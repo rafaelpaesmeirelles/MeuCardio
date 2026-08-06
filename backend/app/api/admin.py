@@ -2,7 +2,7 @@
 
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, field_validator
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -12,7 +12,9 @@ from app.core.security import require_admin
 from app.models.agenda import GoogleTestUserRequest
 from app.models.audit import AuditLog
 from app.models.content import Document
+from app.models.kyc import KycVerification
 from app.services import emails
+from app.services.kyc import verificacao as kyc_verificacao
 from app.services.professional_profile import normalize_council, normalize_professional_title
 
 router = APIRouter(prefix="/api/admin", tags=["administração"])
@@ -632,3 +634,96 @@ def liberar_pedido_teste_google(
     item.notificado_em = datetime.now(timezone.utc)
     db.commit()
     return {"id": item.id, "status": item.status, "liberado_em": item.liberado_em}
+
+
+# ---------------------------------------------------------------------------
+# Verificação de identidade pós-pagamento (Trabalho 11, 06/08/2026) —
+# documentos e selfie do assinante, revisão definitiva do admin. A liberação
+# automática por CRM (se/quando configurada) já deixa o assinante usar a
+# Corvia antes desta revisão — aqui é a aprovação DEFINITIVA, que fecha o
+# ciclo mesmo pra quem já foi liberado.
+# ---------------------------------------------------------------------------
+
+_CAMPOS_DOCUMENTO = {
+    "doc_profissional_frente", "doc_profissional_verso",
+    "doc_pessoal_frente", "doc_pessoal_verso", "doc_pessoal_digital", "selfie",
+}
+
+
+def _mime_por_assinatura(dados: bytes) -> str:
+    if dados.startswith(b"%PDF-"):
+        return "application/pdf"
+    if dados.startswith(b"\xff\xd8\xff"):
+        return "image/jpeg"
+    if dados.startswith(b"\x89PNG\r\n\x1a\n"):
+        return "image/png"
+    if dados.startswith(b"RIFF"):
+        return "image/webp"
+    return "application/octet-stream"
+
+
+@router.get("/kyc")
+def listar_verificacoes_pendentes(db: Session = Depends(get_db), _=Depends(require_admin)):
+    itens = kyc_verificacao.listar_pendentes(db)
+    return [
+        {
+            "id": i.id, "user_id": i.owner_id, "status": i.status,
+            "crm_check_status": i.crm_check_status, "crm_check_detalhe": i.crm_check_detalhe,
+            "tem_documento_digital": i.doc_pessoal_digital is not None,
+            "criado_em": i.criado_em, "liberado_em": i.liberado_em,
+        }
+        for i in itens
+    ]
+
+
+@router.get("/kyc/{item_id}/documento/{campo}")
+def ver_documento_kyc(item_id: int, campo: str, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    if campo not in _CAMPOS_DOCUMENTO:
+        raise HTTPException(status_code=422, detail="Campo de documento desconhecido.")
+    item = db.get(KycVerification, item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Verificação não encontrada.")
+    try:
+        conteudo = kyc_verificacao.ler_documento(item, campo, item.owner_id)
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Este documento não foi enviado.") from None
+    db.add(AuditLog(
+        user_id=admin.id, action="kyc_documento_visualizado", entity="kyc_verifications",
+        entity_id=str(item_id), detail={"campo": campo},
+    ))
+    db.commit()
+    return Response(content=conteudo, media_type=_mime_por_assinatura(conteudo))
+
+
+class DecisaoKyc(BaseModel):
+    nota: str | None = None
+
+
+@router.post("/kyc/{item_id}/aprovar")
+def aprovar_verificacao(item_id: int, dados: DecisaoKyc, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    item = db.get(KycVerification, item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Verificação não encontrada.")
+    kyc_verificacao.aprovar(db, item, admin, dados.nota)
+    db.add(AuditLog(
+        user_id=admin.id, action="kyc_aprovado", entity="kyc_verifications",
+        entity_id=str(item_id), detail={"user_id": item.owner_id},
+    ))
+    db.commit()
+    return {"id": item.id, "status": item.status}
+
+
+@router.post("/kyc/{item_id}/rejeitar")
+def rejeitar_verificacao(item_id: int, dados: DecisaoKyc, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    if not dados.nota or not dados.nota.strip():
+        raise HTTPException(status_code=422, detail="Explique o motivo da rejeição — o assinante precisa saber o que corrigir.")
+    item = db.get(KycVerification, item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Verificação não encontrada.")
+    kyc_verificacao.rejeitar(db, item, admin, dados.nota.strip())
+    db.add(AuditLog(
+        user_id=admin.id, action="kyc_rejeitado", entity="kyc_verifications",
+        entity_id=str(item_id), detail={"user_id": item.owner_id, "nota": dados.nota.strip()},
+    ))
+    db.commit()
+    return {"id": item.id, "status": item.status}

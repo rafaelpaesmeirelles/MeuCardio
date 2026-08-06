@@ -40,6 +40,10 @@ class Settings(BaseSettings):
     # privada é o dado mais sensível deste projeto além do exame do
     # paciente, mesma razão de nunca ter URL alcançável de fora do Caddy.
     certificados_dir: str = "/certificados-a1"
+    # Documentos de verificação de identidade (Trabalho 11, 06/08/2026) —
+    # foto de documento profissional/pessoal e selfie. PII sensível, mesmo
+    # cofre e mesma regra de nunca ter URL alcançável de fora do Caddy.
+    kyc_dir: str = "/kyc-documentos"
     storage_encryption_key: str = ""
     # Janela de plantão para o SLA de 2h do pedido urgente. Fora dela, o
     # prazo passa a contar como eletivo (decisão do Rafael: 7h às 22h, todos
@@ -202,6 +206,20 @@ class Settings(BaseSettings):
 
     vidaas_client_id: str = ""
     vidaas_client_secret: str = ""
+
+    # --- Checagem automática de CRM (Trabalho 11, 06/08/2026) ---------------
+    # O webservice OFICIAL do CFM (Resolução 2.129/15) exige credencial paga
+    # pra empresa privada — pedida em sistemas.cfm.org.br/listamedicos, sem
+    # retorno ainda. Em branco, a checagem devolve "erro_checagem" sempre —
+    # honesto (nunca finge que confirmou), e a inscrição vai pra fila manual
+    # em vez de liberar sozinha. Trocar aqui assim que a credencial chegar,
+    # sem mexer em mais nada.
+    cfm_webservice_url: str = ""
+    cfm_webservice_chave: str = ""
+
+    @property
+    def cfm_webservice_configurado(self) -> bool:
+        return bool(self.cfm_webservice_url and self.cfm_webservice_chave)
 
     @property
     def vidaas_configurado(self) -> bool:
