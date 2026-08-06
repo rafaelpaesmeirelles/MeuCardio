@@ -11397,5 +11397,26 @@
       "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194, Seção 7.6.1 e Tabelas 22-23"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-doenca-multiarterial-quanto-revascularizar",
+    "titulo": "Choque cardiogênico com doença multiarterial: revascularizar tudo no mesmo procedimento?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, IAM com supra de ST e choque cardiogênico (Killip IV), coronariografia mostrando oclusão de artéria descendente anterior (lesão culpada) e lesões significativas adicionais em circunflexa e coronária direita.",
+    "pergunta": "Segundo o ensaio CULPRIT-SHOCK, qual a estratégia de revascularização no procedimento índice associada a melhor desfecho em 30 dias?",
+    "opcoes": [
+      "Revascularização multiarterial imediata de todas as lesões significativas no mesmo procedimento, para minimizar o número de intervenções",
+      "Angioplastia restrita à lesão culpada (descendente anterior), com desfecho composto de morte ou necessidade de terapia renal substitutiva de 45,9% contra 55,4% da estratégia multiarterial imediata (RR 0,83; p=0,01)",
+      "Aguardar estabilização hemodinâmica completa antes de qualquer intervenção coronariana",
+      "Cirurgia de revascularização miocárdica de urgência, evitando angioplastia neste cenário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio CULPRIT-SHOCK (706 pacientes com doença multiarterial e choque cardiogênico) mostrou que revascularizar apenas a artéria culpada no procedimento índice é superior à revascularização multiarterial imediata: desfecho composto de morte ou insuficiência renal grave com necessidade de terapia de substituição em 30 dias foi 45,9% na estratégia só-culpada contra 55,4% na multiarterial imediata (RR 0,83; IC95% 0,71-0,96; p=0,01). Importante: esse benefício de mortalidade NÃO se sustentou em 1 ano (50,0% vs. 56,9%, sem significância), e a estratégia só-culpada teve mais revascularização repetida (32,3% vs. 9,4%) e mais reinternação por insuficiência cardíaca (5,2% vs. 1,2%) — a leitura correta é 'adiar o que não é urgente', não abandonar a revascularização das outras lesões indefinidamente.",
+    "source_refs": [
+      "Thiele H, Akin I, Sandri M, Fuernau G, et al. PCI Strategies in Patients with Acute Myocardial Infarction and Cardiogenic Shock. N Engl J Med. 2017;377(25):2419-2432. PMID: 29083953",
+      "Thiele H, Akin I, Sandri M, de Waha-Thiele S, et al. One-Year Outcomes after PCI Strategies in Cardiogenic Shock. N Engl J Med. 2018;379(18):1699-1710. PMID: 30145971"
+    ],
+    "review_status": "revisado"
   }
 ]

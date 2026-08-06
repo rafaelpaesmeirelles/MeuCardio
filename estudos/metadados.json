@@ -9653,5 +9653,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "iabp-shock-ii-balao-intra-aortico-no-choque-cardiogenico",
+    "title": "IABP-SHOCK II — Balão intra-aórtico no choque cardiogênico complicando infarto agudo",
+    "study_type": "ensaio_clinico",
+    "authors": "Thiele H, Zeymer U, Neumann FJ, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2012,
+    "doi": "10.1056/NEJMoa1208410",
+    "pmid": "22920912",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1208410",
+    "summary": "Ensaio randomizado, prospectivo, aberto, multicêntrico, com 600 pacientes com choque cardiogênico complicando infarto agudo do miocárdio, todos com revascularização precoce e terapia médica otimizada, comparando balão intra-aórtico (IABP, n=301) contra sem IABP (n=299).",
+    "key_findings": "Mortalidade em 30 dias (desfecho primário): 39,7% (119/300) com IABP contra 41,3% (123/298) sem IABP — RR 0,96 (IC95% 0,79-1,17), p=0,69, sem diferença. Sem diferença em sangramento maior (3,3% vs. 4,4%), complicação isquêmica periférica (4,3% vs. 3,4%), sepse (15,7% vs. 20,5%) ou AVC (0,7% vs. 1,7%). Seguimento de 12 meses (Lancet 2013, PMID 24011548) confirmou ausência de benefício de mortalidade também no acompanhamento mais longo.",
+    "clinical_implications": "Ensaio que retirou o balão intra-aórtico do uso de rotina como suporte circulatório no choque cardiogênico isquêmico com revascularização precoce — não demonstrou redução de mortalidade em 30 dias nem em 12 meses. Não avalia outras formas de suporte circulatório mecânico (ECMO, dispositivos percutâneos de fluxo axial) nem uso de IABP em indicações específicas como complicação mecânica.",
+    "limitations": "Desenho aberto (sem cegamento). Delineado para choque cardiogênico isquêmico com revascularização precoce — não generalizável a outras etiologias de choque cardiogênico ou a cenários sem revascularização.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "iabp-shock-ii",
+      "balão intra-aórtico",
+      "choque cardiogênico",
+      "infarto agudo",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
