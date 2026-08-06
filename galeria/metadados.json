@@ -5227,5 +5227,50 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ultrassonografia-tvp-veia-femoral-superficial",
+    "title": "Ultrassonografia Doppler — Trombose venosa profunda da veia femoral superficial",
+    "modality": "Ultrassonografia",
+    "theme": "Tromboembolismo",
+    "file_path": "eco/ultrassonografia-tvp-veia-femoral-superficial.jpg",
+    "findings": "Ultrassonografia Doppler colorido do membro inferior direito de homem de 65 anos com edema de perna. A veia femoral superficial, situada entre a artéria femoral (fluxo em vermelho/laranja, acima) e a veia femoral profunda (fluxo em azul, abaixo), aparece sem sinal de cor e com parede hiperecoica — achados de ausência de fluxo e conteúdo trombótico compatíveis com trombose venosa profunda, contrastando com o fluxo normal presente nos dois vasos patentes ao redor.",
+    "teaching_points": "A ausência de sinal de fluxo ao Doppler colorido, associada à falta de compressibilidade da veia à manobra de compressão (não capturada nesta imagem estática) e ao conteúdo ecogênico intraluminal, são os três pilares do diagnóstico ultrassonográfico de TVP. A localização na veia femoral superficial (segmento proximal) é clinicamente relevante: TVP proximal (acima da veia poplítea) carrega risco embólico maior que TVP distal isolada de panturrilha, e é a que mais frequentemente motiva anticoagulação terapêutica imediata. A adjacência anatômica entre artéria e veia femorais explica por que a compressão pela sonda é a manobra confirmatória clássica — vaso trombosado não colaba, vaso patente sim.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg",
+    "license": "CC0 1.0",
+    "attribution": "Mikael Häggström, M.D., via Wikimedia Commons — CC0 1.0 (domínio público).",
+    "tags": [
+      "trombose venosa profunda",
+      "tvp",
+      "ultrassonografia doppler",
+      "veia femoral",
+      "tromboembolismo venoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-hipercalemia-ondas-t-apiculadas",
+    "title": "ECG — Hipercalemia grave com ondas T apiculadas",
+    "modality": "ECG",
+    "theme": "Farmacologia",
+    "file_path": "ecg/ecg-hipercalemia-ondas-t-apiculadas.jpg",
+    "findings": "Traçado de 12 derivações de paciente com doença renal e potássio sérico de 8,2 mmol/L, registrando ondas T altas, estreitas e apiculadas (\"em tenda\") de forma difusa em praticamente todas as derivações — o achado eletrocardiográfico clássico e mais precoce da hipercalemia.",
+    "teaching_points": "Este achado é diretamente relevante à farmacologia cardiovascular: IECA, BRA, antagonistas mineralocorticoides (espironolactona, eplerenona, finerenona) e a combinação de bloqueio duplo ou triplo do sistema renina-angiotensina-aldosterona são causas farmacológicas comuns de hipercalemia, sobretudo em paciente com função renal reduzida — é a mesma razão pela qual a hipercalemia é a principal barreira prática à titulação plena desses fármacos na insuficiência cardíaca. A progressão eletrocardiográfica clássica com a piora do potássio é: ondas T apiculadas (achado mais precoce) → achatamento/perda da onda P → alargamento do QRS → padrão sinusoidal → fibrilação ventricular/assistolia. Reconhecer o padrão apiculado precocemente, antes da perda da onda P ou alargamento do QRS, permite intervir (gluconato de cálcio, insulina/glicose, diálise) antes da progressão para arritmia maligna.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hyperkalemia_ECG.jpg",
+    "license": "CC BY 4.0",
+    "attribution": "Dr. Michael-Joseph F. Agbayani e Dr. Eddieson Gonzales (Manila, Filipinas), via Wikimedia Commons — CC BY 4.0.",
+    "tags": [
+      "hipercalemia",
+      "ondas t apiculadas",
+      "ecg",
+      "iSRAA",
+      "espironolactona",
+      "farmacologia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
