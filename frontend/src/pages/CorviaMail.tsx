@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { api, ApiError } from "../lib/api";
-import { apiEmail, ApiEmailError } from "../lib/apiEmail";
+import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import Credito from "../components/Credito";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 
@@ -169,10 +169,30 @@ function AbaAssinar() {
 
   return (
     <div className="cartao" style={{ marginTop: "1rem" }}>
-      <p>
-        Um endereço de e-mail próprio no domínio <strong>@corvia.med.br</strong>, com
-        webmail integrado — add-on separado da assinatura principal da Corvia, cobrado à parte.
-      </p>
+      {!status?.incluido_no_plano && !STATUS_COM_ACESSO.includes(status?.status ?? "") ? (
+        <>
+          <h1 style={{ fontSize: "1.25rem", margin: "0 0 0.3rem" }}>
+            Seu endereço profissional <span style={{ color: "var(--acao)" }}>@corvia.med.br</span>
+          </h1>
+          <p style={{ margin: "0 0 0.8rem" }}>
+            Um e-mail médico, dentro da mesma plataforma onde você já prescreve, documenta e assina.
+          </p>
+        </>
+      ) : (
+        <p>
+          Um endereço de e-mail próprio no domínio <strong>@corvia.med.br</strong>, com
+          webmail integrado — add-on separado da assinatura principal da Corvia, cobrado à parte.
+        </p>
+      )}
+
+      {!status?.incluido_no_plano && !STATUS_COM_ACESSO.includes(status?.status ?? "") && (
+        <ul style={{ margin: "0 0 1.1rem", paddingLeft: "1.1rem", lineHeight: 1.7 }}>
+          <li>Envie receita e documento <strong>já assinados digitalmente</strong> direto ao paciente, sem trocar de aplicativo.</li>
+          <li>Assinatura de e-mail com seu nome, conselho e logo em toda mensagem que você manda.</li>
+          <li>Leia Yahoo, iCloud, Gmail e Outlook <strong>na mesma caixa</strong>, dentro da Corvia.</li>
+          <li>Mande material educativo ao paciente por e-mail em um clique.</li>
+        </ul>
+      )}
 
       {status?.incluido_no_plano ? (
         <p style={{ color: "var(--sucesso)" }}>
@@ -182,7 +202,7 @@ function AbaAssinar() {
         <p>
           <strong>{status?.preco_definido ? `${reais(status.preco_centavos)}/mês` : "Em breve"}</strong>
           {!status?.preco_definido && " — o valor ainda está sendo definido."}
-          {status?.preco_definido && " — pagamento em Pix ou cartão."}
+          {status?.preco_definido && " — pagamento em Pix ou cartão, à parte da sua assinatura principal."}
         </p>
       )}
 
@@ -339,9 +359,33 @@ function AbaEsqueciSenha() {
 
 export default function CorviaMail() {
   const { usuario, carregando } = useAuth();
+  const navigate = useNavigate();
   const [aba, setAba] = useState<"entrar" | "esqueci" | "assinar">("entrar");
+  // `null` = ainda não sabemos. Decide duas coisas: (1) se a caixa já está
+  // ativa E existe sessão de e-mail salva, pula esta tela inteira e vai
+  // direto pra caixa — mesma lógica que o atalho do Painel já usa; (2) se a
+  // caixa NUNCA foi ativada, "Entrar"/"Esqueci a senha" não servem pra nada
+  // (não existe credencial pra usar ali) — só a aba "Assine já" faz
+  // sentido, e ela nasce como a única visível.
+  const [contaAtiva, setContaAtiva] = useState<boolean | null>(null);
 
-  if (carregando) return <p className="eyebrow">Carregando…</p>;
+  useEffect(() => {
+    if (!usuario) return;
+    api.get<ContaEmail>("/email/conta")
+      .then((c) => {
+        setContaAtiva(c.ativa);
+        if (c.ativa && tokenEmail.get()) {
+          navigate("/caixa-de-email", { replace: true });
+        } else if (!c.ativa) {
+          setAba("assinar");
+        }
+      })
+      .catch(() => setContaAtiva(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [usuario]);
+
+  if (carregando || (usuario && contaAtiva === null)) return <p className="eyebrow">Carregando…</p>;
+  if (usuario && contaAtiva && tokenEmail.get()) return <p className="eyebrow">Abrindo sua caixa…</p>;
 
   if (!usuario) {
     return (
@@ -372,14 +416,19 @@ export default function CorviaMail() {
         <LogoCorviaMail tamanho="compacto" />
       </div>
 
-      <div style={{ display: "flex", gap: 6 }}>
-        <button className={aba === "entrar" ? "botao" : "botao botao--secundario"}
-                style={{ flex: 1 }} onClick={() => setAba("entrar")}>Entrar</button>
-        <button className={aba === "esqueci" ? "botao" : "botao botao--secundario"}
-                style={{ flex: 1 }} onClick={() => setAba("esqueci")}>Esqueci a senha</button>
-        <button className={aba === "assinar" ? "botao" : "botao botao--secundario"}
-                style={{ flex: 1 }} onClick={() => setAba("assinar")}>Assine já</button>
-      </div>
+      {contaAtiva && (
+        <div style={{ display: "flex", gap: 6 }}>
+          <button className={aba === "entrar" ? "botao" : "botao botao--secundario"}
+                  style={{ flex: 1 }} onClick={() => setAba("entrar")}>Entrar</button>
+          <button className={aba === "esqueci" ? "botao" : "botao botao--secundario"}
+                  style={{ flex: 1 }} onClick={() => setAba("esqueci")}>Esqueci a senha</button>
+          <button className={aba === "assinar" ? "botao" : "botao botao--secundario"}
+                  style={{ flex: 1 }} onClick={() => setAba("assinar")}>Gerenciar</button>
+        </div>
+      )}
+      {/* Caixa nunca ativada: "Entrar"/"Esqueci a senha" não levam a lugar
+          nenhum (não existe credencial ainda) — só a página de assinatura
+          faz sentido, e é ela que carrega a propaganda do serviço. */}
 
       {aba === "entrar" && <AbaEntrar />}
       {aba === "esqueci" && <AbaEsqueciSenha />}
