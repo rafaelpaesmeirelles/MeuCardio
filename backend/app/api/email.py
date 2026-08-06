@@ -433,6 +433,84 @@ def contas_da_caixa_unificada(
     return resultado
 
 
+def _timestamp_ordenacao(valor: object) -> float:
+    """`receivedTime` chega em três formatos diferentes conforme a origem —
+    epoch em milissegundos (caixa nativa e Gmail, `internalDate`) ou ISO 8601
+    (Microsoft Graph, `receivedDateTime`) — porque cada provedor normaliza
+    para o mesmo NOME de campo, não para o mesmo FORMATO. Sem isto, ordenar a
+    lista misturada por data compararia string com número."""
+    texto = str(valor or "").strip()
+    if not texto:
+        return 0.0
+    try:
+        return float(texto) / 1000
+    except ValueError:
+        pass
+    try:
+        from datetime import datetime as _datetime
+        return _datetime.fromisoformat(texto.replace("Z", "+00:00")).timestamp()
+    except ValueError:
+        return 0.0
+
+
+@router.get("/mensagens/todas")
+def mensagens_todas(
+    limite: int = 20,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    """Uma lista só, misturando a caixa nativa CorvIA Mail com toda conta
+    externa conectada que autorizou e-mail (Gmail/Outlook), ordenada por data
+    de recebimento, mais recente primeiro.
+
+    Cada mensagem carrega `origem` ("corvia" ou o id da integração) — é o
+    dado que o frontend usa para saber a quem mandar uma ação (marcar
+    lida, abrir a mensagem inteira): a rota certa continua sendo
+    `/mensagens/{id}` para "corvia" ou
+    `/externas/{origem}/mensagens/{id}` para as demais. Esta rota é só
+    LEITURA da lista combinada — não substitui as rotas por conta.
+
+    Falha em UMA fonte não derruba a lista inteira: a fonte que falhou entra
+    em `fontes_com_erro` com o motivo, e as que responderam aparecem
+    normalmente — nunca finge que uma fonte respondeu quando não respondeu.
+    """
+    if limite < 1 or limite > 50:
+        raise HTTPException(status_code=422, detail="Limite deve ser entre 1 e 50.")
+
+    mensagens: list[dict] = []
+    fontes_com_erro: list[dict] = []
+
+    try:
+        _exigir_configurado()
+        for item in mail360.listar_mensagens(conta.mail360_account_key, limite=limite):
+            mensagens.append({**item, "origem": "corvia", "provider": "corvia"})
+    except (Mail360Error, HTTPException) as exc:
+        detalhe = exc.detail if isinstance(exc, HTTPException) else str(exc)
+        fontes_com_erro.append({"origem": "corvia", "provider": "corvia", "erro": str(detalhe)})
+
+    integracoes = db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == conta.user_id,
+        CalendarIntegration.enabled.is_(True),
+        CalendarIntegration.status == "connected",
+        CalendarIntegration.provider.in_(["google_calendar", "microsoft_365"]),
+    ).order_by(CalendarIntegration.id.asc()).all()
+
+    for integracao in integracoes:
+        capacidades = integracao.capabilities or {}
+        if not capacidades.get("read_mail"):
+            continue
+        provider = "google" if integracao.provider == "google_calendar" else "microsoft"
+        try:
+            externas = external_mail.list_messages(db, integracao, folder=None, limit=limite, start=1)
+            for item in externas:
+                mensagens.append({**item, "origem": str(integracao.id)})
+        except external_mail.ExternalMailError as exc:
+            fontes_com_erro.append({"origem": str(integracao.id), "provider": provider, "erro": str(exc)})
+
+    mensagens.sort(key=lambda m: _timestamp_ordenacao(m.get("receivedTime")), reverse=True)
+    return {"mensagens": mensagens[:limite], "fontes_com_erro": fontes_com_erro}
+
+
 @router.get("/pastas")
 def pastas(conta: EmailAccount = Depends(current_email_account)):
     _exigir_configurado()
