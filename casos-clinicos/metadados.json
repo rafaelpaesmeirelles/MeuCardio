@@ -11254,5 +11254,26 @@
       "Gornik HL, Persu A, Adlam D, et al. First International Consensus on the diagnosis and management of fibromuscular dysplasia. Vasc Med. 2019;24(2):164-189. DOI: 10.1177/1358863X18821816. PMID: 30648921"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cctga-troca-valvar-tricuspide-momento-certo",
+    "titulo": "Transposição corrigida congenitamente: qual o momento certo de trocar a valva tricúspide?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Homem, 38 anos, ccTGA sem cirurgia prévia de duplo switch, em acompanhamento em centro de cardiopatia congênita do adulto. Assintomático (NYHA I), mas o ecocardiograma seriado mostra dilatação progressiva do ventrículo direito sistêmico nos últimos 2 anos, com fração de ejeção do VD de 44% (função levemente reduzida) e regurgitação tricúspide moderada a grave.",
+    "pergunta": "Segundo a diretriz ESC 2020, qual a conduta mais alinhada com a evidência para este paciente?",
+    "opcoes": [
+      "Manter conduta expectante até que o paciente se torne sintomático, já que a fração de ejeção ainda está acima de 40%",
+      "Troca valvar tricúspide deve ser considerada (Classe IIa) — paciente assintomático, mas com dilatação progressiva do VD e função ainda preservada/levemente reduzida (FE >40%), no ponto em que a indicação cirúrgica ainda é forte",
+      "Troca valvar está contraindicada em paciente assintomático, independentemente da função do VD",
+      "Indicação de troca valvar só se aplica a paciente sintomático — a Classe I é reservada exclusivamente para essa situação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2020 gradua a troca valvar tricúspide na ccTGA em três cenários por sintoma e função do VD sistêmico: sintomático com FE >40% é Classe I; ASSINTOMÁTICO com dilatação progressiva do VD e/ou disfunção leve (FE >40%) é Classe IIa — exatamente o cenário deste paciente; e sintomático com FE ≤40% cai para Classe IIb, porque o benefício da cirurgia já compete com uma disfunção ventricular que ela não reverte. A lógica clínica central é operar a regurgitação tricúspide grave ANTES que a função do VD sistêmico caia abaixo de 40% — esperar o paciente ficar sintomático, neste caso, seria perder a janela de melhor prognóstico cirúrgico.",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554",
+      "van Dissel AC, Opotowsky AR, Burchill LJ, et al. End-stage heart failure in congenitally corrected transposition of the great arteries: a multicentre study. Eur Heart J. 2023;44(34):3278-3291. PMID: 37592821"
+    ],
+    "review_status": "revisado"
   }
 ]
