@@ -11234,5 +11234,25 @@
       "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO, 2024 (NCBI Bookshelf NBK609692)."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "displasia-fibromuscular-hipertensao-em-mulher-jovem",
+    "titulo": "Hipertensão em mulher jovem: quando pensar em displasia fibromuscular?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 34 anos, hipertensão de início recente e difícil controle com três classes de anti-hipertensivo. Sem história familiar de hipertensão, sem obesidade, função renal normal. Angiotomografia de artérias renais mostra estenose única em artéria renal direita, sem o padrão clássico em colar de contas, sem aneurisma ou dissecção associados.",
+    "pergunta": "Segundo o Primeiro Consenso Internacional de Displasia Fibromuscular (2019), o que é necessário para fechar o diagnóstico de DFM neste caso, e qual a conduta de imagem recomendada em seguida?",
+    "opcoes": [
+      "O achado de estenose focal isolada já é suficiente para diagnóstico de DFM; não é necessária nenhuma outra investigação de imagem",
+      "A estenose focal já preenche o critério mínimo de diagnóstico de DFM (lesão focal ou multifocal); a conduta recomendada é complementar com imagem de todos os vasos do crânio à pelve, para identificar outras áreas de acometimento e rastrear aneurismas/dissecções ocultos",
+      "Sem o padrão em colar de contas, o diagnóstico de DFM está descartado — a estenose focal isolada não conta como critério diagnóstico",
+      "É necessário biópsia da artéria renal para confirmar o diagnóstico de DFM antes de qualquer conduta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso de 2019 define que a presença de pelo menos uma lesão arterial FOCAL OU multifocal já é suficiente para o diagnóstico de DFM — o padrão focal (estenose única) é reconhecido como subtipo válido, tipicamente em paciente mais jovem e com pressões mais elevadas que a forma multifocal clássica em colar de contas. Uma vez firmado o diagnóstico em qualquer leito arterial, a recomendação do consenso é obter imagem de todos os vasos do crânio à pelve, porque envolvimento de múltiplos leitos ocorre em mais da metade dos pacientes, e o objetivo é tanto mapear outras áreas de DFM quanto rastrear aneurismas e dissecções ocultos associados. Biópsia não é parte do algoritmo diagnóstico do consenso.",
+    "source_refs": [
+      "Gornik HL, Persu A, Adlam D, et al. First International Consensus on the diagnosis and management of fibromuscular dysplasia. Vasc Med. 2019;24(2):164-189. DOI: 10.1177/1358863X18821816. PMID: 30648921"
+    ],
+    "review_status": "revisado"
   }
 ]
