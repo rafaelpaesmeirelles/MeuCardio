@@ -32735,5 +32735,640 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "confirmacao-diagnostica-de-hipertensao-com-medida-fora-do-consultorio",
+    "statement": "Em indivíduos com risco cardiovascular aumentado cuja pressão arterial de consultório está entre 120-139/70-89 mmHg, é recomendado medir a pressão arterial fora do consultório, com MAPA e/ou MRPA — ou, quando isso não for logisticamente viável, com medidas repetidas de consultório em mais de uma visita — antes de confirmar o diagnóstico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "diagnóstico",
+      "mapa",
+      "mrpa",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-farmacologico-apos-3-meses-de-estilo-de-vida-em-pa-elevada-de-alto-risco",
+    "statement": "Em adultos com pressão arterial elevada (120-139/70-89 mmHg) e risco cardiovascular suficientemente alto, após 3 meses de intervenção no estilo de vida, o tratamento farmacológico é recomendado para reduzir o risco cardiovascular quando a pressão arterial confirmada permanecer ≥130/80 mmHg.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "pa elevada",
+      "tratamento farmacológico",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-imediato-na-hipertensao-confirmada-independente-do-risco",
+    "statement": "Em pacientes hipertensos com pressão arterial confirmada ≥140/90 mmHg, é recomendado iniciar prontamente medidas de estilo de vida e tratamento farmacológico anti-hipertensivo para reduzir o risco cardiovascular, independentemente da categoria de risco cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "início de tratamento",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "manutencao-vitalicia-do-anti-hipertensivo-mesmo-apos-os-85-anos",
+    "statement": "É recomendado manter o tratamento anti-hipertensivo por toda a vida, mesmo além dos 85 anos de idade, desde que bem tolerado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso",
+      "adesão",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "adiamento-do-inicio-do-anti-hipertensivo-no-idoso-fragil-ou-com-hipotensao-ortostatica",
+    "statement": "Como o benefício em reduzir desfechos cardiovasculares é incerto nesses cenários e é aconselhado monitoramento próximo da tolerância ao tratamento, o início do tratamento anti-hipertensivo deve ser considerado somente a partir de ≥140/90 mmHg em pacientes com hipotensão ortostática sintomática pré-tratamento, idade ≥85 anos, fragilidade moderada a grave clinicamente significativa, e/ou expectativa de vida limitada (<3 anos).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso frágil",
+      "hipotensão ortostática",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecg-de-12-derivacoes-para-todo-paciente-hipertenso",
+    "statement": "Um eletrocardiograma de 12 derivações é recomendado para todos os pacientes com hipertensão, como rastreio de lesão de órgão-alvo cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "ecg",
+      "lesão de órgão-alvo",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecocardiograma-no-hipertenso-com-ecg-anormal-ou-sintomas-cardiacos",
+    "statement": "A ecocardiografia é recomendada em pacientes com hipertensão quando o eletrocardiograma é anormal, há sopros detectados, ou existem sintomas cardíacos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "ecocardiograma",
+      "lesão de órgão-alvo",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "encaminhamento-da-hipertensao-resistente-a-centro-especializado",
+    "statement": "Pacientes com hipertensão resistente devem ser considerados para encaminhamento a centros clínicos com expertise em manejo de hipertensão, para investigação adicional.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão resistente",
+      "encaminhamento",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-por-cateter-pode-ser-considerada-na-hipertensao-resistente",
+    "statement": "Para reduzir a pressão arterial, e se realizada em centro de médio a alto volume, a denervação renal por cateter pode ser considerada em pacientes com hipertensão resistente cuja pressão arterial permaneça descontrolada apesar de combinação de três fármacos anti-hipertensivos (incluindo um diurético tiazídico ou similar), e que expressem preferência por se submeter ao procedimento após discussão compartilhada de risco-benefício e avaliação multidisciplinar.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão resistente",
+      "denervação renal",
+      "dispositivo",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-nao-e-recomendada-como-primeira-linha",
+    "statement": "Pela falta de estudos de desfecho adequadamente dimensionados demonstrando segurança e benefício cardiovascular, a denervação renal não é recomendada como intervenção de primeira linha para redução da pressão arterial na hipertensão.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "denervação renal",
+      "não recomendado",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-contraindicada-em-doenca-renal-avancada-ou-causa-secundaria",
+    "statement": "A denervação renal não é recomendada para tratar hipertensão em pacientes com função renal moderada a gravemente comprometida (TFGe <40 mL/min/1,73m²) ou com causas secundárias de hipertensão, até que evidências adicionais estejam disponíveis.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão secundária",
+      "denervação renal",
+      "doença renal crônica",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "primeira-linha-farmacologica-na-hipertensao-ieca-bra-bcc-diuretico",
+    "statement": "Entre todos os fármacos anti-hipertensivos, IECA, BRA, bloqueadores de canal de cálcio diidropiridínicos e diuréticos (tiazídicos e similares, como clortalidona e indapamida) demonstraram a redução mais efetiva de pressão arterial e de eventos cardiovasculares, sendo por isso recomendados como tratamento de primeira linha.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "hipertensão",
+      "ieca",
+      "bra",
+      "bloqueador de canal de cálcio",
+      "diurético",
+      "primeira linha"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-combinado-por-indicacao-compelente-na-hipertensao",
+    "statement": "É recomendado combinar betabloqueador com qualquer uma das outras classes principais de anti-hipertensivos quando há indicação convincente para seu uso — por exemplo angina, pós-infarto do miocárdio, insuficiência cardíaca com fração de ejeção reduzida, ou necessidade de controle de frequência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "hipertensão",
+      "indicação compelente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "espironolactona-como-quarto-farmaco-na-hipertensao-resistente",
+    "statement": "Se a pressão arterial não for controlada com combinação de três fármacos, a adição de espironolactona deve ser considerada como quarto agente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "espironolactona",
+      "hipertensão resistente",
+      "quarto fármaco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eplerenona-no-lugar-da-espironolactona-quando-nao-tolerada",
+    "statement": "Se a pressão arterial não for controlada com combinação de três fármacos e a espironolactona não for eficaz ou não for tolerada, tratamento com eplerenona no lugar da espironolactona — ou a adição de um betabloqueador (se ainda não indicado por outro motivo), e em seguida um fármaco de ação central, um alfabloqueador, hidralazina ou um diurético poupador de potássio — deve ser considerado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "eplerenona",
+      "espironolactona",
+      "hipertensão resistente",
+      "escalonamento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "combinacao-de-dois-bloqueadores-do-sraa-nao-e-recomendada",
+    "statement": "Combinar dois bloqueadores do sistema renina-angiotensina-aldosterona (um inibidor da ECA e um bloqueador do receptor de angiotensina) não é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ieca",
+      "bra",
+      "duplo bloqueio do sraa",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-nao-seletivo-em-todo-paciente-com-cpvt",
+    "statement": "Betabloqueadores, idealmente não seletivos (nadolol ou propranolol), são recomendados em todos os pacientes com diagnóstico clínico de taquicardia ventricular polimórfica catecolaminérgica (CPVT).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "cpvt",
+      "nadolol",
+      "propranolol"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-no-qt-longo-com-prolongamento-documentado",
+    "statement": "Betabloqueadores, idealmente não seletivos (nadolol ou propranolol), são recomendados em pacientes com síndrome do QT longo e prolongamento documentado do intervalo QT, para reduzir o risco de eventos arrítmicos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "síndrome do qt longo",
+      "nadolol",
+      "propranolol"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mexiletina-no-qt-longo-tipo-3-com-qt-prolongado",
+    "statement": "Mexiletina é indicada em pacientes com síndrome do QT longo tipo 3 (LQT3) que apresentam intervalo QT prolongado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "mexiletina",
+      "síndrome do qt longo",
+      "lqt3"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "evitar-farmacos-que-induzem-supra-de-st-nas-derivacoes-precordiais-direitas-na-brugada",
+    "statement": "Em todos os pacientes com síndrome de Brugada, é recomendado evitar fármacos que possam induzir elevação do segmento ST nas derivações precordiais direitas, além de evitar cocaína, cannabis e consumo excessivo de álcool, e tratar febre com antipiréticos.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "síndrome de brugada",
+      "fármacos a evitar",
+      "brugadadrugs"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-diagnostico-por-padrao-espontaneo-tipo-1",
+    "statement": "É recomendado diagnosticar síndrome de Brugada em pacientes sem outra cardiopatia que apresentem padrão eletrocardiográfico tipo 1 de Brugada espontâneo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "diagnóstico",
+      "padrão tipo 1"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-diagnostico-por-teste-de-bloqueador-de-canal-de-sodio-ou-febre-em-sobrevivente-de-pcr",
+    "statement": "É recomendado diagnosticar síndrome de Brugada em pacientes sem outra cardiopatia que sobreviveram a uma parada cardíaca por fibrilação ventricular ou taquicardia ventricular polimórfica e que apresentem padrão eletrocardiográfico tipo 1 de Brugada induzido por teste de bloqueador de canal de sódio ou durante febre.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "diagnóstico",
+      "teste farmacológico",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-teste-genetico-scn5a-para-probandos",
+    "statement": "O teste genético para o gene SCN5A é recomendado para probandos com síndrome de Brugada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "teste genético",
+      "scn5a"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-teste-de-bloqueador-de-sodio-contraindicado-com-padrao-tipo-1-previo",
+    "statement": "O teste de bloqueador de canal de sódio não é recomendado em pacientes que já apresentam padrão eletrocardiográfico tipo 1 de Brugada prévio.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "teste farmacológico",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-cdi-em-sobrevivente-de-pcr-ou-com-tv-sustentada-documentada",
+    "statement": "O implante de CDI é recomendado em pacientes com síndrome de Brugada que são sobreviventes de parada cardíaca abortada e/ou têm taquicardia ventricular sustentada documentada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "cdi",
+      "parada cardíaca",
+      "morte súbita"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-ablacao-nao-recomendada-em-assintomatico",
+    "statement": "A ablação por cateter em pacientes com síndrome de Brugada assintomáticos não é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "ablação",
+      "assintomático",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-criterios-diagnosticos",
+    "statement": "É recomendado diagnosticar síndrome do QT longo (LQTS) na presença de QTc ≥480 ms em ECGs de 12 derivações repetidos (com ou sem sintomas), de escore diagnóstico de LQTS >3, ou de mutação patogênica, independentemente da duração do QT.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "diagnóstico",
+      "qtc"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-teste-genetico-e-aconselhamento-genetico",
+    "statement": "Em pacientes com diagnóstico clínico de síndrome do QT longo, o teste genético e o aconselhamento genético são recomendados.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "teste genético",
+      "aconselhamento genético"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-cdi-associado-a-betabloqueador-apos-parada-cardiaca",
+    "statement": "O implante de CDI associado a betabloqueador é recomendado em pacientes com síndrome do QT longo que sofreram parada cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "cdi",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-cdi-em-sintomatico-apesar-de-betabloqueador-e-terapia-genotipo-especifica",
+    "statement": "O implante de CDI é recomendado em pacientes com síndrome do QT longo que permanecem sintomáticos apesar de betabloqueador e terapias genótipo-específicas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "cdi",
+      "sintomático",
+      "terapia genótipo-específica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-criterios-diagnosticos",
+    "statement": "É recomendado diagnosticar taquicardia ventricular polimórfica catecolaminérgica (CPVT) na presença de coração estruturalmente normal, ECG normal, e taquicardia ventricular bidirecional ou polimórfica induzida por esforço ou emoção — ou em portadores de mutação em gene causador da doença.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "diagnóstico",
+      "taquicardia ventricular bidirecional"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-teste-genetico-e-aconselhamento-genetico",
+    "statement": "Teste genético e aconselhamento genético são indicados em pacientes com suspeita clínica ou diagnóstico clínico de CPVT.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "teste genético",
+      "aconselhamento genético"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-cdi-com-betabloqueador-e-flecainida-apos-parada-cardiaca-abortada",
+    "statement": "O implante de CDI combinado com betabloqueador e flecainida é recomendado em pacientes com CPVT após parada cardíaca abortada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "cdi",
+      "flecainida",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eef-nao-recomendado-para-estratificacao-de-risco-em-cpvt",
+    "statement": "O estudo eletrofisiológico com estimulação ventricular programada não é recomendado para estratificação de risco de morte súbita cardíaca em pacientes com CPVT.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "estudo eletrofisiológico",
+      "estratificação de risco",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sqts-criterios-diagnosticos",
+    "statement": "É recomendado diagnosticar síndrome do QT curto (SQTS) na presença de QTc ≤360 ms associado a um ou mais dos seguintes: mutação patogênica, história familiar de SQTS, ou sobrevivência a episódio de taquicardia/fibrilação ventricular na ausência de cardiopatia estrutural.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt curto",
+      "diagnóstico",
+      "qtc"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sqts-cdi-em-sobrevivente-de-pcr-ou-com-tv-sustentada-documentada",
+    "statement": "O implante de CDI é recomendado em pacientes com síndrome do QT curto que são sobreviventes de parada cardíaca abortada e/ou têm taquicardia ventricular sustentada documentada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt curto",
+      "cdi",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
   }
 ]
