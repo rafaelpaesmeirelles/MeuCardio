@@ -24,6 +24,7 @@ from app.models.receituario import (
 )
 from app.services import cofre
 from app.services.assinatura import emissao as assinatura_emissao
+from app.services.assinatura.provedor import _MANUAL_EXTERNO
 from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
@@ -188,6 +189,15 @@ def _doc_json(db: Session, doc: PrescriptionDocument, tipo: PrescriptionType | N
     pode_enviar_email = bool(
         emitido and emitido.assinado_em is not None and emitido.nivel == "qualificada"
     )
+    # Trabalho 14: documento emitido por GOVBR/VIDAAS/BIRDID/SAFEID/NEOID/
+    # REMOTEID nunca assina nada em `/emitir` (fica "nao_assinado" de
+    # propósito) — o médico ainda precisa passar pelo Assinador ITI e
+    # reenviar o arquivo. Expor isso aqui, e não só no retorno síncrono do
+    # `/emitir`, é o que permite ao frontend mostrar de novo o painel de
+    # instruções depois de um F5/nova sessão, em vez de perder o estado.
+    aguardando_assinatura_externa = bool(
+        emitido and emitido.metodo in _MANUAL_EXTERNO and emitido.assinado_em is None
+    )
     return {
         "id": doc.id, "tipo": doc.tipo_codigo,
         "tipo_nome": tipo.nome if tipo else None,
@@ -202,6 +212,8 @@ def _doc_json(db: Session, doc: PrescriptionDocument, tipo: PrescriptionType | N
         "fonte_versao_listas": doc.fonte_versao_listas,
         "cid": doc.cid,
         "pode_enviar_email": pode_enviar_email,
+        "aguardando_assinatura_externa": aguardando_assinatura_externa,
+        "metodo_emitido": emitido.metodo if emitido else None,
     }
 
 

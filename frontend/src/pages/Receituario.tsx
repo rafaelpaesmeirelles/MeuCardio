@@ -3,6 +3,7 @@ import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import Icone from "../components/Icone";
+import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 
 type Farmaco = {
   slug: string; nome: string; marca?: string | null; fabricante?: string | null;
@@ -44,7 +45,14 @@ type Documento = {
   classificacao_corrigida_de: string | null; motivo_correcao: string | null;
   fonte_versao_listas: string | null; cid: string | null;
   pode_enviar_email: boolean;
+  aguardando_assinatura_externa: boolean;
+  metodo_emitido: string | null;
 };
+
+// Trabalho 14 (06/08/2026) — os métodos sem API própria: assinatura
+// acontece de verdade fora da Corvia, no Assinador ITI (assinador.iti.br).
+// Mesmo conjunto de `provedor._MANUAL_EXTERNO` no backend.
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
 type ReceituarioCriado = { prescricao_id: number; exige_revisao: boolean; documentos: Documento[] };
 
 type HistoricoDocResumo = { tipo: string; tipo_nome: string | null; status: string };
@@ -105,6 +113,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
+  const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
   const temC5 = doc.itens.some((item) => String(item.lista ?? "").toUpperCase() === "C5");
 
   async function revisar() {
@@ -133,13 +142,21 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         body: JSON.stringify({ endereco: endereco || null, metodo }),
       });
       baixarBlob(blob, `receituario-${doc.id}.pdf`);
+      const externo = METODOS_MANUAL_EXTERNO.has(metodo);
       const provedor = provedores?.find((item) => item.codigo === metodo);
       onAtualizado({
         ...doc,
         status: "emitido",
-        pode_enviar_email: Boolean(
+        // Método manual-externo (Trabalho 14) nunca assina em `/emitir` — o
+        // PDF baixado agora está SEM assinatura, `pode_enviar_email`
+        // continua false até o médico voltar do Assinador ITI. Os demais
+        // (MANUAL, A1_ARQUIVO) seguem a lógica anterior: assinam de
+        // verdade na própria chamada, quando o nível é qualificada.
+        pode_enviar_email: externo ? false : Boolean(
           metodo !== "MANUAL" && provedor?.disponivel && provedor.nivel === "qualificada",
         ),
+        aguardando_assinatura_externa: externo,
+        metodo_emitido: metodo,
       });
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível emitir.");
@@ -288,6 +305,28 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
           </button>
         )}
       </div>
+
+      {doc.status === "emitido" && doc.aguardando_assinatura_externa && doc.metodo_emitido && (
+        <AssinaturaExternaITI
+          metodo={doc.metodo_emitido}
+          nomeProvedor={provedores?.find((p) => p.codigo === doc.metodo_emitido)?.nome ?? doc.metodo_emitido}
+          enviarUrl={`/receituario/documentos/${doc.id}/assinatura-externa`}
+          onConcluido={() => {
+            const provedor = provedores?.find((p) => p.codigo === doc.metodo_emitido);
+            setAssinadoExternoAgora(true);
+            onAtualizado({
+              ...doc,
+              aguardando_assinatura_externa: false,
+              pode_enviar_email: provedor?.nivel === "qualificada",
+            });
+          }}
+        />
+      )}
+      {assinadoExternoAgora && !doc.aguardando_assinatura_externa && (
+        <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
+          Assinatura conferida com sucesso — o documento já está assinado.
+        </p>
+      )}
 
       {doc.status === "emitido" && doc.pode_enviar_email && (
         <div style={{ marginTop: "0.8rem" }}>

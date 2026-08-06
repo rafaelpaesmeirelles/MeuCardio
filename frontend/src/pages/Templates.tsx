@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Vazio } from "../components/Estado";
+import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+
+// Trabalho 14 (06/08/2026) — mesmo conjunto de `provedor._MANUAL_EXTERNO`
+// no backend: métodos que não têm API própria e passam pelo Assinador ITI.
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
 
 type Template = { id: number; title: string; doc_type: string; body: string };
 type Gerado = { id: number; title: string; doc_type: string; created_at: string; patient_name: string | null };
@@ -64,6 +69,8 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
+  const [aguardandoExterno, setAguardandoExterno] = useState(false);
+  const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
 
   const faltando = variaveis.filter((v) => !valores[v]?.trim());
 
@@ -93,6 +100,7 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
         `/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`,
       );
       baixarBlob(blob, `${template.doc_type}-${geradoId}.pdf`);
+      setAguardandoExterno(METODOS_MANUAL_EXTERNO.has(metodo));
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
     }
@@ -169,6 +177,23 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
             })()}
           </div>
           <button className="botao" style={{ marginTop: "0.6rem" }} onClick={baixar}>Baixar PDF</button>
+
+          {aguardandoExterno && geradoId && (
+            <AssinaturaExternaITI
+              metodo={metodo}
+              nomeProvedor={provedores?.find((p) => p.codigo === metodo)?.nome ?? metodo}
+              enviarUrl={`/document-templates/gerados/${geradoId}/assinatura-externa`}
+              onConcluido={() => {
+                setAguardandoExterno(false);
+                setAssinadoExternoAgora(true);
+              }}
+            />
+          )}
+          {assinadoExternoAgora && (
+            <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
+              Assinatura conferida com sucesso — o documento já está assinado.
+            </p>
+          )}
 
           <div style={{ marginTop: "0.8rem" }}>
             <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
