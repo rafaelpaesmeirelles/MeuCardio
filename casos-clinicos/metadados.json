@@ -11296,5 +11296,25 @@
       "Takemura M, Ikemura K, Okuda M. Factors and preventive strategies for perioperative euglycemic diabetic ketoacidosis in patients with type 2 diabetes receiving sodium-glucose cotransporter 2 inhibitors: a retrospective study. J Pharm Health Care Sci. 2025;11:56. PMID: 40855351"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-ou-crise-convulsiva-mordedura-lingua-mioclonia",
+    "titulo": "Perda transitória da consciência com abalos: síncope ou crise epiléptica?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 45 anos, episódio presenciado de perda súbita de consciência após ficar em pé por tempo prolongado em ambiente quente. Testemunha relata poucos abalos musculares irregulares e assimétricos que começaram alguns segundos DEPOIS da queda, mordedura na ponta da língua, e recuperação da consciência com plena orientação em menos de 30 segundos.",
+    "pergunta": "Segundo a Tabela 10 da diretriz ESC 2018 (diferenciação síncope vs. crise epiléptica), qual conjunto de achados está descrito neste caso?",
+    "opcoes": [
+      "Achados típicos de crise epiléptica: mioclonia sincrônica de início simultâneo à perda de consciência e confusão pós-ictal prolongada",
+      "Achados típicos de síncope: mioclonia de início tardio (após a perda de consciência), poucas contrações irregulares e assimétricas, mordedura na ponta da língua, e recuperação rápida com plena orientação",
+      "O quadro é indeterminado — mordedura de língua sempre indica crise epiléptica, independentemente de outros achados",
+      "Face cianótica é o achado mais importante deste caso e por si só confirma síncope"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Tabela 10 da diretriz ESC 2018 lista como achados que favorecem síncope (não crise epiléptica): mioclonia com menos de 10 contrações, de amplitude irregular, assíncrona e assimétrica, com início APÓS o início da perda de consciência (na crise epiléptica, a mioclonia tem 20-100 contrações síncronas e simétricas, com início coincidindo com a perda de consciência); mordedura na PONTA da língua (na crise epiléptica, tipicamente lateral); e recuperação da consciência em 10-30 segundos com plena orientação (na crise epiléptica, o déficit de memória com perguntas repetidas dura muitos minutos). O gatilho (ortostatismo prolongado em ambiente quente) também favorece síncope reflexa. Mordedura de língua isoladamente não é discriminativa — o local da mordedura (ponta vs. lateral) é que tem valor, e cianose facial é achado de utilidade limitada segundo a própria diretriz, não decisivo isoladamente.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037, Tabela 10"
+    ],
+    "review_status": "revisado"
   }
 ]
