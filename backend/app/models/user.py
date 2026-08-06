@@ -79,6 +79,15 @@ class User(Base):
     ia_ferramentas_consent_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     ia_ferramentas_consent_versao: Mapped[str | None] = mapped_column(String(40), nullable=True)
 
+    # Assinatura de e-mail (logo Corvia + logo/dados profissionais) anexada
+    # ao final de todo e-mail enviado pelo CorvIA Mail — nativo ou contas
+    # externas conectadas. Desligada por padrão (opt-in). Telefone e endereço
+    # profissional são sub-opções independentes: o médico pode querer nome/
+    # CRM/logo na assinatura sem publicar telefone ou endereço do consultório.
+    email_assinatura_ativa: Mapped[bool] = mapped_column(Boolean, default=False)
+    email_assinatura_incluir_telefone: Mapped[bool] = mapped_column(Boolean, default=False)
+    email_assinatura_incluir_endereco: Mapped[bool] = mapped_column(Boolean, default=False)
+
 
 @event.listens_for(User.password_hash, "set")
 def _revogar_sessoes_ao_trocar_senha(target, value, oldvalue, initiator) -> None:

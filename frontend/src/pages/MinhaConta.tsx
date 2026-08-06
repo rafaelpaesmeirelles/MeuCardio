@@ -480,6 +480,90 @@ function PreferenciaAssinaturaDigital({ perfil, aoSalvar }: { perfil: Usuario; a
   );
 }
 
+type AssinaturaEmail = {
+  ativa: boolean;
+  incluir_telefone: boolean;
+  incluir_endereco: boolean;
+  pre_visualizacao: string | null;
+};
+
+/** Assinatura anexada ao final de todo e-mail enviado pelo CorvIA Mail (caixa
+ * nativa e contas Google/Microsoft conectadas) — logo Corvia, logo
+ * profissional se houver, nome e CRM. Desligada por padrão; telefone e
+ * endereço do consultório são opções à parte, mesmo com a assinatura ligada. */
+function PreferenciaAssinaturaEmail() {
+  const [dados, setDados] = useState<AssinaturaEmail | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const [erro, setErro] = useState("");
+
+  useEffect(() => {
+    api.get<AssinaturaEmail>("/email/assinatura").then(setDados).catch(() => {});
+  }, []);
+
+  async function salvar(proximo: Pick<AssinaturaEmail, "ativa" | "incluir_telefone" | "incluir_endereco">) {
+    setSalvando(true);
+    setErro("");
+    try {
+      setDados(await api.put<AssinaturaEmail>("/email/assinatura", proximo));
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível salvar a assinatura de e-mail.");
+    } finally {
+      setSalvando(false);
+    }
+  }
+
+  if (!dados) return null;
+
+  return (
+    <div className="cartao">
+      <h2 style={{ margin: "0 0 0.2rem" }}>Assinatura de e-mail</h2>
+      <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
+        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM ao final de
+        todo e-mail enviado pelo CorvIA Mail — caixa nativa e contas Google/Microsoft conectadas.
+      </p>
+
+      <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.7rem" }}>
+        <input
+          type="checkbox" style={{ width: "auto" }} checked={dados.ativa} disabled={salvando}
+          onChange={(e) => salvar({ ativa: e.target.checked, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco })}
+        />
+        Incluir assinatura nos e-mails que eu enviar
+      </label>
+
+      {dados.ativa && (
+        <div style={{ marginTop: "0.5rem", paddingLeft: "1.6rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+          <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <input
+              type="checkbox" style={{ width: "auto" }} checked={dados.incluir_telefone} disabled={salvando}
+              onChange={(e) => salvar({ ativa: true, incluir_telefone: e.target.checked, incluir_endereco: dados.incluir_endereco })}
+            />
+            Incluir telefone profissional
+          </label>
+          <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <input
+              type="checkbox" style={{ width: "auto" }} checked={dados.incluir_endereco} disabled={salvando}
+              onChange={(e) => salvar({ ativa: true, incluir_telefone: dados.incluir_telefone, incluir_endereco: e.target.checked })}
+            />
+            Incluir endereço profissional
+          </label>
+        </div>
+      )}
+
+      {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.84rem" }}>{erro}</p>}
+
+      {dados.ativa && dados.pre_visualizacao && (
+        <div style={{ marginTop: "0.7rem" }}>
+          <p style={{ margin: "0 0 0.3rem", fontSize: "0.78rem", color: "var(--texto-secundario)" }}>Pré-visualização:</p>
+          <div
+            style={{ border: "1px solid var(--borda)", borderRadius: "8px", padding: "0.6rem", background: "#fff" }}
+            dangerouslySetInnerHTML={{ __html: dados.pre_visualizacao }}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
 type Fatura = {
   id: string;
   numero: string | null;
@@ -786,6 +870,7 @@ export default function MinhaConta() {
             recarregar();
           }}
         />
+        <PreferenciaAssinaturaEmail />
         <DadosPessoais
           perfil={perfil}
           aoSalvar={(u) => {

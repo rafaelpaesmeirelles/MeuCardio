@@ -232,19 +232,23 @@ def responder_mensagem(
     cc: str | None = None,
     cco: str | None = None,
     anexos: list[str] | None = None,
+    mail_format: str = "plaintext",
 ) -> dict:
-    """Responde, responde a todos ou encaminha preservando a conversa real."""
+    """Responde, responde a todos ou encaminha preservando a conversa real.
+    `mail_format` — ver a nota em `enviar_mensagem`, mesma regra."""
     if acao not in {"reply", "replyall", "forward"}:
         raise Mail360Error("Ação de resposta inválida.")
     if acao == "forward" and not para:
         raise Mail360Error("Informe o destinatário do encaminhamento.")
+    if mail_format not in ("html", "plaintext"):
+        raise Mail360Error(f"mail_format inválido: {mail_format!r}.")
 
     corpo: dict[str, object] = {
         "fromAddress": remetente,
         "action": acao,
         "subject": assunto,
         "content": conteudo,
-        "mailFormat": "plaintext",
+        "mailFormat": mail_format,
     }
     if para:
         corpo["toAddress"] = para
@@ -311,17 +315,28 @@ def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
 def enviar_mensagem(
     account_key: str, remetente: str, para: str, assunto: str, corpo_html: str,
     anexos: list[str] | None = None, cc: str | None = None, cco: str | None = None,
+    mail_format: str = "plaintext",
 ) -> dict:
     """`fromAddress` é obrigatório — confirmado em 30/07/2026 contra a API
     real: sem ele, `/messages` devolve 500 "Given FromAddress not exists!".
     A API não deriva o remetente do `account_key` sozinha, então quem chama
-    precisa passar o endereço da própria caixa (`conta.email_address`)."""
+    precisa passar o endereço da própria caixa (`conta.email_address`).
+
+    `mail_format`: "plaintext" (padrão, igual ao comportamento de sempre —
+    hoje o compositor do CorvIA Mail é um `<textarea>` puro, não um editor
+    rico, então o texto do médico nunca contém HTML de verdade) ou "html"
+    (usado quando a assinatura de e-mail está ligada — ver
+    `app/services/email_signature.py` — porque ela precisa renderizar um
+    `<img>`, não aparecer como tag literal). Confirmado contra a doc oficial
+    do Mail360 em 06/08/2026: `mailFormat` aceita `html`/`plaintext`."""
+    if mail_format not in ("html", "plaintext"):
+        raise Mail360Error(f"mail_format inválido: {mail_format!r}.")
     corpo: dict = {
         "fromAddress": remetente,
         "toAddress": para,
         "subject": assunto,
         "content": corpo_html,
-        "mailFormat": "plaintext",
+        "mailFormat": mail_format,
     }
     if cc:
         corpo["ccAddress"] = cc

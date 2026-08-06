@@ -54,6 +54,7 @@ from app.models.user import User
 from app.services import emails, mail360
 from app.services import external_mail
 from app.services.agenda_integrada.contacts import list_contacts
+from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
 
@@ -143,6 +144,43 @@ def minha_conta(db: Session = Depends(get_db), user: User = Depends(current_user
         "senha_definida": conta.password_hash is not None,
         "lgpd_aceite_versao": conta.lgpd_aceite_versao,
         "lgpd_versao_atual": termo_lgpd_email.VERSAO,
+    }
+
+
+class AssinaturaEmailIn(BaseModel):
+    ativa: bool
+    incluir_telefone: bool = False
+    incluir_endereco: bool = False
+
+
+@router.get("/assinatura")
+def obter_assinatura(user: User = Depends(current_user)):
+    return {
+        "ativa": user.email_assinatura_ativa,
+        "incluir_telefone": user.email_assinatura_incluir_telefone,
+        "incluir_endereco": user.email_assinatura_incluir_endereco,
+        "pre_visualizacao": montar_assinatura_html(user),
+    }
+
+
+@router.put("/assinatura")
+def definir_assinatura(
+    dados: AssinaturaEmailIn, db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    """Liga/desliga a assinatura anexada a todo e-mail enviado pelo CorvIA
+    Mail (nativo e contas externas conectadas) — logo Corvia, logo
+    profissional se houver, nome e CRM. Telefone e endereço do consultório
+    são sub-opções independentes: só entram se o médico marcar cada uma,
+    mesmo com a assinatura ligada."""
+    user.email_assinatura_ativa = dados.ativa
+    user.email_assinatura_incluir_telefone = dados.incluir_telefone
+    user.email_assinatura_incluir_endereco = dados.incluir_endereco
+    db.commit()
+    return {
+        "ativa": user.email_assinatura_ativa,
+        "incluir_telefone": user.email_assinatura_incluir_telefone,
+        "incluir_endereco": user.email_assinatura_incluir_endereco,
+        "pre_visualizacao": montar_assinatura_html(user),
     }
 
 
@@ -433,26 +471,6 @@ def contas_da_caixa_unificada(
     return resultado
 
 
-def _timestamp_ordenacao(valor: object) -> float:
-    """`receivedTime` chega em três formatos diferentes conforme a origem —
-    epoch em milissegundos (caixa nativa e Gmail, `internalDate`) ou ISO 8601
-    (Microsoft Graph, `receivedDateTime`) — porque cada provedor normaliza
-    para o mesmo NOME de campo, não para o mesmo FORMATO. Sem isto, ordenar a
-    lista misturada por data compararia string com número."""
-    texto = str(valor or "").strip()
-    if not texto:
-        return 0.0
-    try:
-        return float(texto) / 1000
-    except ValueError:
-        pass
-    try:
-        from datetime import datetime as _datetime
-        return _datetime.fromisoformat(texto.replace("Z", "+00:00")).timestamp()
-    except ValueError:
-        return 0.0
-
-
 @router.get("/mensagens/todas")
 def mensagens_todas(
     limite: int = 20,
@@ -507,7 +525,7 @@ def mensagens_todas(
         except external_mail.ExternalMailError as exc:
             fontes_com_erro.append({"origem": str(integracao.id), "provider": provider, "erro": str(exc)})
 
-    mensagens.sort(key=lambda m: _timestamp_ordenacao(m.get("receivedTime")), reverse=True)
+    mensagens.sort(key=_momento_da_mensagem, reverse=True)
     return {"mensagens": mensagens[:limite], "fontes_com_erro": fontes_com_erro}
 
 
@@ -633,12 +651,18 @@ async def enviar_anexo(arquivo: UploadFile, conta: EmailAccount = Depends(curren
 
 
 @router.post("/mensagens", status_code=201)
-def enviar(dados: NovaMensagem, conta: EmailAccount = Depends(current_email_account)):
+def enviar(
+    dados: NovaMensagem,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
     _exigir_configurado()
+    titular = db.get(User, conta.user_id)
+    corpo, formato = montar_corpo_com_assinatura(dados.corpo_html, montar_assinatura_html(titular))
     try:
         return mail360.enviar_mensagem(
-            conta.mail360_account_key, conta.email_address, dados.para, dados.assunto, dados.corpo_html,
-            anexos=dados.anexos, cc=dados.cc, cco=dados.cco,
+            conta.mail360_account_key, conta.email_address, dados.para, dados.assunto, corpo,
+            anexos=dados.anexos, cc=dados.cc, cco=dados.cco, mail_format=formato,
         )
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
@@ -648,9 +672,12 @@ def enviar(dados: NovaMensagem, conta: EmailAccount = Depends(current_email_acco
 def responder(
     message_id: str,
     dados: ResponderMensagem,
+    db: Session = Depends(get_db),
     conta: EmailAccount = Depends(current_email_account),
 ):
     _exigir_configurado()
+    titular = db.get(User, conta.user_id)
+    conteudo, formato = montar_corpo_com_assinatura(dados.conteudo, montar_assinatura_html(titular))
     try:
         return mail360.responder_mensagem(
             conta.mail360_account_key,
@@ -658,11 +685,12 @@ def responder(
             conta.email_address,
             dados.acao,
             dados.assunto,
-            dados.conteudo,
+            conteudo,
             para=dados.para,
             cc=dados.cc,
             cco=dados.cco,
             anexos=dados.anexos,
+            mail_format=formato,
         )
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
@@ -820,9 +848,17 @@ def enviar_mensagem_externa(
     if dados.anexos:
         raise HTTPException(status_code=422, detail="Envie anexos pela caixa nativa; anexos externos serão liberados após validação específica de cada provedor.")
     integracao = _integracao_email(db, conta, integration_id, escrita=True)
+    titular = db.get(User, conta.user_id)
+    assinatura = montar_assinatura_html(titular)
+    # send_message() já trata `html` como HTML de verdade (Gmail/Graph), ao
+    # contrário da caixa nativa — por isso, sem assinatura, o corpo segue
+    # exatamente como já era (comportamento inalterado). Só quando a
+    # assinatura está ligada o texto do médico passa a ser escapado antes de
+    # virar HTML, porque nesse caminho ele nunca foi escapado.
+    corpo = dados.corpo_html if assinatura is None else montar_corpo_com_assinatura(dados.corpo_html, assinatura)[0]
     try:
         return external_mail.send_message(
-            db, integracao, to=dados.para, subject=dados.assunto, html=dados.corpo_html,
+            db, integracao, to=dados.para, subject=dados.assunto, html=corpo,
             cc=dados.cc, bcc=dados.cco,
         )
     except external_mail.ExternalMailError as exc:

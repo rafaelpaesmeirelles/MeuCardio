@@ -129,10 +129,11 @@ def monkeypatch_mail360(monkeypatch):
         estado["anexos"].append((account_key, nome_arquivo, len(conteudo)))
         return f"file-id-{len(estado['anexos'])}"
 
-    def _enviar_mensagem(account_key, remetente, para, assunto, corpo_html, anexos=None, cc=None, cco=None):
+    def _enviar_mensagem(account_key, remetente, para, assunto, corpo_html, anexos=None, cc=None, cco=None, mail_format="plaintext"):
         registro = {
             "account_key": account_key, "remetente": remetente, "para": para,
-            "assunto": assunto, "anexos": anexos or [], "cc": cc, "cco": cco,
+            "assunto": assunto, "corpo": corpo_html, "anexos": anexos or [], "cc": cc, "cco": cco,
+            "mail_format": mail_format,
         }
         estado["mensagens_enviadas"].append(registro)
         return {"messageId": "msg-enviada-1"}
@@ -148,12 +149,12 @@ def monkeypatch_mail360(monkeypatch):
 
     def _responder_mensagem(
         account_key, message_id, remetente, acao, assunto, conteudo,
-        para=None, cc=None, cco=None, anexos=None,
+        para=None, cc=None, cco=None, anexos=None, mail_format="plaintext",
     ):
         estado["respostas"].append({
             "account_key": account_key, "message_id": message_id, "remetente": remetente,
             "acao": acao, "assunto": assunto, "conteudo": conteudo, "para": para,
-            "cc": cc, "cco": cco, "anexos": anexos or [],
+            "cc": cc, "cco": cco, "anexos": anexos or [], "mail_format": mail_format,
         })
         return {"messageId": "resposta-1"}
 
