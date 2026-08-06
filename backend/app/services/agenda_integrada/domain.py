@@ -70,7 +70,10 @@ def integration_cursor(integration: CalendarIntegration) -> str | None:
 
 def store_integration_credentials(integration: CalendarIntegration, credentials: dict) -> None:
     oauth = {"access_token", "refresh_token", "expires_at", "token_type", "scope"}
-    allowed = {"username", "app_specific_password"} if integration.provider == "apple_icloud" else oauth
+    # Apple e Yahoo não falam OAuth — as duas usam senha específica de app
+    # gerada pelo próprio titular (ver docstring de yahoo_mail.py).
+    senha_de_app = {"username", "app_specific_password"}
+    allowed = senha_de_app if integration.provider in ("apple_icloud", "yahoo_mail") else oauth
     unknown = set(credentials) - allowed
     if unknown:
         raise ValueError(f"Campos de credencial não aceitos: {', '.join(sorted(unknown))}.")

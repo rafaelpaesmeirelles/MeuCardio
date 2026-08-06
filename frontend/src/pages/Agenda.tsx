@@ -288,6 +288,7 @@ export default function Agenda() {
   });
   const [novaIntegracao, setNovaIntegracao] = useState({ provider: "feegow", display_name: "" });
   const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false });
+  const [yahoo, setYahoo] = useState({ endereco: "", senha_de_app: "", consent_accepted: false });
   const [consentimentoContas, setConsentimentoContas] = useState(false);
   const [novoLocal, setNovoLocal] = useState({ name: "", city: "", state: "", latitude: "", longitude: "" });
   const [novoServico, setNovoServico] = useState({ name: "", code: "", location_id: "", duration_minutes: 30, price: "", allow_extra_slot: false });
@@ -545,6 +546,15 @@ export default function Agenda() {
   async function conectarApple() {
     await api.post("/agenda/integrations/apple", { ...apple, contacts: true });
     setApple({ apple_id: "", app_specific_password: "", consent_accepted: false });
+    await carregar();
+  }
+
+  async function conectarYahoo() {
+    // Diferente de Apple/Google/Microsoft, é rota do CorvIA Mail
+    // (/api/email/...), não da Agenda — a Yahoo não sincroniza calendário
+    // nem contatos, só e-mail (ver docs/adr-... e o serviço yahoo_mail.py).
+    await api.post("/email/conectar-yahoo", { ...yahoo, senha_de_app: yahoo.senha_de_app });
+    setYahoo({ endereco: "", senha_de_app: "", consent_accepted: false });
     await carregar();
   }
 
@@ -843,7 +853,14 @@ export default function Agenda() {
             <p className="agenda-config-help span-2">Use somente uma senha específica de app criada em account.apple.com. O Corvia nunca solicita nem armazena sua senha principal da Apple.</p>
             <button className="botao botao--secundario" disabled={!apple.apple_id || !apple.app_specific_password || !apple.consent_accepted} onClick={() => conectarApple().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o iCloud."))}>Conectar Apple</button>
           </div></details>
-          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider)).map((item) => <div className="agenda-config-item" key={item.id}><i className={item.enabled ? "conectavel" : "em-breve"} /><span><strong>{item.display_name}</strong><small>{item.enabled ? `${item.contact_count} contatos · ${item.last_success_at ? "sincronizada" : "aguardando primeira sincronização"}` : "desconectada"}</small></span><div className="agenda-conta-acoes"><button onClick={() => sincronizarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))} disabled={!item.enabled}>Sincronizar</button><button onClick={() => desconectarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha ao desconectar."))} disabled={!item.enabled}>Desconectar</button></div></div>)}
+          <details className="agenda-apple-config"><summary><LogoProvedor provedor="yahoo" /> Conectar Yahoo Mail (só e-mail, sem calendário)</summary><div className="agenda-config-form agenda-config-form--routine">
+            <label>Endereço Yahoo<input type="email" autoComplete="username" value={yahoo.endereco} onChange={(e) => setYahoo({ ...yahoo, endereco: e.target.value })} placeholder="nome@yahoo.com" /></label>
+            <label>Senha específica de app<input type="password" autoComplete="new-password" value={yahoo.senha_de_app} onChange={(e) => setYahoo({ ...yahoo, senha_de_app: e.target.value })} placeholder="gerada em login.yahoo.com" /></label>
+            <label className="agenda-check span-2"><input type="checkbox" checked={yahoo.consent_accepted} onChange={(e) => setYahoo({ ...yahoo, consent_accepted: e.target.checked })} /> Autorizo a leitura e o envio de e-mail pela minha caixa Yahoo.</label>
+            <p className="agenda-config-help span-2">Gere a senha em login.yahoo.com → Segurança da conta → Senhas de aplicativos de terceiros. O Corvia nunca solicita nem armazena sua senha principal da Yahoo. A Yahoo não sincroniza calendário nem contatos aqui, só e-mail.</p>
+            <button className="botao botao--secundario" disabled={!yahoo.endereco || !yahoo.senha_de_app || !yahoo.consent_accepted} onClick={() => conectarYahoo().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar a Yahoo."))}>Conectar Yahoo</button>
+          </div></details>
+          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider)).map((item) => <div className="agenda-config-item" key={item.id}><i className={item.enabled ? "conectavel" : "em-breve"} /><span><strong>{item.display_name}</strong><small>{item.provider === "yahoo_mail" ? (item.enabled ? "e-mail conectado" : "desconectada") : item.enabled ? `${item.contact_count} contatos · ${item.last_success_at ? "sincronizada" : "aguardando primeira sincronização"}` : "desconectada"}</small></span><div className="agenda-conta-acoes">{item.provider !== "yahoo_mail" && <button onClick={() => sincronizarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))} disabled={!item.enabled}>Sincronizar</button>}<button onClick={() => desconectarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha ao desconectar."))} disabled={!item.enabled}>Desconectar</button></div></div>)}
         </section>
         <section className="agenda-config-section">
           <div className="agenda-config-section__title"><div><h3>Importar agendas de clínicas e hospitais</h3><p>Prepare uma conexão para cada local de trabalho. Ativação e escrita exigem API oficial, credenciais e homologação do fornecedor.</p></div><span>{integracoes.length}</span></div>

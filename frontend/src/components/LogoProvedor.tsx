@@ -1,4 +1,4 @@
-type Provedor = "google" | "microsoft" | "apple";
+type Provedor = "google" | "microsoft" | "apple" | "yahoo";
 
 type Props = {
   provedor: Provedor;
@@ -36,9 +36,21 @@ export default function LogoProvedor({ provedor, className = "" }: Props) {
     </span>;
   }
 
+  if (provedor === "apple") {
+    return <span className={classes} aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path fill="currentColor" d="M20.013 10.726v-.028A6.346 6.346 0 0 0 8.09 7.67a3.414 3.414 0 0 0-4.989 2.829A4.72 4.72 0 0 0 4.719 19.648h14.807a4.475 4.475 0 0 0 .487-8.922Z" />
+      </svg>
+    </span>;
+  }
+
+  // Yahoo — símbolo geométrico próprio, não o logotipo oficial (mesmo
+  // critério já usado acima para a Apple: identifica o provedor sem
+  // reproduzir marca registrada de terceiro pixel a pixel).
   return <span className={classes} aria-hidden="true">
-    <svg viewBox="0 0 24 24" focusable="false">
-      <path fill="currentColor" d="M20.013 10.726v-.028A6.346 6.346 0 0 0 8.09 7.67a3.414 3.414 0 0 0-4.989 2.829A4.72 4.72 0 0 0 4.719 19.648h14.807a4.475 4.475 0 0 0 .487-8.922Z" />
+    <svg viewBox="0 0 18 18" focusable="false">
+      <circle cx="9" cy="9" r="9" fill="#6001D2" />
+      <text x="9" y="13" textAnchor="middle" fontSize="10" fontWeight="700" fontFamily="Arial,Helvetica,sans-serif" fill="#fff">Y!</text>
     </svg>
   </span>;
 }

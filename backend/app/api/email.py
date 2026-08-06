@@ -33,7 +33,7 @@ from fastapi import (
     Response,
     UploadFile,
 )
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
 from app.content import termo_lgpd_email
@@ -47,16 +47,19 @@ from app.core.security import (
     hash_password,
     verify_password,
 )
+from app.models.audit import AuditLog
 from app.models.email_account import EmailAccount
 from app.models.agenda import CalendarIntegration
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import emails, mail360
-from app.services import external_mail
+from app.services import external_mail, yahoo_mail
 from app.services.agenda_integrada.contacts import list_contacts
+from app.services.agenda_integrada.domain import integration_credentials, store_integration_credentials
 from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
+from app.services.yahoo_mail import YahooMailError
 
 router = APIRouter(prefix="/api/email", tags=["caixa de e-mail"])
 
@@ -128,6 +131,10 @@ def _validar_local_part(db: Session, local: str) -> str | None:
 
 def _obter_conta(db: Session, user: User) -> EmailAccount | None:
     return db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
+
+
+def _provider_curto(provider: str) -> str:
+    return {"google_calendar": "google", "microsoft_365": "microsoft", "yahoo_mail": "yahoo"}.get(provider, provider)
 
 
 # --------------------------------------------------------------------------
@@ -434,6 +441,78 @@ def eu(conta: EmailAccount = Depends(current_email_account)):
     return {"email_address": conta.email_address}
 
 
+_EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
+
+
+class YahooMailIntegrationIn(BaseModel):
+    """Yahoo não fala OAuth — a senha de aplicativo é gerada pelo próprio
+    titular em login.yahoo.com → Segurança da conta (mesmo padrão já usado
+    para a Apple). Ver docstring de `app/services/yahoo_mail.py` para o
+    porquê disso não passar por acordo comercial nem app registrado."""
+    endereco: str = Field(min_length=5, max_length=320)
+    senha_de_app: str = Field(min_length=4, max_length=64)
+    consent_accepted: bool
+
+    @field_validator("endereco")
+    @classmethod
+    def _endereco(cls, value: str) -> str:
+        if not _EMAIL_RE.fullmatch(value):
+            raise ValueError("Endereço Yahoo inválido.")
+        return value.lower()
+
+
+@router.post("/conectar-yahoo", status_code=201)
+def conectar_yahoo(
+    dados: YahooMailIntegrationIn, db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    """Conecta uma conta Yahoo Mail via IMAP/SMTP com senha de aplicativo —
+    aparece depois em GET /contas e nas rotas /externas/{id}/... como
+    qualquer outra conta conectada. current_user (sessão principal Corvia),
+    não a sessão de e-mail: mesma família de decisão de conexão que
+    Google/Microsoft/Apple, que também vive fora da sessão de e-mail."""
+    if not dados.consent_accepted:
+        raise HTTPException(status_code=422, detail="Aceite o acesso de leitura/envio à sua caixa Yahoo.")
+    existing = db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == user.id,
+        CalendarIntegration.provider == "yahoo_mail",
+        CalendarIntegration.external_account_id == dados.endereco,
+    ).first()
+    item = existing or CalendarIntegration(
+        owner_id=user.id, provider="yahoo_mail", display_name=dados.endereco,
+        external_account_id=dados.endereco, sync_strategy="external_authoritative",
+    )
+    if not existing:
+        db.add(item)
+        db.flush()
+    credenciais = {"username": dados.endereco, "app_specific_password": dados.senha_de_app}
+    try:
+        diagnostico = yahoo_mail.diagnose(credenciais)
+    except YahooMailError as exc:
+        db.rollback()
+        raise HTTPException(status_code=exc.status_code, detail=str(exc)) from exc
+    item.status = "connected"
+    item.enabled = True
+    item.write_enabled = False
+    item.contacts_enabled = False
+    # Diferente de Google/Microsoft, aqui não há escopo parcial — a senha de
+    # aplicativo dá acesso de leitura E envio de uma vez, então as duas
+    # capacidades entram como concedidas ao conectar.
+    item.capabilities = {"read_mail": True, "send_mail": True}
+    item.consent_version = "yahoo-mail-v1-2026-08-06"
+    item.consent_at = datetime.now(timezone.utc)
+    item.revoked_at = None
+    item.last_error_code = None
+    item.last_error_message = None
+    store_integration_credentials(item, credenciais)
+    db.add(AuditLog(
+        user_id=user.id, action="external_account_connected", entity="calendar_integration",
+        entity_id=str(item.id), detail={"provider": "yahoo_mail"},
+    ))
+    db.commit()
+    db.refresh(item)
+    return {"id": item.id, "provider": "yahoo", "status": item.status, "diagnosis": diagnostico}
+
+
 @router.get("/contas")
 def contas_da_caixa_unificada(
     db: Session = Depends(get_db),
@@ -453,7 +532,7 @@ def contas_da_caixa_unificada(
         CalendarIntegration.owner_id == conta.user_id,
         CalendarIntegration.enabled.is_(True),
         CalendarIntegration.status == "connected",
-        CalendarIntegration.provider.in_(["google_calendar", "microsoft_365"]),
+        CalendarIntegration.provider.in_(PROVEDORES_EXTERNOS_MAIL),
     ).order_by(CalendarIntegration.id.asc()).all()
     for integracao in integracoes:
         capacidades = integracao.capabilities or {}
@@ -461,7 +540,7 @@ def contas_da_caixa_unificada(
             continue
         resultado.append({
             "id": str(integracao.id),
-            "provider": "google" if integracao.provider == "google_calendar" else "microsoft",
+            "provider": _provider_curto(integracao.provider),
             "display_name": integracao.display_name,
             "email_address": integracao.display_name,
             "native": False,
@@ -510,19 +589,19 @@ def mensagens_todas(
         CalendarIntegration.owner_id == conta.user_id,
         CalendarIntegration.enabled.is_(True),
         CalendarIntegration.status == "connected",
-        CalendarIntegration.provider.in_(["google_calendar", "microsoft_365"]),
+        CalendarIntegration.provider.in_(PROVEDORES_EXTERNOS_MAIL),
     ).order_by(CalendarIntegration.id.asc()).all()
 
     for integracao in integracoes:
         capacidades = integracao.capabilities or {}
         if not capacidades.get("read_mail"):
             continue
-        provider = "google" if integracao.provider == "google_calendar" else "microsoft"
+        provider = _provider_curto(integracao.provider)
         try:
-            externas = external_mail.list_messages(db, integracao, folder=None, limit=limite, start=1)
+            externas = _mensagens_da_integracao(db, integracao, folder=None, limit=limite, start=1)
             for item in externas:
                 mensagens.append({**item, "origem": str(integracao.id)})
-        except external_mail.ExternalMailError as exc:
+        except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
             fontes_com_erro.append({"origem": str(integracao.id), "provider": provider, "erro": str(exc)})
 
     mensagens.sort(key=_momento_da_mensagem, reverse=True)
@@ -743,6 +822,9 @@ def excluir(message_id: str, conta: EmailAccount = Depends(current_email_account
 # Contas externas — proxy ao vivo; o conteúdo permanece no provedor
 # --------------------------------------------------------------------------
 
+PROVEDORES_EXTERNOS_MAIL = ("google_calendar", "microsoft_365", "yahoo_mail")
+
+
 def _integracao_email(
     db: Session,
     conta: EmailAccount,
@@ -755,7 +837,7 @@ def _integracao_email(
         CalendarIntegration.owner_id == conta.user_id,
         CalendarIntegration.enabled.is_(True),
         CalendarIntegration.status == "connected",
-        CalendarIntegration.provider.in_(["google_calendar", "microsoft_365"]),
+        CalendarIntegration.provider.in_(PROVEDORES_EXTERNOS_MAIL),
     ).first()
     capacidades = (integracao.capabilities or {}) if integracao else {}
     exigida = "send_mail" if escrita else "read_mail"
@@ -767,8 +849,36 @@ def _integracao_email(
     return integracao
 
 
-def _traduzir_erro_externo(exc: external_mail.ExternalMailError) -> HTTPException:
+def _traduzir_erro_externo(exc: external_mail.ExternalMailError | YahooMailError) -> HTTPException:
     return HTTPException(status_code=exc.status_code, detail=str(exc))
+
+
+# A Yahoo não fala REST/OAuth como Gmail e Graph — é IMAP/SMTP com senha de
+# aplicativo (ver o docstring de yahoo_mail.py para o porquê). Estes quatro
+# despachantes escondem essa diferença das rotas HTTP abaixo, que não
+# precisam saber qual protocolo cada provedor fala por baixo.
+def _pastas_da_integracao(db: Session, integracao: CalendarIntegration):
+    if integracao.provider == "yahoo_mail":
+        return yahoo_mail.list_folders(integration_credentials(integracao))
+    return external_mail.list_folders(db, integracao)
+
+
+def _mensagens_da_integracao(db: Session, integracao: CalendarIntegration, *, folder, limit, start):
+    if integracao.provider == "yahoo_mail":
+        return yahoo_mail.list_messages(integration_credentials(integracao), folder=folder, limit=limit, start=start)
+    return external_mail.list_messages(db, integracao, folder=folder, limit=limit, start=start)
+
+
+def _mensagem_da_integracao(db: Session, integracao: CalendarIntegration, message_id: str):
+    if integracao.provider == "yahoo_mail":
+        return yahoo_mail.get_message(integration_credentials(integracao), message_id)
+    return external_mail.get_message(db, integracao, message_id)
+
+
+def _enviar_pela_integracao(db: Session, integracao: CalendarIntegration, *, to, subject, html, cc, bcc):
+    if integracao.provider == "yahoo_mail":
+        return yahoo_mail.send_message(integration_credentials(integracao), to=to, subject=subject, html=html, cc=cc, bcc=bcc)
+    return external_mail.send_message(db, integracao, to=to, subject=subject, html=html, cc=cc, bcc=bcc)
 
 
 @router.get("/externas/{integration_id}/pastas")
@@ -779,8 +889,8 @@ def pastas_externas(
 ):
     integracao = _integracao_email(db, conta, integration_id)
     try:
-        return external_mail.list_folders(db, integracao)
-    except external_mail.ExternalMailError as exc:
+        return _pastas_da_integracao(db, integracao)
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -797,8 +907,8 @@ def mensagens_externas(
         raise HTTPException(status_code=422, detail="Paginação inválida.")
     integracao = _integracao_email(db, conta, integration_id)
     try:
-        return external_mail.list_messages(db, integracao, folder=pasta, limit=limite, start=inicio)
-    except external_mail.ExternalMailError as exc:
+        return _mensagens_da_integracao(db, integracao, folder=pasta, limit=limite, start=inicio)
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -811,8 +921,8 @@ def mensagem_externa(
 ):
     integracao = _integracao_email(db, conta, integration_id)
     try:
-        return external_mail.get_message(db, integracao, message_id)
-    except external_mail.ExternalMailError as exc:
+        return _mensagem_da_integracao(db, integracao, message_id)
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -831,10 +941,15 @@ def agir_em_mensagens_externas(
         raise HTTPException(status_code=422, detail="Informe a pasta de destino.")
     integracao = _integracao_email(db, conta, integration_id)
     try:
-        external_mail.act_on_messages(
-            db, integracao, dados.message_ids, dados.acao, destination=dados.pasta_destino,
-        )
-    except external_mail.ExternalMailError as exc:
+        if integracao.provider == "yahoo_mail":
+            if dados.acao == "mover":
+                raise HTTPException(status_code=422, detail="Mover mensagem ainda não é compatível com a Yahoo.")
+            yahoo_mail.act_on_messages(integration_credentials(integracao), dados.message_ids, dados.acao)
+        else:
+            external_mail.act_on_messages(
+                db, integracao, dados.message_ids, dados.acao, destination=dados.pasta_destino,
+            )
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -850,18 +965,17 @@ def enviar_mensagem_externa(
     integracao = _integracao_email(db, conta, integration_id, escrita=True)
     titular = db.get(User, conta.user_id)
     assinatura = montar_assinatura_html(titular)
-    # send_message() já trata `html` como HTML de verdade (Gmail/Graph), ao
-    # contrário da caixa nativa — por isso, sem assinatura, o corpo segue
+    # send_message() já trata `html` como HTML de verdade (Gmail/Graph/Yahoo),
+    # ao contrário da caixa nativa — por isso, sem assinatura, o corpo segue
     # exatamente como já era (comportamento inalterado). Só quando a
     # assinatura está ligada o texto do médico passa a ser escapado antes de
     # virar HTML, porque nesse caminho ele nunca foi escapado.
     corpo = dados.corpo_html if assinatura is None else montar_corpo_com_assinatura(dados.corpo_html, assinatura)[0]
     try:
-        return external_mail.send_message(
-            db, integracao, to=dados.para, subject=dados.assunto, html=corpo,
-            cc=dados.cc, bcc=dados.cco,
+        return _enviar_pela_integracao(
+            db, integracao, to=dados.para, subject=dados.assunto, html=corpo, cc=dados.cc, bcc=dados.cco,
         )
-    except external_mail.ExternalMailError as exc:
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
