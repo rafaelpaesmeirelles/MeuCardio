@@ -1,0 +1,6 @@
+Olá, {{ nome }}!
+
+Sua conexão com o Google ({{ google_email }}) já está liberada — agenda, contatos e e-mail podem ser conectados agora.
+
+Acesse a Agenda no painel da Corvia e clique em "Conectar Google":
+{{ link_agenda }}

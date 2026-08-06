@@ -89,6 +89,7 @@ type Capacidades = {
   external_writes_enabled: boolean;
   traffic_configured: boolean;
   traffic_provider: string;
+  google_oauth_modo_teste: boolean;
   connectors: Array<{
     provider: string;
     name: string;
@@ -96,6 +97,12 @@ type Capacidades = {
     oauth_configured?: boolean;
     capabilities: Record<string, boolean>;
   }>;
+};
+
+type StatusTesteGoogle = {
+  status: "pendente" | "liberado" | null;
+  google_email?: string;
+  created_at?: string;
 };
 
 type PreferenciaMobilidade = {
@@ -273,6 +280,10 @@ export default function Agenda() {
   const [mensagem, setMensagem] = useState("");
   const [contaEmConexao, setContaEmConexao] = useState<"google" | "microsoft" | null>(null);
   const [integracaoSincronizando, setIntegracaoSincronizando] = useState<number | null>(null);
+  const [statusTesteGoogle, setStatusTesteGoogle] = useState<StatusTesteGoogle | null>(null);
+  const [testeGoogleAberto, setTesteGoogleAberto] = useState(false);
+  const [emailTesteGoogle, setEmailTesteGoogle] = useState("");
+  const [enviandoTesteGoogle, setEnviandoTesteGoogle] = useState(false);
   const [novo, setNovo] = useState({
     patient_name: "", patient_phone: "", patient_email: "", email_consent: false,
     starts_at: localDateTime(), service_id: "", location_id: "", duration_minutes: 30,
@@ -350,7 +361,7 @@ export default function Agenda() {
   }, [configAberta, focarContasExternas]);
 
   async function carregar() {
-    const [appointments, locations, services, integrations, capabilities, mobility, routines, commitmentSeries] = await Promise.all([
+    const [appointments, locations, services, integrations, capabilities, mobility, routines, commitmentSeries, testeGoogle] = await Promise.all([
       api.get<Agendamento[]>("/agenda/appointments"),
       api.get<LocalAgenda[]>("/agenda/locations"),
       api.get<Servico[]>("/agenda/services"),
@@ -359,9 +370,32 @@ export default function Agenda() {
       api.get<PreferenciaMobilidade>("/agenda/mobility/preferences"),
       api.get<RotinaTrabalho[]>("/agenda/work-routines"),
       api.get<SerieCompromisso[]>("/agenda/commitment-series"),
+      api.get<StatusTesteGoogle>("/agenda/google-teste/status"),
     ]);
     setAgendamentos(appointments); setLocais(locations); setServicos(services);
     setIntegracoes(integrations); setCapacidades(capabilities); setMobilidade(mobility); setRotinas(routines); setSeries(commitmentSeries);
+    setStatusTesteGoogle(testeGoogle);
+  }
+
+  async function solicitarTesteGoogle() {
+    setEnviandoTesteGoogle(true);
+    try {
+      await api.post("/agenda/google-teste/solicitar", { google_email: emailTesteGoogle.trim().toLowerCase() });
+      setStatusTesteGoogle({ status: "pendente", google_email: emailTesteGoogle.trim().toLowerCase() });
+      setTesteGoogleAberto(false);
+      setMensagem("Pedido enviado — avisaremos por e-mail assim que sua conexão com o Google estiver liberada.");
+    } finally {
+      setEnviandoTesteGoogle(false);
+    }
+  }
+
+  function conectarOuSolicitarGoogle() {
+    if (capacidades?.google_oauth_modo_teste && statusTesteGoogle?.status !== "liberado") {
+      setEmailTesteGoogle(statusTesteGoogle?.google_email || "");
+      setTesteGoogleAberto(true);
+      return Promise.resolve();
+    }
+    return conectarConta("google");
   }
 
   async function carregarCompromissos(reference = referencia) {
@@ -686,7 +720,10 @@ export default function Agenda() {
           {[{ provider: "google_calendar", nome: "Google", acao: "google" as const }, { provider: "microsoft_365", nome: "Microsoft", acao: "microsoft" as const }].map((conta) => {
             const integracao = integracoes.find((item) => item.provider === conta.provider && item.enabled);
             const configurado = capacidades?.connectors.find((item) => item.provider === conta.provider)?.oauth_configured !== false;
-            return <article key={conta.provider} className="agenda-conta-provider"><LogoProvedor provedor={conta.acao} /><div><strong>{conta.nome}</strong><small>{integracao ? `${integracao.contact_count} contatos · conexão ativa` : configurado ? "Calendário e contatos disponíveis para conectar" : "Credenciais OAuth ainda não cadastradas"}</small></div>{integracao ? <button disabled={integracaoSincronizando === integracao.id} onClick={() => sincronizarConta(integracao.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))}>{integracaoSincronizando === integracao.id ? "Atualizando…" : "Sincronizar"}</button> : <button disabled={!consentimentoContas || !configurado || contaEmConexao !== null} onClick={() => conectarConta(conta.acao).catch((e) => setErro(e instanceof ApiError ? e.message : `Não foi possível conectar ${conta.nome}.`))}>{contaEmConexao === conta.acao ? "Abrindo…" : "Conectar"}</button>}</article>;
+            const emTesteAguardando = conta.acao === "google" && capacidades?.google_oauth_modo_teste && statusTesteGoogle?.status === "pendente";
+            const rotulo = emTesteAguardando ? "Aguardando liberação — clique para editar o e-mail" : contaEmConexao === conta.acao ? "Abrindo…" : "Conectar";
+            const acaoClique = conta.acao === "google" ? conectarOuSolicitarGoogle : () => conectarConta(conta.acao);
+            return <article key={conta.provider} className="agenda-conta-provider"><LogoProvedor provedor={conta.acao} /><div><strong>{conta.nome}</strong><small>{integracao ? `${integracao.contact_count} contatos · conexão ativa` : emTesteAguardando ? `Integração momentaneamente limitada a Calendário/Agenda — avisaremos quando o e-mail (${statusTesteGoogle?.google_email}) estiver sincronizado` : configurado ? "Calendário e contatos disponíveis para conectar" : "Credenciais OAuth ainda não cadastradas"}</small></div>{integracao ? <button disabled={integracaoSincronizando === integracao.id} onClick={() => sincronizarConta(integracao.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))}>{integracaoSincronizando === integracao.id ? "Atualizando…" : "Sincronizar"}</button> : <button disabled={!consentimentoContas || !configurado || contaEmConexao !== null} onClick={() => acaoClique().catch((e: unknown) => setErro(e instanceof ApiError ? e.message : `Não foi possível conectar ${conta.nome}.`))}>{rotulo}</button>}</article>;
           })}
           <article className="agenda-conta-provider"><LogoProvedor provedor="apple" /><div><strong>Apple iCloud</strong><small>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Calendário e contatos do iCloud conectados" : "Conexão segura por senha específica de app"}</small></div><button disabled={!consentimentoContas} onClick={abrirContasExternas}>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Gerenciar" : "Conectar"}</button></article>
         </div>
@@ -793,6 +830,15 @@ export default function Agenda() {
         <footer><button className="botao botao--secundario" onClick={() => setNovoAberto(false)}>Cancelar</button><button className="botao" disabled={salvando || !novo.patient_name.trim()} onClick={salvarAgendamento}>{salvando ? "Verificando agenda…" : "Confirmar agendamento"}</button></footer>
       </div></div>}
 
+      {testeGoogleAberto && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="teste-google-titulo"><div className="agenda-modal__painel agenda-modal__painel--compacto">
+        <header><div><p className="eyebrow">Conexão com o Google</p><h2 id="teste-google-titulo">Integração em fase de testes</h2></div><button onClick={() => setTesteGoogleAberto(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
+        <div className="agenda-form-grid">
+          <p className="span-2">Essa integração está momentaneamente limitada a Calendário/Agenda enquanto concluímos a homologação com o Google. Digite o e-mail da sua conta Google e avisaremos assim que o e-mail também estiver sincronizado — geralmente em poucas horas.</p>
+          <label className="span-2">E-mail do Google<input type="email" autoFocus value={emailTesteGoogle} onChange={(e) => setEmailTesteGoogle(e.target.value)} placeholder="voce@gmail.com" /></label>
+        </div>
+        <footer><button className="botao botao--secundario" onClick={() => setTesteGoogleAberto(false)}>Cancelar</button><button className="botao" disabled={enviandoTesteGoogle || !emailTesteGoogle.includes("@")} onClick={() => solicitarTesteGoogle().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível enviar o pedido."))}>{enviandoTesteGoogle ? "Enviando…" : "Enviar pedido"}</button></footer>
+      </div></div>}
+
       {cancelando && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="cancelar-agendamento-titulo"><div className="agenda-modal__painel agenda-modal__painel--compacto" ref={cancelarModalRef} tabIndex={-1}>
         <header><div><p className="eyebrow">Confirmação necessária</p><h2 id="cancelar-agendamento-titulo">Cancelar agendamento</h2></div><button onClick={() => { setCancelando(null); setMotivoCancelamento(""); }} aria-label="Fechar"><Icone nome="fechar" /></button></header>
         <div className="agenda-form-grid"><p className="span-2 agenda-cancelamento-resumo"><strong>{cancelando.patient_name || "Paciente"}</strong><span>{new Date(cancelando.starts_at).toLocaleString("pt-BR", { dateStyle: "medium", timeStyle: "short" })}</span></p><label className="span-2">Motivo do cancelamento<textarea autoFocus rows={3} maxLength={500} value={motivoCancelamento} onChange={(e) => setMotivoCancelamento(e.target.value)} placeholder="Registre o motivo para manter a rastreabilidade" /></label></div>
@@ -841,7 +887,7 @@ export default function Agenda() {
         <section className="agenda-config-section" ref={contasExternasRef} tabIndex={-1} style={{ scrollMarginTop: "1rem" }}>
           <div className="agenda-config-section__title"><div><h3>Google, Microsoft e Apple</h3><p>Sincronize calendários e contatos para usar na Agenda e no CorvIA Mail.</p></div><span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider) && item.enabled).length}</span></div>
           <div className="agenda-contas-externas">
-            <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarConta("google").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}><LogoProvedor provedor="google" /> {contaEmConexao === "google" ? "Abrindo Google…" : "Conectar Google"}</button>
+            <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarOuSolicitarGoogle().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}><LogoProvedor provedor="google" /> {statusTesteGoogle?.status === "pendente" && capacidades?.google_oauth_modo_teste ? "Aguardando liberação do Google" : contaEmConexao === "google" ? "Abrindo Google…" : "Conectar Google"}</button>
             <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "microsoft_365")?.oauth_configured === false} onClick={() => conectarConta("microsoft").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Microsoft."))}><LogoProvedor provedor="microsoft" /> {contaEmConexao === "microsoft" ? "Abrindo Microsoft…" : "Conectar Microsoft"}</button>
           </div>
           <label className="agenda-check"><input type="checkbox" checked={consentimentoContas} onChange={(e) => setConsentimentoContas(e.target.checked)} /> Autorizo a leitura dos meus calendários, contatos e e-mails, e o envio de mensagens por minha conta, para uso na Agenda e no CorvIA Mail. Posso revogar o acesso a qualquer momento.</label>

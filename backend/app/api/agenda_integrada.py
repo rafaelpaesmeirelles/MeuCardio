@@ -28,6 +28,7 @@ from app.models.agenda import (
     CalendarLocation,
     CalendarOutboxEvent,
     ExternalContact,
+    GoogleTestUserRequest,
     MobilityPreference,
     SchedulingResource,
     SchedulingService,
@@ -585,12 +586,59 @@ def capabilities(_=Depends(current_user)):
         "background_sync_enabled": settings.agenda_background_sync_enabled,
         "traffic_configured": settings.traffic_configured,
         "traffic_provider": settings.traffic_provider,
+        "google_oauth_modo_teste": settings.google_oauth_modo_teste,
         "connectors": [
             {**item, "oauth_configured": oauth_configured(item["provider"])}
             if item["provider"] in {"google_calendar", "microsoft_365"} else item
             for item in connector_catalog()
         ],
     }
+
+
+_EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
+
+
+class GoogleTesteSolicitarIn(BaseModel):
+    google_email: str = Field(min_length=5, max_length=320)
+
+    @field_validator("google_email")
+    @classmethod
+    def _google_email(cls, value: str) -> str:
+        if not _EMAIL_RE.fullmatch(value):
+            raise ValueError("E-mail inválido.")
+        return value.strip().lower()
+
+
+@router.post("/google-teste/solicitar", status_code=201)
+def solicitar_teste_google(data: GoogleTesteSolicitarIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Pré-cadastro de liberação enquanto o app está em modo Testing (ver
+    GoogleTestUserRequest). Não chama o Google — só guarda o pedido e avisa
+    o admin. Idempotente: pedido pendente existente do mesmo usuário é
+    atualizado (e-mail pode ter mudado), não duplicado."""
+    if not settings.google_oauth_modo_teste:
+        raise HTTPException(status_code=409, detail="O Google já não está em modo de teste — conecte direto.")
+    existente = db.query(GoogleTestUserRequest).filter(
+        GoogleTestUserRequest.user_id == user.id, GoogleTestUserRequest.status == "pendente",
+    ).first()
+    if existente:
+        existente.google_email = data.google_email
+        item = existente
+    else:
+        item = GoogleTestUserRequest(user_id=user.id, google_email=data.google_email)
+        db.add(item)
+    _audit(db, user, "google_teste_solicitado", "google_test_user_request", None, {"google_email": data.google_email})
+    db.commit(); db.refresh(item)
+    return {"id": item.id, "status": item.status}
+
+
+@router.get("/google-teste/status")
+def status_teste_google(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    item = db.query(GoogleTestUserRequest).filter(
+        GoogleTestUserRequest.user_id == user.id,
+    ).order_by(GoogleTestUserRequest.id.desc()).first()
+    if not item:
+        return {"status": None}
+    return {"status": item.status, "google_email": item.google_email, "created_at": item.created_at}
 
 
 @router.get("/locations")

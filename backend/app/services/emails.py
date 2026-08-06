@@ -616,6 +616,29 @@ def enviar_assinatura_suspensa_aviso_exclusao(
 # --------------------------------------------------------------------------
 
 
+def enviar_google_teste_liberado(user_id: int, google_email: str) -> bool:
+    """Contraparte do pré-cadastro em GoogleTestUserRequest (app/api/
+    agenda_integrada.py) — disparado pelo admin ao marcar o pedido como
+    liberado, depois de adicionar o e-mail como testador no Google Cloud."""
+    db = SessionLocal()
+    try:
+        user = db.get(User, user_id)
+        if not user:
+            return False
+        contexto = {
+            "nome": user.full_name, "google_email": google_email,
+            "link_agenda": f"{settings.public_url}/agenda",
+        }
+        return _enviar(
+            db, tipo="google_teste_liberado", destinatario=user.email,
+            assunto="Corvia — sua conexão com o Google já está liberada",
+            template="google_teste_liberado", contexto=contexto, user_id=user.id,
+            chave_idempotencia=f"google_teste_liberado:{user.id}:{google_email}",
+        )
+    finally:
+        db.close()
+
+
 def enviar_corvia_mail_ativado(user_id: int, endereco: str) -> bool:
     db = SessionLocal()
     try:

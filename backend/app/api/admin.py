@@ -2,15 +2,17 @@
 
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
 from pydantic import BaseModel, field_validator
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import require_admin
+from app.models.agenda import GoogleTestUserRequest
 from app.models.audit import AuditLog
 from app.models.content import Document
+from app.services import emails
 from app.services.professional_profile import normalize_council, normalize_professional_title
 
 router = APIRouter(prefix="/api/admin", tags=["administração"])
@@ -578,3 +580,55 @@ def reativar_envio_material(account_id: int, db: Session = Depends(get_db), admi
     ))
     db.commit()
     return {"envio_material_suspenso": False, "reclamacoes_spam": 0}
+
+
+# ---------------------------------------------------------------------------
+# Fila de liberação manual de testador do Google (app OAuth em modo Testing,
+# teto de 100 contas, sem API pra automatizar — ver GoogleTestUserRequest em
+# app/models/agenda.py e o pré-cadastro em app/api/agenda_integrada.py).
+# ---------------------------------------------------------------------------
+
+
+@router.get("/google-teste")
+def listar_pedidos_teste_google(
+    status: str = Query("pendente"), db: Session = Depends(get_db), _=Depends(require_admin),
+):
+    query = db.query(GoogleTestUserRequest)
+    if status:
+        query = query.filter(GoogleTestUserRequest.status == status)
+    itens = query.order_by(GoogleTestUserRequest.created_at.asc()).all()
+    return [
+        {
+            "id": i.id, "user_id": i.user_id, "google_email": i.google_email,
+            "status": i.status, "created_at": i.created_at, "liberado_em": i.liberado_em,
+        }
+        for i in itens
+    ]
+
+
+@router.post("/google-teste/{item_id}/liberar")
+def liberar_pedido_teste_google(
+    item_id: int, background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db), admin=Depends(require_admin),
+):
+    """Chamada DEPOIS que o admin já adicionou o e-mail como testador no
+    Google Cloud Console (passo manual, fora deste sistema — não há API do
+    Google pra isso). Aqui só registra e avisa o assinante."""
+    item = db.get(GoogleTestUserRequest, item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Pedido não encontrado.")
+    if item.status == "liberado":
+        raise HTTPException(status_code=409, detail="Este pedido já foi liberado.")
+
+    item.status = "liberado"
+    item.liberado_em = datetime.now(timezone.utc)
+    item.liberado_por = admin.id
+    db.add(AuditLog(
+        user_id=admin.id, action="google_teste_liberado", entity="google_test_user_requests",
+        entity_id=str(item_id), detail={"google_email": item.google_email, "user_id": item.user_id},
+    ))
+    db.commit()
+    background_tasks.add_task(emails.enviar_google_teste_liberado, item.user_id, item.google_email)
+    item.notificado_em = datetime.now(timezone.utc)
+    db.commit()
+    return {"id": item.id, "status": item.status, "liberado_em": item.liberado_em}

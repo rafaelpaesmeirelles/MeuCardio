@@ -88,6 +88,46 @@ function SolicitacaoCard({ u, aoDecidir }: { u: Usuario; aoDecidir: () => void }
   );
 }
 
+type PedidoTesteGoogle = {
+  id: number; user_id: number; google_email: string; status: string;
+  created_at: string; liberado_em: string | null;
+};
+
+function PedidoTesteGoogleCard({ p, aoLiberar }: { p: PedidoTesteGoogle; aoLiberar: () => void }) {
+  const [enviando, setEnviando] = useState(false);
+  const [erro, setErro] = useState("");
+
+  async function liberar() {
+    setErro("");
+    setEnviando(true);
+    try {
+      await api.post(`/admin/google-teste/${p.id}/liberar`, {});
+      aoLiberar();
+    } catch (e) {
+      setErro(e instanceof Error ? e.message : "Não foi possível liberar o pedido.");
+      setEnviando(false);
+    }
+  }
+
+  return (
+    <div className="cartao cartao--clinico">
+      <strong>{p.google_email}</strong>
+      <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 2 }}>
+        pedido em {new Date(p.created_at).toLocaleString("pt-BR")}
+      </div>
+      <p style={{ fontSize: "0.82rem", marginTop: 6 }}>
+        Antes de clicar: adicione este e-mail como testador no Google Cloud Console
+        (OAuth consent screen → Test users) — este botão só registra e avisa o assinante,
+        não fala com o Google.
+      </p>
+      <button className="botao" style={{ marginTop: 8 }} onClick={liberar} disabled={enviando}>
+        {enviando ? "Liberando…" : "Já adicionei — marcar como liberado"}
+      </button>
+      {erro && <p style={{ color: "var(--alerta)", fontSize: "0.82rem", marginTop: 6 }}>{erro}</p>}
+    </div>
+  );
+}
+
 export default function Admin() {
   const [lista, setLista] = useState<Usuario[] | null>(null);
   const [erro, setErro] = useState("");
@@ -100,10 +140,15 @@ export default function Admin() {
     role: "medico", password: "",
   });
 
+  const [pedidosGoogle, setPedidosGoogle] = useState<PedidoTesteGoogle[] | null>(null);
+
   const recarregar = () =>
     api.get<Usuario[]>("/admin/users").then(setLista).catch((e) => setErro(e.message));
 
-  useEffect(() => { recarregar(); }, []);
+  const recarregarPedidosGoogle = () =>
+    api.get<PedidoTesteGoogle[]>("/admin/google-teste?status=pendente").then(setPedidosGoogle).catch(() => setPedidosGoogle([]));
+
+  useEffect(() => { recarregar(); recarregarPedidosGoogle(); }, []);
 
   async function criar() {
     setErro("");
@@ -179,6 +224,25 @@ export default function Admin() {
               <div className="grade" style={{ marginTop: "0.6rem" }}>
                 {pendentes.map((u) => (
                   <SolicitacaoCard key={u.id} u={u} aoDecidir={recarregar} />
+                ))}
+              </div>
+            </>
+          )}
+
+          {pedidosGoogle !== null && pedidosGoogle.length > 0 && (
+            <>
+              <h2 style={{ marginTop: "1.6rem" }}>
+                Liberação de teste do Google <span className="selo selo--pendente">{pedidosGoogle.length}</span>
+              </h2>
+              <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
+                O app OAuth da Corvia está em modo "Testing" no Google Cloud (teto de 100
+                contas, sem API para automatizar). Cada assinante abaixo pediu para conectar
+                o Google — adicione o e-mail como testador no Console e só então marque
+                como liberado aqui.
+              </p>
+              <div className="grade" style={{ marginTop: "0.6rem" }}>
+                {pedidosGoogle.map((p) => (
+                  <PedidoTesteGoogleCard key={p.id} p={p} aoLiberar={recarregarPedidosGoogle} />
                 ))}
               </div>
             </>

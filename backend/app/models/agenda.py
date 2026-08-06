@@ -411,3 +411,25 @@ class AppointmentCommunication(Base):
     error_message: Mapped[str | None] = mapped_column(String(500), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
     sent_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
+class GoogleTestUserRequest(Base):
+    """Fila de liberação manual enquanto o app OAuth da Corvia está em modo
+    "Testing" no Google Cloud (teto de 100 contas, sem API pra automatizar
+    — confirmado em 06/08/2026, ver docs/adr-google-teste.md). O bloqueio
+    "Acesso bloqueado" do Google acontece dentro do próprio accounts.google.com,
+    antes de qualquer redirecionamento pra nós — por isso o pedido é
+    pré-cadastrado ANTES da tentativa real de OAuth, nunca capturado depois
+    de uma falha (que nosso backend nunca chega a ver).
+    """
+
+    __tablename__ = "google_test_user_requests"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    google_email: Mapped[str] = mapped_column(String(255))
+    status: Mapped[str] = mapped_column(String(20), default="pendente", index=True)  # pendente | liberado
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+    liberado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    liberado_por: Mapped[int | None] = mapped_column(ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
+    notificado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

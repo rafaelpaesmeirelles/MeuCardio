@@ -55,6 +55,13 @@ class Settings(BaseSettings):
     agenda_outbox_max_attempts: int = 8
     google_oauth_client_id: str = ""
     google_oauth_client_secret: str = ""
+    # App OAuth do Google em modo "Testing" (teto de 100 contas na lista de
+    # testador, sem API pra automatizar — confirmado 06/08/2026). Enquanto
+    # True, o front pré-cadastra o pedido em vez de mandar o assinante direto
+    # pro OAuth real (ver GoogleTestUserRequest). Trocar pra False só depois
+    # que a verificação sensitive-scope do Google for aprovada — nunca antes,
+    # senão o assinante cai na tela "Acesso bloqueado" do próprio Google.
+    google_oauth_modo_teste: bool = True
     microsoft_oauth_client_id: str = ""
     microsoft_oauth_client_secret: str = ""
     microsoft_oauth_tenant: str = "common"
