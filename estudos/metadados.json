@@ -10469,5 +10469,58 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "4s-simvastatina-em-prevencao-secundaria",
+    "title": "4S (Scandinavian Simvastatin Survival Study) — Simvastatina em prevenção secundária, o primeiro ensaio de estatina com redução de mortalidade",
+    "study_type": "ensaio_clinico",
+    "authors": "Scandinavian Simvastatin Survival Study Group",
+    "journal": "Lancet",
+    "year": 1994,
+    "doi": "10.1016/S0140-6736(94)90566-5",
+    "pmid": "7968073",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7968073/",
+    "summary": "Ensaio randomizado, duplo-cego, com 4.444 pacientes com angina ou infarto do miocárdio prévio e colesterol sérico entre 5,5-8,0 mmol/L (213-309 mg/dL) apesar de dieta hipolipemiante, comparando simvastatina versus placebo por seguimento mediano de 5,4 anos — primeiro grande ensaio randomizado a testar se reduzir o colesterol com estatina melhora a sobrevida em doença coronariana estabelecida.",
+    "key_findings": "Simvastatina reduziu colesterol total em 25%, LDL em 35% e aumentou HDL em 8%. Mortalidade total: 8% (simvastatina) vs. 12% (placebo), risco relativo 0,70 (IC95% 0,58-0,85; p=0,0003). Mortalidade coronariana: RR 0,58 (IC95% 0,46-0,73). Eventos coronarianos maiores (28% vs. 19%): RR 0,66 (IC95% 0,59-0,75; p<0,00001). Redução de 37% no risco de revascularização miocárdica. Benefício consistente em mulheres e em pacientes ≥60 anos.",
+    "clinical_implications": "Primeiro ensaio a demonstrar de forma inequívoca que reduzir o LDL com estatina reduz mortalidade em doença coronariana estabelecida — encerrou a controvérsia sobre se tratar hipercolesterolemia farmacologicamente melhora desfecho duro, e lançou as bases para a era moderna da terapia hipolipemiante em prevenção secundária.",
+    "limitations": "População selecionada por faixa estreita de colesterol (5,5-8,0 mmol/L), sem incluir pacientes com LDL muito alto ou muito próximo do normal; era pré-troponina, com critérios diagnósticos de infarto diferentes dos atuais; predominantemente homens de meia-idade brancos escandinavos, com generalização limitada a outras populações.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "4s",
+      "simvastatina",
+      "estatina",
+      "prevenção secundária",
+      "colesterol",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jupiter-rosuvastatina-em-pcr-elevada-sem-hiperlipidemia",
+    "title": "JUPITER — Rosuvastatina em prevenção primária por PCR ultrassensível elevada, sem hiperlipidemia",
+    "study_type": "ensaio_clinico",
+    "authors": "Ridker PM, Danielson E, Fonseca FAH, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2008,
+    "doi": "10.1056/NEJMoa0807646",
+    "pmid": "18997196",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa0807646",
+    "summary": "Ensaio randomizado, duplo-cego, com 17.802 homens e mulheres aparentemente saudáveis, com LDL <130 mg/dL (sem hiperlipidemia por critério convencional) mas com proteína C-reativa ultrassensível (PCR-us) ≥2,0 mg/L, comparando rosuvastatina 20 mg/dia versus placebo. Desfecho primário composto: infarto, AVC, revascularização arterial, hospitalização por angina instável ou morte cardiovascular. Interrompido precocemente após seguimento mediano de 1,9 ano.",
+    "key_findings": "Rosuvastatina reduziu LDL em 50% e PCR-us em 37%. Taxa do desfecho primário: 0,77 vs. 1,36 por 100 pessoas-ano (HR 0,56; IC95% 0,46-0,69; p<0,00001). Reduções específicas: infarto (HR 0,46), AVC (HR 0,52), revascularização/angina instável (HR 0,53), e mortalidade por qualquer causa (HR 0,80; p=0,02). Efeito consistente em todos os subgrupos. Sem aumento significativo de miopatia ou câncer, mas com incidência maior de diabetes relatado pelo médico assistente no grupo rosuvastatina.",
+    "clinical_implications": "Ampliou o critério de seleção para estatina além do LDL isolado, validando a PCR-us como marcador de risco inflamatório que identifica pacientes aparentemente saudáveis (sem hiperlipidemia) que se beneficiam de terapia hipolipemiante em prevenção primária — base da incorporação da PCR-us como refinador de risco em escores cardiovasculares contemporâneos.",
+    "limitations": "Interrupção precoce por benefício pode superestimar a magnitude do efeito (fenômeno conhecido de ensaios parados cedo); o sinal de aumento de diabetes relatado, embora não estatisticamente conclusivo neste estudo isoladamente, viria a se confirmar em metanálises posteriores de estatinas — achado que não deve ser lido como ausência de risco.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "jupiter",
+      "rosuvastatina",
+      "estatina",
+      "pcr ultrassensível",
+      "prevenção primária",
+      "inflamação",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
