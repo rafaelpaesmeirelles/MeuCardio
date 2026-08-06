@@ -11418,5 +11418,25 @@
       "Thiele H, Akin I, Sandri M, de Waha-Thiele S, et al. One-Year Outcomes after PCI Strategies in Cardiogenic Shock. N Engl J Med. 2018;379(18):1699-1710. PMID: 30145971"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "angina-persistente-coronarias-normais-anoca-inoca-endotipo",
+    "titulo": "Angina persistente com coronárias angiograficamente normais: e agora?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 52 anos, angina típica recorrente, teste não invasivo com resultado inconclusivo. Angiografia coronariana invasiva não mostra lesão obstrutiva. Teste provocativo com acetilcolina realizado no mesmo procedimento reproduz a dor torácica habitual da paciente, com alteração isquêmica ao ECG, mas SEM constrição maior que 90% do calibre da artéria coronária à angiografia.",
+    "pergunta": "Segundo os critérios COVADIS, qual o endótipo mais provável e a implicação terapêutica?",
+    "opcoes": [
+      "Espasmo epicárdico — os três critérios estão presentes, tratamento de primeira linha com antagonista de canal de cálcio",
+      "Espasmo microvascular — apenas dois dos três critérios COVADIS estão presentes (dor reproduzida + alteração isquêmica de ECG, sem constrição epicárdica >90%), o que direciona para tratamento de disfunção microvascular (IECA, ranolazina) em vez de antagonista de cálcio isolado",
+      "Teste negativo — sem lesão obstrutiva e sem constrição >90%, não há indicação de qualquer tratamento anti-isquêmico adicional",
+      "Teste inconclusivo, deve ser repetido antes de qualquer decisão terapêutica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Os critérios COVADIS para teste de acetilcolina positivo definem espasmo EPICÁRDICO quando os três critérios estão presentes simultaneamente: reprodução da dor torácica habitual, alteração isquêmica ao ECG, e constrição maior que 90% do calibre da artéria coronária à angiografia. Quando apenas os dois primeiros critérios estão presentes (dor + ECG), sem a constrição epicárdica de 90%, a interpretação é de espasmo MICROVASCULAR — endótipo diferente, que direciona para tratamento de disfunção microvascular (IECA, ranolazina) em vez do antagonista de canal de cálcio isolado usado no espasmo epicárdico. A diretriz ESC 2024 recomenda, com Classe I Nível B, que a avaliação funcional invasiva esteja disponível quando o mecanismo da dor torácica permanece incerto após teste não invasivo — exatamente o racional que levou a este teste provocativo.",
+    "source_refs": [
+      "Sucato V, Madaudo C, Galassi AR. The ANOCA/INOCA Dilemma Considering the 2024 ESC Guidelines on Chronic Coronary Syndromes. J Cardiovasc Dev Dis. 2024;11(10):302. DOI: 10.3390/jcdd11100302. PMID: 39452273"
+    ],
+    "review_status": "revisado"
   }
 ]
