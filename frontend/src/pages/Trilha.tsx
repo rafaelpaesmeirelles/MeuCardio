@@ -29,6 +29,8 @@ const TIPO: Record<string, string> = {
   estudo: "Estudo",
   calculadora: "Calculadora",
   checklist: "Checklist",
+  evidencia: "Evidência",
+  caso_clinico: "Caso clínico",
 };
 
 export default function Trilha() {

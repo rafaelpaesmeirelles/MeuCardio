@@ -27,6 +27,8 @@ ROTA = {
     "estudo": "/estudos/{slug}",
     "calculadora": "/calculadoras/{slug}",
     "checklist": "/checklists",
+    "evidencia": "/evidencias/{slug}",
+    "caso_clinico": "/casos-clinicos/{slug}",
 }
 
 
@@ -42,12 +44,15 @@ def _disponivel(db: Session, item_type: str, slug: str) -> bool:
     não que falta conteúdo.
     """
     from app.models.checklist import DischargeChecklist
+    from app.models.clinical_case import ClinicalCase
     from app.models.content import Document
     from app.models.drug import Drug
+    from app.models.evidence import EvidenceRecord
     from app.models.study import ScientificStudy
 
     modelos = {"documento": Document, "medicamento": Drug,
-               "estudo": ScientificStudy, "checklist": DischargeChecklist}
+               "estudo": ScientificStudy, "checklist": DischargeChecklist,
+               "evidencia": EvidenceRecord, "caso_clinico": ClinicalCase}
     Modelo = modelos.get(item_type)
     if Modelo is None:
         return True  # calculadora vive em código, não em tabela
