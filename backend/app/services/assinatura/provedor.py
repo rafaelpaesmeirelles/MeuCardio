@@ -93,6 +93,61 @@ class SemAssinaturaDigital(ProvedorAssinatura):
         return Assinatura(estado="nao_assinado", pdf=pdf)
 
 
+class AssinaturaExternaManual(ProvedorAssinatura):
+    """Fluxo manual via Assinador ITI (assinador.iti.br), Trabalho 14
+    (06/08/2026, ampliado no mesmo dia a pedido do Rafael: "iti tb suporta
+    outras validadoras... medicos geralmente ja tem o Vidaas").
+
+    Pesquisado e confirmado nesta sessão: o gov.br NÃO tem API de
+    "Assinatura Eletrônica" aberta para empresa privada — o endpoint
+    programático exige credenciamento como "Gestor Público", que a Corvia
+    não é e não pode virar. O que existe, de graça e público, é o
+    Assinador ITI: qualquer cidadão assina um PDF pelo navegador, sem
+    contrato nenhum — base legal na Lei nº 14.063/2020. **E o Assinador
+    ITI não fica restrito à conta gov.br simples**: aceita certificado A1/
+    A3 instalado e certificado em nuvem (VIDaaS, Bird ID e outras AC
+    credenciadas ICP-Brasil) para assinar de verdade — muitos médicos já
+    têm VIDaaS pelo próprio CRM. Nenhum desses caminhos tem API para a
+    Corvia automatizar; o fluxo é necessariamente manual, com o médico
+    saindo da plataforma e voltando.
+
+    Por isso esta classe serve para VÁRIOS códigos do catálogo — GOVBR
+    (avançada) e as cloud QUALIFICADA hoje sem credencial comercial
+    (VIDAAS, BIRDID, SAFEID, NEOID, REMOTEID) — parametrizada por
+    `codigo`/`nivel`, em vez de uma classe por provedor: o comportamento é
+    idêntico, o que muda é só o rótulo e o nível jurídico que o catálogo
+    já declara para cada um. `assinar()` **não assina nada** — devolve o
+    PDF como veio (mesmo comportamento de `SemAssinaturaDigital`), estado
+    "nao_assinado". A assinatura de verdade só se completa quando o
+    médico volta com o arquivo assinado, pela rota `.../assinatura-
+    externa` (`emissao.concluir_assinatura_externa`), que CONFERE uma
+    assinatura real e íntegra embutida antes de aceitar — nunca marca
+    como assinado só porque um arquivo qualquer voltou. O NÍVEL gravado
+    no documento final é o que o médico escolheu ao iniciar a emissão
+    (ex.: VIDAAS = qualificada) — a Corvia confia nessa escolha do mesmo
+    jeito que já confia em "tenho certificado A1" ao escolher aquele
+    método; o que ela SEMPRE confere sozinha é que existe mesmo uma
+    assinatura embutida e íntegra, nunca o "nível" declarado por si só.
+
+    ⚠️ Limite honesto, não testado nesta sessão: a compatibilidade do
+    verificador (`verificacao_pdf.py`, pyhanko) com o formato exato que o
+    Assinador ITI produz — em qualquer um destes caminhos — nunca foi
+    conferida contra um arquivo real. Exige alguém passar pelo fluxo de
+    verdade pelo menos uma vez, com cada método, antes de confiar sem
+    ressalva (regra do projeto: dependência externa é indisponível até
+    prova real)."""
+
+    def __init__(self, codigo: str, nivel: str) -> None:
+        self.codigo = codigo
+        self.nivel = nivel
+
+    def disponivel(self) -> tuple[bool, str | None]:
+        return True, None
+
+    def assinar(self, pdf: bytes, medico: dict, contexto: dict) -> Assinatura:
+        return Assinatura(estado="nao_assinado", pdf=pdf)
+
+
 class CertificadoA1(ProvedorAssinatura):
     """`A1_ARQUIVO` — certificado local do próprio médico, guardado cifrado
     (`certificado_a1.py`), assinado de fato com `pyhanko` (`pdf_signer.py`).
@@ -161,20 +216,17 @@ class ProvedorIndisponivel(ProvedorAssinatura):
         return Assinatura(estado="indisponivel", motivo=self._motivo)
 
 
-# Provedores em nuvem (ICP-Brasil qualificada) — planejados, não abandonados.
-# Todos exigem uma relação comercial que ninguém abriu ainda (contato com AC,
-# KYC, credencial de homologação) — ver o histórico de pesquisa da sessão de
-# 06/08/2026. Mensagem distinta da genérica "não integrado": aqui é "em
-# breve", não "sem previsão".
-_NUVEM_EM_BREVE = {"VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+# Provedores QUALIFICADA em nuvem — VIDaaS, Bird ID, SafeID, NeoID, Remote
+# ID. Nenhum tem API contratada pela Corvia (Tarefa 4, bloqueada desde
+# 28/07/2026), mas TODOS podem ser usados hoje pelo fluxo manual do
+# Assinador ITI (Trabalho 14, 06/08/2026) — o médico assina com o próprio
+# certificado em nuvem no site do ITI ou da certificadora, e reenvia o PDF
+# assinado. Por isso caem em `AssinaturaExternaManual`, não em
+# `ProvedorIndisponivel` — GOVBR (avançada) segue o mesmo caminho.
+_MANUAL_EXTERNO = {"GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
 
 
-def _motivo_padrao(codigo: str, nome: str) -> str:
-    if codigo in _NUVEM_EM_BREVE:
-        return (
-            f"{nome} está planejado (certificado em nuvem) — em breve. "
-            f"Por ora, use um certificado A1 (arquivo) se já tiver um."
-        )
+def _motivo_padrao(nome: str) -> str:
     return (
         f"{nome} ainda não está integrado ou a credencial não foi configurada. "
         f"Nada foi assinado."
@@ -208,14 +260,18 @@ def obter_provedor(codigo: str, *, db: Session | None = None, user: User | None 
         provedor: ProvedorAssinatura = SemAssinaturaDigital()
     elif codigo == "VIDAAS" and settings.vidaas_configurado:
         # Quando a credencial VIDAAS chegar (Tarefa 4, bloqueada desde
-        # 28/07/2026), a implementação real entra aqui — sem tocar em mais
-        # nada deste módulo nem em quem chama `obter_provedor`.
+        # 28/07/2026) e a Corvia decidir integrar a API de verdade, a
+        # implementação real entra aqui, ANTES do fluxo manual abaixo —
+        # sem tocar em mais nada deste módulo nem em quem chama
+        # `obter_provedor`.
         raise NotImplementedError(
             "vidaas_configurado ficou True, mas o adaptador real do VIDaaS "
             "ainda não foi escrito."
         )
+    elif codigo in _MANUAL_EXTERNO:
+        provedor = AssinaturaExternaManual(info.codigo, info.nivel)
     else:
-        provedor = ProvedorIndisponivel(info.codigo, info.nivel, _motivo_padrao(info.codigo, info.nome))
+        provedor = ProvedorIndisponivel(info.codigo, info.nivel, _motivo_padrao(info.nome))
 
     _cache[codigo] = provedor
     return provedor

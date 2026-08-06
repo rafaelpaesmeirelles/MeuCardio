@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import hashlib
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
@@ -25,7 +25,7 @@ from app.core.config import settings
 from app.models.assinatura import DocumentoEmitido
 from app.services import cofre
 from app.services.assinatura import catalogo
-from app.services.assinatura.provedor import ProvedorAssinatura, obter_provedor
+from app.services.assinatura.provedor import _MANUAL_EXTERNO, ProvedorAssinatura, obter_provedor
 
 TIPO_RECEITA = "prescription_document"
 TIPO_DOCUMENTO = "generated_document"
@@ -33,6 +33,17 @@ TIPO_DOCUMENTO = "generated_document"
 
 class MetodoInvalido(ValueError):
     """Código de método que não existe no catálogo — vira 422, não 500."""
+
+
+class FluxoAssinaturaExternaInvalido(ValueError):
+    """Documento não está no estado certo para receber o upload de volta
+    do Assinador ITI — outro método, já assinado, ou não existe."""
+
+
+class AssinaturaNaoDetectada(ValueError):
+    """O arquivo enviado não contém uma assinatura digital real e íntegra
+    — nunca aceita um PDF qualquer como se fosse o assinado (regra do
+    projeto: nunca simular assinatura)."""
 
 
 def _raiz() -> Path:
@@ -84,6 +95,59 @@ def assinar_e_persistir(
     )
     db.add(registro)
     return Emitido(pdf=pdf_final, registro=registro)
+
+
+def concluir_assinatura_externa(
+    db: Session, *, tipo: str, referencia_id: int, pdf_assinado: bytes, criado_por: int,
+) -> Emitido:
+    """Fecha o fluxo do Assinador ITI (Trabalho 14): o médico baixou o PDF
+    emitido com `metodo` em GOVBR/VIDAAS/BIRDID/SAFEID/NEOID/REMOTEID (estado
+    "nao_assinado"), assinou em assinador.iti.br — fora da Corvia, sem API —
+    e reenvia o arquivo assinado aqui.
+
+    Nunca aceita o upload só porque "parece" um PDF: confere que existe
+    uma assinatura digital REAL e íntegra embutida
+    (`verificacao_pdf.verificar()`), a mesma checagem já usada para
+    divulgar a assinatura por e-mail (Trabalho 11). Sem isso, levanta
+    `AssinaturaNaoDetectada` — nunca marca como assinado por engano."""
+    from app.services.assinatura import verificacao_pdf
+
+    registro = buscar(db, tipo=tipo, referencia_id=referencia_id)
+    if registro is None:
+        raise FluxoAssinaturaExternaInvalido("Documento não encontrado.")
+    if registro.criado_por != criado_por:
+        raise FluxoAssinaturaExternaInvalido("Documento não encontrado.")
+    if registro.metodo not in _MANUAL_EXTERNO:
+        raise FluxoAssinaturaExternaInvalido(
+            "Este documento não foi emitido pelo fluxo do Assinador ITI."
+        )
+    if registro.assinado_em is not None:
+        raise FluxoAssinaturaExternaInvalido("Este documento já está assinado.")
+
+    resultado = verificacao_pdf.verificar(pdf_assinado)
+    if resultado is None:
+        raise AssinaturaNaoDetectada(
+            "O arquivo enviado não contém nenhuma assinatura digital embutida — "
+            "assine o PDF no Assinador gov.br (assinador.iti.br) e envie o arquivo "
+            "resultante, não o original."
+        )
+    if not resultado.intacta:
+        raise AssinaturaNaoDetectada(
+            "A assinatura encontrada no arquivo não confere com o conteúdo — envie "
+            "o PDF exatamente como saiu do Assinador gov.br, sem editar ou reexportar."
+        )
+
+    sha256 = hashlib.sha256(pdf_assinado).hexdigest()
+    nome_arquivo_novo = cofre.guardar(pdf_assinado, criado_por, raiz=_raiz())
+    nome_arquivo_antigo = registro.arquivo_nome
+
+    registro.arquivo_nome = nome_arquivo_novo
+    registro.sha256 = sha256
+    registro.bytes_tam = len(pdf_assinado)
+    registro.assinado_em = datetime.now(timezone.utc)
+
+    cofre.apagar(nome_arquivo_antigo, raiz=_raiz())
+    return Emitido(pdf=pdf_assinado, registro=registro)
 
 
 def buscar(db: Session, *, tipo: str, referencia_id: int) -> DocumentoEmitido | None:

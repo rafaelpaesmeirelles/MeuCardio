@@ -35,17 +35,25 @@ def _autorizado(role="admin"):
 
 
 class TestCatalogoDeProvedores:
-    def test_lista_14_provedores_so_manual_disponivel(self, client, criar_usuario):
+    def test_lista_14_provedores_manual_e_fluxo_iti_disponiveis(self, client, criar_usuario):
+        """Trabalho 14 (06/08/2026): GOVBR e as clouds sem credencial
+        comercial (VIDAAS/BIRDID/SAFEID/NEOID/REMOTEID) passaram a ter
+        adaptador real — fluxo manual do Assinador ITI, disponível sem
+        nenhuma credencial (o médico assina fora e reenvia)."""
         _, token = criar_usuario(role="admin")
         r = client.get("/api/assinatura/provedores", headers={"Authorization": f"Bearer {token}"})
         assert r.status_code == 200
         provedores = r.json()
         assert len(provedores) == 14
         por_codigo = {p["codigo"]: p for p in provedores}
-        assert por_codigo["MANUAL"]["disponivel"] is True
-        assert por_codigo["MANUAL"]["motivo"] is None
+
+        disponiveis = {"MANUAL", "GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+        for codigo in disponiveis:
+            assert por_codigo[codigo]["disponivel"] is True, codigo
+            assert por_codigo[codigo]["motivo"] is None, codigo
+
         for codigo, p in por_codigo.items():
-            if codigo == "MANUAL":
+            if codigo in disponiveis:
                 continue
             assert p["disponivel"] is False, codigo
             assert p["motivo"], codigo
@@ -178,18 +186,20 @@ class TestEmitirReceituario:
         assert "assinatura qualificada ICP-Brasil" in envio.json()["detail"]
 
     def test_emitir_provedor_indisponivel_recusa_sem_gerar_nada(self, client, criar_usuario, db):
+        """CLICKSIGN continua sem adaptador — diferente de VIDAAS/GOVBR/etc.,
+        que passaram a ter o fluxo manual do Assinador ITI (Trabalho 14)."""
         _, token = criar_usuario(role="admin")
         doc_id = _criar_e_revisar_receita(client, token)
 
         r = client.post(
             f"/api/receituario/documentos/{doc_id}/emitir",
             headers={"Authorization": f"Bearer {token}"},
-            json={"metodo": "VIDAAS"},
+            json={"metodo": "CLICKSIGN"},
         )
         assert r.status_code == 409, r.text
         detail = r.json()["detail"]
         assert detail["nada_foi_simulado"] is True
-        assert any("VIDaaS" in b or "VIDAAS" in b for b in detail["bloqueios"])
+        assert any("Clicksign" in b or "CLICKSIGN" in b for b in detail["bloqueios"])
 
         assert db.query(DocumentoEmitido).count() == 0
 

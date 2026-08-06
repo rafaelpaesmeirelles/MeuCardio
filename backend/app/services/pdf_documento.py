@@ -356,6 +356,13 @@ def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
     return y
 
 
+# Mesmo conjunto de `provedor._MANUAL_EXTERNO` (Trabalho 14) — repetido
+# aqui, não importado, porque este módulo de renderização não depende do
+# pacote `assinatura/` para nada além disto, e um `set` de 6 strings não
+# justifica esse acoplamento novo.
+_METODOS_MANUAL_EXTERNO = {"GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+
+
 def _assinatura_rodape(metodo: str, provedor_nome: str | None, medico: dict, sujeito: str) -> tuple[str, str | None]:
     """Decide a legenda da linha de assinatura e o aviso vermelho a partir do
     MÉTODO escolhido na emissão (Tarefa 4) — este módulo continua sem saber
@@ -373,6 +380,19 @@ def _assinatura_rodape(metodo: str, provedor_nome: str | None, medico: dict, suj
             "Carimbo e assinatura do profissional",
             f"Documento sem assinatura digital — requer assinatura do {sujeito}.",
         )
+    if metodo in _METODOS_MANUAL_EXTERNO:
+        # Texto DELIBERADAMENTE neutro, não condicional ao estado atual —
+        # o mesmo PDF que sai daqui vai e volta do Assinador ITI (fluxo
+        # manual, Trabalho 14: GOVBR e também VIDAAS/BIRDID/SAFEID/NEOID/
+        # REMOTEID, quando o médico já tem certificado em nuvem e assina
+        # com ele pelo próprio Assinador ITI), e a assinatura em si só é
+        # aplicada FORA da Corvia. Um aviso do tipo "ainda não assinado"
+        # ficaria permanentemente errado no arquivo final (a assinatura do
+        # ITI é um incremento no PDF, não regera o rodapé) — por isso a
+        # legenda descreve o MÉTODO, não afirma nem nega que já foi
+        # assinado.
+        nome = provedor_nome or metodo
+        return (f"Assinatura digital — {nome} (assinador.iti.br)", None)
     nome = medico.get("full_name") or ""
     provedor = provedor_nome or metodo
     return (f"Assinado digitalmente por {nome} — {provedor}", None)

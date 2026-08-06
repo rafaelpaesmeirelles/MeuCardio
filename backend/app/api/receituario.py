@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """Receituário — classificação, persistência, revisão e emissão."""
+import asyncio
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
@@ -11,6 +12,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
+from app.core.uploads import UploadRejected, validate_file
 from app.models.audit import AuditLog
 from app.models.assinatura import DocumentoEmitido
 from app.models.clinical_docs import Prescription
@@ -595,6 +597,67 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     return Response(content=emitido.pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="{nome_arquivo}"',
     })
+
+
+TAMANHO_MAXIMO_PDF_ASSINADO = 15 * 1024 * 1024  # 15 MB — PDF assinado, folga sobre o original
+
+
+@router.post("/documentos/{documento_id}/assinatura-externa")
+async def enviar_assinatura_externa(
+    documento_id: int, arquivo: UploadFile = File(...),
+    db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Fecha o fluxo do Assinador ITI/gov.br (Trabalho 14): o documento já
+    foi emitido com `metodo="GOVBR"` (via `/emitir`, sem assinar nada de
+    verdade) e o médico volta aqui com o PDF que assinou fora da Corvia,
+    em assinador.iti.br. Nunca aceita o arquivo sem conferir que existe
+    uma assinatura real embutida — ver `emissao.concluir_assinatura_
+    externa`."""
+    doc = db.get(PrescriptionDocument, documento_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    presc = db.get(Prescription, doc.prescription_id)
+    if not presc or presc.created_by != user.id:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+
+    conteudo = await arquivo.read(TAMANHO_MAXIMO_PDF_ASSINADO + 1)
+    if len(conteudo) > TAMANHO_MAXIMO_PDF_ASSINADO:
+        raise HTTPException(status_code=413, detail="O arquivo assinado precisa ter no máximo 15 MB.")
+    if not conteudo:
+        raise HTTPException(status_code=422, detail="Envie o arquivo assinado.")
+    try:
+        validate_file(conteudo, arquivo.filename or "documento-assinado.pdf", "exam")
+    except UploadRejected as erro:
+        raise HTTPException(status_code=erro.status_code, detail=erro.detail) from None
+    if not conteudo.startswith(b"%PDF-"):
+        raise HTTPException(
+            status_code=422,
+            detail="O Assinador gov.br devolve um PDF assinado — envie esse arquivo, não uma imagem.",
+        )
+
+    try:
+        # `verificacao_pdf.verificar()` chama `pyhanko.validate_pdf_signature`,
+        # que por dentro faz `asyncio.run()` — trava com "cannot be called
+        # from a running event loop" se rodar direto numa rota `async def`
+        # (Starlette já tem um loop rodando aqui). `to_thread` isola a
+        # chamada síncrona inteira numa thread própria, sem loop ambiente.
+        emitido = await asyncio.to_thread(
+            assinatura_emissao.concluir_assinatura_externa,
+            db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id,
+            pdf_assinado=conteudo, criado_por=user.id,
+        )
+    except assinatura_emissao.AssinaturaNaoDetectada as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
+    except assinatura_emissao.FluxoAssinaturaExternaInvalido as e:
+        raise HTTPException(status_code=409, detail=str(e)) from e
+
+    db.add(AuditLog(
+        user_id=user.id, action="concluir_assinatura_externa_receita",
+        entity="prescription_document", entity_id=str(doc.id),
+        detail={"sha256": emitido.registro.sha256, "bytes": len(emitido.pdf)},
+    ))
+    db.commit()
+    return {"assinado": True, "assinado_em": emitido.registro.assinado_em}
 
 
 class EnviarEmailIn(BaseModel):

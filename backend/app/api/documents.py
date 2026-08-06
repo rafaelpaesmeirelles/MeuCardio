@@ -1,7 +1,8 @@
+import asyncio
 import re
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
@@ -9,6 +10,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
+from app.core.uploads import UploadRejected, validate_file
 from app.models.audit import AuditLog
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.compartilhamento import DocumentShareLink
@@ -234,6 +236,57 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
     db.commit()
     return Response(content=emitido.pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})
+
+
+TAMANHO_MAXIMO_PDF_ASSINADO = 15 * 1024 * 1024  # 15 MB — PDF assinado, folga sobre o original
+
+
+@router.post("/gerados/{gid}/assinatura-externa")
+async def enviar_assinatura_externa(
+    gid: int, arquivo: UploadFile = File(...),
+    db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Fecha o fluxo do Assinador ITI/gov.br (Trabalho 14) para documento
+    gerado por modelo (atestado/laudo) — mesma lógica de
+    `receituario.py::enviar_assinatura_externa`."""
+    g = _obter_gerado(gid, db, user)
+
+    conteudo = await arquivo.read(TAMANHO_MAXIMO_PDF_ASSINADO + 1)
+    if len(conteudo) > TAMANHO_MAXIMO_PDF_ASSINADO:
+        raise HTTPException(status_code=413, detail="O arquivo assinado precisa ter no máximo 15 MB.")
+    if not conteudo:
+        raise HTTPException(status_code=422, detail="Envie o arquivo assinado.")
+    try:
+        validate_file(conteudo, arquivo.filename or "documento-assinado.pdf", "exam")
+    except UploadRejected as erro:
+        raise HTTPException(status_code=erro.status_code, detail=erro.detail) from None
+    if not conteudo.startswith(b"%PDF-"):
+        raise HTTPException(
+            status_code=422,
+            detail="O Assinador gov.br devolve um PDF assinado — envie esse arquivo, não uma imagem.",
+        )
+
+    try:
+        # Ver o comentário equivalente em receituario.py: `verificacao_pdf.
+        # verificar()` chama `asyncio.run()` por dentro (pyhanko) — precisa
+        # rodar numa thread própria quando a rota é `async def`.
+        emitido = await asyncio.to_thread(
+            assinatura_emissao.concluir_assinatura_externa,
+            db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id,
+            pdf_assinado=conteudo, criado_por=user.id,
+        )
+    except assinatura_emissao.AssinaturaNaoDetectada as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
+    except assinatura_emissao.FluxoAssinaturaExternaInvalido as e:
+        raise HTTPException(status_code=409, detail=str(e)) from e
+
+    db.add(AuditLog(
+        user_id=user.id, action="concluir_assinatura_externa_documento_gerado",
+        entity="generated_document", entity_id=str(g.id),
+        detail={"sha256": emitido.registro.sha256, "bytes": len(emitido.pdf)},
+    ))
+    db.commit()
+    return {"assinado": True, "assinado_em": emitido.registro.assinado_em}
 
 
 class EnviarEmailIn(BaseModel):
