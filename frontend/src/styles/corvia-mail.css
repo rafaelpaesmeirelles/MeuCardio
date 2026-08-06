@@ -282,6 +282,7 @@
 .mail-conta-ativa { display: flex; align-items: center; gap: .4rem; margin-top: .15rem; }
 .mail-conta-ativa .logo-provedor { flex: 0 0 auto; width: 20px; height: 20px; }
 .mail-conta-ativa select { max-width: min(360px, 58vw); min-height: 34px; padding: .25rem 2rem .25rem .55rem; border: 1px solid var(--borda); border-radius: 8px; background: var(--superficie); color: var(--texto); font-weight: 700; }
+.mail-conta-ativa__definir-padrao { flex: 0 0 auto; min-height: 34px; padding: .25rem .5rem; color: var(--acento); background: var(--superficie); border: 1px solid var(--borda); border-radius: 8px; font-size: .62rem; font-weight: 800; cursor: pointer; white-space: nowrap; }
 .mail-conta-nota { margin: .5rem 0; padding: .55rem .7rem; border-radius: 8px; background: var(--acento-tinta); color: var(--texto-secundario); font-size: .75rem; }
 
 /* Tablet: pastas + uma única área de trabalho. A leitura substitui a lista. */

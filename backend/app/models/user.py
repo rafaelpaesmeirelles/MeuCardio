@@ -88,6 +88,15 @@ class User(Base):
     email_assinatura_incluir_telefone: Mapped[bool] = mapped_column(Boolean, default=False)
     email_assinatura_incluir_endereco: Mapped[bool] = mapped_column(Boolean, default=False)
 
+    # Conta usada por padrão ao abrir o CorvIA Mail para escrever uma
+    # mensagem nova (Trabalho 9, painel "Administre suas contas"). Guarda o
+    # mesmo `id` que o frontend já usa em ContaEmail — "corvia" para a caixa
+    # nativa, ou o id (string) da CalendarIntegration para conta externa.
+    # None = comportamento de sempre, abre na caixa nativa. Não é FK: o id
+    # pode apontar pra uma integração que foi desconectada depois, e nesse
+    # caso o frontend cai de volta pro nativo em vez de quebrar.
+    email_conta_padrao_envio: Mapped[str | None] = mapped_column(String(40), nullable=True)
+
 
 @event.listens_for(User.password_hash, "set")
 def _revogar_sessoes_ao_trocar_senha(target, value, oldvalue, initiator) -> None:

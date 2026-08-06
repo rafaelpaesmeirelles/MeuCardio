@@ -50,9 +50,9 @@ type ContatoExterno = {
   organization: string; provider: string; integration_id: number;
 };
 type ContaEmail = {
-  id: string; provider: "corvia" | "google" | "microsoft";
+  id: string; provider: "corvia" | "google" | "microsoft" | "yahoo";
   display_name: string; email_address: string; native: boolean;
-  read_mail: boolean; send_mail: boolean;
+  read_mail: boolean; send_mail: boolean; padrao: boolean;
 };
 type Filtro = "todas" | "nao_lidas" | "anexos" | "acompanhamento";
 type AcaoResposta = "reply" | "replyall" | "forward";
@@ -313,6 +313,11 @@ export default function CaixaDeEmail() {
   const contaExterna = contaSelecionada && !contaSelecionada.native ? contaSelecionada : null;
   const prefixoConta = contaExterna ? `/email/externas/${contaExterna.id}` : "/email";
 
+  async function definirContaPadrao(contaId: string) {
+    await apiEmail.put("/email/conta-padrao-envio", { conta_id: contaId });
+    setContasEmail((atual) => atual.map((c) => ({ ...c, padrao: c.id === contaId })));
+  }
+
   function mensagemDeErro(e: unknown, fallback: string): string {
     if (e instanceof ApiEmailError && e.status === 401) {
       setSemSessao(true);
@@ -362,6 +367,8 @@ export default function CaixaDeEmail() {
         setEnderecoAtual(r.email_address);
         const contas = await apiEmail.get<ContaEmail[]>("/email/contas");
         setContasEmail(contas);
+        const padrao = contas.find((c) => c.padrao);
+        if (padrao) setContaEmailId(padrao.id);
       })
       .catch((e) => setErro(mensagemDeErro(e, "Não foi possível carregar sua caixa de e-mail.")));
   }, [semSessao]);
@@ -581,8 +588,18 @@ export default function CaixaDeEmail() {
             <div className="mail-conta-ativa">
               {contaExterna && contaExterna.provider !== "corvia" && <LogoProvedor provedor={contaExterna.provider} />}
               <select value={contaEmailId} onChange={(event) => setContaEmailId(event.target.value)} aria-label="Conta de e-mail ativa">
-                {contasEmail.map((conta) => <option key={conta.id} value={conta.id}>{conta.email_address}</option>)}
+                {contasEmail.map((conta) => <option key={conta.id} value={conta.id}>{conta.email_address}{conta.padrao ? " (padrão)" : ""}</option>)}
               </select>
+              {contaSelecionada && contaSelecionada.send_mail && !contaSelecionada.padrao && (
+                <button
+                  type="button"
+                  className="mail-conta-ativa__definir-padrao"
+                  title="Usar esta conta por padrão ao escrever uma mensagem nova"
+                  onClick={() => definirContaPadrao(contaSelecionada.id).catch((e) => setErro(mensagemDeErro(e, "Não foi possível definir a conta padrão.")))}
+                >
+                  Definir como padrão
+                </button>
+              )}
             </div>
           </div>
         </div>

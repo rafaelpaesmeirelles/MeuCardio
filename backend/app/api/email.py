@@ -519,6 +519,8 @@ def contas_da_caixa_unificada(
     conta: EmailAccount = Depends(current_email_account),
 ):
     """Caixa nativa e contas OAuth do mesmo titular, sem expor tokens."""
+    titular = db.get(User, conta.user_id)
+    padrao = (titular.email_conta_padrao_envio if titular else None) or "corvia"
     resultado = [{
         "id": "corvia",
         "provider": "corvia",
@@ -527,6 +529,7 @@ def contas_da_caixa_unificada(
         "native": True,
         "read_mail": True,
         "send_mail": True,
+        "padrao": padrao == "corvia",
     }]
     integracoes = db.query(CalendarIntegration).filter(
         CalendarIntegration.owner_id == conta.user_id,
@@ -546,8 +549,31 @@ def contas_da_caixa_unificada(
             "native": False,
             "read_mail": True,
             "send_mail": bool(capacidades.get("send_mail")),
+            "padrao": padrao == str(integracao.id),
         })
     return resultado
+
+
+class ContaPadraoEnvioIn(BaseModel):
+    conta_id: str
+
+
+@router.put("/conta-padrao-envio")
+def definir_conta_padrao_envio(
+    dados: ContaPadraoEnvioIn, db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    """Só aceita um `conta_id` que hoje aparece em GET /contas (nativa ou
+    externa conectada com send_mail) — não deixa gravar id de conta que não
+    existe ou que não pode enviar, o que deixaria o compositor sem opção
+    válida na próxima abertura."""
+    validos = {c["id"] for c in contas_da_caixa_unificada(db=db, conta=conta) if c["send_mail"]}
+    if dados.conta_id not in validos:
+        raise HTTPException(status_code=422, detail="Conta inválida ou sem permissão de envio.")
+    titular = db.get(User, conta.user_id)
+    titular.email_conta_padrao_envio = None if dados.conta_id == "corvia" else dados.conta_id
+    db.commit()
+    return {"conta_padrao_envio": dados.conta_id}
 
 
 @router.get("/mensagens/todas")
