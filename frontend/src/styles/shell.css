@@ -1919,6 +1919,12 @@
 }
 .hoje-card--deslocamento .eyebrow,
 .hoje-card--deslocamento .hoje-card__topo > svg { color: var(--teal-200); }
+/* Sem isto, o h2 ("Rota para o trabalho") herda a regra global
+ * `h1,h2,h3,h4 { color: var(--primaria) }` (navy escuro) em vez do branco
+ * do card — navy sobre o gradiente teal escuro deste card fica quase
+ * ilegível. Mesma correção que .hoje-card--mail e .hoje-card--apresentacao
+ * já têm; só faltava aqui. */
+.hoje-card--deslocamento .hoje-card__topo h2 { color: var(--white); }
 .hoje-card--deslocamento .hoje-card__acao {
   width: fit-content;
   margin-top: .9rem;
