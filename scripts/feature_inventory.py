@@ -41,7 +41,7 @@ EXPECTED_NAV_ROUTES = {
     "/documentos", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
-    "/usuarios-online", "/minha-conta", "/admin", "/fila-telediagnostico",
+    "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
