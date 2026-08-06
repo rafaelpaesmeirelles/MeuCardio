@@ -33,7 +33,14 @@ from email.header import decode_header
 from email.message import EmailMessage
 from email.utils import getaddresses, parsedate_to_datetime
 from html import escape
-from typing import Any
+from typing import TYPE_CHECKING, Any
+
+from sqlalchemy.orm import Session
+
+from app.services.assinatura import smime
+
+if TYPE_CHECKING:
+    from app.models.user import User
 
 IMAP_HOST = "imap.mail.me.com"
 IMAP_PORT = 993
@@ -240,13 +247,41 @@ def act_on_messages(credentials: dict[str, Any], message_ids: list[str], acao: s
 def send_message(
     credentials: dict[str, Any], *, to: str, subject: str, html: str,
     cc: str | None = None, bcc: str | None = None,
+    db: Session | None = None, user: "User | None" = None, assinar_smime: bool = False,
 ) -> dict[str, Any]:
+    """`assinar_smime=True` (pedido do Rafael em 06/08/2026 — "assinar
+    digitalmente um email pra enviar") exige `db`/`user`, porque a
+    assinatura usa o certificado A1 do próprio médico (mesma infra do
+    Trabalho 7, ver `services/assinatura/smime.py`). Só é possível aqui —
+    Yahoo/iCloud, onde a Corvia monta o MIME bruto — nunca na caixa nativa
+    Mail360, cuja API não aceita corpo pré-montado."""
     usuario, senha = _credenciais(credentials)
     destinatarios = [endereco for _, endereco in getaddresses([to]) if endereco]
     cc_lista = [endereco for _, endereco in getaddresses([cc or ""]) if endereco]
     bcc_lista = [endereco for _, endereco in getaddresses([bcc or ""]) if endereco]
     if not destinatarios:
         raise AppleMailError("Informe ao menos um destinatário válido.", status_code=422)
+
+    if assinar_smime:
+        if db is None or user is None:
+            raise AppleMailError("Assinatura S/MIME exige usuário autenticado.", status_code=422)
+        try:
+            mensagem_bytes = smime.montar_mensagem_assinada(
+                db, user, remetente=usuario, para=destinatarios, cc=cc_lista or None,
+                assunto=subject, html=html,
+            )
+        except smime.SmimeIndisponivel as exc:
+            raise AppleMailError(f"Não foi possível assinar o e-mail: {exc}", status_code=409) from exc
+        try:
+            with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=15) as smtp:
+                smtp.starttls()
+                smtp.login(usuario, senha)
+                smtp.sendmail(usuario, destinatarios + cc_lista + bcc_lista, mensagem_bytes)
+        except smtplib.SMTPAuthenticationError as exc:
+            raise AppleMailError("Login SMTP recusado pela Apple — a senha específica de app pode ter expirado.", status_code=401) from exc
+        except (smtplib.SMTPException, OSError) as exc:
+            raise AppleMailError("Falha ao enviar pelo iCloud.", status_code=502) from exc
+        return {"status": "sent", "assinado_smime": True}
 
     mensagem = EmailMessage()
     mensagem["From"] = usuario

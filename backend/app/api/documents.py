@@ -13,9 +13,9 @@ from app.models.audit import AuditLog
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.compartilhamento import DocumentShareLink
 from app.models.round import Patient
-from app.services import cofre
+from app.services import cofre, emails, envio_documento_email
+from app.services.assinatura import divulgacao_email
 from app.services.assinatura import emissao as assinatura_emissao
-from app.services.notificar import tentar_enviar_email
 from app.services.professional_profile import (
     document_identity, normalize_search_text, professional_name,
 )
@@ -238,6 +238,7 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
 
 class EnviarEmailIn(BaseModel):
     email: str = Field(min_length=5)
+    assinar_smime: bool = False
 
 
 @router.post("/gerados/{gid}/enviar-email")
@@ -255,14 +256,30 @@ def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(ge
     db.commit()
     db.refresh(link)
 
+    # Divulgação da assinatura só aparece se o documento FOI assinado com
+    # certificado A1 (nível "qualificada") — diferente do receituário, esta
+    # rota não exige isso: `GeneratedDocument` também aceita o método
+    # MANUAL (sem assinatura), e continuar permitindo enviá-lo por e-mail é
+    # o comportamento já existente, não alterado aqui.
+    emitido = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
+    divulgacao = None
+    if emitido and emitido.assinado_em is not None and emitido.nivel == "qualificada":
+        divulgacao = divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(emitido))
+
     url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
-    enviado = tentar_enviar_email(
-        destinatario=dados.email,
-        assunto="Corvia — documento do seu médico disponível",
-        corpo=(
-            f"{professional_name(user)} disponibilizou um documento para você na Corvia.\n\n"
-            f"Acesse pelo link abaixo (válido por {VALIDADE_LINK_DIAS} dias): {url}\n\n"
-            f"Este link é pessoal — não compartilhe."
-        ),
+    html = emails.montar_html_documento_disponivel(
+        nome_medico=professional_name(user), url=url, dias_validade=VALIDADE_LINK_DIAS,
+        divulgacao_assinatura=divulgacao,
     )
-    return {"enviado": enviado, "link": None if enviado else url}
+    resultado = envio_documento_email.enviar(
+        db, user, destinatario=dados.email, assunto=emails.ASSUNTO_DOCUMENTO_DISPONIVEL,
+        corpo_html=html, assinar_smime=dados.assinar_smime,
+    )
+    db.add(AuditLog(user_id=user.id, action="enviar_email_documento_gerado",
+                    entity="generated_document", entity_id=str(g.id),
+                    detail={"enviado": resultado.enviado, "erro": resultado.erro,
+                            "assinado_smime": resultado.assinado_smime}))
+    db.commit()
+    if not resultado.enviado:
+        raise HTTPException(status_code=502, detail=resultado.erro or "Não foi possível enviar o e-mail agora.")
+    return {"enviado": True, "link": None, "assinado_smime": resultado.assinado_smime}

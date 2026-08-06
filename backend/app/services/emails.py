@@ -679,3 +679,21 @@ def montar_html_material_paciente(
         nome_paciente=nome_paciente, nome_medico=nome_medico, recado=(recado or "").strip() or None,
         url=url, dias=dias_validade,
     )
+
+
+# Mesmo padrão do bloco acima (e-mail em nome do médico, não da Corvia) —
+# usado por `/api/receituario/documentos/{id}/enviar-email` e
+# `/api/document-templates/gerados/{id}/enviar-email`, Trabalho 11
+# (ampliação de 06/08/2026), via `services/envio_documento_email.py`.
+
+ASSUNTO_DOCUMENTO_DISPONIVEL = "Corvia — documento do seu médico disponível"
+
+
+def montar_html_documento_disponivel(
+    nome_medico: str, url: str, dias_validade: int, divulgacao_assinatura: str | None = None,
+) -> str:
+    template = _env_html.get_template("documento_disponivel.html")
+    return template.render(
+        nome_medico=nome_medico, url=url, dias=dias_validade,
+        divulgacao_assinatura=divulgacao_assinatura,
+    )

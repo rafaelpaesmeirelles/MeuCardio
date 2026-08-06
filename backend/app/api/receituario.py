@@ -26,7 +26,8 @@ from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
 from app.services.kyc import escopo_profissional
-from app.services.notificar import tentar_enviar_email
+from app.services import emails, envio_documento_email
+from app.services.assinatura import divulgacao_email
 from app.services.professional_profile import (
     document_identity, normalize_search_text, professional_name,
 )
@@ -598,6 +599,7 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
 
 class EnviarEmailIn(BaseModel):
     email: str = Field(min_length=5)
+    assinar_smime: bool = False
 
 
 @router.post("/documentos/{documento_id}/enviar-email")
@@ -639,18 +641,20 @@ def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(
     db.refresh(link)
 
     url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
-    enviado = tentar_enviar_email(
-        destinatario=dados.email,
-        assunto="Corvia — documento do seu médico disponível",
-        corpo=(
-            f"{professional_name(user)} disponibilizou um documento para você na Corvia.\n\n"
-            f"Acesse pelo link abaixo (válido por {VALIDADE_LINK_DIAS} dias): {url}\n\n"
-            f"Este link é pessoal — não compartilhe."
-        ),
+    html = emails.montar_html_documento_disponivel(
+        nome_medico=professional_name(user), url=url, dias_validade=VALIDADE_LINK_DIAS,
+        divulgacao_assinatura=divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(registro)),
+    )
+    resultado = envio_documento_email.enviar(
+        db, user, destinatario=dados.email, assunto=emails.ASSUNTO_DOCUMENTO_DISPONIVEL,
+        corpo_html=html, assinar_smime=dados.assinar_smime,
     )
 
     db.add(AuditLog(user_id=user.id, action="enviar_email_documento_receita",
                     entity="prescription_document", entity_id=str(doc.id),
-                    detail={"enviado": enviado}))
+                    detail={"enviado": resultado.enviado, "erro": resultado.erro,
+                            "assinado_smime": resultado.assinado_smime}))
     db.commit()
-    return {"enviado": enviado, "link": None if enviado else url}
+    if not resultado.enviado:
+        raise HTTPException(status_code=502, detail=resultado.erro or "Não foi possível enviar o e-mail agora.")
+    return {"enviado": True, "link": None, "assinado_smime": resultado.assinado_smime}
