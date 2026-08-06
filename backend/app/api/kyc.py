@@ -44,7 +44,7 @@ def _status_publico(registro: KycVerification | None) -> dict:
     return {
         "status": registro.status,
         "liberado": verificacao.liberado_para_uso(registro),
-        "crm_check_status": registro.crm_check_status,
+        "conselho_check_status": registro.conselho_check_status,
         "criado_em": registro.criado_em,
         "nota_revisao": registro.nota_revisao if registro.status == "rejeitado" else None,
     }

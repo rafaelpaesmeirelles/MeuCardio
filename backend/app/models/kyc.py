@@ -42,16 +42,22 @@ class KycVerification(Base):
     doc_pessoal_digital: Mapped[str | None] = mapped_column(String(120), nullable=True)
     selfie: Mapped[str] = mapped_column(String(120))
 
-    # "aguardando_revisao" (padrão) | "liberado_crm_ok" (CRM confirmado,
-    # assinante já usa, mas falta revisão definitiva) | "aprovado" | "rejeitado"
+    # "aguardando_revisao" (padrão) | "liberado_conselho_ok" (checagem
+    # automática confirmou registro ativo — hoje só existe para CRM) |
+    # "liberado_sem_checagem" (não-médico: nenhuma checagem automática
+    # existe para o conselho dele, liberado por decisão do Rafael em
+    # 06/08/2026 — ver `app/services/kyc/verificacao.py`) | "aprovado" |
+    # "rejeitado"
     status: Mapped[str] = mapped_column(String(30), default="aguardando_revisao", index=True)
 
-    # "ativo_confirmado" | "nao_confirmado" | "erro_checagem" — melhor
-    # esforço contra a busca pública do CFM, sem API oficial contratada
-    # (ver docstring de app/services/kyc/crm_check.py).
-    crm_check_status: Mapped[str] = mapped_column(String(20), default="nao_verificado")
-    crm_check_detalhe: Mapped[str | None] = mapped_column(String(500), nullable=True)
-    crm_check_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    # "ativo_confirmado" | "nao_confirmado" | "erro_checagem" |
+    # "indisponivel_para_conselho" — melhor esforço; hoje só o CRM tem
+    # webservice em potencial (CFM, pago, sem credencial ainda). Nenhum
+    # outro conselho (CRO/CRBM/COREN/CRF/CREFITO/CRN/CRP/CREF/CRESS) tem
+    # API pública documentada — ver `app/services/kyc/council_check.py`.
+    conselho_check_status: Mapped[str] = mapped_column(String(30), default="nao_verificado")
+    conselho_check_detalhe: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    conselho_check_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
     liberado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     aprovado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

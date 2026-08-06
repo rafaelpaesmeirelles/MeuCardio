@@ -25,6 +25,7 @@ from app.services.assinatura import emissao as assinatura_emissao
 from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
+from app.services.kyc import escopo_profissional
 from app.services.notificar import tentar_enviar_email
 from app.services.professional_profile import (
     document_identity, normalize_search_text, professional_name,
@@ -91,11 +92,13 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
     resolvidos: list[ItemPrescrito] = []
     for i in itens:
         substancia = None
+        drug_id = None
         apresentacao = i.apresentacao
         if i.drug_slug:
             d = db.query(Drug).filter(Drug.slug == i.drug_slug).first()
             if d:
                 substancia = d.generic_name
+                drug_id = d.id
                 if not apresentacao and d.presentations:
                     apresentacao = d.presentations[0]
         quantidade = "" if i.uso_continuo else (i.quantidade or "").strip()
@@ -116,8 +119,25 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
             pmc_snapshot=i.pmc_snapshot,
             uf=(i.uf or "").strip().upper() or None,
             cmed_version=(i.cmed_version or "").strip() or None,
+            drug_id=drug_id,
         ))
     return resolvidos
+
+
+def _bloqueios_de_escopo(db: Session, user, resultado) -> list[dict]:
+    """Escopo legal de prescrição por profissão (Tarefa 11, ampliação de
+    06/08/2026) — ver `app/services/kyc/escopo_profissional.py`. Roda
+    depois da classificação por lista da Portaria 344/98, item a item."""
+    escopo = escopo_profissional.escopo_de(user.council_name)
+    if escopo == escopo_profissional.ESCOPO_COMPLETO:
+        return []
+    bloqueios = []
+    for plano in resultado.documentos:
+        for item in plano.itens:
+            avaliado = escopo_profissional.avaliar_item(db, escopo, item.lista, item.drug_id)
+            if not avaliado.permitido:
+                bloqueios.append({"item": item.descricao, "motivo": avaliado.motivo})
+    return bloqueios
 
 
 def _tipos(db: Session) -> dict[str, PrescriptionType]:
@@ -193,7 +213,7 @@ def listar_tipos(db: Session = Depends(get_db), _=Depends(current_user)):
 
 @router.post("/classificar")
 def classificar_previa(dados: ReceituarioIn, db: Session = Depends(get_db),
-                       _=Depends(current_user)):
+                       user=Depends(current_user)):
     subs, regras, versao = _carregar_regras(db)
     r = classificar(_resolver(db, dados.itens), subs, regras)
     tipos = _tipos(db)
@@ -208,6 +228,7 @@ def classificar_previa(dados: ReceituarioIn, db: Session = Depends(get_db),
             "pendencias": d.pendencias,
         } for d in r.documentos],
         "recusados": [{"item": x.item.descricao, "motivo": x.motivo} for x in r.recusados],
+        "bloqueados_por_escopo": _bloqueios_de_escopo(db, user, r),
     }
 
 
@@ -220,6 +241,13 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
         raise HTTPException(status_code=422, detail={
             "erro": "A receita contém substância proscrita e não pode ser criada.",
             "itens": [{"item": x.item.descricao, "motivo": x.motivo} for x in resultado.recusados],
+        })
+
+    bloqueios_escopo = _bloqueios_de_escopo(db, user, resultado)
+    if bloqueios_escopo:
+        raise HTTPException(status_code=422, detail={
+            "erro": "Um ou mais itens estão fora do escopo legal de prescrição da sua profissão na Corvia.",
+            "itens": bloqueios_escopo,
         })
 
     rce_itens = [

@@ -75,6 +75,14 @@ services:
       # Certificado A1 do médico (Trabalho 7), cifrado em repouso — nunca
       # montado no Caddy, mesma razão dos dois volumes acima.
       - certificadosfiles:/certificados-a1
+      # Selfie e documentos pessoais/profissionais do KYC (Trabalho 11),
+      # cifrados em repouso — nunca montado no Caddy, mesma razão dos
+      # volumes acima. Faltava neste arquivo (só existia `settings.kyc_dir`
+      # apontando para o caminho, sem volume nomeado por trás — os arquivos
+      # estariam indo para o filesystem efêmero do container e se perderiam
+      # no próximo rebuild). Corrigido em 06/08/2026, junto do backup
+      # automático que passa a cobrir este volume.
+      - kycfiles:/kyc-documentos
       - cursofiles:/materiais-curso
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
     healthcheck:
@@ -124,6 +132,7 @@ volumes:
   examefiles:
   documentofiles:
   certificadosfiles:
+  kycfiles:
   cursofiles:
   caddy_data:
   caddy_config:

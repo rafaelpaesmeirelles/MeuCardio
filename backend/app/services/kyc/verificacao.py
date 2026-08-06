@@ -16,7 +16,7 @@ from app.core.config import settings
 from app.models.kyc import KycVerification
 from app.models.user import User
 from app.services import cofre
-from app.services.kyc import crm_check
+from app.services.kyc import council_check
 
 
 class DocumentoPessoalIncompleto(ValueError):
@@ -82,13 +82,27 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
         db.add(registro)
     db.flush()
 
-    # Checagem de CRM — melhor esforço, nunca bloqueia a submissão.
-    resultado = crm_check.checar_crm(user.council_number or "", user.council_state or "")
-    registro.crm_check_status = resultado.status
-    registro.crm_check_detalhe = resultado.detalhe
-    registro.crm_check_em = resultado.verificado_em
-    if resultado.status == crm_check.STATUS_ATIVO_CONFIRMADO:
-        registro.status = "liberado_crm_ok"
+    # Checagem de conselho — melhor esforço, nunca bloqueia a submissão.
+    resultado = council_check.checar_conselho(
+        user.council_name, user.council_number or "", user.council_state or "",
+    )
+    registro.conselho_check_status = resultado.status
+    registro.conselho_check_detalhe = resultado.detalhe
+    registro.conselho_check_em = resultado.verificado_em
+    if resultado.status == council_check.STATUS_ATIVO_CONFIRMADO:
+        registro.status = "liberado_conselho_ok"
+        registro.liberado_em = datetime.now(timezone.utc)
+    elif resultado.status == council_check.STATUS_INDISPONIVEL_PARA_CONSELHO:
+        # Só profissões não-médicas caem aqui (CRM sempre tenta a
+        # checagem real, mesmo que hoje falhe por falta de credencial —
+        # nesse caso o status é STATUS_ERRO_CHECAGEM, não este). Sem
+        # nenhuma checagem automática possível para o conselho, libera
+        # mesmo assim — decisão do Rafael em 06/08/2026 — porque o
+        # escopo de prescrição dessas profissões já é restrito por
+        # padrão (`app/services/kyc/escopo_profissional.py`), o que
+        # reduz o risco de liberar sem confirmação. A informação segue
+        # marcada como não verificada na fila de revisão manual.
+        registro.status = "liberado_sem_checagem"
         registro.liberado_em = datetime.now(timezone.utc)
 
     for nome_antigo in arquivos_antigos:
@@ -103,19 +117,26 @@ def obter(db: Session, user: User) -> KycVerification | None:
 
 
 def liberado_para_uso(registro: KycVerification | None) -> bool:
-    """Regra de acesso: liberado se a checagem automática confirmou OU se
-    já passou pela revisão definitiva. "aguardando_revisao" sozinho NUNCA
-    libera — é o caso em que a checagem de CRM falhou ou não confirmou."""
-    return registro is not None and registro.status in ("liberado_crm_ok", "aprovado")
+    """Regra de acesso: liberado se a checagem automática confirmou, OU se
+    não havia checagem automática possível para o conselho (não-médico,
+    ver `council_check.py`), OU se já passou pela revisão definitiva.
+    "aguardando_revisao" sozinho NUNCA libera — é o caso em que a
+    checagem (de CRM, hoje o único conselho com checagem em potencial)
+    falhou ou não confirmou o registro."""
+    return registro is not None and registro.status in (
+        "liberado_conselho_ok", "liberado_sem_checagem", "aprovado",
+    )
 
 
 def listar_pendentes(db: Session) -> list[KycVerification]:
     """Fila do admin: tudo que ainda não recebeu aprovação DEFINITIVA —
-    inclui tanto o que já está liberado por CRM (revisão ainda pendente)
-    quanto o que está travado esperando revisão."""
+    inclui tanto o que já está liberado (por checagem confirmada ou por
+    checagem indisponível) quanto o que está travado esperando revisão."""
     return (
         db.query(KycVerification)
-        .filter(KycVerification.status.in_(["aguardando_revisao", "liberado_crm_ok"]))
+        .filter(KycVerification.status.in_([
+            "aguardando_revisao", "liberado_conselho_ok", "liberado_sem_checagem",
+        ]))
         .order_by(KycVerification.criado_em.asc())
         .all()
     )

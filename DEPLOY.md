@@ -161,6 +161,10 @@ PROJETO="$PWD" bash ./infra/backup/backup.sh
 
 O backup é um dump custom do PostgreSQL (`.dump`), comprimido internamente pelo `pg_dump`. Antes de ser publicado, seu catálogo é validado por `pg_restore --list`. O script usa arquivo temporário, permissões `0600` e cria um SHA-256 portátil no mesmo diretório.
 
+**Desde 06/08/2026, o mesmo comando também empacota os quatro volumes sensíveis com arquivo enviado por assinante** (`kycfiles` — selfie e documento pessoal/profissional do KYC; `documentofiles` — PDF de receituário/documento assinado; `certificadosfiles` — certificado digital A1; `examefiles` — exame de telediagnóstico), um `.tar.gz` + `.sha256` por volume, no mesmo diretório e com a mesma retenção do dump do banco. Cada arquivo já está cifrado por dentro pelo cofre (`app/services/cofre.py`) — o backup não decifra nada, só empacota. Restaurar um volume: `infra/backup/restaurar_volume.sh <arquivo.tar.gz>` (destrutivo, pede confirmação, para o backend antes de escrever — mesma cautela do `restaurar.sh` do banco).
+
+**Isto NÃO é disaster recovery contra perda do host inteiro** — os pacotes ficam no mesmo servidor (`infra/backup/dumps/`). Réplica fora do VPS exigiria credencial de armazenamento externo (S3, Backblaze etc.) que este projeto não tem configurada hoje; decisão de contratar isso é do Rafael, não assumida aqui.
+
 ### Backup automático
 
 ```bash

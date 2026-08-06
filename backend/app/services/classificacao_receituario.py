@@ -42,6 +42,7 @@ class ItemPrescrito:
     pmc_snapshot: float | None = None
     uf: str | None = None
     cmed_version: str | None = None
+    drug_id: int | None = None
 
 
 @dataclass

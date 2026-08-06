@@ -8,6 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 DEPLOY = REPO_ROOT / "deploy.sh"
 BACKUP = REPO_ROOT / "infra/backup/backup.sh"
 RESTORE = REPO_ROOT / "infra/backup/restaurar.sh"
+RESTORE_VOLUME = REPO_ROOT / "infra/backup/restaurar_volume.sh"
 COMPOSE = REPO_ROOT / "docker-compose.prod.yml"
 HEALTH = REPO_ROOT / "backend/app/api/health.py"
 FRONTEND_DOCKERIGNORE = REPO_ROOT / "frontend/.dockerignore"
@@ -29,7 +30,7 @@ def _linhas_ativas(caminho: Path) -> list[str]:
 
 def test_scripts_operacionais_possuem_sintaxe_bash_valida():
     resultado = subprocess.run(
-        ["bash", "-n", str(DEPLOY), str(BACKUP), str(RESTORE)],
+        ["bash", "-n", str(DEPLOY), str(BACKUP), str(RESTORE), str(RESTORE_VOLUME)],
         cwd=REPO_ROOT, capture_output=True, text=True, check=False,
     )
     assert resultado.returncode == 0, resultado.stderr
@@ -175,6 +176,31 @@ def test_backup_e_portavel_atomico_restauravel_e_verificado():
     assert "pg_restore --list" in fonte
     assert 'sha256sum "$(basename "$ARQUIVO")"' in fonte
     assert "--no-owner" in fonte and "--no-privileges" in fonte
+
+
+def test_backup_empacota_volumes_sensiveis_antes_de_imprimir_o_dump_por_ultimo():
+    """Trabalho 11 (06/08/2026) — backup automático de selfie/documento do
+    KYC, PDF de receituário, certificado A1 e exame. `deploy.sh` depende de
+    `tail -n 1` para achar o dump de rollback — qualquer eco novo tem que
+    vir ANTES do `printf` final, nunca depois."""
+    fonte = _fonte(BACKUP)
+    for volume, caminho in (
+        ("kycfiles", "/kyc-documentos"),
+        ("documentofiles", "/documentos-emitidos"),
+        ("certificadosfiles", "/certificados-a1"),
+        ("examefiles", "/exames-pacientes"),
+    ):
+        assert f"[{volume}]=\"{caminho}\"" in fonte
+    assert fonte.rstrip().splitlines()[-1] == 'printf \'%s\\n\' "$ARQUIVO"'
+    assert fonte.index('run --rm -T --no-deps') < fonte.rindex('printf \'%s\\n\' "$ARQUIVO"')
+
+
+def test_restaurador_de_volume_valida_checksum_antes_de_apagar():
+    fonte = _fonte(RESTORE_VOLUME)
+    indice_checksum = fonte.index("sha256sum -c")
+    indice_delete = fonte.index("find '$CAMINHO' -mindepth 1 -delete")
+    assert indice_checksum < indice_delete
+    assert 'confirmacao" == "RESTAURAR"' in fonte
 
 
 def test_restaurador_valida_antes_de_apagar_e_usa_pg_restore():

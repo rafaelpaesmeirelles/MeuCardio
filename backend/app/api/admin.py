@@ -13,6 +13,7 @@ from app.models.agenda import GoogleTestUserRequest
 from app.models.audit import AuditLog
 from app.models.content import Document
 from app.models.kyc import KycVerification
+from app.models.user import User
 from app.services import emails
 from app.services.kyc import verificacao as kyc_verificacao
 from app.services.professional_profile import normalize_council, normalize_professional_title
@@ -639,9 +640,11 @@ def liberar_pedido_teste_google(
 # ---------------------------------------------------------------------------
 # Verificação de identidade pós-pagamento (Trabalho 11, 06/08/2026) —
 # documentos e selfie do assinante, revisão definitiva do admin. A liberação
-# automática por CRM (se/quando configurada) já deixa o assinante usar a
-# Corvia antes desta revisão — aqui é a aprovação DEFINITIVA, que fecha o
-# ciclo mesmo pra quem já foi liberado.
+# automática (por CRM confirmado, quando a credencial existir, ou por
+# ausência de checagem possível pra qualquer outro conselho — ver
+# `council_check.py`) já deixa o assinante usar a Corvia antes desta
+# revisão — aqui é a aprovação DEFINITIVA, que fecha o ciclo mesmo pra quem
+# já foi liberado.
 # ---------------------------------------------------------------------------
 
 _CAMPOS_DOCUMENTO = {
@@ -664,11 +667,24 @@ def _mime_por_assinatura(dados: bytes) -> str:
 
 @router.get("/kyc")
 def listar_verificacoes_pendentes(db: Session = Depends(get_db), _=Depends(require_admin)):
+    """Fila de revisão definitiva. Para profissão sem checagem automática
+    possível (todo conselho que não seja CRM — ver `council_check.py`), o
+    profissional já está liberado (`status == "liberado_sem_checagem"`) e
+    esta é a única validação que o registro dele recebe — por isso os
+    dados de profissão/conselho vêm aqui, não só no cadastro."""
     itens = kyc_verificacao.listar_pendentes(db)
+    usuarios = {
+        u.id: u for u in db.query(User).filter(User.id.in_([i.owner_id for i in itens])).all()
+    } if itens else {}
     return [
         {
             "id": i.id, "user_id": i.owner_id, "status": i.status,
-            "crm_check_status": i.crm_check_status, "crm_check_detalhe": i.crm_check_detalhe,
+            "conselho_check_status": i.conselho_check_status,
+            "conselho_check_detalhe": i.conselho_check_detalhe,
+            "profession": (usuarios[i.owner_id].profession if i.owner_id in usuarios else None),
+            "council_name": (usuarios[i.owner_id].council_name if i.owner_id in usuarios else None),
+            "council_number": (usuarios[i.owner_id].council_number if i.owner_id in usuarios else None),
+            "council_state": (usuarios[i.owner_id].council_state if i.owner_id in usuarios else None),
             "tem_documento_digital": i.doc_pessoal_digital is not None,
             "criado_em": i.criado_em, "liberado_em": i.liberado_em,
         }

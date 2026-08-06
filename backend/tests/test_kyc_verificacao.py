@@ -5,7 +5,7 @@ import pytest
 
 from app.core.config import settings
 from app.models.kyc import KycVerification
-from app.services.kyc import crm_check, verificacao
+from app.services.kyc import council_check, crm_check, verificacao
 
 
 @pytest.fixture(autouse=True)
@@ -50,15 +50,39 @@ def test_submeter_com_documento_digital_funciona_sem_fotos(db, criar_usuario):
 
 
 def test_sem_credencial_cfm_configurada_vai_para_revisao_manual(db, criar_usuario):
+    """CRM continua exigindo checagem confirmada OU aprovação manual —
+    sem credencial do CFM, a submissão fica bloqueada. Comportamento
+    inalterado pela generalização a outros conselhos (06/08/2026)."""
     user, _ = criar_usuario()
+    user.council_name = "CRM"
     user.council_number = "123456"
     user.council_state = "SP"
     db.commit()
     registro = verificacao.submeter(db, user, _docs())
     db.commit()
     assert registro.status == "aguardando_revisao"
-    assert registro.crm_check_status == crm_check.STATUS_ERRO_CHECAGEM
+    assert registro.conselho_check_status == crm_check.STATUS_ERRO_CHECAGEM
     assert verificacao.liberado_para_uso(registro) is False
+
+
+def test_profissao_sem_conselho_com_checagem_e_liberada_mesmo_sem_confirmar(db, criar_usuario):
+    """Não-médico (ou CRM não informado): nenhum conselho fora do CRM tem
+    checagem automática hoje, então a submissão libera acesso e assinatura
+    de imediato, com o registro marcado como não verificado para a fila de
+    revisão manual do Rafael — decisão dele em 06/08/2026."""
+    user, _ = criar_usuario()
+    user.council_name = "CREFITO"
+    user.council_number = "98765"
+    user.council_state = "RJ"
+    db.commit()
+    registro = verificacao.submeter(db, user, _docs())
+    db.commit()
+    assert registro.status == "liberado_sem_checagem"
+    assert registro.conselho_check_status == council_check.STATUS_INDISPONIVEL_PARA_CONSELHO
+    assert verificacao.liberado_para_uso(registro) is True
+    # E ainda assim entra na fila do admin — liberado não é a mesma coisa
+    # que aprovado definitivamente.
+    assert registro in verificacao.listar_pendentes(db)
 
 
 def test_submeter_de_novo_substitui_e_apaga_arquivos_antigos(db, criar_usuario):
@@ -88,7 +112,7 @@ def test_listar_pendentes_inclui_aguardando_e_liberado_crm_mas_nao_aprovado(db, 
 
     r1 = verificacao.submeter(db, user1, _docs())  # aguardando_revisao
     r2 = verificacao.submeter(db, user2, _docs())
-    r2.status = "liberado_crm_ok"
+    r2.status = "liberado_conselho_ok"
     r3 = verificacao.submeter(db, user3, _docs())
     db.commit()
     verificacao.aprovar(db, r3, user1, "ok")  # aprovado — some da fila
