@@ -11377,5 +11377,25 @@
       "Meredith A, Zazai IK, Kyriakopoulos C. Pericardial Cyst. StatPearls [Internet]. Atualizado em 04/01/2023."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "hve-t1-nativo-baixo-doenca-de-fabry-vs-amiloidose",
+    "titulo": "Hipertrofia ventricular com T1 nativo baixo: Fabry ou amiloidose?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 34 anos, hipertrofia ventricular esquerda moderada em ecocardiograma de rotina, sem hipertensão. Refere dor neuropática em extremidades desde a adolescência, angioceratomas em região umbilical e proteinúria leve em exame de urina. RM cardíaca mostra T1 nativo BAIXO, sem o padrão de pseudonormalização, e realce tardio basal-ínfero-lateral.",
+    "pergunta": "Qual a hipótese diagnóstica mais provável e a via de confirmação?",
+    "opcoes": [
+      "Amiloidose cardíaca — solicitar cintilografia com pirofosfato e eletroforese de proteínas séricas/urinárias",
+      "Doença de Anderson-Fabry — confirmar em homem por dosagem de atividade de alfa-galactosidase A e lyso-Gb3",
+      "Cardiomiopatia hipertrófica sarcomérica — solicitar painel genético de genes do sarcômero apenas",
+      "Hipertensão arterial secundária — investigar causas endócrinas de HVE antes de qualquer outro exame"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O conjunto de achados — HVE em homem jovem sem hipertensão, dor neuropática desde a adolescência, angioceratomas, proteinúria e, especialmente, T1 NATIVO BAIXO à RM cardíaca (achado que diferencia Fabry de amiloidose, cujo padrão típico é T1 nativo ELEVADO) — aponta para doença de Anderson-Fabry, não amiloidose. Em homens, o diagnóstico é confirmado por dosagem de atividade de alfa-galactosidase A (α-GalA) e de lyso-Gb3; em mulheres, como a atividade enzimática pode estar normal apesar da doença (inativação variável do X), o diagnóstico geralmente exige teste genético para variantes no gene GLA. Identificar Fabry é clinicamente relevante porque, ao contrário da maioria das fenocópias de cardiomiopatia hipertrófica, existe tratamento etiológico específico (terapia de reposição enzimática com agalsidase alfa/beta, ou migalastat).",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194, Seção 7.6.1 e Tabelas 22-23"
+    ],
+    "review_status": "revisado"
   }
 ]
