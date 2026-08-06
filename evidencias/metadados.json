@@ -33650,5 +33650,121 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hbpm-ou-fondaparinux-preferiveis-a-hnf-no-tep",
+    "statement": "Se a anticoagulação for iniciada por via parenteral, HBPM ou fondaparinux são recomendados (em vez de HNF) para a maioria dos pacientes com TEP agudo de risco intermediário ou baixo.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "hbpm",
+      "fondaparinux",
+      "anticoagulação parenteral"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "noac-nao-recomendado-em-insuficiencia-renal-grave-gestacao-e-saf-no-tep",
+    "statement": "NOAC (DOAC) NÃO são recomendados em pacientes com TEP e insuficiência renal grave, durante gestação e lactação, e em pacientes com síndrome do anticorpo antifosfolípide.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "doac",
+      "insuficiência renal",
+      "gestação",
+      "saf",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trombolise-de-resgate-na-deterioracao-hemodinamica-sob-anticoagulacao-no-tep",
+    "statement": "Terapia trombolítica de resgate é recomendada para pacientes com TEP e deterioração hemodinâmica durante anticoagulação (risco intermediário/baixo inicial que evolui para instabilidade).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "trombólise",
+      "deterioração hemodinâmica",
+      "resgate"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trombolise-sistemica-rotineira-nao-recomendada-em-tep-de-risco-intermediario-ou-baixo",
+    "statement": "O uso rotineiro de trombólise sistêmica primária NÃO é recomendado em pacientes com TEP de risco intermediário ou baixo.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "trombólise",
+      "risco intermediário",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "filtro-de-veia-cava-inferior-de-rotina-nao-recomendado-no-tep",
+    "statement": "O uso rotineiro de filtro de veia cava inferior NÃO é recomendado em pacientes com TEP agudo. O filtro deve ser considerado (Classe IIa) apenas em contraindicação absoluta à anticoagulação, ou em recorrência de TEP apesar de anticoagulação terapêutica.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "filtro de veia cava inferior",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "overlap-vka-com-anticoagulante-parenteral-ate-inr-alvo-no-tep",
+    "statement": "Quando o paciente com TEP é tratado com antagonista de vitamina K, é recomendada sobreposição (overlap) com anticoagulante parenteral até que um INR de 2,5 (faixa 2,0-3,0) seja atingido.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "antagonista de vitamina k",
+      "warfarina",
+      "inr",
+      "overlap"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
