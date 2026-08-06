@@ -33876,5 +33876,60 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "participacao-em-reabilitacao-cardiaca-estruturada-multidisciplinar-esc-2021",
+    "statement": "Participação em programa de reabilitação cardíaca baseada em exercício (EBCR), estruturado, multidisciplinar e supervisionado por profissional de saúde, é recomendada após eventos de doença cardiovascular aterosclerótica e/ou revascularização, e em pacientes com insuficiência cardíaca (principalmente ICFEr), para melhorar os desfechos do paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.11 (Cardiac rehabilitation and prevention programmes), tabela de recomendações.",
+    "theme": "Geral",
+    "tags": [
+      "reabilitação cardíaca",
+      "programa multidisciplinar",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "metodos-para-aumentar-encaminhamento-e-adesao-a-reabilitacao-cardiaca-esc-2021",
+    "statement": "Métodos para aumentar o encaminhamento e a adesão à reabilitação cardíaca devem ser considerados — por exemplo, lembretes eletrônicos ou encaminhamento automático, visitas de encaminhamento e ligação, seguimento estruturado por enfermeiros ou outros profissionais de saúde, e início precoce do programa após a alta hospitalar.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.11 (Cardiac rehabilitation and prevention programmes), tabela de recomendações.",
+    "theme": "Geral",
+    "tags": [
+      "reabilitação cardíaca",
+      "adesão",
+      "encaminhamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reabilitacao-cardiaca-domiciliar-telessaude-e-mhealth-esc-2021",
+    "statement": "Reabilitação cardíaca domiciliar, telessaúde e intervenções por dispositivo móvel (mHealth) podem ser consideradas para aumentar a participação do paciente e a adesão de longo prazo a comportamentos saudáveis.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.11 (Cardiac rehabilitation and prevention programmes), tabela de recomendações.",
+    "theme": "Geral",
+    "tags": [
+      "reabilitação cardíaca",
+      "telessaúde",
+      "mhealth",
+      "reabilitação domiciliar"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
