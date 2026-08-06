@@ -352,7 +352,22 @@ def sync_integration(db: Session, integration: CalendarIntegration, *, full: boo
         integration.last_sync_finished_at = finished
         integration.last_success_at = finished
         integration.status = "connected"
-        integration.capabilities = asdict(connector.capabilities)
+        # ConnectorCapabilities é o contrato do CONECTOR DE CALENDÁRIO — não tem
+        # (e não deve ganhar) campo de e-mail, porque nem todo provedor de
+        # agenda tem caixa de e-mail associada. `read_mail`/`send_mail` vêm do
+        # ESCOPO OAUTH CONCEDIDO na conexão (ver complete_oauth em
+        # external_accounts.py) e moram no mesmo dict `capabilities` por
+        # conveniência — sobrescrever o dict inteiro aqui apagava essas duas
+        # chaves a cada sincronização, e a caixa de e-mail unificada
+        # (app/api/email.py::contas_da_caixa_unificada) parava de oferecer a
+        # conta Google/Microsoft como opção de e-mail depois do primeiro sync,
+        # mesmo com o escopo de Gmail/Mail concedido de verdade. Preserva as
+        # duas chaves em vez de descartar o dict anterior.
+        capacidades_mail = {
+            chave: valor for chave, valor in (integration.capabilities or {}).items()
+            if chave in ("read_mail", "send_mail")
+        }
+        integration.capabilities = {**asdict(connector.capabilities), **capacidades_mail}
         db.commit()
         return {"created": created, "updated": updated, "cancelled": cancelled, "skipped": skipped}
     except Exception as exc:

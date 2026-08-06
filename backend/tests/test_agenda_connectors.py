@@ -1,8 +1,8 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import httpx
 import pytest
-from app.models.agenda import CalendarOutboxEvent
+from app.models.agenda import CalendarIntegration, CalendarOutboxEvent
 from app.services.agenda_integrada.apple_dav import parse_icalendar, parse_vcard
 from app.services.agenda_integrada.connectors import (
     ConnectorError,
@@ -12,7 +12,11 @@ from app.services.agenda_integrada.connectors import (
     connector_catalog,
 )
 from app.services.agenda_integrada.contacts import GoogleContacts, MicrosoftContacts
-from app.services.agenda_integrada.domain import process_outbox_event
+from app.services.agenda_integrada.domain import (
+    process_outbox_event,
+    store_integration_credentials,
+    sync_integration,
+)
 
 
 def test_catalog_does_not_claim_unverified_clinical_connectors():
@@ -60,6 +64,43 @@ def test_google_incremental_sync_maps_cancelled_and_preserves_sync_token():
     )
     assert result.cursor == "cursor-2"
     assert [item.status for item in result.appointments] == ["confirmed", "cancelled"]
+
+
+def test_sync_preserves_mail_capability_granted_by_oauth_scope(db, criar_usuario):
+    """Regressão: `sync_integration` sobrescrevia `capabilities` inteiro com o
+    `ConnectorCapabilities` do conector de calendário — que não tem (e não deve
+    ganhar) campo de e-mail — apagando `read_mail`/`send_mail` concedidos pelo
+    escopo OAuth a cada sincronização. Achado ao vivo: conta Google conectada
+    com Gmail sumia da caixa de e-mail unificada depois do 1º sync."""
+    user, _ = criar_usuario(email="agenda.sync.mail-capability@teste.local")
+    integration = CalendarIntegration(
+        owner_id=user.id, provider="google_calendar", display_name="teste@gmail.com",
+        external_account_id="ext-1", sync_strategy="external_authoritative",
+        enabled=True, status="connected", contacts_enabled=True,
+        configuration={"calendar_id": "primary"},
+        # Estado pós-OAuth: complete_oauth() grava isto com base no escopo
+        # concedido — mail=True foi pedido e o Google concedeu.
+        capabilities={"read_appointments": True, "read_mail": True, "send_mail": True},
+    )
+    db.add(integration)
+    db.flush()
+    store_integration_credentials(integration, {
+        "access_token": "token", "refresh_token": "refresh",
+        "expires_at": (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat(),
+    })
+    db.commit()
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={"items": [], "nextSyncToken": "cursor-1"})
+
+    sync_integration(db, integration, transport=httpx.MockTransport(handler))
+
+    assert integration.capabilities["read_mail"] is True
+    assert integration.capabilities["send_mail"] is True
+    # As capacidades de calendário do conector continuam vindo do conector,
+    # não congeladas do valor inicial que o teste montou.
+    assert integration.capabilities["read_appointments"] is True
+    assert integration.capabilities["create_appointment"] is True  # do conector, não do teste
 
 
 def test_google_create_uses_deterministic_provider_id_for_idempotency():
