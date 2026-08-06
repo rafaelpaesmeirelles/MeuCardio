@@ -1,0 +1,143 @@
+/* Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026) — tela cheia,
+   fora do Shell de propósito. Fundo em degradê navy, cartão central
+   elevado; cada troca de passo remonta `.tour__slide` (key={passo} no
+   componente), o que já dispara a animação de entrada sozinho. */
+
+.tour {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(1100px 620px at 15% -10%, rgba(37, 150, 169, 0.35), transparent 60%),
+    radial-gradient(900px 560px at 100% 110%, rgba(200, 18, 46, 0.18), transparent 55%),
+    linear-gradient(160deg, var(--navy-950), var(--navy-900) 55%, var(--navy-800));
+  color: var(--white);
+  overflow: hidden;
+}
+
+.tour__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem clamp(1rem, 4vw, 3rem) 0;
+}
+.tour__logo { height: 28px; width: auto; filter: brightness(0) invert(1); opacity: 0.92; }
+.tour__pular {
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.tour__pular:hover { color: var(--white); border-color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.08); }
+
+.tour__progresso {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 1.4rem 1rem 0.4rem;
+}
+.tour__ponto {
+  width: 22px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  transition: background-color 0.25s ease;
+}
+.tour__ponto--feito { background: var(--teal-500); }
+
+.tour__corpo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem clamp(1rem, 5vw, 3rem) 1rem;
+  min-height: 0;
+}
+
+.tour__slide {
+  width: 100%;
+  max-width: 620px;
+  animation: tour-entra 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes tour-entra {
+  from { opacity: 0; transform: translateY(14px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tour__slide { animation: none; }
+}
+
+.tour__cartao {
+  background: var(--white);
+  color: var(--texto);
+  border-radius: var(--r-xl);
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  box-shadow: var(--sombra-lg);
+  text-align: center;
+}
+.tour__cartao--boas-vindas { padding-block: clamp(2.4rem, 6vw, 3.6rem); }
+.tour__cartao h1 { margin-bottom: 0.5rem; }
+
+.tour__icone {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--teal-50);
+  color: var(--teal-700);
+}
+
+.tour__resumo {
+  color: var(--texto-secundario);
+  font-size: 1.02rem;
+  max-width: 46ch;
+  margin: 0 auto 1.4rem;
+}
+
+.tour__detalhes {
+  display: grid;
+  gap: 0.9rem;
+  text-align: left;
+  margin: 0;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--borda);
+}
+.tour__detalhes > div { padding-top: 0.9rem; }
+.tour__detalhes > div:first-child { padding-top: 0; }
+.tour__detalhes dt {
+  font-family: var(--fonte-dados);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--teal-700);
+  margin-bottom: 0.25rem;
+}
+.tour__detalhes dd { margin: 0; color: var(--texto); font-size: 0.94rem; line-height: 1.55; }
+
+.tour__nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1.5rem clamp(1.6rem, 4vh, 2.4rem);
+}
+.tour__nav .botao { min-width: 150px; }
+.tour__nav .botao--secundario {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.32);
+  background: transparent;
+}
+.tour__nav .botao--secundario:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.5); }
+.tour__nav .botao--secundario:disabled { opacity: 0.35; }
+
+@media (max-width: 560px) {
+  .tour__nav { flex-direction: column-reverse; }
+  .tour__nav .botao { width: 100%; }
+}

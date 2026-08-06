@@ -82,6 +82,29 @@ def _kyc_required(db: Session, user: User) -> bool:
     return not kyc_verificacao.liberado_para_uso(kyc_verificacao.obter(db, user))
 
 
+def _onboarding_pendente(db: Session, user: User) -> bool:
+    """Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026) — só depois
+    do KYC estar resolvido, para as duas telas nunca disputarem o mesmo
+    momento (o App.tsx checa perfil → KYC → tour, nessa ordem, mas calcular
+    já considerando isso aqui evita depender só da ordem do frontend)."""
+    if _kyc_required(db, user):
+        return False
+    if user.role == "admin":
+        return False
+    from app.core.security import ACESSO_LIBERADO
+    from app.models.subscription import Subscription
+
+    sub = (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user.id, Subscription.kind == "meucardio")
+        .order_by(Subscription.id)
+        .first()
+    )
+    if sub is None or sub.status not in ACESSO_LIBERADO:
+        return False
+    return not user.onboarding_visto
+
+
 def _perfil(db: Session, user: User) -> dict:
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
@@ -110,6 +133,7 @@ def _perfil(db: Session, user: User) -> dict:
         "boas_vindas_pendente": user.boas_vindas_pendente,
         "assinatura_metodo_preferido": user.assinatura_metodo_preferido,
         "kyc_required": _kyc_required(db, user),
+        "onboarding_pendente": _onboarding_pendente(db, user),
     }
 
 
@@ -283,6 +307,15 @@ def marcar_boas_vindas_vista(db: Session = Depends(get_db), user: User = Depends
     user.boas_vindas_pendente = False
     db.commit()
     return {"boas_vindas_pendente": False}
+
+
+@router.post("/me/onboarding-concluido")
+def marcar_onboarding_concluido(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Fecha o tour guiado do primeiro acesso (Trabalho 13) de vez — tanto
+    quem termina o tour quanto quem escolhe pular chegam aqui."""
+    user.onboarding_visto = True
+    db.commit()
+    return {"onboarding_pendente": False}
 
 
 class PreferenciaAssinatura(BaseModel):

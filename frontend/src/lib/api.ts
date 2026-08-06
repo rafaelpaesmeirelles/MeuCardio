@@ -285,4 +285,5 @@ export type Usuario = {
   boas_vindas_pendente: boolean;
   assinatura_metodo_preferido: string | null;
   kyc_required: boolean;
+  onboarding_pendente: boolean;
 };

@@ -61,6 +61,11 @@ class User(Base):
     reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     rejection_note: Mapped[str | None] = mapped_column(String(500), nullable=True)
     boas_vindas_pendente: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Tour guiado do primeiro acesso já com assinatura ativa (Trabalho 13,
+    # 06/08/2026) — coluna já existia desde a migração b3f8a1d92e64
+    # (03/08/2026, funil público→assinante), nunca tinha sido exposta no
+    # model nem usada por código nenhum até agora.
+    onboarding_visto: Mapped[bool] = mapped_column(Boolean, default=False)
 
     last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     show_online_status: Mapped[bool] = mapped_column(Boolean, default=False)

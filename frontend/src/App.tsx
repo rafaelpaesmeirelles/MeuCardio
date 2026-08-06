@@ -59,6 +59,7 @@ const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
 const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
+const Tour = lazy(() => import("./pages/Tour"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -103,6 +104,12 @@ export default function App() {
   // teria o que checar.
   if (usuario.kyc_required && location.pathname !== "/verificacao-identidade") {
     return <Navigate to="/verificacao-identidade" replace />;
+  }
+
+  // Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026) — só depois
+  // do perfil e do KYC resolvidos, uma única vez por assinante.
+  if (usuario.onboarding_pendente && location.pathname !== "/tour") {
+    return <Navigate to="/tour" replace />;
   }
 
   return (
@@ -166,6 +173,9 @@ export default function App() {
             <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />
           )}
         </Route>
+        {/* Fora do <Shell />, de propósito — layout de tela cheia própria,
+            sem sidebar/topo por trás (Trabalho 13, 06/08/2026). */}
+        <Route path="/tour" element={<Tour />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </RotasSuspensas>
