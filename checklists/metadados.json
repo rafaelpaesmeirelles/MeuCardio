@@ -2540,5 +2540,203 @@
       }
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diagnostico-e-conduta-inicial-na-doenca-de-kawasaki",
+    "condicao": "Diagnóstico e conduta inicial na doença de Kawasaki",
+    "theme": "Cardiologia pediátrica",
+    "documento_origem": "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+    "resumo": "Critérios diagnósticos, escore de predição de refratariedade à IVIG, dose de imunoglobulina e AAS, e primeira avaliação ecocardiográfica por Z-score na suspeita de doença de Kawasaki, a partir da diretriz JCS/JSCS 2020.",
+    "itens": [
+      {
+        "id": "kd-criterios-completos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Critérios diagnósticos (6ª edição revisada)",
+        "texto": "Contados os 6 achados clínicos principais (febre, injeção conjuntival bilateral, alterações de lábios/cavidade oral, exantema, alterações de extremidades periféricas, linfadenopatia cervical não supurativa) — KD completa definida por ≥5 dos 6, ou por 4 achados com dilatação coronariana e exclusão de outras doenças febris"
+      },
+      {
+        "id": "kd-forma-incompleta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Critérios diagnósticos — KD incompleta e outros achados significativos",
+        "texto": "Se menos de 4 achados principais presentes: buscados ativamente os 'outros achados clínicos significativos' antes de excluir o diagnóstico (elevação precoce de transaminases, leucocitúria em lactente, trombocitose de convalescença, BNP/NT-proBNP elevado, regurgitação mitral ou derrame pericárdico ao eco, hidropisia vesicular, hipoalbuminemia/hiponatremia)"
+      },
+      {
+        "id": "kd-escore-refratariedade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Escores de predição de não resposta à IVIG (Tabela 4)",
+        "texto": "Calculado um escore de predição de refratariedade à IVIG (Kobayashi, Egami ou Sano) antes de iniciar o tratamento, para identificar quem pode se beneficiar de terapia inicial intensificada com corticosteroide associado; VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao desempenho desses escores fora da população japonesa, onde foram derivados e validados"
+      },
+      {
+        "id": "kd-ivig-dose",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Tratamento inicial",
+        "texto": "Imunoglobulina intravenosa administrada em dose próxima de 2 g/kg em infusão única, idealmente até o 5º dia de doença — dado de uso real da prática japonesa (1.900-2.099 mg/kg em 97,9% dos pacientes, infusão de 1 dia em 97,5%)"
+      },
+      {
+        "id": "kd-aas-fase-aguda",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Antiagregação e anticoagulação (Tabela 12 e 17)",
+        "texto": "AAS em dose moderada (30-50 mg/kg/dia, dividida em 3 tomadas) durante a fase febril aguda, reduzida para dose baixa (3-5 mg/kg/dia, 1x/dia) após a defervescência, mantida por 2-3 meses do início — Classe I, Nível C"
+      },
+      {
+        "id": "kd-eco-basal-zscore",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "Classificação de gravidade das lesões coronarianas por Z-score (Tabela 5)",
+        "texto": "Ecocardiograma realizado para avaliar dilatação de artéria coronária por Z-score (não por diâmetro absoluto isolado em criança ≥5 anos, que superestima a gravidade) e classificar a gravidade (I a V) que vai orientar o seguimento de longo prazo"
+      },
+      {
+        "id": "kd-refratariedade-conduta",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Tratamento inicial — refratariedade",
+        "texto": "Se febre persiste ou recorre após a primeira dose de IVIG (refratariedade, ~17,8% dos casos): nova dose de IVIG considerada como conduta mais usada na prática japonesa (90,6% dos casos refratários), seguida de corticosteroide, infliximabe ou imunossupressor conforme resposta"
+      },
+      {
+        "id": "kd-seguimento-por-gravidade",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "Algoritmo de acompanhamento de longo prazo por gravidade (Tabela 7)",
+        "texto": "Frequência de ECG/eco, teste de indução de isquemia e imagem coronariana programada conforme a classificação de gravidade (I a V) — do simples acompanhamento anual até os 5 anos na ausência de dilatação, até reavaliação a cada 6-12 meses com imagem coronariana seriada no aneurisma persistente médio/gigante"
+      },
+      {
+        "id": "kd-aneurisma-gigante-anticoagulacao",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "origem_secao": "Indicação de varfarina, detalhada",
+        "texto": "Se aneurisma gigante, infarto do miocárdio prévio ou trombose documentada no aneurisma: considerada anticoagulação com varfarina associada a AAS em dose baixa, RNI-alvo entre 2,0 e 2,5, com vigilância rigorosa nos primeiros 18 meses do início da doença (período de maior risco de infarto nesse subgrupo, 87,1% dos eventos)"
+      }
+    ],
+    "source_refs": [
+      "Fukazawa R et al. JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease. Circ J. 2020;84(8):1348-1407. PMID 32641591.",
+      "McCrindle BW et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. PMID 28356445."
+    ],
+    "review_status": "revisado",
+    "revisao": "Itens derivados do documento já verificado e publicado desta base (doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento.md), com a seção de origem registrada em cada item. Nenhum dado numérico novo foi introduzido além dos já citados e verificados no documento de origem. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-cirurgia-nao-cardiaca",
+    "condicao": "Avaliação pré-operatória cardiovascular no muito idoso para cirurgia não cardíaca",
+    "theme": "Cardiologia geriátrica",
+    "documento_origem": "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca",
+    "resumo": "Onde as ferramentas convencionais de risco perioperatório (RCRI, avaliação subjetiva de capacidade funcional) perdem precisão no muito idoso, e o que usar em vez disso — a partir de quatro estudos que testam essas ferramentas especificamente em coortes idosas ou muito idosas.",
+    "itens": [
+      {
+        "id": "preop-idoso-rcri-limite",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "O RCRI não tem idade entre suas variáveis",
+        "texto": "RCRI calculado como ponto de partida (não como avaliação completa) — reconhecendo que suas 6 variáveis não incluem idade nem fragilidade, e que seu desempenho foi medido como apenas modesto (estatística C 0,693) numa coorte dedicada de nonagenários"
+      },
+      {
+        "id": "preop-idoso-dasi-nao-subjetivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "A pergunta sobre subir escadas tem desempenho ruim",
+        "texto": "Capacidade funcional avaliada por instrumento estruturado (DASI), não por pergunta informal do tipo 'sobe escada sem parar?' — a avaliação subjetiva teve sensibilidade de apenas 19,2% para identificar quem não atinge 4 METs no estudo METS, e a limitação funcional do idoso é tipicamente multifatorial (artrose, sarcopenia, descondicionamento), não só cardíaca"
+      },
+      {
+        "id": "preop-idoso-troponina-vigilancia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "Lesão miocárdica silenciosa — vigilância por biomarcador",
+        "texto": "Vigilância programada por troponina de alta sensibilidade no pós-operatório de paciente de maior risco, não apenas em caso de sintoma — no estudo VISION, 93,1% dos casos de lesão miocárdica pós-operatória (MINS) não tiveram nenhum sintoma isquêmico, e o risco de morte em 30 dias aumentou de forma graduada com o pico de troponina"
+      },
+      {
+        "id": "preop-idoso-fragilidade-seletiva",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "Fragilidade — acrescenta informação, mas perde valor quando DASI/NP já disponíveis",
+        "texto": "Clinical Frailty Scale medida de forma seletiva — reservada para quando DASI e peptídeo natriurético não puderem ser obtidos, já que seu valor prognóstico incremental (razão de chances 1,62 ajustado para idade/sexo/RCRI) deixou de ser significativo após ajuste adicional para essas duas medidas no estudo FIT After Surgery"
+      },
+      {
+        "id": "preop-idoso-nonagenario-marcadores",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "No extremo mais idoso, o RCRI perde poder discriminativo",
+        "texto": "Em paciente com 90 anos ou mais: considerado o caráter eletivo versus urgente da cirurgia e marcadores inflamatórios/de coagulação (razão neutrófilo/linfócito, D-dímero) como informação complementar ao RCRI clássico — dado de estudo específico de nonagenários, ainda não replicado por múltiplas coortes independentes"
+      },
+      {
+        "id": "preop-idoso-diretriz-vigente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "origem_secao": "A diretriz mais recente existe, e substitui formalmente a anterior",
+        "texto": "Conferido se a diretriz de referência usada é a 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM (que substitui formalmente a de 2014) antes de aplicar qualquer recomendação de classe/nível — VERIFICAÇÃO HUMANA NECESSÁRIA quanto às recomendações específicas desta diretriz de 2024, cujo texto integral não foi obtido nesta base"
+      }
+    ],
+    "source_refs": [
+      "Lee TH et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049. PMID 10477528.",
+      "Wijeysundera DN et al. Assessment of functional capacity before major non-cardiac surgery: an international, prospective cohort study (METS). Lancet. 2018;391(10140):2631-2640. PMID 30070222.",
+      "Writing Committee for the VISION Study Investigators. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. PMID 28444280.",
+      "Chatziperi A et al. Frailty Status and Preoperative Cardiac Risk Stratification in Older Adults Undergoing Noncardiac Surgery (FIT After Surgery). J Am Heart Assoc. 2026;15(12):e049360. PMID 42261947.",
+      "Feng L et al. Development and validation of a new predictive model for in-hospital postoperative major adverse cardiovascular and cerebrovascular events after general anesthesia in nonagenarians undergoing non-cardiac surgery. Front Cardiovasc Med. 2025;12:1590496. PMID 40556657."
+    ],
+    "review_status": "revisado",
+    "revisao": "Itens derivados do documento já verificado e publicado desta base (avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "triagem-cardiovascular-pre-participacao-esportiva-decisao-sobre-incluir-ecg",
+    "condicao": "Triagem cardiovascular pré-participação esportiva — decisão sobre incluir ECG",
+    "theme": "Geral",
+    "documento_origem": "morte-subita-cardiaca-em-atletas-causas-por-faixa-etaria-e-custo-efetividade-do-rastreio-com-ecg",
+    "resumo": "O que a história e o exame físico isolados deixam de detectar, o ganho e o custo de acrescentar ECG à triagem pré-participação esportiva, e como a causa mais provável de morte súbita muda conforme a faixa etária do atleta.",
+    "itens": [
+      {
+        "id": "triagem-esportiva-historia-exame",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Causas mais comuns de morte súbita cardíaca por faixa etária",
+        "texto": "História clínica e exame físico cardiovascular direcionado realizados em todo atleta antes da participação — reconhecendo que, isoladamente, identificam apenas cerca de 45,5% dos achados cardiovasculares relevantes (5 de 11 casos no estudo de Baggish et al.)"
+      },
+      {
+        "id": "triagem-esportiva-faixa-etaria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Atletas acima de 35 anos",
+        "texto": "Hipótese diagnóstica ajustada pela faixa etária do atleta: em jovens, priorizar cardiomiopatia hipertrófica (35-50% das causas cardiovasculares) e anomalia congênita de artéria coronária (12-20%); acima de 35 anos, a causa predominante passa a ser doença arterial coronariana aterosclerótica, como na população geral"
+      },
+      {
+        "id": "triagem-esportiva-ecg-decisao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "Custo-efetividade do rastreio com ECG",
+        "texto": "Decisão sobre acrescentar ECG de 12 derivações à triagem, informada por números concretos: acrescentar ECG a história+exame elevou a sensibilidade de detecção de achado cardiovascular relevante de 45,5% para 90,9%, mas reduziu a especificidade de 94,5% para 82,7% e elevou a taxa de falso-positivo de 5,5% para 16,9% (Baggish et al.)"
+      },
+      {
+        "id": "triagem-esportiva-custo-por-ano-de-vida",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "Custo-efetividade do rastreio com ECG",
+        "texto": "Se a decisão institucional for pró-ECG: registrado que o modelo de análise de decisão de Wheeler et al. estimou US$ 42.900 por ano de vida salvo ao acrescentar ECG à história/exame (vs. história/exame isolados) em atletas de 14-22 anos, e US$ 76.100 por ano de vida salvo comparando a estratégia combinada com nenhuma triagem"
+      },
+      {
+        "id": "triagem-esportiva-achado-positivo-encaminhamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "origem_secao": "Causas mais comuns de morte súbita cardíaca por faixa etária",
+        "texto": "Achado suspeito (história familiar de morte súbita ou canalopatia, sopro patológico, ECG com padrão de repolarização anormal pelos critérios de Seattle) encaminhado para avaliação cardiológica especializada antes da liberação, sem desqualificação nem liberação automática baseada em triagem isolada"
+      },
+      {
+        "id": "triagem-esportiva-nao-substitui-emergencia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "origem_secao": "Escopo deste documento",
+        "texto": "Reconhecido que a triagem pré-participação reduz mas não elimina o risco — o próprio estudo de Corrado et al. mostrou queda de 89% na incidência após implementação da triagem, não eliminação completa — e que a disponibilidade de desfibrilador externo automático no local de treino/competição continua sendo medida complementar, não substituível pela triagem"
+      }
+    ],
+    "source_refs": [
+      "Maron BJ et al. Sudden deaths in young competitive athletes: analysis of 1866 deaths in the United States, 1980-2006. Circulation. 2009;119(8):1085-1092. PMID 19221222.",
+      "Corrado D et al. Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA. 2006;296(13):1593-1601. PMID 17018804.",
+      "Halabchi F, Seif-Barghi T. Sudden cardiac death in young athletes; a literature review and special considerations in Asia. Asian J Sports Med. 2011;2(1):1-15. PMID 22375212. PMC3289188.",
+      "Baggish AL et al. Cardiovascular screening in college athletes with and without electrocardiography: a cross-sectional study. Ann Intern Med. 2010;152(5):269-275. PMID 20194232.",
+      "Wheeler MT et al. Cost-effectiveness of preparticipation screening for prevention of sudden cardiac death in young athletes. Ann Intern Med. 2010;152(5):276-286. PMID 20194233."
+    ],
+    "review_status": "revisado",
+    "revisao": "Itens derivados do documento já verificado e publicado desta base (morte-subita-cardiaca-em-atletas-causas-por-faixa-etaria-e-custo-efetividade-do-rastreio-com-ecg.md) e do documento irmão citado dentro dele (content/Arritmias/morte-subita-em-atletas-triagem-pre-participacao-e-o-debate-do-ecg-obrigatorio.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
   }
 ]
