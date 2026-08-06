@@ -1104,15 +1104,22 @@
 }
 .topo__icone:hover { color: var(--teal-700); background: var(--teal-50); text-decoration: none; }
 .topo__mail-logo { display: block; width: 35px; height: 28px; object-fit: contain; }
+.topo__conta { position: relative; flex: 0 0 auto; }
 .topo__perfil {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.3rem 0.45rem 0.3rem 0.3rem;
   color: var(--texto);
+  background: transparent;
   border: 1px solid transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 .topo__perfil:hover { background: var(--slate-50); border-color: var(--borda); text-decoration: none; }
+.topo__perfil:focus-visible { outline: 3px solid rgba(37, 150, 169, 0.2); outline-offset: 2px; }
+.topo__perfil--aberto { background: var(--teal-50); border-color: var(--teal-100); }
 .topo__avatar {
   display: grid;
   place-items: center;
@@ -1131,6 +1138,73 @@
 .topo__perfil-texto strong { overflow: hidden; font-size: 0.78rem; text-overflow: ellipsis; white-space: nowrap; }
 .topo__perfil-texto small { margin-top: 0.2rem; color: var(--texto-secundario); font-size: 0.65rem; }
 .topo__perfil > svg { width: 15px; height: 15px; color: var(--slate-600); transform: rotate(90deg); }
+.topo__perfil--aberto > svg { transform: rotate(-90deg); }
+
+/* Menu de conta: recursos pessoais e de gestão, sem duplicar o catálogo clínico. */
+.menu-conta {
+  position: absolute;
+  z-index: 90;
+  top: calc(100% + 0.65rem);
+  right: 0;
+  width: min(330px, calc(100vw - 1.5rem));
+  max-height: min(620px, calc(100dvh - var(--topo-altura) - 1.5rem));
+  overflow: auto;
+  padding: 0.5rem;
+  color: var(--texto);
+  background: rgba(255, 255, 255, 0.99);
+  border: 1px solid var(--slate-200);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px -24px rgba(4, 28, 40, 0.38), 0 8px 24px -18px rgba(4, 28, 40, 0.28);
+  animation: menu-conta-entrar 0.16s ease-out;
+  transform-origin: top right;
+}
+@keyframes menu-conta-entrar {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-conta__identidade {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.7rem 0.75rem 0.8rem;
+  border-bottom: 1px solid var(--slate-200);
+}
+.menu-conta__nome { overflow: hidden; font-size: 0.82rem; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
+.menu-conta__email { overflow: hidden; color: var(--texto-secundario); font-size: 0.68rem; text-overflow: ellipsis; white-space: nowrap; }
+.menu-conta__recursos { display: grid; gap: 0.12rem; padding: 0.45rem 0; }
+.menu-conta__recursos a,
+.menu-conta__sair {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 43px;
+  padding: 0.55rem 0.65rem;
+  color: var(--slate-700);
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 680;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu-conta__recursos a svg,
+.menu-conta__sair svg { flex: 0 0 auto; width: 19px; height: 19px; color: var(--teal-700); }
+.menu-conta__recursos a:hover,
+.menu-conta__recursos a:focus-visible { color: var(--navy-900); background: var(--teal-50); outline: 0; text-decoration: none; }
+.menu-conta__recursos a.ativo { color: var(--teal-700); background: var(--teal-50); box-shadow: inset 3px 0 var(--teal-500); }
+.menu-conta__badge { min-width: 22px; margin-left: auto; padding: 0.08rem 0.36rem; color: var(--white); background: var(--perigo); border-radius: 999px; font-size: 0.62rem; text-align: center; }
+.menu-conta__sair { margin-top: 0.1rem; color: var(--perigo); border-top: 1px solid var(--slate-200); border-radius: 0 0 10px 10px; }
+.menu-conta__sair svg { color: currentColor; }
+.menu-conta__sair:hover,
+.menu-conta__sair:focus-visible { background: var(--perigo-tinta); outline: 0; }
+.menu-conta__sair:disabled { cursor: wait; opacity: 0.65; }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-conta { animation: none; }
+}
 
 .conteudo {
   width: min(100%, 1480px);

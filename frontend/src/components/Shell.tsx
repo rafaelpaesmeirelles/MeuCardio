@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
 } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { api, assetUrl } from "../lib/api";
@@ -199,12 +200,17 @@ export default function Shell() {
   const naEmergencia = location.pathname.startsWith("/emergencia");
   const [pendentes, setPendentes] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
+  const [menuContaAberto, setMenuContaAberto] = useState(false);
+  const [saindoPeloMenu, setSaindoPeloMenu] = useState(false);
   const [buscaTopo, setBuscaTopo] = useState("");
   const [fotoCabecalhoQuebrada, setFotoCabecalhoQuebrada] = useState(false);
   const buscaRef = useRef<HTMLInputElement>(null);
   const abrirMenuRef = useRef<HTMLButtonElement>(null);
   const fecharRef = useRef<HTMLButtonElement>(null);
   const gavetaRef = useRef<HTMLElement>(null);
+  const contaRef = useRef<HTMLDivElement>(null);
+  const abrirContaRef = useRef<HTMLButtonElement>(null);
+  const menuContaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (usuario?.role !== "admin") return;
@@ -214,6 +220,34 @@ export default function Shell() {
   }, [usuario]);
 
   useEffect(() => setFotoCabecalhoQuebrada(false), [usuario?.photo_url]);
+
+  useEffect(() => setMenuContaAberto(false), [location.pathname]);
+
+  useEffect(() => {
+    if (!menuContaAberto) return;
+
+    requestAnimationFrame(() => {
+      menuContaRef.current?.querySelector<HTMLElement>('[role="menuitem"]')?.focus();
+    });
+
+    function fecharAoClicarFora(evento: PointerEvent) {
+      if (!contaRef.current?.contains(evento.target as Node)) setMenuContaAberto(false);
+    }
+
+    function fecharComEscape(evento: KeyboardEvent) {
+      if (evento.key !== "Escape") return;
+      evento.preventDefault();
+      setMenuContaAberto(false);
+      requestAnimationFrame(() => abrirContaRef.current?.focus());
+    }
+
+    document.addEventListener("pointerdown", fecharAoClicarFora);
+    document.addEventListener("keydown", fecharComEscape);
+    return () => {
+      document.removeEventListener("pointerdown", fecharAoClicarFora);
+      document.removeEventListener("keydown", fecharComEscape);
+    };
+  }, [menuContaAberto]);
 
   useEffect(() => {
     function atalhoBusca(evento: KeyboardEvent) {
@@ -271,8 +305,14 @@ export default function Shell() {
 
   async function encerrarSessao() {
     setMenuAberto(false);
-    await sair();
-    navigate("/entrar", { replace: true });
+    setMenuContaAberto(false);
+    setSaindoPeloMenu(true);
+    try {
+      await sair();
+      navigate("/entrar", { replace: true });
+    } finally {
+      setSaindoPeloMenu(false);
+    }
   }
 
   function buscarDaFaixa(evento: FormEvent) {
@@ -314,6 +354,40 @@ export default function Shell() {
           },
     );
   }, [pendentes, usuario?.role]);
+
+  const recursosDaConta = useMemo(() => {
+    const recursos: ItemNav[] = [
+      { to: "/agenda", rotulo: "Agenda integrada", icone: "agenda" },
+      { to: "/assinatura", rotulo: "Assinatura e plano", icone: "check" },
+      { to: "/corvia-mail", rotulo: "Corvia Mail", icone: "mail" },
+      { to: "/documentos", rotulo: "Documentos", icone: "documento" },
+      { to: "/favoritos", rotulo: "Favoritos", icone: "favorito" },
+      { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
+      { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" },
+      { to: "/usuarios-online", rotulo: "Rede profissional", icone: "pacientes" },
+    ];
+    if (usuario?.role === "admin") {
+      recursos.push(
+        { to: "/admin", rotulo: "Administração", icone: "gestao", badge: pendentes },
+        { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia" },
+      );
+    }
+    return recursos.sort((a, b) => a.rotulo.localeCompare(b.rotulo, "pt-BR"));
+  }, [pendentes, usuario?.role]);
+
+  function navegarNoMenuConta(evento: ReactKeyboardEvent<HTMLDivElement>) {
+    if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(evento.key)) return;
+    const itens = Array.from(
+      menuContaRef.current?.querySelectorAll<HTMLElement>('[role="menuitem"]:not([disabled])') ?? [],
+    );
+    if (!itens.length) return;
+    evento.preventDefault();
+    const atual = itens.indexOf(document.activeElement as HTMLElement);
+    if (evento.key === "Home") itens[0].focus();
+    else if (evento.key === "End") itens[itens.length - 1].focus();
+    else if (evento.key === "ArrowDown") itens[(atual + 1 + itens.length) % itens.length].focus();
+    else itens[(atual - 1 + itens.length) % itens.length].focus();
+  }
 
   return (
     <div className="app-clinico">
@@ -378,19 +452,71 @@ export default function Shell() {
             <NavLink to="/corvia-mail" className="topo__icone" aria-label="Abrir Corvia Mail">
               <img className="topo__mail-logo" src="/corviamail-icone.svg" alt="" />
             </NavLink>
-            <NavLink to="/minha-conta" className="topo__perfil" aria-label={`Abrir conta de ${usuario?.full_name}`}>
-              {usuario?.photo_url && !fotoCabecalhoQuebrada ? (
-                <img className="topo__avatar topo__avatar--foto" src={assetUrl(usuario.photo_url)} alt=""
-                     onError={() => setFotoCabecalhoQuebrada(true)} />
-              ) : (
-                <span className="topo__avatar">{iniciais(usuario?.full_name)}</span>
+            <div className="topo__conta" ref={contaRef}>
+              <button
+                ref={abrirContaRef}
+                type="button"
+                className={`topo__perfil${menuContaAberto ? " topo__perfil--aberto" : ""}`}
+                onClick={() => setMenuContaAberto((aberto) => !aberto)}
+                aria-label={`Abrir recursos da conta de ${usuario?.full_name}`}
+                aria-haspopup="menu"
+                aria-expanded={menuContaAberto}
+                aria-controls="menu-recursos-conta"
+              >
+                {usuario?.photo_url && !fotoCabecalhoQuebrada ? (
+                  <img className="topo__avatar topo__avatar--foto" src={assetUrl(usuario.photo_url)} alt=""
+                       onError={() => setFotoCabecalhoQuebrada(true)} />
+                ) : (
+                  <span className="topo__avatar">{iniciais(usuario?.full_name)}</span>
+                )}
+                <span className="topo__perfil-texto">
+                  <strong>{usuario?.full_name}</strong>
+                  <small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small>
+                </span>
+                <Icone nome="chevron" />
+              </button>
+
+              {menuContaAberto && (
+                <div
+                  ref={menuContaRef}
+                  id="menu-recursos-conta"
+                  className="menu-conta"
+                  role="menu"
+                  aria-label="Recursos da conta"
+                  onKeyDown={navegarNoMenuConta}
+                >
+                  <header className="menu-conta__identidade" role="presentation">
+                    <span className="menu-conta__nome">{usuario?.full_name}</span>
+                    <span className="menu-conta__email">{usuario?.email}</span>
+                  </header>
+                  <div className="menu-conta__recursos" role="presentation">
+                    {recursosDaConta.map((recurso) => (
+                      <NavLink
+                        key={recurso.to}
+                        to={recurso.to}
+                        role="menuitem"
+                        onClick={() => setMenuContaAberto(false)}
+                        className={({ isActive }) => (isActive ? "ativo" : "")}
+                      >
+                        <Icone nome={recurso.icone} />
+                        <span>{recurso.rotulo}</span>
+                        {!!recurso.badge && <strong className="menu-conta__badge">{recurso.badge}</strong>}
+                      </NavLink>
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    role="menuitem"
+                    className="menu-conta__sair"
+                    onClick={() => void encerrarSessao()}
+                    disabled={saindoPeloMenu}
+                  >
+                    <Icone nome="sair" />
+                    <span>{saindoPeloMenu ? "Saindo…" : "Sair"}</span>
+                  </button>
+                </div>
               )}
-              <span className="topo__perfil-texto">
-                <strong>{usuario?.full_name}</strong>
-                <small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small>
-              </span>
-              <Icone nome="chevron" />
-            </NavLink>
+            </div>
           </div>
         </header>
 
