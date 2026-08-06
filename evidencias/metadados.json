@@ -32613,5 +32613,127 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tep-tratamento-domiciliar-em-baixo-risco-com-acesso-garantido-a-saude",
+    "statement": "Sugerimos tratamento domiciliar (ambulatorial) para pacientes com diagnóstico de tromboembolismo pulmonar (TEP) agudo de baixo risco e que tenham acesso garantido a serviços de saúde. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "tratamento domiciliar",
+      "baixo risco",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-em-cancer-acod-preferido-sobre-heparina-de-baixo-peso-molecular",
+    "statement": "Sugerimos tratamento com anticoagulantes orais de ação direta (ACOD) em vez de heparina de baixo peso molecular em pacientes com tromboembolismo pulmonar (TEP) diagnosticados com câncer. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Baixa",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "câncer",
+      "acod",
+      "heparina de baixo peso molecular",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-nao-provocado-anticoagulacao-estendida-com-acod-apos-3-a-6-meses",
+    "statement": "Recomendamos tratamento com ACOD por pelo menos 3-6 meses adicionais (anticoagulação estendida) para pacientes diagnosticados com tromboembolismo pulmonar (TEP) não provocado que já completaram, no mínimo, 3 meses de anticoagulação. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "tep não provocado",
+      "anticoagulação estendida",
+      "acod",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-acod-recomendado-por-3-a-6-meses-em-todos-os-estratos-de-risco-apos-estabilizacao",
+    "statement": "Recomendamos tratamento com ACOD por pelo menos 3-6 meses em vez de anticoagulação convencional (heparina de baixo peso molecular ou não fracionada, seguida de varfarina) em pacientes diagnosticados com tromboembolismo pulmonar (TEP) de baixo risco, risco intermediário, risco intermediário-alto após estabilização, ou alto risco após reperfusão e estabilização. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "acod",
+      "anticoagulação",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-risco-intermediario-alto-trombolise-sistemica-nao-sugerida-de-rotina",
+    "statement": "Sugerimos NÃO utilizar trombólise farmacológica sistêmica de rotina, em vez de anticoagulação isolada (heparina de baixo peso molecular ou não fracionada), em pacientes com tromboembolismo pulmonar (TEP) de risco intermediário-alto. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "trombólise sistêmica",
+      "risco intermediário-alto",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-alto-risco-trombolise-sistemica-sugerida",
+    "statement": "Sugerimos trombólise farmacológica sistêmica, em vez de anticoagulação isolada (heparina de baixo peso molecular ou não fracionada), em pacientes com tromboembolismo pulmonar (TEP) de alto risco. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "trombólise sistêmica",
+      "alto risco",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
