@@ -70,6 +70,8 @@ from app.services.agenda_integrada.recurrence import (
     occurrence_interval,
 )
 from app.services.agenda_integrada.traffic import traffic_eta
+from app.services.apple_mail import AppleMailError
+from app.services import apple_mail
 from app.services.cofre import cifrar_campo
 
 router = APIRouter(prefix="/api/agenda", tags=["agenda-integrada"])
@@ -304,6 +306,11 @@ class AppleIntegrationIn(StrictModel):
     app_specific_password: str = Field(min_length=16, max_length=32)
     contacts: bool = True
     consent_accepted: bool
+    # E-mail é opt-in separado da Agenda/Contatos (Trabalho 10) — mesma
+    # senha específica de app funciona pros dois fins, mas o consentimento
+    # de ler/enviar e-mail é uma autorização distinta, texto próprio.
+    mail: bool = False
+    mail_consent_accepted: bool = False
 
     @field_validator("apple_id")
     @classmethod
@@ -1260,6 +1267,8 @@ def microsoft_oauth_callback(
 def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
     if not data.consent_accepted:
         raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário e Contatos.")
+    if data.mail and not data.mail_consent_accepted:
+        raise HTTPException(status_code=422, detail="Aceite a leitura e o envio de e-mail pela caixa iCloud.")
     existing = db.query(CalendarIntegration).filter(
         CalendarIntegration.owner_id == user.id,
         CalendarIntegration.provider == "apple_icloud",
@@ -1275,7 +1284,8 @@ def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user:
     item.enabled = True
     item.write_enabled = False
     item.contacts_enabled = data.contacts
-    item.capabilities = next(x["capabilities"] for x in connector_catalog() if x["provider"] == "apple_icloud")
+    capacidades_calendario = next(x["capabilities"] for x in connector_catalog() if x["provider"] == "apple_icloud")
+    item.capabilities = {**capacidades_calendario, "read_mail": data.mail, "send_mail": data.mail}
     item.consent_version = "external-accounts-v1-2026-08-05"
     item.consent_at = datetime.now(timezone.utc)
     item.revoked_at = None
@@ -1285,10 +1295,18 @@ def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user:
     })
     try:
         diagnosis = get_connector("apple_icloud", integration_credentials(item), {}).diagnose()
+        if data.mail:
+            # Confirma de verdade que a senha também autentica no IMAP, em
+            # vez de supor que "a mesma senha serve pra tudo na Apple" —
+            # mesmo cuidado de nunca simular sucesso sem testar.
+            apple_mail.diagnose(integration_credentials(item))
     except ConnectorError as exc:
         db.rollback()
         raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
-    _audit(db, user, "external_account_connected", "calendar_integration", item.id, {"provider": "apple_icloud"})
+    except AppleMailError as exc:
+        db.rollback()
+        raise HTTPException(status_code=exc.status_code, detail={"code": "apple_mail_error", "message": str(exc)}) from exc
+    _audit(db, user, "external_account_connected", "calendar_integration", item.id, {"provider": "apple_icloud", "mail": data.mail})
     db.commit(); db.refresh(item)
     return {"id": item.id, "provider": item.provider, "status": item.status, "diagnosis": diagnosis}
 

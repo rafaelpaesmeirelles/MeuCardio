@@ -82,6 +82,7 @@ type Integracao = {
   has_credentials: boolean;
   last_success_at: string | null;
   last_error_message: string | null;
+  capabilities?: Record<string, boolean>;
 };
 
 type Capacidades = {
@@ -302,7 +303,7 @@ export default function Agenda() {
     starts_at: "", ends_at: "", title: "", location_id: "", notes: "",
   });
   const [novaIntegracao, setNovaIntegracao] = useState({ provider: "feegow", display_name: "" });
-  const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false });
+  const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false, mail: false, mail_consent_accepted: false });
   const [yahoo, setYahoo] = useState({ endereco: "", senha_de_app: "", consent_accepted: false });
   const [consentimentoContas, setConsentimentoContas] = useState(false);
   const [novoLocal, setNovoLocal] = useState({ name: "", city: "", state: "", latitude: "", longitude: "" });
@@ -583,7 +584,7 @@ export default function Agenda() {
 
   async function conectarApple() {
     await api.post("/agenda/integrations/apple", { ...apple, contacts: true });
-    setApple({ apple_id: "", app_specific_password: "", consent_accepted: false });
+    setApple({ apple_id: "", app_specific_password: "", consent_accepted: false, mail: false, mail_consent_accepted: false });
     await carregar();
   }
 
@@ -900,8 +901,10 @@ export default function Agenda() {
             <label>ID Apple<input type="email" autoComplete="username" value={apple.apple_id} onChange={(e) => setApple({ ...apple, apple_id: e.target.value })} placeholder="nome@icloud.com" /></label>
             <label>Senha específica de app<input type="password" autoComplete="new-password" value={apple.app_specific_password} onChange={(e) => setApple({ ...apple, app_specific_password: e.target.value })} placeholder="xxxx-xxxx-xxxx-xxxx" /></label>
             <label className="agenda-check span-2"><input type="checkbox" checked={apple.consent_accepted} onChange={(e) => setApple({ ...apple, consent_accepted: e.target.checked })} /> Autorizo a leitura do Calendário e dos Contatos do iCloud.</label>
+            <label className="agenda-check span-2"><input type="checkbox" checked={apple.mail} onChange={(e) => setApple({ ...apple, mail: e.target.checked, mail_consent_accepted: e.target.checked ? apple.mail_consent_accepted : false })} /> Também conectar o e-mail do iCloud (mesma senha específica de app).</label>
+            {apple.mail && <label className="agenda-check span-2"><input type="checkbox" checked={apple.mail_consent_accepted} onChange={(e) => setApple({ ...apple, mail_consent_accepted: e.target.checked })} /> Autorizo a leitura e o envio de e-mail pela minha caixa iCloud.</label>}
             <p className="agenda-config-help span-2">Você pode conectar mais de uma conta Apple — cada ID Apple diferente vira uma conta nova na lista, sem substituir a anterior. Use somente uma senha específica de app, gerada em <strong>appleid.apple.com → Entrar e Segurança → Senhas específicas de app</strong>. O Corvia nunca solicita nem armazena sua senha principal da Apple.</p>
-            <button className="botao botao--secundario" disabled={!apple.apple_id || !apple.app_specific_password || !apple.consent_accepted} onClick={() => conectarApple().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o iCloud."))}>Conectar Apple</button>
+            <button className="botao botao--secundario" disabled={!apple.apple_id || !apple.app_specific_password || !apple.consent_accepted || (apple.mail && !apple.mail_consent_accepted)} onClick={() => conectarApple().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o iCloud."))}>Conectar Apple</button>
           </div></details>
           <details className="agenda-apple-config"><summary><LogoProvedor provedor="yahoo" /> {integracoes.some((i) => i.provider === "yahoo_mail" && i.enabled) ? "Adicionar outra conta Yahoo" : "Conectar Yahoo Mail (só e-mail, sem calendário)"}</summary><div className="agenda-config-form agenda-config-form--routine">
             <label>Endereço Yahoo<input type="email" autoComplete="username" value={yahoo.endereco} onChange={(e) => setYahoo({ ...yahoo, endereco: e.target.value })} placeholder="nome@yahoo.com" /></label>
@@ -912,7 +915,7 @@ export default function Agenda() {
           </div></details>
           <h4 className="agenda-contas-lista__titulo">Contas conectadas</h4>
           {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider)).length === 0 && <p className="agenda-config-vazio">Nenhuma conta conectada ainda — use os botões acima.</p>}
-          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider)).map((item) => <div className="agenda-config-item" key={item.id}><LogoProvedor provedor={PROVEDOR_POR_TIPO_INTEGRACAO[item.provider]} /><span><strong>{item.display_name}</strong><small>{item.provider === "yahoo_mail" ? (item.enabled ? "e-mail conectado" : "desconectada") : item.enabled ? `${item.contact_count} contatos · ${item.last_success_at ? "sincronizada" : "aguardando primeira sincronização"}` : "desconectada"}</small></span><div className="agenda-conta-acoes">{item.provider !== "yahoo_mail" && <button onClick={() => sincronizarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))} disabled={!item.enabled}>Sincronizar</button>}<button title="Remove esta conta e os contatos sincronizados dela" onClick={() => desconectarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha ao desconectar."))} disabled={!item.enabled}>Excluir conta</button></div></div>)}
+          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider)).map((item) => <div className="agenda-config-item" key={item.id}><LogoProvedor provedor={PROVEDOR_POR_TIPO_INTEGRACAO[item.provider]} /><span><strong>{item.display_name}</strong><small>{item.provider === "yahoo_mail" ? (item.enabled ? "e-mail conectado" : "desconectada") : item.enabled ? `${item.contact_count} contatos · ${item.last_success_at ? "sincronizada" : "aguardando primeira sincronização"}${item.capabilities?.read_mail ? " · e-mail conectado" : ""}` : "desconectada"}</small></span><div className="agenda-conta-acoes">{item.provider !== "yahoo_mail" && <button onClick={() => sincronizarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))} disabled={!item.enabled}>Sincronizar</button>}<button title="Remove esta conta e os contatos sincronizados dela" onClick={() => desconectarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha ao desconectar."))} disabled={!item.enabled}>Excluir conta</button></div></div>)}
         </section>
         <section className="agenda-config-section">
           <div className="agenda-config-section__title"><div><h3>Importar agendas de clínicas e hospitais</h3><p>Prepare uma conexão para cada local de trabalho. Ativação e escrita exigem API oficial, credenciais e homologação do fornecedor.</p></div><span>{integracoes.length}</span></div>

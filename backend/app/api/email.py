@@ -53,12 +53,13 @@ from app.models.agenda import CalendarIntegration
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import emails, mail360
-from app.services import external_mail, yahoo_mail
+from app.services import apple_mail, external_mail, yahoo_mail
 from app.services.agenda_integrada.contacts import list_contacts
 from app.services.agenda_integrada.domain import integration_credentials, store_integration_credentials
 from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
+from app.services.apple_mail import AppleMailError
 from app.services.yahoo_mail import YahooMailError
 
 router = APIRouter(prefix="/api/email", tags=["caixa de e-mail"])
@@ -134,7 +135,7 @@ def _obter_conta(db: Session, user: User) -> EmailAccount | None:
 
 
 def _provider_curto(provider: str) -> str:
-    return {"google_calendar": "google", "microsoft_365": "microsoft", "yahoo_mail": "yahoo"}.get(provider, provider)
+    return {"google_calendar": "google", "microsoft_365": "microsoft", "yahoo_mail": "yahoo", "apple_icloud": "apple"}.get(provider, provider)
 
 
 # --------------------------------------------------------------------------
@@ -627,7 +628,7 @@ def mensagens_todas(
             externas = _mensagens_da_integracao(db, integracao, folder=None, limit=limite, start=1)
             for item in externas:
                 mensagens.append({**item, "origem": str(integracao.id)})
-        except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
+        except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
             fontes_com_erro.append({"origem": str(integracao.id), "provider": provider, "erro": str(exc)})
 
     mensagens.sort(key=_momento_da_mensagem, reverse=True)
@@ -848,7 +849,7 @@ def excluir(message_id: str, conta: EmailAccount = Depends(current_email_account
 # Contas externas — proxy ao vivo; o conteúdo permanece no provedor
 # --------------------------------------------------------------------------
 
-PROVEDORES_EXTERNOS_MAIL = ("google_calendar", "microsoft_365", "yahoo_mail")
+PROVEDORES_EXTERNOS_MAIL = ("google_calendar", "microsoft_365", "yahoo_mail", "apple_icloud")
 
 
 def _integracao_email(
@@ -875,35 +876,45 @@ def _integracao_email(
     return integracao
 
 
-def _traduzir_erro_externo(exc: external_mail.ExternalMailError | YahooMailError) -> HTTPException:
+def _traduzir_erro_externo(exc: external_mail.ExternalMailError | YahooMailError | AppleMailError) -> HTTPException:
     return HTTPException(status_code=exc.status_code, detail=str(exc))
 
 
-# A Yahoo não fala REST/OAuth como Gmail e Graph — é IMAP/SMTP com senha de
-# aplicativo (ver o docstring de yahoo_mail.py para o porquê). Estes quatro
-# despachantes escondem essa diferença das rotas HTTP abaixo, que não
-# precisam saber qual protocolo cada provedor fala por baixo.
+# Yahoo e Apple não falam REST/OAuth como Gmail e Graph — são IMAP/SMTP com
+# senha de aplicativo (ver o docstring de yahoo_mail.py/apple_mail.py para o
+# porquê). Estes quatro despachantes escondem essa diferença das rotas HTTP
+# abaixo, que não precisam saber qual protocolo cada provedor fala por baixo.
+_PROVEDORES_IMAP = {
+    "yahoo_mail": yahoo_mail,
+    "apple_icloud": apple_mail,
+}
+
+
 def _pastas_da_integracao(db: Session, integracao: CalendarIntegration):
-    if integracao.provider == "yahoo_mail":
-        return yahoo_mail.list_folders(integration_credentials(integracao))
+    modulo = _PROVEDORES_IMAP.get(integracao.provider)
+    if modulo:
+        return modulo.list_folders(integration_credentials(integracao))
     return external_mail.list_folders(db, integracao)
 
 
 def _mensagens_da_integracao(db: Session, integracao: CalendarIntegration, *, folder, limit, start):
-    if integracao.provider == "yahoo_mail":
-        return yahoo_mail.list_messages(integration_credentials(integracao), folder=folder, limit=limit, start=start)
+    modulo = _PROVEDORES_IMAP.get(integracao.provider)
+    if modulo:
+        return modulo.list_messages(integration_credentials(integracao), folder=folder, limit=limit, start=start)
     return external_mail.list_messages(db, integracao, folder=folder, limit=limit, start=start)
 
 
 def _mensagem_da_integracao(db: Session, integracao: CalendarIntegration, message_id: str):
-    if integracao.provider == "yahoo_mail":
-        return yahoo_mail.get_message(integration_credentials(integracao), message_id)
+    modulo = _PROVEDORES_IMAP.get(integracao.provider)
+    if modulo:
+        return modulo.get_message(integration_credentials(integracao), message_id)
     return external_mail.get_message(db, integracao, message_id)
 
 
 def _enviar_pela_integracao(db: Session, integracao: CalendarIntegration, *, to, subject, html, cc, bcc):
-    if integracao.provider == "yahoo_mail":
-        return yahoo_mail.send_message(integration_credentials(integracao), to=to, subject=subject, html=html, cc=cc, bcc=bcc)
+    modulo = _PROVEDORES_IMAP.get(integracao.provider)
+    if modulo:
+        return modulo.send_message(integration_credentials(integracao), to=to, subject=subject, html=html, cc=cc, bcc=bcc)
     return external_mail.send_message(db, integracao, to=to, subject=subject, html=html, cc=cc, bcc=bcc)
 
 
@@ -916,7 +927,7 @@ def pastas_externas(
     integracao = _integracao_email(db, conta, integration_id)
     try:
         return _pastas_da_integracao(db, integracao)
-    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -934,7 +945,7 @@ def mensagens_externas(
     integracao = _integracao_email(db, conta, integration_id)
     try:
         return _mensagens_da_integracao(db, integracao, folder=pasta, limit=limite, start=inicio)
-    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -948,7 +959,7 @@ def mensagem_externa(
     integracao = _integracao_email(db, conta, integration_id)
     try:
         return _mensagem_da_integracao(db, integracao, message_id)
-    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -966,16 +977,18 @@ def agir_em_mensagens_externas(
     if dados.acao == "mover" and not dados.pasta_destino:
         raise HTTPException(status_code=422, detail="Informe a pasta de destino.")
     integracao = _integracao_email(db, conta, integration_id)
+    modulo = _PROVEDORES_IMAP.get(integracao.provider)
     try:
-        if integracao.provider == "yahoo_mail":
+        if modulo:
             if dados.acao == "mover":
-                raise HTTPException(status_code=422, detail="Mover mensagem ainda não é compatível com a Yahoo.")
-            yahoo_mail.act_on_messages(integration_credentials(integracao), dados.message_ids, dados.acao)
+                nome = {"yahoo_mail": "a Yahoo", "apple_icloud": "o iCloud"}.get(integracao.provider, integracao.provider)
+                raise HTTPException(status_code=422, detail=f"Mover mensagem ainda não é compatível com {nome}.")
+            modulo.act_on_messages(integration_credentials(integracao), dados.message_ids, dados.acao)
         else:
             external_mail.act_on_messages(
                 db, integracao, dados.message_ids, dados.acao, destination=dados.pasta_destino,
             )
-    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
@@ -991,7 +1004,7 @@ def enviar_mensagem_externa(
     integracao = _integracao_email(db, conta, integration_id, escrita=True)
     titular = db.get(User, conta.user_id)
     assinatura = montar_assinatura_html(titular)
-    # send_message() já trata `html` como HTML de verdade (Gmail/Graph/Yahoo),
+    # send_message() já trata `html` como HTML de verdade (Gmail/Graph/Yahoo/Apple),
     # ao contrário da caixa nativa — por isso, sem assinatura, o corpo segue
     # exatamente como já era (comportamento inalterado). Só quando a
     # assinatura está ligada o texto do médico passa a ser escapado antes de
@@ -1001,7 +1014,7 @@ def enviar_mensagem_externa(
         return _enviar_pela_integracao(
             db, integracao, to=dados.para, subject=dados.assunto, html=corpo, cc=dados.cc, bcc=dados.cco,
         )
-    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError) as exc:
+    except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc
 
 
