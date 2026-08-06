@@ -33370,5 +33370,285 @@
       "parada cardíaca"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "iecai-icfer-classe-i",
+    "statement": "Um IECA é recomendado para pacientes com ICFEr para reduzir o risco de hospitalização por IC e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "ieca",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-icfer-classe-i",
+    "statement": "Um betabloqueador é recomendado para pacientes com ICFEr estável para reduzir o risco de hospitalização por IC e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "betabloqueador",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mra-icfer-classe-i",
+    "statement": "Um antagonista mineralocorticoide (MRA) é recomendado para pacientes com ICFEr para reduzir o risco de hospitalização por IC e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "mra",
+      "espironolactona",
+      "eplerenona",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diureticos-icfer-com-congestao",
+    "statement": "Diuréticos são recomendados em pacientes com ICFEr com sinais e/ou sintomas de congestão, para aliviar os sintomas de IC, melhorar a capacidade de exercício e reduzir hospitalizações por IC.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "diuretico",
+      "congestao"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "arb-icfer-intolerancia-a-ieca-ou-arni",
+    "statement": "Um BRA é recomendado para reduzir o risco de hospitalização por IC e morte cardiovascular em pacientes sintomáticos incapazes de tolerar um IECA ou um INRA (esses pacientes também devem receber betabloqueador e MRA).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "bra",
+      "intolerancia a ieca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "triplo-bloqueio-sraa-nao-recomendado-na-ic",
+    "statement": "A adição de um BRA (ou inibidor de renina) à combinação de um IECA e um MRA NÃO é recomendada em pacientes com IC, pelo aumento do risco de disfunção renal e hipercalemia.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "triplo bloqueio sraa",
+      "hipercalemia",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-secundaria-pos-arritmia-ventricular",
+    "statement": "Um CDI é recomendado para reduzir o risco de morte súbita e mortalidade por todas as causas em pacientes recuperados de arritmia ventricular causadora de instabilidade hemodinâmica, com expectativa de sobrevida >1 ano com bom estado funcional, na ausência de causas reversíveis ou a menos que a arritmia tenha ocorrido <48h após um IAM.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "prevencao secundaria",
+      "morte subita",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-icfer-isquemica",
+    "statement": "Um CDI é recomendado para reduzir o risco de morte súbita e mortalidade por todas as causas em pacientes com IC sintomática (NYHA II-III) de etiologia isquêmica (exceto se IAM nos últimos 40 dias) e FEVE ≤35% apesar de ≥3 meses de terapia clínica otimizada, desde que a expectativa de sobrevida seja substancialmente maior que 1 ano com bom estado funcional.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "prevencao primaria",
+      "icfer isquemica",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-nao-recomendado-menos-de-40-dias-pos-iam",
+    "statement": "A implantação de CDI NÃO é recomendada dentro de 40 dias de um IAM, pois o implante nesse momento não melhora o prognóstico.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "iam recente",
+      "dispositivos",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-classe-i-qrs-150ms-lbbb",
+    "statement": "TRC é recomendada para pacientes sintomáticos com IC em ritmo sinusal, duração do QRS ≥150 ms e morfologia de bloqueio de ramo esquerdo (BRE), com FEVE ≤35% apesar de terapia clínica otimizada, para melhorar sintomas e reduzir morbimortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "ressincronizacao",
+      "bre",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-preferivel-a-estimulacao-de-vd-em-bloqueio-av",
+    "statement": "TRC, em vez de estimulação de VD isolada, é recomendada para pacientes com ICFEr, independentemente da classe NYHA ou da largura do QRS, que tenham indicação de estimulação ventricular por bloqueio atrioventricular de alto grau, para reduzir a morbidade — inclui pacientes com fibrilação atrial.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "bloqueio atrioventricular",
+      "marca-passo",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-nao-recomendada-qrs-menor-130ms",
+    "statement": "TRC NÃO é recomendada em pacientes com duração do QRS <130 ms que não tenham indicação de marca-passo por bloqueio atrioventricular de alto grau.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "qrs estreito",
+      "dispositivos",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diltiazem-verapamil-nao-recomendados-icfer",
+    "statement": "Diltiazem ou verapamil NÃO são recomendados em pacientes com ICFEr, pois aumentam o risco de piora da IC e de hospitalização por IC.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "bloqueadores de canal de calcio",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antiarritmicos-classe-i-e-iii-inseguros-na-ic",
+    "statement": "O tratamento com os antiarrítmicos flecainida, encainida, disopiramida, dronedarona e D-sotalol NÃO é recomendado em pacientes com IC, por motivo de segurança.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "antiarritmicos",
+      "fibrilacao atrial",
+      "seguranca",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "programa-multidisciplinar-reduz-hospitalizacao-por-ic",
+    "statement": "É recomendado que pacientes com IC sejam matriculados em um programa multidisciplinar de manejo de IC, para reduzir o risco de hospitalização por IC e mortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "manejo multidisciplinar",
+      "reabilitacao",
+      "prevencao de reinternacao"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
