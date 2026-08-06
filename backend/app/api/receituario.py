@@ -440,7 +440,7 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
         )
 
     try:
-        provedor, info_metodo = assinatura_emissao.preparar(dados.metodo)
+        provedor, info_metodo = assinatura_emissao.preparar(dados.metodo, db=db, user=user)
     except assinatura_emissao.MetodoInvalido as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
 

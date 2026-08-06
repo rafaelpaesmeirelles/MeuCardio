@@ -36,6 +36,10 @@ class Settings(BaseSettings):
     # de fora do Caddy, e este volume não é montado lá — só rota autenticada
     # ou o link público com token de `documentos_publicos.py` servem o PDF.
     documentos_dir: str = "/documentos-emitidos"
+    # Certificado A1 (.pfx/.p12) do médico, cifrado no mesmo cofre — chave
+    # privada é o dado mais sensível deste projeto além do exame do
+    # paciente, mesma razão de nunca ter URL alcançável de fora do Caddy.
+    certificados_dir: str = "/certificados-a1"
     storage_encryption_key: str = ""
     # Janela de plantão para o SLA de 2h do pedido urgente. Fora dela, o
     # prazo passa a contar como eletivo (decisão do Rafael: 7h às 22h, todos

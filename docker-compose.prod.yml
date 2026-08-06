@@ -72,6 +72,9 @@ services:
       - examefiles:/exames-pacientes
       # PDFs de receita/documento emitidos, cifrados em repouso.
       - documentofiles:/documentos-emitidos
+      # Certificado A1 do médico (Trabalho 7), cifrado em repouso — nunca
+      # montado no Caddy, mesma razão dos dois volumes acima.
+      - certificadosfiles:/certificados-a1
       - cursofiles:/materiais-curso
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
     healthcheck:
@@ -120,6 +123,7 @@ volumes:
   userfiles:
   examefiles:
   documentofiles:
+  certificadosfiles:
   cursofiles:
   caddy_data:
   caddy_config:

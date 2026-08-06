@@ -39,13 +39,15 @@ def _raiz() -> Path:
     return Path(settings.documentos_dir)
 
 
-def preparar(metodo: str) -> tuple[ProvedorAssinatura, catalogo.ProvedorInfo]:
+def preparar(metodo: str, *, db: Session | None = None, user=None) -> tuple[ProvedorAssinatura, catalogo.ProvedorInfo]:
     """Resolve o provedor e a info do catálogo, ou recusa com `MetodoInvalido`
-    — quem chama decide se isso é 422 (parâmetro errado) ou outra coisa."""
+    — quem chama decide se isso é 422 (parâmetro errado) ou outra coisa.
+    `db`/`user` só são exigidos por `A1_ARQUIVO` (provedor por usuário, ver
+    `provedor.py`) — os demais ignoram."""
     info = catalogo.info(metodo)
     if info is None:
         raise MetodoInvalido(f"Método de assinatura desconhecido: {metodo}")
-    return obter_provedor(metodo), info
+    return obter_provedor(metodo, db=db, user=user), info
 
 
 @dataclass

@@ -28,6 +28,11 @@ pillow==12.3.0
 # Mantida na linha 4.x: 4.4.10 declara suporte a Python 3.14 e elimina o uso
 # legado de ast.NameConstant, sem assumir as mudanças incompatíveis da versão 5.
 reportlab==4.4.10
+# Assinatura digital PAdES a partir de certificado A1 local (.pfx/.p12) do
+# próprio médico (Trabalho 7, 06/08/2026) — biblioteca padrão de fato em
+# Python pra assinatura de PDF ICP-Brasil-compatível, usa `cryptography`
+# (já dependência) como backend criptográfico.
+pyhanko==0.36.2
 # Templates dos e-mails transacionais (02/08/2026) — HTML + texto puro
 # renderizados a partir de backend/app/templates/emails/.
 jinja2==3.1.6

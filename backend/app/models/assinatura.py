@@ -24,10 +24,14 @@ produzir o mesmo hash).
 """
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, ForeignKey, Integer, String
+from sqlalchemy import DateTime, ForeignKey, Integer, LargeBinary, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
+
+
+def _agora() -> datetime:
+    return datetime.now(timezone.utc)
 
 
 class DocumentoEmitido(Base):
@@ -56,3 +60,44 @@ class DocumentoEmitido(Base):
     criado_em: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
+
+class DigitalCertificate(Base):
+    """Certificado A1 (.pfx/.p12) do próprio médico — provedor `A1_ARQUIVO`
+    do catálogo (Trabalho 7, 06/08/2026). Um por médico: reenviar substitui
+    o anterior (o arquivo velho é apagado do cofre, não fica órfão).
+
+    O arquivo cifrado não fica em coluna — vai pro cofre já existente
+    (`services/cofre.py`, AES-256-GCM), volume próprio
+    (`settings.certificados_dir`), mesma filosofia do PDF emitido em
+    `DocumentoEmitido` e do exame em `exames_dir`. A SENHA do .pfx também é
+    guardada cifrada (`cofre.cifrar_campo`, não é arquivo) porque é exigida
+    a cada assinatura — pedir de novo a cada receita inviabilizaria o fluxo,
+    e o precedente de reter senha cifrada e reutilizável já existe no
+    projeto (senha de app do Yahoo/iCloud, em `CalendarIntegration.
+    credentials_cipher`).
+
+    A Corvia NÃO valida a cadeia até a raiz ICP-Brasil — isso é trabalho de
+    quem verifica a assinatura depois (Adobe Reader, o validador do ITI, o
+    futuro SNCR), o mesmo modelo de confiança de qualquer verificador de
+    PAdES. O que este módulo garante é que a chave privada enviada
+    realmente assina o PDF; não que o certificado é genuíno ICP-Brasil —
+    isso é responsabilidade de quem emitiu (a AC escolhida pelo médico) e de
+    quem verifica.
+    """
+
+    __tablename__ = "digital_certificates"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), unique=True, index=True)
+
+    arquivo_nome: Mapped[str] = mapped_column(String(120))
+    senha_cifrada: Mapped[bytes] = mapped_column(LargeBinary)
+
+    titular_cn: Mapped[str] = mapped_column(String(255))
+    numero_serie: Mapped[str] = mapped_column(String(80))
+    valido_ate: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    certificadora: Mapped[str | None] = mapped_column(String(120), nullable=True)
+
+    criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+    atualizado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora, onupdate=_agora)

@@ -19,6 +19,14 @@ Regra que não se flexibiliza, herdada do CLAUDE.md: **nunca simular a
 assinatura**. Por isso este módulo não tenta stub por provedor — todo
 provedor sem adaptador real cai em `ProvedorIndisponivel`, que diz a
 verdade em vez de fingir.
+
+`A1_ARQUIVO` (Trabalho 7, 06/08/2026) é o primeiro provedor QUALIFICADA
+(ICP-Brasil) de fato implementado — certificado local do próprio médico
+(`.pfx`/`.p12`), sem depender de nenhuma relação comercial com terceiro. Os
+provedores em nuvem (VIDaaS, Bird ID, SafeID, NeoID, Remote ID) continuam
+`ProvedorIndisponivel`, mas com mensagem "em breve" distinta — são
+planejados, não abandonados; só dependem de uma conta comercial que
+ninguém abriu ainda (ver ADR).
 """
 
 from __future__ import annotations
@@ -27,7 +35,10 @@ import logging
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
+from sqlalchemy.orm import Session
+
 from app.core.config import settings
+from app.models.user import User
 from app.services.assinatura import catalogo
 
 log = logging.getLogger("meucardio.assinatura")
@@ -82,6 +93,55 @@ class SemAssinaturaDigital(ProvedorAssinatura):
         return Assinatura(estado="nao_assinado", pdf=pdf)
 
 
+class CertificadoA1(ProvedorAssinatura):
+    """`A1_ARQUIVO` — certificado local do próprio médico, guardado cifrado
+    (`certificado_a1.py`), assinado de fato com `pyhanko` (`pdf_signer.py`).
+    Único provedor cuja disponibilidade é POR USUÁRIO, não do sistema
+    inteiro — por isso recebe `db`/`user` no construtor, e `obter_provedor()`
+    não usa o cache module-level pra este código (cache por código
+    quebraria entre usuários diferentes)."""
+
+    codigo = "A1_ARQUIVO"
+    nivel = catalogo.NIVEL_QUALIFICADA
+
+    def __init__(self, db: Session, user: User) -> None:
+        self._db = db
+        self._user = user
+
+    def disponivel(self) -> tuple[bool, str | None]:
+        from app.services.assinatura import certificado_a1
+
+        registro = certificado_a1.obter(self._db, self._user)
+        if registro is None:
+            return False, "Nenhum certificado A1 conectado. Cadastre um em Minha Conta → Assinatura digital."
+        from datetime import datetime, timezone
+
+        if registro.valido_ate < datetime.now(timezone.utc):
+            return False, f"Seu certificado A1 venceu em {registro.valido_ate:%d/%m/%Y} — envie um novo."
+        return True, None
+
+    def assinar(self, pdf: bytes, medico: dict, contexto: dict) -> Assinatura:
+        from app.services.assinatura import certificado_a1, pdf_signer
+
+        try:
+            carregado = certificado_a1.carregar_para_assinar(self._db, self._user)
+        except certificado_a1.CertificadoInvalido as exc:
+            log.warning("Certificado A1 inválido no momento de assinar (owner_id=%s): %s", self._user.id, exc)
+            return Assinatura(estado="indisponivel", motivo=str(exc))
+
+        motivo_doc = f"Documento clínico — {contexto.get('tipo', 'documento')}"
+        local = medico.get("municipio") or "Brasil"
+        try:
+            pdf_assinado = pdf_signer.assinar_pdf(
+                pdf, pfx_bytes=carregado.pfx_bytes, senha=carregado.senha, motivo=motivo_doc, local=local,
+            )
+        except pdf_signer.FalhaAoAssinar as exc:
+            log.error("Falha ao assinar PDF com certificado A1 (owner_id=%s): %s", self._user.id, exc)
+            return Assinatura(estado="indisponivel", motivo=f"Falha ao assinar: {exc}")
+
+        return Assinatura(estado="assinado", pdf=pdf_assinado, referencia=carregado.dados.numero_serie)
+
+
 class ProvedorIndisponivel(ProvedorAssinatura):
     """Representa, com honestidade, qualquer provedor do catálogo que ainda
     não tem adaptador real ou credencial configurada. Uma classe só,
@@ -101,7 +161,20 @@ class ProvedorIndisponivel(ProvedorAssinatura):
         return Assinatura(estado="indisponivel", motivo=self._motivo)
 
 
-def _motivo_padrao(nome: str) -> str:
+# Provedores em nuvem (ICP-Brasil qualificada) — planejados, não abandonados.
+# Todos exigem uma relação comercial que ninguém abriu ainda (contato com AC,
+# KYC, credencial de homologação) — ver o histórico de pesquisa da sessão de
+# 06/08/2026. Mensagem distinta da genérica "não integrado": aqui é "em
+# breve", não "sem previsão".
+_NUVEM_EM_BREVE = {"VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+
+
+def _motivo_padrao(codigo: str, nome: str) -> str:
+    if codigo in _NUVEM_EM_BREVE:
+        return (
+            f"{nome} está planejado (certificado em nuvem) — em breve. "
+            f"Por ora, use um certificado A1 (arquivo) se já tiver um."
+        )
     return (
         f"{nome} ainda não está integrado ou a credencial não foi configurada. "
         f"Nada foi assinado."
@@ -111,16 +184,25 @@ def _motivo_padrao(nome: str) -> str:
 _cache: dict[str, ProvedorAssinatura] = {}
 
 
-def obter_provedor(codigo: str) -> ProvedorAssinatura:
-    """Factory com cache por código. `codigo` desconhecido é erro de quem
-    chama — a validação contra `catalogo.codigos_validos()` é feita antes,
-    na rota, para virar 422 e não 500."""
-    if codigo in _cache:
-        return _cache[codigo]
+def obter_provedor(codigo: str, *, db: Session | None = None, user: User | None = None) -> ProvedorAssinatura:
+    """Factory com cache por código — EXCETO `A1_ARQUIVO`, que é por usuário
+    e por isso nunca entra no cache module-level (cachear por código
+    misturaria o certificado de um médico com a sessão de outro).
 
+    `codigo` desconhecido é erro de quem chama — a validação contra
+    `catalogo.codigos_validos()` é feita antes, na rota, para virar 422 e
+    não 500."""
     info = catalogo.info(codigo)
     if info is None:
         raise KeyError(f"Método de assinatura desconhecido: {codigo}")
+
+    if codigo == "A1_ARQUIVO":
+        if db is None or user is None:
+            raise ValueError("A1_ARQUIVO exige db e user — provedor por usuário, não por sistema.")
+        return CertificadoA1(db, user)
+
+    if codigo in _cache:
+        return _cache[codigo]
 
     if codigo == "MANUAL":
         provedor: ProvedorAssinatura = SemAssinaturaDigital()
@@ -133,7 +215,7 @@ def obter_provedor(codigo: str) -> ProvedorAssinatura:
             "ainda não foi escrito."
         )
     else:
-        provedor = ProvedorIndisponivel(info.codigo, info.nivel, _motivo_padrao(info.nome))
+        provedor = ProvedorIndisponivel(info.codigo, info.nivel, _motivo_padrao(info.codigo, info.nome))
 
     _cache[codigo] = provedor
     return provedor

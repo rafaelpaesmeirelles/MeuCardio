@@ -480,6 +480,128 @@ function PreferenciaAssinaturaDigital({ perfil, aoSalvar }: { perfil: Usuario; a
   );
 }
 
+type Certificadora = { nome: string; site: string };
+type StatusCertificadoA1 = {
+  conectado: boolean;
+  titular_cn?: string;
+  numero_serie?: string;
+  valido_ate?: string;
+  certificadora?: string | null;
+};
+
+/** Certificado A1 (Trabalho 7) — o único provedor QUALIFICADA (ICP-Brasil)
+ * que não depende de nenhuma conta comercial: o médico já tem (ou compra
+ * de qualquer Autoridade Certificadora credenciada) um arquivo .pfx/.p12
+ * com a própria chave privada. */
+function CertificadoA1() {
+  const [status, setStatus] = useState<StatusCertificadoA1 | null>(null);
+  const [certificadoras, setCertificadoras] = useState<Certificadora[]>([]);
+  const [arquivo, setArquivo] = useState<File | null>(null);
+  const [senha, setSenha] = useState("");
+  const [certificadoraEscolhida, setCertificadoraEscolhida] = useState("");
+  const [enviando, setEnviando] = useState(false);
+  const [removendo, setRemovendo] = useState(false);
+  const [erro, setErro] = useState("");
+
+  const carregarStatus = () => api.get<StatusCertificadoA1>("/assinatura/certificado-a1").then(setStatus).catch(() => {});
+
+  useEffect(() => {
+    carregarStatus();
+    api.get<Certificadora[]>("/assinatura/certificadoras").then(setCertificadoras).catch(() => {});
+  }, []);
+
+  async function enviar() {
+    if (!arquivo || !senha) return;
+    setEnviando(true);
+    setErro("");
+    try {
+      await api.upload<StatusCertificadoA1>("/assinatura/certificado-a1", "arquivo", arquivo, {
+        senha, ...(certificadoraEscolhida ? { certificadora: certificadoraEscolhida } : {}),
+      });
+      setArquivo(null);
+      setSenha("");
+      await carregarStatus();
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o certificado.");
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  async function remover() {
+    if (!window.confirm("Remover o certificado A1 conectado? Você precisará enviar o arquivo de novo para assinar com ele.")) return;
+    setRemovendo(true);
+    try {
+      await api.delete("/assinatura/certificado-a1");
+      await carregarStatus();
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível remover o certificado.");
+    } finally {
+      setRemovendo(false);
+    }
+  }
+
+  return (
+    <div className="cartao">
+      <h2 style={{ margin: "0 0 0.2rem" }}>Assinatura digital — certificado A1</h2>
+      <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
+        Assinatura qualificada (ICP-Brasil), a partir do seu próprio certificado em arquivo. O Corvia guarda o
+        arquivo cifrado e nunca o compartilha — ele só é usado para assinar seus documentos.
+      </p>
+
+      {status?.conectado ? (
+        <div style={{ marginTop: "0.7rem" }}>
+          <p style={{ margin: 0, fontSize: "0.84rem" }}><strong>Titular:</strong> {status.titular_cn}</p>
+          <p style={{ margin: "0.2rem 0 0", fontSize: "0.84rem" }}>
+            <strong>Válido até:</strong> {status.valido_ate ? new Date(status.valido_ate).toLocaleDateString("pt-BR") : "—"}
+          </p>
+          {status.certificadora && <p style={{ margin: "0.2rem 0 0", fontSize: "0.84rem" }}><strong>Certificadora:</strong> {status.certificadora}</p>}
+          <button className="botao botao--secundario" style={{ marginTop: "0.6rem" }} onClick={remover} disabled={removendo}>
+            {removendo ? "Removendo…" : "Remover certificado"}
+          </button>
+        </div>
+      ) : (
+        <div style={{ marginTop: "0.7rem" }}>
+          <label style={{ display: "block", fontSize: "0.82rem", marginBottom: "0.3rem" }}>
+            Arquivo do certificado (.pfx ou .p12)
+            <input type="file" accept=".pfx,.p12" onChange={(e) => setArquivo(e.target.files?.[0] ?? null)} style={{ display: "block", marginTop: "0.25rem" }} />
+          </label>
+          <label style={{ display: "block", fontSize: "0.82rem", marginTop: "0.5rem" }}>
+            Senha do certificado
+            <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} style={{ display: "block", marginTop: "0.25rem", width: "100%" }} />
+          </label>
+          <label style={{ display: "block", fontSize: "0.82rem", marginTop: "0.5rem" }}>
+            Certificadora (opcional, só pra referência)
+            <select value={certificadoraEscolhida} onChange={(e) => setCertificadoraEscolhida(e.target.value)} style={{ display: "block", marginTop: "0.25rem", width: "100%" }}>
+              <option value="">Não informar</option>
+              {certificadoras.map((c) => <option key={c.nome} value={c.nome}>{c.nome}</option>)}
+            </select>
+          </label>
+
+          {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.5rem" }}>{erro}</p>}
+
+          <button className="botao botao--secundario" style={{ marginTop: "0.6rem" }} onClick={enviar} disabled={enviando || !arquivo || !senha}>
+            {enviando ? "Conectando…" : "Conectar certificado"}
+          </button>
+
+          <details style={{ marginTop: "0.7rem", fontSize: "0.78rem" }}>
+            <summary style={{ cursor: "pointer", color: "var(--acento)" }}>Ainda não tenho um certificado A1</summary>
+            <p style={{ marginTop: "0.4rem" }}>
+              Compre um certificado e-CPF modelo A1 em qualquer Autoridade Certificadora credenciada pela ICP-Brasil.
+              A emissão costuma ser 100% online, por videoconferência. Algumas opções:
+            </p>
+            <ul style={{ margin: "0.3rem 0 0", paddingLeft: "1.1rem" }}>
+              {certificadoras.map((c) => (
+                <li key={c.nome}><a href={c.site} target="_blank" rel="noreferrer">{c.nome}</a></li>
+              ))}
+            </ul>
+          </details>
+        </div>
+      )}
+    </div>
+  );
+}
+
 type AssinaturaEmail = {
   ativa: boolean;
   incluir_telefone: boolean;
@@ -870,6 +992,7 @@ export default function MinhaConta() {
             recarregar();
           }}
         />
+        <CertificadoA1 />
         <PreferenciaAssinaturaEmail />
         <DadosPessoais
           perfil={perfil}

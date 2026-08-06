@@ -129,9 +129,10 @@ export const api = {
   delete: <T>(p: string, body?: unknown) =>
     request<T>(p, { method: "DELETE", body: body === undefined ? undefined : JSON.stringify(body) }),
 
-  upload: <T>(p: string, campo: string, arquivo: File) => {
+  upload: <T>(p: string, campo: string, arquivo: File, camposExtras?: Record<string, string>) => {
     const form = new FormData();
     form.append(campo, arquivo);
+    for (const [chave, valor] of Object.entries(camposExtras ?? {})) form.append(chave, valor);
     return request<T>(p, { method: "POST", body: form });
   },
 

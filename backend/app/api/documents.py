@@ -204,7 +204,7 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
             "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})
 
     try:
-        provedor, info_metodo = assinatura_emissao.preparar(metodo)
+        provedor, info_metodo = assinatura_emissao.preparar(metodo, db=db, user=user)
     except assinatura_emissao.MetodoInvalido as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
 
