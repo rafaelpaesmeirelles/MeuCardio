@@ -1,5 +1,57 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026: varredura geral pedida pelo Rafael — 6 bugs reais achados e corrigidos
+> Pedido do Rafael ("teste tudo, corrija tudo que for possível... varredura geral"): percorrida a
+> estrutura inteira do menu (Decisão clínica, Pacientes e prática, Conhecimento, Comunicação,
+> Gestão, Modo Emergência) com o Claude in Chrome, sempre reproduzindo antes de corrigir. **6 bugs
+> reais confirmados ao vivo e corrigidos, publicados em produção um a um:**
+>
+> 1. **Trilhas: título da etapa era o slug cru title-cased**, tipo "Aneurisma De Aorta Toracica
+>    Cortes Por Etiologia E Seguimento Esc 2024" — o frontend nunca teve título de verdade,
+>    `Trilha.tsx` fazia `item_slug.replace(/-/g," ")`. Fix: `_titulo()` novo em `study_tracks.py`,
+>    busca o campo certo por `item_type` na tabela do item (`Document.title`,
+>    `ScientificStudy.title`, `Drug.generic_name`, `ClinicalCase.titulo`, `EvidenceRecord.statement`,
+>    `DischargeChecklist.condicao`, nome da calculadora no `REGISTRY`). Removido também o
+>    `text-transform: capitalize` do CSS, que maiusculizava "De"/"Por"/"E" — existia só para
+>    disfarçar o slug antigo.
+> 2. **CorvIA Mail: trocar de conta cruzava o ID de pasta entre contas.** Reproduzido ao vivo:
+>    trocar para Yahoo mostrava "Pasta '2505063000000002008' não encontrada na Yahoo" (o id
+>    numérico é da conta Corvia/Mail360, vazando para a requisição da Yahoo). Causa: dois
+>    `useEffect` de `CaixaDeEmail.tsx` reagiam a `contaEmailId`, e o que recarrega mensagens
+>    disparava ANTES do que zera `pastaAtual` (ordem de declaração) — lia o id de pasta da conta
+>    ANTERIOR contra o prefixo já atualizado para a conta nova. Fix: `contaEmailId` saiu das
+>    dependências do efeito de recarregar mensagens, que já reage a `pastaAtual`/`pastas`.
+> 3. **Evidencia.tsx (tela de detalhe) voltou a mostrar o resumo clínico duplicado** — a correção
+>    original (mesma já aplicada em `Evidencias.tsx`, a lista) nunca chegou a ser commitada antes
+>    desta sessão. Um agente de conteúdo redescobriu o mesmo bug independentemente e deixou o fix
+>    pronto num `git stash`; apliquei o stash em vez de reescrever.
+> 4. **Sincronização: "Sincronizar agora" na conta `meirellesemaluf@gmail.com` não fazia nada** —
+>    bug relatado pelo Rafael desde antes da reforma desta tela, e AINDA presente na tela nova.
+>    Causa raiz real, só agora encontrada: a conta está `enabled=false` no banco (token OAuth
+>    expirado/revogado), e o backend responde 409 `integration_disabled` antes de tentar qualquer
+>    coisa — clicar nunca fez nada de fato. Fix: quando `enabled=false`, a tela mostra aviso claro
+>    e troca "Sincronizar agora" por "Reconectar", que reabre o fluxo de conexão do provedor
+>    (`complete_oauth`/`/integrations/apple`/`/conectar-yahoo` já fazem upsert pela mesma conta —
+>    reconectar revive a mesma linha, não duplica).
+> 5-6. **Modo Apresentação e Modo Emergência só tinham um campo de busca** (texto livre) — pedido
+>    do Rafael de que toda ferramenta de busca tenha 2+ opções. Os dois ganharam filtro por
+>    área/tema, 100% client-side sobre dados já carregados (Modo Emergência mantém a garantia de
+>    funcionar offline — filtrar por tema não dispara rede). CorvIA Chat também ganhou filtro por
+>    órgão de classe no "Procurar outro profissional" — o backend (`GET /chat/buscar-usuarios?
+>    conselho=`, `GET /chat/orgaos-de-classe`) já suportava isso, só a tela nunca usava.
+>
+> **Verificação de cada fix**: reproduzido o bug ao vivo antes de mexer, corrigido, `tsc --noEmit`
+> limpo, testes de backend novos onde havia lógica de servidor (`test_study_tracks_titulo.py`,
+> 2 testes), rebuild de backend/frontend, cache/service worker limpos no navegador de teste, e
+> conferência final ao vivo — inclusive lendo requisições de rede reais (não só a tela) para os
+> bugs 2 e 4. **33/33 protocolos de emergência conferidos por script** (fluxograma presente, bloco
+> mermaid válido) — zero problema estrutural.
+>
+> **Falsos-alarmes descartados com evidência, não por suposição**: pastas do Yahoo pareceram
+> travadas em "Sincronizando…" — era só a IMAP real demorando mais para 26 mensagens (confirmado
+> com `fetch` direto no console, resolveu sozinho); tela de galeria com imagem "não carregando" —
+> era latência normal do próprio teste.
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~02h45: Trabalho 15 (Assistente Clínica/Pessoal) + Trabalho 16 (Sincronização de contas)
 > Dois pedidos do Rafael em 06-07/08/2026, implementados, testados e publicados juntos.
 >
