@@ -60,6 +60,48 @@ def _disponivel(db: Session, item_type: str, slug: str) -> bool:
     return bool(item and getattr(item, "published", False))
 
 
+def _titulo(db: Session, item_type: str, slug: str) -> str | None:
+    """Título de verdade do item referenciado pela etapa.
+
+    Achado em 07/08/2026: a etapa nunca carregou título nenhum — nem no JSON de
+    origem, nem em campo calculado aqui. O frontend preenchia a lacuna sozinho,
+    mostrando `item_slug.replace("-", " ")` — daí títulos como "Aneurisma De
+    Aorta Toracica Cortes Por Etiologia E Seguimento Esc 2024": sem acento
+    (o slug nunca tem), com capitalização de toda palavra (inclusive artigo e
+    preposição) e sigla espremida no meio ("Esc 2024" em vez de "ESC 2024").
+    Busca o título real na tabela do item, mesmo critério de `_disponivel()`.
+    """
+    from app.models.checklist import DischargeChecklist
+    from app.models.clinical_case import ClinicalCase
+    from app.models.content import Document
+    from app.models.drug import Drug
+    from app.models.evidence import EvidenceRecord
+    from app.models.study import ScientificStudy
+    from app.services.calculators import REGISTRY
+
+    if item_type == "calculadora":
+        calc = REGISTRY.get(slug)
+        return calc.name if calc else None
+
+    # Campo que funciona como título em cada tabela — nem todas têm `title`.
+    # `evidencia` não tem título próprio: o enunciado (`statement`) é o que a
+    # própria tela de Evidências usa como cabeçalho do card.
+    modelos_e_campo = {
+        "documento": (Document, "title"),
+        "medicamento": (Drug, "generic_name"),
+        "estudo": (ScientificStudy, "title"),
+        "checklist": (DischargeChecklist, "condicao"),
+        "evidencia": (EvidenceRecord, "statement"),
+        "caso_clinico": (ClinicalCase, "titulo"),
+    }
+    par = modelos_e_campo.get(item_type)
+    if par is None:
+        return None
+    Modelo, campo = par
+    item = db.query(Modelo).filter(Modelo.slug == slug).first()
+    return getattr(item, campo) if item else None
+
+
 def _progresso(db: Session, user_id: int, track: StudyTrack) -> StudyTrackProgress | None:
     return db.query(StudyTrackProgress).filter(
         StudyTrackProgress.user_id == user_id, StudyTrackProgress.track_id == track.id
@@ -78,6 +120,7 @@ def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapa
     if com_etapas:
         d["etapas"] = [
             {**e,
+             "titulo": _titulo(db, e.get("item_type"), e.get("item_slug")),
              "link": ROTA.get(e.get("item_type"), "").format(slug=e.get("item_slug")),
              "concluida": e.get("item_slug") in feitas,
              "disponivel": _disponivel(db, e.get("item_type"), e.get("item_slug"))}
