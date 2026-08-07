@@ -5272,5 +5272,49 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-torsades-de-pointes-induzida-por-farmaco-qtc-longo",
+    "title": "ECG esquemático — Torsades de pointes sobre QTc longo, em contexto de fármaco prolongador de QT",
+    "modality": "ECG (traçado esquemático)",
+    "theme": "Farmacologia",
+    "file_path": "ecg/torsades-de-pointes-induzida-por-farmaco-qtc-longo.png",
+    "findings": "Traçado de ritmo mostrando taquicardia ventricular polimórfica com o padrão característico de torsades de pointes — complexos QRS de amplitude e polaridade que oscilam progressivamente em torno da linha de base, dando o aspecto de \"torção\" ao redor do eixo isoelétrico, entremeados por batimentos de menor amplitude. É representação esquemática do padrão eletrocardiográfico clássico, não traçado de paciente real.",
+    "teaching_points": "Do ponto de vista farmacológico, torsades de pointes é a arritmia paradigmática de prolongamento adquirido do intervalo QT induzido por fármaco — a lista de classes de risco inclui antiarrítmicos de classe IA e III (quinidina, sotalol, amiodarona em menor grau), macrolídeos, fluoroquinolonas, antipsicóticos (haloperidol, sobretudo intravenoso), antieméticos (ondansetrona, droperidol) e metadona, entre outros. O risco aumenta com hipocalemia, hipomagnesemia, bradicardia, sexo feminino, disfunção renal/hepática (que reduz o clearance do fármaco) e associação de mais de um agente prolongador de QT ao mesmo tempo — motivo pelo qual a checagem de interação medicamentosa antes de somar dois fármacos QT-prolongadores é rotina de segurança em prescrição cardiológica. Esta base já traz o mesmo padrão eletrocardiográfico em outros contextos clínicos (Arritmias, Síncope e Cardiologia geriátrica) — o recorte aqui é deliberadamente farmacológico: o gatilho é o medicamento, não a canalopatia congênita nem a bradiarritmia isolada, e a conduta imediata inclui suspender o agente causador além do sulfato de magnésio intravenoso e da correção de eletrólitos.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Torsades_de_Pointes_(polymorphic_VT).svg",
+    "license": "CC0 1.0",
+    "attribution": "Rocuronium Bromide, via Wikimedia Commons — CC0 1.0 Universal Public Domain Dedication. Arquivo original em SVG, convertido para PNG (rsvg-convert) para uso nesta plataforma; conteúdo gráfico inalterado.",
+    "tags": [
+      "torsades de pointes",
+      "qt longo induzido por farmaco",
+      "farmacologia",
+      "interacao medicamentosa",
+      "antiarritmico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "derrame-pericardico-ecocardiograma",
+    "title": "Ecocardiograma — Derrame pericárdico (espaço anecoico ao redor do coração)",
+    "modality": "Ecocardiograma",
+    "theme": "Cardio-oncologia",
+    "file_path": "ecocardiograma/derrame-pericardico-ecocardiograma.png",
+    "findings": "Imagem ecocardiográfica com seta apontando espaço anecoico (escuro, livre de eco) circundando o miocárdio, compatível com líquido no espaço pericárdico — achado de derrame pericárdico. A imagem-fonte não especifica o corte/janela acústica utilizada nem a etiologia do derrame no paciente fotografado.",
+    "teaching_points": "O derrame pericárdico maligno é uma das apresentações cardiológicas mais comuns em cardio-oncologia — pode ser a manifestação inicial de neoplasia (sobretudo pulmão, mama, linfoma e melanoma) ou complicação tardia de tratamento (radioterapia mediastinal, alguns quimioterápicos). O ecocardiograma é o método de escolha para detecção inicial e quantificação semiquantitativa (pequeno, moderado, importante) pela distância do espaço anecoico em diástole, além de permitir avaliar sinais de repercussão hemodinâmica (colapso diastólico de câmaras direitas, variação respiratória exagerada do fluxo mitral/tricúspide) que definem tamponamento cardíaco — emergência que pode exigir pericardiocentese guiada por imagem. Esta imagem específica não permite, por si só, inferir a causa do derrame retratado (a fonte não descreve etiologia) — é usada aqui pelo valor didático do achado ecocardiográfico em si, que é idêntico independentemente da causa subjacente.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:PericardialeffusionUS.PNG",
+    "license": "CC BY-SA 3.0",
+    "attribution": "James Heilman, MD (Jmh649), via Wikimedia Commons — CC BY-SA 3.0, obra própria do autor.",
+    "tags": [
+      "derrame pericardico",
+      "ecocardiograma",
+      "cardio-oncologia",
+      "tamponamento cardiaco",
+      "pericardiocentese"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
