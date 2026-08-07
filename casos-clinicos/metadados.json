@@ -11999,5 +11999,85 @@
       "Fernández C, Bova C, Sanchez O, et al. Validation of a Model for Identification of Patients at Intermediate to High Risk for Complications Associated With Acute Symptomatic Pulmonary Embolism. Chest. 2015;148(1):211-218. DOI: 10.1378/chest.14-2551. PMID: 25633724"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "totg-versus-glicemia-de-jejum-na-predicao-de-mortalidade-cardiovascular-estudo-decode",
+    "titulo": "Paciente com glicemia de jejum normal, mas o cardiologista pede um TOTG — por quê?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 58 anos, com síndrome metabólica (obesidade abdominal, triglicerídeos elevados, HDL baixo), procura avaliação cardiovascular. A glicemia de jejum está normal (98 mg/dL), mas o cardiologista solicita um teste oral de tolerância à glicose (TOTG) com dosagem da glicemia 2 horas após sobrecarga de 75 g.",
+    "pergunta": "Que evidência sustenta pedir o TOTG mesmo com glicemia de jejum normal, em vez de considerar a investigação metabólica encerrada?",
+    "opcoes": [
+      "Nenhuma — a glicemia de jejum normal já exclui risco metabólico relevante, e o TOTG não acrescenta informação prognóstica cardiovascular",
+      "O estudo DECODE, reunindo dados de 10 coortes prospectivas europeias (mais de 22 mil participantes), mostrou que a glicemia 2 horas após sobrecarga prediz mortalidade cardiovascular e por todas as causas melhor que a glicemia de jejum isolada, e que o maior número de mortes em excesso ocorreu justamente no grupo com tolerância diminuída à glicose mas jejum normal — exatamente o cenário deste paciente",
+      "O TOTG é indicado apenas para gestantes, nunca para investigação de risco cardiovascular em homens adultos",
+      "A glicemia de jejum é sempre superior à glicemia pós-sobrecarga para prever eventos cardiovasculares, e o TOTG só serve para diagnosticar diabetes gestacional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo DECODE (Diabetes Epidemiology: Collaborative analysis Of Diagnostic criteria in Europe) reuniu dados basais de glicemia de jejum e de 2 horas pós-sobrecarga oral de 75 g de glicose de 10 coortes prospectivas europeias (15.388 homens e 7.126 mulheres, 30 a 89 anos, seguimento médio de 8,8 anos) para comparar o valor preditivo dos dois critérios diagnósticos. A inclusão da glicemia de jejum não acrescentou informação preditiva significativa além da glicemia de 2 horas isolada (p>0,10 para as diversas causas de morte), enquanto acrescentar a glicemia de 2 horas ao critério de jejum melhorou significativamente a predição de mortalidade (p<0,001 para todas as causas, p<0,005 para doença cardiovascular). Em modelo com os dois critérios simultaneamente, a razão de risco para mortalidade cardiovascular foi de 1,40 (IC95% 1,02-1,92) em quem tinha diabetes definido pela glicemia de 2 horas, contra 1,20 (IC95% 0,88-1,64) — não significativo — em quem tinha diabetes definido só pela glicemia de jejum. Mais importante para este caso: o maior número de mortes em excesso na coorte ocorreu no subgrupo com tolerância diminuída à glicose (2 horas alterada) mas glicemia de jejum normal — a população que uma triagem baseada só em jejum simplesmente não identifica. Em paciente com síndrome metabólica e fatores de risco cardiovascular, essa lacuna de sensibilidade justifica clinicamente complementar a glicemia de jejum normal com o TOTG antes de considerar a investigação metabólica encerrada.",
+    "source_refs": [
+      "DECODE Study Group, the European Diabetes Epidemiology Group. Glucose tolerance and cardiovascular mortality: comparison of fasting and 2-hour diagnostic criteria. Arch Intern Med. 2001;161(3):397-405. DOI: 10.1001/archinte.161.3.397. PMID: 11176766"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "apolipoproteina-b-versus-ldl-colesterol-discordancia-no-paciente-com-sindrome-metabolica",
+    "titulo": "LDL-colesterol na meta, mas o risco parece maior que o esperado — o que a ApoB pode revelar?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 52 anos, diabética tipo 2, com triglicerídeos de 280 mg/dL e LDL-colesterol calculado de 95 mg/dL (dentro da meta para o risco estimado). O cardiologista, desconfiado de que o LDL calculado pode estar subestimando o risco real nessa paciente com triglicerídeos elevados, solicita apolipoproteína B (ApoB).",
+    "pergunta": "Por que a ApoB pode discordar do LDL-colesterol nesse cenário, e qual marcador tem maior poder preditivo de eventos cardiovasculares segundo a metanálise de Sniderman et al.?",
+    "opcoes": [
+      "Os dois marcadores são intercambiáveis e sempre concordam — pedir ApoB nesse caso é redundante",
+      "Triglicerídeos elevados aumentam o número de partículas de LDL pequenas e densas, que carregam menos colesterol por partícula — o LDL-colesterol (que mede massa de colesterol) pode subestimar o número real de partículas aterogênicas nesse cenário; a metanálise de Sniderman et al. (233.455 indivíduos, 22.950 eventos) mostrou que a ApoB foi o marcador de risco mais potente entre os três (razão de risco relativo 1,43), superando o LDL-colesterol (1,25) e o colesterol não-HDL (1,34)",
+      "A ApoB só é útil em pacientes com LDL muito elevado, nunca em LDL na meta",
+      "O colesterol não-HDL é sempre superior à ApoB na predição de risco cardiovascular, tornando a ApoB um exame obsoleto"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A apolipoproteína B está presente em exatamente uma cópia em cada partícula de LDL, VLDL, IDL e lipoproteína(a) — ela mede diretamente o número de partículas aterogênicas circulantes, enquanto o LDL-colesterol mede a massa de colesterol transportada por essas partículas. Em cenários de triglicerídeos elevados, diabetes, obesidade ou síndrome metabólica — exatamente o perfil desta paciente —, é comum haver discordância: as partículas de LDL tendem a ser pequenas e densas, carregando menos colesterol cada uma, de modo que o LDL-colesterol calculado pode parecer controlado mesmo com um número elevado de partículas aterogênicas circulando (ApoB alta). A metanálise de Sniderman et al., reunindo 12 estudos epidemiológicos independentes (233.455 indivíduos, 22.950 eventos isquêmicos fatais ou não fatais), mostrou que a ApoB foi o marcador de risco mais potente entre os três avaliados, isoladamente ou em comparações diretas cabeça a cabeça: razão de risco relativo padronizada de 1,43 (IC95% 1,35-1,51) para ApoB, contra 1,34 (IC95% 1,24-1,44) para colesterol não-HDL e 1,25 (IC95% 1,18-1,33) para LDL-colesterol — ApoB superou o LDL-colesterol em 12,0% (p<0,0001) e o colesterol não-HDL em 5,7% (p<0,001). Os autores estimaram que uma estratégia de tratamento guiada por ApoB preveniria 500 mil eventos a mais que uma guiada por colesterol não-HDL ao longo de 10 anos na população de risco dos EUA. Na prática desta paciente, uma ApoB elevada apesar do LDL-colesterol na meta reclassificaria seu risco residual para cima e poderia justificar intensificação terapêutica que a leitura isolada do LDL não sugeriria.",
+    "source_refs": [
+      "Sniderman AD, Williams K, Contois JH, Monroe HM, McQueen MJ, de Graaf J, Furberg CD. A meta-analysis of low-density lipoprotein cholesterol, non-high-density lipoprotein cholesterol, and apolipoprotein B as markers of cardiovascular risk. Circ Cardiovasc Qual Outcomes. 2011;4(3):337-345. DOI: 10.1161/CIRCOUTCOMES.110.959247. PMID: 21487090"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "proteina-c-reativa-ultrassensivel-e-decisao-de-estatina-em-ldl-nao-elevado-jupiter",
+    "titulo": "LDL não elevado, mas hs-CRP alta — vale a pena tratar com estatina? O que o JUPITER mostrou",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, aparentemente saudável, sem diabetes nem hipertensão, procura avaliação de rotina. LDL-colesterol é 118 mg/dL (não francamente elevado), mas a proteína C-reativa ultrassensível (hs-CRP) está em 3,2 mg/L, sugerindo inflamação vascular subclínica.",
+    "pergunta": "Existe evidência de ensaio clínico randomizado sustentando tratamento com estatina especificamente nesse perfil (LDL não elevado, hs-CRP elevada)?",
+    "opcoes": [
+      "Não — hs-CRP elevada isolada nunca foi testada como critério de inclusão em ensaio clínico de estatina",
+      "Sim — o ensaio JUPITER randomizou 17.802 homens e mulheres aparentemente saudáveis, com LDL-colesterol <130 mg/dL e hs-CRP ≥2,0 mg/L, para rosuvastatina 20 mg/dia ou placebo, e mostrou redução do desfecho primário combinado (infarto, AVC, revascularização, internação por angina instável ou morte cardiovascular) com hazard ratio de 0,56 (IC95% 0,46-0,69), levando à interrupção precoce do estudo por benefício",
+      "O JUPITER estudou apenas pacientes com LDL acima de 190 mg/dL, população muito diferente deste paciente",
+      "Estatina só tem benefício comprovado em prevenção secundária, nunca em prevenção primária com LDL não elevado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio JUPITER (Justification for the Use of Statins in Prevention: an Intervention Trial Evaluating Rosuvastatin) randomizou 17.802 homens e mulheres aparentemente saudáveis, com LDL-colesterol <130 mg/dL (3,4 mmol/L) e hs-CRP ≥2,0 mg/L — perfil equivalente ao deste paciente —, para rosuvastatina 20 mg/dia ou placebo, com seguimento até o desfecho primário combinado (infarto do miocárdio, AVC, revascularização arterial, internação por angina instável ou morte cardiovascular). O estudo foi interrompido precocemente, após seguimento médio de apenas 1,9 anos, por benefício claro: a taxa do desfecho primário foi de 0,77 versus 1,36 por 100 pessoas-ano nos grupos rosuvastatina e placebo, respectivamente (hazard ratio 0,56; IC95% 0,46-0,69; p<0,00001), com reduções também significativas em infarto isolado (HR 0,46), AVC isolado (HR 0,52) e mortalidade por todas as causas (HR 0,80; p=0,02). A rosuvastatina reduziu LDL-colesterol em 50% e hs-CRP em 37%. Este é o ensaio que estabeleceu, de forma randomizada e não apenas observacional, que hs-CRP elevada identifica um subgrupo de risco cardiovascular residual que se beneficia de estatina mesmo sem hiperlipidemia definida pelos critérios tradicionais — sustentando, no caso deste paciente, que hs-CRP de 3,2 mg/L com LDL de 118 mg/dL é achado com implicação terapêutica real, não apenas um número a ser observado.",
+    "source_refs": [
+      "Ridker PM, Danielson E, Fonseca FA, Genest J, Gotto AM Jr, Kastelein JJ, Koenig W, Libby P, Lorenzatti AJ, MacFadyen JG, Nordestgaard BG, Shepherd J, Willerson JT, Glynn RJ; JUPITER Study Group. Rosuvastatin to prevent vascular events in men and women with elevated C-reactive protein. N Engl J Med. 2008;359(21):2195-2207. DOI: 10.1056/NEJMoa0807646. PMID: 18997196"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estratificacao-hemodinamica-pre-transplante-cardiaco-resistencia-vascular-pulmonar-e-teste-de-reversibilidade",
+    "titulo": "Candidato a transplante cardíaco com resistência vascular pulmonar elevada — operar ou não?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 45 anos, em avaliação para transplante cardíaco por insuficiência cardíaca avançada refratária, é submetido a cateterismo cardíaco direito, que mostra resistência vascular pulmonar (RVP) de 4,2 unidades Wood. É realizado teste de reversibilidade com nitroprussiato de sódio.",
+    "pergunta": "Segundo o estudo clássico de Costard-Jäckle e Fowler, que padrão de resposta ao teste de reversibilidade identifica o subgrupo de MENOR risco de mortalidade pós-transplante?",
+    "opcoes": [
+      "RVP basal elevada isoladamente já contraindica definitivamente o transplante, independentemente da resposta ao vasodilatador",
+      "A resposta ao nitroprussiato não tem relação com o desfecho pós-transplante — apenas a RVP basal importa",
+      "RVP reduzida para ≤2,5 unidades Wood com o nitroprussiato, mantendo pressão arterial sistólica sistêmica ≥85 mmHg, identificou o subgrupo de menor mortalidade em 3 meses (3,8%) — muito menor que a dos pacientes cuja RVP não reduzia (40,6%) ou que só reduzia à custa de hipotensão sistêmica (27,5%)",
+      "Apenas a fração de ejeção do receptor determina o risco pós-transplante; a hemodinâmica pulmonar pré-operatória é irrelevante"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No estudo de Costard-Jäckle e Fowler (293 pacientes consecutivos submetidos a cateterismo cardíaco direito pré-transplante com teste de reversibilidade por nitroprussiato), pacientes com RVP basal >2,5 unidades Wood tiveram mortalidade em 3 meses de 17,9%, contra 6,9% nos com RVP ≤2,5 unidades (p<0,02). Mas o achado mais importante para a decisão clínica veio da estratificação dentro do grupo de RVP elevada pela resposta ao vasodilatador: pacientes cuja RVP reduzia para ≤2,5 unidades com nitroprussiato, mantendo pressão sistólica sistêmica ≥85 mmHg (reversibilidade sem comprometer a perfusão sistêmica), tiveram mortalidade em 3 meses de apenas 3,8% — comparável ao grupo de baixo risco basal. Já os pacientes cuja resistência não reduzia para ≤2,5 unidades tiveram mortalidade de 40,6%, e os que só reduziam a RVP à custa de hipotensão sistêmica (PAS ≤85 mmHg) tiveram mortalidade de 27,5%. Todos os 10 óbitos por falência aguda de ventrículo direito do enxerto no estudo pertenciam a esses dois últimos grupos. Ou seja: não é a RVP basal isolada que define a decisão, e sim a capacidade de reduzi-la de forma segura (sem hipotensão) com vasodilatador — é esse teste de reversibilidade que separa o candidato de baixo risco do de alto risco de falência de ventrículo direito pós-transplante.",
+    "source_refs": [
+      "Costard-Jäckle A, Fowler MB. Influence of preoperative pulmonary artery pressure on mortality after heart transplantation: testing of potential reversibility of pulmonary hypertension with nitroprusside is useful in defining a high risk group. J Am Coll Cardiol. 1992;19(1):48-54. DOI: 10.1016/0735-1097(92)90050-w. PMID: 1729345"
+    ],
+    "review_status": "revisado"
   }
 ]
