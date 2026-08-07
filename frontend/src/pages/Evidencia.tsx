@@ -58,10 +58,20 @@ export default function Evidencia() {
         <h1 style={{ fontSize: "1.25rem", margin: 0 }}>{evidencia.statement}</h1>
       </section>
 
-      <section className="cartao" style={{ marginTop: "0.8rem" }}>
-        <p className="eyebrow">Resumo clínico</p>
-        <p style={{ lineHeight: 1.65, marginBottom: 0 }}>{evidencia.summary}</p>
-      </section>
+      {/* 07/08/2026: `summary` nunca é preenchido de fato hoje — as 1.870
+       * evidências publicadas têm `summary = null` no banco, e a API
+       * (evidence.py) cai no fallback `e.summary or e.statement`, para nunca
+       * devolver campo vazio. O efeito colateral, achado em varredura visual
+       * real: o enunciado aparecia repetido palavra por palavra logo abaixo
+       * de si mesmo. Como o fallback é sobre TODO o registro publicado hoje,
+       * a seção some sempre que o resumo for idêntico ao enunciado — volta a
+       * aparecer no dia em que `summary` for um texto genuinamente distinto. */}
+      {evidencia.summary.trim() !== evidencia.statement.trim() && (
+        <section className="cartao" style={{ marginTop: "0.8rem" }}>
+          <p className="eyebrow">Resumo clínico</p>
+          <p style={{ lineHeight: 1.65, marginBottom: 0 }}>{evidencia.summary}</p>
+        </section>
+      )}
 
       <section className="cartao" style={{ marginTop: "0.8rem" }}>
         <p className="eyebrow">Diretriz de origem</p>
