@@ -32,12 +32,13 @@ export default function CalculadorasPreOperatoriasAvancadas({ idade, onChange }:
     Promise.all(SLUGS.map((slug) => api.get<Definicao>(`/calculators/${slug}`))).then((lista) => {
       if (!ativo) return; const d: Record<string, Definicao> = {}; const s: AvancadosState = {};
       for (const def of lista) { d[def.slug] = def; s[def.slug] = { selecionado: false, payload: payloadInicial(def, idade), result: null, interpretation: "" }; }
-      setDefs(d); setState(s); onChange(s);
+      setDefs(d); setState(s);
     }).catch(() => ativo && setErro("Não foi possível carregar as calculadoras avançadas.")).finally(() => ativo && setCarregando(false));
     return () => { ativo = false; };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => { onChange(state); }, [state, onChange]);
   useEffect(() => {
     if (!idade) return;
     setState((atual) => {
@@ -46,10 +47,9 @@ export default function CalculadorasPreOperatoriasAvancadas({ idade, onChange }:
         const m = atual[slug]; if (!m || !defs[slug]?.fields.some((f) => f.name === "idade")) continue;
         if (m.payload.idade === "" || m.payload.idade === undefined) { novo[slug] = { ...m, payload: { ...m.payload, idade: Number(idade) } }; mudou = true; }
       }
-      if (mudou) queueMicrotask(() => onChange(novo));
       return mudou ? novo : atual;
     });
-  }, [idade, defs, onChange]);
+  }, [idade, defs]);
 
   const ordenados = useMemo(() => SLUGS.map((s) => defs[s]).filter(Boolean), [defs]);
   function alterar(slug: string, campo: Campo, valor: string | boolean) {
@@ -57,13 +57,13 @@ export default function CalculadorasPreOperatoriasAvancadas({ idade, onChange }:
       const m = atual[slug]; if (!m) return atual; let normalizado: unknown = valor;
       if (campo.type === "number") normalizado = valor === "" ? "" : Number(valor);
       if (campo.type === "select") normalizado = campo.options?.find((o) => String(o.value) === String(valor))?.value ?? valor;
-      const novo = { ...atual, [slug]: { ...m, payload: { ...m.payload, [campo.name]: normalizado }, result: null, interpretation: "" } }; onChange(novo); return novo;
+      return { ...atual, [slug]: { ...m, payload: { ...m.payload, [campo.name]: normalizado }, result: null, interpretation: "" } };
     });
   }
-  function selecionar(slug: string, selecionado: boolean) { setState((atual) => { const m = atual[slug]; if (!m) return atual; const novo = { ...atual, [slug]: { ...m, selecionado, result: selecionado ? m.result : null, interpretation: selecionado ? m.interpretation : "" } }; onChange(novo); return novo; }); }
+  function selecionar(slug: string, selecionado: boolean) { setState((atual) => { const m = atual[slug]; if (!m) return atual; return { ...atual, [slug]: { ...m, selecionado, result: selecionado ? m.result : null, interpretation: selecionado ? m.interpretation : "" } }; }); }
   async function calcular(slug: string) {
     const m = state[slug]; if (!m) return; setCalculando(slug); setErro("");
-    try { const r = await api.post<ResultadoApi>(`/calculators/${slug}/run`, m.payload); setState((atual) => { const novo = { ...atual, [slug]: { ...atual[slug], result: r.result, interpretation: r.interpretation } }; onChange(novo); return novo; }); }
+    try { const r = await api.post<ResultadoApi>(`/calculators/${slug}/run`, m.payload); setState((atual) => ({ ...atual, [slug]: { ...atual[slug], result: r.result, interpretation: r.interpretation } })); }
     catch (e) { setErro(e instanceof ApiError ? e.message : `Não foi possível calcular ${slug}.`); } finally { setCalculando(null); }
   }
   if (carregando) return <div className="cartao" style={{ marginTop: "1rem" }}>Carregando metodologias avançadas…</div>;
@@ -72,7 +72,7 @@ export default function CalculadorasPreOperatoriasAvancadas({ idade, onChange }:
     <p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem" }}>{def.purpose}</p>
     {m.selecionado && <><div className="grade grade--2">{def.fields.map((f) => <div key={f.name}>{f.type === "boolean" ? <label style={{ display: "flex", gap: 8, alignItems: "flex-start", fontWeight: 400 }}><input type="checkbox" checked={Boolean(m.payload[f.name])} onChange={(e) => alterar(def.slug, f, e.target.checked)} /><span>{f.label}</span></label> : <><label>{f.label}{f.unit ? ` (${f.unit})` : ""}</label>{f.type === "select" ? <select value={String(m.payload[f.name] ?? "")} onChange={(e) => alterar(def.slug, f, e.target.value)}>{(f.options ?? []).map((o) => <option key={String(o.value)} value={String(o.value)}>{o.label}</option>)}</select> : <input type="number" min={f.min ?? undefined} max={f.max ?? undefined} value={String(m.payload[f.name] ?? "")} onChange={(e) => alterar(def.slug, f, e.target.value)} />}{f.help && <small style={{ color: "var(--texto-secundario)" }}>{f.help}</small>}</>}</div>)}</div>
     <button className="botao" style={{ marginTop: "0.7rem" }} onClick={() => calcular(def.slug)} disabled={calculando === def.slug}>{calculando === def.slug ? "Calculando…" : `Calcular ${def.name.split(" — ")[0]}`}</button>
-    {m.result && <div style={{ marginTop: "0.7rem", borderLeft: "3px solid var(--acento)", paddingLeft: "0.75rem" }}><strong>Resultado</strong><p style={{ margin: "0.3rem 0" }}>{Object.entries(m.result).map(([k,v]) => `${k.replaceAll("_", " ")}: ${valorResultado(v)}`).join(" · ")}</p><p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem" }}>{m.interpretation}</p></div>}
+    {m.result && <div style={{ marginTop: "0.7rem", borderLeft: "3px solid var(--acento)", paddingLeft: "0.75rem" }}><strong>Resultado</strong><p style={{ margin: "0.3rem 0" }}>{Object.entries(m.result).map(([k,v]) => `${k.split("_").join(" ")}: ${valorResultado(v)}`).join(" · ")}</p><p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem" }}>{m.interpretation}</p></div>}
     <p style={{ color: "var(--texto-secundario)", fontSize: "0.78rem", marginBottom: 0 }}><strong>Referência:</strong> {def.reference}</p></>}
   </div>; })}{erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}</>;
 }
