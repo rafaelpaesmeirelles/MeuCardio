@@ -14062,5 +14062,185 @@
       "Bazoukis G, Letsas KP, Liu T, Tse G, Alsheikh-Ali A. Association of Late Potentials With Fatal Arrhythmic Events in Patients With Brugada Syndrome-A Meta-analysis. Cardiol Rev. 2023;32(4):334-337. DOI: 10.1097/CRD.0000000000000511. PMID: 37811999"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "hipercolesterolemia-lpa-elevada-muvalaplin-decisao-terapeutica",
+    "titulo": "Lp(a) elevada e LDL já na meta: o que mais oferecer?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 54 anos, doença arterial coronariana estabelecida (angioplastia há 2 anos), em uso de estatina de alta intensidade com LDL-c atual de 62 mg/dL (na meta). Dosagem de lipoproteína(a) solicitada por história familiar de infarto precoce retorna em 210 nmol/L (muito elevada). Ele pergunta se existe algum tratamento específico para esse resultado.",
+    "pergunta": "Qual a orientação mais adequada sobre tratamento farmacológico da Lp(a) elevada neste momento?",
+    "opcoes": [
+      "Aumentar a dose da estatina, já que estatina também reduz Lp(a) de forma clinicamente relevante",
+      "Explicar que não há, até o momento, agente aprovado especificamente para reduzir Lp(a) com desfecho cardiovascular comprovado — agentes como a muvalaplina oral estão em fase 2, com redução de até 85% do biomarcador mas sem dado de eventos ainda",
+      "Iniciar niacina em alta dose, já validada para reduzir eventos em pacientes com Lp(a) elevada",
+      "Indicar aférese de LDL imediatamente, por ser o único tratamento com eficácia comprovada para Lp(a)"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A estatina não reduz Lp(a) de forma clinicamente relevante — pode até elevá-la discretamente em alguns pacientes. Até o momento, nenhum agente redutor de Lp(a) tem ensaio de desfecho cardiovascular concluído: os inibidores de RNA (olpasirana, zerlasirana) e agora também o inibidor oral de pequena molécula muvalaplina (ensaio de fase 2, Nicholls et al. JAMA 2025, PMID 39556768) reduzem o biomarcador em até 85,8% na maior dose, mas os próprios autores destacam que o efeito sobre eventos cardiovasculares 'requer investigação adicional'. Niacina não tem eficácia comprovada sobre eventos nesse contexto (AIM-HIGH e HPS2-THRIVE, já documentados nesta pasta, foram neutros ou negativos). A conduta correta hoje é otimizar todos os fatores de risco modificáveis convencionais e acompanhar o desenvolvimento de agentes específicos, sem aférese fora de contexto de hipercolesterolemia familiar homozigota grave refratária.",
+    "source_refs": [
+      "Nicholls SJ, Ni W, Rhodes GM, et al. Oral Muvalaplin for Lowering of Lipoprotein(a): A Randomized Clinical Trial. JAMA. 2025;333(3):222-231. DOI: 10.1001/jama.2024.24017. PMID: 39556768"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpk-elevada-assintomatica-em-uso-de-pembrolizumabe-conduta",
+    "titulo": "CPK elevada em exame de rotina sob imunoterapia — investigar miocardite?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 61 anos, em terceiro ciclo de pembrolizumabe para melanoma metastático, assintomática. Painel metabólico de rotina do oncologista mostra CPK 850 U/L (normal até 200) e AST discretamente elevada, com ALT normal. Ela não relata dor torácica, dispneia ou palpitação.",
+    "pergunta": "Qual a conduta mais adequada diante desse achado laboratorial?",
+    "opcoes": [
+      "Como ela está assintomática, repetir o exame em 3 meses sem investigação adicional",
+      "Solicitar troponina de alta sensibilidade e ECG de imediato, mesmo assintomática, pelo alto valor preditivo negativo da CPK normal e o risco de miocardite por inibidor de checkpoint",
+      "Suspender definitivamente o pembrolizumabe sem outra investigação, já que CPK elevada já confirma miocardite",
+      "Repetir apenas as transaminases, já que CPK isolada não tem relação com o coração"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em coorte de 2.606 pacientes sob inibidor de checkpoint imunológico (Vasbinder et al., JACC CardioOncology 2022, PMID 36636441), a CPK foi o único biomarcador não cardíaco associado de forma independente ao desenvolvimento de miocardite (HR 1,83 por aumento de 100%) e à mortalidade, com sensibilidade de 99% para miocardite — ou seja, CPK elevada deve funcionar como gatilho de investigação cardíaca dirigida mesmo sem sintomas, já que a miocardite por ICI pode ser oligossintomática até fase avançada. A especificidade é baixa (23%), então a CPK isolada não fecha diagnóstico — mas também não deve ser ignorada ou aguardar 3 meses. Suspender o fármaco sem confirmar o diagnóstico é prematuro; a decisão de suspender depende da confirmação com troponina/ECG e, se necessário, ressonância cardíaca.",
+    "source_refs": [
+      "Vasbinder A, Chen Y, Procureur A, et al. Biomarker Trends, Incidence, and Outcomes of Immune Checkpoint Inhibitor-Induced Myocarditis. JACC CardioOncol. 2022;4(5):689-700. DOI: 10.1016/j.jaccao.2022.11.004. PMID: 36636441"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "iam-recente-fevr-40-empagliflozina-remodelamento-empress-mi",
+    "titulo": "Adicionar SGLT2 já na alta pós-infarto para prevenir remodelamento?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, IAM com supradesnível de ST há 5 dias, tratado com angioplastia primária, ecocardiograma na alta com FEVE 40%. Já em uso de betabloqueador, IECA e estatina de alta intensidade. O residente pergunta se deveria acrescentar empagliflozina especificamente para 'evitar que o coração dilate' nas próximas semanas.",
+    "pergunta": "O que a evidência mais recente diz sobre esse racional específico?",
+    "opcoes": [
+      "O ensaio EMPRESS-MI mostrou que empagliflozina reduziu significativamente o volume sistólico final do VE em 24 semanas comparado a placebo",
+      "O ensaio EMPRESS-MI (105 pacientes, RM cardíaca seriada) foi neutro para o desfecho de volumes/função do VE em 24 semanas — a maioria dos pacientes já não apresentou remodelamento adverso progressivo mesmo no grupo placebo, sob cuidado padrão contemporâneo",
+      "Empagliflozina piorou os volumes ventriculares em relação ao placebo no EMPRESS-MI",
+      "Não existe nenhum ensaio randomizado testando SGLT2 nesse contexto pós-infarto"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O EMPRESS-MI (Carberry et al., Eur J Heart Fail 2025, PMID 39675781) randomizou 105 pacientes com FEVE <45% por ressonância cardíaca 12h-14 dias pós-IAM para empagliflozina 10 mg/dia ou placebo, com desfecho primário de variação do volume sistólico final indexado em 24 semanas. O resultado foi neutro (diferença entre grupos 0,3 ml/m2; p=0,92) — inclusive o grupo placebo já mostrou melhora espontânea sob o cuidado padrão contemporâneo, sugerindo que a maioria dos pacientes não desenvolve remodelamento adverso progressivo hoje em dia. Esse achado específico de imagem não invalida os benefícios de SGLT2 documentados em desfechos clínicos por outros ensaios (como o EMPACT-MI) — é um resultado negativo específico para este desfecho surrogado e esta janela de tempo, e deve ser comunicado como tal, sem generalização para 'SGLT2 não funciona pós-infarto'.",
+    "source_refs": [
+      "Carberry J, Petrie MC, Lee MMY, et al. Empagliflozin to prevent worsening of left ventricular volumes and systolic function after myocardial infarction (EMPRESS-MI). Eur J Heart Fail. 2025;27(3):566-576. DOI: 10.1002/ejhf.3560. PMID: 39675781"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-pergunta-sobre-seguranca-de-produto-sem-acucar-com-xilitol",
+    "titulo": "\"Esse doce sem açúcar com xilitol é seguro para o coração?\"",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente com doença coronariana estável pergunta na consulta se pode consumir livremente balas e gomas de mascar 'sem açúcar' adoçadas com xilitol, já que 'não têm açúcar' e por isso presume que são neutras para o coração.",
+    "pergunta": "Qual orientação está mais alinhada com a evidência mais recente sobre xilitol e risco cardiovascular?",
+    "opcoes": [
+      "Confirmar que xilitol é totalmente seguro, pois é produzido naturalmente pelo próprio organismo",
+      "Explicar que estudo recente (Witkowski et al., 2024) associou o xilitol circulante a maior risco de evento cardiovascular e demonstrou, em experimentos complementares, que ele aumenta a reatividade plaquetária e a formação de trombo — orientando moderação, sem alarmismo, já que não há ainda corte de dose de segurança estabelecido",
+      "Recomendar substituir por açúcar comum, que é mais seguro para o coração que qualquer adoçante",
+      "Afirmar que o achado só vale para diabéticos, não para pacientes com doença coronariana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Witkowski et al. (Eur Heart J 2024, PMID 38842092) associaram xilitol circulante a maior risco de MACE em 3 anos (HR 1,57) em duas coortes independentes, e demonstraram em plaquetas humanas, sangue total, modelo animal e intervenção aguda em voluntários saudáveis que o xilitol aumenta a reatividade plaquetária e a formação de trombo — em níveis de exposição alcançados pelo consumo dietético como substituto de açúcar (mais de 1.000 vezes acima da produção endógena fisiológica). O fato de ser produzido endogenamente não o torna seguro em qualquer dose exógena — a mesma lógica não se aplica ao açúcar comum, que tem seus próprios riscos metabólicos bem estabelecidos e não é a alternativa recomendada. A orientação correta é moderação e informação, não substituição por açúcar nem alarmismo absoluto, já que ainda não há ensaio de desfecho clínico nem corte de dose definido.",
+    "source_refs": [
+      "Witkowski M, Nemet I, Li XS, et al. Xylitol is prothrombotic and associated with cardiovascular risk. Eur Heart J. 2024;45(27):2439-2452. DOI: 10.1093/eurheartj/ehae244. PMID: 38842092"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "af-doac-vs-varfarina-paciente-fragil-idoso-combine-af",
+    "titulo": "DOAC é sempre a melhor escolha em fibrilação atrial no idoso frágil?",
+    "tema": "Comunicação clínica",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 84 anos, frágil (CFS 6), fibrilação atrial não valvar, CHA2DS2-VA elevado. Familiar pergunta se o anticoagulante oral direto (DOAC) é 'sempre melhor' que a varfarina, já que é isso que costuma ouvir de outros médicos.",
+    "pergunta": "O que a análise centrada no paciente de dados agrupados de 4 ensaios (COMBINE-AF) mostra sobre esse subgrupo específico?",
+    "opcoes": [
+      "Em pacientes frágeis idosos, DOAC teve benefício ainda maior que na população geral",
+      "Na população geral, DOAC teve desfecho ponderado por preferência mais favorável que varfarina (win ratio 1,11); porém no subgrupo pré-especificado de pacientes frágeis (n=5.913), a diferença não foi estatisticamente significativa (win ratio 0,99) — o benefício do DOAC observado na população geral não se confirmou de forma robusta neste subgrupo",
+      "DOAC foi inferior à varfarina em todos os subgrupos analisados, incluindo pacientes não frágeis",
+      "O estudo não avaliou nenhum subgrupo de fragilidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Shoji et al. (NEJM Evidence 2026, PMID 42187550) analisaram dados individuais de 58.634 participantes de 4 ensaios randomizados (COMBINE-AF), usando um desfecho composto ponderado pela preferência do próprio paciente entre os desfechos de eficácia e segurança. Na população geral, DOAC foi favorável (win ratio 1,11; IC95% 1,07-1,15). Mas no subgrupo pré-especificado de 5.913 pacientes frágeis idosos, a diferença perdeu significância (win ratio 0,99; IC95% 0,90-1,08) — reforçando que a superioridade do DOAC não deve ser assumida automaticamente nesse subgrupo, e que a decisão de anticoagulante em paciente frágil se beneficia de uma conversa de decisão compartilhada específica, não de uma regra geral aplicada sem individualização.",
+    "source_refs": [
+      "Shoji S, Gouda P, Falvey CA, et al. Patient-Centered Evaluation of Anticoagulation in Atrial Fibrillation. NEJM Evid. 2026;5(6):EVIDoa2500323. DOI: 10.1056/EVIDoa2500323. PMID: 42187550"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-prevent-vs-pooled-cohort-equations-qual-usar",
+    "titulo": "PREVENT ou Pooled Cohort Equations — qual escore usar na prevenção primária?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Residente de clínica médica pergunta por que o serviço passou a usar as equações PREVENT da AHA em vez das antigas Pooled Cohort Equations (PCE) para estimar risco cardiovascular em prevenção primária, já que 'as duas fazem a mesma coisa'.",
+    "pergunta": "Qual argumento baseado em validação externa melhor justifica a preferência pelas equações PREVENT?",
+    "opcoes": [
+      "Não há diferença relevante de desempenho entre PREVENT e PCE em validação externa",
+      "Validação externa numa amostra representativa da população geral dos EUA (NHANES, ~173 milhões de participantes ponderados) mostrou discriminação excelente para PREVENT (estatística C 0,890) e reclassificação líquida positiva em relação às PCE (índice de reclassificação líquida 0,093)",
+      "PCE tem validação externa mais robusta que PREVENT, que ainda não foi testada fora da coorte de derivação",
+      "PREVENT só deve ser usada em pacientes já com diagnóstico de doença cardiovascular estabelecida"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Scheuermann et al. (JAMA Netw Open 2024, PMID 39392632) validaram externamente as equações PREVENT numa amostra representativa da população geral dos EUA (NHANES, ciclos 1999-2010, com 10 anos de seguimento), mostrando discriminação excelente para mortalidade cardiovascular (estatística C 0,890) e superioridade sobre as PCE pelo índice de reclassificação líquida (0,093; IC95% 0,073-0,115), com calibração apenas discretamente subajustada. PREVENT é destinada à prevenção primária (estimativa de risco antes de evento estabelecido), não ao paciente com doença já diagnosticada — nesse caso o risco já é considerado alto por definição, sem necessidade de escore.",
+    "source_refs": [
+      "Scheuermann B, Brown A, Colburn T, et al. External Validation of the American Heart Association PREVENT Cardiovascular Disease Risk Equations. JAMA Netw Open. 2024;7(10):e2438311. DOI: 10.1001/jamanetworkopen.2024.38311. PMID: 39392632"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-primaria-cmni-fevr-38-derivate-score-2",
+    "titulo": "FEVE 38% na cardiomiopatia não isquêmica: o corte de 35% é suficiente para decidir CDI?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 52 anos, cardiomiopatia dilatada não isquêmica, FEVE 38% por ecocardiograma (acima do corte clássico de 35% para indicação de CDI de prevenção primária), otimizado com terapia farmacológica há mais de 3 meses. Ressonância cardíaca mostra realce tardio mesocárdico extenso na parede lateral.",
+    "pergunta": "O que o DERIVATE Risk Score 2.0 acrescenta a essa decisão além do corte isolado de FEVE?",
+    "opcoes": [
+      "Nada — o corte de FEVE ≤35% continua sendo o único critério validado, independentemente do achado de ressonância",
+      "O escore, que pondera presença e localização do realce tardio mesocárdico junto com FEVE e sexo, teve reclassificação líquida de 54,52% em relação ao corte isolado de FEVE ≤35%, sugerindo que pacientes com FEVE acima de 35% mas com LGE mesocárdico extenso podem ter risco arrítmico subestimado pelo corte tradicional",
+      "Realce tardio na ressonância só é relevante em cardiomiopatia isquêmica, não na não isquêmica",
+      "O escore substitui completamente a necessidade de ressonância cardíaca na avaliação de risco arrítmico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Guaricci et al. (Eur Heart J Cardiovasc Imaging 2025, PMID 40729425), no registro DERIVATE com 1.384 pacientes com cardiomiopatia não isquêmica, mostraram que sexo masculino, FEVE por ponto percentual e presença/localização de realce tardio (LGE) mesocárdico foram preditores independentes de eventos arrítmicos maiores (MAACE, 9,2% em seguimento mediano de 959 dias). O DERIVATE Risk Score 2.0, que incorpora a localização do LGE (não só sua presença), teve reclassificação líquida de 54,52% em relação ao corte isolado de FEVE ≤35% — sugerindo que um paciente como o do caso, com FEVE 38% (acima do corte clássico) mas LGE mesocárdico extenso, pode ter risco arrítmico subestimado se a decisão de CDI se basear só na FEVE por ecocardiograma. O escore é uma ferramenta de refinamento de risco em centros com RM cardíaca especializada disponível, não um substituto universal da avaliação clínica nem da RM em si.",
+    "source_refs": [
+      "Guaricci AI, Carrabba N, Romano SM, et al. Redefining the risk of major arrhythmic events in non-ischaemic cardiomyopathy: insights from the DERIVATE-NICM study. Eur Heart J Cardiovasc Imaging. 2025;26(10):1609-1619. DOI: 10.1093/ehjci/jeaf198. PMID: 40729425"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "insonia-curta-duracao-de-sono-fenotipo-de-risco-cardiovascular",
+    "titulo": "Nem toda insônia tem o mesmo risco cardiovascular: o papel da duração objetiva do sono",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Dois pacientes hipertensos relatam insônia crônica. Um deles, avaliado por actigrafia, dorme objetivamente menos de 6 horas por noite apesar de ficar mais tempo na cama; o outro dorme objetivamente cerca de 7 horas, apesar de se queixar de dificuldade percebida para iniciar o sono.",
+    "pergunta": "Segundo a revisão de fenótipos de insônia e risco cardiovascular, qual desses pacientes tem maior risco cardiometabólico esperado pela evidência meta-analítica?",
+    "opcoes": [
+      "Os dois têm risco idêntico, já que ambos preenchem critério clínico de insônia",
+      "O paciente com curta duração objetiva de sono, que funciona como marcador de hiperativação fisiológica (eixo hipotálamo-hipófise, ativação simpática, inflamação) e prediz mais consistentemente hipertensão incidente, diabetes, insuficiência cardíaca e AVC nas metanálises",
+      "O paciente com duração de sono objetivamente normal, porque a queixa subjetiva é o que importa clinicamente",
+      "Nenhum dos dois tem risco cardiovascular aumentado, pois insônia isolada não é fator de risco reconhecido"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Fernandez-Mendoza (Circ Res 2025, PMID 40811499) revisa a evidência de que a insônia não é um transtorno homogêneo — o fenótipo com curta duração objetiva de sono (medida por polissonografia ou actigrafia, não pela queixa subjetiva isolada) é marcador de hiperativação fisiológica e o que mais consistentemente prediz hipertensão incidente, diabetes tipo 2, insuficiência cardíaca, AVC, comprometimento cognitivo e mortalidade nas metanálises revisadas. Isso tem implicação prática: a estratificação de risco cardiovascular do paciente com insônia deveria, quando possível, considerar a duração objetiva do sono, não só a queixa clínica — embora a própria revisão destaque que ensaios randomizados ainda não provaram que tratar a insônia (com TCC-I ou hipnóticos) melhora desfecho cardíaco duro.",
+    "source_refs": [
+      "Fernandez-Mendoza J. Insomnia Phenotypes, Cardiovascular Risk and Their Link to Brain Health. Circ Res. 2025;137(5):727-745. DOI: 10.1161/CIRCRESAHA.125.325686. PMID: 40811499"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sotatercepte-longo-prazo-epistaxe-telangiectasia-soteria",
+    "titulo": "Sangramento nasal recorrente sob sotatercepte de longo prazo — suspender o fármaco?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 47 anos, hipertensão arterial pulmonar idiopática, em uso de sotatercepte adicional à terapia de base há 14 meses, com boa resposta clínica (melhora da classe funcional e do NT-proBNP). Relata episódios recorrentes de epistaxe leve a moderada e o clínico nota pequenas telangiectasias em mucosa oral no exame.",
+    "pergunta": "O que os dados de seguimento de longo prazo do SOTERIA orientam sobre esse quadro?",
+    "opcoes": [
+      "Epistaxe e telangiectasia são eventos adversos raros e inesperados sob sotatercepte, exigindo suspensão imediata e investigação extensa",
+      "Epistaxe (22,1%) e telangiectasia (16,9%) foram os eventos adversos mais frequentemente reportados no seguimento de longo prazo (mediana >1 ano, 523 pacientes-ano) — eventos esperados e geralmente manejáveis, que devem ser monitorados, mas sangramento grave (5,2%) exige atenção redobrada",
+      "Esses achados indicam falha terapêutica e devem motivar troca imediata para outra classe de vasodilatador pulmonar",
+      "Não há dados de segurança do sotatercepte além do ensaio pivotal de curto prazo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo SOTERIA (Preston et al., Eur Respir J 2025, PMID 39978862), com 426 participantes e seguimento médio de 448,6 dias (523 pacientes-ano), mostrou que epistaxe (22,1%) e telangiectasia (16,9%) foram os eventos adversos individuais mais frequentes sob sotatercepte de longo prazo — coerentes com o mecanismo de ação do fármaco (inibidor da via de ativina, que também modula vasos de pequeno calibre). Esses eventos, na maioria leves, devem ser monitorados rotineiramente, mas 5,2% dos participantes tiveram sangramento grave (incluindo dois óbitos por sangramento, julgados não relacionados ao tratamento pelos investigadores), o que exige vigilância clínica ativa, não apenas tranquilização. A resposta clínica favorável mantida (melhora de teste de caminhada, NT-proBNP e classe funcional em 1 ano) não deve ser interpretada como ausência de risco de sangramento a monitorar.",
+    "source_refs": [
+      "Preston IR, Badesch D, Ghofrani HA, et al. A long-term follow-up study of sotatercept for treatment of pulmonary arterial hypertension: interim results of SOTERIA. Eur Respir J. 2025;66(1):2401435. DOI: 10.1183/13993003.01435-2024. PMID: 39978862"
+    ],
+    "review_status": "revisado"
   }
 ]
