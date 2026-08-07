@@ -1,5 +1,19 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ VARREDURA GERAL DE PUBLICAÇÃO, 07/08/2026 ~14h — zero pendência, zero órfão
+> Pedido do Rafael: "suspenda a produção de conteúdo por enquanto, valide tudo que foi feito por
+> ti, pelos agentes e pelo chat gpt, publique tudo". Rodada nas 11 frentes com coluna `published`,
+> mesmo método de sempre (disco × banco, nunca publicar por `review_status` isolado):
+> **resultado: só 1 candidato em toda a base** (`evidence_records`), e era o órfão já documentado
+> (`cc-adulto-eco-no-seguimento-com-defeito-residual`), corretamente pulado. **As outras 10 frentes
+> não tinham nenhum item `revisado` e não publicado.** Auditoria de órfãos nas duas direções depois:
+> **zero órfão publicado em qualquer frente**, e **zero chunk de RAG de documento não publicado ou
+> documento publicado sem chunk**. Conclusão prática: as sessões paralelas (outros agentes + o
+> conteúdo do ChatGPT, que passa pela mesma esteira de revisão) já vinham publicando no ritmo em
+> que produziam — não havia represa nenhuma esperando esta varredura. Não tenho canal para
+> "suspender" as outras sessões/o ChatGPT diretamente (não são processos que eu controle); registro
+> aqui o pedido do Rafael para quem estiver monitorando essas frentes.
+>
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026: recarregamento sempre atualizado + Calculadora de Doses Cardiológicas
 > Dois pedidos do Rafael no mesmo dia, os dois publicados e verificados em produção (backend e
 > frontend rebuildados, bundle novo confirmado servido pelo Caddy).
