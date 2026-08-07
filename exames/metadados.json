@@ -6677,5 +6677,168 @@
       "pulso irregular",
       "apple heart study"
     ]
+  },
+  {
+    "slug": "inr-monitorizacao-do-antagonista-de-vitamina-k",
+    "name": "INR (Razão Normalizada Internacional) na anticoagulação com antagonista de vitamina K",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "O International Normalized Ratio (INR) é a padronização do tempo de protrombina, criada para permitir comparação entre laboratórios e reagentes diferentes. Na prática cardiológica, é o exame que guia o ajuste de dose da varfarina e dos demais antagonistas de vitamina K (AVK) — não existe dose fixa desses fármacos, e o INR é o único jeito de saber se o paciente está anticoagulado dentro da faixa pretendida.",
+    "reference_range": "Faixa terapêutica-alvo de 2,0 a 3,0 para a maioria das indicações cardiológicas (fibrilação atrial, tromboembolismo venoso, prótese valvar biológica) — recomendação forte (Grade 1B) da diretriz de manejo de anticoagulantes do American College of Chest Physicians (9ª edição, 2012). Prótese valvar mecânica em posição mitral ou de maior trombogenicidade costuma exigir alvo mais alto (2,5 a 3,5), fora do escopo desta diretriz específica — conferir a indicação exata antes de generalizar a faixa 2,0-3,0.",
+    "indications": "Todo paciente em uso de varfarina ou outro AVK, para ajuste inicial de dose e monitorização de manutenção. A diretriz recomenda não usar teste farmacogenético de rotina para guiar a dose (Grade 1B) — o INR seriado continua sendo o método de ajuste, não o genótipo.",
+    "interpretation": "INR abaixo de 2,0 indica anticoagulação insuficiente, com risco tromboembólico mantido; acima de 3,0, risco de sangramento aumentado sem ganho adicional de proteção. O tempo dentro da faixa terapêutica (TTR, do inglês time in therapeutic range) ao longo do seguimento é o parâmetro que melhor se relaciona com desfecho clínico — um único valor pontual dentro da faixa não garante controle adequado se os valores oscilam entre as consultas.",
+    "limitations": "A diretriz nota que a maior parte das perguntas práticas de manejo (dose de ataque, sobreposição na introdução, frequência de monitorização, suplementação de vitamina K, autoajuste pelo paciente) tem evidência de qualidade baixa — das 23 recomendações da diretriz, apenas duas são fortes (alvo de INR 2,0-3,0 e não usar farmacogenética de rotina); as demais são recomendações fracas. O INR é sensível a interação medicamentosa, dieta rica em vitamina K e função hepática, e cada mudança nesses fatores exige reavaliação, não só a dose do AVK isoladamente.",
+    "source_refs": [
+      "Holbrook A, Schulman S, Witt DM, Vandvik PO, Fish J, Kovacs MJ, et al. Evidence-based management of anticoagulant therapy: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e152S-e184S. DOI: 10.1378/chest.11-2295. PMID: 22315259."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "INR",
+      "varfarina",
+      "antagonista de vitamina K",
+      "anticoagulação",
+      "monitorização"
+    ]
+  },
+  {
+    "slug": "digoxinemia-nivel-serico-de-digoxina",
+    "name": "Digoxinemia (nível sérico de digoxina)",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Concentração sérica de digoxina (SDC, do inglês serum digoxin concentration), coletada idealmente pelo menos 6 a 8 horas após a última dose (a fase de distribuição tecidual precisa terminar antes da coleta, para o nível sérico refletir o equilíbrio com o tecido, e não um pico de absorção ainda em trânsito).",
+    "reference_range": "Faixa historicamente citada como \"terapêutica\" é 0,8 a 2,0 ng/mL, mas a análise post-hoc do ensaio DIG (Digitalis Investigation Group) mostrou que essa faixa é ampla demais para insuficiência cardíaca: a faixa de 0,5 a 0,8 ng/mL foi a única associada a redução de mortalidade (6,3 pontos percentuais a menos que placebo), enquanto 0,9 a 1,1 ng/mL foi neutra e ≥1,2 ng/mL associou-se a 11,8 pontos percentuais a mais de mortalidade que o placebo.",
+    "indications": "Suspeita clínica de intoxicação digitálica (náusea, distúrbio visual, arritmia), avaliação de adesão ou dúvida sobre resposta terapêutica insuficiente, e ajuste de dose em insuficiência renal (a digoxina tem eliminação predominantemente renal e meia-vida prolongada no idoso e no renal crônico).",
+    "interpretation": "Em homens com insuficiência cardíaca e fração de ejeção ≤45% na coorte do DIG trial, a mortalidade por qualquer causa cresceu de forma escalonada com a concentração sérica em 1 mês: 29,9% na faixa 0,5-0,8 ng/mL, 38,8% na faixa 0,9-1,1 ng/mL e 48,0% na faixa ≥1,2 ng/mL (p=0,006 para tendência), com razão de risco ajustada de 0,80 (IC95% 0,68-0,94) na faixa mais baixa e 1,16 (IC95% 0,96-1,39) na faixa mais alta, tomando o placebo como referência (RR=1,00). A leitura prática: mais digoxina no sangue não significa mais benefício — o alvo terapêutico é mais baixo do que a faixa de referência tradicional do laboratório sugere.",
+    "limitations": "É uma análise post-hoc de ensaio randomizado, não um braço randomizado por faixa de concentração — a associação observada não prova causalidade direta da concentração em si, e pode refletir características dos pacientes que atingiram cada faixa (função renal, peso, interação medicamentosa). A dosagem sérica reflete o momento da coleta, não a exposição cumulativa; amostra colhida antes das 6-8 horas pós-dose superestima o nível de equilíbrio.",
+    "source_refs": [
+      "Rathore SS, Curtis JP, Wang Y, Bristow MR, Krumholz HM. Association of serum digoxin concentration and outcomes in patients with heart failure. JAMA. 2003;289(7):871-878. DOI: 10.1001/jama.289.7.871. PMID: 12588271."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "digoxina",
+      "digoxinemia",
+      "insuficiência cardíaca",
+      "DIG trial",
+      "monitorização de fármaco"
+    ]
+  },
+  {
+    "slug": "atividade-anti-fator-xa-monitorizacao-de-heparina",
+    "name": "Atividade anti-fator Xa (monitorização de heparina não fracionada e HBPM)",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Mede a capacidade do plasma do paciente de inibir o fator Xa ativado adicionado ao ensaio, na presença de antitrombina — quantifica o efeito anticoagulante da heparina (não fracionada ou de baixo peso molecular, HBPM) e dos demais compostos que atuam por essa via (fondaparinux), de forma mais direta que o TTPa para a HBPM.",
+    "reference_range": "Não há um único corte universal: a faixa-alvo depende do fármaco, da dose (profilática ou terapêutica) e do intervalo entre a última dose e a coleta. A revisão de farmacologia dos anticoagulantes parenterais do American College of Chest Physicians descreve que a HBPM tem farmacocinética mais previsível que a heparina não fracionada justamente por se ligar menos a células e proteínas plasmáticas — o que permite, na maioria das indicações, dose fixa por peso sem monitorização laboratorial de rotina.",
+    "indications": "A própria diretriz que fundamenta este exame nota que a HBPM e o fondaparinux podem ser administrados em dose fixa, por via subcutânea, sem monitorização da coagulação, na maioria dos pacientes. A dosagem de anti-Xa fica reservada a cenários em que a farmacocinética previsível deixa de valer: obesidade extrema, insuficiência renal significativa, gestação (volume de distribuição e clearance renal mudam ao longo da gravidez) e uso pediátrico.",
+    "interpretation": "Nível abaixo da faixa-alvo sugere subdose (risco trombótico mantido); acima, sugere excesso (risco hemorrágico), sempre interpretado em conjunto com o horário da coleta em relação à última dose — a farmacocinética da HBPM tem meia-vida mais longa que a heparina não fracionada, então o momento ideal de coleta (geralmente pico, 4 horas após dose subcutânea) precisa ser respeitado para o resultado ser interpretável.",
+    "limitations": "A heparina não fracionada tem propriedades farmacocinéticas e farmacodinâmicas imprevisíveis por se ligar a células e proteínas plasmáticas além da antitrombina — por isso costuma ser monitorizada por TTPa na prática, com anti-Xa reservado a situações específicas (ex.: síndrome antifosfolípide, que pode alterar o TTPa basal de forma espúria). O ensaio de anti-Xa também não é uniformemente calibrado entre laboratórios para todos os tipos de heparina, e o resultado deve ser lido com a faixa de referência do próprio laboratório que processou a amostra, não um valor genérico.",
+    "source_refs": [
+      "Garcia DA, Baglin TP, Weitz JI, Samama MM. Parenteral anticoagulants: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e24S-e43S. DOI: 10.1378/chest.11-2291. PMID: 22315264."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "anti-fator Xa",
+      "heparina",
+      "HBPM",
+      "fondaparinux",
+      "monitorização de anticoagulante"
+    ]
+  },
+  {
+    "slug": "interrogacao-de-dispositivo-cardiaco-eletronico-implantavel",
+    "name": "Interrogação de dispositivo cardíaco eletrônico implantável (marca-passo/CDI/TRC)",
+    "category": "metodo_grafico",
+    "theme": "Dispositivos",
+    "what_it_measures": "Leitura, por telemetria (presencial com o programador do fabricante, ou remota), dos parâmetros técnicos e clínicos armazenados no dispositivo: status e voltagem da bateria/longevidade estimada, impedância de cada eletrodo, limiar de captura (estimulação) e amplitude de sensibilidade por câmara, contadores de eventos e episódios de arritmia armazenados (incluindo os eletrogramas intracavitários de cada episódio detectado), e percentual de estimulação em cada câmara.",
+    "reference_range": "Não se aplica um valor único — cada parâmetro tem faixa esperada própria por fabricante e modelo, e o achado relevante costuma ser a variação em relação à interrogação anterior do mesmo paciente (ex.: impedância que sobe ou cai abruptamente sugere fratura ou curto-circuito do eletrodo) mais do que um corte absoluto isolado.",
+    "indications": "Seguimento periódico de todo paciente com marca-passo, cardiodesfibrilador implantável (CDI) ou dispositivo de ressincronização cardíaca (TRC), com primeira avaliação já no período peri-implante e depois em intervalos definidos por consenso de sociedade — o documento de referência distingue explicitamente o seguimento presencial tradicional do seguimento remoto (monitorização por telemetria doméstica), descrevendo as duas modalidades como complementares, não substitutas uma da outra em todos os cenários.",
+    "interpretation": "A leitura combina três eixos: função do gerador (bateria/longevidade), integridade do sistema de eletrodos (impedância, limiar, sensibilidade) e os eventos clínicos armazenados (arritmias detectadas, terapias de choque ou estimulação antitaquicardia entregues pelo CDI, percentual de estimulação ventricular que pode ser indesejável em alguns contextos). Alteração aguda de impedância ou de limiar de captura, mesmo assintomática, é achado que pode preceder disfunção clínica do sistema e costuma anteceder o desfecho clínico percebido pelo paciente.",
+    "limitations": "A interrogação por telemetria não substitui a avaliação clínica do paciente nem a radiografia de tórax quando há suspeita de deslocamento mecânico do eletrodo — os parâmetros elétricos podem estar normais mesmo com o eletrodo posicionado de forma subótima, se ainda houver contato elétrico adequado. Consensos de sociedade (Heart Rhythm Society/EHRA, com atualização em 2015 dedicada especificamente à interrogação e monitorização remota) definem a frequência recomendada por tipo de dispositivo e cenário clínico, mas essa periodicidade exata depende do documento consultado e não está resumida de forma numérica única aqui — conferir o consenso vigente para o intervalo aplicável ao dispositivo específico. VERIFICAÇÃO HUMANA NECESSÁRIA para os intervalos numéricos exatos de seguimento por tipo de dispositivo, não confirmados em detalhe nesta revisão.",
+    "source_refs": [
+      "Wilkoff BL, Auricchio A, Brugada J, Cowie M, Ellenbogen KA, Gillis AM, et al. HRS/EHRA expert consensus on the monitoring of cardiovascular implantable electronic devices (CIEDs): description of techniques, indications, personnel, frequency and ethical considerations. Heart Rhythm. 2008;5(6):907-925. DOI: 10.1016/j.hrthm.2008.04.013. PMID: 18551743.",
+      "Slotwiner D, Varma N, Akar JG, Annas G, Beardsall M, Fogel RI, et al. HRS Expert Consensus Statement on remote interrogation and monitoring for cardiovascular implantable electronic devices. Heart Rhythm. 2015;12(7):e69-e100. DOI: 10.1016/j.hrthm.2015.05.008. PMID: 25981148."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "marca-passo",
+      "cardiodesfibrilador implantável",
+      "CDI",
+      "ressincronização cardíaca",
+      "monitorização remota",
+      "telemetria"
+    ]
+  },
+  {
+    "slug": "radiografia-de-torax-apos-implante-de-marca-passo",
+    "name": "Radiografia de tórax após implante de marca-passo/CDI",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Imagem torácica (incidências posteroanterior e/ou lateral) obtida rotineiramente após o implante de marca-passo definitivo, para avaliar o trajeto e posição do(s) eletrodo(s) e excluir pneumotórax relacionado à punção venosa (subclávia, na maioria dos implantes).",
+    "reference_range": "Não se aplica valor numérico — a leitura é qualitativa: posição radiográfica adequada do eletrodo ventricular (tipicamente ápice ou septo de ventrículo direito) e/ou atrial, ausência de pneumotórax, e contorno do eletrodo sem alça excessiva que sugira folga ou risco de deslocamento.",
+    "indications": "Historicamente solicitada de rotina após todo implante de marca-passo permanente. Um estudo retrospectivo de 125 pacientes consecutivos avaliou justamente essa prática rotineira e seu valor clínico real.",
+    "interpretation": "Na coorte estudada, 86% das radiografias pós-procedimento mostraram posição de eletrodo radiograficamente adequada, e 14% foram consideradas subótimas — mas nenhum dos pacientes com radiografia \"anormal\" teve complicação subsequente do marca-passo nem radiografia repetida por esse motivo. Pneumotórax iatrogênico ocorreu em 1 paciente (incidência de 0,8%), e a radiografia confirmou o diagnóstico clínico e permitiu dimensionar a conduta.",
+    "limitations": "O próprio estudo conclui que a radiografia de tórax de rotina após implante de marca-passo não é necessária em casos sem intercorrência e com parâmetros de estimulação adequados na interrogação do dispositivo — de 16 pacientes (13%) que fizeram radiografia de repetição por algum motivo clínico, só 3 (2%) tinham alteração de posicionamento como indicação primária, e todos os 3 tinham radiografia inicial e posterior satisfatórias, mas precisaram de reposicionamento por outros achados. Ou seja: a radiografia rotineira detecta achado incidental com frequência, mas raramente muda conduta isoladamente — a interrogação elétrica do dispositivo é o que efetivamente orienta a necessidade de reintervenção.",
+    "source_refs": [
+      "Edwards NC, Varma M, Pitcher DW. Routine chest radiography after permanent pacemaker implantation: is it necessary? J Postgrad Med. 2005;51(2):92-96; discussion 96-97. PMID: 16006698."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "radiografia de tórax",
+      "marca-passo",
+      "eletrodo",
+      "pneumotórax",
+      "pós-implante"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-fetal",
+    "name": "Ecocardiograma fetal",
+    "category": "imagem",
+    "theme": "Gravidez",
+    "what_it_measures": "Avaliação ecocardiográfica detalhada da anatomia e função cardíaca do feto, incluindo situs, conexões venoatriais, atrioventriculares e ventrículo-arteriais, integridade septal, função ventricular e ritmo cardíaco fetal — realizada tipicamente entre 18 e 22-24 semanas de gestação, quando a anatomia cardíaca fetal já está suficientemente desenvolvida para avaliação detalhada.",
+    "reference_range": "Não se aplica valor numérico único — a interpretação é estrutural e funcional, comparando a anatomia encontrada com o padrão de normalidade esperado para a idade gestacional.",
+    "indications": "Declaração científica da American Heart Association situa o ecocardiograma fetal como o principal método de diagnóstico pré-natal de cardiopatia congênita, indicado por fator de risco materno (cardiopatia congênita materna, diabetes pré-gestacional, exposição a teratógeno, doença autoimune com risco de bloqueio atrioventricular fetal, uso de tecnologia de reprodução assistida) ou fetal (achado suspeito na ultrassonografia obstétrica de rotina, translucência nucal aumentada, arritmia detectada na ausculta ou no exame obstétrico, gestação múltipla monocoriônica).",
+    "interpretation": "Permite diagnóstico pré-natal da maioria das cardiopatias estruturais congênitas maiores, com impacto direto no planejamento do parto — via, local (centro com suporte de cardiologia pediátrica/cirurgia cardíaca neonatal disponível) e momento —, além de possibilitar aconselhamento aos pais e, em casos selecionados, intervenção fetal. Também identifica arritmias fetais (taquiarritmia sustentada, bloqueio atrioventricular completo) que podem exigir tratamento transplacentário ainda durante a gestação.",
+    "limitations": "A sensibilidade depende da idade gestacional, do índice de massa corporal materno, da posição fetal no momento do exame e da experiência do examinador — lesões que evoluem ao longo da gestação (ex.: algumas formas de estenose valvar progressiva, coarctação de aorta) podem não estar aparentes num exame único e podem exigir reavaliação em gestação mais avançada. A declaração da AHA também trata do manejo pós-diagnóstico (aconselhamento multidisciplinar, planejamento de parto e eventual terapia fetal), que está fora do escopo deste exame isoladamente.",
+    "source_refs": [
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, Copel JA, Sklansky MS, Abuhamad A, et al. Diagnosis and treatment of fetal cardiac disease: a scientific statement from the American Heart Association. Circulation. 2014;129(21):2183-2242. DOI: 10.1161/01.cir.0000437597.44550.5d. PMID: 24763516."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma fetal",
+      "cardiopatia congênita",
+      "diagnóstico pré-natal",
+      "gestação",
+      "arritmia fetal"
+    ]
+  },
+  {
+    "slug": "peptideo-natriuretico-tipo-b-bnp-na-gestante-com-cardiopatia",
+    "name": "Peptídeo natriurético tipo B (BNP) na gestante com cardiopatia estrutural",
+    "category": "laboratorial",
+    "theme": "Gravidez",
+    "what_it_measures": "Dosagem sérica do peptídeo natriurético tipo B (BNP), liberado pelos miócitos ventriculares em resposta ao estresse de parede — usado, na gestante com cardiopatia estrutural conhecida, como marcador seriado da capacidade do coração de se adaptar à sobrecarga hemodinâmica progressiva da gravidez.",
+    "reference_range": "Em gestantes saudáveis sem cardiopatia, o estudo de referência encontrou BNP de pico mediano de 35 pg/mL (intervalo interquartil 21-43) ao longo da gestação. Em gestantes com cardiopatia estrutural, o BNP de pico mediano foi mais alto, 79 pg/mL (intervalo interquartil 51-152), p<0,001 na comparação entre os grupos.",
+    "indications": "Gestante com cardiopatia estrutural conhecida (a coorte do estudo incluía principalmente lesões congênitas e valvares), para acompanhamento seriado ao longo do primeiro e terceiro trimestres e após o parto (mais de 6 semanas pós-parto), e na suspeita clínica de evento cardíaco durante a gestação.",
+    "interpretation": "Um valor de BNP acima de 100 pg/mL esteve presente em 100% das gestantes que tiveram evento cardíaco materno adverso durante a gestação (n=8) no estudo de referência, e nenhuma gestante com BNP ≤100 pg/mL teve evento — valor preditivo negativo de 100% para identificar eventos durante a gestação nessa coorte. Dezesseis gestantes tiveram BNP elevado sem evento clínico associado, ou seja, BNP elevado isolado não define evento — a leitura é a de um exame com alto valor preditivo negativo (útil para descartar), não um critério diagnóstico isolado de descompensação.",
+    "limitations": "Coorte de tamanho moderado (66 gestantes com cardiopatia, 12 controles saudáveis) e de um único centro especializado em cardiopatia e gestação — o corte de 100 pg/mL não deve ser generalizado sem validação em outras populações e tipos de cardiopatia sem confirmação adicional. Disfunção ventricular subaórtica esteve associada a níveis mais altos de BNP (p=0,03) no mesmo estudo, então a interpretação do valor absoluto precisa considerar a lesão de base, não um corte único para toda cardiopatia estrutural.",
+    "source_refs": [
+      "Tanous D, Siu SC, Mason J, Greutmann M, Wald RM, Parker JD, et al. B-type natriuretic peptide in pregnant women with heart disease. J Am Coll Cardiol. 2010;56(15):1247-1253. DOI: 10.1016/j.jacc.2010.02.076. PMID: 20883932."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "BNP",
+      "peptídeo natriurético",
+      "gestação",
+      "cardiopatia estrutural",
+      "biomarcador"
+    ]
   }
 ]
