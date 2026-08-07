@@ -7236,5 +7236,121 @@
       "hipertrigliceridemia",
       "risco residual"
     ]
+  },
+  {
+    "slug": "biopsia-endomiocardica-na-miocardite-por-inibidor-de-checkpoint-imunologico",
+    "name": "Biópsia endomiocárdica na miocardite por inibidor de checkpoint imunológico",
+    "category": "laboratorial",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Análise histopatológica de fragmento de miocárdio obtido por cateter de biótomo, à procura do infiltrado inflamatório linfocítico (predominantemente células T CD8+) característico da miocardite associada a inibidor de checkpoint imunológico (ICI) — permanece o padrão-ouro para o diagnóstico definitivo dessa complicação, distinguindo-a de outras causas de elevação de troponina no paciente em imunoterapia.",
+    "reference_range": "Não se aplica um valor de referência numérico: o resultado é qualitativo (presença/ausência e grau de infiltrado inflamatório). Em série retrospectiva de 28 pacientes submetidos a biópsia por suspeita de miocardite por ICI, 18 (64%) tiveram achado positivo para miocardite/inflamação miocárdica.",
+    "indications": "Suspeita de miocardite por ICI com quadro clínico e/ou biomarcadores (troponina, muitas vezes muito elevada) que não permitem excluir a complicação com segurança apenas por ressonância cardíaca — sobretudo quando o resultado vai mudar a conduta (manter ou suspender definitivamente a imunoterapia, indicar ou não imunossupressão) ou quando a ressonância é normal/inconclusiva apesar de suspeita clínica alta, cenário em que a sensibilidade da RM é limitada.",
+    "interpretation": "Estudo de 2021 do MD Anderson Cancer Center propôs um sistema de graduação histopatológica (Grau 0 a 2) baseado no grau do infiltrado inflamatório em biópsias de pacientes com suspeita de miocardite por ICI. Dos 18 pacientes com biópsia positiva, houve 4 óbitos no total (2 em Grau 2, 2 em Grau 1), mas apenas 1 foi atribuído à miocardite; pacientes com inflamação Grau 2 tiveram a maior troponina T mediana (2.063 pg/mL) e, ainda assim, nenhum óbito atribuído à miocardite. Quatro pacientes com inflamação Grau 1 mantiveram o ICI sem qualquer imunomodulação e permaneceram vivos, sem evento cardiovascular adverso no seguimento — evidência de que a graduação histopatológica identifica um subgrupo de inflamação de baixo grau que pode, em casos selecionados, não exigir suspensão definitiva da imunoterapia nem imunossupressão.",
+    "limitations": "Procedimento invasivo, com risco (ainda que baixo) de perfuração cardíaca e outras complicações do acesso vascular; a amostra é pontual e pode não captar acometimento miocárdico em mosaico (erro de amostragem, mesma limitação já reconhecida na miocardite viral clássica); exige equipe e patologista com experiência na interpretação — não há ainda critério histopatológico único e universalmente validado para miocardite por ICI, e o sistema de graduação citado vem de série retrospectiva unicêntrica, não de estudo prospectivo multicêntrico.",
+    "source_refs": [
+      "Palaskas NL, Segura A, Lelenwa L, Siddiqui BA, Subudhi SK, Lopez-Mattei J, Durand JB, Deswal A, Zhao B, Maximilian Buja L, Iliescu C. Immune checkpoint inhibitor myocarditis: elucidating the spectrum of disease through endomyocardial biopsy. Eur J Heart Fail. 2021;23(10):1725-1735. DOI: 10.1002/ejhf.2265. PMID: 34114291"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "biópsia endomiocárdica",
+      "miocardite",
+      "inibidor de checkpoint imunológico",
+      "cardio-oncologia",
+      "cardiotoxicidade"
+    ]
+  },
+  {
+    "slug": "angiotomografia-coronariana-e-escore-de-calcio-no-rastreio-de-coronariopatia-induzida-por-radiacao-toracica",
+    "name": "Angiotomografia coronariana e escore de cálcio no rastreio de coronariopatia induzida por radiação torácica",
+    "category": "imagem",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Presença e extensão de calcificação coronariana (escore de cálcio, método de Agatston) e, quando indicada a angiotomografia com contraste, estenose luminal nas artérias coronárias de pacientes que receberam radioterapia torácica (mama, linfoma de Hodgkin, pulmão, esôfago) — a radiação acelera a aterosclerose coronariana por lesão endotelial direta, tipicamente com padrão ostial e proximal, distinto da doença aterosclerótica espontânea.",
+    "reference_range": "Não há um corte único: qualquer calcificação coronariana detectada em paciente irradiado é considerada marcador de doença arterial estabelecida e eleva o risco cardiovascular estimado, mesmo em CT não sincronizada (não-gated) de estadiamento oncológico. Em coorte citada pelo consenso do ICOS, a presença de calcificação coronariana ao exame de estadiamento conferiu risco 7 vezes maior de evento cardíaco adverso maior (HR ajustado 7,00; IC95% 3,20-15,31), com tempo mediano até o primeiro evento de 18,5 meses.",
+    "indications": "Revisão de TC de tórax já disponível (mesmo não sincronizada, feita para estadiamento oncológico) à procura de calcificação coronariana e aórtica antes do início da radioterapia, para estratificação de risco cardiovascular basal; e, no seguimento após radioterapia torácica sem aterosclerose documentada em avaliações prévias, repetir o rastreio por escore de cálcio, angiotomografia coronariana ou teste funcional de isquemia a intervalos de cerca de 5 anos, conforme o risco cardiovascular global do paciente.",
+    "interpretation": "O consenso multidisciplinar de 2021 da International Cardio-Oncology Society recomenda revisar toda TC de tórax disponível antes da radioterapia à procura de calcificações coronarianas e aórticas (Recomendação A.2) e, no paciente já irradiado sem aterosclerose documentada, prosseguir com rastreio periódico por escore de cálcio, angiotomografia coronariana ou teste funcional a cada 5 anos aproximadamente (Recomendação C.3). A ausência de calcificação coronariana em TC não sincronizada não exclui doença coronariana com segurança — a sensibilidade dessa técnica para calcificação é menor que a do protocolo dedicado de escore de cálcio.",
+    "limitations": "TC de estadiamento oncológico não sincronizada com o ECG tem sensibilidade reduzida para detectar e quantificar calcificação coronariana em comparação ao protocolo dedicado (gated); a doença coronariana actínica frequentemente acomete óstios e segmentos proximais de forma diferente da aterosclerose espontânea, podendo exigir maior suspeição mesmo com escore de cálcio limítrofe; exposição a radiação e contraste iodado (na angiotomografia) devem ser ponderados, sobretudo em paciente já exposto a radioterapia prévia.",
+    "source_refs": [
+      "Mitchell JD, Cehic DA, Morgia M, Bergom C, Toohey J, Guerrero PA, Ferencik M, Kikuchi R, Carver JR, Zaha VG, Alvarez-Cardona JA, Szmit S, Daniele AJ, Lopez-Mattei J, Zhang L, Herrmann J, Nohria A, Lenihan DJ, Dent SF. Cardiovascular Manifestations From Therapeutic Radiation: A Multidisciplinary Expert Consensus Statement From the International Cardio-Oncology Society. JACC CardioOncol. 2021;3(3):360-380. DOI: 10.1016/j.jaccao.2021.06.003. PMCID: PMC8463721. PMID: 34604797"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "angiotomografia coronariana",
+      "escore de cálcio coronariano",
+      "radioterapia",
+      "cardio-oncologia",
+      "doença coronariana actínica"
+    ]
+  },
+  {
+    "slug": "teste-cardiopulmonar-de-exercicio-na-hipertensao-arterial-pulmonar",
+    "name": "Teste cardiopulmonar de exercício (ergoespirometria) na hipertensão arterial pulmonar",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Consumo de oxigênio (VO₂), limiar anaeróbico, pulso de O₂ e eficiência ventilatória (relação VE/VCO₂) durante exercício incremental em cicloergômetro — caracteriza o padrão de limitação ao exercício por vasculopatia pulmonar, distinto da limitação cardíaca ou ventilatória de outras causas.",
+    "reference_range": "Padrão característico descrito por Sun et al. em 53 pacientes com hipertensão pulmonar primária (hoje idiopática) submetidos a cateterismo direito e ergoespirometria: redução consistente do VO₂ de pico, do limiar anaeróbico, do pulso de O₂ de pico, da taxa de incremento do VO₂ e da eficiência ventilatória, formando um padrão reprodutível e característico da doença.",
+    "indications": "Caracterização da limitação funcional em paciente com hipertensão arterial pulmonar já diagnosticada, quando a dispneia de esforço não se explica claramente pelos parâmetros hemodinâmicos de repouso; acompanhamento da resposta ao tratamento; e, em investigação diagnóstica mais ampla, apoio à identificação de hipertensão pulmonar induzida pelo esforço em portador assintomático de mutação predisponente (uso descrito em protocolo de rastreio de portadores de mutação BMPR2).",
+    "interpretation": "O estudo de Sun et al. (Circulation, 2001) mostrou que o teste cardiopulmonar de exercício pode ser realizado com segurança até a tolerância máxima em pacientes com hipertensão pulmonar primária, sem eventos adversos na coorte estudada, e que a classe funcional da NYHA se correlacionou bem com os parâmetros de função aeróbica e eficiência ventilatória do teste — correlação mais consistente do que a observada com a hemodinâmica pulmonar de repouso isoladamente. Isso reforça o teste como ferramenta complementar à hemodinâmica de repouso, não substituta dela.",
+    "limitations": "Exige capacidade do paciente de pedalar até a exaustão voluntária, o que pode ser limitado por comorbidade musculoesquelética ou descondicionamento não relacionado à doença pulmonar vascular; não substitui o cateterismo cardíaco direito, que continua sendo o exame de referência para o diagnóstico hemodinâmico de hipertensão pulmonar; interpretação exige treinamento específico em fisiologia do exercício.",
+    "source_refs": [
+      "Sun XG, Hansen JE, Oudiz RJ, Wasserman K. Exercise pathophysiology in patients with primary pulmonary hypertension. Circulation. 2001;104(4):429-435. DOI: 10.1161/hc2901.093198. PMID: 11468205"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste cardiopulmonar de exercício",
+      "ergoespirometria",
+      "hipertensão arterial pulmonar",
+      "capacidade funcional",
+      "vo2 pico"
+    ]
+  },
+  {
+    "slug": "capacidade-de-difusao-pulmonar-do-monoxido-de-carbono-dlco-na-hipertensao-arterial-pulmonar-idiopatica",
+    "name": "Capacidade de difusão pulmonar do monóxido de carbono (DLCO) na hipertensão arterial pulmonar idiopática",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Eficiência da troca gasosa através da membrana alvéolo-capilar, medida pela captação de monóxido de carbono inalado em concentração conhecida — na hipertensão arterial pulmonar idiopática (HAPI), uma DLCO desproporcionalmente reduzida em relação aos volumes pulmonares e à espirometria sinaliza um subgrupo de pior prognóstico e levanta a suspeita de acometimento venoso/capilar associado (doença veno-oclusiva pulmonar) ou de componente parenquimatoso não evidente na espirometria.",
+    "reference_range": "Corte de gravidade validado por Trip et al. (Eur Respir J, 2013) em coorte retrospectiva de 166 pacientes com HAPI: DLCO < 45% do previsto define o subgrupo de risco (HAPI<45%), comparado ao subgrupo com DLCO ≥ 45% do previsto (HAPI≥45%).",
+    "indications": "Compõe a investigação diagnóstica inicial de toda hipertensão pulmonar, ajudando a diferenciar HAP idiopática de hipertensão pulmonar associada a doença pulmonar (grupo 3) — nesse último grupo a DLCO tende a acompanhar a redução de volumes pulmonares e a obstrução ao fluxo aéreo; estratificação prognóstica na HAPI já estabelecida; parte do protocolo de rastreio anual em portador assintomático de mutação BMPR2 (estudo DELPHI-2).",
+    "interpretation": "No estudo de Trip et al., os pacientes com HAPI e DLCO < 45% do previsto eram mais idosos, mais frequentemente do sexo masculino, tinham história mais frequente de doença coronariana e maior exposição tabágica; apresentavam pior desempenho ao exercício apesar de perfil hemodinâmico invasivo semelhante ao do grupo com DLCO preservada, e sobrevida pior — associada de forma independente a idade, sexo e presença de doença coronariana, não à hemodinâmica pulmonar isoladamente. Ou seja, a DLCO muito reduzida na HAPI identifica um fenótipo de pior prognóstico que não é explicado apenas pela gravidade hemodinâmica da doença vascular pulmonar.",
+    "limitations": "Não é específica: reduz-se em qualquer doença que comprometa a superfície de troca alveolocapilar (enfisema, doença intersticial, anemia, tabagismo), exigindo interpretação em conjunto com espirometria, volumes pulmonares e tomografia de tórax para atribuir corretamente a causa da redução; valores devem ser corrigidos para hemoglobina.",
+    "source_refs": [
+      "Trip P, Nossent EJ, de Man FS, van den Berk IA, Boonstra A, Groepenhoff H, Leter EM, Westerhof N, Grünberg K, Bogaard HJ, Vonk-Noordegraaf A. Severely reduced diffusion capacity in idiopathic pulmonary arterial hypertension: patient characteristics and treatment responses. Eur Respir J. 2013;42(6):1575-1585. DOI: 10.1183/09031936.00184412. PMID: 23949959"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "dlco",
+      "capacidade de difusão pulmonar",
+      "hipertensão arterial pulmonar idiopática",
+      "prova de função pulmonar",
+      "prognóstico"
+    ]
+  },
+  {
+    "slug": "teste-genetico-para-mutacao-de-bmpr2-na-hipertensao-arterial-pulmonar-hereditaria",
+    "name": "Teste genético para mutação de BMPR2 na hipertensão arterial pulmonar hereditária",
+    "category": "laboratorial",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Sequenciamento do gene BMPR2 (receptor tipo 2 da proteína morfogenética óssea, via de sinalização TGF-β) — o gene causal mais prevalente da hipertensão arterial pulmonar hereditária (HAPH) e encontrado também em parte dos casos aparentemente idiopáticos —, geralmente dentro de um painel multigênico que inclui outros genes já implicados (ACVRL1, ENG, EIF2AK4, entre outros).",
+    "reference_range": "Não se aplica valor numérico: resultado qualitativo (variante patogênica, provavelmente patogênica, variante de significado incerto ou ausência de variante relevante nos genes testados). A penetrância de variantes patogênicas de BMPR2 é estimada em torno de 30%, sendo maior em mulheres heterozigotas (42%) do que em homens heterozigotos (14%) — ou seja, a maioria dos portadores da mutação nunca desenvolve a doença.",
+    "indications": "Recomendado para todo paciente com hipertensão arterial pulmonar idiopática, hereditária ou associada a certas condições (incluindo casos pediátricos), segundo o consenso de 2023 do International Consortium for Genetic Studies in PAH — a identificação de uma variante causal permite aconselhamento genético do paciente e rastreio em cascata de familiares assintomáticos portadores, que podem ser incluídos em programas de vigilância.",
+    "interpretation": "O estudo DELPHI-2, citado pelo consenso de 2023, aplicou rastreio anual (avaliação clínica, ECG, prova de função pulmonar, DLCO, teste de caminhada de 6 minutos, teste cardiopulmonar de exercício, radiografia de tórax, ecocardiograma e NT-proBNP) em 55 portadores assintomáticos de mutação de BMPR2 (idade mediana 37 anos). Na avaliação basal, nenhum caso de HAP foi suspeitado pela ecocardiografia e pelo NT-proBNP isoladamente — mas o cateterismo direito opcional, aceito por todos os participantes, identificou 2 casos de HAP leve (3,6%) já presentes e 12 pacientes (21,8%) com hipertensão pulmonar induzida pelo esforço. No seguimento de longo prazo (>5 anos), mais 3 casos foram diagnosticados, ainda em classe funcional I-II. Ou seja: o rastreio não invasivo de rotina subestima a doença já presente no portador assintomático, e o achado justifica a vigilância estruturada e periódica proposta pelo consenso, em vez de alta sem seguimento após um teste genético positivo isolado.",
+    "limitations": "Teste negativo não exclui HAP hereditária — outros genes menos prevalentes podem não estar no painel testado, e uma fração dos casos familiares permanece sem causa genética identificada; a baixa penetrância (cerca de 30%) torna o aconselhamento genético complexo, porque a maioria dos portadores jamais desenvolverá a doença, e a decisão de testar familiares assintomáticos deve vir acompanhada de aconselhamento genético estruturado, não apenas do resultado laboratorial isolado.",
+    "source_refs": [
+      "Eichstaedt CA, Belge C, Chung WK, Gräf S, Grünig E, Montani D, Quarck R, Tenorio-Castano JA, Soubrier F, Trembath RC, Morrell NW; PAH-ICON associated with the PVRI. Genetic counselling and testing in pulmonary arterial hypertension: a consensus statement on behalf of the International Consortium for Genetic Studies in PAH. Eur Respir J. 2023;61(2):2201471. DOI: 10.1183/13993003.01471-2022. PMCID: PMC9947314. PMID: 36302552",
+      "Lane KB, Machado RD, Pauciulo MW, Thomson JR, Phillips JA 3rd, Loyd JE, Nichols WC, Trembath RC. Heterozygous germline mutations in BMPR2, encoding a TGF-beta receptor, cause familial primary pulmonary hypertension. Nat Genet. 2000;26(1):81-84. DOI: 10.1038/79226. PMID: 10973254"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bmpr2",
+      "teste genético",
+      "hipertensão arterial pulmonar hereditária",
+      "aconselhamento genético",
+      "painel multigênico"
+    ]
   }
 ]
