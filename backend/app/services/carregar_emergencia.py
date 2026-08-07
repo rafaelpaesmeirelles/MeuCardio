@@ -2,11 +2,25 @@
 
 Duas checagens que só existem nesta frente, e as duas por causa do que a tela é:
 
-1. **O documento referenciado precisa existir e estar disponível para publicação.**
-   Aceita documento já publicado ou explicitamente revisado, pois o comando de
-   reconciliação promove os revisados somente depois de carregar todas as frentes.
-   Uma seleção apontando para slug inexistente continua sendo recusada.
-2. **`published` nunca vem do arquivo**, como nas demais frentes. Repetido aqui
+1. **`documento_slug`/`fluxograma_slug` precisam existir como `Document` e
+   estar disponíveis para publicação** (já publicado ou explicitamente
+   revisado — o comando de reconciliação promove os revisados somente depois
+   de carregar todas as frentes). Uma seleção apontando para slug inexistente
+   continua sendo recusada.
+2. **`relacionados` aceita as DUAS naturezas de referência que o arquivo-fonte
+   usa** — achado em 07/08/2026 ao investigar 19 protocolos que travavam entre
+   si: a maioria dos itens usa `relacionados` para apontar outro DOCUMENTO
+   correlato (o desenho original), mas um lote mais recente passou a usá-lo
+   para apontar outro PROTOCOLO de emergência ("ver também: síndrome X"). A
+   checagem original só validava contra `Document.slug`, então todo protocolo
+   que citasse outro protocolo (não um documento) era recusado — inclusive
+   quando os dois lados da referência já estavam prontos, só porque a busca
+   olhava a tabela errada. Agora `relacionados` é aceito se o slug existir em
+   QUALQUER uma das duas tabelas (Document disponível, ou EmergencyProtocol já
+   presente no arquivo sendo carregado) — `documento_slug`/`fluxograma_slug`
+   continuam exigindo `Document` especificamente, sem essa folga, porque são o
+   texto/fluxograma que a tela realmente renderiza.
+3. **`published` nunca vem do arquivo**, como nas demais frentes. Repetido aqui
    porque uma recarga não pode despublicar conteúdo em silêncio.
 """
 
@@ -28,7 +42,7 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
     novos = atualizados = 0
     recusados: list[dict] = []
     try:
-        disponiveis = {
+        documentos_disponiveis = {
             s for (s,) in (
                 db.query(Document.slug)
                 .filter(
@@ -40,13 +54,21 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
                 .all()
             )
         }
+        # Todo slug de protocolo que já existe no arquivo sendo carregado —
+        # cobre tanto os já persistidos quanto os que este mesmo `carregar()`
+        # vai criar (o próprio arquivo é a lista completa de protocolos).
+        protocolos_do_arquivo = {item["slug"] for item in dados}
 
         for item in dados:
-            faltando = [
-                s for s in ([item["documento_slug"], item.get("fluxograma_slug")]
-                            + list(item.get("relacionados") or []))
-                if s and s not in disponiveis
+            faltando_documento = [
+                s for s in (item["documento_slug"], item.get("fluxograma_slug"))
+                if s and s not in documentos_disponiveis
             ]
+            faltando_relacionado = [
+                s for s in (item.get("relacionados") or [])
+                if s not in documentos_disponiveis and s not in protocolos_do_arquivo
+            ]
+            faltando = faltando_documento + faltando_relacionado
             if faltando:
                 recusados.append({"slug": item["slug"],
                                   "motivo": "documento inexistente ou ainda não revisado",
