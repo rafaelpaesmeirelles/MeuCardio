@@ -583,3 +583,40 @@ conferidos nesta rodada.**
 - O restante do backlog mais antigo (40 documentos de `b88c0ae`, 9 estudos de `051cc7a`).
 
 ---
+
+## Rodada 8 — 07/08/2026
+
+### Commit `731fe54` — estudos: +3 estudos de derivação de escore (PESI, SYNTAX Score II, SCORE2)
+
+**Conferido: os 3 PMIDs principais e os 4 secundários citados nos campos `limitations`/`key_findings`
+batem exatamente** no registro do PubMed: PESI 16020800, SYNTAX Score II 23439103, SCORE2
+34120177, sPESI 20696966, validação externa BEST/PRECOMBAT 27491605, SYNTAXES/redesenvolvimento
+33038944, SCORE2-OP 34120185. Abstract do PESI conferido linha a linha: 15.531 internações, 186
+hospitais da Pensilvânia, 67%/33%, validação externa 221 (Suíça/França), 11 variáveis, 5 classes de
+risco — **bate exatamente**. A tabela de pontos por variável (idade em pontos, sexo masc. +10,
+câncer +30, IC +10, DPOC +10, pulso≥110 +20, PAS<100 +30, FR≥30 +20, temp<36 +20, alteração mental
++60, SatO2<90% +20) **não está no abstract** (não verificável só por ele), mas é a tabela padrão e
+amplamente replicada do PESI original — não localizei divergência. **PASSA.**
+
+### Commit `db4c8fc` — evidências: +10 recomendações GRADE para Diabetes e cardiologia (IWGDF/ESVS/SVS 2023, pé diabético)
+
+**Conferido: PMID 37724985 bate exatamente** (título/revista/volume/edição/páginas/DOI). Só a
+primeira das 10 recomendações foi lida por completo nesta rodada (rastreio anual de DAP) — texto
+plausível e consistente com prática padrão de rastreio. **As demais 9 recomendações (ITB/TBI,
+prognóstico de cicatrização/amputação, bypass vs. endovascular) não foram conferidas linha a linha
+contra o texto integral da diretriz** por falta de tempo nesta rodada.
+
+### Commit `b274423` — exames: +6 novos (Cardio-oncologia, Tromboembolismo, Hipertensão pulmonar)
+
+**Conferido: os 8 PMIDs citados batem exatamente** no registro do PubMed (US para TVP 16202135,
+cintilografia V/Q vs. AngioTC em HP crônica tromboembólica 17475953, QT prolongado por
+quimioterapia 29217664, RM cardíaca em miocardite 30545455, riociguate RISE-IIP 31416769, ESC 2019
+TEP 31504429, ESC/ERS 2022 HP 36017548, ESC 2022 cardio-oncologia 36017568). **Não verifiquei os
+valores numéricos/de referência do corpo de cada exame** nesta rodada.
+
+### Não verificado por falta de tempo nesta rodada (rodada 8)
+- As 9 recomendações restantes de `db4c8fc` contra o texto integral da diretriz IWGDF/ESVS/SVS 2023.
+- Valores de referência/interpretação do corpo dos 6 exames de `b274423`.
+- Backlog mais antigo ainda pendente (40 documentos de `b88c0ae`, 9 estudos de `051cc7a`).
+
+---
