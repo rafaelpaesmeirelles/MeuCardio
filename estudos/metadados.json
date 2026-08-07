@@ -15639,5 +15639,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "affirm-ahf-carboximaltose-ferrica-apos-ic-aguda-com-deficiencia-de-ferro",
+    "title": "AFFIRM-AHF — Carboximaltose férrica após alta de internação por IC aguda com deficiência de ferro",
+    "study_type": "ensaio_clinico",
+    "authors": "Ponikowski P, Kirwan BA, Anker SD, McDonagh T, Dorobantu M, Drozdz J, et al.; AFFIRM-AHF Investigators",
+    "journal": "Lancet",
+    "year": 2020,
+    "doi": "10.1016/S0140-6736(20)32339-4",
+    "pmid": "33197395",
+    "url": "https://doi.org/10.1016/S0140-6736(20)32339-4",
+    "summary": "Ensaio multicêntrico, duplo-cego, controlado por placebo, 121 centros na Europa, América do Sul e Singapura, com 1.132 pacientes hospitalizados por IC aguda com deficiência de ferro concomitante (ferritina <100 mcg/L, ou 100-299 mcg/L com saturação de transferrina <20%) e FEVE <50%. Antes da alta, alocados 1:1 para carboximaltose férrica intravenosa ou placebo por até 24 semanas. Desfecho primário: composto de hospitalizações totais por IC e morte cardiovascular em 52 semanas.",
+    "key_findings": "293 eventos primários (57,2/100 pacientes-ano) com carboximaltose férrica vs. 372 (72,5/100 pacientes-ano) com placebo — razão de taxas (RR) 0,79 (IC95% 0,62-1,01; p=0,059), sem significância formal. Hospitalizações totais por IC: 217 vs. 294 (RR 0,74; IC95% 0,58-0,94; p=0,013). Composto de primeira hospitalização por IC ou morte cardiovascular: 32% vs. 38% (HR 0,80; IC95% 0,66-0,98; p=0,030). Sem diferença em morte cardiovascular isolada (14% em ambos os grupos; HR 0,96; IC95% 0,70-1,32; p=0,81).",
+    "clinical_implications": "Reforça, no momento de maior risco (alta hospitalar após IC aguda descompensada), o benefício já visto na IC crônica: repor ferro intravenoso reduz hospitalização por IC, sem efeito demonstrado sobre mortalidade cardiovascular isolada — desfecho primário composto não atingiu p<0,05 formal, mas o componente de hospitalização por IC (mais frequente e mais sensível ao tratamento da congestão) foi consistente e significativo. Junto ao IRONMAN e à metanálise de dados individuais já registrados nesta biblioteca, forma o corpo de evidência que sustenta rastrear e tratar deficiência de ferro sistematicamente na alta da internação por IC.",
+    "limitations": "O desfecho primário formal não atingiu significância estatística (p=0,059); a pandemia de COVID-19 interferiu no seguimento de parte da coorte, e uma análise de sensibilidade pré-especificada excluindo esse período mostrou efeito mais consistente, mas não é a análise principal.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "carboximaltose férrica",
+      "deficiência de ferro",
+      "insuficiência cardíaca aguda",
+      "affirm-ahf",
+      "alta hospitalar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "empulse-empagliflozina-iniciada-na-internacao-por-ic-aguda",
+    "title": "EMPULSE — Empagliflozina iniciada durante a internação por insuficiência cardíaca aguda",
+    "study_type": "ensaio_clinico",
+    "authors": "Voors AA, Angermann CE, Teerlink JR, Collins SP, Kosiborod M, Biegus J, et al.",
+    "journal": "Nature Medicine",
+    "year": 2022,
+    "doi": "10.1038/s41591-021-01659-1",
+    "pmid": "35228754",
+    "url": "https://doi.org/10.1038/s41591-021-01659-1",
+    "summary": "Ensaio multinacional, randomizado, duplo-cego, com 530 pacientes internados por IC aguda de novo ou por descompensação de IC crônica, independentemente da fração de ejeção e da presença de diabetes, alocados para empagliflozina 10 mg/dia ou placebo, iniciados intra-hospitalarmente após estabilização clínica (mediana de 3 dias após admissão) e mantidos por até 90 dias. Desfecho primário: benefício clínico em 90 dias, composto hierárquico (win ratio) de óbito por qualquer causa, número de eventos de IC e tempo até o primeiro evento de IC, ou variação ≥5 pontos no escore de sintomas do questionário KCCQ.",
+    "key_findings": "Mais pacientes do grupo empagliflozina tiveram benefício clínico em relação ao placebo (win ratio estratificado 1,36; IC95% 1,09-1,68; p=0,0054), atingindo o desfecho primário. O benefício foi observado tanto na IC de novo quanto na descompensada, independentemente da fração de ejeção ou da presença de diabetes. Evento adverso grave: 32,3% (empagliflozina) vs. 43,6% (placebo) — empagliflozina foi bem tolerada, sem sinal de mais eventos adversos.",
+    "clinical_implications": "Demonstra que iniciar iSGLT2 ainda durante a internação por IC aguda — e não só depois da alta, como em DAPA-HF/EMPEROR-Reduced — é seguro e traz benefício clínico já nos primeiros 90 dias, com desenho robusto o suficiente para incluir todo o espectro de fração de ejeção. Junto ao STRONG-HF e ao TRANSITION (já registrados nesta biblioteca), sustenta a estratégia de otimização precoce e intra-hospitalar da terapia guiada por diretriz, em vez de esperar a estabilidade ambulatorial para iniciar cada classe.",
+    "limitations": "Desfecho primário composto hierárquico (win ratio) mistura desfechos de gravidade muito diferente (óbito e variação de escore de sintomas) numa única métrica, o que facilita atingir significância estatística mas dificulta interpretar isoladamente o efeito sobre mortalidade; amostra de 530 pacientes é pequena para desfechos duros isolados.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "empagliflozina",
+      "isglt2",
+      "insuficiência cardíaca aguda",
+      "empulse",
+      "início intra-hospitalar"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
