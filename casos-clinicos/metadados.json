@@ -12401,5 +12401,25 @@
       "Khan SS, Matsushita K, Sang Y, Ballew SH, Grams ME, Surapaneni A, et al. Development and Validation of the American Heart Association's PREVENT Equations. Circulation. 2024;149(6):430-449. DOI: 10.1161/CIRCULATIONAHA.123.067626. PMID: 37947085."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sintomas-de-estresse-pos-traumatico-predizem-mortalidade-apos-implante-de-cdi-ladwig-2008",
+    "titulo": "Sintomas de estresse pós-traumático após implante de CDI predizem mortalidade — independente da gravidade da doença? O estudo LICAD",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Coorte prospectiva alemã (estudo 'Living With an Implanted Cardioverter-Defibrillator', LICAD) acompanhou 211 pacientes com cardiodesfibrilador implantável em ambulatório de rotina, com seguimento médio de 5,1 anos (743 pessoas-ano). Dos 147 pacientes que preenchiam o critério A de TEPT (sobrevivência a evento com risco de vida), 38 pontuaram no quartil superior da Escala de Impacto do Evento-Revisada e formaram o grupo-índice de sintomas de estresse pós-traumático.",
+    "pergunta": "O grupo com sintomas de TEPT teve maior mortalidade de longo prazo, e essa diferença se explicou pela gravidade da doença cardíaca de base?",
+    "opcoes": [
+      "Não houve diferença de mortalidade entre os grupos — só diferença de qualidade de vida percebida",
+      "O grupo-índice teve risco relativo de mortalidade 3,45 vezes maior (IC95% 1,57-7,60; p=0,002), ajustado para idade, sexo, diabetes, fração de ejeção, uso de betabloqueador, ressuscitação prévia, número de choques do CDI, depressão e ansiedade — sem diferença de fração de ejeção ou de número de choques do CDI entre os grupos na linha de base",
+      "A diferença de mortalidade desapareceu completamente depois do ajuste multivariado, mostrando que era só um marcador de doença mais grave",
+      "O efeito só foi significativo em mulheres, não em homens, no subgrupo de 147 pacientes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O achado central do LICAD é justamente que os sintomas de TEPT predisseram mortalidade de forma independente da gravidade objetiva da doença — o grupo-índice não diferiu do restante da amostra em fração de ejeção nem em número de choques recebidos do CDI, e mesmo assim teve risco de morte quase 3,5 vezes maior depois de ajustar para os fatores clínicos clássicos (incluindo depressão e ansiedade separadamente, o que reforça que o efeito não é só 'sofrimento psíquico genérico' capturado por outro nome). Em números absolutos: 55 óbitos por 1.000 pessoas-ano sem TEPT contra 80 por 1.000 pessoas-ano com TEPT. É estudo observacional de amostra pequena (38 no grupo-índice) e centro único — não estabelece mecanismo causal —, mas os próprios autores concluem que sustenta a necessidade de cuidado psicossocial interdisciplinar sistemático no sobrevivente de evento cardíaco grave tratado com CDI, não reservado a quem espontaneamente relata sofrimento.",
+    "source_refs": [
+      "Ladwig KH, Baumert J, Marten-Mittag B, Kolb C, Zrenner B, Schmitt C. Posttraumatic stress symptoms and predicted mortality in patients with implantable cardioverter-defibrillators: results from the prospective living with an implanted cardioverter-defibrillator study. Arch Gen Psychiatry. 2008;65(11):1324-1330. DOI: 10.1001/archpsyc.65.11.1324. PMID: 18981344."
+    ],
+    "review_status": "revisado"
   }
 ]
