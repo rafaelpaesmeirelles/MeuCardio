@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import re
 from datetime import date, datetime, time, timedelta, timezone
 from typing import Literal
@@ -74,6 +75,8 @@ from app.services.agenda_integrada.traffic import traffic_eta
 from app.services.apple_mail import AppleMailError
 from app.services import apple_mail
 from app.services.cofre import cifrar_campo
+
+log = logging.getLogger("meucardio.agenda")
 
 router = APIRouter(prefix="/api/agenda", tags=["agenda-integrada"])
 oauth_callback_router = APIRouter(prefix="/api/agenda/oauth", tags=["contas-externas"])
@@ -1325,9 +1328,19 @@ def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user:
             apple_mail.diagnose(integration_credentials(item))
     except ConnectorError as exc:
         db.rollback()
+        # 07/08/2026: até aqui só o status HTTP final chegava ao log
+        # (`http_request_completed` genérico) — o código/mensagem reais do
+        # que a Apple respondeu nunca ficavam registrados no servidor, só no
+        # corpo da resposta ao navegador. Foi exatamente essa lacuna que
+        # atrasou o diagnóstico do bug de redirecionamento de partição
+        # (corrigido no mesmo dia, ver apple_dav.py). Log explícito aqui para
+        # qualquer falha futura já vir com o código/mensagem no log do
+        # servidor, sem depender de reproduzir de novo.
+        log.warning("Falha ao conectar Apple (owner_id=%s): %s — %s", user.id, exc.code, exc)
         raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
     except AppleMailError as exc:
         db.rollback()
+        log.warning("Falha ao conectar e-mail Apple (owner_id=%s): %s", user.id, exc)
         raise HTTPException(status_code=exc.status_code, detail={"code": "apple_mail_error", "message": str(exc)}) from exc
     _audit(db, user, "external_account_connected", "calendar_integration", item.id, {"provider": "apple_icloud", "mail": data.mail})
     db.commit(); db.refresh(item)

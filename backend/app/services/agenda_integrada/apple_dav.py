@@ -131,7 +131,23 @@ class AppleDavClient:
             follow_redirects=False, transport=transport,
         )
 
-    def _xml(self, method: str, url: str, body: str, *, depth: str = "0") -> ET.Element:
+    def _xml(self, method: str, url: str, body: str, *, depth: str = "0") -> tuple[ET.Element, str]:
+        """Devolve o XML já decodificado **e** a URL que de fato respondeu.
+
+        Bug real encontrado em 07/08/2026 (Rafael reportou falha ao conectar
+        Apple mesmo com credenciais corretas — reproduzido sem credencial
+        nenhuma, simulando o redirecionamento real do iCloud): o servidor
+        genérico `caldav.icloud.com` redireciona (301) para um servidor de
+        partição do usuário (`pXX-caldav.icloud.com`), e é **esse** host que
+        passa a responder dali em diante — os hrefs relativos vêm relativos
+        A ELE, não ao endereço genérico original. Resolver o próximo passo da
+        descoberta contra a URL original (em vez da URL que respondeu) faz o
+        cliente voltar a bater no host genérico, perder a sessão de partição
+        e nunca completar a descoberta — em QUALQUER conta real da Apple, não
+        só nas de credencial errada. Por isso `_xml` agora devolve também
+        `current_url` (a URL efetiva, já com o redirecionamento resolvido),
+        para cada chamador usar como base do próximo `_safe_icloud_url`.
+        """
         current_url = _safe_icloud_url(url, url)
         response = None
         for _ in range(4):
@@ -157,27 +173,27 @@ class AppleDavClient:
         if b"<!DOCTYPE" in prefix or b"<!ENTITY" in prefix:
             raise ConnectorError("apple_dav_unsafe_xml", "Resposta DAV insegura recusada.")
         try:
-            return ET.fromstring(response.content)  # noqa: S314 - DTD/entidades recusados acima
+            return ET.fromstring(response.content), current_url  # noqa: S314 - DTD/entidades recusados acima
         except ET.ParseError as exc:
             raise ConnectorError("apple_dav_invalid_xml", "Resposta DAV inválida do iCloud.", status_code=502) from exc
 
     def _discover_home(self, root: str, namespace: str, property_name: str) -> str:
-        principal_xml = self._xml("PROPFIND", root, '<d:propfind xmlns:d="DAV:"><d:prop><d:current-user-principal/></d:prop></d:propfind>')
+        principal_xml, principal_base = self._xml("PROPFIND", root, '<d:propfind xmlns:d="DAV:"><d:prop><d:current-user-principal/></d:prop></d:propfind>')
         href = principal_xml.findtext(f".//{{{DAV}}}current-user-principal/{{{DAV}}}href")
         if not href:
             raise ConnectorError("apple_dav_discovery_failed", "O iCloud não informou o usuário DAV.")
-        principal = _safe_icloud_url(root, href)
-        home_xml = self._xml(
+        principal = _safe_icloud_url(principal_base, href)
+        home_xml, home_base = self._xml(
             "PROPFIND", principal,
             f'<d:propfind xmlns:d="DAV:" xmlns:x="{namespace}"><d:prop><x:{property_name}/></d:prop></d:propfind>',
         )
         home_href = home_xml.findtext(f".//{{{namespace}}}{property_name}/{{{DAV}}}href")
         if not home_href:
             raise ConnectorError("apple_dav_discovery_failed", "O iCloud não informou a coleção DAV.")
-        return _safe_icloud_url(principal, home_href)
+        return _safe_icloud_url(home_base, home_href)
 
     def _collections(self, home: str, namespace: str, resource_name: str) -> list[str]:
-        xml = self._xml(
+        xml, base = self._xml(
             "PROPFIND", home,
             '<d:propfind xmlns:d="DAV:"><d:prop><d:resourcetype/><d:displayname/></d:prop></d:propfind>', depth="1",
         )
@@ -187,7 +203,7 @@ class AppleDavClient:
                 continue
             href = response.findtext(f"{{{DAV}}}href")
             if href:
-                result.append(_safe_icloud_url(home, href))
+                result.append(_safe_icloud_url(base, href))
         return list(dict.fromkeys(result))
 
     def addressbooks(self) -> list[str]:
@@ -199,12 +215,12 @@ class AppleDavClient:
         return self._collections(home, CALDAV, "calendar")
 
     def addressbook_resources(self, addressbook: str) -> list[DavResource]:
-        xml = self._xml(
+        xml, base = self._xml(
             "REPORT", addressbook,
             '<c:addressbook-query xmlns:d="DAV:" xmlns:c="urn:ietf:params:xml:ns:carddav"><d:prop><d:getetag/><c:address-data/></d:prop></c:addressbook-query>',
             depth="1",
         )
-        return self._resources(xml, addressbook, CARDDAV, "address-data")
+        return self._resources(xml, base, CARDDAV, "address-data")
 
     def calendar_resources(self, calendar: str, start: datetime, end: datetime) -> list[DavResource]:
         start_utc = start.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -214,8 +230,8 @@ class AppleDavClient:
             '<c:calendar-data/></d:prop><c:filter><c:comp-filter name="VCALENDAR"><c:comp-filter name="VEVENT">'
             f'<c:time-range start="{start_utc}" end="{end_utc}"/></c:comp-filter></c:comp-filter></c:filter></c:calendar-query>'
         )
-        xml = self._xml("REPORT", calendar, body, depth="1")
-        return self._resources(xml, calendar, CALDAV, "calendar-data")
+        xml, base = self._xml("REPORT", calendar, body, depth="1")
+        return self._resources(xml, base, CALDAV, "calendar-data")
 
     @staticmethod
     def _resources(xml: ET.Element, base: str, namespace: str, data_tag: str) -> list[DavResource]:

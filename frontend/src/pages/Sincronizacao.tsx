@@ -14,6 +14,7 @@ type IntegracaoExterna = {
   capabilities?: Record<string, boolean>;
   contact_count: number;
   last_success_at: string | null;
+  last_error_message: string | null;
 };
 type CapacidadesSync = { connectors: Array<{ provider: string; oauth_configured?: boolean }> };
 
@@ -46,6 +47,7 @@ export default function Sincronizacao() {
   const [capacidades, setCapacidades] = useState<CapacidadesSync | null>(null);
   const [consentimento, setConsentimento] = useState(false);
   const [conectando, setConectando] = useState<string | null>(null);
+  const [sincronizando, setSincronizando] = useState<number | null>(null);
   const [erro, setErro] = useState("");
   const [mensagem, setMensagem] = useState("");
   const [formAberto, setFormAberto] = useState<"apple" | "yahoo" | null>(null);
@@ -114,6 +116,27 @@ export default function Sincronizacao() {
       await carregar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível conectar a Yahoo.");
+    }
+  }
+
+  /** Trabalho 16, ajuste de 07/08/2026 — Rafael reportou que "clicar em
+   * sincronizar não resulta em nada": esta página nasceu só com Conectar +
+   * preferências, sem nenhuma ação de "buscar agora" — quem já estava
+   * conectado (ex.: Microsoft de véspera) não tinha como pedir uma nova
+   * busca por aqui, só na tela antiga da Agenda. Mesma rota que a Agenda já
+   * usa (`sincronizarConta`), para não duplicar comportamento. Contas só de
+   * e-mail (Yahoo) não têm este botão — a leitura delas é sempre ao vivo,
+   * feita no momento de abrir o CorvIA Mail, não por sincronização prévia. */
+  async function sincronizarConta(id: number) {
+    setSincronizando(id); setErro(""); setMensagem("");
+    try {
+      await api.post(`/agenda/integrations/${id}/sync-all?full=false`, {});
+      await carregar();
+      setMensagem("Agenda e contatos atualizados agora.");
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível sincronizar agora.");
+    } finally {
+      setSincronizando(null);
     }
   }
 
@@ -266,11 +289,33 @@ export default function Sincronizacao() {
                   <strong>{item.display_name}</strong>
                   <span className="eyebrow" style={{ margin: 0 }}>{PROVEDOR_NOME[item.provider]}</span>
                 </span>
-                <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
-                        onClick={() => desconectar(item.id, item.display_name)}>
-                  Desconectar
-                </button>
+                <span style={{ display: "flex", gap: 6 }}>
+                  {cap.read_appointments && (
+                    <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                            disabled={sincronizando === item.id} onClick={() => sincronizarConta(item.id)}>
+                      {sincronizando === item.id ? "Sincronizando…" : "Sincronizar agora"}
+                    </button>
+                  )}
+                  <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                          onClick={() => desconectar(item.id, item.display_name)}>
+                    Desconectar
+                  </button>
+                </span>
               </div>
+              {item.last_success_at ? (
+                <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--texto-secundario)" }}>
+                  Última sincronização: {new Date(item.last_success_at).toLocaleString("pt-BR")}
+                </p>
+              ) : cap.read_appointments ? (
+                <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
+                  Ainda sem sincronização bem-sucedida — clique em "Sincronizar agora".
+                </p>
+              ) : null}
+              {item.last_error_message && (
+                <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
+                  Última falha: {item.last_error_message}
+                </p>
+              )}
               <p className="eyebrow" style={{ margin: 0 }}>O que sincronizar desta conta</p>
               <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap", fontSize: "0.84rem" }}>
                 {cap.read_appointments ? (

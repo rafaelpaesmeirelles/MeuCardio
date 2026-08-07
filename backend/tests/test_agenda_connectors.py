@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 import httpx
 import pytest
 from app.models.agenda import CalendarIntegration, CalendarOutboxEvent
-from app.services.agenda_integrada.apple_dav import parse_icalendar, parse_vcard
+from app.services.agenda_integrada.apple_dav import AppleDavClient, parse_icalendar, parse_vcard
 from app.services.agenda_integrada.connectors import (
     ConnectorError,
     GoogleCalendarConnector,
@@ -206,3 +206,48 @@ def test_apple_vcard_and_calendar_parsers_unfold_records():
     assert contact["organization"] == "Corvia · Cardio"
     assert events[0]["id"] == "event-1"
     assert events[0]["starts_at"] == "2026-08-05T13:00:00+00:00"
+
+
+def test_apple_dav_follows_partition_redirect_correctly():
+    """Bug real reportado pelo Rafael em 07/08/2026: conectar Apple falhava
+    com HTTP 502 mesmo com credenciais corretas. Reproduzido sem credencial
+    nenhuma, simulando o comportamento real do iCloud — `caldav.icloud.com`
+    redireciona (301) para um servidor de partição do usuário
+    (`pXX-caldav.icloud.com`), e as próximas descobertas (principal →
+    calendar-home-set → coleções) precisam resolver os hrefs relativos
+    contra ESSE host, não contra o host genérico original. O bug estava em
+    `_discover_home`/`_collections` resolvendo sempre contra a URL de
+    entrada, nunca contra a URL que de fato respondeu — quebra em qualquer
+    conta real da Apple, não só com credencial errada."""
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        host, path = request.url.host, request.url.path
+        if host == "caldav.icloud.com" and path == "/.well-known/caldav":
+            return httpx.Response(301, headers={"location": "https://p01-caldav.icloud.com/.well-known/caldav"})
+        if host == "p01-caldav.icloud.com" and path == "/.well-known/caldav":
+            return httpx.Response(207, content=(
+                '<?xml version="1.0"?><d:multistatus xmlns:d="DAV:"><d:response>'
+                '<d:href>/.well-known/caldav</d:href><d:propstat><d:prop>'
+                '<d:current-user-principal><d:href>/123456/principal/</d:href></d:current-user-principal>'
+                '</d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>'
+            ).encode())
+        if host == "p01-caldav.icloud.com" and path == "/123456/principal/":
+            return httpx.Response(207, content=(
+                '<?xml version="1.0"?><d:multistatus xmlns:d="DAV:" xmlns:c="urn:ietf:params:xml:ns:caldav">'
+                '<d:response><d:href>/123456/principal/</d:href><d:propstat><d:prop>'
+                '<c:calendar-home-set><d:href>/123456/calendars/</d:href></c:calendar-home-set>'
+                '</d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>'
+            ).encode())
+        if host == "p01-caldav.icloud.com" and path == "/123456/calendars/":
+            return httpx.Response(207, content=(
+                '<?xml version="1.0"?><d:multistatus xmlns:d="DAV:"><d:response>'
+                '<d:href>/123456/calendars/home/</d:href><d:propstat><d:prop><d:resourcetype>'
+                '<d:collection/><cal:calendar xmlns:cal="urn:ietf:params:xml:ns:caldav"/></d:resourcetype>'
+                '<d:displayname>Home</d:displayname></d:prop><d:status>HTTP/1.1 200 OK</d:status>'
+                '</d:propstat></d:response></d:multistatus>'
+            ).encode())
+        return httpx.Response(404)  # pragma: no cover - qualquer host/caminho fora do esperado é falha do teste
+
+    client = AppleDavClient("teste@icloud.com", "abcd-efgh-ijkl-mnop", transport=httpx.MockTransport(handler))
+    calendars = client.calendars()
+    assert calendars == ["https://p01-caldav.icloud.com/123456/calendars/home/"]
