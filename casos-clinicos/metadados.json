@@ -13282,5 +13282,185 @@
       "Carroll DL, Rankin SH. Comparing interventions in older unpartnered adults after myocardial infarction. Eur J Cardiovasc Nurs. 2005;5(1):83-89. DOI: 10.1016/j.ejcnurse.2005.09.001. PMID: 16256442"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "miocardite-por-checkpoint-com-troponina-1-8-decisao-de-dose-de-corticoide",
+    "titulo": "Miocardite por inibidor de checkpoint com troponina 1,8 ng/mL: qual dose de corticoide?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, melanoma metastático em terapia combinada com ipilimumabe e nivolumabe há 5 semanas. Admitido por dispneia leve e palpitações. Troponina T 1,8 ng/mL (muito acima do limite superior), FEVE preservada ao ecocardiograma (58%). Biópsia endomiocárdica confirma miocardite. Equipe discute se inicia metilprednisolona em dose baixa-moderada (1 mg/kg/dia) ou pulsoterapia em dose alta (1 g/dia) desde o início.",
+    "pergunta": "Com base no registro multicêntrico de miocardite por checkpoint, qual a conduta mais consistente com o desfecho observado?",
+    "opcoes": [
+      "Iniciar corticoide em dose baixa e escalonar somente se a troponina continuar subindo, já que a FEVE está preservada",
+      "Iniciar pulsoterapia em dose alta desde o início, porque no registro doses menores de corticoide associaram-se a troponina residual mais alta e mais eventos cardíacos maiores (MACE), mesmo com FEVE normal",
+      "Não iniciar corticoide e apenas suspender a imunoterapia, monitorando a troponina",
+      "Iniciar corticoide em dose baixa e transferir o paciente para acompanhamento ambulatorial, já que não há queda de FEVE"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O registro multicêntrico de Mahmood et al. (JACC 2018, 35 casos de miocardite por checkpoint) mostrou que 38% dos eventos cardíacos adversos maiores (MACE) ocorreram com FEVE normal — a FEVE preservada não é garantia de segurança nessa entidade — e que doses menores de corticoide associaram-se a troponina residual mais alta e a mais MACE, enquanto doses mais altas se associaram a melhor controle. Troponina T ≥1,5 ng/mL, como neste caso, conferiu risco 4 vezes maior de MACE (HR 4,0). A conduta recomendada pelo achado do estudo é pulsoterapia em dose alta desde o início, não escalonamento gradual, mesmo com função ventricular normal.",
+    "source_refs": [
+      "Mahmood SS, Fradley MG, Cohen JV, et al. Myocarditis in Patients Treated With Immune Checkpoint Inhibitors. J Am Coll Cardiol. 2018;71(16):1755-1764. DOI: 10.1016/j.jacc.2018.02.037. PMID: 29567210"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "car-t-com-sindrome-de-liberacao-de-citocinas-grau-2-e-troponina-subindo",
+    "titulo": "CAR-T com síndrome de liberação de citocinas grau 2 e troponina em ascensão: quando dar tocilizumabe?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 58 anos, linfoma difuso de grandes células B, D+4 pós-infusão de CAR-T. Febre 39,2°C, hipotensão respondendo a volume, taquicardia — síndrome de liberação de citocinas (SLC) grau 2 confirmada pela equipe de hematologia há 6 horas, ainda sem tocilizumabe prescrito. Troponina colhida na admissão já elevada e repetida agora mostra novo aumento.",
+    "pergunta": "Com base no registro de 137 pacientes CAR-T, qual a conduta prioritária neste momento?",
+    "opcoes": [
+      "Aguardar critério clínico de choque estabelecido antes de acionar tocilizumabe, já que a hipotensão já respondeu a volume",
+      "Solicitar ecocardiograma antes de decidir sobre tocilizumabe, para saber se já há queda de FEVE",
+      "Administrar tocilizumabe o quanto antes: no registro, cada atraso de 12 horas entre o início da SLC e a administração de tocilizumabe aumentou o risco de evento cardiovascular em 1,7 vez, e 95% dos eventos ocorreram após elevação de troponina — exatamente o estágio atual desta paciente",
+      "Manter conduta expectante, pois SLC grau 2 isolada não é indicação de tocilizumabe segundo o registro"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No registro de Alvi et al. (JACC 2019, 137 pacientes CAR-T), todos os 17 eventos cardiovasculares ocorreram em SLC grau ≥2, e 95% deles surgiram depois da elevação de troponina — o estágio em que esta paciente já se encontra. O achado central do estudo foi que cada atraso de 12 horas entre o início da SLC e a administração de tocilizumabe aumentou o risco de evento cardiovascular em 1,7 vez. Isso torna a administração precoce de tocilizumabe, e não a espera por descompensação hemodinâmica franca ou por confirmação ecocardiográfica, a conduta que o próprio estudo associa a menor risco cardíaco.",
+    "source_refs": [
+      "Alvi RM, Frigault MJ, Fradley MG, et al. Cardiovascular Events Among Adults Treated With Chimeric Antigen Receptor T-Cells (CAR-T). J Am Coll Cardiol. 2019;74(25):3099-3108. DOI: 10.1016/j.jacc.2019.10.038. PMID: 31856966"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cornell-positivo-sokolow-lyon-negativo-hipertrofia-ventricular-esquerda",
+    "titulo": "ECG com critério de Cornell positivo e Sokolow-Lyon negativo: isso exclui hipertrofia ventricular esquerda?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 61 anos, hipertensa de longa data, controle irregular. ECG de rotina: SV1 + RV5 = 3,1 mV (abaixo do limiar de Sokolow-Lyon de 3,5 mV) e RaVL + SV3 = 2,3 mV (acima do limiar de Cornell para mulheres, 2,0 mV). Residente pergunta se pode descartar hipertrofia ventricular esquerda (HVE) porque o critério clássico de Sokolow-Lyon foi negativo.",
+    "pergunta": "O que responder, com base no estudo de validação por necropsia dos critérios eletrocardiográficos de HVE?",
+    "opcoes": [
+      "Sim: Sokolow-Lyon negativo é suficiente para excluir HVE com segurança, já que é o critério de referência histórico",
+      "Não: o Sokolow-Lyon tem sensibilidade muito baixa (22% no estudo de validação por necropsia), então um resultado negativo não exclui HVE — o Cornell positivo, com sensibilidade maior (42%) e especificidade também alta (96%), é achado clinicamente relevante e sugere HVE mesmo com Sokolow-Lyon negativo",
+      "Não é possível interpretar sem ecocardiograma, os dois critérios eletrocardiográficos não têm nenhum valor diagnóstico comprovado",
+      "Sim, porque o Cornell só deve ser aplicado em homens, sendo inválido em mulheres"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de validação por necropsia de Casale et al. (Circulation 1987), a sensibilidade do critério de Sokolow-Lyon para detectar HVE confirmada por massa ventricular medida diretamente foi de apenas 22% (especificidade 100%), enquanto o critério de voltagem de Cornell elevou a sensibilidade para 42% mantendo especificidade alta (96%). Ou seja, Sokolow-Lyon negativo não exclui HVE — ele simplesmente detecta poucos casos verdadeiros (muitos falso-negativos). Um Cornell positivo, com melhor sensibilidade e especificidade comparável, é um achado que deve ser levado a sério mesmo com Sokolow-Lyon negativo, e o critério é validado especificamente com limiares diferentes por sexo (2,8 mV em homens, 2,0 mV em mulheres), sendo plenamente aplicável a esta paciente.",
+    "source_refs": [
+      "Casale PN, Devereux RB, Alonso DR, Campo E, Kligfield P. Improved sex-specific criteria of left ventricular hypertrophy for clinical and computer interpretation of electrocardiograms: validation with autopsy findings. Circulation. 1987;75(3):565-72. DOI: 10.1161/01.cir.75.3.565. PMID: 2949887"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-de-duke-do-teste-ergometrico-decisao-de-nao-encaminhar-para-cateterismo",
+    "titulo": "Escore de Duke +8 no teste ergométrico ambulatorial: cateterismo é necessário?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Homem, 54 anos, dor torácica atípica, sem fatores de risco maiores além de tabagismo remoto. Teste ergométrico ambulatorial: 11 minutos de exercício, sem infradesnível de ST, sem angina durante o teste. Escore de Duke calculado: 11 − (5×0) − (4×0) = +11.",
+    "pergunta": "Com base no estudo de validação ambulatorial do escore de Duke, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Encaminhar para cateterismo cardíaco de rotina, já que o paciente teve dor torácica",
+      "Não encaminhar para investigação invasiva de rotina: escore ≥+5 identificou grupo de baixo risco com sobrevida em 4 anos de 99% (mortalidade anual média de 0,25%) no estudo ambulatorial original — o escore deste paciente (+11) está bem dentro dessa faixa",
+      "Repetir o teste ergométrico em 6 meses independente do resultado, pois um único teste negativo não tem valor prognóstico",
+      "Solicitar angiotomografia coronariana obrigatoriamente antes de liberar o paciente, mesmo com escore de baixo risco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de validação ambulatorial de Mark et al. (NEJM 1991, 613 pacientes com 4 anos de seguimento), pacientes com escore de Duke ≥+5 (dois terços da coorte) tiveram sobrevida em 4 anos de 99% (mortalidade anual média de apenas 0,25%) — o escore discriminou risco melhor que a avaliação clínica isolada (área sob a curva ROC de 0,849). Um escore de +11, bem acima do corte de +5, coloca este paciente no estrato de risco muito baixo, para o qual a própria lógica do escore é evitar encaminhamento reflexo para investigação invasiva.",
+    "source_refs": [
+      "Mark DB, Shaw L, Harrell FE Jr, et al. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med. 1991;325(12):849-53. DOI: 10.1056/NEJM199109193251204. PMID: 1875969"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertenso-em-area-de-alta-poluicao-atmosferica-e-controle-pressorico-dificil",
+    "titulo": "Hipertenso com controle pressórico difícil e exposição crônica a poluição atmosférica: fator a considerar?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Mulher, 52 anos, hipertensão em uso de três anti-hipertensivos em doses adequadas, ainda com PA de consultório em torno de 152/94 mmHg em consultas repetidas, boa adesão confirmada por contagem de comprimidos. Reside há 20 anos próximo a via expressa de tráfego intenso, em região com índices de qualidade do ar frequentemente ruins.",
+    "pergunta": "O que a metanálise de PM2,5 e pressão arterial acrescenta a este caso?",
+    "opcoes": [
+      "Nada: não há evidência de que poluição atmosférica afete pressão arterial, apenas eventos respiratórios",
+      "A exposição a PM2,5 associa-se de forma estatisticamente significativa a elevação da pressão arterial (cerca de 1,4 mmHg de PA sistólica por 10 μg/m³, com o efeito de longo prazo sendo o mais forte), o que é um fator ambiental plausível contribuindo para a dificuldade de controle pressórico nesta paciente, a ser considerado ao lado da adesão e das doses medicamentosas",
+      "A poluição do ar só é relevante para gatilho agudo de infarto, nunca para pressão arterial crônica",
+      "PM2,5 só afeta pressão arterial em quem já tem doença pulmonar obstrutiva crônica associada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise de Liang et al. (J Hypertens 2014, 22 estudos) mostrou elevação estatisticamente significativa da pressão arterial associada à exposição a PM2,5 — 1,393 mmHg de PA sistólica e 0,895 mmHg de PA diastólica por incremento de 10 μg/m³ — com a exposição de longo prazo mostrando a associação mais forte. Isso não substitui a investigação de má adesão ou dose inadequada, mas é um fator ambiental adicional plausível e mensurável a ser considerado em hipertensão de difícil controle em paciente com exposição crônica documentada a tráfego intenso.",
+    "source_refs": [
+      "Liang R, Zhang B, Zhao X, Ruan Y, Lian H, Fan Z. Effect of exposure to PM2.5 on blood pressure: a systematic review and meta-analysis. J Hypertens. 2014;32(11):2130-40. DOI: 10.1097/HJH.0000000000000342. PMID: 25250520"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "personalidade-tipo-d-pos-infarto-triagem-de-saude-mental",
+    "titulo": "Paciente pós-infarto com traço de personalidade tipo D: só monitorar eventos ou também a qualidade de vida?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 57 anos, 3 semanas após infarto com stent, evolução clínica sem intercorrências, FEVE preservada. Durante consulta de reabilitação cardíaca, a psicóloga da equipe aplica a escala DS14 e identifica traço de personalidade tipo D (alta afetividade negativa e alta inibição social). O paciente nega sintomas depressivos francos e diz que está \"bem\", só reclamando de cansaço.",
+    "pergunta": "O que a metanálise de personalidade tipo D e estado de saúde cardiovascular orienta sobre a conduta?",
+    "opcoes": [
+      "Como o escore de eventos cardíacos duros é o que importa e o paciente não tem depressão diagnosticada, não há indicação de qualquer intervenção adicional",
+      "Personalidade tipo D associa-se não só a maior risco de eventos, mas também a chance quase 2 vezes maior de estado de saúde física prejudicado e 2,5 vezes maior de estado de saúde mental prejudicado relatados pelo próprio paciente — achado que justifica investigar ativamente a qualidade de vida percebida deste paciente, mesmo sem depressão formalmente diagnosticada, e considerar encaminhamento para suporte psicológico dirigido",
+      "A escala DS14 não tem validade estabelecida e o resultado deve ser desconsiderado",
+      "Personalidade tipo D só é relevante em pacientes com insuficiência cardíaca avançada, não em pós-infarto com boa função ventricular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise de Versteeg et al. (Eur J Prev Cardiol 2011, 10 estudos prospectivos) mostrou que personalidade tipo D associa-se a OR de 1,94 para estado de saúde física prejudicado e OR de 2,55 para estado de saúde mental prejudicado, ambos relatados pelo próprio paciente — mesmo sem diagnóstico formal de depressão, que é uma entidade categorial distinta do traço de personalidade tipo D. O achado sustenta rastrear ativamente a qualidade de vida percebida (não apenas eventos duros) em quem tem esse traço identificado, e considerar suporte psicológico dirigido — o \"estou bem\" verbalizado pode não refletir o impacto real percebido, dado o componente de inibição social do próprio traço.",
+    "source_refs": [
+      "Versteeg H, Spek V, Pedersen SS, Denollet J. Type D personality and health status in cardiovascular disease populations: a meta-analysis of prospective studies. Eur J Prev Cardiol. 2011;19(6):1373-80. DOI: 10.1177/1741826711425338. PMID: 21965518"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-negro-relutante-quanto-a-cdi-de-prevencao-primaria-o-que-pesa-na-decisao",
+    "titulo": "Paciente negro elegível a CDI de prevenção primária, relutante em decidir: o que costuma pesar mais na decisão?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Homem negro, 61 anos, cardiomiopatia isquêmica com FEVE 28% em terapia otimizada há mais de 3 meses, elegível para CDI de prevenção primária. Na consulta, se mostra hesitante, faz poucas perguntas sobre estatística de benefício e parece mais preocupado em entender \"o que o médico realmente acha que ele deveria fazer\".",
+    "pergunta": "Segundo os achados qualitativos do ensaio VIVID sobre decisão compartilhada de CDI em pacientes negros, qual conduta de comunicação é mais consistente com o que pesa nessa decisão?",
+    "opcoes": [
+      "Insistir em apresentar apenas números de redução de risco relativo e absoluto, evitando dar uma recomendação pessoal para não influenciar a autonomia do paciente",
+      "Reconhecer que, além da percepção do próprio paciente sobre seu estado de saúde e do desejo de viver mais pela família, a recomendação explícita do médico foi um dos três fatores predominantes na decisão desses pacientes — logo, uma recomendação clara e franca do cardiologista, associada a ferramentas de apoio à decisão, tende a ajudar mais do que apenas apresentar estatística isolada",
+      "Encaminhar diretamente para implante sem mais conversa, já que a indicação clínica já está estabelecida",
+      "Não oferecer o CDI, assumindo que a hesitação do paciente já significa recusa implícita"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo qualitativo do ensaio VIVID (Jackson et al., Circ Cardiovasc Qual Outcomes 2024), os três fatores predominantes na decisão de pacientes negros elegíveis a CDI de prevenção primária foram a recomendação do médico assistente, a percepção do próprio paciente sobre seu estado de saúde cardíaco, e o desejo de prolongar a vida pela família — não a informação estatística abstrata isolada. Isso não significa abrir mão da decisão compartilhada nem impor a conduta, mas sim reconhecer que uma recomendação franca e clara do cardiologista, combinada a ferramenta de apoio à decisão, é o que os próprios pacientes relataram valorizar mais nessa população historicamente sub-representada nos ensaios de dispositivo.",
+    "source_refs": [
+      "Jackson LR 2nd, McKenna K, Corneli A, Dombeck C, Brelsford K, Thomas KL. Assisting Black Patients With Decision-Making for Implantable Cardioverter Defibrillator Therapy: Qualitative Findings From the VIVID Trial. Circ Cardiovasc Qual Outcomes. 2024;17(7):e010550. DOI: 10.1161/CIRCOUTCOMES.123.010550. PMID: 38864226"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "perda-de-consciencia-atipica-em-jovem-escore-de-calgary-sindrome-versus-crise",
+    "titulo": "Perda de consciência com abalos musculares em jovem: síncope convulsiva ou crise epiléptica?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 22 anos, episódio de perda de consciência em pé, após ficar muito tempo em fila no calor, precedido por náusea, visão turva e sudorese fria, com breves abalos musculares generalizados durante o episódio, recuperação da consciência em menos de 1 minuto, sem confusão pós-ictal prolongada nem mordedura de língua lateral. Encaminhada com hipótese de \"primeira crise convulsiva\".",
+    "pergunta": "Com base no escore histórico que diferencia síncope de crise epiléptica, qual conjunto de achados pesa a favor de síncope (possivelmente convulsiva) em vez de crise epiléptica?",
+    "opcoes": [
+      "Os abalos musculares durante o episódio já definem o diagnóstico de crise epiléptica, independentemente do restante da história",
+      "Pródromo típico (náusea, visão turva, sudorese fria) antes do evento, gatilho postural/situacional (ortostatismo prolongado, calor), recuperação rápida da consciência e ausência de confusão pós-ictal prolongada ou mordedura lateral de língua — o conjunto de sintomas ao redor do episódio, não os abalos isolados, é o que discrimina síncope de crise no escore validado",
+      "Só o eletroencefalograma pode diferenciar as duas condições; a história clínica não tem valor discriminativo comprovado",
+      "A idade da paciente já exclui crise epiléptica como possibilidade diagnóstica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O escore derivado por Sheldon et al. (JACC 2002) mostrou que um conjunto de características históricas — não apenas a presença de abalos musculares, que também ocorrem na síncope convulsiva por hipóxia cerebral transitória — discrimina crise epiléptica de síncope com 94% de sensibilidade e especificidade. Pródromo autonômico típico, gatilho situacional/ortostático, recuperação rápida da consciência e ausência de confusão pós-ictal prolongada ou mordedura lateral de língua pesam a favor de síncope. O caso descrito tem o padrão clássico de síncope vasovagal (possivelmente com componente convulsivo), não de crise epiléptica primária, apesar dos abalos musculares presentes.",
+    "source_refs": [
+      "Sheldon R, Rose S, Ritchie D, et al. Historical criteria that distinguish syncope from seizures. J Am Coll Cardiol. 2002;40(1):142-8. DOI: 10.1016/s0735-1097(02)01940-x. PMID: 12103268"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "infarto-prematuro-com-ldl-normal-dosar-lipoproteina-a",
+    "titulo": "Infarto prematuro com LDL normal: qual exame lipídico adicional considerar?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 44 anos, infarto agudo do miocárdio sem outros fatores de risco maiores identificados — não fumante, não diabético, PA normal, IMC normal. Perfil lipídico do momento: LDL-C 98 mg/dL, HDL-C 45 mg/dL, triglicerídeos 110 mg/dL — todos dentro da faixa considerada aceitável. História familiar positiva para infarto precoce no pai (52 anos) e em um tio paterno.",
+    "pergunta": "Diante de infarto prematuro com perfil lipídico convencional normal e história familiar positiva, qual exame lipídico adicional tem maior justificativa neste caso?",
+    "opcoes": [
+      "Nenhum exame adicional é necessário, já que o LDL está dentro da meta",
+      "Dosar lipoproteína(a) — os estudos de Copenhague mostraram, por randomização mendeliana usando o polimorfismo genético KIV-2, que a Lp(a) elevada é fator de risco causal de infarto independente do LDL, e o padrão de infarto prematuro com forte histórico familiar e LDL normal é justamente o cenário clínico em que a Lp(a) elevada geneticamente determinada costuma explicar o risco não capturado pelo perfil lipídico convencional",
+      "Repetir apenas o LDL-C em jejum mais rigoroso, pois o valor atual pode estar artefatado",
+      "Solicitar apenas colesterol total, que é mais sensível que o LDL calculado para detectar risco residual"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo de Kamstrup et al. (JAMA 2009), combinando três coortes de Copenhague, usou o polimorfismo de repetições KIV-2 da lipoproteína(a) como variável instrumental (randomização mendeliana) e confirmou que a Lp(a) geneticamente elevada é causalmente associada a maior risco de infarto do miocárdio, com risco crescente e consistente por faixa de nível plasmático — de forma independente do LDL-C. O quadro de infarto prematuro, forte agregação familiar e perfil lipídico convencional dentro da normalidade é o cenário clássico em que a Lp(a) elevada, um fator de risco geneticamente determinado e não capturado pelo LDL, costuma explicar o risco aparentemente inexplicado — daí a recomendação de dosá-la ao menos uma vez na vida, sobretudo neste contexto.",
+    "source_refs": [
+      "Kamstrup PR, Tybjærg-Hansen A, Steffensen R, Nordestgaard BG. Genetically elevated lipoprotein(a) and increased risk of myocardial infarction. JAMA. 2009;301(22):2331-9. DOI: 10.1001/jama.2009.801. PMID: 19509380"
+    ],
+    "review_status": "revisado"
   }
 ]
