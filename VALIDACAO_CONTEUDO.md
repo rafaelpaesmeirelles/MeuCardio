@@ -501,3 +501,85 @@ fica para a próxima rodada.
 - Integridade referencial dos 7 itens de `97d639c`/`a7c275f` contra os documentos de origem.
 
 ---
+
+## Rodada 7 — 07/08/2026
+
+### Commit `9f03e46` — Gravidez: +8 evidências (ACC/AHA 2022 doença aórtica, gestação/aortopatia) + 3 estudos
+
+**Destaque de qualidade nesta rodada.** PMID 36322642 (2022 ACC/AHA Guideline for the Diagnosis and
+Management of Aortic Disease) confere exatamente no PubMed, e **o PMC9876736 citado é real e foi
+acessado por completo** (texto integral aberto). **As 8 recomendações Classe/Nível foram conferidas
+PALAVRA POR PALAVRA contra a tabela original da diretriz — todas batem exatamente**, inclusive
+classe, nível de evidência e os cortes numéricos em cm:
+- *"In pregnant patients with a history of chronic aortic dissection, cesarean delivery is
+  recommended"* — I/C-EO ✓
+- *"...aortic diameter of <4.0 cm, vaginal delivery... is recommended"* — I/C-EO ✓
+- *"...≥4.5 cm, cesarean delivery is reasonable"* — IIa/C-EO ✓
+- *"...4.0 cm to 4.5 cm, vaginal delivery with regional anesthesia, expedited second stage, and
+  assisted delivery may be reasonable"* — IIb/C-EO ✓
+- *"...syndromic and nsHTAD, and a diameter... of 4.0 cm to 4.5 cm, cesarean delivery may be
+  considered"* — IIb/C-EO ✓
+- *"Marfan syndrome and an aortic root diameter of >4.5 cm, aortic surgery before pregnancy is
+  recommended"* — I/C-LD ✓
+- *"...4.0 cm to 4.5 cm, aortic surgery before pregnancy may be considered, especially... rapid
+  aortic growth of ≥0.3 cm/y or a family history of aortic dissection"* — IIb/C-LD ✓ (limiar de
+  crescimento e histórico familiar batem literalmente)
+- Vigilância ecocardiográfica "a cada trimestre" — confirmado no corpo do texto da diretriz.
+
+**Os 3 estudos** (REBECGA PMID null/DOI `10.36660/abc.20240807i`, Pillarisetti 2014 PMID 24814494,
+Hosseinpour 2022 PMID 35883253) — **todos os PMIDs/DOI batem exatamente**. Números do Pillarisetti
+conferidos linha a linha: **batem exatamente** (100 pacientes, 55%/39%/6% por raça, idade 30±6,
+FEVE 28±9%, 42% melhora, HR 3,0 p=0,01 pós-parto, HR 2,2 p=0,01 raça, mortalidade 15% vs. 5%
+p=0,1, ICD em 12% dos sem melhora). **Boa prática destacada**: para o REBECGA, sem PMID indexado no
+PubMed, o campo foi gravado como `"pmid": null` em vez de omitido ou inventado, com o DOI
+confirmado de forma independente no Crossref (conferido aqui também: resolve para o artigo certo,
+"REBECGA: Brazilian Registry of Heart Disease and Pregnancy...", Arq Bras Cardiol 2025).
+
+**Resultado: PASSA integralmente, com destaque positivo pela exatidão literal das 8 recomendações
+Classe/Nível.**
+
+### Commit `a093e2a` — estudos: +5 estudos de Saúde mental e cardiologia (INTERHEART, Mostofsky, Kivimäki, SUPRIM, Roest)
+
+**Conferido: os 5 PMIDs batem exatamente** no registro do PubMed (INTERHEART 15364185, Mostofsky
+2012 22230481, Kivimäki 2012 22981903, SUPRIM 21263103, Roest 2010 20620715). **Números conferidos
+linha a linha contra os abstracts, todos batendo exatamente**: Mostofsky (270/1985 13,6%, 19 em 1
+dia, incidência elevada 21,1× [13,1-34,1], risco absoluto 1/1394 vs. 1/320), Kivimäki (197.473
+participantes, 30.214/15% job strain, 2358 eventos, HR 1,23 [1,10-1,37], publicados 1,43 vs. não
+publicados 1,16, exclusão 3 anos 1,31 e 5 anos 1,30, PAR 3,4%) — **um número do Kivimäki não pôde
+ser conferido contra o abstract** (HR ajustado multivariável completo 1,17 [1,05-1,31], que a
+entrada cita mas não aparece no resumo indexado, só o HR ajustado por idade/sexo de 1,23 aparece —
+não é contraditório, só não verificável só pelo abstract, provavelmente do corpo do artigo).
+
+**🔁 Novo caso de duplicata de PMID, mesmo padrão dos 4 já registrados na Rodada 1 e o MOMENTUM 3 da
+Rodada 6**: PMID 15364185 (INTERHEART) agora aparece **duas vezes** em `estudos/metadados.json`,
+sob slugs diferentes — `interheart-fatores-de-risco-modificaveis-para-infarto-no-mundo` (já
+existente, sincronizada por `b88c0ae`/`b0fbe93`) e `interheart-fator-psicossocial-risco-de-infarto`
+(nova, introduzida por este commit `a093e2a`). São o mesmo estudo (mesmo PMID/DOI) cadastrado duas
+vezes com ângulos de leitura diferentes (fatores de risco em geral vs. recorte psicossocial
+específico) — não é erro de fato (os números da nova entrada batem com a fonte real), é o mesmo
+padrão de duplicação de conteúdo já sinalizado à sessão orquestradora. `estudos/metadados.json`
+passou de 4 para **5 PMIDs duplicados** com este commit.
+
+**Resultado: PASSA quanto a exatidão de PMID/números; acrescenta uma 5ª duplicata de estudo à lista
+já registrada.**
+
+### Commit `311ffce` — casos-clinicos: +10 novos (Comunicação clínica, Farmacologia, Geral, Saúde mental, Calculadoras)
+
+**Verificação leve, por falta de tempo**: os 18 PMIDs citados nos 10 casos foram checados **apenas
+quanto a existência/registro** (não os números do corpo do caso) — todos resolvem a registros reais
+no PubMed, incluindo dois PMIDs de 8 dígitos incomuns (41277145, 42471187) que **conferem como
+publicações reais de 2026** ("Systematic Review and Meta-Analysis of Mortality in Patients With
+Anorexia Nervosa", Int J Eat Disord 2026; "Association of lithium treatment with incident
+cardiovascular disease...", J Affect Disord 2026) — não são PMID inventado, é só o número de
+identificação já ter avançado bastante em 2026. **Números do corpo de cada caso não foram
+conferidos nesta rodada.**
+
+### JSON válido (confirmado após as 3 rodadas de commits)
+`python3 -c "import json; json.load(open('estudos/metadados.json'))"` e o mesmo para
+`evidencias/metadados.json` e `casos-clinicos/metadados.json` — todos válidos.
+
+### Não verificado por falta de tempo nesta rodada (rodada 7)
+- Números do corpo dos 10 casos clínicos do commit `311ffce` contra as fontes citadas.
+- O restante do backlog mais antigo (40 documentos de `b88c0ae`, 9 estudos de `051cc7a`).
+
+---
