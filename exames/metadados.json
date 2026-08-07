@@ -6631,5 +6631,51 @@
       "quimioterapia em altas doses",
       "cardio-oncologia"
     ]
+  },
+  {
+    "slug": "rastreio-de-depressao-pelo-phq-9-no-paciente-com-doenca-coronariana",
+    "name": "Rastreio de depressão (PHQ-9) no paciente com doença coronariana",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Questionário estruturado e autoaplicável (Patient Health Questionnaire-9) que pontua a presença e intensidade de sintomas depressivos ao longo das duas semanas anteriores — usado como instrumento de rastreio (não diagnóstico definitivo) de depressão em paciente com doença coronariana, população em que a depressão é comum e prognosticamente relevante.",
+    "reference_range": "Pontuação de 0 a 27; cortes convencionais de gravidade sintomática crescente ao longo da escala. A declaração científica da American Heart Association (Lichtman et al.) recomenda rastreio ativo de sintomas depressivos em todo paciente com doença coronariana, com encaminhamento para avaliação diagnóstica formal quando o rastreio for positivo — o instrumento de rastreio não substitui a entrevista clínica para diagnóstico de transtorno depressivo maior.",
+    "indications": "Rastreio sistemático de depressão em paciente internado ou ambulatorial com doença coronariana estabelecida (após infarto, angioplastia, cirurgia de revascularização), dada a associação independente entre depressão e maior morbimortalidade cardiovascular nessa população.",
+    "interpretation": "A declaração científica multissocietária da American Heart Association (endossada pela American Psychiatric Association) revisou a evidência ligando depressão a doença coronariana — associação independente com maior morbidade e mortalidade cardiovascular — e recomendou que testes de rastreio de sintomas depressivos sejam aplicados sistematicamente para identificar pacientes que necessitem avaliação e tratamento adicionais, com via estruturada de assessment, encaminhamento e tratamento para quem pontuar positivo.",
+    "limitations": "É instrumento de rastreio, não diagnóstico — resultado positivo exige confirmação por avaliação clínica estruturada antes de rotular o paciente como tendo transtorno depressivo maior. Sintomas somáticos de depressão (fadiga, alteração de sono e apetite) se sobrepõem a sintomas comuns da própria doença cardíaca e de sua fase de recuperação, o que pode gerar falso-positivo se aplicado sem essa ressalva.",
+    "source_refs": [
+      "Lichtman JH, Bigger JT Jr, Blumenthal JA, Frasure-Smith N, Kaufmann PG, Lespérance F, Mark DB, Sheps DS, Taylor CB, Froelicher ES; American Heart Association Prevention Committee of the Council on Cardiovascular Nursing, Council on Clinical Cardiology, Council on Epidemiology and Prevention, and Interdisciplinary Council on Quality of Care and Outcomes Research. Depression and coronary heart disease: recommendations for screening, referral, and treatment: a science advisory from the American Heart Association Prevention Committee. Circulation. 2008;118(17):1768-1775. Republicado em Prog Cardiovasc Nurs. 2009;24(1):19-26. DOI: 10.1111/j.1751-7117.2009.00028.x. PMID: 19261139"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "phq-9",
+      "rastreio de depressao",
+      "doenca coronariana",
+      "saude mental",
+      "aha science advisory"
+    ]
+  },
+  {
+    "slug": "smartwatch-e-notificacao-de-pulso-irregular-no-rastreio-de-fibrilacao-atrial",
+    "name": "Smartwatch com notificação de pulso irregular no rastreio de fibrilação atrial",
+    "category": "metodo_grafico",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Algoritmo de sensor óptico (fotopletismografia) embarcado em relógio inteligente, que analisa o pulso periférico continuamente durante o uso habitual do dispositivo e gera notificação quando detecta padrão de pulso irregular sugestivo de fibrilação atrial — ferramenta de rastreio populacional em massa, não exame diagnóstico confirmatório por si só.",
+    "reference_range": "Não se aplica valor numérico de referência. No Apple Heart Study, entre os participantes notificados que devolveram o adesivo de ECG para análise, fibrilação atrial foi confirmada em 34% dos casos (IC97,5% 29-39%) no geral, e em 35% dos participantes com 65 anos ou mais; o valor preditivo positivo da notificação de pulso irregular para FA simultânea no ECG foi de 0,84 (IC95% 0,76-0,92).",
+    "indications": "Rastreio assintomático de fibrilação atrial paroxística em uso populacional amplo de dispositivo vestível, com confirmação subsequente por ECG de monitorização prolongada (adesivo/Holter) em quem recebe notificação de pulso irregular — nunca como diagnóstico definitivo isolado.",
+    "interpretation": "O Apple Heart Study recrutou 419.297 participantes sem fibrilação atrial conhecida (autorrelato), acompanhados por app de smartphone/smartwatch por mediana de 117 dias. Apenas 2.161 participantes (0,52%) receberam notificação de pulso irregular. Dos 450 que devolveram adesivo de ECG com dados analisáveis (aplicado em média 13 dias após a notificação), fibrilação atrial foi confirmada em 34% (IC97,5% 29-39%) — ou seja, a maioria das notificações NÃO correspondeu a FA confirmada no período de monitorização subsequente. Entre os notificados que responderam à pesquisa de 90 dias, 57% contataram profissional de saúde fora do estudo por conta da notificação.",
+    "limitations": "Baixa taxa de notificação (0,52%) e valor preditivo positivo moderado (34% de confirmação por ECG entre os notificados) — a maioria das notificações não representa fibrilação atrial confirmada no período estudado, o que pode gerar ansiedade e utilização de serviço de saúde desnecessária se o resultado não for comunicado com essa ressalva. Não substitui ECG de 12 derivações ou monitorização prolongada validada para diagnóstico; população do estudo foi autosselecionada (usuários de smartphone dispostos a participar), o que limita a generalização direta para a população geral.",
+    "source_refs": [
+      "Perez MV, Mahaffey KW, Hedlin H, Rumsfeld JS, Garcia A, Ferris T, Balasubramanian V, Russo AM, Rajmane A, Cheung L, Hung G, Lee J, Kowey P, Talati N, Nag D, Gummidipundi SE, Beatty A, Hills MT, Desai S, Granger CB, Desai M, Turakhia MP; Apple Heart Study Investigators. Large-Scale Assessment of a Smartwatch to Identify Atrial Fibrillation. N Engl J Med. 2019;381(20):1909-1917. DOI: 10.1056/NEJMoa1901183. PMID: 31722151"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "smartwatch",
+      "rastreio de fibrilacao atrial",
+      "fotopletismografia",
+      "pulso irregular",
+      "apple heart study"
+    ]
   }
 ]
