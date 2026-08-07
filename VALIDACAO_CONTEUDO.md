@@ -620,3 +620,83 @@ valores numéricos/de referência do corpo de cada exame** nesta rodada.
 - Backlog mais antigo ainda pendente (40 documentos de `b88c0ae`, 9 estudos de `051cc7a`).
 
 ---
+
+## Rodada 9 — 07/08/2026
+
+### Commit `7cafdfc` — estudos: +4 estudos de Hipertensão pulmonar/CTEPH (RACE, MR BPA, MERIT-1, Delcroix 2016)
+
+**Destaque de qualidade — tratamento correto de um caso real de retratação/republicação.**
+Conferidos os 6 PMIDs envolvidos: RACE 35926542, MR BPA 35926544, MERIT-1 republicado 38548406,
+MERIT-1 original 28919201, nota de retratação 38552648, Delcroix 26826181 — **todos batem
+exatamente** no registro do PubMed. **Confirmado de forma independente que a história de
+retratação é real e está descrita com exatidão**: o PMID 28919201 (versão original do MERIT-1,
+2017) tem literalmente `"Retracted Publication"` no campo `PubType` do PubMed; o PMID 38552648 é a
+nota formal `"Retraction and republication-Macitentan for the treatment of inoperable CTEPH
+(MERIT-1)..."`, `PubType: "Retraction Notice"`; e o PMID 38548406 é a versão republicada de 2024,
+corretamente identificada no commit como *"a versão vigente a citar"*. O item já registra
+explicitamente que não conseguiu ler a nota de retratação na íntegra (bloqueio de acesso) e
+reconstruiu a história por buscas convergentes — postura correta, e a reconstrução **bateu com o
+que os metadados do PubMed confirmam de forma independente**.
+
+**Números conferidos linha a linha contra os abstracts, todos batendo exatamente:**
+- RACE: 39,9% [36,2-44,0] vs. 66,7% [60,5-73,5], razão 0,60 [0,52-0,69] p<0,0001; EAG 22/52 (42%)
+  vs. 5/53 (9%); lesão pulmonar 35%, hipotensão/síncope 4%.
+- MERIT-1 (versão republicada): 186 rastreados/48 hospitais/20 países, 80 randomizados 40/40, RVP
+  71,5% vs. 87,6%, razão 0,81 [0,70-0,95] p=0,0098; edema periférico 9/40 (23%), queda de Hb 6/40
+  (15%).
+
+**Resultado: PASSA integralmente**, com destaque muito positivo pelo manejo correto e verificável
+de uma situação editorial complexa (retratação + republicação) que seria fácil de citar errado.
+
+### Commit `a60d0ed` — exames: +3 novos (Saúde mental, Terapia intensiva, Fibrilação atrial)
+
+**Conferido: os 3 PMIDs batem exatamente** no registro do PubMed (cortisol capilar e doença
+cardiovascular 23596141, protocolo RUSH 19945597, integração de TC 3D pré-ablação de FA 16643352).
+Números do corpo não verificados nesta rodada.
+
+### Balanço acumulado desta sessão de validação (9 rodadas)
+**Commits de conteúdo revisados: 21** (`ea22393`, `4f877f4`, `384bcfb`, `b876fde`, `d43468d`,
+`3b2084b`, `e499b1b`, `cbc9b02`, `6d75f90`, `309cac7`, `3557cbc`, `0cd86cb`, `cc4d367`, `392a365`,
+`ec5481d`, `b88c0ae`* (parcial), `051cc7a`, `97d639c`, `a7c275f`, `9f03e46`, `a093e2a`, `311ffce`*
+(parcial), `731fe54`, `db4c8fc`* (parcial), `b274423`, `7cafdfc`, `a60d0ed` — 26 ao todo, 3 deles só
+por amostragem/PMID por serem grandes demais para cobertura total no tempo desta sessão).
+
+**Erros reais encontrados e documentados para a sessão orquestradora corrigir (nenhum corrigido por
+mim, conforme instrução):**
+1. **DOI errado** no estudo PARROT (`estudos/metadados.json`, slug
+   `parrot-plgf-revelado-ao-clinico-na-pre-eclampsia-suspeita`) — aponta para um editorial não
+   relacionado do Lancet. Correto: `10.1016/S0140-6736(18)33212-4`.
+2. **p-valor com ordem de grandeza errada** na evidência de troca para riociguate (HP 2026 SBPT,
+   slug `hp-troca-para-riociguate-em-risco-intermediario`) — grava p=0,007, o correto (REPLACE,
+   PMID 33773120) é p=0,0007.
+3. **Nível de evidência errado** na recomendação de TAVI (ESC/EACTS 2021, slug
+   `estenose-aortica-tavi-recomendada-em-idoso-ou-alto-risco-sts-prom`) — grava Nível B, a tabela
+   original tem Nível A.
+4. **DOI errado** no caso clínico de cardite de Lyme (`casos-clinicos/metadados.json`, slug
+   `bloqueio-atrioventricular-total-em-jovem-com-artralgia-migratoria-cardite-de-lyme`) — aponta
+   para um ensaio de evolocumabe não relacionado. Correto: `10.1002/clc.23102`.
+
+**Duplicatas de PMID/estudo (mesmo artigo cadastrado duas vezes sob slugs diferentes) — 5 pares
+confirmados em `estudos/metadados.json`, nenhuma delas erro de fato, mas infla a contagem de itens
+com conteúdo redundante:**
+Ben-Farhat (PMID 9462525), INVICTUS (36036525), MOMENTUM 3 (30883052, origem localizada nesta
+sessão: commits `3e55efe` + `051cc7a`), SCD-HeFT (15659722), e agora **INTERHEART (15364185,
+achada nesta sessão, commits `b88c0ae`/`b0fbe93` + `a093e2a`)**.
+
+**Tudo o mais verificado nesta sessão passou** — dezenas de PMIDs/DOIs conferidos via PubMed
+E-utilities e Crossref, com abstracts lidos linha a linha e comparados número a número contra o
+conteúdo publicado; a esmagadora maioria bate exatamente, inclusive em casos difíceis (retratação/
+republicação do MERIT-1, inconsistência real de denominador no próprio abstract do PROACTIVE
+corretamente sinalizada como tal, recomendações Classe/Nível conferidas palavra por palavra contra
+o texto integral aberto de duas diretrizes ESC/AHA).
+
+### Não verificado por falta de tempo (acumulado, para a próxima sessão de validação)
+- 40 dos 42 documentos de `content/` do commit `b88c0ae` (só 2 verificados a fundo).
+- 9 dos 13 estudos de `051cc7a`, as 9 recomendações restantes de `db4c8fc`, números do corpo dos
+  casos clínicos de `311ffce`, valores de referência dos exames de `b274423`/`a60d0ed`.
+- Toda a frente de `galeria/`/`exames/`/`content/` mais antiga do agente que trabalha em
+  `casos-clinicos/`+`trilhas/`+`galeria/`+`exames/` (segunda frente descrita no prompt desta
+  sessão) — a maior parte dos commits revisados nesta sessão veio de uma única frente de conteúdo;
+  não houve tempo de cobrir a segunda frente em profundidade equivalente.
+
+---
