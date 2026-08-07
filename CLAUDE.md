@@ -1,5 +1,45 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026: Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico
+> Função nova pedida pelo Rafael: reúne conteúdo científico de Perioperatório e as calculadoras de
+> risco cirúrgico validadas (RCRI — Lee 1999; Gupta MICA — Circulation 2011) num documento pronto
+> para assinar, imprimir e enviar ao paciente. Rota `/avaliacao-preoperatoria`, menu "Pacientes e
+> prática", link também dentro de Documentos.
+>
+> **Decisão de arquitetura que economizou a maior parte do trabalho**: o documento gerado é um
+> `GeneratedDocument` comum (mesma tabela de atestado/laudo) — então as rotas já existentes de
+> `app/api/documents.py` (`/gerados/{id}/pdf`, `/assinatura-externa`, `/enviar-email`) servem este
+> documento **sem nenhuma alteração**, porque operam só em `GeneratedDocument.id`, agnósticas a como
+> o registro foi criado. Isso trouxe de graça, sem escrever uma linha: identidade visual Corvia +
+> logo pessoal opcional + endereço comercial/residencial (`documento_generico()`), todo o catálogo
+> de provedores de assinatura já existente (inclusive gov.br via Assinador ITI, Trabalho 14), e o
+> envio por e-mail via CorvIA Mail com link seguro de 7 dias. O único endpoint novo
+> (`POST /api/avaliacao-preoperatoria/gerar`) só monta o corpo do documento e cria o registro —
+> e **recalcula os dois escores no servidor** a partir dos campos brutos, nunca confiando num
+> resultado que o cliente diga ter obtido (mesma régua de "nunca fabricar dado", aplicada aqui a
+> cálculo, não só a texto).
+>
+> **RCRI**: 6 critérios binários, 1 ponto cada, 4 classes de risco com taxa de evento da coorte
+> original (Lee TH et al. Circulation. 1999;100(10):1043-1049) — mesmo padrão de calculadora de
+> escore simples já usado em CHA₂DS₂-VASc/HAS-BLED.
+>
+> **Gupta MICA**: regressão logística (idade, status funcional, classe ASA, creatinina, tipo de
+> procedimento — 21 categorias) — Gupta PK et al. Circulation. 2011;124(4):381-387. **Fonte dos
+> coeficientes declarada como secundária**: a fórmula/coeficientes exatos foram conferidos contra
+> duas calculadoras de terceiros independentes (omnicalculator.com/health/mica e mdapp.co),
+> convergentes em todos os valores exceto um artefato óbvio de transcrição num deles (coeficiente
+> de idade 0,2 vs 0,02 — ficou com 0,02, consistente com a segunda fonte e com o que a literatura
+> cita). Registrado explicitamente no campo `reference`, mesma transparência de fonte fraca já
+> praticada em outras calculadoras do sistema (ex. revisão narrativa de amiodarona/tireoide).
+>
+> **Verificação**: 2 casos de fronteira calculados à mão antes de escrever o teste (paciente de
+> baixo risco ~0,06% e de alto risco ~20,4%), 26 testes novos (RCRI + Gupta MICA + integração pela
+> rota HTTP real — geração, listagem em `/document-templates/gerados`, PDF real `%PDF-`, recusa
+> 422 sem nenhum escore calculado), todos passando. Suíte completa do backend sem regressão:
+> **634/636** (as 2 falhas são pré-existentes, de outra frente — redis indisponível no ambiente
+> local de teste, e um item `pendente_revisao` em `estudos/metadados.json` que o teste
+> `test_canonical_content_review_status.py` já cobrava antes desta mudança).
+
 > ## ✅ VARREDURA GERAL DE PUBLICAÇÃO, 07/08/2026 ~14h — zero pendência, zero órfão
 > Pedido do Rafael: "suspenda a produção de conteúdo por enquanto, valide tudo que foi feito por
 > ti, pelos agentes e pelo chat gpt, publique tudo". Rodada nas 11 frentes com coluna `published`,
