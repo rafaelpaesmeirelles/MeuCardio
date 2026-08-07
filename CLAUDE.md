@@ -1,5 +1,61 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026: recarregamento sempre atualizado + Calculadora de Doses Cardiológicas
+> Dois pedidos do Rafael no mesmo dia, os dois publicados e verificados em produção (backend e
+> frontend rebuildados, bundle novo confirmado servido pelo Caddy).
+>
+> **1. Recarregamento sempre atualizado.** O pedido literal era forçar recarga completa a cada
+> login, reload e navegação interna — **decisão consciente de não implementar ao pé da letra**: um
+> reload de página inteira a cada clique de navegação em uma SPA quebraria a experiência (flicker,
+> perda de posição de rolagem, mais lento) e não é o que o pedido realmente precisa resolver. O que
+> foi implementado ataca a causa raiz real, achada ao investigar: `vite.config.ts` tinha
+> `StaleWhileRevalidate` para `/api/(library|calculators|drugs|material-paciente)` — o assinante via
+> a versão em CACHE primeiro (revalidação só acontece DEPOIS, em segundo plano), então a primeira
+> abertura de cada tela nessas frentes mostrava conteúdo desatualizado mesmo com internet boa.
+> Trocado para `NetworkFirst` (timeout 4s, cai pro cache só se a rede falhar/demorar) —
+> `/api/emergencia` manteve SWR de propósito (offline-first documentado). Além disso: verificação de
+> versão nova do service worker no boot, no foco da aba (`visibilitychange`/`pageshow`) e a cada
+> troca de rota (`useLocation` em `App.tsx`) — barata (só um `.update()`, não recarrega nada por si
+> só) e só dispara reload de fato quando HÁ uma versão nova (mecanismo de `controllerchange` que já
+> existia). Login passou a fazer navegação completa (`window.location.href`) em vez de troca de
+> estado via React Router, garantindo bundle e conteúdo atuais a cada novo login sem custo de UX
+> (já é um momento de transição de tela).
+>
+> **2. Calculadoras: busca com 2 filtros (texto + tema) e nova "Calculadora de Doses
+> Cardiológicas".** Mesmo padrão de busca já usado em Apresentação/Emergência. A função nova é uma
+> seção própria e visualmente destacada dentro de Calculadoras, com **9 calculadoras de dose**
+> (cobertura inicial pedida pelo Rafael: Cardiologia Geral, Cardiologia Pediátrica, Medicina
+> Intensiva — a lista cresce depois, mesmo padrão de toda outra frente do produto):
+> - **Infusão contínua por peso** (Medicina Intensiva) — um calculador só, com seletor de 9
+>   fármacos (noradrenalina, adrenalina, dobutamina, dopamina, milrinona, vasopressina,
+>   nitroglicerina, nitroprussiato, propofol, fentanil), calcula mL/h e gotas/min a partir de
+>   peso + dose-alvo + diluição preparada. Uma fórmula só, testada por análise dimensional, em vez
+>   de 9 calculadoras quase-duplicadas — reduz risco de erro de fórmula.
+> - **Heparina não fracionada** (nomograma peso-ajustado, Raschke 1993), **enoxaparina** (dose por
+>   indicação + ajuste renal) e **digoxina** (impregnação + manutenção) — Cardiologia Geral.
+> - **Adrenalina, amiodarona, choque elétrico (desfibrilação/cardioversão), adenosina e atropina**
+>   em PCR/emergência pediátrica — Cardiologia Pediátrica, todas PALS 2020 (Topjian AA et al.
+>   Circulation. 2020;142(16_suppl_2):S469-S523).
+> **Nenhuma calculadora bloqueia dose fora da faixa usual — só avisa** (`fora_da_faixa` no
+> resultado): cenário clínico real às vezes justifica dose fora do habitual, e a decisão é do
+> médico. Faixas de dose com fonte citada em cada `reference`; onde a fonte é secundária (cartão
+> de referência de UTI, monografia agregada) em vez de bula/diretriz primária, isso está **declarado
+> explicitamente**, nunca escondido — mesmo padrão de honestidade de fonte já usado nas 18
+> calculadoras de escore existentes.
+> **Arquitetura**: reaproveita 100% a infraestrutura de `Calculator`/`Field`/`run()` já existente
+> (zero endpoint novo) — só um campo novo, `Calculator.kind` (`"escore"` default vs `"dose"`), que
+> `Calculadora.tsx` usa para mostrar a interpretação em prosa como resposta principal em vez do
+> número gigante pensado para escore/máximo (um resultado de dose não cabe nesse formato: `mL/h`,
+> `gotas/min`, texto de fármaco no meio do dict etc.). `dose_calculators.py` é módulo separado,
+> mesclado em `REGISTRY` no fim de `calculators.py`.
+> **Verificação, mesma régua das 12 calculadoras de escore da Tarefa Especial corvia2** ("erro em
+> calculadora clínica é pior que lacuna de conteúdo"): cada faixa de dose cruzada contra pelo menos
+> uma fonte (PALS 2020, Surviving Sepsis Campaign 2021, Raschke 1993 ou bula), e **cada fórmula
+> testada com caso numérico calculado à mão antes de escrever o teste** — 19 testes novos em
+> `test_dose_calculators.py`, todos passando (`./.venv/bin/python -m pytest`, fora do Docker, porque
+> o container de produção não tem bind-mount de código-fonte — mesmo obstáculo já documentado para
+> as calculadoras de escore).
+
 > ## ✅ CONCLUÍDO, 07/08/2026: os 12 órfãos de `drugs` foram EXCLUÍDOS DEFINITIVAMENTE (não só despublicados)
 > Pedido direto do Rafael ("exclua definitivamente os orfaos"). Os 12 slugs já despublicados desde
 > 01/08/2026 (`atropina`, `evinacumabe`, `metoprolol-succinato` ×3, `nitro*` ×2, `prasugrel-cloridrato`,
