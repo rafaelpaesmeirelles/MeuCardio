@@ -34228,5 +34228,83 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "avaliar-sintomas-por-metodos-que-ajudem-o-paciente-a-descrever-a-experiencia",
+    "statement": "Na síndrome coronariana aguda, é recomendado avaliar os sintomas do paciente por métodos que o ajudem a descrever sua experiência — recomendação de comunicação clínica com a mesma força formal (Classe I) dada a condutas farmacológicas na mesma diretriz.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Capítulo 14 (Patient perspectives), já citado e verificado em content/Comunicação_clínica/comunicacao-consentimento-e-alta-na-sindrome-coronariana-aguda-esc-2023.md.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "síndrome coronariana aguda",
+      "avaliação de sintomas",
+      "comunicação clínica",
+      "experiência do paciente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "qt-longo-decisao-compartilhada-genotipo-positivo-fenotipo-negativo",
+    "statement": "Na síndrome do QT longo, decisão compartilhada DEVE SER CONSIDERADA para participação esportiva em indivíduo genótipo-positivo/fenótipo-negativo (QTc <470ms em homens, <480ms em mulheres) — tipo e contexto do esporte (individual vs. coletivo), tipo de mutação e extensão das precauções devem ser considerados na conversa. Um teste de esforço negativo não tem valor preditivo nesse subgrupo e não encerra a discussão.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412 — seção 5.6.5 (QT longo), já citada e verificada em content/Comunicação_clínica/decisao-compartilhada-no-retorno-ao-esporte-competitivo-em-cardiopatia-com-risco-de-morte-subita-esc-2020.md.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "QT longo",
+      "decisão compartilhada",
+      "esporte competitivo",
+      "morte súbita cardíaca",
+      "genótipo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "brugada-pos-cdi-retorno-ao-esporte-decisao-compartilhada",
+    "statement": "Na síndrome de Brugada, após implante de cardiodesfibrilador (CDI), retomar esporte de lazer ou competitivo DEVE SER CONSIDERADO após decisão compartilhada, em quem não teve arritmia recorrente nos 3 meses seguintes ao implante — a decisão é um passo posterior, condicionado a essa janela de observação livre de evento.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412 — seção 5.6.6 (Brugada), já citada e verificada em content/Comunicação_clínica/decisao-compartilhada-no-retorno-ao-esporte-competitivo-em-cardiopatia-com-risco-de-morte-subita-esc-2020.md.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "síndrome de Brugada",
+      "cardiodesfibrilador implantável",
+      "decisão compartilhada",
+      "esporte competitivo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-cdi-decisao-compartilhada-continuar-esporte-intenso",
+    "statement": "Em portador de marca-passo ou CDI, decisão compartilhada DEVE SER CONSIDERADA nas decisões sobre continuar esporte intenso ou competitivo, levando em conta o efeito do esporte sobre o substrato arrítmico subjacente, o fato de que esporte intenso gera mais choques apropriados e inapropriados, o impacto psicológico dos choques sobre o atleta, e o risco potencial para terceiros. Sustentado por registro multinacional de segurança com 440 atletas em seguimento mediano de 44 meses, sem morte nem lesão física relacionada a choque ou arritmia em quem continuou esporte competitivo ou de alto risco após o implante.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412 — seção 5.6.7.2 (marca-passo/CDI), já citada e verificada em content/Comunicação_clínica/decisao-compartilhada-no-retorno-ao-esporte-competitivo-em-cardiopatia-com-risco-de-morte-subita-esc-2020.md.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "marca-passo",
+      "cardiodesfibrilador implantável",
+      "decisão compartilhada",
+      "esporte competitivo",
+      "risco para terceiros"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
