@@ -5,7 +5,7 @@ theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Abordagem do recém-nascido com choque, cianose ou acidose por possível fechamento do canal arterial em cardiopatia congênita crítica, com início precoce de PGE1/alprostadil e ecocardiograma urgente."
 review_status: revisado
-source_refs: ["Singh Y. Diagnosis and management of critical congenital heart defects in infants. Paediatr Child Health. 2022;32(9):332-338. DOI: 10.1016/j.paed.2022.07.003.", "Chan B, Singh Y. Prostaglandin E1: Infants With Critical Congenital Heart Defects. Neoreviews. 2024;25(12):e765-e779. DOI: 10.1542/neo.25-12-e765. PMID: 39616144.", "Bai S, et al. Standardizing Prostaglandin Initiation in Prenatally Diagnosed Ductal-Dependent Neonates; A Quality Initiative. Pediatr Cardiol. 2023. DOI: 10.1007/s00246-022-03075-9. PMID: 36538050."]
+source_refs: ["Singh Y. Diagnosis and management of critical congenital heart defects in infants. Paediatr Child Health. 2022;32(9):332-338. DOI: 10.1016/j.paed.2022.07.003.", "Chan B, Singh Y. Prostaglandin E1: Infants With Critical Congenital Heart Defects. Neoreviews. 2024;25(12):e765-e779. DOI: 10.1542/neo.25-12-e765. PMID: 39616144.", "Haughey BS, Elliott MR, Wiggin JY, et al. Standardizing Prostaglandin Initiation in Prenatally Diagnosed Ductal-Dependent Neonates; A Quality Initiative. Pediatr Cardiol. 2023;44(6):1327-1332. DOI: 10.1007/s00246-022-03075-9. PMID: 36538050."]
 ---
 
 # Colapso neonatal por cardiopatia congênita crítica canal-dependente
