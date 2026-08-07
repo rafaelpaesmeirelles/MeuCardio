@@ -5,6 +5,7 @@ Fonte: ChatGPT.
 """
 
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 
 
 def test_dasi_todas_atividades_soma_58_2():
@@ -122,39 +123,37 @@ def test_vsg_cri_revascularizacao_previa_subtrai_um_ponto():
     assert c.compute(payload)["score"] == 3
 
 
-def test_sort_v1_baseline_reproduz_intercepto_original():
-    c = PERIOPERATIVE_REGISTRY["sort-v1"]
+def test_sort_baseline_reproduz_probabilidade_do_intercepto_original():
+    c = SORT_PERIOPERATIVE_REGISTRY["sort"]
     r = c.compute({
         "idade": 50,
         "asa": 1,
         "urgencia": "eletiva",
         "especialidade_alto_risco": False,
-        "cirurgia_xmajor_complexa": False,
+        "xmajor_complexa": False,
         "cancer": False,
     })
-    assert r["preditor_linear"] == -7.366
-    assert r["risco_mortalidade_30d_pct"] == 0.06
+    assert r["risco_pct"] == 0.06
 
 
-def test_sort_v1_soma_coeficientes_publicados():
-    c = PERIOPERATIVE_REGISTRY["sort-v1"]
+def test_sort_soma_coeficientes_publicados():
+    c = SORT_PERIOPERATIVE_REGISTRY["sort"]
     r = c.compute({
         "idade": 70,
         "asa": 3,
         "urgencia": "urgente",
         "especialidade_alto_risco": True,
-        "cirurgia_xmajor_complexa": True,
+        "xmajor_complexa": True,
         "cancer": True,
     })
-    # -7,366 + 1,411 + 1,657 + 0,712 + 0,381 + 0,667 + 0,777 = -1,761.
-    assert r["preditor_linear"] == -1.761
-    assert r["risco_mortalidade_30d_pct"] == 14.67
+    # logit = -7,366 + 1,411 + 1,657 + 0,712 + 0,381 + 0,667 + 0,777 = -1,761.
+    assert r["risco_pct"] == 14.67
 
 
-def test_sort_v1_asa_i_e_ii_mesmo_coeficiente_zero():
-    c = PERIOPERATIVE_REGISTRY["sort-v1"]
+def test_sort_asa_i_e_ii_tem_mesmo_risco_quando_demais_variaveis_iguais():
+    c = SORT_PERIOPERATIVE_REGISTRY["sort"]
     base = {
         "idade": 50, "urgencia": "eletiva", "especialidade_alto_risco": False,
-        "cirurgia_xmajor_complexa": False, "cancer": False,
+        "xmajor_complexa": False, "cancer": False,
     }
-    assert c.compute({**base, "asa": 1})["preditor_linear"] == c.compute({**base, "asa": 2})["preditor_linear"]
+    assert c.compute({**base, "asa": 1})["risco_pct"] == c.compute({**base, "asa": 2})["risco_pct"]
