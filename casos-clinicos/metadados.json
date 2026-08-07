@@ -13662,5 +13662,205 @@
       "Cannon CP, Pratley R, Dagogo-Jack S, Mancuso J, Huyck S, Masiukiewicz U, Charbonnel B, Frederich R, Gallo S, Cosentino F, Shih WJ, Gantz I, Terra SG, Cherney DZI, McGuire DK. Cardiovascular Outcomes with Ertugliflozin in Type 2 Diabetes. N Engl J Med. 2020;383(15):1425-1435. DOI: 10.1056/NEJMoa2004967. PMID: 32966714"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "familiar-designado-acerta-a-preferencia-do-paciente-em-que-fracao-dos-casos",
+    "titulo": "Quanto o familiar designado realmente acerta a preferência do paciente incapacitado?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente idoso é internado em UTI com rebaixamento do nível de consciência e sem diretiva antecipada de vontade registrada. A esposa, designada informalmente como responsável, afirma com confiança: \"eu conheço meu marido há 40 anos, sei exatamente o que ele ia querer\". A equipe se prepara para seguir integralmente a decisão dela como se fosse a vontade do próprio paciente.",
+    "pergunta": "Segundo a revisão sistemática de Shalowitz, Garrett-Mayer e Wendler (2006, Arch Intern Med), que reuniu 16 estudos com 2.595 pares paciente-substituto, qual foi a acurácia média de decisores substitutos (familiares/procuradores) ao predizer a real preferência de tratamento do paciente, e o que a conversa prévia sobre o tema mudou nesse número?",
+    "opcoes": [
+      "Acurácia de 68% — substitutos erram a preferência real do paciente em cerca de 1 a cada 3 decisões, e nem a designação formal pelo paciente nem a conversa prévia sobre preferências melhoraram significativamente essa acurácia",
+      "Acurácia de 95% — substitutos próximos praticamente sempre acertam, validando a prática de seguir a família sem outras salvaguardas",
+      "Acurácia de 68%, mas a conversa prévia sobre preferências de tratamento elevou a acurácia para mais de 90%",
+      "O estudo não mediu acurácia — apenas descreveu como as decisões são tomadas na prática"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Shalowitz et al. (2006) reuniram 16 estudos (151 cenários hipotéticos, 2.595 pares paciente-substituto, 19.526 respostas pareadas) e encontraram acurácia geral de apenas 68% — ou seja, o substituto erra a real preferência do paciente em cerca de 1 em cada 3 decisões. Um achado contraintuitivo do estudo é que nem a designação formal do substituto pelo próprio paciente, nem ter conversado previamente sobre preferências de tratamento, melhoraram essa acurácia de forma significativa. Isso não significa que a opinião do familiar deva ser descartada — ele segue sendo, na ausência de diretiva antecipada, a melhor fonte disponível de julgamento substituto — mas justifica reforçar diretivas antecipadas explícitas por escrito e ferramentas estruturadas de planejamento antecipado de cuidados (como o vídeo educativo de Volandes et al. 2009 e o processo de Detering et al. 2010, já documentados no acervo), em vez de assumir que a proximidade afetiva garante acurácia na predição da vontade do paciente.",
+    "source_refs": [
+      "Shalowitz DI, Garrett-Mayer E, Wendler D. The accuracy of surrogate decision makers: a systematic review. Arch Intern Med. 2006;166(5):493-497. DOI: 10.1001/archinte.166.5.493. PMID: 16534034"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sexo-do-medico-emergencista-influencia-sobrevida-de-mulheres-com-infarto",
+    "titulo": "A concordância de gênero entre médico e paciente muda a sobrevida no infarto?",
+    "tema": "Comunicação clínica",
+    "nivel": "avançado",
+    "enunciado": "Em uma discussão sobre equidade na sala de emergência, um residente questiona se a composição de gênero da equipe plantonista realmente faz diferença clínica mensurável em desfecho duro (não só em satisfação do paciente), especificamente no atendimento de mulheres com infarto agudo do miocárdio.",
+    "pergunta": "O estudo retrospectivo de Greenwood, Carnahan e Huang (2018, PNAS), analisando pacientes admitidos com infarto em hospitais da Flórida entre 1991 e 2010, encontrou qual padrão de mortalidade conforme a concordância de sexo entre médico emergencista e paciente?",
+    "opcoes": [
+      "Mortalidade foi igual em todos os grupos, independentemente do sexo do médico ou do paciente",
+      "Mulheres tratadas por médicos homens tiveram mortalidade significativamente maior do que mulheres tratadas por médicas mulheres; homens tiveram desfecho semelhante independentemente do sexo do médico — e médicos homens com maior exposição prévia a pacientes mulheres tiveram melhor desempenho",
+      "Homens tratados por médicas mulheres tiveram a maior mortalidade de todos os grupos",
+      "O estudo encontrou associação, mas atribuiu integralmente à gravidade clínica de apresentação, sem relação com comunicação ou reconhecimento de sintomas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Greenwood et al. (2018) analisaram o censo de pacientes com infarto agudo do miocárdio admitidos em hospitais da Flórida (1991-2010) e encontraram maior mortalidade em mulheres tratadas por médicos homens, comparado a mulheres tratadas por médicas mulheres — enquanto homens tiveram desfecho semelhante independentemente do sexo do médico. Um achado adicional relevante: médicos homens com maior exposição prévia a pacientes mulheres (mais colegas mulheres na equipe, mais casos tratados antes) e médicas mulheres tiveram mais sucesso tratando pacientes mulheres, sugerindo papel de familiaridade/experiência somado ao de possível viés implícito. É um estudo observacional retrospectivo — não estabelece mecanismo causal direto — mas se soma a outras evidências já no acervo (Schulman 1999 sobre viés de raça/sexo na indicação de cateterismo, e o documento sobre sintomas prodrômicos atípicos de infarto em mulheres) sobre a existência de lacunas de reconhecimento e tratamento por sexo do paciente na síndrome coronariana aguda.",
+    "source_refs": [
+      "Greenwood BN, Carnahan S, Huang L. Patient-physician gender concordance and increased mortality among female heart attack patients. Proc Natl Acad Sci U S A. 2018;115(34):8569-8574. DOI: 10.1073/pnas.1800097115. PMID: 30082406"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lifes-essential-8-o-que-mudou-em-relacao-ao-lifes-simple-7",
+    "titulo": "Life's Essential 8: o que mudou em relação ao antigo Life's Simple 7?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Um médico da atenção primária, acostumado a usar o antigo construto \"Life's Simple 7\" da American Heart Association para orientar pacientes sobre saúde cardiovascular, ouve falar do \"Life's Essential 8\", lançado em 2022, e quer saber exatamente o que foi acrescentado ou modificado.",
+    "pergunta": "Segundo o advisory presidencial de Lloyd-Jones et al. (2022, Circulation) que introduziu o Life's Essential 8, qual é a principal métrica NOVA (que não existia no Life's Simple 7) e como o escore final é calculado?",
+    "opcoes": [
+      "A métrica nova é atividade física, e o escore final é a soma simples de todos os componentes, sem limite máximo",
+      "A métrica nova é sono (saúde do sono), e o escore final é a média não ponderada dos 8 componentes, cada um pontuado de 0 a 100, gerando um composto de 0 a 100",
+      "A métrica nova é glicemia, substituindo por completo o componente de dieta, que foi removido",
+      "Não houve métrica nova — a mudança foi apenas de nome, mantendo os 7 componentes originais e o mesmo método de pontuação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O Life's Essential 8 (Lloyd-Jones et al. 2022) mantém e atualiza os 7 componentes originais (dieta, atividade física, exposição à nicotina, IMC, lipídios, glicemia e pressão arterial) e acrescenta o sono como métrica nova, refletindo evidência acumulada sobre o vínculo entre qualidade/duração do sono e saúde cardiovascular. Cada um dos 8 componentes é pontuado numa escala de 0 a 100, e o escore composto final é a média não ponderada dos 8 — também variando de 0 a 100. O documento amplia a faixa etária de aplicação para todo o curso de vida e passa a contextualizar explicitamente determinantes sociais de saúde e saúde psicológica como fatores centrais na interpretação do escore, não incluídos no construto de 2010.",
+    "source_refs": [
+      "Lloyd-Jones DM, Allen NB, Anderson CAM, et al. Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation. 2022;146(5):e18-e43. DOI: 10.1161/CIR.0000000000001078. PMID: 35766027"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "solidao-e-isolamento-social-aumentam-risco-de-infarto-e-avc-em-quanto",
+    "titulo": "Solidão e isolamento social aumentam o risco de doença coronariana e AVC — em quanto, segundo a metanálise?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Durante uma consulta de rotina, um paciente idoso viúvo e que mora sozinho, sem outros fatores de risco cardiovascular relevantes, pergunta se \"morar sozinho e não ter muito contato social\" realmente aumenta o risco de infarto ou AVC, ou se isso é \"só uma questão de qualidade de vida, sem relação com o coração\".",
+    "pergunta": "A metanálise de Valtorta et al. (2016, Heart), reunindo 23 estudos longitudinais de países de alta renda (4.628 eventos de doença coronariana e 3.002 eventos de AVC), encontrou qual magnitude de associação entre solidão/isolamento social e incidência desses dois desfechos?",
+    "opcoes": [
+      "Nenhuma associação estatisticamente significativa foi encontrada para nenhum dos dois desfechos",
+      "Aumento de risco de 29% para doença coronariana incidente e de 32% para AVC, sem diferença por sexo nas análises de subgrupo",
+      "Aumento de risco de mais de 200% para ambos os desfechos, tornando a solidão o fator de risco cardiovascular mais forte já identificado",
+      "A associação foi encontrada apenas para AVC, não para doença coronariana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Valtorta et al. (2016) encontraram que relacionamentos sociais deficientes (solidão/isolamento social) associaram-se a um aumento de 29% no risco de doença coronariana incidente (RR agrupado 1,29; IC95% 1,04-1,59) e de 32% no risco de AVC (RR 1,32; IC95% 1,04-1,68), sem diferença por sexo nas análises de subgrupo. É evidência observacional — não estabelece causalidade isolada, e possíveis confundidores residuais (comorbidades, nível socioeconômico) não podem ser totalmente excluídos — mas amplia para desfechos cardiovasculares incidentes específicos a associação já conhecida entre isolamento social e pior saúde geral (Holt-Lunstad 2015, já no acervo, focada em mortalidade). Na prática, justifica rastrear isolamento social ativamente na anamnese cardiovascular, como fator de risco psicossocial modificável junto com depressão e estresse crônico.",
+    "source_refs": [
+      "Valtorta NK, Kanaan M, Gilbody S, Ronzi S, Hanratty B. Loneliness and social isolation as risk factors for coronary heart disease and stroke: systematic review and meta-analysis of longitudinal observational studies. Heart. 2016;102(13):1009-1016. DOI: 10.1136/heartjnl-2015-308790. PMID: 27091846"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "san-francisco-syncope-rule-quais-sao-as-cinco-variaveis-e-a-sensibilidade",
+    "titulo": "San Francisco Syncope Rule: quais são as cinco variáveis e qual sua sensibilidade original?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 68 anos é atendido no pronto-socorro após episódio de síncope. ECG normal, sem dispneia, hematócrito normal, pressão arterial estável e sem história de insuficiência cardíaca. A equipe de emergência aplica a San Francisco Syncope Rule para apoiar a decisão entre alta e observação.",
+    "pergunta": "No estudo de derivação de Quinn et al. (2004, Ann Emerg Med), com 684 atendimentos por síncope, quais são as cinco variáveis que compõem a San Francisco Syncope Rule e qual foi a sensibilidade da regra para prever desfecho grave em 7 dias?",
+    "opcoes": [
+      "Idade >65 anos, sexo masculino, síncope aos esforços, história familiar de morte súbita e QT longo no ECG — sensibilidade de 80%",
+      "ECG anormal, dispneia, hematócrito <30%, pressão arterial sistólica <90 mmHg e história de insuficiência cardíaca congestiva — sensibilidade de 96% (IC95% 92-100%) e especificidade de 62%",
+      "Apenas ECG anormal e história de insuficiência cardíaca — sensibilidade de 99%, sem necessidade de outras variáveis",
+      "Palpitações prévias, síncope em decúbito, ausência de pródromo, trauma associado e idade <45 anos — sensibilidade de 90%"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A San Francisco Syncope Rule, derivada por Quinn et al. (2004) em coorte prospectiva de 684 atendimentos de emergência por síncope/pré-síncope, usa cinco variáveis: ECG anormal, queixa de dispneia, hematócrito <30%, pressão arterial sistólica <90 mmHg, ou história de insuficiência cardíaca congestiva. A presença de qualquer uma delas classifica o paciente como de risco para desfecho grave em 7 dias (morte, infarto, arritmia, embolia pulmonar, AVC, hemorragia subaracnóidea, hemorragia significativa, ou retorno ao PS com internação relacionada). A regra teve sensibilidade de 96% (IC95% 92-100%) e especificidade de 62% (IC95% 58-66%) na coorte de derivação, e aplicada retrospectivamente reduziria a taxa de internação em 10%. É importante lembrar que, por ter sido derivada em centro único, tentativas de validação externa (Quinn et al. 2006; metanálise de Costantino et al. 2014, já referenciadas no acervo) mostraram sensibilidade heterogênea entre centros — a regra apoia, mas não substitui, o julgamento clínico.",
+    "source_refs": [
+      "Quinn JV, Stiell IG, McDermott DA, Sellers KL, Kohn MA, Wells GA. Derivation of the San Francisco Syncope Rule to predict patients with short-term serious outcomes. Ann Emerg Med. 2004;43(2):224-232. DOI: 10.1016/s0196-0644(03)00823-0. PMID: 14747812"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "chads2-de-onde-veio-o-escore-antes-do-cha2ds2-vasc",
+    "titulo": "CHADS₂: de onde veio o escore que precedeu o CHA₂DS₂-VASc?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Um estudante de medicina, estudando estratificação de risco tromboembólico na fibrilação atrial, encontra referências ao \"CHADS₂\" em textos mais antigos e quer entender sua origem e como ele se compara ao CHA₂DS₂-VASc usado atualmente.",
+    "pergunta": "Segundo o estudo de Gage et al. (2001, JAMA), que derivou o CHADS₂ a partir do National Registry of Atrial Fibrillation (1.733 pacientes do Medicare), qual foi o desempenho do CHADS₂ comparado aos esquemas de classificação de risco já existentes na época (AFI e SPAF III)?",
+    "opcoes": [
+      "O CHADS₂ teve desempenho pior que os dois esquemas anteriores, e por isso não chegou a ser adotado na prática",
+      "O CHADS₂ foi o preditor mais acurado (estatística c de 0,82), superior ao esquema AFI (c=0,68) e ao SPAF III (c=0,74), com a taxa de AVC aumentando por fator de 1,5 a cada ponto adicional no escore",
+      "Os três esquemas tiveram desempenho estatisticamente idêntico, sem diferença relevante",
+      "O estudo não comparou desempenho preditivo, apenas descreveu a composição dos escores"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Gage et al. (2001) combinaram elementos dos dois esquemas de classificação de risco de AVC já existentes (AFI e SPAF III) num novo índice, o CHADS₂ (1 ponto para insuficiência cardíaca, hipertensão, idade ≥75 anos e diabetes; 2 pontos para AVC/AIT prévio), testado em 1.733 beneficiários do Medicare com fibrilação atrial não reumática sem uso de varfarina. O CHADS₂ superou os dois esquemas anteriores em acurácia preditiva (estatística c de 0,82 vs. 0,68 do AFI e 0,74 do SPAF III), com a taxa de AVC aumentando por fator de 1,5 a cada ponto adicional (de 1,9/100 pacientes-ano no escore 0 a 18,2/100 pacientes-ano no escore 6). O CHADS₂ tornou-se o escore de risco de AVC mais usado na fibrilação atrial por mais de uma década, até ser expandido pelo CHA₂DS₂-VASc (já no acervo), que acrescentou sexo feminino, faixa etária 65-74 anos e doença vascular — fatores que o CHADS₂ original não capturava, especialmente relevantes para reclassificar pacientes de \"risco baixo\" (CHADS₂ = 0) que na verdade têm algum risco residual.",
+    "source_refs": [
+      "Gage BF, Waterman AD, Shannon W, Boechler M, Rich MW, Radford MJ. Validation of clinical classification schemes for predicting stroke: results from the National Registry of Atrial Fibrillation. JAMA. 2001;285(22):2864-2870. DOI: 10.1001/jama.285.22.2864. PMID: 11401607"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "evinacumabe-funciona-em-hofh-com-variante-null-null-sem-receptor-de-ldl",
+    "titulo": "Evinacumabe funciona mesmo quando o paciente não tem nenhuma atividade do receptor de LDL?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 16 anos com hipercolesterolemia familiar homozigótica, variante null-null (ausência completa de atividade do receptor de LDL), permanece com LDL-colesterol muito elevado apesar de estatina de alta intensidade, ezetimiba e tentativa de inibidor de PCSK9 — que, como esperado nessa variante genética, teve efeito mínimo. A equipe discute a adição de evinacumabe.",
+    "pergunta": "No ensaio ELIPSE HoFH (Raal et al. 2020, NEJM), qual foi o resultado do evinacumabe (anticorpo anti-ANGPTL3) sobre o LDL-colesterol especificamente em pacientes com variante null-null, comparado à variante não-null?",
+    "opcoes": [
+      "Evinacumabe não teve efeito em pacientes null-null, funcionando apenas na variante não-null — como os demais fármacos que dependem do receptor de LDL",
+      "Evinacumabe reduziu o LDL em ambos os subgrupos genéticos — -43,4% vs. +16,2% no grupo null-null, e -49,1% vs. -3,8% no grupo não-null, ambos comparados a placebo — porque atua por via independente do receptor de LDL",
+      "Evinacumabe só foi testado em pacientes não-null; o ensaio excluiu formalmente a variante null-null",
+      "O ensaio não separou os resultados por variante genética"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O diferencial mecanístico do evinacumabe é justamente atuar por inibição de ANGPTL3, via completamente independente da atividade do receptor de LDL — por isso mantém eficácia mesmo nos pacientes com variante null-null, que não respondem (ou respondem minimamente) a estatina, ezetimiba e à maioria dos inibidores de PCSK9, todos dependentes de alguma atividade residual do receptor de LDL. No ELIPSE HoFH, evinacumabe reduziu LDL em -43,4% no subgrupo null-null (vs. +16,2% no placebo) e em -49,1% no subgrupo não-null (vs. -3,8% no placebo) — no geral, diferença de -49,0 pontos percentuais entre grupos na semana 24 (IC95% -65,0 a -33,1; p<0,001), com segurança semelhante entre os grupos. É um ensaio pequeno (65 pacientes, típico de doença rara) e de seguimento curto (24 semanas), mas abre opção terapêutica real para a forma mais grave e refratária de hipercolesterolemia familiar.",
+    "source_refs": [
+      "Raal FJ, Rosenson RS, Reeskamp LF, et al. Evinacumab for Homozygous Familial Hypercholesterolemia. N Engl J Med. 2020;383(8):711-720. DOI: 10.1056/NEJMoa2004215. PMID: 32813947"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "radioterapia-de-mama-e-doenca-isquemica-do-coracao-existe-dose-segura",
+    "titulo": "Radioterapia para câncer de mama e doença isquêmica do coração: existe uma dose \"segura\" para o coração?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Uma paciente de 52 anos, tratada com radioterapia adjuvante para câncer de mama esquerdo há 8 anos, pergunta ao cardiologista se, por ter recebido uma dose relativamente baixa de radiação ao coração segundo o plano de tratamento, ela está \"livre\" do risco cardíaco associado à radioterapia.",
+    "pergunta": "No estudo caso-controle de Darby et al. (2013, NEJM), com 2.168 mulheres irradiadas para câncer de mama na Suécia e Dinamarca, qual foi a relação entre dose de radiação ao coração e risco de eventos coronarianos maiores, e existe um limiar de dose considerado seguro?",
+    "opcoes": [
+      "Existe um limiar de segurança claro: abaixo de 5 Gy não houve aumento de risco detectável",
+      "As taxas de eventos coronarianos maiores aumentaram linearmente com a dose média ao coração (7,4% por Gy), sem limiar aparente de segurança — o aumento começa nos primeiros 5 anos e persiste por pelo menos 20 anos após a radioterapia",
+      "O risco só aumentou em doses acima de 20 Gy, sendo desprezível em qualquer dose menor",
+      "O estudo não encontrou associação entre dose de radiação e risco cardiovascular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Darby et al. (2013) demonstraram que o risco de eventos coronarianos maiores (infarto, revascularização ou morte por doença isquêmica do coração) aumenta linearmente com a dose média de radiação ao coração, em 7,4% por Gy (IC95% 2,9-14,5; p<0,001), sem limiar aparente abaixo do qual o risco seja zero — ou seja, não existe dose \"segura\" no sentido de risco nulo, apenas doses menores associadas a risco proporcionalmente menor. O aumento de risco já começa nos primeiros 5 anos após a radioterapia e continua a se acumular por pelo menos 20 anos, sendo proporcionalmente semelhante em mulheres com e sem fator de risco cardíaco basal (embora o risco absoluto seja maior nas que já tinham risco cardíaco de base). Esse achado motivou as técnicas modernas de radioterapia que buscam minimizar ativamente a dose cardíaca (por exemplo, posicionamento em apneia inspiratória profunda) e fundamenta o rastreio cardiovascular de longo prazo em sobreviventes de câncer de mama irradiadas — mesmo décadas após o tratamento.",
+    "source_refs": [
+      "Darby SC, Ewertz M, McGale P, et al. Risk of ischemic heart disease in women after radiotherapy for breast cancer. N Engl J Med. 2013;368(11):987-998. DOI: 10.1056/NEJMoa1209825. PMID: 23484825"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "treprostinil-inalatorio-adicionado-a-terapia-oral-o-que-o-triumph-mostrou",
+    "titulo": "Adicionar treprostinil inalatório à terapia oral na hipertensão arterial pulmonar: o que o TRIUMPH mostrou?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com hipertensão arterial pulmonar em classe funcional III da NYHA permanece sintomática em uso de bosentana isolada. A equipe discute adicionar treprostinil por via inalatória, evitando a via subcutânea ou intravenosa tradicionalmente associada a maior desconforto e risco de infecção de cateter.",
+    "pergunta": "No ensaio TRIUMPH I (McLaughlin et al. 2010, JACC), com 235 pacientes já em terapia oral (bosentana ou sildenafila), qual foi o efeito da adição de treprostinil inalatório sobre a distância no teste de caminhada de 6 minutos e sobre os desfechos secundários \"duros\" (tempo até piora clínica, classe funcional)?",
+    "opcoes": [
+      "Melhora estatisticamente significativa tanto no teste de caminhada de 6 minutos quanto no tempo até piora clínica e na classe funcional NYHA",
+      "Melhora estatisticamente significativa na distância do teste de caminhada de 6 minutos (cerca de 20 m na semana 12) e na qualidade de vida, mas sem diferença significativa nos desfechos secundários mais \"duros\", como tempo até piora clínica e classe funcional",
+      "Nenhuma diferença significativa em nenhum desfecho, levando à descontinuação do desenvolvimento do fármaco",
+      "Piora significativa da capacidade de exercício, atribuída a eventos adversos da via inalatória"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O TRIUMPH I mostrou benefício funcional consistente da adição de treprostinil inalatório à terapia oral (bosentana em 70% dos pacientes, ou sildenafila): diferença de mediana no teste de caminhada de 6 minutos de 19 m na semana 6 (p=0,0001) e 20 m na semana 12 (p=0,0004), além de melhora de qualidade de vida e de NT-proBNP. Entretanto, os desfechos secundários mais \"duros\" — tempo até piora clínica, escala de dispneia de Borg e classe funcional NYHA — não atingiram diferença estatisticamente significativa. Isso é importante para calibrar a expectativa clínica: o treprostinil inalatório amplia as opções de terapia combinada por via não invasiva (diferente da via subcutânea/intravenosa de outras prostaciclinas, com maior desconforto e risco de infecção de cateter), com ganho funcional real, mas o estudo isoladamente não demonstrou impacto em morbimortalidade — motivo pelo qual segue sendo usado como adição a outras classes (antagonistas de endotelina, inibidores de PDE5, estimuladores de guanilato ciclase solúvel), não como substituto delas.",
+    "source_refs": [
+      "McLaughlin VV, Benza RL, Rubin LJ, et al. Addition of inhaled treprostinil to oral therapy for pulmonary arterial hypertension: a randomized controlled clinical trial. J Am Coll Cardiol. 2010;55(18):1915-1922. DOI: 10.1016/j.jacc.2010.01.027. PMID: 20430262"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ukpds-33-controle-glicemico-intensivo-reduziu-mortalidade-cardiovascular",
+    "titulo": "O UKPDS 33 mostrou que controle glicêmico intensivo reduz mortalidade cardiovascular no diabetes tipo 2?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Um estudante, estudando a história dos grandes ensaios de diabetes, encontra referências ao UKPDS 33 (1998) como um marco na diabetologia e presume que ele já teria demonstrado redução de mortalidade cardiovascular com controle glicêmico intensivo — o que geraria confusão sobre por que os SGLT2 e GLP-1 modernos foram necessários décadas depois.",
+    "pergunta": "No UKPDS 33 (UK Prospective Diabetes Study Group, 1998, Lancet), com 3.867 pacientes recém-diagnosticados com diabetes tipo 2, o controle glicêmico intensivo (sulfonilureia ou insulina) reduziu significativamente qual tipo de desfecho, e o que NÃO atingiu significância estatística?",
+    "opcoes": [
+      "Reduziu significativamente mortalidade cardiovascular e mortalidade total; não teve efeito sobre desfechos microvasculares",
+      "Reduziu significativamente desfechos microvasculares (25% de redução, incluindo necessidade de fotocoagulação retiniana); não houve redução estatisticamente significativa de morte relacionada ao diabetes nem de mortalidade total nesse braço",
+      "Não teve nenhum efeito significativo em nenhum desfecho — o estudo é lembrado apenas por seu tamanho amostral",
+      "Reduziu apenas hipoglicemia, sem impacto em complicações crônicas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O UKPDS 33 demonstrou, já na década de 1990, que o controle glicêmico intensivo (HbA1c média de 7,0% vs. 7,9% no grupo convencional) reduz o risco de complicações microvasculares em 25% (IC95% 7-40%; p=0,0099), incluindo necessidade de fotocoagulação retiniana — mas não atingiu significância estatística para redução de morte relacionada ao diabetes (10% menor; IC95% -11 a 27%; p=0,34) nem de mortalidade total (6% menor; IC95% -10 a 20%; p=0,44) nesse braço específico. Esse é um contraste histórico importante com os ensaios modernos já no acervo (EMPA-REG OUTCOME, LEADER, CANVAS): eles só décadas depois demonstraram redução direta de eventos cardiovasculares por uma classe específica de antidiabético (SGLT2 e agonistas de GLP-1), e não pelo controle glicêmico per se — reforçando que \"baixar a glicemia\" e \"reduzir risco cardiovascular\" são efeitos que podem ou não coincidir, dependendo do mecanismo do fármaco usado para atingir a meta glicêmica.",
+    "source_refs": [
+      "UK Prospective Diabetes Study (UKPDS) Group. Intensive blood-glucose control with sulphonylureas or insulin compared with conventional treatment and risk of complications in patients with type 2 diabetes (UKPDS 33). Lancet. 1998;352(9131):837-853. PMID: 9742976"
+    ],
+    "review_status": "revisado"
   }
 ]
