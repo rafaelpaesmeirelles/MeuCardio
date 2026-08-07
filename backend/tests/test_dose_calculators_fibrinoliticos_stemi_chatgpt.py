@@ -49,16 +49,17 @@ def test_tenecteplase_75_anos_sinaliza_stream_sem_reduzir_automaticamente():
     assert r["dose_a_administrar_mg"] == 40.0
 
 
-def test_alteplase_stemi_67kg_resulta_100mg_total():
+def test_alteplase_stemi_67kg_entra_no_regime_fixo_100mg():
     c = FIBRINOLITICOS_STEMI_DOSE_REGISTRY["alteplase-stemi-esquema-acelerado-90min-2025"]
     r = c.compute({"peso": 67})
     assert r["bolus_iv_mg"] == 15.0
     assert r["infusao_primeiros_30min_mg"] == 50.0
-    assert r["infusao_30_a_90min_mg"] == 33.5
-    assert r["dose_total_mg"] == 98.5
+    assert r["infusao_30_a_90min_mg"] == 35.0
+    assert r["dose_total_mg"] == 100.0
+    assert r["peso_ge_67"] is True
 
 
-def test_alteplase_stemi_acima_70kg_atinge_tetos_e_100mg_total():
+def test_alteplase_stemi_acima_67kg_permanece_100mg_total():
     c = FIBRINOLITICOS_STEMI_DOSE_REGISTRY["alteplase-stemi-esquema-acelerado-90min-2025"]
     r = c.compute({"peso": 80})
     assert r["bolus_iv_mg"] == 15.0
@@ -73,3 +74,12 @@ def test_alteplase_stemi_60kg_peso_ajustado_90mg_total():
     assert r["infusao_primeiros_30min_mg"] == 45.0
     assert r["infusao_30_a_90min_mg"] == 30.0
     assert r["dose_total_mg"] == 90.0
+
+
+def test_alteplase_stemi_66_9kg_ainda_e_peso_ajustado():
+    c = FIBRINOLITICOS_STEMI_DOSE_REGISTRY["alteplase-stemi-esquema-acelerado-90min-2025"]
+    r = c.compute({"peso": 66.9})
+    assert r["peso_ge_67"] is False
+    assert r["infusao_primeiros_30min_mg"] == 50.2
+    assert r["infusao_30_a_90min_mg"] == 33.5
+    assert r["dose_total_mg"] == 98.7
