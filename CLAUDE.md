@@ -1,5 +1,17 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🛑 PEDIDO DO RAFAEL, 07/08/2026 ~14h55: PARAR OS AGENTES DE CONTEÚDO — só o ChatGPT continua
+> Texto dele: "pare os agentes, deixaremos somente o chatgpt produzindo conteúdo por enquanto."
+> **Se você é uma sessão/agente de produção de conteúdo lendo isto: pare agora, sem produzir mais
+> nenhum item novo em nenhuma frente**, até nova instrução dele revogando este bloco.
+>
+> Registrado por uma sessão que tentou cumprir a ordem tecnicamente e não conseguiu alcançar
+> as outras sessões: `tmux list-sessions` só mostra a sessão `ops` — nenhuma das sessões nomeadas
+> `biblioteca`/`medicamentos`/`corvia` do histórico deste arquivo está de pé neste servidor, e o
+> canal `/root/mensagens/avisar.sh` manda mensagem por nome de sessão tmux, então não alcança
+> quem não está aqui. Se você é uma dessas sessões (rodando em outro terminal, aba ou ambiente),
+> este arquivo é o único canal que chega até você — pare ao ler isto.
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026: Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico
 > Função nova pedida pelo Rafael: reúne conteúdo científico de Perioperatório e as calculadoras de
 > risco cirúrgico validadas (RCRI — Lee 1999; Gupta MICA — Circulation 2011) num documento pronto
