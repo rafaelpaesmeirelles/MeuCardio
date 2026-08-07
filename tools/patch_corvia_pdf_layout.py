@@ -15,7 +15,7 @@ s = s.replace(
 
 s = s.replace(
     'section_header(c,"Operação conectada","Agenda, integrações e acesso responsivo","A plataforma reúne a rotina clínica sem separar conhecimento, paciente e ferramentas de produtividade.")',
-    'section_header(c,"Operação conectada","Agenda, integrações e acesso móvel","Interface responsiva e rotina conectada sem separar conhecimento, paciente e ferramentas de produtividade.")',
+    'section_header(c,"Operação conectada","Agenda, integrações e acesso móvel",None)',
 )
 
 old = 'image_fit(c,CAP/"04-avaliacao-preoperatoria-completa.png",0.75*inch,0.95*inch,8.16*inch,5.16*inch,crop=False,border=False,bg=LIGHT)'
