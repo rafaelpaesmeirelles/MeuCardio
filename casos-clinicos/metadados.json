@@ -12822,5 +12822,125 @@
       "Khera AV, Emdin CA, Drake I, Natarajan P, Bick AG, Cook NR, Chasman DI, Baber U, Mehran R, Rader DJ, Fuster V, Boerwinkle E, Melander O, Orho-Melander M, Ridker PM, Kathiresan S. Genetic Risk, Adherence to a Healthy Lifestyle, and Coronary Disease. N Engl J Med. 2016;375(24):2349-2358. PMID: 27959714. DOI: 10.1056/NEJMoa1605086."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sbar-deterioracao-clinica-comunicacao-enfermagem-medicina",
+    "titulo": "Deterioração clínica na enfermaria: como estruturar a comunicação com a equipe médica?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Enfermeiro identifica, numa ronda de rotina, que um paciente internado por insuficiência cardíaca descompensada está com frequência respiratória de 28 irpm, saturação de 89% em ar ambiente e turgência jugular nova, diferente do exame de 4 horas antes. Precisa comunicar o médico plantonista por telefone.",
+    "pergunta": "Qual estrutura de comunicação tem evidência de reduzir eventos adversos graves nesse cenário?",
+    "opcoes": [
+      "Relatar todos os dados de sinais vitais das últimas 24 horas, na ordem em que foram coletados",
+      "Usar o protocolo SBAR (Situação, Antecedentes, Avaliação, Recomendação), afirmando explicitamente a impressão clínica e o que está sendo pedido",
+      "Aguardar a próxima visita médica presencial, já programada para dentro de 2 horas",
+      "Comunicar apenas os valores numéricos dos sinais vitais, sem incluir opinião clínica, para não induzir a conduta do médico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "De Meester K et al. (Resuscitation 2013;84(9):1192-1196, PMID 23537699) testaram a introdução do SBAR em 16 alas hospitalares: após a intervenção, o registro dos quatro elementos do SBAR em prontuário nos casos de evento adverso grave subiu de 4% para 35% (p<0,001), as admissões não planejadas em UTI aumentaram (leitura dos autores: mais reconhecimento precoce de deterioração) e as mortes inesperadas caíram de 0,99/1.000 para 0,34/1.000 internações (p<0,001). O SBAR exige explicitamente que quem comunica assuma uma Avaliação (impressão clínica) e uma Recomendação (o que está sendo pedido) — não apenas relate dados brutos, que é justamente o que as outras opções fazem e o que o estudo associa a maior risco de informação crítica se perder.",
+    "source_refs": [
+      "De Meester K, Verspuy M, Monsieurs KG, Van Bogaert P. SBAR improves nurse-physician communication and reduces unexpected death: a pre and post intervention study. Resuscitation. 2013;84(9):1192-1196. DOI: 10.1016/j.resuscitation.2013.03.016. PMID: 23537699"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sintomas-atipicos-de-iam-em-mulher-anamnese-dirigida",
+    "titulo": "Mulher com fadiga e falta de ar há semanas: perguntar só sobre dor no peito é suficiente?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Mulher, 63 anos, procura consulta relatando fadiga incomum e distúrbio do sono nas últimas semanas, sem dor torácica. Ao ser perguntada diretamente 'sente dor no peito?', responde que não. O médico considera não investigar causa cardíaca por ausência do sintoma cardinal.",
+    "pergunta": "O que o estudo de McSweeney et al. (Circulation 2003) sobre sintomas de infarto em mulheres sustenta sobre essa conduta?",
+    "opcoes": [
+      "A ausência de dor torácica exclui razoavelmente a suspeita cardíaca em mulheres, como em homens",
+      "Fadiga incomum e distúrbio do sono são os sintomas prodrômicos mais frequentes relatados por mulheres antes do infarto, e o desconforto torácico foi relatado por menos de 30% delas como sintoma prodrômico — pergunta fechada sobre 'dor no peito' captura pouco do quadro",
+      "Sintomas prodrômicos em mulheres não têm relação com o quadro agudo do infarto, por isso não precisam ser investigados",
+      "O estudo recomenda investigação cardíaca apenas quando há fadiga associada a dor torácica típica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "McSweeney JC et al. (Circulation 2003;108(21):2619-2623, PMID 14597589) entrevistaram 515 mulheres com IAM confirmado: 95% relataram sintomas prodrômicos, sendo os mais frequentes fadiga incomum (70,7%), distúrbio do sono (47,8%) e falta de ar (42,1%) — apenas 29,7% relataram desconforto torácico como sintoma prodrômico. O escore prodrômico correlacionou-se com o escore de sintomas agudos (r=0,61; p<0,001) e explicou 33,2% da variação nos sintomas agudos após ajuste para fatores de risco. A pergunta fechada 'sente dor no peito?' captura, por este estudo, menos de um terço do quadro prodrômico relevante em mulheres — anamnese dirigida a fadiga, distúrbio do sono e falta de ar tem maior chance de identificar risco.",
+    "source_refs": [
+      "McSweeney JC, Cody M, O'Sullivan P, Elberson K, Moser DK, Garvin BJ. Women's early warning symptoms of acute myocardial infarction. Circulation. 2003;108(21):2619-2623. DOI: 10.1161/01.CIR.0000097116.29625.7C. PMID: 14597589"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "killip-classe-e-mortalidade-em-scassst",
+    "titulo": "Classificação de Killip tem valor prognóstico fora do infarto com supra de ST?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Paciente com síndrome coronariana aguda sem supra de ST apresenta, ao exame físico de admissão, estertores pulmonares em menos de 50% dos campos e terceira bulha, sem edema agudo de pulmão nem choque.",
+    "pergunta": "Este achado (Killip II) tem valor prognóstico reconhecido fora do contexto original (STEMI) em que a classificação foi descrita?",
+    "opcoes": [
+      "Não — a classificação de Killip só é validada para infarto com supra de ST, seu contexto de derivação original em 1967",
+      "Sim — em coorte contemporânea de 26.090 pacientes com SCA sem supra de ST, Killip II associou-se a razão de risco de 1,73 para mortalidade em 30 dias (IC95% 1,44-2,09) comparado à classe I, e classe III/IV foi o preditor multivariado mais forte de mortalidade",
+      "Sim, mas apenas em combinação com biomarcador de necrose miocárdica, nunca isoladamente",
+      "Não é possível avaliar Killip em SCA sem supra de ST porque a classificação exige radiografia de tórax"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Khot UN et al. (JAMA 2003;290(16):2174-2181, PMID 14570953) validaram a classificação de Killip — descrita originalmente por Killip e Kimball em 1967 numa coorte de STEMI — em 26.090 pacientes com síndrome coronariana aguda SEM supra de ST dos ensaios GUSTO IIb, PURSUIT, PARAGON A e PARAGON B. Mortalidade em 30 dias: 2,8% (Killip I) vs. 8,8% (Killip II) vs. 14,4% (Killip III/IV), p<0,001. Em análise multivariada, Killip III/IV foi o preditor mais forte de mortalidade em 30 dias (razão de risco 2,35; IC95% 1,69-3,26) e Killip II também foi preditor independente (razão de risco 1,73; IC95% 1,44-2,09). Cinco variáveis simples — idade, classe de Killip, frequência cardíaca, pressão arterial sistólica e desvio de ST — responderam por mais de 70% da informação prognóstica do modelo. A classificação, baseada só em exame físico, mantém valor prognóstico forte fora do cenário em que nasceu.",
+    "source_refs": [
+      "Khot UN, Jia G, Moliterno DJ, Lincoff AM, Khot MB, Harrington RA, Topol EJ. Prognostic importance of physical examination for heart failure in non-ST-elevation acute coronary syndromes: the enduring value of Killip classification. JAMA. 2003;290(16):2174-2181. DOI: 10.1001/jama.290.16.2174. PMID: 14570953"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reveal-risk-score-estratificacao-de-risco-em-hap",
+    "titulo": "Paciente com hipertensão arterial pulmonar: qual ferramenta discrimina melhor o risco de mortalidade?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Médico assistente de um paciente com hipertensão arterial pulmonar em reavaliação periódica de risco precisa decidir entre usar o REVEAL 2.0 ou uma estratégia de risco derivada das diretrizes ESC/ERS (como a usada nos registros COMPERA ou FPHR).",
+    "pergunta": "O que a comparação direta feita pelos autores do REVEAL 2.0 (Benza et al., Chest 2019) mostrou sobre a discriminação entre essas ferramentas?",
+    "opcoes": [
+      "As três ferramentas têm discriminação estatisticamente idêntica, sem diferença relevante",
+      "O REVEAL 2.0 em três categorias teve discriminação maior (estatística c = 0,73) que a COMPERA (c = 0,62) ou a FPHR (c = 0,64), e tanto a COMPERA quanto a FPHR subestimaram e superestimaram risco em diferentes faixas",
+      "A COMPERA teve discriminação superior ao REVEAL 2.0 na coorte de validação americana",
+      "Nenhuma das três ferramentas foi validada em coorte independente da de derivação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Benza RL et al. (Chest 2019;156(2):323-337, PMID 30772387) compararam o REVEAL 2.0 às estratégias de risco derivadas das diretrizes ESC/ERS (COMPERA e FPHR) na mesma subpopulação do registro REVEAL. O REVEAL 2.0 de três categorias teve discriminação maior (estatística c = 0,73) que a COMPERA (c = 0,62) ou a FPHR (c = 0,64), e os autores relatam que tanto a COMPERA quanto a FPHR subestimaram e superestimaram risco em comparação ao REVEAL 2.0 — ou seja, a diferença não foi só de magnitude da discriminação, foi também de calibração. Isso é relevante para decidir qual ferramenta usar na reavaliação periódica de risco recomendada pelas diretrizes de tratamento da HAP.",
+    "source_refs": [
+      "Benza RL, Gomberg-Maitland M, Elliott CG, Farber HW, Foreman AJ, Frost AE, McGoon MD, Pasta DJ, Selej M, Burger CD, Frantz RP. Predicting Survival in Patients With Pulmonary Arterial Hypertension: The REVEAL Risk Score Calculator 2.0 and Comparison With ESC/ERS-Based Risk Assessment Strategies. Chest. 2019;156(2):323-337. DOI: 10.1016/j.chest.2019.02.004. PMID: 30772387"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "solidao-e-risco-cardiovascular-triagem-social",
+    "titulo": "Isolamento social deve entrar na anamnese de risco cardiovascular?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente idoso, viúvo, mora sozinho e relata pouco contato social. Fatores de risco cardiovascular tradicionais (hipertensão, dislipidemia, tabagismo, diabetes) estão bem controlados ou ausentes.",
+    "pergunta": "A evidência sobre isolamento social e solidão sustenta considerá-los na avaliação de risco cardiovascular?",
+    "opcoes": [
+      "Não — não há literatura consistente relacionando isolamento social a desfecho cardiovascular",
+      "Sim — metanálise de estudos observacionais longitudinais associou pior qualidade de relação social a 29% maior risco de doença arterial coronariana e 32% maior risco de AVC, magnitude comparável a outros fatores de risco psicossociais estabelecidos",
+      "Sim, mas apenas em pacientes com diagnóstico prévio de depressão maior",
+      "A associação existe apenas para AVC, não para doença coronariana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Valtorta NK et al. (Heart 2016;102(13):1009-1016, PMID 27091846) fizeram revisão sistemática e metanálise de estudos observacionais longitudinais: pior qualidade de relação social associou-se a 29% maior risco de incidência de doença arterial coronariana (razão de risco combinada 1,29; IC95% 1,04-1,59) e 32% maior risco de AVC (razão de risco combinada 1,32; IC95% 1,04-1,68) — os autores descrevem esses tamanhos de efeito como comparáveis a outros fatores de risco psicossociais já estabelecidos para doença cardiovascular. São dados observacionais (sem prova de causalidade), mas consistentes o suficiente para sustentar perguntar sobre isolamento social e solidão na anamnese de risco cardiovascular, junto a outros determinantes comportamentais já rotineiramente perguntados.",
+    "source_refs": [
+      "Valtorta NK, Kanaan M, Gilbody S, Ronzi S, Hanratty B. Loneliness and social isolation as risk factors for coronary heart disease and stroke: systematic review and meta-analysis of longitudinal observational studies. Heart. 2016;102(13):1009-1016. DOI: 10.1136/heartjnl-2015-308790. PMID: 27091846"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tmao-metabolismo-microbiano-e-risco-cardiovascular-caso",
+    "titulo": "Por que o metabolismo da microbiota intestinal importa para o risco cardiovascular?",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Em discussão sobre dieta e prevenção cardiovascular, um paciente pergunta por que alimentos ricos em colina (gema de ovo, carne vermelha) são frequentemente associados a maior risco cardiovascular, além do conteúdo de gordura saturada.",
+    "pergunta": "Qual mecanismo, testado em humanos, sustenta essa associação independentemente da gordura saturada?",
+    "opcoes": [
+      "Não há mecanismo estabelecido; a associação é apenas epidemiológica sem base biológica",
+      "A microbiota intestinal metaboliza a fosfatidilcolina dietética produzindo TMAO (N-óxido de trimetilamina), que se associou a razão de risco de 2,54 para evento cardiovascular adverso maior (quartil mais alto vs. mais baixo), com produção suprimida por antibiótico e reaparecendo após sua suspensão",
+      "O mecanismo depende exclusivamente do colesterol dietético, não da colina",
+      "O TMAO é produzido no fígado, sem participação da microbiota intestinal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Tang WH et al. (N Engl J Med 2013;368(17):1575-1584, PMID 23614584) demonstraram, em participantes saudáveis submetidos a desafio com fosfatidilcolina, que os níveis plasmáticos de TMAO foram marcadamente suprimidos após antibiótico de amplo espectro e reapareceram após sua suspensão — prova direta de que a produção de TMAO depende do metabolismo pela microbiota intestinal. Em coorte de 4.007 pacientes submetidos a cateterismo coronariano eletivo, seguidos por 3 anos, TMAO plasmático elevado associou-se a razão de risco de 2,54 (IC95% 1,96-3,28; p<0,001) para evento cardiovascular adverso maior, mantendo-se significativo após ajuste para fatores de risco tradicionais. É estudo observacional para o desfecho clínico (não prova que reduzir TMAO farmacologicamente reduz evento), mas estabelece plausibilidade mecanística clara.",
+    "source_refs": [
+      "Tang WH, Wang Z, Levison BS, Koeth RA, Britt EB, Fu X, Wu Y, Hazen SL. Intestinal microbial metabolism of phosphatidylcholine and cardiovascular risk. N Engl J Med. 2013;368(17):1575-1584. DOI: 10.1056/NEJMoa1109400. PMID: 23614584"
+    ],
+    "review_status": "revisado"
   }
 ]
