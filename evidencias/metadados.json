@@ -34798,5 +34798,66 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ash2018-profilaxia-farmacologica-tev-risco-sangramento-aceitavel",
+    "statement": "Em paciente agudamente enfermo ou criticamente enfermo com risco de sangramento aceitável, a profilaxia farmacológica de tromboembolismo venoso (TEV) é recomendada.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2018,
+    "guideline_title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: prophylaxis for hospitalized and nonhospitalized medical patients",
+    "reference": "Schünemann HJ, Cushman M, Burnett AE, et al. Blood Adv. 2018;2(22):3198-3225. DOI: 10.1182/bloodadvances.2018022954. PMID: 30482763 — já citada e verificada em content/Tromboembolismo/tromboprofilaxia-no-paciente-critico-de-uti-protect-e-prevent.md. NOTA DE SISTEMA: diretriz GRADE (força Forte/Condicional), não a escala Classe I-III/Nível A-C da ESC — os dois vocabulários não são equivalentes e não devem ser convertidos um no outro.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboprofilaxia",
+      "paciente crítico",
+      "UTI",
+      "GRADE",
+      "ASH"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash2018-profilaxia-mecanica-tev-risco-sangramento-inaceitavel",
+    "statement": "Em paciente agudamente enfermo ou criticamente enfermo com risco de sangramento inaceitável (contraindicação a anticoagulante), o uso de profilaxia MECÂNICA de tromboembolismo venoso é recomendado — é a recomendação que autoriza a compressão pneumática intermitente (CPI) como estratégia isolada, não apenas como coadjuvante à profilaxia farmacológica.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2018,
+    "guideline_title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: prophylaxis for hospitalized and nonhospitalized medical patients",
+    "reference": "Schünemann HJ, Cushman M, Burnett AE, et al. Blood Adv. 2018;2(22):3198-3225. DOI: 10.1182/bloodadvances.2018022954. PMID: 30482763 — já citada e verificada em content/Tromboembolismo/tromboprofilaxia-no-paciente-critico-de-uti-protect-e-prevent.md.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboprofilaxia",
+      "compressão pneumática intermitente",
+      "contraindicação a anticoagulante",
+      "GRADE",
+      "ASH"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash2018-contra-doac-e-profilaxia-estendida-pos-alta-em-critico",
+    "statement": "Em paciente agudamente enfermo ou criticamente enfermo, é recomendado CONTRA o uso de anticoagulante oral de ação direta (DOAC) durante a internação para profilaxia de TEV, e CONTRA estender a profilaxia farmacológica além da alta hospitalar nesse grupo.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2018,
+    "guideline_title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: prophylaxis for hospitalized and nonhospitalized medical patients",
+    "reference": "Schünemann HJ, Cushman M, Burnett AE, et al. Blood Adv. 2018;2(22):3198-3225. DOI: 10.1182/bloodadvances.2018022954. PMID: 30482763 — já citada e verificada em content/Tromboembolismo/tromboprofilaxia-no-paciente-critico-de-uti-protect-e-prevent.md.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboprofilaxia",
+      "DOAC",
+      "recomendação negativa",
+      "profilaxia estendida",
+      "GRADE",
+      "ASH"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
