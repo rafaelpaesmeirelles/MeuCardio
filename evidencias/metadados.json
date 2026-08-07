@@ -41882,5 +41882,400 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ash-2020-tratamento-domiciliar-na-tvp-nao-complicada",
+    "statement": "Em pacientes com trombose venosa profunda (TVP) não complicada, sugere-se oferecer tratamento domiciliar em vez de tratamento hospitalar.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Baixa",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP",
+      "tratamento domiciliar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-tratamento-domiciliar-no-tep-de-baixo-risco",
+    "statement": "Em pacientes com tromboembolismo pulmonar (TEP) de baixo risco para complicações, sugere-se oferecer tratamento domiciliar em vez de tratamento hospitalar — os escores de predição clínica (PESI e PESI simplificado) têm capacidade apenas moderada de prever desfechos e não substituem o julgamento clínico, mas ajudam a selecionar pacientes de baixo risco.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP",
+      "tratamento domiciliar",
+      "PESI"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-doac-preferido-a-antagonista-de-vitamina-k-na-tvp-e-tep",
+    "statement": "Em pacientes com TVP e/ou TEP, sugere-se o uso de anticoagulantes orais diretos (DOAC) em vez de antagonistas da vitamina K — a recomendação pode não se aplicar a subgrupos como insuficiência renal (clearance de creatinina <30 mL/min), doença hepática moderada a grave ou síndrome antifosfolípide.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "DOAC",
+      "antagonista de vitamina K",
+      "TVP",
+      "TEP"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-nenhum-doac-especifico-preferido-sobre-outro-na-tvp-e-tep",
+    "statement": "Em pacientes com TVP e/ou TEP, não se sugere um DOAC específico em detrimento de outro. Fatores como necessidade de anticoagulante parenteral inicial, posologia de uma ou duas tomadas diárias e custo podem orientar a escolha entre os DOAC disponíveis.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "DOAC",
+      "escolha de anticoagulante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-anticoagulacao-isolada-preferida-a-trombolise-na-maioria-da-tvp-proximal",
+    "statement": "Na maioria dos pacientes com TVP proximal, sugere-se anticoagulação isolada em vez de terapia trombolítica associada à anticoagulação. A trombólise é razoável em TVP com risco de perda de membro (phlegmasia cerulea dolens) e em pacientes jovens selecionados de baixo risco de sangramento com TVP ilíaca e femoral comum.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Baixa",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP proximal",
+      "trombólise",
+      "phlegmasia cerulea dolens"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-trombolise-seguida-de-anticoagulacao-no-tep-com-comprometimento-hemodinamico",
+    "statement": "Em pacientes com TEP e comprometimento hemodinâmico, recomenda-se terapia trombolítica seguida de anticoagulação em vez de anticoagulação isolada. É recomendação forte apesar da baixa certeza da evidência: a alta mortalidade do TEP com comprometimento hemodinâmico e o potencial efeito salvador de vida do trombolítico justificaram a exceção às regras usuais do GRADE.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP maciço",
+      "trombólise",
+      "instabilidade hemodinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-anticoagulacao-isolada-preferida-no-tep-submassivo-sem-trombolise-rotineira",
+    "statement": "Em pacientes com TEP com ecocardiograma e/ou biomarcadores compatíveis com disfunção do ventrículo direito, mas sem comprometimento hemodinâmico (TEP submassivo), sugere-se anticoagulação isolada em vez do uso rotineiro de trombólise associada à anticoagulação. A trombólise é razoável em TEP submassivo de baixo risco de sangramento em pacientes jovens selecionados ou de alto risco de descompensação por doença cardiopulmonar concomitante — esses pacientes devem ser monitorados de perto.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Baixa",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP submassivo",
+      "disfunção do ventrículo direito",
+      "trombólise"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-trombolise-guiada-por-cateter-preferida-a-sistemica-na-tvp-extensa",
+    "statement": "Em pacientes com TVP extensa em que a trombólise é considerada apropriada, sugere-se o uso de trombólise guiada por cateter em vez de trombólise sistêmica.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP extensa",
+      "trombólise guiada por cateter"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-trombolise-sistemica-preferida-a-guiada-por-cateter-no-tep",
+    "statement": "Em pacientes com TEP em que a trombólise é considerada apropriada, sugere-se o uso de trombólise sistêmica em vez de trombólise guiada por cateter — reflete a escassez de dados randomizados e a variabilidade de experiência procedural entre centros. Em centros com infraestrutura e experiência adequadas, a trombólise guiada por cateter pode ser alternativa, especialmente com risco intermediário a alto de sangramento.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP",
+      "trombólise sistêmica",
+      "trombólise guiada por cateter"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-anticoagulacao-isolada-preferida-a-filtro-de-veia-cava-na-tvp-proximal-com-cardiopulmonar-grave",
+    "statement": "Em pacientes com TVP proximal e doença cardiopulmonar preexistente significativa, bem como em pacientes com TEP e comprometimento hemodinâmico, sugere-se anticoagulação isolada em vez de anticoagulação associada à inserção de filtro de veia cava inferior. Aplica-se a pacientes elegíveis para anticoagulação; com contraindicação a ela, um filtro recuperável pode ser indicado, com retirada assim que a anticoagulação puder ser iniciada.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Baixa",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "filtro de veia cava inferior",
+      "TVP proximal",
+      "TEP"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-curso-mais-curto-de-anticoagulacao-como-tratamento-primario-independente-do-fator-provocador",
+    "statement": "Para o tratamento primário de pacientes com TVP e/ou TEP — provocado por fator de risco transitório, provocado por fator de risco crônico ou não provocado —, sugere-se usar um curso mais curto de anticoagulação (3-6 meses) em vez de um curso mais longo (6-12 meses). Se a decisão for suspender a anticoagulação, não se sugere prolongar o tratamento primário além de 3-6 meses; para fatores de risco crônicos com melhora esperada ao longo do tempo (por exemplo, reabilitação com melhora da mobilidade), um curso mais longo pode se justificar.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "duração da anticoagulação",
+      "tratamento primário",
+      "TVP",
+      "TEP"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-contra-uso-rotineiro-de-escores-prognosticos-d-dimero-ou-us-para-guiar-duracao-no-tev-nao-provocado",
+    "statement": "Em pacientes com TVP e/ou TEP não provocados, sugere-se contra o uso rotineiro de escores prognósticos, dosagem de D-dímero ou ultrassonografia para detectar trombose venosa residual, como forma de guiar a duração da anticoagulação. A anticoagulação indefinida é provavelmente apropriada para a maioria dos pacientes com TEV não provocado; esses testes podem auxiliar quando o paciente está indeciso ou o balanço risco-benefício é incerto.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "escore prognóstico",
+      "D-dímero",
+      "trombose residual",
+      "duração da anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-terapia-antitrombotica-indefinida-apos-tev-provocado-por-fator-de-risco-cronico",
+    "statement": "Após a conclusão do tratamento primário em pacientes com TVP e/ou TEP provocados por fator de risco crônico, sugere-se terapia antitrombótica indefinida em vez de suspender a anticoagulação — não se aplica a pacientes com alto risco de sangramento.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "prevenção secundária",
+      "fator de risco crônico",
+      "anticoagulação indefinida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-terapia-antitrombotica-indefinida-apos-tev-nao-provocado",
+    "statement": "Após a conclusão do tratamento primário em pacientes com TVP e/ou TEP não provocados, sugere-se terapia antitrombótica indefinida em vez de suspender a anticoagulação — não se aplica a pacientes com alto risco de sangramento.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "prevenção secundária",
+      "TEV não provocado",
+      "anticoagulação indefinida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-anticoagulacao-preferida-a-aspirina-na-prevencao-secundaria-do-tev",
+    "statement": "Em pacientes com TVP e/ou TEP que concluíram o tratamento primário e continuarão em prevenção secundária, sugere-se o uso de anticoagulação em vez de aspirina.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "prevenção secundária",
+      "aspirina",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-inr-alvo-2-a-3-na-prevencao-secundaria-com-antagonista-de-vitamina-k",
+    "statement": "Em pacientes com TVP e/ou TEP que concluíram o tratamento primário e continuarão com antagonista da vitamina K na prevenção secundária, recomenda-se manter o INR entre 2,0 e 3,0, em vez de uma faixa mais baixa (por exemplo, 1,5-1,9).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "INR",
+      "antagonista de vitamina K",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-doac-em-dose-padrao-ou-reduzida-na-prevencao-secundaria",
+    "statement": "Em pacientes com TVP e/ou TEP que concluíram o tratamento primário e continuarão com DOAC na prevenção secundária, sugere-se o uso de DOAC em dose padrão ou em dose reduzida — como regimes de dose reduzida, citam-se rivaroxabana 10 mg/dia ou apixabana 2,5 mg duas vezes ao dia.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "DOAC",
+      "dose reduzida",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-hbpm-preferida-a-doac-no-tev-de-brecha-sob-antagonista-de-vitamina-k",
+    "statement": "Em pacientes com TVP e/ou TEP de brecha (breakthrough) durante tratamento terapêutico com antagonista da vitamina K, sugere-se o uso de heparina de baixo peso molecular em vez de DOAC. Não se aplica a pacientes com TEV de brecha por mau controle do INR, em que um DOAC pode ser opção razoável.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEV recorrente",
+      "heparina de baixo peso molecular",
+      "antagonista de vitamina K"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-terapia-indefinida-apos-tev-provocado-transitorio-com-historia-de-tev-nao-provocado-previo",
+    "statement": "Em pacientes que desenvolvem TVP e/ou TEP provocados por fator de risco transitório e têm história de TEV prévio não provocado ou provocado por fator de risco crônico, sugere-se terapia antitrombótica indefinida em vez de suspender a anticoagulação após o tratamento primário.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEV recorrente",
+      "fator de risco transitório",
+      "anticoagulação indefinida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-suspender-anticoagulacao-apos-dois-episodios-de-tev-provocados-por-fator-transitorio",
+    "statement": "Em pacientes que desenvolvem TVP e/ou TEP provocados por fator de risco transitório e têm história de evento trombótico prévio também provocado por fator transitório, sugere-se suspender a anticoagulação após a conclusão do tratamento primário, em vez de terapia indefinida.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEV recorrente",
+      "fator de risco transitório",
+      "suspensão da anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-terapia-indefinida-apos-tev-recorrente-nao-provocado",
+    "statement": "Em pacientes com TVP ou TEP não provocado recorrente, recomenda-se terapia antitrombótica indefinida em vez de suspender a anticoagulação após a conclusão do tratamento primário — recomendação forte, dado o risco muito alto de recorrência fora da anticoagulação.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEV recorrente não provocado",
+      "anticoagulação indefinida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ash-2020-suspender-aspirina-ao-iniciar-anticoagulacao-em-doenca-cardiovascular-estavel",
+    "statement": "Em pacientes com TVP e/ou TEP com doença cardiovascular estável que iniciam anticoagulação e usavam aspirina para modificação de risco cardiovascular, sugere-se suspender a aspirina em vez de mantê-la durante a vigência da anticoagulação — não se aplica a pacientes com evento coronariano agudo recente ou intervenção coronariana recente.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "ASH",
+    "year": 2020,
+    "guideline_title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of DVT and PE",
+    "reference": "Ortel TL, Neumann I, Ageno W, Beyth R, Clark NP, Cuker A, Hutten BA, Jaff MR, Manja V, Schulman S, Thurston C, Vedantham S, Verhamme P, Witt DM, D Florez I, Izcovich A, Nieuwlaat R, Ross S, Schunemann HJ, Wiercioch W, Zhang Y, Zhang Y. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077. Texto integral em acesso aberto (PMC7556153), conferido nesta sessao em 07/08/2026. NOTA DE SISTEMA: a ASH usa GRADE - forca de recomendacao FORTE ou CONDICIONAL (recommendation_class), e certeza da evidencia Alta/Mod(erada)/Baixa/MtBx (muito baixa), representada no artigo por simbolos preenchidos (evidence_level). Nao e a escala Classe I-III/Nivel A-C da ESC/AHA usada na maior parte desta base - a interface exibe 'Forca' e 'Certeza' para diferenciar.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "aspirina",
+      "doença cardiovascular estável",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
