@@ -8848,5 +8848,147 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-de-uma-derivacao-por-dispositivo-portatil-kardiamobile-na-triagem-de-fibrilacao-atrial",
+    "name": "ECG de uma derivação por dispositivo portátil (KardiaMobile/AliveCor) na triagem de fibrilação atrial",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Traçado eletrocardiográfico de uma derivação, obtido por eletrodos em um dispositivo portátil de bolso (KardiaMobile/AliveCor) conectado a smartphone, com leitura automática por algoritmo e possibilidade de revisão remota por profissional — usado para amostragem repetida do ritmo cardíaco fora do ambiente hospitalar, ao contrário do ECG de 12 derivações pontual.",
+    "reference_range": "Não se aplica valor de referência numérico — o resultado é qualitativo (ritmo sinusal, fibrilação atrial ou traçado não classificável pelo algoritmo, este último exigindo revisão humana).",
+    "indications": "Rastreio de fibrilação atrial assintomática em paciente ambulatorial com risco tromboembólico elevado (idade avançada, CHA2DS2-VASc alto) e sem diagnóstico prévio de FA — cenário testado no estudo REHEARSE-AF. Não substitui o ECG de 12 derivações para diagnóstico definitivo de outras arritmias nem para análise morfológica detalhada (não define eixo, não avalia todas as derivações simultaneamente).",
+    "interpretation": "Segundo o REHEARSE-AF (Halcox et al., Circulation 2017), ensaio clínico randomizado com 1.001 pacientes ≥65 anos com CHA2DS2-VASc ≥2 e sem FA conhecida: o grupo rastreado com ECG de uma derivação duas vezes por semana por 12 meses diagnosticou FA incidente em 19 pacientes, contra 5 no grupo de cuidado de rotina (razão de risco 3,9; IC95% 1,4-10,4; p=0,007) — ou seja, quase quatro vezes mais diagnósticos de FA no grupo rastreado, ao custo de US$10.780 por diagnóstico adicional. O estudo não teve poder estatístico para detectar diferença em desfecho clínico duro (AVC/AIT/embolia sistêmica: 6 vs. 10 eventos, sem diferença significativa) — ponto de honestidade relevante: o ensaio prova aumento de detecção, não redução comprovada de eventos tromboembólicos, que exigiria um estudo maior orientado a desfecho clínico, como os próprios autores reconhecem no texto.",
+    "limitations": "O algoritmo automático do dispositivo pode gerar traçado 'não classificável' com relativa frequência, exigindo revisão humana — cenário não detalhado no resumo do estudo aqui citado. Uma derivação única não permite diagnóstico de outras arritmias que dependem de morfologia multiderivacional (ex.: bloqueios de ramo, isquemia localizada). O custo por diagnóstico adicional (US$10.780) e a ausência de redução comprovada de desfecho clínico duro no próprio ensaio são limitações relevantes para justificar rastreio populacional amplo fora do cenário de alto risco testado.",
+    "source_refs": [
+      "Halcox JPJ, Wareham K, Cardew A, Gilmore M, Barry JP, Phillips C, Gravenor MB. Assessment of Remote Heart Rhythm Sampling Using the AliveCor Heart Monitor to Screen for Atrial Fibrillation: The REHEARSE-AF Study. Circulation. 2017;136(19):1784-1794. DOI: 10.1161/CIRCULATIONAHA.117.030583. PMID: 28851729."
+    ],
+    "tags": [
+      "fibrilação atrial",
+      "rastreio",
+      "kardiamobile",
+      "alivecor",
+      "ecg portátil",
+      "monitorização ambulatorial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mapeamento-eletroanatomico-de-linhas-de-descontinuidade-de-frente-de-onda-na-ablacao-de-taquicardia-ventricular-por-cicatriz",
+    "name": "Mapeamento eletroanatômico de linhas de descontinuidade de frente de onda (WADL) na ablação de taquicardia ventricular relacionada a cicatriz",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Mapa eletroanatômico tridimensional de ativação (sistema CARTO, módulo de projeção automática de linhas de descontinuidade de frente de onda — WADL) construído a partir de um ou mais ritmos basais (sinusal ou estimulado), identificando de forma automática linhas de bloqueio fixo, condução lenta e propagação rotacional que delimitam o istmo crítico de reentrada de taquicardia ventricular relacionada a cicatriz — usado para guiar a ablação por radiofrequência do substrato arrítmico sem necessidade de induzir e mapear a taquicardia sustentada durante o procedimento.",
+    "reference_range": "Não se aplica valor de referência — o achado relevante é a presença/localização das linhas de descontinuidade e sua proximidade aos sítios críticos de taquicardia ventricular identificados por métodos convencionais de mapeamento.",
+    "indications": "Taquicardia ventricular monomórfica recorrente relacionada a cicatriz (isquêmica ou não isquêmica) refratária a tratamento antiarrítmico, quando indicada ablação por cateter guiada por mapeamento de substrato — abordagem útil sobretudo quando a taquicardia não é hemodinamicamente tolerada para mapeamento por ativação durante o próprio ritmo taquicárdico.",
+    "interpretation": "Maher et al. (JACC Clin Electrophysiol, 2024) analisaram 71 mapas de substrato em 49 pacientes (52 ablações) com taquicardia ventricular de etiologia mista: linhas de descontinuidade de frente de onda (WADL) foram identificadas automaticamente em 49 dos 71 mapas (69%), independentemente da etiologia da cardiomiopatia, do ritmo usado para o mapeamento ou da superfície mapeada (endocárdica/epicárdica). No limiar de 30%, 73,9% dos sítios críticos de taquicardia ventricular confirmados por métodos convencionais estavam a até 15 mm de uma WADL. A sobrevida livre de recorrência de TV guiada por essa estratégia foi de 62% em 1 ano (risco competitivo de recorrência estimado em 23% no mesmo período).",
+    "limitations": "Estudo de coorte único-centro, sem grupo comparador randomizado contra a estratégia convencional de mapeamento de substrato — não permite afirmar superioridade da técnica automatizada sobre os métodos já estabelecidos, apenas viabilidade e associação espacial com os sítios críticos já conhecidos por outros métodos. Amostra de 49 pacientes é modesta para conclusões definitivas sobre desfecho de recorrência em 1 ano. A técnica depende de mapa de substrato de boa qualidade (múltiplos pontos, boa janela de estabilidade de cateter) e de sistema de mapeamento com o módulo específico disponível — não generalizável a todo laboratório de eletrofisiologia.",
+    "source_refs": [
+      "Maher TR, Freedman BL, Yang S, Locke AH, D'Angelo R, Galvao M, Buxton AE, Waks JW, d'Avila A. Targeting Wavefront Discontinuity Lines for Scar-Related Ventricular Tachycardia Ablation: A Novel Functional Substrate Ablation Approach. JACC Clin Electrophysiol. 2024;10(7 Pt 1):1255-1270. DOI: 10.1016/j.jacep.2024.03.023. PMID: 38819346."
+    ],
+    "tags": [
+      "taquicardia ventricular",
+      "mapeamento eletroanatômico",
+      "ablação por cateter",
+      "carto",
+      "substrato arrítmico",
+      "cicatriz miocárdica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "potencial-evocado-somatossensitivo-n20-no-prognostico-neurologico-pos-parada-cardiorrespiratoria",
+    "name": "Potencial evocado somatossensitivo (componente N20) no prognóstico neurológico pós-parada cardiorrespiratória",
+    "category": "metodo_grafico",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Resposta cortical precoce (componente N20) do potencial evocado somatossensitivo do nervo mediano, registrada bilateralmente em paciente comatoso após parada cardiorrespiratória — avalia a integridade da via somatossensitiva entre o nervo periférico e o córtex, servindo como marcador eletrofisiológico de lesão cerebral anóxica grave quando ausente.",
+    "reference_range": "Presença bilateral do componente N20 é compatível com integridade da via — a ausência BILATERAL (não a unilateral) do N20, mantida em exame técnico adequado, é o achado com valor prognóstico estabelecido.",
+    "indications": "Parte do painel multimodal de prognóstico neurológico em paciente que permanece comatoso após parada cardiorrespiratória ressuscitada, tipicamente realizado a partir de 24-72h após o evento (e após controle de temperatura/sedação residual, quando aplicável) — nunca como exame isolado para decisão de limitação terapêutica, mas como um dos componentes de um algoritmo multimodal ao lado de exame neurológico seriado, biomarcadores (enolase neuroespecífica) e neuroimagem.",
+    "interpretation": "Segundo revisão de Zandbergen (Eur J Anaesthesiol Suppl, 2008), que resume o estudo PROPAC (407 pacientes, Holanda) e o parâmetro de prática da American Academy of Neurology de 2006: a ausência bilateral da resposta cortical precoce do potencial evocado somatossensitivo do nervo mediano foi o preditor mais confiável de mau prognóstico (ausência de recuperação da consciência) entre os métodos avaliados, com desempenho equivalente ao da enolase neuroespecífica sérica >33 µg/L. O parâmetro de prática da AAN 2006 também listou outros preditores de mau prognóstico com timing específico: estado de mal mioclônico nas primeiras 24h, ausência de reflexo pupilar após 24h, ausência de reflexo corneano após 48h, e resposta motora ausente ou em extensão após 72h.",
+    "limitations": "Fonte usada aqui é uma revisão (não o estudo primário PROPAC diretamente) — cita achados de segunda mão, ainda que de um estudo grande e de um parâmetro de prática formal, prática aceitável para uma revisão de tema mas registrada aqui por transparência. O próprio texto reconhece que resultados de biomarcadores bioquímicos e neuroimagem eram, à época da publicação, inconclusivos — e a literatura mais recente (fora do escopo desta revisão de 2008) tende a recomendar interpretação combinada com hipotermia terapêutica/controle direcionado de temperatura, que pode alterar a confiabilidade de alguns preditores clínicos isolados (embora o N20 seja considerado relativamente robusto a essa influência). O exame exige técnico experiente e equipamento específico, nem sempre disponível em toda UTI.",
+    "source_refs": [
+      "Zandbergen EGJ. Postanoxic coma: how (long) should we treat? Eur J Anaesthesiol Suppl. 2008;42:39-42. DOI: 10.1017/S0265021507003468. PMID: 18289415."
+    ],
+    "tags": [
+      "potencial evocado somatossensitivo",
+      "prognóstico neurológico",
+      "parada cardiorrespiratória",
+      "coma pós-anóxico",
+      "n20"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "espectroscopia-de-infravermelho-proximo-nirs-muscular-sto2-na-monitorizacao-do-choque",
+    "name": "Espectroscopia de infravermelho próximo (NIRS) muscular — saturação tecidual de oxigênio (StO2) na monitorização do choque",
+    "category": "laboratorial",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Saturação de oxigênio da hemoglobina no leito microvascular muscular (tipicamente eminência tenar), medida de forma contínua e não invasiva por espectroscopia de infravermelho próximo (NIRS) — reflete o equilíbrio local entre oferta e consumo de oxigênio tecidual, complementar (não substituto) às medidas hemodinâmicas centrais como pressão arterial e saturação venosa central de oxigênio.",
+    "reference_range": "Não há corte universalmente validado como alvo terapêutico — um dos protocolos de pesquisa citados usou StO2 >80% em pelo menos 2 sítios musculares como meta experimental, sem que isso constitua recomendação de prática consolidada.",
+    "indications": "Monitorização adjunta da perfusão tecidual no choque séptico ou hemorrágico, como ferramenta de pesquisa e, em alguns serviços, complementar aos alvos já recomendados (pressão arterial média, débito urinário, lactato, ScvO2) — não é exame de rotina consolidada em diretriz maior de sepse.",
+    "interpretation": "Mulier et al. (Surg Infect, 2008) mediram StO2 tenar em 10 pacientes com sepse grave e 9 voluntários saudáveis: pacientes sépticos tiveram StO2 significativamente menor que voluntários (p=0,031), e a StO2/NIRSvO2 correlacionou-se com a SvO2 medida por cateter de artéria pulmonar (p<0,05) — mas NÃO houve correlação significativa com lactato, déficit de base ou escore APACHE II. Em ensaio piloto randomizado subsequente, Nardi et al. (J Clin Monit Comput, 2013) testaram StO2 como alvo adicional de ressuscitação em 30 pacientes com sepse grave/choque séptico (StO2 >80% em ≥2 músculos) e não encontraram diferença significativa no desfecho composto de mortalidade/piora do SOFA em 7 dias entre o grupo guiado por StO2 e o controle (33,3% vs. 26,6%; p=1,00) — sem tendência clara a favor do uso de StO2 como meta de ressuscitação.",
+    "limitations": "Ressalva de honestidade central desta entrada: as duas amostras que sustentam a interpretação acima são pequenas (19 participantes no primeiro estudo, 30 no segundo, ambos unicêntricos) e o ensaio randomizado citado é explicitamente um estudo PILOTO, sem poder estatístico para desfecho clínico — resultado negativo/neutro, não uma prova de ineficácia definitiva. A medida sobre o músculo peitoral teve desempenho técnico ruim no estudo de Nardi et al., o que ilustra variabilidade dependente do sítio de medição. NIRS muscular não é, até o momento coberto por essas fontes, um alvo de ressuscitação endossado por diretriz maior de sepse — deve ser apresentado como ferramenta em investigação, não como padrão de monitorização estabelecido.",
+    "source_refs": [
+      "Mulier KE, Skarda DE, Taylor JH, Myers DE, McGraw MK, Gallea BL, Beilman GJ. Near-infrared spectroscopy in patients with severe sepsis: correlation with invasive hemodynamic measurements. Surg Infect (Larchmt). 2008;9(5):515-519. DOI: 10.1089/sur.2007.091. PMID: 18687043.",
+      "Nardi O, Polito A, Aboab J, Colin G, Maxime V, Clair B, Friedman D, Orlikowski D, Sharshar T, Annane D. StO2 guided early resuscitation in subjects with severe sepsis or septic shock: a pilot randomised trial. J Clin Monit Comput. 2013;27(3):215-221. DOI: 10.1007/s10877-013-9432-y. PMID: 23381608 — ensaio PILOTO com 30 pacientes, resultado negativo/neutro, evidência de robustez limitada citada explicitamente como tal."
+    ],
+    "tags": [
+      "nirs",
+      "espectroscopia de infravermelho próximo",
+      "sto2",
+      "choque séptico",
+      "perfusão tecidual",
+      "monitorização hemodinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cintilografia-com-leucocitos-marcados-spect-ct-na-infeccao-de-bolsa-de-dispositivo-cardiaco-eletronico-implantavel",
+    "name": "Cintilografia com leucócitos marcados (99mTc-HMPAO-WBC SPECT/CT) na infecção de bolsa/eletrodo de dispositivo cardíaco eletrônico implantável",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Cintilografia com leucócitos autólogos marcados com 99mTc-HMPAO, associada a SPECT/CT, para localizar e quantificar foco infeccioso ativo relacionado a marca-passo, CDI ou ressincronizador — bolsa subcutânea do gerador e/ou porção intracavitária do(s) eletrodo(s).",
+    "reference_range": "Achado qualitativo/semiquantitativo (captação focal anormal de leucócitos marcados vs. ausência de captação) — sem corte numérico de referência.",
+    "indications": "Suspeita clínica de infecção relacionada a dispositivo cardíaco eletrônico implantável (CIED) quando a avaliação inicial (exame local da bolsa, hemoculturas, ecocardiograma) é inconclusiva, sobretudo para diferenciar infecção limitada à bolsa de envolvimento do eletrodo intracavitário — distinção com implicação direta na decisão de extração completa do sistema.",
+    "interpretation": "Erba et al. (JACC Cardiovasc Imaging, 2013), 63 pacientes consecutivos com suspeita de infecção de CIED, diagnóstico final de infecção confirmado em 32/63: a cintilografia com leucócitos marcados por SPECT/CT teve sensibilidade de 94% tanto para detecção quanto para localização da infecção, com apenas 2 falsos negativos e nenhum falso positivo, e valor preditivo negativo de 95% — nenhum paciente com exame negativo desenvolveu infecção relacionada ao dispositivo no seguimento de 12 meses. O exame teve valor agregado claro sobre a imagem planar isolada e sobre o SPECT sem CT. Para comparação, os critérios de Duke tiveram sensibilidade de apenas 31% para a categoria 'definitiva' (81% somando 'definitiva' e 'possível').",
+    "limitations": "Estudo unicêntrico (Pisa, Itália), com 63 pacientes — amostra moderada, sem validação prospectiva multicêntrica direta citada aqui. Distinto do exame já cadastrado no tema Endocardite ('Cintilografia com leucócitos marcados na endocardite de prótese') — aquele usa uma revisão narrativa de 2026 como fonte, com números de sensibilidade/especificidade não conferidos diretamente nos estudos primários; este usa o estudo primário original de Erba et al. (2013), com amostra e metodologia detalhadas e conferíveis, focado especificamente em infecção de bolsa/eletrodo de CIED — não de prótese valvar. Disponibilidade do exame é limitada a centros com medicina nuclear e capacidade de marcação leucocitária autóloga, processo trabalhoso que restringe seu uso à segunda linha diagnóstica.",
+    "source_refs": [
+      "Erba PA, Sollini M, Conti U, Bandera F, Tascini C, De Tommasi SM, Zucchelli G, Doria R, Menichetti F, Bongiorni MG, Lazzeri E, Mariani G. Radiolabeled WBC scintigraphy in the diagnostic workup of patients with suspected device-related infections. JACC Cardiovasc Imaging. 2013;6(10):1075-1086. DOI: 10.1016/j.jcmg.2013.08.001. PMID: 24011775."
+    ],
+    "tags": [
+      "cintilografia com leucócitos marcados",
+      "spect-ct",
+      "infecção de dispositivo cardíaco eletrônico implantável",
+      "ciecd",
+      "infecção de bolsa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tomografia-computadorizada-de-torax-na-perfuracao-cardiaca-tardia-por-eletrodo-de-dispositivo",
+    "name": "Tomografia computadorizada de tórax na perfuração cardíaca tardia por eletrodo de marca-passo/CDI",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Tomografia computadorizada de tórax, com ou sem contraste, para identificar a posição do eletrodo em relação à parede miocárdica e detectar extensão extracardíaca da ponta do eletrodo (perfuração), além de complicações associadas (derrame/tamponamento pericárdico, hemotórax, lesão de estrutura adjacente).",
+    "reference_range": "Achado qualitativo — posição intracavitária normal do eletrodo vs. extensão da ponta além do contorno epicárdico esperado, com ou sem derrame pericárdico associado.",
+    "indications": "Suspeita de perfuração cardíaca por eletrodo de marca-passo ou cardiodesfibrilador implantável — quadro clínico variável (desde achado incidental por parâmetros elétricos anormais até dor torácica ou tamponamento agudo), o que frequentemente causa atraso diagnóstico quando a suspeita não é levantada precocemente.",
+    "interpretation": "Waddingham et al. (Europace, 2022), série multicêntrica retrospectiva de 3 centros terciários do Reino Unido (2016-2020): 70 casos de perfuração identificados entre 10.631 procedimentos (taxa de 0,50% para implantes locais), com tempo mediano até o diagnóstico de 9 dias (variação de 0 a 989 dias). A tomografia computadorizada diagnosticou a perfuração com 97% de sensibilidade. Alterações de parâmetro elétrico do eletrodo estavam presentes em 86% do total de casos e em 98,6% dos casos diagnosticados com mais de 24h de atraso — reforçando que a checagem de limiar/sensing/impedância é um sinal de alerta precoce importante mesmo antes da confirmação por imagem. Derrame pericárdico com tamponamento ocorreu em 17% dos casos e associou-se a maior mortalidade e complicações maiores; uso de anticoagulante foi preditor independente de tamponamento (odds ratio 21,7; IC95% 1,7-275,5; p=0,018). Manejo percutâneo teve sucesso em 98,6% dos casos.",
+    "limitations": "Estudo retrospectivo multicêntrico (3 centros), sujeito a viés de seleção e de registro típico do desenho retrospectivo, ainda que com amostra relativamente robusta para uma complicação rara (70 casos). Perfuração é evento pouco frequente (0,50% dos implantes) — a tomografia não é exame de rotina para todo implante, e sim reservada a suspeita clínica ou elétrica específica. O estudo não compara diretamente a sensibilidade da TC com a do ecocardiograma na mesma coorte de forma pareada, limitando conclusão sobre superioridade entre os métodos de imagem nesse cenário específico.",
+    "source_refs": [
+      "Waddingham PH, Elliott J, Bates A, Bilham J, Muthumala A, Honarbakhsh S, Ullah W, Hunter RJ, Lambiase PD, Lane RE, Chow AWC. Iatrogenic cardiac perforation due to pacemaker and defibrillator leads: a contemporary multicentre experience. Europace. 2022;24(11):1824-1833. DOI: 10.1093/europace/euac105. PMID: 35894862."
+    ],
+    "tags": [
+      "perfuração cardíaca",
+      "eletrodo de dispositivo",
+      "tomografia computadorizada de tórax",
+      "complicação de implante",
+      "tamponamento pericárdico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

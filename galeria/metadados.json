@@ -5902,5 +5902,73 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "conducao-normal-vs-wolff-parkinson-white-via-acessoria",
+    "title": "Ilustração — Sistema de condução normal vs. via acessória na síndrome de Wolff-Parkinson-White",
+    "modality": "Ilustração médica",
+    "theme": "Arritmias",
+    "file_path": "diagrama/conducao-normal-vs-wolff-parkinson-white-via-acessoria.jpg",
+    "findings": "Painel comparativo em corte esquemático de quatro câmaras: à esquerda, a condução elétrica normal, originada no nó sinoatrial (amarelo, átrio direito) e propagada pelos átrios até o nó atrioventricular (AV), único ponto de passagem para os ventrículos; à direita, a mesma anatomia na síndrome de Wolff-Parkinson-White, com uma via acessória (banda amarela) ligando diretamente átrio e ventrículo, em paralelo ao nó AV, contornando o atraso fisiológico que ele impõe.",
+    "teaching_points": "A via acessória (feixe de Kent, na nomenclatura clássica) é o substrato anatômico único que explica tanto o achado eletrocardiográfico (PR curto + onda delta, por ativação ventricular precoce fora do sistema His-Purkinje) quanto o risco clínico da síndrome: ela permite dois circuitos de taquicardia por reentrada (ortodrômica, mais comum, e antidrômica) e, principalmente, oferece uma via de condução rápida para os ventrículos caso o paciente desenvolva fibrilação atrial — sem o efeito 'filtro' protetor do nó AV, a resposta ventricular pode ser perigosamente alta e degenerar para fibrilação ventricular. Esta imagem é complementar às duas imagens de ECG de WPW já cadastradas na galeria (onda delta clássica e pré-excitação intermitente): aquelas mostram o traçado resultante, esta mostra o substrato anatômico que o gera — ponto de ensino frequentemente pedido por quem já sabe reconhecer o ECG mas não visualiza o circuito por trás dele.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:WPW.jpeg",
+    "license": "CC BY 3.0",
+    "attribution": "Tom Lück, via Wikimedia Commons — CC BY 3.0.",
+    "tags": [
+      "wolff-parkinson-white",
+      "wpw",
+      "via acessória",
+      "sistema de condução cardíaca",
+      "nó atrioventricular",
+      "pré-excitação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecmo-veno-arterial-esquema-classico-canulacao-jugular-carotida",
+    "title": "Esquema clássico de ECMO veno-arterial — canulação jugular/carótida por drenagem gravitacional",
+    "modality": "Ilustração esquemática",
+    "theme": "Terapia intensiva",
+    "file_path": "diagrama/ecmo-veno-arterial-esquema-classico-canulacao-jugular-carotida.jpg",
+    "findings": "Diagrama esquemático de um circuito de ECMO veno-arterial: sangue drenado da veia jugular interna direita por gravidade, passando por um oxigenador de membrana ('Lung' no diagrama) e retornando por infusão na artéria carótida direita — o circuito completo, do paciente ao dispositivo extracorpóreo e de volta, está representado em traço único.",
+    "teaching_points": "Ressalva de honestidade importante sobre esta imagem: é um esquema clássico, de um capítulo de referência de 2005 da Extracorporeal Life Support Organization (ELSO) sobre suporte extracorpóreo cardiopulmonar — a canulação jugular-carotídea com drenagem por gravidade é o desenho histórico de ECMO neonatal/pediátrico, não o circuito predominante hoje em choque cardiogênico do adulto. Na prática atual de ECMO VA em adultos, a canulação mais comum é femoro-femoral (veia femoral para drenagem, artéria femoral para retorno, frequentemente com cânula distal de perfusão de membro para prevenir isquemia do membro canulado) e o fluxo é impulsionado por bomba centrífuga, não por gravidade. O valor didático do esquema está no princípio geral do circuito veno-arterial (drenagem venosa → oxigenação/troca gasosa extracorpórea → retorno arterial, substituindo total ou parcialmente a função de bomba do coração nativo) — não nos detalhes específicos de sítio de canulação ou mecanismo de propulsão do modelo retratado, que devem ser complementados com a prática contemporânea ao ensinar o tema.",
+    "source_name": "Wikimedia Commons (figura de capítulo ELSO, 2005)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Veno-arterial_(VA)_ECMO_for_cardiac_or_respiratory_failure.jpg",
+    "license": "CC BY 2.5",
+    "attribution": "Van Meurs K, Lally KP, Peek G, Zwischenberger JB (eds.). ECMO: Extracorporeal Cardiopulmonary Support in Critical Care. Extracorporeal Life Support Organization, Ann Arbor, 2005 — via Wikimedia Commons, CC BY 2.5.",
+    "tags": [
+      "ecmo",
+      "ecmo veno-arterial",
+      "suporte circulatório mecânico",
+      "choque cardiogênico",
+      "oxigenação por membrana extracorpórea",
+      "terapia intensiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-gerador-e-eletrodo-fotografia-com-escala",
+    "title": "Fotografia — Gerador de marca-passo e eletrodo, com escala de referência",
+    "modality": "Fotografia de dispositivo",
+    "theme": "Dispositivos",
+    "file_path": "dispositivo/marca-passo-gerador-e-eletrodo-fotografia-com-escala.jpg",
+    "findings": "Fotografia de um marca-passo definitivo unicameral (St. Jude Medical Victory SR 5610, modo SSIR) explantado, com o eletrodo bipolar completo enrolado ao lado do gerador, sobre régua métrica de referência: o corpo do gerador mede cerca de 4-5 cm no maior eixo e o eletrodo, cerca de 58 cm de comprimento, com o conector IS-1 padrão visível na extremidade oposta à ponta ativa.",
+    "teaching_points": "Fotografia útil para dar noção real de escala a quem só viu o dispositivo em radiografia ou fluoroscopia — a galeria já tem três imagens de marca-passo/CDI em RX/fluoroscopia (posicionamento normal, síndrome de Twiddler, ressincronizador com três eletrodos), mas nenhuma mostra o objeto físico fora do corpo. O comprimento generoso do eletrodo (bem maior que a distância direta entre o bolso peitoral subcutâneo e a câmara cardíaca-alvo) não é desperdício de material: a folga é deixada propositalmente em alça no bolso do gerador (visível também nas radiografias pós-implante) para acomodar o movimento do braço e do tórax sem tracionar a ponta fixada ao miocárdio ou endocárdio — tração repetida é um mecanismo reconhecido de deslocamento tardio de eletrodo.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Jude_Medical_pacemaker_with_ruler.jpg",
+    "license": "CC BY 3.0 / GFDL",
+    "attribution": "Steven Fruitsmaak, via Wikimedia Commons — CC BY 3.0 / GFDL.",
+    "tags": [
+      "marca-passo",
+      "gerador de pulso",
+      "eletrodo",
+      "dispositivo cardíaco eletrônico implantável",
+      "fotografia de dispositivo"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
