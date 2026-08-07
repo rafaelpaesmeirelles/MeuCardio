@@ -148,3 +148,21 @@ def test_executor_ferramenta_recebe_input_correto_com_multiplas_tools_na_mesma_r
     ]
     resultados = chamadas[1]["messages"][-1]["content"]
     assert [r["tool_use_id"] for r in resultados] == ["t1", "t2"]
+
+
+def test_web_search_declara_allowed_callers_direct():
+    """Bug real em produção, 06-07/08/2026: com `usar_internet=True` e o
+    modelo auto-selecionado sendo claude-haiku-4-5 (comum na Assistente
+    Pessoal, pergunta curta), a Anthropic devolvia 400 BadRequestError —
+    "claude-haiku-4-5 does not support programmatic tool calling" — porque a
+    tool `web_search` não declarava `allowed_callers`, e o padrão implícito
+    da API exige um recurso que aquele modelo não tem. `allowed_callers:
+    ["direct"]` explícito resolve, conforme a própria mensagem de erro da
+    Anthropic indicou."""
+    respostas = [
+        _Resp(content=[_Bloco(type="text", text="ok")], stop_reason="end_turn"),
+    ]
+    provedor, chamadas = _provedor_com_cliente_falso(respostas)
+    provedor.responder("sistema", [{"role": "user", "content": "oi"}], usar_internet=True)
+    ferramenta_busca = next(t for t in chamadas[0]["tools"] if t["name"] == "web_search")
+    assert ferramenta_busca["allowed_callers"] == ["direct"]

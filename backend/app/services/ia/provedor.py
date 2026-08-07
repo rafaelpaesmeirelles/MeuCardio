@@ -190,7 +190,20 @@ class ProvedorAnthropic(ProvedorIA):
             # tolera antes de cair — foi o que produziu "Failed to fetch" em
             # produção mesmo com a resposta pronta do lado do servidor
             # (medido: ~125s de principio a fim, conexão morrendo ~100s).
-            tools.append({"type": "web_search_20260209", "name": "web_search", "max_uses": 3})
+            # `allowed_callers: ["direct"]` explícito — bug real em produção,
+            # 06-07/08/2026: a Assistente Pessoal (Trabalho 15) pode
+            # auto-selecionar claude-haiku-4-5 para pergunta curta/simples, e
+            # esse modelo não suporta "chamada programática" de ferramenta, o
+            # modo que a API assume por padrão quando o campo não é
+            # declarado. Sem isso a chamada inteira falhava com 400
+            # BadRequestError, e o assinante via só "O provedor de IA não
+            # respondeu" — a mensagem de erro da própria Anthropic já indica
+            # esta correção. Modelos que suportam chamada programática
+            # continuam funcionando normalmente com o campo explícito.
+            tools.append({
+                "type": "web_search_20260209", "name": "web_search", "max_uses": 3,
+                "allowed_callers": ["direct"],
+            })
         if ferramentas:
             # Tools "cliente" (agenda/e-mail do próprio usuário) — ao contrário
             # da web_search, que o servidor da Anthropic executa sozinho,
