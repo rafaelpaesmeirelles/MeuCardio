@@ -25,6 +25,11 @@ const PROVEDOR_LOGO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> 
 const PROVEDOR_NOME: Record<string, string> = {
   google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud", yahoo_mail: "Yahoo Mail",
 };
+// Chave curta que conectarOAuth()/os formulários Apple e Yahoo esperam, a
+// partir do nome completo do provider que a API devolve.
+const PROVEDOR_CHAVE_CONEXAO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
+  google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo",
+};
 
 /** Trabalho 16 (07/08/2026), item próprio do menu ("Sincronize suas
  * contas", seção Gestão, posição inferior do menu lateral — pedido do
@@ -138,6 +143,24 @@ export default function Sincronizacao() {
     } finally {
       setSincronizando(null);
     }
+  }
+
+  /** 07/08/2026 — achado ao reproduzir de novo o "ressincronizar não funciona"
+   * que o Rafael reportou: a conta meirellesemaluf@gmail.com está com
+   * `enabled: false` no banco (token OAuth revogado/expirado — mesma causa
+   * de sempre para esse código de erro). "Sincronizar agora" chamava
+   * `/sync-all` sem checar isso primeiro, e o backend responde 409
+   * `integration_disabled` ANTES de tentar qualquer coisa com o provedor —
+   * clicar não "não levava a nada" por acaso, sempre falhava, só que o erro
+   * genérico não dizia por quê nem o que fazer. As três rotas de conexão
+   * (`complete_oauth`, `/integrations/apple`, `/conectar-yahoo`) já fazem
+   * upsert pela MESMA conta (owner + provider + identificador externo) —
+   * reconectar não cria duplicata, revive esta mesma linha. */
+  function reconectar(item: IntegracaoExterna) {
+    const chave = PROVEDOR_CHAVE_CONEXAO[item.provider];
+    if (chave === "google" || chave === "microsoft") { conectarOAuth(chave); return; }
+    if (chave === "apple") { setApple((a) => ({ ...a, apple_id: item.display_name })); setFormAberto("apple"); return; }
+    if (chave === "yahoo") { setYahoo((y) => ({ ...y, endereco: item.display_name })); setFormAberto("yahoo"); return; }
   }
 
   async function alterarPreferencia(id: number, campo: "sync_calendar" | "sync_mail" | "contacts", valor: boolean) {
@@ -290,7 +313,12 @@ export default function Sincronizacao() {
                   <span className="eyebrow" style={{ margin: 0 }}>{PROVEDOR_NOME[item.provider]}</span>
                 </span>
                 <span style={{ display: "flex", gap: 6 }}>
-                  {cap.read_appointments && (
+                  {!item.enabled ? (
+                    <button className="botao" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                            onClick={() => reconectar(item)}>
+                      Reconectar
+                    </button>
+                  ) : cap.read_appointments && (
                     <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
                             disabled={sincronizando === item.id} onClick={() => sincronizarConta(item.id)}>
                       {sincronizando === item.id ? "Sincronizando…" : "Sincronizar agora"}
@@ -302,7 +330,12 @@ export default function Sincronizacao() {
                   </button>
                 </span>
               </div>
-              {item.last_success_at ? (
+              {!item.enabled ? (
+                <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
+                  Conta desconectada — o acesso expirou ou foi revogado do lado do provedor.
+                  Clique em "Reconectar" para retomar a sincronização desta mesma conta.
+                </p>
+              ) : item.last_success_at ? (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--texto-secundario)" }}>
                   Última sincronização: {new Date(item.last_success_at).toLocaleString("pt-BR")}
                 </p>
@@ -311,7 +344,7 @@ export default function Sincronizacao() {
                   Ainda sem sincronização bem-sucedida — clique em "Sincronizar agora".
                 </p>
               ) : null}
-              {item.last_error_message && (
+              {item.enabled && item.last_error_message && (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
                   Última falha: {item.last_error_message}
                 </p>
