@@ -2,6 +2,7 @@
 
 from . import calculators as calculators
 from .dose_calculators_acls2025_chatgpt import ACLS_2025_DOSE_REGISTRY
+from .dose_calculators_antiagregantes_sca2025_chatgpt import ANTIAGREGANTES_SCA_2025_DOSE_REGISTRY
 from .dose_calculators_doac_brasil_chatgpt import DOAC_BRASIL_DOSE_REGISTRY
 from .dose_calculators_enoxaparina_sca_chatgpt import ENOXAPARINA_SCA_DOSE_REGISTRY
 from .dose_calculators_fibrinoliticos_stemi_chatgpt import FIBRINOLITICOS_STEMI_DOSE_REGISTRY
@@ -12,6 +13,7 @@ from .perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGIS
 from .perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 
 calculators.REGISTRY.update(ACLS_2025_DOSE_REGISTRY)
+calculators.REGISTRY.update(ANTIAGREGANTES_SCA_2025_DOSE_REGISTRY)
 calculators.REGISTRY.update(DOAC_BRASIL_DOSE_REGISTRY)
 calculators.REGISTRY.update(ENOXAPARINA_SCA_DOSE_REGISTRY)
 calculators.REGISTRY.update(FIBRINOLITICOS_STEMI_DOSE_REGISTRY)
