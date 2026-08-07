@@ -36061,5 +36061,289 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ssc2021-cristaloide-30ml-kg-nas-primeiras-3h",
+    "statement": "Em pacientes com sepse com hipoperfusão ou choque séptico, é sugerido administrar pelo menos 30 mL/kg de cristaloide intravenoso nas primeiras 3 horas de ressuscitação.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 5, seção 'Initial resuscitation', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "reposição volêmica",
+      "cristaloide",
+      "ressuscitação inicial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-medidas-dinamicas-para-guiar-reposicao-volemica",
+    "statement": "Em adultos com sepse ou choque séptico, é sugerido usar medidas dinâmicas — resposta à elevação passiva das pernas ou a uma prova de volume, aferida por volume sistólico, variação de volume sistólico, variação de pressão de pulso ou ecocardiografia — para guiar a reposição volêmica, em vez de exame físico isolado ou parâmetros estáticos.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "MtBx",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 6, seção 'Initial resuscitation', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "reposição volêmica",
+      "parâmetros dinâmicos",
+      "ecocardiografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-lactato-seriado-para-guiar-ressuscitacao",
+    "statement": "Em adultos com sepse ou choque séptico e lactato sérico elevado, é sugerido guiar a ressuscitação pela redução do lactato sérico, em vez de não usar o lactato como parâmetro — sempre interpretando o valor à luz do contexto clínico e de outras causas de hiperlactatemia.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 7, seção 'Initial resuscitation', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "lactato",
+      "ressuscitação guiada por metas"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-tempo-de-enchimento-capilar-como-adjuvante-da-ressuscitacao",
+    "statement": "Em adultos com choque séptico, é sugerido usar o tempo de enchimento capilar como adjuvante de outras medidas de perfusão para guiar a ressuscitação.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 8, seção 'Initial resuscitation', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "tempo de enchimento capilar",
+      "perfusão tecidual"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-meta-de-pam-65-mmhg-no-choque-septico",
+    "statement": "Em adultos com choque séptico em uso de vasopressor, é recomendada uma pressão arterial média (PAM) alvo inicial de 65 mmHg, em vez de metas de PAM mais altas.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 9, seção 'Mean arterial pressure', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "pressão arterial média",
+      "meta hemodinâmica",
+      "vasopressor"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-noradrenalina-vasopressor-de-primeira-linha-no-choque-septico",
+    "statement": "Em adultos com choque séptico, é recomendado usar noradrenalina como agente vasopressor de primeira linha, preferível a outros vasopressores. A força da recomendação é a mesma para todos os comparadores, mas a qualidade da evidência que a sustenta varia conforme o comparador: alta frente à dopamina, moderada frente à vasopressina, baixa frente à adrenalina e à selepressina, e muito baixa frente à angiotensina II. Onde a noradrenalina não estiver disponível, adrenalina ou dopamina podem ser usadas como alternativa, com atenção especial ao risco de arritmia com dopamina e adrenalina.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 37, seção 'Vasoactive agents', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "noradrenalina",
+      "vasopressor",
+      "dopamina",
+      "adrenalina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-vasopressina-antes-de-escalonar-noradrenalina",
+    "statement": "Em adultos com choque séptico em uso de noradrenalina com PAM ainda inadequada, é sugerido acrescentar vasopressina em vez de escalonar a dose de noradrenalina. Na prática, a vasopressina costuma ser iniciada quando a dose de noradrenalina está na faixa de 0,25–0,5 mcg/kg/min.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 38, seção 'Vasoactive agents', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "vasopressina",
+      "noradrenalina",
+      "vasopressor de resgate"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-adrenalina-associada-quando-pam-inadequada-com-noradrenalina-e-vasopressina",
+    "statement": "Em adultos com choque séptico e PAM ainda inadequada apesar de noradrenalina e vasopressina associadas, é sugerido acrescentar adrenalina.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 39, seção 'Vasoactive agents', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "adrenalina",
+      "vasopressor de resgate",
+      "noradrenalina",
+      "vasopressina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-dobutamina-associada-a-noradrenalina-na-disfuncao-cardiaca-do-choque-septico",
+    "statement": "Em adultos com choque séptico e disfunção cardíaca com hipoperfusão persistente, apesar de volemia e pressão arterial adequadas, é sugerido acrescentar dobutamina à noradrenalina ou, alternativamente, usar adrenalina isolada.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 41, seção 'Inotropes', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "disfunção miocárdica séptica",
+      "dobutamina",
+      "inotrópico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-contra-levosimendana-na-disfuncao-cardiaca-do-choque-septico",
+    "statement": "Em adultos com choque séptico e disfunção cardíaca com hipoperfusão persistente, apesar de volemia e pressão arterial adequadas, é sugerido NÃO usar levosimendana.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 42, seção 'Inotropes', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "disfunção miocárdica séptica",
+      "levosimendana",
+      "inotrópico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-monitorizacao-invasiva-da-pressao-arterial-no-choque-septico",
+    "statement": "Em adultos com choque séptico, é sugerido usar monitorização invasiva da pressão arterial (cateter arterial), em vez de monitorização não invasiva, assim que praticável e se houver recurso disponível — a aferição não invasiva por manguito tende a ser imprecisa, com discrepância mais pronunciada em estados de choque.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "MtBx",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 43, seção 'Monitoring and intravenous access', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "cateter arterial",
+      "monitorização hemodinâmica invasiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-vasopressor-periferico-sem-esperar-acesso-venoso-central",
+    "statement": "Em adultos com choque séptico, é sugerido iniciar vasopressor por via periférica para restaurar a PAM, em vez de adiar o início até que um acesso venoso central esteja disponível. Quando usados perifericamente, os vasopressores devem ser administrados por curto período, numa veia na fossa antecubital ou proximal a ela, com transição para acesso central assim que praticável se a infusão continuar sendo necessária.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "MtBx",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 44, seção 'Monitoring and intravenous access', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "vasopressor periférico",
+      "acesso venoso central",
+      "tempo até vasopressor"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-corticosteroide-iv-no-choque-septico-com-vasopressor-continuo",
+    "statement": "Em adultos com choque séptico e necessidade contínua de vasopressor, é sugerido usar corticosteroide intravenoso. O corticosteroide típico é hidrocortisona IV 200 mg/dia, em 50 mg a cada 6 horas ou infusão contínua, com sugestão de iniciar quando a dose de noradrenalina ou adrenalina atingir ≥0,25 mcg/kg/min por pelo menos 4 horas após o início do vasopressor.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 58, seção 'Adjunctive therapies', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "choque séptico",
+      "corticosteroide",
+      "hidrocortisona",
+      "vasopressor refratário"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-estrategia-restritiva-de-transfusao-na-sepse",
+    "statement": "Em adultos com sepse ou choque séptico, é recomendado usar estratégia restritiva de transfusão de hemácias, em vez de estratégia liberal. Uma estratégia restritiva tipicamente usa gatilho transfusional de hemoglobina de 70 g/L, mas a transfusão não deve ser guiada pela hemoglobina isoladamente — deve considerar o quadro clínico global e circunstâncias específicas, como isquemia miocárdica aguda, hipoxemia grave ou hemorragia aguda.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 61, seção 'Additional therapies', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "sepse",
+      "choque séptico",
+      "transfusão de hemácias",
+      "estratégia restritiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ssc2021-insulina-a-partir-de-glicemia-180-mg-dl",
+    "statement": "Em adultos com sepse ou choque séptico, é recomendado iniciar insulinoterapia a partir de glicemia ≥180 mg/dL (10 mmol/L). Após o início, a faixa-alvo típica de glicemia é 144-180 mg/dL (8-10 mmol/L).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "ESICM/SCCM",
+    "year": 2021,
+    "guideline_title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+    "reference": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247. DOI: 10.1007/s00134-021-06506-y. PMID: 34599691. PMCID: PMC8486643 (acesso aberto) — Recomendação 69, seção 'Additional therapies', texto integral em inglês lido diretamente no PMC (versão Intensive Care Med, copublicada pela ESICM/SCCM) nesta sessão, não de resumo secundário.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "sepse",
+      "choque séptico",
+      "controle glicêmico",
+      "insulinoterapia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
