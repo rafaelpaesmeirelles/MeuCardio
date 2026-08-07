@@ -12,13 +12,18 @@ from app.models.round import Patient
 from app.services import calculators as calc
 from app.services import cofre
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 from app.services.professional_profile import document_identity
 
-# Calculadoras perioperatórias produzidas pelo ChatGPT são registradas no mesmo
-# catálogo usado pelo frontend genérico e pela avaliação pré-operatória.
-# A atualização ocorre após `calculators` estar completamente importado, evitando
-# duplicar as dataclasses/infraestrutura existentes.
+# Registra as calculadoras perioperatórias no catálogo genérico. As extensões
+# abaixo são produção ChatGPT e mantêm as referências primárias nos próprios
+# objetos Calculator.
 calc.REGISTRY.update(PERIOPERATIVE_REGISTRY)
+calc.REGISTRY.update(GERIATRIC_PERIOPERATIVE_REGISTRY)
+calc.REGISTRY.update(MORTALITY_PERIOPERATIVE_REGISTRY)
+calc.REGISTRY.update(SORT_PERIOPERATIVE_REGISTRY)
 
 router = APIRouter(prefix="/api/calculators", tags=["calculadoras"])
 
@@ -71,11 +76,6 @@ def run_calculator(slug: str, payload: dict, _=Depends(current_user)):
 class GerarDocumentoIn(BaseModel):
     patient_id: int | None = None
     patient_name: str | None = None
-    # Texto livre — nem toda calculadora é sobre um procedimento cirúrgico
-    # (CHA₂DS₂-VASc é sobre risco de AVC em FA, QTc é sobre segurança de
-    # fármaco etc.), então o rótulo não presume cirurgia; quem preenche
-    # escreve o que for pertinente (procedimento planejado, contexto da
-    # avaliação, motivo da consulta).
     contexto_clinico: str | None = None
     conduta_recomendada: str | None = None
     endereco: str | None = None
@@ -86,18 +86,10 @@ class GerarDocumentoIn(BaseModel):
 def gerar_documento(
     slug: str, dados: GerarDocumentoIn, db: Session = Depends(get_db), user=Depends(current_user),
 ):
-    """Laudo genérico de calculadora clínica — dados do paciente (opcionais,
-    anonimizados como o resto do Round) + contexto clínico + resultado
-    recalculado no servidor (nunca confia em número que o cliente diga ter
-    obtido) + conduta do médico, pronto para assinar, imprimir e enviar.
+    """Gera laudo genérico para qualquer calculadora do catálogo.
 
-    Reaproveita a mesma infraestrutura genérica de `GeneratedDocument` já
-    usada por Atestado/Laudo/Avaliação Pré-Operatória: as rotas de
-    `app/api/documents.py` (`/gerados/{id}/pdf`, `/assinatura-externa`,
-    `/enviar-email`) servem este documento sem alteração nenhuma. Funciona
-    para qualquer uma das calculadoras do catálogo, não só as de risco
-    cirúrgico — pedido do Rafael em 07/08/2026 ("todas as calculadoras
-    habilitadas para... gerar laudo completo do resultado").
+    O resultado é recalculado no servidor e reutiliza a infraestrutura de
+    GeneratedDocument/PDF/assinatura/e-mail já existente.
     """
     c = calc.REGISTRY.get(slug)
     if not c:
@@ -119,7 +111,6 @@ def gerar_documento(
         raise HTTPException(status_code=422, detail="Revise os valores informados antes de gerar o documento.")
 
     resultado, interpretacao = r["result"], r.get("interpretation")
-
     linhas: list[str] = [c.name.upper(), ""]
     if dados.contexto_clinico:
         linhas.append(f"Contexto clínico / procedimento: {dados.contexto_clinico}")
@@ -143,8 +134,7 @@ def gerar_documento(
         linhas.append("")
     linhas.append(
         "Este documento é uma ferramenta de apoio à decisão clínica, com o resultado recalculado "
-        "no servidor a partir dos dados informados. Não substitui o julgamento clínico do médico "
-        "responsável."
+        "no servidor a partir dos dados informados. Não substitui o julgamento clínico do médico responsável."
     )
     corpo = "\n".join(linhas)
 
@@ -161,6 +151,7 @@ def gerar_documento(
             "payload": dados.payload,
             "contexto_clinico": dados.contexto_clinico or "",
             "conduta_recomendada": dados.conduta_recomendada or "",
+            "fonte_producao_extensao": "chatgpt" if slug in {"gscri", "sort", "s-mpm"} else "",
         },
     )
     db.add(gerado)
@@ -169,15 +160,13 @@ def gerar_documento(
     if nome_paciente:
         gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
 
-    db.add(
-        AuditLog(
-            user_id=user.id,
-            action="gerar_documento_calculadora",
-            entity="generated_document",
-            entity_id=str(gerado.id),
-            detail={"calculadora": slug},
-        )
-    )
+    db.add(AuditLog(
+        user_id=user.id,
+        action="gerar_documento_calculadora",
+        entity="generated_document",
+        entity_id=str(gerado.id),
+        detail={"calculadora": slug},
+    ))
     db.commit()
     db.refresh(gerado)
     return {
