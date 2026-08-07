@@ -17555,5 +17555,80 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "orion-10-11-inclisiran-reducao-sustentada-de-ldl-a-cada-6-meses",
+    "title": "Ray et al. 2020 — ORION-10 e ORION-11: inclisirana reduz LDL em ~50% com aplicação a cada 6 meses",
+    "study_type": "ensaio_clinico",
+    "authors": "Ray KK, Wright RS, Kallend D, Koenig W, Leiter LA, Raal FJ, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2020,
+    "doi": "10.1056/NEJMoa1912387",
+    "pmid": "32187462",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32187462/",
+    "summary": "Dois ensaios clínicos randomizados, duplo-cegos, controlados por placebo — ORION-10 (pacientes com doença cardiovascular aterosclerótica, n=1.561) e ORION-11 (pacientes com doença aterosclerótica ou equivalente de risco, n=1.617) — testando inclisirana (short interfering RNA que inibe a síntese hepática de PCSK9), 284 mg por via subcutânea nos dias 1, 90 e a cada 6 meses depois, versus placebo, em pacientes com LDL elevado apesar de estatina em dose máxima tolerada.",
+    "key_findings": "No dia 510, inclisirana reduziu o LDL em 52,3% (IC95% 48,8-55,7) no ORION-10 e 49,9% (IC95% 46,6-53,1) no ORION-11 em relação ao placebo (p<0,001 em todas as comparações). Eventos adversos foram similares entre os grupos, exceto reação no local de injeção, mais frequente com inclisirana (2,6% vs. 0,9% no ORION-10; 4,7% vs. 0,5% no ORION-11) — em geral leves, nenhuma grave ou persistente.",
+    "clinical_implications": "Estabelece a inclisirana como opção de redução de LDL de longa duração com apenas duas aplicações subcutâneas por ano (após a dose inicial), potencial vantagem de adesão sobre os inibidores de PCSK9 injetáveis a cada 2-4 semanas (evolocumabe, alirocumabe) — os ensaios avaliaram desfecho substituto (LDL), não desfecho cardiovascular duro diretamente.",
+    "limitations": "Desfecho primário é redução percentual de LDL (substituto), não evento cardiovascular; eventos cardiovasculares foram monitorados como desfecho exploratório/de segurança, sem poder estatístico dedicado para essa análise nestes dois ensaios especificamente.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "inclisirana",
+      "PCSK9",
+      "siRNA",
+      "LDL",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ascend-2018-aspirina-em-prevencao-primaria-no-diabetes-mellitus",
+    "title": "ASCEND 2018 — Aspirina em prevenção primária em pessoas com diabetes mellitus",
+    "study_type": "ensaio_clinico",
+    "authors": "ASCEND Study Collaborative Group; Bowman L, Mafham M, Wallendszus K, Stevens W, Buck G, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2018,
+    "doi": "10.1056/NEJMoa1804988",
+    "pmid": "30146931",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30146931/",
+    "summary": "Ensaio clínico randomizado com 15.480 adultos com diabetes mellitus, mas sem doença cardiovascular evidente, comparando aspirina 100 mg/dia versus placebo, com seguimento médio de 7,4 anos, avaliando desfecho primário de eficácia (primeiro evento vascular grave: infarto, AVC/AIT ou morte vascular) e desfecho primário de segurança (primeiro sangramento maior).",
+    "key_findings": "Eventos vasculares graves ocorreram em 8,5% do grupo aspirina versus 9,6% do grupo placebo (razão de taxa 0,88; IC95% 0,79-0,97; p=0,01) — benefício estatisticamente significativo, porém modesto em termos absolutos. Sangramento maior ocorreu em 4,1% do grupo aspirina versus 3,2% do grupo placebo (razão de taxa 1,29; IC95% 1,09-1,52; p=0,003), principalmente sangramento gastrointestinal e outro sangramento extracraniano. Não houve diferença na incidência de câncer gastrointestinal ou câncer em geral entre os grupos.",
+    "clinical_implications": "Demonstra que, em pessoas com diabetes sem doença cardiovascular estabelecida, o benefício absoluto da aspirina em prevenção primária é amplamente contrabalançado pelo risco de sangramento maior — os próprios autores concluem isso explicitamente na discussão —, reforçando que a indicação de aspirina em prevenção primária no diabético deve ser individualizada, não automática, mesmo reconhecendo o maior risco cardiovascular basal dessa população.",
+    "limitations": "O follow-up de longo prazo para desfechos de câncer estava planejado mas não incluído nesta publicação; a magnitude do benefício líquido depende do risco basal individual de sangramento, não quantificado por escore específico neste ensaio.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "aspirina",
+      "prevenção primária",
+      "diabetes mellitus",
+      "sangramento",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "arrive-2018-aspirina-em-risco-cardiovascular-moderado",
+    "title": "ARRIVE 2018 — Aspirina em prevenção primária de risco cardiovascular moderado: evento muito abaixo do esperado",
+    "study_type": "ensaio_clinico",
+    "authors": "Gaziano JM, Brotons C, Coppolecchia R, Cricelli C, Darius H, Gorelick PB, et al.",
+    "journal": "Lancet",
+    "year": 2018,
+    "doi": "10.1016/S0140-6736(18)31924-X",
+    "pmid": "30158069",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30158069/",
+    "summary": "Ensaio clínico randomizado, duplo-cego, controlado por placebo, multicêntrico em sete países, com 12.546 pacientes de risco cardiovascular moderado (homens ≥55 anos, mulheres ≥60 anos, sem diabetes, sem alto risco de sangramento), comparando aspirina 100 mg/dia versus placebo, com desfecho primário composto de morte cardiovascular, infarto, angina instável, AVC ou AIT, seguimento mediano de 60 meses.",
+    "key_findings": "O desfecho primário ocorreu em 4,29% do grupo aspirina versus 4,48% do grupo placebo (HR 0,96; IC95% 0,81-1,13; p=0,60) — sem diferença significativa. Sangramento gastrointestinal (majoritariamente leve) foi mais frequente com aspirina (0,97% vs. 0,46%; HR 2,11; IC95% 1,36-3,28; p=0,0007). A taxa de eventos observada foi muito menor que a esperada no desenho do estudo, tornando a amostra, na prática, mais representativa de população de baixo risco que de risco moderado.",
+    "clinical_implications": "O resultado NULO deste ensaio precisa ser lido à luz de sua limitação principal, reconhecida pelos próprios autores: a taxa de evento observada ficou muito abaixo da esperada — provavelmente reflexo do manejo contemporâneo de risco (uso disseminado de estatina, controle pressórico) — o que tornou a amostra de fato mais parecida com população de baixo risco. O papel da aspirina em prevenção primária especificamente em risco MODERADO permanece, portanto, não respondido por este ensaio, e os achados são consistentes com os já publicados em populações de baixo risco (sem benefício líquido claro).",
+    "limitations": "Taxa de evento muito abaixo do esperado no desenho comprometeu o poder estatístico para a pergunta de pesquisa original (risco moderado); os próprios autores afirmam explicitamente na interpretação que \"o papel da aspirina em prevenção primária entre pacientes de risco moderado não pôde, portanto, ser respondido\".",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "aspirina",
+      "prevenção primária",
+      "risco cardiovascular moderado",
+      "sangramento",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
