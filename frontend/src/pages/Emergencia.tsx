@@ -94,6 +94,11 @@ export default function Emergencia() {
   const [aberto, setAberto] = useState<string | null>(null);
   const [secaoAberta, setSecaoAberta] = useState<number>(0);
   const [busca, setBusca] = useState("");
+  // 07/08/2026, pedido do Rafael: toda busca do site precisa de pelo menos
+  // duas formas de refinar. Aqui é 100% local — o pacote inteiro já está
+  // carregado (regra 1 do offline-first desta tela, acima), então filtrar por
+  // tema não dispara rede nenhuma, mesma garantia do texto livre.
+  const [tema, setTema] = useState("");
 
   useEffect(() => {
     const local = recuperar();
@@ -113,13 +118,23 @@ export default function Emergencia() {
       });
   }, []);
 
+  const temas = useMemo(() => {
+    const contagem = new Map<string, number>();
+    (pacote?.protocolos || []).forEach((p) => {
+      const t = pacote?.documentos[p.documento_slug]?.theme;
+      if (t) contagem.set(t, (contagem.get(t) ?? 0) + 1);
+    });
+    return [...contagem.entries()].sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
+  }, [pacote]);
+
   const protocolosFiltrados = useMemo(() => {
     const protocolos = pacote?.protocolos || [];
     const termos = normalizarBusca(busca).split(" ").filter(Boolean);
-    if (termos.length === 0) return protocolos;
 
     return protocolos.filter((p) => {
       const documento = pacote?.documentos[p.documento_slug];
+      if (tema && documento?.theme !== tema) return false;
+      if (termos.length === 0) return true;
       const texto = normalizarBusca([
         p.titulo,
         p.gatilho || "",
@@ -128,7 +143,7 @@ export default function Emergencia() {
       ].join(" "));
       return termos.every((termo) => texto.includes(termo));
     });
-  }, [busca, pacote]);
+  }, [busca, tema, pacote]);
 
   const protocolo = useMemo(
     () => pacote?.protocolos.find((p) => p.slug === aberto) || null,
@@ -184,6 +199,17 @@ export default function Emergencia() {
                 </button>
               )}
             </div>
+            {temas.length > 1 && (
+              <div className="emerg__temaLinha">
+                <label htmlFor="tema-emergencia">Filtrar por sistema/tema</label>
+                <select id="tema-emergencia" value={tema} onChange={(event) => setTema(event.target.value)}>
+                  <option value="">Todos os temas ({pacote?.protocolos.length ?? 0})</option>
+                  {temas.map(([nome, contagem]) => (
+                    <option key={nome} value={nome}>{nome} ({contagem})</option>
+                  ))}
+                </select>
+              </div>
+            )}
             {pacote && (
               <small aria-live="polite">
                 {protocolosFiltrados.length} de {pacote.protocolos.length} protocolo(s)
@@ -214,7 +240,9 @@ export default function Emergencia() {
           )}
           {pacote && pacote.protocolos.length > 0 && protocolosFiltrados.length === 0 && (
             <p className="emerg__semResultado">
-              Nenhum protocolo encontrado para “{busca.trim()}”.
+              {busca.trim()
+                ? `Nenhum protocolo encontrado para “${busca.trim()}”${tema ? ` em ${tema}` : ""}.`
+                : `Nenhum protocolo encontrado em ${tema}.`}
             </p>
           )}
         </>
