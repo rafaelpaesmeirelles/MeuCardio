@@ -726,7 +726,12 @@
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
   text-transform: uppercase; color: var(--acento);
 }
-.trilha__titulo { font-weight: 600; text-transform: capitalize; }
+/* 07/08/2026: `text-transform: capitalize` foi removido — existia para
+   disfarçar o antigo título derivado do slug (minúsculo, com hífen). Agora o
+   título vem pronto do item real (Document.title etc.), com a capitalização
+   certa do português; o `capitalize` do CSS maiusculizava também "De", "Por"
+   e "E", que não deveriam ir maiúsculos. */
+.trilha__titulo { font-weight: 600; }
 .trilha__titulo--off { color: var(--texto-secundario); }
 .trilha__titulo--off em { font-size: 0.8rem; font-weight: 400; }
 /* O "por quê" é o que a trilha acrescenta ao conteúdo que já existe — fica
