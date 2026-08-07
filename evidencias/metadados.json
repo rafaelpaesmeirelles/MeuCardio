@@ -39620,5 +39620,826 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "pre-hipertensao-classificacao-pas-120-139-ou-pad-80-89-sbc-2025",
+    "statement": "Recomenda-se classificar a pré-hipertensão abrangendo valores de PAS entre 120-139 mmHg ou PAD entre 80-89 mmHg no consultório, com o objetivo de identificar precocemente indivíduos em risco e incentivar intervenções mais proativas e não medicamentosas para prevenir a progressão para hipertensão arterial.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "pré-hipertensão",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diagnostico-de-ha-com-duas-medidas-de-consultorio-e-estadiamento-sbc-2025",
+    "statement": "Recomenda-se que o diagnóstico de hipertensão arterial (HA) seja feito quando a PA no consultório for ≥ 140 e/ou 90 mmHg em duas ocasiões diferentes, classificada em estágios 1, 2 e 3 de acordo com o maior valor de PAS ou PAD.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "diagnóstico",
+      "estadiamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "equipamento-automatico-de-braco-para-medida-da-pa-sbc-2025",
+    "statement": "Recomenda-se utilizar equipamento automático de braço para a medida da pressão arterial, com o objetivo de reduzir erros e facilitar a obtenção da medida.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "medida da pressão arterial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mapa-ou-mrpa-para-confirmar-diagnostico-e-monitorar-tratamento-sbc-2025",
+    "statement": "Recomenda-se usar MAPA (monitorização ambulatorial da pressão arterial) ou MRPA (monitorização residencial da pressão arterial) para confirmar o diagnóstico de hipertensão arterial e monitorar o tratamento.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "mapa",
+      "mrpa",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pesquisa-de-frcv-e-loa-no-diagnostico-de-ha-e-reavaliacao-anual-sbc-2025",
+    "statement": "Recomenda-se pesquisar fatores de risco cardiovascular (FRCV) e lesão de órgão-alvo (LOA) idealmente em todos os pacientes no momento do diagnóstico de hipertensão arterial, repetindo essa avaliação pelo menos anualmente, com o método escolhido conforme os recursos disponíveis.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "lesão de órgão-alvo",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-prevent-para-avaliacao-de-risco-cardiovascular-na-ha-sbc-2025",
+    "statement": "Recomenda-se avaliar o risco cardiovascular do paciente hipertenso utilizando o escore PREVENT (Predicting Risk of Cardiovascular Disease Events).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "escore prevent",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estratificacao-de-risco-cv-na-pre-hipertensao-para-guiar-inicio-de-tratamento-sbc-2025",
+    "statement": "Recomenda-se estratificar o risco cardiovascular em indivíduos com pré-hipertensão, com o objetivo de orientar o início do tratamento anti-hipertensivo e promover um controle mais adequado dos fatores de risco cardiovascular.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "pré-hipertensão",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estratificacao-de-risco-cv-em-pacientes-com-ha-para-manejo-personalizado-sbc-2025",
+    "statement": "Recomenda-se estratificar o risco cardiovascular em pacientes com hipertensão arterial, com o objetivo de promover uma abordagem mais precisa e personalizada no manejo de medicamentos e no direcionamento de metas para controle dos fatores de risco cardiovascular.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "risco cardiovascular",
+      "individualização de metas"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "medidas-nao-medicamentosas-para-todo-individuo-com-pa-120-80-ou-mais-sbc-2025",
+    "statement": "Recomendam-se medidas não medicamentosas (MNM) para todos os indivíduos com pressão arterial ≥ 120/80 mmHg, independentemente da necessidade de tratamento farmacológico.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "medidas não medicamentosas",
+      "prevenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tratamento-medicamentoso-apos-3-meses-de-mnm-em-pa-elevada-de-alto-risco-sbc-2025",
+    "statement": "Recomenda-se iniciar tratamento medicamentoso após 3 meses de medidas não medicamentosas para indivíduos com PA 130-139/80-89 mmHg e alto risco cardiovascular, caso a meta não tenha sido alcançada.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "medidas não medicamentosas",
+      "início de tratamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inicio-imediato-de-tratamento-medicamentoso-em-pa-maior-ou-igual-140-90-sbc-2025",
+    "statement": "Recomenda-se o início de tratamento medicamentoso para todo indivíduo com pressão arterial ≥ 140/90 mmHg, sem necessidade de aguardar período de medidas não medicamentosas isoladas.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "início de tratamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-para-pa-130-139-80-89-e-risco-cv-alto-sbc-2025",
+    "statement": "Recomenda-se a meta de pressão arterial < 130/80 mmHg para pacientes com PA 130-139/80-89 mmHg (estágio 1) e risco cardiovascular alto.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "meta pressórica",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reduzir-ate-o-menor-valor-tolerado-quando-meta-de-130-80-nao-e-tolerada-sbc-2025",
+    "statement": "Recomenda-se que, para pacientes que não tolerem a meta de PA < 130/80 mmHg, a pressão arterial seja reduzida até o valor mais baixo tolerado, em vez de manter a meta rígida à custa de efeitos adversos.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "meta pressórica",
+      "individualização"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "confirmar-meta-pressorica-com-medida-fora-do-consultorio-sbc-2025",
+    "statement": "Recomenda-se confirmar o alcance da meta de pressão arterial com a medida da PA fora do consultório, por meio de MAPA ou MRPA, em vez de basear a decisão só na medida de consultório.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "mapa",
+      "mrpa",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diminuicao-do-peso-corporal-para-reducao-da-pa-e-mortalidade-sbc-2025",
+    "statement": "Recomenda-se a diminuição do peso corporal para redução da pressão arterial e da mortalidade em pacientes hipertensos com obesidade.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "obesidade",
+      "perda de peso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reducao-de-sodio-e-aumento-de-potassio-dietetico-para-reducao-da-pa-sbc-2025",
+    "statement": "Recomenda-se a redução da ingestão de sódio e o aumento da ingestão de potássio dietético (exceto para pacientes com doença renal crônica) para redução da pressão arterial.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "sódio",
+      "potássio",
+      "dieta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dieta-dash-e-atividade-fisica-moderada-para-reducao-da-pa-sbc-2025",
+    "statement": "Recomendam-se a dieta DASH (Dietary Approaches to Stop Hypertension) e a prática de atividade física moderada para redução da pressão arterial.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "dieta dash",
+      "atividade física"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "associacao-de-medicamentos-em-comprimido-unico-com-classes-preferenciais-sbc-2025",
+    "statement": "Recomenda-se a associação de medicamentos anti-hipertensivos, preferencialmente em comprimido único e com as classes preferenciais, para atingir metas rigorosas de PA (< 130/80 mmHg) e reduzir eventos cardiovasculares e renais.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "tratamento medicamentoso",
+      "comprimido único"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monoterapia-em-subgrupos-especificos-de-baixo-risco-ou-fragilidade-sbc-2025",
+    "statement": "Recomenda-se monoterapia para indivíduos com PA 130-139/80-89 mmHg e alto risco cardiovascular, pacientes com HA estágio 1 de baixo risco (a critério médico, podendo-se optar por associação), indivíduos frágeis, muito idosos (≥ 80 anos) ou com hipotensão ortostática sintomática, especialmente em idosos.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "monoterapia",
+      "idoso",
+      "fragilidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inicio-com-associacao-dupla-em-doses-baixas-para-a-maioria-dos-pacientes-sbc-2025",
+    "statement": "Recomenda-se, para a maioria dos pacientes, o início do tratamento da hipertensão arterial com associação dupla de medicamentos em doses baixas, preferencialmente em comprimido único, quando disponível.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "associação dupla",
+      "comprimido único"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tiazidicos-ieca-bra-e-bcc-como-classes-preferenciais-no-tratamento-da-ha-sbc-2025",
+    "statement": "Recomenda-se o uso de diuréticos tiazídicos ou similares, IECA ou BRA e bloqueadores dos canais de cálcio (BCC) como classes preferenciais para o tratamento da hipertensão arterial e redução de eventos cardiovasculares e renais importantes.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "tiazídicos",
+      "ieca",
+      "bra",
+      "bcc"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-em-situacoes-especificas-de-hipertensao-sbc-2025",
+    "statement": "Recomenda-se o uso de betabloqueador (BB) para o tratamento da hipertensão arterial em situações específicas: insuficiência cardíaca, fibrilação atrial, outras arritmias, doença arterial coronariana, hipertensão em pacientes em hemodiálise e outras condições (enxaqueca, tremor essencial, mulheres que desejam engravidar, varizes esofágicas).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "betabloqueador",
+      "indicações específicas"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "espironolactona-como-quarta-droga-para-metas-rigorosas-em-har-e-harf-sbc-2025",
+    "statement": "Recomenda-se o uso de espironolactona (ou eplerenona, em caso de intolerância à espironolactona) para atingir metas rigorosas de PA (< 130/80 mmHg) e reduzir eventos cardiovasculares e renais, quando essas metas não tiverem sido atingidas apenas com três classes iniciais, na hipertensão arterial resistente (HAR) e refratária (HARf).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "espironolactona",
+      "hipertensão resistente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-em-hipertenso-com-doenca-arterial-coronariana-sbc-2025",
+    "statement": "Recomenda-se a meta de PA < 130/80 mmHg para indivíduos com hipertensão arterial e doença arterial coronariana. Admite-se que reduzir a PA até 120/70 mmHg não aumenta o risco cardiovascular, e que pacientes com PA < 120/70 mmHg e assintomáticos não necessitam parar ou reduzir a medicação anti-hipertensiva.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "doença arterial coronariana",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-em-hipertenso-com-drc-ou-diabetes-sbc-2025",
+    "statement": "Recomenda-se, em adultos com hipertensão arterial e doença renal crônica (DRC) ou diabetes mellitus, a meta de PA < 130/80 mmHg para redução de eventos cardiovasculares e falência renal.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "doença renal crônica",
+      "diabetes",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ieca-bra-e-farmacos-nefroprotetores-na-ha-associada-a-drc-sbc-2025",
+    "statement": "Recomenda-se que a escolha de anti-hipertensivos na hipertensão associada à doença renal crônica inclua, a menos que contraindicado, o uso de IECA ou BRA, favorecendo a introdução e manutenção de medicamentos com efeito anti-hipertensivo discreto mas com propriedades nefro e cardioprotetoras, como a finerenona e os agonistas do GLP-1 em pacientes com diabetes mellitus, e os iSGLT2, pelo comprovado efeito benéfico na proteção cardiorrenal.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "doença renal crônica",
+      "finerenona",
+      "iSGLT2",
+      "aGLP1"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inicio-imediato-com-dois-farmacos-na-ha-do-paciente-com-diabetes-sbc-2025",
+    "statement": "Recomenda-se que, na hipertensão arterial do paciente com diabetes mellitus, o início do tratamento medicamentoso seja imediato (ao diagnóstico) com dois medicamentos — IECA ou BRA quando houver intolerância ao IECA — associado a bloqueador dos canais de cálcio ou diurético tiazídico similar.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "diabetes",
+      "início de tratamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-no-hipertenso-com-obesidade-sbc-2025",
+    "statement": "Recomenda-se a meta de PA < 130/80 mmHg para pacientes hipertensos com obesidade.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "obesidade",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aglp1-para-reducao-de-peso-e-risco-cv-no-hipertenso-obeso-sbc-2025",
+    "statement": "Recomenda-se o uso de medicamentos para diminuir o peso, tais como os agonistas do GLP-1 (liraglutida, semaglutida e dulaglutida), no paciente hipertenso com obesidade, por apresentarem bons resultados na redução de peso e do risco cardiovascular — os resultados na redução da PA em si são modestos.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "obesidade",
+      "aglp1",
+      "semaglutida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-apos-avc-ou-ait-para-reducao-de-eventos-cv-maiores-sbc-2025",
+    "statement": "Recomenda-se a meta de PA < 130/80 mmHg para pacientes com AVC ou AIT (ataque isquêmico transitório) prévios, para redução de eventos cardiovasculares maiores (IAM, recorrência de AVC, morte).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "avc",
+      "ait",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-no-hipertenso-com-icfep-e-icfer-sbc-2025",
+    "statement": "Recomenda-se a meta de PA < 130/80 mmHg para os pacientes com hipertensão arterial e insuficiência cardíaca, tanto com fração de ejeção preservada (ICFEp) quanto reduzida (ICFEr).",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "insuficiência cardíaca",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bb-ieca-bra-e-arm-no-hipertenso-com-icfer-sbc-2025",
+    "statement": "Recomenda-se, para pacientes com insuficiência cardíaca com fração de ejeção reduzida (ICFEr) e hipertensão arterial, o tratamento com medicações que tenham ação anti-hipertensiva e que melhorem o prognóstico: betabloqueador, IECA (ou BRA) e antagonista dos receptores mineralocorticoides (ARM).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "icfer",
+      "betabloqueador",
+      "arm"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-para-a-maioria-dos-pacientes-idosos-sbc-2025",
+    "statement": "Recomenda-se a meta de PA < 130/80 mmHg para a maioria dos pacientes idosos hipertensos.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "idosos-frageis-ou-muito-idosos-reduzir-ate-o-menor-valor-tolerado-sbc-2025",
+    "statement": "Recomenda-se, para idosos frágeis, muito idosos ou com condições que comprometam a expectativa de vida, que a pressão arterial seja reduzida até o menor valor tolerado, em vez de perseguir uma meta numérica rígida.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso",
+      "fragilidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "revisao-periodica-e-comprimido-unico-no-idoso-em-polifarmacia-sbc-2025",
+    "statement": "Recomenda-se, nos idosos sob polifarmácia, a revisão periódica de cada um dos medicamentos em uso, a avaliação de eventos adversos, e que o tratamento anti-hipertensivo tenha o menor número possível de comprimidos ao dia — com uso de combinações em comprimido único de dose diária —, além de ênfase às medidas não medicamentosas.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso",
+      "polifarmácia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inicio-de-farmacoterapia-em-criancas-e-adolescentes-com-ha-sbc-2025",
+    "statement": "Recomenda-se o início de terapêutica medicamentosa em crianças e adolescentes com IECA, BRA, bloqueador dos canais de cálcio de ação prolongada ou diurético tiazídico, para pacientes com hipertensão sintomática, presença de lesão de órgão-alvo, hipertensão estágio 2 sem causa modificável aparente, ou hipertensão persistente não responsiva a medidas não medicamentosas, quando a PA for ≥ percentil 95 (ou ≥ 130/80 mmHg em adolescentes ≥ 13 anos).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "pediatria",
+      "criança",
+      "adolescente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitorar-pa-antes-e-apos-inicio-de-anticoncepcional-em-mulheres-jovens-sbc-2025",
+    "statement": "Recomenda-se monitorar a pressão arterial em mulheres jovens antes da prescrição de anticoncepcionais e após o início do uso, reforçando a importância de medidas regulares da PA (a cada 6 meses), incluindo medidas domiciliares, e o controle dos demais fatores de risco cardiovascular.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "anticoncepcional",
+      "mulher"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tratamento-da-ha-na-menopausa-com-sraa-mais-bcc-ou-tiazidico-sbc-2025",
+    "statement": "Recomenda-se, para o tratamento medicamentoso da hipertensão arterial na mulher durante e após a menopausa, iniciar com a combinação de bloqueador do sistema renina-angiotensina-aldosterona (SRAA) com bloqueador dos canais de cálcio ou diurético tiazídico.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "menopausa",
+      "mulher"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "metas-e-classes-de-anti-hipertensivos-iguais-entre-mulheres-e-homens-sbc-2025",
+    "statement": "Recomendam-se metas de PA iguais para mulheres e homens, assim como a utilização das mesmas classes de anti-hipertensivos para o tratamento da hipertensão arterial em ambos os sexos.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "mulher",
+      "equidade de tratamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "acompanhamento-de-longo-prazo-apos-ha-na-gestacao-para-prevencao-de-dcv-sbc-2025",
+    "statement": "Recomenda-se o acompanhamento de longo prazo de toda mulher que teve hipertensão arterial na gestação, para a prevenção efetiva de doença cardiovascular futura.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "gestação",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reavaliacao-ambulatorial-em-1-a-7-dias-na-pa-elevada-sem-loa-aguda-sbc-2025",
+    "statement": "Recomenda-se, em pacientes com elevação importante da PA sem lesão de órgão-alvo aguda (antes denominada urgência hipertensiva), reavaliação ambulatorial em 1 a 7 dias, com alvo de PAS < 160 e PAD < 100 mmHg — não internação nem redução abrupta da pressão arterial.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "crise hipertensiva",
+      "emergência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "internacao-em-uti-e-anti-hipertensivo-iv-na-emergencia-hipertensiva-sbc-2025",
+    "statement": "Recomenda-se que o paciente com emergência hipertensiva (EH) seja admitido em UTI, use anti-hipertensivos intravenosos com monitorização contínua da PA e tenha observação da progressão da lesão de órgão-alvo.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "emergência hipertensiva",
+      "uti"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mapa-preferencial-para-confirmar-hipertensao-resistente-ou-refrataria-sbc-2025",
+    "statement": "Recomenda-se a realização preferencial de MAPA para confirmação diagnóstica de hipertensão arterial resistente (HAR) e refratária (HARf), se disponível, ou MRPA como alternativa.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão resistente",
+      "hipertensão refratária",
+      "mapa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-pa-130-80-em-hipertensao-resistente-ou-refrataria-sbc-2025",
+    "statement": "Recomenda-se a meta de PA < 130/80 mmHg também para pacientes com hipertensão arterial resistente (HAR) ou refratária (HARf).",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão resistente",
+      "hipertensão refratária",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estrategias-multiprofissionais-para-adesao-ao-tratamento-anti-hipertensivo-sbc-2025",
+    "statement": "Recomendam-se estratégias envolvendo a atuação de equipe multiprofissional, subsídios, recursos de comunicação/educação e aplicativos para promover melhorias na adesão ao tratamento anti-hipertensivo.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC/SBH/SBN",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+    "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, Nadruz W, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "adesão ao tratamento",
+      "equipe multiprofissional"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
