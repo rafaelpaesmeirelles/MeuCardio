@@ -622,5 +622,70 @@
       "sindrome-de-liberacao-de-citocinas-car-t-com-choque"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "trombose-de-protese-valvar-mecanica-na-gestacao",
+    "titulo": "Trombose de prótese valvar mecânica na gestação",
+    "gatilho": "Gestante com prótese mecânica e dispneia nova, insuficiência cardíaca, síncope, embolia, novo sopro ou alteração do clique protético — especialmente com anticoagulação subterapêutica",
+    "ordem": 102,
+    "documento_slug": "trombose-de-protese-valvar-mecanica-na-gestacao",
+    "fluxograma_slug": "fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao",
+    "relacionados": [
+      "sangramento-maior-em-paciente-anticoagulado",
+      "parada-cardiorrespiratoria-na-gestante"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crise-de-hipertensao-pulmonar-pediatrica",
+    "titulo": "Crise de hipertensão pulmonar pediátrica e falência aguda de VD",
+    "gatilho": "Criança com hipertensão pulmonar conhecida ou suspeita e piora abrupta de hipoxemia, hipotensão, síncope, baixo débito ou falência de ventrículo direito",
+    "ordem": 103,
+    "documento_slug": "crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
+    "fluxograma_slug": "fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
+    "relacionados": [
+      "parada-cardiorrespiratoria-pediatrica",
+      "crise-de-hipertensao-pulmonar-persistente-do-recem-nascido"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-aortica-grave-descompensada-no-idoso",
+    "titulo": "Estenose aórtica grave descompensada e choque no idoso",
+    "gatilho": "Idoso com estenose aórtica grave conhecida ou suspeita e edema pulmonar, hipotensão, baixo débito, síncope ou choque cardiogênico",
+    "ordem": 104,
+    "documento_slug": "estenose-aortica-grave-descompensada-e-choque-no-idoso",
+    "fluxograma_slug": "fluxograma-estenose-aortica-grave-descompensada-e-choque-no-idoso",
+    "relacionados": [
+      "choque-cardiogenico",
+      "edema-agudo-de-pulmao-hipertensivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+    "titulo": "Taquiarritmia na gestação com instabilidade hemodinâmica",
+    "gatilho": "Gestante com TSV, fibrilação atrial ou flutter e hipotensão/choque, isquemia, edema pulmonar ou alteração importante da consciência",
+    "ordem": 105,
+    "documento_slug": "taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+    "fluxograma_slug": "fluxograma-taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+    "relacionados": [
+      "parada-cardiorrespiratoria-na-gestante",
+      "fibrilacao-atrial-de-alta-resposta"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miocardite-fulminante-pediatrica",
+    "titulo": "Miocardite fulminante pediátrica e choque cardiogênico",
+    "gatilho": "Lactente, criança ou adolescente com insuficiência cardíaca aguda, choque, TV/FV, BAV avançado ou rápida deterioração ventricular com suspeita de miocardite",
+    "ordem": 106,
+    "documento_slug": "miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+    "fluxograma_slug": "fluxograma-miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+    "relacionados": [
+      "parada-cardiorrespiratoria-pediatrica",
+      "miocardite-fulminante"
+    ],
+    "review_status": "revisado"
   }
 ]
