@@ -31,11 +31,20 @@ function SnippetDestacado({ snippet }: { snippet: string }) {
   return <>{nos}</>;
 }
 
+const RÓTULO_KIND: Record<string, string> = {
+  documento: "Documento", estudo: "Estudo", fluxograma: "Fluxograma", protocolo: "Protocolo",
+};
+
 export default function Busca() {
   const [params] = useSearchParams();
   const [q, setQ] = useState(params.get("q") ?? "");
   const [res, setRes] = useState<Res[] | null>(null);
   const [buscando, setBuscando] = useState(false);
+  // 07/08/2026, pedido do Rafael: toda ferramenta de busca do site precisa de
+  // pelo menos duas formas de refinar — aqui, além do termo livre, filtrar
+  // pelo tipo de conteúdo (`kind`) já presente nos próprios resultados. Sem
+  // rota nova no backend: o filtro é sobre o que já veio, client-side.
+  const [tipo, setTipo] = useState("");
 
   async function buscar(termo: string) {
     if (termo.trim().length < 2) return;
@@ -43,6 +52,7 @@ export default function Busca() {
     try {
       const r = await api.get<{ results: Res[] }>(`/search?q=${encodeURIComponent(termo)}`);
       setRes(r.results);
+      setTipo("");
     } finally {
       setBuscando(false);
     }
@@ -54,13 +64,17 @@ export default function Busca() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const tipos = Array.from(new Set((res ?? []).map((r) => r.kind))).sort();
+  const resultados = tipo ? (res ?? []).filter((r) => r.kind === tipo) : res;
+
   return (
     <>
       <p className="eyebrow">Busca</p>
       <h1>Procurar em todo o conteúdo</h1>
 
-      <div style={{ display: "flex", gap: 8, margin: "1rem 0 1.4rem", maxWidth: 620 }}>
+      <div style={{ display: "flex", gap: 8, margin: "1rem 0 1.4rem", maxWidth: 620, flexWrap: "wrap" }}>
         <input
+          style={{ flex: 1, minWidth: 240 }}
           value={q}
           onChange={(e) => setQ(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && buscar(q)}
@@ -70,6 +84,20 @@ export default function Busca() {
         <button className="botao" onClick={() => buscar(q)} disabled={q.trim().length < 2}>Buscar</button>
       </div>
 
+      {!buscando && tipos.length > 1 && (
+        <label style={{ display: "block", maxWidth: 260, margin: "0 0 1rem" }}>
+          Tipo de conteúdo
+          <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
+            <option value="">Todos os tipos ({res?.length ?? 0})</option>
+            {tipos.map((k) => (
+              <option key={k} value={k}>
+                {RÓTULO_KIND[k] ?? k} ({(res ?? []).filter((r) => r.kind === k).length})
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+
       {buscando && <Carregando texto="Procurando…" />}
 
       {!buscando && res !== null && res.length === 0 && (
@@ -77,7 +105,7 @@ export default function Busca() {
       )}
 
       <div className="grade">
-        {res?.map((r) => (
+        {resultados?.map((r) => (
           <Link key={r.slug} to={`/biblioteca/${r.slug}`} className="cartao" style={{ color: "inherit" }}>
             <p className="eyebrow">{r.theme} · {r.kind}</p>
             <h3>{r.title}</h3>
