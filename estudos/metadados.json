@@ -12158,5 +12158,103 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ssass-substituto-de-sal-desfecho-cardiovascular",
+    "title": "SSaSS — Substituto de sal com potássio e desfechos cardiovasculares duros na China rural",
+    "study_type": "ensaio_clinico",
+    "authors": "Neal B, Wu Y, Feng X, Zhang R, Zhang Y, Shi J, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2021,
+    "doi": "10.1056/NEJMoa2105675",
+    "pmid": "34459569",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34459569/",
+    "summary": "Ensaio pragmático, aberto, randomizado por conglomerado (cluster), 600 vilarejos em cinco províncias da China rural. Critério de inclusão: história de AVC prévio OU idade ≥60 anos com hipertensão. Vilarejos randomizados para substituto de sal (75% NaCl + 25% KCl) ou sal comum (100% NaCl) para uso doméstico habitual. 20.995 participantes (idade média 65,4 anos, 72,6% com AVC prévio, 88,4% com hipertensão). Desfecho primário: AVC (fatal e não fatal). Seguimento médio de 4,74 anos.",
+    "key_findings": "AVC: 29,14 vs. 33,65 eventos/1.000 pessoas-ano — razão de taxas 0,86 (IC95% 0,77-0,96; p=0,006), redução relativa de 14%. Evento cardiovascular maior (composto): 49,09 vs. 56,29/1.000 pessoas-ano — RT 0,87 (IC95% 0,80-0,94; p<0,001), redução de 13%. Morte por qualquer causa: 39,28 vs. 44,61/1.000 pessoas-ano — RT 0,88 (IC95% 0,82-0,95; p<0,001), redução de 12%.",
+    "clinical_implications": "Demonstra, com desfecho cardiovascular duro (não apenas pressão arterial como substituto), que uma intervenção simples e escalável — trocar sal de cozinha por substituto rico em potássio — reduz AVC, evento cardiovascular maior e mortalidade numa população de altíssimo risco basal. Sustenta recomendação populacional de substituto de sal em contextos de alto risco cardiovascular.",
+    "limitations": "Conduzido em população específica (idosos rurais chineses de alto risco, alta prevalência de AVC prévio) — generalização para outras populações com perfil de risco distinto exige cautela. Desenho aberto (sem cegamento), inerente à natureza da intervenção dietética por vilarejo.",
+    "theme": "Hipertensão",
+    "tags": [
+      "SSaSS",
+      "substituto de sal",
+      "potássio",
+      "AVC",
+      "desfecho cardiovascular duro"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "spyral-htn-off-med-pivotal-denervacao-renal-sem-medicacao",
+    "title": "SPYRAL HTN-OFF MED Pivotal — Denervação renal na ausência de anti-hipertensivos",
+    "study_type": "ensaio_clinico",
+    "authors": "Böhm M, Kario K, Kandzari DE, Mahfoud F, Weber MA, Schmieder RE, Tsioufis K, Pocock S, Konstantinidis D, Choi JW, East C, Lee DP, Ma A, Ewen S, Cohen DL, Wilensky R, Devireddy CM, Lea J, Schmid A, Weil J, Agdirlioglu T, Reeve-Stoffer H, Mullin C, Townsend R; SPYRAL HTN-OFF MED Pivotal Investigators",
+    "journal": "Lancet",
+    "year": 2020,
+    "doi": "10.1016/S0140-6736(20)30554-7",
+    "pmid": "32234534",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32234534/",
+    "summary": "Ensaio multicêntrico, randomizado, sham-controlado, testando desnervação renal por cateter na AUSÊNCIA completa de tratamento farmacológico (washout de anti-hipertensivos antes da randomização) — desenho que isola o efeito mecanístico do procedimento. Fase pivotal, sucedendo o proof-of-concept de 2017 (Townsend RR et al., Lancet 2017, PMID 28859944, 80 pacientes, resultado positivo).",
+    "key_findings": "No proof-of-concept (2017): PAS ambulatorial de 24h com denervação -5,5mmHg (p=0,0031); diferença entre grupos (denervação vs. sham) na PAS ambulatorial de 24h -5,0mmHg (IC95% -9,9 a -0,2; p=0,0414). O braço OFF MED do programa SPYRAL teve resultado POSITIVO nas duas fases (proof-of-concept e pivotal), diferente do padrão heterogêneo visto no braço ON MED (pivotal neutro).",
+    "clinical_implications": "É a peça do programa SPYRAL que melhor isola se o procedimento, por si só, reduz a pressão arterial — mas responde a uma pergunta de maior valor mecanístico/regulatório do que de generalização direta, já que a maioria dos candidatos reais a denervação renal já está em tratamento farmacológico quando a hipertensão permanece não controlada (pergunta respondida pelo braço ON MED).",
+    "limitations": "Washout completo de anti-hipertensivos antes do procedimento não reproduz o cenário clínico real de decisão (paciente já em múltiplas classes de fármaco) — ver o SPYRAL HTN-ON MED Pivotal (PMID 37914510) para essa pergunta complementar.",
+    "theme": "Hipertensão",
+    "tags": [
+      "SPYRAL HTN-OFF MED",
+      "denervação renal",
+      "hipertensão resistente",
+      "sham-controlado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "spyral-htn-on-med-pivotal-2023-denervacao-renal-com-medicacao",
+    "title": "SPYRAL HTN-ON MED Pivotal (JACC 2023) — Denervação renal por radiofrequência em uso de anti-hipertensivos, resultado neutro",
+    "study_type": "ensaio_clinico",
+    "authors": "Kandzari DE, Townsend RR, Kario K, Mahfoud F, Weber MA, Schmieder RE, Pocock S, Tsioufis K, Konstantinidis D, Choi J, East C, Lauder L, Cohen DL, Kobayashi T, Schmid A, Lee DP, Ma A, Weil J, Agdirlioglu T, Schlaich MP, Shetty S, Devireddy CM, Lea J, Aoki J, Sharp ASP, Anderson R, Fahy M, DeBruin V, Brar S, Böhm M",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2023,
+    "doi": "10.1016/j.jacc.2023.08.045",
+    "pmid": "37914510",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37914510/",
+    "summary": "Ensaio prospectivo, randomizado, sham-controlado, cego para paciente e avaliador, 56 centros internacionais. Pacientes com hipertensão não controlada em uso de 1 a 3 anti-hipertensivos em dose estável, randomizados para denervação renal por radiofrequência ou procedimento sham. Desfecho primário: variação ajustada pelo basal da PAS ambulatorial média de 24h aos 6 meses, análise bayesiana. 337 pacientes randomizados (206 denervação, 131 sham) — amostra bem maior que o piloto de 2018 (80 pacientes).",
+    "key_findings": "PAS ambulatorial de 24h, variação do basal aos 6 meses: -6,5±10,7mmHg (denervação) vs. -4,5±10,3mmHg (sham). Diferença entre grupos: -1,9mmHg (IC95% -4,4 a 0,5; p=0,12) — NÃO significativo, ao contrário do piloto de 2018 (positivo) e seu seguimento de 36 meses (também positivo).",
+    "clinical_implications": "O ensaio pivotal, maior e de desenho mais robusto que o piloto, NÃO reproduziu a significância estatística do resultado positivo anterior — é a pergunta que pesa mais para uso regulatório e clínico (paciente real já em medicação), e o resultado neutro no desfecho primário do pivotal é achado que precisa ser comunicado ao lado dos resultados positivos do piloto e do braço OFF MED, não substituído por eles.",
+    "limitations": "Resultado neutro no desfecho primário não significa ausência completa de efeito — a diferença numérica (-1,9mmHg) favorece a denervação, mas o intervalo de confiança cruza zero. Contraste importante com o piloto positivo do mesmo programa (Kandzari DE et al., Lancet 2018, PMID 29803589) e seu seguimento de 36 meses (Mahfoud F et al., Lancet 2022, PMID 35390320).",
+    "theme": "Hipertensão",
+    "tags": [
+      "SPYRAL HTN-ON MED",
+      "denervação renal",
+      "radiofrequência",
+      "hipertensão resistente",
+      "resultado neutro"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "radiance-htn-trio-denervacao-renal-ultrassom-resistente",
+    "title": "RADIANCE-HTN TRIO — Denervação renal por ultrassom em hipertensão resistente a combinação tripla padronizada",
+    "study_type": "ensaio_clinico",
+    "authors": "Azizi M, Sanghvi K, Saxena M, et al; RADIANCE-HTN investigators",
+    "journal": "Lancet",
+    "year": 2021,
+    "doi": "10.1016/S0140-6736(21)00788-1",
+    "pmid": "34010611",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34010611/",
+    "summary": "Ensaio randomizado, internacional, multicêntrico, unicego, sham-controlado, 28 centros nos EUA e 25 na Europa. Pacientes 18-75 anos com PA de consultório ≥140/90mmHg apesar de ≥3 anti-hipertensivos incluindo diurético, trocados para combinação de dose única fixa (bloqueador de canal de cálcio + antagonista do receptor de angiotensina + diurético tiazídico). Após 4 semanas, pacientes com PA ambulatorial diurna ≥135/85mmHg randomizados 1:1 para denervação renal por ultrassom ou sham. 989 rastreados, 136 randomizados (69 denervação, 67 sham). Desfecho primário: mudança na PAS ambulatorial diurna aos 2 meses.",
+    "key_findings": "Adesão plena à medicação combinada em 2 meses: 82% em ambos os grupos (p=0,99) — controle de confusão que garante que a diferença de pressão não é explicada por adesão desigual. Desfecho primário: denervação -8,0mmHg vs. sham -3,0mmHg; diferença mediana entre grupos -4,5mmHg (IC95% -8,5 a -0,3; p ajustado=0,022); entre pacientes com dado ambulatorial completo, -5,8mmHg (IC95% -9,7 a -1,6; p ajustado=0,0051). Sem diferença nos desfechos de segurança.",
+    "clinical_implications": "Estabelece a denervação renal por ultrassom (tecnologia distinta da radiofrequência) como opção com evidência sham-controlada em hipertensão resistente VERDADEIRA — o desenho garantiu adesão medicamentosa verificada e semelhante entre grupos antes de atribuir a diferença de pressão ao procedimento. Magnitude do efeito (5-6mmHg a mais que sham) é modesta mas clinicamente relevante em resistência já maximizada.",
+    "limitations": "Amostra relativamente pequena (136 randomizados de 989 rastreados). Seguimento de curto prazo (2 meses) para o desfecho primário — durabilidade do efeito depende de dados de seguimento mais longo.",
+    "theme": "Hipertensão",
+    "tags": [
+      "RADIANCE-HTN TRIO",
+      "denervação renal por ultrassom",
+      "hipertensão resistente",
+      "sham-controlado"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
