@@ -828,5 +828,17 @@
     "conduta": "Não coadministrar. A rotulagem regulatória contraindica nitratos ou nitritos orgânicos em qualquer forma durante o uso de sildenafila. A própria rotulagem consultada declara que não está estabelecido quando um nitrato pode ser administrado com segurança após sildenafil, inclusive aos 24 horas; portanto, para registrar uma janela fixa de washout nesta base, VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "fonte": "Webb DJ, Muirhead GJ, Wulff M, Sutton JA, Levi R, Dinsmore WW. Sildenafil citrate potentiates the hypotensive effects of nitric oxide donor drugs in male patients with stable angina. J Am Coll Cardiol. 2000;36(1):25-31. PMID: 10898408. DOI: 10.1016/S0735-1097(00)00705-1; rotulagem do VIAGRA (sildenafil citrate) aprovada pelo FDA, seções 4.1 e 7.1 — nitratos.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "sildenafila-alfa-bloqueador",
+    "farmacos": [
+      "sildenafila-citrato"
+    ],
+    "classe_oposta": "alfa-bloqueador (ex.: doxazosina, tansulosina, terazosina)",
+    "gravidade": "moderada",
+    "efeito": "Sildenafila e alfa-bloqueadores são vasodilatadores e podem somar a redução da pressão arterial, levando em alguns pacientes a hipotensão sintomática com tontura, sensação de cabeça leve ou síncope. Depleção de volume e outros anti-hipertensivos aumentam esse risco.",
+    "conduta": "Antes de iniciar sildenafila, o paciente deve estar hemodinamicamente estável com o alfa-bloqueador; nessa situação, iniciar sildenafila em 25 mg. Se o paciente já usa uma dose otimizada de inibidor da PDE5 e será iniciado o alfa-bloqueador, começar o alfa-bloqueador na menor dose e titular gradualmente.",
+    "fonte": "Rotulagem aprovada pelo FDA para sildenafil/VIAGRA, seções 2.3 e 5.5. A rotulagem vigente especifica início da sildenafila em 25 mg quando coadministrada com alfa-bloqueador e descreve o risco de hipotensão sintomática; VYBRIQUE (sildenafil oral film), FDA 2025, seção 5.5, confirma as mesmas precauções.",
+    "review_status": "revisado"
   }
 ]
