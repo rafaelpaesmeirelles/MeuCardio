@@ -8990,5 +8990,148 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cintilografia-renal-com-captopril-renograma-na-estenose-de-arteria-renal",
+    "name": "Cintilografia renal com captopril (renograma) na avaliação funcional de estenose de artéria renal",
+    "category": "imagem",
+    "theme": "Hipertensão",
+    "what_it_measures": "Curvas de atividade renal (renograma) obtidas antes e depois da administração de captopril, com um radiotraçador (ex.: 99mTc-DTPA ou 99mTc-EC) — em rim com estenose de artéria renal hemodinamicamente significativa, a filtração glomerular depende de vasoconstrição da arteríola eferente mediada por angiotensina II; o captopril bloqueia essa compensação e revela queda funcional que o renograma basal, sem o fármaco, pode não mostrar.",
+    "reference_range": "Não se aplica valor numérico único — o resultado é qualitativo, por padrão de curva (achatamento/retardo do pico pós-captopril no rim acometido) e por comparação da função relativa entre os dois rins antes e depois do captopril.",
+    "indications": "Historicamente usado como teste funcional de triagem para hipertensão renovascular, e sobretudo para tentar prever se a revascularização (angioplastia ou cirurgia) vai melhorar a pressão arterial em paciente com estenose já confirmada por método anatômico — pergunta diferente da que a angiotomografia/angiorressonância respondem.",
+    "interpretation": "A cintilografia com captopril teve desempenho consistentemente inferior à angiotomografia e à angiorressonância como método de detecção anatômica de estenose: no estudo prospectivo de Eklöf et al. (Acta Radiologica, 2006), que comparou os quatro métodos contra o padrão-ouro de gradiente de pressão transtenótico invasivo em 58 pacientes hipertensos, a sensibilidade/especificidade da cintilografia com captopril foi de apenas 52%/63%, significativamente pior que a da própria ultrassonografia Doppler (73%/71%) — os autores concluem textualmente que \"a cintilografia com captopril não pode ser recomendada para avaliar estenose de artéria renal\" com essa finalidade. Seu papel remanescente é funcional, não anatômico: em série pequena e antiga (Ugur et al., Annals of Nuclear Medicine, 1999, 12 pacientes com angioplastia), a cintilografia com captopril previu corretamente a resposta pressórica pós-intervenção em 11 dos 12 casos.",
+    "limitations": "⚠️ Estudo de predição funcional (Ugur et al. 1999) tem amostra muito pequena (12 pacientes) e é antigo — não é desenho robusto o suficiente para sustentar uso rotineiro isolado, e resultado desse tamanho é facilmente instável. Na prática atual, a angiotomografia ou a angiorressonância confirmam a estenose anatômica primeiro (métodos com desempenho superior, ver exame de angiotomografia de artérias renais já cadastrado nesta base), e a cintilografia com captopril, quando ainda usada, entra como teste funcional complementar de seleção de candidato à revascularização — não como primeira linha diagnóstica. Falso-negativo pode ocorrer em estenose bilateral (não há rim de referência não estenosado para comparação) e falso-positivo, em doença renal parenquimatosa intrínseca que já reduz a função basal do rim independentemente da estenose.",
+    "source_refs": [
+      "Eklöf H, Ahlström H, Magnusson A, Andersson LG, Andrén B, Hägg A, Bergqvist D, Nyman R. A prospective comparison of duplex ultrasonography, captopril renography, MRA, and CTA in assessing renal artery stenosis. Acta Radiol. 2006;47(8):764-774. DOI: 10.1080/02841850600849092. PMID: 17050355.",
+      "Uğur O, Serdengeçti M, Karacalioğlu O, Ergün EL, Peksoy I, Cekirge S. Prediction of response to revascularization in patients with renal artery stenosis by Tc-99m-ethylenedicysteine captopril scintigraphy. Ann Nucl Med. 1999;13(2):77-81. DOI: 10.1007/BF03164881. PMID: 10355950. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à validade externa — amostra de apenas 12 pacientes, estudo de 1999."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cintilografia renal",
+      "renograma com captopril",
+      "estenose de artéria renal",
+      "hipertensão renovascular",
+      "teste funcional"
+    ]
+  },
+  {
+    "slug": "microalbuminuria-marcador-prognostico-na-hipertensao-essencial",
+    "name": "Microalbuminúria como marcador prognóstico na hipertensão essencial",
+    "category": "laboratorial",
+    "theme": "Hipertensão",
+    "what_it_measures": "Excreção urinária de albumina em faixa acima do normal mas abaixo do detectável por fita de proteinúria convencional (tipicamente 30-300 mg/24h, ou relação albumina-creatinina urinária equivalente) — marcador de disfunção endotelial sistêmica e lesão renal subclínica, não exclusivo do diabetes.",
+    "reference_range": "Normal: <30 mg/24h (ou relação albumina-creatinina <30 mg/g). Microalbuminúria: 30-300 mg/24h. Os cortes numéricos exatos não são o foco desta revisão — ela trata do valor prognóstico do achado, já normatizado em outras entradas desta base sob o rótulo de UACR.",
+    "indications": "Rastreio de lesão de órgão-alvo subclínica em paciente hipertenso, como parte da avaliação de risco cardiovascular recomendada pelas diretrizes de hipertensão (a 2018 ESC/ESH já cadastrada nesta base lista avaliação de lesão de órgão-alvo renal entre os exames de rotina/extensão).",
+    "interpretation": "Revisão narrativa de Dimitriadis et al. (Current Medicinal Chemistry, 2025), grupo de hipertensão da Universidade de Atenas: a microalbuminúria em hipertenso está bem correlacionada com níveis pressóricos mais altos e com o padrão non-dipping (queda insuficiente da pressão arterial noturna), e sua presença se associa a maiores taxas de mortalidade, progressão de doença renal e eventos cardiovasculares maiores (incluindo AVC e infarto do miocárdio) — funcionando como marcador prognóstico independente, não apenas como achado renal isolado. O texto também aponta que terapia anti-hipertensiva padrão e fármacos mais novos podem regredir a microalbuminúria, sugerindo tratamento precoce como forma de limitar a progressão da lesão de órgão-alvo.",
+    "limitations": "⚠️ Fonte é revisão narrativa, não metanálise com estimativa de efeito agrupada — o resumo não traz números de risco relativo/hazard ratio isolados, apenas a direção qualitativa dos achados relatados na literatura que a revisão sintetiza. A maior parte dos estudos citados na literatura de microalbuminúria e hipertensão tem desenho observacional (coorte), o que sustenta associação prognóstica mas não prova causalidade direta entre a albuminúria em si e o desfecho cardiovascular — pode ser marcador de um processo vascular sistêmico comum aos dois. Não confundir com o uso da microalbuminúria/UACR já cadastrado nesta base para o tema Diabetes e cardiologia, que é sobre nefropatia diabética especificamente — aqui o contexto é a hipertensão essencial, população parcialmente sobreposta mas não idêntica.",
+    "source_refs": [
+      "Dimitriadis K, Pyrpyris N, Vakka A, Iliakis P, Theofilis P, Tatakis F, Beneki E, Pitsiori D, Tsioufis P, Aznaouridis K, Tousoulis D, Tsioufis K. Microalbuminuria as a Prognostic Marker in Essential Hypertension. Curr Med Chem. 2025;32(39):8855-8884. DOI: 10.2174/0109298673348953250310044927. PMID: 40143689."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "microalbuminúria",
+      "hipertensão essencial",
+      "lesão de órgão-alvo",
+      "marcador prognóstico",
+      "risco cardiovascular"
+    ]
+  },
+  {
+    "slug": "doppler-arterial-de-membros-inferiores-tempo-de-aceleracao-pedioso-no-diabetico",
+    "name": "Doppler arterial de membros inferiores — tempo de aceleração pedioso (PAT) e forma de onda, quando o ITB é invalidado por calcificação medial no diabético",
+    "category": "metodo_grafico",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Análise da forma de onda espectral do fluxo arterial pedioso ao Doppler duplex, incluindo o tempo de aceleração pedioso (pedal acceleration time, PAT — intervalo do início ao pico da sístole arterial) e a classificação qualitativa da onda (trifásica/bifásica/monofásica) — parâmetros hemodinâmicos diretos, que não dependem da compressibilidade do vaso, ao contrário da pressão medida pelo índice tornozelo-braço (ITB).",
+    "reference_range": "PAT mais curto (subida rápida ao pico sistólico) é normal; PAT prolongado indica obstrução arterial proximal significativa. A base não fixa um corte numérico único aqui — os estudos incluídos na metanálise-fonte usaram diferentes limiares diagnósticos, não padronizados entre si.",
+    "indications": "Paciente diabético com suspeita clínica de doença arterial periférica (claudicação, ferida que não cicatriza, pé frio) mas ITB normal ou elevado (>1,30), cenário em que a calcificação da camada média arterial (arteriosclerose de Mönckeberg) torna o vaso incompressível e o ITB pressórico não confiável — situação já registrada como limitação no exame de índice tornozelo-braço desta mesma base.",
+    "interpretation": "Rosado-Fonseca et al. (BMC Medical Imaging, 2026), revisão sistemática e metanálise de 17 estudos (1.749 pacientes) comparando o PAT ao ITB na detecção de isquemia de membro clinicamente significativa: sensibilidade agrupada de 0,72 (IC95% 0,68-0,76), especificidade de 0,84 (IC95% 0,79-0,88), razão de verossimilhança positiva de 4,38 e razão de chances diagnóstica de 14,85 — discriminação classificada pelos autores como robusta frente ao ITB. PAT mais prolongado também se associou a pior cicatrização de ferida e maior risco de amputação nos estudos incluídos.",
+    "limitations": "⚠️ A metanálise-fonte não é especificamente sobre pacientes diabéticos — é sobre doença arterial periférica em geral (isquemia crítica de membro), com diabetes como comorbidade comum mas não critério de inclusão exclusivo; a extrapolação para o cenário específico de ITB pseudonormal por calcificação no diabético é plausível fisiologicamente (é a situação-tipo em que o PAT tem vantagem teórica), mas não foi isolada como subgrupo próprio nos dados do resumo consultado. Os 17 estudos incluídos têm desenhos heterogêneos (8 transversais, 4 de coorte, 1 caso-controle, entre outros), e a metanálise não conseguiu agrupar a análise prognóstica de cicatrização por dados insuficientes e não padronizados. É exame que exige equipamento de Doppler duplex e operador treinado — não é tão amplamente disponível à beira do leito quanto o ITB.",
+    "source_refs": [
+      "Rosado-Fonseca M, Silva E, Ribeiro T, Rocha-Melo A, Santos-Silva D, Marques-Vieira M, Myrcha P, Ribeiro H, Rocha-Neves J. Pedal acceleration time as a diagnostic and prognostic tool in peripheral artery disease: systematic review and meta-analysis. BMC Med Imaging. 2026 Jul 9. DOI: 10.1186/s12880-026-02493-y. PMID: 42426635."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doppler arterial",
+      "tempo de aceleração pedioso",
+      "índice tornozelo-braço",
+      "calcificação de mönckeberg",
+      "diabetes mellitus",
+      "doença arterial periférica"
+    ]
+  },
+  {
+    "slug": "velocidade-de-onda-de-pulso-como-marcador-de-risco-no-diabetes-mellitus",
+    "name": "Velocidade de onda de pulso (rigidez arterial) como marcador de risco cardiovascular no diabetes mellitus",
+    "category": "metodo_grafico",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Velocidade de propagação da onda de pulso arterial entre dois pontos (classicamente carótido-femoral), medida por tonometria de aplanação ou dispositivo oscilométrico — quanto mais rígida a parede arterial, mais rápido o pulso se propaga. É o mesmo parâmetro já cadastrado nesta base para o tema Hipertensão; aqui o enfoque é a relação bidirecional específica com o diabetes.",
+    "reference_range": "Não se aplica um único corte de normalidade nesta entrada — os valores de referência por idade e as diretrizes de interpretação já constam no exame de velocidade de onda de pulso carótido-femoral cadastrado no tema Hipertensão.",
+    "indications": "Estratificação de risco cardiovascular no diabetes mellitus (tipo 1, tipo 2 ou gestacional) e identificação de paciente com maior risco de desenvolver diabetes entre não diabéticos com fatores de risco metabólico, dado o caráter preditivo bidirecional descrito abaixo.",
+    "interpretation": "Beros et al. (Current Diabetes Reviews, 2025), revisão sistemática e metanálise de estudos de coorte (19 estudos incluídos, cobrindo diabetes tipo 1, tipo 2 e gestacional): das 11 coortes que avaliaram rigidez arterial como preditora de diabetes incidente, todas encontraram relação significativa, e a metanálise das 6 coortes elegíveis mostrou risco de desenvolver diabetes 2,14 vezes maior (RR 2,14; IC95% 1,65-2,79; p<0,00001) em quem tinha VOP mais alta no início do seguimento, com diferença média de VOP basal de 0,77 m/s (IC95% 0,47-1,06) entre quem desenvolveu diabetes e quem não desenvolveu. Na direção inversa, 7 das 8 coortes que avaliaram diabetes como preditor de rigidez arterial futura também encontraram relação significativa — os autores concluem que a relação é bidirecional, e que a rigidez arterial pode ser o elo causal entre diabetes e doença cardiovascular futura.",
+    "limitations": "É revisão de estudos observacionais (coorte) — relação bidirecional consistente reforça plausibilidade de conexão fisiopatológica real, mas não estabelece por si só qual seta causal (se houver apenas uma) é dominante, nem exclui um terceiro fator comum (síndrome metabólica, inflamação crônica) impulsionando os dois. Apenas 6 das 11 coortes na direção rigidez→diabetes, e um número não especificado na direção inversa, foram estatisticamente combináveis em metanálise — o restante entrou apenas como síntese qualitativa. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao instrumento/protocolo de medida de VOP usado em cada uma das 19 coortes, que provavelmente não foi uniforme (tonometria vs. oscilometria, trajeto carótido-femoral vs. outro), fonte de heterogeneidade não detalhada no resumo consultado.",
+    "source_refs": [
+      "Beros AL, Sluyter JD, Scragg RKR. Evidence of a Bi-Directional Relationship between Arterial Stiffness and Diabetes: A Systematic Review and Meta-Analysis of Cohort Studies. Curr Diabetes Rev. 2025;21(10):11-19. DOI: 10.2174/0115733998298294240820070528. PMID: 39225217."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "velocidade de onda de pulso",
+      "rigidez arterial",
+      "diabetes mellitus",
+      "risco cardiovascular",
+      "relação bidirecional"
+    ]
+  },
+  {
+    "slug": "holter-24h-fibrilacao-atrial-associada-a-inibidores-de-btk",
+    "name": "Holter de 24 horas na detecção de fibrilação atrial associada a inibidores de BTK (ibrutinibe e comparadores)",
+    "category": "metodo_grafico",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Registro eletrocardiográfico contínuo ambulatorial por 24 horas (ou mais, a depender do protocolo), buscando episódios de fibrilação atrial paroxística — arritmia associada de forma consistente aos inibidores da tirosina-quinase de Bruton (BTK), classe usada em leucemia linfocítica crônica e linfoma de células do manto.",
+    "reference_range": "Não se aplica valor de referência numérico — o achado é binário (presença ou ausência de fibrilação atrial no período monitorizado), com carga de arritmia (percentual do tempo em FA) como dado complementar quando presente.",
+    "indications": "Paciente em uso de inibidor de BTK (ibrutinibe é o de maior risco descrito; acalabrutinibe e zanubrutinibe são de segunda geração, com perfil mais favorável) que refere palpitação, dispneia nova ou episódio sugestivo de arritmia; e, em muitos protocolos de vigilância cardio-oncológica, também no rastreio de rotina pelo risco de base da classe, independente de sintoma.",
+    "interpretation": "Mushtaq et al. (The Oncologist, 2026), metanálise de 6 estudos comparativos diretos entre inibidores de BTK de primeira e segunda geração (14.455 pacientes, 12.816 em ibrutinibe e 1.639 em segunda geração): ibrutinibe associou-se a risco significativamente maior de fibrilação atrial (odds ratio 2,50; IC95% 1,97-3,17), de eventos cardíacos totais (OR 1,53; IC95% 1,18-1,99) e de insuficiência cardíaca (OR 2,08; IC95% 1,13-3,83) que os agentes de segunda geração, com taxa de descontinuação por causa cardíaca 3 vezes maior (OR 3,32; IC95% 1,46-7,55) — sem diferença de mortalidade por todas as causas. O sinal de risco de fibrilação atrial com ibrutinibe já havia sido descrito originalmente por Leong et al. (Blood, 2016), revisão sistemática e metanálise que estabeleceu a associação pela primeira vez.",
+    "limitations": "A comparação de Mushtaq et al. é entre classes de fármaco (1ª vs. 2ª geração de inibidor de BTK), não valida diretamente o desempenho diagnóstico do Holter em si — a interpretação aqui é sobre POR QUE vigiar (risco de base da droga), não sobre a sensibilidade do método de monitorização. Holter de 24h tem sensibilidade limitada para arritmia paroxística infrequente por natureza (janela de observação curta); monitorização prolongada (patch adesivo de 7-14 dias, já cadastrada nesta base para outro contexto) rende maior detecção quando a suspeita persiste com Holter convencional negativo. Não foi possível obter do resumo indexado do artigo original de Leong et al. 2016 os números exatos de incidência agrupada — citado aqui apenas como marco histórico do sinal, sem número extraído dele.",
+    "source_refs": [
+      "Mushtaq A, Ahmed EN, Aljumaa R, E'mar AR, Badwan O, Ashruf O, Elshaer A, Shaik A, Baroudi M, Moudgil R, Mustafa Ali MK. Cardiac safety profiles of first-generation vs second-generation BTK inhibitors: a meta-analysis. Oncologist. 2026;31(5):oyag102. DOI: 10.1093/oncolo/oyag102. PMID: 41871445.",
+      "Leong DP, Caron F, Hillis C, Duan A, Healey JS, Fraser G, Siegal D. The risk of atrial fibrillation with ibrutinib use: a systematic review and meta-analysis. Blood. 2016;128(1):138-140. DOI: 10.1182/blood-2016-05-712828. PMID: 27247135. VERIFICAÇÃO HUMANA NECESSÁRIA quanto aos números agrupados de incidência — resumo estruturado não disponível nas bases consultadas nesta sessão, artigo citado apenas como marco histórico do achado."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "holter 24 horas",
+      "fibrilação atrial",
+      "inibidores de btk",
+      "ibrutinibe",
+      "cardiotoxicidade",
+      "cardio-oncologia"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-tridimensional-3d-na-vigilancia-de-cardiotoxicidade-oncologica",
+    "name": "Ecocardiograma tridimensional (3D) na vigilância de cardiotoxicidade relacionada a terapia oncológica",
+    "category": "imagem",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Fração de ejeção do ventrículo esquerdo (FEVE) calculada a partir de aquisição volumétrica tridimensional real (não geométrica/estimada como no método de Simpson biplanar do eco 2D), reduzindo o erro de suposição de forma ventricular e a variabilidade entre exames seriados do mesmo paciente ao longo do tratamento oncológico.",
+    "reference_range": "Mesmos cortes de FEVE já usados nesta base para função ventricular (normal ≥ 50-55%); o que muda com o 3D não é o corte, e sim a reprodutibilidade da medida — ponto central desta entrada.",
+    "indications": "Vigilância seriada da função ventricular esquerda antes, durante e após quimioterapia cardiotóxica (antraciclina, terapia anti-HER2, inibidor de checkpoint imunológico), quando o objetivo é detectar queda real e precoce da FEVE e não confundi-la com variabilidade de medida entre um exame e o seguinte — problema relevante quando a decisão clínica (suspender ou não a quimioterapia) depende de uma diferença de poucos pontos percentuais.",
+    "interpretation": "Tanaka et al. (Journal of Echocardiography, 2026), atualização focada da diretriz prática da Sociedade Japonesa de Ecocardiografia para disfunção cardíaca relacionada a terapia oncológica (baseada nas diretrizes de cardio-oncologia de 2022 da Sociedade Europeia de Cardiologia — já cadastrada nesta base): o documento reforça FEVE e strain longitudinal global como parâmetros essenciais de vigilância, e destaca explicitamente a importância da ecocardiografia tridimensional — ao lado de controle de qualidade de medida e inteligência artificial — na prática de cardio-oncologia contemporânea, com protocolo padronizado de avaliação antes, durante e após a terapia.",
+    "limitations": "O ecocardiograma 3D exige sonda matricial e software específicos, nem sempre disponíveis fora de centro com programa estruturado de cardio-oncologia — quando indisponível, o 2D com strain longitudinal global (já cadastrado nesta base) segue sendo a alternativa validada. Qualidade de imagem tridimensional é mais sensível a janela acústica ruim que o 2D, e pode ser tecnicamente inviável no mesmo paciente em que seria mais necessária (por exemplo, após cirurgia torácica oncológica). O resumo consultado da diretriz japonesa não fornece números de reprodutibilidade (coeficiente de variação intra/interobservador) especificamente comparando 3D a 2D — a afirmação de superioridade em reprodutibilidade reflete o corpo geral de literatura de imagem cardíaca, não um número extraído desta fonte específica.",
+    "source_refs": [
+      "Tanaka H, Fukuda Y, Yamada H, Miyazaki S, Sakamoto J, Daimon M; Guideline Committee of the Japanese Society of Echocardiography. Practical guidance for echocardiography for cancer therapy-related cardiac dysfunction: 2026 focused update. J Echocardiogr. 2026;24(2):123-140. DOI: 10.1007/s12574-026-00731-4. PMID: 42070216.",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J Cardiovasc Imaging. 2022;23(10):e333-e465. DOI: 10.1093/ehjci/jeac106. PMID: 36017575."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma tridimensional",
+      "fração de ejeção",
+      "cardiotoxicidade",
+      "vigilância cardio-oncológica",
+      "reprodutibilidade"
+    ]
   }
 ]

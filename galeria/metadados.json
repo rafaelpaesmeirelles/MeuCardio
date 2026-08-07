@@ -5970,5 +5970,72 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "estenose-de-arteria-renal-diagrama",
+    "title": "Diagrama — Estenose de artéria renal como causa de hipertensão secundária",
+    "modality": "Diagrama",
+    "theme": "Hipertensão",
+    "file_path": "diagrama/estenose-de-arteria-renal-diagrama.jpg",
+    "findings": "Ilustração esquemática (não é imagem diagnóstica real) mostrando os dois rins e suas artérias a partir da aorta abdominal, com detalhe ampliado de uma placa aterosclerótica estreitando o lúmen de uma artéria renal — mecanismo pelo qual a hipoperfusão renal ativa o sistema renina-angiotensina-aldosterona e eleva a pressão arterial (hipertensão renovascular).",
+    "teaching_points": "É uma peça educativa do NIDDK (instituto de pesquisa em diabetes, doenças digestivas e renais dos EUA), pensada para explicar o mecanismo ao paciente — não substitui angiografia, angiotomografia ou Doppler reais para diagnóstico. Two mecanismos causam estenose de artéria renal: aterosclerose (mais comum, geralmente ostial/proximal, em paciente mais velho com outros fatores de risco cardiovascular, como o esquematizado aqui) e displasia fibromuscular (mais comum em mulheres jovens, tipicamente distal, com aspecto de 'colar de contas' na angiografia). A suspeita clínica que leva a investigar — início antes dos 30 ou depois dos 55 anos, hipertensão resistente a três ou mais classes, piora da função renal após IECA/BRA, assimetria de tamanho renal — está detalhada no exame de angiotomografia de artérias renais já cadastrado nesta base, que é um dos métodos reais de confirmação.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RAS_Plaque.jpg",
+    "license": "Domínio público",
+    "attribution": "NIDDK (National Institute of Diabetes and Digestive and Kidney Diseases), Estados Unidos — obra de agência do governo federal norte-americano, em domínio público. Via Wikimedia Commons.",
+    "tags": [
+      "estenose de artéria renal",
+      "hipertensão renovascular",
+      "hipertensão secundária",
+      "diagrama esquemático",
+      "aterosclerose"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-de-carotida-por-doppler-no-diabetico",
+    "title": "Ultrassom Doppler de carótida — placa aterosclerótica com estenose ~70%",
+    "modality": "Ultrassonografia",
+    "theme": "Diabetes e cardiologia",
+    "file_path": "eco/estenose-de-carotida-doppler-placa.png",
+    "findings": "Corte transversal de ultrassom modo-B da artéria carótida comum direita (rotulado \"Right CCA\"), com seta apontando placa aterosclerótica ocupando parte do lúmen do vaso — segundo a legenda original do autor, redução luminal de aproximadamente 70%.",
+    "teaching_points": "A imagem em si não identifica a etiologia (não há informação de que o paciente da fonte seja diabético); está cadastrada neste tema porque ilustra o desfecho que o rastreio cardiovascular no diabetes tenta antecipar. O diabetes mellitus tipo 2 acelera a aterosclerose de grandes vasos por múltiplos mecanismos (glicação de proteínas da parede arterial, disfunção endotelial, estado pró-inflamatório e pró-trombótico), e a carótida é um sítio acessível para observar essa doença macrovascular diretamente — diferente da espessura médio-intimal (CIMT, já cadastrada nesta galeria sob o tema Prevenção e lipídios), que mede o espessamento difuso da parede, este achado é uma placa focal com repercussão luminal, estágio mais avançado da mesma doença. Uma estenose carotídea satisfatoriamente confirmada em paciente diabético assintomático levanta a discussão de rastreio de doença coronariana concomitante (mesmo mecanismo fisiopatológico, território diferente), tema já coberto nos exames de escore de cálcio coronariano e cintilografia de perfusão miocárdica desta base.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:70PerBlockedRtCarotidA.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "James Heilman, MD, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "doppler de carótidas",
+      "estenose carotídea",
+      "aterosclerose",
+      "diabetes mellitus",
+      "doença macrovascular",
+      "rastreio cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-peca-anatomica-fenotipo-cardiotoxicidade",
+    "title": "Peça anatômica — Cardiomiopatia dilatada com fibrose subendocárdica (fenótipo final da cardiotoxicidade avançada)",
+    "modality": "Patologia",
+    "theme": "Cardio-oncologia",
+    "file_path": "patologia/cardiomiopatia-dilatada-peca-anatomica-idiopatica.jpg",
+    "findings": "Peça de necropsia com o ventrículo esquerdo aberto, mostrando câmara dilatada e parede com fibrose subendocárdica, visível como aumento da brancura/opacidade do endocárdio em relação ao miocárdio subjacente.",
+    "teaching_points": "⚠️ RESSALVA DE ETIOLOGIA, para não ser lida como retrato de cardiotoxicidade confirmada: a legenda original do CDC identifica esta peça apenas como \"cardiomiopatia idiopática\" — não há qualquer menção a quimioterapia, antraciclina ou outro tratamento oncológico na fonte, e a causa real desta peça específica é desconhecida para quem cataloga esta imagem. Ela está cadastrada no tema Cardio-oncologia porque ilustra o fenótipo anatômico final e comum a que a cardiotoxicidade avançada por antraciclina converge — cardiomiopatia dilatada com fibrose, indistinguível macroscopicamente de outras causas de cardiomiopatia dilatada (idiopática, viral, alcoólica, isquêmica em estágio final) — não como documentação de um caso real de cardiotoxicidade oncológica. O valor didático está exatamente nessa indistinguibilidade: por imagem macroscópica isolada, sem história clínica, não é possível apontar a antraciclina como causa — o diagnóstico de cardiotoxicidade depende de cronologia com a exposição ao quimioterápico, exclusão de causas alternativas e, quando disponível, do padrão de realce tardio subepicárdico/médio-parietal (não subendocárdico isquêmico) à ressonância cardíaca, já ilustrado nesta galeria noutro registro de cardio-oncologia.",
+    "source_name": "Wikimedia Commons / CDC Public Health Image Library",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Idiopathic_cardiomyopathy,_gross_pathology_20G0018_lores.jpg",
+    "license": "Domínio público",
+    "attribution": "CDC/Dr. Edwin P. Ewing, Jr., Public Health Image Library (PHIL) #20G0018 — domínio público (obra do governo federal dos EUA), via Wikimedia Commons.",
+    "tags": [
+      "cardiomiopatia dilatada",
+      "peça anatômica",
+      "fibrose subendocárdica",
+      "cardiotoxicidade",
+      "ressalva de etiologia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
