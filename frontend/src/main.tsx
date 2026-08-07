@@ -12,8 +12,6 @@ import "./styles/tour.css";
 // clientsClaim, configurados em vite.config.ts), recarrega a aba uma única
 // vez — sem isto, o app já aberto continua rodando o JS antigo mesmo com o
 // SW novo já ativo, e o usuário só vê a versão nova fechando todas as abas.
-// Guarda em sessionStorage evita loop se o evento disparar mais de uma vez
-// na mesma sessão de aba.
 //
 // MAS nunca recarregar com uma resposta do assistente em andamento — achado
 // ao vivo em produção: o controllerchange pode disparar bem no meio de um
@@ -22,14 +20,29 @@ import "./styles/tour.css";
 // setado pelo Assistente.tsx durante o streaming; se a troca de SW acontece
 // nesse meio-tempo, a recarga fica pendente e só executa quando o streaming
 // terminar (`window.__streamEncerrado()`), nunca no meio dele.
+//
+// BUG REAL corrigido em 07/08/2026, achado ao vivo (Rafael reportou "o site
+// não atualiza automático quando entra ou acessa outra sessão ou opção"):
+// a guarda original usava uma bandeira PERMANENTE em sessionStorage
+// (`"sw-recarregado" === "1"`, nunca limpa) para evitar loop de reload. Com
+// deploys frequentes no mesmo dia, isso quebrava a própria função da guarda:
+// a PRIMEIRA troca de versão na aba recarregava e marcava a bandeira; toda
+// troca de versão SEGUINTE, na mesma aba, era silenciosamente ignorada — o
+// usuário ficava preso na versão daquele primeiro reload até fechar a aba.
+// Trocado por um "debounce" por tempo: só ignora um controllerchange se o
+// último reload aconteceu há menos de 5s (protege contra o evento disparar
+// duas vezes seguidas pelo mesmo deploy), e volta a reagir normalmente a
+// qualquer deploy depois disso — que é sempre minutos/horas depois, na
+// prática deste projeto.
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
-  if (sessionStorage.getItem("sw-recarregado") === "1") return;
+  const ultimaRecargaEm = Number(sessionStorage.getItem("sw-recarregado-em") || "0");
+  if (Date.now() - ultimaRecargaEm < 5000) return;
   if ((window as unknown as { __streamAtivo?: boolean }).__streamAtivo) {
     swRecargaPendente = true;
     return;
   }
-  sessionStorage.setItem("sw-recarregado", "1");
+  sessionStorage.setItem("sw-recarregado-em", String(Date.now()));
   window.location.reload();
 }
 if ("serviceWorker" in navigator) {

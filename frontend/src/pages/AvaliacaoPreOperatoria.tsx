@@ -182,7 +182,14 @@ export default function AvaliacaoPreOperatoria() {
   const [indicacao, setIndicacao] = useState("");
   const [capacidadeFuncional, setCapacidadeFuncional] = useState("");
   const [conduta, setConduta] = useState("");
-  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
+  // Padrão "Profissional" quando o médico já tem esse endereço cadastrado — pedido do Rafael,
+  // 07/08/2026, depois de gerar um laudo pré-operatório sem endereço: o seletor nasce em "Nenhum"
+  // e é fácil esquecer de trocar antes de gerar. Continua editável (Residencial/Nenhum) para quem
+  // não quiser mostrar endereço. Mesma condição do backend (`resolver_endereco` em
+  // pdf_documento.py): só entra "profissional" se houver rua OU cidade cadastrada.
+  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">(() =>
+    usuario?.practice_street || usuario?.practice_city ? "profissional" : "",
+  );
 
   const [usarRcri, setUsarRcri] = useState(true);
   const [rcri, setRcri] = useState<RcriEntrada>(RCRI_INICIAL);

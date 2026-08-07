@@ -58,7 +58,11 @@ export default function Calculadora() {
   const [patientName, setPatientName] = useState("");
   const [contexto, setContexto] = useState("");
   const [conduta, setConduta] = useState("");
-  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
+  // Padrão "Profissional" quando o médico já tem esse endereço cadastrado — mesmo fix aplicado em
+  // AvaliacaoPreOperatoria.tsx, 07/08/2026 (ver comentário lá para o motivo).
+  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">(() =>
+    usuario?.practice_street || usuario?.practice_city ? "profissional" : "",
+  );
   const [gerando, setGerando] = useState(false);
   const [erroGeracao, setErroGeracao] = useState("");
   const [geradoId, setGeradoId] = useState<number | null>(null);

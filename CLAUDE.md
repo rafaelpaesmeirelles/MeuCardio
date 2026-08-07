@@ -1,5 +1,37 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~19h20: 2 bugs reportados pelo Rafael — recarga automática presa após o 1º deploy do dia + endereço profissional ausente no laudo pré-operatório
+> Dois relatos separados do Rafael, os dois investigados a fundo (reprodução real, não suposição)
+> e corrigidos.
+>
+> **1. "O site não está atualizando automático quando entra ou acessa outra sessão ou opção."**
+> Causa raiz real, achada lendo `main.tsx`: a guarda contra loop de reload
+> (`sessionStorage.getItem("sw-recarregado") === "1"`) era uma **bandeira permanente por aba**,
+> nunca limpa — sem querer, ela desfazia a própria função do recarregamento automático (Trabalho
+> deste mesmo dia, "recarregamento sempre atualizado"). Com deploys frequentes no mesmo dia (como
+> hoje), a PRIMEIRA troca de versão numa aba recarregava e marcava a bandeira; **toda troca de
+> versão seguinte, na mesma aba, era silenciosamente ignorada** — o assinante ficava preso na
+> versão do primeiro reload do dia até fechar a aba de verdade. Corrigido: bandeira virou um
+> **debounce por tempo** (`sw-recarregado-em`, ignora só se o último reload foi há menos de 5s —
+> suficiente para não entrar em loop no mesmo evento, mas nunca bloqueia um deploy real seguinte).
+>
+> **2. "Laudo pré-operatório: pedi para incluir endereço profissional e ele não colocou."**
+> Reproduzido chamando `resolver_endereco()`/`documento_generico()` direto no container com o
+> usuário real (`rafael@corvia.med.br`, id 1): **o backend renderiza o endereço corretamente**
+> quando `endereco_exibido == "profissional"` chega até ele (endereço completo do consultório,
+> Rua Tibiriça 1172, saiu certo no PDF de teste). **A causa não é bug de renderização — é que o
+> seletor de endereço (`AvaliacaoPreOperatoria.tsx` e `Calculadora.tsx`) nasce em "Nenhum" por
+> padrão**, e é fácil gerar o documento sem lembrar de trocar para "Profissional" antes. Corrigido
+> nos dois lugares: o seletor agora nasce em **"Profissional" automaticamente quando o médico já
+> tem esse endereço cadastrado** (mesma condição do backend — rua OU cidade preenchida), continua
+> editável para quem preferir "Residencial" ou "Nenhum". Não resolve o(s) documento(s) já gerados
+> sem endereço (o campo é fixado na criação, sem rota de edição) — só os próximos.
+>
+> **Verificado**: `tsc --noEmit` limpo (Node 22), frontend rebuildado e bundle novo confirmado —
+> `sw-recarregado-em` no chunk principal, `practice_street` nos chunks de
+> `AvaliacaoPreOperatoria`/`Calculadora` (grep direto no volume `sitefiles`). Backend saudável
+> depois (200 em `/api/openapi.json`).
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~19h: redesenho do card "Hoje" do menu lateral
 > Rafael mandou screenshot dizendo que o item logo abaixo de "Ecossistema Clínico Cardiológico"
 > (o card "Hoje" do menu lateral) estava esteticamente ruim e a palavra "Hoje" ilegível pela cor,
