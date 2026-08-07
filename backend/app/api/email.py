@@ -58,7 +58,7 @@ from app.services import apple_mail, external_mail, yahoo_mail
 from app.services.assinatura import divulgacao_email, verificacao_pdf
 from app.services.agenda_integrada.contacts import list_contacts
 from app.services.agenda_integrada.domain import integration_credentials, store_integration_credentials
-from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
+from app.services.email_signature import dados_assinatura, montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
 from app.services.apple_mail import AppleMailError
@@ -169,7 +169,7 @@ def obter_assinatura(user: User = Depends(current_user)):
         "ativa": user.email_assinatura_ativa,
         "incluir_telefone": user.email_assinatura_incluir_telefone,
         "incluir_endereco": user.email_assinatura_incluir_endereco,
-        "pre_visualizacao": montar_assinatura_html(user),
+        "pre_visualizacao": dados_assinatura(user),
     }
 
 
@@ -190,7 +190,7 @@ def definir_assinatura(
         "ativa": user.email_assinatura_ativa,
         "incluir_telefone": user.email_assinatura_incluir_telefone,
         "incluir_endereco": user.email_assinatura_incluir_endereco,
-        "pre_visualizacao": montar_assinatura_html(user),
+        "pre_visualizacao": dados_assinatura(user),
     }
 
 

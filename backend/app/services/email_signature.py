@@ -40,39 +40,62 @@ def _conselho(user: Any) -> str | None:
     return " ".join(p for p in partes if p) or None
 
 
+def dados_assinatura(user: Any) -> dict[str, Any] | None:
+    """Campos estruturados da assinatura (nome, linhas de identidade, URLs de
+    logo), sem nenhuma marcação HTML. `None` quando a assinatura está
+    desligada. Duas finalidades: (1) fonte para `montar_assinatura_html()`
+    montar o e-mail de verdade; (2) devolvida crua pela rota
+    `GET/PUT /api/email/assinatura` para o frontend renderizar a
+    pré-visualização em JSX — nunca `dangerouslySetInnerHTML`, política
+    imposta por `scripts/check-rendering-security.mjs`."""
+    if not getattr(user, "email_assinatura_ativa", False):
+        return None
+
+    linhas: list[str] = []
+    especialidade = (user.specialty or "").strip()
+    if especialidade:
+        linhas.append(especialidade)
+    conselho = _conselho(user)
+    if conselho:
+        linhas.append(conselho)
+    linhas.extend(workplace_lines(user))
+    if user.email_assinatura_incluir_telefone and (user.practice_phone or "").strip():
+        linhas.append(f"Tel.: {user.practice_phone.strip()}")
+    if user.email_assinatura_incluir_endereco:
+        endereco = _endereco_profissional(user)
+        if endereco:
+            linhas.append(endereco)
+
+    logo_profissional_url = None
+    if user.document_logo_url and user.document_logo_url.startswith("/logos/"):
+        logo_profissional_url = f"{settings.public_url.rstrip('/')}{user.document_logo_url}"
+
+    return {
+        "nome": professional_name(user),
+        "linhas": linhas,
+        "logo_profissional_url": logo_profissional_url,
+        "logo_corvia_url": LOGO_CORVIA_URL,
+    }
+
+
 def montar_assinatura_html(user: Any) -> str | None:
     """`None` quando a assinatura está desligada — quem chama deve manter o
     comportamento atual (corpo enviado como o médico digitou, sem anexar
     nada) nesse caso, não um bloco vazio."""
-    if not getattr(user, "email_assinatura_ativa", False):
+    dados = dados_assinatura(user)
+    if dados is None:
         return None
 
-    nome = _html.escape(professional_name(user))
-    linhas_identidade: list[str] = []
-    especialidade = (user.specialty or "").strip()
-    if especialidade:
-        linhas_identidade.append(_html.escape(especialidade))
-    conselho = _conselho(user)
-    if conselho:
-        linhas_identidade.append(_html.escape(conselho))
-    for linha in workplace_lines(user):
-        linhas_identidade.append(_html.escape(linha))
-    if user.email_assinatura_incluir_telefone and (user.practice_phone or "").strip():
-        linhas_identidade.append(f"Tel.: {_html.escape(user.practice_phone.strip())}")
-    if user.email_assinatura_incluir_endereco:
-        endereco = _endereco_profissional(user)
-        if endereco:
-            linhas_identidade.append(_html.escape(endereco))
+    nome = _html.escape(dados["nome"])
+    linhas_html = "<br>".join(_html.escape(linha) for linha in dados["linhas"])
 
     logo_profissional = ""
-    if user.document_logo_url and user.document_logo_url.startswith("/logos/"):
-        url_logo = f"{settings.public_url.rstrip('/')}{user.document_logo_url}"
+    if dados["logo_profissional_url"]:
         logo_profissional = (
-            f'<img src="{_html.escape(url_logo)}" alt="" '
+            f'<img src="{_html.escape(dados["logo_profissional_url"])}" alt="" '
             f'style="max-height:48px;max-width:160px;display:block;margin-bottom:6px;">'
         )
 
-    linhas_html = "<br>".join(linhas_identidade)
     return f"""
 <table role="presentation" style="margin-top:24px;padding-top:12px;border-top:1px solid #dbe2e6;font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#3a4750;">
   <tr>

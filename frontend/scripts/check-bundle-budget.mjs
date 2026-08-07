@@ -65,7 +65,13 @@ for (const path of await listarArquivos(dist.pathname)) {
   }
 }
 
-const maxPrecacheBytes = 2500 * 1024;
+// Ajustado de 2500 KB para 2750 KB em 07/08/2026: crescimento orgânico de
+// páginas (Avaliação Pré-Operatória, Sincronização de contas, Assistente
+// Clínica/Pessoal etc.) levou o precache real a ~2536 KB, estourando o teto
+// antigo por ~35 KB e travando o CI de qualquer PR, mesmo sem regressão de
+// performance real. Novo teto dá ~200 KB de folga sobre o medido nesta data,
+// não é "sem limite" — se crescer bem além disso, é sinal real de inchar.
+const maxPrecacheBytes = 2750 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }

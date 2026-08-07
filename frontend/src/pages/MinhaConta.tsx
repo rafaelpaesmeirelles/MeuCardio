@@ -659,11 +659,18 @@ function CertificadoA1() {
   );
 }
 
+type AssinaturaPreview = {
+  nome: string;
+  linhas: string[];
+  logo_profissional_url: string | null;
+  logo_corvia_url: string;
+};
+
 type AssinaturaEmail = {
   ativa: boolean;
   incluir_telefone: boolean;
   incluir_endereco: boolean;
-  pre_visualizacao: string | null;
+  pre_visualizacao: AssinaturaPreview | null;
 };
 
 /** Assinatura anexada ao final de todo e-mail enviado pelo CorvIA Mail (caixa
@@ -733,10 +740,25 @@ function PreferenciaAssinaturaEmail() {
       {dados.ativa && dados.pre_visualizacao && (
         <div style={{ marginTop: "0.7rem" }}>
           <p style={{ margin: "0 0 0.3rem", fontSize: "0.78rem", color: "var(--texto-secundario)" }}>Pré-visualização:</p>
-          <div
-            style={{ border: "1px solid var(--borda)", borderRadius: "8px", padding: "0.6rem", background: "#fff" }}
-            dangerouslySetInnerHTML={{ __html: dados.pre_visualizacao }}
-          />
+          {/* JSX puro, nunca a prop de HTML cru do React — política de renderização
+              segura (scripts/check-rendering-security.mjs) proíbe isso fora do renderer
+              de e-mail recebido (CaixaDeEmail.tsx, sandboxado). React escapa todo texto
+              aqui por padrão, então isso é seguro por construção, não por convenção. */}
+          <div style={{ border: "1px solid var(--borda)", borderRadius: "8px", padding: "0.6rem", background: "#fff", display: "flex", gap: "14px" }}>
+            <div>
+              {dados.pre_visualizacao.logo_profissional_url && (
+                <img
+                  src={dados.pre_visualizacao.logo_profissional_url} alt=""
+                  style={{ maxHeight: 48, maxWidth: 160, display: "block", marginBottom: 6 }}
+                />
+              )}
+              <img src={dados.pre_visualizacao.logo_corvia_url} alt="Corvia" style={{ height: 22, display: "block" }} />
+            </div>
+            <div style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "12.5px", color: "#3a4750" }}>
+              <strong style={{ color: "#0b2e45" }}>{dados.pre_visualizacao.nome}</strong>
+              {dados.pre_visualizacao.linhas.map((linha, i) => <div key={i}>{linha}</div>)}
+            </div>
+          </div>
         </div>
       )}
     </div>

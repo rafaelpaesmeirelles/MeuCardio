@@ -142,7 +142,11 @@ def test_put_assinatura_liga_e_reflete_na_pre_visualizacao(client, criar_usuario
     assert resposta.status_code == 200
     corpo = resposta.json()
     assert corpo["ativa"] is True
-    assert "Bruno Lima" in corpo["pre_visualizacao"]
+    # Estruturado (nome/linhas/logos), nunca HTML cru — o frontend renderiza
+    # isso em JSX, nunca dangerouslySetInnerHTML (política de
+    # scripts/check-rendering-security.mjs).
+    assert corpo["pre_visualizacao"]["nome"] == "Bruno Lima"
+    assert corpo["pre_visualizacao"]["logo_corvia_url"].endswith("corvia-logo-compacta.png")
 
     status = client.get("/api/email/assinatura", headers=_headers(token))
     assert status.json()["ativa"] is True
