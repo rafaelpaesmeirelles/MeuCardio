@@ -5834,5 +5834,73 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "filtro-de-veia-cava-inferior-especime",
+    "title": "Filtro de veia cava inferior — espécime explantado",
+    "modality": "Fotografia de dispositivo",
+    "theme": "Tromboembolismo",
+    "file_path": "dispositivo/filtro-de-veia-cava-inferior-especime.jpg",
+    "findings": "Fotografia de um filtro de veia cava inferior já removido do corpo, mostrando a estrutura em formato de guarda-chuva: múltiplos braços metálicos (nitinol ou aço inoxidável) convergindo para um corpo central com gancho de recuperação em uma extremidade e espículas de fixação nas pontas dos braços opostos, que ancoram o dispositivo na parede da veia cava. Escala de 25 mm incluída na imagem para referência de tamanho.",
+    "teaching_points": "O filtro de veia cava inferior não trata TEV e não substitui anticoagulação — sua única função é mecânica: interceptar êmbolos que se soltem de uma trombose venosa profunda de membros inferiores antes que alcancem a circulação pulmonar. As duas indicações consolidadas são contraindicação absoluta à anticoagulação em vigência de TEV agudo (ex.: sangramento ativo, cirurgia recente de alto risco hemorrágico) e falha comprovada da anticoagulação terapêutica (TEP recorrente apesar de anticoagulação adequada). Fora desses cenários, o uso rotineiro não tem respaldo — estudos randomizados não mostram redução de mortalidade com filtro associado à anticoagulação padrão frente à anticoagulação isolada, e o dispositivo carrega risco cumulativo de complicações tardias (trombose do próprio filtro, perfuração da parede da veia cava, migração e fratura de hastes) que aumenta com o tempo de permanência. Por isso a recomendação atual prioriza filtros recuperáveis com remoção assim que a contraindicação à anticoagulação for resolvida — o gancho visível nesta foto é justamente o ponto de apreensão usado nesse procedimento de retirada por via endovascular.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Inferior_vena_cava_filter.jpg",
+    "license": "CC BY-SA 3.0 / GFDL",
+    "attribution": "BozMo, via Wikimedia Commons — CC BY-SA 3.0 / GFDL.",
+    "tags": [
+      "filtro de veia cava inferior",
+      "tromboembolismo venoso",
+      "dispositivo",
+      "contraindicação à anticoagulação",
+      "profilaxia mecânica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "conducao-cardiaca-e-comparacao-ecg-ritmo-sinusal-vs-fibrilacao-atrial",
+    "title": "Ilustração — Sistema de condução cardíaca e comparação de ECG entre ritmo sinusal e fibrilação atrial",
+    "modality": "Ilustração médica",
+    "theme": "Fibrilação atrial",
+    "file_path": "diagrama/conducao-e-ecg-comparativo-ritmo-sinusal-vs-fibrilacao-atrial.png",
+    "findings": "Painel composto: à esquerda, corte esquemático do coração destacando o sistema de condução elétrica (nó sinoatrial, nó atrioventricular e feixes de condução ventricular) sobreposto à anatomia das quatro câmaras; à direita, dois traçados de ECG empilhados para comparação — o superior em ritmo sinusal normal (ondas P regulares antecedendo cada QRS) e o inferior em fibrilação atrial (ausência de onda P organizada, intervalos R-R irregulares).",
+    "teaching_points": "A utilidade didática deste painel é ligar o traçado elétrico à estrutura anatômica que o gera: a onda P do ritmo sinusal reflete a despolarização atrial organizada, iniciada no nó sinoatrial e propagada de forma coordenada — o que a fibrilação atrial substitui por atividade elétrica atrial caótica e multifocal, sem despolarização coordenada e, portanto, sem onda P discreta no traçado. O nó AV, nesse contexto, funciona como um filtro parcial e irregular dos impulsos atriais caóticos que chegam a ele, o que explica a resposta ventricular irregularmente irregular característica da FA — e por que o controle de frequência na FA mira justamente a condução através do nó AV (com betabloqueador, antagonista de canal de cálcio não di-hidropiridínico ou digoxina), não o foco atrial em si.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atrial_Fibrillation.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "BruceBlaus, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "fibrilação atrial",
+      "sistema de condução cardíaca",
+      "ecg comparativo",
+      "ritmo sinusal",
+      "nó sinoatrial",
+      "nó atrioventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ressonancia-cardiaca-miocardite-mimetizando-cardiomiopatia-periparto",
+    "title": "Ressonância cardíaca — Miocardite aguda mimetizando cardiomiopatia periparto (realce tardio)",
+    "modality": "Ressonância magnética cardíaca",
+    "theme": "Gravidez",
+    "file_path": "rm/miocardite-mimetizando-cardiomiopatia-periparto-realce-tardio.jpg",
+    "findings": "Cortes de eixo curto de ressonância cardíaca em paciente com disfunção ventricular no período periparto: painel A (sequência de realce tardio) mostra realce subepicárdico/mesocárdico multifocal na parede do ventrículo esquerdo (setas); painel B, mapeamento paramétrico (aspecto tipo mapa de T2/T1) evidenciando a mesma região com sinal alterado em cores quentes; painel C, outro corte de realce tardio com múltiplas áreas de realce ao longo da parede (setas). O padrão — realce subepicárdico e mesocárdico, não subendocárdico nem coronariano — é típico de miocardite, não de necrose isquêmica.",
+    "teaching_points": "Ressalva de honestidade que é o próprio ponto de ensino desta imagem: o caso-fonte não é uma cardiomiopatia periparto verdadeira — é um relato de miocardite aguda com recorrência tardia que inicialmente foi rotulada como cardiomiopatia periparto pela coincidência temporal com o puerpério, até a ressonância com realce tardio revelar o padrão típico de miocardite (subepicárdico/mesocárdico) em vez do padrão mais difuso e sem realce tardio característico (ou às vezes com realce mesocárdico inespecífico) da cardiomiopatia periparto propriamente dita. A imagem ilustra exatamente por que a ressonância cardíaca — e não apenas o ecocardiograma — entra na investigação de disfunção ventricular nova no período periparto: quando a apresentação clínica (dispneia, disfunção sistólica, timing periparto) é ambígua, o padrão de realce tardio ajuda a diferenciar miocardite, necrose isquêmica (síndrome coronariana ou dissecção espontânea de artéria coronária, mais frequente na gestante/puérpera) e cardiomiopatia periparto genuína — três entidades com repercussão terapêutica e prognóstica diferentes, apesar de poderem se apresentar de forma clinicamente indistinguível à beira do leito.",
+    "source_name": "Cureus (PMC, Open Access — CC BY 4.0)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11076127/",
+    "license": "CC BY 4.0",
+    "attribution": "Allihien ST, Ibrahim S, Agyeman WY, Markson F, Naji A, Marti CN. \"The Masquerading Myocarditis: A Case of Late Recurrence of Acute Myocarditis Presenting as 'Peripartum Cardiomyopathy'\". Cureus. 2024;16(4):e57782. DOI: 10.7759/cureus.57782 — Figura 4, via PMC Open Access (CC BY 4.0).",
+    "tags": [
+      "cardiomiopatia periparto",
+      "miocardite",
+      "ressonância cardíaca",
+      "realce tardio",
+      "diagnóstico diferencial",
+      "gravidez"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

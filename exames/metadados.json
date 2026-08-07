@@ -8707,5 +8707,146 @@
       "miopatia",
       "cpic"
     ]
+  },
+  {
+    "slug": "escore-de-qanadli-indice-de-obstrucao-vascular-pulmonar-na-angiotomografia-do-tep-agudo",
+    "name": "Escore de Qanadli (índice de obstrução vascular pulmonar) na angiotomografia do TEP agudo",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Quantifica, na própria angiotomografia de tórax diagnóstica do TEP, a carga trombótica total: cada uma das 10 artérias pulmonares (segmentares/subsegmentares mais proximais, numeradas por segmento broncopulmonar) recebe peso (n) conforme sua posição proximal-distal, e cada uma é pontuada por grau de obstrução — 1 para obstrução parcial, 2 para obstrução completa (multiplicado por 2 se o vaso obstruído for mais proximal que um vaso patente a jusante, refletindo trombo residual). A soma (n×d) é expressa como percentual do escore máximo teórico (40 pontos).",
+    "reference_range": "Escore de 0% (sem obstrução) a 100% (obstrução completa de todo o leito arterial pulmonar avaliável). No estudo original de validação, a média foi de 29% ± 17% pelo índice tomográfico de Qanadli, correlacionado com média de 43% ± 25% pelo índice angiográfico de Miller (padrão de referência histórico). Escore de Qanadli maior que 40% identificou mais de 90% dos pacientes com dilatação de ventrículo direito no mesmo estudo.",
+    "indications": "Não é um exame à parte — é uma leitura estruturada aplicada sobre a angiotomografia de tórax já realizada para diagnosticar o TEP agudo, útil quando se quer quantificar objetivamente a carga trombótica além da descrição qualitativa (ex.: 'êmbolo em sela', 'trombo bilateral'), para fins de pesquisa, comparação evolutiva em exames seriados, ou como dado auxiliar na avaliação de gravidade em conjunto com achados de disfunção de ventrículo direito.",
+    "interpretation": "Segundo o estudo original de Qanadli et al. (AJR, 2001), o índice tomográfico correlacionou-se fortemente com o índice angiográfico de Miller (r = 0,867; p < 0,0001), com excelente concordância interobservador tanto para o índice tomográfico (r = 0,944) quanto para o angiográfico (r = 0,904) — ou seja, é um método reprodutível de quantificação, não apenas uma impressão subjetiva do radiologista. Os autores descrevem o objetivo como complementar à estratificação de risco, não substituto dos parâmetros clínicos e de disfunção de VD que efetivamente guiam a decisão terapêutica (anticoagulação isolada vs. terapia de reperfusão).",
+    "limitations": "Ressalva importante: o próprio estudo original de 2001 — com 54 pacientes — descreve o índice como reprodutível e correlacionado a achados ecocardiográficos, mas explicitamente qualifica que 'avaliações adicionais são necessárias para investigar a utilidade do índice de obstrução por TC na estratificação de risco e na definição de opções terapêuticas'. Ou seja, a carga trombótica anatômica isolada — mesmo quantificada de forma reprodutível — não define por si só a gravidade clínica do TEP: pacientes com escore de obstrução elevado podem estar hemodinamicamente estáveis, e a estratificação de risco que orienta o tratamento (segundo as diretrizes atuais de TEP) depende de repercussão clínica, disfunção de ventrículo direito (por imagem) e biomarcadores (troponina, peptídeos natriuréticos), não do escore de obstrução tomográfico isoladamente. O escore também não é rotina na maioria dos laudos assistenciais — é mais usado em protocolos de pesquisa e ensaios clínicos sobre TEP.",
+    "source_refs": [
+      "Qanadli SD, El Hajjam M, Vieillard-Baron A, Joseph T, Mesurolle B, Oliva VL, Barré O, Bruckert F, Dubourg O, Lacombe P. New CT index to quantify arterial obstruction in pulmonary embolism: comparison with angiographic index and echocardiography. AJR Am J Roentgenol. 2001;176(6):1415-1420. DOI: 10.2214/ajr.176.6.1761415. PMID: 11373204."
+    ],
+    "tags": [
+      "tromboembolismo pulmonar",
+      "angiotomografia",
+      "escore de qanadli",
+      "carga trombótica",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ultrassom-point-of-care-multiorganico-pocus-no-tep-hemodinamicamente-instavel",
+    "name": "Ultrassom point-of-care multiorgânico (POCUS) no TEP hemodinamicamente instável",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Avaliação ultrassonográfica integrada e sequencial à beira do leito, combinando três janelas — cardíaca (dilatação/disfunção de ventrículo direito, trombo em trânsito em câmaras direitas), pulmonar (excluir pneumotórax, derrame ou padrão de consolidação como causa alternativa de instabilidade) e venosa de membros inferiores (trombose venosa profunda proximal, que sustenta a origem do êmbolo) — em paciente instável no qual o transporte para angiotomografia de tórax é considerado inseguro ou impraticável no momento.",
+    "reference_range": "Não é exame de corte binário como um valor laboratorial; o \"positivo\" combina sinais indiretos (dilatação/disfunção de VD ao eco, ausência de compressibilidade venosa) mais do que visualizar o êmbolo diretamente — visualização direta de trombo em câmaras direitas ou no tronco da artéria pulmonar é achado ocasional, não esperado na maioria dos exames positivos.",
+    "indications": "Paciente com suspeita de TEP e instabilidade hemodinâmica ou respiratória em que o transporte para a angiotomografia de tórax (padrão de referência) é considerado inseguro — cenário em que a avaliação à beira do leito é o que orienta a decisão terapêutica imediata (trombólise, suporte hemodinâmico) antes ou mesmo na ausência de confirmação por imagem definitiva.",
+    "interpretation": "Segundo uma revisão sistemática com metanálise de 2025 reunindo 4 estudos e 594 pacientes críticos com suspeita de TEP (usando angiotomografia ou cintilografia V/Q como referência), o POCUS multiorgânico teve sensibilidade agrupada de 90% (IC 95% 85-94%) e especificidade de 69% (IC 95% 42-87%), razão de verossimilhança positiva de 3,35 e negativa de 0,16, com área sob a curva ROC de 0,89 — desempenho considerado de alta acurácia diagnóstica nessa população crítica, embora a especificidade tenha variado consideravelmente entre os estudos incluídos (heterogeneidade estatística elevada, I² = 95% para especificidade). Uma revisão de 2026 no mesmo periódico reforça que a modalidade não substitui a angiotomografia como padrão de referência, mas fornece informação clinicamente acionável para decisão terapêutica imediata quando a imagem definitiva não é factível no momento.",
+    "limitations": "A especificidade agrupada (69%) é bem mais baixa e mais heterogênea entre estudos do que a sensibilidade, o que limita o uso do POCUS como ferramenta de confirmação diagnóstica isolada — um resultado negativo tem maior valor para reduzir a probabilidade de TEP grave do que um resultado positivo tem para confirmá-la com segurança. A metanálise incluiu apenas 4 estudos (594 pacientes), prevalência de TEP variando de 28% a 66,2% entre eles, o que limita a generalização do desempenho estimado para populações com prevalência pré-teste muito diferente. Assim que a estabilização permitir, a confirmação por angiotomografia (ou cintilografia V/Q) continua indicada.",
+    "source_refs": [
+      "Melo RH, Gioli-Pereira L, Lourenço ID, Da Hora Passos R, Bernardo AT, Volpicelli G. Diagnostic accuracy of multi-organ point-of-care ultrasound for pulmonary embolism in critically ill patients: a systematic review and meta-analysis. Crit Care. 2025;29(1):162. DOI: 10.1186/s13054-025-05359-x. PMID: 40269937.",
+      "Moreno-Loaiza O, de Melo CB, Moreno-Loaiza M, Bamberg S. Point-of-care ultrasound in hemodynamically unstable pulmonary embolism. Crit Care. 2026;30(1). DOI: 10.1186/s13054-026-06097-4. PMID: 42169048."
+    ],
+    "tags": [
+      "tromboembolismo pulmonar",
+      "pocus",
+      "ultrassom point-of-care",
+      "instabilidade hemodinâmica",
+      "diagnóstico à beira do leito"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-de-esforco-cardiopulmonar-no-controle-de-frequencia-da-fibrilacao-atrial-permanente",
+    "name": "Teste de esforço cardiopulmonar (ergoespirometria) na avaliação do controle de frequência na fibrilação atrial permanente",
+    "category": "metodo_grafico",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Teste em esteira (protocolo de Bruce modificado, no estudo de referência) com análise de gases expirados, medindo consumo de oxigênio de pico, equivalente metabólico de pico e limiar anaeróbico, além da frequência cardíaca durante esforço moderado — usado para verificar se o controle farmacológico de frequência na FA permanente é adequado também durante atividade, não apenas em repouso.",
+    "reference_range": "No estudo de referência, controle \"estrito\" foi definido como frequência cardíaca de repouso ≤80 bpm e frequência cardíaca ≤110 bpm durante exercício moderado (3 METs); controle \"permissivo/lenient\" como valores acima desses cortes.",
+    "indications": "Considerado em pacientes com fibrilação atrial permanente sob terapia de controle de frequência, especialmente quando há dúvida se o controle avaliado apenas em repouso (ou por ECG isolado) reflete adequadamente a resposta cronotrópica durante atividade física — cenário em que o paciente pode estar assintomático em repouso e sintomático (dispneia, intolerância ao esforço) apenas durante exercício.",
+    "interpretation": "Segundo estudo prospectivo com 143 pacientes com FA permanente em uso de medicação para controle de frequência, acompanhados por 1 ano e avaliados por ergoespirometria e questionário de qualidade de vida SF-36: não houve diferença significativa no consumo de oxigênio de pico, equivalente metabólico de pico ou limiar anaeróbico entre os grupos de controle estrito e permissivo — ou seja, a capacidade de exercício objetivamente medida não dependeu da rigidez do controle de frequência. Por outro lado, os escores de qualidade de vida (componentes físico e mental do SF-36) foram significativamente mais altos no grupo de controle estrito, e a análise de regressão linear multivariável mostrou correlação entre frequência cardíaca de esforço (além da duração da FA) e os escores de qualidade de vida.",
+    "limitations": "Achado que vale registrar com honestidade, porque vai contra a intuição de 'quanto mais estrito o controle, melhor o desempenho físico': a capacidade de exercício objetiva não melhorou com controle mais estrito neste estudo — o benefício encontrado foi em qualidade de vida percebida, não em capacidade funcional mensurada. É um estudo observacional prospectivo de centro único (143 pacientes), não um ensaio randomizado comparando estratégias de controle, e os autores não estabelecem causalidade entre o nível de controle e os desfechos de qualidade de vida — a correlação encontrada não exclui que pacientes com melhor qualidade de vida basal tenham aderido mais à terapia que resultou em controle mais estrito.",
+    "source_refs": [
+      "She F, Ma Y, Li Y, Li L, Xu W, Wang H, Cui M. Influence of heart rate control on exercise capacity and quality of life in patients with permanent atrial fibrillation. BMC Cardiovasc Disord. 2019;19(1):308. DOI: 10.1186/s12872-019-01293-3. PMID: 31864289."
+    ],
+    "tags": [
+      "fibrilação atrial",
+      "ergoespirometria",
+      "teste de esforço cardiopulmonar",
+      "controle de frequência",
+      "qualidade de vida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "polissonografia-no-rastreio-de-apneia-obstrutiva-do-sono-antes-da-ablacao-de-fibrilacao-atrial",
+    "name": "Polissonografia no rastreio de apneia obstrutiva do sono antes da ablação de fibrilação atrial",
+    "category": "metodo_grafico",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Registro polissonográfico (fluxo aéreo, esforço respiratório, oximetria, eletroencefalograma) para diagnosticar e graduar apneia obstrutiva do sono (AOS) pelo índice de apneia-hipopneia (IAH), aplicado aqui especificamente na avaliação pré-procedimento de pacientes candidatos à ablação por cateter da fibrilação atrial.",
+    "reference_range": "Classificação por IAH: normal <5/h · leve 5-14/h · moderada 15-29/h · grave ≥30/h (critérios AASM, já usados em outro item deste acervo para o contexto geriátrico).",
+    "indications": "Diretrizes atuais de fibrilação atrial (ESC 2024, arcabouço AF-CARE) colocam o manejo de comorbidades e fatores de risco modificáveis — apneia do sono entre eles — como um dos quatro pilares do cuidado, ao lado de anticoagulação, controle de sintomas e avaliação/reavaliação periódica; rastrear e tratar AOS antes de uma ablação busca reduzir um fator de recorrência conhecido, não apenas tratar uma comorbidade isolada.",
+    "interpretation": "Segundo metanálise reunindo 6 estudos e 3.995 pacientes submetidos a isolamento de veias pulmonares, pacientes com AOS tiveram risco 25% maior de recorrência de FA após a ablação em relação aos sem AOS (razão de risco 1,25; IC 95% 1,08-1,45; p = 0,003). A análise de subgrupo é o achado que mais importa para a escolha do método diagnóstico: quando a AOS foi diagnosticada por polissonografia, o risco de recorrência foi ainda maior e estatisticamente robusto (razão de risco 1,40; IC 95% 1,16-1,68; p = 0,0004) — mas quando o diagnóstico de AOS partiu apenas do questionário de Berlim (rastreio por sintomas, sem registro objetivo do sono), a associação deixou de ser estatisticamente significativa (razão de risco 1,07; IC 95% 0,91-1,27; p = 0,39).",
+    "limitations": "A limitação mais relevante desta metanálise de 2011 é justamente o ponto que a torna útil clinicamente: instrumentos de rastreio por questionário (como o de Berlim) não reproduzem o valor prognóstico do diagnóstico objetivo por polissonografia — ou seja, um rastreio negativo por questionário não deve ser interpretado como equivalente a uma polissonografia normal antes de decidir sobre ablação. Os estudos incluídos são observacionais (não ensaios randomizados testando se tratar a AOS antes da ablação reduz recorrência), então a associação encontrada é prognóstica, não necessariamente causal nem prova de que o tratamento da AOS reduza a recorrência — essa é uma pergunta relacionada, mas diferente, da que esta metanálise responde.",
+    "source_refs": [
+      "Ng CY, Liu T, Shehata M, Stevens S, Chugh SS, Wang X. Meta-analysis of obstructive sleep apnea as predictor of atrial fibrillation recurrence after catheter ablation. Am J Cardiol. 2011;108(1):47-51. DOI: 10.1016/j.amjcard.2011.02.343. PMID: 21529734.",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723 — arcabouço AF-CARE, pilar de manejo de comorbidades e fatores de risco."
+    ],
+    "tags": [
+      "fibrilação atrial",
+      "polissonografia",
+      "apneia obstrutiva do sono",
+      "ablação por cateter",
+      "recorrência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "holter-ou-monitor-de-eventos-externo-na-gestante-com-palpitacoes",
+    "name": "Holter ou monitor de eventos externo (looper) na gestante com palpitações",
+    "category": "metodo_grafico",
+    "theme": "Gravidez",
+    "what_it_measures": "Registro ambulatorial do ritmo cardíaco — Holter de 24h (contínuo) ou monitor de eventos/looper externo (registro acionado por sintoma ou por detecção automática de arritmia, usado por período mais prolongado) — para documentar e classificar a arritmia responsável por palpitações relatadas durante a gestação.",
+    "reference_range": "Não há corte numérico único; a interpretação classifica o achado por gravidade (arritmia benigna vs. distúrbio de ritmo sério) e correlaciona com o sintoma relatado pela paciente durante o registro.",
+    "indications": "Gestante com palpitações persistentes, após eletrocardiograma basal, quando se deseja capturar e caracterizar a arritmia responsável — indicação comum, já que palpitação é queixa frequente na gestação mesmo sem cardiopatia estrutural subjacente, refletindo em parte as próprias mudanças fisiológicas do sistema cardiovascular gestacional.",
+    "interpretation": "Segundo estudo com 96 gestantes encaminhadas para avaliação cardiológica por palpitação, síncope ou tontura (idade gestacional média de 22,6 ± 8,3 semanas no encaminhamento), 65 realizaram monitor de eventos e 19 Holter; 76% das gestantes tiveram arritmias classificadas como benignas. História prévia de arritmia associou-se a risco quatro vezes maior de distúrbio de ritmo sério durante a gestação (razão de chances 4,7; IC 95% 1,1-20,3; p = 0,01), assim como obesidade (IMC > 30, razão de chances 4,0; p = 0,03; o intervalo de confiança de 95% consta no resumo original como iniciando em 1,0, mas o limite superior não pôde ser confirmado com precisão nesta sessão a partir do resumo indexado no PubMed — não reproduzido aqui para não arriscar um número incorreto). Nenhuma associação foi encontrada entre distúrbio de ritmo sério e maior chance de cesárea, indução de parto, ou arritmia no recém-nascido. Os autores concluem que o monitor de eventos pareceu ter melhor rendimento diagnóstico que o Holter nessa coorte, plausivelmente por cobrir período mais longo e capturar eventos esporádicos que um registro de 24h pode não incluir.",
+    "limitations": "A maioria das gestantes com palpitação tem arritmia benigna (76% neste estudo), o que sustenta uma abordagem inicialmente não invasiva e sem alarme excessivo — mas a minoria com achado sério (associada a história prévia de arritmia e obesidade) justifica a investigação sistemática em vez de atribuir toda palpitação gestacional a ansiedade ou à fisiologia da gravidez sem documentação objetiva do ritmo. É um estudo observacional de um único serviço, sem grupo controle de gestantes assintomáticas para comparação, e a preferência por monitor de eventos sobre Holter nos resultados reflete também a maior proporção de pacientes que o receberam (65 vs. 19), não necessariamente um teste randomizado comparando os dois métodos diretamente.",
+    "source_refs": [
+      "Cruz MO, Hibbard JU, Alexander T, Briller J. Ambulatory arrhythmia monitoring in pregnant patients with palpitations. Am J Perinatol. 2013;30(1):53-58. DOI: 10.1055/s-0032-1321500. PMID: 22814871."
+    ],
+    "tags": [
+      "gravidez",
+      "palpitações",
+      "holter",
+      "monitor de eventos",
+      "arritmia na gestação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cateterismo-cardiaco-estrutural-na-gestante-protecao-fetal-contra-radiacao",
+    "name": "Cateterismo cardíaco/intervenção estrutural percutânea na gestante — proteção fetal contra radiação",
+    "category": "imagem",
+    "theme": "Gravidez",
+    "what_it_measures": "Procedimento hemodinâmico/intervencionista guiado por fluoroscopia (ex.: valvuloplastia mitral percutânea por balão em estenose mitral sintomática refratária ao tratamento clínico) adaptado à gestação — com blindagem pélvico-abdominal da paciente, minimização do tempo de fluoroscopia, e omissão de etapas não essenciais (como ventriculografia esquerda) que aumentariam a exposição sem mudar a conduta.",
+    "reference_range": "Segundo o Parecer do American College of Obstetricians and Gynecologists (ACOG) sobre imagem diagnóstica na gestação, a exposição fetal à radiação por procedimentos radiológicos, na grande maioria dos casos — incluindo os que envolvem fluoroscopia — fica em dose muito inferior ao limiar associado a dano fetal; o parecer recomenda que o exame não seja negado à gestante quando clinicamente indicado, e que o uso de blindagem e técnica otimizada seja empregado para reduzir a dose ao mínimo necessário.",
+    "indications": "Cardiopatia estrutural sintomática e refratária ao tratamento clínico durante a gestação em que a intervenção percutânea é preferível à cirurgia cardíaca aberta com circulação extracorpórea (que carrega risco fetal maior) — o exemplo mais estabelecido é a estenose mitral reumática grave sintomática (classe funcional III/IV apesar de diuréticos e betabloqueador) tratada por valvuloplastia mitral por balão.",
+    "interpretation": "Em série de 4 gestantes com estenose mitral leve a grave, sintomáticas apesar de terapia medicamentosa otimizada (diurético e betabloqueador), submetidas a valvuloplastia percutânea por balão após o primeiro trimestre, com blindagem pélvico-abdominal e sem realização de ventriculografia esquerda: tempo médio de fluoroscopia de 7 ± 3 minutos, sem complicação maior imediata, área valvar mitral aumentando de 1,05 ± 0,08 cm² para 2,52 ± 0,26 cm² e gradiente mitral caindo de 26,7 ± 5,7 mmHg para 8,5 ± 3 mmHg — as quatro gestantes tiveram recém-nascidos saudáveis a termo, e no seguimento médio de 22 ± 8 meses todas estavam assintomáticas.",
+    "limitations": "Ressalva de honestidade necessária: a série clínica citada tem apenas 4 pacientes, é de 1998 e de um único centro — evidência de baixa robustez estatística, que serve para ilustrar viabilidade técnica e não para estabelecer taxas de sucesso ou segurança generalizáveis. O parecer do ACOG (2017, reafirmado como referência corrente) é a base mais sólida para a afirmação geral sobre segurança da dose de radiação em exames diagnósticos, mas cateterismo intervencionista tende a ter tempo de fluoroscopia maior que exames puramente diagnósticos, o que reforça — mais do que dispensa — a importância de minimizar tempo de escopia e usar blindagem nesse cenário específico. Decisão sobre via de tratamento (percutânea vs. cirúrgica vs. adiar para o pós-parto) depende de gravidade dos sintomas, morfologia valvar e idade gestacional, e deve ser feita por equipe multidisciplinar (cardiologia, obstetrícia de alto risco, anestesia).",
+    "source_refs": [
+      "Committee on Obstetric Practice. Committee Opinion No. 723: Guidelines for Diagnostic Imaging During Pregnancy and Lactation. Obstet Gynecol. 2017;130(4):e210-e216. DOI: 10.1097/AOG.0000000000002355. PMID: 28937575.",
+      "Ramondo A, Barchitta A, Budano L, Lupia M, Chioin R. [Mitral valvuloplasty in pregnancy: a report of 4 cases]. G Ital Cardiol. 1998;28(8):873-877. PMID: 9773312 — série de 4 casos, evidência de baixa robustez, citada apenas para exemplificar a técnica de proteção fetal (blindagem pélvico-abdominal, omissão de ventriculografia)."
+    ],
+    "tags": [
+      "gravidez",
+      "cateterismo cardíaco",
+      "valvuloplastia mitral percutânea",
+      "proteção radiológica fetal",
+      "estenose mitral"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
