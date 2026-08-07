@@ -1,9 +1,8 @@
-"""Calculadoras de enoxaparina para SCA/ICP a partir da bula brasileira Clexane.
+"""Calculadoras de enoxaparina para SCA/ICP.
 
-Fonte efetivamente consultada: bula Sanofi Medley Farmacêutica Ltda., registro
-MS 1.8326.0336, aprovada pela Anvisa em 10/06/2019. A indicação estendida em
-câncer foi posteriormente aprovada em 2025, mas não altera os esquemas de SCA
-aqui modelados.
+Fontes consultadas:
+- Clexane®/Sanofi Brasil para os esquemas brasileiros de SCA;
+- ACC/AHA ACS 2025 para a regra contemporânea de dose adicional na PCI.
 
 Fonte de produção: ChatGPT.
 """
@@ -17,6 +16,12 @@ FONTE_PRODUCAO = "chatgpt"
 CLEXANE_BR = (
     "Clexane® (enoxaparina sódica). Bula Sanofi Medley Farmacêutica Ltda., "
     "MS 1.8326.0336, IB100619; aprovada pela Anvisa em 10/06/2019."
+)
+
+ACC_AHA_ACS_2025 = (
+    "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the "
+    "Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. "
+    "doi:10.1016/j.jacc.2024.11.009. Table 10."
 )
 
 
@@ -42,7 +47,6 @@ def _enoxaparina_sca(d: dict) -> dict:
             "renal_severa": renal_severa,
         }
 
-    # STEMI
     if idade < 75:
         bolus_iv_mg = 30.0
         dose_sc = min(peso * 1.0, 100.0)
@@ -63,7 +67,6 @@ def _enoxaparina_sca(d: dict) -> dict:
             "renal_severa": renal_severa,
         }
 
-    # >=75 anos: sem bolus IV inicial
     if renal_severa:
         dose_sc = min(peso * 1.0, 100.0)
         return {
@@ -119,7 +122,7 @@ _ENOXAPARINA_SCA = Calculator(
     ],
     compute=_enoxaparina_sca,
     interpret=_enoxaparina_sca_txt,
-    reference=CLEXANE_BR,
+    reference=f"{CLEXANE_BR} · {ACC_AHA_ACS_2025}",
     kind="dose",
     limitations=[
         "No STEMI <75 anos: bolus IV 30 mg + 1 mg/kg SC; com ClCr ≥30, q12h e teto 100 mg nas duas primeiras doses SC; com ClCr <30, q24h e teto 100 mg na primeira dose SC.",
@@ -134,23 +137,37 @@ _ENOXAPARINA_SCA = Calculator(
 def _enoxaparina_pci_stemi(d: dict) -> dict:
     peso = float(d["peso"])
     horas = float(d["horas_desde_ultima_sc"])
+    apenas_uma_dose = bool(d.get("apenas_uma_dose_sc_previa"))
     if peso <= 0 or horas < 0:
         raise ValueError("Revise peso e intervalo desde a última dose SC.")
+
+    if apenas_uma_dose:
+        return {
+            "farmaco": "Enoxaparina",
+            "conduta": "bolus_iv_adicional",
+            "dose_mg": round(peso * 0.3, 1),
+            "dose_por_peso": "0,3 mg/kg IV",
+            "motivo": "apenas uma dose SC prévia — regra ACC/AHA 2025",
+        }
     if horas < 8:
         return {
             "conduta": "sem_dose_adicional",
-            "motivo": "última dose SC administrada há menos de 8 horas antes da insuflação do balão",
+            "motivo": "última dose SC administrada há menos de 8 horas",
         }
-    if horas == 8:
+    if horas <= 12:
         return {
-            "conduta": "VERIFICAÇÃO HUMANA NECESSÁRIA",
-            "motivo": "a bula consultada explicita <8 h sem dose e >8 h com dose adicional; não explicita exatamente 8 h",
+            "farmaco": "Enoxaparina",
+            "conduta": "bolus_iv_adicional",
+            "dose_mg": round(peso * 0.3, 1),
+            "dose_por_peso": "0,3 mg/kg IV",
+            "motivo": "última dose SC há 8-12 horas — regra ACC/AHA 2025",
         }
     return {
-        "farmaco": "Enoxaparina",
-        "conduta": "bolus_iv_adicional",
-        "dose_mg": round(peso * 0.3, 1),
-        "dose_por_peso": "0,3 mg/kg IV",
+        "conduta": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+        "motivo": (
+            "a Tabela 10 ACC/AHA 2025 explicita <8 h sem dose e 8-12 h com 0,3 mg/kg; "
+            "para >12 h após múltiplas doses prévias, a estratégia deve ser definida pelo contexto anticoagulante/ACT"
+        ),
     }
 
 
@@ -159,26 +176,27 @@ def _enoxaparina_pci_stemi_txt(r: dict) -> str:
         return f"Não administrar dose adicional de enoxaparina na ICP: {r['motivo']}."
     if r["conduta"] == "VERIFICAÇÃO HUMANA NECESSÁRIA":
         return f"VERIFICAÇÃO HUMANA NECESSÁRIA — {r['motivo']}."
-    return f"Administrar enoxaparina {r['dose_mg']} mg IV ({r['dose_por_peso']}) antes da ICP."
+    return f"Administrar enoxaparina {r['dose_mg']} mg IV ({r['dose_por_peso']}) antes/para suporte da ICP — {r['motivo']}."
 
 
 _ENOXAPARINA_PCI_STEMI = Calculator(
     slug="enoxaparina-stemi-dose-adicional-icp",
-    name="Enoxaparina — dose IV adicional na ICP após STEMI",
+    name="Enoxaparina — dose IV adicional para suporte da ICP (ACC/AHA 2025)",
     theme="Doses — Hemodinâmica",
-    purpose="Decide e calcula a dose IV adicional de 0,3 mg/kg conforme o intervalo desde a última dose SC.",
+    purpose="Decide e calcula 0,3 mg/kg IV conforme tempo e número de doses SC prévias.",
     fields=[
         Field("peso", "Peso", "number", "kg", min=20, max=300),
         Field("horas_desde_ultima_sc", "Horas desde a última dose subcutânea de enoxaparina", "number", "h", min=0, max=48),
+        Field("apenas_uma_dose_sc_previa", "Foi administrada apenas 1 dose SC de enoxaparina até agora", "boolean"),
     ],
     compute=_enoxaparina_pci_stemi,
     interpret=_enoxaparina_pci_stemi_txt,
-    reference=CLEXANE_BR,
+    reference=f"{CLEXANE_BR} · {ACC_AHA_ACS_2025}",
     kind="dose",
     limitations=[
-        "Se a última dose SC foi administrada há menos de 8 h antes da insuflação do balão, a bula não recomenda dose adicional.",
-        "Se foi há mais de 8 h, administrar 0,3 mg/kg IV.",
-        "Exatamente 8 h não é explicitado no texto consultado e por isso retorna VERIFICAÇÃO HUMANA NECESSÁRIA, em vez de interpolar a regra.",
+        "ACC/AHA 2025: se a última dose SC foi <8 h antes da PCI, não administrar dose adicional.",
+        "Se a última dose foi 8-12 h antes, ou se apenas 1 dose SC foi administrada, usar 0,3 mg/kg IV.",
+        "Após >12 h e múltiplas doses prévias, a tabela consultada não fornece um único bolus automático; a calculadora retorna VERIFICAÇÃO HUMANA NECESSÁRIA.",
     ],
 )
 
