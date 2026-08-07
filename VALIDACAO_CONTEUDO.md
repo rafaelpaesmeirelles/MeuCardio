@@ -700,3 +700,54 @@ o texto integral aberto de duas diretrizes ESC/AHA).
   não houve tempo de cobrir a segunda frente em profundidade equivalente.
 
 ---
+
+## 📢 Atualização de escopo, 07/08/2026: terceiro colaborador (ChatGPT, via conector GitHub)
+
+A partir daqui esta validação também cobre commits de um terceiro agente, instruído (segundo a
+sessão orquestradora) a trabalhar **exclusivamente** em 4 arquivos: `medicamentos/interacoes.json`,
+`emergencia/metadados.json`, `checklists/metadados.json`, `material-paciente/metadados.json`, um
+commit isolado por arquivo. Vou sinalizar explicitamente quando um commit desses aparecer, e também
+se algum vier **sem fonte declarada** (tratado como achado, não só ausência de dado).
+
+## Rodada 10 — 07/08/2026
+
+### Commit `1fd8ae9` — estudos: +7 ensaios de Prevenção e lipídios (REDUCE-IT, TIPS-3, AIM-HIGH, HPS2-THRIVE, OCEAN(a)-DOSE, FOURIER, ODYSSEY OUTCOMES)
+
+**Conferido: os 7 PMIDs principais e os 2 secundários (STRENGTH 33190147, resposta sobre óleo
+mineral como placebo 33061866) batem exatamente** no registro do PubMed. **Números conferidos
+linha a linha contra os abstracts, todos batendo exatamente**:
+- REDUCE-IT: 8.179 pacientes, 70,7% prevenção secundária, 17,2% vs. 22,0% HR 0,75 [0,68-0,83]
+  p<0,001; secundário-chave 11,2% vs. 14,8% HR 0,74 [0,65-0,83]; morte CV 4,3% vs. 5,2% HR 0,80
+  p=0,03; FA/flutter 3,1% vs. 2,1% p=0,004.
+- TIPS-3: 5.713 participantes, LDL -19mg/dL, PAS -5,8mmHg; policomprimido 4,4% vs. 5,5% HR 0,79
+  [0,63-1,00]; aspirina 4,1% vs. 4,7% HR 0,86 [0,67-1,10]; combinado 4,1% vs. 5,8% HR 0,69
+  [0,50-0,97] — única comparação com IC inteiramente <1, exatamente como o documento descreve.
+
+**Resultado: PASSA integralmente.** Os outros 5 estudos (AIM-HIGH, HPS2-THRIVE, OCEAN(a)-DOSE,
+FOURIER, ODYSSEY OUTCOMES) tiveram só o PMID conferido, não os números do corpo.
+
+### Commit `643d361` — evidências: +7 recomendações Classe/Nível para Terapia intensiva (RCP/ACLS SBC 2019)
+
+**Conferido: PMID 31621787 (diretriz SBC 2019) bate exatamente**, e o PMID secundário citado no
+item de adrenalina — **PARAMEDIC2, PMID 30021076 — teve os números conferidos e batem exatamente**
+(3,2% vs. 2,4% de sobrevida em 30 dias, sem diferença em desfecho neurológico favorável). Boa
+prática observada: o item de adrenalina reproduz **entre aspas** o texto de ressalva da própria
+diretriz sobre a força limitada da evidência ("embora o nível de evidência seja limitado"), em vez
+de apresentar a recomendação como mais robusta do que a fonte a descreve. As demais 6
+recomendações (ventilação pós-via aérea, energia de desfibrilação, amiodarona/lidocaína na
+FV/TVSP refratária) não tiveram o texto integral da diretriz conferido linha a linha nesta rodada
+— são plausíveis e consistentes com o algoritmo de ACLS padrão, mas não cruzadas contra o PDF
+original.
+
+**Resultado: PASSA quanto ao que foi verificado.**
+
+### Nenhum commit do terceiro colaborador (ChatGPT) apareceu ainda nesta rodada
+Os 4 arquivos-alvo (`medicamentos/interacoes.json`, `emergencia/metadados.json`,
+`checklists/metadados.json`, `material-paciente/metadados.json`) não têm commit novo desde que a
+atualização de escopo foi recebida. Vou continuar monitorando a cada ciclo.
+
+### Não verificado por falta de tempo nesta rodada (rodada 10)
+- 5 dos 7 estudos de `1fd8ae9` (só REDUCE-IT e TIPS-3 tiveram números conferidos).
+- 6 das 7 recomendações de `643d361` contra o texto integral da diretriz SBC 2019.
+
+---
