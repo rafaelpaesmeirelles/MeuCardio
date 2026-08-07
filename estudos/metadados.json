@@ -10848,5 +10848,83 @@
       "betabloqueador"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "magpie-sulfato-de-magnesio-na-pre-eclampsia",
+    "title": "Magpie Trial — Sulfato de magnésio na pré-eclâmpsia",
+    "study_type": "ensaio_clinico",
+    "authors": "Altman D, Carroli G, Duley L, Farrell B, Moodley J, Neilson J, Smith D; Magpie Trial Collaboration Group.",
+    "journal": "Lancet",
+    "year": 2002,
+    "doi": "10.1016/S0140-6736(02)08778-0",
+    "pmid": "12057549",
+    "url": "https://doi.org/10.1016/S0140-6736(02)08778-0",
+    "summary": "Ensaio multicêntrico, randomizado, controlado por placebo, com 10.141 gestantes em 33 países, com pressão arterial ≥140/90 mmHg e proteinúria ≥1+ (30 mg/dL), em quem havia incerteza clínica sobre o uso de sulfato de magnésio. Randomizadas para sulfato de magnésio (n=5.071) ou placebo (n=5.070). Desfechos primários: eclâmpsia e, para as randomizadas antes do parto, óbito do bebê. Seguimento até a alta hospitalar pós-parto.",
+    "key_findings": "Sulfato de magnésio reduziu o risco de eclâmpsia em 58% (IC95% 40-71%) em relação ao placebo — 40/4.999 (0,8%) vs. 96/4.993 (1,9%), 11 casos de eclâmpsia a menos por 1.000 mulheres tratadas. Mortalidade materna também foi menor no grupo sulfato de magnésio (risco relativo 0,55; IC 0,26-1,14), sem significância estatística formal. Não houve diferença clara no risco de óbito do bebê entre os grupos que randomizaram antes do parto (12,7% vs. 12,4%; RR 1,02, IC99% 0,92-1,14). A única diferença notável de morbidade materna/neonatal foi descolamento de placenta, menor com sulfato de magnésio (RR 0,67, IC99% 0,45-0,89). Efeitos colaterais (principalmente rubor/fogacho) foram mais frequentes com sulfato de magnésio (24% vs. 5%).",
+    "clinical_implications": "É o ensaio de maior peso que sustenta o sulfato de magnésio como fármaco de escolha para prevenção de eclâmpsia em mulher com pré-eclâmpsia — reduz pela metade o risco de convulsão eclâmptica e provavelmente reduz mortalidade materna, sem efeito adverso substantivo detectado a curto prazo para mãe ou bebê. Análises de seguimento posteriores em subgrupos do Reino Unido, a 18 meses (criança) e a 2 anos (mãe), não mostraram excesso de morte, incapacidade neurossensorial ou morbidade tardia associados ao sulfato de magnésio, reforçando a segurança de longo prazo.",
+    "limitations": "Um quarto das mulheres no grupo sulfato de magnésio relatou efeitos colaterais (24% vs. 5% no placebo), o que compromete parcialmente o cegamento na prática clínica apesar do desenho duplo-cego. Análise por intenção de tratar; 0,3% das mulheres perderam o seguimento.",
+    "theme": "Gravidez",
+    "tags": [
+      "magpie",
+      "sulfato de magnésio",
+      "pré-eclâmpsia",
+      "eclâmpsia",
+      "gestação",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "prognosis-razao-sflt-1-plgf-na-pre-eclampsia-suspeita",
+    "title": "PROGNOSIS — Valor preditivo da razão sFlt-1:PlGF em mulheres com pré-eclâmpsia suspeita",
+    "study_type": "estudo_de_coorte",
+    "authors": "Zeisler H, Llurba E, Chantraine F, Vatish M, Staff AC, Sennström M, Olovsson M, Brennecke SP, Stepan H, Allegranza D, Dilba P, Schoedl M, Hund M, Verlohren S.",
+    "journal": "New England Journal of Medicine",
+    "year": 2016,
+    "doi": "10.1056/NEJMoa1414838",
+    "pmid": "26735990",
+    "url": "https://doi.org/10.1056/NEJMoa1414838",
+    "summary": "Estudo prospectivo multicêntrico observacional, com gestação única, entre 24 semanas e 0 dias e 36 semanas e 6 dias, com pré-eclâmpsia clinicamente suspeita. Coorte de derivação com 500 mulheres para estabelecer um corte da razão sFlt-1:PlGF (fms-like tyrosine kinase 1 solúvel sobre fator de crescimento placentário), seguida de coorte de validação independente com 550 mulheres. Objetivo primário: testar se razão baixa (no corte ou abaixo) prediz ausência de pré-eclâmpsia em 1 semana, e se razão alta (acima do corte) prediz presença de pré-eclâmpsia em 4 semanas.",
+    "key_findings": "O corte de 38 foi identificado na coorte de derivação como o de maior valor preditivo. Na coorte de validação (550 mulheres), razão sFlt-1:PlGF ≤38 teve valor preditivo negativo de 99,3% (IC95% 97,9-99,9%) para ausência de pré-eclâmpsia na semana seguinte, com sensibilidade de 80,0% (IC95% 51,9-95,7%) e especificidade de 78,3% (IC95% 74,6-81,7%). Razão >38 teve valor preditivo positivo de 36,7% (IC95% 28,4-45,7%) para diagnóstico de pré-eclâmpsia em 4 semanas, com sensibilidade de 66,2% e especificidade de 83,1%. Estudo financiado pela Roche Diagnostics.",
+    "clinical_implications": "Estabelece um corte único e reprodutível (38) para a razão sFlt-1:PlGF como ferramenta de triagem à beira do leito em mulher com suspeita clínica de pré-eclâmpsia entre 24 e 37 semanas — com desempenho assimétrico: excelente para AFASTAR pré-eclâmpsia com segurança em uma semana (VPN 99,3%), e moderado para CONFIRMAR o diagnóstico em quatro semanas (VPP 36,7%). Não substitui os critérios diagnósticos clássicos (pressão arterial, proteinúria, sinais de gravidade) — é ferramenta complementar de estratificação de risco de curto prazo.",
+    "limitations": "Corte derivado e validado apenas para gestação única, entre 24 e 37 semanas — extrapolação para outras idades gestacionais ou gestação múltipla não está sustentada pelos dados deste estudo. Estudo observacional de acurácia diagnóstica, não ensaio clínico randomizado (o PARROT, listado à parte nesta base, testa se entregar esse resultado ao médico muda a conduta e o desfecho).",
+    "theme": "Gravidez",
+    "tags": [
+      "prognosis",
+      "sflt-1",
+      "plgf",
+      "pré-eclâmpsia",
+      "biomarcador",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "parrot-plgf-revelado-ao-clinico-na-pre-eclampsia-suspeita",
+    "title": "PARROT — Revelar o resultado do PlGF ao clínico reduz o tempo até o diagnóstico de pré-eclâmpsia",
+    "study_type": "ensaio_clinico",
+    "authors": "Duhig KE, Myers J, Seed PT, Sparkes J, Lowe J, Hunter RM, Shennan AH, Chappell LC; PARROT trial group.",
+    "journal": "Lancet",
+    "year": 2019,
+    "doi": "10.1016/S0140-6736(19)30490-8",
+    "pmid": "30948284",
+    "url": "https://doi.org/10.1016/S0140-6736(19)30490-8",
+    "summary": "Ensaio pragmático, multicêntrico, randomizado por cluster em cunha escalonada (stepped-wedge), em 11 maternidades do Reino Unido (3.000-9.000 partos/ano cada), com 1.023 gestantes elegíveis com pré-eclâmpsia clinicamente suspeita entre 20 e 37 semanas, gestação única e feto vivo. Todos os centros começaram em cuidado usual com dosagem de PlGF (fator de crescimento placentário) OCULTADA do clínico; em blocos sucessivos de 6 semanas, cada centro passou a REVELAR o resultado do PlGF ao clínico, com algoritmo de manejo associado. Desfecho primário: tempo entre a apresentação com suspeita e o diagnóstico documentado de pré-eclâmpsia.",
+    "key_findings": "Tempo mediano até o diagnóstico caiu de 4,1 dias (teste ocultado) para 1,9 dia (teste revelado) — razão de tempo 0,36 (IC95% 0,15-0,87; p=0,027). Desfecho materno grave ocorreu em 24/447 (5%) no grupo ocultado vs. 22/573 (4%) no grupo revelado (odds ratio ajustada 0,32; IC95% 0,11-0,96; p=0,043). Não houve diferença clara em desfecho perinatal adverso (15% vs. 14%) nem na idade gestacional ao parto (36,6 vs. 36,8 semanas).",
+    "clinical_implications": "Demonstra, em desenho de ensaio clínico (não só de acurácia diagnóstica como o PROGNOSIS), que disponibilizar o resultado do PlGF ao médico assistente — integrado a um algoritmo de conduta — acelera o diagnóstico de pré-eclâmpsia e associa-se a menor incidência de desfecho materno grave, plausivelmente por vigilância mais direcionada e precoce conforme o algoritmo de manejo. Sustenta a incorporação do teste de PlGF/razão sFlt-1:PlGF à rotina assistencial da suspeita de pré-eclâmpsia, não apenas como curiosidade laboratorial.",
+    "limitations": "Desenho stepped-wedge (não randomização individual) — sujeito a viés temporal, já que a fase de revelação ocorreu sempre depois da fase ocultada em cada centro; mudanças concomitantes de prática ao longo do tempo não são inteiramente controláveis por esse desenho. Resultado de desfecho materno grave tem intervalo de confiança limítrofe (IC95% 0,11-0,96) e p próximo do limite de significância (0,043).",
+    "theme": "Gravidez",
+    "tags": [
+      "parrot",
+      "plgf",
+      "pré-eclâmpsia",
+      "ensaio clínico",
+      "gestação",
+      "biomarcador"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
