@@ -1,5 +1,34 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🔍 VERIFICAÇÃO das claims do ChatGPT em `referencias_preoperatorio/`, 08/08/2026 — resultado misto
+> Pedido do Rafael, conferido nesta sessão (Grupo A/Claude) contra o PubMed diretamente, não aceito
+> por afirmação do README:
+>
+> - **✅ CONFIRMADO: PMID 42326382 ("DASI — atualização 2026") é real e bate exatamente com o que o
+>   README descreve.** Wijeysundera DN et al., *EClinicalMedicine*. 2026;96:104015, publicado
+>   11/06/2026, PMCID PMC13276150 — coorte pooled internacional (METS + FIT After Surgery, n=3.485),
+>   confirma que o DASI agrega valor prognóstico além de idade/RCRI/peptídeo natriurético (p=0,009),
+>   mas com discriminação modesta (c-index 0,70-0,71) e melhor interpretado como marcador contínuo,
+>   não limiar dicotômico (≤34). Abstract completo conferido via `efetch`.
+> - **⚠️ NÃO CONFIRMADO por mim: a alegação de que existem "outras rotas oficiais" dando acesso a
+>   texto completo da ESC 2022 e a um "slide set oficial" da AHA/ACC 2024.** Tentei de novo nesta
+>   sessão: `academic.oup.com/eurheartj/article/43/39/3826/...` → 403; PDF do `escardio.org` → 403;
+>   `ahajournals.org/doi/10.1161/CIR.0000000000001285` → 403; `professional.heart.org` → 403. `elink`
+>   PMC para a ESC 2022 (PMID 36017553) devolve só `pubmed_pmc_refs` (quem CITA o artigo, não o
+>   artigo em si) — **mesmo bloqueio já documentado à exaustão neste arquivo para essas duas
+>   diretrizes**. Não estou dizendo que a rota do ChatGPT não existe (pode ser um link específico que
+>   ele tem e eu não testei), só que **não consegui reproduzir o acesso com as ferramentas desta
+>   sessão** — então continuo tratando essas duas diretrizes como bloqueadas para conteúdo que exija
+>   o texto integral, até alguém confirmar a URL exata que funcionou do lado dele.
+> - **Sem novidade real (já era acesso conhecido)**: "registro PubMed do Gupta MICA" e "registro
+>   PubMed do DASI original" são só o abstract indexado, que este projeto já usava; "PMC aberto do
+>   GSCRI" também já estava documentado neste arquivo antes do ChatGPT mexer na pasta.
+>
+> **Conclusão prática:** o conteúdo novo e verificável que veio dessa pasta é o estudo do DASI 2026
+> — o resto do "upgrade" descrito no README/ATLAS_DECISAO.md é reformulação/interpretação sobre
+> fontes já conhecidas (algumas com acesso ainda não confirmado por mim). Não removi nem contestei o
+> conteúdo do ChatGPT — é frente dele — só registrando aqui o resultado da verificação pedida.
+
 > ## 🗂️ DIVISÃO DE PRODUÇÃO DE CONTEÚDO EM DUAS METADES — pedido do Rafael, 08/08/2026
 > Texto dele: *"divida todo o conteudo da corvia em 2, voce vai assumir producao de conteudo para
 > uma metade e o chat gpt vai assumir a outra"*. Se você é o ChatGPT (ou qualquer sessão Claude
