@@ -4,7 +4,7 @@ slug: cardiopatia-reumatica-na-gestacao-transicao-de-cuidado-ao-puerperio-rhdaus
 theme: "Febre reumática"
 kind: protocolo
 review_status: revisado
-source_refs: ["RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Capítulo 12 (Women and girls with RHD), texto integral lido nesta sessão (pdftotext -layout, linhas 17.293-19.808 do arquivo extraído). Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. NOTA DE SISTEMA: a diretriz usa GRADE (força 1=Forte/2=Ponderada + qualidade A-D), mesma convenção já usada nesta base para a diretriz de Chagas da SBC. Onde uma célula da tabela original reúne mais de uma frase sob mais de um código GRADE, a correspondência exata frase-a-código nem sempre é inequívoca no texto extraído — nesses pontos o documento apresenta a recomendação em prosa, sem forçar um único código isolado a uma frase específica, para não fabricar precisão que a fonte não garante com clareza."]
+source_refs: ["RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Capítulo 12 (Women and girls with RHD), texto integral lido nesta sessão (pdftotext -layout, linhas 17.293-19.808 do arquivo extraído). Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. NOTA DE SISTEMA: a diretriz usa GRADE (força 1=Forte/2=Ponderada + qualidade A-D), mesma convenção já usada nesta base para a diretriz de Chagas da SBC. Onde uma célula da tabela original reúne mais de uma frase sob mais de um código GRADE, a correspondência exata frase-a-código nem sempre é inequívoca no texto extraído — nesses pontos o documento apresenta a recomendação em prosa, sem forçar um único código isolado a uma frase específica, para não fabricar precisão que a fonte não garante com clareza.", "Elkins E, Gosden J, Ascione G, et al. Global disparities in the detection and management of rheumatic heart disease in pregnancy across endemic settings. Front Surg. 2026;13:1838220. DOI: 10.3389/fsurg.2026.1838220. PMID: 42529508 — revisão narrativa estruturada, sintetizando literatura de 2005-2026; abstract conferido contra o PubMed em 08/08/2026."]
 ---
 
 # Cardiopatia Reumática na Gestação: da Transição de Cuidado ao Puerpério (RHDAustralia 2020)
@@ -12,6 +12,42 @@ source_refs: ["RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideli
 ## Definicao
 A cardiopatia reumática é aproximadamente **duas vezes mais comum em mulheres** que em homens, e no Território do Norte australiano **2-3% das gestantes aborígenes por ano** têm a doença. O Capítulo 12 do guideline RHDAustralia 2020 é a seção mais extensa da diretriz dedicada a uma população específica, e adota uma abordagem de **curso de vida completo** — da adolescência à transição de cuidado, passando por pré-concepção, gestação, parto e puerpério —, diferente da edição de 2012, que tratava o tema só como "RHD in Pregnancy".
 - **fonte**: RHDAustralia 2020, Capítulo 12
+
+## Carga global e desfechos maternos/fetais — acrescentado em 08/08/2026
+Uma revisão narrativa estruturada, publicada em 2026, sintetiza a literatura global (registros
+multicêntricos, coortes observacionais, ensaios randomizados, diretrizes internacionais e revisões
+publicadas entre 2005 e maio de 2026) especificamente sobre cardiopatia reumática na gestação, com
+ênfase em regiões endêmicas de baixa renda. **É revisão narrativa, não estudo primário** — os números
+abaixo são o que a própria revisão reporta ter encontrado na literatura sintetizada, não um dado
+medido diretamente por este grupo de autores.
+
+- **proporção da doença cardíaca na gestação**: em regiões endêmicas, registros contemporâneos
+  relatam que **30% a 70%** de toda a doença cardíaca que complica a gestação é de origem reumática —
+  faixa ampla, refletindo a heterogeneidade entre os cenários endêmicos estudados.
+- **lesão predominante**: **estenose mitral**, associada a altas taxas de insuficiência cardíaca
+  materna, arritmia, tromboembolismo e descompensação no puerpério — consistente com o que este
+  documento já descreve sobre o período de maior risco hemodinâmico da gestante com valvopatia
+  reumática.
+- **eventos cardíacos maternos adversos**: ocorrem em aproximadamente **15% a 40%** das gestações
+  complicadas por cardiopatia reumática, com **mortalidade entre 1% e 10%**, variando conforme
+  gravidade da lesão, status do ritmo cardíaco e acesso a cuidado especializado.
+- **complicações fetais**: parto pré-termo, baixo peso ao nascer e perda gestacional são comuns,
+  agravadas por doença estenótica grave e por prótese valvar mecânica.
+- **lacuna de diagnóstico prévio**: estudos de rastreio mostram que **muitas mulheres com cardiopatia
+  reumática desconhecem o diagnóstico antes da gestação** — reforçando o valor do rastreio
+  ecocardiográfico combinado à profilaxia antibiótica secundária para reduzir progressão da doença
+  em estágio inicial, quando aplicado antes da gravidez.
+- **manejo cirúrgico/intervencionista durante a gestação**: seguem de alto risco, particularmente em
+  mulheres com prótese valvar mecânica — reforça, com outra fonte, a mesma prioridade que este
+  documento já dá à **otimização pré-concepcional** e ao cuidado multidisciplinar (ver seções
+  abaixo).
+- **implicação prática**: os números desta revisão são consistentes, em direção, com o que o
+  Capítulo 12 do RHDAustralia 2020 já descreve para o contexto australiano específico (2-3% das
+  gestantes aborígenes por ano) — a revisão de 2026 amplia o quadro para uma perspectiva global de
+  múltiplos cenários endêmicos, sem substituir a orientação clínica detalhada (estratificação de
+  risco, manejo de anticoagulação, cuidado periparto) que o restante deste documento já traz a partir
+  do guideline australiano.
+- **fonte**: Elkins E et al., Front Surg. 2026;13:1838220, PMID 42529508, publicado julho/2026.
 
 ## Transicao de cuidado e planejamento reprodutivo
 A transição para o cuidado cardíaco adulto **deve começar na adolescência** (Forte, C), envolvendo simultaneamente as equipes de cardiologia pediátrica e adulta, planejamento familiar e saúde primária, junto com a adolescente e sua família (Ponderada, B) — não é evento único, é processo contínuo.
