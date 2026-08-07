@@ -12079,5 +12079,86 @@
       "Costard-Jäckle A, Fowler MB. Influence of preoperative pulmonary artery pressure on mortality after heart transplantation: testing of potential reversibility of pulmonary hypertension with nitroprusside is useful in defining a high risk group. J Am Coll Cardiol. 1992;19(1):48-54. DOI: 10.1016/0735-1097(92)90050-w. PMID: 1729345"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "saturacao-venosa-central-de-oxigenio-e-o-limite-do-protocolo-de-rivers-no-choque-septico",
+    "titulo": "Choque séptico: a meta de ScvO2 ≥70% ainda deve guiar a ressuscitação volêmica?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 55 anos admitido na emergência com choque séptico de foco pulmonar. A equipe médica discute se deve seguir o protocolo clássico de terapia guiada por metas precoces, com meta de saturação venosa central de oxigênio (ScvO₂) ≥70%, para orientar a reposição volêmica e o suporte hemodinâmico nas primeiras horas.",
+    "pergunta": "O que a evidência mais recente mostra sobre o benefício de mortalidade do protocolo original de Rivers guiado especificamente por essa meta de ScvO₂?",
+    "opcoes": [
+      "O protocolo original de Rivers permanece a única forma validada de ressuscitação no choque séptico, sem ensaios contemporâneos que o tenham reavaliado",
+      "O ensaio original de Rivers et al. (2001) mostrou redução de mortalidade intra-hospitalar com a terapia guiada por metas incluindo ScvO₂ ≥70% (30,5% vs. 46,5%, p=0,009) e influenciou diretrizes por mais de uma década; porém, ensaios multicêntricos posteriores (ProCESS, ARISE, ProMISe) não reproduziram benefício de mortalidade do protocolo completo guiado por essa meta específica quando comparado ao cuidado usual contemporâneo com ressuscitação precoce — o que reduziu, sem eliminar, o papel isolado dessa meta na prática atual",
+      "A ScvO2 nunca teve qualquer papel na literatura de sepse, sendo um marcador puramente experimental sem aplicação clínica",
+      "Estudos posteriores mostraram que ScvO2 ≥70% está associada a PIOR desfecho e deve ser ativamente evitada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio original de Rivers et al. (2001, N Engl J Med), com 263 pacientes com sepse grave ou choque séptico randomizados para terapia guiada por metas precoces (incluindo meta de ScvO₂ ≥70%, obtida por otimização sequencial de volume, vasopressor e, se necessário, transfusão e suporte inotrópico) versus tratamento padrão, mostrou mortalidade intra-hospitalar significativamente menor no grupo guiado por metas (30,5% vs. 46,5%, p=0,009), com diferença mantida em 28 e 60 dias. Esse resultado moldou diretrizes de manejo inicial da sepse por mais de uma década. Entretanto, três ensaios multicêntricos contemporâneos e maiores — ProCESS (EUA), ARISE (Austrália/Nova Zelândia) e ProMISe (Reino Unido) — compararam o protocolo completo guiado por ScvO₂ contra o cuidado usual moderno (que já incorporava reconhecimento precoce de sepse e ressuscitação volêmica ágil) e não encontraram benefício de mortalidade adicional do protocolo formal guiado por essa meta específica. A leitura atual não é que a ScvO₂ seja inútil, e sim que, num cenário de cuidado usual já otimizado (reconhecimento precoce, antibiótico ágil, volume adequado), perseguir rigidamente o alvo numérico de ScvO₂ ≥70% como protocolo obrigatório deixou de mostrar vantagem de mortalidade sobre o julgamento clínico bem treinado.",
+    "source_refs": [
+      "Rivers E, Nguyen B, Havstad S, Ressler J, Muzzin A, Knoblich B, Peterson E, Tomlanovich M; Early Goal-Directed Therapy Collaborative Group. Early goal-directed therapy in the treatment of severe sepsis and septic shock. N Engl J Med. 2001;345(19):1368-1377. DOI: 10.1056/NEJMoa010307. PMID: 11794169"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "veia-cava-inferior-por-pocus-na-decisao-de-expansao-volemica-no-choque-septico",
+    "titulo": "Paciente ventilado em choque séptico — o ultrassom da veia cava inferior prediz resposta a volume?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Paciente sob ventilação mecânica controlada, sem esforço respiratório espontâneo, em choque séptico. À beira do leito, o intensivista realiza ultrassom point-of-care da veia cava inferior (VCI) em janela subxifoide, medindo o diâmetro máximo e mínimo ao longo do ciclo respiratório para calcular o índice de distensibilidade.",
+    "pergunta": "Que corte de distensibilidade da VCI foi identificado no estudo de Barbier et al. como preditor de resposta a volume, e com qual acurácia?",
+    "opcoes": [
+      "Não existe corte validado — a VCI não tem relação demonstrada com resposta a volume em nenhum contexto",
+      "Um índice de distensibilidade da VCI ≥18% previu aumento do índice cardíaco ≥15% após expansão volêmica, com sensibilidade e especificidade de 90% cada, no estudo original com 20 pacientes sépticos ventilados mecanicamente sem esforço respiratório espontâneo",
+      "O corte de distensibilidade de 50% é o único validado, com acurácia de apenas 60%",
+      "A VCI só pode ser usada em pacientes respirando espontaneamente, nunca sob ventilação mecânica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de Barbier et al. (20 pacientes sépticos, ventilados mecanicamente e sem esforço respiratório espontâneo, em ritmo sinusal), o índice de distensibilidade da veia cava inferior — calculado como a diferença entre o diâmetro máximo inspiratório e o mínimo expiratório, dividida pelo diâmetro mínimo — correlacionou-se com a variação do índice cardíaco após expansão volêmica. O corte de 18% discriminou pacientes responsivos (aumento de índice cardíaco ≥15%) de não responsivos com sensibilidade e especificidade de 90% cada. É importante reconhecer o contexto de validação: esse resultado se aplica especificamente a paciente sob ventilação mecânica controlada, sem esforço inspiratório espontâneo e em ritmo sinusal — a acurácia cai acentuadamente em respiração espontânea, esforço inspiratório irregular, arritmia ou pressão intra-abdominal elevada, cenários em que a variação da VCI deixa de refletir de forma confiável a pré-carga cardíaca. É ferramenta de triagem rápida à beira do leito, não substituta de avaliação hemodinâmica mais completa quando disponível e indicada.",
+    "source_refs": [
+      "Barbier C, Loubières Y, Schmit C, Hayon J, Ricôme JL, Jardin F, Vieillard-Baron A. Respiratory changes in inferior vena cava diameter are helpful in predicting fluid responsiveness in ventilated septic patients. Intensive Care Med. 2004;30(9):1740-1746. DOI: 10.1007/s00134-004-2259-8. PMID: 15034650"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-como-preditor-independente-de-mortalidade-na-hipertensao-pulmonar",
+    "titulo": "Hipertensão arterial pulmonar: por que a distância caminhada em 6 minutos prediz sobrevida melhor que a pressão pulmonar medida no cateterismo?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com hipertensão arterial pulmonar primária é acompanhado com teste de caminhada de 6 minutos (TC6M) seriado, além de ecocardiograma, cateterismo cardíaco direito e dosagem de catecolaminas plasmáticas.",
+    "pergunta": "No estudo de Miyamoto et al., qual parâmetro não invasivo se associou de forma independente à mortalidade em análise multivariada, e como ele se relacionou com a pressão média de artéria pulmonar medida no cateterismo?",
+    "opcoes": [
+      "A pressão média de artéria pulmonar foi o único preditor independente de mortalidade; a distância caminhada não teve relação com sobrevida",
+      "Entre os parâmetros clínicos, ecocardiográficos e neuro-humorais avaliados, apenas a distância caminhada em 6 minutos se associou de forma independente à mortalidade por análise multivariada — e, notavelmente, essa distância NÃO se correlacionou de forma significativa com a pressão média de artéria pulmonar medida por cateterismo, ao contrário do que se correlacionou fortemente com o VO2 pico ao teste cardiopulmonar de exercício (r=0,70)",
+      "A distância caminhada se correlacionou perfeitamente (r=1,0) com a pressão média de artéria pulmonar, tornando o cateterismo desnecessário para seguimento",
+      "Nenhum parâmetro não invasivo teve relação com mortalidade nesse estudo — apenas variáveis hemodinâmicas invasivas foram preditivas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de Miyamoto et al. (43 pacientes com hipertensão pulmonar primária, seguimento médio de 21±16 meses, 12 óbitos por causa cardiopulmonar), a distância percorrida no teste de caminhada de 6 minutos correlacionou-se fortemente com o VO2 pico determinado por teste cardiopulmonar de exercício máximo (r=0,70, p<0,001), com o pulso de oxigênio (r=0,57, p<0,01) e com a inclinação VE-VCO2 (r=-0,66, p<0,001), e modestamente com o débito cardíaco basal (r=0,48, p<0,05) e a resistência pulmonar total (r=-0,49, p<0,05) — mas NÃO com a pressão média de artéria pulmonar medida por cateterismo direito. Apesar dessa ausência de correlação direta com a pressão pulmonar, foi justamente a distância caminhada — e não a pressão pulmonar nem outros parâmetros clínicos, ecocardiográficos ou neuro-humorais — que se associou de forma independente à mortalidade em análise multivariada. Pacientes que caminhavam menos de 332 metros tiveram sobrevida significativamente menor (log-rank p<0,01). Esse achado ilustra por que a capacidade funcional integrada (que reflete débito cardíaco, extração periférica de oxigênio e reserva cardiopulmonar como um todo) pode ser prognosticamente mais informativa que uma única medida hemodinâmica estática obtida em repouso durante o cateterismo.",
+    "source_refs": [
+      "Miyamoto S, Nagaya N, Satoh T, Kyotani S, Sakamaki F, Fujita M, Nakanishi N, Miyatake K. Clinical correlates and prognostic significance of six-minute walk test in patients with primary pulmonary hypertension. Comparison with cardiopulmonary exercise testing. Am J Respir Crit Care Med. 2000;161(2 Pt 1):487-492. DOI: 10.1164/ajrccm.161.2.9906015. PMID: 10673190"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "teste-ergometrico-negativo-nao-exclui-cpvt-o-limite-da-sensibilidade-de-50",
+    "titulo": "Adolescente com síncope aos esforços e teste ergométrico negativo — a CPVT está descartada?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Adolescente de 14 anos, com história familiar de morte súbita em parente jovem de primeiro grau, apresenta episódio de síncope durante atividade física intensa. ECG de repouso é normal. É realizado teste ergométrico, que não induz arritmia ventricular significativa.",
+    "pergunta": "Um teste ergométrico negativo é suficiente para descartar taquicardia ventricular polimórfica catecolaminérgica (CPVT) nesse adolescente?",
+    "opcoes": [
+      "Sim — teste ergométrico negativo exclui CPVT com 100% de certeza, dispensando qualquer investigação adicional",
+      "Não necessariamente — no estudo de Hayashi et al. com familiares assintomáticos de portadores confirmados de CPVT, o teste ergométrico teve sensibilidade de apenas 50% para identificar portador de mutação genética (especificidade de 97%), o que significa que metade dos portadores de mutação tinha teste ergométrico negativo; diante de forte suspeita clínica (síncope ao esforço + história familiar de morte súbita), investigação genética e reavaliação podem ser necessárias mesmo com teste inicial negativo",
+      "O teste ergométrico é irrelevante para CPVT — o diagnóstico depende exclusivamente de biópsia endomiocárdica",
+      "CPVT só pode ser diagnosticada em adultos, nunca em adolescentes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A CPVT é canalopatia hereditária em que a arritmia ventricular é tipicamente desencadeada por descarga adrenérgica (esforço físico ou emoção intensa), com ECG de repouso normal — por isso o teste ergométrico é a ferramenta diagnóstica de primeira linha recomendada pelo consenso de especialistas HRS/EHRA/APHRS de 2013. No entanto, o estudo de Hayashi et al., que avaliou 67 familiares assintomáticos de 17 probandos com CPVT geneticamente confirmada, mostrou que o teste foi positivo (indução de taquicardia ventricular ou extrassístoles em bigeminismo/pares) em apenas 17 dos 67 (25%) — e, entre os portadores confirmados de mutação genética, o teste teve sensibilidade de apenas 50% (especificidade de 97% para portador de mutação entre quem tinha teste positivo). Ou seja, metade dos portadores de mutação nesse estudo tinha teste ergométrico NEGATIVO. Diante de um quadro clínico de alta suspeita — síncope desencadeada por esforço em adolescente com história familiar de morte súbita —, um teste ergométrico negativo isolado não é suficiente para encerrar a investigação: avaliação genética dirigida (mutação em RYR2, mais comumente) e reavaliação clínica cuidadosa continuam indicadas, e a decisão de tratamento (betabloqueador, considerar CDI conforme estratificação de risco) não deve depender de um único teste com essa limitação de sensibilidade conhecida.",
+    "source_refs": [
+      "Hayashi M, Denjoy I, Hayashi M, Extramiana F, Maltret A, Roux-Buisson N, Lupoglazoff JM, Klug D, Maury P, Messali A, Guicheney P, Leenhardt A. The role of stress test for predicting genetic mutations and future cardiac events in asymptomatic relatives of catecholaminergic polymorphic ventricular tachycardia probands. Europace. 2012;14(9):1344-1351. DOI: 10.1093/europace/eus031. PMID: 22383456",
+      "Priori SG, Wilde AA, Horie M, Cho Y, Behr ER, Berul C, Blom N, Brugada J, Chiang CE, Huikuri H, Kannankeril P, Krahn A, Leenhardt A, Moss A, Schwartz PJ, Shimizu W, Tomaselli G, Tracy C. Executive summary: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):e85-e108. DOI: 10.1016/j.hrthm.2013.07.021. PMID: 23916535"
+    ],
+    "review_status": "revisado"
   }
 ]
