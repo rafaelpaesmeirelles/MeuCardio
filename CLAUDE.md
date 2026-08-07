@@ -1,5 +1,56 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~18h: 4 pedidos do Rafael sobre Calculadoras e Modo Apresentação
+> A partir de um screenshot da Avaliação Pré-Operatória com os quadros de seleção visivelmente
+> desalinhados, quatro pedidos no mesmo texto:
+>
+> **1. "Todas as calculadoras estão habilitadas para... gerar laudo completo do resultado?"** —
+> Não estavam: só a Avaliação Pré-Operatória (RCRI/Gupta/DASI/AUB-HAS2/VSG-CRI) tinha esse fluxo;
+> as outras ~27 calculadoras do catálogo (`Calculadora.tsx`) só mostravam o resultado inline, sem
+> opção de gerar documento. **Corrigido de forma genérica**: `POST /api/calculators/{slug}/
+> gerar-documento` funciona para as **32 calculadoras** (escore e dose), reaproveitando 100% a
+> infraestrutura de `GeneratedDocument` já existente (PDF/assinatura digital/e-mail de
+> `app/api/documents.py`, zero código novo ali) — mesma régua de sempre, o resultado é
+> **recalculado no servidor**, nunca aceito do cliente. `Calculadora.tsx` ganhou o botão "Gerar
+> laudo deste resultado". 7 testes novos pela rota HTTP real.
+>
+> **2. Texto da "Calculadora de Doses Cardiológicas"** (`Calculadoras.tsx`) — pedido: mencionar
+> mcg/kg/min (já é a unidade real usada internamente, só não aparecia no resumo) e ligar a energia
+> de choque à arritmia encontrada (o calculador de choque pediátrico já pede o tipo — desfibrilação
+> vs. cardioversão — só o texto não refletia isso). Corrigido, sem mudança de comportamento.
+>
+> **3. "Os quadros de seleção estão mal desenhados em todos os scores"** — causa raiz: a regra
+> genérica `input, select, textarea { width:100%; min-height:44px; padding:...; border:... }` de
+> `tokens.css` também pegava checkboxes/radios, virando retângulos grandes e desalinhados do
+> próprio rótulo. Visível na Avaliação Pré-Operatória porque tem muitos critérios binários, mas o
+> bug afetava (potencialmente) checkbox/radio em qualquer tela sem override local. **Corrigido na
+> raiz**, uma regra `input[type="checkbox"], input[type="radio"]` em `tokens.css`, em vez de patch
+> por tela.
+>
+> **3b. "Incluir calculadora da SBC também"** — esclarecido em chat com o Rafael: RCRI/AUB-HAS2/
+> VSG-CRI **já são** os métodos que a Diretriz SBC 2024 endossa (publicado hoje mesmo em
+> `diretriz-sbc-2024-algoritmo-avaliacao-cardiovascular-perioperatoria.md`, com a árvore de decisão
+> em mermaid); faltava laudo+assinatura (resolvido pelo item 1) e ligar cada calculadora ao
+> fluxograma/resumo/referências já publicados na Biblioteca. `Calculadora.tsx` ganhou link
+> `/biblioteca?tema=<tema da calculadora>` — genérico para as 32, não só as de risco cirúrgico.
+>
+> **4. Modo Apresentação: opção de PDF ou PowerPoint editável** — `apresentacao_pptx.py` (novo),
+> reaproveitando **a mesma extração de conteúdo** do PDF (`_secoes`, `_limpar`, `_fragmentar`,
+> `MARCADORES_POR_PAGINA`, árvore via `arv`) — nenhum texto novo é produzido, só o formato de
+> arquivo muda. Árvore de decisão vira lista indentada (não desenho — o desenho fiel já existe no
+> PDF/fluxograma da tela; uma lista é o que dá pra editar de verdade num .pptx). Dependência nova:
+> `python-pptx==1.0.2`. `POST /api/biblioteca/{slug}/apresentacao` ganhou o campo `formato`
+> (`pdf` padrão, `pptx`), frontend com seletor por rádio. 4 testes novos, inclusive abrindo o
+> arquivo gerado de volta com `python-pptx` e conferindo texto real (não só o `Content-Type`).
+>
+> **Verificação**: TypeScript limpo, 665 testes coletados sem erro de import em todo o backend,
+> os 15 testes novos destas mudanças passando, suítes adjacentes (avaliação pré-operatória,
+> calculadoras perioperatórias, doses) sem regressão. Testado também pela rota HTTP real em
+> produção depois do rebuild (`gerar-documento` → 201; exportação `.pptx` → 200, assinatura de
+> arquivo `PK` confirmada, Content-Type OOXML correto). Backend e frontend rebuildados; bundle novo
+> confirmado no Caddy (`input[type=checkbox]` + `1.05rem` no CSS, "Gerar laudo deste resultado" e
+> "PowerPoint" nos JS).
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~17h10: PR do ChatGPT revisado, corrigido, mesclado e publicado
 > Rafael pediu: **"revise todo o conteudo que ele criou e liste o conteudo e o que esta correto ou
 > incorreto"**, e depois **"revise... corrija os erros, complete o que estiver faltando. considere
