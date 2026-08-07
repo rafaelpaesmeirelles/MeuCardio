@@ -22065,5 +22065,129 @@
         "por_que": "Fecha testando a mesma pergunta de cenário pós-infarto com outra classe do quarto pilar: o EMPACT-MI avaliou empagliflozina logo após infarto agudo do miocárdio com risco de IC — permitindo comparar, lado a lado com o passo anterior, como duas classes com benefício consolidado na ICFEr crônica se comportam quando testadas no mesmo cenário agudo pós-infarto."
       }
     ]
+  },
+  {
+    "slug": "trilha-hipertensao-terapia-baseada-em-dispositivo-para-resistente",
+    "titulo": "Hipertensão resistente: as três terapias baseadas em dispositivo, e o que cada ensaio pivotal realmente mostrou",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo diferenciar as três abordagens de dispositivo para hipertensão resistente — desnervação renal por radiofrequência (com e sem medicação de base), desnervação renal por ultrassom, e ativação do barorreflexo — pelo desenho do ensaio pivotal de cada uma, não só pelo mecanismo teórico, porque a evidência de eficácia e a aprovação regulatória vieram em momentos e com desenhos bem diferentes.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "desnervacao-renal-na-ausencia-de-medicacao-o-spyral-htn-off-med-pivotal-lancet-2020",
+        "por_que": "Começa pelo desenho mais rigoroso possível para isolar o efeito do procedimento: SPYRAL HTN-OFF MED testou a desnervação renal por radiofrequência SEM nenhum anti-hipertensivo associado, eliminando o fator de confusão de adesão medicamentosa variável que atrapalhou ensaios anteriores da mesma tecnologia."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "desnervacao-renal-por-radiofrequencia-em-uso-de-medicacao-o-spyral-htn-on-med-pivotal-jacc-2023",
+        "por_que": "Completa o programa SPYRAL testando o cenário oposto e mais próximo da prática real: pacientes já em uso de anti-hipertensivos, com a mesma técnica de radiofrequência — a leitura conjunta dos dois ensaios do programa é o que sustenta a indicação regulatória, não um deles isolado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "denervacao-renal-por-ultrassom-o-ensaio-radiance-htn-solo-e-a-aprovacao-da-fda",
+        "por_que": "Muda de tecnologia dentro do mesmo conceito: a desnervação renal por ultrassom é uma plataforma distinta da radiofrequência, testada no RADIANCE-HTN SOLO, e foi o conjunto de evidência que sustentou uma aprovação regulatória própria pela FDA — sem que isso implique equivalência automática de resultado entre as duas tecnologias."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "terapia-de-ativacao-do-barorreflexo-na-hipertensao-resistente-o-rheos-pivotal-trial",
+        "por_que": "Fecha com uma abordagem de mecanismo completamente diferente das duas anteriores: em vez de interromper a inervação simpática renal, o Rheos Pivotal Trial testou a ativação elétrica do barorreflexo carotídeo — mesma categoria de 'dispositivo para hipertensão resistente refratária', racional fisiológico oposto."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-resistente-verdadeira-descartar-antes-de-escalonar",
+    "titulo": "Hipertensão resistente: o que descartar antes de escalonar — pseudorresistência, hiperaldosteronismo e alçaçuz",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo que 'hipertensão resistente' é, com frequência, pseudorresistência (má técnica de medida, avental branco, não adesão) e que duas causas secundárias específicas — hiperaldosteronismo primário subdiagnosticado e consumo de alcaçuz/regaliz — têm bioquímica característica que permite reconhecê-las sem cateterismo de veia adrenal, antes de acrescentar o quarto ou quinto anti-hipertensivo.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "por_que": "Começa pelo primeiro filtro, o mais barato e o mais frequentemente pulado: antes de rotular hipertensão como resistente, é preciso excluir técnica de medida inadequada, efeito do avental branco (MAPA/MRPA) e não adesão — cada um desses três, isoladamente, pode simular resistência farmacológica que não existe."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hiperaldosteronismo-primario-subdiagnosticado-prevalencia-real-e-rastreio-por-arr",
+        "por_que": "Depois de excluir pseudorresistência, avança à causa secundária mais prevalente e mais subdiagnosticada: hiperaldosteronismo primário, cuja prevalência real na hipertensão resistente é maior do que o rastreio pela relação aldosterona/renina (ARR) atualmente capta na prática."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo",
+        "por_que": "Fecha com o diagnóstico diferencial mais fácil de resolver de toda a trilha, bastando uma pergunta dirigida: consumo de alcaçuz/regaliz gera quadro bioquímico que imita hiperaldosteronismo na apresentação clínica (hipertensão, hipocalemia) mas com renina E aldosterona suprimidas — padrão oposto ao do passo 2, e resolve com a simples suspensão da fonte."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-novos-alvos-farmacologicos-e-reducao-de-sodio",
+    "titulo": "Hipertensão: novos alvos farmacológicos (endotelina, siRNA) e duas formas simples de reduzir sódio que mudam desfecho",
+    "tema": "Hipertensão",
+    "objetivo": "Sair conhecendo dois mecanismos farmacológicos novos para hipertensão resistente/difícil controle — antagonismo dual do receptor de endotelina e silenciamento de RNA contra o angiotensinogênio — e dois ajustes de baixo custo, quase sem efeito colateral, que mudaram desfecho cardiovascular em ensaio randomizado: clortalidona em vez de hidroclorotiazida, e substituto de sal com potássio.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "aprocitentana-antagonista-dual-do-receptor-de-endotelina-o-ensaio-precision",
+        "por_que": "Começa pelo primeiro mecanismo novo: aprocitentana bloqueia os dois subtipos de receptor de endotelina (ETA e ETB), via até então pouco explorada em hipertensão, e o ensaio PRECISION testou especificamente a população mais difícil — hipertensão resistente confirmada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "zilebesirana-sirna-contra-angiotensinogenio-os-ensaios-kardia",
+        "por_que": "Segue com um mecanismo ainda mais novo: zilebesirana é siRNA que silencia a produção hepática de angiotensinogênio — substrato inicial de toda a cascata renina-angiotensina —, permitindo controle pressórico com aplicação subcutânea espaçada em meses, testado no programa KARDIA."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "clortalidona-versus-hidroclorotiazida-o-ensaio-diuretic-comparison-project",
+        "por_que": "Muda de mecanismo novo para uma pergunta antiga e ainda não resolvida na prática: dentro da mesma classe (tiazídico), clortalidona e hidroclorotiazida são usadas como se fossem intercambiáveis, mas o Diuretic Comparison Project testou diretamente se a escolha entre as duas muda desfecho cardiovascular."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "substituto-de-sal-com-potassio-e-desfecho-cardiovascular-o-ensaio-ssass",
+        "por_que": "Fecha com a intervenção de menor custo e maior escala populacional da trilha: o SSaSS testou substituir parte do cloreto de sódio da dieta por cloreto de potássio em nível comunitário, e mediu desfecho cardiovascular duro — contraste direto com os dois primeiros passos, que são fármacos novos e caros, ainda sem a mesma disponibilidade em larga escala."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-emergencia-crise-adrenergica-e-cognicao",
+    "titulo": "Hipertensão: emergência hipertensiva, crise adrenérgica do feocromocitoma, e o efeito do controle intensivo sobre a cognição",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo diferenciar a conduta por síndrome-alvo na emergência hipertensiva geral da conduta específica na crise adrenérgica do feocromocitoma — que tem armadilha farmacológica própria (nunca betabloqueador isolado) —, e fechar sabendo o que o SPRINT MIND de fato mostrou sobre controle pressórico intensivo e declínio cognitivo, muitas vezes citado de forma imprecisa.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-emergencia-hipertensiva",
+        "por_que": "Começa pelo mapa geral de decisão da emergência hipertensiva: a conduta não é uniforme — depende da síndrome-alvo acometida (encefalopatia, dissecção de aorta, edema agudo de pulmão, entre outras), cada uma com meta de redução pressórica e fármaco preferencial próprios."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-crise-hipertensiva-adrenergica-do-feocromocitoma",
+        "por_que": "Recorta um cenário específico dentro do mapa geral, com uma regra que não pode ser esquecida: na crise adrenérgica do feocromocitoma, betabloqueador isolado (sem bloqueio alfa prévio) é contraindicado — pode precipitar crise hipertensiva paradoxal por bloqueio da vasodilatação beta-2 com a vasoconstrição alfa sem oposição."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-e-declinio-cognitivo-o-que-o-sprint-mind-realmente-mostrou",
+        "por_que": "Fecha mudando de emergência para cronicidade: o SPRINT MIND é frequentemente citado de forma imprecisa como prova de que controle pressórico intensivo 'previne demência' — o documento separa o que o ensaio de fato mostrou (redução de comprometimento cognitivo leve e do desfecho composto) do que não atingiu significância isolada (demência provável como desfecho único), uma distinção que muda como a evidência deve ser comunicada ao paciente."
+      }
+    ]
   }
 ]
