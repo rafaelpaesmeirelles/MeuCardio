@@ -362,3 +362,63 @@ confirmadas.
   frente mais antiga de `galeria/`/`exames/` do segundo agente.
 
 ---
+
+## Rodada 5 — 07/08/2026 (mesmo dia, ciclo seguinte)
+
+### Commit `cc4d367` — estudos: +6 ensaios/estudos de Comunicação clínica
+
+**Conferido: os 7 PMIDs citados (incluindo a réplica de Schwartz, PMID 10413743) batem exatamente**
+no registro do PubMed (título/revista/volume/edição/páginas/DOI). Números conferidos linha a linha
+contra os abstracts originais, **todos batendo exatamente**: Jabre (211/266 79% vs. 131/304 43%,
+OR ajustada 1,7 [1,2-2,5] p=0,004; OR 1,6 [1,1-2,5] p=0,02), REACT (mediana basal 140 min, -4,7%/ano
+vs. -6,8%/ano p=0,54; efeito líquido de uso de EMS 20% [7-34%] p<0,005), Schulman 1999 (64,1% vs.
+69,2% p<0,001; OR 0,60 [0,4-0,9] p=0,02 para sexo e raça; OR 0,4 [0,2-0,7] p=0,004 para interação
+raça×sexo). **PASSA integralmente.**
+
+### Commit `392a365` — evidências: +4 recomendações Classe/Nível de Comunicação clínica (ESC 2023 SCA + ESC 2020 esporte)
+
+**Conferido:** PMID 32860412 (ESC 2020 esporte) e o DOI `10.1093/eurheartj/ehad191` (ESC 2023 SCA,
+conferido via Crossref) batem exatamente com as citações do commit. **As 4 classificações
+Classe/Nível (I/C, IIa/C ×3) não foram conferidas contra o texto integral** — as duas diretrizes
+estão atrás do bloqueio de 403 do Oxford Academic já registrado no projeto, e não localizei PMC
+aberto para nenhuma das duas nesta rodada.
+
+### Commit `ec5481d` — casos-clinicos: +8 novos (Cardio-oncologia, Gravidez, Hipertensão, Arritmias)
+
+**Conferido: 15 dos 16 PMIDs citados nos 8 casos batem exatamente** no registro do PubMed
+(título/revista/volume/edição/páginas/DOI): 5-FU vasoespasmo (33817666, 29977352), tríade
+miocardite-miosite-miastenia (30089619, 29567210, 36017568), SCAD gestacional (28728686, 34001675),
+cesárea perimortem/Katz (15970850), alcaçuz/pseudo-hiperaldosteronismo (31379750, 34362360),
+PRESCRIPT/feocromocitoma (31714582 — número de pacientes, 134, conferido exatamente; 24893135),
+cardite de Lyme (30765038, 2644885), RIVA (6849238; 32119407 é referência StatPearls sem DOI, só
+PMID, e o PMID confere no registro do PubMed apesar de não ter metadados de revista/página —
+comportamento esperado de verbete StatPearls).
+
+**🚨 ERRO REAL ENCONTRADO — casos-clinicos/metadados.json, caso
+`bloqueio-atrioventricular-total-em-jovem-com-artralgia-migratoria-cardite-de-lyme`:**
+O `source_refs` cita *"Besant G, Wan D, Yeung C, et al. Suspicious index in Lyme carditis...
+Clin Cardiol. 2018;41(12):1611-1616. **DOI: 10.1002/clc.23112**. PMID: 30350436"*. **O PMID está
+correto** (confere no PubMed, título/revista/páginas batem). **O DOI está errado**: o registro do
+PubMed para o PMID 30350436 mostra DOI **`10.1002/clc.23102`** (não 23112), confirmado também via
+Crossref — `10.1002/clc.23102` resolve para o artigo certo de Lyme carditis, enquanto
+`10.1002/clc.23112` (o DOI usado no commit) resolve, via Crossref, para um artigo **completamente
+diferente e não relacionado**: *"Design of the randomized, placebo-controlled evolocumab for early
+reduction of LDL-cholesterol levels... (EVOPACS) trial"*, também publicado em Clinical Cardiology
+— mesmo padrão de erro do DOI do PARROT encontrado na Rodada 1 (dígito transposto num DOI da mesma
+revista). **Ação recomendada:** corrigir o campo DOI de `10.1002/clc.23112` para `10.1002/clc.23102`
+no `source_refs` do caso `bloqueio-atrioventricular-total-em-jovem-com-artralgia-migratoria-cardite-de-lyme`
+em `casos-clinicos/metadados.json`.
+
+**Resultado geral do commit: passa quanto a PMIDs e conteúdo clínico; 1 DOI incorreto encontrado
+(reportado acima).**
+
+### Não verificado por falta de tempo nesta rodada (rodada 5)
+- As 4 classificações Classe/Nível do commit `392a365` contra o texto integral das duas diretrizes
+  (bloqueio de acesso).
+- Descrições fisiopatológicas dos casos de vasoespasmo por 5-FU, tríade autoimune por checkpoint,
+  SCAD gestacional, pseudo-hiperaldosteronismo por alcaçuz e RIVA — checadas quanto a PMID/DOI, não
+  frase a frase contra o texto integral de cada fonte.
+- Commits mais antigos ainda não revisados (`051cc7a`, `97d639c`, `a7c275f`, `b88c0ae`) e toda a
+  frente mais antiga de `galeria/`/`exames/` do segundo agente.
+
+---
