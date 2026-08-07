@@ -5383,5 +5383,49 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cateter-de-arteria-pulmonar-posicionamento-swan-ganz-diagrama",
+    "title": "Cateter de artéria pulmonar (Swan-Ganz) — diagrama de posicionamento e das quatro vias",
+    "modality": "Diagrama esquemático",
+    "theme": "Terapia intensiva",
+    "file_path": "diagrama/cateter-de-arteria-pulmonar-posicionamento-swan-ganz.jpg",
+    "findings": "Diagrama esquemático mostrando o trajeto do cateter de artéria pulmonar inserido pela veia jugular/subclávia, passando pela veia cava superior, átrio direito, ventrículo direito, até a posição final em cunha na artéria pulmonar (balão insuflado ocluindo o vaso). As quatro vias do cateter estão identificadas: via proximal (1, no átrio direito), via do termistor (2, mede temperatura para débito cardíaco por termodiluição), via do balão (3) e via distal (4, mede pressão de artéria pulmonar e pressão de oclusão/\"wedge\").",
+    "teaching_points": "O diagrama complementa o verbete de exame já cadastrado sobre teste de limiar de desfibrilação e a discussão textual do cateter de artéria pulmonar no choque (documento já publicado, citando ESCAPE e a metanálise de Ortega-Hernández) — aqui está a anatomia do próprio dispositivo, útil para entender por que a leitura da pressão de oclusão pulmonar (\"wedge\") equivale, na ausência de doença valvar mitral, à pressão de enchimento do átrio esquerdo. A via distal só fornece leitura confiável quando a ponta do cateter está corretamente posicionada no ramo da artéria pulmonar, sem estar excessivamente distal (risco de infarto pulmonar) nem proximal demais (perde a correlação com a pressão de enchimento esquerdo).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pulmonary_artery_catheter_english.JPG",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Tariq Abdulla (obra derivada); criadores originais: Chikumaya e PhilippN. Via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "cateter de artéria pulmonar",
+      "Swan-Ganz",
+      "pressão de oclusão pulmonar",
+      "monitorização hemodinâmica",
+      "terapia intensiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dispositivo-de-assistencia-ventricular-esquerda-lvad-heartmate-diagrama",
+    "title": "Dispositivo de assistência ventricular esquerda (LVAD) — diagrama do HeartMate pneumático",
+    "modality": "Diagrama esquemático",
+    "theme": "Insuficiência cardíaca",
+    "file_path": "diagrama/dispositivo-de-assistencia-ventricular-esquerda-lvad-heartmate.gif",
+    "findings": "Diagrama esquemático do CDC mostrando um dispositivo de assistência ventricular esquerda (LVAD) do modelo HeartMate implantado: a via de entrada retira sangue do ápice do ventrículo esquerdo, a bomba (posicionada abaixo do diafragma, no diagrama) impulsiona o sangue de volta à circulação por uma cânula anastomosada à aorta, com conexão externa a uma fonte de energia pneumática.",
+    "teaching_points": "ARMADILHA DE ATUALIZAÇÃO, declarada: este é o desenho de um LVAD de fluxo PULSÁTIL, pneumático (geração do HeartMate original) — a geração hoje implantada na prática clínica (HeartMate 3 e dispositivos equivalentes) usa bombas centrífugas de fluxo CONTÍNUO, magneticamente levitadas, sem a bolsa pneumática externa mostrada aqui. O diagrama mantém valor didático para o princípio geral (via de entrada apical, bomba, via de saída anastomosada à aorta) mas não deve ser lido como representação do dispositivo atualmente implantado — diferença relevante inclusive para a ausculta (pulso arterial pode estar ausente ou muito reduzido em fluxo contínuo, ao contrário do que a intuição de \"bomba pulsátil\" sugere).",
+    "source_name": "Wikimedia Commons / CDC",
+    "source_url": "https://commons.wikimedia.org/wiki/File:LVAD_CDC_Gordon.gif",
+    "license": "Domínio público (obra de agência do governo dos EUA — CDC)",
+    "attribution": "Steven M. Gordon, Centers for Disease Control and Prevention (CDC), EUA. Domínio público por ser produzida por funcionário federal no exercício da função. Via Wikimedia Commons.",
+    "tags": [
+      "LVAD",
+      "dispositivo de assistência ventricular",
+      "HeartMate",
+      "insuficiência cardíaca avançada",
+      "fluxo pulsátil versus contínuo"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
