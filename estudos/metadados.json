@@ -14291,5 +14291,81 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ropac-registro-europeu-de-gravidez-e-cardiopatia-2013",
+    "theme": "Gravidez",
+    "title": "ROPAC — Registro Europeu de Gravidez e Cardiopatia Estrutural ou Isquêmica",
+    "authors": "Roos-Hesselink JW, Ruys TP, Stein JI, et al.",
+    "year": 2013,
+    "journal": "European Heart Journal",
+    "pmid": "22968232",
+    "doi": "10.1093/eurheartj/ehs270",
+    "url": "https://academic.oup.com/eurheartj/article/34/9/657/611805",
+    "study_type": "registro_prospectivo",
+    "summary": "Registro prospectivo multicêntrico da ESC (European Registry on Pregnancy and Heart Disease), iniciado em 2007, que incluiu 1.321 gestantes consecutivas com cardiopatia valvar, congênita, isquêmica ou cardiomiopatia, atendidas em 60 hospitais de 28 países entre 2007 e 2011. Comparou os desfechos maternos e fetais dessa coorte com dados da população geral obtidos da literatura.",
+    "key_findings": "Cardiopatia congênita foi a etiologia mais prevalente (66%), seguida de valvopatia (25%), cardiomiopatia (7%) e cardiopatia isquêmica (2%); 72% das pacientes estavam em classe funcional NYHA I. Óbito materno ocorreu em 1% das gestantes, ante 0,007% na população geral. A maior mortalidade materna foi observada nas pacientes com cardiomiopatia. Durante a gestação, 26% das pacientes foram hospitalizadas (133 por insuficiência cardíaca) e a cesárea foi realizada em 41%. Mortalidade fetal foi de 1,7% e neonatal de 0,6%, ambas mais altas que na população geral. Em centros de países em desenvolvimento, a mortalidade materna e fetal foi significativamente maior que em centros de países desenvolvidos (3,9% vs. 0,6% e 6,5% vs. 0,9%, p<0,001 para ambas).",
+    "clinical_implications": "Registro fundador que embasa a recomendação de que a maioria das gestantes com cardiopatia pode ter gestação e parto seguros desde que haja avaliação pré-gestacional adequada e cuidado especializado de alta qualidade durante a gestação e o parto — base para a recomendação de tratamento em centro com equipe multidisciplinar (pregnancy heart team) presente na 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Evidencia também a disparidade de desfechos entre países desenvolvidos e em desenvolvimento, relevante para o contexto brasileiro.",
+    "limitations": "Estudo observacional sem grupo controle randomizado; comparação com a população geral feita a partir de dados históricos da literatura, não de controles pareados coletados no mesmo período. Viés de seleção possível pela participação voluntária dos centros.",
+    "tags": [
+      "ROPAC",
+      "registro",
+      "cardiopatia estrutural",
+      "mortalidade materna",
+      "gestação de alto risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ropac-protese-valvar-mecanica-na-gestacao-2015",
+    "theme": "Gravidez",
+    "title": "ROPAC — Gestação em mulheres com prótese valvar mecânica",
+    "authors": "van Hagen IM, Roos-Hesselink JW, Ruys TP, et al.",
+    "year": 2015,
+    "journal": "Circulation",
+    "pmid": "26100109",
+    "doi": "10.1161/CIRCULATIONAHA.115.015242",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.115.015242",
+    "study_type": "registro_prospectivo",
+    "summary": "Substudy do registro ROPAC que descreveu os desfechos de 212 gestantes com prótese valvar mecânica (MHV), comparando-as com 134 gestantes com prótese biológica e 2.620 gestantes sem prótese valvar, dentro do registro prospectivo, observacional e multicêntrico ROPAC.",
+    "key_findings": "Mortalidade materna ocorreu em 1,4% das pacientes com prótese mecânica, 1,5% com prótese biológica (p=1,000) e 0,2% sem prótese (p=0,025 vs. mecânica). Trombose de prótese mecânica complicou 4,7% das gestações (10 pacientes); em 5 delas a trombose ocorreu no primeiro trimestre, todas após troca para algum esquema de heparina. Eventos hemorrágicos ocorreram em 23,1% das pacientes com prótese mecânica, contra 5,1% com prótese biológica e 4,9% sem prótese (p<0,001 para ambas comparações). Apenas 58% das pacientes com prótese mecânica tiveram gestação livre de eventos adversos graves, contra 79% com prótese biológica e 78% sem prótese (p<0,001). O uso de antagonista da vitamina K no primeiro trimestre, comparado à heparina, associou-se a maior taxa de aborto espontâneo (28,6% vs. 9,2%; p<0,001) e óbito fetal tardio (7,1% vs. 0,7%; p=0,016).",
+    "clinical_implications": "Principal evidência empírica por trás das recomendações da 2018 ESC Guidelines sobre troca de antagonista da vitamina K para heparina em dose ajustada na 36ª semana e sobre a preferência por heparina (em vez de varfarina) no primeiro trimestre nas pacientes que optam por evitar a embriopatia por varfarina — quantifica o trade-off real entre risco trombótico (favorecendo varfarina) e risco obstétrico/fetal (favorecendo heparina) que fundamenta o aconselhamento pré-concepcional dessas pacientes.",
+    "limitations": "Estudo observacional, sem randomização entre estratégias de anticoagulação — a escolha do anticoagulante refletia prática clínica local, sujeita a viés de indicação. Amostra de 212 pacientes com prótese mecânica limita a precisão de subanálises por tipo de anticoagulante e trimestre.",
+    "tags": [
+      "ROPAC",
+      "prótese valvar mecânica",
+      "anticoagulação",
+      "varfarina",
+      "heparina",
+      "trombose valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "zahara-preditores-de-complicacoes-na-gestante-com-cardiopatia-congenita-2010",
+    "theme": "Gravidez",
+    "title": "ZAHARA — Preditores de complicações na gestação de mulheres com cardiopatia congênita",
+    "authors": "Drenthen W, Boersma E, Balci A, et al.",
+    "year": 2010,
+    "journal": "European Heart Journal",
+    "pmid": "20584777",
+    "doi": "10.1093/eurheartj/ehq200",
+    "url": "https://academic.oup.com/eurheartj/article/31/17/2124/2465224",
+    "study_type": "coorte_retrospectiva",
+    "summary": "Estudo de coorte multicêntrico (ZAHARA — Zwangerschap bij Aangeboren HARtAfwijkingen) que analisou gestações de mulheres com cardiopatia congênita atendidas em centros terciários holandeses, buscando identificar preditores independentes de complicações cardíacas, obstétricas e neonatais, e propondo um novo escore de risco.",
+    "key_findings": "As complicações cardíacas mais prevalentes na gestação foram arritmia (4,7%) e insuficiência cardíaca (1,6%). Fatores independentemente associados a complicação cardíaca materna foram cardiopatia cianótica corrigida ou não corrigida (p<0,0001), uso de medicação cardíaca antes da gestação (p<0,0001) e obstrução de via de saída do coração esquerdo (p<0,0001); prótese valvar mecânica (p=0,0014) e regurgitação atrioventricular sistêmica (p=0,04) ou pulmonar (p=0,03) associada à cardiopatia congênita moderadamente complexa também entraram no novo escore. A complicação obstétrica mais prevalente foi hipertensão (12,2%), sem correlação encontrada com características maternas. As complicações neonatais mais prevalentes foram prematuridade (12%), pequeno para idade gestacional (14%) e mortalidade (4%), associadas a cardiopatia cianótica, prótese mecânica, tabagismo materno, gestação múltipla e uso de medicação cardíaca.",
+    "clinical_implications": "Um dos dois escores de risco (junto ao CARPREG) que fundamentam a classificação de risco materno mWHO citada nas recomendações gerais da 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy — usado para estratificar especificamente gestantes com cardiopatia congênita e orientar a intensidade do acompanhamento pré-natal.",
+    "limitations": "Coorte retrospectiva de centros terciários holandeses, com possível viés de encaminhamento (casos mais complexos concentrados nesses centros) e de memória na coleta de dados anteriores à gestação; validação prospectiva externa do escore proposto ainda era necessária à época da publicação.",
+    "tags": [
+      "ZAHARA",
+      "cardiopatia congênita",
+      "gestação de alto risco",
+      "escore de risco",
+      "mWHO"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
