@@ -5514,5 +5514,51 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "mecanismo-de-avc-embolico-na-fibrilacao-atrial",
+    "title": "Ilustração — Mecanismo do AVC embólico na fibrilação atrial",
+    "modality": "Ilustração médica",
+    "theme": "Fibrilação atrial",
+    "file_path": "diagrama/mecanismo-de-acidente-vascular-cerebral-embolico-na-fibrilacao-atrial.jpg",
+    "findings": "Ilustração esquemática mostrando trombo (coágulo) formado no átrio esquerdo em contexto de fibrilação atrial, com fragmento (êmbolo) que se desprende, segue pela aorta e pelas artérias carótida comum e carótida interna, e obstrui uma artéria cerebral — bloqueando o fluxo sanguíneo para a porção do cérebro irrigada por ela e causando acidente vascular cerebral isquêmico.",
+    "teaching_points": "É a imagem-resumo do motivo pelo qual a fibrilação atrial exige avaliação sistemática do risco tromboembólico (CHA₂DS₂-VASc) e, na maioria dos casos, anticoagulação: a perda da contração atrial coordenada favorece estase de sangue no átrio esquerdo — sobretudo no apêndice atrial esquerdo, a estrutura mais associada à formação de trombo nessa arritmia — e o trombo formado ali pode embolizar para qualquer território arterial sistêmico, sendo a circulação cerebral o destino mais temido pela gravidade do AVC cardioembólico resultante. A ilustração conecta visualmente o que costuma ficar abstrato quando se fala apenas em 'escore de risco': o caminho físico do êmbolo, do átrio ao cérebro.",
+    "source_name": "National Heart, Lung, and Blood Institute (NHLBI/NIH), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atrial_fib_stroke.jpg",
+    "license": "Domínio público (obra do governo dos EUA — PD-USGov)",
+    "attribution": "National Heart, Lung, and Blood Institute (NIH), 2013 — domínio público por ser obra de agência do governo federal dos EUA, via Wikimedia Commons.",
+    "tags": [
+      "fibrilação atrial",
+      "avc embólico",
+      "trombo atrial",
+      "apêndice atrial esquerdo",
+      "anticoagulação",
+      "cha2ds2-vasc"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fluxograma-de-conduta-na-pre-eclampsia-grave",
+    "title": "Fluxograma — Conduta na pré-eclâmpsia grave (manejo conservador versus interrupção da gestação)",
+    "modality": "Diagrama esquemático",
+    "theme": "Gravidez",
+    "file_path": "diagrama/fluxograma-de-conduta-na-pre-eclampsia-grave.jpg",
+    "findings": "Fluxograma em inglês que resume a decisão entre manejo conservador (observação, corticoide para maturação pulmonar fetal, avaliação laboratorial e materno-fetal seriada) e interrupção da gestação (parto) na pré-eclâmpsia grave, organizado a partir da presença ou ausência de contraindicações ao manejo conservador — eclâmpsia, edema pulmonar, síndrome HELLP, disfunção renal significativa, coagulopatia, descolamento de placenta com feto pré-viável, ou comprometimento fetal.",
+    "teaching_points": "O ponto central do fluxograma é que a decisão não é binária simples ('grave = parto imediato'), mas condicionada à presença de uma lista específica de contraindicações ao manejo expectante — na ausência delas, um período de observação de 24-48 horas com corticoide e vigilância laboratorial diária (incluindo rastreio seriado de síndrome HELLP) é uma conduta aceita, com o parto reservado para 34 semanas ou para o surgimento de qualquer uma das contraindicações listadas durante a observação. Para quem atende essa paciente do lado cardiovascular — pela sobreposição entre pré-eclâmpsia grave, edema pulmonar e disfunção ventricular transitória —, o fluxograma deixa explícito que edema pulmonar e HELLP entram na mesma lista de gatilhos que forçam a interrupção da gestação, não são achados que esperam a evolução natural do quadro.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Treatment_of_severe_preeclampsia.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Dr. Vijaya Chandar (Dr.Vijayachandar), via Wikimedia Commons — CC BY-SA 4.0, 2018.",
+    "tags": [
+      "pré-eclâmpsia grave",
+      "eclâmpsia",
+      "síndrome HELLP",
+      "manejo conservador",
+      "interrupção da gestação",
+      "gravidez"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
