@@ -23,6 +23,11 @@ function baixar(blob: Blob, nome: string) {
 export default function Apresentacao() {
   const [documentos, setDocumentos] = useState<Documento[] | null>(null);
   const [busca, setBusca] = useState("");
+  // 07/08/2026, pedido do Rafael: toda ferramenta de busca do site precisa de
+  // pelo menos duas formas de refinar — aqui, além do termo livre, filtrar
+  // por tema (já presente em cada documento do catálogo), igual ao padrão
+  // já usado em Busca.tsx e nas páginas de listagem da biblioteca.
+  const [tema, setTema] = useState("");
   const [selecionado, setSelecionado] = useState<Documento | null>(null);
   const [anotacao, setAnotacao] = useState("");
   const [gerando, setGerando] = useState(false);
@@ -37,14 +42,19 @@ export default function Apresentacao() {
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os documentos."));
   }, [tentativa]);
 
+  const temas = useMemo(() => {
+    const contagem = new Map<string, number>();
+    (documentos ?? []).forEach((d) => contagem.set(d.theme, (contagem.get(d.theme) ?? 0) + 1));
+    return [...contagem.entries()].sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
+  }, [documentos]);
+
   const filtrados = useMemo(() => {
     const termo = busca.trim().toLocaleLowerCase("pt-BR");
-    if (!documentos || !termo) return documentos ?? [];
-    return documentos.filter((documento) =>
-      [documento.title, documento.theme, documento.kind, documento.summary ?? ""]
-        .some((campo) => campo.toLocaleLowerCase("pt-BR").includes(termo)),
-    );
-  }, [documentos, busca]);
+    return (documentos ?? [])
+      .filter((documento) => !tema || documento.theme === tema)
+      .filter((documento) => !termo || [documento.title, documento.theme, documento.kind, documento.summary ?? ""]
+        .some((campo) => campo.toLocaleLowerCase("pt-BR").includes(termo)));
+  }, [documentos, busca, tema]);
 
   async function gerar() {
     if (!selecionado) return;
@@ -77,13 +87,24 @@ export default function Apresentacao() {
 
       <div className="grade grade--2" style={{ alignItems: "start", marginTop: "1rem" }}>
         <section>
-          <label htmlFor="busca-apresentacao">Procurar assunto</label>
-          <input
-            id="busca-apresentacao"
-            value={busca}
-            onChange={(e) => setBusca(e.target.value)}
-            placeholder="Ex.: insuficiência cardíaca, fibrilação atrial, fluxograma…"
-          />
+          <div className="filtros-conteudo">
+            <label><strong>Procurar assunto</strong>
+              <input
+                id="busca-apresentacao"
+                value={busca}
+                onChange={(e) => setBusca(e.target.value)}
+                placeholder="Ex.: insuficiência cardíaca, fibrilação atrial, fluxograma…"
+              />
+            </label>
+            <label><strong>Área/tema</strong>
+              <select value={tema} onChange={(e) => setTema(e.target.value)}>
+                <option value="">Todas as áreas ({documentos?.length ?? 0})</option>
+                {temas.map(([nome, contagem]) => (
+                  <option key={nome} value={nome}>{nome} ({contagem})</option>
+                ))}
+              </select>
+            </label>
+          </div>
 
           <div style={{ display: "grid", gap: "0.55rem", marginTop: "0.8rem", maxHeight: "68vh", overflowY: "auto", paddingRight: 4 }}>
             {filtrados.length === 0 ? (
