@@ -1,5 +1,42 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~16h30: publicação dos 20 fármacos combinados pendentes + correção
+> ## dos 19 protocolos de emergência + exclusão definitiva de 4 fármacos vazios/mal classificados
+> Rafael pediu diretamente, em duas partes: **"1. marque todos como revisados e publique, 2. corrija
+> o problema com os 19 protocolos de emergência e publique."**
+>
+> **Parte 1 — combos.** A consulta por `review_status=='pendente_revisao' AND published=False`
+> devolveu **24**, não os 20 esperados. Antes de publicar em bloco, conferi individualmente: **4
+> desses 24 têm `mechanism=None`, `dosing={}`, `indications=[]`** — zero conteúdo clínico jamais
+> escrito. São os 3 duplicatas já documentadas neste arquivo (`saxagliptina-dapagliflozina`,
+> `acido-acetilsalicilico-aas-cafeina`, `acido-acetilsalicilico-aas-paracetamol-cafeina` — cada uma
+> com gêmeo já publicado e enriquecido) mais `dipropionato-de-betametasona-acido-acetilsalicilico-aas`
+> (produto **dermatológico** — corticoide + ácido salicílico — mal rotulado no catálogo-fonte original
+> como se contivesse AAS/cardiologia). Publicar os 4 colocaria página vazia ou clinicamente errada no
+> ar de um produto médico pago — reportei isso ao Rafael em vez de cumprir a instrução ao pé da letra
+> nos 4. Ele respondeu: **"esses 4 que estao vazios e as 3 duplicatas nao publique e exclua."**
+> **Publicados os 20 reais** (`review_status='revisado'`, `published=True`, `AuditLog` citando a
+> autorização). **Os 4 vazios/mal classificados foram EXCLUÍDOS DEFINITIVAMENTE** — mesmo padrão já
+> usado nos 12 órfãos de `drugs`: backup completo em
+> `/root/backups-corvia/backup_4_drugs_vazios_07082026.json` (fora do git), 6 linhas de
+> `cmed_apresentacoes` ligadas apagadas em cascata antes (1+3+1+1), transação com `assert` de
+> contagem e de `published=False`, `AuditLog` gravado. `drugs`: **175/175 publicados, zero
+> pendência.** Os dois itens isolados que Rafael também liberou (`ScientificStudy` e `ClinicalCase`
+> de Killip-Kimball) foram publicados junto, sem achado de qualidade.
+>
+> **Parte 2 — protocolos de emergência.** Causa raiz achada: `carregar_emergencia.py` validava
+> `relacionados` **só contra `Document.slug`**, mas o lote novo de 19 protocolos usa `relacionados`
+> para referenciar **outros `EmergencyProtocol`** ("ver também: síndrome X") — busca na tabela
+> errada, não dependência circular real. Fix em
+> [backend/app/services/carregar_emergencia.py](backend/app/services/carregar_emergencia.py):
+> `relacionados` agora aceito contra `Document` OU `EmergencyProtocol` do próprio arquivo;
+> `documento_slug`/`fluxograma_slug` continuam exigindo `Document` especificamente (é o texto/
+> fluxograma que a tela `/api/emergencia` de fato renderiza). Recarregado: **19/19 (antes 0/19)**,
+> publicados por lista explícita, **zero referência quebrada** nas 59 protocolos publicados,
+> verificado simulando a resolução real do endpoint. Commit `fbd6447`, push feito, backend
+> rebuildado (`docker compose up -d --build backend`) e confirmado saudável em produção (200 em
+> `/api/openapi.json`, dados intactos depois do rebuild).
+
 > ## 🛑 PEDIDO DO RAFAEL, 07/08/2026 ~14h55: PARAR OS AGENTES DE CONTEÚDO — só o ChatGPT continua
 > Texto dele: "pare os agentes, deixaremos somente o chatgpt produzindo conteúdo por enquanto."
 > **Se você é uma sessão/agente de produção de conteúdo lendo isto: pare agora, sem produzir mais
