@@ -1,5 +1,72 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO, 07/08/2026: os 12 órfãos de `drugs` foram EXCLUÍDOS DEFINITIVAMENTE (não só despublicados)
+> Pedido direto do Rafael ("exclua definitivamente os orfaos"). Os 12 slugs já despublicados desde
+> 01/08/2026 (`atropina`, `evinacumabe`, `metoprolol-succinato` ×3, `nitro*` ×2, `prasugrel-cloridrato`,
+> `sotalol-cloridrato`, `trimetazidina-dicloridrato`, `verapamil-diltiazem`, `warfarina`) foram
+> **apagados de vez** da tabela `drugs`. Bloqueio real encontrado e resolvido: `DELETE` falhava por
+> `ForeignKeyViolation` em `cmed_apresentacoes_drug_id_fkey` — 7 dos 12 tinham linhas de preço CMED
+> ligadas (310 no total). Antes de apagar, medi que **todo substituto vivo tinha cobertura CMED
+> igual ou maior** que o órfão correspondente (`metoprolol` 142=142, `prasugrel` 16 vs 8,
+> `sotalol` 28 vs 14, `trimetazidina` 248 vs 124 — sempre 1× ou 2×, nunca menos), confirmando que
+> eram cópias redundantes do bug histórico do matcher, não dado único. Apaguei as 310 linhas de
+> `cmed_apresentacoes` em cascata e então os 12 `drugs`, tudo numa transação guardada (`assert`
+> de 12 linhas, `assert` de nenhuma publicada). **Conferido depois**: os 10 fármacos vivos
+> substitutos mantiveram exatamente a mesma contagem de apresentações CMED antes/depois — zero
+> perda de preço para quem está no ar. Backup completo das 12 linhas em
+> `/root/backups-corvia/backup_12_orfaos_drugs_definitivo_07082026.json`, fora do git. `AuditLog`
+> gravado citando a autorização direta do Rafael em chat.
+
+> ## ✅ CONCLUÍDO, 07/08/2026: casamento CMED de COMBINAÇÕES DE DOSE FIXA — nunca existia
+> Achado ao investigar o pedido do Rafael de ampliar os ~55 medicamentos de combinação (2-3
+> princípios ativos) com marca/laboratório/preço reais: `cmed_precos.casar_substancia()` **sempre
+> retornava `[]` para qualquer linha de combinação da CMED** (`eh_combinacao()`, `;` no nome da
+> substância) — o comentário no código já avisava que não casava combinação com princípio isolado,
+> mas **não existia nenhum caminho que casasse combinação com combinação**. Resultado medido:
+> 3.886 linhas de combinação na planilha atual, **3.047 com `drug_id = NULL`** — todo fármaco de
+> combinação do catálogo, publicado ou não, sempre apareceria sem preço/marca/laboratório em
+> `/drugs/{slug}/apresentacoes` e em `/api/drug-insights/{slug}`.
+>
+> **Implementado em `cmed_precos.py`, aditivo — não muda nenhum casamento de princípio isolado já
+> em produção** (confirmado: nenhum `Drug` publicado hoje tem `+` no `generic_name`, então a nova
+> rota de código nunca era exercitada pelos dados atuais):
+> - `componentes_normalizados(nome)`: separa por `;` (lado CMED) ou `+` (lado local,
+>   `generic_name`), normaliza cada componente pelo mesmo `palavras_normalizadas` do princípio
+>   isolado (remove sal, ex. "besilato de anlodipino" × "Anlodipino (besilato)").
+> - `_combinacao_bate(...)`: exige o MESMO NÚMERO de princípios ativos dos dois lados, e casa cada
+>   componente da CMED com um componente local DISTINTO pela mesma regra assimétrica do princípio
+>   isolado (`eh_match`, aceita glosa extra do lado local, ex. "Ácido Acetilsalicílico (AAS)" com
+>   a palavra extra "AAS") — testado com permutação, N pequeno (2-3 nos fármacos deste catálogo).
+> - `casar_combinacao(...)`: usa a função acima, com o mesmo desempate por igualdade exata de
+>   `casar_substancia`.
+> - `atualizar()`: separa os `Drug` locais publicados em duas listas (com/sem `+` no nome) e roteia
+>   cada linha da planilha pela função certa — **continua exigindo `Drug.published.is_(True))`**,
+>   mesma regra já documentada para não deixar órfão roubar match.
+>
+> **Testado com dry-run somente-leitura** (sem persistir) contra os 55 fármacos de combinação hoje
+> não publicados: **55/55 casaram pelo menos 1 apresentação real**, com marcas corretas e
+> reconhecíveis — HYZAAR, VYTORIN, BENICAR TRIPLO, CLOPIN DUO, TRIPLIXAM, EXFORGE HCT, GLYXAMBI,
+> XULTOPHY, JANUMET, XIGDUO XR, NUSTENDI etc. Regressão dos princípios isolados conferida por
+> testes manuais (ver diagnóstico completo abaixo) — sem alteração de comportamento.
+>
+> **Confirmado ao investigar o pipeline: nem `/drugs/{slug}/apresentacoes` nem
+> `/api/drug-insights/{slug}` (a rota que a tela "Medicamentos" usa) guardam preço/marca em campo
+> estático — as duas leem `cmed_apresentacoes` AO VIVO por `drug_id`, a cada requisição.** Ou seja,
+> assim que um fármaco de combinação for publicado e o casamento acima rodar, marca/laboratório/
+> apresentação/preço aparecem automaticamente nas duas telas (Medicamentos e Prescrição digital),
+> sem precisar escrever `commercial_presentations` nem preço à mão no JSON — só o conteúdo clínico
+> (mecanismo, dose, contraindicação etc.) precisa ser escrito e revisado.
+>
+> **Achado colateral, duplicata real em 3 pares dos 55 — nunca publicados, então baixo risco, mas
+> registrado para o Rafael decidir se apaga os 3 slugs redundantes depois:** `saxagliptina-
+> dapagliflozina` × `saxagliptina-monoidratada-dapagliflozina` (mesma marca QTERN — a CMED tem as
+> duas grafias do princípio ativo na mesma planilha, provavelmente troca de nomenclatura DCB ao
+> longo do tempo); `acido-acetilsalicilico-aas-cafeina` × `cafeina-anidra-acido-acetilsalicilico-
+> aas` (marcas CAFIASPIRINA/DORIL aparecem sob as duas grafias); `acido-acetilsalicilico-aas-
+> paracetamol-cafeina` × `cafeina-anidra-acido-acetilsalicilico-aas-paracetamol` (DORIL ENXAQUECA
+> em ambos). Escrevendo conteúdo só para um de cada par (o mais preciso/mais comum na CMED), o
+> outro fica como está, sem enriquecer — mesmo padrão do achado de imagem duplicada do takotsubo.
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026: varredura geral pedida pelo Rafael — 6 bugs reais achados e corrigidos
 > Pedido do Rafael ("teste tudo, corrija tudo que for possível... varredura geral"): percorrida a
 > estrutura inteira do menu (Decisão clínica, Pacientes e prática, Conhecimento, Comunicação,

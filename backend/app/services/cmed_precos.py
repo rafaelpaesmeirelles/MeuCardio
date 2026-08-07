@@ -311,6 +311,72 @@ def casar_substancia(substancia_cmed: str, farmacos_normalizados: list[tuple[int
     return exatos or [drug_id for drug_id, _ in candidatos]
 
 
+def componentes_normalizados(nome: str) -> tuple[frozenset[str], ...]:
+    """Separa um nome de combinação (`;` no lado CMED, `+` no `generic_name`
+    local) em componentes, normalizando cada um pelo mesmo `palavras_normalizadas`
+    usado no princípio isolado — inclusive removendo sal (`PALAVRAS_SAL`), que é
+    onde o texto dos dois lados mais diverge (ex.: "besilato de anlodipino" ×
+    "Anlodipino (besilato)"). A ordem devolvida segue a do texto original; quem
+    compara duas combinações (`_combinacao_bate`) não depende dela."""
+    partes = re.split(r"[;+]", nome)
+    return tuple(
+        p for p in (palavras_normalizadas(parte) for parte in partes if parte.strip())
+        if p
+    )
+
+
+def _combinacao_bate(cmed_componentes: tuple[frozenset[str], ...], local_componentes: tuple[frozenset[str], ...]) -> bool:
+    """Mesmo número de princípios ativos dos dois lados, e cada componente da
+    CMED é subconjunto (`eh_match`, a mesma regra assimétrica do princípio
+    isolado) de um componente local DISTINTO — permite que o lado local tenha
+    glosa a mais por componente (ex.: "Ácido Acetilsalicílico (AAS)" tem a
+    palavra extra "AAS", que a CMED nunca escreve), sem deixar "A + B" casar
+    com "A + B + C" nem com "A" isolado. N de componentes é pequeno (2-3 nos
+    fármacos deste catálogo) — busca por permutação é barata; volume grande
+    (misturas de nutrição parenteral, 15+ princípios) já é descartado pelo
+    `len` diferente antes de tentar."""
+    if len(cmed_componentes) != len(local_componentes):
+        return False
+    from itertools import permutations
+    return any(
+        all(eh_match(cmed_c, local_c) for cmed_c, local_c in zip(cmed_componentes, ordem))
+        for ordem in permutations(local_componentes)
+    )
+
+
+def casar_combinacao(
+    substancia_cmed: str, combinacoes_normalizadas: list[tuple[int, tuple[frozenset[str], ...]]],
+) -> list[int]:
+    """Casa uma linha de combinação da CMED (substância com `;`) contra os
+    `Drug` locais cujo `generic_name` também é combinação (com `+`). Exige o
+    MESMO NÚMERO de princípios ativos dos dois lados — confundir "A + B" com
+    "A + B + C" troca o medicamento, não só perde ou ganha uma palavra de sal.
+    Nunca "empresta" preço de combinação a princípio isolado nem o inverso —
+    é a regra já documentada no CLAUDE.md ("a regra de combinação não empresta
+    PMC ao princípio isolado"), aplicada aqui pelo lado oposto: irmã, não
+    substituta."""
+    if not eh_combinacao(substancia_cmed):
+        return []
+    cmed_componentes = componentes_normalizados(substancia_cmed)
+    if len(cmed_componentes) < 2:
+        # `;` presente mas um dos lados normalizou pra vazio/duplicata — não
+        # arrisca casar combinação de N princípios com registro de 1.
+        return []
+    candidatos = [
+        drug_id for drug_id, local_componentes in combinacoes_normalizadas
+        if _combinacao_bate(cmed_componentes, local_componentes)
+    ]
+    if not candidatos:
+        return []
+    # Em empate, prefere igualdade exata de palavras (sem glosa extra local) —
+    # mesmo critério de desempate do princípio isolado.
+    exatos = [
+        drug_id for drug_id, local_componentes in combinacoes_normalizadas
+        if drug_id in candidatos and frozenset(local_componentes) == frozenset(cmed_componentes)
+    ]
+    return exatos or candidatos
+
+
 # -------------------------------------------------------------- resolução --
 def _icms_por_uf() -> dict:
     return json.loads(ARQUIVO_ICMS.read_text())["ufs"]
@@ -393,7 +459,16 @@ def atualizar(db: Session, forcar: bool = False, diretorio: Path | None = None) 
     # tela (medido em produção, 03/08/2026: "metoprolol-succinato" roubou o
     # match de "metoprolol").
     farmacos = db.query(Drug.id, Drug.generic_name).filter(Drug.published.is_(True)).all()
-    farmacos_normalizados = [(drug_id, palavras_normalizadas(nome)) for drug_id, nome in farmacos]
+    farmacos_normalizados = [
+        (drug_id, palavras_normalizadas(nome)) for drug_id, nome in farmacos if "+" not in nome
+    ]
+    # Combinação de dose fixa é casada à parte, por igualdade exata do
+    # conjunto de princípios ativos (ver `casar_combinacao`) — nunca pelo
+    # casamento assimétrico de princípio isolado, que aceitaria "A" bater em
+    # "A + B" se não fosse filtrado daqui.
+    combinacoes_normalizadas = [
+        (drug_id, componentes_normalizados(nome)) for drug_id, nome in farmacos if "+" in nome
+    ]
 
     linhas = list(parsear_linhas(caminho))
 
@@ -403,7 +478,10 @@ def atualizar(db: Session, forcar: bool = False, diretorio: Path | None = None) 
 
     casados = 0
     for linha in linhas:
-        drug_ids = casar_substancia(linha["substancia"], farmacos_normalizados)
+        if eh_combinacao(linha["substancia"]):
+            drug_ids = casar_combinacao(linha["substancia"], combinacoes_normalizadas)
+        else:
+            drug_ids = casar_substancia(linha["substancia"], farmacos_normalizados)
         # Uma apresentação pode servir >1 Drug só no caso raro de dois slugs
         # locais mapeando pro mesmo nome (não deveria acontecer, mas não
         # arrisca perder preço se acontecer); sem match, drug_id fica None e
