@@ -8609,5 +8609,78 @@
       "eletrodo de ventriculo esquerdo",
       "planejamento pre-implante"
     ]
+  },
+  {
+    "slug": "provas-de-funcao-tireoidiana-tsh-t4-livre-na-disfuncao-tireoidiana-por-amiodarona",
+    "name": "Provas de função tireoidiana (TSH, T4 livre) no diagnóstico e na monitorização da disfunção tireoidiana por amiodarona",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "TSH e T4 livre séricos, usados para classificar e diferenciar hipotireoidismo induzido por amiodarona (AIH) de tireotoxicose induzida por amiodarona (AIT), no paciente em uso agudo ou crônico do fármaco.",
+    "reference_range": "TSH suprimido com T4 livre elevado sugere AIT; TSH elevado com T4 livre baixo ou normal-baixo sugere AIH. A diferenciação entre AIT tipo 1 (hipertireoidismo induzido por iodo em bócio nodular ou doença de Graves latente) e tipo 2 (tireoidite destrutiva em glândula previamente normal) frequentemente exige exame complementar (ex. Doppler tireoidiano, captação de iodo radioativo) além de TSH/T4 livre isolados.",
+    "indications": "Paciente em uso de amiodarona com sintomas sugestivos de disfunção tireoidiana; acompanhamento de hipotireoidismo subclínico já identificado induzido por amiodarona.",
+    "interpretation": "Segundo a diretriz 2018 da European Thyroid Association — ETA (Bartalena L et al., Eur Thyroid J. 2018;7(2):55-66, DOI 10.1159/000486957, PMID 29594056): o AIH não exige suspensão da amiodarona, sendo tratado com reposição de levotiroxina quando manifesto (formas subclínicas podem ser acompanhadas sem tratamento, com reteste a cada 4-6 meses pelo risco de progressão para hipotireoidismo manifesto). Reconhecem-se dois tipos principais de AIT: tipo 1, hipertireoidismo induzido por iodo em bócio nodular ou doença de Graves latente, tratado preferencialmente com tionamidas (por vezes associadas a perclorato de sódio por algumas semanas para sensibilizar a glândula); e tipo 2, por tireoidite destrutiva em glândula previamente normal, tratado com glicocorticoide oral. Formas mistas/indefinidas existem e são tratadas com tionamidas, associando glicocorticoide desde o início se o diagnóstico for incerto, ou após algumas semanas se a resposta às tionamidas isoladas for pobre. A decisão de continuar ou suspender a amiodarona no AIT deve ser individualizada por estratificação de risco cardiovascular, tomada em conjunto entre cardiologista e endocrinologista; tireoidectomia de emergência pode ser necessária em deterioração cardíaca rápida, para qualquer forma de AIT.",
+    "limitations": "A diretriz foca no diagnóstico e no manejo da disfunção já instalada — ela **não detalha, de forma explícita, um protocolo de rastreio basal** (antes de iniciar a amiodarona) **nem a periodicidade de rastreio em paciente assintomático**, exceto o reteste a cada 4-6 meses já indicado para o seguimento do hipotireoidismo subclínico identificado. A prática amplamente adotada na cardiologia de dosar TSH basal antes de iniciar amiodarona e reavaliar periodicamente não está, portanto, prescrita com intervalo definido para todos os cenários por este documento específico. Diferenciar AIT tipo 1 de tipo 2 apenas por TSH/T4 livre não é possível — a distinção com frequência exige exame de imagem/captação, fora do escopo desta ficha.",
+    "source_refs": [
+      "Bartalena L, Bogazzi F, Chiovato L, Hubalewska-Dydejczyk A, Links TP, Vanderpump M. 2018 European Thyroid Association (ETA) Guidelines for the Management of Amiodarone-Associated Thyroid Dysfunction. Eur Thyroid J. 2018;7(2):55-66. DOI 10.1159/000486957. PMID 29594056."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "amiodarona",
+      "disfuncao tireoidiana",
+      "tsh",
+      "t4 livre",
+      "tireotoxicose",
+      "hipotireoidismo induzido por farmaco"
+    ]
+  },
+  {
+    "slug": "monitorizacao-de-potassio-e-creatinina-apos-inicio-de-antagonista-mineralocorticoide-sobre-ieca-bra",
+    "name": "Monitorização de potássio e creatinina após início de antagonista mineralocorticoide em uso concomitante de IECA/BRA",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Potássio sérico e creatinina (com estimativa da taxa de filtração glomerular), aferidos antes e logo após o início de um antagonista mineralocorticoide (espironolactona, eplerenona) em paciente já em uso de inibidor da ECA ou bloqueador do receptor de angiotensina, para detecção precoce de hipercalemia e de piora aguda da função renal.",
+    "reference_range": "Valores de alerta usados no estudo de referência: potássio ≥6,0 mmol/L, creatinina ≥220 µmol/L (aproximadamente 2,5 mg/dL) ou aumento ≥30% da creatinina em relação ao valor basal.",
+    "indications": "Início de antagonista mineralocorticoide em paciente já em uso de IECA/BRA (cenário típico: insuficiência cardíaca com fração de ejeção reduzida), com atenção redobrada quando o potássio basal está entre 5,0 e 5,5 mmol/L ou a TFG estimada entre 45 e 59 mL/min/1,73 m² — fatores preditivos independentes de hipercalemia grave identificados no estudo de referência.",
+    "interpretation": "Segundo estudo de coorte em atenção primária no Reino Unido (Sinnott SJ et al., BMJ Open. 2017;7(11):e018153, DOI 10.1136/bmjopen-2017-018153, PMID 29150471; 10.546 pacientes que iniciaram antagonista mineralocorticoide em uso concomitante de IECA/BRA, entre 2004 e 2014): apenas 3.291 (31,2%) tiveram registro de monitorização bioquímica em até 2 semanas após o início. Entre os que tiveram monitorização em até 2 meses, 2,0% apresentaram potássio ≥6 mmol/L e 2,7% apresentaram creatinina ≥220 µmol/L, enquanto 13,5% tiveram aumento ≥30% da creatinina em relação ao basal. Potássio basal entre 5,0 e 5,5 mmol/L (OR 3,59; IC95% 2,43-5,32, comparado a <5,0 mmol/L) e TFG estimada entre 45 e 59 mL/min/1,73 m² (OR 2,06; IC95% 1,26-3,35, comparado a ≥60) foram preditores independentes de potássio ≥6 mmol/L. Mulheres e pacientes diabéticos tiveram maior chance de aumento ≥30% da creatinina.",
+    "limitations": "Estudo observacional de coorte em atenção primária (não é ensaio clínico randomizado), que retrata a prática assistencial real — menos de um terço dos pacientes teve monitorização registrada em 2 semanas. O achado central é uma medida da qualidade assistencial observada (baixa adesão à monitorização) associada a eventos bioquímicos adversos mensuráveis, não a validação formal de um intervalo ótimo específico de monitorização — o desenho observacional não estabelece causalidade direta entre monitorizar mais cedo e prevenir o evento adverso, apenas a associação.",
+    "source_refs": [
+      "Sinnott SJ, Mansfield KE, Schmidt M, Bhaskaran K, Smeeth L, Nitsch D, Tomlinson LA. Biochemical monitoring after initiation of aldosterone antagonist therapy in users of renin-angiotensin system blockers: a UK primary care cohort study. BMJ Open. 2017;7(11):e018153. DOI 10.1136/bmjopen-2017-018153. PMID 29150471."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "antagonista mineralocorticoide",
+      "espironolactona",
+      "hipercalemia",
+      "monitorizacao laboratorial",
+      "ieca",
+      "bra"
+    ]
+  },
+  {
+    "slug": "ventriculografia-radioisotopica-muga-na-vigilancia-de-cardiotoxicidade-por-antraciclina",
+    "name": "Ventriculografia radioisotópica (MUGA) na vigilância de cardiotoxicidade por antraciclina — e a exceção da doxorrubicina lipossomal peguilada",
+    "category": "imagem",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Fração de ejeção do ventrículo esquerdo calculada por contagem de radioatividade em hemácias autólogas marcadas com tecnécio-99m, sincronizada (gated) ao ciclo cardíaco pelo eletrocardiograma — método historicamente usado para vigilância seriada da função ventricular durante quimioterapia potencialmente cardiotóxica, anterior à disseminação do ecocardiograma com strain longitudinal global.",
+    "reference_range": "Queda ≥10% da fração de ejeção em relação ao valor basal, ou fração de ejeção abaixo de 50%, são os limiares usados operacionalmente para definir toxicidade relevante nos estudos que empregam MUGA seriado citados abaixo.",
+    "indications": "Vigilância seriada da fração de ejeção durante quimioterapia com antraciclina, sobretudo quando a janela ecocardiográfica é inadequada, ou quando já existe série prévia de MUGA do mesmo paciente — manter o mesmo método ao longo do seguimento reduz a variabilidade de comparar técnicas diferentes.",
+    "interpretation": "Dois estudos retrospectivos com doxorrubicina lipossomal peguilada (PLD) em neoplasia ginecológica, usando MUGA (e ecocardiograma) para acompanhamento seriado da FEVE, ilustram um achado específico dessa formulação, não da antraciclina convencional: Gill SE et al. (Gynecol Oncol. 2013;129(3):544-547, DOI 10.1016/j.ygyno.2013.03.012, PMID 23523653; 141 pacientes com ao menos uma avaliação de FEVE por MUGA ou ecocardiograma) encontraram queda de FEVE >10% em apenas 10 pacientes (7%); 93 (66%) nunca precisaram de reavaliação de FEVE durante o tratamento; e só 1 paciente teve queda clinicamente significativa (FEVE <50%), numa dose cumulativa de 1.670 mg/m². Os autores concluíram que a vigilância rotineira de FEVE não pareceu necessária nem custo-efetiva na ausência de outros fatores de risco, nessa população tratada com PLD. Uyar D et al. (Gynecol Oncol. 2004;94(1):147-151, DOI 10.1016/j.ygyno.2004.03.024, PMID 15262133; 22 pacientes com 6 ou mais ciclos de PLD, dose cumulativa mediana de 483 mg/m², variando até 1.699 mg/m²) não encontraram nenhum paciente com queda de FEVE abaixo de 50% nem redução ≥10% em relação ao basal, nem evidência clínica de insuficiência cardíaca, apesar de doses cumulativas prolongadas.",
+    "limitations": "**A conclusão de que a vigilância rotineira pode ser dispensável aplica-se especificamente à doxorrubicina LIPOSSOMAL PEGUILADA nesses dois estudos — não deve ser extrapolada para a doxorrubicina convencional (não lipossomal) ou para outras antraciclinas, para as quais a vigilância seriada de função ventricular (por ecocardiograma com strain, MUGA ou ressonância cardíaca) permanece prática padrão recomendada.** O MUGA envolve exposição à radiação ionizante, ao contrário do ecocardiograma, e por isso vem sendo progressivamente substituído pelo ecocardiograma com strain longitudinal global (ver ficha correspondente desta biblioteca) como método de vigilância de primeira linha na maior parte dos protocolos atuais. Os dois estudos citados são retrospectivos, de instituição única, com amostras modestas (141 e 22 pacientes), numa população oncológica ginecológica específica — não necessariamente generalizáveis a outros contextos tumorais ou a outras antraciclinas.",
+    "source_refs": [
+      "Gill SE, Savage K, Wysham WZ, Blackhurst DW, Winter WE, Puls LE. Continuing routine cardiac surveillance in long-term use of pegylated liposomal doxorubicin: is it necessary? Gynecol Oncol. 2013;129(3):544-547. DOI 10.1016/j.ygyno.2013.03.012. PMID 23523653.",
+      "Uyar D, Kulp B, Peterson G, Zanotti K, Markman M, Belinson J. Cardiac safety profile of prolonged (>or=6 cycles) pegylated liposomal doxorubicin administration in patients with gynecologic malignancies. Gynecol Oncol. 2004;94(1):147-151. DOI 10.1016/j.ygyno.2004.03.024. PMID 15262133."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "muga",
+      "ventriculografia radioisotopica",
+      "cardiotoxicidade",
+      "antraciclina",
+      "doxorrubicina lipossomal peguilada",
+      "fracao de ejecao"
+    ]
   }
 ]
