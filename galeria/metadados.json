@@ -5560,5 +5560,73 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cimt-espessura-medio-intimal-carotida-duplo-contorno",
+    "title": "Ultrassom Doppler de carótidas — Espessura médio-intimal (CIMT)",
+    "modality": "Ultrassonografia",
+    "theme": "Prevenção e lipídios",
+    "file_path": "eco/cimt-espessura-medio-intimal-carotida-duplo-contorno.jpg",
+    "findings": "Ultrassom modo-B da artéria carótida comum direita (RT.CCA) e de seu bulbo (RT.CCA bulb), com as setas marcando o padrão de dupla linha (duas linhas ecogênicas paralelas separadas por um espaço eco-lucente) na parede distal do vaso — a interface lúmen-íntima e a interface média-adventícia. É exatamente essa distância entre as duas linhas, medida na parede distal da carótida comum a 1 cm da bifurcação, que define a espessura médio-intimal (CIMT).",
+    "teaching_points": "CIMT é biomarcador de aterosclerose subclínica, associado a eventos cardiovasculares futuros de forma independente de idade, sexo e fatores de risco clássicos — mas seu papel prático é mais restrito do que se pensava nos anos 2000: as diretrizes atuais de prevenção não recomendam a medida rotineira em toda a população, reservando-a como recritério opcional de reclassificação em pacientes de risco intermediário, sobretudo pela variabilidade técnica da medida (necessidade de protocolo padronizado, treinamento do operador, leitura semiautomática) e pela sobreposição de valores entre quem terá e quem não terá evento. Espessamento médio-intimal (processo difuso) e placa focal são achados ateroscleróticos distintos, ainda que relacionados — a placa surge mais tardiamente na história natural, enquanto o espessamento pode já estar presente da infância à vida adulta.",
+    "source_name": "Pakistan Journal of Medical Sciences (via PubMed Central, PMC3858954)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3858954/",
+    "license": "CC BY 3.0",
+    "attribution": "Figura 2 de: Khan SP, Gul P, Khemani S, Yaqub Z. Determination of site-specific carotid-intima media thickness: common-carotid artery and carotid bifurcation in hypercholesterolemia patients. Pak J Med Sci. 2013;29(5):1249-1253. DOI: 10.12669/pjms.295.3830. PMID: 24353730. Distribuído sob licença Creative Commons Attribution 3.0.",
+    "tags": [
+      "cimt",
+      "espessura médio-intimal",
+      "carótida",
+      "aterosclerose subclínica",
+      "ultrassom doppler",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "takotsubo-angiografia-coronariana-normal-ventriculografia-abaulamento-apical",
+    "title": "Angiografia coronariana sem lesões obstrutivas e ventriculografia com abaulamento apical na síndrome de takotsubo",
+    "modality": "Angiografia e ventriculografia",
+    "theme": "Saúde mental e cardiologia",
+    "file_path": "angiografia/takotsubo-angiografia-coronariana-normal-ventriculografia-abaulamento-apical.jpg",
+    "findings": "Painel de 4 imagens do mesmo paciente. (a) e (b): cinecoronariografia da artéria coronária esquerda e da artéria coronária direita, ambas sem lesões obstrutivas — achado que descarta doença aterosclerótica como causa do quadro. (c) e (d): ventriculografia esquerda em diástole e sístole, mostrando o contorno característico da síndrome de takotsubo — acinesia/discinesia apical com hipercinesia compensatória da base, dando ao ventrículo esquerdo o aspecto do 'takotsubo' (armadilha japonesa para polvo) que dá nome à síndrome.",
+    "teaching_points": "O diagnóstico de takotsubo depende de dois achados combinados, não de um isolado: disfunção ventricular esquerda transitória com o padrão típico de balonamento apical/hipercinesia basal E ausência de doença coronariana obstrutiva que explique essa disfunção (Critérios de Mayo Clinic revisados) — daí a angiografia coronariana normal ser tão essencial ao diagnóstico quanto a própria ventriculografia alterada. O caso de origem (takotsubo complicando pancreatite aguda) ilustra um ponto frequentemente esquecido: embora a associação clássica seja com estresse emocional ('síndrome do coração partido'), gatilhos físicos — doença aguda grave, procedimentos, abstinência alcoólica, entre outros — são, na verdade, mais comuns que o gatilho emocional isolado. Isso reforça que takotsubo é uma síndrome do eixo de estresse-catecolaminas de forma ampla, não exclusivamente um diagnóstico psiquiátrico-cardiológico.",
+    "source_name": "BMC Gastroenterology (via PubMed Central, PMC7989002)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7989002/",
+    "license": "CC BY 4.0",
+    "attribution": "Figura 2 de: Yeh J, Carroll J. Takotsubo cardiomyopathy complicating acute pancreatitis: a case report. BMC Gastroenterol. 2021;21:114. DOI: 10.1186/s12876-021-01725-5. PMID: 33757444. Distribuído sob licença Creative Commons Attribution 4.0 International.",
+    "tags": [
+      "takotsubo",
+      "cardiomiopatia de takotsubo",
+      "angiografia coronariana",
+      "ventriculografia",
+      "abaulamento apical",
+      "coronárias normais"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "takotsubo-ecg-st-elevacao-anterior-mimetizando-iam",
+    "title": "ECG na apresentação aguda da síndrome de takotsubo — supradesnivelamento de ST em parede anterior mimetizando IAM",
+    "modality": "ECG",
+    "theme": "Saúde mental e cardiologia",
+    "file_path": "ecg/takotsubo-st-elevacao-anterior-mimetizando-iam.jpg",
+    "findings": "ECG de 12 derivações do momento da apresentação, mostrando supradesnivelamento do segmento ST em derivações anteriores — traçado indistinguível, à primeira vista, de um infarto agudo do miocárdio com supradesnivelamento de ST (IAMCSST) de parede anterior. Foi exatamente esse padrão, somado à troponina seriada em elevação (de 0,77 para 1019,63 ng/mL), que levou ao diagnóstico presuntivo inicial de síndrome coronariana aguda e à trombólise do paciente, antes da angiografia mostrar coronárias sem lesão obstrutiva.",
+    "teaching_points": "O ECG isolado não diferencia takotsubo de IAMCSST na fase aguda — ambos podem cursar com supradesnivelamento de ST, elevação de troponina e evolução eletrocardiográfica com ondas Q, como ocorreu neste caso no ECG seriado. A diferenciação definitiva exige cateterismo com ventriculografia (ausência de lesão obstrutiva que explique a disfunção contrátil) ou, em paciente estável, ecocardiograma seguido de angiotomografia coronariana. Na prática, isso significa que suspeita clínica de takotsubo NÃO deve atrasar o protocolo padrão de síndrome coronariana aguda — a reperfusão de emergência (trombólise ou angioplastia primária) costuma ser iniciada antes de o diagnóstico diferencial estar resolvido, como neste caso, e o diagnóstico de takotsubo só é confirmado depois, na sala de hemodinâmica.",
+    "source_name": "BMC Gastroenterology (via PubMed Central, PMC7989002)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7989002/",
+    "license": "CC BY 4.0",
+    "attribution": "Figura 1 de: Yeh J, Carroll J. Takotsubo cardiomyopathy complicating acute pancreatitis: a case report. BMC Gastroenterol. 2021;21:114. DOI: 10.1186/s12876-021-01725-5. PMID: 33757444. Distribuído sob licença Creative Commons Attribution 4.0 International.",
+    "tags": [
+      "takotsubo",
+      "ecg",
+      "supradesnivelamento de st",
+      "diagnóstico diferencial de iam",
+      "cardiomiopatia de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

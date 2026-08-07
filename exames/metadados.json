@@ -8006,5 +8006,76 @@
       "cardiotoxicidade",
       "cardioproteção"
     ]
+  },
+  {
+    "slug": "espessura-medio-intimal-de-carotida-cimt",
+    "name": "Espessura médio-intimal de carótida (CIMT)",
+    "category": "imagem",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Distância entre a interface lúmen-íntima e a interface média-adventícia da parede da artéria carótida, medida por ultrassom modo-B de alta resolução — biomarcador de aterosclerose subclínica difusa, distinto da placa carotídea focal (achado aterosclerótico mais tardio na história natural da doença).",
+    "reference_range": "Não há um único corte universal — o valor varia com idade, sexo e etnia, e é interpretado por percentil populacional (ex.: >percentil 75 sugere risco aumentado) mais do que por um limiar absoluto único. Como referência prática, valores acima de aproximadamente 0,9 mm na carótida comum já são considerados espessados na maioria dos protocolos, mas o achado deve ser sempre contextualizado ao percentil por idade/sexo, não usado isoladamente.",
+    "indications": "Reclassificação de risco cardiovascular em pacientes de risco intermediário pelos escores clássicos, quando a decisão de iniciar ou intensificar estatina permanece incerta — uso semelhante ao do escore de cálcio coronariano, embora com evidência mais heterogênea e sem a mesma força de recomendação nas diretrizes atuais. Não é exame de rastreamento populacional nem substitui o escore de cálcio coronariano onde este está disponível.",
+    "interpretation": "CIMT aumentada é preditor independente de eventos cardiovasculares futuros (infarto, AVC), mesmo ajustado para os fatores de risco clássicos — mas seu valor incremental sobre os escores de risco tradicionais é modesto, e a variabilidade da medida entre operadores e aparelhos é uma limitação prática relevante que explica por que o exame perdeu espaço para o escore de cálcio coronariano nas diretrizes mais recentes de prevenção primária.",
+    "limitations": "Depende de protocolo padronizado de aquisição (segmento medido, ângulo, ciclo cardíaco) e de treinamento do operador — variabilidade inter e intraobservador é a principal limitação técnica. Progressão de CIMT ao longo do tempo, usada em alguns estudos como desfecho substituto de resposta terapêutica, tem correlação inconsistente com desfechos clínicos duros, e por isso não é recomendada como ferramenta rotineira de monitorização de tratamento hipolipemiante na prática clínica.",
+    "source_refs": [
+      "Bauer M, Caviezel S, Teynor A, Erbel R, Mahabadi AA, Schmidt-Trucksäss A. Carotid intima-media thickness as a biomarker of subclinical atherosclerosis. Swiss Med Wkly. 2012;142:w13705. DOI: 10.4414/smw.2012.13705. PMID: 23135891."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cimt",
+      "espessura médio-intimal",
+      "carótida",
+      "aterosclerose subclínica",
+      "risco cardiovascular",
+      "reclassificação de risco"
+    ]
+  },
+  {
+    "slug": "teste-de-vasorreatividade-aguda-na-hipertensao-arterial-pulmonar",
+    "name": "Teste de vasorreatividade aguda (durante cateterismo cardíaco direito)",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Resposta hemodinâmica aguda da circulação pulmonar a um vasodilatador de ação curta (óxido nítrico inalatório, de preferência, ou iloprosta inalatória; epoprostenol IV como alternativa) administrado durante o próprio cateterismo cardíaco direito diagnóstico — identifica o subgrupo de pacientes com hipertensão arterial pulmonar (HAP) capaz de responder a bloqueador de canal de cálcio em altas doses como terapia de primeira linha.",
+    "reference_range": "Resposta positiva definida (critério de Sitbon, adotado pelas diretrizes ESC/ERS): queda da pressão arterial pulmonar média (mPAP) ≥10 mmHg até atingir valor absoluto ≤40 mmHg, com débito cardíaco aumentado ou inalterado. O critério vale tanto para quem tem mPAP basal >40 mmHg quanto para quem já parte de valor mais baixo.",
+    "indications": "Recomendado em todo paciente com HAP idiopática, hereditária ou associada ao uso de anorexígeno/droga — grupos em que a prevalência de resposta positiva é maior (em torno de 10% dos casos, concentrada nos idiopáticos). Não é indicado rotineiramente nos demais grupos de hipertensão pulmonar (associada a doença do tecido conjuntivo, cardiopatia esquerda, doença pulmonar, tromboembólica crônica), nos quais a resposta a bloqueador de canal de cálcio é rara e potencialmente perigosa.",
+    "interpretation": "Paciente respondedor (~10% dos HAP idiopáticos) tem prognóstico substancialmente melhor com bloqueador de canal de cálcio em monoterapia e deve ser reavaliado com novo cateterismo em 3-6 meses para confirmar resposta sustentada antes de considerar a terapia definitiva — resposta positiva ao teste agudo não garante resposta clínica mantida a longo prazo, daí a necessidade dessa reavaliação. Em registro contemporâneo (PHSANZ, Austrália/Nova Zelândia), apenas 28% dos testados foram positivos e, destes, os respondedores de longo prazo a bloqueador de canal de cálcio tiveram sobrevida em 5 anos de 100%, contra 61% nos não respondedores mantidos em bloqueador de canal de cálcio.",
+    "limitations": "O mesmo registro mostrou uso e documentação inconsistentes do teste na prática real — só 22% dos pacientes elegíveis foram testados, com 26% de dados incompletos, apontando para subutilização sistemática apesar da recomendação de diretriz. Teste negativo não exclui necessidade de tratamento; apenas direciona para terapia específica de HAP em vez de bloqueador de canal de cálcio. Bloqueador de canal de cálcio nunca deve ser iniciado empiricamente sem teste de vasorreatividade positivo documentado, pelo risco de hipotensão sistêmica grave e piora hemodinâmica em não respondedor.",
+    "source_refs": [
+      "Chandrasekara S, Lau EM, Anderson J, et al. Acute Vasoreactivity Testing and Outcomes in Pulmonary Arterial Hypertension: A Call for Increased Testing. Heart Lung Circ. 2022;32(2):156-165. DOI: 10.1016/j.hlc.2022.09.005. PMID: 36503731.",
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Respir J. 2023;61(1):2200879."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hipertensão arterial pulmonar",
+      "teste de vasorreatividade",
+      "cateterismo cardíaco direito",
+      "bloqueador de canal de cálcio",
+      "óxido nítrico inalatório"
+    ]
+  },
+  {
+    "slug": "excursao-sistolica-do-plano-do-anel-tricuspide-tapse",
+    "name": "Excursão sistólica do plano do anel tricúspide (TAPSE)",
+    "category": "imagem",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Deslocamento longitudinal do anel tricúspide lateral em direção ao ápice durante a sístole, medido por modo-M ao ecocardiograma transtorácico (janela apical de 4 câmaras) — parâmetro simples e reprodutível de função sistólica longitudinal do ventrículo direito, útil quando a geometria complexa do VD limita outras medidas de função.",
+    "reference_range": "TAPSE <1,8 cm identifica disfunção sistólica de VD com valor prognóstico em hipertensão pulmonar. Como referência geral de normalidade ecocardiográfica (fora do contexto de HP), TAPSE ≥1,7 cm é considerado normal pelas diretrizes de quantificação de câmaras cardíacas.",
+    "indications": "Estratificação de risco e acompanhamento longitudinal de pacientes com hipertensão arterial pulmonar já diagnosticada — compõe, junto de outros parâmetros clínicos, hemodinâmicos e laboratoriais, os escores de risco multiparamétricos (ex.: REVEAL, tabela de risco ESC/ERS) usados para guiar intensificação terapêutica.",
+    "interpretation": "No estudo original de validação (63 pacientes com HP submetidos a cateterismo direito e ecocardiograma pareados), TAPSE <1,8 cm associou-se a maior disfunção sistólica de VD (índice cardíaco 1,9 vs. 2,7 L/min/m²), maior remodelamento de câmaras direitas e sobrevida em 1-2 anos de 60%/50% versus 94%/88% em quem tinha TAPSE ≥1,8 cm — cada redução de 1 mm no TAPSE aumentou o risco de óbito em 17%, associação que se manteve após ajuste para variáveis hemodinâmicas e ecocardiográficas.",
+    "limitations": "TAPSE é medida unidimensional (longitudinal) e não captura a contração radial nem torsional do VD, podendo ficar pseudonormal em situações de pós-carga muito elevada com contratilidade já comprometida ('acoplamento VD-artéria pulmonar' desfavorável mascarado). Também é dependente de ângulo (erro de medida se o feixe de ultrassom não estiver alinhado ao movimento longitudinal do anel) e pode estar artificialmente reduzido após cirurgia cardíaca prévia, independente da função real do VD.",
+    "source_refs": [
+      "Forfia PR, Fisher MR, Mathai SC, et al. Tricuspid annular displacement predicts survival in pulmonary hypertension. Am J Respir Crit Care Med. 2006;174(9):1034-1041. DOI: 10.1164/rccm.200604-547OC. PMID: 16888289."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tapse",
+      "função do ventrículo direito",
+      "ecocardiograma",
+      "hipertensão arterial pulmonar",
+      "prognóstico"
+    ]
   }
 ]
