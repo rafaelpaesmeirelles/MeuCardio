@@ -147,8 +147,14 @@ def _alteplase_stemi(d: dict) -> dict:
         raise ValueError("Peso precisa ser maior que zero.")
 
     bolus = 15.0
-    fase_30 = min(0.75 * peso, 50.0)
-    fase_60 = min(0.50 * peso, 35.0)
+    if peso >= 67:
+        # ACC/AHA 2025 explicita este ramo como esquema fixo, não como simples
+        # aplicação dos tetos da fórmula peso-ajustada.
+        fase_30 = 50.0
+        fase_60 = 35.0
+    else:
+        fase_30 = 0.75 * peso
+        fase_60 = 0.50 * peso
     total = bolus + fase_30 + fase_60
     return {
         "farmaco": "Alteplase (tPA)",
@@ -181,8 +187,8 @@ _ALTEPLASE_STEMI = Calculator(
     kind="dose",
     limitations=[
         "Uso exclusivo para fibrinólise de STEMI; não usar este regime para AVC isquêmico ou TEP.",
-        "Em adultos ≥67 kg, o esquema resulta em 100 mg totais: 15 mg bolus + 50 mg/30 min + 35 mg/60 min.",
-        "Em adultos <67 kg, usar 15 mg bolus + 0,75 mg/kg (máx 50 mg) em 30 min + 0,5 mg/kg (máx 35 mg) nos 60 min seguintes.",
+        "Em adultos ≥67 kg, o esquema é fixo e resulta em 100 mg totais: 15 mg bolus + 50 mg/30 min + 35 mg/60 min.",
+        "Em adultos <67 kg, usar 15 mg bolus + 0,75 mg/kg em 30 min + 0,5 mg/kg nos 60 min seguintes; os tetos de 50/35 mg só são alcançados no ramo ≥67 kg da tabela ACC/AHA 2025.",
         "A calculadora não decide indicação de fibrinólise nem verifica contraindicações hemorrágicas.",
     ],
 )
