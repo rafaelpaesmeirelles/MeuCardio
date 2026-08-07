@@ -15,6 +15,10 @@ calc.REGISTRY.update(PERIOPERATIVE_REGISTRY)
 router = APIRouter(prefix="/api/calculators", tags=["calculadoras"])
 
 
+def _fonte(c):
+    return getattr(c, "fonte_producao", None)
+
+
 @router.get("")
 def list_calculators(_=Depends(current_user)):
     return [
@@ -25,6 +29,7 @@ def list_calculators(_=Depends(current_user)):
             "purpose": c.purpose,
             "status": c.status,
             "kind": c.kind,
+            "fonte_producao": _fonte(c),
         }
         for c in sorted(calc.REGISTRY.values(), key=lambda c: c.name)
     ]
@@ -42,6 +47,7 @@ def get_calculator(slug: str, _=Depends(current_user)):
         "purpose": c.purpose,
         "status": c.status,
         "kind": c.kind,
+        "fonte_producao": _fonte(c),
         "reference": c.reference,
         "limitations": c.limitations,
         "fields": [asdict(f) for f in c.fields],
@@ -51,7 +57,10 @@ def get_calculator(slug: str, _=Depends(current_user)):
 @router.post("/{slug}/run")
 def run_calculator(slug: str, payload: dict, _=Depends(current_user)):
     try:
-        return calc.run(slug, payload)
+        result = calc.run(slug, payload)
+        c = calc.REGISTRY.get(slug)
+        result["fonte_producao"] = _fonte(c) if c else None
+        return result
     except KeyError:
         raise HTTPException(status_code=404, detail="Calculadora não encontrada.")
     except ValueError as e:
