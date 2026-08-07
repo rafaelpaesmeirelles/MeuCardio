@@ -6,7 +6,9 @@ from .dose_calculators_antiagregantes_sca2025_chatgpt import ANTIAGREGANTES_SCA_
 from .dose_calculators_anticoagulacao_sca2025_chatgpt import ANTICOAGULACAO_SCA_2025_DOSE_REGISTRY
 from .dose_calculators_doac_brasil_chatgpt import DOAC_BRASIL_DOSE_REGISTRY
 from .dose_calculators_enoxaparina_sca_chatgpt import ENOXAPARINA_SCA_DOSE_REGISTRY
+from .dose_calculators_entresto_brasil_chatgpt import ENTRESTO_BRASIL_DOSE_REGISTRY
 from .dose_calculators_fibrinoliticos_stemi_chatgpt import FIBRINOLITICOS_STEMI_DOSE_REGISTRY
+from .dose_calculators_icfer_chatgpt import ICFER_DOSE_REGISTRY
 from .dose_calculators_pals2025_chatgpt import PALS_2025_DOSE_REGISTRY
 from .perioperative_calculators_frailty import FRAILTY_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
@@ -18,7 +20,9 @@ calculators.REGISTRY.update(ANTIAGREGANTES_SCA_2025_DOSE_REGISTRY)
 calculators.REGISTRY.update(ANTICOAGULACAO_SCA_2025_DOSE_REGISTRY)
 calculators.REGISTRY.update(DOAC_BRASIL_DOSE_REGISTRY)
 calculators.REGISTRY.update(ENOXAPARINA_SCA_DOSE_REGISTRY)
+calculators.REGISTRY.update(ENTRESTO_BRASIL_DOSE_REGISTRY)
 calculators.REGISTRY.update(FIBRINOLITICOS_STEMI_DOSE_REGISTRY)
+calculators.REGISTRY.update(ICFER_DOSE_REGISTRY)
 # PALS 2025 vem depois do registry legado para substituir os mesmos slugs 2020
 # sem quebrar URLs/favoritos já existentes.
 calculators.REGISTRY.update(PALS_2025_DOSE_REGISTRY)
