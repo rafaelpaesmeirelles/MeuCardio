@@ -56,6 +56,7 @@ const SECOES_BASE: SecaoNav[] = [
       { to: "/agenda", rotulo: "Agenda", icone: "agenda" },
       { to: "/round", rotulo: "Round hospitalar", icone: "round" },
       { to: "/receituario", rotulo: "Prescrição eletrônica", icone: "prescricao" },
+      { to: "/avaliacao-preoperatoria", rotulo: "Avaliação pré-operatória", icone: "clinica" },
       { to: "/documentos", rotulo: "Documentos", icone: "documento" },
       { to: "/exames", rotulo: "Exames e marcadores", icone: "clinica" },
       { to: "/checklists", rotulo: "Checklist de alta", icone: "check" },

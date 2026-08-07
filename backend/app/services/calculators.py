@@ -42,6 +42,87 @@ class Calculator:
     kind: str = "escore"
 
 
+# -------------------------------------------------------------------- RCRI
+def _rcri(d: dict) -> dict:
+    keys = [
+        "cirurgia_alto_risco", "cardiopatia_isquemica", "insuficiencia_cardiaca_congestiva",
+        "doenca_cerebrovascular", "diabetes_em_uso_de_insulina", "creatinina_maior_2",
+    ]
+    score = sum(1 for k in keys if d.get(k))
+    classe, evento_pct = (
+        ("I", "0,4") if score == 0 else
+        ("II", "0,9") if score == 1 else
+        ("III", "7,0") if score == 2 else
+        ("IV", "11,0")
+    )
+    return {"pontos": score, "classe": classe, "evento_pct": evento_pct}
+
+
+def _rcri_txt(r: dict) -> str:
+    return (
+        f"{r['pontos']} ponto(s) — Classe {r['classe']} de risco, com taxa de evento cardíaco "
+        f"grave (infarto, edema pulmonar, fibrilação ventricular/parada cardíaca ou bloqueio "
+        f"AV total) de aproximadamente {r['evento_pct']}% na coorte original de derivação/"
+        "validação. Não substitui a avaliação clínica global nem a capacidade funcional."
+    )
+
+
+# --------------------------------------------------------- Avaliação Pré-Operatória
+# (função nova pedida pelo Rafael, 07/08/2026 — reúne conteúdo científico e as
+# calculadoras validadas de risco cirúrgico numa função própria; ver
+# `app/api/avaliacao_preoperatoria.py`)
+
+_GUPTA_PROCEDIMENTOS = {
+    "hernia": ("Hérnia", 0.0),
+    "anorretal": ("Anorretal", -0.16),
+    "aortica": ("Aórtica", 1.6),
+    "bariatrica": ("Bariátrica", -0.25),
+    "encefalica": ("Encefálica (neurocirurgia)", 1.4),
+    "mama": ("Mama", -1.61),
+    "cardiaca": ("Cardíaca", 1.01),
+    "orl": ("Otorrinolaringológica", 0.71),
+    "foregut_hpb": ("Trato gastrointestinal alto / hepatopancreatobiliar", 1.39),
+    "vesicula_apendice_adrenal_baco": ("Vesícula biliar, apêndice, adrenal ou baço", 0.59),
+    "intestinal": ("Intestinal", 1.14),
+    "pescoco": ("Pescoço (tireoide/paratireoide)", 0.18),
+    "obstetrica_ginecologica": ("Obstétrica ou ginecológica", 0.76),
+    "ortopedica": ("Ortopédica não vertebral", 0.8),
+    "abdome_outro": ("Abdominal, outra", 1.13),
+    "vascular_periferica": ("Vascular periférica", 0.86),
+    "pele": ("Pele/tecido subcutâneo", 0.54),
+    "coluna": ("Coluna vertebral", 0.21),
+    "toracica": ("Torácica não cardíaca", 0.4),
+    "veias": ("Veias (varizes etc.)", -1.09),
+    "urologia": ("Urológica", -0.26),
+}
+
+
+def _gupta_mica(d: dict) -> dict:
+    idade = float(d["idade"])
+    status_funcional = d["status_funcional"]  # independente | parcialmente_dependente | totalmente_dependente
+    asa = int(d["asa"])
+    creatinina_maior_1_5 = bool(d.get("creatinina_maior_1_5"))
+    procedimento = d["tipo_procedimento"]
+
+    coef_status = {"independente": 0.0, "parcialmente_dependente": 0.65, "totalmente_dependente": 1.03}[status_funcional]
+    coef_asa = {1: -5.17, 2: -3.29, 3: -1.92, 4: -0.95, 5: 0.0}[asa]
+    coef_creatinina = 0.61 if creatinina_maior_1_5 else 0.0
+    nome_procedimento, coef_procedimento = _GUPTA_PROCEDIMENTOS[procedimento]
+
+    x = idade * 0.02 + coef_status + coef_asa + coef_creatinina + coef_procedimento - 5.25
+    risco = (2.718281828459045 ** x) / (1 + 2.718281828459045 ** x)
+    return {"risco_pct": round(risco * 100, 2), "procedimento": nome_procedimento}
+
+
+def _gupta_mica_txt(r: dict) -> str:
+    faixa = "risco elevado — considerar avaliação/otimização perioperatória adicional" if r["risco_pct"] >= 1 else "risco baixo"
+    return (
+        f"Risco estimado de infarto do miocárdio ou parada cardíaca em até 30 dias: "
+        f"{r['risco_pct']}% (procedimento: {r['procedimento']}) — {faixa} pelo corte de 1% "
+        "usado na validação original."
+    )
+
+
 # ---------------------------------------------------------------- CHA2DS2-VASc
 def _cha2ds2vasc(d: dict) -> dict:
     age = float(d["idade"])
@@ -1118,6 +1199,74 @@ REGISTRY: dict[str, Calculator] = {
             "Fridericia ou Framingham.",
             "Nenhuma fórmula substitui medição cuidadosa do QT (derivação II ou V5, batimento "
             "sem onda U proeminente sobreposta).",
+        ],
+    ),
+    "rcri": Calculator(
+        slug="rcri",
+        name="RCRI — Índice de Risco Cardíaco Revisado (Lee)",
+        theme="Perioperatório",
+        purpose="Risco de evento cardíaco grave em cirurgia não cardíaca — 6 critérios, 1 ponto cada.",
+        fields=[
+            Field("cirurgia_alto_risco", "Cirurgia de alto risco", "boolean",
+                  help="Intraperitoneal, intratorácica ou vascular suprainguinal."),
+            Field("cardiopatia_isquemica", "Cardiopatia isquêmica", "boolean",
+                  help="IAM prévio, teste de esforço positivo, angina, uso de nitrato ou onda Q no ECG."),
+            Field("insuficiencia_cardiaca_congestiva", "Insuficiência cardíaca congestiva", "boolean"),
+            Field("doenca_cerebrovascular", "Doença cerebrovascular", "boolean", help="AVC ou AIT prévio."),
+            Field("diabetes_em_uso_de_insulina", "Diabetes em uso de insulina", "boolean"),
+            Field("creatinina_maior_2", "Creatinina sérica pré-operatória > 2,0 mg/dL", "boolean"),
+        ],
+        compute=_rcri,
+        interpret=_rcri_txt,
+        reference="Lee TH et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049.",
+        limitations=[
+            "Validado para cirurgia não cardíaca eletiva/urgência em adultos — desempenho inferior "
+            "ao Gupta MICA em coortes ACS-NSQIP mais recentes, sobretudo em pacientes de baixo risco.",
+            "Não incorpora capacidade funcional (METs) nem idade como variáveis contínuas.",
+        ],
+    ),
+    "gupta-mica": Calculator(
+        slug="gupta-mica",
+        name="Gupta MICA — risco de infarto ou parada cardíaca perioperatória",
+        theme="Perioperatório",
+        purpose="Risco percentual individualizado de IAM ou PCR em até 30 dias após cirurgia não cardíaca.",
+        fields=[
+            Field("idade", "Idade", "number", "anos", min=18, max=110),
+            Field("status_funcional", "Status funcional", "select", options=[
+                {"value": "independente", "label": "Independente para atividades da vida diária"},
+                {"value": "parcialmente_dependente", "label": "Parcialmente dependente"},
+                {"value": "totalmente_dependente", "label": "Totalmente dependente"},
+            ]),
+            Field("asa", "Classe ASA", "select", options=[
+                {"value": 1, "label": "ASA I — saudável"},
+                {"value": 2, "label": "ASA II — doença sistêmica leve"},
+                {"value": 3, "label": "ASA III — doença sistêmica grave"},
+                {"value": 4, "label": "ASA IV — doença sistêmica grave, ameaça constante à vida"},
+                {"value": 5, "label": "ASA V — moribundo, sobrevida improvável sem a cirurgia"},
+            ]),
+            Field("creatinina_maior_1_5", "Creatinina sérica pré-operatória > 1,5 mg/dL", "boolean"),
+            Field("tipo_procedimento", "Tipo de procedimento cirúrgico", "select", options=[
+                {"value": k, "label": v[0]} for k, v in _GUPTA_PROCEDIMENTOS.items()
+            ]),
+        ],
+        compute=_gupta_mica,
+        interpret=_gupta_mica_txt,
+        reference=(
+            "Gupta PK et al. Development and validation of a risk calculator for prediction of "
+            "cardiac risk after surgery. Circulation. 2011;124(4):381-387. Coeficientes conferidos "
+            "contra duas calculadoras de terceiros que reproduzem a tabela original "
+            "(omnicalculator.com/health/mica e mdapp.co), convergentes em status funcional, classe "
+            "ASA, creatinina e nos coeficientes de procedimento verificados em ambas as fontes."
+        ),
+        limitations=[
+            "Coeficiente de cada procedimento vem da categoria mais próxima da lista original "
+            "ACS-NSQIP — procedimento não listado aqui deve ser aproximado pelo tipo mais "
+            "semelhante, com julgamento clínico.",
+            "Desenvolvido e validado em cirurgia não cardíaca; não usar para cirurgia cardíaca "
+            "eletiva (a categoria 'Cardíaca' aqui refere-se a procedimentos card­íacos dentro do "
+            "escopo NSQIP geral, não à cirurgia cardíaca de rotina avaliada por outros escores).",
+            "Desempenho superior ao RCRI em coortes de validação (estatística C 0,87 vs 0,75), "
+            "mas ainda é estimativa populacional — não substitui julgamento clínico individual.",
         ],
     ),
 }

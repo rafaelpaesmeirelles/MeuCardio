@@ -45,6 +45,7 @@ const Estudos = lazy(() => import("./pages/Estudos"));
 const Estudo = lazy(() => import("./pages/Estudo"));
 const Agenda = lazy(() => import("./pages/Agenda"));
 const Templates = lazy(() => import("./pages/Templates"));
+const AvaliacaoPreOperatoria = lazy(() => import("./pages/AvaliacaoPreOperatoria"));
 const Assinatura = lazy(() => import("./pages/Assinatura"));
 const MinhaConta = lazy(() => import("./pages/MinhaConta"));
 const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
@@ -167,6 +168,7 @@ export default function App() {
           <Route path="round" element={<Round />} />
           <Route path="agenda" element={<Agenda />} />
           <Route path="documentos" element={<Templates />} />
+          <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
           <Route path="receituario" element={<Receituario />} />
           <Route path="assinatura" element={<Assinatura />} />
           <Route path="minha-conta" element={<MinhaConta />} />

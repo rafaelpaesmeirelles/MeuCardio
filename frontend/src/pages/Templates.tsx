@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Vazio } from "../components/Estado";
@@ -360,6 +361,16 @@ export default function Templates() {
         Crie modelos com variáveis entre chaves duplas — ex.: <code>{"{{dias_afastamento}}"}</code> —
         preenchidas na hora de gerar o documento.
       </p>
+
+      <Link to="/avaliacao-preoperatoria" className="cartao cartao--clinico"
+            style={{ display: "block", marginTop: "0.8rem", color: "inherit" }}>
+        <p className="eyebrow" style={{ margin: 0 }}>Função relacionada</p>
+        <strong>Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico</strong>
+        <p style={{ margin: "0.2rem 0 0", fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
+          Escores de risco cirúrgico (RCRI, Gupta MICA) direto num documento pronto para
+          assinar, imprimir ou enviar ao paciente.
+        </p>
+      </Link>
 
       <button
         className="botao"
