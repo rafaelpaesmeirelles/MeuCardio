@@ -15,6 +15,12 @@ const RÓTULO_TIPO: Record<string, string> = {
   ensaio_clinico: "Ensaio clínico", revisao_sistematica: "Revisão sistemática",
   metanalise: "Metanálise", consenso: "Consenso", coorte: "Coorte", caso_controle: "Caso-controle",
   estudo_de_coorte: "Estudo observacional",
+  // 07/08/2026: mesmo defeito já corrigido uma vez para estudo_de_coorte —
+  // valor novo no JSON sem entrada no mapa aparecia cru ao assinante
+  // ("estudo_ecologico_descritivo", com underscore). Rótulo próprio, não
+  // dobrado em "Estudo observacional": desenho ecológico tem viés próprio
+  // (falácia ecológica, dado agregado por população) que vale distinguir.
+  estudo_ecologico_descritivo: "Estudo ecológico descritivo",
 };
 
 export default function Estudos() {
