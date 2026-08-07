@@ -247,6 +247,75 @@ commit efetivamente adiciona (curadoria, não fato clínico novo).
 - As 8 recomendações restantes de `cbc9b02` (HP 2026 SBPT) não tiveram a classificação
   Forte/Ponderado ou Classe/Nível conferida contra o texto integral da diretriz.
 - Commit `051cc7a`, `97d639c`, `a7c275f`, `b88c0ae` (mais antigos) e toda a frente de
-  `casos-clinicos/`+`galeria/`+`exames/` do segundo agente — ficam para a próxima rodada.
+  `galeria/`+`exames/` mais antiga do segundo agente — ficam para a próxima rodada.
+
+---
+
+## Rodada 3 — 07/08/2026 (mesmo dia, ciclo seguinte)
+
+`git fetch`/`merge` trouxe mais 2 commits de conteúdo desde a rodada 2 (mais mudanças locais
+não commitadas de outra sessão em `frontend/src/pages/Agenda.tsx`, `Sincronizacao.tsx` e
+`frontend/src/styles/shell.css` — código de outra sessão, deixado intocado, não é conteúdo e não
+é minha frente).
+
+### Commit `309cac7` — estudos: +6 ensaios pivotais de Diabetes e cardiologia (FLOW, DEVOTE, ORIGIN, REWIND, PROACTIVE, FREEDOM)
+
+**Conferido — os 6 PMIDs batem exatamente** (título, revista, volume/edição/páginas, DOI, todos
+conferidos no PubMed): FLOW 38785209, DEVOTE 28605603, ORIGIN 22686416, REWIND 31189511,
+PROACTIVE 16214598, FREEDOM 23121323.
+
+**Números conferidos linha a linha contra o abstract original, todos batendo exatamente:**
+- **FLOW**: 331 vs. 410 eventos, HR 0,76 [0,66-0,88] p=0,0003; declínio de TFGe 1,16 mL/min/1,73m²
+  p<0,001; morte CV HR 0,71 [0,56-0,89].
+- **DEVOTE**: 325 (8,5%) vs. 356 (9,3%), HR 0,91 [0,78-1,06]; HbA1c 7,5±1,2% nos dois grupos;
+  glicemia de jejum 128±56 vs. 136±57 mg/dL p<0,001; hipoglicemia grave 187 (4,9%) vs. 252 (6,6%).
+- **REWIND**: 594 (12,0%) vs. 663 (13,4%), HR 0,88 [0,79-0,99] p=0,026; mortalidade 536 (10,8%) vs.
+  592 (12,0%) HR 0,90 [0,80-1,01] p=0,067; evento GI 47,4% vs. 34,1% p<0,0001.
+- **MINT** (citado em outro commit, ver abaixo) — não aplicável aqui.
+
+**🔍 Achado positivo, não um erro — o item PROACTIVE flagra corretamente uma inconsistência real
+do próprio abstract do PubMed.** O campo `limitations` diz que o abstract indexado registra
+internação por IC como "6% (149 de 2.065)" no grupo pioglitazona, mas o mesmo resumo define esse
+grupo com 2.605 pacientes — **conferido diretamente no `efetch`: a inconsistência existe de fato no
+abstract original** ("6% (149 of 2065) and 4% (108 of 2633)... pioglitazone and placebo groups"),
+não foi inventada pelo redator. O item marca isso com `VERIFICAÇÃO HUMANA NECESSÁRIA` em vez de
+"corrigir" silenciosamente ou escolher um denominador — postura correta. Os demais números do
+PROACTIVE (514/2605 vs. 572/2633, HR 0,90 [0,80-1,02] p=0,095; secundário 301 vs. 358, HR 0,84
+[0,72-0,98] p=0,027) **batem exatamente** com o abstract.
+
+**Resultado: PASSA integralmente**, com destaque positivo pela honestidade do PROACTIVE.
+
+### Commit `3557cbc` — casos-clinicos: +7 novos (IC x2, Terapia intensiva x3, Hipertensão pulmonar x2)
+
+**Conferido — os 9 PMIDs citados nos 7 casos batem exatamente** no registro do PubMed: HFA-PEFF
+31504452, amiloidose ATTR (Ruberg & Berk) 22949539, MINT 37952133, REALITY 33560322, VANCS
+27841822, POCUS choque (meta-análise) 37231510, POCUS derrame pericárdico 33538920, esquistossomose
+HAP Brasil 31720370, e o PMCID 11932222 (revisão sistemática de HAP esquistossomótica, sem PMID
+próprio — conferido via `esummary db=pmc`, título bate exatamente).
+
+**Números conferidos contra os abstracts originais:**
+- **MINT**: 295/1749 (16,9%) vs. 255/1755 (14,5%), RR 1,15 [0,99-1,34] p=0,07 — a explicação do
+  caso ("intervalo de confiança tangenciando a significância... sem cruzar de forma inequívoca")
+  descreve corretamente esse resultado limítrofe.
+- **VANCS**: 330 randomizados, 300 infundidos (149 vasopressina/151 noradrenalina) — bate
+  exatamente. O desfecho composto do abstract (32% vs. 49%, HR 0,55 [0,38-0,80] p=0,0014) é mais
+  forte do que o texto do caso sugere ("menor taxa", sem citar a magnitude) — não é erro, é
+  descrição qualitativa compatível, só não reproduz o número exato do HR no corpo do caso (o
+  case não afirma nenhum valor numérico falso, então não conta como erro, só como detalhe
+  omitido).
+- **HFA-PEFF**: descrição do algoritmo (Etapa P/E/F1/F2, faixas de pontuação 0-1/2-4/≥5) consistente
+  com o que é publicamente conhecido da diretriz; não confrontei linha a linha contra o texto
+  integral nesta rodada (Oxford Academic, mesmo bloqueio de 403 já registrado no projeto).
+
+**Resultado: PASSA.** Nenhum erro de PMID, DOI ou número encontrado nos 7 casos.
+
+### Não verificado por falta de tempo nesta rodada (rodada 3)
+- HFA-PEFF: descrição do algoritmo não conferida linha a linha contra o texto integral (bloqueio
+  de acesso conhecido do projeto a `academic.oup.com`).
+- Descrição fisiopatológica do caso de amiloidose (triagem hematológica antes de PYP) e do caso de
+  POCUS (achados ecocardiográficos/pulmonares) — são afirmações de conhecimento médico geral
+  amplamente replicado na literatura, não checadas frase a frase contra a fonte primária citada.
+- Commits mais antigos ainda não revisados (`051cc7a`, `97d639c`, `a7c275f`, `b88c0ae`) e toda a
+  frente mais antiga de `galeria/`/`exames/` do segundo agente — seguem para a próxima rodada.
 
 ---
