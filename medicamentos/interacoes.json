@@ -804,5 +804,17 @@
     "conduta": "Monitorar sintomas musculares (mialgia, fraqueza, urina escura) e, se indicado, CK, especialmente em idosos e em disfunção renal ou hepática — população de maior risco segundo a própria bula.",
     "fonte": "Bula da COLCHICINA (Geolab Indústria Farmacêutica S.A.), seção Interações Medicamentosas: \"A colchicina pode aumentar o risco de rabdomiólise (...) de inibidores da enzima HMG-CoA redutase (estatinas) e de derivados do ácido fíbrico (fibratos).\"",
     "review_status": "revisado"
+  },
+  {
+    "slug": "dapagliflozina-diuretico-de-alca",
+    "farmacos": [
+      "dapagliflozina"
+    ],
+    "classe_oposta": "diurético de alça (ex.: bumetanida, furosemida)",
+    "gravidade": "moderada",
+    "efeito": "A associação de iSGLT2 com diurético de alça pode aumentar o risco de depleção de volume. Em estudo randomizado de farmacologia clínica, dapagliflozina e bumetanida não apresentaram interação farmacocinética relevante, mas a exposição sequencial produziu sinergia natriurética adaptativa.",
+    "conduta": "Monitorar de perto o estado volêmico ao iniciar ou intensificar a associação, sobretudo em pacientes mais idosos ou com função renal reduzida. As fontes verificadas não sustentam um esquema universal de redução automática do diurético de alça; para qualquer ajuste posológico fixo, VERIFICAÇÃO HUMANA NECESSÁRIA.",
+    "fonte": "Wilcox CS, Shen W, Boulton DW, Leslie BR, Griffen SC. Interaction Between the Sodium-Glucose-Linked Transporter 2 Inhibitor Dapagliflozin and the Loop Diuretic Bumetanide in Normal Human Subjects. J Am Heart Assoc. 2018;7(4):e007046. PMID: 29440005. DOI: 10.1161/JAHA.117.007046; Lewellyan CM, Spoutz P, Schaefer M, Patterson ME. Risk of volume depletion events with concomitant use of sodium glucose co-transporter 2 inhibitors and loop diuretics: A self-controlled case series study. Pharmacoepidemiol Drug Saf. 2022;31(10):1102-1109. PMID: 35713292. DOI: 10.1002/pds.5496.",
+    "review_status": "revisado"
   }
 ]
