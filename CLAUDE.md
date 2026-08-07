@@ -1,5 +1,42 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~02h45: Trabalho 15 (Assistente Clínica/Pessoal) + Trabalho 16 (Sincronização de contas)
+> Dois pedidos do Rafael em 06-07/08/2026, implementados, testados e publicados juntos.
+>
+> **Trabalho 15 — Assistente Clínica e Assistente Pessoal, dois modos num só menu.** O item de
+> menu (renomeado de "Assistente clínico" para "Assistente") agora abre um seletor entre
+> **Assistente Clínica** (o que já existia — RAG institucional + PubMed, nunca oferece
+> ferramentas de agenda/e-mail) e **Assistente Pessoal** (sem embasamento institucional,
+> assistente de rotina, só oferece as ferramentas de agenda/e-mail quando o instalador tem
+> `AI_ASSISTANT_TOOLS_ENABLED=true` **e** o médico deu consentimento explícito numa tela nova —
+> a lacuna real era essa: a rota de consentimento já existia no backend desde o Trabalho 5, mas
+> nenhuma tela a chamava). `AIConversation.modo` (migração `f64f20260807`) separa o histórico dos
+> dois. Duas logos novas (`LogoAssistenteClinica`, `LogoAssistentePessoal`), mesma família visual
+> do coração-ECG da marca. Campo de leitura das respostas da IA alargado (`.ia__msg` 74ch→92ch,
+> `.ia__abertura` 62ch→80ch), pedido à parte do Rafael. 11 testes novos.
+>
+> **Trabalho 16 — Sincronização de contas.** Novo item de menu dedicado "Sincronize suas contas"
+> (seção Gestão, posição inferior), separado de Minha Conta (que ganhou só um resumo com atalho).
+> O médico conecta quantas contas quiser, de uma ou várias empresas (Google/Microsoft/Apple/Yahoo)
+> ao mesmo tempo, e agora pode **escolher o que cada uma sincroniza** (agenda/contatos/e-mail,
+> dentro do que a conexão realmente permite) **depois** de conectada — antes só dava para
+> desconectar e reconectar para mudar isso. Na Agenda e no CorvIA Mail, o médico escolhe quais
+> contas ver — uma, várias ou todas juntas, inclusive mais de uma conta da mesma empresa. Boa
+> parte da infraestrutura (OAuth, múltiplas contas por provedor) já existia desde o Trabalho 9; o
+> que faltava era o lugar dedicado de gerenciar e a rota `PATCH /api/agenda/integrations/{id}/
+> preferencias` (migração `f65g20260807`, colunas `sync_calendar`/`sync_mail`). 7 testes novos.
+> **Quirk de UX aceito conscientemente:** o `redirect_uri` do OAuth Google/Microsoft continua
+> fixo em `/agenda` no backend — conectar pela página nova ainda passa por `/agenda` de volta.
+> Não mexido por ser mudança de fluxo de OAuth fora do escopo pedido.
+>
+> **Verificação antes de publicar:** suíte completa do backend, 609/609 relevantes passando (1
+> falha era artefato de editar um arquivo de teste com a suíte já rodando havia 27 minutos —
+> reproduzido isolado, 2/2 passou). Migrações `f64f20260807`+`f65g20260807` aplicadas em produção
+> sem erro (`alembic current` confirma head). Bundle novo confirmado no ar (`Assistente-*.js`,
+> `Sincronizacao-*.js`). Varredura de rotas GET (`/api/agenda/*`, `/api/email/mensagens/todas`,
+> `/api/ai/conversas`) devolvendo 401 (autenticação exigida), nunca 500. Zero erro nos logs do
+> backend nos 5 minutos após o deploy. Commits `d40ae8d` (Trabalho 15) e `16fef1f` (Trabalho 16).
+
 > ## ✅ CONCLUÍDO E NO AR, 03/08/2026 ~02h: Modo Emergência — 31/31 protocolos com fluxograma
 > Pedido do Rafael, retomando uma decisão já tomada antes da queda da sessão: cada protocolo de
 > emergência ganha um fluxograma de **conduta imediata** (reconhecimento até resolução do
