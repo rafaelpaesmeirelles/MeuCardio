@@ -105,9 +105,16 @@ export default function Evidencias() {
                   {e.society} {e.year} · {rotuloNivel(e.evidence_level)} · {e.theme}
                 </p>
                 <h2 style={{ fontSize: "1rem", margin: "0.35rem 0" }}>{e.statement}</h2>
-                <p style={{ color: "var(--texto-secundario)", margin: "0.35rem 0 0.6rem", lineHeight: 1.5 }}>
-                  {e.summary}
-                </p>
+                {/* 07/08/2026: `summary` cai no fallback do backend (e.summary
+                 * or e.statement) enquanto o campo não for preenchido de fato
+                 * — hoje é o caso das 1.870 evidências publicadas. Sem esta
+                 * checagem, o enunciado aparecia repetido logo abaixo de si
+                 * mesmo em todo card da listagem. */}
+                {e.summary.trim() !== e.statement.trim() && (
+                  <p style={{ color: "var(--texto-secundario)", margin: "0.35rem 0 0.6rem", lineHeight: 1.5 }}>
+                    {e.summary}
+                  </p>
+                )}
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <Link className="botao botao--secundario" to={`/evidencias/${e.slug}`}>
                     Ver análise completa
