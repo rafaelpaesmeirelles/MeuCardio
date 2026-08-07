@@ -43552,5 +43552,455 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "jcs-2025-trombolise-recomendada-no-tep-agudo-com-choque-ou-instabilidade-hemodinamica",
+    "statement": "A terapia trombolítica é recomendada para pacientes com tromboembolismo pulmonar (TEP) agudo que estejam em choque ou hemodinamicamente instáveis por hipotensão prolongada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "trombólise",
+      "TEP maciço",
+      "instabilidade hemodinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-trombolise-deve-ser-considerada-no-tep-normotenso-com-disfuncao-de-vd-e-biomarcador-positivo",
+    "statement": "Em pacientes com tromboembolismo pulmonar agudo normotensos, mas com disfunção de ventrículo direito e biomarcadores cardíacos positivos, a anticoagulação parenteral é a primeira escolha e os sinais de deterioração hemodinâmica não devem ser negligenciados, com monitorização constante. A trombólise deve ser considerada se sinais de deterioração hemodinâmica forem observados.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP submassivo",
+      "disfunção de ventrículo direito",
+      "trombólise de resgate"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-heparina-combinada-com-varfarina-no-tratamento-agudo-do-tep",
+    "statement": "Para o tratamento agudo do tromboembolismo pulmonar agudo, anticoagulantes parenterais como heparina são iniciados e administrados em combinação com varfarina oral, mantendo-se o anticoagulante parenteral até que o efeito da varfarina atinja a faixa terapêutica.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "heparina",
+      "varfarina",
+      "TEP agudo",
+      "tratamento inicial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-faixa-terapeutica-de-inr-1-5-a-2-5-no-tep-diretriz-japonesa",
+    "statement": "A faixa terapêutica de varfarina deve ser ajustada para manter o PT-INR entre 1,5 e 2,5 no tratamento do tromboembolismo pulmonar — faixa mais estreita que a usada em diretrizes ocidentais (INR 2,0-3,0), reflexo de diferença de prática entre a diretriz japonesa e a norte-americana/europeia.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "INR alvo",
+      "varfarina",
+      "divergência entre diretrizes"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-doac-como-tratamento-agudo-do-tep-hemodinamicamente-estavel",
+    "statement": "Os anticoagulantes orais diretos (DOAC) são administrados como tratamento agudo do tromboembolismo pulmonar hemodinamicamente estável. A edoxabana é iniciada após tratamento inicial parenteral apropriado; rivaroxabana e apixabana são administradas em dose de manutenção após período inicial de terapia intensiva em dose alta.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "DOAC",
+      "edoxabana",
+      "rivaroxabana",
+      "apixabana",
+      "TEP agudo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-de-3-meses-no-tep-provocado-por-fator-transitorio",
+    "statement": "Para tromboembolismo pulmonar provocado por fatores de risco transitórios maiores ou menores (sem fatores adicionais de risco para recorrência), deve-se considerar anticoagulação por 3 meses.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP provocado",
+      "duração da anticoagulação",
+      "fator de risco transitório"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-estendida-alem-de-3-meses-no-tep-provocado-por-fator-menor-com-risco-adicional",
+    "statement": "Para tromboembolismo pulmonar provocado por fator de risco transitório menor, com fatores de risco adicionais para recorrência, deve-se considerar anticoagulação estendida além de 3 meses, se o risco de sangramento não for alto.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP provocado",
+      "anticoagulação estendida",
+      "fator de risco adicional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-estendida-no-tep-nao-provocado-sem-alto-risco-de-sangramento",
+    "statement": "Para tromboembolismo pulmonar não provocado, deve-se considerar terapia anticoagulante estendida se o risco de sangramento não for alto.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP não provocado",
+      "anticoagulação estendida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-estendida-no-tep-provocado-por-fator-de-risco-persistente",
+    "statement": "Para tromboembolismo pulmonar provocado por fatores de risco persistentes, deve-se considerar terapia anticoagulante estendida.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP provocado",
+      "fator de risco persistente",
+      "anticoagulação estendida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-estendida-no-tep-do-paciente-com-cancer-ativo",
+    "statement": "Para tromboembolismo pulmonar em pacientes com câncer ativo, deve-se considerar terapia anticoagulante estendida enquanto o câncer não estiver curado, com atenção às complicações hemorrágicas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP",
+      "câncer ativo",
+      "anticoagulação estendida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-reavaliacao-periodica-de-risco-beneficio-na-anticoagulacao-do-tep-alem-de-3-meses",
+    "statement": "Quando a terapia anticoagulante para tromboembolismo pulmonar agudo é estendida além de 3 meses, os riscos e benefícios devem ser cuidadosamente reconsiderados periodicamente.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TEP",
+      "reavaliação periódica",
+      "anticoagulação prolongada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-heparina-combinada-com-varfarina-no-tratamento-agudo-da-tvp-proximal",
+    "statement": "Como tratamento agudo para trombose venosa profunda (TVP) proximal/central, anticoagulantes parenterais como heparina devem ser iniciados e combinados com varfarina, mantendo-se o anticoagulante parenteral até que o efeito da varfarina atinja a faixa terapêutica.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP proximal",
+      "heparina",
+      "varfarina",
+      "tratamento inicial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-doac-como-terapia-aguda-da-tvp-proximal",
+    "statement": "Para trombose venosa profunda proximal, os DOAC devem ser administrados como terapia aguda. A edoxabana deve ser iniciada após terapia parenteral inicial apropriada; rivaroxabana e apixabana são mantidas em dose de manutenção após período inicial em dose mais alta.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP proximal",
+      "DOAC",
+      "tratamento agudo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-minimo-de-3-meses-de-anticoagulacao-em-toda-tvp-proximal",
+    "statement": "Para todos os pacientes com trombose venosa profunda proximal, a terapia anticoagulante deve ser administrada por pelo menos 3 meses, a menos que haja contraindicação ao anticoagulante ou sangramento não sustentável.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP proximal",
+      "duração mínima da anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-doac-em-dose-reduzida-na-tvp-proximal-nao-provocada-de-continuidade-prolongada",
+    "statement": "A anticoagulação prolongada com DOAC em dose reduzida é sugerida para o tratamento e a prevenção de recorrência de trombose venosa profunda proximal não provocada, se o paciente não estiver em alto risco de sangramento.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP não provocada",
+      "DOAC em dose reduzida",
+      "prevenção de recorrência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-prolongada-na-tvp-proximal-por-fator-de-risco-persistente",
+    "statement": "A anticoagulação de longo prazo, se possível, é sugerida para o tratamento e a prevenção de recorrência de trombose venosa profunda proximal causada por fatores de risco persistentes.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP proximal",
+      "fator de risco persistente",
+      "anticoagulação prolongada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-anticoagulacao-de-longo-prazo-recomendada-na-tvp-proximal-recorrente",
+    "statement": "A anticoagulação de longo prazo é recomendada, se possível, para pacientes com trombose venosa profunda proximal recorrente.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP recorrente",
+      "anticoagulação de longo prazo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-aspirina-para-prevenir-recorrencia-apos-suspender-anticoagulacao-na-tvp-nao-provocada",
+    "statement": "A aspirina pode ser considerada para prevenir recorrência após a suspensão da anticoagulação em trombose venosa profunda não provocada, quando a terapia anticoagulante estendida não é desejada ou não é possível.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "aspirina",
+      "TVP não provocada",
+      "prevenção de recorrência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-tvp-distal-nao-deve-ser-anticoagulada-de-forma-uniforme",
+    "statement": "A trombose venosa profunda distal não deve ser anticoagulada de forma uniforme, especialmente a TVP distal crônica.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP distal",
+      "anticoagulação seletiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-tvp-distal-tratada-com-fisioterapia-e-observacao-de-progressao-proximal",
+    "statement": "A trombose venosa profunda distal é tratada com fisioterapia e observação quanto à progressão proximal.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "TVP distal",
+      "observação clínica",
+      "fisioterapia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-mobilizacao-precoce-recomendada-em-todo-paciente-de-risco-para-tev-perioperatorio",
+    "statement": "A mobilização precoce e o exercício ativo são recomendados para todos os pacientes em risco de tromboembolismo venoso perioperatório.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "mobilização precoce",
+      "profilaxia de TEV",
+      "perioperatório"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-meia-de-compressao-deve-ser-considerada-no-risco-intermediario-perioperatorio",
+    "statement": "Deve-se considerar o uso de meias de compressão elástica em pacientes de risco intermediário para tromboembolismo venoso perioperatório.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "meia de compressão elástica",
+      "profilaxia de TEV",
+      "risco intermediário"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-compressao-pneumatica-intermitente-usada-no-risco-intermediario-perioperatorio",
+    "statement": "A compressão pneumática intermitente é usada em pacientes de risco intermediário para tromboembolismo venoso perioperatório.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "compressão pneumática intermitente",
+      "profilaxia de TEV",
+      "risco intermediário"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-compressao-pneumatica-ou-anticoagulacao-recomendada-no-alto-risco-perioperatorio",
+    "statement": "Para pacientes de alto risco de tromboembolismo venoso perioperatório, é recomendada compressão pneumática intermitente ou terapia anticoagulante.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "compressão pneumática intermitente",
+      "anticoagulação profilática",
+      "alto risco perioperatório"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-2025-profilaxia-farmacologica-combinada-no-risco-mais-alto-perioperatorio",
+    "statement": "Para pacientes de risco mais alto de tromboembolismo venoso perioperatório, usa-se profilaxia farmacológica combinada com compressão pneumática intermitente, ou profilaxia farmacológica combinada com meias de compressão. Pacientes com alto risco de sangramento são tratados apenas com compressão pneumática intermitente.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JPCPHS",
+    "year": 2026,
+    "guideline_title": "JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis",
+    "reference": "Tamura Y, Kusunose K, Yamashita Y, Akagi T, Atsukawa M, Fukumoto Y, et al.; Japanese Circulation Society and Japanese Pulmonary Circulation and Pulmonary Hypertension Society Joint Working Group. JCS/JPCPHS 2025 Guideline on Pulmonary Hypertension and Pulmonary Embolism/Deep Vein Thrombosis. Circ J. 2026 (Advance Publication, publicado online em 30/06/2026). DOI: 10.1253/circj.CJ-25-1144. PMID: 42386545. PDF integral aberto no J-STAGE, lido nesta sessao em 07/08/2026. NOTA: o alvo de PT-INR desta diretriz japonesa (1,5-2,5) diverge do usado em diretrizes ocidentais (ASH 2020 recomenda 2,0-3,0, ja cadastrado nesta base) -- divergencia real entre fontes, registrada explicitamente e nao harmonizada.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "profilaxia farmacológica",
+      "risco muito alto perioperatório",
+      "risco de sangramento"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
