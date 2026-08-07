@@ -104,6 +104,14 @@ export default function ChatFlutuante() {
   const [termo, setTermo] = useState("");
   const [resultados, setResultados] = useState<UsuarioBusca[] | null>(null);
   const [buscando, setBuscando] = useState(false);
+  // 07/08/2026, pedido do Rafael: toda ferramenta de busca do site precisa de
+  // pelo menos duas formas de refinar. O backend já suportava filtro por
+  // órgão de classe (`GET /chat/buscar-usuarios?conselho=...`) e já tinha a
+  // rota `GET /chat/orgaos-de-classe` para popular um seletor — só faltava a
+  // tela usar os dois. Sem eles, "Procurar outro profissional" tinha um único
+  // campo de texto livre.
+  const [conselho, setConselho] = useState("");
+  const [orgaosDeClasse, setOrgaosDeClasse] = useState<string[]>([]);
   const [ativo, setAtivo] = useState<{ id: number; nome: string; foto: string | null } | null>(null);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
   const [texto, setTexto] = useState("");
@@ -186,6 +194,7 @@ export default function ChatFlutuante() {
     carregarConversas();
     carregarNaoLidas();
     api.get<Suporte | null>("/chat/suporte").then(setSuporte).catch(() => {});
+    api.get<string[]>("/chat/orgaos-de-classe").then(setOrgaosDeClasse).catch(() => {});
   }, [aberto, carregarConversas, carregarNaoLidas]);
 
   useEffect(() => {
@@ -215,7 +224,9 @@ export default function ChatFlutuante() {
     setBuscando(true);
     setErro("");
     try {
-      setResultados(await api.get<UsuarioBusca[]>(`/chat/buscar-usuarios?q=${encodeURIComponent(q)}`));
+      const params = new URLSearchParams({ q });
+      if (conselho) params.set("conselho", conselho);
+      setResultados(await api.get<UsuarioBusca[]>(`/chat/buscar-usuarios?${params}`));
     } catch {
       setErro("A busca falhou. Tente de novo.");
     } finally {
@@ -299,7 +310,7 @@ export default function ChatFlutuante() {
           >
             {vista !== "lista" && (
               <button
-                onClick={() => { setVista("lista"); setAtivo(null); setResultados(null); setTermo(""); }}
+                onClick={() => { setVista("lista"); setAtivo(null); setResultados(null); setTermo(""); setConselho(""); }}
                 aria-label="Voltar"
                 style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", fontSize: "1.1rem", padding: "0 .2rem" }}
               >
@@ -354,7 +365,7 @@ export default function ChatFlutuante() {
               )}
 
               <button
-                onClick={() => { setVista("busca"); setResultados(null); setTermo(""); }}
+                onClick={() => { setVista("busca"); setResultados(null); setTermo(""); setConselho(""); }}
                 style={{
                   width: "100%", textAlign: "left", cursor: "pointer",
                   padding: ".7rem .75rem", border: "none",
@@ -419,17 +430,30 @@ export default function ChatFlutuante() {
           {/* ---------------------------------------------------- BUSCA -- */}
           {vista === "busca" && (
             <div style={{ height: CORPO_ALTURA, overflowY: "auto" }}>
-              <form onSubmit={buscar} style={{ display: "flex", gap: ".4rem", padding: ".75rem" }}>
-                <input
-                  value={termo}
-                  onChange={(e) => setTermo(e.target.value)}
-                  placeholder="Nome, e-mail ou registro do conselho"
-                  aria-label="Procurar profissional"
-                  style={{ flex: 1, padding: ".45rem .6rem", borderRadius: 6, border: "1px solid var(--linha, #cfcac3)" }}
-                />
-                <button type="submit" className="botao" disabled={buscando || termo.trim().length < 2}>
-                  {buscando ? "…" : "Buscar"}
-                </button>
+              <form onSubmit={buscar} style={{ display: "flex", flexDirection: "column", gap: ".4rem", padding: ".75rem" }}>
+                <div style={{ display: "flex", gap: ".4rem" }}>
+                  <input
+                    value={termo}
+                    onChange={(e) => setTermo(e.target.value)}
+                    placeholder="Nome, e-mail ou registro do conselho"
+                    aria-label="Procurar profissional"
+                    style={{ flex: 1, padding: ".45rem .6rem", borderRadius: 6, border: "1px solid var(--linha, #cfcac3)" }}
+                  />
+                  <button type="submit" className="botao" disabled={buscando || termo.trim().length < 2}>
+                    {buscando ? "…" : "Buscar"}
+                  </button>
+                </div>
+                {orgaosDeClasse.length > 0 && (
+                  <select
+                    value={conselho}
+                    onChange={(e) => setConselho(e.target.value)}
+                    aria-label="Filtrar por órgão de classe"
+                    style={{ padding: ".4rem .5rem", borderRadius: 6, border: "1px solid var(--linha, #cfcac3)", fontSize: ".85rem" }}
+                  >
+                    <option value="">Qualquer órgão de classe</option>
+                    {orgaosDeClasse.map((c) => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                )}
               </form>
 
               {resultados === null ? (
