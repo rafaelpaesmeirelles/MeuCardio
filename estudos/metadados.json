@@ -11231,5 +11231,80 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rebecga-registro-brasileiro-cardiopatia-gravidez",
+    "title": "REBECGA — Registro Brasileiro de Cardiopatia e Gravidez",
+    "study_type": "estudo_de_coorte",
+    "authors": "Avila WS, Lucena AJG, Freire CMV, da Silva FB, Rivera IR, Oliveira JRS, Rivera MAM, de Carvalho RC, Avila Neto V, Tarasoutchi F",
+    "journal": "Arquivos Brasileiros de Cardiologia",
+    "year": 2025,
+    "doi": "10.36660/abc.20240807i",
+    "pmid": null,
+    "url": "https://doi.org/10.36660/abc.20240807i",
+    "summary": "Coorte retrospectiva multicêntrica brasileira, coordenada pelo InCor-HCFMUSP, com dados de 2017 a 2020. 638 gestantes com cardiopatia (valvopatia 37,8%, cardiopatia congênita 35,7%, arritmia sem cardiopatia estrutural 14,7%, cardiomiopatia 11,3%, outras 6,4%). É o primeiro dado epidemiológico brasileiro robusto sobre cardiopatia e gravidez, complementando os registros europeus (ROPAC). PMID não encontrado no PubMed nesta sessão (esearch por título e por DOI sem resultado) — DOI confirmado resolvendo corretamente no Crossref.",
+    "key_findings": "Mortalidade materna: 18 óbitos (2,8%), dos quais 10/18 (55,6%) no período pós-parto. Complicação mais frequente: insuficiência cardíaca (16,7%), seguida de arritmia (10,7%) e síncope (8,0%). Cesárea em 62,9%, prematuridade em 25,7%, perda fetal em 3,2%. Preditores multivariados independentes de complicação/óbito materno: classificação mWHO classe IV (OR 3,51; IC95% 1,75-7,04; p<0,001), classe funcional NYHA III/IV (OR 2,27; IC95% 1,12-4,60; p=0,023) e hipertensão pulmonar (OR 2,45; IC95% 1,05-5,70; p=0,037).",
+    "clinical_implications": "Confirma em população brasileira o mesmo padrão qualitativo de registros internacionais (ROPAC), com magnitude própria medida localmente. A concentração de óbitos no pós-parto (55,6%) tem implicação prática direta: a vigilância intensiva não deve relaxar após o parto bem-sucedido.",
+    "limitations": "Coorte retrospectiva, incluída apenas em hospitais com infraestrutura adequada para seguimento — possível viés de seleção para centros de maior complexidade. PMID não localizado no PubMed nesta sessão.",
+    "theme": "Gravidez",
+    "tags": [
+      "REBECGA",
+      "registro brasileiro",
+      "cardiopatia e gravidez",
+      "mortalidade materna",
+      "mWHO"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pillarisetti-2014-preditores-recuperacao-cardiomiopatia-periparto",
+    "title": "Pillarisetti 2014 — Preditores de recuperação ventricular na cardiomiopatia periparto",
+    "study_type": "estudo_de_coorte",
+    "authors": "Pillarisetti J, Kondur A, Alani A, et al.",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2014,
+    "doi": null,
+    "pmid": "24814494",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24814494/",
+    "summary": "Estudo retrospectivo em 2 centros acadêmicos americanos (1999-2012), 100 pacientes com cardiomiopatia periparto (55% negras, 39% brancas, 6% hispânicas; idade média 30±6 anos). FEVE média ao diagnóstico: 28±9%. Seguimento médio de 33±21 meses.",
+    "key_findings": "42% apresentaram melhora da FEVE, majoritariamente de forma tardia (não nos primeiros meses). Preditores de melhora: diagnóstico no pós-parto (em vez de anteparto), HR 3,0 (p=0,01); raça branca ou hispânica (em vez de negra), HR 2,2 (p=0,01). Mortalidade: 15% no grupo sem melhora da FEVE vs. 5% no grupo com melhora. Apenas 12% das pacientes sem melhora funcional receberam CDI nesta coorte, achado discutido pelos autores como possível subutilização.",
+    "clinical_implications": "Fundamenta o aconselhamento pré-concepcional sobre a chance e o tempo esperado de recuperação ventricular na cardiomiopatia periparto, e sinaliza disparidade racial nos preditores de recuperação — achado que deve ser comunicado com cautela, sem reduzir a decisão clínica individual a uma variável demográfica isolada.",
+    "limitations": "Estudo retrospectivo de 2 centros, sem grupo controle randomizado. A subutilização de CDI é achado observacional, não uma medida de eficácia do dispositivo nesta população.",
+    "theme": "Gravidez",
+    "tags": [
+      "cardiomiopatia periparto",
+      "recuperação ventricular",
+      "fração de ejeção",
+      "cardiodesfibrilador implantável",
+      "disparidade racial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hosseinpour-2022-metanalise-marcadores-prognosticos-cardiomiopatia-periparto",
+    "title": "Hosseinpour 2022 — Metanálise de marcadores prognósticos de recuperação na cardiomiopatia periparto",
+    "study_type": "metanalise",
+    "authors": "Hosseinpour A, Fedorowski A, Jeanty C, et al.",
+    "journal": "ESC Heart Failure",
+    "year": 2022,
+    "doi": null,
+    "pmid": "35883253",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35883253/",
+    "summary": "Revisão sistemática e metanálise (metodologia MOOSE) de marcadores prognósticos de recuperação em cardiomiopatia periparto. De onze marcadores potencialmente elegíveis, seis se associaram significativamente à recuperação, cada um expresso como odds ratio com IC95%.",
+    "key_findings": "FEVE basal mais alta: OR 4,84 (IC95% 2,53-9,26). Diâmetro diastólico final do VE menor: OR 3,67 (IC95% 2,58-5,23). Diâmetro sistólico final do VE menor: OR 3,99 (IC95% 2,27-7,02). Fração de encurtamento maior: OR 6,14 (IC95% 1,81-20,85). Pressão arterial sistólica mais alta: OR 2,16 (IC95% 1,38-3,38). Pressão arterial diastólica mais alta: OR 2,06 (IC95% 1,07-3,96).",
+    "clinical_implications": "Pacientes com FEVE basal mais alta, diâmetros ventriculares esquerdos menores e pressão arterial mais alta ao diagnóstico têm maior chance de recuperar da cardiomiopatia periparto — direção e força de associação por marcador, útil para calibrar expectativa no aconselhamento pré-concepcional subsequente.",
+    "limitations": "A metanálise não converte os odds ratios em um ponto de corte único e validado no resumo disponível (ex.: 'FEVE ≥X% prediz recuperação com Y% de sensibilidade') — é a direção e a força da associação por marcador, não um algoritmo pronto de decisão. Qualquer corte numérico de uso clínico direto exigiria checagem no texto completo — VERIFICAÇÃO HUMANA NECESSÁRIA para ponto de corte específico.",
+    "theme": "Gravidez",
+    "tags": [
+      "cardiomiopatia periparto",
+      "metanálise",
+      "marcadores prognósticos",
+      "recuperação ventricular",
+      "fração de ejeção"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

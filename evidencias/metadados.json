@@ -34306,5 +34306,161 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "aortopatia-gestante-cesarea-recomendada-em-historia-de-disseccao-cronica",
+    "statement": "Em gestante com história de dissecção aórtica crônica, o parto cesáreo é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "C-EO",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.2, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "aortopatia",
+      "gestação",
+      "dissecção aórtica",
+      "via de parto",
+      "cesárea"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aortopatia-gestante-parto-vaginal-recomendado-diametro-menor-4cm",
+    "statement": "Em gestante com aortopatia e diâmetro aórtico <4,0cm, o parto vaginal (quando apropriado por outros motivos) é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "C-EO",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.2, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "aortopatia",
+      "gestação",
+      "via de parto",
+      "parto vaginal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aortopatia-gestante-cesarea-razoavel-diametro-45cm-ou-mais",
+    "statement": "Em gestante com diâmetro da raiz aórtica ou aorta ascendente ≥4,5cm, a cesárea é razoável.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C-EO",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.2, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "aortopatia",
+      "gestação",
+      "via de parto",
+      "cesárea",
+      "síndrome de Marfan"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aortopatia-gestante-parto-vaginal-pode-ser-razoavel-entre-40-e-45mm",
+    "statement": "Em gestante com diâmetro da raiz aórtica ou aorta ascendente entre 4,0cm e 4,5cm, o parto vaginal com anestesia regional, segunda fase abreviada e parto assistido pode ser razoável.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C-EO",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.2, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "aortopatia",
+      "gestação",
+      "via de parto",
+      "parto vaginal assistido",
+      "anestesia regional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aortopatia-sindromica-gestante-cesarea-pode-ser-considerada-entre-40-e-45mm",
+    "statement": "Em gestante com aortopatia torácica hereditária sindrômica ou não sindrômica (syndromic e nsHTAD) e diâmetro da raiz aórtica ou aorta ascendente entre 4,0cm e 4,5cm, a cesárea pode ser considerada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C-EO",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.2, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "aortopatia hereditária",
+      "gestação",
+      "via de parto",
+      "cesárea"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marfan-cirurgia-aortica-pre-concepcional-recomendada-acima-de-45mm",
+    "statement": "Em mulher com síndrome de Marfan e diâmetro da raiz aórtica >4,5cm, a cirurgia aórtica antes da gestação é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.3, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "síndrome de Marfan",
+      "gestação",
+      "cirurgia aórtica profilática",
+      "aconselhamento pré-concepcional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marfan-cirurgia-aortica-pre-concepcional-pode-ser-considerada-entre-40-e-45mm",
+    "statement": "Em mulher com síndrome de Marfan e diâmetro da raiz aórtica entre 4,0cm e 4,5cm, a cirurgia aórtica antes da gestação pode ser considerada, especialmente na presença de fatores de risco para dissecção (crescimento aórtico rápido ≥0,3cm/ano ou história familiar de dissecção).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C-LD",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.3, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "síndrome de Marfan",
+      "gestação",
+      "cirurgia aórtica profilática",
+      "crescimento aórtico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aortopatia-gestante-ecocardiograma-de-vigilancia-a-cada-trimestre",
+    "statement": "Em gestante com condição aortopática ou raiz/aorta ascendente dilatada, o ecocardiograma transtorácico de vigilância para monitorar diâmetros aórticos e função da valva aórtica é recomendado a cada trimestre e novamente algumas semanas após o parto, podendo a imagem ser mais frequente conforme o diâmetro aórtico, a taxa de crescimento e a condição de base.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "AHA/ACC",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 (acesso aberto). Seção 8.1, recomendação 7, já citada e verificada linha a linha em content/Gravidez/sindrome-de-marfan-na-gestacao-risco-de-disseccao-aortica-e-limiares-de-manejo-pelo-diametro.md.",
+    "theme": "Gravidez",
+    "tags": [
+      "aortopatia",
+      "gestação",
+      "ecocardiograma seriado",
+      "vigilância",
+      "síndrome de Marfan"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
