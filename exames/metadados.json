@@ -6840,5 +6840,76 @@
       "cardiopatia estrutural",
       "biomarcador"
     ]
+  },
+  {
+    "slug": "monitorizacao-laboratorial-dos-anticoagulantes-orais-diretos-doac",
+    "name": "Monitorização laboratorial dos anticoagulantes orais diretos (DOAC)",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Testes de coagulação específicos e calibrados para quantificar a concentração ou o efeito farmacodinâmico dos anticoagulantes orais diretos (DOAC): tempo de trombina diluído (dTT) calibrado ou tempo de coagulação por ecarina para a dabigatrana (inibidor direto da trombina), e ensaio de atividade anti-fator Xa calibrado para rivaroxabana, apixabana, edoxabana e betrixabana. O padrão-ouro para medir a concentração do fármaco é a cromatografia líquida acoplada a espectrometria de massas em tandem (LC-MS/MS), método de referência de laboratório especializado, não de rotina clínica.",
+    "reference_range": "Não existe faixa terapêutica-alvo definida para os DOAC como existe o INR 2,0-3,0 para os antagonistas de vitamina K — os DOAC foram licenciados em regime de dose fixa, sem monitorização de rotina prevista em bula.",
+    "indications": "Os testes de coagulação globais de rotina (tempo de protrombina, TTPa) NÃO são adequados para quantificar o efeito dos DOAC, segundo a revisão de referência. A monitorização específica fica reservada a cenários clínicos que exigem saber a concentração ou o efeito residual do fármaco: sangramento ativo, necessidade de procedimento de urgência, suspeita de acúmulo por insuficiência renal, extremos de peso corporal, ou dúvida sobre adesão/momento da última dose antes de trombólise no AVC isquêmico.",
+    "interpretation": "Para a dabigatrana, o dTT calibrado ou o ensaio cromogênico de ecarina estimam a concentração plasmática do fármaco. Para os inibidores do fator Xa, o ensaio anti-Xa calibrado para o fármaco específico faz o mesmo. A revisão nota que há variação interindividual real na resposta aos DOAC mesmo em dose fixa padronizada, o que sustenta o interesse em monitorização farmacodinâmica para individualizar dose em casos selecionados — mas a revisão também é explícita que poucos dados clínicos publicados comprovam benefício desse ajuste guiado por exame, e que os ensaios de geração de trombina, propostos como alternativa para as duas classes, ainda carecem de padronização.",
+    "limitations": "A oferta desses testes calibrados não é universal em laboratório de rotina, e um TTPa ou TP normais NÃO excluem efeito anticoagulante relevante do DOAC — a leitura exige o teste específico e calibrado, não o teste de coagulação genérico disponível na maioria dos prontos-socorros. A revisão conclui que as plataformas para monitorização farmacodinâmica já existem em muitos laboratórios clínicos, mas ainda faltam validação e padronização entre laboratórios para sustentar ensaios clínicos que comprovem o benefício de ajustar dose por esse resultado.",
+    "source_refs": [
+      "Wieland E, Shipkova M. Pharmacokinetic and Pharmacodynamic Drug Monitoring of Direct-Acting Oral Anticoagulants: Where Do We Stand? Ther Drug Monit. 2019;41(2):180-191. DOI: 10.1097/FTD.0000000000000594. PMID: 30883512."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "DOAC",
+      "dabigatrana",
+      "anti-fator Xa",
+      "tempo de trombina diluído",
+      "ecarina",
+      "monitorização de anticoagulante"
+    ]
+  },
+  {
+    "slug": "teste-de-limiar-de-desfibrilacao-dft-no-implante-de-cdi",
+    "name": "Teste de limiar de desfibrilação (DFT) no implante de cardiodesfibrilador — por que deixou de ser rotina",
+    "category": "metodo_grafico",
+    "theme": "Dispositivos",
+    "what_it_measures": "Indução deliberada de fibrilação ventricular no momento do implante do cardiodesfibrilador implantável (CDI), seguida da tentativa de reversão pelo próprio dispositivo, para confirmar que o choque programado é suficiente para desfibrilar aquele paciente específico (a chamada margem de segurança de desfibrilação).",
+    "reference_range": "Não se aplica valor numérico de referência — o teste é um evento binário (choque reverte ou não reverte a fibrilação ventricular induzida), e a prática histórica era repetir com energia crescente até confirmar margem de segurança adequada.",
+    "indications": "Durante décadas, foi praticado de forma rotineira em praticamente todo implante de CDI, sob a premissa de que confirmar a eficácia do choque no momento do implante evitaria falha terapêutica futura. O ensaio randomizado SIMPLE (Shockless IMPLant Evaluation) testou diretamente essa premissa: comparou implante de CDI COM teste de desfibrilação contra implante SEM o teste, em 2.500 pacientes de 85 hospitais em 18 países, seguidos por média de 3,1 anos.",
+    "interpretation": "O desfecho composto de morte arrítmica ou choque apropriado que falhou em reverter a arritmia ocorreu em MENOS pacientes no grupo sem teste (90 eventos, 7%/ano) do que no grupo com teste (104 eventos, 8%/ano) — razão de risco 0,86 (IC95% 0,65-1,14), confirmando não inferioridade do implante sem teste (p<0,0001). Ou seja: pular o teste de desfibrilação não piorou a eficácia do choque nem aumentou a morte arrítmica — o resultado foi numericamente melhor sem o teste, embora a diferença não tenha sido estatisticamente superior, só não inferior.",
+    "limitations": "O teste de desfibrilação não é isento de risco: o desfecho de segurança que incluiu só os eventos mais diretamente atribuíveis ao teste ocorreu em 3,2% dos pacientes sem teste contra 4,5% com teste (p=0,08), e insuficiência cardíaca que exigiu inotrópico ou diurético endovenoso ocorreu em 2% dos pacientes em ambos os grupos. A conclusão dos próprios autores é que o teste de desfibrilação de rotina no implante é geralmente bem tolerado, mas não melhora a eficácia do choque nem reduz morte arrítmica — o que sustenta abandoná-lo como prática rotineira, reservando-o para cenários específicos (dispositivo subcutâneo, dúvida técnica sobre posicionamento) a critério do eletrofisiologista, não como etapa obrigatória de todo implante.",
+    "source_refs": [
+      "Healey JS, Hohnloser SH, Glikson M, Neuzner J, Mabo P, Vinolas X, et al. Cardioverter defibrillator implantation without induction of ventricular fibrillation: a single-blind, non-inferiority, randomised controlled trial (SIMPLE). Lancet. 2015;385(9970):785-791. DOI: 10.1016/S0140-6736(14)61903-6. PMID: 25715991."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiodesfibrilador implantável",
+      "CDI",
+      "teste de desfibrilação",
+      "DFT",
+      "SIMPLE trial",
+      "implante"
+    ]
+  },
+  {
+    "slug": "troponina-cardiaca-de-alta-sensibilidade-na-gestacao-e-na-pre-eclampsia",
+    "name": "Troponina cardíaca de alta sensibilidade na gestação e na pré-eclâmpsia",
+    "category": "laboratorial",
+    "theme": "Gravidez",
+    "what_it_measures": "Dosagem de troponina cardíaca (I ou T) de alta sensibilidade, usada na gestante da mesma forma que na população geral para investigar suspeita de lesão miocárdica — mas com uma pergunta adicional própria da gestação: se a interpretação do valor precisa ser diferente da não gestante, e se a pré-eclâmpsia por si só eleva o marcador na ausência de infarto.",
+    "reference_range": "Uma revisão sistemática identificou dez estudos (1.581 mulheres) sobre troponina cardíaca na gestação, mas concluiu que NÃO existe, até o momento da publicação, faixa de referência específica para a gestação validada com ensaio de alta sensibilidade — só dois dos dez estudos usaram métodos de alta sensibilidade, o restante usou métodos contemporâneos considerados insensíveis demais para esse cenário clínico.",
+    "indications": "Suspeita de síndrome coronariana aguda na gestante — o risco de infarto do miocárdio aumenta durante a gestação, principalmente na pré-eclâmpsia — e investigação de lesão miocárdica associada à pré-eclâmpsia, quadro em que o diagnóstico diferencial com infarto genuíno é clinicamente relevante e nem sempre simples.",
+    "interpretation": "A troponina I parece estar elevada na pré-eclâmpsia em comparação com a gestação sem complicação ou com mulheres não gestantes — sete dos sete estudos que compararam pré-eclâmpsia com gestação sem complicação (por qualquer método) mostraram troponina I elevada no grupo com pré-eclâmpsia, achado que a revisão atribui possivelmente ao estresse cardíaco da própria condição, não necessariamente a infarto. Já na gestação SEM complicação, a troponina I parece semelhante à de mulheres não gestantes saudáveis — ou seja, gestação por si só não eleva o marcador, mas pré-eclâmpsia pode elevar.",
+    "limitations": "A revisão é explícita quanto à limitação principal: não há faixa de referência específica da gestação estabelecida com ensaio de alta sensibilidade, o que limita a aplicação mais ampla do exame nesse contexto — um valor discretamente elevado numa gestante com pré-eclâmpsia não permite, sozinho, distinguir estresse cardíaco da condição de infarto genuíno. Os autores pedem estudos que definam faixas de referência específicas por gestação, com amostragem seriada ao longo da gravidez e considerando idade gestacional e índice de massa corporal, variáveis que mudam a fisiologia materna normal.",
+    "source_refs": [
+      "Dockree S, Brook J, Shine B, James T, Green L, Vatish M. Cardiac-specific troponins in uncomplicated pregnancy and pre-eclampsia: A systematic review. PLoS One. 2021;16(2):e0247946. DOI: 10.1371/journal.pone.0247946. PMID: 33635922."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "pré-eclâmpsia",
+      "gestação",
+      "infarto na gestante",
+      "biomarcador cardíaco"
+    ]
   }
 ]
