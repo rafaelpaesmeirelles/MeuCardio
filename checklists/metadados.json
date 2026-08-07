@@ -2738,5 +2738,77 @@
     ],
     "review_status": "revisado",
     "revisao": "Itens derivados do documento já verificado e publicado desta base (morte-subita-cardiaca-em-atletas-causas-por-faixa-etaria-e-custo-efetividade-do-rastreio-com-ecg.md) e do documento irmão citado dentro dele (content/Arritmias/morte-subita-em-atletas-triagem-pre-participacao-e-o-debate-do-ecg-obrigatorio.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "avaliacao-psicologica-apos-choque-do-cdi",
+    "condicao": "Avaliação psicológica após choque do cardiodesfibrilador implantável (CDI)",
+    "resumo": "Rastreio estruturado de ansiedade específica relacionada ao choque, sintomas de ansiedade/depressão, repercussão funcional e necessidade de suporte psicológico no portador de CDI após choque, sem criar ponto de corte não sustentado pelas fontes verificadas.",
+    "documento_origem": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Magyar-Russell G, Thombs BD, Cai JX, et al. The prevalence of anxiety and depression in adults with implantable cardioverter defibrillators: a systematic review. J Psychosom Res. 2011;71(4):223-231. DOI: 10.1016/j.jpsychores.2011.02.014. PMID: 21911099.",
+      "Tripp C, Huber NL, Kuhl EA, Sears SF. Measuring ICD shock anxiety: Status update on the Florida Shock Anxiety Scale after over a decade of use. Pacing Clin Electrophysiol. 2019;42(10):1294-1301. DOI: 10.1111/pace.13793. PMID: 31463949.",
+      "Ford J, Finch JF, Woodrow LK, et al. The Florida Shock Anxiety Scale (FSAS) for patients with implantable cardioverter defibrillators: testing factor structure, reliability, and validity of a previously established measure. Pacing Clin Electrophysiol. 2012;35(9):1146-1153. DOI: 10.1111/j.1540-8159.2012.03455.x. PMID: 22758923."
+    ],
+    "itens": [
+      {
+        "id": "cdi-psico-ansiedade-depressao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sintomas de ansiedade e depressão pesquisados diretamente após a experiência de choque, reconhecendo que sofrimento psicológico é frequente em adultos portadores de CDI e pode interferir na adaptação ao dispositivo",
+        "origem_secao": "Revisão sistemática de ansiedade e depressão em adultos com CDI — Magyar-Russell et al."
+      },
+      {
+        "id": "cdi-psico-medo-novo-choque",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perguntado especificamente sobre medo de novos choques e ansiedade relacionada ao dispositivo, em vez de limitar a avaliação a sintomas gerais de ansiedade",
+        "origem_secao": "Ansiedade específica relacionada ao choque — FSAS"
+      },
+      {
+        "id": "cdi-psico-fsas",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Quando disponível, ansiedade específica relacionada ao choque avaliada com instrumento validado, como a Florida Shock Anxiety Scale (FSAS), cuja confiabilidade e validade foram sustentadas em estudos de diferentes populações de portadores de CDI",
+        "origem_secao": "Validade e confiabilidade da Florida Shock Anxiety Scale"
+      },
+      {
+        "id": "cdi-psico-impacto-atividade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrado se a ansiedade relacionada ao choque está levando à redução ou evitação de atividade física, associação descrita na revisão de uso da FSAS",
+        "origem_secao": "Correlatos clínicos da ansiedade relacionada ao choque — Tripp et al."
+      },
+      {
+        "id": "cdi-psico-tept",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Sintomas pós-traumáticos pesquisados quando houver sofrimento persistente após o choque, porque escores mais altos de ansiedade relacionada ao choque se associam a maior carga de sintomas de transtorno de estresse pós-traumático",
+        "origem_secao": "Correlatos da FSAS — sintomas de transtorno de estresse pós-traumático"
+      },
+      {
+        "id": "cdi-psico-educacao-suporte",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Compreensão sobre o CDI e percepção de suporte da equipe exploradas e reforçadas, pois menor conhecimento relacionado ao dispositivo e menor suporte percebido dos profissionais de saúde se associaram a maior ansiedade relacionada ao choque",
+        "origem_secao": "Correlatos da FSAS — conhecimento do dispositivo e suporte da equipe"
+      },
+      {
+        "id": "cdi-psico-encaminhamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se houver sofrimento psicológico clinicamente relevante ou persistente, considerado encaminhamento para psicologia/saúde mental integrado ao seguimento cardiológico; a revisão da FSAS descreve seu uso para identificar necessidade de suporte psicológico ou psicoeducação",
+        "origem_secao": "Uso clínico da FSAS para identificar necessidade de suporte psicológico ou psicoeducação"
+      },
+      {
+        "id": "cdi-psico-corte-fsas",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: as fontes verificadas sustentam validade e confiabilidade da FSAS, mas não estabelecem nesta ficha um ponto de corte universal único que obrigue encaminhamento ou intervenção; não criar threshold numérico sem fonte específica",
+        "origem_secao": "Limite das fontes verificadas nesta ficha"
+      }
+    ],
+    "revisao": "Checklist elaborado em 06/08/2026 a partir de uma revisão sistemática sobre ansiedade/depressão em portadores de CDI e de duas publicações de validação/uso da Florida Shock Anxiety Scale, com PMID e DOI conferidos no PubMed. Nenhum ponto de corte da FSAS foi criado: onde as fontes verificadas não sustentam um threshold universal único, a lacuna foi marcada explicitamente como VERIFICAÇÃO HUMANA NECESSÁRIA. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
   }
 ]
