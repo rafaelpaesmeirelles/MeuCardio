@@ -6237,5 +6237,74 @@
       "doenca pulmonar intersticial",
       "investigacao etiologica"
     ]
+  },
+  {
+    "slug": "cortisol-capilar-como-biomarcador-de-estresse-cronico-e-risco-cardiovascular",
+    "name": "Cortisol capilar como biomarcador de estresse crônico e risco cardiovascular",
+    "category": "laboratorial",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Concentração de cortisol acumulada em segmento de cabelo (tipicamente 3 cm, correspondendo a cerca de 3 meses de exposição), oferecendo uma medida de exposição crônica ao cortisol — diferente da dosagem sérica ou salivar, que captam apenas um único ponto no tempo e são muito sensíveis à variação circadiana e a estressores agudos do próprio momento da coleta.",
+    "reference_range": "Não há corte diagnóstico único estabelecido para uso clínico de rotina — o método é predominantemente de pesquisa. Em coorte populacional de referência, a mediana foi de 21,0 pg/mg de cabelo em mulheres e 26,3 pg/mg em homens (p<0,001 entre sexos), com associação de risco calculada por quartil/nível elevado versus não elevado, não por corte absoluto validado para decisão individual.",
+    "indications": "Uso predominantemente em pesquisa clínica, para estudar a relação entre estresse crônico (carga alostática) e desfecho cardiovascular — não é exame de rotina em consultório. Relevante para o raciocínio clínico porque fundamenta biologicamente a associação, já observada em outros desenhos de estudo, entre estresse psicossocial crônico e risco cardiovascular incidente.",
+    "interpretation": "Um estudo populacional com 283 idosos da comunidade (idade mediana 75 anos) encontrou associação entre nível elevado de cortisol capilar e maior risco cardiovascular (odds ratio 2,7; p=0,01) e maior risco de diabetes tipo 2 (odds ratio 3,2; p=0,04), com os autores descrevendo a magnitude do efeito como comparável à de fatores de risco cardiovascular tradicionais — reforçando a hipótese de que a exposição crônica e não apenas pontual ao cortisol tem relevância fisiopatológica própria, distinta do que uma dosagem sérica isolada consegue captar.",
+    "limitations": "Método ainda não padronizado para uso clínico individual (sem corte diagnóstico validado para decisão terapêutica). Influenciado por fatores que afetam o crescimento e a cor do cabelo, tratamento capilar químico, e não distingue a fonte do estresse (psicossocial, doença física crônica, uso de corticoide exógeno). Estudo de associação, não estabelece causalidade nem orienta intervenção terapêutica direta a partir do resultado isolado.",
+    "source_refs": [
+      "Manenschijn L, Schaap L, van Schoor NM, van der Pas S, Peeters GM, Lips P, Koper JW, van Rossum EF. High long-term cortisol levels, measured in scalp hair, are associated with a history of cardiovascular disease. J Clin Endocrinol Metab. 2013;98(5):2078-2083. DOI: 10.1210/jc.2012-3663. PMID: 23596141"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cortisol",
+      "estresse cronico",
+      "biomarcador",
+      "saude mental",
+      "risco cardiovascular"
+    ]
+  },
+  {
+    "slug": "protocolo-rush-ultrassom-point-of-care-no-choque-indiferenciado",
+    "name": "Protocolo RUSH (Rapid Ultrasound in SHock) — ultrassom point-of-care no choque indiferenciado",
+    "category": "imagem",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Sequência estruturada de janelas de ultrassom à beira do leito (cardíaca, veia cava inferior, pulmonar, abdominal/FAST e vascular periférico) organizada em torno de três perguntas — 'a bomba' (função ventricular, derrame pericárdico), 'o tanque' (volemia — veia cava inferior, linhas B pulmonares, líquido livre) e 'o cano' (aneurisma de aorta, trombose venosa profunda) — para orientar a classificação fisiológica do choque indiferenciado (hipovolêmico, cardiogênico, obstrutivo, distributivo) em minutos, sem esperar exame confirmatório laboratorial ou de imagem seccional.",
+    "reference_range": "Não se aplica valor numérico único — o resultado é a combinação de achados qualitativos nas três categorias ('bomba', 'tanque', 'cano'), que juntos apontam para um padrão fisiológico de choque predominante.",
+    "indications": "Paciente em choque de causa não esclarecida à beira do leito (pronto-socorro, UTI), quando a decisão de reposição volêmica, vasopressor, ou intervenção mecânica (pericardiocentese, trombólise) precisa ser tomada rapidamente e a história/exame físico isolados não definem com segurança o mecanismo predominante do choque.",
+    "interpretation": "O protocolo, descrito originalmente como sistematização de um exame de ultrassom point-of-care multiorgão para o paciente crítico, organiza achados já conhecidos isoladamente (colapso diastólico de câmara direita no tamponamento, veia cava inferior colabada na hipovolemia, linhas B difusas na congestão, sinal de McConnell ou dilatação aguda de VD na embolia pulmonar maciça) num fluxo de decisão único, permitindo diferenciar rapidamente entre os quatro grandes mecanismos de choque à beira do leito — hipovolêmico (tanque vazio), cardiogênico (bomba fraca), obstrutivo (tanque cheio com bomba obstruída, como no tamponamento ou pneumotórax hipertensivo) e distributivo (bomba hipercontrátil, tanque normal a colabado, vasoplegia periférica).",
+    "limitations": "A acurácia depende do treinamento e da experiência do operador em cada uma das janelas — o protocolo não substitui, mas complementa, o julgamento clínico e os exames confirmatórios quando disponíveis em tempo hábil. Janela acústica limitada (obesidade, enfisema, curativos, drenos) pode impedir a aquisição de uma ou mais das janelas do protocolo, exigindo integração com os demais dados clínicos.",
+    "source_refs": [
+      "Perera P, Mailhot T, Riley D, Mandavia D. The RUSH exam: Rapid Ultrasound in SHock in the evaluation of the critically lll. Emerg Med Clin North Am. 2010;28(1):29-56. DOI: 10.1016/j.emc.2009.09.010. PMID: 19945597"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pocus",
+      "rush",
+      "ultrassom point-of-care",
+      "choque indiferenciado",
+      "terapia intensiva"
+    ]
+  },
+  {
+    "slug": "tomografia-cardiaca-com-integracao-ao-mapeamento-eletroanatomico-antes-de-ablacao-de-fa",
+    "name": "Tomografia cardíaca com integração ao sistema de mapeamento eletroanatômico antes de ablação de fibrilação atrial",
+    "category": "imagem",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Reconstrução tridimensional da anatomia do átrio esquerdo e das veias pulmonares por angiotomografia cardíaca, importada e registrada (fusionada) dentro do sistema de mapeamento eletroanatômico usado durante o procedimento de ablação por cateter — permitindo ao operador visualizar a anatomia real do paciente (incluindo variantes anatômicas de veia pulmonar) sobreposta à posição do cateter em tempo real.",
+    "reference_range": "Não se aplica valor numérico de referência — o parâmetro de qualidade técnica relevante é o erro de registro entre a imagem tomográfica e a geometria eletroanatômica adquirida durante o procedimento, idealmente inferior a poucos milímetros.",
+    "indications": "Planejamento pré-procedimento de ablação por cateter de fibrilação atrial, sobretudo para identificar variantes anatômicas da veia pulmonar (veia acessória, tronco comum de veias pulmonares esquerdas) que mudam a estratégia de isolamento, e para reduzir tempo de procedimento e exposição a fluoroscopia ao guiar a navegação do cateter por uma anatomia já conhecida em detalhe.",
+    "interpretation": "O estudo original de validação da integração de imagem tridimensional (30 pacientes submetidos a ablação de FA paroxística ou persistente) mostrou erro de registro da tomografia por ajuste de superfície à geometria eletroanatômica de 2,3 ± 0,4 mm, sem diferença significativa entre as regiões do átrio esquerdo (superior, inferior, septal, lateral) nem entre pacientes em fibrilação atrial ou ritmo sinusal no momento da aquisição — precisão suficiente para guiar o isolamento das veias pulmonares em pares, alcançado em 58 de 60 pares de veias avaliadas, sem evidência de estenose significativa de veia pulmonar na angiografia pós-procedimento.",
+    "limitations": "Exige exposição adicional a contraste iodado e radiação da própria tomografia, antes mesmo do procedimento de ablação. O registro/fusão de imagem depende de qualidade técnica da aquisição e pode acumular erro se houver movimento significativo entre a aquisição da tomografia e o procedimento. Não substitui a confirmação elétrica de isolamento das veias pulmonares durante o próprio procedimento — é ferramenta de navegação e planejamento, não de confirmação de eficácia da ablação.",
+    "source_refs": [
+      "Kistler PM, Earley MJ, Harris S, Abrams D, Ellis S, Sporton SC, Schilling RJ. Validation of three-dimensional cardiac image integration: use of integrated CT image into electroanatomic mapping system to perform catheter ablation of atrial fibrillation. J Cardiovasc Electrophysiol. 2006;17(4):341-348. DOI: 10.1111/j.1540-8167.2006.00371.x. PMID: 16643352"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tomografia cardiaca",
+      "ablacao de fibrilacao atrial",
+      "mapeamento eletroanatomico",
+      "veias pulmonares",
+      "planejamento pre-procedimento"
+    ]
   }
 ]
