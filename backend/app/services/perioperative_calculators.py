@@ -10,6 +10,8 @@ Fonte: ChatGPT
 
 from __future__ import annotations
 
+import math
+
 from app.services.calculators import Calculator, Field
 
 
@@ -116,12 +118,8 @@ def _vsg_cri(d: dict) -> dict:
 
     categoria = "baixo" if score <= 4 else ("intermediario" if score <= 6 else "alto")
     # Os dois extremos (2,6% e 14,3%) estão no abstract do Bertges 2010, PMID
-    # 20570467: "six categories of risk ranging from 2.6% to 14.3% (score of
-    # 0-3 to 8)". Os quatro valores intermediários (3,5/6,0/6,6/8,9%) vieram
-    # de fonte secundária e NÃO foram confirmados contra a Table do texto
-    # completo (paywall, sem PMC) nesta sessão — achado ao revisar o PR do
-    # ChatGPT em 07/08/2026. Sinalizado explicitamente em vez de apresentar
-    # como igualmente verificado.
+    # 20570467. Os quatro valores intermediários vieram de fonte secundária e
+    # não foram confirmados contra a tabela do texto completo nesta sessão.
     if score <= 3:
         evento_original_pct, evento_verificado = 2.6, True
     elif score == 4:
@@ -155,6 +153,46 @@ def _vsg_cri_txt(r: dict) -> str:
         f"teve taxa de complicações cardíacas de aproximadamente {r['evento_original_pct']}%.{aviso} "
         "Essas taxas históricas não equivalem a probabilidade individual contemporânea e o escore "
         "deve ser usado especificamente em cirurgia vascular arterial."
+    )
+
+
+# -------------------------------------------------------------------- SORT v1
+# Protopapa KL, Simpson JC, Smith NCE, Moonesinghe SR. Br J Surg.
+# 2014;101(13):1774-1783. PMID: 25388883. PMCID: PMC4240514.
+# DOI: 10.1002/bjs.9638. Equação completa publicada no artigo original.
+_SORT_INTERCEPTO = -7.366
+_SORT_ASA = {1: 0.0, 2: 0.0, 3: 1.411, 4: 2.388, 5: 4.081}
+_SORT_URGENCIA = {"eletiva": 0.0, "expedited": 1.236, "urgente": 1.657, "imediata": 2.452}
+
+
+def _sort_v1(d: dict) -> dict:
+    idade = float(d["idade"])
+    asa = int(d["asa"])
+    urgencia = d["urgencia"]
+    if asa not in _SORT_ASA:
+        raise ValueError("Classe ASA precisa estar entre I e V.")
+    if urgencia not in _SORT_URGENCIA:
+        raise ValueError("Urgência cirúrgica inválida para SORT v1.")
+
+    x = _SORT_INTERCEPTO + _SORT_ASA[asa] + _SORT_URGENCIA[urgencia]
+    x += 0.712 if d.get("especialidade_alto_risco") else 0.0
+    x += 0.381 if d.get("cirurgia_xmajor_complexa") else 0.0
+    x += 0.667 if d.get("cancer") else 0.0
+    x += 1.591 if idade >= 80 else (0.777 if idade >= 65 else 0.0)
+    risco = 1.0 / (1.0 + math.exp(-x))
+    return {
+        "risco_mortalidade_30d_pct": round(risco * 100, 2),
+        "preditor_linear": round(x, 3),
+        "versao": "SORT v1 (2014)",
+    }
+
+
+def _sort_v1_txt(r: dict) -> str:
+    return (
+        f"SORT v1 (2014): mortalidade global estimada em 30 dias de "
+        f"{r['risco_mortalidade_30d_pct']}%. O SORT prevê mortalidade por qualquer causa após "
+        "cirurgia não cardíaca e não é um escore específico de MACE/IAM. Deve ser interpretado "
+        "separadamente de RCRI, Gupta MICA, AUB-HAS2 e VSG-CRI."
     )
 
 
@@ -226,6 +264,42 @@ PERIOPERATIVE_REGISTRY: dict[str, Calculator] = {
             "Usar especificamente em cirurgia vascular arterial; não extrapolar para cirurgia não vascular.",
             "As taxas absolutas de evento são da coorte original e podem não refletir risco contemporâneo individual.",
             "Uso crônico de betabloqueador é variável prognóstica do modelo e não implica causalidade.",
+        ],
+    ),
+    "sort-v1": Calculator(
+        slug="sort-v1",
+        name="SORT v1 (2014) — mortalidade em 30 dias",
+        theme="Perioperatório",
+        purpose="Estimar mortalidade global em 30 dias após cirurgia não cardíaca com seis variáveis pré-operatórias.",
+        fields=[
+            Field(name="idade", label="Idade", type="number", unit="anos", min=16, max=120),
+            Field(name="asa", label="Classe ASA", type="select", options=[
+                {"value": 1, "label": "ASA I"}, {"value": 2, "label": "ASA II"},
+                {"value": 3, "label": "ASA III"}, {"value": 4, "label": "ASA IV"},
+                {"value": 5, "label": "ASA V"},
+            ]),
+            Field(name="urgencia", label="Urgência da cirurgia", type="select", options=[
+                {"value": "eletiva", "label": "Eletiva"},
+                {"value": "expedited", "label": "Expedited"},
+                {"value": "urgente", "label": "Urgente"},
+                {"value": "imediata", "label": "Imediata"},
+            ]),
+            Field(name="especialidade_alto_risco", label="Especialidade de alto risco: gastrointestinal, torácica ou vascular", type="boolean"),
+            Field(name="cirurgia_xmajor_complexa", label="Gravidade cirúrgica Xmajor/complexa no modelo original", type="boolean"),
+            Field(name="cancer", label="Câncer/malignidade", type="boolean"),
+        ],
+        reference=(
+            "Protopapa KL, Simpson JC, Smith NCE, Moonesinghe SR. Development and validation of "
+            "the Surgical Outcome Risk Tool (SORT). Br J Surg. 2014;101(13):1774-1783. "
+            "PMID 25388883. PMCID PMC4240514. DOI 10.1002/bjs.9638."
+        ),
+        compute=_sort_v1,
+        interpret=_sort_v1_txt,
+        limitations=[
+            "Prediz mortalidade global em 30 dias, não eventos cardiovasculares maiores; não comparar diretamente seu percentual com RCRI/Gupta MICA.",
+            "Esta implementação reproduz a equação SORT original publicada em 2014 (v1); não representa versões posteriores do calculador oficial.",
+            "O estudo original excluiu cirurgia ambulatorial/day-case, obstétrica, neurocirurgia, cirurgia cardíaca e transplante.",
+            "A classificação Xmajor/complexa e a categoria de urgência devem seguir as definições operacionais do modelo original/local; classificação incorreta altera a estimativa.",
         ],
     ),
 }
