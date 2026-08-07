@@ -5,7 +5,7 @@ impressão, assinatura digital e envio ao paciente. Os resultados são sempre
 recalculados no servidor a partir dos campos brutos — nunca se confia em um
 número enviado pelo cliente.
 
-Fonte: ChatGPT nas extensões DASI/AUB-HAS2 adicionadas em 07/08/2026.
+Fonte: ChatGPT nas extensões DASI/AUB-HAS2/VSG-CRI adicionadas em 07/08/2026.
 """
 
 from __future__ import annotations
@@ -24,8 +24,6 @@ from app.services import cofre
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
 from app.services.professional_profile import document_identity
 
-# Garante disponibilidade das calculadoras perioperatórias mesmo se este router
-# for importado antes do router genérico /api/calculators.
 calc.REGISTRY.update(PERIOPERATIVE_REGISTRY)
 
 router = APIRouter(prefix="/api/avaliacao-preoperatoria", tags=["avaliacao-preoperatoria"])
@@ -45,6 +43,7 @@ class GerarIn(BaseModel):
     gupta: dict | None = None
     dasi: dict | None = None
     aub_has2: dict | None = None
+    vsg_cri: dict | None = None
     conduta_recomendada: str | None = None
     endereco: str | None = None
 
@@ -65,6 +64,7 @@ def _montar_corpo(
     gupta: tuple[dict, str] | None,
     dasi: tuple[dict, str] | None,
     aub_has2: tuple[dict, str] | None,
+    vsg_cri: tuple[dict, str] | None,
 ) -> str:
     linhas: list[str] = []
     linhas.append("AVALIAÇÃO CARDIOLÓGICA PRÉ-OPERATÓRIA DE RISCO CIRÚRGICO")
@@ -112,12 +112,22 @@ def _montar_corpo(
         linhas.append(interpretacao)
         linhas.append("")
 
+    if vsg_cri:
+        resultado, interpretacao = vsg_cri
+        linhas.append(
+            f"VSG-CRI (cirurgia vascular arterial): {resultado['score']} ponto(s) — "
+            f"categoria de risco {resultado['categoria']}."
+        )
+        linhas.append(interpretacao)
+        linhas.append("")
+
     linhas.append("INTEGRAÇÃO DOS MÉTODOS")
     linhas.append(
         "Os escores estimam desfechos diferentes e não devem ser somados, promediados nem usados "
         "isoladamente como autorização para cirurgia. A decisão integra doença cardiovascular ativa, "
         "risco do procedimento, modificadores de risco, capacidade funcional e possibilidade de que "
-        "uma investigação adicional modifique o manejo."
+        "uma investigação adicional modifique o manejo. O VSG-CRI deve ser utilizado especificamente "
+        "em cirurgia vascular arterial."
     )
     linhas.append("")
 
@@ -145,19 +155,19 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
             raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
-    if all(x is None for x in (dados.rcri, dados.gupta, dados.dasi, dados.aub_has2)):
+    if all(x is None for x in (dados.rcri, dados.gupta, dados.dasi, dados.aub_has2, dados.vsg_cri)):
         raise HTTPException(
             status_code=422,
-            detail="Calcule ao menos um método (RCRI, Gupta MICA, DASI ou AUB-HAS2) antes de gerar o documento.",
+            detail="Calcule ao menos um método (RCRI, Gupta MICA, DASI, AUB-HAS2 ou VSG-CRI) antes de gerar o documento.",
         )
 
-    # Recalcula no servidor: mesma régua de "nunca fabricar dado" aplicada ao cálculo.
     rcri = _resultado_calculadora("rcri", dados.rcri)
     gupta = _resultado_calculadora("gupta-mica", dados.gupta)
     dasi = _resultado_calculadora("dasi", dados.dasi)
     aub_has2 = _resultado_calculadora("aub-has2", dados.aub_has2)
+    vsg_cri = _resultado_calculadora("vsg-cri", dados.vsg_cri)
 
-    corpo = _montar_corpo(dados, rcri, gupta, dasi, aub_has2)
+    corpo = _montar_corpo(dados, rcri, gupta, dasi, aub_has2, vsg_cri)
 
     variaveis = {
         "idade": str(dados.idade) if dados.idade is not None else "",
@@ -169,6 +179,7 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "gupta": dados.gupta or {},
         "dasi": dados.dasi or {},
         "aub_has2": dados.aub_has2 or {},
+        "vsg_cri": dados.vsg_cri or {},
         "fonte_producao_extensoes": "chatgpt",
     }
 
@@ -199,6 +210,7 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
                 "tem_gupta": gupta is not None,
                 "tem_dasi": dasi is not None,
                 "tem_aub_has2": aub_has2 is not None,
+                "tem_vsg_cri": vsg_cri is not None,
             },
         )
     )
@@ -216,4 +228,5 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "gupta": gupta[0] if gupta else None,
         "dasi": dasi[0] if dasi else None,
         "aub_has2": aub_has2[0] if aub_has2 else None,
+        "vsg_cri": vsg_cri[0] if vsg_cri else None,
     }
