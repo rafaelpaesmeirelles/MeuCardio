@@ -21567,5 +21567,327 @@
         "por_que": "Fecha a trilha no que conecta os dois problemas anteriores à segurança da internação: o idoso investigado por síncope/queda de causa cardiovascular soma os mesmos fatores de risco para delirium hospitalar que o pós-operatório, e o programa multicomponente HELP foi testado exatamente nessa população de clínica médica, não cirúrgica."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-doenca-coronariana-cronica-e-aguda",
+    "titulo": "Cardiologia geriátrica: doença coronariana no muito idoso, da angina refratária à síndrome coronariana aguda",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo decidir entre estratégia invasiva e terapia médica otimizada em três cenários coronarianos do paciente muito idoso — angina crônica refratária, doença multiarterial estável e síndrome coronariana aguda sem supra de ST — e escolher a antiplaquetária dupla certa e sua duração depois de qualquer um deles.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "angina-refrataria-no-muito-idoso-revascularizacao-versus-terapia-medica-otimizada-o-ensaio-time",
+        "por_que": "Primeiro cenário: angina crônica refratária a dois ou mais antianginosos. O TIME é o único ensaio randomizado conduzido inteiramente em ≥75 anos, e mostra alívio de sintomas maior com revascularização aos 6 meses — mas sem diferença de mortalidade em 1 e 4 anos, o que já entrega a tensão central da trilha: sintoma melhora, sobrevida não muda."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "doenca-coronariana-multiarterial-no-muito-idoso-cabg-versus-pci-e-o-cruzamento-entre-risco-precoce-e-beneficio-tardio",
+        "por_que": "Sobe a complexidade anatômica: doença multiarterial estável, e a escolha entre CABG e PCI no muito idoso. O ponto que dá nome ao documento — risco cirúrgico precoce maior compensado por benefício tardio — é a mesma lógica de trade-off temporal já vista no TIME, agora aplicada à escolha de técnica, não só à indicação de revascularizar."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-sem-supra-de-st-no-muito-idoso-estrategia-invasiva-versus-conservadora-after-eighty-e-senior-rita",
+        "por_que": "Muda de crônico para agudo: SCA sem supra no muito idoso, com dois ensaios que respondem à mesma pergunta do TIME (invasiva vs. conservadora) só que no contexto agudo — After Eighty e SENIOR-RITA convergem em reduzir eventos isquêmicos sem o mesmo peso na mortalidade, reforçando o padrão que atravessa a trilha inteira."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "terapia-antiplaquetaria-dupla-no-muito-idoso-apos-sindrome-coronariana-aguda-escolha-e-duracao-popular-age-e-senior",
+        "por_que": "Fecha a trilha na decisão que vem depois de qualquer uma das três anteriores, se a estratégia invasiva foi escolhida: qual P2Y12 e por quanto tempo. POPular AGE e SENIOR tratam exatamente da mesma população muito idosa dos documentos anteriores, agora pelo ângulo do sangramento, que é o que limita a agressividade da estratégia invasiva discutida do primeiro ao terceiro passo."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-fibrilacao-atrial-alem-da-anticoagulacao",
+    "titulo": "Cardiologia geriátrica: fibrilação atrial no muito idoso além da anticoagulação — rastreio, FA subclínica e ablação",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo que a fibrilação atrial no muito idoso levanta três perguntas anteriores ou distintas da decisão de anticoagular já coberta em outra trilha do tema: vale a pena rastrear quem nunca teve o diagnóstico, o que fazer com um episódio subclínico visto só no dispositivo, e até que faixa etária a ablação por cateter ainda compensa o risco do procedimento.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "rastreio-de-fibrilacao-atrial-assintomatica-no-idoso-loop-strokestop-guard-af-e-mstops",
+        "por_que": "Começa pela pergunta anterior a qualquer decisão terapêutica: vale rastrear FA assintomática no idoso? Quatro ensaios (LOOP, STROKESTOP, GUARD-AF, mSToPS) dão veredito divergente — não é unanimidade, e a trilha começa reconhecendo essa divergência em vez de escondê-la."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-subclinica-detectada-por-dispositivo-no-idoso-anticoagulacao-artesia-e-noah-afnet-6",
+        "por_que": "Um passo adiante do rastreio: o episódio já foi detectado, agora por um dispositivo implantado (marca-passo, CDI), e a pergunta é se anticoagula. ARTESiA e NOAH-AFNET 6 não deram a mesma resposta — o documento explica por quê, e a divergência entre eles é o contraponto direto à divergência de rastreio do passo 1."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ablacao-de-fibrilacao-atrial-no-muito-idoso-seguranca-e-eficacia-por-faixa-etaria",
+        "por_que": "Fecha com a pergunta procedural: existe um limite de idade que torna a ablação por cateter desaconselhável, ou a decisão continua sendo por fragilidade e expectativa de vida funcional, como em toda a trilha de cardiologia geriátrica sobre decisão por fragilidade, não por número de anos?"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-prevencao-e-telessaude",
+    "titulo": "Cardiologia geriátrica: prevenção primária e telessaúde no muito idoso — estatina, meta pressórica e monitoramento remoto",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo até onde a evidência de prevenção primária (estatina, meta de pressão arterial) se sustenta no paciente ≥75-80 anos, e quando a tecnologia de monitoramento remoto de fato reduz desfecho na insuficiência cardíaca do idoso, em vez de apenas gerar mais dado sem mudar conduta.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estatina-em-prevencao-primaria-no-muito-idoso-o-que-prosper-e-a-metanalise-ctt-mostram",
+        "por_que": "Começa pela pergunta mais comum de consultório em prevenção primária no muito idoso: estatina compensa depois dos 75-80 anos? PROSPER e a metanálise CTT respondem de forma diferente, e o documento é explícito sobre onde a evidência é genuinamente mais fraca nessa faixa etária."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "prosper-pravastatina-em-idosos-com-risco-vascular",
+        "por_que": "Aprofunda o ensaio de referência do passo anterior — ver o desenho e os números originais do PROSPER (a população mais idosa já testada em prevenção primária/secundária mista com estatina) evita depender só do resumo do documento clínico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-sistolica-isolada-e-meta-pressorica-no-muito-idoso-hyvet-sprint-e-step",
+        "por_que": "Muda de lipídio para pressão arterial, mesma lógica de pergunta: existe meta pressórica validada no muito idoso, ou o corte usado em adultos mais jovens simplesmente foi extrapolado? HYVET, SPRINT e STEP não convergem por completo, e a divergência entre eles é o ponto central do documento."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "telessaude-e-monitoramento-remoto-na-insuficiencia-cardiaca-do-idoso-o-que-funciona-e-para-quem",
+        "por_que": "Fecha com uma pergunta de forma de cuidado, não de meta terapêutica: monitoramento remoto reduz reinternação por IC no idoso, ou é tecnologia que gera dado sem mudar desfecho? O documento seleciona o que funciona e para qual subgrupo, o mesmo tipo de seleção criteriosa que os três passos anteriores já vinham exigindo do leitor."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-marcadores-sociais-e-funcionais-de-risco",
+    "titulo": "Cardiologia geriátrica: isolamento social, disfunção erétil e sarcopenia como marcadores de risco cardiovascular no idoso",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair reconhecendo três achados que raramente entram na anamnese cardiovascular de rotina — isolamento social, disfunção erétil e perda de massa muscular — como marcadores de risco com peso prognóstico próprio no muito idoso, não como queixas periféricas à cardiologia.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "isolamento-social-e-solidao-como-fatores-de-risco-cardiovascular-no-idoso",
+        "por_que": "Abre com o marcador menos perguntado de todos: isolamento social e solidão têm associação própria com desfecho cardiovascular no idoso, independente de comorbidade clássica — e é o tipo de dado que só aparece se o médico perguntar ativamente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "disfuncao-eretil-como-marcador-precoce-de-risco-cardiovascular-e-a-modificacao-do-efeito-pela-idade",
+        "por_que": "Segundo marcador subutilizado, com uma reviravolta que vale a leitura: o efeito preditivo da disfunção erétil sobre risco cardiovascular se ATENUA com a idade, não se reforça — a associação é mais forte no homem mais jovem, o oposto do que a intuição sugere."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sarcopenia-e-caquexia-cardiaca-no-idoso-com-insuficiencia-cardiaca-definicoes-prevalencia-e-prognostico",
+        "por_que": "Fecha com o marcador físico, não só de história clínica: sarcopenia e caquexia cardíaca têm definições diferentes na literatura, mas apontam na mesma direção de pior prognóstico quando presentes na insuficiência cardíaca do idoso — o documento separa as definições em vez de tratá-las como sinônimo."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-valvopatia-mitral-e-sincope",
+    "titulo": "Cardiologia geriátrica: valvopatia mitral e síncope no muito idoso — da estenose reumática residual ao paradoxo COAPT-MITRA-FR",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo diferenciar duas etiologias de doença mitral que se apresentam de forma muito diferente no muito idoso — a estenose reumática residual, cada vez mais rara, e a insuficiência funcional secundária, cada vez mais candidata a reparo percutâneo — e reconhecer que ambas podem se manifestar como síncope de causa não imediatamente óbvia.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estenose-mitral-reumatica-no-idoso-diagnostico-diferencial-e-estrategia-terapeutica-por-faixa-etaria",
+        "por_que": "Começa pela etiologia mais antiga e menos lembrada no idoso ocidental contemporâneo: estenose mitral reumática residual, cujo diagnóstico diferencial e estratégia terapêutica mudam por faixa etária dentro do próprio grupo geriátrico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-mitral-funcional-secundaria-no-idoso-coapt-mitra-fr-e-o-conceito-de-desproporcionalidade",
+        "por_que": "Contrasta com a etiologia mais frequente hoje: insuficiência mitral funcional secundária, e o paradoxo real entre COAPT e MITRA-FR — dois ensaios de reparo percutâneo com resultado oposto, explicado pelo conceito de desproporcionalidade entre o grau de regurgitação e o tamanho do ventrículo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "coapt-reparo-mitral-transcateter-na-regurgitacao-secundaria",
+        "por_que": "Aprofunda o ensaio positivo citado no passo anterior — ver o desenho e os números originais do COAPT (redução de hospitalização e mortalidade com o MitraClip na população com desproporcionalidade favorável) evita depender só do resumo do documento clínico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "mitra-fr-reparo-percutaneo-na-regurgitacao-mitral-secundaria",
+        "por_que": "Fecha comparando com o ensaio negativo — MITRA-FR não mostrou o mesmo benefício, numa população com ventrículos proporcionalmente mais dilatados para o grau de regurgitação, e a leitura pareada dos dois ensaios é o que sustenta o conceito de desproporcionalidade do passo 2."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-cancer-e-fim-de-vida",
+    "titulo": "Cardiologia geriátrica: cardiotoxicidade oncológica e cuidados paliativos no muito idoso com insuficiência cardíaca",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo vigiar a cardiotoxicidade de antraciclina e trastuzumabe no idoso em tratamento oncológico, e reconhecer quando a insuficiência cardíaca avançada do muito idoso deixa de ser um problema de otimizar mais uma droga e passa a ser um problema de integrar cuidados paliativos formalmente.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-de-antraciclina-e-trastuzumabe-no-idoso-dose-idade-e-vigilancia",
+        "por_que": "Abre pelo risco que se acumula silenciosamente durante o tratamento oncológico: dose cumulativa de antraciclina e trastuzumabe, com a idade funcionando como fator de risco adicional para cardiotoxicidade — e a lacuna real de vigilância que o documento nomeia explicitamente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "prada-candesartana-e-metoprolol-na-prevencao-da-cardiotoxicidade-por-antraciclina",
+        "por_que": "Testa uma estratégia farmacológica concreta para reduzir o risco descrito no passo anterior — candesartana e metoprolol como prevenção primária de cardiotoxicidade, útil para saber o que oferecer ao paciente antes de a disfunção ventricular aparecer, não só depois."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
+        "por_que": "Fecha em outro extremo da trajetória: quando a insuficiência cardíaca do muito idoso — seja de causa oncológica ou não — chega à fase terminal, o documento mostra com números reais como o sistema de saúde de fato cuida do fim de vida, e o que a evidência controlada (PAL-HF, ENABLE CHF-PC) diz sobre integrar cuidados paliativos formalmente, incluindo os limites dessa evidência."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-recem-nascido-e-feto-de-alto-risco",
+    "titulo": "Cardiologia pediátrica: recém-nascido e feto de alto risco — anomalias estruturais e arritmias fora da triagem habitual",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer quatro apresentações neonatais/fetais que fogem do algoritmo padrão de triagem de cardiopatia congênita crítica — anomalia de Ebstein com shunt circular, hipertensão pulmonar persistente do recém-nascido, insuficiência cardíaca de alto débito por malformação vascular, arritmia fetal e doença de Chagas congênita — e a conduta específica de cada uma.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anomalia-de-ebstein-neonatal-estratificacao-de-risco-e-manejo-do-shunt-circular",
+        "por_que": "Abre com uma das apresentações neonatais mais graves e menos intuitivas: a anomalia de Ebstein grave gera um shunt circular, fisiologia própria que exige estratificação de risco e manejo específicos, diferentes do resto das cardiopatias cianóticas do neonato."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica",
+        "por_que": "Segunda emergência neonatal, de fisiopatologia distinta: hipertensão pulmonar persistente do recém-nascido, com diagnóstico à beira do leito e escada terapêutica própria — condição que pode mimetizar cardiopatia estrutural cianótica sem ser uma."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-de-alto-debito-no-neonato-malformacao-da-veia-de-galeno-e-hemangioma-hepatico",
+        "por_que": "Terceiro cenário, de mecanismo oposto aos dois anteriores: aqui o coração é estruturalmente normal, mas entra em insuficiência de alto débito por uma malformação vascular fora dele — veia de Galeno ou hemangioma hepático infantil — e a conduta é tratar a malformação, não o coração."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+        "por_que": "Muda do neonato já nascido para o feto: taquicardia supraventricular e bloqueio atrioventricular total congênito diagnosticados ainda intraútero, com tratamento transplacentário — decisão que precisa ser tomada antes do parto, não depois."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "doenca-de-chagas-congenita-transmissao-vertical-diagnostico-e-tratamento-do-recem-nascido",
+        "por_que": "Fecha com uma causa infecciosa relevante no Brasil e ausente da maioria dos guias internacionais: doença de Chagas congênita, com a taxa real de transmissão vertical, o diagnóstico parasitológico/sorológico específico do recém-nascido e o tratamento com benznidazol — tema que nenhuma das quatro cardiopatias/arritmias anteriores cobre."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-sindromes-geneticas-e-cardiomiopatia",
+    "titulo": "Cardiologia pediátrica: síndromes genéticas e cardiomiopatia na criança — do QT longo à síndrome de Williams",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer cinco condições de base genética na cardiologia pediátrica — canalopatia (QT longo), aortopatia hereditária, síndrome de Williams, defeito do septo atrioventricular na síndrome de Down e cardiomiopatia não compactada — cada uma com sua própria regra de vigilância e seu próprio gatilho para intervir.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",
+        "por_que": "Abre pela canalopatia mais estudada em pediatria: síndrome do QT longo congênita, com o escore de Schwartz como ferramenta diagnóstica formal e a estratificação de risco que muda por genótipo (LQT1, LQT2, LQT3), não só pelo QTc medido."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "aortopatias-geneticas-na-crianca-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos",
+        "por_que": "Muda de canalopatia elétrica para aortopatia estrutural: Marfan, Loeys-Dietz e Ehlers-Danlos vascular têm vigilância por imagem, manejo medicamentoso e limiares cirúrgicos distintos entre si, apesar de todas entrarem no mesmo raciocínio inicial de 'criança com dilatação de aorta'."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-williams-estenose-aortica-supravalvar-obstrucao-biventricular-e-risco-de-morte-subita-relacionada-a-anestesia",
+        "por_que": "Terceira síndrome genética, com uma armadilha prática que nenhuma das duas anteriores tem: a estenose aórtica supravalvar da síndrome de Williams carrega risco de morte súbita especificamente relacionado à anestesia, informação que muda a conduta perioperatória, não só o acompanhamento ambulatorial."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico",
+        "por_que": "Quarta síndrome, e a mais prevalente das quatro: o defeito do septo atrioventricular na síndrome de Down desenvolve hipertensão pulmonar precocemente em comparação com a mesma lesão anatômica sem trissomia do 21, o que muda o timing cirúrgico — quanto antes corrigir, menor a chance de doença vascular pulmonar já estabelecida."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-nao-compactada-do-ventriculo-esquerdo-na-crianca-criterios-diagnosticos-genetica-e-desfechos",
+        "por_que": "Fecha com a cardiomiopatia de fenótipo mais heterogêneo da trilha: a não compactação do ventrículo esquerdo tem critérios diagnósticos que ainda geram debate, base genética sobreposta à das outras cardiomiopatias pediátricas, e desfecho que varia conforme o fenótipo associado — reforçando que 'genético' não significa 'um só padrão de gravidade', tema comum aos cinco passos da trilha."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-anatomia-complexa-de-via-de-saida-e-fontan",
+    "titulo": "Cardiologia pediátrica: anatomia complexa de via de saída ventricular — estenose pulmonar, dupla via de saída e Fontan",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo escalonar a complexidade anatômica da via de saída ventricular na cardiopatia congênita — da estenose pulmonar valvar isolada, tratável por balão, à dupla via de saída de ventrículo direito, que já exige decisão cirúrgica por subtipo, até o ventrículo único, cuja única via possível é o estadiamento fisiológico de Fontan em três cirurgias.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estenose-pulmonar-valvar-isolada-na-crianca-gravidade-por-doppler-e-criterios-de-valvoplastia-por-balao",
+        "por_que": "Começa pela lesão mais simples e mais tratável do grupo: estenose pulmonar valvar isolada, cuja gravidade se mede por gradiente ao Doppler e cujo tratamento de escolha — valvoplastia por balão — resolve a lesão sem cirurgia aberta na maioria dos casos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "dupla-via-de-saida-de-ventriculo-direito-classificacao-anatomica-estrategia-cirurgica-e-desfechos",
+        "por_que": "Sobe um degrau de complexidade: na dupla via de saída de ventrículo direito, a decisão cirúrgica não é padronizada — depende da classificação anatômica pela posição da CIV em relação às grandes artérias, e cada subtipo tem sua própria estratégia e seu próprio desfecho esperado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+        "por_que": "Fecha no grau máximo de complexidade anatômica: quando não existe via biventricular possível, o caminho é a fisiologia de Fontan, construída em três estágios cirúrgicos ao longo dos primeiros anos de vida, com complicações de longo prazo que só aparecem depois que a criança já cresceu — o oposto do desfecho definitivo e precoce do primeiro passo da trilha."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-prevencao-cardiovascular-na-infancia",
+    "titulo": "Cardiologia pediátrica: prevenção cardiovascular na infância — obesidade, dieta desde cedo e elegibilidade esportiva na cardiopatia congênita",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo que a prevenção cardiovascular pediátrica tem dois lados que raramente se encontram na mesma consulta — o risco cardiometabólico da obesidade infantil na criança sem cardiopatia estrutural, e a prescrição de exercício e a elegibilidade esportiva na criança que já tem uma cardiopatia congênita — e que intervenção dietética precoce muda a trajetória de pressão arterial até a vida adulta jovem.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "obesidade-infantil-e-risco-cardiovascular-hipertensao-dislipidemia-aterogenica-e-dano-subclinico-em-orgao-alvo",
+        "por_que": "Abre pelo problema de prevalência crescente e sem relação com cardiopatia estrutural: obesidade infantil já traz hipertensão, dislipidemia aterogênica e dano subclínico em órgão-alvo mensurável antes mesmo da vida adulta — o oposto da lógica de 'espera dar sintoma' que ainda orienta parte da prática pediátrica geral."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "laitinen2020-strip-meta-dietetica-desde-a-infancia-e-pressao-arterial-ate-a-idade-adulta-jovem",
+        "por_que": "Traz a evidência de que intervir cedo funciona: o estudo STRIP acompanhou intervenção dietética iniciada na infância até a idade adulta jovem, medindo efeito real sobre pressão arterial — resposta direta ao problema descrito no passo 1, com desfecho de longuíssimo prazo, incomum em pediatria."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "avaliacao-cardiologica-e-prescricao-de-exercicio-na-crianca-com-cardiopatia-congenita-elegibilidade-esportiva-por-lesao",
+        "por_que": "Fecha virando a pergunta ao contrário: em vez de prevenir doença cardiovascular pela atividade física, aqui a criança já tem cardiopatia congênita e a pergunta é se e quanto exercício ela pode fazer — elegibilidade esportiva que varia por lesão específica, não uma resposta única de 'pode' ou 'não pode' esporte."
+      }
+    ]
   }
 ]
