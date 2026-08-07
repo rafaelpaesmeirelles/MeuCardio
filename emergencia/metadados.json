@@ -397,5 +397,17 @@
     "ordem": 83,
     "relacionados": [],
     "review_status": "revisado"
+  },
+  {
+    "slug": "edema-agudo-de-pulmao-hipertensivo",
+    "titulo": "Edema agudo de pulmão hipertensivo",
+    "gatilho": "Dispneia súbita intensa com ortopneia, estertores difusos ou hipoxemia e pressão arterial elevada · congestão pulmonar de instalação rápida",
+    "documento_slug": "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+    "fluxograma_slug": "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
+    "ordem": 84,
+    "relacionados": [
+      "vasodilatadores-endovenosos-na-ic-aguda-por-que-nesiritida-serelaxina-e-ularitida-falharam"
+    ],
+    "review_status": "revisado"
   }
 ]
