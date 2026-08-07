@@ -19570,5 +19570,80 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "coronariopatia-subclinica-atletas-master-endurance-merghani-2017",
+    "title": "Prevalência de coronariopatia subclínica em atletas master de endurance com baixo perfil de risco aterosclerótico",
+    "study_type": "estudo_de_coorte",
+    "authors": "Merghani A, Maestrini V, Rosmini S, Cox AT, Dhutia H, Bastiaenan R, David S, Yeo TJ, Narain R, Malhotra A, Papadakis M, Wilson MG, Tome M, AlFakih K, Moon JC, Sharma S",
+    "journal": "Circulation",
+    "year": 2017,
+    "doi": "10.1161/CIRCULATIONAHA.116.026964",
+    "pmid": "28465287",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28465287/",
+    "summary": "Estudo transversal comparando 152 atletas master de endurance (54,4±8,5 anos, 70% homens, treinamento médio de 31 anos) e 92 controles sedentários pareados por idade, sexo e escore de Framingham de baixo risco, avaliados por ecocardiograma, teste ergométrico, angiotomografia coronariana, ressonância cardíaca com realce tardio e Holter de 24h.",
+    "key_findings": "60% dos atletas e 63% dos controles tinham escore de cálcio coronariano normal. Homens atletas tiveram mais placa aterosclerótica de qualquer irregularidade luminal que sedentários (44,3% vs. 22,2%; p=0,009); só atletas homens atingiram CAC ≥300 (11,3%) e estenose ≥50% (7,5%). O número de anos de treinamento foi a única variável independentemente associada a maior carga de doença coronariana em homens (OR 1,08/ano; IC95% 1,01-1,15). Placas em atletas eram predominantemente calcificadas (72,7%); em sedentários, predominantemente mistas (61,5%). Realce tardio esteve presente em 14% dos atletas homens e em nenhum controle.",
+    "clinical_implications": "Treinamento de endurance em longo prazo associa-se a mais placa coronariana em homens com baixo risco tradicional, mas com morfologia predominantemente calcificada (potencialmente mais estável) — achado que não deve ser lido como razão para suspender o exercício, mas que pode justificar rastreio de imagem coronariana dirigido em atletas master de muitos anos de treinamento, especialmente homens.",
+    "limitations": "Desenho transversal, não permite inferência causal; amostra feminina pequena, limitando conclusões sobre mulheres; significado clínico da carga de placa predominantemente calcificada permanece incerto segundo os próprios autores.",
+    "theme": "Geral",
+    "tags": [
+      "atletas",
+      "endurance",
+      "escore de cálcio coronariano",
+      "placa aterosclerótica",
+      "coração de atleta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "griphon-extensao-aberta-selexipague-galie-2021",
+    "title": "GRIPHON e sua extensão de rótulo aberto — sobrevida, segurança e tolerabilidade em longo prazo com selexipague na hipertensão arterial pulmonar",
+    "study_type": "estudo_de_coorte",
+    "authors": "Galiè N, Gaine S, Channick R, Coghlan JG, Hoeper MM, Lang IM, McLaughlin VV, Lassen C, Rubin LJ, Hsu Schmitz SF, Sitbon O, Tapson VF, Chin KM",
+    "journal": "Advances in Therapy",
+    "year": 2021,
+    "doi": "10.1007/s12325-021-01898-1",
+    "pmid": "34727317",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34727317/",
+    "summary": "Extensão de rótulo aberto do ensaio randomizado GRIPHON, reunindo 953 pacientes tratados com selexipague (durante o ensaio duplo-cego e/ou na extensão), com exposição mediana de 31,7 meses (0-106 meses) e total de 3.054,4 pacientes-ano — o maior período de seguimento já publicado para uma terapia de hipertensão arterial pulmonar até a data.",
+    "key_findings": "Sobrevida estimada por Kaplan-Meier nos 574 pacientes originalmente randomizados para selexipague no GRIPHON: 92,0% em 1 ano, 79,3% em 3 anos, 71,2% em 5 anos e 63,0% em 7 anos. Perfil de eventos adversos consistente com o observado no ensaio primário (relacionados à via da prostaciclina ou à doença de base), sem sinal novo de toxicidade emergente com o tempo; 32,0% dos pacientes descontinuaram por evento adverso ao longo de toda a exposição prolongada.",
+    "clinical_implications": "Fornece a base de evidência para a conversa sobre expectativa de sobrevida em longo prazo com pacientes já estabelecidos em selexipague, complementando o desfecho de eficácia em curto/médio prazo do ensaio randomizado original — sem sinal de toxicidade cumulativa nova ao longo de até 7 anos de exposição.",
+    "limitations": "Sem braço placebo concorrente na fase de extensão aberta — não permite comparação direta de sobrevida contra não tratamento; viés de seleção característico de extensões abertas (sobrevivência ao evento inicial que motivou a entrada na extensão em parte da amostra); maioria já usava terapia de base ao iniciar selexipague, refletindo terapia combinada, não monoterapia isolada.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "selexipague",
+      "GRIPHON",
+      "extensão aberta",
+      "sobrevida de longo prazo",
+      "hipertensão arterial pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "respect-epa-icosapente-etilico-japao-miyauchi-2024",
+    "title": "RESPECT-EPA — ensaio randomizado de icosapente etílico associado à estatina em população japonesa com baixa razão EPA/AA e doença coronariana estável",
+    "study_type": "ensaio_clinico",
+    "authors": "Miyauchi K, Iwata H, Nishizaki Y, Inoue T, Hirayama A, Kimura K, Ozaki Y, Murohara T, Ueshima K, Kuwabara Y, Tanaka-Mizuno S, Yanagisawa N, Sato T, Daida H",
+    "journal": "Circulation",
+    "year": 2024,
+    "doi": "10.1161/CIRCULATIONAHA.123.065520",
+    "pmid": "38873793",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38873793/",
+    "summary": "Ensaio prospectivo, multicêntrico, randomizado, aberto com desfecho cego, em 95 centros do Japão, testando icosapente etílico 1.800 mg/dia versus controle em 2.506 pacientes com doença coronariana estável, razão EPA/ácido araquidônico (EPA/AA) baixa (<0,4) e já em uso de estatina — 1.249 randomizados para EPA e 1.257 para controle, seguimento mediano de 5 anos.",
+    "key_findings": "Desfecho primário composto (morte cardiovascular, IAM não fatal, AVC isquêmico não fatal, angina instável, revascularização): 9,1% (EPA) vs. 12,6% (controle), HR 0,79 (IC95% 0,62-1,00; p=0,055 — não significativo). Desfecho secundário de eventos coronarianos: 6,6% (EPA) vs. 9,7% (controle), HR 0,73 (IC95% 0,55-0,97, significativo). Fibrilação atrial de novo mais frequente no grupo EPA (3,1% vs. 1,6%; p=0,017).",
+    "clinical_implications": "Resultado primário neutro que não confirma a hipótese de seleção de paciente por deficiência relativa de EPA (razão EPA/AA baixa) como critério para benefício cardiovascular — desfecho secundário positivo gera hipótese, não confirma eficácia. Reforça, junto com REDUCE-IT e JELIS, o sinal consistente de mais fibrilação atrial nova com icosapente etílico em dose alta, sustentando leitura de efeito de classe.",
+    "limitations": "Desfecho primário não atingiu significância estatística (p=0,055); população exclusivamente japonesa, já em estatina, limitando generalização; desenho aberto (não duplo-cego), com desfecho avaliado de forma cega.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "icosapente etílico",
+      "ômega-3",
+      "EPA/AA",
+      "doença coronariana estável",
+      "Japão"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
