@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   build:
-    # O commit produzido pelo próprio workflow contém [skip pdf build] para evitar loop.
     if: ${{ !contains(github.event.head_commit.message, '[skip pdf build]') }}
     runs-on: ubuntu-latest
     steps:
@@ -45,16 +44,36 @@ jobs:
           src = root / 'artifacts' / 'Corvia_Apresentacao_Institucional.pdf'
           compact = root / 'artifacts' / 'Corvia_Apresentacao_Institucional_compacto.pdf'
           chunks_dir = root / 'artifacts' / 'corvia_pdf_chunks'
+          page_dir = root / 'artifacts' / 'corvia_page_chunks'
           chunks_dir.mkdir(parents=True, exist_ok=True)
-          for p in chunks_dir.glob('*'):
-              p.unlink()
+          page_dir.mkdir(parents=True, exist_ok=True)
+          for d in (chunks_dir, page_dir):
+              for p in d.glob('*'):
+                  p.unlink()
 
           doc = fitz.open(src)
           pages = []
-          for page in doc:
+          page_manifest = []
+          page_chunk_size = 24000
+          for page_no, page in enumerate(doc, start=1):
               pix = page.get_pixmap(matrix=fitz.Matrix(1.0, 1.0), alpha=False)
               img = Image.open(BytesIO(pix.tobytes('png'))).convert('RGB')
               pages.append(img)
+              bio = BytesIO()
+              img.save(bio, format='JPEG', quality=72, optimize=True)
+              jpg = bio.getvalue()
+              enc = base64.b64encode(jpg).decode('ascii')
+              parts = [enc[i:i+page_chunk_size] for i in range(0, len(enc), page_chunk_size)]
+              for j, part in enumerate(parts):
+                  (page_dir / f'page_{page_no:02d}_chunk_{j:02d}.txt').write_text(part, encoding='ascii')
+              page_manifest.append({
+                  'page': page_no,
+                  'jpeg_bytes': len(jpg),
+                  'base64_chars': len(enc),
+                  'chunks': len(parts),
+                  'sha256': hashlib.sha256(jpg).hexdigest(),
+              })
+
           pages[0].save(compact, 'PDF', resolution=72.0, save_all=True,
                         append_images=pages[1:], quality=72, optimize=True)
 
@@ -73,13 +92,19 @@ jobs:
               'sha256': hashlib.sha256(raw).hexdigest(),
           }
           (chunks_dir / 'manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+          (page_dir / 'manifest.json').write_text(json.dumps({
+              'width': 960, 'height': 540, 'chunk_size': page_chunk_size,
+              'pages': page_manifest,
+          }, indent=2), encoding='utf-8')
           print(json.dumps(manifest, indent=2))
+          print(json.dumps(page_manifest, indent=2))
           PY
 
       - name: Inspect output
         run: |
           ls -lh artifacts/Corvia_Apresentacao_Institucional*.pdf
           cat artifacts/corvia_pdf_chunks/manifest.json
+          cat artifacts/corvia_page_chunks/manifest.json
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
@@ -92,10 +117,10 @@ jobs:
         run: |
           git config user.name "Corvia PDF Builder"
           git config user.email "corvia-pdf-builder@users.noreply.github.com"
-          git add -f artifacts/corvia_pdf_chunks
+          git add -f artifacts/corvia_pdf_chunks artifacts/corvia_page_chunks
           if git diff --cached --quiet; then
             echo "No chunk changes to commit"
             exit 0
           fi
-          git commit -m "build: publica PDF institucional em chunks [skip pdf build]" -m "Fonte: ChatGPT"
+          git commit -m "build: publica PDF e páginas para validação [skip pdf build]" -m "Fonte: ChatGPT"
           git push origin HEAD:agent/corvia-pdf-build
