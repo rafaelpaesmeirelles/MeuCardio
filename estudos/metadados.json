@@ -18460,5 +18460,57 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "kline-2004-derivacao-do-perc-criterios-para-dispensar-d-dimero-em-tep",
+    "title": "Derivação dos critérios PERC (Pulmonary Embolism Rule-out Criteria) para dispensar o D-dímero em suspeita de baixo risco de TEP",
+    "study_type": "estudo_de_coorte",
+    "authors": "Kline JA, Mitchell AM, Kabrhel C, Richman PB, Courtney DM",
+    "journal": "Journal of Thrombosis and Haemostasis",
+    "year": 2004,
+    "doi": "10.1111/j.1538-7836.2004.00790.x",
+    "pmid": "15304025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15304025/",
+    "summary": "Estudo de derivação e teste inicial de critérios clínicos para dispensar a dosagem de D-dímero na avaliação de suspeita de tromboembolismo pulmonar (TEP), a partir de análise de regressão logística com eliminação retrógrada de 21 variáveis, coletadas em 3.148 pacientes avaliados por suspeita de TEP em 10 hospitais dos EUA. O limiar de teste foi estimado em 1,8% pelo método de Pauker e Kassirer.",
+    "key_findings": "Oito variáveis compuseram a regra final (critérios PERC): idade <50 anos, pulso <100 bpm, SaO2 >94%, ausência de edema unilateral de perna, ausência de hemoptise, ausência de trauma ou cirurgia recente, ausência de TEP/TVP prévios, ausência de uso de hormônio. Testada prospectivamente em grupo de baixo risco (1.427 pacientes, prevalência de TEP 8%) e de risco muito baixo (382 pacientes, prevalência de TEP 2%), a regra apresentou sensibilidade de 96% e 100%, respectivamente, com especificidade de 27% e 15%. A prevalência de TEP entre quem preencheu todos os critérios da regra (PERC-negativo) foi de 1,4% e 0%, respectivamente — abaixo do limiar de teste estimado.",
+    "clinical_implications": "Deu origem à ferramenta PERC, hoje amplamente usada para identificar pacientes com probabilidade pré-teste já baixa (avaliação clínica gestáltica) nos quais nenhum dos oito critérios está presente — nesse subgrupo, o próprio D-dímero deixa de agregar valor diagnóstico, evitando toda a cascata de exames subsequente (incluindo angiotomografia) e a exposição à radiação e ao contraste que ela envolve. A regra é uma ferramenta de exclusão em baixa probabilidade pré-teste, não um substituto para os escores de probabilidade em pacientes com suspeita clínica moderada ou alta.",
+    "limitations": "Especificidade baixa (15-27%), ou seja, a maioria dos pacientes ainda terá algum critério positivo e precisará seguir a investigação padrão; a regra só deve ser aplicada em quem já tem probabilidade pré-teste clínica baixa (gestalt), não em toda a população triada por dor torácica ou dispneia — uso fora desse contexto invalida a regra, como reforçado pelo estudo de validação prospectiva multicêntrica publicado posteriormente pelos mesmos autores (Kline et al., J Thromb Haemost 2008, PMID 18318689).",
+    "theme": "Calculadoras",
+    "tags": [
+      "perc",
+      "tromboembolismo pulmonar",
+      "d-dimero",
+      "regra de decisao clinica",
+      "emergencia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bhala-2013-cnt-metanalise-de-dados-individuais-de-aines-e-risco-vascular",
+    "title": "Colaboração CNT — Metanálise de dados individuais de 754 ensaios mostra que coxibes, diclofenaco e ibuprofeno em altas doses aumentam risco vascular, enquanto naproxeno não",
+    "study_type": "metanalise",
+    "authors": "Coxib and traditional NSAID Trialists' (CNT) Collaboration; Bhala N, Emberson J, Merhi A, et al.",
+    "journal": "The Lancet",
+    "year": 2013,
+    "doi": "10.1016/S0140-6736(13)60900-9",
+    "pmid": "23726390",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23726390/",
+    "summary": "Metanálise de dados de participantes individuais de 280 ensaios de anti-inflamatório não esteroidal (AINE) versus placebo (124.513 participantes, 68.342 pessoas-ano) e 474 ensaios de um AINE versus outro (229.296 participantes, 165.456 pessoas-ano), avaliando eventos vasculares maiores, eventos coronarianos maiores, AVC, mortalidade, insuficiência cardíaca e complicações gastrointestinais altas por classe de AINE (coxibe, diclofenaco, ibuprofeno, naproxeno).",
+    "key_findings": "Eventos vasculares maiores aumentaram cerca de um terço com coxibe (razão de taxa [RR] 1,37; IC95% 1,14-1,66) ou diclofenaco (RR 1,41; IC95% 1,12-1,78), principalmente por aumento de eventos coronarianos maiores (coxibe RR 1,76; diclofenaco RR 1,70). Ibuprofeno aumentou significativamente eventos coronarianos maiores (RR 2,22) mas não o composto vascular maior. Naproxeno não aumentou significativamente eventos vasculares maiores (RR 0,93; IC95% 0,69-1,27). Morte vascular aumentou significativamente com coxibe e numericamente com diclofenaco e ibuprofeno, mas não com naproxeno. O risco de insuficiência cardíaca foi aproximadamente dobrado por todas as classes de AINE testadas. Todos os regimes de AINE aumentaram complicações gastrointestinais altas, com o maior aumento relativo em ibuprofeno e naproxeno.",
+    "clinical_implications": "É a evidência mais robusta (dados individuais de mais de 353 mil participantes) de que o risco vascular dos AINEs não é uniforme entre classes: diclofenaco e coxibes têm perfil de risco vascular comparável entre si, ibuprofeno em dose alta se aproxima desse padrão, enquanto naproxeno tem o perfil vascular mais seguro entre os AINEs de uso comum — dado usado até hoje para orientar a escolha de AINE em paciente com risco cardiovascular basal aumentado, e para justificar a recomendação de evitar diclofenaco nesse perfil de paciente. O aumento de insuficiência cardíaca por TODAS as classes, sem exceção, é achado tão ou mais relevante clinicamente quanto o de eventos coronarianos.",
+    "limitations": "A maioria dos ensaios incluídos foi desenhada para avaliar eficácia analgésica/anti-inflamatória, não desfecho cardiovascular como objetivo primário, e teve duração relativamente curta comparada ao uso crônico real de muitos pacientes; a metanálise não distingue com granularidade completa dose e tempo de exposição em todos os subgrupos, e populações de alto risco cardiovascular basal foram sub-representadas nos ensaios originais.",
+    "theme": "Geral",
+    "tags": [
+      "aines",
+      "risco cardiovascular",
+      "coxibe",
+      "diclofenaco",
+      "naproxeno",
+      "metanalise",
+      "insuficiencia cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
