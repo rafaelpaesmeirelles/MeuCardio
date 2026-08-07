@@ -751,3 +751,45 @@ atualização de escopo foi recebida. Vou continuar monitorando a cada ciclo.
 - 6 das 7 recomendações de `643d361` contra o texto integral da diretriz SBC 2019.
 
 ---
+
+## Rodada 11 — 07/08/2026 — primeiro commit do terceiro colaborador (ChatGPT)
+
+Dois commits chegaram entre o push e o fetch seguinte, não vistos na rodada 10:
+
+### Commit `8befd8c` — **primeiro commit do terceiro colaborador (ChatGPT, via conector GitHub)**: "Amplia interações com dapagliflozina e diurético de alça"
+
+Identificado pelo padrão do commit (autor `rafaelpaesmeirelles` com timezone `-0300`, diferente do
+`+0200` dos commits das duas sessões Claude Code, mensagem sem o rodapé `Co-Authored-By: Claude
+Sonnet 5`, e tocando exatamente um dos 4 arquivos designados — `medicamentos/interacoes.json`).
+Toca **só esse arquivo**, um item novo: interação dapagliflozina × diurético de alça.
+
+**Conferido: os 2 PMIDs citados batem exatamente** no registro do PubMed — Wilcox et al. (dapagliflozina
+× bumetanida, farmacologia clínica), J Am Heart Assoc 2018;7(4):e007046, PMID 29440005; Lewellyan
+et al. (depleção de volume, iSGLT2 + diurético de alça, estudo de série de casos autocontrolada),
+Pharmacoepidemiol Drug Saf 2022;31(10):1102-1109, PMID 35713292.
+
+**Números/frases conferidos linha a linha contra o abstract do Wilcox 2018, batendo exatamente**:
+*"There were no meaningful pharmacokinetic interactions"* → *"não apresentaram interação
+farmacocinética relevante"*; *"mutual adaptive natriuretic synergy"* → *"sinergia natriurética
+adaptativa"* — tradução fiel, não paráfrase que distorce.
+
+**Boa prática observada**: o campo `conduta` explicitamente recusa prescrever um esquema fixo de
+redução de dose não sustentado pelas fontes, e marca `VERIFICAÇÃO HUMANA NECESSÁRIA` para qualquer
+ajuste posológico específico — exatamente a régua que este projeto pede.
+
+**Resultado: PASSA integralmente.** Fonte declarada e verificável nos dois PMIDs, sem número
+fabricado. Primeiro commit do terceiro colaborador dentro da régua esperada.
+
+### Commit `7b8292a` — trilhas: +5 novas em Insuficiência cardiaca (não é do ChatGPT — mesma dupla assinatura das sessões Claude Code)
+
+**Conferido por integridade referencial** (curadoria, não fato clínico novo): os 21 `item_slug`
+citados nas 5 trilhas novas foram extraídos e cruzados contra os slugs de `content/**/*.md` — **0
+referências quebradas**, todos os 21 documentos/fluxogramas citados existem no disco com o slug
+exato usado. Não verifiquei o conteúdo clínico de cada documento referenciado (já publicado por
+commits anteriores).
+
+### Nenhum outro commit do terceiro colaborador apareceu ainda nos outros 3 arquivos-alvo
+`emergencia/metadados.json`, `checklists/metadados.json`, `material-paciente/metadados.json`
+seguem sem commit do ChatGPT até este ciclo. Continuo monitorando.
+
+---
