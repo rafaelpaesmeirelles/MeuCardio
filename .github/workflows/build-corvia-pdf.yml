@@ -30,7 +30,7 @@ jobs:
       - name: Build PDF
         run: python tools/build_corvia_pdf.py
 
-      - name: Compact PDF and create transport chunks
+      - name: Compact PDF and create previews
         shell: bash
         run: |
           python - <<'PY'
@@ -62,7 +62,6 @@ jobs:
               img = Image.open(BytesIO(pix.tobytes('png'))).convert('RGB')
               pages.append(img)
 
-              # JPEG de referência
               bio = BytesIO(); img.save(bio, format='JPEG', quality=72, optimize=True)
               jpg = bio.getvalue(); enc = base64.b64encode(jpg).decode('ascii')
               parts = [enc[i:i+page_chunk_size] for i in range(0, len(enc), page_chunk_size)]
@@ -70,7 +69,6 @@ jobs:
                   (page_dir / f'page_{page_no:02d}_chunk_{j:02d}.txt').write_text(part, encoding='ascii')
               page_manifest.append({'page': page_no, 'jpeg_bytes': len(jpg), 'base64_chars': len(enc), 'chunks': len(parts), 'sha256': hashlib.sha256(jpg).hexdigest()})
 
-              # WebP para transporte/inspeção local - mesma resolução 960x540
               wb = BytesIO(); img.save(wb, format='WEBP', quality=52, method=6)
               webp = wb.getvalue(); wenc = base64.b64encode(webp).decode('ascii')
               wparts = [wenc[i:i+webp_chunk_size] for i in range(0, len(wenc), webp_chunk_size)]
@@ -88,14 +86,13 @@ jobs:
           (chunks_dir / 'manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
           (page_dir / 'manifest.json').write_text(json.dumps({'width': 960, 'height': 540, 'chunk_size': page_chunk_size, 'pages': page_manifest}, indent=2), encoding='utf-8')
           (webp_dir / 'manifest.json').write_text(json.dumps({'width': 960, 'height': 540, 'chunk_size': webp_chunk_size, 'pages': webp_manifest}, indent=2), encoding='utf-8')
-          print(json.dumps(manifest, indent=2)); print(json.dumps(webp_manifest, indent=2))
+          print(json.dumps(manifest, indent=2))
           PY
 
       - name: Inspect output
         run: |
           ls -lh artifacts/Corvia_Apresentacao_Institucional*.pdf
           cat artifacts/corvia_pdf_chunks/manifest.json
-          cat artifacts/corvia_webp_chunks/manifest.json
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
@@ -104,14 +101,18 @@ jobs:
           path: artifacts/Corvia_Apresentacao_Institucional_compacto.pdf
           if-no-files-found: error
 
-      - name: Publish transport chunks on technical branch
+      - name: Record run id
+        run: |
+          printf '%s\n' '${{ github.run_id }}' > artifacts/corvia_pdf_run_id.txt
+
+      - name: Publish build metadata on technical branch
         run: |
           git config user.name "Corvia PDF Builder"
           git config user.email "corvia-pdf-builder@users.noreply.github.com"
-          git add -f artifacts/corvia_pdf_chunks artifacts/corvia_page_chunks artifacts/corvia_webp_chunks
+          git add -f artifacts/corvia_pdf_chunks artifacts/corvia_page_chunks artifacts/corvia_webp_chunks artifacts/corvia_pdf_run_id.txt
           if git diff --cached --quiet; then
-            echo "No chunk changes to commit"
+            echo "No build metadata changes to commit"
             exit 0
           fi
-          git commit -m "build: publica PDF e previews WebP [skip pdf build]" -m "Fonte: ChatGPT"
+          git commit -m "build: publica PDF, previews e run id [skip pdf build]" -m "Fonte: ChatGPT"
           git push origin HEAD:agent/corvia-pdf-build
