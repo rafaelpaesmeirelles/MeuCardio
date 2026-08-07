@@ -544,5 +544,44 @@
       "tromboembolismo-pulmonar"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "colapso-neonatal-por-cardiopatia-congenita-canal-dependente",
+    "titulo": "Colapso neonatal por cardiopatia congênita crítica canal-dependente",
+    "gatilho": "Recém-nascido com choque, acidose, pulsos femorais fracos/ausentes, cianose ou hipoxemia inexplicada nas primeiras horas/dias de vida — suspeita de fechamento do canal arterial",
+    "ordem": 96,
+    "documento_slug": "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+    "fluxograma_slug": "fluxograma-colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+    "relacionados": [
+      "reanimacao-neonatal-na-sala-de-parto",
+      "crise-de-hipertensao-pulmonar-persistente-do-recem-nascido"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas",
+    "titulo": "SCA e vasoespasmo por fluoropirimidinas (5-FU/capecitabina)",
+    "gatilho": "Paciente em 5-FU ou capecitabina com dor torácica, alteração isquêmica no ECG, troponina elevada, síncope, arritmia ventricular ou instabilidade hemodinâmica",
+    "ordem": 97,
+    "documento_slug": "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas-5fu-capecitabina",
+    "fluxograma_slug": "fluxograma-sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas",
+    "relacionados": [
+      "sindrome-coronariana-aguda",
+      "miocardite-por-inibidor-de-checkpoint-imune"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-coronariana-aguda-no-idoso-fragil-ou-atipica",
+    "titulo": "Síndrome coronariana aguda no idoso frágil ou com apresentação atípica",
+    "gatilho": "Idoso com dor torácica OU dispneia aguda, síncope, confusão súbita, queda inexplicada, insuficiência cardíaca aguda ou instabilidade com suspeita de isquemia",
+    "ordem": 98,
+    "documento_slug": "sindrome-coronariana-aguda-no-idoso-fragil-e-apresentacao-atipica",
+    "fluxograma_slug": "fluxograma-sindrome-coronariana-aguda-no-idoso-fragil-e-apresentacao-atipica",
+    "relacionados": [
+      "sindrome-coronariana-aguda",
+      "sincope-ou-queda-de-alto-risco-no-idoso"
+    ],
+    "review_status": "revisado"
   }
 ]
