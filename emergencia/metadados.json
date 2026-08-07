@@ -364,5 +364,28 @@
     "ordem": 80,
     "relacionados": [],
     "review_status": "revisado"
+  },
+  {
+    "slug": "hipotermia-acidental-e-parada-cardiorrespiratoria",
+    "titulo": "Hipotermia acidental e parada cardiorrespiratória",
+    "gatilho": "Temperatura central medida abaixo de 35°C · exposição ao frio ou causa secundária (uso de álcool/droga, idoso multimórbido em ambiente interno) · rebaixamento de consciência com hipotermia confirmada",
+    "documento_slug": "hipotermia-acidental-e-parada-cardiorrespiratoria-erc-2021",
+    "fluxograma_slug": "fluxograma-hipotermia-acidental-e-parada-cardiorrespiratoria",
+    "ordem": 81,
+    "relacionados": [
+      "hipotermia-terapeutica-em-ritmo-nao-chocavel-pos-parada-o-ensaio-hyperion",
+      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "afogamento",
+    "titulo": "Afogamento",
+    "gatilho": "Vítima recuperada de submersão em água · inconsciente ou sem respiração normal após resgate · desconforto respiratório após episódio de quase afogamento",
+    "documento_slug": "afogamento-prevencao-e-manejo-da-parada-cardiorrespiratoria-erc-2021",
+    "fluxograma_slug": "fluxograma-afogamento-manejo-da-parada-cardiorrespiratoria",
+    "ordem": 82,
+    "relacionados": [],
+    "review_status": "revisado"
   }
 ]
