@@ -6,13 +6,17 @@
 // Propriedade de arvore: todo no que nao e a raiz tem exatamente um pai.
 // Isso e o que proibe caminho convergente e volta — o que um flowchart permite
 // e uma arvore de decisao, nao.
+//
+// CORRIGIDO em 07/08/2026: a versao anterior so reconhecia a forma de um no
+// quando ela vinha INLINE na propria linha da aresta (`A["x"] --> B`). Isso
+// gerava FALSO-NEGATIVO em todo fluxograma que declara o no numa linha
+// propria e conecta noutra linha (`R["x"]` seguido de `R --> D1`), que e o
+// padrao real de TODOS os fluxogramas ja publicados no repositorio (medido:
+// rodando a versao antiga contra os 48 fluxogramas publicados, ela reprovava
+// os que usam esse padrao, apesar de mermaid.parse() aceita-los). Agora ha
+// duas passadas: 1) coleta toda declaracao de no, inline ou solta numa linha
+// propria; 2) coleta toda aresta, com ou sem forma inline.
 import { readFileSync } from "node:fs";
-
-const FORMA = {
-  '["': "raiz-ou-passo",
-  '{"': "decisao",
-  '(["': "conduta",
-};
 
 function formaDe(decl) {
   if (!decl) return null;
@@ -22,26 +26,38 @@ function formaDe(decl) {
   return "desconhecida";
 }
 
+const DECL = String.raw`(?:\(\["[^"]*"\]\)|\{"[^"]*"\}|\["[^"]*"\])`;
+const RE_DECL_SOLTA = new RegExp(String.raw`^([A-Za-z][\w]*)\s*(${DECL})\s*$`);
+const RE_ARESTA = new RegExp(
+  String.raw`^([A-Za-z][\w]*)\s*(${DECL})?\s*-->\s*(?:\|([^|]*)\|)?\s*([A-Za-z][\w]*)\s*(${DECL})?\s*$`
+);
+
 function analisar(bloco) {
   const problemas = [];
   const forma = new Map();
   const arestas = [];
   const pais = new Map();
+  const linhasNaoReconhecidas = [];
 
-  const DECL = String.raw`(?:\(\["[^"]*"\]\)|\{"[^"]*"\}|\["[^"]*"\])`;
-  const re = new RegExp(
-    String.raw`^\s*([A-Za-z][\w]*)\s*(${DECL})?\s*-->\s*(?:\|([^|]*)\|)?\s*([A-Za-z][\w]*)\s*(${DECL})?\s*$`
-  );
+  const linhas = bloco
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("%%"))
+    .filter((l) => !/^(flowchart|graph)\b/.test(l))
+    .filter((l) => !/^(classDef|class|style|linkStyle|subgraph|end)\b/.test(l));
 
-  for (const linhaBruta of bloco.split("\n")) {
-    const linha = linhaBruta.trim();
-    if (!linha || linha.startsWith("%%")) continue;
-    if (/^(flowchart|graph)\b/.test(linha)) continue;
-    if (/^(classDef|class|style|linkStyle|subgraph|end)\b/.test(linha)) continue;
+  // 1a passada: declaracoes soltas ("NOME[forma]" sozinho numa linha)
+  for (const linha of linhas) {
+    const md = linha.match(RE_DECL_SOLTA);
+    if (md) forma.set(md[1], formaDe(md[2]));
+  }
 
-    const m = linha.match(re);
+  // 2a passada: arestas, com ou sem forma inline
+  for (const linha of linhas) {
+    if (RE_DECL_SOLTA.test(linha)) continue;
+    const m = linha.match(RE_ARESTA);
     if (!m) {
-      problemas.push(`linha fora do padrao da casa: ${linha}`);
+      linhasNaoReconhecidas.push(linha);
       continue;
     }
     const [, de, declDe, rotulo, para, declPara] = m;
@@ -51,7 +67,9 @@ function analisar(bloco) {
     pais.set(para, (pais.get(para) || 0) + 1);
   }
 
-  const nos = new Set(arestas.flatMap((a) => [a.de, a.para]));
+  for (const l of linhasNaoReconhecidas) problemas.push(`linha fora do padrao da casa: ${l}`);
+
+  const nos = new Set([...forma.keys(), ...arestas.flatMap((a) => [a.de, a.para])]);
   const filhos = new Map();
   for (const a of arestas) filhos.set(a.de, [...(filhos.get(a.de) || []), a]);
 
