@@ -196,6 +196,22 @@ textarea { min-height: 96px; }
 input:hover, select:hover, textarea:hover { border-color: #9db0b8; }
 input:focus, select:focus, textarea:focus { border-color: var(--teal-600); box-shadow: 0 0 0 3px rgba(37, 150, 169, 0.12); outline: none; }
 
+/* Checkbox/radio herdavam width:100%/min-height:44px/padding da regra
+   genérica acima, virando retângulos grandes e desalinhados do próprio
+   rótulo (achado em telas com muitos critérios binários — RCRI, DASI,
+   AUB-HAS2, VSG-CRI etc., mas a regra genérica afeta qualquer checkbox do
+   site). Várias telas já contornavam isso com estilo local repetido
+   (CorvIA Mail, Round, Prescrição); esta regra corrige na raiz, para todo
+   checkbox/radio sem precisar de override por tela. */
+input[type="checkbox"], input[type="radio"] {
+  width: 1.05rem;
+  height: 1.05rem;
+  min-height: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  accent-color: var(--acento);
+}
+
 .grade { display: grid; gap: 1rem; }
 @media (min-width: 760px) { .grade--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1120px) { .grade--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

@@ -29,6 +29,7 @@ from app.models.email_account import EmailAccount
 from app.models.patient_material import PatientMaterial
 from app.models.patient_material_send import PatientMaterialSend
 from app.services import apresentacao as svc_apres
+from app.services import apresentacao_pptx as svc_apres_pptx
 from app.services import cofre, emails, mail360
 from app.services import material_paciente as svc_material
 from app.services.professional_profile import document_identity
@@ -43,7 +44,7 @@ def _dados_do_medico(user) -> dict:
     return document_identity(user)
 
 
-def _nome_arquivo(base: str, sufixo: str) -> str:
+def _nome_arquivo(base: str, sufixo: str, extensao: str = "pdf") -> str:
     """Nome de arquivo sem acento e sem espaço.
 
     O cabeçalho `Content-Disposition` é latin-1 por padrão: acento cru nele faz o
@@ -51,7 +52,7 @@ def _nome_arquivo(base: str, sufixo: str) -> str:
     """
     limpo = unicodedata.normalize("NFKD", base).encode("ascii", "ignore").decode()
     limpo = re.sub(r"[^A-Za-z0-9]+", "-", limpo).strip("-").lower()[:80]
-    return f"{limpo or 'corvia'}-{sufixo}.pdf"
+    return f"{limpo or 'corvia'}-{sufixo}.{extensao}"
 
 
 def _pdf(conteudo: bytes, nome: str) -> Response:
@@ -62,12 +63,33 @@ def _pdf(conteudo: bytes, nome: str) -> Response:
     )
 
 
+def _pptx(conteudo: bytes, nome: str) -> Response:
+    return Response(
+        content=conteudo,
+        media_type="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        headers={"Content-Disposition": f'attachment; filename="{nome}"'},
+    )
+
+
 # ---------------------------------------------------------------------------
 # Tarefa 16 — modo apresentação
 # ---------------------------------------------------------------------------
 
 class PedidoApresentacao(BaseModel):
     anotacao: str = Field(default="", max_length=LIMITE_ANOTACAO)
+    # PDF pronto para projetar (padrão, comportamento inalterado) ou PPTX
+    # editável — pedido do Rafael em 07/08/2026, para o assinante poder
+    # ajustar os slides (reordenar, cortar, incluir algo próprio) antes de
+    # apresentar. Mesmo conteúdo nos dois formatos; só muda o arquivo.
+    formato: str = Field(default="pdf")
+
+    @field_validator("formato")
+    @classmethod
+    def _formato_valido(cls, v: str) -> str:
+        v = (v or "pdf").strip().lower()
+        if v not in ("pdf", "pptx"):
+            raise ValueError("formato precisa ser 'pdf' ou 'pptx'.")
+        return v
 
 
 @router.post("/api/biblioteca/{slug}/apresentacao")
@@ -77,7 +99,8 @@ def exportar_apresentacao(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    """Exporta um documento publicado como apresentação para aula ou round.
+    """Exporta um documento publicado como apresentação para aula ou round,
+    em PDF (pronto para projetar) ou PowerPoint (editável).
 
     A anotação chega por POST e **não é gravada em lugar nenhum**: ela existe
     durante a geração do arquivo e some. É deliberado — a observação de um round
@@ -91,13 +114,21 @@ def exportar_apresentacao(
         raise HTTPException(status_code=404, detail="Documento não encontrado ou não publicado.")
 
     anotacao = (dados.anotacao if dados else "") or ""
-    pdf = svc_apres.gerar(doc, _dados_do_medico(user), anotacao=anotacao.strip())
+    formato = (dados.formato if dados else "pdf") or "pdf"
+    medico = _dados_do_medico(user)
+
+    if formato == "pptx":
+        arquivo = svc_apres_pptx.gerar(doc, medico, anotacao=anotacao.strip())
+        resposta = _pptx(arquivo, _nome_arquivo(doc.title, "apresentacao", "pptx"))
+    else:
+        arquivo = svc_apres.gerar(doc, medico, anotacao=anotacao.strip())
+        resposta = _pdf(arquivo, _nome_arquivo(doc.title, "apresentacao"))
 
     db.add(AuditLog(user_id=user.id, action="exportar_apresentacao", entity="documents",
                     entity_id=slug[:255],
-                    detail={"com_anotacao": bool(anotacao.strip()), "bytes": len(pdf)}))
+                    detail={"com_anotacao": bool(anotacao.strip()), "bytes": len(arquivo), "formato": formato}))
     db.commit()
-    return _pdf(pdf, _nome_arquivo(doc.title, "apresentacao"))
+    return resposta
 
 
 # ---------------------------------------------------------------------------

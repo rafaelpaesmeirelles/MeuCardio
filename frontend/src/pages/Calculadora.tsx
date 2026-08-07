@@ -1,7 +1,26 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api } from "../lib/api";
+import { api, ApiError } from "../lib/api";
+import { useAuth } from "../lib/auth";
 import { Carregando, Erro } from "../components/Estado";
+import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+
+/**
+ * Página de calculadora única — usada pelas 32 calculadoras do catálogo
+ * (`/api/calculators`), não só as de risco cirúrgico.
+ *
+ * "Gerar documento", acrescentado em 07/08/2026 a pedido do Rafael ("todas
+ * as calculadoras habilitadas para... gerar laudo completo do resultado?"):
+ * mesmo fluxo já usado em Avaliação Pré-Operatória — dados do
+ * paciente/contexto → resultado recalculado no servidor ao gerar
+ * (`POST /calculators/{slug}/gerar-documento`, nunca confia no que já está
+ * na tela) → assinar/baixar/enviar por e-mail, reaproveitando as rotas
+ * genéricas de `document-templates/gerados/*` sem nenhum código novo ali.
+ */
+
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
+
+type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
 
 type Campo = {
   name: string; label: string; type: string; unit: string | null;
@@ -17,12 +36,38 @@ type Saida = {
   reference: string; limitations: string[];
 };
 
+function baixarBlob(blob: Blob, nomeArquivo: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = nomeArquivo;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 export default function Calculadora() {
   const { slug } = useParams();
+  const { usuario } = useAuth();
   const [calc, setCalc] = useState<Calc | null>(null);
   const [valores, setValores] = useState<Record<string, unknown>>({});
   const [saida, setSaida] = useState<Saida | null>(null);
   const [erro, setErro] = useState("");
+
+  const [provedores, setProvedores] = useState<Provedor[] | null>(null);
+  const [mostrarDocumento, setMostrarDocumento] = useState(false);
+  const [patientName, setPatientName] = useState("");
+  const [contexto, setContexto] = useState("");
+  const [conduta, setConduta] = useState("");
+  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
+  const [gerando, setGerando] = useState(false);
+  const [erroGeracao, setErroGeracao] = useState("");
+  const [geradoId, setGeradoId] = useState<number | null>(null);
+  const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
+  const [aguardandoExterno, setAguardandoExterno] = useState(false);
+  const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
+  const [email, setEmail] = useState("");
+  const [enviando, setEnviando] = useState(false);
+  const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
 
   useEffect(() => {
     api.get<Calc>(`/calculators/${slug}`).then((c) => {
@@ -34,15 +79,71 @@ export default function Calculadora() {
       }
       setValores(iniciais);
     });
+    setSaida(null);
+    setMostrarDocumento(false);
+    setGeradoId(null);
+    setResultadoEnvio(null);
   }, [slug]);
+
+  useEffect(() => {
+    api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
+  }, []);
 
   async function calcular() {
     setErro("");
     try {
       setSaida(await api.post<Saida>(`/calculators/${slug}/run`, valores));
+      setGeradoId(null);
+      setResultadoEnvio(null);
     } catch (e) {
       setSaida(null);
       setErro(e instanceof Error ? e.message : "Revise os valores informados.");
+    }
+  }
+
+  async function gerarDocumento() {
+    setGerando(true);
+    setErroGeracao("");
+    try {
+      const r = await api.post<{ id: number }>(`/calculators/${slug}/gerar-documento`, {
+        patient_name: patientName.trim() || null,
+        contexto_clinico: contexto.trim() || null,
+        conduta_recomendada: conduta.trim() || null,
+        endereco: endereco || null,
+        payload: valores,
+      });
+      setGeradoId(r.id);
+    } catch (e) {
+      setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível gerar o documento.");
+    } finally {
+      setGerando(false);
+    }
+  }
+
+  async function baixar() {
+    if (!geradoId) return;
+    try {
+      const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
+      baixarBlob(blob, `${slug}-${geradoId}.pdf`);
+      setAguardandoExterno(METODOS_MANUAL_EXTERNO.has(metodo));
+    } catch (e) {
+      setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
+    }
+  }
+
+  async function enviarPorEmail() {
+    if (!geradoId || !email) return;
+    setEnviando(true);
+    setErroGeracao("");
+    try {
+      const r = await api.post<{ enviado: boolean; link: string | null }>(
+        `/document-templates/gerados/${geradoId}/enviar-email`, { email },
+      );
+      setResultadoEnvio(r);
+    } catch (e) {
+      setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível enviar o e-mail.");
+    } finally {
+      setEnviando(false);
     }
   }
 
@@ -66,7 +167,7 @@ export default function Calculadora() {
               <label style={{ display: "flex", gap: 10, alignItems: "flex-start", fontWeight: 400 }}>
                 <input
                   type="checkbox"
-                  style={{ width: 18, height: 18, marginTop: 2, flex: "0 0 18px" }}
+                  style={{ marginTop: 2 }}
                   checked={Boolean(valores[f.name])}
                   onChange={(e) => setValores({ ...valores, [f.name]: e.target.checked })}
                 />
@@ -158,6 +259,88 @@ export default function Calculadora() {
             </span>
           </p>
           {saida.interpretation && <p>{saida.interpretation}</p>}
+        </div>
+      )}
+
+      {saida && !mostrarDocumento && (
+        <button className="botao botao--secundario" style={{ marginTop: "0.8rem" }} onClick={() => setMostrarDocumento(true)}>
+          Gerar laudo deste resultado
+        </button>
+      )}
+
+      {saida && mostrarDocumento && (
+        <div className="cartao" style={{ marginTop: "1rem" }}>
+          <p className="eyebrow" style={{ marginTop: 0 }}>Laudo — dados do paciente e contexto</p>
+          <label>Nome do paciente (opcional)</label>
+          <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Usado só para organizar o histórico" />
+          <label style={{ marginTop: "0.6rem" }}>Contexto clínico / procedimento (opcional)</label>
+          <input
+            value={contexto} onChange={(e) => setContexto(e.target.value)}
+            placeholder="Ex.: colecistectomia videolaparoscópica eletiva; investigação de palpitações; etc."
+          />
+          <label style={{ marginTop: "0.6rem" }}>Conduta e recomendações (opcional)</label>
+          <textarea rows={3} value={conduta} onChange={(e) => setConduta(e.target.value)} />
+          <label style={{ marginTop: "0.6rem" }}>Endereço no cabeçalho/rodapé (opcional)</label>
+          <select value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
+            <option value="">Nenhum</option>
+            <option value="profissional">Profissional (consultório)</option>
+            <option value="residencial">Residencial</option>
+          </select>
+
+          {!geradoId ? (
+            <>
+              {erroGeracao && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erroGeracao}</p>}
+              <button className="botao" style={{ marginTop: "0.8rem" }} onClick={gerarDocumento} disabled={gerando}>
+                {gerando ? "Gerando…" : "Gerar documento"}
+              </button>
+            </>
+          ) : (
+            <>
+              <p style={{ color: "var(--sucesso)", marginTop: "0.6rem" }}>Documento gerado.</p>
+              <label>Método de assinatura</label>
+              <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
+                {(provedores ?? []).map((p) => (
+                  <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
+                    {p.nome}{!p.disponivel ? " — indisponível" : ""}
+                  </option>
+                ))}
+              </select>
+              <button className="botao" style={{ marginTop: "0.6rem" }} onClick={baixar}>Baixar PDF</button>
+
+              {aguardandoExterno && (
+                <AssinaturaExternaITI
+                  metodo={metodo}
+                  nomeProvedor={provedores?.find((p) => p.codigo === metodo)?.nome ?? metodo}
+                  enviarUrl={`/document-templates/gerados/${geradoId}/assinatura-externa`}
+                  onConcluido={() => { setAguardandoExterno(false); setAssinadoExternoAgora(true); }}
+                />
+              )}
+              {assinadoExternoAgora && (
+                <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
+                  Assinatura conferida com sucesso — o documento já está assinado.
+                </p>
+              )}
+
+              <div style={{ marginTop: "0.8rem" }}>
+                <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias — exige CorvIA Mail ativo)</label>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="paciente@exemplo.com" />
+                <button className="botao" style={{ marginTop: "0.4rem" }} onClick={enviarPorEmail} disabled={enviando || !email}>
+                  {enviando ? "Enviando…" : "Enviar por e-mail"}
+                </button>
+              </div>
+              {resultadoEnvio && (
+                resultadoEnvio.enviado ? (
+                  <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>E-mail enviado.</p>
+                ) : (
+                  <p style={{ fontSize: "0.86rem" }}>
+                    O envio automático não está disponível agora. Copie o link e envie manualmente:{" "}
+                    <code style={{ wordBreak: "break-all" }}>{resultadoEnvio.link}</code>
+                  </p>
+                )
+              )}
+              {erroGeracao && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erroGeracao}</p>}
+            </>
+          )}
         </div>
       )}
 

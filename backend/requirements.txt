@@ -36,3 +36,7 @@ pyhanko==0.36.2
 # Templates dos e-mails transacionais (02/08/2026) — HTML + texto puro
 # renderizados a partir de backend/app/templates/emails/.
 jinja2==3.1.6
+# Modo Apresentação: exportação em PowerPoint editável (07/08/2026), a par do
+# PDF já existente — pedido do Rafael para o assinante poder modificar os
+# slides antes de projetar. Formato .pptx nativo (não é PDF disfarçado).
+python-pptx==1.0.2

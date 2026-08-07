@@ -19,6 +19,7 @@ export default function ExportarApresentacao({ slug, titulo }: {
 }) {
   const [aberto, setAberto] = useState(false);
   const [anotacao, setAnotacao] = useState("");
+  const [formato, setFormato] = useState<"pdf" | "pptx">("pdf");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
 
@@ -28,12 +29,12 @@ export default function ExportarApresentacao({ slug, titulo }: {
     try {
       const blob = await api.blobPost(
         `/biblioteca/${slug}/apresentacao`,
-        { anotacao }
+        { anotacao, formato }
       );
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `${slug}-apresentacao.pdf`;
+      a.download = `${slug}-apresentacao.${formato}`;
       a.click();
       URL.revokeObjectURL(url);
       setAberto(false);
@@ -57,9 +58,21 @@ export default function ExportarApresentacao({ slug, titulo }: {
     <div className="cartao" style={{ marginTop: "0.8rem" }}>
       <p className="eyebrow">Exportar “{titulo}”</p>
       <p style={{ fontSize: "0.86rem", margin: "0.5rem 0 0.7rem" }}>
-        Gera um PDF em paisagem, com um assunto por página e corpo grande, pronto
+        Gera slides em paisagem, com um assunto por página e corpo grande, prontos
         para projetar. O conteúdo é o mesmo que está publicado aqui.
       </p>
+
+      <fieldset style={{ border: "none", padding: 0, margin: "0 0 0.7rem" }}>
+        <legend style={{ fontSize: "0.84rem", fontWeight: 600, marginBottom: "0.35rem" }}>Formato</legend>
+        <label style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 400, marginBottom: "0.3rem" }}>
+          <input type="radio" name="formato-apresentacao" checked={formato === "pdf"} onChange={() => setFormato("pdf")} />
+          PDF — pronto para projetar
+        </label>
+        <label style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 400 }}>
+          <input type="radio" name="formato-apresentacao" checked={formato === "pptx"} onChange={() => setFormato("pptx")} />
+          PowerPoint (.pptx) — editável, para ajustar os slides antes de apresentar
+        </label>
+      </fieldset>
 
       <label htmlFor="anotacao" style={{ fontSize: "0.84rem", fontWeight: 600 }}>
         Anotação para esta apresentação (opcional)
@@ -81,7 +94,7 @@ export default function ExportarApresentacao({ slug, titulo }: {
 
       <div style={{ display: "flex", gap: 8, marginTop: "0.8rem" }}>
         <button className="botao botao--acao" onClick={exportar} disabled={gerando}>
-          {gerando ? "Gerando…" : "Gerar PDF"}
+          {gerando ? "Gerando…" : formato === "pptx" ? "Gerar PowerPoint" : "Gerar PDF"}
         </button>
         <button
           className="botao botao--secundario"

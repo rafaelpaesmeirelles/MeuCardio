@@ -124,8 +124,9 @@ export default function Calculadoras() {
           <p className="eyebrow" style={{ marginBottom: "0.2rem" }}>Função nova</p>
           <h2 style={{ margin: "0 0 0.3rem" }}>Calculadora de Doses Cardiológicas</h2>
           <p style={{ color: "var(--texto-secundario)", maxWidth: "70ch", marginTop: 0 }}>
-            Dose, taxa de infusão (mL/h e gotas/min) e energia de choque a partir do peso do
-            paciente e da diluição preparada — cobertura inicial em Cardiologia Geral,
+            Dose, taxa de infusão (mL/h, gotas/min e mcg/kg/min) e energia de choque a partir
+            da arritmia encontrada, do peso do paciente e da diluição preparada — cobertura
+            inicial em Cardiologia Geral,
             Cardiologia Pediátrica e Medicina Intensiva. Cada resultado avisa quando a dose
             informada sai da faixa usual, mas nunca bloqueia: a decisão é sempre do médico.
           </p>
