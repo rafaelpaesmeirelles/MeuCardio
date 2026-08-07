@@ -7352,5 +7352,74 @@
       "aconselhamento genético",
       "painel multigênico"
     ]
+  },
+  {
+    "slug": "hemodinamica-de-exercicio-invasiva-no-diagnostico-de-icfep-precoce",
+    "name": "Hemodinâmica de exercício invasiva no diagnóstico da ICFEp precoce/oculta",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Pressão de capilar pulmonar (PCWP) e pressão sistólica de artéria pulmonar medidas por cateterismo cardíaco direito, em repouso e durante exercício progressivo — desmascara elevação das pressões de enchimento do ventrículo esquerdo que só aparece sob esforço, quando os valores de repouso são normais.",
+    "reference_range": "No estudo de Borlaug et al. (Circ Heart Fail, 2010), pacientes com dispneia aos esforços, fração de ejeção >50%, sem doença coronariana significativa, BNP normal e hemodinâmica de repouso normal (PAP média <25 mmHg e PCWP <15 mmHg) foram submetidos a exercício: PCWP de exercício ≥25 mmHg definiu insuficiência cardíaca com fração de ejeção preservada (ICFEp) (32 de 55 pacientes), contra PCWP <25 mmHg classificado como dispneia não cardíaca (23 pacientes). Uma pressão sistólica de artéria pulmonar de exercício ≥45 mmHg identificou ICFEp com sensibilidade de 96% e especificidade de 95%.",
+    "indications": "Paciente com dispneia de esforço inexplicada, fração de ejeção preservada, peptídeo natriurético normal e hemodinâmica de repouso normal, quando a suspeita clínica de ICFEp permanece alta apesar da investigação não invasiva inconclusiva — situação em que a doença pode estar presente em fase inicial, ainda sem elevação de pressões em repouso.",
+    "interpretation": "No estudo original, a hipertensão pulmonar induzida pelo exercício esteve presente em 88% dos pacientes com ICFEp confirmada e relacionou-se principalmente à PCWP elevada (a resistência vascular pulmonar caiu de forma semelhante nos dois grupos, cardíaco e não cardíaco) — ou seja, o componente hemodinâmico dominante é a pressão de enchimento do ventrículo esquerdo transmitida retrogradamente, não doença vascular pulmonar primária. O grupo com ICFEp também mostrou resposta cronotrópica atenuada, menor vasodilatação sistêmica e menor incremento de débito cardíaco ao esforço, compondo o fenótipo de reserva hemodinâmica limitada da doença.",
+    "limitations": "Procedimento invasivo, exige protocolo padronizado de exercício sob monitorização hemodinâmica contínua, disponível apenas em centros com experiência específica; a coorte original é pequena (55 pacientes) e unicêntrica; não substitui a investigação não invasiva inicial (ecocardiograma com Doppler, peptídeo natriurético) — é reservado para quando esses exames não confirmam nem excluem a hipótese com segurança.",
+    "source_refs": [
+      "Borlaug BA, Nishimura RA, Sorajja P, Lam CS, Redfield MM. Exercise hemodynamics enhance diagnosis of early heart failure with preserved ejection fraction. Circ Heart Fail. 2010;3(5):588-595. DOI: 10.1161/CIRCHEARTFAILURE.109.930701. PMCID: PMC3048586. PMID: 20543134"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hemodinâmica de exercício",
+      "cateterismo cardíaco direito",
+      "icfep",
+      "insuficiência cardíaca",
+      "diagnóstico"
+    ]
+  },
+  {
+    "slug": "bateria-de-testes-de-reflexo-autonomico-cardiovascular-ewing-na-neuropatia-autonomica-cardiovascular-diabetica",
+    "name": "Bateria de testes de reflexo autonômico cardiovascular (Ewing) na neuropatia autonômica cardiovascular diabética",
+    "category": "metodo_grafico",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Conjunto de testes cardiovagais e simpáticos à beira do leito — variação da frequência cardíaca com a respiração profunda, resposta da frequência cardíaca à manobra de Valsalva, razão 30:15 da frequência cardíaca ao ortostatismo (testes cardiovagais) e queda da pressão arterial ao ortostatismo (teste simpático) — que avaliam a integridade do controle autonômico cardiovascular no paciente diabético.",
+    "reference_range": "Critérios de diagnóstico e estadiamento do Consenso de Toronto (2011): um resultado cardiovagal anormal isolado identifica neuropatia autonômica cardiovascular (CAN) possível ou precoce; pelo menos dois resultados cardiovagais anormais são necessários para CAN definida ou confirmada; e a presença de hipotensão ortostática associada a resultados anormais de frequência cardíaca identifica CAN grave ou avançada.",
+    "indications": "Investigação de disautonomia no paciente diabético com sintomas sugestivos (taquicardia de repouso persistente, intolerância ortostática, síncope inexplicada) ou como parte da estratificação de risco cardiovascular do diabético de longa data — a CAN é marcador de risco de mortalidade e morbidade cardiovascular, e pode preceder e favorecer arritmias e isquemia silenciosa.",
+    "interpretation": "O Consenso de Toronto estima a prevalência de CAN confirmada em torno de 20% entre diabéticos, subindo a até 65% com o avançar da idade e da duração do diabetes. Fatores de risco estabelecidos são o controle glicêmico no diabetes tipo 1 e a combinação de hipertensão, dislipidemia, obesidade e controle glicêmico no diabetes tipo 2. Estágios progressivos de CAN associam-se a prognóstico cardiovascular cada vez pior, e o achado tem implicações práticas: correlatos clínicos a tratar de forma dirigida (taquicardia, hipotensão ortostática, ausência do descenso noturno pressórico, prolongamento do intervalo QT), estratificação de risco de complicações e modulação de metas terapêuticas do diabetes.",
+    "limitations": "Requer suspensão prévia de fármacos que interferem no sistema nervoso autônomo e ambiente controlado para reduzir variabilidade da medida; o consenso reconhece que faltam evidências robustas sobre a relação custo-efetividade do rastreio rotineiro, e que — à parte do papel preventivo do controle glicêmico intensivo no diabetes tipo 1 — não há recomendações firmes de tratamento específico da CAN uma vez estabelecida.",
+    "source_refs": [
+      "Spallone V, Ziegler D, Freeman R, Bernardi L, Frontoni S, Pop-Busui R, Stevens M, Kempler P, Hilsted J, Tesfaye S, Low P, Valensi P; Toronto Consensus Panel on Diabetic Neuropathy. Cardiovascular autonomic neuropathy in diabetes: clinical impact, assessment, diagnosis, and management. Diabetes Metab Res Rev. 2011;27(7):639-653. DOI: 10.1002/dmrr.1239. PMID: 21695768"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "neuropatia autonômica cardiovascular",
+      "teste de ewing",
+      "diabetes",
+      "disautonomia",
+      "variabilidade da frequência cardíaca"
+    ]
+  },
+  {
+    "slug": "ressonancia-magnetica-cardiaca-na-gestante-com-suspeita-de-doenca-estrutural",
+    "name": "Ressonância magnética cardíaca na gestante com suspeita de doença estrutural",
+    "category": "imagem",
+    "theme": "Gravidez",
+    "what_it_measures": "Avaliação morfológica e funcional cardíaca por ressonância magnética sem exposição à radiação ionizante, incluindo caracterização tecidual (realce tardio, mapeamento) quando há indicação de contraste — na gestante, é opção quando o ecocardiograma não esclarece a dúvida diagnóstica, especialmente em suspeita de cardiomiopatia, miocardite ou doença estrutural congênita/vascular complexa.",
+    "reference_range": "Não se aplica valor de referência único — a RM cardíaca é modalidade diagnóstica morfofuncional, cuja interpretação depende da estrutura avaliada. Em coorte multicêntrica de 83 gestantes submetidas a RM cardíaca diagnóstica entre 2008 e 2017, não houve complicação imediata relacionada ao exame.",
+    "indications": "Suspeita de cardiomiopatia ou miocardite na gestante quando o ecocardiograma é inconclusivo; avaliação de doença vascular (aorta) ou cardiopatia congênita complexa que se beneficia de caracterização anatômica tridimensional; a diretriz seguida no estudo-fonte autoriza também o uso de contraste à base de gadolínio quando clinicamente indicado, conforme as recomendações vigentes.",
+    "interpretation": "Na coorte de Herrey et al. (Eur Heart J Cardiovasc Imaging, 2019), a indicação mais comum foi doença vascular ou congênita (48%), seguida de cardiomiopatia/miocardite (43%); 19% das gestantes receberam contraste. O resultado da RM mudou a conduta clínica em 35% de todas as pacientes e em 50% das que receberam contraste — ou seja, quando a dúvida diagnóstica já justificou solicitar o exame, o achado teve impacto real na decisão médica na maioria dos casos com contraste.",
+    "limitations": "Série observacional, sem grupo controle e sem seguimento sistemático do desfecho fetal a longo prazo além do período do estudo; a decisão de usar contraste gadolinado na gestação deve pesar a informação diagnóstica adicional contra a travessia placentária do agente, e é tomada caso a caso, alinhada às diretrizes vigentes de segurança em gestação; exige protocolo institucional e equipe habituada ao exame em gestante, nem sempre disponível fora de centros de referência.",
+    "source_refs": [
+      "Herrey AS, Francis JM, Hughes M, Ntusi NAB. Cardiovascular magnetic resonance can be undertaken in pregnancy and guide clinical decision-making in this patient population. Eur Heart J Cardiovasc Imaging. 2019;20(3):291-297. DOI: 10.1093/ehjci/jey162. PMID: 30462196"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância magnética cardíaca",
+      "gestação",
+      "cardiomiopatia",
+      "doença estrutural",
+      "segurança em gestação"
+    ]
   }
 ]
