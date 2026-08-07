@@ -18132,5 +18132,78 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "nidorf-2020-lodoco2-colchicina-em-doenca-coronariana-cronica",
+    "title": "Nidorf et al. 2020 — Ensaio LoDoCo2: colchicina em baixa dose na doença coronariana crônica",
+    "study_type": "ensaio_clinico",
+    "authors": "Nidorf SM, Fiolet ATL, Mosterd A, Eikelboom JW, Schut A, Opstal TSJ, et al; LoDoCo2 Trial Investigators.",
+    "journal": "The New England Journal of Medicine",
+    "year": 2020,
+    "doi": "10.1056/NEJMoa2021372",
+    "pmid": "32865380",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32865380/",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo (LoDoCo2, ANZCTR ACTRN12614000093684), 5.522 pacientes com doença coronariana crônica, comparando colchicina 0,5 mg/dia (n=2.762) a placebo (n=2.760), seguimento mediano de 28,6 meses, desfecho primário composto de morte cardiovascular, infarto espontâneo, AVC isquêmico ou revascularização guiada por isquemia.",
+    "key_findings": "Desfecho primário em 6,8% (colchicina) vs. 9,6% (placebo), HR 0,69 (IC95% 0,57-0,83; p<0,001). Desfecho secundário-chave (morte cardiovascular/infarto/AVC) também menor: HR 0,72 (IC95% 0,57-0,92; p=0,007). Sinal a observar: morte por causa não cardiovascular numericamente maior com colchicina (HR 1,51; IC95% 0,99-2,31).",
+    "clinical_implications": "Estende a indicação de colchicina anti-inflamatória, já estabelecida na fase pós-infarto pelo COLCOT, para doença coronariana crônica estável — reforça a inflamação residual como alvo terapêutico modificável na aterosclerose estabelecida, além do LDL.",
+    "limitations": "Sinal de aumento de morte não cardiovascular precisa de monitoramento, mencionado no próprio resumo do ensaio. Conduzido predominantemente em populações específicas (Austrália, Holanda). Colchicina tem interações medicamentosas relevantes (estatinas, inibidores de CYP3A4) não detalhadas neste resumo.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "colchicina",
+      "anti-inflamatório",
+      "doença coronariana crônica",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tardif-2019-colcot-colchicina-pos-infarto-do-miocardio",
+    "title": "Tardif et al. 2019 — Ensaio COLCOT: eficácia e segurança de colchicina em baixa dose após infarto do miocárdio",
+    "study_type": "ensaio_clinico",
+    "authors": "Tardif JC, Kouz S, Waters DD, Bertrand OF, Diaz R, Maggioni AP, et al.",
+    "journal": "The New England Journal of Medicine",
+    "year": 2019,
+    "doi": "10.1056/NEJMoa1912388",
+    "pmid": "31733140",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31733140/",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, 4.745 pacientes recrutados dentro de 30 dias pós-infarto do miocárdio, comparando colchicina 0,5 mg/dia (n=2.366) a placebo (n=2.379), seguimento mediano de 22,6 meses, desfecho primário composto de morte cardiovascular, parada cardíaca ressuscitada, infarto, AVC ou internação urgente por angina com revascularização.",
+    "key_findings": "Desfecho primário em 5,5% (colchicina) vs. 7,1% (placebo), HR 0,77 (IC95% 0,61-0,96; p=0,02). Componentes individuais: morte cardiovascular HR 0,84 (NS), parada cardíaca HR 0,83 (NS), infarto HR 0,91 (NS), AVC HR 0,26 (significativo), revascularização urgente por angina HR 0,50 (significativo) — o efeito do composto foi impulsionado principalmente por AVC e revascularização urgente. Diarreia mais frequente com colchicina (9,7% vs. 8,9%).",
+    "clinical_implications": "Ensaio fundador que estabeleceu colchicina em baixa dose como estratégia anti-inflamatória pós-infarto, base para o desenho do CLEAR-SYNERGY/OASIS-9 e do LoDoCo2 (doença crônica). A leitura de quais componentes do desfecho composto foram significativos é essencial para comunicar a evidência com precisão.",
+    "limitations": "Componentes individuais mais relevantes clinicamente (morte cardiovascular, infarto, parada cardíaca) não atingiram significância isoladamente — limitação de interpretação central, não apenas técnica. Diarreia mais frequente pode afetar adesão. Interações medicamentosas relevantes não detalhadas neste resumo.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "colchicina",
+      "anti-inflamatório",
+      "pós-infarto",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "carroll-rankin-2005-consultor-leigo-vs-apn-pos-infarto-idoso-sem-parceiro",
+    "title": "Carroll & Rankin 2005 — Comparação de intervenções em idosos sem parceiro após infarto do miocárdio",
+    "study_type": "ensaio_clinico",
+    "authors": "Carroll DL, Rankin SH.",
+    "journal": "European Journal of Cardiovascular Nursing",
+    "year": 2005,
+    "doi": "10.1016/j.ejcnurse.2005.09.001",
+    "pmid": "16256442",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16256442/",
+    "summary": "Ensaio clínico randomizado de 3 grupos nos EUA, comparando intervenção de autoeficácia conduzida por consultor leigo (peer advisor), a mesma intervenção conduzida por enfermeira de prática avançada (APN), e cuidado padrão, em idosos sem parceiro após infarto do miocárdio, com avaliação por telefone às 12 semanas pós-alta.",
+    "key_findings": "Sem diferença significativa entre os 3 grupos em nenhum desfecho de saúde às 12 semanas — mudanças em autoeficácia para comportamentos de recuperação, desempenho real desses comportamentos, e saúde física e mental foram semelhantes nos 3 grupos.",
+    "clinical_implications": "Resultado nulo relevante para quem planeja programa de suporte de pares esperando replicar automaticamente resultados positivos vistos em outras populações — a generalização de intervenções de suporte social/autoeficácia não é garantida, e a escolha de medida de desfecho pode ter mascarado efeito real.",
+    "limitations": "Tamanho amostral não detalhado no resumo — estudo de 3 braços pode ter poder estatístico reduzido. Os próprios autores reconhecem que as medidas usadas podem não ser suficientemente sensíveis. Seguimento curto (12 semanas), população específica (idosos sem parceiro nos EUA).",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "suporte de pares",
+      "autoeficácia",
+      "resultado nulo",
+      "idoso",
+      "pós-infarto"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
