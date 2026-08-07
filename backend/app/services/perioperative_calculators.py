@@ -1,9 +1,9 @@
 """Calculadoras perioperatórias adicionais produzidas pelo ChatGPT.
 
 Governança: somente fórmulas/itens explicitamente verificáveis em fonte primária
-ou diretriz foram implementados. GSCRI e ACS-NSQIP permanecem fora deste módulo
-porque a regressão completa não foi validada nesta sessão contra a fonte primária
-(GSCRI) e o ACS exige uso do calculador oficial dinâmico (NSQIP).
+ou diretriz foram implementados. GSCRI permanece sem cálculo porque a regressão
+completa não foi validada nesta sessão contra a fonte primária; ACS-NSQIP deve
+usar o calculador oficial dinâmico.
 
 Fonte: ChatGPT
 """
@@ -16,7 +16,6 @@ from app.services.calculators import Calculator, Field
 # ---------------------------------------------------------------------- DASI
 # Hlatky MA et al. Am J Cardiol. 1989;64(10):651-654.
 # PMID: 2782256. DOI: 10.1016/0002-9149(89)90496-7.
-# Os pesos abaixo também constam do material oficial da AHA/ACC 2024.
 _DASI_ITEMS: tuple[tuple[str, str, float], ...] = (
     ("autocuidado", "Cuida de si mesmo (alimentar-se, vestir-se, banho e banheiro)", 2.75),
     ("caminhar_casa", "Caminha dentro de casa", 1.75),
@@ -91,6 +90,60 @@ def _aub_has2_txt(r: dict) -> str:
     )
 
 
+# -------------------------------------------------------------------- VSG-CRI
+# Bertges DJ et al. J Vasc Surg. 2010;52(3):674-683.e1-3.
+# PMID: 20570467. DOI: 10.1016/j.jvs.2010.03.031.
+# Pontuação reproduzida também na Diretriz SBC 2024, Tabelas 6 e 7.
+def _vsg_cri(d: dict) -> dict:
+    idade = float(d["idade"])
+    if idade >= 80:
+        score = 4
+    elif idade >= 70:
+        score = 3
+    elif idade >= 60:
+        score = 2
+    else:
+        score = 0
+
+    score += 2 if d.get("doenca_arterial_coronariana") else 0
+    score += 2 if d.get("insuficiencia_cardiaca") else 0
+    score += 2 if d.get("dpoc") else 0
+    score += 2 if d.get("creatinina_maior_1_8") else 0
+    score += 1 if d.get("tabagismo") else 0
+    score += 1 if d.get("diabetes_insulina") else 0
+    score += 1 if d.get("betabloqueador_cronico") else 0
+    score -= 1 if d.get("revascularizacao_coronaria_previa") else 0
+
+    categoria = "baixo" if score <= 4 else ("intermediario" if score <= 6 else "alto")
+    if score <= 3:
+        evento_original_pct = 2.6
+    elif score == 4:
+        evento_original_pct = 3.5
+    elif score == 5:
+        evento_original_pct = 6.0
+    elif score == 6:
+        evento_original_pct = 6.6
+    elif score == 7:
+        evento_original_pct = 8.9
+    else:
+        evento_original_pct = 14.3
+    return {
+        "score": score,
+        "categoria": categoria,
+        "evento_original_pct": evento_original_pct,
+    }
+
+
+def _vsg_cri_txt(r: dict) -> str:
+    return (
+        f"VSG-CRI {r['score']} ponto(s) — risco {r['categoria']} pela classificação adotada pela "
+        f"SBC 2024 (0–4 baixo, 5–6 intermediário, ≥7 alto). Na coorte original, a faixa correspondente "
+        f"teve taxa de complicações cardíacas de aproximadamente {r['evento_original_pct']}%. "
+        "Essas taxas históricas não equivalem a probabilidade individual contemporânea e o escore "
+        "deve ser usado especificamente em cirurgia vascular arterial."
+    )
+
+
 PERIOPERATIVE_REGISTRY: dict[str, Calculator] = {
     "dasi": Calculator(
         slug="dasi",
@@ -130,6 +183,35 @@ PERIOPERATIVE_REGISTRY: dict[str, Calculator] = {
             "O desfecho do modelo é morte, IAM ou AVC em 30 dias; não é idêntico aos desfechos do RCRI ou Gupta MICA.",
             "Não indicar teste cardíaco apenas pela categoria do escore.",
             "Anemia é definida no modelo por hemoglobina <12 g/dL, independentemente do sexo.",
+        ],
+    ),
+    "vsg-cri": Calculator(
+        slug="vsg-cri",
+        name="VSG-CRI — Cirurgia vascular arterial",
+        theme="Perioperatório",
+        purpose="Estratificar complicações cardíacas em pacientes submetidos a cirurgia vascular arterial.",
+        fields=[
+            Field(name="idade", label="Idade", type="number", unit="anos", min=18, max=120),
+            Field(name="doenca_arterial_coronariana", label="Doença arterial coronariana", type="boolean"),
+            Field(name="insuficiencia_cardiaca", label="Insuficiência cardíaca", type="boolean"),
+            Field(name="dpoc", label="DPOC", type="boolean"),
+            Field(name="creatinina_maior_1_8", label="Creatinina >1,8 mg/dL", type="boolean"),
+            Field(name="tabagismo", label="Tabagismo atual ou prévio conforme variável do modelo", type="boolean"),
+            Field(name="diabetes_insulina", label="Diabetes em uso de insulina", type="boolean"),
+            Field(name="betabloqueador_cronico", label="Uso crônico de betabloqueador", type="boolean"),
+            Field(name="revascularizacao_coronaria_previa", label="Revascularização coronária prévia (CABG/PCI) — −1 ponto", type="boolean"),
+        ],
+        reference=(
+            "Bertges DJ, Goodney PP, Zhao Y, et al. J Vasc Surg. 2010;52(3):674-683.e1-3. "
+            "PMID 20570467. DOI 10.1016/j.jvs.2010.03.031. Classificação operacional: "
+            "Diretriz SBC 2024, DOI 10.36660/abc.20240590."
+        ),
+        compute=_vsg_cri,
+        interpret=_vsg_cri_txt,
+        limitations=[
+            "Usar especificamente em cirurgia vascular arterial; não extrapolar para cirurgia não vascular.",
+            "As taxas absolutas de evento são da coorte original e podem não refletir risco contemporâneo individual.",
+            "Uso crônico de betabloqueador é variável prognóstica do modelo e não implica causalidade.",
         ],
     ),
 }
