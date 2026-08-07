@@ -7421,5 +7421,28 @@
       "doença estrutural",
       "segurança em gestação"
     ]
+  },
+  {
+    "slug": "ressonancia-cardiaca-com-realce-tardio-atrial-fibrose-atrial-na-selecao-para-ablacao-de-fa",
+    "name": "Ressonância cardíaca com realce tardio atrial (fibrose atrial) na seleção para ablação de fibrilação atrial",
+    "category": "imagem",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Extensão de fibrose do átrio esquerdo, estimada pela captação de contraste (realce tardio) na parede atrial em ressonância magnética cardíaca dedicada — quantifica o substrato estrutural da fibrilação atrial (FA), distinto da carga elétrica/arrítmica avaliada por Holter ou monitor implantável.",
+    "reference_range": "Sistema de estadiamento de Utah, usado no estudo DECAAF (Marrouche et al., JAMA 2014): estágio 1, fibrose <10% da parede atrial; estágio 2, 10% a <20%; estágio 3, 20% a <30%; estágio 4, ≥30%.",
+    "indications": "Avaliação do substrato atrial antes de ablação por cateter da FA, sobretudo quando se quer estimar a probabilidade de recorrência da arritmia após o procedimento e discutir essa expectativa com o paciente; pesquisa e planejamento de estratégia de ablação (extensão da lesão) guiados pela distribuição da fibrose.",
+    "interpretation": "No estudo multicêntrico DECAAF (272 pacientes com quantificação de fibrose bem-sucedida, de 329 incluídos — 17% excluídos por qualidade de imagem insuficiente), a incidência cumulativa não ajustada de recorrência de arritmia após o período de blanking de 90 dias, medida no dia 475, foi de 15,3% no estágio 1, 35,8% no estágio 2, 45,9% no estágio 3 e 69,4% no estágio 4 — gradiente consistente entre mais fibrose e mais recorrência. Cada aumento de 1% na fibrose atrial esquerda elevou o risco de recorrência em 6% (HR 1,06; IC95% 1,03-1,08; p<0,001), associação que se manteve após ajuste para covariáveis clínicas. A adição da fibrose a um modelo preditivo com variáveis clínicas tradicionais melhorou discretamente a acurácia preditiva (estatística C de 0,65 para 0,69).",
+    "limitations": "Exige protocolo de aquisição e pós-processamento especializados, com curva de aprendizado — no próprio DECAAF, 17% dos exames foram excluídos por qualidade insuficiente para quantificação confiável; o ganho de discriminação sobre variáveis clínicas tradicionais é real, porém modesto (C de 0,65 para 0,69); a publicação original tem errata (JAMA. 2014;312(17):1805), não revisada nesta sessão — conferir antes de citar valor específico da errata.",
+    "source_refs": [
+      "Marrouche NF, Wilber D, Hindricks G, Jais P, Akoum N, Marchlinski F, Kholmovski E, Burgon N, Hu N, Mont L, Deneke T, Duytschaever M, Neumann T, Mansour M, Mahnkopf C, Herweg B, Daoud E, Wissner E, Bansmann P, Brachmann J. Association of atrial tissue fibrosis identified by delayed enhancement MRI and atrial fibrillation catheter ablation: the DECAAF study. JAMA. 2014;311(5):498-506. DOI: 10.1001/jama.2014.3. PMID: 24496537. Errata: JAMA. 2014;312(17):1805 (não revisada nesta sessão)"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância magnética cardíaca",
+      "realce tardio",
+      "fibrose atrial",
+      "fibrilação atrial",
+      "ablação por cateter"
+    ]
   }
 ]
