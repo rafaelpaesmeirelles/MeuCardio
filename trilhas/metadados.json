@@ -22189,5 +22189,73 @@
         "por_que": "Fecha mudando de emergência para cronicidade: o SPRINT MIND é frequentemente citado de forma imprecisa como prova de que controle pressórico intensivo 'previne demência' — o documento separa o que o ensaio de fato mostrou (redução de comprometimento cognitivo leve e do desfecho composto) do que não atingiu significância isolada (demência provável como desfecho único), uma distinção que muda como a evidência deve ser comunicada ao paciente."
       }
     ]
+  },
+  {
+    "slug": "trilha-diabetes-diagnostico-e-limite-da-glicemia-de-jejum-isolada",
+    "titulo": "Diabetes e cardiologia: o limite diagnóstico da glicemia de jejum isolada e a estratificação de risco",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Sair sabendo por que a glicemia de jejum isolada pode subestimar risco cardiovascular em comparação à glicemia pós-sobrecarga (TOTG), como isso se conecta à estratificação de risco cardiovascular do diabético pelas diretrizes atuais (SBD 2025, ESC 2023), e reconhecer o paradoxo prognóstico da hiperglicemia de estresse no infarto agudo — três momentos diferentes em que a glicemia, medida do jeito errado ou interpretada fora de contexto, engana o cardiologista.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "caso_clinico",
+        "item_slug": "totg-versus-glicemia-de-jejum-na-predicao-de-mortalidade-cardiovascular-estudo-decode",
+        "por_que": "Começa pelo achado que justifica não parar a investigação metabólica na glicemia de jejum normal: o estudo DECODE mostrou que a glicemia 2 horas pós-sobrecarga prediz mortalidade cardiovascular melhor que o jejum isolado, e que o maior excesso de mortes ocorre exatamente no grupo com jejum normal mas tolerância diminuída à glicose — invisível a quem só pede o exame de jejum."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025",
+        "por_que": "Uma vez identificado o paciente com alteração metabólica, a diretriz brasileira mais atual orienta como estratificar o risco cardiovascular dele — o passo seguinte depois do diagnóstico laboratorial."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+        "por_que": "Contraponto europeu à diretriz brasileira, para o cardiologista comparar os dois algoritmos de estratificação de risco e reconhecer onde convergem e onde divergem na prática."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hiperglicemia-de-estresse-no-infarto-agudo-do-miocardio-valor-prognostico-e-controle-glicemico",
+        "por_que": "Fecha com o paradoxo inverso: no paciente internado por infarto agudo, a hiperglicemia aguda (de estresse, não necessariamente diabetes prévio) tem valor prognóstico próprio, e o controle glicêmico intensivo nesse cenário agudo não é a mesma pergunta que o diagnóstico ambulatorial de diabetes das etapas anteriores — a glicemia muda de significado conforme o contexto clínico em que é medida."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-prevencao-discordancia-lipidica-apob-e-marcadores-alem-do-ldl-isolado",
+    "titulo": "Prevenção e lipídios: quando o LDL isolado engana — ApoB, hs-CRP e triglicerídeos residuais",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo reconhecer os dois cenários em que o LDL-colesterol isolado subestima o risco cardiovascular real — discordância por partículas pequenas e densas em paciente com triglicerídeos elevados (ApoB) e inflamação vascular subclínica em LDL não francamente elevado (hs-CRP) —, situar isso dentro do diagnóstico de hipercolesterolemia familiar, e reconhecer os limites da terapia com fibrato para risco residual por triglicerídeos.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
+        "por_que": "Começa pelo diagnóstico de dislipidemia genética, contexto em que a interpretação cuidadosa do perfil lipídico (não só o número de LDL) já é rotina — base para entender por que outros marcadores lipídicos ganham espaço na prática."
+      },
+      {
+        "ordem": 2,
+        "item_type": "caso_clinico",
+        "item_slug": "apolipoproteina-b-versus-ldl-colesterol-discordancia-no-paciente-com-sindrome-metabolica",
+        "por_que": "Caso central da trilha: mostra por que triglicerídeos elevados criam discordância entre LDL-colesterol (massa) e ApoB (número de partículas aterogênicas), com os números da metanálise de Sniderman et al. que comparam o poder preditivo dos dois marcadores."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fibratos-e-risco-cardiovascular-residual-o-ensaio-prominent-e-o-precedente-do-accord-lipid",
+        "por_que": "Conecta a discordância lipídica ao tratamento: se o problema é hipertrigliceridemia e partículas de LDL pequenas e densas, o fibrato parece a solução lógica — o PROMINENT (e o precedente do ACCORD Lipid) mostra por que essa lógica farmacológica não se traduziu em redução de eventos."
+      },
+      {
+        "ordem": 4,
+        "item_type": "caso_clinico",
+        "item_slug": "proteina-c-reativa-ultrassensivel-e-decisao-de-estatina-em-ldl-nao-elevado-jupiter",
+        "por_que": "Fecha com o outro tipo de discordância — não por partícula, mas por inflamação vascular subclínica —, usando o ensaio JUPITER como evidência randomizada de que hs-CRP elevada com LDL não elevado ainda assim identifica quem se beneficia de estatina."
+      }
+    ]
   }
 ]
