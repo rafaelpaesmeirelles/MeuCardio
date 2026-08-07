@@ -11432,5 +11432,81 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "pesi-derivacao-original-2005",
+    "title": "PESI — Derivação e validação do Pulmonary Embolism Severity Index",
+    "study_type": "estudo_de_coorte",
+    "authors": "Aujesky D, Obrosky DS, Stone RA, et al.",
+    "journal": "American Journal of Respiratory and Critical Care Medicine",
+    "year": 2005,
+    "doi": "10.1164/rccm.200506-862OC",
+    "pmid": "16020800",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16020800/",
+    "summary": "Derivação e validação de regra de predição clínica para mortalidade em 30 dias no tromboembolismo pulmonar agudo, a partir de 15.531 internações por TEP em 186 hospitais da Pensilvânia (67% coorte de derivação, 33% validação interna), com validação externa em 221 pacientes da Suíça e França. Regra baseada em 11 características clínicas obtidas na apresentação, sem necessidade de exame laboratorial.",
+    "key_findings": "Onze variáveis pontuadas (idade em pontos = idade em anos; sexo masculino +10; câncer +30; insuficiência cardíaca +10; doença pulmonar crônica +10; pulso ≥110/min +20; PAS <100mmHg +30; FR ≥30/min +20; temperatura <36°C +20; estado mental alterado +60; SatO2 <90% +20) classificam o paciente em 5 classes de risco crescente de mortalidade em 30 dias, da classe I (≤65 pontos, mortalidade 0-1,6%) até a classe V (risco muito alto).",
+    "clinical_implications": "É a regra de predição clínica de referência para estimar mortalidade em 30 dias no TEP agudo e decidir intensidade inicial de tratamento, inclusive elegibilidade para alta precoce/tratamento ambulatorial nas classes de baixo risco (I e II). Deu origem à versão simplificada sPESI (Jiménez D et al., Arch Intern Med. 2010;170(15):1383-1389, PMID 20696966).",
+    "limitations": "Derivado em coorte norte-americana de um único estado (Pensilvânia); onze variáveis tornam o cálculo manual mais trabalhoso que a versão simplificada (sPESI), que reduziu para seis variáveis dicotômicas.",
+    "theme": "Calculadoras",
+    "tags": [
+      "PESI",
+      "tromboembolismo pulmonar",
+      "escore de gravidade",
+      "estratificação de risco",
+      "derivação de escore"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "syntax-score-ii-derivacao-farooq-2013",
+    "title": "SYNTAX Score II — Derivação e validação de modelo combinando variáveis anatômicas e clínicas para decisão entre CABG e PCI",
+    "study_type": "estudo_de_coorte",
+    "authors": "Farooq V, van Klaveren D, Steyerberg EW, et al.",
+    "journal": "Lancet",
+    "year": 2013,
+    "doi": "10.1016/S0140-6736(13)60108-7",
+    "pmid": "23439103",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23439103/",
+    "summary": "Derivação e validação do SYNTAX Score II a partir da coorte do ensaio SYNTAX (1.800 pacientes com doença trivascular e/ou de tronco de coronária esquerda, randomizados para CABG ou PCI), por regressão de Cox. Diferente do SYNTAX score original (puramente anatômico), combina o escore anatômico com variáveis clínicas do paciente para permitir decisão individualizada entre CABG e PCI.",
+    "key_findings": "Modelo final com oito preditores: escore SYNTAX anatômico (contínuo), idade, clearance de creatinina, FEVE, doença de tronco de coronária esquerda desprotegido, sexo feminino, DPOC e doença arterial periférica. Diabetes foi testado como candidato e NÃO entrou no modelo final — interação com a escolha de estratégia não foi significativa (p=0,67). Gera duas estimativas separadas de mortalidade em 4 anos (uma para CABG, outra para PCI); a estratégia com menor mortalidade prevista é indicada como preferível para aquele paciente.",
+    "clinical_implications": "Substitui a lógica de tercis fixos do SYNTAX original (≤22, 23-32, ≥33) por uma comparação individualizada: pacientes mais jovens, mulheres e com FEVE reduzida toleram menos complexidade anatômica antes de a balança pender para CABG, enquanto idosos, doença de tronco desprotegido ou DPOC toleram escore anatômico mais alto antes da cirurgia se tornar claramente preferível. Não é calculado à mão — requer nomograma ou calculadora on-line (syntaxscore.org).",
+    "limitations": "Modelo desenvolvido e validado inicialmente na própria coorte do ensaio SYNTAX; validações externas posteriores (BEST/PRECOMBAT, PMID 27491605; SYNTAXES/redesenvolvimento SYNTAX Score II 2020, PMID 33038944) foram necessárias para confirmar generalização.",
+    "theme": "Calculadoras",
+    "tags": [
+      "SYNTAX Score II",
+      "doença coronariana multiarterial",
+      "CABG",
+      "PCI",
+      "decisão individualizada",
+      "derivação de escore"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "score2-derivacao-esc-2021",
+    "title": "SCORE2 — Novos algoritmos de predição de risco cardiovascular em 10 anos para a Europa",
+    "study_type": "estudo_de_coorte",
+    "authors": "SCORE2 working group and ESC Cardiovascular Risk Collaboration",
+    "journal": "European Heart Journal",
+    "year": 2021,
+    "doi": "10.1093/eurheartj/ehab309",
+    "pmid": "34120177",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34120177/",
+    "summary": "Desenvolvimento e validação de modelo de risco competitivo, recalibrado por região de risco cardiovascular europeia, para estimar risco em 10 anos de eventos cardiovasculares fatais e não fatais (infarto, AVC) em adultos de 40-69 anos sem doença cardiovascular ou diabetes conhecidos, combinando idade, sexo, tabagismo atual, PAS e colesterol não-HDL.",
+    "key_findings": "Modelo recalibrado por quatro regiões de risco cardiovascular (baixo, moderado, alto, muito alto), com faixas de interpretação por idade: <50 anos (baixo <2,5%, alto 2,5-7,5%, muito alto ≥7,5%); 50-69 anos (baixo <5%, alto 5-10%, muito alto ≥10%). Publicado em par com o SCORE2-OP (SCORE2-OP working group, Eur Heart J. 2021;42(25):2455-2467, PMID 34120185), calibração específica para idosos de 70-89 anos.",
+    "clinical_implications": "Substitui o SCORE original como ferramenta recomendada pela ESC para estimar risco cardiovascular em prevenção primária, orientando decisões sobre intervenção de estilo de vida, indicação de estatina e tratamento anti-hipertensivo. Automaticamente classifica como alto risco quem já teve IAM, AVC, angioplastia ou tem diabetes prévio — a calculadora não se aplica a esses pacientes.",
+    "limitations": "Calibração regional reflete variação epidemiológica entre populações europeias — aplicabilidade direta a populações não europeias (incluindo a brasileira) requer validação própria, discutida em documento complementar desta biblioteca.",
+    "theme": "Calculadoras",
+    "tags": [
+      "SCORE2",
+      "risco cardiovascular",
+      "prevenção primária",
+      "ESC",
+      "derivação de escore"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
