@@ -5695,5 +5695,51 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-avnrt-terminacao-por-adenosina",
+    "title": "ECG — Taquicardia por reentrada nodal atrioventricular (AVNRT), terminação por adenosina",
+    "modality": "ECG",
+    "theme": "Arritmias",
+    "file_path": "ecg/avnrt-terminacao-por-adenosina.jpg",
+    "findings": "Traçado eletrocardiográfico de derivações múltiplas mostrando taquicardia regular de complexo estreito, sustentada, que termina de forma abrupta durante o registro, com retorno a ritmo sinusal normal nas derivações finais (V4-V6 e a tira de ritmo em D2). O caso-fonte descreve RP' curto (cerca de 80 ms) e ausência de onda delta nos batimentos sinusais, com terminação da taquicardia após administração de adenosina intravenosa — achados que, em conjunto, favorecem reentrada nodal atrioventricular (AVNRT) em vez de taquicardia por reentrada atrioventricular (AVRT) por via acessória.",
+    "teaching_points": "Adenosina intravenosa em bolus é manobra diagnóstico-terapêutica de primeira linha em taquicardia regular de complexo estreito de causa indefinida: bloqueia transitoriamente a condução pelo nó atrioventricular e termina qualquer taquicardia que dependa desse nó para se manter (AVNRT, AVRT) — sem terminar taquicardia atrial ou flutter atrial, que apenas revelam a atividade atrial subjacente com o bloqueio AV transitório. O RP' curto (intervalo entre o QRS e a onda P retrógrada seguinte) e a ausência de onda delta nos batimentos de base ajudam a diferenciar AVNRT (RP' tipicamente muito curto, P retrógrada frequentemente escondida no QRS ou logo após) de AVRT por via acessória manifesta (que teria pré-excitação basal) ou oculta (RP' geralmente mais longo que na AVNRT típica).",
+    "source_name": "Wikimedia Commons (EKG World Encyclopedia / ECGpedia, CardioNetworks)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:E345_(CardioNetworks_ECGpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Michael Rosengarten, BEng, MD (McGill University) — EKG World Encyclopedia, cortesia de CardioNetworks (ecgpedia.org), via Wikimedia Commons, licenciado CC BY-SA 3.0.",
+    "tags": [
+      "ecg",
+      "avnrt",
+      "taquicardia supraventricular",
+      "taquicardia de complexo estreito",
+      "adenosina",
+      "reentrada nodal atrioventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "capnograma-normal-fases-do-ciclo-respiratorio",
+    "title": "Capnograma normal — fases do ciclo respiratório e ETCO2",
+    "modality": "Diagrama",
+    "theme": "Terapia intensiva",
+    "file_path": "diagrama/capnograma-normal-fases-do-ciclo-respiratorio.png",
+    "findings": "Traçado esquemático de um capnograma normal (concentração de CO2 no ar, eixo vertical em vol%, versus tempo), demarcando as fases do ciclo respiratório: platô inspiratório em zero (ausência de CO2 no ar inalado, marcado 'INHALATIE'), fase A (linha de base expiratória inicial, ainda espaço morto anatômico sem CO2), fase B (subida ascendente rápida, mistura de gás de espaço morto com gás alveolar) e fase C (platô alveolar, onde a curva se estabiliza em um patamar) — o ponto ao final do platô C é o CO2 expirado ao final da expiração (ETCO2, marcado no diagrama), seguido de queda abrupta com o início da inspiração seguinte ('EXHALATIE'/'INHALATIE').",
+    "teaching_points": "O ETCO2 medido ao final do platô alveolar (fase C) é o valor clinicamente relevante da capnografia — reflete, em ventilação e perfusão pulmonar estáveis, a pressão parcial de CO2 alveolar e, por extensão, a arterial. Fora da anestesia/ventilação mecânica de rotina, a capnografia contínua tem três aplicações centradas em emergência e terapia intensiva, todas apoiadas na mesma curva normal como referência do que é fisiológico: confirmar o correto posicionamento do tubo traqueal (ausência completa de onda de CO2 após intubação é o critério mais específico disponível para excluir intubação esofágica), monitorizar a qualidade das compressões torácicas durante a ressuscitação cardiopulmonar (o ETCO2 gerado pelas compressões é proporcional ao débito cardíaco por elas produzido) e sinalizar o retorno da circulação espontânea por uma elevação abrupta do ETCO2 durante a RCP.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Capnogram.png",
+    "license": "GFDL 1.2 ou posterior / CC BY-SA 3.0 (licenciamento duplo)",
+    "attribution": "Rschiedon (Wikipédia em neerlandês), via Wikimedia Commons — licenciado sob GNU Free Documentation License 1.2 (ou posterior) e Creative Commons Attribution-ShareAlike 3.0 Unported.",
+    "tags": [
+      "capnografia",
+      "capnograma",
+      "etco2",
+      "parada cardiorrespiratoria",
+      "monitorizacao respiratoria",
+      "reanimacao cardiopulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

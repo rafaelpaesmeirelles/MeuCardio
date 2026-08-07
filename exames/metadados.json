@@ -8238,5 +8238,155 @@
       "redução de radiação",
       "fluoroscopia"
     ]
+  },
+  {
+    "slug": "nt-probnp-e-troponina-de-alta-sensibilidade-na-estratificacao-de-risco-no-diabetes",
+    "name": "NT-proBNP e troponina T de alta sensibilidade na estratificação de risco cardiovascular no diabetes",
+    "category": "laboratorial",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Combinação de dois biomarcadores medidos em conjunto no mesmo paciente assintomático com pré-diabetes ou diabetes tipo 2: NT-proBNP (peptídeo natriurético, liberado por estresse/distensão da parede miocárdica) e troponina T cardíaca de alta sensibilidade (hs-cTnT, marcador de injúria/necrose miocárdica subclínica, abaixo do limiar de detecção dos ensaios convencionais). Isoladamente cada um já é usado na prática; a proposta discutida aqui é o valor incremental de considerá-los em conjunto para reclassificar o risco de insuficiência cardíaca (IC) incidente e de evento cardiovascular (CVD) nessa população.",
+    "reference_range": "Não há um corte único validado para esta finalidade combinada — os dois marcadores têm relação praticamente contínua e gradual com o risco, sem um ponto de inflexão nítido. O estudo de referência (MESA) trabalhou com quartis de cada biomarcador e com a comparação acima/abaixo da mediana, não com um valor de decisão fixo. Para uso clínico isolado, cada laboratório aplica a referência de normalidade do próprio ensaio: hs-cTnT pelo 99º percentil da população de referência (specific ao kit); NT-proBNP tipicamente <125 pg/mL em rastreio ambulatorial não agudo, com ajuste esperado para idade.",
+    "indications": "Reclassificação do risco cardiovascular e, sobretudo, do risco de insuficiência cardíaca incidente em paciente assintomático com pré-diabetes ou diabetes tipo 2, além do que os fatores de risco clássicos (idade, pressão arterial, LDL, tabagismo, função renal) já capturam — população em que o risco de IC é desproporcionalmente maior que o de outras doenças cardiovasculares e frequentemente subestimado pelos escores tradicionais, desenhados sobretudo para doença coronariana.",
+    "interpretation": "No estudo MESA (Nguyen K et al., Am J Cardiol 2020;125(8):1194-1201, PMID 32106929; 5.584 participantes, 695 com diabetes, seguimento médio de 12,4 ± 3,8 anos), no subgrupo com diabetes a incidência de IC variou de 3,2 a 39,4 por 1.000 pessoas-ano entre os quartis de NT-proBNP e de 0,6 a 18,2 por 1.000 pessoas-ano entre os de hs-cTnT; a incidência de evento cardiovascular total variou de 13,7 a 39,4 (NT-proBNP) e de 13,2 a 35,4 (hs-cTnT) por 1.000 pessoas-ano. O achado central do estudo: quando os DOIS biomarcadores estavam acima da mediana simultaneamente, o risco ajustado multivariado foi HR 16,7 para IC incidente e HR 2,1 para evento cardiovascular total (p < 0,01 para ambos), maior do que qualquer um isoladamente — sustentando o racional de medi-los em conjunto, não como substitutos um do outro.",
+    "limitations": "É evidência de associação em coorte observacional, não ensaio randomizado testando se uma conduta guiada por esses biomarcadores muda desfecho — não há prova de que rastrear e agir sobre o resultado reduza IC ou eventos cardiovasculares nessa população. Os dois marcadores têm confundidores próprios que precisam ser considerados na interpretação: NT-proBNP é reduzido pela obesidade (comum no diabetes tipo 2) e elevado por fibrilação atrial e disfunção renal, o que pode mascarar ou inflar o risco real; hs-cTnT fica cronicamente elevado, de forma quase universal e independente de isquemia aguda, em pacientes com doença renal crônica avançada e hemodiálise — em uma coorte de hemodiálise assintomática, 99% tiveram hs-cTnT acima do percentil 99 da população geral (Pianta TJ et al., Nephrology (Carlton) 2012;17(7):636-641, PMID 22694299), o que torna a interpretação isolada do valor absoluto de hs-cTnT pouco confiável nesse cenário específico, mais do que no diabetes sem nefropatia avançada.",
+    "source_refs": [
+      "Nguyen K, Fan W, Bertoni A, Budoff MJ, Defilippi C, Lombardo D, Maisel A, Szklo M, Wong ND. N-terminal Pro B-type Natriuretic Peptide and High-sensitivity Cardiac Troponin as Markers for Heart Failure and Cardiovascular Disease Risks According to Glucose Status (from the Multi-Ethnic Study of Atherosclerosis [MESA]). Am J Cardiol. 2020;125(8):1194-1201. DOI 10.1016/j.amjcard.2020.01.025. PMID 32106929.",
+      "Pianta TJ, Horvath AR, Ellis VM, Leonetti R, Moffat C, Josland EA, Brown MA. Cardiac high-sensitivity troponin T measurement: a layer of complexity in managing haemodialysis patients. Nephrology (Carlton). 2012;17(7):636-641. DOI 10.1111/j.1440-1797.2012.01625.x. PMID 22694299."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "nt-probnp",
+      "troponina de alta sensibilidade",
+      "biomarcadores",
+      "diabetes",
+      "risco cardiovascular",
+      "insuficiencia cardiaca incidente"
+    ]
+  },
+  {
+    "slug": "strain-longitudinal-global-na-cardiomiopatia-diabetica-subclinica",
+    "name": "Strain longitudinal global (GLS) no rastreio da cardiomiopatia diabética subclínica",
+    "category": "imagem",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Deformação miocárdica longitudinal do ventrículo esquerdo, medida por speckle-tracking sobre imagens de ecocardiograma bidimensional convencional, expressa em percentual de encurtamento das fibras longitudinais entre diástole e sístole. Por convenção o valor é negativo (o miocárdio encurta), mas costuma ser reportado e discutido em módulo. É mais sensível que a fração de ejeção para detectar disfunção sistólica sutil, porque capta redução de função regional/global antes que o volume ejetado global caia o suficiente para reduzir a FEVE.",
+    "reference_range": "A literatura ecocardiográfica geral descreve o valor normal de GLS tipicamente entre 18% e 22% em módulo (ou -18% a -22%). No estudo de referência desta ficha (Yeo JL et al., Cardiovasc Diabetol 2022;21(1):85, PMID 35643571), controles pareados por idade, sexo e etnia, sem diabetes, tiveram GLS médio de 17,2 ± 2,1%, contra 16,0 ± 2,3% no grupo com diabetes tipo 2 sem doença cardiovascular prévia conhecida (p = 0,004) — diferença absoluta pequena entre os grupos, mas estatisticamente significativa, com o grupo diabético já deslocado para valores mais baixos (piores) mesmo antes de qualquer sintoma.",
+    "indications": "Rastreio de disfunção sistólica subclínica (cardiomiopatia diabética) em paciente assintomático com diabetes tipo 2 e fração de ejeção preservada ao ecocardiograma convencional — cenário em que a FEVE isolada não discrimina quem já tem comprometimento miocárdico mensurável.",
+    "interpretation": "No mesmo estudo (205 pacientes com diabetes tipo 2 sem doença cardiovascular prévia vs. 40 controles pareados, fenotipagem cardiovascular abrangente com ecocardiograma, ressonância magnética cardíaca com perfusão sob adenosina e MAPA de 24h), o GLS reduzido no grupo diabético veio acompanhado de outros três achados no mesmo coorte, reforçando que a cardiomiopatia diabética é processo multifatorial e não isolado: remodelamento concêntrico do ventrículo esquerdo (razão massa/volume 0,91 ± 0,15 vs. 0,82 ± 0,11 g/mL, p < 0,001), reserva de perfusão miocárdica reduzida à RM com adenosina (2,82 ± 0,83 vs. 3,18 ± 0,82, p = 0,020) e disfunção diastólica (relação E/e' 9,30 ± 2,43 vs. 8,47 ± 1,53, p = 0,044). Em modelo de regressão multivariável ajustado para 14 variáveis clínicas, a pressão arterial sistólica média de 24h (MAPA) — não a pressão de consultório — associou-se de forma independente à disfunção diastólica (β = 0,273, p < 0,001) e à reserva de perfusão miocárdica reduzida (β = -0,218, p = 0,016), sugerindo que o controle pressórico ambulatorial, não só o de consultório, é alvo terapêutico relevante nesse processo.",
+    "limitations": "A diferença absoluta de GLS entre os grupos no estudo de referência é pequena (17,2% vs. 16,0%) frente à variabilidade intra e interobservador já descrita para a técnica (da ordem de 1 a 2 pontos percentuais), e o valor também varia conforme o fornecedor do ecógrafo e a versão do software de análise (vendor-dependence) — comparação seriada do mesmo paciente deve, idealmente, usar o mesmo aparelho/software. É achado de estudo transversal: mostra associação e coexistência com outros marcadores de dano cardíaco precoce, não estabelece se uma intervenção terapêutica guiada por GLS reduzido muda desfecho clínico duro (IC manifesta, mortalidade) nessa população.",
+    "source_refs": [
+      "Yeo JL, Gulsin GS, Brady EM, Dattani A, Bilak JM, Marsh AM, Sian M, Athithan L, Parke KS, Wormleighton J, Graham-Brown MPM, Singh A, Arnold JR, Lawson C, Davies MJ, Xue H, Kellman P, McCann GP. Association of ambulatory blood pressure with coronary microvascular and cardiac dysfunction in asymptomatic type 2 diabetes. Cardiovasc Diabetol. 2022;21(1):85. DOI 10.1186/s12933-022-01528-2. PMID 35643571."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "strain longitudinal global",
+      "gls",
+      "cardiomiopatia diabetica",
+      "diabetes",
+      "disfuncao subclinica",
+      "ecocardiograma",
+      "speckle tracking"
+    ]
+  },
+  {
+    "slug": "monitor-de-eventos-implantavel-looper-em-palpitacoes-inexplicadas",
+    "name": "Monitor de eventos implantável (looper) no diagnóstico de palpitações inexplicadas",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Dispositivo subcutâneo pequeno (looper/ILR — implantable loop recorder), implantado sob anestesia local em bolso pré-torácico, que registra continuamente um traçado eletrocardiográfico de derivação única por até vários anos de duração de bateria. A gravação é ativada tanto automaticamente, por algoritmo de detecção de arritmia (pausa, bradicardia, taquicardia), quanto manualmente pelo próprio paciente (ou cuidador) por um ativador externo no momento do sintoma, capturando o traçado de um intervalo retrospectivo ao redor do evento.",
+    "reference_range": "Não se aplica — é método diagnóstico de captura de ritmo, não um exame com valor de referência numérico. O resultado é qualitativo: presença ou ausência de arritmia coincidente com o sintoma relatado, ou detecção de arritmia assintomática pelo algoritmo automático.",
+    "indications": "Paciente com palpitações sustentadas (>1 minuto) recorrentes, porém infrequentes (≤1 episódio por mês), com avaliação inicial negativa — anamnese, exame físico e ECG de repouso sem diagnóstico —, em quem a estratégia convencional (Holter de curta duração, monitor externo por semanas, estudo eletrofisiológico) tem probabilidade menor de capturar o evento por causa do intervalo entre episódios.",
+    "interpretation": "No ensaio RUP (Recurrent Unexplained Palpitations, Giada F et al., J Am Coll Cardiol 2007;49(19):1951-1956, PMID 17498580; 50 pacientes com palpitações infrequentes e avaliação inicial negativa, randomizados para looper com 1 ano de monitorização vs. estratégia convencional — Holter de 24h, monitor ambulatorial externo por 4 semanas e estudo eletrofisiológico), o diagnóstico foi estabelecido em 19 de 26 pacientes do grupo looper (73%) contra 5 de 24 do grupo convencional (21%), p < 0,001. Apesar do custo inicial mais alto do dispositivo, o custo por diagnóstico foi menor no grupo looper (€3.056 ± 363 vs. €6.768 ± 6.672, p = 0,012), porque a estratégia convencional frequentemente encadeava vários exames sem chegar a um diagnóstico. Estudos observacionais posteriores confirmam rendimento diagnóstico global entre 54% e 74% em coortes com síncope e/ou palpitações inexplicadas, com o rendimento tendendo a ser menor especificamente no subgrupo de palpitações isoladas do que no de síncope/pré-síncope.",
+    "limitations": "É procedimento invasivo, ainda que de pequeno porte (implantação em consultório/ambulatório, anestesia local); depende de interrogação periódica (presencial ou monitorização remota) para a extração e análise dos dados armazenados — um evento gravado e nunca revisto não gera diagnóstico. Algoritmos de detecção automática geram falsos positivos por ruído/artefato de movimento e oversensing do sinal, exigindo adjudicação manual de cada episódio sinalizado. A duração da bateria é finita (tipicamente 2 a 4 anos conforme o modelo), e o dispositivo não captura nada do período anterior à implantação.",
+    "source_refs": [
+      "Giada F, Gulizia M, Francese M, Croci F, Santangelo L, Santomauro M, Occhetta E, Menozzi C, Raviele A. Recurrent unexplained palpitations (RUP) study comparison of implantable loop recorder versus conventional diagnostic strategy. J Am Coll Cardiol. 2007;49(19):1951-1956. DOI 10.1016/j.jacc.2007.02.036. PMID 17498580."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "monitor de eventos implantavel",
+      "looper",
+      "ilr",
+      "palpitacoes",
+      "arritmia",
+      "diagnostico de arritmia"
+    ]
+  },
+  {
+    "slug": "monitor-adesivo-de-longa-duracao-patch-versus-holter-convencional",
+    "name": "Monitor adesivo de longa duração (patch) versus Holter convencional no diagnóstico de arritmias",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Monitor eletrocardiográfico ambulatorial de derivação única, sem fios, adesivo diretamente à pele do tórax, com gravação contínua por período mais longo que o Holter convencional — tipicamente até 14 dias de uso ininterrupto num único dispositivo, sem necessidade de troca de eletrodos ou bateria pelo paciente.",
+    "reference_range": "Não se aplica — método de captura de ritmo, não exame com valor de referência numérico; o resultado é a presença ou ausência de arritmia durante o período de uso, com a duração de monitorização (dias de uso efetivo) sendo em si um dado relevante do laudo.",
+    "indications": "Investigação de arritmia paroxística intermitente quando o Holter convencional de 24-48h é negativo ou inconclusivo por baixa frequência dos episódios; suspeita de fibrilação atrial paroxística, palpitações recorrentes ou síncope em que se deseja estender a janela de monitorização sem recorrer a um dispositivo implantável.",
+    "interpretation": "No estudo original do dispositivo mais estudado dessa categoria (Zio Patch; Barrett PM et al., Am J Med 2014;127(1):95.e11-95.e17, PMID 24384108), 146 pacientes referidos para avaliação de arritmia usaram simultaneamente um Holter de 24h e o monitor adesivo por até 14 dias. Considerando o tempo total de uso de cada dispositivo, o monitor adesivo detectou 96 eventos arrítmicos contra 61 do Holter (p < 0,001) — vantagem que vem inteiramente da duração maior de monitorização, não de superioridade técnica por evento: no comentário sobre o mesmo ensaio (Cheung CC et al., Future Cardiol 2014;10(3):319-322, PMID 24976467), observa-se que, restrito às primeiras 24 horas de uso simultâneo dos dois dispositivos, o Holter efetivamente detectou MAIS eventos que o adesivo no mesmo intervalo (61 vs. 52, p = 0,013) — ou seja, o ganho do monitor adesivo é conferido pela duração estendida, não por sensibilidade superior por hora de gravação.",
+    "limitations": "Derivação única reduz o detalhe morfológico do traçado comparado a um Holter multiderivação — dificulta caracterizar completamente uma taquicardia de complexo largo ou alterações isquêmicas do segmento ST, que exigem mais de uma derivação para localização topográfica. O algoritmo de análise automática do software precisa de validação por técnico/médico antes do laudo final. Uso prolongado do adesivo (até 14 dias) pode causar irritação cutânea local, e o dispositivo não permite ao paciente visualizar o traçado em tempo real (ao contrário de alguns monitores de evento com transmissão).",
+    "source_refs": [
+      "Barrett PM, Komatireddy R, Haaser S, Topol S, Sheard J, Encinas J, Fought AJ, Topol EJ. Comparison of 24-hour Holter monitoring with 14-day novel adhesive patch electrocardiographic monitoring. Am J Med. 2014;127(1):95.e11-95.e17. DOI 10.1016/j.amjmed.2013.10.003. PMID 24384108.",
+      "Cheung CC, Kerr CR, Krahn AD. Comparing 14-day adhesive patch with 24-h Holter monitoring. Future Cardiol. 2014;10(3):319-322. DOI 10.2217/fca.14.24. PMID 24976467."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "monitor adesivo",
+      "patch",
+      "holter",
+      "arritmia",
+      "fibrilacao atrial paroxistica",
+      "monitorizacao ambulatorial"
+    ]
+  },
+  {
+    "slug": "capnografia-etco2-na-parada-cardiorrespiratoria",
+    "name": "Capnografia (ETCO2) na parada cardiorrespiratória",
+    "category": "metodo_grafico",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Medida contínua e não invasiva da pressão parcial de CO2 no ar exalado ao final da expiração (end-tidal CO2, ETCO2), obtida por um sensor acoplado ao circuito de via aérea (tubo traqueal ou máscara/cânula). Durante a parada cardiorrespiratória sem circulação espontânea, o ETCO2 reflete indiretamente o débito cardíaco gerado pelas compressões torácicas, porque o CO2 só chega aos pulmões para ser exalado se houver fluxo sanguíneo pulmonar suficiente carregando-o dos tecidos.",
+    "reference_range": "Fora da parada cardíaca, o ETCO2 normal em paciente ventilado é de aproximadamente 35-45 mmHg. Durante a ressuscitação cardiopulmonar (RCP) em parada prolongada, valores persistentemente abaixo de 10 mmHg associam-se de forma consistente a desfecho desfavorável; uma elevação abrupta do ETCO2 durante as compressões sugere que ocorreu retorno da circulação espontânea (RCE/ROSC).",
+    "indications": "Confirmação do posicionamento correto do tubo traqueal após intubação (é o critério mais específico disponível para essa finalidade durante a RCP); monitorização contínua da qualidade das compressões torácicas; detecção precoce do retorno da circulação espontânea sem interromper as compressões para checar o ritmo/pulso.",
+    "interpretation": "Segundo revisão de Sandroni C et al. (Resuscitation. 2018;132:73-77, PMID 30142399), em estudos clínicos observacionais o ETCO2 médio é sistematicamente maior nos pacientes que atingem RCE do que nos que não atingem. Em parada cardíaca extra-hospitalar prolongada, valores de ETCO2 persistentemente abaixo de 10 mmHg associam-se de forma consistente a desfecho desfavorável, e níveis acima desse limiar já foram propostos como critério para considerar o paciente candidato a ressuscitação extracorpórea de resgate (ECPR). Uma elevação abrupta do ETCO2 durante a RCP é sinal sugestivo de que ocorreu retorno da circulação espontânea, antes mesmo de uma pausa para checar o ritmo. A detecção de CO2 no ar exalado após a intubação é, segundo a mesma revisão, o critério mais específico disponível para confirmar o posicionamento traqueal (e não esofágico) do tubo durante a RCP.",
+    "limitations": "As diretrizes atuais de suporte avançado de vida recomendam explicitamente CONTRA usar o valor de ETCO2 isoladamente para tomar decisões durante o manejo da parada cardíaca (por exemplo, decidir interromper a ressuscitação só por um valor baixo) — é dado complementar ao quadro clínico, não substituto dele. A etiologia da parada, variações no padrão de ventilação durante a RCP e o uso de fármacos como adrenalina ou bicarbonato de sódio em bolus podem alterar significativamente o ETCO2 de forma independente da qualidade da compressão ou da perfusão gerada, confundindo a interpretação isolada de um valor pontual.",
+    "source_refs": [
+      "Sandroni C, De Santis P, D'Arrigo S. Capnography during cardiac arrest. Resuscitation. 2018;132:73-77. DOI 10.1016/j.resuscitation.2018.08.018. PMID 30142399.",
+      "Documento relacionado nesta biblioteca: galeria/diagrama/capnograma-normal-fases-do-ciclo-respiratorio.png (capnograma normal, referência de fases do ciclo respiratório)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "capnografia",
+      "etco2",
+      "parada cardiorrespiratoria",
+      "rcp",
+      "reanimacao cardiopulmonar",
+      "retorno da circulacao espontanea"
+    ]
+  },
+  {
+    "slug": "termodiluicao-transpulmonar-e-analise-de-contorno-de-pulso-picco",
+    "name": "Termodiluição transpulmonar e análise de contorno de pulso (PiCCO)",
+    "category": "metodo_grafico",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Sistema de monitorização hemodinâmica minimamente invasivo que combina um cateter venoso central (para injeção de solução salina fria, o indicador térmico) com um cateter arterial term-sensor, tipicamente femoral, que detecta a curva de diluição térmica ao longo do trajeto transpulmonar. A partir dessa curva calcula-se o débito cardíaco por termodiluição transpulmonar intermitente (calibração), o volume diastólico final global e a água extravascular pulmonar (índices de pré-carga volumétrica e de edema pulmonar, respectivamente). Entre as calibrações, o mesmo cateter arterial permite estimar o débito cardíaco de forma contínua, batimento a batimento, por análise do contorno da onda de pressão arterial.",
+    "reference_range": "Débito cardíaco normal em adulto: aproximadamente 4-8 L/min (índice cardíaco 2,5-4,0 L/min/m²). Os valores de referência de volume diastólico final global e água extravascular pulmonar variam por fabricante/algoritmo e não são objeto desta ficha — o uso clínico do método é predominantemente de tendência (resposta a intervenção) mais do que de valor absoluto isolado.",
+    "indications": "Choque de etiologia indefinida ou refratário ao tratamento inicial em terapia intensiva, quando se deseja monitorização hemodinâmica quantitativa contínua sem inserir um cateter de artéria pulmonar (Swan-Ganz); também indicado quando a estimativa de pré-carga volumétrica (mais robusta que a pressão venosa central isolada) ou de água extravascular pulmonar (quantificação objetiva de edema pulmonar) mudaria a conduta de reposição volêmica.",
+    "interpretation": "Em estudo de validação multicêntrico e prospectivo em pacientes críticos (Bendjelid K et al., Br J Anaesth. 2013;111(4):573-579, PMID 23625132; 72 pacientes, 338 conjuntos pareados de medidas), o viés do débito cardíaco por contorno de pulso calibrado por termodiluição transpulmonar (método PiCCO2) frente à termodiluição transpulmonar de referência foi de +0,03 L/min, com limites de concordância de 2,48 L/min e erro percentual de 37% — desempenho equivalente ao de outro método de contorno de pulso mais recente testado no mesmo estudo (VolumeView/EV1000, viés -0,07 L/min, erro percentual 29%), com capacidade de acompanhar tendências (trending) comparável entre os dois. Revisão de Proulx F et al. (Pediatr Crit Care Med. 2011;12(4):459-466, PMID 21263372) descreve que a própria termodiluição transpulmonar intermitente (a calibração de referência, não o contorno de pulso contínuo) tem reprodutibilidade da ordem de 5% de viés/precisão e erro percentual de cerca de 15% — ou seja, mais precisa isoladamente do que o método contínuo de contorno de pulso, que depende dela para recalibrar periodicamente.",
+    "limitations": "Exige cateterização arterial (femoral ou axilar), com risco de sangramento, hematoma e isquemia distal do membro cateterizado. O débito cardíaco contínuo por análise de contorno de pulso sofre desvio (drift) ao longo do tempo e precisa de recalibração periódica por termodiluição transpulmonar fresca, sobretudo após mudança relevante do estado hemodinâmico (troca de vasopressor, expansão volêmica, alteração da complacência arterial) — usar o valor contínuo por tempo prolongado sem recalibrar reduz sua confiabilidade. Os erros percentuais de validação (29% a 37%, e mais altos ainda para outros dispositivos totalmente não invasivos como o Nexfin, que Monnet X et al., Crit Care 2012;16(5):R212, PMID 23107227, descreveram com erro percentual de 57%) aproximam-se ou superam o limiar de 30% classicamente usado para considerar dois métodos de medida de débito cardíaco intercambiáveis — a leitura mais robusta do método é a tendência ao longo do tempo em resposta a uma intervenção, não o valor absoluto isolado de uma única medida. Validação em crianças é mais limitada que em adultos, segundo a mesma revisão pediátrica.",
+    "source_refs": [
+      "Bendjelid K, Marx G, Kiefer N, Simon TP, Geisen M, Hoeft A, Siegenthaler N, Hofer CK. Performance of a new pulse contour method for continuous cardiac output monitoring: validation in critically ill patients. Br J Anaesth. 2013;111(4):573-579. DOI 10.1093/bja/aet116. PMID 23625132.",
+      "Proulx F, Lemson J, Choker G, Tibby SM. Hemodynamic monitoring by transpulmonary thermodilution and pulse contour analysis in critically ill children. Pediatr Crit Care Med. 2011;12(4):459-466. PMID 21263372.",
+      "Monnet X, Picard F, Lidzborski E, Mesnil M, Duranteau J, Richard C, Teboul JL. The estimation of cardiac output by the Nexfin device is of poor reliability for tracking the effects of a fluid challenge. Crit Care. 2012;16(5):R212. PMID 23107227."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "picco",
+      "termodiluicao transpulmonar",
+      "debito cardiaco",
+      "monitorizacao hemodinamica",
+      "choque",
+      "analise de contorno de pulso"
+    ]
   }
 ]
