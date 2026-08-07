@@ -11622,5 +11622,174 @@
       "Benza RL, Gomberg-Maitland M, Elliott CG, et al. Predicting Survival in Patients With Pulmonary Arterial Hypertension: The REVEAL Risk Score Calculator 2.0 and Comparison With ESC/ERS-Based Risk Assessment Strategies. Chest. 2019;156(2):323-337. DOI: 10.1016/j.chest.2019.02.004. PMID: 30772387"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-durante-infusao-de-5-fluorouracil-vasoespasmo-coronariano",
+    "titulo": "Dor torácica e supra de ST transitório durante infusão de 5-fluorouracil: é infarto ou é vasoespasmo?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente em quimioterapia para câncer colorretal, sem doença coronariana conhecida, desenvolve dor torácica típica cerca de 24 horas após início de infusão contínua de 5-fluorouracil, com supradesnível transitório de ST no ECG que se resolve espontaneamente em poucos minutos, junto com o alívio da dor. Troponina discretamente elevada.",
+    "pergunta": "Qual é o mecanismo mais provável, e como isso muda a conduta em relação a um IAM aterotrombótico clássico?",
+    "opcoes": [
+      "É certamente síndrome coronariana aguda aterotrombótica clássica, e o paciente deve ser levado à sala de hemodinâmica para angioplastia primária com a mesma urgência de qualquer supra de ST",
+      "É vasoespasmo coronariano associado a 5-fluorouracil — mecanismo reconhecido e relativamente frequente dessa classe de quimioterápico, tipicamente com dor e supra transitórios que revertem com nitrato/bloqueador de canal de cálcio; a conduta prioriza suspender a infusão, tratar o vasoespasmo e reavaliar a real necessidade de reexposição, em vez de tratar automaticamente como oclusão trombótica",
+      "É certamente pericardite aguda induzida por quimioterapia, e o paciente deve receber colchicina e anti-inflamatório não esteroidal sem investigação coronariana adicional",
+      "O supra de ST transitório e autolimitado durante infusão de 5-FU não tem significado clínico e a infusão pode continuar sem qualquer ajuste"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A cardiotoxicidade do 5-fluorouracil (e da capecitabina, seu pró-fármaco oral) tem como mecanismo predominante o vasoespasmo coronariano, não a aterotrombose — descrito já nos primeiros estudos prospectivos com infusão contínua em altas doses e caracterizado de forma mais sistemática em coorte contemporânea (JACC CardioOncology, 2021), que documentou incidência, fatores de risco (doença coronariana prévia, infusão contínua versus bolus) e desfecho dessa complicação. O quadro típico — dor torácica com supra de ST transitório e autolimitado, muitas vezes recorrente a cada nova infusão, revertendo com nitrato — é distinto do padrão de oclusão trombótica persistente que define a urgência de reperfusão mecânica imediata. Isso não significa investigar menos: a troponina elevada e o ECG documentado precisam ser registrados, e uma coronariografia pode ser considerada para excluir lesão obstrutiva subjacente que precipitaria o espasmo sobre placa. Mas a conduta imediata prioriza suspender a infusão do fluoropirimidínico, tratar o vasoespasmo com nitrato e/ou bloqueador de canal de cálcio, e decidir com a oncologia se há alternativa terapêutica — reexpor sem esse cuidado carrega risco real de recorrência, inclusive de infarto verdadeiro em reexposições sucessivas.",
+    "source_refs": [
+      "Zafar A, Drobni ZD, Mosarla R, et al. The Incidence, Risk Factors, and Outcomes With 5-Fluorouracil-Associated Coronary Vasospasm. JACC CardioOncol. 2021;3(1):101-109. DOI: 10.1016/j.jaccao.2020.12.005. PMID: 33817666",
+      "Sara JD, Kaur J, Khodadadi R, et al. 5-fluorouracil and cardiotoxicity: a review. Ther Adv Med Oncol. 2018;10:1758835918780140. DOI: 10.1177/1758835918780140. PMID: 29977352"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fraqueza-muscular-e-dispneia-em-imunoterapia-triade-miocardite-miosite-miastenia",
+    "titulo": "Ptose, diplopia e dispneia começando juntas após inibidor de checkpoint: pensar em três órgãos ao mesmo tempo",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Paciente em uso de pembrolizumabe para melanoma metastático, no segundo ciclo, desenvolve ptose palpebral, diplopia, fraqueza proximal de membros e dispneia progressiva ao longo de poucos dias. CK está elevada, troponina também está elevada, e o ECG mostra alteração de condução inespecífica.",
+    "pergunta": "Qual é a interpretação correta desse conjunto de achados, e por que reconhecê-lo rapidamente muda o prognóstico?",
+    "opcoes": [
+      "São três eventos adversos independentes e não relacionados entre si — miastenia gravis de novo, miopatia por outra causa e uma coincidência cardíaca — que devem ser investigados e tratados separadamente, sem urgência compartilhada",
+      "É a tríade miocardite-miosite-miastenia relacionada a inibidor de checkpoint imunológico, uma síndrome rara mas com mortalidade desproporcionalmente alta quando as três se sobrepõem — a fraqueza da musculatura ocular e esquelética pode mascarar (ou coexistir com) miocardite fulminante, e o reconhecimento precoce muda a urgência de iniciar imunossupressão e monitorização cardíaca contínua",
+      "É apenas miastenia gravis paraneoplásica, sem relação com a imunoterapia, e a troponina elevada é achado incidental sem significado",
+      "A dispneia é explicada só pela fraqueza dos músculos respiratórios da miastenia, e não há necessidade de investigação cardíaca dirigida enquanto a força muscular não for corrigida"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A superposição de miocardite, miosite e miastenia gravis induzidas por inibidor de checkpoint imunológico é uma síndrome reconhecida e descrita em coortes dedicadas — não é coincidência de três eventos adversos separados, e sim manifestação de um mesmo processo autoimune sistêmico desencadeado pelo bloqueio de checkpoint, que ataca simultaneamente miocárdio, músculo esquelético (incluindo a musculatura ocular e respiratória) e a junção neuromuscular. O ponto de maior risco prático: a fraqueza respiratória de origem miastênica e/ou miopática pode ser confundida com — ou mascarar — insuficiência respiratória de origem cardíaca por miocardite fulminante, atrasando o reconhecimento da causa mais letal das três. A mortalidade descrita nessa superposição é desproporcionalmente maior do que a de miocardite por checkpoint isolada, e a conduta indicada quando a tríade (ou parte dela) é reconhecida inclui suspender o inibidor de checkpoint, iniciar corticoide em dose alta precocemente, monitorização cardíaca contínua (telemetria, troponina seriada) mesmo que o quadro predominante pareça neuromuscular, e avaliação para suporte ventilatório antecipado — não reativo — dado o risco de insuficiência respiratória mista.",
+    "source_refs": [
+      "Touat M, Maisonobe T, Knauss S, et al. Immune checkpoint inhibitor-related myositis and myocarditis in patients with cancer. Neurology. 2018;91(10):e985-e994. DOI: 10.1212/WNL.0000000000006124. PMID: 30089619",
+      "Mahmood SS, Fradley MG, Cohen JV, et al. Myocarditis in Patients Treated With Immune Checkpoint Inhibitors. J Am Coll Cardiol. 2018;71(16):1755-1764. DOI: 10.1016/j.jacc.2018.02.037. PMID: 29567210",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. PMID: 36017568"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-pos-parto-dissecao-coronariana-espontanea-associada-a-gravidez",
+    "titulo": "Dor torácica intensa na primeira semana de puerpério em mulher sem fator de risco coronariano: SCAD associada à gravidez",
+    "tema": "Gravidez",
+    "nivel": "avançado",
+    "enunciado": "Puérpera de 33 anos, sem hipertensão, diabetes ou tabagismo, sem doença coronariana conhecida, apresenta dor torácica intensa e súbita no sexto dia pós-parto, com supradesnível de ST em parede anterior. Coronariografia mostra dissecção coronariana longa e irregular, sem placa aterosclerótica evidente, em artéria descendente anterior.",
+    "pergunta": "Qual é o diagnóstico mais provável e qual princípio orienta a conduta imediata, diferente do IAM aterotrombótico típico?",
+    "opcoes": [
+      "É dissecção coronariana espontânea associada à gravidez (P-SCAD) — o puerpério, sobretudo a primeira semana a um mês pós-parto, é a janela de maior risco entre as gestantes/puérperas que desenvolvem SCAD; a conduta prioriza, sempre que hemodinamicamente estável, tratamento conservador (o vaso dissecado frequentemente cicatriza espontaneamente), reservando intervenção percutânea para instabilidade, porque a manipulação mecânica pode propagar a dissecção",
+      "É infarto aterotrombótico atípico por hipercoagulabilidade da gestação, e a conduta deve ser idêntica à de qualquer SCA com supra: angioplastia primária imediata com stent, sem particularidade",
+      "É espasmo coronariano de causa hormonal sem lesão estrutural, que não precisa de coronariografia nem de qualquer intervenção",
+      "É miocardite periparto, e a coronariografia com achado de dissecção deve ser interpretada como artefato técnico do exame"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A SCAD (dissecção coronariana espontânea) associada à gravidez é uma causa reconhecida e desproporcionalmente grave de síndrome coronariana aguda em mulheres jovens sem os fatores de risco tradicionais de aterosclerose, com concentração de casos no período pós-parto — sobretudo na primeira semana a poucas semanas após o parto — mais do que durante a própria gestação. O mecanismo proposto envolve alterações hormonais e estruturais da parede arterial que tornam o vaso mais suscetível à dissecção espontânea da íntima ou hemorragia da média, sem placa aterosclerótica subjacente na maioria dos casos. A diferença crucial de conduta em relação ao IAM aterotrombótico clássico: como o vaso dissecado frequentemente cicatriza espontaneamente ao longo de semanas, e como a manipulação com fio-guia e stent pode propagar a dissecção e piorar a obstrução (ao contrário de uma placa aterosclerótica, que o stent estabiliza), a conduta preferida em paciente hemodinamicamente estável é o tratamento médico conservador, com revascularização percutânea ou cirúrgica reservada para instabilidade hemodinâmica, isquemia refratária ou comprometimento de território extenso. Coortes dedicadas de SCAD associada à gravidez também documentam risco de recorrência em gestação subsequente, informação relevante para o aconselhamento reprodutivo futuro dessa paciente.",
+    "source_refs": [
+      "Tweet MS, Hayes SN, Codsi E, Gulati R, Rose CH, Best PJM. Spontaneous Coronary Artery Dissection Associated With Pregnancy. J Am Coll Cardiol. 2017;70(4):426-435. DOI: 10.1016/j.jacc.2017.05.055. PMID: 28728686",
+      "Chen S, Merchant M, Mahrer KN, Ambrosy AP, Lundstrom RJ, Naderi S. Pregnancy-Associated Spontaneous Coronary Artery Dissection: Clinical Characteristics, Outcomes, and Risk During Subsequent Pregnancy. J Invasive Cardiol. 2021;33(6):E457-E466. DOI: 10.25270/jic/20.00529. PMID: 34001675"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "parada-cardiaca-em-gestante-a-termo-decisao-de-cesarea-perimortem",
+    "titulo": "Parada cardiorrespiratória em gestante de 36 semanas: quando indicar a cesárea perimortem, e por quê o relógio importa",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Gestante de 36 semanas entra em parada cardiorrespiratória em ritmo não chocável na sala de emergência. A reanimação cardiopulmonar de alta qualidade é iniciada imediatamente, com deslocamento uterino manual para a esquerda, mas não há retorno de circulação espontânea nos primeiros minutos.",
+    "pergunta": "Segundo a evidência sobre cesárea perimortem (revisão de Katz), qual é o princípio que deve orientar a decisão de tempo para o procedimento?",
+    "opcoes": [
+      "A cesárea perimortem só deve ser considerada depois de pelo menos 20 minutos de RCP sem resposta, para não interromper prematuramente as manobras de reanimação materna",
+      "A decisão de proceder à cesárea perimortem deve ser tomada precocemente — a revisão clássica de Katz reforça o princípio da 'regra dos 4 minutos': se não houver retorno de circulação espontânea em cerca de 4 minutos de RCP, iniciar a cesárea no local onde a paciente está, sem transferir para centro cirúrgico, porque o esvaziamento uterino alivia a compressão aortocaval e pode ser decisivo tanto para o retorno da circulação materna quanto para o desfecho fetal",
+      "A cesárea perimortem é contraindicada em ritmo não chocável, sendo reservada exclusivamente para fibrilação ventricular refratária",
+      "A decisão de tempo não tem base em evidência e deve ser deixada inteiramente ao critério subjetivo da equipe presente, sem diretriz de referência"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A gestação a termo comprime a veia cava inferior e a aorta quando a paciente está em decúbito dorsal, reduzindo o retorno venoso e o débito cardíaco durante a RCP mesmo com deslocamento uterino manual — o que torna a reanimação estruturalmente menos eficaz do que na paciente não grávida. A revisão de Katz e colaboradores (2005), que reexaminou casos históricos de cesárea perimortem, sustenta a chamada 'regra dos 4 minutos': se não houver retorno de circulação espontânea em torno de 4 minutos de RCP de alta qualidade, a cesárea deve ser iniciada de imediato, no próprio local do atendimento — não após transferência para centro cirúrgico, que consome tempo crítico —, com o objetivo de esvaziar o útero e aliviar a compressão aortocaval o mais rápido possível. O racional não é apenas salvar o feto: o esvaziamento uterino é, em si, parte da reanimação materna, e há relatos de retorno de circulação espontânea materna logo após o procedimento, atribuído à melhora abrupta do retorno venoso. Essa é a razão pela qual o procedimento não deve ser adiado à espera de mais tempo de RCP nem condicionado ao ritmo inicial (chocável ou não) — a decisão de tempo é sobre fisiologia mecânica de compressão de grandes vasos, não sobre o mecanismo elétrico da parada.",
+    "source_refs": [
+      "Katz V, Balderston K, DeFreest M. Perimortem cesarean delivery: were our assumptions correct? Am J Obstet Gynecol. 2005;192(6):1916-1920. DOI: 10.1016/j.ajog.2005.02.038. PMID: 15970850"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-resistente-com-hipocalemia-e-renina-suprimida-consumo-de-alcacuz",
+    "titulo": "Hipertensão de difícil controle com hipocalemia e renina/aldosterona baixas: antes de investigar hiperaldosteronismo primário, pergunte sobre o que ele come",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com hipertensão resistente a três anti-hipertensivos, incluindo diurético, apresenta hipocalemia persistente. A investigação inicial mostra renina plasmática suprimida e aldosterona também baixa (não elevada) — um perfil que, à primeira vista, não bate com hiperaldosteronismo primário clássico (que cursaria com aldosterona alta e renina suprimida). Ao ser questionado ativamente, o paciente relata consumo diário de balas de alcaçuz/regaliz preto havia vários meses.",
+    "pergunta": "Qual é o mecanismo mais provável para explicar hipertensão, hipocalemia e renina E aldosterona baixas simultaneamente, e qual a conduta?",
+    "opcoes": [
+      "É hiperaldosteronismo primário atípico, e o paciente deve ser submetido a cateterismo de veias adrenais para localizar um adenoma, independente do relato de consumo de alcaçuz",
+      "É pseudo-hiperaldosteronismo por ácido glicirrízico do alcaçuz/regaliz — o composto inibe a enzima 11β-hidroxiesteroide desidrogenase tipo 2, permitindo que o cortisol (normalmente inativado nessa via) ative o receptor mineralocorticoide diretamente, causando retenção de sódio, hipocalemia e hipertensão com renina e aldosterona SUPRIMIDAS (porque o eixo renina-angiotensina-aldosterona está inibido pela expansão de volume, mas o efeito mineralocorticoide não passa pela aldosterona); a conduta é suspender o consumo e reavaliar, o que costuma reverter o quadro em semanas",
+      "É síndrome de Liddle, uma canalopatia genética rara, e o relato do alcaçuz é irrelevante para o mecanismo",
+      "A combinação de renina e aldosterona baixas é laboratorialmente incompatível com qualquer diagnóstico e deve ser atribuída a erro de coleta, repetindo o exame sem investigar outra causa"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O padrão bioquímico que diferencia o pseudo-hiperaldosteronismo por alcaçuz do hiperaldosteronismo primário verdadeiro é justamente esse: no hiperaldosteronismo primário, a aldosterona está ELEVADA com renina suprimida; no consumo excessivo de alcaçuz/regaliz, tanto a aldosterona quanto a renina estão SUPRIMIDAS, porque o efeito mineralocorticoide não é mediado pela aldosterona — é mediado pelo cortisol, que normalmente é inativado a cortisona no rim pela enzima 11β-hidroxiesteroide desidrogenase tipo 2 antes de chegar ao receptor mineralocorticoide. O ácido glicirrízico (e seu metabólito, o ácido glicirretínico) presente no alcaçuz inibe essa enzima, permitindo que o cortisol — presente em concentração muito maior que a aldosterona no plasma — ative diretamente o receptor mineralocorticoide, causando retenção de sódio e água, hipertensão e perda urinária de potássio (hipocalemia, às vezes grave, com relatos de casos com risco de vida na literatura). Como a retenção de volume resultante suprime o eixo renina-angiotensina-aldosterona por retroalimentação normal, tanto a renina quanto a aldosterona aparecem baixas — o oposto do perfil esperado em hiperaldosteronismo primário. Reconhecer esse padrão evita investigação invasiva desnecessária (cateterismo de veias adrenais, tomografia de adrenal): a conduta é simplesmente identificar e suspender a fonte de glicirrizina — série de casos mostram reversão completa em semanas após a suspensão, embora casos graves possam exigir reposição de potássio e, transitoriamente, espironolactona (que bloqueia o receptor mineralocorticoide independentemente do que o esteja ativando).",
+    "source_refs": [
+      "Sabbadin C, Bordin L, Donà G, Manso J, Avruscio G, Armanini D. Licorice: From Pseudohyperaldosteronism to Therapeutic Uses. Front Endocrinol (Lausanne). 2019;10:484. DOI: 10.3389/fendo.2019.00484. PMID: 31379750",
+      "McHugh J, Marzella J, Kane A, Islam N. A life-threatening case of pseudo-aldosteronism secondary to excessive liquorice ingestion. BMC Endocr Disord. 2021;21(1):158. DOI: 10.1186/s12902-021-00816-4. PMID: 34362360"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "feocromocitoma-preparo-cirurgico-com-bloqueio-alfa-o-ensaio-prescript",
+    "titulo": "Feocromocitoma confirmado, cirurgia agendada: o bloqueio alfa pré-operatório de rotina realmente reduz instabilidade hemodinâmica?",
+    "tema": "Hipertensão",
+    "nivel": "avançado",
+    "enunciado": "Paciente com feocromocitoma confirmado por exame bioquímico e de imagem está sendo preparado para adrenalectomia eletiva. A prática consagrada há décadas é o bloqueio alfa-adrenérgico pré-operatório (fenoxibenzamina ou doxazosina) por um período de dias a semanas antes da cirurgia, com o objetivo de prevenir crise hipertensiva intraoperatória durante a manipulação do tumor.",
+    "pergunta": "O que o ensaio randomizado PRESCRIPT (J Clin Endocrinol Metab, 2020) mostrou sobre a eficácia real do bloqueio alfa pré-operatório nesse cenário?",
+    "opcoes": [
+      "O PRESCRIPT confirmou de forma definitiva que o bloqueio alfa reduz drasticamente a instabilidade hemodinâmica intraoperatória e deve ser mantido como padrão inquestionável em todo paciente, sem exceção",
+      "O PRESCRIPT foi o primeiro ensaio randomizado controlado a testar essa prática consagrada e não validada por ensaio prévio; ele forneceu evidência de qualidade superior sobre o efeito real do bloqueio alfa no controle hemodinâmico durante a ressecção — resultado que reforça a importância de submeter até práticas antigas e amplamente aceitas ao teste de um desenho experimental robusto, em vez de presumir eficácia só pela tradição de uso",
+      "O ensaio mostrou que o bloqueio alfa aumenta a mortalidade cirúrgica e deve ser abandonado por completo",
+      "O PRESCRIPT não incluiu nenhum desfecho hemodinâmico intraoperatório, avaliando apenas qualidade de vida pós-operatória"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O bloqueio alfa-adrenérgico pré-operatório no feocromocitoma é uma prática recomendada há décadas por sociedades como a Endocrine Society (diretriz de 2014), mas — como o próprio documento de referência registra — historicamente sustentada mais por consenso de especialistas e experiência acumulada do que por ensaio clínico randomizado de alta qualidade. O PRESCRIPT (ClinicalTrials.gov NCT01379898), com 134 pacientes randomizados, foi desenhado especificamente para testar essa lacuna: comparar de forma controlada o efeito do bloqueio alfa pré-operatório sobre o controle hemodinâmico durante a ressecção cirúrgica do tumor. O valor desse ensaio para a prática clínica não está em confirmar cegamente o que já se fazia, nem em refutar a prática de forma alarmista — está em oferecer, pela primeira vez, um desenho experimental robusto para quantificar o benefício real dessa intervenção amplamente estabelecida, permitindo decisões mais informadas sobre em quem, e por quanto tempo, o bloqueio alfa realmente compensa o inconveniente (hipotensão ortostática, tempo de preparo mais longo) que ele impõe antes da cirurgia. A diretriz da Endocrine Society de 2014 continua sendo a referência de recomendação de bloqueio pré-operatório universal associado a dieta hipersódica para expansão de volume — o papel do PRESCRIPT é fortalecer essa recomendação com evidência de maior qualidade metodológica, não substituí-la por conclusão oposta.",
+    "source_refs": [
+      "Buitenwerf E, Osinga TE, Timmers HJLM, et al. Efficacy of α-Blockers on Hemodynamic Control during Pheochromocytoma Resection: A Randomized Controlled Trial (PRESCRIPT). J Clin Endocrinol Metab. 2020;105(7):2381-2391. DOI: 10.1210/clinem/dgz188. PMID: 31714582",
+      "Lenders JW, Duh QY, Eisenhofer G, et al; Endocrine Society. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. DOI: 10.1210/jc.2014-1498. PMID: 24893135"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bloqueio-atrioventricular-total-em-jovem-com-artralgia-migratoria-cardite-de-lyme",
+    "titulo": "Bloqueio atrioventricular total em paciente jovem com artralgia migratória recente: implantar marca-passo definitivo já, ou esperar?",
+    "tema": "Arritmias",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 28 anos, previamente hígido, é internado com síncope e bloqueio atrioventricular total ao ECG. Relata episódio de eritema cutâneo migratório e artralgia há cerca de três semanas, após atividade em área de mata. Não há doença estrutural cardíaca ao ecocardiograma. A equipe discute implante imediato de marca-passo definitivo.",
+    "pergunta": "Qual é a suspeita diagnóstica que deve ser ativamente investigada antes de decidir por marca-passo definitivo, e por que isso muda a conduta?",
+    "opcoes": [
+      "Nenhuma investigação adicional é necessária — todo bloqueio atrioventricular total sintomático em adulto tem indicação inequívoca de marca-passo definitivo imediato, independentemente da causa",
+      "Cardite de Lyme deve ser ativamente suspeitada pela história epidemiológica (exposição em área de mata) e pelo eritema migratório/artralgia prévios — é causa reconhecida e classicamente REVERSÍVEL de bloqueio atrioventricular de alto grau; a conduta nesse cenário prioriza suporte temporário (marca-passo transvenoso temporário, se necessário) e antibioticoterapia dirigida, com o bloqueio frequentemente resolvendo em dias a poucas semanas — evitando o implante definitivo desnecessário num paciente jovem",
+      "A suspeita deve ser de miocardite viral, que também é reversível, mas o tratamento nesse caso é sempre corticoide em altas doses, nunca antibiótico",
+      "A história de artralgia é irrelevante para bloqueio cardíaco e não deve redirecionar a investigação, que deve seguir o protocolo padrão de bloqueio atrioventricular idiopático"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A cardite de Lyme é causa bem documentada e importante de bloqueio atrioventricular de alto grau ou total, sobretudo em adultos jovens sem doença cardíaca estrutural, e sua principal característica prática é ser potencialmente REVERSÍVEL — ao contrário da maioria das causas degenerativas de bloqueio total no idoso, que exigem marca-passo definitivo permanente. A revisão de referência (JACC, 2019) e séries clássicas anteriores (incluindo uma série de quatro casos adultos já na década de 1980) descrevem que o bloqueio da cardite de Lyme costuma resolver em dias a poucas semanas com antibioticoterapia apropriada, e um escore de suspeição (mnemônico com sigla em inglês, validado em revisão sistemática de 88 casos) ajuda a estimar a probabilidade pré-teste a partir de idade jovem, sexo masculino, estação do ano, sintomas prodrômicos (artralgia, eritema migratório) e grau de bloqueio. A conduta prática nesse cenário, quando a suspeita epidemiológica é consistente (exposição em área endêmica, pródromo compatível): suporte hemodinâmico com marca-passo transvenoso TEMPORÁRIO se o paciente estiver sintomático ou instável, sorologia para Borrelia, início empírico de antibiótico dirigido enquanto aguarda confirmação, e reavaliação seriada do ritmo — reservando o implante definitivo para os casos que não revertem após tratamento adequado. Implantar um marca-passo definitivo num paciente jovem sem investigar essa possibilidade condena-o a décadas de dispositivo, gerador e eletrodos que talvez nunca tivessem sido necessários.",
+    "source_refs": [
+      "Yeung C, Baranchuk A. Diagnosis and Treatment of Lyme Carditis: JACC Review Topic of the Week. J Am Coll Cardiol. 2019;73(6):717-726. DOI: 10.1016/j.jacc.2018.11.035. PMID: 30765038",
+      "Besant G, Wan D, Yeung C, et al. Suspicious index in Lyme carditis: Systematic review and proposed new risk score. Clin Cardiol. 2018;41(12):1611-1616. DOI: 10.1002/clc.23112. PMID: 30350436",
+      "McAlister HF, Klementowicz PT, Andrews C, Fisher JD, Feld M, Furman S. Lyme carditis: an important cause of reversible heart block. Ann Intern Med. 1989;110(5):339-345. DOI: 10.7326/0003-4819-110-5-339. PMID: 2644885"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ritmo-largo-frequencia-70-bpm-pos-reperfusao-riva-ou-taquicardia-ventricular",
+    "titulo": "Ritmo de QRS largo a 75 bpm minutos após reperfusão de IAM: acionar cardioversão de emergência ou apenas observar?",
+    "tema": "Arritmias",
+    "nivel": "básico",
+    "enunciado": "Paciente em angioplastia primária para IAM com supra de ST desenvolve, minutos após restabelecimento do fluxo coronariano, um ritmo de complexo QRS largo, com frequência de aproximadamente 75 bpm, hemodinamicamente bem tolerado, que dura menos de um minuto e cede espontaneamente, alternando com o ritmo sinusal de base.",
+    "pergunta": "Qual é a interpretação mais provável desse achado, e ele exige tratamento antiarrítmico imediato?",
+    "opcoes": [
+      "É taquicardia ventricular sustentada e exige cardioversão elétrica sincronizada imediata, independente da tolerância hemodinâmica",
+      "É ritmo idioventricular acelerado (RIVA) — um marcador clássico e bem descrito de reperfusão coronariana bem-sucedida, com frequência tipicamente entre 50 e 110 bpm (ou seja, mais lento que a definição usual de taquicardia ventricular), autolimitado e hemodinamicamente benigno na grande maioria dos casos; não exige tratamento antiarrítmico específico, e sua principal utilidade é servir de sinal não invasivo de reperfusão",
+      "É fibrilação atrial com condução aberrante, e deve ser tratado com controle de frequência imediato",
+      "É artefato de monitorização sem significado clínico e deve ser ignorado sem qualquer registro no prontuário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ritmo idioventricular acelerado (RIVA) é um marcapasso ectópico ventricular cuja frequência ultrapassa a do nó sinusal, mas fica tipicamente na faixa de 50 a 110 bpm — abaixo do limiar convencional de 100-120 bpm usado para definir taquicardia ventricular verdadeira, o que já é uma pista diagnóstica à beira do leito. Descrito originalmente como marcador não invasivo de reperfusão durante trombólise intracoronariana (Goldberg et al., 1983) e confirmado por angiografia em segundos do início da arritmia, o RIVA tornou-se um sinal reconhecido de restabelecimento do fluxo anterógrado após angioplastia primária — sua aparição minutos após a abertura do vaso, como no caso descrito, é consistente exatamente com esse contexto, e não com uma arritmia ventricular maligna. Diferente da TV sustentada, o RIVA costuma ser autolimitado, intermitente (alternando com o ritmo sinusal de base, como descrito), hemodinamicamente bem tolerado, e não exige tratamento antiarrítmico específico nem cardioversão — intervir desnecessariamente pode, inclusive, suprimir um sinal útil de reperfusão sem benefício real ao paciente. A distinção com TV verdadeira importa clinicamente: tratar RIVA como se fosse TV maligna expõe o paciente a risco de fármaco antiarrítmico ou choque elétrico desnecessários num momento em que a arritmia, paradoxalmente, é sinal de boa notícia.",
+    "source_refs": [
+      "Gangwani MK, Nagalli S. Idioventricular Rhythm. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026 Jan–. PMID: 32119407",
+      "Goldberg S, Greenspon AJ, Urban PL, Muza B, Berger B, Walinsky P, Maroko PR. Reperfusion arrhythmia: a marker of restoration of antegrade flow during intracoronary thrombolysis for acute myocardial infarction. Am Heart J. 1983;105(1):26-32. DOI: 10.1016/0002-8703(83)90274-0. PMID: 6849238"
+    ],
+    "review_status": "revisado"
   }
 ]
