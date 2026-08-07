@@ -687,5 +687,30 @@
       "miocardite-fulminante"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-do-choque-da-doenca-de-kawasaki",
+    "titulo": "Síndrome do choque da doença de Kawasaki",
+    "gatilho": "Criança com febre persistente e hipotensão ou hipoperfusão sem causa suficientemente explicada, sobretudo com achados completos/incompletos de Kawasaki, disfunção ventricular ou alterações coronarianas",
+    "ordem": 107,
+    "documento_slug": "sindrome-do-choque-da-doenca-de-kawasaki",
+    "fluxograma_slug": "fluxograma-sindrome-do-choque-da-doenca-de-kawasaki",
+    "relacionados": [
+      "miocardite-fulminante-pediatrica",
+      "parada-cardiorrespiratoria-pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prolongamento-qt-por-ribociclibe-e-risco-de-torsades",
+    "titulo": "Prolongamento de QT por ribociclibe e risco de torsades",
+    "gatilho": "Paciente oncológico em ribociclibe com QTcF prolongado, palpitação, síncope/pré-síncope, TV polimórfica ou torsades de pointes",
+    "ordem": 108,
+    "documento_slug": "prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe",
+    "fluxograma_slug": "fluxograma-prolongamento-qt-por-ribociclibe-e-risco-de-torsades",
+    "relacionados": [
+      "torsades-de-pointes-e-qt-longo-adquirido"
+    ],
+    "review_status": "revisado"
   }
 ]
