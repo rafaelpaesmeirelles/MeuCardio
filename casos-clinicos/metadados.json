@@ -12622,5 +12622,85 @@
       "Le Gal G, Righini M, Roy PM, Sanchez O, Aujesky D, Bounameaux H, Perrier A. Prediction of pulmonary embolism in the emergency department: the revised Geneva score. Ann Intern Med. 2006;144(3):165-171. PMID: 16461960."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "ansiedade-generalizada-e-risco-de-doenca-coronariana-incidente-metanalise-de-batelaan",
+    "titulo": "Ansiedade generalizada e risco de doença coronariana incidente: o que a metanálise de Batelaan mostra",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 46 anos, sem doença cardiovascular conhecida, procura o cardiologista para avaliação de risco após ler uma reportagem sobre \"ansiedade que causa infarto\". Ela tem diagnóstico de transtorno de ansiedade generalizada há 8 anos, controlado com psicoterapia, sem uso de medicação. Não tem outros fatores de risco cardiovascular relevantes. O médico busca quantificar, com base em evidência primária, se a ansiedade por si só eleva o risco cardiovascular dela.",
+    "pergunta": "Segundo a metanálise de Batelaan et al. (British Journal of Psychiatry, 2016), qual foi a magnitude do aumento de risco de doença cardiovascular incidente associado a ansiedade, e o que os autores concluíram sobre a plausibilidade de causalidade dessa associação?",
+    "opcoes": [
+      "Aumento de 52% na incidência de doença cardiovascular (HR 1,52; IC95% 1,36-1,71), aparentemente independente de fatores de risco tradicionais e de depressão, com avaliação dos critérios de causalidade de Hill majoritariamente favorável a uma relação causal",
+      "Nenhum aumento significativo de risco foi encontrado após ajuste para depressão, concluindo que a ansiedade é apenas um marcador de depressão subjacente não diagnosticada",
+      "Aumento de risco de apenas 5%, considerado clinicamente irrelevante pelos autores, que recomendaram não incluir ansiedade em nenhum protocolo de rastreio cardiovascular",
+      "O estudo encontrou aumento de risco, mas concluiu que a associação era inteiramente explicada por tabagismo mais frequente em pacientes ansiosos, sem efeito direto da ansiedade"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Batelaan NM et al. (Br J Psychiatry 2016;208(3):223-231, PMID 26932485) realizaram revisão sistemática com metanálise de 37 artigos (n=1.565.699 participantes livres de doença cardiovascular no início do seguimento, que variou de 1 a 24 anos), encontrando que a ansiedade associou-se a aumento de 52% na incidência de doença cardiovascular (HR 1,52; IC95% 1,36-1,71), com o risco aparentando ser independente tanto de fatores de risco cardiovascular tradicionais quanto de depressão comórbida. Os autores também aplicaram formalmente os critérios de causalidade de Hill (força de associação, consistência entre estudos, especificidade, temporalidade, gradiente biológico, plausibilidade, coerência, evidência experimental e analogia) à literatura disponível, concluindo que a avaliação argumentava majoritariamente a favor de uma relação causal, não apenas de associação estatística — embora reconheçam que confirmação experimental direta (intervenção que reduza ansiedade e meça redução de eventos cardiovasculares) ainda seja necessária. O achado sustenta considerar a ansiedade, isoladamente, alvo legítimo de atenção na prevenção cardiovascular — não apenas como epifenômeno da depressão.",
+    "source_refs": [
+      "Batelaan NM, Seldenrijk A, Bot M, van Balkom AJLM, Penninx BWJH. Anxiety and new onset of cardiovascular disease: critical review and meta-analysis. Br J Psychiatry. 2016;208(3):223-231. PMID: 26932485. DOI: 10.1192/bjp.bp.114.156554."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "percepcao-de-que-o-estresse-afeta-a-saude-e-risco-coronariano-whitehall-ii",
+    "titulo": "\"Doutor, eu sei que o estresse está me adoecendo\": o que o Whitehall II mostrou sobre essa percepção",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Homem de 51 anos, executivo, comparece à consulta de rotina e, ao ser perguntado sobre estresse, declara espontaneamente: \"eu sinto que o estresse do trabalho está afetando muito minha saúde, extremamente mesmo\". Nos escores tradicionais de estresse percebido, ele pontua na faixa intermediária, sem se destacar como caso extremo. O cardiologista se pergunta se essa afirmação espontânea — distinta da pontuação em escala de estresse percebido — tem algum valor prognóstico independente.",
+    "pergunta": "Segundo o estudo de coorte de Nabi et al. na coorte Whitehall II (European Heart Journal, 2013), qual foi o risco de doença coronariana associado a relatar que o estresse afeta \"muito ou extremamente\" a própria saúde, em comparação a relatar nenhum efeito — e esse achado se manteve após ajuste completo?",
+    "opcoes": [
+      "Risco 2,12 vezes maior (IC95% 1,52-2,98) na análise ajustada para fatores sociodemográficos, atenuando para HR 1,49 (IC95% 1,01-2,22) mas permanecendo estatisticamente significativo após ajuste completo para fatores biológicos, comportamentais e psicológicos, incluindo o nível de estresse percebido em si",
+      "Nenhuma associação foi encontrada; a percepção subjetiva de impacto do estresse na saúde não teve nenhum valor preditivo além do escore padrão de estresse percebido",
+      "A associação encontrada (HR 1,15) foi pequena e perdeu significância estatística assim que ajustada para o nível de estresse percebido, sugerindo que a percepção não acrescenta informação além da escala tradicional",
+      "O estudo encontrou associação apenas em mulheres, sem efeito detectável em homens na mesma coorte"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Nabi H et al. (Eur Heart J 2013;34(34):2697-2705, PMID 23804585) analisaram 7.268 participantes da coorte britânica Whitehall II (idade média 49,5 anos), com 18 anos de seguimento e 352 mortes coronarianas ou infartos não fatais incidentes. Participantes que relataram no início do estudo que o estresse afetou \"muito ou extremamente\" sua saúde tiveram risco 2,12 vezes maior (IC95% 1,52-2,98) de morte coronariana ou infarto não fatal, em comparação a quem relatou nenhum efeito do estresse na própria saúde — ajustado para características sociodemográficas. Crucialmente, após ajuste completo para fatores biológicos, comportamentais e psicológicos, incluindo o NÍVEL de estresse percebido medido separadamente e suporte social, a associação atenuou mas permaneceu estatisticamente significativa (HR ajustado 1,49; IC95% 1,01-2,22). Isso indica que a PERCEPÇÃO de que o estresse prejudica a saúde é um preditor de risco parcialmente independente do nível de estresse percebido em si — ou seja, a pergunta direta \"você sente que o estresse está afetando sua saúde?\" captura algo que a escala padronizada de estresse percebido não captura sozinha, achado com implicação prática direta para a anamnese cardiológica de rotina.",
+    "source_refs": [
+      "Nabi H, Kivimäki M, Batty GD, Shipley MJ, Britton A, Brunner EJ, Vahtera J, Lemogne C, Elbaz A, Singh-Manoux A. Increased risk of coronary heart disease among individuals reporting adverse impact of stress on their health: the Whitehall II prospective cohort study. Eur Heart J. 2013;34(34):2697-2705. PMID: 23804585. DOI: 10.1093/eurheartj/eht216."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estresse-agudo-como-gatilho-de-sindrome-coronariana-aguda-e-de-takotsubo",
+    "titulo": "Estresse agudo como gatilho: síndrome coronariana aguda e cardiomiopatia de takotsubo",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 67 anos dá entrada no pronto-socorro com dor torácica e dispneia horas após receber a notícia inesperada da morte de um familiar próximo. O ECG mostra supradesnível discreto de ST em parede anterior, sem lesão obstrutiva relevante na coronariografia; o ecocardiograma revela discinesia apical característica de balonamento (\"apical ballooning\"). A equipe discute a fisiopatologia do quadro e sua relação com o evento emocional agudo recente.",
+    "pergunta": "Segundo a revisão de Steptoe & Kivimäki (Annual Review of Public Health, 2013), qual é o risco relativo combinado (estudos caso-cruzado) de síndrome coronariana aguda ser precedida por um episódio de estresse agudo, e que outra condição cardíaca os autores associam explicitamente ao desenvolvimento por estresse?",
+    "opcoes": [
+      "Risco relativo combinado de 2,5 (IC95% 1,8-3,5) para síndrome coronariana aguda precedida por estresse agudo, com o estresse também implicado no desenvolvimento de cardiomiopatia de takotsubo (estresse) induzida por estresse",
+      "Risco relativo de 1,05, considerado não significativo, e nenhuma menção a takotsubo nesse artigo específico",
+      "Risco relativo de 5,0, mas os autores atribuem esse achado inteiramente a confundimento por tabagismo desencadeado pelo evento estressor",
+      "O artigo não quantifica risco relativo algum, sendo puramente descritivo sobre mecanismos moleculares de estresse"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Steptoe A & Kivimäki M (Annu Rev Public Health 2013;34:337-354, PMID 23297662) atualizaram, com metanálises próprias de estudos publicados até 2011, o conhecimento sobre efeitos cardiovasculares do estresse. Entre os achados, o risco relativo combinado (em estudos de desenho caso-cruzado) de início de síndrome coronariana aguda ser precedido por um episódio de estresse agudo foi 2,5 (IC95% 1,8-3,5). Os autores também afirmam explicitamente que o estresse está implicado tanto no PROGNÓSTICO de doença cardiovascular já estabelecida quanto no DESENVOLVIMENTO da cardiomiopatia de estresse (takotsubo) — o quadro do caso, com discinesia apical característica desencadeada por evento emocional agudo (luto), é a apresentação clássica dessa entidade, mecanicamente ligada à descarga de catecolaminas induzida pelo estresse agudo, distinta da síndrome coronariana aguda por doença aterosclerótica obstrutiva.",
+    "source_refs": [
+      "Steptoe A, Kivimäki M. Stress and cardiovascular disease: an update on current knowledge. Annu Rev Public Health. 2013;34:337-354. PMID: 23297662. DOI: 10.1146/annurev-publhealth-031912-114452."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bem-estar-psicologico-positivo-como-fator-protetor-cardiovascular-metanalise-de-chida-e-steptoe",
+    "titulo": "Otimismo protege o coração? A metanálise de Chida & Steptoe sobre bem-estar positivo e mortalidade",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "básico",
+    "enunciado": "Durante uma consulta de reabilitação cardíaca pós-infarto, um paciente de 60 anos, historicamente otimista e com boa rede de apoio social, pergunta ao cardiologista se \"ter uma atitude positiva\" tem algum efeito real e mensurado sobre seu prognóstico, ou se é \"só um discurso motivacional sem base científica\".",
+    "pergunta": "Segundo a metanálise de Chida & Steptoe (Psychosomatic Medicine, 2008), o bem-estar psicológico positivo associou-se a redução de mortalidade tanto em população saudável quanto em população doente. Qual foi a magnitude dessa associação (hazard ratio combinado) em cada um dos dois grupos?",
+    "opcoes": [
+      "HR combinado de 0,82 (IC95% 0,76-0,89; p<0,001) em população inicialmente saudável e HR combinado de 0,98 (IC95% 0,95-1,00; p=0,030) em população com doença — em ambos os casos, associação estatisticamente significativa de redução de mortalidade",
+      "Nenhuma redução de mortalidade foi encontrada em nenhum dos dois grupos; a metanálise foi majoritariamente negativa",
+      "A redução de mortalidade só foi significativa em população doente (HR 0,50), sem qualquer efeito detectável em população saudável",
+      "O efeito protetor encontrado dependeu inteiramente do afeto negativo controlado, desaparecendo completamente quando os autores ajustaram para esse fator"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Chida Y & Steptoe A (Psychosom Med 2008;70(7):741-756, PMID 18725425) revisaram sistematicamente 70 estudos de coorte prospectivos (35 estudos/26 artigos em população inicialmente saudável e 35 estudos/28 artigos em população doente), encontrando que bem-estar psicológico positivo associou-se a redução de mortalidade em ambos os grupos: HR combinado de 0,82 (IC95% 0,76-0,89; p<0,001) em população saudável e HR combinado de 0,98 (IC95% 0,95-1,00; p=0,030) em população doente — este último efeito mais modesto, mas ainda estatisticamente significativo. Importante: a metanálise mostrou que o efeito protetor do bem-estar positivo foi independente do afeto negativo em análises que o controlaram, ou seja, não é simplesmente \"ausência de depressão/ansiedade\" — é um construto com contribuição própria. Em população saudável, o efeito foi significativo especificamente para mortalidade cardiovascular. A resposta ao paciente, portanto, é que a evidência quantitativa apoia (com ressalva de que são estudos observacionais, sem prova experimental de causalidade) que disposição positiva se associa a melhor sobrevida, distinta de apenas \"não estar deprimido\".",
+    "source_refs": [
+      "Chida Y, Steptoe A. Positive psychological well-being and mortality: a quantitative review of prospective observational studies. Psychosom Med. 2008;70(7):741-756. PMID: 18725425. DOI: 10.1097/PSY.0b013e31818105ba."
+    ],
+    "review_status": "revisado"
   }
 ]
