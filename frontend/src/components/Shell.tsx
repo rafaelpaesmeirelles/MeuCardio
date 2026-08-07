@@ -37,7 +37,7 @@ const SECOES_BASE: SecaoNav[] = [
     rotulo: "Decisão clínica",
     icone: "clinica",
     itens: [
-      { to: "/assistente", rotulo: "Assistente clínico", icone: "assistente" },
+      { to: "/assistente", rotulo: "Assistente", icone: "assistente" },
       { to: "/doencas", rotulo: "Guia de doenças", icone: "doencas" },
       { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
       { to: "/condicoes", rotulo: "Condições especiais", icone: "check" },
@@ -96,6 +96,7 @@ const SECOES_BASE: SecaoNav[] = [
       { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
       { to: "/favoritos", rotulo: "Favoritos", icone: "favorito" },
       { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" },
+      { to: "/sincronizacao", rotulo: "Sincronize suas contas", icone: "sincronizar" },
     ],
   },
 ];
@@ -364,6 +365,7 @@ export default function Shell() {
       { to: "/favoritos", rotulo: "Favoritos", icone: "favorito" },
       { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
       { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" },
+      { to: "/sincronizacao", rotulo: "Sincronize suas contas", icone: "sincronizar" },
       { to: "/usuarios-online", rotulo: "Rede profissional", icone: "pacientes" },
     ];
     if (usuario?.role === "admin") {

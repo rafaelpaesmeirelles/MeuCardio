@@ -31,11 +31,11 @@ def _token_email(client, db, user, monkeypatch_mail360, senha="senha-caixa-123")
     return login.json()["access_token"]
 
 
-def _integracao_google_com_mail(db, user_id, *, read_mail=True) -> CalendarIntegration:
+def _integracao_google_com_mail(db, user_id, *, read_mail=True, sync_mail=True, display_name="titular@gmail.com") -> CalendarIntegration:
     integracao = CalendarIntegration(
-        owner_id=user_id, provider="google_calendar", display_name="titular@gmail.com",
-        external_account_id="ext-google-1", sync_strategy="external_authoritative",
-        enabled=True, status="connected", contacts_enabled=True,
+        owner_id=user_id, provider="google_calendar", display_name=display_name,
+        external_account_id=f"ext-{display_name}", sync_strategy="external_authoritative",
+        enabled=True, status="connected", contacts_enabled=True, sync_mail=sync_mail,
         capabilities={"read_appointments": True, "read_mail": read_mail, "send_mail": read_mail},
     )
     db.add(integracao)
@@ -140,3 +140,55 @@ def test_isolamento_entre_usuarios(client, db, criar_usuario, monkeypatch_mail36
 
 def test_sem_token_devolve_401(client):
     assert client.get("/api/email/mensagens/todas").status_code == 401
+
+
+def test_conta_com_sync_mail_desligado_fica_de_fora_por_padrao(client, db, criar_usuario, monkeypatch_mail360, monkeypatch):
+    """Trabalho 16 (07/08/2026): preferência de sincronização desligada —
+    sem `contas` explícito na chamada, a conta some da combinada, mas
+    continua existindo (não foi desconectada)."""
+    user, _ = criar_usuario()
+    token = _token_email(client, db, user, monkeypatch_mail360)
+    _integracao_google_com_mail(db, user.id, sync_mail=False)
+
+    monkeypatch.setattr(
+        mail360, "listar_mensagens",
+        lambda *a, **k: [{"messageId": "nativa-1", "subject": "Nativa", "receivedTime": "1000"}],
+    )
+    chamou_externa = []
+    monkeypatch.setattr(external_mail, "list_messages", lambda *a, **k: chamou_externa.append(True) or [])
+
+    resposta = client.get("/api/email/mensagens/todas", headers={"Authorization": f"Bearer {token}"})
+    assert resposta.status_code == 200
+    assert [m["messageId"] for m in resposta.json()["mensagens"]] == ["nativa-1"]
+    assert chamou_externa == []
+
+
+def test_parametro_contas_escolhe_exatamente_quais_entram(client, db, criar_usuario, monkeypatch_mail360, monkeypatch):
+    """`contas=` é pedido explícito — inclui mesmo com sync_mail desligado,
+    e pode excluir a nativa também (não pedir "corvia" na lista)."""
+    user, _ = criar_usuario()
+    token = _token_email(client, db, user, monkeypatch_mail360)
+    desligada = _integracao_google_com_mail(db, user.id, sync_mail=False, display_name="conta-a@gmail.com")
+    _integracao_google_com_mail(db, user.id, sync_mail=True, display_name="conta-b@gmail.com")
+
+    monkeypatch.setattr(
+        mail360, "listar_mensagens",
+        lambda *a, **k: [{"messageId": "nativa-1", "subject": "Nativa", "receivedTime": "1000"}],
+    )
+    monkeypatch.setattr(
+        external_mail, "list_messages",
+        lambda *a, **k: [{
+            "messageId": "gmail-a", "id": "gmail-a", "subject": "Da conta A",
+            "receivedTime": "9999", "provider": "google",
+        }],
+    )
+
+    # Pede só a conta desligada por padrão — sem "corvia" na lista, sem a
+    # outra integração: só ela deve aparecer.
+    resposta = client.get(
+        f"/api/email/mensagens/todas?contas={desligada.id}",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    assert resposta.status_code == 200
+    ids = [m["messageId"] for m in resposta.json()["mensagens"]]
+    assert ids == ["gmail-a"]

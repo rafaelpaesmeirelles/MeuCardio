@@ -36,6 +36,8 @@ EXPECTED_APP_ROUTES = {
     # pós-pagamento) — as duas são redirecionamento de gate, não item de
     # menu, por isso não entram em EXPECTED_NAV_ROUTES.
     "/tour", "/verificacao-identidade",
+    # Trabalho 16 (07/08/2026): item próprio no menu (seção Gestão).
+    "/sincronizacao",
 }
 
 EXPECTED_NAV_ROUTES = {
@@ -46,6 +48,7 @@ EXPECTED_NAV_ROUTES = {
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
     "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
+    "/sincronizacao",
 }
 
 EXPECTED_BACKEND_ROUTERS = {

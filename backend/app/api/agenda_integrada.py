@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -299,6 +300,17 @@ class IntegrationIn(StrictModel):
     write_enabled: bool = False
     consent_accepted: bool = False
     consent_version: str | None = Field(default=None, max_length=40)
+
+
+class PreferenciasSincronizacaoIn(StrictModel):
+    """Trabalho 16 (07/08/2026) — `sync_calendar`/`sync_mail`/`contacts`
+    alteram só a PREFERÊNCIA de uso, nunca o que a conta pode tecnicamente
+    fazer (isso vem de `capabilities`, concedido no momento da conexão/
+    OAuth — reconectar ou trocar de escopo é o único jeito de mudar
+    capacidade real). Todos opcionais: o médico manda só o que quer mudar."""
+    sync_calendar: bool | None = None
+    sync_mail: bool | None = None
+    contacts: bool | None = None
 
 
 class AppleIntegrationIn(StrictModel):
@@ -978,6 +990,17 @@ def list_appointments(
     if location_id: query = query.filter(Appointment.location_id == location_id)
     if service_id: query = query.filter(Appointment.service_id == service_id)
     if search: query = query.filter(Appointment.patient_name_temp.ilike(f"%{search}%"))
+    # Trabalho 16: agendamento importado de conta cuja preferência de
+    # sincronização de agenda está desligada não aparece — sem apagar nada,
+    # só parar de mostrar (a próxima sincronização real ainda escreve os
+    # dados; é a LEITURA que respeita a preferência). Nunca afeta os
+    # compromissos nativos (integration_id nulo).
+    desligadas = db.query(CalendarIntegration.id).filter(
+        CalendarIntegration.owner_id == owner_id, CalendarIntegration.sync_calendar.is_(False),
+    )
+    query = query.filter(
+        or_(Appointment.integration_id.is_(None), Appointment.integration_id.notin_(desligadas))
+    )
     return [_dump_appointment(db, item) for item in query.order_by(Appointment.scheduled_at).limit(2000).all()]
 
 
@@ -1319,7 +1342,7 @@ def list_integrations(professional_id: int | None = None, db: Session = Depends(
         contact_count = db.query(ExternalContact).filter(
             ExternalContact.integration_id == x.id, ExternalContact.deleted.is_(False),
         ).count()
-        result.append({"id": x.id, "provider": x.provider, "display_name": x.display_name, "status": x.status, "sync_strategy": x.sync_strategy, "enabled": x.enabled, "write_enabled": x.write_enabled, "contacts_enabled": x.contacts_enabled, "contact_count": contact_count, "configuration": x.configuration, "capabilities": x.capabilities, "has_credentials": bool(x.credentials_cipher), "consent_at": x.consent_at, "revoked_at": x.revoked_at, "last_success_at": x.last_success_at, "last_error_code": x.last_error_code, "last_error_message": x.last_error_message})
+        result.append({"id": x.id, "provider": x.provider, "display_name": x.display_name, "status": x.status, "sync_strategy": x.sync_strategy, "enabled": x.enabled, "write_enabled": x.write_enabled, "contacts_enabled": x.contacts_enabled, "sync_calendar": x.sync_calendar, "sync_mail": x.sync_mail, "contact_count": contact_count, "configuration": x.configuration, "capabilities": x.capabilities, "has_credentials": bool(x.credentials_cipher), "consent_at": x.consent_at, "revoked_at": x.revoked_at, "last_success_at": x.last_success_at, "last_error_code": x.last_error_code, "last_error_message": x.last_error_message})
     return result
 
 
@@ -1397,6 +1420,44 @@ def run_contacts_sync(integration_id: int, full: bool = False, db: Session = Dep
         raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
     _audit(db, user, "external_contacts_sync", "calendar_integration", item.id, {"provider": item.provider, **result})
     db.commit(); return result
+
+
+@router.patch("/integrations/{integration_id}/preferencias")
+def alterar_preferencias_sincronizacao(
+    integration_id: int, dados: PreferenciasSincronizacaoIn,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    """Liga/desliga o que a Corvia efetivamente USA de uma conta já
+    conectada — agenda, contatos, e-mail —, sem desconectar. Só aceita
+    ligar o que a conta REALMENTE tem (capabilities); ligar o que não tem
+    seria fingir uma sincronização que não vai acontecer. Efetivo na
+    próxima leitura (agenda/caixa unificada já filtram por estes campos),
+    sem precisar de nova sincronização."""
+    item = _integration(db, integration_id, user.id)
+    capacidades = item.capabilities or {}
+
+    if dados.sync_calendar is not None:
+        if dados.sync_calendar and not capacidades.get("read_appointments"):
+            raise HTTPException(status_code=422, detail="Esta conta não tem agenda para sincronizar.")
+        item.sync_calendar = dados.sync_calendar
+    if dados.sync_mail is not None:
+        if dados.sync_mail and not capacidades.get("read_mail"):
+            raise HTTPException(status_code=422, detail="Esta conta não tem e-mail conectado.")
+        item.sync_mail = dados.sync_mail
+    if dados.contacts is not None:
+        if dados.contacts and not capacidades.get("read_contacts"):
+            raise HTTPException(status_code=422, detail="Esta conta não sincroniza contatos.")
+        item.contacts_enabled = dados.contacts
+
+    _audit(db, user, "sync_preferences_changed", "calendar_integration", item.id, {
+        "provider": item.provider, "sync_calendar": item.sync_calendar,
+        "sync_mail": item.sync_mail, "contacts_enabled": item.contacts_enabled,
+    })
+    db.commit(); db.refresh(item)
+    return {
+        "id": item.id, "sync_calendar": item.sync_calendar,
+        "sync_mail": item.sync_mail, "contacts_enabled": item.contacts_enabled,
+    }
 
 
 @router.delete("/integrations/{integration_id}", status_code=204)

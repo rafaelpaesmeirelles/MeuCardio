@@ -264,6 +264,14 @@ class CalendarIntegration(Base):
     enabled: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
     write_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
     contacts_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Trabalho 16 (07/08/2026): preferência de sincronização, distinta do
+    # que a conta TECNICAMENTE permite (capabilities/OAuth scope). Nasce
+    # true — opt-out, não opt-in, mesmo comportamento que já existia antes
+    # desta preferência existir (conectar já mostrava tudo que a conta
+    # permitisse). Alterável a qualquer momento via
+    # PATCH /api/agenda/integrations/{id}/preferencias.
+    sync_calendar: Mapped[bool] = mapped_column(Boolean, default=True)
+    sync_mail: Mapped[bool] = mapped_column(Boolean, default=True)
     external_account_id: Mapped[str | None] = mapped_column(String(255), nullable=True)
     credentials_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     cursor_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)

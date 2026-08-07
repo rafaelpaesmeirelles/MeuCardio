@@ -47,6 +47,7 @@ const Agenda = lazy(() => import("./pages/Agenda"));
 const Templates = lazy(() => import("./pages/Templates"));
 const Assinatura = lazy(() => import("./pages/Assinatura"));
 const MinhaConta = lazy(() => import("./pages/MinhaConta"));
+const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
 const FilaTelediagnostico = lazy(() => import("./pages/FilaTelediagnostico"));
 const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
@@ -158,6 +159,7 @@ export default function App() {
           <Route path="receituario" element={<Receituario />} />
           <Route path="assinatura" element={<Assinatura />} />
           <Route path="minha-conta" element={<MinhaConta />} />
+          <Route path="sincronizacao" element={<Sincronizacao />} />
           <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
           <Route path="telediagnostico" element={<Telediagnostico />} />
           <Route path="caixa-de-email" element={<CaixaDeEmail />} />

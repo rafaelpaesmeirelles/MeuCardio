@@ -52,6 +52,7 @@ type Agendamento = {
   payment_mode: string;
   price_cents: number | null;
   source: string;
+  integration_id?: number | null;
   sync_status: string;
   conflict_reason: string | null;
   version: number;
@@ -78,6 +79,8 @@ type Integracao = {
   enabled: boolean;
   write_enabled: boolean;
   contacts_enabled: boolean;
+  sync_calendar?: boolean;
+  sync_mail?: boolean;
   contact_count: number;
   has_credentials: boolean;
   last_success_at: string | null;
@@ -272,7 +275,13 @@ export default function Agenda() {
   const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
   const [busca, setBusca] = useState("");
   const [filtroLocal, setFiltroLocal] = useState("");
-  const [filtroOrigem, setFiltroOrigem] = useState("");
+  // Trabalho 16 (07/08/2026): `null` = mostrar todas as origens juntas
+  // (padrão); um Set = mostrar só as origens marcadas — combinando
+  // Corvia, compromissos pessoais e qualquer conta externa conectada
+  // (uma, várias ou todas de uma vez), inclusive mais de uma conta da
+  // mesma empresa. Chave: "corvia" | "corvia_manual" | id da integração.
+  const [contasVisiveis, setContasVisiveis] = useState<Set<string> | null>(null);
+  const [seletorContasAberto, setSeletorContasAberto] = useState(false);
   const [novoAberto, setNovoAberto] = useState(false);
   const [compromissoAberto, setCompromissoAberto] = useState(false);
   const [ajustando, setAjustando] = useState<Agendamento | null>(null);
@@ -438,13 +447,51 @@ export default function Agenda() {
     if (conectada || falha) window.history.replaceState({}, "", window.location.pathname);
   }, []);
 
+  // Chave de origem de um item: compromisso pessoal (corvia_manual),
+  // atendimento nativo (corvia), ou a conta externa que sincronizou (o
+  // integration_id como string) — é o que o seletor de contas usa para
+  // decidir o que mostrar.
+  function chaveOrigem(item: Agendamento): string {
+    if (item.calendar_kind === "commitment") return "corvia_manual";
+    if (item.integration_id) return String(item.integration_id);
+    return item.source || "corvia";
+  }
+
   const filtrados = useMemo(() => [...(agendamentos ?? []), ...compromissos].filter((item) => {
     const query = busca.trim().toLocaleLowerCase("pt-BR");
     if (query && !`${item.title || ""} ${item.patient_name || ""} ${item.service?.name || ""} ${item.location?.name || ""}`.toLocaleLowerCase("pt-BR").includes(query)) return false;
     if (filtroLocal && item.location?.id !== Number(filtroLocal)) return false;
-    if (filtroOrigem && item.source !== filtroOrigem) return false;
+    if (contasVisiveis && !contasVisiveis.has(chaveOrigem(item))) return false;
     return true;
-  }), [agendamentos, compromissos, busca, filtroLocal, filtroOrigem]);
+  }), [agendamentos, compromissos, busca, filtroLocal, contasVisiveis]);
+
+  // Trabalho 16: opções do seletor de contas — Corvia + compromissos
+  // pessoais sempre presentes, mais uma entrada por conta externa
+  // conectada com sincronização de agenda ligada (a mesma preferência
+  // gerenciada em /sincronizacao). Duas contas da mesma empresa aparecem
+  // como duas entradas distintas, cada uma com o próprio nome.
+  const opcoesOrigem = useMemo(() => {
+    const base: Array<{ chave: string; rotulo: string; provedor?: "google" | "microsoft" | "apple" }> = [
+      { chave: "corvia", rotulo: "Atendimentos Corvia" },
+      { chave: "corvia_manual", rotulo: "Compromissos pessoais" },
+    ];
+    const mapaLogo: Record<string, "google" | "microsoft" | "apple"> = {
+      google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple",
+    };
+    const externas = integracoes
+      .filter((i) => mapaLogo[i.provider] && i.enabled && i.sync_calendar !== false)
+      .map((i) => ({ chave: String(i.id), rotulo: i.display_name, provedor: mapaLogo[i.provider] }));
+    return [...base, ...externas];
+  }, [integracoes]);
+
+  function alternarConta(chave: string, marcado: boolean) {
+    const atual = contasVisiveis ?? new Set(opcoesOrigem.map((o) => o.chave));
+    const novo = new Set(atual);
+    if (marcado) novo.add(chave); else novo.delete(chave);
+    // Todas marcadas de novo volta a ser "sem filtro" — evita um Set idêntico
+    // ao universo inteiro se comportando diferente de null por acidente.
+    setContasVisiveis(novo.size >= opcoesOrigem.length ? null : novo);
+  }
 
   const diasVisiveis = useMemo(() => {
     if (visao === "dia") return [inicioDia(referencia)];
@@ -752,7 +799,39 @@ export default function Agenda() {
       <section className="agenda-filtros">
         <label className="agenda-busca"><Icone nome="busca" /><span className="sr-only">Buscar</span><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Paciente, compromisso, serviço ou local" /></label>
         <label><Icone nome="pin" /><span className="sr-only">Filtrar local</span><select value={filtroLocal} onChange={(e) => setFiltroLocal(e.target.value)}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
-        <label><Icone nome="sincronizar" /><span className="sr-only">Filtrar origem</span><select value={filtroOrigem} onChange={(e) => setFiltroOrigem(e.target.value)}><option value="">Todas as origens</option><option value="corvia">Atendimentos Corvia</option><option value="corvia_manual">Compromissos pessoais</option><option value="google_calendar">Google</option><option value="microsoft_365">Microsoft 365</option></select></label>
+        <div className="agenda-filtro-contas" style={{ position: "relative" }}>
+          <button type="button" className="botao botao--secundario" onClick={() => setSeletorContasAberto((v) => !v)}
+                  aria-expanded={seletorContasAberto} aria-haspopup="true">
+            <Icone nome="sincronizar" />{" "}
+            {contasVisiveis === null ? "Todas as contas" : `${contasVisiveis.size} conta${contasVisiveis.size === 1 ? "" : "s"}`}
+          </button>
+          {seletorContasAberto && (
+            <div role="menu" style={{
+              position: "absolute", top: "calc(100% + 4px)", left: 0, zIndex: 30,
+              background: "var(--superficie)", border: "1px solid var(--borda)", borderRadius: "var(--r)",
+              padding: "0.5rem 0.7rem", minWidth: 240, boxShadow: "var(--sombra)",
+            }}>
+              <label style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.84rem", padding: "0.2rem 0", fontWeight: 600 }}>
+                <input type="checkbox" checked={contasVisiveis === null} onChange={() => setContasVisiveis(null)} />
+                Todas juntas
+              </label>
+              <hr style={{ margin: "0.3rem 0", border: "none", borderTop: "1px solid var(--borda)" }} />
+              {opcoesOrigem.map((opcao) => (
+                <label key={opcao.chave} style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.84rem", padding: "0.2rem 0" }}>
+                  <input type="checkbox"
+                         checked={contasVisiveis === null || contasVisiveis.has(opcao.chave)}
+                         onChange={(e) => alternarConta(opcao.chave, e.target.checked)} />
+                  {opcao.provedor && <LogoProvedor provedor={opcao.provedor} />}
+                  {opcao.rotulo}
+                </label>
+              ))}
+              <button type="button" className="botao botao--secundario" style={{ marginTop: "0.4rem", padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                      onClick={() => setSeletorContasAberto(false)}>
+                Fechar
+              </button>
+            </div>
+          )}
+        </div>
       </section>
 
       <div className="agenda-layout">

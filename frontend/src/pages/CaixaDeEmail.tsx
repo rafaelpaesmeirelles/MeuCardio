@@ -288,6 +288,17 @@ export default function CaixaDeEmail() {
   const [enderecoAtual, setEnderecoAtual] = useState<string | null>(null);
   const [contasEmail, setContasEmail] = useState<ContaEmail[]>([]);
   const [contaEmailId, setContaEmailId] = useState("corvia");
+  // Trabalho 16 (07/08/2026): combinar várias contas na mesma lista.
+  // `null` = modo normal (uma conta por vez, com pastas e ações em lote,
+  // sem mudança nenhuma de comportamento). Um Set = mostra as contas
+  // marcadas juntas, numa lista só, sem pastas nem ações em lote — clicar
+  // numa mensagem abre pelo caminho normal (troca a conta ativa e sai do
+  // modo combinado), reaproveitando toda a leitura/resposta já existente
+  // em vez de duplicar essa lógica para o modo combinado.
+  const [contasCombinadas, setContasCombinadas] = useState<Set<string> | null>(null);
+  const [seletorCombinadoAberto, setSeletorCombinadoAberto] = useState(false);
+  const [mensagensCombinadas, setMensagensCombinadas] = useState<(Mensagem & { origem: string; provider: string })[] | null>(null);
+  const [carregandoCombinada, setCarregandoCombinada] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
   const [aviso, setAviso] = useState<string | null>(null);
   const [modo, setModo] = useState<"hoje" | "caixa">("hoje");
@@ -394,6 +405,46 @@ export default function CaixaDeEmail() {
     setAnexosRecebidos([]);
     void carregarPastas();
   }, [contaEmailId, enderecoAtual]);
+
+  async function carregarCombinada(contas: Set<string>) {
+    setCarregandoCombinada(true);
+    setErro(null);
+    try {
+      const lista = [...contas].join(",");
+      const resposta = await apiEmail.get<{
+        mensagens: (Mensagem & { origem: string; provider: string })[];
+        fontes_com_erro: { origem: string; provider: string; erro: string }[];
+      }>(`/email/mensagens/todas?contas=${encodeURIComponent(lista)}&limite=30`);
+      setMensagensCombinadas(resposta.mensagens);
+      if (resposta.fontes_com_erro.length > 0) {
+        setErro(`Algumas contas não responderam: ${resposta.fontes_com_erro.map((f) => f.provider).join(", ")}.`);
+      }
+    } catch (e) {
+      setErro(mensagemDeErro(e, "Não foi possível carregar as contas combinadas."));
+    } finally {
+      setCarregandoCombinada(false);
+    }
+  }
+
+  useEffect(() => {
+    if (contasCombinadas) void carregarCombinada(contasCombinadas);
+  }, [contasCombinadas]);
+
+  async function abrirMensagemCombinada(msg: Mensagem & { origem: string }) {
+    const id = idDaMensagem(msg);
+    if (!id) return;
+    const prefixo = msg.origem === "corvia" ? "/email" : `/email/externas/${msg.origem}`;
+    setContaEmailId(msg.origem);
+    setContasCombinadas(null);
+    setErro(null);
+    setModo("caixa");
+    try {
+      const completa = await apiEmail.get<MensagemCompleta>(`${prefixo}/mensagens/${encodeURIComponent(id)}`);
+      setMensagemAberta(completa);
+    } catch (e) {
+      setErro(mensagemDeErro(e, "Não foi possível abrir a mensagem."));
+    }
+  }
 
   const mensagensFiltradas = useMemo(() => {
     const termo = busca.trim().toLocaleLowerCase("pt-BR");
@@ -600,6 +651,47 @@ export default function CaixaDeEmail() {
                   Definir como padrão
                 </button>
               )}
+              <div style={{ position: "relative" }}>
+                <button type="button" className="botao botao--secundario"
+                        onClick={() => setSeletorCombinadoAberto((v) => !v)}
+                        aria-expanded={seletorCombinadoAberto} aria-haspopup="true">
+                  {contasCombinadas ? `Combinando ${contasCombinadas.size} contas` : "Combinar contas"}
+                </button>
+                {seletorCombinadoAberto && (
+                  <div role="menu" style={{
+                    position: "absolute", top: "calc(100% + 4px)", right: 0, zIndex: 30,
+                    background: "var(--superficie)", border: "1px solid var(--borda)", borderRadius: "var(--r)",
+                    padding: "0.5rem 0.7rem", minWidth: 240, boxShadow: "var(--sombra)",
+                  }}>
+                    <p className="eyebrow" style={{ margin: "0 0 0.3rem" }}>
+                      Ver mensagens de uma, várias ou todas as contas juntas
+                    </p>
+                    {contasEmail.filter((c) => c.read_mail).map((conta) => (
+                      <label key={conta.id} style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.84rem", padding: "0.2rem 0" }}>
+                        <input type="checkbox"
+                               checked={contasCombinadas?.has(conta.id) ?? false}
+                               onChange={(e) => {
+                                 const atual = new Set(contasCombinadas ?? []);
+                                 if (e.target.checked) atual.add(conta.id); else atual.delete(conta.id);
+                                 setContasCombinadas(atual.size > 0 ? atual : null);
+                               }} />
+                        {conta.provider !== "corvia" && <LogoProvedor provedor={conta.provider} />}
+                        {conta.email_address}
+                      </label>
+                    ))}
+                    <div style={{ display: "flex", gap: 6, marginTop: "0.4rem" }}>
+                      <button type="button" className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                              onClick={() => setContasCombinadas(new Set(contasEmail.filter((c) => c.read_mail).map((c) => c.id)))}>
+                        Todas
+                      </button>
+                      <button type="button" className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                              onClick={() => setContasCombinadas(null)}>
+                        Nenhuma (voltar ao normal)
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -701,6 +793,43 @@ export default function CaixaDeEmail() {
               <Link to="/telediagnostico"><strong>Cofre protegido</strong><span>Use para informações clínicas identificáveis.</span></Link>
             </section>
           </div>
+        </section>
+      ) : contasCombinadas ? (
+        <section className="mail-workspace mail-workspace--combinada">
+          <section className="mail-lista" aria-label="Mensagens combinadas" style={{ gridColumn: "1 / -1" }}>
+            <div className="mail-lista__topo">
+              <div>
+                <p className="eyebrow">Contas combinadas ({contasCombinadas.size})</p>
+                <h2>{mensagensCombinadas?.length ?? 0} mensagens</h2>
+              </div>
+              {carregandoCombinada && <span className="mail-lista__sincronizando">Carregando…</span>}
+            </div>
+            {mensagensCombinadas === null || carregandoCombinada ? (
+              <div className="mail-estado"><Carregando /></div>
+            ) : mensagensCombinadas.length === 0 ? (
+              <div className="mail-estado"><Vazio titulo="Nenhuma mensagem nas contas selecionadas." /></div>
+            ) : mensagensCombinadas.map((msg) => {
+              const conta = contasEmail.find((c) => c.id === msg.origem);
+              const id = `${msg.origem}-${idDaMensagem(msg)}`;
+              return (
+                <article className="mail-item" key={id}>
+                  <button className="mail-item__abrir" onClick={() => void abrirMensagemCombinada(msg)}>
+                    <span className="mail-avatar">{iniciais(msg)}</span>
+                    <span className="mail-item__conteudo">
+                      <span className="mail-item__linha">
+                        <strong>{remetente(msg)}</strong><time>{dataMensagem(msg)}</time>
+                      </span>
+                      <span className="mail-item__assunto">{msg.subject ?? "(sem assunto)"}</span>
+                      <span className="mail-item__marcas">
+                        {conta && conta.provider !== "corvia" && <LogoProvedor provedor={conta.provider} />}
+                        <small>{conta?.email_address ?? msg.origem}</small>
+                      </span>
+                    </span>
+                  </button>
+                </article>
+              );
+            })}
+          </section>
         </section>
       ) : (
         <section className={`mail-workspace ${mensagemAberta ? "mail-workspace--lendo" : ""}`}>

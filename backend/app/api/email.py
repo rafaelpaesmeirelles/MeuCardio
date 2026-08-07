@@ -580,12 +580,21 @@ def definir_conta_padrao_envio(
 @router.get("/mensagens/todas")
 def mensagens_todas(
     limite: int = 20,
+    contas: str | None = None,
     db: Session = Depends(get_db),
     conta: EmailAccount = Depends(current_email_account),
 ):
     """Uma lista só, misturando a caixa nativa CorvIA Mail com toda conta
-    externa conectada que autorizou e-mail (Gmail/Outlook), ordenada por data
-    de recebimento, mais recente primeiro.
+    externa conectada que autorizou e-mail (Gmail/Outlook/Yahoo/iCloud),
+    ordenada por data de recebimento, mais recente primeiro.
+
+    `contas` (Trabalho 16, 07/08/2026) — lista de ids separados por vírgula
+    (`"corvia,12,15"`) para escolher exatamente quais contas entram nesta
+    chamada, uma, várias ou todas de uma vez; pedir uma conta aqui é
+    intenção explícita e vale mesmo se a preferência de sincronização
+    padrão dela estiver desligada. **Omitido** (comportamento de sempre):
+    todas as contas conectadas cuja preferência `sync_mail` esteja ligada —
+    ver `PATCH /agenda/integrations/{id}/preferencias`.
 
     Cada mensagem carrega `origem` ("corvia" ou o id da integração) — é o
     dado que o frontend usa para saber a quem mandar uma ação (marcar
@@ -601,16 +610,19 @@ def mensagens_todas(
     if limite < 1 or limite > 50:
         raise HTTPException(status_code=422, detail="Limite deve ser entre 1 e 50.")
 
+    pedidas = {c.strip() for c in contas.split(",") if c.strip()} if contas is not None else None
+
     mensagens: list[dict] = []
     fontes_com_erro: list[dict] = []
 
-    try:
-        _exigir_configurado()
-        for item in mail360.listar_mensagens(conta.mail360_account_key, limite=limite):
-            mensagens.append({**item, "origem": "corvia", "provider": "corvia"})
-    except (Mail360Error, HTTPException) as exc:
-        detalhe = exc.detail if isinstance(exc, HTTPException) else str(exc)
-        fontes_com_erro.append({"origem": "corvia", "provider": "corvia", "erro": str(detalhe)})
+    if pedidas is None or "corvia" in pedidas:
+        try:
+            _exigir_configurado()
+            for item in mail360.listar_mensagens(conta.mail360_account_key, limite=limite):
+                mensagens.append({**item, "origem": "corvia", "provider": "corvia"})
+        except (Mail360Error, HTTPException) as exc:
+            detalhe = exc.detail if isinstance(exc, HTTPException) else str(exc)
+            fontes_com_erro.append({"origem": "corvia", "provider": "corvia", "erro": str(detalhe)})
 
     integracoes = db.query(CalendarIntegration).filter(
         CalendarIntegration.owner_id == conta.user_id,
@@ -622,6 +634,14 @@ def mensagens_todas(
     for integracao in integracoes:
         capacidades = integracao.capabilities or {}
         if not capacidades.get("read_mail"):
+            continue
+        # Sem pedido explícito de `contas`, respeita a preferência padrão
+        # (sync_mail); com pedido explícito, a conta só entra se estiver
+        # na lista pedida — nos dois casos, nunca sem `read_mail` real.
+        if pedidas is None:
+            if not integracao.sync_mail:
+                continue
+        elif str(integracao.id) not in pedidas:
             continue
         provider = _provider_curto(integracao.provider)
         try:

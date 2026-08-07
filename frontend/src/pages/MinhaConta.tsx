@@ -117,6 +117,40 @@ function RevisarTour() {
   );
 }
 
+/** Trabalho 16 (07/08/2026): a gestão completa (conectar Google/Microsoft/
+ * Apple/Yahoo, escolher o que cada conta sincroniza, desconectar) mora na
+ * própria página /sincronizacao — item dedicado no menu lateral, seção
+ * Gestão. Aqui fica só o resumo e o atalho, para não duplicar a tela
+ * inteira dentro de Minha Conta. */
+function ResumoSincronizacao() {
+  const navigate = useNavigate();
+  const [total, setTotal] = useState<number | null>(null);
+
+  useEffect(() => {
+    api.get<Array<{ provider: string }>>("/agenda/integrations")
+      .then((lista) => setTotal(lista.filter((i) =>
+        ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(i.provider)
+      ).length))
+      .catch(() => setTotal(null));
+  }, []);
+
+  return (
+    <div className="cartao" style={{ display: "flex", gap: "1rem", alignItems: "center", justifyContent: "space-between" }}>
+      <div>
+        <h2 style={{ margin: "0 0 0.2rem" }}>Sincronize suas contas</h2>
+        <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
+          {total === null ? "Google, Microsoft, Apple e Yahoo — conecte quantas contas quiser." :
+           total === 0 ? "Nenhuma conta conectada ainda." :
+           `${total} conta${total > 1 ? "s" : ""} conectada${total > 1 ? "s" : ""}.`}
+        </p>
+      </div>
+      <button type="button" className="botao botao--secundario" onClick={() => navigate("/sincronizacao")}>
+        Gerenciar
+      </button>
+    </div>
+  );
+}
+
 function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Usuario) => void }) {
   const [dados, setDados] = useState({
     full_name: perfil.full_name ?? "",
@@ -1016,6 +1050,7 @@ export default function MinhaConta() {
             recarregar();
           }}
         />
+        <ResumoSincronizacao />
         <CertificadoA1 />
         <PreferenciaAssinaturaEmail />
         <DadosPessoais
