@@ -13062,5 +13062,165 @@
       "Decousus H, Tapson VF, Bergmann JF, Chong BH, Froehlich JB, Kakkar AK, et al. Factors at admission associated with bleeding risk in medical patients: findings from the IMPROVE investigators. Chest. 2011;139(1):69-79. DOI: 10.1378/chest.09-3081. PMID: 20453069"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "text-me-mensagem-de-texto-como-suporte-de-estilo-de-vida-caso",
+    "titulo": "Mensagem de texto reduz fator de risco após doença coronariana? O ensaio TEXT ME",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Paciente de 58 anos, ex-fumante recente, com infarto prévio, tem baixa adesão a consultas presenciais de reabilitação cardíaca. O serviço avalia oferecer um programa de mensagens de texto (SMS) automáticas, não interativas, com conselhos de estilo de vida.",
+    "pergunta": "Segundo o ensaio TEXT ME (Chow et al., JAMA 2015), qual foi o desfecho primário avaliado em 6 meses, e o que ele mostrou?",
+    "opcoes": [
+      "Mortalidade cardiovascular, sem diferença entre grupos",
+      "LDL-colesterol, significativamente menor no grupo que recebeu as mensagens, com reduções concomitantes de pressão arterial sistólica e IMC",
+      "Adesão a consultas presenciais, sem melhora mensurável",
+      "Qualidade de vida autorreferida, único desfecho avaliado no estudo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Chow CK et al. (JAMA. 2015;314(12):1255-1263, PMID 26393848) randomizaram 710 pacientes com doença coronariana comprovada para receber 4 mensagens de texto por semana durante 6 meses (conselhos de estilo de vida, não interativas) ou cuidado usual. O desfecho primário foi LDL-colesterol em 6 meses, significativamente menor no grupo de intervenção, com reduções concomitantes de pressão arterial sistólica e IMC, aumento de atividade física e redução de tabagismo. 91% dos participantes acharam as mensagens úteis. Limitação: desfecho substituto (LDL), não evento clínico duro; estudo de centro único, com predomínio de homens (82%).",
+    "source_refs": [
+      "Chow CK, Redfern J, Hillis GS, et al. Effect of Lifestyle-Focused Text Messaging on Risk Factor Modification in Patients With Coronary Heart Disease: A Randomized Clinical Trial. JAMA. 2015;314(12):1255-1263. DOI: 10.1001/jama.2015.10945. PMID: 26393848"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sintomas-atipicos-cardiologia-hereditaria-teste-em-cascata-caso",
+    "titulo": "Comunicar risco genético e organizar teste em cascata na cardiologia hereditária",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente jovem tem diagnóstico confirmado de cardiomiopatia hereditária por teste genético. Familiares de primeiro grau assintomáticos precisam decidir se fazem o teste em cascata.",
+    "pergunta": "Qual é a abordagem de comunicação recomendada para o rastreio em cascata de familiares de primeiro grau nesse cenário?",
+    "opcoes": [
+      "O médico do paciente índice deve testar diretamente os familiares sem contato prévio, para agilizar o diagnóstico",
+      "O paciente índice é orientado e apoiado a comunicar o risco aos familiares, que recebem aconselhamento genético próprio antes de decidir pelo teste — processo estruturado, não automático",
+      "O teste em cascata só deve ser oferecido se todos os familiares forem sintomáticos",
+      "A comunicação do risco genético deve ser evitada até que o paciente índice tenha filhos, para não gerar ansiedade prematura"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A comunicação de risco genético em cardiologia hereditária segue um processo estruturado: o paciente índice recebe apoio para comunicar o diagnóstico aos familiares de primeiro grau, que por sua vez recebem aconselhamento genético próprio (não testagem direta sem consentimento e sem contexto) antes de decidir se fazem o teste em cascata. Esse processo respeita autonomia dos familiares e reduz o risco de teste sem preparo psicológico adequado — tema já documentado nesta pasta em 'comunicacao-de-risco-genetico-e-rastreio-em-cascata-na-cardiologia-hereditaria'.",
+    "source_refs": [
+      "Documento institucional já publicado nesta biblioteca: comunicação de risco genético e rastreio em cascata na cardiologia hereditária (tema Comunicação clínica)"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-acef-cirurgia-cardiaca-eletiva-caso",
+    "titulo": "Estimativa rápida de risco cirúrgico com apenas 3 variáveis: o Escore ACEF",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Paciente de 74 anos será submetido a cirurgia de revascularização coronariana eletiva isolada. Fração de ejeção de 45%, creatinina sérica 1,1 mg/dL. Antes de reunir todas as variáveis do EuroSCORE II, o cirurgião quer uma estimativa rápida de risco.",
+    "pergunta": "Como se calcula o Escore ACEF (Ranucci et al., Circulation 2009), e em qual cenário ele teve a MELHOR acurácia entre todos os modelos testados no estudo de validação?",
+    "opcoes": [
+      "ACEF = idade × creatinina ÷ fração de ejeção; melhor acurácia em cirurgia valvar",
+      "ACEF = idade (anos) ÷ fração de ejeção (%) + 1 se creatinina > 2 mg/dL; melhor acurácia em cirurgia coronariana isolada, superando inclusive o escore da Cleveland Clinic",
+      "ACEF = (idade + creatinina) ÷ 2; melhor acurácia em cirurgia de emergência",
+      "ACEF não usa fração de ejeção, apenas idade e creatinina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Ranucci M et al. (Circulation. 2009;119(24):3053-3061, PMID 19506110) desenvolveram e validaram o ACEF = idade (anos) / fração de ejeção (%) + 1 (se creatinina > 2 mg/dL) em 4.557 pacientes (derivação) e 4.091 pacientes (validação) de cirurgia cardíaca eletiva de um único centro. Na série de validação, o escore da Cleveland Clinic teve a melhor acurácia geral (AUC 0,812) com ACEF logo abaixo (0,808); mas em cirurgia coronariana ISOLADA, o ACEF teve a MELHOR acurácia entre todos os modelos testados (0,826), superando o escore da Cleveland Clinic (0,806) — apesar de usar só 3 variáveis. Limitação: validado em centro único, exclusivamente cirurgia eletiva.",
+    "source_refs": [
+      "Ranucci M, Castelvecchio S, Menicanti L, Frigiola A, Pelissero G. Risk of assessing mortality risk in elective cardiac operations: age, creatinine, ejection fraction, and the law of parsimony. Circulation. 2009;119(24):3053-3061. DOI: 10.1161/CIRCULATIONAHA.108.842393. PMID: 19506110"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escala-de-fragilidade-clinica-rockwood-decisao-tavi-caso",
+    "titulo": "Fragilidade clínica no idoso candidato a procedimento cardiovascular de alto risco",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 85 anos, estenose aórtica grave sintomática, está sendo avaliado por Heart Team para TAVI vs. cirurgia. Além do EuroSCORE II e STS Risk Score, a equipe quer incorporar avaliação de fragilidade clínica.",
+    "pergunta": "Segundo o estudo de derivação de Rockwood et al. (CMAJ 2005), o que a Clinical Frailty Scale (CFS) de 7 pontos mede, e como seu desempenho se comparou a medidas isoladas de cognição, função ou comorbidade para prever mortalidade?",
+    "opcoes": [
+      "Mede exclusivamente força de preensão manual; desempenho inferior às medidas isoladas de função",
+      "É um julgamento clínico global de fitness/fragilidade, com correlação de 0,80 com o Índice de Fragilidade; teve MELHOR desempenho preditivo de mortalidade (AUC 0,77 em 18 meses) que medidas isoladas de cognição, função ou comorbidade",
+      "É calculada exclusivamente por exames laboratoriais, sem envolver julgamento clínico",
+      "Mede apenas número de comorbidades, de forma equivalente ao Índice de Charlson"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Rockwood K et al. (CMAJ. 2005;173(5):489-495, PMID 16129869) desenvolveram a Clinical Frailty Scale de 7 pontos em 2.305 idosos do Canadian Study of Health and Aging, com seguimento de 5 anos. A CFS teve correlação de 0,80 com o Índice de Fragilidade (medida mais complexa baseada em déficits acumulados) e, por análise de curva ROC, desempenho MELHOR que medidas isoladas de cognição, função ou comorbidade para prever mortalidade (AUC 0,77 em 18 meses e 0,70 em 70 meses). Cada aumento de 1 categoria na CFS aumentou o risco de morte em 21,2% em cerca de 70 meses. É hoje incorporada à decisão de Heart Team em TAVI e outros procedimentos de alto risco no idoso, complementando escores de risco cirúrgico tradicionais. Limitação: derivada em idosos da comunidade, não em população cirúrgica cardiovascular especificamente.",
+    "source_refs": [
+      "Rockwood K, Song X, MacKnight C, Bergman H, Hogan DB, McDowell I, Mitnitski A. A global clinical measure of fitness and frailty in elderly people. CMAJ. 2005;173(5):489-495. DOI: 10.1503/cmaj.050051. PMID: 16129869"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tept-apos-choque-de-cdi-mortalidade-caso",
+    "titulo": "Estresse pós-traumático após choque do CDI prediz mortalidade, mesmo com fração de ejeção estável",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com CDI recebeu um choque apropriado há 6 meses. Na consulta de rotina, relata pesadelos recorrentes sobre o episódio e evitação de atividades que associa ao choque. Exame mostra fração de ejeção estável e sem novos choques registrados.",
+    "pergunta": "Segundo o estudo de Ladwig et al. (Arch Gen Psychiatry 2008), qual foi a associação entre sintomas de estresse pós-traumático (TEPT) e mortalidade em pacientes com CDI, e ela dependeu de maior gravidade cardíaca objetiva?",
+    "opcoes": [
+      "TEPT não teve associação significativa com mortalidade nesse estudo",
+      "TEPT associou-se a hazard ratio de 3,45 para mortalidade, AJUSTADO para fração de ejeção e choques recebidos — ou seja, o grupo com TEPT não tinha fração de ejeção pior nem mais choques que o grupo sem TEPT",
+      "A associação só foi encontrada em pacientes que também tinham depressão maior diagnosticada",
+      "TEPT associou-se a MENOR mortalidade, por aumentar a vigilância do paciente aos sintomas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Ladwig KH et al. (Arch Gen Psychiatry. 2008;65(11):1324-1330, PMID 18981344), no estudo Living With an ICD, acompanharam 147 pacientes com CDI por média de 5,1 anos. O grupo com sintomas de TEPT (quartil superior da Impact of Event Scale-Revised, n=38) NÃO tinha diferença de fração de ejeção nem de frequência de choques do CDI comparado ao restante — mas teve hazard ratio de mortalidade de 3,45 (IC95% 1,57-7,60; p=0,002), ajustado para idade, sexo, diabetes, fração de ejeção, betabloqueador, ressuscitação prévia, choques recebidos, depressão e ansiedade. Ou seja, o efeito foi INDEPENDENTE da gravidade cardíaca objetiva — sustentando rastreio sistemático de sintomas de TEPT (não só depressão/ansiedade genéricas) após choque de CDI. Limitação: centro único, amostra pequena no grupo-índice (n=38).",
+    "source_refs": [
+      "Ladwig KH, Baumert J, Marten-Mittag B, Kolb C, Zrenner B, Schmitt C. Posttraumatic stress symptoms and predicted mortality in patients with implantable cardioverter-defibrillators. Arch Gen Psychiatry. 2008;65(11):1324-1330. DOI: 10.1001/archpsyc.65.11.1324. PMID: 18981344"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ensaio-copes-cuidado-escalonado-depressao-sca-caso",
+    "titulo": "Cuidado escalonado de depressão após síndrome coronariana aguda: o ensaio COPES",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com síndrome coronariana aguda (SCA) recente mantém sintomas depressivos persistentes 3 meses após o evento. O serviço está decidindo entre oferecer um protocolo fixo único de tratamento ou um modelo de cuidado com preferência do paciente e escalonamento por resposta.",
+    "pergunta": "Segundo o ensaio COPES (Davidson et al., Arch Intern Med 2010), o que caracterizou a intervenção testada, e qual foi seu efeito sobre satisfação e sintomas depressivos comparado ao cuidado usual?",
+    "opcoes": [
+      "A intervenção testou apenas sertralina em dose fixa; sem diferença de satisfação ou sintomas",
+      "A intervenção ofereceu preferência inicial do paciente (terapia de resolução de problemas e/ou farmacoterapia) seguida de cuidado escalonado; satisfação foi de 54% vs. 19% do cuidado usual, e a redução de sintomas depressivos (Beck Depression Inventory) foi significativamente maior (-5,7 vs. -1,9 pontos)",
+      "A intervenção não incluiu nenhuma opção farmacológica, apenas psicoterapia obrigatória",
+      "Não houve diferença em satisfação, apenas em desfechos cardíacos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Davidson KW et al. (Arch Intern Med. 2010;170(7):600-608, PMID 20386003), no ensaio COPES (5 hospitais, EUA), randomizaram 157 pacientes com SCA e depressão persistente entre cuidado escalonado com preferência do paciente (n=80) e cuidado usual (n=77). A satisfação com o cuidado de depressão foi de 54% na intervenção vs. 19% no cuidado usual (OR 5,4; IC95% 2,2-12,9; p<0,001), e a redução de sintomas depressivos foi significativamente maior na intervenção (-5,7 vs. -1,9 pontos; p=0,005). Eventos cardíacos adversos maiores também foram numericamente menores na intervenção (4% vs. 13%; p=0,047), descrito pelos próprios autores como 'melhora promissora', não demonstração definitiva dado o pequeno número de eventos. Diferente de SADHART/CREATE/MOOD-HF (que testam um fármaco específico), o COPES testa um MODELO DE CUIDADO baseado em preferência do paciente.",
+    "source_refs": [
+      "Davidson KW, Rieckmann N, Clemow L, et al. Enhanced depression care for patients with acute coronary syndrome and persistent depressive symptoms: coronary psychosocial evaluation studies randomized controlled trial. Arch Intern Med. 2010;170(7):600-608. DOI: 10.1001/archinternmed.2010.29. PMID: 20386003"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "duracao-do-sono-em-forma-de-u-e-risco-cardiovascular-caso",
+    "titulo": "Sono curto ou longo demais: os dois extremos aumentam risco cardiovascular",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Na anamnese cardiovascular de rotina, um paciente relata dormir habitualmente 9,5 horas por noite, sem queixa de sonolência diurna excessiva ou de apneia. O médico se pergunta se sono 'longo demais', e não só sono curto, é um fator de risco a ser registrado.",
+    "pergunta": "Segundo a metanálise de Cappuccio et al. (Eur Heart J 2011), qual foi o formato da relação entre duração do sono e risco cardiovascular?",
+    "opcoes": [
+      "Relação linear: quanto mais sono, sempre menor o risco",
+      "Relação em formato de U: tanto sono curto quanto sono longo se associaram a maior risco de doença coronariana e AVC, com sono longo também associado a maior risco de doença cardiovascular total",
+      "Apenas sono curto teve associação com risco cardiovascular; sono longo não teve nenhuma associação em nenhum desfecho",
+      "A duração do sono não teve associação significativa com nenhum desfecho cardiovascular na metanálise"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Cappuccio FP et al. (Eur Heart J. 2011;32(12):1484-1492, PMID 21300732), metanálise de 15 estudos prospectivos (474.684 participantes), encontraram relação em FORMATO DE U: sono curto associado a maior risco de doença coronariana (RR 1,48) e AVC (RR 1,15, limite da significância), mas não de doença cardiovascular total; sono LONGO associado a maior risco de doença coronariana (RR 1,38), AVC (RR 1,65) e doença cardiovascular total (RR 1,41), todos estatisticamente significativos. Isso sustenta perguntar duração habitual de sono na anamnese, com atenção a AMBOS os extremos, não apenas à insônia. Limitação: sono medido por autorrelato, não polissonografia; desenho observacional não estabelece causalidade (possível causalidade reversa, com sono longo sendo marcador de doença subjacente não diagnosticada).",
+    "source_refs": [
+      "Cappuccio FP, Cooper D, D'Elia L, Strazzullo P, Miller MA. Sleep duration predicts cardiovascular outcomes: a systematic review and meta-analysis of prospective studies. Eur Heart J. 2011;32(12):1484-1492. DOI: 10.1093/eurheartj/ehr007. PMID: 21300732"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "poluicao-do-ar-mortalidade-cardiovascular-especifica-caso",
+    "titulo": "Poluição do ar como fator de risco cardiovascular: quais causas de morte mais afetadas?",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Em consulta de prevenção cardiovascular, paciente residente em região urbana de alta poluição atmosférica pergunta se isso é relevante para o risco cardíaco dele, além do risco pulmonar já conhecido.",
+    "pergunta": "Segundo o estudo de Pope et al. (Circulation 2004), a exposição de longo prazo a material particulado fino (PM) esteve mais fortemente associada a qual grupo de causas de morte?",
+    "opcoes": [
+      "Doença respiratória, com associação mais forte que qualquer causa cardiovascular",
+      "Causas cardiovasculares específicas — doença isquêmica do coração, arritmias, insuficiência cardíaca e parada cardíaca — com aumento de 8% a 18% no risco por 10 μg/m³ de PM fino; associação com doença respiratória foi relativamente fraca em comparação",
+      "Nenhuma causa de morte específica, apenas mortalidade geral inespecífica",
+      "Apenas acidente vascular cerebral hemorrágico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Pope CA 3rd et al. (Circulation. 2004;109(1):71-77, PMID 14676145), usando a coorte Cancer Prevention Study II vinculada a dados de poluição do ar de áreas metropolitanas dos EUA, encontraram que a exposição de longo prazo a PM fino esteve MAIS fortemente associada a mortalidade por doença isquêmica do coração, arritmias, insuficiência cardíaca e parada cardíaca — um aumento de 10 μg/m³ em PM fino associou-se a 8-18% de aumento no risco dessas causas, com risco comparável ou maior em fumantes. A associação com doença respiratória foi relativamente fraca em comparação. Isso reforça que poluição do ar deve entrar na discussão de risco cardiovascular ambiental, não só pulmonar. Limitação: exposição estimada por dados de área metropolitana, não medição individual — possível erro de classificação de exposição.",
+    "source_refs": [
+      "Pope CA 3rd, Burnett RT, Thurston GD, Thun MJ, Calle EE, Krewski D, Godleski JJ. Cardiovascular mortality and long-term exposure to particulate air pollution: epidemiological evidence of general pathophysiological pathways of disease. Circulation. 2004;109(1):71-77. DOI: 10.1161/01.CIR.0000108927.80044.7F. PMID: 14676145"
+    ],
+    "review_status": "revisado"
   }
 ]
