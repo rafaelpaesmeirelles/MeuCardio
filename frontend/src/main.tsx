@@ -39,6 +39,32 @@ if ("serviceWorker" in navigator) {
   if (swRecargaPendente) tentarRecarregarPorNovoSW();
 };
 
+// Pedido do Rafael, 07/08/2026: o conteúdo científico está em expansão
+// contínua (centenas de itens publicados por dia), e o assinante não pode
+// ficar preso numa aba com bundle antigo sem saber que há versão nova. Isto
+// NÃO força reload nenhum por si só — `.update()` só verifica e baixa uma
+// versão nova do service worker em segundo plano (o browser faz um GET
+// condicional do sw.js; se o arquivo não mudou, é praticamente grátis). Quem
+// de fato troca de versão e recarrega a aba é o listener de `controllerchange`
+// acima, que só dispara se `.update()` encontrar algo realmente novo — por
+// isso é seguro chamar em toda navegação interna, sem o custo de recarregar a
+// página inteira a cada clique (que quebraria a experiência de SPA à toa).
+function verificarAtualizacaoDoServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  navigator.serviceWorker.getRegistration().then((registro) => registro?.update()).catch(() => {
+    // Sem rede, ou SW ainda não registrado — não é erro para o usuário ver.
+  });
+}
+verificarAtualizacaoDoServiceWorker();
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") verificarAtualizacaoDoServiceWorker();
+});
+window.addEventListener("pageshow", verificarAtualizacaoDoServiceWorker);
+// Chamado por App.tsx a cada troca de rota (ver `useVerificarAtualizacao` em
+// App.tsx) — é o gancho que cobre "toda página interna aberta".
+(window as unknown as { __corviaVerificarAtualizacao?: () => void }).__corviaVerificarAtualizacao =
+  verificarAtualizacaoDoServiceWorker;
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>

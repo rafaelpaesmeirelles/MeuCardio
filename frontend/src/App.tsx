@@ -1,4 +1,4 @@
-import { lazy, Suspense, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
 import { Carregando } from "./components/Estado";
@@ -73,6 +73,17 @@ function RotasSuspensas({ children }: { children: ReactNode }) {
 export default function App() {
   const { usuario, carregando } = useAuth();
   const location = useLocation();
+
+  // Pedido do Rafael, 07/08/2026: a cada página interna aberta (troca de
+  // rota), verifica se há versão nova do app — barato (GET condicional do
+  // sw.js) e não recarrega nada por si só; só dispara reload se houver
+  // mesmo uma versão nova (ver `verificarAtualizacaoDoServiceWorker` e o
+  // listener de `controllerchange` em main.tsx). É o mesmo gancho usado no
+  // login e no foco/retomada da aba — três gatilhos, um mecanismo só.
+  useEffect(() => {
+    (window as unknown as { __corviaVerificarAtualizacao?: () => void })
+      .__corviaVerificarAtualizacao?.();
+  }, [location.pathname]);
 
   if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
   if (!usuario) {

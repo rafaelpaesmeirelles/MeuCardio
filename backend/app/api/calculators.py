@@ -17,6 +17,7 @@ def list_calculators(_=Depends(current_user)):
             "theme": c.theme,
             "purpose": c.purpose,
             "status": c.status,
+            "kind": c.kind,
         }
         for c in sorted(calc.REGISTRY.values(), key=lambda c: c.name)
     ]
@@ -33,6 +34,7 @@ def get_calculator(slug: str, _=Depends(current_user)):
         "theme": c.theme,
         "purpose": c.purpose,
         "status": c.status,
+        "kind": c.kind,
         "reference": c.reference,
         "limitations": c.limitations,
         "fields": [asdict(f) for f in c.fields],

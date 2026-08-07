@@ -64,10 +64,21 @@ export default defineConfig({
             }
           },
           {
+            // NetworkFirst, não StaleWhileRevalidate — pedido do Rafael,
+            // 07/08/2026: com o acervo em expansão contínua, mostrar a
+            // versão em cache antes de tentar a rede (o que SWR faz) deixava
+            // o assinante vendo conteúdo desatualizado na PRIMEIRA abertura
+            // de cada tela, mesmo com internet boa; só a próxima abertura
+            // pegava a atualização, porque SWR revalida DEPOIS de responder.
+            // NetworkFirst busca a rede primeiro (assinante sempre vê o que
+            // está publicado agora) e só cai para o cache se a rede falhar
+            // ou demorar mais que `networkTimeoutSeconds` — preserva a
+            // resiliência offline sem servir dado velho com internet normal.
             urlPattern: /\/api\/(library|calculators|drugs|material-paciente)/,
-            handler: "StaleWhileRevalidate",
+            handler: "NetworkFirst",
             options: {
               cacheName: "corvia-conteudo",
+              networkTimeoutSeconds: 4,
               expiration: { maxEntries: 500 },
               cacheableResponse: { statuses: [200] }
             }

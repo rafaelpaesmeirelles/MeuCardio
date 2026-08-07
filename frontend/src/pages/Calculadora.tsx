@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
@@ -9,7 +9,7 @@ type Campo = {
   min: number | null; max: number | null; help: string | null;
 };
 type Calc = {
-  slug: string; name: string; theme: string; purpose: string;
+  slug: string; name: string; theme: string; purpose: string; kind: string;
   reference: string; limitations: string[]; fields: Campo[];
 };
 type Saida = {
@@ -120,7 +120,35 @@ export default function Calculadora() {
 
       {erro && <div style={{ marginTop: "1rem" }}><Erro mensagem={erro} /></div>}
 
-      {saida && (
+      {saida && calc.kind === "dose" && (
+        // Calculadora de DOSE: a resposta principal é a frase de interpretação
+        // (tem unidade, contexto e aviso de faixa embutidos) — não um número
+        // isolado. Um resultado de dose não cabe no formato "número grande +
+        // /máximo" pensado para escore. Ver `dose_calculators.py` (backend).
+        <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
+          <p className="eyebrow">Resultado</p>
+          {saida.interpretation && (
+            <p style={{ fontSize: "1.15rem", fontWeight: 600, margin: "0.3rem 0 0.8rem" }}>
+              {saida.interpretation}
+            </p>
+          )}
+          <dl style={{
+            display: "grid", gridTemplateColumns: "auto 1fr", columnGap: "0.7rem", rowGap: "0.3rem",
+            fontSize: "0.85rem", color: "var(--texto-secundario)", margin: 0,
+          }}>
+            {Object.entries(saida.result)
+              .filter(([chave]) => chave !== "fora_da_faixa")
+              .map(([chave, valor]) => (
+                <Fragment key={chave}>
+                  <dt style={{ textTransform: "capitalize" }}>{chave.replace(/_/g, " ")}</dt>
+                  <dd style={{ margin: 0 }}>{String(valor)}</dd>
+                </Fragment>
+              ))}
+          </dl>
+        </div>
+      )}
+
+      {saida && calc.kind !== "dose" && (
         <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
           <p className="eyebrow">Resultado</p>
           <p className="dado" style={{ fontSize: "2.4rem", margin: "0.2rem 0", color: "var(--acento)" }}>

@@ -33,6 +33,13 @@ class Calculator:
     compute: Callable[[dict], dict] | None = None
     limitations: list[str] = field(default_factory=list)
     status: str = "implementada"
+    # "escore": resultado é um número/classificação só (score/max, egfr etc.) —
+    # o frontend mostra esse valor em destaque, como sempre fez. "dose": o
+    # resultado é uma dose/taxa (às vezes mais de um número, às vezes com
+    # texto no meio, ex. nome do fármaco) — o frontend mostra a interpretação
+    # em prosa como resposta principal, não um único número gigante. Ver
+    # `dose_calculators.py`, pedido do Rafael em 07/08/2026.
+    kind: str = "escore"
 
 
 # ---------------------------------------------------------------- CHA2DS2-VASc
@@ -1115,6 +1122,13 @@ REGISTRY: dict[str, Calculator] = {
     ),
 }
 
+# Calculadora de Doses Cardiológicas (pedido do Rafael, 07/08/2026) — módulo
+# separado por serem calculadoras de DOSE, não de escore/risco; importado no
+# fim do arquivo porque `dose_calculators.py` importa `Calculator`/`Field`
+# daqui, e essas duas classes já existem no namespace do módulo neste ponto.
+from .dose_calculators import DOSE_REGISTRY  # noqa: E402
+
+REGISTRY.update(DOSE_REGISTRY)
 
 
 def run(slug: str, payload: dict) -> dict:

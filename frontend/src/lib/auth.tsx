@@ -27,7 +27,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   async function entrar(email: string, senha: string) {
     await api.login(email, senha);
-    setUsuario(await api.get<Usuario>("/auth/me"));
+    // Navegação completa (não `setUsuario` + troca de rota via React
+    // Router) — pedido do Rafael, 07/08/2026: todo novo login precisa
+    // garantir bundle e conteúdo atuais, e a forma mais simples e sem
+    // custo de UX de garantir isso é uma recarga real de página logo
+    // aqui, num momento em que o usuário já espera uma transição de tela.
+    // O cookie de sessão (HttpOnly) já foi gravado por `api.login()`, então
+    // a próxima carga de `/` autentica normalmente via `/auth/me` no
+    // `AuthProvider` acima.
+    window.location.href = "/";
   }
 
   async function sair() {
