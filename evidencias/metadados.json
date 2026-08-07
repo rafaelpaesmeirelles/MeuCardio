@@ -34859,5 +34859,375 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "avaliacao-cardiologica-inicial-completa-antes-de-terapia-oncologica-cardiotoxica",
+    "statement": "Na avaliação cardiológica inicial do paciente que iniciará terapia oncológica potencialmente cardiotóxica, recomenda-se anamnese, exame físico, eletrocardiograma, radiografia de tórax, hemograma completo, dosagem de eletrólitos e biomarcadores (NT-proBNP e troponina I ou troponina T ultrassensível), ácido fólico, vitaminas D e B12, glicemia, perfil lipídico, além de função renal, hepática e tireoidiana.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "avaliação basal",
+      "cardiotoxicidade",
+      "biomarcadores"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-tridimensional-basal-e-seriado-com-strain-no-paciente-oncologico",
+    "statement": "Na avaliação basal e seriada de acordo com o regime de tratamento, recomenda-se ecocardiograma transtorácico com Doppler colorido, idealmente tridimensional, com análise da fração de ejeção do ventrículo esquerdo, da função diastólica e da deformação miocárdica por quantificação do strain com a técnica de speckle tracking.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ecocardiograma tridimensional",
+      "strain",
+      "speckle tracking",
+      "monitorização"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "definicao-diagnostica-de-cardiotoxicidade-por-exclusao-de-outras-etiologias",
+    "statement": "A cardiotoxicidade pode ser diagnosticada pela confirmação de uma nova alteração cardiovascular (clínica e/ou em biomarcadores e/ou em exame de imagem) durante ou após o tratamento oncológico, uma vez excluídas outras etiologias.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "cardiotoxicidade",
+      "diagnóstico diferencial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "metodo-de-simpson-biplanar-quando-eco-tridimensional-indisponivel-em-cardio-oncologia",
+    "statement": "A ecocardiografia tridimensional é o melhor método ecocardiográfico para medir a fração de ejeção do ventrículo esquerdo em pacientes oncológicos; quando não disponível ou na presença de limitações técnicas, recomenda-se o método de Simpson biplanar.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "método de simpson",
+      "fração de ejeção",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "repetir-exame-de-imagem-em-2-a-3-semanas-apos-queda-de-feve-detectada",
+    "statement": "A disfunção ventricular relacionada à terapia oncológica é definida como redução ≥10% na fração de ejeção do ventrículo esquerdo (FEVE) para um valor abaixo do limite inferior da normalidade (FEVE <50%); um novo exame de imagem cardiovascular deve ser realizado em 2 a 3 semanas para confirmação.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "disfunção ventricular",
+      "fração de ejeção",
+      "reavaliação de imagem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ventriculografia-radioisotopica-nao-recomendada-na-avaliacao-do-paciente-oncologico",
+    "statement": "A ventriculografia radioisotópica não é recomendada para a avaliação da função ventricular em pacientes oncológicos.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ventriculografia radioisotópica",
+      "função ventricular",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "biomarcadores-elevados-indicam-maior-risco-de-cardiotoxicidade",
+    "statement": "Níveis elevados de biomarcadores (NT-proBNP e troponina) indicam risco aumentado de cardiotoxicidade no paciente em tratamento oncológico.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "nt-probnp",
+      "troponina",
+      "biomarcadores",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitorizacao-clinica-e-ecocardiografica-durante-tratamento-com-trastuzumabe",
+    "statement": "Durante o tratamento com trastuzumabe, recomenda-se monitorização clínica e ecocardiográfica de acordo com protocolo estabelecido ou na presença de sinais e sintomas de insuficiência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "trastuzumabe",
+      "monitorização cardíaca",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ieca-bra-e-betabloqueador-antes-de-iniciar-terapia-cardiotoxica-com-feve-limitrofe",
+    "statement": "Em pacientes com fração de ejeção do ventrículo esquerdo entre 40% e 50%, recomenda-se terapia com IECA/BRA e betabloqueador antes de iniciar tratamento oncológico cardiotóxico.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ieca",
+      "bra",
+      "betabloqueador",
+      "cardioproteção",
+      "feve limítrofe"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "suspensao-temporaria-de-antineoplasico-com-feve-abaixo-de-40-e-inicio-de-terapia-de-ic",
+    "statement": "Pacientes em quimioterapia ou imunoterapia que desenvolvem insuficiência cardíaca com FEVE <40% durante o tratamento devem ter o tratamento antineoplásico temporariamente suspenso, com base em discussão entre cardiologista e oncologista, e a terapia para insuficiência cardíaca deve ser iniciada conforme diretrizes e consensos vigentes.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "suspensão de quimioterapia",
+      "insuficiência cardíaca",
+      "decisão multidisciplinar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dexrazoxana-em-cancer-de-mama-metastatico-com-dose-alta-de-antraciclina-planejada",
+    "statement": "Considerar o uso de dexrazoxana em pacientes com câncer de mama metastático e dose alta de antraciclina planejada (doxorrubicina >250 mg/m²).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "dexrazoxana",
+      "antraciclina",
+      "câncer de mama metastático",
+      "cardioproteção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dexrazoxana-em-sarcoma-e-linfoma-leucemia-pediatricos",
+    "statement": "Considerar o uso de dexrazoxana em pacientes com sarcoma e em pacientes pediátricos com linfoma/leucemia — recomendação de força distinta da usada em câncer de mama metastático com dose alta de antraciclina planejada, pela diferença de nível de evidência entre as duas populações.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "dexrazoxana",
+      "sarcoma",
+      "linfoma pediátrico",
+      "leucemia pediátrica",
+      "cardioproteção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "anticoagulacao-de-rotina-nao-recomendada-em-ambulatorial-oncologico-de-baixo-risco",
+    "statement": "Para pacientes ambulatoriais oncológicos de baixo risco de tromboembolismo venoso, a anticoagulação de rotina para prevenção não é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "tromboembolismo venoso",
+      "profilaxia ambulatorial",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "profilaxia-farmacologica-de-tev-em-grande-cirurgia-oncologica",
+    "statement": "Pacientes submetidos a grandes cirurgias oncológicas devem receber profilaxia farmacológica contra tromboembolismo venoso (enoxaparina ou heparina de baixo peso molecular), iniciada no período pré-operatório, exceto os que apresentam sangramento ativo ou alto risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "tromboembolismo venoso",
+      "profilaxia cirúrgica",
+      "heparina de baixo peso molecular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hbpm-preferida-a-hnf-nos-primeiros-dias-de-anticoagulacao-parenteral-no-cancer",
+    "statement": "Para pacientes com câncer iniciando tratamento com anticoagulação parenteral, a heparina de baixo peso molecular é preferível à heparina não fracionada nos primeiros dias de tratamento, desde que o paciente não tenha disfunção renal (clearance de creatinina >40 mL/min/m²).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "heparina de baixo peso molecular",
+      "tromboembolismo venoso",
+      "anticoagulação parenteral"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "anticoagulacao-de-longo-prazo-por-pelo-menos-6-meses-no-tev-associado-a-cancer",
+    "statement": "A anticoagulação de longo prazo no tromboembolismo venoso associado a câncer pode ser realizada preferencialmente com heparina de baixo peso molecular, edoxabana, apixabana ou rivaroxabana, por pelo menos 6 meses.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "tromboembolismo venoso",
+      "doac",
+      "heparina de baixo peso molecular",
+      "anticoagulação de longo prazo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "controle-de-fatores-de-risco-cardiovascular-em-quem-recebe-droga-predisponente-a-dac",
+    "statement": "O controle de fatores de risco (hipertensão, diabetes, dislipidemias), a perda de peso corporal, a cessação do tabagismo e a orientação dietética devem ser fornecidos a todos os pacientes que receberão fármacos predisponentes à doença arterial coronariana.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "fatores de risco cardiovascular",
+      "doença arterial coronariana",
+      "prevenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aferição-periódica-de-pressao-arterial-no-paciente-oncologico",
+    "statement": "A pressão arterial deve ser aferida de forma adequada e regular em pacientes oncológicos.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "hipertensão arterial",
+      "aferição de pressão arterial",
+      "monitorização"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "verapamil-e-diltiazem-nao-recomendados-no-paciente-oncologico-por-interacao-cyp3a4",
+    "statement": "Bloqueadores de canal de cálcio não di-hidropiridínicos (verapamil e diltiazem) não são recomendados em pacientes oncológicos, porque esses fármacos são metabolizados pela via do CYP3A4 e podem alterar os níveis séricos de fármacos antineoplásicos.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "verapamil",
+      "diltiazem",
+      "interação medicamentosa",
+      "cyp3a4",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
