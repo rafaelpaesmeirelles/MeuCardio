@@ -44,16 +44,12 @@ def _entresto_inicial(d: dict) -> dict:
             "motivo": "não há estudos em doença renal em estágio terminal e a bula não recomenda o uso",
         }
     if potassio > 5.4:
-        return {
-            "conduta": "nao_iniciar",
-            "motivo": "potássio sérico >5,4 mmol/L",
-        }
+        return {"conduta": "nao_iniciar", "motivo": "potássio sérico >5,4 mmol/L"}
     if pas < 100:
-        return {
-            "conduta": "nao_iniciar",
-            "motivo": "PAS <100 mmHg",
-        }
-    if terapia_sraa == "ieca" and horas_desde_ieca < 36:
+        return {"conduta": "nao_iniciar", "motivo": "PAS <100 mmHg"}
+
+    usa_ieca = terapia_sraa in {"ieca", "ieca_baixa_dose"}
+    if usa_ieca and horas_desde_ieca < 36:
         return {
             "conduta": "aguardar_washout_ieca",
             "horas_minimas": 36,
@@ -65,8 +61,10 @@ def _entresto_inicial(d: dict) -> dict:
     fatores_50 = []
     if terapia_sraa == "nenhum":
         fatores_50.append("não está usando IECA/BRA")
-    elif terapia_sraa == "baixa_dose":
-        fatores_50.append("uso prévio de baixa dose de IECA/BRA")
+    elif terapia_sraa == "ieca_baixa_dose":
+        fatores_50.append("uso prévio de baixa dose de IECA")
+    elif terapia_sraa == "bra_baixa_dose":
+        fatores_50.append("uso prévio de baixa dose de BRA")
     if tfge < 60:
         fatores_50.append("TFGe <60 mL/min/1,73 m²")
     if child_pugh == "B":
@@ -82,7 +80,7 @@ def _entresto_inicial(d: dict) -> dict:
         "titulacao": "dobrar a dose a cada 2-4 semanas, conforme tolerância",
         "fatores_para_inicio_50mg": fatores_50,
         "tfge_grave_menor_30": tfge < 30,
-        "suspender_bra_concomitante": terapia_sraa in {"bra", "baixa_dose"},
+        "suspender_bra_concomitante": terapia_sraa in {"bra", "bra_baixa_dose"},
     }
 
 
@@ -98,10 +96,7 @@ def _entresto_inicial_txt(r: dict) -> str:
             f"Intervalo informado {r['horas_informadas']} h; faltam aproximadamente {r['horas_restantes']} h."
         )
 
-    texto = (
-        f"Entresto®: iniciar {r['dose_inicial']}; alvo {r['dose_alvo']}; "
-        f"{r['titulacao']}."
-    )
+    texto = f"Entresto®: iniciar {r['dose_inicial']}; alvo {r['dose_alvo']}; {r['titulacao']}."
     if r["fatores_para_inicio_50mg"]:
         texto += " Razões para a dose de 50 mg 2x/dia: " + "; ".join(r["fatores_para_inicio_50mg"]) + "."
     if r["tfge_grave_menor_30"]:
@@ -113,18 +108,19 @@ def _entresto_inicial_txt(r: dict) -> str:
 
 _ENTRESTO_INICIAL = Calculator(
     slug="entresto-dose-inicial-bula-brasil-2025",
-    name="Entresto® — dose inicial, washout de IECA e titulação (bula Brasil)"
-    ,theme="Doses — Insuficiência Cardíaca",
+    name="Entresto® — dose inicial, washout de IECA e titulação (bula Brasil)",
+    theme="Doses — Insuficiência Cardíaca",
     purpose="Seleciona 50 versus 100 mg 2x/dia e aplica limites explícitos da bula brasileira antes da titulação ao alvo de 200 mg 2x/dia.",
     fields=[
         Field("terapia_sraa", "Terapia atual/prévia com IECA ou BRA", "select", options=[
             {"value": "nenhum", "label": "Não usa IECA nem BRA atualmente"},
-            {"value": "baixa_dose", "label": "Usava/usa baixa dose de IECA ou BRA"},
+            {"value": "ieca_baixa_dose", "label": "Usava/usa IECA em baixa dose"},
+            {"value": "bra_baixa_dose", "label": "Usava/usa BRA em baixa dose"},
             {"value": "ieca", "label": "Usa IECA em dose não classificada como baixa"},
             {"value": "bra", "label": "Usa BRA em dose não classificada como baixa"},
         ]),
         Field("horas_desde_ieca", "Horas desde a última dose de IECA", "number", "h", min=0, max=240,
-              help="Preencher quando terapia atual/prévia é IECA; mínimo de 36 h antes de iniciar Entresto."),
+              help="Obrigatório quando a opção é IECA, inclusive IECA em baixa dose; mínimo de 36 h antes de iniciar Entresto."),
         Field("tfge", "TFG estimada", "number", "mL/min/1,73 m²", min=0, max=200),
         Field("potassio", "Potássio sérico", "number", "mmol/L", min=1, max=10),
         Field("pas", "Pressão arterial sistólica", "number", "mmHg", min=50, max=250),
@@ -143,9 +139,9 @@ _ENTRESTO_INICIAL = Calculator(
     limitations=[
         "A bula brasileira usa apresentações nominais de Entresto 50/100/200 mg; não confundir com a nomenclatura internacional que frequentemente escreve os componentes como 24/26, 49/51 e 97/103 mg.",
         "Dose inicial padrão: 100 mg 2x/dia; alvo: 200 mg 2x/dia; dobrar a cada 2-4 semanas conforme tolerância.",
-        "Considerar/iniciar 50 mg 2x/dia se sem IECA/BRA, uso prévio de baixa dose, TFGe 30-60, TFGe <30, Child-Pugh B ou PAS 100-110 mmHg, conforme as respectivas seções da bula.",
+        "Considerar/iniciar 50 mg 2x/dia se sem IECA/BRA, uso prévio de baixa dose, TFGe <60, Child-Pugh B ou PAS 100-110 mmHg, conforme as respectivas seções da bula.",
         "Não iniciar se K >5,4 mmol/L ou PAS <100 mmHg.",
-        "Após IECA, respeitar pelo menos 36 h antes de iniciar Entresto; a terapia com IECA também só deve ser reiniciada 36 h após a última dose de Entresto.",
+        "Após IECA, inclusive em baixa dose, respeitar pelo menos 36 h antes de iniciar Entresto; a terapia com IECA também só deve ser reiniciada 36 h após a última dose de Entresto.",
         "Child-Pugh C, cirrose biliar ou colestase são contraindicações. A calculadora só codifica Child-Pugh C; cirrose biliar/colestase devem ser verificadas clinicamente.",
         "A calculadora não substitui avaliação de hipovolemia, hipotensão sintomática, angioedema prévio, gravidez, alisquireno no diabetes, interações e monitorização de K/creatinina.",
     ],
