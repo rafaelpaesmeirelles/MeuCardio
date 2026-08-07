@@ -12160,5 +12160,125 @@
       "Priori SG, Wilde AA, Horie M, Cho Y, Behr ER, Berul C, Blom N, Brugada J, Chiang CE, Huikuri H, Kannankeril P, Krahn A, Leenhardt A, Moss A, Schwartz PJ, Shimizu W, Tomaselli G, Tracy C. Executive summary: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):e85-e108. DOI: 10.1016/j.hrthm.2013.07.021. PMID: 23916535"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "fa-sintomatica-ablacao-reduz-morte-avc-e-sangramento-o-ensaio-cabana",
+    "titulo": "Fibrilação atrial sintomática: a ablação por cateter reduz morte, AVC incapacitante e sangramento, comparada ao tratamento medicamentoso?",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 66 anos, fibrilação atrial paroxística sintomática há 8 meses, apesar de betabloqueador em dose otimizada. Tem hipertensão controlada, sem outras comorbidades relevantes. O eletrofisiologista propõe ablação por cateter (isolamento de veias pulmonares) e o paciente pergunta se isso vai reduzir seu risco de morrer, ter AVC ou sangrar, comparado a simplesmente ajustar a medicação antiarrítmica.",
+    "pergunta": "O que a evidência de maior qualidade mostra sobre esse desfecho composto?",
+    "opcoes": [
+      "A ablação reduziu significativamente o desfecho composto de morte, AVC incapacitante, sangramento grave ou parada cardíaca, na análise por intenção de tratar",
+      "Na análise por intenção de tratar, não houve redução estatisticamente significativa do desfecho composto (HR 0,86; IC95% 0,65-1,15; p=0,30) — mas a ablação reduziu de forma expressiva a recorrência de FA e a hospitalização cardiovascular",
+      "A ablação aumentou significativamente a mortalidade, o que contraindica o procedimento neste perfil de paciente",
+      "O estudo não avaliou desfechos duros, apenas recorrência sintomática da arritmia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CABANA (JAMA 2019), com 2.204 pacientes randomizados entre ablação por cateter (isolamento de veias pulmonares) e terapia farmacológica, não demonstrou redução estatisticamente significativa do desfecho primário composto (morte, AVC incapacitante, sangramento grave ou parada cardíaca: 8,0% vs. 9,2%; HR 0,86; IC95% 0,65-1,15; p=0,30) na análise por intenção de tratar. Um fator que compromete a interpretação literal desse resultado negativo: 27,5% dos pacientes randomizados para o braço medicamentoso acabaram sendo submetidos a ablação durante o seguimento (crossover), o que dilui a diferença entre os grupos na análise por intenção de tratar. Entre os desfechos secundários, a ablação reduziu significativamente a recorrência de FA (49,9% vs. 69,5%; HR 0,52) e o composto de morte ou hospitalização cardiovascular (51,7% vs. 58,1%; HR 0,83; p=0,001) — ou seja, o procedimento melhora controle de ritmo e reduz hospitalização, mesmo sem prova estatística robusta de redução de mortalidade isolada nesta análise. A decisão de indicar ablação continua sendo guiada primariamente por controle sintomático, não pela promessa de reduzir mortalidade.",
+    "source_refs": [
+      "Packer DL, Mark DB, Robb RA, et al.; CABANA Investigators. Effect of Catheter Ablation vs Antiarrhythmic Drug Therapy on Mortality, Stroke, Bleeding, and Cardiac Arrest Among Patients With Atrial Fibrillation: The CABANA Randomized Clinical Trial. JAMA. 2019;321(13):1261-1274. DOI: 10.1001/jama.2019.0693. PMID: 30874766"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tev-associado-a-cancer-edoxabana-oral-versus-dalteparina-subcutanea-hokusai-vte-cancer",
+    "titulo": "TEV associado a câncer: edoxabana oral pode substituir a dalteparina subcutânea?",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 61 anos, com adenocarcinoma de pâncreas metastático, diagnosticada com trombose venosa profunda proximal sintomática. A equipe de oncologia pergunta se é possível tratar com um anticoagulante oral (edoxabana), em vez do padrão histórico de heparina de baixo peso molecular subcutânea injetável por via subcutânea (dalteparina) por todo o tratamento.",
+    "pergunta": "O que o ensaio randomizado que testou diretamente essa comparação mostrou?",
+    "opcoes": [
+      "Edoxabana foi inferior à dalteparina para o desfecho composto de recorrência de TEV ou sangramento maior, não devendo ser usada",
+      "Edoxabana foi não inferior à dalteparina no desfecho composto (12,8% vs. 13,5%; p=0,006 para não inferioridade) — com menos recorrência de TEV, mas mais sangramento maior",
+      "Não houve diferença em nenhum componente do desfecho entre os dois fármacos",
+      "O estudo não incluiu pacientes com câncer de pâncreas, não podendo ser extrapolado para este caso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O Hokusai VTE Cancer (NEJM 2018), ensaio aberto e de não inferioridade com 1.046 pacientes com câncer e TEV agudo, comparou heparina de baixo peso molecular seguida de edoxabana oral (60 mg/dia) versus dalteparina subcutânea isolada por até 12 meses. O desfecho composto (recorrência de TEV ou sangramento maior em 12 meses) ocorreu em 12,8% com edoxabana e 13,5% com dalteparina, confirmando não inferioridade (p=0,006), sem diferença estatística para superioridade (p=0,87). Olhando os componentes separadamente: a recorrência de TEV foi numericamente menor com edoxabana (7,9% vs. 11,3%), mas o sangramento maior foi mais frequente (6,9% vs. 4,0% — diferença de risco de 2,9 pontos percentuais). Essa foi exatamente a assimetria (mais eficácia, mais sangramento) que, junto de achados semelhantes de outros DOAC nessa população (como o CARAVAGGIO, com apixabana e sem esse excesso de sangramento), motivou as diretrizes atuais a recomendar anticoagulante oral direto no TEV associado a câncer, com cautela redobrada em tumores gastrointestinais/urológicos ainda não ressecados, onde o risco de sangramento de mucosa é maior.",
+    "source_refs": [
+      "Raskob GE, van Es N, Verhamme P, et al.; Hokusai VTE Cancer Investigators. Edoxaban for the Treatment of Cancer-Associated Venous Thromboembolism. N Engl J Med. 2018;378(7):615-624. DOI: 10.1056/NEJMoa1711948. PMID: 29231094"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aaa-elegivel-para-os-dois-metodos-sobrevida-em-6-anos-e-reintervencao-o-ensaio-dream",
+    "titulo": "Aneurisma de aorta abdominal elegível para os dois métodos: a vantagem inicial de sobrevida do reparo endovascular se mantém em 6 anos?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 69 anos, aneurisma de aorta abdominal infrarrenal de 5,6 cm, anatomia favorável para reparo endovascular (EVAR) ou cirurgia aberta, sem contraindicação a nenhum dos dois métodos. Ele já ouviu de um colega que o EVAR tem menos mortalidade perioperatória e pergunta se essa vantagem se mantém no longo prazo.",
+    "pergunta": "O que o seguimento de longo prazo do ensaio randomizado holandês (DREAM) mostrou, comparando EVAR e cirurgia aberta?",
+    "opcoes": [
+      "A vantagem de sobrevida do EVAR se manteve e ampliou ao longo de 6 anos de seguimento",
+      "Em 6 anos, a sobrevida cumulativa foi semelhante entre os métodos (69,9% cirurgia aberta vs. 68,9% EVAR; p=0,97), mas a taxa de reintervenção foi significativamente maior com EVAR (liberdade de reintervenção 81,9% vs. 70,4%; p=0,03)",
+      "A cirurgia aberta teve mortalidade perioperatória menor que o EVAR neste ensaio",
+      "O EVAR eliminou por completo a necessidade de reintervenção em relação à cirurgia aberta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O DREAM (Dutch Randomized Endovascular Aneurysm Management), com 351 pacientes randomizados entre cirurgia aberta e EVAR, mostrou no seguimento de 6 anos que a sobrevida cumulativa foi estatisticamente igual entre os métodos (69,9% cirurgia aberta vs. 68,9% EVAR; diferença de 1,0 ponto percentual; IC95% -8,8 a 10,8; p=0,97) — a vantagem inicial de sobrevida do EVAR (descrita nos primeiros relatos do ensaio, ligada à menor mortalidade perioperatória) deixou de ser detectável já a partir do segundo ano. Em compensação, a taxa de liberdade de reintervenções secundárias foi significativamente menor no grupo EVAR (70,4% vs. 81,9% no grupo cirurgia aberta; p=0,03) — ou seja, quem faz EVAR tem menor risco cirúrgico imediato, mas maior chance de precisar de um novo procedimento ao longo dos anos, geralmente por endoleak ou necessidade de reintervenção endovascular. Esse mesmo padrão (sobrevida equivalente a longo prazo, mais reintervenção com EVAR) foi replicado por outros ensaios independentes (como o OVER, de 14 anos, já cadastrado nesta base), o que reforça a mensagem para a decisão compartilhada: a escolha do método deve pesar o risco cirúrgico imediato contra a disposição do paciente para vigilância e eventual reintervenção ao longo da vida.",
+    "source_refs": [
+      "De Bruin JL, Baas AF, Buth J, et al.; DREAM Study Group. Long-term outcome of open or endovascular repair of abdominal aortic aneurysm. N Engl J Med. 2010;362(20):1881-1889. DOI: 10.1056/NEJMoa0909499. PMID: 20484396"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "avaliacao-pre-operatoria-de-capacidade-funcional-estimativa-subjetiva-versus-dasi-o-estudo-mets",
+    "titulo": "Avaliação pré-operatória de capacidade funcional: a estimativa clínica subjetiva de METs é confiável?",
+    "tema": "Perioperatório",
+    "nivel": "avançado",
+    "enunciado": "Homem, 70 anos, diabetes e história de AVC prévio sem sequela, será submetido a cirurgia oncológica de grande porte. No ambulatório de avaliação pré-operatória, o anestesiologista pergunta ao paciente sobre suas atividades do dia a dia e conclui, por impressão clínica, que ele tem 'boa capacidade funcional, mais de 4 METs', dispensando investigação adicional.",
+    "pergunta": "O que o estudo de coorte internacional prospectivo (METS) mostrou sobre a acurácia dessa avaliação subjetiva, comparada a medidas objetivas?",
+    "opcoes": [
+      "A avaliação subjetiva teve alta sensibilidade e alta especificidade para identificar quem não atingia 4 METs no teste cardiopulmonar de exercício, validando a prática",
+      "A avaliação subjetiva teve sensibilidade muito baixa (19,2%) para identificar a incapacidade de atingir 4 METs no CPET, apesar de especificidade alta (94,7%) — ou seja, o médico costuma superestimar a capacidade funcional real do paciente",
+      "O estudo mostrou que nenhuma medida objetiva (CPET, DASI, NT-proBNP) teve relação com desfecho pós-operatório, tornando a avaliação subjetiva a melhor opção disponível",
+      "A avaliação subjetiva só é imprecisa em pacientes acima de 80 anos, sendo confiável nas demais faixas etárias"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo METS (Lancet 2018), coorte prospectiva multicêntrica com 1.401 pacientes submetidos a cirurgia não cardíaca de grande porte, comparou a estimativa subjetiva de capacidade funcional pelo anestesiologista contra medidas objetivas — teste cardiopulmonar de exercício (CPET, padrão-ouro), questionário DASI (Duke Activity Status Index) e NT-proBNP. A estimativa subjetiva teve sensibilidade de apenas 19,2% (IC95% 14,2-25) para identificar pacientes incapazes de atingir 4 METs no CPET, ainda que a especificidade fosse alta (94,7%) — na prática, isso significa que a maioria dos pacientes com capacidade funcional objetivamente baixa é classificada erroneamente como \"boa capacidade funcional\" pela impressão clínica. Dos marcadores testados, só o escore DASI se associou de forma independente ao desfecho primário (morte ou infarto em 30 dias; OR ajustada 0,96 por ponto; IC95% 0,83-0,99; p=0,03). A conclusão prática do estudo, incorporada a diretrizes perioperatórias posteriores, é que a estimativa subjetiva de METs — prática amplamente disseminada — não deve ser usada isoladamente para decidir a necessidade de investigação cardíaca adicional; um instrumento estruturado como o DASI é mais confiável e não exige teste de esforço.",
+    "source_refs": [
+      "Wijeysundera DN, Pearse RM, Shulman MA, et al. Assessment of functional capacity before major non-cardiac surgery: an international, prospective cohort study. Lancet. 2018;391(10140):2631-2640. DOI: 10.1016/S0140-6736(18)31131-0. PMID: 30070222"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-borderline-sem-sopro-audivel-criterios-ecocardiograficos-da-world-heart-federation",
+    "titulo": "Cardiopatia reumática sem sopro audível: quando o ecocardiograma já define o diagnóstico?",
+    "tema": "Febre reumática",
+    "nivel": "avançado",
+    "enunciado": "Menina, 11 anos, sem história conhecida de febre reumática aguda, é submetida a ecocardiograma de rastreamento em programa escolar numa região de alta incidência de cardiopatia reumática. O exame mostra insuficiência mitral com pelo menos duas características morfológicas valvares sugestivas de doença reumática, mas o jato de regurgitação não atinge os critérios Doppler mais completos de \"definite RHD\", e a ausculta clínica não identificou sopro.",
+    "pergunta": "Segundo os critérios ecocardiográficos padronizados da World Heart Federation, essa combinação de achados permite qual classificação, mesmo sem sopro à ausculta?",
+    "opcoes": [
+      "Nenhuma classificação é possível sem sopro audível — ausculta normal descarta cardiopatia reumática por definição",
+      "Pode ser classificada como \"borderline RHD\" (cardiopatia reumática limítrofe), categoria criada justamente para achados morfológicos sugestivos sem preencher todos os critérios Doppler de doença definida — isso já basta para considerar entrada em programa de profilaxia secundária",
+      "Só pode ser classificada como \"definite RHD\" se houver relato prévio confirmado de febre reumática aguda",
+      "A classificação ecocardiográfica de cardiopatia reumática só é válida em pacientes acima de 20 anos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Os critérios da World Heart Federation (WHF) para diagnóstico ecocardiográfico de cardiopatia reumática (Reményi B et al., Nat Rev Cardiol 2012) foram desenvolvidos exatamente para resolver o problema deste caso: rastreamento ecocardiográfico em populações de alto risco revelou uma carga de doença muito maior do que a suspeitada pela ausculta clínica isolada, com casos subclínicos (sem sopro, sem diagnóstico prévio de febre reumática aguda) que só aparecem ao ecocardiograma. Os critérios definem três categorias — \"normal\", \"borderline RHD\" e \"definite RHD\" — com subcategorias morfológicas e critérios Doppler específicos para cada uma, e a categoria \"borderline\" existe justamente para achados morfológicos sugestivos (espessamento de folheto, prolapso, restrição de mobilidade) que não preenchem todos os critérios de regurgitação patológica exigidos para \"definite\". A padronização permite identificar, de forma consistente entre diferentes serviços, pacientes sem sopro e sem diagnóstico prévio de febre reumática aguda que se beneficiam de entrar em programa de profilaxia secundária com penicilina benzatina — a própria publicação original reconhece, porém, que ainda há incerteza sobre o significado prognóstico da doença subclínica borderline e sobre a relação custo-benefício de rastreamento em larga escala, pontos que a decisão clínica individual precisa ponderar.",
+    "source_refs": [
+      "Reményi B, Wilson N, Steer A, et al. World Heart Federation criteria for echocardiographic diagnosis of rheumatic heart disease--an evidence-based guideline. Nat Rev Cardiol. 2012;9(5):297-309. DOI: 10.1038/nrcardio.2012.7. PMID: 22371105"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-no-pronto-socorro-regra-de-decisao-de-boston-para-identificar-risco",
+    "titulo": "Síncope no pronto-socorro: a Regra de Boston identifica quem tem risco real de complicação em 30 dias?",
+    "tema": "Síncope",
+    "nivel": "básico",
+    "enunciado": "Homem, 58 anos, chega ao pronto-socorro após episódio de síncope presenciado, sem pródromo típico, resolvido espontaneamente. Exame físico e sinais vitais normais na avaliação inicial, sem sopro cardíaco ao exame, sem sinais de disfunção do sistema de condução ao ECG, sem antecedente cardíaco relevante e sem sinais de depleção de volume. A equipe está em dúvida sobre internar para investigação ou liberar com seguimento ambulatorial.",
+    "pergunta": "O que a Regra de Boston para Síncope (Boston Syncope Criteria), validada em coorte prospectiva de pronto-socorro, propõe para essa decisão?",
+    "opcoes": [
+      "Todo paciente com síncope deve ser internado independentemente de achados clínicos, por segurança",
+      "A regra usa 8 critérios de risco (sinais/sintomas de síndrome coronariana aguda, sinais de doença do sistema de condução, história cardíaca preocupante, valvopatia, história familiar de morte súbita, sinais vitais persistentemente alterados, depleção de volume e evento primário do sistema nervoso central) — na ausência de todos eles, o risco de desfecho adverso ou intervenção crítica em 30 dias é baixo, com sensibilidade de 97% da regra para identificar quem tem risco",
+      "A regra baseia-se exclusivamente na idade do paciente acima ou abaixo de 60 anos",
+      "A regra só se aplica a pacientes já internados, não a quem está no pronto-socorro"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Regra de Boston para Síncope (Grossman SA et al., J Emerg Med 2007) foi derivada numa coorte prospectiva de 362 pacientes consecutivos com síncope no pronto-socorro, com o objetivo de identificar quem tem risco real de desfecho adverso (óbito, IAM, arritmia significativa, TEP, hemorragia maior, entre outros) ou de necessitar intervenção crítica em 30 dias. A regra reúne 8 critérios de risco: sinais/sintomas de síndrome coronariana aguda, sinais de doença do sistema de condução, história cardíaca preocupante, valvopatia ao exame ou história, história familiar de morte súbita, sinais vitais persistentemente anormais no pronto-socorro, sinais de depleção de volume e evento primário do sistema nervoso central. Na coorte de derivação, 23% dos pacientes (68 de 293 com seguimento completo) tiveram desfecho adverso ou intervenção crítica em 30 dias, e a regra identificou 66 desses 68 casos — sensibilidade de 97% (IC95% 93-100%) e especificidade de 62% (IC95% 56-69%). Como o paciente deste caso não preenche nenhum dos 8 critérios, a regra sinaliza baixo risco, sustentando alta com seguimento ambulatorial em vez de internação — mas os próprios autores destacam que a regra ainda exigia validação multicêntrica antes de aplicação disseminada, e ela deve ser usada como apoio à decisão clínica, não como substituto do julgamento médico.",
+    "source_refs": [
+      "Grossman SA, Fischer C, Lipsitz LA, et al. Predicting adverse outcomes in syncope. J Emerg Med. 2007;33(3):233-239. DOI: 10.1016/j.jemermed.2007.04.001. PMID: 17976548"
+    ],
+    "review_status": "revisado"
   }
 ]
