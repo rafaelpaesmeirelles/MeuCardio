@@ -13222,5 +13222,65 @@
       "Pope CA 3rd, Burnett RT, Thurston GD, Thun MJ, Calle EE, Krewski D, Godleski JJ. Cardiovascular mortality and long-term exposure to particulate air pollution: epidemiological evidence of general pathophysiological pathways of disease. Circulation. 2004;109(1):71-77. DOI: 10.1161/01.CIR.0000108927.80044.7F. PMID: 14676145"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "lodoco2-colchicina-doenca-coronariana-cronica-caso",
+    "titulo": "Colchicina em baixa dose na doença coronariana crônica: o que mostrou o LoDoCo2?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com doença coronariana crônica estável, sem evento agudo recente, já em uso otimizado de estatina e antiagregante. A equipe discute se colchicina em baixa dose, como terapia anti-inflamatória adicional, teria respaldo de evidência nesse cenário (não pós-infarto agudo).",
+    "pergunta": "Segundo o ensaio LoDoCo2 (Nidorf et al., NEJM 2020), qual foi o resultado do desfecho primário com colchicina 0,5 mg/dia versus placebo em doença coronariana crônica, e que sinal de segurança foi observado?",
+    "opcoes": [
+      "Sem diferença no desfecho primário; aumento de sangramento maior com colchicina",
+      "Redução significativa do desfecho primário (HR 0,69; IC95% 0,57-0,83; p<0,001), mas com sinal de aumento numérico de morte por causa NÃO cardiovascular (HR 1,51; IC95% 0,99-2,31)",
+      "Redução significativa do desfecho primário, sem nenhum sinal de segurança a observar",
+      "O ensaio foi interrompido precocemente por futilidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Nidorf SM et al. (N Engl J Med. 2020;383(19):1838-1847, PMID 32865380), ensaio LoDoCo2, 5.522 pacientes com doença coronariana crônica, colchicina 0,5 mg/dia vs. placebo, seguimento mediano de 28,6 meses. Desfecho primário (morte cardiovascular, infarto espontâneo, AVC isquêmico ou revascularização guiada por isquemia): 6,8% com colchicina vs. 9,6% com placebo (HR 0,69; IC95% 0,57-0,83; p<0,001). MAS o próprio resumo do ensaio registra sinal de aumento numérico de morte por causa não cardiovascular no grupo colchicina (0,7 vs. 0,5 eventos por 100 pessoas-ano; HR 1,51; IC95% 0,99-2,31) — um sinal a monitorar, não um detalhe a ignorar ao comunicar o resultado. Estende para doença crônica o racional anti-inflamatório já estabelecido pelo COLCOT na fase pós-infarto.",
+    "source_refs": [
+      "Nidorf SM, Fiolet ATL, Mosterd A, et al; LoDoCo2 Trial Investigators. Colchicine in Patients with Chronic Coronary Disease. N Engl J Med. 2020;383(19):1838-1847. DOI: 10.1056/NEJMoa2021372. PMID: 32865380"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "colcot-colchicina-pos-infarto-componentes-do-desfecho-caso",
+    "titulo": "COLCOT: quais componentes do desfecho composto realmente melhoraram com colchicina pós-infarto?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avancado",
+    "enunciado": "Paciente foi internado há 3 semanas por infarto do miocárdio. A equipe considera iniciar colchicina em baixa dose como terapia anti-inflamatória adjuvante e quer entender exatamente qual componente do desfecho do ensaio COLCOT sustenta essa decisão.",
+    "pergunta": "Segundo o ensaio COLCOT (Tardif et al., NEJM 2019), o desfecho primário composto foi reduzido com colchicina — mas quais componentes individuais atingiram significância estatística isolada?",
+    "opcoes": [
+      "Morte cardiovascular e infarto do miocárdio, os dois componentes mais relevantes clinicamente",
+      "AVC (HR 0,26) e internação urgente por angina levando a revascularização (HR 0,50) — morte cardiovascular, parada cardíaca ressuscitada e infarto do miocárdio isolados NÃO atingiram significância estatística individual",
+      "Todos os 5 componentes do desfecho composto foram significativos isoladamente",
+      "Apenas parada cardíaca ressuscitada foi significativa isoladamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Tardif JC et al. (N Engl J Med. 2019;381(26):2497-2505, PMID 31733140), ensaio COLCOT, 4.745 pacientes dentro de 30 dias pós-infarto, colchicina 0,5 mg/dia vs. placebo. Desfecho primário composto: 5,5% vs. 7,1% (HR 0,77; IC95% 0,61-0,96; p=0,02). Mas por componente: morte cardiovascular HR 0,84 (IC95% 0,46-1,52, não significativo), parada cardíaca ressuscitada HR 0,83 (IC95% 0,25-2,73, não significativo), infarto HR 0,91 (IC95% 0,68-1,21, não significativo), AVC HR 0,26 (IC95% 0,10-0,70, significativo) e internação urgente por angina com revascularização HR 0,50 (IC95% 0,31-0,81, significativo). O efeito do composto foi impulsionado principalmente por AVC e revascularização urgente — leitura essencial para comunicar a evidência com precisão, sem sugerir que colchicina comprovadamente reduz morte ou reinfarto isoladamente neste ensaio.",
+    "source_refs": [
+      "Tardif JC, Kouz S, Waters DD, et al. Efficacy and Safety of Low-Dose Colchicine after Myocardial Infarction. N Engl J Med. 2019;381(26):2497-2505. DOI: 10.1056/NEJMoa1912388. PMID: 31733140"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "consultor-leigo-vs-apn-pos-infarto-resultado-nulo-caso",
+    "titulo": "Quando o suporte de pares não muda o desfecho: o resultado nulo de Carroll & Rankin",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Um serviço de cardiologia planeja implantar um programa de consultor leigo (peer advisor) para idosos sem parceiro após infarto do miocárdio, esperando replicar automaticamente resultados positivos vistos em outras populações com suporte de pares.",
+    "pergunta": "Segundo o ensaio de Carroll & Rankin (Eur J Cardiovasc Nurs 2005), o que se encontrou ao comparar consultor leigo, enfermeira de prática avançada (APN) e cuidado padrão nesse subgrupo específico?",
+    "opcoes": [
+      "O consultor leigo foi superior à APN e ao cuidado padrão em todos os desfechos",
+      "Não houve diferença significativa entre os 3 grupos em nenhum desfecho de saúde às 12 semanas — resultado nulo, que os próprios autores atribuem possivelmente a medidas pouco sensíveis à mudança nesse subgrupo",
+      "A APN foi superior ao consultor leigo, mas ambos foram superiores ao cuidado padrão",
+      "O estudo não avaliou desfecho de saúde, apenas satisfação com o programa"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Carroll DL, Rankin SH (Eur J Cardiovasc Nurs. 2005;5(1):83-89, PMID 16256442), ensaio randomizado de 3 grupos em idosos sem parceiro pós-infarto: consultor leigo, APN e cuidado padrão, avaliados por telefone às 12 semanas pós-alta. NÃO houve diferença significativa entre os 3 grupos em autoeficácia, desempenho de comportamentos de recuperação, ou saúde física e mental. Os próprios autores reconhecem que os dados não validaram os benefícios das intervenções testadas, e que medidas mais sensíveis poderiam ser necessárias para detectar mudança nesse subgrupo. O caso ilustra por que a generalização de intervenções de suporte social/pares entre populações não é automática — cada contexto e subgrupo pode responder de forma diferente, e um programa planejado deveria idealmente ser piloto-testado, não apenas replicado por analogia.",
+    "source_refs": [
+      "Carroll DL, Rankin SH. Comparing interventions in older unpartnered adults after myocardial infarction. Eur J Cardiovasc Nurs. 2005;5(1):83-89. DOI: 10.1016/j.ejcnurse.2005.09.001. PMID: 16256442"
+    ],
+    "review_status": "revisado"
   }
 ]
