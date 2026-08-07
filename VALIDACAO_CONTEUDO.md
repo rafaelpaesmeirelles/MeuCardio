@@ -319,3 +319,46 @@ próprio — conferido via `esummary db=pmc`, título bate exatamente).
   frente mais antiga de `galeria/`/`exames/` do segundo agente — seguem para a próxima rodada.
 
 ---
+
+## Rodada 4 — 07/08/2026 (mesmo dia, ciclo seguinte)
+
+### Commit `0cd86cb` — evidências: +6 recomendações Classe/Nível (ESC) para o tema Calculadoras (HCM Risk-SCD + STS-PROM/EuroSCORE II)
+
+**Conferido:**
+- PMID 37622657 (ESC 2023 Guidelines for the management of cardiomyopathies) — registro
+  (título/revista/volume/edição/páginas/DOI) confere exatamente no PubMed. **Sem PMC** disponível
+  (`elink` não devolve `pubmed_pmc`) — não consegui conferir as 4 recomendações de HCM Risk-SCD
+  linha a linha contra o texto integral nesta rodada (mesmo bloqueio de `academic.oup.com` já
+  registrado no projeto).
+- PMID 34453165 (ESC/EACTS 2021 valvopatias) — o commit cita a fonte como PMCID 9725093, sem PMID
+  próprio no texto; localizei o PMID correspondente (34453165, Eur Heart J. 2022;43(7):561-632) e
+  confirmei que **título/revista/volume/edição/páginas batem exatamente** com a citação do commit.
+  **Texto integral acessado** via PMC (aberto), permitindo conferência real, não só de registro.
+
+**🚨 ERRO REAL ENCONTRADO — evidencias/metadados.json, item
+`estenose-aortica-tavi-recomendada-em-idoso-ou-alto-risco-sts-prom`:**
+O item grava `"evidence_level": "B"` para a recomendação *"TAVI is recommended in older patients
+(≥75 years), or in those who are high risk (STS-PROM/EuroSCORE II >8%) or unsuitable for
+surgery"*. **Conferido no HTML da tabela original do PMC** (célula de nível de evidência com cor
+de fundo distinta, lida da estrutura `<tr><td>...recomendação...</td><td>I</td><td>A</td></tr>`):
+a diretriz atribui a essa recomendação **Classe I, Nível A** — não Nível B. O nível correto é
+**A**, não B. (A recomendação irmã de SAVR, no mesmo item de tabela — *"SAVR is recommended in
+younger patients who are low risk for surgery (<75 years and STS-PROM/EuroSCORE II <4%)..."* —
+está corretamente gravada como Classe I/Nível B no item `estenose-aortica-savr-recomendada-em-jovem-baixo-risco-cirurgico-sts-prom`, conferido contra a mesma tabela: bate.)
+**Ação recomendada:** corrigir `evidence_level` de `"B"` para `"A"` no slug
+`estenose-aortica-tavi-recomendada-em-idoso-ou-alto-risco-sts-prom` em `evidencias/metadados.json`.
+
+**As 4 recomendações de HCM Risk-SCD (alto risco IIa/B, intermediário IIb/B, baixo risco com LGE
+extenso IIb/B, prevenção secundária I/B) não foram conferidas contra o texto integral** — sem
+acesso ao PMC/PDF da diretriz ESC 2023 nesta rodada. Ficam como não verificadas, não como
+confirmadas.
+
+- JSON: `python3 -c "import json; json.load(open('evidencias/metadados.json'))"` — válido.
+
+### Não verificado por falta de tempo nesta rodada (rodada 4)
+- As 4 recomendações de HCM Risk-SCD do commit `0cd86cb`, contra o texto integral da ESC 2023 de
+  cardiomiopatias (sem PMC aberto, acesso bloqueado nesta rodada).
+- Commits mais antigos ainda não revisados (`051cc7a`, `97d639c`, `a7c275f`, `b88c0ae`) e toda a
+  frente mais antiga de `galeria/`/`exames/` do segundo agente.
+
+---
