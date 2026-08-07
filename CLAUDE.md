@@ -1,5 +1,46 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🗂️ DIVISÃO DE PRODUÇÃO DE CONTEÚDO EM DUAS METADES — pedido do Rafael, 08/08/2026
+> Texto dele: *"divida todo o conteudo da corvia em 2, voce vai assumir producao de conteudo para
+> uma metade e o chat gpt vai assumir a outra"*. Se você é o ChatGPT (ou qualquer sessão Claude
+> Code) lendo este arquivo pela primeira vez: **esta tabela é a sua faixa — não escreva fora dela
+> sem avisar aqui antes**, mesma regra que todo o histórico deste arquivo já documenta para
+> divisões anteriores entre sessões.
+>
+> **Método:** as 29 áreas temáticas de `content/` foram medidas em **todas as frentes** (documentos,
+> evidências, estudos, casos clínicos, trilhas, galeria, exames — não só a contagem de `.md`), e
+> divididas em dois grupos por um algoritmo guloso de balanceamento (maior item primeiro, sempre
+> para o lado com soma menor), não por sorteio nem por afinidade de assunto. Resultado: **3.133
+> itens de um lado, 3.277 do outro — 2,2% de diferença**, o mais próximo de 50/50 que uma divisão
+> por tema inteiro permite.
+>
+> | Grupo | Dono | Temas (com o total de itens de cada um, todas as frentes somadas) |
+> |---|---|---|
+> | **A** | **Claude (esta sessão e sucessoras)** | Cardiomiopatias (459) · Cardiologia pediátrica (310) · Cardiologia geriátrica (275) · Pericárdio (243) · Valvopatias (222) · Febre reumática (211) · Farmacologia (197) · Terapia intensiva (186) · Tromboembolismo (177) · Arritmias (175) · Síncope (171) · Geral (170) · Saúde mental e cardiologia (169) · Prevenção e lipídios (168) |
+> | **B** | **ChatGPT** | Cardiopatias congênitas (347) · Doença coronariana (331) · Perioperatório (278) · Aorta e doença arterial periférica (270) · Endocardite (233) · Fibrilação atrial (221) · Cardio-oncologia (201) · Gravidez (192) · Dispositivos (178) · Hipertensão (176) · Diabetes e cardiologia (174) · Calculadoras (170) · Comunicação clínica (170) · Hipertensão pulmonar (169) · Insuficiência cardíaca (167) |
+>
+> **As quatro frentes que não são organizadas por tema** (catálogos únicos, não fragmentáveis por
+> assunto sem risco de duplicar entrada): `medicamentos/metadados.json` e `interacoes.json` ficam
+> com o **Grupo A** (pareiam naturalmente com Farmacologia); `emergencia/`, `checklists/` e
+> `material-paciente/` ficam com o **Grupo B** — é essa distribuição que fecha o equilíbrio citado
+> acima (3.133 + 175 = 3.308 · 3.277 + 59 + 38 + 40 = 3.414).
+>
+> **O risco real, já documentado à exaustão neste arquivo para as divisões anteriores, continua
+> valendo aqui:** `evidencias/metadados.json`, `estudos/metadados.json`, `casos-clinicos/
+> metadados.json`, `trilhas/metadados.json`, `galeria/metadados.json` e `exames/metadados.json` são
+> **arquivos únicos que cobrem os 29 temas ao mesmo tempo** — não existe um arquivo por tema. Cada
+> lado só deve **adicionar** entradas dos próprios temas, nunca reescrever o arquivo inteiro a
+> partir de uma cópia desatualizada, e sempre conferir `git pull`/diff antes de commitar para não
+> apagar o lote do outro lado. Fluxogramas e calculadoras não são frente separada — vivem dentro de
+> `content/` e seguem o dono do tema (ex.: fluxograma de Cardiomiopatias é do Grupo A, de
+> Fibrilação atrial é do Grupo B).
+>
+> **O que não muda:** a régua de qualidade é a mesma para os dois lados — nada fabricado, fonte
+> primária real e verificável (PMID/DOI conferido, nunca aceito por citação de segunda mão), e
+> `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar um valor com segurança.
+> Alterar código de backend/frontend continua fora do escopo desta divisão de conteúdo — é uma
+> autorização separada, como sempre foi neste projeto.
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~19h20: 2 bugs reportados pelo Rafael — recarga automática presa após o 1º deploy do dia + endereço profissional ausente no laudo pré-operatório
 > Dois relatos separados do Rafael, os dois investigados a fundo (reprodução real, não suposição)
 > e corrigidos.
