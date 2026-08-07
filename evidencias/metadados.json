@@ -34107,5 +34107,126 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hcm-risk-scd-alto-risco-cdi-deve-ser-considerado",
+    "statement": "Na cardiomiopatia hipertrófica, para paciente com risco estimado em 5 anos ≥6% (alto risco) pelo escore HCM Risk-SCD, o implante de cardiodesfibrilador (CDI) em prevenção primária DEVE SER CONSIDERADO, sempre dentro de decisão compartilhada com o paciente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657 — já citado e verificado em content/Calculadoras/hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofica.md, seção 'Categorias de risco e decisão de CDI (ESC 2023)'.",
+    "theme": "Calculadoras",
+    "tags": [
+      "HCM Risk-SCD",
+      "cardiomiopatia hipertrófica",
+      "cardiodesfibrilador implantável",
+      "morte súbita cardíaca",
+      "prevenção primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hcm-risk-scd-risco-intermediario-cdi-pode-ser-considerado",
+    "statement": "Na cardiomiopatia hipertrófica, para paciente com risco estimado em 5 anos entre 4% e <6% (risco intermediário) pelo escore HCM Risk-SCD, o implante de cardiodesfibrilador (CDI) em prevenção primária PODE SER CONSIDERADO, dentro de decisão compartilhada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657 — já citado e verificado em content/Calculadoras/hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofica.md.",
+    "theme": "Calculadoras",
+    "tags": [
+      "HCM Risk-SCD",
+      "cardiomiopatia hipertrófica",
+      "cardiodesfibrilador implantável",
+      "risco intermediário"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hcm-risk-scd-baixo-risco-com-lge-extenso-cdi-pode-ser-considerado",
+    "statement": "Na cardiomiopatia hipertrófica, para paciente com risco estimado em 5 anos <4% (baixo risco) pelo escore HCM Risk-SCD, o CDI profilático não é rotineiramente recomendado — EXCETO na presença de realce tardio extenso (LGE ≥15% da massa do ventrículo esquerdo) na ressonância cardíaca, situação em que o implante PODE SER CONSIDERADO em decisão compartilhada. A extensão de fibrose por LGE não faz parte das sete variáveis do modelo original e funciona como reclassificador adicional nessa faixa de baixo risco.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657 — já citado e verificado em content/Calculadoras/hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofica.md.",
+    "theme": "Calculadoras",
+    "tags": [
+      "HCM Risk-SCD",
+      "cardiomiopatia hipertrófica",
+      "realce tardio",
+      "ressonância cardíaca",
+      "fibrose miocárdica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hcm-risk-scd-prevencao-secundaria-cdi-independente-do-escore",
+    "statement": "Na cardiomiopatia hipertrófica, em prevenção secundária — sobrevivente de parada cardíaca por taquicardia/fibrilação ventricular, ou taquicardia ventricular sustentada com comprometimento hemodinâmico —, o CDI É RECOMENDADO independentemente do resultado do escore HCM Risk-SCD, que não se aplica a essa população, já com indicação estabelecida por outro critério.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657 — já citado e verificado em content/Calculadoras/hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofica.md.",
+    "theme": "Calculadoras",
+    "tags": [
+      "HCM Risk-SCD",
+      "cardiomiopatia hipertrófica",
+      "cardiodesfibrilador implantável",
+      "prevenção secundária",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-aortica-savr-recomendada-em-jovem-baixo-risco-cirurgico-sts-prom",
+    "statement": "Na estenose aórtica grave, a cirurgia (SAVR) é recomendada em pacientes mais jovens (<75 anos) e de baixo risco cirúrgico (STS-PROM/EuroSCORE II <4%). A diretriz não nomeia explicitamente uma faixa numérica única para 'risco intermediário' — o intervalo entre 4% e 8% fica sem rótulo formal na tabela de recomendações, remetendo à avaliação individualizada do Heart Team.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMCID: PMC9725093 (texto integral aberto). Recommendations D, seção 5.2.3, já citada e verificada em content/Calculadoras/escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia.md: \"SAVR is recommended in younger patients who are low risk for surgery (<75 years and STS-PROM/EuroSCORE II <4%)\".",
+    "theme": "Calculadoras",
+    "tags": [
+      "STS-PROM",
+      "EuroSCORE II",
+      "estenose aórtica",
+      "SAVR",
+      "TAVI",
+      "Heart Team"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-aortica-tavi-recomendada-em-idoso-ou-alto-risco-sts-prom",
+    "statement": "Na estenose aórtica grave, a TAVI é recomendada em pacientes mais velhos (≥75 anos) OU de alto risco cirúrgico (STS-PROM/EuroSCORE II >8%). Junto com a recomendação de SAVR (STS-PROM <4%, <75 anos), forma a base da decisão de modo de intervenção pelo Heart Team, combinando o eixo do escore de risco cirúrgico com o eixo etário — não são critérios isolados nem sinônimos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMCID: PMC9725093 (texto integral aberto). Recommendations D, seção 5.2.3, já citada e verificada em content/Calculadoras/escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia.md: \"TAVI is recommended in older patients (≥75 years), or in those who are high risk (STS-PROM/EuroSCORE II >8%)\".",
+    "theme": "Calculadoras",
+    "tags": [
+      "STS-PROM",
+      "EuroSCORE II",
+      "estenose aórtica",
+      "TAVI",
+      "SAVR",
+      "Heart Team"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
