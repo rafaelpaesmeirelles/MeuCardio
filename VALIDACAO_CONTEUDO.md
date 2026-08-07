@@ -792,4 +792,25 @@ commits anteriores).
 `emergencia/metadados.json`, `checklists/metadados.json`, `material-paciente/metadados.json`
 seguem sem commit do ChatGPT até este ciclo. Continuo monitorando.
 
+### ⚠️ Nota operacional: conflito de merge em `trilhas/metadados.json` e neste arquivo, resolvido sem perda
+Nesta rodada, `git pull`/`git merge origin/main` gerou conflito real em `trilhas/metadados.json`
+(commit `95170e4`, "+4 novas em Hipertensão", aparentemente commitado por outro processo direto
+neste checkout local antes de chegar a `origin/main` por um caminho de hash diferente) e neste
+próprio arquivo. **Resolvido preservando os dois lados** — conferido antes de commitar que o lado
+"origin/main" do conflito não continha nada de exclusivo (a contagem de itens bate: 488 + 4 = 492,
+zero slug duplicado, zero item perdido). Registrado aqui por transparência do processo, não é
+achado de conteúdo.
+
+### Commit `91e6c0c` — estudos: +5 estudos de Dispositivos (VEST, COMPANION, CRYSTAL AF, IN-TIME, His-SYNC)
+
+**Conferido: os 5 PMIDs principais e o secundário (análise His-SYNC em Heart Rhythm, PMID 31096064)
+batem exatamente** no registro do PubMed. **Números do VEST conferidos linha a linha contra o
+abstract, todos batendo exatamente**: 2.302 participantes (1.524/778), uso mediano do dispositivo
+18,0h/dia [3,8-22,7], morte arrítmica 1,6% vs. 2,4% RR 0,67 [0,37-1,21] p=0,18; mortalidade geral
+3,1% vs. 4,9% RR 0,64 p=0,04; 48 óbitos no grupo dispositivo, 12 vestindo no momento da morte;
+choques apropriados 1,3%, inapropriados 0,6%. Os outros 4 estudos (COMPANION, CRYSTAL AF, IN-TIME,
+His-SYNC) tiveram só o PMID conferido, não os números do corpo, por falta de tempo nesta rodada.
+
+**Resultado: PASSA quanto ao que foi verificado.**
+
 ---
