@@ -3,6 +3,8 @@
 from . import calculators as calculators
 from .perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
+from .perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 
 calculators.REGISTRY.update(GERIATRIC_PERIOPERATIVE_REGISTRY)
 calculators.REGISTRY.update(MORTALITY_PERIOPERATIVE_REGISTRY)
+calculators.REGISTRY.update(SORT_PERIOPERATIVE_REGISTRY)
