@@ -13462,5 +13462,205 @@
       "Kamstrup PR, Tybjærg-Hansen A, Steffensen R, Nordestgaard BG. Genetically elevated lipoprotein(a) and increased risk of myocardial infarction. JAMA. 2009;301(22):2331-9. DOI: 10.1001/jama.2009.801. PMID: 19509380"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "ia-generativa-para-simplificar-material-educativo-limites-da-legibilidade",
+    "titulo": "Usar ChatGPT para simplificar um folheto sobre estenose aórtica: o que a evidência mostra?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Uma cardiologista quer entregar a um paciente recém-diagnosticado com estenose aórtica um material educativo mais fácil de entender. O texto disponível no serviço está em nível de leitura de ensino médio (9º-10º ano equivalente). Ela cogita colar o texto em uma plataforma de IA generativa de acesso gratuito e pedir para reescrevê-lo em linguagem simples antes de entregar ao paciente.",
+    "pergunta": "Com base em estudo piloto que testou essa exata estratégia (ChatGPT-3.5 e Bard reescrevendo material sobre estenose aórtica para nível de leitura da 5ª série), o que a médica deve esperar?",
+    "opcoes": [
+      "A IA vai produzir texto no nível de leitura pedido (5ª série) e pronto para entrega direta ao paciente, sem revisão",
+      "A IA melhora a legibilidade de forma mensurável nos índices validados, mas nenhuma das duas plataformas testadas chegou ao nível de 6ª série recomendado — o texto reescrito ainda precisa de revisão humana antes de ir ao paciente",
+      "IA generativa não tem nenhum efeito comprovado sobre a legibilidade de material médico, o achado é só teórico",
+      "O uso de IA para isso é contraindicado por trazer sempre erro clínico ao texto reescrito"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Rouhi AD et al. (Cardiology and Therapy, 2024, PMID 38194058) testaram exatamente esse cenário: 21 materiais educativos sobre estenose aórtica, originalmente em nível de leitura de 10ª-12ª série, foram reescritos por ChatGPT-3.5 e Bard com o comando \"reescreva no nível de leitura da 5ª série\". Os dois melhoraram a legibilidade de forma estatisticamente significativa nos índices validados (Flesch Reading Ease, Flesch-Kincaid, SMOG, Gunning-Fog), com o ChatGPT-3.5 levando o texto a aproximadamente 6ª-7ª série e o Bard a 8ª-9ª série — mas nenhuma das duas plataformas atingiu o nível de 6ª série recomendado pelas diretrizes de comunicação em saúde, e o estudo não avaliou se o conteúdo clínico permaneceu correto após a reescrita. A conclusão prática é que a IA generativa é útil como ferramenta de rascunho, não como substituto do controle de qualidade humano do material entregue ao paciente.",
+    "source_refs": [
+      "Rouhi AD, Ghanem YK, Yolchieva L, Saleh Z, Joshi H, Moccia MC, Suarez-Pierre A, Han JJ. Can Artificial Intelligence Improve the Readability of Patient Education Materials on Aortic Stenosis? A Pilot Study. Cardiol Ther. 2024;13(1):137-147. DOI: 10.1007/s40119-023-00347-0. PMID: 38194058"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mindfulness-como-complemento-ao-tratamento-cardiologico-padrao-na-doenca-coronariana",
+    "titulo": "Paciente coronariano com alto estresse percebido: mindfulness tem respaldo em ensaio clínico?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "básico",
+    "enunciado": "Homem de 52 anos, doença arterial coronariana estável, em uso regular de estatina, betabloqueador e AAS, relata estresse percebido elevado e sintomas leves de ansiedade nas consultas de retorno. Ele pergunta se existe alguma intervenção não farmacológica, além do exercício, que tenha sido testada formalmente em pacientes como ele.",
+    "pergunta": "Um ensaio clínico randomizado publicado no International Journal of Yoga testou um programa estruturado de 8 semanas de Redução de Estresse Baseado em Mindfulness (MBSR) em pacientes coronarianos. Qual foi o resultado?",
+    "opcoes": [
+      "O MBSR não teve nenhum efeito mensurável sobre ansiedade, depressão, estresse percebido, pressão arterial ou IMC",
+      "O MBSR reduziu significativamente sintomas de ansiedade e depressão, estresse percebido, pressão arterial e IMC no grupo intervenção, com ganhos mantidos em 3 meses de seguimento, comparado ao grupo de tratamento habitual",
+      "O MBSR só teve efeito em mulheres, não em homens",
+      "O estudo mostrou piora dos marcadores psicológicos no grupo MBSR"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Parswani MJ et al. (Int J Yoga, 2013, PMID 23930029) randomizaram 30 pacientes homens com doença coronariana entre um programa MBSR de 8 sessões semanais e um grupo de tratamento habitual (uma sessão de educação em saúde). O grupo MBSR completou integralmente a intervenção e apresentou redução significativa de ansiedade e depressão (Hospital Anxiety and Depression Scale), de estresse percebido (Perceived Stress Scale), de pressão arterial e de IMC, com ganhos terapêuticos mantidos no seguimento de 3 meses. É um ensaio pequeno e unicêntrico, sem desfecho cardiovascular objetivo, mas fornece evidência inicial a favor de oferecer manejo de estresse baseado em mindfulness como complemento não farmacológico ao cuidado cardiovascular padrão.",
+    "source_refs": [
+      "Parswani MJ, Sharma MP, Iyengar SS. Mindfulness-based stress reduction program in coronary heart disease: A randomized control trial. Int J Yoga. 2013;6(2):111-7. DOI: 10.4103/0973-6131.113405. PMID: 23930029"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trastuzumabe-mais-antraciclina-o-ensaio-que-definiu-o-risco-de-cardiotoxicidade",
+    "titulo": "Trastuzumabe associado a antraciclina no câncer de mama HER2-positivo: por que o rastreio cardíaco é tão intensivo?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 48 anos com câncer de mama metastático HER2-positivo será tratada com doxorrubicina, ciclofosfamida e trastuzumabe. A oncologista pede avaliação cardiológica prévia e solicita ecocardiogramas seriados frequentes durante o tratamento, o que surpreende a paciente, que pergunta por que esse cuidado é tão mais intenso do que em outros esquemas de quimioterapia que já fez antes.",
+    "pergunta": "O ensaio original que estabeleceu o benefício do trastuzumabe no câncer de mama HER2-positivo (Slamon et al., NEJM 2001) também definiu seu principal risco. Qual foi a taxa de disfunção cardíaca classe III/IV da NYHA no grupo que recebeu antraciclina + ciclofosfamida + trastuzumabe, comparada ao grupo antraciclina + ciclofosfamida isolado?",
+    "opcoes": [
+      "1% com trastuzumabe vs. 8% sem — o risco cardíaco praticamente desapareceu com a adição do trastuzumabe",
+      "27% com a combinação antraciclina+ciclofosfamida+trastuzumabe vs. 8% com antraciclina+ciclofosfamida isolado — mais que o triplo de disfunção cardíaca grave com a associação",
+      "A taxa foi idêntica nos dois grupos (13% em ambos), mostrando que o trastuzumabe não altera o risco cardíaco da antraciclina",
+      "O estudo não avaliou função cardíaca, apenas resposta oncológica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ensaio de Slamon DJ et al. (NEJM 2001, PMID 11248153), a disfunção cardíaca classe III/IV da NYHA ocorreu em 27% do grupo antraciclina+ciclofosfamida+trastuzumabe, contra 8% no grupo antraciclina+ciclofosfamida isolado — e em 13% do grupo paclitaxel+trastuzumabe, contra apenas 1% do grupo paclitaxel isolado. Embora a cardiotoxicidade tenha melhorado com manejo clínico padrão na maioria dos casos, esse achado é a base histórica direta da cardio-oncologia moderna de HER2: evitar a combinação concomitante de antraciclina com trastuzumabe sempre que possível, e manter rastreio ecocardiográfico seriado obrigatório durante todo o tratamento anti-HER2, sobretudo quando há exposição prévia ou concomitante a antraciclina.",
+    "source_refs": [
+      "Slamon DJ, Leyland-Jones B, Shak S, Fuchs H, Paton V, Bajamonde A, Fleming T, Eiermann W, Wolter J, Pegram M, Baselga J, Norton L. Use of chemotherapy plus a monoclonal antibody against HER2 for metastatic breast cancer that overexpresses HER2. N Engl J Med. 2001;344(11):783-92. DOI: 10.1056/NEJM200103153441101. PMID: 11248153"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aspirina-em-prevencao-primaria-o-que-o-physicians-health-study-realmente-mostrou",
+    "titulo": "Homem saudável de 55 anos pergunta sobre tomar aspirina para prevenir infarto",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem de 55 anos, sem doença cardiovascular conhecida, sem diabetes, com fatores de risco leves (colesterol levemente elevado, sedentarismo), pergunta ao cardiologista se deveria começar a tomar aspirina em baixa dose todos os dias \"para prevenir infarto\", citando ter lido sobre um estudo antigo e famoso com médicos americanos.",
+    "pergunta": "O Physicians' Health Study (relatório final do componente aspirina, NEJM 1989) — um dos ensaios fundadores da prevenção primária cardiovascular com aspirina — mostrou qual conjunto de resultados?",
+    "opcoes": [
+      "Redução de 44% no risco de infarto do miocárdio, mas sem redução de mortalidade cardiovascular total e com sinal de aumento (não conclusivo) de AVC hemorrágico",
+      "Redução de mortalidade cardiovascular total de 44%, sem qualquer efeito sobre infarto ou AVC",
+      "Nenhum benefício em nenhum desfecho, o estudo foi encerrado por ineficácia",
+      "Redução de infarto e de AVC de forma equivalente e sem qualquer sinal de sangramento"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No relatório final do componente aspirina do Physicians' Health Study (NEJM 1989, PMID 2664509), 22.071 médicos americanos saudáveis foram randomizados para aspirina 325 mg em dias alternados ou placebo. A aspirina reduziu o risco de infarto do miocárdio em 44% (RR 0,56; IC95% 0,45-0,70; p<0,00001), mas não houve redução de mortalidade cardiovascular total (RR 0,96) e houve tendência não significativa de aumento de AVC, concentrada no subgrupo de AVC hemorrágico (RR 2,14; p=0,06). O benefício foi restrito a homens com 50 anos ou mais. Essa dissociação — infarto reduzido, mas sem prova de benefício em mortalidade total nem em AVC, com sinal de risco hemorrágico — é historicamente citada como o ponto de partida do debate que hoje levou as diretrizes a serem bem mais conservadoras quanto ao uso rotineiro de aspirina em prevenção primária, individualizando a decisão pelo risco isquêmico e hemorrágico de cada paciente.",
+    "source_refs": [
+      "Steering Committee of the Physicians' Health Study Research Group. Final report on the aspirin component of the ongoing Physicians' Health Study. N Engl J Med. 1989;321(3):129-35. DOI: 10.1056/NEJM198907203210301. PMID: 2664509"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "adolescente-com-desmaios-recorrentes-e-teste-de-inclinacao-sem-hipotensao",
+    "titulo": "Adolescente com múltiplos episódios de \"desmaio\": quando suspeitar de pseudossíncope?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Menina de 15 anos é encaminhada por episódios recorrentes descritos como \"desmaios\", com queda da cabeça e flacidez corporal, durando cerca de 40-50 segundos, com choro frequente antes e principalmente depois dos episódios. Durante teste de inclinação (tilt-table) monitorado, um evento típico foi reproduzido, mas sem queda de pressão arterial nem bradicardia, e o EEG contínuo não mostrou alteração.",
+    "pergunta": "Um estudo que comparou a semiologia de colapso psicogênico não sincopal (pseudossíncope) induzido em teste de inclinação com crises não epilépticas psicogênicas confirmadas por vídeo-EEG encontrou qual diferença mais marcante entre os dois quadros?",
+    "opcoes": [
+      "Pseudossíncope e crise não epiléptica psicogênica são clinicamente indistinguíveis em todos os aspectos",
+      "Eventos de pseudossíncope foram mais breves (mediana 45 vs. 201,5 segundos) e com predomínio de sinais motores negativos (queda da cabeça, flacidez), enquanto a crise não epiléptica teve predomínio de sinais motores positivos (convulsão)",
+      "Pseudossíncope ocorre só em homens, crise não epiléptica psicogênica só em mulheres",
+      "A duração do evento não diferiu entre os dois grupos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Heyer GL et al. (Epilepsy & Behavior, 2016, PMID 27486953) compararam 40 casos de colapso psicogênico não sincopal (PNSC, pseudossíncope) induzidos em teste de inclinação com 40 casos de crise não epiléptica psicogênica (PNES) confirmada por vídeo-EEG. Eventos de PNSC foram significativamente mais breves (mediana 45 vs. 201,5 segundos; p<0,001), com predomínio de sinais motores negativos — queda da cabeça e flacidez corporal (85% vs. 20%; p<0,001) — enquanto sinais motores positivos (convulsão) predominaram na PNES (90% vs. 30%; p<0,001). Pacientes com PNSC também choraram mais antes e depois do evento. O quadro clínico do caso — evento breve, flácido, reproduzido em teste de inclinação sem hipotensão nem alteração eletroencefalográfica — é típico de pseudossíncope, que se assemelha fenomenologicamente à síncope neuromediada verdadeira e exige alto índice de suspeita quando o teste não mostra achado hemodinâmico compatível.",
+    "source_refs": [
+      "Heyer GL, Albert DVF, Weber A, Gedela S, Vidaurre J. Comparison of semiologies between tilt-induced psychogenic nonsyncopal collapse and psychogenic nonepileptic seizures. Epilepsy Behav. 2016;62:171-5. DOI: 10.1016/j.yebeh.2016.06.027. PMID: 27486953"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estratificacao-de-risco-a-beira-do-leito-no-infarto-agudo-classificacao-de-killip",
+    "titulo": "Paciente com infarto agudo e estertores pulmonares bibasais: qual a classe de Killip e por que ela importa?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Homem de 68 anos é internado com infarto agudo do miocárdio com supra de ST. Ao exame físico de admissão, apresenta estertores crepitantes em bases pulmonares bilaterais, sem edema agudo de pulmão franco, pressão arterial preservada e sem sinais de choque.",
+    "pergunta": "Pela Classificação de Killip — descrita originalmente por Killip e Kimball a partir do acompanhamento de 250 pacientes em unidade coronariana — qual classe melhor descreve este paciente, e o que essa classificação representa clinicamente?",
+    "opcoes": [
+      "Killip I — sem sinais de insuficiência cardíaca; a classificação não tem relação com prognóstico",
+      "Killip II — estertores pulmonares leves a moderados (sem edema agudo de pulmão franco), uma ferramenta de estratificação de risco à beira do leito baseada só no exame físico, sem necessidade de exame complementar, e incorporada até hoje a escores de risco modernos (GRACE, TIMI)",
+      "Killip IV — choque cardiogênico, a pior classe da escala",
+      "A Classificação de Killip não é mais usada na prática clínica atual"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Classificação de Killip, descrita por Killip T e Kimball JT a partir de uma coorte de 250 pacientes com infarto agudo do miocárdio acompanhados em unidade coronariana (Am J Cardiol, 1967, PMID 6059183), estratifica o paciente à admissão em 4 classes clínicas conforme sinais de insuficiência cardíaca ao exame físico: Killip I (sem sinais), Killip II (estertores/terceira bulha leves a moderados), Killip III (edema agudo de pulmão) e Killip IV (choque cardiogênico). O paciente do caso, com estertores bibasais sem edema agudo de pulmão franco e sem choque, corresponde à Killip II. A força da classificação é depender só de exame físico, sem exame complementar — por isso permanece incorporada, mais de 55 anos depois, a escores de risco modernos como GRACE e TIMI. VERIFICAÇÃO HUMANA NECESSÁRIA quanto aos percentuais exatos de mortalidade histórica por classe (6%/17%/38%/81% nas classes I-IV, respectivamente, conforme amplamente citado na literatura secundária): o artigo original de 1967 não tem abstract estruturado indexado no PubMed, e os números não foram conferidos diretamente no texto integral nesta sessão — a mortalidade absoluta de cada classe também mudou substancialmente desde 1967 com a reperfusão moderna, ainda que a validade relativa da classificação se mantenha.",
+    "source_refs": [
+      "Killip T, Kimball JT. Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients. Am J Cardiol. 1967;20(4):457-64. DOI: 10.1016/0002-9149(67)90023-9. PMID: 6059183"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "hipercolesterolemia-familiar-em-terapia-maxima-sem-atingir-a-meta-de-ldl",
+    "titulo": "Paciente com hipercolesterolemia familiar em estatina de alta potência + ezetimiba, ainda sem atingir a meta de LDL",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 39 anos, hipercolesterolemia familiar heterozigota confirmada por teste molecular, sem doença aterosclerótica estabelecida, está em uso de rosuvastatina 40 mg + ezetimiba 10 mg há 8 meses. LDL-C atual: 145 mg/dL. Ela pergunta se isso é esperado, mesmo em terapia considerada máxima.",
+    "pergunta": "O registro SAFEHEART (seguimento de 5 anos, JACC 2016), que acompanhou pacientes com hipercolesterolemia familiar heterozigota diagnosticada molecularmente na Espanha, encontrou que percentual dos pacientes em terapia hipolipemiante máxima atingiu a meta de LDL-C <100 mg/dL?",
+    "opcoes": [
+      "Cerca de 90% — a grande maioria atinge a meta com terapia máxima",
+      "Apenas 11,2% dos pacientes atingiram a meta de LDL-C <100 mg/dL, mesmo com 71,8% dos casos de HF em terapia hipolipemiante máxima",
+      "100% dos pacientes, sem exceção",
+      "O estudo não avaliou alcance de meta de LDL-C"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No registro SAFEHEART (Perez de Isla L et al., JACC 2016, PMID 26988947), que acompanhou 2.752 pacientes com hipercolesterolemia familiar heterozigota diagnosticada molecularmente por tempo médio de 5,1 anos, 71,8% dos casos estavam em terapia hipolipemiante máxima, mas a meta de LDL-C <100 mg/dL foi alcançada por apenas 11,2% dos pacientes. Diabetes tipo 2, tipo de mutação do receptor de LDL, uso de ezetimiba e ausência de doença aterosclerótica prévia foram preditores independentes de atingir a meta. O caso descrito — LDL-C ainda elevado apesar de estatina de alta potência associada a ezetimiba — é exatamente o cenário retratado pelo registro, e reforça a necessidade de considerar terapia adicional (inibidor de PCSK9) precocemente nesta população de risco genético elevado, em vez de aceitar o LDL-C residual como \"o possível\".",
+    "source_refs": [
+      "Perez de Isla L, Alonso R, Watts GF, Mata N, Saltijeral Cerezo A, Muñiz O, Fuentes F, Diaz-Diaz JL, de Andrés R, Zambón D, et al. Attainment of LDL-Cholesterol Treatment Goals in Patients With Familial Hypercholesterolemia: 5-Year SAFEHEART Registry Follow-Up. J Am Coll Cardiol. 2016;67(11):1278-85. DOI: 10.1016/j.jacc.2016.01.008. PMID: 26988947"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "qual-escore-de-risco-usar-na-hipertensao-arterial-pulmonar-reveal-lite-2-ou-compera",
+    "titulo": "Estratificação de risco na hipertensão arterial pulmonar: REVEAL Lite 2 supera o modelo recomendado pela diretriz?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Um centro de referência em hipertensão pulmonar reavalia seu protocolo de estratificação de risco em pacientes com hipertensão arterial pulmonar (HAP). As diretrizes atuais da ESC/ERS recomendam o modelo COMPERA (três estratos na avaliação inicial, quatro estratos no seguimento). A equipe pergunta se há evidência comparando esse modelo ao REVEAL Lite 2, ferramenta alternativa não incorporada pela diretriz.",
+    "pergunta": "Um estudo de coorte de centro especializado (Sahay et al., Chest 2024) comparou a capacidade discriminativa do REVEAL Lite 2 versus os modelos COMPERA de três e quatro estratos para prever transplante pulmonar ou morte. Qual foi o achado na avaliação basal?",
+    "opcoes": [
+      "Os três modelos tiveram desempenho estatisticamente idêntico",
+      "O REVEAL Lite 2 teve estatístico C significativamente maior (0,74) do que o COMPERA de quatro estratos (0,68) e o de três estratos (0,63) na avaliação basal",
+      "O COMPERA superou o REVEAL Lite 2 em todas as comparações",
+      "Nenhum dos três modelos discriminou risco melhor do que o acaso (estatístico C ≈ 0,50)"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Sahay S et al. (Chest, 2024, PMID 38447640) analisaram 296 pacientes com HAP de um centro especializado, comparando REVEAL Lite 2, COMPERA de três estratos e COMPERA 2.0 de quatro estratos para prever o desfecho composto de transplante pulmonar ou morte. Na avaliação basal, o estatístico C do REVEAL Lite 2 foi 0,74 (IC95% 0,69-0,80), significativamente superior ao COMPERA de quatro estratos (0,68) e ao de três estratos (0,63). A sobrevida livre de transplante da coorte foi de 93,6%/81,3%/75,1%/68,8% em 1/3/5/7 anos. Apesar de as diretrizes atuais recomendarem apenas o modelo COMPERA, este achado — concentrado na avaliação basal e ainda pendente de validação em coortes maiores, segundo os próprios autores — sustenta a discussão sobre incorporar o REVEAL Lite 2 como ferramenta complementar de apoio à decisão terapêutica na HAP.",
+    "source_refs": [
+      "Sahay S, Villasmil Hernandez N, Wang F, Wooten M, Nguyen DT, Fauvel C, Benza R, Graviss EA. Comparison Between REVEAL Lite 2 and COMPERA 2.0 for Risk Stratification in Pulmonary Arterial Hypertension. Chest. 2024;166(2):373-387. DOI: 10.1016/j.chest.2024.02.052. PMID: 38447640"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-do-qt-longo-tipo-2-com-sincope-recorrente-apesar-do-betabloqueador",
+    "titulo": "Síndrome do QT longo tipo 2 com síncope recorrente em uso de betabloqueador: o genótipo importa?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 24 anos, síndrome do QT longo confirmada por teste genético como LQT2, em uso de betabloqueador em dose otimizada há 2 anos, apresenta dois episódios de síncope no último ano, com QTc medido em consultas recentes de 510 ms.",
+    "pergunta": "Um estudo de coorte que genotipou sistematicamente 335 pacientes com síndrome do QT longo tratados com betabloqueador (Priori et al., JAMA 2004) encontrou que o risco de evento cardíaco em vigência de tratamento variava conforme o genótipo. Qual foi o padrão encontrado, e como ele se aplica a esta paciente?",
+    "opcoes": [
+      "O betabloqueador protegeu igualmente todos os genótipos (LQT1, LQT2, LQT3), sem diferença de risco residual",
+      "Pacientes LQT2 e LQT3 tiveram risco de evento cardíaco significativamente maior do que LQT1 mesmo em uso de betabloqueador (risco relativo ajustado 2,81 e 4,00, respectivamente), e QTc >500 mg em tratamento foi preditor independente adicional de risco — o quadro desta paciente (LQT2, QTc 510 ms, síncope recorrente sob betabloqueador) representa exatamente o perfil de maior risco residual identificado no estudo",
+      "O genótipo não influencia a resposta ao betabloqueador na síndrome do QT longo",
+      "LQT1 teve o maior risco residual entre os três genótipos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Priori SG et al. (JAMA, 2004, PMID 15367556) acompanharam 335 pacientes com síndrome do QT longo genotipados (LQT1, LQT2, LQT3), tratados com betabloqueador por tempo médio de 5 anos. Eventos cardíacos ocorreram em 10% dos LQT1, 23% dos LQT2 e 32% dos LQT3 (p<0,001), com risco relativo ajustado de 2,81 para LQT2 e 4,00 para LQT3 em relação a LQT1 — evidenciando proteção inadequada do betabloqueador nesses dois genótipos. QTc >500 ms em vigência de tratamento (RR ajustado 2,01) foi preditor independente adicional de risco. A paciente do caso — LQT2, QTc 510 ms sob tratamento, síncope recorrente apesar de betabloqueador em dose otimizada — reúne justamente os dois marcadores de risco residual identificados pelo estudo, cenário em que a literatura desde então passou a considerar terapia adicional (CDI, denervação simpática cardíaca esquerda) de forma mais precoce.",
+    "source_refs": [
+      "Priori SG, Napolitano C, Schwartz PJ, Grillo M, Bloise R, Ronchetti E, Moncalvo C, Tulipani C, Veia A, Bottelli G, Nastoli J. Association of long QT syndrome loci and cardiac events among patients treated with beta-blockers. JAMA. 2004;292(11):1341-4. DOI: 10.1001/jama.292.11.1341. PMID: 15367556"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ertugliflozina-nao-mostrou-superioridade-cardiovascular-e-isso-muda-a-escolha-de-sglt2",
+    "titulo": "Todos os inibidores de SGLT2 têm o mesmo benefício cardiovascular? O que o VERTIS CV mostrou",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Paciente com diabetes tipo 2 e doença arterial coronariana estabelecida está sendo avaliado para início de inibidor de SGLT2. O residente pergunta se \"qualquer gliflozina serve\", já que a classe toda reduziria risco cardiovascular por efeito de classe.",
+    "pergunta": "O ensaio VERTIS CV (Cannon et al., NEJM 2020) testou ertugliflozina versus placebo em 8.246 pacientes com diabetes tipo 2 e doença aterosclerótica estabelecida. Qual foi o resultado para o desfecho primário de eventos cardiovasculares adversos maiores (MACE), e o que isso implica sobre \"efeito de classe\" dos SGLT2?",
+    "opcoes": [
+      "Ertugliflozina foi superior a placebo para MACE, replicando o benefício visto com empagliflozina, canagliflozina e dapagliflozina — confirmando efeito de classe uniforme",
+      "Ertugliflozina foi não inferior a placebo para MACE (11,9% em ambos os grupos), mas não demonstrou superioridade estatística — diferente de outros SGLT2 que mostraram redução significativa de MACE em ensaios de superioridade, o que motivou discussão sobre heterogeneidade de efeito clínico dentro da classe",
+      "Ertugliflozina aumentou significativamente o risco de MACE comparada a placebo",
+      "O estudo não avaliou desfechos cardiovasculares, apenas controle glicêmico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No VERTIS CV (Cannon CP et al., NEJM 2020, PMID 32966714), MACE ocorreu em 11,9% do grupo ertugliflozina e 11,9% do grupo placebo (RR 0,97; IC95% 0,85-1,11; p<0,001 para não inferioridade, mas sem superioridade estatística). O composto de morte cardiovascular ou hospitalização por insuficiência cardíaca também não atingiu significância para superioridade (RR 0,88; p=0,11). Isso contrasta com empagliflozina (EMPA-REG OUTCOME), canagliflozina (CANVAS) e dapagliflozina (DECLARE-TIMI 58), que demonstraram benefício cardiovascular estatisticamente significativo em desenhos de superioridade. A lição prática para o residente é que \"efeito de classe\" não deve ser presumido automaticamente entre diferentes SGLT2 — o VERTIS CV prova segurança cardiovascular da ertugliflozina, não o mesmo grau de benefício ativo demonstrado por outros representantes da classe, e a diferença pode refletir tanto o fármaco quanto a população estudada (aqui, só prevenção secundária com doença aterosclerótica já estabelecida).",
+    "source_refs": [
+      "Cannon CP, Pratley R, Dagogo-Jack S, Mancuso J, Huyck S, Masiukiewicz U, Charbonnel B, Frederich R, Gallo S, Cosentino F, Shih WJ, Gantz I, Terra SG, Cherney DZI, McGuire DK. Cardiovascular Outcomes with Ertugliflozin in Type 2 Diabetes. N Engl J Med. 2020;383(15):1425-1435. DOI: 10.1056/NEJMoa2004967. PMID: 32966714"
+    ],
+    "review_status": "revisado"
   }
 ]
