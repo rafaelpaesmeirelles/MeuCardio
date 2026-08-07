@@ -292,22 +292,22 @@
     "review_status": "revisado"
   },
   {
-    "slug": "dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
-    "titulo": "Dor torácica e SCA por vasoespasmo coronariano induzido por cocaína",
-    "gatilho": "Dor torácica em paciente com uso recente de cocaína (intranasal, inalada ou intravenosa) — especialmente se jovem, com dor atípica e poucos fatores de risco coronariano clássicos",
-    "ordem": 27,
-    "documento_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
-    "fluxograma_slug": "fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
-    "relacionados": [],
-    "review_status": "revisado"
-  },
-  {
     "slug": "crise-hipertensiva-adrenergica-do-feocromocitoma",
     "titulo": "Crise hipertensiva adrenérgica do feocromocitoma",
     "gatilho": "Crise hipertensiva paroxística com taquicardia, sudorese e cefaleia, em paciente com feocromocitoma conhecido ou suspeito (massa adrenal) — inclui a crise precipitada por manipulação tumoral, indução anestésica ou início de betabloqueador antes do bloqueio alfa estabelecido",
     "ordem": 26,
     "documento_slug": "feocromocitoma-preparo-pre-operatorio-com-bloqueio-alfa-o-ensaio-prescript",
     "fluxograma_slug": "fluxograma-crise-hipertensiva-adrenergica-do-feocromocitoma",
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
+    "titulo": "Dor torácica e SCA por vasoespasmo coronariano induzido por cocaína",
+    "gatilho": "Dor torácica em paciente com uso recente de cocaína (intranasal, inalada ou intravenosa) — especialmente se jovem, com dor atípica e poucos fatores de risco coronariano clássicos",
+    "ordem": 27,
+    "documento_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+    "fluxograma_slug": "fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -467,6 +467,55 @@
     "fluxograma_slug": "fluxograma-sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
     "relacionados": [
       "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bradicardia-pediatrica-com-pulso",
+    "titulo": "Bradicardia pediátrica com pulso",
+    "gatilho": "Lactente ou criança com bradicardia e alteração mental aguda, sinais de choque ou hipotensão · FC <60/min persistente apesar de ventilação/oxigenação adequadas",
+    "ordem": 90,
+    "documento_slug": "bradicardia-pediatrica-com-pulso-aha-aap-2025",
+    "fluxograma_slug": "fluxograma-bradicardia-pediatrica-com-pulso-aha-aap-2025",
+    "relacionados": [
+      "taquiarritmia-pediatrica-com-pulso"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "parada-cardiorrespiratoria-pediatrica",
+    "titulo": "Parada cardiorrespiratória pediátrica",
+    "gatilho": "Lactente ou criança sem pulso · FV/TV sem pulso · assistolia/AESP",
+    "ordem": 91,
+    "documento_slug": "parada-cardiorrespiratoria-pediatrica-aha-aap-2025",
+    "fluxograma_slug": "fluxograma-parada-cardiorrespiratoria-pediatrica-aha-aap-2025",
+    "relacionados": [
+      "bradicardia-pediatrica-com-pulso",
+      "taquiarritmia-pediatrica-com-pulso"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crise-de-hipertensao-pulmonar-persistente-do-recem-nascido",
+    "titulo": "Crise de hipertensão pulmonar persistente do recém-nascido",
+    "gatilho": "Recém-nascido com hipoxemia/cianose grave, shunt direita-esquerda ou bidirecional e suspeita ecocardiográfica de HPPRN",
+    "ordem": 92,
+    "documento_slug": "hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica",
+    "fluxograma_slug": "fluxograma-crise-de-hipertensao-pulmonar-persistente-do-recem-nascido",
+    "relacionados": [
+      "reanimacao-neonatal-na-sala-de-parto"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-de-liberacao-de-citocinas-car-t-com-choque",
+    "titulo": "Síndrome de liberação de citocinas por CAR-T com hipotensão/choque",
+    "gatilho": "Paciente após CAR-T com febre e hipotensão, necessidade de vasopressor, hipoxemia ou sinais de disfunção cardiovascular",
+    "ordem": 93,
+    "documento_slug": "sindrome-de-liberacao-de-citocinas-por-car-t-graduacao-astct-choque-distributivo-e-tocilizumabe",
+    "fluxograma_slug": "fluxograma-sindrome-de-liberacao-de-citocinas-car-t-com-choque",
+    "relacionados": [
+      "miocardite-por-inibidor-de-checkpoint-imune"
     ],
     "review_status": "revisado"
   }
