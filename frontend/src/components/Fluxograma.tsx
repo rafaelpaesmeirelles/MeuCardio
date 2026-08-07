@@ -64,6 +64,7 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
   const quadro = useRef<HTMLDivElement>(null);
   const [estado, setEstado] = useState<Estado>("carregando");
   const [zoom, setZoom] = useState(100);
+  const [detalheErro, setDetalheErro] = useState("");
 
   useEffect(() => {
     let cancelado = false;
@@ -72,6 +73,7 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
 
     setEstado("carregando");
     setZoom(100);
+    setDetalheErro("");
     alvo.removeAttribute("data-processed");
     alvo.textContent = fonte;
 
@@ -128,6 +130,13 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
         if (!cancelado) {
           alvo.textContent = "";
           alvo.removeAttribute("data-processed");
+          // 07/08/2026: até aqui o detalhe do erro só ia para
+          // console.error — invisível para quem reporta o problema sem
+          // abrir o DevTools. Mostrar a mensagem real na tela fecha esse
+          // buraco de diagnóstico (achado ao investigar um caso real
+          // reportado pelo Rafael que, verificado, tinha sintaxe mermaid
+          // 100% válida — a causa só aparece com o erro exato do navegador).
+          setDetalheErro(erro instanceof Error ? erro.message : String(erro));
           setEstado("erro");
         }
       }
@@ -175,6 +184,9 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
         <p className="fluxograma__erro" role="alert">
           Não foi possível desenhar esta árvore de decisão. Recarregue a página;
           se o problema persistir, use o texto clínico exibido abaixo.
+          {detalheErro && (
+            <><br /><small style={{ opacity: 0.75 }}>Detalhe técnico: {detalheErro}</small></>
+          )}
         </p>
       )}
       {estado === "pronto" && (

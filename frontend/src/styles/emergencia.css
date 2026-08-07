@@ -154,7 +154,13 @@
   background: none; border: 0; color: var(--e-suave);
   font: inherit; padding: 0.4rem 0; cursor: pointer;
 }
-.emerg__protocolo h1 { font-size: 1.9rem; line-height: 1.2; margin: 0.2rem 0 1rem; }
+/* `color` explícito, não só herança: 07/08/2026, Rafael reportou o título
+ * (e outro h1 embutido no corpo markdown, ver .emerg__corpo abaixo)
+ * ilegível — a regra global `h1,h2,h3,h4{color:var(--primaria)}` de
+ * tokens.css bate direto no elemento e vence a cor herdada de `.emerg`,
+ * porque regra direta sempre vence herança, não importa a especificidade
+ * do seletor que definiu a herança. */
+.emerg__protocolo h1 { font-size: 1.9rem; line-height: 1.2; margin: 0.2rem 0 1rem; color: var(--e-texto); }
 
 .emerg__lacuna {
   background: #3a1119; border-left: 5px solid var(--e-acao);
@@ -191,6 +197,11 @@
 .emerg__secaoTitulo.aberta::after { content: "－"; }
 .emerg__corpo { padding-bottom: 1rem; }
 .emerg__corpo :is(p, li) { font-size: 1.06rem; }
+/* h1/h2: alguns documentos trazem um cabeçalho nível 1 logo no início do
+ * corpo (ex.: "# Afogamento — manejo..."), que cai aqui dentro por não ter
+ * `##` antes — sem esta regra, herdava a cor global escura (mesmo motivo
+ * do .emerg__protocolo h1 acima) e ficava ilegível sobre o fundo escuro. */
+.emerg__corpo :is(h1, h2) { color: var(--e-texto); }
 .emerg__corpo :is(h3, h4) { font-size: 1.02rem; color: var(--e-suave); }
 .emerg__corpo strong { color: #fff; }
 .emerg__corpo a { color: #8fd0ea; }

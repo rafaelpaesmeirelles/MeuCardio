@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
+import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
 import LogoProvedor from "../components/LogoProvedor";
 import { ApiError, api } from "../lib/api";
@@ -762,22 +763,34 @@ export default function Agenda() {
         <div className="agenda-contas-destaque__topo">
           <div>
             <p className="eyebrow">Sincronização externa</p>
-            <h2 id="agenda-contas-titulo">Conecte seus calendários e contatos</h2>
-            <p>Google, Microsoft e Apple aparecem juntos na Agenda e alimentam também os contatos do CorvIA Mail.</p>
+            <h2 id="agenda-contas-titulo">Conecte seus Calendários, Contatos e Contas de E-mail</h2>
+            <p>Google, Microsoft, Apple e Yahoo — quantas contas quiser, de uma ou várias empresas ao mesmo tempo.</p>
           </div>
-          <button className="botao botao--secundario" onClick={abrirContasExternas}><Icone nome="configuracao" /> Gerenciar conexões</button>
+          <Link to="/sincronizacao" className="botao botao--secundario"><Icone nome="configuracao" /> Gerenciar conexões</Link>
         </div>
-        <label className="agenda-check agenda-contas-destaque__consentimento"><input type="checkbox" checked={consentimentoContas} onChange={(event) => setConsentimentoContas(event.target.checked)} /> Autorizo a leitura dos meus calendários, contatos e e-mails, e o envio de mensagens por minha conta, para uso na Agenda e no CorvIA Mail. Posso revogar o acesso a qualquer momento.</label>
+        {/* 07/08/2026: esta seção mostrava só Google/Microsoft/Apple, com Google e
+         * Microsoft em cartões grandes e Apple relegado a uma linha secundária —
+         * Rafael reportou como "sem sentido" e "Yahoo faltando". A tela dedicada
+         * /sincronizacao (Trabalho 16) já trata os 4 provedores em pé de
+         * igualdade, com conectar/sincronizar/preferências por conta — em vez de
+         * manter duas telas de conta divergindo com o tempo (o defeito que este
+         * projeto já gastou semanas removendo antes), esta seção virou um resumo
+         * que aponta para lá. */}
         <div className="agenda-contas-destaque__grade">
-          {[{ provider: "google_calendar", nome: "Google", acao: "google" as const }, { provider: "microsoft_365", nome: "Microsoft", acao: "microsoft" as const }].map((conta) => {
-            const integracao = integracoes.find((item) => item.provider === conta.provider && item.enabled);
-            const configurado = capacidades?.connectors.find((item) => item.provider === conta.provider)?.oauth_configured !== false;
-            const emTesteAguardando = conta.acao === "google" && capacidades?.google_oauth_modo_teste && statusTesteGoogle?.status === "pendente";
-            const rotulo = emTesteAguardando ? "Aguardando liberação — clique para editar o e-mail" : contaEmConexao === conta.acao ? "Abrindo…" : "Conectar";
-            const acaoClique = conta.acao === "google" ? conectarOuSolicitarGoogle : () => conectarConta(conta.acao);
-            return <article key={conta.provider} className="agenda-conta-provider"><LogoProvedor provedor={conta.acao} /><div><strong>{conta.nome}</strong><small>{integracao ? `${integracao.contact_count} contatos · conexão ativa` : emTesteAguardando ? `Integração momentaneamente limitada a Calendário/Agenda — avisaremos quando o e-mail (${statusTesteGoogle?.google_email}) estiver sincronizado` : configurado ? "Calendário e contatos disponíveis para conectar" : "Credenciais OAuth ainda não cadastradas"}</small></div>{integracao ? <button disabled={integracaoSincronizando === integracao.id} onClick={() => sincronizarConta(integracao.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))}>{integracaoSincronizando === integracao.id ? "Atualizando…" : "Sincronizar"}</button> : <button disabled={!consentimentoContas || !configurado || contaEmConexao !== null} onClick={() => acaoClique().catch((e: unknown) => setErro(e instanceof ApiError ? e.message : `Não foi possível conectar ${conta.nome}.`))}>{rotulo}</button>}</article>;
+          {(["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"] as const).map((provider) => {
+            const nome = { google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud", yahoo_mail: "Yahoo Mail" }[provider];
+            const acao = { google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo" }[provider] as "google" | "microsoft" | "apple" | "yahoo";
+            const conectadas = integracoes.filter((item) => item.provider === provider && item.enabled);
+            return (
+              <Link to="/sincronizacao" key={provider} className="agenda-conta-provider agenda-conta-provider--link">
+                <LogoProvedor provedor={acao} />
+                <div>
+                  <strong>{nome}</strong>
+                  <small>{conectadas.length > 0 ? `${conectadas.length} conta${conectadas.length > 1 ? "s" : ""} conectada${conectadas.length > 1 ? "s" : ""}` : "Não conectado"}</small>
+                </div>
+              </Link>
+            );
           })}
-          <article className="agenda-conta-provider"><LogoProvedor provedor="apple" /><div><strong>Apple iCloud</strong><small>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Calendário e contatos do iCloud conectados" : "Conexão segura por senha específica de app"}</small></div><button disabled={!consentimentoContas} onClick={abrirContasExternas}>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Gerenciar" : "Conectar"}</button></article>
         </div>
       </section>
 
@@ -969,32 +982,21 @@ export default function Agenda() {
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Catálogo de serviços</h3><p>Duração, preço, modalidade e política de encaixe.</p></div><span>{servicos.length}</span></div>{servicos.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name} · {item.duration_minutes} min</strong><small>{item.visit_mode} · {formatarDinheiro(item.private_price_cents)}{item.allow_extra_slot ? " · aceita encaixe" : ""}</small></span></div>)}<div className="agenda-config-form agenda-config-form--service"><input placeholder="Nome do serviço" value={novoServico.name} onChange={(e) => setNovoServico({ ...novoServico, name: e.target.value, code: e.target.value })} /><select value={novoServico.location_id} onChange={(e) => setNovoServico({ ...novoServico, location_id: e.target.value })}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select><input type="number" min={5} value={novoServico.duration_minutes} onChange={(e) => setNovoServico({ ...novoServico, duration_minutes: Number(e.target.value) })} /><input inputMode="decimal" placeholder="Preço particular" value={novoServico.price} onChange={(e) => setNovoServico({ ...novoServico, price: e.target.value })} /><label className="agenda-check"><input type="checkbox" checked={novoServico.allow_extra_slot} onChange={(e) => setNovoServico({ ...novoServico, allow_extra_slot: e.target.checked })} /> Permitir encaixe</label><button className="botao botao--secundario" onClick={() => adicionarServico().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o serviço."))}>Adicionar serviço</button></div></section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Deslocamento inteligente</h3><p>A posição atual não é armazenada; a permissão permanece sob controle do aparelho.</p></div><button className={`agenda-switch${mobilidade?.enabled ? " ativo" : ""}`} role="switch" aria-checked={mobilidade?.enabled || false} onClick={() => alternarMobilidade().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível alterar a mobilidade."))}><span /></button></div><div className="agenda-config-note"><Icone nome="rota" /><span><strong>{mobilidade?.enabled ? "Atualização automática em primeiro plano" : "Recurso desativado"}</strong><small>{capacidades?.traffic_configured ? "Trânsito em tempo real disponível." : "É preciso configurar uma credencial de trânsito no servidor."}</small></span></div></section>
         <section className="agenda-config-section" ref={contasExternasRef} tabIndex={-1} style={{ scrollMarginTop: "1rem" }}>
-          <div className="agenda-config-section__title"><div><h3>Administre suas contas</h3><p>Conecte, adicione mais de uma conta do mesmo provedor, ou desconecte — Google, Microsoft, Apple e Yahoo, para usar na Agenda e no CorvIA Mail.</p></div><span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider) && item.enabled).length}</span></div>
-          <div className="agenda-contas-externas">
-            <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarOuSolicitarGoogle().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}><LogoProvedor provedor="google" /> {statusTesteGoogle?.status === "pendente" && capacidades?.google_oauth_modo_teste ? "Aguardando liberação do Google" : contaEmConexao === "google" ? "Abrindo Google…" : "Conectar Google"}</button>
-            <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "microsoft_365")?.oauth_configured === false} onClick={() => conectarConta("microsoft").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Microsoft."))}><LogoProvedor provedor="microsoft" /> {contaEmConexao === "microsoft" ? "Abrindo Microsoft…" : "Conectar Microsoft"}</button>
+          {/* 07/08/2026: este painel duplicava, com texto e comportamento
+           * divergentes, a tela dedicada /sincronizacao (Trabalho 16) — Rafael
+           * reportou os dois efeitos colaterais dessa duplicação (Google/
+           * Microsoft em destaque com Apple/Yahoo relegados, "sincronizar" sem
+           * efeito visível numa conta desconectada). Substituído por um
+           * ponteiro, mesmo padrão já usado no resumo da Minha Conta — uma
+           * fonte só de verdade para conectar/sincronizar/gerenciar. */}
+          <div className="agenda-config-section__title">
+            <div>
+              <h3>Administre suas contas</h3>
+              <p>Conectar, sincronizar e desconectar Google, Microsoft, Apple e Yahoo agora é tudo numa página só.</p>
+            </div>
+            <span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider) && item.enabled).length}</span>
           </div>
-          <label className="agenda-check"><input type="checkbox" checked={consentimentoContas} onChange={(e) => setConsentimentoContas(e.target.checked)} /> Autorizo a leitura dos meus calendários, contatos e e-mails, e o envio de mensagens por minha conta, para uso na Agenda e no CorvIA Mail. Posso revogar o acesso a qualquer momento.</label>
-          {capacidades?.connectors.some((item) => ["google_calendar", "microsoft_365"].includes(item.provider) && item.oauth_configured === false) && <p className="agenda-config-help">O administrador ainda precisa cadastrar o cliente OAuth correspondente no servidor.</p>}
-          <details className="agenda-apple-config"><summary><LogoProvedor provedor="apple" /> {integracoes.some((i) => i.provider === "apple_icloud" && i.enabled) ? "Adicionar outra conta Apple" : "Conectar Calendário e Contatos Apple"}</summary><div className="agenda-config-form agenda-config-form--routine">
-            <label>ID Apple<input type="email" autoComplete="username" value={apple.apple_id} onChange={(e) => setApple({ ...apple, apple_id: e.target.value })} placeholder="nome@icloud.com" /></label>
-            <label>Senha específica de app<input type="password" autoComplete="new-password" value={apple.app_specific_password} onChange={(e) => setApple({ ...apple, app_specific_password: e.target.value })} placeholder="xxxx-xxxx-xxxx-xxxx" /></label>
-            <label className="agenda-check span-2"><input type="checkbox" checked={apple.consent_accepted} onChange={(e) => setApple({ ...apple, consent_accepted: e.target.checked })} /> Autorizo a leitura do Calendário e dos Contatos do iCloud.</label>
-            <label className="agenda-check span-2"><input type="checkbox" checked={apple.mail} onChange={(e) => setApple({ ...apple, mail: e.target.checked, mail_consent_accepted: e.target.checked ? apple.mail_consent_accepted : false })} /> Também conectar o e-mail do iCloud (mesma senha específica de app).</label>
-            {apple.mail && <label className="agenda-check span-2"><input type="checkbox" checked={apple.mail_consent_accepted} onChange={(e) => setApple({ ...apple, mail_consent_accepted: e.target.checked })} /> Autorizo a leitura e o envio de e-mail pela minha caixa iCloud.</label>}
-            <p className="agenda-config-help span-2">Você pode conectar mais de uma conta Apple — cada ID Apple diferente vira uma conta nova na lista, sem substituir a anterior. Use somente uma senha específica de app, gerada em <strong>appleid.apple.com → Entrar e Segurança → Senhas específicas de app</strong>. O Corvia nunca solicita nem armazena sua senha principal da Apple.</p>
-            <button className="botao botao--secundario" disabled={!apple.apple_id || !apple.app_specific_password || !apple.consent_accepted || (apple.mail && !apple.mail_consent_accepted)} onClick={() => conectarApple().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o iCloud."))}>Conectar Apple</button>
-          </div></details>
-          <details className="agenda-apple-config"><summary><LogoProvedor provedor="yahoo" /> {integracoes.some((i) => i.provider === "yahoo_mail" && i.enabled) ? "Adicionar outra conta Yahoo" : "Conectar Yahoo Mail (só e-mail, sem calendário)"}</summary><div className="agenda-config-form agenda-config-form--routine">
-            <label>Endereço Yahoo<input type="email" autoComplete="username" value={yahoo.endereco} onChange={(e) => setYahoo({ ...yahoo, endereco: e.target.value })} placeholder="nome@yahoo.com" /></label>
-            <label>Senha específica de app<input type="password" autoComplete="new-password" value={yahoo.senha_de_app} onChange={(e) => setYahoo({ ...yahoo, senha_de_app: e.target.value })} placeholder="gerada em login.yahoo.com" /></label>
-            <label className="agenda-check span-2"><input type="checkbox" checked={yahoo.consent_accepted} onChange={(e) => setYahoo({ ...yahoo, consent_accepted: e.target.checked })} /> Autorizo a leitura e o envio de e-mail pela minha caixa Yahoo.</label>
-            <p className="agenda-config-help span-2">Você pode conectar mais de uma conta Yahoo — cada endereço diferente vira uma conta nova na lista. Gere a senha em login.yahoo.com → Segurança da conta → Senhas de aplicativos de terceiros. O Corvia nunca solicita nem armazena sua senha principal da Yahoo. A Yahoo não sincroniza calendário nem contatos aqui, só e-mail.</p>
-            <button className="botao botao--secundario" disabled={!yahoo.endereco || !yahoo.senha_de_app || !yahoo.consent_accepted} onClick={() => conectarYahoo().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar a Yahoo."))}>Conectar Yahoo</button>
-          </div></details>
-          <h4 className="agenda-contas-lista__titulo">Contas conectadas</h4>
-          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider)).length === 0 && <p className="agenda-config-vazio">Nenhuma conta conectada ainda — use os botões acima.</p>}
-          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider)).map((item) => <div className="agenda-config-item" key={item.id}><LogoProvedor provedor={PROVEDOR_POR_TIPO_INTEGRACAO[item.provider]} /><span><strong>{item.display_name}</strong><small>{item.provider === "yahoo_mail" ? (item.enabled ? "e-mail conectado" : "desconectada") : item.enabled ? `${item.contact_count} contatos · ${item.last_success_at ? "sincronizada" : "aguardando primeira sincronização"}${item.capabilities?.read_mail ? " · e-mail conectado" : ""}` : "desconectada"}</small></span><div className="agenda-conta-acoes">{item.provider !== "yahoo_mail" && <button onClick={() => sincronizarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))} disabled={!item.enabled}>Sincronizar</button>}<button title="Remove esta conta e os contatos sincronizados dela" onClick={() => desconectarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha ao desconectar."))} disabled={!item.enabled}>Excluir conta</button></div></div>)}
+          <Link to="/sincronizacao" className="botao botao--secundario">Abrir Sincronização de contas</Link>
         </section>
         <section className="agenda-config-section">
           <div className="agenda-config-section__title"><div><h3>Importar agendas de clínicas e hospitais</h3><p>Prepare uma conexão para cada local de trabalho. Ativação e escrita exigem API oficial, credenciais e homologação do fornecedor.</p></div><span>{integracoes.length}</span></div>

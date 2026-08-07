@@ -183,7 +183,7 @@ export default function Sincronizacao() {
         {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
         {mensagem && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>{mensagem}</p>}
 
-        <label style={{ display: "flex", gap: 6, alignItems: "flex-start", fontSize: "0.84rem", margin: "0 0 0.6rem" }}>
+        <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.84rem", margin: "0 0 0.6rem" }}>
           <input type="checkbox" checked={consentimento} onChange={(e) => setConsentimento(e.target.checked)} />
           Autorizo a leitura dos meus calendários, contatos e e-mails, e o envio de mensagens pela
           minha conta, para uso na Agenda e no CorvIA Mail. Posso revogar a qualquer momento.
@@ -218,18 +218,18 @@ export default function Sincronizacao() {
               <input type="password" autoComplete="new-password" value={apple.app_specific_password}
                      onChange={(e) => setApple({ ...apple, app_specific_password: e.target.value })} placeholder="xxxx-xxxx-xxxx-xxxx" />
             </label>
-            <label style={{ display: "flex", gap: 6, alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>
+            <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>
               <input type="checkbox" checked={apple.consent_accepted}
                      onChange={(e) => setApple({ ...apple, consent_accepted: e.target.checked })} />
               Autorizo a leitura do Calendário e dos Contatos do iCloud.
             </label>
-            <label style={{ display: "flex", gap: 6, alignItems: "flex-start", fontSize: "0.82rem" }}>
+            <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem" }}>
               <input type="checkbox" checked={apple.mail}
                      onChange={(e) => setApple({ ...apple, mail: e.target.checked, mail_consent_accepted: e.target.checked ? apple.mail_consent_accepted : false })} />
               Também conectar o e-mail do iCloud (mesma senha específica de app).
             </label>
             {apple.mail && (
-              <label style={{ display: "flex", gap: 6, alignItems: "flex-start", fontSize: "0.82rem" }}>
+              <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem" }}>
                 <input type="checkbox" checked={apple.mail_consent_accepted}
                        onChange={(e) => setApple({ ...apple, mail_consent_accepted: e.target.checked })} />
                 Autorizo a leitura e o envio de e-mail pela minha caixa iCloud.
@@ -258,7 +258,7 @@ export default function Sincronizacao() {
               <input type="password" autoComplete="new-password" value={yahoo.senha_de_app}
                      onChange={(e) => setYahoo({ ...yahoo, senha_de_app: e.target.value })} placeholder="gerada em login.yahoo.com" />
             </label>
-            <label style={{ display: "flex", gap: 6, alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>
+            <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>
               <input type="checkbox" checked={yahoo.consent_accepted}
                      onChange={(e) => setYahoo({ ...yahoo, consent_accepted: e.target.checked })} />
               Autorizo a leitura e o envio de e-mail pela minha caixa Yahoo.
@@ -319,21 +319,21 @@ export default function Sincronizacao() {
               <p className="eyebrow" style={{ margin: 0 }}>O que sincronizar desta conta</p>
               <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap", fontSize: "0.84rem" }}>
                 {cap.read_appointments ? (
-                  <label style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                  <label className="agenda-check">
                     <input type="checkbox" checked={item.sync_calendar}
                            onChange={(e) => alterarPreferencia(item.id, "sync_calendar", e.target.checked)} />
                     Agenda/calendário
                   </label>
                 ) : <span style={{ color: "var(--texto-secundario)" }}>Sem calendário</span>}
                 {cap.read_contacts && (
-                  <label style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                  <label className="agenda-check">
                     <input type="checkbox" checked={item.contacts_enabled}
                            onChange={(e) => alterarPreferencia(item.id, "contacts", e.target.checked)} />
                     Contatos
                   </label>
                 )}
                 {cap.read_mail && (
-                  <label style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                  <label className="agenda-check">
                     <input type="checkbox" checked={item.sync_mail}
                            onChange={(e) => alterarPreferencia(item.id, "sync_mail", e.target.checked)} />
                     E-mail

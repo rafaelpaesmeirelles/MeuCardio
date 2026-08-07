@@ -20,6 +20,7 @@ Escopo do conteúdo continua administrativo/profissional, não clínico
 (decisão do Rafael) — ver a ressalva permanente na tela, em
 `frontend/src/pages/CaixaDeEmail.tsx`.
 """
+import asyncio
 import re
 import unicodedata
 from datetime import datetime, timezone
@@ -54,6 +55,7 @@ from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import emails, mail360
 from app.services import apple_mail, external_mail, yahoo_mail
+from app.services.assinatura import divulgacao_email, verificacao_pdf
 from app.services.agenda_integrada.contacts import list_contacts
 from app.services.agenda_integrada.domain import integration_credentials, store_integration_credentials
 from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
@@ -774,6 +776,50 @@ async def enviar_anexo(arquivo: UploadFile, conta: EmailAccount = Depends(curren
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
     return {"file_id": file_id, "nome": arquivo.filename}
+
+
+@router.post("/mensagens/anexos/verificar-assinatura")
+async def verificar_assinatura_anexo(arquivo: UploadFile, conta: EmailAccount = Depends(current_email_account)):
+    """Rafael pediu, 07/08/2026: "validar assinatura digital do arquivo em
+    anexo... ao validar uma assinatura ele incorpora no texto do email a
+    comprovacao da validacao da assinatura, dando mais credibilidade" —
+    reaproveita a verificação REAL já usada para o material do paciente
+    (`services/assinatura/verificacao_pdf.py`, lê o PDF de verdade, nunca
+    confia no certificado atual do médico como proxy) e o texto pronto de
+    `divulgacao_email.texto_divulgacao()`, já testado e em produção desde
+    06/08/2026.
+
+    Roda ANTES do upload ao Mail360 — sobre os mesmos bytes que o
+    formulário já tem localmente no navegador — porque o Mail360 não expõe
+    de volta o conteúdo de um anexo ainda não enviado; verificar aqui evita
+    inventar um segundo caminho de leitura pelo `file_id`.
+
+    `assinado: false` para PDF sem assinatura embutida (emissão manual) e
+    também para qualquer arquivo que não seja PDF — nunca finge verificação
+    do que não pôde ser lido."""
+    conteudo = await arquivo.read()
+    if len(conteudo) > TAMANHO_MAXIMO_ANEXO:
+        raise HTTPException(status_code=413, detail="O anexo precisa ter no máximo 15 MB.")
+    nome = (arquivo.filename or "").lower()
+    if not nome.endswith(".pdf"):
+        return {"assinado": False, "texto_comprovacao": None}
+    # `verificacao_pdf.verificar()` chama `pyhanko.validate_pdf_signature`,
+    # que por dentro faz `asyncio.run()` — trava com "cannot be called from
+    # a running event loop" numa rota `async def` (mesmo bug já documentado
+    # em `receituario.py::enviar_assinatura_externa`). `to_thread` isola a
+    # chamada síncrona numa thread própria, sem loop ambiente.
+    resultado = await asyncio.to_thread(verificacao_pdf.verificar, conteudo)
+    if resultado is None:
+        return {"assinado": False, "texto_comprovacao": None}
+    texto = await asyncio.to_thread(divulgacao_email.texto_divulgacao, conteudo)
+    return {
+        "assinado": True,
+        "intacta": resultado.intacta,
+        "titular": resultado.titular_cn,
+        "emissor": resultado.emissor_cn,
+        "assinado_em": resultado.assinado_em.isoformat() if resultado.assinado_em else None,
+        "texto_comprovacao": texto,
+    }
 
 
 @router.post("/mensagens", status_code=201)
