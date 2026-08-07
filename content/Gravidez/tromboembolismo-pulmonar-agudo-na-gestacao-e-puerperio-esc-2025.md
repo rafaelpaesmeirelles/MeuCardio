@@ -5,7 +5,7 @@ theme: "Gravidez"
 kind: protocolo
 summary: "Avaliação de TEP suspeito na gestante e puérpera, com estratégia YEARS adaptada nas pacientes estáveis, anticoagulação terapêutica precoce e escalada especializada no TEP de alto risco."
 review_status: revisado
-source_refs: ["Regitz-Zagrosek V, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. Seção 11.4 — Management of acute venous thromboembolism."]
+source_refs: ["De Backer J, Haugaa KH, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. Seção 11.4 — Management of acute venous thromboembolism."]
 ---
 
 # Tromboembolismo pulmonar agudo na gestação e no puerpério
