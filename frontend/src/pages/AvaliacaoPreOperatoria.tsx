@@ -7,12 +7,12 @@ import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 /**
  * Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico.
  *
- * RCRI + Gupta MICA foram criados na implementação inicial. DASI e AUB-HAS2
- * foram acrescentados pelo ChatGPT em 07/08/2026, preservando o mesmo fluxo:
- * dados brutos → cálculo via API → recálculo no servidor ao gerar o documento
- * → assinatura/download/e-mail.
+ * RCRI + Gupta MICA foram criados na implementação inicial. DASI, AUB-HAS2 e
+ * VSG-CRI foram acrescentados pelo ChatGPT em 07/08/2026, preservando o mesmo
+ * fluxo: dados brutos → cálculo via API → recálculo no servidor ao gerar o
+ * documento → assinatura/download/e-mail.
  *
- * Fonte: ChatGPT nas extensões DASI/AUB-HAS2.
+ * Fonte: ChatGPT nas extensões DASI/AUB-HAS2/VSG-CRI.
  */
 
 const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
@@ -130,6 +130,39 @@ const AUB_LABELS: Record<Exclude<keyof AubEntrada, "idade_maior_igual_75">, stri
   cirurgia_emergencia: "Cirurgia de emergência",
 };
 
+type VsgEntrada = {
+  idade: string;
+  doenca_arterial_coronariana: boolean;
+  insuficiencia_cardiaca: boolean;
+  dpoc: boolean;
+  creatinina_maior_1_8: boolean;
+  tabagismo: boolean;
+  diabetes_insulina: boolean;
+  betabloqueador_cronico: boolean;
+  revascularizacao_coronaria_previa: boolean;
+};
+const VSG_INICIAL: VsgEntrada = {
+  idade: "",
+  doenca_arterial_coronariana: false,
+  insuficiencia_cardiaca: false,
+  dpoc: false,
+  creatinina_maior_1_8: false,
+  tabagismo: false,
+  diabetes_insulina: false,
+  betabloqueador_cronico: false,
+  revascularizacao_coronaria_previa: false,
+};
+const VSG_LABELS: Record<Exclude<keyof VsgEntrada, "idade">, string> = {
+  doenca_arterial_coronariana: "Doença arterial coronariana (+2)",
+  insuficiencia_cardiaca: "Insuficiência cardíaca (+2)",
+  dpoc: "DPOC (+2)",
+  creatinina_maior_1_8: "Creatinina >1,8 mg/dL (+2)",
+  tabagismo: "Tabagismo atual ou prévio, conforme variável do modelo (+1)",
+  diabetes_insulina: "Diabetes em uso de insulina (+1)",
+  betabloqueador_cronico: "Uso crônico de betabloqueador (+1; variável prognóstica, não causal)",
+  revascularizacao_coronaria_previa: "Revascularização coronária prévia — CABG/PCI (−1)",
+};
+
 function baixarBlob(blob: Blob, nomeArquivo: string) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -177,6 +210,11 @@ export default function AvaliacaoPreOperatoria() {
   const [resultadoAub, setResultadoAub] = useState<{ score: number; max: number; categoria: string } | null>(null);
   const [interpretacaoAub, setInterpretacaoAub] = useState("");
 
+  const [usarVsg, setUsarVsg] = useState(false);
+  const [vsg, setVsg] = useState<VsgEntrada>(VSG_INICIAL);
+  const [resultadoVsg, setResultadoVsg] = useState<{ score: number; categoria: string; evento_original_pct: number } | null>(null);
+  const [interpretacaoVsg, setInterpretacaoVsg] = useState("");
+
   const [erroCalculo, setErroCalculo] = useState("");
   const [calculando, setCalculando] = useState(false);
 
@@ -199,6 +237,12 @@ export default function AvaliacaoPreOperatoria() {
       ...aub,
       idade_maior_igual_75: idade ? Number(idade) >= 75 : aub.idade_maior_igual_75,
     };
+  }
+
+  function vsgPayload(): Omit<VsgEntrada, "idade"> & { idade: number } {
+    const idadeVsg = vsg.idade || idade;
+    if (!idadeVsg) throw new ApiError(422, "Informe a idade para calcular o VSG-CRI.");
+    return { ...vsg, idade: Number(idadeVsg) };
   }
 
   async function calcularEscores() {
@@ -231,6 +275,12 @@ export default function AvaliacaoPreOperatoria() {
         setResultadoAub(r.result);
         setInterpretacaoAub(r.interpretation);
       } else setResultadoAub(null);
+
+      if (usarVsg) {
+        const r = await api.post<{ result: NonNullable<typeof resultadoVsg>; interpretation: string }>("/calculators/vsg-cri/run", vsgPayload());
+        setResultadoVsg(r.result);
+        setInterpretacaoVsg(r.interpretation);
+      } else setResultadoVsg(null);
     } catch (e) {
       setErroCalculo(e instanceof ApiError ? e.message : "Não foi possível calcular os métodos selecionados.");
     } finally {
@@ -238,8 +288,8 @@ export default function AvaliacaoPreOperatoria() {
     }
   }
 
-  const temResultado = Boolean(resultadoRcri || resultadoGupta || resultadoDasi || resultadoAub);
-  const algumMetodoSelecionado = usarRcri || usarGupta || usarDasi || usarAub;
+  const temResultado = Boolean(resultadoRcri || resultadoGupta || resultadoDasi || resultadoAub || resultadoVsg);
+  const algumMetodoSelecionado = usarRcri || usarGupta || usarDasi || usarAub || usarVsg;
   const podeGerar = procedimento.trim().length > 0 && temResultado;
 
   async function gerarDocumento() {
@@ -260,6 +310,7 @@ export default function AvaliacaoPreOperatoria() {
         gupta: usarGupta && resultadoGupta ? { ...gupta, idade: Number(idadeGupta), asa: Number(gupta.asa) } : null,
         dasi: usarDasi && resultadoDasi ? dasi : null,
         aub_has2: usarAub && resultadoAub ? aubPayload() : null,
+        vsg_cri: usarVsg && resultadoVsg ? vsgPayload() : null,
       });
       setGeradoId(r.id);
     } catch (e) {
@@ -393,6 +444,30 @@ export default function AvaliacaoPreOperatoria() {
         </div>}
       </div>
 
+      <div className="cartao" style={{ marginTop: "1rem" }}>
+        <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 700 }}>
+          <input type="checkbox" checked={usarVsg} onChange={(e) => setUsarVsg(e.target.checked)} />
+          VSG-CRI — cirurgia vascular arterial
+        </label>
+        {usarVsg && <>
+          <p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem" }}>
+            Use somente em cirurgia vascular arterial. Classificação SBC 2024: 0–4 baixo, 5–6 intermediário, ≥7 alto.
+          </p>
+          <div className="grade grade--2">
+            <div>
+              <label>Idade</label>
+              <input type="number" min={18} max={120} value={vsg.idade} placeholder={idade || ""} onChange={(e) => setVsg({ ...vsg, idade: e.target.value })} />
+            </div>
+          </div>
+          {(Object.keys(VSG_LABELS) as (keyof typeof VSG_LABELS)[]).map((chave) => (
+            <label key={chave} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontWeight: 400, marginBottom: "0.35rem" }}>
+              <input type="checkbox" checked={vsg[chave]} onChange={(e) => setVsg({ ...vsg, [chave]: e.target.checked })} style={{ marginTop: 3 }} />
+              <span>{VSG_LABELS[chave]}</span>
+            </label>
+          ))}
+        </>}
+      </div>
+
       <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
         <p className="eyebrow" style={{ marginTop: 0 }}>Metodologias adicionais</p>
         <p style={{ marginBottom: "0.35rem" }}><strong>GSCRI:</strong> documentado para pacientes ≥65 anos; cálculo local permanece bloqueado até revisão integral dos coeficientes contra a publicação original.</p>
@@ -410,6 +485,7 @@ export default function AvaliacaoPreOperatoria() {
         {resultadoGupta && <p><strong>Gupta MICA:</strong> {resultadoGupta.risco_pct}%. {interpretacaoGupta}</p>}
         {resultadoDasi && <p><strong>DASI:</strong> {resultadoDasi.score}/58,2. {interpretacaoDasi}</p>}
         {resultadoAub && <p><strong>AUB-HAS2:</strong> {resultadoAub.score}/6 — {resultadoAub.categoria}. {interpretacaoAub}</p>}
+        {resultadoVsg && <p><strong>VSG-CRI:</strong> {resultadoVsg.score} ponto(s) — {resultadoVsg.categoria}. {interpretacaoVsg}</p>}
         <p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem", marginBottom: 0 }}>
           Os métodos têm desfechos diferentes e não devem ser somados ou promediados. Use as árvores da Biblioteca para definir a próxima etapa de investigação.
         </p>
