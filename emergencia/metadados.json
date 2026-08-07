@@ -518,5 +518,31 @@
       "miocardite-por-inibidor-de-checkpoint-imune"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio",
+    "titulo": "Síndrome coronariana aguda por SCAD na gestação e puerpério",
+    "gatilho": "Gestante ou puérpera com dor torácica, alteração isquêmica no ECG, troponina elevada, arritmia ou choque — especialmente jovem e sem perfil aterosclerótico habitual",
+    "ordem": 94,
+    "documento_slug": "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio-esc-2025",
+    "fluxograma_slug": "fluxograma-sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio-esc-2025",
+    "relacionados": [
+      "cardiomiopatia-periparto-descompensada-no-puerperio",
+      "sindrome-coronariana-aguda"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tromboembolismo-pulmonar-na-gestacao-e-puerperio",
+    "titulo": "Tromboembolismo pulmonar na gestação e puerpério",
+    "gatilho": "Gestante ou puérpera com dispneia súbita, dor torácica, síncope, hipoxemia, sinais de TVP ou instabilidade hemodinâmica com suspeita de TEP",
+    "ordem": 95,
+    "documento_slug": "tromboembolismo-pulmonar-agudo-na-gestacao-e-puerperio-esc-2025",
+    "fluxograma_slug": "fluxograma-tromboembolismo-pulmonar-agudo-na-gestacao-e-puerperio-esc-2025",
+    "relacionados": [
+      "cardiomiopatia-periparto-descompensada-no-puerperio",
+      "tromboembolismo-pulmonar"
+    ],
+    "review_status": "revisado"
   }
 ]
