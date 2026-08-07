@@ -12280,5 +12280,126 @@
       "Grossman SA, Fischer C, Lipsitz LA, et al. Predicting adverse outcomes in syncope. J Emerg Med. 2007;33(3):233-239. DOI: 10.1016/j.jemermed.2007.04.001. PMID: 17976548"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "empatia-do-medico-e-controle-metabolico-no-diabetico-hojat-2011",
+    "titulo": "A empatia do médico muda o controle do diabetes do paciente? O estudo de Hojat et al.",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Um estudo correlacional acompanhou 891 pacientes diabéticos tratados por 29 médicos de família num ambulatório universitário entre 2006 e 2009. Os médicos responderam à Escala de Empatia de Jefferson em 2009 e foram agrupados em tercis de empatia alta, moderada e baixa. Os desfechos foram o controle de HbA1c (bom controle: <7,0%) e de LDL-C (bom controle: <100 mg/dL) dos pacientes, extraídos do prontuário eletrônico.",
+    "pergunta": "O que o estudo encontrou sobre a relação entre a empatia do médico e o controle metabólico do paciente diabético?",
+    "opcoes": [
+      "Nenhuma associação — a empatia é traço de personalidade do médico, sem relação com desfecho clínico objetivo",
+      "Pacientes de médicos com escore de empatia alto tiveram maior proporção de bom controle de HbA1c (56% vs. 40%) e de LDL-C (59% vs. 44%) do que pacientes de médicos com escore baixo, associação que persistiu após ajuste para sexo e idade de médico e paciente e para o seguro de saúde",
+      "A associação existiu só para o LDL-C, não para a HbA1c, porque o colesterol depende mais de adesão medicamentosa do que de mudança de comportamento",
+      "A associação foi observada só em análise bruta e desapareceu totalmente após ajuste por variáveis de confusão"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Hojat et al. encontraram associação estatisticamente significativa (p<0,001 nos dois desfechos) entre o escore de empatia do médico e o controle metabólico do paciente diabético, para HbA1c e para LDL-C, e essa associação teve contribuição própria em análise de regressão logística mesmo depois de controlar sexo e idade de médico e paciente e o tipo de seguro de saúde. É um estudo correlacional (não randomizado) — não prova causalidade direta de 'ser mais empático' sobre o valor laboratorial, mas é evidência de que a dimensão relacional da consulta se associa a desfecho objetivo e mensurável, não apenas a satisfação subjetiva do paciente, o que reforça que comunicação clínica não é 'só' cortesia: tem correlato clínico concreto nessa amostra.",
+    "source_refs": [
+      "Hojat M, Louis DZ, Markham FW, Wender R, Rabinowitz C, Gonnella JS. Physicians' empathy and clinical outcomes for diabetic patients. Acad Med. 2011;86(3):359-364. DOI: 10.1097/ACM.0b013e3182086fe1. PMID: 21248604."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "programa-estruturado-de-alta-hospitalar-reduz-reutilizacao-project-red",
+    "titulo": "Um programa estruturado de alta hospitalar reduz retorno ao pronto-socorro e reinternação? O ensaio Project RED",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Ensaio clínico randomizado num hospital-escola urbano de segurança social incluiu 749 adultos internados na clínica médica geral. No grupo intervenção, um enfermeiro 'advogado de alta' trabalhava com o paciente durante a internação para agendar consulta de seguimento, conferir a reconciliação medicamentosa e conduzir educação individualizada com um caderno de instruções enviado também ao médico de atenção primária; um farmacêutico clínico ligava para o paciente 2 a 4 dias após a alta para reforçar o plano e revisar as medicações. O grupo controle recebeu os cuidados habituais de alta.",
+    "pergunta": "Qual foi o efeito do programa estruturado de alta sobre a utilização de serviços de saúde nos 30 dias seguintes?",
+    "opcoes": [
+      "Nenhuma diferença — o desfecho combinado de idas ao pronto-socorro e reinternação foi igual nos dois grupos",
+      "O grupo intervenção teve menor taxa de utilização hospitalar (0,314 vs. 0,451 visita por pessoa-mês; razão de taxas de incidência 0,695; IC95% 0,515-0,937; p=0,009), com o efeito mais pronunciado em quem já tinha utilizado o serviço nos 6 meses anteriores",
+      "O programa reduziu reinternação, mas aumentou as idas ao pronto-socorro, porque o paciente passou a procurar ajuda mais cedo diante de qualquer dúvida",
+      "O benefício só apareceu em análise por protocolo, não na análise por intenção de tratar"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O Project RED (Re-Engineered Discharge) mostrou redução de cerca de 30% no desfecho combinado de utilização hospitalar (pronto-socorro + reinternação) nos 30 dias após a alta com um pacote de comunicação estruturada — não uma tecnologia nova, e sim reorganizar o QUEM diz O QUÊ e QUANDO ao paciente antes e depois de sair do hospital: reconciliação medicamentosa explícita, agendamento ativo de retorno, caderno de instruções individualizado que também vai para quem vai seguir o paciente fora do hospital, e uma ligação de reforço nos primeiros dias. O efeito foi maior em quem já tinha histórico de uso do serviço, sugerindo que o programa endereça sobretudo a falha de comunicação na transição de cuidado, não uma característica fixa do paciente. Limitação declarada pelos próprios autores: estudo de centro único, sem inclusão de todos os elegíveis, com parte da aferição de desfecho por relato do próprio participante.",
+    "source_refs": [
+      "Jack BW, Chetty VK, Anthony D, Greenwald JL, Sanchez GM, Johnson AE, Forsythe SR, O'Donnell JK, Paasche-Orlow MK, Manasseh C, Martin S, Culpepper L. A reengineered hospital discharge program to decrease rehospitalization: a randomized trial. Ann Intern Med. 2009;150(3):178-187. DOI: 10.7326/0003-4819-150-3-200902030-00007. PMID: 19189907."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "temperatura-ambiente-fria-como-gatilho-de-infarto-registro-minap",
+    "titulo": "\"Esfriou e ele teve um infarto\": a queda de temperatura é mesmo gatilho de infarto? O registro MINAP",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Análise de série temporal com regressão sobre 84.010 internações por infarto agudo do miocárdio registradas no Myocardial Ischaemia National Audit Project (MINAP), em 15 conurbações da Inglaterra e do País de Gales entre 2003 e 2006 (mediana de 57 eventos por dia), relacionou a temperatura ambiente diária ao risco de infarto, incluindo efeitos com atraso de até 28 dias.",
+    "pergunta": "O que o estudo encontrou sobre a relação entre temperatura ambiente e risco de infarto?",
+    "opcoes": [
+      "Só o calor extremo aumentou o risco de infarto — o frio não teve efeito detectável",
+      "Cada redução de 1°C na temperatura média diária associou-se a aumento cumulativo de 2,0% no risco de infarto ao longo dos 28 dias seguintes (IC95% 1,1%-2,9%), relação linear sem limiar de temperatura, mais pronunciada em idosos de 75-84 anos e em quem já tinha doença coronariana — e o calor não mostrou efeito deletério detectável",
+      "A relação foi em U: tanto o frio quanto o calor extremos aumentaram o risco na mesma magnitude",
+      "Não houve relação temporal alguma — a variação encontrada se explicou inteiramente por sazonalidade de influenza"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O registro MINAP mostrou relação log-linear, sem limiar, entre queda de temperatura e risco de infarto — cada grau Celsius a menos soma 2,0% de risco cumulativo nos 28 dias seguintes, com o efeito mais forte entre 2 e 14 dias de atraso. Contraintuitivamente para a crença popular de que 'calor sobrecarrega o coração', o estudo não detectou efeito deletério do calor sobre o infarto nessa coorte britânica — clima predominantemente temperado, o que limita extrapolação direta para climas de calor extremo persistente. Population mais vulnerável ao frio: idosos de 75-84 anos e quem já tinha doença coronariana prévia (interação estatisticamente significativa para as duas); uso de AAS associou-se a menor vulnerabilidade ao frio. Implicação prática que os próprios autores discutem: alerta de temperatura baixa poderia orientar aconselhamento ou intervenção direcionada em população de risco, e não só em onda de calor.",
+    "source_refs": [
+      "Bhaskaran K, Hajat S, Haines A, Herrett E, Wilkinson P, Smeeth L. Short term effects of temperature on risk of myocardial infarction in England and Wales: time series regression analysis of the Myocardial Ischaemia National Audit Project (MINAP) registry. BMJ. 2010;341:c3823. DOI: 10.1136/bmj.c3823. PMID: 20699305."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aptidao-cardiorrespiratoria-e-mortalidade-sem-limite-superior-de-beneficio-mandsager-2018",
+    "titulo": "Existe excesso de condicionamento físico que faça mal? A coorte de 122.007 pacientes da Cleveland Clinic",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Coorte retrospectiva de 122.007 pacientes adultos (idade média 53 anos, 59% homens) referenciados para teste ergométrico em centro terciário entre 1991 e 2014, com seguimento mediano de 8,4 anos. Os pacientes foram estratificados por aptidão cardiorrespiratória (equivalentes metabólicos de pico, ajustados por idade e sexo) em grupos de desempenho: baixo, abaixo da média, acima da média, alto e elite (≥ percentil 97,7).",
+    "pergunta": "O que o estudo encontrou sobre aptidão cardiorrespiratória extremamente alta e mortalidade por todas as causas?",
+    "opcoes": [
+      "Relação em U: desempenho 'elite' teve mortalidade maior que desempenho 'alto', sugerindo dano do exercício extremo",
+      "A mortalidade ajustada por risco foi inversamente proporcional à aptidão cardiorrespiratória, mais baixa exatamente no grupo elite (HR 0,20 vs. baixo desempenho; HR 0,77 vs. alto desempenho), sem limite superior de benefício observado — inclusive com benefício adicional do grupo elite sobre o alto em idosos ≥70 anos e hipertensos",
+      "A aptidão cardiorrespiratória teve efeito menor sobre a mortalidade do que fatores de risco tradicionais como tabagismo e diabetes",
+      "O benefício do desempenho elite desapareceu completamente após os 70 anos de idade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Ao contrário da hipótese de que exercício muito vigoroso e sustentado traria dano cardiovascular líquido — hipótese que a própria introdução do artigo cita como motivação do estudo —, a mortalidade por todas as causas caiu de forma monotônica com o aumento da aptidão cardiorrespiratória, sem sinal de reversão nos extremos: o grupo elite teve o menor risco de todos, inclusive menor que o grupo 'alto' (HR 0,77; IC95% 0,63-0,95). O tamanho de efeito da baixa aptidão (HR 5,04 comparando baixo com elite) foi maior que o de fatores de risco tradicionais isolados como tabagismo (HR 1,41), diabetes (HR 1,40) ou doença arterial coronariana (HR 1,29) nesta coorte. É estudo observacional e retrospectivo de pacientes referenciados para teste ergométrico (população com indicação clínica para o exame, não amostra populacional geral), o que limita a extrapolação direta — mas o achado central, sem limite superior de benefício detectado, contraria diretamente relatos anteriores de possível 'dose excessiva' de exercício.",
+    "source_refs": [
+      "Mandsager K, Harb S, Cremer P, Phelan D, Nissen SE, Jaber W. Association of Cardiorespiratory Fitness With Long-term Mortality Among Adults Undergoing Exercise Treadmill Testing. JAMA Netw Open. 2018;1(6):e183605. DOI: 10.1001/jamanetworkopen.2018.3605. PMID: 30646252."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cha2ds2-va-substitui-cha2ds2-vasc-esc-2024-por-que-tirar-o-sexo-do-escore",
+    "titulo": "A ESC 2024 tirou o sexo feminino do escore de risco de AVC na FA: por que, e o que muda na prática?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Desde 2010 o CHA2DS2-VASc soma 1 ponto para sexo feminino na estimativa de risco tromboembólico na fibrilação atrial. A diretriz ESC 2024 de fibrilação atrial substitui esse escore pelo CHA2DS2-VA, que mantém idade, hipertensão, insuficiência cardíaca/disfunção de VE, diabetes, AVC/AIT/tromboembolismo prévio e doença vascular — mas remove inteiramente a categoria de sexo.",
+    "pergunta": "Qual é a justificativa da ESC 2024 para remover o sexo do escore, e qual o novo corte de decisão?",
+    "opcoes": [
+      "O sexo feminino deixou de ser fator de risco de AVC na FA em qualquer situação, e por isso foi simplesmente apagado do cálculo",
+      "O sexo feminino é modificador de risco dependente da idade e de outros fatores — não um fator de risco independente por si só —, e já 'carimba' indicação de anticoagulação sobretudo quando os demais fatores de risco também estão presentes; a diretriz recomenda anticoagulação com CHA2DS2-VA ≥2 e permite considerá-la com CHA2DS2-VA=1, sem depender do sexo",
+      "A remoção foi só uma simplificação prática, sem base em evidência de que o sexo modifique o risco de forma diferente conforme a idade",
+      "O CHA2DS2-VA é um escore totalmente novo e substitui a lógica do CHA2DS2-VASc na íntegra, não apenas removendo uma variável"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2024 (Van Gelder et al., Eur Heart J 2024) argumenta que o sexo feminino funciona como modificador de risco dependente de idade, não como fator de risco independente equivalente aos demais — e que, na prática, mulheres com risco elevado de AVC já costumam acumular outros fatores de risco que por si só indicam anticoagulação, tornando o ponto extra de sexo redundante na maioria dos cenários de decisão real. A simplificação também resolve uma lacuna prática que o próprio corpo de comentário da mudança discute: a categoria binária de sexo do CHA2DS2-VASc não acomoda bem pessoa não binária, transgênero ou em terapia hormonal. Na prática: CHA2DS2-VA ≥2 mantém recomendação de anticoagular; CHA2DS2-VA=1 passa a 'pode-se considerar', independente do sexo. Isso NÃO significa que sexo feminino deixou de se associar a maior risco de AVC na FA em estudos observacionais — significa que a diretriz decidiu não usá-lo como critério autônomo de pontuação na decisão binária de anticoagular ou não.",
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, Casado-Arroyo R, Caso V, Crijns HJGM, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723.",
+      "Boriani G, Vitolo M, Mei DA. CHA2DS2-VA instead of CHA2DS2-VASc for stroke risk stratification in patients with atrial fibrillation: not just a matter of sex. Europace. 2024;26(11):euae281. DOI: 10.1093/europace/euae281. PMID: 39498823."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "equacoes-prevent-da-aha-2024-o-que-muda-em-relacao-as-pooled-cohort-equations",
+    "titulo": "As equações PREVENT da American Heart Association: o que muda em relação às Pooled Cohort Equations?",
+    "tema": "Calculadoras",
+    "nivel": "avançado",
+    "enunciado": "A American Heart Association derivou e validou as equações PREVENT (Predicting Risk of CVD EVENTs) a partir de dados de nível individual de 25 bases entre 1992 e 2017 (mais de 3,28 milhões de adultos na derivação, mais de 3,33 milhões em validação externa de 21 bases adicionais), para estimar risco de doença cardiovascular (incluindo, pela primeira vez nesse tipo de equação, insuficiência cardíaca como desfecho) em adultos de 30 a 79 anos sem doença cardiovascular conhecida.",
+    "pergunta": "Quais são as principais diferenças estruturais das equações PREVENT em relação às Pooled Cohort Equations (PCE) de 2013?",
+    "opcoes": [
+      "PREVENT usa exatamente as mesmas variáveis das PCE, só recalibradas com dados mais recentes",
+      "PREVENT é livre de raça como variável de entrada, incorpora a taxa de filtração glomerular estimada como preditor de base, modela desfechos cardiovasculares ateroscleróticos E insuficiência cardíaca (não só eventos ateroscleróticos), e tem equações opcionais que incorporam razão albumina-creatinina urinária, HbA1c e índice de privação social",
+      "PREVENT abandonou completamente o sexo como variável, seguindo a mesma lógica do CHA2DS2-VA",
+      "PREVENT só pode ser calculado com exames laboratoriais avançados não disponíveis na maioria dos serviços, o que limita seu uso a centros de pesquisa"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "As PREVENT são race-free (não usam raça como variável, ao contrário das PCE, que tinham equação separada para pacientes negros) e sex-specific (continuam distintas por sexo, diferente do CHA2DS2-VA — são mudanças metodológicas independentes, não a mesma lógica). Incorporam a taxa de filtração glomerular estimada no modelo de base — reconhecendo a relação rim-coração-metabolismo — e ampliam o desfecho: além de doença cardiovascular aterosclerótica, modelam insuficiência cardíaca como componente do risco total, o que as PCE não faziam. Discriminação na validação externa: estatística C de 0,794 em mulheres e 0,757 em homens para o desfecho total; equações opcionais que acrescentam razão albumina-creatinina urinária, HbA1c e índice de privação social melhoram discriminação de forma pequena mas estatisticamente significativa, e melhoram a calibração de forma mais expressiva especificamente em quem tem albuminúria marcada (>300 mg/g). O próprio artigo original não compara diretamente PREVENT com PCE numa mesma coorte de teste de cabeça a cabeça — a comparação de superioridade prática, inclusive quanto à tendência já descrita na literatura de as PCE superestimarem risco no extremo superior, é matéria de estudos posteriores de validação cruzada, não do artigo de derivação em si.",
+    "source_refs": [
+      "Khan SS, Matsushita K, Sang Y, Ballew SH, Grams ME, Surapaneni A, et al. Development and Validation of the American Heart Association's PREVENT Equations. Circulation. 2024;149(6):430-449. DOI: 10.1161/CIRCULATIONAHA.123.067626. PMID: 37947085."
+    ],
+    "review_status": "revisado"
   }
 ]
