@@ -37793,5 +37793,253 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "modo-de-estimulacao-dnss-dd-com-algoritmo-para-minimizar-estimulacao-ventricular",
+    "statement": "Na doença do nó sinusal com indicação de marca-passo, o modo DDD com algoritmo para minimizar a estimulação ventricular em pacientes com condução atrioventricular preservada é recomendação Classe IIa, Nível B.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo",
+      "doença do nó sinusal",
+      "modo de estimulação",
+      "minimização de estimulação ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "modo-de-estimulacao-dns-vvir-em-idosos-sem-conducao-retrograda-va",
+    "statement": "Na doença do nó sinusal com indicação de marca-passo, o modo VVI(R) em idosos, na ausência de condução retrógrada ventrículo-atrial, é recomendação Classe IIb, Nível B — opção reservada, não a escolha padrão, que segue sendo AAI(R)/DDD(R) conforme a condução atrioventricular.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo",
+      "doença do nó sinusal",
+      "modo de estimulação",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-nao-indicado-na-apneia-obstrutiva-do-sono-sem-tratamento-especifico-tentado",
+    "statement": "Marca-passo definitivo NÃO é indicado (Classe III, Nível C) em pacientes com bradiarritmias noturnas, sem cardiopatia significativa, assintomáticos no período de vigília, com síndrome da apneia obstrutiva do sono nos quais não foi realizado o tratamento específico da apneia — a bradicardia noturna isolada não tratada da causa de base não é indicação de marca-passo.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo",
+      "apneia obstrutiva do sono",
+      "bradiarritmia noturna",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estimulacao-fisiologica-do-feixe-de-his-ou-ramo-esquerdo-na-fa-permanente-com-ablacao-do-no-av",
+    "statement": "Em pacientes com fibrilação atrial permanente com indicação de ablação da junção atrioventricular para controle de frequência cardíaca, a estimulação fisiológica (feixe de His ou ramo esquerdo) é recomendação Classe IIa, Nível C — alternativa à estimulação convencional de ventrículo direito no contexto de \"ablate and pace\".",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "estimulação fisiológica",
+      "feixe de His",
+      "ramo esquerdo",
+      "fibrilação atrial permanente",
+      "ablação do nó AV"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estimulacao-fisiologica-do-feixe-de-his-ou-ramo-esquerdo-no-bav-sem-disfuncao-sistolica-de-ve",
+    "statement": "Em pacientes com bloqueio atrioventricular sem disfunção sistólica de ventrículo esquerdo, a estimulação fisiológica (feixe de His ou ramo esquerdo) para tratamento da bradiarritmia é recomendação Classe IIb, Nível B.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "estimulação fisiológica",
+      "feixe de His",
+      "ramo esquerdo",
+      "bloqueio atrioventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-sem-eletrodo-preferencial-apos-complicacao-de-dispositivo-convencional-com-obstrucao-venosa",
+    "statement": "O marca-passo sem eletrodo (leadless pacemaker) é recomendado (Classe IIa, Nível C) em pacientes com complicação de dispositivos convencionais (fratura de eletrodo, após extração por infecção) nos quais existem obstruções venosas críticas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo sem eletrodo",
+      "leadless pacemaker",
+      "obstrução venosa",
+      "extração de eletrodo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-sem-eletrodo-nao-indicado-em-criancas-e-jovens",
+    "statement": "O marca-passo sem eletrodo (leadless pacemaker) NÃO é indicado (Classe III, Nível C) em crianças e jovens — a diretriz cita explicitamente a incerteza quanto à conduta quando o gerador chega ao fim da vida útil nessa faixa etária como razão da restrição.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo sem eletrodo",
+      "leadless pacemaker",
+      "criança",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-qt-longo-refratario-a-betabloqueador-ou-simpatectomia-com-sincope-ou-tv-polimorfica",
+    "statement": "Em pacientes com síndrome do QT longo refratários a betabloqueadores e/ou a simpatectomia, com síncope ou taquicardia ventricular polimórfica recorrente, o cardioversor-desfibrilador implantável em prevenção primária é recomendação Classe I, Nível B.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "prevenção primária",
+      "síndrome do QT longo",
+      "refratário a betabloqueador"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-qt-curto-assintomatico-com-historia-familiar-de-morte-subita",
+    "statement": "Em pacientes com QTc menor que 330 ms, assintomáticos, mas com história de morte súbita familiar, o cardioversor-desfibrilador implantável em prevenção primária pode ser considerado — Classe IIb, Nível C.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "prevenção primária",
+      "síndrome do QT curto",
+      "história familiar de morte súbita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-brugada-tvs-ou-sincope-com-padrao-tipo-1-espontaneo",
+    "statement": "Em pacientes com taquicardia ventricular sustentada ou síncope de provável causa arrítmica e ECG com padrão de Brugada tipo 1 ESPONTÂNEO, o cardioversor-desfibrilador implantável em prevenção primária é recomendação Classe I, Nível B. Quando o padrão tipo 1 só aparece INDUZIDO farmacologicamente (teste com bloqueador de canal de sódio), a recomendação cai para Classe IIa, mesmo nível de evidência B — a diretriz distingue explicitamente padrão espontâneo de padrão induzido para a força da recomendação.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "prevenção primária",
+      "síndrome de Brugada",
+      "padrão tipo 1 espontâneo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-tvpc-com-sincope-ou-tvs-apesar-de-betabloqueador-em-dose-maxima",
+    "statement": "Em pacientes com taquicardia ventricular polimórfica catecolaminérgica (TVPC) com síncope ou taquicardia ventricular sustentada apesar do uso de betabloqueador em dose máxima tolerada, ou que tenham contraindicação ao betabloqueador e expectativa de vida maior que 1 ano, o cardioversor-desfibrilador implantável em prevenção primária é recomendação Classe IIa, Nível C. Na TVPC assintomática com boa resposta ao betabloqueador, o CDI NÃO é indicado (Classe III, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "prevenção primária",
+      "taquicardia ventricular polimórfica catecolaminérgica",
+      "TVPC"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitor-de-eventos-implantavel-na-sincope-recorrente-de-origem-indeterminada",
+    "statement": "O monitor de eventos implantável (loop recorder) é recomendação Classe I, Nível A na síncope recorrente de origem indeterminada, sem indicação formal de marca-passo ou CDI, após investigação clínica e laboratorial inconclusiva — é o único item de nível A em todo o capítulo de indicações de loop recorder da diretriz.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "monitor de eventos implantável",
+      "loop recorder",
+      "síncope recorrente",
+      "síncope de origem indeterminada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitor-de-eventos-implantavel-no-avc-criptogenico-para-detectar-fa",
+    "statement": "O monitor de eventos implantável (loop recorder) para detecção de fibrilação atrial em pacientes com AVC criptogênico e investigação não invasiva negativa ou inconclusiva é recomendação Classe IIa, Nível B.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596. PMC10389103, texto integral lido nesta sessão.",
+    "theme": "Dispositivos",
+    "tags": [
+      "monitor de eventos implantável",
+      "loop recorder",
+      "AVC criptogênico",
+      "fibrilação atrial subclínica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
