@@ -5628,5 +5628,72 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tromboembolo-pulmonar-em-sela-peca-de-necropsia",
+    "title": "Peça de necropsia — Tromboembolismo pulmonar em sela",
+    "modality": "Anatomia patológica",
+    "theme": "Tromboembolismo",
+    "file_path": "patologia/tromboembolo-em-sela-peca-de-necropsia.jpg",
+    "findings": "Peça de necropsia com os dois pulmões abertos, expondo o tronco da artéria pulmonar e seus ramos principais. Um trombo esbranquiçado/pálido, alongado e ramificado ocupa a bifurcação do tronco pulmonar e se estende para os ramos direito e esquerdo, moldando-se ao contorno do lúmen vascular — o formato que dá nome ao achado ('êmbolo em sela', cavalgando a bifurcação). O parênquima pulmonar ao redor mostra áreas de coloração hemorrágica, compatíveis com infarto pulmonar hemorrágico associado à obstrução.",
+    "teaching_points": "O êmbolo em sela obstrui, ao mesmo tempo, os dois ramos principais da artéria pulmonar — é por isso que costuma ser o cenário mais associado a colapso hemodinâmico agudo e morte súbita, mesmo quando a origem do trombo (tipicamente veias ilíacas ou femorais) é a mesma de qualquer outro tromboembolismo venoso. Esta é uma peça POST-MORTEM: mostra a anatomia macroscópica do achado que a angiotomografia de tórax já cadastrada na galeria ('TC de embolo em sela') mostra in vivo, em corte transversal — as duas imagens se complementam, uma dando a correlação anatômica direta, a outra o que o radiologista lê no exame do paciente vivo. Não há dado clínico do caso associado a esta peça (idade, comorbidade, se houve tentativa de trombólise ou embolectomia) — a fonte é uma fotografia de acervo de patologia pulmonar, sem relato de caso.",
+    "source_name": "Wikimedia Commons (originalmente publicada no Flickr, conta Pulmonary Pathology)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Saddle_thromboembolus.jpg",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Yale Rosen, via Wikimedia Commons/Flickr (Pulmonary Pathology) — CC BY-SA 2.0.",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "êmbolo em sela",
+      "necropsia",
+      "anatomia patológica",
+      "trombo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "deteccao-de-fibrilacao-atrial-por-fotopletismografia-vs-ecg",
+    "title": "Diagrama — Detecção de fibrilação atrial por fotopletismografia (PPG) comparada ao ECG",
+    "modality": "Diagrama",
+    "theme": "Fibrilação atrial",
+    "file_path": "diagrama/deteccao-de-fibrilacao-atrial-por-fotopletismografia-ppg-vs-ecg.png",
+    "findings": "Painel com quatro blocos, comparando fibrilação atrial (esquerda) e ritmo sinusal (direita) no mesmo paciente/registro: (a) traçado de fotopletismografia (PPG) de 10 segundos, com os picos de pulso marcados — irregulares em amplitude e intervalo na FA, regulares no ritmo sinusal; (b) o ECG simultâneo dos mesmos 10 segundos, como referência-padrão; (c) série temporal dos intervalos entre batimentos (IBI, em segundos) medidos pelo ECG e pelo PPG, sobrepostos — na FA os dois métodos oscilam em conjunto entre ~0,35 e ~0,6 s; no ritmo sinusal ficam estáveis perto de 0,73-0,76 s; (d) gráfico de Poincaré (IBI atual vs. IBI seguinte) — nuvem de pontos dispersa na FA ('maior variabilidade entre intervalos'), agrupamento compacto no ritmo sinusal ('menor variabilidade').",
+    "teaching_points": "Esta figura mostra o princípio de sinal por trás da detecção de FA por relógio inteligente/oxímetro de pulso, já registrada nesta galeria como exame ('smartwatch e notificação de pulso irregular no rastreio de fibrilação atrial'): o algoritmo não lê o ritmo elétrico diretamente, lê a variabilidade do intervalo entre pulsos de volume sanguíneo periférico (PPG) e a compara a um padrão de irregularidade — daí o gráfico de Poincaré, ferramenta clássica de análise de variabilidade batimento a batimento. A concordância PPG×ECG na série temporal (painel c) ilustra por que o método funciona como rastreio, e a limitação junto: é rastreio por variabilidade, não diagnóstico eletrocardiográfico — outras causas de pulso irregular (extrassístoles frequentes, artefato de movimento) também aumentam a variabilidade e podem gerar notificação falso-positiva, por isso a confirmação por ECG de 12 derivações continua sendo exigida antes de iniciar anticoagulação.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Detecting_atrial_fibrillation_(AF)_from_the_photoplethysmogram_(PPG).svg",
+    "license": "CC BY 4.0",
+    "attribution": "Peter H. Charlton (Peterhcharlton), via Wikimedia Commons — CC BY 4.0. Dados do Listen Dataset (DOI: 10.6084/m9.figshare.5039298.v1).",
+    "tags": [
+      "fibrilação atrial",
+      "fotopletismografia",
+      "ppg",
+      "smartwatch",
+      "variabilidade de intervalo entre batimentos",
+      "poincaré"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "radiografia-de-torax-na-cardiomiopatia-periparto-congestao-pulmonar",
+    "title": "Radiografia de tórax — Congestão pulmonar na cardiomiopatia periparto",
+    "modality": "Radiografia",
+    "theme": "Gravidez",
+    "file_path": "radiografia/radiografia-de-torax-congestao-pulmonar-na-cardiomiopatia-periparto.jpg",
+    "findings": "Radiografia de tórax portátil, em incidência ântero-posterior, de paciente internada (eletrodos de monitorização visíveis sobre a parede torácica). Opacidades intersticiais difusas bilaterais e aumento da trama vascular pulmonar, compatíveis com congestão vascular pulmonar/edema pulmonar. Sem sinal de pneumotórax.",
+    "teaching_points": "Achado do caso-fonte: multigesta com dispneia aguda no puerpério, ecocardiograma com fração de ejeção estimada <40% e má contratilidade global do ventrículo esquerdo — quadro consistente com cardiomiopatia periparto. A radiografia de tórax costuma ser o primeiro exame de imagem realizado numa paciente com dispneia aguda no periparto, e o achado de congestão pulmonar/edema é o sinal indireto mais comum de disfunção do ventrículo esquerdo antes de o ecocardiograma confirmar. É um achado inespecífico: a mesma imagem pode ocorrer na pré-eclâmpsia grave com edema pulmonar, no tromboembolismo pulmonar maciço ou na síndrome do desconforto respiratório agudo — por isso o ecocardiograma transtorácico (exame já cadastrado nesta base) é indispensável para diferenciar cardiomiopatia periparto das outras causas de dispneia aguda do periparto.",
+    "source_name": "PMC (Cureus)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10118904/",
+    "license": "CC BY 4.0",
+    "attribution": "Cross M, Schirding JH, Domanski K. Peripartum Cardiomyopathy in a Multigravida Patient. Cureus. 2023;15(3):e36492. PMID: 37090262. CC BY 4.0.",
+    "tags": [
+      "cardiomiopatia periparto",
+      "radiografia de tórax",
+      "congestão pulmonar",
+      "edema pulmonar",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

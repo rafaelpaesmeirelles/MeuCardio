@@ -8101,5 +8101,142 @@
       "cálculo de ldl",
       "triglicerídeos altos"
     ]
+  },
+  {
+    "slug": "ecocardiograma-transtoracico-no-diagnostico-de-cardiomiopatia-periparto",
+    "name": "Ecocardiograma transtorácico no diagnóstico de cardiomiopatia periparto",
+    "category": "imagem",
+    "theme": "Gravidez",
+    "what_it_measures": "Função sistólica do ventrículo esquerdo (fração de ejeção), diâmetros e volumes ventriculares, e triagem de outras causas estruturais de insuficiência cardíaca (valvopatia, cardiopatia congênita não diagnosticada) — é o exame central para confirmar disfunção sistólica de início recente no periparto.",
+    "reference_range": "Não há um único valor de corte reproduzido nesta verificação: a posição da Heart Failure Association da ESC (2019) caracteriza a cardiomiopatia periparto como insuficiência cardíaca com fração de ejeção reduzida (ICFEr) no último mês de gestação ou nos meses seguintes ao parto, sem detalhar no resumo um limiar numérico único de FEVE. `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar de um corte específico (ex.: FEVE <45%) como regra isolada de decisão — checar o texto completo do documento.",
+    "indications": "Gestante no último mês de gestação, ou puérpera nos meses seguintes ao parto, com sintomas novos de insuficiência cardíaca (dispneia desproporcional para a fase da gestação, ortopneia, edema de piora rápida) sem outra causa conhecida de cardiopatia.",
+    "interpretation": "A posição da Heart Failure Association da Sociedade Europeia de Cardiologia (Bauersachs J et al., 2019) recomenda a dosagem de peptídeos natriuréticos, o eletrocardiograma e o ecocardiograma para diagnosticar ou excluir prontamente insuficiência cardíaca/cardiomiopatia periparto — o ecocardiograma é o exame que demonstra a disfunção sistólica em si, os outros dois orientam a suspeita e afastam diferenciais.",
+    "limitations": "O ecocardiograma isolado não distingue, por critério de imagem, a cardiomiopatia periparto de outras causas de insuficiência cardíaca com fração de ejeção reduzida de início recente reveladas pela sobrecarga hemodinâmica da gestação (por exemplo, cardiomiopatia dilatada previamente não reconhecida, cardiopatia hipertensiva) — o diagnóstico continua sendo, em parte, de exclusão, apoiado na história e no momento de aparecimento dos sintomas.",
+    "source_refs": [
+      "Bauersachs J, König T, van der Meer P, et al. Pathophysiology, diagnosis and management of peripartum cardiomyopathy: a position statement from the Heart Failure Association of the European Society of Cardiology Study Group on peripartum cardiomyopathy. Eur J Heart Fail. 2019;21(7):827-843. DOI: 10.1002/ejhf.1493. PMID: 31243866."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiomiopatia periparto",
+      "ecocardiograma",
+      "fração de ejeção",
+      "insuficiência cardíaca gestacional"
+    ]
+  },
+  {
+    "slug": "mapa-monitorizacao-ambulatorial-da-pressao-arterial-nos-transtornos-hipertensivos-da-gestacao",
+    "name": "MAPA (monitorização ambulatorial da pressão arterial) nos transtornos hipertensivos da gestação",
+    "category": "metodo_grafico",
+    "theme": "Gravidez",
+    "what_it_measures": "Aferições automáticas de pressão arterial em intervalos programados ao longo de 24 horas, gerando médias diurna, noturna e de 24 horas, além do padrão de descenso noturno da pressão (dipping) — mede a pressão arterial fora do consultório, ao contrário da aferição casual isolada.",
+    "reference_range": "O resumo consultado nesta verificação não traz o corte numérico diagnóstico específico da MAPA na gestação (ex.: média diurna ≥135/85 mmHg). `VERIFICAÇÃO HUMANA NECESSÁRIA` para o valor de corte exato — checar o texto completo da fonte ou uma diretriz específica de hipertensão na gestação antes de usar um número isolado na decisão clínica.",
+    "indications": "Investigação de hipertensão na gestação quando a aferição de consultório é discordante do quadro clínico ou dos valores domiciliares, e diferenciação entre hipertensão do jaleco branco, hipertensão mascarada e hipertensão sustentada na gestante.",
+    "interpretation": "Revisão de Metoki H et al. (Hypertension Research, 2022) sobre os transtornos hipertensivos da gestação: a aferição da pressão arterial é o componente fundamental do diagnóstico, e a medição fora do consultório — incluindo a MAPA e a aferição domiciliar — ganhou destaque nas recomendações recentes. Os autores relatam que hipertensão do jaleco branco e hipertensão mascarada já foram descritas na gestação, mas que determinar sua ocorrência é complicado pela variação ao longo da idade gestacional (a pressão arterial fisiologicamente cai no segundo trimestre e sobe de novo no terceiro).",
+    "limitations": "O próprio artigo nota que a interpretação de jaleco branco/mascarada na gestante é complicada pela idade gestacional — o mesmo corte pode significar coisas diferentes em momentos diferentes da gravidez. Disponibilidade e tolerabilidade do exame (aferições repetidas durante o sono) também limitam o uso rotineiro.",
+    "source_refs": [
+      "Metoki H, Iwama N, Hamada H, Satoh M, Murakami T, Ishikuro M, Obara T. Hypertensive disorders of pregnancy: definition, management, and out-of-office blood pressure measurement. Hypertens Res. 2022;45(8):1298-1309. PMID: 35726086."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapa",
+      "monitorização ambulatorial da pressão arterial",
+      "hipertensão gestacional",
+      "pré-eclâmpsia",
+      "hipertensão do jaleco branco"
+    ]
+  },
+  {
+    "slug": "gasometria-arterial-e-gradiente-alveolo-arterial-no-tromboembolismo-pulmonar-agudo",
+    "name": "Gasometria arterial e gradiente alvéolo-arterial (A-a) no tromboembolismo pulmonar agudo",
+    "category": "laboratorial",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "PaO2, PaCO2 e pH medidos diretamente no sangue arterial, mais o gradiente alvéolo-arterial de oxigênio (A-a), calculado a partir da PaO2, da PaCO2, da fração inspirada de oxigênio e da pressão barométrica.",
+    "reference_range": "Não há um corte único que separe presença/ausência de TEP — o valor da gasometria está na combinação de achados (hipoxemia, hipocapnia por hiperventilação, gradiente A-a aumentado) associada ao quadro clínico, nunca isolada.",
+    "indications": "Parte da avaliação inicial de dispneia/hipoxemia aguda com suspeita de tromboembolismo pulmonar, sempre como informação adjunta ao D-dímero e à imagem (angiotomografia ou cintilografia V/Q) — nunca como teste isolado para excluir o diagnóstico.",
+    "interpretation": "Stein PD et al. (Chest, 1996), analisando dados relacionados ao estudo PIOPED: entre pacientes SEM doença cardiopulmonar prévia que tinham PaO2, PaCO2 e gradiente A-a todos normais, 16 de 42 (38%; IC95% 24-54%) ainda tinham TEP confirmado. Entre os pacientes COM doença cardiopulmonar prévia e os mesmos três parâmetros normais, 4 de 28 (14%; IC95% 4-33%) tinham TEP confirmado. Conclusão textual dos autores: os valores da gasometria arterial têm valor discriminante insuficiente para permitir excluir o diagnóstico de TEP.",
+    "limitations": "Gasometria arterial normal — incluindo gradiente A-a normal — NÃO exclui tromboembolismo pulmonar, nos dois grupos estudados (com e sem doença cardiopulmonar prévia). O exame é influenciado por posição do paciente, oxigênio suplementar já em uso no momento da coleta e doença pulmonar/cardíaca de base, o que reduz ainda mais seu valor discriminante isolado.",
+    "source_refs": [
+      "Stein PD, Goldhaber SZ, Henry JW, Miller AC. Arterial blood gas analysis in the assessment of suspected acute pulmonary embolism. Chest. 1996;109(1):78-81. PMID: 8549223."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "gasometria arterial",
+      "gradiente alvéolo-arterial",
+      "tromboembolismo pulmonar",
+      "pioped",
+      "hipoxemia"
+    ]
+  },
+  {
+    "slug": "venografia-por-ressonancia-magnetica-no-diagnostico-de-trombose-venosa-profunda",
+    "name": "Venografia por ressonância magnética (RM) no diagnóstico de trombose venosa profunda",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Visualização direta do lúmen venoso e de trombo intraluminal por ressonância magnética, com técnicas que dispensam contraste iodado e, em protocolos específicos, dispensam também o gadolínio (venografia por RM sem contraste) — sem exposição à radiação ionizante.",
+    "reference_range": "Não se aplica (exame de imagem qualitativo/estrutural, não um valor numérico de referência).",
+    "indications": "Alternativa ao ultrassom com compressão quando este é inadequado ou inviável — por exemplo, paciente obeso, edema importante de membro, ou suspeita de trombose em segmento venoso proximal (ilíaco/pélvico) que o ultrassom visualiza mal. Não substitui o ultrassom como exame de primeira linha.",
+    "interpretation": "Abdalla G et al. (Clinical Radiology, 2015), revisão sistemática e metanálise de 23 estudos observacionais (16 incluídos na síntese quantitativa): sensibilidade agrupada de 93% (IC95% 89-95%) e especificidade agrupada de 96% (IC95% 94-97%) da venografia por RM para detecção de TVP, com heterogeneidade importante entre os estudos (I² de 80,7% para sensibilidade e 77,9% para especificidade). Os autores concluem que a venografia por RM não deve substituir o ultrassom como exame de primeira linha para TVP suspeita, mas é alternativa viável quando o ultrassom é inadequado ou inviável.",
+    "limitations": "Heterogeneidade alta entre os estudos incluídos na metanálise. Custo, disponibilidade e tempo de exame limitam o uso rotineiro frente ao ultrassom. O resumo consultado nesta verificação não confirma especificamente o desempenho do exame na gestante nem na trombose venosa pélvica isolada — `VERIFICAÇÃO HUMANA NECESSÁRIA` para essas duas afirmações específicas, caso venham a ser acrescentadas.",
+    "source_refs": [
+      "Abdalla G, Fawzi Matuk R, Venugopal V, Verde F, Magnuson TH, Schweitzer MA, Steele KE. The diagnostic accuracy of magnetic resonance venography in the detection of deep venous thrombosis: a systematic review and meta-analysis. Clin Radiol. 2015;70(8):858-871. PMID: 26091753."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "venografia por ressonância magnética",
+      "trombose venosa profunda",
+      "tromboembolismo venoso",
+      "diagnóstico por imagem"
+    ]
+  },
+  {
+    "slug": "clearance-de-creatinina-por-cockcroft-gault-para-ajuste-de-dose-de-doac-na-fibrilacao-atrial",
+    "name": "Clearance de creatinina por Cockcroft-Gault para ajuste de dose do anticoagulante oral direto na fibrilação atrial",
+    "category": "laboratorial",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Creatinina sérica utilizada na fórmula de Cockcroft-Gault (que incorpora peso corporal, idade e sexo) para estimar o clearance de creatinina — distinto da taxa de filtração glomerular estimada por CKD-EPI ou MDRD, que não usam peso corporal.",
+    "reference_range": "Os cortes de clearance de creatinina que definem redução de dose ou contraindicação de cada anticoagulante oral direto (apixabana, rivaroxabana, dabigatrana, edoxabana) são específicos de cada fármaco e de sua bula — não reproduzidos aqui como número isolado. `VERIFICAÇÃO HUMANA NECESSÁRIA` para o corte exato de cada substância, a conferir na bula vigente ou na diretriz de referência.",
+    "indications": "Antes de iniciar e periodicamente durante o uso de anticoagulante oral direto para prevenção de AVC na fibrilação atrial, para decidir dose plena, dose reduzida ou contraindicação por função renal.",
+    "interpretation": "Nabiee M et al. (Expert Review of Clinical Pharmacology, 2020), revisão sobre a discordância de dose do anticoagulante oral direto conforme a equação usada para estimar a função renal: a fórmula de Cockcroft-Gault foi a usada nos ensaios pivotais dos DOACs, e substituí-la por MDRD ou CKD-EPI causa discordância de dose que varia de 28,8% de subdosagem a 59,2% de sobredosagem. As equações mais novas tendem a superestimar a função renal nas faixas mais baixas de filtração (sobretudo em idosos e mulheres) e a subestimar nas faixas mais altas. Opinião dos autores: até que existam estudos de desfecho com as equações mais novas, recomenda-se manter o método de Cockcroft-Gault para o ajuste de dose do DOAC na prática real.",
+    "limitations": "A própria fórmula de Cockcroft-Gault tem limitações conhecidas (obesidade, extremos de massa muscular, creatinina fora de estado estável) que continuam valendo mesmo sendo a equação recomendada para esta finalidade específica. Usar CKD-EPI ou MDRD no lugar da Cockcroft-Gault pode levar à escolha de dose inadequada, pelas taxas de discordância acima.",
+    "source_refs": [
+      "Nabiee M, Dashti-Khavidaki S, Khajeh B. Dose discordance of direct acting oral anticoagulants using different equations for estimating GFR: a literature review. Expert Rev Clin Pharmacol. 2020;13(8):857-863. PMID: 32683999."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cockcroft-gault",
+      "clearance de creatinina",
+      "anticoagulante oral direto",
+      "doac",
+      "fibrilação atrial",
+      "ajuste de dose renal"
+    ]
+  },
+  {
+    "slug": "mapeamento-eletroanatomico-tridimensional-nao-fluoroscopico-na-ablacao-de-fibrilacao-atrial",
+    "name": "Mapeamento eletroanatômico tridimensional (não fluoroscópico) na ablação de fibrilação atrial",
+    "category": "metodo_grafico",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Reconstrução tridimensional, em tempo real, da geometria das câmaras cardíacas e da atividade elétrica local, a partir de sistemas de localização do cateter por campo eletromagnético/impedância — reduz a dependência da fluoroscopia para navegar o cateter durante o procedimento de ablação.",
+    "reference_range": "Não se aplica (tecnologia de navegação/mapeamento, não um valor laboratorial ou uma medida com faixa de normalidade).",
+    "indications": "Orientação da navegação do cateter e da criação do conjunto de lesões durante a ablação de fibrilação atrial (isolamento de veias pulmonares e afins), com o objetivo declarado de reduzir a exposição cumulativa à radiação do paciente e da equipe.",
+    "interpretation": "Huo Y et al. (Heart Rhythm, 2015), ensaio clínico randomizado, controlado, unicego (n=80, FA paroxística): o tempo de fluoroscopia caiu de uma mediana de 10min42s (IQR 8:45-12:46) com o mapeamento eletroanatômico convencional para 1min45s (IQR 1:05-2:22) com o sistema que integra imagem de fluoroscopia ao mapa 3D (F-EAM) — redução relativa de aproximadamente 84%. A dose de radiação caiu de 2440 cGy·cm² (IQR 1593-3091) para 652 cGy·cm² (IQR 326-1489) — redução relativa de aproximadamente 73%. A duração do procedimento não diferiu significativamente entre os grupos, e a ausência de recorrência de arritmia atrial no seguimento de 5,9±1,3 meses foi semelhante entre os grupos (76,3% no total).",
+    "limitations": "Um único ensaio randomizado, 80 pacientes, todos com FA paroxística — não necessariamente generalizável para ablação de FA persistente/permanente, que costuma exigir conjunto de lesões mais extenso. A expressão 'sem fluoroscopia' é aspiracional: mesmo o grupo com o sistema integrado ainda usou fluoroscopia neste estudo, apenas em tempo muito menor, não fluoroscopia zero.",
+    "source_refs": [
+      "Huo Y, Christoph M, Forkmann M, Pohl M, Mayer J, Salmas J, Sitzy J, Wunderlich C, Piorkowski C, Gaspar T. Reduction of radiation exposure during atrial fibrillation ablation using a novel fluoroscopy image integrated 3-dimensional electroanatomic mapping system. Heart Rhythm. 2015;12(9):1945-1955. PMID: 26001508."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapeamento eletroanatômico",
+      "ablação de fibrilação atrial",
+      "isolamento de veias pulmonares",
+      "redução de radiação",
+      "fluoroscopia"
+    ]
   }
 ]
