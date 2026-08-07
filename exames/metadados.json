@@ -6306,5 +6306,330 @@
       "veias pulmonares",
       "planejamento pre-procedimento"
     ]
+  },
+  {
+    "slug": "mrpa-monitorizacao-residencial-da-pressao-arterial",
+    "name": "MRPA — Monitorização Residencial da Pressão Arterial",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Série de medidas de pressão arterial realizadas pelo próprio paciente, em casa, com aparelho oscilométrico validado, seguindo protocolo estruturado (em geral duas medidas pela manhã e duas à noite, por pelo menos três a sete dias, descartando o primeiro dia) — diferente da MAPA, que usa dispositivo automático programado para medir em intervalos fixos ao longo de 24 horas, incluindo o sono.",
+    "reference_range": "Média das medidas residenciais ≥135/85 mmHg é considerada elevada (equivalente aproximado a 140/90 mmHg em consultório), segundo o Guia de Prática 2021 da Sociedade Europeia de Hipertensão para medida de pressão arterial em consultório e fora dele.",
+    "indications": "Confirmação diagnóstica de hipertensão antes de iniciar tratamento, identificação de hipertensão do avental branco (pressão elevada só em consultório) e de hipertensão mascarada (pressão normal em consultório, elevada fora dele), e acompanhamento do controle pressórico ao longo do tratamento — mais acessível e barato que a MAPA, e mais representativo do dia a dia do paciente que a medida isolada de consultório.",
+    "interpretation": "O Guia de Prática 2021 da Sociedade Europeia de Hipertensão recomenda a MRPA como alternativa validada à MAPA para diagnóstico e seguimento fora do consultório, com protocolo mínimo de três dias (idealmente sete), duas medidas consecutivas em cada sessão, pela manhã antes da medicação e à noite antes de deitar. A discordância entre pressão de consultório e residencial define os quatro fenótipos (normotensão, hipertensão sustentada, hipertensão do avental branco e hipertensão mascarada), com implicação direta na decisão de tratar.",
+    "limitations": "Depende de técnica correta do paciente (posição, manguito adequado, ausência de cafeína/exercício/tabagismo nos 30 minutos anteriores) e de aparelho oscilométrico validado — braçadeira de punho e aparelhos não validados produzem leitura pouco confiável. Não captura a pressão durante o sono, ao contrário da MAPA, e depende de adesão do paciente ao protocolo de dias e horários.",
+    "source_refs": [
+      "Stergiou GS, Palatini P, Parati G, O'Brien E, Januszewicz A, Lurbe E, Persu A, Mancia G, Kreutz R; European Society of Hypertension Council and the European Society of Hypertension Working Group on Blood Pressure Monitoring and Cardiovascular Variability. 2021 European Society of Hypertension practice guidelines for office and out-of-office blood pressure measurement. J Hypertens. 2021;39(7):1293-1302. DOI: 10.1097/HJH.0000000000002843. PMID: 33710173"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mrpa",
+      "pressao arterial residencial",
+      "hipertensao do avental branco",
+      "hipertensao mascarada",
+      "hipertensao"
+    ]
+  },
+  {
+    "slug": "velocidade-de-onda-de-pulso-carotido-femoral-rigidez-arterial",
+    "name": "Velocidade de onda de pulso carótido-femoral (rigidez arterial)",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Velocidade de propagação da onda de pulso arterial entre os pontos carotídeo e femoral, medida por tonometria de aplanação ou dispositivo oscilométrico equivalente — considerada o método de referência para quantificar rigidez da parede aórtica, um marcador de dano vascular acumulado (não a pressão arterial em si, mas a consequência estrutural da hipertensão crônica sobre a parede do vaso).",
+    "reference_range": "Não há um único corte universal de normalidade — o risco aumenta de forma gradual e quase linear com o valor de VOP; a diretriz europeia de hipertensão já usou o corte de VOP >10 m/s como um dos critérios de lesão de órgão-alvo assintomática. Valores de referência normais variam por idade e pressão arterial média (envelhecimento e hipertensão crônica elevam a rigidez esperada).",
+    "indications": "Estratificação de risco cardiovascular adicional em hipertenso, sobretudo quando a decisão terapêutica permanece incerta após os fatores de risco tradicionais; pesquisa de dano vascular subclínico como desfecho substituto em estudos de intervenção anti-hipertensiva.",
+    "interpretation": "Metanálise de 17 estudos longitudinais com 15.877 indivíduos e seguimento médio de 7,7 anos mostrou que o risco relativo combinado de eventos cardiovasculares totais foi de 2,26 (IC95% 1,89-2,70), de mortalidade cardiovascular de 2,02 (IC95% 1,68-2,42) e de mortalidade por todas as causas de 1,90 (IC95% 1,61-2,24) comparando o terço de maior VOP aórtica contra o de menor. Cada aumento de 1 m/s na VOP aórtica correspondeu a um aumento de risco ajustado por idade, sexo e fatores de risco de 14% em eventos cardiovasculares totais, 15% em mortalidade cardiovascular e 15% em mortalidade por todas as causas. O poder preditivo foi maior em grupos de risco basal mais alto (doença arterial coronariana, doença renal, hipertensão) que na população geral.",
+    "limitations": "Exige equipamento e treinamento específicos, pouco disponíveis fora de centros de pesquisa ou serviços especializados em hipertensão; a medida pode ser afetada por arritmia, obesidade abdominal (dificulta a palpação femoral) e variação de postura. É marcador de risco, não alvo terapêutico com meta numérica validada por ensaio clínico randomizado dedicado.",
+    "source_refs": [
+      "Vlachopoulos C, Aznaouridis K, Stefanadis C. Prediction of cardiovascular events and all-cause mortality with arterial stiffness: a systematic review and meta-analysis. J Am Coll Cardiol. 2010;55(13):1318-1327. DOI: 10.1016/j.jacc.2009.10.061. PMID: 20338492"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "velocidade de onda de pulso",
+      "rigidez arterial",
+      "risco cardiovascular",
+      "hipertensao",
+      "dano de orgao-alvo"
+    ]
+  },
+  {
+    "slug": "teste-cardiopulmonar-de-exercicio-vo2-pico-na-insuficiencia-cardiaca",
+    "name": "Teste cardiopulmonar de exercício — VO₂ pico na insuficiência cardíaca avançada",
+    "category": "metodo_grafico",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Consumo máximo de oxigênio (VO₂ pico) durante teste de esforço com análise de gases expirados — mede diretamente a capacidade funcional cardiopulmonar integrada (débito cardíaco, extração periférica de oxigênio e função pulmonar), usado historicamente para orientar o momento ideal de indicação de transplante cardíaco em paciente ambulatorial com insuficiência cardíaca avançada.",
+    "reference_range": "No estudo original de Mancini et al., pacientes com VO₂ pico ≤14 mL/kg/min foram aceitos para transplante; pacientes com VO₂ pico >14 mL/kg/min foram considerados bem demais para transplante, com sobrevida em 1 e 2 anos de 94% e 84% — equivalente à sobrevida pós-transplante.",
+    "indications": "Definir o momento de encaminhar paciente ambulatorial com insuficiência cardíaca avançada para avaliação de transplante cardíaco ou dispositivo de assistência ventricular, quando a capacidade funcional clínica (classe funcional NYHA) não é suficiente para a decisão.",
+    "interpretation": "No estudo prospectivo original (114 pacientes ambulatoriais encaminhados para avaliação de transplante entre 1986 e 1989), os pacientes foram divididos em três grupos pelo VO₂ pico: aceitos para transplante (VO₂ ≤14 mL/kg/min, sobrevida em 1 ano de 70%), considerados bem demais para transplante (VO₂ >14 mL/kg/min, sobrevida em 1 e 2 anos de 94% e 84%) e rejeitados para transplante por problema não cardíaco (VO₂ baixo, sobrevida de apenas 47% em 1 ano e 32% em 2 anos). Por análise uni e multivariada, o VO₂ pico foi o melhor preditor de sobrevida, com a pressão de capilar pulmonar agregando informação prognóstica adicional. Todas as mortes no grupo de VO₂ preservado foram súbitas.",
+    "limitations": "Exige esforço máximo voluntário do paciente e equipamento de análise de gases, pouco disponível fora de centros especializados; o corte de 14 mL/kg/min foi derivado antes da era dos betabloqueadores e dos dispositivos modernos de terapia da insuficiência cardíaca — a interpretação atual costuma exigir ajuste ao contexto terapêutico do paciente e é usada junto com outros escores de risco (não isoladamente), decisão que cabe à equipe de transplante.",
+    "source_refs": [
+      "Mancini DM, Eisen H, Kussmaul W, Mull R, Edmunds LH Jr, Wilson JR. Value of peak exercise oxygen consumption for optimal timing of cardiac transplantation in ambulatory patients with heart failure. Circulation. 1991;83(3):778-786. DOI: 10.1161/01.cir.83.3.778. PMID: 1999029"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste cardiopulmonar de exercicio",
+      "vo2 pico",
+      "transplante cardiaco",
+      "insuficiencia cardiaca avancada",
+      "capacidade funcional"
+    ]
+  },
+  {
+    "slug": "cateterismo-cardiaco-direito-com-teste-de-reversibilidade-pre-transplante-cardiaco",
+    "name": "Cateterismo cardíaco direito com teste de reversibilidade pré-transplante cardíaco",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Pressões de câmaras direitas, artéria pulmonar e capilar pulmonar, débito cardíaco e resistência vascular pulmonar (RVP) calculada, com teste farmacológico de vasodilatador (nitroprussiato, entre outros) para avaliar se uma resistência pulmonar elevada é reversível — usado na avaliação hemodinâmica de candidato a transplante cardíaco, para estimar o risco de falência de ventrículo direito do enxerto após o implante.",
+    "reference_range": "Resistência vascular pulmonar ≤2,5 unidades Wood no estudo basal associou-se a menor mortalidade pós-transplante; quando a RVP basal era >2,5 unidades, a resposta ao nitroprussiato (redução para ≤2,5 unidades mantendo pressão sistólica sistêmica ≥85 mmHg) identificou um subgrupo de risco muito mais baixo.",
+    "indications": "Avaliação hemodinâmica obrigatória de todo candidato a transplante cardíaco antes da inclusão em lista, para excluir hipertensão pulmonar fixa (não reversível) que contraindicaria o procedimento pelo alto risco de falência aguda do ventrículo direito do enxerto.",
+    "interpretation": "No estudo de Costard-Jäckle e Fowler (293 pacientes consecutivos), a mortalidade em 3 meses pós-transplante foi de 17,9% nos pacientes com RVP basal >2,5 unidades Wood, contra 6,9% nos com RVP ≤2,5 unidades (p<0,02). Entre os pacientes com RVP elevada, aqueles cuja resistência caía para ≤2,5 unidades com o teste de nitroprussiato, mantendo pressão sistólica ≥85 mmHg, tiveram mortalidade em 3 meses de apenas 3,8%; os que não reduziam a RVP tiveram mortalidade de 40,6%, e os que só reduziam à custa de hipotensão sistêmica (PAS ≤85 mmHg), 27,5%. Todos os 10 óbitos por falência de ventrículo direito do estudo pertenciam a esses dois últimos grupos.",
+    "limitations": "É procedimento invasivo, com os riscos inerentes ao cateterismo de câmaras direitas; o teste de reversibilidade com vasodilatador pode ser limitado por hipotensão sistêmica, que por si só impede concluir se a resistência pulmonar é de fato reversível. Os cortes numéricos originam-se de uma coorte de 1992, anterior aos protocolos modernos de otimização hemodinâmica pré-transplante — servem como referência histórica de risco, não como corte fixo isolado de decisão.",
+    "source_refs": [
+      "Costard-Jäckle A, Fowler MB. Influence of preoperative pulmonary artery pressure on mortality after heart transplantation: testing of potential reversibility of pulmonary hypertension with nitroprusside is useful in defining a high risk group. J Am Coll Cardiol. 1992;19(1):48-54. DOI: 10.1016/0735-1097(92)90050-w. PMID: 1729345"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cateterismo cardiaco direito",
+      "resistencia vascular pulmonar",
+      "transplante cardiaco",
+      "teste de reversibilidade",
+      "falencia de ventriculo direito"
+    ]
+  },
+  {
+    "slug": "ecg-de-alta-resolucao-potenciais-tardios-na-cardiomiopatia-arritmogenica",
+    "name": "ECG de alta resolução — potenciais tardios (signal-averaged ECG) na cardiomiopatia arritmogênica",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Média de sinal de múltiplos ciclos cardíacos do eletrocardiograma de superfície, com filtro de alta resolução, para detectar potenciais tardios — sinais elétricos de baixa amplitude ao final do complexo QRS que refletem condução lentificada por áreas de fibrose miocárdica, substrato de reentrada ventricular.",
+    "reference_range": "Presença de potenciais tardios é definida por critérios combinados de duração do QRS filtrado, voltagem da porção terminal e duração de sinais de baixa amplitude; o parâmetro de voltagem RMS dos 40 ms terminais a 25 Hz foi identificado como fator preditivo independente de arritmia ventricular sustentada no estudo original.",
+    "indications": "Estratificação de risco arrítmico em cardiomiopatia arritmogênica de ventrículo direito (displasia arritmogênica), como parte da avaliação de substrato elétrico associada à ressonância cardíaca e à biópsia endomiocárdica quando indicada.",
+    "interpretation": "Em 38 pacientes com cardiomiopatia arritmogênica de ventrículo direito submetidos a biópsia endomiocárdica, os 18 pacientes com potenciais tardios positivos tinham maior percentual de fibrose miocárdica (p=0,01), fração de ejeção de ventrículo direito mais reduzida (p=0,0004) e maior risco de arritmia ventricular sustentada (p=0,05) que os 20 sem potenciais tardios. A fração de ejeção de ventrículo direito ≤50% associou-se a maior risco de arritmia ventricular sustentada (p=0,02), e a voltagem RMS dos 40 ms terminais do QRS filtrado foi fator preditivo independente de arritmia sustentada por análise multivariada (p=0,02).",
+    "limitations": "Sensibilidade reduzida quando o QRS basal já está alargado (bloqueio de ramo), situação comum em doença estrutural avançada, o que limita sua interpretação nesses casos. É marcador de substrato arritmogênico, não prediz o momento do evento, e não substitui a avaliação de imagem (ressonância com realce tardio) nem os critérios de risco combinados usados na decisão de implante de CDI.",
+    "source_refs": [
+      "Turrini P, Angelini A, Thiene G, Buja G, Daliento L, Rizzoli G, Nava A. Late potentials and ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Am J Cardiol. 1999;83(8):1214-1219. DOI: 10.1016/s0002-9149(99)00062-4. PMID: 10215287"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecg de alta resolucao",
+      "potenciais tardios",
+      "cardiomiopatia arritmogenica",
+      "displasia arritmogenica de vd",
+      "estratificacao de risco arritmico"
+    ]
+  },
+  {
+    "slug": "teste-ergometrico-no-diagnostico-de-taquicardia-ventricular-polimorfica-catecolaminergica",
+    "name": "Teste ergométrico no diagnóstico da taquicardia ventricular polimórfica catecolaminérgica (CPVT)",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Resposta arrítmica ventricular ao esforço físico progressivo sob monitorização eletrocardiográfica contínua — é o método de primeira linha para diagnosticar a taquicardia ventricular polimórfica catecolaminérgica (CPVT), canalopatia hereditária em que a arritmia é desencadeada especificamente por descarga adrenérgica (esforço ou emoção intensa), com ECG de repouso tipicamente normal.",
+    "reference_range": "Teste considerado positivo quando o esforço induz extrassístoles ventriculares em padrão de bigeminismo ou pares, ou taquicardia ventricular — no estudo de familiares assintomáticos de portadores de CPVT, o teste positivo teve sensibilidade de 50% e especificidade de 97% para identificar portador de mutação genética.",
+    "indications": "Investigação de síncope ou parada cardíaca relacionada a esforço ou emoção intensa em criança ou adulto jovem com coração estruturalmente normal e ECG de repouso sem alterações; rastreio de familiares de primeiro grau de paciente com diagnóstico confirmado de CPVT.",
+    "interpretation": "O consenso de especialistas HRS/EHRA/APHRS de 2013 sobre síndromes arrítmicas hereditárias primárias recomenda o teste ergométrico como ferramenta diagnóstica de primeira linha na suspeita de CPVT, por ser a arritmia tipicamente induzida por esforço e ausente ao repouso. No estudo de Hayashi et al. com 67 familiares assintomáticos de 17 probandos com CPVT geneticamente confirmada, o teste foi positivo (indução de taquicardia ventricular ou extrassístoles em bigeminismo/pares) em 17 dos 67 (25%); a análise genética confirmou mutação em 16 desses 17 (94%) contra 16 dos 50 com teste negativo (32%) — sensibilidade de 50% e especificidade de 97% para genótipo positivo (p<0,001). Entre os 32 portadores de mutação, eventos cardíacos ocorreram em 7 dos 16 com teste positivo contra 2 dos 16 com teste negativo durante seguimento médio de 9,6 anos.",
+    "limitations": "Um teste negativo não exclui CPVT — sensibilidade de apenas 50% no estudo de familiares, e a arritmia pode não ser reproduzida em todo portador de mutação no dia do exame. Exige disponibilidade imediata de desfibrilador e equipe treinada, por ser exame que deliberadamente busca induzir arritmia ventricular potencialmente maligna.",
+    "source_refs": [
+      "Priori SG, Wilde AA, Horie M, Cho Y, Behr ER, Berul C, Blom N, Brugada J, Chiang CE, Huikuri H, Kannankeril P, Krahn A, Leenhardt A, Moss A, Schwartz PJ, Shimizu W, Tomaselli G, Tracy C. Executive summary: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):e85-e108. DOI: 10.1016/j.hrthm.2013.07.021. PMID: 23916535",
+      "Hayashi M, Denjoy I, Hayashi M, Extramiana F, Maltret A, Roux-Buisson N, Lupoglazoff JM, Klug D, Maury P, Messali A, Guicheney P, Leenhardt A. The role of stress test for predicting genetic mutations and future cardiac events in asymptomatic relatives of catecholaminergic polymorphic ventricular tachycardia probands. Europace. 2012;14(9):1344-1351. DOI: 10.1093/europace/eus031. PMID: 22383456"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste ergometrico",
+      "cpvt",
+      "taquicardia ventricular polimorfica catecolaminergica",
+      "canalopatia",
+      "morte subita em jovem"
+    ]
+  },
+  {
+    "slug": "proteina-c-reativa-ultrassensivel-hs-crp",
+    "name": "Proteína C-reativa ultrassensível (hs-CRP)",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Concentração sérica de proteína C-reativa medida por ensaio de alta sensibilidade, capaz de quantificar valores baixos que o ensaio convencional (usado para infecção/inflamação aguda) não distingue — usada como marcador de inflamação vascular subclínica e de risco cardiovascular residual, inclusive em pessoas com LDL-colesterol dentro da meta.",
+    "reference_range": "A declaração científica conjunta AHA/CDC de 2003 (Pearson et al.) recomenda o uso de hs-CRP para refinar a estratificação de risco cardiovascular; o ensaio JUPITER usou o corte ≥2,0 mg/L, combinado a LDL-colesterol <130 mg/dL, como critério de entrada para identificar indivíduos aparentemente saudáveis com inflamação elevada apesar de perfil lipídico não claramente alterado. VERIFICAÇÃO HUMANA NECESSÁRIA para os pontos de corte exatos de categoria de risco (baixo/médio/alto) da própria declaração AHA/CDC de 2003, cujo texto integral não foi acessível nesta sessão para conferência direta.",
+    "indications": "Refinamento da estratificação de risco cardiovascular em prevenção primária, sobretudo em paciente de risco intermediário pelos escores tradicionais, para apoiar a decisão de iniciar estatina mesmo com LDL-colesterol não francamente elevado.",
+    "interpretation": "No ensaio JUPITER (17.802 homens e mulheres aparentemente saudáveis, LDL-colesterol <130 mg/dL e hs-CRP ≥2,0 mg/L, randomizados para rosuvastatina 20 mg/dia ou placebo), o desfecho primário combinado (infarto, AVC, revascularização arterial, internação por angina instável ou morte cardiovascular) ocorreu em taxa de 0,77 versus 1,36 por 100 pessoas-ano no grupo rosuvastatina versus placebo (HR 0,56; IC95% 0,46-0,69; p<0,00001) — demonstrando que hs-CRP elevada identifica um grupo que se beneficia de estatina mesmo sem hiperlipidemia definida. A rosuvastatina reduziu LDL-colesterol em 50% e hs-CRP em 37%.",
+    "limitations": "É marcador inespecífico de inflamação — eleva-se em infecção, doença autoimune, obesidade e outras condições não cardiovasculares, e deve ser medida fora de quadro inflamatório agudo (idealmente duas medidas com pelo menos duas semanas de intervalo, ambas <10 mg/L, para reduzir esse viés). Não é alvo terapêutico direto — é marcador de risco que orienta decisão de tratamento hipolipemiante, não um parâmetro a ser normalizado por si só.",
+    "source_refs": [
+      "Ridker PM, Danielson E, Fonseca FA, Genest J, Gotto AM Jr, Kastelein JJ, Koenig W, Libby P, Lorenzatti AJ, MacFadyen JG, Nordestgaard BG, Shepherd J, Willerson JT, Glynn RJ; JUPITER Study Group. Rosuvastatin to prevent vascular events in men and women with elevated C-reactive protein. N Engl J Med. 2008;359(21):2195-2207. DOI: 10.1056/NEJMoa0807646. PMID: 18997196",
+      "Pearson TA, Mensah GA, Alexander RW, Anderson JL, Cannon RO 3rd, Criqui M, Fadl YY, Fortmann SP, Hong Y, Myers GL, Rifai N, Smith SC Jr, Taubert K, Tracy RP, Vinicor F; Centers for Disease Control and Prevention; American Heart Association. Markers of inflammation and cardiovascular disease: application to clinical and public health practice: A statement for healthcare professionals from the Centers for Disease Control and Prevention and the American Heart Association. Circulation. 2003;107(3):499-511. DOI: 10.1161/01.cir.0000052939.59093.45. PMID: 12551878"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "proteina c reativa ultrassensivel",
+      "hs-crp",
+      "inflamacao vascular",
+      "risco cardiovascular residual",
+      "jupiter"
+    ]
+  },
+  {
+    "slug": "apolipoproteina-b-apob",
+    "name": "Apolipoproteína B (ApoB)",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Concentração de apolipoproteína B, proteína estrutural presente em uma cópia por partícula de LDL, VLDL, IDL e lipoproteína(a) — mede diretamente o número total de partículas aterogênicas circulantes, ao contrário do LDL-colesterol, que mede a massa de colesterol transportada e pode subestimar o número de partículas em situações de discordância (síndrome metabólica, diabetes, triglicerídeos elevados).",
+    "reference_range": "Não requer jejum. Metanálise de 12 estudos independentes (233.455 indivíduos, 22.950 eventos) mostrou razão de risco relativo padronizada de 1,43 (IC95% 1,35-1,51) para ApoB, contra 1,34 (IC95% 1,24-1,44) para colesterol não-HDL e 1,25 (IC95% 1,18-1,33) para LDL-colesterol.",
+    "indications": "Refinamento da estratificação de risco cardiovascular quando há discordância entre LDL-colesterol e risco clínico esperado, sobretudo em paciente com triglicerídeos elevados, diabetes, obesidade ou síndrome metabólica, situações em que o número de partículas de LDL pode ser maior do que o LDL-colesterol sozinho sugere.",
+    "interpretation": "Na metanálise de Sniderman et al., considerando os marcadores isoladamente ou em comparações diretas cabeça a cabeça, ApoB foi o marcador mais potente de risco cardiovascular (razão de risco relativo 1,43), superando o colesterol não-HDL em 5,7% (p<0,001) e o LDL-colesterol em 12,0% (p<0,0001). Os autores estimaram que, ao longo de 10 anos, uma estratégia de tratamento guiada por ApoB preveniria 500.000 eventos a mais que uma estratégia guiada por colesterol não-HDL, e esta preveniria 300.000 a mais que uma guiada por LDL-colesterol, na população adulta dos EUA acima do percentil 70 de risco.",
+    "limitations": "Ainda não substituiu o LDL-colesterol como meta primária na maioria das diretrizes de prevenção cardiovascular, embora seja cada vez mais recomendado como meta secundária ou alternativa, sobretudo nas situações de discordância descritas acima. Disponibilidade e padronização laboratorial variam mais entre serviços do que o perfil lipídico convencional.",
+    "source_refs": [
+      "Sniderman AD, Williams K, Contois JH, Monroe HM, McQueen MJ, de Graaf J, Furberg CD. A meta-analysis of low-density lipoprotein cholesterol, non-high-density lipoprotein cholesterol, and apolipoprotein B as markers of cardiovascular risk. Circ Cardiovasc Qual Outcomes. 2011;4(3):337-345. DOI: 10.1161/CIRCOUTCOMES.110.959247. PMID: 21487090"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "apolipoproteina b",
+      "apob",
+      "particulas aterogenicas",
+      "discordancia ldl",
+      "risco cardiovascular residual"
+    ]
+  },
+  {
+    "slug": "teste-oral-de-tolerancia-a-glicose-totg-e-risco-cardiovascular",
+    "name": "Teste oral de tolerância à glicose (TOTG) e risco cardiovascular",
+    "category": "laboratorial",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Glicemia medida em jejum e 2 horas após sobrecarga oral de 75 g de glicose — diagnostica diabetes e intolerância à glicose, e permite comparar diretamente o valor preditivo cardiovascular da glicemia de jejum isolada contra a glicemia de 2 horas pós-sobrecarga.",
+    "reference_range": "Glicemia de 2 horas ≥200 mg/dL (11,1 mmol/L) define diabetes pelo TOTG; entre 140-199 mg/dL define tolerância diminuída à glicose (intolerância). O estudo DECODE mostrou que a inclusão da glicemia de jejum não acrescentou informação preditiva significativa além da glicemia de 2 horas isolada (p>0,10 para as diversas causas de morte), enquanto acrescentar a glicemia de 2 horas ao critério de jejum melhorou significativamente a predição (p<0,001 para todas as causas, p<0,005 para doença cardiovascular).",
+    "indications": "Investigação de intolerância à glicose e diabetes em paciente com fatores de risco cardiovascular e glicemia de jejum normal ou limítrofe, sobretudo quando há suspeita clínica de risco metabólico não capturado pela glicemia de jejum isolada.",
+    "interpretation": "O estudo DECODE (10 coortes prospectivas europeias, 15.388 homens e 7.126 mulheres, seguimento médio de 8,8 anos) mostrou razão de risco (comparado a TOTG normal) de 1,73 (IC95% 1,45-2,06) para mortalidade por todas as causas, 1,40 (IC95% 1,02-1,92) para doença cardiovascular e 1,56 (IC95% 1,03-2,36) para doença coronariana em quem tinha diabetes definido pela glicemia de 2 horas — contra razões de risco menores e com intervalos de confiança mais largos quando o diabetes era definido só pela glicemia de jejum (1,21; 1,20; 1,09, respectivamente). O maior número de mortes em excesso ocorreu justamente no grupo com tolerância diminuída à glicose mas glicemia de jejum normal — pacientes que a triagem só por jejum não identificaria.",
+    "limitations": "Exame mais trabalhoso que a glicemia de jejum isolada (exige jejum de 8 horas, ingestão padronizada de glicose e nova coleta 2 horas depois), o que limita seu uso em rastreio populacional amplo. Hoje concorre com a hemoglobina glicada como critério diagnóstico mais prático, embora capture uma dimensão diferente (resposta aguda à sobrecarga de glicose, não a média dos últimos meses).",
+    "source_refs": [
+      "DECODE Study Group, the European Diabetes Epidemiology Group. Glucose tolerance and cardiovascular mortality: comparison of fasting and 2-hour diagnostic criteria. Arch Intern Med. 2001;161(3):397-405. DOI: 10.1001/archinte.161.3.397. PMID: 11176766"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste oral de tolerancia a glicose",
+      "totg",
+      "intolerancia a glicose",
+      "decode",
+      "risco cardiovascular"
+    ]
+  },
+  {
+    "slug": "indice-tornozelo-braco-no-rastreio-de-doenca-arterial-periferica-no-diabetico",
+    "name": "Índice tornozelo-braço (ITB) no rastreio de doença arterial periférica no paciente diabético",
+    "category": "metodo_grafico",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Razão entre a pressão arterial sistólica medida no tornozelo (artérias tibial posterior ou pediosa) e no braço (artéria braquial), por Doppler portátil — rastreia doença arterial periférica subclínica, cujo risco é marcadamente maior no paciente diabético e cuja apresentação clássica (claudicação) costuma faltar por neuropatia associada.",
+    "reference_range": "ITB ≤0,90 é o corte diagnóstico convencional de doença arterial periférica, valor já adotado nesta base para o exame de índice tornozelo-braço em outros contextos clínicos. VERIFICAÇÃO HUMANA NECESSÁRIA para a idade de início e o intervalo exatos de rastreio periódico recomendados pelo consenso da American Diabetes Association no paciente diabético assintomático, cujo texto integral não foi acessível nesta sessão para conferência direta — a recomendação de rastreio regular está confirmada pela fonte, mas o intervalo específico não pôde ser conferido no resumo indexado.",
+    "indications": "Rastreio de doença arterial periférica assintomática em paciente com diabetes, população em que a doença é mais prevalente, mais frequentemente assintomática (por neuropatia periférica associada, que mascara a claudicação) e associada a maior taxa de eventos isquêmicos que na população não diabética com doença arterial periférica equivalente.",
+    "interpretation": "O consenso da American Diabetes Association sobre doença arterial periférica no paciente diabético, revisado por Marso e Hiatt (JACC 2006), estabelece que o risco de doença arterial periférica é marcadamente aumentado entre indivíduos com diabetes, e que as taxas de eventos isquêmicos são mais altas em diabéticos com doença arterial periférica do que em populações não diabéticas comparáveis — sustentando diagnóstico e tratamento precoces por rastreio ativo, já que a apresentação costuma ser subclínica nessa população.",
+    "limitations": "Pode ser falsamente elevado (normal ou alto) em diabético de longa data por calcificação da camada média arterial (arteriosclerose de Mönckeberg), que torna o vaso incompressível — nesse cenário, um ITB normal não exclui doença arterial periférica, e métodos complementares (índice hálux-braço, forma de onda Doppler, pressão de dedo) podem ser necessários.",
+    "source_refs": [
+      "American Diabetes Association. Peripheral arterial disease in people with diabetes. Diabetes Care. 2003;26(12):3333-3341. DOI: 10.2337/diacare.26.12.3333. PMID: 14633825",
+      "Marso SP, Hiatt WR. Peripheral arterial disease in patients with diabetes. J Am Coll Cardiol. 2006;47(5):921-929. DOI: 10.1016/j.jacc.2005.09.065. PMID: 16516072"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "indice tornozelo-braco",
+      "doenca arterial periferica",
+      "diabetes",
+      "rastreio",
+      "calcificacao arterial"
+    ]
+  },
+  {
+    "slug": "saturacao-venosa-central-de-oxigenio-scvo2",
+    "name": "Saturação venosa central de oxigênio (ScvO₂)",
+    "category": "laboratorial",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Saturação de oxigênio do sangue venoso colhido por cateter venoso central posicionado na veia cava superior/átrio direito — usada como aproximação prática da saturação venosa mista (que exigiria cateter de artéria pulmonar), reflete o equilíbrio entre oferta e consumo de oxigênio nos tecidos irrigados pelo território superior do corpo.",
+    "reference_range": "No protocolo original de terapia guiada por metas precoces de Rivers et al., a meta terapêutica de ScvO₂ era ≥70%, obtida por otimização sequencial de volume, vasopressor e, se necessário, transfusão e suporte inotrópico.",
+    "indications": "Monitorização hemodinâmica no choque séptico como parte de protocolo de ressuscitação guiada por metas, junto com pressão arterial média e pressão venosa central, para orientar reposição volêmica e suporte hemodinâmico nas primeiras horas de tratamento.",
+    "interpretation": "No ensaio original de Rivers et al. (263 pacientes com sepse grave ou choque séptico randomizados para terapia guiada por metas precoces, incluindo meta de ScvO₂ ≥70%, versus tratamento padrão), a mortalidade intra-hospitalar foi significativamente menor no grupo de terapia guiada por metas (30,5% versus 46,5%, p=0,009), com diferença que se manteve nos desfechos de mortalidade em 28 e 60 dias. O protocolo original influenciou diretamente as diretrizes de manejo inicial da sepse por mais de uma década, embora ensaios multicêntricos posteriores (ProCESS, ARISE, ProMISe) não tenham reproduzido benefício de mortalidade do protocolo completo guiado por ScvO₂ contra o cuidado usual moderno, o que reduziu — sem eliminar — o papel desse alvo específico na prática atual.",
+    "limitations": "A ScvO₂ mede o território de drenagem venosa superior, não é idêntica à saturação venosa mista verdadeira (obtida por cateter de artéria pulmonar), e ensaios multicêntricos mais recentes (ProCESS 2014, ARISE 2014, ProMISe 2015) não confirmaram benefício de mortalidade do protocolo original guiado especificamente por essa meta quando comparado ao cuidado usual contemporâneo com ressuscitação precoce — o valor isolado deve ser interpretado dentro desse contexto histórico, não como meta terapêutica isolada obrigatória.",
+    "source_refs": [
+      "Rivers E, Nguyen B, Havstad S, Ressler J, Muzzin A, Knoblich B, Peterson E, Tomlanovich M; Early Goal-Directed Therapy Collaborative Group. Early goal-directed therapy in the treatment of severe sepsis and septic shock. N Engl J Med. 2001;345(19):1368-1377. DOI: 10.1056/NEJMoa010307. PMID: 11794169"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "saturacao venosa central de oxigenio",
+      "scvo2",
+      "choque septico",
+      "terapia guiada por metas",
+      "rivers"
+    ]
+  },
+  {
+    "slug": "avaliacao-da-veia-cava-inferior-por-ultrassom-point-of-care-na-volemia",
+    "name": "Avaliação da veia cava inferior por ultrassom point-of-care na estimativa de volemia",
+    "category": "imagem",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Diâmetro da veia cava inferior e sua variação respiratória (colapsabilidade em ventilação espontânea, ou distensibilidade em paciente sob ventilação mecânica controlada), medidos por ultrassom point-of-care em janela subxifoide — usada como estimativa não invasiva de pré-carga e de resposta a volume.",
+    "reference_range": "No estudo original de Barbier et al. em pacientes sépticos sob ventilação mecânica, um índice de distensibilidade da veia cava inferior ≥18% previu resposta ao volume (aumento do índice cardíaco ≥15% após expansão volêmica) com sensibilidade de 90% e especificidade de 90%.",
+    "indications": "Avaliação point-of-care da volemia e da probabilidade de resposta a expansão volêmica em paciente crítico, sobretudo em choque de etiologia indefinida, como complemento rápido à beira do leito, à espera ou em substituição a métodos mais invasivos.",
+    "interpretation": "No estudo de Barbier et al. (20 pacientes sépticos, ventilados mecanicamente, sem esforço respiratório espontâneo), a distensibilidade da veia cava inferior (diferença entre diâmetro máximo inspiratório e mínimo expiratório, dividida pelo diâmetro mínimo) correlacionou-se com a variação de índice cardíaco após expansão volêmica, e o corte de 18% discriminou responsivos de não responsivos a volume com boa acurácia (sensibilidade e especificidade de 90%).",
+    "limitations": "Validado especificamente em paciente sob ventilação mecânica controlada, sem esforço respiratório espontâneo e em ritmo sinusal — a acurácia cai acentuadamente em respiração espontânea, esforço inspiratório irregular, arritmia ou pressões intra-abdominais elevadas, cenários em que a variação da veia cava deixa de refletir de forma confiável a pré-carga. É ferramenta de triagem rápida, não substitui avaliação hemodinâmica mais completa quando disponível.",
+    "source_refs": [
+      "Barbier C, Loubières Y, Schmit C, Hayon J, Ricôme JL, Jardin F, Vieillard-Baron A. Respiratory changes in inferior vena cava diameter are helpful in predicting fluid responsiveness in ventilated septic patients. Intensive Care Med. 2004;30(9):1740-1746. DOI: 10.1007/s00134-004-2259-8. PMID: 15034650"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "veia cava inferior",
+      "ultrassom point-of-care",
+      "pocus",
+      "resposta a volume",
+      "choque septico"
+    ]
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-na-hipertensao-pulmonar",
+    "name": "Teste de caminhada de 6 minutos (TC6M) na hipertensão pulmonar",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Distância percorrida em caminhada de ritmo autoescolhido durante 6 minutos, em corredor plano — teste submáximo de capacidade funcional, útil em paciente que não tolera esforço máximo, historicamente um dos parâmetros prognósticos mais usados na hipertensão arterial pulmonar.",
+    "reference_range": "No estudo original de Miyamoto et al., a distância percorrida foi significativamente menor em pacientes com hipertensão pulmonar primária que em controles pareados por idade e sexo (297±188 m versus 655±91 m, p<0,001), e diminuiu proporcionalmente à gravidade da classe funcional NYHA. Pacientes que caminhavam menos de 332 m tiveram sobrevida significativamente menor (log-rank p<0,01).",
+    "indications": "Avaliação de capacidade funcional e estratificação prognóstica na hipertensão arterial pulmonar, acompanhamento da resposta a tratamento e, junto com outros parâmetros (classe funcional, biomarcadores, ecocardiograma, hemodinâmica), compõe os escores de risco multiparamétricos usados na decisão terapêutica.",
+    "interpretation": "No estudo de Miyamoto et al. (43 pacientes com hipertensão pulmonar primária), a distância percorrida no TC6M correlacionou-se fortemente com o VO₂ pico determinado por teste cardiopulmonar de exercício máximo (r=0,70, p<0,001), com o pulso de oxigênio (r=0,57, p<0,01) e com a inclinação VE-VCO₂ (r=-0,66, p<0,001), e modestamente com o débito cardíaco basal (r=0,48, p<0,05) e a resistência pulmonar total (r=-0,49, p<0,05) — mas não com a pressão média de artéria pulmonar. Em análise multivariada de sobrevida ao longo de seguimento médio de 21±16 meses (12 óbitos por causa cardiopulmonar), apenas a distância caminhada em 6 minutos se associou de forma independente à mortalidade entre os parâmetros clínicos, ecocardiográficos e neuro-humorais avaliados.",
+    "limitations": "Depende de motivação e esforço do paciente, de padronização do corredor e da técnica do avaliador (instruções verbais padronizadas de incentivo são parte do protocolo). É teste submáximo — não substitui o teste cardiopulmonar de exercício quando a pergunta clínica exige medida direta de VO₂ pico, e não se correlacionou com a pressão média de artéria pulmonar no estudo original, ou seja, não reflete diretamente a gravidade hemodinâmica isolada.",
+    "source_refs": [
+      "Miyamoto S, Nagaya N, Satoh T, Kyotani S, Sakamaki F, Fujita M, Nakanishi N, Miyatake K. Clinical correlates and prognostic significance of six-minute walk test in patients with primary pulmonary hypertension. Comparison with cardiopulmonary exercise testing. Am J Respir Crit Care Med. 2000;161(2 Pt 1):487-492. DOI: 10.1164/ajrccm.161.2.9906015. PMID: 10673190"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste de caminhada de 6 minutos",
+      "tc6m",
+      "hipertensao arterial pulmonar",
+      "capacidade funcional",
+      "prognostico"
+    ]
+  },
+  {
+    "slug": "peptideos-natriureticos-na-vigilancia-de-cardiotoxicidade-por-quimioterapia",
+    "name": "Peptídeos natriuréticos (NT-proBNP) na vigilância de cardiotoxicidade por quimioterapia em altas doses",
+    "category": "laboratorial",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Concentração sérica de NT-proBNP medida em série (antes, ao final e em intervalos após a quimioterapia em altas doses) — biomarcador de estresse miocárdico usado como sinal precoce de disfunção ventricular induzida por quimioterapia, antes que a queda da fração de ejeção se torne detectável ao ecocardiograma.",
+    "reference_range": "No estudo de Sandri et al., o valor médio de NT-proBNP às 72 horas após quimioterapia em altas doses foi de 1.163±936 ng/L no grupo com elevação persistente, contra 185±101 ng/L no grupo com elevação apenas transitória (que retornava ao basal em 72h) e 39±19 ng/L no grupo sem elevação (p<0,0001 entre os três grupos).",
+    "indications": "Vigilância seriada de cardiotoxicidade em paciente submetido a quimioterapia em altas doses (contexto de transplante de células-tronco hematopoiéticas ou regime de intensificação), como complemento à troponina e ao ecocardiograma seriado (incluindo strain longitudinal global) já usados nesta base para o mesmo propósito.",
+    "interpretation": "No estudo prospectivo de Sandri et al. (52 pacientes, 62 tratamentos de quimioterapia em altas doses, com ecocardiograma seriado por 1 ano), 17 tratamentos (33%) tiveram elevação persistente de NT-proBNP, 19 (36%) elevação apenas transitória e 16 (31%) nenhuma elevação. Apenas o grupo com elevação persistente teve piora significativa dos índices diastólicos (relação E/A caindo de 1,42±0,33 para 0,78±0,11, p<0,0001; tempo de relaxamento isovolumétrico subindo de 90±15 para 141±26 ms, p<0,0001) e da fração de ejeção (de 62,8±3,4% para 45,6±11,5%, p<0,0001) ao longo de 12 meses de seguimento — ou seja, a elevação persistente e precoce do biomarcador antecipou a disfunção ventricular que só se tornaria evidente à imagem meses depois.",
+    "limitations": "É estudo de coorte pequeno (52 pacientes) e de contexto específico (quimioterapia em altas doses, não o regime padrão de antraciclina em dose convencional mais comum na prática oncológica geral), o que limita a extrapolação direta do ponto de corte numérico para outros protocolos quimioterápicos. NT-proBNP também se eleva por outras causas (disfunção renal, idade, fibrilação atrial), que devem ser consideradas na interpretação de qualquer elevação isolada.",
+    "source_refs": [
+      "Sandri MT, Salvatici M, Cardinale D, Zorzino L, Passerini R, Lentati P, Leon M, Civelli M, Martinelli G, Cipolla CM. N-terminal pro-B-type natriuretic peptide after high-dose chemotherapy: a marker predictive of cardiac dysfunction? Clin Chem. 2005;51(8):1405-1410. DOI: 10.1373/clinchem.2005.050153. PMID: 15932966"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "nt-probnp",
+      "peptideos natriureticos",
+      "cardiotoxicidade",
+      "quimioterapia em altas doses",
+      "cardio-oncologia"
+    ]
   }
 ]
