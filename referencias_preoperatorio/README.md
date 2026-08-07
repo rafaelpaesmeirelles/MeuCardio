@@ -4,22 +4,26 @@ Levantamento pedido pelo Rafael em 07/08/2026 (repassando pedido do ChatGPT): fi
 das publicações originais dos escores de risco perioperatório, para conferência visual antes de
 expandir a Avaliação Cardiológica Pré-Operatória — nunca reconstruir árvore/tabela de memória.
 
-Página com todos os itens (obtidos e bloqueados, com status de cada um):
-https://claude.ai/code/artifact/c3166189-22be-4eb2-be99-215169e096ca
+Este README já traz tudo embutido (GitHub renderiza as imagens abaixo direto). Página equivalente,
+fora do repositório: https://claude.ai/code/artifact/c3166189-22be-4eb2-be99-215169e096ca
 
 ## Obtido
 
-- **`RCRI_Lee_1999_tabela_6preditores.png`** e **`RCRI_Lee_1999_tabela_classes_eventos.png`** —
-  Tabelas 4 e 3 do artigo original (Lee TH et al., Circulation. 1999;100(10):1043-1049,
-  PMID 10477528), extraídas do PDF de acesso aberto em
-  https://cloudfront.escholarship.org/dist/prd/content/qt845640mb/qt845640mb.pdf
+**Lee TH et al., Circulation. 1999;100(10):1043-1049, PMID 10477528** — PDF de acesso aberto em
+https://cloudfront.escholarship.org/dist/prd/content/qt845640mb/qt845640mb.pdf
+
+![Tabela 4 do original — os 6 preditores, OR bruto e ajustado nas duas coortes](RCRI_Lee_1999_tabela_6preditores.png)
+
+![Tabela 3 do original — taxa de evento por classe, nas 4 escalas comparadas](RCRI_Lee_1999_tabela_classes_eventos.png)
 
 ## Parcial
 
-- **`ACS_NSQIP_tela_inicial.png`** — só a tela de abertura da calculadora oficial
-  (riskcalculator.facs.org). Não fui além: os termos da própria ferramenta proíbem automação, e
-  a entrada tem CAPTCHA — as duas coisas juntas impedem capturar as telas de variáveis/resultado
-  por este caminho.
+**ACS-NSQIP Surgical Risk Calculator** — só a tela de abertura (riskcalculator.facs.org, v4.0.4).
+Não fui além: os termos da própria ferramenta proíbem automação ("we do not permit... the
+functionality of the calculator to be automated in any way"), e a entrada tem CAPTCHA — as duas
+coisas juntas impedem capturar as telas de variáveis/resultado por este caminho.
+
+![Tela inicial oficial do ACS NSQIP Surgical Risk Calculator](ACS_NSQIP_tela_inicial.png)
 
 ## Bloqueado (testado, não é falta de tentativa)
 
