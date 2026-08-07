@@ -115,6 +115,31 @@
   background: #16435e;
   outline: none;
 }
+.emerg__temaLinha {
+  margin-top: 0.7rem;
+}
+.emerg__temaLinha label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--e-texto);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.emerg__temaLinha select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #5686a2;
+  border-radius: 8px;
+  background: #fff;
+  color: #102838;
+  font: inherit;
+  font-size: 1rem;
+}
+.emerg__temaLinha select:focus-visible {
+  outline: 3px solid #8fd0ea;
+  outline-offset: 2px;
+}
 .emerg__busca small {
   display: block;
   margin-top: 0.45rem;
