@@ -17505,5 +17505,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ford-2007-explicando-a-queda-de-mortalidade-coronariana-nos-eua-1980-2000",
+    "title": "Ford et al. 2007 — Explicando a queda de mortalidade coronariana nos EUA entre 1980 e 2000",
+    "study_type": "estudo_ecologico_descritivo",
+    "authors": "Ford ES, Ajani UA, Croft JB, Critchley JA, Labarthe DR, Kottke TE, Giles WH, Capewell S",
+    "journal": "New England Journal of Medicine",
+    "year": 2007,
+    "doi": "10.1056/NEJMsa053935",
+    "pmid": "17554120",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17554120/",
+    "summary": "Estudo que aplica o modelo estatístico validado IMPACT a dados de uso e efetividade de tratamentos cardíacos específicos e a mudanças em fatores de risco cardiovascular entre 1980 e 2000 em adultos americanos de 25 a 84 anos, para decompor a queda de mortalidade coronariana observada no período entre a contribuição de tratamentos médico-cirúrgicos e a de mudança de fatores de risco.",
+    "key_findings": "A taxa de mortalidade coronariana ajustada por idade caiu de 542,9 para 266,8 mortes/100.000 em homens e de 263,3 para 134,4 mortes/100.000 em mulheres entre 1980 e 2000, resultando em 341.745 mortes coronarianas a menos em 2000. Cerca de 47% dessa queda foi atribuída a tratamentos (prevenção secundária pós-infarto/revascularização 11%, tratamento inicial de infarto/angina instável 10%, tratamentos de IC 9%, revascularização eletiva 5%, outros 12%) e cerca de 44% a mudanças em fatores de risco (redução do colesterol total 24%, da pressão sistólica 20%, do tabagismo 12%, do sedentarismo 5%) — parcialmente contrabalançadas por aumento de IMC (+8% de mortes) e de prevalência de diabetes (+10% de mortes).",
+    "clinical_implications": "Quantifica, de forma rara e influente, que aproximadamente metade da redução histórica de mortalidade coronariana veio de terapia médica baseada em evidência e a outra metade de prevenção de fatores de risco — argumento robusto contra a ideia de que só a inovação terapêutica (novos fármacos, novos dispositivos) explica o ganho de sobrevida populacional, e a favor de investimento equivalente em prevenção primária (controle pressórico e lipídico, cessação de tabagismo).",
+    "limitations": "Estudo ecológico-descritivo baseado em modelagem (IMPACT), não em dados individuais — a atribuição de percentuais a cada fator depende da validade do modelo e dos coeficientes de efetividade de tratamento usados como insumo; obesidade e diabetes crescentes no mesmo período parcialmente anulam o ganho, tendência que os próprios autores destacam como preocupação para as décadas seguintes.",
+    "theme": "Geral",
+    "tags": [
+      "mortalidade coronariana",
+      "modelo IMPACT",
+      "prevenção primária",
+      "tratamento baseado em evidência",
+      "epidemiologia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "danaei-2009-causas-preveniveis-de-morte-nos-eua-por-fator-de-risco",
+    "title": "Danaei et al. 2009 — Causas preveníveis de morte nos EUA: avaliação comparativa de risco por fator dietético, comportamental e metabólico",
+    "study_type": "estudo_ecologico_descritivo",
+    "authors": "Danaei G, Ding EL, Mozaffarian D, Taylor B, Rehm J, Murray CJL, Ezzati M",
+    "journal": "PLoS Medicine",
+    "year": 2009,
+    "doi": "10.1371/journal.pmed.1000058",
+    "pmid": "19399161",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19399161/",
+    "summary": "Avaliação comparativa de risco estimando o número de mortes nos Estados Unidos (dados de 2005) atribuíveis a 12 fatores de risco dietéticos, comportamentais e metabólicos modificáveis — glicemia elevada, LDL elevado, pressão arterial elevada, sobrepeso-obesidade, gordura trans, sódio na dieta, baixo consumo de gordura poli-insaturada/ômega-3/frutas e vegetais, sedentarismo, uso de álcool e tabagismo — usando métodos consistentes e comparáveis entre fatores.",
+    "key_findings": "Tabagismo e pressão arterial elevada foram os fatores de maior impacto, responsáveis por cerca de 467.000 (IC95% 436.000–500.000) e 395.000 (IC95% 372.000–414.000) mortes em 2005, respectivamente — juntos, cerca de uma em cada cinco ou seis mortes de adultos americanos. Sobrepeso-obesidade (216.000 mortes) e sedentarismo (191.000 mortes) foram responsáveis cada um por quase 1 em 10 mortes. O uso de álcool teve efeito líquido deletério: 26.000 mortes evitadas por doença isquêmica/AVC/diabetes foram superadas por 90.000 mortes por outras causas relacionadas ao álcool (outras doenças cardiovasculares, câncer, cirrose, pancreatite, trauma, violência).",
+    "clinical_implications": "Fornece a hierarquia quantitativa mais citada de \"o que mais mata\" entre fatores de risco modificáveis nos EUA — hipertensão e tabagismo à frente de obesidade e sedentarismo —, útil para calibrar prioridade de aconselhamento clínico quando o tempo de consulta obriga a escolher qual fator de risco abordar primeiro.",
+    "limitations": "Estudo ecológico-descritivo dependente de estimativas de efeito etiológico extraídas de revisões sistemáticas e metanálises de terceiros, aplicadas a dados de exposição populacional dos EUA — não mede diretamente causa de morte individual; o próprio artigo tem errata publicada (2011) não incorporada nesta descrição além da menção de sua existência.",
+    "theme": "Geral",
+    "tags": [
+      "causas de morte",
+      "avaliação comparativa de risco",
+      "tabagismo",
+      "hipertensão",
+      "epidemiologia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
