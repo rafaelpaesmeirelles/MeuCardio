@@ -813,4 +813,17 @@ His-SYNC) tiveram só o PMID conferido, não os números do corpo, por falta de 
 
 **Resultado: PASSA quanto ao que foi verificado.**
 
+## Rodada 12 — 07/08/2026
+
+### Commits `2f8cd8c` (estudos: +5 Cardio-oncologia) e `25fefbc` (estudos: +5 Tromboembolismo + evidências: +3 GRADE ASH 2018)
+
+**Verificação leve por falta de tempo**: os 11 PMIDs citados nos dois commits foram conferidos
+**apenas quanto a existência/registro** (título e fonte batem no PubMed) — HERO/relugolix
+32469183, reanálise independente do PACE 34991679, ENESTnd 10 anos 33414482, Kim 2013
+nilotinibe/DAOP 23459449, ANDROMEDA/daratumumabe 34192431 (Cardio-oncologia); ATTRACT 29211671,
+PREPIC2 25919526, SOX (meias de compressão) 24315521, PROTECT (dalteparina em UTI) 21417952,
+PREVENT (compressão pneumática) 30779530, e a diretriz ASH 2018 de tromboprofilaxia 30482763
+(Tromboembolismo). **Todos os 11 resolvem a registros reais e coerentes com o que o commit
+descreve.** Números do corpo de cada item **não foram conferidos** nesta rodada.
+
 ---
