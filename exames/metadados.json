@@ -6096,5 +6096,146 @@
       "vigilância",
       "pediatria"
     ]
+  },
+  {
+    "slug": "eletrocardiograma-seriado-monitorizacao-de-qtc-em-quimioterapicos-de-risco",
+    "name": "Eletrocardiograma seriado — monitorização de QTc em quimioterápicos de risco de prolongamento",
+    "category": "metodo_grafico",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Intervalo QT corrigido pela frequência cardíaca (QTc, fórmula de Bazett ou Fridericia), medido em ECG de 12 derivações repetido em pontos definidos do tratamento oncológico, para vigiar o efeito de fármacos antineoplásicos com potencial de prolongar a repolarização ventricular e precipitar torsades de pointes.",
+    "reference_range": "QTc normal: até 450 ms em homens e 460 ms em mulheres. Prolongamento relevante: QTc >500 ms, ou aumento absoluto ≥60 ms em relação ao basal — os dois cortes mais usados para decisão de ajuste ou suspensão do fármaco, adaptados de critérios oncológicos gerais.",
+    "indications": "Antes de iniciar, e em intervalos definidos durante o uso de, fármacos antineoplásicos com risco descrito de prolongamento de QTc — inclui inibidores de tirosina-quinase (ex.: alguns inibidores de BCR-ABL), inibidores de CDK4/6, e outras classes-alvo com incidência de prolongamento relatada em revisão sistemática dedicada. Também indicado na presença de fator de risco associado (hipocalemia, hipomagnesemia, uso concomitante de outro fármaco prolongador de QT, bradicardia).",
+    "interpretation": "Uma revisão sistemática (PRISMA) de 173 publicações sobre QTc induzido por terapias oncológicas encontrou incidência de qualquer prolongamento de QTc de até 22,7% com alguns agentes-alvo, mas reforça que o desfecho grave — QTc >500 ms, arritmia sintomática ou morte súbita — é raro mesmo nos fármacos de maior incidência de prolongamento assintomático; o texto integral (acesso aberto via PMC) traz tabela de incidência ponderada por fármaco (número de estudos e de pacientes agrupados) e uma classificação de risco em quatro faixas, que orienta a frequência de monitorização recomendada para cada classe de medicamento.",
+    "limitations": "A fórmula de correção do QT (Bazett superestima em frequência cardíaca alta; Fridericia é mais estável) influencia o valor medido — usar a mesma fórmula em toda a série para o mesmo paciente. Fatores concomitantes (distúrbio eletrolítico, outros fármacos, doença cardíaca estrutural de base) confundem a atribuição causal ao quimioterápico isoladamente.",
+    "source_refs": [
+      "Porta-Sánchez A, Gilbert C, Spears D, Amir E, Chan J, Nanthakumar K, Thavendiranathan P. Incidence, Diagnosis, and Management of QT Prolongation Induced by Cancer Therapies: A Systematic Review. J Am Heart Assoc. 2017;6(12):e007724. DOI: 10.1161/JAHA.117.007724. PMID: 29217664"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "qtc",
+      "eletrocardiograma",
+      "cardio-oncologia",
+      "quimioterapia",
+      "torsades de pointes"
+    ]
+  },
+  {
+    "slug": "ressonancia-magnetica-cardiaca-t1-t2-mapping-na-miocardite-por-inibidor-de-checkpoint",
+    "name": "Ressonância magnética cardíaca com mapeamento T1/T2 na miocardite por inibidor de checkpoint imunológico",
+    "category": "imagem",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Sequências de ressonância cardíaca (T2-mapping/STIR para edema miocárdico, T1-mapping nativo e volume extracelular, realce tardio por gadolínio) aplicadas aos Critérios de Lake Louise atualizados (2018) para inflamação miocárdica não isquêmica, no contexto de suspeita de miocardite relacionada a inibidor de checkpoint imunológico.",
+    "reference_range": "Critérios de Lake Louise atualizados exigem pelo menos um marcador baseado em T2 (aumento global/regional do tempo de relaxamento T2, ou sinal aumentado em imagem ponderada em T2) associado a pelo menos um marcador de lesão miocárdica inflamatória baseado em T1 (T1 nativo ou volume extracelular elevados, ou realce tardio não isquêmico) para sustentar evidência forte de inflamação miocárdica; a combinação eleva a especificidade em relação a qualquer critério isolado.",
+    "indications": "Suspeita clínica de miocardite por inibidor de checkpoint imunológico (troponina elevada, sintoma cardiovascular novo, alteração de ECG) em paciente em uso de pembrolizumabe, nivolumabe ou outro agente da classe — a ressonância ajuda a caracterizar e quantificar o acometimento miocárdico, mas a decisão terapêutica (suspensão do inibidor de checkpoint e início de imunossupressão) não deve esperar a confirmação por imagem quando a suspeita clínica é forte, dado o risco de deterioração rápida da miocardite fulminante por checkpoint.",
+    "interpretation": "Os critérios de Lake Louise foram desenvolvidos para miocardite não isquêmica em geral, não especificamente para a etiologia por checkpoint — a extrapolação para esse contexto é amplamente usada na prática mas carrega a limitação de que a miocardite por checkpoint pode ter apresentação fulminante com exame de ressonância inicialmente pouco alterado, especialmente nos primeiros dias. A ausência de achado positivo na ressonância NÃO exclui miocardite por checkpoint quando a suspeita clínica é alta (biópsia endomiocárdica permanece o padrão de referência em caso de dúvida diagnóstica com risco de vida).",
+    "limitations": "Sensibilidade reduzida na fase mais precoce e fulminante da miocardite por checkpoint, quando a decisão terapêutica é mais urgente. Exige protocolo de aquisição dedicado (mapeamento paramétrico), nem sempre disponível em todos os serviços com a mesma qualidade. Interpretação depende de comparação com valores de referência específicos do equipamento/campo magnético usado.",
+    "source_refs": [
+      "Ferreira VM, Schulz-Menger J, Holmvang G, Kramer CM, Carbone I, Sechtem U, Kindermann I, Gutberlet M, Cooper LT, Liu P, Friedrich MG. Cardiovascular Magnetic Resonance in Nonischemic Myocardial Inflammation: Expert Recommendations. J Am Coll Cardiol. 2018;72(24):3158-3176. DOI: 10.1016/j.jacc.2018.09.072. PMID: 30545455",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. PMID: 36017568"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonancia cardiaca",
+      "lake louise",
+      "miocardite",
+      "inibidor de checkpoint",
+      "cardio-oncologia"
+    ]
+  },
+  {
+    "slug": "ultrassonografia-de-compressao-doppler-venoso-de-membros-inferiores-no-diagnostico-de-tvp",
+    "name": "Ultrassonografia com compressão (Doppler venoso) de membros inferiores no diagnóstico de TVP",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Avaliação da compressibilidade das veias profundas do membro inferior por transdutor de ultrassom — veia normal colaba totalmente sob compressão manual; a presença de trombo impede o colabamento total, sinal central do exame. O modo duplex/triplex acrescenta avaliação de fluxo por Doppler à imagem de compressão.",
+    "reference_range": "Não se aplica um valor numérico de referência — o resultado é qualitativo (presença ou ausência de trombo, e sua extensão/localização proximal versus distal).",
+    "indications": "Suspeita clínica de trombose venosa profunda de membro inferior, isoladamente ou combinada a escore de probabilidade pré-teste (Wells) e D-dímero. É o exame de escolha por ser não invasivo, amplamente disponível e ter substituído a flebografia com contraste (padrão de referência histórico) na maioria dos serviços.",
+    "interpretation": "Metanálise de 100 coortes diagnósticas comparando ultrassom à flebografia contrastada encontrou sensibilidade agrupada de 94,2% (IC95% 93,2-95,0) para TVP proximal e de apenas 63,5% (IC95% 59,8-67,0) para TVP distal (infrapoplítea), com especificidade de 93,8% (IC95% 93,1-94,4). A técnica de compressão isolada (sem Doppler) teve a maior especificidade entre as três técnicas comparadas — 97,8% (IC95% 97,0-98,4) —, enquanto o Doppler duplex/triplex teve sensibilidade combinada mais alta para TVP proximal (96,4-96,5%). Essa diferença de desempenho entre TVP proximal e distal é o ponto prático mais relevante: um exame negativo não exclui com a mesma confiança uma trombose limitada às veias da panturrilha, e a repetição do exame em alguns dias (para detectar propagação proximal) tem rendimento descrito, mas baseado em dados limitados.",
+    "limitations": "Sensibilidade bem menor para TVP distal/infrapoplítea do que para TVP proximal — resultado negativo isolado não deve ser interpretado como exclusão definitiva de trombose de panturrilha em paciente com alta suspeita clínica. Operador-dependente. Exame de repetição carece de evidência robusta sobre o intervalo ideal.",
+    "source_refs": [
+      "Goodacre S, Sampson F, Thomas S, van Beek E, Sutton A. Systematic review and meta-analysis of the diagnostic accuracy of ultrasonography for deep vein thrombosis. BMC Med Imaging. 2005;5:6. DOI: 10.1186/1471-2342-5-6. PMID: 16202135"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doppler venoso",
+      "ultrassom de compressao",
+      "trombose venosa profunda",
+      "tvp",
+      "tromboembolismo"
+    ]
+  },
+  {
+    "slug": "troponina-e-peptideos-natriureticos-na-estratificacao-de-risco-do-tep-normotenso",
+    "name": "Troponina e peptídeos natriuréticos (BNP/NT-proBNP) na estratificação de risco do TEP normotenso",
+    "category": "laboratorial",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Marcadores de lesão miocárdica (troponina) e de sobrecarga/estresse de parede ventricular direita (BNP/NT-proBNP), dosados no paciente com tromboembolismo pulmonar confirmado e hemodinamicamente estável (normotenso), para complementar a avaliação de disfunção do ventrículo direito por imagem na estratificação de risco.",
+    "reference_range": "Não há corte único universal — os valores de referência seguem o método/kit laboratorial local. O uso clínico é qualitativo: elevado versus não elevado, combinado a critérios de imagem (disfunção de VD ao ecocardiograma ou à razão de diâmetro VD/VE na angiotomografia) e a escores clínicos (PESI/sPESI).",
+    "indications": "TEP agudo confirmado, paciente sem hipotensão/choque (risco alto já definido pela instabilidade hemodinâmica), para diferenciar dentro do grupo normotenso quem tem risco baixo (candidato a alta precoce/tratamento ambulatorial) de quem tem risco intermediário — e, dentro deste, intermediário-baixo de intermediário-alto, conforme a combinação de biomarcador e disfunção de VD por imagem.",
+    "interpretation": "A diretriz ESC/ERS de 2019 para TEP agudo posiciona a combinação de biomarcador laboratorial (troponina elevada) e sinal de disfunção de VD por imagem como o que define o TEP de risco intermediário-alto dentro do grupo normotenso — paciente com PESI/sPESI de risco não baixo, biomarcador elevado E disfunção de VD por imagem tem risco de deterioração clínica maior do que quem tem só um dos dois achados alterados (intermediário-baixo) ou nenhum (baixo risco), e essa estratificação orienta o nível de monitorização (enfermaria versus unidade de cuidado intermediário/UTI) e a decisão sobre trombólise de resgate se houver deterioração.",
+    "limitations": "Nenhum biomarcador isolado tem acurácia suficiente para decidir trombólise sistêmica de rotina no TEP normotenso — a evidência de benefício de trombólise nesse grupo é limitada e associada a maior risco de sangramento maior; a combinação biomarcador+imagem serve para estratificar vigilância, não para indicar trombólise automática. Elevação de troponina e BNP também ocorre por outras causas concomitantes (doença coronariana prévia, disfunção renal), reduzindo a especificidade isolada de cada marcador.",
+    "source_refs": [
+      "Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "bnp",
+      "nt-probnp",
+      "tromboembolismo pulmonar",
+      "estratificacao de risco"
+    ]
+  },
+  {
+    "slug": "cintilografia-de-ventilacao-perfusao-na-triagem-de-hipertensao-pulmonar-tromboembolica-cronica",
+    "name": "Cintilografia de ventilação-perfusão (V/Q) na triagem de hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "category": "imagem",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Comparação entre a distribuição da ventilação (radioaerossol ou gás inalado marcado) e da perfusão (macroagregado de albumina marcado, injetado por via venosa) nos dois pulmões — na doença tromboembólica crônica, a perfusão fica reduzida em áreas com ventilação preservada ('mismatch' ventilação-perfusão), o padrão característico que diferencia CTEPH de outras causas de hipertensão pulmonar.",
+    "reference_range": "Resultado categórico por probabilidade (baixa, intermediária, alta), segundo critérios PIOPED modificados — um ou mais defeitos de perfusão segmentares ou maiores, sem defeito de ventilação correspondente, define alta probabilidade para doença tromboembólica.",
+    "indications": "Todo paciente com hipertensão pulmonar recém-diagnosticada deve ser rastreado para CTEPH — é a causa potencialmente curável (por tromboendarterectomia pulmonar) dentro da classificação de hipertensão pulmonar, e a cintilografia V/Q é o exame de triagem recomendado pela diretriz ESC/ERS de hipertensão pulmonar, preferencialmente à angiotomografia isolada nessa etapa de rastreio.",
+    "interpretation": "Um estudo comparando diretamente V/Q e angiotomografia pulmonar multidetector (CTPA) em 227 pacientes referenciados a um serviço de hipertensão pulmonar encontrou, nos 78 pacientes com diagnóstico final de CTEPH, cintilografia V/Q de alta probabilidade em 75 (96%) contra CTPA positiva em apenas 40 (51%) — ou seja, a cintilografia identificou quase o dobro de casos verdadeiros que a angiotomografia isolada nessa coorte, sustentando por que a V/Q permanece o exame de triagem preferido apesar da disponibilidade mais recente e da resolução anatômica maior da angiotomografia.",
+    "limitations": "Uma cintilografia V/Q normal ou de baixa probabilidade tem alto valor preditivo negativo para excluir CTEPH, mas resultado de alta probabilidade não é específico — outras vasculopatias pulmonares (incluindo alguns casos de HAP idiopática e doença veno-oclusiva) podem produzir padrão de mismatch semelhante, e a confirmação diagnóstica exige angiografia pulmonar por cateter e avaliação por heart team especializado antes de definir operabilidade.",
+    "source_refs": [
+      "Tunariu N, Gibbs SJ, Win Z, Gin-Sing W, Graham A, Gishen P, Al-Nahhas A. Ventilation-perfusion scintigraphy is more sensitive than multidetector CTPA in detecting chronic thromboembolic pulmonary disease as a treatable cause of pulmonary hypertension. J Nucl Med. 2007;48(5):680-684. DOI: 10.2967/jnumed.106.039438. PMID: 17475953",
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cintilografia",
+      "ventilacao-perfusao",
+      "cteph",
+      "hipertensao pulmonar tromboembolica cronica",
+      "triagem"
+    ]
+  },
+  {
+    "slug": "tomografia-de-alta-resolucao-de-torax-na-investigacao-etiologica-da-hipertensao-pulmonar",
+    "name": "Tomografia computadorizada de alta resolução de tórax na investigação etiológica da hipertensão pulmonar",
+    "category": "imagem",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Cortes finos de alta resolução do parênquima pulmonar, permitindo identificar sinais de doença pulmonar intersticial, enfisema, padrão em mosaico de perfusão, linfadenopatia mediastinal e sinais indiretos de hipertensão pulmonar (dilatação de artéria pulmonar principal, razão artéria pulmonar/aorta aumentada) — usada na investigação etiológica que distingue os grupos 2 (doença cardíaca esquerda) e 3 (doença pulmonar/hipóxia) de HP dos demais grupos.",
+    "reference_range": "Não se aplica valor numérico único — a interpretação é qualitativa, por padrão de imagem (presença/ausência/extensão de fibrose, enfisema, mosaico de perfusão) e por medidas indiretas (diâmetro de artéria pulmonar principal >29 mm é sinal sugestivo, não diagnóstico isolado, de hipertensão pulmonar).",
+    "indications": "Parte da investigação diagnóstica padrão de qualquer paciente com hipertensão pulmonar recém-identificada, especialmente para diferenciar HP do grupo 3 (secundária a doença pulmonar, como DPOC ou doença pulmonar intersticial) e para complementar o cateterismo direito e a cintilografia V/Q na exclusão de doença tromboembólica crônica (grupo 4) e na busca de sinais indiretos de doença cardíaca esquerda (grupo 2).",
+    "interpretation": "A diretriz ESC/ERS de hipertensão pulmonar de 2022 posiciona a tomografia de alta resolução como parte do algoritmo diagnóstico sequencial após o ecocardiograma, com o achado de doença pulmonar intersticial ou enfisema relevante direcionando a classificação para o grupo 3 — cuja gravidade prognóstica e cuja resposta a vasodilatador específico são diferentes das do grupo 1 (HAP), inclusive com risco documentado de dano em subgrupos tratados com vasodilatador oral fora de indicação (o ensaio RISE-IIP de riociguato na hipertensão pulmonar associada à pneumonia intersticial idiopática foi interrompido precocemente por excesso de mortalidade e eventos adversos graves).",
+    "limitations": "A tomografia identifica a doença pulmonar associada, mas não estabelece por si só a relação causal com a hipertensão pulmonar nem substitui o cateterismo cardíaco direito para confirmação hemodinâmica. A decisão sobre uso de vasodilatador específico em HP do grupo 3 exige avaliação individualizada por centro especializado, dado o risco documentado de piora da relação ventilação-perfusão e de mortalidade em subgrupos tratados fora de indicação formal.",
+    "source_refs": [
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548",
+      "Nathan SD, Behr J, Cottin V, Huang IH, Kim YJ, Nikkho SM, Pittrow D, Rosenkranz S, Ferreira S. Riociguat for idiopathic interstitial pneumonia-associated pulmonary hypertension (RISE-IIP): a randomised, placebo-controlled trial. Lancet Respir Med. 2019;7(9):780-790. DOI: 10.1016/S2213-2600(19)30250-4. PMID: 31416769"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tomografia de torax",
+      "hipertensao pulmonar",
+      "grupo 3",
+      "doenca pulmonar intersticial",
+      "investigacao etiologica"
+    ]
   }
 ]
