@@ -143,7 +143,12 @@
 /* Caixa ------------------------------------------------------------------ */
 .mail-workspace {
   display: grid;
-  grid-template-columns: 210px minmax(300px, 360px) minmax(420px, 1fr);
+  /* 07/08/2026, pedido do Rafael: a coluna de mensagens era fixa demais
+   * (minmax(300,360)) e cortava remetente/assunto. Agora a largura vem de
+   * uma variável CSS que o divisor arrastável (`.mail-resize-handle`)
+   * atualiza e persiste em localStorage — o valor aqui é só o padrão da
+   * primeira visita. */
+  grid-template-columns: 210px var(--mail-lista-largura, 380px) 6px minmax(360px, 1fr);
   min-height: 620px;
   height: calc(100dvh - 225px);
   max-height: 820px;
@@ -153,6 +158,30 @@
   background: var(--superficie);
   box-shadow: var(--sombra);
 }
+
+.mail-resize-handle {
+  cursor: col-resize;
+  position: relative;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  touch-action: none;
+}
+.mail-resize-handle::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 2px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--borda);
+}
+.mail-resize-handle:hover::after,
+.mail-resize-handle:focus-visible::after,
+.mail-resize-handle--arrastando::after {
+  background: var(--acento);
+  width: 3px;
+}
+.mail-resize-handle:focus-visible { outline: 2px solid var(--acento); outline-offset: -2px; }
 
 .mail-pastas { background: #f7fafb; border-right: 1px solid var(--borda); padding: .8rem .55rem; overflow-y: auto; }
 .mail-pastas__titulo { display: flex; justify-content: space-between; color: var(--texto-secundario); font-size: .73rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; padding: .35rem .55rem .6rem; }
@@ -224,8 +253,24 @@
 .mail-item__linha time { color: var(--texto-secundario); font-size: .67rem; flex: 0 0 auto; }
 .mail-item__assunto { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .79rem; }
 .mail-item__resumo { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--texto-secundario); font-size: .72rem; }
-.mail-item__marcas { display: flex; gap: .35rem; margin-top: .15rem; }
+.mail-item__marcas { display: flex; align-items: center; gap: .35rem; margin-top: .15rem; }
 .mail-item__marcas small { color: var(--acento); background: var(--acento-tinta); padding: .05rem .3rem; border-radius: 3px; font-size: .62rem; }
+/* 07/08/2026: o ícone do provedor (`.logo-provedor`) nasce em 36px com
+ * moldura/sombra — pensado pros botões grandes de "Conectar Google" etc.
+ * Sem escopo próprio aqui, ele caía nesse tamanho padrão ao lado de texto
+ * pequeno (mensagem combinada) ou de um checkbox (menu "Combinar contas"),
+ * ficando visivelmente maior que tudo ao redor. Mesmo ajuste em duas telas. */
+.mail-item__marcas .logo-provedor { width: 16px; height: 16px; border-radius: 4px; box-shadow: none; flex: 0 0 auto; }
+.mail-item__marcas .logo-provedor svg { width: 11px; height: 11px; }
+
+.mail-combinar-menu .logo-provedor { width: 18px; height: 18px; border-radius: 5px; box-shadow: none; flex: 0 0 auto; }
+.mail-combinar-menu .logo-provedor svg { width: 12px; height: 12px; }
+/* Tamanho do checkbox explícito por precaução: o navegador não deveria
+ * renderizar o mesmo <input type="checkbox"> em tamanhos diferentes entre
+ * linhas do mesmo menu, mas foi exatamente o observado ao vivo (rafael@corvia
+ * e Yahoo maiores que o do Google) — fixar o tamanho aqui garante
+ * consistência independente da causa exata no motor de renderização. */
+.mail-combinar-menu input[type="checkbox"] { flex: 0 0 auto; width: 15px; height: 15px; margin: 0; }
 
 .mail-leitura { min-width: 0; overflow-y: auto; background: var(--superficie); }
 .mail-leitura__vazio { height: 100%; display: grid; place-content: center; justify-items: center; text-align: center; color: var(--texto-secundario); padding: 2rem; }
@@ -295,6 +340,7 @@
   .mail-dashboard__grade { grid-template-columns: 1fr 1fr; }
   .mail-painel-card--prioridades { grid-column: 1 / -1; }
   .mail-workspace { grid-template-columns: 190px minmax(0, 1fr); }
+  .mail-resize-handle { display: none; }
   .mail-leitura { display: none; }
   .mail-workspace--lendo .mail-lista { display: none; }
   .mail-workspace--lendo .mail-leitura { display: block; border-right: 0; }
@@ -313,6 +359,7 @@
   .mail-dashboard__grade { grid-template-columns: 1fr; }
   .mail-painel-card--prioridades { grid-column: auto; }
   .mail-workspace { display: flex; flex-direction: column; height: calc(100dvh - 250px); min-height: 560px; }
+  .mail-resize-handle { display: none; }
   .mail-pastas { flex: 0 0 auto; display: flex; gap: .25rem; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--borda); padding: .4rem; }
   .mail-pastas__titulo, .mail-pastas__atalhos { display: none; }
   .mail-pastas > button { flex: 0 0 auto; width: auto; padding: .35rem .55rem; font-size: .72rem; min-height: 34px; }

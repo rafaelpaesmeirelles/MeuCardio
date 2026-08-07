@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import { Carregando, Vazio } from "../components/Estado";
@@ -303,6 +303,52 @@ export default function CaixaDeEmail() {
   const [erro, setErro] = useState<string | null>(null);
   const [aviso, setAviso] = useState<string | null>(null);
   const [modo, setModo] = useState<"hoje" | "caixa">("hoje");
+
+  // 07/08/2026, pedido do Rafael: a coluna de mensagens era fixa e curta
+  // demais, cortando remetente/assunto ("dificulta a visualização"). A
+  // largura agora é ajustável pelo próprio médico, arrastando o divisor, e
+  // fica lembrada entre visitas (localStorage) — não é reset a cada sessão.
+  const LARGURA_LISTA_MIN = 300;
+  const LARGURA_LISTA_MAX = 720;
+  const [larguraLista, setLarguraLista] = useState(() => {
+    const salva = Number(localStorage.getItem("corvia.mail.larguraLista"));
+    return salva >= LARGURA_LISTA_MIN && salva <= LARGURA_LISTA_MAX ? salva : 380;
+  });
+  const [arrastandoLista, setArrastandoLista] = useState(false);
+  const workspaceRef = useRef<HTMLElement | null>(null);
+
+  function iniciarRedimensionamento(evento: React.PointerEvent<HTMLDivElement>) {
+    evento.preventDefault();
+    const alvo = evento.currentTarget;
+    alvo.setPointerCapture(evento.pointerId);
+    setArrastandoLista(true);
+    const origemX = evento.clientX;
+    const larguraInicial = larguraLista;
+
+    function mover(ev: PointerEvent) {
+      const nova = larguraInicial + (ev.clientX - origemX);
+      setLarguraLista(Math.min(LARGURA_LISTA_MAX, Math.max(LARGURA_LISTA_MIN, nova)));
+    }
+    function soltar() {
+      setArrastandoLista(false);
+      window.removeEventListener("pointermove", mover);
+      window.removeEventListener("pointerup", soltar);
+      setLarguraLista((atual) => {
+        localStorage.setItem("corvia.mail.larguraLista", String(atual));
+        return atual;
+      });
+    }
+    window.addEventListener("pointermove", mover);
+    window.addEventListener("pointerup", soltar);
+  }
+
+  function ajustarLarguraPorTeclado(delta: number) {
+    setLarguraLista((atual) => {
+      const nova = Math.min(LARGURA_LISTA_MAX, Math.max(LARGURA_LISTA_MIN, atual + delta));
+      localStorage.setItem("corvia.mail.larguraLista", String(nova));
+      return nova;
+    });
+  }
 
   const [pastas, setPastas] = useState<Pasta[] | null>(null);
   const [pastaAtual, setPastaAtual] = useState<string | undefined>(undefined);
@@ -689,7 +735,7 @@ export default function CaixaDeEmail() {
                   {contasCombinadas ? `Combinando ${contasCombinadas.size} contas` : "Combinar contas"}
                 </button>
                 {seletorCombinadoAberto && (
-                  <div role="menu" style={{
+                  <div role="menu" className="mail-combinar-menu" style={{
                     position: "absolute", top: "calc(100% + 4px)", right: 0, zIndex: 30,
                     background: "var(--superficie)", border: "1px solid var(--borda)", borderRadius: "var(--r)",
                     padding: "0.5rem 0.7rem", minWidth: 240, boxShadow: "var(--sombra)",
@@ -863,7 +909,11 @@ export default function CaixaDeEmail() {
           </section>
         </section>
       ) : (
-        <section className={`mail-workspace ${mensagemAberta ? "mail-workspace--lendo" : ""}`}>
+        <section
+          ref={workspaceRef}
+          className={`mail-workspace ${mensagemAberta ? "mail-workspace--lendo" : ""}`}
+          style={{ "--mail-lista-largura": `${larguraLista}px` } as React.CSSProperties}
+        >
           <aside className="mail-pastas" aria-label="Pastas">
             <div className="mail-pastas__titulo"><span>Pastas</span><small>{pastas?.length ?? 0}</small></div>
             {pastas === null ? <Carregando /> : pastas.map((pasta) => {
@@ -972,6 +1022,22 @@ export default function CaixaDeEmail() {
               })}
             </div>
           </section>
+
+          <div
+            className={`mail-resize-handle ${arrastandoLista ? "mail-resize-handle--arrastando" : ""}`}
+            role="separator"
+            aria-orientation="vertical"
+            aria-label="Redimensionar a largura da lista de mensagens"
+            aria-valuemin={LARGURA_LISTA_MIN}
+            aria-valuemax={LARGURA_LISTA_MAX}
+            aria-valuenow={larguraLista}
+            tabIndex={0}
+            onPointerDown={iniciarRedimensionamento}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowLeft") { e.preventDefault(); ajustarLarguraPorTeclado(-20); }
+              if (e.key === "ArrowRight") { e.preventDefault(); ajustarLarguraPorTeclado(20); }
+            }}
+          />
 
           <section className="mail-leitura" aria-label="Leitura da mensagem">
             {!mensagemAberta ? (
