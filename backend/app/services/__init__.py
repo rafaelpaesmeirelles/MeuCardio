@@ -18,21 +18,29 @@ from .perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTR
 from .perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 
-calculators.REGISTRY.update(ACLS_2025_DOSE_REGISTRY)
-calculators.REGISTRY.update(ANTIAGREGANTES_SCA_2025_DOSE_REGISTRY)
-calculators.REGISTRY.update(ANTICOAGULACAO_SCA_2025_DOSE_REGISTRY)
-calculators.REGISTRY.update(CHOQUE_CARDIOGENICO_2025_DOSE_REGISTRY)
-calculators.REGISTRY.update(DIURETICO_IC_AGUDA_DOSE_REGISTRY)
-calculators.REGISTRY.update(DOAC_BRASIL_DOSE_REGISTRY)
-calculators.REGISTRY.update(ENOXAPARINA_SCA_DOSE_REGISTRY)
-calculators.REGISTRY.update(ENTRESTO_BRASIL_DOSE_REGISTRY)
-calculators.REGISTRY.update(FIBRINOLITICOS_STEMI_DOSE_REGISTRY)
-calculators.REGISTRY.update(ICFER_DOSE_REGISTRY)
-calculators.REGISTRY.update(MRA_ICFER_DOSE_REGISTRY)
-# PALS 2025 vem depois do registry legado para substituir os mesmos slugs 2020
-# sem quebrar URLs/favoritos já existentes.
-calculators.REGISTRY.update(PALS_2025_DOSE_REGISTRY)
-calculators.REGISTRY.update(FRAILTY_PERIOPERATIVE_REGISTRY)
-calculators.REGISTRY.update(GERIATRIC_PERIOPERATIVE_REGISTRY)
-calculators.REGISTRY.update(MORTALITY_PERIOPERATIVE_REGISTRY)
-calculators.REGISTRY.update(SORT_PERIOPERATIVE_REGISTRY)
+_CHATGPT_REGISTRIES = [
+    ACLS_2025_DOSE_REGISTRY,
+    ANTIAGREGANTES_SCA_2025_DOSE_REGISTRY,
+    ANTICOAGULACAO_SCA_2025_DOSE_REGISTRY,
+    CHOQUE_CARDIOGENICO_2025_DOSE_REGISTRY,
+    DIURETICO_IC_AGUDA_DOSE_REGISTRY,
+    DOAC_BRASIL_DOSE_REGISTRY,
+    ENOXAPARINA_SCA_DOSE_REGISTRY,
+    ENTRESTO_BRASIL_DOSE_REGISTRY,
+    FIBRINOLITICOS_STEMI_DOSE_REGISTRY,
+    ICFER_DOSE_REGISTRY,
+    MRA_ICFER_DOSE_REGISTRY,
+    PALS_2025_DOSE_REGISTRY,
+    FRAILTY_PERIOPERATIVE_REGISTRY,
+    GERIATRIC_PERIOPERATIVE_REGISTRY,
+    MORTALITY_PERIOPERATIVE_REGISTRY,
+    SORT_PERIOPERATIVE_REGISTRY,
+]
+
+# O dataclass Calculator legado não possui esse campo. Objetos Python sem slots
+# aceitam o atributo dinamicamente, permitindo expor a origem pela API sem
+# alterar retroativamente o schema de todas as calculadoras históricas.
+for registry in _CHATGPT_REGISTRIES:
+    for calculator in registry.values():
+        calculator.fonte_producao = "chatgpt"
+        calculators.REGISTRY[calculator.slug] = calculator
