@@ -21889,5 +21889,181 @@
         "por_que": "Fecha virando a pergunta ao contrário: em vez de prevenir doença cardiovascular pela atividade física, aqui a criança já tem cardiopatia congênita e a pergunta é se e quanto exercício ela pode fazer — elegibilidade esportiva que varia por lesão específica, não uma resposta única de 'pode' ou 'não pode' esporte."
       }
     ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-diagnostico-diferencial-e-vigilancia",
+    "titulo": "Insuficiência cardíaca: diagnóstico diferencial além do óbvio, do estágio B assintomático à vigilância de rejeição pós-transplante",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair reconhecendo cinco situações em que o diagnóstico de IC (ou de uma complicação dela) exige mais do que o algoritmo padrão — disfunção diastólica assintomática que já é estágio B, ICFEp que não fecha sozinha no ecocardiograma, alto débito num paciente com sintoma de baixo débito, hepatopatia atribuída à causa errada, e vigilância de rejeição no transplantado sem depender só de biópsia seriada.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "disfuncao-diastolica-assintomatica-estagio-b-de-ic-com-icfep-incipiente",
+        "por_que": "Começa antes do sintoma aparecer: disfunção diastólica assintomática já é estágio B de insuficiência cardíaca, e reconhecer esse estágio muda a conversa com o paciente de 'você não tem nada' para 'há uma janela de prevenção antes da ICFEp se instalar'."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hfa-peff-algoritmo-diagnostico-para-icfep-esc-2019",
+        "por_que": "Segue para quando o sintoma já apareceu, mas o ecocardiograma sozinho não fecha o diagnóstico — o algoritmo HFA-PEFF formaliza os passos (pré-teste, escore funcional/estrutural, teste funcional, etiologia) para os casos que ficam na zona cinzenta que o passo 1 já antecipa."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-de-alto-debito-causas-mecanismo-e-por-que-e-subdiagnosticada",
+        "por_que": "Inverte a lógica fisiopatológica esperada: aqui o problema não é bomba fraca, é demanda circulatória alta demais (anemia grave, fístula arteriovenosa, hipertireoidismo, entre outras causas) — e por isso é sistematicamente subdiagnosticada por quem só procura disfunção sistólica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hepatopatia-congestiva-cronica-na-insuficiencia-cardiaca-direita-de-longa-data-reconhecimento-e-prognostico",
+        "por_que": "Terceira armadilha de atribuição: alteração hepática crônica num paciente com IC direita de longa data é rotineiramente atribuída a outra causa (esteatose, hepatite, uso de álcool) antes de se pensar em congestão — e essa hepatopatia carrega implicação prognóstica própria, independente da etiologia cardíaca de base."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "vigilancia-nao-invasiva-de-rejeicao-pos-transplante-cardiaco-perfil-de-expressao-genica-e-dd-cfdna",
+        "por_que": "Fecha na vigilância de uma complicação, não de um diagnóstico inicial: no transplantado cardíaco, perfil de expressão gênica (AlloMap) e DNA livre derivado do doador (dd-cfDNA) permitem monitorizar rejeição sem repetir biópsia endomiocárdica a cada avaliação — mesma lógica de 'diagnóstico que exige mais do que o exame padrão' que atravessa toda a trilha."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-farmacoterapia-comparativa-e-adesao",
+    "titulo": "Insuficiência cardíaca: farmacoterapia comparativa dentro da classe e o problema real da adesão",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo que 'já prescrevi um betabloqueador' não é o mesmo que 'prescrevi o betabloqueador certo' — carvedilol e metoprolol tartarato não são intercambiáveis, betabloqueador muda de valor quando a FA é permanente, e populações negras respondem à combinação hidralazina/dinitrato de forma que o ensaio A-HeFT documentou de modo pouco replicado — e fechar reconhecendo que a titulação só avança de verdade quando a adesão é medida, não presumida pelo relato do paciente.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "carvedilol-versus-metoprolol-tartarato-o-ensaio-comet",
+        "por_que": "Começa desfazendo a ideia de que 'betabloqueador é betabloqueador': o COMET comparou diretamente carvedilol e metoprolol tartarato (não succinato de liberação prolongada, o de fato usado hoje) e mostrou diferença de desfecho entre os dois — a classe terapêutica não garante equivalência entre representantes."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "betabloqueador-na-icfer-com-fibrilacao-atrial-permanente-o-que-a-metanalise-de-kotecha-mostra",
+        "por_que": "Segue para uma população em que o próprio benefício do betabloqueador é questionado: a metanálise de Kotecha, em pacientes com ICFEr e fibrilação atrial permanente, não reproduziu o mesmo benefício de mortalidade visto em ritmo sinusal — achado que muda a expectativa de resultado sem mudar a indicação de prescrever."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hidralazina-dinitrato-de-isossorbida-em-negros-com-insuficiencia-cardiaca-o-ensaio-a-heft",
+        "por_que": "Muda de classe terapêutica: o A-HeFT testou hidralazina associada a dinitrato de isossorbida especificamente em pacientes autodeclarados negros com IC já em terapia otimizada, com benefício de mortalidade documentado numa população historicamente sub-representada nos grandes ensaios de ICFEr."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "discrepancia-entre-adesao-autorrelatada-e-adesao-medida-objetivamente-na-insuficiencia-cardiaca",
+        "por_que": "Fecha com o problema que torna os três passos anteriores irrelevantes se não for resolvido primeiro: o paciente sistematicamente superestima a própria adesão quando perguntado diretamente, e escalonar dose ou trocar fármaco sem medir adesão de forma objetiva pode estar resolvendo o problema errado."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-aguda-diuretico-e-isglt2-hospitalar",
+    "titulo": "Insuficiência cardíaca aguda descompensada: resistência diurética, torasemida ou furosemida, e por que não esperar a alta para o iSGLT2",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo reconhecer e tratar resistência diurética pelo bloqueio sequencial do néfron, decidir entre torasemida e furosemida na alta com base em evidência direta (não em preferência de serviço), e saber que a pergunta sobre iniciar iSGLT2 na internação — não esperar a alta — já tem ensaio dedicado respondendo a ela.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
+        "por_que": "Começa pelo mapa geral de decisão da internação por IC aguda descompensada, para dar o contexto em que os três passos seguintes — resistência diurética, escolha do diurético de alça e momento de iniciar o iSGLT2 — se encaixam."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron",
+        "por_que": "Aprofunda o obstáculo mais comum da descongestão: quando a dose de diurético de alça para de funcionar, o mecanismo é adaptação do néfron distal — e o bloqueio sequencial (acrescentar diurético tiazídico ou poupador de potássio) ataca esse mecanismo de forma dirigida, em vez de simplesmente aumentar a dose do mesmo fármaco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf",
+        "por_que": "Responde uma pergunta prática de prescrição na alta, testada em ensaio dedicado: torasemida tem farmacocinética teoricamente mais previsível que furosemida, mas o TRANSFORM-HF comparou os dois diretamente após a internação — o resultado importa tanto quanto o racional farmacológico que motivou a pergunta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "dapagliflozina-iniciada-nas-primeiras-24-horas-de-internacao-por-ic-aguda-o-ensaio-dictate-ahf",
+        "por_que": "Fecha respondendo à dúvida que se tornou rotina na prática desde os primeiros ensaios de iSGLT2 na internação: dá para começar dapagliflozina já nas primeiras 24 horas, junto com a descongestão, ou é preciso esperar o paciente estabilizar? O DICTATE-AHF foi desenhado exatamente para responder isso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-icfep-dispositivo-e-quarto-pilar",
+    "titulo": "ICFEp e ICFEr: quando dispositivo e prognóstico ventilatório entram na conversa além do quarto pilar farmacológico",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo que a ICFEp e a ICFEmr também têm opção de dispositivo em investigação (shunt interatrial) e uma decisão de reparo valvar que depende mais da seleção do paciente do que da técnica em si (MITRA-FR versus COAPT), e reconhecer um marcador ventilatório prognóstico independente na ICFEr que raramente é procurado ativamente — fechando com o quarto pilar farmacológico consolidado, para servir de ponto de referência aos três anteriores.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dispositivo-de-shunt-interatrial-na-icfep-reduce-lap-hf-ii",
+        "por_que": "Começa por uma tecnologia ainda em investigação na ICFEp/ICFEmr: o dispositivo de shunt interatrial reduz pressão de enchimento esquerda por desvio para o átrio direito — mas o programa REDUCE LAP-HF teve resultado negativo na fase III (REDUCE LAP-HF II), e a trilha começa justamente por esse resultado, que contraria a expectativa fisiológica inicial."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-mitral-funcional-secundaria-por-que-a-selecao-de-paciente-decide-mitra-fr-versus-coapt",
+        "por_que": "Segue com outra decisão em que a seleção do paciente pesa mais do que a técnica: MITRA-FR e COAPT testaram o mesmo reparo mitral funcional transcatéter em populações com proporção diferente entre grau de regurgitação e tamanho do ventrículo, e chegaram a resultados opostos — quem entende por que a seleção decide não erra ao aplicar a evidência na prática."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "respiracao-de-cheyne-stokes-na-icfer-marcador-prognostico-independente",
+        "por_que": "Muda de dispositivo para achado clínico subutilizado: a respiração de Cheyne-Stokes na ICFEr é marcador prognóstico independente mesmo sem tratamento específico consolidado para ela — reconhecer o padrão já agrega informação prognóstica, independentemente de qual intervenção (se alguma) será oferecida."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced",
+        "por_que": "Fecha voltando ao terreno mais consolidado da trilha, como contraponto aos três achados anteriores (ainda em investigação, dependentes de seleção, ou sem tratamento específico): o quarto pilar farmacológico da ICFEr, sustentado por DAPA-HF e EMPEROR-Reduced, é hoje indicação de classe I sem a mesma incerteza dos passos anteriores."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-sacubitril-valsartana-e-isglt2-pos-evento",
+    "titulo": "Sacubitril-valsartana e iSGLT2 em cenários pós-evento: descompensação, ICFEp e pós-infarto",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo que sacubitril-valsartana e iSGLT2 têm resultado diferente conforme o momento e o cenário em que são testados — logo após descompensação na ICFEp/ICFElr, na ICFEp estável, e no pós-infarto agudo do miocárdio — e que 'resultado neutro' num desses cenários não invalida o benefício já estabelecido em outro.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sacubitril-valsartana-apos-descompensacao-na-icfep-e-icfelr-o-ensaio-paraglide-hf",
+        "por_que": "Começa pelo cenário mais agudo: iniciar sacubitril-valsartana logo após uma descompensação de ICFEp ou ICFElr, testado no PARAGLIDE-HF — pergunta que só faz sentido depois de já se saber (próximo passo) que o resultado na ICFEp estável não foi tão nítido quanto na ICFEr."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sacubitril-valsartana-na-icfep-o-ensaio-paragon-hf",
+        "por_que": "Recua ao ensaio de base da ICFEp estável: o PARAGON-HF não atingiu significância formal no desfecho primário, mas deixou sinais de benefício em subgrupos (sobretudo fração de ejeção mais próxima do limite inferior e mulheres) que moldaram como o fármaco passou a ser considerado nessa população."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sacubitril-valsartana-pos-infarto-agudo-do-miocardio-o-ensaio-paradise-mi",
+        "por_que": "Muda de ICFEp para o cenário pós-infarto agudo: o PARADISE-MI testou sacubitril-valsartana versus ramipril logo após infarto com disfunção de VE ou congestão, e teve resultado neutro no desfecho primário — reforçando que benefício estabelecido em ICFEr crônica não se transfere automaticamente para outro momento da doença."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "empagliflozina-pos-infarto-agudo-do-miocardio-o-ensaio-empact-mi",
+        "por_que": "Fecha testando a mesma pergunta de cenário pós-infarto com outra classe do quarto pilar: o EMPACT-MI avaliou empagliflozina logo após infarto agudo do miocárdio com risco de IC — permitindo comparar, lado a lado com o passo anterior, como duas classes com benefício consolidado na ICFEr crônica se comportam quando testadas no mesmo cenário agudo pós-infarto."
+      }
+    ]
   }
 ]
