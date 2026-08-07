@@ -7444,5 +7444,353 @@
       "fibrilação atrial",
       "ablação por cateter"
     ]
+  },
+  {
+    "slug": "d-dimero-na-gestante-com-suspeita-de-tromboembolismo-pulmonar-algoritmo-years-adaptado",
+    "name": "D-dímero na gestante com suspeita de tromboembolismo pulmonar — algoritmo YEARS adaptado à gestação",
+    "category": "laboratorial",
+    "theme": "Gravidez",
+    "what_it_measures": "Produto de degradação da fibrina, o mesmo dosado fora da gestação — mas aqui interpretado dentro de um algoritmo desenhado especificamente para gestantes, porque o D-dímero sobe de forma fisiológica e progressiva ao longo da gravidez, reduzindo sua especificidade a ponto de a estratégia convencional (excluir TEP com D-dímero negativo e nenhum critério de risco) não ser considerada segura isoladamente no 2º-3º trimestre pela maioria dos protocolos anteriores a 2019.",
+    "reference_range": "O estudo que validou o algoritmo pregnancy-adapted YEARS não usou um corte fixo único: aplicou os três critérios YEARS (sinais clínicos de trombose venosa profunda, hemoptise, TEP como diagnóstico mais provável) combinados a dois pontos de corte de D-dímero — 1000 ng/mL se nenhum critério YEARS presente, 500 ng/mL se um ou mais critérios presentes — para decidir se a angiotomografia de artérias pulmonares podia ser dispensada.",
+    "indications": "Gestante ou puérpera com suspeita clínica de tromboembolismo pulmonar, em qualquer trimestre, como primeiro passo antes de exame de imagem (angiotomografia ou cintilografia V/Q).",
+    "interpretation": "No estudo multicêntrico prospectivo de van der Pol et al. (NEJM, 2019; 498 gestantes/puérperas), a angiotomografia de artérias pulmonares foi dispensada com segurança em 39% das pacientes usando o algoritmo pregnancy-adapted YEARS. Entre as pacientes em que o TEP foi excluído pelo algoritmo e que não receberam anticoagulação, a incidência de tromboembolismo venoso sintomático no seguimento de 3 meses foi de 0,21% (IC 95% 0,04-1,2) — nenhum caso fatal. O algoritmo reduziu a necessidade de angiotomografia especialmente no 1º trimestre (65% das pacientes dispensadas do exame), quando a exposição fetal à radiação é motivo maior de cautela.",
+    "limitations": "O D-dímero isolado, sem os critérios clínicos YEARS e sem os cortes ajustados do algoritmo, não deve ser usado para excluir TEP na gestante — é essa a razão de existir um algoritmo dedicado. O estudo original excluiu gestantes com alto risco hemodinâmico (TEP maciço com necessidade de tratamento imediato) e teve como critério de desfecho o retorno em 3 meses, não um seguimento mais longo. Trombofilia, pré-eclâmpsia e outras condições obstétricas também elevam o D-dímero de forma independente do TEP, o que reforça que o valor isolado, fora do algoritmo, tem baixo valor discriminativo nessa população.",
+    "source_refs": [
+      "van der Pol LM, Tromeur C, Bistervels IM, Ni Ainle F, van Bemmel T, Bertoletti L, Couturaud F, van Dooren YPA, Elias A, Faber LM, Hofstee HMA, Jimenez D, Kruip MJHA, Mairuhu ATA, Middeldorp S, Nijkeuter M, Roy PM, Sanchez O, Schaefer-Prokop CM, Schellong S, Sohne M, Stephan D, Ten Wolde M, Klok FA, Huisman MV; Artemis Study Investigators. Pregnancy-Adapted YEARS Algorithm for Diagnosis of Suspected Pulmonary Embolism. N Engl J Med. 2019;380(12):1139-1149. DOI: 10.1056/NEJMoa1813865. PMID: 30893534."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "D-dímero",
+      "gestação",
+      "tromboembolismo pulmonar",
+      "algoritmo YEARS",
+      "puerpério"
+    ]
+  },
+  {
+    "slug": "radiografia-de-torax-e-exames-radiologicos-na-gestante-com-suspeita-de-doenca-cardiopulmonar-aguda",
+    "name": "Radiografia de tórax e exames radiológicos na gestante com suspeita de doença cardiopulmonar aguda — dose fetal e por que não devem ser adiados",
+    "category": "imagem",
+    "theme": "Gravidez",
+    "what_it_measures": "Não um novo tipo de exame, mas a decisão clínica de solicitar (ou não) radiografia de tórax, angiotomografia ou cintilografia numa gestante com suspeita aguda de doença cardiopulmonar — pesada contra o receio, frequente entre médicos e pacientes, de que qualquer radiação seja perigosa ao feto.",
+    "reference_range": "Segundo a revisão de McCollough et al. (RadioGraphics, 2007), a dose fetal estimada de uma radiografia de tórax é da ordem de 0,0005-0,01 mGy; de uma angiotomografia de tórax, cerca de 0,01-0,66 mGy (varia com protocolo e trimestre); de uma cintilografia de perfusão pulmonar em dose reduzida, tipicamente abaixo de 0,5 mSv. Os limiares de risco determinístico documentado ao feto (malformação, restrição de crescimento) começam por volta de 50-100 mGy — uma a duas ordens de grandeza acima da dose de qualquer exame torácico isolado.",
+    "indications": "Gestante com suspeita de pneumonia, edema pulmonar, dissecção de aorta, tromboembolismo pulmonar ou qualquer quadro cardiopulmonar agudo em que o exame de imagem mudaria a conduta — ou seja, as mesmas indicações da paciente não gestante.",
+    "interpretation": "A posição conjunta descrita pela revisão (que cita a International Commission on Radiological Protection, o National Council on Radiation Protection, o American College of Radiology e o American College of Obstetrics and Gynecology) é explícita: exame radiológico ou de medicina nuclear com potencial de fornecer informação diagnóstica relevante não deve ser retido da gestante por causa do receio de exposição fetal, porque a dose de um exame isolado — mesmo de tórax, abdome ou até múltiplos exames — fica muito abaixo do limiar associado a efeito determinístico documentado. A recomendação prática que se segue dessa constatação é manter a dose tão baixa quanto razoavelmente exequível (princípio ALARA), não evitar o exame.",
+    "limitations": "A revisão de 2007 é sobre risco determinístico populacional, não elimina a discussão sobre risco estocástico (câncer na infância) em dose cumulativa alta, nem substitui o julgamento caso a caso quando múltiplos exames se acumulam na mesma gestação. Ela também não trata da diferença entre radiação ionizante (abordada aqui) e o risco específico do meio de contraste iodado ou do gadolínio, que seguem discussão à parte. Nenhuma tabela de dose fetal específica da instituição foi conferida nesta sessão — os valores citados são da revisão original, e podem variar por protocolo e equipamento locais.",
+    "source_refs": [
+      "McCollough CH, Schueler BA, Atwell TD, Braun NN, Regner DM, Brown DL, LeRoy AJ. Radiation exposure and pregnancy: when should we be concerned? Radiographics. 2007;27(4):909-17; discussion 917-8. DOI: 10.1148/rg.274065149. PMID: 17620458."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "radiografia de tórax",
+      "gestação",
+      "radiação ionizante",
+      "dose fetal",
+      "angiotomografia"
+    ]
+  },
+  {
+    "slug": "manobra-de-valsalva-modificada-revert-no-tratamento-agudo-da-taquicardia-supraventricular",
+    "name": "Manobra de Valsalva modificada (REVERT) no tratamento agudo da taquicardia supraventricular",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Resposta do nó atrioventricular a um estímulo vagal padronizado — não um exame diagnóstico, mas uma manobra terapêutica de primeira linha para reverter taquicardia supraventricular paroxística (por reentrada nodal ou por via acessória) sem droga, aplicada com técnica reprodutível: 40 mmHg de pressão de esforço expiratório por 15 segundos, seguida imediatamente de reposicionamento supino com elevação passiva das pernas a 45°.",
+    "reference_range": "Não se aplica um valor de referência — o desfecho é binário: reversão para ritmo sinusal, aferida por eletrocardiograma, em até 1 minuto após a manobra.",
+    "indications": "Paciente hemodinamicamente estável com taquicardia supraventricular (excluindo fibrilação e flutter atrial) no pronto-socorro, como primeira tentativa antes de adenosina ou outro antiarrítmico endovenoso.",
+    "interpretation": "No ensaio clínico randomizado REVERT (Appelboam et al., Lancet, 2015; 433 pacientes em pronto-socorros da Inglaterra), a manobra de Valsalva padrão (semi-recumbente) reverteu a arritmia em 17% dos casos (37/214), contra 43% (93/214) com a manobra modificada — reposicionamento supino e elevação passiva das pernas logo após o esforço expiratório (odds ratio ajustada 3,7; IC 95% 2,3-5,8; p<0,0001). Nenhum evento adverso grave foi registrado no estudo. A técnica é simples de ensinar ao paciente e ao profissional, e o ensaio recomenda considerá-la a manobra vagal de primeira escolha por reduzir a necessidade de adenosina — que costuma ser desconfortável para o paciente (sensação de morte iminente, rubor, dispneia transitória).",
+    "limitations": "O ensaio foi conduzido em pronto-socorros ingleses com protocolo padronizado (seringa de 10 mL usada como referência de esforço); reprodutibilidade fora desse contexto de treinamento depende de técnica correta. A manobra exige colaboração do paciente durante a fase de esforço expiratório, o que pode ser difícil em quem está muito sintomático ou ansioso. O estudo excluiu fibrilação e flutter atrial — a manobra vagal modificada não tem papel estabelecido nessas arritmias.",
+    "source_refs": [
+      "Appelboam A, Reuben A, Mann C, Gagg J, Ewings P, Barton A, Lobban T, Dayer M, Vickery J, Benger J; REVERT trial collaborators. Postural modification to the standard Valsalva manoeuvre for emergency treatment of supraventricular tachycardias (REVERT): a randomised controlled trial. Lancet. 2015;386(10005):1747-53. DOI: 10.1016/S0140-6736(15)61485-4. PMID: 26314489."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "manobra de Valsalva",
+      "REVERT",
+      "taquicardia supraventricular",
+      "manobra vagal",
+      "pronto-socorro"
+    ]
+  },
+  {
+    "slug": "painel-genetico-multigenico-nas-sindromes-arritmicas-primarias-hereditarias-canalopatias",
+    "name": "Painel genético multigênico nas síndromes arrítmicas primárias hereditárias (canalopatias)",
+    "category": "laboratorial",
+    "theme": "Arritmias",
+    "what_it_measures": "Sequenciamento dos genes associados às canalopatias cardíacas hereditárias — síndrome do QT longo (KCNQ1, KCNH2, SCN5A entre outros), síndrome de Brugada (SCN5A principalmente), taquicardia ventricular polimórfica catecolaminérgica (RYR2, CASQ2) e síndrome do QT curto — buscando a variante causadora numa família com fenótipo clínico já sugestivo.",
+    "reference_range": "Não se aplica valor de referência numérico. O resultado é classificado por categoria de variante (patogênica, provavelmente patogênica, de significado incerto — VUS —, provavelmente benigna, benigna), seguindo os critérios do American College of Medical Genetics and Genomics (ACMG).",
+    "indications": "Segundo o consenso de especialistas HRS/EHRA/APHRS 2013, o teste genético abrangente ou direcionado ao gene mais provável é indicado (classe I) em paciente com diagnóstico clínico forte de uma canalopatia (por ECG, história e/ou teste provocativo), e é razoável (classe IIa) em paciente com fenótipo limítrofe quando o resultado pode confirmar o diagnóstico. Também está indicado o teste em cascata dos familiares de primeiro grau, uma vez identificada a variante causadora no caso-índice — esse teste direcionado é mais simples e barato que o painel completo.",
+    "interpretation": "Um resultado positivo (variante patogênica confirmada) tem implicação dupla: orienta o tratamento do probando (por exemplo, a variante específica de QT longo pode mudar a escolha do betabloqueador) e permite o teste em cascata dirigido nos familiares, identificando portadores assintomáticos antes do primeiro evento. Um resultado negativo não exclui a doença — o rendimento diagnóstico varia por síndrome (mais alto na síndrome do QT longo típica, mais baixo na síndrome de Brugada, em que a maioria dos casos permanece sem variante identificada mesmo com fenótipo claro) — e por isso o diagnóstico clínico continua sendo a referência, não o teste genético isolado.",
+    "limitations": "Uma proporção relevante dos resultados é de significado incerto (VUS), que não deve ser usada para decisão clínica isolada nem para estratificar familiares — o documento recomenda cautela explícita nesse cenário. O aconselhamento genético pré e pós-teste é parte inseparável do processo, dado o impacto psicológico e em seguros/trabalho de um resultado positivo. Reclassificação de variantes ao longo do tempo, à medida que bancos de dados populacionais crescem, é um problema conhecido — um VUS de hoje pode ser reclassificado como patogênico ou benigno anos depois, exigindo reavaliação periódica.",
+    "source_refs": [
+      "Priori SG, Wilde AA, Horie M, Cho Y, Behr ER, Berul C, Blom N, Brugada J, Chiang CE, Huikuri H, Kannankeril P, Krahn A, Leenhardt A, Moss A, Schwartz PJ, Shimizu W, Tomaselli G, Tracy C. Executive summary: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):e85-108. DOI: 10.1016/j.hrthm.2013.07.021. PMID: 23916535."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste genético",
+      "canalopatia",
+      "síndrome do QT longo",
+      "síndrome de Brugada",
+      "CPVT",
+      "teste em cascata"
+    ]
+  },
+  {
+    "slug": "escore-de-calcio-coronariano-no-diabetico-tipo-2-assintomatico",
+    "name": "Escore de cálcio coronariano (CAC) no diabético tipo 2 assintomático",
+    "category": "imagem",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Quantidade de cálcio nas artérias coronárias por tomografia sem contraste, expressa em unidades Agatston — usada para refinar a estimativa de risco cardiovascular de escores clínicos (que já incluem diabetes como fator de risco), mas que sozinhos discriminam mal quem, dentro da população diabética, tem risco realmente alto de quem tem risco baixo apesar do diagnóstico.",
+    "reference_range": "Escore 0 (ausência de cálcio coronariano); 1-100 (leve); 101-300 (moderado); acima de 300 unidades Agatston (grave).",
+    "indications": "Diabético tipo 2 de 55-74 anos, sem diagnóstico prévio de doença arterial coronariana, com ao menos um fator de risco adicional, quando a decisão sobre intensidade de terapia preventiva (estatina de alta intensidade, aspirina) permanece incerta após aplicar um escore de risco clínico.",
+    "interpretation": "No estudo de coorte de Zafrir et al. (BMC Cardiovascular Disorders, 2021; 735 diabéticos tipo 2 sem DAC conhecida, seguidos por 10 anos), o CAC previu eventos cardiovasculares maiores (infarto, AVC ou morte cardiovascular) de forma independente dos escores clínicos Pooled Cohort Equations e MESA, da hemoglobina glicada e de outras variáveis basais: razão de risco de 2,92 (IC 95% 1,06-7,86) para CAC 1-100, 6,53 (IC 95% 2,47-17,29) para CAC 101-300 e 8,3 (IC 95% 3,28-21) para CAC acima de 300, todos comparados a CAC zero. Adicionar o CAC ao Pooled Cohort Equations melhorou a discriminação do modelo (área sob a curva ROC de 0,615 para 0,696; p=0,0024).",
+    "limitations": "Cálcio coronariano ausente (CAC=0) não é sinônimo de ausência de placa — pode haver placa não calcificada, sobretudo em diabético mais jovem — mas no próprio estudo esteve associado a taxa de eventos muito baixa mesmo entre os classificados como alto risco pelos escores clínicos, o que sustenta seu uso para reclassificar risco para baixo, não só para cima. O estudo é observacional, de centro único, e não testa se mudar a conduta com base no CAC reduz desfechos (ausência de ensaio randomizado de estratégia). Exposição à radiação (ainda que baixa) e custo não desprezível também limitam o uso rotineiro e não seletivo.",
+    "source_refs": [
+      "Zafrir B, Saliba W, Widder RSL, Khoury R, Shemesh E, Halon DA. Value of addition of coronary artery calcium to risk scores in the prediction of major cardiovascular events in patients with type 2 diabetes. BMC Cardiovasc Disord. 2021;21(1):541. DOI: 10.1186/s12872-021-02352-4. PMID: 34773970."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "escore de cálcio coronariano",
+      "diabetes tipo 2",
+      "reclassificação de risco",
+      "prevenção cardiovascular",
+      "Agatston"
+    ]
+  },
+  {
+    "slug": "monitorizacao-continua-de-glicose-cgm-e-tempo-no-alvo-time-in-range",
+    "name": "Monitorização contínua de glicose (CGM) e tempo no alvo (time in range) — metas do consenso internacional ATTD 2019",
+    "category": "metodo_grafico",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Glicemia intersticial medida em intervalos frequentes (a cada 1-15 minutos, dependendo do sensor) ao longo de dias a semanas, gerando um perfil glicêmico contínuo — em vez do retrato pontual da glicemia capilar ou da média de três meses da HbA1c. As métricas centrais são o tempo no alvo (time in range, TIR), o tempo abaixo do alvo (hipoglicemia) e o coeficiente de variação, que estima a variabilidade glicêmica.",
+    "reference_range": "Para a maioria dos adultos com diabetes tipo 1 ou tipo 2 (fora da gestação), o consenso internacional ATTD 2019 recomenda como meta: tempo no alvo (70-180 mg/dL) acima de 70% do dia; tempo abaixo de 70 mg/dL menor que 4%; tempo abaixo de 54 mg/dL menor que 1%; tempo acima de 180 mg/dL menor que 25%; coeficiente de variação de 36% ou menos. Metas são mais permissivas para idosos/alto risco e mais rígidas na gestação.",
+    "indications": "Diabético tipo 1 em qualquer momento do seguimento; diabético tipo 2 em uso de insulina ou com hipoglicemias frequentes/despercebidas; ajuste terapêutico quando a HbA1c isolada não explica os sintomas relatados (por exemplo, HbA1c na meta mas hipoglicemias assintomáticas frequentes, ou HbA1c elevada com grande variabilidade mascarada pela média).",
+    "interpretation": "O tempo no alvo (TIR) acima de 70% corresponde, em correlação populacional citada pelo consenso, a uma HbA1c aproximada de 7% (53 mmol/mol) — cada 10% de variação no TIR equivale a cerca de 0,5 pontos percentuais de HbA1c. O documento recomenda que a variabilidade glicêmica (coeficiente de variação) seja considerada estável quando ≤36%, sinalizando risco maior de hipoglicemia quando acima desse valor mesmo com HbA1c controlada. O relatório padronizado (Ambulatory Glucose Profile, AGP) organiza essas métricas de forma visual, permitindo revisão rápida do padrão de 24 horas.",
+    "limitations": "As metas de TIR foram estabelecidas por consenso de especialistas com base em correlação com HbA1c e desfechos de curto prazo (hipoglicemia, variabilidade) — o documento reconhece que estudos prospectivos correlacionando TIR diretamente a desfechos cardiovasculares de longo prazo ainda eram limitados na época da publicação. A acurácia do sensor varia por dispositivo e piora nos extremos glicêmicos e com uso de certas medicações (altas doses de vitamina C, por exemplo, interferem em alguns sensores mais antigos). Custo e acesso ao dispositivo continuam sendo barreira relevante para uso rotineiro fora de sistemas de saúde que cobrem o insumo.",
+    "source_refs": [
+      "Battelino T, Danne T, Bergenstal RM, Amiel SA, Beck R, Biester T, Bosi E, Buckingham BA, Cefalu WT, Close KL, Cobelli C, Dassau E, DeVries JH, Donaghue KC, Dovc K, Doyle FJ 3rd, Garg S, Grunberger G, Heller S, Heinemann L, Hirsch IB, Hovorka R, Jia W, Kordonouri O, Kovatchev B, Kowalski A, Laffel L, Levine B, Mayorov A, Mathieu C, Murphy HR, Nimri R, Nørgaard K, Parkin CG, Renard E, Rodbard D, Saboo B, Schatz D, Stoner K, Urakami T, Weinzimer SA, Phillip M. Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range. Diabetes Care. 2019;42(8):1593-1603. DOI: 10.2337/dci19-0028. PMID: 31177185."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "monitorização contínua de glicose",
+      "CGM",
+      "time in range",
+      "variabilidade glicêmica",
+      "diabetes"
+    ]
+  },
+  {
+    "slug": "ressonancia-magnetica-em-portador-de-marca-passo-ou-cdi-nao-condicional-seguranca-pos-magnasafe",
+    "name": "Ressonância magnética em portador de marca-passo ou CDI não condicional — segurança pós-MagnaSafe e protocolo",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Não um exame novo, mas a decisão e o protocolo de segurança para realizar ressonância magnética em paciente com dispositivo cardíaco eletrônico implantável (marca-passo ou CDI) que não é rotulado 'condicional para RM' pelo fabricante — cenário antes considerado contraindicação absoluta.",
+    "reference_range": "Não se aplica valor de referência; o desfecho monitorado é a ocorrência de evento adverso relacionado ao dispositivo durante ou após o exame (reset do gerador, mudança de limiar de captura, de impedância ou de sensibilidade, ativação de terapia inadequada).",
+    "indications": "Paciente com marca-passo ou CDI não condicional que tem indicação clínica forte de ressonância magnética não substituível por outro método de imagem — cenário que se tornou mais comum à medida que a RM passou a ser exame de escolha em mais contextos neurológicos e musculoesqueléticos.",
+    "interpretation": "O estudo de Mason et al. (Journal of Cardiovascular Electrophysiology, 2017), que avaliou prospectivamente 178 pacientes consecutivos com dispositivos condicionais e não condicionais submetidos a RM (incluindo exames torácicos, que o MagnaSafe original não havia incluído em grande número), confirma e estende a conclusão do próprio MagnaSafe: com protocolo de segurança padronizado — reprogramação do dispositivo antes do exame, monitorização contínua durante a aquisição e reavaliação dos parâmetros depois — a RM não condicional em campo de 1,5 Tesla não esteve associada a evento clinicamente significativo na amostra estudada. O protocolo típico inclui desligar a função de resposta em frequência, programar modo assíncrono em paciente dependente de marca-passo, e reprogramar CDI para suspender detecção de taquiarritmia durante o exame.",
+    "limitations": "'Segurança' aqui depende inteiramente da adesão ao protocolo — não é RM sem cuidado nenhum. Dispositivos com eletrodos abandonados, fraturados ou muito antigos, e exames em campo de 3 Tesla, permanecem com dados de segurança mais limitados e maior cautela institucional. A decisão exige presença de equipe treinada (eletrofisiologia ou cardiologia) disponível antes e depois do exame para reprogramação, o que nem toda instituição tem estruturado — sendo essa, na prática, a principal barreira operacional, não a segurança do exame em si.",
+    "source_refs": [
+      "Mason PW, Osborn JS, Dhar S, Cain ME, Segerson N, Mueller ME, Woods CE, Doetkott D, Meng X, Padanilam BJ, Prystowsky EN. Real world MRI experience with nonconditional and conditional cardiac rhythm devices after MagnaSafe. J Cardiovasc Electrophysiol. 2017;28(12):1468-1474. DOI: 10.1111/jce.13351. PMID: 28960745."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância magnética",
+      "marca-passo",
+      "cardiodesfibrilador implantável",
+      "MagnaSafe",
+      "dispositivo condicional"
+    ]
+  },
+  {
+    "slug": "otimizacao-ecocardiografica-do-atraso-atrioventricular-na-terapia-de-ressincronizacao-cardiaca",
+    "name": "Otimização ecocardiográfica do atraso atrioventricular na terapia de ressincronização cardíaca",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Ajuste do intervalo entre a estimulação atrial e ventricular (atraso AV) do ressincronizador, guiado por ecocardiograma Doppler do influxo mitral, buscando o intervalo que maximiza o tempo de enchimento diastólico e o débito cardíaco — em contraste com o valor nominal fixo (geralmente 120 ms) programado por padrão no implante.",
+    "reference_range": "Não há um valor de atraso AV universal — o alvo é individualizado por paciente, tipicamente entre 100-160 ms, definido pelo padrão de fusão da onda E e A no Doppler mitral que evita truncamento da onda A.",
+    "indications": "Pacientes com terapia de ressincronização cardíaca (TRC) e resposta clínica ou ecocardiográfica insuficiente ao ajuste nominal, sobretudo aqueles com maior atraso elétrico interventricular basal — subgrupo em que a otimização tem maior chance de agregar benefício, segundo a evidência mais recente.",
+    "interpretation": "No sub-estudo do ensaio SMART-AV (Gold et al., Circulation: Arrhythmia and Electrophysiology, 2018; 275 pacientes), o atraso interventricular elétrico basal (tempo entre os eletrogramas de ventrículo direito e esquerdo, RV-LV) modificou o efeito da otimização do atraso AV sobre o remodelamento reverso: no quartil de maior atraso interventricular, a otimização guiada por eletrograma (comparada ao atraso AV nominal fixo de 120 ms) associou-se a 4,26 vezes mais chance de resposta ao remodelamento (redução maior que 15% do volume sistólico final do VE em 6 meses; p=0,010). Em pacientes com atraso interventricular curto, a otimização não mostrou o mesmo benefício — sugerindo que otimização de rotina, sem seleção pelo atraso elétrico basal, dilui o efeito em estudos de população geral (o SMART-AV original, sem essa estratificação, não havia mostrado benefício de otimização de rotina).",
+    "limitations": "É um subgrupo de análise post hoc de um ensaio cujo desfecho primário (na população não estratificada) foi neutro — a estratificação por atraso interventricular precisa de confirmação prospectiva dedicada antes de mudar prática de forma ampla. A otimização ecocardiográfica também consome tempo de exame e depende de operador treinado, o que limita sua aplicação rotineira em todo implante de TRC, mesmo quando teoricamente indicada.",
+    "source_refs": [
+      "Gold MR, Yu Y, Singh JP, Birgersdotter-Green U, Stein KM, Wold N, Meyer TE, Ellenbogen KA. Effect of Interventricular Electrical Delay on Atrioventricular Optimization for Cardiac Resynchronization Therapy. Circ Arrhythm Electrophysiol. 2018;11(8):e006055. DOI: 10.1161/CIRCEP.117.006055. PMID: 30354310."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "terapia de ressincronização cardíaca",
+      "otimização do atraso AV",
+      "ecocardiograma Doppler",
+      "SMART-AV",
+      "remodelamento reverso"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-na-quantificacao-da-massa-e-hipertrofia-ventricular-esquerda-criterios-ase-eacvi",
+    "name": "Ecocardiograma na quantificação da massa e hipertrofia ventricular esquerda — critérios ASE/EACVI",
+    "category": "imagem",
+    "theme": "Hipertensão",
+    "what_it_measures": "Massa do ventrículo esquerdo, calculada a partir das medidas lineares (septo, parede posterior, diâmetro diastólico) pela fórmula de Devereux ou, preferencialmente, por volumetria tridimensional — o marcador ecocardiográfico central de lesão de órgão-alvo pela hipertensão arterial crônica, distinto do critério de voltagem do ECG (mais barato, porém menos sensível).",
+    "reference_range": "Índice de massa do VE (indexado pela superfície corporal): hipertrofia em mulheres acima de 95 g/m² e em homens acima de 115 g/m², segundo as recomendações atualizadas da American Society of Echocardiography (ASE) em conjunto com a European Association of Cardiovascular Imaging (EACVI).",
+    "indications": "Paciente hipertenso, sobretudo com hipertensão de longa data ou resistente, para avaliar lesão de órgão-alvo cardíaca — informação que participa da estratificação de risco cardiovascular global e pode justificar intensificação terapêutica mesmo em pressão arterial limítrofe.",
+    "interpretation": "O documento de recomendações ASE/EACVI de 2015 (atualização das diretrizes de quantificação de câmaras cardíacas) estabelece os valores normais de massa e índice de massa do VE com base em bancos de dados multicêntricos maiores que os das versões anteriores, além de introduzir a possibilidade de quantificação por ecocardiografia tridimensional quando disponível — método mais reprodutível que a estimativa linear, por não depender de assumir geometria elipsoide do ventrículo. O padrão geométrico (hipertrofia concêntrica versus excêntrica, ou remodelamento concêntrico sem hipertrofia) é definido cruzando o índice de massa com a espessura relativa da parede, e tem valor prognóstico distinto — hipertrofia concêntrica carrega o pior prognóstico entre os padrões.",
+    "limitations": "A fórmula de Devereux (a mais usada na prática, por medidas em modo M ou 2D) assume geometria ventricular regular, que nem sempre corresponde à realidade em ventrículos muito dilatados ou muito hipertrofiados assimetricamente — daí a preferência crescente por volumetria 3D quando disponível. Qualidade de janela acústica limita a reprodutibilidade em obesos e pneumopatas. O documento é uma atualização de recomendações técnicas de quantificação, não uma diretriz de manejo da hipertensão propriamente dita.",
+    "source_refs": [
+      "Lang RM, Badano LP, Mor-Avi V, Afilalo J, Armstrong A, Ernande L, Flachskampf FA, Foster E, Goldstein SA, Kuznetsova T, Lancellotti P, Muraru D, Picard MH, Rietzschel ER, Rudski L, Spencer KT, Tsang W, Voigt JU. Recommendations for cardiac chamber quantification by echocardiography in adults: an update from the American Society of Echocardiography and the European Association of Cardiovascular Imaging. Eur Heart J Cardiovasc Imaging. 2015;16(3):233-70. DOI: 10.1093/ehjci/jev014. PMID: 25712077."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "hipertrofia ventricular esquerda",
+      "massa do VE",
+      "hipertensão arterial",
+      "lesão de órgão-alvo"
+    ]
+  },
+  {
+    "slug": "angiotomografia-de-arterias-renais-no-diagnostico-de-estenose-de-arteria-renal",
+    "name": "Angiotomografia de artérias renais no diagnóstico de estenose de artéria renal como causa de hipertensão secundária",
+    "category": "imagem",
+    "theme": "Hipertensão",
+    "what_it_measures": "Anatomia luminal das artérias renais por tomografia com contraste iodado, buscando estreitamento (aterosclerótico ou, mais raramente em jovens, por displasia fibromuscular) causador de hipertensão renovascular — mecanismo mediado por ativação do sistema renina-angiotensina-aldosterona no rim hipoperfundido.",
+    "reference_range": "Não se aplica valor numérico de referência — o achado é qualitativo/estrutural (percentual de estenose luminal, tipicamente considerado hemodinamicamente significativo acima de 60-70%).",
+    "indications": "Hipertensão de início antes dos 30 ou depois dos 55 anos sem outra causa aparente, hipertensão resistente a três ou mais classes de anti-hipertensivo, piora súbita da função renal após início de IECA/BRA, assimetria de tamanho renal, ou sopro abdominal à ausculta — no contexto de investigação de hipertensão secundária.",
+    "interpretation": "Na metanálise de Vasbinder et al. (Annals of Internal Medicine, 2001), que comparou angiotomografia, angiorressonância com gadolínio, ultrassonografia Doppler, cintilografia renal com captopril e teste do captopril contra o padrão-ouro (angiografia por cateter), a angiotomografia e a angiorressonância 3D com gadolínio tiveram desempenho significativamente melhor que os demais métodos nas curvas ROC sumárias — sendo, segundo os autores, os métodos preferíveis para investigação de hipertensão renovascular quando a suspeita clínica é consistente.",
+    "limitations": "A metanálise é de 2001 e usa como padrão-ouro a angiografia por cateter invasiva — cenário de comparação que mudou desde então com a evolução tecnológica de ambos os métodos (mais fileiras de detectores na tomografia, sequências mais rápidas na ressonância). Contraste iodado exige atenção à função renal (o próprio motivo da investigação pode already ser insuficiência renal) e a angiotomografia expõe a radiação ionizante, o que pesa na escolha frente à angiorressonância em pacientes jovens ou com função renal limítrofe. Estenose angiograficamente significativa não implica necessariamente que a revascularização traga benefício clínico — decisão que depende de outros fatores, avaliados fora do escopo deste exame.",
+    "source_refs": [
+      "Vasbinder GB, Nelemans PJ, Kessels AG, Kroon AA, de Leeuw PW, van Engelshoven JM. Diagnostic tests for renal artery stenosis in patients suspected of having renovascular hypertension: a meta-analysis. Ann Intern Med. 2001;135(6):401-11. DOI: 10.7326/0003-4819-135-6-200109180-00009. PMID: 11560453."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "angiotomografia",
+      "estenose de artéria renal",
+      "hipertensão secundária",
+      "hipertensão renovascular",
+      "displasia fibromuscular"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-na-avaliacao-de-disfuncao-de-ventriculo-direito-e-estratificacao-de-risco-do-tep",
+    "name": "Ecocardiograma na avaliação de disfunção de ventrículo direito e estratificação de risco do TEP agudo normotenso",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Sinais ecocardiográficos de sobrecarga aguda de pressão sobre o ventrículo direito — dilatação de VD, disfunção sistólica (TAPSE reduzido), septo interventricular achatado ou paradoxal, e velocidade de regurgitação tricúspide elevada — no paciente com TEP confirmado e pressão arterial normal, para decidir se o risco é intermediário-alto ou intermediário-baixo dentro do grupo normotenso.",
+    "reference_range": "Não há um único corte universal; entre os achados mais usados: TAPSE menor que 16 mm e razão do diâmetro basal VD/VE maior que 1,0 são comumente considerados marcadores de disfunção de VD nesse contexto.",
+    "indications": "Todo paciente com TEP agudo confirmado e pressão arterial normal (sem choque), como parte da estratificação de risco que combina achado clínico (escore PESI/sPESI), disfunção de VD (por imagem) e biomarcador (troponina, peptídeo natriurético) — os chamados três pilares do modelo de estratificação da diretriz europeia.",
+    "interpretation": "Segundo as diretrizes ESC 2019 para diagnóstico e manejo do TEP agudo (Konstantinides et al., European Heart Journal, 2020), o paciente normotenso com TEP confirmado é classificado como risco intermediário-alto quando tem disfunção de VD por imagem (ecocardiograma ou angiotomografia) associada a biomarcador cardíaco elevado — combinação que justifica monitorização mais próxima, mesmo sem indicação de trombólise de rotina, pelo risco de descompensação hemodinâmica precoce. Paciente normotenso sem disfunção de VD ou sem biomarcador elevado (ou com apenas um dos dois) é classificado como risco intermediário-baixo, elegível a alta mais precoce em protocolo selecionado.",
+    "limitations": "A avaliação ecocardiográfica da função de VD tem maior variabilidade interobservador que a de VE, pela geometria complexa da câmara; a angiotomografia (já realizada no diagnóstico, na maioria dos casos) pode fornecer informação equivalente sobre razão VD/VE sem exame adicional, o que faz o ecocardiograma acrescentar valor sobretudo quando a angiotomografia não é conclusiva quanto à sobrecarga de VD ou quando se deseja avaliação funcional mais detalhada (TAPSE, strain). Nenhum achado isolado de disfunção de VD, sem o biomarcador associado, muda a conduta padrão do TEP normotenso segundo o modelo de três pilares da diretriz.",
+    "source_refs": [
+      "Konstantinides SV, Meyer G, Becattini C, Bueno H, Geersing GJ, Harjola VP, Huisman MV, Humbert M, Jennings CS, Jiménez D, Kucher N, Lang IM, Lankeit M, Lorusso R, Mazzolai L, Meneveau N, Ní Áinle F, Prandoni P, Pruszczyk P, Righini M, Torbicki A, Van Belle E, Zamorano JL; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "disfunção de ventrículo direito",
+      "tromboembolismo pulmonar",
+      "estratificação de risco",
+      "TAPSE"
+    ]
+  },
+  {
+    "slug": "ca-125-antigeno-carboidrato-125-como-marcador-seriado-de-congestao-na-insuficiencia-cardiaca-aguda",
+    "name": "CA-125 (antígeno carboidrato 125) como marcador seriado de congestão na insuficiência cardíaca aguda",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Glicoproteína classicamente usada como marcador tumoral ovariano, mas que também é expressa por células mesoteliais em resposta ao estiramento mecânico causado por congestão sistêmica (derrame pleural, ascite, edema de serosas) — funcionando, na insuficiência cardíaca, como marcador indireto de sobrecarga de volume, com cinética diferente da dos peptídeos natriuréticos.",
+    "reference_range": "Corte de normalidade laboratorial convencional de 35 U/mL, usado nos estudos de insuficiência cardíaca como ponto de corte para estratificar risco (CA-125 acima de 35 U/mL identifica subgrupo de maior risco).",
+    "indications": "Acompanhamento seriado do paciente internado por insuficiência cardíaca aguda descompensada, como complemento aos peptídeos natriuréticos na avaliação de congestão residual antes da alta e no período de transição pós-alta.",
+    "interpretation": "No estudo de coorte de de la Espriella et al. (Revista Española de Cardiología, 2026; 3.980 pacientes consecutivos com IC aguda, 6.975 medidas seriadas de CA-125 ao longo de 6 meses pós-alta), o CA-125 mostrou trajetória bifásica característica — pico por volta do 10º dia pós-alta, queda acentuada no primeiro mês, redução gradual depois — e cada aumento de uma unidade logarítmica de CA-125 associou-se a 27% mais risco de reinternação recorrente por IC (HR 1,27; IC 95% 1,17-1,37; p<0,001) de forma constante ao longo do tempo, e a risco de mortalidade mais forte nos primeiros 60 dias (HR ~1,70) do que depois. Em outro estudo do mesmo grupo (Santas et al., Biomolecules, 2025; 4.043 pacientes), o CA-125 modulou o valor prognóstico da proteína C-reativa de alta sensibilidade: a PCR-as só se associou a maior risco de eventos quando o CA-125 estava acima de 35 U/mL, sugerindo que a combinação dos dois marcadores capta uma interação entre inflamação e congestão que nenhum dos dois isoladamente capta por completo.",
+    "limitations": "CA-125 não é específico de insuficiência cardíaca — está classicamente elevado em doença ovariana, mas também em qualquer condição com efusão serosa (ascite cirrótica, derrame pleural neoplásico, peritonite), o que exige interpretação no contexto clínico e não como teste isolado de rastreio de câncer nessa população. Os dados citados vêm de coortes de centro único na Espanha, com replicação externa ainda limitada em outras populações; o uso do CA-125 seriado para guiar decisão terapêutica ativa (por exemplo, intensificar diurético) ainda não tem ensaio randomizado dedicado publicado que confirme benefício da estratégia guiada pelo marcador.",
+    "source_refs": [
+      "de la Espriella R, Santas E, Miñana G, Lorenzo M, Núñez G, Mollar A, Rodríguez E, Bayés-Genís A, Fudim M, Petrie MC, Docherty KF, Bodí V, Sanchis J, Núñez E, Núñez J. Carbohydrate antigen 125 trajectories during the transitional phase predict short-term outcomes after admission for acute heart failure. Rev Esp Cardiol (Engl Ed). 2026. DOI: 10.1016/j.rec.2026.05.003. PMID: 42235631.",
+      "Santas E, Martí-Martínez A, Revuelta-López E, Villar S, de la Espriella R, Palau P, Llàcer P, Miñana G, Rodriguez-Borja E, Carratalá A, Gonzalez A, Bayés-Genís A, Sanchis J, Núñez J. Modulating Effect of Carbohydrate Antigen 125 on the Prognostic Value of High-Sensitivity C-Reactive Protein in Heart Failure. Biomolecules. 2025;15(9):1260. DOI: 10.3390/biom15091260. PMID: 41008566."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "CA-125",
+      "insuficiência cardíaca",
+      "congestão",
+      "biomarcador",
+      "reinternação"
+    ]
+  },
+  {
+    "slug": "gap-de-co2-veno-arterial-como-alvo-adicional-de-ressuscitacao-no-choque-septico",
+    "name": "Gap de CO2 veno-arterial (P(cv-a)CO2) como alvo adicional de ressuscitação no choque séptico",
+    "category": "laboratorial",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Diferença entre a pressão parcial de CO2 no sangue venoso central (colhido pelo cateter venoso central) e no sangue arterial — reflete indiretamente o débito cardíaco: quando o fluxo sanguíneo cai, o CO2 produzido pelos tecidos se acumula no sangue venoso por menor clareamento, alargando o gap, mesmo que a oxigenação tecidual (ScvO2) já pareça satisfatória.",
+    "reference_range": "Corte de 6 mmHg, usado no estudo original para separar pacientes em 'gap baixo' e 'gap alto' após a meta de ScvO2 já ter sido atingida.",
+    "indications": "Paciente em choque séptico já ressuscitado até a meta de ScvO2 acima de 70%, quando permanece dúvida se a ressuscitação hemodinâmica está de fato completa — o cenário específico em que o gap de CO2 agrega informação que a ScvO2 isolada não captura.",
+    "interpretation": "No estudo prospectivo de Vallée et al. (Intensive Care Medicine, 2008; 50 pacientes em choque séptico com ScvO2 já acima de 70% ao entrarem na UTI), os pacientes com gap de CO2 baixo (≤6 mmHg, n=26) tinham índice cardíaco significativamente maior que os de gap alto (>6 mmHg, n=24): 4,3±1,6 vs. 2,7±0,8 L/min/m² (p<0,0001), apesar de a ScvO2 não diferir de forma significativa entre os grupos (78±5% vs. 75±5%; p=0,07). Ao longo de 12 horas de seguimento, o grupo de gap baixo teve maior clareamento de lactato e maior queda do escore SOFA em 24 horas. Em todos os pontos de medida, índice cardíaco e gap de CO2 se correlacionaram inversamente (p<0,0001) — ou seja, gap alto sinalizou débito cardíaco baixo mesmo quando a meta de ScvO2 já parecia cumprida.",
+    "limitations": "Estudo de centro único, amostra pequena (50 pacientes), e o corte de 6 mmHg não é universalmente validado em todas as populações de choque — outros estudos usam limiares ligeiramente diferentes. O gap de CO2 depende tanto do débito cardíaco quanto da produção tecidual de CO2 (que pode estar alterada por outras causas, como hipertermia ou hipermetabolismo), então não deve ser interpretado como medida pura e exclusiva de fluxo. É um alvo complementar à ScvO2 e ao lactato, não um substituto isolado para guiar toda a estratégia de ressuscitação.",
+    "source_refs": [
+      "Vallée F, Vallet B, Mathe O, Parraguette J, Mari A, Silva S, Samii K, Fourcade O, Genestal M. Central venous-to-arterial carbon dioxide difference: an additional target for goal-directed therapy in septic shock? Intensive Care Med. 2008;34(12):2218-25. DOI: 10.1007/s00134-008-1199-0. PMID: 18607565."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "gap de CO2",
+      "choque séptico",
+      "ressuscitação hemodinâmica",
+      "débito cardíaco",
+      "ScvO2"
+    ]
+  },
+  {
+    "slug": "pet-ct-com-fdg-na-miocardite-por-inibidor-de-checkpoint-imunologico",
+    "name": "PET-CT com FDG na miocardite por inibidor de checkpoint imunológico refratária ou com ressonância inconclusiva",
+    "category": "imagem",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Captação miocárdica de 18F-fluordesoxiglicose (FDG), marcador de atividade metabólica de células inflamatórias (monócitos, linfócitos), oferecendo informação complementar à ressonância cardíaca com mapeamento T1/T2 (que mostra edema e fibrose/necrose estrutural) na suspeita de miocardite por inibidor de checkpoint imunológico.",
+    "reference_range": "Não há corte de captação (SUV) universalmente validado para o diagnóstico de miocardite por checkpoint; a interpretação é qualitativa/semiquantitativa, comparando o padrão de captação miocárdica ao esperado após preparo dietético adequado (jejum de carboidrato prolongado, para suprimir a captação fisiológica do miocárdico normal).",
+    "indications": "Suspeita clínica de miocardite por inibidor de checkpoint imunológico quando a ressonância cardíaca é inconclusiva (não preenche os critérios de Lake Louise) ou quando o quadro permanece refratário a corticoide em dose alta apesar de ressonância inicialmente negativa ou discordante do quadro clínico.",
+    "interpretation": "No estudo de Tong et al. (Cardio-Oncology, 2024; 12 pacientes com suspeita de miocardite por checkpoint submetidos a ambos os exames), apenas 25% (3/12) preencheram os critérios de Lake Louise 2018 na ressonância, enquanto 33% (4/12) tiveram evidência de inflamação miocárdica pelo FDG-PET (SUV médio de 3,5±1,7 nos positivos). Houve concordância entre os dois métodos em 7 casos (1 positivo em ambos, 6 negativos em ambos) e discordância em 5 (2 positivos só na ressonância, 3 positivos só no PET) — os autores concluem que os exames fornecem informação complementar: a ressonância informa sobre edema miocárdico, o PET sobre atividade metabólica inflamatória (monocítica/linfocítica), e a combinação captura casos que um exame isolado deixaria passar.",
+    "limitations": "Amostra muito pequena (12 pacientes, estudo de centro único), sem padrão-ouro histológico (biópsia) na maioria dos casos para confirmar qual dos dois exames discordantes estava certo. O preparo dietético para suprimir a captação fisiológica do miocárdio normal é tecnicamente exigente e, quando malfeito, gera tanto falso-positivo quanto falso-negativo — limitação prática relevante para reprodutibilidade fora de centros com protocolo bem estabelecido. O PET com FDG não está disponível na maioria dos serviços de cardio-oncologia, o que restringe seu uso a centros de referência mesmo quando clinicamente indicado.",
+    "source_refs": [
+      "Tong J, Vogiatzakis N, Andres MS, Senechal I, Badr A, Ramalingam S, Rosen SD, Lyon AR, Nazir MS. Complementary use of cardiac magnetic resonance and 18F-FDG positron emission tomography imaging in suspected immune checkpoint inhibitor myocarditis. Cardiooncology. 2024;10(1):53. DOI: 10.1186/s40959-024-00250-0. PMID: 39175028."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "PET-CT",
+      "FDG",
+      "miocardite",
+      "inibidor de checkpoint imunológico",
+      "cardio-oncologia"
+    ]
+  },
+  {
+    "slug": "tempo-de-coagulacao-ativado-act-na-monitorizacao-periprocedural-da-heparina-nao-fracionada",
+    "name": "Tempo de coagulação ativado (ACT) na monitorização periprocedural da heparina não fracionada em intervenção coronária percutânea",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Tempo de coagulação do sangue total ativado por um agente de contato (celite ou caulim, conforme o sistema), medido à beira do leito na sala de hemodinâmica — usado para titular a dose de heparina não fracionada durante procedimento invasivo, quando o efeito precisa ser conhecido em minutos e não em horas (ao contrário do TTPa, mais lento e menos usado nesse cenário).",
+    "reference_range": "Segundo a diretriz ACCF/AHA/SCAI 2011 de intervenção coronária percutânea: alvo de ACT 250-300 segundos (sistema Hemotec) ou 300-350 segundos (sistema Hemochron) quando inibidor de glicoproteína IIb/IIIa não é usado; alvo mais baixo, 200-250 segundos, quando inibidor de IIb/IIIa está associado.",
+    "indications": "Todo paciente recebendo heparina não fracionada durante intervenção coronária percutânea, para confirmar anticoagulação adequada antes de avançar o procedimento e guiar doses adicionais de heparina se o ACT ficar abaixo do alvo.",
+    "interpretation": "A diretriz ACCF/AHA/SCAI 2011 recomenda dose inicial de heparina de 70-100 UI/kg (sem IIb/IIIa) ou 50-70 UI/kg (com IIb/IIIa), com ACT verificado após a dose inicial e complementado conforme necessário. Um estudo retrospectivo chinês de centro único (Li et al., 2015; 1.062 pacientes submetidos a ICP eletiva com heparina ajustada por peso segundo a mesma diretriz) mostrou, na prática real, que o alvo de ACT (300-350 segundos) foi atingido em apenas 17,2% dos pacientes (183/1.062) — a maioria ficou com ACT abaixo do alvo (598/1.062 com ACT <300s), e 74,2% desses receberam heparina adicional. Não houve diferença nas taxas de sangramento menor ou complicação isquêmica entre os grupos de ACT nesse estudo, mas os autores reforçam a recomendação da diretriz de monitorizar o ACT rotineiramente, já que a dose ajustada por peso isoladamente não garante o alvo de anticoagulação na maioria dos pacientes.",
+    "limitations": "O ACT não mede diretamente o nível sérico de heparina, e sim seu efeito funcional sobre a cascata de coagulação — pode ser afetado por hipotermia, hemodiluição, trombocitopenia e outras variáveis do procedimento, gerando resultado que não reflete só a dose de heparina administrada. Os dois sistemas de medição (Hemotec e Hemochron) não são intercambiáveis — o valor-alvo muda conforme o aparelho usado, e confundir os dois é fonte conhecida de erro de dose. O estudo chinês citado é retrospectivo, de centro único, e a ausência de diferença de desfecho entre os grupos de ACT pode refletir amostra insuficiente para detectar diferença, não ausência real de efeito.",
+    "source_refs": [
+      "Levine GN, Bates ER, Blankenship JC, Bailey SR, Bittl JA, Cercek B, Chambers CE, Ellis SG, Guyton RA, Hollenberg SM, Khot UN, Lange RA, Mauri L, Mehran R, Moussa ID, Mukherjee D, Nallamothu BK, Ting HH. 2011 ACCF/AHA/SCAI Guideline for Percutaneous Coronary Intervention: executive summary. Catheter Cardiovasc Interv. 2012;79(3):453-95. DOI: 10.1002/ccd.23438. PMID: 22328235.",
+      "Li JY, Liu ZY, Zhang SY, Shen ZJ, Fan ZJ, Zeng Y, Xie HZ, Wang CH, Jin XF, Fang Q, Zhu WL. [Activated clotting time post therapeutic anticoagulation with unfractionated heparin in patients undergoing elective percutaneous coronary intervention]. Zhonghua Xin Xue Guan Bing Za Zhi. 2015;43(5):408-12. PMID: 26419985."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tempo de coagulação ativado",
+      "ACT",
+      "heparina não fracionada",
+      "intervenção coronária percutânea",
+      "monitorização periprocedural"
+    ]
   }
 ]
