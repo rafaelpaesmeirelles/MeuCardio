@@ -7,6 +7,7 @@ type Etapa = {
   item_type: string;
   item_slug: string;
   por_que: string;
+  titulo: string | null;
   link: string;
   concluida: boolean;
   disponivel: boolean;
@@ -104,13 +105,18 @@ export default function Trilha() {
             </button>
             <div className="trilha__corpo">
               <span className="trilha__tipo">{TIPO[e.item_type] || e.item_type}</span>
+              {/* 07/08/2026: título vem de verdade do item referenciado (`titulo`,
+                  calculado no backend a partir da tabela certa por `item_type`).
+                  O `replace(/-/g, " ")` do slug fica só como último recurso, para
+                  etapa cujo item sumiu ou tem slug digitado errado — caso em que
+                  não há título nenhum para buscar. */}
               {e.disponivel ? (
                 <Link to={e.link} className="trilha__titulo">
-                  {e.item_slug.replace(/-/g, " ")}
+                  {e.titulo || e.item_slug.replace(/-/g, " ")}
                 </Link>
               ) : (
                 <span className="trilha__titulo trilha__titulo--off">
-                  {e.item_slug.replace(/-/g, " ")} <em>— em revisão, ainda não publicado</em>
+                  {e.titulo || e.item_slug.replace(/-/g, " ")} <em>— em revisão, ainda não publicado</em>
                 </span>
               )}
               {/* O "por quê" é o que a trilha acrescenta ao conteúdo que já existe.
