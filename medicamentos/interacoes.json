@@ -816,5 +816,17 @@
     "conduta": "Monitorar de perto o estado volêmico ao iniciar ou intensificar a associação, sobretudo em pacientes mais idosos ou com função renal reduzida. As fontes verificadas não sustentam um esquema universal de redução automática do diurético de alça; para qualquer ajuste posológico fixo, VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "fonte": "Wilcox CS, Shen W, Boulton DW, Leslie BR, Griffen SC. Interaction Between the Sodium-Glucose-Linked Transporter 2 Inhibitor Dapagliflozin and the Loop Diuretic Bumetanide in Normal Human Subjects. J Am Heart Assoc. 2018;7(4):e007046. PMID: 29440005. DOI: 10.1161/JAHA.117.007046; Lewellyan CM, Spoutz P, Schaefer M, Patterson ME. Risk of volume depletion events with concomitant use of sodium glucose co-transporter 2 inhibitors and loop diuretics: A self-controlled case series study. Pharmacoepidemiol Drug Saf. 2022;31(10):1102-1109. PMID: 35713292. DOI: 10.1002/pds.5496.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "sildenafila-nitrato-organico",
+    "farmacos": [
+      "sildenafila-citrato"
+    ],
+    "classe_oposta": "doador de óxido nítrico — nitrato ou nitrito orgânico em qualquer forma (ex.: nitroglicerina, mononitrato ou dinitrato de isossorbida)",
+    "gravidade": "contraindicada",
+    "efeito": "Potencialização marcada da vasodilatação pela via NO-GMPc, com queda pressórica potencialmente grave. Em dois ensaios randomizados cruzados em homens com angina estável, sildenafil 50 mg associado a mononitrato de isossorbida ou nitroglicerina produziu reduções pressóricas significativamente maiores do que nitrato mais placebo.",
+    "conduta": "Não coadministrar. A rotulagem regulatória contraindica nitratos ou nitritos orgânicos em qualquer forma durante o uso de sildenafila. A própria rotulagem consultada declara que não está estabelecido quando um nitrato pode ser administrado com segurança após sildenafil, inclusive aos 24 horas; portanto, para registrar uma janela fixa de washout nesta base, VERIFICAÇÃO HUMANA NECESSÁRIA.",
+    "fonte": "Webb DJ, Muirhead GJ, Wulff M, Sutton JA, Levi R, Dinsmore WW. Sildenafil citrate potentiates the hypotensive effects of nitric oxide donor drugs in male patients with stable angina. J Am Coll Cardiol. 2000;36(1):25-31. PMID: 10898408. DOI: 10.1016/S0735-1097(00)00705-1; rotulagem do VIAGRA (sildenafil citrate) aprovada pelo FDA, seções 4.1 e 7.1 — nitratos.",
+    "review_status": "revisado"
   }
 ]
