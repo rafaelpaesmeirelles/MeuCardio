@@ -156,14 +156,97 @@ ou consolida em um.
 **JSON**: `python3 -c "import json; json.load(open('estudos/metadados.json'))"` — **válido**,
 440 itens, 0 slugs duplicados, 4 PMIDs duplicados (ver acima).
 
+---
+
+## Rodada 2 — 07/08/2026 (mesmo dia, ciclo seguinte)
+
+`git pull` trouxe 2 commits de conteúdo novos desde a rodada 1 (mais um commit de código,
+`d2dd832`, fora do escopo).
+
+### Commit `cbc9b02` — evidências: +9 recomendações GRADE/clássicas da Diretriz Brasileira de HP 2026 (SBPT)
+
+**Conferido:**
+- DOI `10.36416/1806-3756/e20250528` — resolvido via **Crossref**: título e autoria batem
+  exatamente com o que o commit descreve (*"Brazilian guidelines for the pharmacological
+  treatment of pulmonary hypertension..."*, Sociedade Brasileira de Pneumologia e Tisiologia,
+  publicado 2026-06-10, container "Respiratory Research & Clinical Practice" — bate com a
+  abreviação "Respir Res Clin Pract" usada no commit). **DOI real e correto.**
+- A recomendação de troca para riociguate cita números de um ensaio específico (41% vs. 20%,
+  OR 2,78 [1,53-5,06], p=0,007; piora clínica 1% vs. 9%, OR 0,10 [0,01-0,73], p=0,0047).
+  Identifiquei a fonte desses números como o **ensaio REPLACE** (Hoeper MM et al., *Switching to
+  riociguat versus maintenance therapy with phosphodiesterase-5 inhibitors...*, Lancet Respir Med
+  2021;9(6), **PMID 33773120**) — não citado no `source_refs` do item (só a diretriz brasileira é
+  citada), mas os números batem com o ensaio original **exceto um**:
+
+**🚨 ERRO REAL ENCONTRADO — evidencias/metadados.json, item `hp-troca-para-riociguate-em-risco-intermediario`:**
+O texto do `statement` diz **"p=0,007"** para o desfecho primário (45/111 vs. 23/113, OR 2,78,
+IC95% 1,53-5,06). O abstract original do REPLACE (PMID 33773120) diz **"p=0·0007"** — uma ordem
+de grandeza menor (mais significativo, não menos). Conferido diretamente no `efetch` do PubMed:
+*"odds ratio [OR] 2·78 (95% CI 1·53-5·06; p=0·0007)"*. É erro de transcrição (um zero a menos),
+não muda a direção da conclusão (ainda é resultado estatisticamente muito significativo), mas é
+um número errado publicado como se fosse exato. O segundo número do mesmo item (piora clínica
+1% vs. 9%, OR 0,10, IC95% 0,01-0,73, p=0,0047) **bate exatamente** com o abstract.
+**Ação recomendada:** corrigir `p=0,007` para `p=0,0007` no `statement` do slug
+`hp-troca-para-riociguate-em-risco-intermediario` em `evidencias/metadados.json`.
+
+- Os demais 8 itens (terapia combinada inicial AMBITION, 3 recomendações negativas do grupo 2 —
+  sildenafila/bosentana/macitentana —, e as 4 de terapia tripla/oxigenoterapia em escala
+  Classe/Nível) não citam número duro de ensaio no `statement`, só classe/força e nível/qualidade
+  — não há valor numérico adicional para conferir contra fonte externa nesta rodada; a
+  classificação em si (Forte/Ponderado, Alta/Mod/Baixa/MtBx e Classe/Nível quando aplicável)
+  não foi conferida linha a linha contra o texto integral da diretriz (não localizei o texto
+  completo em acesso rápido nesta rodada — só o registro do DOI/Crossref).
+- JSON: `python3 -c "import json; json.load(open('evidencias/metadados.json'))"` — válido.
+
+### Commit `6d75f90` — trilhas: +10 novas (6 Cardiologia geriátrica, 4 Cardiologia pediátrica)
+
+**Conferido:** JSON válido (483 itens, 0 slugs duplicados). As 10 trilhas novas somam 36 etapas
+referenciando itens `documento`/`estudo`. Extraí a lista completa de slugs de `content/**/*.md`
+(via front matter) e de `estudos/metadados.json`, e cruzei contra os 36 `item_slug` das 10 trilhas
+novas: **0 referências quebradas** — todos os documentos e estudos citados existem no disco com o
+slug exato usado na trilha. Não verifiquei separadamente o conteúdo clínico de cada documento
+referenciado (seria reverificar dezenas de documentos já publicados por commits anteriores, fora
+do escopo desta rodada) — só a integridade referencial da trilha em si, que é o que este tipo de
+commit efetivamente adiciona (curadoria, não fato clínico novo).
+
+### Commits mais antigos, também conferidos nesta janela de trabalho (antes do fim da rodada 1)
+
+- **`b876fde` (galeria: +3 imagens — ECG hipercalemia, ECG HVE, US TVP)**: as 3 imagens foram
+  abertas e inspecionadas visualmente. As 3 URLs de origem no Wikimedia Commons (`Hyperkalemia_ECG.jpg`,
+  `E307_(CardioNetworks_ECGpedia).jpg`, `Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg`)
+  respondem 200 e **os metadados batem exatamente**: dimensões do arquivo de HVE (2015×1307)
+  conferem com `data-file-width`/`data-file-height` da página do Commons; tamanho em bytes do
+  arquivo de TVP (74.609 bytes) confere com o `contentSize` do JSON-LD da página; texto da licença
+  e atribuição (CC BY 4.0/Agbayani-Gonzales, CC BY-SA 3.0/Rosengarten, CC0/Häggström) conferem
+  com o texto da página de cada arquivo. O achado clínico descrito no `findings` de cada imagem é
+  consistente com o que se vê na imagem (ondas T apiculadas difusas; QRS de alta voltagem
+  precordial com padrão de strain; veia femoral superficial sem sinal de cor entre artéria
+  (vermelho) e veia femoral profunda (azul) com fluxo). **PASSA.**
+- **`d43468d` + `3b2084b` + `e499b1b` (evidências ESC 2021 prevenção CV — Saúde mental/tabagismo/
+  reabilitação, PMID 34458905)**: registro do PMID conferido no PubMed — título, revista,
+  volume/edição/páginas e DOI batem exatamente (`Eur Heart J. 2021;42(34):3227-3337`, DOI
+  `10.1093/eurheartj/ehab484`). O único número duro citado num desses itens — o ensaio **SUPRIM**
+  (redução de 41% no desfecho composto de DCVA, HR 0,59) — foi conferido contra o abstract
+  original (Gulliksson et al., PMID 21263103, Arch Intern Med 2011): **41% e HR 0,59 [IC95%
+  0,42-0,83] batem exatamente**. Não consegui acessar o texto integral da diretriz ESC 2021 (Oxford
+  Academic bloqueia por 403, sem PMC direto — limitação já registrada váras vezes no CLAUDE.md
+  deste projeto) para conferir linha a linha as demais 14 recomendações desses três commits contra
+  a tabela original; as classes/níveis citados (I-A para cessação de tabagismo, IIa-A para reposição
+  de nicotina/vareniclina/bupropiona, I-C/I-B/IIa-B para as de saúde mental) são plausíveis e
+  consistentes com o que é de conhecimento médico padrão dessa diretriz, mas **não foram
+  verificadas contra o texto primário nesta rodada** — registro como parcialmente verificado.
+
 ### Não verificado por falta de tempo nesta rodada
 - Conteúdo do texto integral do IDSA 2012 (item a item das recomendações graduadas) — só o
   registro bibliográfico foi conferido, não as recomendações contra o PDF primário (bloqueado
   para download automatizado).
 - Texto integral do AHA 2007 (17446442) contra a lista de 4 categorias — aceito por ora, dado que
   o próprio documento já sinaliza `VERIFICAÇÃO HUMANA NECESSÁRIA` para esse ponto específico.
-- Commits mais antigos da fila (`1597b71`, `b876fde`, `b88c0ae`, `d43468d`, `3b2084b`, `e499b1b`,
-  `051cc7a`, `97d639c`, `a7c275f`) e toda a frente de `casos-clinicos/`+`trilhas/`+`galeria/`+
-  `exames/` do segundo agente — ficam para a próxima rodada.
+- Texto integral da ESC 2021 de prevenção cardiovascular (34458905) contra as 15 recomendações dos
+  commits `d43468d`/`3b2084b`/`e499b1b` — só o PMID/registro e um número (SUPRIM) foram conferidos.
+- As 8 recomendações restantes de `cbc9b02` (HP 2026 SBPT) não tiveram a classificação
+  Forte/Ponderado ou Classe/Nível conferida contra o texto integral da diretriz.
+- Commit `051cc7a`, `97d639c`, `a7c275f`, `b88c0ae` (mais antigos) e toda a frente de
+  `casos-clinicos/`+`galeria/`+`exames/` do segundo agente — ficam para a próxima rodada.
 
 ---
