@@ -13862,5 +13862,205 @@
       "UK Prospective Diabetes Study (UKPDS) Group. Intensive blood-glucose control with sulphonylureas or insulin compared with conventional treatment and risk of complications in patients with type 2 diabetes (UKPDS 33). Lancet. 1998;352(9131):837-853. PMID: 9742976"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "opennotes-qual-foi-a-proporcao-de-pacientes-que-contatou-o-consultorio-por-possivel-erro",
+    "titulo": "OpenNotes: qual foi a proporção de pacientes que contatou o consultório por possível erro de documentação?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Um serviço de cardiologia está avaliando implantar acesso irrestrito do paciente às notas de evolução pelo portal eletrônico (modelo OpenNotes). A equipe questiona se isso vai gerar sobrecarga de contatos por parte de pacientes que discordarem do que está escrito.",
+    "pergunta": "No estudo multicêntrico de Bell et al. (2017, BMJ Quality & Safety), com 99 médicos e 4.592 pacientes que leram suas notas pelo portal, qual foi a proporção de pacientes que contatou o consultório por acreditar ter identificado uma imprecisão na documentação, e qual a taxa de satisfação com a resolução?",
+    "opcoes": [
+      "35% contataram o consultório, e apenas 40% ficaram satisfeitos com a resolução",
+      "7% contataram o consultório, e 85% ficaram satisfeitos com a forma como o consultório resolveu",
+      "Nenhum paciente contatou o consultório, pois todas as notas foram consideradas corretas",
+      "60% contataram o consultório, refletindo alta taxa de erro de documentação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de Bell et al. (BMJ Qual Saf, 2017, PMID 27193032), 7% dos pacientes que leram suas notas contataram o consultório por acreditar ter identificado uma imprecisão, e 85% desses pacientes ficaram satisfeitos com a forma como a questão foi resolvida. Além disso, 37% dos pacientes relataram se sentir melhor em relação ao médico depois de ler as notas, e 62% relataram se sentir igual — sustentando que a transparência do prontuário não é, na maioria dos casos, fonte de dano à relação médico-paciente, e o volume de contatos gerado é gerenciável.",
+    "source_refs": [
+      "Bell SK, Mejilla R, Anselmo M, et al. When doctors share visit notes with patients: a study of patient and doctor perceptions of documentation errors, safety opportunities and the patient-doctor relationship. BMJ Qual Saf. 2017;26(4):262-270. DOI: 10.1136/bmjqs-2015-004697. PMID: 27193032"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cuidado-diadico-na-insuficiencia-cardiaca-o-que-a-meta-regressao-de-yu-2024-identificou",
+    "titulo": "Cuidado diádico na insuficiência cardíaca: o que a meta-regressão de Yu et al. 2024 identificou?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Um programa de manejo de insuficiência cardíaca está desenhando uma intervenção que envolve tanto o paciente quanto o cuidador familiar principal, com o objetivo de melhorar adesão e reduzir reinternação. A equipe busca evidência sobre quais elementos do desenho da intervenção maximizam o efeito.",
+    "pergunta": "Segundo a revisão sistemática com metanálise e meta-regressão de Yu et al. (2024, International Journal of Nursing Studies), qual foi a principal contribuição da meta-regressão em relação a uma metanálise simples de efeito agregado das intervenções diádicas em insuficiência cardíaca?",
+    "opcoes": [
+      "Provou que intervenções diádicas não têm nenhum efeito sobre desfechos do cuidador",
+      "Identificou quais características específicas do desenho da intervenção (intensidade, duração, formato, envolvimento do cuidador) se associam a maior efeito, em vez de apenas confirmar um efeito genérico uniforme",
+      "Demonstrou que apenas intervenções presenciais têm qualquer efeito, sem exceção",
+      "Mostrou que o cuidado diádico só funciona quando o cuidador é profissional de saúde"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Yu et al. (Int J Nurs Stud, 2024, PMID 38901123) foram além de uma metanálise de efeito agregado: a meta-regressão permitiu identificar quais características específicas do desenho da intervenção diádica (por exemplo intensidade, duração, formato e grau de envolvimento ativo do cuidador) se associam a maior magnitude de efeito sobre desfechos do paciente e do cuidador, informando diretamente o desenho de programas futuros em vez de apenas confirmar que 'intervenções diádicas funcionam' de forma genérica e uniforme entre todos os desenhos testados.",
+    "source_refs": [
+      "Yu DSF, Li PWC, Yue SCS, et al. Effects of dyadic care interventions for heart failure on patients' and caregivers' outcomes: A systematic review, meta-analysis and meta-regression. Int J Nurs Stud. 2024;157:104829. DOI: 10.1016/j.ijnurstu.2024.104829. PMID: 38901123"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "canadian-syncope-risk-score-desempenho-na-validacao-externa-multicentrica-de-solbiati",
+    "titulo": "Canadian Syncope Risk Score: qual foi o desempenho na validação externa multicêntrica de Solbiati et al.?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Uma equipe de emergência quer saber se o Canadian Syncope Risk Score (CSRS), derivado no Canadá, mantém boa capacidade discriminativa quando aplicado fora da coorte original, e como ele se compara ao julgamento clínico isolado.",
+    "pergunta": "Na validação externa multicêntrica de Solbiati et al. (2021, Emergency Medicine Journal), com 345 pacientes da coorte SyMoNE, qual foi a área sob a curva ROC (AUC) do CSRS para prever eventos adversos graves em 30 dias, e como ela se comparou ao julgamento clínico isolado?",
+    "opcoes": [
+      "AUC de 0,50, equivalente ao acaso, inferior ao julgamento clínico",
+      "AUC de 0,75 (IC95% 0,68-0,81), superior à do julgamento clínico isolado (AUC 0,68)",
+      "AUC de 0,99, quase perfeita, tornando o julgamento clínico desnecessário",
+      "O estudo não conseguiu calcular AUC por dados insuficientes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Solbiati et al. (Emerg Med J, 2021, PMID 34039646) validaram externamente o CSRS numa coorte multicêntrica independente (SyMoNE, N=345), fora da coorte de derivação canadense original. O CSRS teve AUC de 0,75 (IC95% 0,68-0,81) para prever eventos adversos graves em 30 dias, superior à AUC de 0,68 do julgamento clínico isolado — confirmando boa capacidade discriminativa da regra também fora do contexto de derivação, e reforçando seu papel como apoio à decisão de alta versus observação na síncope de emergência.",
+    "source_refs": [
+      "Solbiati M, Casazza G, Dipaola F, et al. Multicentre external validation of the Canadian Syncope Risk Score to predict adverse events and comparison with clinical judgement. Emerg Med J. 2021;38(9):701-706. DOI: 10.1136/emermed-2020-210579. PMID: 34039646"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-na-hipertensao-nao-controlada-a-reducao-de-pas-de-consultorio-na-metanalise-de-sharp",
+    "titulo": "Denervação renal na hipertensão não controlada: qual foi a redução de PAS de consultório na metanálise de Sharp et al.?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Um paciente com hipertensão resistente a três classes de anti-hipertensivos em dose otimizada está sendo avaliado para denervação renal (RDN). O cardiologista quer citar a magnitude de efeito esperada com base na evidência agregada mais recente.",
+    "pergunta": "Segundo a revisão sistemática e metanálise de Sharp et al. (2024, Journal of Hypertension), com 25 ensaios clínicos randomizados de denervação renal, qual foi a diferença média estimada na pressão arterial sistólica (PAS) de consultório a favor da RDN versus controle?",
+    "opcoes": [
+      "Nenhuma diferença estatisticamente significativa foi encontrada em nenhum subgrupo",
+      "-8,5 mmHg (IC95% -13,5 a -3,6) na PAS de consultório, com reduções consistentes inclusive no subgrupo de hipertensão resistente",
+      "-30 mmHg, um efeito maior que qualquer classe farmacológica isolada",
+      "A redução só foi significativa na PAS de consultório, mas não na PAS ambulatorial de 24h"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Sharp et al. (J Hypertens, 2024, PMID 38634457) encontraram diferença média de -8,5 mmHg (IC95% -13,5 a -3,6) na PAS de consultório a favor da denervação renal versus controle (medicação e/ou sham), além de -3,6 mmHg na PAS ambulatorial de 24h e -3,9 mmHg na PAS ambulatorial diurna. As reduções foram estatisticamente consistentes com e sem uso concomitante de medicação, inclusive no subgrupo pré-especificado de hipertensão resistente a três ou mais fármacos — consolidando a RDN como opção terapêutica com efeito consistente e clinicamente relevante.",
+    "source_refs": [
+      "Sharp ASP, Sanderson A, Hansell N, et al. Renal denervation for uncontrolled hypertension: a systematic review and meta-analysis examining multiple subgroups. J Hypertens. 2024;42(7):1133-1144. DOI: 10.1097/HJH.0000000000003727. PMID: 38634457"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "inibidores-de-sglt2-e-hospitalizacao-por-ic-diferenca-entre-grupos-raciais-na-metanalise-de-kani",
+    "titulo": "Inibidores de SGLT2 e hospitalização por IC: qual diferença entre grupos raciais a metanálise de Kani et al. encontrou?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Uma discussão em equipe multidisciplinar levanta a questão de se o benefício cardiorrenal dos inibidores de SGLT2 é uniforme entre diferentes grupos raciais e regiões geográficas, com base nos grandes ensaios cardiovasculares já publicados.",
+    "pergunta": "Na metanálise de Kani et al. (2025, International Journal of Cardiology), com 14 ensaios clínicos randomizados (94.445 participantes), como se comparou a redução de hospitalização por insuficiência cardíaca (HHF) com SGLT2i em pacientes negros e asiáticos versus pacientes brancos?",
+    "opcoes": [
+      "O efeito foi idêntico em todos os grupos raciais, sem nenhuma diferença numérica",
+      "A redução de HHF foi numericamente mais pronunciada em pacientes negros (razão de HRs 0,64) e asiáticos (0,62) comparados a brancos, com efeito consistente entre regiões e mais pronunciado na Ásia",
+      "SGLT2i não reduziu HHF em nenhum grupo racial avaliado",
+      "O benefício foi exclusivo de pacientes brancos, sem sinal de efeito em outros grupos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Kani et al. (Int J Cardiol, 2025, PMID 39983878) encontraram eficácia geralmente consistente dos SGLT2i entre grupos raciais/étnicos, com redução de HHF numericamente mais pronunciada em pacientes negros (razão de hazard ratios 0,64; IC95% 0,44-0,94) e asiáticos (0,62; IC95% 0,38-1,01) comparados a brancos, e efeito mais pronunciado na Ásia (0,52; IC95% 0,33-0,81) que em outras regiões — reforçando a aplicabilidade ampla da classe, com sinal de benefício potencialmente maior em subgrupos específicos.",
+    "source_refs": [
+      "Kani R, Miyamoto Y, Saito T, et al. Racial and regional differences in efficacy of sodium-glucose cotransporter 2 inhibitors on cardiorenal outcomes: A systematic review and meta-analysis. Int J Cardiol. 2025;426:133079. DOI: 10.1016/j.ijcard.2025.133079. PMID: 39983878"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "protese-valvar-mecanica-na-gestacao-risco-de-trombose-valvar-no-registro-ropac-iii",
+    "titulo": "Prótese valvar mecânica na gestação: qual o risco de trombose valvar no registro ROPAC III?",
+    "tema": "Gravidez",
+    "nivel": "avançado",
+    "enunciado": "Uma mulher com prótese valvar mecânica em posição mitral deseja engravidar. A equipe de cardio-obstetrícia está revisando o registro mais atual sobre desfechos gestacionais e risco de trombose valvar nessa população para o aconselhamento pré-concepcional.",
+    "pergunta": "No registro ESC EORP ROPAC III (van der Zande et al., 2026, European Heart Journal), com 613 gestações em mulheres com prótese valvar (411 mecânica, 202 biológica), qual foi a taxa de trombose valvar e qual fator se associou especificamente a esse risco?",
+    "opcoes": [
+      "Trombose valvar ocorreu em 6% das mulheres, associada a prótese em posição mitral (odds ratio 3,3)",
+      "Trombose valvar não ocorreu em nenhuma paciente do registro",
+      "A trombose valvar foi exclusiva de próteses biológicas, nunca mecânicas",
+      "O risco de trombose foi idêntico entre posição mitral e aórtica, sem diferença estatística"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ROPAC III (van der Zande et al., Eur Heart J, 2026, PMID 40237423), trombose valvar ocorreu em 24 mulheres (6% da coorte), e a posição mitral da prótese foi identificada como preditor específico de trombose valvar (odds ratio 3,3; IC95% 1,9-8,0). O registro também mostrou gestação sem complicações com nativivo em 54% das mulheres com prótese mecânica versus 79% com prótese biológica (p<0,001), e complicações tromboembólicas/hemorrágicas mais frequentes com esquemas baseados em heparina de baixo peso molecular — informação central para o aconselhamento pré-concepcional dessa paciente.",
+    "source_refs": [
+      "van der Zande JA, Ramlakhan KP, Sliwa K, et al. Pregnancy with a prosthetic heart valve, thrombosis, and bleeding: the ESC EORP Registry of Pregnancy and Cardiac disease III. Eur Heart J. 2026;47(11):1318-1335. DOI: 10.1093/eurheartj/ehaf265. PMID: 40237423"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "expressao-de-pd-l1-na-biopsia-e-risco-de-evento-cardiotoxico-maior-na-miocardite-por-ici",
+    "titulo": "Expressão de PD-L1 na biópsia e risco de evento cardiotóxico maior na miocardite por inibidor de checkpoint",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Um paciente oncológico em uso de inibidor de checkpoint imunológico desenvolve miocardite confirmada por biópsia endomiocárdica. A equipe de cardio-oncologia quer usar um marcador tecidual para ajudar a estimar o risco de evento cardiotóxico maior nos próximos 30 dias.",
+    "pergunta": "No estudo de Imaoka et al. (2026, JACC: CardioOncology), com 20 casos de miocardite confirmada por biópsia associada a inibidor de checkpoint imunológico, qual foi o risco absoluto de evento cardiotóxico maior em 30 dias no grupo com expressão miocárdica de PD-L1 alta (≥8%) comparado ao grupo com PD-L1 baixa?",
+    "opcoes": [
+      "71,4% no grupo PD-L1 alto versus 7,7% no grupo PD-L1 baixo (p=0,007)",
+      "O risco foi idêntico entre os dois grupos, sem diferença estatística",
+      "5% no grupo PD-L1 alto versus 40% no grupo PD-L1 baixo, um achado paradoxal",
+      "PD-L1 não foi associado a nenhum desfecho clínico neste estudo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Imaoka et al. (JACC CardioOncol, 2026, PMID 42017567) encontraram risco absoluto de evento cardiotóxico maior em 30 dias de 71,4% (5 de 7 pacientes) no grupo com PD-L1 alto (≥8%) versus 7,7% (1 de 13) no grupo com PD-L1 baixo (p=0,007). O grupo PD-L1 alto também teve troponina de pico normalizada mais alta, QRS mais longo e maior infiltração de células T CD3+ e macrófagos CD68+ — sugerindo que a expressão de PD-L1 na biópsia endomiocárdica pode ajudar a identificar, entre pacientes com miocardite por ICI já confirmada, o subgrupo de maior risco.",
+    "source_refs": [
+      "Imaoka T, Sakashita S, Matsuoka S, et al. Myocardial Expression of PD-L1 as a Marker of Poor Prognosis in Immune Checkpoint Inhibitor-Associated Myocarditis. JACC CardioOncol. 2026;8(2):168-180. DOI: 10.1016/j.jaccao.2026.03.006. PMID: 42017567"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ferro-intravenoso-na-insuficiencia-cardiaca-aguda-reinternacao-e-mortalidade-na-metanalise-de-lopez",
+    "titulo": "Ferro intravenoso na insuficiência cardíaca aguda: reinternação e mortalidade na metanálise de Lopez et al.",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Um paciente é internado por insuficiência cardíaca aguda descompensada e apresenta deficiência de ferro na investigação laboratorial. A equipe assistente debate se repor ferro por via intravenosa durante a internação reduziria reinternação e mortalidade, com base na evidência mais recente específica do contexto agudo.",
+    "pergunta": "Segundo a metanálise de Lopez et al. (2025, Cureus), com 3 ensaios clínicos randomizados e 6 estudos observacionais (3.588 pacientes) sobre ferro intravenoso em insuficiência cardíaca AGUDA com deficiência de ferro, o que foi encontrado para os desfechos de reinternação e mortalidade por qualquer causa?",
+    "opcoes": [
+      "Redução estatisticamente significativa tanto de reinternação quanto de mortalidade, replicando exatamente o achado da IC crônica",
+      "Nenhuma diferença estatisticamente significativa em reinternação por IC, reinternação por qualquer causa ou mortalidade por qualquer causa, apesar de elevação significativa da hemoglobina",
+      "Aumento significativo de mortalidade com ferro intravenoso na fase aguda",
+      "O estudo não avaliou nenhum desfecho clínico, apenas hemoglobina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Lopez et al. (Cureus, 2025, PMID 40896039) não encontraram diferença estatisticamente significativa entre ferro IV e controle para reinternação por IC (RR 0,96), reinternação por qualquer causa (RR 1,03) ou mortalidade por qualquer causa (RR 1,00) em pacientes internados por IC AGUDA com deficiência de ferro — apesar de elevação significativa da hemoglobina (diferença média 0,80 g/dL; p=0,0003). Isso contrasta com o papel já bem estabelecido do ferro IV na IC CRÔNICA (classe IA, documentado nesta pasta via IRONMAN e AFFIRM-AHF), reforçando que a decisão de repor ferro na fase aguda não deve presumir automaticamente o mesmo benefício de desfecho clínico observado na IC crônica estável — os autores pedem ensaios randomizados maiores.",
+    "source_refs": [
+      "Lopez V, Chacón M, Arias MJ, et al. Intravenous Iron Therapy in Patients Admitted With Acute Heart Failure and Iron Deficiency: A Systematic Review and Meta-Analysis. Cureus. 2025;17(7):e88989. DOI: 10.7759/cureus.88989. PMID: 40896039"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tromboprofilaxia-estendida-com-doac-trade-off-entre-eficacia-e-sangramento-na-metanalise-de-bhalla",
+    "titulo": "Tromboprofilaxia estendida com DOAC: qual o trade-off entre eficácia e sangramento na metanálise de Bhalla et al.?",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Um paciente clínico hospitalizado, de alto risco para tromboembolismo venoso, recebe alta e a equipe considera estender a tromboprofilaxia com anticoagulante oral direto (DOAC) além do período de internação, com base na evidência agregada mais atual sobre eficácia e segurança dessa estratégia.",
+    "pergunta": "Na metanálise de Bhalla et al. (2020, The American Journal of Medicine), sobre tromboprofilaxia estendida pós-alta com DOAC versus placebo em pacientes clínicos hospitalizados, qual foi o achado em relação a eficácia (desfecho composto de TEV e mortalidade) e a segurança (sangramento maior)?",
+    "opcoes": [
+      "Redução do desfecho composto de eficácia (OR 0,79) às custas de sangramento maior quase dobrado (OR 1,92) no grupo DOAC",
+      "Nenhuma diferença de eficácia nem de segurança entre DOAC e placebo",
+      "DOAC reduziu eventos tromboembólicos sem qualquer aumento de sangramento",
+      "DOAC aumentou tanto eventos tromboembólicos quanto sangramento, sendo inferior ao placebo em tudo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Bhalla et al. (Am J Med, 2020, PMID 32151593) encontraram redução do desfecho composto de eficácia (TEV + mortalidade) com OR 0,79 (IC95% 0,69-0,91) e do TEV sintomático não fatal (OR 0,62) no grupo DOAC versus placebo, mas às custas de sangramento maior quase dobrado (OR 1,92; IC95% 1,35-2,73) e sangramento clinicamente relevante não maior também aumentado (OR 1,75). Esse trade-off levou as diretrizes ASH e ACCP a manterem recomendação contra o uso rotineiro de tromboprofilaxia estendida além da internação, reforçando que a decisão deve ser individualizada, balanceando risco trombótico e hemorrágico específicos do paciente.",
+    "source_refs": [
+      "Bhalla V, Lamping OF, Abdel-Latif A, Bhalla M, Ziada K, Smyth SS. Contemporary Meta-Analysis of Extended Direct-Acting Oral Anticoagulant Thromboprophylaxis to Prevent Venous Thromboembolism. Am J Med. 2020;133(9):1074-1081.e8. DOI: 10.1016/j.amjmed.2020.01.037. PMID: 32151593"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "potenciais-tardios-e-eventos-arritmicos-fatais-na-sindrome-de-brugada-o-que-a-metanalise-de-bazoukis-mostrou",
+    "titulo": "Potenciais tardios e eventos arrítmicos fatais na síndrome de Brugada: o que a metanálise de Bazoukis et al. mostrou?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Um paciente com síndrome de Brugada tipo 1 espontâneo é avaliado para estratificação de risco de morte súbita. O eletrofisiologista considera usar o eletrocardiograma de alta amplificação (SAECG) para detectar potenciais tardios como ferramenta adicional de risco.",
+    "pergunta": "Segundo a metanálise de Bazoukis et al. (2023, Cardiology in Review), com 1.431 pacientes de 10 estudos, qual foi a associação encontrada entre potenciais tardios (LP) no SAECG e evento arrítmico fatal na síndrome de Brugada?",
+    "opcoes": [
+      "Associação fortemente significativa e consistente (RR>3, p<0,001), tornando o SAECG suficiente isoladamente para decidir implante de CDI",
+      "Associação estatisticamente não significativa (RR 2,06; IC95% 0,98-4,36; p=0,06), com heterogeneidade alta entre os estudos (I²=82%)",
+      "Associação inversa — potenciais tardios positivos associaram-se a MENOR risco de evento fatal",
+      "O SAECG não pôde ser realizado em nenhum paciente com síndrome de Brugada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Bazoukis et al. (Cardiol Rev, 2023, PMID 37811999) encontraram associação estatisticamente NÃO significativa entre potenciais tardios positivos no SAECG e evento arrítmico fatal na síndrome de Brugada (RR 2,06; IC95% 0,98-4,36; p=0,06; I²=82%), permanecendo não significativa mesmo restringindo a análise a pacientes sem história prévia de arritmia fatal (RR 1,29; p=0,44). Apesar da plausibilidade fisiopatológica, a evidência agregada não sustenta o uso isolado de potenciais tardios como ferramenta confiável de estratificação de risco — reforçando a necessidade de abordagem multiparamétrica, não apoiada num único marcador não invasivo.",
+    "source_refs": [
+      "Bazoukis G, Letsas KP, Liu T, Tse G, Alsheikh-Ali A. Association of Late Potentials With Fatal Arrhythmic Events in Patients With Brugada Syndrome-A Meta-analysis. Cardiol Rev. 2023;32(4):334-337. DOI: 10.1097/CRD.0000000000000511. PMID: 37811999"
+    ],
+    "review_status": "revisado"
   }
 ]
