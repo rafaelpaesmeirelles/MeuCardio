@@ -199,7 +199,7 @@
 
 /* --- Assistente clínico ---------------------------------------------------- */
 .ia { display: flex; flex-direction: column; height: calc(100dvh - 190px); }
-@media (min-width: 900px) { .ia { height: calc(100dvh - 140px); } }
+@media (min-width: 900px) { .ia { height: calc(100dvh - 120px); } }
 
 .ia__topo { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 0.8rem; }
 .ia__topo .selo { margin-left: auto; white-space: nowrap; }
@@ -218,7 +218,7 @@
   padding: 0.2rem 0 0.2rem 0.9rem;
   color: var(--texto-secundario);
   font-size: 0.9rem;
-  max-width: 62ch;
+  max-width: 80ch;
 }
 .ia__privacidade { color: var(--alerta); }
 
@@ -236,7 +236,7 @@
 }
 .ia__sugestao:hover { border-color: var(--acento); background: var(--acento-tinta); }
 
-.ia__msg { border-radius: var(--r); padding: 0.75rem 0.95rem; max-width: 74ch; }
+.ia__msg { border-radius: var(--r); padding: 0.75rem 0.95rem; max-width: 92ch; }
 .ia__msg--user {
   background: var(--acento);
   color: var(--superficie);
@@ -285,6 +285,25 @@
 
 .ia__rodape {
   font-size: 0.76rem; color: var(--texto-secundario); margin: 0.5rem 0 0; text-align: center;
+}
+
+/* Trabalho 15 (07/08/2026): seletor Assistente Clínica × Assistente Pessoal. */
+.ia-escolha { max-width: 720px; margin: 0 auto; text-align: center; padding: 1rem 0; }
+.ia-escolha__cartoes {
+  display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.2rem;
+}
+@media (min-width: 700px) { .ia-escolha__cartoes { grid-template-columns: 1fr 1fr; } }
+.ia-escolha__cartao {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.7rem;
+  text-align: left; padding: 1.3rem; border: 1px solid var(--borda); border-radius: var(--r);
+  background: var(--superficie); cursor: pointer; font: inherit; color: inherit;
+}
+.ia-escolha__cartao:hover { border-color: var(--acento); }
+.ia-escolha__cartao p { margin: 0; color: var(--texto-secundario); font-size: 0.9rem; }
+
+.ia__aviso-ferramentas {
+  background: var(--acento-tinta); border-radius: var(--r); padding: 0.55rem 0.8rem;
+  font-size: 0.84rem; margin: 0 0 0.7rem;
 }
 
 .bloco-comando {

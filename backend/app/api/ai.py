@@ -30,6 +30,12 @@ MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haik
 # ver o pedido de consentimento.
 FERRAMENTAS_CONSENT_VERSION = "assistente-ferramentas-v1-2026-08-06"
 
+# Trabalho 15 (07/08/2026): os dois modos do assistente. Conversa nova grava
+# o modo escolhido; conversa existente usa sempre o modo com que nasceu
+# (ver `_preparar_pergunta`) — o cliente não pode trocar o modo de um fio
+# no meio da conversa.
+MODOS_VALIDOS = {"clinica", "pessoal"}
+
 
 class Pergunta(BaseModel):
     pergunta: str = Field(min_length=3, max_length=4000)
@@ -37,6 +43,7 @@ class Pergunta(BaseModel):
     temas: list[str] | None = None
     modelo: str | None = None
     usar_internet: bool = False
+    modo: str = "clinica"
 
 
 class ConsentimentoFerramentas(BaseModel):
@@ -89,14 +96,17 @@ def consentimento_ferramentas(dados: ConsentimentoFerramentas, db: Session = Dep
 
 
 @router.get("/conversas")
-def listar_conversas(db: Session = Depends(get_db), user=Depends(current_user)):
-    itens = db.execute(
-        select(AIConversation)
-        .where(AIConversation.user_id == user.id)
-        .order_by(AIConversation.updated_at.desc())
-        .limit(50)
-    ).scalars().all()
-    return [{"id": c.id, "titulo": c.titulo, "updated_at": c.updated_at} for c in itens]
+def listar_conversas(modo: str | None = None, db: Session = Depends(get_db), user=Depends(current_user)):
+    """`modo` filtra o histórico (Trabalho 15) — sem ele, devolve os dois
+    misturados, mas o frontend sempre passa o modo da tela atual, para
+    Clínica e Pessoal nunca aparecerem no mesmo histórico."""
+    if modo is not None and modo not in MODOS_VALIDOS:
+        raise HTTPException(status_code=422, detail=f"modo inválido. Use um de: {', '.join(sorted(MODOS_VALIDOS))}.")
+    consulta = select(AIConversation).where(AIConversation.user_id == user.id)
+    if modo is not None:
+        consulta = consulta.where(AIConversation.modo == modo)
+    itens = db.execute(consulta.order_by(AIConversation.updated_at.desc()).limit(50)).scalars().all()
+    return [{"id": c.id, "titulo": c.titulo, "modo": c.modo, "updated_at": c.updated_at} for c in itens]
 
 
 @router.get("/conversas/{cid}")
@@ -110,6 +120,7 @@ def ler_conversa(cid: int, db: Session = Depends(get_db), user=Depends(current_u
     return {
         "id": conv.id,
         "titulo": conv.titulo,
+        "modo": conv.modo,
         "mensagens": [{
             "papel": m.papel,
             "conteudo": m.conteudo,
@@ -134,6 +145,9 @@ def _preparar_pergunta(dados: Pergunta, db: Session, user) -> tuple[AIConversati
     existir em duas rotas não pode significar duas regras de validação."""
     if not settings.ai_enabled:
         raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
+
+    if dados.modo not in MODOS_VALIDOS:
+        raise HTTPException(status_code=422, detail=f"modo inválido. Use um de: {', '.join(sorted(MODOS_VALIDOS))}.")
 
     achados = rag.identificadores_encontrados(dados.pergunta)
     if achados:
@@ -165,7 +179,7 @@ def _preparar_pergunta(dados: Pergunta, db: Session, user) -> tuple[AIConversati
         if not conv or conv.user_id != user.id:
             raise HTTPException(status_code=404, detail="Conversa não encontrada.")
     else:
-        conv = AIConversation(user_id=user.id, titulo=dados.pergunta[:120].strip())
+        conv = AIConversation(user_id=user.id, titulo=dados.pergunta[:120].strip(), modo=dados.modo)
         db.add(conv)
         # commit, não flush: a conversa precisa estar DURAVELMENTE gravada
         # antes de perguntar() começar — achado em produção (IntegrityError
@@ -201,6 +215,7 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
         r = rag.perguntar(
             db, dados.pergunta, historico, dados.temas,
             modelo=modelo_efetivo, usar_internet=dados.usar_internet, user=user,
+            modo=conv.modo,
         )
     except NotImplementedError as e:
         raise HTTPException(status_code=501, detail=str(e))
@@ -229,6 +244,7 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
 
     return {
         "conversation_id": conv.id,
+        "modo": conv.modo,
         "resposta": r["texto"],
         "fontes": r["fontes"],
         "fontes_pubmed": r["fontes_pubmed"],
@@ -252,6 +268,7 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
     # dentro de eventos() sobre por que a sessão do Depends(get_db) não pode
     # ser usada lá dentro.
     conv_id = conv.id
+    conv_modo = conv.modo
     user_id = user.id
 
     def eventos():
@@ -280,6 +297,7 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
             for evento in rag.perguntar_stream(
                 db2, dados.pergunta, historico, dados.temas,
                 modelo=modelo_efetivo, usar_internet=dados.usar_internet, user=user2,
+                modo=conv_modo,
             ):
                 if "status" in evento:
                     yield f"data: {json.dumps({'tipo': 'status', 'etapa': evento['status']}, ensure_ascii=False)}\n\n"
@@ -303,7 +321,7 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
                                 "tokens": r["tokens_entrada"] + r["tokens_saida"], "via": "stream"},
                     ))
                     db2.commit()
-                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv_id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo'], 'truncado': r['truncado']}, ensure_ascii=False)}\n\n"
+                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv_id, 'modo': conv_modo, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo'], 'truncado': r['truncado']}, ensure_ascii=False)}\n\n"
         except Exception as e:
             # Sem isto, o erro real só aparecia indo direto ao log do
             # Postgres — o usuário via só o nome da exceção e ninguém

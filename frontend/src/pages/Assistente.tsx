@@ -4,6 +4,10 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { api } from "../lib/api";
 import { Carregando } from "../components/Estado";
+import LogoAssistenteClinica, { IconeAssistenteClinica } from "../components/LogoAssistenteClinica";
+import LogoAssistentePessoal, { IconeAssistentePessoal } from "../components/LogoAssistentePessoal";
+
+type Modo = "clinica" | "pessoal";
 
 type Fonte = {
   referencia: string; slug: string; titulo: string; tema: string; review_status: string;
@@ -16,11 +20,112 @@ type Mensagem = {
 type Status = {
   ativo: boolean; provedor: string; modelo: string; modelos_disponiveis: string[];
   limite_diario: number; usado_hoje: number; restante_hoje: number;
+  ferramentas_disponiveis_instalacao: boolean; ferramentas_consentidas: boolean;
 };
-type ConversaResumo = { id: number; titulo: string; updated_at: string };
+type ConversaResumo = { id: number; titulo: string; modo: Modo; updated_at: string };
+
+const SUGESTOES: Record<Modo, string[]> = {
+  clinica: [
+    "Quando indicar anticoagulação em FA com CHA₂DS₂-VASc 1?",
+    "Ajuste de dose de apixabana na doença renal crônica",
+    "Quais os quatro pilares da ICFER e a ordem de introdução?",
+  ],
+  pessoal: [
+    "O que eu tenho na agenda amanhã?",
+    "Qual o próximo local de atendimento e quanto tempo até lá?",
+    "Resuma os e-mails não lidos de hoje",
+  ],
+};
+
+/** Seletor exibido toda vez que o assinante entra em "Assistente" — decisão
+ * do Rafael em 07/08/2026 (Trabalho 15): renomear a página única para
+ * abrigar dois modos, em vez de duas páginas separadas. Clínica mantém
+ * exatamente o comportamento de sempre (base institucional + PubMed, sem
+ * ferramentas); Pessoal é novo — sem base científica, com acesso à agenda/
+ * e-mail do próprio médico quando ele autorizar. */
+function Escolha({ onEscolher }: { onEscolher: (modo: Modo) => void }) {
+  return (
+    <div className="ia-escolha">
+      <p className="eyebrow">Assistente</p>
+      <h1>Qual assistente você quer usar?</h1>
+      <div className="ia-escolha__cartoes">
+        <button className="ia-escolha__cartao" onClick={() => onEscolher("clinica")}>
+          <LogoAssistenteClinica />
+          <p>
+            Conteúdo médico/científico — base da Corvia, PubMed e busca na internet
+            focada em literatura. As respostas vêm com as fontes usadas.
+          </p>
+        </button>
+        <button className="ia-escolha__cartao" onClick={() => onEscolher("pessoal")}>
+          <LogoAssistentePessoal />
+          <p>
+            Rotina do dia a dia — agenda, compromissos, deslocamento, e-mail e
+            temas gerais. Não é fonte de conteúdo clínico.
+          </p>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/** Consentimento individual para o Assistente Pessoal mexer em agenda/e-mail
+ * — a rota já existia (PUT /api/ai/ferramentas/consentimento, Trabalho 5),
+ * só nunca tinha tela que a chamasse. Aparece na primeira vez que o médico
+ * entra em modo Pessoal sem ter concedido ainda; "usar sem essas
+ * ferramentas" deixa seguir como assistente geral, sem tocar em agenda/
+ * e-mail, e pode ser ativado depois pelo aviso dentro do chat. */
+function ConsentimentoPessoal({
+  instalado, onDecidir,
+}: {
+  instalado: boolean;
+  onDecidir: (ativar: boolean) => void;
+}) {
+  const [enviando, setEnviando] = useState(false);
+
+  async function decidir(ativar: boolean) {
+    setEnviando(true);
+    try {
+      await api.put("/ai/ferramentas/consentimento", { ativar });
+    } finally {
+      setEnviando(false);
+      onDecidir(ativar);
+    }
+  }
+
+  return (
+    <div className="ia-escolha">
+      <LogoAssistentePessoal />
+      <div className="cartao" style={{ marginTop: "1rem", maxWidth: 560 }}>
+        <p style={{ marginTop: 0 }}>
+          Para ajudar na sua rotina, o Assistente Pessoal pode acessar a sua própria agenda
+          (ver, criar, reagendar e cancelar compromisso, saber o próximo local e o trânsito
+          até lá) e ler a sua caixa do CorvIA Mail — sempre a sua conta, nunca a de outra
+          pessoa. Nada disso é enviado por conta própria: ele só age quando você pedir na
+          conversa.
+        </p>
+        {!instalado && (
+          <p className="eyebrow" style={{ color: "var(--alerta)" }}>
+            Estas ferramentas ainda não foram habilitadas nesta instalação. Sua escolha
+            fica salva e passa a valer assim que forem habilitadas.
+          </p>
+        )}
+        <div style={{ display: "flex", gap: 8, marginTop: "0.8rem", flexWrap: "wrap" }}>
+          <button className="botao" onClick={() => decidir(true)} disabled={enviando}>
+            Ativar acesso à agenda e ao e-mail
+          </button>
+          <button className="botao botao--secundario" onClick={() => decidir(false)} disabled={enviando}>
+            Usar sem essas ferramentas por enquanto
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Assistente() {
   const [status, setStatus] = useState<Status | null>(null);
+  const [modo, setModo] = useState<Modo | null>(null);
+  const [mostrarConsentimento, setMostrarConsentimento] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
   const [pergunta, setPergunta] = useState("");
   const [conversa, setConversa] = useState<number | null>(null);
@@ -31,9 +136,9 @@ export default function Assistente() {
   const [mostrarHistorico, setMostrarHistorico] = useState(false);
   // "" = Automático (recomendado) — o backend escolhe o modelo pela pergunta.
   const [modeloEscolhido, setModeloEscolhido] = useState("");
-  // A base CorvIA e o PubMed continuam sempre ativos. A pesquisa web do Claude
-  // é uma etapa aprofundada e opcional, pois pode acrescentar dezenas de
-  // segundos quando o provedor executa múltiplas buscas.
+  // A base CorvIA e o PubMed continuam sempre ativos no modo Clínica. A
+  // pesquisa web do Claude é uma etapa aprofundada e opcional ali, mas é o
+  // recurso central do modo Pessoal — por isso nasce ligada nesse modo.
   const [usarInternet, setUsarInternet] = useState(false);
   const fim = useRef<HTMLDivElement>(null);
 
@@ -42,11 +147,33 @@ export default function Assistente() {
   }, []);
   useEffect(() => { fim.current?.scrollIntoView({ behavior: "smooth" }); }, [mensagens, pensando]);
 
-  const recarregarHistorico = () => api.get<ConversaResumo[]>("/ai/conversas").then(setHistorico).catch(() => {});
-  useEffect(() => { recarregarHistorico(); }, []);
+  const recarregarHistorico = (m: Modo) =>
+    api.get<ConversaResumo[]>(`/ai/conversas?modo=${m}`).then(setHistorico).catch(() => {});
+  useEffect(() => { if (modo) recarregarHistorico(modo); }, [modo]);
+
+  function escolherModo(escolhido: Modo) {
+    setModo(escolhido);
+    setUsarInternet(escolhido === "pessoal");
+    setMensagens([]);
+    setConversa(null);
+    setMostrarHistorico(false);
+    setErro("");
+    if (escolhido === "pessoal" && status && !status.ferramentas_consentidas) {
+      setMostrarConsentimento(true);
+    }
+  }
+
+  function trocarAssistente() {
+    setModo(null);
+    setMostrarConsentimento(false);
+    setMensagens([]);
+    setConversa(null);
+    setErro("");
+  }
 
   async function abrirConversa(id: number) {
     const c = await api.get<{
+      modo: Modo;
       mensagens: { papel: "user" | "assistant"; conteudo: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[] }[]
     }>(`/ai/conversas/${id}`);
     setConversa(id);
@@ -67,24 +194,24 @@ export default function Assistente() {
     e.stopPropagation();
     await api.delete(`/ai/conversas/${id}`);
     if (conversa === id) novaConversa();
-    recarregarHistorico();
+    if (modo) recarregarHistorico(modo);
   }
 
   async function enviar() {
     const texto = pergunta.trim();
-    if (!texto || pensando) return;
+    if (!texto || pensando || !modo) return;
     setPergunta("");
     setErro("");
     setMensagens((m) => [...m, { papel: "user", conteudo: texto }, { papel: "assistant", conteudo: "" }]);
     setPensando(true);
-    setEtapa("Preparando a consulta clínica…");
+    setEtapa(modo === "clinica" ? "Preparando a consulta clínica…" : "Preparando a resposta…");
     // Sinaliza para main.tsx que um streaming está em andamento: se o
     // service worker trocar de versão nesse meio-tempo, a recarga da página
     // fica pendente em vez de cortar a resposta no meio (ver main.tsx).
     (window as unknown as { __streamAtivo?: boolean }).__streamAtivo = true;
     try {
       await api.stream("/ai/perguntar/stream", {
-        pergunta: texto, conversation_id: conversa,
+        pergunta: texto, conversation_id: conversa, modo,
         modelo: status?.provedor === "anthropic" && modeloEscolhido ? modeloEscolhido : undefined,
         usar_internet: status?.provedor === "anthropic" ? usarInternet : false,
       }, (evento) => {
@@ -115,7 +242,7 @@ export default function Assistente() {
             return copia;
           });
           setStatus((s) => s && { ...s, usado_hoje: s.usado_hoje + 1, restante_hoje: s.restante_hoje - 1 });
-          recarregarHistorico();
+          if (modo) recarregarHistorico(modo);
         } else if (evento.tipo === "erro") {
           setErro(evento.detalhe ?? "Não foi possível consultar o assistente.");
           setMensagens((m) => m.slice(0, -1));
@@ -137,7 +264,7 @@ export default function Assistente() {
   if (!status.ativo) {
     return (
       <>
-        <p className="eyebrow">Assistente clínico</p>
+        <p className="eyebrow">Assistente</p>
         <h1>Assistente desligado</h1>
         <div className="cartao">
           <p style={{ marginTop: 0 }}>
@@ -150,12 +277,41 @@ export default function Assistente() {
     );
   }
 
+  if (!modo) return <Escolha onEscolher={escolherModo} />;
+
+  if (mostrarConsentimento) {
+    return (
+      <ConsentimentoPessoal
+        instalado={status.ferramentas_disponiveis_instalacao}
+        onDecidir={(ativar) => {
+          setStatus((s) => s && { ...s, ferramentas_consentidas: ativar });
+          setMostrarConsentimento(false);
+        }}
+      />
+    );
+  }
+
+  const IconeModo = modo === "clinica" ? IconeAssistenteClinica : IconeAssistentePessoal;
+
   return (
     <div className="ia">
       <header className="ia__topo">
-        <div>
-          <p className="eyebrow">Assistente clínico</p>
-          <h1 style={{ marginBottom: 2 }}>Perguntar à base</h1>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+          <IconeModo tamanho={32} />
+          <div>
+            <p className="eyebrow" style={{ margin: 0 }}>
+              Assistente {modo === "clinica" ? "Clínica" : "Pessoal"}
+              {" · "}
+              <button
+                className="ia__link-trocar"
+                onClick={trocarAssistente}
+                style={{ background: "none", border: "none", padding: 0, color: "var(--acento)", cursor: "pointer", font: "inherit" }}
+              >
+                trocar assistente
+              </button>
+            </p>
+            <h1 style={{ marginBottom: 2 }}>{modo === "clinica" ? "Perguntar à base" : "Sua rotina"}</h1>
+          </div>
         </div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
           {status.provedor === "anthropic" && (
@@ -177,7 +333,7 @@ export default function Assistente() {
                   checked={usarInternet}
                   onChange={(e) => setUsarInternet(e.target.checked)}
                 />
-                Pesquisa web aprofundada (mais lenta)
+                Pesquisa web {modo === "clinica" ? "aprofundada (mais lenta)" : ""}
               </label>
             </>
           )}
@@ -194,6 +350,18 @@ export default function Assistente() {
           </span>
         </div>
       </header>
+
+      {modo === "pessoal" && !status.ferramentas_consentidas && (
+        <p className="ia__aviso-ferramentas">
+          O acesso à sua agenda e ao seu e-mail ainda não está ativado.{" "}
+          <button
+            onClick={() => setMostrarConsentimento(true)}
+            style={{ background: "none", border: "none", padding: 0, color: "var(--acento)", cursor: "pointer", font: "inherit", textDecoration: "underline" }}
+          >
+            Ativar agora
+          </button>
+        </p>
+      )}
 
       {mostrarHistorico && (
         <div className="cartao" style={{ marginBottom: "0.8rem", maxHeight: 260, overflowY: "auto" }}>
@@ -224,20 +392,31 @@ export default function Assistente() {
       <div className="ia__conversa">
         {mensagens.length === 0 && (
           <div className="ia__abertura">
-            <p>
-              As respostas saem da base científica do serviço e vêm com as fontes usadas.
-              Quando a base não sustenta a resposta, o assistente diz isso.
-            </p>
-            <p className="ia__privacidade">
-              Descreva o caso sem identificar o paciente. CPF, telefone, cartão SUS e e-mail
-              são bloqueados no envio.
-            </p>
+            {modo === "clinica" ? (
+              <>
+                <p>
+                  As respostas saem da base científica do serviço e vêm com as fontes usadas.
+                  Quando a base não sustenta a resposta, o assistente diz isso.
+                </p>
+                <p className="ia__privacidade">
+                  Descreva o caso sem identificar o paciente. CPF, telefone, cartão SUS e e-mail
+                  são bloqueados no envio.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  Ajuda com agenda, compromissos, deslocamento, e-mail e temas gerais do dia a
+                  dia — não é fonte de conteúdo clínico. Para dúvida médica/científica, use o
+                  Assistente Clínica.
+                </p>
+                <p className="ia__privacidade">
+                  CPF, telefone, cartão SUS e e-mail de paciente são bloqueados no envio, mesmo aqui.
+                </p>
+              </>
+            )}
             <div className="ia__sugestoes">
-              {[
-                "Quando indicar anticoagulação em FA com CHA₂DS₂-VASc 1?",
-                "Ajuste de dose de apixabana na doença renal crônica",
-                "Quais os quatro pilares da ICFER e a ordem de introdução?",
-              ].map((s) => (
+              {SUGESTOES[modo].map((s) => (
                 <button key={s} className="ia__sugestao" onClick={() => setPergunta(s)}>
                   {s}
                 </button>
@@ -310,7 +489,9 @@ export default function Assistente() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(); }
           }}
-          placeholder="Descreva a dúvida clínica, sem identificar o paciente…"
+          placeholder={modo === "clinica"
+            ? "Descreva a dúvida clínica, sem identificar o paciente…"
+            : "Pergunte sobre sua agenda, e-mail ou qualquer tema do dia a dia…"}
           aria-label="Pergunta"
         />
         <button className="botao" onClick={enviar} disabled={!pergunta.trim() || pensando}>
@@ -318,7 +499,9 @@ export default function Assistente() {
         </button>
       </div>
       <p className="ia__rodape">
-        Apoio à decisão. Não substitui julgamento clínico, bula nem diretriz vigente.
+        {modo === "clinica"
+          ? "Apoio à decisão. Não substitui julgamento clínico, bula nem diretriz vigente."
+          : "Assistente de apoio à rotina. Não substitui o Assistente Clínica para decisões médicas."}
       </p>
     </div>
   );

@@ -353,6 +353,41 @@ identificador de paciente que porventura apareça num e-mail.
 """
 
 
+# Trabalho 15 (07/08/2026): a Corvia passou a oferecer dois modos de
+# assistente — Clínica (o que já existia, PROMPT_SISTEMA acima, focado no
+# corpus institucional/PubMed/busca científica) e Pessoal (este prompt),
+# para rotina do dia a dia e temas gerais, com acesso às ferramentas de
+# agenda/e-mail (PROMPT_FERRAMENTAS, anexado só quando as duas travas de
+# `_ferramentas_para` liberam). Nunca usa o CONTEXTO INSTITUCIONAL nem o
+# PubMed — `perguntar()`/`perguntar_stream()` pulam essa etapa inteira
+# quando `modo == "pessoal"`, então este prompt nem finge que essas fontes
+# existem na conversa.
+PROMPT_PESSOAL = """Você é o assistente PESSOAL da Corvia — o mesmo produto do \
+Assistente Clínica, mas neste modo você ajuda o médico com a rotina do dia a dia \
+e temas gerais, não com conteúdo científico/clínico.
+
+Você tem à disposição uma ferramenta de busca na internet (web_search). Use-a \
+livremente para qualquer pergunta de conhecimento geral, prática ou atual — \
+notícia, trânsito, previsão do tempo, informação sobre um lugar, etc.
+
+Regras:
+1. Se a pergunta for sobre agenda, compromissos ou deslocamento, e as \
+ferramentas correspondentes estiverem disponíveis nesta conversa, use-as em \
+vez de responder de memória — nunca invente horário, endereço ou distância.
+2. Se a pergunta pedir orientação clínica, científica ou de conduta médica \
+(dose, diagnóstico, diretriz, interpretação de exame, literatura, prescrição), \
+diga que isso é papel do Assistente Clínica e sugira trocar para ele — não \
+tente responder aqui, mesmo que soubesse a resposta. A separação existe \
+exatamente para que conteúdo clínico sempre passe pela disciplina de citação \
+de fonte do outro modo, nunca por aqui.
+3. Escreva em português do Brasil, direto e natural — sem os marcadores de \
+citação [F#]/[PM#]/[W#] do modo Clínica; aqui, quando usar uma fonte da \
+busca na internet, basta mencionar de onde veio em prosa normal.
+4. Não peça nem repita identificador de paciente, mesmo que apareça em \
+e-mail ou compromisso lido por uma ferramenta.
+"""
+
+
 PROMPT_CASO = """Você é o assistente clínico da Corvia, ajudando um médico a conduzir um caso.
 
 Você recebeu os dados estruturados de um paciente internado. Sua tarefa é produzir uma análise
@@ -632,6 +667,38 @@ def _ferramentas_para(db: Session, user) -> tuple[str, list[dict] | None, object
     return PROMPT_FERRAMENTAS, ASSISTANT_TOOLS_SCHEMA, executor
 
 
+def _preparar_por_modo(
+    db: Session, pergunta: str, temas: list[str] | None, modo: str, user,
+) -> tuple[str, str, list[dict], list[dict], dict[str, int], list[dict] | None, object]:
+    """Ponto único onde os dois modos do assistente (Trabalho 15) divergem.
+
+    Clínica: exatamente o comportamento de sempre — base institucional +
+    PubMed, PROMPT_SISTEMA, sem ferramentas de agenda/e-mail (o modo Pessoal
+    existe justamente para isolar isso).
+
+    Pessoal: nunca consulta a base institucional nem o PubMed — não faz
+    sentido fingir fonte científica numa pergunta de agenda —, usa
+    PROMPT_PESSOAL, e SEMPRE tenta oferecer as ferramentas (é o propósito do
+    modo); `_ferramentas_para` continua sendo quem decide se elas de fato
+    liberam, pelas duas travas de sempre.
+    """
+    if modo == "pessoal":
+        prompt_extra, ferramentas, executor_ferramenta = _ferramentas_para(db, user)
+        return (
+            PROMPT_PESSOAL + prompt_extra,
+            f"PERGUNTA:\n{pergunta}",
+            [], [], {"rag_ms": 0, "fontes_ms": 0, "trechos": 0, "pubmed": 0},
+            ferramentas, executor_ferramenta,
+        )
+    contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
+    return (
+        PROMPT_SISTEMA,
+        f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}",
+        fontes, artigos_pubmed, metricas,
+        None, None,
+    )
+
+
 def perguntar(
     db: Session,
     pergunta: str,
@@ -640,16 +707,18 @@ def perguntar(
     modelo: str | None = None,
     usar_internet: bool = False,
     user=None,
+    modo: str = "clinica",
 ) -> dict:
     inicio = time.perf_counter()
-    contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
-    prompt_extra, ferramentas, executor_ferramenta = _ferramentas_para(db, user)
+    prompt_sistema, conteudo_usuario, fontes, artigos_pubmed, metricas, ferramentas, executor_ferramenta = (
+        _preparar_por_modo(db, pergunta, temas, modo, user)
+    )
 
     resposta = obter_provedor().responder(
-        PROMPT_SISTEMA + prompt_extra,
+        prompt_sistema,
         [
             *limitar_historico(historico),
-            {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
+            {"role": "user", "content": conteudo_usuario},
         ],
         modelo=modelo,
         usar_internet=usar_internet,
@@ -657,8 +726,8 @@ def perguntar(
         executor_ferramenta=executor_ferramenta,
     )
     log.info(
-        "ai_request_completed model=%s internet=%s sources_ms=%s total_ms=%s chunks=%s pubmed=%s",
-        resposta.modelo, usar_internet, metricas["fontes_ms"],
+        "ai_request_completed modo=%s model=%s internet=%s sources_ms=%s total_ms=%s chunks=%s pubmed=%s",
+        modo, resposta.modelo, usar_internet, metricas["fontes_ms"],
         round((time.perf_counter() - inicio) * 1000), metricas["trechos"], metricas["pubmed"],
     )
 
@@ -682,6 +751,7 @@ def perguntar_stream(
     modelo: str | None = None,
     usar_internet: bool = False,
     user=None,
+    modo: str = "clinica",
 ):
     """Mesma lógica de `perguntar`, mas em streaming — existe para manter a
     conexão HTTP viva em perguntas longas com busca na internet ligada, que
@@ -693,16 +763,21 @@ def perguntar_stream(
     com {"final": {...}} no mesmo formato de retorno de `perguntar`.
     """
     inicio = time.perf_counter()
-    yield {"status": "Consultando a base científica e o PubMed…"}
-    contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
-    yield {"status": "Fontes localizadas. Preparando a síntese clínica…"}
-    prompt_extra, ferramentas, executor_ferramenta = _ferramentas_para(db, user)
+    yield {"status": (
+        "Consultando a base científica e o PubMed…" if modo != "pessoal"
+        else "Preparando a resposta…"
+    )}
+    prompt_sistema, conteudo_usuario, fontes, artigos_pubmed, metricas, ferramentas, executor_ferramenta = (
+        _preparar_por_modo(db, pergunta, temas, modo, user)
+    )
+    if modo != "pessoal":
+        yield {"status": "Fontes localizadas. Preparando a síntese clínica…"}
 
     gerador = obter_provedor().responder_stream(
-        PROMPT_SISTEMA + prompt_extra,
+        prompt_sistema,
         [
             *limitar_historico(historico),
-            {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
+            {"role": "user", "content": conteudo_usuario},
         ],
         modelo=modelo,
         usar_internet=usar_internet,
@@ -718,8 +793,8 @@ def perguntar_stream(
         else:
             resposta = evento["final"]
             log.info(
-                "ai_stream_completed model=%s internet=%s sources_ms=%s first_token_ms=%s total_ms=%s chunks=%s pubmed=%s",
-                resposta.modelo, usar_internet, metricas["fontes_ms"],
+                "ai_stream_completed modo=%s model=%s internet=%s sources_ms=%s first_token_ms=%s total_ms=%s chunks=%s pubmed=%s",
+                modo, resposta.modelo, usar_internet, metricas["fontes_ms"],
                 primeiro_token_ms, round((time.perf_counter() - inicio) * 1000),
                 metricas["trechos"], metricas["pubmed"],
             )
