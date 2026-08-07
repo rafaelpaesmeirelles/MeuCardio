@@ -4,6 +4,11 @@ p = Path(__file__).with_name('build_corvia_pdf.py')
 s = p.read_text(encoding='utf-8')
 
 s = s.replace(
+    'section_header(c,"Visão geral","Um único ambiente, da evidência à prática","A Corvia organiza conhecimento clínico e ferramentas de trabalho em uma experiência contínua.")',
+    'section_header(c,"Visão geral","Da evidência à prática","Um único ambiente para conhecimento clínico, estratificação de risco e ferramentas de trabalho.")',
+)
+
+s = s.replace(
     'section_header(c,"Metodologia visual","Do dado bruto à decisão: o raciocínio fica explícito","Estrutura visual proposta para cada metodologia validada de risco, facilitando comparação e entendimento.")',
     'section_header(c,"Metodologia visual","Do dado bruto à decisão","O raciocínio fica explícito em cada metodologia validada de risco, facilitando comparação e entendimento.")',
 )
