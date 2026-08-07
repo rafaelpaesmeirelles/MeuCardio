@@ -19495,5 +19495,80 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "heart-pathway-ensaio-randomizado-mahler-2015",
+    "title": "O HEART Pathway — ensaio randomizado identificando pacientes de dor torácica no pronto-socorro para alta precoce",
+    "study_type": "ensaio_clinico",
+    "authors": "Mahler SA, Riley RF, Hiestand BC, Russell GB, Hoekstra JW, Lefebvre CW, Nicks BA, Cline DM, Askew KL, Elliott SB, Herrington DM, Burke GL, Miller CD",
+    "journal": "Circulation: Cardiovascular Quality and Outcomes",
+    "year": 2015,
+    "doi": "10.1161/CIRCOUTCOMES.114.001384",
+    "pmid": "25737484",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25737484/",
+    "summary": "Ensaio randomizado com 282 pacientes adultos do pronto-socorro com sintomas de síndrome coronariana aguda sem supra de ST, comparando o HEART Pathway (escore HEART + troponina seriada em 0 e 3h para decisão de alta precoce) versus cuidado usual baseado em diretrizes ACC/AHA, com desfecho primário de teste cardíaco objetivo em 30 dias.",
+    "key_findings": "Idade média 53 anos, 16% com infarto prévio, 6% (IC95% 3,6-9,5%) com evento cardíaco adverso maior em 30 dias. HEART Pathway reduziu teste cardíaco objetivo em 12,1 pontos percentuais (56,7% vs. 68,8%; p=0,048), reduziu permanência hospitalar em 12h (9,9h vs. 21,9h; p=0,013) e aumentou alta precoce em 21,3 pontos percentuais (39,7% vs. 18,4%; p<0,001). Nenhum paciente liberado precocemente teve evento cardíaco adverso maior em 30 dias.",
+    "clinical_implications": "Primeiro ensaio randomizado pragmático a testar o escore HEART incorporado a um protocolo assistencial completo (não a acurácia diagnóstica isolada) contra cuidado usual — ganho de eficiência (menos teste, menos internação, mais alta precoce) sem sinal de dano de segurança nesta amostra, sustentando a adoção do protocolo estruturado.",
+    "limitations": "Amostra de tamanho moderado (n=282) de centro único; zero evento adverso na amostra não equivale a risco zero garantido para eventos raros; resultado depende do uso conjunto do escore com troponina seriada, não do escore isolado.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore HEART",
+      "dor torácica",
+      "pronto-socorro",
+      "ensaio randomizado",
+      "alta precoce"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "treinamento-comunicacao-generalistas-metanalise-selman-2017",
+    "title": "Efeito do treinamento em habilidades de comunicação para profissionais generalistas em cuidado paliativo sobre desfechos relatados pelo paciente",
+    "study_type": "metanalise",
+    "authors": "Selman LE, Brighton LJ, Hawkins A, McDonald C, O'Brien S, Robinson V, Khan SA, George R, Ramsenthaler C, Higginson IJ, Koffman J",
+    "journal": "Journal of Pain and Symptom Management",
+    "year": 2017,
+    "doi": "10.1016/j.jpainsymman.2017.04.007",
+    "pmid": "28778560",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28778560/",
+    "summary": "Revisão sistemática com metanálise (10 bases de dados até dez/2015) de ensaios clínicos randomizados de treinamento em habilidades de comunicação para profissionais generalistas (não especialistas em paliativo) em cuidado de fim de vida, avaliando efeito sobre desfechos relatados pelo paciente e comportamento do profissional treinado.",
+    "key_findings": "19 artigos elegíveis (14 ensaios), 11 na metanálise (3.144 pacientes, 791 profissionais). Sem efeito sobre desfechos relatados pelo paciente (SMD 0,10; IC95% -0,05 a 0,24; I²=67%). Efeito moderado sobre comportamento do profissional em interação simulada (SMD 0,50; IC95% 0,19-0,81), mas pequeno e não significativo em interação real com paciente (SMD 0,21; IC95% -0,01 a 0,43). Duas intervenções com efeito em demonstrar empatia real usavam retroalimentação personalizada sobre gravações da própria interação.",
+    "clinical_implications": "A evidência de que treinar profissionais em comunicação melhora diretamente o desfecho relatado pelo paciente é mais fraca do que a intuição sugere; a transferência de habilidade da simulação para a prática real é limitada. Retroalimentação individualizada sobre interações reais gravadas pode ser o componente mais efetivo, mais que treinamento genérico em sala de aula.",
+    "limitations": "Restrita a comunicação de fim de vida por generalistas (não especificamente cardiologia); heterogeneidade alta entre os estudos incluídos (I²=67% no desfecho principal), limitando a força da conclusão agregada.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "treinamento de comunicação",
+      "cuidados paliativos",
+      "generalistas",
+      "metanálise",
+      "empatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-idade-dependente-sincope-vasovagal-sheldon-2012",
+    "title": "Efeito dependente da idade de betabloqueadores na prevenção de síncope vasovagal",
+    "study_type": "estudo_de_coorte",
+    "authors": "Sheldon RS, Morillo CA, Klingenheben T, Krahn AD, Sheldon A, Rose MS",
+    "journal": "Circulation: Arrhythmia and Electrophysiology",
+    "year": 2012,
+    "doi": "10.1161/CIRCEP.112.974386",
+    "pmid": "22972872",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22972872/",
+    "summary": "Reanálise de duas populações — coorte observacional de 153 pacientes com síncope vasovagal (52 sob betabloqueador) e os 208 participantes do ensaio randomizado POST — testando a interação entre faixa etária e efeito do metoprolol na prevenção de síncope vasovagal, com hazard ratios combinados por metanálise de variância inversa.",
+    "key_findings": "Hazard ratio combinado para síncope sob betabloqueador: 1,58 (IC95% 1,00-2,31) em pacientes <42 anos (tendência de piora) e 0,52 (IC95% 0,27-1,01) em pacientes ≥42 anos (tendência de proteção). Interação idade-tratamento significativa no POST (p=0,026); os dois grupos etários diferiram significativamente na resposta combinada (p=0,007).",
+    "clinical_implications": "Explica a inconsistência histórica dos ensaios de betabloqueador na síncope vasovagal — o benefício pode existir, mas concentrado em pacientes de meia-idade e mais velhos (≥42 anos), sendo diluído ou revertido em população mais jovem quando analisada sem estratificação por idade.",
+    "limitations": "Corte de 42 anos emergiu da própria análise dos dados (achado post hoc), não foi pré-especificado nem validado prospectivamente em ensaio dedicado; nenhum IC95% individual por estudo/faixa etária excluiu 1, força do achado está na análise combinada.",
+    "theme": "Síncope",
+    "tags": [
+      "síncope vasovagal",
+      "betabloqueador",
+      "metoprolol",
+      "POST",
+      "idade"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
