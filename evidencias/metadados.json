@@ -34663,5 +34663,140 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "pcr-ventilacao-continua-apos-via-aerea-avancada",
+    "statement": "Após via aérea avançada estabelecida, confirmada e fixada na parada cardiorrespiratória, a RCP prossegue com compressões contínuas — sem pausa para ventilar — e uma ventilação a cada 6 segundos. A hiperventilação é contraindicada: aumenta a pressão intratorácica, reduz a pré-carga e o débito cardíaco, e compromete a sobrevida.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "via aérea avançada",
+      "ventilação",
+      "RCP",
+      "reanimação cardiopulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-desfibrilacao-bifasica-energia-conforme-fabricante",
+    "statement": "Na parada cardiorrespiratória com ritmo chocável, o desfibrilador bifásico deve ser usado com energia de 120 a 200 J, conforme a orientação do fabricante (se desconhecida, administrar 200 J); o desfibrilador monofásico usa 360 J. O desfibrilador bifásico é preferível, mas não obrigatório — não demonstrou benefício na redução de mortalidade após a parada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "desfibrilação",
+      "energia de choque",
+      "RCP"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-adrenalina-1mg-a-cada-3-5-minutos-fv-tvsp",
+    "statement": "Na fibrilação ventricular/taquicardia ventricular sem pulso (FV/TVSP), a adrenalina 1mg por via intravenosa ou intraóssea, repetível a cada 3 a 5 minutos, é indicada a partir do segundo ciclo. A própria diretriz qualifica a recomendação como de evidência limitada: 'embora o nível de evidência seja limitado' e 'apesar da ausência de dados conclusivos, parece ser razoável o emprego rotineiro'.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md. Ver também PARAMEDIC2 (Perkins GD et al., N Engl J Med 2018, PMID 30021076), citado no mesmo documento: sobrevida em 30 dias 3,2% vs. 2,4% com adrenalina, sem diferença em desfecho neurológico favorável.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "adrenalina",
+      "fibrilação ventricular",
+      "taquicardia ventricular sem pulso",
+      "PARAMEDIC2"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-amiodarona-fv-tvsp-refrataria",
+    "statement": "Na FV/TVSP persistente apesar de RCP, desfibrilação e vasopressor, é indicado um antiarrítmico. Amiodarona: dose inicial de 300mg IV ou IO, com dose adicional de 150mg possível, intercalada com o vasopressor.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "amiodarona",
+      "fibrilação ventricular refratária",
+      "antiarrítmico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-lidocaina-fv-tvsp-refrataria",
+    "statement": "Na FV/TVSP persistente apesar de RCP, desfibrilação e vasopressor, lidocaína é opção antiarrítmica: dose inicial de 1,0 a 1,5mg/kg IV; persistindo a FV/TVSP, segunda dose de 0,5 a 0,75mg/kg. Evidência recente mostrou taxa de sobrevida semelhante à da amiodarona na parada extra-hospitalar.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "lidocaína",
+      "fibrilação ventricular refratária",
+      "antiarrítmico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-vasopressina-nao-indicada-de-rotina",
+    "statement": "A vasopressina não é mais indicada como droga vasopressora de rotina na parada cardiorrespiratória — não oferece vantagem em relação à adrenalina. A bula brasileira da vasopressina ainda traz 40 U na parada, atribuindo a recomendação ao algoritmo da American Heart Association de 2005, mas a bula não foi atualizada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "vasopressina",
+      "recomendação negativa",
+      "bula desatualizada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-vasopressina-em-anafilaxia-refrataria-a-epinefrina",
+    "statement": "A vasopressina, retirada do algoritmo geral da parada cardiorrespiratória, ainda é considerada em cenário mais estreito: anafilaxia, com ou sem parada, não responsiva à epinefrina.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019",
+    "reference": "Bernoche C, Timerman S, Polastri TF, et al. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787 — já citada e verificada em content/Terapia_intensiva/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019.md.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "parada cardiorrespiratória",
+      "vasopressina",
+      "anafilaxia",
+      "epinefrina refratária"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
