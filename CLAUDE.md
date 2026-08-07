@@ -1,5 +1,38 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~19h: redesenho do card "Hoje" do menu lateral
+> Rafael mandou screenshot dizendo que o item logo abaixo de "Ecossistema Clínico Cardiológico"
+> (o card "Hoje" do menu lateral) estava esteticamente ruim e a palavra "Hoje" ilegível pela cor,
+> e pediu opções de substituição antes de qualquer mudança de código. Mostradas 4 alternativas de
+> layout (via mockup visual, cores reais do navy da sidebar — `linear-gradient(180deg,#082637,
+> #061923)`, acento teal `#2596a9`) — linha simples igual aos outros itens, bloco teal cheio,
+> barra de acento lateral, e cartão com borda mantendo o layout atual só com contraste corrigido.
+> Rafael escolheu a última ("opção D"), pedindo mais equilíbrio estético; mostrada uma versão
+> refinada (chip de ícone com fundo teal translúcido, respiro maior entre título/subtítulo) e só
+> então implementada, com aprovação explícita antes do código.
+>
+> **Causa raiz real do "Hoje ilegível", achada ao investigar o CSS antes de desenhar as opções:**
+> o card não tinha fundo nem borda própria — dependia inteiramente do hover/estado ativo para se
+> diferenciar do resto do menu, e o ícone (44×44, sem chip de fundo) ficava solto contra o navy,
+> sem ancoragem visual. `strong` (peso 850) colado no `small` do subtítulo (margem de 0.24rem)
+> também apertava a leitura.
+>
+> **Implementado em `frontend/src/styles/shell.css`/`Shell.tsx`**: `.nav-clinica__hoje-logo` virou
+> um chip de 38×38 com `background: rgba(37,150,169,0.22)` (contraste garantido em qualquer
+> estado, não herda mais nada); texto alinhado à esquerda em vez de centralizado (mais legível,
+> consistente com os outros itens do menu); `.nav-clinica__hoje` ganhou fundo (`rgba(255,255,255,
+> 0.045)`) e borda (`rgba(255,255,255,0.09)`) próprios, sem depender de hover para existir; grid
+> de 3 colunas (ícone/texto/spacer de equilíbrio) virou 2 colunas — o spacer (`equilibrio`) nunca
+> tinha propósito real além de forçar centralização, removido do CSS e do JSX. Variante mobile
+> (`.gaveta`, tema claro, diferente da sidebar navy) ajustada só no grid (2 colunas), mantendo o
+> visual próprio dela intacto.
+>
+> **Verificado**: `tsc --noEmit` limpo (Node 22), frontend rebuildado
+> (`docker compose up -d --build frontend-build`), bundle novo confirmado no Caddy — grep direto
+> no CSS servido mostra `nav-clinica__hoje-logo{...background:#2596a938...}` (chip teal 22%) e o
+> grid de 2 colunas, exatamente como implementado. Backend saudável depois (200 em
+> `/api/openapi.json`).
+
 > ## ✅ CONCLUÍDO E NO AR, 07/08/2026 ~18h: 4 pedidos do Rafael sobre Calculadoras e Modo Apresentação
 > A partir de um screenshot da Avaliação Pré-Operatória com os quadros de seleção visivelmente
 > desalinhados, quatro pedidos no mesmo texto:

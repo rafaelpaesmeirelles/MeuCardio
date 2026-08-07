@@ -148,7 +148,6 @@ function Navegacao({
           <strong>Hoje</strong>
           <small>Seu dia clínico</small>
         </span>
-        <span className="nav-clinica__hoje-equilibrio" aria-hidden="true" />
       </NavLink>
 
       <div className="nav-clinica__separador" />
