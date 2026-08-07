@@ -33931,5 +33931,181 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hp-terapia-combinada-inicial-vs-monoterapia-na-hap",
+    "statement": "Na hipertensão arterial pulmonar (HAP), a terapia combinada inicial — antagonista do receptor de endotelina associado a inibidor de PDE5 — é recomendada em vez de monoterapia. Recomendação FORTE, qualidade de evidência ALTA. A diretriz brasileira expande esse conceito para as demais drogas disponíveis no país dentro das duas classes citadas, não restringindo a recomendação à combinação exata testada no ensaio pivotal (ambrisentana + tadalafila, AMBITION).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Documento oficial da Sociedade Brasileira de Pneumologia e Tisiologia baseado na metodologia GRADE. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto). NOTA DE SISTEMA: esta diretriz usa GRADE para as quatro perguntas PICO — força FORTE ou PONDERADO (condicional), qualidade de evidência Alta/Mod/Baixa/MtBx (muito baixa) — diferente da escala Classe I-III/Nível A-C da ESC/AHA usada em outras seções do mesmo documento.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão arterial pulmonar",
+      "terapia combinada inicial",
+      "AMBITION",
+      "antagonista de receptor de endotelina",
+      "inibidor de PDE5",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-troca-para-riociguate-em-risco-intermediario",
+    "statement": "No paciente com HAP em terapia oral combinada (antagonista do receptor de endotelina + inibidor de PDE5) classificado como risco intermediário, sugere-se substituir o inibidor de PDE5 (sildenafila ≥60mg/dia ou tadalafila 20-40mg/dia) por riociguate. Recomendação CONDICIONAL (Ponderado), qualidade de evidência MUITO BAIXA. Ensaio de base: aberto, não cego, n=111. Desfecho primário (melhora em ao menos 2 de 3 parâmetros — DTC6M, NT-proBNP, classe funcional OMS — sem piora em nenhum, em 24 semanas): 41% com riociguate vs. 20% com controle (OR 2,78; IC95% 1,53-5,06; p=0,007). Piora clínica: 1% vs. 9% (OR 0,10; IC95% 0,01-0,73; p=0,0047).",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "MtBx",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional) e qualidade MtBx (muito baixa), não a escala Classe/Nível da ESC/AHA.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão arterial pulmonar",
+      "riociguate",
+      "sildenafila",
+      "tadalafila",
+      "risco intermediário",
+      "troca de classe",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo2-sildenafila-nao-recomendada",
+    "statement": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), sugere-se NÃO USAR sildenafila. Recomendação CONDICIONAL (Ponderado), qualidade de evidência MUITO BAIXA — uma das três recomendações negativas do documento para esse grupo específico de hipertensão pulmonar.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "MtBx",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade MtBx (muito baixa).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 2",
+      "doença cardíaca esquerda",
+      "sildenafila",
+      "recomendação negativa",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo2-bosentana-nao-recomendada",
+    "statement": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), sugere-se NÃO USAR bosentana. Recomendação CONDICIONAL (Ponderado), qualidade de evidência BAIXA.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade Baixa.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 2",
+      "doença cardíaca esquerda",
+      "bosentana",
+      "recomendação negativa",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo2-macitentana-contraindicada",
+    "statement": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), recomenda-se NÃO USAR macitentana. Recomendação FORTE, qualidade de evidência MODERADA — a mais firme das três recomendações negativas da diretriz para esse grupo (junto com sildenafila e bosentana, ambas condicionais).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). NOTA DE SISTEMA: recomendação GRADE — Forte, qualidade Moderada (Mod).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 2",
+      "doença cardíaca esquerda",
+      "macitentana",
+      "recomendação negativa forte",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-terapia-tripla-selexipague-oral",
+    "statement": "Na hipertensão arterial pulmonar em terapia tripla sequencial, a adição de selexipague oral é recomendada — Nível de evidência I-B (escala clássica Classe/Nível, seção da diretriz fora do escopo das quatro perguntas PICO em GRADE).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). Seção de terapia tripla sequencial, fora do escopo GRADE — escala clássica Classe I-III/Nível A-C.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "terapia tripla sequencial",
+      "selexipague",
+      "hipertensão arterial pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-terapia-tripla-iloprosta-inalatorio",
+    "statement": "Na hipertensão arterial pulmonar em terapia tripla sequencial, a adição de iloprosta inalatório é recomendada — Nível de evidência IIa-C.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). Seção de terapia tripla sequencial, fora do escopo GRADE.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "terapia tripla sequencial",
+      "iloprosta inalatório",
+      "hipertensão arterial pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-terapia-tripla-sotatercepte",
+    "statement": "Na hipertensão arterial pulmonar, o sotatercepte (agente que atua na via da ativina) é apresentado como alternativa mais recente de terapia tripla sequencial — Nível de evidência I-A, o mais alto do conjunto de opções de escalonamento citadas pela diretriz.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). Seção de terapia tripla sequencial, fora do escopo GRADE.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "terapia tripla sequencial",
+      "sotatercepte",
+      "via da ativina",
+      "hipertensão arterial pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-oxigenoterapia-domiciliar-controversa",
+    "statement": "Na hipertensão arterial pulmonar, a oxigenoterapia domiciliar é indicada para PaO2 <60mmHg — Classe IIa-C, evidência limitada, declarada explicitamente como controversa pelo próprio documento da diretriz.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (conferido no Crossref em 07/08/2026). Recomendação declarada como controversa pelo próprio texto da diretriz.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "oxigenoterapia domiciliar",
+      "hipertensão arterial pulmonar",
+      "hipoxemia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
