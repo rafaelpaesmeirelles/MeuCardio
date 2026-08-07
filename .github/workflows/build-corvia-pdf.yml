@@ -27,6 +27,9 @@ jobs:
       - name: Install PDF dependencies
         run: python -m pip install --disable-pip-version-check reportlab pillow pymupdf
 
+      - name: Apply reviewed layout corrections
+        run: python tools/patch_corvia_pdf_layout.py
+
       - name: Build PDF
         run: python tools/build_corvia_pdf.py
 
