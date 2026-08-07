@@ -7003,5 +7003,101 @@
       "gestação",
       "isuog"
     ]
+  },
+  {
+    "slug": "rastreio-de-ansiedade-pelo-gad-7-no-paciente-cardiopata",
+    "name": "Rastreio de ansiedade generalizada (GAD-7) no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Questionário autoaplicável de 7 itens (Generalized Anxiety Disorder-7) que pontua a frequência de sintomas nucleares de ansiedade generalizada nas duas semanas anteriores — desenvolvido originalmente para atenção primária, hoje o instrumento de rastreio de ansiedade mais usado em pesquisa e prática clínica, inclusive em cardiologia, onde o transtorno de ansiedade generalizada é prevalente na doença arterial coronariana.",
+    "reference_range": "Pontuação de 0 a 21 (cada um dos 7 itens de 0 a 3). No estudo de validação original (Spitzer et al., 2006, atenção primária), o corte ≥10 foi o ponto ótimo para identificar TAG provável, com sensibilidade de 89% e especificidade de 82% contra entrevista estruturada por profissional de saúde mental — quanto maior a pontuação acima desse corte, maior a probabilidade e a gravidade do quadro.",
+    "indications": "Rastreio sistemático de ansiedade em paciente cardiopata internado ou ambulatorial — a prevalência de transtornos ansiosos é alta na doença arterial coronariana e frequentemente subdiagnosticada quando a atenção clínica se concentra só nos sintomas depressivos. Útil também no diagnóstico diferencial de sintomas físicos (palpitação, dispneia, desconforto torácico) que podem ter componente ansioso sobreposto à doença cardíaca de base.",
+    "interpretation": "Escala validada estruturalmente numa amostra italiana de doença arterial coronariana (Bolgeo et al., 2023): estrutura fatorial unidimensional confirmada, alfa de Cronbach 0,89 e índice de confiabilidade composta 0,90, com associação significativa entre GAD-7 e PHQ-9 — sustentando o uso do instrumento nessa população para comparação de escores entre subgrupos de sexo e idade. Resultado positivo (≥10) indica necessidade de avaliação diagnóstica formal, não substitui a entrevista clínica.",
+    "limitations": "É instrumento de rastreio, não diagnóstico — TAG é diagnóstico clínico que exige critérios formais (DSM/CID) além da pontuação do questionário. Sintomas somáticos de ansiedade (palpitação, taquicardia, dispneia, sudorese) se sobrepõem a sintomas de doença cardíaca ativa ou de efeito adverso medicamentoso, o que pode gerar falso-positivo se aplicado sem essa ressalva clínica — e, no sentido inverso, atribuir sintoma cardíaco real a 'apenas ansiedade' sem investigação é o erro oposto e igualmente perigoso.",
+    "source_refs": [
+      "Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006;166(10):1092-1097. DOI: 10.1001/archinte.166.10.1092. PMID: 16717171.",
+      "Bolgeo T, Di Matteo R, Simonelli N, Dal Molin A, Lusignani M, Bassola B, Vellone E, Maconi A, Iovino P. Psychometric properties and measurement invariance of the 7-item General Anxiety Disorder scale (GAD-7) in an Italian coronary heart disease population. J Affect Disord. 2023;334:213-219. DOI: 10.1016/j.jad.2023.04.140. PMID: 37149049."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "gad-7",
+      "rastreio de ansiedade",
+      "doenca coronariana",
+      "saude mental",
+      "transtorno de ansiedade generalizada"
+    ]
+  },
+  {
+    "slug": "escala-hospitalar-de-ansiedade-e-depressao-hads-no-paciente-cardiopata",
+    "name": "Escala Hospitalar de Ansiedade e Depressão (HADS) no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Questionário autoaplicável de 14 itens, divididos em duas subescalas de 7 itens cada — HADS-A (ansiedade) e HADS-D (depressão) —, concebido originalmente para uso em ambulatório médico-cirúrgico geral. Diferença estrutural relevante para o cardiopata: os itens foram escolhidos deliberadamente para excluir sintomas somáticos (fadiga, alteração de sono, alteração de apetite) que se confundem com manifestação da própria doença física, medindo de forma mais pura o componente afetivo e cognitivo do sofrimento psíquico.",
+    "reference_range": "Cada subescala pontua de 0 a 21. Na revisão sistemática de validade de Bjelland et al. (2002), sobre 747 artigos que usaram o instrumento, o melhor equilíbrio entre sensibilidade e especificidade (~0,80 para ambas as subescalas) foi obtido com o corte de 8 pontos ou mais em cada subescala, separadamente, para definir 'caso provável' de ansiedade ou de depressão.",
+    "indications": "Rastreio combinado de ansiedade e depressão no paciente com doença cardiovascular internado ou ambulatorial, sobretudo quando sintomas somáticos (fadiga, insônia, inapetência) tornam instrumentos que os incluem (como PHQ-9 ou BDI-II) mais sujeitos a falso-positivo por conta da própria doença de base ou de sua fase de recuperação.",
+    "interpretation": "A revisão de Bjelland et al. encontrou boa consistência interna (alfa de Cronbach médio 0,83 na HADS-A e 0,82 na HADS-D) e estrutura fatorial de dois componentes bem replicada, com desempenho como instrumento de rastreio equivalente ao do General Health Questionnaire (GHQ) em população médica, psiquiátrica e da comunidade geral — sustentando seu uso em ambiente hospitalar não psiquiátrico, cenário para o qual foi originalmente desenhado.",
+    "limitations": "É instrumento de rastreio, não diagnóstico — pontuação elevada indica necessidade de avaliação clínica estruturada, não confirma por si só transtorno de ansiedade ou depressivo maior. Por excluir itens somáticos, pode subestimar a carga sintomática total em quem tem apresentação predominantemente somática do sofrimento psíquico. A escala tem uso amplamente publicado em cardiologia (síndrome coronariana aguda, insuficiência cardíaca, pós-operatório de cirurgia cardíaca), mas os dois artigos-fonte aqui citados não são, eles próprios, estudos de validação em população cardiológica brasileira — a tradução/adaptação transcultural usada localmente deve ser conferida antes de aplicação em protocolo formal de pesquisa.",
+    "source_refs": [
+      "Zigmond AS, Snaith RP. The hospital anxiety and depression scale. Acta Psychiatr Scand. 1983;67(6):361-370. DOI: 10.1111/j.1600-0447.1983.tb09716.x. PMID: 6880820.",
+      "Bjelland I, Dahl AA, Haug TT, Neckelmann D. The validity of the Hospital Anxiety and Depression Scale. An updated literature review. J Psychosom Res. 2002;52(2):69-77. DOI: 10.1016/s0022-3999(01)00296-3. PMID: 11832252."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hads",
+      "rastreio de ansiedade",
+      "rastreio de depressao",
+      "saude mental",
+      "instrumento sem itens somaticos"
+    ]
+  },
+  {
+    "slug": "inventario-de-depressao-de-beck-ii-bdi-ii-no-paciente-cardiopata",
+    "name": "Inventário de Depressão de Beck-II (BDI-II) no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Questionário autoaplicável de 21 itens, cada um pontuado de 0 a 3, que avalia a intensidade de sintomas depressivos (cognitivos, afetivos e somáticos) nas duas semanas anteriores, seguindo mais de perto os critérios diagnósticos do DSM-IV que a versão original de 1961 — é um dos instrumentos de autorrelato de depressão mais usados em pesquisa clínica, inclusive em cardiologia.",
+    "reference_range": "Pontuação total de 0 a 63; o manual do instrumento (Beck, Steer e Brown, 1996) descreve as faixas convencionais 0-13 (mínima), 14-19 (leve), 20-28 (moderada) e 29-63 (grave), amplamente reproduzidas na literatura. Em amostra específica de 750 cardiopatas ambulatoriais do Instituto de Cardiologia de Montreal, o corte ótimo contra entrevista psiquiátrica estruturada (PRIME-MD) foi 10 para a amostra total (sensibilidade 83%, especificidade 73%) — mais baixo que o corte geral do manual —, com variação por subgrupo (13 em mulheres, 10 em homens; 15 na presença de transtorno de ansiedade, 10 na ausência).",
+    "indications": "Rastreio de sintomas depressivos no cardiopata ambulatorial ou internado, com atenção a fatores que alteram a acurácia do corte (sexo, ansiedade concomitante) segundo o estudo de validação específico em cardiologia.",
+    "interpretation": "Moullec et al. (2015) avaliaram 750 pacientes ambulatoriais do Departamento de Medicina Nuclear do Instituto de Cardiologia de Montreal: 42 (6%) preencheram critério de transtorno depressivo maior atual pela PRIME-MD. A área sob a curva ROC ajustada para covariáveis (idade, sexo, escolaridade, tabagismo, obesidade, transtorno de ansiedade, uso de psicofármaco, doença arterial coronariana prévia) foi significativamente menor que a curva não ajustada (0,76 vs. 0,84), e os autores concluem explicitamente que um corte estabelecido numa população pode não valer para outra — recomendação direta contra aplicar o corte geral do manual sem ajuste ao contexto clínico.",
+    "limitations": "É instrumento de rastreio, não diagnóstico. Itens somáticos (alteração de sono, apetite, fadiga, perda de interesse sexual) se sobrepõem a sintomas da própria doença cardíaca ou de medicação cardiovascular, inflando a pontuação por causa não depressiva — a mesma ressalva já registrada para o PHQ-9 nesta base. O corte ótimo varia por sexo e por presença de ansiedade concomitante segundo o próprio estudo de validação em cardiopatas, então usar cegamente o corte único do manual geral (14) nessa população pode reduzir a sensibilidade.",
+    "source_refs": [
+      "Beck AT, Steer RA, Ball R, Ranieri W. Comparison of Beck Depression Inventories -IA and -II in psychiatric outpatients. J Pers Assess. 1996;67(3):588-597. DOI: 10.1207/s15327752jpa6703_13. PMID: 8991972.",
+      "Moullec G, Plourde A, Lavoie KL, Suarthana E, Bacon SL. Beck Depression Inventory II: determination and comparison of its diagnostic accuracy in cardiac outpatients. Eur J Prev Cardiol. 2015;22(5):665-672. DOI: 10.1177/2047487314527851. PMID: 24618475."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bdi-ii",
+      "rastreio de depressao",
+      "saude mental",
+      "cardiopata ambulatorial",
+      "corte diagnostico"
+    ]
+  },
+  {
+    "slug": "indice-de-qualidade-de-sono-de-pittsburgh-psqi-no-paciente-cardiopata",
+    "name": "Índice de Qualidade de Sono de Pittsburgh (PSQI) no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Questionário autoaplicável de 19 itens que gera sete escores de componente — qualidade subjetiva do sono, latência, duração, eficiência habitual, distúrbios do sono, uso de medicação para dormir e disfunção diurna — somados num escore global de 0 a 21, referentes ao mês anterior. É o instrumento de rastreio de qualidade de sono mais usado tanto em psiquiatria quanto, hoje, em cardiologia.",
+    "reference_range": "Escore global de 0 a 21. No estudo de validação original (Buysse et al., 1989), um escore global de Pittsburgh maior que 5 teve sensibilidade de 89,6% e especificidade de 86,5% (kappa=0,75) para distinguir 'bons dormidores' (voluntários saudáveis) de 'maus dormidores' (pacientes deprimidos e pacientes com transtorno do sono).",
+    "indications": "Avaliação de qualidade de sono no cardiopata, população em que a má qualidade do sono é fator de risco cardiovascular modificável reconhecido e, ao mesmo tempo, consequência comum da própria doença cardíaca (dispneia paroxística noturna, ortopneia, nictúria, apneia do sono, ansiedade sobre o próprio quadro). A revisão sistemática de Gazerani et al. (2025) identificou o PSQI como o instrumento mais usado para essa avaliação especificamente em pacientes com insuficiência cardíaca, entre 37 estudos revisados.",
+    "interpretation": "Na revisão de Gazerani et al., fatores relacionados à saúde mental (depressão, fadiga) e ao estilo de vida (sexo feminino, IMC elevado) associaram-se de forma consistente a pior qualidade de sono medida pelo PSQI em pacientes com insuficiência cardíaca — reforçando que o instrumento captura um desfecho multideterminado, não só a arquitetura do sono isoladamente, e que a investigação de má qualidade de sono nessa população deve considerar rastreio concomitante de depressão.",
+    "limitations": "É instrumento de rastreio subjetivo (autorrelato), não substitui polissonografia quando há suspeita de apneia obstrutiva do sono ou outro distúrbio respiratório do sono que exija diagnóstico objetivo — indicação já coberta em separado nesta base pelo verbete de polissonografia no idoso cardiopata. A mesma revisão sistemática que valida seu uso amplo em insuficiência cardíaca conclui que ainda falta instrumento de rastreio de sono desenhado especificamente para essa população, o que é uma limitação declarada da literatura, não um defeito do PSQI isoladamente.",
+    "source_refs": [
+      "Buysse DJ, Reynolds CF 3rd, Monk TH, Berman SR, Kupfer DJ. The Pittsburgh Sleep Quality Index: a new instrument for psychiatric practice and research. Psychiatry Res. 1989;28(2):193-213. DOI: 10.1016/0165-1781(89)90047-4. PMID: 2748771.",
+      "Gazerani A, Manzari ZS, Mohammadi E, Amini M, Manzari TS, Dalir Z. Sleep Quality in Heart Failure Patients: A Systematic Review of Risk Factors and Assessment Tools. Iran J Public Health. 2025;54(9):1842-1856. DOI: 10.18502/ijph.v54i9.19853. PMID: 41277919."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "psqi",
+      "qualidade de sono",
+      "saude mental",
+      "insuficiencia cardiaca",
+      "fator de risco cardiovascular"
+    ]
   }
 ]
