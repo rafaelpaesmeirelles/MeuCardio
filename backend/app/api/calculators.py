@@ -4,6 +4,13 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from app.core.security import current_user
 from app.services import calculators as calc
+from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
+
+# Calculadoras perioperatórias produzidas pelo ChatGPT são registradas no mesmo
+# catálogo usado pelo frontend genérico e pela avaliação pré-operatória.
+# A atualização ocorre após `calculators` estar completamente importado, evitando
+# duplicar as dataclasses/infraestrutura existentes.
+calc.REGISTRY.update(PERIOPERATIVE_REGISTRY)
 
 router = APIRouter(prefix="/api/calculators", tags=["calculadoras"])
 
