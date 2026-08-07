@@ -12942,5 +12942,125 @@
       "Tang WH, Wang Z, Levison BS, Koeth RA, Britt EB, Fu X, Wu Y, Hazen SL. Intestinal microbial metabolism of phosphatidylcholine and cardiovascular risk. N Engl J Med. 2013;368(17):1575-1584. DOI: 10.1056/NEJMoa1109400. PMID: 23614584"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "alimento-ultraprocessado-e-risco-cardiovascular-caso",
+    "titulo": "Consumo de alimento ultraprocessado prediz doença cardiovascular além da composição nutricional?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente de 45 anos, sem diagnóstico cardiovascular prévio, questiona se pode continuar consumindo produtos industrializados 'light' e 'diet' com baixo teor de sódio e açúcar declarado no rótulo, argumentando que a composição nutricional está dentro do recomendado.",
+    "pergunta": "A coorte NutriNet-Santé (Srour et al., BMJ 2019) mostrou que o grau de processamento do alimento (classificação NOVA) prediz risco cardiovascular independentemente da composição nutricional declarada?",
+    "opcoes": [
+      "Não — uma vez ajustado para sódio, açúcar, gordura saturada e fibra, a associação com alimento ultraprocessado deixa de ser significativa",
+      "Sim — em 105.159 participantes seguidos por 5,2 anos, cada 10 pontos percentuais a mais de ultraprocessado na dieta associou-se a HR 1,12 para doença cardiovascular global, e a associação permaneceu significativa após ajuste para múltiplos marcadores de qualidade nutricional da dieta",
+      "O estudo não avaliou composição nutricional, apenas classificação NOVA, portanto a pergunta não pode ser respondida por ele",
+      "Sim, mas apenas para doença cerebrovascular — não houve associação com doença coronariana em nenhuma análise"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Srour B et al. (BMJ 2019;365:l1451, PMID 31142457) acompanharam 105.159 participantes da coorte francesa NutriNet-Santé por 5,2 anos. Cada incremento de 10 pontos percentuais na proporção de alimento ultraprocessado associou-se a HR 1,12 (IC95% 1,05-1,20) para doença cardiovascular global, HR 1,13 para doença coronariana e HR 1,11 para doença cerebrovascular — todas significativas. A associação manteve-se significativa após ajuste para gordura saturada, sódio, açúcar, fibra e um padrão alimentar saudável derivado por análise de componentes principais, sugerindo que o grau de processamento carrega informação de risco além da composição nutricional tradicionalmente contada em rótulo.",
+    "source_refs": [
+      "Srour B, Fezeu LK, Kesse-Guyot E, Allès B, Méjean C, Andrianasolo RM, Chazelas E, Deschasaux M, Hercberg S, Galan P, Monteiro CA, Julia C, Touvier M. Ultra-processed food intake and risk of cardiovascular disease: prospective cohort study (NutriNet-Santé). BMJ. 2019;365:l1451. DOI: 10.1136/bmj.l1451. PMID: 31142457"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jornada-de-trabalho-longa-e-risco-de-avc-caso",
+    "titulo": "Jornada de trabalho de 55 horas ou mais por semana eleva risco de AVC?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente de 50 anos relata rotina de trabalho de aproximadamente 58 horas semanais há mais de uma década, sem outros fatores de risco cardiovascular relevantes na anamnese além disso.",
+    "pergunta": "A metanálise do consórcio IPD-Work (Kivimäki et al., Lancet 2015), reunindo mais de 600 mil indivíduos, encontrou associação entre jornada de trabalho ≥55 horas/semana e risco de AVC?",
+    "opcoes": [
+      "Não — jornada de trabalho longa associou-se apenas a doença coronariana, sem relação com AVC",
+      "Sim — comparado a jornada padrão de 35-40h/semana, trabalhar ≥55h/semana associou-se a RR de 1,33 para AVC incidente, com relação dose-resposta clara entre faixas de jornada",
+      "A metanálise encontrou associação em homens mas não em mulheres",
+      "Sim, mas a associação desapareceu completamente após ajuste para fatores de confusão em todas as análises de sensibilidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Kivimäki M et al. (Lancet 2015;386(10005):1739-1746, PMID 26298822), reunindo dados publicados e não publicados de 25 estudos e 24 coortes (603.838 indivíduos para doença coronariana, 528.908 para AVC), encontraram que trabalhar ≥55h/semana associou-se a RR 1,33 (IC95% 1,11-1,61; p=0,002) para AVC incidente, com relação dose-resposta clara (RR 1,10 para 41-48h, 1,27 para 49-54h, 1,33 para ≥55h; p de tendência <0,0001). A associação com doença coronariana foi mais fraca (RR 1,13). O excesso de risco de AVC manteve-se estável em análises que trataram causalidade reversa, ajuste multivariável para outros fatores de risco e diferentes métodos de captação do desfecho.",
+    "source_refs": [
+      "Kivimäki M, Jokela M, Nyberg ST, Singh-Manoux A, Fransson EI, Alfredsson L, et al. Long working hours and risk of coronary heart disease and stroke: a systematic review and meta-analysis of published and unpublished data for 603,838 individuals. Lancet. 2015;386(10005):1739-1746. DOI: 10.1016/S0140-6736(15)60295-1. PMID: 26298822"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "i-pass-passagem-de-plantao-e-reducao-de-erro-medico-caso",
+    "titulo": "Passagem de plantão estruturada (I-PASS) reduz erro médico sem aumentar tempo gasto?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Equipe de enfermaria de cardiologia debate se vale a pena adotar um mnemônico estruturado (I-PASS) para a passagem de plantão de rotina entre médicos, preocupada que isso alongue o tempo da troca de turno sem benefício comprovado em desfecho.",
+    "pergunta": "O estudo multicêntrico de Starmer et al. (NEJM 2014) mostrou redução de erro médico com o programa I-PASS sem aumento do tempo de passagem de plantão?",
+    "opcoes": [
+      "Não — houve redução de erro, mas às custas de aumento significativo do tempo de passagem de plantão (de 2,4 para mais de 4 minutos por paciente)",
+      "Sim — em 10.740 internações, a taxa de erro médico caiu 23% e a de evento adverso evitável caiu 30%, sem mudança significativa na duração da passagem de plantão (2,4 vs 2,5 min/paciente) nem no fluxo de trabalho do residente",
+      "O estudo não mediu tempo de passagem de plantão, apenas taxa de erro",
+      "Sim, mas a redução de erro não foi estatisticamente significativa em nenhum dos nove hospitais participantes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Starmer AJ et al. (N Engl J Med. 2014;371(19):1803-1812, PMID 25372088) conduziram estudo de intervenção prospectivo em nove hospitais, avaliando o programa I-PASS de passagem de plantão estruturada. Em 10.740 internações, a taxa de erro médico caiu 23% (24,5 para 18,8 por 100 internações; p<0,001) e a de evento adverso evitável caiu 30% (4,7 para 3,3; p<0,001), com redução significativa de erro em seis de nove centros. A duração da passagem de plantão não mudou significativamente (2,4 vs 2,5 min/paciente; p=0,55), nem o fluxo de trabalho do residente — a intervenção incluiu mnemônico padronizado, treinamento de comunicação e observação por corpo docente, não apenas um formulário.",
+    "source_refs": [
+      "Starmer AJ, Spector ND, Srivastava R, West DC, Rosenbluth G, Allen AD, et al. Changes in medical errors after implementation of a handoff program. N Engl J Med. 2014;371(19):1803-1812. DOI: 10.1056/NEJMsa1405556. PMID: 25372088"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "segunda-vitima-suporte-ao-profissional-apos-erro-caso",
+    "titulo": "O conceito de 'segunda vítima' desloca o foco de cuidado do paciente para o profissional?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Após um evento adverso grave em procedimento cardiológico, um residente pergunta se a instituição deveria oferecer algum tipo de suporte a ele, ou se isso seria inapropriado por 'tirar o foco' do paciente afetado.",
+    "pergunta": "Segundo o texto fundador do conceito de 'segunda vítima' (Wu, BMJ 2000), oferecer suporte estruturado ao profissional envolvido em erro médico compete com o cuidado devido ao paciente?",
+    "opcoes": [
+      "Sim — o próprio conceito propõe substituir a resposta institucional centrada no paciente por uma centrada no profissional",
+      "Não — o texto argumenta que são cuidados paralelos e não concorrentes: o paciente (primeira vítima) permanece prioridade absoluta, e a ausência histórica de suporte estruturado ao profissional (segunda vítima) tende a fazer com que o erro fique escondido, prejudicando também o aprendizado sistêmico de segurança do paciente",
+      "O texto não discute suporte institucional, apenas descreve sintomas do profissional após erro",
+      "Sim, e por isso o conceito nunca foi adotado por instituições de saúde"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Wu AW (BMJ. 2000;320(7237):726-727, PMID 10720336) cunhou o termo 'segunda vítima' num editorial que descreve o padrão recorrente de vergonha, culpa, isolamento e medo de litígio do profissional após erro sério, e argumenta que a cultura médica tradicional — ao tratar erro como falha de caráter individual e não oferecer suporte estruturado ao profissional — inibe a revelação do erro, prejudicando o aprendizado sistêmico de segurança do paciente. O texto é explícito em não deslocar prioridade do paciente (a primeira vítima); propõe um cuidado adicional e paralelo, hoje formalizado em programas de suporte entre pares (peer support) em muitas instituições.",
+    "source_refs": [
+      "Wu AW. Medical error: the second victim. The doctor who makes the mistake needs help too. BMJ. 2000;320(7237):726-727. DOI: 10.1136/bmj.320.7237.726. PMID: 10720336"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-de-padua-decisao-de-tromboprofilaxia-em-paciente-clinico-caso",
+    "titulo": "Escore de Padua discrimina risco de TEV o suficiente para orientar profilaxia em paciente clínico internado?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Paciente clínico internado por descompensação de insuficiência cardíaca, sem indicação cirúrgica, é avaliado quanto à necessidade de tromboprofilaxia farmacológica de rotina.",
+    "pergunta": "No estudo de derivação do Escore de Padua (Barbar et al., J Thromb Haemost 2010), qual foi a diferença de incidência de TEV entre pacientes de alto risco sem profilaxia e pacientes de alto risco com profilaxia adequada?",
+    "opcoes": [
+      "Não houve diferença significativa — a profilaxia farmacológica não alterou a incidência de TEV em pacientes de alto risco pelo escore",
+      "TEV ocorreu em 11,0% dos pacientes de alto risco sem profilaxia contra 2,2% dos que receberam profilaxia adequada (HR 0,13; IC95% 0,04-0,40), com sangramento em apenas 1,6% do grupo tratado",
+      "A profilaxia farmacológica reduziu TEV, mas às custas de taxa de sangramento maior que 15% no grupo tratado",
+      "O estudo avaliou apenas pacientes de baixo risco, sem comparação entre grupos de alto risco tratados e não tratados"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Barbar S et al. (J Thromb Haemost. 2010;8(11):2450-2457, PMID 20738765) acompanharam 1.180 pacientes clínicos internados em Pádua, classificados por um modelo simples de risco (o Escore de Padua) em alto ou baixo risco de TEV, seguidos por até 90 dias. Entre os 469 pacientes de alto risco, TEV ocorreu em 31 de 283 (11,0%) sem profilaxia adequada contra 4 de 186 (2,2%) com profilaxia (HR 0,13; IC95% 0,04-0,40); sangramento ocorreu em apenas 3 de 186 (1,6%) do grupo tratado. Entre os 711 pacientes de baixo risco, TEV ocorreu em apenas 2 (0,3%). O escore hoje é referência para decidir tromboprofilaxia farmacológica em paciente clínico hospitalizado.",
+    "source_refs": [
+      "Barbar S, Noventa F, Rossetto V, Ferrari A, Brandolin B, Perlati M, De Bon E, Tormene D, Pagnan A, Prandoni P. A risk assessment model for the identification of hospitalized medical patients at risk for venous thromboembolism: the Padua Prediction Score. J Thromb Haemost. 2010;8(11):2450-2457. DOI: 10.1111/j.1538-7836.2010.04044.x. PMID: 20738765"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-improve-sangramento-decisao-mecanica-vs-farmacologica-caso",
+    "titulo": "Quando o Escore IMPROVE de sangramento indica trocar profilaxia farmacológica por mecânica?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Paciente clínico de alto risco pelo Escore de Padua tem, na admissão, úlcera gastroduodenal ativa documentada por endoscopia recente e plaquetopenia leve.",
+    "pergunta": "Segundo o registro IMPROVE (Decousus et al., Chest 2011), qual desses dois fatores teve a maior razão de chance (odds ratio) independente para sangramento intra-hospitalar em paciente clínico?",
+    "opcoes": [
+      "Plaquetopenia, com OR 4,15",
+      "Úlcera gastroduodenal ativa, com OR 4,15 — o fator de risco independente mais forte identificado no registro, à frente de sangramento prévio (OR 3,64) e plaquetopenia (OR 3,37)",
+      "Nenhum dos dois foi identificado como fator de risco independente no registro IMPROVE",
+      "Os dois têm OR idêntico de 3,37, segundo o modelo multivariado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Decousus H et al. (Chest. 2011;139(1):69-79, PMID 20453069) usaram o registro observacional multinacional IMPROVE, com 15.156 pacientes clínicos agudamente enfermos, para identificar fatores de risco de sangramento intra-hospitalar (incidência cumulativa de 3,2% em 14 dias). Os três fatores independentes mais fortes por regressão múltipla foram: úlcera gastroduodenal ativa (OR 4,15; IC95% 2,21-7,77) — o mais forte —, sangramento prévio (OR 3,64; IC95% 2,21-5,99) e plaquetopenia (OR 3,37; IC95% 1,84-6,18). Um paciente com esses dois fatores presentes tem risco de sangramento alto o suficiente para justificar considerar profilaxia mecânica em vez de farmacológica, mesmo sendo também de alto risco de TEV pelo Escore de Padua.",
+    "source_refs": [
+      "Decousus H, Tapson VF, Bergmann JF, Chong BH, Froehlich JB, Kakkar AK, et al. Factors at admission associated with bleeding risk in medical patients: findings from the IMPROVE investigators. Chest. 2011;139(1):69-79. DOI: 10.1378/chest.09-3081. PMID: 20453069"
+    ],
+    "review_status": "revisado"
   }
 ]
