@@ -391,12 +391,25 @@ export default function CaixaDeEmail() {
     apiEmail.get<ContatoExterno[]>("/email/contatos?limite=100").then(setContatos).catch(() => setContatos([]));
   }, [semSessao, enderecoAtual]);
 
+  // 07/08/2026: `contaEmailId` NÃO entra nesta lista de dependências — achado
+  // reproduzindo o bug relatado pelo Rafael ("pastas não carregam no Yahoo,
+  // erro com um ID interno cru"). Causa raiz: ao trocar de conta, este efeito
+  // e o de baixo (que zera `pastaAtual`) disparam no MESMO ciclo, e o React
+  // roda os dois na ordem em que foram declarados — este vinha primeiro, e
+  // lia `pastaAtual` ainda com o valor ANTIGO (o id de pasta numérico da
+  // conta anterior) contra o `prefixoConta` já atualizado para a conta nova,
+  // gerando uma requisição cruzada (pasta de uma conta, endpoint de outra) —
+  // sempre 404 na Yahoo/Apple, que não reconhecem o id da outra conta.
+  // Sem `contaEmailId` aqui, este efeito só reage à mudança real de
+  // `pastaAtual`/`pastas`, que o efeito de baixo já sequencia direito
+  // (undefined/null primeiro, pasta e lista da conta nova depois).
   useEffect(() => {
     if (semSessao || !enderecoAtual || pastas === null) return;
     setMensagemAberta(null);
     setAnexosRecebidos([]);
     void carregarMensagens(pastaAtual);
-  }, [semSessao, enderecoAtual, pastaAtual, pastas, contaEmailId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [semSessao, enderecoAtual, pastaAtual, pastas]);
 
   useEffect(() => {
     if (!enderecoAtual) return;
