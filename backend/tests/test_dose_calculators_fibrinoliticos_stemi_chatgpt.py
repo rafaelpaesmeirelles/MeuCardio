@@ -76,10 +76,10 @@ def test_alteplase_stemi_60kg_peso_ajustado_90mg_total():
     assert r["dose_total_mg"] == 90.0
 
 
-def test_alteplase_stemi_66_9kg_ainda_e_peso_ajustado():
+def test_alteplase_stemi_66_9kg_respeita_teto_de_50mg_no_primeiro_segmento():
     c = FIBRINOLITICOS_STEMI_DOSE_REGISTRY["alteplase-stemi-esquema-acelerado-90min-2025"]
     r = c.compute({"peso": 66.9})
     assert r["peso_ge_67"] is False
-    assert r["infusao_primeiros_30min_mg"] == 50.2
+    assert r["infusao_primeiros_30min_mg"] == 50.0
     assert r["infusao_30_a_90min_mg"] == 33.5
-    assert r["dose_total_mg"] == 98.7
+    assert r["dose_total_mg"] == 98.5
