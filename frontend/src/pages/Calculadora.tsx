@@ -159,6 +159,10 @@ export default function Calculadora() {
       <p className="eyebrow" style={{ marginTop: "0.8rem" }}>{calc.theme}</p>
       <h1>{calc.name}</h1>
       <p style={{ color: "var(--texto-secundario)" }}>{calc.purpose}</p>
+      <p style={{ fontSize: "0.86rem" }}>
+        Fluxograma de decisão, resumo dos estudos e demais conteúdo de apoio na{" "}
+        <Link to={`/biblioteca?tema=${encodeURIComponent(calc.theme)}`}>Biblioteca — {calc.theme}</Link>.
+      </p>
 
       <div className="cartao cartao--clinico" style={{ marginTop: "1rem" }}>
         {calc.fields.map((f) => (
