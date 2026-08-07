@@ -422,3 +422,82 @@ em `casos-clinicos/metadados.json`.
   frente mais antiga de `galeria/`/`exames/` do segundo agente.
 
 ---
+
+## Rodada 6 — 07/08/2026 (backlog mais antigo, sem commits novos no momento do ciclo)
+
+Sem commits de conteúdo novos desde a rodada 5 neste ciclo — usei a janela de espera para revisar
+parte do backlog mais antigo sinalizado nas rodadas anteriores.
+
+### Commit `b88c0ae` — sincroniza 183 itens JSON e 42 documentos de content (commit grande, 8.206 inserções)
+
+**Verificação parcial, por amostragem** — commit grande demais para adversarial completo linha a
+linha no tempo desta rodada. Dois documentos de `content/Doença_coronariana/` foram escolhidos por
+densidade numérica (mais fácil de errar) e verificados **linha a linha contra os abstracts
+originais**:
+
+- **`revascularizacao-completa-versus-somente-lesao-culpada-no-iam-multiarterial-o-ensaio-complete.md`**
+  (ensaio COMPLETE, PMID 31475795): registro bate exatamente; números do desfecho coprimário 1
+  (7,8% vs. 10,5%, p=0,004) e 2 (8,9% vs. 16,7%, p<0,001) batem exatamente com o abstract. **Os
+  números de HR por momento de revascularização (0,77 [0,59-1,00] durante a internação; 0,69
+  [0,49-0,97] após a alta) também batem exatamente** — mas contra um **artigo complementar** (Wood
+  DA et al., JACC 2019, PMID 31779786) **não listado no `source_refs`** do documento (só a NEJM
+  principal é citada). Não é fabricação (os números batem com a fonte real), é lacuna de citação —
+  quem checar `source_refs` sozinho não vai achar a fonte desse detalhe específico.
+- **`choque-cardiogenico-na-sindrome-coronariana-aguda-culprit-shock-e-iabp-shock-ii.md`**
+  (CULPRIT-SHOCK PMID 29083953 + seguimento 1 ano PMID 30145971 + IABP-SHOCK II PMID 22920912 +
+  Lancet 12 meses PMID 24011548): **todos os 4 PMIDs batem exatamente** no registro do PubMed, e
+  **todos os números conferidos batem exatamente** com os abstracts: CULPRIT-SHOCK 45,9%/158/344
+  vs. 55,4%/189/341 RR 0,83 [0,71-0,96] p=0,01; morte RR 0,84 [0,72-0,98] p=0,03; 1 ano 50,0% vs.
+  56,9% RR 0,88 [0,76-1,01]; revascularização repetida 32,3% vs. 9,4% RR 3,44; reinternação por IC
+  5,2% vs. 1,2% RR 4,46; IABP-SHOCK II 39,7%/119/300 vs. 41,3%/123/298 RR 0,96 [0,79-1,17] p=0,69,
+  e todos os desfechos secundários (sangramento, isquemia periférica, sepse, AVC). **Boa prática
+  observada**: o documento marca `VERIFICAÇÃO HUMANA NECESSÁRIA` explicitamente para os
+  percentuais exatos de 12 meses do Lancet 2013, que não foram extraídos diretamente — em vez de
+  inventar ou aproximar. **PASSA integralmente**, com destaque positivo.
+
+**Resultado da amostra: PASSA**, com uma lacuna de citação menor (não erro de fato) no documento do
+COMPLETE. As 40 demais entradas de `content/` e as ~140 entradas das frentes JSON deste commit
+**não foram verificadas** nesta rodada — fica pendente para quem continuar.
+
+### Commit `051cc7a` — estudos: +13 ensaios pivotais em temas mais rasos
+
+**Conferido: os 13 PMIDs batem exatamente** no registro do PubMed (DELIVER 36027570, ENGAGE
+AF-TIMI 48 24251359, LEADER 27295427, PATENT-1 23883378, MOMENTUM 3 30883052, PADIS-PE 26151264,
+ProCESS 24635773, POG 9404 26700126, Statin Choice 17533211, validação Pooled Cohort Equations
+24682252, PARTITA 35369700, PURE 31492503, UPBEAT 22858387).
+
+**Números da entrada MOMENTUM 3 (slug `momentum-3-dispositivo-de-assistencia-ventricular-centrifugo-vs-axial`)
+conferidos contra o abstract original: batem exatamente** (76,9% vs. 64,8% RR 0,84 [0,78-0,91]
+p<0,001; substituição de bomba 2,3% vs. 11,3% RR 0,21 [0,11-0,38] p<0,001).
+
+**🔁 Confirma e localiza a origem de uma das 4 duplicatas de PMID já registradas na Rodada 1**: esta
+entrada (`momentum-3-dispositivo-de-assistencia-ventricular-centrifugo-vs-axial`, introduzida neste
+commit `051cc7a`) e a entrada `momentum-3-relatorio-final-dav-de-fluxo-centrifugo` (introduzida
+antes, no commit `3e55efe`) citam **o mesmo PMID/DOI** (30883052 /
+`10.1056/NEJMoa1900486`) — são o mesmo artigo ("A Fully Magnetically Levitated Left Ventricular
+Assist Device - Final Report", NEJM 2019) cadastrado duas vezes sob títulos ligeiramente diferentes
+("...versus axial" vs. "(relatório final)..."). Não é erro de fato (os números da nova entrada
+batem com a fonte real) — é duplicata de conteúdo, já registrada como achado da Rodada 1 e agora
+confirmada como tendo entrado por este commit específico.
+
+**Resultado: PASSA quanto a exatidão de PMID/número; confirma duplicata já registrada.** Os outros
+9 estudos deste commit (exceto MOMENTUM 3) não tiveram os números do `key_findings` conferidos
+linha a linha nesta rodada, só o registro do PMID.
+
+### Commits `97d639c` e `a7c275f` — material-paciente e checklists (7 itens, derivados de documento já publicado)
+
+Ambos os commits declaram explicitamente que os itens **não introduzem fonte nova** — são
+reformulações de documentos já verificados e publicados em `content/`, para os formatos de
+material do paciente e checklist de alta. **JSON válido** nos dois
+(`python3 -c "import json; json.load(open('material-paciente/metadados.json'))"` e o mesmo para
+`checklists/metadados.json`). Não conferi se os `documento_slug`/`documento_origem` referenciados
+realmente existem e estão publicados (checagem de integridade referencial, não de fato clínico) —
+fica para a próxima rodada.
+
+### Não verificado por falta de tempo nesta rodada (rodada 6)
+- 40 dos 42 documentos de `content/` e a maior parte das ~140 entradas JSON do commit `b88c0ae`
+  (só 2 documentos verificados por amostragem).
+- 9 dos 13 estudos do commit `051cc7a` (só MOMENTUM 3 teve os números conferidos).
+- Integridade referencial dos 7 itens de `97d639c`/`a7c275f` contra os documentos de origem.
+
+---
