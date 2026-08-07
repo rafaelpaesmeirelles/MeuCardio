@@ -35229,5 +35229,219 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "formula-de-fridericia-preferida-para-qtc-no-paciente-oncologico",
+    "statement": "O QTc deve ser calculado pela fórmula de Bazett [QT/(RR)^1/2] ou de Fridericia [QT/(RR)^1/3], usando-se sempre o mesmo método nas reavaliações seriadas do mesmo paciente; no paciente oncológico, a fórmula de Fridericia é preferida, por sofrer menos alteração na presença de taquicardia ou bradicardia.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "qtc",
+      "fórmula de fridericia",
+      "eletrocardiograma",
+      "arritmia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "biopsia-endomiocardica-na-suspeita-de-miocardite-por-imunoterapia-com-investigacao-inicial-negativa",
+    "statement": "Diante de suspeita de miocardite associada a inibidor de checkpoint imunológico, recomenda-se iniciar a investigação cardiovascular com dosagem de biomarcadores (troponina, NT-proBNP e proteína C-reativa), ECG, painel viral, ecocardiograma com strain e ressonância magnética cardíaca para confirmar o diagnóstico e excluir miocardite viral; biópsia endomiocárdica deve ser considerada quando há suspeita diagnóstica mesmo com investigação inicial negativa.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "miocardite",
+      "inibidor de checkpoint imunológico",
+      "biópsia endomiocárdica",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "agonistas-de-glp-1-preferidos-no-diabetico-oncologico-com-doenca-arterial-coronariana",
+    "statement": "Na presença de doença arterial coronariana, os agonistas do receptor de GLP-1 (liraglutida, dulaglutida e semaglutida) devem ser preferidos no tratamento do diabetes do paciente oncológico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "agonista de glp-1",
+      "diabetes",
+      "doença arterial coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "feve-40-nao-deve-receber-antraciclina-salvo-ausencia-de-alternativa-eficaz",
+    "statement": "Pacientes com fração de ejeção do ventrículo esquerdo ≤40% não devem receber terapia com antraciclina, a menos que não haja opção de tratamento eficaz disponível.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "fração de ejeção reduzida",
+      "cardiotoxicidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "transplante-cardiaco-apos-remissao-oncologica-de-pelo-menos-3-anos",
+    "statement": "Pacientes com insuficiência cardíaca aguda ou crônica associada a tratamento oncológico só devem ser considerados para transplante cardíaco quando atenderem aos critérios de remissão ou cura do câncer por um período maior que 3 anos.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "transplante cardíaco",
+      "remissão oncológica",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "stent-farmacologico-preferido-e-dapt-mantida-com-plaquetas-acima-de-30-mil-no-oncologico",
+    "statement": "No paciente oncológico com indicação de intervenção coronariana percutânea, o stent farmacológico deve ser preferido; a dupla antiagregação plaquetária pode ser mantida em pacientes com contagem de plaquetas >30.000/μL, na ausência de contraindicação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "stent farmacológico",
+      "dupla antiagregação plaquetária",
+      "trombocitopenia",
+      "intervenção coronariana percutânea"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "investigacao-de-dac-cinco-anos-apos-radioterapia-mediastinal-de-alta-dose",
+    "statement": "A investigação de doença arterial coronariana está indicada em pacientes 5 anos após exposição mediastinal à radioterapia em dose de pelo menos 30 Gy.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "radioterapia mediastinal",
+      "doença arterial coronariana",
+      "rastreamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-coronariana-e-reexposicao-cautelosa-apos-sindrome-coronariana-por-5-fluorouracila",
+    "statement": "Para pacientes que desenvolveram síndrome coronariana aguda com o uso de 5-fluorouracila, deve-se considerar a avaliação da anatomia coronariana pela equipe de cardio-oncologia; reexposição pode ser considerada em pacientes com evento leve, assintomáticos e cujo benefício da 5-fluorouracila tenha impacto prognóstico relevante, podendo-se considerar o uso de nitratos e vasodilatadores nesse cenário.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "5-fluorouracila",
+      "vasospasmo coronariano",
+      "síndrome coronariana aguda",
+      "reexposição"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escores-chads2-e-cha2ds2-vasc-acima-de-2-indicam-anticoagulacao-no-paciente-oncologico-com-fa",
+    "statement": "Embora não haja validação específica dos escores clássicos para a população oncológica, a anticoagulação na fibrilação atrial associada a câncer deve ser iniciada segundo os mesmos critérios adotados na população sem câncer: escores CHADS₂ e CHA₂DS₂-VASc acima de 2 indicam anticoagulação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "fibrilação atrial",
+      "cha2ds2-vasc",
+      "chads2",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "has-bled-na-personalizacao-da-terapia-antitrombotica-no-paciente-oncologico",
+    "statement": "A terapia antitrombótica no paciente oncológico deve ser personalizada, analisando-se o perfil do paciente, o tipo de câncer e o risco de trombose e de sangramento — este último, por exemplo, por meio do escore HAS-BLED.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "has-bled",
+      "risco de sangramento",
+      "terapia antitrombótica personalizada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cardiologista-desde-o-inicio-no-manejo-da-fibrilacao-atrial-no-paciente-oncologico",
+    "statement": "O manejo do paciente oncológico com fibrilação atrial deve incluir avaliação de cardiologista desde o início, associado a maiores taxas de uso de anticoagulação e menor incidência de complicações isquêmicas e hemorrágicas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Diretriz Brasileira de Cardio-oncologia – 2020",
+    "reference": "Hajjar LA et al. Diretriz Brasileira de Cardio-oncologia – 2020. Arq Bras Cardiol. 2020;115(5):1006-1043.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "fibrilação atrial",
+      "equipe multidisciplinar",
+      "cardiologista"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
