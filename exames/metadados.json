@@ -8682,5 +8682,30 @@
       "doxorrubicina lipossomal peguilada",
       "fracao de ejecao"
     ]
+  },
+  {
+    "slug": "genotipagem-de-slco1b1-abcg2-e-cyp2c9-para-sintomas-musculoesqueleticos-associados-a-estatina",
+    "name": "Genotipagem de SLCO1B1, ABCG2 e CYP2C9 para risco de sintomas musculoesqueléticos associados à estatina (SAMS)",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Identifica variantes em três genes que alteram a exposição sistêmica às estatinas: SLCO1B1 (transportador hepático de captação, relevante para TODAS as estatinas — variante mais estudada c.521T>C/rs4149056), ABCG2 (transportador de efluxo, relevante especificamente para a rosuvastatina — variante c.421C>A/rs2231142) e CYP2C9 (enzima de metabolização de fase I, relevante especificamente para a fluvastatina — variantes *2/rs1799853 e *3/rs1057910). O resultado classifica o paciente em fenótipos (função aumentada, normal, diminuída ou pobre para SLCO1B1 e ABCG2; metabolizador normal, intermediário ou pobre para CYP2C9).",
+    "reference_range": "Não se aplica valor numérico — resultado categórico por fenótipo/diplótipo, usado para escolher a estatina e a dose de menor risco dentro da diretriz CPIC (a diretriz classifica cada combinação de estatina/dose em risco baixo, uso com cautela ou uso a evitar, por fenótipo).",
+    "indications": "Antes de iniciar ou revisar terapia com estatina, sobretudo quando o paciente já teve sintomas musculoesqueléticos associados a estatina (SAMS) em uso prévio, ou quando doses mais altas (maior risco de SAMS, conforme a própria diretriz) são consideradas necessárias para a meta de LDL-C.",
+    "interpretation": "Segundo a diretriz 2022 do Clinical Pharmacogenetics Implementation Consortium (CPIC), que substitui as versões de 2012 e 2014 restritas a SLCO1B1/sinvastatina: SAMS abrange um espectro que vai de mialgia (dor sem elevação relevante de CK, ~1 em 10 usuários), a miopatia (CK ≥3x o limite superior da normalidade, ~1 em 2.000) e, raramente, rabdomiólise (~1 em 10.000). O alelo de função diminuída/nula em SLCO1B1 (rs4149056, alelo C) aumenta a exposição sistêmica a todas as estatinas e o risco de SAMS — a diretriz fornece uma tabela de estatina/dose preferencial por fenótipo SLCO1B1. Para ABCG2, o genótipo c.421AA (homozigoto para o alelo de função diminuída) associa-se a exposição (AUC) à rosuvastatina 144% maior que o genótipo c.421CC — recomenda-se dose inicial de rosuvastatina ≤20 mg nesse fenótipo, com estatina alternativa ou terapia combinada (ex.: associação com ezetimiba) se for necessária dose maior. Para CYP2C9, metabolizadores intermediários devem evitar fluvastatina acima de 40 mg/dia e metabolizadores pobres devem evitar doses acima de 20 mg/dia. A dose da estatina é o preditor independente mais forte de risco de SAMS — a diretriz cita risco cerca de 6 vezes maior com dose alta versus dose baixa, e reforça explicitamente que a terapia com estatina NÃO deve ser suspensa ou evitada somente com base no genótipo em paciente com indicação clínica clara, especialmente quando a decisão for compartilhada entre médico e paciente.",
+    "limitations": "A diretriz orienta qual estatina/dose usar quando o resultado genético já está disponível — não estabelece se ou quando testar (rastreio pré-emptivo versus reativo). Faltam dados prospectivos mostrando que prescrever com base no genótipo efetivamente reduz a incidência de SAMS na prática (os dados disponíveis, citados na própria diretriz, são de percepção do paciente sobre a estatina, adesão relatada e redução de LDL-C, com resultados mistos). Não há recomendação de dose para outras estatinas (pravastatina, pitavastatina, atorvastatina, lovastatina) além das combinações citadas — a diretriz reconhece evidência insuficiente para ação clínica nesses casos. Em crianças, não há dados sobre o efeito do genótipo SLCO1B1 na resposta ou miopatia por estatina.",
+    "source_refs": [
+      "Cooper-DeHoff RM, Niemi M, Ramsey LB, Luzum JA, Tarkiainen EK, Straka RJ, et al. The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin-Associated Musculoskeletal Symptoms. Clin Pharmacol Ther. 2022;111(5):1007-1021. DOI: 10.1002/cpt.2557. PMID: 35152405."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "farmacogenômica",
+      "slco1b1",
+      "abcg2",
+      "cyp2c9",
+      "estatina",
+      "miopatia",
+      "cpic"
+    ]
   }
 ]

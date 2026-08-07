@@ -5764,5 +5764,75 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "vasospasmo-coronariano-por-5-fluorouracil-rm-cardiaca",
+    "title": "Ressonância cardíaca — Vasospasmo coronariano induzido por 5-fluorouracil, com edema e realce subepicárdico",
+    "modality": "Ressonância cardíaca",
+    "theme": "Cardio-oncologia",
+    "file_path": "rm/vasospasmo-coronariano-por-5-fluorouracil-rm-cardiaca.jpg",
+    "findings": "Três planos de ressonância cardíaca no eixo curto médio-ventricular do mesmo paciente, homem de 45 anos com câncer de cólon metastático, 2 dias após o 3º ciclo de FOLFOX (ácido folínico, fluorouracil, oxaliplatina). (A) T2 STIR (short-tau inversion recovery): sinal aumentado do miocárdio, sugerindo edema. (B) Realce tardio por gadolínio (LGE): realce subepicárdico linear no segmento ântero-lateral médio (seta). (C) Mapeamento de T2: valores de T2 globalmente aumentados (tons de azul), predominando na parede lateral — achado quantitativo de edema miocárdico, coerente com (A).",
+    "teaching_points": "O paciente havia se apresentado com fibrilação atrial de início recente, dor torácica e supradesnivelamento difuso do segmento ST no ECG (achados que inicialmente levantaram suspeita de IAMCSST), troponina discretamente elevada e FEVE reduzida a 35% ao ecocardiograma transtorácico inicial. A ressonância, feita 8 dias depois, já mostrava recuperação da FEVE para 61% — a rápida reversibilidade da disfunção ventricular associada a edema miocárdico e realce subepicárdico (sem padrão de necrose isquêmica transmural) foi o conjunto de achados que sustentou o diagnóstico de vasospasmo coronariano induzido por 5-fluorouracil, e não IAM aterotrombótico. O paciente não foi submetido a cateterismo coronariano — a conclusão diagnóstica desta publicação apoiou-se inteiramente na reversibilidade funcional e no padrão de imagem multimodal, não em angiografia invasiva confirmatória, limitação que os próprios autores reconhecem. A cardiotoxicidade por 5-fluorouracil (e por outras fluoropirimidinas, como a capecitabina) tem incidência descrita muito variável na literatura (0-35%, conforme a série) e mecanismo multifatorial, incluindo vasospasmo por disfunção endotelial e lesão direta do cardiomiócito — clinicamente relevante porque costuma ser confundida com síndrome coronariana aguda aterotrombótica à primeira apresentação, quando a conduta correta é a suspensão do agente citotóxico, não necessariamente a via de reperfusão coronariana.",
+    "source_name": "Global Cardiology Science and Practice (acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10422872/",
+    "license": "CC BY 4.0",
+    "attribution": "Garbis K, Rafiee MJ, Luu J. 5-fluorouracil-induced coronary vasospasm: A cardiovascular magnetic resonance imaging case report. Glob Cardiol Sci Pract. 2023;2023(3):e202316. DOI: 10.21542/gcsp.2023.16. PMID: 37575292 — Figura 1, licenciada sob CC BY 4.0 (Creative Commons Attribution 4.0 International).",
+    "tags": [
+      "cardio-oncologia",
+      "5-fluorouracil",
+      "vasospasmo coronariano",
+      "ressonância cardíaca",
+      "edema miocárdico",
+      "realce tardio subepicárdico",
+      "quimioterapia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "discromia-azul-acinzentada-por-amiodarona-face",
+    "title": "Fotografia clínica — Discromia cutânea azul-acinzentada (\"blue man syndrome\") por uso prolongado de amiodarona",
+    "modality": "Fotografia clínica",
+    "theme": "Farmacologia",
+    "file_path": "clinico/discromia-azul-acinzentada-por-amiodarona-face.jpg",
+    "findings": "Homem de 51 anos, caucasiano, em uso de amiodarona 200 mg 2x/dia (400 mg/dia) por 3 anos sem seguimento médico regular (dose cumulativa estimada de aproximadamente 438 g). Setas amarelas apontam áreas de discromia azul-acinzentada na pele do nariz e das bochechas — regiões fotoexpostas —, surgidas nas 3 semanas anteriores à consulta. Olhos ocultados na fotografia original por preservação de identidade do paciente.",
+    "teaching_points": "A pigmentação azul-acinzentada (\"blue man syndrome\" ou síndrome do homem azul) é um efeito adverso incomum da amiodarona (descrito em cerca de 1-3% dos usuários crônicos), tipicamente após uso prolongado (em geral mais de 1 ano) e concentrado em áreas fotoexpostas — face, principalmente nariz e bochechas, e dorso das mãos. Resulta do acúmulo de lipofuscina e de complexos do próprio fármaco/metabólitos nos macrófagos dérmicos, com fotossensibilização contribuindo para o padrão de distribuição. É reversível após a suspensão da amiodarona, mas a resolução é lenta, ao longo de meses a anos — reforça a importância de orientar fotoproteção rigorosa a todo paciente em uso crônico do fármaco, tanto para prevenir a queimadura solar exagerada (fototoxicidade, o efeito cutâneo mais comum da amiodarona) quanto, possivelmente, para atenuar esta discromia. É um diagnóstico majoritariamente clínico e cosmético — não indica por si só toxicidade sistêmica grave (pulmonar, tireoidiana ou hepática) associada à amiodarona, que exigem rastreio próprio e independente.",
+    "source_name": "PubMed Central (acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10250067/",
+    "license": "CC BY 4.0",
+    "attribution": "Case report (Journal of Medical Case Reports, 2023) descrevendo síndrome do homem azul induzida por amiodarona. DOI: 10.1186/s13256-023-03954-6. PMID: 37291615 — Figura 1, licenciada sob CC BY 4.0 (Creative Commons Attribution 4.0 International).",
+    "tags": [
+      "amiodarona",
+      "discromia cutânea",
+      "blue man syndrome",
+      "fotossensibilidade",
+      "farmacologia",
+      "achado clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pe-de-charcot-luxacao-de-lisfranc-no-diabetico",
+    "title": "Radiografia — Pé de Charcot agudo (luxação de Lisfranc) no paciente diabético",
+    "modality": "Radiografia",
+    "theme": "Diabetes e cardiologia",
+    "file_path": "radiografia/pe-de-charcot-luxacao-de-lisfranc-no-diabetico.jpg",
+    "findings": "Radiografia em incidência oblíqua do pé de homem de 45 anos, diabético, mostrando luxação divergente de Lisfranc do 1º metatarsal com fraturas associadas dos metatarsais menores — achado equivalente a pé de Charcot ativo, grau 1 (estágio de fragmentação/desenvolvimento, na classificação de Eichenholtz).",
+    "teaching_points": "A neuroartropatia de Charcot é uma complicação da neuropatia diabética periférica grave, não uma doença vascular em si — mas pertence ao mesmo espectro de complicações do \"pé diabético\" que a doença arterial periférica, e a distinção entre as duas (e da osteomielite, sua principal confusão diagnóstica) é relevante também para quem avalia o paciente diabético do ponto de vista cardiovascular/vascular: o pé de Charcot agudo classicamente cursa com edema, eritema e AUMENTO da temperatura local (por hiperemia/shunt neurovascular), ao contrário da isquemia crítica de membro por doença arterial periférica, que cursa com pele fria e pulsos reduzidos ou ausentes — um erro de triagem comum é confundir o pé de Charcot agudo com celulite/infecção pela combinação de calor e eritema, atrasando o diagnóstico correto (imobilização em vez de antibiótico). Nesta radiografia, o colapso do mediopé é consequência de fraturas e luxações patológicas em ossos com densidade mineral reduzida e sensibilidade protetora perdida — o paciente tipicamente NÃO relata trauma ou dor proporcional à gravidade radiográfica, achado-chave desta condição.",
+    "source_name": "Wikimedia Commons (fig. de artigo em acesso aberto, Foot and Ankle Online Journal)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Charcot_arthropathy_X-ray.jpg",
+    "license": "CC BY 3.0",
+    "attribution": "Jerome JT. Divergent Lisfranc's Dislocation and Fracture in the Charcot Foot: A case report. Foot and Ankle Online Journal (FAOJ). 2008;1(6):3 — licenciado sob CC BY 3.0 (Creative Commons Attribution 3.0), via Wikimedia Commons. Legenda original: \"Oblique view X-ray in a 45-year-old male diabetic revealed a divergent, Lisfranc dislocation of the first metatarsal with associated lesser metatarsal fractures. This is equivalent to active Charcot foot grade 1.\"",
+    "tags": [
+      "pé de charcot",
+      "neuroartropatia diabética",
+      "luxação de lisfranc",
+      "diabetes",
+      "neuropatia periférica",
+      "radiografia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
