@@ -5449,5 +5449,26 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "xantomas-eruptivos-hipertrigliceridemia-grave",
+    "title": "Achado clínico — Xantomas eruptivos por hipertrigliceridemia grave",
+    "modality": "Fotografia clínica",
+    "theme": "Prevenção e lipídios",
+    "file_path": "clinico/xantomas-eruptivos-hipertrigliceridemia-grave.jpg",
+    "findings": "Fotografia composta (painéis A e B) de pápulas amarelo-alaranjadas de 2-5 mm, com base eritematosa, isoladas (painel A) ou agrupadas em salva (painel B), típicas de xantoma eruptivo — achado cutâneo de aparecimento súbito (dias a poucas semanas) associado a hipertrigliceridemia grave, tipicamente com triglicerídeos acima de 2.000-3.000 mg/dL. Diferem dos xantomas tendinosos e do xantelasma, já cadastrados neste acervo, tanto na velocidade de instalação (eruptivo é agudo, os outros são insidiosos) quanto no mecanismo — o eruptivo reflete acúmulo de quilomícrons circulantes, não hipercolesterolemia isolada por defeito do receptor de LDL.",
+    "teaching_points": "O xantoma eruptivo é sinal cutâneo de alarme, não achado estético isolado: sua presença deve disparar dosagem urgente de triglicerídeos, porque o mesmo nível de hipertrigliceridemia que produz a lesão de pele (tipicamente >2.000-3.000 mg/dL) é a faixa de risco reconhecido para pancreatite aguda. As causas mais comuns por trás do achado são diabetes mellitus mal controlado, consumo excessivo de álcool, hipotireoidismo não tratado, uso de medicações que elevam triglicerídeos (estrogênio em dose alta, retinoides, alguns antipsicóticos) e formas genéticas de hiperquilomicronemia — muitas vezes mais de uma causa se somando na mesma pessoa. As lesões costumam regredir por completo em semanas depois que os triglicerídeos caem com o tratamento da causa de base, o que serve inclusive como confirmação diagnóstica retrospectiva quando a apresentação inicial for atípica.",
+    "source_name": "PubMed Central (PMC) — Cureus, via NCBI",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11875218/",
+    "license": "CC BY 4.0",
+    "attribution": "Morka J, Morajko A, Otulak S, et al. Cutaneous Manifestation of Eruptive Xanthoma as a Consequence of Severe Hypertriglyceridemia: A Case Report Highlighting Diagnostic and Therapeutic Challenges. Cureus. 2025;17(2):e78329. DOI: 10.7759/cureus.78329. PMID: 40034640. Distribuído sob Creative Commons Attribution License 4.0 (CC BY 4.0).",
+    "tags": [
+      "xantoma eruptivo",
+      "hipertrigliceridemia grave",
+      "pancreatite aguda",
+      "achado clinico",
+      "prevencao cardiovascular"
+    ],
+    "review_status": "revisado"
   }
 ]
