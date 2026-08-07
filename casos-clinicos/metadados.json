@@ -11479,5 +11479,148 @@
       "World Health Organization. Medical Eligibility Criteria for Contraceptive Use. 5th ed. Geneva: World Health Organization; 2015 — fonte primária das categorias 1 a 4."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-provavel-mas-nao-confirmada-algoritmo-hfa-peff",
+    "titulo": "Dispneia com fração de ejeção preservada: o ecocardiograma ajuda, mas não fecha o diagnóstico — e agora?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 71 anos, hipertensa e obesa (IMC 33), refere dispneia aos esforços moderados há 6 meses. Ecocardiograma mostra fração de ejeção de 58%, relação E/e' de 11 (limítrofe), volume atrial esquerdo indexado de 32 mL/m² (limítrofe) e espessura relativa de parede discretamente aumentada. NT-proBNP: 220 pg/mL (elevado para a idade, mas não francamente diagnóstico). Não há fibrilação atrial. A impressão inicial da equipe é 'provavelmente ICFEp, mas o ecocardiograma não fecha sozinho'.",
+    "pergunta": "Qual o próximo passo mais apropriado, segundo o algoritmo HFA-PEFF da ESC (2019)?",
+    "opcoes": [
+      "Descartar insuficiência cardíaca, já que a fração de ejeção está preservada e nenhum critério isolado é francamente anormal",
+      "Aplicar o escore funcional/estrutural do HFA-PEFF (Etapa E) somando os pontos ecocardiográficos e de NT-proBNP; se o resultado ficar na faixa intermediária (não baixo, não alto), avançar para teste funcional (ecoestresse ou cateterismo direito com esforço) antes de fechar ou excluir o diagnóstico",
+      "Iniciar empiricamente diurético e reavaliar em 3 meses, sem prosseguir a investigação estrutural",
+      "Solicitar ressonância cardíaca como próximo exame de rotina para todo caso limítrofe de ICFEp, independentemente do escore inicial"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O HFA-PEFF é desenhado exatamente para o cenário mais comum na prática — nem todo achado bate com o critério franco de ICFEp, nem todo paciente pode ser descartado com segurança. A Etapa P (pré-teste) já era favorável aqui (hipertensão, obesidade, idade, dispneia). A Etapa E soma pontos funcionais/morfológicos do ecocardiograma (E/e', volume atrial esquerdo indexado, massa de VE) e de biomarcador (NT-proBNP), com três faixas: baixa (0-1 ponto, ICFEp pouco provável), alta (≥5 pontos, ICFEp confirma), e intermediária (2-4 pontos) — é essa faixa intermediária que descreve a paciente do caso, com achados 'limítrofes' em vez de francamente anormais. Para a faixa intermediária, o algoritmo não recomenda nem excluir nem tratar empiricamente: recomenda avançar para a Etapa F1 (teste funcional, tipicamente ecocardiograma de estresse diastólico ou cateterismo cardíaco direito com esforço), que discrimina os casos que o escore sozinho deixou em aberto. Só depois de sustentado o diagnóstico é que a Etapa F2 busca a etiologia específica (amiloidose, doença coronariana, valvopatia) antes de definir tratamento.",
+    "source_refs": [
+      "Pieske B, Tschöpe C, de Boer RA, et al. How to diagnose heart failure with preserved ejection fraction: the HFA-PEFF diagnostic algorithm: a consensus recommendation from the Heart Failure Association (HFA) of the European Society of Cardiology (ESC). Eur Heart J. 2019;40(40):3297-3317. DOI: 10.1093/eurheartj/ehz641. PMID: 31504452"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiloidose-cardiaca-suspeita-antes-de-pedir-cintilografia-com-pirofosfato",
+    "titulo": "Hipertrofia ventricular desproporcional à pressão arterial no idoso: pode pedir cintilografia com pirofosfato direto?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem, 78 anos, hipertensão leve bem controlada com uma droga, é encaminhado por espessura de parede de VE de 16 mm ao ecocardiograma — desproporcional ao grau de hipertensão —, com strain longitudinal reduzido nos segmentos basais e preservado no ápice ('apical sparing'). A equipe assistente já quer solicitar cintilografia com pirofosfato de tecnécio (PYP) para confirmar amiloidose cardíaca por transtirretina (ATTR).",
+    "pergunta": "Antes de solicitar a cintilografia com PYP, qual etapa não pode ser pulada?",
+    "opcoes": [
+      "Nenhuma — a cintilografia com PYP positiva já confirma amiloidose ATTR isoladamente, sem necessidade de outro exame antes ou depois",
+      "Excluir amiloidose de cadeia leve (AL) com eletroforese de proteínas séricas e urinárias, imunofixação e dosagem de cadeias leves livres séricas (relação kappa/lambda) — porque uma cintilografia positiva não distingue ATTR de AL, e tratar AL como se fosse ATTR atrasa quimioterapia potencialmente curável",
+      "Pedir diretamente o teste genético para variante de TTR, já que ele por si só decide entre ATTR hereditária e selvagem sem necessidade de exame de imagem",
+      "Iniciar tafamidis empiricamente enquanto aguarda o resultado da cintilografia, para não atrasar o tratamento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A armadilha diagnóstica mais grave da amiloidose cardíaca não é deixar de suspeitar — é confirmar o tipo errado. A cintilografia com PYP tem alta sensibilidade e especificidade para depósito de transtirretina (ATTR) quando o grau 2-3 de captação miocárdica é acompanhado de ausência de proteína monoclonal, mas ela pode gerar captação falso-positiva em uma minoria de pacientes com amiloidose AL — e a amiloidose AL não tratada progride rapidamente e é potencialmente curável com quimioterapia dirigida ao clone de plasmócitos, enquanto o tratamento de ATTR (estabilizador de tetrâmero como tafamidis) não trata AL. Por isso a regra prática, sustentada pela literatura de amiloidose cardíaca: a via diagnóstica não invasiva com PYP só é validada quando a triagem hematológica (eletroforese sérica/urinária com imunofixação e cadeias leves livres) já excluiu proteína monoclonal significativa — se ela for positiva, o caminho correto passa por biópsia (endomiocárdica ou de gordura abdominal) com tipagem por espectrometria de massa, não por PYP isolada. Só depois de confirmado ATTR o teste genético entra para diferenciar a forma hereditária (com implicação para aconselhamento familiar) da forma selvagem (wild-type), que é a mais comum no idoso sem história familiar.",
+    "source_refs": [
+      "Ruberg FL, Berk JL. Transthyretin (TTR) cardiac amyloidosis. Circulation. 2012;126(10):1286-1300. DOI: 10.1161/CIRCULATIONAHA.111.078915. PMID: 22949539"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "iam-com-anemia-estrategia-transfusional-restritiva-ou-liberal-mint-reality",
+    "titulo": "Infarto agudo do miocárdio com hemoglobina de 8 g/dL: transfundir logo ou aguardar sintoma?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 74 anos internado por infarto agudo do miocárdio sem supra de ST, hemodinamicamente estável, apresenta hemoglobina de 8,0 g/dL no segundo dia de internação (basal pré-infarto desconhecido). Não há sangramento ativo evidente nem angina em repouso. A equipe discute se deve transfundir concentrado de hemácias imediatamente ou aguardar critério clínico mais restritivo.",
+    "pergunta": "O que os ensaios MINT (NEJM 2023) e REALITY (JAMA 2021) mostram sobre estratégia transfusional nesse cenário?",
+    "opcoes": [
+      "Os dois ensaios mostraram claramente que a estratégia liberal (transfundir com Hb <10 g/dL) reduz mortalidade e reinfarto de forma estatisticamente significativa em comparação com a restritiva — deve-se transfundir agora",
+      "O MINT, o maior ensaio já feito no tema (3.504 pacientes), mostrou um sinal a favor da estratégia liberal (transfundir com Hb <10 g/dL) sobre a restritiva (transfundir com Hb <8 g/dL) para o desfecho composto de morte ou reinfarto em 30 dias, mas sem atingir a robustez de uma recomendação definitiva; o REALITY, menor e desenhado como não inferioridade, não mostrou diferença entre as estratégias para eventos cardiovasculares maiores — os dois juntos sustentam individualizar a decisão, não uma resposta única e automática",
+      "Os dois ensaios são concordantes em mostrar superioridade da estratégia restritiva, e transfundir apenas com Hb <7 g/dL é a conduta baseada em evidência para IAM com anemia",
+      "Nenhum dos dois ensaios incluiu pacientes com síndrome coronariana aguda sem supra de ST — a pergunta não se aplica a este caso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MINT randomizou 3.504 pacientes com infarto agudo do miocárdio (com ou sem supra de ST) e hemoglobina <10 g/dL para estratégia restritiva (transfundir só se Hb <8 g/dL) ou liberal (transfundir para manter Hb ≥10 g/dL). O desfecho composto de morte ou reinfarto em 30 dias ocorreu em 16,9% do grupo restritivo vs. 14,5% do grupo liberal — diferença numérica a favor da estratégia liberal, com o intervalo de confiança tangenciando a significância estatística, sem cruzar de forma inequívoca o limiar que sustentaria uma mudança categórica de prática. O REALITY, ensaio francês/espanhol de não inferioridade com 668 pacientes, comparou os mesmos limiares (restritivo Hb<8 vs. liberal Hb<10) e não encontrou diferença em eventos cardiovasculares maiores em 30 dias, com resultado compatível com não inferioridade da estratégia restritiva. A leitura conjunta que os dois ensaios sustentam — sem que um refute o outro, porque têm desenho e poder diferentes — é que a decisão de transfundir no IAM com anemia moderada e sem instabilidade hemodinâmica não tem um gatilho único e automático: o sinal do MINT pesa a favor de não adiar demais a transfusão em quem está mais anêmico, mas não estabelece que toda Hb entre 8 e 10 g/dL exija transfusão imediata, sobretudo na ausência de isquemia ativa ou instabilidade.",
+    "source_refs": [
+      "Carson JL, Brooks MM, Hébert PC, Goodman SG, Bertolet M, et al; MINT Investigators. Restrictive or Liberal Transfusion Strategy in Myocardial Infarction and Anemia. N Engl J Med. 2023;389(26):2446-2456. DOI: 10.1056/NEJMoa2307983. PMID: 37952133",
+      "Ducrocq G, Gonzalez-Juanatey JR, Puymirat E, Lemesle G, Cachanado M, et al; REALITY Investigators. Effect of a Restrictive vs Liberal Blood Transfusion Strategy on Major Cardiovascular Events Among Patients With Acute Myocardial Infarction and Anemia: The REALITY Randomized Clinical Trial. JAMA. 2021;325(6):552-560. DOI: 10.1001/jama.2021.0135. PMID: 33560322"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-vasoplegico-pos-cirurgia-cardiaca-vasopressina-ou-noradrenalina-vancs",
+    "titulo": "Choque vasoplégico após CEC, refratário a noradrenalina em dose moderada: acrescentar vasopressina muda o desfecho?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Paciente no primeiro dia de pós-operatório de revascularização miocárdica com circulação extracorpórea evolui com hipotensão refratária, índice cardíaco preservado e resistência vascular sistêmica baixa — quadro compatível com choque vasoplégico. Já está em noradrenalina em dose moderada, sem resposta plena.",
+    "pergunta": "O que o ensaio VANCS (Anesthesiology, 2017, InCor-HCFMUSP) mostrou ao comparar vasopressina com noradrenalina nesse cenário específico?",
+    "opcoes": [
+      "A vasopressina foi inferior à noradrenalina para todos os desfechos avaliados, e o ensaio recomenda evitá-la no choque vasoplégico pós-cirurgia cardíaca",
+      "Não houve diferença de mortalidade entre os grupos, mas o grupo vasopressina teve menor taxa do desfecho composto de mortalidade em 30 dias ou complicação grave (que incluía necessidade de suporte circulatório mecânico, AVC e diálise), com sinal de menos fibrilação atrial pós-operatória — resultado de um único centro (InCor), que pesa na força da evidência",
+      "O ensaio não encontrou nenhuma diferença entre os grupos em nenhum desfecho, e por isso a escolha do vasopressor deve ser guiada só pela disponibilidade e pelo custo",
+      "A vasopressina só foi estudada como terapia de resgate após falha de dois outros vasopressores, nunca como primeira linha comparada à noradrenalina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O VANCS randomizou 330 pacientes (300 efetivamente infundidos) em choque vasoplégico pós-cirurgia cardíaca com circulação extracorpórea para vasopressina ou noradrenalina como vasopressor de primeira linha, em desenho duplo-cego, de centro único (InCor, Hospital das Clínicas da FMUSP). O desfecho composto (mortalidade em 30 dias ou complicação grave definida a priori — necessidade de suporte circulatório mecânico, AVC ou diálise) favoreceu o grupo vasopressina, e houve também menor incidência de fibrilação atrial pós-operatória nesse grupo. A leitura honesta, que o próprio corpo do documento registra: é um ensaio de centro único, com as limitações de generalização que isso impõe, e o texto completo não está disponível em acesso aberto — o resumo indexado no PubMed foi a fonte primária consultada. Ainda assim, é o ensaio randomizado mais citado especificamente nessa população (vasoplegia pós-CEC, não choque séptico em geral), e o sinal a favor de acrescentar vasopressina cedo — não como resgate tardio — é o que sustenta a prática de muitos serviços de considerá-la já na dose moderada de noradrenalina refratária, e não apenas como último recurso.",
+    "source_refs": [
+      "Hajjar LA, Vincent JL, Barbosa Gomes Galas FR, Rhodes A, Landoni G, Osawa EA, et al. Vasopressin versus Norepinephrine in Patients with Vasoplegic Shock after Cardiac Surgery: The VANCS Randomized Controlled Trial. Anesthesiology. 2017;126(1):85-93. DOI: 10.1097/ALN.0000000000001434. PMID: 27841822"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-indiferenciado-a-beira-do-leito-tamponamento-ou-pneumotorax-hipertensivo-pocus",
+    "titulo": "Hipotensão súbita e turgência jugular após punção venosa central: tamponamento ou pneumotórax hipertensivo — o POCUS decide em minutos?",
+    "tema": "Terapia intensiva",
+    "nivel": "básico",
+    "enunciado": "Paciente evolui com hipotensão súbita, taquicardia e turgência jugular logo após tentativa de punção de veia subclávia para acesso central. Ausculta pulmonar difícil de avaliar no leito por ruído ambiente. A equipe tem ultrassom point-of-care (POCUS) disponível à beira do leito.",
+    "pergunta": "Qual sequência de achados ao POCUS diferencia tamponamento cardíaco de pneumotórax hipertensivo como causa da hipotensão nesse contexto?",
+    "opcoes": [
+      "Os dois têm a mesma janela e o mesmo achado ecocardiográfico — a distinção só é possível por radiografia de tórax, que deve ser priorizada antes de qualquer conduta",
+      "Derrame pericárdico com colapso diastólico de câmara direita (janela subcostal/paraesternal) aponta para tamponamento; ausência de deslizamento pleural ('lung sliding') associada a 'ponto pulmonar' na janela pulmonar aponta para pneumotórax — e como os dois mecanismos podem coexistir após punção venosa central malsucedida, a janela cardíaca e a pulmonar devem ser checadas em sequência, não uma no lugar da outra",
+      "A presença de linhas B difusas ao ultrassom pulmonar já confirma pneumotórax hipertensivo, dispensando avaliação cardíaca",
+      "POCUS não tem acurácia suficiente documentada para diferenciar as duas condições, e a decisão deve ser sempre clínica, sem apoio de imagem à beira do leito"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Punção malsucedida de subclávia é causa reconhecida tanto de pneumotórax (laceração pleural) quanto, mais raramente, de tamponamento (perfuração cardíaca ou de grande vaso com hemopericárdio) — os dois mecanismos podem, inclusive, coexistir no mesmo paciente. O protocolo de POCUS no choque indiferenciado prevê exatamente essa checagem sequencial: na janela subcostal ou paraesternal, derrame pericárdico com colapso diastólico do átrio e, em casos mais graves, do ventrículo direito sustenta tamponamento — o colapso de câmara direita na diástole é mais sensível e mais precoce que o colapso sistólico. Na janela pulmonar, a ausência de deslizamento pleural (sinal dinâmico, mais confiável que qualquer achado estático isolado) e a presença de um 'ponto pulmonar' (limite entre pulmão normalmente aerado e pneumotórax) sustentam pneumotórax, este último sendo praticamente patognomônico quando presente. Uma metanálise de 12 estudos e 1.132 pacientes em choque mostrou boa acurácia agregada do POCUS para a categoria de choque obstrutivo (tamponamento, pneumotórax hipertensivo e TEP agrupados, sem discriminação individual nesse dado agregado específico), e uma coorte dedicada de derrame pericárdico confirmou a colapso diastólico de câmara direita como achado central na triagem à beira do leito — reforçando que, quando os dois mecanismos são possíveis pelo mesmo evento causador, a checagem tem de ser sequencial e não seletiva.",
+    "source_refs": [
+      "Yoshida T, Yoshida T, Noma H, Nomura T, Suzuki A, Mihara T. Diagnostic accuracy of point-of-care ultrasound for shock: a systematic review and meta-analysis. Crit Care. 2023;27(1):200. DOI: 10.1186/s13054-023-04495-6. PMID: 37231510",
+      "Hanson MG, Chan B. The role of point-of-care ultrasound in the diagnosis of pericardial effusion: a single academic center retrospective study. Ultrasound J. 2021;13:2. DOI: 10.1186/s13089-021-00205-x. PMID: 33538920"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-pulmonar-em-paciente-de-area-endemica-de-esquistossomose",
+    "titulo": "Dispneia progressiva e hipertensão pulmonar em paciente do nordeste brasileiro com história de contato com água doce: pensar em quê?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 42 anos, natural de área rural endêmica do nordeste brasileiro, com história de contato frequente com água doce na infância, é investigado por dispneia progressiva aos esforços. Ecocardiograma mostra sinais de hipertensão pulmonar; cateterismo direito confirma HAP pré-capilar (RVP elevada, PCP normal). Não há doença do tecido conjuntivo, HIV ou uso de anorexígeno.",
+    "pergunta": "Qual etiologia de hipertensão arterial pulmonar (Grupo 1) deve ser ativamente investigada nesse contexto epidemiológico, e por quê isso importa clinicamente?",
+    "opcoes": [
+      "Nenhuma investigação adicional é necessária — toda HAP sem causa aparente em adulto jovem deve ser classificada diretamente como idiopática",
+      "HAP associada à esquistossomose deve ser investigada (pesquisa de ovos nas fezes, sorologia, história epidemiológica), porque é uma causa subdiagnosticada e prevalente em área endêmica brasileira, com sobrevida documentada em coorte nacional, e porque o tratamento anti-helmíntico específico da esquistossomose faz parte do manejo, além da terapia vasodilatadora específica da HAP",
+      "A investigação de esquistossomose só é relevante em pacientes com hipertensão portal e sinais de doença hepática avançada, não em HAP isolada",
+      "Esquistossomose causa apenas hipertensão pulmonar do Grupo 4 (tromboembólica crônica), nunca HAP do Grupo 1"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A hipertensão arterial pulmonar associada à esquistossomose é reconhecida como uma das etiologias do Grupo 1 (junto com idiopática, hereditária, por drogas/toxinas, associada a doença do tecido conjuntivo, HIV, hipertensão portal e cardiopatia congênita), e é particularmente relevante no Brasil por ser doença endêmica em várias regiões, sobretudo no Nordeste. Uma coorte brasileira dedicada, conduzida em área endêmica, documentou sobrevida e perfil clínico dessa população especificamente — reconhecer a etiologia não é só uma questão de classificação: o manejo inclui tratamento anti-helmíntico (praziquantel) dirigido à infecção ativa, quando presente, além da terapia vasodilatadora específica da HAP que se aplicaria a qualquer paciente do Grupo 1. Uma revisão sistemática com metanálise mais recente reforça que o perfil clínico, funcional e hemodinâmico dessa forma de HAP em pacientes brasileiros vem sendo cada vez melhor caracterizado, o que sustenta a investigação epidemiológica dirigida (história de contato com água doce em área endêmica, pesquisa parasitológica de fezes, sorologia) sempre que a apresentação e a origem geográfica do paciente forem compatíveis, em vez de rotular a HAP como idiopática por exclusão apressada.",
+    "source_refs": [
+      "Piscoya Roncal CG, Mendes AA, Muniz MTC, et al. Schistosomiasis-associated pulmonary arterial hypertension: survival in endemic area in Brazil. Int J Cardiol Heart Vasc. 2019;25:100373. DOI: 10.1016/j.ijcha.2019.100373. PMID: 31720370",
+      "Clinical, Functional, and Hemodynamic Profile of Schistosomiasis-Associated Pulmonary Arterial Hypertension Patients in Brazil: Systematic Review and Meta-Analysis. Infect Dis Rep. 2025;17(2):22. DOI: 10.3390/idr17020022. PMCID: PMC11932222"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-classe-funcional-iii-estratificacao-de-risco-pelo-escore-reveal-2-0",
+    "titulo": "HAP em classe funcional III, já em terapia dupla: o escore REVEAL 2.0 muda a decisão de escalonar?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Paciente com hipertensão arterial pulmonar idiopática, em terapia dupla oral há 6 meses, mantém classe funcional III da OMS, teste de caminhada de 6 minutos em 340 metros e NT-proBNP moderadamente elevado. A equipe discute se deve escalonar para terapia tripla, incluindo um agente da via da prostaciclina, e usa o escore REVEAL 2.0 para apoiar a decisão.",
+    "pergunta": "O que caracteriza o escore REVEAL 2.0, e por que ele é mais informativo do que usar a classe funcional isoladamente para decidir escalonamento?",
+    "opcoes": [
+      "O REVEAL 2.0 é um escore puramente ecocardiográfico, que substitui a necessidade de cateterismo cardíaco direito na reavaliação de risco",
+      "O REVEAL 2.0 é uma calculadora multiparamétrica de sobrevida — combina variáveis clínicas (classe funcional, PA, FC, função renal), hemodinâmicas (pressão em átrio direito, RVP) e funcionais (TC6M) em uma pontuação contínua estratificada em faixas de risco, permitindo reclassificar pacientes que a classe funcional isolada colocaria na mesma categoria mas que têm prognóstico substancialmente diferente — e uma faixa de risco intermediário-alto ou alto reforça a indicação de escalonar a terapia, inclusive para a via da prostaciclina",
+      "O REVEAL 2.0 é validado apenas para hipertensão pulmonar tromboembólica crônica (Grupo 4), não para HAP do Grupo 1",
+      "A pontuação do REVEAL 2.0 é calculada uma única vez ao diagnóstico e não deve ser repetida durante o seguimento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O escore REVEAL 2.0 (Chest, 2019) foi desenvolvido e validado a partir do registro REVEAL, com o objetivo específico de predizer sobrevida em HAP de forma mais granular do que os estratos de risco baseados só em classe funcional. Ele combina variáveis demográficas e clínicas (idade, sexo, etiologia da HAP, classe funcional, pressão arterial, frequência cardíaca, função renal, presença de derrame pericárdico), hemodinâmicas (pressão de átrio direito, resistência vascular pulmonar) e funcionais (distância no teste de caminhada de 6 minutos, BNP/NT-proBNP) numa pontuação somada, estratificada em faixas de risco baixo, intermediário-baixo, intermediário-alto e alto — e o artigo original demonstra que essa estratificação discrimina sobrevida melhor do que abordagens baseadas só na classe funcional da OMS/ESC-ERS. Na prática clínica, isso significa que dois pacientes igualmente classificados como 'classe funcional III' podem ter risco REVEAL 2.0 bem diferente a depender dos demais parâmetros — e um escore que aponta risco intermediário-alto ou alto, mesmo com classe funcional estável, é argumento a favor de escalonar a terapia (incluindo considerar a via da prostaciclina), reforçando a recomendação de reavaliação de risco estruturada e repetida ao longo do seguimento, não apenas no diagnóstico inicial.",
+    "source_refs": [
+      "Benza RL, Gomberg-Maitland M, Elliott CG, et al. Predicting Survival in Patients With Pulmonary Arterial Hypertension: The REVEAL Risk Score Calculator 2.0 and Comparison With ESC/ERS-Based Risk Assessment Strategies. Chest. 2019;156(2):323-337. DOI: 10.1016/j.chest.2019.02.004. PMID: 30772387"
+    ],
+    "review_status": "revisado"
   }
 ]
