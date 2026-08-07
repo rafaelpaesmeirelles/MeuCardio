@@ -45,6 +45,7 @@ type AnexoRecebido = {
   size?: number;
 };
 type AnexoEnviado = { file_id: string; nome: string };
+type VerificacaoAssinatura = { assinado: boolean; titular?: string; texto_comprovacao: string | null };
 type ContatoExterno = {
   id: number; name: string; emails: string[]; phones: string[];
   organization: string; provider: string; integration_id: number;
@@ -319,6 +320,7 @@ export default function CaixaDeEmail() {
   const [enviando, setEnviando] = useState(false);
   const [anexos, setAnexos] = useState<AnexoEnviado[]>([]);
   const [enviandoAnexo, setEnviandoAnexo] = useState(false);
+  const [verificacoesAssinatura, setVerificacoesAssinatura] = useState<Record<string, VerificacaoAssinatura>>({});
   const [contatos, setContatos] = useState<ContatoExterno[]>([]);
   const contaSelecionada = contasEmail.find((conta) => conta.id === contaEmailId);
   const contaExterna = contaSelecionada && !contaSelecionada.native ? contaSelecionada : null;
@@ -554,6 +556,7 @@ export default function CaixaDeEmail() {
       corpo: modelo?.corpo ?? "",
     });
     setAnexos([]);
+    setVerificacoesAssinatura({});
     setMostrarCopias(false);
     setCompondo(true);
   }
@@ -572,6 +575,7 @@ export default function CaixaDeEmail() {
       corpo: "",
     });
     setAnexos([]);
+    setVerificacoesAssinatura({});
     setMostrarCopias(acao === "replyall");
     setCompondo(true);
   }
@@ -581,11 +585,24 @@ export default function CaixaDeEmail() {
     try {
       const resultado = await apiEmail.uploadAnexo(arquivo);
       setAnexos((atuais) => [...atuais, resultado]);
+      // Pedido do Rafael, 07/08/2026: avisar quando o anexo já vem
+      // assinado digitalmente. Roda em paralelo, sobre o MESMO arquivo que
+      // acabou de subir — nunca bloqueia o anexo em si nem impede o envio
+      // se a verificação falhar (arquivo grande, rede lenta etc.).
+      apiEmail.verificarAssinaturaAnexo(arquivo)
+        .then((v) => setVerificacoesAssinatura((atuais) => ({ ...atuais, [resultado.file_id]: v })))
+        .catch(() => {});
     } catch (e) {
       setErro(mensagemDeErro(e, "Não foi possível anexar o arquivo."));
     } finally {
       setEnviandoAnexo(false);
     }
+  }
+
+  function inserirComprovacaoDeAssinatura(fileId: string) {
+    const texto = verificacoesAssinatura[fileId]?.texto_comprovacao;
+    if (!texto) return;
+    setRascunho((atual) => ({ ...atual, corpo: atual.corpo ? `${atual.corpo}\n\n${texto}` : texto }));
   }
 
   async function enviar() {
@@ -614,6 +631,7 @@ export default function CaixaDeEmail() {
       setCompondo(false);
       setRascunho(RASCUNHO_VAZIO);
       setAnexos([]);
+      setVerificacoesAssinatura({});
       setAviso(rascunho.modo === "nova" ? "Mensagem enviada." : "Resposta enviada.");
     } catch (e) {
       setErro(mensagemDeErro(e, "Não foi possível enviar a mensagem."));
@@ -1060,9 +1078,28 @@ export default function CaixaDeEmail() {
                   }}
                 />
               </label>
-              {anexos.map((anexo) => (
-                <span key={anexo.file_id}>{anexo.nome}<button onClick={() => setAnexos((lista) => lista.filter((item) => item.file_id !== anexo.file_id))}>×</button></span>
-              ))}
+              {anexos.map((anexo) => {
+                const verificacao = verificacoesAssinatura[anexo.file_id];
+                return (
+                  <span key={anexo.file_id} className="mail-anexo-item">
+                    {anexo.nome}
+                    {verificacao?.assinado && (
+                      <span className="mail-anexo-assinado" title={`Assinado digitalmente por ${verificacao.titular ?? "titular não identificado"}`}>
+                        ✓ assinado
+                      </span>
+                    )}
+                    {verificacao?.assinado && verificacao.texto_comprovacao && (
+                      <button type="button" className="mail-anexo-comprovar" onClick={() => inserirComprovacaoDeAssinatura(anexo.file_id)}>
+                        Inserir comprovação no e-mail
+                      </button>
+                    )}
+                    <button onClick={() => {
+                      setAnexos((lista) => lista.filter((item) => item.file_id !== anexo.file_id));
+                      setVerificacoesAssinatura((atuais) => { const { [anexo.file_id]: _removido, ...resto } = atuais; return resto; });
+                    }}>×</button>
+                  </span>
+                );
+              })}
             </div> : <p className="mail-conta-nota">A conta externa envia pelo provedor original. Anexos externos serão liberados após a validação específica de segurança do Google e da Microsoft.</p>}
             <footer>
               <button className="botao" onClick={() => void enviar()} disabled={enviando || enviandoAnexo || !rascunho.assunto || !rascunho.corpo || ((rascunho.modo === "nova" || rascunho.modo === "forward") && !rascunho.para)}>

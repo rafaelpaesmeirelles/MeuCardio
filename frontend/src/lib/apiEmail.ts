@@ -60,6 +60,20 @@ export const apiEmail = {
     });
   },
 
+  /** Pedido do Rafael, 07/08/2026: avisar quando o anexo já vem assinado
+   * digitalmente, com a comprovação pronta para incorporar no corpo do
+   * e-mail. Roda sobre os MESMOS bytes do `<input type="file">`, antes ou
+   * em paralelo ao upload — o Mail360 não devolve o conteúdo de um anexo
+   * ainda não enviado. */
+  verificarAssinaturaAnexo: (arquivo: File) => {
+    const form = new FormData();
+    form.append("arquivo", arquivo);
+    return request<{
+      assinado: boolean; intacta?: boolean; titular?: string; emissor?: string;
+      assinado_em?: string | null; texto_comprovacao: string | null;
+    }>("/email/mensagens/anexos/verificar-assinatura", { method: "POST", body: form });
+  },
+
   async baixarAnexo(messageId: string, attachmentId: string, nome: string) {
     const headers = new Headers();
     const token = tokenEmail.get();

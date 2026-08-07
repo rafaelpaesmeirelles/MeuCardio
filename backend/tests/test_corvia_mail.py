@@ -3,12 +3,49 @@ a sessão de 30/07/2026 validou manualmente e descreveu em
 `BRIEFING_CLAUDE_CODE_4.md` ("Nenhum teste automatizado foi commitado"),
 agora commitado. Rodar com Postgres real (ver `tests/README.md`).
 """
+import datetime as dt_module
+import io
 from datetime import datetime, timedelta, timezone
+
+from cryptography import x509
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.primitives.serialization import pkcs12
+from cryptography.x509.oid import NameOID
+from reportlab.pdfgen import canvas
 
 from app.core.security import create_access_token
 from app.models.email_account import EmailAccount
 from app.models.password_reset import PasswordResetToken
 from app.models.subscription import TIPO_EMAIL, Subscription
+from app.services.assinatura import pdf_signer
+
+
+def _pfx_de_teste(*, senha: str = "senha123", cn: str = "DR TESTE DA SILVA:12345678900") -> bytes:
+    """Mesmo gerador de `test_verificacao_pdf.py` — certificado autoassinado,
+    só para exercitar o parser PAdES sem depender de ICP-Brasil real."""
+    chave = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    nome = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, cn)])
+    certificado = (
+        x509.CertificateBuilder()
+        .subject_name(nome).issuer_name(nome).public_key(chave.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(dt_module.datetime.now(dt_module.timezone.utc) - dt_module.timedelta(days=1))
+        .not_valid_after(dt_module.datetime.now(dt_module.timezone.utc) + dt_module.timedelta(days=365))
+        .sign(chave, hashes.SHA256())
+    )
+    return pkcs12.serialize_key_and_certificates(
+        name=b"teste", key=chave, cert=certificado, cas=None,
+        encryption_algorithm=serialization.BestAvailableEncryption(senha.encode()),
+    )
+
+
+def _pdf_minimo_de_teste(texto: str = "Documento de teste — Corvia") -> bytes:
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf)
+    c.drawString(100, 750, texto)
+    c.save()
+    return buf.getvalue()
 
 
 def _dar_assinatura_email_ativa(db, user, status="ativo"):
@@ -481,6 +518,52 @@ class TestPastasEMensagens:
             headers={"Authorization": f"Bearer {token}"},
         )
         assert resp.status_code == 413
+
+    def test_verificar_assinatura_de_anexo_nao_pdf_devolve_nao_assinado(self, client, db, criar_usuario, monkeypatch_mail360):
+        """Pedido do Rafael, 07/08/2026: o compositor de e-mail passa a
+        avisar quando um anexo já vem assinado digitalmente, incorporando a
+        comprovação no texto do e-mail. Arquivo que não é PDF nunca finge
+        verificação — sempre `assinado: False`."""
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        resp = client.post(
+            "/api/email/mensagens/anexos/verificar-assinatura",
+            files={"arquivo": ("foto.jpg", b"nao e um pdf", "image/jpeg")},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 200
+        assert resp.json() == {"assinado": False, "texto_comprovacao": None}
+
+    def test_verificar_assinatura_de_pdf_sem_assinatura_embutida(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        resp = client.post(
+            "/api/email/mensagens/anexos/verificar-assinatura",
+            files={"arquivo": ("comum.pdf", _pdf_minimo_de_teste(), "application/pdf")},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 200
+        assert resp.json() == {"assinado": False, "texto_comprovacao": None}
+
+    def test_verificar_assinatura_de_pdf_assinado_devolve_texto_de_comprovacao(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        pfx = _pfx_de_teste(cn="DRA. FULANA DE TAL:98765432100")
+        assinado = pdf_signer.assinar_pdf(
+            _pdf_minimo_de_teste(), pfx_bytes=pfx, senha="senha123", motivo="Receita", local="SP",
+        )
+        resp = client.post(
+            "/api/email/mensagens/anexos/verificar-assinatura",
+            files={"arquivo": ("receita.pdf", assinado, "application/pdf")},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 200
+        corpo = resp.json()
+        assert corpo["assinado"] is True
+        assert corpo["intacta"] is True
+        assert corpo["titular"] == "DRA. FULANA DE TAL:98765432100"
+        assert corpo["texto_comprovacao"] is not None
+        assert "DRA. FULANA DE TAL" in corpo["texto_comprovacao"]
 
     def test_enviar_mensagem_encaminha_ids_de_anexo(self, client, db, criar_usuario, monkeypatch_mail360):
         user, _ = criar_usuario()
