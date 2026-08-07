@@ -5492,5 +5492,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cdi-radiografia-de-torax-posicionamento-normal",
+    "title": "Radiografia de tórax — Cardiodesfibrilador implantável (CDI), posicionamento normal",
+    "modality": "Radiografia",
+    "theme": "Dispositivos",
+    "file_path": "radiografia/cdi-radiografia-de-torax-posicionamento-normal.jpg",
+    "findings": "Radiografia de tórax em incidência posteroanterior. O gerador de pulso está alojado na loja subcutânea peitoral esquerda. Um único eletrodo sai do gerador, percorre a veia subclávia esquerda, cruza a linha média pela veia inominada, desce pela veia cava superior até o átrio direito e segue até a ponta do ventrículo direito, onde se ancora — trajeto contínuo, sem angulação abrupta sugestiva de fratura ou alça redundante sugestiva de deslocamento. Não há alargamento do mediastino nem sinal de pneumotórax nos campos pulmonares visíveis.",
+    "teaching_points": "Um sistema de cardiodesfibrilador implantável (CDI) unicameral tem, ao raio X, a mesma aparência geral de um marca-passo unicameral — gerador + um eletrodo até o ventrículo direito —, e a distinção entre os dois exige olhar o eletrodo de perto: o eletrodo de choque do CDI tem uma ou duas bobinas (coils) radiopacas mais espessas ao longo do trajeto, que faltam no eletrodo de marca-passo simples, sem coil. A revisão de Silva e Christensen (Radiology, 2025) descreve a leitura sistemática da radiografia pós-implante de dispositivo cardíaco eletrônico: identificar o tipo de gerador e o número de eletrodos, seguir cada trajeto por inteiro até a ponta, e checar ativamente os achados que definem as principais complicações — deslocamento do eletrodo (mudança de posição da ponta em relação a exame anterior, ou ângulo inadequado), fratura do eletrodo (descontinuidade focal do condutor, muitas vezes no ponto de maior estresse mecânico sob a clavícula) e perfuração (ponta do eletrodo além do contorno cardíaco esperado, associada a risco de derrame pericárdico). A radiografia pós-implante imediata também serve para excluir pneumotórax, complicação mecânica do acesso venoso subclávio — não visível nesta imagem, mas parte obrigatória da leitura sistemática de toda radiografia desse tipo.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Implantable_cardioverter_defibrillator_chest_X-ray.jpg",
+    "license": "CC BY 3.0",
+    "attribution": "Gregory Marcus, MD, MAS, FACC, via Wikimedia Commons — CC BY 3.0.",
+    "tags": [
+      "radiografia de tórax",
+      "cardiodesfibrilador implantável",
+      "cdi",
+      "dispositivo cardíaco",
+      "complicações de eletrodo"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
