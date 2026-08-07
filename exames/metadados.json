@@ -7792,5 +7792,219 @@
       "intervenção coronária percutânea",
       "monitorização periprocedural"
     ]
+  },
+  {
+    "slug": "mr-proanp-e-bnp-na-predicao-de-recorrencia-de-fibrilacao-atrial-apos-cardioversao-eletrica",
+    "name": "MR-proANP e BNP na predição de recorrência de fibrilação atrial após cardioversão elétrica",
+    "category": "laboratorial",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Fragmento médio-regional do pró-peptídeo natriurético atrial (MR-proANP) e peptídeo natriurético tipo B (BNP), dosados no sangue periférico antes da cardioversão elétrica de FA persistente — biomarcadores de estiramento atrial e ventricular usados aqui não para diagnóstico de insuficiência cardíaca, mas para estimar a chance de a FA voltar dentro de um ano após a reversão bem-sucedida ao ritmo sinusal.",
+    "reference_range": "Corte de 311,5 pmol/L de MR-proANP identificado por análise de curva ROC como o de melhor valor preditivo para recorrência em 12 meses no estudo de referência — não é um valor de normalidade laboratorial padrão, e sim um limiar específico desse desfecho.",
+    "indications": "Paciente com FA persistente e fração de ejeção preservada (≥45%) programado para cardioversão elétrica eletiva, quando a informação sobre probabilidade de recorrência ajuda a decidir intensidade do seguimento e da estratégia antiarrítmica pós-procedimento.",
+    "interpretation": "No estudo prospectivo multicêntrico de Badoz et al. (BMC Cardiovascular Disorders, 2025; 61 pacientes, ritmo sinusal restaurado em 51 deles), o MR-proANP medido antes da cardioversão foi significativamente mais alto entre os pacientes com recorrência de FA em 12 meses do que entre os sem recorrência (314,45 vs. 214,50 pmol/L; p<0,01). Na análise multivariável, MR-proANP acima de 311,5 pmol/L foi o único preditor independente de recorrência (razão de risco 4,74; IC 95% 1,59-14,07), com valor preditivo positivo de 83,3%. Nem sST2 nem BNP diferiram significativamente entre os grupos nesse estudo — achado que contrasta com outro estudo observacional menor (Ozturk & Okan, Cardiovascular Journal of Africa, 2025) no qual o BNP dosado 30 minutos após a cardioversão (não o basal) se associou a recorrência precoce.",
+    "limitations": "Amostra pequena (61 e 31 pacientes, respectivamente, nos dois estudos citados), o que exige confirmação em coortes maiores antes de adoção rotineira — os próprios autores do estudo principal pedem essa validação. Os dois estudos usam biomarcadores e momentos de coleta diferentes (MR-proANP basal versus BNP pós-procedimento), sem comparação direta entre as duas estratégias na mesma população. Nenhum dos estudos incluiu pacientes com fração de ejeção reduzida, o que limita a extrapolação para essa população.",
+    "source_refs": [
+      "Badoz M, Serzian G, Favoulet B, Sellal JM, De Chillou C, Laurent G, Ecarnot F, Bardonnet K, Seronde MF, Schiele F, Meneveau N. MR-proANP, sST2, BNP and sinus rhythm maintenance 1 year after electrical cardioversion for atrial fibrillation. BMC Cardiovasc Disord. 2025;25(1):640. DOI: 10.1186/s12872-025-05052-5. PMID: 40883706.",
+      "Ozturk A, Okan T. Association of plasma BNP levels at different times with cardioversion success, maintenance of sinus rhythm and severity of diastolic dysfunction in patients with atrial fibrillation. Cardiovasc J Afr. 2025;36(1):6-11. DOI: 10.5830/CVJA-2024-009. PMID: 40779155."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "MR-proANP",
+      "BNP",
+      "fibrilação atrial",
+      "cardioversão elétrica",
+      "recorrência",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "painel-de-trombofilia-hereditaria-na-investigacao-do-tromboembolismo-venoso-nao-provocado",
+    "name": "Painel de trombofilia hereditária na investigação do tromboembolismo venoso não provocado",
+    "category": "laboratorial",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Bateria de testes que investiga anormalidades biológicas hereditárias e adquiridas predisponentes a tromboembolismo venoso (TEV) — mutação do fator V de Leiden, mutação da protrombina G20210A, deficiência de proteína C, proteína S e antitrombina, além do rastreio de síndrome antifosfolípide quando indicado —, não solicitada de rotina em todo paciente com TVP ou TEP.",
+    "reference_range": "Não se aplica valor único; cada componente do painel tem seu próprio critério de anormalidade (por exemplo, atividade de proteína C, proteína S ou antitrombina abaixo do limite inferior de referência do laboratório; presença da mutação em heterozigose ou homozigose para fator V de Leiden e protrombina G20210A).",
+    "indications": "Segundo a revisão prática de Cordeanu et al. (Archives of Cardiovascular Diseases, 2026), o rastreio seletivo — não universal — é indicado principalmente em: TEV não provocado em paciente jovem, trombose em local incomum, TEV associado a uso de hormônio (contraceptivo ou terapia de reposição), e em contextos que orientam decisão terapêutica concreta (duração da anticoagulação, escolha do anticoagulante, aconselhamento contraceptivo ou manejo de gestação futura). O rastreio universal de todo paciente com TVP/TEP não é recomendado nem custo-efetivo.",
+    "interpretation": "A revisão detalha considerações práticas relevantes ao resultado: o momento da coleta importa, porque a anticoagulação em curso interfere em vários componentes do painel (proteína C e S caem sob antagonista de vitamina K; antitrombina cai sob heparina; os anticoagulantes orais diretos também interferem em ensaios funcionais, exigindo estratégias de neutralização por carvão ativado, mencionadas na revisão como orientação de especialistas recente). O achado positivo tem implicação terapêutica distinta por população — mulheres que precisam de contracepção hormonal ou terapia de reposição na menopausa, pacientes com trombose associada a câncer, e pacientes com hipertensão pulmonar tromboembólica crônica são discutidos separadamente no documento, porque a trombofilia interage de forma diferente com a decisão terapêutica em cada um desses cenários. Dados do registro RIETE (Cohen et al., Blood Advances, 2024; mais de 100 mil pacientes, 20,3% testados para trombofilia hereditária) mostram que pacientes não testados tiveram desfechos piores em geral (mais recorrência, sangramento maior e mortalidade) — achado que provavelmente reflete viés de seleção (quem é testado tende a ser mais jovem e mais saudável), não um efeito causal do teste em si.",
+    "limitations": "Resultado positivo não altera necessariamente a duração da anticoagulação em todo cenário — a decisão depende do tipo de trombofilia, se o evento foi provocado ou não, e de fatores de risco concomitantes, não do resultado do painel isoladamente. Colher a bateria completa durante a fase aguda do evento trombótico ou durante a anticoagulação pode gerar resultado falso-positivo ou falso-negativo, exigindo repetição em momento apropriado antes de qualquer decisão baseada no resultado. O documento de referência é uma revisão narrativa de especialistas, não uma diretriz formal com sistema de graduação de evidência (COR/LOE) — os dados do RIETE, por sua vez, são observacionais e sujeitos a viés de indicação.",
+    "source_refs": [
+      "Cordeanu EM, Mirea C, Zamperini C, Brouder S, Stephan D. Thrombophilia testing in venous thromboembolism: When, who and why it matters. A practical review. Arch Cardiovasc Dis. 2026. DOI: 10.1016/j.acvd.2026.04.004. PMID: 42215408.",
+      "Cohen O, Waldman Radinsky L, Kenet G, Mahé I, Barillari G, Soler S, Sigüenza P, Del Valle Morales M, Villares P, Monreal M. Venous thromboembolism characteristics and outcomes among RIETE patients tested and untested for inherited thrombophilia. Blood Adv. 2024;8(18):4950-4959. DOI: 10.1182/bloodadvances.2024012611. PMID: 38669351."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "trombofilia",
+      "fator V de Leiden",
+      "protrombina G20210A",
+      "tromboembolismo venoso não provocado",
+      "síndrome antifosfolípide"
+    ]
+  },
+  {
+    "slug": "adenosina-intravenosa-diagnostico-terapeutica-na-taquicardia-de-qrs-estreito",
+    "name": "Adenosina intravenosa diagnóstico-terapêutica na taquicardia de QRS estreito indiferenciada",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Resposta do nó atrioventricular a um bloqueio farmacológico ultrarrápido e transitório — a adenosina interrompe a condução AV por segundos, o suficiente para reverter arritmias que dependem do nó AV no circuito de reentrada (taquicardia por reentrada nodal, taquicardia por via acessória) e para 'desmascarar' a atividade atrial subjacente em arritmias que não dependem do nó AV (flutter e taquicardia atrial), útil quando o diagnóstico à beira do leito permanece incerto mesmo após a manobra vagal.",
+    "reference_range": "Não se aplica valor de referência — o desfecho é a resposta observada no ECG contínuo durante e após a injeção: reversão a ritmo sinusal, desmascaramento de ondas de flutter/taquicardia atrial, ou ausência de resposta.",
+    "indications": "Taquicardia de QRS estreito regular, hemodinamicamente estável, refratária à manobra vagal (Valsalva modificada), como segunda linha diagnóstico-terapêutica antes de considerar bloqueador de canal de cálcio não di-hidropiridínico ou cardioversão elétrica.",
+    "interpretation": "Segundo a revisão de Tednes et al. (Annals of Pharmacotherapy, 2023), a técnica de administração em seringa única (adenosina pré-diluída no mesmo volume de soro fisiológico, em vez da técnica clássica de duas seringas separadas) tem sido associada a melhores desfechos práticos, e a revisão discute ajuste de dose necessário por interação medicamentosa (por exemplo, redução de dose com dipiridamol, que potencializa o efeito da adenosina, e necessidade de dose maior em uso concomitante de metilxantinas, que antagonizam o efeito). O ensaio piloto randomizado de Kotruchin et al. (Clinical Cardiology, 2022; 30 pacientes, nove hospitais tailandeses) encontrou taxa de reversão de 93,3% com a técnica de duas seringas e 100% com a técnica de seringa única (p=1,000, sem diferença estatística nessa amostra pequena), com dose total similar entre os grupos (8,6±5,1 mg vs. 7,6±4,5 mg) e nenhuma complicação em nenhum dos dois grupos.",
+    "limitations": "A adenosina é contraindicada ou exige cautela em asma/DPOC grave (broncoespasmo) e em transplantado cardíaco denervado (resposta exagerada, exigindo dose bem menor). Efeitos transitórios desagradáveis — sensação de morte iminente, rubor facial, dispneia — são frequentes e devem ser avisados ao paciente antes da administração, ainda que durem poucos segundos. O ensaio piloto citado tem amostra pequena (30 pacientes) e não tem poder estatístico para detectar diferença real entre as duas técnicas de administração — a similaridade encontrada não deve ser lida como equivalência definitivamente estabelecida.",
+    "source_refs": [
+      "Tednes P, Marquardt S, Kuhrau S, Heagler K, Rech M. Keeping It \"Current\": A Review of Treatment Options for the Management of Supraventricular Tachycardia. Ann Pharmacother. 2023;58(7):715-727. DOI: 10.1177/10600280231199136. PMID: 37743672.",
+      "Kotruchin P, Chaiyakhan IO, Kamonsri P, Chantapoh W, Serewiwattana N, Kaweenattayanon N, Narangsiya N, Lorcharassriwong P, Korsakul K, Thawepornpuriphong P, Tirapuritorn T, Mitsungnern T. Comparison between the double-syringe and the single-syringe techniques of adenosine administration for terminating supraventricular tachycardia: A pilot, randomized controlled trial. Clin Cardiol. 2022;45(5):583-589. DOI: 10.1002/clc.23820. PMID: 35340059."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "adenosina",
+      "taquicardia supraventricular",
+      "taquicardia de QRS estreito",
+      "pronto-socorro",
+      "diagnóstico-terapêutico"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-de-estresse-diastolico-por-exercicio-no-diabetico-assintomatico",
+    "name": "Ecocardiograma de estresse diastólico por exercício no rastreio de doença arterial coronariana no diabético tipo 2 assintomático",
+    "category": "imagem",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Variação da relação E/E' (marcador Doppler de pressão de enchimento do ventrículo esquerdo) induzida por exercício — em vez do achado clássico de alteração de contratilidade segmentar usado no ecocardiograma de estresse convencional —, testando a hipótese de que a resposta diastólica ao esforço é um marcador mais sensível de isquemia oculta no coração diabético, onde a disfunção diastólica de base é comum e pode mascarar sinais sistólicos habituais.",
+    "reference_range": "Ponto de corte de -0,0708 para a variação induzida por exercício da média do E/E' (lateral e septal) identificado por curva ROC como o de melhor discriminação entre presença e ausência de doença arterial coronariana obstrutiva no estudo de referência.",
+    "indications": "Diabético tipo 2 assintomático, sem diagnóstico prévio de doença arterial coronariana, quando se deseja rastrear isquemia oculta — alternativa à cintilografia de perfusão miocárdica já usada com essa mesma finalidade nessa população.",
+    "interpretation": "No estudo de Paraskevaidis et al. (Coronary Artery Disease, 2010; 105 diabéticos tipo 2, todos submetidos a teste ergométrico com ecocardiograma e cintilografia, confirmados por cateterismo em até 1 mês), a angiografia coronariana revelou estenose ≥70% em 69% da amostra. O exercício induziu aumento do E/E' no grupo com DAC e queda no grupo sem DAC — direções opostas que permitiram discriminação com área sob a curva ROC de 0,892 (p<0,001). A sensibilidade do ecocardiograma de estresse diastólico foi de 93,1% contra 75,0% da cintilografia, com especificidade igual entre os dois métodos (78,8%); restrito aos pacientes assintomáticos, os números foram semelhantes (sensibilidade 92,3% vs. 76,9%, especificidade 80% para ambos).",
+    "limitations": "Estudo de centro único com 105 pacientes — o ponto de corte de variação do E/E' precisa validação externa antes de adoção ampla, e a técnica de aquisição do Doppler tecidual durante exercício exige treinamento específico do ecocardiografista, não disponível em todo serviço. O protocolo usa teste ergométrico (esforço em esteira/bicicleta), não dobutamina — pacientes com neuropatia autonômica diabética grave que limita a capacidade de exercício podem não atingir frequência cardíaca alvo suficiente para o teste, cenário em que a alternativa farmacológica (dobutamina) permanece a opção prática, ainda que não tenha sido comparada diretamente no estudo citado.",
+    "source_refs": [
+      "Paraskevaidis IA, Tsougos E, Panou F, Dagres N, Karatzas D, Boutati E, Varounis C, Kremastinos DT. Diastolic stress echocardiography detects coronary artery disease in patients with asymptomatic type II diabetes. Coron Artery Dis. 2010;21(2):104-12. DOI: 10.1097/MCA.0b013e328335a05d. PMID: 20124991."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma de estresse",
+      "disfunção diastólica",
+      "diabetes tipo 2",
+      "isquemia silenciosa",
+      "rastreio de doença coronariana"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-transesofagico-na-avaliacao-de-leak-peridispositivo-apos-oclusao-de-apendice-atrial-esquerdo",
+    "name": "Ecocardiograma transesofágico na avaliação de leak peridispositivo após oclusão de apêndice atrial esquerdo",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Fluxo residual de sangue ao redor do disco de um oclusor de apêndice atrial esquerdo (Watchman ou similar), avaliado por Doppler colorido ao ecocardiograma transesofágico (ou por angiotomografia cardíaca, alternativa cada vez mais usada) em exame de seguimento — verifica se o dispositivo realmente selou a estrutura que deveria eliminar como fonte de trombo na fibrilação atrial.",
+    "reference_range": "Classificação por tamanho do jato residual: leak pequeno (até 3 mm), moderado (3-5 mm) e grande (maior que 5 mm) — o corte de 5 mm costuma ser o ponto usado para decidir se a anticoagulação pode ser suspensa com segurança.",
+    "indications": "Todo paciente após implante de oclusor de apêndice atrial esquerdo, em exame de seguimento programado (tipicamente 45 dias a 3 meses após o implante), antes de decidir suspender a anticoagulação sistêmica em favor de antiagregação isolada.",
+    "interpretation": "No estudo piloto de viabilidade de Chen et al. (Journal of the Society for Cardiovascular Angiography & Interventions, 2026; 12 pacientes submetidos a cardioversão elétrica combinada com oclusão de apêndice atrial esquerdo no mesmo procedimento, população com contraindicação a anticoagulação pós-cardioversão), a imagem de seguimento (tomografia cardíaca ou ecocardiograma transesofágico) identificou 1 trombo relacionado ao dispositivo de baixo risco (9%) e leak peridispositivo maior que 3 mm em 18% dos casos — nenhum leak maior que 5 mm. Não houve morte, AVC, evento embólico sistêmico ou sangramento maior em 45 dias e 3 meses de seguimento nessa série.",
+    "limitations": "Série piloto muito pequena (12 pacientes, um único centro), insuficiente para estabelecer taxa de leak esperada de forma confiável — estudos maiores com oclusão isolada (sem cardioversão combinada) são necessários para contextualizar esses números. A avaliação do leak por ecocardiograma transesofágico depende de operador treinado e tem variabilidade inter-observador conhecida, sobretudo para jatos pequenos próximos ao limite de detecção; a angiotomografia vem sendo comparada como alternativa potencialmente mais reprodutível, mas ainda sem consenso sobre qual método deve prevalecer quando os dois discordam.",
+    "source_refs": [
+      "Chen L, Pham T, Aman E, Khong A, Munir I, Dong T, Munir MB, Smith TWR, Rogers JH, Singh G. Combined Direct Current Cardioversion and Left Atrial Appendage Occlusion in Patients With Contraindication to Anticoagulation: A Single-Center Feasibility Study. J Soc Cardiovasc Angiogr Interv. 2026;5(7):105393. DOI: 10.1016/j.jscai.2026.105393. PMID: 42500432."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma transesofágico",
+      "leak peridispositivo",
+      "oclusão de apêndice atrial esquerdo",
+      "Watchman",
+      "fibrilação atrial"
+    ]
+  },
+  {
+    "slug": "polissonografia-no-rastreio-de-apneia-obstrutiva-do-sono-na-hipertensao-resistente",
+    "name": "Polissonografia no rastreio de apneia obstrutiva do sono na hipertensão resistente",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Registro simultâneo de variáveis fisiológicas durante o sono (fluxo aéreo, esforço respiratório, saturação de oxigênio, eletroencefalograma) para diagnosticar e graduar a apneia obstrutiva do sono (AOS) — investigada aqui não por sintoma respiratório isolado, mas como causa secundária tratável de hipertensão que permanece descontrolada apesar de três ou mais classes de anti-hipertensivo em dose adequada.",
+    "reference_range": "Índice de apneia-hipopneia (IAH) ≥10 eventos obstrutivos por hora de sono foi o critério de AOS usado no estudo de referência — classificações mais recentes costumam usar leve (5-14/h), moderada (15-29/h) e grave (≥30/h).",
+    "indications": "Hipertensão resistente (pressão não controlada apesar de três classes de anti-hipertensivo, incluindo diurético, em dose otimizada), sobretudo em paciente obeso, roncador ou com sonolência diurna relatada — ainda que a ausência desses sintomas clássicos não deva descartar a investigação nessa população, dado o achado do estudo de referência.",
+    "interpretation": "No estudo de Logan et al. (Journal of Hypertension, 2001; 41 pacientes consecutivos com hipertensão resistente, definida como pressão de consultório ≥140/90 mmHg em uso de três ou mais anti-hipertensivos em dose máxima recomendada, todos submetidos a polissonografia overnight), a prevalência de AOS foi de 83% — 96% nos homens e 65% nas mulheres (p=0,014), com gravidade maior nos homens (índice de apneia-hipopneia médio de 32,2 vs. 14,0 eventos/hora nas mulheres; p=0,004). A prevalência extraordinariamente alta nesse estudo sustenta a hipótese de que a AOS não diagnosticada contribui para a resistência ao tratamento farmacológico da hipertensão nessa população.",
+    "limitations": "O estudo de referência é de 2001, com amostra pequena (41 pacientes) e delineamento transversal — não prova causalidade entre AOS e resistência ao tratamento, apenas associação forte o suficiente para justificar rastreio. O próprio estudo aponta a necessidade de ensaio clínico randomizado para confirmar se o tratamento da AOS (CPAP) efetivamente reduz a pressão arterial nesse cenário — questão tratada separadamente, fora do escopo deste exame. Populações mais diversificadas (diferentes etnias, diferentes critérios de definição de hipertensão resistente) podem ter prevalência diferente da encontrada nessa coorte específica.",
+    "source_refs": [
+      "Logan AG, Perlikowski SM, Mente A, Tisler A, Tkacova R, Niroumand M, Leung RS, Bradley TD. High prevalence of unrecognized sleep apnoea in drug-resistant hypertension. J Hypertens. 2001;19(12):2271-7. DOI: 10.1097/00004872-200112000-00022. PMID: 11725173."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "polissonografia",
+      "apneia obstrutiva do sono",
+      "hipertensão resistente",
+      "hipertensão secundária"
+    ]
+  },
+  {
+    "slug": "bioimpedancia-vetorial-biva-na-avaliacao-de-congestao-na-insuficiencia-cardiaca-com-doenca-renal-cronica",
+    "name": "Bioimpedância vetorial (BIVA) na avaliação de congestão em pacientes com insuficiência cardíaca e doença renal crônica (síndrome cardiorrenal)",
+    "category": "metodo_grafico",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Resistência e reatância da corrente elétrica de baixa intensidade aplicada ao corpo (analisador de bioimpedância de 50 kHz), plotadas num gráfico R-Xc que estima o estado de hidratação e a composição corporal (massa celular) — método point-of-care, não invasivo, complementar ao exame clínico e a outros marcadores de congestão na síndrome cardiorrenal (insuficiência cardíaca coexistindo com doença renal crônica).",
+    "reference_range": "Ponto de corte de hidratação (calculado pelo software do aparelho, HYDRAGRAM) de 78,7% identificado como o de melhor valor preditivo para mortalidade cardiovascular em 12 meses no estudo de referência; ângulo de fase abaixo de 4,8° na admissão por IC aguda foi associado a maior mortalidade em outro protocolo de referência.",
+    "indications": "Paciente com insuficiência cardíaca e doença renal crônica concomitantes (síndrome cardiorrenal), como ferramenta complementar de avaliação de volemia quando o exame clínico isolado é ambíguo — situação comum nessa população, em que edema pode refletir tanto congestão cardíaca quanto síndrome nefrótica ou outras causas renais.",
+    "interpretation": "No estudo prospectivo de Jiménez-Villodres et al. (Physiological Measurement, 2026; 85 pacientes com IC e DRC concomitantes, seguidos por 12 meses), a hidratação estimada por BIVA se correlacionou moderadamente com a avaliação por ultrassom (escore VExUS) (r=0,51; p<0,001), e hidratação acima do corte de 78,7% associou-se a 5,43 vezes mais risco de mortalidade cardiovascular (IC 95% 1,36-21,61; p=0,016) na análise de Cox. Reatância e ângulo de fase também se associaram significativamente à mortalidade. O protocolo complementar de ângulo de fase e escore-Z do BIVA (Bernal-Ceballos et al., Journal of Visualized Experiments, 2023) descreve como o ângulo de fase reduzido pode refletir tanto sobrecarga hídrica quanto desnutrição — dois processos que, na prática, coexistem com frequência no paciente com IC avançada e caquexia cardíaca, exigindo interpretação conjunta com o estado nutricional, não isolada.",
+    "limitations": "A BIVA por si só não distingue se um ângulo de fase reduzido reflete excesso de água corporal, perda de massa celular (desnutrição/caquexia) ou os dois simultaneamente — por isso a literatura recomenda interpretá-la ao lado de outros marcadores (biomarcadores, ultrassom de veia cava/VExUS, exame clínico), não isoladamente. O estudo de maior porte citado tem 85 pacientes de centro único, população específica de síndrome cardiorrenal — extrapolação para IC sem doença renal concomitante não foi testada nesse desenho. Equipamentos e algoritmos de diferentes fabricantes de bioimpedância não são necessariamente intercambiáveis, o que limita comparação direta entre estudos que usam aparelhos diferentes.",
+    "source_refs": [
+      "Jiménez-Villodres M, Vegas-Aguilar I, Jiménez Rubio C, Fernández-Jiménez R, González-Aguado N, Del Mar Amaya-Campos M, Palma-Martí L, Delgado-Lozano C, García-Pinilla JM, García-Almeida JM. BIVA and VExUS for hydration assessment and cardiovascular mortality prediction in cardiorenal patients. Physiol Meas. 2026;47(5). DOI: 10.1088/1361-6579/ae700d. PMID: 42155516.",
+      "Bernal-Ceballos F, Castillo-Martínez L, Reyes-Paz Y, Villanueva-Juárez JL, Hernández-Gilsoul T. Clinical Application of Phase Angle and BIVA Z-Score Analyses in Patients Admitted to an Emergency Department with Acute Heart Failure. J Vis Exp. 2023;(196). DOI: 10.3791/65660. PMID: 37458449."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bioimpedância vetorial",
+      "BIVA",
+      "congestão",
+      "síndrome cardiorrenal",
+      "insuficiência cardíaca",
+      "ângulo de fase"
+    ]
+  },
+  {
+    "slug": "variacao-da-pressao-de-pulso-e-elevacao-passiva-das-pernas-na-fluidorresponsividade",
+    "name": "Variação da pressão de pulso (PPV) e prova de elevação passiva das pernas na predição de fluidorresponsividade em ventilação mecânica",
+    "category": "metodo_grafico",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Oscilação da pressão de pulso arterial ao longo do ciclo respiratório em paciente sob ventilação mecânica — reflete a interação coração-pulmão que faz o débito cardíaco variar com a pressão intratorácica quando o paciente está na porção ascendente da curva de Frank-Starling (fluidorresponsivo). A prova de elevação passiva das pernas (PLR) funciona como um 'bolus de fluido reversível e endógeno' (desloca cerca de 300 mL de sangue venoso para a circulação central), usada para contornar as limitações conhecidas da PPV isolada em volume corrente baixo.",
+    "reference_range": "PPV acima de 12-13% costuma indicar fluidorresponsividade em ventilação com volume corrente convencional; no cenário específico de volume corrente baixo (protetor pulmonar), a mudança absoluta da PPV induzida pela elevação passiva das pernas teve valor de corte médio/mediano de -2 pontos (variação de -2,5 a -1) no estudo de referência.",
+    "indications": "Paciente em ventilação mecânica com volume corrente baixo (estratégia protetora pulmonar, comum em SDRA), quando há dúvida se administrar mais fluido vai de fato aumentar o débito cardíaco — cenário em que a PPV isolada perde acurácia, motivando o uso combinado com a prova de elevação passiva das pernas.",
+    "interpretation": "Na metanálise de Mallat et al. (Critical Care, 2025; 5 estudos, 474 pacientes em ventilação mecânica com volume corrente baixo em UTI), a mudança absoluta da PPV induzida pela elevação passiva das pernas teve área sob a curva sumária de 0,91 (IC 95% 0,88-0,93), sensibilidade de 88% e especificidade de 83% para prever fluidorresponsividade, com razão de chances diagnóstica de 35. Pelo nomograma de Fagan, partindo de probabilidade pré-teste de 50%, um resultado positivo elevou a probabilidade pós-teste para 84%, e um negativo reduziu para 17% — desempenho bem superior ao relatado para a PPV isolada nesse mesmo cenário de volume corrente baixo. Em contraste, outra metanálise (Wang et al., Annals of Translational Medicine, 2023) mostrou que tanto a PPV quanto a variação de volume sistólico (SVV) têm desempenho ruim para prever fluidorresponsividade durante ventilação monopulmonar em cirurgia torácica (área sob a curva de apenas 0,60 e 0,68, respectivamente) — reforçando que esses índices dependem muito do contexto ventilatório específico, não são generalizáveis a qualquer paciente ventilado.",
+    "limitations": "A PPV isolada perde acurácia em volume corrente baixo, respiração espontânea concomitante, arritmia cardíaca (sobretudo fibrilação atrial, em que não há um ciclo respiratório-hemodinâmico regular para analisar), tórax aberto e ventilação monopulmonar — situações em que a interpretação isolada do índice é inadequada, exigindo a prova de elevação passiva das pernas ou outro método alternativo. A metanálise de maior qualidade citada tem apenas 5 estudos incluídos (474 pacientes), heterogeneidade de protocolo de medida entre eles, e I² reportado como 0% pode refletir também amostra pequena de estudos, não ausência real de heterogeneidade.",
+    "source_refs": [
+      "Mallat J, Siuba MT, Abou-Arab O, Kovacevic P, Ismail K, Duggal A, Guinot PG. Changes in pulse pressure variation induced by passive leg raising test to predict preload responsiveness in mechanically ventilated patients with low tidal volume in ICU: a systematic review and meta-analysis. Crit Care. 2025;29(1):18. DOI: 10.1186/s13054-024-05238-x. PMID: 39789598.",
+      "Wang C, Feng Z, Cai J, Duan M, Li H, Dai Z, Lv H, Xu Z, Wang H, Chen Y. Accuracy of stroke volume variation and pulse pressure variation in predicting fluid responsiveness undergoing one-lung ventilation during thoracic surgery: a systematic review and meta-analysis. Ann Transl Med. 2023;11(1):19. DOI: 10.21037/atm-22-6030. PMID: 36760241."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "variação de pressão de pulso",
+      "elevação passiva das pernas",
+      "fluidorresponsividade",
+      "ventilação mecânica",
+      "ressuscitação hemodinâmica"
+    ]
+  },
+  {
+    "slug": "estratificacao-de-risco-basal-hfa-icos-antes-de-terapia-oncologica-cardiotoxica",
+    "name": "Estratificação de risco basal pelo escore HFA-ICOS antes de terapia oncológica cardiotóxica",
+    "category": "metodo_grafico",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Ferramenta estruturada de classificação de risco cardiovascular — desenvolvida pela Heart Failure Association em conjunto com a International Cardio-Oncology Society (HFA-ICOS) — que combina fatores de risco cardiovascular basais, histórico cardiológico e oncológico prévio, e exames basais (biomarcadores, ecocardiograma com strain, ECG), aplicada antes do início de terapia com potencial cardiotóxico conhecido, não depois que o dano já ocorreu.",
+    "reference_range": "Classificação em quatro categorias de risco: baixo, moderado, alto e muito alto, conforme o número e o peso dos fatores de risco identificados — validada de forma específica para antraciclinas, terapias direcionadas ao HER2 e inibidores de BCR-ABL.",
+    "indications": "Todo paciente com indicação de terapia oncológica com risco cardiotóxico conhecido (antraciclina, terapia anti-HER2, inibidor de BCR-ABL, entre outras listadas na diretriz), antes do início do tratamento — o momento em que a estratificação de risco tem maior utilidade prática, pois orienta intensidade de vigilância e elegibilidade a cardioproteção.",
+    "interpretation": "As diretrizes de cardio-oncologia da ESC 2022 (Lyon et al., European Heart Journal - Cardiovascular Imaging) recomendam o uso de ferramentas padronizadas de estratificação de risco antes de terapias cardiotóxicas, com o HFA-ICOS como referência central. A revisão prática de Tong et al. (British Journal of Hospital Medicine, 2025) resume o processo em 7 passos: identificar a população-alvo (quem vai receber terapia cardiotóxica), avaliar fatores de risco cardiovascular não modificáveis, avaliar fatores modificáveis, revisar terapia oncológica prévia, revisar história cardiovascular prévia, e realizar investigação basal (biomarcadores e imagem). Pacientes classificados como alto ou muito alto risco são candidatos a vigilância mais próxima durante o tratamento (biomarcador e/ou imagem seriados) e a discussão sobre cardioproteção farmacológica antes mesmo do primeiro sinal de toxicidade, em vez de esperar a disfunção se instalar para então agir.",
+    "limitations": "A validação do HFA-ICOS foi feita principalmente para as três classes de terapia citadas (antraciclina, anti-HER2, inibidor de BCR-ABL) — a extrapolação para outras classes cardiotóxicas mais novas (por exemplo, inibidores de checkpoint imunológico, terapias de célula CAR-T) tem validação mais limitada e é área de pesquisa ativa. A ferramenta exige acesso a ecocardiograma com strain longitudinal global e biomarcador basal, recursos nem sempre disponíveis em todo serviço oncológico, o que pode limitar sua aplicação rotineira fora de centros com estrutura de cardio-oncologia dedicada.",
+    "source_refs": [
+      "Lyon AR, López-Fernández T, Couch LS, Asteggiano R, Aznar MC, Bergler-Klein J, Boriani G, Cardinale D, Cordoba R, Cosyns B, Cutter DJ, de Azambuja E, de Boer RA, Dent SF, Farmakis D, Gevaert SA, Gorog DA, Herrmann J, Lenihan D, Moslehi J, Moura B, Salinger SS, Stephens R, Suter TM, Szmit S, Tamargo J, Thavendiranathan P, Tocchetti CG, van der Meer P, van der Pal HJH. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J Cardiovasc Imaging. 2022;23(10):e333-e465. DOI: 10.1093/ehjci/jeac106. PMID: 36017575.",
+      "Tong J, Senechal I, Ramalingam S, Lyon AR. Risk Assessment Prior to Cardiotoxic Anticancer Therapies in 7 Steps. Br J Hosp Med (Lond). 2025;86(1):1-21. DOI: 10.12968/hmed.2024.0632. PMID: 39862029."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "HFA-ICOS",
+      "cardio-oncologia",
+      "estratificação de risco",
+      "cardiotoxicidade",
+      "cardioproteção"
+    ]
   }
 ]
