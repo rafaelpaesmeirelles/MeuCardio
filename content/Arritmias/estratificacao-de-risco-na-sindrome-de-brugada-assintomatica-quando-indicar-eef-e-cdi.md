@@ -4,8 +4,8 @@ slug: "estratificacao-de-risco-na-sindrome-de-brugada-assintomatica-quando-indic
 theme: "Arritmias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Sieira J, Brugada P. Brugada Syndrome: Defining the Risk in Asymptomatic Patients. Arrhythm Electrophysiol Rev. 2016;5(3):164-169. PMID: 28116080", "Probst V, Veltmann C, Eckardt L, et al. Long-term prognosis of patients diagnosed with Brugada syndrome: Results from the FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972", "Priori SG, Gasparini M, Napolitano C, et al. Risk stratification in Brugada syndrome: results of the PRELUDE (PRogrammed ELectrical stimUlation preDictive valuE) registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666", "Sieira J, Conte G, Ciconte G, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome: 20 years experience. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495", "Bazoukis G, et al. The Role of Electrophysiological Study in the Risk Stratification of Brugada Syndrome. Cardiol Rev. 2023. PMID: 37126436", "Gaita F, et al. The Brugada syndrome: risk stratification. Eur Heart J Suppl. 2023;25(Suppl C):C27-C31. PMID: 37125275", "Sieira J, Conte G, Ciconte G, et al. A score model to predict risk of events in patients with Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. PMID: 28379344"]
-legacy_source: "Documento novo. O documento existente de canalopatias (content/Arritmias/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo.md) cobre diagnóstico e manejo geral e cita, como armadilha isolada, que CDI de rotina no assintomático sem evento documentado é inadequado — sem desenvolver a estratificação de risco em si. O documento de escore de Sieira (escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa.md) cobre o escore combinado e seu fracasso de validação externa, mas não o debate específico sobre inducibilidade no EEF nem o recorte assintomático puro. Este documento preenche essa lacuna: a decisão prática de EEF e/ou CDI em quem NUNCA teve síncope nem parada cardíaca."
+source_refs: ["Sieira J, Brugada P. Brugada Syndrome: Defining the Risk in Asymptomatic Patients. Arrhythm Electrophysiol Rev. 2016;5(3):164-169. PMID: 28116080", "Probst V, Veltmann C, Eckardt L, et al. Long-term prognosis of patients diagnosed with Brugada syndrome: Results from the FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972", "Priori SG, Gasparini M, Napolitano C, et al. Risk stratification in Brugada syndrome: results of the PRELUDE (PRogrammed ELectrical stimUlation preDictive valuE) registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666", "Sieira J, Conte G, Ciconte G, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome: 20 years experience. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495", "Bazoukis G, et al. The Role of Electrophysiological Study in the Risk Stratification of Brugada Syndrome. Cardiol Rev. 2023. PMID: 37126436", "Gaita F, et al. The Brugada syndrome: risk stratification. Eur Heart J Suppl. 2023;25(Suppl C):C27-C31. PMID: 37125275", "Sieira J, Conte G, Ciconte G, et al. A score model to predict risk of events in patients with Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. PMID: 28379344", "Rattanawong P, Kulthamrongsri N, Chung EH. Exercise and Exercise Stress Testing in Brugada Syndrome: Diagnostic, Prognostic, and Safety Implications. JACC Asia. 2026;6(6):848-859. DOI: 10.1016/j.jacasi.2026.03.021. PMID: 42233564 — revisão narrativa, conferida contra o abstract indexado no PubMed em 08/08/2026."]
+legacy_source: "Documento novo. O documento existente de canalopatias (content/Arritmias/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo.md) cobre diagnóstico e manejo geral e cita, como armadilha isolada, que CDI de rotina no assintomático sem evento documentado é inadequado — sem desenvolver a estratificação de risco em si. O documento de escore de Sieira (escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa.md) cobre o escore combinado e seu fracasso de validação externa, mas não o debate específico sobre inducibilidade no EEF nem o recorte assintomático puro. Este documento preenche essa lacuna: a decisão prática de EEF e/ou CDI em quem NUNCA teve síncope nem parada cardíaca. Atualizado em 08/08/2026 com seção sobre teste ergométrico (JACC Asia 2026, PMID 42233564) — nenhuma das ferramentas de risco já descritas neste documento (EEF, escore de Sieira, história familiar) incluía o teste de esforço; a revisão nova mostra que ele pode ter papel diagnóstico e prognóstico complementar."
 ---
 
 # Estratificação de Risco na Síndrome de Brugada Assintomática: Quando Indicar EEF e CDI
@@ -72,6 +72,39 @@ Não existe recomendação formal de classe (I/IIa/IIb/III) das diretrizes de so
 - O escore de Sieira (Eur Heart J. 2017;38(22):1756-1763, PMID 28379344), que combina várias dessas variáveis em uma pontuação única, teve C-index de 0,82 na derivação mas caiu para 0,58 — próximo do acaso — em validação externa independente (ver documento específico desta base sobre o escore). Isso reforça que **nenhuma ferramenta combinada substitui hoje o julgamento individualizado**, e que qualquer escore usado deve ser interpretado com essa ressalva.
 
 **Prática recomendada pela literatura de risco, resumida:** no paciente verdadeiramente assintomático (nunca teve síncope nem parada cardíaca), a presença isolada de padrão espontâneo, ou de EEF indutível, é motivo para vigilância mais próxima e discussão individualizada — não para indicação automática de CDI. A combinação de múltiplas variáveis de risco (padrão espontâneo + disfunção do nó sinusal + EEF indutível, e possivelmente história familiar de morte súbita precoce em múltiplos parentes) é o cenário em que a discussão sobre CDI ganha mais força, sempre pesando explicitamente contra as taxas de complicação do próprio dispositivo.
+
+## Teste ergométrico — ferramenta adicional, acrescentada em 08/08/2026
+Nenhuma variável discutida acima (padrão espontâneo, EEF, escore de Sieira, história familiar) usa
+o teste de esforço. Uma revisão narrativa publicada em 2026 reúne o papel emergente do teste
+ergométrico (TE) na síndrome de Brugada — importante frisar que **é revisão, não ensaio clínico
+randomizado**, então os pontos abaixo são leitura qualitativa de mecanismo e observação clínica, não
+número de risco relativo ou HR.
+
+- **Dois momentos do teste têm mecanismos diferentes de desmascarar a doença.** No **pico do
+  esforço**, a taquicardia pode desmascarar anormalidades de despolarização dependentes de
+  frequência cardíaca, capazes de provocar arritmia. Na **fase de recuperação precoce** — marcada por
+  retirada simpática abrupta e rebote parassimpático — é mais comum desmascarar anormalidades de
+  **repolarização**, revelando o padrão tipo 1 e disparando arritmia ventricular. Ou seja, **o
+  eletrocardiograma da recuperação precoce, não só do pico do esforço, merece atenção** ao interpretar
+  o exame num paciente com suspeita ou diagnóstico de Brugada.
+- **Marcadores de risco durante o teste**: extrassístoles ventriculares induzidas pelo exercício e
+  alterações do segmento ST durante a recuperação precoce são descritas como potencialmente
+  significativas para risco arrítmico — achados que merecem registro explícito no laudo, não só a
+  presença/ausência de padrão tipo 1.
+- **Segurança**: apesar de relatos de caso raros de arritmia ventricular desencadeada pelo exercício,
+  a revisão descreve o TE como **geralmente seguro quando realizado com monitorização apropriada**.
+- **Valor diagnóstico agregado**: o TE pode aumentar a acurácia diagnóstica, particularmente quando
+  combinado com posicionamento alto das derivações precordiais ou teste de provocação farmacológica
+  (bloqueador de canal de sódio) — ferramentas complementares, não substitutas uma da outra.
+- **O que isto muda na prática, com a devida cautela de fonte**: o teste ergométrico é um exame já
+  disponível e de baixo custo que pode ser incorporado à investigação diagnóstica e, possivelmente, à
+  estratificação de risco do paciente com Brugada — mas, como a própria fonte é uma revisão narrativa
+  sem metanálise de números de risco relativo, **não deve ser tratado como equivalente em força de
+  evidência ao EEF ou ao escore de Sieira** (ambos com estudos primários e validação, ainda que
+  imperfeita) até que estudos prospectivos dedicados confirmem o valor prognóstico incremental.
+- **fonte**: Rattanawong P et al., JACC Asia. 2026;6(6):848-859, PMID 42233564, publicado
+  junho/2026 — revisão narrativa, abstract conferido no PubMed nesta sessão; texto completo (acesso
+  aberto, PMCID PMC13244109) não foi lido integralmente.
 
 ## Armadilhas clínicas
 
