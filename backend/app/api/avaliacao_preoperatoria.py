@@ -2,10 +2,9 @@
 
 Reúne calculadoras perioperatórias validadas num documento clínico pronto para
 impressão, assinatura digital e envio ao paciente. Os resultados são sempre
-recalculados no servidor a partir dos campos brutos — nunca se confia em um
-número enviado pelo cliente.
+recalculados no servidor a partir dos campos brutos.
 
-Fonte: ChatGPT nas extensões DASI/AUB-HAS2/VSG-CRI adicionadas em 07/08/2026.
+Fonte: ChatGPT nas extensões perioperatórias produzidas em 07/08/2026.
 """
 
 from __future__ import annotations
@@ -22,12 +21,17 @@ from app.models.round import Patient
 from app.services import calculators as calc
 from app.services import cofre
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 from app.services.professional_profile import document_identity
 
 calc.REGISTRY.update(PERIOPERATIVE_REGISTRY)
+calc.REGISTRY.update(GERIATRIC_PERIOPERATIVE_REGISTRY)
+calc.REGISTRY.update(MORTALITY_PERIOPERATIVE_REGISTRY)
+calc.REGISTRY.update(SORT_PERIOPERATIVE_REGISTRY)
 
 router = APIRouter(prefix="/api/avaliacao-preoperatoria", tags=["avaliacao-preoperatoria"])
-
 DOC_TYPE = "avaliacao_preoperatoria"
 TITULO_DOCUMENTO = "Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico"
 
@@ -44,6 +48,9 @@ class GerarIn(BaseModel):
     dasi: dict | None = None
     aub_has2: dict | None = None
     vsg_cri: dict | None = None
+    gscri: dict | None = None
+    sort: dict | None = None
+    s_mpm: dict | None = None
     conduta_recomendada: str | None = None
     endereco: str | None = None
 
@@ -58,17 +65,8 @@ def _resultado_calculadora(slug: str, payload: dict | None) -> tuple[dict, str] 
     return r["result"], r["interpretation"]
 
 
-def _montar_corpo(
-    dados: GerarIn,
-    rcri: tuple[dict, str] | None,
-    gupta: tuple[dict, str] | None,
-    dasi: tuple[dict, str] | None,
-    aub_has2: tuple[dict, str] | None,
-    vsg_cri: tuple[dict, str] | None,
-) -> str:
-    linhas: list[str] = []
-    linhas.append("AVALIAÇÃO CARDIOLÓGICA PRÉ-OPERATÓRIA DE RISCO CIRÚRGICO")
-    linhas.append("")
+def _montar_corpo(dados: GerarIn, resultados: list[tuple[str, tuple[dict, str] | None]]) -> str:
+    linhas: list[str] = ["AVALIAÇÃO CARDIOLÓGICA PRÉ-OPERATÓRIA DE RISCO CIRÚRGICO", ""]
     if dados.idade is not None:
         linhas.append(f"Idade do paciente: {dados.idade} anos")
     linhas.append(f"Procedimento planejado: {dados.procedimento_planejado}")
@@ -78,70 +76,38 @@ def _montar_corpo(
         linhas.append(f"Capacidade funcional (descrição clínica): {dados.capacidade_funcional}")
     linhas.append("")
 
-    if rcri:
-        resultado, interpretacao = rcri
-        linhas.append(
-            f"RCRI (Índice de Risco Cardíaco Revisado, Lee 1999): "
-            f"{resultado['pontos']} ponto(s) — Classe {resultado['classe']}."
-        )
-        linhas.append(interpretacao)
+    for nome, item in resultados:
+        if not item:
+            continue
+        resultado, interpretacao = item
+        if nome == "RCRI":
+            linhas.append(f"RCRI: {resultado['pontos']} ponto(s) — Classe {resultado['classe']}.")
+        elif nome == "Gupta MICA":
+            linhas.append(f"Gupta MICA — risco de IAM/parada cardíaca: {resultado['risco_pct']}%.")
+        elif nome == "DASI":
+            linhas.append(f"DASI: {resultado['score']}/58,2 — capacidade funcional {resultado['capacidade_funcional'].replace('_', ' ')}.")
+        elif nome == "AUB-HAS2":
+            linhas.append(f"AUB-HAS2: {resultado['score']}/6 — risco {resultado['categoria']}.")
+        elif nome == "VSG-CRI":
+            linhas.append(f"VSG-CRI (cirurgia vascular): {resultado['score']} ponto(s) — risco {resultado['categoria']}.")
+        elif nome == "GSCRI":
+            linhas.append(f"GSCRI (≥65 anos) — risco de IAM/parada cardíaca: {resultado['risco_pct']}%.")
+        elif nome == "SORT":
+            linhas.append(f"SORT — mortalidade por todas as causas em 30 dias: {resultado['risco_pct']}%.")
+        elif nome == "S-MPM":
+            linhas.append(f"S-MPM — mortalidade por todas as causas em 30 dias: {resultado['score']}/9, Classe {resultado['classe']}, {resultado['mortalidade_30d']}.")
+        if interpretacao:
+            linhas.append(interpretacao)
         linhas.append("")
 
-    if gupta:
-        resultado, interpretacao = gupta
-        linhas.append(
-            f"Gupta MICA (risco de IAM ou parada cardíaca perioperatória): {resultado['risco_pct']}%."
-        )
-        linhas.append(interpretacao)
-        linhas.append("")
-
-    if dasi:
-        resultado, interpretacao = dasi
-        linhas.append(
-            f"DASI (Duke Activity Status Index): {resultado['score']}/58,2 — "
-            f"capacidade funcional: {resultado['capacidade_funcional'].replace('_', ' ')}."
-        )
-        linhas.append(interpretacao)
-        linhas.append("")
-
-    if aub_has2:
-        resultado, interpretacao = aub_has2
-        linhas.append(
-            f"AUB-HAS2: {resultado['score']}/6 — categoria de risco {resultado['categoria']}."
-        )
-        linhas.append(interpretacao)
-        linhas.append("")
-
-    if vsg_cri:
-        resultado, interpretacao = vsg_cri
-        linhas.append(
-            f"VSG-CRI (cirurgia vascular arterial): {resultado['score']} ponto(s) — "
-            f"categoria de risco {resultado['categoria']}."
-        )
-        linhas.append(interpretacao)
-        linhas.append("")
-
-    linhas.append("INTEGRAÇÃO DOS MÉTODOS")
-    linhas.append(
-        "Os escores estimam desfechos diferentes e não devem ser somados, promediados nem usados "
-        "isoladamente como autorização para cirurgia. A decisão integra doença cardiovascular ativa, "
-        "risco do procedimento, modificadores de risco, capacidade funcional e possibilidade de que "
-        "uma investigação adicional modifique o manejo. O VSG-CRI deve ser utilizado especificamente "
-        "em cirurgia vascular arterial."
-    )
-    linhas.append("")
-
+    linhas.extend([
+        "INTEGRAÇÃO DOS MÉTODOS",
+        "Os escores estimam desfechos diferentes e não devem ser somados ou promediados. RCRI, Gupta MICA, AUB-HAS2, VSG-CRI e GSCRI focam risco cardiovascular com endpoints próprios; SORT e S-MPM estimam mortalidade cirúrgica global; DASI mede capacidade funcional. A decisão final integra doença cardiovascular ativa, risco do procedimento, fragilidade, capacidade funcional e a possibilidade de que investigação adicional modifique o manejo.",
+        "",
+    ])
     if dados.conduta_recomendada:
-        linhas.append("Conduta e recomendações do médico responsável:")
-        linhas.append(dados.conduta_recomendada)
-        linhas.append("")
-
-    linhas.append(
-        "Este documento é uma ferramenta de apoio à decisão clínica baseada em metodologias "
-        "validadas na literatura. Não substitui o julgamento clínico do médico responsável nem "
-        "a avaliação anestésica. As árvores de decisão e referências completas estão disponíveis "
-        "na Biblioteca da Corvia, tema Perioperatório."
-    )
+        linhas.extend(["Conduta e recomendações do médico responsável:", dados.conduta_recomendada, ""])
+    linhas.append("Ferramenta de apoio à decisão clínica; não substitui julgamento médico nem avaliação anestésica. Árvores de decisão e referências completas: Biblioteca Corvia > Perioperatório.")
     return "\n".join(linhas)
 
 
@@ -155,19 +121,23 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
             raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
-    if all(x is None for x in (dados.rcri, dados.gupta, dados.dasi, dados.aub_has2, dados.vsg_cri)):
-        raise HTTPException(
-            status_code=422,
-            detail="Calcule ao menos um método (RCRI, Gupta MICA, DASI, AUB-HAS2 ou VSG-CRI) antes de gerar o documento.",
-        )
 
-    rcri = _resultado_calculadora("rcri", dados.rcri)
-    gupta = _resultado_calculadora("gupta-mica", dados.gupta)
-    dasi = _resultado_calculadora("dasi", dados.dasi)
-    aub_has2 = _resultado_calculadora("aub-has2", dados.aub_has2)
-    vsg_cri = _resultado_calculadora("vsg-cri", dados.vsg_cri)
+    payloads = {
+        "rcri": dados.rcri, "gupta-mica": dados.gupta, "dasi": dados.dasi,
+        "aub-has2": dados.aub_has2, "vsg-cri": dados.vsg_cri, "gscri": dados.gscri,
+        "sort": dados.sort, "s-mpm": dados.s_mpm,
+    }
+    if all(v is None for v in payloads.values()):
+        raise HTTPException(status_code=422, detail="Calcule ao menos um método antes de gerar o documento.")
 
-    corpo = _montar_corpo(dados, rcri, gupta, dasi, aub_has2, vsg_cri)
+    calculados = {slug: _resultado_calculadora(slug, payload) for slug, payload in payloads.items()}
+    resultados = [
+        ("RCRI", calculados["rcri"]), ("Gupta MICA", calculados["gupta-mica"]),
+        ("DASI", calculados["dasi"]), ("AUB-HAS2", calculados["aub-has2"]),
+        ("VSG-CRI", calculados["vsg-cri"]), ("GSCRI", calculados["gscri"]),
+        ("SORT", calculados["sort"]), ("S-MPM", calculados["s-mpm"]),
+    ]
+    corpo = _montar_corpo(dados, resultados)
 
     variaveis = {
         "idade": str(dados.idade) if dados.idade is not None else "",
@@ -175,58 +145,22 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "indicacao_cirurgica": dados.indicacao_cirurgica or "",
         "capacidade_funcional": dados.capacidade_funcional or "",
         "conduta_recomendada": dados.conduta_recomendada or "",
-        "rcri": dados.rcri or {},
-        "gupta": dados.gupta or {},
-        "dasi": dados.dasi or {},
-        "aub_has2": dados.aub_has2 or {},
-        "vsg_cri": dados.vsg_cri or {},
+        **{slug.replace('-', '_'): payload or {} for slug, payload in payloads.items()},
         "fonte_producao_extensoes": "chatgpt",
     }
 
-    gerado = GeneratedDocument(
-        patient_id=dados.patient_id,
-        template_id=None,
-        created_by=user.id,
-        doc_type=DOC_TYPE,
-        title=TITULO_DOCUMENTO,
-        rendered_body=corpo,
-        endereco_exibido=dados.endereco,
-        variables=variaveis,
-    )
-    db.add(gerado)
-    db.flush()
+    gerado = GeneratedDocument(patient_id=dados.patient_id, template_id=None, created_by=user.id, doc_type=DOC_TYPE,
+        title=TITULO_DOCUMENTO, rendered_body=corpo, endereco_exibido=dados.endereco, variables=variaveis)
+    db.add(gerado); db.flush()
     nome_paciente = (dados.patient_name or "").strip()
     if nome_paciente:
         gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
-
-    db.add(
-        AuditLog(
-            user_id=user.id,
-            action="gerar_avaliacao_preoperatoria",
-            entity="generated_document",
-            entity_id=str(gerado.id),
-            detail={
-                "tem_rcri": rcri is not None,
-                "tem_gupta": gupta is not None,
-                "tem_dasi": dasi is not None,
-                "tem_aub_has2": aub_has2 is not None,
-                "tem_vsg_cri": vsg_cri is not None,
-            },
-        )
-    )
-    db.commit()
-    db.refresh(gerado)
+    db.add(AuditLog(user_id=user.id, action="gerar_avaliacao_preoperatoria", entity="generated_document",
+        entity_id=str(gerado.id), detail={f"tem_{slug.replace('-', '_')}": calculados[slug] is not None for slug in calculados}))
+    db.commit(); db.refresh(gerado)
     return {
-        "id": gerado.id,
-        "title": gerado.title,
-        "doc_type": gerado.doc_type,
-        "rendered_body": gerado.rendered_body,
-        "created_at": gerado.created_at,
-        "patient_name": nome_paciente or None,
-        "medico": document_identity(user),
-        "rcri": rcri[0] if rcri else None,
-        "gupta": gupta[0] if gupta else None,
-        "dasi": dasi[0] if dasi else None,
-        "aub_has2": aub_has2[0] if aub_has2 else None,
-        "vsg_cri": vsg_cri[0] if vsg_cri else None,
+        "id": gerado.id, "title": gerado.title, "doc_type": gerado.doc_type,
+        "rendered_body": gerado.rendered_body, "created_at": gerado.created_at,
+        "patient_name": nome_paciente or None, "medico": document_identity(user),
+        **{slug.replace('-', '_'): calculados[slug][0] if calculados[slug] else None for slug in calculados},
     }
