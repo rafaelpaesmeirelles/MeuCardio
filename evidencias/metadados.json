@@ -37671,5 +37671,127 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hp-grupo2-riociguate-sem-evidencia-suficiente",
+    "statement": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), NÃO HÁ EVIDÊNCIA SUFICIENTE para recomendar ou não recomendar o uso de riociguate. Recomendação CONDICIONAL (Ponderado), qualidade de evidência MODERADA. Dois ensaios fase II embasam a incerteza: em ICFEr, riociguate 2 mg 8/8h (n=67) vs. placebo (n=69) não reduziu a PAPm (desfecho primário) mas melhorou RVP, índice cardíaco e qualidade de vida; em ICFEP (Dachs et al., n=58 vs. 56), o desfecho primário de aumento do débito cardíaco foi favorável ao riociguate, com mais hipotensão nesse grupo.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Mod",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto; PDF integral em português lido na íntegra nesta sessão, via rrcpjournal.org). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade Moderada (Mod).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 2",
+      "doença cardíaca esquerda",
+      "riociguate",
+      "sem evidência suficiente",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo3-pde5i-sem-evidencia-suficiente-em-dpoc",
+    "statement": "Na hipertensão pulmonar do grupo 3 associada a DPOC, NÃO HÁ EVIDÊNCIA SUFICIENTE para recomendar ou não recomendar o uso de inibidores da fosfodiesterase-5 (PDE-5i) associado ao manejo clínico da doença de base. Recomendação CONDICIONAL (Ponderado), qualidade de evidência BAIXA (o texto da diretriz usa literalmente \"fraca\"). Base: dois ensaios de tadalafila vs. placebo em DPOC (Maron et al., n=14 placebo/28 tadalafila 40 mg/dia, sem diferença em DTC6M em 12 meses; Goudie et al., n=60/60, sem diferença no desfecho primário) e um de sildenafila 20 mg 8/8h (n=18) vs. placebo (n=10) por 16 semanas, com melhora hemodinâmica (RVP, VS, índice cardíaco) mas sem desfecho clínico duro avaliado.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto; PDF integral em português lido na íntegra nesta sessão, via rrcpjournal.org). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade Baixa (o texto original usa \"fraca qualidade de evidência\").",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 3",
+      "DPOC",
+      "inibidor de fosfodiesterase-5",
+      "sem evidência suficiente",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo3-riociguate-contraindicado-em-fpi",
+    "statement": "Na hipertensão pulmonar do grupo 3 associada a fibrose pulmonar idiopática (FPI), RECOMENDA-SE NÃO USAR riociguate associado ao manejo clínico da doença de base. Recomendação FORTE, qualidade de evidência MODERADA. Base: o ensaio RISE-IIP (Nathan et al., 2019) foi interrompido precocemente por aumento de eventos adversos graves e mortalidade no grupo riociguate (n=73, dose titulada até 2,5 mg 8/8h) frente ao placebo (n=74); o desfecho primário de DTC6M não mostrou diferença estatística entre os grupos (diferença de mínimos quadrados 21 m; IC95% −9 a 52).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto; PDF integral em português lido na íntegra nesta sessão, via rrcpjournal.org). NOTA DE SISTEMA: recomendação GRADE — Forte, qualidade Moderada (Mod).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 3",
+      "fibrose pulmonar idiopática",
+      "riociguate",
+      "recomendação negativa",
+      "GRADE",
+      "RISE-IIP"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo3-bosentana-nao-recomendada-em-doenca-pulmonar-fibrosante",
+    "statement": "Na hipertensão pulmonar do grupo 3 associada a doença pulmonar fibrosante (FPI, doença intersticial não específica e pneumonia por hipersensibilidade crônica), SUGERE-SE NÃO USAR bosentana associada ao manejo clínico da doença de base. Recomendação CONDICIONAL (Ponderado), qualidade de evidência MODERADA. Base: estudo de Corte et al. (2014) com 60 pacientes recrutados, dados hemodinâmicos completos em 39 (bosentana n=25, placebo n=14); o desfecho primário de redução de 20% do índice de RVP foi negativo (p=0,97), sem diferença em DTC6M, DLCO, CVF ou qualidade de vida.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Mod",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto; PDF integral em português lido na íntegra nesta sessão, via rrcpjournal.org). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade Moderada (Mod).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 3",
+      "doença pulmonar fibrosante",
+      "bosentana",
+      "recomendação negativa",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo3-bosentana-nao-recomendada-em-dpoc",
+    "statement": "Na hipertensão pulmonar do grupo 3 associada a DPOC, SUGERE-SE NÃO USAR bosentana associada ao manejo clínico da doença de base. Recomendação CONDICIONAL (Ponderado), qualidade de evidência MODERADA. Base: ensaio de Stolz et al. (2008), bosentana (n=20) vs. placebo (n=10) em pacientes com HP por critério ecocardiográfico (PSAP ≥30 mmHg), sem diferença estatística em DTC6M (p=0,474) nem nos desfechos secundários de qualidade de vida, função pulmonar ou função ventricular direita ao ecocardiograma.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Mod",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto; PDF integral em português lido na íntegra nesta sessão, via rrcpjournal.org). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade Moderada (Mod).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 3",
+      "DPOC",
+      "bosentana",
+      "recomendação negativa",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hp-grupo3-treprostinil-inalatorio-em-doenca-intersticial-pulmonar",
+    "statement": "Na hipertensão pulmonar do grupo 3 associada a doença intersticial pulmonar (DIP), SUGERE-SE O USO de treprostinil inalatório associado ao manejo clínico da doença de base. Recomendação CONDICIONAL (Ponderado), qualidade de evidência MODERADA — a única recomendação POSITIVA de fármaco vasodilatador pulmonar dentro do grupo 3 deste documento. Base: ensaio INCREASE (Waxman et al., 2021), treprostinil inalatório (n=163, titulado até 12 respirações de solução 0,6 mg/mL, 4x/dia) vs. placebo, 16 semanas: aumento significativo de DTC6M (31,12 m; IC95% 16,85-45,39; p<0,001), com melhora também de piora clínica e NT-proBNP. ARMADILHA REGISTRADA PELA PRÓPRIA DIRETRIZ: este benefício NÃO se estende à HP por DPOC — o ensaio PERFECT, publicado após a revisão sistemática desta diretriz (portanto citado só como comentário, fora da síntese formal GRADE), foi interrompido precocemente por excesso de eventos adversos com treprostinil inalatório em DPOC+HP; a própria diretriz desaconselha o uso inalatório nesse subgrupo.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Mod",
+    "society": "SBPT",
+    "year": 2026,
+    "guideline_title": "Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar (GRADE) – 2026",
+    "reference": "Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528 (DOI conferido no Crossref em 07/08/2026, resolve para o documento correto; PDF integral em português lido na íntegra nesta sessão, via rrcpjournal.org). NOTA DE SISTEMA: recomendação GRADE — Ponderado (condicional), qualidade Moderada (Mod).",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "hipertensão pulmonar grupo 3",
+      "doença intersticial pulmonar",
+      "treprostinil inalatório",
+      "recomendação positiva",
+      "GRADE",
+      "INCREASE"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
