@@ -409,5 +409,65 @@
       "vasodilatadores-endovenosos-na-ic-aguda-por-que-nesiritida-serelaxina-e-ularitida-falharam"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "reanimacao-neonatal-na-sala-de-parto",
+    "titulo": "Reanimação neonatal na sala de parto",
+    "gatilho": "Recém-nascido com apneia/gasping ou FC <100 bpm após passos iniciais · FC <60 bpm apesar de ventilação efetiva",
+    "ordem": 85,
+    "documento_slug": "reanimacao-neonatal-na-sala-de-parto-aha-aap-2025",
+    "fluxograma_slug": "fluxograma-reanimacao-neonatal-na-sala-de-parto-aha-aap-2025",
+    "relacionados": [
+      "hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica",
+      "insuficiencia-cardiaca-de-alto-debito-no-neonato-malformacao-da-veia-de-galeno-e-hemangioma-hepatico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquiarritmia-pediatrica-com-pulso",
+    "titulo": "Taquiarritmia pediátrica com pulso",
+    "gatilho": "Lactente ou criança com TSV ou taquicardia de QRS largo · hipotensão, alteração mental ou choque",
+    "ordem": 86,
+    "documento_slug": "taquiarritmia-pediatrica-com-pulso-aha-aap-2025",
+    "fluxograma_slug": "fluxograma-taquiarritmia-pediatrica-com-pulso-aha-aap-2025",
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miocardite-por-inibidor-de-checkpoint-imune",
+    "titulo": "Miocardite por inibidor de checkpoint imune",
+    "gatilho": "Paciente em imunoterapia com troponina elevada, alteração nova no ECG, BAV, TV/FV, insuficiência cardíaca ou choque",
+    "ordem": 87,
+    "documento_slug": "miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025",
+    "fluxograma_slug": "fluxograma-miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025",
+    "relacionados": [
+      "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-periparto-descompensada-no-puerperio",
+    "titulo": "Cardiomiopatia periparto descompensada no puerpério",
+    "gatilho": "Puerpério ou final da gestação com ortopneia, edema pulmonar, nova disfunção ventricular, arritmia ou choque",
+    "ordem": 88,
+    "documento_slug": "cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025",
+    "fluxograma_slug": "fluxograma-cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025",
+    "relacionados": [
+      "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+      "choque-cardiogenico-suporte-circulatorio-mecanico-temporario"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-ou-queda-de-alto-risco-no-idoso",
+    "titulo": "Síncope ou queda de alto risco no idoso",
+    "gatilho": "Síncope ou queda inexplicada no idoso com cardiopatia importante, evento em esforço/supino, palpitação, ECG de risco ou hipotensão persistente",
+    "ordem": 89,
+    "documento_slug": "sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
+    "fluxograma_slug": "fluxograma-sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
+    "relacionados": [
+      "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica"
+    ],
+    "review_status": "revisado"
   }
 ]
