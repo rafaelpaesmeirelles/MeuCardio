@@ -7,11 +7,12 @@ fonte_producao: chatgpt
 review_status: pendente_revisao
 source_refs:
   - "Clexane® (enoxaparina sódica). Bula Sanofi Medley Farmacêutica Ltda., MS 1.8326.0336, IB100619; aprovada pela Anvisa em 10/06/2019."
+  - "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.11.009. Table 10."
 ---
 
 # Enoxaparina na SCA — árvore de dose
 
-O regime de enoxaparina no IAM com supra não pode ser resumido a “1 mg/kg 12/12 h”. A bula brasileira consultada cria quatro ramos pela combinação **idade <75 versus ≥75 anos** e **ClCr ≥30 versus <30 mL/min**.
+O regime de enoxaparina no IAM com supra não pode ser resumido a “1 mg/kg 12/12 h”. A dose muda com **idade, clearance de creatinina e momento da ICP**.
 
 ```mermaid
 flowchart TD
@@ -35,58 +36,59 @@ flowchart TD
     J --> O
     M --> O
     N --> O
-    O -->|Sim| P{Tempo desde última dose SC até insuflação do balão}
-    P -->|<8 h| Q[Sem dose adicional]
-    P -->|>8 h| R[Bolus IV adicional 0,3 mg/kg]
-    P -->|Exatamente 8 h| S[VERIFICAÇÃO HUMANA NECESSÁRIA]
+    O -->|Sim| P{Apenas 1 dose SC prévia?}
+    P -->|Sim| Q[0,3 mg/kg IV]
+    P -->|Não| R{Tempo desde a última dose SC}
+    R -->|<8 h| S[Sem dose adicional]
+    R -->|8-12 h| T[0,3 mg/kg IV]
+    R -->|>12 h| U[VERIFICAÇÃO HUMANA NECESSÁRIA: definir por anticoagulação/ACT]
 ```
 
 ## Angina instável / IAM sem supra
 
-- Dose padrão: **1 mg/kg SC a cada 12 horas**.
-- ClCr <30 mL/min: **1 mg/kg SC uma vez ao dia**.
-- A bula consultada orienta uso concomitante com AAS oral 100–325 mg/dia e descreve duração usual de 2–8 dias.
+- **1 mg/kg SC a cada 12 horas**.
+- ClCr <30 mL/min: **1 mg/kg SC a cada 24 horas**.
 
 ## IAM com supra — idade <75 anos
 
 ### ClCr ≥30 mL/min
-- bolus IV único: **30 mg**;
-- imediatamente acompanhado de **1 mg/kg SC**;
+- bolus IV inicial **30 mg**;
+- seguido de **1 mg/kg SC**;
 - depois 1 mg/kg SC a cada 12 h;
-- as **duas primeiras doses SC** têm máximo de **100 mg cada**.
+- máximo **100 mg** em cada uma das duas primeiras doses SC.
 
 ### ClCr <30 mL/min
-- bolus IV único: **30 mg**;
+- bolus IV inicial **30 mg**;
 - 1 mg/kg SC;
-- depois 1 mg/kg SC **uma vez ao dia**;
-- a **primeira dose SC** tem máximo de **100 mg**.
+- depois 1 mg/kg SC **a cada 24 h**;
+- primeira dose SC máximo **100 mg**.
 
 ## IAM com supra — idade ≥75 anos
 
-A mudança mais importante é: **não administrar o bolus IV inicial de 30 mg**.
+- **Não administrar o bolus IV inicial de 30 mg.**
 
 ### ClCr ≥30 mL/min
 - **0,75 mg/kg SC a cada 12 h**;
-- máximo **75 mg** em cada uma das duas primeiras doses;
-- doses posteriores 0,75 mg/kg.
+- máximo **75 mg** em cada uma das duas primeiras doses.
 
 ### ClCr <30 mL/min
-- **1 mg/kg SC uma vez ao dia**;
-- sem bolus IV inicial;
+- **1 mg/kg SC a cada 24 h**;
 - primeira dose SC máximo **100 mg**.
 
-## Dose adicional na ICP
+## Dose adicional para suporte da ICP
 
-Segundo a bula consultada:
+A Tabela 10 da ACC/AHA 2025 torna a janela mais precisa que a bula histórica usada na primeira versão desta calculadora:
 
-- se a última dose SC ocorreu **há menos de 8 horas** antes da insuflação do balão: **não é necessária dose adicional**;
-- se ocorreu **há mais de 8 horas**: administrar **0,3 mg/kg IV**;
-- o texto não explicita a situação de **exatamente 8 horas**. A calculadora retorna `VERIFICAÇÃO HUMANA NECESSÁRIA` nesse valor, evitando escolher arbitrariamente um dos ramos.
+- última dose SC há **<8 h**: **sem dose adicional**;
+- última dose SC há **8–12 h**: **0,3 mg/kg IV**;
+- se **apenas uma dose SC de enoxaparina foi administrada**, usar **0,3 mg/kg IV** para suporte da PCI;
+- se transcorreram **>12 h** após múltiplas doses prévias, a tabela consultada não fornece um único bolus automático. A calculadora retorna `VERIFICAÇÃO HUMANA NECESSÁRIA` para que anticoagulação prévia e ACT sejam integrados em vez de extrapolar a regra.
 
 ## Segurança
 
-A calculadora não incorpora, por si só, risco hemorrágico global, história de HIT, plaquetopenia, anestesia neuraxial, peso extremo ou necessidade de monitorização anti-Xa. Em ClCr 30–50 mL/min a bula não determina redução de dose, mas recomenda monitorização clínica cuidadosa.
+A calculadora não substitui avaliação de sangramento, HIT/trombocitopenia, anestesia neuraxial, peso extremo, função renal instável ou estratégia de reperfusão. Em ClCr 30–50 mL/min a bula brasileira consultada não determina redução da dose, mas recomenda monitorização clínica cuidadosa.
 
-## Fonte
+## Fontes
 
-Clexane® (enoxaparina sódica), Sanofi Medley Farmacêutica Ltda., registro MS 1.8326.0336, bula identificada como IB100619 e aprovada pela Anvisa em **10/06/2019**. A Anvisa aprovou posteriormente, em fevereiro de 2025, nova indicação de tratamento estendido de TEV em câncer ativo; essa atualização não foi utilizada para alterar os esquemas de SCA descritos neste documento.
+- Clexane® (enoxaparina sódica), Sanofi Medley Farmacêutica Ltda., MS 1.8326.0336, IB100619.
+- Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI **10.1016/j.jacc.2024.11.009**.
