@@ -16939,5 +16939,55 @@
     ],
     "published": false,
     "review_status": "revisado"
+  },
+  {
+    "slug": "frosch-2012-obstaculos-a-decisao-compartilhada-medico-autoritario-e-medo-de-parecer-dificil",
+    "title": "Frosch et al. 2012 — Médicos autoritários e o medo do paciente de ser rotulado \"difícil\" como obstáculos à decisão compartilhada",
+    "study_type": "estudo_de_coorte",
+    "authors": "Frosch DL, May SG, Rendle KA, Tietbohl C, Elwyn G",
+    "journal": "Health Affairs",
+    "year": 2012,
+    "doi": "10.1377/hlthaff.2011.0576",
+    "pmid": "22566443",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22566443/",
+    "summary": "Estudo qualitativo com seis grupos focais e 48 participantes na região da Baía de São Francisco, explorando por que alguns pacientes relutam em se engajar numa discussão colaborativa com médicos sobre suas opções de cuidado, mesmo entre pacientes relativamente afluentes e bem-educados.",
+    "key_findings": "Os participantes expressaram forte desejo de participar de decisão compartilhada, mas identificaram obstáculos concretos: mesmo pacientes de maior escolaridade e renda sentem-se compelidos a seguir papéis socialmente sancionados e deferir ao médico durante a consulta; médicos podem ser autoritários; e o medo de ser rotulado como \"paciente difícil\" impede muitos de participar mais ativamente do próprio cuidado.",
+    "clinical_implications": "Complementa os achados de Deber (1996, já cadastrado nesta base) sobre o que os pacientes realmente desejam, mostrando o lado do médico e da dinâmica de poder na consulta — reforça que ferramentas de decisão compartilhada (como PCI Choice, Statin Choice, Anticoagulation Choice, já cadastradas) só funcionam se o ambiente da consulta explicitamente sinalizar segurança para o paciente discordar ou perguntar.",
+    "limitations": "Estudo qualitativo com amostra pequena (48 participantes) e localizada (uma região dos EUA), sem generalização estatística; dados de autorrelato em grupo focal, sujeitos a viés de desejabilidade social mesmo em ambiente qualitativo.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "decisão compartilhada",
+      "relação médico-paciente",
+      "obstáculos",
+      "grupo focal",
+      "autonomia do paciente"
+    ],
+    "published": false,
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prospective-studies-collaboration-2007-colesterol-e-mortalidade-vascular-por-idade-sexo-e-pressao",
+    "title": "Prospective Studies Collaboration 2007 (Lewington et al.) — Colesterol sanguíneo e mortalidade vascular por idade, sexo e pressão arterial",
+    "study_type": "metanalise",
+    "authors": "Prospective Studies Collaboration; Lewington S, Whitlock G, Clarke R, Sherliker P, Emberson J, Halsey J, Qizilbash N, Peto R, Collins R",
+    "journal": "Lancet",
+    "year": 2007,
+    "doi": "10.1016/S0140-6736(07)61778-4",
+    "pmid": "18061058",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18061058/",
+    "summary": "Metanálise de dados individuais de 61 estudos observacionais prospectivos (majoritariamente Europa Ocidental e América do Norte), quase 900.000 adultos sem doença prévia com colesterol total e pressão arterial basais medidos, quase 12 milhões de pessoas-ano de seguimento entre 40-89 anos e mais de 55.000 mortes vasculares, avaliando a relevância conjunta de colesterol e pressão arterial para mortalidade vascular por idade e sexo.",
+    "key_findings": "Cada 1 mmol/L a menos de colesterol total associou-se a mortalidade por doença isquêmica do coração cerca de metade menor (HR 0,44; IC95% 0,42-0,48) aos 40-49 anos, um terço menor (HR 0,66; IC95% 0,65-0,68) aos 50-69 anos, e um sexto menor (HR 0,83; IC95% 0,81-0,85) aos 70-89 anos, sem limiar aparente. A razão colesterol total/HDL foi o preditor mais forte de mortalidade coronariana entre os índices testados. O colesterol total teve relação positiva fraca com mortalidade por AVC apenas em meia-idade e pressão abaixo da média, tornando-se negativamente relacionado a AVC hemorrágico em idosos com PAS >145 mmHg.",
+    "clinical_implications": "Uma das metanálises observacionais mais robustas sobre a relação dose-resposta entre colesterol e mortalidade vascular por faixa etária — mostra que o efeito relativo do colesterol diminui com a idade e que a relação com AVC é mais complexa e dependente da pressão arterial, ao contrário da relação linear e sem limiar observada para doença isquêmica do coração, o que ajuda a interpretar por que ensaios de estatina (como os já cadastrados nesta base) têm efeito mais robusto sobre eventos coronarianos do que sobre AVC hemorrágico.",
+    "limitations": "Desenho observacional (não randomizado), sujeito a fatores de confusão residual apesar do grande tamanho amostral; a associação positiva fraca entre colesterol e AVC isquêmico em meia-idade foi em grande parte explicada pela associação do colesterol com pressão arterial, relação de causalidade que a metanálise não consegue estabelecer definitivamente.",
+    "theme": "Geral",
+    "tags": [
+      "colesterol",
+      "mortalidade vascular",
+      "metanálise",
+      "pressão arterial",
+      "risco por idade"
+    ],
+    "published": false,
+    "review_status": "revisado"
   }
 ]
