@@ -4,7 +4,7 @@ slug: vsg-cri-cirurgia-vascular-arterial
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Vascular Study Group of New England Cardiac Risk Index com pontuação, classes de risco da SBC 2024 e árvore de decisão específica para cirurgia vascular arterial."
 source_refs:
@@ -74,6 +74,7 @@ O VSG-CRI incorpora idade em faixas, DPOC, tabagismo e tratamento crônico com b
 - Taxas absolutas de evento pertencem à coorte de derivação/validação original.
 - Estudos posteriores mostraram desempenho variável em diferentes populações vasculares.
 - O uso crônico de betabloqueador é uma **variável prognóstica do modelo** e não deve ser interpretado como evidência de que betabloqueadores causam aumento de risco.
+- **VERIFICAÇÃO HUMANA NECESSÁRIA**: dos seis estratos de pontuação da tabela original, só os dois extremos (2,6% em 0–3 pontos e 14,3% em ≥8 pontos) estão confirmados diretamente no abstract do Bertges 2010. Os quatro valores intermediários usados na calculadora da Corvia (3,5%/6,0%/6,6%/8,9% para 4/5/6/7 pontos) vieram de fonte secundária e não foram conferidos contra a tabela do texto completo (paywall, sem PMC) — achado ao revisar este conteúdo em 07/08/2026.
 
 ## Regra prática
 

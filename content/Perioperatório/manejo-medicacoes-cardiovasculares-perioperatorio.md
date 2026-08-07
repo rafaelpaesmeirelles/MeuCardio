@@ -4,7 +4,7 @@ slug: manejo-medicacoes-cardiovasculares-perioperatorio
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvore prática para betabloqueadores, estatinas, inibidores de SGLT2 e bloqueadores do SRAA antes de cirurgia não cardíaca, baseada em SBC 2024 e AHA/ACC 2024."
 source_refs:

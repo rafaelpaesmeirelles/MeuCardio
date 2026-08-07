@@ -4,7 +4,7 @@ slug: arvore-decisao-gupta-mica
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Metodologia do Gupta MICA para estimar IAM ou parada cardíaca perioperatória em 30 dias e sua integração ao algoritmo pré-operatório."
 source_refs:

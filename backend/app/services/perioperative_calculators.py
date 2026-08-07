@@ -115,30 +115,44 @@ def _vsg_cri(d: dict) -> dict:
     score -= 1 if d.get("revascularizacao_coronaria_previa") else 0
 
     categoria = "baixo" if score <= 4 else ("intermediario" if score <= 6 else "alto")
+    # Os dois extremos (2,6% e 14,3%) estão no abstract do Bertges 2010, PMID
+    # 20570467: "six categories of risk ranging from 2.6% to 14.3% (score of
+    # 0-3 to 8)". Os quatro valores intermediários (3,5/6,0/6,6/8,9%) vieram
+    # de fonte secundária e NÃO foram confirmados contra a Table do texto
+    # completo (paywall, sem PMC) nesta sessão — achado ao revisar o PR do
+    # ChatGPT em 07/08/2026. Sinalizado explicitamente em vez de apresentar
+    # como igualmente verificado.
     if score <= 3:
-        evento_original_pct = 2.6
+        evento_original_pct, evento_verificado = 2.6, True
     elif score == 4:
-        evento_original_pct = 3.5
+        evento_original_pct, evento_verificado = 3.5, False
     elif score == 5:
-        evento_original_pct = 6.0
+        evento_original_pct, evento_verificado = 6.0, False
     elif score == 6:
-        evento_original_pct = 6.6
+        evento_original_pct, evento_verificado = 6.6, False
     elif score == 7:
-        evento_original_pct = 8.9
+        evento_original_pct, evento_verificado = 8.9, False
     else:
-        evento_original_pct = 14.3
+        evento_original_pct, evento_verificado = 14.3, True
     return {
         "score": score,
         "categoria": categoria,
         "evento_original_pct": evento_original_pct,
+        "evento_original_pct_verificado": evento_verificado,
     }
 
 
 def _vsg_cri_txt(r: dict) -> str:
+    aviso = (
+        "" if r["evento_original_pct_verificado"] else
+        " VERIFICAÇÃO HUMANA NECESSÁRIA: este valor intermediário vem de fonte secundária, "
+        "não foi conferido contra a tabela do texto completo do artigo original (só os "
+        "extremos 2,6% e 14,3% estão confirmados no abstract)."
+    )
     return (
         f"VSG-CRI {r['score']} ponto(s) — risco {r['categoria']} pela classificação adotada pela "
         f"SBC 2024 (0–4 baixo, 5–6 intermediário, ≥7 alto). Na coorte original, a faixa correspondente "
-        f"teve taxa de complicações cardíacas de aproximadamente {r['evento_original_pct']}%. "
+        f"teve taxa de complicações cardíacas de aproximadamente {r['evento_original_pct']}%.{aviso} "
         "Essas taxas históricas não equivalem a probabilidade individual contemporânea e o escore "
         "deve ser usado especificamente em cirurgia vascular arterial."
     )

@@ -4,7 +4,7 @@ slug: arvore-decisao-rcri-lee
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Resumo do Revised Cardiac Risk Index com seus seis critérios, limitações e integração ao algoritmo pré-operatório contemporâneo."
 source_refs:

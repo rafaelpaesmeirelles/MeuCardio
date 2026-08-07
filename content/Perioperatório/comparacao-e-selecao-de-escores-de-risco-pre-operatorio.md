@@ -4,7 +4,7 @@ slug: comparacao-e-selecao-de-escores-de-risco-pre-operatorio
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Comparação prática entre RCRI, Gupta MICA, AUB-HAS2, GSCRI, DASI e ACS NSQIP, com árvore para escolher a metodologia conforme paciente, objetivo e cirurgia."
 source_refs:

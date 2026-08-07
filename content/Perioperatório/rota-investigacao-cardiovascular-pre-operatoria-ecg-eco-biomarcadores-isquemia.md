@@ -4,7 +4,7 @@ slug: rota-investigacao-cardiovascular-pre-operatoria-ecg-eco-biomarcadores-isqu
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvores de decisão baseadas na AHA/ACC 2024 para definir quando solicitar ECG, ecocardiograma/avaliação de função ventricular, BNP/NT-proBNP, troponina, teste de estresse ou CCTA antes de cirurgia não cardíaca."
 source_refs:

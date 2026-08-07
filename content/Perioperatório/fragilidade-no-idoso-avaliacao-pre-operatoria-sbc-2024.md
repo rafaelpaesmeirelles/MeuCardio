@@ -4,7 +4,7 @@ slug: fragilidade-no-idoso-avaliacao-pre-operatoria-sbc-2024
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvore para avaliação objetiva de fragilidade em idosos submetidos a cirurgia não cardíaca, integrando a recomendação SBC 2024 sem misturar fragilidade aos escores cardiovasculares tradicionais."
 source_refs:

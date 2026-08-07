@@ -4,7 +4,7 @@ slug: dasi-capacidade-funcional-pre-operatoria
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Duke Activity Status Index como avaliação estruturada de capacidade funcional antes de cirurgia não cardíaca, com os 12 itens, pesos e árvore de decisão AHA/ACC 2024."
 source_refs:

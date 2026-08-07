@@ -4,7 +4,7 @@ slug: sbc-2024-monitorizacao-troponina-ecg-bnp-pos-operatorio
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvores de decisão da Diretriz SBC 2024 para troponina e ECG seriados, BNP/NT-proBNP e monitorização pós-operatória em pacientes de risco cardiovascular aumentado."
 source_refs:

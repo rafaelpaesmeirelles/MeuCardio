@@ -4,7 +4,7 @@ slug: risco-intrinseco-do-procedimento-cirurgico-sbc-2024
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvore para classificar o risco cardiovascular intrínseco da operação em baixo, intermediário ou alto e integrar essa informação aos escores clínicos."
 source_refs:

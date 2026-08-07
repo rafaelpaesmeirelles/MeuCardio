@@ -4,7 +4,7 @@ slug: gscri-risco-cardiaco-geriatrico-pre-operatorio
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Geriatric-Sensitive Cardiac Risk Index para pacientes com 65 anos ou mais, com árvore de decisão e comparação com RCRI e Gupta MICA."
 source_refs:

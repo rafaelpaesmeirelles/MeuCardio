@@ -4,7 +4,7 @@ slug: algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvore de decisão baseada na diretriz AHA/ACC 2024 para definir quando prosseguir para cirurgia, pausar para tratar doença cardiovascular ativa, usar escores, avaliar capacidade funcional, biomarcadores e testes adicionais."
 source_refs:

@@ -96,20 +96,30 @@ def test_vsg_cri_pontuacao_e_classes_sbc_2024():
         "revascularizacao_coronaria_previa": False,
     }
 
-    assert c.compute(base)["score"] == 0
-    assert c.compute(base)["categoria"] == "baixo"
+    r_baixo = c.compute(base)
+    assert r_baixo["score"] == 0
+    assert r_baixo["categoria"] == "baixo"
+    assert r_baixo["evento_original_pct_verificado"] is True  # extremo, confirmado no abstract
 
     intermediario = {**base, "idade": 70, "doenca_arterial_coronariana": True}
     r = c.compute(intermediario)
     assert r["score"] == 5
     assert r["categoria"] == "intermediario"
     assert r["evento_original_pct"] == 6.0
+    assert r["evento_original_pct_verificado"] is False  # valor intermediário, só fonte secundária
 
     alto = {**base, "idade": 80, "doenca_arterial_coronariana": True, "tabagismo": True}
     r = c.compute(alto)
     assert r["score"] == 7
     assert r["categoria"] == "alto"
     assert r["evento_original_pct"] == 8.9
+    assert r["evento_original_pct_verificado"] is False
+
+    extremo_alto = {**base, "idade": 80, "doenca_arterial_coronariana": True, "insuficiencia_cardiaca": True, "dpoc": True}
+    r = c.compute(extremo_alto)
+    assert r["score"] >= 8
+    assert r["evento_original_pct"] == 14.3
+    assert r["evento_original_pct_verificado"] is True  # extremo, confirmado no abstract
 
 
 def test_vsg_cri_revascularizacao_previa_subtrai_um_ponto():

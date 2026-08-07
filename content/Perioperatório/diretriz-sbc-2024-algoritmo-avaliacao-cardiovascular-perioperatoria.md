@@ -4,7 +4,7 @@ slug: diretriz-sbc-2024-algoritmo-avaliacao-cardiovascular-perioperatoria
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Árvore de decisão baseada na Diretriz de Avaliação Cardiovascular Perioperatória da SBC 2024, incluindo escolha entre RCRI, AUB-HAS2 e VSG-CRI, risco cirúrgico, capacidade funcional e monitorização perioperatória."
 source_refs:

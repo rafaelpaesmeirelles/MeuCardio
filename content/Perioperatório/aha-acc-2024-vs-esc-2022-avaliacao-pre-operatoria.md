@@ -4,7 +4,7 @@ slug: aha-acc-2024-vs-esc-2022-avaliacao-pre-operatoria
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Comparação prática das duas principais diretrizes contemporâneas de avaliação cardiovascular em cirurgia não cardíaca, com árvore de decisão de pontos convergentes e diferenças operacionais."
 source_refs:

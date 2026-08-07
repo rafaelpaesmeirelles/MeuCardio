@@ -4,7 +4,7 @@ slug: acs-nsqip-surgical-risk-calculator-metodologia
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
 revisado_por_voce: false
 summary: "Como usar o ACS NSQIP Surgical Risk Calculator no planejamento cirúrgico e por que o modelo oficial deve ser aberto externamente em vez de reproduzido na Corvia."
 source_refs:
