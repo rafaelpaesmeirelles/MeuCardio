@@ -14242,5 +14242,65 @@
       "Preston IR, Badesch D, Ghofrani HA, et al. A long-term follow-up study of sotatercept for treatment of pulmonary arterial hypertension: interim results of SOTERIA. Eur Respir J. 2025;66(1):2401435. DOI: 10.1183/13993003.01435-2024. PMID: 39978862"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-baixo-risco-heart-pathway-decisao-de-alta",
+    "titulo": "Escore HEART baixo e troponina seriada negativa: pode dar alta?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 48 anos, dor torácica atípica há 3 horas, sem fatores de risco maiores, ECG sem alterações isquêmicas. Escore HEART calculado em 2 pontos (baixo risco). Troponina de admissão negativa; repetida em 3 horas, também negativa.",
+    "pergunta": "Com base no ensaio randomizado que testou o HEART Pathway na prática, qual conduta está mais alinhada com a evidência?",
+    "opcoes": [
+      "Manter internação para teste de esforço antes de qualquer decisão de alta, independentemente do escore",
+      "Considerar alta precoce sem teste cardíaco objetivo obrigatório — no ensaio randomizado do HEART Pathway, usar o escore combinado com troponina seriada em 0 e 3h para essa decisão aumentou a alta precoce em 21,3 pontos percentuais sem nenhum evento cardíaco adverso maior em 30 dias entre os liberados precocemente",
+      "Solicitar angiotomografia coronariana obrigatoriamente antes de liberar, já que é o exame padrão-ouro",
+      "A decisão de alta não deve considerar o escore HEART, apenas o julgamento clínico não estruturado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O HEART Pathway (Mahler et al., Circ Cardiovasc Qual Outcomes 2015, PMID 25737484) randomizou 282 pacientes de perfil semelhante (idade média 53 anos, 16% com infarto prévio) para uso do escore HEART + troponina seriada em 0 e 3h versus cuidado usual. O braço HEART Pathway teve 21,3 pontos percentuais a mais de alta precoce, 12h a menos de permanência hospitalar e 12,1 pontos percentuais a menos de teste cardíaco objetivo — sem nenhum evento cardíaco adverso maior em 30 dias entre os pacientes liberados precocemente. Um paciente com escore HEART baixo e troponina seriada negativa (0h e 3h) se enquadra exatamente no perfil testado nesse ensaio: a alta precoce sem teste objetivo obrigatório é a conduta sustentada pela evidência, não a internação rotineira nem a angiotomografia obrigatória.",
+    "source_refs": [
+      "Mahler SA, Riley RF, Hiestand BC, et al. The HEART Pathway randomized trial: identifying emergency department patients with acute chest pain for early discharge. Circ Cardiovasc Qual Outcomes. 2015;8(2):195-203. DOI: 10.1161/CIRCOUTCOMES.114.001384. PMID: 25737484"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "curso-de-comunicacao-de-mas-noticias-expectativa-vs-evidencia",
+    "titulo": "\"Fiz o curso de comunicação, agora meus pacientes vão relatar melhor experiência?\"",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Um cardiologista recém-treinado num curso institucional de comunicação de más notícias pergunta se, a partir de agora, os desfechos relatados pelos seus pacientes (satisfação, ansiedade, qualidade de vida percebida) devem melhorar de forma mensurável, já que ele agora domina a técnica formalmente.",
+    "pergunta": "O que a metanálise de Selman et al. (2017) sobre treinamento de comunicação para generalistas mostra sobre essa expectativa?",
+    "opcoes": [
+      "Confirma a expectativa: a metanálise mostrou efeito grande e consistente do treinamento sobre desfechos relatados pelo paciente",
+      "A metanálise (11 ensaios, 3.144 pacientes) não encontrou efeito significativo do treinamento sobre desfechos relatados pelo paciente (SMD 0,10; IC95% -0,05 a 0,24), embora tenha mostrado melhora no comportamento do profissional, mais consistente em simulação do que na interação real com paciente",
+      "A metanálise mostrou que o treinamento piora os desfechos relatados pelo paciente",
+      "Não existe nenhuma evidência sistemática sobre esse tema"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Selman et al. (J Pain Symptom Manage 2017, PMID 28778560), em metanálise de 11 ensaios randomizados (3.144 pacientes, 791 profissionais) sobre treinamento de comunicação para generalistas em cuidado de fim de vida, não encontraram efeito significativo sobre desfechos relatados pelo paciente (SMD 0,10; IC95% -0,05 a 0,24, com heterogeneidade alta). O treinamento teve efeito moderado sobre o comportamento do profissional em simulação (SMD 0,50), mas o efeito foi menor e não significativo em interações reais com pacientes (SMD 0,21). A mensagem prática correta não é que o treinamento seja inútil — é que a expectativa de melhora automática e mensurável no desfecho do paciente não é sustentada pela evidência agregada, e que retroalimentação individualizada sobre gravações reais parece ser o componente com mais chance de gerar efeito real, não o curso isolado.",
+    "source_refs": [
+      "Selman LE, Brighton LJ, Hawkins A, et al. The Effect of Communication Skills Training for Generalist Palliative Care Providers on Patient-Reported Outcomes and Clinician Behaviors: A Systematic Review and Meta-analysis. J Pain Symptom Manage. 2017;54(3):404-416.e5. DOI: 10.1016/j.jpainsymman.2017.04.007. PMID: 28778560"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-vasovagal-recorrente-jovem-vs-idoso-decisao-de-betabloqueador",
+    "titulo": "Betabloqueador para síncope vasovagal recorrente: em quem considerar?",
+    "tema": "Síncope",
+    "nivel": "avançado",
+    "enunciado": "Dois pacientes com síncope vasovagal recorrente, refratária a manobras de contrapressão física e otimização de hidratação/sal, são avaliados no mesmo dia: uma mulher de 26 anos e um homem de 58 anos, ambos sem contraindicação a betabloqueador.",
+    "pergunta": "Com base na reanálise por idade de Sheldon et al. (2012) dos estudos POST, em qual paciente há maior racional para considerar betabloqueador como próximo passo terapêutico?",
+    "opcoes": [
+      "Nos dois igualmente, já que o efeito do betabloqueador na síncope vasovagal não depende da idade",
+      "No homem de 58 anos — a análise combinada de POST e da coorte observacional mostrou hazard ratio de 0,52 (tendência de proteção) em pacientes ≥42 anos, contra HR de 1,58 (tendência de piora) em pacientes <42 anos, com interação idade-tratamento estatisticamente significativa",
+      "Na mulher de 26 anos, porque betabloqueador é mais eficaz em pacientes jovens com síncope vasovagal",
+      "Em nenhum dos dois, porque betabloqueador nunca deve ser usado em síncope vasovagal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Sheldon et al. (Circ Arrhythm Electrophysiol 2012, PMID 22972872) reanalisaram o ensaio POST e uma coorte observacional, encontrando hazard ratio combinado de 1,58 (IC95% 1,00-2,31) para síncope sob betabloqueador em pacientes <42 anos (tendência de piora) e 0,52 (IC95% 0,27-1,01) em pacientes ≥42 anos (tendência de proteção), com interação idade-tratamento estatisticamente significativa (p=0,026 no POST; p=0,007 na análise combinada). Isso favorece considerar betabloqueador no paciente de 58 anos como próximo passo terapêutico após falha de medidas não farmacológicas, e desfavorece — ou pelo menos não sustenta — seu uso rotineiro na paciente de 26 anos, mantendo para ela a ênfase em medidas não farmacológicas e reavaliação de outras opções. É importante comunicar que o corte de 42 anos é um achado post hoc de reanálise, não um limiar prospectivamente validado.",
+    "source_refs": [
+      "Sheldon RS, Morillo CA, Klingenheben T, Krahn AD, Sheldon A, Rose MS. Age-dependent effect of β-blockers in preventing vasovagal syncope. Circ Arrhythm Electrophysiol. 2012;5(5):920-926. DOI: 10.1161/CIRCEP.112.974386. PMID: 22972872"
+    ],
+    "review_status": "revisado"
   }
 ]
