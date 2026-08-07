@@ -45,66 +45,57 @@ jobs:
           compact = root / 'artifacts' / 'Corvia_Apresentacao_Institucional_compacto.pdf'
           chunks_dir = root / 'artifacts' / 'corvia_pdf_chunks'
           page_dir = root / 'artifacts' / 'corvia_page_chunks'
-          chunks_dir.mkdir(parents=True, exist_ok=True)
-          page_dir.mkdir(parents=True, exist_ok=True)
-          for d in (chunks_dir, page_dir):
+          webp_dir = root / 'artifacts' / 'corvia_webp_chunks'
+          for d in (chunks_dir, page_dir, webp_dir):
+              d.mkdir(parents=True, exist_ok=True)
               for p in d.glob('*'):
                   p.unlink()
 
           doc = fitz.open(src)
           pages = []
           page_manifest = []
+          webp_manifest = []
           page_chunk_size = 24000
+          webp_chunk_size = 15000
           for page_no, page in enumerate(doc, start=1):
               pix = page.get_pixmap(matrix=fitz.Matrix(1.0, 1.0), alpha=False)
               img = Image.open(BytesIO(pix.tobytes('png'))).convert('RGB')
               pages.append(img)
-              bio = BytesIO()
-              img.save(bio, format='JPEG', quality=72, optimize=True)
-              jpg = bio.getvalue()
-              enc = base64.b64encode(jpg).decode('ascii')
+
+              # JPEG de referência
+              bio = BytesIO(); img.save(bio, format='JPEG', quality=72, optimize=True)
+              jpg = bio.getvalue(); enc = base64.b64encode(jpg).decode('ascii')
               parts = [enc[i:i+page_chunk_size] for i in range(0, len(enc), page_chunk_size)]
               for j, part in enumerate(parts):
                   (page_dir / f'page_{page_no:02d}_chunk_{j:02d}.txt').write_text(part, encoding='ascii')
-              page_manifest.append({
-                  'page': page_no,
-                  'jpeg_bytes': len(jpg),
-                  'base64_chars': len(enc),
-                  'chunks': len(parts),
-                  'sha256': hashlib.sha256(jpg).hexdigest(),
-              })
+              page_manifest.append({'page': page_no, 'jpeg_bytes': len(jpg), 'base64_chars': len(enc), 'chunks': len(parts), 'sha256': hashlib.sha256(jpg).hexdigest()})
 
-          pages[0].save(compact, 'PDF', resolution=72.0, save_all=True,
-                        append_images=pages[1:], quality=72, optimize=True)
+              # WebP para transporte/inspeção local - mesma resolução 960x540
+              wb = BytesIO(); img.save(wb, format='WEBP', quality=52, method=6)
+              webp = wb.getvalue(); wenc = base64.b64encode(webp).decode('ascii')
+              wparts = [wenc[i:i+webp_chunk_size] for i in range(0, len(wenc), webp_chunk_size)]
+              for j, part in enumerate(wparts):
+                  (webp_dir / f'page_{page_no:02d}_chunk_{j:02d}.txt').write_text(part, encoding='ascii')
+              webp_manifest.append({'page': page_no, 'webp_bytes': len(webp), 'base64_chars': len(wenc), 'chunks': len(wparts), 'sha256': hashlib.sha256(webp).hexdigest()})
 
-          raw = compact.read_bytes()
-          encoded = base64.b64encode(raw).decode('ascii')
-          chunk_size = 48000
-          chunks = [encoded[i:i+chunk_size] for i in range(0, len(encoded), chunk_size)]
+          pages[0].save(compact, 'PDF', resolution=72.0, save_all=True, append_images=pages[1:], quality=72, optimize=True)
+
+          raw = compact.read_bytes(); encoded = base64.b64encode(raw).decode('ascii')
+          chunk_size = 48000; chunks = [encoded[i:i+chunk_size] for i in range(0, len(encoded), chunk_size)]
           for i, chunk in enumerate(chunks):
               (chunks_dir / f'chunk_{i:03d}.txt').write_text(chunk, encoding='ascii')
-          manifest = {
-              'filename': compact.name,
-              'bytes': len(raw),
-              'base64_chars': len(encoded),
-              'chunk_size': chunk_size,
-              'chunks': len(chunks),
-              'sha256': hashlib.sha256(raw).hexdigest(),
-          }
+          manifest = {'filename': compact.name, 'bytes': len(raw), 'base64_chars': len(encoded), 'chunk_size': chunk_size, 'chunks': len(chunks), 'sha256': hashlib.sha256(raw).hexdigest()}
           (chunks_dir / 'manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
-          (page_dir / 'manifest.json').write_text(json.dumps({
-              'width': 960, 'height': 540, 'chunk_size': page_chunk_size,
-              'pages': page_manifest,
-          }, indent=2), encoding='utf-8')
-          print(json.dumps(manifest, indent=2))
-          print(json.dumps(page_manifest, indent=2))
+          (page_dir / 'manifest.json').write_text(json.dumps({'width': 960, 'height': 540, 'chunk_size': page_chunk_size, 'pages': page_manifest}, indent=2), encoding='utf-8')
+          (webp_dir / 'manifest.json').write_text(json.dumps({'width': 960, 'height': 540, 'chunk_size': webp_chunk_size, 'pages': webp_manifest}, indent=2), encoding='utf-8')
+          print(json.dumps(manifest, indent=2)); print(json.dumps(webp_manifest, indent=2))
           PY
 
       - name: Inspect output
         run: |
           ls -lh artifacts/Corvia_Apresentacao_Institucional*.pdf
           cat artifacts/corvia_pdf_chunks/manifest.json
-          cat artifacts/corvia_page_chunks/manifest.json
+          cat artifacts/corvia_webp_chunks/manifest.json
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
@@ -117,10 +108,10 @@ jobs:
         run: |
           git config user.name "Corvia PDF Builder"
           git config user.email "corvia-pdf-builder@users.noreply.github.com"
-          git add -f artifacts/corvia_pdf_chunks artifacts/corvia_page_chunks
+          git add -f artifacts/corvia_pdf_chunks artifacts/corvia_page_chunks artifacts/corvia_webp_chunks
           if git diff --cached --quiet; then
             echo "No chunk changes to commit"
             exit 0
           fi
-          git commit -m "build: publica PDF e páginas para validação [skip pdf build]" -m "Fonte: ChatGPT"
+          git commit -m "build: publica PDF e previews WebP [skip pdf build]" -m "Fonte: ChatGPT"
           git push origin HEAD:agent/corvia-pdf-build
