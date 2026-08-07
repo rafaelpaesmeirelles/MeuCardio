@@ -8388,5 +8388,226 @@
       "choque",
       "analise de contorno de pulso"
     ]
+  },
+  {
+    "slug": "strain-longitudinal-global-gls-por-speckle-tracking-na-insuficiencia-cardiaca",
+    "name": "Strain longitudinal global (GLS) por speckle-tracking na insuficiência cardíaca",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Deformação miocárdica longitudinal do ventrículo esquerdo, medida por rastreamento de manchas acústicas (speckle-tracking) sobre a imagem bidimensional do ecocardiograma, expressa como percentual de encurtamento sistólico ao longo do eixo longitudinal (valor negativo por convenção — quanto mais negativo, melhor a função contrátil longitudinal).",
+    "reference_range": "Valor normal de referência aproximado: GLS mais negativo que -18% (varia conforme fabricante/software de análise, um dos limites reconhecidos do método — ver limitações). Redução da magnitude (valor menos negativo, ex.: -12%) indica disfunção longitudinal, que costuma preceder a queda da fração de ejeção calculada pelo método de Simpson.",
+    "indications": "Detecção de disfunção sistólica subclínica com fração de ejeção ainda preservada (cardiotoxicidade por quimioterápico, amiloidose cardíaca, doença valvar assintomática em vigilância), estratificação prognóstica em insuficiência cardíaca já estabelecida e em outras cardiopatias estruturais, quando a fração de ejeção isolada não capta variação inicial de função.",
+    "interpretation": "Segundo revisão sistemática e metanálise de Kalam K et al. (Heart. 2014;100(21):1673-1680, PMID 24860005; 16 estudos observacionais, n=5.721), reunindo pacientes com insuficiência cardíaca, infarto agudo do miocárdio, doença valvar e outras cardiopatias: a mortalidade associou-se de forma independente a cada desvio-padrão de variação do GLS basal (HR 0,50; IC95% 0,36-0,69; p<0,002) de forma mais robusta que à fração de ejeção (HR 0,81; IC95% 0,72-0,92; p=0,572) — o HR por desvio-padrão de variação do GLS correspondeu a uma redução de mortalidade 1,62 vez maior (IC95% 1,13-2,33; p=0,009) que a do mesmo desvio-padrão de variação da FEVE. Os autores concluem que o GLS tem valor prognóstico superior ao da fração de ejeção para eventos cardíacos adversos maiores.",
+    "limitations": "O valor absoluto do GLS varia de forma relevante entre fabricantes de ecógrafo e entre versões de software de análise (falta de padronização entre plataformas) — comparar exames seriados feitos em aparelhos ou softwares diferentes exige cautela, e idealmente o seguimento longitudinal do mesmo paciente deveria usar sempre o mesmo equipamento/software. Depende de janela acústica adequada e de boa qualidade de imagem bidimensional; é, como qualquer parâmetro de função sistólica, sensível à pré-carga e à pós-carga (não é medida de contratilidade pura e independente de carga).",
+    "source_refs": [
+      "Kalam K, Otahal P, Marwick TH. Prognostic implications of global LV dysfunction: a systematic review and meta-analysis of global longitudinal strain and ejection fraction. Heart. 2014;100(21):1673-1680. DOI 10.1136/heartjnl-2014-305538. PMID 24860005."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "strain longitudinal global",
+      "gls",
+      "speckle tracking",
+      "deformacao miocardica",
+      "disfuncao subclinica",
+      "prognostico"
+    ]
+  },
+  {
+    "slug": "relacao-e-e-linha-algoritmo-ase-eacvi-2016-pressao-de-enchimento-do-ve",
+    "name": "Relação E/e' e algoritmo ASE/EACVI 2016 na estimativa da pressão de enchimento do ventrículo esquerdo",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Razão entre a velocidade máxima da onda E do influxo transmitral (Doppler pulsado) e a velocidade e' do Doppler tecidual do anel mitral (septal e/ou lateral, com uso da média das duas quando ambas disponíveis), como parâmetro não invasivo integrado a um algoritmo de quatro variáveis para estimar a pressão de enchimento do ventrículo esquerdo e classificar a função diastólica.",
+    "reference_range": "Segundo o algoritmo ASE/EACVI 2016 (Nagueh SF et al.), os quatro parâmetros e seus cortes são: e' septal < 7 cm/s ou e' lateral < 10 cm/s (relaxamento anormal); relação E/e' média > 14 (pressão de enchimento provavelmente elevada); velocidade de regurgitação tricúspide > 2,8 m/s; e volume atrial esquerdo indexado > 34 mL/m². Presença de duas ou mais variáveis alteradas sustenta pressão de enchimento elevada; algoritmo indeterminado quando exatamente metade dos critérios aplicáveis está alterada.",
+    "indications": "Avaliação da função diastólica do ventrículo esquerdo em paciente com fração de ejeção preservada e dispneia inexplicada, suspeita de insuficiência cardíaca com fração de ejeção preservada (ICFEp), acompanhamento de cardiopatias com risco de disfunção diastólica (hipertensão arterial de longa data, cardiomiopatia hipertrófica, doença infiltrativa).",
+    "interpretation": "O algoritmo de quatro variáveis do documento ASE/EACVI 2016 (Nagueh SF et al., J Am Soc Echocardiogr. 2016;29(4):277-314, DOI 10.1016/j.echo.2016.01.011, PMID 27037982) é o método integrado recomendado para estimar a pressão de enchimento do VE por ecocardiografia quando a fração de ejeção está preservada, combinando e'/E/e', velocidade de regurgitação tricúspide e volume atrial esquerdo indexado em vez de qualquer parâmetro isolado.",
+    "limitations": "Em estudo de validação prospectivo com padrão-ouro invasivo (van de Bovenkamp AA et al., J Am Heart Assoc. 2021;10(18):e021165, DOI 10.1161/JAHA.121.021165, PMID 34476984; 204 pacientes avaliados por dispneia inexplicada ou hipertensão pulmonar, com ecocardiograma e cateterismo cardíaco direito, usando a pressão capilar pulmonar encunhada como referência), o algoritmo ASE/EACVI 2016 teve sensibilidade de apenas 35% e especificidade de 87% para identificar pressão de enchimento elevada, acurácia de 67% e área sob a curva ROC de 0,56 (desempenho próximo do acaso); a correlação entre o grau de disfunção diastólica pelo algoritmo e a pressão capilar pulmonar medida foi fraca (r=0,17, p<0,05), e em 30% dos casos o algoritmo foi indeterminado ou inaplicável. Nenhuma variável isolada (E/e' septal ou médio, e' septal/lateral, regurgitação tricúspide) correlacionou-se de forma forte com a pressão invasiva nessa coorte. **A relação E/e' e o algoritmo que a incorpora devem ser interpretados como estimativa de probabilidade, não como medida com a mesma acurácia de um cateterismo direito** — especialmente em população com dispneia inexplicada ou hipertensão pulmonar, onde o desempenho medido foi baixo.",
+    "source_refs": [
+      "Nagueh SF, Smiseth OA, Appleton CP, et al. Recommendations for the Evaluation of Left Ventricular Diastolic Function by Echocardiography: An Update from the American Society of Echocardiography and the European Association of Cardiovascular Imaging. J Am Soc Echocardiogr. 2016;29(4):277-314. DOI 10.1016/j.echo.2016.01.011. PMID 27037982.",
+      "van de Bovenkamp AA, Enait V, de Man FS, et al. Validation of the 2016 ASE/EACVI Guideline for Diastolic Dysfunction in Patients With Unexplained Dyspnea and a Preserved Left Ventricular Ejection Fraction. J Am Heart Assoc. 2021;10(18):e021165. DOI 10.1161/JAHA.121.021165. PMID 34476984."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "e/e linha",
+      "doppler tecidual",
+      "funcao diastolica",
+      "pressao de enchimento",
+      "icfep",
+      "ase eacvi 2016"
+    ]
+  },
+  {
+    "slug": "ultrassom-pulmonar-point-of-care-linhas-b-na-avaliacao-de-congestao-na-ic-aguda",
+    "name": "Ultrassom pulmonar point-of-care (linhas B) na avaliação de congestão na insuficiência cardíaca aguda",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Artefatos de reverberação verticais (linhas B), gerados pela interação do feixe de ultrassom com septos interlobulares subpleurais espessados por água extravascular pulmonar, identificados por varredura intercostal com transdutor cardíaco ou abdominal padrão (3,5-5,0 MHz) em múltiplas janelas torácicas bilaterais.",
+    "reference_range": "Menos de 5 linhas B por campo costuma ser considerado normal; múltiplas linhas B bilaterais e difusas, sobretudo confluentes (formando o 'pulmão branco'), definem síndrome alveolointersticial de intensidade crescente conforme o número de linhas B aumenta e a distância entre elas diminui.",
+    "indications": "Dispneia aguda indiferenciada no pronto-socorro, quantificação e monitorização seriada da congestão pulmonar em internação por insuficiência cardíaca aguda descompensada, guia à beira do leito para ajuste da terapia de descongestão (resposta ao diurético) sem depender de radiografia repetida.",
+    "interpretation": "Segundo revisão de Picano E et al. (JACC Cardiovasc Imaging. 2018;11(11):1692-1705, DOI 10.1016/j.jcmg.2018.06.023, PMID 30409330), o ultrassom pulmonar supera a acurácia diagnóstica da radiografia de tórax para detectar água pulmonar (congestão), com aquisição de menos de 1 minuto para as duas aplicações principais (derrame pleural e linhas B), método portátil, sem radiação e de baixo custo; um 'pulmão molhado' detectado por ultrassom prediz descompensação iminente e pode motivar terapia de descongestão. Leidi F et al. (Intern Emerg Med. 2016;11(4):597-601, DOI 10.1007/s11739-016-1403-0, PMID 26885846) descrevem sensibilidade e especificidade acima de 95% para diferenciar dispneia cardiogênica quando o ultrassom pulmonar é integrado à avaliação clínica. Estudo de Imanishi J et al. (Int J Cardiol. 2023;395:131446, DOI 10.1016/j.ijcard.2023.131446, PMID 37844666) mostrou que, após treinamento breve, 30 residentes sem experiência prévia em ecocardiografia atingiram sensibilidade de 90% e especificidade de 100% para identificar congestão residual pós-descongestão em pacientes internados por insuficiência cardíaca aguda, com concordância substancial frente ao especialista (kappa 0,86) e correlação muito alta na contagem de linhas B (coeficiente de Spearman 0,916, p<0,0001) — ou seja, a curva de aprendizado da técnica é rápida.",
+    "limitations": "Linhas B são achado não específico de etiologia — aparecem em qualquer causa de síndrome alveolointersticial (edema cardiogênico, fibrose pulmonar, SDRA, pneumonia intersticial, contusão pulmonar), e a interpretação exige sempre o contexto clínico. Resultado pode ser afetado por obesidade importante, enfisema subcutâneo, doença pulmonar intersticial crônica de base (que já produz linhas B fora de um quadro de congestão aguda) e pneumopatia prévia. É método operador-dependente, embora a curva de aprendizado seja rápida conforme o estudo de Imanishi et al. acima.",
+    "source_refs": [
+      "Picano E, Scali MC, Ciampi Q, Lichtenstein D. Lung Ultrasound for the Cardiologist. JACC Cardiovasc Imaging. 2018;11(11):1692-1705. DOI 10.1016/j.jcmg.2018.06.023. PMID 30409330.",
+      "Leidi F, Casella F, Cogliati C. Bedside lung ultrasound in the evaluation of acute decompensated heart failure. Intern Emerg Med. 2016;11(4):597-601. DOI 10.1007/s11739-016-1403-0. PMID 26885846.",
+      "Imanishi J, Iwasaki M, Ujiro S, et al. Accuracy of lung ultrasound examinations of residual congestion performed by novice residents in patients with acute heart failure. Int J Cardiol. 2023;395:131446. DOI 10.1016/j.ijcard.2023.131446. PMID 37844666.",
+      "Imagem relacionada nesta biblioteca: galeria/eco/ultrassom-pulmonar-linhas-b-sindrome-alveolo-intersticial.jpg (padrão de linhas B, imagem-fonte de paciente com fibrose pulmonar, usada para ilustrar o artefato em si)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ultrassom pulmonar",
+      "linhas b",
+      "congestao pulmonar",
+      "insuficiencia cardiaca aguda",
+      "point-of-care",
+      "descongestao"
+    ]
+  },
+  {
+    "slug": "pressao-arterial-central-e-augmentation-index-tonometria-de-aplanacao",
+    "name": "Pressão arterial central e augmentation index (tonometria de aplanação de pulso)",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Estimativa não invasiva da onda de pressão aórtica central (sistólica, diastólica e pressão de pulso central) a partir do registro tonométrico da onda de pulso periférica (radial ou carotídea), com aplicação de função de transferência generalizada validada; o augmentation index quantifica a fração da pressão sistólica central atribuível à onda refletida que retorna precocemente ao coração, refletindo rigidez arterial.",
+    "reference_range": "Não há corte único de referência amplamente padronizado incorporado à prática clínica de rotina (ver limitações) — o método é mais usado como comparador de tratamentos ou marcador de rigidez vascular do que com valor de corte diagnóstico isolado. Pressão de pulso central mais alta associa-se a maior rigidez arterial e maior risco cardiovascular.",
+    "indications": "Pesquisa e estratificação de rigidez arterial; investigação de discordância entre o efeito de diferentes classes de anti-hipertensivos sobre a pressão braquial periférica e sobre a pressão aórtica central — não é exame de rotina no consultório, com uso concentrado em pesquisa clínica e avaliação mais aprofundada de risco vascular.",
+    "interpretation": "Segundo o estudo CAFE (Conduit Artery Function Evaluation), substudo do ASCOT (Williams B et al., Circulation. 2006;113(9):1213-1225, DOI 10.1161/CIRCULATIONAHA.105.595496, PMID 16476843; 2.199 pacientes, tonometria de aplanação radial seriada por até 4 anos): apesar de pressões arteriais sistólicas braquiais semelhantes entre os grupos de tratamento (Δ0,7 mmHg; IC95% -0,4 a 1,7; p=0,2), houve redução substancial da pressão aórtica sistólica central (Δ4,3 mmHg; IC95% 3,3-5,4; p<0,0001) e da pressão de pulso aórtica central (Δ3,0 mmHg; IC95% 2,1-3,9; p<0,0001) com o esquema baseado em anlodipino (+/- perindopril) em comparação ao baseado em atenolol (+/- tiazídico). A pressão de pulso central associou-se de forma significativa a um desfecho composto pós-hoc de eventos/procedimentos cardiovasculares totais e desenvolvimento de disfunção renal na coorte do CAFE (não ajustado, p<0,0001; ajustado para variáveis basais, p<0,05) — achado que sugere a pressão aórtica central, e não só a braquial, como possível determinante de desfecho clínico e mecanismo para explicar diferenças de desfecho entre os dois braços de tratamento do ASCOT.",
+    "limitations": "O achado de associação com desfecho no CAFE veio de análise pós-hoc, definida a posteriori, de um substudo não desenhado primariamente para esse desfecho — hipótese-geradora, não confirmatória. A medida exige tonômetro validado e software específico, equipamento pouco disponível na prática clínica de rotina fora de centros de pesquisa ou avaliação vascular especializada. Valores de referência normativos por idade/sexo ainda não são amplamente padronizados nem uniformemente incorporados a diretrizes de manejo de rotina.",
+    "source_refs": [
+      "Williams B, Lacy PS, Thom SM, et al. Differential impact of blood pressure-lowering drugs on central aortic pressure and clinical outcomes: principal results of the Conduit Artery Function Evaluation (CAFE) study. Circulation. 2006;113(9):1213-1225. DOI 10.1161/CIRCULATIONAHA.105.595496. PMID 16476843."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pressao arterial central",
+      "augmentation index",
+      "tonometria de aplanacao",
+      "rigidez arterial",
+      "cafe study",
+      "pressao de pulso"
+    ]
+  },
+  {
+    "slug": "rastreio-laboratorial-de-sindrome-de-cushing-como-causa-secundaria-de-hipertensao",
+    "name": "Rastreio laboratorial de síndrome de Cushing como causa secundária de hipertensão (cortisol salivar noturno, cortisol livre urinário, teste de supressão com dexametasona)",
+    "category": "laboratorial",
+    "theme": "Hipertensão",
+    "what_it_measures": "Três testes de primeira linha, com desempenho diagnóstico considerado equivalente pela diretriz da Endocrine Society, para rastreio de hipercortisolismo endógeno (síndrome de Cushing) como causa secundária de hipertensão: cortisol livre urinário de 24 horas, cortisol salivar tardio noturno (coletado por volta das 23h, quando o cortisol fisiologicamente está em seu nadir) e teste de supressão com dexametasona (1 mg overnight ou 2 mg por 48 horas).",
+    "reference_range": "Um resultado normal em teste inicial de alta acurácia diagnóstica, em paciente sem características adicionais que se acumulem ao longo do tempo, dispensa investigação adicional, segundo a diretriz. Resultado anormal exige avaliação por endocrinologista e um segundo teste (um dos três acima, ou cortisol sérico à meia-noite, ou teste de suspensão com dexametasona-CRH em casos selecionados) antes de prosseguir à investigação etiológica.",
+    "indications": "Rastreio de síndrome de Cushing como causa secundária de hipertensão em pacientes com múltiplas características progressivas compatíveis com a síndrome — sobretudo as de maior valor discriminatório (fragilidade cutânea, miopatia proximal, estrias violáceas largas, fácies pletórica) — e em pacientes com incidentaloma adrenal, após exclusão de uso de glicocorticoide exógeno.",
+    "interpretation": "Segundo a diretriz de prática clínica da Endocrine Society (Nieman LK et al., J Clin Endocrinol Metab. 2008;93(5):1526-1540, DOI 10.1210/jc.2008-0125, PMID 18334580): recomenda-se testar para síndrome de Cushing pacientes com características múltiplas e progressivas compatíveis com a síndrome, sobretudo as de alto valor discriminatório, e pacientes com incidentaloma adrenal, após excluir uso de glicocorticoide exógeno. Recomenda-se o uso inicial de um teste de alta acurácia diagnóstica (cortisol urinário, cortisol salivar noturno tardio, teste de supressão com dexametasona 1 mg overnight ou 2 mg/48h). Resultado anormal deve levar a avaliação por endocrinologista e a um segundo teste; resultados concordantemente anormais nos dois testes indicam prosseguir à investigação da causa; resultados concordantemente normais não exigem avaliação adicional; resultados discordantes, respostas normais com suspeita de hipercortisolismo cíclico, ou respostas inicialmente normais com acúmulo de características ao longo do tempo justificam testagem adicional.",
+    "limitations": "Nenhum dos três testes tem acurácia perfeita isoladamente — por isso a diretriz recomenda confirmação com um segundo teste em caso de resultado anormal. Estados de pseudo-Cushing (obesidade importante, depressão maior, uso crônico de álcool) podem gerar resultados falso-positivos nos testes de rastreio, exigindo julgamento clínico e, por vezes, testes adicionais para diferenciar de síndrome de Cushing verdadeira. Hipercortisolismo cíclico pode gerar resultado normal em uma única amostra, apesar de doença presente.",
+    "source_refs": [
+      "Nieman LK, Biller BM, Findling JW, et al. The diagnosis of Cushing's syndrome: an Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2008;93(5):1526-1540. DOI 10.1210/jc.2008-0125. PMID 18334580."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "sindrome de cushing",
+      "hipertensao secundaria",
+      "cortisol salivar",
+      "teste de supressao com dexametasona",
+      "cortisol urinario",
+      "hipercortisolismo"
+    ]
+  },
+  {
+    "slug": "medida-automatizada-da-pressao-arterial-em-consultorio-aobp",
+    "name": "Medida automatizada da pressão arterial em consultório (AOBP — automated office blood pressure)",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Pressão arterial obtida por dispositivo oscilométrico automatizado que realiza múltiplas aferições sucessivas (tipicamente 3 a 6), após período de repouso, calculando a média das leituras — podendo ser realizada com o paciente sozinho na sala (não assistida/'unattended') ou na presença de um profissional (assistida/'attended').",
+    "reference_range": "Não há um único corte diagnóstico universal independente do protocolo empregado — o valor obtido depende de forma relevante de o método ser assistido ou não assistido (ver interpretação), o que precisa ser declarado junto ao resultado, não tratado como um número intercambiável entre protocolos.",
+    "indications": "Reduzir o efeito do jaleco branco na aferição da pressão arterial em consultório, tanto para diagnóstico quanto para acompanhamento do tratamento anti-hipertensivo; método de aferição utilizado em ensaios clínicos de referência sobre metas pressóricas (ex.: SPRINT), o que torna relevante saber se a aferição de um paciente individual está sendo feita da mesma forma que a do estudo cuja meta se pretende replicar.",
+    "interpretation": "Segundo revisão de Myers MG et al. (J Hypertens. 2020;38(8):1407-1411, DOI 10.1097/HJH.0000000000002439, PMID 32251198): a principal vantagem da AOBP no rastreio de hipertensão é eliminar o efeito do jaleco branco observado na prática rotineira de consultório, com leituras semelhantes às da monitorização ambulatorial da pressão arterial em vigília, quando realizada sem a presença de profissional (não assistida). Estudos que compararam AOBP assistida e não assistida relataram PA sistólica assistida em média 5,8 mmHg mais alta que a não assistida; em leituras automatizadas assistidas na prática clínica real (27.211 pacientes), a PA sistólica foi em média 25 mmHg mais alta que a MAPA em vigília — dado consistente com a presença de um profissional elevando o valor obtido. Em estudos de pesquisa, todos os tipos de aferição de consultório na meta de PAS <130 mmHg tenderam a ser mais baixos que a MAPA em vigília; já na prática clínica, a AOBP assistida foi discretamente mais alta que a MAPA em vigília.",
+    "limitations": "O protocolo empregado (assistido vs. não assistido, tempo de repouso, número de leituras, paciente sozinho na sala ou não) muda substancialmente o resultado — usar o mesmo nome 'AOBP' não garante que dois serviços estejam medindo de forma comparável entre si, nem necessariamente comparável à MAPA usada como referência nos grandes ensaios. A própria revisão conclui que mais pesquisa é necessária para determinar a técnica ótima de aferição de PA em consultório na meta pressórica.",
+    "source_refs": [
+      "Myers MG, de la Sierra A, Roerecke M, Kaczorowski J. Attended versus unattended automated office blood pressure measurement in the diagnosis and treatment of hypertension. J Hypertens. 2020;38(8):1407-1411. DOI 10.1097/HJH.0000000000002439. PMID 32251198."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "aobp",
+      "pressao arterial automatizada",
+      "efeito do jaleco branco",
+      "mapa",
+      "medida de pressao em consultorio",
+      "sprint"
+    ]
+  },
+  {
+    "slug": "teste-de-resposta-ao-ima-magnet-test-em-marca-passo-e-cdi",
+    "name": "Teste de resposta ao ímã (magnet test) em portador de marca-passo ou cardiodesfibrilador implantável",
+    "category": "metodo_grafico",
+    "theme": "Dispositivos",
+    "what_it_measures": "Resposta eletrônica do gerador de marca-passo ou cardiodesfibrilador implantável (CDI) à aplicação de um ímã externo sobre a loja do dispositivo, monitorizada por eletrocardiograma contínuo — em marca-passo, tipicamente reverte a estimulação para modo assíncrono em frequência fixa (permitindo avaliar limiar de captura e, pela frequência magnética específica do fabricante, estimar o status da bateria); em CDI, tipicamente inibe/suspende de forma transitória a detecção e a terapia de taquiarritmia, sem alterar a função de estimulação bradicárdica de base.",
+    "reference_range": "Não há um único padrão de resposta universal — a resposta ao ímã varia por fabricante, tipo de dispositivo e programação (ver limitações), o que torna indispensável conhecer o modelo do dispositivo do paciente antes de interpretar o teste.",
+    "indications": "Manejo perioperatório de portador de dispositivo cardíaco eletrônico implantável (evitar interferência do bisturi elétrico sobre a detecção do CDI, sem depender de reprogramação formal quando não há tempo/disponibilidade), manobra de emergência à beira do leito diante de suspeita de choques inapropriados por CDI, avaliação expedita do dispositivo quando o programador específico do fabricante não está disponível.",
+    "interpretation": "Segundo revisão de Özkartal T et al. (J Clin Med. 2022;11(3):691, DOI 10.3390/jcm11030691, PMID 35160149): embora se assuma de forma geral que a aplicação do ímã reverte a estimulação para modo assíncrono em marca-passo e desabilita a detecção/terapia de taquiarritmia em CDI, a resposta real ao ímã pode diferir substancialmente conforme o tipo de dispositivo, o fabricante e o modelo — a revisão detalha essa resposta especificamente por fabricante e tipo de dispositivo, exatamente porque não pode ser assumida como uniforme.",
+    "limitations": "A resposta ao ímã NÃO é padronizada entre fabricantes — Cronin B et al. (J Cardiothorac Vasc Anesth. 2019;33(12):3427-3436, DOI 10.1053/j.jvca.2019.03.001, PMID 30928289) descrevem que dispositivos Biotronik têm resposta ao ímã programável e, por padrão de fábrica, NÃO resultam em estimulação assíncrona sustentada — comportamento diferente do assumido como 'padrão' para outros fabricantes. Nunca assumir o comportamento de um dispositivo sem identificar previamente o fabricante e modelo reais (cartão de identificação do paciente, radiografia com código do gerador, ou interrogação formal) — aplicar o ímã presumindo resposta genérica pode não produzir o efeito clínico pretendido.",
+    "source_refs": [
+      "Özkartal T, Demarchi A, Caputo ML, Baldi E, Conte G, Auricchio A. Perioperative Management of Patients with Cardiac Implantable Electronic Devices and Utility of Magnet Application. J Clin Med. 2022;11(3):691. DOI 10.3390/jcm11030691. PMID 35160149.",
+      "Cronin B, Dalia A, Sandoval K, Birgersdotter-Green U, Sherer E, Essandoh MK. Perioperative Interrogation of Biotronik Cardiovascular Implantable Electronic Devices: A Guide for Anesthesiologists. J Cardiothorac Vasc Anesth. 2019;33(12):3427-3436. DOI 10.1053/j.jvca.2019.03.001. PMID 30928289."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste do ima",
+      "magnet test",
+      "marca-passo",
+      "cardiodesfibrilador implantavel",
+      "manejo perioperatorio",
+      "estimulacao assincrona"
+    ]
+  },
+  {
+    "slug": "algoritmo-de-deteccao-de-oversensing-e-ruido-de-eletrodo-por-monitorizacao-remota-do-cdi",
+    "name": "Algoritmo de detecção de oversensing e ruído de eletrodo por monitorização remota do cardiodesfibrilador implantável",
+    "category": "metodo_grafico",
+    "theme": "Dispositivos",
+    "what_it_measures": "Algoritmo embutido no cardiodesfibrilador implantável (exemplo estudado: SecureSense, dispositivos St Jude Medical) que analisa em paralelo os eletrogramas de canal próximo e de canal distante do eletrodo ventricular direito para discriminar ruído verdadeiro — por fratura ou mau contato do eletrodo — de sinal fisiológico superdetectado (oversensing de onda T ou onda P), com o objetivo de suprimir terapia de choque inapropriada.",
+    "reference_range": "Não se aplica um valor de referência numérico único — o resultado é qualitativo, por episódio (ruído confirmado vs. sinal fisiológico vs. taquiarritmia ventricular verdadeira), reportado por transmissão de monitorização remota.",
+    "indications": "Prevenção de choques inapropriados em portador de CDI acompanhado por monitorização remota, investigação de episódios de detecção não sustentada transmitidos remotamente, suporte à decisão de reprogramação ou revisão de eletrodo quando o algoritmo aponta ruído compatível com disfunção de eletrodo.",
+    "interpretation": "Segundo estudo multicêntrico de Welte N et al. (Heart Rhythm. 2017;14(7):1008-1015, DOI 10.1016/j.hrthm.2017.03.023, PMID 28323174; 486 pacientes em 3 centros franceses, seguidos por monitorização remota com o algoritmo SecureSense ativado): o algoritmo inibiu 22 terapias inapropriadas (10 por disfunção de eletrodo, 12 por oversensing de onda P). Cinquenta e sete pacientes (12%) apresentaram ao menos um episódio de oversensing não sustentado (393 episódios no total), com etiologias diversas: ruído no canal de campo próximo (38%), oversensing de onda T durante estimulação ventricular (33%), oversensing de onda P sinusal (12%) e de onda P estimulada (6%). Dois episódios (0,5%) de taquicardia ventricular não sustentada foram subdetectados pelo canal de campo distante. Dos 336 episódios de taquiarritmia ventricular analisados, 15 (4%), em 4 pacientes, relacionaram-se a oversensing — 11 por onda P intrínseca, 4 por ruído externo de eletrocautério.",
+    "limitations": "O próprio estudo relata que oversensing de onda P em eletrodos bipolares integrados, eletrocautério e interferência eletromagnética são situações propensas a passar despercebidas pelo algoritmo SecureSense — ou seja, ele reduz mas não elimina o risco de terapia inapropriada por essas causas. É um algoritmo proprietário de um único fabricante (St Jude Medical/Abbott); o desempenho relatado não pode ser generalizado sem verificação para algoritmos de discriminação de outros fabricantes. Série retrospectiva, multicêntrica, mas de um único país (França), o que limita a generalização de proporções absolutas para outras populações.",
+    "source_refs": [
+      "Welte N, Strik M, Eschalier R, et al. Multicenter investigation of an implantable cardioverter-defibrillator algorithm to detect oversensing. Heart Rhythm. 2017;14(7):1008-1015. DOI 10.1016/j.hrthm.2017.03.023. PMID 28323174."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiodesfibrilador implantavel",
+      "oversensing",
+      "ruido de eletrodo",
+      "monitorizacao remota",
+      "choque inapropriado",
+      "fratura de eletrodo"
+    ]
+  },
+  {
+    "slug": "venografia-por-angiotomografia-guiando-implante-do-eletrodo-de-ve-na-trc",
+    "name": "Venografia por angiotomografia guiando o implante do eletrodo de ventrículo esquerdo na terapia de ressincronização cardíaca",
+    "category": "imagem",
+    "theme": "Dispositivos",
+    "what_it_measures": "Mapeamento por angiotomografia das veias tributárias do seio coronário, combinável com cintilografia de perfusão miocárdica e ecocardiograma com speckle-tracking, para planejar o posicionamento do eletrodo de ventrículo esquerdo sobre o segmento mecanicamente ativado mais tardio e sem cicatriz transmural, antes do implante de terapia de ressincronização cardíaca (TRC).",
+    "reference_range": "Não se aplica valor de referência numérico — resultado é a identificação de anatomia venosa (presença/calibre/trajeto das tributárias do seio coronário) e do segmento-alvo de ativação tardia não cicatricial, integrada ao planejamento cirúrgico.",
+    "indications": "Planejamento pré-implante de TRC, particularmente quando se antecipa anatomia venosa desafiadora ou quando a equipe deseja guiar o posicionamento do eletrodo especificamente pelo local de ativação mecânica mais tardia identificado por imagem, em vez de por mapeamento elétrico durante o próprio implante.",
+    "interpretation": "Em ensaio clínico randomizado, duplo-cego (Stephansen C et al., Europace. 2019;21(9):1369-1377, DOI 10.1093/europace/euz184, PMID 31274152; 122 pacientes), a estratégia guiada por imagem (angiotomografia de venografia + cintilografia de perfusão com Rubídio-82 + ecocardiograma com speckle-tracking, direcionando o eletrodo para o segmento mecanicamente ativado mais tardio e não cicatricial) foi comparada a uma estratégia guiada eletricamente (eletrodo direcionado para o segmento eletricamente ativado mais tardio, por mapeamento sistemático das tributárias do seio coronário durante o implante) combinada a otimização pós-implante do atraso interventricular. **O desfecho primário — aumento absoluto da fração de ejeção do VE em 6 meses — foi maior no grupo guiado eletricamente (11±10%) do que no grupo guiado por imagem (7±11%; IC95% da diferença 0,4-7,9%; p=0,03), diferença que perdeu significância estatística após ajuste para covariáveis basais pré-especificadas (p=0,09).** Classe funcional NYHA, teste de caminhada de 6 minutos, qualidade de vida, remodelamento reverso do VE e taxa de complicações não diferiram entre os grupos. Os autores concluem que a estratégia guiada eletricamente pareceu não inferior à guiada por imagem, sem demonstrar superioridade da abordagem por imagem neste ensaio.",
+    "limitations": "**Este é o ponto que mais precisa ficar explícito para quem consultar esta ficha**: o ensaio que melhor testou a estratégia guiada por imagem NÃO demonstrou superioridade dela sobre uma estratégia mais simples de mapeamento elétrico durante o próprio implante — a leitura de que 'a angiotomografia venosa melhora o resultado da TRC' não é sustentada por este resultado primário. Amostra modesta (122 pacientes), estudo unicêntrico dinamarquês, seguimento de 6 meses — não avalia desfechos duros (internação, mortalidade) nem seguimento de longo prazo.",
+    "source_refs": [
+      "Stephansen C, Sommer A, Kronborg MB, et al. Electrically vs. imaging-guided left ventricular lead placement in cardiac resynchronization therapy: a randomized controlled trial. Europace. 2019;21(9):1369-1377. DOI 10.1093/europace/euz184. PMID 31274152."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressincronizacao cardiaca",
+      "trc",
+      "venografia",
+      "angiotomografia",
+      "eletrodo de ventriculo esquerdo",
+      "planejamento pre-implante"
+    ]
   }
 ]

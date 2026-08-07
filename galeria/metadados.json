@@ -5741,5 +5741,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ultrassom-pulmonar-linhas-b-sindrome-alveolo-intersticial",
+    "title": "Ultrassom pulmonar point-of-care — padrão de linhas B (síndrome alveolointersticial)",
+    "modality": "Ultrassonografia",
+    "theme": "Insuficiência cardíaca",
+    "file_path": "eco/ultrassom-pulmonar-linhas-b-sindrome-alveolo-intersticial.jpg",
+    "findings": "Corte setorial de ultrassom pulmonar point-of-care (transdutor curvilíneo, janela intercostal) mostrando a linha pleural hiperecogênica próxima ao topo da imagem e múltiplos artefatos de reverberação verticais, hiperecogênicos, que nascem na linha pleural e se estendem sem atenuação até a borda inferior do campo (as chamadas linhas B), parcialmente confluentes na porção central do setor — padrão compatível com síndrome alveolointersticial ao ultrassom. **Ressalva de procedência, para não repetir o erro já registrado neste projeto de atribuir achado à etiologia errada**: a imagem-fonte, publicada no Wikimedia Commons, documenta esse padrão em um paciente com FIBROSE PULMONAR, não com insuficiência cardíaca. As linhas B são um achado ultrassonográfico não específico de etiologia — aparecem em qualquer causa de síndrome alveolointersticial (edema pulmonar cardiogênico, fibrose pulmonar, SDRA, pneumonia intersticial) — e a imagem entra nesta galeria para ilustrar o PADRÃO do artefato em si, referenciado pela ficha de exame 'Ultrassom pulmonar point-of-care (linhas B) na avaliação de congestão na insuficiência cardíaca aguda' (tema Insuficiência cardíaca). A etiologia do caso-fonte é declaradamente outra.",
+    "teaching_points": "A linha B nasce sempre na linha pleural, é hiperecogênica, estreita como um facho de laser, apaga as linhas A (artefato de reverberação horizontal do pulmão normalmente aerado) por trás dela, estende-se até a borda da tela sem atenuar e se move em sincronia com a respiração (desliza junto com a linha pleural) — são esses cinco critérios, e não a mera presença de uma linha vertical qualquer, que definem uma linha B verdadeira e a distinguem de artefato de cauda de cometa mal formado. Múltiplas linhas B bilaterais, difusas e mais numerosas nos campos inferiores/posteriores sugerem edema pulmonar cardiogênico quando o contexto clínico for de insuficiência cardíaca; linhas B focais/localizadas, associadas a espessamento ou irregularidade da linha pleural, orientam mais para causa parenquimatosa focal (pneumonia, contusão, fibrose localizada) — a distribuição e o contexto clínico é que discriminam etiologia, não o achado isolado.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:B_lines_on_a_lung_ultrasound_of_a_patient_with_fibrosis.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Tinss, via Wikimedia Commons, licenciado sob Creative Commons Attribution-ShareAlike 4.0 International.",
+    "tags": [
+      "ultrassom pulmonar",
+      "linhas b",
+      "sindrome alveolointersticial",
+      "congestao pulmonar",
+      "point-of-care",
+      "insuficiencia cardiaca aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
