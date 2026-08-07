@@ -12421,5 +12421,206 @@
       "Ladwig KH, Baumert J, Marten-Mittag B, Kolb C, Zrenner B, Schmitt C. Posttraumatic stress symptoms and predicted mortality in patients with implantable cardioverter-defibrillators: results from the prospective living with an implanted cardioverter-defibrillator study. Arch Gen Psychiatry. 2008;65(11):1324-1330. DOI: 10.1001/archpsyc.65.11.1324. PMID: 18981344."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "efeito-de-enquadramento-risco-relativo-versus-absoluto-na-decisao-de-medicacao-malenka-1993",
+    "titulo": "Duas formas de dizer o mesmo benefício: por que o enquadramento do risco muda a decisão do paciente",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Estudo com questionário aplicado a 470 pacientes consecutivos de um ambulatório de clínica médica geral (92% de taxa de resposta) apresentou um cenário hipotético de doença grave e pediu que cada participante escolhesse entre dois medicamentos igualmente eficazes para preveni-la. O benefício do medicamento A foi descrito em termos de redução de risco relativo; o benefício do medicamento B, matematicamente idêntico, foi descrito em termos de redução de risco absoluto — a mesma eficácia, duas frases diferentes.",
+    "pergunta": "Frente a benefícios matematicamente idênticos, a escolha do paciente dependeu de qual forma de apresentação (relativa ou absoluta) ele leu?",
+    "opcoes": [
+      "Não — pacientes com formação em saúde reconheceram a equivalência e ficaram indiferentes entre as duas opções na maioria dos casos",
+      "Sim — 56,8% preferiram o medicamento cujo benefício foi descrito em termos relativos, contra 14,7% que preferiram o de termos absolutos (15,5% indiferentes), e a preferência pelo enquadramento relativo foi ainda maior entre os mais escolarizados",
+      "Sim, mas o efeito desapareceu por completo quando o paciente já estava em tratamento para a condição em questão",
+      "Não — a maioria (mais de 70%) preferiu consistentemente a informação em termos absolutos, por ser mais concreta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo de Malenka et al. (1993), um dos mais citados sobre enquadramento (framing) em decisão médica, mostrou que a forma de apresentar um benefício idêntico muda sistematicamente a escolha: 56,8% dos pacientes preferiram a opção cujo benefício veio em redução de risco relativo (RRR), contra apenas 14,7% que preferiram a mesma informação em redução de risco absoluto (RRA) — e o efeito foi ainda mais pronunciado entre os pacientes com maior escolaridade e entre os que já estavam em tratamento para a condição, contrariando a expectativa de que mais informação ou mais experiência protegeria contra o viés. A implicação prática para a cardiologia é direta: RRR sempre soa maior que RRA para o mesmo efeito absoluto (por exemplo, uma estatina que reduz eventos de 3% para 2% tem RRR de 33% e RRA de apenas 1 ponto percentual) — comunicar só a relativa, prática comum em bulas e até em publicações científicas, infla a percepção de benefício sem que o paciente perceba. Discutir explicitamente as duas formas, e idealmente também o número necessário para tratar (NNT), é o que sustenta uma decisão verdadeiramente informada e compartilhada, coerente com a literatura mais ampla de comunicação de risco que este acervo já reúne.",
+    "source_refs": [
+      "Malenka DJ, Baron JA, Johansen S, Wahrenberger JW, Ross JM. The framing effect of relative and absolute risk. J Gen Intern Med. 1993;8(10):543-548. DOI: 10.1007/BF02599636. PMID: 8271086."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "letramento-em-saude-e-controle-de-inr-em-uso-cronico-de-varfarina-estrada-2004",
+    "titulo": "Paciente com dificuldade de leitura em uso crônico de varfarina: o letramento em saúde muda o controle do INR?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Estudo prospectivo com 143 pacientes acima de 50 anos, acompanhados em dois ambulatórios de anticoagulação, mediu literacia (capacidade de leitura de material de saúde) e numeracia (capacidade de interpretar números) de cada participante e comparou com medidas objetivas de controle da varfarina ao longo do seguimento. Apenas 52,4% dos pacientes liam material de saúde no nível de oitava série ou abaixo — apesar de 79% relatarem ter completado a oitava série —, e 48,3% acertaram menos de duas de seis perguntas de numeracia básica.",
+    "pergunta": "Literacia e numeracia mais baixas se associaram a algum desfecho objetivo de controle da anticoagulação, ou o efeito ficou restrito a escalas subjetivas de conhecimento sobre o medicamento?",
+    "opcoes": [
+      "Não — nem literacia nem numeracia tiveram associação com nenhuma medida objetiva de controle do INR, só com escalas de conhecimento autorreferido",
+      "Sim — a variabilidade do INR foi maior nos pacientes com literacia mais baixa (p=0,009) e com numeracia mais baixa (p=0,004); numeracia mais baixa também se associou a mais tempo acima da faixa terapêutica (p=0,04), embora o tempo total em faixa terapêutica não tenha diferido por nível de literacia (p=0,9)",
+      "Sim, mas na direção oposta — pacientes com literacia mais baixa tiveram INR mais estável, provavelmente por seguirem instruções à risca sem questionar a dose",
+      "O estudo não conseguiu medir literacia de forma confiável nessa faixa etária e não chegou a nenhuma conclusão sobre controle do INR"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estrada et al. (2004) encontraram associação real, e não só percebida, entre habilidades de literacia/numeracia e controle objetivo da varfarina: a variabilidade do INR — quanto o valor oscila de uma medida para outra, refletindo instabilidade da anticoagulação — foi significativamente maior nos pacientes com literacia mais baixa e nos com numeracia mais baixa. A numeracia mais baixa também previu mais tempo passado acima da faixa terapêutica, achado clinicamente relevante porque é justamente a faixa de maior risco hemorrágico. Curiosamente, o tempo total em faixa terapêutica não diferiu por literacia isoladamente — sugerindo que a variabilidade (oscilação) e o tempo fora da faixa por excesso podem ser sensíveis a aspectos diferentes da comunicação do que a média global de controle. Na prática, isso sustenta duas medidas concretas para o paciente com baixo letramento em uso de varfarina (ou de qualquer anticoagulante que exija ajuste fino, incluindo os que monitoram sintomas de sangramento): material educativo em linguagem simples e verificação ativa de compreensão (teach-back), não a simples entrega de uma bula ou tabela de dose.",
+    "source_refs": [
+      "Estrada CA, Martin-Hryniewicz M, Peek BT, Collins C, Byrd JC. Literacy and numeracy skills and anticoagulation control. Am J Med Sci. 2004;328(2):88-93. DOI: 10.1097/00000441-200408000-00004. PMID: 15311167."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "entrevista-motivacional-e-adesao-anti-hipertensiva-em-afro-americanos-ogedegbe-2008",
+    "titulo": "Hipertenso com adesão em queda: entrevista motivacional aplicada na rotina do consultório muda o quadro?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Ensaio clínico randomizado incluiu 190 pacientes hipertensos afro-americanos (88% mulheres, idade média 54 anos) acompanhados em atenção primária, comparando um protocolo de entrevista motivacional aplicado por profissionais da própria prática clínica (MINT) contra cuidado usual, com adesão medicamentosa monitorada objetivamente ao longo do seguimento.",
+    "pergunta": "O grupo que recebeu entrevista motivacional manteve a adesão à medicação anti-hipertensiva melhor do que o cuidado usual, e essa diferença veio acompanhada de queda mensurável da pressão arterial?",
+    "opcoes": [
+      "Não houve diferença de adesão entre os grupos — a entrevista motivacional só melhorou a satisfação do paciente com a consulta",
+      "A adesão caiu nos dois grupos ao longo do tempo, mas caiu menos no grupo de cuidado usual",
+      "A adesão pós-tratamento foi de 57% no grupo de entrevista motivacional contra 43% no cuidado usual (diferença de 14 pontos percentuais, p=0,027), com tendência a maior redução da pressão sistólica no grupo MINT (diferença de 6,1 mmHg, p=0,065) sem significância estatística",
+      "A entrevista motivacional piorou a adesão por gerar resistência psicológica à mudança em pacientes que não pediram aconselhamento"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Ogedegbe et al. (2008) mostraram, num ensaio pragmático dentro da rotina real do consultório (não um ambiente de pesquisa artificial), que a entrevista motivacional manteve a adesão medicamentosa estável ao longo do tempo, enquanto o cuidado usual mostrou queda significativa — resultando numa diferença final de 14 pontos percentuais (57% vs. 43%, p=0,027) a favor da intervenção. A pressão arterial sistólica também tendeu a cair mais no grupo de entrevista motivacional (6,1 mmHg a mais de redução), mas essa diferença não atingiu significância estatística (p=0,065) — no tamanho de amostra do estudo, o desfecho comportamental (adesão) teve poder estatístico para mostrar diferença antes que o desfecho fisiológico (pressão) o tivesse, o que é comum em ensaios de intervenção comportamental e não deve ser lido como 'a adesão melhorou mas não adiantou nada'. A técnica central da entrevista motivacional — explorar a ambivalência do próprio paciente em vez de prescrever mudança de comportamento de cima para baixo — é ensinável a qualquer profissional da equipe, não só a psicólogos, e esse estudo é evidência de que funciona incorporada à rotina real, não só em protocolo de pesquisa.",
+    "source_refs": [
+      "Ogedegbe G, Chaplin W, Schoenthaler A, et al. A practice-based trial of motivational interviewing and adherence in hypertensive African Americans. Am J Hypertens. 2008;21(10):1137-1143. DOI: 10.1038/ajh.2008.240. PMID: 18654123."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "padrao-guerreiro-de-fim-de-semana-de-atividade-fisica-e-mortalidade-cardiovascular-dos-santos-2022",
+    "titulo": "\"Só malho no fim de semana\": concentrar o exercício em 1-2 dias vale tanto quanto espalhar pela semana?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Estudo de coorte nacional (Reino Unido) classificou os participantes conforme o padrão de atividade física de lazer relatado: inativos, \"guerreiros de fim de semana\" (150 minutos/semana de atividade moderada ou 75 minutos/semana de atividade vigorosa concentrados em 1-2 sessões) e regularmente ativos (o mesmo volume distribuído em 3 ou mais sessões por semana), acompanhando mortalidade por todas as causas, cardiovascular e por câncer.",
+    "pergunta": "Concentrar o exercício recomendado em 1-2 sessões por semana ofereceu proteção cardiovascular pior do que distribuir o mesmo volume ao longo da semana?",
+    "opcoes": [
+      "Sim, claramente pior — concentrar o exercício em poucos dias anulou praticamente todo o benefício observado nos regularmente ativos",
+      "Os guerreiros de fim de semana tiveram mortalidade por todas as causas comparável aos inativos, sem nenhum benefício mensurável de fazer exercício",
+      "Comparados aos inativos, tanto os guerreiros de fim de semana (HR 0,92) quanto os regularmente ativos (HR 0,85) tiveram menor mortalidade por todas as causas, e a diferença entre os dois padrões entre si não foi estatisticamente significativa (HR 1,08; IC95% 0,97-1,20) para mortalidade geral, nem para mortalidade cardiovascular (HR 1,14; IC95% 0,85-1,53) ou por câncer (HR 1,07; IC95% 0,87-1,31)",
+      "O estudo não conseguiu formar um grupo de \"guerreiros de fim de semana\" numeroso o suficiente para qualquer comparação estatística"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Dos Santos et al. (2022) encontraram que o que parece importar para mortalidade é o volume total de atividade física moderada-a-vigorosa acumulado na semana, não necessariamente como ele é distribuído nos dias: tanto o padrão concentrado em 1-2 sessões (\"guerreiro de fim de semana\") quanto o distribuído em 3 ou mais sessões reduziram a mortalidade por todas as causas de forma semelhante em relação aos inativos, e a comparação direta entre os dois padrões não mostrou diferença estatisticamente significativa para mortalidade geral, cardiovascular ou por câncer. Isso é uma mensagem prática relevante para o paciente que usa a falta de tempo nos dias úteis como razão para não se exercitar: a recomendação de atividade física (150 min/semana moderada ou 75 min/semana vigorosa) pode, pelos dados observacionais disponíveis, ser cumprida concentrada no fim de semana sem perder o essencial do benefício de mortalidade — o que não elimina, porém, outros potenciais benefícios de sessões mais frequentes (controle glicêmico agudo, por exemplo) que este desfecho específico não captura, nem substitui aconselhamento individualizado sobre risco de lesão ao concentrar esforço.",
+    "source_refs": [
+      "Dos Santos M, Ferrari G, Lee DH, Rey-López JP, Aune D, Liao B, Huang W, Nie J, Wang Y, Giovannucci E, Rezende LFM. Association of the \"Weekend Warrior\" and Other Leisure-time Physical Activity Patterns With All-Cause and Cause-Specific Mortality: A Nationwide Cohort Study. JAMA Intern Med. 2022;182(8):840-848. DOI: 10.1001/jamainternmed.2022.2488. PMID: 35788615."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mortalidade-cardiaca-mais-alta-no-natal-e-ano-novo-o-estudo-de-phillips-2004",
+    "titulo": "\"Ele teve o infarto bem no Natal\": existe mesmo um pico de mortalidade cardíaca nas festas de fim de ano?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Estudo analisou dados de certidão de óbito de todos os falecimentos ocorridos nos Estados Unidos entre meados de 1973 e meados de 2001 (análise dia a dia ao longo de quase três décadas), comparando o número observado de mortes cardíacas em torno do Natal e do Ano Novo com o número esperado, com base no padrão sazonal do restante do inverno.",
+    "pergunta": "O excesso de mortes cardíacas ao redor do Natal e Ano Novo é explicado inteiramente pelo frio do inverno, ou existe um pico adicional ligado especificamente às próprias datas?",
+    "opcoes": [
+      "O excesso é só o frio de inverno — quando os autores controlaram para temperatura, o \"efeito das festas\" desapareceu por completo",
+      "Existe um pico duplo e específico das datas, além do padrão sazonal de inverno: as mortes cardíacas ficaram 4,65% acima do esperado (IC95% 4,06%-5,24%) e as não cardíacas 4,99% acima (IC95% 4,17%-5,81%) no período do Natal/Ano Novo, com o excesso crescendo proporcionalmente ao longo das décadas estudadas",
+      "O efeito só apareceu em mortes intra-hospitalares, nunca em pacientes que chegaram mortos ao pronto-socorro ou morreram em casa",
+      "Não houve qualquer diferença estatisticamente significativa entre o período de festas e o resto do inverno nessa série de quase 30 anos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Phillips et al. (2004) confirmaram, numa das maiores séries temporais já analisadas para esse fim (praticamente todas as mortes dos EUA num período de 28 anos), que existe um excesso de mortalidade cardíaca e não cardíaca especificamente ao redor do Natal e do Ano Novo, além — não apenas por causa — do padrão sazonal já conhecido de mais mortes cardíacas no inverno. O achado de dois picos distintos (um no Natal, outro no Ano Novo) e o fato de o excesso ter crescido proporcionalmente ao longo do tempo argumentam contra uma explicação puramente climática. Os mecanismos propostos pelos próprios autores e por revisões posteriores incluem atraso na procura por atendimento médico por parte do paciente (querer 'passar as festas em casa'), redução do quadro de pessoal nos serviços de saúde nesse período, excessos alimentares e de sal, consumo aumentado de álcool, e estresse emocional das reuniões familiares — nenhum comprovado como causa isolada, mas o conjunto é conhecido informalmente como 'Merry Christmas Coronary' e 'Happy New Year Heart Attack'. Não é motivo para alarmismo com o paciente, mas é argumento a favor de manter medicação e sinais de alarme em mente justamente quando a rotina de cuidado do próprio paciente costuma relaxar.",
+    "source_refs": [
+      "Phillips DP, Jarvinen JR, Abramson IS, Phillips RR. Cardiac mortality is higher around Christmas and New Year's than at any other time: the holidays as a risk factor for death. Circulation. 2004;110(25):3781-3788. DOI: 10.1161/01.CIR.0000151424.02045.F7. PMID: 15596560."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "consumo-moderado-de-alcool-protege-o-coracao-randomizacao-mendeliana-holmes-2014",
+    "titulo": "\"Uma taça de vinho por dia protege o coração\": a randomização mendeliana sustenta essa ideia?",
+    "tema": "Geral",
+    "nivel": "avançado",
+    "enunciado": "Metanálise de randomização mendeliana reuniu dados individuais de 56 estudos epidemiológicos, totalizando 261.991 indivíduos de ascendência europeia (20.259 casos de doença coronariana, 10.164 eventos de AVC), usando a variante rs1229984 do gene ADH1B (álcool desidrogenase 1B) como instrumento genético — portadores do alelo A metabolizam o álcool mais rápido, bebem menos e têm mais abstinência, por razão genética que não se confunde com escolha consciente de estilo de vida saudável.",
+    "pergunta": "Os portadores da variante genética associada a beber menos tiveram risco cardiovascular pior (contrariando a hipótese do 'efeito protetor do álcool moderado') ou melhor?",
+    "opcoes": [
+      "Pior — tiveram mais doença coronariana, reforçando que beber moderadamente protege o coração e que a variante genética atrapalha esse benefício",
+      "Melhor — portadores do alelo A consumiram 17,2% menos álcool por semana e tiveram odds ratio de 0,90 (IC95% 0,84-0,96) para doença coronariana, ou seja, risco cerca de 10% menor — na direção oposta à do 'efeito protetor' relatado em estudos observacionais de consumo moderado",
+      "Não houve nenhuma diferença de risco cardiovascular associada à variante genética, só diferença no volume de álcool consumido",
+      "O estudo não conseguiu genotipar amostra suficiente para qualquer conclusão sobre doença coronariana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A randomização mendeliana usa uma variante genética que influencia o comportamento (aqui, beber menos) mas que é distribuída ao acaso na população — como numa randomização — e por isso não sofre da confusão clássica que atormenta estudos observacionais de álcool: o 'bebedor social moderado saudável' tende a ter renda mais alta, mais acesso a cuidado de saúde e menos comorbidades do que o abstêmio (que muitas vezes parou de beber por já estar doente, o viés do 'ex-bebedor doente'). Holmes et al. (2014) encontraram que os portadores do alelo A do ADH1B — geneticamente predispostos a beber 17,2% menos — tiveram odds ratio de 0,90 para doença coronariana, ou seja, risco menor associado a beber MENOS, na direção oposta à do 'efeito protetor da taça de vinho' popularizado por estudos observacionais que mostram uma curva em J. Isso não prova que álcool zero é a única conduta correta em toda situação clínica, mas é evidência forte contra recomendar início ou manutenção do consumo de álcool como estratégia de proteção cardiovascular — o entendimento atual, também refletido em diretrizes de prevenção mais recentes, é que a relação dose-resposta real tende a ser mais linear (quanto menos, melhor) do que a curva em J sugeria, e que a curva em J observacional é, em boa parte, artefato do desenho do estudo.",
+    "source_refs": [
+      "Holmes MV, Dale CE, Zuccolo L, et al. Association between alcohol and cardiovascular disease: Mendelian randomisation analysis based on individual participant data. BMJ. 2014;349:g4164. DOI: 10.1136/bmj.g4164. PMID: 25011450."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "timi-risk-score-stemi-estratificacao-de-risco-a-beira-do-leito-morrow-2000",
+    "titulo": "IAM com supra de ST recém-chegado: o escore TIMI para STEMI muda a triagem já na admissão?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Escore de risco derivado do estudo InTIME-II (14.114 pacientes elegíveis para fibrinolítico), somando pontos por 8 variáveis simples disponíveis à beira do leito: idade (0 se <65, 2 se 65-74, 3 se ≥75), história de diabetes/hipertensão/angina (1 ponto), pressão sistólica <100 mmHg (3 pontos), frequência cardíaca >100 bpm (2 pontos), Killip II-IV (2 pontos), peso <67 kg (1 ponto), tempo até fibrinólise >4 horas (1 ponto) e supra de ST anterior ou bloqueio de ramo esquerdo (1 ponto) — total de 0 a 14 pontos.",
+    "pergunta": "A mortalidade em 30 dias variou de forma clinicamente relevante entre a pontuação mais baixa e a mais alta do escore?",
+    "opcoes": [
+      "Não — o escore discrimina mal, com mortalidade em torno de 5-8% em praticamente toda a faixa de pontuação",
+      "Sim, de forma acentuada: mortalidade em 30 dias de 0,8% no escore 0 até 35,9% no escore acima de 8 — um gradiente de mais de 40 vezes entre os extremos, validado externamente na coorte TIMI 9 com boa concordância (estatística c = 0,79)",
+      "Sim, mas só nos pacientes acima de 75 anos — nos mais jovens o escore não discrimina risco",
+      "A mortalidade caiu com o aumento da pontuação, um resultado contraintuitivo atribuído a maior intensidade de tratamento nos pacientes de maior risco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O escore TIMI para STEMI (Morrow et al., 2000) foi desenhado deliberadamente como soma aritmética simples — sem necessidade de calculadora ou regressão — mantendo 97% da capacidade preditiva do modelo logístico multivariado completo. O gradiente de mortalidade em 30 dias é acentuado: 0,8% no escore 0, subindo passo a passo (1,6% no 1, 2,2% no 2, 4,4% no 3, 7,3% no 4, 12,4% no 5, 16,1% no 6, 23,4% no 7, 26,8% no 8) até 35,9% no escore acima de 8 — ou seja, um paciente no extremo superior tem risco de morte em 30 dias mais de 40 vezes maior do que um no extremo inferior, informação que orienta a intensidade de monitorização e a urgência de reperfusão desde a triagem. É diferente do escore TIMI para angina instável/IAM sem supra (Antman et al., já registrado neste acervo) — são dois instrumentos distintos, derivados de populações e desfechos diferentes, e não devem ser confundidos ou usados de forma intercambiável: o de STEMI usa variáveis hemodinâmicas mais pesadas (Killip, PA sistólica) porque a população de referência já está infartando com supra de ST, enquanto o de UA/NSTEMI pondera mais história pregressa e biomarcadores.",
+    "source_refs": [
+      "Morrow DA, Antman EM, Charlesworth A, et al. TIMI risk score for ST-elevation myocardial infarction: a convenient, bedside, clinical score for risk assessment at presentation: an intravenous nPA for treatment of infarcting myocardium early II trial substudy. Circulation. 2000;102(17):2031-2037. DOI: 10.1161/01.CIR.102.17.2031. PMID: 11044416."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "classificacao-de-killip-em-infarto-agudo-do-miocardio-killip-kimball-1967",
+    "titulo": "Sem nenhum exame além do estetoscópio: a classificação de Killip ainda prediz mortalidade no infarto?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Publicação original de Killip e Kimball (1967), descrevendo os primeiros dois anos de experiência de uma das primeiras unidades coronarianas do mundo, com 250 pacientes internados por infarto agudo do miocárdio, estratificados só pelo exame físico à admissão em 4 classes: I (sem sinais de insuficiência cardíaca), II (estertores pulmonares, B3 ou turgência jugular), III (edema agudo de pulmão franco) e IV (choque cardiogênico ou hipotensão com vasoconstrição periférica).",
+    "pergunta": "A mortalidade intra-hospitalar variou de forma expressiva entre as 4 classes, usando só achados de exame físico à beira do leito?",
+    "opcoes": [
+      "Sim: 6% na classe I, 17% na classe II, 38% na classe III e 81% na classe IV — um gradiente de mais de 13 vezes entre a classe mais leve e a mais grave, obtido sem nenhum exame complementar",
+      "Não — a classificação original não discriminou risco de forma relevante; ganhou uso só por tradição histórica",
+      "Sim, mas de forma inversa ao esperado — pacientes em choque cardiogênico (classe IV) tiveram a menor mortalidade por já estarem sob vigilância mais intensa",
+      "A diferença só apareceu quando a classificação foi combinada posteriormente com biomarcadores, décadas depois da publicação original"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A classificação de Killip continua sendo um dos exemplos mais duradouros de estratificação de risco clínico feita só com exame físico, sem exame complementar nenhum: no estudo original de 250 pacientes, a mortalidade intra-hospitalar foi 6% na classe I (sem sinais de congestão), 17% na classe II (estertores, B3 ou turgência jugular), 38% na classe III (edema agudo de pulmão) e 81% na classe IV (choque cardiogênico) — um gradiente que continua sendo confirmado em coortes contemporâneas, décadas depois e já na era de angioplastia primária, ainda que a mortalidade absoluta em cada classe tenha caído bastante com o tratamento moderno. É por essa robustez que o Killip continua sendo variável de entrada em escores mais recentes e maiores, como o próprio TIMI para STEMI e o GRACE (já registrados neste acervo) — não foi substituído, foi incorporado. Na prática clínica, o valor do Killip está exatamente em não depender de nenhum resultado de exame para orientar a primeira impressão de gravidade: dá para classificar o paciente enquanto o eletrocardiograma ainda está sendo feito.",
+    "source_refs": [
+      "Killip T 3rd, Kimball JT. Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients. Am J Cardiol. 1967;20(4):457-464. DOI: 10.1016/0002-9149(67)90023-9."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pesi-e-spesi-selecionando-quem-pode-tratar-tep-em-casa",
+    "titulo": "TEP confirmado, paciente estável na sala de emergência: o PESI simplificado (sPESI) autoriza tratamento ambulatorial?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "O Pulmonary Embolism Severity Index (PESI) original, derivado de 15.531 pacientes com TEP em 186 hospitais da Pensilvânia, usa 11 variáveis clínicas para estratificar em 5 classes de risco de mortalidade em 30 dias. Uma versão simplificada (sPESI), com apenas 6 variáveis dicotomizadas (idade >80 anos, câncer, doença cardiopulmonar crônica, frequência cardíaca ≥110, pressão sistólica <100 mmHg, saturação de O2 <90%), foi derivada e validada externamente em coortes espanhola (995 pacientes na derivação, 7.106 na validação).",
+    "pergunta": "Simplificar de 11 variáveis (PESI) para 6 dicotômicas (sPESI, zero fatores presentes = baixo risco) manteve capacidade discriminatória suficiente para identificar quem pode ser tratado fora do hospital?",
+    "opcoes": [
+      "Não — a simplificação perdeu precisão a ponto de tornar o sPESI inadequado para decisão clínica isolada",
+      "Sim: na coorte de validação, os classificados como baixo risco pelo sPESI (zero critérios, 36,2% da amostra) tiveram mortalidade em 30 dias de 1,1% (IC95% 0,7%-1,5%), contra 8,9% (IC95% 8,1%-9,8%) nos classificados como alto risco — discriminação semelhante à do PESI original de 11 variáveis",
+      "Sim, mas só em pacientes sem nenhuma comorbidade cardiovascular prévia",
+      "O sPESI discrimina bem mortalidade, mas nunca foi validado numa segunda coorte independente da que o derivou"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O sPESI (Jiménez et al., 2010) manteve acurácia prognóstica comparável ao PESI original de 11 variáveis (Aujesky et al., 2005) com uma regra muito mais simples de aplicar à beira do leito: zero dos 6 critérios presentes classifica como baixo risco. Na coorte de validação de mais de 7 mil pacientes, o grupo de baixo risco teve mortalidade em 30 dias de apenas 1,1%, contra 8,9% no grupo de alto risco — diferença suficiente para sustentar, junto com julgamento clínico e ausência de outras contraindicações (sangramento ativo, suporte social inadequado, comorbidade descompensada), a decisão de tratar o TEP agudo em regime ambulatorial ou com internação breve, prática cada vez mais amparada por diretrizes à medida que os anticoagulantes orais diretos dispensam a ponte parenteral que antes obrigava internação. É importante não confundir baixo risco pelo (s)PESI com ausência de disfunção de ventrículo direito — o (s)PESI mede risco de mortalidade global por qualquer causa em 30 dias, não substitui a avaliação ecocardiográfica ou de biomarcadores quando há suspeita de TEP de risco intermediário (ver também o escore de Bova, já registrado neste acervo, para essa situação específica).",
+    "source_refs": [
+      "Aujesky D, Obrosky DS, Stone RA, Auble TE, Perrier A, Cornuz J, Roy PM, Fine MJ. Derivation and validation of a prognostic model for pulmonary embolism. Am J Respir Crit Care Med. 2005;172(8):1041-1046. PMID: 16020800.",
+      "Jiménez D, Aujesky D, Moores L, Gómez V, Lobo JL, Uresandi F, Otero R, Monreal M, Muriel A, Yusen RD; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-de-genebra-revisado-probabilidade-pre-teste-de-tep-le-gal-2006",
+    "titulo": "Suspeita de TEP na emergência sem usar o Wells: o escore de Genebra revisado chega à mesma decisão?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "O escore de Genebra revisado foi derivado e validado em dois estudos independentes de manejo de TEP, conduzidos em pronto-socorros de três hospitais universitários europeus, usando só variáveis objetivas de história e exame físico (idade, TEP ou TVP prévios, cirurgia ou fratura recente, câncer ativo, dor unilateral em membro inferior, hemoptise, frequência cardíaca, dor à palpação venosa profunda com edema unilateral) — deliberadamente sem nenhum item que exija julgamento subjetivo do examinador, ao contrário do escore de Wells, que inclui o item \"diagnóstico alternativo menos provável que TEP\".",
+    "pergunta": "O escore de Genebra revisado, todo baseado em critérios objetivos, discriminou bem as três categorias de probabilidade pré-teste (baixa, intermediária, alta) na coorte de validação?",
+    "opcoes": [
+      "Não — por eliminar o julgamento clínico subjetivo, o escore perdeu capacidade discriminatória em relação ao Wells",
+      "Sim: na coorte de validação, a prevalência de TEP confirmado foi de 8% no grupo de baixa probabilidade, 28% no de probabilidade intermediária e 74% no de alta probabilidade — um gradiente consistente e proporcional entre as três categorias",
+      "Sim, mas só quando combinado obrigatoriamente com o d-dímero, nunca isoladamente",
+      "O escore discriminou bem só a categoria de alta probabilidade; baixa e intermediária tiveram prevalência semelhante de TEP"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Le Gal et al. (2006) mostraram que é possível obter discriminação de risco robusta usando só itens objetivos (sem depender da impressão subjetiva do examinador sobre qual é 'o diagnóstico mais provável', item central do escore de Wells): a prevalência de TEP confirmado cresceu de forma consistente entre as três categorias — 8% na baixa probabilidade, 28% na intermediária e 74% na alta — validando o escore como ferramenta de estratificação pré-teste tão útil quanto o Wells para orientar a estratégia diagnóstica seguinte (d-dímero como triagem em baixa/intermediária probabilidade, angiotomografia direta em alta probabilidade). A vantagem prática do Genebra revisado é a reprodutibilidade entre observadores diferentes, exatamente por não exigir julgamento clínico ponderado em nenhum item; a desvantagem é ser um pouco mais longo de aplicar. Nenhum dos dois escores (Wells ou Genebra) substitui o d-dímero ou a imagem — ambos servem só para decidir com que probabilidade pré-teste o resultado desses exames deve ser interpretado, o mesmo princípio bayesiano que sustenta o uso de qualquer escore de probabilidade pré-teste em medicina.",
+    "source_refs": [
+      "Le Gal G, Righini M, Roy PM, Sanchez O, Aujesky D, Bounameaux H, Perrier A. Prediction of pulmonary embolism in the emergency department: the revised Geneva score. Ann Intern Med. 2006;144(3):165-171. PMID: 16461960."
+    ],
+    "review_status": "revisado"
   }
 ]
