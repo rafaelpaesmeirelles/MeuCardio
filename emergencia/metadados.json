@@ -583,5 +583,44 @@
       "sincope-ou-queda-de-alto-risco-no-idoso"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-aortica-aguda-na-gestacao-e-puerperio",
+    "titulo": "Síndrome aórtica aguda na gestação e puerpério",
+    "gatilho": "Gestante ou puérpera com dor torácica/dorsal abrupta intensa, assimetria de pulsos ou pressão, síncope, déficit neurológico, choque ou aortopatia conhecida com sintomas",
+    "ordem": 99,
+    "documento_slug": "sindrome-aortica-aguda-na-gestacao-e-puerperio",
+    "fluxograma_slug": "fluxograma-sindrome-aortica-aguda-na-gestacao-e-puerperio",
+    "relacionados": [
+      "sindrome-aortica-aguda",
+      "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crise-hipercianotica-na-tetralogia-de-fallot",
+    "titulo": "Crise hipercianótica na Tetralogia de Fallot",
+    "gatilho": "Lactente ou criança com Tetralogia de Fallot/fisiologia semelhante e piora súbita da cianose, hiperpneia, agitação, rebaixamento de consciência ou convulsão",
+    "ordem": 100,
+    "documento_slug": "crise-hipercianotica-na-tetralogia-de-fallot",
+    "fluxograma_slug": "fluxograma-crise-hipercianotica-na-tetralogia-de-fallot",
+    "relacionados": [
+      "parada-cardiorrespiratoria-pediatrica",
+      "colapso-neonatal-por-cardiopatia-congenita-canal-dependente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-pulmonar-por-dasatinibe-com-descompensacao",
+    "titulo": "Hipertensão pulmonar por dasatinibe com síncope ou falência de VD",
+    "gatilho": "Paciente em dasatinibe com dispneia nova/progressiva, hipóxia, síncope, edema, sinais de falência de VD ou choque sem outra causa suficiente",
+    "ordem": 101,
+    "documento_slug": "hipertensao-pulmonar-arterial-induzida-por-dasatinibe",
+    "fluxograma_slug": "fluxograma-hipertensao-pulmonar-arterial-por-dasatinibe-com-descompensacao",
+    "relacionados": [
+      "falencia-aguda-de-ventriculo-direito",
+      "sindrome-de-liberacao-de-citocinas-car-t-com-choque"
+    ],
+    "review_status": "revisado"
   }
 ]
