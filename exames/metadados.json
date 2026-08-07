@@ -8077,5 +8077,29 @@
       "hipertensão arterial pulmonar",
       "prognóstico"
     ]
+  },
+  {
+    "slug": "ldl-c-estimado-pelo-metodo-martin-hopkins-vs-equacao-de-friedewald",
+    "name": "LDL-C estimado pelo método Martin/Hopkins (fator ajustável) vs. equação de Friedewald",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Duas formas distintas de calcular o LDL-colesterol a partir do perfil lipídico padrão (colesterol total, HDL-C, triglicerídeos), sem dosagem direta: a equação de Friedewald clássica (LDL-C = CT − HDL-C − TG/5, usando um fator fixo de 5 para estimar o VLDL-C a partir do triglicerídeo) e o método Martin/Hopkins, que substitui o fator fixo 5 por um fator ajustável, derivado de uma tabela de 180 células estratificada por triglicerídeo e colesterol não-HDL.",
+    "reference_range": "Não se aplica um valor de referência único — o que se avalia é a concordância entre o LDL-C estimado por cada método e o LDL-C medido diretamente (ultracentrifugação), sobretudo nas faixas de decisão clínica (<70 mg/dL, <55 mg/dL).",
+    "indications": "Sempre que o LDL-C for estimado (não medido diretamente) em paciente com triglicerídeos entre 150-399 mg/dL, ou quando a meta terapêutica for um LDL-C muito baixo (<70 mg/dL, como em prevenção secundária ou risco muito alto) — cenários em que a equação de Friedewald é sabidamente menos precisa. Diversas diretrizes de lipídios (incluindo a AHA/ACC 2018) já recomendam o método Martin/Hopkins como alternativa preferencial à Friedewald nesses cenários.",
+    "interpretation": "No estudo de derivação e validação (>1,3 milhão de perfis lipídicos, EUA), a concordância de classificação de risco com o LDL-C medido diretamente foi de 91,7% para o método Martin/Hopkins contra 85,4% para Friedewald (p<0,001). A diferença foi maior exatamente na faixa de LDL-C mais baixo: em pacientes com LDL-C estimado <70 mg/dL e triglicerídeos 200-399 mg/dL, o LDL-C direto confirmou o valor <70 mg/dL em 84,0% dos casos pelo método Martin/Hopkins, contra apenas 40,3% pela Friedewald — ou seja, a Friedewald superestima grosseiramente quantos pacientes já atingiram a meta quando o triglicerídeo está elevado, um erro sistemático que pode levar a subtratamento não percebido.",
+    "limitations": "Nenhuma das duas equações — nem Friedewald, nem Martin/Hopkins — é válida com triglicerídeos ≥400 mg/dL: nessa faixa, o cálculo indireto perde a validade e a dosagem direta de LDL-C (ou o uso de apoB/colesterol não-HDL como alvo alternativo) é a conduta recomendada. O método Martin/Hopkins depende de uma tabela de referência (ou calculadora online/software do laboratório) para aplicar o fator ajustável — não é uma fórmula de bolso simples como a Friedewald, o que exige que o laboratório ou o prontuário eletrônico já o tenha implementado para que o médico se beneficie na prática sem cálculo manual.",
+    "source_refs": [
+      "Martin SS, Blaha MJ, Elshazly MB, et al. Comparison of a novel method vs the Friedewald equation for estimating low-density lipoprotein cholesterol levels from the standard lipid profile. JAMA. 2013;310(19):2061-2068. DOI: 10.1001/jama.2013.280532. PMID: 24240933."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ldl colesterol",
+      "friedewald",
+      "martin hopkins",
+      "perfil lipídico",
+      "cálculo de ldl",
+      "triglicerídeos altos"
+    ]
   }
 ]
