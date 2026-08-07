@@ -58,3 +58,11 @@ CMH obstrutiva sintomática (classe funcional NYHA II-III), com gradiente de via
 
 ## Armadilhas clinicas
 Iniciar mavacamten sem monitorização ecocardiográfica seriada de FEVE; não considerar interação farmacológica (metabolismo via CYP2C19) antes de associar a outros fármacos
+
+## Uso em adolescentes — ponteiro, 08/08/2026
+Este documento cobre a população **adulta** (EXPLORER-HCM, SEQUOIA-HCM). O primeiro ensaio de
+fase 3 dedicado a **adolescentes de 12 a <18 anos** (SCOUT-HCM, mavacamten vs. placebo, redução de
+−48,0 mmHg no gradiente de VSVE por Valsalva na semana 28, p<0,001) está tratado em documento
+próprio, no tema Cardiologia pediátrica: `mavacamten-em-adolescentes-com-cardiomiopatia-
+hipertrofica-obstrutiva-o-ensaio-scout-hcm`. Fonte: Rossano JW et al., N Engl J Med.
+2026;395(4):362-373, PMID 41910394.
