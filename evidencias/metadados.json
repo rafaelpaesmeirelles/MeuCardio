@@ -34462,5 +34462,206 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "iwgdf-dap-diabetico-sem-ulcera-rastreio-anual",
+    "statement": "Em pessoa com diabetes sem úlcera, é recomendado investigar história de doença arterial periférica (DAP), examinar sinais de isquemia e palpar pulsos do pé pelo menos anualmente, ou a cada mudança do status clínico dos pés.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 1, já citada e verificada via texto integral (iwgdfguidelines.org) em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md. NOTA DE SISTEMA: diretriz GRADE — Forte/Condicional, qualidade Alta/Mod/Baixa/MtBx.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "pé diabético",
+      "rastreio",
+      "diabetes",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-suspeita-doppler-itb-tbi-combinados",
+    "statement": "Em pessoa com diabetes sem úlcera com suspeita de doença arterial periférica, é sugerido considerar Doppler pedioso combinado a índice tornozelo-braquial (ITB) e índice tornozelo-braquial digital (TBI) — nenhum método isolado é ótimo para excluir DAP, mas ela é menos provável com ITB 0,9-1,3, TBI ≥0,70 e onda Doppler trifásica ou bifásica.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 2, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "índice tornozelo-braquial",
+      "índice tornozelo-braquial digital",
+      "diabetes",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-diabetico-com-ulcera-investigar-sempre",
+    "statement": "Em pessoa com diabetes E úlcera ou gangrena, é recomendado investigar história de doença arterial periférica, examinar sinais de isquemia e palpar pulsos do pé — a neuropatia costuma apagar os sintomas clássicos de claudicação e dor em repouso, o que não dispensa a investigação.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 3, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "úlcera de pé diabético",
+      "gangrena",
+      "diabetes",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-diabetico-com-ulcera-doppler-itb-tbi-obrigatorios",
+    "statement": "Em pessoa com diabetes e úlcera ou gangrena, é recomendado avaliar onda Doppler pedioso combinada a índice tornozelo-braquial (ITB) e índice tornozelo-braquial digital (TBI) para identificar doença arterial periférica — o ITB isolado não deve ser usado para excluir DAP nesse paciente, porque a calcificação da média arterial eleva artificialmente a pressão de tornozelo.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 4, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "úlcera de pé diabético",
+      "Doppler",
+      "índice tornozelo-braquial",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-pressao-tornozelo-itb-preditores-fracos-de-cicatrizacao",
+    "statement": "Pressão de tornozelo e índice tornozelo-braquial (ITB) devem ser considerados para estimar chance de cicatrização e amputação no pé diabético, mas são preditores FRACOS: pressão de tornozelo <50mmHg ou ITB <0,5 associam-se a maior chance de cicatrização prejudicada e de amputação maior.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 6, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "prognóstico de cicatrização",
+      "amputação",
+      "índice tornozelo-braquial",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-pressao-do-halux-preditor-de-cicatrizacao-e-amputacao",
+    "statement": "A pressão do hálux (toe pressure) deve ser considerada na estimativa de prognóstico do pé diabético: ≥30mmHg aumenta em até 30 pontos percentuais a probabilidade pré-teste de cicatrização, e <30mmHg aumenta em aproximadamente 20 pontos percentuais a probabilidade de amputação maior.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 7, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "pressão do hálux",
+      "prognóstico de cicatrização",
+      "amputação",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-tcpo2-spp-quando-halux-nao-mensuravel",
+    "statement": "Se a pressão do hálux não puder ser medida no pé diabético, devem ser considerados TcPO2 (pressão transcutânea de oxigênio) ou SPP (pressão de perfusão cutânea): TcPO2 ≥25mmHg aumenta em até 45 pontos percentuais a probabilidade de cicatrização, e <25mmHg aumenta em ~20 pontos a de amputação maior; SPP ≥40mmHg aumenta em até 30 pontos a probabilidade de cicatrização.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 8, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "TcPO2",
+      "pressão de perfusão cutânea",
+      "prognóstico de cicatrização",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-excluir-antes-de-atribuir-a-microangiopatia",
+    "statement": "No pé diabético, é sempre necessário investigar doença arterial periférica e outras causas de má cicatrização antes de atribuí-la à microangiopatia diabética — a microangiopatia não deve ser considerada causa primária de ulceração, gangrena ou má cicatrização sem antes excluir DAP macrovascular e outras causas.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 9, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "microangiopatia diabética",
+      "diagnóstico diferencial",
+      "úlcera de pé diabético",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-classificacao-wifi-prognostico",
+    "statement": "A classificação WIfI (Wound/Ischaemia/foot Infection) deve ser considerada para estimar chance de cicatrização e risco de amputação no pé diabético com doença arterial periférica.",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Baixa",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação 10, já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "classificação WIfI",
+      "prognóstico",
+      "amputação",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "iwgdf-dap-bypass-preferivel-a-endovascular-com-safena-adequada",
+    "statement": "No paciente diabético com doença arterial periférica e indicação de revascularização infrainguinal, com veia safena de segmento único adequada disponível, a ponte (bypass) cirúrgica é preferível à terapia endovascular quando ambas as técnicas forem viáveis — é a única recomendação de tratamento desta diretriz com força GRADE plena (as demais de tratamento são práticas recomendadas por consenso).",
+    "recommendation_class": "Ponderado",
+    "evidence_level": "Mod",
+    "society": "IWGDF/ESVS/SVS",
+    "year": 2023,
+    "guideline_title": "The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer",
+    "reference": "Fitridge R, Chuter V, Mills J, et al. J Vasc Surg. 2023;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985 — recomendação de tratamento (seção de revascularização), já citada e verificada em content/Diabetes_e_cardiologia/doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023.md.",
+    "theme": "Diabetes e cardiologia",
+    "tags": [
+      "doença arterial periférica",
+      "revascularização",
+      "bypass cirúrgico",
+      "terapia endovascular",
+      "veia safena",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
