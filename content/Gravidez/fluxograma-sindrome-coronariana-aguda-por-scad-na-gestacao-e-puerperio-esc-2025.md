@@ -5,7 +5,7 @@ theme: "Gravidez"
 kind: fluxograma
 summary: "Árvore de decisão para dor torácica/SCA na gestante ou puérpera com suspeita de dissecção espontânea de coronária, distinguindo SCAD estável de cenários que exigem revascularização urgente."
 review_status: revisado
-source_refs: ["Regitz-Zagrosek V, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. Seções 12.1 e 12.2.1.3.", "Hayes SN, Kim ESH, Saw J, et al. Spontaneous Coronary Artery Dissection: Current State of the Science. Circulation. 2018;137(19):e523-e557. DOI: 10.1161/CIR.0000000000000564. PMID: 29472380. PMCID: PMC5957087."]
+source_refs: ["De Backer J, Haugaa KH, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. Seções 12.1 e 12.2.1.3.", "Hayes SN, Kim ESH, Saw J, et al. Spontaneous Coronary Artery Dissection: Current State of the Science. Circulation. 2018;137(19):e523-e557. DOI: 10.1161/CIR.0000000000000564. PMID: 29472380. PMCID: PMC5957087."]
 ---
 
 # SCA por SCAD na gestação e no puerpério
