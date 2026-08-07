@@ -6911,5 +6911,97 @@
       "infarto na gestante",
       "biomarcador cardíaco"
     ]
+  },
+  {
+    "slug": "monitorizacao-remota-de-dispositivo-cardiaco-eletronico-implantavel",
+    "name": "Monitorização remota de dispositivo cardíaco eletrônico implantável",
+    "category": "metodo_grafico",
+    "theme": "Dispositivos",
+    "what_it_measures": "Transmissão periódica e automática, por telemetria, dos dados armazenados no dispositivo (marca-passo, CDI ou TRC) para uma plataforma acessada pela equipe assistente — status da bateria, limiares de estimulação, impedância de eletrodo, contagem e classificação de arritmias detectadas (incluindo episódios de FA subclínica), percentual de estimulação e alertas técnicos ou clínicos pré-configurados — sem exigir a presença física do paciente no consultório.",
+    "reference_range": "Não se aplica valor numérico único — a interpretação depende do parâmetro transmitido (ex.: impedância de eletrodo dentro da faixa esperada para o modelo, tensão de bateria acima do limiar de substituição eletiva, ausência de alerta de fratura de eletrodo) comparado à linha de base do próprio paciente.",
+    "indications": "O consenso de 2023 da Heart Rhythm Society com EHRA/APHRS/LAHRS recomenda monitorização remota como padrão de cuidado para praticamente todo portador de dispositivo cardíaco eletrônico implantável, substituindo parte das consultas presenciais de rotina por transmissões agendadas, com protocolo estruturado de triagem e resposta a alertas pela equipe da clínica de dispositivos.",
+    "interpretation": "Permite detecção mais precoce de arritmias assintomáticas (inclusive FA subclínica, terapias apropriadas/inapropriadas do CDI e taquicardia ventricular não sustentada), problemas técnicos do sistema (fratura de eletrodo, sensing inadequado) e depleção de bateria — antecipando a intervenção em relação ao intervalo fixo de consultas presenciais tradicional. O documento detalha estrutura recomendada de equipe, fluxo de triagem de alertas por prioridade e comunicação de resultados ao paciente e à equipe assistente.",
+    "limitations": "Depende de conectividade do paciente (rede celular/Wi-Fi do transmissor) e de adesão a manter o transmissor por perto; o volume de transmissões e alertas gerados pode sobrecarregar a equipe da clínica de dispositivos sem fluxo de triagem estruturado — é exatamente essa lacuna operacional que o consenso de 2023 busca endereçar, mais do que a tecnologia de transmissão em si, já estabelecida há mais tempo.",
+    "source_refs": [
+      "Ferrick AM, Raj SR, Deneke T, Kojodjojo P, Lopez-Cabanillas N, Abe H, et al. 2023 HRS/EHRA/APHRS/LAHRS expert consensus statement on practical management of the remote device clinic. Heart Rhythm. 2023;20(9):e92-e144. DOI: 10.1016/j.hrthm.2023.03.1525. PMID: 37211145."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "monitorização remota",
+      "marca-passo",
+      "cardiodesfibrilador implantável",
+      "clínica de dispositivos",
+      "telemetria"
+    ]
+  },
+  {
+    "slug": "genotipagem-de-cyp2c19-para-resposta-ao-clopidogrel",
+    "name": "Genotipagem de CYP2C19 para resposta ao clopidogrel",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Identifica variantes do gene CYP2C19 que determinam o fenótipo metabolizador do paciente (ultrarrápido, rápido, normal, intermediário ou pobre) para essa enzima do citocromo P450, responsável pela bioativação hepática do clopidogrel — um pró-fármaco que só se torna ativo depois dessa etapa metabólica.",
+    "reference_range": "Não se aplica valor numérico — o resultado é categórico, classificando o paciente em um dos fenótipos metabolizadores (ultrarrápido/rápido, normal, intermediário ou pobre), conforme a combinação de alelos identificada.",
+    "indications": "A atualização 2022 do Clinical Pharmacogenetics Implementation Consortium (CPIC) recomenda considerar a genotipagem de CYP2C19 antes de definir a terapia antiplaquetária, principalmente em contextos de alto risco isquêmico (ex.: síndrome coronariana aguda com intervenção coronária percutânea), para orientar a escolha entre clopidogrel e um inibidor de P2Y12 alternativo (prasugrel ou ticagrelor) que não depende dessa via de ativação.",
+    "interpretation": "Metabolizadores intermediários e pobres formam menos metabólito ativo do clopidogrel, têm menor inibição plaquetária e risco aumentado de eventos cardiovasculares e cerebrovasculares adversos maiores sob esse fármaco — a atualização de 2022 reforçou a força da recomendação para o fenótipo intermediário (antes mais branda) e ampliou as indicações clínicas cobertas pela diretriz em relação à versão original de 2013.",
+    "limitations": "O resultado orienta a escolha do fármaco, mas não substitui o julgamento clínico sobre risco isquêmico versus hemorrágico individual; disponibilidade e tempo de retorno do exame variam por serviço, e em cenários agudos a decisão terapêutica frequentemente precisa ser tomada antes do resultado estar disponível, com troca posterior se indicado.",
+    "source_refs": [
+      "Lee CR, Luzum JA, Sangkuhl K, Gammal RS, Sabatine MS, Stein CM, et al. Clinical Pharmacogenetics Implementation Consortium Guideline for CYP2C19 Genotype and Clopidogrel Therapy: 2022 Update. Clin Pharmacol Ther. 2022;112(5):959-967. DOI: 10.1002/cpt.2526. PMID: 35034351."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "farmacogenômica",
+      "cyp2c19",
+      "clopidogrel",
+      "antiplaquetário",
+      "cpic"
+    ]
+  },
+  {
+    "slug": "genotipagem-de-cyp2c9-vkorc1-para-dose-de-varfarina",
+    "name": "Genotipagem de CYP2C9/VKORC1 (e CYP4F2) para dose de varfarina",
+    "category": "laboratorial",
+    "theme": "Farmacologia",
+    "what_it_measures": "Identifica variantes dos genes CYP2C9 (metabolismo hepático da varfarina), VKORC1 (alvo farmacológico, a enzima vitamina K epóxido redutase) e, secundariamente, CYP4F2, que em conjunto explicam parte relevante da variabilidade interindividual na dose de manutenção necessária para atingir a faixa terapêutica de INR.",
+    "reference_range": "Não se aplica valor numérico único — o resultado (combinação de genótipos) alimenta um algoritmo de estimativa de dose inicial/de manutenção, não substituindo a titulação por INR seriado.",
+    "indications": "O Clinical Pharmacogenetics Implementation Consortium (CPIC) recomenda o uso do resultado, quando disponível antes ou no início do tratamento, para calcular a dose inicial estimada de varfarina por algoritmo farmacogenético validado, em vez de dose fixa padrão — é uma ferramenta de apoio à fase de indução da anticoagulação, não de indicação da própria varfarina.",
+    "interpretation": "Metabolizadores lentos de CYP2C9 e portadores de variantes de VKORC1 associadas a maior sensibilidade tendem a exigir doses de manutenção mais baixas e apresentam maior risco de INR supraterapêutico e sangramento nas primeiras semanas se tratados com dose padrão fixa; o algoritmo genético-clínico combinado reduz o tempo até a faixa terapêutica estável em relação a algoritmos que usam só variáveis clínicas.",
+    "limitations": "Não elimina a necessidade de monitorização seriada do INR — é auxiliar da fase de indução, não substituto do acompanhamento; a magnitude do benefício clínico (redução de eventos hemorrágicos maiores) além da otimização mais rápida da dose ainda é debatida na literatura, e a diretriz é sobre COMO dosar quando a genotipagem está disponível, não uma recomendação de testar rotineiramente todo paciente antes de iniciar varfarina.",
+    "source_refs": [
+      "Johnson JA, Caudle KE, Gong L, Whirl-Carrillo M, Stein CM, Scott SA, et al. Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Pharmacogenetics-Guided Warfarin Dosing: 2017 Update. Clin Pharmacol Ther. 2017;102(3):397-404. DOI: 10.1002/cpt.668. PMID: 28198005."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "farmacogenômica",
+      "varfarina",
+      "cyp2c9",
+      "vkorc1",
+      "cpic"
+    ]
+  },
+  {
+    "slug": "doppler-de-arterias-uterinas-na-predicao-de-pre-eclampsia-e-rciu",
+    "name": "Doppler de artérias uterinas na predição de pré-eclâmpsia e restrição de crescimento fetal",
+    "category": "imagem",
+    "theme": "Gravidez",
+    "what_it_measures": "Avaliação por ultrassonografia Doppler do fluxo nas artérias uterinas — vasos que suprem a placenta — tipicamente no segundo trimestre (e, em protocolos de rastreio combinado, já no primeiro trimestre), analisando índices de resistência ao fluxo (como o índice de pulsatilidade) e a presença de incisura protodiastólica (\"notching\"), que refletem a qualidade da remodelação das artérias espiraladas uterinas pela invasão trofoblástica.",
+    "reference_range": "Não se aplica valor numérico único fixo — os índices de pulsatilidade das artérias uterinas são interpretados por percentil, ajustado pela idade gestacional, conforme curvas de referência da própria plataforma/protocolo utilizado; índice de pulsatilidade elevado (acima do percentil de referência) e persistência de incisura protodiastólica bilateral sinalizam maior resistência ao fluxo placentário.",
+    "indications": "A atualização de 2021 do ISUOG (International Society of Ultrasound in Obstetrics and Gynecology) sobre uso de velocimetria Doppler em obstetrícia recomenda a avaliação do Doppler de artérias uterinas como parte da investigação de gestantes com fatores de risco para pré-eclâmpsia e restrição de crescimento fetal, e sua incorporação em protocolos de rastreio combinado do primeiro trimestre junto a fatores maternos, pressão arterial média e biomarcadores séricos.",
+    "interpretation": "Resistência aumentada nas artérias uterinas reflete falha (parcial ou completa) da segunda onda de invasão trofoblástica das artérias espiraladas, mecanismo fisiopatológico central da pré-eclâmpsia e de parte dos casos de restrição de crescimento fetal de origem placentária — um Doppler de artérias uterinas normal no segundo trimestre tem alto valor preditivo negativo para pré-eclâmpsia precoce, enquanto resistência aumentada aumenta a vigilância e pode orientar decisões de profilaxia com aspirina em baixa dose quando ainda no primeiro trimestre.",
+    "limitations": "O desempenho preditivo isolado do Doppler de artérias uterinas é menor do que quando combinado a fatores maternos e biomarcadores séricos (rastreio combinado do primeiro trimestre); a técnica exige treinamento específico para reprodutibilidade da mensuração, e curvas de referência variam por protocolo/software utilizado — não há um único ponto de corte universal citado neste registro.",
+    "source_refs": [
+      "Bhide A, Acharya G, Baschat A, Bilardo CM, Brezinka C, Cafici D, et al. ISUOG Practice Guidelines (updated): use of Doppler velocimetry in obstetrics. Ultrasound Obstet Gynecol. 2021;58(2):331-339. DOI: 10.1002/uog.23698. PMID: 34278615."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doppler de artérias uterinas",
+      "pré-eclâmpsia",
+      "restrição de crescimento fetal",
+      "gestação",
+      "isuog"
+    ]
   }
 ]
