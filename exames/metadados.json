@@ -7099,5 +7099,142 @@
       "insuficiencia cardiaca",
       "fator de risco cardiovascular"
     ]
+  },
+  {
+    "slug": "escala-tipo-d-ds14-personalidade-distressada-no-cardiopata",
+    "name": "Escala Tipo D (DS14) — personalidade distressada no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Questionário autoaplicável de 14 itens (Type D Scale-14) que mede dois traços de personalidade — afetividade negativa (tendência a experimentar emoções negativas: irritabilidade, preocupação, disforia) e inibição social (tendência a evitar expressar essas emoções por medo de desaprovação alheia) — cada um com 7 itens numa escala de 0 a 4. A personalidade Tipo D ('distressada') é definida pela combinação das duas: pontuação ≥10 em ambas as subescalas simultaneamente, não em uma isolada.",
+    "reference_range": "Cada subescala varia de 0 a 28 pontos. O corte validado para classificar Tipo D é ≥10 em afetividade negativa E ≥10 em inibição social ao mesmo tempo — atingir o corte em só uma das duas não caracteriza o traço. No estudo de validação original (Denollet, 2005, n=3.813, incluindo 573 pacientes cardíacos e 732 hipertensos), 28% da amostra total foi classificada como Tipo D.",
+    "indications": "Identificação de um traço de personalidade estável (não um estado emocional transitório como depressão ou ansiedade, embora se sobreponha parcialmente a eles) associado a pior prognóstico cardiovascular — mortalidade, novos eventos coronarianos e pior qualidade de vida percebida em portadores de doença cardíaca estabelecida. Diferente de rastreio de depressão (PHQ-9) ou ansiedade (GAD-7), já cadastrados neste acervo, a DS14 não mede sintoma agudo: mede um padrão de personalidade que predispõe o paciente a não comunicar sofrimento emocional ao médico, mesmo quando presente — relevante para calibrar o quanto confiar só no relato espontâneo do paciente sobre bem-estar psicológico.",
+    "interpretation": "Na validação original, idade, sexo e Tipo D foram associados de forma independente a morbidade cardiovascular (odds ratio 3,98; IC95% 3,2-4,6; p<0,0001), e Tipo D esteve associado a quase 4 vezes mais chance de depressão e 5 vezes mais chance de ansiedade comórbidas. O instrumento foi cross-validado em mais de 20 países, incluindo uma coorte internacional de 6.222 pacientes cardíacos, com estrutura fatorial de dois fatores estável entre culturas. Pontuação positiva não é diagnóstico psiquiátrico — é sinalizador de que o paciente tende a internalizar sofrimento emocional, o que justifica busca ativa (não esperar o paciente relatar espontaneamente) por sintomas depressivos/ansiosos e reforço do vínculo terapêutico, já que inibição social alta também prediz menor adesão a orientações que exigem comunicação aberta com a equipe.",
+    "limitations": "Mede traço de personalidade, não estado clínico agudo — não deve ser usado como substituto de escalas de rastreio de depressão ou ansiedade, e sim como complemento que ajuda a interpretar por que certos pacientes não relatam sofrimento mesmo quando presente. A causalidade entre Tipo D e pior prognóstico cardiovascular permanece objeto de debate — parte da literatura argumenta que o instrumento captura sobreposição com sintomas depressivos não identificados mais do que um traço de personalidade genuinamente independente, o que reforça a recomendação de sempre associar a escalas de sintoma agudo, nunca usar isoladamente para decisão clínica.",
+    "source_refs": [
+      "Denollet J. DS14: standard assessment of negative affectivity, social inhibition, and Type D personality. Psychosom Med. 2005;67(1):89-97. DOI: 10.1097/01.psy.0000149256.81953.49. PMID: 15673629."
+    ],
+    "review_status": "revisado",
+    "tags": [
+      "ds14",
+      "personalidade tipo d",
+      "afetividade negativa",
+      "inibicao social",
+      "prognostico cardiovascular",
+      "saude mental"
+    ]
+  },
+  {
+    "slug": "audit-c-rastreio-de-consumo-de-alcool-no-paciente-cardiopata",
+    "name": "AUDIT-C — rastreio breve de consumo de álcool no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Versão reduzida do Alcohol Use Disorders Identification Test, formada pelas 3 primeiras perguntas do instrumento original da OMS (frequência de consumo, número típico de doses por ocasião, frequência de consumo de 6 ou mais doses numa mesma ocasião), cada uma pontuada de 0 a 4, totalizando 0 a 12 pontos — desenhado para triagem rápida de padrão de consumo de risco, sem precisar das perguntas mais longas sobre consequências e dependência do AUDIT completo.",
+    "reference_range": "Pontuação de 0 a 12. Os cortes mais usados na prática (variam um pouco por diretriz e por sexo) são ≥4 em homens e ≥3 em mulheres como sugestivos de consumo de risco, com sensibilidade e especificidade satisfatórias contra o AUDIT completo de 10 itens no estudo de derivação original em pacientes de atenção primária.",
+    "indications": "Rastreio sistemático de consumo de álcool em qualquer paciente cardiopata, mas com relevância direta em três cenários: fibrilação atrial de início recente ou recorrente (a chamada síndrome do coração em festa/'holiday heart syndrome', em que o consumo agudo de álcool é gatilho reconhecido de arritmia atrial mesmo em coração estruturalmente normal), miocardiopatia dilatada de etiologia não esclarecida (miocardiopatia alcoólica é diagnóstico de exclusão que depende de história de consumo bem levantada) e hipertensão de difícil controle, em que consumo de álcool não declarado é causa reconhecida de resistência aparente ao tratamento.",
+    "interpretation": "Um estudo controlado por sensor transdérmico de álcool em tempo real (HOLIDAY Monitors/Alcohol-AF Study) confirmou fisiologicamente o que a triagem por questionário busca identificar: em pacientes com fibrilação atrial paroxística ou intermitente monitorados por ECG contínuo, consumir uma dose de álcool associou-se a risco aumentado de episódio de FA nas horas seguintes, com relação dose-resposta — quanto mais doses, maior o risco, contrariando a crença de que só o consumo pesado ('binge') importa. Isso reforça que mesmo consumo relatado como 'moderado' no AUDIT-C merece investigação em paciente com arritmia atrial recorrente sem outra causa clara.",
+    "limitations": "É instrumento de autorrelato, sujeito a subnotificação — o próprio padrão de consumo que mais preocupa clinicamente (uso pesado episódico) é o que o paciente tende mais a minimizar. Pontuação baixa não exclui consumo problemático não declarado, especialmente diante de forte suspeita clínica (arritmia recorrente sem outra causa, transaminases elevadas, macrocitose); nesse cenário, a história colateral com familiares e a repetição da pergunta em consultas subsequentes, depois de vínculo estabelecido, têm mais valor do que insistir no mesmo questionário.",
+    "source_refs": [
+      "Bush K, Kivlahan DR, McDonell MB, Fihn SD, Bradley KA. The AUDIT alcohol consumption questions (AUDIT-C): an effective brief screening test for problem drinking. Ambulatory Care Quality Improvement Project (ACQUIP). Alcohol Use Disorders Identification Test. Arch Intern Med. 1998;158(16):1789-1795. PMID: 9738608.",
+      "Marcus GM, Vittinghoff E, Whitman IR, et al. Acute Consumption of Alcohol and Discrete Atrial Fibrillation Events. Ann Intern Med. 2021;174(11):1503-1509. DOI: 10.7326/M21-0228. PMID: 34461028."
+    ],
+    "review_status": "revisado",
+    "tags": [
+      "audit-c",
+      "rastreio de alcool",
+      "holiday heart syndrome",
+      "fibrilacao atrial",
+      "saude mental"
+    ]
+  },
+  {
+    "slug": "escala-de-estresse-percebido-pss-10-no-paciente-cardiopata",
+    "name": "Escala de Estresse Percebido (PSS-10) no paciente cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Versão de 10 itens da Perceived Stress Scale, questionário autoaplicável que mede o quanto o paciente avalia as situações da própria vida como imprevisíveis, incontroláveis ou sobrecarregadas nas últimas quatro semanas — não mede eventos estressores objetivos, mede a percepção subjetiva de estresse, que é o que mais consistentemente se associa a desfecho de saúde na literatura. A versão original de 14 itens (Cohen, Kamarck & Mermelstein, 1983) foi reduzida para 10 itens (Cohen & Williamson, 1988), a forma mais usada hoje em pesquisa e prática clínica.",
+    "reference_range": "Pontuação de 0 a 40 (cada um dos 10 itens de 0 a 4, com 4 itens de pontuação invertida), quanto maior a pontuação maior o estresse percebido. Não há um corte único universalmente validado para 'estresse patológico' — o instrumento é mais usado de forma contínua (quanto maior o escore, maior o risco) ou por comparação a normas populacionais por faixa etária e sexo do que por um ponto de corte binário.",
+    "indications": "Avaliação de carga de estresse psicossocial percebida em paciente com doença coronariana estabelecida ou em prevenção primária de alto risco, sobretudo quando a história clínica sugere estresse crônico relevante (sobrecarga de trabalho, cuidador de familiar doente, insegurança financeira) como possível contribuinte para descompensação de quadro cardíaco ou para dificuldade de adesão a mudança de estilo de vida.",
+    "interpretation": "No REGARDS Study (coorte prospectiva americana, 24.443 participantes sem doença coronariana na linha de base, 659 eventos coronarianos incidentes em seguimento médio de 4,2 anos), estresse percebido mais alto associou-se a maior incidência de doença coronariana e mortalidade por todas as causas especificamente nos participantes de renda mais baixa (hazard ratio 1,36; IC95% 1,04-1,78, no modelo ajustado por fatores sociodemográficos, atenuando para 1,29; IC95% 0,99-1,69 após ajuste completo por fatores clínicos e comportamentais) — sem associação significativa nos participantes de renda mais alta, achado que sugere que o efeito do estresse percebido sobre o risco cardiovascular pode depender também dos recursos disponíveis para lidar com ele, não só da intensidade do estresse relatado.",
+    "limitations": "Mede percepção subjetiva, não exposição objetiva a estressores — dois pacientes na mesma situação real podem pontuar muito diferente, o que é a força e a limitação do instrumento ao mesmo tempo (é exatamente a percepção, não o evento em si, que a literatura associa a desfecho, mas isso também torna o escore sensível ao estado de humor do momento da aplicação, não só a um traço estável). Não distingue estresse agudo de crônico nem identifica a fonte do estresse — funciona como sinalizador para investigação mais aprofundada, não como diagnóstico.",
+    "source_refs": [
+      "Cohen S, Kamarck T, Mermelstein R. A global measure of perceived stress. J Health Soc Behav. 1983;24(4):385-396. PMID: 6668417.",
+      "Cohen S, Williamson G. Perceived stress in a probability sample of the United States. In: Spacapan S, Oskamp S, eds. The Social Psychology of Health. Sage; 1988.",
+      "Redmond N, Richman J, Gamboa CM, Albert MA, Sims M, Durant RW, Glasser SP, Safford MM. Perceived Stress Is Associated With Incident Coronary Heart Disease and All-Cause Mortality in Low- but Not High-Income Participants in the Reasons for Geographic And Racial Differences in Stroke Study. J Am Heart Assoc. 2013;2(6):e000447. DOI: 10.1161/JAHA.113.000447. PMID: 24356528."
+    ],
+    "review_status": "revisado",
+    "tags": [
+      "pss-10",
+      "estresse percebido",
+      "doenca coronariana",
+      "regards study",
+      "saude mental"
+    ]
+  },
+  {
+    "slug": "colesterol-nao-hdl-como-alvo-secundario-de-tratamento",
+    "name": "Colesterol não-HDL (não-HDL-C) como alvo secundário de tratamento",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Diferença simples entre o colesterol total e o HDL-colesterol (não-HDL-C = CT − HDL-C), captando todo o colesterol carregado por lipoproteínas aterogênicas — LDL, IDL, VLDL, remanescentes de quilomícrons e Lp(a) — numa única conta que não exige o paciente em jejum nem depende da fórmula de Friedewald (que perde precisão quando os triglicerídeos estão elevados, situação exatamente em que o não-HDL-C se torna mais informativo que o LDL-C isolado).",
+    "reference_range": "Metas por categoria de risco cardiovascular, segundo a diretriz europeia de dislipidemia (ESC/EAS 2019): risco muito alto, não-HDL-C <85 mg/dL; risco alto, <100 mg/dL; risco moderado, <130 mg/dL — cada meta de não-HDL-C fixada cerca de 30 mg/dL acima da meta equivalente de LDL-C, refletindo o colesterol adicional carregado pelas outras lipoproteínas aterogênicas incluídas no cálculo.",
+    "indications": "Alvo secundário de tratamento recomendado ao lado do LDL-C (nunca substituindo-o) em todo paciente sob terapia hipolipemiante, com relevância maior em hipertrigliceridemia moderada a grave (>200 mg/dL), síndrome metabólica e diabetes — situações em que o LDL-C calculado subestima sistematicamente o risco carregado pelas lipoproteínas ricas em triglicerídeos, e o não-HDL-C captura esse risco residual sem exigir jejum nem dosagem adicional de apolipoproteína B.",
+    "interpretation": "A diretriz ESC/EAS 2019 posiciona explicitamente o não-HDL-C (junto com a apoB, já cadastrada neste acervo) como meta secundária formal de tratamento, recomendada especialmente quando os triglicerídeos estão elevados — cenário em que o LDL-C calculado por Friedewald fica menos confiável e pode subestimar o número real de partículas aterogênicas circulantes. Como é cálculo simples a partir do perfil lipídico de rotina (sem custo adicional, sem exigir jejum), o não-HDL-C funciona como uma ponte de baixo custo entre o LDL-C tradicional e a apoB, quando esta última não está disponível.",
+    "limitations": "Ainda depende da dosagem de colesterol total e HDL-C, que carregam suas próprias limitações analíticas em situações extremas (disbetalipoproteinemia, por exemplo). Não substitui a apoB em precisão para contar o número real de partículas aterogênicas quando essa distinção importa clinicamente (por exemplo, LDL pequena e densa numa síndrome metabólica, em que muitas partículas pequenas podem carregar pouco colesterol cada uma) — nesse cenário, apoB permanece a medida mais direta.",
+    "source_refs": [
+      "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418."
+    ],
+    "review_status": "revisado",
+    "tags": [
+      "colesterol nao-hdl",
+      "meta secundaria",
+      "hipertrigliceridemia",
+      "esc eas 2019",
+      "prevencao cardiovascular"
+    ]
+  },
+  {
+    "slug": "teste-genetico-para-hipercolesterolemia-familiar-ldlr-apob-pcsk9",
+    "name": "Teste genético para hipercolesterolemia familiar (LDLR, APOB, PCSK9)",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Sequenciamento dos três genes classicamente associados à hipercolesterolemia familiar monogênica — LDLR (receptor de LDL, responsável por cerca de 85-90% dos casos geneticamente confirmados), APOB (apolipoproteína B, região de ligação ao receptor de LDL, cerca de 5-15% dos casos) e PCSK9 (variantes de ganho de função, cerca de 1-3% dos casos) — incluindo análise de éxons, junções éxon-íntron e, para o LDLR, também deleções/duplicações que o sequenciamento convencional pode não capturar.",
+    "reference_range": "Não se aplica valor de referência numérico — o resultado é qualitativo: variante patogênica ou provavelmente patogênica identificada, variante de significado incerto, ou nenhuma variante identificada nos genes testados.",
+    "indications": "Paciente com diagnóstico clínico de hipercolesterolemia familiar (por critérios como Dutch Lipid Clinic Network, já cadastrado neste acervo) 'definitivo' ou 'provável', para confirmação diagnóstica e, principalmente, para viabilizar o rastreio em cascata de familiares de primeiro grau — uma vez identificada a variante no caso índice, testar parentes para a mesma variante específica é rápido, barato e evita hipercolesterolemia não tratada em décadas de vida antes do primeiro evento coronariano, que costuma ser a forma como a doença é descoberta na ausência de rastreio ativo.",
+    "interpretation": "O painel de expert do JACC (Sturm et al., 2018) recomenda a análise dos três genes principais (LDLR, APOB, PCSK9) como conduta padrão diante de suspeita clínica, com detecção de variante causal em até 80% dos pacientes com HF 'definitiva' pelos critérios clínicos e até 30% dos classificados como 'possível' — ou seja, uma proporção relevante de HF clinicamente diagnosticada não tem variante identificável nos três genes principais, e a decisão terapêutica deve se basear no fenótipo (nível de LDL-C e história familiar/pessoal), nunca ser adiada à espera do resultado genético ou descartada por um resultado negativo.",
+    "limitations": "Resultado negativo não exclui hipercolesterolemia familiar — só nos três genes testados; genes adicionais (como LDLRAP1, na forma recessiva) ou causas poligênicas (soma de múltiplas variantes comuns de efeito pequeno, sem nenhuma isoladamente causal) explicam parte dos casos com fenótipo clássico e teste dos três genes principais negativo. Variante de significado incerto é resultado frequente e não deve ser comunicada ao paciente como se fosse diagnóstico definitivo positivo ou negativo — exige acompanhamento e, quando possível, reclassificação à medida que mais dados populacionais acumulam.",
+    "source_refs": [
+      "Sturm AC, Knowles JW, Gidding SS, et al. Clinical Genetic Testing for Familial Hypercholesterolemia: JACC Scientific Expert Panel. J Am Coll Cardiol. 2018;72(6):662-680. DOI: 10.1016/j.jacc.2018.05.044. PMID: 30071997."
+    ],
+    "review_status": "revisado",
+    "tags": [
+      "hipercolesterolemia familiar",
+      "teste genetico",
+      "ldlr",
+      "apob",
+      "pcsk9",
+      "rastreio em cascata"
+    ]
+  },
+  {
+    "slug": "colesterol-remanescente-remnant-cholesterol",
+    "name": "Colesterol remanescente (remnant cholesterol)",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Fração de colesterol carregada pelas lipoproteínas remanescentes ricas em triglicerídeos — os produtos residuais do metabolismo de quilomícrons e VLDL, que ficam pequenos e densos o suficiente para penetrar a parede arterial como o LDL, mas ainda carregam quantidade desproporcional de colesterol por partícula. Pode ser calculado de forma simples a partir do perfil lipídico de rotina (colesterol total − HDL-C − LDL-C) ou medido diretamente por método laboratorial específico, com boa concordância entre os dois na maior parte da faixa de triglicerídeos.",
+    "reference_range": "Não há corte diagnóstico único consagrado em diretriz; a literatura mais recente trabalha com o valor como contínuo (quanto maior, maior o risco atribuível) ou por quartis/quintis populacionais. Valores de colesterol remanescente acima de aproximadamente 30-35 mg/dL (0,8-0,9 mmol/L) já aparecem associados a risco adicional em estudos de coorte dinamarqueses, mas isso não substitui um ponto de corte formalmente validado em diretriz de sociedade.",
+    "indications": "Investigação de risco cardiovascular residual em paciente com LDL-C já na meta mas com triglicerídeos persistentemente elevados — cenário em que uma fração relevante do risco aterogênico pode estar sendo carregada pelas lipoproteínas remanescentes e não estar refletida no LDL-C isolado. Situação semelhante à que já justifica dosar apoB ou calcular o colesterol não-HDL (ambos cadastrados neste acervo), mas com racional mecanístico e evidência causal específica para essa fração.",
+    "interpretation": "Varbo et al. (2013), em estudo de randomização mendeliana com mais de 70 mil indivíduos dinamarqueses (quase 12 mil com doença coronariana), usaram 15 variantes genéticas associadas a colesterol remanescente, HDL-C ou LDL-C para testar causalidade: o odds ratio causal para um aumento genético de 1 mmol/L (39 mg/dL) em colesterol remanescente não-jejum foi 2,8 (IC95% 1,9-4,2) para doença isquêmica do coração, contra uma razão de risco observacional de 1,4 (IC95% 1,3-1,5) para o mesmo incremento — a estimativa genética (causal) foi maior que a observacional, argumento forte a favor de colesterol remanescente ser causa, e não apenas marcador associado, de doença coronariana, de forma independente da redução de HDL-C que costuma acompanhá-lo.",
+    "limitations": "Ainda não existe classe terapêutica aprovada com indicação primária de 'reduzir colesterol remanescente' isoladamente — fibratos, ácidos graxos ômega-3 em alta dose e, mais recentemente, inibidores de ANGPTL3 reduzem triglicerídeos e, por consequência, o remanescente, mas o desfecho clínico de reduzir especificamente essa fração (independente de LDL-C) ainda não tem o mesmo nível de evidência de desfecho duro que sustenta a meta de LDL-C. O cálculo indireto (CT − HDL-C − LDL-C) herda o erro de cada um dos três componentes, e pode ficar impreciso quando os triglicerídeos estão muito elevados — cenário em que a medida direta, quando disponível, é preferível.",
+    "source_refs": [
+      "Varbo A, Benn M, Tybjærg-Hansen A, Jørgensen AB, Frikke-Schmidt R, Nordestgaard BG. Remnant cholesterol as a causal risk factor for ischemic heart disease. J Am Coll Cardiol. 2013;61(4):427-436. DOI: 10.1016/j.jacc.2012.08.1026. PMID: 23265341."
+    ],
+    "review_status": "revisado",
+    "tags": [
+      "colesterol remanescente",
+      "remnant cholesterol",
+      "randomizacao mendeliana",
+      "hipertrigliceridemia",
+      "risco residual"
+    ]
   }
 ]
