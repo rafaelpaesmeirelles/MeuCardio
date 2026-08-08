@@ -8,7 +8,7 @@ pessoa já leu.
 
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -16,6 +16,7 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.study_track import StudyTrack, StudyTrackProgress
 from app.models.user import User
+from app.services.timeline_conhecimento import montar_timeline, temas_disponiveis
 
 router = APIRouter(prefix="/api/trilhas", tags=["trilhas de estudo"])
 
@@ -141,6 +142,33 @@ def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
         ).all()
     } if ts else {}
     return [_dump(db, t, progressos.get(t.id), com_etapas=False) for t in ts]
+
+
+# --- Timeline de evolução do conhecimento por doença (tarefa #53) ----------
+# Declaradas ANTES de `/{slug}` de propósito: "/timeline" e "/timeline/temas"
+# têm o mesmo formato de caminho que o `/{slug}` genérico logo abaixo
+# (um ou dois segmentos depois do prefixo `/api/trilhas`), e o FastAPI
+# resolve por ORDEM DE DECLARAÇÃO — se o catch-all viesse primeiro, uma
+# chamada a `/api/trilhas/timeline` seria interpretada como `slug="timeline"`
+# e devolveria 404 em vez de acionar esta rota.
+
+@router.get("/timeline/temas")
+def timeline_temas(db: Session = Depends(get_db), _: User = Depends(current_user)):
+    """Temas com marco publicado (evidência ou estudo), para o seletor da
+    tela de timeline — nunca lista tema sem nenhum conteúdo."""
+    return temas_disponiveis(db)
+
+
+@router.get("/timeline")
+def timeline(
+    tema: str = Query(..., min_length=1, max_length=120),
+    db: Session = Depends(get_db),
+    _: User = Depends(current_user),
+):
+    """Marcos (evidências + estudos publicados) do tema, em ordem
+    cronológica — ver `app.services.timeline_conhecimento` para a decisão de
+    arquitetura (derivada dos dados existentes, sem tabela nova)."""
+    return montar_timeline(db, tema)
 
 
 @router.get("/{slug}")

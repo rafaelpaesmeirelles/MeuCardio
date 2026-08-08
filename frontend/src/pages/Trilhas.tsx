@@ -53,6 +53,11 @@ export default function Trilhas() {
       <h1>Trilhas de estudo</h1>
       <p className="subtitulo">Sequências guiadas do conteúdo que já está na plataforma. Cada etapa explica por que vem naquele ponto — a trilha organiza, não repete.</p>
 
+      <Link to="/trilhas/timeline" className="cartao painel__funcao painel__funcao--destaque">
+        <strong>Timeline de evolução do conhecimento por doença</strong>
+        <span>Veja como o conhecimento e o tratamento de cada doença evoluíram, ano a ano, a partir das evidências e dos estudos já publicados na Corvia.</span>
+      </Link>
+
       <section className="filtros-conteudo">
         <label><strong>Buscar por tema específico</strong><input type="search" value={busca} onChange={(event) => setBusca(event.target.value)} placeholder="Ex.: insuficiência cardíaca, ECG, cardiopatias congênitas…" /></label>
         <label><strong>Assunto</strong><select value={tema} onChange={(event) => setTema(event.target.value)}><option value="">Todos os assuntos</option>{temas.map((item) => <option key={item} value={item}>{item}</option>)}</select></label>

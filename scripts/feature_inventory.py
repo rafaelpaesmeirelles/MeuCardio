@@ -26,6 +26,7 @@ EXPECTED_APP_ROUTES = {
     "/calculadoras/:slug", "/medicamentos", "/interacoes", "/condicoes",
     "/galeria", "/galeria/:slug", "/exames", "/exames/:slug", "/evidencias",
     "/evidencias/:slug", "/estudos", "/estudos/:slug", "/trilhas",
+    "/trilhas/timeline",
     "/material-paciente", "/emergencia", "/trilhas/:slug", "/casos-clinicos",
     "/casos-clinicos/:slug", "/checklists", "/checklists/alta/:id",
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
@@ -67,6 +68,10 @@ EXPECTED_BACKEND_ROUTERS = {
     "avaliacao_preoperatoria.router", "chat_session.router_ws",
     # Trabalho 11 (06/08/2026): verificação de identidade pós-pagamento (KYC).
     "kyc.router",
+    # Tarefa #54 (08/08/2026): Hub "Tudo sobre este tema" (`GET /api/relacionados`).
+    # Faltava aqui — lacuna pré-existente encontrada e fechada durante a tarefa
+    # #53 (timeline de evolução do conhecimento), sem relação direta com ela.
+    "related_content.router",
 }
 
 EXPECTED_SUPPORT_FILES = {

@@ -9,6 +9,7 @@ const Produto = lazy(() => import("./pages/Produto"));
 const Painel = lazy(() => import("./pages/Painel"));
 const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
+const TimelineDoencas = lazy(() => import("./pages/TimelineDoencas"));
 const MaterialPaciente = lazy(() => import("./pages/MaterialPaciente"));
 const Emergencia = lazy(() => import("./pages/Emergencia"));
 const Trilha = lazy(() => import("./pages/Trilha"));
@@ -153,6 +154,7 @@ export default function App() {
           <Route path="estudos" element={<Estudos />} />
           <Route path="estudos/:slug" element={<Estudo />} />
           <Route path="trilhas" element={<Trilhas />} />
+          <Route path="trilhas/timeline" element={<TimelineDoencas />} />
           <Route path="material-paciente" element={<MaterialPaciente />} />
           <Route path="emergencia" element={<Emergencia />} />
           <Route path="trilhas/:slug" element={<Trilha />} />
