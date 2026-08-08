@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Item = {
   slug: string;
@@ -196,11 +198,18 @@ function ResumoFarmaco({ drug }: { drug: Insight }) {
       {drug.references.length > 0 && (
         <section className="cartao" style={{ marginTop: "0.8rem" }}><p className="eyebrow">Fontes</p><Lista itens={drug.references} /></section>
       )}
+
+      {/* Medicamentos não têm campo de tema próprio no banco — a convenção do
+       * projeto (ver CLAUDE.md e app/services/related_content.py) é que a
+       * frente de Farmacologia inteira entra no cruzamento sob o tema
+       * "Farmacologia", junto dos documentos/evidências/estudos desse tema. */}
+      <TudoSobreEsteTema tema="Farmacologia" excluirTipo="medicamento" excluirSlug={drug.slug} />
     </article>
   );
 }
 
 export default function Medicamentos() {
+  const [searchParams] = useSearchParams();
   const [lista, setLista] = useState<Item[] | null>(null);
   const [busca, setBusca] = useState("");
   const [grupo, setGrupo] = useState("");
@@ -239,6 +248,15 @@ export default function Medicamentos() {
       setErro(e instanceof ApiError ? e.message : "Não foi possível abrir o medicamento.");
     } finally { setCarregando(false); }
   }
+
+  // Chegada por link direto do painel "Tudo sobre este tema" de outra página
+  // (`/medicamentos?slug=...`) — abre o verbete sozinho, sem exigir que o
+  // médico procure o remédio de novo na lista.
+  useEffect(() => {
+    const slugPedido = searchParams.get("slug");
+    if (slugPedido) visualizar(slugPedido);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   function alternarComparacao(slug: string) {
     setSelecionados((atuais) => {

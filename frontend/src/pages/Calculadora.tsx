@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro } from "../components/Estado";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 /**
  * Página de calculadora única — usada pelas 32 calculadoras do catálogo
@@ -360,6 +361,8 @@ export default function Calculadora() {
           </ul>
         )}
       </div>
+
+      <TudoSobreEsteTema tema={calc.theme} excluirTipo="calculadora" excluirSlug={slug} />
     </div>
   );
 }

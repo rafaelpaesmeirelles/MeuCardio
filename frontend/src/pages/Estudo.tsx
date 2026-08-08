@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Detalhe = {
   id: number; slug: string; title: string; study_type: string; journal: string; year: number;
@@ -61,6 +62,8 @@ export default function Estudo() {
         {s.pmid && <div>PMID: {s.pmid}</div>}
         {s.url && <a href={s.url} target="_blank" rel="noopener noreferrer">Ver publicação original</a>}
       </div>
+
+      <TudoSobreEsteTema tema={s.theme} excluirTipo="estudo" excluirSlug={slug} />
     </>
   );
 }

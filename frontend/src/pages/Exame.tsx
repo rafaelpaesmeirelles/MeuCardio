@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Detalhe = {
   id: number; slug: string; name: string; category: string; theme: string;
@@ -73,6 +74,8 @@ export default function Exame() {
           </ul>
         </div>
       )}
+
+      <TudoSobreEsteTema tema={t.theme} excluirTipo="exame" excluirSlug={slug} />
     </>
   );
 }

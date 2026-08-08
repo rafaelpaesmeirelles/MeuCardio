@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import { rotuloClasse, rotuloNivel } from "../lib/evidencia";
 
 type Detalhe = {
@@ -104,6 +105,8 @@ export default function Evidencia() {
           Ver análise relacionada na Biblioteca
         </Link>
       )}
+
+      <TudoSobreEsteTema tema={evidencia.theme} excluirTipo="evidencia" excluirSlug={slug} />
     </article>
   );
 }
