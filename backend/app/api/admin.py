@@ -462,6 +462,116 @@ def alternar_convidado(
     return {"id": alvo.id, "convidado": alvo.convidado}
 
 
+class NovaPreAutorizacaoConvidado(BaseModel):
+    """Pedido do Rafael (08/08/2026): cadastrar a pré-autorização ANTES do
+    convidado se registrar, por e-mail e/ou nome completo, escolhendo se
+    esse convidado específico terá CorvIA Mail ou não. Ver
+    `app/models/convidado_pre_autorizado.py` para o mecanismo completo."""
+
+    email: str | None = None
+    nome_completo: str | None = None
+    incluir_corvia_mail: bool = True
+    observacao: str | None = None
+
+    @field_validator("email")
+    @classmethod
+    def _email(cls, v: str | None) -> str | None:
+        v = (v or "").strip().lower()
+        if not v:
+            return None
+        if "@" not in v:
+            raise ValueError("E-mail inválido.")
+        return v
+
+    @field_validator("nome_completo")
+    @classmethod
+    def _nome(cls, v: str | None) -> str | None:
+        v = (v or "").strip()
+        return v or None
+
+
+@router.post("/convidados-pre-autorizados", status_code=201)
+def criar_pre_autorizacao_convidado(
+    dados: NovaPreAutorizacaoConvidado, db: Session = Depends(get_db), admin=Depends(require_admin)
+):
+    """Cadastra a pré-autorização de um convidado por e-mail e/ou nome
+    completo — quando ele se cadastrar em `POST /auth/solicitar-acesso`
+    casando com esta linha, o acesso já libera automaticamente, sem
+    precisar de nenhum clique manual depois. Só admin."""
+    from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+
+    if not dados.email and not dados.nome_completo:
+        raise HTTPException(
+            status_code=422, detail="Informe pelo menos o e-mail ou o nome completo do convidado."
+        )
+    if dados.email and (
+        db.query(ConvidadoPreAutorizado)
+        .filter(ConvidadoPreAutorizado.email == dados.email, ConvidadoPreAutorizado.usado_em.is_(None))
+        .first()
+    ):
+        raise HTTPException(status_code=409, detail="Já existe uma pré-autorização pendente com este e-mail.")
+
+    linha = ConvidadoPreAutorizado(
+        email=dados.email, nome_completo=dados.nome_completo,
+        incluir_corvia_mail=dados.incluir_corvia_mail, observacao=dados.observacao,
+        criado_por=admin.id,
+    )
+    db.add(linha)
+    db.commit()
+    db.refresh(linha)
+    db.add(AuditLog(
+        user_id=admin.id, action="criar_pre_autorizacao_convidado",
+        entity="convidado_pre_autorizado", entity_id=str(linha.id),
+        detail={"email": linha.email, "nome_completo": linha.nome_completo,
+                "incluir_corvia_mail": linha.incluir_corvia_mail},
+    ))
+    db.commit()
+    return _dump_pre_autorizacao(linha)
+
+
+def _dump_pre_autorizacao(linha) -> dict:
+    return {
+        "id": linha.id, "email": linha.email, "nome_completo": linha.nome_completo,
+        "incluir_corvia_mail": linha.incluir_corvia_mail, "observacao": linha.observacao,
+        "criado_em": linha.criado_em, "usado_em": linha.usado_em,
+        "usado_por_user_id": linha.usado_por_user_id,
+    }
+
+
+@router.get("/convidados-pre-autorizados")
+def listar_pre_autorizacoes_convidado(db: Session = Depends(get_db), _=Depends(require_admin)):
+    from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+
+    linhas = (
+        db.query(ConvidadoPreAutorizado)
+        .order_by(ConvidadoPreAutorizado.usado_em.is_(None).desc(), ConvidadoPreAutorizado.criado_em.desc())
+        .all()
+    )
+    return [_dump_pre_autorizacao(l) for l in linhas]
+
+
+@router.delete("/convidados-pre-autorizados/{pre_autorizacao_id}", status_code=204)
+def revogar_pre_autorizacao_convidado(
+    pre_autorizacao_id: int, db: Session = Depends(get_db), admin=Depends(require_admin)
+):
+    """Só revoga pré-autorização ainda não usada — uma já consumida virou
+    histórico de uma conta real, apagar aqui não desfaria o convite."""
+    from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+
+    linha = db.get(ConvidadoPreAutorizado, pre_autorizacao_id)
+    if not linha:
+        raise HTTPException(status_code=404, detail="Pré-autorização não encontrada.")
+    if linha.usado_em is not None:
+        raise HTTPException(status_code=409, detail="Esta pré-autorização já foi usada — não é mais possível revogar.")
+    db.add(AuditLog(
+        user_id=admin.id, action="revogar_pre_autorizacao_convidado",
+        entity="convidado_pre_autorizado", entity_id=str(linha.id),
+        detail={"email": linha.email, "nome_completo": linha.nome_completo},
+    ))
+    db.delete(linha)
+    db.commit()
+
+
 @router.post("/users/{user_id}/senha")
 def redefinir_senha(
     user_id: int, dados: SenhaTemporaria, db: Session = Depends(get_db),
