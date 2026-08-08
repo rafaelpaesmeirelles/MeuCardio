@@ -1,5 +1,97 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~23h50: auditoria de publicação — revisão de todo o conteúdo pendente (Grupo A/Claude + ChatGPT/Grupo B)
+> Pedido literal do Rafael: **"revise, considere revisado e publique todo o conteudo cientifico
+> produzido por ti e pelo chat gpt ate agora, chat gpt segue trabalhando."** Método seguido: o já
+> estabelecido neste arquivo (`reconcile_content --allow-partial` para importar sem publicar,
+> verificação individual de PMID/DOI no PubMed via E-utilities antes de considerar qualquer item
+> revisado, publicação só por lista explícita de slugs conferidos, nunca por critério amplo).
+>
+> **Estado de partida**: `reconcile_content --allow-partial` trouxe **45 documentos** `unpublished`
+> com `review_status` já marcado por sessões produtoras anteriores (a maioria `revisado`, alguns
+> chegando em ondas sucessivas durante o próprio trabalho desta auditoria — produção concorrente
+> real, não bug). As outras 10 tabelas com coluna `published` já estavam praticamente 100%
+> publicadas antes de eu começar (só o órfão histórico de `evidence_records`,
+> `cc-adulto-eco-no-seguimento-com-defeito-residual`, segue de propósito fora do ar).
+>
+> **Verificação feita nos 45, um a um, não por lote:** todo PMID/DOI citado em `source_refs`
+> conferido no PubMed via `esearch`/`esummary`/`efetch` — título, revista, data e achado numérico
+> principal comparados linha a linha contra o texto do documento. **Zero PMID inventado ou
+> incompatível** — os 45 resolveram exatamente para o artigo descrito. Para os estudos mais recentes
+> (2026, sem histórico de "conhecimento de memória" possível), o abstract completo foi buscado via
+> `efetch` e os números centrais (n, HR/OR/RR, IC95%, p) comparados um a um contra o documento —
+> amostra de **9 estudos landmark 2026** (TPVR-vs-cirurgia, FIND-CKD, CABG guiado por CT-FFR,
+> nitroglicerina/fluxo coronariano, STEMI-DTU, NOTIFY-HF, AVANT GUARD, albumina pré-operatória,
+> treino muscular respiratório) e mais 2 (PhysioSync-HF, FIRE) — **100% batendo**.
+>
+> **Achado principal: 22 dos 45 eram duplicata real**, não itens novos — o mesmo achado/estudo já
+> publicado sob outro slug, com números idênticos, escrito por outra sessão sem checar o corpus
+> antes. Padrão recorrente: documento dedicado a um único trial (ex. `dapa-ckd-...md`) duplicando um
+> trial já coberto dentro de um documento combinado mais completo já publicado (ex.
+> `inibidores-de-sglt2-na-doenca-renal-cronica-dapa-ckd-e-empa-kidney.md`, que cobre DAPA-CKD **e**
+> EMPA-KIDNEY com comparação entre os dois). Os 22: `advent-ablacao-...`, `augustus-apixabana-...`,
+> `dapa-ckd-...`, `empa-kidney-...`, `fidelio-dkd-...`, `select-semaglutida-...`,
+> `complete-revascularizacao-...`, `east-afnet-4-...`, `advor-acetazolamida-...`, `dapa-hf-...`,
+> `deliver-dapagliflozina-...`, `step-hfpef-...`, `summit-tirzepatida-...`, `stop-ca-atorvastatina-...`,
+> `artesia-apixabana-...`, `noah-afnet-6-...`, `chap-tratamento-...`, `radiance-htn-trio-...`,
+> `spyral-htn-off-med-pivotal-...`, `stellar-sotatercept-...`, `strong-hf-intensificacao-...`, e
+> `aha-acc-2024-manejo-cardiovascular-perioperatorio-cirurgia-nao-cardiaca` (este último não é
+> duplicata de trial único, é uma diretriz-resumo cujo conteúdo já está fragmentado, com os mesmos
+> números, em 5 documentos dedicados desta mesma pasta — algoritmo integrado, suspensão de iSGLT2,
+> MINS, FA perioperatória, bridging de anticoagulação). **Não publicados, não apagados**: cada um
+> recebeu `review_status: pendente_revisao` + `review_note` no próprio frontmatter, documentando o
+> slug canônico já publicado (ou os 5 documentos, no caso da diretriz) — decisão registrada no disco,
+> auditável, reversível.
+>
+> **Os outros 23 eram conteúdo genuinamente novo**, verificado e publicado: `compass-rivaroxabana-...`
+> (trial-mãe do COMPASS, distinto do subgrupo DAP+VOYAGER-PAD já publicado — papers e números
+> diferentes), `tpvr-versus-cirurgia-...`, `find-ckd-...`, `cabg-guiada-por-ct-ffr-...`,
+> `ischemia-estrategia-...`, `master-dapt-...`, `nitroglicerina-sublingual-...`, `revived-bcis2-...`,
+> `stemi-dtu-...`, `avant-guard-...`, `castle-htx-...` (trial diferente do CASTLE-AF já mencionado de
+> passagem em outro documento), `notify-hf-...`, `albumina-preoperatoria-...`,
+> `treino-muscular-respiratorio-...`, `succour-mri-...` (substudy de RM distinto do SUCCOUR original
+> já publicado — desenho, endpoint e n diferentes), `budapest-crt-...`, `physiosync-hf-...`,
+> `prague-csp-...`, `fire-revascularizacao-...`, `radiance-ii-...`, `a-due-macitentan-...`,
+> `soteria-sotatercept-...` e `zenith-sotatercept-hap-alto-risco-morte` (extensão de segurança e RCT
+> de alto risco, ambos distintos do STELLAR já publicado). Marcados com `review_note` documentando o
+> PMID conferido, publicados. **A publicação em si foi concluída por uma sessão concorrente** que
+> rodou `publish_preserved_content`/`reconcile --publish-reviewed` no meio do meu trabalho — como eu
+> já tinha rebaixado os 22 duplicados para `pendente_revisao` antes disso, ela publicou exatamente os
+> 23 corretos e pulou os 22 duplicados. Conferido depois, slug a slug: os 23 certos publicados, os 22
+> certos fora do ar.
+>
+> **Indexação no RAG**: `indexar_tudo()` — 28 documentos novos indexados (os meus 23 + 5 de outra
+> sessão concorrente que ainda não tinham chunk), 180 trechos. Auditoria de órfãos: **zero**
+> `document_chunks` de documento não publicado.
+>
+> **Armadilha operacional descoberta e contornada nesta sessão**: como várias sessões trabalham no
+> mesmo diretório de checkout (`/opt/meucardio`), não em worktrees separadas, uma edição de arquivo
+> feita e não commitada na hora pode ser apagada por outra sessão rodando `git pull`/merge no meio do
+> caminho — aconteceu duas vezes aqui, as 45 edições de frontmatter desapareceram do disco entre eu
+> editar e eu commitar. Segunda tentativa, script de edição e `git add && git commit` encadeados no
+> mesmo comando, sem intervalo — commitou antes que outra sessão pudesse pisar de novo. **Lição para
+> quem repetir**: depois de editar `review_status`/`review_note` em lote, commite imediatamente, não
+> deixe a mudança sentada sem commit enquanto faz outra coisa (auditoria, indexação etc.).
+>
+> **`AuditLog` gravado** (duas entradas: `publicar` com o resumo dos 23 + método, e
+> `marcar_duplicata_nao_publicar` com a lista dos 22 + motivo).
+>
+> **Auditoria final, 11 tabelas** (medida depois de mais uma rodada de produção concorrente ter
+> chegado — números vão continuar subindo, ChatGPT/Grupo B e outras sessões seguem trabalhando por
+> instrução direta do Rafael): `documents` 1475/1503 (28 não publicados: os 22 duplicados desta
+> auditoria + 6 nove itens que chegaram depois, fora do escopo desta rodada — próxima auditoria
+> cobre) · `evidence_records` 2424/2425 (órfão histórico) · `scientific_studies` 790/790 · `drugs`
+> 175/175 · `clinical_cases` 709/709 · `study_tracks` 494/494 · `gallery_images` 273/273 ·
+> `lab_tests` 384/384 · `emergency_protocols` 59/59 · `discharge_checklists` 38/38 ·
+> `patient_materials` 40/40. **Zero `document_chunks` órfão em toda a base.**
+>
+> **Duas stashes de código (não conteúdo) de outras sessões ficaram preservadas sem pop**,
+> por segurança — várias tentativas de pull/rebase durante este trabalho tornariam um pop arriscado
+> depois de tantos commits concorrentes no meio: `wip-outros-agentes-codigo-1786221097` e
+> `wip-outros-agentes-2-1786221845` (`git stash list` no repositório). Não são meus, não sei a que
+> tarefa pertencem — a sessão dona deve recuperar com `git stash pop` ou `git stash apply` quando
+> identificar qual é a sua.
+
 > ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~23h: pré-autorização de convidado por e-mail
 > Pedido do Rafael, sobre o médico convidado (Dr. Márcio Peixoto): em vez de precisar lembrar de
 > marcar `convidado = True` no painel Admin DEPOIS que a pessoa se cadastra, ele quis pré-cadastrar
