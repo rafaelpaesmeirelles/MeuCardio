@@ -16,6 +16,7 @@ export const AREAS_CARDIOLOGIA: AreaCardiologia[] = [
   { id: "hipertensao", label: "Hipertensão e prevenção", descricao: "Risco cardiovascular, hipertensão, lípides e prevenção" },
   { id: "vascular", label: "Aorta, vascular e tromboembolismo", descricao: "Aortopatias, circulação pulmonar e doença vascular" },
   { id: "inflamatoria", label: "Pericárdio, endocardite e inflamação", descricao: "Doenças pericárdicas, infecciosas e inflamatórias" },
+  { id: "esporte", label: "Cardiologia do esporte e do exercício", descricao: "Coração de atleta, triagem pré-participação e prescrição segura de exercício" },
   { id: "outros", label: "Outras áreas", descricao: "Demais temas e conteúdos do acervo cardiológico" },
 ];
 
@@ -42,6 +43,7 @@ export function areaDaCardiologia(...campos: Array<string | null | undefined>): 
   if (procurar("hipertens", "prevenc", "dislip", "lipid", "diabetes", "risco cardiovascular", "obesidade")) return AREAS_CARDIOLOGIA[8];
   if (procurar("aorta", "vascular", "trombo", "embolia", "pulmonar", "carot", "perifer")) return AREAS_CARDIOLOGIA[9];
   if (procurar("pericard", "endocard", "miocardite", "inflama", "infecc")) return AREAS_CARDIOLOGIA[10];
-  return AREAS_CARDIOLOGIA[11];
+  if (procurar("esporte", "exercicio", "atleta", "atletica", "treinamento fisico", "cardiologia esportiva", "morte subita no esporte", "coracao de atleta", "pre-participacao esportiva", "preparticipacao esportiva")) return AREAS_CARDIOLOGIA[11];
+  return AREAS_CARDIOLOGIA[12];
 }
 

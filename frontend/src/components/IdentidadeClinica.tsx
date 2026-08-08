@@ -24,7 +24,7 @@ export function IconeEmergencia(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export type AreaClinicaMarca = "pediatrica" | "neonatal" | "congenita" | "geriatria" | "gestacao" | "oncologia";
+export type AreaClinicaMarca = "pediatrica" | "neonatal" | "congenita" | "geriatria" | "gestacao" | "oncologia" | "esporte";
 
 const simbolos: Record<AreaClinicaMarca, ReactNode> = {
   pediatrica: (
@@ -62,6 +62,16 @@ const simbolos: Record<AreaClinicaMarca, ReactNode> = {
     <>
       <path d="M19 9c7 2 12 7 12 13 0 8-8 15-16 18 5-7 7-12 6-18-.7-4-2-8-2-13Z" />
       <path d="M29 9c-7 2-12 7-12 13 0 5 3 10 9 14M11 25h7l2-4 3 8 2-4h9" />
+    </>
+  ),
+  /** Coração (cardio) com linha de pulso e uma figura em corrida, marcando a
+   * velocidade/movimento do esporte e do exercício. */
+  esporte: (
+    <>
+      <path d="M18 39S5 30.8 5 21.8A7.6 7.6 0 0 1 18 17a7.6 7.6 0 0 1 13 4.8C31 30.8 18 39 18 39Z" />
+      <path d="M10 24h4.5l2-4.5L20 29l2.3-7.5 1.8 3.9H29" />
+      <circle cx="35" cy="10" r="3" />
+      <path d="M32 15l3 4.5-2.2 5 5.4 2.6-1 6.4M35.5 19.3l6-2.3M28.7 22.6l3.3 1" />
     </>
   ),
 };
