@@ -3,7 +3,8 @@ title: "STOP-CA: atorvastatina para prevenção de disfunção cardíaca associa
 slug: stop-ca-atorvastatina-prevencao-cardiotoxicidade-antraciclina
 theme: "Cardio-oncologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'atorvastatina-como-cardioprotecao-durante-antraciclina-o-ensaio-stop-ca', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Neilan TG, Quinaglia T, Onoue T, et al. Atorvastatin for Anthracycline-Associated Cardiac Dysfunction: The STOP-CA Randomized Clinical Trial. JAMA. 2023;330(6):528-536. DOI: 10.1001/jama.2023.11887. PMID: 37552303. PMCID: PMC10410476. NCT02943590."]
 legacy_source: "Documento novo. Fonte primária JAMA/PubMed conferida em 08/08/2026."
 ---

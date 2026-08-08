@@ -3,7 +3,8 @@ title: "EAST-AFNET 4: controle precoce do ritmo na fibrilação atrial"
 slug: east-afnet-4-controle-precoce-do-ritmo-na-fa
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'controle-de-ritmo-vs-frequencia-na-fibrilacao-atrial-affirm-east-afnet-4-e-castle-af', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Kirchhof P, Camm AJ, Goette A, et al.; EAST-AFNET 4 Trial Investigators. Early Rhythm-Control Therapy in Patients with Atrial Fibrillation. N Engl J Med. 2020;383(14):1305-1316. DOI: 10.1056/NEJMoa2019422. PMID: 32865375. NCT01288352."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

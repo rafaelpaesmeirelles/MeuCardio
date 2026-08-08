@@ -4,6 +4,7 @@ slug: nitroglicerina-sublingual-fluxo-coronariano-absoluto-estudo-randomizado
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42442890 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Mahendiran T, Wilgenhof A, Corradetti S, et al. Effect of Sublingual Nitroglycerin on Absolute Coronary Blood Flow: A Randomized Double-Blind Placebo-Controlled Mechanistic Study. JACC Cardiovasc Interv. 2026;19(13):1748-1762. DOI: 10.1016/j.jcin.2026.04.014. PMID: 42442890."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária JACC Cardiovascular Interventions/PubMed conferida nesta sessão."
 ---

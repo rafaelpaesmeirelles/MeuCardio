@@ -3,7 +3,8 @@ title: "SPYRAL HTN-OFF MED Pivotal: denervação renal na ausência de anti-hipe
 slug: spyral-htn-off-med-pivotal-denervacao-renal-sem-antihipertensivos
 theme: "Hipertensão"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'desnervacao-renal-na-ausencia-de-medicacao-o-spyral-htn-off-med-pivotal-lancet-2020', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Böhm M, Kario K, Kandzari DE, et al. Efficacy of catheter-based renal denervation in the absence of antihypertensive medications (SPYRAL HTN-OFF MED Pivotal): a multicentre, randomised, sham-controlled trial. Lancet. 2020;395(10234):1444-1451. DOI: 10.1016/S0140-6736(20)30554-7. PMID: 32234534. NCT02439749."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Lancet/PubMed conferida nesta sessão."
 ---

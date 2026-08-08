@@ -3,7 +3,8 @@ title: "DAPA-HF: dapagliflozina na ICFER independentemente de diabetes"
 slug: dapa-hf-dapagliflozina-na-icfer-independente-de-diabetes
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381:1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829. NCT03036124."]
 legacy_source: "Landmark 2020-2026 priorizado em 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

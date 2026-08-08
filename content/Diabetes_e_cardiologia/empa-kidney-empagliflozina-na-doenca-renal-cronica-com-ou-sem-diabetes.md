@@ -3,7 +3,8 @@ title: "EMPA-KIDNEY: empagliflozina na doença renal crônica com ou sem diabete
 slug: empa-kidney-empagliflozina-na-doenca-renal-cronica-com-ou-sem-diabetes
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'inibidores-de-sglt2-na-doenca-renal-cronica-dapa-ckd-e-empa-kidney', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["The EMPA-KIDNEY Collaborative Group. Empagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2023;388:117-127. DOI: 10.1056/NEJMoa2204233. PMID: 36331190. NCT03594110."]
 legacy_source: "Landmark 2020-2026 priorizado em 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

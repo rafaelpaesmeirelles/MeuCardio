@@ -3,7 +3,8 @@ title: "AHA/ACC 2024: manejo cardiovascular perioperatório em cirurgia não car
 slug: aha-acc-2024-manejo-cardiovascular-perioperatorio-cirurgia-nao-cardiaca
 theme: "Perioperatório"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): conteudo substancialmente redundante com documentos ja publicados desta mesma pasta que cobrem a mesma diretriz AHA/ACC 2024 em partes especificas -- algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024.md (algoritmo escalonado), manejo-medicacoes-cardiovasculares-perioperatorio.md (suspensao de iSGLT2 3-4 dias, mesmo numero), mins-lesao-miocardica-pos-operatoria-vigilancia-e-arvore-de-decisao.md (MINS), fibrilacao-atrial-perioperatoria-pos-operatoria-arvore-aha-acc-2024.md (FA perioperatoria) e anticoagulacao-ponte-heparina-preoperatorio-arvore-aha-acc-2024.md (bridging). Nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. J Am Coll Cardiol. 2024;84(19):1869-1969. DOI: 10.1016/j.jacc.2024.06.013. PMID: 39320289."]
 legacy_source: "Documento novo. Diretriz oficial AHA/ACC/JACC conferida em 08/08/2026."
 ---

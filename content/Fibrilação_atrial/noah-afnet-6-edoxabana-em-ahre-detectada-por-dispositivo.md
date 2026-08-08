@@ -3,7 +3,8 @@ title: "NOAH-AFNET 6: edoxabana em episódios atriais de alta frequência detect
 slug: noah-afnet-6-edoxabana-em-ahre-detectada-por-dispositivo
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'fibrilacao-atrial-subclinica-detectada-por-dispositivo-noah-afnet-6-artesia-e-metanalise', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Kirchhof P, Toennis T, Goette A, et al. Anticoagulation with Edoxaban in Patients with Atrial High-Rate Episodes. N Engl J Med. 2023;389(13):1167-1179. DOI: 10.1056/NEJMoa2303062. PMID: 37622677. NCT02618577."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

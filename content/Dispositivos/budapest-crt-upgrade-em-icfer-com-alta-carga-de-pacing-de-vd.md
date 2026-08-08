@@ -4,6 +4,7 @@ slug: budapest-crt-upgrade-em-icfer-com-alta-carga-de-pacing-de-vd
 theme: "Dispositivos"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 37632437 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Merkely B, Hatala R, Wranicz JK, et al. Upgrade of right ventricular pacing to cardiac resynchronization therapy in heart failure: a randomized trial. Eur Heart J. 2023;44(40):4259-4269. DOI: 10.1093/eurheartj/ehad591. PMID: 37632437. PMCID: PMC10590127. NCT02270840."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Eur Heart J/PubMed conferida nesta sessão."
 ---

@@ -4,6 +4,7 @@ slug: stemi-dtu-descarga-ventricular-esquerda-antes-da-reperfusao
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42029358 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Kapur NK, Mangner N, Aghili N, et al. Left Ventricular Unloading in Anterior ST-Segment Elevation Myocardial Infarction Without Shock: The ST-Segment Elevation Myocardial Infarction Door to Unload Randomized Controlled Trial. J Am Coll Cardiol. 2026;88(1):76-90. DOI: 10.1016/j.jacc.2026.03.071. PMID: 42029358. NCT03947619."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária JACC/PubMed conferida nesta sessão."
 ---

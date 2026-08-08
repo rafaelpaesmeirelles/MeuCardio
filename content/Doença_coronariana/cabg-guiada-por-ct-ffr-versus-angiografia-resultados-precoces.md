@@ -4,6 +4,7 @@ slug: cabg-guiada-por-ct-ffr-versus-angiografia-resultados-precoces
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42392427 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Kim M-S, Ryu A-J, Kim JW, et al. Coronary artery bypass grafting based on computed tomography-derived fractional flow reserve versus angiography: Early results. Ann Thorac Surg. 2026 Jul 2. DOI: 10.1016/j.athoracsur.2026.06.024. PMID: 42392427."]
 legacy_source: "Documento novo, 08/08/2026. Abstract primário conferido no PubMed nesta sessão."
 ---

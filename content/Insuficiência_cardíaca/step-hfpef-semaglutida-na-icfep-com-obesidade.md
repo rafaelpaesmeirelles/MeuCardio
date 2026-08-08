@@ -3,7 +3,8 @@ title: "STEP-HFpEF: semaglutida na ICFEP associada à obesidade"
 slug: step-hfpef-semaglutida-na-icfep-com-obesidade
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'semaglutida-na-icfep-com-obesidade-o-ensaio-step-hfpef', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al.; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681. NCT04788511."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

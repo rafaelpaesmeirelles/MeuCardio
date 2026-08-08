@@ -4,6 +4,7 @@ slug: ischemia-estrategia-invasiva-vs-conservadora-na-dac-estavel
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 32227755 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Maron DJ, Hochman JS, Reynolds HR, et al. Initial Invasive or Conservative Strategy for Stable Coronary Disease. N Engl J Med. 2020;382:1395-1407. DOI: 10.1056/NEJMoa1915922. NCT01471522."]
 legacy_source: "Documento novo, ciclo landmark 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

@@ -4,6 +4,7 @@ slug: radiance-ii-denervacao-renal-por-ultrassom-na-hipertensao
 theme: "Hipertensão"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 36853250 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Azizi M, Saxena M, Wang Y, et al. Endovascular Ultrasound Renal Denervation to Treat Hypertension: The RADIANCE II Randomized Clinical Trial. JAMA. 2023;329(8):651-661. DOI: 10.1001/jama.2023.0713. PMID: 36853250. NCT03614260."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária JAMA/PubMed conferida nesta sessão."
 ---

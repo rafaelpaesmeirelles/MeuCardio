@@ -4,6 +4,7 @@ slug: physiosync-hf-csp-versus-biventricular-na-icfer-com-bre
 theme: "Dispositivos"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 41811324 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Zimerman A, Dal Forno A, Rohde LE, et al. Conduction System vs Biventricular Pacing in Heart Failure: The PhysioSync-HF Randomized Clinical Trial. JAMA Cardiol. 2026;11(4):360-368. DOI: 10.1001/jamacardio.2026.0101. PMID: 41811324. NCT05572736."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária JAMA Cardiology/PubMed conferida nesta sessão."
 ---

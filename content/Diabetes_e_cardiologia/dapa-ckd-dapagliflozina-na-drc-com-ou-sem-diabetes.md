@@ -3,7 +3,8 @@ title: "DAPA-CKD: dapagliflozina na DRC com ou sem diabetes"
 slug: dapa-ckd-dapagliflozina-na-drc-com-ou-sem-diabetes
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'inibidores-de-sglt2-na-doenca-renal-cronica-dapa-ckd-e-empa-kidney', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383:1436-1446. DOI: 10.1056/NEJMoa2024816. NCT03036150."]
 legacy_source: "Landmark cardiorrenal priorizado em 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

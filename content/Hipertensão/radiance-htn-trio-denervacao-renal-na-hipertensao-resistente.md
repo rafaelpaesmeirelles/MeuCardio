@@ -3,7 +3,8 @@ title: "RADIANCE-HTN TRIO: denervação renal por ultrassom na hipertensão resi
 slug: radiance-htn-trio-denervacao-renal-na-hipertensao-resistente
 theme: "Hipertensão"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'denervacao-renal-por-ultrassom-o-ensaio-radiance-htn-trio', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Azizi M, Sanghvi K, Saxena M, et al. Ultrasound renal denervation for hypertension resistant to a triple medication pill (RADIANCE-HTN TRIO): a randomised, multicentre, single-blind, sham-controlled trial. Lancet. 2021;397(10293):2476-2486. DOI: 10.1016/S0140-6736(21)00788-1. PMID: 34010611. NCT02649426."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Lancet/PubMed conferida nesta sessão."
 ---

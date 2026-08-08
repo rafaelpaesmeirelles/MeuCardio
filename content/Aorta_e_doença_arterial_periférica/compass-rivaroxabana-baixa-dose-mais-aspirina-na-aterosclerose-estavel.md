@@ -4,6 +4,7 @@ slug: compass-rivaroxabana-baixa-dose-mais-aspirina-na-aterosclerose-estavel
 theme: "Aorta e doença arterial periférica"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 28844192 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Eikelboom JW, Connolly SJ, Bosch J, et al. Rivaroxaban with or without Aspirin in Stable Cardiovascular Disease. N Engl J Med. 2017;377:1319-1330. DOI: 10.1056/NEJMoa1709118. NCT01776424."]
 legacy_source: "Landmark antitrombótico priorizado em 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

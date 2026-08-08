@@ -3,7 +3,8 @@ title: "SELECT: semaglutida reduz eventos cardiovasculares na obesidade sem diab
 slug: select-semaglutida-obesidade-sem-diabetes-e-prevencao-cardiovascular
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'perder-peso-reduz-evento-cardiovascular-look-ahead-surmount-1-e-o-contraste-com-o-select', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

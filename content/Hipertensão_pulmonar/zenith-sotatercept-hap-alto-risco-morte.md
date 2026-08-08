@@ -4,6 +4,7 @@ slug: zenith-sotatercept-hap-alto-risco-morte
 theme: "Hipertensão pulmonar"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 40167274 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Hoeper MM, et al. Sotatercept in Patients with Pulmonary Arterial Hypertension at High Risk for Death. N Engl J Med. 2025. DOI: 10.1056/NEJMoa2415160. PMID: 40167274. NCT04896008."]
 legacy_source: "Documento novo. Fonte primária NEJM/PubMed conferida em 08/08/2026."
 ---

@@ -3,7 +3,8 @@ title: "FIDELIO-DKD: finerenona na DRC e diabetes tipo 2"
 slug: fidelio-dkd-finerenona-na-drc-e-diabetes-tipo-2
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Bakris GL, Agarwal R, Anker SD, et al. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383:2219-2229. DOI: 10.1056/NEJMoa2025845. NCT02540993."]
 legacy_source: "Landmark cardiorrenal priorizado em 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

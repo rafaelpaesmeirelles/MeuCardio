@@ -4,6 +4,7 @@ slug: soteria-sotatercept-seguranca-longo-prazo-hap
 theme: "Hipertensão pulmonar"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 39978862 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Preston IR, et al. A long-term follow-up study of sotatercept for treatment of pulmonary arterial hypertension: interim results of SOTERIA. Eur Respir J. 2025;66(1):2401435. DOI: 10.1183/13993003.01435-2024. PMID: 39978862. NCT04796337."]
 legacy_source: "Documento novo. Fonte primária PubMed/Eur Respir J conferida em 08/08/2026."
 ---
