@@ -16,7 +16,7 @@ from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
 from app.core.validators import UFS, cpf_valido, limpar_cpf
 from app.models.audit import AuditLog
 from app.models.user import User
-from app.services import emails
+from app.services import emails, instagram_profile
 from app.services.assinatura import catalogo
 from app.services.professional_profile import (
     council_display, normalize_council, normalize_professional_title, profile_payload,
@@ -133,6 +133,8 @@ def _perfil(db: Session, user: User) -> dict:
         "practice_city": user.practice_city, "practice_state": user.practice_state,
         "practice_zip": user.practice_zip, "practice_phone": user.practice_phone,
         "document_logo_url": user.document_logo_url,
+        "instagram_handle": user.instagram_handle,
+        "instagram_photo_url": user.instagram_photo_url,
         **profile_payload(user),
         "boas_vindas_pendente": user.boas_vindas_pendente,
         "assinatura_metodo_preferido": user.assinatura_metodo_preferido,
@@ -573,6 +575,10 @@ class SolicitacaoAcesso(BaseModel):
     workplace_role: str | None = None
     workplace_notes: str | None = None
     include_workplace_on_documents: bool = False
+    # Opcional (tarefa #43, 08/08/2026) — o médico digita se quiser; nunca
+    # buscado/adivinhado pelo sistema. Ver instagram_profile.py para a
+    # busca best-effort da foto pública a partir DESTE handle específico.
+    instagram_handle: str | None = None
     email: str
     password: str
 
@@ -611,7 +617,19 @@ class SolicitacaoAcesso(BaseModel):
 
     @field_validator("email")
     @classmethod
-    def _email(cls, v: str) -> str:
+    de    @field_validator("instagram_handle")
+    @classmethod
+    def _instagram(cls, v: str | None) -> str | None:
+        v = (v or "").strip().lstrip("@")
+        if not v:
+            return None
+        if len(v) > 30 or not all(c.isalnum() or c in "._" for c in v):
+            raise ValueError(
+                "Instagram inválido — use só letras, números, ponto e sublinhado, sem o @."
+            )
+        return v
+
+    @field_validator("email")
         v = v.strip().lower()
         if "@" not in v:
             raise ValueError("E-mail inválido.")
@@ -675,6 +693,7 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
         workplace_role=(dados.workplace_role or "").strip() or None,
         workplace_notes=(dados.workplace_notes or "").strip() or None,
         include_workplace_on_documents=dados.include_workplace_on_documents,
+        instagram_handle=dados.instagram_handle,
         password_hash=hash_password(dados.password),
         role="leitor" if not convidado_via_pre_autorizacao else "medico",
         status="pendente" if not convidado_via_pre_autorizacao else "aprovado",
@@ -686,6 +705,12 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
     db.add(novo)
     db.commit()
     db.refresh(novo)
+
+    if dados.instagram_handle:
+        # Best-effort, nunca bloqueia a resposta do cadastro nem depende de
+        # aprovação — é só uma foto pública, independente do fluxo de KYC.
+        # Ver a limitação real documentada em app/services/instagram_profile.py.
+        background_tasks.add_task(instagram_profile.buscar_e_salvar_foto, novo.id, dados.instagram_handle)
 
     if convidado_via_pre_autorizacao:
         pre_autorizacao.usado_em = datetime.now(timezone.utc)

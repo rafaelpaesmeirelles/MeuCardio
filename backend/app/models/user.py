@@ -120,6 +120,17 @@ class User(Base):
     # caso o frontend cai de volta pro nativo em vez de quebrar.
     email_conta_padrao_envio: Mapped[str | None] = mapped_column(String(40), nullable=True)
 
+    # Instagram opcional no cadastro (tarefa #43, 08/08/2026) — campo livre
+    # que o próprio médico digita se quiser; NUNCA buscado/adivinhado pelo
+    # sistema por nome ou e-mail (correlação automática foi rejeitada por
+    # LGPD/ToS da plataforma, decisão já tomada com o Rafael). Sem "@" na
+    # frente (normalizado em SolicitacaoAcesso). instagram_photo_url é
+    # preenchido em segundo plano, melhor esforço, a partir DESSE handle
+    # específico — ver app/services/instagram_profile.py; fica None se a
+    # busca falhar, o perfil for privado ou não existir.
+    instagram_handle: Mapped[str | None] = mapped_column(String(60), nullable=True)
+    instagram_photo_url: Mapped[str | None] = mapped_column(String(255), nullable=True)
+
 
 @event.listens_for(User.password_hash, "set")
 def _revogar_sessoes_ao_trocar_senha(target, value, oldvalue, initiator) -> None:
