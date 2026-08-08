@@ -189,6 +189,107 @@ class TestStatusEAtivacao:
         assert all("summary" not in mensagem and "content" not in mensagem for mensagem in corpo["pendentes"])
         assert all(mensagem["status"] == "0" for mensagem in corpo["pendentes"])
 
+    def test_resumo_inclui_nao_lidas_de_conta_externa_conectada(
+        self, client, db, criar_usuario, monkeypatch_mail360, monkeypatch,
+    ):
+        """Achado do Rafael em 08/08/2026: e-mails de conta externa
+        (Google/Microsoft/Yahoo/Apple) conectada e sincronizando apareciam na
+        caixa combinada (`/mensagens/todas`) mas sumiam do cartão da página
+        Hoje, que só olhava a caixa nativa @corvia.med.br."""
+        from app.models.agenda import CalendarIntegration
+        from app.services import external_mail, mail360
+
+        user, token = criar_usuario()
+        _ativar_caixa(client, db, user, monkeypatch_mail360)
+        db.add(CalendarIntegration(
+            owner_id=user.id, provider="google_calendar", display_name="titular@gmail.com",
+            external_account_id="ext-titular@gmail.com", sync_strategy="external_authoritative",
+            enabled=True, status="connected", contacts_enabled=True, sync_mail=True,
+            capabilities={"read_appointments": True, "read_mail": True, "send_mail": True},
+        ))
+        db.commit()
+
+        monkeypatch.setattr(
+            mail360, "listar_mensagens",
+            lambda *a, **k: [{"messageId": "nativa-1", "status": "1", "subject": "Já lida"}],
+        )
+        monkeypatch.setattr(
+            external_mail, "list_messages",
+            lambda *a, **k: [{
+                "messageId": "gmail-1", "id": "gmail-1", "status": "0",
+                "fromAddress": "paciente@example.com", "subject": "Do Gmail conectado",
+                "receivedTime": "9999999", "provider": "google",
+            }],
+        )
+
+        resposta = client.get("/api/email/resumo", headers={"Authorization": f"Bearer {token}"})
+        assert resposta.status_code == 200
+        corpo = resposta.json()
+        assert corpo["disponivel"] is True
+        assert [m["messageId"] for m in corpo["pendentes"]] == ["gmail-1"]
+
+    def test_resumo_ignora_conta_externa_com_sync_mail_desligado(
+        self, client, db, criar_usuario, monkeypatch_mail360, monkeypatch,
+    ):
+        from app.models.agenda import CalendarIntegration
+        from app.services import external_mail, mail360
+
+        user, token = criar_usuario()
+        _ativar_caixa(client, db, user, monkeypatch_mail360)
+        db.add(CalendarIntegration(
+            owner_id=user.id, provider="google_calendar", display_name="titular@gmail.com",
+            external_account_id="ext-titular@gmail.com", sync_strategy="external_authoritative",
+            enabled=True, status="connected", contacts_enabled=True, sync_mail=False,
+            capabilities={"read_appointments": True, "read_mail": True, "send_mail": True},
+        ))
+        db.commit()
+
+        monkeypatch.setattr(mail360, "listar_mensagens", lambda *a, **k: [])
+        chamou_externa = {"valor": False}
+
+        def _explode(*a, **k):
+            chamou_externa["valor"] = True
+            raise AssertionError("não deveria consultar conta com sync_mail desligado")
+
+        monkeypatch.setattr(external_mail, "list_messages", _explode)
+
+        resposta = client.get("/api/email/resumo", headers={"Authorization": f"Bearer {token}"})
+        assert resposta.status_code == 200
+        assert resposta.json()["pendentes"] == []
+        assert chamou_externa["valor"] is False
+
+    def test_resumo_sobrevive_a_falha_de_uma_conta_externa(
+        self, client, db, criar_usuario, monkeypatch_mail360, monkeypatch,
+    ):
+        from app.models.agenda import CalendarIntegration
+        from app.services import external_mail, mail360
+
+        user, token = criar_usuario()
+        _ativar_caixa(client, db, user, monkeypatch_mail360)
+        db.add(CalendarIntegration(
+            owner_id=user.id, provider="microsoft_365", display_name="titular@outlook.com",
+            external_account_id="ext-titular@outlook.com", sync_strategy="external_authoritative",
+            enabled=True, status="connected", contacts_enabled=True, sync_mail=True,
+            capabilities={"read_appointments": True, "read_mail": True, "send_mail": True},
+        ))
+        db.commit()
+
+        monkeypatch.setattr(
+            mail360, "listar_mensagens",
+            lambda *a, **k: [{"messageId": "nativa-1", "status": "0", "subject": "Da nativa", "receivedTime": "1"}],
+        )
+
+        def _falha(*a, **k):
+            raise external_mail.ExternalMailError("token expirado")
+
+        monkeypatch.setattr(external_mail, "list_messages", _falha)
+
+        resposta = client.get("/api/email/resumo", headers={"Authorization": f"Bearer {token}"})
+        assert resposta.status_code == 200
+        corpo = resposta.json()
+        assert corpo["disponivel"] is True
+        assert [m["messageId"] for m in corpo["pendentes"]] == ["nativa-1"]
+
     def test_ativar_sem_local_part_devolve_422(self, client, db, criar_usuario):
         user, token = criar_usuario()
         _dar_assinatura_email_ativa(db, user)

@@ -219,11 +219,24 @@ def resumo_da_caixa(db: Session = Depends(get_db), user: User = Depends(current_
     A sessão principal pode ver somente remetente, assunto e horário das três
     mensagens não lidas mais recentes. Abrir o conteúdo, baixar anexos ou agir
     sobre qualquer mensagem continua exigindo a sessão própria do CorvIA Mail.
+
+    Corrigido em 08/08/2026 (achado do Rafael: "os emails dentro da caixa de
+    entrada não estão aparecendo na caixa do corvia mail na página
+    principal") — este resumo só olhava a caixa nativa @corvia.med.br via
+    Mail360, ignorando toda conta externa conectada (Google/Microsoft/Yahoo/
+    Apple). Quem lê a caixa combinada de verdade é `/mensagens/todas`, mas
+    aquela rota exige a sessão própria do CorvIA Mail (`current_email_account`)
+    — este resumo roda dentro da sessão comum da Corvia (`current_user`), de
+    propósito, então precisa da própria varredura das integrações, no mesmo
+    padrão de `mensagens_todas`: cada fonte que falhar não derruba as demais.
     """
     conta = _obter_conta(db, user)
     if not conta or not assinatura_email_ativa(db, user):
         return {"disponivel": False, "email_address": None, "pendentes": []}
     _exigir_configurado()
+
+    mensagens: list[dict] = []
+
     try:
         pastas = mail360.listar_pastas(conta.mail360_account_key)
         entrada = next(
@@ -239,11 +252,26 @@ def resumo_da_caixa(db: Session = Depends(get_db), user: User = Depends(current_
             None,
         )
         pasta_id = str(entrada.get("folderId") or entrada.get("id")) if entrada else None
-        mensagens = mail360.listar_mensagens(
+        mensagens.extend(mail360.listar_mensagens(
             conta.mail360_account_key, pasta=pasta_id, limite=30, inicio=1,
-        )
-    except Mail360Error as e:
-        raise HTTPException(status_code=502, detail=str(e)) from e
+        ))
+    except Mail360Error:
+        pass  # uma fonte falhando não some com o resumo das demais
+
+    integracoes = db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == user.id,
+        CalendarIntegration.enabled.is_(True),
+        CalendarIntegration.status == "connected",
+        CalendarIntegration.provider.in_(PROVEDORES_EXTERNOS_MAIL),
+        CalendarIntegration.sync_mail.is_(True),
+    ).order_by(CalendarIntegration.id.asc()).all()
+    for integracao in integracoes:
+        if not (integracao.capabilities or {}).get("read_mail"):
+            continue
+        try:
+            mensagens.extend(_mensagens_da_integracao(db, integracao, folder=None, limit=30, start=1))
+        except (external_mail.ExternalMailError, YahooMailError, AppleMailError):
+            pass  # idem — conta externa fora do ar não esconde a nativa
 
     campos_permitidos = (
         "messageId", "id", "subject", "fromAddress", "sender",
