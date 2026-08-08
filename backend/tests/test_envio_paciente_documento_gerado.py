@@ -6,6 +6,14 @@ mesmo comportamento de "sem a opção"), com CorvIA Mail + canal automático
 (anexo real preparado na caixa nativa do médico via Mail360).
 """
 import datetime
+import io
+
+from cryptography import x509
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.primitives.serialization import pkcs12
+from cryptography.x509.oid import NameOID
+from reportlab.pdfgen import canvas
 
 from app.models.assinatura import DocumentoEmitido
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
@@ -15,6 +23,36 @@ from app.models.patient_document_email_send import PatientDocumentEmailSend
 from app.models.subscription import Subscription
 from app.services import cofre
 from app.services.assinatura import emissao as assinatura_emissao
+from app.services.assinatura import pdf_signer
+
+
+def _gerar_pfx(*, senha: str = "senha123", cn: str = "DR TESTE DA SILVA:12345678900") -> bytes:
+    # Mesmo helper de `tests/test_divulgacao_email.py` — certificado
+    # autoassinado só para o teste conseguir produzir um PDF com assinatura
+    # digital REAL embutida (pyhanko), já que `divulgacao_email.texto_
+    # divulgacao()` nunca confia em metadado de banco, só no PDF de fato.
+    chave = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    nome = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, cn)])
+    certificado = (
+        x509.CertificateBuilder()
+        .subject_name(nome).issuer_name(nome).public_key(chave.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=1))
+        .not_valid_after(datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=365))
+        .sign(chave, hashes.SHA256())
+    )
+    return pkcs12.serialize_key_and_certificates(
+        name=b"teste", key=chave, cert=certificado, cas=None,
+        encryption_algorithm=serialization.BestAvailableEncryption(senha.encode()),
+    )
+
+
+def _pdf_minimo(texto: str = "Documento de teste — Corvia") -> bytes:
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf)
+    c.drawString(100, 750, texto)
+    c.save()
+    return buf.getvalue()
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -49,12 +87,21 @@ def _criar_gerado(db, user) -> GeneratedDocument:
 
 
 def _emitir(db, user, gerado_id: int, *, nivel: str) -> DocumentoEmitido:
-    pdf_falso = b"%PDF-1.4 conteudo de teste\n%%EOF"
-    nome_arquivo = cofre.guardar(pdf_falso, user.id, raiz=assinatura_emissao._raiz())
+    if nivel == "qualificada":
+        # PDF com assinatura digital REAL embutida — necessário porque
+        # `divulgacao_email.texto_divulgacao()` lê o arquivo de verdade
+        # (pyhanko), nunca confia no `nivel` gravado no banco.
+        pfx = _gerar_pfx()
+        pdf = pdf_signer.assinar_pdf(
+            _pdf_minimo(), pfx_bytes=pfx, senha="senha123", motivo="teste", local="teste",
+        )
+    else:
+        pdf = b"%PDF-1.4 conteudo de teste\n%%EOF"
+    nome_arquivo = cofre.guardar(pdf, user.id, raiz=assinatura_emissao._raiz())
     registro = DocumentoEmitido(
         tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=gerado_id,
         metodo="A1_ARQUIVO" if nivel == "qualificada" else "MANUAL", nivel=nivel,
-        arquivo_nome=nome_arquivo, sha256="x" * 64, bytes_tam=len(pdf_falso),
+        arquivo_nome=nome_arquivo, sha256="x" * 64, bytes_tam=len(pdf),
         assinado_em=datetime.datetime.now(datetime.timezone.utc), criado_por=user.id,
     )
     db.add(registro)
@@ -201,12 +248,12 @@ class TestCanalProprioCorviaMail:
         assert corpo["enviado"] is None
         assert corpo["anexo"]["file_id"]
         assert corpo["assunto_sugerido"]
-        # PDF de teste não carrega assinatura real embutida (pyhanko não
-        # encontra nada em "%PDF-1.4 conteudo de teste") — o gate que
-        # importa aqui (nunca fabricar confirmação) já está coberto por
-        # `divulgacao_email` isoladamente; aqui confere só que o campo
-        # existe e é string (vazia quando a verificação real não confirma).
-        assert isinstance(corpo["corpo_sugerido"], str)
+        # PDF de teste TEM assinatura digital real embutida (`_emitir` usa
+        # `pdf_signer.assinar_pdf` para nivel="qualificada") — a frase de
+        # confirmação vem de `divulgacao_email.texto_divulgacao()` lendo o
+        # arquivo de verdade, nunca fabricada a partir do banco.
+        assert "assinado digitalmente" in corpo["corpo_sugerido"]
+        assert "DR TESTE DA SILVA" in corpo["corpo_sugerido"]
 
         anexos_subidos = monkeypatch_mail360["anexos"]
         assert len(anexos_subidos) == 1
