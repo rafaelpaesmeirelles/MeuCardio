@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro } from "../components/Estado";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 /**
@@ -70,6 +71,7 @@ export default function Calculadora() {
   const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
   const [aguardandoExterno, setAguardandoExterno] = useState(false);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
+  const [emitido, setEmitido] = useState(false);
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
@@ -131,6 +133,7 @@ export default function Calculadora() {
       const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
       baixarBlob(blob, `${slug}-${geradoId}.pdf`);
       setAguardandoExterno(METODOS_MANUAL_EXTERNO.has(metodo));
+      setEmitido(true);
     } catch (e) {
       setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
     }
@@ -328,6 +331,12 @@ export default function Calculadora() {
                 <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
                   Assinatura conferida com sucesso — o documento já está assinado.
                 </p>
+              )}
+              {geradoId && (
+                <OfertaEnvioEmailPaciente
+                  endpointBase={`/document-templates/gerados/${geradoId}`}
+                  habilitado={emitido && !aguardandoExterno}
+                />
               )}
 
               <div style={{ marginTop: "0.8rem" }}>
