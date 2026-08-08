@@ -1,5 +1,54 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: Timeline de evolução do conhecimento por doença (tarefa #53)
+> Pedido do Rafael: novo item dentro de Trilhas de estudo que lista as principais doenças da
+> cardiologia e mostra uma timeline da evolução do conhecimento/tratamento de cada uma, com links
+> para tudo que já existe no site sobre cada marco (estudos, evidências, documentos).
+>
+> **Arquitetura escolhida: derivada, sem tabela nova, sem migração.** `evidence_records.year` e
+> `scientific_studies.year` já são dado real e verificado (mesma régua de fonte de todo o conteúdo
+> do projeto — nenhum marco é escrito de novo, nenhuma data é fabricada). `backend/app/services/
+> timeline_conhecimento.py` só agrupa por tema e ordena cronologicamente o que já existe. Decisão
+> tomada em vez da alternativa (tabela `TimelineMarco` com narrativa própria por marco) porque os
+> dois campos `year` já davam volume suficiente para uma timeline decente em qualquer um dos ~30
+> temas, sem exigir curadoria manual tema a tema.
+>
+> **Backend**: `GET /api/trilhas/timeline/temas` e `GET /api/trilhas/timeline?tema=`
+> (`app/api/study_tracks.py`), declarados **antes** do catch-all `/{slug}` — sem essa ordem,
+> `/api/trilhas/timeline` seria interpretado como `slug="timeline"` e devolveria 404 (documentado no
+> código e coberto por teste dedicado). Só item `published = True` entra na timeline; documento de
+> origem só aparece linkado quando também publicado.
+>
+> **Frontend**: `frontend/src/pages/TimelineDoencas.tsx`, rota `/trilhas/timeline` — seletor de tema
+> em chips, eixo cronológico agrupado por década, cartões de marco (diretriz/evidência vs. estudo,
+> com "ver mais" para anos com múltiplos marcos), link para o documento de origem, painel
+> `TudoSobreEsteTema` instalado no fim da página. Reaproveitou o CSS `.timeline-doenca__*` que já
+> estava em `shell.css` desde o commit `53555f85` (de uma sessão anterior que preparou o estilo mas
+> nunca chegou a construir o componente que o consumisse) — seguiu esses nomes de classe em vez de
+> inventar um padrão visual novo. `Trilhas.tsx` ganhou um card de entrada para a timeline.
+>
+> **Hub "Tudo sobre este tema" — nada novo a integrar.** Como esta é só uma nova *visualização* de
+> dados que já existem (evidências e estudos já publicados, já alcançáveis por
+> `GET /api/relacionados`), os próprios marcos já eram itens do Hub antes desta tarefa. O painel foi
+> instalado na própria página de timeline mesmo assim, para reforçar a navegação por tema.
+>
+> **Achado incidental, corrigido de passagem**: `scripts/feature_inventory.py` (checagem de
+> superfície funcional) tinha uma lacuna pré-existente sem relação com esta tarefa —
+> `related_content.router` (tarefa #54, hub de integração) nunca tinha sido adicionado ao conjunto
+> esperado de routers, fazendo o script falhar. Corrigido no mesmo commit, já que o arquivo precisava
+> ser tocado de qualquer forma para registrar `/trilhas/timeline`.
+>
+> **Verificado**: 6 testes novos (`test_timeline_conhecimento.py` — marcos cronológicos, item não
+> publicado nunca aparece, documento relacionado só quando publicado, tema sem conteúdo não quebra,
+> `/temas` soma evidência+estudo corretamente, e a rota não é engolida pelo catch-all), rodados
+> contra banco de teste isolado, sem regressão em `test_study_tracks_titulo.py`. `tsc --noEmit`,
+> `npm run build`, `check-bundle-budget.mjs`, `check-rendering-security.mjs` e
+> `check-route-splitting.mjs` limpos. **Nenhuma migração pendente** — sem tabela nova, o deploy foi
+> só rebuild. Backend e frontend rebuildados em produção; rotas `/api/trilhas/timeline` e `/temas`
+> confirmadas no `openapi.json`, bundle novo (`TimelineDoencas-*.js`) confirmado no Caddy, `/trilhas`
+> e `/trilhas/timeline` respondendo 200. Backend saudável (200 em `/api/openapi.json` e `/`) depois
+> do rebuild.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: Hub de integração "Tudo sobre este tema" (tarefa #54)
 > Pedido do Rafael: a partir de 1 item qualquer do ecossistema, o usuário visualiza tudo que a
 > Corvia tem sobre aquele tópico e acessa direto — sem sair da página, sem busca manual por tema.
