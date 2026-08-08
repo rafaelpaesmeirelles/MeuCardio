@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
+<p style="margin:0 0 16px;">Recebemos sua solicitação de acesso à Corvia.</p>
+<p style="margin:0 0 16px;">
+  Um administrador vai conferir seu registro profissional{% if conselho %} — <strong>{{ conselho }}{% if numero %} {{ numero }}{% endif %}{% if estado %}, {{ estado }}{% endif %}</strong>{% endif %}
+  — antes de liberar o acesso à plataforma.
+</p>
+<p style="margin:0;">Você recebe um novo e-mail assim que sua conta for liberada.</p>
+{% endblock %}

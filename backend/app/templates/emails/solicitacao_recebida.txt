@@ -1,0 +1,7 @@
+Olá, {{ nome }}!
+
+Recebemos sua solicitação de acesso à Corvia.
+
+Um administrador vai conferir seu registro profissional{% if conselho %} ({{ conselho }}{% if numero %} {{ numero }}{% endif %}{% if estado %}, {{ estado }}{% endif %}){% endif %} antes de liberar o acesso à plataforma.
+
+Você recebe um novo e-mail assim que sua conta for liberada.

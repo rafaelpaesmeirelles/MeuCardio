@@ -45,6 +45,7 @@ from app.models.subscription import PLANO_BASICO, PLANO_COMPLETO
 from app.models.user import User
 from app.services.pdf.marca import LOGO, logo_disponivel
 from app.services.pdf_documento import EMPRESA
+from app.services.professional_profile import council_display
 
 log = logging.getLogger("meucardio.emails")
 
@@ -227,6 +228,43 @@ def _criar_token_ativacao(db, user_id: int) -> str:
     db.commit()
     db.refresh(token)
     return token.token
+
+
+# --------------------------------------------------------------------------
+# 0. Solicitação de acesso recebida (cadastro, ANTES de qualquer aprovação
+#    de admin — dispara em POST /api/auth/solicitar-acesso, junto com
+#    `notificar_admins_nova_solicitacao`). Usa o e-mail já coletado no
+#    cadastro (`user.email`, também o login) — não há campo de contato
+#    separado, e não deve haver. Sem `chave_idempotencia` fixa por conta
+#    de reenvio: como o cadastro em si só acontece uma vez por e-mail
+#    (`solicitar_acesso` já recusa e-mail duplicado com 409), a chamada
+#    também só acontece uma vez — mas leva a mesma proteção das demais
+#    funções, pelo padrão `tipo:user_id`, para o caso de retentativa da
+#    própria `BackgroundTasks` do FastAPI.
+# --------------------------------------------------------------------------
+
+
+def enviar_solicitacao_recebida(user_id: int) -> bool:
+    db = SessionLocal()
+    try:
+        user = db.get(User, user_id)
+        if not user:
+            return False
+        conselho, estado = council_display(user)
+        contexto = {
+            "nome": user.full_name,
+            "conselho": conselho,
+            "numero": (user.council_number or "").strip() or None,
+            "estado": estado,
+        }
+        return _enviar(
+            db, tipo="solicitacao_recebida", destinatario=user.email,
+            assunto="Corvia — solicitação de acesso recebida",
+            template="solicitacao_recebida", contexto=contexto, user_id=user.id,
+            chave_idempotencia=f"solicitacao_recebida:{user.id}",
+        )
+    finally:
+        db.close()
 
 
 # --------------------------------------------------------------------------

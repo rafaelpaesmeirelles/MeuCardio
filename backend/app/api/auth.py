@@ -1,6 +1,6 @@
 import logging
 import secrets
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile
@@ -14,6 +14,7 @@ from app.core.db import get_db
 from app.core.security import create_access_token, current_user, hash_password, verify_password
 from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
 from app.core.validators import UFS, cpf_valido, limpar_cpf
+from app.models.audit import AuditLog
 from app.models.user import User
 from app.services import emails
 from app.services.assinatura import catalogo
@@ -633,7 +634,7 @@ class SolicitacaoAcesso(BaseModel):
 
 
 @router.post("/solicitar-acesso", status_code=201)
-def solicitar_acesso(dados: SolicitacaoAcesso, db: Session = Depends(get_db)):
+def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
     if dados.birth_date >= date.today():
         raise HTTPException(status_code=422, detail="Data de nascimento inválida.")
     if not cpf_valido(dados.cpf):
@@ -646,6 +647,20 @@ def solicitar_acesso(dados: SolicitacaoAcesso, db: Session = Depends(get_db)):
         raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este e-mail.")
     if db.query(User).filter(User.cpf == cpf_limpo).first():
         raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este CPF.")
+
+    # Pré-autorização de convidado por e-mail (08/08/2026, pedido do Rafael):
+    # um admin já cadastrou este e-mail em ConvidadoPreAutorizado ANTES do
+    # cadastro acontecer — quando ele bate aqui, o usuário nasce já aprovado
+    # e marcado como convidado, sem precisar de nenhum clique manual depois.
+    # Consumo é único: `usado_em` trava a linha contra reaproveitamento.
+    from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+
+    pre_autorizacao = (
+        db.query(ConvidadoPreAutorizado)
+        .filter(ConvidadoPreAutorizado.email == dados.email, ConvidadoPreAutorizado.usado_em.is_(None))
+        .first()
+    )
+    convidado_via_pre_autorizacao = pre_autorizacao is not None
 
     novo = User(
         email=dados.email, full_name=dados.full_name, birth_date=dados.birth_date,
@@ -661,14 +676,40 @@ def solicitar_acesso(dados: SolicitacaoAcesso, db: Session = Depends(get_db)):
         workplace_notes=(dados.workplace_notes or "").strip() or None,
         include_workplace_on_documents=dados.include_workplace_on_documents,
         password_hash=hash_password(dados.password),
-        role="leitor",
-        status="pendente", is_active=False,
+        role="leitor" if not convidado_via_pre_autorizacao else "medico",
+        status="pendente" if not convidado_via_pre_autorizacao else "aprovado",
+        is_active=convidado_via_pre_autorizacao,
+        convidado=convidado_via_pre_autorizacao,
     )
+    if convidado_via_pre_autorizacao:
+        novo.reviewed_at = datetime.now(timezone.utc)
     db.add(novo)
     db.commit()
+    db.refresh(novo)
+
+    if convidado_via_pre_autorizacao:
+        pre_autorizacao.usado_em = datetime.now(timezone.utc)
+        pre_autorizacao.usado_por_user_id = novo.id
+        db.add(AuditLog(
+            user_id=novo.id, action="convidado_via_pre_autorizacao", entity="user",
+            entity_id=str(novo.id),
+            detail={
+                "email": novo.email,
+                "pre_autorizacao_id": pre_autorizacao.id,
+                "observacao": pre_autorizacao.observacao,
+                "nota": "Cadastro aprovado e marcado convidado automaticamente — e-mail já "
+                        "pré-autorizado por um admin antes do cadastro acontecer.",
+            },
+        ))
+        db.commit()
+        return {
+            "nota": "Cadastro concluído! Seu acesso já está liberado — você pode entrar agora.",
+            "acesso_imediato": True,
+        }
 
     from app.services.notificar import notificar_admins_nova_solicitacao
     notificar_admins_nova_solicitacao(db, novo.full_name, novo.email)
+    background_tasks.add_task(emails.enviar_solicitacao_recebida, novo.id)
 
     return {
         "nota": "Solicitação registrada. Você recebe acesso assim que um administrador "
