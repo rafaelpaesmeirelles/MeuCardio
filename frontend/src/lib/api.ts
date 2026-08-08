@@ -93,7 +93,11 @@ function redirecionarSessaoExpirada() {
   }
 }
 
-async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
+async function request<T>(
+  path: string,
+  init: RequestInit = {},
+  opcoes: { silencioso401?: boolean } = {},
+): Promise<T> {
   const headers = new Headers(init.headers);
   if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
@@ -105,7 +109,17 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
     credentials: "include",
   });
   if (res.status === 401) {
-    redirecionarSessaoExpirada();
+    // `silencioso401` existe para a checagem de sessão do AuthProvider
+    // (`GET /auth/me` ao abrir qualquer página) — 401 ali é o resultado
+    // NORMAL e esperado pra visitante anônimo em página pública
+    // (/solicitar-acesso, /produto, /corvia-mail, /esqueci-senha...), não
+    // uma sessão que expirou. Sem este flag, o redirecionamento genérico
+    // abaixo disparava por trás de QUALQUER visitante sem cookie, alguns
+    // segundos depois da página pública já ter renderizado — jogando o
+    // médico de volta para /entrar no meio do cadastro (achado do Rafael,
+    // 08/08/2026: "página de cadastro... não adaptada", na real o usuário
+    // via a tela certa por um instante e era redirecionado pouco depois).
+    if (!opcoes.silencioso401) redirecionarSessaoExpirada();
     throw new ApiError(401, "Sessão expirada.");
   }
   if (res.status === 402) {
@@ -119,7 +133,7 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
 }
 
 export const api = {
-  get: <T>(p: string) => request<T>(p),
+  get: <T>(p: string, opcoes?: { silencioso401?: boolean }) => request<T>(p, {}, opcoes),
   post: <T>(p: string, body?: unknown) =>
     request<T>(p, { method: "POST", body: body === undefined ? undefined : JSON.stringify(body) }),
   patch: <T>(p: string, body: unknown) =>

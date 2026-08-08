@@ -17,9 +17,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // O cookie é HttpOnly: o cliente não tenta "ver" se existe. A fonte da
-    // verdade é sempre /auth/me, que responde 200 ou 401.
+    // verdade é sempre /auth/me, que responde 200 ou 401. `silencioso401`
+    // é essencial aqui: esta chamada roda ao abrir QUALQUER página, inclusive
+    // as públicas (/solicitar-acesso, /produto, /corvia-mail...), e 401 é o
+    // resultado normal para visitante anônimo — não uma sessão expirada que
+    // deva expulsar o usuário de volta para /entrar.
     api
-      .get<Usuario>("/auth/me")
+      .get<Usuario>("/auth/me", { silencioso401: true })
       .then(setUsuario)
       .catch(() => setUsuario(null))
       .finally(() => setCarregando(false));
