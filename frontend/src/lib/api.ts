@@ -291,6 +291,8 @@ export type Usuario = {
   practice_phone: string | null;
   document_logo_url: string | null;
   document_logo_dark_background: boolean;
+  instagram_handle: string | null;
+  instagram_photo_url: string | null;
   professional_title: string | null;
   workplace_name: string | null;
   workplace_department: string | null;
