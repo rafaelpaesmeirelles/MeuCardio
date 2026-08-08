@@ -1,5 +1,58 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: planos semestral e anual + troca de plano/periodicidade sincronizada com o Stripe (tarefas #45 e #47)
+> Pedido do Rafael: além do mensal já existente, oferecer periodicidade **semestral** e **anual**
+> para os dois planos (Básico e Completo), com preços sugeridos e confirmados por ele
+> (Básico R$269,90/6m e R$479,90/12m; Completo R$323,90/6m e R$575,90/12m — mensal sem mudança de
+> valor), e permitir **trocar de plano e/ou periodicidade depois de já assinante**, sincronizado de
+> verdade com o Stripe (nunca aplicado só localmente).
+>
+> **`Subscription.periodicidade`** (migração `26751b9d12f0`, idempotente — checa se a coluna já
+> existe via `sa.inspect` antes de criar, porque uma sessão paralela já tinha aplicado por SQL
+> direto sem stampar a revisão neste banco; alinha o tipo ao `String(20)` do modelo em vez de deixar
+> disco/banco divergentes) — `mensal`/`semestral`/`anual`, nasce `mensal` para toda assinatura já
+> existente (é o único valor real hoje). `backend/app/api/billing.py` ganhou `PRECO_CENTAVOS`
+> (dict `(plano, periodicidade) → centavos`, única fonte de verdade do servidor para os 6 preços),
+> `_item_de_preco()` (resolve o line-item do Stripe: Price ID já configurado nas variáveis
+> `stripe_price_id_basico_semestral`/`_anual`/`_completo_semestral`/`_anual` do `.env`, ou
+> `price_data` inline para mensal — nunca inventa preço inline para semestral/anual, sempre exige o
+> Price já criado no Stripe) e `_periodicidade_do_price()` (infere a periodicidade pelo
+> `recurring.interval`/`interval_count` do Stripe, para reconciliar depois de uma troca).
+>
+> **`POST /billing/checkout`** ganhou `periodicidade` (query, default `mensal`), validada contra
+> `PERIODICIDADES_VALIDAS`. **`POST /billing/trocar-plano`** (novo) — recebe `plano`/`periodicidade`,
+> valida que existe assinatura ativa e que não é conta de convidado (convidado não paga, trocar não
+> faz sentido), rejeita no-op (já está exatamente nesse plano+periodicidade), chama
+> `stripe.Subscription.modify(..., proration_behavior="create_prorations")` — **nunca aplica a
+> mudança localmente**; o banco só é atualizado quando o webhook `customer.subscription.updated`
+> confirmar, mesma disciplina de "nunca confiar em estado otimista do cliente" que o resto deste
+> arquivo já documenta para todo o `billing.py`. O e-mail de alteração de plano (já existente)
+> passou a disparar também quando só a periodicidade muda, não só o plano.
+>
+> **`Assinatura.tsx`** reescrita: seletor de periodicidade (mensal/semestral/anual) com tabela de
+> preço e rótulo de desconto por plano; quando já ativo, um segundo bloco "Trocar plano ou
+> periodicidade" com o mesmo seletor + botão "Mudar para X", desabilitado quando já é exatamente
+> aquele plano+periodicidade, mostrando a nota de proration do servidor após confirmar.
+> `allow_promotion_codes=True` (tarefa #46, já coberta) valendo também nas duas periodicidades
+> novas.
+>
+> **Verificado**: 15 testes novos (`test_billing_periodicidade.py`) — checkout com cada
+> periodicidade, 503 quando o Price não está configurado no `.env`, 409 para já-ativo, e a classe
+> `TestTrocarPlano` completa (404 sem assinatura, 409 mesmo plano, 409 convidado, chamada real
+> verificando que `stripe.Subscription.modify` foi invocado e que o banco **não** foi alterado antes
+> do webhook). Migração aplicada em produção (`alembic current` confirma `26751b9d12f0 (head)`),
+> backend e frontend rebuildados, bundle novo confirmado no Caddy (grep de `trocar-plano`,
+> "Mudar para" e "Semestral" no chunk `Assinatura-*.js`). Backend saudável (200 em
+> `/api/openapi.json` e `/`) depois do rebuild.
+>
+> **Pendência que não é de código:** os 4 Price IDs de semestral/anual
+> (`stripe_price_id_basico_semestral`/`_anual`/`_completo_semestral`/`_anual`) ainda não estão
+> preenchidos no `.env` de produção — sem eles, `_item_de_preco()` responde 503 ao tentar checkout
+> semestral/anual (comportamento correto, nunca inventa preço inline para esses dois). O Rafael
+> precisa criar os 4 Price recorrentes no painel Stripe (mesmos valores já confirmados nesta seção)
+> e colar os IDs no `.env` antes que semestral/anual funcionem de ponta a ponta para o assinante;
+> mensal não é afetado, continua exatamente como estava.
+
 > ## 📢 REGRA PERMANENTE PARA TODO CONTEÚDO NOVO, 09/08/2026 — vale para o Grupo A (Claude) e o Grupo B (ChatGPT)
 > Pedido do Rafael, em duas mensagens: *"muito importante, integrar todo o conhecimento/documentos
 > de cada tema e de cada assunto da cardiologia presentes no ecossistema corvia com todos os
