@@ -85,6 +85,16 @@ class User(Base):
     # próprio usuário.
     convidado: Mapped[bool] = mapped_column(Boolean, default=False)
 
+    # Plano que o convidado deve receber ao assinar, quando o cadastro veio
+    # de uma pré-autorização (08/08/2026, pedido do Rafael — admin escolhe
+    # por linha se aquele convidado tem CorvIA Mail ou não). None significa
+    # "sem preferência registrada": tanto convidado marcado direto pelo
+    # admin (toggle, sem pré-autorização) quanto pré-autorização antiga sem
+    # esse campo caem no padrão PLANO_COMPLETO já usado por
+    # `criar_checkout()` — nenhuma mudança de comportamento pra quem já
+    # usava o caminho antigo.
+    convidado_plano_preferido: Mapped[str | None] = mapped_column(String(20), nullable=True)
+
     last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     show_online_status: Mapped[bool] = mapped_column(Boolean, default=False)
 
