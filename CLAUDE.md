@@ -1,5 +1,53 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~21h: as 7 falhas pré-existentes da suíte de testes corrigidas + bug real de redirecionamento em página pública
+> Pedido do Rafael: "corrija tb as 7 falhas pre-existentes" (as que eu tinha reportado, sem relação
+> com a sessão, ao concluir o trabalho de médico convidado). Resolvidas as 7 — **766/766 testes
+> passando agora**, suíte completa rodada do zero antes e depois pra confirmar:
+>
+> 1. **6 falhas em `test_dose_calculators.py`**: o arquivo testava a interface ANTIGA (PALS 2020)
+>    de `adrenalina/amiodarona/choque-eletrico-pediatrico`, substituída pela versão PALS 2025 sob os
+>    mesmos slugs numa sessão anterior (decisão já documentada abaixo neste arquivo). Os testes nunca
+>    foram atualizados para a nova interface (chaves de resultado renomeadas, `amiodarona` passou a
+>    exigir `numero_dose`). Corrigidos para a interface real; `test_registro_tem_as_nove_...` também
+>    estava preso em `== 9` — o registro de calculadoras de dose cresceu para 34 (produção contínua
+>    do Grupo B), trocado para "nunca encolhe abaixo de 9 + slugs originais continuam existindo".
+> 2. **1 falha em `test_readiness.py`**: Redis indisponível no ambiente local de teste (gap já
+>    conhecido). Instalado Redis de teste nesta sessão, porta 6380 (a 6379 já é ocupada pelo Redis de
+>    produção via docker-proxy) — documentado em `backend/tests/README.md`, mesmo padrão do Postgres
+>    de teste (porta 5433, instalado numa sessão anterior no mesmo dia).
+> 3. **1 falha em `test_canonical_content_review_status.py`** — não era bug de teste, apontava **22
+>    itens de conteúdo real ainda `pendente_revisao`** em produção, sem relação com esta sessão:
+>    estudo + caso clínico de Killip-Kimball 1967 (números de mortalidade reverificados contra 3
+>    fontes secundárias independentes — Wikipedia, WikiDoc, ScienceDirect Topics — todas convergentes
+>    e citando a mesma referência primária; o PubMed não tem abstract estruturado para este artigo de
+>    1967) e **20 fármacos combinados** em `medicamentos/metadados.json` (conteúdo já continha
+>    mecanismo/dose/interações de bula real citada — provavelmente sobra do lote dos "55 fármacos
+>    combinados" de sessão anterior — conferidos campo a campo antes de marcar revisado). Publicados.
+>
+> **Achado à parte, no meio do trabalho**: Rafael mandou print dizendo que a página de cadastro
+> (`/solicitar-acesso`) "não está adaptada ao tamanho da tela, só para celular". **Reproduzido com
+> Playwright (Chromium via Node 22, instalado nesta sessão) contra produção — não era CSS/
+> responsividade.** Causa raiz real: `AuthProvider` chama `GET /auth/me` ao abrir QUALQUER página,
+> inclusive as públicas — para visitante anônimo isso sempre responde 401, o que é NORMAL. Mas o
+> interceptor genérico de 401 em `lib/api.ts` tratava todo 401 como sessão expirada e disparava
+> `window.location.assign('/entrar')` incondicionalmente, exceto se o caminho já começasse com
+> `/entrar`. Resultado: o visitante via a página pública certa por um instante e, pouco depois (assim
+> que o 401 do `/auth/me` resolvia), era jogado de volta para `/entrar` no meio do cadastro — sem
+> nenhuma mudança de layout de verdade, só um redirect intermitente que parecia "página quebrada".
+> Corrigido com um novo parâmetro `silencioso401` em `api.get()`, usado só pela checagem de sessão do
+> `AuthProvider`. Confirmado com Playwright: as 7 rotas públicas (`/`, `/produto`,
+> `/solicitar-acesso`, `/esqueci-senha`, `/corvia-mail`, `/privacidade`, `/termos`) permanecem no
+> lugar certo depois do redirect antigo ter tido tempo de disparar; screenshots em 1920px/1440px/
+> 390px confirmam a página renderizando corretamente (card centralizado, grade responsiva de 2
+> colunas em desktop, 1 coluna em mobile) — a queixa original nunca foi de fato sobre CSS.
+>
+> **Ferramental novo desta sessão, disponível para as próximas**: Playwright com Chromium
+> (`npx playwright install --with-deps chromium`, usando `/opt/node22` — o Node 18 do sistema não
+> roda bem o instalador) é a forma de reproduzir bug visual/de navegação contra produção quando o
+> Claude in Chrome não está conectado — muito mais confiável que interpretar foto de tela tirada de
+> ângulo/rotação estranha pelo celular do Rafael.
+
 > ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~20h15: médico convidado (acesso cortesia) + correção do cartão de e-mail do Painel
 > Pedido do Rafael: um amigo médico que vai trabalhar com a Corvia precisa passar pelo fluxo REAL de
 > cadastro/KYC/pagamento (é teste do sistema, e ele quer impressionar o convidado), mas sem cobrança
