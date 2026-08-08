@@ -1,5 +1,40 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ AUDITORIA DE CONTEÚDO PENDENTE, 09/08/2026 — 3 documentos novos publicados, 3 duplicados corrigidos
+> Rotina periódica de auditoria (pedido do Rafael: "de tempo em tempo... vá verificando a produção
+> do chat gpt... audite tudo, se estiver tudo correto marque como verificado e vá publicando").
+> Consulta ao banco encontrou **6 documentos `revisado` mas não publicados** — o backlog exato que a
+> auditoria anterior (08/08 ~23h50) já havia sinalizado como "6 itens que chegaram depois, fora do
+> escopo daquela rodada".
+>
+> **Verificados um a um, não por lote.** 3 eram conteúdo genuinamente novo — checados por PMID via
+> PubMed E-utilities (título/revista/DOI batendo exatamente) e por busca no corpus para confirmar
+> que nenhum documento publicado já cobria o mesmo trial: `basil-2-bypass-endovascular-infrapopliteo-clti`
+> (Lancet 2023, PMID 37116524), `best-cli-bypass-endovascular-isquemia-cronica-ameacadora-membro`
+> (NEJM 2022, PMID 36342173) e `hyperion-sotatercept-hap-primeiro-ano-diagnostico` (NEJM 2025, PMID
+> 41025556) — **publicados e indexados no RAG** (19 trechos).
+>
+> **Os outros 3 eram duplicata real**, achados comparando o corpo do texto (não só o título) contra
+> documentos já publicados: `zenith-sotatercept-hap-alto-risco` duplica o já publicado
+> `zenith-sotatercept-hap-alto-risco-morte` (mesmo PMID 40167274, mesmos números — só o slug e a
+> citação de autoria mudavam); `soul-semaglutida-oral-desfechos-cardiovasculares` e
+> `surpass-cvot-tirzepatida-dulaglutida-desfechos-cardiovasculares` duplicam, cada um, uma seção
+> inteira do documento combinado já publicado
+> `semaglutida-oral-e-tirzepatida-em-desfecho-cardiovascular-soul-pioneer-6-e-surpass-cvot` (mesmos
+> PMIDs 40162642 e 41406444, mesmos números — HR 0,86/12,0% vs. 13,8%/p=0,006 para o SOUL, idêntico
+> nos dois lados). **Não publicados** — marcados `review_status: pendente_revisao` com `review_note`
+> apontando o slug canônico já no ar, mesmo padrão já documentado neste arquivo para os 22 duplicados
+> da auditoria de 08/08. `AuditLog` gravado nas duas operações (publicar e marcar duplicata).
+>
+> **Achado que não é duplicata, registrado para não se refazer a busca**: o acrônimo "HYPERION" tem
+> **dois** trials homônimos e completamente distintos no acervo — o de sotatercept em HAP (publicado
+> nesta rodada) e um trial de hipotermia terapêutica pós-parada cardiorrespiratória em ritmo não
+> chocável, já citado em 3 documentos publicados de Terapia intensiva. Colisão de sigla, não erro.
+>
+> **Auditoria final**: `documents` 1478/1503 publicados (0 `revisado`-pendente) · `evidence_records`
+> 2424/2425 (só o órfão histórico `cc-adulto-eco-no-seguimento-com-defeito-residual`, corretamente
+> fora do ar) · `scientific_studies` 790/790. **Zero `document_chunks` órfão no RAG.**
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: Timeline de evolução do conhecimento por doença (tarefa #53)
 > Pedido do Rafael: novo item dentro de Trilhas de estudo que lista as principais doenças da
 > cardiologia e mostra uma timeline da evolução do conhecimento/tratamento de cada uma, com links
