@@ -1,5 +1,81 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: tour de onboarding refeito por completo + Instagram opcional no cadastro com foto de boas-vindas (tarefa #43)
+> Pedido literal do Rafael sobre o tour: *"nao gostei do tour de inicio... simples demais, sem
+> graca, explica poucas funcoes e nao impressiona ninguem... refaca, talvez usando imagens
+> interativas de cada funcionalidade... me impressione!!!"* — pensado inclusive para impressionar
+> o médico convidado, amigo pessoal dele.
+>
+> **Tour (`frontend/src/pages/Tour.tsx`/`tour.css`) reescrito do zero.** O antigo era cartão de
+> texto puro (resumo/uso/benefício/rotina em prosa). O novo mostra, para cada funcionalidade REAL
+> do produto — levantada direto do menu de `Shell.tsx`, nenhuma inventada —, uma pequena
+> **renderização interativa** (mockup) ao lado do texto: bolha de chat com citação `[F#]`/`[W#]`
+> para o Assistente de IA, cartão de evidência com selo "Classe I/Nível A" para a Biblioteca,
+> checklist + gauge de risco para Calculadoras, árvore de decisão em SVG animando o caminho ativo
+> para Fluxogramas, grade de protocolos com "funciona sem internet" para o Modo Emergência,
+> documento com selo de assinatura aparecendo para a Prescrição digital, caixa de entrada para o
+> CorvIA Mail, calendário + leito para Agenda/Round, trilha de passos + quiz para
+> Trilhas/Casos clínicos, e provedores sincronizados + indicadores para a Gestão da prática — 10
+> funcionalidades, cada uma com "O que é" / "Por que importa clinicamente" / "No seu dia a dia".
+> Tudo em **JSX/CSS puro** (nenhum `dangerouslySetInnerHTML`/`innerHTML`, confirmado por
+> `scripts/check-rendering-security.mjs`), paleta de marca (`tokens.css`), progresso clicável,
+> navegação por teclado mantida, animações decorativas (cursor piscando, traço de fluxograma,
+> selo de assinatura) cobertas pela regra global de `prefers-reduced-motion`.
+>
+> **Tarefa #43 — Instagram opcional no cadastro, integrada ao início do tour.** Campo `@handle`
+> opcional em `SolicitarAcesso.tsx` — o médico digita se quiser, **nunca é buscado/adivinhado**
+> pelo sistema (correlação automática por nome/e-mail foi rejeitada por LGPD/ToS, decisão já
+> tomada com o Rafael, não reaberta). Migração `f6cm20260808` (`users.instagram_handle`,
+> `users.instagram_photo_url`, ambos nullable). Ao cadastrar, se o handle foi informado,
+> `BackgroundTasks` dispara `app/services/instagram_profile.buscar_e_salvar_foto` — busca
+> best-effort da foto pública **desse handle específico, nunca busca ampla**, nunca bloqueia a
+> resposta do cadastro. A tela de boas-vindas do tour ("Bem-vindo ao Ecossistema Corvia,
+> {nome}") mostra a foto se ela chegou a ser resolvida, com **fallback gracioso** (avatar com as
+> iniciais do nome, em gradiente da marca) sempre que a busca falhar, o perfil for privado, o
+> handle não existir, ou simplesmente não tiver terminado a tempo.
+>
+> **Limitação real, verificada nesta sessão (documentada também no código,
+> `app/services/instagram_profile.py`): não existe API oficial gratuita para isto.** A Instagram
+> Graph API exige app revisado pela Meta e, para ler perfil de terceiro, parceria comercial de
+> Business Discovery — fora de escopo. Usado o endpoint interno e não-documentado que o próprio
+> `instagram.com` chama para montar a página pública de perfil
+> (`i.instagram.com/api/v1/users/web_profile_info`) — **sem contrato de estabilidade, pode mudar
+> ou bloquear por IP a qualquer momento**. Testado manualmente antes de implementar: funcionou
+> (200 + foto real) contra perfis públicos. **Testado de novo em produção, ao final desta
+> sessão, com um handle público conhecido: desta vez voltou HTTP 429 (rate limit)** — o mesmo
+> host havia feito várias chamadas de teste em sequência mais cedo. **O fallback é o caminho
+> testado como principal, não o caminho feliz**: o cadastro de teste completou normalmente
+> (201), `instagram_photo_url` ficou `NULL`, e é exatamente esse o comportamento que o frontend
+> trata com o avatar de iniciais — confirmado ao vivo, não só em teste mockado. Registro de teste
+> apagado do banco depois (`id=16`, `email=teste.verificacao.instagram.08082026@corvia-teste.local`).
+>
+> **⚠️ Perda de trabalho e recuperação, registrada para quem investigar sessões futuras:** durante
+> esta sessão, a árvore de trabalho local (`/opt/meucardio`) foi **repetidamente revertida por
+> processo(s) externo(s) concorrentes** (aparentando `git reset --hard`/checkout, várias vezes
+> em minutos) — perdendo edições já feitas em `user.py`/`auth.py`/`Tour.tsx`/`tour.css` antes de
+> qualquer commit. Reconstruído do zero e commitado em unidades pequenas, imediatamente após
+> cada edição (`git add <arquivo específico> && git commit` na mesma respiração, sem gap para
+> outro processo intervir), com push logo em seguida — é o que finalmente persistiu o trabalho.
+> Um patch script (edição via Python, não via ferramenta de edição interativa) introduziu um
+> `SyntaxError` real em `auth.py` no primeiro commit backend (fatiamento de string errado ao
+> inserir o validador de `instagram_handle` antes do de `email`); **outra sessão corrigiu no
+> commit seguinte** (`99fbc9bf`), achado e resolvido rápido — registrado aqui como reconhecimento,
+> não como pendência.
+>
+> **Verificação**: `tsc --noEmit` limpo, `check-rendering-security.mjs` e `check-bundle-budget.mjs`
+> passando, `npm run build` completo sem erro. 9 testes novos em `test_instagram_handle.py`
+> (validação/normalização do handle, foto resolvida com sucesso, perfil privado/inexistente, erro
+> de rede — nenhum caminho de falha afeta o cadastro), **9/9 passando**, mais 12/12 de suítes
+> adjacentes (`test_conselho_outro.py`, `test_convidado_pre_autorizacao.py`) sem regressão — todos
+> rodados contra um banco de teste **isolado** (`meucardio_test_ig`, clonado por schema do banco
+> compartilhado), porque o banco de teste compartilhado estava sob contenção pesada de múltiplas
+> sessões concorrentes rodando `TRUNCATE ... CASCADE` ao mesmo tempo (reproduzido também em
+> `test_conselho_outro.py`, não tocado nesta sessão, confirmando que não é bug desta mudança).
+> Migração `f6cm20260808` aplicada em produção (já estava, por rebuild de outra sessão que puxou o
+> commit antes de mim), backend e frontend rebuildados; bundle novo confirmado no Caddy (grep de
+> "Bem-vindo ao Ecossistema Corvia" em `Tour-*.js` e de "tour-mock-lado" no CSS publicado). Backend
+> saudável (200 em `/api/openapi.json`, `/` e `/solicitar-acesso`) depois do rebuild.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: planos semestral e anual + troca de plano/periodicidade sincronizada com o Stripe (tarefas #45 e #47)
 > Pedido do Rafael: além do mensal já existente, oferecer periodicidade **semestral** e **anual**
 > para os dois planos (Básico e Completo), com preços sugeridos e confirmados por ele
