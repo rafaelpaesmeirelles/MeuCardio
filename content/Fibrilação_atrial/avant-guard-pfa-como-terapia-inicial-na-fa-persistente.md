@@ -4,6 +4,7 @@ slug: avant-guard-pfa-como-terapia-inicial-na-fa-persistente
 theme: "Fibrilação atrial"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42041224 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Wazni OM, Chun KRJ, Nair DG, et al. Pulsed Field Ablation as Initial Therapy for Persistent Atrial Fibrillation. N Engl J Med. 2026;394:2407-2418. DOI: 10.1056/NEJMoa2600929. PMID: 42041224. NCT06096337."]
 legacy_source: "Documento novo, ciclo landmark/novidades 08/08/2026. Fonte primária NEJM e registro ClinicalTrials.gov conferidos nesta sessão."
 ---

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 
 /**
  * Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico.
@@ -231,6 +232,7 @@ export default function AvaliacaoPreOperatoria() {
   const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
   const [aguardandoExterno, setAguardandoExterno] = useState(false);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
+  const [emitido, setEmitido] = useState(false);
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
@@ -333,6 +335,7 @@ export default function AvaliacaoPreOperatoria() {
       const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
       baixarBlob(blob, `avaliacao-preoperatoria-${geradoId}.pdf`);
       setAguardandoExterno(METODOS_MANUAL_EXTERNO.has(metodo));
+      setEmitido(true);
     } catch (e) {
       setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
     }
@@ -516,6 +519,12 @@ export default function AvaliacaoPreOperatoria() {
 
           {aguardandoExterno && <AssinaturaExternaITI metodo={metodo} nomeProvedor={provedores?.find((p) => p.codigo === metodo)?.nome ?? metodo} enviarUrl={`/document-templates/gerados/${geradoId}/assinatura-externa`} onConcluido={() => { setAguardandoExterno(false); setAssinadoExternoAgora(true); }} />}
           {assinadoExternoAgora && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>Assinatura conferida com sucesso — o documento já está assinado.</p>}
+          {geradoId && (
+            <OfertaEnvioEmailPaciente
+              endpointBase={`/document-templates/gerados/${geradoId}`}
+              habilitado={emitido && !aguardandoExterno}
+            />
+          )}
 
           <div style={{ marginTop: "0.8rem" }}>
             <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias — exige CorvIA Mail ativo)</label>

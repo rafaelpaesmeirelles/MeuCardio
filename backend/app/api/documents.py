@@ -1,6 +1,7 @@
 import asyncio
 import re
 from datetime import datetime, timedelta, timezone
+from typing import Literal
 
 from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
@@ -9,13 +10,18 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
-from app.core.security import current_user
+from app.core.security import assinatura_email_ativa, current_user
 from app.core.uploads import UploadRejected, validate_file
 from app.models.audit import AuditLog
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.compartilhamento import DocumentShareLink
+from app.models.email_account import EmailAccount
+from app.models.patient_document_email_send import (
+    CANAL_AUTO_CONTATO_CORVIA, CANAL_PROPRIO_CORVIA_MAIL, TIPO_DOCUMENTO_GERADO,
+    PatientDocumentEmailSend,
+)
 from app.models.round import Patient
-from app.services import cofre, emails, envio_documento_email
+from app.services import anexo_email_proprio, cofre, emails, envio_documento_email
 from app.services.assinatura import divulgacao_email
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.professional_profile import (
@@ -343,4 +349,112 @@ def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(ge
         "link": None if resultado.enviado else url,
         "erro": None if resultado.enviado else resultado.erro,
         "assinado_smime": resultado.assinado_smime,
+    }
+
+
+class EnvioPacienteIn(BaseModel):
+    email_paciente: str = Field(min_length=5)
+    canal: Literal["auto_contato_corvia", "proprio_corvia_mail"]
+
+
+def _checar_corvia_mail_ativo(db: Session, user) -> EmailAccount:
+    if not assinatura_email_ativa(db, user):
+        raise HTTPException(status_code=409, detail="Este recurso exige CorvIA Mail ativo.")
+    conta = db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
+    if not conta or conta.status != "ativa":
+        raise HTTPException(status_code=409, detail="Sua caixa do CorvIA Mail não está ativa.")
+    return conta
+
+
+@router.post("/gerados/{gid}/envio-paciente")
+def envio_paciente_gerado(
+    gid: int, dados: EnvioPacienteIn, db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Oferta de envio ao paciente por e-mail ao concluir a assinatura
+    digital (pedido do Rafael, 08/08/2026) — dois canais, ver
+    `app/models/patient_document_email_send.py`:
+
+    - `auto_contato_corvia`: a Corvia manda sozinha, pela conta institucional
+      (SMTP, link seguro de `VALIDADE_LINK_DIAS`, nunca o PDF anexado).
+    - `proprio_corvia_mail`: sobe o PDF assinado como anexo na caixa nativa
+      do próprio médico (Mail360) e devolve o `file_id` — o frontend navega
+      para o compositor do CorvIA Mail já com o anexo, destinatário e uma
+      sugestão de corpo (a confirmação da assinatura, quando aplicável)."""
+    g = _obter_gerado(gid, db, user)
+    _checar_corvia_mail_ativo(db, user)
+
+    registro = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
+    if not registro or registro.assinado_em is None:
+        raise HTTPException(
+            status_code=409,
+            detail="Conclua a emissão/assinatura do documento antes de enviá-lo ao paciente.",
+        )
+    divulgacao = None
+    if registro.nivel == "qualificada":
+        divulgacao = divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(registro))
+
+    g.destinatario_email_cifrado = cofre.cifrar_campo(dados.email_paciente, g.id)
+    titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
+
+    if dados.canal == CANAL_AUTO_CONTATO_CORVIA:
+        link = DocumentShareLink(
+            tipo="generated_document", referencia_id=g.id, criado_por=user.id,
+            expires_at=datetime.now(timezone.utc) + timedelta(days=VALIDADE_LINK_DIAS),
+        )
+        db.add(link)
+        db.commit()
+        db.refresh(link)
+
+        url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
+        html = emails.montar_html_documento_disponivel(
+            nome_medico=professional_name(user), url=url, dias_validade=VALIDADE_LINK_DIAS,
+            divulgacao_assinatura=divulgacao,
+        )
+        resultado = emails.enviar_institucional_paciente(
+            db, user_id=user.id, destinatario=dados.email_paciente,
+            assunto=emails.ASSUNTO_DOCUMENTO_DISPONIVEL, html=html,
+            tipo_log="documento_paciente_auto",
+        )
+        db.add(PatientDocumentEmailSend(
+            tipo_origem=TIPO_DOCUMENTO_GERADO, referencia_id=g.id, canal=dados.canal,
+            share_link_id=link.id, enviado_por=user.id,
+            paciente_email_cifrado=cofre.cifrar_campo(dados.email_paciente, g.id),
+            assinatura_confirmada=divulgacao is not None, sucesso=resultado.enviado,
+        ))
+        db.add(AuditLog(
+            user_id=user.id, action="envio_paciente_documento_gerado", entity="generated_document",
+            entity_id=str(g.id),
+            detail={"canal": dados.canal, "enviado": resultado.enviado, "erro": resultado.erro},
+        ))
+        db.commit()
+        return {
+            "canal": dados.canal, "enviado": resultado.enviado, "erro": resultado.erro,
+            "anexo": None, "assunto_sugerido": None, "corpo_sugerido": None,
+        }
+
+    assert dados.canal == CANAL_PROPRIO_CORVIA_MAIL  # só resta este valor no Literal
+    nome_arquivo = f"{normalize_search_text(titulo).replace(' ', '-')}-{g.id}.pdf"
+    try:
+        anexo = anexo_email_proprio.preparar(
+            db, user, nome_arquivo=nome_arquivo, conteudo=assinatura_emissao.ler_bytes(registro),
+        )
+    except anexo_email_proprio.AnexoIndisponivel as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+    db.add(PatientDocumentEmailSend(
+        tipo_origem=TIPO_DOCUMENTO_GERADO, referencia_id=g.id, canal=dados.canal,
+        share_link_id=None, enviado_por=user.id,
+        paciente_email_cifrado=cofre.cifrar_campo(dados.email_paciente, g.id),
+        assinatura_confirmada=divulgacao is not None, sucesso=True,
+    ))
+    db.add(AuditLog(
+        user_id=user.id, action="envio_paciente_documento_gerado", entity="generated_document",
+        entity_id=str(g.id), detail={"canal": dados.canal, "anexo_file_id": anexo.file_id},
+    ))
+    db.commit()
+    return {
+        "canal": dados.canal, "enviado": None, "erro": None,
+        "anexo": {"file_id": anexo.file_id, "nome": anexo.nome},
+        "assunto_sugerido": f"{titulo} do seu médico — Corvia",
+        "corpo_sugerido": divulgacao or "",
     }

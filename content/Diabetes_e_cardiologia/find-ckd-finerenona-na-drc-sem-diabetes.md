@@ -4,6 +4,7 @@ slug: find-ckd-finerenona-na-drc-sem-diabetes
 theme: "Diabetes e cardiologia"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42246672 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Finerenone in Persons with Chronic Kidney Disease without Diabetes. N Engl J Med. 2026. DOI: 10.1056/NEJMoa2604625. NCT05047263."]
 legacy_source: "Atualização cardiorrenal 2026 priorizada em 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

@@ -4,6 +4,7 @@ slug: tpvr-versus-cirurgia-reposicao-valvar-pulmonar-adultos-chd-2026
 theme: "Cardiopatias congênitas"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42387804 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Bolad A, Elganainy M, Alenezi F, et al. Comparative Outcomes of Transcatheter Versus Surgical Pulmonary Valve Replacement in Adults With Congenital Heart Disease. Catheter Cardiovasc Interv. 2026 Jul 1. DOI: 10.1002/ccd.70718. PMID: 42387804."]
 legacy_source: "Documento novo, 08/08/2026. Abstract primário conferido no PubMed nesta sessão."
 ---

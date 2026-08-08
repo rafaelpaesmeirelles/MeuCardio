@@ -4,6 +4,7 @@ slug: succour-mri-strain-guia-cardioprotecao-antraciclina
 theme: "Cardio-oncologia"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 39217601 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Marwick TH, Dewar E, Nolan M, et al. Strain surveillance during chemotherapy to improve cardiovascular outcomes: the SUCCOUR-MRI trial. Eur Heart J. 2024;45(41):4414-4424. DOI: 10.1093/eurheartj/ehae574. PMID: 39217601. PMCID: PMC11542702."]
 legacy_source: "Documento novo. Fonte primária Eur Heart J/PubMed conferida em 08/08/2026."
 ---

@@ -3,7 +3,8 @@ title: "ADVOR: acetazolamida adicionada ao diurético de alça na insuficiência
 slug: advor-acetazolamida-na-descongestao-da-ic-aguda
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Mullens W, Dauw J, Martens P, et al. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387:1185-1195. DOI: 10.1056/NEJMoa2203094. NCT03505788."]
 legacy_source: "Documento novo, ciclo landmark 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

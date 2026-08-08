@@ -4,6 +4,7 @@ import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import { Carregando, Vazio } from "../components/Estado";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 import LogoProvedor from "../components/LogoProvedor";
+import { CHAVE_PENDING_COMPOSE } from "../components/OfertaEnvioEmailPaciente";
 import "../styles/corvia-mail.css";
 
 type Pasta = {
@@ -436,6 +437,35 @@ export default function CaixaDeEmail() {
     if (semSessao || !enderecoAtual) return;
     apiEmail.get<ContatoExterno[]>("/email/contatos?limite=100").then(setContatos).catch(() => setContatos([]));
   }, [semSessao, enderecoAtual]);
+
+  // Compositor pré-preenchido ao vir da oferta de "enviar ao paciente por
+  // e-mail" (pedido do Rafael, 08/08/2026 — ver `OfertaEnvioEmailPaciente.
+  // tsx`). O anexo já foi preparado no servidor (upload direto na caixa
+  // nativa via a sessão comum da Corvia, ANTES de chegar aqui) — este
+  // efeito só abre o compositor com o que já veio pronto. `sessionStorage`
+  // (não `location.state`) porque, sem sessão de e-mail ainda aberta, a
+  // tela redireciona para `/corvia-mail` primeiro (linha abaixo, `Navigate`)
+  // — `location.state` não sobreviveria a esse salto; `sessionStorage` sim,
+  // e é consumido uma única vez (removido logo depois de ler).
+  useEffect(() => {
+    if (semSessao) return;
+    const bruto = sessionStorage.getItem(CHAVE_PENDING_COMPOSE);
+    if (!bruto) return;
+    sessionStorage.removeItem(CHAVE_PENDING_COMPOSE);
+    try {
+      const pendente = JSON.parse(bruto) as {
+        para: string; assunto: string; corpo: string; anexos: { file_id: string; nome: string }[];
+      };
+      setRascunho({ ...RASCUNHO_VAZIO, para: pendente.para, assunto: pendente.assunto, corpo: pendente.corpo });
+      setAnexos(pendente.anexos.map((a) => ({ file_id: a.file_id, nome: a.nome })));
+      setVerificacoesAssinatura({});
+      setMostrarCopias(false);
+      setCompondo(true);
+    } catch {
+      // JSON inválido — ignora silenciosamente, o médico ainda pode
+      // escrever a mensagem do zero com "+ Escrever".
+    }
+  }, [semSessao]);
 
   // 07/08/2026: `contaEmailId` NÃO entra nesta lista de dependências — achado
   // reproduzindo o bug relatado pelo Rafael ("pastas não carregam no Yahoo,

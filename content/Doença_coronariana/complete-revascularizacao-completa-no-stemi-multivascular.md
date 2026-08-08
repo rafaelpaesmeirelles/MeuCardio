@@ -3,7 +3,8 @@ title: "COMPLETE: revascularização completa no STEMI com doença multiarterial
 slug: complete-revascularizacao-completa-no-stemi-multivascular
 theme: "Doença coronariana"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'revascularizacao-completa-versus-somente-lesao-culpada-no-iam-multiarterial-o-ensaio-complete', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Mehta SR, Wood DA, Storey RF, et al. Complete Revascularization with Multivessel PCI for Myocardial Infarction. N Engl J Med. 2019;381:1411-1421. DOI: 10.1056/NEJMoa1907775. NCT01740479."]
 legacy_source: "Documento novo, ciclo landmark 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

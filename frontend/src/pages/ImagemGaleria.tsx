@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Detalhe = {
   slug: string; title: string; modality: string; theme: string;
@@ -73,6 +74,8 @@ export default function ImagemGaleria() {
           ))}
         </div>
       )}
+
+      <TudoSobreEsteTema tema={img.theme} excluirTipo="galeria" excluirSlug={slug} />
     </>
   );
 }

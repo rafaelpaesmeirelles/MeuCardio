@@ -3,7 +3,8 @@ title: "STELLAR: sotatercept na hipertensão arterial pulmonar"
 slug: stellar-sotatercept-na-hipertensao-arterial-pulmonar
 theme: "Hipertensão pulmonar"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'sotatercepte-o-ensaio-de-fase-3-stellar', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Hoeper MM, Badesch DB, Ghofrani HA, et al. Phase 3 Trial of Sotatercept for Treatment of Pulmonary Arterial Hypertension. N Engl J Med. 2023;388(16):1478-1490. DOI: 10.1056/NEJMoa2213558. PMID: 36877098."]
 legacy_source: "Documento novo. Fonte primária NEJM/PubMed conferida em 08/08/2026."
 ---

@@ -4,6 +4,7 @@ slug: fire-revascularizacao-completa-guiada-por-fisiologia-em-idosos-com-iam
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 37634150 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Biscaglia S, Guiducci V, Escaned J, et al. Complete or Culprit-Only PCI in Older Patients with Myocardial Infarction. N Engl J Med. 2023;389(10):889-898. DOI: 10.1056/NEJMoa2300468. PMID: 37634150. NCT03772743."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

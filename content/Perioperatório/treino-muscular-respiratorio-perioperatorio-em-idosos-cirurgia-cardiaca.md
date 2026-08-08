@@ -4,6 +4,7 @@ slug: treino-muscular-respiratorio-perioperatorio-em-idosos-cirurgia-cardiaca
 theme: "Perioperatório"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42401308 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Wang Q, Shao J, Peng Y, et al. The effectiveness of perioperative respiratory muscle exercise in elderly cardiac surgery patients: a randomized controlled trial. Arch Phys Med Rehabil. 2026 Jul 4. DOI: 10.1016/j.apmr.2026.06.023. PMID: 42401308."]
 legacy_source: "Documento novo, 08/08/2026. Fonte PubMed/Elsevier conferida nesta sessão."
 ---

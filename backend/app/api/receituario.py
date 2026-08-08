@@ -3,6 +3,7 @@
 import asyncio
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from typing import Literal
 
 from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
@@ -11,18 +12,23 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
-from app.core.security import current_user
+from app.core.security import assinatura_email_ativa, current_user
 from app.core.uploads import UploadRejected, validate_file
 from app.models.audit import AuditLog
 from app.models.assinatura import DocumentoEmitido
 from app.models.clinical_docs import Prescription
 from app.models.compartilhamento import DocumentShareLink
 from app.models.drug import Drug
+from app.models.email_account import EmailAccount
+from app.models.patient_document_email_send import (
+    CANAL_AUTO_CONTATO_CORVIA, CANAL_PROPRIO_CORVIA_MAIL, TIPO_RECEITA as TIPO_ORIGEM_RECEITA,
+    PatientDocumentEmailSend,
+)
 from app.models.receituario import (
     ControlledSubstance, PrescriptionDocument, PrescriptionRecipient,
     PrescriptionRule, PrescriptionType,
 )
-from app.services import cofre
+from app.services import anexo_email_proprio, cofre
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.assinatura.provedor import _MANUAL_EXTERNO
 from app.services.classificacao_receituario import (
@@ -740,4 +746,120 @@ def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(
         "link": None if resultado.enviado else url,
         "erro": None if resultado.enviado else resultado.erro,
         "assinado_smime": resultado.assinado_smime,
+    }
+
+
+class EnvioPacienteIn(BaseModel):
+    email_paciente: str = Field(min_length=5)
+    canal: Literal["auto_contato_corvia", "proprio_corvia_mail"]
+
+
+@router.post("/documentos/{documento_id}/envio-paciente")
+def envio_paciente_receita(
+    documento_id: int, dados: EnvioPacienteIn, db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    """Oferta de envio ao paciente por e-mail ao concluir a assinatura
+    digital da receita (pedido do Rafael, 08/08/2026) — mesmos dois canais
+    de `documents.py::envio_paciente_gerado`, mesma exigência que já valia
+    para `enviar_email` acima: só libera com assinatura qualificada
+    ICP-Brasil (regra do receituário, mais estrita que documento genérico)."""
+    doc = db.get(PrescriptionDocument, documento_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    presc = db.get(Prescription, doc.prescription_id)
+    if not presc or presc.created_by != user.id:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    if doc.status != "emitido":
+        raise HTTPException(status_code=409, detail="Só é possível enviar um documento já emitido.")
+
+    if not assinatura_email_ativa(db, user):
+        raise HTTPException(status_code=409, detail="Este recurso exige CorvIA Mail ativo.")
+    conta = db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
+    if not conta or conta.status != "ativa":
+        raise HTTPException(status_code=409, detail="Sua caixa do CorvIA Mail não está ativa.")
+
+    registro = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id)
+    if not registro or registro.assinado_em is None or registro.nivel != "qualificada":
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "O envio ao paciente só é liberado para receita assinada digitalmente "
+                "com assinatura qualificada ICP-Brasil."
+            ),
+        )
+    divulgacao = divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(registro))
+
+    dest = db.query(PrescriptionRecipient).filter(
+        PrescriptionRecipient.prescription_id == presc.id).first()
+    if not dest:
+        raise HTTPException(status_code=409, detail="Destinatário da receita não encontrado.")
+    dest.email_cifrado = cofre.cifrar_campo(dados.email_paciente, presc.id)
+
+    nome_tipo = "Receita de Controle Especial" if doc.tipo_codigo == "RCE" else "Receituário"
+
+    if dados.canal == CANAL_AUTO_CONTATO_CORVIA:
+        link = DocumentShareLink(
+            tipo="prescription_document", referencia_id=doc.id, criado_por=user.id,
+            expires_at=datetime.now(timezone.utc) + timedelta(days=VALIDADE_LINK_DIAS),
+        )
+        db.add(link)
+        db.commit()
+        db.refresh(link)
+
+        url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
+        html = emails.montar_html_documento_disponivel(
+            nome_medico=professional_name(user), url=url, dias_validade=VALIDADE_LINK_DIAS,
+            divulgacao_assinatura=divulgacao,
+        )
+        resultado = emails.enviar_institucional_paciente(
+            db, user_id=user.id, destinatario=dados.email_paciente,
+            assunto=emails.ASSUNTO_DOCUMENTO_DISPONIVEL, html=html,
+            tipo_log="documento_paciente_auto",
+        )
+        db.add(PatientDocumentEmailSend(
+            tipo_origem=TIPO_ORIGEM_RECEITA, referencia_id=doc.id, canal=dados.canal,
+            share_link_id=link.id, enviado_por=user.id,
+            paciente_email_cifrado=cofre.cifrar_campo(dados.email_paciente, doc.id),
+            assinatura_confirmada=divulgacao is not None, sucesso=resultado.enviado,
+        ))
+        db.add(AuditLog(
+            user_id=user.id, action="envio_paciente_documento_receita", entity="prescription_document",
+            entity_id=str(doc.id),
+            detail={"canal": dados.canal, "enviado": resultado.enviado, "erro": resultado.erro},
+        ))
+        db.commit()
+        return {
+            "canal": dados.canal, "enviado": resultado.enviado, "erro": resultado.erro,
+            "anexo": None, "assunto_sugerido": None, "corpo_sugerido": None,
+        }
+
+    assert dados.canal == CANAL_PROPRIO_CORVIA_MAIL  # só resta este valor no Literal
+    nome_arquivo = (
+        f"receita-controle-especial-{doc.id}.pdf" if doc.tipo_codigo == "RCE"
+        else f"receituario-{doc.id}.pdf"
+    )
+    try:
+        anexo = anexo_email_proprio.preparar(
+            db, user, nome_arquivo=nome_arquivo, conteudo=assinatura_emissao.ler_bytes(registro),
+        )
+    except anexo_email_proprio.AnexoIndisponivel as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+    db.add(PatientDocumentEmailSend(
+        tipo_origem=TIPO_ORIGEM_RECEITA, referencia_id=doc.id, canal=dados.canal,
+        share_link_id=None, enviado_por=user.id,
+        paciente_email_cifrado=cofre.cifrar_campo(dados.email_paciente, doc.id),
+        assinatura_confirmada=divulgacao is not None, sucesso=True,
+    ))
+    db.add(AuditLog(
+        user_id=user.id, action="envio_paciente_documento_receita", entity="prescription_document",
+        entity_id=str(doc.id), detail={"canal": dados.canal, "anexo_file_id": anexo.file_id},
+    ))
+    db.commit()
+    return {
+        "canal": dados.canal, "enviado": None, "erro": None,
+        "anexo": {"file_id": anexo.file_id, "nome": anexo.nome},
+        "assunto_sugerido": f"{nome_tipo} do seu médico — Corvia",
+        "corpo_sugerido": divulgacao or "",
     }

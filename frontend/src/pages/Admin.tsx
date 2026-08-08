@@ -13,6 +13,12 @@ type Usuario = {
   rejection_note: string | null; created_at: string; convidado: boolean;
 };
 
+type PreAutorizacaoConvidado = {
+  id: number; email: string | null; nome_completo: string | null;
+  incluir_corvia_mail: boolean; observacao: string | null;
+  criado_em: string; usado_em: string | null; usado_por_user_id: number | null;
+};
+
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "OUTRO"];
 const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
 const UFS = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
@@ -125,6 +131,130 @@ function PedidoTesteGoogleCard({ p, aoLiberar }: { p: PedidoTesteGoogle; aoLiber
       </button>
       {erro && <p style={{ color: "var(--alerta)", fontSize: "0.82rem", marginTop: 6 }}>{erro}</p>}
     </div>
+  );
+}
+
+function PreAutorizacoesConvidado() {
+  const [lista, setLista] = useState<PreAutorizacaoConvidado[] | null>(null);
+  const [erro, setErro] = useState("");
+  const [enviando, setEnviando] = useState(false);
+  const [dados, setDados] = useState({
+    email: "", nome_completo: "", incluir_corvia_mail: true, observacao: "",
+  });
+
+  const recarregar = () =>
+    api.get<PreAutorizacaoConvidado[]>("/admin/convidados-pre-autorizados")
+      .then(setLista).catch((e) => setErro(e instanceof Error ? e.message : "Erro ao carregar."));
+
+  useEffect(() => { recarregar(); }, []);
+
+  async function cadastrar() {
+    setErro("");
+    setEnviando(true);
+    try {
+      await api.post("/admin/convidados-pre-autorizados", {
+        email: dados.email.trim() || null,
+        nome_completo: dados.nome_completo.trim() || null,
+        incluir_corvia_mail: dados.incluir_corvia_mail,
+        observacao: dados.observacao.trim() || null,
+      });
+      setDados({ email: "", nome_completo: "", incluir_corvia_mail: true, observacao: "" });
+      recarregar();
+    } catch (e) {
+      setErro(e instanceof Error ? e.message : "Não foi possível cadastrar a pré-autorização.");
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  async function revogar(id: number) {
+    if (!confirm("Revogar esta pré-autorização? Quem ainda não se cadastrou perde o acesso automático.")) return;
+    try {
+      await api.delete(`/admin/convidados-pre-autorizados/${id}`);
+      recarregar();
+    } catch (e) {
+      setErro(e instanceof Error ? e.message : "Não foi possível revogar.");
+    }
+  }
+
+  const podeCadastrar = (dados.email.trim() || dados.nome_completo.trim()) && !enviando;
+  const pendentes = lista?.filter((l) => !l.usado_em) ?? [];
+  const usadas = lista?.filter((l) => l.usado_em) ?? [];
+
+  return (
+    <>
+      <h2 style={{ marginTop: "1.6rem" }}>
+        Pré-autorizações de convidado
+        {pendentes.length > 0 && <span className="selo selo--pendente" style={{ marginLeft: 8 }}>{pendentes.length} pendente(s)</span>}
+      </h2>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
+        Cadastre aqui um novo convidado ANTES dele se registrar — pelo e-mail que ele vai
+        usar no cadastro e/ou pelo nome completo. Quando o cadastro dele casar com esta
+        linha, o acesso libera automaticamente (sem revisão manual), já no plano escolhido.
+      </p>
+
+      <div className="cartao" style={{ maxWidth: 460, marginTop: "0.6rem" }}>
+        <label htmlFor="pa-email">E-mail pessoal <span className="eyebrow">(opcional se tiver o nome)</span></label>
+        <input id="pa-email" type="email" value={dados.email}
+               onChange={(e) => setDados((d) => ({ ...d, email: e.target.value }))} />
+
+        <label htmlFor="pa-nome" style={{ marginTop: "0.6rem" }}>
+          Nome completo <span className="eyebrow">(opcional se tiver o e-mail)</span>
+        </label>
+        <input id="pa-nome" value={dados.nome_completo}
+               onChange={(e) => setDados((d) => ({ ...d, nome_completo: e.target.value }))} />
+
+        <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: "0.8rem" }}>
+          <input type="checkbox" style={{ width: "auto" }} checked={dados.incluir_corvia_mail}
+                 onChange={(e) => setDados((d) => ({ ...d, incluir_corvia_mail: e.target.checked }))} />
+          Incluir acesso ao CorvIA Mail
+        </label>
+
+        <label htmlFor="pa-obs" style={{ marginTop: "0.6rem" }}>
+          Observação <span className="eyebrow">(opcional, só para você)</span>
+        </label>
+        <input id="pa-obs" placeholder="Ex.: amigo, vai trabalhar com a Corvia" value={dados.observacao}
+               onChange={(e) => setDados((d) => ({ ...d, observacao: e.target.value }))} />
+
+        <button className="botao" style={{ marginTop: "0.8rem" }} onClick={cadastrar} disabled={!podeCadastrar}>
+          {enviando ? "Cadastrando…" : "Cadastrar pré-autorização"}
+        </button>
+        {erro && <p style={{ color: "var(--alerta)", fontSize: "0.82rem", marginTop: 6 }}>{erro}</p>}
+      </div>
+
+      {lista === null ? (
+        <Carregando />
+      ) : lista.length === 0 ? (
+        <p style={{ color: "var(--texto-secundario)", marginTop: "0.8rem" }}>Nenhuma pré-autorização cadastrada ainda.</p>
+      ) : (
+        <div className="grade" style={{ marginTop: "0.8rem" }}>
+          {pendentes.map((l) => (
+            <div className="cartao cartao--clinico" key={l.id}>
+              <strong>{l.nome_completo || l.email}</strong>
+              {l.nome_completo && l.email && (
+                <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)" }}>{l.email}</div>
+              )}
+              <div style={{ fontSize: "0.82rem", marginTop: 4 }}>
+                {l.incluir_corvia_mail ? "Com CorvIA Mail" : "Sem CorvIA Mail"}
+              </div>
+              {l.observacao && <p style={{ fontSize: "0.82rem", marginTop: 4 }}>{l.observacao}</p>}
+              <button className="botao botao--secundario" style={{ marginTop: 8 }} onClick={() => revogar(l.id)}>
+                Revogar
+              </button>
+            </div>
+          ))}
+          {usadas.map((l) => (
+            <div className="cartao cartao--clinico" key={l.id} style={{ opacity: 0.6 }}>
+              <strong>{l.nome_completo || l.email}</strong>
+              <span className="selo selo--revisado" style={{ marginLeft: 6 }}>já cadastrado</span>
+              <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 4 }}>
+                usado em {new Date(l.usado_em as string).toLocaleString("pt-BR")}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
@@ -256,6 +386,8 @@ export default function Admin() {
               </div>
             </>
           )}
+
+          <PreAutorizacoesConvidado />
 
           <h2 style={{ marginTop: "1.6rem" }}>Criar conta diretamente</h2>
           <p style={{ color: "var(--texto-secundario)", maxWidth: "58ch" }}>

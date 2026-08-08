@@ -3,7 +3,8 @@ title: "ARTESiA: apixabana na fibrilação atrial subclínica detectada por disp
 slug: artesia-apixabana-na-fa-subclinica-detectada-por-dispositivo
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'fibrilacao-atrial-subclinica-detectada-por-dispositivo-noah-afnet-6-artesia-e-metanalise', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Healey JS, Lopes RD, Granger CB, et al. Apixaban for Stroke Prevention in Subclinical Atrial Fibrillation. N Engl J Med. 2024;390(2):107-117. DOI: 10.1056/NEJMoa2310234. PMID: 37952132. NCT01938248."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

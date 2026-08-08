@@ -4,6 +4,7 @@ slug: revived-bcis2-pci-na-disfuncao-isquemica-grave
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 36027563 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Perera D, Clayton T, O'Kane PD, et al.; REVIVED-BCIS2 Investigators. Percutaneous Revascularization for Ischemic Left Ventricular Dysfunction. N Engl J Med. 2022;387(15):1351-1360. DOI: 10.1056/NEJMoa2206606. PMID: 36027563. NCT01920048."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

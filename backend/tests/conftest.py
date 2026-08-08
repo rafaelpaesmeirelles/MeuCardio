@@ -52,6 +52,7 @@ TABELAS_PARA_LIMPAR = (
     "email_accounts",
     "subscriptions",
     "audit_logs",
+    "convidados_pre_autorizados",
     "users",
 )
 

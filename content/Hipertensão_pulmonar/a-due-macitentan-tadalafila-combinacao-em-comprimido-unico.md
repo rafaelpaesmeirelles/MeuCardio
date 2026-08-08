@@ -4,6 +4,7 @@ slug: a-due-macitentan-tadalafila-combinacao-em-comprimido-unico
 theme: "Hipertensão pulmonar"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 38267108 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Grünig E, Jansa P, Fan F, et al. Randomized Trial of Macitentan/Tadalafil Single-Tablet Combination Therapy for Pulmonary Arterial Hypertension. J Am Coll Cardiol. 2024;83(4):473-484. DOI: 10.1016/j.jacc.2023.10.045. PMID: 38267108. NCT03904693."]
 legacy_source: "Documento novo. Fonte primária JACC/PubMed conferida em 08/08/2026."
 ---

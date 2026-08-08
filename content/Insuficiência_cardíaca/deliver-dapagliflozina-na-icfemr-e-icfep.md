@@ -3,7 +3,8 @@ title: "DELIVER: dapagliflozina na ICFEmr e ICFEP"
 slug: deliver-dapagliflozina-na-icfemr-e-icfep
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'inibidores-de-sglt2-na-icfep-empagliflozina-emperor-preserved-e-dapagliflozina-deliver', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2022;387:1089-1098. DOI: 10.1056/NEJMoa2206286. PMID: 36027570. NCT03619213."]
 legacy_source: "Landmark 2020-2026 priorizado em 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

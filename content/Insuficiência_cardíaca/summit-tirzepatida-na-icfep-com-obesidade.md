@@ -3,7 +3,8 @@ title: "SUMMIT: tirzepatida na ICFEP associada à obesidade"
 slug: summit-tirzepatida-na-icfep-com-obesidade
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'tirzepatida-e-icfep-com-obesidade-o-ensaio-summit', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Packer M, Zile MR, Kramer CM, et al.; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

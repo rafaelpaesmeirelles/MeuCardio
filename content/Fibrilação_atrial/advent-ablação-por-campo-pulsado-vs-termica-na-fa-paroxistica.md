@@ -3,7 +3,8 @@ title: "ADVENT: ablação por campo pulsado versus ablação térmica na FA paro
 slug: advent-ablacao-por-campo-pulsado-vs-termica-na-fa-paroxistica
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'ablacao-por-campo-pulsado-versus-termica-o-ensaio-advent', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Reddy VY, Gerstenfeld EP, Natale A, et al. Pulsed Field or Conventional Thermal Ablation for Paroxysmal Atrial Fibrillation. N Engl J Med. 2023;389:1660-1671. DOI: 10.1056/NEJMoa2307291. NCT04612244."]
 legacy_source: "Documento novo, ciclo landmark 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---

@@ -4,6 +4,7 @@ slug: castle-htx-ablacao-na-fa-com-insuficiencia-cardiaca-terminal
 theme: "Fibrilação atrial"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 37634135 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Sohns C, Fox H, Marrouche NF, et al.; CASTLE HTx Investigators. Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation. N Engl J Med. 2023;389(15):1380-1389. DOI: 10.1056/NEJMoa2306037. PMID: 37634135. NCT04649801."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

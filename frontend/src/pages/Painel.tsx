@@ -263,6 +263,15 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     tema: "Cardio-oncologia",
     areaId: "cardiooncologia",
   },
+  {
+    nome: "Cardiologia do Esporte e do Exercício",
+    contexto: "Atividade física e desempenho",
+    descricao: "Coração de atleta, triagem pré-participação, arritmias induzidas por exercício e prescrição segura de atividade física.",
+    to: "/biblioteca?tema=Cardiologia%20do%20Esporte%20e%20do%20Exerc%C3%ADcio",
+    marca: "esporte",
+    tema: "Cardiologia do Esporte e do Exercício",
+    areaId: "esporte",
+  },
 ];
 
 function mesmoTema(a: string, b: string) {
@@ -725,7 +734,7 @@ export default function Painel() {
             </div>
             <div className="hoje__temas" aria-label="Outras áreas e temas disponíveis">
               {temasSecundarios.map((tema) => (
-                <Link key={tema.theme} to={`/biblioteca?tema=${encodeURIComponent(tema.theme)}`}>
+                <Link key={tema.theme} to={`/biblioteca?tema=${encodeURIComponent(tema.theme)}#documentos`}>
                   <span>{tema.theme}</span><small>{tema.count.toLocaleString("pt-BR")}</small>
                 </Link>
               ))}

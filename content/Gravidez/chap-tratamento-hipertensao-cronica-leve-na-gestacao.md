@@ -3,7 +3,8 @@ title: "CHAP: tratar hipertensão crônica leve durante a gestação"
 slug: chap-tratamento-hipertensao-cronica-leve-na-gestacao
 theme: "Gravidez"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'tratar-hipertensao-cronica-leve-na-gestacao-o-ensaio-chap', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Tita AT, Szychowski JM, Boggess K, et al. Treatment for Mild Chronic Hypertension during Pregnancy. N Engl J Med. 2022;386(19):1781-1792. DOI: 10.1056/NEJMoa2201295. PMID: 35363951. NCT02299414."]
 legacy_source: "Documento novo. Fonte primária NEJM/PubMed conferida em 08/08/2026."
 ---

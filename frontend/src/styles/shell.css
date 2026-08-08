@@ -738,6 +738,107 @@
    legível, e não em letra de nota de rodapé. */
 .trilha__porque { margin: 0.15rem 0 0; font-size: 0.88rem; color: var(--texto-secundario); max-width: 62ch; }
 
+/* --------------------------------- Timeline de doenças (dentro de Trilhas)
+   Linha do tempo vertical por doença: um eixo com marcador teal por marco,
+   agrupado em décadas para dar leitura de "evolução" ao rolar a tela, em vez
+   de uma lista plana. Estudo (conhecimento) e diretriz (tratamento) têm cor
+   própria para o olho distinguir os dois tipos de marco sem ler o selo. */
+.timeline-doenca__entrada {
+  display: flex; flex-direction: column; gap: 0.2rem; margin: 1rem 0 1.4rem;
+  border-left: 3px solid var(--acento);
+}
+.timeline-doenca__entrada strong { color: var(--primaria); }
+.timeline-doenca__entrada span { font-size: 0.88rem; color: var(--texto-secundario); max-width: 68ch; }
+
+.timeline-doenca__seletor {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.1rem 0 1.6rem;
+}
+.timeline-doenca__chip {
+  display: flex; flex-direction: column; gap: 0.15rem; text-align: left;
+  padding: 0.55rem 0.9rem; background: var(--superficie); color: var(--texto);
+  border: 1px solid var(--borda); border-radius: var(--r); cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.timeline-doenca__chip strong { font-size: 0.88rem; }
+.timeline-doenca__chip span { font-size: 0.74rem; color: var(--texto-secundario); }
+.timeline-doenca__chip:hover { border-color: var(--acento); }
+.timeline-doenca__chip--ativo {
+  border-color: var(--acento); background: var(--acento-tinta);
+  box-shadow: 0 0 0 1px var(--acento) inset;
+}
+.timeline-doenca__chip--ativo span { color: var(--acao); }
+
+.timeline-doenca__eixo { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 0.6rem; }
+
+.timeline-doenca__decada { display: flex; gap: 1.1rem; align-items: flex-start; }
+.timeline-doenca__decada-rotulo {
+  flex: 0 0 auto; position: sticky; top: 0.6rem;
+  font-family: var(--fonte-display); font-weight: 800; font-size: 1.1rem;
+  color: var(--primaria); min-width: 4.4rem; text-align: right;
+  padding-top: 0.35rem;
+}
+
+.timeline-doenca__lista {
+  list-style: none; margin: 0; padding: 0 0 0 1.3rem; flex: 1; min-width: 0;
+  border-left: 3px solid var(--borda);
+}
+
+.timeline-doenca__marco { position: relative; padding: 0 0 1.3rem 1.4rem; }
+.timeline-doenca__marco:last-child { padding-bottom: 0.1rem; }
+.timeline-doenca__marcador {
+  position: absolute; left: -1.62rem; top: 0.35rem;
+  width: 0.7rem; height: 0.7rem; border-radius: 50%;
+  background: var(--acento); border: 2px solid var(--superficie);
+  box-shadow: 0 0 0 2px var(--acento);
+}
+.timeline-doenca__marco--diretriz .timeline-doenca__marcador {
+  background: var(--primaria); box-shadow: 0 0 0 2px var(--primaria);
+}
+
+.timeline-doenca__cartao {
+  background: var(--superficie); border: 1px solid var(--borda);
+  border-radius: var(--r); padding: 0.85rem 1rem; box-shadow: var(--sombra-xs);
+  max-width: 62rem;
+}
+.timeline-doenca__cabecalho { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.3rem; }
+.timeline-doenca__ano {
+  font-family: var(--fonte-dados); font-weight: 700; font-size: 0.95rem; color: var(--primaria);
+}
+.timeline-doenca__selo {
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 0.14rem 0.5rem; border-radius: 999px; background: var(--acento-tinta); color: var(--acao);
+}
+.timeline-doenca__selo--diretriz { background: var(--slate-100); color: var(--primaria); }
+
+.timeline-doenca__titulo { display: block; font-weight: 700; color: var(--texto); max-width: 58ch; }
+.timeline-doenca__titulo:hover { color: var(--acao); }
+.timeline-doenca__resumo { margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--texto-secundario); max-width: 62ch; }
+.timeline-doenca__fonte {
+  margin: 0.35rem 0 0; font-size: 0.76rem; font-style: italic; color: var(--texto-secundario);
+}
+
+.timeline-doenca__itens { margin-top: 0.55rem; }
+.timeline-doenca__alternar {
+  font-size: 0.8rem; font-weight: 600; color: var(--acao); background: none;
+  border: none; cursor: pointer; padding: 0;
+}
+.timeline-doenca__alternar:hover { text-decoration: underline; }
+.timeline-doenca__sublista {
+  list-style: none; margin: 0.5rem 0 0; padding: 0.6rem 0 0; border-top: 1px dashed var(--borda);
+  display: flex; flex-direction: column; gap: 0.45rem;
+}
+.timeline-doenca__sublista li { display: flex; flex-direction: column; gap: 0.1rem; }
+.timeline-doenca__sublista a { font-size: 0.85rem; font-weight: 600; }
+.timeline-doenca__classe { font-size: 0.72rem; color: var(--texto-secundario); }
+
+@media (max-width: 640px) {
+  .timeline-doenca__decada { gap: 0.7rem; }
+  .timeline-doenca__decada-rotulo { min-width: 3rem; font-size: 0.95rem; }
+  .timeline-doenca__lista { padding-left: 1rem; }
+  .timeline-doenca__marco { padding-left: 1.1rem; }
+  .timeline-doenca__marcador { left: -1.32rem; }
+}
+
 /* --------------------------------------- cabeçalho dos documentos impressos
    O documento é do médico, não da plataforma: quem assina e responde pelo
    conteúdo é ele. Por isso o nome tem peso maior que a logo, e a logo entra
@@ -1808,6 +1909,7 @@
 .hoje-area__icone--geriatria { --area:#c4a7ed; }
 .hoje-area__icone--gestacao { --area:#f2a8bf; }
 .hoje-area__icone--oncologia { --area:#8cdbb3; }
+.hoje-area__icone--esporte { --area:#f0894f; }
 .hoje-area__numero { color: rgba(235,246,248,.55); font-family: var(--fonte-dados); font-size: .7rem; font-weight: 700; letter-spacing: .08em; }
 .hoje-area__contexto { color: #9de2e8; font-family: var(--fonte-dados); font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .hoje-area h4 { margin: .3rem 0 .45rem; color: #fff; font-size: clamp(1rem,1.35vw,1.16rem); line-height: 1.2; }

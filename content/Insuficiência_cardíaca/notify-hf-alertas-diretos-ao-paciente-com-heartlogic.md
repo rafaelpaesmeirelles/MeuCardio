@@ -4,6 +4,7 @@ slug: notify-hf-alertas-diretos-ao-paciente-com-heartlogic
 theme: "Insuficiência cardíaca"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42435023 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Assad J, Briggs NE, Lo S, et al. NOTIFY-HF: A Randomized Pilot Trial of Patient-Facing Alerts for Worsening Heart Failure Using Multiparameter Monitoring. JACC Heart Fail. 2026 Jul 21. DOI: 10.1016/j.jchf.2026.103184. PMID: 42435023."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária JACC Heart Failure/PubMed conferida nesta sessão."
 ---

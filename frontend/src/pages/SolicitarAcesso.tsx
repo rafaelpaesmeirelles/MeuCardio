@@ -30,6 +30,10 @@ export default function SolicitarAcesso() {
     council_name_other: "", council_state_other: "",
     specialty: "", professional_title: "", workplace_name: "", workplace_department: "",
     workplace_role: "", workplace_notes: "", include_workplace_on_documents: false,
+    // Opcional (tarefa #43, 08/08/2026): só entra se o médico digitar. Nunca
+    // buscado/adivinhado pelo sistema — é o próprio texto que vai pro
+    // backend, que normaliza (tira "@", valida caracteres).
+    instagram_handle: "",
     email: "", password: "",
   });
   const [erro, setErro] = useState("");
@@ -61,6 +65,7 @@ export default function SolicitarAcesso() {
         council_state: ehOutro ? null : dados.council_state,
         council_name_other: ehOutro ? dados.council_name_other.trim() : null,
         council_state_other: ehOutro ? dados.council_state_other.trim() : null,
+        instagram_handle: dados.instagram_handle.trim().replace(/^@/, "") || null,
       });
       setEnviado(true);
     } catch (e) {
@@ -183,6 +188,16 @@ export default function SolicitarAcesso() {
                  onChange={(e) => set("include_workplace_on_documents", e.target.checked)} />
           Incluir o local de trabalho em receitas e documentos
         </label>
+
+        <label htmlFor="instagram" style={{ marginTop: "0.8rem" }}>
+          Instagram <span className="eyebrow">(opcional)</span>
+        </label>
+        <input id="instagram" placeholder="@seu.usuario" value={dados.instagram_handle}
+               onChange={(e) => set("instagram_handle", e.target.value)} />
+        <p className="aviso" style={{ marginTop: "0.35rem", paddingTop: 0, borderTop: "none", fontSize: "0.78rem" }}>
+          Só se você quiser — usamos apenas para mostrar sua foto de perfil pública na tela de
+          boas-vindas. Nunca procuramos ou adivinhamos seu perfil por conta própria.
+        </p>
 
         <label htmlFor="email" style={{ marginTop: "0.8rem" }}>E-mail (será seu login)</label>
         <input id="email" type="email" value={dados.email} onChange={(e) => set("email", e.target.value)} />

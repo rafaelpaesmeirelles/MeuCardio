@@ -4,6 +4,7 @@ slug: albumina-preoperatoria-idosos-hipoalbuminemia-cirurgia-cardiaca-piloto-202
 theme: "Perioperatório"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 42441079 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Liu J, Chen S, Bai Y, et al. Preoperative Albumin Infusion Reduced Pulmonary Complications in Elderly Patients With Hypoalbuminemia Undergoing Cardiac Surgery: A Single-Center, Randomized, Double-Blind, Controlled Pilot Trial. MedComm (2020). 2026;7(7):e70840. DOI: 10.1002/mco2.70840. PMID: 42441079. PMCID: PMC13334133."]
 legacy_source: "Documento novo, 08/08/2026. Abstract primário conferido no PubMed/PMC nesta sessão."
 ---

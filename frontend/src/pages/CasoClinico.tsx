@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { api, ApiError } from "../lib/api";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Caso = {
   slug: string;
@@ -132,6 +133,8 @@ export default function CasoClinico() {
           </div>
         )}
       </div>
+
+      <TudoSobreEsteTema tema={caso.tema} excluirTipo="caso_clinico" excluirSlug={slug} />
     </div>
   );
 }

@@ -4,6 +4,7 @@ slug: master-dapt-dapt-abreviada-em-alto-risco-hemorragico
 theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude), pedido do Rafael: PMID 34449185 conferido no PubMed via E-utilities (esearch/esummary/efetch) -- titulo, revista, data e achado numerico principal batendo exatamente com o texto do documento. Checado contra o corpus para garantir que nao duplica achado ja publicado sob outro slug. Ver revisao completa registrada em CLAUDE.md."
 source_refs: ["Valgimigli M, Frigoli E, Heg D, et al. Dual Antiplatelet Therapy after PCI in Patients at High Bleeding Risk. N Engl J Med. 2021;385:1643-1655. DOI: 10.1056/NEJMoa2108749. PMID: 34449185. NCT03023020."]
 legacy_source: "Documento novo, ciclo landmark 08/08/2026. Fontes primárias NEJM e PubMed conferidas nesta sessão."
 ---

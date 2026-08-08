@@ -3,7 +3,8 @@ title: "AUGUSTUS: apixabana e retirada de aspirina após SCA ou PCI na fibrilaç
 slug: augustus-apixabana-sem-aspirina-apos-sca-ou-pci-na-fibrilacao-atrial
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Auditoria de publicacao 08/08/2026 (Grupo A/Claude): mesmo achado/estudo ja publicado sob o slug 'augustus-terapia-antitrombotica-apos-sca-ou-icp-na-fibrilacao-atrial', com dados numericos identicos verificados contra a fonte primaria (mesmo PMID/DOI). Duplicata real, nao publicar sob este slug -- ver revisao completa registrada em CLAUDE.md. Nao apagar: preservado para auditoria."
 source_refs: ["Lopes RD, Heizer G, Aronson R, et al. Antithrombotic Therapy after Acute Coronary Syndrome or PCI in Atrial Fibrillation. N Engl J Med. 2019;380:1509-1524. DOI: 10.1056/NEJMoa1817083. NCT02415400."]
 legacy_source: "Landmark antitrombótico priorizado em 08/08/2026. Fonte primária NEJM conferida nesta sessão."
 ---
