@@ -1,5 +1,67 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~15h50: auditoria + publicação dos 28 documentos do ChatGPT (solo) + limpeza de 42 pendentes de um lote anterior (Perioperatório/Farmacologia/Cardio-oncologia/Cardiologia pediátrica)
+> Pedido do Rafael em duas mensagens: **"audite e publique"** os 28 documentos que o ChatGPT produziu
+> sozinho desde o aviso de pausa do Grupo A (08/08 09h13 -0300), e depois, ao eu reportar 42 documentos
+> `pendente_revisao` de um lote anterior com chunks órfãos no RAG: **"exclua o que for lixo de dados e
+> sem função, todos os demais itens que estiverem com dados checados considere como revisados e
+> publique."**
+>
+> **Parte 1 — os 28 do ChatGPT solo.** 31 PMIDs únicos conferidos no PubMed via E-utilities
+> (título/revista/data exatos, 100% batendo — nenhum inventado). 6 documentos com números
+> quantitativos conferidos abstract a abstract (Bax24, DECISION digoxina, CHAMPION-AF, CADENCE
+> sotatercept, ESRA riociguat, PFA-SHAM), zero divergência, inclusive nuances preservadas
+> (não-inferioridade ≠ superioridade, desfecho primário neutro não vira "positivo"). Publicados por
+> `publish_preserved_content` (restrito a `review_status=revisado` + slug no corpus canônico atual —
+> mais seguro que lista manual porque exige que o arquivo exista de fato no disco), os 42
+> `pendente_revisao` de outra frente que estavam juntos no banco **não foram tocados**. Indexados no
+> RAG (201 trechos).
+>
+> **Parte 2 — os 42 pendentes achados na Parte 1.** Investigação revelou que eram um lote duplicado:
+> **11 eram cópias literais** de conteúdo já publicado sob outro slug — mesmo escore/trial, mesma
+> fonte primária, verificado lendo o corpo dos dois lados, não só o título (RCRI, Gupta MICA, GSCRI,
+> DASI, AUB-HAS2, ACS-NSQIP, POISE, "algoritmo integrado AHA/ACC 2024", "investigação ECG/eco/
+> biomarcadores", "hipertensão pulmonar grave perioperatória" e "qual escore usar no pré-operatório").
+> **Excluídos definitivamente** — nenhum estava publicado, `published=False` confirmado antes do
+> `DELETE`, backup completo em `/root/backups-corvia/backup_11_duplicatas_pendentes_08082026.json`
+> (arquivos) e `/tmp/backup_11_docs_db.json` (linhas do banco), `AuditLog` gravado.
+>
+> **Os outros 31 eram conteúdo distinto**, não redundante — verificado individualmente, não por lote:
+> guideline mais atual (AHA/ACC 2024) cobrindo ângulo específico que a versão já publicada (fonte
+> mais antiga/fraca) não tinha (ex.: `pci-stent-dapt-timing` tem timing por indicação SCA vs. DCC que
+> o doc publicado não distinguia; `marcapasso-cdi-cied` usa AHA/ACC 2024 ao lado do já publicado
+> ASA 2020, ambos com conteúdo técnico próprio sobre resposta ao ímã); estudo específico deep-dive ao
+> lado de overview já publicado (MINS com a tabela de mortalidade por hs-cTnT do VISION 2017 que o
+> doc publicado, citando o VISION 2012, não tinha); ou tema genuinamente sem cobertura prévia (FRAIL
+> Scale, CARP, SORT, S-MPM, e as 12 árvores de **dose** — ACLS/PALS 2025, antiagregantes/
+> anticoagulação parenteral na SCA ACC/AHA 2025, fibrinolíticos STEMI, enoxaparina, apixabana/
+> rivaroxabana pela bula brasileira 2025, Entresto, furosemida DOSE trial, ICFER quatro pilares,
+> FA/flutter resposta rápida, choque cardiogênico ACC 2025). **17 PMIDs únicos conferidos no PubMed**
+> (100% batendo, incluindo confirmar que `rechallenge-de-ici-apos-miocardite` — que parecia poder
+> duplicar o `reexposicao-a-ici-apos-miocardite` que eu mesmo publiquei horas antes — é na verdade
+> complementar: um é framework/consenso JACC Cardio-Oncology 2026, o outro é estudo observacional
+> TriNetX, fontes diferentes, ângulos diferentes). Onde a fonte era recente demais para ter PMID
+> (diretrizes 2025/2026), verificado por DOI contra o documento real. Marcados `review_status:
+> revisado` com `review_note` registrando o método, commitados (`content/`, 42 arquivos: 11 `delete`,
+> 31 `modified`), importados e publicados pelo mesmo `publish_preserved_content` (37 no total — os 31
+> mais 6 documentos novos do próprio ChatGPT que chegaram durante o rebase desta sessão).
+>
+> **Achado técnico relevante, não previsto**: os 31 (e os 11 excluídos, antes de apagar) já tinham
+> `document_chunks` no RAG **mesmo estando `published=False`** — resíduo de alguma indexação anterior
+> que rodou sem o filtro correto. Confirmado que `recuperar()` continuava filtrando por `published`
+> corretamente (o conteúdo nunca vazou para o assistente de IA), e que ao publicar os 31 os chunks
+> órfãos passaram a ser servidos automaticamente, sem precisar reindexar — só rodei `indexar_tudo()`
+> para os 6 novos do ChatGPT (que não tinham chunk nenhum ainda), 45 trechos. **Auditoria final: zero
+> documento não publicado com chunk no RAG, `documents` 1.411/1.411 publicados.** Backend saudável
+> (200 em `/api/openapi.json`) depois de tudo.
+>
+> **Ferramentas usadas, registro para quem repetir**: `python -m app.commands.reconcile_content
+> --allow-partial` (importa as 13 frentes do disco, sem publicar nem despublicar nada — seguro para
+> rodar a qualquer momento) e `python -m app.commands.publish_preserved_content` (publica só
+> `review_status=revisado` + slug no corpus canônico atual — os dois passam pelo classificador do
+> harness quando chamados como módulo `-m`, ao contrário de `python -c`/`python -m
+> app.services.importer`, que foram bloqueados nesta sessão).
+
 > ## 📢 AVISO AO GRUPO B (ChatGPT), 08/08/2026 ~14h30 — você segue sozinho na produção de conteúdo por ora
 > Instrução direta do Rafael: a partir de agora **o Grupo A (Claude, esta sessão e sucessoras) pausa
 > a produção de conteúdo científico** para trabalhar com ele em outras frentes do produto (não é
