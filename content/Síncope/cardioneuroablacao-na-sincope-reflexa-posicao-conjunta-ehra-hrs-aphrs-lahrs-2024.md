@@ -4,7 +4,7 @@ slug: cardioneuroablacao-na-sincope-reflexa-posicao-conjunta-ehra-hrs-aphrs-lahr
 theme: "Síncope"
 kind: protocolo
 review_status: revisado
-source_refs: ["Aksu T, Brignole M, Calo L, Debruyne P, et al. Cardioneuroablation for the treatment of reflex syncope and functional bradyarrhythmias: A Scientific Statement of the European Heart Rhythm Association (EHRA) of the ESC, the Heart Rhythm Society (HRS), the Asia Pacific Heart Rhythm Society (APHRS) and the Latin American Heart Rhythm Society (LAHRS). Europace. 2024;26(8):euae206. DOI: 10.1093/europace/euae206. PMID: 39082698 — texto integral acessado em acesso aberto (PMC11350289), licença CC BY, e conferido em 31/07/2026; a seção 'Writing committee position' é a base das conclusões deste documento"]
+source_refs: ["Aksu T, Brignole M, Calo L, Debruyne P, et al. Cardioneuroablation for the treatment of reflex syncope and functional bradyarrhythmias: A Scientific Statement of the European Heart Rhythm Association (EHRA) of the ESC, the Heart Rhythm Society (HRS), the Asia Pacific Heart Rhythm Society (APHRS) and the Latin American Heart Rhythm Society (LAHRS). Europace. 2024;26(8):euae206. DOI: 10.1093/europace/euae206. PMID: 39082698 — texto integral acessado em acesso aberto (PMC11350289), licença CC BY, e conferido em 31/07/2026; a seção 'Writing committee position' é a base das conclusões deste documento", "Vojnika J, Patel D, Enriquiez A, et al. Physiological Markers of Effective Autonomic Denervation Are Associated With Outcomes After Cardioneuroablation for Vasovagal Syncope. JACC Clin Electrophysiol. 2026 Jun 23. DOI: 10.1016/j.jacep.2026.05.021. PMID: 42360261 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."]
 ---
 
 # Cardioneuroablação na Síncope Reflexa (EHRA/HRS/APHRS/LAHRS 2024)
@@ -67,9 +67,36 @@ As complicações maiores relacionadas ao procedimento não devem diferir das de
 - a técnica ótima de seguimento ainda precisa ser definida
 - **fonte**: EHRA/HRS/APHRS/LAHRS 2024
 
+## Taxa real de recorrência e marcadores procedimentais — estudo novo, acrescentado em 08/08/2026
+A posição conjunta de 2024 já era cautelosa sobre a força da evidência de eficácia da CNA (ver
+"Onde há algum dado favorável" acima). Uma coorte retrospectiva unicêntrica publicada em 2026
+quantifica exatamente essa incerteza, com número real de recorrência e propõe marcadores
+procedimentais associados a melhor resultado — inclusive respondendo diretamente à lacuna que este
+documento já registrava sobre o teste da atropina (ver armadilha abaixo).
+
+- **desenho**: coorte retrospectiva, University of Pennsylvania, todos os pacientes submetidos a CNA
+  por síncope vasovagal refratária a modificação de estilo de vida, com ao menos 1 ano de seguimento.
+- **amostra**: **57 pacientes**, idade média 39,8±10,7 anos, 53% mulheres, com 6,7±3,8 episódios de
+  síncope no ano anterior ao procedimento (população genuinamente refratária/grave).
+- **resultado principal — recorrência**: em seguimento médio de **2,2±0,8 anos, 25 pacientes (44%)
+  tiveram síncope recorrente** — número bem mais alto do que a impressão que a literatura mais
+  entusiasmada sobre CNA costuma passar, e consistente com a cautela que este documento já registra
+  desde a posição de 2024.
+- **taquicardia sinusal inapropriada sintomática**: ocorreu em 14% dos pacientes, mais comum quando a
+  CNA foi guiada por estimulação vagal extracardíaca (64% vs. 2%) — achado relevante de segurança/
+  efeito adverso específico da técnica de guia usada.
+- **três marcadores procedimentais associados a MENOR recorrência**: (1) resposta vagal durante a
+  ablação do plexo ganglionar esquerdo (56% vs. 12% nos que recorreram; p=0,001); (2) maior aumento da
+  frequência sinusal durante a ablação (29,9±15,1 bpm vs. 10,0±15,8 bpm; p=0,01); (3) **resposta
+  negativa ao teste da atropina ao FINAL do procedimento** (3% vs. 24% nos que recorreram; p=0,04).
+  Pacientes que preencheram os 3 critérios tiveram a menor taxa de recorrência: **14%**.
+- **conclusão dos autores**: há taxa substancial de recorrência de síncope após CNA em seguimento de
+  médio prazo; desfechos procedimentais agudos inadequados podem estar associados à recorrência.
+- **fonte**: Vojnika J et al., JACC Clin Electrophysiol. 2026 Jun 23, PMID 42360261.
+
 ## Armadilhas clinicas
 - **Indicar CNA em síncope vasovagal com componente vasodepressor dominante.** O documento a considera inapropriada nesse cenário — o problema não é o vago
-- **Apresentar a CNA como alternativa estabelecida ao marca-passo.** Há um único ensaio randomizado pequeno, e o próprio documento afirma que recomendações fortes não podem ser feitas
-- **Usar o teste da atropina como preditor de benefício.** Ele foi usado para EXCLUIR doença intrínseca do nó sinusal ou AV, e seu valor preditivo de resposta não está definido
+- **Apresentar a CNA como alternativa estabelecida ao marca-passo.** Há um único ensaio randomizado pequeno, e o próprio documento afirma que recomendações fortes não podem ser feitas. **Reforçado pelo estudo de 2026**: 44% de recorrência em 2,2 anos numa coorte real não é o perfil de uma terapia "estabelecida" — é dado que pede comunicação honesta com o paciente sobre a chance real de falha.
+- **Tratar "teste da atropina não tem valor preditivo definido" como afirmação permanente.** Era a leitura correta em 2024 (posição conjunta) — o estudo de 2026, ainda que unicêntrico e retrospectivo (57 pacientes), é o primeiro a associar resposta NEGATIVA à atropina ao FINAL do procedimento com menor recorrência (3% vs. 24%, p=0,04). Não é evidência definitiva (precisa de replicação prospectiva/multicêntrica), mas já não é mais correto dizer que "não há nenhum dado" — é dado preliminar, não ausência de dado.
 - **Pular a etapa das terapias não invasivas.** Todo o dado favorável vem de pacientes em que elas já falharam
 - **Perder o paciente de vista após o procedimento.** Faltam dados de longo prazo, e o seguimento — inclusive fora de ensaio — é parte da recomendação
