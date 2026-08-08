@@ -1,5 +1,43 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026 ~00h: Admin cadastra pré-autorização de convidado (nome/e-mail + escolha de CorvIA Mail)
+> Extensão do mecanismo de pré-autorização de convidado: Rafael pediu uma opção no menu
+> Administração (só admin) para cadastrar a pré-autorização de um novo convidado por **nome
+> completo e/ou e-mail pessoal** (antes só dava por e-mail, e só via container exec — não havia
+> UI), escolhendo se **aquele convidado específico** terá acesso ao CorvIA Mail ou não.
+>
+> `convidados_pre_autorizados` (migração `f6dn20260808`): `email` virou opcional (continua único
+> quando presente), `nome_completo` novo, `incluir_corvia_mail` novo (default `True` — preserva o
+> comportamento de quem já usava o caminho antigo). CHECK no banco garante `email` OU
+> `nome_completo` preenchido. `users.convidado_plano_preferido` guarda o plano
+> (`PLANO_BASICO`/`PLANO_COMPLETO`) escolhido na pré-autorização, gravado no cadastro quando casa;
+> `criar_checkout()` lê esse campo em vez do `PLANO_COMPLETO` fixo que valia antes — `None`
+> (convidado marcado direto pelo toggle do admin, sem pré-autorização) continua caindo em
+> `PLANO_COMPLETO`, zero mudança de comportamento pra quem já usava esse caminho.
+>
+> `solicitar_acesso()` casa primeiro por e-mail (critério preferido, mais confiável), e só na
+> ausência de match tenta por nome completo normalizado (`normalize_search_text`, mesmo helper já
+> usado na busca da biblioteca) — o admin nem sempre sabe de antemão qual e-mail a pessoa vai
+> escolher no cadastro.
+>
+> **`POST/GET/DELETE /api/admin/convidados-pre-autorizados`** — criar exige pelo menos um
+> identificador; revogar só funciona enquanto ainda não usada (uma já consumida virou histórico de
+> conta real). Tela nova em `Admin.tsx` (`PreAutorizacoesConvidado`), formulário + lista de
+> pendentes (com botão revogar) e já usadas.
+>
+> **Verificado**: `tsc --noEmit` limpo, migração aplicada em produção (conferido que a linha já
+> existente do Dr. Márcio Peixoto sobreviveu intacta, `incluir_corvia_mail=True`), backend e
+> frontend rebuildados, bundle novo confirmado no Caddy (grep de `convidados-pre-autorizados` e
+> "Pré-autorizações de convidado" nos assets servidos). Backend saudável (200 em
+> `/api/openapi.json` e `/`) depois do rebuild.
+>
+> **Também nesta rodada — tarefa #46 (código promocional)**: `allow_promotion_codes=True` nas duas
+> Checkout Sessions (assinatura principal e add-on CorvIA Mail) — o cupom em si é criado/gerenciado
+> pelo Rafael no painel Stripe, isto só habilita o campo na tela de pagamento. **Tarefa #44
+> (alterar forma de pagamento) já estava coberta**: `POST /billing/portal` (Stripe Customer Portal)
+> já existe e já está exposto em Minha Conta ("Gerenciar assinatura" — troca cartão, baixa recibos,
+> cancela) — conferido, nenhum código novo necessário.
+
 > ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~23h50: auditoria de publicação — revisão de todo o conteúdo pendente (Grupo A/Claude + ChatGPT/Grupo B)
 > Pedido literal do Rafael: **"revise, considere revisado e publique todo o conteudo cientifico
 > produzido por ti e pelo chat gpt ate agora, chat gpt segue trabalhando."** Método seguido: o já
