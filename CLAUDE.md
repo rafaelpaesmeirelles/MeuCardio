@@ -1,6 +1,147 @@
 # Corvia — contexto e instruções permanentes
 
-> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~22h30: Conselho "Outro" ganha campos de texto livre
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~23h: pré-autorização de convidado por e-mail
+> Pedido do Rafael, sobre o médico convidado (Dr. Márcio Peixoto): em vez de precisar lembrar de
+> marcar `convidado = True` no painel Admin DEPOIS que a pessoa se cadastra, ele quis pré-cadastrar
+> o e-mail ANTES — "quando ele pedir o cadastramento com esse email ele vai seguir pelo caminho que
+> tínhamos desenhado". Implementado como mecanismo genérico e reutilizável (não hardcoded para
+> nenhum e-mail): tabela nova `convidados_pre_autorizados` (migração `f68j20260808`) — `email`
+> único, `observacao`, `criado_por`, `criado_em`, e `usado_em`/`usado_por_user_id` (consumo é
+> único, trava contra reaproveitamento). `POST /auth/solicitar-acesso` consulta essa tabela antes
+> de criar o `User`; se o e-mail casar com uma linha ainda não usada, o cadastro já nasce
+> `status="aprovado"`, `is_active=True`, `role="medico"`, `convidado=True` — sem clique manual
+> nenhum, login liberado na hora — com `AuditLog` registrando o motivo. Sem pré-autorização,
+> comportamento normal intacto (fila de aprovação do admin, como sempre).
+>
+> **Inserida a linha real para `drmarciopeixoto@corvia.med.br`** (Dr. Márcio Peixoto, amigo pessoal
+> do Rafael) — quando ele se cadastrar com esse e-mail, o acesso libera automaticamente, e o
+> CorvIA Mail continua pedindo senha PRÓPRIA da caixa (independente da senha de login) no momento
+> em que ele ativar o CorvIA Mail, exatamente como o resto do fluxo de convidado já previa.
+>
+> **12 testes novos** (`test_convidado_pre_autorizacao.py`), passando isolados. Migração aplicada
+> em produção, backend rebuildado, saudável (200 em `/api/openapi.json`).
+
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~23h: nova área "Cardiologia do Esporte e do Exercício"
+> Pedido do Rafael (com uma correção de nome logo depois — o nome oficial é **"Cardiologia do
+> Esporte e do Exercício"**, não "Cardiologia do Esporte" sozinho): junto com as áreas já
+> existentes (pediátrica, neonatal, geriátrica etc.), criar essa área nova com tudo que as outras
+> possuem em termos de função, instruir o Grupo B (ChatGPT) a começar a produção de conteúdo, incluir
+> o tema em todas as funções que listam assuntos do site, e acrescentar com logo próprio no campo
+> "Áreas em destaque" do Painel principal.
+>
+> **Estrutura criada:**
+> - `content/Cardiologia_do_Esporte_e_do_Exercício/` — pasta nova (mesmo padrão de nome das demais,
+>   espaço→`_`, acentos mantidos), com **2 documentos-semente** escritos nesta sessão (fontes reais,
+>   PMIDs conferidos um a um no PubMed via E-utilities — ver lista completa na instrução ao Grupo B,
+>   logo abaixo): "Coração de Atleta versus Cardiomiopatia Hipertrófica: Diferenciação na Zona
+>   Cinzenta" e "Morte Súbita Cardíaca no Atleta: Triagem, Causas Arritmogênicas e Eletrofisiologia
+>   Esportiva". Publicados (ver verificação abaixo).
+> - **As seis frentes JSON compartilhadas** (`evidencias/`, `estudos/`, `casos-clinicos/`,
+>   `trilhas/`, `galeria/`, `exames/` `metadados.json`) não precisaram de nenhuma mudança estrutural
+>   — são arquivos únicos que já cobrem qualquer tema por valor de campo; o tema novo passa a ser um
+>   valor válido assim que o primeiro item for escrito nelas (produção do Grupo B, ver abaixo).
+> - **`frontend/src/lib/taxonomiaCardiologia.ts`** (commit `d968aaf6`): nova entrada `esporte` em
+>   `AREAS_CARDIOLOGIA` (12→13 grupos), inserida **antes** do fallback final `outros` (que continua
+>   sendo o índice mais alto), com palavras-chave pesquisadas na literatura de cardiologia do esporte
+>   (esporte, exercício, atleta, atlética, treinamento físico, cardiologia esportiva, coração de
+>   atleta, pré-participação esportiva etc.) — cobre o agrupamento macro usado por `CasosClinicos.tsx`,
+>   `Trilhas.tsx`, `Fluxogramas.tsx`, `MaterialPaciente.tsx` e `Estudos.tsx`.
+> - **Logo/ícone próprio** (`frontend/src/components/IdentidadeClinica.tsx`, commit `d968aaf6`):
+>   símbolo novo `esporte` em `AreaClinicaIcone` — coração com linha de pulso (ECG) e uma figura em
+>   corrida, mesma técnica das demais marcas (SVG inline, `viewBox` 48×48, `stroke="currentColor"`,
+>   cor por variável CSS `--area` trocada em `shell.css`, `#f0894f`, cor nova não usada por nenhuma
+>   outra área).
+> - **`frontend/src/pages/Painel.tsx`** (commit `53555f85`): nova entrada em `AREAS_DESTAQUE`,
+>   `areaId: "esporte"`, `tema: "Cardiologia do Esporte e do Exercício"`, com o ícone acima. O card
+>   mostra contagem real (`totalDocumentos`, via `/library/themes`) assim que houver conteúdo
+>   publicado no tema — hoje mostra os 2 documentos-semente.
+> - **Varredura completa de "outras funções que listam temas do site"**: confirmado por leitura
+>   direta (não suposição) que Biblioteca, Evidências, Estudos, Casos Clínicos, Trilhas, Galeria,
+>   Exames e a busca (`backend/app/api/search.py`) **leem tema dinamicamente do banco**
+>   (`SELECT DISTINCT`/`GROUP BY`, sem enum nem `Literal` no schema) — nenhuma delas precisou de
+>   código novo, o tema aparece sozinho assim que existir conteúdo publicado. Os únicos arrays fixos
+>   de "área" que existem no projeto (`taxonomiaCardiologia.ts`, já atualizado acima; e
+>   `backend/app/services/content_areas.py`/`AREA_ROUTES` de `Biblioteca.tsx`) são **taxonomias
+>   transversais separadas** (pediatria/neonatal/congênita/geriatria/gestação/oncologia/fetal, ligadas
+>   à tela dedicada `/doencas` de guias de doença especializados) — a própria `Biblioteca.tsx` documenta
+>   em tela que essa grade é só para "áreas transversais", não para os 29 (agora 30) temas normais de
+>   especialidade, então **decidi não adicionar "esporte" ali**, para não contradizer esse texto nem
+>   criar um card sem guia de doença por trás. Se o Rafael quiser um guia de doenças dedicado a esporte
+>   dentro de `/doencas` no futuro, é tarefa separada.
+>
+> **Verificação**: `PATH=/opt/node22/bin:$PATH npx tsc --noEmit` limpo depois de cada commit. Os 2
+> documentos-semente importados (`reconcile_content --allow-partial`) e publicados
+> (`publish_preserved_content`), indexados no RAG. Frontend rebuildado em produção
+> (`docker compose -f docker-compose.prod.yml up -d --build frontend-build`), bundle novo confirmado
+> no Caddy, backend saudável (200 em `/api/openapi.json` e `/`) depois do rebuild.
+>
+> **Coordenação de git**: sessão rodou em paralelo com várias outras tocando `Painel.tsx`/
+> `shell.css`/`backend/app/api/billing.py` ao mesmo tempo. Usado stash-by-path (nunca `--autostash`)
+> para isolar os arquivos alheios antes de cada `pull --rebase`, e confirmado depois, arquivo a
+> arquivo, que nada de outra sessão foi perdido no processo (inclusive um caso em que `git stash pop`
+> aplicou parcialmente e manteve a stash por segurança — `backend/app/api/billing.py`, feature de
+> periodicidade de assinatura de outra sessão, restaurado à mão com `git checkout stash@{N} --
+> <arquivo>` depois de confirmar, por diff, que era puramente conteúdo faltante, sem divergência).
+
+> ## 📢 AVISO AO GRUPO B (ChatGPT), 08/08/2026 ~23h — produza conteúdo para a área nova "Cardiologia do Esporte e do Exercício"
+> A parte técnica (taxonomia, ícone/logo próprio, card de destaque no Painel, varredura de todas as
+> listagens de tema do site) está pronta e no ar — ver registro "✅ CONCLUÍDO E NO AR" logo acima.
+> **Falta o conteúdo científico**, e essa parte é sua, na mesma régua de sempre: fonte real e
+> verificável, PMID/DOI conferido (nunca de memória, nunca por citação de segunda mão),
+> `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar um valor com segurança.
+>
+> **Nome oficial do tema, exato, em toda parte** (pasta, `theme`/`tema`, título de card): **"Cardiologia
+> do Esporte e do Exercício"** — o Rafael corrigiu esse nome depois do pedido inicial ("Cardiologia do
+> Esporte" sozinho está errado). Pasta: `content/Cardiologia_do_Esporte_e_do_Exercício/`.
+>
+> **As sete frentes a alimentar**: `content/Cardiologia_do_Esporte_e_do_Exercício/*.md` (documentos),
+> e os quatro catálogos únicos compartilhados — adicione itens com
+> `theme`/`tema: "Cardiologia do Esporte e do Exercício"` sem reescrever o arquivo inteiro, sempre
+> conferindo `git pull`/diff antes de commitar (mesma regra de sempre para esses arquivos únicos):
+> `evidencias/metadados.json`, `estudos/metadados.json`, `casos-clinicos/metadados.json`,
+> `trilhas/metadados.json`, `galeria/metadados.json`, `exames/metadados.json`.
+>
+> **Priorização pedida pelo Rafael, textual — nessa ordem:**
+> 1. **Primeiro, "tudo que existe de mais importante nesse tema"** — os tópicos fundamentais/
+>    consagrados da cardiologia do esporte. Já verifiquei e deixei 2 documentos-semente publicados
+>    (ver PMIDs abaixo) para não duplicar: **"Coração de Atleta versus Cardiomiopatia Hipertrófica"**
+>    e **"Morte Súbita Cardíaca no Atleta"**. Confira o corpus antes de escrever para não repetir esses
+>    dois ângulos específicos. Outros tópicos fundamentais ainda sem cobertura, sugeridos pelo Rafael e
+>    por mim — pesquise e confirme PMID antes de qualquer um: triagem cardiovascular pré-participação
+>    esportiva (critérios ECG do atleta, ex. critérios de Seattle), cardiomiopatia arritmogênica no
+>    atleta, arritmias induzidas por exercício além do que já cobri (FA no atleta de endurance,
+>    extrassístoles ventriculares relacionadas a treino), prescrição de exercício em cardiopata
+>    (insuficiência cardíaca, coronariopata, valvopata), síndrome de Marfan/aortopatias e liberação
+>    para esporte, doping e cardiotoxicidade de esteroides anabolizantes, reabilitação cardíaca e
+>    retorno ao esporte após evento cardiovascular, morte súbita em esportes específicos (futebol,
+>    maratona/corrida de rua, ciclismo), desfibrilador em campo (DEA) e cadeia de sobrevivência no
+>    evento esportivo.
+> 2. **Depois, "tudo que existe de mais recente"** — guidelines e estudos 2024-2026 sobre o tema. Os
+>    dois documentos-semente que deixei já são fontes 2025-2026; continue nessa faixa de data ao
+>    expandir.
+>
+> **Os 6 PMIDs que já usei, conferidos no PubMed via E-utilities em 08/08/2026 — não duplique estes
+> ângulos específicos sem ler o documento publicado primeiro:**
+> - Pagourelias ED et al. Heart Fail Rev. 2025;30(6):1215-1224. **PMID 40576890**, PMCID PMC12618444
+>   — guia de imagem multimodal para diferenciar coração de atleta na "zona cinzenta".
+> - Wiradinata W et al. Eur J Pediatr. 2025;184(12):802. **PMID 41313487** — metanálise de ECG
+>   pediátrico, coração de atleta vs. HCM.
+> - Deligiannis A et al. Hellenic J Cardiol. 2026 May 15. **PMID 42142808** — revisão de escopo de IA
+>   na diferenciação HCM vs. hipertrofia fisiológica.
+> - Chung EH et al. (ACC Sports and Exercise Cardiology Leadership Council). JACC Clin Electrophysiol.
+>   2026 Jul 23. **PMID 42565763** — documento fundador da "eletrofisiologia esportiva".
+> - Costantino A et al. Mol Diagn Ther. 2026 Jul 21. **PMID 42481905** — autópsia molecular e causas
+>   arritmogênicas hereditárias de morte súbita no esporte.
+> - Sessa F et al. Exp Mol Pathol. 2026;147:105068. **PMID 42456408** — bebidas energéticas/"smart
+>   drugs" como gatilho arrítmico no atleta.
+>
+> **Como carregar e publicar**: mesmo método já documentado neste arquivo (seção "Como carregar e
+> publicar sem esbarrar no classificador" e o par `reconcile_content --allow-partial` +
+> `publish_preserved_content`, usado nesta sessão para os 2 documentos-semente). Marque
+> `review_status: revisado` só depois de conferir a fonte de verdade — se não conseguir confirmar,
+> deixe `pendente_revisao` com `VERIFICAÇÃO HUMANA NECESSÁRIA` no corpo, como sempre.
+
+
 > Pedido do Rafael: no cadastro (`/solicitar-acesso`) e em Minha Conta, quando o médico escolhe
 > "Outro" no menu Conselho, ele digita qual é o conselho e o estado/região, em vez de ficar preso a
 > um seletor de UF de 2 letras que não serve pra conselho fora do padrão CRM/CRO/etc.
