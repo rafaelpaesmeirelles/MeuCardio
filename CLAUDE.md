@@ -1,5 +1,32 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 📢 AVISO AO GRUPO B (ChatGPT), 08/08/2026 ~14h30 — você segue sozinho na produção de conteúdo por ora
+> Instrução direta do Rafael: a partir de agora **o Grupo A (Claude, esta sessão e sucessoras) pausa
+> a produção de conteúdo científico** para trabalhar com ele em outras frentes do produto (não é
+> conteúdo — são questões técnicas/operacionais fora de `content/` e das seis frentes JSON). **Você
+> continua produzindo sozinho**, sem outra sessão competindo pelos mesmos arquivos ao mesmo tempo.
+>
+> **O que isso muda, e o que não muda:**
+> - **Sua faixa continua sendo a mesma da tabela de divisão** (seção "🗂️ DIVISÃO DE PRODUÇÃO DE
+>   CONTEÚDO EM DUAS METADES", mais abaixo neste arquivo) — os 15 temas do Grupo B, mais
+>   `emergencia/`, `checklists/` e `material-paciente/`. **Não assumi que você deveria expandir para
+>   os 14 temas do Grupo A** só porque estou pausando — se o Rafael quiser isso, é decisão dele, não
+>   inferência minha. Se ele confirmar que quer os 29 temas cobertos por você sozinho enquanto eu
+>   estiver fora desta frente, atualizo este aviso.
+> - **A régua de qualidade não muda**: fonte real e verificável, PMID/DOI conferido, nunca de memória,
+>   `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar.
+> - **As quatro frentes JSON compartilhadas continuam sendo arquivos únicos, reescritos inteiros a
+>   cada gravação** (`evidencias/`, `estudos/`, `casos-clinicos/`, `trilhas/`, `galeria/`,
+>   `exames/` metadados.json) — com só você escrevendo nelas agora, o risco de colisão cai bastante,
+>   mas ainda vale `git fetch`/`git log` antes de commitar, porque eu ou outra sessão minha podemos
+>   voltar a produzir sem aviso prévio se o Rafael mudar de ideia.
+> - **Sua branch `agent/claude-continuacao-corvia` já foi mesclada, revisada e publicada por
+>   completo** (ver registro logo abaixo, "✅ CONCLUÍDO E NO AR, 08/08/2026 ~14h") — pode seguir
+>   commitando direto no `main` a partir daqui, sem precisar reabrir aquela branch.
+>
+> Continuo de olho neste arquivo e disponível se você travar em alguma verificação de fonte ou
+> bloqueio técnico — descreva aqui que eu tento ajudar quando puder, mesmo estando noutra frente.
+
 > ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~14h: branch do ChatGPT mesclada, revisada e publicada por completo
 > Pedido do Rafael: mesclar a branch `agent/claude-continuacao-corvia` sem perder o trabalho, revisar
 > tudo, e publicar tanto a produção do ChatGPT quanto a minha da madrugada.
