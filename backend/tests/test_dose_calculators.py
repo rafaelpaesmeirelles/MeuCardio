@@ -15,15 +15,29 @@ demais) antes de escrever o teste — não o inverso.
 from app.services import calculators as calc
 
 
-def test_registro_tem_as_nove_calculadoras_de_dose():
+def test_registro_tem_pelo_menos_as_nove_calculadoras_de_dose_originais():
+    """As 9 originais (07/08/2026) nunca deveriam sumir do registro, mas o
+    total só cresce — produção contínua (ChatGPT/Grupo B) já acrescentou
+    árvores de dose novas (ACLS/PALS 2025, antiagregantes e anticoagulação
+    na SCA, fibrinolíticos, bulas brasileiras) em temas que não existiam em
+    07/08. Fixar `== 9` deixava o teste furado a cada calculadora nova
+    legítima — por isso a checagem vira "nunca encolhe" e "os slugs
+    originais continuam existindo", não uma contagem exata."""
     doses = [c for c in calc.REGISTRY.values() if c.kind == "dose"]
-    assert len(doses) == 9
+    assert len(doses) >= 9
     areas = {c.theme for c in doses}
-    assert areas == {
+    assert areas.issuperset({
         "Doses — Cardiologia Geral",
         "Doses — Cardiologia Pediátrica",
         "Doses — Medicina Intensiva",
+    })
+    slugs_originais = {
+        "infusao-continua-peso", "heparina-nao-fracionada-nomograma",
+        "enoxaparina-dose", "digoxina-dose", "adrenalina-pcr-pediatrica",
+        "amiodarona-pcr-pediatrica", "choque-eletrico-pediatrico",
+        "adenosina-tsv-pediatrica", "atropina-bradicardia-pediatrica",
     }
+    assert slugs_originais.issubset({c.slug for c in doses})
 
 
 def test_infusao_noradrenalina_peso_ajustada():
@@ -106,9 +120,13 @@ def test_digoxina_manutencao_reduzida_na_disfuncao_renal():
 
 def test_adrenalina_pcr_pediatrica_dose_e_volume():
     # 0,01 mg/kg × 20 kg = 0,2 mg; diluição 1:10.000 (0,1 mg/mL) => 2 mL.
+    # PALS 2025 (dose_calculators_pals2025_chatgpt.py, substituiu a versão
+    # PALS 2020 pelo mesmo slug, 08/08/2026): o campo de volume ganhou o
+    # nome `volume_ml_0_1mg_ml`, deixando a concentração explícita na
+    # própria chave em vez de só no texto interpretativo.
     r = calc.run("adrenalina-pcr-pediatrica", {"peso": 20})
     assert r["result"]["dose_mg"] == 0.2
-    assert r["result"]["volume_ml"] == 2.0
+    assert r["result"]["volume_ml_0_1mg_ml"] == 2.0
 
 
 def test_adrenalina_pcr_pediatrica_respeita_teto_de_1mg():
@@ -117,22 +135,36 @@ def test_adrenalina_pcr_pediatrica_respeita_teto_de_1mg():
 
 
 def test_amiodarona_pcr_pediatrica():
-    r = calc.run("amiodarona-pcr-pediatrica", {"peso": 20})
+    # PALS 2025 substituiu o teto diário único (15 mg/kg/dia) por um teto
+    # POR DOSE, diferente na 1ª (300 mg) e nas subsequentes (150 mg) — por
+    # isso `numero_dose` passou a ser obrigatório e `dose_mg_maxima_dia`
+    # não existe mais.
+    r = calc.run("amiodarona-pcr-pediatrica", {"peso": 20, "numero_dose": 1})
     assert r["result"]["dose_mg"] == 100.0  # 5 × 20
-    assert r["result"]["dose_mg_maxima_dia"] == 300.0  # 15 × 20
+    assert r["result"]["teto_desta_dose_mg"] == 300.0
+
+    r2 = calc.run("amiodarona-pcr-pediatrica", {"peso": 40, "numero_dose": 2})
+    assert r2["result"]["dose_mg"] == 150.0  # 5 × 40 = 200, capado em 150
+    assert r2["result"]["teto_desta_dose_mg"] == 150.0
 
 
 def test_choque_pediatrico_desfibrilacao():
+    # PALS 2025 renomeou as chaves do resultado (primeiro_j/segundo_j/
+    # subsequente_min_j/teto_peso_j, no lugar de primeira/subsequente/teto)
+    # e passou a distinguir 1º e 2º choque, além do piso dos subsequentes.
     r = calc.run("choque-eletrico-pediatrico", {"peso": 20, "tipo": "desfibrilacao"})
-    assert r["result"]["primeira"] == 40.0  # 2 J/kg
-    assert r["result"]["subsequente"] == 80.0  # 4 J/kg
-    assert r["result"]["teto"] == 200.0  # 10 J/kg
+    assert r["result"]["primeiro_j"] == 40.0  # 2 J/kg
+    assert r["result"]["segundo_j"] == 80.0  # 4 J/kg
+    assert r["result"]["subsequente_min_j"] == 80.0  # ≥4 J/kg
+    assert r["result"]["teto_peso_j"] == 200.0  # 10 J/kg
 
 
 def test_choque_pediatrico_cardioversao():
     r = calc.run("choque-eletrico-pediatrico", {"peso": 20, "tipo": "cardioversao"})
-    assert r["result"]["subsequente"] == 40.0  # 2 J/kg
-    assert "10.0–20.0 J" in r["interpretation"]  # faixa 0,5-1 J/kg
+    assert r["result"]["primeiro_min_j"] == 10.0  # 0,5 J/kg
+    assert r["result"]["primeiro_max_j"] == 20.0  # 1 J/kg
+    assert r["result"]["segundo_j"] == 40.0  # 2 J/kg
+    assert "10.0-20.0 J" in r["interpretation"]  # faixa 0,5-1 J/kg
 
 
 def test_adenosina_pediatrica_respeita_teto_por_dose():

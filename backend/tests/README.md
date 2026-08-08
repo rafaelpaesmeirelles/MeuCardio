@@ -2,16 +2,28 @@
 
 Exigem um Postgres 16 real com a extensão `pgvector` e o esquema em dia
 (`alembic upgrade head`) — não usam `create_all` de propósito, para testar
-contra o mesmo schema que a migração real produz.
+contra o mesmo schema que a migração real produz. `test_readiness.py`
+também precisa de um Redis real (só ele — os outros ~760 testes não).
 
-## Banco local, uma vez
+**Se este servidor já roda o `docker-compose.prod.yml` de produção**, o
+Postgres/Redis de produção já ocupam as portas padrão (5432/6379) via
+`docker-proxy` em `127.0.0.1`. Não tente reusá-los para teste — o cluster
+local de teste abaixo nasce em portas diferentes (`postgresql-common`
+resolve isso sozinho pro Postgres; para o Redis, a porta alternativa é
+explícita no comando). **Nunca aponte os testes para o banco/Redis de
+produção** — `_banco_limpo` faz `TRUNCATE ... CASCADE` antes de cada teste.
+
+## Banco e Redis locais, uma vez
 
 ```bash
-apt-get install -y postgresql-16-pgvector
+apt-get install -y postgresql-16-pgvector redis-server
 service postgresql start
 sudo -u postgres psql -c "CREATE USER meucardio_test WITH PASSWORD 'test' SUPERUSER;"
 sudo -u postgres psql -c "CREATE DATABASE meucardio_test OWNER meucardio_test;"
 sudo -u postgres psql -d meucardio_test -c "CREATE EXTENSION IF NOT EXISTS vector;"
+pg_lsclusters   # confirme a porta real do cluster novo (5433 se 5432 já estiver ocupado)
+
+redis-server --port 6380 --daemonize yes --bind 127.0.0.1 --logfile /var/log/redis-test.log
 ```
 
 ## Rodar
@@ -19,12 +31,21 @@ sudo -u postgres psql -d meucardio_test -c "CREATE EXTENSION IF NOT EXISTS vecto
 ```bash
 cd backend
 pip install -r requirements-dev.txt
-POSTGRES_HOST=localhost POSTGRES_USER=meucardio_test POSTGRES_PASSWORD=test \
-POSTGRES_DB=meucardio_test STORAGE_ENCRYPTION_KEY=$(python3 -c "import os,base64;print(base64.b64encode(os.urandom(32)).decode())") \
+POSTGRES_HOST=localhost POSTGRES_PORT=5433 POSTGRES_USER=meucardio_test POSTGRES_PASSWORD=test \
+POSTGRES_DB=meucardio_test REDIS_URL=redis://127.0.0.1:6380/0 \
+STORAGE_ENCRYPTION_KEY=$(python3 -c "import os,base64;print(base64.b64encode(os.urandom(32)).decode())") \
 alembic upgrade head
 
+POSTGRES_HOST=localhost POSTGRES_PORT=5433 POSTGRES_USER=meucardio_test POSTGRES_PASSWORD=test \
+POSTGRES_DB=meucardio_test REDIS_URL=redis://127.0.0.1:6380/0 \
 python3 -m pytest tests/ -v
 ```
+
+Ajuste `POSTGRES_PORT` para o que `pg_lsclusters` mostrou (5433 é o valor
+observado nesta sessão, 08/08/2026, com produção ocupando 5432). Sem
+`REDIS_URL` explícito, `test_readiness.py::test_readiness_checks_database_and_redis`
+falha sozinho (Redis indisponível) — os demais ~760 testes não dependem
+dele e passam normalmente mesmo sem essa variável.
 
 `tests/conftest.py` já define o resto das variáveis de ambiente necessárias
 (Mail360, Stripe, JWT) com valores dublê — nenhum teste sai para a rede;
