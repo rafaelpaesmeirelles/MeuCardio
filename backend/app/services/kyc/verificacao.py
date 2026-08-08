@@ -105,6 +105,22 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
         registro.status = "liberado_sem_checagem"
         registro.liberado_em = datetime.now(timezone.utc)
 
+    # Médico convidado (08/08/2026, pedido do Rafael) — aprovação DEFINITIVA
+    # automática, não apenas liberação provisória. Só entra aqui quem ainda
+    # ficou em "aguardando_revisao" acima (o caso normal do CRM hoje, porque
+    # a checagem do CFM ainda não tem credencial — cai em STATUS_ERRO_CHECAGEM,
+    # nenhum dos dois ramos acima). Decisão explícita do Rafael de dispensar
+    # a revisão manual só para conta marcada `convidado`, nunca em geral.
+    if user.convidado and registro.status == "aguardando_revisao":
+        registro.status = "aprovado"
+        registro.liberado_em = datetime.now(timezone.utc)
+        registro.aprovado_em = datetime.now(timezone.utc)
+        registro.aprovado_por = None
+        registro.nota_revisao = (
+            "Aprovação automática — conta marcada como convidado (checagem do CFM "
+            "ainda não disponível; revisão manual dispensada por decisão do Rafael)."
+        )
+
     for nome_antigo in arquivos_antigos:
         if nome_antigo:
             cofre.apagar(nome_antigo, raiz=raiz)

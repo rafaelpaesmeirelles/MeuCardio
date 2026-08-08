@@ -59,6 +59,7 @@ export default function Assinatura() {
   const [processando, setProcessando] = useState<string | null>(null);
   const [status, setStatus] = useState<StatusAssinatura | null>(null);
   const [erro, setErro] = useState("");
+  const [mensagemConvidado, setMensagemConvidado] = useState("");
 
   useEffect(() => {
     api
@@ -72,8 +73,19 @@ export default function Assinatura() {
     setProcessando(planoId);
     setErro("");
     try {
-      const { checkout_url } = await api.post<{ checkout_url: string }>(`/billing/checkout?plano=${planoId}`);
-      window.location.assign(checkout_url);
+      const resultado = await api.post<{ checkout_url: string | null; convidado?: boolean; mensagem?: string }>(
+        `/billing/checkout?plano=${planoId}`
+      );
+      if (resultado.convidado) {
+        // Médico convidado (08/08/2026): sem Stripe, a assinatura já foi
+        // liberada no servidor — só recarrega o status em vez de redirecionar.
+        setMensagemConvidado(resultado.mensagem || "Médico Convidado — Acesso Completo Liberado.");
+        const novoStatus = await api.get<StatusAssinatura>("/billing/status");
+        setStatus(novoStatus);
+        setProcessando(null);
+        return;
+      }
+      window.location.assign(resultado.checkout_url as string);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar o pagamento.");
       setProcessando(null);
@@ -90,6 +102,16 @@ export default function Assinatura() {
         <p>Carregando…</p>
       ) : (
         <>
+          {mensagemConvidado && (
+            <div className="cartao cartao--clinico" style={{ maxWidth: "560px", marginBottom: "1rem", borderLeftColor: "var(--sucesso)" }}>
+              <p className="eyebrow" style={{ color: "var(--sucesso)" }}>Médico Convidado</p>
+              <p style={{ margin: 0, fontWeight: 700 }}>{mensagemConvidado}</p>
+              <p style={{ margin: "0.4rem 0 0", fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
+                Nenhuma cobrança foi feita. Seu acesso já está liberado.
+              </p>
+            </div>
+          )}
+
           <div className="cartao" style={{ maxWidth: "560px", marginBottom: "1.5rem" }}>
             <p>
               Status atual: <strong>{status ? ROTULOS[status.status] ?? status.status : "—"}</strong>

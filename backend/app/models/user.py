@@ -67,6 +67,15 @@ class User(Base):
     # model nem usada por código nenhum até agora.
     onboarding_visto: Mapped[bool] = mapped_column(Boolean, default=False)
 
+    # Médico convidado — acesso cortesia completo (08/08/2026, pedido do
+    # Rafael). Passa pelo fluxo real de cadastro/KYC/pagamento, mas:
+    # `criar_checkout` (app/api/billing.py) libera a assinatura sem cobrar
+    # e sem redirecionar ao Stripe; `verificacao.submeter` (KYC) aprova
+    # automaticamente em vez de cair na fila de revisão manual. Ligado só
+    # por admin, via `PATCH /api/admin/users/{id}/convidado` — nunca pelo
+    # próprio usuário.
+    convidado: Mapped[bool] = mapped_column(Boolean, default=False)
+
     last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     show_online_status: Mapped[bool] = mapped_column(Boolean, default=False)
 

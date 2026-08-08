@@ -65,6 +65,43 @@ def test_sem_credencial_cfm_configurada_vai_para_revisao_manual(db, criar_usuari
     assert verificacao.liberado_para_uso(registro) is False
 
 
+def test_convidado_com_crm_e_aprovado_automaticamente(db, criar_usuario):
+    """Médico convidado (08/08/2026): mesmo cenário do teste acima (CRM sem
+    credencial do CFM, cairia em 'aguardando_revisao') — mas com
+    `user.convidado = True`, a submissão já sai como 'aprovado', sem passar
+    pela fila de revisão manual."""
+    user, _ = criar_usuario()
+    user.council_name = "CRM"
+    user.council_number = "123456"
+    user.council_state = "SP"
+    user.convidado = True
+    db.commit()
+    registro = verificacao.submeter(db, user, _docs())
+    db.commit()
+    assert registro.status == "aprovado"
+    assert registro.aprovado_em is not None
+    assert registro.aprovado_por is None
+    assert "convidado" in (registro.nota_revisao or "")
+    assert verificacao.liberado_para_uso(registro) is True
+    # Aprovação definitiva não entra mais na fila do admin.
+    assert registro not in verificacao.listar_pendentes(db)
+
+
+def test_convidado_nao_rebaixa_aprovacao_ja_confirmada_por_checagem(db, criar_usuario):
+    """O atalho do convidado só age sobre 'aguardando_revisao' — se a
+    checagem de conselho já liberou por outro caminho (ex.: profissão sem
+    checagem automática), o status dela prevalece, sem sobrescrever."""
+    user, _ = criar_usuario()
+    user.council_name = "CREFITO"
+    user.council_number = "98765"
+    user.council_state = "RJ"
+    user.convidado = True
+    db.commit()
+    registro = verificacao.submeter(db, user, _docs())
+    db.commit()
+    assert registro.status == "liberado_sem_checagem"
+
+
 def test_profissao_sem_conselho_com_checagem_e_liberada_mesmo_sem_confirmar(db, criar_usuario):
     """Não-médico (ou CRM não informado): nenhum conselho fora do CRM tem
     checagem automática hoje, então a submissão libera acesso e assinatura

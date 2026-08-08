@@ -10,7 +10,7 @@ type Usuario = {
   workplace_name: string | null; workplace_department: string | null;
   workplace_role: string | null; workplace_notes: string | null;
   include_workplace_on_documents: boolean; role: string; status: string; is_active: boolean;
-  rejection_note: string | null; created_at: string;
+  rejection_note: string | null; created_at: string; convidado: boolean;
 };
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "OUTRO"];
@@ -195,6 +195,15 @@ export default function Admin() {
     }
   }
 
+  async function alternarConvidado(u: Usuario) {
+    try {
+      await api.patch(`/admin/users/${u.id}/convidado?convidado=${!u.convidado}`, {});
+      recarregar();
+    } catch (e) {
+      setErro(e instanceof Error ? e.message : "Não foi possível alterar o status de convidado.");
+    }
+  }
+
   const senhaFraca = novo.password.length > 0 && novo.password.length < 8;
   const podeCriar = novo.email && novo.full_name && novo.password.length >= 8 && !enviando;
 
@@ -363,6 +372,7 @@ export default function Admin() {
                 <div style={{ flex: 1 }}>
                   <strong>{u.full_name}</strong>{" "}
                   <span className="eyebrow">{PERFIS.find((p) => p.valor === u.role)?.rotulo}</span>
+                  {u.convidado && <span className="selo selo--revisado" style={{ marginLeft: 6 }}>convidado</span>}
                   <div style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
                     {u.email}
                     {u.council_name && ` · ${u.council_name} ${u.council_number}/${u.council_state}`}
@@ -378,10 +388,17 @@ export default function Admin() {
                   {u.status === "rejeitado" ? "rejeitado" : u.is_active ? "ativo" : "desativado"}
                 </span>
                 {u.status !== "rejeitado" && (
-                  <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
-                          onClick={() => alternar(u)}>
-                    {u.is_active ? "Desativar" : "Reativar"}
-                  </button>
+                  <>
+                    <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
+                            onClick={() => alternarConvidado(u)}
+                            title="Acesso cortesia completo: assinatura liberada sem cobrança e KYC aprovado automaticamente.">
+                      {u.convidado ? "Remover convidado" : "Marcar convidado"}
+                    </button>
+                    <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
+                            onClick={() => alternar(u)}>
+                      {u.is_active ? "Desativar" : "Reativar"}
+                    </button>
+                  </>
                 )}
               </div>
             ))}

@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import ACESSO_LIBERADO, current_user
+from app.models.audit import AuditLog
 from app.models.subscription import (
     PLANO_BASICO, PLANO_COMPLETO, TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription,
 )
@@ -260,6 +261,29 @@ def criar_checkout(
             status_code=409,
             detail="Você já tem uma assinatura ativa. Para trocar de plano, cancele a atual pelo portal de assinatura e assine o novo plano.",
         )
+
+    if user.convidado:
+        # Médico convidado (08/08/2026, pedido do Rafael) — mesma tela,
+        # mesmo botão "Assinar", mas sem Stripe: a assinatura é liberada
+        # direto no banco, sempre no plano Completo (é o que "acesso
+        # completo" promete, inclusive CorvIA Mail — que já é incluído sem
+        # add-on separado quando `plano == PLANO_COMPLETO`, ver
+        # `status_email` mais abaixo). Nunca cria `stripe_customer_id`: sem
+        # cliente Stripe, `/billing/portal` e `/billing/faturas` já
+        # respondem "sem assinatura para gerenciar"/lista vazia, em vez de
+        # tentar falar com uma API que não tem nada para mostrar.
+        sub.plano = PLANO_COMPLETO
+        sub.status = "ativo"
+        db.add(AuditLog(
+            user_id=user.id, action="liberar_acesso_convidado", entity="subscription",
+            entity_id=str(sub.id), detail={"email": user.email, "plano": PLANO_COMPLETO},
+        ))
+        db.commit()
+        return {
+            "checkout_url": None,
+            "convidado": True,
+            "mensagem": "Médico Convidado — Acesso Completo Liberado.",
+        }
 
     if not sub.stripe_customer_id:
         customer = stripe.Customer.create(email=user.email, name=user.full_name)

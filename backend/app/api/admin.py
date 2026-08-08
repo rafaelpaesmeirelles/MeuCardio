@@ -327,6 +327,7 @@ def _dump_usuario(u) -> dict:
         "profile_completion_required": u.profile_completion_required,
         "role": u.role, "status": u.status, "is_active": u.is_active,
         "rejection_note": u.rejection_note, "created_at": u.created_at,
+        "convidado": u.convidado,
     }
 
 
@@ -433,6 +434,30 @@ def alternar_usuario(
                     entity="user", entity_id=str(alvo.id)))
     db.commit()
     return {"id": alvo.id, "is_active": alvo.is_active}
+
+
+@router.patch("/users/{user_id}/convidado")
+def alternar_convidado(
+    user_id: int, convidado: bool, db: Session = Depends(get_db), admin=Depends(require_admin)
+):
+    """Marca/desmarca uma conta como médico convidado (08/08/2026) — acesso
+    cortesia completo: `POST /billing/checkout` libera a assinatura sem
+    cobrar, e a submissão de KYC é aprovada automaticamente em vez de cair
+    na fila de revisão manual. Reversível a qualquer momento; desmarcar não
+    cancela retroativamente uma assinatura ou um KYC já liberados — só
+    impede que uma FUTURA chamada dessas rotas volte a usar o atalho."""
+    from app.models.user import User
+
+    alvo = db.get(User, user_id)
+    if not alvo:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    alvo.convidado = convidado
+    db.add(AuditLog(
+        user_id=admin.id, action="marcar_convidado" if convidado else "desmarcar_convidado",
+        entity="user", entity_id=str(alvo.id), detail={"email": alvo.email},
+    ))
+    db.commit()
+    return {"id": alvo.id, "convidado": alvo.convidado}
 
 
 @router.post("/users/{user_id}/senha")
