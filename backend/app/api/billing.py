@@ -534,9 +534,6 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
         # O metadata da sessão e o da assinatura são campos diferentes; o
         # webhook de customer.subscription.* só enxerga o da assinatura.
         metadata={"tipo": "email", "user_id": str(user.id)},
-        # Código promocional no checkout (08/08/2026, pedido do Rafael) —
-        # mesmo campo do checkout principal, ver comentário lá.
-        allow_promotion_codes=True,
         success_url=f"{settings.public_url}/corvia-mail?status=sucesso",
         cancel_url=f"{settings.public_url}/corvia-mail?status=cancelado",
     )

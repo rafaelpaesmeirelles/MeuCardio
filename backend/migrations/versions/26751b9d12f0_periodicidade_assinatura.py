@@ -10,17 +10,13 @@ teria como interpretar retroativamente uma assinatura antiga como semestral
 ou anual sem checar o Stripe, e o mensal é o comportamento real de 100% das
 assinaturas já ativas hoje.
 
-`down_revision` aponta para o último head COMMITADO em `main` no momento
-desta migração (`f67i20260808`) — havia trabalho de outra sessão em
-andamento na árvore (`f68j20260808`/`f6ak20260808`), ainda não commitado,
-então não é seguro encadear esta migração nele. Ver CLAUDE.md, entrada desta
-tarefa, para o registro do achado. Se a árvore de `f68j`/`f6ak` já estiver em
-`main` no momento de aplicar esta migração, gere uma migração de merge
-(mesmo padrão de `f47a20260804_merge_pr47_head.py`) antes de rodar
-`alembic upgrade head`.
+`down_revision` foi rebaseado em 08/08/2026 para `f6dn20260808` (head real de
+`main` no momento em que este branch foi integrado) — várias outras sessões
+adicionaram migrações entre a criação original desta (`f67i20260808`) e a
+integração, então a cadeia precisou avançar para continuar linear.
 
 Revision ID: 26751b9d12f0
-Revises: f67i20260808
+Revises: f6dn20260808
 Create Date: 2026-08-08
 """
 
@@ -28,7 +24,7 @@ from alembic import op
 import sqlalchemy as sa
 
 revision = "26751b9d12f0"
-down_revision = "f67i20260808"
+down_revision = "f6dn20260808"
 branch_labels = None
 depends_on = None
 
