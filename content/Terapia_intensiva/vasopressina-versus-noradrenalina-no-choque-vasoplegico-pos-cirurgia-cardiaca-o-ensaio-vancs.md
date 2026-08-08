@@ -4,7 +4,7 @@ slug: vasopressina-versus-noradrenalina-no-choque-vasoplegico-pos-cirurgia-cardi
 theme: "Terapia intensiva"
 kind: estudo
 review_status: revisado
-source_refs: ["Hajjar LA, Vincent JL, Barbosa Gomes Galas FR, Rhodes A, Landoni G, Osawa EA, et al. Vasopressin versus Norepinephrine in Patients with Vasoplegic Shock after Cardiac Surgery: The VANCS Randomized Controlled Trial. Anesthesiology. 2017;126(1):85-93. DOI: 10.1097/ALN.0000000000001434. PMID: 27841822 — ensaio único centro (InCor, Hospital das Clínicas da Universidade de São Paulo), prospectivo, randomizado, duplo-cego, janeiro/2012 a março/2014, 330 randomizados, 300 infundidos. Texto completo é pago (confirmado via Europe PMC e Unpaywall em 02/08/2026: isOpenAccess=false, sem cópia em repositório, sem PMC) — só o resumo indexado no PubMed foi usado como fonte primária desta sessão.", "Hajjar L, Vincent JL, Rhodes A, Annane D, Galas F, Almeida J, et al. Vasopressin versus norepinephrine for the management of shock after cardiac surgery (VaNCS study): a randomized controlled trial [abstract]. Crit Care. 2013;17(Suppl 2):P222. DOI: 10.1186/cc12160. PMCID: PMC3642574 (acesso aberto, CC BY) — resumo de congresso (33rd ISICEM, Brussels, 2013) do MESMO ensaio (NCT01505231) e do mesmo grupo de investigadores, com leitura PRELIMINAR/interina de dados enquanto o estudo ainda recrutava (o artigo final, publicado em 2017, fechou com 149 vasopressina/151 noradrenalina; este resumo de 2013 traz 148/152 — diferença de 1 paciente por braço, sinal de que é um corte de dados anterior ao banco final, não o mesmo conjunto de dados). Usado apenas para a mortalidade isolada em 30 dias, que não consta no resumo do artigo final."]
+source_refs: ["Hajjar LA, Vincent JL, Barbosa Gomes Galas FR, Rhodes A, Landoni G, Osawa EA, et al. Vasopressin versus Norepinephrine in Patients with Vasoplegic Shock after Cardiac Surgery: The VANCS Randomized Controlled Trial. Anesthesiology. 2017;126(1):85-93. DOI: 10.1097/ALN.0000000000001434. PMID: 27841822 — ensaio único centro (InCor, Hospital das Clínicas da Universidade de São Paulo), prospectivo, randomizado, duplo-cego, janeiro/2012 a março/2014, 330 randomizados, 300 infundidos. Texto completo é pago (confirmado via Europe PMC e Unpaywall em 02/08/2026: isOpenAccess=false, sem cópia em repositório, sem PMC) — só o resumo indexado no PubMed foi usado como fonte primária desta sessão.", "Hajjar L, Vincent JL, Rhodes A, Annane D, Galas F, Almeida J, et al. Vasopressin versus norepinephrine for the management of shock after cardiac surgery (VaNCS study): a randomized controlled trial [abstract]. Crit Care. 2013;17(Suppl 2):P222. DOI: 10.1186/cc12160. PMCID: PMC3642574 (acesso aberto, CC BY) — resumo de congresso (33rd ISICEM, Brussels, 2013) do MESMO ensaio (NCT01505231) e do mesmo grupo de investigadores, com leitura PRELIMINAR/interina de dados enquanto o estudo ainda recrutava (o artigo final, publicado em 2017, fechou com 149 vasopressina/151 noradrenalina; este resumo de 2013 traz 148/152 — diferença de 1 paciente por braço, sinal de que é um corte de dados anterior ao banco final, não o mesmo conjunto de dados). Usado apenas para a mortalidade isolada em 30 dias, que não consta no resumo do artigo final.", "Cui H, Meng Y, Peng S, Fan S, Li L, Li Z, Zhang Y. Vasopressin-Based Versus Norepinephrine-Based Strategy in Vasoplegic Syndrome After Cardiac Surgery: A Randomized Controlled Trial. J Intensive Care Med. 2026 Jul 29:8850666261467010. DOI: 10.1177/08850666261467010. PMID: 42524721 — ensaio DISTINTO do VANCS (Fuwai Hospital, Pequim, China; 90 pacientes; NÃO é o mesmo NCT nem os mesmos dados) — números conferidos contra o abstract indexado no PubMed em 08/08/2026."]
 legacy_source: "Documento novo, escrito em 02/08/2026. A pasta já cobria vasopressores adjuvantes no choque SÉPTICO/vasodilatador (VASST, VANISH, ATHOS-3) e drogas vasoativas no choque CARDIOGÊNICO, mas não havia nenhum documento sobre o cenário intermediário e muito comum em UTI cardiológica: a vasoplegia do PÓS-OPERATÓRIO de cirurgia cardíaca com CEC, que não é sepse nem é falência de bomba. O VANCS é o ensaio de referência desse cenário específico e não constava em nenhum arquivo desta pasta (conferido por grep antes de escrever)."
 ---
 
@@ -49,6 +49,37 @@ O HR de 0,55 no composto é um efeito grande para um ensaio de terapia intensiva
 | centros | 1 | multicêntrico | 18 UTIs |
 
 **A leitura que atravessa os três:** o cenário clínico decide a resposta. No choque séptico estabelecido (VASST, VANISH), somar vasopressina à noradrenalina poupa catecolamina sem benefício de mortalidade demonstrado. No choque vasoplégico pós-CEC (VANCS), com fisiopatologia de depleção de vasopressina endógena bem descrita, o resultado foi positivo no composto — e é o único dos três ensaios desta pasta em que a vasopressina foi testada como **primeira linha**, não como adjuvante de resgate.
+
+## Segundo ensaio randomizado, distinto do VANCS — acrescentado em 08/08/2026
+Publicado em 2026, um ensaio **diferente** (outro centro, outro grupo, outro registro — não é
+reanálise nem extensão do VANCS) testou a mesma pergunta clínica, com desenho e desfecho primário
+diferentes.
+
+- **desenho**: unicêntrico, randomizado, controlado — Fuwai Hospital (Pequim, China), **90
+  pacientes** com síndrome vasoplégica após CEC.
+- **intervenção**: estratégia baseada em **vasopressina** (0,01-0,1 U/min) vs. estratégia baseada em
+  **noradrenalina** (0,01-0,1 µg/kg/min), como primeira linha — com noradrenalina de resgate
+  padronizada permitida nos dois grupos se a meta hemodinâmica não fosse atingida.
+- **desfecho primário**: **tempo de internação hospitalar** (não composto de mortalidade/complicação,
+  como no VANCS) — **mediana de 7,0 dias (IIQ 6,0-8,0) com vasopressina vs. 8,0 dias (IIQ 7,0-11,0)
+  com noradrenalina** (p=0,0036, análise por protocolo).
+- **desfechos secundários**: pressão arterial média e índice de resistência vascular sistêmica
+  maiores no grupo vasopressina às 12h e 24h (p<0,05); normalização mais rápida do lactato; redução
+  mais acentuada de biomarcadores cardíacos. Marcadores endócrinos (copeptina e AVP) mais altos no
+  grupo vasopressina, mas **sem correlação com desfecho clínico** (|r|<0,15, p>0,05). Taxas de evento
+  adverso equilibradas entre os grupos.
+- **conclusão dos autores**: estratégia baseada em vasopressina estabilizou a hemodinâmica de forma
+  eficaz e se associou a menor tempo de internação — a noradrenalina continua eficaz, mas a
+  vasopressina pode ser considerada alternativa precoce viável ou estratégia adjuvante.
+- **como isto se soma ao VANCS, sem confundir os dois**: os dois ensaios, feitos em populações e
+  décadas diferentes, apontam na MESMA direção (vasopressina favorável na vasoplegia pós-CEC), mas
+  com desfechos primários diferentes — o VANCS mede complicação grave/mortalidade composta; este mede
+  tempo de internação. **Não some os dois resultados nem cite o N de um como se fosse do outro** —
+  são 300 pacientes (VANCS, Brasil, 2017) e 90 pacientes (Fuwai, China, 2026), estudos independentes.
+  A convergência direcional entre dois ensaios de centros/populações diferentes é um sinal a favor da
+  robustez da conduta, mais forte do que qualquer um dos dois isoladamente — mas ainda não é
+  replicação multicêntrica formal.
+- **fonte**: Cui H et al., J Intensive Care Med. 2026 Jul 29, PMID 42524721.
 
 ## Limites
 - **Unicêntrico** — replicação multicêntrica ainda não publicada até onde esta sessão verificou
