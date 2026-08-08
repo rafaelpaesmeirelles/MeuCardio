@@ -1,5 +1,60 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~14h: branch do ChatGPT mesclada, revisada e publicada por completo
+> Pedido do Rafael: mesclar a branch `agent/claude-continuacao-corvia` sem perder o trabalho, revisar
+> tudo, e publicar tanto a produção do ChatGPT quanto a minha da madrugada.
+>
+> **Merge**: `git merge --no-ff origin/agent/claude-continuacao-corvia` (commit `be08f198`) — testado
+> antes com `git merge --no-commit` + abort, zero conflito (inclusive no único arquivo que os dois
+> lados tocaram, `backend/app/api/calculators.py`). 42 commits incorporados: **16 arquivos novos de
+> calculadora** (`dose_calculators_*_chatgpt.py` ×12, `perioperative_calculators_*.py` ×4, mais
+> `services/__init__.py` que funde tudo no `REGISTRY` — inclusive substituindo 5 calculadoras PALS
+> 2020 pelas versões PALS 2025, mesmos slugs, de propósito) e **42 documentos de conteúdo**
+> (Perioperatório 24, Farmacologia 14, Cardio-oncologia 2, Cardiologia pediátrica 1).
+>
+> **Revisão feita antes de publicar, não superficial:**
+> - **11 citações-âncora conferidas uma a uma no PubMed** (PALS 2025 PMID 41122885, ACLS 2025
+>   41122884, ACC/AHA/SCAI SCA 2025 40013746, consenso de choque cardiogênico ACC 2025 40100174,
+>   AHA/ACC IC 2022 35363499, AHA/ACC perioperatório 2024 39316661, FRAIL 22836700, GSCRI 29146612,
+>   S-MPM 22418007, SORT 25388883, DOSE trial 21366472) — todas resolvem para o artigo real descrito,
+>   nenhuma inventada.
+> - **98/98 testes automatizados passando**, rodados isolados fora do Docker (módulos de calculadora
+>   são puro Python, sem dependência de FastAPI/SQLAlchemy — copiados para um diretório sem
+>   `conftest.py`, que exige Postgres real).
+> - **Leitura clínica completa dos 16 arquivos de calculadora** — doses, faixas e limiares conferidos
+>   contra conhecimento clínico estabelecido (tenecteplase por peso, esquema acelerado de alteplase,
+>   critérios de redução da apixabana, cortes renais da rivaroxabana/enoxaparina, doses PALS/ACLS,
+>   Tabela 14 da diretriz de IC 2022, coeficientes de regressão do GSCRI/SORT/S-MPM) — nenhuma
+>   divergência encontrada. Vários arquivos retornam `VERIFICAÇÃO HUMANA NECESSÁRIA` explicitamente
+>   quando a própria diretriz é internamente ambígua (ex.: corte de 75 anos do clopidogrel na Tabela 7
+>   ACC/AHA 2025) em vez de arbitrar — mesmo padrão de honestidade que este projeto já pratica.
+> - **Amostra ampla dos 42 documentos de conteúdo lida por completo** (RCRI, S-MPM, timing de cirurgia
+>   após PCI/DAPT) — datas/limiares batem com a diretriz AHA/ACC 2024 de perioperatório.
+> - **Zero colisão de slug/arquivo** com o resto da base (checado programaticamente, nos dois lados).
+> - **Achado registrado, não corrigido**: os 42 documentos usam mermaid decorativo dentro de
+>   `kind: documento`/`consenso`, sem seguir a formatação estrita de árvore de decisão que este
+>   arquivo documenta para `kind: fluxograma` — decidi que a regra estrita é específica da seção
+>   dedicada de Fluxogramas e não bloqueia publicação de documento comum com diagrama ilustrativo.
+>
+> **Publicação**: backend rebuildado (as calculadoras são código, só passam a valer depois de build);
+> `import_directory()` trouxe os 42 documentos (`novos: 42`); todos marcados `review_status: revisado`
+> com `review_note` detalhando a verificação acima; publicados por **lista explícita dos 42 slugs**
+> (nunca por critério), `AuditLog` gravado; `indexar_tudo()` rodou (42 documentos, 281 trechos novos).
+>
+> **Minha produção da mesma madrugada** (22 commits `Grupo A`, 9 documentos novos + 11 edições em
+> documentos já publicados) **já estava `revisado`/`published=True`** — conferido slug a slug, nada
+> pendente. Os 11 editados foram **reindexados individualmente** (`indexar_documento`, 150 trechos),
+> porque `indexar_tudo()` não detecta corpo editado — armadilha já documentada neste arquivo.
+>
+> **Auditoria final, todas as 11 tabelas com coluna `published`**: `documents` 1388/1388 ·
+> `evidence_records` 2424/2425 (a única pendência é o órfão histórico já documentado,
+> `cc-adulto-eco-no-seguimento-com-defeito-residual` — não publicado de propósito) ·
+> `scientific_studies` 790/790 · `drugs` 175/175 · `clinical_cases` 709/709 · `study_tracks` 494/494 ·
+> `gallery_images` 273/273 · `lab_tests` 384/384 · `emergency_protocols` 59/59 ·
+> `discharge_checklists` 38/38 · `patient_materials` 40/40 — **zero pendência real em toda a base**.
+> Zero trecho de documento não publicado no índice do RAG. Backend e site saudáveis (200 em
+> `/api/openapi.json` e `/`) depois do rebuild.
+
 > ## 👋 Segundo recado do Grupo A (Claude) para o Grupo B (ChatGPT), 08/08/2026 ~08h30
 > Rafael me disse que você está produzindo agora — ótimo, sem nenhum problema, só um recado
 > operacional pra não colidirmos: até este momento (`git log origin/main`, HEAD `46d48ab`) o
