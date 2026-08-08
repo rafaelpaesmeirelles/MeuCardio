@@ -1,5 +1,65 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ SEGUNDA RODADA DE AUDITORIA, 09/08/2026 — 20 documentos novos publicados (2 meus + 18 do Grupo B), 7 duplicados corrigidos
+> Continuação da rodada anterior no mesmo dia, pedido do Rafael: **"valide e publique toda a sua
+> producao e a producao do chat gpt, todos revisados e validados"**. Enquanto verificava PMIDs para
+> escrever conteúdo novo em Cardiologia do Esporte, percebi que o Grupo B (ChatGPT) já tinha coberto
+> o próximo tópico da minha lista (cardiomiopatia arritmogênica no atleta) — conferi o corpus antes
+> de escrever, o que evitou duplicar trabalho.
+>
+> **Meus 2 documentos** (`cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte`,
+> `extrassistoles-e-arritmias-ventriculares-no-atleta`, ambos do Grupo B na verdade — chegaram por
+> commit enquanto eu pesquisava o mesmo tópico): 5 PMIDs conferidos via E-utilities (HRS 2024 consenso
+> 38763377, AHA/ACC 2025 scientific statement 39973614, JACC Clin EP 2025 41105061, VENTOUX Circ
+> Cardiovasc Imaging 2025 40675176, coorte 2026 41520681) — **n=106 e HR 4,7 do VENTOUX conferidos
+> abstract a abstract**, batendo exatamente. Publicados, indexados (25 trechos).
+>
+> **Auditoria ampla em seguida:** consulta ao banco achou **27 documentos `revisado` mas não
+> publicados**, espalhados por 10 temas — a maioria produção do Grupo B que nunca tinha passado pelo
+> `reconcile_content`/publicação (os arquivos já estavam commitados em `main` há tempo, só não
+> importados no banco). Verificados **um a um, não por lote**:
+>
+> **18 eram conteúdo genuinamente novo** — PMID conferido via E-utilities em todos, checado contra o
+> corpus publicado (por PMID exato **e** por assunto, não só título) para garantir que nenhum
+> duplicava algo já no ar: SWEDEPAD-1/SWEDEPAD-2 (Lancet 2025, paclitaxel em CLTI/claudicação),
+> triagem pré-participação ECG do atleta (AHA/ACC 2025), aortopatias/Marfan e esporte, cardioproteção
+> guiada por NT-proBNP (JAMA Netw Open 2025), SAFE-HEaRt (terapia anti-HER2 com FE reduzida), PREVENT
+> (PCI preventiva de placa vulnerável, Lancet 2024), critérios diagnósticos Duke-ISCVID 2023 (documento
+> fundacional — as outras menções a "Duke-ISCVID" no corpus são aplicações a cenários específicos,
+> nunca a descrição completa dos critérios), TEPvENDO (PET/CT de corpo inteiro na endocardite),
+> OCEANIC-AF (asundexiana — confirmei que a menção já existente em outro documento era só citação de
+> contexto de 2 números, não cobertura completa do trial de 14.810 pacientes), OPTION (fechamento de
+> apêndice pós-ablação de FA — trial e pergunta clínica distintos do LAAOS III, que é durante cirurgia
+> cardíaca), arritmias maternas EPIC-COSMOS 2026, aspirina 162 vs. 81mg na pré-eclâmpsia, subtipos de
+> DHG e risco cardiovascular de longo prazo, BedMed (JAMA 2025, horário do anti-hipertensivo), HEART-FID
+> e POISE-3.
+>
+> **7 eram duplicata real**, achados comparando PMID e conteúdo contra o corpus publicado, não só
+> título: a diretriz AHA/ACC 2024 de manejo cardiovascular perioperatório (mesma que a auditoria de
+> 08/08 já tinha identificado sob outro slug — o conteúdo já está fragmentado em 5 documentos
+> dedicados), SENIOR-RITA (já coberto por completo dentro do documento combinado "After Eighty e
+> SENIOR-RITA", números conferidos: n=1.518, 753/765), TIME (mesmos 21.104 pacientes, HR 0,95, já
+> publicado sob outro slug), IRONMAN e AFFIRM-AHF (ambos já citados/cobertos nos documentos de anemia/
+> deficiência de ferro na IC do idoso e na atualização focada 2023 da ESC), LAAOS III e PRECISION
+> (ambos já publicados sob outros slugs, mesmos PMIDs e números).
+>
+> **🐛 Armadilha encontrada e corrigida: `review_status` corrigido só no banco não sobrevive ao
+> próximo `reconcile_content`.** Na rodada anterior deste mesmo dia eu tinha marcado 3 duplicatas como
+> `pendente_revisao` **só via script direto no banco** — o `reconcile_content` seguinte, ao reimportar
+> os arquivos `.md` (que ainda diziam `review_status: revisado` no front matter), **reverteu a
+> correção silenciosamente**. Descoberto porque conferi o estado antes de publicar em massa, em vez de
+> confiar na correção anterior. **A fonte de verdade de `review_status` é o arquivo, não o banco** —
+> corrigido nos 7 arquivos (os 3 antigos + os 4 novos desta rodada) diretamente no front matter, com
+> campo `review_note` explicando o slug canônico duplicado, e só então re-sincronizado via
+> `reconcile_content`. Também descoberto que o modelo `Document` **não tem coluna `review_note`** —
+> é só um campo de front matter, documentação para quem ler o arquivo, nunca persistido no banco;
+> setar esse atributo num objeto ORM não dá erro mas também não grava nada.
+>
+> **Verificado depois de publicar**: `documents` 1498/1530 publicados, **zero `revisado`-pendente**
+> (era 27) · `evidence_records` 2424/2425 (só o órfão histórico, correto) · `scientific_studies`
+> 790/790. **Zero `document_chunks` órfão no RAG.** Os 18 documentos indexados (96 trechos). `AuditLog`
+> gravado em cada operação (publicar e reconciliar duplicata).
+
 > ## ✅ AUDITORIA DE CONTEÚDO PENDENTE, 09/08/2026 — 3 documentos novos publicados, 3 duplicados corrigidos
 > Rotina periódica de auditoria (pedido do Rafael: "de tempo em tempo... vá verificando a produção
 > do chat gpt... audite tudo, se estiver tudo correto marque como verificado e vá publicando").
