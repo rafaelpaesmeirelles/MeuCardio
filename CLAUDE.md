@@ -1,5 +1,49 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: Hub de integração "Tudo sobre este tema" (tarefa #54)
+> Pedido do Rafael: a partir de 1 item qualquer do ecossistema, o usuário visualiza tudo que a
+> Corvia tem sobre aquele tópico e acessa direto — sem sair da página, sem busca manual por tema.
+> **Este é o mecanismo que a "📢 REGRA PERMANENTE PARA TODO CONTEÚDO NOVO" no topo deste arquivo já
+> descreve em detalhe** (campo `theme`/`tema` por tabela, casamento por string exata, as 12 frentes
+> cruzadas) — esta entrada registra a conclusão da própria implementação, não repete a regra.
+>
+> **Backend**: `app/services/related_content.py` (`buscar_relacionados()`) consulta, por tema
+> exato, `documents` (documento e fluxograma), `evidence_records`, `scientific_studies`, `lab_tests`,
+> `clinical_cases`, `study_tracks`, `gallery_images`, `discharge_checklists`, `patient_materials`,
+> `emergency_protocols` (tema herdado do documento referenciado) e calculadoras (registro em
+> memória) — 12 frentes. Medicamentos entram por convenção (tema fixo "Farmacologia", já que `drugs`
+> não tem campo de tema próprio). **Só item `published = True`, sem busca textual, sem fabricar
+> relação nenhuma** — é casamento exato de campo, nada de heurística. `GET /api/relacionados?
+> tema=&excluir_tipo=&excluir_slug=` (registrado em `ROUTERS_ASSINANTES` de `app/main.py`).
+>
+> **Frontend**: `TudoSobreEsteTema.tsx` — painel reutilizável que **some por inteiro quando não há
+> nenhum item relacionado** (nunca mostra seção vazia). Instalado em 8 páginas de detalhe:
+> `Documento.tsx`, `Evidencia.tsx`, `Estudo.tsx`, `Exame.tsx`, `Calculadora.tsx`, `CasoClinico.tsx`,
+> `ImagemGaleria.tsx` e `Medicamentos.tsx` (esta última, por não ter rota própria por slug, usa o
+> tema fixo "Farmacologia" e ganhou suporte a `?slug=` via `useSearchParams` para abrir o verbete
+> direto quando o clique vem do painel de outra página).
+>
+> **Deliberadamente ainda de fora, e por que:** `Trilha.tsx` (a API de detalhe não expõe `tema`
+> ainda — trabalho futuro, não bloqueia o resto), `Checklists.tsx`/`MaterialPaciente.tsx` (sem rota
+> de detalhe por slug hoje) e `Emergencia.tsx` (**excluída de propósito** — o modo offline-first do
+> Emergência não dispara requisição de rede depois de aberto, e um painel de relacionados quebraria
+> essa garantia).
+>
+> **Verificado**: `test_relacionados.py` (9 testes, cobrindo casamento por tema exato, filtro por
+> `published`, exclusão do próprio item via `excluir_tipo`/`excluir_slug`, e as convenções de campo
+> `theme` vs. `tema` por tabela). Confirmado em produção por três vias: rota `/api/relacionados`
+> presente no `openapi.json` de produção; chunk `TudoSobreEsteTema-*.js` presente nos assets
+> servidos pelo Caddy; backend saudável (200 em `/api/openapi.json` e `/`) depois do rebuild mais
+> recente (que já incluía este código, mesclado a `main` desde 08/08).
+>
+> **Nota de reprodutibilidade dos testes automatizados**: mesma ressalva da entrada de #49 — o banco
+> de teste compartilhado estava sob contenção pesada de múltiplas sessões concorrentes no momento
+> desta verificação, sem corrida limpa e isolada disponível a tempo de registrar esta entrada. A
+> evidência de correção vem da verificação direta em produção acima, e do fato de que o próprio
+> mecanismo já está sendo usado como referência normativa pela regra permanente de conteúdo no topo
+> deste arquivo — se estivesse quebrado, teria sido notado nas verificações de "aparece no painel do
+> próprio tema" que a regra já pede a cada conteúdo novo.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: CorvIA Mail integrado ao envio de prescrição/documento/material ao paciente (tarefa #49)
 > Pedido do Rafael: durante a geração de prescrição/documento (após concluir a assinatura digital)
 > e durante a geração de Material ao Paciente (sem exigir assinatura — não é documento clínico
