@@ -615,9 +615,7 @@ class SolicitacaoAcesso(BaseModel):
         v = (v or "").strip()
         return v or None
 
-    @field_validator("email")
-    @classmethod
-    de    @field_validator("instagram_handle")
+    @field_validator("instagram_handle")
     @classmethod
     def _instagram(cls, v: str | None) -> str | None:
         v = (v or "").strip().lstrip("@")
@@ -630,6 +628,8 @@ class SolicitacaoAcesso(BaseModel):
         return v
 
     @field_validator("email")
+    @classmethod
+    def _email(cls, v: str) -> str:
         v = v.strip().lower()
         if "@" not in v:
             raise ValueError("E-mail inválido.")
