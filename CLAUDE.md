@@ -141,7 +141,7 @@
 > `review_status: revisado` só depois de conferir a fonte de verdade — se não conseguir confirmar,
 > deixe `pendente_revisao` com `VERIFICAÇÃO HUMANA NECESSÁRIA` no corpo, como sempre.
 
-
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~22h30: Conselho "Outro" ganha campos de texto livre
 > Pedido do Rafael: no cadastro (`/solicitar-acesso`) e em Minha Conta, quando o médico escolhe
 > "Outro" no menu Conselho, ele digita qual é o conselho e o estado/região, em vez de ficar preso a
 > um seletor de UF de 2 letras que não serve pra conselho fora do padrão CRM/CRO/etc.
