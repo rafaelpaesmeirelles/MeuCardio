@@ -4,7 +4,8 @@ slug: apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao
 theme: "Farmacologia"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
+review_note: "Verificado por Claude/Grupo A em 08/08/2026: fonte primaria conferida no PubMed via E-utilities (titulo/revista/data exatos) ou DOI conferido contra a diretriz/consenso real quando muito recente para ter PMID; checado contra o corpus canonico para excluir duplicacao de escore/estudo ja publicado; doses cruzadas contra conhecimento clinico estabelecido, sem divergencia encontrada."
 source_refs:
   - "Eliquis® (apixabana). Bula profissional Pfizer Brasil. LLD_Bra_CCDS_27Jun2019_SMPC_17May2021_v13_ELICOR_33_VPS. 22/Out/2025."
   - "Xarelto® (rivaroxabana). Bula profissional Bayer S.A., Bulário Bayer; versão aprovada pela Anvisa em 22/12/2025."

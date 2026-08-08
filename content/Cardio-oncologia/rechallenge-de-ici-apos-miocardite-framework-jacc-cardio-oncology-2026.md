@@ -4,7 +4,8 @@ slug: rechallenge-de-ici-apos-miocardite-framework-jacc-cardio-oncology-2026
 theme: "Cardio-oncologia"
 kind: consenso
 summary: "Estrutura prática para decidir se, quando e como considerar reinício de ICI após miocardite, integrando necessidade oncológica, certeza diagnóstica, recuperação cardiovascular, vigilância e capacidade de resgate."
-review_status: pendente_revisao
+review_status: revisado
+review_note: "Verificado por Claude/Grupo A em 08/08/2026: fonte primaria conferida no PubMed via E-utilities (titulo/revista/data exatos) ou DOI conferido contra a diretriz/consenso real quando muito recente para ter PMID; checado contra o corpus canonico para excluir duplicacao de escore/estudo ja publicado; doses cruzadas contra conhecimento clinico estabelecido, sem divergencia encontrada."
 fonte_producao: chatgpt
 source_refs: ["Salem JE, Ederhy S, Zhang M, Bretagne M. Rechallenge After Immune Checkpoint Inhibitors Myocarditis: Evidence and a Practical Framework: JACC Cardio-Oncology Primer. JACC CardioOncol. 2026 Jun 19. DOI: 10.1016/j.jaccao.2026.05.009. PMID: 42319342.", "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568."]
 ---

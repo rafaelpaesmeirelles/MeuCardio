@@ -4,7 +4,8 @@ slug: anticoagulacao-parenteral-sca-acc-aha-2025-arvore-de-dose
 theme: "Farmacologia"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
+review_note: "Verificado por Claude/Grupo A em 08/08/2026: fonte primaria conferida no PubMed via E-utilities (titulo/revista/data exatos) ou DOI conferido contra a diretriz/consenso real quando muito recente para ter PMID; checado contra o corpus canonico para excluir duplicacao de escore/estudo ja publicado; doses cruzadas contra conhecimento clinico estabelecido, sem divergencia encontrada."
 source_refs:
   - "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.11.009. Table 10."
 ---

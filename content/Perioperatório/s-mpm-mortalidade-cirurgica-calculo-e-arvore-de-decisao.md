@@ -4,7 +4,8 @@ slug: s-mpm-mortalidade-cirurgica-calculo-e-arvore-de-decisao
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
+review_note: "Verificado por Claude/Grupo A em 08/08/2026: fonte primaria conferida no PubMed via E-utilities (titulo/revista/data exatos) ou DOI conferido contra a diretriz/consenso real quando muito recente para ter PMID; checado contra o corpus canonico para excluir duplicacao de escore/estudo ja publicado; doses cruzadas contra conhecimento clinico estabelecido, sem divergencia encontrada."
 summary: "Modelo simples de 9 pontos para mortalidade por todas as causas em 30 dias após cirurgia não cardíaca, separado dos escores de risco cardíaco."
 source_refs:
   - "Glance LG, Lustik SJ, Hannan EL, et al. Ann Surg. 2012;255(4):696-702. PMID: 22418007. DOI: 10.1097/SLA.0b013e31824b45af."

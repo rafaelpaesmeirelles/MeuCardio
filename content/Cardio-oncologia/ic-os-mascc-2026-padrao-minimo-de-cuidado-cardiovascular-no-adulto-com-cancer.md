@@ -4,7 +4,7 @@ slug: ic-os-mascc-2026-padrao-minimo-de-cuidado-cardiovascular-no-adulto-com-can
 theme: "Cardio-oncologia"
 kind: consenso
 summary: "Resumo operacional do statement IC-OS/MASCC 2026 sobre avaliação de risco cardiovascular antes, durante e após terapia antineoplásica, com árvore de decisão de encaminhamento e vigilância."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Dent S, Nadler MB, Blaes A, et al. Prevention and management of cardiovascular disease in adults with cancer: an International Cardio-Oncology Society (IC-OS) and Multinational Association of Supportive Care in Cancer (MASCC) clinical practice statement. Support Care Cancer. 2026;34(6):590. DOI: 10.1007/s00520-026-10741-8. PMID: 42209784. PMCID: PMC13219080.", "Correction: Dent S, Nadler MB, Blaes A, et al. Support Care Cancer. 2026;34(7):707. DOI: 10.1007/s00520-026-10950-1. PMID: 42377594."]
 ---

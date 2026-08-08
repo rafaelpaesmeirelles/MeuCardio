@@ -4,7 +4,8 @@ slug: fibrinoliticos-stemi-tenecteplase-alteplase-arvore-de-dose
 theme: "Farmacologia"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
+review_note: "Verificado por Claude/Grupo A em 08/08/2026: fonte primaria conferida no PubMed via E-utilities (titulo/revista/data exatos) ou DOI conferido contra a diretriz/consenso real quando muito recente para ter PMID; checado contra o corpus canonico para excluir duplicacao de escore/estudo ja publicado; doses cruzadas contra conhecimento clinico estabelecido, sem divergencia encontrada."
 source_refs:
   - "Metalyse® (tenecteplase). Bula profissional Boehringer Ingelheim, código 07-5773227/07-5775310/P23-02."
   - "Atualização das Diretrizes em Cardiogeriatria da Sociedade Brasileira de Cardiologia - 2019. Arq Bras Cardiol. 2019."

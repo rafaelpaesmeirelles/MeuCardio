@@ -4,7 +4,8 @@ slug: sort-mortalidade-30-dias-calculo-e-arvore-de-decisao
 theme: "Perioperatório"
 kind: documento
 fonte_producao: chatgpt
-review_status: pendente_revisao
+review_status: revisado
+review_note: "Verificado por Claude/Grupo A em 08/08/2026: fonte primaria conferida no PubMed via E-utilities (titulo/revista/data exatos) ou DOI conferido contra a diretriz/consenso real quando muito recente para ter PMID; checado contra o corpus canonico para excluir duplicacao de escore/estudo ja publicado; doses cruzadas contra conhecimento clinico estabelecido, sem divergencia encontrada."
 summary: "Modelo pré-operatório de seis variáveis que estima mortalidade individual em 30 dias após cirurgia não cardíaca."
 source_refs:
   - "Protopapa KL, Simpson JC, Smith NCE, Moonesinghe SR. Br J Surg. 2014;101(13):1774-1783. PMID: 25388883. PMCID: PMC4240514. DOI: 10.1002/bjs.9638."
