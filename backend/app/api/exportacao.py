@@ -14,6 +14,7 @@ from __future__ import annotations
 import re
 import unicodedata
 from datetime import datetime, timedelta, timezone
+from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Response
 from pydantic import BaseModel, Field, field_validator
@@ -26,13 +27,18 @@ from app.models.audit import AuditLog
 from app.models.compartilhamento import DocumentShareLink
 from app.models.content import Document
 from app.models.email_account import EmailAccount
+from app.models.patient_document_email_send import (
+    CANAL_AUTO_CONTATO_CORVIA, CANAL_PROPRIO_CORVIA_MAIL, TIPO_MATERIAL,
+    PatientDocumentEmailSend,
+)
 from app.models.patient_material import PatientMaterial
 from app.models.patient_material_send import PatientMaterialSend
+from app.services import anexo_email_proprio
 from app.services import apresentacao as svc_apres
 from app.services import apresentacao_pptx as svc_apres_pptx
 from app.services import cofre, emails, mail360
 from app.services import material_paciente as svc_material
-from app.services.professional_profile import document_identity
+from app.services.professional_profile import document_identity, professional_name
 from app.services.mail360 import Mail360Error
 
 router = APIRouter(tags=["exportação"])
@@ -378,3 +384,157 @@ def listar_envios_material(slug: str, db: Session = Depends(get_db), user=Depend
         }
         for envio, link in linhas
     ]
+
+
+# ---------------------------------------------------------------------------
+# Oferta unificada de envio ao paciente por e-mail (pedido do Rafael,
+# 08/08/2026) — mesmo par de canais de `documents.py::envio_paciente_gerado`
+# e `receituario.py::envio_paciente_receita`, sem a exigência de assinatura
+# digital (Material ao Paciente não é documento assinado). Endpoint
+# NOVO, distinto de `POST /enviar-email` acima (que continua existindo,
+# inalterado, para quem já usa o fluxo antigo de link direto pela própria
+# caixa).
+# ---------------------------------------------------------------------------
+
+
+class EnvioPacienteMaterialIn(BaseModel):
+    email_paciente: str
+    nome_paciente: str = Field(min_length=1, max_length=200)
+    recado: str | None = Field(default=None, max_length=500)
+    consentimento: bool = False
+    canal: Literal["auto_contato_corvia", "proprio_corvia_mail"]
+
+    @field_validator("email_paciente")
+    @classmethod
+    def _email(cls, v: str) -> str:
+        v = v.strip().lower()
+        if "@" not in v:
+            raise ValueError("E-mail inválido.")
+        return v
+
+    @field_validator("recado")
+    @classmethod
+    def _recado_sem_marcacao(cls, v: str | None) -> str | None:
+        v = (v or "").strip()
+        if not v:
+            return None
+        if "<" in v or ">" in v:
+            raise ValueError("O recado não pode conter marcação (HTML).")
+        return v
+
+
+@router.post("/api/material-paciente/{slug}/envio-paciente")
+def envio_paciente_material(
+    slug: str, dados: EnvioPacienteMaterialIn,
+    db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Oferta de envio ao paciente logo depois de gerar o Material ao
+    Paciente — mesmo fluxo de `documents.py`/`receituario.py`, sem a
+    exigência de assinatura digital (este material não é documento clínico
+    assinado). Mesmo teto diário/mensal de `enviar_material_por_email`
+    acima, contado à parte na tabela nova (`PatientDocumentEmailSend`) —
+    os dois canais daqui não compartilham volume com o fluxo antigo."""
+    m = (
+        db.query(PatientMaterial)
+        .filter(PatientMaterial.slug == slug, PatientMaterial.published.is_(True))
+        .first()
+    )
+    if m is None:
+        raise HTTPException(status_code=404, detail="Material não encontrado.")
+    if not dados.consentimento:
+        raise HTTPException(
+            status_code=422,
+            detail="Confirme que o paciente autorizou receber este material por e-mail.",
+        )
+
+    if not assinatura_email_ativa(db, user):
+        raise HTTPException(status_code=409, detail="Este recurso exige CorvIA Mail ativo.")
+    conta = db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
+    if not conta or conta.status != "ativa":
+        raise HTTPException(status_code=409, detail="Sua caixa do CorvIA Mail não está ativa.")
+    if conta.envio_material_suspenso:
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "O envio de material a pacientes está suspenso nesta conta por reclamações "
+                "de spam. Fale com o suporte para reativar."
+            ),
+        )
+
+    agora = datetime.now(timezone.utc)
+    inicio_dia = agora.replace(hour=0, minute=0, second=0, microsecond=0)
+    inicio_mes = agora.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    base_query = db.query(PatientDocumentEmailSend).filter(
+        PatientDocumentEmailSend.enviado_por == user.id,
+        PatientDocumentEmailSend.tipo_origem == TIPO_MATERIAL,
+    )
+    if base_query.filter(PatientDocumentEmailSend.created_at >= inicio_dia).count() >= LIMITE_DESTINATARIOS_DIA:
+        raise HTTPException(
+            status_code=429, detail=f"Limite diário de {LIMITE_DESTINATARIOS_DIA} envios a pacientes atingido."
+        )
+    if base_query.filter(PatientDocumentEmailSend.created_at >= inicio_mes).count() >= LIMITE_DESTINATARIOS_MES:
+        raise HTTPException(
+            status_code=429, detail=f"Limite mensal de {LIMITE_DESTINATARIOS_MES} envios a pacientes atingido."
+        )
+
+    if dados.canal == CANAL_AUTO_CONTATO_CORVIA:
+        link = DocumentShareLink(
+            tipo="patient_material", referencia_id=m.id, criado_por=user.id,
+            expires_at=agora + timedelta(days=DIAS_VALIDADE_LINK_MATERIAL),
+        )
+        db.add(link)
+        db.commit()
+        db.refresh(link)
+
+        url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
+        html = emails.montar_html_material_paciente(
+            nome_paciente=dados.nome_paciente, nome_medico=professional_name(user),
+            recado=dados.recado, url=url, dias_validade=DIAS_VALIDADE_LINK_MATERIAL,
+        )
+        resultado = emails.enviar_institucional_paciente(
+            db, user_id=user.id, destinatario=dados.email_paciente,
+            assunto=emails.ASSUNTO_MATERIAL_PACIENTE, html=html, tipo_log="material_paciente_auto",
+        )
+        db.add(PatientDocumentEmailSend(
+            tipo_origem=TIPO_MATERIAL, referencia_id=m.id, canal=dados.canal,
+            share_link_id=link.id, enviado_por=user.id,
+            paciente_email_cifrado=cofre.cifrar_campo(dados.email_paciente, m.id),
+            assinatura_confirmada=False, sucesso=resultado.enviado,
+        ))
+        db.add(AuditLog(
+            user_id=user.id, action="envio_paciente_material", entity="patient_materials",
+            entity_id=slug[:255],
+            detail={"canal": dados.canal, "enviado": resultado.enviado, "erro": resultado.erro},
+        ))
+        db.commit()
+        return {
+            "canal": dados.canal, "enviado": resultado.enviado, "erro": resultado.erro,
+            "anexo": None, "assunto_sugerido": None, "corpo_sugerido": None,
+        }
+
+    assert dados.canal == CANAL_PROPRIO_CORVIA_MAIL  # só resta este valor no Literal
+    pdf = svc_material.gerar(m, _dados_do_medico(user))
+    nome_arquivo = _nome_arquivo(m.titulo, "material-do-paciente")
+    try:
+        anexo = anexo_email_proprio.preparar(db, user, nome_arquivo=nome_arquivo, conteudo=pdf)
+    except anexo_email_proprio.AnexoIndisponivel as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+    db.add(PatientDocumentEmailSend(
+        tipo_origem=TIPO_MATERIAL, referencia_id=m.id, canal=dados.canal,
+        share_link_id=None, enviado_por=user.id,
+        paciente_email_cifrado=cofre.cifrar_campo(dados.email_paciente, m.id),
+        assinatura_confirmada=False, sucesso=True,
+    ))
+    db.add(AuditLog(
+        user_id=user.id, action="envio_paciente_material", entity="patient_materials",
+        entity_id=slug[:255], detail={"canal": dados.canal, "anexo_file_id": anexo.file_id},
+    ))
+    db.commit()
+    corpo_sugerido = f"Olá {dados.nome_paciente},\n\n{dados.recado}\n" if dados.recado else ""
+    return {
+        "canal": dados.canal, "enviado": None, "erro": None,
+        "anexo": {"file_id": anexo.file_id, "nome": anexo.nome},
+        "assunto_sugerido": f"{m.titulo} — Corvia",
+        "corpo_sugerido": corpo_sugerido,
+    }

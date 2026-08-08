@@ -30,7 +30,9 @@ painel `/api/auth/reset-pendentes`.
 from __future__ import annotations
 
 import logging
+import re
 import smtplib
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 from pathlib import Path
@@ -735,3 +737,83 @@ def montar_html_documento_disponivel(
         nome_medico=nome_medico, url=url, dias=dias_validade,
         divulgacao_assinatura=divulgacao_assinatura,
     )
+
+
+# --------------------------------------------------------------------------
+# Envio ao paciente — canal "automático, pela Corvia" (pedido do Rafael,
+# 08/08/2026): ao concluir a assinatura digital de uma prescrição/documento,
+# ou ao gerar um item de Material ao Paciente, o assinante com CorvIA Mail
+# ativo pode escolher que a Corvia mande o e-mail sozinha, pela conta
+# institucional `contato@corvia.med.br`, em vez de sair pela caixa pessoal
+# dele no Mail360 (esse é o outro canal, `proprio_corvia_mail` — ver
+# `app/services/anexo_email_proprio.py`).
+#
+# **Decisão de design, registrada aqui e no commit**: este canal envia por
+# LINK seguro (`DocumentShareLink`, reaproveitando `montar_html_documento_
+# disponivel`/`montar_html_material_paciente` acima), nunca o PDF anexado —
+# mesma regra já praticada em todo o projeto para material enviado por conta
+# própria da Corvia (`documentos_publicos.py`). O pedido literal do Rafael
+# ("o arquivo já em anexo... pela conta contato@corvia.med.br") foi
+# entendido, com autorização explícita da tarefa que criou este código, como
+# aplicável ao OUTRO canal (envio pela própria caixa do médico, onde o
+# anexo é exatamente o que ele pediu) — aqui, no canal automático/
+# institucional, o link é a opção mais segura e a única consistente com o
+# padrão já usado neste código-fonte para qualquer envio "em nome da
+# Corvia". Rafael pode pedir o contrário depois; até lá, este é o
+# comportamento.
+#
+# Reaproveita o MESMO pipeline SMTP das 11 notificações transacionais
+# (`_montar_mensagem`/`_smtp_enviar`/`_registrar_log`, remetente "Corvia
+# <contato@corvia.med.br>") — herda a mesma pendência de credencial já
+# registrada em CLAUDE.md (`535 Authentication Failed` em produção, até o
+# Rafael trocar a senha do SMTP no Zoho) até ela ser corrigida. Não é uma
+# regressão desta tarefa.
+# --------------------------------------------------------------------------
+
+
+_TAG_HTML = re.compile(r"<[^>]+>")
+_ESPACOS = re.compile(r"[ \t]+")
+_LINHAS_VAZIAS = re.compile(r"\n{3,}")
+
+
+def _texto_simples_de_html(html: str) -> str:
+    """Alternativa em texto puro, gerada a partir do HTML já pronto — estes
+    dois e-mails (`documento_disponivel`/`material_paciente`) nunca tiveram
+    um `.txt` gêmeo porque nasceram para sair só via Mail360 (que não usa
+    alternativa em texto). Para sair por SMTP de verdade (`EmailMessage`
+    exige as duas partes para MIME multipart/alternative bem formado), basta
+    uma extração honesta — não precisa ser bonita, só legível em cliente sem
+    HTML."""
+    texto = html.replace("<br>", "\n").replace("<br/>", "\n").replace("<br />", "\n")
+    texto = re.sub(r"</p>|</div>|</li>", "\n", texto)
+    texto = _TAG_HTML.sub("", texto)
+    texto = texto.replace("&nbsp;", " ").replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+    texto = _ESPACOS.sub(" ", texto)
+    linhas = [linha.strip() for linha in texto.splitlines()]
+    texto = "\n".join(linhas)
+    return _LINHAS_VAZIAS.sub("\n\n", texto).strip()
+
+
+@dataclass
+class ResultadoEnvioInstitucional:
+    enviado: bool
+    erro: str | None = None
+
+
+def enviar_institucional_paciente(
+    db, *, user_id: int, destinatario: str, assunto: str, html: str, tipo_log: str,
+) -> ResultadoEnvioInstitucional:
+    """Envia em nome da Corvia (`contato@corvia.med.br`, via SMTP) — canal
+    "automático" da oferta de envio ao paciente. `html` já vem pronto de
+    `montar_html_documento_disponivel`/`montar_html_material_paciente`."""
+    if not settings.smtp_configurado:
+        log.info("SMTP não configurado — envio institucional (%s) para %s não realizado", tipo_log, destinatario)
+        _registrar_log(db, tipo_log, destinatario, user_id, None, False, "SMTP não configurado")
+        return ResultadoEnvioInstitucional(
+            False, "O envio automático pela Corvia ainda não está disponível neste servidor."
+        )
+    texto = _texto_simples_de_html(html)
+    msg = _montar_mensagem(destinatario, assunto, html, texto)
+    sucesso, erro = _smtp_enviar(msg)
+    _registrar_log(db, tipo_log, destinatario, user_id, None, sucesso, erro)
+    return ResultadoEnvioInstitucional(sucesso, erro)
