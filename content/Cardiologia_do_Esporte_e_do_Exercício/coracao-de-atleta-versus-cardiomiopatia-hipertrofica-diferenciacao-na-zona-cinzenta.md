@@ -1,0 +1,41 @@
+---
+title: "Coração de Atleta versus Cardiomiopatia Hipertrófica: Diferenciação na Zona Cinzenta"
+slug: coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta
+theme: "Cardiologia do Esporte e do Exercício"
+kind: documento
+review_status: revisado
+source_refs: ["Pagourelias ED, Ouzouni S, Salmatzidis P, Sargiannidis T, Tsiouli E, Ntelios D, Kouidi E, Vassilikos VP. A concise guide of contemporary cardiovascular imaging practices to differentiate athlete's heart in the gray zone. Heart Fail Rev. 2025;30(6):1215-1224. PMID: 40576890. PMCID: PMC12618444. DOI: 10.1007/s10741-025-10541-y — abstract integral conferido via PubMed E-utilities em 08/08/2026.", "Wiradinata W, Aditya MR, Subali AD, Lestari H, Hardani RB, Mukti NH. Distinguishing athlete's heart from hypertrophic cardiomyopathy by ECG features in the pediatric population: a systematic review and meta-analysis. Eur J Pediatr. 2025;184(12):802. PMID: 41313487. DOI: 10.1007/s00431-025-06657-w — abstract integral conferido via PubMed E-utilities em 08/08/2026.", "Deligiannis A, Bompotis G, Deligiannis P, Anifanti M, Kouidi E. Artificial intelligence in the differential diagnosis of hypertrophic cardiomyopathy and physiological hypertrophy: a scoping review. Hellenic J Cardiol. 2026 May 15. PMID: 42142808. DOI: 10.1016/j.hjc.2026.05.001 — abstract integral conferido via PubMed E-utilities em 08/08/2026."]
+legacy_source: "Documento novo — tema Cardiologia do Esporte e do Exercício, criação da área em 08/08/2026 (primeiro lote de conteúdo, pedido do Rafael)."
+---
+
+# Coração de Atleta versus Cardiomiopatia Hipertrófica: Diferenciação na Zona Cinzenta
+
+## Por que isso importa na prática
+O treinamento físico sistemático e intenso induz remodelamento cardíaco estrutural e funcional — o chamado "coração de atleta" — que em parte dos casos se sobrepõe, na imagem e no ECG, aos achados da cardiomiopatia hipertrófica (HCM), a principal causa cardíaca de morte súbita em atletas jovens e adultos competitivos. Errar nessa diferenciação tem dois custos opostos e igualmente graves: desqualificar um atleta saudável de forma permanente e desnecessária, ou liberar para competição um portador de HCM não reconhecida. É exatamente esse território de sobreposição — a "zona cinzenta" — que concentra a maior dificuldade diagnóstica da cardiologia do esporte.
+
+## O desafio central: distinguir remodelamento fisiológico de doença genética
+Pagourelias et al. (*Heart Failure Reviews*, 2025, PMID 40576890) descrevem que, na maioria dos casos, o remodelamento cardíaco do atleta apresenta características discretas, facilmente distinguíveis de achados patológicos. O problema recai sobre um subgrupo: atletas cujo remodelamento assume forma mais pronunciada (a "zona cinzenta" propriamente dita) e que precisa ser diferenciado tanto de HCM quanto de outras cardiomiopatias hereditárias (dilatada, arritmogênica) que também podem se manifestar em pessoas fisicamente ativas. Os autores propõem que a imagem cardiovascular — ecocardiografia e ressonância magnética cardíaca (RMC), com os avanços recentes de ambas as técnicas — continua sendo o processo central para diferenciar fenótipos normais de anormais, viabilizando tanto a triagem pré-participação esportiva quanto a detecção precoce de cardiomiopatias subjacentes. O artigo é estruturado como um guia prático, com algoritmos hierárquicos de escolha de método e momento de imagem — mas os limiares numéricos específicos de espessura parietal, diâmetro de câmara e função diastólica usados nesses algoritmos não estão detalhados no resumo indexado. **VERIFICAÇÃO HUMANA NECESSÁRIA** para reproduzir os cortes exatos e a sequência hierárquica de exames propostos pelos autores — recomenda-se consultar o texto completo (livre em PMC12618444) antes de aplicar clinicamente os algoritmos descritos.
+
+## O que o ECG pediátrico acrescenta à diferenciação
+Wiradinata et al. (*European Journal of Pediatrics*, 2025, PMID 41313487), em revisão sistemática com metanálise de 25 estudos elegíveis, sintetizaram parâmetros eletrocardiográficos capazes de diferenciar HCM pediátrica de adaptação fisiológica em atletas jovens — um problema adicionalmente complicado pelo fato de que os critérios de ECG do atleta hoje disponíveis foram desenvolvidos majoritariamente em população adulta e podem não se aplicar bem à criança e ao adolescente. Os achados agregados mostraram diferenças significativas, mais prevalentes no grupo com HCM, em:
+- **Prolongamento do intervalo QTc**;
+- **Alterações de onda T e do segmento ST**;
+- **Ondas Q patológicas**.
+
+Achados complementares, a partir de estudos de braço único comparados a dados normativos de atletas, também apontaram diferenças em **desvio de eixo, aumento atrial e bloqueios de ramo**. Os valores exatos de odds ratio, sensibilidade e especificidade de cada parâmetro, calculados pelo método de Mantel-Haenszel, não constam do resumo indexado. **VERIFICAÇÃO HUMANA NECESSÁRIA** para os números agregados exatos antes de usar qualquer um desses achados como limiar de decisão isolado — a própria metanálise recomenda que uma alteração de ECG detectada deve **motivar investigação adicional**, não servir como critério diagnóstico definitivo isolado.
+
+## Inteligência artificial: uma ferramenta emergente, ainda com lacuna específica no atleta
+Deligiannis et al. (*Hellenic Journal of Cardiology*, 2026, PMID 42142808) conduziram uma revisão de escopo (metodologia Arksey e O'Malley, PRISMA-ScR) sobre uso de inteligência artificial (aprendizado de máquina e aprendizado profundo) na diferenciação de HCM frente a hipertrofia fisiológica. De oito estudos elegíveis, **apenas um comparou diretamente HCM contra coração de atleta**, usando parâmetros ecocardiográficos derivados de deformação miocárdica (*strain*) com classificação por máquina de vetores de suporte, obtendo **AUC de 0,93**. Os demais sete estudos comparavam HCM contra hipertrofia hipertensiva ou não patológica em geral (não especificamente atletas), com AUC entre 0,89 e 0,96, usando análise por ECG, ecocardiografia, radiômica ou vídeo. A conclusão dos autores é direta: a IA mostra potencial real para essa diferenciação, mas **a escassez de bases de dados específicas de atletas e a validação externa limitada ainda restringem a aplicabilidade clínica** na cardiologia do esporte — nenhum conjunto de dados recente específico de atletas foi identificado na revisão.
+
+## Lendo as três fontes em conjunto
+| Fonte | Foco | Contribuição principal |
+|---|---|---|
+| Pagourelias 2025 (Heart Fail Rev) | Guia de imagem multimodal | Algoritmo hierárquico de escolha de método (eco/RMC) para a zona cinzenta — limiares numéricos exigem leitura do texto completo |
+| Wiradinata 2025 (Eur J Pediatr) | ECG pediátrico | QTc prolongado, alterações de onda T/ST e onda Q patológica mais prevalentes na HCM pediátrica que no coração de atleta jovem |
+| Deligiannis 2026 (Hellenic J Cardiol) | IA aplicada à imagem | Só 1 de 8 estudos comparou IA diretamente contra coração de atleta (AUC 0,93); lacuna de bases de dados específicas de atletas |
+
+## Mensagem prática para a triagem
+Nenhuma das três fontes propõe um critério único e definitivo. O padrão que emerge, de forma consistente entre elas, é o de **abordagem multimodal e hierárquica**: ECG de repouso como primeira triagem (com atenção a QTc, onda T/ST e onda Q, sobretudo em jovens), seguido de imagem cardíaca estruturada (ecocardiografia com avaliação de deformação miocárdica, escalando para RMC quando a dúvida persistir), com a IA despontando como ferramenta de apoio promissora, mas ainda não validada especificamente para esta população. Achado clínico duvidoso na zona cinzenta deve ser resolvido por investigação adicional — nunca por presunção em qualquer direção.
+
+---
+*Este documento inaugura, junto com "Morte Súbita Cardíaca no Atleta: Triagem, Causas Arritmogênicas e Eletrofisiologia Esportiva", a produção de conteúdo do tema Cardiologia do Esporte e do Exercício nesta plataforma. Produção adicional (triagem pré-participação, cardiomiopatia arritmogênica no atleta, prescrição de exercício em cardiopata, síndrome de Marfan e esporte, doping/cardiotoxicidade) está em andamento — ver instrução ao Grupo B em `CLAUDE.md`.*
