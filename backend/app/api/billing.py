@@ -10,6 +10,7 @@ from app.core.db import get_db
 from app.core.security import ACESSO_LIBERADO, current_user
 from app.models.audit import AuditLog
 from app.models.subscription import (
+    PERIODICIDADE_ANUAL, PERIODICIDADE_MENSAL, PERIODICIDADE_SEMESTRAL,
     PLANO_BASICO, PLANO_COMPLETO, TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription,
 )
 from app.models.user import User
@@ -27,6 +28,28 @@ PRECO_COMPLETO_CENTAVOS = 5990
 # documentado em CLAUDE.md e cobrado no painel do Stripe.
 PRECO_BASICO_CENTAVOS = 4990
 PLANOS_NOME = {PLANO_BASICO: "Assinatura Básica", PLANO_COMPLETO: "Assinatura Completa"}
+
+PERIODICIDADES_VALIDAS = {PERIODICIDADE_MENSAL, PERIODICIDADE_SEMESTRAL, PERIODICIDADE_ANUAL}
+ROTULO_PERIODICIDADE = {
+    PERIODICIDADE_MENSAL: "mês", PERIODICIDADE_SEMESTRAL: "6 meses", PERIODICIDADE_ANUAL: "ano",
+}
+# Valores fixos por plano+periodicidade, confirmados pelo Rafael em
+# 08/08/2026 (mensal sem mudança de valor). Única fonte de verdade sobre
+# preço no servidor — o cliente nunca envia valor, só plano+periodicidade,
+# e é este dicionário que resolve o centavo, aqui e no e-mail transacional.
+PRECO_CENTAVOS = {
+    (PLANO_BASICO, PERIODICIDADE_MENSAL): PRECO_BASICO_CENTAVOS,
+    (PLANO_BASICO, PERIODICIDADE_SEMESTRAL): 26990,
+    (PLANO_BASICO, PERIODICIDADE_ANUAL): 47990,
+    (PLANO_COMPLETO, PERIODICIDADE_MENSAL): PRECO_COMPLETO_CENTAVOS,
+    (PLANO_COMPLETO, PERIODICIDADE_SEMESTRAL): 32390,
+    (PLANO_COMPLETO, PERIODICIDADE_ANUAL): 57590,
+}
+# Reverso de PRECO_CENTAVOS, usado para inferir o plano a partir do valor
+# cobrado que o Stripe confirma no webhook (nunca dos parâmetros que o
+# cliente mandou no clique) — chave única porque os seis valores são todos
+# distintos entre si.
+PLANO_DO_VALOR_CENTAVOS = {v: k[0] for k, v in PRECO_CENTAVOS.items()}
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
 # de `handle_path`, não remove o prefixo antes de repassar ao backend).
@@ -211,22 +234,85 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> Subscript
     return sub
 
 
-def _inferir_plano_do_objeto(obj) -> str | None:
-    """Lê o valor cobrado no primeiro item da assinatura do Stripe e infere
-    qual dos dois planos da plataforma é. Best-effort: usado só para detectar
-    troca de plano numa assinatura já existente (e-mail de "alteração de
-    plano") — se não der para ler o valor, simplesmente não dispara o e-mail,
-    nunca adivinha. Como só existem dois planos hoje, comparar contra o valor
-    conhecido do Completo já resolve o caso — se um terceiro plano existir um
-    dia, esta função precisa ser refeita, não só estendida."""
+def _periodicidade_do_price(price) -> str:
+    """A partir do `recurring` do Price confirmado pelo Stripe — nunca do que
+    o cliente pediu no checkout. `interval_count` só existe nos Prices
+    semestrais/anuais criados para esta tarefa; um Price antigo (mensal, sem
+    o campo ou com valor 1) cai no `else`, que é o comportamento real de
+    100% das assinaturas de antes desta funcionalidade."""
+    recurring = _campo(price, "recurring") or {}
+    interval = _campo(recurring, "interval")
+    interval_count = _campo(recurring, "interval_count") or 1
+    if interval == "year":
+        return PERIODICIDADE_ANUAL
+    if interval == "month" and interval_count and interval_count >= 6:
+        return PERIODICIDADE_SEMESTRAL
+    return PERIODICIDADE_MENSAL
+
+
+def _inferir_plano_periodicidade_do_objeto(obj) -> tuple[str | None, str | None]:
+    """Lê o valor cobrado e a recorrência do primeiro item da assinatura do
+    Stripe e infere plano+periodicidade — nunca do que o cliente pediu no
+    checkout ou na troca de plano, só do que o Stripe confirma. Usado tanto
+    no evento de assinatura criada/atualizada quanto para reconciliar uma
+    troca de plano/periodicidade feita via `stripe.Subscription.modify(...)`
+    (endpoint `/trocar-plano`) — a mesma disciplina de "nunca aplicar
+    localmente antes da confirmação" que o resto deste arquivo já segue.
+    Best-effort: se não der para ler o valor, não adivinha, devolve None."""
     itens = _campo(_campo(obj, "items") or {}, "data") or []
     if not itens:
-        return None
+        return None, None
     price = _campo(itens[0], "price") or {}
     valor = _campo(price, "unit_amount")
     if valor is None:
-        return None
-    return PLANO_COMPLETO if valor == PRECO_COMPLETO_CENTAVOS else PLANO_BASICO
+        return None, None
+    plano = PLANO_DO_VALOR_CENTAVOS.get(valor)
+    if plano is None:
+        return None, None
+    return plano, _periodicidade_do_price(price)
+
+
+def _item_de_preco(plano: str, periodicidade: str) -> dict:
+    """Resolve o item de linha (Price existente ou `price_data` inline) para
+    um plano+periodicidade — usado tanto no checkout quanto na troca de
+    plano de uma assinatura ativa, para não ter duas fontes de verdade sobre
+    preço. Nunca aceita preço vindo do cliente: os seis pontos possíveis
+    (2 planos × 3 periodicidades) são todos resolvidos aqui, a partir de
+    PRECO_CENTAVOS/settings — o cliente só escolhe QUAL dos seis, nunca o
+    valor.
+
+    Levanta 503 se a periodicidade pedida ainda não tiver Price configurado
+    no `.env` — nunca inventa um price_data com o valor de PRECO_CENTAVOS
+    para semestral/anual: o pedido original foi explícito em pedir Price
+    OBJECTS de verdade para esses dois, criados uma vez via API, não preço
+    inline recriado a cada chamada."""
+    if periodicidade == PERIODICIDADE_MENSAL:
+        if plano == PLANO_COMPLETO:
+            return {
+                "price_data": {
+                    "currency": "brl",
+                    "unit_amount": PRECO_COMPLETO_CENTAVOS,
+                    "recurring": {"interval": "month"},
+                    "product_data": {"name": "Corvia — Assinatura Completa (Acesso ao Site + CorvIA Mail)"},
+                },
+            }
+        return {"price": settings.stripe_price_id}
+
+    price_id = {
+        (PLANO_BASICO, PERIODICIDADE_SEMESTRAL): settings.stripe_price_id_basico_semestral,
+        (PLANO_BASICO, PERIODICIDADE_ANUAL): settings.stripe_price_id_basico_anual,
+        (PLANO_COMPLETO, PERIODICIDADE_SEMESTRAL): settings.stripe_price_id_completo_semestral,
+        (PLANO_COMPLETO, PERIODICIDADE_ANUAL): settings.stripe_price_id_completo_anual,
+    }.get((plano, periodicidade))
+    if not price_id:
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                f"O plano {PLANOS_NOME.get(plano, plano)} a cada {ROTULO_PERIODICIDADE[periodicidade]} "
+                "ainda não está disponível para assinatura."
+            ),
+        )
+    return {"price": price_id}
 
 
 def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
@@ -248,18 +334,25 @@ def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
 @router.post("/checkout")
 def criar_checkout(
     plano: str = Query(PLANO_BASICO),
+    periodicidade: str = Query(PERIODICIDADE_MENSAL),
     db: Session = Depends(get_db),
     user: User = Depends(current_user),
 ):
     if plano not in PLANOS_VALIDOS:
         raise HTTPException(status_code=400, detail="Plano inválido.")
+    if periodicidade not in PERIODICIDADES_VALIDAS:
+        raise HTTPException(status_code=400, detail="Periodicidade inválida.")
 
     sub = _obter_ou_criar_assinatura(db, user)
 
     if sub.status in ACESSO_LIBERADO:
         raise HTTPException(
             status_code=409,
-            detail="Você já tem uma assinatura ativa. Para trocar de plano, cancele a atual pelo portal de assinatura e assine o novo plano.",
+            detail=(
+                "Você já tem uma assinatura ativa. Para trocar de plano ou periodicidade, use "
+                "\"Trocar plano\" na tela de Assinatura, ou cancele pelo portal de assinatura e "
+                "assine de novo."
+            ),
         )
 
     if user.convidado:
@@ -295,34 +388,29 @@ def criar_checkout(
         sub.stripe_customer_id = customer["id"]
 
     # Gravado aqui, não deduzido do webhook: o webhook só confirma status e
-    # data de renovação, quem decide o plano é esta chamada, antes de existir
-    # qualquer evento do Stripe para esta assinatura.
+    # data de renovação, quem decide o plano/periodicidade é esta chamada,
+    # antes de existir qualquer evento do Stripe para esta assinatura.
     sub.plano = plano
+    sub.periodicidade = periodicidade
     db.commit()
 
-    if plano == PLANO_COMPLETO:
-        line_items = [{
-            "price_data": {
-                "currency": "brl",
-                "unit_amount": PRECO_COMPLETO_CENTAVOS,
-                "recurring": {"interval": "month"},
-                "product_data": {"name": "Corvia — Assinatura Completa (Acesso ao Site + CorvIA Mail)"},
-            },
-            "quantity": 1,
-        }]
-    else:
-        line_items = [{"price": settings.stripe_price_id, "quantity": 1}]
+    line_items = [{**_item_de_preco(plano, periodicidade), "quantity": 1}]
 
     session = stripe.checkout.Session.create(
         customer=sub.stripe_customer_id,
         mode="subscription",
         payment_method_types=["card"],
         line_items=line_items,
-        # Código promocional no checkout (08/08/2026, pedido do Rafael) — o
-        # cupom em si é criado/gerenciado por ele direto no painel Stripe,
-        # isto só habilita o campo na tela de pagamento.
+        # Pedido do Rafael em 08/08/2026: cupom promocional no checkout —
+        # os cupons em si são criados por ele no painel Stripe depois, este
+        # campo só habilita o campo de código na tela do Stripe.
         allow_promotion_codes=True,
-        subscription_data={"metadata": {"tipo": "meucardio", "plano": plano, "user_id": str(user.id)}},
+        subscription_data={
+            "metadata": {
+                "tipo": "meucardio", "plano": plano, "periodicidade": periodicidade,
+                "user_id": str(user.id),
+            }
+        },
         success_url=f"{settings.public_url}/assinatura?status=sucesso",
         cancel_url=f"{settings.public_url}/assinatura?status=cancelado",
     )
@@ -430,6 +518,9 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
                 },
             },
         },
+        # Mesmo motivo do checkout principal, 08/08/2026: habilita o campo de
+        # cupom na tela do Stripe — os cupons são criados pelo Rafael.
+        allow_promotion_codes=True,
         line_items=[{
             "price_data": {
                 "currency": "brl",
@@ -443,9 +534,6 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
         # O metadata da sessão e o da assinatura são campos diferentes; o
         # webhook de customer.subscription.* só enxerga o da assinatura.
         metadata={"tipo": "email", "user_id": str(user.id)},
-        # Código promocional no checkout (08/08/2026, pedido do Rafael) —
-        # mesmo campo do checkout principal, ver comentário lá.
-        allow_promotion_codes=True,
         success_url=f"{settings.public_url}/corvia-mail?status=sucesso",
         cancel_url=f"{settings.public_url}/corvia-mail?status=cancelado",
     )
@@ -507,6 +595,66 @@ def abrir_portal(db: Session = Depends(get_db), user: User = Depends(current_use
     return {"portal_url": session["url"]}
 
 
+@router.post("/trocar-plano")
+def trocar_plano(
+    plano: str = Query(...), periodicidade: str = Query(...),
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    """Troca plano e/ou periodicidade de uma assinatura JÁ ATIVA (08/08/2026,
+    pedido do Rafael) — antes disso, trocar exigia cancelar e reassinar
+    manualmente (o 409 em `criar_checkout` acima). Usa
+    `stripe.Subscription.modify(...)` trocando o item de preço, com
+    `proration_behavior="create_prorations"`: o Stripe credita/debita a
+    diferença proporcional ao tempo restante do ciclo atual, em vez de
+    cobrar o valor cheio do novo plano imediatamente ou esperar o próximo
+    ciclo — é o comportamento que a maioria dos assinantes espera ao trocar
+    no meio do período já pago.
+
+    NUNCA aplica o novo plano/periodicidade localmente aqui — só dispara a
+    troca no Stripe. Quem grava `sub.plano`/`sub.periodicidade` de verdade é
+    sempre o webhook (`customer.subscription.updated`), lendo o que o Stripe
+    confirmou — mesma disciplina de "nunca confiar no otimista" que o resto
+    deste arquivo já segue (ver `_inferir_plano_periodicidade_do_objeto`)."""
+    if plano not in PLANOS_VALIDOS:
+        raise HTTPException(status_code=400, detail="Plano inválido.")
+    if periodicidade not in PERIODICIDADES_VALIDAS:
+        raise HTTPException(status_code=400, detail="Periodicidade inválida.")
+
+    sub = _assinatura_meucardio(db, user.id)
+    if not sub or sub.status not in ACESSO_LIBERADO or not sub.stripe_subscription_id:
+        raise HTTPException(status_code=404, detail="Você não tem uma assinatura ativa para trocar.")
+    if user.convidado:
+        # Convidado nunca fala com o Stripe (ver `criar_checkout` acima) —
+        # trocar o plano dele é ação de admin (painel Admin/pré-autorização),
+        # não desta rota.
+        raise HTTPException(status_code=409, detail="Contas de convidado não trocam de plano por aqui.")
+    if sub.plano == plano and sub.periodicidade == periodicidade:
+        raise HTTPException(status_code=409, detail="Você já está neste plano e periodicidade.")
+
+    item_preco = _item_de_preco(plano, periodicidade)
+    stripe_sub = stripe.Subscription.retrieve(sub.stripe_subscription_id)
+    item_atual = _campo(_campo(stripe_sub, "items") or {}, "data")[0]
+
+    stripe.Subscription.modify(
+        sub.stripe_subscription_id,
+        items=[{"id": item_atual["id"], **item_preco}],
+        proration_behavior="create_prorations",
+        metadata={"tipo": "meucardio", "plano": plano, "periodicidade": periodicidade, "user_id": str(user.id)},
+    )
+    db.add(AuditLog(
+        user_id=user.id, action="solicitar_troca_plano", entity="subscription",
+        entity_id=str(sub.id),
+        detail={
+            "plano_anterior": sub.plano, "periodicidade_anterior": sub.periodicidade,
+            "plano_solicitado": plano, "periodicidade_solicitada": periodicidade,
+        },
+    ))
+    db.commit()
+    return {
+        "nota": "Troca solicitada — confirmamos assim que o Stripe processar (geralmente na hora).",
+    }
+
+
 @router.get("/faturas")
 def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_user)):
     """Histórico de cobranças. Lê direto do Stripe em vez de espelhar faturas no
@@ -546,8 +694,11 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
 def status_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
     sub = _assinatura_meucardio(db, user.id)
     if not sub:
-        return {"status": "inativo", "current_period_end": None, "plano": None}
-    return {"status": sub.status, "current_period_end": sub.current_period_end, "plano": sub.plano}
+        return {"status": "inativo", "current_period_end": None, "plano": None, "periodicidade": None}
+    return {
+        "status": sub.status, "current_period_end": sub.current_period_end, "plano": sub.plano,
+        "periodicidade": sub.periodicidade,
+    }
 
 
 def _ultimos4_da_fatura(invoice_id: str | None) -> str:
@@ -604,15 +755,25 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
             estado_antes["era_nova"] = sub.stripe_subscription_id is None
             estado_antes["status_anterior"] = sub.status
             estado_antes["plano_anterior"] = sub.plano
+            estado_antes["periodicidade_anterior"] = sub.periodicidade
             sub.stripe_subscription_id = obj["id"]
             sub.status = traduzir_status(obj["status"])
             fim = _fim_do_periodo(obj)
             if fim is not None:
                 sub.current_period_end = fim
             if sub.kind == TIPO_MEUCARDIO:
-                novo_plano = _inferir_plano_do_objeto(obj)
+                # Reconciliação SEMPRE pelo que o Stripe confirma neste
+                # evento — nunca pelo que `/checkout` ou `/trocar-plano`
+                # gravaram otimisticamente antes da confirmação. É assim que
+                # uma troca de plano feita via `stripe.Subscription.modify`
+                # (endpoint `/trocar-plano`) e uma troca feita pelo próprio
+                # Customer Portal do Stripe convergem para o mesmo estado
+                # local, sem depender de qual caminho o assinante usou.
+                novo_plano, nova_periodicidade = _inferir_plano_periodicidade_do_objeto(obj)
                 if novo_plano:
                     sub.plano = novo_plano
+                if nova_periodicidade:
+                    sub.periodicidade = nova_periodicidade
 
         sub = _aplicar_evento(db, obj, quando, alterar)
 
@@ -620,13 +781,17 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
             era_nova = estado_antes["era_nova"]
             status_anterior = estado_antes["status_anterior"]
             plano_anterior = estado_antes["plano_anterior"]
-            valor_do_plano = PRECO_COMPLETO_CENTAVOS if sub.plano == PLANO_COMPLETO else PRECO_BASICO_CENTAVOS
+            periodicidade_anterior = estado_antes["periodicidade_anterior"]
+            valor_do_plano = PRECO_CENTAVOS.get(
+                (sub.plano, sub.periodicidade),
+                PRECO_COMPLETO_CENTAVOS if sub.plano == PLANO_COMPLETO else PRECO_BASICO_CENTAVOS,
+            )
 
             if era_nova and tipo == "customer.subscription.created":
                 background_tasks.add_task(
                     emails.enviar_boas_vindas, sub.user_id, sub.plano, valor_do_plano, sub.current_period_end,
                 )
-            elif not era_nova and plano_anterior != sub.plano:
+            elif not era_nova and (plano_anterior != sub.plano or periodicidade_anterior != sub.periodicidade):
                 background_tasks.add_task(
                     emails.enviar_alteracao_plano, sub.user_id, plano_anterior, sub.plano,
                     valor_do_plano, sub.current_period_end or quando,

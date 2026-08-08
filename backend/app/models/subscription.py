@@ -12,6 +12,14 @@ TIPO_EMAIL = "email"  # CorvIA Mail (Tarefa 28) — add-on cobrado à parte, nã
 PLANO_BASICO = "basico"     # R$49,90/mês, acesso completo à plataforma, sem CorvIA Mail
 PLANO_COMPLETO = "completo"  # R$59,90/mês, acesso completo à plataforma + CorvIA Mail incluso
 
+# Periodicidade da assinatura principal (kind=meucardio) — mensal já existia
+# implicitamente; semestral/anual pedidos pelo Rafael em 08/08/2026, com
+# valores fixos por plano+periodicidade definidos em app/api/billing.py.
+# Não se aplica a kind=email (add-on é sempre mensal) nem kind=curso.
+PERIODICIDADE_MENSAL = "mensal"
+PERIODICIDADE_SEMESTRAL = "semestral"
+PERIODICIDADE_ANUAL = "anual"
+
 
 class Subscription(Base):
     __tablename__ = "subscriptions"
@@ -60,6 +68,8 @@ class Subscription(Base):
     # Só tem sentido para kind='meucardio' — nas linhas de curso e de CorvIA
     # Mail o campo existe (coluna única na tabela) mas não é lido.
     plano: Mapped[str] = mapped_column(String(20), default=PLANO_BASICO)
+    # Idem: só tem sentido para kind='meucardio'. Migração 26751b9d12f0.
+    periodicidade: Mapped[str] = mapped_column(String(20), default=PERIODICIDADE_MENSAL)
     stripe_customer_id: Mapped[str | None] = mapped_column(String(255), nullable=True, index=True)
     stripe_subscription_id: Mapped[str | None] = mapped_column(String(255), nullable=True, unique=True, index=True)
     status: Mapped[str] = mapped_column(String(30), default="inativo")

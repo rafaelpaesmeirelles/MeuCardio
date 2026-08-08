@@ -190,6 +190,20 @@ class Settings(BaseSettings):
         return [s.strip() for s in (self.stripe_webhook_secret or "").split(",") if s.strip()]
     stripe_price_id: str = ""
 
+    # --- Planos semestral/anual (08/08/2026, pedido do Rafael) --------------
+    # Diferente do mensal (básico via Price pré-criado acima; completo via
+    # price_data inline no checkout), os quatro pontos novos são Price
+    # OBJECTS de verdade, criados uma única vez via API do Stripe — é o que
+    # o pedido original especificou, e mantém o histórico de preço visível
+    # no painel do Stripe (price_data inline não aparece na lista de Preços).
+    # Em branco, a periodicidade correspondente fica indisponível no
+    # checkout (409/503) em vez de cobrar um valor inventado — mesmo
+    # princípio já usado em `corvia_mail_preco_definido`.
+    stripe_price_id_basico_semestral: str = ""
+    stripe_price_id_basico_anual: str = ""
+    stripe_price_id_completo_semestral: str = ""
+    stripe_price_id_completo_anual: str = ""
+
     @property
     def smtp_configurado(self) -> bool:
         return bool(self.smtp_host and self.smtp_user and self.smtp_password)
