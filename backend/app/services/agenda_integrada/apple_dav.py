@@ -7,6 +7,7 @@ evitando transformar a integração em um proxy SSRF.
 
 from __future__ import annotations
 
+import logging
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -16,6 +17,8 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import httpx
 
 from app.services.agenda_integrada.connectors import ConnectorError
+
+log = logging.getLogger(__name__)
 
 DAV = "DAV:"
 CALDAV = "urn:ietf:params:xml:ns:caldav"
@@ -129,6 +132,18 @@ class AppleDavClient:
         self.client = httpx.Client(
             auth=(username, app_specific_password), timeout=httpx.Timeout(30.0, connect=8.0),
             follow_redirects=False, transport=transport,
+            # Achado em 08/08/2026, investigando "apple_dav_discovery_failed" persistente
+            # (Rafael reportou o erro de novo mesmo com o fix de redirecionamento de
+            # 07/08/2026 já em produção — confirmado por hash do arquivo rodando igual ao
+            # do repositório). Sem User-Agent identificável, httpx manda "python-httpx/x.y",
+            # e alguns testes contra caldav.icloud.com sem credencial mostraram o servidor
+            # respondendo 401 direto no host genérico (sem redirecionar pra partição),
+            # comportamento diferente do documentado no fix anterior — sinal de que o
+            # servidor da Apple está tratando o cliente de forma diferente conforme o
+            # User-Agent. DAVx5/vdirsyncer (clientes CalDAV populares) sempre mandam um
+            # User-Agent identificável; alinhando por cautela, não confirmado como causa
+            # raiz definitiva sem reproduzir com credencial real.
+            headers={"User-Agent": "Corvia/1.0 (CalDAV/CardDAV sync; +https://corvia.med.br)"},
         )
 
     def _xml(self, method: str, url: str, body: str, *, depth: str = "0") -> tuple[ET.Element, str]:
@@ -181,6 +196,15 @@ class AppleDavClient:
         principal_xml, principal_base = self._xml("PROPFIND", root, '<d:propfind xmlns:d="DAV:"><d:prop><d:current-user-principal/></d:prop></d:propfind>')
         href = principal_xml.findtext(f".//{{{DAV}}}current-user-principal/{{{DAV}}}href")
         if not href:
+            # Diagnóstico acrescentado em 08/08/2026: o erro genérico não dizia se o
+            # iCloud respondeu 200/207 com XML válido mas sem o elemento esperado, ou
+            # se veio outra coisa (ex.: multistatus de erro por propriedade, corpo
+            # vazio). Logar o XML bruto (nível debug, sem credencial nele) é o que
+            # falta pra diagnosticar sem precisar reproduzir às cegas de novo.
+            log.warning(
+                "Apple DAV discovery sem current-user-principal — root=%s base=%s corpo=%s",
+                root, principal_base, ET.tostring(principal_xml, encoding="unicode")[:2000],
+            )
             raise ConnectorError("apple_dav_discovery_failed", "O iCloud não informou o usuário DAV.")
         principal = _safe_icloud_url(principal_base, href)
         home_xml, home_base = self._xml(
@@ -189,6 +213,10 @@ class AppleDavClient:
         )
         home_href = home_xml.findtext(f".//{{{namespace}}}{property_name}/{{{DAV}}}href")
         if not home_href:
+            log.warning(
+                "Apple DAV discovery sem %s — principal=%s base=%s corpo=%s",
+                property_name, principal, home_base, ET.tostring(home_xml, encoding="unicode")[:2000],
+            )
             raise ConnectorError("apple_dav_discovery_failed", "O iCloud não informou a coleção DAV.")
         return _safe_icloud_url(home_base, home_href)
 
