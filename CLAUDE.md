@@ -1,5 +1,39 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~22h30: Conselho "Outro" ganha campos de texto livre
+> Pedido do Rafael: no cadastro (`/solicitar-acesso`) e em Minha Conta, quando o médico escolhe
+> "Outro" no menu Conselho, ele digita qual é o conselho e o estado/região, em vez de ficar preso a
+> um seletor de UF de 2 letras que não serve pra conselho fora do padrão CRM/CRO/etc.
+>
+> **Ponto legalmente sensível, preservado sem alteração:** `users.council_name` continua guardando
+> o literal `"OUTRO"` — é exatamente esse valor que `escopo_profissional.escopo_de()` usa para o
+> fail-closed do escopo de prescrição (qualquer conselho fora de CRM/CRO cai no escopo mais
+> restrito). Os dois campos novos, `council_name_other`/`council_state_other` (migração
+> `f67i20260808`, nullable), são só para **exibição** — nunca entram em decisão de escopo/permissão.
+>
+> **`professional_profile.council_display(source)`** é o ponto único que troca "OUTRO" pelo texto
+> livre para exibição, quando presente. Como `document_identity()` (usado por toda geração de
+> documento — avaliação pré-operatória, calculadoras, receituário, documentos públicos, exportação)
+> já chama `council_display()` internamente, a correção cobriu essas rotas automaticamente, sem
+> precisar tocar em cada uma. Também corrigidos à mão os pontos que montavam a string de conselho
+> por conta própria, fora de `document_identity()`: `GET /auth/me`, busca de profissional no CorvIA
+> Chat, presença online, cabeçalho do receituário digital (`prescriptions.py`), solicitante de
+> telediagnóstico (`service_orders.py`) e assinatura de e-mail opcional.
+>
+> **Validação condicional** em `SolicitacaoAcesso` (cadastro) e `DadosPessoais` (Minha Conta) via
+> `model_validator`: "Outro" exige os dois campos livres preenchidos; qualquer outro conselho
+> continua exigindo UF válida da lista fixa, sem mudança de comportamento pra ninguém que não usa
+> "Outro". Frontend (`SolicitarAcesso.tsx`, `MinhaConta.tsx`) troca o `<select>` de UF por dois
+> campos de texto livre quando `council_name === "Outro"`.
+>
+> **Verificação**: 12 testes novos (`test_professional_profile.py` — `council_display`/
+> `document_identity` isolados; `test_conselho_outro.py` — HTTP real de `POST /solicitar-acesso` e
+> `PATCH /auth/me`, cobrindo o caso "Outro" completo, "Outro" sem os campos livres → 422, e conselho
+> comum sem UF → 422 preservado). Suíte completa: **779/779 passando**. `tsc --noEmit` limpo.
+> Migração `f67i20260808` aplicada em produção, backend e frontend rebuildados, bundle novo
+> confirmado no Caddy (grep de `council_name_other`/`conselho-outro` nos assets servidos). Backend
+> saudável (200 em `/api/openapi.json` e `/`) depois do rebuild.
+
 > ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~21h: as 7 falhas pré-existentes da suíte de testes corrigidas + bug real de redirecionamento em página pública
 > Pedido do Rafael: "corrija tb as 7 falhas pre-existentes" (as que eu tinha reportado, sem relação
 > com a sessão, ao concluir o trabalho de médico convidado). Resolvidas as 7 — **766/766 testes
