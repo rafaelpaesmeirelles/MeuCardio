@@ -159,6 +159,10 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
     council_name: perfil.council_name ?? "CRM",
     council_number: perfil.council_number ?? "",
     council_state: perfil.council_state ?? "",
+    // Só usados quando council_name === "Outro" (08/08/2026) — mesmo padrão
+    // do cadastro em SolicitarAcesso.tsx.
+    council_name_other: perfil.council_name_other ?? "",
+    council_state_other: perfil.council_state_other ?? "",
     specialty: perfil.specialty ?? "",
     rqe: perfil.rqe ?? "",
     professional_title: perfil.professional_title ?? "",
@@ -188,6 +192,7 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
     setOk(false);
   }
 
+  const ehOutro = dados.council_name === "Outro";
   const valido = dados.full_name.trim().split(/\s+/).length >= 2;
 
   async function salvar() {
@@ -198,7 +203,9 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
         ...dados,
         profession: dados.profession.trim() || null,
         council_number: dados.council_number.trim() || null,
-        council_state: dados.council_state || null,
+        council_state: ehOutro ? null : dados.council_state || null,
+        council_name_other: ehOutro ? dados.council_name_other.trim() || null : null,
+        council_state_other: ehOutro ? dados.council_state_other.trim() || null : null,
         specialty: dados.specialty.trim() || null,
         rqe: dados.rqe.trim() || null,
         home_street: residencial.street.trim() || null,
@@ -260,14 +267,33 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
           <label htmlFor="conta-numero">Nº de registro</label>
           <input id="conta-numero" value={dados.council_number} onChange={(e) => set("council_number", e.target.value)} />
         </div>
-        <div>
-          <label htmlFor="conta-uf">Estado</label>
-          <select id="conta-uf" value={dados.council_state} onChange={(e) => set("council_state", e.target.value)}>
-            <option value="">—</option>
-            {UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
-          </select>
-        </div>
+        {!ehOutro && (
+          <div>
+            <label htmlFor="conta-uf">Estado</label>
+            <select id="conta-uf" value={dados.council_state} onChange={(e) => set("council_state", e.target.value)}>
+              <option value="">—</option>
+              {UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
+            </select>
+          </div>
+        )}
       </div>
+
+      {ehOutro && (
+        <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+          <div>
+            <label htmlFor="conta-conselho-outro">Qual conselho</label>
+            <input id="conta-conselho-outro" placeholder="Ex.: Ordem dos Farmacêuticos"
+                   value={dados.council_name_other}
+                   onChange={(e) => set("council_name_other", e.target.value)} />
+          </div>
+          <div>
+            <label htmlFor="conta-conselho-estado-outro">Estado/região</label>
+            <input id="conta-conselho-estado-outro" placeholder="Ex.: São Paulo"
+                   value={dados.council_state_other}
+                   onChange={(e) => set("council_state_other", e.target.value)} />
+          </div>
+        </div>
+      )}
 
       <div className="grade grade--2" style={{ marginTop: "0.8rem" }}>
         <div>

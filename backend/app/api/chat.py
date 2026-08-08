@@ -18,6 +18,7 @@ from app.core.security import ACESSO_LIBERADO, current_user
 from app.models.chat import ChatMessage
 from app.models.subscription import TIPO_MEUCARDIO, Subscription
 from app.models.user import User
+from app.services.professional_profile import council_display
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
@@ -39,13 +40,14 @@ def _e_assinante(db: Session, user_id: int, role: str) -> bool:
 
 
 def _dump_usuario_busca(u: User) -> dict:
+    nome_conselho, estado_conselho = council_display(u)
     return {
         "id": u.id,
         "full_name": u.full_name,
         "email": u.email,
-        "council_name": u.council_name,
+        "council_name": nome_conselho,
         "council_number": u.council_number,
-        "council_state": u.council_state,
+        "council_state": estado_conselho,
         "specialty": u.specialty,
         "photo_url": u.photo_url,
     }

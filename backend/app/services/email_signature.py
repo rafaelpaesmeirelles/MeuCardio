@@ -18,7 +18,7 @@ import html as _html
 from typing import Any
 
 from app.core.config import settings
-from app.services.professional_profile import professional_name, workplace_lines
+from app.services.professional_profile import council_display, professional_name, workplace_lines
 
 LOGO_CORVIA_URL = "https://corvia.med.br/corvia-logo-compacta.png"
 
@@ -36,7 +36,8 @@ def _endereco_profissional(user: Any) -> str | None:
 def _conselho(user: Any) -> str | None:
     if not user.council_name:
         return None
-    partes = [f"{user.council_name}-{user.council_state or ''}".rstrip("-"), (user.council_number or "").strip()]
+    nome_conselho, estado_conselho = council_display(user)
+    partes = [f"{nome_conselho}-{estado_conselho or ''}".rstrip("-"), (user.council_number or "").strip()]
     return " ".join(p for p in partes if p) or None
 
 

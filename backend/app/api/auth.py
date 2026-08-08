@@ -5,7 +5,7 @@ from pathlib import Path
 
 from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile
 from fastapi.security import OAuth2PasswordRequestForm
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, field_validator, model_validator
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
@@ -18,7 +18,7 @@ from app.models.user import User
 from app.services import emails
 from app.services.assinatura import catalogo
 from app.services.professional_profile import (
-    normalize_council, normalize_professional_title, profile_payload,
+    council_display, normalize_council, normalize_professional_title, profile_payload,
 )
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
@@ -106,10 +106,11 @@ def _onboarding_pendente(db: Session, user: User) -> bool:
 
 
 def _perfil(db: Session, user: User) -> dict:
+    nome_conselho_exibicao, estado_conselho_exibicao = council_display(user)
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
         "role": user.role, "specialty": user.specialty,
-        "council": f"{user.council_name} {user.council_number}/{user.council_state}"
+        "council": f"{nome_conselho_exibicao} {user.council_number}/{estado_conselho_exibicao}"
                    if user.council_name else None,
         "crm": user.crm,
         "rqe": user.rqe,
@@ -118,6 +119,8 @@ def _perfil(db: Session, user: User) -> dict:
         "council_name": user.council_name,
         "council_number": user.council_number,
         "council_state": user.council_state,
+        "council_name_other": user.council_name_other,
+        "council_state_other": user.council_state_other,
         "cpf_mascarado": _cpf_mascarado(user.cpf),
         "birth_date": user.birth_date,
         "created_at": user.created_at,
@@ -150,6 +153,10 @@ class DadosPessoais(BaseModel):
     council_name: str | None = None
     council_number: str | None = None
     council_state: str | None = None
+    # Preenchidos só quando council_name == "OUTRO" (08/08/2026, pedido do
+    # Rafael) — ver o mesmo campo em SolicitacaoAcesso, mais abaixo.
+    council_name_other: str | None = None
+    council_state_other: str | None = None
     specialty: str | None = None
     rqe: str | None = None
     professional_title: str | None = None
@@ -203,6 +210,21 @@ class DadosPessoais(BaseModel):
             raise ValueError("Estado inválido — use a sigla (ex.: SP).")
         return v
 
+    @field_validator("council_name_other", "council_state_other")
+    @classmethod
+    def _texto_livre_outro(cls, v: str | None) -> str | None:
+        v = (v or "").strip()
+        return v or None
+
+    @model_validator(mode="after")
+    def _campos_outro_coerentes(self) -> "DadosPessoais":
+        if (self.council_name or "").strip().upper() == "OUTRO":
+            if not self.council_name_other or not self.council_state_other:
+                raise ValueError(
+                    'Para conselho "Outro", informe qual é o conselho e o estado/região.'
+                )
+        return self
+
 
 _ROTULOS_CADASTRO = {
     "full_name": "Nome completo",
@@ -210,6 +232,8 @@ _ROTULOS_CADASTRO = {
     "council_name": "Conselho de classe",
     "council_number": "Número no conselho",
     "council_state": "UF do conselho",
+    "council_name_other": "Nome do conselho (Outro)",
+    "council_state_other": "Estado/região do conselho (Outro)",
     "specialty": "Especialidade",
     "rqe": "RQE",
     "professional_title": "Forma de tratamento",
@@ -235,12 +259,22 @@ def _perfil_profissional_completo(user: User) -> bool:
     nome_real = len(nome.split()) >= 2 and nome_normalizado not in {
         "novo usuário", "nova usuária", "usuário provisório", "usuária provisória",
     }
+    # "OUTRO" não tem UF de 2 letras que sirva — o par de campos livres
+    # (conselho + estado/região) é quem completa a identificação aqui
+    # (08/08/2026, pedido do Rafael). Qualquer outro conselho continua
+    # exigindo a UF de sempre, sem mudança de comportamento.
+    eh_outro = (user.council_name or "").strip().upper() == "OUTRO"
+    estado_ok = (
+        bool((user.council_name_other or "").strip()) and bool((user.council_state_other or "").strip())
+        if eh_outro
+        else bool((user.council_state or "").strip())
+    )
     return bool(
         nome_real
         and (user.profession or "").strip()
         and (user.council_name or "").strip()
         and (user.council_number or "").strip()
-        and (user.council_state or "").strip()
+        and estado_ok
     )
 
 
@@ -256,6 +290,8 @@ def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
     user.council_name = (dados.council_name or "").strip().upper() or None
     user.council_number = (dados.council_number or "").strip() or None
     user.council_state = dados.council_state
+    user.council_name_other = dados.council_name_other
+    user.council_state_other = dados.council_state_other
     user.specialty = (dados.specialty or "").strip() or None
     user.rqe = (dados.rqe or "").strip() or None
     user.professional_title = dados.professional_title
@@ -520,7 +556,15 @@ class SolicitacaoAcesso(BaseModel):
     profession: str
     council_name: str
     council_number: str
-    council_state: str
+    # Opcional aqui de propósito: obrigatório só quando o conselho NÃO é
+    # "Outro" (checado no model_validator abaixo, depois que council_name já
+    # foi normalizado) — pra "Outro" quem manda é council_state_other, texto
+    # livre, porque a UF de 2 letras não serve pra região não-brasileira.
+    council_state: str | None = None
+    # Preenchidos só quando council_name == "OUTRO" (08/08/2026, pedido do
+    # Rafael): o nome real do conselho e o estado/região em texto livre.
+    council_name_other: str | None = None
+    council_state_other: str | None = None
     specialty: str | None = None
     professional_title: str | None = None
     workplace_name: str | None = None
@@ -550,11 +594,19 @@ class SolicitacaoAcesso(BaseModel):
 
     @field_validator("council_state")
     @classmethod
-    def _uf(cls, v: str) -> str:
+    def _uf(cls, v: str | None) -> str | None:
+        if v is None or not v.strip():
+            return None
         v = v.strip().upper()
         if v not in UFS:
             raise ValueError("Estado do conselho inválido — use a sigla (ex.: SP).")
         return v
+
+    @field_validator("council_name_other", "council_state_other")
+    @classmethod
+    def _texto_livre_outro(cls, v: str | None) -> str | None:
+        v = (v or "").strip()
+        return v or None
 
     @field_validator("email")
     @classmethod
@@ -563,6 +615,21 @@ class SolicitacaoAcesso(BaseModel):
         if "@" not in v:
             raise ValueError("E-mail inválido.")
         return v
+
+    @model_validator(mode="after")
+    def _conselho_outro_ou_uf(self) -> "SolicitacaoAcesso":
+        # "OUTRO" pede o texto livre (conselho não identificável por sigla
+        # fixa, estado/região pode nem ser brasileiro); qualquer outro
+        # conselho continua exigindo a UF de sempre, sem mudança de
+        # comportamento (08/08/2026, pedido do Rafael).
+        if self.council_name == "OUTRO":
+            if not self.council_name_other or not self.council_state_other:
+                raise ValueError(
+                    'Para conselho "Outro", informe qual é o conselho e o estado/região.'
+                )
+        elif self.council_state is None:
+            raise ValueError("Estado do conselho inválido — use a sigla (ex.: SP).")
+        return self
 
 
 @router.post("/solicitar-acesso", status_code=201)
@@ -584,7 +651,9 @@ def solicitar_acesso(dados: SolicitacaoAcesso, db: Session = Depends(get_db)):
         email=dados.email, full_name=dados.full_name, birth_date=dados.birth_date,
         cpf=cpf_limpo, profession=dados.profession.strip(),
         council_name=dados.council_name.strip().upper(), council_number=dados.council_number.strip(),
-        council_state=dados.council_state, specialty=(dados.specialty or "").strip() or None,
+        council_state=dados.council_state,
+        council_name_other=dados.council_name_other, council_state_other=dados.council_state_other,
+        specialty=(dados.specialty or "").strip() or None,
         professional_title=dados.professional_title,
         workplace_name=(dados.workplace_name or "").strip() or None,
         workplace_department=(dados.workplace_department or "").strip() or None,

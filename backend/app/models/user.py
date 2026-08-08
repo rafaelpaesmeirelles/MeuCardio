@@ -26,6 +26,15 @@ class User(Base):
     council_name: Mapped[str | None] = mapped_column(String(20), nullable=True)
     council_number: Mapped[str | None] = mapped_column(String(30), nullable=True)
     council_state: Mapped[str | None] = mapped_column(String(2), nullable=True)
+    # Preenchidos só quando council_name == "OUTRO" (08/08/2026, pedido do
+    # Rafael) — o nome real do conselho e o estado/região em texto livre,
+    # já que "OUTRO" sozinho não identifica o conselho e a UF de 2 letras
+    # não serve pra região não-brasileira. council_name continua "OUTRO"
+    # literal (é o que escopo_profissional.escopo_de() usa pro fail-closed
+    # do escopo de prescrição) — estes dois campos são só para EXIBIÇÃO,
+    # nunca para decisão de escopo/permissão.
+    council_name_other: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    council_state_other: Mapped[str | None] = mapped_column(String(60), nullable=True)
     specialty: Mapped[str | None] = mapped_column(String(120), nullable=True)
     rqe: Mapped[str | None] = mapped_column(String(40), nullable=True)
     professional_title: Mapped[str | None] = mapped_column(String(30), nullable=True)

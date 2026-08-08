@@ -21,6 +21,7 @@ from app.core.validators import cpf_valido, limpar_cpf
 from app.models.audit import AuditLog
 from app.models.service_order import ServiceOrder, ServiceOrderPatient
 from app.models.user import User
+from app.services.professional_profile import council_display
 
 router = APIRouter(prefix="/api/pedidos", tags=["pedidos"])
 
@@ -102,9 +103,10 @@ def _dump_solicitante(db: Session, user_id: int) -> dict:
     u = db.get(User, user_id)
     if u is None:
         return {}
+    nome_conselho, estado_conselho = council_display(u)
     return {
         "nome": u.full_name,
-        "conselho": f"{u.council_name} {u.council_number}/{u.council_state}"
+        "conselho": f"{nome_conselho} {u.council_number}/{estado_conselho}"
                     if u.council_name else None,
         "email": u.email,
     }

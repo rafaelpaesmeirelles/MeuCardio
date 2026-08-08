@@ -269,6 +269,8 @@ export type Usuario = {
   council_name: string | null;
   council_number: string | null;
   council_state: string | null;
+  council_name_other: string | null;
+  council_state_other: string | null;
   cpf_mascarado: string | null;
   birth_date: string | null;
   created_at: string;

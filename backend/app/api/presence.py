@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.user import User
+from app.services.professional_profile import council_display
 
 router = APIRouter(prefix="/api/presence", tags=["presença online"])
 
@@ -18,11 +19,12 @@ class PresencePreferenceIn(BaseModel):
 
 
 def _public_user(user: User) -> dict:
+    nome_conselho, estado_conselho = council_display(user)
     council = " ".join(
-        part for part in (user.council_name, user.council_number) if part
+        part for part in (nome_conselho, user.council_number) if part
     )
-    if user.council_state:
-        council = f"{council}/{user.council_state}".strip("/")
+    if estado_conselho:
+        council = f"{council}/{estado_conselho}".strip("/")
     return {
         "id": user.id,
         "full_name": user.full_name,

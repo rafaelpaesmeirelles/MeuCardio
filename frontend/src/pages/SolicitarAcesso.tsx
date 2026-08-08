@@ -24,6 +24,10 @@ export default function SolicitarAcesso() {
   const [dados, setDados] = useState({
     full_name: "", birth_date: "", cpf: "", profession: "Médico(a)",
     council_name: "CRM", council_number: "", council_state: "",
+    // Só usados quando council_name === "Outro" — o conselho digitado por
+    // extenso e o estado/região em texto livre, já que a UF de 2 letras não
+    // serve pra conselho fora do padrão brasileiro (08/08/2026).
+    council_name_other: "", council_state_other: "",
     specialty: "", professional_title: "", workplace_name: "", workplace_department: "",
     workplace_role: "", workplace_notes: "", include_workplace_on_documents: false,
     email: "", password: "",
@@ -36,11 +40,15 @@ export default function SolicitarAcesso() {
     setDados((d) => ({ ...d, [campo]: valor }));
   }
 
+  const ehOutro = dados.council_name === "Outro";
   const senhaFraca = dados.password.length > 0 && dados.password.length < 8;
+  const conselhoCompleto = ehOutro
+    ? dados.council_name_other.trim() && dados.council_state_other.trim()
+    : dados.council_state;
   const completo =
     dados.full_name.trim().split(" ").length >= 2 &&
     dados.birth_date && dados.cpf.replace(/\D/g, "").length === 11 &&
-    dados.profession.trim() && dados.council_number.trim() && dados.council_state &&
+    dados.profession.trim() && dados.council_number.trim() && conselhoCompleto &&
     dados.email.includes("@") && dados.password.length >= 8;
 
   async function enviar() {
@@ -50,6 +58,9 @@ export default function SolicitarAcesso() {
       await api.post("/auth/solicitar-acesso", {
         ...dados,
         specialty: dados.specialty.trim() || null,
+        council_state: ehOutro ? null : dados.council_state,
+        council_name_other: ehOutro ? dados.council_name_other.trim() : null,
+        council_state_other: ehOutro ? dados.council_state_other.trim() : null,
       });
       setEnviado(true);
     } catch (e) {
@@ -127,14 +138,33 @@ export default function SolicitarAcesso() {
             <label htmlFor="numero">Nº de registro</label>
             <input id="numero" value={dados.council_number} onChange={(e) => set("council_number", e.target.value)} />
           </div>
-          <div>
-            <label htmlFor="uf">Estado</label>
-            <select id="uf" value={dados.council_state} onChange={(e) => set("council_state", e.target.value)}>
-              <option value="">—</option>
-              {UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
-            </select>
-          </div>
+          {!ehOutro && (
+            <div>
+              <label htmlFor="uf">Estado</label>
+              <select id="uf" value={dados.council_state} onChange={(e) => set("council_state", e.target.value)}>
+                <option value="">—</option>
+                {UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
+              </select>
+            </div>
+          )}
         </div>
+
+        {ehOutro && (
+          <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+            <div>
+              <label htmlFor="conselho-outro">Qual conselho</label>
+              <input id="conselho-outro" placeholder="Ex.: Ordem dos Farmacêuticos"
+                     value={dados.council_name_other}
+                     onChange={(e) => set("council_name_other", e.target.value)} />
+            </div>
+            <div>
+              <label htmlFor="conselho-estado-outro">Estado/região</label>
+              <input id="conselho-estado-outro" placeholder="Ex.: São Paulo"
+                     value={dados.council_state_other}
+                     onChange={(e) => set("council_state_other", e.target.value)} />
+            </div>
+          </div>
+        )}
 
         <label htmlFor="especialidade" style={{ marginTop: "0.8rem" }}>
           Especialidade <span className="eyebrow">(opcional)</span>

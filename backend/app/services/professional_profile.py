@@ -40,6 +40,23 @@ def normalize_council(value: str | None) -> str | None:
     return value
 
 
+def council_display(source: Any) -> tuple[str | None, str | None]:
+    """(nome do conselho, estado/região) para EXIBIÇÃO — nunca para decisão
+    de escopo/permissão (isso continua sendo `user.council_name` literal,
+    lido direto por `escopo_profissional.escopo_de()`). Quando
+    `council_name == "OUTRO"`, troca pelo texto livre que o médico digitou
+    no cadastro (`council_name_other`/`council_state_other`), se houver —
+    sem isso, toda prescrição/documento de quem tem conselho "Outro"
+    mostraria literalmente a palavra "OUTRO" em vez do conselho real."""
+    getter = source.get if isinstance(source, dict) else lambda key, default=None: getattr(source, key, default)
+    nome = getter("council_name")
+    estado = getter("council_state")
+    if (nome or "").strip().upper() == "OUTRO":
+        nome = getter("council_name_other") or nome
+        estado = getter("council_state_other") or estado
+    return nome, estado
+
+
 def normalize_search_text(value: str | None) -> str:
     """Normaliza busca parcial sem expor ou persistir uma segunda cópia do nome."""
     decomposed = unicodedata.normalize("NFKD", (value or "").strip().casefold())
@@ -162,13 +179,14 @@ def profile_payload(user: Any) -> dict:
 
 
 def document_identity(user: Any) -> dict:
+    nome_conselho, estado_conselho = council_display(user)
     return {
         "full_name": user.full_name,
         "professional_title": user.professional_title,
         "profession": user.profession,
-        "council_name": user.council_name,
+        "council_name": nome_conselho,
         "council_number": user.council_number,
-        "council_state": user.council_state,
+        "council_state": estado_conselho,
         "rqe": user.rqe,
         "specialty": user.specialty,
         "document_logo_url": user.document_logo_url,
