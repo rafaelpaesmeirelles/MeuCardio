@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
+import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 /**
@@ -212,6 +213,12 @@ export default function MaterialPaciente() {
                   Enviar por e-mail ao paciente
                 </button>
               </div>
+
+              <OfertaEnvioEmailPaciente
+                endpointBase={`/material-paciente/${m.slug}`}
+                habilitado
+                variante="material"
+              />
 
               {envioAberto === m.slug && (
                 <div className="cartao" style={{ marginTop: "0.8rem", background: "var(--fundo-alt, #f7f9fa)" }}>
