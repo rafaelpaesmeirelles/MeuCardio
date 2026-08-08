@@ -4,7 +4,7 @@ slug: tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019
 theme: "Tromboembolismo"
 kind: protocolo
 review_status: revisado
-source_refs: ["Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429 — texto completo bloqueado por Cloudflare/paywall no Oxford Academic e nos mirrors da ERS/ERJ (403 em todas as tentativas em 02/08/2026); citação, PMID e DOI conferidos via PubMed", "2019 ESC Guidelines for Acute Pulmonary Embolism — Ten Points to Remember · ACC · 2019 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2019/09/04/13/39/2019-esc-guidelines-for-acute-pulmonary-embolism — texto completo lido e conferido ponto a ponto em 02/08/2026", "Pruszczyk P, Konstantinides S. Where to treat patients with acute pulmonary embolism? Kardiol Pol. 2020;78(1):15-19. DOI: 10.33963/KP.15143. PMID: 31939451 — acesso aberto (CC BY-NC-ND), coautoria de Konstantinides (também autor sênior da diretriz ESC 2019 citada acima); reproduz as Tabelas 1, 2, 3 e 4 da diretriz (critérios de alto risco, indicadores de risco intermediário, sPESI, critérios de Hestia), todas atribuídas na própria tabela à diretriz ESC 2019 (referência 5 do artigo); PDF baixado e lido na íntegra com pdftotext -layout", "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966 — artigo original de derivação e validação do sPESI, citado na diretriz ESC 2019 e usado para conferir a tabela de pontos", "Meyer G, Vicaut E, Danays T, et al; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681 — números conferidos contra o abstract do PubMed em 02/08/2026", "Chatterjee S, Chakraborty A, Weinberg I, et al. Thrombolysis for pulmonary embolism and risk of all-cause mortality, major bleeding, and intracranial hemorrhage: a meta-analysis. JAMA. 2014;311(23):2414-2421. DOI: 10.1001/jama.2014.5990. PMID: 24938564 — números conferidos contra o abstract do PubMed em 02/08/2026"]
+source_refs: ["Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429 — texto completo bloqueado por Cloudflare/paywall no Oxford Academic e nos mirrors da ERS/ERJ (403 em todas as tentativas em 02/08/2026); citação, PMID e DOI conferidos via PubMed", "2019 ESC Guidelines for Acute Pulmonary Embolism — Ten Points to Remember · ACC · 2019 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2019/09/04/13/39/2019-esc-guidelines-for-acute-pulmonary-embolism — texto completo lido e conferido ponto a ponto em 02/08/2026", "Pruszczyk P, Konstantinides S. Where to treat patients with acute pulmonary embolism? Kardiol Pol. 2020;78(1):15-19. DOI: 10.33963/KP.15143. PMID: 31939451 — acesso aberto (CC BY-NC-ND), coautoria de Konstantinides (também autor sênior da diretriz ESC 2019 citada acima); reproduz as Tabelas 1, 2, 3 e 4 da diretriz (critérios de alto risco, indicadores de risco intermediário, sPESI, critérios de Hestia), todas atribuídas na própria tabela à diretriz ESC 2019 (referência 5 do artigo); PDF baixado e lido na íntegra com pdftotext -layout", "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966 — artigo original de derivação e validação do sPESI, citado na diretriz ESC 2019 e usado para conferir a tabela de pontos", "Meyer G, Vicaut E, Danays T, et al; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681 — números conferidos contra o abstract do PubMed em 02/08/2026", "Chatterjee S, Chakraborty A, Weinberg I, et al. Thrombolysis for pulmonary embolism and risk of all-cause mortality, major bleeding, and intracranial hemorrhage: a meta-analysis. JAMA. 2014;311(23):2414-2421. DOI: 10.1001/jama.2014.5990. PMID: 24938564 — números conferidos contra o abstract do PubMed em 02/08/2026", "2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. Circulation. 2026;153(12):e977-e1051. DOI: 10.1161/CIR.0000000000001415. PMID: 41712677 — só o resumo estrutural (AIM/METHODS/STRUCTURE) foi acessado nesta sessão; texto completo bloqueado (Circulation/ahajournals.org, sem depósito em PMC, elink devolveu só pubmed_pmc_refs), critérios das novas 'Clinical Categories' NÃO verificados, ver seção do documento"]
 legacy_source: "Fusão de dois documentos da mesma diretriz ESC 2019 na mesma pasta, com 14 e 9 seções e apenas 2 em comum. Do absorvido vieram estratificação de mortalidade em 30 dias, tratamento domiciliar, papel da tomografia, trombólise, TEP subsegmentar e outras formas de embolia."
 ---
 
@@ -93,6 +93,38 @@ Diretriz estratifica TEP agudo com base na mortalidade prevista em 30 dias, clas
 - **risco intermediario baixo**: PESI/sPESI elevado, mas apenas um ou nenhum dos critérios adicionais (disfunção de VD ou biomarcadores) presente
 - **baixo risco**: PESI/sPESI baixo, sem disfunção de VD, sem elevação de biomarcadores — candidatos a tratamento ambulatorial
 - **fonte**: diretriz ESC 2019 de embolia pulmonar aguda (Konstantinides SV et al., Eur Heart J. 2020;41(4):543-603, PMID 31504429), com a estrutura de 4 categorias confirmada, texto e Tabelas 1-2, em Pruszczyk P, Konstantinides S, Kardiol Pol. 2020;78(1):15-19, PMID 31939451 (Konstantinides é autor sênior dos dois artigos)
+
+## Nova diretriz americana de 2026 — ponteiro, verificação parcial
+Existe uma diretriz **de novo** (não atualização, documento novo desde a base) publicada em 2026,
+multissociedade (AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN): *"2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/
+SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults"*
+— Writing Committee Members; Creager MA, Barnes GD, Giri J, et al. Circulation. 2026 Mar 24;
+153(12):e977-e1051. DOI: 10.1161/CIR.0000000000001415. PMID: 41712677 (com errata publicada em
+14/07/2026, DOI 10.1161/CIR.0000000000001462).
+
+- **o que está confirmado, direto do resumo estrutural (AIM/METHODS/STRUCTURE) indexado no
+  PubMed**: é diretriz nova (não revisão da anterior), cobre adultos ≥18 anos, do início dos sintomas
+  ao seguimento clínico. **Introduz um novo sistema chamado "AHA/ACC Acute Pulmonary Embolism
+  Clinical Categories"**, descrito no próprio resumo como desenhado para aumentar a precisão da
+  classificação de gravidade, avaliação prognóstica e decisão terapêutica baseada em evidência —
+  ou seja, é uma proposta de **substituir ou complementar** a estratificação de 4 categorias (alto/
+  intermediário-alto/intermediário-baixo/baixo risco) da ESC 2019 já descrita acima nesta mesma
+  seção. Revisão de literatura de fevereiro a outubro de 2024, com estudos-chave adicionais até
+  abril de 2025.
+- **`VERIFICAÇÃO HUMANA NECESSÁRIA` — o que NÃO está confirmado nesta sessão**: os critérios exatos
+  das novas "Clinical Categories" (quantas categorias, quais variáveis, quais cortes numéricos) **não
+  constam no resumo indexado no PubMed** — o resumo estrutural de diretriz da AHA/ACC não traz tabela
+  de recomendação nem definição operacional das categorias, só a descrição do que o documento faz.
+  Tentativa de acesso ao texto completo (Circulation, `ahajournals.org`) e busca de depósito em PMC
+  (`elink dbfrom=pubmed db=pmc`) devolveram só `pubmed_pmc_refs` (artigos que CITAM a diretriz, não o
+  texto dela) — mesmo padrão de bloqueio já documentado nesta base para outras diretrizes da AHA.
+  Comentários/editoriais da JACC que acompanham a diretriz (ex. PMID 41949219, "The AHA/ACC Guideline
+  for Pulmonary Embolism: A New Era...") também não têm resumo estruturado disponível.
+- **o que isto significa na prática, até que a fonte primária seja acessada**: existe uma diretriz
+  americana de 2026 genuinamente nova e relevante para o tema desta seção, mas **as 4 categorias de
+  risco descritas acima continuam sendo a referência usada neste documento** — não substituir por uma
+  classificação cujos critérios não foram verificados. Quem tiver acesso institucional ao texto
+  completo da Circulation deve atualizar este documento com os critérios reais das novas categorias.
 
 ## Possibilidade tratamento domiciliar
 
