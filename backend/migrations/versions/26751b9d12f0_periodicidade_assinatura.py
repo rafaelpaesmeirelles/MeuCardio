@@ -30,10 +30,26 @@ depends_on = None
 
 
 def upgrade() -> None:
-    op.add_column(
-        "subscriptions",
-        sa.Column("periodicidade", sa.String(length=20), nullable=False, server_default="mensal"),
-    )
+    # Idempotente (CLAUDE.md já documenta armadilha de alembic_version fora
+    # de sincronia neste banco): em produção a coluna já existia como
+    # VARCHAR(10) — alguma sessão paralela aplicou por SQL direto sem
+    # stampar a revisão. VARCHAR(10) comporta os três valores atuais
+    # ("mensal"/"semestral"/"anual"), mas o modelo ORM declara String(20) —
+    # alinhamos ao tipo do modelo em vez de deixar disco/banco divergentes.
+    bind = op.get_bind()
+    inspector = sa.inspect(bind)
+    colunas = {c["name"] for c in inspector.get_columns("subscriptions")}
+    if "periodicidade" not in colunas:
+        op.add_column(
+            "subscriptions",
+            sa.Column("periodicidade", sa.String(length=20), nullable=False, server_default="mensal"),
+        )
+    else:
+        op.alter_column(
+            "subscriptions", "periodicidade",
+            type_=sa.String(length=20), existing_type=sa.String(length=10),
+            existing_nullable=False, existing_server_default="mensal",
+        )
 
 
 def downgrade() -> None:
