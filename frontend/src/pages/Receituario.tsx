@@ -4,6 +4,7 @@ import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import Icone from "../components/Icone";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 
 type Farmaco = {
   slug: string; nome: string; marca?: string | null; fabricante?: string | null;
@@ -326,6 +327,13 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
           Assinatura conferida com sucesso — o documento já está assinado.
         </p>
+      )}
+
+      {doc.status === "emitido" && (
+        <OfertaEnvioEmailPaciente
+          endpointBase={`/receituario/documentos/${doc.id}`}
+          habilitado={doc.pode_enviar_email}
+        />
       )}
 
       {doc.status === "emitido" && doc.pode_enviar_email && (
