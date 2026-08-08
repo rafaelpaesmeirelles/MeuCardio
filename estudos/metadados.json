@@ -6720,7 +6720,7 @@
     "url": "https://doi.org/10.1056/NEJMoa2307447",
     "summary": "Seguimento de 5 anos do ensaio randomizado aberto com 1.000 pacientes de baixo risco cirúrgico (503 TAVI, 497 cirurgia), com dois desfechos primários: o composto de morte, AVC ou re-hospitalização, e um composto hierárquico avaliado por win ratio.",
     "key_findings": "Desfecho primário em 5 anos: 22,8% com TAVI contra 27,2% com cirurgia; diferença de −4,3 pontos percentuais (IC95% −9,9 a 1,3); p=0,07. Win ratio 1,17 (IC95% 0,90-1,51); p=0,25. Componentes: morte 10,0% contra 8,2%; AVC 5,8% contra 6,4%; re-hospitalização 13,7% contra 17,4%. Gradiente médio 12,8±6,5 contra 11,7±5,6 mmHg; falha de bioprótese 3,3% contra 3,8%.",
-    "clinical_implications": "É o dado que corrige a leitura mais difundida sobre TAVI no baixo risco: o resultado de 1 ano era significativamente favorável ao transcateter, e aos 5 anos DEIXOU DE SER. A citação corrente ainda usa o número de 1 ano. O que os 5 anos autorizam dizer é equivalência, não superioridade.",
+    "clinical_implications": "É o dado que corrige a leitura mais difundida sobre TAVI no baixo risco: o resultado de 1 ano era significativamente favorável ao transcateter, e aos 5 anos DEIXOU DE SER. A citação corrente ainda usa o número de 1 ano. O que os 5 anos autorizam dizer é equivalência, não superioridade. Atualização, 08/08/2026: o mesmo ensaio publicou análise de status de saúde relatado pelo paciente (KCCQ/SF-36) até 7 anos (Brener MI et al., JACC 2026, PMID 42524810, ver registro `partner-3-sete-anos-status-de-saude-kccq`) — confirma o mesmo padrão de convergência: vantagem inicial de qualidade de vida com TAVI que desaparece a partir do 3º ano.",
     "limitations": "Os denominadores da análise de 5 anos são 496 e 454 — a perda de seguimento foi maior no braço CIRÚRGICO, o que enviesa contra a cirurgia exatamente na direção do resultado nulo observado. Ensaio aberto.",
     "theme": "Valvopatias",
     "tags": [
@@ -19668,6 +19668,31 @@
       "seguimento de 6 e 7 anos",
       "reintervenção",
       "regurgitação valvar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "partner-3-sete-anos-status-de-saude-kccq",
+    "title": "PARTNER 3 em 7 anos — status de saúde relatado pelo paciente (KCCQ), TAVI versus cirurgia no risco baixo",
+    "study_type": "ensaio_clinico",
+    "authors": "Brener MI, Cohen DJ, Kodali SK, Hahn RT, Thourani VH, Makkar RR, Pibarot P, et al.",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2026,
+    "doi": "10.1016/j.jacc.2026.06.022",
+    "pmid": "42524810",
+    "url": "https://doi.org/10.1016/j.jacc.2026.06.022",
+    "summary": "Análise de status de saúde relatado pelo paciente (KCCQ e SF-36) do PARTNER 3, do início até 7 anos de seguimento, em 943 pacientes com avaliação basal e procedimento realizado (494 TAVI, 493 cirurgia — nota: abstract usa 449 no corpo do texto e 943 no total, diferença de denominador não resolvida nesta sessão, ver `limitations`). Complementa o registro `partner-3-cinco-anos-tavi-versus-cirurgia-no-risco-baixo` (desfecho clínico composto), que não incluía qualidade de vida.",
+    "key_findings": "TAVI e cirurgia melhoraram significativamente os escores de KCCQ e SF-36 em relação à linha de base, sustentado até 7 anos nos dois grupos. Escore KCCQ-OS substancialmente maior com TAVI em 1 mês (diferença média +16,2 pontos; IC95% 14,3-18,1) e ainda modestamente maior em 2 anos (+1,9 ponto; IC95% 0,2-3,7) — mas SEM diferença significativa entre os grupos dos anos 3 a 7. Em 7 anos, cerca de 60% dos pacientes de ambos os grupos tiveram \"desfecho excelente\" (vivo, KCCQ-OS ≥75, sem queda ≥10 pontos da linha de base).",
+    "clinical_implications": "TAVI recupera mais rápido — a vantagem de qualidade de vida é grande no primeiro mês e ainda perceptível em 2 anos —, mas a partir do 3º ano a qualidade de vida relatada pelo paciente converge entre as duas vias, igual ao que o desfecho clínico composto de 5 anos já mostrava (`partner-3-cinco-anos-tavi-versus-cirurgia-no-risco-baixo`). Para a conversa de decisão compartilhada com o paciente jovem de baixo risco: a escolha entre TAVI e cirurgia deve pesar recuperação inicial (favorece TAVI) e não desfecho de qualidade de vida em longo prazo (equivalente nas duas vias) — o que muda a decisão de longo prazo são outros fatores já registrados nesta base (durabilidade valvar, taxa de marca-passo, reintervenção), não status de saúde relatado.",
+    "limitations": "Financiado pela Edwards Lifesciences (fabricante da válvula SAPIEN 3), com múltiplos autores declarando vínculo financeiro com a empresa. O abstract relata dois números de N cirúrgico ligeiramente diferentes (449 no corpo do resultado, resultando em total relatado de 943 com os 494 de TAVI) — mantido como está no resumo, sem tentar reconciliar sem o texto completo. Modelo de efeitos mistos para medidas repetidas, ajustado por linha de base — não relatado se houve imputação de dados faltantes ao longo de 7 anos de seguimento, ponto relevante dado o desgaste natural de coorte nesse horizonte.",
+    "theme": "Valvopatias",
+    "tags": [
+      "TAVI",
+      "estenose aórtica",
+      "baixo risco",
+      "qualidade de vida",
+      "KCCQ",
+      "seguimento de 7 anos"
     ],
     "review_status": "revisado"
   }
