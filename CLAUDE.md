@@ -1,5 +1,59 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: CorvIA Mail integrado ao envio de prescrição/documento/material ao paciente (tarefa #49)
+> Pedido do Rafael: durante a geração de prescrição/documento (após concluir a assinatura digital)
+> e durante a geração de Material ao Paciente (sem exigir assinatura — não é documento clínico
+> individualizado), o assinante com CorvIA Mail ativo pode enviar o arquivo ao paciente por e-mail,
+> escolhendo entre dois canais:
+> - **`auto_contato_corvia`** — a Corvia envia sozinha, pela conta institucional
+>   `contato@corvia.med.br` (SMTP, mesmo pipeline dos 11 e-mails transacionais já documentados),
+>   com **link seguro de 7/14 dias, nunca o PDF anexado** — mesma regra inegociável já em vigor para
+>   material ao paciente. Herda a pendência já documentada neste arquivo sobre a credencial SMTP em
+>   produção não autenticar (`535 Authentication Failed`) — este canal continua sem sair de fato até
+>   o Rafael corrigir a senha de aplicativo do Zoho.
+> - **`proprio_corvia_mail`** — sobe o PDF de verdade como **anexo real** na caixa nativa do próprio
+>   médico via Mail360 e devolve o `file_id`; o frontend guarda `{para, assunto, corpo, anexos}` em
+>   `sessionStorage` (`corviamail.pendingCompose`) e navega para `/caixa-de-email`, que consome a
+>   chave ao montar (uma única vez) e abre o compositor já preenchido — este canal é o único onde o
+>   pedido literal do Rafael por "arquivo já em anexo" se aplica, distinto do canal institucional.
+>
+> **Peças novas no backend**: `PatientDocumentEmailSend` (tabela de auditoria genérica, cobre
+> `generated_document`/`prescription_document`/`patient_material` num só schema, migração
+> `f69k20260808`), `anexo_email_proprio.py` (sobe PDF na caixa nativa via Mail360, sem depender do
+> token de sessão separado da caixa de e-mail), `emails.enviar_institucional_paciente()`
+> (reaproveita o pipeline SMTP existente). Três rotas novas: `POST
+> /api/document-templates/gerados/{id}/envio-paciente`, `POST
+> /api/receituario/documentos/{id}/envio-paciente` (exige assinatura qualificada ICP-Brasil, mesma
+> regra do `enviar-email` já existente), `POST /api/material-paciente/{slug}/envio-paciente` (sem
+> exigir assinatura, com o mesmo teto diário/mensal do fluxo antigo de material). **A confirmação de
+> assinatura no corpo do e-mail sempre vem de `divulgacao_email.texto_divulgacao()` lendo o PDF real
+> (pyhanko) — nunca fabricada a partir de metadado de banco.**
+>
+> **Frontend**: `OfertaEnvioEmailPaciente.tsx` — card reutilizável que checa CorvIA Mail ativo via
+> `GET /email/conta` e **some por inteiro quando inativo** (nunca mostra opção morta); instalado em
+> `Receituario.tsx`, `Calculadora.tsx`, `AvaliacaoPreOperatoria.tsx`, `Templates.tsx` e
+> `MaterialPaciente.tsx` — as cinco telas que geram documento/prescrição/material para paciente.
+> `CaixaDeEmail.tsx` consome o compositor pré-preenchido do canal próprio.
+>
+> **Verificado**: `test_envio_paciente_documento_gerado.py`, `test_envio_paciente_receita.py` e
+> `test_envio_paciente_material.py` cobrem os três cenários pedidos (sem CorvIA Mail = sem opção;
+> com CorvIA Mail + envio automático institucional; com CorvIA Mail + composição pré-preenchida no
+> canal próprio). Migração `f69k20260808` aplicada em produção (verificado: `alembic current` está
+> no head `26751b9d12f0`, que inclui esta migração na cadeia), backend e frontend rebuildados,
+> confirmado no ar por três vias independentes: rota `/api/relacionados`… *(nota: essa rota é do
+> Hub, #54 — ver entrada correspondente)* — para #49 especificamente, `POST
+> /api/material-paciente/{slug}/envio-paciente` presente no `openapi.json` de produção, e o
+> componente `OfertaEnvioEmailPaciente` presente nos chunks `Receituario-*.js`,
+> `AvaliacaoPreOperatoria-*.js`, `Calculadora-*.js` e `CaixaDeEmail-*.js` servidos pelo Caddy.
+> Backend saudável (200 em `/api/openapi.json` e `/`) depois do rebuild.
+>
+> **Nota de reprodutibilidade dos testes automatizados**: a suíte completa do backend estava sob
+> contenção pesada do banco de teste compartilhado (múltiplas sessões concorrentes rodando `pytest
+> tests/ -q` ao mesmo tempo neste servidor, mesmo padrão de deadlock já documentado neste arquivo) no
+> momento desta verificação — não foi possível obter uma corrida limpa e isolada dos três arquivos de
+> teste antes de registrar esta entrada. A evidência de que a feature está correta e no ar vem da
+> verificação direta em produção acima (rotas, migração, bundle), não da suíte local.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: tour de onboarding refeito por completo + Instagram opcional no cadastro com foto de boas-vindas (tarefa #43)
 > Pedido literal do Rafael sobre o tour: *"nao gostei do tour de inicio... simples demais, sem
 > graca, explica poucas funcoes e nao impressiona ninguem... refaca, talvez usando imagens
