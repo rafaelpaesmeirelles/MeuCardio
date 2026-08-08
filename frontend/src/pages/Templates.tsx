@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Vazio } from "../components/Estado";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
+import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 
 // Trabalho 14 (06/08/2026) — mesmo conjunto de `provedor._MANUAL_EXTERNO`
 // no backend: métodos que não têm API própria e passam pelo Assinador ITI.
@@ -72,6 +73,7 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
   const [aguardandoExterno, setAguardandoExterno] = useState(false);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
+  const [emitido, setEmitido] = useState(false);
 
   const faltando = variaveis.filter((v) => !valores[v]?.trim());
 
@@ -102,6 +104,7 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
       );
       baixarBlob(blob, `${template.doc_type}-${geradoId}.pdf`);
       setAguardandoExterno(METODOS_MANUAL_EXTERNO.has(metodo));
+      setEmitido(true);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
     }
@@ -194,6 +197,13 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
             <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
               Assinatura conferida com sucesso — o documento já está assinado.
             </p>
+          )}
+
+          {geradoId && (
+            <OfertaEnvioEmailPaciente
+              endpointBase={`/document-templates/gerados/${geradoId}`}
+              habilitado={emitido && !aguardandoExterno}
+            />
           )}
 
           <div style={{ marginTop: "0.8rem" }}>
