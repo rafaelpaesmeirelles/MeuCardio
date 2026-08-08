@@ -5,7 +5,7 @@ impressão, assinatura digital e envio ao paciente. Os resultados são sempre
 recalculados no servidor a partir dos campos brutos — nunca se confia em um
 número enviado pelo cliente.
 
-Fonte: ChatGPT nas extensões DASI/AUB-HAS2/VSG-CRI adicionadas em 07/08/2026.
+Fonte: ChatGPT nas extensões DASI/AUB-HAS2/VSG-CRI/GSCRI/SORT/S-MPM/FRAIL.
 """
 
 from __future__ import annotations
@@ -44,6 +44,10 @@ class GerarIn(BaseModel):
     dasi: dict | None = None
     aub_has2: dict | None = None
     vsg_cri: dict | None = None
+    gscri: dict | None = None
+    sort: dict | None = None
+    s_mpm: dict | None = None
+    frail: dict | None = None
     conduta_recomendada: str | None = None
     endereco: str | None = None
 
@@ -65,6 +69,10 @@ def _montar_corpo(
     dasi: tuple[dict, str] | None,
     aub_has2: tuple[dict, str] | None,
     vsg_cri: tuple[dict, str] | None,
+    gscri: tuple[dict, str] | None,
+    sort: tuple[dict, str] | None,
+    s_mpm: tuple[dict, str] | None,
+    frail: tuple[dict, str] | None,
 ) -> str:
     linhas: list[str] = []
     linhas.append("AVALIAÇÃO CARDIOLÓGICA PRÉ-OPERATÓRIA DE RISCO CIRÚRGICO")
@@ -121,13 +129,50 @@ def _montar_corpo(
         linhas.append(interpretacao)
         linhas.append("")
 
+    if gscri:
+        resultado, interpretacao = gscri
+        linhas.append(
+            f"GSCRI (pacientes ≥65 anos; risco de IAM ou parada cardíaca): {resultado['risco_pct']}%."
+        )
+        linhas.append(interpretacao)
+        linhas.append("")
+
+    if sort:
+        resultado, interpretacao = sort
+        linhas.append(
+            f"SORT (mortalidade por todas as causas em 30 dias): {resultado['risco_pct']}%."
+        )
+        linhas.append(interpretacao)
+        linhas.append("")
+
+    if s_mpm:
+        resultado, interpretacao = s_mpm
+        linhas.append(
+            f"S-MPM (mortalidade por todas as causas em 30 dias): "
+            f"{resultado['score']}/9 — Classe {resultado['classe']} — {resultado['mortalidade_30d']}."
+        )
+        linhas.append(interpretacao)
+        linhas.append("")
+
+    if frail:
+        resultado, interpretacao = frail
+        rotulo = resultado["categoria"].replace("_", "-")
+        linhas.append(
+            f"FRAIL Scale (modificador de risco por fragilidade): "
+            f"{resultado['score']}/5 — {rotulo}."
+        )
+        linhas.append(interpretacao)
+        linhas.append("")
+
     linhas.append("INTEGRAÇÃO DOS MÉTODOS")
     linhas.append(
         "Os escores estimam desfechos diferentes e não devem ser somados, promediados nem usados "
         "isoladamente como autorização para cirurgia. A decisão integra doença cardiovascular ativa, "
         "risco do procedimento, modificadores de risco, capacidade funcional e possibilidade de que "
         "uma investigação adicional modifique o manejo. O VSG-CRI deve ser utilizado especificamente "
-        "em cirurgia vascular arterial."
+        "em cirurgia vascular arterial; o GSCRI foi desenvolvido para pacientes ≥65 anos; SORT e "
+        "S-MPM estimam mortalidade cirúrgica global; a FRAIL Scale avalia fragilidade e reserva "
+        "fisiológica, não risco cardíaco percentual."
     )
     linhas.append("")
 
@@ -155,10 +200,26 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
             raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
-    if all(x is None for x in (dados.rcri, dados.gupta, dados.dasi, dados.aub_has2, dados.vsg_cri)):
+    if all(
+        x is None
+        for x in (
+            dados.rcri,
+            dados.gupta,
+            dados.dasi,
+            dados.aub_has2,
+            dados.vsg_cri,
+            dados.gscri,
+            dados.sort,
+            dados.s_mpm,
+            dados.frail,
+        )
+    ):
         raise HTTPException(
             status_code=422,
-            detail="Calcule ao menos um método (RCRI, Gupta MICA, DASI, AUB-HAS2 ou VSG-CRI) antes de gerar o documento.",
+            detail=(
+                "Calcule ao menos um método (RCRI, Gupta MICA, DASI, AUB-HAS2, VSG-CRI, "
+                "GSCRI, SORT, S-MPM ou FRAIL Scale) antes de gerar o documento."
+            ),
         )
 
     rcri = _resultado_calculadora("rcri", dados.rcri)
@@ -166,8 +227,12 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
     dasi = _resultado_calculadora("dasi", dados.dasi)
     aub_has2 = _resultado_calculadora("aub-has2", dados.aub_has2)
     vsg_cri = _resultado_calculadora("vsg-cri", dados.vsg_cri)
+    gscri = _resultado_calculadora("gscri", dados.gscri)
+    sort = _resultado_calculadora("sort", dados.sort)
+    s_mpm = _resultado_calculadora("s-mpm", dados.s_mpm)
+    frail = _resultado_calculadora("frail-scale-perioperatorio", dados.frail)
 
-    corpo = _montar_corpo(dados, rcri, gupta, dasi, aub_has2, vsg_cri)
+    corpo = _montar_corpo(dados, rcri, gupta, dasi, aub_has2, vsg_cri, gscri, sort, s_mpm, frail)
 
     variaveis = {
         "idade": str(dados.idade) if dados.idade is not None else "",
@@ -180,6 +245,10 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "dasi": dados.dasi or {},
         "aub_has2": dados.aub_has2 or {},
         "vsg_cri": dados.vsg_cri or {},
+        "gscri": dados.gscri or {},
+        "sort": dados.sort or {},
+        "s_mpm": dados.s_mpm or {},
+        "frail": dados.frail or {},
         "fonte_producao_extensoes": "chatgpt",
     }
 
@@ -211,6 +280,10 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
                 "tem_dasi": dasi is not None,
                 "tem_aub_has2": aub_has2 is not None,
                 "tem_vsg_cri": vsg_cri is not None,
+                "tem_gscri": gscri is not None,
+                "tem_sort": sort is not None,
+                "tem_s_mpm": s_mpm is not None,
+                "tem_frail": frail is not None,
             },
         )
     )
@@ -229,4 +302,8 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "dasi": dasi[0] if dasi else None,
         "aub_has2": aub_has2[0] if aub_has2 else None,
         "vsg_cri": vsg_cri[0] if vsg_cri else None,
+        "gscri": gscri[0] if gscri else None,
+        "sort": sort[0] if sort else None,
+        "s_mpm": s_mpm[0] if s_mpm else None,
+        "frail": frail[0] if frail else None,
     }

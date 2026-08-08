@@ -5,6 +5,7 @@ Fonte: ChatGPT.
 """
 
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
+from app.services.perioperative_calculators_sort import SORT_PERIOPERATIVE_REGISTRY
 
 
 def test_dasi_todas_atividades_soma_58_2():
@@ -27,13 +28,9 @@ def test_dasi_zero_e_capacidade_ruim():
 def test_dasi_exatamente_34_permanece_capacidade_ruim():
     c = PERIOPERATIVE_REGISTRY["dasi"]
     payload = {f.name: False for f in c.fields}
-    # 8 + 8 + 4,5 + 6 + 7,5 = 34,0
     for key in (
-        "correr_curto",
-        "trabalho_domestico_pesado",
-        "quintal_jardim",
-        "recreacao_moderada",
-        "esporte_extenuante",
+        "correr_curto", "trabalho_domestico_pesado", "quintal_jardim",
+        "recreacao_moderada", "esporte_extenuante",
     ):
         payload[key] = True
     r = c.compute(payload)
@@ -45,12 +42,8 @@ def test_dasi_acima_de_34_muda_classificacao():
     c = PERIOPERATIVE_REGISTRY["dasi"]
     payload = {f.name: False for f in c.fields}
     for key in (
-        "correr_curto",
-        "trabalho_domestico_pesado",
-        "quintal_jardim",
-        "recreacao_moderada",
-        "esporte_extenuante",
-        "caminhar_casa",
+        "correr_curto", "trabalho_domestico_pesado", "quintal_jardim",
+        "recreacao_moderada", "esporte_extenuante", "caminhar_casa",
     ):
         payload[key] = True
     r = c.compute(payload)
@@ -85,28 +78,24 @@ def test_aub_has2_cada_item_vale_um_ponto():
 def test_vsg_cri_pontuacao_e_classes_sbc_2024():
     c = PERIOPERATIVE_REGISTRY["vsg-cri"]
     base = {
-        "idade": 50,
-        "doenca_arterial_coronariana": False,
-        "insuficiencia_cardiaca": False,
-        "dpoc": False,
-        "creatinina_maior_1_8": False,
-        "tabagismo": False,
-        "diabetes_insulina": False,
-        "betabloqueador_cronico": False,
+        "idade": 50, "doenca_arterial_coronariana": False,
+        "insuficiencia_cardiaca": False, "dpoc": False,
+        "creatinina_maior_1_8": False, "tabagismo": False,
+        "diabetes_insulina": False, "betabloqueador_cronico": False,
         "revascularizacao_coronaria_previa": False,
     }
 
     r_baixo = c.compute(base)
     assert r_baixo["score"] == 0
     assert r_baixo["categoria"] == "baixo"
-    assert r_baixo["evento_original_pct_verificado"] is True  # extremo, confirmado no abstract
+    assert r_baixo["evento_original_pct_verificado"] is True
 
     intermediario = {**base, "idade": 70, "doenca_arterial_coronariana": True}
     r = c.compute(intermediario)
     assert r["score"] == 5
     assert r["categoria"] == "intermediario"
     assert r["evento_original_pct"] == 6.0
-    assert r["evento_original_pct_verificado"] is False  # valor intermediário, só fonte secundária
+    assert r["evento_original_pct_verificado"] is False
 
     alto = {**base, "idade": 80, "doenca_arterial_coronariana": True, "tabagismo": True}
     r = c.compute(alto)
@@ -119,21 +108,52 @@ def test_vsg_cri_pontuacao_e_classes_sbc_2024():
     r = c.compute(extremo_alto)
     assert r["score"] >= 8
     assert r["evento_original_pct"] == 14.3
-    assert r["evento_original_pct_verificado"] is True  # extremo, confirmado no abstract
+    assert r["evento_original_pct_verificado"] is True
 
 
 def test_vsg_cri_revascularizacao_previa_subtrai_um_ponto():
     c = PERIOPERATIVE_REGISTRY["vsg-cri"]
     payload = {
-        "idade": 60,
-        "doenca_arterial_coronariana": True,
-        "insuficiencia_cardiaca": False,
-        "dpoc": False,
-        "creatinina_maior_1_8": False,
-        "tabagismo": False,
-        "diabetes_insulina": False,
-        "betabloqueador_cronico": False,
+        "idade": 60, "doenca_arterial_coronariana": True,
+        "insuficiencia_cardiaca": False, "dpoc": False,
+        "creatinina_maior_1_8": False, "tabagismo": False,
+        "diabetes_insulina": False, "betabloqueador_cronico": False,
         "revascularizacao_coronaria_previa": True,
     }
-    # idade 60–69 = 2, DAC = 2, revascularização prévia = −1.
     assert c.compute(payload)["score"] == 3
+
+
+def test_sort_baseline_reproduz_probabilidade_do_intercepto_original():
+    c = SORT_PERIOPERATIVE_REGISTRY["sort"]
+    r = c.compute({
+        "idade": 50,
+        "asa": 1,
+        "urgencia": "eletiva",
+        "especialidade_alto_risco": False,
+        "xmajor_complexa": False,
+        "cancer": False,
+    })
+    assert r["risco_pct"] == 0.06
+
+
+def test_sort_soma_coeficientes_publicados():
+    c = SORT_PERIOPERATIVE_REGISTRY["sort"]
+    r = c.compute({
+        "idade": 70,
+        "asa": 3,
+        "urgencia": "urgente",
+        "especialidade_alto_risco": True,
+        "xmajor_complexa": True,
+        "cancer": True,
+    })
+    # logit = -7,366 + 1,411 + 1,657 + 0,712 + 0,381 + 0,667 + 0,777 = -1,761.
+    assert r["risco_pct"] == 14.67
+
+
+def test_sort_asa_i_e_ii_tem_mesmo_risco_quando_demais_variaveis_iguais():
+    c = SORT_PERIOPERATIVE_REGISTRY["sort"]
+    base = {
+        "idade": 50, "urgencia": "eletiva", "especialidade_alto_risco": False,
+        "xmajor_complexa": False, "cancer": False,
+    }
+    assert c.compute({**base, "asa": 1})["risco_pct"] == c.compute({**base, "asa": 2})["risco_pct"]
