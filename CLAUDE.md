@@ -1,5 +1,44 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 📢 REGRA PERMANENTE PARA TODO CONTEÚDO NOVO, 09/08/2026 — vale para o Grupo A (Claude) e o Grupo B (ChatGPT)
+> Pedido do Rafael, em duas mensagens: *"muito importante, integrar todo o conhecimento/documentos
+> de cada tema e de cada assunto da cardiologia presentes no ecossistema corvia com todos os
+> assuntos disponíveis no ecossistema... a partir de 1 item, o usuário visualize tudo que o
+> ecossistema tem sobre esse tópico e acesse o conteúdo que desejar imediatamente"* e, na sequência:
+> *"nova regra: tudo que for colocado de novo no ecossistema corvia a partir de hoje já deve ser
+> incluído com essa integração implantada, independente de qual IA faça a inclusão do conteúdo."*
+>
+> **O mecanismo já está implementado e no ar** (`GET /api/relacionados?tema=...`,
+> `backend/app/services/related_content.py`, painel `TudoSobreEsteTema` instalado nas principais
+> páginas de detalhe): dado um item, mostra tudo que o ecossistema tem sob o **mesmo tema**, cruzando
+> `documents` (documento e fluxograma), `evidence_records`, `scientific_studies`, `lab_tests`,
+> `clinical_cases`, `study_tracks`, `gallery_images`, calculadoras, `emergency_protocols`,
+> `discharge_checklists` e `patient_materials` — 12 frentes ao todo. Medicamentos entram por
+> convenção: `drugs` não tem campo de tema próprio, então o cruzamento usa o tema do documento de
+> Farmacologia correspondente.
+>
+> **O que isso exige de QUALQUER conteúdo novo, a partir de agora — é a regra em si:**
+> - **O campo de tema é `theme` na maioria das tabelas, mas `tema` em `ClinicalCase`, `StudyTrack` e
+>   `PatientMaterial`** — confira o nome exato do campo na tabela/JSON que está preenchendo antes de
+>   escrever, não assuma.
+> - **O casamento é por STRING EXATA, sem normalização nenhuma** (nada de acento, maiúscula/
+>   minúscula ou espaço sendo ignorado) — `related_content.py` faz `Tabela.theme == tema` literal.
+>   Um tema grafado `"Doença Coronariana"` num item e `"Doença coronariana"` (minúsculo) noutro
+>   **não casam entre si**, e o item fica invisível no painel "Tudo sobre este tema" mesmo estando
+>   no mesmo assunto de verdade.
+> - **Use exatamente o nome do tema já em uso nas outras frentes do mesmo assunto** — os 28 temas
+>   de `content/` (mais "Cardiologia do Esporte e do Exercício", novo) são a lista canônica; ao
+>   escrever evidência/estudo/caso clínico/etc. de um tema já coberto por `content/`, copie a grafia
+>   exata da pasta correspondente (trocando `_` por espaço), não invente uma variante.
+> - **Só item `published = True` entra no cruzamento** — nada muda na régua de revisão já em vigor,
+>   é só mais um motivo para publicar direito.
+> - **Antes de considerar um item novo "pronto", vale conferir que ele aparece no painel do próprio
+>   tema** (`GET /api/relacionados?tema=<seu tema>`) — se não aparecer, o tema provavelmente está
+>   grafado diferente de como as outras frentes grafam o mesmo assunto.
+>
+> Sem seguir isso, o conteúdo continua publicado e visível normalmente — só fica **fora** do painel
+> de cruzamento, que é exatamente o problema que esta funcionalidade existe para resolver.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026 ~00h: Admin cadastra pré-autorização de convidado (nome/e-mail + escolha de CorvIA Mail)
 > Extensão do mecanismo de pré-autorização de convidado: Rafael pediu uma opção no menu
 > Administração (só admin) para cadastrar a pré-autorização de um novo convidado por **nome
