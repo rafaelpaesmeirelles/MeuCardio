@@ -3,7 +3,8 @@ title: "ZENITH: sotatercept na HAP com alto risco de morte"
 slug: zenith-sotatercept-hap-alto-risco
 theme: "Hipertensão pulmonar"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial ZENITH (PMID 40167274), mesmos números, já publicado sob o slug zenith-sotatercept-hap-alto-risco-morte. Não publicar — ver CLAUDE.md, auditoria de 09/08."
 source_refs: ["Humbert M, McLaughlin VV, Badesch DB, et al. Sotatercept in Patients with Pulmonary Arterial Hypertension at High Risk for Death. N Engl J Med. 2025;392(20):1987-2000. DOI: 10.1056/NEJMoa2415160. PMID: 40167274. NCT04896008."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

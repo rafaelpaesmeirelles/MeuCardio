@@ -3,7 +3,8 @@ title: "SOUL: semaglutida oral e desfechos cardiovasculares no diabetes tipo 2 d
 slug: soul-semaglutida-oral-desfechos-cardiovasculares
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial SOUL (PMID 40162642), mesmos números (HR 0,86; 12,0% vs. 13,8%; p=0,006), já coberto na seção \"SOUL (2025)\" do documento combinado já publicado semaglutida-oral-e-tirzepatida-em-desfecho-cardiovascular-soul-pioneer-6-e-surpass-cvot. Não publicar — ver CLAUDE.md, auditoria de 09/08."
 source_refs: ["McGuire DK, Marx N, Mulvagh SL, et al. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642. NCT03914326."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

@@ -3,7 +3,8 @@ title: "SURPASS-CVOT: tirzepatida versus dulaglutida em desfechos cardiovascular
 slug: surpass-cvot-tirzepatida-dulaglutida-desfechos-cardiovasculares
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial SURPASS-CVOT (PMID 41406444), já coberto na seção \"SURPASS-CVOT (2025)\" do documento combinado já publicado semaglutida-oral-e-tirzepatida-em-desfecho-cardiovascular-soul-pioneer-6-e-surpass-cvot. Não publicar — ver CLAUDE.md, auditoria de 09/08."
 source_refs: ["Nicholls SJ, Pavo I, Bhatt DL, et al. Cardiovascular Outcomes with Tirzepatide versus Dulaglutide in Type 2 Diabetes. N Engl J Med. 2025;393(24):2409-2420. DOI: 10.1056/NEJMoa2505928. PMID: 41406444. NCT04255433."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---
