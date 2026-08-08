@@ -25,6 +25,7 @@ from app.models.receituario import (  # noqa: F401
 )
 from app.models.assinatura import DocumentoEmitido  # noqa: F401
 from app.models.cmed import CmedVersao, CmedApresentacao  # noqa: F401
+from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado  # noqa: F401
 from app.models.agenda import (  # noqa: F401
     AppointmentCommunication, AppointmentResource, AvailabilityException,
     AvailabilityRule, CalendarDelegation, CalendarIntegration, CalendarLocation,
