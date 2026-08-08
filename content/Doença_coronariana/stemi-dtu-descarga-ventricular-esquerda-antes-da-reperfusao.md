@@ -1,7 +1,7 @@
 ---
 title: "STEMI-DTU: descarga ventricular esquerda antes da reperfusão no IAM anterior sem choque"
 slug: stemi-dtu-descarga-ventricular-esquerda-antes-da-reperfusao
- theme: "Doença coronariana"
+theme: "Doença coronariana"
 kind: estudo
 review_status: revisado
 source_refs: ["Kapur NK, Mangner N, Aghili N, et al. Left Ventricular Unloading in Anterior ST-Segment Elevation Myocardial Infarction Without Shock: The ST-Segment Elevation Myocardial Infarction Door to Unload Randomized Controlled Trial. J Am Coll Cardiol. 2026;88(1):76-90. DOI: 10.1016/j.jacc.2026.03.071. PMID: 42029358. NCT03947619."]
