@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CampoSenha from "../components/CampoSenha";
 import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { useNavigate } from "react-router-dom";
@@ -625,7 +626,7 @@ function CertificadoA1() {
           </label>
           <label style={{ display: "block", fontSize: "0.82rem", marginTop: "0.5rem" }}>
             Senha do certificado
-            <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} style={{ display: "block", marginTop: "0.25rem", width: "100%" }} />
+            <CampoSenha value={senha} onChange={(e) => setSenha(e.target.value)} style={{ display: "block", marginTop: "0.25rem", width: "100%" }} />
           </label>
           <label style={{ display: "block", fontSize: "0.82rem", marginTop: "0.5rem" }}>
             Certificadora (opcional, só pra referência)

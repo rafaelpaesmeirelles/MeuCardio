@@ -391,10 +391,29 @@ class AppleICloudCalendarConnector:
 
     def diagnose(self) -> dict[str, Any]:
         calendars = self.dav.calendars()
-        addressbooks = self.dav.addressbooks()
+        # 08/08/2026: reproduzido com credencial real (Rafael) — a descoberta de
+        # calendário (caldav.icloud.com) funciona normalmente, mas a de contatos
+        # (contacts.icloud.com/.well-known/carddav) responde 207 com
+        # current-user-principal vazio (status interno 404), sem nenhum
+        # redirecionamento de partição, ao contrário do caldav. Causa exata do lado
+        # da Apple não confirmada (log de diagnóstico não deu margem pra mais). Até
+        # então, essa falha isolada de contatos derrubava a conexão inteira — quem só
+        # queria sincronizar agenda ficava bloqueado por um serviço que nem usaria.
+        # Agora a falha de contatos vira degradação, não impedimento: calendário (e
+        # e-mail, diagnosticado à parte) conectam normalmente, e o retorno sinaliza
+        # que contatos não ficou disponível, sem fingir que funcionou.
+        addressbooks_count = 0
+        addressbooks_disponivel = True
+        try:
+            addressbooks_count = len(self.dav.addressbooks())
+        except ConnectorError as exc:
+            if exc.code != "apple_dav_discovery_failed":
+                raise
+            addressbooks_disponivel = False
         return {
             "ok": True, "provider": self.provider, "calendars": len(calendars),
-            "addressbooks": len(addressbooks), "capabilities": asdict(self.capabilities),
+            "addressbooks": addressbooks_count, "addressbooks_disponivel": addressbooks_disponivel,
+            "capabilities": asdict(self.capabilities),
         }
 
     def pull(self, *, cursor: str | None, start: datetime, end: datetime) -> PullResult:

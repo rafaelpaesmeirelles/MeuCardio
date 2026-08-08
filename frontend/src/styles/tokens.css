@@ -212,6 +212,31 @@ input[type="checkbox"], input[type="radio"] {
   accent-color: var(--acento);
 }
 
+/* Campo de senha com botão de mostrar/ocultar embutido (componente
+   CampoSenha.tsx) — padrão único reaproveitado em todo campo de senha do
+   site, pedido do Rafael em 08/08/2026. O botão fica dentro do próprio
+   campo, à direita, sem alterar a régua visual genérica de input acima. */
+.campo-senha { position: relative; }
+.campo-senha input { padding-right: 2.6rem; }
+.campo-senha__alternar {
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  color: var(--slate-600);
+  background: transparent;
+  border: 0;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.campo-senha__alternar:hover { color: var(--teal-700); background: var(--acento-tinta); }
+.campo-senha__alternar:focus-visible { outline: 2px solid var(--teal-600); outline-offset: 1px; }
+
 .grade { display: grid; gap: 1rem; }
 @media (min-width: 760px) { .grade--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1120px) { .grade--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

@@ -1309,7 +1309,6 @@ def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user:
     item.status = "connected"
     item.enabled = True
     item.write_enabled = False
-    item.contacts_enabled = data.contacts
     capacidades_calendario = next(x["capabilities"] for x in connector_catalog() if x["provider"] == "apple_icloud")
     item.capabilities = {**capacidades_calendario, "read_mail": data.mail, "send_mail": data.mail}
     item.consent_version = "external-accounts-v1-2026-08-05"
@@ -1326,6 +1325,12 @@ def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user:
             # vez de supor que "a mesma senha serve pra tudo na Apple" —
             # mesmo cuidado de nunca simular sucesso sem testar.
             apple_mail.diagnose(integration_credentials(item))
+        # 08/08/2026: contatos entram como opcionais de verdade agora — só liga
+        # `contacts_enabled` se o médico pediu E a descoberta de contatos
+        # realmente funcionou (ver diagnose() em connectors.py). Sem isso, uma
+        # conta cujo iCloud não expõe contatos entrava com a flag ligada e toda
+        # sincronização subsequente ia falhar silenciosamente na mesma causa.
+        item.contacts_enabled = bool(data.contacts and diagnosis.get("addressbooks_disponivel", True))
     except ConnectorError as exc:
         db.rollback()
         # 07/08/2026: até aqui só o status HTTP final chegava ao log

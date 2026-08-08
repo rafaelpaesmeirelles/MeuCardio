@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import Credito from "../components/Credito";
+import CampoSenha from "../components/CampoSenha";
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
 const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
@@ -157,7 +158,7 @@ export default function SolicitarAcesso() {
         <input id="email" type="email" value={dados.email} onChange={(e) => set("email", e.target.value)} />
 
         <label htmlFor="senha" style={{ marginTop: "0.8rem" }}>Senha</label>
-        <input id="senha" type="password" value={dados.password}
+        <CampoSenha id="senha" autoComplete="new-password" value={dados.password}
                onChange={(e) => set("password", e.target.value)} />
         {senhaFraca && (
           <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>

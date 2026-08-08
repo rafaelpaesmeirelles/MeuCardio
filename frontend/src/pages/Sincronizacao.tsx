@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import LogoProvedor from "../components/LogoProvedor";
+import CampoSenha from "../components/CampoSenha";
 
 type IntegracaoExterna = {
   id: number;
@@ -238,7 +239,7 @@ export default function Sincronizacao() {
                      onChange={(e) => setApple({ ...apple, apple_id: e.target.value })} placeholder="nome@icloud.com" />
             </label>
             <label>Senha específica de app
-              <input type="password" autoComplete="new-password" value={apple.app_specific_password}
+              <CampoSenha autoComplete="new-password" value={apple.app_specific_password}
                      onChange={(e) => setApple({ ...apple, app_specific_password: e.target.value })} placeholder="xxxx-xxxx-xxxx-xxxx" />
             </label>
             <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>
@@ -278,7 +279,7 @@ export default function Sincronizacao() {
                      onChange={(e) => setYahoo({ ...yahoo, endereco: e.target.value })} placeholder="nome@yahoo.com" />
             </label>
             <label>Senha específica de app
-              <input type="password" autoComplete="new-password" value={yahoo.senha_de_app}
+              <CampoSenha autoComplete="new-password" value={yahoo.senha_de_app}
                      onChange={(e) => setYahoo({ ...yahoo, senha_de_app: e.target.value })} placeholder="gerada em login.yahoo.com" />
             </label>
             <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>

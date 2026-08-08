@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import Credito from "../components/Credito";
+import CampoSenha from "../components/CampoSenha";
 
 export default function RedefinirSenha() {
   const [params] = useSearchParams();
@@ -62,10 +63,10 @@ export default function RedefinirSenha() {
         ) : (
           <>
             <label htmlFor="senha">Nova senha</label>
-            <input id="senha" type="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
+            <CampoSenha id="senha" autoComplete="new-password" value={senha} onChange={(e) => setSenha(e.target.value)} />
 
             <label htmlFor="confirmacao" style={{ marginTop: "0.8rem" }}>Confirmar senha</label>
-            <input id="confirmacao" type="password" value={confirmacao}
+            <CampoSenha id="confirmacao" autoComplete="new-password" value={confirmacao}
                    onChange={(e) => setConfirmacao(e.target.value)} />
 
             {confirmacao.length > 0 && !senhasBatem && (

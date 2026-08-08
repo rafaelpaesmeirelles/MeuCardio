@@ -5,6 +5,7 @@ import { api, ApiError } from "../lib/api";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import Credito from "../components/Credito";
 import LogoCorviaMail from "../components/LogoCorviaMail";
+import CampoSenha from "../components/CampoSenha";
 
 type StatusEmail = {
   status: string; current_period_end: string | null;
@@ -230,7 +231,7 @@ function AbaAssinar() {
           <label htmlFor="senha-inicial" style={{ marginTop: "0.8rem", display: "block" }}>
             {precisaReconsentir ? "Confirme a senha da sua caixa de e-mail" : "Crie uma senha para sua caixa de e-mail"}
           </label>
-          <input id="senha-inicial" type="password" value={senhaInicial}
+          <CampoSenha id="senha-inicial" autoComplete="new-password" value={senhaInicial}
                  onChange={(e) => setSenhaInicial(e.target.value)} />
           <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
             {precisaReconsentir
@@ -310,7 +311,7 @@ function AbaEntrar() {
       <input id="endereco-email" value={endereco} onChange={(e) => setEndereco(e.target.value)}
              onKeyDown={(e) => e.key === "Enter" && enviar()} />
       <label htmlFor="senha-email" style={{ marginTop: "0.8rem" }}>Senha da caixa de e-mail</label>
-      <input id="senha-email" type="password" value={senha} onChange={(e) => setSenha(e.target.value)}
+      <CampoSenha id="senha-email" autoComplete="current-password" value={senha} onChange={(e) => setSenha(e.target.value)}
              onKeyDown={(e) => e.key === "Enter" && enviar()} />
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
       <button className="botao" style={{ width: "100%", marginTop: "1rem" }}
