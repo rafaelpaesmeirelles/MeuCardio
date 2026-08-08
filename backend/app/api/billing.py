@@ -265,18 +265,23 @@ def criar_checkout(
     if user.convidado:
         # Médico convidado (08/08/2026, pedido do Rafael) — mesma tela,
         # mesmo botão "Assinar", mas sem Stripe: a assinatura é liberada
-        # direto no banco, sempre no plano Completo (é o que "acesso
-        # completo" promete, inclusive CorvIA Mail — que já é incluído sem
-        # add-on separado quando `plano == PLANO_COMPLETO`, ver
-        # `status_email` mais abaixo). Nunca cria `stripe_customer_id`: sem
-        # cliente Stripe, `/billing/portal` e `/billing/faturas` já
-        # respondem "sem assinatura para gerenciar"/lista vazia, em vez de
-        # tentar falar com uma API que não tem nada para mostrar.
-        sub.plano = PLANO_COMPLETO
+        # direto no banco. Plano: `convidado_plano_preferido`, escolhido
+        # pelo admin na pré-autorização (08/08/2026 — "escolher também se o
+        # convidado terá acesso ou não ao CorviaMail"); `None` (convidado
+        # marcado direto pelo admin via toggle, sem pré-autorização) cai no
+        # padrão PLANO_COMPLETO de sempre, sem mudança de comportamento.
+        # CorvIA Mail já é incluído sem add-on separado quando
+        # `plano == PLANO_COMPLETO`, ver `status_email` mais abaixo. Nunca
+        # cria `stripe_customer_id`: sem cliente Stripe, `/billing/portal` e
+        # `/billing/faturas` já respondem "sem assinatura para gerenciar"/
+        # lista vazia, em vez de tentar falar com uma API que não tem nada
+        # para mostrar.
+        plano_convidado = user.convidado_plano_preferido or PLANO_COMPLETO
+        sub.plano = plano_convidado
         sub.status = "ativo"
         db.add(AuditLog(
             user_id=user.id, action="liberar_acesso_convidado", entity="subscription",
-            entity_id=str(sub.id), detail={"email": user.email, "plano": PLANO_COMPLETO},
+            entity_id=str(sub.id), detail={"email": user.email, "plano": plano_convidado},
         ))
         db.commit()
         return {
@@ -313,6 +318,10 @@ def criar_checkout(
         mode="subscription",
         payment_method_types=["card"],
         line_items=line_items,
+        # Código promocional no checkout (08/08/2026, pedido do Rafael) — o
+        # cupom em si é criado/gerenciado por ele direto no painel Stripe,
+        # isto só habilita o campo na tela de pagamento.
+        allow_promotion_codes=True,
         subscription_data={"metadata": {"tipo": "meucardio", "plano": plano, "user_id": str(user.id)}},
         success_url=f"{settings.public_url}/assinatura?status=sucesso",
         cancel_url=f"{settings.public_url}/assinatura?status=cancelado",
@@ -434,6 +443,9 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
         # O metadata da sessão e o da assinatura são campos diferentes; o
         # webhook de customer.subscription.* só enxerga o da assinatura.
         metadata={"tipo": "email", "user_id": str(user.id)},
+        # Código promocional no checkout (08/08/2026, pedido do Rafael) —
+        # mesmo campo do checkout principal, ver comentário lá.
+        allow_promotion_codes=True,
         success_url=f"{settings.public_url}/corvia-mail?status=sucesso",
         cancel_url=f"{settings.public_url}/corvia-mail?status=cancelado",
     )
