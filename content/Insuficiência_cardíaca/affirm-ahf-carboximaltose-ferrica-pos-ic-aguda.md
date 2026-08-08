@@ -3,7 +3,8 @@ title: "AFFIRM-AHF: carboximaltose férrica após internação por IC aguda com 
 slug: affirm-ahf-carboximaltose-ferrica-pos-ic-aguda
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial AFFIRM-AHF (PMID 33197395), ja citado/coberto nos documentos publicados anemia-e-deficiencia-de-ferro-na-insuficiencia-cardiaca-do-idoso e atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca. Nao publicar."
 source_refs: ["Ponikowski P, Kirwan BA, Anker SD, et al. Ferric carboxymaltose for iron deficiency at discharge after acute heart failure: a multicentre, double-blind, randomised, controlled trial. Lancet. 2020;396(10266):1895-1904. DOI: 10.1016/S0140-6736(20)32339-4. PMID: 33197395. NCT02937454."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Lancet/PubMed conferida nesta sessão."
 ---

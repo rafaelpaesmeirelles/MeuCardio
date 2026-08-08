@@ -3,7 +3,8 @@ title: "SENIOR-RITA: estratégia invasiva versus conservadora no NSTEMI em idoso
 slug: senior-rita-estrategia-invasiva-versus-conservadora-nstemi-idosos
 theme: "Doença coronariana"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial SENIOR-RITA (PMID 39225274, n=1518), ja coberto integralmente no documento combinado ja publicado sindrome-coronariana-aguda-sem-supra-de-st-no-muito-idoso-estrategia-invasiva-versus-conservadora-after-eighty-e-senior-rita. Nao publicar."
 source_refs: ["PMID:39225274", "DOI:10.1056/NEJMoa2407791", "ISRCTN11343602"]
 legacy_source: "British Heart Foundation SENIOR-RITA"
 ---

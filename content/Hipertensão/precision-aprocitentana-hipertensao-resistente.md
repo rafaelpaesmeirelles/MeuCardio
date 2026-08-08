@@ -3,7 +3,8 @@ title: "PRECISION: aprocitentana e bloqueio da endotelina na hipertensão resist
 slug: precision-aprocitentana-hipertensao-resistente
 theme: "Hipertensão"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial PRECISION (PMID 36356632), ja publicado sob o slug aprocitentana-antagonista-dual-do-receptor-de-endotelina-o-ensaio-precision. Nao publicar."
 source_refs: ["Schlaich MP, Bellet M, Weber MA, et al. Dual endothelin antagonist aprocitentan for resistant hypertension (PRECISION): a multicentre, blinded, randomised, parallel-group, phase 3 trial. Lancet. 2022;400(10367):1927-1937. DOI: 10.1016/S0140-6736(22)02034-7. PMID: 36356632. NCT03541174."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Lancet/PubMed conferida nesta sessão."
 ---

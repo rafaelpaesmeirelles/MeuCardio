@@ -3,7 +3,8 @@ title: "LAAOS III: oclusão do apêndice atrial esquerdo durante cirurgia cardí
 slug: laaos-iii-oclusao-apendice-atrial-cirurgia-cardiaca
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial LAAOS III (PMID 33999547), ja publicado sob o slug oclusao-cirurgica-do-apendice-atrial-durante-cirurgia-cardiaca-o-ensaio-laaos-iii. Nao publicar."
 source_refs: ["Whitlock RP, Belley-Cote EP, Paparella D, et al. Left Atrial Appendage Occlusion during Cardiac Surgery to Prevent Stroke. N Engl J Med. 2021;384(22):2081-2091. DOI: 10.1056/NEJMoa2101897. PMID: 33999547. NCT01561651."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária NEJM/PubMed conferida nesta sessão."
 ---

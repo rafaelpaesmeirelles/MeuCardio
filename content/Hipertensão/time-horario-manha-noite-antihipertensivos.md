@@ -3,7 +3,8 @@ title: "TIME: anti-hipertensivos pela manhã ou à noite e desfechos cardiovascu
 slug: time-horario-manha-noite-antihipertensivos
 theme: "Hipertensão"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial TIME (PMID 36240838, n=21.104, HR 0,95), ja publicado sob o slug horario-do-anti-hipertensivo-manha-ou-noite-o-ensaio-time. Nao publicar."
 source_refs: ["Mackenzie IS, Rogers A, Poulter NR, et al. Cardiovascular outcomes in adults with hypertension with evening versus morning dosing of usual antihypertensives in the UK (TIME study): a prospective, randomised, open-label, blinded-endpoint clinical trial. Lancet. 2022;400(10361):1417-1425. DOI: 10.1016/S0140-6736(22)01786-X. PMID: 36240838. ISRCTN18157641."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Lancet/PubMed conferida nesta sessão."
 ---

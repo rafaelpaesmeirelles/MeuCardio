@@ -3,7 +3,8 @@ title: "Diretriz AHA/ACC 2024: manejo cardiovascular perioperatório em cirurgia
 slug: diretriz-aha-acc-2024-manejo-cardiovascular-cirurgia-nao-cardiaca
 theme: "Perioperatório"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesma diretriz AHA/ACC 2024 de manejo cardiovascular perioperatorio ja identificada como duplicata na auditoria de 08/08 sob o slug aha-acc-2024-manejo-cardiovascular-perioperatorio-cirurgia-nao-cardiaca -- o conteudo ja esta fragmentado, com os mesmos numeros, em 5 documentos dedicados desta mesma pasta (algoritmo integrado, suspensao de iSGLT2, MINS, FA perioperatoria, bridging de anticoagulacao). Nao publicar."
 source_refs: ["PMID:39320289", "DOI:10.1016/j.jacc.2024.06.013"]
 legacy_source: "2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery"
 ---

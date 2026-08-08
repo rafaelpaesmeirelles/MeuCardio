@@ -3,7 +3,8 @@ title: "IRONMAN: derisomaltose férrica intravenosa na IC com deficiência de fe
 slug: ironman-derisomaltose-ferrica-ic-deficiencia-ferro
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "DUPLICATA, 09/08/2026: mesmo trial IRONMAN (PMID 36347265), ja citado/coberto nos documentos publicados anemia-e-deficiencia-de-ferro-na-insuficiencia-cardiaca-do-idoso e atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca. Nao publicar."
 source_refs: ["Kalra PR, Cleland JGF, Petrie MC, et al. Intravenous ferric derisomaltose in patients with heart failure and iron deficiency in the UK (IRONMAN): an investigator-initiated, prospective, randomised, open-label, blinded-endpoint trial. Lancet. 2022;400(10369):2199-2209. DOI: 10.1016/S0140-6736(22)02083-9. PMID: 36347265. NCT02642562."]
 legacy_source: "Documento novo, 08/08/2026. Fonte primária Lancet/PubMed conferida nesta sessão."
 ---
