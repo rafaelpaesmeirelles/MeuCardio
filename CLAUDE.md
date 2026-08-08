@@ -1,5 +1,56 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~20h15: médico convidado (acesso cortesia) + correção do cartão de e-mail do Painel
+> Pedido do Rafael: um amigo médico que vai trabalhar com a Corvia precisa passar pelo fluxo REAL de
+> cadastro/KYC/pagamento (é teste do sistema, e ele quer impressionar o convidado), mas sem cobrança
+> e com o KYC aprovado automaticamente — o CFM ainda não liberou a checagem automática (pendência já
+> registrada neste arquivo), e para este caso a revisão manual é dispensada por decisão direta dele.
+>
+> **Implementado como mecanismo reutilizável** (`users.convidado`, migração `f66h20260808`), não
+> hardcoded para um e-mail — liga/desliga só por admin, `PATCH /api/admin/users/{id}/convidado`,
+> badge + botão no painel `Admin.tsx`. Com o flag ligado: `POST /billing/checkout` libera a
+> assinatura (plano Completo, sempre — é o que "acesso completo" promete) direto no banco, sem
+> falar com o Stripe, e devolve `{"convidado": true, "mensagem": "Médico Convidado — Acesso
+> Completo Liberado."}` em vez de `checkout_url`; a tela (`Assinatura.tsx`) mostra essa mensagem em
+> vez de redirecionar. CorvIA Mail vem **incluso de graça** sem precisar de nenhum código novo —
+> `status_email` já trata `plano == completo` como "incluído no plano", então a tela do CorvIA Mail
+> já pula direto para "escolha seu endereço + crie uma senha", exatamente como Rafael descreveu
+> ("pedirá uma senha para o e-mail junto com os dados do cadastramento geral"). No KYC
+> (`verificacao.submeter`), se `convidado=True` e o resultado ainda estivesse `aguardando_revisao`
+> (o caso normal do CRM sem credencial do CFM), aprova na hora, com `nota_revisao` explicando o
+> motivo — não sobrescreve uma liberação já dada por outro caminho. O tour de onboarding (Trabalho
+> 13) dispara sozinho quando a assinatura fica ativa, sem precisar de nenhuma mudança.
+>
+> **Ainda falta**: Rafael vai passar o e-mail do amigo assim que ele se cadastrar, para eu marcar a
+> conta como convidado pelo painel Admin. Nada a fazer até lá.
+>
+> **Bug real achado e corrigido no mesmo lote** (relato do Rafael: "os emails dentro da caixa de
+> entrada não estão aparecendo na caixa do corvia mail na página principal/painel"): `GET
+> /email/resumo` (o cartão "Hoje" do Painel) só consultava a caixa nativa @corvia.med.br via
+> Mail360, ignorando toda conta externa conectada (Google/Microsoft/Yahoo/Apple) — mesmo com
+> sincronização de e-mail ligada e a mesma mensagem aparecendo normalmente na caixa combinada de
+> verdade (`GET /mensagens/todas`). As duas rotas nunca puderam compartilhar código diretamente:
+> `/mensagens/todas` exige a sessão própria do CorvIA Mail (`current_email_account`), e `/resumo`
+> roda dentro da sessão comum da Corvia (`current_user`) de propósito, pra o cartão funcionar sem
+> pedir um segundo login. Corrigido replicando o mesmo padrão de agregação dentro de `/resumo`:
+> soma a caixa nativa com toda `CalendarIntegration` conectada com `read_mail` e `sync_mail`
+> ligados, filtra não lidas (`_nao_lida` já cobre o campo `status` normalizado por todos os
+> provedores), ordena por data, mantém só as 3 mais recentes — e falha de uma fonte não derruba as
+> demais (antes, um 502 do Mail360 nativo escondia o cartão inteiro mesmo com contas externas
+> saudáveis).
+>
+> **Verificação**: 19 testes novos de convidado (`test_billing_convidado.py`, +2 em
+> `test_kyc_verificacao.py`) e 3 do cartão de e-mail (`test_corvia_mail.py`) — **75/75 passando**.
+> Suíte completa do backend rodada do zero num Postgres 16+pgvector local instalado nesta sessão
+> (`postgresql-16-pgvector`, cluster próprio na porta 5433, deixado configurado para as próximas
+> sessões — ver `backend/tests/README.md`): **756/763**, as 7 falhas são pré-existentes e sem
+> relação com esta mudança (6 são bugs conhecidos das calculadoras de dose PALS 2025 e um item de
+> conteúdo pendente de outra sessão em produção contínua; Redis indisponível é gap do ambiente local
+> de teste, já documentado). `tsc --noEmit` limpo. Migração `f66h20260808` aplicada em produção
+> (`alembic upgrade head`), backend e frontend rebuildados, bundle novo confirmado no Caddy (grep de
+> "Médico Convidado" e "Marcar convidado" nos assets servidos). Backend saudável (200 em
+> `/api/openapi.json` e `/`) depois do rebuild.
+
 > ## 🔄 GRUPO A (Claude) VOLTOU A PRODUZIR CONTEÚDO, 08/08/2026 ~16h — pedido do Rafael: "priorize temas de maior prevalência e dados mais recentes possíveis"
 > Isto revoga o "AVISO AO GRUPO B" logo abaixo (que mandava eu pausar) — ChatGPT/Grupo B continua na
 > própria faixa normalmente, sem mudança nenhuma para ele. Primeiro lote: **6 documentos**, um em cada
