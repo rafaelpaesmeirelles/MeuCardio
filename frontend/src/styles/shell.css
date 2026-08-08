@@ -1336,6 +1336,12 @@
     display: grid;
     grid-template-columns: 48px minmax(0, 1fr);
     align-items: center;
+    /* Pedido do Rafael, 08/08/2026: o bloco (ícone + texto) ficava
+       encostado à esquerda do quadro, com folga sobrando à direita — sem
+       simetria. `justify-items: center` centraliza cada coluna do grid
+       dentro do próprio espaço, e a coluna de texto abaixo também passa a
+       centralizar o conteúdo nela mesma (era alinhado à esquerda). */
+    justify-items: center;
     gap: 0.7rem;
     min-height: 74px;
     padding: 0.72rem 0.8rem;
@@ -1343,6 +1349,12 @@
   }
   .gaveta .nav-clinica__hoje-logo { width: 48px; height: 48px; border-radius: 13px; }
   .gaveta .nav-clinica__hoje-logo svg { width: 40px; height: 40px; }
+  .gaveta .nav-clinica__hoje-texto {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
   .gaveta .nav-clinica__hoje-texto strong { font-size: 1.1rem; }
   .gaveta .nav-clinica__hoje-texto small { margin-top: 0.28rem; font-size: 0.72rem; }
   .gaveta .nav-clinica__hoje.ativo {
@@ -1352,6 +1364,14 @@
     box-shadow: inset 4px 0 var(--teal-500), 0 12px 28px -20px rgba(37, 150, 169, 0.7);
   }
   .gaveta .nav-clinica__hoje.ativo .nav-clinica__hoje-logo { background: var(--white); border-color: var(--teal-100); }
+  /* Achado em 08/08/2026, print do Rafael: a palavra "Hoje" ficava
+     ilegível (quase branco sobre fundo claro) quando o cartão está
+     selecionado. Causa: `.nav-clinica__hoje-texto strong` (regra de base,
+     pensada pro fundo navy da sidebar) fixa `color: var(--white)`, e o
+     estado `.ativo` deste componente móvel só corrigia a cor do texto
+     pequeno (`small`), nunca a do "Hoje" (`strong`) — o branco ficava sem
+     contraste nenhum contra o novo fundo claro. */
+  .gaveta .nav-clinica__hoje.ativo .nav-clinica__hoje-texto strong { color: var(--teal-700); }
   .gaveta .nav-clinica__hoje.ativo .nav-clinica__hoje-texto small { color: var(--slate-600); }
   .gaveta__sair {
     display: flex;
@@ -1806,6 +1826,17 @@
 .hoje__temas a > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .hoje__temas a:hover { color: #fff; background: rgba(255,255,255,.14); border-color: rgba(143,211,220,.4); text-decoration: none; }
 .hoje__temas small { flex: 0 0 auto; color: #a9e6eb; font-family: var(--fonte-dados); font-weight: 750; }
+
+/* Variante de fundo claro do grid de temas/áreas acima (.hoje__temas é desenhado para o
+   card navy escuro do painel "Hoje" — texto quase branco, ilegível se reaproveitado sobre
+   um .cartao branco). Usada em Biblioteca.tsx, "Conteúdos por área clínica". Bug real
+   relatado pelo Rafael em 08/08/2026: texto invisível sobre fundo claro. */
+.areas-clinicas__grade { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .42rem; margin-top: .85rem; }
+.areas-clinicas__grade a { display: flex; min-width: 0; min-height: 44px; align-items: center; justify-content: space-between; gap: .65rem; padding: .45rem .7rem; color: var(--texto); background: var(--fundo); border: 1px solid var(--borda); border-radius: var(--r-sm); font-size: .78rem; font-weight: 600; }
+.areas-clinicas__grade a > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.areas-clinicas__grade a:hover { color: var(--teal-700); background: var(--acento-tinta); border-color: var(--teal-600); text-decoration: none; }
+.areas-clinicas__grade small { flex: 0 0 auto; color: var(--texto-secundario); font-family: var(--fonte-dados); font-weight: 750; }
+@media (max-width: 640px) { .areas-clinicas__grade { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 
 .hoje__grupos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; }
 .hoje-grupo { position: relative; min-width: 0; padding: 1.1rem; background: var(--white); border: 1px solid var(--borda); border-radius: var(--r-lg); box-shadow: var(--sombra-xs); }

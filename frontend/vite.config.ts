@@ -46,10 +46,39 @@ export default defineConfig({
         navigateFallback: "index.html",
         runtimeCaching: [
           {
+            // Achado em 08/08/2026, pedido do Rafael ("continua abrindo
+            // páginas antigas em cache" mesmo recarregando a página): por
+            // padrão, o Workbox intercepta TODA requisição de navegação
+            // (inclusive um F5/recarregar) e responde com o `index.html`
+            // pré-cacheado (navigateFallback) — isso acontece ANTES de
+            // qualquer verificação HTTP normal, então o `Cache-Control:
+            // no-cache` que o Caddy manda para o shell da aplicação nunca
+            // chega a ser considerado: o service worker responde primeiro,
+            // direto do cache, sem nem tentar a rede. Precisava de uma regra
+            // própria e explícita para navegação, com a rede em primeiro
+            // lugar — sem isso, o app inteiro podia ficar "congelado" na
+            // versão instalada até o mecanismo de detecção de SW novo (em
+            // main.tsx) disparar, o que não cobre um F5 simples.
+            urlPattern: ({ request }) => request.mode === "navigate",
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "corvia-navegacao",
+              networkTimeoutSeconds: 4,
+              expiration: { maxEntries: 20 },
+              cacheableResponse: { statuses: [200] }
+            }
+          },
+          {
+            // Trocado de StaleWhileRevalidate para NetworkFirst pelo mesmo
+            // motivo acima: cada arquivo já tem hash no nome (muda sozinho a
+            // cada deploy), então a rede deveria ser sempre tentada primeiro;
+            // o cache aqui existe só como resiliência para rede ruim/offline,
+            // não como atalho que arrisca servir um bundle antigo.
             urlPattern: /\/assets\/.*\.(?:js|css)$/,
-            handler: "StaleWhileRevalidate",
+            handler: "NetworkFirst",
             options: {
               cacheName: "corvia-assets-v1",
+              networkTimeoutSeconds: 4,
               expiration: { maxEntries: 160, maxAgeSeconds: 2592000 },
               cacheableResponse: { statuses: [200] }
             }
