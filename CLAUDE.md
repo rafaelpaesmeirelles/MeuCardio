@@ -1,5 +1,19 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🔄 GRUPO A (Claude) VOLTOU A PRODUZIR CONTEÚDO, 08/08/2026 ~16h — pedido do Rafael: "priorize temas de maior prevalência e dados mais recentes possíveis"
+> Isto revoga o "AVISO AO GRUPO B" logo abaixo (que mandava eu pausar) — ChatGPT/Grupo B continua na
+> própria faixa normalmente, sem mudança nenhuma para ele. Primeiro lote: **6 documentos**, um em cada
+> um dos temas mais rasos da minha faixa (Valvopatias 19→20, Cardiomiopatias 18→19, Pericárdio 19→20,
+> Tromboembolismo, Síncope, Saúde mental e cardiologia), todos com PMID **2026** (dado mais recente
+> disponível), conferidos no PubMed via E-utilities e checados contra o corpus antes de escrever para
+> não duplicar tema já coberto: PARTNER 2A em 10 anos (JACC, PMID 42300821), AVC cardioembólico na
+> cardiomiopatia chagásica (Heart, PMID 42521491), colchicina em DRC na pericardite (J Cardiovasc
+> Pharmacol, PMID 42552067), subanálise de risco hemorrágico do AZALEA-TIMI 71 (Blood, PMID 42213637),
+> marcadores de sucesso na cardioneuroablação (JACC Clin EP, PMID 42360261), sobreposição fragilidade+
+> depressão como risco CV (Clin Med Insights Cardiol, PMID 42553585). Publicados, indexados no RAG
+> (104 trechos), zero órfão. Sigo produzindo — critério de priorização: dentro de cada tema, a condição
+> mais prevalente sem cobertura recente primeiro; entre temas, o mais raso primeiro.
+
 > ## ✅ CONCLUÍDO E NO AR, 08/08/2026 ~15h50: auditoria + publicação dos 28 documentos do ChatGPT (solo) + limpeza de 42 pendentes de um lote anterior (Perioperatório/Farmacologia/Cardio-oncologia/Cardiologia pediátrica)
 > Pedido do Rafael em duas mensagens: **"audite e publique"** os 28 documentos que o ChatGPT produziu
 > sozinho desde o aviso de pausa do Grupo A (08/08 09h13 -0300), e depois, ao eu reportar 42 documentos
