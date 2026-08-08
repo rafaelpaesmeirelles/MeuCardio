@@ -7,6 +7,7 @@ summary: "Resumo operacional da diretriz ESC 2024 de fibrilação atrial, com fo
 review_status: pendente_revisao
 fonte_producao: chatgpt
 source_refs: ["Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723."]
+legacy_source: "Documento novo do Grupo B, 08/08/2026. Diretriz primária ESC 2024 conferida no European Heart Journal e no PubMed; manter pendente de revisão editorial antes de publicação."
 ---
 
 # ESC 2024 na fibrilação atrial — AF-CARE e anticoagulação pelo CHA₂DS₂-VA
