@@ -1,5 +1,41 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: redesenho visual do CorvIA Mail + varredura final de pendências (zero real)
+> Dois pedidos do Rafael, em sequência ao bloco de bugs logo abaixo.
+>
+> **Redesenho visual**, a partir de um modelo de referência que ele mandou (mockup "Opção A —
+> Professional", ícones de conta à esquerda, busca em destaque, avatar do usuário). Implementado
+> **só o que mapeia pra funcionalidade REAL já existente** — a régua de "nunca um botão que não
+> faz nada" valendo também pra UI, não só pra conteúdo clínico:
+> - **Trilha de ícones das contas conectadas**, à esquerda do workspace — chama exatamente
+>   `selecionarConta`/`aplicarCombinacao`, que já existiam no seletor/menu; só ficou visível de
+>   imediato.
+> - **Identidade do médico logado** (nome/e-mail/foto real via `useAuth()`) no cabeçalho.
+> - **Avatar colorido por remetente** na lista (hash determinístico da string — puro efeito
+>   visual, não é dado novo).
+> - **Estrela de favorito** clicável na lista e na leitura — reaproveita literalmente o
+>   `agir("sinalizar", …)` que já existia como botão "Acompanhar", só com ícone de estrela.
+> - Busca em pílula, abas Todas/Não lidas/Favoritas com peso visual de aba (mesmo estado `filtro`
+>   de sempre).
+> **Deliberadamente fora**, por não existir funcionalidade real por trás: paleta de comando
+> (Cmd+K), central de notificações, "visão" de menções (não existe em e-mail), adiar mensagem
+> (snooze), criação de pasta customizada. `tsc --noEmit` limpo, `npm run build` sem erro, frontend
+> rebuildado, bundle novo confirmado no Caddy (`mail-contas-rail`/`mail-topo__usuario` em
+> `CaixaDeEmail-*.js`).
+>
+> **Varredura final de conteúdo pendente**, pedido explícito de zerar pendências. Consulta nas 11
+> tabelas com coluna `published`: 10 delas 100% publicadas. Em `documents`, **33 não publicados** —
+> conferidos um a um contra o que **já estava documentado nas duas rodadas de auditoria deste
+> mesmo dia** (ver os dois blocos "✅ RODADA DE AUDITORIA" logo abaixo): **32 são duplicatas reais
+> já identificadas e resolvidas** (`review_note` no front matter apontando o slug canônico
+> publicado) — publicá-los recriaria a duplicata clínica que aquelas rodadas trabalharam pra
+> evitar, então continuam de propósito fora do ar. **1 era pendência real**:
+> `esteroides-anabolizantes-androgenicos-cardiotoxicidade-no-atleta-recreacional` (documento meu,
+> já `review_status: revisado`, nunca chegou a ser publicado numa rodada anterior) — publicado e
+> indexado agora. Em `evidence_records`, o único não publicado é o órfão histórico já documentado
+> à exaustão neste arquivo (`cc-adulto-eco-no-seguimento-com-defeito-residual`, não existe mais no
+> disco, nunca deve publicar). **Zero `document_chunks` órfão no RAG**, conferido depois.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: bug definitivo de reconexão OAuth (SameSite) + combinar contas/conta padrão sem persistir + logo da Apple errado
 > Relato do Rafael, com bastante frustração (**"ja esta com esse problema a um tempao... tu ja
 > disse que resolveu varias vezes... corrija definitivamente o erro"**): opção de combinar contas
