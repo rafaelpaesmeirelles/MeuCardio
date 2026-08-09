@@ -1,9 +1,9 @@
 """Sincronização periódica automática das contas externas da CorvIA.
 
-O supervisor é deliberadamente tolerante a falhas: uma indisponibilidade de
-rede ou do provedor não pode expulsar uma conta das rodadas seguintes. Contas
-``connected`` e ``error`` são candidatas; somente estados que exigem ação do
-titular (``reauth_required``/``disconnected``) ficam de fora.
+O supervisor é tolerante a falhas e respeita cada preferência do usuário.
+Calendário e contatos só são sincronizados quando habilitados; e-mail não é
+copiado para o banco (a caixa é proxy ao vivo), mas contas OAuth com e-mail
+habilitado recebem um heartbeat de credencial para renovação proativa.
 """
 
 from __future__ import annotations
@@ -16,6 +16,7 @@ from app.models.agenda import CalendarIntegration
 from app.services.agenda_integrada.connectors import ConnectorError
 from app.services.agenda_integrada.contacts import sync_contacts
 from app.services.agenda_integrada.domain import sync_integration
+from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("agenda_sync_cli")
@@ -24,26 +25,16 @@ ESTADOS_RECUPERAVEIS = ("connected", "error")
 ERROS_REAUTENTICACAO = {
     "reauth_required", "invalid_grant", "interaction_required", "consent_required",
 }
+PROVEDORES_OAUTH = {"google_calendar", "microsoft_365"}
 
 
-def _registrar_falha_calendario(db, integration_id: int, exc: ConnectorError) -> CalendarIntegration | None:
-    """Normaliza o estado depois de uma tentativa de sincronização.
-
-    ``sync_integration`` historicamente grava ``error`` para qualquer exceção.
-    Aqui distinguimos erro recuperável de revogação real para que uma falha
-    temporária continue sendo tentada automaticamente no próximo cron.
-    """
+def _registrar_falha(db, integration_id: int, exc: ConnectorError) -> CalendarIntegration | None:
     item = db.get(CalendarIntegration, integration_id)
     if item is None:
         return None
     item.last_error_code = exc.code
     item.last_error_message = str(exc)[:500]
-    if exc.code in ERROS_REAUTENTICACAO:
-        item.status = "reauth_required"
-    else:
-        # Rede, rate limit, timeout, 5xx e outros erros operacionais continuam
-        # elegíveis para a próxima rodada automática.
-        item.status = "connected"
+    item.status = "reauth_required" if exc.code in ERROS_REAUTENTICACAO else "connected"
     db.commit()
     return item
 
@@ -65,90 +56,102 @@ def sincronizar_todas() -> dict:
             integration_id = item.id
             rotulo = f"{item.provider}:{item.display_name or item.id}"
             calendario = contatos = None
-            erro_calendario = erro_contatos = None
-            calendario_aplicavel = True
+            heartbeat_mail = None
+            erro_calendario = erro_contatos = erro_mail = None
 
-            try:
-                calendario = sync_integration(db, item, full=False)
-                db.commit()
-            except ConnectorError as exc:
-                db.rollback()
-                if exc.code == "read_not_supported":
-                    calendario_aplicavel = False
+            # 1) Heartbeat do CorvIA Mail. Não baixa mensagens: apenas garante
+            # que OAuth continua renovável. Yahoo/iCloud usam senha de app e
+            # são validados quando o próprio IMAP/SMTP é acessado.
+            mail_aplicavel = bool(item.sync_mail and (item.capabilities or {}).get("read_mail"))
+            if mail_aplicavel and item.provider in PROVEDORES_OAUTH:
+                try:
+                    ensure_fresh_credentials(db, item)
+                    heartbeat_mail = {"ok": True}
+                except ConnectorError as exc:
+                    db.rollback()
+                    erro_mail = exc.code
+                    item = _registrar_falha(db, integration_id, exc) or item
+
+            # 2) Calendário respeita explicitamente sync_calendar.
+            calendario_aplicavel = bool(item.sync_calendar and item.status != "reauth_required")
+            if calendario_aplicavel:
+                try:
+                    calendario = sync_integration(db, item, full=False)
+                    db.commit()
+                except ConnectorError as exc:
+                    db.rollback()
+                    if exc.code == "read_not_supported":
+                        calendario_aplicavel = False
+                        item = db.get(CalendarIntegration, integration_id) or item
+                        if item.status == "error":
+                            item.status = "connected"
+                            db.commit()
+                    else:
+                        erro_calendario = exc.code
+                        item = _registrar_falha(db, integration_id, exc) or item
+                except Exception as exc:  # noqa: BLE001
+                    db.rollback()
+                    erro_calendario = "erro_inesperado"
                     item = db.get(CalendarIntegration, integration_id) or item
-                    # Conta somente de e-mail não está quebrada por não possuir
-                    # calendário. Mantém conectada para o CorvIA Mail.
-                    if item.status == "error":
-                        item.status = "connected"
-                        db.commit()
-                else:
-                    erro_calendario = exc.code
-                    item = _registrar_falha_calendario(db, integration_id, exc) or item
-            except Exception as exc:  # noqa: BLE001
-                db.rollback()
-                erro_calendario = "erro_inesperado"
-                item = db.get(CalendarIntegration, integration_id) or item
-                item.last_error_code = "erro_inesperado"
-                item.last_error_message = str(exc)[:500]
-                # Também é recuperável: uma exceção inesperada não pode retirar
-                # definitivamente a conta do supervisor periódico.
-                item.status = "connected"
-                db.commit()
-                log.exception("Erro inesperado sincronizando calendário de %s", rotulo)
+                    item.last_error_code = "erro_inesperado"
+                    item.last_error_message = str(exc)[:500]
+                    item.status = "connected"
+                    db.commit()
+                    log.exception("Erro inesperado sincronizando calendário de %s", rotulo)
 
-            contatos_aplicavel = bool(item.contacts_enabled)
-            if contatos_aplicavel and item.status != "reauth_required":
-                item = db.get(CalendarIntegration, integration_id) or item
+            # 3) Contatos são independentes e respeitam contacts_enabled.
+            item = db.get(CalendarIntegration, integration_id) or item
+            contatos_aplicavel = bool(item.contacts_enabled and item.status != "reauth_required")
+            if contatos_aplicavel:
                 try:
                     contatos = sync_contacts(db, item, full=False)
                     db.commit()
                 except ConnectorError as exc:
                     db.rollback()
                     erro_contatos = exc.code
-                    # Se contatos detectarem revogação verdadeira, isso vale
-                    # para a credencial da conta inteira, não apenas contatos.
                     if exc.code in ERROS_REAUTENTICACAO:
-                        item = db.get(CalendarIntegration, integration_id) or item
-                        item.status = "reauth_required"
-                        item.last_error_code = exc.code
-                        item.last_error_message = str(exc)[:500]
-                        db.commit()
+                        item = _registrar_falha(db, integration_id, exc) or item
                 except Exception:  # noqa: BLE001
                     db.rollback()
                     erro_contatos = "erro_inesperado"
                     log.exception("Erro inesperado sincronizando contatos de %s", rotulo)
 
             item = db.get(CalendarIntegration, integration_id) or item
+            mail_ok = (not mail_aplicavel) or erro_mail is None
             calendario_ok = (not calendario_aplicavel) or erro_calendario is None
             contatos_ok = (not contatos_aplicavel) or erro_contatos is None
-            ok = calendario_ok and contatos_ok and item.status != "reauth_required"
+            ok = mail_ok and calendario_ok and contatos_ok and item.status != "reauth_required"
+
             if ok:
                 resultado["sincronizadas"] += 1
-                # Limpa erro operacional antigo após uma rodada saudável.
                 if item.status != "connected" or item.last_error_code:
                     item.status = "connected"
                     item.last_error_code = None
                     item.last_error_message = None
                     db.commit()
-                log.info("OK %s — calendario=%s contatos=%s", rotulo, calendario, contatos)
+                log.info(
+                    "OK %s — mail=%s calendario=%s contatos=%s",
+                    rotulo, heartbeat_mail, calendario, contatos,
+                )
             else:
                 resultado["falharam"] += 1
                 log.warning(
-                    "FALHOU %s — calendario=%s contatos=%s status=%s",
-                    rotulo, erro_calendario, erro_contatos, item.status,
+                    "FALHOU %s — mail=%s calendario=%s contatos=%s status=%s",
+                    rotulo, erro_mail, erro_calendario, erro_contatos, item.status,
                 )
+
             resultado["detalhe"].append({
                 "conta": rotulo,
                 "ok": ok,
                 "status": item.status,
+                "mail": heartbeat_mail,
+                "erro_mail": erro_mail,
                 "calendario": calendario,
                 "erro_calendario": erro_calendario,
                 "contatos": contatos,
                 "erro_contatos": erro_contatos,
             })
 
-        # Somente estados realmente não recuperáveis são "pulados". ``error``
-        # deixou de ser limbo permanente e é sempre retentado.
         resultado["puladas"] = (
             db.query(CalendarIntegration)
             .filter(
