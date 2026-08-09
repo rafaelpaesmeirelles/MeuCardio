@@ -329,10 +329,20 @@
 .mail-anexo-comprovar { min-height: 22px; padding: 0 .4rem; color: var(--acento-escuro); background: none; border: 1px solid var(--acento); border-radius: 6px; font-size: .68rem; cursor: pointer; }
 .mail-compositor > footer { display: flex; align-items: center; gap: .5rem; border-top: 1px solid var(--borda); margin-top: .6rem; padding-top: .75rem; }
 .mail-compositor > footer small { margin-left: auto; color: var(--alerta); text-align: right; max-width: 280px; }
-.mail-conta-ativa { display: flex; align-items: center; gap: .4rem; margin-top: .15rem; }
+/* 09/08/2026: linha de proveniência sempre visível acima do seletor — texto
+ * por extenso (não só o ícone pequeno que já existia ao lado do <select>),
+ * para que fique claro de qual empresa/conta são os e-mails na tela mesmo
+ * sem abrir o seletor. */
+.mail-conta-ativa__proveniencia { display: flex; align-items: center; gap: .3rem; margin: 0 0 .3rem; font-size: .78rem; color: var(--texto-secundario); flex-wrap: wrap; }
+.mail-conta-ativa__proveniencia .logo-provedor { width: 15px; height: 15px; }
+.mail-conta-ativa__proveniencia strong { color: var(--texto); }
+.mail-conta-ativa__selo { padding: .05rem .4rem; color: var(--acento-escuro); background: var(--acento-tinta); border-radius: 999px; font-size: .66rem; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; }
+.mail-conta-ativa { display: flex; align-items: center; gap: .4rem; margin-top: .15rem; flex-wrap: wrap; }
 .mail-conta-ativa .logo-provedor { flex: 0 0 auto; width: 20px; height: 20px; }
 .mail-conta-ativa select { max-width: min(360px, 58vw); min-height: 34px; padding: .25rem 2rem .25rem .55rem; border: 1px solid var(--borda); border-radius: 8px; background: var(--superficie); color: var(--texto); font-weight: 700; }
 .mail-conta-ativa__definir-padrao { flex: 0 0 auto; min-height: 34px; padding: .25rem .5rem; color: var(--acento); background: var(--superficie); border: 1px solid var(--borda); border-radius: 8px; font-size: .62rem; font-weight: 800; cursor: pointer; white-space: nowrap; }
+/* Estado "já é a padrão" — mesmo tamanho/posição do botão acima, só texto, sem ação. */
+.mail-conta-ativa__padrao-atual { flex: 0 0 auto; min-height: 34px; display: inline-flex; align-items: center; padding: .25rem .5rem; color: var(--sucesso); font-size: .62rem; font-weight: 800; white-space: nowrap; }
 .mail-conta-nota { margin: .5rem 0; padding: .55rem .7rem; border-radius: 8px; background: var(--acento-tinta); color: var(--texto-secundario); font-size: .75rem; }
 
 /* Tablet: pastas + uma única área de trabalho. A leitura substitui a lista. */

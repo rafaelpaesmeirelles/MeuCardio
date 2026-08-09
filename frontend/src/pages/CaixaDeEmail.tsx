@@ -101,6 +101,20 @@ const MODELOS = [
   },
 ];
 
+const NOME_PROVEDOR: Record<string, string> = {
+  corvia: "CorvIA Mail", google: "Google", microsoft: "Microsoft", apple: "Apple iCloud", yahoo: "Yahoo Mail",
+};
+
+// 09/08/2026, bug real reportado pelo Rafael: a combinação de contas e a
+// escolha de conta ativa se perdiam a cada navegação/recarga — "toda vez tem
+// que selecionar de novo". As duas eram só estado React em memória, sem
+// nenhuma persistência. Guardadas em localStorage (preferência de UI local,
+// mesmo padrão já usado para `corvia.mail.larguraLista`) e restauradas ao
+// montar, revalidando contra as contas que realmente existem hoje — uma
+// conta desconectada/removida não deixa a combinação salva quebrada.
+const CHAVE_CONTAS_COMBINADAS = "corvia.mail.contasCombinadas";
+const CHAVE_CONTA_ATIVA = "corvia.mail.contaAtiva";
+
 const NOMES_PASTAS: Record<string, string> = {
   Inbox: "Entrada",
   Drafts: "Rascunhos",
@@ -299,6 +313,14 @@ export default function CaixaDeEmail() {
   // em vez de duplicar essa lógica para o modo combinado.
   const [contasCombinadas, setContasCombinadas] = useState<Set<string> | null>(null);
   const [seletorCombinadoAberto, setSeletorCombinadoAberto] = useState(false);
+  // 09/08/2026: seleção só entra em vigor ao clicar "Combinar selecionadas"
+  // — antes, marcar a caixa já aplicava na hora, sem nenhum botão de
+  // confirmação visível, e o Rafael reportou "não tem opção de combinar a
+  // seleção escolhida" (o auto-apply silencioso não contava como uma opção
+  // perceptível). `null` até o primeiro carregamento de contas terminar,
+  // para não sobrescrever a seleção restaurada do localStorage com um Set
+  // vazio no primeiro render.
+  const [selecaoPendente, setSelecaoPendente] = useState<Set<string> | null>(null);
   const [mensagensCombinadas, setMensagensCombinadas] = useState<(Mensagem & { origem: string; provider: string })[] | null>(null);
   const [carregandoCombinada, setCarregandoCombinada] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
@@ -427,11 +449,61 @@ export default function CaixaDeEmail() {
         setEnderecoAtual(r.email_address);
         const contas = await apiEmail.get<ContaEmail[]>("/email/contas");
         setContasEmail(contas);
+
+        // 09/08/2026: qual conta ficar mostrando ao reabrir — prioridade é
+        // a última que o médico estava vendo (localStorage), caindo para a
+        // conta padrão de envio do servidor, e só então para "corvia". Sem
+        // isso, quem trabalha o dia inteiro numa conta externa (ex.: Google)
+        // sempre reabria de volta na caixa nativa.
+        const salva = localStorage.getItem(CHAVE_CONTA_ATIVA);
         const padrao = contas.find((c) => c.padrao);
-        if (padrao) setContaEmailId(padrao.id);
+        if (salva && contas.some((c) => c.id === salva)) setContaEmailId(salva);
+        else if (padrao) setContaEmailId(padrao.id);
+
+        // Restaura a combinação de contas salva, se as contas ainda
+        // existirem e ainda lerem e-mail (uma conta desconectada depois de
+        // salvar a combinação não deixa a tela presa nela).
+        const combinadaSalva = localStorage.getItem(CHAVE_CONTAS_COMBINADAS);
+        if (combinadaSalva) {
+          try {
+            const ids = (JSON.parse(combinadaSalva) as string[]).filter(
+              (id) => contas.some((c) => c.id === id && c.read_mail),
+            );
+            if (ids.length > 0) {
+              setContasCombinadas(new Set(ids));
+              setSelecaoPendente(new Set(ids));
+              setModo("caixa");
+            } else {
+              localStorage.removeItem(CHAVE_CONTAS_COMBINADAS);
+              setSelecaoPendente(new Set());
+            }
+          } catch {
+            localStorage.removeItem(CHAVE_CONTAS_COMBINADAS);
+            setSelecaoPendente(new Set());
+          }
+        } else {
+          setSelecaoPendente(new Set());
+        }
       })
       .catch((e) => setErro(mensagemDeErro(e, "Não foi possível carregar sua caixa de e-mail.")));
   }, [semSessao]);
+
+  function selecionarConta(id: string) {
+    setContaEmailId(id);
+    localStorage.setItem(CHAVE_CONTA_ATIVA, id);
+  }
+
+  function aplicarCombinacao(ids: Set<string>) {
+    if (ids.size === 0) {
+      setContasCombinadas(null);
+      localStorage.removeItem(CHAVE_CONTAS_COMBINADAS);
+    } else {
+      setContasCombinadas(new Set(ids));
+      localStorage.setItem(CHAVE_CONTAS_COMBINADAS, JSON.stringify([...ids]));
+      setModo("caixa");
+    }
+    setSeletorCombinadoAberto(false);
+  }
 
   useEffect(() => {
     if (semSessao || !enderecoAtual) return;
@@ -525,7 +597,10 @@ export default function CaixaDeEmail() {
     const id = idDaMensagem(msg);
     if (!id) return;
     const prefixo = msg.origem === "corvia" ? "/email" : `/email/externas/${msg.origem}`;
-    setContaEmailId(msg.origem);
+    selecionarConta(msg.origem);
+    // Só sai do modo combinado nesta sessão da tela — a combinação salva
+    // continua guardada e volta a valer da próxima vez que "Combinar
+    // contas" for aberto ou a página for recarregada.
     setContasCombinadas(null);
     setErro(null);
     setModo("caixa");
@@ -743,24 +818,55 @@ export default function CaixaDeEmail() {
           <LogoCorviaMail tamanho="compacto" />
           <div>
             <p className="eyebrow">Central de comunicação profissional</p>
+            {/* 09/08/2026: indicador de proveniência sempre visível, texto
+              * por extenso — antes só um ícone pequeno ao lado do seletor
+              * identificava a empresa, e o Rafael reportou não conseguir
+              * dizer de qual caixa os e-mails na tela eram. */}
+            <p className="mail-conta-ativa__proveniencia">
+              {contasCombinadas ? (
+                <>Mostrando <strong>{contasCombinadas.size} contas combinadas</strong></>
+              ) : (
+                <>
+                  Mostrando{" "}
+                  {contaSelecionada && contaSelecionada.provider !== "corvia" && <LogoProvedor provedor={contaSelecionada.provider} />}
+                  <strong>{NOME_PROVEDOR[contaSelecionada?.provider ?? "corvia"]}</strong>
+                  {" — "}{contaSelecionada?.email_address ?? enderecoAtual}
+                  {contaSelecionada?.padrao && <span className="mail-conta-ativa__selo">conta padrão</span>}
+                </>
+              )}
+            </p>
             <div className="mail-conta-ativa">
               {contaExterna && contaExterna.provider !== "corvia" && <LogoProvedor provedor={contaExterna.provider} />}
-              <select value={contaEmailId} onChange={(event) => setContaEmailId(event.target.value)} aria-label="Conta de e-mail ativa">
-                {contasEmail.map((conta) => <option key={conta.id} value={conta.id}>{conta.email_address}{conta.padrao ? " (padrão)" : ""}</option>)}
+              <select value={contaEmailId} onChange={(event) => selecionarConta(event.target.value)} aria-label="Conta de e-mail ativa">
+                {contasEmail.map((conta) => <option key={conta.id} value={conta.id}>{NOME_PROVEDOR[conta.provider]} — {conta.email_address}{conta.padrao ? " (padrão)" : ""}</option>)}
               </select>
-              {contaSelecionada && contaSelecionada.send_mail && !contaSelecionada.padrao && (
-                <button
-                  type="button"
-                  className="mail-conta-ativa__definir-padrao"
-                  title="Usar esta conta por padrão ao escrever uma mensagem nova"
-                  onClick={() => definirContaPadrao(contaSelecionada.id).catch((e) => setErro(mensagemDeErro(e, "Não foi possível definir a conta padrão.")))}
-                >
-                  Definir como padrão
-                </button>
+              {/* 09/08/2026: antes só aparecia quando a conta selecionada
+                * podia virar padrão e ainda não era — o Rafael relatou não
+                * achar "opção de definir a conta principal padrão". Agora o
+                * estado (é ou não é a padrão) fica sempre visível, com a
+                * ação sempre alcançável quando fizer sentido. */}
+              {contaSelecionada && (
+                contaSelecionada.padrao ? (
+                  <span className="mail-conta-ativa__padrao-atual" title="Usada ao escrever uma mensagem nova">
+                    ★ Conta padrão
+                  </span>
+                ) : contaSelecionada.send_mail ? (
+                  <button
+                    type="button"
+                    className="mail-conta-ativa__definir-padrao"
+                    title="Usar esta conta por padrão ao escrever uma mensagem nova"
+                    onClick={() => definirContaPadrao(contaSelecionada.id).catch((e) => setErro(mensagemDeErro(e, "Não foi possível definir a conta padrão.")))}
+                  >
+                    ☆ Definir como padrão
+                  </button>
+                ) : null
               )}
               <div style={{ position: "relative" }}>
                 <button type="button" className="botao botao--secundario"
-                        onClick={() => setSeletorCombinadoAberto((v) => !v)}
+                        onClick={() => {
+                          setSelecaoPendente(new Set(contasCombinadas ?? []));
+                          setSeletorCombinadoAberto((v) => !v);
+                        }}
                         aria-expanded={seletorCombinadoAberto} aria-haspopup="true">
                   {contasCombinadas ? `Combinando ${contasCombinadas.size} contas` : "Combinar contas"}
                 </button>
@@ -768,32 +874,37 @@ export default function CaixaDeEmail() {
                   <div role="menu" className="mail-combinar-menu" style={{
                     position: "absolute", top: "calc(100% + 4px)", right: 0, zIndex: 30,
                     background: "var(--superficie)", border: "1px solid var(--borda)", borderRadius: "var(--r)",
-                    padding: "0.5rem 0.7rem", minWidth: 240, boxShadow: "var(--sombra)",
+                    padding: "0.5rem 0.7rem", minWidth: 260, boxShadow: "var(--sombra)",
                   }}>
                     <p className="eyebrow" style={{ margin: "0 0 0.3rem" }}>
-                      Ver mensagens de uma, várias ou todas as contas juntas
+                      Marque as contas e confirme para ver todas juntas
                     </p>
                     {contasEmail.filter((c) => c.read_mail).map((conta) => (
                       <label key={conta.id} style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.84rem", padding: "0.2rem 0" }}>
                         <input type="checkbox"
-                               checked={contasCombinadas?.has(conta.id) ?? false}
+                               checked={selecaoPendente?.has(conta.id) ?? false}
                                onChange={(e) => {
-                                 const atual = new Set(contasCombinadas ?? []);
+                                 const atual = new Set(selecaoPendente ?? []);
                                  if (e.target.checked) atual.add(conta.id); else atual.delete(conta.id);
-                                 setContasCombinadas(atual.size > 0 ? atual : null);
+                                 setSelecaoPendente(atual);
                                }} />
                         {conta.provider !== "corvia" && <LogoProvedor provedor={conta.provider} />}
-                        {conta.email_address}
+                        {NOME_PROVEDOR[conta.provider]} — {conta.email_address}
                       </label>
                     ))}
-                    <div style={{ display: "flex", gap: 6, marginTop: "0.4rem" }}>
-                      <button type="button" className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
-                              onClick={() => setContasCombinadas(new Set(contasEmail.filter((c) => c.read_mail).map((c) => c.id)))}>
-                        Todas
+                    <div style={{ display: "flex", gap: 6, marginTop: "0.5rem", flexWrap: "wrap" }}>
+                      <button type="button" className="botao" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                              disabled={!selecaoPendente || selecaoPendente.size === 0}
+                              onClick={() => aplicarCombinacao(selecaoPendente ?? new Set())}>
+                        Combinar selecionadas{selecaoPendente && selecaoPendente.size > 0 ? ` (${selecaoPendente.size})` : ""}
                       </button>
                       <button type="button" className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
-                              onClick={() => setContasCombinadas(null)}>
-                        Nenhuma (voltar ao normal)
+                              onClick={() => setSelecaoPendente(new Set(contasEmail.filter((c) => c.read_mail).map((c) => c.id)))}>
+                        Marcar todas
+                      </button>
+                      <button type="button" className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                              onClick={() => aplicarCombinacao(new Set())}>
+                        Voltar ao normal
                       </button>
                     </div>
                   </div>
@@ -968,7 +1079,10 @@ export default function CaixaDeEmail() {
           <section className="mail-lista" aria-label="Lista de mensagens">
             <div className="mail-lista__topo">
               <div>
-                <p className="eyebrow">{pastaSelecionada ? nomeDaPasta(pastaSelecionada) : "Mensagens"}</p>
+                <p className="eyebrow">
+                  {pastaSelecionada ? nomeDaPasta(pastaSelecionada) : "Mensagens"}
+                  {" · "}{NOME_PROVEDOR[contaSelecionada?.provider ?? "corvia"]}
+                </p>
                 <h2>{mensagens?.length ?? 0} mensagens</h2>
               </div>
               {atualizando && <span className="mail-lista__sincronizando">Sincronizando…</span>}
@@ -1102,7 +1216,7 @@ export default function CaixaDeEmail() {
                 </div>
 
                 <header className="mail-leitura__cabecalho">
-                  <p className="eyebrow">Mensagem</p>
+                  <p className="eyebrow">Mensagem · {NOME_PROVEDOR[contaSelecionada?.provider ?? "corvia"]}</p>
                   <h2>{mensagemAberta.subject ?? "(sem assunto)"}</h2>
                   <div className="mail-leitura__remetente">
                     <span className="mail-avatar mail-avatar--grande">{iniciais(mensagemAberta)}</span>
