@@ -1,10 +1,6 @@
 # Deploy de produção: HTTPS automático (Caddy + Let's Encrypt) no seu domínio,
 # frontend compilado como arquivos estáticos (sem servidor de desenvolvimento),
 # banco e cache não expostos à internet.
-#
-#   cp .env.example .env    # preencha DOMAIN, senhas e OPENAI_API_KEY
-#   ./deploy.sh             # fluxo certificado de backup, corpus e readiness
-#
 services:
   db:
     image: pgvector/pgvector:pg16
@@ -39,8 +35,6 @@ services:
     env_file: .env
     environment:
       ENVIRONMENT: production
-      # Injetado por deploy.sh a partir de git rev-parse HEAD. Permite comprovar
-      # externamente qual revisão está atendendo em /api/version.
       DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
     depends_on:
       db:
@@ -56,32 +50,17 @@ services:
       - ./medicamentos:/medicamentos:ro
       - ./checklists:/checklists:ro
       - ./trilhas:/trilhas:ro
-      # Material educativo do paciente (Tarefa 12). Somente-leitura como as
-      # demais frentes de conteúdo: o backend lê, nunca escreve.
       - ./material-paciente:/material-paciente:ro
       - ./emergencia:/emergencia:ro
       - ./casos-clinicos:/casos-clinicos:ro
       - ./doencas:/doencas:ro
       - ./triagem-sintomas:/triagem-sintomas:ro
-      # Listas da Portaria 344/98 e regras de adendo (Tarefa 27).
       - ./controlados:/controlados:ro
       - ./backend/migrations/versions:/app/migrations/versions
-      # Único volume gravável pelo backend: arquivos enviados pelo usuário.
       - userfiles:/uploads
-      # Exames de paciente, cifrados em repouso e servidos por rota autenticada.
       - examefiles:/exames-pacientes
-      # PDFs de receita/documento emitidos, cifrados em repouso.
       - documentofiles:/documentos-emitidos
-      # Certificado A1 do médico (Trabalho 7), cifrado em repouso — nunca
-      # montado no Caddy, mesma razão dos dois volumes acima.
       - certificadosfiles:/certificados-a1
-      # Selfie e documentos pessoais/profissionais do KYC (Trabalho 11),
-      # cifrados em repouso — nunca montado no Caddy, mesma razão dos
-      # volumes acima. Faltava neste arquivo (só existia `settings.kyc_dir`
-      # apontando para o caminho, sem volume nomeado por trás — os arquivos
-      # estariam indo para o filesystem efêmero do container e se perderiam
-      # no próximo rebuild). Corrigido em 06/08/2026, junto do backup
-      # automático que passa a cobrir este volume.
       - kycfiles:/kyc-documentos
       - cursofiles:/materiais-curso
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
@@ -99,6 +78,7 @@ services:
       dockerfile: Dockerfile.prod
       args:
         VITE_API_URL: /api
+        VITE_DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
     volumes:
       - sitefiles:/site
     restart: "no"
