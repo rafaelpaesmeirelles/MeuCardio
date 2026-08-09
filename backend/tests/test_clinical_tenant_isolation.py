@@ -226,3 +226,126 @@ def test_round_rejects_cross_tenant_access_even_for_admin(
         ),
     )
     assert all(response.status_code == 404 for response in attempts)
+
+
+# ---------------------------------------------------------------------------
+# 🚨 Achados da auditoria AUTH/SESSION (issue #52, subfase 1): a MESMA tabela
+# Patient, com a MESMA regra de posse (`created_by`), é estritamente isolada
+# em round.py (inclusive contra admin, ver teste acima) mas tem um bypass
+# `... and user.role != "admin"` em pelo menos três outras rotas que também
+# leem/escrevem dado ligado a Patient: timeline.py, prescriptions.py e
+# appointments.py. Ou seja: o paciente de um médico, supostamente isolado até
+# de outro admin, continua acessível a qualquer conta admin por essas rotas
+# alternativas. Os testes abaixo documentam o comportamento ATUAL (o bypass
+# funciona) para não regredir silenciosamente e para servir de cobertura a
+# uma correção futura (alinhar as três rotas ao padrão de round.py/
+# documents.py/receituario.py, que nunca abrem exceção para admin).
+# ---------------------------------------------------------------------------
+
+
+def test_timeline_route_lets_any_admin_read_another_doctors_patient(
+    client, criar_usuario, db
+):
+    """app/api/timeline.py:15 — `if not p or (p.created_by != user.id and
+    user.role != "admin")` — o admin de outra conta lê a timeline clínica de
+    paciente que não é dele, mesmo a rota de posse direta (round.py) negando
+    para o mesmo par paciente/intruso.
+
+    Paciente criado direto via ORM (não pela rota) — o dono é `medico`
+    deliberadamente, para o teste ser o caso real (médico comum, não outro
+    admin), e `medico` exige assinatura ativa em `/api/round/patients`
+    (`assinante_ativo`), que este teste não está cobrindo."""
+    owner, _ = criar_usuario(email="dono.timeline@teste.local", role="medico")
+    _, intruso_token = criar_usuario(email="intruso.timeline@teste.local", role="admin")
+
+    patient = Patient(record_number="TIMELINE-ISOLAMENTO-1", initials="TI", created_by=owner.id)
+    db.add(patient)
+    db.commit()
+    db.refresh(patient)
+    patient_id = patient.id
+
+    # A rota de posse direta nega corretamente, mesmo para admin.
+    round_direto = client.get(
+        f"/api/round/patients/{patient_id}", headers=_headers(intruso_token)
+    )
+    assert round_direto.status_code == 404
+
+    # A rota de timeline, para o MESMO paciente, deixa passar — é o gap.
+    timeline = client.get(
+        f"/api/timeline/patient/{patient_id}", headers=_headers(intruso_token)
+    )
+    assert timeline.status_code == 200, (
+        "Se este assert falhar, o bypass de admin foi removido de "
+        "app/api/timeline.py — troque para esperar 404 e atualize o "
+        "relatório da auditoria."
+    )
+
+
+def test_prescriptions_route_lets_any_admin_read_and_write_another_doctors_patient(
+    client, criar_usuario, db
+):
+    """app/api/prescriptions.py:37 (`_dono_do_paciente`) — mesmo bypass:
+    admin de outra conta consegue LISTAR e CRIAR prescrição de beira de
+    leito vinculada a paciente de outro médico. Paciente via ORM, mesmo
+    motivo do teste de timeline acima (dono `medico` sem assinatura)."""
+    owner, _ = criar_usuario(email="dono.prescricao@teste.local", role="medico")
+    _, intruso_token = criar_usuario(email="intruso.prescricao@teste.local", role="admin")
+
+    patient = Patient(record_number="PRESCRICAO-ISOLAMENTO-1", initials="PI", created_by=owner.id)
+    db.add(patient)
+    db.commit()
+    db.refresh(patient)
+    patient_id = patient.id
+
+    listar = client.get(
+        f"/api/prescriptions/patient/{patient_id}", headers=_headers(intruso_token)
+    )
+    assert listar.status_code == 200, (
+        "Se este assert falhar, o bypass de admin foi removido de "
+        "app/api/prescriptions.py (_dono_do_paciente) — troque para esperar "
+        "404 e atualize o relatório da auditoria."
+    )
+
+    criar = client.post(
+        "/api/prescriptions",
+        headers=_headers(intruso_token),
+        json={
+            "patient_id": patient_id,
+            "items": [{"drug_name": "Losartana 50mg", "posology": "1 cp/dia"}],
+        },
+    )
+    assert criar.status_code == 201, (
+        "Se este assert falhar (esperado 404), o bypass foi corrigido — "
+        "atualize o relatório da auditoria."
+    )
+
+
+def test_appointments_route_lets_any_admin_link_appointment_to_another_doctors_patient(
+    client, criar_usuario, db
+):
+    """app/api/appointments.py:62 — mesmo bypass ao vincular um novo
+    agendamento a `patient_id` de outro médico. Paciente via ORM, mesmo
+    motivo dos dois testes acima (dono `medico` sem assinatura)."""
+    owner, _ = criar_usuario(email="dono.agenda@teste.local", role="medico")
+    _, intruso_token = criar_usuario(email="intruso.agenda@teste.local", role="admin")
+
+    patient = Patient(record_number="AGENDA-ISOLAMENTO-1", initials="AI", created_by=owner.id)
+    db.add(patient)
+    db.commit()
+    db.refresh(patient)
+    patient_id = patient.id
+
+    criar = client.post(
+        "/api/appointments",
+        headers=_headers(intruso_token),
+        json={
+            "patient_id": patient_id,
+            "scheduled_at": "2026-09-01T10:00:00Z",
+            "appointment_type": "consulta",
+        },
+    )
+    assert criar.status_code == 201, (
+        "Se este assert falhar (esperado 404), o bypass de admin foi "
+        "removido de app/api/appointments.py — atualize o relatório da "
+        "auditoria."
+    )

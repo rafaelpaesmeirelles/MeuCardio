@@ -20,7 +20,11 @@ def test_browser_login_sets_httponly_lax_cookie_and_authenticates_without_bearer
 
     response = _login_cookie(client, user.email)
     assert response.status_code == 200, response.text
-    assert response.json() == {"authenticated": True}
+    # `persistent` (09/08/2026, "permanecer conectado") passou a vir na
+    # resposta depois que este teste foi escrito — assert por chave em vez
+    # de igualdade estrita de dict, para não travar a cada campo novo que a
+    # rota passe a devolver.
+    assert response.json()["authenticated"] is True
 
     set_cookie = response.headers["set-cookie"].lower()
     assert f"{AUTH_COOKIE_NAME}=" in set_cookie
