@@ -1,7 +1,7 @@
 """Gateway de e-mail externo para a caixa unificada do CorvIA Mail.
 
-As mensagens permanecem no Google/Microsoft. O CorvIA faz proxy autenticado
-pelas APIs oficiais e não persiste corpo ou anexos no banco local.
+As mensagens permanecem no provedor. O CorvIA faz proxy autenticado pelas
+APIs oficiais e não persiste corpo ou anexos no banco local.
 """
 
 from __future__ import annotations
@@ -32,20 +32,42 @@ _GRAPH = "https://graph.microsoft.com/v1.0/me"
 
 
 def _request(db: Session, integration: CalendarIntegration, method: str, url: str, **kwargs: Any) -> httpx.Response:
+    """Executa a chamada externa e tenta uma renovação OAuth forçada em 401.
+
+    Access tokens podem ser invalidados antes do ``expires_at`` local. Nessa
+    situação uma reconexão manual era pedida cedo demais; agora o refresh token
+    é tentado uma vez antes de considerar a sessão realmente perdida.
+    """
     try:
         credentials = ensure_fresh_credentials(db, integration)
     except ConnectorError as exc:
         raise ExternalMailError(str(exc), status_code=exc.status_code) from exc
-    headers = dict(kwargs.pop("headers", {}))
-    headers["Authorization"] = f"Bearer {credentials['access_token']}"
-    try:
-        response = httpx.request(method, url, headers=headers, timeout=30.0, **kwargs)
-    except httpx.HTTPError as exc:
-        raise ExternalMailError("O provedor de e-mail não respondeu. Tente novamente.") from exc
+
+    base_headers = dict(kwargs.pop("headers", {}))
+
+    def enviar(token: str) -> httpx.Response:
+        headers = {**base_headers, "Authorization": f"Bearer {token}"}
+        try:
+            return httpx.request(method, url, headers=headers, timeout=30.0, **kwargs)
+        except httpx.HTTPError as exc:
+            raise ExternalMailError("O provedor de e-mail não respondeu. Tente novamente.") from exc
+
+    response = enviar(credentials["access_token"])
     if response.status_code == 401:
-        raise ExternalMailError("A autorização da conta expirou. Reconecte-a na Agenda.", status_code=409)
+        try:
+            refreshed = ensure_fresh_credentials(db, integration, force=True)
+        except ConnectorError as exc:
+            raise ExternalMailError(str(exc), status_code=exc.status_code) from exc
+        response = enviar(refreshed["access_token"])
+
+    if response.status_code == 401:
+        raise ExternalMailError("A autorização da conta foi recusada. Reconecte-a na Agenda.", status_code=409)
     if response.status_code == 403:
         raise ExternalMailError("A conta não autorizou acesso ao e-mail. Reconecte-a e aceite as permissões solicitadas.", status_code=403)
+    if response.status_code == 429:
+        raise ExternalMailError("O provedor limitou temporariamente as solicitações. Tente novamente em instantes.", status_code=503)
+    if response.status_code >= 500:
+        raise ExternalMailError("O provedor de e-mail está temporariamente indisponível.", status_code=503)
     if response.status_code >= 400:
         raise ExternalMailError(f"O provedor recusou a operação (HTTP {response.status_code}).")
     return response
