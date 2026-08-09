@@ -5,7 +5,20 @@ import { Carregando, Vazio } from "../components/Estado";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 import LogoProvedor from "../components/LogoProvedor";
 import { CHAVE_PENDING_COMPOSE } from "../components/OfertaEnvioEmailPaciente";
+import { useAuth } from "../lib/auth";
 import "../styles/corvia-mail.css";
+
+// 09/08/2026: redesenho visual pedido pelo Rafael a partir de um modelo de
+// referência (caixa "profissional" com trilha de contas à esquerda, busca
+// em destaque, avatar do usuário). Implementado só o que mapeia pra
+// funcionalidade REAL já existente (nunca um botão que não faz nada) —
+// ver a nota no fim do render sobre o que ficou de fora e por quê.
+const CORES_AVATAR = ["#167d92", "#082637", "#993c1d", "#3b6d11", "#712b13", "#0c447c", "#854f0b"];
+function corAvatar(texto: string): string {
+  let hash = 0;
+  for (let i = 0; i < texto.length; i++) hash = (hash * 31 + texto.charCodeAt(i)) >>> 0;
+  return CORES_AVATAR[hash % CORES_AVATAR.length];
+}
 
 type Pasta = {
   folderId?: string;
@@ -300,6 +313,7 @@ function RessalvaClinica() {
 
 export default function CaixaDeEmail() {
   const navigate = useNavigate();
+  const { usuario } = useAuth();
   const [semSessao, setSemSessao] = useState(!tokenEmail.get());
   const [enderecoAtual, setEnderecoAtual] = useState<string | null>(null);
   const [contasEmail, setContasEmail] = useState<ContaEmail[]>([]);
@@ -915,10 +929,29 @@ export default function CaixaDeEmail() {
         </div>
         <div className="mail-topo__acoes">
           <button className="botao" onClick={() => novaMensagem()}>+ Escrever</button>
-          <button className="botao botao--secundario" onClick={() => void carregarMensagens()} disabled={atualizando}>
-            {atualizando ? "Atualizando…" : "Atualizar"}
+          <button className="botao botao--secundario" onClick={() => void carregarMensagens()} disabled={atualizando} title="Atualizar">
+            {atualizando ? "⟳ Atualizando…" : "⟳ Atualizar"}
           </button>
-          <button className="mail-link" onClick={sair}>Sair</button>
+          {/* 09/08/2026: identidade do médico logado, sempre visível — pedido
+            * do Rafael a partir de um modelo de referência (nome/e-mail e
+            * avatar no canto do cabeçalho). Dado real (`useAuth().usuario`),
+            * a mesma foto/nome já usados em Minha Conta — nunca inventado. */}
+          {usuario && (
+            <div className="mail-topo__usuario">
+              {usuario.photo_url ? (
+                <img src={usuario.photo_url} alt="" className="mail-avatar mail-avatar--usuario" />
+              ) : (
+                <span className="mail-avatar mail-avatar--usuario" style={{ background: corAvatar(usuario.full_name || usuario.email) }}>
+                  {(usuario.full_name || usuario.email).slice(0, 1).toUpperCase()}
+                </span>
+              )}
+              <span className="mail-topo__usuario-texto">
+                <strong>{usuario.full_name}</strong>
+                <small>{usuario.email}</small>
+              </span>
+            </div>
+          )}
+          <button className="mail-link" onClick={sair} title="Sair">⏻</button>
         </div>
       </header>
 
@@ -977,7 +1010,7 @@ export default function CaixaDeEmail() {
               ) : (
                 (mensagens ?? []).filter(ehNaoLida).slice(0, 5).map((m) => (
                   <button className="mail-prioridade" key={idDaMensagem(m)} onClick={() => void abrirMensagem(m)}>
-                    <span className="mail-avatar">{iniciais(m)}</span>
+                    <span className="mail-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(m)}</span>
                     <span><strong>{m.subject ?? "(sem assunto)"}</strong><small>{remetente(m)}</small></span>
                     <time>{dataMensagem(m)}</time>
                   </button>
@@ -1012,7 +1045,43 @@ export default function CaixaDeEmail() {
             </section>
           </div>
         </section>
-      ) : contasCombinadas ? (
+      ) : (
+        <div className="mail-corpo">
+          {/* 09/08/2026: trilha de ícones das contas conectadas — mesma
+            * funcionalidade que já existia no seletor/menu acima (trocar de
+            * conta, combinar), só tornada visível de imediato. Cada ícone
+            * chama exatamente `selecionarConta`/`aplicarCombinacao`, sem
+            * nenhum comportamento novo. */}
+          <aside className="mail-contas-rail" aria-label="Contas conectadas">
+            {contasEmail.map((conta) => (
+              <button
+                key={conta.id}
+                type="button"
+                className={`mail-contas-rail__item ${!contasCombinadas && contaEmailId === conta.id ? "ativo" : ""}`}
+                title={`${NOME_PROVEDOR[conta.provider]} — ${conta.email_address}`}
+                onClick={() => selecionarConta(conta.id)}
+              >
+                {conta.provider === "corvia" ? (
+                  <span className="mail-contas-rail__icone">C</span>
+                ) : (
+                  <LogoProvedor provedor={conta.provider} />
+                )}
+              </button>
+            ))}
+            {contasEmail.filter((c) => c.read_mail).length > 1 && (
+              <button
+                type="button"
+                className={`mail-contas-rail__item mail-contas-rail__todas ${contasCombinadas ? "ativo" : ""}`}
+                title="Todas as caixas combinadas"
+                onClick={() => aplicarCombinacao(contasCombinadas
+                  ? new Set()
+                  : new Set(contasEmail.filter((c) => c.read_mail).map((c) => c.id)))}
+              >
+                <span className="mail-contas-rail__icone mail-contas-rail__icone--todas" aria-hidden="true">⊞</span>
+              </button>
+            )}
+          </aside>
+          {contasCombinadas ? (
         <section className="mail-workspace mail-workspace--combinada">
           <section className="mail-lista" aria-label="Mensagens combinadas" style={{ gridColumn: "1 / -1" }}>
             <div className="mail-lista__topo">
@@ -1032,7 +1101,7 @@ export default function CaixaDeEmail() {
               return (
                 <article className="mail-item" key={id}>
                   <button className="mail-item__abrir" onClick={() => void abrirMensagemCombinada(msg)}>
-                    <span className="mail-avatar">{iniciais(msg)}</span>
+                    <span className="mail-avatar" style={{ background: corAvatar(remetente(msg)) }}>{iniciais(msg)}</span>
                     <span className="mail-item__conteudo">
                       <span className="mail-item__linha">
                         <strong>{remetente(msg)}</strong><time>{dataMensagem(msg)}</time>
@@ -1150,15 +1219,28 @@ export default function CaixaDeEmail() {
                       <input type="checkbox" checked={selecionadas.has(id)} onChange={() => alternarSelecao(id)} />
                     </label>
                     <button className="mail-item__abrir" onClick={() => void abrirMensagem(m)}>
-                      <span className="mail-avatar">{iniciais(m)}</span>
+                      <span className="mail-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(m)}</span>
                       <span className="mail-item__conteudo">
-                        <span className="mail-item__linha"><strong>{remetente(m)}</strong><time>{dataMensagem(m)}</time></span>
+                        <span className="mail-item__linha">
+                          <strong>{remetente(m)}</strong>
+                          <span style={{ display: "flex", alignItems: "center", gap: 4, flex: "0 0 auto" }}>
+                            {/* 09/08/2026: estrela clicável — chama exatamente `agir("sinalizar", …)`,
+                              * já usado pelo botão "Acompanhar" da leitura; é o mesmo dado, só como
+                              * ícone de favorito na lista, como no modelo de referência do Rafael. */}
+                            <button
+                              type="button"
+                              className={`mail-item__favorito ${estaEmAcompanhamento(m) ? "mail-item__favorito--ativo" : ""}`}
+                              title={estaEmAcompanhamento(m) ? "Remover de Acompanhar" : "Marcar para Acompanhar"}
+                              onClick={(e) => { e.stopPropagation(); void agir("sinalizar", [id], { sinalizador: estaEmAcompanhamento(m) ? "" : "followup" }); }}
+                            >
+                              {estaEmAcompanhamento(m) ? "★" : "☆"}
+                            </button>
+                            <time>{dataMensagem(m)}</time>
+                          </span>
+                        </span>
                         <span className="mail-item__assunto">{m.subject ?? "(sem assunto)"}</span>
                         <span className="mail-item__resumo">{m.summary ?? "Sem prévia disponível"}</span>
-                        <span className="mail-item__marcas">
-                          {temAnexo(m) && <small>▱ Anexo</small>}
-                          {estaEmAcompanhamento(m) && <small>⚑ Acompanhar</small>}
-                        </span>
+                        {temAnexo(m) && <span className="mail-item__marcas"><small>▱ Anexo</small></span>}
                       </span>
                     </button>
                   </article>
@@ -1198,7 +1280,11 @@ export default function CaixaDeEmail() {
                   <button onClick={() => responder("replyall")}>Responder a todos</button>
                   <button onClick={() => responder("forward")}>Encaminhar</button>
                   <button onClick={() => void agir("nao_lida", [idDaMensagem(mensagemAberta)])}>Marcar não lida</button>
-                  {!contaExterna && <button onClick={() => void agir("sinalizar", [idDaMensagem(mensagemAberta)], { sinalizador: "followup" })}>⚑ Acompanhar</button>}
+                  {!contaExterna && (
+                    <button onClick={() => void agir("sinalizar", [idDaMensagem(mensagemAberta)], { sinalizador: estaEmAcompanhamento(mensagemAberta) ? "" : "followup" })}>
+                      {estaEmAcompanhamento(mensagemAberta) ? "★ Acompanhando" : "☆ Acompanhar"}
+                    </button>
+                  )}
                   <select
                     aria-label="Mover mensagem"
                     defaultValue=""
@@ -1219,7 +1305,7 @@ export default function CaixaDeEmail() {
                   <p className="eyebrow">Mensagem · {NOME_PROVEDOR[contaSelecionada?.provider ?? "corvia"]}</p>
                   <h2>{mensagemAberta.subject ?? "(sem assunto)"}</h2>
                   <div className="mail-leitura__remetente">
-                    <span className="mail-avatar mail-avatar--grande">{iniciais(mensagemAberta)}</span>
+                    <span className="mail-avatar mail-avatar--grande" style={{ background: corAvatar(remetente(mensagemAberta)) }}>{iniciais(mensagemAberta)}</span>
                     <span><strong>{remetente(mensagemAberta)}</strong><small>Para: {mensagemAberta.toAddress ?? contaSelecionada?.email_address ?? enderecoAtual}</small></span>
                     <time>{dataMensagem(mensagemAberta, true)}</time>
                   </div>
@@ -1252,6 +1338,8 @@ export default function CaixaDeEmail() {
             )}
           </section>
         </section>
+          )}
+        </div>
       )}
 
       {compondo && (

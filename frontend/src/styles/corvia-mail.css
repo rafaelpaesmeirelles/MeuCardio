@@ -20,8 +20,18 @@
 .mail-topo__identidade .eyebrow { margin: 0 0 .1rem; }
 .mail-topo__identidade strong { color: var(--primaria); overflow-wrap: anywhere; }
 .mail-topo__acoes { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; justify-content: flex-end; }
-.mail-link { border: 0; color: var(--texto-secundario); background: transparent; cursor: pointer; padding: .5rem; }
+.mail-link { border: 0; color: var(--texto-secundario); background: transparent; cursor: pointer; padding: .5rem; font-size: 1.05rem; }
 .mail-link:hover { color: var(--alerta); }
+/* 09/08/2026: identidade do médico logado no cabeçalho, pedido a partir de
+ * um modelo de referência. */
+.mail-topo__usuario { display: flex; align-items: center; gap: .5rem; padding: .2rem .6rem .2rem .2rem; border-left: 1px solid var(--borda); margin-left: .2rem; }
+.mail-avatar--usuario { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; color: var(--branco); font-weight: 800; font-size: .8rem; }
+.mail-topo__usuario-texto { display: none; }
+@media (min-width: 900px) {
+  .mail-topo__usuario-texto { display: grid; line-height: 1.25; }
+  .mail-topo__usuario-texto strong { font-size: .8rem; color: var(--primaria); }
+  .mail-topo__usuario-texto small { font-size: .68rem; color: var(--texto-secundario); }
+}
 
 .mail-ressalva {
   border: 1px solid #c9dde5;
@@ -141,6 +151,20 @@
 .mail-painel-card--contatos{display:flex;flex-direction:column}.mail-painel-card--contatos>button{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:.55rem;padding:.5rem 0;text-align:left;background:transparent;border:0;border-top:1px solid var(--borda);cursor:pointer}.mail-painel-card--contatos>button>span:last-child{display:flex;min-width:0;flex-direction:column}.mail-painel-card--contatos>button strong{font-size:.78rem}.mail-painel-card--contatos>button small{overflow:hidden;color:var(--texto-secundario);font-size:.66rem;text-overflow:ellipsis;white-space:nowrap}.mail-contatos-vazio{display:flex;flex-direction:column;gap:.35rem;margin-top:.6rem;padding:.75rem;background:var(--superficie-suave);border-radius:10px;color:var(--texto-secundario);font-size:.72rem}.mail-contatos-vazio a{color:var(--acento);font-weight:800}
 
 /* Caixa ------------------------------------------------------------------ */
+/* 09/08/2026: trilha de ícones das contas conectadas — pedido do Rafael a
+ * partir de um modelo de referência de caixa "profissional". Mesma
+ * funcionalidade que já existia (trocar de conta, combinar contas), só
+ * tornada visível de imediato em vez de escondida num <select>/menu; ver
+ * `renderContasRail` em CaixaDeEmail.tsx. */
+.mail-corpo { display: flex; border: 1px solid var(--borda); border-radius: 9px; overflow: hidden; box-shadow: var(--sombra); background: var(--superficie); }
+.mail-corpo .mail-workspace { border: 0; border-radius: 0; box-shadow: none; flex: 1; min-width: 0; }
+.mail-contas-rail { display: flex; flex-direction: column; align-items: center; gap: .5rem; padding: .75rem .4rem; background: #eef2f4; border-right: 1px solid var(--borda); overflow-y: auto; }
+.mail-contas-rail__item { width: 42px; height: 42px; flex: 0 0 auto; border-radius: 50%; border: 2px solid transparent; background: transparent; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.mail-contas-rail__item.ativo { border-color: var(--acento); }
+.mail-contas-rail__icone { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--primaria); color: var(--branco); font-weight: 800; font-size: .9rem; }
+.mail-contas-rail__icone--todas { background: var(--acento); font-size: 1.2rem; }
+.mail-contas-rail .logo-provedor { width: 36px; height: 36px; box-shadow: none; }
+
 .mail-workspace {
   display: grid;
   /* 07/08/2026, pedido do Rafael: a coluna de mensagens era fixa demais
@@ -211,12 +235,17 @@
 .mail-lista__topo .eyebrow { margin: 0; }
 .mail-lista__topo h2 { font-size: 1rem; margin: .05rem 0 0; }
 .mail-lista__sincronizando { font-size: .7rem; color: var(--acento); }
-.mail-busca { position: relative; margin: .25rem .75rem .5rem; }
-.mail-busca > span { position: absolute; left: .65rem; top: .45rem; color: var(--texto-secundario); font-size: 1.1rem; }
-.mail-busca input { padding-left: 2rem; min-height: 38px; background: var(--fundo); }
-.mail-filtros { display: flex; gap: .25rem; overflow-x: auto; padding: 0 .75rem .55rem; }
-.mail-filtros button { flex: 0 0 auto; min-height: 30px; padding: .25rem .55rem; border: 1px solid var(--borda); border-radius: 15px; background: transparent; color: var(--texto-secundario); cursor: pointer; font-size: .73rem; }
-.mail-filtros button.ativo { color: var(--acento); background: var(--acento-tinta); border-color: var(--acento); }
+/* 09/08/2026: busca em pílula, como as três referências do Rafael
+ * (Gmail/Thunderbird/Yahoo). */
+.mail-busca { position: relative; margin: .3rem .75rem .55rem; }
+.mail-busca > span { position: absolute; left: .75rem; top: 50%; transform: translateY(-50%); color: var(--texto-secundario); font-size: 1.05rem; pointer-events: none; }
+.mail-busca input { padding-left: 2.15rem; min-height: 38px; background: #f1f4f6; border: 1px solid transparent; border-radius: 999px; }
+.mail-busca input:focus { background: var(--superficie); border-color: var(--acento); }
+/* Abas Todas/Não lidas/Favoritas — mesmo estado (`filtro`) de sempre, só
+ * com peso visual de aba em vez de chip discreto. */
+.mail-filtros { display: flex; gap: .3rem; overflow-x: auto; padding: 0 .75rem .55rem; }
+.mail-filtros button { flex: 0 0 auto; min-height: 28px; padding: .22rem .65rem; border: 1px solid var(--borda); border-radius: 15px; background: transparent; color: var(--texto-secundario); cursor: pointer; font-size: .71rem; font-weight: 600; }
+.mail-filtros button.ativo { color: var(--branco); background: var(--acento); border-color: var(--acento); font-weight: 700; }
 .mail-selecao { border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); padding: .35rem .75rem; }
 .mail-selecao label { display: flex; align-items: center; gap: .45rem; margin: 0; font-size: .72rem; color: var(--texto-secundario); }
 .mail-selecao input, .mail-item__check input { width: 16px; height: 16px; min-height: 0; accent-color: var(--acento); }
@@ -238,23 +267,32 @@
 .mail-lista__rolagem { flex: 1; overflow-y: auto; }
 .mail-estado { padding: 1rem; }
 
-.mail-item { position: relative; display: grid; grid-template-columns: 30px minmax(0, 1fr); border-bottom: 1px solid var(--borda); }
-.mail-item:hover { background: #f8fbfc; }
+/* 09/08/2026: linha redesenhada — antes tintava a linha inteira pra "não
+ * lida" e "ativa" quase da mesma cor; agora só a barra lateral/estrela
+ * mudam de estado, e a coluna de avatar entra colorida por remetente
+ * (`corAvatar()`, hash determinístico — puro efeito visual, não é dado). */
+.mail-item { position: relative; display: grid; grid-template-columns: 26px minmax(0, 1fr); border-bottom: 1px solid #eef2f4; }
+.mail-item:hover { background: #f7fafb; }
 .mail-item--ativo { background: var(--acento-tinta); box-shadow: inset 3px 0 var(--acento); }
-.mail-item--nao-lida { background: #f4f9fb; }
 .mail-item--nao-lida .mail-item__linha strong, .mail-item--nao-lida .mail-item__assunto { color: var(--primaria); font-weight: 800; }
-.mail-item__check { display: grid; place-items: start center; padding-top: .8rem; margin: 0; }
-.mail-item__abrir { border: 0; background: transparent; cursor: pointer; display: grid; grid-template-columns: auto minmax(0,1fr); gap: .55rem; text-align: left; padding: .65rem .65rem .65rem 0; min-width: 0; }
-.mail-avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--acento-tinta); color: var(--acento); font-family: var(--fonte-dados); font-size: .7rem; font-weight: 800; }
+.mail-item__check { display: grid; place-items: center; margin: 0; }
+.mail-item__favorito { border: 0; background: transparent; color: var(--borda); cursor: pointer; font-size: 1.05rem; padding: 0 .1rem; line-height: 1; }
+.mail-item__favorito--ativo { color: #c48a1a; }
+.mail-item__abrir { border: 0; background: transparent; cursor: pointer; display: grid; grid-template-columns: auto minmax(0,1fr); gap: .55rem; text-align: left; padding: .5rem .65rem .5rem .3rem; min-width: 0; }
+/* Fundo padrão é sólido (var(--primaria)) porque o texto agora é sempre
+ * branco — os avatares da lista recebem cor dinâmica por remetente via
+ * `style` (corAvatar()); os que não recebem (contatos, modelos) caem
+ * neste fallback, que continua legível. */
+.mail-avatar { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--primaria); color: var(--branco); font-family: var(--fonte-dados); font-size: .68rem; font-weight: 800; }
 .mail-avatar--grande { width: 42px; height: 42px; font-size: .8rem; }
-.mail-item__conteudo { display: grid; min-width: 0; }
+.mail-item__conteudo { display: grid; min-width: 0; align-content: center; gap: .1rem; }
 .mail-item__linha { display: flex; align-items: baseline; justify-content: space-between; gap: .45rem; min-width: 0; }
-.mail-item__linha strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .8rem; }
-.mail-item__linha time { color: var(--texto-secundario); font-size: .67rem; flex: 0 0 auto; }
-.mail-item__assunto { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .79rem; }
-.mail-item__resumo { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--texto-secundario); font-size: .72rem; }
-.mail-item__marcas { display: flex; align-items: center; gap: .35rem; margin-top: .15rem; }
-.mail-item__marcas small { color: var(--acento); background: var(--acento-tinta); padding: .05rem .3rem; border-radius: 3px; font-size: .62rem; }
+.mail-item__linha strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .81rem; font-weight: 700; }
+.mail-item__linha time { color: var(--texto-secundario); font-size: .66rem; flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+.mail-item__assunto { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .78rem; }
+.mail-item__resumo { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--texto-secundario); font-size: .71rem; }
+.mail-item__marcas { display: flex; align-items: center; gap: .35rem; margin-top: .1rem; }
+.mail-item__marcas small { color: var(--acento-escuro); background: var(--acento-tinta); padding: .05rem .3rem; border-radius: 3px; font-size: .61rem; font-weight: 700; }
 /* 07/08/2026: o ícone do provedor (`.logo-provedor`) nasce em 36px com
  * moldura/sombra — pensado pros botões grandes de "Conectar Google" etc.
  * Sem escopo próprio aqui, ele caía nesse tamanho padrão ao lado de texto
@@ -368,6 +406,8 @@
   .mail-metricas { grid-template-columns: 1fr 1fr; }
   .mail-dashboard__grade { grid-template-columns: 1fr; }
   .mail-painel-card--prioridades { grid-column: auto; }
+  .mail-corpo { flex-direction: column; }
+  .mail-contas-rail { flex-direction: row; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--borda); padding: .4rem; }
   .mail-workspace { display: flex; flex-direction: column; height: calc(100dvh - 250px); min-height: 560px; }
   .mail-resize-handle { display: none; }
   .mail-pastas { flex: 0 0 auto; display: flex; gap: .25rem; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--borda); padding: .4rem; }
