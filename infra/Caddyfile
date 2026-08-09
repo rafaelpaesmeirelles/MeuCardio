@@ -1,59 +1,46 @@
 # Corvia — domínio único.
-#
-# meucardio.med.br foi DESLIGADO, não redirecionado: a marca anterior está
-# registrada por outro titular, e manter o domínio no ar servindo ou
-# apontando para cá prolongaria o uso do nome. Decisão do Rafael, por risco
-# jurídico — não por questão técnica.
-#
-# Consequência assumida: link antigo, favorito e o app Android já instalado
-# deixam de resolver. Foi conferido antes de desligar que não havia
-# assinante pagante nem usuário além do administrador, e o app novo está
-# sendo gerado com o domínio novo.
 {$DOMAIN}, www.{$DOMAIN} {
 	encode gzip zstd
 
-	# API e documentação do backend
+	# API nunca é cacheada pelo proxy do site. A aplicação também usa
+	# `cache: no-store`/NetworkOnly para as rotas de dados dinâmicos.
 	handle /api/* {
+		header Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
 		reverse_proxy backend:8000
 	}
 
-	# Galeria de imagens — arquivo estático, servido direto (não passa pelo backend)
 	handle_path /galeria/* {
 		root * /galeria
 		file_server
 		header Cache-Control "public, max-age=2592000"
 	}
 
-	# Foto de perfil enviada pelo usuário. Volume somente-leitura aqui: quem
-	# grava é o backend. Cache curto porque a foto pode ser trocada — o nome do
-	# arquivo já muda a cada envio, mas o curto evita foto velha após remoção.
 	handle_path /fotos/* {
 		root * /uploads/fotos
 		file_server
 		header Cache-Control "public, max-age=300"
 	}
 
-	# Logo pessoal do médico (Tarefa 29), usado no cabeçalho de receita e
-	# documento além da logo da Corvia — mesmo padrão de /fotos acima.
 	handle_path /logos/* {
 		root * /uploads/logos
 		file_server
 		header Cache-Control "public, max-age=300"
 	}
 
-	# Arquivos com hash no nome (Vite): podem ser cacheados por muito tempo,
-	# porque qualquer mudança de conteúdo já vem com um nome de arquivo novo.
+	# Hash de conteúdo: é seguro manter imutável. Cada build gera URLs novas.
 	handle_path /assets/* {
 		root * /site/assets
 		file_server
 		header Cache-Control "public, max-age=31536000, immutable"
 	}
 
-	# PWA: arquivos estáticos, com fallback para index.html (rotas do React
-	# Router). Cache-Control "no-cache" força revalidação do shell da aplicação.
+	# Shell, sw.js, manifest, registerSW e rotas SPA: nunca ficam presos em
+	# cache HTTP antigo. A cada abertura/reload o navegador precisa revalidar.
 	handle {
 		root * /site
-		header Cache-Control "no-cache"
+		header Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+		header Pragma "no-cache"
+		header Expires "0"
 		try_files {path} /index.html
 		file_server
 	}
@@ -66,9 +53,6 @@
 		X-Permitted-Cross-Domain-Policies "none"
 		Referrer-Policy "strict-origin-when-cross-origin"
 		Permissions-Policy "camera=(), microphone=(), geolocation=(self), payment=(), usb=()"
-		# Scripts inline continuam bloqueados. Os únicos terceiros liberados são
-		# os endpoints necessários ao Google Maps; geolocalização segue limitada
-		# ao próprio CorvIA pela Permissions-Policy acima.
 		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googleapis.com https://*.gstatic.com https://*.google.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' wss: https://*.googleapis.com https://*.gstatic.com; worker-src 'self' blob:; manifest-src 'self'; upgrade-insecure-requests"
 	}
 }
