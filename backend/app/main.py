@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api import (
     admin, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
     calculators, chat, chat_session,
-    cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, evidence,
+    cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_session, evidence,
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
     service_orders, sessions, specialty_guides, studies, timeline, billing, guidelines, indicadores,
@@ -48,7 +48,7 @@ app.add_middleware(ObservabilityMiddleware)
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
     sessions.router, billing.router, admin.router, service_orders.router,
-    partner_courses.router, email_api.router, documentos_publicos.router, cmed.router,
+    partner_courses.router, email_api.router, email_session.router, documentos_publicos.router, cmed.router,
     agenda_integrada.oauth_callback_router,
 )
 
