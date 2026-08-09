@@ -13,18 +13,12 @@ from app.core.runtime import ambiente_atual
 from app.core.security import (
     AUTH_COOKIE_NAME,
     create_access_token,
-    gravar_cookie_sessao,
     limpar_cookie_sessao,
     verify_password,
 )
 from app.models.user import User
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
-
-# "Permanecer conectado" mantém a sessão por 30 dias neste dispositivo.
-# O cookie continua HttpOnly/Secure e qualquer troca de senha ou revogação de
-# sessões invalida o JWT pelo mesmo `sessions_valid_after` usado nas sessões
-# curtas — persistência não significa ignorar revogação.
 SESSAO_PERSISTENTE_MINUTOS = 30 * 24 * 60
 
 
@@ -53,16 +47,18 @@ def _autenticar(db: Session, email: str, password: str) -> User:
     return user
 
 
-def _gravar_cookie_persistente(response: Response, token: str) -> None:
-    response.set_cookie(
-        key=AUTH_COOKIE_NAME,
-        value=token,
-        max_age=SESSAO_PERSISTENTE_MINUTOS * 60,
-        httponly=True,
-        secure=ambiente_atual() == "production",
-        samesite="lax",
-        path="/",
-    )
+def _cookie_base(response: Response, token: str, *, max_age: int | None) -> None:
+    kwargs = {
+        "key": AUTH_COOKIE_NAME,
+        "value": token,
+        "httponly": True,
+        "secure": ambiente_atual() == "production",
+        "samesite": "lax",
+        "path": "/",
+    }
+    if max_age is not None:
+        kwargs["max_age"] = max_age
+    response.set_cookie(**kwargs)
 
 
 @router.post("/sessao")
@@ -79,14 +75,15 @@ def criar_sessao_navegador(
             scope="app",
             expires_minutes=SESSAO_PERSISTENTE_MINUTOS,
         )
-        _gravar_cookie_persistente(response, token)
+        _cookie_base(response, token, max_age=SESSAO_PERSISTENTE_MINUTOS * 60)
     else:
-        gravar_cookie_sessao(response, create_access_token(user.email, scope="app"))
+        # Cookie de sessão: sem Expires/Max-Age. O JWT continua tendo seu prazo
+        # normal de segurança, mas fechar o navegador encerra a persistência.
+        _cookie_base(response, create_access_token(user.email, scope="app"), max_age=None)
     return {"authenticated": True, "persistent": permanecer_conectado}
 
 
 @router.post("/sair")
 def sair(response: Response) -> dict[str, bool]:
-    """Apaga o cookie mesmo quando o JWT já expirou ou foi revogado."""
     limpar_cookie_sessao(response)
     return {"authenticated": False}
