@@ -1,27 +1,29 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { api, type Usuario } from "./api";
 
+const BASE = import.meta.env.VITE_API_URL ?? "/api";
+
 type Estado = {
   usuario: Usuario | null;
   carregando: boolean;
-  entrar: (email: string, senha: string) => Promise<void>;
+  entrar: (email: string, senha: string, permanecerConectado?: boolean) => Promise<void>;
   sair: () => Promise<void>;
   recarregar: () => void;
 };
 
 const Ctx = createContext<Estado | null>(null);
 
+async function mensagemLogin(res: Response): Promise<string> {
+  const body = await res.json().catch(() => null);
+  const detail = body?.detail;
+  return typeof detail === "string" && detail.trim() ? detail : "E-mail ou senha incorretos.";
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [usuario, setUsuario] = useState<Usuario | null>(null);
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    // O cookie é HttpOnly: o cliente não tenta "ver" se existe. A fonte da
-    // verdade é sempre /auth/me, que responde 200 ou 401. `silencioso401`
-    // é essencial aqui: esta chamada roda ao abrir QUALQUER página, inclusive
-    // as públicas (/solicitar-acesso, /produto, /corvia-mail...), e 401 é o
-    // resultado normal para visitante anônimo — não uma sessão expirada que
-    // deva expulsar o usuário de volta para /entrar.
     api
       .get<Usuario>("/auth/me", { silencioso401: true })
       .then(setUsuario)
@@ -29,17 +31,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       .finally(() => setCarregando(false));
   }, []);
 
-  async function entrar(email: string, senha: string) {
-    await api.login(email, senha);
-    // Navegação completa (não `setUsuario` + troca de rota via React
-    // Router) — pedido do Rafael, 07/08/2026: todo novo login precisa
-    // garantir bundle e conteúdo atuais, e a forma mais simples e sem
-    // custo de UX de garantir isso é uma recarga real de página logo
-    // aqui, num momento em que o usuário já espera uma transição de tela.
-    // O cookie de sessão (HttpOnly) já foi gravado por `api.login()`, então
-    // a próxima carga de `/` autentica normalmente via `/auth/me` no
-    // `AuthProvider` acima.
-    window.location.href = "/";
+  async function entrar(email: string, senha: string, permanecerConectado = true) {
+    const form = new URLSearchParams({
+      username: email,
+      password: senha,
+      permanecer_conectado: String(permanecerConectado),
+    });
+    const res = await fetch(`${BASE}/auth/sessao`, {
+      method: "POST",
+      credentials: "include",
+      cache: "no-store",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: form,
+    });
+    if (!res.ok) throw new Error(await mensagemLogin(res));
+
+    // Login é um ponto seguro para uma recarga completa. O parâmetro único
+    // evita reaproveitamento do documento HTML por caches intermediários; o
+    // Caddy e o service worker também revalidam o shell.
+    window.location.replace(`/?login=${Date.now()}`);
   }
 
   async function sair() {
@@ -47,8 +57,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUsuario(null);
   }
 
-  // Usada depois de editar o perfil em /minha-conta, pra que o nome no
-  // cabeçalho reflita a alteração sem exigir novo login.
   function recarregar() {
     api.get<Usuario>("/auth/me").then(setUsuario).catch(() => setUsuario(null));
   }
