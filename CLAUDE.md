@@ -1,6 +1,91 @@
 # Corvia — contexto e instruções permanentes
 
-> ## ✅ SEGUNDA RODADA DE AUDITORIA, 09/08/2026 — 20 documentos novos publicados (2 meus + 18 do Grupo B), 7 duplicados corrigidos
+> ## ✅ CONCLUÍDO E NO AR, 09/08/2026: bug definitivo de reconexão OAuth (SameSite) + combinar contas/conta padrão sem persistir + logo da Apple errado
+> Relato do Rafael, com bastante frustração (**"ja esta com esse problema a um tempao... tu ja
+> disse que resolveu varias vezes... corrija definitivamente o erro"**): opção de combinar contas
+> sem opção de confirmar a seleção; sem opção visível de definir conta principal padrão; caixa não
+> diz de qual empresa são os e-mails na tela; configuração de e-mail padrão e combinação de contas
+> não salvam, "toda vez tem que selecionar de novo"; contas do Google desconectadas e, ao pedir
+> para reconectar e aceitar todas as permissões, **volta pra tela de login** em vez de reconectar.
+>
+> **Causa raiz real do bug de reconexão, achada por leitura de código, não suposição — e é
+> diferente de qualquer coisa corrigida antes nesta frente:** o cookie de sessão
+> (`corvia_session`) nascia com **`SameSite=Strict`**. O navegador retém cookies `Strict` em
+> **qualquer navegação de nível superior cujo redirecionamento se originou de outro site** —
+> inclusive o retorno do consentimento OAuth do Google/Microsoft, mesmo a URL final sendo do
+> próprio `corvia.med.br`. Sequência real, confirmada lendo `_oauth_callback` em
+> `agenda_integrada.py` (que **não depende do cookie** — resolve `owner_id` pelo `state` já salvo
+> antes do redirect para o provedor, então o backend grava a conta corretamente **mesmo com o
+> cookie ausente**): Google → nosso callback → `RedirectResponse` para `/agenda?conta_conectada=…`
+> → o navegador chega em `/agenda` sem o cookie (retido pelo `Strict`) → `AuthProvider` chama
+> `GET /auth/me`, recebe 401, e o interceptor genérico de 401 (`lib/api.ts`) redireciona para
+> `/entrar` **antes do médico ver o resultado** — exatamente o "voltou pra tela de login" relatado.
+> **`SameSite=Lax`** é o padrão da indústria pra este cenário (Django/Rails usam Lax por padrão):
+> continua enviando o cookie em navegação de nível superior GET (cobre o retorno do OAuth), e
+> continua retendo em POST/subrecurso cross-site (a proteção prática contra CSRF é preservada).
+> Corrigido em `gravar_cookie_sessao()`/`limpar_cookie_sessao()`, `backend/app/core/security.py`.
+>
+> **Confirmado que a mecânica de manter a conta sempre conectada já existia e está correta, e vai
+> voltar a funcionar assim que o Google for reconectado com o fix no ar** — `infra/
+> agenda_sync_cron.sh`, cron a cada 15 minutos, chama `ensure_fresh_credentials()` pra toda
+> integração `enabled=True`/`status='connected'`, renovando o access token pelo refresh token
+> sempre que está a menos de 90s de expirar. **Provado funcionando ao vivo, no log de produção,
+> pra Microsoft** (`rafaelpaesmeirelles@hotmail.com`, sincronizando com sucesso a cada 15 min).
+> **Conferido direto no banco**: as duas contas Google (`rafaelpaesmeirelles@gmail.com`,
+> `meirellesemaluf@gmail.com`) estão `enabled=False, status=disconnected` — a assinatura exata de
+> um `disconnect_integration()` explícito, não de falha de refresh (que deixaria
+> `status='reauth_required'` com `last_error_code` preenchido). Ou seja: a conta foi desconectada
+> em algum momento e a tentativa de reconectar nunca "colou" por causa do bug acima. **Não é
+> reconectado sozinho por este fix** — o Rafael precisa clicar em conectar de novo em Agenda ou
+> CorvIA Mail; desta vez o fluxo não deve mais devolver ele pra tela de login no meio do caminho.
+>
+> **Três bugs de UI, os três reais e distintos, verificados por leitura de código antes de
+> corrigir (a "conta padrão de envio" JÁ persistia certo no banco — não reescrevi o que
+> funcionava):**
+> 1. **Combinar contas aplicava a seleção sozinha a cada clique de checkbox**, sem confirmação —
+>    trocado por seleção pendente separada (`selecaoPendente`), só vira combinação de fato ao
+>    clicar em "Combinar selecionadas".
+> 2. **A conta ATIVA sendo visualizada e a combinação de contas eram só estado React em memória**
+>    — a "conta padrão de envio" (`titular.email_conta_padrao_envio`) já ia pro banco e voltava
+>    certo; o que nunca persistia era o que a tela mostrava no momento. Agora
+>    `corvia.mail.contaAtiva` e `corvia.mail.contasCombinadas` vão pro `localStorage` (mesmo
+>    padrão já usado pra largura do painel), revalidados contra as contas que existem de fato ao
+>    carregar a página — conta desconectada/removida não deixa preferência salva quebrada.
+> 3. **Proveniência da caixa não aparecia por extenso** — texto sempre visível
+>    ("Mostrando **Google** — fulano@gmail.com") acima do seletor, não só o ícone pequeno de
+>    antes; selo de conta padrão (★/☆) também sempre visível em vez de escondido condicionalmente.
+>
+> **Pedido à parte, atendido no mesmo lote**: opção "permanecer conectado" no login da caixa
+> CorvIA Mail (telas de referência: Thunderbird/Gmail/Yahoo Mail), nasce marcada. A arquitetura de
+> reabrir a caixa sozinha ao entrar no sistema **já existia** (`CorviaMail.tsx` já pulava direto
+> pra caixa quando o token existia e era válido); faltava só a duração do token — 12h fixas antes,
+> 30 dias quando marcado agora (`create_access_token()` ganhou `expires_minutes` opcional).
+>
+> **🍎 Logo da Apple estava errado — "resolva de uma vez" também cobriu isto.** O SVG de `apple`
+> em `LogoProvedor.tsx` desenhava uma **nuvem genérica** (parece ter sido pensado pra iCloud), não
+> a maçã — não identificava o provedor visualmente em nenhuma tela (Agenda, CorvIA Mail). Trocado
+> pela silhueta clássica da maçã mordida com folha, mesmo espírito já documentado no próprio
+> arquivo pro Yahoo (identifica sem embutir arquivo de marca de terceiro). Cor do badge
+> (`.logo-provedor--apple`, `shell.css`) trocada do azul residual do desenho de nuvem
+> (`#1684d6`) pro cinza-quase-preto que o resto do sistema já usa pra Apple
+> (`.agenda-conta-provider__marca--apple`).
+>
+> **Redesenho visual "profissional" da caixa (pedido à parte, com screenshots de referência de
+> Thunderbird/Gmail/Yahoo) — PAUSADO a pedido do próprio Rafael antes de qualquer mudança de
+> aparência entrar em produção**: mostrei 3 opções visuais (imagem) e ele interrompeu a pergunta
+> sem escolher, priorizando a correção funcional. Nada de redesenho visual está no ar — só as
+> correções funcionais acima. Fica pendente até ele escolher uma direção.
+>
+> **Verificado**: `tsc --noEmit` limpo, `npm run build` completo sem erro, 92 testes de backend
+> passando num banco de teste isolado (`test_browser_session_cookie.py` — 2 testes atualizados pra
+> `samesite=lax` — mais `test_corvia_mail.py`, `test_email_conta_padrao_envio.py`,
+> `test_email_mensagens_todas.py`, `test_email_assinatura.py`, `test_session_revocation.py`, sem
+> regressão). Migração: nenhuma (mudança de cookie e de CSS/JSX, sem alteração de schema). Backend
+> e frontend rebuildados em produção; bundle novo confirmado direto no volume servido pelo Caddy
+> (grep de `corvia.mail.contasCombinadas` em `CaixaDeEmail-*.js` e do novo path SVG da maçã em
+> `LogoProvedor-*.js`); `samesite="lax"` confirmado lendo o código-fonte de dentro do container do
+> backend em produção (não só no disco). Backend saudável (200 em `/api/openapi.json` e `/`)
+> depois do rebuild.
 > Continuação da rodada anterior no mesmo dia, pedido do Rafael: **"valide e publique toda a sua
 > producao e a producao do chat gpt, todos revisados e validados"**. Enquanto verificava PMIDs para
 > escrever conteúdo novo em Cardiologia do Esporte, percebi que o Grupo B (ChatGPT) já tinha coberto
