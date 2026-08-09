@@ -21,11 +21,8 @@ function tentarRecarregarPorNovoSW() {
   window.location.reload();
 }
 
-async function verificarAtualizacaoCompleta() {
-  // 1) compara o commit do bundle com o commit realmente servido pelo backend;
-  // 2) pede ao navegador para verificar o service worker sem esperar o ciclo
-  // automático dele. Nenhuma das duas ações recarrega se não houver deploy novo.
-  await verificarVersaoAtual();
+async function verificarAtualizacaoCompleta(forcar = false) {
+  await verificarVersaoAtual(forcar);
   if (!("serviceWorker" in navigator)) return;
   navigator.serviceWorker.getRegistration().then((registro) => registro?.update()).catch(() => undefined);
 }
@@ -42,16 +39,20 @@ if ("serviceWorker" in navigator) {
   }
 };
 
-void verificarAtualizacaoCompleta();
+void verificarAtualizacaoCompleta(true);
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") void verificarAtualizacaoCompleta();
+  if (document.visibilityState === "visible") void verificarAtualizacaoCompleta(true);
 });
-window.addEventListener("pageshow", () => void verificarAtualizacaoCompleta());
+window.addEventListener("pageshow", () => void verificarAtualizacaoCompleta(true));
 
-// App.tsx chama isto em toda mudança de rota. É uma checagem de versão, não
-// um F5 em todo clique: só há recarga quando o commit realmente mudou.
+// Qualquer interação relevante também consulta a versão, limitada internamente
+// a uma chamada a cada 5 segundos. Assim uma aba aberta por horas percebe um
+// deploy mesmo sem mudança de rota, sem transformar cada clique em tráfego.
+document.addEventListener("click", () => void verificarAtualizacaoCompleta(false), { capture: true });
+document.addEventListener("keydown", () => void verificarAtualizacaoCompleta(false), { capture: true });
+
 (window as unknown as { __corviaVerificarAtualizacao?: () => void }).__corviaVerificarAtualizacao = () => {
-  void verificarAtualizacaoCompleta();
+  void verificarAtualizacaoCompleta(true);
 };
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
