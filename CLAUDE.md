@@ -1,5 +1,37 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO, 09/08/2026: exclusão definitiva dos 34+1 duplicados/órfãos acumulados no dia
+> Pedido do Rafael: **"o que for conteudo cientifico repetido, errado e inutil pode apagar"** —
+> primeira autorização deste tipo no dia (até aqui, duplicata só era despublicada/marcada
+> `pendente_revisao`, nunca apagada). Excluídos os **34 documentos** que as três rodadas de
+> auditoria de hoje já tinham verificado individualmente como duplicata real (comparação de PMID e
+> número, não só título) e marcado com `review_note` explicando o slug canônico já publicado — a
+> lista completa está nas entradas de auditoria logo abaixo. Nenhum estava publicado, nenhum tinha
+> chunk no RAG (conferido antes de apagar). Também excluído o **1 órfão histórico** de
+> `evidence_records` (`cc-adulto-eco-no-seguimento-com-defeito-residual`) já documentado à
+> exaustão neste arquivo desde 31/07/2026.
+>
+> **Backup completo antes de apagar, fora do git**: `/root/backups-corvia/
+> backup_34_duplicatas_conteudo_repetido_09082026.json` e `backup_orfao_evidence_09082026.json`.
+> `DELETE` em transação com guardas (`assert` de contagem exata, `assert` de nenhum publicado,
+> `assert` de que a contagem de publicados não muda depois). Os 34 arquivos `.md` também foram
+> removidos do repositório (`git rm`), pra reimportação futura não os ressuscitar. `AuditLog`
+> gravado nas duas operações, citando a autorização do Rafael em chat.
+>
+> **Resultado, auditoria final nas 11 tabelas com coluna `published`: todas 100%.**
+> `documents` 1530/1530 · `evidence_records` 2424/2424 · `scientific_studies` 790/790 · `drugs`
+> 175/175 · `clinical_cases` 709/709 · `study_tracks` 494/494 · `gallery_images` 273/273 ·
+> `lab_tests` 384/384 · `emergency_protocols` 59/59 · `discharge_checklists` 38/38 ·
+> `patient_materials` 40/40. **Zero pendência de qualquer tipo em toda a base pela primeira vez
+> desde que este arquivo começou a registrar essas rodadas.**
+>
+> **Instrução do Rafael sobre coordenação, também nesta rodada**: o ChatGPT está corrigindo bugs
+> reais do CorvIA Mail/Agenda/Calendário/sincronização por pedido direto dele — **não competir nem
+> alterar esse trabalho, só acompanhar** (ver os commits `agenda_sync_cli.py`/`infra/
+> agenda_sync_cron.sh` das últimas horas). Vale também para o redesenho da caixa de e-mail
+> (`CaixaDeEmailProfessional.tsx`), que outra sessão já reconstruiu — registrado na entrada
+> "redesenho visual do CorvIA Mail" logo abaixo.
+
 > ## ✅ TERCEIRA RODADA DE AUDITORIA, 09/08/2026 — 28 documentos novos publicados, 2 duplicados corrigidos
 > Pedido do Rafael: **"tem conteudo seu e do chat gpt pra publicar?"**, seguido de confirmação pra
 > zerar pendências. `import_directory()` trouxe **30 documentos novos** desde a última varredura do
