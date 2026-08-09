@@ -2,6 +2,9 @@
  * do token da conta Corvia em `lib/api.ts`. */
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const TOKEN_KEY = "corviamail.token";
+const RENEW_KEY = "corviamail.token.renewed_at";
+const RENEW_INTERVAL_MS = 24 * 60 * 60 * 1000;
+let renovando = false;
 
 function storageDisponivel(): boolean {
   return typeof window !== "undefined";
@@ -12,22 +15,50 @@ export const tokenEmail = {
     if (!storageDisponivel()) return null;
     return sessionStorage.getItem(TOKEN_KEY) ?? localStorage.getItem(TOKEN_KEY);
   },
+  persistente: () => storageDisponivel() && Boolean(localStorage.getItem(TOKEN_KEY)),
   set: (v: string, persistir = true) => {
     if (!storageDisponivel()) return;
     localStorage.removeItem(TOKEN_KEY);
     sessionStorage.removeItem(TOKEN_KEY);
     (persistir ? localStorage : sessionStorage).setItem(TOKEN_KEY, v);
+    if (persistir) localStorage.setItem(RENEW_KEY, String(Date.now()));
+    else localStorage.removeItem(RENEW_KEY);
   },
   clear: () => {
     if (!storageDisponivel()) return;
     localStorage.removeItem(TOKEN_KEY);
     sessionStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(RENEW_KEY);
   },
 };
 
 export class ApiEmailError extends Error {
   constructor(public status: number, message: string) {
     super(message);
+  }
+}
+
+async function renovarSessaoPersistenteSeNecessario() {
+  if (!tokenEmail.persistente() || renovando) return;
+  const ultima = Number(localStorage.getItem(RENEW_KEY) || "0");
+  if (Date.now() - ultima < RENEW_INTERVAL_MS) return;
+  const token = localStorage.getItem(TOKEN_KEY);
+  if (!token) return;
+
+  renovando = true;
+  try {
+    const res = await fetch(`${BASE}/email/renovar-sessao`, {
+      method: "POST",
+      cache: "no-store",
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (!res.ok) return;
+    const dados = await res.json() as { access_token: string };
+    tokenEmail.set(dados.access_token, true);
+  } catch {
+    // Renovação é oportunística; uma falha de rede não derruba a sessão atual.
+  } finally {
+    renovando = false;
   }
 }
 
@@ -48,6 +79,7 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
     const detail = await res.json().catch(() => null);
     throw new ApiEmailError(res.status, detail?.detail ?? "Não foi possível concluir a solicitação.");
   }
+  void renovarSessaoPersistenteSeNecessario();
   return res.status === 204 ? (undefined as T) : res.json();
 }
 
@@ -90,6 +122,7 @@ export const apiEmail = {
       const detail = await res.json().catch(() => null);
       throw new ApiEmailError(res.status, detail?.detail ?? "Não foi possível baixar o anexo.");
     }
+    void renovarSessaoPersistenteSeNecessario();
     const url = URL.createObjectURL(await res.blob());
     const link = document.createElement("a");
     link.href = url;
