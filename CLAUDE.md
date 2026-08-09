@@ -1,5 +1,45 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ TERCEIRA RODADA DE AUDITORIA, 09/08/2026 — 28 documentos novos publicados, 2 duplicados corrigidos
+> Pedido do Rafael: **"tem conteudo seu e do chat gpt pra publicar?"**, seguido de confirmação pra
+> zerar pendências. `import_directory()` trouxe **30 documentos novos** desde a última varredura do
+> dia (23 de Cardiologia do Esporte, 3 de Doença coronariana, 1 de FA, 3 de Insuficiência cardíaca,
+> 1 de Hipertensão — produção do Grupo B/ChatGPT).
+>
+> **56 PMIDs únicos + 1 DOI conferidos via PubMed E-utilities/Crossref, 100% batendo** (revista,
+> ano, título) — nenhum inventado: HRS 2024 consenso arritmias no atleta, AHA/ACC 2025 esportes
+> cardiovasculares, bradicardia/Brugada/CPVT/HCM/anomalias coronárias no atleta, coração da atleta
+> feminina, DEA/RCP em maratona (Resuscitation, JAMA, Europace), prolapso mitral arrítmico, REDs,
+> resposta pressórica exagerada, TCPE e troponina pós-exercício, NEO-MINDSET/ORBITA-2/ULTIMATE-DAPT
+> (NEJM/Lancet), OCEAN (NEJM), BaxHTN (NEJM), RELIEVE-HF (Circulation), VICTOR (Lancet), DIGIT-HF
+> (NEJM, verificado por DOI via Crossref).
+>
+> **2 duplicatas reais achadas, comparando PMID e conteúdo contra o corpus publicado — não
+> publicadas, marcadas `pendente_revisao` com `review_note`:**
+> - `baxhtn-baxdrostat-hipertensao-nao-controlada-resistente` duplica o já publicado
+>   `baxdrostat-inibidor-da-aldosterona-sintase-o-ensaio-brightn` (mesmo PMID 40888730, mesmo
+>   n=796/794, mesmas doses 1mg/2mg — o documento já publicado cobre as duas fases, BrigHTN e
+>   BaxHTN, com mais detalhe, incluindo o dado de insuficiência adrenal do texto completo).
+> - `cardiopatia-congenita-exercicio-e-participacao-esportiva` (Cardiologia do Esporte) duplica,
+>   em versão mais rasa e sem número nenhum, dois documentos já publicados que cobrem os mesmos
+>   PMIDs centrais (Budts 2020 PMID 32845299, Cifra/AHA 2025 PMID 39782908) com profundidade real —
+>   `Cardiologia_pediátrica/avaliacao-cardiologica-...-elegibilidade-esportiva-por-lesao.md`
+>   (cortes numéricos por lesão) e `Cardiopatias_congênitas/teste-cardiopulmonar-de-exercicio-...`
+>   (tabela de valores de referência do TCPE).
+>
+> **Os outros 28 eram conteúdo genuinamente novo**, publicados e indexados no RAG (a lista completa
+> de slugs está no `AuditLog` desta rodada). **Auditoria final**: `documents` 1530/1564 publicados
+> — os 34 não publicados são **todos duplicatas já identificadas e documentadas** nas três rodadas
+> de auditoria de hoje (não são pendência esquecida; publicá-las recriaria conteúdo clínico
+> repetido). **Zero `document_chunks` órfão no RAG.**
+>
+> **Nota de coordenação**: durante esta rodada, outra sessão reconstruiu a caixa de e-mail do zero
+> (`CaixaDeEmailProfessional.tsx`, commits `5acb0c8a`/`9077625b`/`f14b7c4e`, substituindo o
+> `CaixaDeEmail.tsx` que eu havia acabado de redesenhar) e outra ainda corrigiu a resiliência do
+> cron de sincronização OAuth (`agenda_sync_cli.py`, commits `456d3f98`/`d1b3721b`/`702c592a`/
+> `60c0de6d`). Rafael pediu explicitamente para não alterar o que essas sessões fizeram — nada
+> nelas foi tocado nesta rodada, só trazido via `git pull --ff-only`/`--rebase`.
+
 > ## ✅ CONCLUÍDO E NO AR, 09/08/2026: redesenho visual do CorvIA Mail + varredura final de pendências (zero real)
 > Dois pedidos do Rafael, em sequência ao bloco de bugs logo abaixo.
 >
