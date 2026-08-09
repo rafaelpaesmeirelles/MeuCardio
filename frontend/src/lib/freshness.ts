@@ -1,9 +1,11 @@
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const BUILD_COMMIT = String(import.meta.env.VITE_DEPLOY_COMMIT ?? "unknown");
 const CHAVE_ULTIMA_RECARGA = "corvia.freshness.reload";
+const INTERVALO_MINIMO_CHECK_MS = 5000;
 
 let verificando = false;
 let recargaPendente = false;
+let ultimoCheckEm = 0;
 
 function streamAtivo() {
   return Boolean((window as unknown as { __streamAtivo?: boolean }).__streamAtivo);
@@ -12,7 +14,11 @@ function streamAtivo() {
 async function limparCachesDoApp() {
   if (!("caches" in window)) return;
   const nomes = await caches.keys();
-  await Promise.all(nomes.filter((nome) => nome.startsWith("corvia-") || nome.startsWith("workbox-")).map((nome) => caches.delete(nome)));
+  await Promise.all(
+    nomes
+      .filter((nome) => nome.startsWith("corvia-") || nome.startsWith("workbox-"))
+      .map((nome) => caches.delete(nome)),
+  );
 }
 
 async function prepararNovaVersao(commit: string) {
@@ -39,17 +45,14 @@ async function prepararNovaVersao(commit: string) {
   }
 }
 
-/**
- * Confirma que o bundle em execução pertence ao mesmo commit que o backend.
- * É chamado na abertura, retorno à aba e em toda mudança de rota. Arquivos
- * Vite com hash continuam cacheáveis; só o shell/caches do app são eliminados
- * quando há um deploy REALMENTE novo.
- */
-export async function verificarVersaoAtual() {
+export async function verificarVersaoAtual(forcar = false) {
+  const agora = Date.now();
   if (verificando || BUILD_COMMIT === "unknown") return;
+  if (!forcar && agora - ultimoCheckEm < INTERVALO_MINIMO_CHECK_MS) return;
+  ultimoCheckEm = agora;
   verificando = true;
   try {
-    const res = await fetch(`${BASE}/version?_=${Date.now()}`, {
+    const res = await fetch(`${BASE}/version?_=${agora}`, {
       cache: "no-store",
       credentials: "include",
       headers: { "Cache-Control": "no-cache" },
@@ -61,7 +64,7 @@ export async function verificarVersaoAtual() {
       await prepararNovaVersao(servidor);
     }
   } catch {
-    // Sem rede: não inutiliza o app. Na próxima navegação/foco a checagem roda novamente.
+    // Sem rede: mantém o app utilizável e tenta novamente na próxima interação.
   } finally {
     verificando = false;
   }
@@ -70,5 +73,5 @@ export async function verificarVersaoAtual() {
 export function liberarRecargaPendente() {
   if (!recargaPendente) return;
   recargaPendente = false;
-  void verificarVersaoAtual();
+  void verificarVersaoAtual(true);
 }
