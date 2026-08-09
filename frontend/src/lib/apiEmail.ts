@@ -105,11 +105,11 @@ export const apiEmail = {
    *  mensagem real do backend (`detail`) era descartada e trocada por
    *  "Sessão da caixa de e-mail expirada", que confunde quem está entrando
    *  pela primeira vez tanto quanto quem de fato só errou a senha. */
-  async entrar(endereco: string, senha: string) {
+  async entrar(endereco: string, senha: string, permanecerConectado = false) {
     const res = await fetch(`${BASE}/email/entrar`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ endereco, senha }),
+      body: JSON.stringify({ endereco, senha, permanecer_conectado: permanecerConectado }),
     });
     if (!res.ok) {
       const detail = await res.json().catch(() => null);

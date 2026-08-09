@@ -415,6 +415,15 @@ def ativar_conta(
 class LoginEmail(BaseModel):
     endereco: str
     senha: str
+    # 09/08/2026, pedido do Rafael com referência direta às telas de login do
+    # Yahoo/Gmail que ele mandou: "Permanecer conectado". Default False
+    # preserva o comportamento de sempre para quem não marcar nada.
+    permanecer_conectado: bool = False
+
+
+# 30 dias — mesma ordem de grandeza que Gmail/Yahoo mantêm a sessão marcada
+# como "permanecer conectado" num navegador não compartilhado.
+TOKEN_EMAIL_PERMANECER_CONECTADO_MINUTOS = 30 * 24 * 60
 
 
 @router.post("/entrar")
@@ -427,7 +436,9 @@ def entrar(dados: LoginEmail, db: Session = Depends(get_db)):
         raise erro
     if conta.status != "ativa":
         raise HTTPException(status_code=403, detail="Esta caixa de e-mail está suspensa.")
-    return {"access_token": create_access_token(conta.email_address, scope="email"), "token_type": "bearer"}
+    expira_em = TOKEN_EMAIL_PERMANECER_CONECTADO_MINUTOS if dados.permanecer_conectado else None
+    token = create_access_token(conta.email_address, scope="email", expires_minutes=expira_em)
+    return {"access_token": token, "token_type": "bearer"}
 
 
 class EsqueciSenhaEmail(BaseModel):

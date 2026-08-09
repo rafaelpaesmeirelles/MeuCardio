@@ -291,12 +291,20 @@ function AbaEntrar() {
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
+  // 09/08/2026, pedido do Rafael (com print do Yahoo/Gmail como referência):
+  // "Permanecer conectado" — nasce marcado, porque é exatamente o "já
+  // conectar automaticamente" que ele pediu junto: com a sessão da caixa
+  // valendo por 30 dias em vez de 12h, entrar na Corvia volta a abrir o
+  // CorvIA Mail direto (o atalho em CorviaMail.tsx já pula esta tela quando
+  // há sessão válida — só faltava a sessão durar o suficiente para isso
+  // acontecer na prática, não só na teoria).
+  const [permanecerConectado, setPermanecerConectado] = useState(true);
 
   async function enviar() {
     setErro("");
     setEnviando(true);
     try {
-      await apiEmail.entrar(endereco.trim().toLowerCase(), senha);
+      await apiEmail.entrar(endereco.trim().toLowerCase(), senha, permanecerConectado);
       navigate("/caixa-de-email");
     } catch (e) {
       setErro(e instanceof ApiEmailError ? e.message : "Não foi possível entrar.");
@@ -313,6 +321,15 @@ function AbaEntrar() {
       <label htmlFor="senha-email" style={{ marginTop: "0.8rem" }}>Senha da caixa de e-mail</label>
       <CampoSenha id="senha-email" autoComplete="current-password" value={senha} onChange={(e) => setSenha(e.target.value)}
              onKeyDown={(e) => e.key === "Enter" && enviar()} />
+      <label style={{ display: "flex", gap: 8, alignItems: "center", marginTop: "0.8rem", fontSize: "0.86rem" }}>
+        <input type="checkbox" checked={permanecerConectado} style={{ width: "auto" }}
+               onChange={(e) => setPermanecerConectado(e.target.checked)} />
+        Permanecer conectado
+      </label>
+      <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+        Mantém a caixa aberta por 30 dias neste aparelho, sem pedir a senha de novo a cada
+        vez que você entrar na Corvia. Desmarque em computador compartilhado.
+      </p>
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
       <button className="botao" style={{ width: "100%", marginTop: "1rem" }}
               onClick={enviar} disabled={enviando || !endereco || !senha}>
