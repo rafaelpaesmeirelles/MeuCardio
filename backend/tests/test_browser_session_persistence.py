@@ -21,7 +21,7 @@ def test_browser_session_persistent_cookie_lasts_30_days(client, criar_usuario):
     assert me.json()["email"] == user.email
 
 
-def test_browser_session_without_persistence_keeps_normal_expiry(client, criar_usuario):
+def test_browser_session_without_persistence_is_session_cookie(client, criar_usuario):
     user, _ = criar_usuario(email="curta@teste.local")
     response = client.post(
         "/api/auth/sessao",
@@ -35,7 +35,8 @@ def test_browser_session_without_persistence_keeps_normal_expiry(client, criar_u
     assert response.json()["persistent"] is False
     cookie = response.headers.get("set-cookie", "")
     assert "corvia_session=" in cookie
-    assert "Max-Age=43200" in cookie
+    assert "Max-Age=" not in cookie
+    assert "Expires=" not in cookie
 
 
 def test_logout_removes_even_persistent_cookie(client, criar_usuario):
