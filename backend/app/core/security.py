@@ -45,15 +45,21 @@ def verify_password(raw: str, hashed: str) -> bool:
         return False
 
 
-def create_access_token(subject: str, scope: str = "app") -> str:
+def create_access_token(subject: str, scope: str = "app", expires_minutes: int | None = None) -> str:
     """Emite JWT com escopo e instante preciso para revogação de sessões.
 
     `scope` separa o token da conta Corvia (`app`) do token da caixa de e-mail
     (`email`). `session_iat` preserva microssegundos para que uma troca de senha
     invalide imediatamente todos os tokens anteriores sem depender de blacklist.
-    """
+
+    `expires_minutes` sobrescreve `settings.jwt_expire_minutes` quando informado
+    — usado pelo "Permanecer conectado" do CorvIA Mail (09/08/2026, pedido do
+    Rafael: a sessão da caixa de e-mail expirava em 12h como qualquer sessão
+    comum, e ele precisava digitar a senha da caixa de novo toda vez que
+    voltava depois de um tempo — as duas caixas de referência que ele mandou,
+    Yahoo e Gmail, sempre oferecem essa opção)."""
     issued_at = datetime.now(timezone.utc)
-    expire = issued_at + timedelta(minutes=settings.jwt_expire_minutes)
+    expire = issued_at + timedelta(minutes=expires_minutes if expires_minutes is not None else settings.jwt_expire_minutes)
     return jwt.encode(
         {
             "sub": subject,
@@ -68,14 +74,32 @@ def create_access_token(subject: str, scope: str = "app") -> str:
 
 
 def gravar_cookie_sessao(response: Response, token: str) -> None:
-    """Entrega a sessão do navegador sem expor o JWT ao JavaScript."""
+    """Entrega a sessão do navegador sem expor o JWT ao JavaScript.
+
+    `samesite="lax"`, não "strict" (09/08/2026, bug real do Rafael: reconectar
+    Google/Microsoft derrubava para a tela de login). Causa raiz: o retorno do
+    OAuth é uma navegação de nível superior que chega a `/api/agenda/oauth/
+    google/callback` vinda de `accounts.google.com` — cross-site do ponto de
+    vista do navegador — e o backend então redireciona (303) de volta para
+    `/agenda`. Com `Strict`, o cookie de sessão não acompanha essa cadeia de
+    navegação iniciada por outro site, mesmo o destino final sendo o próprio
+    corvia.med.br; o `GET /auth/me` que a página `/agenda` dispara ao montar
+    chega sem cookie, toma 401, e o interceptor genérico manda para `/entrar`
+    — não é sessão expirada de verdade, é o cookie que nunca chegou naquela
+    requisição específica. `Lax` continua enviando o cookie em navegação de
+    nível superior por GET (exatamente este caso) e continua retendo-o em
+    requisições cross-site que não são navegação de topo (POST/PUT/DELETE via
+    fetch, iframe, etc.) — a proteção contra CSRF que importa na prática não
+    muda; é o mesmo default que Django, Rails e a maioria dos frameworks usam
+    para cookie de sessão justamente por causa deste tipo de fluxo (OAuth,
+    link de e-mail, retorno de gateway de pagamento)."""
     response.set_cookie(
         key=AUTH_COOKIE_NAME,
         value=token,
         max_age=settings.jwt_expire_minutes * 60,
         httponly=True,
         secure=ambiente_atual() == "production",
-        samesite="strict",
+        samesite="lax",
         path="/",
     )
 
@@ -85,7 +109,7 @@ def limpar_cookie_sessao(response: Response) -> None:
         key=AUTH_COOKIE_NAME,
         httponly=True,
         secure=ambiente_atual() == "production",
-        samesite="strict",
+        samesite="lax",
         path="/",
     )
 

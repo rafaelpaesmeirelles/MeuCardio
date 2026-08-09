@@ -13,7 +13,7 @@ def _login_cookie(client, email: str, password: str = "senha-conta-123"):
     )
 
 
-def test_browser_login_sets_httponly_strict_cookie_and_authenticates_without_bearer(
+def test_browser_login_sets_httponly_lax_cookie_and_authenticates_without_bearer(
     client, criar_usuario
 ):
     user, _ = criar_usuario(email="cookie.web@teste.local", role="admin")
@@ -25,7 +25,11 @@ def test_browser_login_sets_httponly_strict_cookie_and_authenticates_without_bea
     set_cookie = response.headers["set-cookie"].lower()
     assert f"{AUTH_COOKIE_NAME}=" in set_cookie
     assert "httponly" in set_cookie
-    assert "samesite=strict" in set_cookie
+    # "lax", não "strict" (09/08/2026) -- "strict" derrubava a sessão sempre
+    # que o retorno de um OAuth (Google/Microsoft) pousava de volta em
+    # /agenda, porque o navegador não reenvia cookie Strict numa navegação de
+    # topo cuja cadeia começou em outro site. Ver gravar_cookie_sessao().
+    assert "samesite=lax" in set_cookie
     assert "path=/" in set_cookie
     assert "secure" not in set_cookie
 
@@ -70,7 +74,7 @@ def test_production_cookie_is_secure(monkeypatch):
     set_cookie = response.headers["set-cookie"].lower()
     assert "secure" in set_cookie
     assert "httponly" in set_cookie
-    assert "samesite=strict" in set_cookie
+    assert "samesite=lax" in set_cookie
 
 
 def test_chat_websocket_uses_browser_cookie_not_query_secret(client, criar_usuario):
