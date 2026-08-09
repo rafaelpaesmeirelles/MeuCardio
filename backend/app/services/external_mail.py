@@ -273,8 +273,36 @@ def send_message(
 
 
 def delete_message(db: Session, integration: CalendarIntegration, message_id: str) -> None:
+    """Move a mensagem para a lixeira usando o protocolo correto do provedor."""
+    if integration.provider in {"yahoo_mail", "apple_icloud"}:
+        from app.services.agenda_integrada.domain import integration_credentials
+        from app.services.apple_mail import AppleMailError
+        from app.services.imap_mail_ops import move_to_trash
+        from app.services.yahoo_mail import YahooMailError
+
+        credentials = integration_credentials(integration)
+        if integration.provider == "yahoo_mail":
+            move_to_trash(
+                credentials,
+                message_id,
+                host="imap.mail.yahoo.com",
+                trash_folder="Trash",
+                error_cls=YahooMailError,
+            )
+            return
+        move_to_trash(
+            credentials,
+            message_id,
+            host="imap.mail.me.com",
+            trash_folder="Trash",
+            error_cls=AppleMailError,
+        )
+        return
+
     encoded = quote(message_id, safe="")
     if integration.provider == "google_calendar":
         _request(db, integration, "POST", f"{_GMAIL}/messages/{encoded}/trash")
-    else:
+    elif integration.provider == "microsoft_365":
         _request(db, integration, "DELETE", f"{_GRAPH}/messages/{encoded}")
+    else:
+        raise ExternalMailError("Provedor externo não suportado para exclusão.", status_code=422)
