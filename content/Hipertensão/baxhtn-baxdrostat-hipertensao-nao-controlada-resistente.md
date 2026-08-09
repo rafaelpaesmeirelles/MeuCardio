@@ -3,7 +3,8 @@ title: "BaxHTN: baxdrostat na hipertensão não controlada e resistente"
 slug: baxhtn-baxdrostat-hipertensao-nao-controlada-resistente
 theme: "Hipertensão"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Duplicata real, achada em 09/08/2026: o mesmo trial (BaxHTN, PMID 40888730, n=796/794, mesmas doses 1mg/2mg baxdrostat, mesmo desenho fase 3 duplo-cego) já está coberto em profundidade no documento canônico já publicado content/Hipertensão/baxdrostat-inibidor-da-aldosterona-sintase-o-ensaio-brightn.md (que cobre as duas fases, BrigHTN e BaxHTN, incluindo o dado de insuficiência adrenal do texto completo). Não publicar — evitar duas telas do mesmo trial."
 source_refs: ["PMID:40888730", "DOI:10.1056/NEJMoa2507109", "NCT06034743"]
 legacy_source: "BaxHTN"
 ---

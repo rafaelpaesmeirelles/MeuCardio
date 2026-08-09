@@ -3,7 +3,8 @@ title: "Cardiopatia congênita: exercício, teste cardiopulmonar e participaçã
 slug: cardiopatia-congenita-exercicio-e-participacao-esportiva
 theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
-review_status: revisado
+review_status: pendente_revisao
+review_note: "Duplicata real, achada em 09/08/2026: os mesmos dois PMIDs centrais (Budts 2020 PMID 32845299 e Cifra/AHA 2025 PMID 39782908) já estão cobertos, com mais profundidade e números reais (cortes numéricos por lesão, tabela de valores de referência do TCPE), em dois documentos já publicados: content/Cardiologia_pediátrica/avaliacao-cardiologica-e-prescricao-de-exercicio-na-crianca-com-cardiopatia-congenita-elegibilidade-esportiva-por-lesao.md e content/Cardiopatias_congênitas/teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025.md. Este documento é uma síntese conceitual sem dado numérico próprio, redundante com os dois. Não publicar."
 source_refs: ["PMID:32845299", "DOI:10.1093/eurheartj/ehaa501", "PMID:39782908", "DOI:10.1161/JAHA.124.038200", "PMID:41411375", "DOI:10.1161/CIR.0000000000001402"]
 legacy_source: "EAPC/ESC/AEPC 2020; AHA 2025; ACC/AHA/HRS/ISACHD/SCAI 2025"
 ---
