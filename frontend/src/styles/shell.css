@@ -1829,7 +1829,12 @@
 .logo-provedor { display: grid; flex: 0 0 auto; width: 36px; height: 36px; place-items: center; color: #1684d6; background: #fff; border: 1px solid var(--slate-200); border-radius: 10px; box-shadow: 0 2px 8px rgb(6 42 56 / .06); }
 .logo-provedor svg { display: block; width: 22px; height: 22px; }
 .logo-provedor--microsoft svg { width: 20px; height: 20px; }
-.logo-provedor--apple { color: #1684d6; background: linear-gradient(145deg,#fff,#eef8ff); }
+/* 09/08/2026: era azul (#1684d6), cor pensada pro desenho antigo de nuvem
+ * (iCloud). A silhueta da maçã é monocromática por natureza — trocada pro
+ * cinza-quase-preto que o resto do sistema já usa pra Apple
+ * (`.agenda-conta-provider__marca--apple`, logo acima), pra ficar
+ * reconhecível e consistente dentro do próprio produto. */
+.logo-provedor--apple { color: #16191c; background: #fff; }
 .agenda-conta-provider div { display: flex; min-width: 0; flex-direction: column; }
 .agenda-conta-provider strong { color: var(--navy-900); font-size: .74rem; }
 .agenda-conta-provider small { margin-top: .12rem; overflow: hidden; color: var(--texto-secundario); font-size: .58rem; line-height: 1.35; text-overflow: ellipsis; }
