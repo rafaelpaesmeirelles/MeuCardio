@@ -15,6 +15,7 @@ export default function Entrar() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [permanecerConectado, setPermanecerConectado] = useState(true);
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
 
@@ -24,7 +25,7 @@ export default function Entrar() {
     setEnviando(true);
     setErro("");
     try {
-      await entrar(email.trim().toLowerCase(), senha);
+      await entrar(email.trim().toLowerCase(), senha, permanecerConectado);
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível entrar.");
     } finally {
@@ -136,6 +137,19 @@ export default function Entrar() {
                 </button>
               </div>
             </div>
+
+            <label className="login-permanecer" style={{ display: "flex", gap: 9, alignItems: "flex-start", fontSize: "0.88rem" }}>
+              <input
+                type="checkbox"
+                checked={permanecerConectado}
+                onChange={(event) => setPermanecerConectado(event.target.checked)}
+                style={{ width: "auto", marginTop: 3 }}
+              />
+              <span>
+                <strong>Permanecer conectado neste dispositivo</strong><br />
+                <small>Evita novo login por até 30 dias, salvo logout, troca de senha ou revogação de sessão.</small>
+              </span>
+            </label>
 
             {erro && <p id="login-erro" className="login-formulario__erro" role="alert">{erro}</p>}
 
