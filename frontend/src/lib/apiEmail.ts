@@ -1,17 +1,28 @@
 /** Cliente de API da "sessão email" (CorvIA Mail) — token PRÓPRIO, distinto
- * do token da conta Corvia em `lib/api.ts`. Decisão do Rafael em 30/07/2026:
- * a caixa de e-mail passou a ter senha própria, então o token que abre ela
- * também precisa ser outro — reutilizar `api.ts` faria um 401 daqui
- * redirecionar para `/entrar` (a conta Corvia) em vez de `/corvia-mail`
- * (a sessão certa), e um token roubado de um dos dois sistemas serviria
- * no outro. Ver `core/security.py` (`scope: "email"`) no backend. */
+ * do token da conta Corvia em `lib/api.ts`. */
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const TOKEN_KEY = "corviamail.token";
 
+function storageDisponivel(): boolean {
+  return typeof window !== "undefined";
+}
+
 export const tokenEmail = {
-  get: () => localStorage.getItem(TOKEN_KEY),
-  set: (v: string) => localStorage.setItem(TOKEN_KEY, v),
-  clear: () => localStorage.removeItem(TOKEN_KEY),
+  get: () => {
+    if (!storageDisponivel()) return null;
+    return sessionStorage.getItem(TOKEN_KEY) ?? localStorage.getItem(TOKEN_KEY);
+  },
+  set: (v: string, persistir = true) => {
+    if (!storageDisponivel()) return;
+    localStorage.removeItem(TOKEN_KEY);
+    sessionStorage.removeItem(TOKEN_KEY);
+    (persistir ? localStorage : sessionStorage).setItem(TOKEN_KEY, v);
+  },
+  clear: () => {
+    if (!storageDisponivel()) return;
+    localStorage.removeItem(TOKEN_KEY);
+    sessionStorage.removeItem(TOKEN_KEY);
+  },
 };
 
 export class ApiEmailError extends Error {
@@ -24,13 +35,11 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const headers = new Headers(init.headers);
   const t = tokenEmail.get();
   if (t) headers.set("Authorization", `Bearer ${t}`);
-  // FormData fica de fora: o browser precisa gerar o boundary do multipart
-  // sozinho (mesma regra de lib/api.ts) — usado no upload de anexo.
   if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
   }
 
-  const res = await fetch(`${BASE}${path}`, { ...init, headers });
+  const res = await fetch(`${BASE}${path}`, { ...init, headers, cache: "no-store" });
   if (res.status === 401) {
     tokenEmail.clear();
     throw new ApiEmailError(401, "Sessão da caixa de e-mail expirada.");
@@ -50,8 +59,6 @@ export const apiEmail = {
     request<T>(p, { method: "PUT", body: body ? JSON.stringify(body) : undefined }),
   delete: <T>(p: string) => request<T>(p, { method: "DELETE" }),
 
-  /** Upload de anexo, em duas etapas — o Mail360 exige subir o arquivo
-   *  primeiro e só depois referenciar o `file_id` no envio da mensagem. */
   uploadAnexo: (arquivo: File) => {
     const form = new FormData();
     form.append("arquivo", arquivo);
@@ -60,11 +67,6 @@ export const apiEmail = {
     });
   },
 
-  /** Pedido do Rafael, 07/08/2026: avisar quando o anexo já vem assinado
-   * digitalmente, com a comprovação pronta para incorporar no corpo do
-   * e-mail. Roda sobre os MESMOS bytes do `<input type="file">`, antes ou
-   * em paralelo ao upload — o Mail360 não devolve o conteúdo de um anexo
-   * ainda não enviado. */
   verificarAssinaturaAnexo: (arquivo: File) => {
     const form = new FormData();
     form.append("arquivo", arquivo);
@@ -79,7 +81,7 @@ export const apiEmail = {
     const token = tokenEmail.get();
     if (token) headers.set("Authorization", `Bearer ${token}`);
     const caminho = `/email/mensagens/${encodeURIComponent(messageId)}/anexos/${encodeURIComponent(attachmentId)}?nome=${encodeURIComponent(nome)}`;
-    const res = await fetch(`${BASE}${caminho}`, { headers });
+    const res = await fetch(`${BASE}${caminho}`, { headers, cache: "no-store" });
     if (res.status === 401) {
       tokenEmail.clear();
       throw new ApiEmailError(401, "Sessão da caixa de e-mail expirada.");
@@ -98,16 +100,10 @@ export const apiEmail = {
     URL.revokeObjectURL(url);
   },
 
-  /** Fora de `request()` de propósito: login nunca tem token prévio pra
-   *  expirar, então um 401 aqui é sempre "endereço ou senha incorretos" (ou,
-   *  no caso mais comum de quem nunca ativou a caixa, "conta inexistente")
-   *  — nunca "sessão expirada". Roteado pelo `request()` genérico, a
-   *  mensagem real do backend (`detail`) era descartada e trocada por
-   *  "Sessão da caixa de e-mail expirada", que confunde quem está entrando
-   *  pela primeira vez tanto quanto quem de fato só errou a senha. */
   async entrar(endereco: string, senha: string, permanecerConectado = false) {
     const res = await fetch(`${BASE}/email/entrar`, {
       method: "POST",
+      cache: "no-store",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ endereco, senha, permanecer_conectado: permanecerConectado }),
     });
@@ -116,7 +112,7 @@ export const apiEmail = {
       throw new ApiEmailError(res.status, detail?.detail ?? "Não foi possível entrar.");
     }
     const dados = (await res.json()) as { access_token: string };
-    tokenEmail.set(dados.access_token);
+    tokenEmail.set(dados.access_token, permanecerConectado);
     return dados;
   },
 };
