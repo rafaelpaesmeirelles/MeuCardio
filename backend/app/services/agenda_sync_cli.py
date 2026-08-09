@@ -2,8 +2,9 @@
 
 O supervisor é tolerante a falhas e respeita cada preferência do usuário.
 Calendário e contatos só são sincronizados quando habilitados; e-mail não é
-copiado para o banco (a caixa é proxy ao vivo), mas contas OAuth com e-mail
-habilitado recebem um heartbeat de credencial para renovação proativa.
+copiado para o banco (a caixa é proxy ao vivo), mas toda conta com e-mail
+habilitado recebe um heartbeat de credencial: OAuth para Google/Microsoft e
+login IMAP para Yahoo/iCloud.
 """
 
 from __future__ import annotations
@@ -13,9 +14,10 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.agenda import CalendarIntegration
+from app.services import apple_mail, yahoo_mail
 from app.services.agenda_integrada.connectors import ConnectorError
 from app.services.agenda_integrada.contacts import sync_contacts
-from app.services.agenda_integrada.domain import sync_integration
+from app.services.agenda_integrada.domain import integration_credentials, sync_integration
 from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -26,6 +28,7 @@ ERROS_REAUTENTICACAO = {
     "reauth_required", "invalid_grant", "interaction_required", "consent_required",
 }
 PROVEDORES_OAUTH = {"google_calendar", "microsoft_365"}
+PROVEDORES_IMAP = {"yahoo_mail", "apple_icloud"}
 
 
 def _registrar_falha(db, integration_id: int, exc: ConnectorError) -> CalendarIntegration | None:
@@ -37,6 +40,15 @@ def _registrar_falha(db, integration_id: int, exc: ConnectorError) -> CalendarIn
     item.status = "reauth_required" if exc.code in ERROS_REAUTENTICACAO else "connected"
     db.commit()
     return item
+
+
+def _heartbeat_imap(item: CalendarIntegration) -> dict:
+    credenciais = integration_credentials(item)
+    if item.provider == "yahoo_mail":
+        return yahoo_mail.diagnose(credenciais)
+    if item.provider == "apple_icloud":
+        return apple_mail.diagnose(credenciais)
+    return {"ok": True}
 
 
 def sincronizar_todas() -> dict:
@@ -59,20 +71,40 @@ def sincronizar_todas() -> dict:
             heartbeat_mail = None
             erro_calendario = erro_contatos = erro_mail = None
 
-            # 1) Heartbeat do CorvIA Mail. Não baixa mensagens: apenas garante
-            # que OAuth continua renovável. Yahoo/iCloud usam senha de app e
-            # são validados quando o próprio IMAP/SMTP é acessado.
+            # 1) Heartbeat do CorvIA Mail. Nenhuma mensagem é copiada.
             mail_aplicavel = bool(item.sync_mail and (item.capabilities or {}).get("read_mail"))
             if mail_aplicavel and item.provider in PROVEDORES_OAUTH:
                 try:
                     ensure_fresh_credentials(db, item)
-                    heartbeat_mail = {"ok": True}
+                    heartbeat_mail = {"ok": True, "modo": "oauth"}
                 except ConnectorError as exc:
                     db.rollback()
                     erro_mail = exc.code
                     item = _registrar_falha(db, integration_id, exc) or item
+            elif mail_aplicavel and item.provider in PROVEDORES_IMAP:
+                try:
+                    heartbeat_mail = {**_heartbeat_imap(item), "modo": "imap"}
+                except (yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
+                    db.rollback()
+                    item = db.get(CalendarIntegration, integration_id) or item
+                    # Nos adaptadores IMAP, 401 significa senha de aplicativo
+                    # recusada/revogada. Erro de rede/servidor (502/503) é
+                    # transitório e não deve tirar a conta do supervisor.
+                    status_code = getattr(exc, "status_code", 502)
+                    if status_code in {401, 403, 409}:
+                        erro_mail = "reauth_required"
+                        item.status = "reauth_required"
+                        item.last_error_code = "reauth_required"
+                        item.last_error_message = str(exc)[:500]
+                    else:
+                        erro_mail = "mail_provider_unavailable"
+                        item.status = "connected"
+                        item.last_error_code = erro_mail
+                        item.last_error_message = str(exc)[:500]
+                    db.commit()
 
             # 2) Calendário respeita explicitamente sync_calendar.
+            item = db.get(CalendarIntegration, integration_id) or item
             calendario_aplicavel = bool(item.sync_calendar and item.status != "reauth_required")
             if calendario_aplicavel:
                 try:
