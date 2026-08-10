@@ -78,6 +78,10 @@ EXPECTED_BACKEND_ROUTERS = {
     # Faltava aqui — lacuna pré-existente encontrada e fechada durante a tarefa
     # #53 (timeline de evolução do conhecimento), sem relação direta com ela.
     "related_content.router",
+    # Grafo de Conhecimento Clínico Universal (issue #52, nova fase, 11/08/2026):
+    # `GET /api/grafo/relacionados` — camada persistida/tipada, distinta do
+    # cruzamento em tempo de consulta de `related_content.router` acima.
+    "knowledge_graph.router",
 }
 
 EXPECTED_SUPPORT_FILES = {

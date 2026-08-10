@@ -33,3 +33,4 @@ from app.models.agenda import (  # noqa: F401
     MobilityPreference, SchedulingResource,
     SchedulingService, ServiceResourceRequirement,
 )
+from app.models.knowledge import KnowledgeEntity, KnowledgeRelation  # noqa: F401

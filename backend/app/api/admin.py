@@ -15,6 +15,7 @@ from app.models.content import Document
 from app.models.kyc import KycVerification
 from app.models.user import User
 from app.services import emails
+from app.services.knowledge_graph import backfill_mesmo_tema
 from app.services.kyc import verificacao as kyc_verificacao
 from app.services.professional_profile import normalize_council, normalize_professional_title
 
@@ -880,3 +881,19 @@ def rejeitar_verificacao(item_id: int, dados: DecisaoKyc, db: Session = Depends(
     ))
     db.commit()
     return {"id": item.id, "status": item.status}
+
+
+@router.post("/grafo/backfill")
+def backfill_grafo_conhecimento(db: Session = Depends(get_db), admin=Depends(require_admin)):
+    """Semeia/atualiza o Grafo de Conhecimento Clínico Universal a partir do
+    metadado já publicado (issue #52, nova fase) — idempotente e
+    não-destrutivo, pode ser chamado quantas vezes for preciso (ex.: depois
+    de publicar conteúdo novo). Nunca toca em dado de paciente — só as
+    frentes de conteúdo global já cobertas pelo allowlist do modelo."""
+    resultado = backfill_mesmo_tema(db)
+    db.add(AuditLog(
+        user_id=admin.id, action="grafo_backfill", entity="knowledge_graph",
+        detail=resultado,
+    ))
+    db.commit()
+    return resultado
