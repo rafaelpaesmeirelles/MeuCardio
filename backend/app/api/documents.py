@@ -20,9 +20,9 @@ from app.models.patient_document_email_send import (
     CANAL_AUTO_CONTATO_CORVIA, CANAL_PROPRIO_CORVIA_MAIL, TIPO_DOCUMENTO_GERADO,
     PatientDocumentEmailSend,
 )
-from app.models.round import Patient
 from app.services import anexo_email_proprio, cofre, emails, envio_documento_email
 from app.services.assinatura import divulgacao_email
+from app.services.clinical_ownership import patient_for_user
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.professional_profile import (
     document_identity, normalize_search_text, professional_name,
@@ -90,9 +90,7 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
         raise HTTPException(status_code=404, detail="Template não encontrado.")
 
     if dados.patient_id is not None:
-        p = db.get(Patient, dados.patient_id)
-        if not p or p.created_by != user.id:
-            raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+        patient_for_user(dados.patient_id, db, user)
 
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")

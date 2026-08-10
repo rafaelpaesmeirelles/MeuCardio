@@ -8,9 +8,9 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.audit import AuditLog
 from app.models.clinical_docs import GeneratedDocument
-from app.models.round import Patient
 from app.services import calculators as calc
 from app.services import cofre
+from app.services.clinical_ownership import patient_for_user
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
 from app.services.professional_profile import document_identity
 
@@ -112,9 +112,7 @@ def gerar_documento(
     if not c:
         raise HTTPException(status_code=404, detail="Calculadora não encontrada.")
     if dados.patient_id is not None:
-        p = db.get(Patient, dados.patient_id)
-        if not p or p.created_by != user.id:
-            raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+        patient_for_user(dados.patient_id, db, user)
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
 
