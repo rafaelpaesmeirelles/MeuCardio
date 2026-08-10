@@ -124,6 +124,75 @@ def test_baixar_foto_publica_ignora_perfil_privado(monkeypatch):
     assert instagram_profile._baixar_foto_publica("perfil_privado") is None
 
 
+def test_host_de_cdn_confiavel_aceita_dominios_da_meta():
+    assert instagram_profile._host_de_cdn_confiavel(
+        "https://scontent-gru2-1.cdninstagram.com/v/foto.jpg"
+    )
+    assert instagram_profile._host_de_cdn_confiavel("https://instagram.fbcdn.net/foto.jpg")
+    assert instagram_profile._host_de_cdn_confiavel("https://cdninstagram.com/foto.jpg")
+
+
+def test_host_de_cdn_confiavel_rejeita_dominio_arbitrario_ou_nao_https():
+    """Achado de auditoria (issue #52, subfase 8, defesa em profundidade):
+    `url_foto` vem do corpo da resposta do Instagram, não de um valor fixo
+    nosso — sem esta checagem, uma resposta inesperada (endpoint mudado,
+    comprometido) faria o servidor buscar QUALQUER destino que a resposta
+    contivesse."""
+    assert not instagram_profile._host_de_cdn_confiavel("https://cdninstagram.com.attacker.test/x.jpg")
+    assert not instagram_profile._host_de_cdn_confiavel("https://169.254.169.254/latest/meta-data/")
+    assert not instagram_profile._host_de_cdn_confiavel("http://cdninstagram.com/x.jpg")  # http, não https
+    assert not instagram_profile._host_de_cdn_confiavel("not-a-url")
+    assert not instagram_profile._host_de_cdn_confiavel("")
+
+
+def test_baixar_foto_publica_nao_busca_url_de_host_nao_confiavel(monkeypatch):
+    chamadas = []
+
+    class _RespostaPerfil:
+        status_code = 200
+
+        def json(self):
+            return {"data": {"user": {
+                "is_private": False,
+                "profile_pic_url_hd": "https://evil.example/x.jpg",
+            }}}
+
+    def _get(url, *args, **kwargs):
+        chamadas.append(url)
+        return _RespostaPerfil()
+
+    monkeypatch.setattr(instagram_profile.httpx, "get", _get)
+    assert instagram_profile._baixar_foto_publica("handle_qualquer") is None
+    # Só a chamada ao endpoint fixo do Instagram — a segunda chamada (buscar
+    # a própria imagem) nunca acontece contra um host não confiável.
+    assert chamadas == [instagram_profile._ENDPOINT]
+
+
+def test_baixar_foto_publica_busca_imagem_de_host_confiavel(monkeypatch):
+    chamadas = []
+
+    class _RespostaPerfil:
+        status_code = 200
+
+        def json(self):
+            return {"data": {"user": {
+                "is_private": False,
+                "profile_pic_url_hd": "https://scontent.cdninstagram.com/v/foto.jpg",
+            }}}
+
+    class _RespostaImagem:
+        status_code = 200
+        content = b"conteudo-da-imagem"
+
+    def _get(url, *args, **kwargs):
+        chamadas.append(url)
+        return _RespostaImagem() if "cdninstagram.com" in url else _RespostaPerfil()
+
+    monkeypatch.setattr(instagram_profile.httpx, "get", _get)
+    assert instagram_profile._baixar_foto_publica("handle_qualquer") == b"conteudo-da-imagem"
+    assert chamadas == [instagram_profile._ENDPOINT, "https://scontent.cdninstagram.com/v/foto.jpg"]
+
+
 def test_perfil_expoe_instagram_handle_e_foto(client, db):
     resp = client.post("/api/auth/solicitar-acesso", json=_payload(email="ana7@teste.local"))
     assert resp.status_code == 201

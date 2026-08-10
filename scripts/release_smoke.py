@@ -109,7 +109,12 @@ def run(args: argparse.Namespace) -> None:
         "/api/auth/sessao",
         form={"username": args.email, "password": args.password},
     )
-    if login != {"authenticated": True}:
+    # Checagem por campo, não por igualdade do dict inteiro: a resposta
+    # ganhou o campo `persistent` (09/08/2026, "permanecer conectado") sem
+    # que este smoke fosse atualizado — igualdade estrita quebrava o release
+    # flow da CI a cada login bem-sucedido, mesmo com o backend saudável.
+    # Achado de auditoria, issue #52 subfase 8.
+    if login.get("authenticated") is not True:
         raise SmokeFailure(f"resposta de login inesperada: {login!r}")
 
     set_cookie = response.headers.get("Set-Cookie", "")
@@ -117,7 +122,13 @@ def run(args: argparse.Namespace) -> None:
     required_cookie_attributes = {
         "corvia_session=": "corvia_session=",
         "httponly": "HttpOnly",
-        "samesite=strict": "SameSite=Strict",
+        # SameSite=Lax, não Strict, desde a correção do bug de reconexão
+        # OAuth de 09/08/2026 (Strict retinha o cookie no retorno do
+        # consentimento Google/Microsoft, devolvendo o médico à tela de
+        # login no meio do fluxo — ver app/core/security.py,
+        # gravar_cookie_sessao()). Achado de auditoria, issue #52 subfase 8:
+        # este smoke ainda exigia o valor antigo.
+        "samesite=lax": "SameSite=Lax",
     }
     missing = [label for attribute, label in required_cookie_attributes.items() if attribute not in cookie_lower]
     if args.expect_secure_cookie and "secure" not in cookie_lower:

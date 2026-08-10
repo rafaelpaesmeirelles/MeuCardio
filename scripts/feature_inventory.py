@@ -55,7 +55,13 @@ EXPECTED_NAV_ROUTES = {
 EXPECTED_BACKEND_ROUTERS = {
     "health.router", "auth.router", "browser_session.router", "password_reset.router",
     "sessions.router", "billing.router", "admin.router", "service_orders.router",
-    "partner_courses.router", "email_api.router", "documentos_publicos.router",
+    "partner_courses.router", "email_api.router",
+    # CorvIA Mail — renovação/persistência da sessão própria da caixa
+    # (commits 866f0caa/940a812c, 09/08/2026). Faltava aqui — lacuna
+    # pré-existente à branch de estabilização (issue #52), encontrada e
+    # fechada na subfase 8 (Release Candidate), mesmo padrão de
+    # `related_content.router` logo abaixo.
+    "email_session.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
     "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",

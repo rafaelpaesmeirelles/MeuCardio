@@ -37,6 +37,7 @@ nunca deve derrubar o cadastro nem travar o carregamento de tela nenhuma.
 import logging
 import secrets
 from pathlib import Path
+from urllib.parse import urlparse
 
 import httpx
 
@@ -44,6 +45,30 @@ from app.core.config import settings
 from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
 
 log = logging.getLogger("meucardio.instagram")
+
+# Achado de auditoria (issue #52, subfase 8): `url_foto`, usada para a
+# segunda chamada de rede abaixo, vem do CORPO da resposta do Instagram, não
+# de um valor fixo nosso — em condição normal é sempre um domínio de CDN da
+# Meta, mas nada no código validava isso antes de buscar. Defesa em
+# profundidade contra a resposta um dia trazer um destino inesperado (ex.:
+# endpoint comprometido, formato mudado): só busca se o host for um dos
+# domínios de CDN conhecidos da Meta, sempre por HTTPS. Severidade baixa na
+# prática — o conteúdo baixado já passa por `validate_file` antes de
+# persistir, e nada da resposta é devolvido ao cliente —, mas o custo da
+# checagem é mínimo.
+_HOSTS_CDN_PERMITIDOS = ("cdninstagram.com", "fbcdn.net")
+
+
+def _host_de_cdn_confiavel(url: str) -> bool:
+    try:
+        partes = urlparse(url)
+    except ValueError:
+        return False
+    if partes.scheme != "https" or not partes.hostname:
+        return False
+    host = partes.hostname.lower()
+    return any(host == dominio or host.endswith(f".{dominio}") for dominio in _HOSTS_CDN_PERMITIDOS)
+
 
 _ENDPOINT = "https://i.instagram.com/api/v1/users/web_profile_info/"
 # Id de aplicação público que o próprio site instagram.com usa para montar a
@@ -80,10 +105,10 @@ def _baixar_foto_publica(handle: str) -> bytes | None:
         if not usuario or usuario.get("is_private"):
             return None
         url_foto = usuario.get("profile_pic_url_hd") or usuario.get("profile_pic_url")
-        if not url_foto:
+        if not url_foto or not _host_de_cdn_confiavel(url_foto):
             return None
 
-        imagem = httpx.get(url_foto, headers={"User-Agent": _USER_AGENT}, timeout=_TIMEOUT)
+        imagem = httpx.get(url_foto, headers={"User-Agent": _USER_AGENT}, timeout=_TIMEOUT, follow_redirects=False)
         if imagem.status_code != 200 or not imagem.content:
             return None
         return imagem.content

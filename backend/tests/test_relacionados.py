@@ -140,18 +140,27 @@ def test_tema_sem_item_relacionado_devolve_lista_vazia_sem_erro(client, db, cria
 
 
 def test_medicamentos_entram_so_no_tema_farmacologia(client, db, criar_usuario):
+    """Achado de auditoria (issue #52, subfase 8): duas chamadas a
+    `_headers(criar_usuario)` no mesmo teste criavam DOIS usuários com o
+    mesmo e-mail padrão (`criar_usuario(role="admin")` sem argumento) —
+    violação de unicidade determinística a cada execução, não uma
+    intermitência. O `_banco_limpo` autouse só trunca uma vez por teste, não
+    entre as duas chamadas dentro do mesmo corpo. Corrigido reaproveitando o
+    mesmo cabeçalho para as duas requisições (mesma sessão admin nas duas,
+    de qualquer forma)."""
     _limpar(db)
     db.add(Drug(
         slug="losartana", generic_name="Losartana", drug_class="BRA",
         review_status="revisado", published=True,
     ))
     db.commit()
+    headers = _headers(criar_usuario)
 
-    r_farma = client.get("/api/relacionados?tema=Farmacologia", headers=_headers(criar_usuario))
+    r_farma = client.get("/api/relacionados?tema=Farmacologia", headers=headers)
     por_tipo = {g["tipo"]: g["itens"] for g in r_farma.json()["grupos"]}
     assert [i["slug"] for i in por_tipo["medicamento"]] == ["losartana"]
 
-    r_outro = client.get(f"/api/relacionados?tema={TEMA}", headers=_headers(criar_usuario))
+    r_outro = client.get(f"/api/relacionados?tema={TEMA}", headers=headers)
     por_tipo_outro = {g["tipo"]: g["itens"] for g in r_outro.json()["grupos"]}
     assert por_tipo_outro["medicamento"] == []
 
