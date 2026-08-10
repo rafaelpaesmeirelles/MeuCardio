@@ -8,7 +8,20 @@ const sourceRoot = new URL("../src/", import.meta.url);
 // por e-mail. Esse HTML é sanitizado e renderizado em iframe isolado, com CSP
 // própria e sandbox sem allow-scripts. As invariantes abaixo tornam a exceção
 // mais restritiva que uma simples allowlist e falham se a proteção for removida.
-const APPROVED_EMAIL_RENDERER = "pages/CaixaDeEmail.tsx";
+//
+// Achado de auditoria (issue #52, subfase 5): esta constante apontava para
+// "pages/CaixaDeEmail.tsx", que virou um shim de 1 linha
+// (`export { default } from "./CaixaDeEmailProfessional"`) quando a caixa foi
+// redesenhada — a sanitização de verdade (DOMParser, remoção de tag/atributo
+// perigoso, iframe sandboxed sem allow-scripts, CSP própria) está em
+// CaixaDeEmailProfessional.tsx desde então. O gate ficou cego ao arquivo real
+// (checava um shim sem nenhum dos padrões e sinalizava o arquivo de verdade
+// como uso não aprovado de DOMParser/srcDoc) sem que ninguém notasse — o
+// CI não bloqueia local, só roda em push. Confirmado por leitura, não só
+// pelo check: a implementação real em CaixaDeEmailProfessional.tsx já
+// satisfazia todas as invariantes antes desta correção; produção nunca
+// esteve exposta, só o gate estava apontando para o arquivo errado.
+const APPROVED_EMAIL_RENDERER = "pages/CaixaDeEmailProfessional.tsx";
 
 const forbiddenPatterns = [
   {

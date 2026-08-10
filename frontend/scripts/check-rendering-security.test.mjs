@@ -3,7 +3,7 @@ import test from "node:test";
 
 import { validateRenderingSource } from "./check-rendering-security.mjs";
 
-const approvedPath = "pages/CaixaDeEmail.tsx";
+const approvedPath = "pages/CaixaDeEmailProfessional.tsx";
 const protectedRenderer = `
   const parser = new DOMParser();
   const document = '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'">';
