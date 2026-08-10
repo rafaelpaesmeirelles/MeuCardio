@@ -59,6 +59,19 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
+def _dar_assinatura_principal(db, user) -> None:
+    """`assinante_ativo` (app/main.py, dependência global dos routers
+    assinantes, inclusive `documents.router`) exige
+    `Subscription(kind='meucardio')` — o add-on de e-mail sozinho
+    (`kind='email'`) não a substitui, e sem ela `/envio-paciente` nunca é
+    alcançado (402 antes de qualquer checagem da própria rota). Todo teste
+    que bate na rota HTTP real precisa desta assinatura, inclusive os que
+    testam a AUSÊNCIA de CorvIA Mail — só o add-on de e-mail varia por
+    teste (achado de auditoria, issue #52 subfase 3)."""
+    db.add(Subscription(user_id=user.id, kind="meucardio", plano="basico", status="ativo"))
+    db.commit()
+
+
 def _ativar_corvia_mail(db, user, email_address: str) -> EmailAccount:
     db.add(Subscription(user_id=user.id, kind="email", status="ativo"))
     conta = EmailAccount(
@@ -137,6 +150,7 @@ def _configurar_smtp_ok(monkeypatch, enviados: list):
 class TestSemCorviaMail:
     def test_canal_auto_recusa_409(self, client, db, criar_usuario):
         user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
         gerado = _criar_gerado(db, user)
         _emitir(db, user, gerado.id, nivel="qualificada")
 
@@ -150,6 +164,7 @@ class TestSemCorviaMail:
 
     def test_canal_proprio_recusa_409(self, client, db, criar_usuario):
         user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
         gerado = _criar_gerado(db, user)
         _emitir(db, user, gerado.id, nivel="qualificada")
 
@@ -164,6 +179,7 @@ class TestSemCorviaMail:
 class TestCanalAutomaticoContatoCorvia:
     def test_envia_pela_corvia_com_smtp_configurado(self, client, db, criar_usuario, monkeypatch):
         user, token = criar_usuario(email="medico-auto-doc@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-auto-doc@corvia.med.br")
         gerado = _criar_gerado(db, user)
         _emitir(db, user, gerado.id, nivel="qualificada")
@@ -200,6 +216,7 @@ class TestCanalAutomaticoContatoCorvia:
         # configurado" por padrão, mesmo comportamento honesto do resto do
         # projeto (nunca finge que enviou).
         user, token = criar_usuario(email="medico-auto-doc2@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-auto-doc2@corvia.med.br")
         gerado = _criar_gerado(db, user)
         _emitir(db, user, gerado.id, nivel="qualificada")
@@ -218,6 +235,7 @@ class TestCanalAutomaticoContatoCorvia:
 class TestCanalProprioCorviaMail:
     def test_exige_assinatura_concluida(self, client, db, criar_usuario):
         user, token = criar_usuario(email="medico-proprio-doc@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-proprio-doc@corvia.med.br")
         gerado = _criar_gerado(db, user)
         # Nunca chamou `_emitir` — nenhum `DocumentoEmitido` existe ainda.
@@ -234,6 +252,7 @@ class TestCanalProprioCorviaMail:
         self, client, db, criar_usuario, monkeypatch_mail360,
     ):
         user, token = criar_usuario(email="medico-proprio-doc2@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-proprio-doc2@corvia.med.br")
         gerado = _criar_gerado(db, user)
         _emitir(db, user, gerado.id, nivel="qualificada")
@@ -263,6 +282,7 @@ class TestCanalProprioCorviaMail:
         self, client, db, criar_usuario, monkeypatch_mail360,
     ):
         user, token = criar_usuario(email="medico-proprio-manual@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-proprio-manual@corvia.med.br")
         gerado = _criar_gerado(db, user)
         _emitir(db, user, gerado.id, nivel="nenhuma")

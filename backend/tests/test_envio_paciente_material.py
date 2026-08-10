@@ -2,15 +2,46 @@
 ao paciente por e-mail do documento assinado, para Material ao Paciente
 (pedido do Rafael, 08/08/2026), SEM exigir assinatura digital (este material
 não é documento clínico assinado).
-"""
+
+`patient_materials` é tabela de conteúdo — o `_banco_limpo` autouse do
+conftest não a limpa de propósito (cobre só a suíte do CorvIA Mail; ver
+comentário em `TABELAS_PARA_LIMPAR`). Este arquivo insere `PatientMaterial`
+com slug fixo por teste, então precisa do próprio truncamento local, mesmo
+padrão já usado em `test_relacionados.py`/`test_library_catalog.py` —
+achado de auditoria (issue #52 subfase 3): sem ele, rodar esta suíte mais
+de uma vez contra o mesmo banco de teste (ex.: dentro de uma seleção maior
+de testes que já a exercitou antes) colide em
+`uq_patient_materials_slug`."""
+import pytest
+from sqlalchemy import text
+
 from app.models.email_account import EmailAccount
 from app.models.patient_document_email_send import PatientDocumentEmailSend
 from app.models.patient_material import PatientMaterial
 from app.models.subscription import Subscription
 
 
+@pytest.fixture(autouse=True)
+def _limpar_patient_materials(db):
+    db.execute(text("TRUNCATE patient_materials RESTART IDENTITY CASCADE"))
+    db.commit()
+
+
 def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
+
+
+def _dar_assinatura_principal(db, user) -> None:
+    """`assinante_ativo` (app/main.py, dependência global dos routers
+    assinantes, inclusive `exportacao.router`) exige
+    `Subscription(kind='meucardio')` — o add-on de e-mail sozinho
+    (`kind='email'`) não a substitui, e sem ela `/envio-paciente` nunca é
+    alcançado (402 antes de qualquer checagem da própria rota). Todo teste
+    que bate na rota HTTP real precisa desta assinatura, inclusive os que
+    testam a AUSÊNCIA de CorvIA Mail — só o add-on de e-mail varia por
+    teste (achado de auditoria, issue #52 subfase 3)."""
+    db.add(Subscription(user_id=user.id, kind="meucardio", plano="basico", status="ativo"))
+    db.commit()
 
 
 def _ativar_corvia_mail(db, user, email_address: str) -> EmailAccount:
@@ -64,6 +95,7 @@ def _configurar_smtp_ok(monkeypatch, enviados: list):
 class TestSemCorviaMail:
     def test_recusa_409(self, client, db, criar_usuario):
         user, token = criar_usuario(email="medico-sem-mail-mat@teste.local")
+        _dar_assinatura_principal(db, user)
         m = _material(db, "fibrilacao-atrial-teste-sem-mail")
 
         resposta = client.post(
@@ -80,6 +112,7 @@ class TestSemCorviaMail:
 class TestConsentimentoObrigatorio:
     def test_sem_consentimento_422(self, client, db, criar_usuario):
         user, token = criar_usuario(email="medico-consent-mat@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-consent-mat@corvia.med.br")
         m = _material(db, "fibrilacao-atrial-teste-consentimento")
 
@@ -97,6 +130,7 @@ class TestConsentimentoObrigatorio:
 class TestCanalAutomaticoContatoCorvia:
     def test_envia_pela_corvia_sem_assinatura_exigida(self, client, db, criar_usuario, monkeypatch):
         user, token = criar_usuario(email="medico-auto-mat@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-auto-mat@corvia.med.br")
         m = _material(db, "fibrilacao-atrial-teste-auto")
 
@@ -129,6 +163,7 @@ class TestCanalAutomaticoContatoCorvia:
 class TestCanalProprioCorviaMail:
     def test_anexa_pdf_do_material_de_verdade(self, client, db, criar_usuario, monkeypatch_mail360):
         user, token = criar_usuario(email="medico-proprio-mat@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-proprio-mat@corvia.med.br")
         m = _material(db, "fibrilacao-atrial-teste-proprio")
 
@@ -156,6 +191,7 @@ class TestLimiteDiario:
         from app.api import exportacao
 
         user, token = criar_usuario(email="medico-limite-mat@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-limite-mat@corvia.med.br")
         m = _material(db, "fibrilacao-atrial-teste-limite")
 

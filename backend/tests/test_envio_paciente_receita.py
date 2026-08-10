@@ -53,6 +53,21 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
+def _dar_assinatura_principal(db, user) -> None:
+    """`assinante_ativo` (app/main.py, dependência global dos routers
+    assinantes, inclusive `receituario.router`) exige
+    `Subscription(kind='meucardio')` — o add-on de e-mail sozinho
+    (`kind='email'`) não a substitui, e sem ela `/envio-paciente` nunca é
+    alcançado (402 antes de qualquer checagem da própria rota). Todo teste
+    que bate na rota HTTP real precisa desta assinatura, inclusive os que
+    testam a AUSÊNCIA de CorvIA Mail — só o add-on de e-mail varia por
+    teste (achado de auditoria, issue #52 subfase 3: os testes deste
+    arquivo nunca tinham rodado limpos e isolados o suficiente para expor
+    esta lacuna de fixture)."""
+    db.add(Subscription(user_id=user.id, kind="meucardio", plano="basico", status="ativo"))
+    db.commit()
+
+
 def _ativar_corvia_mail(db, user, email_address: str) -> EmailAccount:
     db.add(Subscription(user_id=user.id, kind="email", status="ativo"))
     conta = EmailAccount(
@@ -86,12 +101,25 @@ def _criar_documento_emitido(db, user) -> PrescriptionDocument:
 
 
 def _emitir(db, user, doc_id: int, *, nivel: str) -> DocumentoEmitido:
-    pdf_falso = b"%PDF-1.4 conteudo de teste\n%%EOF"
-    nome_arquivo = cofre.guardar(pdf_falso, user.id, raiz=assinatura_emissao._raiz())
+    if nivel == "qualificada":
+        # PDF com assinatura digital REAL embutida — achado de auditoria
+        # (issue #52 subfase 3): este helper usava um PDF falso mesmo para
+        # nivel="qualificada", e `divulgacao_email.texto_divulgacao()` lê o
+        # arquivo de verdade (pyhanko), nunca confia no `nivel` gravado no
+        # banco — resultando em `assinatura_confirmada=False` mesmo quando
+        # o cenário testado é justamente o de assinatura confirmada. Mesmo
+        # padrão já usado em `test_envio_paciente_documento_gerado.py`.
+        pfx = _gerar_pfx()
+        pdf = pdf_signer.assinar_pdf(
+            _pdf_minimo(), pfx_bytes=pfx, senha="senha123", motivo="teste", local="teste",
+        )
+    else:
+        pdf = b"%PDF-1.4 conteudo de teste\n%%EOF"
+    nome_arquivo = cofre.guardar(pdf, user.id, raiz=assinatura_emissao._raiz())
     registro = DocumentoEmitido(
         tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc_id,
         metodo="A1_ARQUIVO" if nivel == "qualificada" else "MANUAL", nivel=nivel,
-        arquivo_nome=nome_arquivo, sha256="y" * 64, bytes_tam=len(pdf_falso),
+        arquivo_nome=nome_arquivo, sha256="y" * 64, bytes_tam=len(pdf),
         assinado_em=datetime.datetime.now(datetime.timezone.utc), criado_por=user.id,
     )
     db.add(registro)
@@ -127,6 +155,7 @@ def _configurar_smtp_ok(monkeypatch, enviados: list):
 class TestSemCorviaMail:
     def test_recusa_409_mesmo_com_assinatura_qualificada(self, client, db, criar_usuario):
         user, token = criar_usuario(email="medico-sem-mail-rx@teste.local")
+        _dar_assinatura_principal(db, user)
         doc = _criar_documento_emitido(db, user)
         _emitir(db, user, doc.id, nivel="qualificada")
 
@@ -141,6 +170,7 @@ class TestSemCorviaMail:
 class TestExigeAssinaturaQualificada:
     def test_metodo_manual_recusa_os_dois_canais(self, client, db, criar_usuario):
         user, token = criar_usuario(email="medico-manual-rx@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-manual-rx@corvia.med.br")
         doc = _criar_documento_emitido(db, user)
         _emitir(db, user, doc.id, nivel="nenhuma")
@@ -158,6 +188,7 @@ class TestExigeAssinaturaQualificada:
 class TestCanalAutomaticoContatoCorvia:
     def test_envia_pela_corvia_com_confirmacao_de_assinatura(self, client, db, criar_usuario, monkeypatch):
         user, token = criar_usuario(email="medico-auto-rx@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-auto-rx@corvia.med.br")
         doc = _criar_documento_emitido(db, user)
         _emitir(db, user, doc.id, nivel="qualificada")
@@ -188,6 +219,7 @@ class TestCanalAutomaticoContatoCorvia:
 class TestCanalProprioCorviaMail:
     def test_prepara_anexo_com_nome_de_arquivo_por_tipo(self, client, db, criar_usuario, monkeypatch_mail360):
         user, token = criar_usuario(email="medico-proprio-rx@teste.local")
+        _dar_assinatura_principal(db, user)
         _ativar_corvia_mail(db, user, "medico-proprio-rx@corvia.med.br")
         doc = _criar_documento_emitido(db, user)
         _emitir(db, user, doc.id, nivel="qualificada")
@@ -213,6 +245,7 @@ class TestCanalProprioCorviaMail:
         # caso o gate de rota mude no futuro; hoje os dois já bloqueiam
         # juntos, então o teste também serve de trava de regressão.
         user, token = criar_usuario(email="medico-sem-caixa-rx@teste.local")
+        _dar_assinatura_principal(db, user)
         db.add(Subscription(user_id=user.id, kind="email", status="ativo"))
         db.commit()
         doc = _criar_documento_emitido(db, user)
