@@ -25,6 +25,28 @@ def version() -> dict[str, str]:
     return {"commit": os.getenv("DEPLOY_COMMIT", "unknown")}
 
 
+def _pool_stats() -> dict[str, int] | None:
+    """Estatísticas do pool de conexões do SQLAlchemy — só inteiros, sem
+    nenhum dado de conexão (host/usuário/senha continuam só no `.env`).
+    Achado de auditoria (issue #52, subfase 6): não havia nenhuma forma de
+    observar o pool antes desta rota ganhar este campo — `/api/ready` só
+    testava UMA conexão avulsa (`SELECT 1`), que não revela esgotamento do
+    pool sob carga real. Informativo, nunca decide o status 503 sozinho:
+    pool cheio não é necessariamente indisponibilidade (pode ser só pico de
+    tráfego legítimo), e um `.pool` sem os atributos esperados (implementação
+    de pool não padrão) não pode derrubar o readiness por isso."""
+    try:
+        pool = engine.pool
+        return {
+            "size": pool.size(),
+            "checked_out": pool.checkedout(),
+            "checked_in": pool.checkedin(),
+            "overflow": pool.overflow(),
+        }
+    except Exception:
+        return None
+
+
 @router.get("/ready")
 def ready() -> dict[str, object]:
     """Readiness: exige banco e Redis disponíveis antes de receber tráfego."""
@@ -68,4 +90,8 @@ def ready() -> dict[str, object]:
             detail={"status": "not_ready", "components": components},
         )
 
-    return {"status": "ready", "components": components}
+    resultado: dict[str, object] = {"status": "ready", "components": components}
+    pool = _pool_stats()
+    if pool is not None:
+        resultado["database_pool"] = pool
+    return resultado
