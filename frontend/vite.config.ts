@@ -67,9 +67,31 @@ export default defineConfig({
             }
           },
           {
-            // Ecossistema em atualização contínua: nenhuma resposta de API é
-            // servida do cache do service worker. Isso abrange conteúdo,
-            // agenda, CorvIA Mail, dados clínicos e status de versão.
+            // Achado na revisão de segurança da issue #52 (11/08/2026): o
+            // NetworkOnly genérico abaixo, ao passar a cobrir TODO /api/*,
+            // engoliu sem querer a exceção deliberada do Modo Emergência —
+            // desenhado desde 03/08/2026 para funcionar OFFLINE depois do
+            // primeiro carregamento (documentado em CLAUDE.md: "o modo
+            // offline-first do Emergência não dispara requisição de rede
+            // depois de aberto"; é por isso, inclusive, que o Hub de
+            // integração "Tudo sobre este tema" foi excluído do Modo
+            // Emergência de propósito — essa garantia não podia quebrar).
+            // Precisa vir ANTES da regra genérica: o Workbox usa a primeira
+            // rota que casa, e um urlPattern mais específico só "vence" um
+            // mais genérico se estiver antes na lista.
+            urlPattern: /\/api\/emergencia/,
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "corvia-emergencia-v2",
+              expiration: { maxEntries: 8 },
+              cacheableResponse: { statuses: [200] }
+            }
+          },
+          {
+            // Ecossistema em atualização contínua: nenhuma outra resposta de
+            // API é servida do cache do service worker. Isso abrange
+            // conteúdo, agenda, CorvIA Mail, dados clínicos e status de
+            // versão — a única exceção deliberada é /api/emergencia, acima.
             urlPattern: /\/api\//,
             handler: "NetworkOnly"
           }
