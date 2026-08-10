@@ -179,6 +179,24 @@ Adicione:
 
 A retenção padrão é de 14 dias e pode ser alterada com `BACKUP_RETENCAO_DIAS`.
 
+### Monitoramento de frescor do backup (issue #52, hardening pós-gate-final)
+
+O comando acima **cria** o backup diário; o comando abaixo **verifica** que
+ele de fato foi criado, tem menos de 30h e passa na checagem de checksum —
+sem isso, uma falha silenciosa do cron de backup (disco cheio, permissão,
+serviço fora do ar) só seria percebida na hora de precisar restaurar.
+Instale junto, com 30 minutos de folga sobre o horário do backup:
+
+```cron
+30 3 * * * /opt/meucardio/infra/backup_freshness_cron.sh >> /opt/meucardio/infra/backup_freshness_cron.log 2>&1
+```
+
+Este script só verifica e loga — **não envia alerta externo** (e-mail/SMS/
+webhook). Não há integração de alerta configurada neste projeto hoje; ler o
+log (`infra/backup_freshness_cron.log`) ou encadear a saída não-zero a um
+serviço de monitoramento (ex.: healthchecks.io, um cron externo que baixa
+esse log) é decisão operacional do Rafael, não implementada aqui.
+
 ## Falhas comuns
 
 ### Backend não atinge readiness

@@ -61,3 +61,28 @@ def test_backup_corrompido_falha_na_validacao_de_checksum(tmp_path):
 
     assert result.returncode == 2
     assert json.loads(result.stderr)["reason"] == "checksum_failed"
+
+
+def test_backup_name_prefix_e_configuravel_para_o_backup_real_de_producao(tmp_path):
+    """Achado de auditoria (issue #52, fase de hardening): o backup real de
+    produção (infra/backup/backup.sh, o que de fato roda no cron
+    documentado em DEPLOY.md) grava como 'meucardio_<data>.dump', não
+    'corvia-*' — sem BACKUP_NAME_PREFIX configurável, apontar este script
+    para o diretório real de produção sempre acusaria backup ausente,
+    mesmo com backups válidos sendo criados todo dia."""
+    conteudo = b"backup-producao-real"
+    backup = tmp_path / "meucardio_20260810T030000Z.dump"
+    backup.write_bytes(conteudo)
+    digest = hashlib.sha256(conteudo).hexdigest()
+    backup.with_name(f"{backup.name}.sha256").write_text(
+        f"{digest}  {backup.name}\n", encoding="utf-8"
+    )
+
+    env = {**os.environ, "BACKUP_DIR": str(tmp_path), "MAX_BACKUP_AGE_SECONDS": "3600",
+           "BACKUP_NAME_PREFIX": "meucardio_"}
+    result = subprocess.run(
+        ["bash", str(SCRIPT)], check=False, capture_output=True, text=True, env=env,
+    )
+
+    assert result.returncode == 0, result.stderr
+    assert json.loads(result.stdout)["status"] == "ok"

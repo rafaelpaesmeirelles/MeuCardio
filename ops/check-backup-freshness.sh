@@ -3,6 +3,16 @@ set -Eeuo pipefail
 
 BACKUP_DIR="${BACKUP_DIR:-./backups}"
 MAX_BACKUP_AGE_SECONDS="${MAX_BACKUP_AGE_SECONDS:-93600}"
+# Achado de auditoria (issue #52, fase de hardening pós-gate-final): este
+# script só reconhecia o prefixo "corvia-" (o de ops/backup-postgres.sh,
+# usado só pela CI). O backup real de produção, criado por
+# infra/backup/backup.sh e de fato agendado no cron (ver DEPLOY.md,
+# "Backup automático"), grava como "meucardio_<data>.dump" — prefixo
+# diferente. Sem esta variável, apontar este script para o diretório real
+# de produção (infra/backup/dumps) sempre devolveria "backup_file_not_found",
+# mesmo com backups válidos sendo criados todo dia. Default preserva o
+# comportamento anterior (compatibilidade com os testes existentes).
+BACKUP_NAME_PREFIX="${BACKUP_NAME_PREFIX:-corvia-}"
 
 if ! [[ "$MAX_BACKUP_AGE_SECONDS" =~ ^[0-9]+$ ]] || [[ "$MAX_BACKUP_AGE_SECONDS" -le 0 ]]; then
   printf '{"status":"invalid_configuration","field":"MAX_BACKUP_AGE_SECONDS"}\n' >&2
@@ -16,7 +26,7 @@ fi
 
 latest_record="$({
   find "$BACKUP_DIR" -maxdepth 1 -type f \
-    \( -name 'corvia-*.dump' -o -name 'corvia-*.dump.age' \) \
+    \( -name "${BACKUP_NAME_PREFIX}*.dump" -o -name "${BACKUP_NAME_PREFIX}*.dump.age" \) \
     -printf '%T@ %p\n'
 } | sort -nr | sed -n '1p')"
 
