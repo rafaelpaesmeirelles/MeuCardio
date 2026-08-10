@@ -1,5 +1,53 @@
 /** Cliente de API da "sessão email" (CorvIA Mail) — token PRÓPRIO, distinto
- * do token da conta Corvia em `lib/api.ts`. */
+ * do token da conta Corvia em `lib/api.ts`.
+ *
+ * AVALIAÇÃO DE RISCO (issue #52, fase de hardening pós-gate-final,
+ * 10/08/2026) — token em localStorage/sessionStorage, não em cookie
+ * HttpOnly como a sessão principal. Pedido explícito: avaliar migração
+ * para cookie Secure+HttpOnly+SameSite; decisão foi NÃO migrar agora e
+ * documentar, em vez de trocar silenciosamente.
+ *
+ * Por que é uma exceção deliberada, não um descuido — já era assim antes
+ * desta avaliação, e `scripts/check-auth-storage.mjs` (gate de CI) já
+ * isenta este arquivo especificamente por esse motivo: a sessão principal
+ * usa cookie HttpOnly porque o navegador cuida do envio automaticamente
+ * (útil para navegação de página inteira, OAuth redirect etc.) mas isso
+ * também exige proteção CSRF explícita (Origin-check, já implementada
+ * para o cookie principal). A caixa de e-mail é acessada só via chamada
+ * JS explícita (SPA, nunca navegação de página inteira), então Bearer é
+ * imune a CSRF por construção — nenhum formulário de terceiro consegue
+ * forjar um `Authorization: Bearer` header.
+ *
+ * Migrar para cookie HttpOnly:
+ * - reduziria a superfície de furto por XSS (hoje: se um XSS rodar no
+ *   contexto do CorvIA Mail, o token é legível por JS e pode ser
+ *   exfiltrado; um cookie HttpOnly não seria legível);
+ * - exigiria construir proteção CSRF nova para toda a família de rotas
+ *   `/api/email/*` (hoje inexistente porque nunca foi necessária) — é
+ *   trabalho novo, não é troca de uma linha;
+ * - teria impacto não verificado no app mobile (Capacitor/WebView,
+ *   `br.med.corvia`), onde o comportamento de cookie entre WebView e
+ *   requisições `fetch` pode divergir do navegador desktop — precisaria
+ *   de teste dedicado no app real antes de confiar;
+ * - tocaria todo ponto de chamada deste arquivo (uploads multipart,
+ *   download de anexo via blob, renovação deslizante) — testável, mas é
+ *   mudança de arquitetura de autenticação, não um ajuste pontual.
+ *
+ * Risco residual classificado como BAIXO-MÉDIO, não crítico, por três
+ * mitigações já em vigor:
+ * 1. Escopo estreito — o token só abre a caixa de e-mail, nunca a conta
+ *    Corvia inteira, dados clínicos ou pagamento.
+ * 2. `sessionStorage` é o padrão; só vira `localStorage` (sobrevive ao
+ *    fechar o navegador) com "permanecer conectado" explícito do médico.
+ * 3. Troca de senha da caixa ou desativação da conta principal agora
+ *    revoga o token na hora (issue #52, gate final — ver
+ *    `app/models/email_account.py`/`app/core/security.py` no backend),
+ *    o que já era a lacuna mais séria antes desta avaliação.
+ *
+ * Recomendação: migrar para cookie HttpOnly como melhoria de segurança
+ * dedicada, com CSRF e o app mobile testados à parte — não é um fix
+ * pontual para encaixar na mesma sessão que corrigiu a revogação.
+ */
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const TOKEN_KEY = "corviamail.token";
 const RENEW_KEY = "corviamail.token.renewed_at";
