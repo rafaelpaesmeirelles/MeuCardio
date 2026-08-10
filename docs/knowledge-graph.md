@@ -179,12 +179,16 @@ editorial futura, alimentando o mesmo catálogo de tipos já pronto.
 
 ## 9. Deliberadamente fora do escopo desta fase
 
-- **Frontend "Relacionados" dedicado ao grafo.** O painel `TudoSobreEsteTema`
-  já em produção continua sendo a superfície visível do usuário; a API do
-  grafo está pronta para alimentar uma versão futura mais rica (ordenada
-  por relevância, com tipos de relação semânticos), mas plugar isso na UI
-  não estava no crítico desta rodada de reconciliação — é o próximo passo
-  natural, não um requisito de segurança/correção do RC.
+- **Frontend "Relacionados" dedicado ao grafo — parcialmente feito.**
+  `frontend/src/components/GrafoRelacionados.tsx` já existe e consome
+  `GET /api/grafo/relacionados`, instalado em `Documento.tsx` e
+  `Evidencia.tsx`, coexistindo com (não substituindo) o painel
+  `TudoSobreEsteTema` já em produção. **Fora desta rodada**: instalar o
+  componente nas demais páginas de detalhe (Estudo, Exame, Calculadora,
+  CasoClinico, ImagemGaleria, Medicamentos — mesmas 6 que já usam
+  `TudoSobreEsteTema` e ainda não usam `GrafoRelacionados`). Ampliar essa
+  cobertura é aditivo e de baixo risco (mesmo componente, só mais pontos de
+  instalação) — não é requisito de segurança/correção do RC.
 - **Retrieval por subgrafo para a IA** (issue #52, §32) — a API de leitura
   já existe e pode ser chamada pelo mesmo serviço de RAG; a integração em
   si (trocar/complementar a busca textual do assistente por uma consulta ao
