@@ -8,6 +8,7 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.clinical_docs import Appointment
 from app.models.round import Patient
+from app.services.clinical_ownership import patient_for_user
 
 router = APIRouter(prefix="/api/appointments", tags=["agenda"])
 
@@ -58,9 +59,7 @@ def criar(dados: AgendamentoIn, db: Session = Depends(get_db), user=Depends(curr
     if dados.appointment_type not in TIPOS_VALIDOS:
         raise HTTPException(status_code=422, detail="Tipo de agendamento inválido.")
     if dados.patient_id:
-        p = db.get(Patient, dados.patient_id)
-        if not p or (p.created_by != user.id and user.role != "admin"):
-            raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+        patient_for_user(dados.patient_id, db, user)
     if not dados.patient_id and not dados.patient_name_temp:
         raise HTTPException(status_code=422, detail="Informe o paciente cadastrado ou ao menos um nome.")
 

@@ -1,5 +1,7 @@
+from app.models.clinical_docs import Appointment, Prescription
 from app.models.receituario import PrescriptionType
 from app.models.round import Patient
+from app.models.subscription import Subscription
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -243,13 +245,14 @@ def test_round_rejects_cross_tenant_access_even_for_admin(
 # ---------------------------------------------------------------------------
 
 
-def test_timeline_route_lets_any_admin_read_another_doctors_patient(
+def test_timeline_route_denies_admin_reading_another_doctors_patient(
     client, criar_usuario, db
 ):
-    """app/api/timeline.py:15 — `if not p or (p.created_by != user.id and
-    user.role != "admin")` — o admin de outra conta lê a timeline clínica de
-    paciente que não é dele, mesmo a rota de posse direta (round.py) negando
-    para o mesmo par paciente/intruso.
+    """Achado de auditoria corrigido (issue #52, gate final): admin de
+    outra conta não pode mais ler a timeline clínica de paciente que não é
+    dele — `app/api/timeline.py` agora usa o mesmo ponto único de posse
+    (`app/services/clinical_ownership.patient_for_user`) que a rota de
+    posse direta (round.py) já usava, sem exceção para nenhum papel.
 
     Paciente criado direto via ORM (não pela rota) — o dono é `medico`
     deliberadamente, para o teste ser o caso real (médico comum, não outro
@@ -264,30 +267,50 @@ def test_timeline_route_lets_any_admin_read_another_doctors_patient(
     db.refresh(patient)
     patient_id = patient.id
 
-    # A rota de posse direta nega corretamente, mesmo para admin.
+    # A rota de posse direta já negava corretamente, mesmo para admin.
     round_direto = client.get(
         f"/api/round/patients/{patient_id}", headers=_headers(intruso_token)
     )
     assert round_direto.status_code == 404
 
-    # A rota de timeline, para o MESMO paciente, deixa passar — é o gap.
+    # A rota de timeline, para o MESMO paciente, agora nega igual — sem
+    # vazar nenhum dado clínico no corpo da resposta de erro.
     timeline = client.get(
         f"/api/timeline/patient/{patient_id}", headers=_headers(intruso_token)
     )
-    assert timeline.status_code == 200, (
-        "Se este assert falhar, o bypass de admin foi removido de "
-        "app/api/timeline.py — troque para esperar 404 e atualize o "
-        "relatório da auditoria."
+    assert timeline.status_code == 404
+    assert "TIMELINE-ISOLAMENTO-1" not in timeline.text
+
+
+def test_timeline_route_still_works_for_the_actual_owner(client, criar_usuario, db):
+    """Confirma que a correção do IDOR não é excessiva — o próprio médico
+    dono do paciente continua lendo a timeline normalmente."""
+    owner, owner_token = criar_usuario(email="dono.timeline2@teste.local", role="medico")
+    # timeline.router está em ROUTERS_ASSINANTES — exige assinatura principal
+    # ativa antes de qualquer checagem da própria rota (achado já registrado
+    # na subfase 3 da estabilização para este mesmo padrão).
+    db.add(Subscription(user_id=owner.id, kind="meucardio", plano="basico", status="ativo"))
+    db.commit()
+
+    patient = Patient(record_number="TIMELINE-DONO-1", initials="TD", created_by=owner.id)
+    db.add(patient)
+    db.commit()
+    db.refresh(patient)
+
+    resposta = client.get(
+        f"/api/timeline/patient/{patient.id}", headers=_headers(owner_token)
     )
+    assert resposta.status_code == 200
 
 
-def test_prescriptions_route_lets_any_admin_read_and_write_another_doctors_patient(
+def test_prescriptions_route_denies_admin_reading_and_writing_another_doctors_patient(
     client, criar_usuario, db
 ):
-    """app/api/prescriptions.py:37 (`_dono_do_paciente`) — mesmo bypass:
-    admin de outra conta consegue LISTAR e CRIAR prescrição de beira de
-    leito vinculada a paciente de outro médico. Paciente via ORM, mesmo
-    motivo do teste de timeline acima (dono `medico` sem assinatura)."""
+    """Achado de auditoria corrigido (issue #52, gate final): admin de
+    outra conta não pode mais LISTAR nem CRIAR prescrição de beira de leito
+    vinculada a paciente de outro médico. Confirma também que a tentativa
+    de criação não deixa efeito colateral nenhum — nenhuma linha de
+    `Prescription` chega a existir para esse paciente."""
     owner, _ = criar_usuario(email="dono.prescricao@teste.local", role="medico")
     _, intruso_token = criar_usuario(email="intruso.prescricao@teste.local", role="admin")
 
@@ -300,11 +323,8 @@ def test_prescriptions_route_lets_any_admin_read_and_write_another_doctors_patie
     listar = client.get(
         f"/api/prescriptions/patient/{patient_id}", headers=_headers(intruso_token)
     )
-    assert listar.status_code == 200, (
-        "Se este assert falhar, o bypass de admin foi removido de "
-        "app/api/prescriptions.py (_dono_do_paciente) — troque para esperar "
-        "404 e atualize o relatório da auditoria."
-    )
+    assert listar.status_code == 404
+    assert "PRESCRICAO-ISOLAMENTO-1" not in listar.text
 
     criar = client.post(
         "/api/prescriptions",
@@ -314,18 +334,19 @@ def test_prescriptions_route_lets_any_admin_read_and_write_another_doctors_patie
             "items": [{"drug_name": "Losartana 50mg", "posology": "1 cp/dia"}],
         },
     )
-    assert criar.status_code == 201, (
-        "Se este assert falhar (esperado 404), o bypass foi corrigido — "
-        "atualize o relatório da auditoria."
-    )
+    assert criar.status_code == 404
+
+    # Nenhum efeito colateral: a tentativa recusada não criou prescrição.
+    assert db.query(Prescription).filter(Prescription.patient_id == patient_id).count() == 0
 
 
-def test_appointments_route_lets_any_admin_link_appointment_to_another_doctors_patient(
+def test_appointments_route_denies_admin_linking_appointment_to_another_doctors_patient(
     client, criar_usuario, db
 ):
-    """app/api/appointments.py:62 — mesmo bypass ao vincular um novo
-    agendamento a `patient_id` de outro médico. Paciente via ORM, mesmo
-    motivo dos dois testes acima (dono `medico` sem assinatura)."""
+    """Achado de auditoria corrigido (issue #52, gate final): admin de
+    outra conta não pode mais vincular um novo agendamento a `patient_id`
+    de outro médico, e a tentativa recusada não deixa nenhum agendamento
+    órfão no banco."""
     owner, _ = criar_usuario(email="dono.agenda@teste.local", role="medico")
     _, intruso_token = criar_usuario(email="intruso.agenda@teste.local", role="admin")
 
@@ -344,8 +365,5 @@ def test_appointments_route_lets_any_admin_link_appointment_to_another_doctors_p
             "appointment_type": "consulta",
         },
     )
-    assert criar.status_code == 201, (
-        "Se este assert falhar (esperado 404), o bypass de admin foi "
-        "removido de app/api/appointments.py — atualize o relatório da "
-        "auditoria."
-    )
+    assert criar.status_code == 404
+    assert db.query(Appointment).filter(Appointment.patient_id == patient_id).count() == 0

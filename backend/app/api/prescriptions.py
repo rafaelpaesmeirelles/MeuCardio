@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.clinical_docs import Prescription
-from app.models.round import Patient
+from app.services.clinical_ownership import patient_for_user
 from app.services.professional_profile import council_display
 
 router = APIRouter(prefix="/api/prescriptions", tags=["prescricoes"])
@@ -32,13 +32,6 @@ class PrescricaoIn(BaseModel):
     notes: str = ""
 
 
-def _dono_do_paciente(patient_id: int, db: Session, user) -> Patient:
-    p = db.get(Patient, patient_id)
-    if not p or (p.created_by != user.id and user.role != "admin"):
-        raise HTTPException(status_code=404, detail="Paciente não encontrado.")
-    return p
-
-
 def _dump(p: Prescription) -> dict:
     return {
         "id": p.id, "patient_id": p.patient_id, "items": p.items,
@@ -48,7 +41,7 @@ def _dump(p: Prescription) -> dict:
 
 @router.post("", status_code=201)
 def criar_prescricao(dados: PrescricaoIn, db: Session = Depends(get_db), user=Depends(current_user)):
-    _dono_do_paciente(dados.patient_id, db, user)
+    patient_for_user(dados.patient_id, db, user)
     p = Prescription(
         patient_id=dados.patient_id, created_by=user.id,
         items=[i.model_dump() for i in dados.items], notes=dados.notes or None,
@@ -61,7 +54,7 @@ def criar_prescricao(dados: PrescricaoIn, db: Session = Depends(get_db), user=De
 
 @router.get("/patient/{patient_id}")
 def listar_por_paciente(patient_id: int, db: Session = Depends(get_db), user=Depends(current_user)):
-    _dono_do_paciente(patient_id, db, user)
+    patient_for_user(patient_id, db, user)
     rows = (
         db.query(Prescription)
         .filter(Prescription.patient_id == patient_id)
@@ -78,7 +71,7 @@ def dados_para_impressao(pid: int, db: Session = Depends(get_db), user=Depends(c
     presc = db.get(Prescription, pid)
     if not presc:
         raise HTTPException(status_code=404, detail="Prescrição não encontrada.")
-    paciente = _dono_do_paciente(presc.patient_id, db, user)
+    paciente = patient_for_user(presc.patient_id, db, user)
     nome_conselho, estado_conselho = council_display(user)
     return {
         "prescricao": _dump(presc),

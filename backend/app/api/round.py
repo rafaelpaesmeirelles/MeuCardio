@@ -9,6 +9,7 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.audit import AuditLog
 from app.models.round import Patient, PatientAISuggestion, PatientNote, PatientProblem
+from app.services.clinical_ownership import patient_for_user
 
 router = APIRouter(prefix="/api/round", tags=["round"])
 
@@ -74,12 +75,12 @@ def _patient_for_user(
     *,
     allow_archived: bool = False,
 ) -> Patient:
-    patient = db.get(Patient, patient_id)
-    if not patient or patient.created_by != user.id:
-        raise HTTPException(status_code=404, detail="Paciente não encontrado.")
-    if patient.archived_at is not None and not allow_archived:
-        raise HTTPException(status_code=410, detail="Paciente removido do round.")
-    return patient
+    """Fina camada sobre o ponto único de posse
+    (`app/services/clinical_ownership.py`) — só inverte o default de
+    `allow_archived` (aqui é False: round.py é a tela que decide se um
+    paciente arquivado ainda pode ser operado; os demais consumidores do
+    ponto único, fora deste arquivo, não têm esse conceito)."""
+    return patient_for_user(patient_id, db, user, allow_archived=allow_archived)
 
 
 def _ai_queries_today(db: Session, user_id: int, now: datetime | None = None) -> int:

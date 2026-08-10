@@ -1,19 +1,18 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.clinical_docs import Appointment, GeneratedDocument, Prescription
-from app.models.round import Patient, PatientAISuggestion, PatientNote
+from app.models.round import PatientAISuggestion, PatientNote
+from app.services.clinical_ownership import patient_for_user
 
 router = APIRouter(prefix="/api/timeline", tags=["timeline"])
 
 
 @router.get("/patient/{patient_id}")
 def timeline_paciente(patient_id: int, db: Session = Depends(get_db), user=Depends(current_user)):
-    p = db.get(Patient, patient_id)
-    if not p or (p.created_by != user.id and user.role != "admin"):
-        raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+    patient_for_user(patient_id, db, user)
 
     eventos = []
 
