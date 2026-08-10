@@ -286,7 +286,13 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed de ADENOCARD® IV, seção DOSAGE AND ADMINISTRATION e CLINICAL PHARMACOLOGY, consultado via WebSearch em 10/08/2026 — texto integral não lido diretamente (bloqueio de rede).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como efeito terapêutico quantificado — a adenosina não é usada para tratar hipertensão nem tem indicação de redução sustentada da pressão arterial. Pode causar hipotensão/rubor facial transitório durante os poucos segundos de ação farmacológica (vasodilatação mediada por receptores de adenosina), mas este é um efeito adverso agudo e autolimitado descrito qualitativamente na bula, sem valor numérico de redução de PA sistólica/diastólica associado — a duração de segundos do fármaco torna qualquer medição convencional de PA (que não é instantânea) pouco aplicável a este efeito. Campo deixado vazio por ausência real de dado quantitativo aplicável."
+    "bp_evidence_source": "Não se aplica como efeito terapêutico quantificado — a adenosina não é usada para tratar hipertensão nem tem indicação de redução sustentada da pressão arterial. Pode causar hipotensão/rubor facial transitório durante os poucos segundos de ação farmacológica (vasodilatação mediada por receptores de adenosina), mas este é um efeito adverso agudo e autolimitado descrito qualitativamente na bula, sem valor numérico de redução de PA sistólica/diastólica associado — a duração de segundos do fármaco torna qualquer medição convencional de PA (que não é instantânea) pouco aplicável a este efeito. Campo deixado vazio por ausência real de dado quantitativo aplicável.",
+    "presentations": [
+      "Solução injetável 3 mg/mL, ampola de 2 mL (6 mg/ampola), uso exclusivo intravenoso"
+    ],
+    "commercial_presentations": [
+      "Adenocard® (Libbs Farmacêutica Ltda., indústria brasileira; bula aprovada pela ANVISA em 01/06/2023), ampola de 2 mL (6 mg), embalagens com 2 ou 50 ampolas (hospitalar). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "alteplase",
@@ -342,7 +348,15 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed de ACTIVASE® (alteplase), seção CLINICAL PHARMACOLOGY, consultado via WebSearch em 10/08/2026 — texto integral não lido diretamente (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — o alteplase é um trombolítico (ativador do plasminogênio), sem indicação nem mecanismo farmacológico de redução da pressão arterial sistêmica. Controle rigoroso de PA (geralmente <185/110 mmHg antes de iniciar, e monitorização apertada durante/após a infusão no AVC isquêmico agudo) é pré-requisito de segurança para o USO do fármaco — para reduzir risco de transformação hemorrágica —, não um efeito farmacodinâmico do próprio alteplase sobre a PA. Nenhum dado de redução de PA atribuível à droga em si foi localizado nem é esperado mecanisticamente."
+    "bp_evidence_source": "Não se aplica — o alteplase é um trombolítico (ativador do plasminogênio), sem indicação nem mecanismo farmacológico de redução da pressão arterial sistêmica. Controle rigoroso de PA (geralmente <185/110 mmHg antes de iniciar, e monitorização apertada durante/após a infusão no AVC isquêmico agudo) é pré-requisito de segurança para o USO do fármaco — para reduzir risco de transformação hemorrágica —, não um efeito farmacodinâmico do próprio alteplase sobre a PA. Nenhum dado de redução de PA atribuível à droga em si foi localizado nem é esperado mecanisticamente.",
+    "presentations": [
+      "Pó liofilizado injetável 10 mg/10 mL (frasco-ampola)",
+      "Pó liofilizado injetável 20 mg/20 mL (frasco-ampola)",
+      "Pó liofilizado injetável 50 mg/50 mL (frasco-ampola)"
+    ],
+    "commercial_presentations": [
+      "Actilyse® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), pó liofilizado para reconstituição nas três apresentações; uso hospitalar exclusivo (IAM, TEP maciço, AVC isquêmico agudo). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "amiodarona-cloridrato",
@@ -859,7 +873,14 @@
     "duration_of_action_source": "Inferido do esquema posológico de 2x/dia (12/12h) e da meia-vida de 5h do rótulo FDA TRACLEER®, consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": -5.7,
-    "bp_evidence_source": "**Dado de contexto histórico, de uma dose MUITO MAIOR que a usada hoje em HAP — não extrapolar diretamente para a dose de bula atual (62,5-125 mg 2x/dia).** O ensaio \"Bosentan Hypertension Investigators\" (NEJM 1998;338(12):784-790), em 293 pacientes com hipertensão essencial leve a moderada, randomizados para bosentana em doses de **500 ou 2000 mg/dia** (10 a 30 vezes a dose atual de HAP), placebo ou enalapril por 4 semanas: redução **diastólica** significativa de **-5,7 mmHg** em ambas as doses de bosentana testadas, semelhante à redução com enalapril (-5,8 mmHg), sem alteração significativa da frequência cardíaca. **O valor de redução sistólica correspondente não foi localizado com confiança nos resultados desta busca (WebSearch, 10/08/2026)** — por isso `sbp_reduction_mmhg` foi deixado `null` em vez de estimado. Mecanismo plausível: bloqueio do receptor de endotelina (potente vasoconstritor) reduz resistência vascular sistêmica — coerente com o achado, já registrado neste projeto, de queda de resistência vascular sistêmica (-26,2 ± 12,8%) e pressão arterial média (-19,8 ± 14,4%) em estudo hemodinâmico de pacientes com hipertensão pulmonar. VERIFICAÇÃO HUMANA NECESSÁRIA para o valor sistólico exato e para confirmar se algum dado de PA sistêmica na dose atual de HAP (não na dose de 500-2000 mg/dia do ensaio de hipertensão essencial) está disponível."
+    "bp_evidence_source": "**Dado de contexto histórico, de uma dose MUITO MAIOR que a usada hoje em HAP — não extrapolar diretamente para a dose de bula atual (62,5-125 mg 2x/dia).** O ensaio \"Bosentan Hypertension Investigators\" (NEJM 1998;338(12):784-790), em 293 pacientes com hipertensão essencial leve a moderada, randomizados para bosentana em doses de **500 ou 2000 mg/dia** (10 a 30 vezes a dose atual de HAP), placebo ou enalapril por 4 semanas: redução **diastólica** significativa de **-5,7 mmHg** em ambas as doses de bosentana testadas, semelhante à redução com enalapril (-5,8 mmHg), sem alteração significativa da frequência cardíaca. **O valor de redução sistólica correspondente não foi localizado com confiança nos resultados desta busca (WebSearch, 10/08/2026)** — por isso `sbp_reduction_mmhg` foi deixado `null` em vez de estimado. Mecanismo plausível: bloqueio do receptor de endotelina (potente vasoconstritor) reduz resistência vascular sistêmica — coerente com o achado, já registrado neste projeto, de queda de resistência vascular sistêmica (-26,2 ± 12,8%) e pressão arterial média (-19,8 ± 14,4%) em estudo hemodinâmico de pacientes com hipertensão pulmonar. VERIFICAÇÃO HUMANA NECESSÁRIA para o valor sistólico exato e para confirmar se algum dado de PA sistêmica na dose atual de HAP (não na dose de 500-2000 mg/dia do ensaio de hipertensão essencial) está disponível.",
+    "presentations": [
+      "Comprimido revestido 62,5 mg (frasco com 60 comprimidos)",
+      "Comprimido revestido 125 mg (frasco com 60 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Tracleer® e genéricos/similares (ex. Safebo) registrados no Brasil, comprimidos de 62,5 mg e 125 mg; indicado para hipertensão arterial pulmonar classe funcional III-IV (OMS). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Fabricante/detentor de registro específico e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "bumetanida",
@@ -1116,6 +1137,13 @@
     "bp_evidence_source": "Rótulo FDA/DailyMed do ATACAND (candesartan cilexetil) — 14 estudos placebo-controlados de 4 a 12 semanas, doses de 2 a 32 mg/dia, PA diastólica basal de 95-114 mmHg, 2.350 pacientes randomizados para candesartana vs. 1.027 para placebo. Variação média de pressão: -10,7/-7,8 mmHg com 16 mg e -12,6/-10,2 mmHg com 32 mg, contra -0,3/-2,6 mmHg no grupo placebo; efeito geralmente dose-relacionado, de 8-12/4-8 mmHg nas doses de 8 a 32 mg. Valor registrado nos campos numéricos é o da dose de 32 mg (a mais alta aprovada). Fonte: FDA label PDF (accessdata.fda.gov, Reference ID 4630925), localizado e citado via WebSearch em 10/08/2026 — a leitura direta do PDF não foi possível nesta sessão (WebFetch bloqueado); os números vêm da síntese do mecanismo de busca sobre o conteúdo desse documento. **VERIFICAÇÃO HUMANA NECESSÁRIA**: reconferir os dois pares de número diretamente no PDF do rótulo quando houver acesso de rede íntegro.",
     "brand_names": [
       "Atacand (nome comercial internacional, AstraZeneca) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)"
+    ],
+    "presentations": [
+      "Comprimido 8 mg",
+      "Comprimido 16 mg"
+    ],
+    "commercial_presentations": [
+      "Atacand® (AstraZeneca do Brasil Ltda., bula aprovada pela ANVISA em 15/04/2013) e Blopress® (Abbott Laboratórios do Brasil Ltda.), comprimidos de 8 mg e 16 mg; genéricos de múltiplos fabricantes (ex. Sandoz, Aché) também disponíveis. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
     ]
   },
   {
@@ -1503,7 +1531,15 @@
     "duration_of_action_source": "Já documentado no campo `mechanism` deste mesmo registro (não é pesquisa nova desta sessão) — reaproveitado só para popular o campo estruturado novo.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** A clortalidona é diurético tiazídico-símile usado primariamente como anti-hipertensivo (ver `indications` já cadastrado — hipertensão essencial é a primeira indicação listada), e por isso deveria ter dado numérico de redução pressórica — mas o registro atual não traz esse número, e não foi possível pesquisar fonte nova nesta sessão (WebSearch esgotado; WebFetch e curl bloqueados). Fica pendente de pesquisa futura no rótulo FDA (DailyMed, setid já citado em `dosing.fonte` deste registro: da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e) ou na bula do HIGROTON já citada nas referências deste registro."
+    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** A clortalidona é diurético tiazídico-símile usado primariamente como anti-hipertensivo (ver `indications` já cadastrado — hipertensão essencial é a primeira indicação listada), e por isso deveria ter dado numérico de redução pressórica — mas o registro atual não traz esse número, e não foi possível pesquisar fonte nova nesta sessão (WebSearch esgotado; WebFetch e curl bloqueados). Fica pendente de pesquisa futura no rótulo FDA (DailyMed, setid já citado em `dosing.fonte` deste registro: da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e) ou na bula do HIGROTON já citada nas referências deste registro.",
+    "presentations": [
+      "Comprimido 12,5 mg",
+      "Comprimido 25 mg",
+      "Comprimido 50 mg"
+    ],
+    "commercial_presentations": [
+      "Higroton® (Novartis Biociências S.A.) e genéricos de múltiplos fabricantes (ex. EMS) nas três concentrações; disponível também combinada a atenolol ou amilorida. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "colchicina",
@@ -1548,7 +1584,14 @@
     "duration_of_action_source": null,
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica. Colchicina é anti-inflamatório de mecanismo não esteroidal (inibidor da polimerização de microtúbulos), sem mecanismo de ação hemodinâmico direto — redução de pressão arterial sistêmica não é desfecho estudado nos ensaios de pericardite ou de prevenção cardiovascular já citados neste registro (nem clinicamente relevante para esta classe de fármaco)."
+    "bp_evidence_source": "Não se aplica. Colchicina é anti-inflamatório de mecanismo não esteroidal (inibidor da polimerização de microtúbulos), sem mecanismo de ação hemodinâmico direto — redução de pressão arterial sistêmica não é desfecho estudado nos ensaios de pericardite ou de prevenção cardiovascular já citados neste registro (nem clinicamente relevante para esta classe de fármaco).",
+    "presentations": [
+      "Comprimido 0,5 mg",
+      "Comprimido 1 mg"
+    ],
+    "commercial_presentations": [
+      "Colchis® (Apsen Farmacêutica S.A.; bula aprovada pela ANVISA em 27/04/2023) e genéricos de múltiplos fabricantes (ex. Geolab), comprimidos de 0,5 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Disponibilidade da apresentação de 1 mg por marca específica não confirmada — VERIFICAÇÃO HUMANA NECESSÁRIA. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "dabigatrana-etexilato",
@@ -1783,7 +1826,14 @@
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing` deste registro (3-4x/dia para a formulação de liberação imediata) — sem pesquisa nova nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Diltiazem tem hipertensão arterial como indicação formal já cadastrada em `indications` deste registro, e bloqueadores de canal de cálcio não-diidropiridínicos costumam ter dado numérico de redução pressórica em bula — mas esse número não está no registro atual, e não foi possível pesquisar fonte nova nesta sessão (WebSearch esgotado; WebFetch e curl bloqueados). Pendente: conferir na bula do CARDIZEM (já citada nas referências deste registro) ou no rótulo FDA da formulação oral."
+    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Diltiazem tem hipertensão arterial como indicação formal já cadastrada em `indications` deste registro, e bloqueadores de canal de cálcio não-diidropiridínicos costumam ter dado numérico de redução pressórica em bula — mas esse número não está no registro atual, e não foi possível pesquisar fonte nova nesta sessão (WebSearch esgotado; WebFetch e curl bloqueados). Pendente: conferir na bula do CARDIZEM (já citada nas referências deste registro) ou no rótulo FDA da formulação oral.",
+    "presentations": [
+      "Comprimido 30 mg (embalagens com 20, 30, 50 ou 200 comprimidos)",
+      "Comprimido 60 mg (embalagens com 20, 25, 30, 50, 60 ou 200 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Cardizem® e Cardizem® SR (referência histórica) e genéricos de múltiplos fabricantes (ex. EMS) — bula padrão aprovada pela ANVISA em 23/03/2021, sujeito a retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e detentor de registro atuais não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "dinitrato-de-isossorbida",
@@ -2078,7 +2128,13 @@
     "duration_of_action_source": "RCM da EMA do MULTAQ (dronedarona, Sanofi), secção 5.2 (Propriedades farmacocinéticas) — pesquisado nesta sessão em 10/08/2026.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: dronedarona é antiarrítmico, não anti-hipertensivo, e nem o RCM da EMA nem os ensaios ATHENA/PALLAS já citados em `outcomes` deste verbete reportam redução de PA sistólica/diastólica como desfecho medido nesta busca. O fármaco tem efeito antiadrenérgico discreto que pode, em tese, reduzir levemente a frequência cardíaca, mas nenhuma fonte consultada nesta sessão quantifica efeito sobre PA — campos deixados `null` por ausência de desfecho de PA no desenho dos estudos localizados, não porque foi medido e deu resultado nulo."
+    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: dronedarona é antiarrítmico, não anti-hipertensivo, e nem o RCM da EMA nem os ensaios ATHENA/PALLAS já citados em `outcomes` deste verbete reportam redução de PA sistólica/diastólica como desfecho medido nesta busca. O fármaco tem efeito antiadrenérgico discreto que pode, em tese, reduzir levemente a frequência cardíaca, mas nenhuma fonte consultada nesta sessão quantifica efeito sobre PA — campos deixados `null` por ausência de desfecho de PA no desenho dos estudos localizados, não porque foi medido e deu resultado nulo.",
+    "presentations": [
+      "Comprimido revestido 400 mg (embalagens de 20, 50 ou 60 comprimidos) — ver nota de disponibilidade"
+    ],
+    "commercial_presentations": [
+      "Multaq® (sanofi-aventis). Fonte consultada nesta sessão (news.med.br, ago/2026) indica que o registro sanitário do Multaq® está CANCELADO/CADUCO na ANVISA, e o produto não é mais produzido nem comercializado em território nacional. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA o status atual do registro antes de orientar prescrição, pela relevância clínica da indisponibilidade."
+    ]
   },
   {
     "slug": "dulaglutida",
@@ -2237,7 +2293,15 @@
     "duration_of_action_source": "Inferido da posologia de uma vez ao dia (bula profissional brasileira do LIXIANA, seção 8, já citada nas `references`) e da meia-vida do rótulo FDA/StatPearls citados em `half_life_note` — não é um valor de duração medido isoladamente como desfecho único nesta sessão de pesquisa. VERIFICAÇÃO HUMANA NECESSÁRIA quanto a um valor de duração de efeito anti-Xa medido diretamente.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica: edoxabana é anticoagulante oral direto (inibidor do fator Xa), sem mecanismo farmacológico de ação sobre tônus vascular ou pressão arterial — nenhuma das fontes já citadas neste verbete (bula do LIXIANA, rótulo FDA, ENGAGE AF-TIMI 48) reporta desfecho de PA."
+    "bp_evidence_source": "Não se aplica: edoxabana é anticoagulante oral direto (inibidor do fator Xa), sem mecanismo farmacológico de ação sobre tônus vascular ou pressão arterial — nenhuma das fontes já citadas neste verbete (bula do LIXIANA, rótulo FDA, ENGAGE AF-TIMI 48) reporta desfecho de PA.",
+    "presentations": [
+      "Comprimido revestido 15 mg (20,2 mg de tosilato de edoxabana monoidratado)",
+      "Comprimido revestido 30 mg (40,4 mg de tosilato de edoxabana monoidratado)",
+      "Comprimido revestido 60 mg (80,8 mg de tosilato de edoxabana monoidratado)"
+    ],
+    "commercial_presentations": [
+      "Lixiana® (Daiichi Sankyo Brasil Farmacêutica Ltda.), comprimidos revestidos de 15 mg, 30 mg e 60 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "empagliflozina",
@@ -2284,7 +2348,14 @@
     "duration_of_action_source": "Inferido da posologia de dose única diária (bula do JARDIANCE, já citada em `dosing`/`references`) e do desenho do ensaio de MAPA de 24h citado em `bp_evidence_source` — não é um valor de \"duração de ação\" medido isoladamente como desfecho único.",
     "sbp_reduction_mmhg": -4.16,
     "dbp_reduction_mmhg": -1.72,
-    "bp_evidence_source": "Ensaio randomizado, duplo-cego, controlado por placebo, com MAPA de 24 horas, em 823 pacientes com diabetes tipo 2 e hipertensão, em uso de anti-hipertensivo estável: na 12ª semana, diferença ajustada vs. placebo na variação da PAS média de 24h foi de -3,44 mmHg (IC95% -4,78 a -2,09) com empagliflozina 10 mg e **-4,16 mmHg (IC95% -5,50 a -2,83) com 25 mg**; PAD média de 24h -1,36 mmHg (IC95% -2,15 a -0,56) com 10 mg e **-1,72 mmHg (IC95% -2,51 a -0,93) com 25 mg**, sem alteração relevante na frequência cardíaca. Valores registrados nos campos numéricos são os da dose de 25 mg (dose máxima aprovada) — mesmo padrão de escolha de dose já usado no verbete `canagliflozina` desta base, mesma classe. **Fonte**: Chilton R, Woerle HJ, Broedl UC, et al. Empagliflozin reduces blood pressure in patients with type 2 diabetes and hypertension. Diabetes Care. 2015;38(3):420-428. DOI: 10.2337/dc14-1096. PMID: 25271206 — pesquisado nesta sessão em 10/08/2026. **VERIFICAÇÃO HUMANA NECESSÁRIA**: número não conferido linha a linha contra a bula brasileira do JARDIANCE nem contra o RCM da EMA (já citado em `dosing`) — vem do artigo original do ensaio, não da bula/rótulo regulatório."
+    "bp_evidence_source": "Ensaio randomizado, duplo-cego, controlado por placebo, com MAPA de 24 horas, em 823 pacientes com diabetes tipo 2 e hipertensão, em uso de anti-hipertensivo estável: na 12ª semana, diferença ajustada vs. placebo na variação da PAS média de 24h foi de -3,44 mmHg (IC95% -4,78 a -2,09) com empagliflozina 10 mg e **-4,16 mmHg (IC95% -5,50 a -2,83) com 25 mg**; PAD média de 24h -1,36 mmHg (IC95% -2,15 a -0,56) com 10 mg e **-1,72 mmHg (IC95% -2,51 a -0,93) com 25 mg**, sem alteração relevante na frequência cardíaca. Valores registrados nos campos numéricos são os da dose de 25 mg (dose máxima aprovada) — mesmo padrão de escolha de dose já usado no verbete `canagliflozina` desta base, mesma classe. **Fonte**: Chilton R, Woerle HJ, Broedl UC, et al. Empagliflozin reduces blood pressure in patients with type 2 diabetes and hypertension. Diabetes Care. 2015;38(3):420-428. DOI: 10.2337/dc14-1096. PMID: 25271206 — pesquisado nesta sessão em 10/08/2026. **VERIFICAÇÃO HUMANA NECESSÁRIA**: número não conferido linha a linha contra a bula brasileira do JARDIANCE nem contra o RCM da EMA (já citado em `dosing`) — vem do artigo original do ensaio, não da bula/rótulo regulatório.",
+    "presentations": [
+      "Comprimido revestido 10 mg (embalagens com 10 ou 30 comprimidos)",
+      "Comprimido revestido 25 mg (embalagens com 10 ou 30 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Jardiance® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), comprimidos revestidos de 10 mg e 25 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de aprovação de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "enalapril-maleato",
@@ -2384,7 +2455,15 @@
     "duration_of_action_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — pesquisa não concluída nesta sessão por esgotamento do orçamento de busca (WebSearch) e bloqueio de rede do WebFetch para os domínios de bula/rótulo (DailyMed, FDA, EMA, PMC) testados.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica: enoxaparina é anticoagulante (heparina de baixo peso molecular, inativação do fator Xa), sem mecanismo farmacológico de ação sobre tônus vascular ou pressão arterial — nenhuma fonte já citada neste verbete (bula do CLEXANE, protocolo HCRP/USP) reporta desfecho de PA."
+    "bp_evidence_source": "Não se aplica: enoxaparina é anticoagulante (heparina de baixo peso molecular, inativação do fator Xa), sem mecanismo farmacológico de ação sobre tônus vascular ou pressão arterial — nenhuma fonte já citada neste verbete (bula do CLEXANE, protocolo HCRP/USP) reporta desfecho de PA.",
+    "presentations": [
+      "Solução injetável 20 mg/0,2 mL, seringa preenchida",
+      "Solução injetável 40 mg/0,4 mL, seringa preenchida",
+      "Solução injetável 60 mg/0,6 mL, seringa preenchida"
+    ],
+    "commercial_presentations": [
+      "Clexane® (Sanofi Medley Farmacêutica Ltda.; bula aprovada pela ANVISA em 10/06/2019), seringas preenchidas com sistema de segurança; genéricos/similares de outros fabricantes também registrados no Brasil (ex. NOXX®, Blau Farmacêutica S.A.; HEPARINOX®, Cristália Prod. Quím. Farm. Ltda.). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "epinefrina-adrenalina",
@@ -2431,7 +2510,13 @@
     "duration_of_action_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — pesquisa não concluída nesta sessão por esgotamento do orçamento de busca e bloqueio de rede do WebFetch.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica: adrenalina é catecolamina agonista adrenérgico não seletivo usada para ELEVAR a pressão arterial (parada cardiorrespiratória, choque, anafilaxia — ver `indications`), o oposto do que estes dois campos numéricos pretendem capturar. Nenhuma redução de PA é desfecho relevante para este fármaco nas indicações registradas."
+    "bp_evidence_source": "Não se aplica: adrenalina é catecolamina agonista adrenérgico não seletivo usada para ELEVAR a pressão arterial (parada cardiorrespiratória, choque, anafilaxia — ver `indications`), o oposto do que estes dois campos numéricos pretendem capturar. Nenhuma redução de PA é desfecho relevante para este fármaco nas indicações registradas.",
+    "presentations": [
+      "Solução injetável 1 mg/mL, ampola de 1 mL, uso IM/IV/SC"
+    ],
+    "commercial_presentations": [
+      "Adren® (Hipolabor Farmacêutica Ltda.; registro ANVISA nº 1.1343.0001.001-6), ampola de 1 mL (1 mg/mL), embalagens hospitalares com 100 ampolas; genéricos/similares de outros fabricantes (ex. Hypofarma) também registrados. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+    ]
   },
   {
     "slug": "eplerenona",
@@ -2485,7 +2570,14 @@
     "duration_of_action_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — pesquisa não concluída nesta sessão por esgotamento do orçamento de busca e bloqueio de rede do WebFetch.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: eplerenona TEM indicação registrada para hipertensão (ver `dosing.dose_apresentacoes_especificas`, doses de 50-100mg/dia para essa finalidade), então redução de PA é desfecho clinicamente relevante e esperado — mas não localizei o valor exato em mmHg nesta sessão antes do esgotamento do orçamento de busca (WebSearch) e do bloqueio de rede do WebFetch para os domínios de bula/rótulo testados. Diferente de dopamina/epinefrina/enoxaparina/edoxabana deste mesmo lote, aqui a ausência do número é lacuna real de pesquisa, não ausência de aplicabilidade — não deve ser confundida com \"não se aplica\"."
+    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: eplerenona TEM indicação registrada para hipertensão (ver `dosing.dose_apresentacoes_especificas`, doses de 50-100mg/dia para essa finalidade), então redução de PA é desfecho clinicamente relevante e esperado — mas não localizei o valor exato em mmHg nesta sessão antes do esgotamento do orçamento de busca (WebSearch) e do bloqueio de rede do WebFetch para os domínios de bula/rótulo testados. Diferente de dopamina/epinefrina/enoxaparina/edoxabana deste mesmo lote, aqui a ausência do número é lacuna real de pesquisa, não ausência de aplicabilidade — não deve ser confundida com \"não se aplica\".",
+    "presentations": [
+      "Comprimido revestido 25 mg",
+      "Comprimido revestido 50 mg"
+    ],
+    "commercial_presentations": [
+      "Inspra® (registrado e importado por Upjohn Brasil Importadora e Distribuidora de Medicamentos Ltda., fabricado por Viatris Pharmaceuticals LLC, Vega Baja, Porto Rico; registro ANVISA MS 1.1535.0010), comprimidos revestidos de 25 mg e 50 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Dígitos completos do registro ANVISA não reconferidos em fonte primária nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "esmolol",
@@ -2655,7 +2747,14 @@
     "duration_of_action_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — pesquisa não concluída nesta sessão por esgotamento do orçamento de busca e bloqueio de rede do WebFetch.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica: evolocumabe e alirocumabe são anticorpos monoclonais que atuam sobre a PCSK9 e a reciclagem do receptor de LDL (ver `mechanism`), sem alvo farmacológico em tônus vascular ou volemia — nenhuma fonte já citada neste verbete (bulas do REPATHA/PRALUENT, FOURIER, ODYSSEY OUTCOMES) reporta desfecho de PA, coerente com o mecanismo estritamente lipídico da classe."
+    "bp_evidence_source": "Não se aplica: evolocumabe e alirocumabe são anticorpos monoclonais que atuam sobre a PCSK9 e a reciclagem do receptor de LDL (ver `mechanism`), sem alvo farmacológico em tônus vascular ou volemia — nenhuma fonte já citada neste verbete (bulas do REPATHA/PRALUENT, FOURIER, ODYSSEY OUTCOMES) reporta desfecho de PA, coerente com o mecanismo estritamente lipídico da classe.",
+    "presentations": [
+      "Evolocumabe: solução injetável 140 mg/mL, seringa ou caneta preenchida (SureClick), embalagens com 1, 2 ou 3 unidades",
+      "Alirocumabe: solução injetável 75 mg/mL ou 150 mg/mL, caneta preenchida descartável de uso único — ver nota de disponibilidade"
+    ],
+    "commercial_presentations": [
+      "Repatha® (evolocumabe; Amgen Biotecnologia do Brasil Ltda.), aprovado pela ANVISA em 2016, seringa/caneta preenchida 140 mg/mL, dose de 140 mg a cada 2 semanas ou 420 mg uma vez ao mês. Praluent® (alirocumabe; Sanofi Medley Farmacêutica Ltda.) teve o CANCELAMENTO de registro deferido pela ANVISA em 24/03/2025, após descontinuações de fabricação/importação já comunicadas em 2021, 2023 e 2024 — não está mais disponível para comercialização no Brasil nesta data. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Números de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "ezetimiba",
@@ -2768,7 +2867,15 @@
     "duration_of_action_source": "Felodipine — rótulo aprovado pelo FDA, DailyMed SPL setid 924b2633-74bd-469f-b831-77f09dfebbf7 — mesma fonte já citada em `notes.Farmacocinetica` e `references` deste verbete.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: felodipino é bloqueador de canal de cálcio diidropiridínico indicado especificamente para hipertensão arterial (ver `indications`) — redução de PA é o desfecho central do fármaco e certamente documentado em bula/rótulo, mas não localizei o valor exato em mmHg nesta sessão antes do esgotamento do orçamento de busca (WebSearch) e do bloqueio de rede do WebFetch para os domínios testados (DailyMed, FDA, EMA, PMC). Ausência do número é lacuna real de pesquisa, não ausência de aplicabilidade — prioridade alta para a próxima rodada."
+    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: felodipino é bloqueador de canal de cálcio diidropiridínico indicado especificamente para hipertensão arterial (ver `indications`) — redução de PA é o desfecho central do fármaco e certamente documentado em bula/rótulo, mas não localizei o valor exato em mmHg nesta sessão antes do esgotamento do orçamento de busca (WebSearch) e do bloqueio de rede do WebFetch para os domínios testados (DailyMed, FDA, EMA, PMC). Ausência do número é lacuna real de pesquisa, não ausência de aplicabilidade — prioridade alta para a próxima rodada.",
+    "presentations": [
+      "Comprimido de liberação prolongada 2,5 mg (embalagem com 20 comprimidos)",
+      "Comprimido de liberação prolongada 5 mg (embalagem com 20 comprimidos)",
+      "Comprimido de liberação prolongada 10 mg (embalagem com 20 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Splendil® (AstraZeneca do Brasil Ltda.); registros ANVISA 1.1618.0074.008-8 (2,5 mg), 1.1618.0074.009-6 (5 mg) e 1.1618.0074.012-6 (10 mg). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Dígitos dos registros extraídos de agregador secundário (site de bula), não reconferidos diretamente no bulário eletrônico da ANVISA — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "fenofibrato",
@@ -2890,7 +2997,14 @@
     "duration_of_action_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — pesquisa não concluída nesta sessão por esgotamento do orçamento de busca e bloqueio de rede do WebFetch.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: finerenona é antagonista mineralocorticoide não esteroidal (ver `mechanism` e `drug_class`), classe farmacológica que tipicamente reduz PA de forma discreta como efeito de classe (assim como espironolactona/eplerenona, também pendentes de confirmação numérica neste mesmo lote) — os ensaios FIDELIO-DKD/FIGARO-DKD já citados em `outcomes` deste verbete tipicamente reportam redução modesta de PA como desfecho secundário, mas não localizei o valor exato em mmHg nesta sessão antes do esgotamento do orçamento de busca (WebSearch) e do bloqueio de rede do WebFetch para os domínios testados (DailyMed, FDA, EMA, PMC). Ausência do número é lacuna real de pesquisa, não ausência de aplicabilidade."
+    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA: finerenona é antagonista mineralocorticoide não esteroidal (ver `mechanism` e `drug_class`), classe farmacológica que tipicamente reduz PA de forma discreta como efeito de classe (assim como espironolactona/eplerenona, também pendentes de confirmação numérica neste mesmo lote) — os ensaios FIDELIO-DKD/FIGARO-DKD já citados em `outcomes` deste verbete tipicamente reportam redução modesta de PA como desfecho secundário, mas não localizei o valor exato em mmHg nesta sessão antes do esgotamento do orçamento de busca (WebSearch) e do bloqueio de rede do WebFetch para os domínios testados (DailyMed, FDA, EMA, PMC). Ausência do número é lacuna real de pesquisa, não ausência de aplicabilidade.",
+    "presentations": [
+      "Comprimido revestido 10 mg",
+      "Comprimido revestido 20 mg"
+    ],
+    "commercial_presentations": [
+      "Kerendia®/Firialta® (Bayer S.A.; fabricado por Bayer AG, Leverkusen, Alemanha), comprimidos revestidos de 10 mg e 20 mg, aprovado pela ANVISA para doença renal crônica associada a diabetes tipo 2 (estágios 3 e 4 com albuminúria). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Nome comercial definitivo no mercado brasileiro (Kerendia vs. Firialta) e número de registro ANVISA não confirmados com certeza nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "flecainida",
@@ -2935,7 +3049,13 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do acetato de flecainida, seção Dosage and Administration (mesmo documento já citado em `dosing.fonte`) — não define duração de efeito por dose isolada.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — a flecainida é antiarrítmico classe IC, sem indicação nem efeito antihipertensivo estabelecido; o próprio mecanismo (bloqueio de canal de sódio cardíaco) não tem ação vasodilatadora ou diurética conhecida. Nenhuma fonte consultada nesta sessão associa o fármaco a redução de pressão arterial."
+    "bp_evidence_source": "Não se aplica — a flecainida é antiarrítmico classe IC, sem indicação nem efeito antihipertensivo estabelecido; o próprio mecanismo (bloqueio de canal de sódio cardíaco) não tem ação vasodilatadora ou diurética conhecida. Nenhuma fonte consultada nesta sessão associa o fármaco a redução de pressão arterial.",
+    "presentations": [
+      "Comprimido 100 mg (apresentação de referência internacional — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "Tambocor® e genéricos (mercados internacionais, ex. EUA/Europa) — NÃO localizado registro ativo de comercialização regular no Brasil nesta sessão. Fontes consultadas indicam que o acesso no país se dá por importação regulamentada por pessoa física ou instituição autorizada, conforme a RDC ANVISA nº 81/2008 (medicamento não registrado). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se há registro ativo antes de informar o fármaco como disponível em farmácia comum no Brasil."
+    ]
   },
   {
     "slug": "fondaparinux-sodico",
@@ -3013,6 +3133,13 @@
       "Função renal periódica — especialmente relevante pela eliminação predominantemente renal do fármaco (ver `half_life_note`) e pelo corte de contraindicação em ClCr <20 mL/min (ver `renal_adjustment`).",
       "Contagem de plaquetas — apesar do baixíssimo risco de HIT já registrado em `notes.Vantagem pratica` deste documento, continua sendo boa prática em paciente anticoagulado.",
       "**fonte**: bula do ARIXTRA (fondaparinux sódico), já citada nas `references` deste registro."
+    ],
+    "presentations": [
+      "Solução injetável 2,5 mg/0,5 mL, seringa preenchida (uso SC ou IV)",
+      "Solução injetável 7,5 mg/0,6 mL, seringa preenchida (uso SC)"
+    ],
+    "commercial_presentations": [
+      "Arixtra® (GlaxoSmithKline Brasil Ltda.), seringas preenchidas com sistema de proteção automático para agulha, embalagens com 2 seringas. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
     ]
   },
   {
@@ -3243,7 +3370,13 @@
       "**fonte**: protocolo Heparinização Plena HCRP/USP (já citado em `dosing`/`references` deste registro) e bula brasileira de heparina sódica (HEPAMAX-S)."
     ],
     "renal_adjustment": "**Contraindicada em insuficiência renal grave**, já listada como contraindicação formal neste registro (ver `contraindications`) — não há esquema de redução de dose por faixa de clearance descrito na bula brasileira consultada; a restrição é binária (contraindicação, não ajuste posológico). Fonte: bula brasileira de heparina sódica (HEPAMAX-S), já citada neste registro.",
-    "hepatic_adjustment": "**Contraindicada em icterícia/doença hepática grave**, já listada como contraindicação formal neste registro (ver `contraindications`) — mesma lógica binária da insuficiência renal grave: a bula não descreve um esquema de ajuste de dose por grau de disfunção hepática, apenas a restrição de uso em doença grave. Fonte: bula brasileira de heparina sódica (HEPAMAX-S)."
+    "hepatic_adjustment": "**Contraindicada em icterícia/doença hepática grave**, já listada como contraindicação formal neste registro (ver `contraindications`) — mesma lógica binária da insuficiência renal grave: a bula não descreve um esquema de ajuste de dose por grau de disfunção hepática, apenas a restrição de uso em doença grave. Fonte: bula brasileira de heparina sódica (HEPAMAX-S).",
+    "presentations": [
+      "Solução injetável 5.000 UI/mL, frasco-ampola ou ampola de 5 mL (25.000 UI/frasco)"
+    ],
+    "commercial_presentations": [
+      "Hemofol® (Cristália Produtos Químicos Farmacêuticos Ltda.; bula aprovada pela ANVISA em 09/11/2017) e Hepamax-S® (Blau Farmacêutica S.A.), heparina sódica 5.000 UI/mL em frasco-ampola/ampola de 5 mL. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "hidralazina",
@@ -4452,7 +4585,13 @@
     "duration_of_action_source": "Literatura farmacológica/prática de terapia intensiva sobre titulação de milrinona, obtida via resultado sintetizado de busca — sem citação de bula específica para este valor.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não aplicável no formato padrão do campo — a milrinona é inodilatador usado em insuficiência cardíaca aguda/choque cardiogênico, reduzindo pré-carga e pós-carga (efeito hemodinâmico central: redução de pressão capilar pulmonar e resistência vascular sistêmica), não um anti-hipertensivo com ensaio de dose-resposta em pressão arterial sistêmica no formato placebo-subtraído."
+    "bp_evidence_source": "Não aplicável no formato padrão do campo — a milrinona é inodilatador usado em insuficiência cardíaca aguda/choque cardiogênico, reduzindo pré-carga e pós-carga (efeito hemodinâmico central: redução de pressão capilar pulmonar e resistência vascular sistêmica), não um anti-hipertensivo com ensaio de dose-resposta em pressão arterial sistêmica no formato placebo-subtraído.",
+    "presentations": [
+      "Solução injetável 1 mg/mL, ampola/frasco de 10 mL (uso restrito a estabelecimento de saúde)"
+    ],
+    "commercial_presentations": [
+      "Lactato de milrinona — genérico de Fresenius Kabi Brasil Ltda. (bula padrão ANVISA aprovada em 01/12/2020); referência histórica Primacor® IV, também registrada com o mesmo padrão de apresentação (1 mg/mL, frasco de 10 mL). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA (ex. 1.5143.0022) não reconferido diretamente nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "mononitrato-de-isossorbida",
@@ -5626,6 +5765,13 @@
       "Função renal e hepática antes de iniciar, pelas contraindicações formais já registradas nos campos `contraindications`/`hepatic_adjustment`.",
       "Revisão de interações por CYP3A4 a cada nova prescrição concomitante — diltiazem e verapamil, de uso cardiológico corrente, já sinalizados no campo `dosing` como a interação mais provável na prática.",
       "fonte: extrapolado do perfil de segurança já documentado neste registro (StatPearls) — VERIFICAÇÃO HUMANA NECESSÁRIA para protocolo formal de monitorização citado em bula brasileira."
+    ],
+    "presentations": [
+      "Comprimido revestido de liberação prolongada 500 mg",
+      "Comprimido revestido de liberação prolongada 1000 mg"
+    ],
+    "commercial_presentations": [
+      "Riscard® (Biolab Sanus Farmacêutica Ltda.; bula aprovada pela ANVISA em 11/04/2016), comprimido revestido oval de 500 mg e de 1000 mg, indicado para angina crônica. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. Nota: a marca internacional Ranexa® (Menarini/Ranexa) tem apresentações de 375 mg/500 mg/750 mg em outros mercados — as concentrações comercializadas no Brasil sob a marca Riscard® são as citadas acima, distintas das internacionais."
     ]
   },
   {
@@ -6358,7 +6504,13 @@
     "duration_of_action_source": "Rótulo do VYNDAQEL/VYNDAMAX, FDA, seção Clinical Pharmacology; bula profissional brasileira do VYNDAQEL (Pfizer).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Tafamidis não tem efeito hemodinâmico direto sobre a pressão arterial — o mecanismo (estabilização da transtirretina) não atua em receptor vascular, canal iônico ou sistema renina-angiotensina-aldosterona, e nem a bula brasileira do VYNDAQEL nem o rótulo do FDA listam alteração pressórica entre os efeitos farmacodinâmicos ou adversos do fármaco. Campos mantidos nulos por ausência de mecanismo pressórico, não por lacuna de busca."
+    "bp_evidence_source": "Tafamidis não tem efeito hemodinâmico direto sobre a pressão arterial — o mecanismo (estabilização da transtirretina) não atua em receptor vascular, canal iônico ou sistema renina-angiotensina-aldosterona, e nem a bula brasileira do VYNDAQEL nem o rótulo do FDA listam alteração pressórica entre os efeitos farmacodinâmicos ou adversos do fármaco. Campos mantidos nulos por ausência de mecanismo pressórico, não por lacuna de busca.",
+    "presentations": [
+      "Cápsula mole 20 mg (tafamidis meglumina; embalagens com 30 ou 120 cápsulas)"
+    ],
+    "commercial_presentations": [
+      "Vyndaqel® (Pfizer Brasil Ltda.), cápsula mole de 20 mg de tafamidis meglumina (equivalente a 12,2 mg de tafamidis livre), aprovado pela ANVISA para amiloidose cardíaca por transtirretina (ATTR-CM); conservação sob refrigeração (2-8°C). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de aprovação não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. Existe também a apresentação Vyndaqel® 61 mg (tafamidis, sem o sal meglumina, dose única diária) em outros mercados — presença dessa apresentação específica no Brasil não confirmada nesta sessão."
+    ]
   },
   {
     "slug": "telmisartana",
@@ -6480,7 +6632,14 @@
     "duration_of_action_source": null,
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Tenecteplase é fibrinolítico, sem mecanismo farmacológico de redução pressórica — hipotensão, quando ocorre no contexto do seu uso, é evento adverso ligado a sangramento/reperfusão (ver `adverse_effects` do documento clínico correspondente), não um efeito hemodinâmico direto e dose-dependente mensurável em mmHg como o de um anti-hipertensivo. Campos mantidos nulos por ausência de mecanismo pressórico primário."
+    "bp_evidence_source": "Tenecteplase é fibrinolítico, sem mecanismo farmacológico de redução pressórica — hipotensão, quando ocorre no contexto do seu uso, é evento adverso ligado a sangramento/reperfusão (ver `adverse_effects` do documento clínico correspondente), não um efeito hemodinâmico direto e dose-dependente mensurável em mmHg como o de um anti-hipertensivo. Campos mantidos nulos por ausência de mecanismo pressórico primário.",
+    "presentations": [
+      "Pó liofilizado injetável 40 mg (8.000 U) com seringa preenchida de 8 mL de água para injeção",
+      "Pó liofilizado injetável 50 mg (10.000 U) com seringa preenchida de 10 mL de água para injeção"
+    ],
+    "commercial_presentations": [
+      "Metalyse® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), pó liofilizado com seringa/adaptador preenchidos para reconstituição, uso hospitalar exclusivo no tratamento trombolítico do infarto agudo do miocárdio (e, mais recentemente, do AVC isquêmico — indicação avaliada pela ANVISA). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de aprovação da indicação em AVC não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "ticagrelor",
@@ -6894,7 +7053,13 @@
     "duration_of_action_source": "Literatura de farmacocinética clínica da vasopressina em choque vasodilatatório (Drugs.com Monograph, EMCrit), consultada via WebSearch em 2026.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — a vasopressina é **vasopressor** (eleva a pressão arterial via receptores V1, ver `mechanism`), o oposto farmacológico de um anti-hipertensivo. Os campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` deste catálogo medem redução pressórica e não capturam o efeito pressor deste fármaco — mantidos nulos por não se aplicarem à direção do efeito, não por ausência de dado. O efeito pressor (elevação de PA média) já está descrito qualitativamente em `indications` e nos ensaios VASST/VANISH em `outcomes`."
+    "bp_evidence_source": "Não se aplica — a vasopressina é **vasopressor** (eleva a pressão arterial via receptores V1, ver `mechanism`), o oposto farmacológico de um anti-hipertensivo. Os campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` deste catálogo medem redução pressórica e não capturam o efeito pressor deste fármaco — mantidos nulos por não se aplicarem à direção do efeito, não por ausência de dado. O efeito pressor (elevação de PA média) já está descrito qualitativamente em `indications` e nos ensaios VASST/VANISH em `outcomes`.",
+    "presentations": [
+      "Solução injetável 20 U/mL, ampola de 1 mL (20 U/ampola)"
+    ],
+    "commercial_presentations": [
+      "Encrise® (Biolab Farmacêutica; registro ANVISA nº 1.0974.0190), vasopressina sintética (8-arginina vasopressina) 20 U/mL, ampola de 1 mL, embalagem com 10 ampolas. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+    ]
   },
   {
     "slug": "verapamil-cloridrato",
@@ -6955,7 +7120,13 @@
     "duration_of_action_source": "Bula do DILACORON (cloridrato de verapamil), Abbott Laboratórios do Brasil — já citada nas referências deste registro, seção de posologia; rótulos de formulações de liberação prolongada do FDA/DailyMed (Covera-HS, Verelan) para contraste, consultados via WebSearch em 2026.",
     "sbp_reduction_mmhg": -17.0,
     "dbp_reduction_mmhg": -12.0,
-    "bp_evidence_source": "Estudo com 14 pacientes hipertensos recebendo verapamil de liberação prolongada 240 mg 1x/dia: PA de consultório e PA ambulatorial média significativamente reduzidas em 17/12 mmHg (consultório) e 16/8 mmHg (ambulatorial), redução mantida ao longo do dia. Relação dose-resposta descrita separadamente: queda de PA sistólica supina de 5,8 mmHg e de PA diastólica de 2,9 mmHg a cada 100 ng/mL de verapamil plasmático. **Nota de procedência**: os valores acima vêm de estudo com a formulação de **liberação prolongada** (240mg 1x/dia) — a bula brasileira do DILACORON consultada neste registro descreve a formulação de liberação imediata em doses fracionadas (ver `duration_of_action_note`); os valores de mmHg podem não se aplicar de forma exata à formulação/posologia efetivamente disponível no Brasil sob esta marca. Fonte: estudo comparativo de formulação regular vs. liberação prolongada do verapamil em normotensão e hipertensão leve a moderada (American Journal of Cardiology, consultado via WebSearch em 2026)."
+    "bp_evidence_source": "Estudo com 14 pacientes hipertensos recebendo verapamil de liberação prolongada 240 mg 1x/dia: PA de consultório e PA ambulatorial média significativamente reduzidas em 17/12 mmHg (consultório) e 16/8 mmHg (ambulatorial), redução mantida ao longo do dia. Relação dose-resposta descrita separadamente: queda de PA sistólica supina de 5,8 mmHg e de PA diastólica de 2,9 mmHg a cada 100 ng/mL de verapamil plasmático. **Nota de procedência**: os valores acima vêm de estudo com a formulação de **liberação prolongada** (240mg 1x/dia) — a bula brasileira do DILACORON consultada neste registro descreve a formulação de liberação imediata em doses fracionadas (ver `duration_of_action_note`); os valores de mmHg podem não se aplicar de forma exata à formulação/posologia efetivamente disponível no Brasil sob esta marca. Fonte: estudo comparativo de formulação regular vs. liberação prolongada do verapamil em normotensão e hipertensão leve a moderada (American Journal of Cardiology, consultado via WebSearch em 2026).",
+    "presentations": [
+      "Comprimido revestido 80 mg (embalagem com 30 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Dilacoron® (Abbott Laboratórios do Brasil Ltda.), comprimido revestido 80 mg, embalagem com 30 comprimidos; sujeito a controle especial com retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "vericiguate",
@@ -7419,7 +7590,13 @@
     "duration_of_action_source": "Bula profissional brasileira do Xylestesin® Isobárico (Cristália), campo dosing já existente neste registro (intervalo de redose de 8-10 minutos) — usado apenas como indício indireto, não como fonte dedicada de 'duração de ação'.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Lidocaína IV não é anti-hipertensivo nem vasopressor — não há efeito pressórico sistêmico primário nem dado dose-resposta em mmHg na bula consultada."
+    "bp_evidence_source": "Lidocaína IV não é anti-hipertensivo nem vasopressor — não há efeito pressórico sistêmico primário nem dado dose-resposta em mmHg na bula consultada.",
+    "presentations": [
+      "Solução injetável 2% sem vasoconstritor, frasco-ampola de 20 mL (400 mg/20 mL), uso sistêmico"
+    ],
+    "commercial_presentations": [
+      "Xylestesin® Sem Vasoconstritor (Cristália Produtos Químicos Farmacêuticos Ltda.), Lidojet (União Química) e genéricos/similares de outros fabricantes (ex. Hipolabor, Hypofarma), frasco-ampola de 20 mL a 2% sem vasoconstritor. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "andexaneta-alfa",
@@ -7526,7 +7703,14 @@
     "duration_of_action_source": "Andersson L et al., Eur J Clin Pharmacol (farmacocinética de TXA IV); bula profissional brasileira do Transamin®, posologia de fibrinólise local (3x/dia), já citada em dosing.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Injeção IV rápida associa-se a hipotensão transitória (já registrado em notes, 'Via de administracao'), mas não há dado sistemático de magnitude de queda pressórica em mmHg — hipotensão nesse contexto é efeito da velocidade de infusão, não um efeito farmacodinâmico dose-dependente do fármaco. Fonte: bula profissional brasileira do Transamin®, seção Reações Adversas."
+    "bp_evidence_source": "Injeção IV rápida associa-se a hipotensão transitória (já registrado em notes, 'Via de administracao'), mas não há dado sistemático de magnitude de queda pressórica em mmHg — hipotensão nesse contexto é efeito da velocidade de infusão, não um efeito farmacodinâmico dose-dependente do fármaco. Fonte: bula profissional brasileira do Transamin®, seção Reações Adversas.",
+    "presentations": [
+      "Comprimido 250 mg",
+      "Solução injetável 50 mg/mL, ampola de 5 mL (250 mg/ampola)"
+    ],
+    "commercial_presentations": [
+      "Transamin® (comprimido 250 mg e injetável 50 mg/mL); Hemoblock® e Trexacont® (comprimido 250 mg); genérico injetável de múltiplos fabricantes (ex. Blau Farmacêutica S.A., 50 mg/mL, ampola de 5 mL). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Fabricante/detentor de registro do Transamin® e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "fenilefrina-cloridrato",
@@ -11987,5 +12171,192 @@
     "duration_of_action_note": "Componente saxagliptina: meia-vida plasmática curta (2,5h; metabólito ativo 3,1h), mas a inibição da DPP-4 plasmática dura cerca de 27h — é essa dissociação lenta da enzima, não a meia-vida plasmática, que sustenta a dose única diária (bula ONGLYZA®/FDA, componente já cadastrado nesta base sob análise cruzada). Componente metformina de liberação prolongada (XR): a cinética de liberação prolongada mantém efeito por cerca de 24h, consistente com a dose única diária já registrada em `dosing.posologia` deste verbete. Valor de 24h registrado como a duração prática do EFEITO COMBINADO (dose única diária), não uma medida farmacocinética única — os dois componentes têm mecanismos de sustentação de efeito diferentes entre si.",
     "duration_of_action_source": "FDA label ONGLYZA (saxagliptin), accessdata.fda.gov/drugsatfda_docs/label/2015/022350s016lbl.pdf — meia-vida de inibição da DPP-4 ~27h; Springer/Clinical Pharmacokinetics, 'Clinical Pharmacokinetics and Pharmacodynamics of Saxagliptin' (PMID 27282159); DailyMed, rótulo de metformina de liberação prolongada — duração de efeito ~24h coerente com posologia de dose única diária. Pesquisado em 11/08/2026 (WebSearch), preenchendo a lacuna que a sessão anterior (sem acesso de rede) havia deixado como VERIFICAÇÃO HUMANA NECESSÁRIA — a bula específica combinada de KOMBIGLYZE XR não foi lida por completo, então este valor segue composto a partir dos componentes isolados, mesma metodologia já declarada no restante deste registro.",
     "review_note": "Atualizado em 11/08/2026 (issue #52, nova fase): o achado mais clinicamente sensível deste registro — o sinal de insuficiência cardíaca do SAVOR-TIMI 53 em `outcomes` — estava marcado nesta mesma base como 'citado de memória, não reconferido nesta sessão', que é exatamente o tipo de afirmação que a régua de qualidade do projeto proíbe tratar como verificada. Conferido agora contra o registro real do PubMed via E-utilities (PMID 25189213: título/revista/volume/páginas/data batendo) e por busca — os números (3,5% vs. 2,8%, HR 1,27, IC95% 1,07-1,51, p=0,007, n=16.492) conferem exatamente com o que já estava escrito, e a atribuição foi corrigida para a publicação certa (Circulation 2014, análise dedicada de IC — não a publicação principal do NEJM 2013). Os demais campos deste registro continuam com `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a bula específica de KOMBIGLYZE XR não pôde ser lida por completo (ambiente de pesquisa sem acesso à rede na sessão original) — a composição a partir dos dois componentes isolados já verificados nesta base (saxagliptina via `saxagliptina-monoidratada-dapagliflozina`, metformina via `metformina-cloridrato`) permanece a metodologia declarada, não substituída por leitura da bula combinada. `review_status` mantido `revisado` porque o campo mais sensível a erro de memória (o desfecho de segurança cardiovascular) está agora verificado, e todo campo remanescente sem fonte primária direta carrega o aviso explícito em vez de ser apresentado como confirmado — mesmo padrão de honestidade já em vigor no restante do produto."
+  },
+  {
+    "slug": "anlodipino-besilato-atorvastatina-calcica",
+    "review_status": "pendente_revisao",
+    "generic_name": "Anlodipino (besilato) + Atorvastatina (cálcica)",
+    "brand_names": [
+      "Caduet"
+    ],
+    "drug_class": "Combinação: BCC diidropiridínico (anti-hipertensivo/antianginoso) + estatina (hipolipemiante)",
+    "mechanism": "O anlodipino relaxa a musculatura lisa vascular ao bloquear o influxo de cálcio através de canais de cálcio tipo L, reduzindo a pressão arterial e a demanda miocárdica de oxigênio. A atorvastatina inibe a HMG-CoA redutase, reduzindo a síntese hepática de colesterol e aumentando a expressão de receptores de LDL, reduzindo LDL-c e triglicérides. A combinação em dose fixa reúne, num único comprimido, o controle pressórico/antianginoso e o controle lipídico — indicada quando o paciente já necessita dos dois componentes separadamente.",
+    "presentations": [
+      "Comprimido 5 mg (anlodipino) + 10 mg (atorvastatina)",
+      "Comprimido 5 mg (anlodipino) + 20 mg (atorvastatina) — VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar todas as combinações de dose comercializadas no Brasil",
+      "Comprimido 10 mg (anlodipino) + 10 mg (atorvastatina) — VERIFICAÇÃO HUMANA NECESSÁRIA",
+      "Comprimido 10 mg (anlodipino) + 20 mg (atorvastatina) — VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "commercial_presentations": [
+      "Caduet® (Pfizer Brasil Ltda.), besilato de anlodipino + atorvastatina cálcica; apresentação 5 mg/10 mg confirmada por fonte primária (bula profissional). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais), Parte 2 (combinações de dose fixa). Produto real confirmado no mercado brasileiro por múltiplas fontes de varejo/bulário concordantes antes do cadastro. Grade completa de apresentações comerciais (5/20, 10/10, 10/20 mg) e número de registro ANVISA não reconferidos diretamente nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "indications": [
+      "Tratamento de pacientes com hipertensão arterial e/ou angina (estável crônica ou vasoespástica) que também apresentam dislipidemia (hipercolesterolemia familiar heterozigótica e não familiar, hipertrigliceridemia, disbetalipoproteinemia primária, hipercolesterolemia familiar homozigótica) e que já necessitam de ambos os componentes — substitui a administração separada de anlodipino e atorvastatina na mesma dosagem."
+    ],
+    "contraindications": [
+      "Hipersensibilidade conhecida a qualquer componente da fórmula.",
+      "Doença hepática ativa ou elevações persistentes e inexplicadas das transaminases séricas.",
+      "Gravidez (categoria X de risco gestacional) — estatina contraindicada por risco de dano fetal.",
+      "Hipotensão grave (contraindicação relativa do componente anlodipino).",
+      "Choque, incluindo choque cardiogênico."
+    ],
+    "interactions": [
+      "Fibratos, eritromicina, imunossupressores, antifúngicos azólicos, niacina em dose hipolipemiante: aumentam o risco de miopatia/rabdomiólise com a atorvastatina — considerar dose inicial e de manutenção menores quando coadministrados.",
+      "Pomelo (grapefruit) e seu suco, inibidores de protease, macrolídeos, verapamil/diltiazem: podem aumentar exposição a anlodipino e/ou atorvastatina via CYP3A4.",
+      "Rifampicina e erva-de-São-João (Hypericum perforatum): podem reduzir a exposição a ambos os componentes por indução do CYP3A4.",
+      "Coadministração de atorvastatina 80 mg com anlodipino 10 mg mostrou aumento de 18% na exposição à atorvastatina, sem relevância clínica descrita."
+    ],
+    "monitoring": [
+      "Perfil lipídico e enzimas hepáticas periodicamente.",
+      "Sinais/sintomas de miopatia (dor muscular, fraqueza) especialmente nos primeiros meses.",
+      "Pressão arterial durante titulação."
+    ],
+    "adverse_effects": [
+      "Comuns: edema periférico, cefaleia, mialgia, artralgia, nasofaringite.",
+      "Reações graves descritas para os componentes isolados: rabdomiólise, hepatotoxicidade, angioedema (frequência baixa) — VERIFICAÇÃO HUMANA NECESSÁRIA para frequências exatas do produto combinado, não localizadas nesta sessão."
+    ],
+    "dosing": {
+      "adultos": "Dose individualizada conforme a necessidade de cada componente isoladamente antes da troca para a combinação; comprimido único diário, com ou sem alimentos. VERIFICAÇÃO HUMANA NECESSÁRIA para esquema de titulação detalhado — não reconferido diretamente nesta sessão contra a bula profissional completa."
+    },
+    "renal_adjustment": "Sem recomendação formal de ajuste renal para a combinação — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+    "hepatic_adjustment": "Contraindicado em doença hepática ativa ou elevação persistente e inexplicada de transaminases; usar com cautela em consumo relevante de álcool ou histórico de doença hepática.",
+    "pregnancy": "Categoria de risco X — contraindicado na gravidez e em mulheres que possam engravidar durante o tratamento, pelo componente atorvastatina (risco de dano fetal associado à inibição da síntese de colesterol).",
+    "lactation": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado diretamente nesta sessão; estatinas são geralmente contraindicadas na lactação por precaução, dado o papel do colesterol no desenvolvimento do lactente, mas o texto exato da bula brasileira do Caduet® não foi lido nesta sessão.",
+    "references": [
+      "Caduet® (besilato de anlodipino + atorvastatina cálcica), Pfizer Brasil Ltda. — Bula Profissional (LLD_Bra_CDSv18.0_09Oct2015_v1_CDTCOR_11_VPS, 15/Out/2015), PDF hospedado em uploads.consultaremedios.com.br — trecho de contraindicações e interações lido nesta sessão via WebSearch (11/08/2026); documento completo não lido integralmente, campos não confirmados diretamente estão marcados como VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "sbp_reduction_mmhg": null,
+    "dbp_reduction_mmhg": null,
+    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — não localizada tabela numérica de redução pressórica do produto combinado nesta sessão.",
+    "half_life_hours": null,
+    "half_life_note": "Anlodipino: meia-vida terminal ~30-50 horas. Atorvastatina: meia-vida de eliminação ~14 horas (ativa ~20-30h pelos metabólitos ativos) — valores consolidados na farmacologia de cada componente isolado, não reconfirmados nesta sessão contra a bula do produto combinado.",
+    "duration_of_action_hours": 24,
+    "duration_of_action_note": "Dose única diária.",
+    "duration_of_action_source": "Bula Profissional Caduet® já citada em `references`.",
+    "outcomes": "Sem ensaio de desfecho duro dedicado ao produto combinado em dose fixa; evidência de desfecho vem dos componentes isolados (ex. estudo ASCOT-LLA para atorvastatina em hipertensos), já referenciados em outros documentos deste acervo."
+  },
+  {
+    "slug": "captopril-hidroclorotiazida",
+    "review_status": "pendente_revisao",
+    "generic_name": "Captopril + Hidroclorotiazida",
+    "brand_names": [
+      "Capozide"
+    ],
+    "drug_class": "Combinação: IECA + diurético tiazídico",
+    "mechanism": "O captopril inibe a enzima conversora de angiotensina (ECA), reduzindo a formação de angiotensina II e a degradação da bradicinina, promovendo vasodilatação e queda da pressão arterial. A hidroclorotiazida inibe a reabsorção de sódio e cloreto no túbulo contorcido distal, aumentando a diurese e reduzindo o volume circulante. Os efeitos hipotensores dos dois componentes são aproximadamente aditivos.",
+    "presentations": [
+      "Comprimido 50 mg (captopril) + 25 mg (hidroclorotiazida)"
+    ],
+    "commercial_presentations": [
+      "Genérico de múltiplos fabricantes (ex. EMS) — Captopril + Hidroclorotiazida 50 mg/25 mg, embalagem com 30 comprimidos; referência histórica de mercado internacional Capozide® 50/25 (não confirmado como marca ativa comercializada no Brasil nesta sessão). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais), Parte 2 (combinações de dose fixa). Produto real confirmado no mercado brasileiro por múltiplas fontes de varejo/bulário concordantes antes do cadastro. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "indications": [
+      "Tratamento da hipertensão arterial em pacientes cuja pressão não é adequadamente controlada com um dos componentes isoladamente, ou como terapia de substituição para quem já usa os dois fármacos separadamente na mesma dosagem."
+    ],
+    "contraindications": [
+      "Hipersensibilidade ao captopril, a qualquer outro inibidor da ECA, à hidroclorotiazida ou a outras sulfonamidas.",
+      "Angioedema prévio relacionado a uso de IECA.",
+      "Anúria.",
+      "Gravidez (2º e 3º trimestres) — hidroclorotiazida e captopril contraindicados por fetotoxicidade.",
+      "Uso concomitante com alisquireno em diabéticos ou disfunção renal (TFG < 60 mL/min/1,73 m²)."
+    ],
+    "interactions": [
+      "AINEs: podem reduzir o efeito anti-hipertensivo e aumentar o risco de piora da função renal.",
+      "Diuréticos poupadores de potássio, suplementos de potássio, substitutos de sal com potássio: risco de hipercalemia com o componente captopril.",
+      "Lítio: risco de aumento de litemia e toxicidade, potencializado pela associação IECA + diurético tiazídico.",
+      "Outros anti-hipertensivos e álcool: potencialização do efeito hipotensor."
+    ],
+    "monitoring": [
+      "Função renal e eletrólitos séricos (sódio, potássio) periodicamente, sobretudo no início do tratamento e em pacientes com disfunção renal prévia.",
+      "Pressão arterial.",
+      "Glicemia e ácido úrico (efeito do componente tiazídico)."
+    ],
+    "adverse_effects": [
+      "Comuns: tosse seca (efeito de classe do IECA), tontura, hipotensão, hipopotassemia ou hiperpotassemia, hiponatremia.",
+      "Menos comuns: exantema, disgeusia (alteração do paladar), hiperuricemia.",
+      "Raras/graves: angioedema, neutropenia/agranulocitose, disfunção renal aguda, pancreatite — descritas para os componentes isolados; frequência exata da combinação não confirmada nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "dosing": {
+      "adultos": "Posologia individualizada conforme resposta; esquema usual inicial de 1/2 comprimido (captopril 25 mg + hidroclorotiazida 12,5 mg) uma vez ao dia, aumentando para 1 comprimido inteiro (50 mg/25 mg) uma vez ao dia se a resposta for insuficiente; administrar cerca de 1 hora antes das refeições."
+    },
+    "renal_adjustment": "Uso com cautela em disfunção renal — diuréticos tiazídicos perdem eficácia em TFG muito reduzida, e o captopril exige ajuste em disfunção renal quando usado isoladamente; VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema numérico exato de ajuste da combinação.",
+    "hepatic_adjustment": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado nesta sessão.",
+    "pregnancy": "Contraindicado na gravidez, especialmente no 2º e 3º trimestres — IECA associado a fetotoxicidade (oligoidrâmnio, insuficiência renal fetal/neonatal, hipoplasia craniana) e hidroclorotiazida contraindicada por risco de trombocitopenia neonatal e outras reações adversas fetais/neonatais.",
+    "lactation": "Hidroclorotiazida contraindicada durante a amamentação, conforme fonte consultada nesta sessão; captopril é excretado no leite humano em pequenas quantidades — VERIFICAÇÃO HUMANA NECESSÁRIA para a recomendação exata da bula brasileira da combinação.",
+    "references": [
+      "Captopril + Hidroclorotiazida, bula de genérico (ex. EMS Genérico) — informações de indicação, posologia e contraindicações obtidas via WebSearch (11/08/2026) em agregadores de bula (consultaremedios.com.br, minhavida.com.br); bula profissional completa não lida integralmente nesta sessão — campos não confirmados diretamente marcados como VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Estudo multicêntrico brasileiro de captopril associado a hidroclorotiazida no tratamento da hipertensão leve e moderada — Arq Bras Cardiol (SciELO), citado como referência de eficácia da associação em população brasileira."
+    ],
+    "sbp_reduction_mmhg": null,
+    "dbp_reduction_mmhg": null,
+    "bp_evidence_source": "Estudo multicêntrico brasileiro (Arq Bras Cardiol, SciELO) relata controle pressórico em 45%, 67% e 88% dos pacientes após 4, 8 e 12 semanas, respectivamente — valores percentuais de controle, não redução em mmHg; VERIFICAÇÃO HUMANA NECESSÁRIA para os valores numéricos de redução pressórica em mmHg.",
+    "half_life_hours": null,
+    "half_life_note": "Captopril: meia-vida curta, cerca de 2 horas (justifica posologia usual de 2-3x/dia quando usado isolado, embora a combinação seja administrada em dose única diária). Hidroclorotiazida: meia-vida de aproximadamente 6-15 horas. Valores consolidados na farmacologia de cada componente isolado, não reconfirmados nesta sessão contra a bula do produto combinado.",
+    "duration_of_action_hours": 24,
+    "duration_of_action_note": "Administração em dose única diária conforme bula do genérico.",
+    "duration_of_action_source": "Bula de genérico já citada em `references`.",
+    "outcomes": "Sem ensaio de desfecho duro dedicado ao produto combinado; evidência de eficácia vem do estudo multicêntrico brasileiro de controle pressórico (percentual de pacientes controlados), já citado em `bp_evidence_source`."
+  },
+  {
+    "slug": "metoprolol-succinato-hidroclorotiazida",
+    "review_status": "pendente_revisao",
+    "generic_name": "Succinato de Metoprolol + Hidroclorotiazida",
+    "brand_names": [
+      "Selopress Zok"
+    ],
+    "drug_class": "Combinação: betabloqueador seletivo beta-1 (liberação controlada) + diurético tiazídico",
+    "mechanism": "O succinato de metoprolol, em formulação de liberação controlada em múltiplos grânulos, bloqueia seletivamente receptores beta-1 adrenérgicos, reduzindo frequência cardíaca, contratilidade e liberação de renina. A hidroclorotiazida, presente na massa inerte do comprimido em liberação imediata, aumenta a diurese por inibição da reabsorção de sódio/cloreto no túbulo distal. A combinação em dose única diária reúne os dois mecanismos anti-hipertensivos complementares.",
+    "presentations": [
+      "Comprimido de liberação controlada 95 mg (succinato de metoprolol, equivalente a 100 mg de tartarato de metoprolol) + 12,5 mg (hidroclorotiazida), embalagem com 20 ou 30 comprimidos"
+    ],
+    "commercial_presentations": [
+      "Selopress Zok® (AstraZeneca do Brasil Ltda.), comprimido de liberação controlada 95 mg/12,5 mg (succinato de metoprolol/hidroclorotiazida).Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais), Parte 2 (combinações de dose fixa). Produto real confirmado no mercado brasileiro por múltiplas fontes de varejo/bulário concordantes antes do cadastro. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "indications": [
+      "Tratamento da hipertensão arterial em pacientes cuja pressão não é adequadamente controlada com succinato de metoprolol isolado, quando também há indicação de diurético tiazídico adjuvante."
+    ],
+    "contraindications": [
+      "Hipersensibilidade ao metoprolol, a outros betabloqueadores, à hidroclorotiazida ou a outras sulfonamidas.",
+      "Bloqueio atrioventricular de 2º ou 3º grau, doença do nó sinusal, bradicardia sinusal grave, choque cardiogênico.",
+      "Insuficiência cardíaca descompensada.",
+      "Anúria.",
+      "Asma grave ou broncoespasmo grave (contraindicação relativa/cautela pelo componente betabloqueador)."
+    ],
+    "interactions": [
+      "Verapamil, diltiazem: risco de bradicardia e bloqueio AV aditivos com o componente metoprolol.",
+      "AINEs: podem reduzir o efeito anti-hipertensivo e aumentar risco de piora da função renal.",
+      "Outros anti-hipertensivos, álcool: potencialização do efeito hipotensor.",
+      "Antiarrítmicos classe I, amiodarona: risco de efeitos cronotrópicos/dromotrópicos negativos aditivos.",
+      "Doação de sangue contraindicada durante o tratamento e até 48 horas após seu término, conforme bula do metoprolol isolado (Selozok®)."
+    ],
+    "monitoring": [
+      "Frequência cardíaca e pressão arterial.",
+      "Eletrólitos séricos (sódio, potássio), função renal e glicemia periodicamente (efeito do componente tiazídico).",
+      "Sinais de descompensação cardíaca ao iniciar ou ajustar a dose."
+    ],
+    "adverse_effects": [
+      "Comuns: fadiga, tontura, cefaleia, bradicardia, extremidades frias, hipotensão ortostática.",
+      "Do componente tiazídico: hipopotassemia, hiperuricemia, hiperglicemia.",
+      "Raras/graves: broncoespasmo em predispostos, bloqueio AV, agravamento de insuficiência cardíaca descompensada — frequência exata do produto combinado não confirmada nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "dosing": {
+      "adultos": "1 comprimido (95 mg/12,5 mg) uma vez ao dia, por via oral, preferencialmente junto com o café da manhã, engolido inteiro com líquido, sem mastigar ou esmagar; se a resposta for insuficiente, a dose pode ser aumentada para 2 comprimidos ao dia, a critério médico."
+    },
+    "renal_adjustment": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado nesta sessão; diuréticos tiazídicos perdem eficácia em disfunção renal significativa.",
+    "hepatic_adjustment": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado nesta sessão; metoprolol é metabolizado no fígado (CYP2D6), com possível necessidade de cautela em hepatopatia grave, sem esquema numérico formal identificado para a combinação.",
+    "pregnancy": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado diretamente nesta sessão para a combinação; hidroclorotiazida é geralmente evitada na gravidez, e betabloqueadores exigem avaliação individualizada de risco-benefício conforme trimestre.",
+    "lactation": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado diretamente nesta sessão para a combinação.",
+    "references": [
+      "Selopress Zok® (succinato de metoprolol + hidroclorotiazida), AstraZeneca do Brasil Ltda. — Bula Profissional e Bula ao Paciente (PDFs hospedados em qualidoc.com.br, saudedireta.com.br e araujo.vteximg.com.br), composição 95 mg/12,5 mg confirmada por fonte de varejo/distribuidor farmacêutico (WeCare Pharma) e por agregador de bula (consultaremedios.com.br) — informações lidas via WebSearch (11/08/2026); bula profissional completa não lida integralmente nesta sessão — campos não confirmados diretamente marcados como VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "sbp_reduction_mmhg": null,
+    "dbp_reduction_mmhg": null,
+    "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — não localizada tabela numérica de redução pressórica do produto combinado nesta sessão.",
+    "half_life_hours": null,
+    "half_life_note": "Succinato de metoprolol (liberação controlada): perfil plasmático praticamente constante ao longo de 24 horas, efeito betabloqueador sustentado; hidroclorotiazida: meia-vida de aproximadamente 6-15 horas. Valores consolidados na farmacologia de cada componente isolado, não reconfirmados nesta sessão contra a bula do produto combinado.",
+    "duration_of_action_hours": 24,
+    "duration_of_action_note": "Dose única diária, formulação de liberação controlada.",
+    "duration_of_action_source": "Bula Profissional Selopress Zok® já citada em `references`.",
+    "outcomes": "Sem ensaio de desfecho duro dedicado ao produto combinado em dose fixa; evidência de desfecho para o componente succinato de metoprolol isolado vem de estudos como o MERIT-HF (já referenciado em outros documentos deste acervo, no contexto de insuficiência cardíaca) — não aplicável diretamente à indicação anti-hipertensiva desta combinação."
   }
 ]
