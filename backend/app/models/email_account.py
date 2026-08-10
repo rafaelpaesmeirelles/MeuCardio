@@ -1,7 +1,8 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, event
 from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm.attributes import NO_VALUE
 
 from app.core.db import Base
 
@@ -46,6 +47,21 @@ class EmailAccount(Base):
     lgpd_aceite_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     lgpd_aceite_versao: Mapped[str | None] = mapped_column(String(20), nullable=True)
 
+    # Achado de auditoria (issue #52, gate final): a sessão principal
+    # (`users.sessions_valid_after`) já revogava token emitido antes de uma
+    # troca de senha; a sessão separada da caixa (token `scope="email"`) não
+    # tinha equivalente — um token já emitido continuava servindo até a
+    # própria expiração (até 30 dias com "permanecer conectado") mesmo
+    # depois de o médico redefinir a senha da caixa, seja reativando
+    # (`POST /api/email/conta`) seja pelo link de recuperação
+    # (`POST /api/auth/redefinir-senha`, alvo="email"). Mesmo padrão exato
+    # de `User.password_hash` abaixo — marca o instante da troca, e
+    # `current_email_account()` (app/core/security.py) rejeita qualquer
+    # token com `session_iat` anterior a esse marco.
+    sessions_valid_after: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
     # Acrescentado em 02/08/2026 — trava de reputação do domínio para o envio
     # de material do paciente pelo endereço do médico (ver
     # material-paciente-por-email-spec.md, "risco operacional"). Sem
@@ -61,3 +77,13 @@ class EmailAccount(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
+
+@event.listens_for(EmailAccount.password_hash, "set")
+def _revogar_sessoes_email_ao_trocar_senha(target, value, oldvalue, initiator) -> None:
+    """Mesmo gatilho de `User._revogar_sessoes_ao_trocar_senha` — só marca
+    quando o hash já existia e realmente mudou (não na primeira ativação da
+    caixa, `POST /api/email/conta` na criação: `oldvalue` vem `NO_VALUE` ou
+    `None` nesse caso, e não há sessão anterior para revogar)."""
+    if oldvalue is not NO_VALUE and oldvalue is not None and value != oldvalue:
+        target.sessions_valid_after = datetime.now(timezone.utc)

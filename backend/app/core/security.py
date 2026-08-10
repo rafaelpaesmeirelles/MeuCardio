@@ -162,6 +162,10 @@ def _marco_utc(value: datetime) -> datetime:
 
 
 def _sessao_valida_para_usuario(user, issued_at: datetime | None) -> bool:
+    """Genérica de propósito: usada tanto para `User` (sessão principal)
+    quanto para `EmailAccount` (sessão da caixa CorvIA Mail, issue #52 gate
+    final) — as duas entidades expõem `sessions_valid_after` com o mesmo
+    contrato (marcado por um listener de `password_hash` em cada modelo)."""
     if user.sessions_valid_after is None:
         return True
     valid_after = _marco_utc(user.sessions_valid_after)
@@ -317,6 +321,7 @@ def current_email_account(
     ciclo próprios. O cookie app nunca é usado como sessão da caixa.
     """
     from app.models.email_account import EmailAccount
+    from app.models.user import User
 
     credentials_error = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -325,8 +330,20 @@ def current_email_account(
     )
     if not token:
         raise credentials_error
-    email_address, _ = _decodificar(token, "email", credentials_error)
+    email_address, issued_at = _decodificar(token, "email", credentials_error)
     conta = db.query(EmailAccount).filter(EmailAccount.email_address == email_address).first()
     if not conta or conta.status != "ativa":
+        raise credentials_error
+    # Achado de auditoria (issue #52, gate final): faltava aqui o mesmo marco
+    # de revogação que `current_user`/`usuario_por_token_app` já aplicam à
+    # sessão principal — sem ele, trocar a senha da caixa não invalidava
+    # tokens já emitidos (inclusive "permanecer conectado", até 30 dias).
+    if not _sessao_valida_para_usuario(conta, issued_at):
+        raise credentials_error
+    # Achado relacionado, mesmo gate: a conta principal desativada (ex.:
+    # banimento por admin) não derrubava a sessão da caixa — a coerência
+    # pedida com a sessão principal exige as duas caírem juntas.
+    titular = db.get(User, conta.user_id)
+    if titular is None or not titular.is_active:
         raise credentials_error
     return conta
