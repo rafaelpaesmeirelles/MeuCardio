@@ -480,7 +480,7 @@ export default function AvaliacaoPreOperatoria() {
 
       <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
         <p className="eyebrow" style={{ marginTop: 0 }}>Metodologias adicionais</p>
-        <p style={{ marginBottom: "0.35rem" }}><strong>GSCRI:</strong> documentado para pacientes ≥65 anos; cálculo local permanece bloqueado até revisão integral dos coeficientes contra a publicação original.</p>
+        <p style={{ marginBottom: "0.35rem" }}><strong>GSCRI:</strong> validado para pacientes ≥65 anos (Alrezk et al., J Am Heart Assoc. 2017) e já disponível como calculadora própria, com laudo assinável — acesse em <Link to="/calculadoras/gscri">Calculadoras</Link>. Ainda não integrado neste formulário combinado.</p>
         <p style={{ marginBottom: 0 }}><strong>ACS NSQIP:</strong> usar o calculador oficial externo; o modelo é atualizado periodicamente e não deve ser embutido/automatizado na Corvia.</p>
       </div>
 

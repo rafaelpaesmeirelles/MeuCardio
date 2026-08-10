@@ -64,16 +64,24 @@ def get_calculator(slug: str, _=Depends(current_user)):
 
 @router.post("/{slug}/run")
 def run_calculator(slug: str, payload: dict, _=Depends(current_user)):
+    # Checagem de existência ANTES do try: `calc.run()` também levanta
+    # KeyError quando falta um campo obrigatório no payload (ex.: `d["asa"]`
+    # dentro do compute de uma calculadora) — sem pré-checar o slug aqui, os
+    # dois casos ("calculadora não existe" e "faltou um campo") eram
+    # indistinguíveis e o segundo virava, por engano, 404 "não encontrada"
+    # em vez de 422 "dados incompletos" (achado na revisão de segurança da
+    # issue #52; mesmo padrão que _resultado_calculadora(), em
+    # avaliacao_preoperatoria.py, já tratava corretamente).
+    if slug not in calc.REGISTRY:
+        raise HTTPException(status_code=404, detail="Calculadora não encontrada.")
     try:
         result = calc.run(slug, payload)
         c = calc.REGISTRY.get(slug)
         result["fonte_producao"] = _fonte(c) if c else None
         return result
-    except KeyError:
-        raise HTTPException(status_code=404, detail="Calculadora não encontrada.")
     except ValueError as e:
         raise HTTPException(status_code=409, detail=str(e))
-    except (TypeError, ZeroDivisionError):
+    except (KeyError, TypeError, ZeroDivisionError):
         raise HTTPException(status_code=422, detail="Revise os valores informados.")
 
 
@@ -116,13 +124,16 @@ def gerar_documento(
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
 
+    # O slug já foi confirmado no REGISTRY acima — qualquer KeyError daqui
+    # em diante só pode vir de dentro do compute() (campo obrigatório
+    # ausente no payload, ex.: d["asa"]), nunca de "calculadora não existe".
+    # Achado na revisão de segurança da issue #52: antes, esse KeyError
+    # virava 404 por engano (ver mesma correção em run_calculator() acima).
     try:
         r = calc.run(slug, dados.payload)
-    except KeyError:
-        raise HTTPException(status_code=404, detail="Calculadora não encontrada.")
     except ValueError as e:
         raise HTTPException(status_code=409, detail=str(e))
-    except (TypeError, ZeroDivisionError):
+    except (KeyError, TypeError, ZeroDivisionError):
         raise HTTPException(status_code=422, detail="Revise os valores informados antes de gerar o documento.")
 
     resultado, interpretacao = r["result"], r.get("interpretation")

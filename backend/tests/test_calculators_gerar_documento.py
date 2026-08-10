@@ -73,12 +73,47 @@ def test_gerar_documento_dados_invalidos_devolve_422(client, db, criar_usuario):
     assert resposta.status_code in (409, 422)
 
 
-def test_gerar_documento_gscri_nao_esta_no_catalogo_calculavel(client, db, criar_usuario):
-    """GSCRI é documentado (content/Perioperatório) mas deliberadamente NÃO
-    entrou no catálogo de calculadoras — os coeficientes por categoria
-    cirúrgica não foram validados contra a publicação original nesta sessão.
-    A rota genérica precisa herdar esse bloqueio (404, calculadora
-    inexistente) sem tratamento especial que a contorne."""
+def test_gerar_documento_gscri_esta_implementada_e_funciona(client, db, criar_usuario):
+    """CORREÇÃO (issue #52, revisão de segurança, 11/08/2026): esta suíte
+    afirmava que o GSCRI "deliberadamente NÃO entrou no catálogo" e que a
+    rota devolvia 404 por bloqueio proposital. Isso ficou desatualizado —
+    `perioperative_calculators_geriatria.py` implementa o GSCRI por completo
+    (Alrezk R et al., J Am Heart Assoc. 2017;6(11):e006648, PMID 29146612,
+    coeficientes da Table 3), `status="implementada"`, mergeado em
+    `calc.REGISTRY` por `app/services/__init__.py`. A asserção antiga de 404
+    só "passava" por um motivo completamente diferente e não relacionado ao
+    bloqueio documentado: um payload incompleto ({"idade": 70}, sem os
+    campos obrigatórios) fazia `_gscri()` levantar KeyError ao acessar
+    d["asa"], e a rota mapeava QUALQUER KeyError para 404 "calculadora não
+    encontrada" — mascarando um erro de dado incompleto como se a
+    calculadora não existisse. Ambos os defeitos foram corrigidos: o
+    catálogo já tinha o GSCRI real, e a rota agora distingue "slug
+    inexistente" (404) de "payload incompleto" (422) — ver
+    test_gerar_documento_payload_incompleto_devolve_422_nao_404."""
+    user, token = criar_usuario()
+    _subscribe(db, user.id)
+    resposta = client.post(
+        "/api/calculators/gscri/gerar-documento",
+        json={
+            "payload": {
+                "idade": 70, "asa": 3, "tipo_procedimento": "hernia",
+                "status_funcional": "independente", "diabetes": "nao",
+            },
+        },
+        headers=_headers(token),
+    )
+    assert resposta.status_code == 201, resposta.text
+    corpo = resposta.json()
+    assert corpo["result"] is not None
+    assert "risco_pct" in corpo["result"]
+
+
+def test_gerar_documento_payload_incompleto_devolve_422_nao_404(client, db, criar_usuario):
+    """Regressão do bug descrito acima: KeyError por campo obrigatório
+    ausente no payload (não por slug inexistente) precisa virar 422 "dados
+    incompletos", nunca 404 "calculadora não encontrada" — os dois erros
+    têm causas e correções completamente diferentes para quem está usando
+    a API."""
     user, token = criar_usuario()
     _subscribe(db, user.id)
     resposta = client.post(
@@ -86,7 +121,7 @@ def test_gerar_documento_gscri_nao_esta_no_catalogo_calculavel(client, db, criar
         json={"payload": {"idade": 70}},
         headers=_headers(token),
     )
-    assert resposta.status_code == 404
+    assert resposta.status_code == 422, resposta.text
 
 
 def test_gerar_documento_endereco_invalido_devolve_422(client, db, criar_usuario):
@@ -123,6 +158,46 @@ def test_gerar_documento_registra_auditlog_e_persiste(client, db, criar_usuario)
     )
     assert log is not None
     assert log.detail["calculadora"] == "has-bled"
+
+
+def test_run_calculator_slug_inexistente_devolve_404(client, db, criar_usuario):
+    """`POST /{slug}/run` (endpoint distinto de /gerar-documento, sem
+    checagem prévia de slug no REGISTRY) precisava continuar devolvendo 404
+    para slug genuinamente inexistente, depois da correção que separou esse
+    caso de "payload incompleto"."""
+    user, token = criar_usuario()
+    _subscribe(db, user.id)
+    resposta = client.post(
+        "/api/calculators/nao-existe/run", json={}, headers=_headers(token),
+    )
+    assert resposta.status_code == 404
+
+
+def test_run_calculator_payload_incompleto_devolve_422_nao_404(client, db, criar_usuario):
+    """Mesma correção do bug de /gerar-documento (KeyError de campo
+    obrigatório ausente mapeado por engano para 404), agora coberta também
+    em /run — a rota que primeiro apresentava o defeito."""
+    user, token = criar_usuario()
+    _subscribe(db, user.id)
+    resposta = client.post(
+        "/api/calculators/gscri/run", json={"idade": 70}, headers=_headers(token),
+    )
+    assert resposta.status_code == 422, resposta.text
+
+
+def test_run_calculator_gscri_funciona_com_payload_completo(client, db, criar_usuario):
+    user, token = criar_usuario()
+    _subscribe(db, user.id)
+    resposta = client.post(
+        "/api/calculators/gscri/run",
+        json={
+            "idade": 70, "asa": 3, "tipo_procedimento": "hernia",
+            "status_funcional": "independente", "diabetes": "nao",
+        },
+        headers=_headers(token),
+    )
+    assert resposta.status_code == 200, resposta.text
+    assert "risco_pct" in resposta.json()["result"]
 
 
 def test_gerar_documento_funciona_para_calculadora_de_dose(client, db, criar_usuario):
