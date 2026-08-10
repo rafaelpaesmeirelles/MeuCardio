@@ -7,6 +7,7 @@ import { Carregando, Erro, SeloRevisao } from "../components/Estado";
 import Fluxograma from "../components/Fluxograma";
 import ExportarApresentacao from "../components/ExportarApresentacao";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 /** Extrai o código de um bloco ```mermaid```; devolve null para qualquer outro
  * bloco. Sobrescrevemos `pre` em vez de `code` porque o diagrama é uma <div>, e
@@ -79,6 +80,11 @@ export default function Documento() {
         tema={doc.theme}
         excluirTipo={doc.kind === "fluxograma" ? "fluxograma" : "documento"}
         excluirSlug={slug}
+      />
+
+      <GrafoRelacionados
+        entityType={doc.kind === "fluxograma" ? "fluxograma" : "documento"}
+        slug={slug}
       />
     </article>
   );

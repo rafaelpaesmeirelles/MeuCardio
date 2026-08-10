@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 import { rotuloClasse, rotuloNivel } from "../lib/evidencia";
 
 type Detalhe = {
@@ -107,6 +108,8 @@ export default function Evidencia() {
       )}
 
       <TudoSobreEsteTema tema={evidencia.theme} excluirTipo="evidencia" excluirSlug={slug} />
+
+      <GrafoRelacionados entityType="evidencia" slug={slug} />
     </article>
   );
 }
