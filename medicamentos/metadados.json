@@ -404,7 +404,14 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed de CORDARONE® (amiodarone HCl), seção CLINICAL PHARMACOLOGY, consultado via WebSearch em 10/08/2026 — texto integral não lido diretamente (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como efeito terapêutico pretendido/quantificado — a amiodarona não é antihipertensivo. **Hipotensão é evento adverso conhecido, sobretudo na administração intravenosa** (por vasodilatação relacionada ao veículo/polissorbato 80 da formulação IV e, em menor grau, por efeito inotrópico negativo leve), mais frequente com infusão rápida ou dose de ataque — o rótulo relaciona doses médias diárias acima de 2,1 g/dia a maior risco de hipotensão, e orienta tratar hipotensão com repercussão hemodinâmica com agentes inotrópicos positivos e/ou vasopressores. Isso é descrito qualitativamente como reação adversa, não como um efeito antihipertensivo dose-resposta quantificado em mmHg — nenhum número de redução de PA sistólica/diastólica atribuível à amiodarona em uso terapêutico foi localizado nesta sessão."
+    "bp_evidence_source": "Não se aplica como efeito terapêutico pretendido/quantificado — a amiodarona não é antihipertensivo. **Hipotensão é evento adverso conhecido, sobretudo na administração intravenosa** (por vasodilatação relacionada ao veículo/polissorbato 80 da formulação IV e, em menor grau, por efeito inotrópico negativo leve), mais frequente com infusão rápida ou dose de ataque — o rótulo relaciona doses médias diárias acima de 2,1 g/dia a maior risco de hipotensão, e orienta tratar hipotensão com repercussão hemodinâmica com agentes inotrópicos positivos e/ou vasopressores. Isso é descrito qualitativamente como reação adversa, não como um efeito antihipertensivo dose-resposta quantificado em mmHg — nenhum número de redução de PA sistólica/diastólica atribuível à amiodarona em uso terapêutico foi localizado nesta sessão.",
+    "presentations": [
+      "Comprimido 200 mg — apresentação padronizada pelo Ministério da Saúde (CBAF)",
+      "Solução injetável 50 mg/mL, ampola de 3 mL (150 mg/ampola)"
+    ],
+    "commercial_presentations": [
+      "Genérico/similar (comprimido 200 mg e injetável 50 mg/mL) — múltiplos fabricantes com registro ANVISA identificados: Biosintética Farmacêutica Ltda., Hipolabor Farmacêutica Ltda., Fresenius Kabi Brasil Ltda., Geolab Indústria Farmacêutica S/A. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Números de registro ANVISA específicos por fabricante não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para o registro exato antes de exibir como definitivo."
+    ]
   },
   {
     "slug": "anlodipino-besilato",
@@ -453,7 +460,14 @@
     "duration_of_action_source": "Inferido da meia-vida de 30-50h e do esquema posológico de 1x/dia do rótulo FDA NORVASC®, consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": -12.0,
     "dbp_reduction_mmhg": -6.0,
-    "bp_evidence_source": "Rótulo FDA/DailyMed do NORVASC® (amlodipine besylate), seção CLINICAL STUDIES: em pacientes com hipertensão leve a moderada, redução placebo-corrigida média de **12/6 mmHg em posição ortostática (em pé)** e **13/7 mmHg em posição supina** — valores registrados nos campos numéricos são os da posição em pé (12/6 mmHg), por ser a medida ambulatorial padrão. A magnitude da resposta correlaciona-se com a PA basal: hipertensão moderada (PA diastólica basal 105-114 mmHg) teve resposta cerca de 50% maior que hipertensão leve (PA diastólica basal 90-104 mmHg). Em análise mais ampla de estudos de vida real (não apenas o rótulo), redução média de PA sistólica em consultório foi de 17,5 mmHg, maior em ≥60 anos (24,1 mmHg), hipertensão sistólica isolada (25,9 mmHg) e diabéticos (19,1 mmHg) — números de contexto adicional, não usados como valor principal por serem de fonte secundária agregada, não do rótulo. Consultado via WebSearch em 10/08/2026, texto integral do rótulo não lido diretamente nesta sessão (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    "bp_evidence_source": "Rótulo FDA/DailyMed do NORVASC® (amlodipine besylate), seção CLINICAL STUDIES: em pacientes com hipertensão leve a moderada, redução placebo-corrigida média de **12/6 mmHg em posição ortostática (em pé)** e **13/7 mmHg em posição supina** — valores registrados nos campos numéricos são os da posição em pé (12/6 mmHg), por ser a medida ambulatorial padrão. A magnitude da resposta correlaciona-se com a PA basal: hipertensão moderada (PA diastólica basal 105-114 mmHg) teve resposta cerca de 50% maior que hipertensão leve (PA diastólica basal 90-104 mmHg). Em análise mais ampla de estudos de vida real (não apenas o rótulo), redução média de PA sistólica em consultório foi de 17,5 mmHg, maior em ≥60 anos (24,1 mmHg), hipertensão sistólica isolada (25,9 mmHg) e diabéticos (19,1 mmHg) — números de contexto adicional, não usados como valor principal por serem de fonte secundária agregada, não do rótulo. Consultado via WebSearch em 10/08/2026, texto integral do rótulo não lido diretamente nesta sessão (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+    "presentations": [
+      "Comprimido 5 mg (besilato de anlodipino equivalente a 5 mg de anlodipino base)",
+      "Comprimido 10 mg (besilato de anlodipino equivalente a 10 mg de anlodipino base)"
+    ],
+    "commercial_presentations": [
+      "Norvasc® (Viatris Farmacêutica do Brasil Ltda. / Novartis Biociências S.A.), embalagens de 10, 30 ou 60 comprimidos (5 mg) e 30 ou 60 comprimidos (10 mg); numerosos genéricos registrados (ex. Biosintética). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Bula de Norvasc citada com data de aprovação ANVISA 11/05/2026 num dos espelhos consultados — data suspeita (futura em relação a versões anteriores conhecidas do produto); NÃO usar essa data sem confirmação direta no bulário da ANVISA. VERIFICAÇÃO HUMANA NECESSÁRIA para número de registro e data de bula corretos."
+    ]
   },
   {
     "slug": "apixabana",
@@ -1195,7 +1209,15 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do CAPTOPRIL (captopril tablet) para pico/onset; StatPearls (NCBI Bookshelf, NBK535386) e compilações Drugs.com/Medicine.com para a duração de 6-8h, sintetizadas via WebSearch em 10/08/2026. Leitura direta dos documentos não foi possível nesta sessão (WebFetch bloqueado).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Diferente das ARBs/iSGLT2 já cadastrados nesta base (que trazem uma tabela clara de redução placebo-subtraída em mmHg no rótulo), o captopril é fármaco antigo (aprovação original em 1981) cujo rótulo, na parte localizada via WebSearch nesta sessão, não trouxe uma tabela limpa de redução pressórica placebo-controlada por dose. Os únicos números encontrados foram de estudos abertos, sem grupo placebo (ex.: PMID 3317335, sistólica de 173,4 para 154,5 mmHg e diastólica de 104,5 para 91,5 mmHg em estudo multicêntrico não controlado) — valor absoluto de antes-depois, não a redução líquida sobre placebo que os outros registros desta base usam, e por isso não foi lançado nos campos numéricos para não misturar convenções dentro do mesmo arquivo. Não foi possível, dentro do orçamento de busca desta sessão, localizar a tabela de eficácia do rótulo FDA equivalente à usada em candesartana/carvedilol acima."
+    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Diferente das ARBs/iSGLT2 já cadastrados nesta base (que trazem uma tabela clara de redução placebo-subtraída em mmHg no rótulo), o captopril é fármaco antigo (aprovação original em 1981) cujo rótulo, na parte localizada via WebSearch nesta sessão, não trouxe uma tabela limpa de redução pressórica placebo-controlada por dose. Os únicos números encontrados foram de estudos abertos, sem grupo placebo (ex.: PMID 3317335, sistólica de 173,4 para 154,5 mmHg e diastólica de 104,5 para 91,5 mmHg em estudo multicêntrico não controlado) — valor absoluto de antes-depois, não a redução líquida sobre placebo que os outros registros desta base usam, e por isso não foi lançado nos campos numéricos para não misturar convenções dentro do mesmo arquivo. Não foi possível, dentro do orçamento de busca desta sessão, localizar a tabela de eficácia do rótulo FDA equivalente à usada em candesartana/carvedilol acima.",
+    "presentations": [
+      "Comprimido 12,5 mg",
+      "Comprimido 25 mg (embalagem com 30 comprimidos) — padronizado pelo Ministério da Saúde (CBAF)",
+      "Comprimido 50 mg (embalagem com 30 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Genérico de múltiplos fabricantes (ex. Geolab) — sem marca de referência de patente ativa identificada nesta sessão (captopril é fármaco antigo, primariamente genérico no mercado brasileiro atual). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Número de registro ANVISA não confirmado — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "carvedilol",
@@ -1632,7 +1654,13 @@
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing.dose_apresentacao` deste registro (dose única diária) — sem pesquisa nova nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** iSGLT2 tem efeito de redução pressórica real e documentado em bula (o registro-irmão `canagliflozina` já cadastrado nesta base traz -5,3/-2,5 mmHg com a dose de 300 mg, extraído da bula do INVOKANA, item 2 — Resultados de Eficácia). É plausível que a bula do FORXIGA (dapagliflozina) tenha uma tabela equivalente na mesma seção, mas **esse número não foi lido nesta sessão** (WebSearch esgotado; WebFetch e curl bloqueados) e por isso não foi lançado nos campos numéricos, para não copiar por analogia um valor específico de outro fármaco da mesma classe sem confirmação própria. Pendência explícita: reconferir na bula do FORXIGA (já citada nas referências deste registro), item 2 (Resultados de Eficácia), quando houver acesso de rede íntegro."
+    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** iSGLT2 tem efeito de redução pressórica real e documentado em bula (o registro-irmão `canagliflozina` já cadastrado nesta base traz -5,3/-2,5 mmHg com a dose de 300 mg, extraído da bula do INVOKANA, item 2 — Resultados de Eficácia). É plausível que a bula do FORXIGA (dapagliflozina) tenha uma tabela equivalente na mesma seção, mas **esse número não foi lido nesta sessão** (WebSearch esgotado; WebFetch e curl bloqueados) e por isso não foi lançado nos campos numéricos, para não copiar por analogia um valor específico de outro fármaco da mesma classe sem confirmação própria. Pendência explícita: reconferir na bula do FORXIGA (já citada nas referências deste registro), item 2 (Resultados de Eficácia), quando houver acesso de rede íntegro.",
+    "presentations": [
+      "Comprimido revestido 10 mg (12,30 mg de dapagliflozina propanodiol, equivalente a 10 mg de dapagliflozina), embalagens com 14 ou 30 comprimidos"
+    ],
+    "commercial_presentations": [
+      "Forxiga® (AstraZeneca do Brasil Ltda.; fabricado por AstraZeneca Pharmaceuticals LP, Mount Vernon, Indiana, EUA, ou IPR Pharmaceuticals Inc, Canovanas, Porto Rico), bula aprovada pela ANVISA em 13/05/2024; genéricos já disponíveis no varejo (ex. EMS). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Número de registro ANVISA específico não confirmado — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "digoxina",
@@ -1690,7 +1718,14 @@
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing.\"manutencao adulto\"` deste registro (dose única diária de manutenção) — sem pesquisa nova nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica. Digoxina é glicosídeo cardíaco com efeito inotrópico/cronotrópico/dromotrópico (ver `mechanism` já cadastrado), sem efeito antihipertensivo — não reduz pressão arterial sistêmica como desfecho terapêutico, e essa medida não consta do ensaio pivotal DIG nem das bulas já citadas nas referências deste registro."
+    "bp_evidence_source": "Não se aplica. Digoxina é glicosídeo cardíaco com efeito inotrópico/cronotrópico/dromotrópico (ver `mechanism` já cadastrado), sem efeito antihipertensivo — não reduz pressão arterial sistêmica como desfecho terapêutico, e essa medida não consta do ensaio pivotal DIG nem das bulas já citadas nas referências deste registro.",
+    "presentations": [
+      "Comprimido 0,25 mg — apresentação padronizada pelo Ministério da Saúde (CBAF)",
+      "Elixir 0,05 mg/mL, frasco de 60 mL com conta-gotas graduado (1 mL = 0,05 mg)"
+    ],
+    "commercial_presentations": [
+      "Digoxina Pharlab (comprimido 0,25 mg); Digoxina Elixir Aspen Pharma; genéricos de diversos fabricantes (ex. Prati-Donaduzzi). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "diltiazem-cloridrato",
@@ -5382,7 +5417,8 @@
       "Inderal"
     ],
     "presentations": [
-      "VERIFICAÇÃO HUMANA NECESSÁRIA — apresentações comerciais brasileiras (mg por comprimido) do INDERAL não confirmadas nesta sessão; a bula já citada nas referências cobre posologia, mas o detalhamento de apresentação por miligramagem não foi extraído."
+      "Comprimido 40 mg (embalagem com 30 comprimidos)",
+      "Comprimido 80 mg"
     ],
     "half_life_hours": 4.5,
     "half_life_note": "Meia-vida de 3 a 6 horas para a formulação de liberação imediata (valor aqui é o ponto médio, 4,5h). O metabólito ativo 4-hidroxipropranolol tem meia-vida MAIOR (5,2 a 7,5 horas) que o composto original (3-4h) e também é farmacologicamente ativo — contribui para o efeito terapêutico além do previsto pela meia-vida do propranolol isolado. Fonte: consultado via WebSearch em 10/08/2026, citando rótulo/literatura de farmacocinética do propranolol.",
@@ -5406,6 +5442,9 @@
       "Glicemia em paciente diabético, pelo mascaramento de sintomas de hipoglicemia já registrado no `adverse_effects` e nas interações acima.",
       "ECG e sinais de piora de insuficiência cardíaca ao iniciar ou titular, dado o efeito inotrópico e cronotrópico negativo da classe.",
       "fonte: extrapolado do perfil de segurança já documentado nos campos `contraindications`/`adverse_effects` deste registro — prática de monitorização padrão de classe farmacológica, não citação de bula específica adicional."
+    ],
+    "commercial_presentations": [
+      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros) — sem marca de referência dominante identificada nesta sessão. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Número de registro ANVISA não confirmado — VERIFICAÇÃO HUMANA NECESSÁRIA."
     ]
   },
   {
@@ -6266,7 +6305,13 @@
     "duration_of_action_source": "Sotalol Hydrochloride — rótulo aprovado pelo FDA, DailyMed, seção Clinical Pharmacology/Dosage and Administration.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Sotalol não é utilizado como anti-hipertensivo — a indicação registrada neste catálogo é antiarrítmica (manutenção de ritmo sinusal em FA/flutter, arritmias ventriculares graves), não hipertensão arterial. O próprio verbete já documenta em `notes` uma redução de PA sistólica/diastólica de 8% na dose de 160mg (efeito hemodinâmico basal do betabloqueio), mas essa fonte secundária não informa os valores basais de PA necessários para converter esse percentual em mmHg absoluto de forma confiável — campos mantidos nulos em vez de calcular uma conversão não verificada em fonte primária."
+    "bp_evidence_source": "Sotalol não é utilizado como anti-hipertensivo — a indicação registrada neste catálogo é antiarrítmica (manutenção de ritmo sinusal em FA/flutter, arritmias ventriculares graves), não hipertensão arterial. O próprio verbete já documenta em `notes` uma redução de PA sistólica/diastólica de 8% na dose de 160mg (efeito hemodinâmico basal do betabloqueio), mas essa fonte secundária não informa os valores basais de PA necessários para converter esse percentual em mmHg absoluto de forma confiável — campos mantidos nulos em vez de calcular uma conversão não verificada em fonte primária.",
+    "presentations": [
+      "Comprimido 160 mg (embalagem com 30 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Genéricos/similares: Sandoz do Brasil Indústria Farmacêutica Ltda. (registro ANVISA 1004703250017, conferir dígitos antes de uso clínico), Merck (registro MS 1.0089.0281, conferir dígitos), Neo Química. Marcas de referência histórica Sotacor/Sotahexal identificadas com registro ANVISA cancelado/vencido nas fontes consultadas — NÃO usar essas marcas como disponíveis sem reconfirmação. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar os números de registro citados acima antes de exibir como dado definitivo — extraídos de agregador secundário, não do bulário oficial da ANVISA diretamente nesta sessão."
+    ]
   },
   {
     "slug": "tafamidis",
@@ -6791,7 +6836,15 @@
     "duration_of_action_source": "Literatura de farmacocinética/farmacodinâmica clínica da varfarina (consultada via WebSearch em 2026); consistente com o mecanismo já descrito em `mechanism` deste registro (queda mais rápida da proteína C, de meia-vida curta, no início do tratamento).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Varfarina é anticoagulante oral antagonista da vitamina K, sem mecanismo de ação vascular ou hemodinâmico — não reduz nem eleva pressão arterial por ação farmacológica direta. Campos mantidos nulos por ausência de mecanismo pressórico, mesmo padrão já aplicado a outros anticoagulantes/antiagregantes deste catálogo (ex.: ticagrelor)."
+    "bp_evidence_source": "Varfarina é anticoagulante oral antagonista da vitamina K, sem mecanismo de ação vascular ou hemodinâmico — não reduz nem eleva pressão arterial por ação farmacológica direta. Campos mantidos nulos por ausência de mecanismo pressórico, mesmo padrão já aplicado a outros anticoagulantes/antiagregantes deste catálogo (ex.: ticagrelor).",
+    "presentations": [
+      "Comprimido 2,5 mg (embalagem com 60 comprimidos)",
+      "Comprimido 5 mg (embalagem com 10 ou 30 comprimidos)",
+      "Comprimido 7,5 mg (embalagem com 30 comprimidos)"
+    ],
+    "commercial_presentations": [
+      "Marevan® (varfarina sódica), bula aprovada pela ANVISA em 26/11/2020. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Fabricante/detentor de registro e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ]
   },
   {
     "slug": "vasopressina",
