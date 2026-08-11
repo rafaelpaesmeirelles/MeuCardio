@@ -13,6 +13,20 @@ import sys
 from app.core.db import SessionLocal
 from app.models.drug import Drug
 
+# `review_note` (e qualquer outro campo de front matter que documente a
+# verificação de fonte, sem virar dado clínico) é convenção já em uso em
+# `documents`/`evidencias` deste projeto — documentação para quem lê o
+# arquivo, nunca persistida no banco (`Document` não tem coluna própria e
+# ignora o campo em silêncio). `Drug` também não tem essa coluna, mas ao
+# contrário do importador de `Document`, este construía o registro NOVO via
+# `Drug(**d)` sem filtrar — SQLAlchemy declarative rejeita kwarg desconhecido
+# na criação (`TypeError: 'review_note' is an invalid keyword argument for
+# Drug`), diferente do caminho de atualização (que usa `setattr`, silencioso
+# para atributo não mapeado). Filtrar pelas colunas reais de `Drug` alinha os
+# dois caminhos ao mesmo comportamento — nunca falha por causa de um campo de
+# documentação, em nenhum dos dois ramos (issue #52).
+_COLUNAS_DRUG = {c.key for c in Drug.__table__.columns}
+
 
 def carregar(caminho_json: str) -> dict:
     drogas = json.load(open(caminho_json, encoding="utf-8"))
@@ -23,11 +37,12 @@ def carregar(caminho_json: str) -> dict:
             existente = db.query(Drug).filter(Drug.slug == d["slug"]).first()
             if existente:
                 for k, v in d.items():
-                    if k not in ("slug", "review_status"):
+                    if k not in ("slug", "review_status") and k in _COLUNAS_DRUG:
                         setattr(existente, k, v)
                 atualizados += 1
             else:
-                db.add(Drug(**d))
+                campos = {k: v for k, v in d.items() if k in _COLUNAS_DRUG}
+                db.add(Drug(**campos))
                 novos += 1
         db.commit()
     finally:

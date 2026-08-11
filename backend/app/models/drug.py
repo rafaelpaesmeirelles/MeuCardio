@@ -12,7 +12,10 @@ class Drug(Base):
     slug: Mapped[str] = mapped_column(String(120), unique=True, index=True)
     generic_name: Mapped[str] = mapped_column(String(200), index=True)
     brand_names: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
-    drug_class: Mapped[str] = mapped_column(String(120), index=True)
+    # Texto de prosa (ex.: "Betabloqueador não seletivo com atividade alfa-1
+    # bloqueadora adicional"), não rótulo fixo — Text desde migração
+    # 72abcfc8df81, issue #52 (StringDataRightTruncation real em produção).
+    drug_class: Mapped[str] = mapped_column(Text, index=True)
     mechanism: Mapped[str | None] = mapped_column(Text, nullable=True)
     presentations: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
     commercial_presentations: Mapped[list] = mapped_column(JSONB, default=list)
@@ -34,7 +37,9 @@ class Drug(Base):
     half_life_note: Mapped[str | None] = mapped_column(Text, nullable=True)
     duration_of_action_hours: Mapped[float | None] = mapped_column(Float, nullable=True)
     duration_of_action_note: Mapped[str | None] = mapped_column(Text, nullable=True)
-    duration_of_action_source: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    # Texto de citação completa (laboratório, registro MS, URL, data de
+    # consulta) — Text desde migração 72abcfc8df81, mesmo motivo acima.
+    duration_of_action_source: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     sbp_reduction_mmhg: Mapped[float | None] = mapped_column(Numeric(5, 1), nullable=True)
     dbp_reduction_mmhg: Mapped[float | None] = mapped_column(Numeric(5, 1), nullable=True)

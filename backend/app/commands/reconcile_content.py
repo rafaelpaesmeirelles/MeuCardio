@@ -52,10 +52,20 @@ FRONTS: dict[str, dict[str, Any]] = {
     "estudos": {"path": "/estudos/metadados.json", "model": ScientificStudy, "minimum": 383, "loader": "carregar_estudos"},
     "medicamentos": {"path": "/medicamentos/metadados.json", "model": Drug, "minimum": 114, "loader": "carregar_drugs"},
     "checklists": {"path": "/checklists/metadados.json", "model": DischargeChecklist, "minimum": 23, "loader": "carregar_checklists"},
+    # `casos_clinicos` precisa vir ANTES de `trilhas`: uma etapa de trilha
+    # pode referenciar `item_type: "caso_clinico"` (`carregar_trilhas._existe`),
+    # e a validação de referência consulta o banco, não o JSON de origem —
+    # se `casos_clinicos` ainda não tiver sido carregado nesta mesma rodada,
+    # qualquer trilha que aponte para um caso clínico real e existente é
+    # rejeitada por "referência inexistente" em falso. Bug real, reproduzido
+    # localmente ao rodar `reconcile_content --publish-reviewed` contra o
+    # conteúdo íntegro do RC (issue #52, nova fase) — os 6 slugs citados no
+    # erro sempre existiam em `casos-clinicos/metadados.json`, só ainda não
+    # tinham chegado ao banco nesta ordem antiga.
+    "casos_clinicos": {"path": "/casos-clinicos/metadados.json", "model": ClinicalCase, "minimum": 556, "loader": "carregar_casos_clinicos"},
     "trilhas": {"path": "/trilhas/metadados.json", "model": StudyTrack, "minimum": 469, "loader": "carregar_trilhas"},
     "material_paciente": {"path": "/material-paciente/metadados.json", "model": PatientMaterial, "minimum": 27, "loader": "carregar_material_paciente"},
     "emergencia": {"path": "/emergencia/metadados.json", "model": EmergencyProtocol, "minimum": 31, "loader": "carregar_emergencia"},
-    "casos_clinicos": {"path": "/casos-clinicos/metadados.json", "model": ClinicalCase, "minimum": 556, "loader": "carregar_casos_clinicos"},
     "doencas_especializadas": {
         "path": "/doencas/metadados.json",
         "model": SpecialtyDisease,

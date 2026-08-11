@@ -196,16 +196,22 @@ def popular(fontes: list[str]) -> dict:
     drogas = coletar(fontes)
     db = SessionLocal()
     novos = atualizados = 0
+    # Mesmo filtro de `carregar_drugs.py` (issue #52): campo de documentação
+    # como `review_note`, sem coluna própria em `Drug`, não pode chegar ao
+    # construtor sem filtro — `Drug(**d)` levanta TypeError para kwarg
+    # desconhecido, ao contrário do ramo de atualização (`setattr`, silencioso).
+    colunas_drug = {c.key for c in Drug.__table__.columns}
     try:
         for d in drogas:
             existente = db.query(Drug).filter(Drug.slug == d["slug"]).first()
             if existente:
                 for k, v in d.items():
-                    if k not in ("slug", "review_status"):
+                    if k not in ("slug", "review_status") and k in colunas_drug:
                         setattr(existente, k, v)
                 atualizados += 1
             else:
-                db.add(Drug(**d))
+                campos = {k: v for k, v in d.items() if k in colunas_drug}
+                db.add(Drug(**campos))
                 novos += 1
         db.commit()
     finally:
