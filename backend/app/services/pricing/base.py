@@ -22,8 +22,10 @@ class PriceObservation:
     """Identificador curto da fonte: "cmed", "kairos", "market_partner", "pbm"."""
 
     source_type: str
-    """"regulatory" | "market_intelligence" | "retail" | "pbm" — nunca livre;
-    é o que impede a UI/API de tratar preço observado como regulatório."""
+    """"regulatory" | "market_intelligence" | "retail" | "pbm" | "institutional" —
+    nunca livre; é o que impede a UI/API de tratar preço observado como
+    regulatório. "institutional" é preço de COMPRA PÚBLICA/institucional
+    (ex.: BPS) — nunca deve ser rotulado como preço de varejo/consumidor."""
 
     price_type: str
     """"pf" | "pmc" | "observed" | "pbm" — o TIPO do valor, não a fonte."""

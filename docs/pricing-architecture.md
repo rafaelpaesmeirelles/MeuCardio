@@ -167,3 +167,77 @@ camada científica (evidência, indicação, contraindicação, segurança,
 `relevance_score` clínico) permanecem estruturalmente separadas — ver
 `docs/knowledge-graph.md`, seção de patrocínio, para o desenho de como
 isso se aplica também ao grafo de relações.
+
+## 7. POC de fontes de preço de varejo/institucional — 11/08/2026
+
+Continuação da avaliação de fontes desta fase (issue #52), depois da
+avaliação da Kairos (seção 3). Nenhuma mudança em produção — tudo abaixo
+foi pesquisa/implementação de código, sem cadastro concluído em nenhum
+provedor comercial.
+
+### 7.1 BPS (Banco de Preços em Saúde) — IMPLEMENTADO, camada institucional real
+
+`GET https://apidadosabertos.saude.gov.br/economia-da-saude/bps` — API
+pública do Ministério da Saúde, **sem autenticação, sem cadastro**.
+Confirmada funcionando ao vivo nesta sessão: consulta real por
+`codigoCatmat=268856` (losartana potássica 50mg) devolveu preços reais de
+compra pública em 2026 (instituição compradora, fornecedor, fabricante,
+UF, data, preço unitário/total, modalidade de compra).
+
+**Implementado**: `backend/app/services/pricing/bps_provider.py`
+(`BPSProvider`, `source_type = "institutional"` — nunca confundido com
+varejo, avisado explicitamente no próprio campo `metadata.aviso` de cada
+observação), 6 testes (`test_pricing_bps_provider.py`), rede sempre mockada
+nos testes.
+
+**Limitação real, documentada no próprio módulo, não escondida**: a API
+exige `codigoCatmat` (código do Catálogo de Materiais do governo) ou
+`cnpjInstituicao` como filtro obrigatório — não busca por nome de fármaco
+nem por `registroAnvisa` sozinho. **Não existe hoje nenhum crosswalk
+Drug → CATMAT no catálogo** — construir um em escala exigiria baixar o
+Catálogo de Materiais oficial e casar por nome, tarefa maior, fora do
+escopo deste POC. O crosswalk implementado
+(`CROSSWALK_CATMAT_VERIFICADO`) tem, de propósito, **só o par verificado
+nesta sessão** (losartana potássica → 268856) — qualquer fármaco fora
+dessa lista devolve `[]` sem tentar adivinhar o código.
+
+### 7.2 Data Market (Cnova Tech) — avaliado, NÃO ativado
+
+Cadastro é self-service (API key na hora, 14 dias grátis, 50 requisições,
+sem cartão de crédito) — mas **as 12 categorias monitoradas
+(Mercearia, Bebidas, Higiene/Beleza, Limpeza, Laticínios, Hortifruti,
+Congelados, Bebê, Carnes, Pet, Padaria) não incluem farmácia/medicamento**,
+confirmado na própria documentação pública do produto. Isso é forte
+indício de cobertura nula/quase nula para o catálogo de medicamentos da
+Corvia — a mesma régua de "não assumir cobertura" que motivou verificar em
+vez de supor.
+
+**Não ativado, por dois motivos**: (1) a baixa cobertura esperada não
+justifica gastar o teste gratuito único por CNPJ da empresa; (2) mesmo
+sendo self-service, criar a conta exige vincular um e-mail/CNPJ real da
+Corvia — decisão que cabe ao Rafael, não a esta sessão (mesmo padrão de
+"credencial/cadastro que vincula a empresa exige decisão humana" já
+seguido para Kairos). **BLOCKED/NEEDS HUMAN**, não por dificuldade técnica,
+mas por decisão de negócio + baixa expectativa de valor.
+
+### 7.3 CliqueFarma — documentado, sem integração técnica encontrada
+
+Comparador de preços de medicamentos ao consumidor, com parcerias
+declaradas com farmácias em todo o Brasil. **Nenhuma API/feed B2B público
+foi encontrado** nesta pesquisa (site majoritariamente voltado ao
+consumidor final, sem documentação técnica de integração). Path provável
+para uma integração real: contato comercial direto com a CliqueFarma —
+**BLOCKED/NEEDS HUMAN** (conversa de parceria, não tarefa técnica). Nenhum
+scraping foi feito ou é recomendado.
+
+### 7.4 Resumo do estado de preço de varejo, depois desta rodada
+
+Nenhuma fonte de **preço de varejo ao consumidor** foi ativada — Kairos
+segue bloqueada por acesso (seção 3), Data Market tem cobertura
+provavelmente nula para farmácia, CliqueFarma não tem integração técnica
+pública. O que mudou nesta rodada é a camada **institucional**: BPS é real,
+gratuita, sem cadastro, e já tem um adapter funcional — a primeira fonte de
+preço além da CMED que a arquitetura `PriceProvider` de fato usa. Continua
+valendo a regra central: preço institucional nunca é apresentado como
+preço de varejo, e nenhuma das três camadas (regulatório/institucional/
+observado de mercado) é misturada com as outras.
