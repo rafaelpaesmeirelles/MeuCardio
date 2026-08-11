@@ -50,6 +50,12 @@ EXPECTED_NAV_ROUTES = {
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
     "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
     "/sincronizacao",
+    # Issue #52 (11/08/2026): o tour deixou de ser SÓ um gate de primeiro
+    # acesso. O onboarding obrigatório virou um Quick Start de cinco telas;
+    # o tour completo passou a ser opcional e reaberto pelo menu (Gestão ›
+    # Conheça a plataforma), por isso `/tour` agora é também destino de
+    # navegação, não apenas rota de redirecionamento.
+    "/tour",
 }
 
 EXPECTED_BACKEND_ROUTERS = {

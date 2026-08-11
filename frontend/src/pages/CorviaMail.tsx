@@ -4,6 +4,7 @@ import { useAuth } from "../lib/auth";
 import { api, ApiError } from "../lib/api";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import Credito from "../components/Credito";
+import DicaContextual from "../components/DicaContextual";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 import CampoSenha from "../components/CampoSenha";
 
@@ -433,6 +434,14 @@ export default function CorviaMail() {
       <div style={{ marginBottom: "1rem" }}>
         <LogoCorviaMail tamanho="compacto" />
       </div>
+
+      {/* Onboarding contextual da área (issue #52) — primeira visita apenas,
+          e sem bloquear nada: a caixa continua utilizável com a dica aberta. */}
+      <DicaContextual id="corvia-mail" titulo="A caixa tem senha própria">
+        O CorvIA Mail usa uma senha separada da sua senha de acesso à Corvia — é o que mantém a
+        caixa protegida mesmo com a plataforma aberta. Você também pode ler aqui as contas que já
+        usa, sem trocar de aplicativo.
+      </DicaContextual>
 
       {contaAtiva && (
         <div style={{ display: "flex", gap: 6 }}>

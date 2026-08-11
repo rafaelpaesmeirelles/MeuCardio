@@ -48,10 +48,27 @@
 .tour__pular:hover { color: var(--white); border-color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.08); }
 
 .tour__progresso {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 1rem 0.3rem;
+}
+/* "Passo X de Y" explícito — o médico precisa saber quanto falta antes de
+   decidir se segue ou pula (issue #52). Os pontos sozinhos não diziam isso. */
+.tour__contador {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: var(--fonte-dados);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tour__pontos {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 6px;
-  padding: 1.3rem 1rem 0.3rem;
 }
 .tour__ponto {
   width: 22px;
@@ -692,4 +709,115 @@
   .tour__nav { flex-direction: column-reverse; }
   .tour__nav .botao { width: 100%; }
   .tour-mock { max-width: 100%; }
+}
+
+/* ====================================================================== */
+/* Issue #52 — onboarding em dois níveis                                  */
+/* ====================================================================== */
+
+/* Slide do grafo de conhecimento: a constelação precisa de mais largura que
+   os outros mockups para os rótulos não se atropelarem. */
+.tour-mock--grafo { max-width: 460px; }
+.tour-mock--grafo .tour-mock__corpo { padding: 0.9rem 0.6rem 1rem; }
+
+/* Botão do fim do Quick Start que abre o passeio longo — secundário de
+   propósito: a ação principal continua sendo entrar no produto. */
+.tour-final__completo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  margin: 1.4rem auto 0;
+  padding: 0.55rem 1.05rem;
+  color: var(--teal-700);
+  background: transparent;
+  border: 1px solid var(--slate-300);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.tour-final__completo:hover { background: var(--teal-50); border-color: var(--teal-500); }
+.tour-final__completo svg { flex: 0 0 auto; }
+
+/* ---------------------------------------------------------------------- */
+/* Tour em tela pequena — mockup acima, texto abaixo, CTA sempre visível   */
+/* ---------------------------------------------------------------------- */
+/* O tour não é o desktop comprimido: em telas baixas o corpo do slide rola
+   dentro de si e a barra de navegação fica fixa no rodapé, para "Próximo"
+   nunca depender de rolagem. Uma área de rolagem só — nunca scroll dentro
+   de scroll. */
+@media (max-width: 820px) {
+  /* `.tour` já tinha `overflow-x: hidden`, o que o torna um contêiner de
+     rolagem — e um contêiner que nunca rola nunca ativa `position: sticky`
+     nos filhos. Aqui ele passa a ser a ÚNICA área de rolagem da tela
+     (altura fixa da viewport + rolagem interna), o que faz a barra de
+     navegação grudar de verdade no rodapé e mantém a promessa de "uma área
+     de rolagem só, nunca scroll dentro de scroll". */
+  .tour { height: 100svh; min-height: 0; overflow-y: auto; }
+  .tour__topo,
+  .tour__progresso,
+  .tour__nav { flex: 0 0 auto; }
+  .tour__corpo { flex: 0 0 auto; align-items: flex-start; padding: 1rem clamp(0.85rem, 4vw, 2rem) 0.6rem; }
+  .tour__cartao--feature { grid-template-rows: auto 1fr; }
+  .tour-mock-lado { padding: 1.1rem 1rem; }
+  .tour-mock { max-width: 320px; }
+  .tour-mock--grafo { max-width: 100%; }
+  .tour-texto-lado { padding: 1.25rem 1.15rem 1.4rem; }
+  .tour-texto-lado__resumo { font-size: 0.9rem; margin-bottom: 0.8rem; }
+  .tour-texto-lado__texto { font-size: 0.87rem; }
+  .tour-texto-lado__blocos { gap: 0.6rem; }
+  /* Barra de navegação sempre visível, dentro da área segura.
+     Em linha, nunca empilhada: empilhada (`column-reverse`, regra mais
+     antiga deste arquivo) a barra dobrava de altura e "Voltar" caía para
+     fora da área visível — o médico perdia o botão de voltar. */
+  .tour__nav {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.7rem clamp(0.85rem, 4vw, 1.5rem) max(0.85rem, env(safe-area-inset-bottom));
+    background: linear-gradient(transparent, var(--navy-950) 46%);
+  }
+  .tour__nav .botao { min-width: 0; width: auto; }
+  .tour__nav .botao--secundario { flex: 0 0 auto; padding-inline: 1.1rem; }
+  .tour__nav .botao:not(.botao--secundario) { flex: 1 1 auto; }
+  .tour-final__grade { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .tour { min-height: 100svh; }
+  .tour__topo { padding-top: max(0.9rem, env(safe-area-inset-top)); }
+  .tour__contador { font-size: 0.6rem; letter-spacing: 0.08em; }
+  .tour__ponto { width: 18px; }
+  .tour__cartao--central { padding: 1.6rem 1.15rem; }
+  .tour__cartao--central h1 { font-size: 1.42rem; }
+  .tour__resumo { font-size: 0.92rem; }
+  .tour-final__grade { grid-template-columns: 1fr; gap: 0.45rem; }
+  .tour-final__item { font-size: 0.78rem; padding: 0.55rem 0.65rem; }
+}
+
+/* Telas muito estreitas (Galaxy Fold fechado, iPhone SE). */
+@media (max-width: 380px) {
+  .tour__topo { padding-left: 0.85rem; padding-right: 0.85rem; }
+  .tour__logo { height: 22px; }
+  .tour__pular { padding: 0.4rem 0.7rem; font-size: 0.72rem; }
+  .tour-mock { max-width: 100%; }
+  .tour-texto-lado { padding: 1.05rem 0.9rem 1.2rem; }
+  .tour-texto-lado__icone { width: 36px; height: 36px; }
+  .tour-texto-lado__contador { font-size: 0.6rem; }
+  .tour__cartao--central h1 { font-size: 1.3rem; }
+}
+
+/* Paisagem no celular: o cartão volta a duas colunas para caber na altura. */
+@media (max-width: 900px) and (max-height: 480px) and (orientation: landscape) {
+  .tour__cartao--feature { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); grid-template-rows: none; }
+  .tour__corpo { padding-top: 0.5rem; }
+  .tour__progresso { padding-top: 0.6rem; }
+  .tour-mock-lado { padding: 0.75rem; }
+  .tour-texto-lado { padding: 0.9rem 1rem; }
+  .tour-texto-lado__blocos { gap: 0.45rem; }
+  .tour-texto-lado__texto { font-size: 0.8rem; line-height: 1.42; }
 }

@@ -1,0 +1,165 @@
+/* Grafo de Conhecimento Clínico — visualização compartilhada entre a vitrine
+   do login (`Entrar.tsx`) e o slide de onboarding (`Tour.tsx`).
+
+   Duas variantes de cor, mesma geometria: `--escuro` sobre o navy da vitrine,
+   `--claro` sobre o cartão branco do tour. Todo o movimento é decorativo e
+   some por completo em `prefers-reduced-motion` (regra no fim do arquivo),
+   coerente com o padrão já usado em tokens.css/tour.css. */
+
+.grafo-const {
+  width: 100%;
+  max-width: 520px;
+}
+.grafo-const svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ---------- Geometria comum ---------- */
+.grafo-const__anel {
+  fill: none;
+  stroke-width: 1;
+}
+.grafo-const__aresta {
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  animation: grafo-const-fluxo 5.5s linear infinite;
+}
+.grafo-const__aresta--volta {
+  animation-direction: reverse;
+}
+.grafo-const__aresta--borda {
+  stroke-dasharray: 2 7;
+  animation-duration: 11s;
+}
+.grafo-const__no rect,
+.grafo-const__no circle {
+  stroke-width: 1;
+}
+.grafo-const__tipo,
+.grafo-const__rotulo {
+  text-anchor: middle;
+  font-family: var(--fonte-dados, ui-monospace, monospace);
+}
+.grafo-const__tipo {
+  font-size: 6.2px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.grafo-const__rotulo {
+  font-family: var(--fonte-texto, system-ui, sans-serif);
+  font-size: 9px;
+  font-weight: 650;
+}
+.grafo-const__rotulo--centro {
+  font-size: 12px;
+  letter-spacing: -0.01em;
+}
+.grafo-const__halo {
+  fill: none;
+  stroke-width: 1;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: grafo-const-halo 3.6s ease-out infinite;
+}
+.grafo-const__halo--dois {
+  animation-delay: 1.8s;
+}
+
+/* ---------- Variante escura (vitrine navy do login) ---------- */
+.grafo-const--escuro .grafo-const__anel {
+  stroke: rgb(124 213 223 / 0.12);
+}
+.grafo-const--escuro .grafo-const__anel--interno {
+  stroke: rgb(124 213 223 / 0.08);
+}
+.grafo-const--escuro .grafo-const__aresta {
+  stroke: rgb(124 213 223 / 0.42);
+}
+.grafo-const--escuro .grafo-const__aresta--borda {
+  stroke: rgb(124 213 223 / 0.16);
+}
+.grafo-const--escuro .grafo-const__no rect {
+  fill: rgb(9 42 58 / 0.92);
+  stroke: rgb(124 213 223 / 0.28);
+}
+.grafo-const--escuro .grafo-const__no--centro rect {
+  fill: #0d4257;
+  stroke: rgb(139 218 227 / 0.62);
+}
+.grafo-const--escuro .grafo-const__halo {
+  stroke: rgb(139 218 227 / 0.3);
+}
+.grafo-const--escuro .grafo-const__tipo {
+  fill: #7fc3cf;
+}
+.grafo-const--escuro .grafo-const__rotulo {
+  fill: #e4f1f4;
+}
+
+/* ---------- Variante clara (cartão branco do tour) ---------- */
+.grafo-const--claro .grafo-const__anel {
+  stroke: rgb(11 46 69 / 0.09);
+}
+.grafo-const--claro .grafo-const__anel--interno {
+  stroke: rgb(11 46 69 / 0.06);
+}
+.grafo-const--claro .grafo-const__aresta {
+  stroke: rgb(28 114 147 / 0.5);
+}
+.grafo-const--claro .grafo-const__aresta--borda {
+  stroke: rgb(28 114 147 / 0.18);
+}
+.grafo-const--claro .grafo-const__no rect {
+  fill: #fff;
+  stroke: rgb(11 46 69 / 0.16);
+}
+.grafo-const--claro .grafo-const__no--centro rect {
+  fill: var(--navy-900, #0b2e45);
+  stroke: var(--navy-900, #0b2e45);
+}
+.grafo-const--claro .grafo-const__halo {
+  stroke: rgb(28 114 147 / 0.28);
+}
+.grafo-const--claro .grafo-const__tipo {
+  fill: #5b7c8a;
+}
+.grafo-const--claro .grafo-const__rotulo {
+  fill: var(--navy-900, #0b2e45);
+}
+.grafo-const--claro .grafo-const__no--centro .grafo-const__tipo {
+  fill: #8fc9d4;
+}
+.grafo-const--claro .grafo-const__rotulo--centro {
+  fill: #fff;
+}
+
+@keyframes grafo-const-fluxo {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
+@keyframes grafo-const-halo {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.72);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grafo-const__aresta,
+  .grafo-const__halo {
+    animation: none;
+  }
+  .grafo-const__halo {
+    opacity: 0.35;
+  }
+}

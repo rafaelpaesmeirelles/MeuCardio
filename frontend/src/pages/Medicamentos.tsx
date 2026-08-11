@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import DicaContextual from "../components/DicaContextual";
 
 type Item = {
   slug: string;
@@ -295,6 +296,14 @@ export default function Medicamentos() {
       <p style={{ color: "var(--texto-secundario)", maxWidth: "70ch" }}>
         Clique em um medicamento e escolha entre visualizar o verbete completo ou adicioná-lo a uma comparação de até quatro opções.
       </p>
+
+      {/* Onboarding contextual da área (issue #52) — aparece só na primeira visita. */}
+      <div style={{ marginTop: "0.9rem" }}>
+        <DicaContextual id="medicamentos" titulo="O verbete é um ponto de partida">
+          Abrindo um medicamento você chega também às doenças, evidências, exames, estudos e casos
+          clínicos ligados a ele — a navegação continua a partir de qualquer um deles.
+        </DicaContextual>
+      </div>
 
       <div className="grade grade--2" style={{ marginTop: "0.8rem" }}>
         <div><label>Buscar</label><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Nome genérico ou classe" /></div>

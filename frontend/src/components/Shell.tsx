@@ -98,6 +98,10 @@ const SECOES_BASE: SecaoNav[] = [
       { to: "/favoritos", rotulo: "Favoritos", icone: "favorito" },
       { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" },
       { to: "/sincronizacao", rotulo: "Sincronize suas contas", icone: "sincronizar" },
+      // Tour completo (issue #52): o primeiro acesso mostra só o Quick Start
+      // de cinco telas; o passeio longo fica aqui, disponível quando o médico
+      // quiser, em vez de ser empurrado no primeiro minuto de uso.
+      { to: "/tour", rotulo: "Conheça a plataforma", icone: "curso" },
     ],
   },
 ];
@@ -366,6 +370,7 @@ export default function Shell() {
       { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
       { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" },
       { to: "/sincronizacao", rotulo: "Sincronize suas contas", icone: "sincronizar" },
+      { to: "/tour", rotulo: "Conheça a plataforma", icone: "curso" },
       { to: "/usuarios-online", rotulo: "Rede profissional", icone: "pacientes" },
     ];
     if (usuario?.role === "admin") {

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
+import DicaContextual from "../components/DicaContextual";
 import Icone from "../components/Icone";
 import LogoProvedor from "../components/LogoProvedor";
 import { ApiError, api } from "../lib/api";
@@ -751,6 +752,12 @@ export default function Agenda() {
           <button className="botao" onClick={() => setNovoAberto(true)}><Icone nome="agenda" /> Novo atendimento</button>
         </div>
       </header>
+
+      {/* Onboarding contextual da área (issue #52) — aparece só na primeira visita. */}
+      <DicaContextual id="agenda" titulo="Traga suas outras agendas para cá">
+        Em <strong>Configurar</strong> você conecta Google, Microsoft, Apple ou Yahoo e passa a
+        ver tudo numa visão só — quantas contas quiser, inclusive mais de uma do mesmo provedor.
+      </DicaContextual>
 
       <section className="agenda-status" aria-label="Status da agenda">
         <span className="agenda-status__ok"><i /> Agenda Corvia ativa</span>

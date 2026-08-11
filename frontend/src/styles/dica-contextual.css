@@ -1,0 +1,61 @@
+/* Dica contextual de primeira visita (issue #52, terceiro nível do
+   onboarding). Discreta de propósito: informa sem competir com o conteúdo
+   clínico da página e desaparece para sempre depois de fechada. */
+
+.dica-ctx {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  padding: 0.8rem 0.85rem;
+  background: linear-gradient(120deg, var(--teal-50), rgb(255 255 255 / 0.6));
+  border: 1px solid var(--teal-100);
+  border-radius: var(--r, 12px);
+}
+
+.dica-ctx__icone {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: var(--teal-700);
+  background: rgb(255 255 255 / 0.85);
+  border: 1px solid var(--teal-100);
+  border-radius: 9px;
+}
+
+.dica-ctx__texto { min-width: 0; }
+.dica-ctx__titulo {
+  margin: 0 0 0.15rem;
+  color: var(--navy-900);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+.dica-ctx__corpo {
+  margin: 0;
+  color: var(--slate-700);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.dica-ctx__fechar {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: var(--slate-600);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.dica-ctx__fechar:hover { color: var(--navy-900); background: rgb(255 255 255 / 0.8); }
+
+@media (max-width: 520px) {
+  .dica-ctx { gap: 0.6rem; padding: 0.7rem 0.7rem; }
+  .dica-ctx__icone { display: none; }
+  .dica-ctx { grid-template-columns: 1fr auto; }
+  .dica-ctx__corpo { font-size: 0.77rem; }
+}

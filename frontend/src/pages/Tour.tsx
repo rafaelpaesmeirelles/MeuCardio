@@ -1,29 +1,40 @@
-import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
+import { useCallback, useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import GrafoConstelacao from "../components/GrafoConstelacao";
 import Icone, { type NomeIcone } from "../components/Icone";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 
-/** Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026 — reformulado por
- * completo em 08/08/2026, pedido do Rafael: o tour original era "simples
- * demais, sem graça", explicava pouco e não impressionava. Esta versão
- * substitui os cartões de texto puro por uma pequena renderização
- * interativa (mockup) de cada funcionalidade real, ao lado de um texto
- * curto que ensina O QUE a função faz e POR QUE importa clinicamente —
- * pensado para impressionar tanto quanto ensinar (inclusive um médico
- * convidado, amigo pessoal do Rafael).
+/** Tour guiado (Trabalho 13, 06/08/2026 — reformulado em 08/08/2026 e
+ * reorganizado em dois níveis na issue #52).
  *
- * Mostrado uma única vez, depois do KYC e do passo do CorvIA Mail —
- * `App.tsx` força a rota enquanto `usuario.onboarding_pendente` for true; ao
- * fim (ou ao pular), `POST /auth/me/onboarding-concluido` fecha o gate.
+ * O mérito da versão anterior foi preservado: cada funcionalidade aparece
+ * como uma pequena renderização (mockup) em JSX/CSS puro, não como cartão de
+ * texto. O que mudou foi o VOLUME — onboarding de primeiro acesso não pode
+ * ser uma apresentação comercial de dez telas.
  *
- * Cada slide cobre uma funcionalidade REAL, tirada do menu de
- * `Shell.tsx`/rotas de `App.tsx` — nada inventado. Os "mockups" são
- * recriações estilizadas em JSX/CSS puro (nunca HTML cru — ver
- * `scripts/check-rendering-security.mjs`), não screenshots reais. */
+ * Dois modos, um componente só:
+ *
+ * - **Quick Start** (`modo="quick"`): o que o médico vê no primeiro acesso.
+ *   Cinco funcionalidades, menos de dois minutos. `App.tsx` força a rota
+ *   enquanto `usuario.onboarding_pendente` for true; ao concluir ou pular,
+ *   `POST /auth/me/onboarding-concluido` fecha o gate.
+ * - **Tour completo** (`modo="completo"`): o passeio longo, agora OPCIONAL.
+ *   Aberto depois pelo menu (Gestão › Conheça a plataforma → `/tour`) ou
+ *   pelo botão do fim do Quick Start. Quando o onboarding já foi concluído,
+ *   a visita é voluntária e não chama a rota de conclusão — só volta.
+ *
+ * O terceiro nível do onboarding (dicas contextuais na primeira visita a
+ * cada área) vive em `components/DicaContextual.tsx`, fora daqui.
+ *
+ * Cada slide cobre uma funcionalidade REAL, conferida contra as rotas de
+ * `App.tsx` e o menu de `Shell.tsx` — nada inventado, nenhum número
+ * decorado que o produto não sustente. */
 
+type Modo = "quick" | "completo";
 type Bloco = { rotulo: string; texto: string };
 type Slide = {
+  id: string;
   icone: NomeIcone;
   titulo: string;
   eyebrow: string;
@@ -163,6 +174,21 @@ function MockFluxograma() {
   );
 }
 
+/** Grafo de conhecimento — o momento em que o tour ensina a mudança de
+ * paradigma. Reaproveita o mesmo componente da vitrine do login, para que a
+ * primeira imagem que o médico viu do produto seja também a que explica
+ * como ele funciona. */
+function MockGrafo() {
+  return (
+    <div className="tour-mock tour-mock--grafo">
+      <Chrome titulo="Grafo de Conhecimento Clínico" />
+      <div className="tour-mock__corpo">
+        <GrafoConstelacao variante="escuro" />
+      </div>
+    </div>
+  );
+}
+
 function MockEmergencia() {
   const nomes = ["PCR", "IAM", "AVC", "Anafilaxia", "Choque", "Crise HAS"];
   return (
@@ -199,7 +225,7 @@ function MockReceita() {
           <div className="mk-doc__linha" style={{ width: "92%" }} />
           <div className="mk-doc__linha" style={{ width: "70%" }} />
           <div className="mk-doc__linha" style={{ width: "84%" }} />
-          <span className="mk-doc__selo"><Icone nome="check" width={10} height={10} /> Assinado ICP-Brasil</span>
+          <span className="mk-doc__selo"><Icone nome="check" width={10} height={10} /> Pronto para assinar</span>
         </div>
       </div>
     </div>
@@ -306,127 +332,164 @@ function MockGestao() {
 
 const SLIDES: Slide[] = [
   {
+    id: "assistente",
     icone: "assistente",
     eyebrow: "Decisão clínica",
-    titulo: "Assistente de IA clínica",
+    titulo: "Assistente e busca clínica",
     resumo: "Pergunte em linguagem natural — com fonte, não achismo.",
     blocos: [
-      { rotulo: "O que é", texto: "Converse com o assistente: ele busca primeiro na base científica própria da Corvia e complementa com a internet quando precisa de algo mais recente." },
-      { rotulo: "Por que importa", texto: "Cada resposta cita a fonte — você confere antes de decidir, em vez de receber uma resposta genérica sem rastro." },
-      { rotulo: "No seu dia a dia", texto: "Aquela dúvida entre um paciente e outro se resolve conversando, sem montar uma busca formal." },
+      { rotulo: "O que é", texto: "Converse com o assistente: ele busca primeiro na base científica da própria Corvia e complementa com a internet quando a pergunta pede algo mais recente." },
+      { rotulo: "Por que importa", texto: "Cada resposta cita a fonte que usou — você confere antes de decidir, em vez de receber um texto genérico sem rastro." },
+      { rotulo: "No seu dia a dia", texto: "A dúvida entre um paciente e outro se resolve conversando, sem montar uma busca formal." },
     ],
     Mockup: MockAssistente,
   },
   {
+    id: "grafo",
+    icone: "rota",
+    eyebrow: "O jeito Corvia",
+    titulo: "Tudo na Corvia está conectado",
+    resumo: "De um medicamento até a conduta, sem perder o contexto.",
+    blocos: [
+      { rotulo: "O que é", texto: "Abra um medicamento e encontre ali a doença, a evidência, o estudo, o exame, o caso clínico e a trilha ligados a ele — e siga em qualquer direção a partir de qualquer um deles." },
+      { rotulo: "Por que importa", texto: "A Corvia não é um punhado de módulos separados: é um grafo de conhecimento clínico. Você navega pelas relações reais entre os itens, não por menus." },
+      { rotulo: "No seu dia a dia", texto: "Chegou pela dose, saiu com a evidência que a sustenta e o caso clínico que a treina — na mesma página." },
+    ],
+    Mockup: MockGrafo,
+  },
+  {
+    id: "agenda",
+    icone: "agenda",
+    eyebrow: "Pacientes e prática",
+    titulo: "Agenda e round hospitalar",
+    resumo: "Agenda, internados e checklist de alta, no mesmo lugar.",
+    blocos: [
+      { rotulo: "O que é", texto: "Agenda com sincronização de calendário externo (Google, Microsoft, Apple, Yahoo), round hospitalar para acompanhar internados e checklist de alta." },
+      { rotulo: "Por que importa", texto: "O que hoje está em três lugares diferentes — agenda, planilha de round, checklist em papel — passa a ficar num só." },
+      { rotulo: "No seu dia a dia", texto: "Confere os internados do dia e a agenda do consultório na mesma tela, antes de sair de casa." },
+    ],
+    Mockup: MockAgenda,
+  },
+  {
+    id: "prescricao",
+    icone: "prescricao",
+    eyebrow: "Pacientes e prática",
+    titulo: "Prescrição e documentos",
+    resumo: "Receita, atestado e laudo prontos para assinar.",
+    blocos: [
+      { rotulo: "O que é", texto: "Monte a receita pela base de medicamentos, com preço regulado da CMED, ou gere atestado, laudo e avaliação pré-operatória a partir de modelos." },
+      { rotulo: "Por que importa", texto: "O documento sai com a sua identificação profissional e segue para assinatura digital com o seu certificado, sem imprimir e escanear." },
+      { rotulo: "No seu dia a dia", texto: "No retorno, reaproveite a receita anterior: os itens já vêm preenchidos e você ajusta só o que mudou." },
+    ],
+    Mockup: MockReceita,
+  },
+  {
+    id: "mail",
+    icone: "mail",
+    eyebrow: "Comunicação",
+    titulo: "CorvIA Mail",
+    resumo: "Seu e-mail profissional, dentro da própria Corvia.",
+    blocos: [
+      { rotulo: "O que é", texto: "Endereço próprio @corvia.med.br — ou leia as contas que você já usa (Gmail, Outlook, Yahoo, iCloud) na mesma caixa, sem trocar de aplicativo." },
+      { rotulo: "Por que importa", texto: "Envie documento e material ao paciente a partir da tela onde você já está, com a sua assinatura profissional em toda mensagem." },
+      { rotulo: "No seu dia a dia", texto: "Responde o paciente sem abrir outro aplicativo nem perder o contexto da consulta." },
+    ],
+    Mockup: MockMail,
+  },
+  {
+    id: "biblioteca",
     icone: "conhecimento",
     eyebrow: "Conhecimento",
     titulo: "Biblioteca científica",
-    resumo: "Toda a cardiologia organizada, sempre com classe e nível de evidência.",
+    resumo: "A cardiologia organizada, com classe e nível de evidência.",
     blocos: [
-      { rotulo: "O que é", texto: "Doença, diretriz, evidência, estudo, exame ou achado de imagem — tudo com uma busca só, e favoritos para achar de novo em um clique." },
-      { rotulo: "Por que importa", texto: "Você chega direto na recomendação com classe e nível, sem abrir três guias em outra aba para confirmar a fonte." },
-      { rotulo: "No seu dia a dia", texto: "\"Qual o corte de LDL nessa diretriz mesmo?\" — resolve em segundos, sem sair do fluxo da consulta." },
+      { rotulo: "O que é", texto: "Doença, diretriz, evidência, estudo, exame ou achado de imagem — tudo por uma busca só, com favoritos para reencontrar em um clique." },
+      { rotulo: "Por que importa", texto: "Você chega direto na recomendação, com classe e nível à vista, sem abrir três abas para confirmar a fonte." },
+      { rotulo: "No seu dia a dia", texto: "\"Qual era o corte de LDL nessa diretriz?\" — resolve em segundos, sem sair do fluxo da consulta." },
     ],
     Mockup: MockBiblioteca,
   },
   {
+    id: "calculadoras",
     icone: "calculadora",
     eyebrow: "Decisão clínica",
     titulo: "Calculadoras e escores",
-    resumo: "Escore validado, com interpretação e conduta prontas.",
+    resumo: "Escore validado, com interpretação e conduta junto.",
     blocos: [
-      { rotulo: "O que é", texto: "CHA₂DS₂-VASc, HAS-BLED, GRACE e outras — cada uma já vem com a interpretação e a conduta associada, não só o número." },
-      { rotulo: "Por que importa", texto: "Reduz o cálculo mental e a consulta cruzada de bula na hora de decidir anticoagular, escalonar ou ajustar dose." },
-      { rotulo: "No seu dia a dia", texto: "Na beira do leito, um escore vira uma decisão de 30 segundos, não uma conta de cabeça sob pressão." },
+      { rotulo: "O que é", texto: "CHA₂DS₂-VASc, HAS-BLED, GRACE, escores de risco cirúrgico e calculadoras de dose — cada uma com a interpretação ao lado do número." },
+      { rotulo: "Por que importa", texto: "Menos conta de cabeça e menos consulta cruzada de bula na hora de anticoagular, escalonar ou ajustar dose." },
+      { rotulo: "No seu dia a dia", texto: "Na beira do leito, um escore vira decisão de trinta segundos — e vira laudo, se você quiser registrar." },
     ],
     Mockup: MockCalculadora,
   },
   {
+    id: "fluxogramas",
     icone: "seta",
     eyebrow: "Decisão clínica",
     titulo: "Fluxogramas de decisão",
     resumo: "Árvore de decisão clínica, passo a passo, sem ambiguidade.",
     blocos: [
       { rotulo: "O que é", texto: "Cada fluxograma é uma árvore estrita — um caminho por resposta, terminando sempre numa conduta clara." },
-      { rotulo: "Por que importa", texto: "Nada de grafo confuso com setas se cruzando: cada decisão tem só os ramos que importam para ela." },
-      { rotulo: "No seu dia a dia", texto: "Diante de um quadro atípico, você segue o fluxo em vez de reconstruir o raciocínio da diretriz de memória." },
+      { rotulo: "Por que importa", texto: "Nada de grafo confuso com setas se cruzando: cada decisão mostra só os ramos que importam para ela." },
+      { rotulo: "No seu dia a dia", texto: "Diante de um quadro atípico, você segue o fluxo em vez de reconstruir a diretriz de memória." },
     ],
     Mockup: MockFluxograma,
   },
   {
+    id: "emergencia",
     icone: "emergencia",
     eyebrow: "Modo Emergência",
     titulo: "Modo Emergência",
-    resumo: "31 protocolos com conduta imediata — funciona sem internet.",
+    resumo: "Protocolos com conduta imediata — funciona sem internet.",
     blocos: [
-      { rotulo: "O que é", texto: "Ao abrir uma vez, o pacote inteiro (protocolos, documentos, fluxogramas) fica salvo no aparelho." },
-      { rotulo: "Por que importa", texto: "Numa parada ou numa emergência hipertensiva, o fluxograma de conduta aparece pronto, sem depender de sinal." },
+      { rotulo: "O que é", texto: "Ao abrir uma vez, o pacote inteiro — protocolos, documentos e fluxogramas de conduta — fica salvo no aparelho." },
+      { rotulo: "Por que importa", texto: "Numa parada ou numa emergência hipertensiva, a conduta aparece pronta, sem depender de sinal." },
       { rotulo: "No seu dia a dia", texto: "Corredor sem sinal, plantão de UPA, sala de emergência — é exatamente a situação para a qual esta tela foi feita." },
     ],
     acento: "vermelho",
     Mockup: MockEmergencia,
   },
   {
-    icone: "prescricao",
-    eyebrow: "Pacientes e prática",
-    titulo: "Prescrição digital com assinatura",
-    resumo: "Receita e documento já saem assinados digitalmente.",
-    blocos: [
-      { rotulo: "O que é", texto: "Monte a receita pela base de medicamentos (com preço regulado da CMED) ou gere atestado e laudo — e assine com certificado digital." },
-      { rotulo: "Por que importa", texto: "O documento sai pronto para o paciente, com validade jurídica de assinatura digital, sem imprimir e escanear." },
-      { rotulo: "No seu dia a dia", texto: "Reaproveite a receita de um retorno: os itens já vêm preenchidos, você só ajusta o que mudou." },
-    ],
-    Mockup: MockReceita,
-  },
-  {
-    icone: "mail",
-    eyebrow: "Comunicação",
-    titulo: "CorvIA Mail",
-    resumo: "Seu e-mail profissional, dentro da própria Corvia.",
-    blocos: [
-      { rotulo: "O que é", texto: "Endereço próprio @corvia.med.br, ou leia Yahoo, iCloud, Gmail e Outlook na mesma caixa, sem trocar de aplicativo." },
-      { rotulo: "Por que importa", texto: "Envie documento e receita já assinados direto ao paciente, com sua assinatura profissional em toda mensagem." },
-      { rotulo: "No seu dia a dia", texto: "Manda o resultado de um exame por e-mail sem sair da tela onde você já está trabalhando." },
-    ],
-    Mockup: MockMail,
-  },
-  {
-    icone: "agenda",
-    eyebrow: "Pacientes e prática",
-    titulo: "Agenda e round hospitalar",
-    resumo: "Agenda, internados e checklist de alta, no mesmo lugar.",
-    blocos: [
-      { rotulo: "O que é", texto: "Agenda com sincronização de calendário externo, round hospitalar para acompanhar internados e checklist de alta." },
-      { rotulo: "Por que importa", texto: "O que hoje está em três apps diferentes (agenda, planilha de round, checklist em papel) fica num só lugar." },
-      { rotulo: "No seu dia a dia", texto: "Confere os internados do dia e a agenda do consultório na mesma tela, antes de sair de casa." },
-    ],
-    Mockup: MockAgenda,
-  },
-  {
+    id: "trilhas",
     icone: "curso",
     eyebrow: "Conhecimento",
     titulo: "Trilhas de estudo e casos clínicos",
     resumo: "Estudo estruturado, não disperso.",
     blocos: [
-      { rotulo: "O que é", texto: "Trilhas de estudo por tema, casos clínicos interativos com pergunta e resposta, e cursos de parceiros para o Título de Especialista." },
-      { rotulo: "Por que importa", texto: "Cada trilha já organiza a sequência de leitura por relevância clínica — nada de garimpar por conta própria." },
-      { rotulo: "No seu dia a dia", texto: "Um caso clínico de 5 minutos no intervalo entre consultas mantém o estudo em dia." },
+      { rotulo: "O que é", texto: "Trilhas por tema, com a sequência de leitura já organizada, e casos clínicos interativos com pergunta e resposta comentada." },
+      { rotulo: "Por que importa", texto: "A trilha ordena o que ler por relevância clínica — você não precisa garimpar por conta própria." },
+      { rotulo: "No seu dia a dia", texto: "Um caso clínico de cinco minutos no intervalo entre consultas mantém o estudo em dia." },
     ],
     Mockup: MockTrilhas,
   },
   {
+    id: "gestao",
     icone: "gestao",
     eyebrow: "Gestão",
     titulo: "Sua prática, organizada",
-    resumo: "Contas sincronizadas, indicadores e favoritos, sempre à mão.",
+    resumo: "Contas sincronizadas, indicadores e favoritos à mão.",
     blocos: [
-      { rotulo: "O que é", texto: "Sincronize quantas contas quiser (Google, Microsoft, Apple, Yahoo), acompanhe seus próprios indicadores e guarde favoritos." },
-      { rotulo: "Por que importa", texto: "Agenda e e-mail de várias contas numa visão só, sem escolher qual aplicativo abrir a cada momento." },
-      { rotulo: "No seu dia a dia", texto: "Tudo o que você usa com frequência fica a um clique — sem procurar de novo toda vez." },
+      { rotulo: "O que é", texto: "Sincronize quantas contas quiser (Google, Microsoft, Apple, Yahoo), acompanhe seus indicadores de uso e guarde favoritos." },
+      { rotulo: "Por que importa", texto: "Agenda e e-mail de várias contas numa visão só, sem decidir qual aplicativo abrir a cada momento." },
+      { rotulo: "No seu dia a dia", texto: "O que você usa com frequência fica a um clique, sem procurar de novo toda vez." },
     ],
     Mockup: MockGestao,
   },
 ];
+
+/** Quick Start — as cinco funcionalidades do primeiro acesso, na ordem em
+ * que fazem sentido para quem nunca abriu o produto: entender como se
+ * pergunta, entender que tudo é conectado, e então as três frentes de
+ * rotina (agenda, prescrição, e-mail). */
+const QUICK_START = ["assistente", "grafo", "agenda", "prescricao", "mail"];
+
+function slidesDoModo(modo: Modo): Slide[] {
+  if (modo === "completo") return SLIDES;
+  const ordem = new Map(QUICK_START.map((id, i) => [id, i]));
+  return SLIDES.filter((s) => ordem.has(s.id)).sort(
+    (a, b) => (ordem.get(a.id) ?? 0) - (ordem.get(b.id) ?? 0),
+  );
+}
 
 /* ---------------------------------------------------------------------- */
 /* Boas-vindas — avatar do Instagram (se informado) com fallback gracioso */
@@ -468,34 +531,64 @@ function AvatarBoasVindas({ fotoUrl, nome }: { fotoUrl: string | null | undefine
 }
 
 export default function Tour() {
-  const { usuario, recarregar } = useAuth();
+  const { usuario } = useAuth();
   const navigate = useNavigate();
+  const [params] = useSearchParams();
+
+  // Primeiro acesso (gate de `App.tsx`) → Quick Start. Visita voluntária,
+  // com o onboarding já concluído → tour completo. `?modo=` permite linkar
+  // qualquer um dos dois diretamente.
+  const pendente = Boolean(usuario?.onboarding_pendente);
+  const modoDaUrl = params.get("modo");
+  const [modo, setModo] = useState<Modo>(
+    modoDaUrl === "completo" || modoDaUrl === "quick"
+      ? modoDaUrl
+      : pendente
+        ? "quick"
+        : "completo",
+  );
   const [passo, setPasso] = useState(0);
   const [concluindo, setConcluindo] = useState(false);
 
-  const total = SLIDES.length + 2; // boas-vindas + funcionalidades + final
+  const slides = slidesDoModo(modo);
+  const total = slides.length + 2; // boas-vindas + funcionalidades + final
   const ehBoasVindas = passo === 0;
   const ehFinal = passo === total - 1;
-  const slideAtual = !ehBoasVindas && !ehFinal ? SLIDES[passo - 1] : null;
+  const slideAtual = !ehBoasVindas && !ehFinal ? slides[passo - 1] : null;
+
+  const avancar = useCallback(() => {
+    setPasso((p) => Math.min(p + 1, total - 1));
+  }, [total]);
+  const voltar = useCallback(() => {
+    setPasso((p) => Math.max(p - 1, 0));
+  }, []);
 
   useEffect(() => {
     function aoTeclar(e: KeyboardEvent) {
+      // Não sequestra as setas quando o foco está num controle que já as
+      // usa (navegação por teclado nos pontos de progresso, por exemplo).
+      const alvo = e.target as HTMLElement | null;
+      if (alvo && /^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName)) return;
       if (e.key === "ArrowRight") avancar();
       if (e.key === "ArrowLeft") voltar();
     }
     window.addEventListener("keydown", aoTeclar);
     return () => window.removeEventListener("keydown", aoTeclar);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [passo]);
+  }, [avancar, voltar]);
 
-  function avancar() {
-    setPasso((p) => Math.min(p + 1, total - 1));
-  }
-  function voltar() {
-    setPasso((p) => Math.max(p - 1, 0));
+  /** Troca para o passeio longo sem sair da página nem fechar o gate. */
+  function verTourCompleto() {
+    setModo("completo");
+    setPasso(1);
   }
 
   async function concluir() {
+    // Visita voluntária (onboarding já concluído): só volta, sem tocar no
+    // estado do usuário.
+    if (!pendente) {
+      navigate("/");
+      return;
+    }
     setConcluindo(true);
     try {
       await api.post("/auth/me/onboarding-concluido", {});
@@ -504,32 +597,60 @@ export default function Tour() {
       // engole o erro; ele pode ver o tour de novo, mas não fica preso.
       if (!(e instanceof ApiError)) throw e;
     } finally {
-      recarregar();
-      navigate("/");
+      // Navegação completa do navegador, não troca de rota do React Router.
+      //
+      // 🐛 Bug real, reproduzido de ponta a ponta nesta subfase (issue #52) e
+      // presente desde a versão anterior do tour: `recarregar()` dispara um
+      // GET /auth/me e NÃO é aguardado, então o `navigate("/")` seguinte
+      // chegava ao gate de `App.tsx` com o usuário ainda em memória —
+      // `onboarding_pendente` continuava `true` e o gate devolvia o médico
+      // para `/tour`. Resultado: ao clicar em "Começar a usar a Corvia" (ou
+      // em "Pular") a tela do tour simplesmente não saía do lugar, e só a
+      // navegação manual destravava.
+      //
+      // Recarregar de verdade garante um `/auth/me` novo antes de o gate
+      // rodar. É o mesmo padrão que o login já usa em `lib/auth.tsx`, e o
+      // custo de um recarregamento é aceitável num momento que já é de
+      // transição de tela — acontece uma única vez por assinante.
+      window.location.replace("/");
     }
   }
+
+  const rotuloSair = pendente ? "Pular" : "Fechar";
 
   return (
     <div className="tour">
       <div className="tour__topo">
         <img src="/corvia-logo-compacta.png" alt="Corvia" className="tour__logo" />
-        {!ehFinal && (
-          <button className="tour__pular" onClick={concluir} disabled={concluindo}>
-            Pular tour
-          </button>
-        )}
+        <button className="tour__pular" onClick={concluir} disabled={concluindo}>
+          {ehFinal ? "Fechar" : rotuloSair}
+        </button>
       </div>
 
-      <div className="tour__progresso" role="progressbar" aria-valuenow={passo + 1} aria-valuemax={total}>
-        {Array.from({ length: total }).map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            className={`tour__ponto${i <= passo ? " tour__ponto--feito" : ""}${i === passo ? " tour__ponto--atual" : ""}`}
-            aria-label={`Ir para o passo ${i + 1} de ${total}`}
-            onClick={() => setPasso(i)}
-          />
-        ))}
+      <div className="tour__progresso">
+        <p className="tour__contador" aria-live="polite">
+          {modo === "quick" ? "Início rápido" : "Tour completo"} · Passo {passo + 1} de {total}
+        </p>
+        <div
+          className="tour__pontos"
+          role="progressbar"
+          aria-label="Progresso do tour"
+          aria-valuenow={passo + 1}
+          aria-valuemin={1}
+          aria-valuemax={total}
+          aria-valuetext={`Passo ${passo + 1} de ${total}`}
+        >
+          {Array.from({ length: total }).map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              className={`tour__ponto${i <= passo ? " tour__ponto--feito" : ""}${i === passo ? " tour__ponto--atual" : ""}`}
+              aria-label={`Ir para o passo ${i + 1} de ${total}`}
+              aria-current={i === passo ? "step" : undefined}
+              onClick={() => setPasso(i)}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="tour__corpo">
@@ -540,8 +661,9 @@ export default function Tour() {
               <AvatarBoasVindas fotoUrl={usuario?.instagram_photo_url} nome={usuario?.full_name} />
               <h1>Bem-vindo ao Ecossistema Corvia, {usuario?.full_name?.split(" ")[0]}.</h1>
               <p className="tour__resumo">
-                Antes de começar, um giro rápido pelo que a plataforma oferece — leva menos de
-                dois minutos, e você pode pular a qualquer momento.
+                {modo === "quick"
+                  ? "Cinco telas, menos de dois minutos — o suficiente para começar a usar. Você pode pular a qualquer momento e ver o tour completo depois."
+                  : "O passeio completo pelo que a plataforma oferece. Avance no seu ritmo e feche quando quiser."}
               </p>
               <svg className="tour-boasvindas__pulso" viewBox="0 0 420 44" aria-hidden="true">
                 <path d="M0 22 H140 L158 6 L176 38 L194 14 L208 30 L222 22 H420" />
@@ -557,7 +679,7 @@ export default function Tour() {
               <div className="tour-texto-lado">
                 <div className="tour-texto-lado__topo">
                   <span className="tour-texto-lado__icone"><Icone nome={slideAtual.icone} width={22} height={22} /></span>
-                  <span className="tour-texto-lado__contador">{slideAtual.eyebrow} · {passo} de {SLIDES.length}</span>
+                  <span className="tour-texto-lado__contador">{slideAtual.eyebrow} · {passo} de {slides.length}</span>
                 </div>
                 <h2>{slideAtual.titulo}</h2>
                 <p className="tour-texto-lado__resumo">{slideAtual.resumo}</p>
@@ -578,17 +700,23 @@ export default function Tour() {
               <p className="tour-boasvindas__eyebrow">Tudo pronto</p>
               <h1>Pronto para começar.</h1>
               <p className="tour__resumo">
-                Você já conhece o essencial. O resto você descobre usando — e pode voltar a
-                qualquer uma dessas telas pelo menu, quando quiser.
+                Você já tem o essencial. O resto aparece no caminho — e o tour completo fica
+                sempre disponível em <strong>Gestão › Conheça a plataforma</strong>.
               </p>
               <div className="tour-final__grade">
-                {SLIDES.map((s) => (
+                {slides.map((s) => (
                   <span className="tour-final__item" key={s.titulo}>
                     <Icone nome={s.icone} width={17} height={17} />
                     {s.titulo}
                   </span>
                 ))}
               </div>
+              {modo === "quick" && (
+                <button type="button" className="tour-final__completo" onClick={verTourCompleto}>
+                  Ver o tour completo agora
+                  <Icone nome="seta" width={15} height={15} aria-hidden="true" />
+                </button>
+              )}
             </div>
           )}
         </div>
@@ -600,7 +728,7 @@ export default function Tour() {
         </button>
         {ehFinal ? (
           <button className="botao" onClick={concluir} disabled={concluindo}>
-            {concluindo ? "Entrando…" : "Começar a usar a Corvia"}
+            {concluindo ? "Entrando…" : pendente ? "Começar a usar a Corvia" : "Voltar para a Corvia"}
           </button>
         ) : (
           <button className="botao" onClick={avancar}>Próximo</button>
