@@ -722,7 +722,13 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do LOTENSIN® (benazepril hydrochloride), seção CLINICAL STUDIES, consultado via WebSearch em 10/08/2026 — texto integral não lido diretamente (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "sbp_reduction_mmhg": -12.2,
     "dbp_reduction_mmhg": -7.7,
-    "bp_evidence_source": "Estudo multicêntrico com 206 pacientes com hipertensão leve a moderada, randomizados para benazepril 2, 5, 10 ou 20 mg, hidroclorotiazida 25 mg, ou placebo, 1x/dia por 4 semanas: a dose de **20 mg** reduziu a PA em **-12,2/-7,7 mmHg** (valores registrados nos campos numéricos, já corrigidos contra o efeito placebo, conforme o desenho do estudo). Nas doses menores (2, 5 e 10 mg), a redução de PA não foi estatisticamente diferente do placebo — ou seja, o efeito antihipertensivo consistente exige a dose de 20 mg neste estudo específico. Fonte: consultado via WebSearch em 10/08/2026, referenciando estudo de dose-resposta do benazepril (PubMed, dose-response studies with benazepril in mild to moderate hypertension) e rótulo FDA LOTENSIN®, seção CLINICAL STUDIES — texto integral não lido diretamente nesta sessão (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar se este é exatamente o estudo citado pelo próprio rótulo ou uma publicação relacionada."
+    "bp_evidence_source": "Estudo multicêntrico com 206 pacientes com hipertensão leve a moderada, randomizados para benazepril 2, 5, 10 ou 20 mg, hidroclorotiazida 25 mg, ou placebo, 1x/dia por 4 semanas: a dose de **20 mg** reduziu a PA em **-12,2/-7,7 mmHg** (valores registrados nos campos numéricos, já corrigidos contra o efeito placebo, conforme o desenho do estudo). Nas doses menores (2, 5 e 10 mg), a redução de PA não foi estatisticamente diferente do placebo — ou seja, o efeito antihipertensivo consistente exige a dose de 20 mg neste estudo específico. Fonte: consultado via WebSearch em 10/08/2026, referenciando estudo de dose-resposta do benazepril (PubMed, dose-response studies with benazepril in mild to moderate hypertension) e rótulo FDA LOTENSIN®, seção CLINICAL STUDIES — texto integral não lido diretamente nesta sessão (bloqueio de rede) — VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar se este é exatamente o estudo citado pelo próprio rótulo ou uma publicação relacionada.",
+    "presentations": [
+      "Comprimido revestido 5 mg, 10 mg e 20 mg (referência internacional; concentrações comercializadas no Brasil confirmadas nesta sessão: 5 mg e 10 mg)"
+    ],
+    "commercial_presentations": [
+      "LOTENSIN® (cloridrato de benazepril), Novartis Biociências S.A. — comprimidos revestidos de 5 mg e 10 mg, embalagens com 14, 30 ou 60 comprimidos. Também comercializado como LOTENSIN H® (associação com hidroclorotiazida 5 mg/6,25 mg e outras doses) pelo mesmo laboratório. Existe também genérico/similar \"cloridrato de benazepril\" comprimidos 5 mg e 10 mg de múltiplos fabricantes. Confirmado por pelo menos duas fontes de varejo concordantes (consultaremedios.com.br, pesquisemedicamentos.com.br, drogarianovaesperanca.com.br) nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Números de registro ANVISA específicos não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para o registro exato antes de exibir como definitivo."
+    ]
   },
   {
     "slug": "bisoprolol-hemifumarato",
@@ -830,7 +836,13 @@
     "duration_of_action_source": "Inferido da meia-vida de 25 minutos (função renal normal) do rótulo FDA ANGIOMAX®, consultado via WebSearch em 10/08/2026 — sem dado direto de tempo-até-ACT-normal localizado nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — a bivalirudina é anticoagulante parenteral de uso periprocedimento (inibidor direto da trombina), sem indicação nem mecanismo de ação sobre a pressão arterial sistêmica. Nenhum desfecho de PA é reportado no rótulo nem nos ensaios pivotais consultados. Campo deixado vazio por ausência real de dado aplicável."
+    "bp_evidence_source": "Não se aplica — a bivalirudina é anticoagulante parenteral de uso periprocedimento (inibidor direto da trombina), sem indicação nem mecanismo de ação sobre a pressão arterial sistêmica. Nenhum desfecho de PA é reportado no rótulo nem nos ensaios pivotais consultados. Campo deixado vazio por ausência real de dado aplicável.",
+    "presentations": [
+      "Pó liofilizado para solução injetável/infusão 250 mg por frasco-ampola (apresentação de referência internacional, Angiox®/Angiomax® — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "NÃO localizado registro/comercialização regular no Brasil nesta sessão. A Diretriz Brasileira de Antiagregantes Plaquetários e Anticoagulantes em Cardiologia (Sociedade Brasileira de Cardiologia, publicada em Arquivos Brasileiros de Cardiologia, disponível em scielo.br) afirma textualmente que \"a bivalirudina ainda não está disponível para utilização no Brasil\", ao discutir os achados do estudo HORIZONS-AMI. Internacionalmente comercializada como Angiox® (Europa) / Angiomax® (EUA). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA se algum registro foi concedido desde a publicação da diretriz consultada, antes de orientar disponibilidade."
+    ]
   },
   {
     "slug": "bosentana",
@@ -1191,6 +1203,12 @@
     "bp_evidence_source": "Não se aplica. Cangrelor é um antiplaquetário P2Y12 de uso intravenoso, indicado como adjuvante à intervenção coronariana percutânea — seu mecanismo (inibição do receptor P2Y12 plaquetário) não tem efeito hemodinâmico direto sobre a pressão arterial sistêmica, e a redução de PA não é desfecho estudado nos ensaios pivotais (CHAMPION-PHOENIX/CHAMPION-PLATFORM/CHAMPION-PCI) nem reportado no rótulo. Por isso os dois campos numéricos ficam vazios em vez de receber um valor que a fonte não mede.",
     "brand_names": [
       "Kengreal (nome comercial internacional, Chiesi/The Medicines Company) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)"
+    ],
+    "presentations": [
+      "Pó liofilizado para solução injetável 50 mg por frasco-ampola (apresentação de referência internacional, Kengreal®— ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "NÃO localizado registro ativo de comercialização no Brasil nesta sessão. Nenhuma referência a registro ANVISA, venda em farmácia/distribuidora hospitalar brasileira, ou menção de disponibilidade nacional em diretriz da Sociedade Brasileira de Cardiologia foi encontrada. Internacionalmente comercializado como Kengreal® (EUA, aprovado FDA 2015) / Kengrexal® (Europa, aprovado EMA 2015). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA antes de informar disponibilidade ou indisponibilidade como definitiva."
     ]
   },
   {
@@ -1932,7 +1950,13 @@
     "duration_of_action_source": "Já documentado no campo `dosing.\"dose usual do adulto\"` deste mesmo registro (rotulagem do FDA para NORPACE/NORPACE CR, DailyMed, versão de 19/03/2026) — reaproveitado só para popular o campo estruturado novo, sem pesquisa adicional nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como desfecho terapêutico estudado. Disopiramida é antiarrítmico classe Ia com efeito inotrópico negativo (ver `mechanism` já cadastrado), usado nesta base especificamente para redução do gradiente de via de saída na cardiomiopatia hipertrófica obstrutiva — o próprio registro já alerta, em `dosing.\"cardiomiopatia ou possivel descompensacao\"`, para o risco de HIPOTENSÃO como efeito adverso a monitorar, não como desfecho terapêutico desejado ou medido em ensaio de redução pressórica sistêmica."
+    "bp_evidence_source": "Não se aplica como desfecho terapêutico estudado. Disopiramida é antiarrítmico classe Ia com efeito inotrópico negativo (ver `mechanism` já cadastrado), usado nesta base especificamente para redução do gradiente de via de saída na cardiomiopatia hipertrófica obstrutiva — o próprio registro já alerta, em `dosing.\"cardiomiopatia ou possivel descompensacao\"`, para o risco de HIPOTENSÃO como efeito adverso a monitorar, não como desfecho terapêutico desejado ou medido em ensaio de redução pressórica sistêmica.",
+    "presentations": [
+      "Cápsula 100 mg, comprimido de liberação prolongada 250 mg, e solução injetável 100 mg — apresentações historicamente registradas no Brasil (ver nota de disponibilidade atual)"
+    ],
+    "commercial_presentations": [
+      "DICORANTIL® (fosfato de disopiramida), Sanofi-Aventis Farmacêutica Ltda. — cápsulas 100 mg (Dicorantil), comprimidos de liberação prolongada 250 mg (Dicorantil-F) e solução injetável 100 mg (Dicorantil Injetável), historicamente registrados na ANVISA. Fonte de bula datada de 2014 (bulas.med.br); listagem ainda aparece em farmácias de varejo online (drogariaminasbrasil.com.br) nesta sessão, mas não foi possível confirmar produção/comercialização ativa em 2026 nem status atual do registro ANVISA. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se o registro segue ativo e se o produto continua em produção antes de orientar disponibilidade."
+    ]
   },
   {
     "slug": "dobutamina",
@@ -3680,6 +3704,12 @@
     "brand_names": [
       "Sybrava (Brasil, Novartis)",
       "Leqvio (outros mercados, inclusive rótulo FDA — mesma molécula, já observado em `dosing.nome comercial no brasil` deste registro)"
+    ],
+    "presentations": [
+      "Solução injetável 284 mg/1,5 mL (189 mg/mL), seringa preenchida de dose única, uso subcutâneo"
+    ],
+    "commercial_presentations": [
+      "SYBRAVA® (inclisirana), Novartis Biociências S.A. — seringa preenchida de dose única com 284 mg/1,5 mL, para aplicação subcutânea (dose inicial, reforço em 3 meses, depois a cada 6 meses). Aprovado pela ANVISA em 19/06/2023 (nome internacional Leqvio®, correspondente ao mesmo produto sob marca diferente em outros países). Confirmado por fonte oficial da própria ANVISA (carta aos profissionais de saúde da Novartis sobre o Sybrava, gov.br/anvisa) e pela bula profissional publicada em portal.novartis.com.br — duas fontes concordantes. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
     ]
   },
   {
@@ -3974,7 +4004,13 @@
     "duration_of_action_source": "Literatura farmacocinética/hemodinâmica sobre levosimendana e seu metabólito ativo OR-1896 (efeito hemodinâmico sustentado pós-infusão de 24h) — mesma linha de evidência da bula brasileira do SIMDAX já citada nas `references` deste registro.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica no sentido de EFEITO TERAPÊUTICO BUSCADO — a levosimendana é inotrópico/vasodilatador (sensibilizador de cálcio + abertura de canais de potássio ATP-dependentes), e **hipotensão é reação adversa/contraindicação relativa já registrada neste documento** (`contraindications`: \"hipotensão grave\"), não um desfecho terapêutico visado como em um antihipertensivo. Não há indicação de uso do fármaco para reduzir pressão arterial, e nenhuma fonte consultada apresenta uma magnitude de queda pressórica em mmHg como dado farmacológico central."
+    "bp_evidence_source": "Não se aplica no sentido de EFEITO TERAPÊUTICO BUSCADO — a levosimendana é inotrópico/vasodilatador (sensibilizador de cálcio + abertura de canais de potássio ATP-dependentes), e **hipotensão é reação adversa/contraindicação relativa já registrada neste documento** (`contraindications`: \"hipotensão grave\"), não um desfecho terapêutico visado como em um antihipertensivo. Não há indicação de uso do fármaco para reduzir pressão arterial, e nenhuma fonte consultada apresenta uma magnitude de queda pressórica em mmHg como dado farmacológico central.",
+    "presentations": [
+      "Solução injetável concentrada 2,5 mg/mL, frasco-ampola de 5 mL (12,5 mg/frasco), uso hospitalar exclusivo, diluição obrigatória antes da infusão IV"
+    ],
+    "commercial_presentations": [
+      "SIMDAX® (levosimendana), fabricado por Orion Corporation (Espoo, Finlândia) e importado/distribuído no Brasil atualmente por Biolab-Sanus Farmacêutica Ltda (bula profissional com atualização de 18/03/2025, EAN 7896112400615) — frasco-ampola de 5 mL a 2,5 mg/mL. Fontes anteriores (bula datada de 2013) registram Abbott Laboratórios do Brasil Ltda como importador, indicando troca de distribuidor ao longo do tempo. Confirmado por pelo menos duas fontes de varejo/bulário concordantes nesta sessão (sara.com.br, consultaremedios.com.br, farmaindex.com, WebSearch 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Medicamento de uso hospitalar exclusivo, não vendido em farmácia de varejo comum ao consumidor final."
+    ]
   },
   {
     "slug": "liraglutida",
@@ -5642,6 +5678,12 @@
       "Pressão arterial e sinais vitais durante e após a infusão, pelo risco de hipotensão/reação anafilactoide já descrito.",
       "Sinais de sangramento recorrente por 'rebote de heparina' nas horas seguintes à reversão, dado a duração de ação variável já registrada no campo `duration_of_action_note`.",
       "fonte: extrapolado da prática clínica padrão de reversão de heparina e do perfil de segurança já documentado neste registro — VERIFICAÇÃO HUMANA NECESSÁRIA para citação específica de bula brasileira sobre protocolo formal de monitorização."
+    ],
+    "presentations": [
+      "Solução injetável 10 mg/mL (1000 UI/mL), ampola de 5 mL (equivalente a 50 mg/ampola), uso intravenoso hospitalar"
+    ],
+    "commercial_presentations": [
+      "PROTAMINA 1000® (cloridrato de protamina), Cellera Farmacêutica S.A. (Indaiatuba/SP — mesmo endereço anteriormente registrado por Valeant Farmacêutica do Brasil Ltda, sucedida pela Cellera), fabricado por União Química Farmacêutica Nacional S.A. Registro ANVISA nº 1.0440.0184. Solução injetável 10 mg/mL, caixa com 25 ampolas de vidro de 5 mL. Confirmado por múltiplas fontes concordantes nesta sessão (cellerafarma.com.br, consultaremedios.com.br, sara.com.br, magazinemedica.com.br, WebSearch 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Medicamento de uso hospitalar."
     ]
   },
   {
@@ -7176,7 +7218,13 @@
     "duration_of_action_source": "Rótulo do VERQUVO (vericiguate), FDA/DailyMed, seção Clinical Pharmacology.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Vericiguate é estimulador da guanilato ciclase solúvel indicado para insuficiência cardíaca (não para hipertensão) e tem hipotensão sintomática como efeito adverso monitorado, dose-dependente na titulação (ver `dosing.titulacao` e `notes.Hipotensao e populacoes nao estudadas`) — mas não foi localizado nesta sessão um valor consolidado e verificável de redução média de PA em mmHg proveniente do ensaio pivotal VICTORIA ou do rótulo/RCM. VERIFICAÇÃO HUMANA NECESSÁRIA: consultar a seção de eventos adversos/farmacodinâmica do RCM (EMA) ou do rótulo FDA para o dado quantitativo de PA, se existir; campos mantidos nulos em vez de estimar."
+    "bp_evidence_source": "Vericiguate é estimulador da guanilato ciclase solúvel indicado para insuficiência cardíaca (não para hipertensão) e tem hipotensão sintomática como efeito adverso monitorado, dose-dependente na titulação (ver `dosing.titulacao` e `notes.Hipotensao e populacoes nao estudadas`) — mas não foi localizado nesta sessão um valor consolidado e verificável de redução média de PA em mmHg proveniente do ensaio pivotal VICTORIA ou do rótulo/RCM. VERIFICAÇÃO HUMANA NECESSÁRIA: consultar a seção de eventos adversos/farmacodinâmica do RCM (EMA) ou do rótulo FDA para o dado quantitativo de PA, se existir; campos mantidos nulos em vez de estimar.",
+    "presentations": [
+      "Comprimido revestido 2,5 mg, 5 mg e 10 mg (apresentação de referência internacional, Verquvo® — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "NÃO localizado registro ativo de comercialização regular no Brasil nesta sessão — nenhuma referência a aprovação ANVISA foi encontrada. O único canal de acesso identificado é uma farmácia de importação internacional (Uno Healthcare, sediada nos EUA, frete internacional e prazo de entrega de ~14 dias úteis), o que é consistente com medicamento sem registro sanitário nacional, disponível apenas por importação regulamentada. Internacionalmente comercializado como Verquvo® (Merck nos EUA; Bayer no restante do mundo), aprovado por FDA, Comissão Europeia e MHLW do Japão. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA antes de informar disponibilidade ou indisponibilidade como definitiva."
+    ]
   },
   {
     "slug": "nicorandil",
@@ -7238,7 +7286,13 @@
     "duration_of_action_source": "Summary of Product Characteristics (SmPC) do Nicorandil, electronic medicines compendium (emc), consultado via WebSearch em 2026.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Nicorandil não tem indicação para hipertensão — é antianginoso vasodilatador de reserva (segunda linha, ver `indications`), e hipotensão consta como possível efeito adverso (ver `adverse_effects`), sobretudo em associação a outros vasodilatadores ou nas primeiras doses/titulação, mas não foi localizado nesta sessão um valor consolidado de redução média de PA em mmHg no SmPC consultado. Campos mantidos nulos; VERIFICAÇÃO HUMANA NECESSÁRIA caso se queira quantificar o efeito hipotensor a partir dos dados de segurança do ensaio IONA ou de outro estudo dedicado."
+    "bp_evidence_source": "Nicorandil não tem indicação para hipertensão — é antianginoso vasodilatador de reserva (segunda linha, ver `indications`), e hipotensão consta como possível efeito adverso (ver `adverse_effects`), sobretudo em associação a outros vasodilatadores ou nas primeiras doses/titulação, mas não foi localizado nesta sessão um valor consolidado de redução média de PA em mmHg no SmPC consultado. Campos mantidos nulos; VERIFICAÇÃO HUMANA NECESSÁRIA caso se queira quantificar o efeito hipotensor a partir dos dados de segurança do ensaio IONA ou de outro estudo dedicado.",
+    "presentations": [
+      "Comprimido 10 mg e 20 mg (apresentação de referência internacional, uso oral 2x/dia — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "NÃO localizado registro/comercialização regular no Brasil nesta sessão. Pesquisa inicial encontrou um falso positivo que precisa ficar registrado para não se repetir: a marca \"Nicord®\" (Marjan Indústria e Comércio Ltda.) circula em bulários brasileiros, mas seu princípio ativo é **besilato de anlodipino**, não nicorandil — coincidência de nome comercial, confirmada por bula profissional da própria Marjan (marjan.com.br/wp-content/uploads/2022/11/BULA-NICORD-25-MG-PROFISSIONAL-DE-SAUDE...pdf). Nenhuma outra marca brasileira de nicorandil foi localizada. Internacionalmente comercializado no Reino Unido/Europa como Nicorandil (genérico) — bula de referência em medicines.org.uk. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA antes de informar disponibilidade ou indisponibilidade como definitiva."
+    ]
   },
   {
     "slug": "tirzepatida",
@@ -7320,7 +7374,13 @@
     "duration_of_action_source": "Bula do paciente MOUNJARO (tirzepatida), Eli Lilly do Brasil, aprovada pela Anvisa em 21/11/2024.",
     "sbp_reduction_mmhg": -6.8,
     "dbp_reduction_mmhg": -4.2,
-    "bp_evidence_source": "Substudo de monitorização ambulatorial de PA do SURMOUNT-1 (adultos com obesidade/sobrepeso, sem diabetes, IMC ≥27 kg/m², 72 semanas): redução líquida (vs. placebo) de 6,8 mmHg na PA sistólica e 4,2 mmHg na PA diastólica com tirzepatida (doses combinadas), com a perda de peso explicando 68% da redução sistólica e 71% da diastólica — ou seja, o efeito é majoritariamente mediado pela perda ponderal, não por um mecanismo hipotensor direto e independente de peso. Redução absoluta a partir do basal (sem subtrair placebo) foi de 6,0 a 7,4 mmHg na PA sistólica conforme a dose, nas 72 semanas. Em diabéticos tipo 2 (programa SURPASS), a redução de PAS a partir do basal variou de -2,8 a -12,6 mmHg conforme o estudo e a dose; no SURPASS-4 (segurança cardiovascular, n=2.002), a redução foi de 7,4 a 10,6 mmHg (PAS) e 2,9 a 4,0 mmHg (PAD) conforme a dose. Valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-6,8/-4,2) são o efeito líquido vs. placebo do substudo SURMOUNT-1, escolhido por ser o desenho placebo-controlado mais diretamente comparável aos demais fármacos deste catálogo. Fonte: substudo de MAPA do SURMOUNT-1, Hypertension (AHA Journals), e Jastreboff AM et al., SURMOUNT-1, N Engl J Med. 2022;387(3):205-216, PMID 35658024 (já citado nas referências deste registro) — consultados via WebSearch em 2026, texto completo do substudo de MAPA não pôde ser acessado diretamente nesta sessão (bloqueio de rede); números replicados da síntese de busca, não lidos linha a linha no artigo original. VERIFICAÇÃO HUMANA NECESSÁRIA: conferir os valores exatos e o desenho estatístico direto no artigo do substudo antes de tratar como definitivo."
+    "bp_evidence_source": "Substudo de monitorização ambulatorial de PA do SURMOUNT-1 (adultos com obesidade/sobrepeso, sem diabetes, IMC ≥27 kg/m², 72 semanas): redução líquida (vs. placebo) de 6,8 mmHg na PA sistólica e 4,2 mmHg na PA diastólica com tirzepatida (doses combinadas), com a perda de peso explicando 68% da redução sistólica e 71% da diastólica — ou seja, o efeito é majoritariamente mediado pela perda ponderal, não por um mecanismo hipotensor direto e independente de peso. Redução absoluta a partir do basal (sem subtrair placebo) foi de 6,0 a 7,4 mmHg na PA sistólica conforme a dose, nas 72 semanas. Em diabéticos tipo 2 (programa SURPASS), a redução de PAS a partir do basal variou de -2,8 a -12,6 mmHg conforme o estudo e a dose; no SURPASS-4 (segurança cardiovascular, n=2.002), a redução foi de 7,4 a 10,6 mmHg (PAS) e 2,9 a 4,0 mmHg (PAD) conforme a dose. Valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-6,8/-4,2) são o efeito líquido vs. placebo do substudo SURMOUNT-1, escolhido por ser o desenho placebo-controlado mais diretamente comparável aos demais fármacos deste catálogo. Fonte: substudo de MAPA do SURMOUNT-1, Hypertension (AHA Journals), e Jastreboff AM et al., SURMOUNT-1, N Engl J Med. 2022;387(3):205-216, PMID 35658024 (já citado nas referências deste registro) — consultados via WebSearch em 2026, texto completo do substudo de MAPA não pôde ser acessado diretamente nesta sessão (bloqueio de rede); números replicados da síntese de busca, não lidos linha a linha no artigo original. VERIFICAÇÃO HUMANA NECESSÁRIA: conferir os valores exatos e o desenho estatístico direto no artigo do substudo antes de tratar como definitivo.",
+    "presentations": [
+      "Solução injetável 2,5 mg, 5 mg, 7,5 mg, 10 mg, 12,5 mg ou 15 mg por 0,5 mL, caneta aplicadora preenchida de dose única, uso subcutâneo semanal"
+    ],
+    "commercial_presentations": [
+      "MOUNJARO® (tirzepatida), Eli Lilly do Brasil Ltda. — caneta aplicadora de dose única (0,5 mL), disponível nas concentrações de 2,5 mg, 5 mg, 7,5 mg, 10 mg, 12,5 mg e 15 mg, embalagem com 4 canetas. Aprovado pela ANVISA desde 2023 para diabetes mellitus tipo 2; indicação em bula ampliada em junho de 2025 para obesidade/sobrepeso com comorbidade (IMC ≥30 kg/m² ou ≥27 kg/m² com comorbidade). Confirmado por múltiplas fontes concordantes nesta sessão, incluindo a bula profissional oficial hospedada no domínio da própria ANVISA (bula-anvisa.s3.sa-east-1.amazonaws.com/112600202_paciente.pdf), agenciabrasil.ebc.com.br (Agência Brasil, veículo oficial do governo federal) e consultaremedios.com.br — WebSearch, 11/08/2026, issue #52, seção 9 (apresentações comerciais)."
+    ]
   },
   {
     "slug": "minoxidil",
@@ -7388,7 +7448,13 @@
     "duration_of_action_source": "Literatura de farmacocinética/farmacodinâmica do minoxidil oral (consultada via WebSearch em 2026), consistente com o mecanismo de ligação a canal K-ATP já descrito em `mechanism` deste registro.",
     "sbp_reduction_mmhg": -26.6,
     "dbp_reduction_mmhg": -10.4,
-    "bp_evidence_source": "Mesmo estudo já citado em `outcomes.estudo_principal` deste registro (Mundt HM et al., J Clin Hypertens (Greenwich). 2016;18(11):1162-1167, PMID 27246772) — coorte retrospectiva de 54 pacientes internados com hipertensão não controlada: a adição de minoxidil reduziu a PA de 162,4±15,1/83,2±12,7 mmHg para 135,8±12,2/72,8±6,9 mmHg (p<0,0001), redução de -26,6/-10,4 mmHg (valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg`). **Nota de procedência, já registrada em `outcomes` deste verbete**: é evidência observacional/retrospectiva, não ensaio randomizado controlado por placebo — não foi localizado ECR contemporâneo de minoxidil oral vs. placebo em hipertensão resistente verdadeira. O minoxidil nunca é usado em monoterapia (ver `notes.terapia_combinada_obrigatoria`), então a redução observada reflete o efeito de adicioná-lo a um regime já em uso, não o efeito isolado do fármaco."
+    "bp_evidence_source": "Mesmo estudo já citado em `outcomes.estudo_principal` deste registro (Mundt HM et al., J Clin Hypertens (Greenwich). 2016;18(11):1162-1167, PMID 27246772) — coorte retrospectiva de 54 pacientes internados com hipertensão não controlada: a adição de minoxidil reduziu a PA de 162,4±15,1/83,2±12,7 mmHg para 135,8±12,2/72,8±6,9 mmHg (p<0,0001), redução de -26,6/-10,4 mmHg (valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg`). **Nota de procedência, já registrada em `outcomes` deste verbete**: é evidência observacional/retrospectiva, não ensaio randomizado controlado por placebo — não foi localizado ECR contemporâneo de minoxidil oral vs. placebo em hipertensão resistente verdadeira. O minoxidil nunca é usado em monoterapia (ver `notes.terapia_combinada_obrigatoria`), então a redução observada reflete o efeito de adicioná-lo a um regime já em uso, não o efeito isolado do fármaco.",
+    "presentations": [
+      "Comprimido 2,5 mg e 10 mg, via oral (apresentação de referência internacional — Loniten® — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "**NÃO disponível comercialmente no Brasil, confirmado por múltiplas fontes concordantes.** A ANVISA não possui registro de minoxidil oral comprimido; o Loniten® (marca de referência internacional para hipertensão grave) \"não está disponível comercialmente no Brasil\", segundo reportagem da Agência Brasil/Rádio Agência Nacional e do Jornal da PUC-SP, que também registram que a ANVISA contraindica expressamente o uso de minoxidil ORAL para queda de cabelo (a via aprovada para esse uso é só a TÓPICA, formulação cosmética diferente, fora do escopo deste verbete de uso cardiovascular). O acesso ao minoxidil oral para hipertensão grave no Brasil se dá hoje por **manipulação em farmácia de manipulação, mediante receita médica controlada** (fonte: maxpharma.com.br, farmácia de manipulação). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA o status atual antes de orientar prescrição."
+    ]
   },
   {
     "slug": "vernakalanto",
@@ -7469,7 +7535,13 @@
     "duration_of_action_source": "EMA, SmPC BRINAVESS, seção 5.1; AVRO (Camm AJ et al., J Am Coll Cardiol. 2011;57(3):313-321, PMID 21232669) e ACT-I/ACT-III (PMID 18332267, 21029824), já citados em outcomes.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Vernakalanto não tem indicação anti-hipertensiva nem dado sistemático de efeito pressórico dose-dependente. Hipotensão consta como reação adversa comum (ver adverse_effects), tipicamente precoce e corrigível com medidas de suporte, mas sem quantificação de queda pressórica em mmHg na fonte consultada. VERIFICAÇÃO HUMANA NECESSÁRIA se for preciso um valor numérico. Fonte: EMA, SmPC BRINAVESS, seções 4.4 e 4.8."
+    "bp_evidence_source": "Vernakalanto não tem indicação anti-hipertensiva nem dado sistemático de efeito pressórico dose-dependente. Hipotensão consta como reação adversa comum (ver adverse_effects), tipicamente precoce e corrigível com medidas de suporte, mas sem quantificação de queda pressórica em mmHg na fonte consultada. VERIFICAÇÃO HUMANA NECESSÁRIA se for preciso um valor numérico. Fonte: EMA, SmPC BRINAVESS, seções 4.4 e 4.8.",
+    "presentations": [
+      "Pó liofilizado para solução injetável 20 mg/2 mL, para infusão intravenosa (apresentação de referência internacional, Brinavess® — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "NÃO disponível comercialmente no Brasil até o momento desta pesquisa. A cobertura jornalística da diretriz de Fibrilação Atrial da Sociedade Brasileira de Cardiologia apresentada no Congresso Brasileiro de Cardiologia (SBC 2025, resumida pelo Portal Afya) registra que \"brevemente, estará disponível para uso clínico o Vernakalant, medicamento injetável para reversão de quadros persistentes\" da arritmia — ou seja, a própria fonte médica brasileira mais recente localizada confirma que, até a data da diretriz (2025), o fármaco ainda não estava disponível no país. Internacionalmente comercializado como Brinavess® (aprovado na União Europeia em 2010). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA se houve aprovação/lançamento comercial desde então."
+    ]
   },
   {
     "slug": "ibutilida",
@@ -7536,7 +7608,13 @@
     "duration_of_action_source": "Bula FDA/DailyMed de CORVERT (ibutilide fumarate), seções WARNINGS e DOSAGE AND ADMINISTRATION — já citada no campo monitoring deste registro.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Hipotensão é reação adversa pouco frequente (2,0% vs. 1,6% placebo, ver adverse_effects), sem dado sistemático de redução pressórica dose-dependente na fonte consultada — ibutilida não tem ação vasoativa direta relevante, seu risco principal é proarrítmico (torsades de pointes), não hemodinâmico. Fonte: bula FDA/DailyMed de CORVERT, seção ADVERSE REACTIONS."
+    "bp_evidence_source": "Hipotensão é reação adversa pouco frequente (2,0% vs. 1,6% placebo, ver adverse_effects), sem dado sistemático de redução pressórica dose-dependente na fonte consultada — ibutilida não tem ação vasoativa direta relevante, seu risco principal é proarrítmico (torsades de pointes), não hemodinâmico. Fonte: bula FDA/DailyMed de CORVERT, seção ADVERSE REACTIONS.",
+    "presentations": [
+      "Solução injetável 0,1 mg/mL, frasco-ampola de 10 mL (1 mg/frasco), uso intravenoso hospitalar exclusivo (apresentação de referência internacional, Corvert® — ver nota de disponibilidade)"
+    ],
+    "commercial_presentations": [
+      "**NÃO disponível comercialmente no Brasil, confirmado por duas fontes concordantes.** O registro ANVISA do fumarato de ibutilida (marca Corvert®, Pharmacia Brasil Ltda., solução injetável 0,1 mg/mL em frasco-ampola de 10 mL) está **VENCIDO desde 01/06/2003** (fonte: smerp.com.br, base de dados de registros ANVISA, registro nº 123890059/1238900590012). Consistente com guia clínico brasileiro de cardioversão elétrica sincronizada (tadeclinicagem.com.br), que afirma textualmente: \"Antiarrítmicos como ibutilida, procainamida, flecainida e propafenona intravenosa seriam a primeira opção, mas não estão disponíveis no país\" — daí a cardioversão elétrica sob sedação ser a estratégia preferencial no Brasil na ausência destas opções farmacológicas. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA se houve renovação de registro desde então."
+    ]
   },
   {
     "slug": "lidocaina-cloridrato",
@@ -7650,7 +7728,13 @@
     "duration_of_action_source": "Connolly SJ et al. ANNEXA-4. N Engl J Med. 2019;380(14):1326-1335, PMID 30730782 (já citado em outcomes); revisão PMC6488727 de farmacocinética/farmacodinâmica.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Andexaneta alfa é reversor de anticoagulante, não agente vasoativo — hipotensão não consta entre as reações mais frequentes (as reações relacionadas à infusão descritas em notes são rubor, calor, tosse, disgeusia, dispneia). Sem dado sistemático de efeito pressórico em mmHg na fonte consultada."
+    "bp_evidence_source": "Andexaneta alfa é reversor de anticoagulante, não agente vasoativo — hipotensão não consta entre as reações mais frequentes (as reações relacionadas à infusão descritas em notes são rubor, calor, tosse, disgeusia, dispneia). Sem dado sistemático de efeito pressórico em mmHg na fonte consultada.",
+    "presentations": [
+      "Pó liofilizado para solução para infusão 200 mg por frasco-ampola (após reconstituição, 10 mg/mL), embalagem com múltiplos frascos conforme esquema de dose baixa ou alta, uso intravenoso hospitalar (bolus seguido de infusão contínua)"
+    ],
+    "commercial_presentations": [
+      "ONDEXXYA® (alfa-andexanete/andexaneta alfa), AstraZeneca do Brasil Ltda. — pó liofilizado 200 mg/frasco-ampola para reconstituição e infusão intravenosa (bolus a ~30 mg/min por 15-30 min, seguido de infusão contínua de 4-8 mg/min conforme dose baixa/alta). **Registro ANVISA nº 116180299, VÁLIDO até 01/09/2033**, confirmado pela própria página oficial da ANVISA (\"Ondexxya (alfa-andexanete): novo registro\", gov.br/anvisa) e pela base smerp.com.br de registros ANVISA — duas fontes concordantes, uma delas a fonte regulatória oficial. Indicado para reversão de anticoagulação por apixabana ou rivaroxabana em sangramento grave/risco de vida. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+    ]
   },
   {
     "slug": "acido-tranexamico",
