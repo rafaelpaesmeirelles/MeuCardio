@@ -80,7 +80,13 @@ class TestStatusEAtivacao:
         user, token = criar_usuario()
         resp = client.get("/api/email/conta", headers={"Authorization": f"Bearer {token}"})
         assert resp.status_code == 200
-        assert resp.json() == {"ativa": False, "assinatura_ativa": False}
+        # `modo_demonstracao` (issue #52, complemento "INVESTIDOR NO CORVIA
+        # MAIL") entrou no corpo desta rota — checagem por campo em vez de
+        # igualdade exata do dict, para não travar a cada campo novo.
+        corpo = resp.json()
+        assert corpo["ativa"] is False
+        assert corpo["assinatura_ativa"] is False
+        assert corpo["modo_demonstracao"] is False
 
     def test_ativar_sem_assinatura_devolve_409(self, client, criar_usuario):
         user, token = criar_usuario()
