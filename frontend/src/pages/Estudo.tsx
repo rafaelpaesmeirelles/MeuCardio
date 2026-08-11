@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Detalhe = {
   id: number; slug: string; title: string; study_type: string; journal: string; year: number;
@@ -64,6 +65,8 @@ export default function Estudo() {
       </div>
 
       <TudoSobreEsteTema tema={s.theme} excluirTipo="estudo" excluirSlug={slug} />
+
+      <GrafoRelacionados entityType="estudo" slug={slug} />
     </>
   );
 }

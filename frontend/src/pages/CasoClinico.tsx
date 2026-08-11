@@ -4,6 +4,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { api, ApiError } from "../lib/api";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Caso = {
   slug: string;
@@ -135,6 +136,8 @@ export default function CasoClinico() {
       </div>
 
       <TudoSobreEsteTema tema={caso.tema} excluirTipo="caso_clinico" excluirSlug={slug} />
+
+      <GrafoRelacionados entityType="caso_clinico" slug={slug} />
     </div>
   );
 }

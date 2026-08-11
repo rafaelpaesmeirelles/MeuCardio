@@ -6,6 +6,7 @@ import { Carregando, Erro } from "../components/Estado";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 /**
  * Página de calculadora única — usada pelas 32 calculadoras do catálogo
@@ -372,6 +373,8 @@ export default function Calculadora() {
       </div>
 
       <TudoSobreEsteTema tema={calc.theme} excluirTipo="calculadora" excluirSlug={slug} />
+
+      <GrafoRelacionados entityType="calculadora" slug={slug} />
     </div>
   );
 }

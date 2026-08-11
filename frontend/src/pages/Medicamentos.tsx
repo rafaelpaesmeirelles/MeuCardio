@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Item = {
   slug: string;
@@ -204,6 +205,8 @@ function ResumoFarmaco({ drug }: { drug: Insight }) {
        * frente de Farmacologia inteira entra no cruzamento sob o tema
        * "Farmacologia", junto dos documentos/evidências/estudos desse tema. */}
       <TudoSobreEsteTema tema="Farmacologia" excluirTipo="medicamento" excluirSlug={drug.slug} />
+
+      <GrafoRelacionados entityType="medicamento" slug={drug.slug} />
     </article>
   );
 }

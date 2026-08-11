@@ -4,6 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Detalhe = {
   id: number; slug: string; name: string; category: string; theme: string;
@@ -76,6 +77,8 @@ export default function Exame() {
       )}
 
       <TudoSobreEsteTema tema={t.theme} excluirTipo="exame" excluirSlug={slug} />
+
+      <GrafoRelacionados entityType="exame" slug={slug} />
     </>
   );
 }

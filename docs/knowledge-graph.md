@@ -179,16 +179,15 @@ editorial futura, alimentando o mesmo catálogo de tipos já pronto.
 
 ## 9. Deliberadamente fora do escopo desta fase
 
-- **Frontend "Relacionados" dedicado ao grafo — parcialmente feito.**
-  `frontend/src/components/GrafoRelacionados.tsx` já existe e consome
-  `GET /api/grafo/relacionados`, instalado em `Documento.tsx` e
-  `Evidencia.tsx`, coexistindo com (não substituindo) o painel
-  `TudoSobreEsteTema` já em produção. **Fora desta rodada**: instalar o
-  componente nas demais páginas de detalhe (Estudo, Exame, Calculadora,
-  CasoClinico, ImagemGaleria, Medicamentos — mesmas 6 que já usam
-  `TudoSobreEsteTema` e ainda não usam `GrafoRelacionados`). Ampliar essa
-  cobertura é aditivo e de baixo risco (mesmo componente, só mais pontos de
-  instalação) — não é requisito de segurança/correção do RC.
+- **Frontend "Relacionados" dedicado ao grafo — feito nas 8 páginas de
+  detalhe.** `frontend/src/components/GrafoRelacionados.tsx` consome
+  `GET /api/grafo/relacionados`, instalado em `Documento.tsx`,
+  `Evidencia.tsx`, `Estudo.tsx`, `Exame.tsx`, `Calculadora.tsx`,
+  `CasoClinico.tsx`, `ImagemGaleria.tsx` e `Medicamentos.tsx` (as 8 páginas
+  que já usam `TudoSobreEsteTema`), sempre coexistindo com o painel de tema
+  já em produção. Verificado com `tsc --noEmit`, `npm run build` e os 4
+  checks de CI do frontend, de forma independente (não só pelo relato de
+  quem instalou).
 - **Retrieval por subgrafo para a IA** (issue #52, §32) — a API de leitura
   já existe e pode ser chamada pelo mesmo serviço de RAG; a integração em
   si (trocar/complementar a busca textual do assistente por uma consulta ao
