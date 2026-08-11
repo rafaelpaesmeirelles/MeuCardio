@@ -1,0 +1,70 @@
+"""access_grants — entitlement administrativo unificado (issue #52)
+
+Substitui o acoplamento frágil em que `User.convidado` só concedia acesso de
+verdade quando o usuário visitava a tela de Assinatura e disparava
+`criar_checkout()` — o gate central `assinante_ativo()` nunca olhava esse
+campo diretamente, então um convidado marcado pelo admin que nunca clicasse
+em "Assinar" continuava sendo barrado com "assinatura necessária". Ver
+`app/models/access_grant.py` e `app/services/entitlement.py`.
+
+Índice parcial (um grant ATIVO por usuário) segue o mesmo padrão já usado em
+`subscriptions` (`uq_assinatura_meucardio_por_usuario`) — permite reconceder
+depois de revogar, sem acumular linhas ativas conflitantes.
+
+Idempotente: confere existência da tabela antes de criar, mesmo padrão já
+estabelecido nas migrações deste projeto (ex. `5a786cb55611`).
+
+Revision ID: bd91c24fa1c9
+Revises: 72abcfc8df81
+Create Date: 2026-08-11 00:00:00.000000
+"""
+from alembic import op
+import sqlalchemy as sa
+
+revision = 'bd91c24fa1c9'
+down_revision = '72abcfc8df81'
+branch_labels = None
+depends_on = None
+
+
+def upgrade() -> None:
+    inspetor = sa.inspect(op.get_bind())
+    if "access_grants" in inspetor.get_table_names():
+        return
+
+    op.create_table(
+        "access_grants",
+        sa.Column("id", sa.Integer(), primary_key=True),
+        sa.Column("user_id", sa.Integer(), sa.ForeignKey("users.id"), nullable=False),
+        sa.Column("tipo", sa.String(length=40), nullable=False),
+        sa.Column("plano", sa.String(length=20), nullable=False),
+        sa.Column("ativo", sa.Boolean(), nullable=False, server_default=sa.true()),
+        sa.Column("concedido_por_user_id", sa.Integer(), sa.ForeignKey("users.id"), nullable=False),
+        sa.Column(
+            "concedido_em", sa.DateTime(timezone=True), nullable=False,
+            server_default=sa.text("now()"),
+        ),
+        sa.Column("expira_em", sa.DateTime(timezone=True), nullable=True),
+        sa.Column("revogado_em", sa.DateTime(timezone=True), nullable=True),
+        sa.Column("revogado_por_user_id", sa.Integer(), sa.ForeignKey("users.id"), nullable=True),
+        sa.Column("nota", sa.Text(), nullable=True),
+    )
+    op.create_index("ix_access_grants_user_id", "access_grants", ["user_id"])
+    op.create_index("ix_access_grants_ativo", "access_grants", ["ativo"])
+    op.create_index(
+        "uq_access_grant_ativo_por_usuario",
+        "access_grants",
+        ["user_id"],
+        unique=True,
+        postgresql_where=sa.text("ativo = true"),
+    )
+
+
+def downgrade() -> None:
+    inspetor = sa.inspect(op.get_bind())
+    if "access_grants" not in inspetor.get_table_names():
+        return
+    op.drop_index("uq_access_grant_ativo_por_usuario", table_name="access_grants")
+    op.drop_index("ix_access_grants_ativo", table_name="access_grants")
+    op.drop_index("ix_access_grants_user_id", table_name="access_grants")
+    op.drop_table("access_grants")
