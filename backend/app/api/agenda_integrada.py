@@ -18,6 +18,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
+from app.services.entitlement import MENSAGEM_MODO_INVESTIDOR
 from app.models.agenda import (
     AppointmentCommunication,
     AppointmentResource,
@@ -1228,6 +1229,12 @@ def start_external_account(
     user: User = Depends(current_user),
 ):
     provider = "google_calendar" if provider_slug == "google" else "microsoft_365"
+    # Investidor (issue #52, "INVESTIDOR NO CORVIA MAIL"): pode conectar
+    # Google/Microsoft para AGENDA normalmente — a restrição é só sobre
+    # e-mail real. Bloqueado apenas quando o pedido inclui `mail=True`,
+    # nunca a conexão inteira.
+    if mail and getattr(user, "investidor", False):
+        raise HTTPException(status_code=403, detail=MENSAGEM_MODO_INVESTIDOR)
     if not consent_accepted:
         raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário, Contatos e, quando solicitado, E-mail.")
     if calendar_write and not settings.agenda_external_writes_enabled:
@@ -1291,6 +1298,8 @@ def microsoft_oauth_callback(
 
 @router.post("/integrations/apple", status_code=201)
 def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    if data.mail and getattr(user, "investidor", False):
+        raise HTTPException(status_code=403, detail=MENSAGEM_MODO_INVESTIDOR)
     if not data.consent_accepted:
         raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário e Contatos.")
     if data.mail and not data.mail_consent_accepted:

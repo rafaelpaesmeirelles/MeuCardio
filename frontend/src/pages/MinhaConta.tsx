@@ -15,6 +15,9 @@ type StatusAssinatura = {
   status: string;
   current_period_end: string | null;
   plano: string | null;
+  // Acesso concedido por convidado/investidor, sem pagamento (issue #52) —
+  // só decide o texto exibido aqui, nunca é usado como gate de acesso.
+  acesso_administrativo?: boolean;
 };
 
 const PRECO_POR_PLANO: Record<string, string> = {
@@ -997,7 +1000,12 @@ function Assinatura() {
       ) : (
         <>
           <p>
-            Status atual: <strong>{status ? ROTULOS[status.status] ?? status.status : "—"}</strong>
+            Status atual:{" "}
+            <strong>
+              {status?.acesso_administrativo
+                ? "Acesso administrativo"
+                : status ? ROTULOS[status.status] ?? status.status : "—"}
+            </strong>
           </p>
           {status?.current_period_end && (
             <p style={{ fontSize: "0.86rem", opacity: 0.8 }}>
@@ -1007,15 +1015,19 @@ function Assinatura() {
           )}
 
 
-          <p>
-            <strong>
-              {status?.plano ? PRECO_POR_PLANO[status.plano] ?? PRECO_POR_PLANO.basico : PRECO_POR_PLANO.basico}
-            </strong>
-          </p>
+          {status?.acesso_administrativo ? (
+            <p style={{ color: "var(--sucesso)" }}>Acesso concedido administrativamente — sem cobrança.</p>
+          ) : (
+            <p>
+              <strong>
+                {status?.plano ? PRECO_POR_PLANO[status.plano] ?? PRECO_POR_PLANO.basico : PRECO_POR_PLANO.basico}
+              </strong>
+            </p>
+          )}
 
           {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
 
-          {!ativa && (
+          {!ativa && !status?.acesso_administrativo && (
             <button className="botao" style={{ marginTop: "0.8rem" }}
                     onClick={() => ir("/billing/checkout", "checkout_url")} disabled={processando}>
               {processando ? "Redirecionando…" : "Assinar agora"}

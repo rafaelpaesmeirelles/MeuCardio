@@ -15,6 +15,11 @@ type StatusEmail = {
 type ContaEmail = {
   ativa: boolean; email_address?: string;
   lgpd_aceite_versao?: string | null; lgpd_versao_atual?: string;
+  // Issue #52, complemento "INVESTIDOR NO CORVIA MAIL" — quando true, a
+  // caixa é 100% sintética (nunca existe `EmailAccount` real, nunca há
+  // sessão de mailbox pra logar) e a tela pula direto pra
+  // `/caixa-de-email`, que renderiza o modo demonstração sozinha.
+  modo_demonstracao?: boolean;
 };
 type TermoLgpd = { versao: string; texto: string };
 type SugestaoEndereco = { local_part: string; dominio: string; editavel: boolean };
@@ -82,6 +87,7 @@ function EscolhaDeEndereco({ valor, onChange, onValidadeMudou }: {
 /** Aba de assinatura — só faz sentido pra quem já está logado na conta
  * Corvia (decisão do Rafael: CorvIA Mail exige conta Corvia aprovada). */
 function AbaAssinar() {
+  const { usuario } = useAuth();
   const [status, setStatus] = useState<StatusEmail | null>(null);
   const [contaEmail, setContaEmail] = useState<ContaEmail | null>(null);
   const [termo, setTermo] = useState<TermoLgpd | null>(null);
@@ -198,7 +204,11 @@ function AbaAssinar() {
 
       {status?.incluido_no_plano ? (
         <p style={{ color: "var(--sucesso)" }}>
-          Incluído no seu plano <strong>Assinatura Completa</strong> — nenhuma cobrança adicional.
+          {usuario?.convidado ? (
+            <>Acesso completo e gratuito como <strong>médico convidado</strong> — nenhuma cobrança.</>
+          ) : (
+            <>Incluído no seu plano <strong>Assinatura Completa</strong> — nenhuma cobrança adicional.</>
+          )}
         </p>
       ) : (
         <p>
@@ -393,7 +403,11 @@ export default function CorviaMail() {
     api.get<ContaEmail>("/email/conta")
       .then((c) => {
         setContaAtiva(c.ativa);
-        if (c.ativa && tokenEmail.get()) {
+        if (c.modo_demonstracao) {
+          // Investidor: nunca há credencial de mailbox pra logar — pula
+          // reto pro modo demonstração, sem passar por "Entrar".
+          navigate("/caixa-de-email", { replace: true });
+        } else if (c.ativa && tokenEmail.get()) {
           navigate("/caixa-de-email", { replace: true });
         } else if (!c.ativa) {
           setAba("assinar");
@@ -404,6 +418,7 @@ export default function CorviaMail() {
   }, [usuario]);
 
   if (carregando || (usuario && contaAtiva === null)) return <p className="eyebrow">Carregando…</p>;
+  if (usuario?.investidor) return <p className="eyebrow">Abrindo o modo demonstração…</p>;
   if (usuario && contaAtiva && tokenEmail.get()) return <p className="eyebrow">Abrindo sua caixa…</p>;
 
   if (!usuario) {

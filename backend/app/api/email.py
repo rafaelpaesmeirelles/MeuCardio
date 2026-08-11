@@ -63,8 +63,19 @@ from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
 from app.services.apple_mail import AppleMailError
 from app.services.yahoo_mail import YahooMailError
+from app.services import investidor_mail_demo
+from app.services.entitlement import bloquear_investidor_em_operacao_real_de_mail
 
 router = APIRouter(prefix="/api/email", tags=["caixa de e-mail"])
+
+
+def _exigir_investidor(user: User = Depends(current_user)) -> User:
+    """Guarda das rotas de demonstração — só investidor tem propósito nelas;
+    qualquer outro usuário recebe 403 em vez de dado sintético sem sentido
+    para a própria conta."""
+    if not getattr(user, "investidor", False):
+        raise HTTPException(status_code=403, detail="Rota exclusiva do modo demonstração do investidor.")
+    return user
 
 
 def _exigir_configurado():
@@ -146,15 +157,48 @@ def _provider_curto(provider: str) -> str:
 
 @router.get("/conta")
 def minha_conta(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    # Investidor (issue #52, "INVESTIDOR NO CORVIA MAIL"): nunca tem caixa
+    # real — nem chega a consultar `EmailAccount`. `modo_demonstracao` é o
+    # sinal que o frontend usa para desviar para /demo/* em vez do fluxo
+    # normal de /entrar.
+    if getattr(user, "investidor", False):
+        return {
+            "ativa": True,
+            "email_address": investidor_mail_demo.EMAIL_DEMO,
+            "status": "demo",
+            "senha_definida": True,
+            "lgpd_aceite_versao": None,
+            "lgpd_versao_atual": termo_lgpd_email.VERSAO,
+            "modo_demonstracao": True,
+        }
     conta = _obter_conta(db, user)
     if not conta:
-        return {"ativa": False, "assinatura_ativa": assinatura_email_ativa(db, user)}
+        return {"ativa": False, "assinatura_ativa": assinatura_email_ativa(db, user), "modo_demonstracao": False}
     return {
         "ativa": True, "email_address": conta.email_address, "status": conta.status,
         "senha_definida": conta.password_hash is not None,
         "lgpd_aceite_versao": conta.lgpd_aceite_versao,
         "lgpd_versao_atual": termo_lgpd_email.VERSAO,
+        "modo_demonstracao": False,
     }
+
+
+@router.get("/demo/pastas")
+def pastas_demo_route(_: User = Depends(_exigir_investidor)):
+    return investidor_mail_demo.pastas_demo()
+
+
+@router.get("/demo/mensagens")
+def mensagens_demo_route(_: User = Depends(_exigir_investidor)):
+    return investidor_mail_demo.mensagens_demo()
+
+
+@router.get("/demo/mensagens/{message_id}")
+def mensagem_demo_route(message_id: str, _: User = Depends(_exigir_investidor)):
+    mensagem = investidor_mail_demo.mensagem_demo(message_id)
+    if mensagem is None:
+        raise HTTPException(status_code=404, detail="Mensagem de demonstração não encontrada.")
+    return mensagem
 
 
 class AssinaturaEmailIn(BaseModel):
@@ -229,7 +273,20 @@ def resumo_da_caixa(db: Session = Depends(get_db), user: User = Depends(current_
     — este resumo roda dentro da sessão comum da Corvia (`current_user`), de
     propósito, então precisa da própria varredura das integrações, no mesmo
     padrão de `mensagens_todas`: cada fonte que falhar não derruba as demais.
+
+    🔴 Achado da revisão adversarial (issue #52): investidor nunca deve
+    chegar aqui — mas antes desta guarda, um usuário marcado `convidado=True`
+    **e** `investidor=True` ao mesmo tempo (nada impede o admin de marcar os
+    dois; são toggles independentes) via `convidado` uma caixa nativa real
+    (permitido) e depois via `investidor` este resumo consultava o Mail360 de
+    verdade — vazando remetente/assunto/horário reais para uma conta que
+    deveria estar só em modo demonstração. `GET /email/conta` já checava
+    `investidor` primeiro; esta rota, que também lê e-mail real, tinha
+    ficado de fora da varredura. Mesma regra do resto do arquivo: investidor
+    nunca vê dado real, mesmo quando também é convidado.
     """
+    if getattr(user, "investidor", False):
+        return {"disponivel": False, "email_address": None, "pendentes": []}
     conta = _obter_conta(db, user)
     if not conta or not assinatura_email_ativa(db, user):
         return {"disponivel": False, "email_address": None, "pendentes": []}
@@ -344,7 +401,8 @@ class AtivarConta(BaseModel):
 @router.post("/conta", status_code=201)
 def ativar_conta(
     dados: AtivarConta, background_tasks: BackgroundTasks,
-    db: Session = Depends(get_db), user: User = Depends(current_user),
+    db: Session = Depends(get_db),
+    user: User = Depends(bloquear_investidor_em_operacao_real_de_mail),
 ):
     """Provisiona a caixa e define a senha própria da "sessão email" — as
     duas coisas juntas, porque uma caixa sem senha não serve pra nada (não
@@ -505,7 +563,8 @@ class YahooMailIntegrationIn(BaseModel):
 
 @router.post("/conectar-yahoo", status_code=201)
 def conectar_yahoo(
-    dados: YahooMailIntegrationIn, db: Session = Depends(get_db), user: User = Depends(current_user),
+    dados: YahooMailIntegrationIn, db: Session = Depends(get_db),
+    user: User = Depends(bloquear_investidor_em_operacao_real_de_mail),
 ):
     """Conecta uma conta Yahoo Mail via IMAP/SMTP com senha de aplicativo —
     aparece depois em GET /contas e nas rotas /externas/{id}/... como

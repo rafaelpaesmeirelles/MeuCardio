@@ -11,6 +11,7 @@ type Usuario = {
   workplace_role: string | null; workplace_notes: string | null;
   include_workplace_on_documents: boolean; role: string; status: string; is_active: boolean;
   rejection_note: string | null; created_at: string; convidado: boolean;
+  investidor: boolean;
 };
 
 type PreAutorizacaoConvidado = {
@@ -334,6 +335,18 @@ export default function Admin() {
     }
   }
 
+  // Investidor (issue #52) — acesso de AVALIAÇÃO, distinto do convidado
+  // (acesso completo gratuito, inclusive CorvIA Mail real). Rótulos abaixo
+  // deixam essa diferença explícita para quem concede o acesso pelo painel.
+  async function alternarInvestidor(u: Usuario) {
+    try {
+      await api.patch(`/admin/users/${u.id}/investidor?investidor=${!u.investidor}`, {});
+      recarregar();
+    } catch (e) {
+      setErro(e instanceof Error ? e.message : "Não foi possível alterar o status de investidor.");
+    }
+  }
+
   const senhaFraca = novo.password.length > 0 && novo.password.length < 8;
   const podeCriar = novo.email && novo.full_name && novo.password.length >= 8 && !enviando;
 
@@ -504,7 +517,16 @@ export default function Admin() {
                 <div style={{ flex: 1 }}>
                   <strong>{u.full_name}</strong>{" "}
                   <span className="eyebrow">{PERFIS.find((p) => p.valor === u.role)?.rotulo}</span>
-                  {u.convidado && <span className="selo selo--revisado" style={{ marginLeft: 6 }}>convidado</span>}
+                  {u.convidado && (
+                    <span className="selo selo--revisado" style={{ marginLeft: 6 }} title="Acesso completo gratuito, inclusive CorvIA Mail real">
+                      convidado — acesso completo gratuito
+                    </span>
+                  )}
+                  {u.investidor && (
+                    <span className="selo selo--pendente" style={{ marginLeft: 6 }} title="Acesso de avaliação — CorvIA Mail em modo demonstração, sem envio/recebimento real">
+                      investidor — acesso de avaliação
+                    </span>
+                  )}
                   <div style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
                     {u.email}
                     {u.council_name && ` · ${u.council_name} ${u.council_number}/${u.council_state}`}
@@ -523,8 +545,13 @@ export default function Admin() {
                   <>
                     <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
                             onClick={() => alternarConvidado(u)}
-                            title="Acesso cortesia completo: assinatura liberada sem cobrança e KYC aprovado automaticamente.">
+                            title="Acesso completo e gratuito — inclusive CorvIA Mail real (enviar, receber, provisionar caixa).">
                       {u.convidado ? "Remover convidado" : "Marcar convidado"}
+                    </button>
+                    <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
+                            onClick={() => alternarInvestidor(u)}
+                            title="Acesso de avaliação — CorvIA Mail só em modo demonstração, sem enviar/receber e-mail real.">
+                      {u.investidor ? "Remover investidor" : "Marcar investidor"}
                     </button>
                     <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
                             onClick={() => alternar(u)}>

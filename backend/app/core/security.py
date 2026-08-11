@@ -240,25 +240,18 @@ ACESSO_LIBERADO = {"ativo", "teste", "inadimplente"}
 
 
 def assinante_ativo(user=Depends(current_user), db: Session = Depends(get_db)):
-    """Exige assinatura vigente. Aplicada por router em app/main.py — os únicos
-    de acesso livre são health, auth, password_reset, billing e admin."""
-    from app.models.subscription import Subscription
+    """Exige acesso vigente ao produto. Aplicada por router em app/main.py —
+    os únicos de acesso livre são health, auth, password_reset, billing e
+    admin.
 
-    if user.role == "admin":
-        return user
+    A decisão em si mora em `app/services/entitlement.py::tem_acesso_ao_produto`
+    — admin, assinatura paga (`kind='meucardio'`, filtrar por `kind` é o que
+    impede uma assinatura de curso parceiro de valer como assinatura da
+    plataforma), convidado ou investidor administrativo. Não reimplemente a
+    regra aqui; esta função só traduz o veredito em HTTP 402."""
+    from app.services.entitlement import tem_acesso_ao_produto
 
-    # Filtrar por `kind` é o que impede uma assinatura de curso parceiro de
-    # valer como assinatura da plataforma. Sem isso, quem assinasse só um curso
-    # (que é venda de terceiro, com repasse) entraria em toda a biblioteca de
-    # graça — e quem tivesse a assinatura da plataforma cancelada mas um curso
-    # ativo continuaria com acesso, sem que nada acusasse erro.
-    sub = (
-        db.query(Subscription)
-        .filter(Subscription.user_id == user.id, Subscription.kind == "meucardio")
-        .order_by(Subscription.id)
-        .first()
-    )
-    if sub is None or sub.status not in ACESSO_LIBERADO:
+    if not tem_acesso_ao_produto(db, user):
         raise HTTPException(
             status_code=402,
             detail="Assinatura necessária para acessar este conteúdo.",
@@ -283,8 +276,19 @@ def assinatura_email_ativa(db: Session, user) -> bool:
     avulso de sempre (kind='email'), ou o plano da plataforma que já inclui
     CorvIA Mail (kind='meucardio', plano='completo') — sem essa segunda
     checagem, quem pagasse o plano completo continuaria vendo a caixa como não
-    assinada."""
+    assinada.
+
+    Convidado (issue #52, "REGRA DEFINITIVA DE ACESSO PARA CONVIDADO"): CorvIA
+    Mail REAL e completo, sem depender de checkout — mesmo princípio de
+    `tem_acesso_ao_produto()` (app/services/entitlement.py), replicado aqui
+    porque este é um gate de add-on separado do gate geral do produto.
+    Investidor NUNCA entra aqui — tem só o modo demonstração (dado sintético,
+    sem caixa real), ver `app/services/entitlement.py::
+    bloquear_investidor_em_operacao_real_de_mail` e
+    `app/services/investidor_mail_demo.py`."""
     if user.role == "admin":
+        return True
+    if getattr(user, "convidado", False):
         return True
 
     from app.models.subscription import PLANO_COMPLETO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
@@ -346,4 +350,16 @@ def current_email_account(
     titular = db.get(User, conta.user_id)
     if titular is None or not titular.is_active:
         raise credentials_error
+    # Defesa em profundidade (issue #52, "INVESTIDOR NO CORVIA MAIL"): o
+    # provisionamento normal (`POST /email/conta`) já é bloqueado para
+    # investidor, então esta caixa não deveria existir para ele — mas se um
+    # admin conceder `investidor=True` a um usuário que JÁ tinha caixa real
+    # (ex.: revogar convidado e conceder investidor à mesma conta), a
+    # sessão da caixa não pode continuar válida. Backend é a fonte de
+    # verdade, não só o bloqueio no momento de provisionar.
+    if getattr(titular, "investidor", False):
+        raise HTTPException(
+            status_code=403,
+            detail="Recurso indisponível no modo investidor.",
+        )
     return conta

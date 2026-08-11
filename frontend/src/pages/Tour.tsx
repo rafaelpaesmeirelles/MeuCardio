@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import GrafoConstelacao from "../components/GrafoConstelacao";
 import Icone, { type NomeIcone } from "../components/Icone";
@@ -550,7 +550,29 @@ export default function Tour() {
   const [passo, setPasso] = useState(0);
   const [concluindo, setConcluindo] = useState(false);
 
-  const slides = slidesDoModo(modo);
+  // Diferenciação contextual de convidado/investidor (issue #52, complemento
+  // "TOUR OBRIGATÓRIO") — mesmo motor de tour, mesmos slides; só o slide de
+  // CorvIA Mail ganha um bloco a mais para o investidor, explicando o modo
+  // demonstração. Nunca um segundo sistema de onboarding.
+  const slides = useMemo(() => {
+    const base = slidesDoModo(modo);
+    if (!usuario?.investidor) return base;
+    return base.map((s) =>
+      s.id === "mail"
+        ? {
+            ...s,
+            blocos: [
+              ...s.blocos,
+              {
+                rotulo: "Modo investidor",
+                texto:
+                  "Sua conta está em modo demonstração no CorvIA Mail: você navega a interface com mensagens fictícias, mas não envia nem recebe e-mail real, não conecta conta externa e não sincroniza nada — é só para conhecer a experiência.",
+              },
+            ],
+          }
+        : s,
+    );
+  }, [modo, usuario?.investidor]);
   const total = slides.length + 2; // boas-vindas + funcionalidades + final
   const ehBoasVindas = passo === 0;
   const ehFinal = passo === total - 1;
@@ -660,6 +682,19 @@ export default function Tour() {
               <p className="tour-boasvindas__eyebrow">Ecossistema Corvia</p>
               <AvatarBoasVindas fotoUrl={usuario?.instagram_photo_url} nome={usuario?.full_name} />
               <h1>Bem-vindo ao Ecossistema Corvia, {usuario?.full_name?.split(" ")[0]}.</h1>
+              {usuario?.convidado && (
+                <p className="tour__resumo" style={{ fontWeight: 600 }}>
+                  Você tem acesso completo e gratuito à Corvia como médico convidado — inclusive
+                  o CorvIA Mail real. Use como parte da sua rotina clínica, sem restrição.
+                </p>
+              )}
+              {usuario?.investidor && (
+                <p className="tour__resumo" style={{ fontWeight: 600 }}>
+                  Você está conhecendo a Corvia como investidor — este passeio mostra a arquitetura
+                  e a proposta de valor do produto. O CorvIA Mail entra em modo demonstração, sem
+                  envio ou recebimento real de e-mail.
+                </p>
+              )}
               <p className="tour__resumo">
                 {modo === "quick"
                   ? "Cinco telas, menos de dois minutos — o suficiente para começar a usar. Você pode pular a qualquer momento e ver o tour completo depois."

@@ -85,6 +85,18 @@ class User(Base):
     # próprio usuário.
     convidado: Mapped[bool] = mapped_column(Boolean, default=False)
 
+    # Investidor — acesso cortesia de demonstração (issue #52, frente de
+    # entitlement). Mesmo espírito do `convidado` acima, mas identidade
+    # distinta de propósito: não é um médico real passando pelo fluxo de
+    # KYC/cadastro profissional, é uma conta de avaliação do produto.
+    # `tem_acesso_ao_produto()` (app/services/entitlement.py) trata os dois
+    # como fontes de acesso administrativo equivalentes, mas o KYC nunca é
+    # exigido de investidor (`_kyc_required`), e a tela de Assinatura
+    # distingue a origem só para efeito de texto exibido. Ligado só por
+    # admin, via `PATCH /api/admin/users/{id}/investidor` — nunca pelo
+    # próprio usuário. Migração 66717ca01f2d.
+    investidor: Mapped[bool] = mapped_column(Boolean, default=False)
+
     # Plano que o convidado deve receber ao assinar, quando o cadastro veio
     # de uma pré-autorização (08/08/2026, pedido do Rafael — admin escolhe
     # por linha se aquele convidado tem CorvIA Mail ou não). None significa

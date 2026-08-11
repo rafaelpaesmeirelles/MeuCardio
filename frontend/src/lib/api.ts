@@ -304,4 +304,9 @@ export type Usuario = {
   assinatura_metodo_preferido: string | null;
   kyc_required: boolean;
   onboarding_pendente: boolean;
+  // Issue #52 — só para contexto de UX (rótulo, mensagem do tour, banner de
+  // modo demonstração no CorvIA Mail). Nunca usar como gate de acesso no
+  // frontend: a decisão real é sempre do backend.
+  convidado: boolean;
+  investidor: boolean;
 };

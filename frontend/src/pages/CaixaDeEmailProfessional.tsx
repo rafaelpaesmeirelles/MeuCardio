@@ -4,6 +4,7 @@ import LogoCorviaMail from "../components/LogoCorviaMail";
 import LogoProvedor from "../components/LogoProvedor";
 import { Carregando, Vazio } from "../components/Estado";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
+import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { CHAVE_PENDING_COMPOSE } from "../components/OfertaEnvioEmailPaciente";
 import "../styles/corvia-mail-professional.css";
@@ -62,6 +63,152 @@ function CorpoMensagem({ mensagem }: { mensagem: Mensagem }) {
   if (!conteudo) return <Vazio titulo="Mensagem sem conteúdo disponível" />;
   if (!/<\s*(?:!doctype|html|body|div|p|span|table|br|a|ul|ol|li)\b/i.test(conteudo)) return <div className="cmp-reader__text">{conteudo}</div>;
   return <><div className="cmp-privacy"><span>Imagens externas {permitirImagens ? "liberadas" : "bloqueadas"}.</span><button onClick={() => setPermitirImagens((v) => !v)}>{permitirImagens ? "Bloquear" : "Carregar imagens"}</button></div><iframe className="cmp-reader__html" sandbox="allow-popups allow-popups-to-escape-sandbox" srcDoc={documentoSeguro(conteudo, permitirImagens)} title={`Conteúdo do e-mail: ${mensagem.subject ?? "sem assunto"}`} /></>;
+}
+
+// --------------------------------------------------------------------------
+// Modo demonstração do investidor (issue #52, complemento "INVESTIDOR NO
+// CORVIA MAIL") — navega a MESMA interface visual, com dado 100% sintético
+// (`GET /email/demo/*`, current_user — nunca a sessão de mailbox própria,
+// que o investidor nunca chega a ter). Toda ação real (enviar, responder,
+// encaminhar, sincronizar, conectar conta) fica desabilitada aqui; o
+// backend também recusa cada uma com 403 (`app/services/entitlement.py::
+// bloquear_investidor_em_operacao_real_de_mail`) — este componente nunca é
+// a única barreira, só evita que o médico clique num botão morto sem
+// explicação.
+type MensagemDemo = { messageId: string; subject: string; fromAddress: string; summary: string; receivedTime: string; status: string; content?: string };
+type PastaDemo = { folderId: string; folderName: string; folderType: string };
+
+function ModoDemonstracaoInvestidor() {
+  const navigate = useNavigate();
+  const { usuario } = useAuth();
+  const [pastas, setPastas] = useState<PastaDemo[]>([]);
+  const [mensagens, setMensagens] = useState<MensagemDemo[]>([]);
+  const [aberta, setAberta] = useState<MensagemDemo | null>(null);
+  const [carregando, setCarregando] = useState(true);
+  const [compondo, setCompondo] = useState(false);
+
+  useEffect(() => {
+    Promise.all([
+      api.get<PastaDemo[]>("/email/demo/pastas"),
+      api.get<MensagemDemo[]>("/email/demo/mensagens"),
+    ])
+      .then(([p, m]) => { setPastas(p); setMensagens(m); })
+      .finally(() => setCarregando(false));
+  }, []);
+
+  async function abrir(m: MensagemDemo) {
+    const completa = await api.get<MensagemDemo>(`/email/demo/mensagens/${m.messageId}`);
+    setAberta(completa);
+  }
+
+  return (
+    <main className="cmp-shell">
+      <header className="cmp-topbar">
+        <div className="cmp-brand">
+          <LogoCorviaMail tamanho="compacto" />
+          <span><strong>CorvIA Mail</strong><small>investidor.demo@corvia.med.br</small></span>
+        </div>
+        <div className="cmp-user">
+          <div><strong>{usuario?.full_name || "Investidor"}</strong><small>{usuario?.email}</small></div>
+          <button onClick={() => navigate("/corvia-mail")} title="Voltar">⏻</button>
+        </div>
+      </header>
+
+      <div className="cmp-alert cmp-alert--warn" role="status">
+        <span>
+          <strong>Modo demonstração — CorvIA Mail.</strong> As mensagens abaixo são fictícias, só
+          para conhecer a interface. Enviar, responder, encaminhar, conectar uma conta externa e
+          sincronizar não estão disponíveis neste modo.
+        </span>
+      </div>
+
+      <section className="cmp-workspace">
+        <aside className="cmp-sidebar">
+          <button
+            className="cmp-compose-primary"
+            onClick={() => setCompondo(true)}
+            title="Recurso indisponível no modo investidor."
+          >
+            <span>＋</span> Nova mensagem
+          </button>
+          <div className="cmp-sidebar__section">
+            <p>Correio</p>
+            {pastas.map((p) => (
+              <button key={p.folderId} className={p.folderType === "inbox" ? "is-active" : ""} disabled={p.folderType !== "inbox"}>
+                <span>{p.folderType === "inbox" ? "▣" : p.folderType === "sent" ? "↗" : "◇"}</span>{p.folderName}
+              </button>
+            ))}
+          </div>
+          <div className="cmp-sidebar__privacy">
+            <strong>Modo investidor</strong>
+            <span>Conta de avaliação — sem caixa real, sem envio ou recebimento de e-mail.</span>
+          </div>
+        </aside>
+
+        <section className="cmp-list">
+          <div className="cmp-list__header">
+            <div><p>Entrada (demonstração)</p><h2>{mensagens.length} mensagens</h2></div>
+          </div>
+          <div className="cmp-list__scroll">
+            {carregando ? (
+              <div className="cmp-state"><Carregando /></div>
+            ) : (
+              mensagens.map((m) => (
+                <article key={m.messageId} className={`cmp-message ${aberta?.messageId === m.messageId ? "is-active" : ""}`}>
+                  <button className="cmp-message__open" onClick={() => void abrir(m)}>
+                    <span className="cmp-avatar" style={{ background: corAvatar(m.fromAddress) }}>{iniciais(m.fromAddress)}</span>
+                    <span className="cmp-message__body">
+                      <span className="cmp-message__meta"><strong>{m.fromAddress}</strong></span>
+                      <b>{m.subject}</b>
+                      <small>{m.summary}</small>
+                    </span>
+                  </button>
+                </article>
+              ))
+            )}
+          </div>
+        </section>
+
+        <section className={`cmp-reader ${aberta ? "has-message" : ""}`}>
+          {!aberta ? (
+            <div className="cmp-reader__empty"><span>✉</span><h2>Selecione uma mensagem</h2><p>Conteúdo de demonstração — nenhuma mensagem aqui é real.</p></div>
+          ) : (
+            <>
+              <div className="cmp-reader__toolbar">
+                <button disabled title="Recurso indisponível no modo investidor.">↩ Responder</button>
+                <button disabled title="Recurso indisponível no modo investidor.">↩ Todos</button>
+                <button disabled title="Recurso indisponível no modo investidor.">↗ Encaminhar</button>
+              </div>
+              <header className="cmp-reader__header">
+                <h1>{aberta.subject}</h1>
+                <div className="cmp-reader__sender">
+                  <span className="cmp-avatar cmp-avatar--large" style={{ background: corAvatar(aberta.fromAddress) }}>{iniciais(aberta.fromAddress)}</span>
+                  <div><strong>{aberta.fromAddress}</strong><small>Para: investidor.demo@corvia.med.br</small></div>
+                </div>
+              </header>
+              <div className="cmp-reader__content"><CorpoMensagem mensagem={{ subject: aberta.subject, content: aberta.content }} /></div>
+            </>
+          )}
+        </section>
+      </section>
+
+      {compondo && (
+        <div className="cmp-compose-modal">
+          <button className="cmp-compose-modal__backdrop" aria-label="Fechar" onClick={() => setCompondo(false)} />
+          <section className="cmp-composer">
+            <header><div><small>NOVA MENSAGEM</small><h2>Escrever (demonstração)</h2></div><button onClick={() => setCompondo(false)}>×</button></header>
+            <div className="cmp-field"><label>Para</label><input placeholder="nome@exemplo.com" /></div>
+            <div className="cmp-field cmp-field--subject"><label>Assunto</label><input /></div>
+            <textarea className="cmp-compose-body" placeholder="Este é o modo demonstração — a mensagem não será enviada." />
+            <footer>
+              <button className="cmp-send" disabled title="Recurso indisponível no modo investidor.">Enviar</button>
+              <span>Modo demonstração — nenhum e-mail real é enviado.</span>
+            </footer>
+          </section>
+        </div>
+      )}
+    </main>
+  );
 }
 
 export default function CaixaDeEmailProfessional() {
@@ -174,6 +321,12 @@ export default function CaixaDeEmailProfessional() {
   }), [mensagens, busca, filtro]);
   const contaAtual = contas.find((c) => c.id === contaId); const pastaAtual = pastas.find((p) => idPasta(p) === pastaId);
 
+  // Investidor (issue #52): nunca tem sessão de mailbox real (nenhuma
+  // credencial jamais é emitida para ele — ver `POST /email/conta`,
+  // bloqueado no backend) — em vez de cair no redirecionamento de "sem
+  // sessão" abaixo, ele vê a interface em modo demonstração, sem precisar
+  // logar em lugar nenhum.
+  if (usuario?.investidor) return <ModoDemonstracaoInvestidor />;
   if (semSessao) return <Navigate to="/corvia-mail" replace />;
   if (!endereco) return <div className="cmp-loading"><LogoCorviaMail tamanho="compacto" /><Carregando /></div>;
 

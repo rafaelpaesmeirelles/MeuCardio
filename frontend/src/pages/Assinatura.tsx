@@ -6,6 +6,9 @@ type StatusAssinatura = {
   current_period_end: string | null;
   plano: string | null;
   periodicidade: string | null;
+  // Acesso concedido por convidado/investidor, sem pagamento (issue #52) —
+  // só decide o texto exibido aqui, nunca é usado como gate de acesso.
+  acesso_administrativo?: boolean;
 };
 
 type Periodicidade = "mensal" | "semestral" | "anual";
@@ -157,7 +160,11 @@ export default function Assinatura() {
 
           <div className="cartao" style={{ maxWidth: "560px", marginBottom: "1.5rem" }}>
             <p>
-              Status atual: <strong>{status ? ROTULOS[status.status] ?? status.status : "—"}</strong>
+              Status atual: <strong>
+                {status?.acesso_administrativo
+                  ? "Acesso administrativo"
+                  : status ? ROTULOS[status.status] ?? status.status : "—"}
+              </strong>
               {ativa && status?.plano && (
                 <>
                   {" "}
@@ -185,9 +192,12 @@ export default function Assinatura() {
             )}
 
             {ativa && <p style={{ color: "var(--sucesso)" }}>Sua assinatura está ativa.</p>}
+            {!ativa && status?.acesso_administrativo && (
+              <p style={{ color: "var(--sucesso)" }}>Acesso concedido administrativamente.</p>
+            )}
           </div>
 
-          {!ativa && (
+          {!ativa && !status?.acesso_administrativo && (
             <>
               <div className="grade" style={{ gridTemplateColumns: "repeat(3, auto)", display: "inline-grid", gap: "0.4rem", marginBottom: "1rem" }}>
                 {(["mensal", "semestral", "anual"] as Periodicidade[]).map((p) => (

@@ -331,6 +331,7 @@ def _dump_usuario(u) -> dict:
         "role": u.role, "status": u.status, "is_active": u.is_active,
         "rejection_note": u.rejection_note, "created_at": u.created_at,
         "convidado": u.convidado,
+        "investidor": u.investidor,
     }
 
 
@@ -443,12 +444,14 @@ def alternar_usuario(
 def alternar_convidado(
     user_id: int, convidado: bool, db: Session = Depends(get_db), admin=Depends(require_admin)
 ):
-    """Marca/desmarca uma conta como médico convidado (08/08/2026) — acesso
-    cortesia completo: `POST /billing/checkout` libera a assinatura sem
-    cobrar, e a submissão de KYC é aprovada automaticamente em vez de cair
-    na fila de revisão manual. Reversível a qualquer momento; desmarcar não
-    cancela retroativamente uma assinatura ou um KYC já liberados — só
-    impede que uma FUTURA chamada dessas rotas volte a usar o atalho."""
+    """Marca/desmarca uma conta como médico convidado (08/08/2026, issue #52
+    — entitlement reconhecido de imediato via `tem_acesso_ao_produto()`,
+    sem depender de checkout). A submissão de KYC continua sendo aprovada
+    automaticamente em vez de cair na fila de revisão manual. Reversível a
+    qualquer momento; desmarcar não cancela retroativamente um KYC já
+    liberado — só remove o acesso administrativo (a menos que o usuário
+    também tenha assinatura paga em dia, caso em que continua com acesso
+    por essa outra fonte, sem relação com este flag)."""
     from app.models.user import User
 
     alvo = db.get(User, user_id)
@@ -456,11 +459,36 @@ def alternar_convidado(
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
     alvo.convidado = convidado
     db.add(AuditLog(
-        user_id=admin.id, action="marcar_convidado" if convidado else "desmarcar_convidado",
+        user_id=admin.id, action="guest_access_granted" if convidado else "guest_access_revoked",
         entity="user", entity_id=str(alvo.id), detail={"email": alvo.email},
     ))
     db.commit()
     return {"id": alvo.id, "convidado": alvo.convidado}
+
+
+@router.patch("/users/{user_id}/investidor")
+def alternar_investidor(
+    user_id: int, investidor: bool, db: Session = Depends(get_db), admin=Depends(require_admin)
+):
+    """Marca/desmarca uma conta como investidor (issue #52) — acesso
+    cortesia de demonstração via `tem_acesso_ao_produto()`, sem checkout,
+    sem cobrança. Nunca eleva `role` (não vira admin), nunca exige KYC
+    (`_kyc_required` trata investidor como isento — ver app/api/auth.py).
+    Reversível a qualquer momento; desmarcar remove o acesso administrativo
+    a menos que o usuário também tenha assinatura paga em dia."""
+    from app.models.user import User
+
+    alvo = db.get(User, user_id)
+    if not alvo:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    alvo.investidor = investidor
+    db.add(AuditLog(
+        user_id=admin.id,
+        action="investor_access_granted" if investidor else "investor_access_revoked",
+        entity="user", entity_id=str(alvo.id), detail={"email": alvo.email},
+    ))
+    db.commit()
+    return {"id": alvo.id, "investidor": alvo.investidor}
 
 
 class NovaPreAutorizacaoConvidado(BaseModel):

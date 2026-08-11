@@ -61,47 +61,46 @@ def _cpf_mascarado(cpf: str | None) -> str | None:
 
 def _kyc_required(db: Session, user: User) -> bool:
     """Gate de KYC obrigatório (Trabalho 12, 06/08/2026) — só se aplica a
-    quem já paga a assinatura principal (`kind='meucardio'`, status em
-    `ACESSO_LIBERADO`). Calculado toda vez, nunca persistido: diferente de
-    `profile_completion_required`, o KYC pode mudar por ação de OUTRA
-    pessoa (o Rafael aprovando pela fila do admin), então um valor
-    guardado ficaria velho até o próximo `PATCH /me` do próprio médico."""
-    from app.core.security import ACESSO_LIBERADO
-    from app.models.subscription import Subscription
+    quem tem acesso ao produto (assinatura paga ou convidado; ver
+    `app/services/entitlement.py::tem_acesso_ao_produto`, a mesma decisão
+    usada por `assinante_ativo()`). Calculado toda vez, nunca persistido:
+    diferente de `profile_completion_required`, o KYC pode mudar por ação
+    de OUTRA pessoa (o Rafael aprovando pela fila do admin), então um valor
+    guardado ficaria velho até o próximo `PATCH /me` do próprio médico.
+
+    Investidor nunca precisa de KYC (issue #52) — não é um médico real
+    passando pelo fluxo de credencial profissional, é conta de avaliação
+    do produto; exigir documento/selfie dele não faz sentido nenhum."""
+    from app.services.entitlement import tem_acesso_ao_produto
     from app.services.kyc import verificacao as kyc_verificacao
 
     if user.role == "admin":
         return False
-    sub = (
-        db.query(Subscription)
-        .filter(Subscription.user_id == user.id, Subscription.kind == "meucardio")
-        .order_by(Subscription.id)
-        .first()
-    )
-    if sub is None or sub.status not in ACESSO_LIBERADO:
+    if user.investidor:
+        return False
+    if not tem_acesso_ao_produto(db, user):
         return False
     return not kyc_verificacao.liberado_para_uso(kyc_verificacao.obter(db, user))
 
 
 def _onboarding_pendente(db: Session, user: User) -> bool:
-    """Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026) — só depois
-    do KYC estar resolvido, para as duas telas nunca disputarem o mesmo
-    momento (o App.tsx checa perfil → KYC → tour, nessa ordem, mas calcular
-    já considerando isso aqui evita depender só da ordem do frontend)."""
+    """Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026; estendido
+    para convidado/investidor na issue #52) — só depois do KYC estar
+    resolvido, para as duas telas nunca disputarem o mesmo momento (o
+    App.tsx checa perfil → KYC → tour, nessa ordem, mas calcular já
+    considerando isso aqui evita depender só da ordem do frontend).
+
+    Antes desta função consultar `tem_acesso_ao_produto`, um convidado sem
+    `Subscription` nunca via `onboarding_pendente=true` — o tour obrigatório
+    simplesmente nunca aparecia para ele. Corrigido usando a mesma decisão
+    central de `assinante_ativo()`/`_kyc_required()`."""
     if _kyc_required(db, user):
         return False
     if user.role == "admin":
         return False
-    from app.core.security import ACESSO_LIBERADO
-    from app.models.subscription import Subscription
+    from app.services.entitlement import tem_acesso_ao_produto
 
-    sub = (
-        db.query(Subscription)
-        .filter(Subscription.user_id == user.id, Subscription.kind == "meucardio")
-        .order_by(Subscription.id)
-        .first()
-    )
-    if sub is None or sub.status not in ACESSO_LIBERADO:
+    if not tem_acesso_ao_produto(db, user):
         return False
     return not user.onboarding_visto
 
@@ -111,6 +110,12 @@ def _perfil(db: Session, user: User) -> dict:
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
         "role": user.role, "specialty": user.specialty,
+        # Só para o frontend contextualizar UX (ex.: texto do tour, aviso na
+        # tela de Assinatura) — nunca usar isto como gate de acesso no
+        # cliente; a decisão de acesso é sempre do backend
+        # (`tem_acesso_ao_produto`), consultada a cada requisição protegida.
+        "convidado": user.convidado,
+        "investidor": user.investidor,
         "council": f"{nome_conselho_exibicao} {user.council_number}/{estado_conselho_exibicao}"
                    if user.council_name else None,
         "crm": user.crm,

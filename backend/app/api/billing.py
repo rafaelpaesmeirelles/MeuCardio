@@ -355,6 +355,20 @@ def criar_checkout(
             ),
         )
 
+    if user.investidor:
+        # Investidor (issue #52) — nunca precisa passar por aqui, o acesso
+        # já é concedido por `tem_acesso_ao_produto()` só pelo flag. Ao
+        # contrário do convidado abaixo, deliberadamente NÃO marca
+        # `sub.status = "ativo"`: investidor não deve aparecer como
+        # assinante em nenhuma métrica que consulte `Subscription.status`,
+        # mesmo sem cobrança real. `sub` já existe (criado, pendente, por
+        # `_obter_ou_criar_assinatura` acima) mas fica intocado.
+        return {
+            "checkout_url": None,
+            "investidor": True,
+            "mensagem": "Acesso concedido administrativamente — não é necessário assinar.",
+        }
+
     if user.convidado:
         # Médico convidado (08/08/2026, pedido do Rafael) — mesma tela,
         # mesmo botão "Assinar", mas sem Stripe: a assinatura é liberada
@@ -430,6 +444,33 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
             "preco_centavos": settings.corvia_mail_preco_centavos,
             "incluido_no_plano": True,
         }
+    # Convidado (issue #52, "REGRA DEFINITIVA DE ACESSO PARA CONVIDADO"):
+    # CorvIA Mail real e completo, sem cobrança — mesmo bypass de
+    # `assinatura_email_ativa()` (core/security.py), aqui refletido na
+    # resposta que a tela usa pra decidir entre mostrar "Assinar" e o
+    # formulário de ativação direto. Sem isto, a tela mostraria "Assine o
+    # CorvIA Mail" para quem já pode ativar a caixa de graça.
+    if getattr(user, "convidado", False):
+        return {
+            "status": "ativo", "current_period_end": None,
+            "preco_definido": settings.corvia_mail_preco_definido,
+            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "incluido_no_plano": True,
+        }
+    # Investidor (issue #52, achado da revisão adversarial): CorvIA Mail
+    # nunca é ativável de verdade para essa conta — `preco_definido: False`
+    # desabilita o botão de assinar na tela (mesma condição que já existe
+    # pra "preço ainda não definido"), reforçando em defesa de profundidade
+    # o bloqueio real que já vive em `POST /billing/checkout-email`. Na
+    # prática o investidor nunca chega nesta tela — `CorviaMail.tsx` já
+    # redireciona pro modo demonstração antes de renderizar esta aba.
+    if getattr(user, "investidor", False):
+        return {
+            "status": "inativo", "current_period_end": None,
+            "preco_definido": False,
+            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "incluido_no_plano": False,
+        }
 
     sub = _assinatura_email(db, user.id)
     if sub and sub.status in ACESSO_LIBERADO:
@@ -467,7 +508,20 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
     principal (decisão do Rafael, 30/07/2026). Preço inline (`price_data`),
     não um Price pré-criado no painel: enquanto `corvia_mail_preco_centavos`
     for 0 ("em branco"), a rota recusa em vez de cobrar um valor inventado —
-    nunca simular um preço que ainda não foi decidido."""
+    nunca simular um preço que ainda não foi decidido.
+
+    🟠 Achado da revisão adversarial (issue #52): faltava aqui o mesmo
+    bloqueio de investidor que `POST /billing/checkout` já tinha — sem ele,
+    um investidor conseguia completar um pagamento real no Stripe por um
+    CorvIA Mail que `bloquear_investidor_em_operacao_real_de_mail`
+    (app/services/entitlement.py) nunca deixa ativar de fato. Não é falha de
+    segurança (nenhum dado vaza, nenhum acesso indevido é concedido) — é
+    cobrar por algo que estruturalmente nunca funciona para essa conta."""
+    if getattr(user, "investidor", False):
+        raise HTTPException(
+            status_code=409,
+            detail="O CorvIA Mail não está disponível para contas de investidor — o acesso a essa conta é só em modo demonstração.",
+        )
     if not settings.corvia_mail_preco_definido:
         raise HTTPException(
             status_code=409,
@@ -692,12 +746,23 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
 
 @router.get("/status")
 def status_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    # `acesso_administrativo` (issue #52) é só para a tela de Assinatura
+    # decidir o texto certo ("Acesso concedido administrativamente" em vez
+    # de "Assine agora"/"Assinatura necessária") quando o acesso do usuário
+    # vem de convidado/investidor, não de pagamento — nunca usar este campo
+    # como gate, a decisão de acesso é sempre do backend em cada requisição.
+    from app.services.entitlement import acesso_administrativo_sem_pagamento
+
     sub = _assinatura_meucardio(db, user.id)
     if not sub:
-        return {"status": "inativo", "current_period_end": None, "plano": None, "periodicidade": None}
+        return {
+            "status": "inativo", "current_period_end": None, "plano": None, "periodicidade": None,
+            "acesso_administrativo": acesso_administrativo_sem_pagamento(user),
+        }
     return {
         "status": sub.status, "current_period_end": sub.current_period_end, "plano": sub.plano,
         "periodicidade": sub.periodicidade,
+        "acesso_administrativo": acesso_administrativo_sem_pagamento(user),
     }
 
 
