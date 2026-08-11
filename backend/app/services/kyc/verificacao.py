@@ -13,6 +13,7 @@ from pathlib import Path
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
+from app.models.audit import AuditLog
 from app.models.kyc import KycVerification
 from app.models.user import User
 from app.services import cofre
@@ -50,6 +51,7 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
         )
 
     existente = db.query(KycVerification).filter(KycVerification.owner_id == user.id).first()
+    eh_reenvio = existente is not None
     arquivos_antigos = []
     if existente:
         arquivos_antigos = [
@@ -121,9 +123,29 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
             "ainda não disponível; revisão manual dispensada por decisão do Rafael)."
         )
 
+    # Auditoria da submissão em si — achado no hardening desta fase (issue #52):
+    # nem o primeiro envio nem o reenvio geravam AuditLog. Nunca registra bytes/
+    # conteúdo do documento, só o fato de que o titular enviou/reenviou.
+    db.add(AuditLog(
+        user_id=user.id, action="kyc_reenvio" if eh_reenvio else "kyc_submissao",
+        entity="kyc_verifications", entity_id=str(registro.id),
+        detail={"owner_id": user.id, "documento_pessoal": "digital" if tem_digital else "fotos"},
+    ))
+
     for nome_antigo in arquivos_antigos:
         if nome_antigo:
             cofre.apagar(nome_antigo, raiz=raiz)
+    if arquivos_antigos:
+        # Os arquivos substituídos pelo reenvio são apagados do cofre acima —
+        # é uma exclusão real de dado sensível, precisa do mesmo tipo de
+        # rastro que uma exclusão por retenção teria.
+        db.add(AuditLog(
+            user_id=user.id, action="kyc_delete", entity="kyc_verifications",
+            entity_id=str(registro.id),
+            detail={"motivo": "reenvio_substituiu_arquivos_anteriores", "quantidade": len(
+                [a for a in arquivos_antigos if a]
+            )},
+        ))
 
     return registro
 
