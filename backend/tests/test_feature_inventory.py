@@ -26,7 +26,7 @@ def test_published_feature_inventory_is_intact():
     # revisada em EXPECTED_BACKEND_ROUTERS); o que faltava era só manter
     # este teste sincronizado com a contagem real depois de cada revisão.
     assert "61 rotas React" in result.stdout
-    assert "37 destinos de menu" in result.stdout
+    assert "38 destinos de menu" in result.stdout
     assert "49 routers FastAPI" in result.stdout
 
 
