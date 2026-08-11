@@ -100,6 +100,33 @@ def test_atualizacao_com_campo_de_documentacao_tambem_nao_quebra(db, tmp_path):
     assert farmaco.review_status == "pendente_revisao"
 
 
+def test_registro_novo_com_chave_editorial_totalmente_arbitraria_nao_derruba_a_carga(db, tmp_path):
+    # Não é `review_note` especificamente — qualquer chave desconhecida do
+    # JSON precisa ser ignorada, porque o filtro é por coluna real do
+    # modelo (`_COLUNAS_DRUG`), não uma lista de nomes conhecidos de campo
+    # editorial. Prova que a correção é genérica, não um caso especial.
+    caminho = _escrever_json(
+        tmp_path,
+        [
+            {
+                "slug": "farmaco-chave-arbitraria-teste",
+                "generic_name": "Fármaco Chave Arbitrária",
+                "brand_names": ["MARCA ARBITRARIA"],
+                "drug_class": "Classe arbitrária",
+                "review_status": "revisado",
+                "campo_que_nao_existe_em_lugar_nenhum": "valor qualquer, nunca deveria chegar ao construtor",
+            }
+        ],
+    )
+
+    resultado = carregar(caminho)
+
+    assert resultado == {"total": 1, "novos": 1, "atualizados": 0}
+    farmaco = db.query(Drug).filter(Drug.slug == "farmaco-chave-arbitraria-teste").first()
+    assert farmaco is not None
+    assert farmaco.generic_name == "Fármaco Chave Arbitrária"
+
+
 def test_registro_sem_campo_extra_continua_funcionando_normalmente(db, tmp_path):
     caminho = _escrever_json(
         tmp_path,

@@ -23,6 +23,22 @@ GALERIA_DIR = Path("/galeria")
 # recarga copiava `published: false` do arquivo por cima do banco e tirava do
 # ar tudo que ja estava publicado.
 
+# Campos que o modelo aceita, derivados das colunas reais de `GalleryImage`
+# — mesmo padrão de `carregar_estudos.py`/`carregar_evidencias.py`/
+# `carregar_exames.py`/`carregar_drugs.py`, adotado aqui (revisão adversarial
+# pós-incidente) em vez de uma lista fixa mantida à mão: uma coluna nova no
+# modelo já entra automaticamente, sem precisar lembrar de atualizar dois
+# lugares. Sem este filtro, um campo de documentação novo no JSON (ex.:
+# `review_note`, convenção já usada em outras frentes) derrubaria a carga
+# inteira com TypeError ao tentar `GalleryImage(**item)` — foi exatamente o
+# que aconteceu com `drugs` no incidente de deploy de 11/08/2026 (issue #52).
+# `_EXCLUIDOS` são os campos que nunca devem vir do JSON: `id` é auto-gerado,
+# `published` é decisão humana (nunca sobrescrita por recarga, ver guarda
+# abaixo), `created_at`/`reviewed_by` são geridos pelo próprio banco/fluxo de
+# revisão, não pelo conteúdo.
+_EXCLUIDOS = {"id", "published", "created_at", "reviewed_by"}
+CAMPOS = {c.key for c in GalleryImage.__table__.columns} - _EXCLUIDOS
+
 
 def _asset_root(caminho_json: str) -> Path:
     """Prioriza o volume produtivo e usa o diretório versionado em CI/dev."""
@@ -45,14 +61,12 @@ def carregar(caminho_json: str) -> dict:
 
             existente = db.query(GalleryImage).filter(GalleryImage.slug == item["slug"]).first()
             if existente:
-                for campo in ("title", "modality", "theme", "findings", "teaching_points",
-                              "file_path", "thumbnail_path", "source_name", "source_url",
-                              "license", "attribution", "tags", "review_status"):
+                for campo in CAMPOS - {"slug"}:
                     if campo in item:
                         setattr(existente, campo, item[campo])
                 atualizados += 1
             else:
-                db.add(GalleryImage(**{k: v for k, v in item.items() if k != "published"}))
+                db.add(GalleryImage(**{k: v for k, v in item.items() if k in CAMPOS}))
                 novos += 1
         db.commit()
     finally:

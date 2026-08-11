@@ -11,16 +11,21 @@ O script só declara sucesso depois de:
 1. validar as variáveis críticas do `.env`;
 2. identificar um SHA Git completo;
 3. verificar DNS;
-4. criar backup pré-deploy se o banco já estiver em execução;
-5. reconstruir e subir os serviços;
-6. aguardar `/api/ready` no backend;
-7. confirmar as migrations de forma idempotente;
-8. reconciliar as 11 coleções científicas;
-9. publicar somente conteúdo com `review_status=revisado`;
-10. falhar se qualquer coleção permanecer abaixo do mínimo versionado;
-11. reindexar a IA quando `AI_ENABLED=true`;
-12. confirmar `/api/ready` pelo domínio HTTPS público;
-13. confirmar em `/api/version` que o domínio serve exatamente o commit solicitado.
+4. reconstruir as imagens a partir do checkout imutável;
+5. **confirmar que o banco NÃO está adiantado em relação às migrations deste
+   RC** (issue #52, hardening pós-incidente de 11/08/2026 — ver seção
+   "Migrations" abaixo) — aborta antes de tocar em qualquer serviço se
+   detectar que uma migration já foi aplicada fora deste script;
+6. criar backup pré-deploy se o banco já estiver em execução;
+7. subir os serviços com a imagem nova;
+8. aguardar `/api/ready` no backend;
+9. confirmar as migrations de forma idempotente;
+10. reconciliar as 11 coleções científicas;
+11. publicar somente conteúdo com `review_status=revisado`;
+12. falhar se qualquer coleção permanecer abaixo do mínimo versionado;
+13. reindexar a IA quando `AI_ENABLED=true`;
+14. confirmar `/api/ready` pelo domínio HTTPS público;
+15. confirmar em `/api/version` que o domínio serve exatamente o commit solicitado.
 
 O importador parcial antigo não é mais usado no deploy.
 
@@ -146,11 +151,53 @@ docker compose -f docker-compose.prod.yml logs -f redis
 
 ### Migrations
 
+> ## 🚫 NUNCA rode este comando manualmente contra produção fora de `./deploy.sh`
+>
+> **Incidente real, 11/08/2026 (issue #52):** este comando foi rodado manualmente
+> contra o backend antigo, ainda em execução, como um passo isolado de
+> "verificação de schema" — **antes** de `./deploy.sh` ser chamado. `migrations/`
+> é bind mount no container, então o backend antigo já enxergava as migrations
+> novas do checkout do RC assim que o `git checkout`/`merge` do host trocava de
+> commit — mesmo sem nenhum rebuild de imagem. O comando **não tem modo
+> dry-run**: rodá-lo "só para conferir" aplica a migração de verdade, para
+> sempre, ali mesmo.
+>
+> Consequência: quando `./deploy.sh` rodou depois, seu próprio backup
+> pré-deploy (`criar_backup_pre_deploy`) já capturou um banco **que já estava
+> no schema novo** — deixou de representar o estado real anterior à mudança.
+> O deploy falhou por outro motivo (bug de conteúdo, não da migration), o
+> rollback automático disparou como projetado, mas restaurou um backup já
+> contaminado: produção ficou fora do ar, com backend/Caddy parados, exigindo
+> intervenção manual para restaurar de um backup anterior, ainda mais antigo,
+> localizado à mão comparando o `alembic_version` de vários dumps.
+>
+> **A idempotência do comando (abaixo) é real, mas não protege contra isto** —
+> ela garante que rodar duas vezes SEGUIDAS não aplica nada a mais na segunda
+> vez; não protege contra a PRIMEIRA vez ser um passo isolado, fora da
+> sequência backup → up → migrate que `./deploy.sh` garante.
+>
+> **Guarda técnica correspondente**: `deploy.sh` (função
+> `validar_migrations_nao_adiantadas`, chamada logo após o build, antes de
+> tocar em caddy/backend/backup) aborta o deploy se detectar que o banco já
+> está no head das migrations do RC ANTES do próprio script ter feito
+> qualquer mudança — é exatamente o sintoma deste incidente, pego cedo.
+>
+> **Se você precisa mesmo inspecionar o estado das migrations sem aplicar
+> nada**, use comandos somente-leitura, que nunca escrevem no banco:
+> ```bash
+> docker compose -f docker-compose.prod.yml exec -T backend alembic current
+> docker compose -f docker-compose.prod.yml exec -T backend alembic heads
+> ```
+
 ```bash
 docker compose -f docker-compose.prod.yml exec -T backend python -m app.commands.migrate
 ```
 
-O comando pode ser repetido; a CI exige idempotência.
+Existe só como referência do que `./deploy.sh` executa internamente, na
+sequência certificada (depois do backup, antes da reconciliação de
+conteúdo) — não é um comando para rodar isoladamente. O comando pode ser
+repetido sem efeito adicional (idempotente), mas isso não é o mesmo que ser
+seguro para rodar fora de ordem.
 
 ### Backup manual
 

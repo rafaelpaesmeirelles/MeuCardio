@@ -19,6 +19,13 @@ from app.models.evidence import EvidenceRecord
 # estudos ao recarregar uma correcao de texto. Mesmo principio que o
 # importer.py ja aplica aos documentos de content/.
 
+# Filtro pelas colunas reais do modelo — sem ele, um campo de documentação
+# novo no JSON (ex.: `review_note`) derruba a carga inteira com TypeError ao
+# criar um registro novo. Foi exatamente o que aconteceu com `drugs` no
+# incidente de deploy de 11/08/2026 (issue #52); aplicado aqui de forma
+# preventiva, mesmo sem mismatch hoje.
+_COLUNAS = {c.key for c in EvidenceRecord.__table__.columns}
+
 
 def carregar(caminho_json: str) -> dict:
     itens = json.load(open(caminho_json, encoding="utf-8"))
@@ -26,7 +33,7 @@ def carregar(caminho_json: str) -> dict:
     novos, atualizados = 0, 0
     try:
         for item in itens:
-            item = {k: v for k, v in item.items() if k != "published"}
+            item = {k: v for k, v in item.items() if k != "published" and k in _COLUNAS}
             existente = db.query(EvidenceRecord).filter(EvidenceRecord.slug == item["slug"]).first()
             if existente:
                 for campo, valor in item.items():

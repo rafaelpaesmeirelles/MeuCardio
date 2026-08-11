@@ -141,6 +141,160 @@ validar_checkout_imutavel() {
   fi
 }
 
+# Guarda contra o incidente de deploy de 11/08/2026 (issue #52): uma migration
+# foi aplicada manualmente contra o backend antigo, ainda em execução, ANTES
+# deste script começar — possível porque `migrations/` é bind mount, e o
+# comando de migração (`app.commands.migrate`, o mesmo que o entrypoint do
+# container roda) sempre aplica de verdade (não existe modo
+# dry-run). O backup pré-deploy tirado depois já saiu contaminado: não
+# representava mais o estado real anterior à mudança, e o rollback automático
+# do próprio script restaurou um snapshot que já tinha o schema novo.
+#
+# Correção de design pós-revisão adversarial: a primeira versão comparava o
+# `alembic_version` do banco contra o head ABSOLUTO das migrations deste RC —
+# e por isso abortaria (falso positivo) todo deploy cujo commit não trouxesse
+# migration nova, que é a maioria; e deixaria passar (falso negativo) o caso
+# de só PARTE das migrations novas terem sido aplicadas fora de ordem. A
+# referência correta não é "o head deste RC" — é "o head que o COMMIT
+# ATUALMENTE EM EXECUÇÃO esperava, antes deste deploy tocar em qualquer
+# coisa". `DEPLOY_COMMIT` é lido do ambiente do próprio container backend
+# ainda rodando (injetado pelo `docker-compose.prod.yml` na hora em que ELE
+# foi iniciado, no deploy anterior) — não depende do checkout do host, que
+# já está no commit novo neste ponto do script.
+#
+# Por isso: chamar SÓ depois do build e SEMPRE antes de parar
+# caddy/backend — a checagem exige o backend ANTIGO ainda vivo para ler o seu
+# próprio `DEPLOY_COMMIT`, e não escreve em `db` (nunca faz `up -d`), evitando
+# qualquer recriação de container sob tráfego real.
+validar_migrations_nao_adiantadas() {
+  local commit_anterior head_esperado versao_atual resultado
+  detectar_banco_persistente
+  if [[ "$BANCO_PERSISTENTE" != "1" ]]; then
+    return 0  # primeiro deploy, sem banco anterior para comparar
+  fi
+
+  # A função inteira governa os próprios erros (graceful-skip em qualquer
+  # falha de leitura, nunca hard-fail por indisponibilidade de diagnóstico) —
+  # `set +e` local evita que `set -Eeuo pipefail` do script aborte no meio de
+  # uma checagem que é defensiva, não obrigatória. Restaurado antes de sair,
+  # em todo caminho de retorno.
+  set +e
+
+  commit_anterior="$("${COMPOSE[@]}" exec -T backend printenv DEPLOY_COMMIT 2>&1)"
+  if [[ $? -ne 0 ]]; then
+    log "Não foi possível ler DEPLOY_COMMIT do backend em execução (${commit_anterior}); pulando checagem de migration adiantada."
+    set -e; return 0
+  fi
+  commit_anterior="$(tr -d '[:space:]' <<< "$commit_anterior")"
+  if [[ -z "$commit_anterior" || "$commit_anterior" == "unknown" ]]; then
+    log "DEPLOY_COMMIT do backend em execução indisponível; pulando checagem de migration adiantada (não é motivo para abortar um deploy legítimo)."
+    set -e; return 0
+  fi
+
+  # Head esperado das migrations NO COMMIT ANTERIOR — via AST do próprio
+  # Python (stdlib, sem alembic, sem tocar em nenhum container): lê
+  # `revision`/`down_revision` de cada arquivo corretamente, INCLUSIVE
+  # merge migrations (`down_revision` como tupla) e anotação de tipo
+  # multi-linha — uma extração por regex ingênua aqui já se mostrou
+  # ambígua contra o histórico real deste projeto (5 candidatas a head em
+  # vez de 1) antes desta versão ser adotada. Head é a única revisão que
+  # nenhuma outra, naquele commit, lista como seu(s) `down_revision`.
+  resultado="$(
+    { git show "${commit_anterior}:backend/migrations/versions" 2>/dev/null \
+        | while IFS= read -r nome; do
+            [[ "$nome" == *.py ]] || continue
+            printf '===ARQUIVO:%s===\n' "$nome"
+            git show "${commit_anterior}:backend/migrations/versions/${nome}" 2>/dev/null
+          done
+    } | python3 -c '
+import ast, re, sys
+
+texto = sys.stdin.read()
+blocos = re.split(r"^===ARQUIVO:(.+?)===\n", texto, flags=re.M)[1:]
+
+def extrair(no):
+    if no is None:
+        return []
+    if isinstance(no, ast.Constant):
+        return [] if no.value is None else [no.value]
+    if isinstance(no, (ast.Tuple, ast.List)):
+        out = []
+        for el in no.elts:
+            out.extend(extrair(el))
+        return out
+    return []
+
+revisoes, downs = set(), set()
+for i in range(0, len(blocos), 2):
+    nome, conteudo = blocos[i], blocos[i + 1]
+    try:
+        arvore = ast.parse(conteudo, filename=nome)
+    except SyntaxError:
+        print("", end="")
+        raise SystemExit(0)
+    rev = down = None
+    for node in ast.walk(arvore):
+        alvo = None
+        if isinstance(node, ast.Assign):
+            alvo = node.targets[0]
+        elif isinstance(node, ast.AnnAssign):
+            alvo = node.target
+        if isinstance(alvo, ast.Name) and alvo.id == "revision":
+            rev = extrair(node.value)
+        elif isinstance(alvo, ast.Name) and alvo.id == "down_revision":
+            down = extrair(node.value)
+    if rev:
+        revisoes.update(rev)
+    if down:
+        downs.update(down)
+
+cabecas = revisoes - downs
+print(cabecas.pop() if len(cabecas) == 1 else "", end="")
+'
+  )"
+  head_esperado="$resultado"
+  if [[ -z "$head_esperado" ]]; then
+    log "Não foi possível calcular o head de migrations do commit anterior ($commit_anterior); pulando checagem de migration adiantada."
+    set -e; return 0
+  fi
+
+  versao_atual="$("${COMPOSE[@]}" exec -T db psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" \
+    -tAc "SELECT version_num FROM alembic_version" 2>&1)"
+  if [[ $? -ne 0 ]]; then
+    log "Não foi possível ler alembic_version do banco em produção (${versao_atual}); pulando checagem de migration adiantada."
+    set -e; return 0
+  fi
+  versao_atual="$(tr -d '[:space:]' <<< "$versao_atual")"
+  if [[ -z "$versao_atual" ]]; then
+    log "alembic_version veio vazio; pulando checagem de migration adiantada."
+    set -e; return 0
+  fi
+
+  set -e
+  if [[ "$versao_atual" != "$head_esperado" ]]; then
+    cat >&2 <<EOF
+ABORTANDO: o banco de produção está em "$versao_atual", mas o commit
+ATUALMENTE em execução ($commit_anterior) esperava "$head_esperado" — antes
+deste deploy ter feito qualquer mudança.
+
+Isso é o sintoma exato do incidente de 11/08/2026 (issue #52): alguém rodou
+o comando de migração (ou 'alembic upgrade head') manualmente
+contra o backend em execução, fora deste script — o bind mount de
+migrations/ deixa a migration nova visível e APLICÁVEL DE VERDADE mesmo
+antes do deploy oficial começar, mesmo que só parcialmente. O backup que
+este script tiraria agora não representaria o estado real anterior à
+mudança, e um rollback automático restauraria um banco que já tem schema
+adiantado.
+
+NUNCA rode comando de migration diretamente contra produção fora deste
+script (ver DEPLOY.md). Se a migration já foi aplicada de propósito e você
+sabe que o backup pré-deploy correto já existe separadamente, resolva
+manualmente antes de tentar de novo — este script não segue sozinho.
+EOF
+    return 1
+  fi
+}
+
 trap diagnosticar_erro ERR
 
 if [[ ! -f .env ]]; then
@@ -187,6 +341,10 @@ fi
 log "Construindo imagens a partir do checkout imutável, sem interromper o tráfego atual."
 validar_checkout_imutavel
 "${COMPOSE[@]}" build backend frontend-build
+validar_checkout_imutavel
+
+log "Confirmando que nenhuma migration deste RC já foi aplicada fora deste script."
+validar_migrations_nao_adiantadas
 validar_checkout_imutavel
 
 log "Fechando o proxy e o backend antigo antes do snapshot usado no rollback."
