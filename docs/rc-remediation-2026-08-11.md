@@ -170,7 +170,24 @@ migração não tem modo dry-run.
 
 ## 4. Resultado da suíte completa
 
-<!-- preenchido após a rodada final -->
+**1009 passed, 0 failed** — rodada final, definitiva, contra o estado exato
+do commit `adc7f97c` (o HEAD final `663a4445` adiciona só os três arquivos
+inertes de `docs/wip/`, zero mudança de código/teste — `git diff
+adc7f97c..HEAD --stat` confirma). Banco de teste isolado, sem contenção de
+outra sessão no momento da rodada.
+
+Duas rodadas intermediárias tiveram falhas que **não eram regressão de
+código** e foram corrigidas/explicadas antes desta rodada final:
+- Uma rodada anterior mostrou dezenas de `ERROR` por `DeadlockDetected` —
+  causa raiz confirmada (por mim e independentemente por um dos agentes de
+  revisão): dois processos `pytest` concorrentes desta própria sessão
+  batendo no mesmo banco de teste compartilhado ao mesmo tempo. Resolvido
+  isolando as rodadas no tempo, não é defeito desta remediação.
+- A penúltima rodada teve exatamente 2 `FAILED`, ambas em
+  `tests/test_deploy_contract.py` — causa real, já descrita na seção 2.3
+  (colisão de substring nos comentários novos de `deploy.sh` com o teste de
+  contrato). Corrigida; 20/20 daquele arquivo passam agora, incluídos nos
+  1009.
 
 ## 5. Produção — confirmado no baseline seguro, intocada
 
@@ -231,7 +248,26 @@ declaração de lançamento comercial definitivo, não o deploy técnico.
 
 ## 7. Veredito
 
-<!-- preenchido após a rodada final -->
+# ✅ GO
+
+**SHA final do RC: `663a4445907d96e71b11227ee7ce2e0a678f1638`**
+(commit funcional: `adc7f97c` — mesma ressalva de auto-referência do RC
+anterior: o HEAD final, ao incluir este próprio documento e a preservação
+do WIP, necessariamente cria um commit novo; `git diff adc7f97c..HEAD
+--stat` confirma zero mudança de código/teste entre os dois, então o
+resultado da regressão da seção 4 vale integralmente para o HEAD final).
+
+Todos os gates obrigatórios passaram: os 3 bugs reais do incidente
+corrigidos e verificados pelo mesmo comando que falhou em produção; auditoria
+estrutural das 13 frentes completa, com correção preventiva onde havia risco
+real; deploy.sh com guarda nova contra repetição do erro operacional,
+redesenhada após revisão adversarial encontrar um bug real na primeira
+versão; suíte completa 1009/1009; produção confirmada, de forma
+independente e repetida, ainda no baseline seguro, sem nenhuma mutação.
+
+Pendência real e conscientemente adiada, não escondida: entitlement de
+convidado/investidor (seção 6) — decisão humana explícita de não incluir
+neste RC.
 
 ## 8. Plano de deploy — preparado, NÃO executado
 
@@ -253,4 +289,5 @@ Fora do escopo desta remediação — não tocado.
 ---
 
 **NENHUM DEPLOY FOI EXECUTADO NESTA REMEDIAÇÃO.** Aguardando nova
-autorização humana explícita, no formato `AUTORIZO O DEPLOY DO RC <SHA>`.
+autorização humana explícita, no formato
+`AUTORIZO O DEPLOY DO RC 663a4445907d96e71b11227ee7ce2e0a678f1638`.
