@@ -8,6 +8,7 @@ import "./styles/tokens.css";
 import "./styles/shell.css";
 import "./styles/clinical-command-center.css";
 import "./styles/clinical-command-launch-polish.css";
+import "./styles/clinical-command-accessibility.css";
 import "./styles/produto.css";
 import "./styles/tour.css";
 
