@@ -3,50 +3,50 @@ import Icone, { type NomeIcone } from "../components/Icone";
 
 const PILARES: { icone: NomeIcone; titulo: string; texto: string; itens: string[] }[] = [
   {
-    icone: "clinica",
-    titulo: "Decidir",
-    texto: "Apoio clínico no momento em que a dúvida aparece.",
-    itens: ["Assistente com fontes", "Escores e calculadoras", "Fluxogramas e interações"],
+    icone: "busca",
+    titulo: "Resolver",
+    texto: "Comece pelo que você precisa fazer agora — não pelo módulo onde isso mora.",
+    itens: ["Command Bar universal", "Busca clínica e científica", "Ações executáveis no mesmo fluxo"],
   },
   {
-    icone: "pacientes",
-    titulo: "Cuidar",
-    texto: "Continuidade do consultório ao leito e à alta.",
-    itens: ["Agenda e round", "Prescrição eletrônica", "Documentos e materiais"],
+    icone: "assistente",
+    titulo: "Entender contexto",
+    texto: "A inteligência muda conforme a tarefa, sem transformar tudo em chatbot.",
+    itens: ["CorVIA Intelligence", "Assistente Clínica", "Assistente Pessoal"],
   },
   {
     icone: "conhecimento",
-    titulo: "Atualizar",
-    texto: "Ciência organizada para consulta e aprofundamento.",
-    itens: ["Biblioteca científica", "Evidências e estudos", "Casos e trilhas"],
+    titulo: "Conectar conhecimento",
+    texto: "Condição, medicamento, estudo, guideline, exame e ação deixam de ser ilhas.",
+    itens: ["Evidências e estudos", "Guidelines e medicamentos", "Clinical Thread e relações"],
   },
   {
-    icone: "comunicacao",
-    titulo: "Conectar",
-    texto: "Comunicação profissional integrada ao trabalho.",
-    itens: ["Corvia Mail", "Rede profissional", "Indicadores pessoais"],
+    icone: "prescricao",
+    titulo: "Agir",
+    texto: "Decisão clínica e execução permanecem próximas no mesmo workspace.",
+    itens: ["Prescrição", "Documentos e solicitações", "Agenda, pacientes e comunicação"],
   },
 ];
 
 const FLUXO = [
-  { numero: "01", titulo: "A dúvida", texto: "Busque uma condição, um fármaco, um escore ou pergunte ao assistente." },
-  { numero: "02", titulo: "A evidência", texto: "Consulte a resposta junto das referências e abra o conteúdo de origem." },
-  { numero: "03", titulo: "A conduta", texto: "Avance para cálculo, checagem, prescrição ou documento sem perder o contexto." },
-  { numero: "04", titulo: "A continuidade", texto: "Organize agenda, round, comunicação e materiais em um único espaço." },
+  { numero: "01", titulo: "Necessidade", texto: "O que você precisa resolver agora? Pesquisar, revisar, calcular, prescrever, documentar ou organizar." },
+  { numero: "02", titulo: "Contexto", texto: "O CorVIA aproxima o que é relevante sem obrigar você a reconstruir o raciocínio em outra ferramenta." },
+  { numero: "03", titulo: "Conhecimento e decisão", texto: "Evidências, guidelines, medicamentos, exames e critérios permanecem conectados e rastreáveis." },
+  { numero: "04", titulo: "Ação", texto: "Avance para prescrição, solicitação, documento, paciente, agenda ou comunicação sem perder o contexto." },
 ];
 
 export default function Produto() {
   return (
     <div className="produto">
       <header className="produto-nav">
-        <Link to="/" className="produto-nav__marca" aria-label="Corvia — início">
-          <img src="/corvia-logo-compacta.png" alt="Corvia" />
-          <span>Ecossistema clínico</span>
+        <Link to="/" className="produto-nav__marca" aria-label="CorVIA — início">
+          <img src="/corvia-logo-compacta.png" alt="CorVIA" />
+          <span>Clinical OS do médico</span>
         </Link>
         <nav aria-label="Navegação da página">
-          <a href="#ecossistema">Ecossistema</a>
+          <a href="#clinical-os">Clinical OS</a>
           <a href="#como-funciona">Como funciona</a>
-          <a href="#qualidade">Qualidade</a>
+          <a href="#qualidade">Ciência e segurança</a>
         </nav>
         <div className="produto-nav__acoes">
           <Link to="/entrar" className="produto-link">Entrar</Link>
@@ -57,69 +57,70 @@ export default function Produto() {
       <main>
         <section className="produto-hero">
           <div className="produto-hero__conteudo">
-            <p className="produto-selo"><span /> Cardiologia conectada, da evidência à prática</p>
-            <h1>O espaço de trabalho que acompanha o médico em toda a jornada clínica.</h1>
+            <p className="produto-selo"><span /> CorVIA · Clinical OS do médico</p>
+            <h1>Um sistema operacional para o trabalho médico.</h1>
             <p className="produto-hero__subtitulo">
-              Decisão clínica, prescrição, documentos, ciência, round, comunicação e gestão —
-              conectados para reduzir atrito e manter a informação útil no momento certo.
+              Conhecimento, contexto, paciente, decisão e ação conectados em um único workspace —
+              construído a partir do que o médico precisa resolver agora.
             </p>
             <div className="produto-hero__acoes">
               <Link to="/solicitar-acesso" className="produto-botao produto-botao--grande">
                 Solicitar acesso profissional <Icone nome="seta" />
               </Link>
-              <a href="#ecossistema" className="produto-botao produto-botao--secundario">Conhecer o ecossistema</a>
+              <a href="#clinical-os" className="produto-botao produto-botao--secundario">Entender o Clinical OS</a>
             </div>
-            <div className="produto-hero__garantias" aria-label="Características de acesso">
-              <span><Icone nome="check" /> Acesso profissional verificado</span>
-              <span><Icone nome="check" /> Fontes clínicas identificadas</span>
-              <span><Icone nome="check" /> Experiência responsiva</span>
+            <div className="produto-hero__garantias" aria-label="Princípios do CorVIA">
+              <span><Icone nome="check" /> Médico no centro do produto</span>
+              <span><Icone nome="check" /> Ciência com fontes rastreáveis</span>
+              <span><Icone nome="check" /> Desktop e mobile pensados para contextos reais</span>
             </div>
           </div>
 
-          <div className="produto-demo" aria-label="Prévia do painel Corvia">
+          <div className="produto-demo" aria-label="Prévia do Clinical Command Center CorVIA">
             <div className="produto-demo__barra">
               <span className="produto-demo__marca"><img src="/corvia-logo-compacta.png" alt="" /></span>
-              <span className="produto-demo__busca"><Icone nome="busca" /> Buscar na Corvia</span>
+              <span className="produto-demo__busca"><Icone nome="busca" /> Pergunte, pesquise ou execute uma ação...</span>
               <span className="produto-demo__avatar">RM</span>
             </div>
             <div className="produto-demo__corpo">
               <aside>
-                <strong><Icone nome="hoje" /> Hoje</strong>
-                <span><Icone nome="clinica" /> Decisão clínica</span>
-                <span><Icone nome="pacientes" /> Pacientes e prática</span>
-                <span><Icone nome="conhecimento" /> Conhecimento</span>
-                <span><Icone nome="comunicacao" /> Comunicação</span>
+                <strong><Icone nome="hoje" /> Início</strong>
+                <span><Icone nome="busca" /> Buscar</span>
+                <span><Icone nome="medicamento" /> Medicamentos</span>
+                <span><Icone nome="evidencia" /> Evidências</span>
+                <span><Icone nome="pacientes" /> Pacientes</span>
+                <span><Icone nome="agenda" /> Agenda</span>
               </aside>
               <div className="produto-demo__painel">
-                <div className="produto-demo__saudacao"><small>Central clínica</small><strong>Bom dia, Rafael.</strong><span>Sua rotina clínica em um só lugar.</span></div>
+                <div className="produto-demo__saudacao"><small>Clinical Command Center</small><strong>O que você precisa resolver agora?</strong><span>Pesquisa, decisão e ação a partir do mesmo ponto.</span></div>
                 <div className="produto-demo__atalhos">
-                  <span className="ativo"><Icone nome="prescricao" /><b>Nova prescrição</b></span>
-                  <span><Icone nome="documento" /><b>Emitir documento</b></span>
-                  <span><Icone nome="triagem" /><b>Iniciar triagem</b></span>
+                  <span className="ativo"><Icone nome="prescricao" /><b>Prescrever</b></span>
+                  <span><Icone nome="clinica" /><b>Solicitar exames</b></span>
+                  <span><Icone nome="documento" /><b>Documento</b></span>
                 </div>
                 <div className="produto-demo__cards">
-                  <span><small>Seu dia</small><b>Agenda de hoje</b><i>Compromissos e retornos</i></span>
-                  <span><small>Continuidade</small><b>Round hospitalar</b><i>Evolução e pendências</i></span>
-                  <span className="escuro"><small>Comunicação</small><b>Corvia Mail</b><i>Prioridades e modelos</i></span>
+                  <span><small>Continuar</small><b>Insuficiência cardíaca</b><i>Condição → tratamento → evidência</i></span>
+                  <span><small>CorVIA Intelligence</small><b>3 relações relevantes</b><i>Estudos, guideline e medicamento</i></span>
+                  <span className="escuro"><small>Assistente Pessoal</small><b>Seu dia</b><i>Agenda e pendências sob demanda</i></span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="produto-faixa" aria-label="Abrangência do sistema">
-          <span>Uma plataforma</span><i />
-          <strong>Decisão clínica</strong><i />
-          <strong>Prática médica</strong><i />
+        <section className="produto-faixa" aria-label="Arquitetura do Clinical OS">
+          <span>Necessidade</span><i />
+          <strong>Contexto</strong><i />
           <strong>Conhecimento</strong><i />
-          <strong>Comunicação</strong>
+          <strong>Decisão</strong><i />
+          <strong>Ação</strong>
         </section>
 
-        <section className="produto-secao" id="ecossistema">
+        <section className="produto-secao" id="clinical-os">
           <div className="produto-secao__cabecalho">
-            <p className="produto-selo"><span /> Ecossistema integrado</p>
-            <h2>Menos ferramentas dispersas.<br />Mais continuidade clínica.</h2>
-            <p>Cada módulo resolve uma tarefa; juntos, formam um fluxo de trabalho conectado.</p>
+            <p className="produto-selo"><span /> Uma categoria diferente</p>
+            <h2>Não é prontuário.<br />Não é chatbot. É o workspace do médico.</h2>
+            <p>O CorVIA reduz o atrito cognitivo entre a necessidade clínica e a ação necessária para resolvê-la.</p>
           </div>
           <div className="produto-pilares">
             {PILARES.map((pilar) => (
@@ -136,8 +137,8 @@ export default function Produto() {
         <section className="produto-fluxo" id="como-funciona">
           <div className="produto-fluxo__intro">
             <p className="produto-selo produto-selo--claro"><span /> Um fluxo, não um catálogo</p>
-            <h2>Do primeiro questionamento à continuidade do cuidado.</h2>
-            <p>A Corvia mantém as ferramentas próximas da etapa seguinte, para o médico avançar sem reconstruir seu raciocínio a cada tela.</p>
+            <h2>O sistema acompanha o raciocínio em vez de obrigar o médico a acompanhar o sistema.</h2>
+            <p>A arquitetura aproxima conhecimento, contexto e execução conforme a tarefa muda durante o dia.</p>
           </div>
           <ol>
             {FLUXO.map((item) => (
@@ -154,29 +155,29 @@ export default function Produto() {
             <span className="produto-qualidade__orbita produto-qualidade__orbita--dois" />
             <span className="produto-qualidade__centro"><Icone nome="evidencia" /></span>
             <span className="produto-qualidade__nota nota--um">Fonte identificada</span>
-            <span className="produto-qualidade__nota nota--dois">Classe e nível</span>
+            <span className="produto-qualidade__nota nota--dois">Revisão editorial</span>
             <span className="produto-qualidade__nota nota--tres">Contexto clínico</span>
           </div>
           <div className="produto-qualidade__texto">
-            <p className="produto-selo"><span /> Qualidade rastreável</p>
-            <h2>Conteúdo que mostra de onde veio.</h2>
+            <p className="produto-selo"><span /> Ciência e segurança</p>
+            <h2>Inteligência clínica precisa mostrar de onde veio — e onde termina.</h2>
             <p>
-              A Corvia organiza diretrizes, estudos e recomendações para consulta profissional,
-              mantendo referências visíveis e separando apoio à decisão de julgamento clínico.
+              O CorVIA organiza evidências e recomendações para consulta profissional,
+              preserva fontes e status de revisão e mantém ações consequenciais sob controle do médico.
             </p>
             <ul>
-              <li><Icone nome="check" /><span><strong>Referência verificável</strong> no conteúdo científico disponível.</span></li>
-              <li><Icone nome="check" /><span><strong>Contexto de uso</strong> para interpretar antes de aplicar.</span></li>
-              <li><Icone nome="check" /><span><strong>Responsabilidade profissional</strong> preservada em toda decisão.</span></li>
+              <li><Icone nome="check" /><span><strong>Referências rastreáveis</strong> no conteúdo científico.</span></li>
+              <li><Icone nome="check" /><span><strong>Dados privados separados</strong> de conhecimento público e relações clínicas.</span></li>
+              <li><Icone nome="check" /><span><strong>Revisão médica preservada</strong> antes de prescrever, assinar ou enviar.</span></li>
             </ul>
           </div>
         </section>
 
         <section className="produto-cta" id="acesso">
           <div>
-            <p className="produto-selo produto-selo--claro"><span /> Comece sua jornada</p>
-            <h2>Traga mais continuidade para sua rotina clínica.</h2>
-            <p>Solicite o acesso com seus dados profissionais. O cadastro passa por verificação antes da liberação.</p>
+            <p className="produto-selo produto-selo--claro"><span /> Comece pelo que precisa resolver</p>
+            <h2>Experimente uma nova maneira de trabalhar em medicina.</h2>
+            <p>Solicite acesso profissional e conheça o Clinical OS construído para o médico.</p>
           </div>
           <div>
             <Link to="/solicitar-acesso" className="produto-botao produto-botao--claro">Solicitar acesso <Icone nome="seta" /></Link>
@@ -186,8 +187,8 @@ export default function Produto() {
       </main>
 
       <footer className="produto-rodape">
-        <img src="/corvia-logo-compacta.png" alt="Corvia" />
-        <p>Suporte à decisão clínica para profissionais de saúde. Não substitui avaliação, julgamento ou responsabilidade profissional.</p>
+        <img src="/corvia-logo-compacta.png" alt="CorVIA" />
+        <p>CorVIA — Clinical OS do médico. Apoio ao trabalho profissional; não substitui julgamento clínico nem responsabilidade médica.</p>
         <div><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><Link to="/entrar">Acesso profissional</Link></div>
       </footer>
     </div>
