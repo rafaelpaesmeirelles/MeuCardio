@@ -712,5 +712,61 @@
       "torsades-de-pointes-e-qt-longo-adquirido"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-brash",
+    "titulo": "Síndrome BRASH",
+    "gatilho": "Bradicardia refratária à atropina · hipercalemia · disfunção renal aguda · uso de bloqueador de nó AV (betabloqueador, bloqueador de canal de cálcio ou digoxina)",
+    "ordem": 109,
+    "documento_slug": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia",
+    "fluxograma_slug": "fluxograma-sindrome-brash",
+    "relacionados": [
+      "hipercalemia-grave",
+      "intoxicacao-por-betabloqueador-ou-antagonista-de-calcio",
+      "bradiarritmia-e-bloqueio-av",
+      "intoxicacao-digitalica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "embolia-de-liquido-amniotico-com-choque-parada-e-civd",
+    "titulo": "Embolia de líquido amniótico",
+    "gatilho": "Colapso cardiopulmonar súbito periparto · hipóxia aguda · hipotensão ou parada cardiorrespiratória · coagulopatia de consumo (CIVD)",
+    "ordem": 110,
+    "documento_slug": "embolia-de-liquido-amniotico-com-choque-parada-e-civd",
+    "fluxograma_slug": "fluxograma-embolia-de-liquido-amniotico-com-choque-parada-e-civd",
+    "relacionados": [
+      "parada-cardiorrespiratoria-na-gestante",
+      "tromboembolismo-pulmonar-na-gestacao-e-puerperio",
+      "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "obstrucao-coronaria-aguda-apos-tavi",
+    "titulo": "Obstrução coronária aguda após TAVI",
+    "gatilho": "Choque, supradesnivelamento de ST ou parada cardiorrespiratória nos minutos seguintes ao implante de TAVI",
+    "ordem": 111,
+    "documento_slug": "obstrucao-coronaria-aguda-apos-tavi",
+    "fluxograma_slug": "fluxograma-obstrucao-coronaria-aguda-apos-tavi",
+    "relacionados": [
+      "sindrome-coronariana-aguda",
+      "choque-cardiogenico",
+      "estenose-aortica-grave-descompensada-no-idoso"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquicardia-juncional-ectopica-pos-operatoria-jet",
+    "titulo": "Taquicardia juncional ectópica pós-operatória (JET)",
+    "gatilho": "Taquicardia de QRS estreito com dissociação AV ou condução VA 1:1, nas primeiras 24-72h após cirurgia cardíaca congênita, com instabilidade hemodinâmica",
+    "ordem": 112,
+    "documento_slug": "taquicardia-juncional-ectopica-pos-operatoria-jet",
+    "fluxograma_slug": "fluxograma-taquicardia-juncional-ectopica-pos-operatoria-jet",
+    "relacionados": [
+      "taquiarritmia-pediatrica-com-pulso",
+      "bradicardia-pediatrica-com-pulso"
+    ],
+    "review_status": "revisado"
   }
 ]

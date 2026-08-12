@@ -2810,5 +2810,296 @@
       }
     ],
     "revisao": "Checklist elaborado em 06/08/2026 a partir de uma revisão sistemática sobre ansiedade/depressão em portadores de CDI e de duas publicações de validação/uso da Florida Shock Anxiety Scale, com PMID e DOI conferidos no PubMed. Nenhum ponto de corte da FSAS foi criado: onde as fontes verificadas não sustentam um threshold universal único, a lacuna foi marcada explicitamente como VERIFICAÇÃO HUMANA NECESSÁRIA. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "pre-cardioversao-eletiva-de-fibrilacao-atrial",
+    "condicao": "Preparo para cardioversão elétrica eletiva de fibrilação atrial",
+    "resumo": "Anticoagulação antes e depois da cardioversão eletiva — as duas vias de preparo (3 semanas comprovadas ou TEE) e a regra das 4 semanas pós-procedimento, que vale mesmo com CHA2DS2-VA de 0.",
+    "documento_origem": "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"
+    ],
+    "itens": [
+      {
+        "id": "cv-via-preparo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Via de preparo definida e documentada: anticoagulação terapêutica plena por pelo menos 3 semanas (adesão comprovada a DOAC, ou RIN consistentemente >2 se em antagonista de vitamina K) OU ecocardiograma transesofágico (TEE) sem trombo em apêndice atrial esquerdo",
+        "origem_secao": "Anticoagulação antes da cardioversão — duas vias"
+      },
+      {
+        "id": "cv-tee-anticoagulacao-no-momento",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se via TEE: confirmado que o paciente já está em anticoagulação terapêutica no momento do procedimento — o TEE exclui trombo, não dispensa a anticoagulação periprocedimento",
+        "origem_secao": "Anticoagulação antes da cardioversão — duas vias"
+      },
+      {
+        "id": "cv-nenhuma-via-cumprida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferido que a cardioversão não está sendo feita com menos de 3 semanas de anticoagulação documentada e sem TEE prévio — nenhuma das duas vias cumprida contraindica o procedimento eletivo",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "cv-anticoagulacao-4-semanas-apos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação terapêutica prescrita por pelo menos 4 semanas após a cardioversão, independentemente do CHA2DS2-VA — inclusive em paciente com escore 0, pelo atordoamento atrial pós-procedimento",
+        "origem_secao": "Anticoagulação depois da cardioversão — 4 semanas, sem exceção por escore"
+      },
+      {
+        "id": "cv-nao-suspender-cha2ds2-0",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a não suspender a anticoagulação logo após cardioversão bem-sucedida só porque o CHA2DS2-VA é 0 — a regra das 4 semanas não depende do risco tromboembólico crônico",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "cv-reavaliacao-apos-4-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação agendada ao final das 4 semanas para decidir manter ou suspender a anticoagulação, agora sim conforme o CHA2DS2-VA crônico",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "cv-distinguir-fa-aguda",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que não se trata do cenário de FA aguda (menos de 24h, sem TEE) coberto pelo documento geral de diagnóstico e manejo — a estratégia aqui descrita é para cardioversão eletiva, fora da janela aguda",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "inicio-de-varfarina-em-protese-valvar-mecanica",
+    "condicao": "Início de anticoagulação com varfarina após implante de prótese valvar mecânica",
+    "resumo": "Alvo de INR por tipo e posição de prótese (Tabela 10, ESC/EACTS 2025), e por que DOAC e dupla antiagregação continuam formalmente contraindicados nesse cenário.",
+    "documento_origem": "protese-valvar-escolha-mecanica-vs-biologica-e-alvo-de-inr-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025. PMID: 40878295 — Recommendation Table 13 (prosthetic valve selection), Table 10 (alvos de INR) e seção 14.3.1, texto integral obtido e conferido em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "pvm-doac-contraindicado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o anticoagulante prescrito é antagonista de vitamina K (varfarina) — DOAC e dupla antiagregação NÃO são recomendados para prevenir trombose em prótese mecânica (Classe III, Nível A)",
+        "origem_secao": "Regras que não mudam com o tipo de prótese"
+      },
+      {
+        "id": "pvm-alvo-inr-tipo-posicao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Alvo de INR definido pelo tipo e posição da prótese: 3 (2,5-3,5) para bola em gaiola/disco basculante em qualquer posição, ou qualquer prótese mecânica em posição mitral/tricúspide, sem fator pró-trombótico adicional; 2,5 (2-3) para bilíflex/disco único de geração atual em posição aórtica, sem fator adicional",
+        "origem_secao": "Alvo de INR por tipo e posição de prótese mecânica (Tabela 10)"
+      },
+      {
+        "id": "pvm-fator-protrombotico-adicional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisado fator pró-trombótico adicional (trombofilia herdada/adquirida, FEVE <35%, fibrilação atrial com estenose mitral significativa, ou evento trombótico maior nos últimos 12 meses) — se presente, o alvo de INR sobe 0,5 unidade na mesma categoria de prótese",
+        "origem_secao": "Alvo de INR por tipo e posição de prótese mecânica (Tabela 10)"
+      },
+      {
+        "id": "pvm-alvo-baixo-alto-risco-sangramento",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em paciente de alto risco de sangramento com prótese bilíflex/disco único aórtica sem fator adicional: considerado alvo mais baixo, 2 (1,5-2,5)",
+        "origem_secao": "Parágrafo após a Tabela 10"
+      },
+      {
+        "id": "pvm-educacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre a variabilidade intra e interpaciente do AVK, a janela terapêutica estreita e a interação com fármacos e alimentos — educação estruturada é Classe I, Nível A para melhorar a qualidade da anticoagulação",
+        "origem_secao": "Regras que não mudam com o tipo de prótese"
+      },
+      {
+        "id": "pvm-nao-trocar-doac-na-falha",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se ocorrer complicação tromboembólica maior apesar de INR documentado adequado e boa qualidade de anticoagulação: considerado aumentar o alvo de INR em 0,5 unidade ou associar AAS em dose baixa (75-100 mg/dia) — nunca trocar para DOAC, que segue contraindicado",
+        "origem_secao": "Parágrafo sobre complicação tromboembólica apesar de INR adequado"
+      },
+      {
+        "id": "pvm-nao-generico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferido que o alvo de INR usado é o específico do tipo e posição da prótese, não um valor genérico de 2,5-3,5 aplicado a qualquer prótese mecânica",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pvm-manejo-perioperatorio-referencia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se o paciente for submetido a procedimento não cardíaco: manejo perioperatório de interrupção, bridging e retomada da anticoagulação segue tabela própria da diretriz (Tabela 11) — não reproduzido aqui",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Valvopatias citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "retorno-ao-esporte-apos-miocardite-aguda",
+    "condicao": "Retorno ao esporte competitivo ou de alta intensidade após miocardite aguda em atleta",
+    "resumo": "Avaliação multiparamétrica antes de liberar o retorno — não é decisão por calendário, e a persistência de realce tardio na ressonância não equivale automaticamente a inflamação ativa.",
+    "documento_origem": "miocardite-retorno-ao-esporte",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151(11):e716-e761. PMID 39973614. DOI 10.1161/CIR.0000000000001297.",
+      "Dores H, et al. Myocarditis in athletes: Challenges for return to play. Rev Port Cardiol. 2026;45(6):307-317. PMID 42061508. DOI 10.1016/j.repc.2026.02.006.",
+      "Phelan D, et al. A Prospective Pilot Study to Identify a Myocarditis Cohort who may Safely Resume Sports Activities 3 Months after Diagnosis. Heart Lung Circ. 2020. PMID 32367345."
+    ],
+    "itens": [
+      {
+        "id": "rte-sem-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de sintomas compatíveis com doença ativa",
+        "origem_secao": "O que deve ser resolvido antes do retorno"
+      },
+      {
+        "id": "rte-biomarcadores",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Biomarcadores previamente elevados normalizados ou com tendência clara de normalização",
+        "origem_secao": "O que deve ser resolvido antes do retorno"
+      },
+      {
+        "id": "rte-funcao-ventricular",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Função ventricular reavaliada e recuperada, quando havia disfunção na fase aguda",
+        "origem_secao": "O que deve ser resolvido antes do retorno"
+      },
+      {
+        "id": "rte-arritmia-ventricular",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ausência de arritmias ventriculares clinicamente relevantes em monitorização ambulatorial e/ou teste de esforço que reproduza intensidade relevante para a modalidade esportiva",
+        "origem_secao": "Teste de esforço e monitorização"
+      },
+      {
+        "id": "rte-inflamacao-ativa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ausência de sinais de inflamação ativa nos exames indicados para o caso",
+        "origem_secao": "O que deve ser resolvido antes do retorno"
+      },
+      {
+        "id": "rte-rmc-interpretada-em-contexto",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houver realce tardio residual na ressonância cardíaca: interpretado em conjunto com padrão, extensão, função ventricular, arritmias e evolução temporal — realce residual não equivale automaticamente a inflamação ativa",
+        "origem_secao": "Ressonância magnética cardíaca"
+      },
+      {
+        "id": "rte-restricao-3-6-meses",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Restrição de exercício intenso mantida por aproximadamente 3 a 6 meses após a fase aguda antes da reavaliação — período de referência histórica, sem evidência prospectiva robusta que sustente um intervalo único e universal para todo atleta",
+        "origem_secao": "Duração da restrição esportiva"
+      },
+      {
+        "id": "rte-retorno-progressivo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno planejado como progressão gradual de volume e intensidade, não como liberação plena imediata — permite identificar recorrência de sintomas ou arritmia antes da retomada competitiva",
+        "origem_secao": "Retorno progressivo"
+      },
+      {
+        "id": "rte-fatores-de-maior-cautela",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisados fatores que exigem conduta mais conservadora: disfunção ventricular persistente, arritmia ventricular complexa, síncope arrítmica ou inexplicada, inflamação ativa persistente, cicatriz extensa associada a outros marcadores de risco, recorrência de miocardite, ou cardiomiopatia/predisposição genética subjacente",
+        "origem_secao": "Quando a cautela deve ser maior"
+      },
+      {
+        "id": "rte-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Incerteza sobre o momento ideal de retorno e o significado prognóstico de cicatriz residual explicitada ao atleta, em decisão compartilhada — sem transformar ausência de dados em proibição absoluta nem em falsa garantia de segurança",
+        "origem_secao": "Decisão compartilhada e incerteza residual"
+      },
+      {
+        "id": "rte-nao-e-decisao-por-calendario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferido que a liberação não se baseia só no tempo decorrido — o retorno exige demonstrar recuperação clínica, elétrica e funcional, não apenas cumprir um calendário fixo",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiologia do Esporte e do Exercício citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "encaminhamento-para-reabilitacao-cardiaca-em-prevencao-secundaria",
+    "condicao": "Encaminhamento e prescrição de exercício em reabilitação cardíaca para prevenção secundária",
+    "resumo": "Componentes do programa e a meta de exercício aeróbico e resistido da diretriz ESC 2021 — reconhecida como a intervenção mais custo-efetiva da prevenção secundária, e ainda subutilizada.",
+    "documento_origem": "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. European Heart Journal. 2021.",
+      "Cardiac rehabilitation and its essential role in the secondary prevention of cardiovascular diseases. PMC.",
+      "Secondary prevention through comprehensive cardiovascular rehabilitation: From knowledge to implementation. Journal of Cardiovascular Medicine. 2020."
+    ],
+    "itens": [
+      {
+        "id": "rc-encaminhamento-feito",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento formal para programa de reabilitação cardíaca registrado — reconhecida como a intervenção mais custo-efetiva para assegurar desfecho favorável num amplo espectro de doença cardiovascular",
+        "origem_secao": "Benefício de mortalidade da reabilitação cardíaca"
+      },
+      {
+        "id": "rc-prescricao-aerobica",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Prescrição aeróbica registrada: 150-300 min/semana de intensidade moderada, ou 75-150 min/semana de intensidade vigorosa, ou combinação equivalente",
+        "origem_secao": "Prescrição de exercício — recomendações ESC 2021"
+      },
+      {
+        "id": "rc-prescricao-resistida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Exercício resistido prescrito em 2 ou mais dias por semana, além da atividade aeróbica (Classe I, para redução de mortalidade por todas as causas)",
+        "origem_secao": "Prescrição de exercício — recomendações ESC 2021"
+      },
+      {
+        "id": "rc-sedentarismo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação registrada para reduzir tempo sedentário e realizar ao menos atividade leve ao longo do dia, inclusive nos dias sem sessão estruturada",
+        "origem_secao": "Prescrição de exercício — recomendações ESC 2021"
+      },
+      {
+        "id": "rc-abaixo-do-minimo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente que não atinge o mínimo recomendado encorajado a manter-se tão ativo quanto suas capacidades e condições de saúde permitirem, em vez de ser dispensado da atividade física por não atingir a meta plena",
+        "origem_secao": "Prescrição de exercício — recomendações ESC 2021"
+      },
+      {
+        "id": "rc-componentes-programa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o programa integra, além do treino aeróbico supervisionado, manejo de fatores de risco (lipídios, pressão arterial, peso, diabetes, tabagismo), educação nutricional e suporte psicossocial — não só a sessão de exercício isolada",
+        "origem_secao": "Componentes do programa de reabilitação"
+      },
+      {
+        "id": "rc-capacidade-funcional-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Capacidade funcional (METs) reavaliada ao longo do programa — cada MET adicional associa-se a cerca de 28% de redução de mortalidade, e treino abaixo de 3,5 METs após 4 semanas associa-se a maior mortalidade em 1 e 3 anos",
+        "origem_secao": "Relação entre capacidade de exercício e mortalidade"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Prevenção e lipídios citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
