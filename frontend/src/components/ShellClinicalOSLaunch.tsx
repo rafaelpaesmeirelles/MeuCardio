@@ -19,7 +19,7 @@ const BASE: Secao[] = [
     rotulo: "Decisão clínica",
     icone: "clinica",
     itens: [
-      { to: "/assistente", rotulo: "CorVIA AI", icone: "assistente" },
+      { to: "/assistente", rotulo: "Assistente", icone: "assistente" },
       { to: "/doencas", rotulo: "Doenças e condições", icone: "doencas" },
       { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
       { to: "/calculadoras", rotulo: "Calculadoras e escores", icone: "calculadora" },
@@ -99,7 +99,7 @@ const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone
   { prefixo: "/documentos", titulo: "Documentos", detalhe: "Documentos e solicitações", icone: "documento" },
   { prefixo: "/round", titulo: "Pacientes e round", detalhe: "Continuidade do cuidado", icone: "round" },
   { prefixo: "/agenda", titulo: "Agenda", detalhe: "Organização clínica", icone: "agenda" },
-  { prefixo: "/assistente", titulo: "CorVIA AI", detalhe: "Assistência contextual", icone: "assistente" },
+  { prefixo: "/assistente", titulo: "Assistente", detalhe: "Assistência contextual", icone: "assistente" },
   { prefixo: "/emergencia", titulo: "Emergência", detalhe: "Protocolos de risco imediato", icone: "emergencia" },
 ];
 
@@ -175,7 +175,7 @@ function Intelligence({ pathname }: { pathname: string }) {
     if (pathname.startsWith("/evidencias") || pathname.startsWith("/estudos") || pathname.startsWith("/diretrizes")) return {
       titulo: "Inteligência científica",
       texto: "Cruze estudos, recomendações e aplicação prática.",
-      links: [["/biblioteca", "Abrir biblioteca", "conhecimento"], ["/estudos", "Estudos relacionados", "evidencia"], ["/assistente", "Discutir com CorVIA AI", "assistente"]] as [string, string, NomeIcone][],
+      links: [["/biblioteca", "Abrir biblioteca", "conhecimento"], ["/estudos", "Estudos relacionados", "evidencia"], ["/assistente", "Discutir com o Assistente", "assistente"]] as [string, string, NomeIcone][],
     };
     if (pathname.startsWith("/exames") || pathname.startsWith("/galeria")) return {
       titulo: "Inteligência diagnóstica",
@@ -185,7 +185,7 @@ function Intelligence({ pathname }: { pathname: string }) {
     return {
       titulo: "CorVIA Intelligence",
       texto: "O sistema aproxima conhecimento, decisão e ação conforme seu contexto.",
-      links: [["/assistente", "Perguntar à CorVIA AI", "assistente"], ["/diretrizes", "Atualização clínica", "evidencia"], ["/favoritos", "Abrir favoritos", "favorito"]] as [string, string, NomeIcone][],
+      links: [["/assistente", "Perguntar ao Assistente", "assistente"], ["/diretrizes", "Atualização clínica", "evidencia"], ["/favoritos", "Abrir favoritos", "favorito"]] as [string, string, NomeIcone][],
     };
   }, [pathname]);
 
@@ -200,7 +200,7 @@ function Intelligence({ pathname }: { pathname: string }) {
         </div>
       </section>
       <Link to="/busca" className="cos-intelligence__graph"><span>◎</span><span><strong>Tudo com Tudo</strong><small>Explorar relações clínicas</small></span><Icone nome="seta" /></Link>
-      <Link to="/assistente" className="cos-intelligence__ask"><span>✦</span><span><strong>Perguntar no contexto</strong><small>Leve esta área para a CorVIA AI.</small></span><Icone nome="seta" /></Link>
+      <Link to="/assistente" className="cos-intelligence__ask"><span>✦</span><span><strong>Perguntar no contexto</strong><small>Leve este contexto para o Assistente.</small></span><Icone nome="seta" /></Link>
     </aside>
   );
 }
@@ -242,7 +242,7 @@ export default function ShellClinicalOSLaunch() {
   }, [location.pathname, usuario?.id]);
 
   useEffect(() => {
-    function abrirAssistentePessoal() { setAssistente(true); }
+    function abrirAssistentePessoal() { setDrawer(false); setConta(false); setAssistente(true); }
     window.addEventListener("corvia:abrir-assistente-pessoal", abrirAssistentePessoal);
     return () => window.removeEventListener("corvia:abrir-assistente-pessoal", abrirAssistentePessoal);
   }, []);
@@ -282,6 +282,10 @@ export default function ShellClinicalOSLaunch() {
 
   async function encerrar() {
     setDrawer(false); setConta(false); setAssistente(false);
+    const chave = chaveContextosRecentes(usuario?.id);
+    if (chave) {
+      try { sessionStorage.removeItem(chave); } catch { /* logout não depende do storage do navegador */ }
+    }
     await sair();
     navigate("/entrar", { replace: true });
   }
@@ -293,7 +297,7 @@ export default function ShellClinicalOSLaunch() {
         <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/corvia-logo-compacta.png" alt="" /></span><span className="cos-brand__text"><strong>CorVIA</strong><small>Clinical OS</small></span></NavLink>
         <Navegacao secoes={secoes} />
         <div className="cos-sidebar__footer">
-          <button type="button" className="cos-assistant-sidebar" onClick={() => setAssistente(true)}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamento e rotina</small></span></button>
+          <button type="button" className="cos-assistant-sidebar" onClick={() => { setDrawer(false); setConta(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamento e rotina</small></span></button>
           <Link to="/busca" className="cos-relations"><span>◎</span><span><strong>Explorar relações</strong><small>Knowledge Graph</small></span></Link>
           <button type="button" className="cos-signout" onClick={() => void encerrar()}><Icone nome="sair" /><span>Sair</span></button>
         </div>
@@ -301,11 +305,11 @@ export default function ShellClinicalOSLaunch() {
 
       <div className="cos-shell">
         <header className="cos-topbar">
-          <button type="button" className="cos-topbar__menu" onClick={() => setDrawer(true)} aria-label="Abrir navegação"><Icone nome="menu" /></button>
+          <button type="button" className="cos-topbar__menu" onClick={() => { setAssistente(false); setConta(false); setDrawer(true); }} aria-label="Abrir navegação"><Icone nome="menu" /></button>
           <NavLink to="/" className="cos-topbar__mobile-brand" aria-label="CorVIA — início"><img src="/corvia-logo-compacta.png" alt="" /></NavLink>
           <form className="cos-command-mini" role="search" onSubmit={executar}><Icone nome="busca" /><input ref={buscaRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pesquisar ou executar uma ação..." aria-label="Pesquisar ou executar uma ação" /><kbd>⌘ K</kbd><button type="submit" aria-label="Executar"><Icone nome="seta" /></button></form>
           <div className="cos-topbar__actions">
-            <button type="button" className="cos-personal-trigger" onClick={() => setAssistente(true)}><span>✦</span><span>Assistente</span></button>
+            <button type="button" className="cos-personal-trigger" onClick={() => { setDrawer(false); setConta(false); setAssistente(true); }}><span>✦</span><span>Assistente</span></button>
             {!naEmergencia && <button type="button" className="cos-emergency" onClick={() => navigate("/emergencia")}><IconeEmergencia /><span>Emergência</span></button>}
             <NavLink to="/corvia-mail" className="cos-topbar__icon" aria-label="CorVIA Mail"><Icone nome="mail" /></NavLink>
             <div className="cos-account" ref={contaRef}>
@@ -326,7 +330,7 @@ export default function ShellClinicalOSLaunch() {
       <div className={`cos-drawer-backdrop${drawer ? " is-visible" : ""}`} onClick={() => setDrawer(false)} aria-hidden="true" />
       <aside className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/corvia-logo-compacta.png" alt="CorVIA" /></NavLink><button type="button" onClick={() => setDrawer(false)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
 
-      <nav className="cos-mobilebar" aria-label="Ações principais"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><button type="button" className="cos-mobilebar__assistant" onClick={() => setAssistente(true)}><span>✦</span><span>Assistente</span></button><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button type="button" onClick={() => setDrawer(true)}><Icone nome="mais" /><span>Mais</span></button></nav>
+      <nav className="cos-mobilebar" aria-label="Ações principais"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><button type="button" className="cos-mobilebar__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span>Assistente</span></button><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button type="button" onClick={() => { setAssistente(false); setDrawer(true); }}><Icone nome="mais" /><span>Mais</span></button></nav>
 
       <PersonalAssistantPanel aberto={assistente} onClose={() => setAssistente(false)} />
       <BoasVindas />
