@@ -1,0 +1,73 @@
+/* CorVIA Mail identity — shared by onboarding and professional inbox. */
+.corvia-mail-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .58rem;
+}
+.corvia-mail-logo > img { width: auto; height: 46px; }
+.corvia-mail-logo__wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  color: #eaf8fa;
+  font: 750 1.55rem/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -.04em;
+}
+.corvia-mail-logo__wordmark > b { color: #4dd7df; font: inherit; }
+.corvia-mail-logo__wordmark > em {
+  margin-left: .28em;
+  color: #9e87ec;
+  font: 600 .76em/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -.02em;
+}
+.corvia-mail-mark { display: inline-grid; place-items: center; flex: 0 0 auto; }
+.corvia-mail-mark > img { width: auto; height: 27px; }
+
+/* Authenticated Mail gateway: compact Clinical OS surface, not a generic form page. */
+.clinical-os .pagina:has(.corvia-mail-mark) {
+  width: min(100%, 720px) !important;
+  max-width: 720px !important;
+  margin-inline: auto;
+}
+.clinical-os .pagina:has(.corvia-mail-mark) > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 44px;
+  margin-bottom: .6rem !important;
+  padding: .55rem .65rem;
+  background: linear-gradient(145deg, rgba(9,28,40,.98), rgba(6,22,32,.99));
+  border: 1px solid rgba(126,183,201,.09);
+  border-radius: 11px;
+}
+.clinical-os .pagina:has(.corvia-mail-mark) .cartao {
+  background: linear-gradient(145deg, rgba(10,31,43,.98), rgba(6,23,33,.99));
+  border-color: rgba(126,183,201,.10);
+  box-shadow: inset 0 1px rgba(255,255,255,.018), 0 18px 38px rgba(0,0,0,.12);
+}
+.clinical-os .pagina:has(.corvia-mail-mark) input {
+  color: #eaf7f9;
+  background: rgba(255,255,255,.025);
+  border-color: rgba(126,183,201,.10);
+}
+.clinical-os .pagina:has(.corvia-mail-mark) input:focus {
+  border-color: rgba(56,202,213,.28);
+  box-shadow: 0 0 0 3px rgba(56,202,213,.045);
+}
+.clinical-os .pagina:has(.corvia-mail-mark) .eyebrow { color: #728d96; }
+.clinical-os .pagina:has(.corvia-mail-mark) .botao {
+  color: #041419;
+  background: linear-gradient(135deg, #31c3ce, #5fdde4);
+  border-color: transparent;
+}
+.clinical-os .pagina:has(.corvia-mail-mark) .botao--secundario {
+  color: #9bb3bb;
+  background: rgba(255,255,255,.022);
+  border: 1px solid rgba(126,183,201,.09);
+}
+
+@media (max-width: 900px) {
+  .corvia-mail-logo > img { height: 38px; }
+  .corvia-mail-logo__wordmark { font-size: 1.3rem; }
+  .clinical-os .pagina:has(.corvia-mail-mark) { padding-bottom: 5.2rem; }
+}
