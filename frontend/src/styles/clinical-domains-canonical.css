@@ -1,0 +1,409 @@
+/* ========================================================================
+   CorVIA Clinical OS — canonical domain migration layer
+   Route context is supplied by ClinicalRouteContext. This file deliberately
+   converts legacy generic cards/forms into the same command-center language
+   without changing clinical/business semantics.
+   ======================================================================== */
+
+body[class*="corvia-route--"] .clinical-os .cos-content {
+  color: var(--ccc-text, #f4fbfc);
+}
+body[class*="corvia-route--"] .clinical-os .cos-content > h1,
+body[class*="corvia-route--"] .clinical-os .cos-content > h2,
+body[class*="corvia-route--"] .clinical-os .cos-content > h3 {
+  color: #f2fbfc;
+  letter-spacing: -.035em;
+}
+body[class*="corvia-route--"] .clinical-os .cos-content > .eyebrow {
+  color: #59d1d9;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+
+/* Generic primitives still used by mature feature code. */
+body[class*="corvia-route--"] .clinical-os .cartao {
+  color: #d9eaed;
+  background: linear-gradient(145deg, rgba(11,34,47,.94), rgba(6,23,33,.97));
+  border-color: rgba(126,183,201,.10);
+  box-shadow: inset 0 1px rgba(255,255,255,.018), 0 14px 34px rgba(0,0,0,.08);
+}
+body[class*="corvia-route--"] .clinical-os .cartao--clinico {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(56,202,213,.045), transparent 10rem),
+    linear-gradient(145deg, rgba(11,34,47,.96), rgba(6,23,33,.98));
+}
+body[class*="corvia-route--"] .clinical-os .cartao:hover {
+  border-color: rgba(56,202,213,.16);
+}
+body[class*="corvia-route--"] .clinical-os input,
+body[class*="corvia-route--"] .clinical-os select,
+body[class*="corvia-route--"] .clinical-os textarea {
+  color: #eaf7f9;
+  background: rgba(2,14,21,.42);
+  border-color: rgba(126,183,201,.12);
+}
+body[class*="corvia-route--"] .clinical-os input::placeholder,
+body[class*="corvia-route--"] .clinical-os textarea::placeholder { color: #5f7c86; }
+body[class*="corvia-route--"] .clinical-os input:focus,
+body[class*="corvia-route--"] .clinical-os select:focus,
+body[class*="corvia-route--"] .clinical-os textarea:focus {
+  border-color: rgba(56,202,213,.36);
+  box-shadow: 0 0 0 3px rgba(56,202,213,.045);
+  outline: 0;
+}
+body[class*="corvia-route--"] .clinical-os label { color: #b4cbd1; }
+body[class*="corvia-route--"] .clinical-os .botao {
+  border-color: rgba(56,202,213,.12);
+}
+body[class*="corvia-route--"] .clinical-os .botao:not(.botao--secundario) {
+  color: #031319;
+  background: linear-gradient(135deg, #32c4cf, #68dfe5);
+  border-color: transparent;
+  box-shadow: 0 12px 24px -19px rgba(56,202,213,.8);
+}
+body[class*="corvia-route--"] .clinical-os .botao--secundario {
+  color: #9fb8bf;
+  background: rgba(255,255,255,.02);
+  border-color: rgba(126,183,201,.10);
+}
+body[class*="corvia-route--"] .clinical-os .botao--secundario:hover {
+  color: #e7f9fa;
+  background: rgba(56,202,213,.045);
+  border-color: rgba(56,202,213,.18);
+}
+body[class*="corvia-route--"] .clinical-os .aviso {
+  color: #a9bec4;
+  background: rgba(56,202,213,.035);
+  border-color: rgba(56,202,213,.11);
+}
+body[class*="corvia-route--"] .clinical-os table {
+  color: #cfe0e4;
+  background: rgba(5,20,29,.35);
+  border-color: rgba(126,183,201,.08);
+}
+body[class*="corvia-route--"] .clinical-os th {
+  color: #7f9aa3;
+  background: rgba(255,255,255,.018);
+  border-color: rgba(126,183,201,.08);
+}
+body[class*="corvia-route--"] .clinical-os td { border-color: rgba(126,183,201,.065); }
+body[class*="corvia-route--"] .clinical-os tr:hover td { background: rgba(56,202,213,.02); }
+
+/* ------------------------------------------------------------------------
+   Documents & Requests — action first, template second, archive last.
+   ------------------------------------------------------------------------ */
+body.corvia-route--documentos .clinical-os .cos-content {
+  width: min(100%, 1180px);
+  max-width: 1180px;
+}
+body.corvia-route--documentos .clinical-os .cos-content > h1 {
+  margin: .08rem 0 .22rem;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+body.corvia-route--documentos .clinical-os .cos-content > h1 + p {
+  margin-top: 0;
+  color: #829ca5 !important;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .62rem;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico {
+  position: relative;
+  min-height: 122px;
+  padding: .9rem .9rem .8rem 3.55rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico::before {
+  position: absolute;
+  top: .88rem;
+  left: .85rem;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: #70e0e5;
+  background: rgba(56,202,213,.07);
+  border: 1px solid rgba(56,202,213,.10);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico:nth-child(1)::before { content: "＋"; }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico:nth-child(2)::before { content: "✓"; color: #c5a9ff; background: rgba(161,124,245,.07); border-color: rgba(161,124,245,.11); }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico:nth-child(3)::before { content: "▤"; color: #74aef5; background: rgba(76,159,255,.07); border-color: rgba(76,159,255,.11); }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico strong { color: #eefafb; font-size: .88rem; }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico:hover { transform: translateY(-1px); }
+body.corvia-route--documentos .clinical-os #fluxo-documento > .cartao {
+  margin-top: .85rem !important;
+  border-color: rgba(56,202,213,.13);
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos {
+  padding-top: .2rem;
+  border-top: 1px solid rgba(126,183,201,.07);
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos .cartao {
+  padding: .72rem .8rem;
+  background: rgba(255,255,255,.017);
+}
+body.corvia-route--documentos .clinical-os pre {
+  color: #c9dce1 !important;
+  background: #04141e !important;
+  border-color: rgba(126,183,201,.09) !important;
+}
+body.corvia-route--documentos .clinical-os code {
+  color: #81e6eb !important;
+  background: rgba(56,202,213,.055) !important;
+  border: 1px solid rgba(56,202,213,.08);
+}
+
+/* ------------------------------------------------------------------------
+   Patient / Round workspace — patient is context, not the whole product.
+   ------------------------------------------------------------------------ */
+body.corvia-route--pacientes .clinical-os .cos-content {
+  width: min(100%, 1240px);
+  max-width: 1240px;
+}
+body.corvia-route--pacientes .clinical-os .cos-content > section.cartao:first-child {
+  padding: .7rem .8rem;
+  background: linear-gradient(90deg, rgba(56,202,213,.045), rgba(255,255,255,.012));
+}
+body.corvia-route--pacientes .clinical-os .cos-content > section.cartao:first-child .dado {
+  color: #72e0e5;
+}
+body.corvia-route--pacientes .clinical-os .cos-content > p.eyebrow { margin-top: 1rem; }
+body.corvia-route--pacientes .clinical-os .cos-content > h1 {
+  margin: .08rem 0 .35rem;
+  font-size: clamp(1.45rem,2vw,2rem);
+}
+body.corvia-route--pacientes .clinical-os .cos-content > .aviso {
+  margin: 0 0 .7rem !important;
+  padding: .52rem .65rem;
+  border: 1px solid rgba(56,202,213,.08) !important;
+  border-radius: 9px;
+  font-size: .72rem;
+}
+body.corvia-route--pacientes .clinical-os .cartao--clinico {
+  border-left: 2px solid rgba(56,202,213,.18);
+}
+body.corvia-route--pacientes .clinical-os .cartao--clinico:has(.dado) {
+  padding: .8rem;
+}
+body.corvia-route--pacientes .clinical-os .cartao--clinico:has(.dado) > div:first-child {
+  min-height: 34px;
+}
+body.corvia-route--pacientes .clinical-os .cartao--clinico .dado {
+  color: #66dce3;
+  font-size: 1rem;
+}
+body.corvia-route--pacientes .clinical-os .cartao--clinico .cartao {
+  background: rgba(2,14,21,.30);
+  box-shadow: none;
+}
+body.corvia-route--pacientes .clinical-os .grade[style*="repeat(3"] {
+  padding: .5rem;
+  background: rgba(255,255,255,.012);
+  border: 1px solid rgba(126,183,201,.06);
+  border-radius: 9px;
+}
+
+/* ------------------------------------------------------------------------
+   Agenda — dense operational surface, not generic calendar SaaS.
+   ------------------------------------------------------------------------ */
+body.corvia-route--agenda .clinical-os .cos-content {
+  width: 100%;
+  max-width: none;
+  padding-inline: .75rem;
+}
+body.corvia-route--agenda .clinical-os .agenda-status,
+body.corvia-route--agenda .clinical-os .agenda-contas-destaque,
+body.corvia-route--agenda .clinical-os .agenda-ferramentas,
+body.corvia-route--agenda .clinical-os .agenda-filtros,
+body.corvia-route--agenda .clinical-os .agenda-calendario,
+body.corvia-route--agenda .clinical-os .agenda-insights article {
+  color: #cfe2e6;
+  background: linear-gradient(145deg, rgba(10,31,43,.94), rgba(6,23,33,.97));
+  border-color: rgba(126,183,201,.09) !important;
+  box-shadow: none !important;
+}
+body.corvia-route--agenda .clinical-os .agenda-contas-destaque {
+  background: radial-gradient(circle at 100% 0%,rgba(76,159,255,.055),transparent 18rem),linear-gradient(145deg,rgba(10,31,43,.94),rgba(6,23,33,.97));
+}
+body.corvia-route--agenda .clinical-os .agenda-conta-provider {
+  color: #b9ced4;
+  background: rgba(255,255,255,.018) !important;
+  border-color: rgba(126,183,201,.07) !important;
+}
+body.corvia-route--agenda .clinical-os .agenda-dia {
+  min-height: 108px;
+  background: rgba(255,255,255,.012) !important;
+  border-color: rgba(126,183,201,.07) !important;
+}
+body.corvia-route--agenda .clinical-os .agenda-dia > header {
+  color: #7f9aa4;
+  border-color: rgba(126,183,201,.06) !important;
+}
+body.corvia-route--agenda .clinical-os .agenda-dia--hoje {
+  background: rgba(56,202,213,.027) !important;
+  box-shadow: inset 0 2px rgba(56,202,213,.34);
+}
+body.corvia-route--agenda .clinical-os .agenda-dia__livre {
+  color: #5f7d87;
+  background: transparent !important;
+  border: 1px dashed rgba(126,183,201,.08) !important;
+}
+body.corvia-route--agenda .clinical-os .agenda-dia__livre:hover { color: #86e6eb; background: rgba(56,202,213,.025) !important; }
+body.corvia-route--agenda .clinical-os .agenda-insights {
+  gap: .48rem;
+}
+body.corvia-route--agenda .clinical-os .agenda-insights article {
+  border-radius: 10px;
+}
+body.corvia-route--agenda .clinical-os .agenda-modal__painel {
+  color: #dcebed;
+  background: #081d2a;
+  border-color: rgba(126,183,201,.12);
+  box-shadow: 0 30px 80px rgba(0,0,0,.42);
+}
+
+/* ------------------------------------------------------------------------
+   Prescribing — consequential action surface.
+   ------------------------------------------------------------------------ */
+body.corvia-route--prescricao .clinical-os .cos-content {
+  width: min(100%,1220px);
+  max-width: 1220px;
+}
+body.corvia-route--prescricao .clinical-os .cartao {
+  border-color: rgba(126,183,201,.09);
+}
+body.corvia-route--prescricao .clinical-os .cartao:has(textarea),
+body.corvia-route--prescricao .clinical-os .cartao:has(input) {
+  background: linear-gradient(145deg,rgba(10,31,43,.96),rgba(6,23,33,.98));
+}
+
+/* ------------------------------------------------------------------------
+   Assistant — two modes, one Intelligence architecture.
+   ------------------------------------------------------------------------ */
+body.corvia-route--assistente .clinical-os .cos-content { width: 100%; max-width: none; }
+body.corvia-route--assistente .clinical-os .ia-escolha > h1 { margin-top: .2rem; }
+body.corvia-route--assistente .clinical-os .ia-escolha__cartao {
+  position: relative;
+  overflow: hidden;
+}
+body.corvia-route--assistente .clinical-os .ia-escolha__cartao::after {
+  content: "";
+  position: absolute;
+  inset: auto -3rem -4rem auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: rgba(56,202,213,.035);
+  pointer-events: none;
+}
+body.corvia-route--assistente .clinical-os .ia-escolha__cartao:nth-child(2)::after { background: rgba(161,124,245,.045); }
+body.corvia-route--assistente .clinical-os .ia__composer textarea,
+body.corvia-route--assistente .clinical-os .ia__composer input {
+  background: rgba(2,14,21,.42);
+}
+
+/* ------------------------------------------------------------------------
+   Connected accounts / profile / subscription / admin.
+   ------------------------------------------------------------------------ */
+body.corvia-route--integracoes .clinical-os .cos-content,
+body.corvia-route--conta .clinical-os .cos-content,
+body.corvia-route--admin .clinical-os .cos-content {
+  width: min(100%,1180px);
+  max-width: 1180px;
+}
+body.corvia-route--integracoes .clinical-os .cartao,
+body.corvia-route--conta .clinical-os .cartao,
+body.corvia-route--admin .clinical-os .cartao {
+  background: linear-gradient(145deg,rgba(10,31,43,.95),rgba(6,23,33,.98));
+}
+body.corvia-route--integracoes .clinical-os .cartao img,
+body.corvia-route--conta .clinical-os .cartao img { filter: saturate(.92); }
+body.corvia-route--admin .clinical-os .dado { color: #71dfe5; }
+body.corvia-route--admin .clinical-os .aviso { border-radius: 9px; }
+
+/* ------------------------------------------------------------------------
+   Network, telediagnosis, remaining knowledge/tools.
+   ------------------------------------------------------------------------ */
+body.corvia-route--rede .clinical-os .cos-content,
+body.corvia-route--telediagnostico .clinical-os .cos-content,
+body.corvia-route--conhecimento .clinical-os .cos-content,
+body.corvia-route--ferramentas .clinical-os .cos-content {
+  width: min(100%,1200px);
+  max-width: 1200px;
+}
+body.corvia-route--rede .clinical-os .cartao,
+body.corvia-route--telediagnostico .clinical-os .cartao,
+body.corvia-route--conhecimento .clinical-os .cartao,
+body.corvia-route--ferramentas .clinical-os .cartao {
+  background: linear-gradient(145deg,rgba(10,31,43,.94),rgba(6,23,33,.97));
+}
+body.corvia-route--ferramentas .clinical-os .cartao--clinico:hover,
+body.corvia-route--conhecimento .clinical-os .cartao--clinico:hover {
+  transform: translateY(-1px);
+  border-color: rgba(56,202,213,.18);
+}
+
+/* ------------------------------------------------------------------------
+   Dense mobile command surfaces.
+   ------------------------------------------------------------------------ */
+@media (max-width: 900px) {
+  body[class*="corvia-route--"] .clinical-os .cos-content {
+    width: 100%;
+    max-width: none;
+    padding: .7rem .65rem 5.2rem;
+  }
+  body[class*="corvia-route--"] .clinical-os .grade--2,
+  body[class*="corvia-route--"] .clinical-os .grade--3 { grid-template-columns: 1fr; }
+
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: .36rem;
+  }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico {
+    min-height: 94px;
+    padding: .55rem .35rem;
+    text-align: center !important;
+  }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico::before {
+    position: static;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto .34rem;
+  }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico strong { font-size: .58rem; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico p { display: none; }
+
+  body.corvia-route--pacientes .clinical-os .cos-content > section.cartao:first-child {
+    padding: .55rem .6rem;
+  }
+  body.corvia-route--pacientes .clinical-os .cartao--clinico > div:first-child {
+    gap: .35rem !important;
+  }
+  body.corvia-route--pacientes .clinical-os .cartao--clinico > div:first-child .botao {
+    margin-left: auto !important;
+  }
+
+  body.corvia-route--agenda .clinical-os .cos-content { padding-inline: .5rem; }
+  body.corvia-route--agenda .clinical-os .agenda-contas-destaque { display: none; }
+  body.corvia-route--agenda .clinical-os .agenda-status { overflow-x: auto; white-space: nowrap; }
+  body.corvia-route--agenda .clinical-os .agenda-ferramentas { gap: .45rem; }
+  body.corvia-route--agenda .clinical-os .agenda-visoes { overflow-x: auto; }
+  body.corvia-route--agenda .clinical-os .agenda-layout { display: block; }
+  body.corvia-route--agenda .clinical-os .agenda-insights { display: none; }
+  body.corvia-route--agenda .clinical-os .agenda-grade--semana { grid-template-columns: 1fr !important; }
+  body.corvia-route--agenda .clinical-os .agenda-dia { min-height: 82px; }
+
+  body.corvia-route--assistente .clinical-os .ia-escolha { padding-inline: .05rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > .cartao--clinico,
+  body.corvia-route--ferramentas .clinical-os .cartao--clinico,
+  body.corvia-route--conhecimento .clinical-os .cartao--clinico { transition: none; }
+}
