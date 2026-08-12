@@ -160,7 +160,9 @@ def liberado_para_uso(registro: KycVerification | None) -> bool:
     ver `council_check.py`), OU se já passou pela revisão definitiva.
     "aguardando_revisao" sozinho NUNCA libera — é o caso em que a
     checagem (de CRM, hoje o único conselho com checagem em potencial)
-    falhou ou não confirmou o registro."""
+    falhou ou não confirmou o registro. "rejeitado" e "reenvio_solicitado"
+    (ver `solicitar_reenvio`) também nunca liberam — são as duas decisões
+    definitivas que tiram o acesso até um novo envio."""
     return registro is not None and registro.status in (
         "liberado_conselho_ok", "liberado_sem_checagem", "aprovado",
     )
@@ -197,6 +199,25 @@ def aprovar(db: Session, registro: KycVerification, admin: User, nota: str | Non
 
 def rejeitar(db: Session, registro: KycVerification, admin: User, nota: str) -> KycVerification:
     registro.status = "rejeitado"
+    registro.aprovado_em = None
+    registro.aprovado_por = admin.id
+    registro.nota_revisao = nota
+    return registro
+
+
+def solicitar_reenvio(db: Session, registro: KycVerification, admin: User, nota: str) -> KycVerification:
+    """Decisão distinta de `rejeitar` (ficha administrativa do assinante,
+    11/08/2026) — para quando a submissão está quase certa e só falta um
+    documento melhor (foto ilegível, borrada, cortada), não uma recusa
+    definitiva. Efeito de acesso é idêntico ao de `rejeitar`: o status sai
+    do conjunto que `liberado_para_uso` aceita, então quem já estava usando
+    a plataforma por checagem automática de conselho perde o acesso até
+    reenviar — mesma severidade de `rejeitar`, só muda o rótulo e a
+    mensagem que o assinante lê (`nota_revisao`), porque é isso que o
+    distingue de uma rejeição definitiva. `submeter()` não olha o status
+    anterior antes de aceitar um reenvio, então o assinante pode responder
+    a qualquer momento, como já podia depois de `rejeitar`."""
+    registro.status = "reenvio_solicitado"
     registro.aprovado_em = None
     registro.aprovado_por = admin.id
     registro.nota_revisao = nota

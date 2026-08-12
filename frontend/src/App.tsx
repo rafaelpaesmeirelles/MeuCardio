@@ -34,6 +34,8 @@ const Condicoes = lazy(() => import("./pages/Condicoes"));
 const Round = lazy(() => import("./pages/RoundGerenciavel"));
 const Assistente = lazy(() => import("./pages/Assistente"));
 const Admin = lazy(() => import("./pages/Admin"));
+const AdminAssinantes = lazy(() => import("./pages/AdminAssinantes"));
+const AdminFichaAssinante = lazy(() => import("./pages/AdminFichaAssinante"));
 const SolicitarAcesso = lazy(() => import("./pages/SolicitarAcesso"));
 const EsqueciSenha = lazy(() => import("./pages/EsqueciSenha"));
 const RedefinirSenha = lazy(() => import("./pages/RedefinirSenha"));
@@ -183,6 +185,12 @@ export default function App() {
           <Route path="privacidade" element={<PoliticaPrivacidade />} />
           <Route path="termos" element={<TermosUso />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
+          {usuario.role === "admin" && (
+            <Route path="admin/usuarios" element={<AdminAssinantes />} />
+          )}
+          {usuario.role === "admin" && (
+            <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />
+          )}
           {usuario.role === "admin" && (
             <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
           )}

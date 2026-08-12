@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 
@@ -357,6 +358,15 @@ export default function Admin() {
     <>
       <p className="eyebrow">Administração</p>
       <h1>Usuários</h1>
+
+      <Link to="/admin/usuarios" className="cartao cartao--clinico" style={{ display: "block", marginTop: "0.8rem", maxWidth: 560, textDecoration: "none" }}>
+        <strong>Ficha completa de assinantes →</strong>
+        <p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>
+          Busca e filtro por status, KYC e assinatura, com a ficha administrativa completa
+          de cada cadastro (dados pessoais/profissionais, documentos de verificação e
+          histórico de decisões).
+        </p>
+      </Link>
 
       {erro && <div style={{ marginTop: "0.8rem", maxWidth: 560 }}><Erro mensagem={erro} /></div>}
 

@@ -13,7 +13,7 @@ from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import create_access_token, current_user, hash_password, verify_password
 from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
-from app.core.validators import UFS, cpf_valido, limpar_cpf
+from app.core.validators import UFS, cpf_mascarado, cpf_valido, limpar_cpf
 from app.models.audit import AuditLog
 from app.models.user import User
 from app.services import emails, instagram_profile
@@ -48,15 +48,11 @@ def login(form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get
     return {"access_token": create_access_token(user.email), "token_type": "bearer"}
 
 
-def _cpf_mascarado(cpf: str | None) -> str | None:
-    """Só os quatro últimos dígitos ficam legíveis — o suficiente pro titular
-    reconhecer o próprio cadastro sem expor o documento inteiro na tela."""
-    if not cpf:
-        return None
-    digitos = limpar_cpf(cpf)
-    if len(digitos) != 11:
-        return None
-    return f"***.***.{digitos[6:9]}-{digitos[9:]}"
+# `_cpf_mascarado` foi movida para `app/core/validators.py::cpf_mascarado`
+# (11/08/2026, ficha administrativa do assinante — issue de estabilização),
+# pra ser a única implementação de mascaramento de CPF do sistema. O alias
+# abaixo evita reescrever a única chamada local só por causa do rename.
+_cpf_mascarado = cpf_mascarado
 
 
 def _kyc_required(db: Session, user: User) -> bool:

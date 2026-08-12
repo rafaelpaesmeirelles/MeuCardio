@@ -46,7 +46,13 @@ def _status_publico(registro: KycVerification | None) -> dict:
         "liberado": verificacao.liberado_para_uso(registro),
         "conselho_check_status": registro.conselho_check_status,
         "criado_em": registro.criado_em,
-        "nota_revisao": registro.nota_revisao if registro.status == "rejeitado" else None,
+        # "reenvio_solicitado" (11/08/2026, ficha administrativa do
+        # assinante) é uma segunda decisão definitiva além de "rejeitado" —
+        # também precisa mostrar a nota, senão o assinante não sabe o que
+        # corrigir antes de reenviar.
+        "nota_revisao": (
+            registro.nota_revisao if registro.status in ("rejeitado", "reenvio_solicitado") else None
+        ),
     }
 
 

@@ -376,6 +376,7 @@ export default function Shell() {
     if (usuario?.role === "admin") {
       recursos.push(
         { to: "/admin", rotulo: "Administração", icone: "gestao", badge: pendentes },
+        { to: "/admin/usuarios", rotulo: "Assinantes", icone: "pacientes" },
         { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia" },
       );
     }

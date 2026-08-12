@@ -4,17 +4,20 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, field_validator
-from sqlalchemy import func, select
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import require_admin
+from app.core.validators import cpf_mascarado, limpar_cpf
 from app.models.agenda import GoogleTestUserRequest
 from app.models.audit import AuditLog
 from app.models.content import Document
 from app.models.kyc import KycVerification
+from app.models.subscription import Subscription
 from app.models.user import User
 from app.services import emails
+from app.services.entitlement import acesso_administrativo_sem_pagamento, tem_acesso_ao_produto
 from app.services.knowledge_graph import backfill_mesmo_tema
 from app.services.kyc import verificacao as kyc_verificacao
 from app.services.professional_profile import normalize_council, normalize_professional_title
@@ -909,6 +912,425 @@ def rejeitar_verificacao(item_id: int, dados: DecisaoKyc, db: Session = Depends(
     ))
     db.commit()
     return {"id": item.id, "status": item.status}
+
+
+@router.post("/kyc/{item_id}/solicitar-reenvio")
+def solicitar_reenvio_verificacao(
+    item_id: int, dados: DecisaoKyc, db: Session = Depends(get_db), admin=Depends(require_admin),
+):
+    """Terceira decisão possível além de aprovar/rejeitar (11/08/2026, ficha
+    administrativa do assinante) — para quando a submissão está quase certa
+    e só falta um documento melhor (foto ilegível, borrada, cortada), sem
+    ser uma recusa definitiva. Ver `KycVerification.status ==
+    "reenvio_solicitado"` e `kyc_verificacao.solicitar_reenvio` — mesmo
+    efeito de acesso de `rejeitar` (o assinante sai do conjunto que
+    `liberado_para_uso` aceita até reenviar), rótulo e nota diferentes.
+
+    Nunca sobrescreve o histórico de uma decisão anterior: como `aprovar`/
+    `rejeitar`, esta rota só muda o `status` atual do registro (que É
+    mutável — é o mesmo registro que o assinante reenvia por cima) e grava
+    MAIS uma linha de `AuditLog`, nunca apagando as anteriores. Quem quiser
+    a sequência completa de decisões usa `GET /admin/usuarios/{id}` — o
+    histórico ali vem inteiro do `AuditLog`, não do estado atual da linha.
+    """
+    if not dados.nota or not dados.nota.strip():
+        raise HTTPException(
+            status_code=422,
+            detail="Explique o que precisa ser reenviado — o assinante precisa saber o que corrigir.",
+        )
+    item = db.get(KycVerification, item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Verificação não encontrada.")
+    kyc_verificacao.solicitar_reenvio(db, item, admin, dados.nota.strip())
+    db.add(AuditLog(
+        user_id=admin.id, action="kyc_reenvio_solicitado", entity="kyc_verifications",
+        entity_id=str(item_id), detail={"user_id": item.owner_id, "nota": dados.nota.strip()},
+    ))
+    db.commit()
+    return {"id": item.id, "status": item.status}
+
+
+# ---------------------------------------------------------------------------
+# Ficha administrativa completa do assinante (11/08/2026, issue de
+# estabilização pré-lançamento) — um único lugar para validar cadastro, KYC
+# e assinatura de um usuário, para análise/decisão humana. Convive com
+# `GET /admin/users` (sem paginação/busca, mantida como está — é a rota que
+# `Admin.tsx`/`Shell.tsx` já usam para a fila de aprovação de cadastro e o
+# contador de pendentes; refazer essas duas telas em cima da rota nova é
+# trabalho de frontend, fora desta frente) e com `GET /admin/kyc` (fila de
+# revisão pendente — a ficha aqui é "tudo sobre ESTE usuário", não fila).
+#
+# Nada aqui reimplementa a decisão de acesso: `tem_acesso_ao_produto()` e
+# `acesso_administrativo_sem_pagamento()` (app/services/entitlement.py) são
+# chamadas diretamente, nunca reconstruídas em paralelo.
+# ---------------------------------------------------------------------------
+
+_CONTA_STATUS_VALORES = {"pendente", "aprovado", "rejeitado"}
+_KYC_STATUS_VALORES = {
+    "aguardando_revisao", "liberado_conselho_ok", "liberado_sem_checagem",
+    "aprovado", "rejeitado", "reenvio_solicitado", "sem_kyc",
+}
+_ASSINATURA_STATUS_VALORES = {
+    "inativo", "ativo", "teste", "pendente", "inadimplente",
+    "suspenso", "cancelado", "pausado", "sem_assinatura",
+}
+_ACOES_DECISAO_KYC = {"kyc_aprovado", "kyc_rejeitado", "kyc_reenvio_solicitado"}
+
+
+def _linha_lista_usuario(u: User, kyc: KycVerification | None, sub: Subscription | None) -> dict:
+    return {
+        "id": u.id,
+        "full_name": u.full_name,
+        "email": u.email,
+        "cpf_mascarado": cpf_mascarado(u.cpf),
+        "profession": u.profession,
+        "council_name": u.council_name,
+        "council_name_other": u.council_name_other,
+        "council_number": u.council_number,
+        "council_state": u.council_state,
+        "council_state_other": u.council_state_other,
+        "created_at": u.created_at,
+        "status": u.status,
+        "convidado": u.convidado,
+        "investidor": u.investidor,
+        "kyc_status": kyc.status if kyc else None,
+        "kyc_aprovado_em": kyc.aprovado_em if kyc else None,
+        "kyc_liberado_em": kyc.liberado_em if kyc else None,
+        "subscription_status": sub.status if sub else None,
+        "subscription_plano": sub.plano if sub else None,
+        "subscription_periodicidade": sub.periodicidade if sub else None,
+    }
+
+
+@router.get("/usuarios")
+def listar_usuarios_ficha(
+    q: str | None = Query(None, max_length=160, description="Nome, e-mail, CPF ou nº do conselho"),
+    status: str | None = Query(None, description="Status da conta: pendente, aprovado ou rejeitado"),
+    kyc_status: str | None = Query(None, description="Status do KYC, ou 'sem_kyc'"),
+    subscription_status: str | None = Query(
+        None, description="Status da assinatura (kind=meucardio), ou 'sem_assinatura'"
+    ),
+    convidado: bool | None = Query(None),
+    investidor: bool | None = Query(None),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
+    db: Session = Depends(get_db),
+    _=Depends(require_admin),
+):
+    """Lista pesquisável e paginada, para o admin achar rápido o cadastro
+    que precisa validar. Filtros combináveis — todo `AND`, nunca `OR` entre
+    filtros diferentes (só `q` casa por `OR` entre os próprios campos de
+    busca)."""
+    if status is not None and status not in _CONTA_STATUS_VALORES:
+        raise HTTPException(status_code=422, detail=f"status inválido. Use um de: {sorted(_CONTA_STATUS_VALORES)}")
+    if kyc_status is not None and kyc_status not in _KYC_STATUS_VALORES:
+        raise HTTPException(status_code=422, detail=f"kyc_status inválido. Use um de: {sorted(_KYC_STATUS_VALORES)}")
+    if subscription_status is not None and subscription_status not in _ASSINATURA_STATUS_VALORES:
+        raise HTTPException(
+            status_code=422,
+            detail=f"subscription_status inválido. Use um de: {sorted(_ASSINATURA_STATUS_VALORES)}",
+        )
+
+    query = db.query(User)
+    if status:
+        query = query.filter(User.status == status)
+    if convidado is not None:
+        query = query.filter(User.convidado.is_(convidado))
+    if investidor is not None:
+        query = query.filter(User.investidor.is_(investidor))
+    if q and q.strip():
+        termo = q.strip()
+        termo_ilike = f"%{termo}%"
+        condicoes = [
+            User.full_name.ilike(termo_ilike),
+            User.email.ilike(termo_ilike),
+            User.council_number.ilike(termo_ilike),
+            User.crm.ilike(termo_ilike),
+        ]
+        digitos = limpar_cpf(termo)
+        if len(digitos) >= 3:
+            condicoes.append(User.cpf.ilike(f"%{digitos}%"))
+        query = query.filter(or_(*condicoes))
+    if kyc_status:
+        if kyc_status == "sem_kyc":
+            query = query.filter(User.id.notin_(select(KycVerification.owner_id)))
+        else:
+            query = query.filter(
+                User.id.in_(select(KycVerification.owner_id).where(KycVerification.status == kyc_status))
+            )
+    if subscription_status:
+        sub_meucardio = select(Subscription.user_id).where(Subscription.kind == "meucardio")
+        if subscription_status == "sem_assinatura":
+            query = query.filter(User.id.notin_(sub_meucardio))
+        else:
+            query = query.filter(
+                User.id.in_(sub_meucardio.where(Subscription.status == subscription_status))
+            )
+
+    total = query.count()
+    usuarios = (
+        query.order_by(User.created_at.desc(), User.id.desc())
+        .offset((page - 1) * page_size)
+        .limit(page_size)
+        .all()
+    )
+
+    ids = [u.id for u in usuarios]
+    kyc_por_usuario: dict[int, KycVerification] = {}
+    sub_por_usuario: dict[int, Subscription] = {}
+    if ids:
+        kyc_por_usuario = {
+            k.owner_id: k
+            for k in db.query(KycVerification).filter(KycVerification.owner_id.in_(ids)).all()
+        }
+        # Ordenado por id desc para o `setdefault` abaixo ficar com a
+        # assinatura kind=meucardio mais recente de cada usuário quando
+        # houver mais de uma (ex.: uma cancelada antiga + a atual).
+        for s in (
+            db.query(Subscription)
+            .filter(Subscription.user_id.in_(ids), Subscription.kind == "meucardio")
+            .order_by(Subscription.id.desc())
+            .all()
+        ):
+            sub_por_usuario.setdefault(s.user_id, s)
+
+    return {
+        "items": [
+            _linha_lista_usuario(u, kyc_por_usuario.get(u.id), sub_por_usuario.get(u.id))
+            for u in usuarios
+        ],
+        "page": page,
+        "page_size": page_size,
+        "total": total,
+        "has_more": page * page_size < total,
+    }
+
+
+def _dump_assinatura(s: Subscription) -> dict:
+    """Nunca inclui segredo, cartão ou CVV — só os IDs do Stripe (o próprio
+    dado sensível de pagamento nunca passa pelo nosso banco, é o Stripe quem
+    guarda)."""
+    return {
+        "id": s.id,
+        "kind": s.kind,
+        "course_id": s.course_id,
+        "plano": s.plano,
+        "periodicidade": s.periodicidade,
+        "status": s.status,
+        "current_period_end": s.current_period_end,
+        "stripe_customer_id": s.stripe_customer_id,
+        "stripe_subscription_id": s.stripe_subscription_id,
+        "last_event_at": s.last_event_at,
+        "created_at": s.created_at,
+        "updated_at": s.updated_at,
+    }
+
+
+def _dump_documentos_kyc(kyc: KycVerification) -> list[dict]:
+    documentos = []
+    for campo in sorted(_CAMPOS_DOCUMENTO):
+        disponivel = getattr(kyc, campo, None) is not None
+        documentos.append({
+            "campo": campo,
+            "disponivel": disponivel,
+            "url": f"/api/admin/kyc/{kyc.id}/documento/{campo}" if disponivel else None,
+        })
+    return documentos
+
+
+def _timeline_usuario(db: Session, alvo: User, kyc: KycVerification | None, assinaturas: list[Subscription]) -> list[dict]:
+    """Todo `AuditLog` relacionado a este usuário — cadastro/decisão de
+    acesso (`entity="user"`), KYC (`entity="kyc_verifications"`, pelo id do
+    registro DELE — é 1:1 com o usuário, `owner_id` é `unique=True`) e
+    assinatura (`entity="subscription"`, por todos os ids de `Subscription`
+    que já existiram para ele, não só a atual). Cronológico, mais recente
+    primeiro."""
+    condicoes = [and_(AuditLog.entity == "user", AuditLog.entity_id == str(alvo.id))]
+    if kyc is not None:
+        condicoes.append(and_(AuditLog.entity == "kyc_verifications", AuditLog.entity_id == str(kyc.id)))
+    ids_assinatura = [str(s.id) for s in assinaturas]
+    if ids_assinatura:
+        condicoes.append(and_(AuditLog.entity == "subscription", AuditLog.entity_id.in_(ids_assinatura)))
+
+    entradas = (
+        db.query(AuditLog)
+        .filter(or_(*condicoes))
+        .order_by(AuditLog.created_at.desc(), AuditLog.id.desc())
+        .all()
+    )
+    autor_ids = {e.user_id for e in entradas if e.user_id}
+    autores = (
+        {u.id: u.full_name for u in db.query(User).filter(User.id.in_(autor_ids)).all()}
+        if autor_ids else {}
+    )
+    return [
+        {
+            "id": e.id,
+            "action": e.action,
+            "entity": e.entity,
+            "entity_id": e.entity_id,
+            "detail": e.detail,
+            "created_at": e.created_at,
+            "admin_id": e.user_id,
+            "admin_nome": autores.get(e.user_id) if e.user_id else None,
+        }
+        for e in entradas
+    ]
+
+
+def _dump_kyc_bloco(kyc: KycVerification | None, timeline: list[dict]) -> dict:
+    if kyc is None:
+        return {
+            "existe": False, "id": None, "status": None,
+            "criado_em": None, "atualizado_em": None,
+            "liberado_em": None, "aprovado_em": None, "aprovado_por": None,
+            "nota_revisao": None,
+            "conselho_check_status": None, "conselho_check_detalhe": None, "conselho_check_em": None,
+            "ultima_decisao": None,
+            "documentos": [],
+        }
+    ultima = next(
+        (e for e in timeline if e["entity"] == "kyc_verifications" and e["action"] in _ACOES_DECISAO_KYC),
+        None,
+    )
+    ultima_decisao = None
+    if ultima:
+        ultima_decisao = {
+            "action": ultima["action"],
+            "em": ultima["created_at"],
+            "admin_id": ultima["admin_id"],
+            "admin_nome": ultima["admin_nome"],
+            "nota": (ultima["detail"] or {}).get("nota"),
+        }
+    return {
+        "existe": True,
+        "id": kyc.id,
+        "status": kyc.status,
+        "criado_em": kyc.criado_em,
+        "atualizado_em": kyc.atualizado_em,
+        "liberado_em": kyc.liberado_em,
+        "aprovado_em": kyc.aprovado_em,
+        "aprovado_por": kyc.aprovado_por,
+        "nota_revisao": kyc.nota_revisao,
+        "conselho_check_status": kyc.conselho_check_status,
+        "conselho_check_detalhe": kyc.conselho_check_detalhe,
+        "conselho_check_em": kyc.conselho_check_em,
+        "ultima_decisao": ultima_decisao,
+        "documentos": _dump_documentos_kyc(kyc),
+    }
+
+
+def _origem_acesso(user: User, sub_meucardio: Subscription | None, tem_acesso: bool) -> str:
+    """Rótulo de exibição, derivado da MESMA decisão que
+    `tem_acesso_ao_produto()` já tomou — nunca uma segunda regra."""
+    if user.role == "admin":
+        return "admin"
+    if user.convidado:
+        return "convidado"
+    if user.investidor:
+        return "investidor"
+    if tem_acesso and sub_meucardio is not None:
+        return "assinatura_paga"
+    return "sem_acesso"
+
+
+@router.get("/usuarios/{user_id}")
+def ficha_usuario(user_id: int, db: Session = Depends(get_db), _=Depends(require_admin)):
+    """A ficha administrativa completa — dados pessoais, dados
+    profissionais, assinatura/billing, KYC (com link para cada documento,
+    reaproveitando `GET /admin/kyc/{id}/documento/{campo}` já existente,
+    nunca um segundo caminho de servir arquivo) e o histórico integral de
+    `AuditLog` relacionado a este usuário."""
+    alvo = db.get(User, user_id)
+    if not alvo:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+
+    kyc = db.query(KycVerification).filter(KycVerification.owner_id == alvo.id).first()
+    assinaturas = (
+        db.query(Subscription)
+        .filter(Subscription.user_id == alvo.id)
+        .order_by(Subscription.id.desc())
+        .all()
+    )
+    sub_meucardio = next((s for s in assinaturas if s.kind == "meucardio"), None)
+
+    timeline = _timeline_usuario(db, alvo, kyc, assinaturas)
+
+    tem_acesso = tem_acesso_ao_produto(db, alvo)
+    origem = _origem_acesso(alvo, sub_meucardio, tem_acesso)
+
+    reviewed_by_nome = None
+    if alvo.reviewed_by:
+        revisor = db.get(User, alvo.reviewed_by)
+        reviewed_by_nome = revisor.full_name if revisor else None
+
+    return {
+        "id": alvo.id,
+        "full_name": alvo.full_name,
+        "email": alvo.email,
+        "cpf_mascarado": cpf_mascarado(alvo.cpf),
+        "status": alvo.status,
+        "role": alvo.role,
+        "created_at": alvo.created_at,
+        "conta": {
+            "status": alvo.status,
+            "is_active": alvo.is_active,
+            "role": alvo.role,
+            "reviewed_by": alvo.reviewed_by,
+            "reviewed_by_nome": reviewed_by_nome,
+            "reviewed_at": alvo.reviewed_at,
+            "rejection_note": alvo.rejection_note,
+            "created_at": alvo.created_at,
+            "convidado": alvo.convidado,
+            "investidor": alvo.investidor,
+            "convidado_plano_preferido": alvo.convidado_plano_preferido,
+            "profile_completion_required": alvo.profile_completion_required,
+        },
+        "dados_pessoais": {
+            "full_name": alvo.full_name,
+            "cpf": alvo.cpf,  # sem máscara — tela administrativa, autorização explícita
+            "birth_date": alvo.birth_date,
+            "email": alvo.email,
+            "instagram_handle": alvo.instagram_handle,
+            "endereco_residencial": {
+                "street": alvo.home_street, "number": alvo.home_number,
+                "complement": alvo.home_complement, "neighborhood": alvo.home_neighborhood,
+                "city": alvo.home_city, "state": alvo.home_state, "zip": alvo.home_zip,
+            },
+        },
+        "dados_profissionais": {
+            "profession": alvo.profession,
+            "council_name": alvo.council_name,
+            "council_name_other": alvo.council_name_other,
+            "council_number": alvo.council_number,
+            "council_state": alvo.council_state,
+            "council_state_other": alvo.council_state_other,
+            "crm": alvo.crm,
+            "rqe": alvo.rqe,
+            "specialty": alvo.specialty,
+            "professional_title": alvo.professional_title,
+            "workplace_name": alvo.workplace_name,
+            "workplace_department": alvo.workplace_department,
+            "workplace_role": alvo.workplace_role,
+            "workplace_notes": alvo.workplace_notes,
+            "include_workplace_on_documents": alvo.include_workplace_on_documents,
+            "endereco_profissional": {
+                "street": alvo.practice_street, "number": alvo.practice_number,
+                "complement": alvo.practice_complement, "neighborhood": alvo.practice_neighborhood,
+                "city": alvo.practice_city, "state": alvo.practice_state, "zip": alvo.practice_zip,
+                "phone": alvo.practice_phone,
+            },
+        },
+        "assinatura": {
+            "tem_acesso_ao_produto": tem_acesso,
+            "origem_acesso": origem,
+            "acesso_administrativo_sem_pagamento": acesso_administrativo_sem_pagamento(alvo),
+            "assinatura_principal": _dump_assinatura(sub_meucardio) if sub_meucardio else None,
+            "todas_assinaturas": [_dump_assinatura(s) for s in assinaturas],
+        },
+        "kyc": _dump_kyc_bloco(kyc, timeline),
+        "historico": timeline,
+    }
 
 
 @router.post("/grafo/backfill")

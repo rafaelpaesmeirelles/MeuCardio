@@ -1,0 +1,360 @@
+/* Ficha administrativa completa do assinante — frontend (issue de
+ * estabilização pré-lançamento, 11/08/2026). Backend em app/api/admin.py
+ * (GET /admin/usuarios, GET /admin/usuarios/{id}) já pronto e testado —
+ * este arquivo cobre só a apresentação das duas telas novas,
+ * AdminAssinantes.tsx (lista) e AdminFichaAssinante.tsx (ficha). */
+
+.admin-assinantes__filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.6rem;
+  margin: 0.9rem 0 1.1rem;
+}
+.admin-assinantes__campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+.admin-assinantes__campo label {
+  margin-bottom: 0.25rem;
+}
+.admin-assinantes__campo--busca { flex: 1 1 260px; min-width: 220px; }
+.admin-assinantes__campo select,
+.admin-assinantes__campo input { min-height: 42px; }
+.admin-assinantes__limpar {
+  min-height: 42px;
+  padding: 0 0.9rem;
+  color: var(--texto-secundario);
+  background: transparent;
+  border: 1px solid var(--borda);
+  border-radius: var(--r-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.admin-assinantes__limpar:hover { color: var(--acento); border-color: var(--acento); }
+
+.admin-assinantes__resumo {
+  margin: 0 0 0.6rem;
+  color: var(--texto-secundario);
+  font-size: 0.82rem;
+}
+
+.admin-assinantes__tabela-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  background: var(--superficie);
+}
+.admin-assinantes__tabela {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+.admin-assinantes__tabela th {
+  padding: 0.65rem 0.75rem;
+  color: var(--texto-secundario);
+  background: var(--superficie-suave, #f4f7f8);
+  border-bottom: 1px solid var(--borda);
+  font-family: var(--fonte-dados);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.admin-assinantes__tabela td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--borda);
+  vertical-align: top;
+}
+.admin-assinantes__linha {
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+.admin-assinantes__linha:hover,
+.admin-assinantes__linha:focus-visible { background: var(--acento-tinta); }
+.admin-assinantes__linha:last-child td { border-bottom: 0; }
+.admin-assinantes__nome { display: block; color: var(--texto); font-weight: 700; }
+.admin-assinantes__sub { display: block; color: var(--texto-secundario); font-size: 0.78rem; }
+.admin-assinantes__badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.25rem; }
+
+.admin-assinantes__paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+}
+.admin-assinantes__paginacao-botoes { display: flex; gap: 0.5rem; }
+
+/* Selo — extensões de cor além das duas já existentes em tokens.css
+   (selo--revisado / selo--pendente), reaproveitando o mesmo componente
+   visual para status de conta/KYC/assinatura. */
+.selo--sucesso { color: var(--teal-700); border-color: #a8d7dd; background: var(--acento-tinta); }
+.selo--atencao { color: var(--alerta); border-color: #efb8c0; background: var(--perigo-tinta); }
+.selo--neutro { color: var(--texto-secundario); border-color: var(--borda); background: var(--superficie-suave, #f4f7f8); }
+.selo--info { color: var(--acento); border-color: var(--acento-claro); background: var(--acento-tinta); }
+
+/* Ficha do assinante */
+.admin-ficha__voltar { display: inline-block; margin-bottom: 0.6rem; font-size: 0.86rem; }
+.admin-ficha__cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  box-shadow: var(--sombra-xs);
+}
+.admin-ficha__cabecalho h1 { margin: 0.1rem 0 0.2rem; font-size: 1.4rem; }
+.admin-ficha__cabecalho-sub { margin: 0; color: var(--texto-secundario); font-size: 0.88rem; }
+.admin-ficha__cabecalho-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.admin-ficha__abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  width: fit-content;
+  margin: 1.1rem 0 1rem;
+  padding: 0.25rem;
+  background: var(--slate-100);
+  border-radius: 11px;
+}
+.admin-ficha__abas button {
+  min-height: 40px;
+  padding: 0.5rem 0.9rem;
+  color: var(--slate-700);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.admin-ficha__abas button[aria-selected="true"] {
+  color: var(--navy-900);
+  background: var(--white);
+  box-shadow: var(--sombra-xs);
+}
+@media (max-width: 640px) {
+  .admin-ficha__abas { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+  .admin-ficha__abas button { flex: 0 0 auto; }
+}
+
+.admin-ficha__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.9rem 1.4rem;
+}
+.admin-ficha__campo dt {
+  margin: 0 0 0.15rem;
+  color: var(--texto-secundario);
+  font-family: var(--fonte-dados);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.admin-ficha__campo dd { margin: 0; font-size: 0.94rem; }
+.admin-ficha__campo dd:empty::before,
+.admin-ficha__vazio { color: var(--texto-secundario); }
+
+.admin-ficha__secao { margin-top: 1.5rem; }
+.admin-ficha__secao > h2 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+
+.admin-ficha__assinaturas-wrap { overflow-x: auto; margin-top: 0.6rem; }
+.admin-ficha__assinaturas {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.admin-ficha__assinaturas th {
+  padding: 0.5rem 0.6rem;
+  color: var(--texto-secundario);
+  background: var(--superficie-suave, #f4f7f8);
+  border-bottom: 1px solid var(--borda);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+}
+.admin-ficha__assinaturas td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--borda); }
+
+.admin-ficha__documentos-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+.admin-ficha__documento-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 0.85rem;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-sm);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.admin-ficha__documento-item:hover { border-color: var(--acento); box-shadow: var(--sombra-xs); }
+.admin-ficha__documento-item:disabled {
+  color: var(--texto-secundario);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.admin-ficha__documento-icone {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--acento);
+  background: var(--acento-tinta);
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+.admin-ficha__documento-rotulo { font-size: 0.86rem; font-weight: 700; }
+.admin-ficha__documento-estado { color: var(--texto-secundario); font-size: 0.75rem; }
+
+.admin-ficha__decisao {
+  margin-top: 1.4rem;
+  padding: 1rem 1.1rem;
+  background: var(--superficie-suave, #f4f7f8);
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+}
+.admin-ficha__decisao-acoes { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.7rem; }
+.admin-ficha__decisao-form { margin-top: 0.7rem; max-width: 480px; }
+.admin-ficha__decisao-form textarea { min-height: 80px; }
+.admin-ficha__decisao-form-acoes { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+
+.admin-ficha__historico { list-style: none; margin: 0.6rem 0 0; padding: 0; }
+.admin-ficha__historico-item {
+  position: relative;
+  padding: 0 0 1rem 1.1rem;
+  border-left: 2px solid var(--borda);
+}
+.admin-ficha__historico-item::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: -5px;
+  width: 8px;
+  height: 8px;
+  background: var(--acento);
+  border-radius: 50%;
+}
+.admin-ficha__historico-item:last-child { padding-bottom: 0; }
+.admin-ficha__historico-acao { font-weight: 700; }
+.admin-ficha__historico-meta { color: var(--texto-secundario); font-size: 0.78rem; margin: 0.1rem 0 0.2rem; }
+.admin-ficha__historico-detalhe {
+  margin: 0.3rem 0 0;
+  padding: 0.5rem 0.65rem;
+  overflow-x: auto;
+  background: var(--superficie-suave, #f4f7f8);
+  border-radius: 6px;
+  font-family: var(--fonte-dados);
+  font-size: 0.74rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Visualizador de documento — imagem via <img src="blob:...">, PDF via
+   <iframe src="blob:...">, nunca srcDoc/innerHTML (política de
+   renderização segura do projeto). O Object URL é sempre criado a partir
+   de um Blob buscado com api.blob() (autenticado), nunca de uma URL
+   pública direta. */
+.admin-visualizador {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(6, 25, 35, 0.72);
+}
+.admin-visualizador__painel {
+  display: flex;
+  flex-direction: column;
+  width: min(96vw, 980px);
+  height: min(90vh, 780px);
+  background: var(--white);
+  border-radius: var(--r);
+  box-shadow: var(--sombra-lg);
+  overflow: hidden;
+}
+.admin-visualizador__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--borda);
+}
+.admin-visualizador__titulo { margin: 0; font-size: 0.94rem; font-weight: 700; }
+.admin-visualizador__contagem { color: var(--texto-secundario); font-size: 0.78rem; }
+.admin-visualizador__fechar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: var(--texto-secundario);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.admin-visualizador__fechar:hover { color: var(--perigo); background: var(--perigo-tinta); }
+.admin-visualizador__corpo {
+  position: relative;
+  flex: 1;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  background: var(--slate-100);
+}
+.admin-visualizador__imagem-wrap { display: grid; place-items: center; width: 100%; height: 100%; overflow: auto; }
+.admin-visualizador__imagem { max-width: none; transition: transform 0.12s ease; }
+.admin-visualizador__pdf { width: 100%; height: 100%; border: 0; background: var(--white); }
+.admin-visualizador__rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  border-top: 1px solid var(--borda);
+}
+.admin-visualizador__navegacao,
+.admin-visualizador__zoom { display: flex; align-items: center; gap: 0.4rem; }
+.admin-visualizador__rodape button {
+  min-height: 38px;
+  padding: 0 0.75rem;
+  color: var(--texto);
+  background: var(--white);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.admin-visualizador__rodape button:hover:not(:disabled) { border-color: var(--acento); color: var(--acento); }
+.admin-visualizador__rodape button:disabled { opacity: 0.45; cursor: not-allowed; }
+.admin-visualizador__baixar { color: var(--acento); text-decoration: underline; font-size: 0.85rem; }
+
+@media (max-width: 640px) {
+  .admin-visualizador__painel { width: 100%; height: 100%; border-radius: 0; }
+  .admin-ficha__cabecalho { flex-direction: column; }
+}
