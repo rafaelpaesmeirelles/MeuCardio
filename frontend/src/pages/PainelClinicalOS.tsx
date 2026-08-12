@@ -32,7 +32,6 @@ type Atualizacao = {
 
 type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
 type Catalogo = { total: number; published_total?: number };
-
 type Contagem = { total?: number };
 
 const ACOES: AcaoRapida[] = [
@@ -73,6 +72,10 @@ function saudacao() {
 
 function primeiroNome(nome?: string) {
   return nome?.trim().split(/\s+/)[0] || "Doutor(a)";
+}
+
+function chaveContextosRecentes(userId?: number) {
+  return userId ? `corvia:contextos-recentes:${userId}` : "";
 }
 
 function destinoDoComando(valor: string) {
@@ -117,13 +120,18 @@ export default function PainelClinicalOS() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    const chave = chaveContextosRecentes(usuario?.id);
+    if (!chave) {
+      setRecentes([]);
+      return;
+    }
     try {
-      const salvos = JSON.parse(localStorage.getItem("corvia:contextos-recentes") || "[]") as ContextoRecente[];
+      const salvos = JSON.parse(sessionStorage.getItem(chave) || "[]") as ContextoRecente[];
       setRecentes(salvos.filter((item) => item?.path && item?.titulo).slice(0, 5));
     } catch {
       setRecentes([]);
     }
-  }, []);
+  }, [usuario?.id]);
 
   useEffect(() => {
     api.get<RespostaAtualizacoes>("/guideline-updates")
@@ -156,6 +164,10 @@ export default function PainelClinicalOS() {
   function usarExemplo(texto: string) {
     setComando(texto);
     inputRef.current?.focus();
+  }
+
+  function abrirAssistentePessoal() {
+    window.dispatchEvent(new Event("corvia:abrir-assistente-pessoal"));
   }
 
   return (
@@ -191,6 +203,11 @@ export default function PainelClinicalOS() {
             <button type="button" onClick={() => usarExemplo("Prescrever medicamento")}>Prescrever</button>
           </div>
         </form>
+      </section>
+
+      <section className="cos-home-closer cos-home-assistant-spotlight" aria-label="Assistente Pessoal">
+        <div><span className="cos-home-closer__spark">✦</span><div><p className="eyebrow">Seu Assistente</p><h2>Seu dia também é contexto.</h2><p>Agenda, deslocamento, próximos compromissos e continuidade da sua rotina sem transformar o CorVIA em prontuário.</p></div></div>
+        <button type="button" className="cos-personal-trigger" onClick={abrirAssistentePessoal}><span>✦</span><span>Abrir briefing do dia</span></button>
       </section>
 
       <section className="cos-home-section" aria-labelledby="cos-acoes">
