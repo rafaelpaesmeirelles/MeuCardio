@@ -30,6 +30,7 @@ import "./styles/clinical-agenda-command.css";
 import "./styles/clinical-documents-command.css";
 import "./styles/clinical-assistant-command.css";
 import "./styles/clinical-intelligence-context.css";
+import "./styles/clinical-account-admin-command.css";
 import "./styles/clinical-command-center-compat.css";
 
 let swRecargaPendente = false;
