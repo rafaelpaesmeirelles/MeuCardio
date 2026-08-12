@@ -15,6 +15,14 @@
   transition: transform .22s ease, visibility 0s linear 0s;
 }
 
+/* Drawer and Assistant are mutually exclusive in state, but they also get
+   deterministic stacking so a transient state change can never leave two
+   interactive mobile surfaces at the same layer. */
+.cos-drawer-backdrop { z-index: 110; }
+.cos-drawer { z-index: 120; }
+.cos-assistant-backdrop { z-index: 130; }
+.cos-assistant-panel { z-index: 140; }
+
 @media (prefers-reduced-motion: reduce) {
   .clinical-os *,
   .clinical-os *::before,
