@@ -2,7 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
-const limitePrecacheJs = 140 * 1024;
+// O precache mantém o shell e chunks clínicos pequenos disponíveis sem rede.
+// Chunks pesados e sob demanda (principalmente renderizadores de diagramas)
+// ficam no runtime cache NetworkFirst em vez de inflar a instalação do PWA.
+const limitePrecacheJs = 100 * 1024;
 
 export default defineConfig({
   plugins: [
@@ -11,12 +14,12 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.png", "apple-touch-icon.png", "logo-horizontal.png", "brasao.png"],
       manifest: {
-        name: "Corvia — O caminho do coração",
-        short_name: "Corvia",
-        description: "Plataforma clínica de apoio à decisão em Cardiologia.",
+        name: "CorVIA — Clinical OS do médico",
+        short_name: "CorVIA",
+        description: "Workspace clínico inteligente do médico: conhecimento, contexto, decisão e ação conectados.",
         lang: "pt-BR",
-        theme_color: "#0B2E45",
-        background_color: "#FFFFFF",
+        theme_color: "#03101A",
+        background_color: "#03101A",
         display: "standalone",
         orientation: "portrait",
         start_url: "/",
@@ -57,6 +60,8 @@ export default defineConfig({
           {
             // Assets têm hash de conteúdo no nome; mudança = URL nova. Rede
             // primeiro evita um SW antigo prolongar a vida de um bundle antigo.
+            // Chunks grandes excluídos do precache continuam disponíveis offline
+            // depois do primeiro uso por esta camada de runtime cache.
             urlPattern: /\/assets\/.*\.(?:js|css)$/,
             handler: "NetworkFirst",
             options: {
@@ -90,7 +95,7 @@ export default defineConfig({
           {
             // Ecossistema em atualização contínua: nenhuma outra resposta de
             // API é servida do cache do service worker. Isso abrange
-            // conteúdo, agenda, CorvIA Mail, dados clínicos e status de
+            // conteúdo, agenda, CorVIA Mail, dados clínicos e status de
             // versão — a única exceção deliberada é /api/emergencia, acima.
             urlPattern: /\/api\//,
             handler: "NetworkOnly"
