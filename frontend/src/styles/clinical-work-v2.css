@@ -1,0 +1,105 @@
+/* ======================================================================
+   Work surfaces — Agenda, Documents, Round, Assistant and Mail.
+   Preserve business logic; replace the white legacy visual language.
+   ====================================================================== */
+
+/* ---------- Agenda ---------- */
+.clinical-os [class^="agenda-"],.clinical-os [class*=" agenda-"]{--agenda-panel:#081b27;--agenda-panel2:#0b2331;--agenda-line:rgba(148,205,219,.13);--agenda-muted:#78959f}
+.clinical-os .agenda-cabecalho,.clinical-os .agenda-toolbar,.clinical-os .agenda-filtros,.clinical-os .agenda-configuracao,.clinical-os .agenda-painel,.clinical-os .agenda-grade,.clinical-os .agenda-calendario,.clinical-os .agenda-sidebar{
+  color:var(--cos-text);background:linear-gradient(145deg,rgba(11,34,47,.92),rgba(7,23,33,.96));border-color:var(--agenda-line)!important;box-shadow:none!important
+}
+.clinical-os .agenda-evento{
+  color:#d9e9ec!important;background:rgba(255,255,255,.022)!important;border-color:var(--agenda-line)!important;border-left:3px solid var(--evento-cor,var(--cos-cyan))!important;box-shadow:none!important
+}
+.clinical-os .agenda-evento:hover{background:rgba(66,202,216,.035)!important;border-color:rgba(66,202,216,.18)!important}
+.clinical-os .agenda-evento__hora span,.clinical-os .agenda-evento__corpo p,.clinical-os .agenda-evento__meta{color:#78949e!important}
+.clinical-os .agenda-evento__linha h3,.clinical-os .agenda-evento__hora strong{color:#edf9fb!important}
+.clinical-os .agenda-pill{color:#9edbe0!important;background:rgba(66,202,216,.06)!important;border-color:rgba(66,202,216,.13)!important}
+.clinical-os .agenda-evento__mais{color:#6f8d97!important;background:transparent!important;border-color:transparent!important}
+.clinical-os .agenda-evento__mais:hover{color:#c8f5f8!important;background:rgba(66,202,216,.07)!important}
+.clinical-os .agenda-dia,.clinical-os .agenda-semana__dia,.clinical-os .agenda-mes__dia{background:rgba(255,255,255,.012)!important;border-color:var(--agenda-line)!important}
+.clinical-os .agenda-dia__cabecalho,.clinical-os .agenda-semana__cabecalho{color:#809ca6!important;background:rgba(255,255,255,.016)!important;border-color:var(--agenda-line)!important}
+.clinical-os [class*="agenda-"] button:not(.botao){border-color:var(--agenda-line)}
+.clinical-os .agenda-integracao,.clinical-os .agenda-local,.clinical-os .agenda-servico,.clinical-os .agenda-rotina{color:#bcd2d7;background:rgba(255,255,255,.02)!important;border-color:var(--agenda-line)!important}
+.clinical-os .agenda-integracao p,.clinical-os .agenda-local p,.clinical-os .agenda-servico p,.clinical-os .agenda-rotina p{color:#78959f!important}
+
+/* ---------- Documents / requests ---------- */
+.clinical-os .documentos-acoes,.clinical-os .documentos-modelos,.clinical-os .documentos-historico,.clinical-os [class*="template-"]{
+  border-color:var(--cos-line)!important
+}
+.clinical-os .documentos-acao,.clinical-os .template-card,.clinical-os .documento-card,.clinical-os .modelo-card{
+  color:#d9eaed!important;background:linear-gradient(145deg,rgba(12,35,48,.92),rgba(7,24,34,.96))!important;border-color:var(--cos-line)!important;box-shadow:none!important
+}
+.clinical-os .documentos-acao:hover,.clinical-os .template-card:hover,.clinical-os .modelo-card:hover{border-color:rgba(66,202,216,.22)!important;background:rgba(66,202,216,.035)!important}
+.clinical-os .documentos-acao h2,.clinical-os .documentos-acao h3,.clinical-os .template-card h3,.clinical-os .modelo-card h3{color:#eefafb!important}
+.clinical-os .documentos-acao p,.clinical-os .template-card p,.clinical-os .modelo-card p{color:#829ea8!important}
+
+/* ---------- Round / patients ---------- */
+.clinical-os .round-grid,.clinical-os .round-painel,.clinical-os .round-form,.clinical-os .round-card,.clinical-os .paciente-card,.clinical-os .pacientes-card{
+  color:#d9eaed!important;background:linear-gradient(145deg,rgba(12,35,48,.92),rgba(7,24,34,.96))!important;border-color:var(--cos-line)!important;box-shadow:none!important
+}
+.clinical-os .round-card p,.clinical-os .paciente-card p,.clinical-os .pacientes-card p{color:#809ca6!important}
+.clinical-os .round-card h2,.clinical-os .round-card h3,.clinical-os .paciente-card h2,.clinical-os .paciente-card h3{color:#effbfc!important}
+.clinical-os .round-tag,.clinical-os .round-status{color:#9edce2!important;background:rgba(66,202,216,.065)!important;border-color:rgba(66,202,216,.15)!important}
+
+/* ---------- Assistant selection + conversation ---------- */
+.clinical-os .ia-escolha{width:min(100%,1080px);margin:0 auto;padding:.2rem 0 1rem}
+.clinical-os .ia-escolha>h1{max-width:22ch;margin:.15rem 0 1rem;color:#effbfc;font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.045em}
+.clinical-os .ia-escolha__cartoes{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.clinical-os .ia-escolha__cartao{
+  min-height:220px;padding:1.1rem!important;color:#d9eaed!important;background:linear-gradient(145deg,rgba(12,35,48,.95),rgba(7,24,34,.97))!important;border:1px solid var(--cos-line)!important;border-radius:17px!important;box-shadow:none!important;text-align:left!important
+}
+.clinical-os .ia-escolha__cartao:hover{transform:translateY(-1px);border-color:rgba(66,202,216,.26)!important;background:linear-gradient(145deg,rgba(14,41,55,.95),rgba(8,28,39,.97))!important}
+.clinical-os .ia-escolha__cartao p{color:#8ba6af!important;line-height:1.55}
+.clinical-os .ia{width:min(100%,1120px);margin:0 auto;color:var(--cos-text)}
+.clinical-os .ia__topo,.clinical-os .ia__controles,.clinical-os .ia__historico,.clinical-os .ia__mensagens,.clinical-os .ia__composer,.clinical-os [class*="ia__painel"]{
+  background:linear-gradient(145deg,rgba(11,34,47,.92),rgba(7,23,33,.96))!important;border-color:var(--cos-line)!important;box-shadow:none!important
+}
+.clinical-os .ia__mensagem--assistant,.clinical-os .ia__mensagem--assistente{background:rgba(66,202,216,.04)!important;border-color:rgba(66,202,216,.12)!important;color:#cbdfe3!important}
+.clinical-os .ia__mensagem--user,.clinical-os .ia__mensagem--usuario{background:rgba(78,162,248,.07)!important;border-color:rgba(78,162,248,.14)!important;color:#e2f0f3!important}
+.clinical-os .ia__sugestao,.clinical-os [class*="ia__sugest"]{color:#9edce2!important;background:rgba(255,255,255,.02)!important;border-color:var(--cos-line)!important}
+.clinical-os .ia__sugestao:hover,.clinical-os [class*="ia__sugest"]:hover{background:rgba(66,202,216,.055)!important;border-color:rgba(66,202,216,.2)!important}
+.clinical-os .ia__link-trocar{color:var(--cos-cyan-2)!important}
+
+/* ---------- Mail professional ---------- */
+.clinical-os .cmp-shell{--cmp-red:#42cad8;--cmp-red-dark:#78e5eb;--cmp-ink:#eaf8fa;--cmp-muted:#76949e;--cmp-line:rgba(148,205,219,.12);--cmp-soft:#071923;--cmp-panel:#081b27;--cmp-shadow:none}
+.clinical-os .cmp-topbar{background:#081b27!important;border-color:var(--cmp-line)!important;box-shadow:none!important}
+.clinical-os .cmp-brand strong{color:#effbfc!important}.clinical-os .cmp-brand small{color:#78959f!important}
+.clinical-os .cmp-global-search input{color:#eaf8fa!important;background:rgba(255,255,255,.03)!important;border-color:var(--cmp-line)!important}
+.clinical-os .cmp-global-search input:focus{background:rgba(255,255,255,.045)!important;border-color:rgba(66,202,216,.38)!important;box-shadow:0 0 0 3px rgba(66,202,216,.06)!important}
+.clinical-os .cmp-user strong{color:#dcecef!important}.clinical-os .cmp-user small{color:#718e98!important}
+.clinical-os .cmp-workspace{background:#061722!important;border-color:var(--cmp-line)!important;box-shadow:none!important}
+.clinical-os .cmp-accounts{background:#04131c!important;border-color:var(--cmp-line)!important}
+.clinical-os .cmp-account:hover{background:rgba(66,202,216,.07)!important}.clinical-os .cmp-account.is-active{background:rgba(66,202,216,.09)!important;border-color:rgba(66,202,216,.24)!important;box-shadow:none!important}
+.clinical-os .cmp-sidebar{background:#071923!important;border-color:var(--cmp-line)!important}
+.clinical-os .cmp-sidebar__section>p{color:#607e89!important}.clinical-os .cmp-sidebar__section>button{color:#91aab4!important}.clinical-os .cmp-sidebar__section>button:hover{background:rgba(66,202,216,.04)!important}.clinical-os .cmp-sidebar__section>button.is-active{color:#d6f9fb!important;background:rgba(66,202,216,.08)!important}
+.clinical-os .cmp-account-card{background:rgba(255,255,255,.02)!important;border-color:var(--cmp-line)!important}.clinical-os .cmp-account-card strong{color:#dcecef!important}.clinical-os .cmp-account-card>span{color:#718e98!important}
+.clinical-os .cmp-sidebar__privacy{color:#728e98!important;background:rgba(255,255,255,.018)!important}.clinical-os .cmp-sidebar__privacy strong{color:#a8c0c7!important}
+.clinical-os .cmp-list{background:#081b27!important;border-color:var(--cmp-line)!important}.clinical-os .cmp-list__header{background:rgba(255,255,255,.01)!important}.clinical-os .cmp-list__header p{color:#718e98!important}.clinical-os .cmp-list__header h2{color:#edf9fb!important}.clinical-os .cmp-list__header>button{color:#86a6af!important;background:rgba(255,255,255,.02)!important;border-color:var(--cmp-line)!important}
+.clinical-os .cmp-list__filters{border-color:var(--cmp-line)!important}.clinical-os .cmp-list__filters button{color:#728e98!important}.clinical-os .cmp-list__filters button.is-active{color:#bff4f7!important;background:rgba(66,202,216,.075)!important}
+.clinical-os .cmp-message{background:#081b27!important;border-color:rgba(148,205,219,.07)!important}.clinical-os .cmp-message:hover{background:rgba(66,202,216,.025)!important}.clinical-os .cmp-message.is-active{background:rgba(66,202,216,.055)!important;box-shadow:inset 3px 0 var(--cos-cyan)!important}.clinical-os .cmp-message.is-unread:before{background:var(--cos-cyan)!important}
+.clinical-os .cmp-message__meta strong,.clinical-os .cmp-message__body>b{color:#dbecef!important}.clinical-os .cmp-message__body>small,.clinical-os .cmp-message__meta time{color:#6f8994!important}.clinical-os .cmp-message__tags i{color:#7d9aa4!important;background:rgba(255,255,255,.025)!important}
+.clinical-os .cmp-reader{background:#0a202d!important}.clinical-os .cmp-reader__empty{color:#78959f!important}.clinical-os .cmp-reader__empty>span{color:#8ce6eb!important;background:rgba(66,202,216,.08)!important}.clinical-os .cmp-reader__empty h2{color:#dcecef!important}
+.clinical-os .cmp-reader__toolbar{background:rgba(8,27,39,.95)!important;border-color:var(--cmp-line)!important}.clinical-os .cmp-reader__toolbar button{color:#98b2ba!important;background:rgba(255,255,255,.02)!important;border-color:var(--cmp-line)!important}
+.clinical-os .cmp-reader__header{border-color:var(--cmp-line)!important}.clinical-os .cmp-reader__header>p{color:#79e3e9!important}.clinical-os .cmp-reader__header h1{color:#effbfc!important}.clinical-os .cmp-reader__sender strong{color:#d7e9ec!important}.clinical-os .cmp-reader__sender small,.clinical-os .cmp-reader__sender time{color:#718e98!important}
+.clinical-os .cmp-reader__text{color:#c6dadd!important}.clinical-os .cmp-privacy{color:#75919b!important;background:rgba(255,255,255,.02)!important}.clinical-os .cmp-reader__footer{border-color:var(--cmp-line)!important}.clinical-os .cmp-reply{color:#03131b!important;background:linear-gradient(135deg,#42cad8,#78e5eb)!important}.clinical-os .cmp-reply--secondary{color:#b6d3d8!important;background:rgba(255,255,255,.02)!important;border-color:var(--cmp-line)!important}
+.clinical-os .cmp-compose-primary{color:#03131b!important;background:linear-gradient(135deg,#42cad8,#78e5eb)!important;box-shadow:none!important}
+.clinical-os .cmp-alert--error{color:#ffb2bf!important;background:rgba(240,68,93,.08)!important;border-color:rgba(240,68,93,.18)!important}.clinical-os .cmp-alert--ok{color:#9ce5c6!important;background:rgba(93,210,164,.07)!important;border-color:rgba(93,210,164,.17)!important}.clinical-os .cmp-alert--warn{color:#e8c989!important;background:rgba(239,188,98,.06)!important;border-color:rgba(239,188,98,.16)!important}
+
+/* ---------- Mail sign-in / account management ---------- */
+.clinical-os [class*="mail-"] .cartao,.clinical-os [class*="corvia-mail"] .cartao{background:linear-gradient(145deg,rgba(12,35,48,.92),rgba(7,24,34,.96))!important;border-color:var(--cos-line)!important}
+.clinical-os .corvia-mail-aviso,.clinical-os .mail-aviso{color:#8eaab3!important;background:rgba(66,202,216,.035)!important;border-color:rgba(66,202,216,.12)!important}
+
+@media(max-width:900px){
+  .clinical-os .ia-escolha__cartoes{grid-template-columns:1fr}
+  .clinical-os .ia-escolha__cartao{min-height:0}
+  .clinical-os .cmp-workspace{display:flex!important;flex-direction:column!important;height:calc(100dvh - 190px)!important;min-height:520px!important;overflow:hidden!important}
+  .clinical-os .cmp-accounts{display:flex!important;flex:0 0 auto!important;min-height:52px!important;max-height:58px!important;flex-direction:row!important;overflow-x:auto!important;overflow-y:hidden!important;padding:.38rem!important;border-right:0!important;border-bottom:1px solid var(--cmp-line)!important}
+  .clinical-os .cmp-accounts__rule{width:1px!important;height:28px!important;flex:0 0 1px!important}
+  .clinical-os .cmp-list{flex:1 1 auto!important;min-height:0!important;overflow:hidden!important}
+  .clinical-os .cmp-list__scroll{min-height:0!important}
+  .clinical-os .cmp-reader.has-message{position:absolute!important;inset:0!important;z-index:8!important;background:#0a202d!important}
+  .clinical-os .cmp-topbar{grid-template-columns:minmax(0,1fr) auto!important;gap:.45rem!important;margin-bottom:.45rem!important}
+  .clinical-os .cmp-brand{gap:.5rem!important}.clinical-os .cmp-brand>span{min-width:0!important}.clinical-os .cmp-brand strong{font-size:.83rem!important}
+  .clinical-os .cmp-global-search{grid-column:1/-1!important}
+}
