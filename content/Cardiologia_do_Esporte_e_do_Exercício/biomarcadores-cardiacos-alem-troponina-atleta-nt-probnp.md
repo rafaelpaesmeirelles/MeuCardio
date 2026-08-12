@@ -18,7 +18,7 @@ Revisão clínica publicada em 2026 (Wu C et al., *Frontiers in Physiology*) sin
 
 ## NT-proBNP após exercício
 
-- Após maratona, **92,7% dos participantes ultrapassam os pontos de corte clínicos** habitualmente usados para insuficiência cardíaca.
+- **[CORRIGIDO em auditoria, 12/08/2026: o dado de 92,7% pertence ao ST2, não ao NT-proBNP — ver a seção "Outros marcadores" abaixo]**. A versão anterior deste documento atribuía esse percentual ao NT-proBNP por erro de leitura da fonte; conferido contra o texto integral da revisão (PMC13402183): o único "92,7%" que a fonte cita é especificamente para ST2 ("92.7% of subjects had ST2 levels above this cut-off"), não para NT-proBNP.
 - Após ultramaratona de 60 km, o aumento mediano é de **3,5 vezes** o valor basal.
 - A proporção de indivíduos acima do limite diagnóstico salta de **0% no pré-prova para 28% no pós-prova (p = 0,016)**.
 - Ao contrário da troponina (que costuma atingir pico entre 2 e 6 horas), o **NT-proBNP atinge pico mais tardiamente e permanece elevado por até 72 horas** após o esforço, em padrão de adaptação fisiológica.
