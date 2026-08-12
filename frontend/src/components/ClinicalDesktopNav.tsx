@@ -95,6 +95,7 @@ export default function ClinicalDesktopNav() {
             <div className="ccc-nav__more-items">
               <Item item={{ to: "/material-paciente", label: "Material para paciente", icon: "documento" }} />
               <Item item={{ to: "/galeria", label: "Galeria", icon: "galeria" }} />
+              <Item item={{ to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" }} />
               <Item item={{ to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" }} />
               <Item item={{ to: "/minha-conta", label: "Minha conta", icon: "conta" }} />
               <Item item={{ to: "/assinatura", label: "Assinatura", icon: "check" }} />
