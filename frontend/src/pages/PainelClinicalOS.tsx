@@ -262,7 +262,7 @@ export default function PainelClinicalOS() {
           <div className="ccc-intelligence-list">
             <Link to="/diretrizes"><span><Icone nome="evidencia" /></span><strong>{atualizacoes.length || "—"}</strong><p>atualizações científicas recentes</p></Link>
             <Link to="/diretrizes"><span><Icone nome="conhecimento" /></span><strong>{atualizacoes[0] ? "1" : "—"}</strong><p>{atualizacoes[0]?.title || "Guidelines e recomendações"}</p></Link>
-            <Link to="/biblioteca"><span><Icone nome="conhecimento" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos conectados no catálogo</p></Link>
+            <Link to="/biblioteca"><span><Icone nome="conhecimento" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos no catálogo</p></Link>
             <Link to="/estudos"><span><Icone nome="evidencia" /></span><strong>{estudos ?? "—"}</strong><p>estudos disponíveis para explorar</p></Link>
           </div>
           <Link to="/busca" className="ccc-intelligence-graph"><span>◎</span><span><strong>Explorar relações</strong><small>Tudo com Tudo</small></span><Icone nome="seta" /></Link>
