@@ -12,6 +12,7 @@ LAUNCH_FILES = [
 ]
 A11Y = ROOT / "frontend/src/styles/clinical-os-a11y.css"
 SHELL = LAUNCH_FILES[0]
+TOUR = LAUNCH_FILES[-1]
 
 
 def test_launch_expoe_um_unico_nome_para_o_assistente():
@@ -19,8 +20,16 @@ def test_launch_expoe_um_unico_nome_para_o_assistente():
         fonte = caminho.read_text(encoding="utf-8")
         assert "CorVIA AI" not in fonte, caminho
 
-    tour = LAUNCH_FILES[-1].read_text(encoding="utf-8")
+    tour = TOUR.read_text(encoding="utf-8")
     assert "CorVIA Chat" in tour  # comunicação profissional continua sendo produto separado
+
+
+def test_tour_nao_posiciona_corvia_como_prontuario_e_identifica_dados_de_mock():
+    tour = TOUR.read_text(encoding="utf-8")
+
+    assert "Não é só prontuário" not in tour
+    assert "Não é prontuário." in tour
+    assert "exemplo ilustrativo" in tour
 
 
 def test_drawer_e_assistente_tem_empilhamento_deterministico_e_abertura_exclusiva():
