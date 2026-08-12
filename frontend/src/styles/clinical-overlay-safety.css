@@ -1,0 +1,38 @@
+/* CorVIA mobile overlay contract: one primary overlay at a time, no FAB above content. */
+@media (max-width: 900px) {
+  /* ChatFlutuante still uses inline fixed positioning. Semantic selectors are
+     intentional here: they neutralize the legacy widget without relying on a
+     class it does not currently expose. Access remains available in Mais →
+     Rede profissional. */
+  .clinical-os button[aria-label^="Abrir o CorvIA Chat"],
+  .clinical-os section[aria-label="CorvIA Chat"] {
+    display: none !important;
+  }
+
+  /* Topbar already exposes Emergency and the canonical mobile menu exposes the
+     Emergency Command Center. A second FAB would cover page actions. */
+  .clinical-os .cos-emergency-fab { display: none !important; }
+
+  /* While the Personal Assistant/drawer owns the viewport, remove the bottom
+     navigation and More trigger from pointer/focus competition. */
+  body.menu-clinico-aberto .cc-mobile-nav,
+  body.menu-clinico-aberto .cc-mobile-menu-trigger {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* The More sheet itself is the active modal surface. */
+  body.cc-mobile-more-open .cc-mobile-menu-trigger,
+  body.cc-mobile-more-open .cc-mobile-nav {
+    pointer-events: none !important;
+  }
+
+  .clinical-os .cos-assistant-backdrop { z-index: 128 !important; }
+  .clinical-os .cos-assistant-panel { z-index: 130 !important; }
+  .cc-mobile-more-backdrop { z-index: 138 !important; }
+  .cc-mobile-more { z-index: 140 !important; }
+
+  /* Any modal opened inside a working surface remains above nav but below no
+     unrelated floating utility, because those utilities are disabled above. */
+  .clinical-os [role="dialog"][aria-modal="true"] { z-index: 150; }
+}
