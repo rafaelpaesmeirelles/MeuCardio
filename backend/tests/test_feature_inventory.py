@@ -25,9 +25,9 @@ def test_published_feature_inventory_is_intact():
     # (falha se um router desaparecer OU se um novo não constar da lista
     # revisada em EXPECTED_BACKEND_ROUTERS); o que faltava era só manter
     # este teste sincronizado com a contagem real depois de cada revisão.
-    assert "61 rotas React" in result.stdout
-    assert "38 destinos de menu" in result.stdout
-    assert "49 routers FastAPI" in result.stdout
+    assert "63 rotas React" in result.stdout
+    assert "39 destinos de menu" in result.stdout
+    assert "50 routers FastAPI" in result.stdout
 
 
 def test_evidence_editorial_note_is_preserved_in_detail():

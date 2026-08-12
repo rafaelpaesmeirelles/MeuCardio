@@ -33,6 +33,8 @@ EXPECTED_APP_ROUTES = {
     "/round", "/agenda", "/documentos", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
+    # issue #52 — ficha administrativa completa do assinante.
+    "/admin/usuarios", "/admin/usuarios/:id",
     # Trabalho 13 (tour guiado) e Trabalho 11/12 (gate de identidade
     # pós-pagamento) — as duas são redirecionamento de gate, não item de
     # menu, por isso não entram em EXPECTED_NAV_ROUTES.
@@ -50,6 +52,10 @@ EXPECTED_NAV_ROUTES = {
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
     "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
     "/sincronizacao",
+    # issue #52 — ficha administrativa completa do assinante, item de menu
+    # próprio (Shell.tsx); "/admin/usuarios/:id" é destino de clique numa
+    # linha da lista, não item de menu, por isso fica de fora daqui.
+    "/admin/usuarios",
     # Issue #52 (11/08/2026): o tour deixou de ser SÓ um gate de primeiro
     # acesso. O onboarding obrigatório virou um Quick Start de cinco telas;
     # o tour completo passou a ser opcional e reaberto pelo menu (Gestão ›
@@ -88,6 +94,10 @@ EXPECTED_BACKEND_ROUTERS = {
     # `GET /api/grafo/relacionados` — camada persistida/tipada, distinta do
     # cruzamento em tempo de consulta de `related_content.router` acima.
     "knowledge_graph.router",
+    # Cadastro de paciente reutilizável entre documentos (12/08/2026):
+    # `GET/POST/PUT/DELETE /api/pacientes` — ver
+    # `backend/app/models/patient_profile.py`.
+    "patient_profiles.router",
 }
 
 EXPECTED_SUPPORT_FILES = {
