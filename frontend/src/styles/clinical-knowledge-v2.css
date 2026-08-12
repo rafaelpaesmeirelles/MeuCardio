@@ -1,0 +1,55 @@
+.clinical-os .cc-filter-grid {
+  display:grid;
+  gap:.62rem;
+  align-items:end;
+}
+.clinical-os .cc-filter-grid--4 { grid-template-columns: minmax(220px,1.4fr) repeat(3,minmax(170px,1fr)); }
+.clinical-os .cc-filter-grid--3 { grid-template-columns: minmax(220px,1.4fr) repeat(2,minmax(180px,1fr)); }
+.clinical-os .cc-filter-grid label { margin:0; }
+.clinical-os .cc-filter-grid label > span { display:block;margin-bottom:.3rem;color:#9db4bc;font-size:.72rem;font-weight:700; }
+.clinical-os .cc-filter-summary { display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-top:.62rem;padding-top:.55rem;border-top:1px solid var(--cos-line); }
+.clinical-os .cc-filter-summary > span { color:#73919b;font:700 .64rem/1 var(--fonte-dados);text-transform:uppercase;letter-spacing:.05em; }
+.clinical-os .cc-filter-summary button { min-height:30px;padding:.28rem .5rem;color:#9edce2;background:transparent;border:1px solid rgba(66,202,216,.15);border-radius:8px;font-size:.66rem;cursor:pointer; }
+.clinical-os .cc-literature-list { display:grid;gap:.42rem; }
+.clinical-os .cc-literature-row {
+  display:grid;
+  grid-template-columns:132px minmax(0,1fr) 28px;
+  align-items:center;
+  gap:.7rem;
+  min-width:0;
+  padding:.72rem .76rem;
+  color:inherit;
+  background:rgba(255,255,255,.018);
+  border:1px solid var(--cos-line);
+  border-radius:11px;
+  transition:background .14s ease,border-color .14s ease,transform .14s ease;
+}
+.clinical-os .cc-literature-row:hover { background:rgba(66,202,216,.045);border-color:rgba(66,202,216,.21);transform:translateX(1px); }
+.clinical-os .cc-literature-row__type { display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:.32rem .44rem;color:#8fcad1;background:rgba(66,202,216,.06);border:1px solid rgba(66,202,216,.12);border-radius:8px;font:700 .58rem/1.2 var(--fonte-dados);text-align:center;text-transform:uppercase;letter-spacing:.035em; }
+.clinical-os .cc-literature-row__body { display:grid;min-width:0; }
+.clinical-os .cc-literature-row__body small { overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#66838d;font-size:.62rem; }
+.clinical-os .cc-literature-row__body strong { margin:.12rem 0;color:#e7f5f7;font-size:.78rem;line-height:1.32; }
+.clinical-os .cc-literature-row__body > span { color:#7c98a2;font-size:.66rem; }
+.clinical-os .cc-literature-row__open { display:grid;place-items:center;width:26px;height:26px;color:#6f929c;background:rgba(255,255,255,.02);border-radius:8px; }
+
+.clinical-os .cc-recommendation-list { display:grid;gap:.5rem; }
+.clinical-os .cc-recommendation-row { display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.7rem;padding:.78rem;background:rgba(255,255,255,.018);border:1px solid var(--cos-line);border-radius:11px; }
+.clinical-os .cc-recommendation-row:hover { border-color:rgba(66,202,216,.2);background:rgba(66,202,216,.035); }
+.clinical-os .cc-recommendation-row__copy { display:grid;min-width:0; }
+.clinical-os .cc-recommendation-row__copy small { color:#68858f;font-size:.62rem; }
+.clinical-os .cc-recommendation-row__copy strong { margin:.14rem 0 .2rem;color:#e8f7f9;font-size:.8rem;line-height:1.32; }
+.clinical-os .cc-recommendation-row__copy p { display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0;color:#88a2ab;font-size:.69rem; }
+.clinical-os .cc-recommendation-row__meta { display:flex;align-items:flex-start;gap:.3rem;flex-wrap:wrap;justify-content:flex-end; }
+.clinical-os .cc-recommendation-row__meta span { padding:.24rem .38rem;color:#8bc7ce;background:rgba(66,202,216,.055);border:1px solid rgba(66,202,216,.11);border-radius:7px;font:700 .55rem/1 var(--fonte-dados);white-space:nowrap; }
+
+@media(max-width:1100px){
+  .clinical-os .cc-filter-grid--4{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .clinical-os .cc-filter-grid--4,.clinical-os .cc-filter-grid--3{grid-template-columns:1fr}
+  .clinical-os .cc-literature-row{grid-template-columns:minmax(0,1fr) 24px;gap:.48rem;padding:.68rem}
+  .clinical-os .cc-literature-row__type{grid-column:1/-1;justify-self:start;min-height:24px;padding:.25rem .38rem}
+  .clinical-os .cc-literature-row__body strong{font-size:.76rem}
+  .clinical-os .cc-recommendation-row{grid-template-columns:1fr}
+  .clinical-os .cc-recommendation-row__meta{justify-content:flex-start}
+}
