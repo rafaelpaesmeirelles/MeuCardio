@@ -22257,5 +22257,143 @@
         "por_que": "Fecha com o outro tipo de discordância — não por partícula, mas por inflamação vascular subclínica —, usando o ensaio JUPITER como evidência randomizada de que hs-CRP elevada com LDL não elevado ainda assim identifica quem se beneficia de estatina."
       }
     ]
+  },
+  {
+    "slug": "trilha-valvopatias-transcateter-alem-da-estenose-aortica-2026",
+    "titulo": "Terapia estrutural transcateter além da estenose aórtica clássica (2024-2026)",
+    "tema": "Valvopatias",
+    "objetivo": "Sair sabendo que a plataforma de TAVI, validada e madura na estenose aórtica, está sendo estendida para três problemas estruturais mecanicamente diferentes — durabilidade em baixo risco, regurgitação aórtica pura sem cálcio para ancoragem, e calcificação anular mitral sem opção cirúrgica segura — e por que cada extensão exigiu um desenho de dispositivo e um corpo de evidência próprios, não apenas repetir a indicação da estenose.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-estenose-aortica-decisao-de-intervencao-esc-eacts-2021",
+        "por_que": "Começa pelo caso consagrado: é na estenose aórtica calcificada que a âncora radial das próteses de TAVI foi desenhada e validada. Todo o resto da trilha é sobre estender essa plataforma para onde esse mecanismo de ancoragem não se aplica diretamente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "tavi-baixo-risco-6-7-anos-durabilidade-valvar-partner3-evolut-low-risk",
+        "por_que": "Documento novo. Mostra que, mesmo dentro da indicação já consolidada (estenose aórtica), a fronteira que falta responder em 2026 é a durabilidade em 6-7 anos no paciente de baixo risco — e que essa durabilidade DIVERGE entre a prótese balão-expansível e a autoexpansível, achado que só aparece comparando os dois ensaios lado a lado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "regurgitacao-aortica-cronica-e-aguda-indicacao-cirurgica-esceacts-2021",
+        "por_que": "Antes de ver a alternativa transcateter, fixa o padrão-ouro cirúrgico da regurgitação aórtica pura e por que ela é um problema mecânico diferente da estenose: sem cálcio, o anel é maior e mais complacente, e os dispositivos de estenose historicamente migravam ou vazavam quando usados nela fora de bula."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "regurgitacao-aortica-nativa-grave-tratamento-transcateter-dedicado-align-ar-trilogy",
+        "por_que": "Documento novo. O ALIGN-AR e o sistema Trilogy resolvem exatamente o problema de ancoragem sem cálcio da etapa anterior — é a primeira plataforma transcateter DEDICADA e testada prospectivamente para regurgitação aórtica pura em paciente de alto risco cirúrgico."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "reparo-percutaneo-borda-a-borda-versus-cirurgia-na-regurgitacao-mitral-primaria-everest-ii-5-anos",
+        "por_que": "Muda o problema estrutural mais uma vez: da valva aórtica para a mitral, e dentro da mitral, da degeneração dos FOLHETOS (o que o EVEREST II trata, com reparo borda-a-borda) para o que vem a seguir — a calcificação do ANEL, que é doença de suporte, não de folheto, e não responde ao mesmo reparo."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "calcificacao-anular-mitral-grave-troca-valvar-transcateter-tendyne-summit-mac",
+        "por_que": "Documento novo, e o fechamento da trilha: a calcificação anular mitral grave costuma tornar a cirurgia convencional proibitiva (paciente idoso, doença renal crônica, diálise) e não respondia ao reparo borda-a-borda da etapa anterior. O SUMMIT-MAC testa a primeira troca valvar transcateter dedicada a esse anel calcificado, fechando a lacuna que faltava nesta base."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-aorta-e-doenca-arterial-periferica-rastreamento-e-tratamento-2024-2026",
+    "titulo": "Rastreamento vascular e tratamento endovascular: do diagnóstico populacional ao reparo anatômico complexo (2024-2026)",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Sair sabendo como o rastreamento vascular está se expandindo de um único território (aorta abdominal) para um modelo multimodal com achado sexo-específico, e como duas frentes de tratamento amadureceram no mesmo período: a técnica de revascularização carotídea com menor risco de manipulação do arco aórtico, e o reparo endovascular ramificado de aneurismas anatomicamente complexos que antes só tinham opção cirúrgica aberta de alto risco.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "aneurisma-de-aorta-abdominal-rastreamento-seguimento-e-indicacao-de-reparo",
+        "por_que": "Ponto de partida: o modelo de rastreamento mais estabelecido em doença aórtica — ultrassom de um único território (aorta abdominal), com intervalos de seguimento por diâmetro. É a referência contra a qual o rastreamento multimodal da próxima etapa se compara."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "rastreamento-vascular-multimodal-e-mortalidade-por-sexo-o-programa-viborg-2026",
+        "por_que": "Documento novo. Amplia o modelo de rastreamento de um território (AAA) para três ao mesmo tempo — aneurisma de aorta, doença arterial periférica e estenose carotídea — na população geral de 67 anos, com achado sexo-específico de mortalidade que não existia nesta base antes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024",
+        "por_que": "Um dos três territórios que o rastreamento multimodal da etapa anterior pode detectar: fixa a indicação de revascularização carotídea (endarterectomia e stent transfemoral) pela ESC 2024, antes de ver a técnica mais recente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "revascularizacao-transcarotidea-tcar-tecnica-e-evidencia-comparativa-2024-2026",
+        "por_que": "Documento novo. A revascularização transcarotídea (TCAR) surgiu depois do corte de literatura da diretriz da etapa anterior — evita a manipulação prolongada do arco aórtico do stent transfemoral clássico, com proteção embólica por fluxo revertido. É a técnica que faltava atualizar nesta base."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+        "por_que": "Muda de território vascular pela última vez: da carótida para a aorta torácica, fixando os cortes de diâmetro por etiologia que definem quando um aneurisma torácico ou toracoabdominal passa a ter indicação de reparo."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "tambe-endoprotese-ramificada-off-the-shelf-para-aneurisma-toracoabdominal-e-pararrenal",
+        "por_que": "Documento novo, e o fechamento da trilha: fecha a lacuna anatômica que os documentos anteriores de aorta abdominal e torácica não cobriam — o aneurisma pararrenal e toracoabdominal extensão IV, que historicamente só tinha reparo cirúrgico aberto de alto risco, agora com endoprótese ramificada off-the-shelf pronta para uso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-gravidez-risco-cardiovascular-contemporaneo-e-longo-prazo-2025-2026",
+    "titulo": "Risco cardiovascular na gravidez: panorama contemporâneo, mecanismo e desfecho de longo prazo (2025-2026)",
+    "tema": "Gravidez",
+    "objetivo": "Sair sabendo dimensionar a carga atual de doença cardiovascular na gestação, entender por que o distúrbio hipertensivo gestacional é um fator de risco cardiovascular materno que persiste décadas depois do parto — inclusive por subtipo e por desfecho específico como o AVC —, o mecanismo que liga pré-eclâmpsia a esse risco, e qual fator de risco pré-natal modificável (obesidade central) antecede tanto o diabetes quanto a hipertensão gestacional.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "carga-contemporanea-de-doenca-cardiovascular-na-gravidez-coorte-de-prontuario-eletronico",
+        "por_que": "Documento novo, e o ponto de partida certo para a trilha: dá o panorama agregado e temporal da doença cardiovascular na gestação ao longo de duas décadas, com dado de mundo real — a visão de conjunto que faltava antes de entrar nas condições específicas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo",
+        "por_que": "A condição isolada mais estudada dentro desse panorama: fixa por que hipertensão gestacional e pré-eclâmpsia não são só um problema da gravidez, mas um marcador de risco cardiovascular materno que persiste depois do parto."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026",
+        "por_que": "Refina a etapa anterior: nem todo distúrbio hipertensivo da gestação carrega o mesmo risco de longo prazo — o subtipo modifica a magnitude, informação de 2026 que não existia quando o risco cardiovascular geral foi descrito pela primeira vez nesta base."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "avc-de-longo-prazo-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2025",
+        "por_que": "Documento novo. Isola um desfecho específico — o AVC — dentro do risco de longo prazo descrito nas duas etapas anteriores, com desenho de coirmãs que testa se o excesso de risco é causal ou reflete apenas fatores familiares compartilhados, em cinco exposições gestacionais simultâneas."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "pre-eclampsia-mecanismo-de-disfuncao-endotelial-e-incorporacao-ao-calculo-de-risco-cardiovascular",
+        "por_que": "Depois de estabelecer QUE o risco existe e QUAL desfecho ele atinge, esta etapa explica POR QUE: o mecanismo de disfunção endotelial da pré-eclâmpsia, e como incorporá-lo ao cálculo de risco cardiovascular da mulher, não só registrá-lo como antecedente."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "obesidade-central-no-inicio-da-gestacao-e-risco-de-diabetes-e-hipertensao-pre-natal-e-pos-parto",
+        "por_que": "Documento novo, e o fechamento da trilha: recua no tempo até um fator de risco pré-natal comum e potencialmente modificável — a obesidade central no início da gestação —, que antecede tanto o diabetes quanto a hipertensão gestacional discutidos nas etapas anteriores, e mostra a limitação do IMC isolado como medida de adiposidade na gestante."
+      }
+    ]
   }
 ]
