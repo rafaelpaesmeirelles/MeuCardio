@@ -1,0 +1,28 @@
+/* Clinical editorial safety — operational provenance stays hidden, unresolved clinical verification does not. */
+.clinical-os .clinical-editorial-warning {
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  margin:.38rem 0 0!important;
+  padding:.26rem .42rem;
+  color:#f0c77f!important;
+  background:rgba(240,170,60,.06);
+  border:1px solid rgba(240,170,60,.13);
+  border-radius:7px;
+  font-size:.5rem!important;
+  font-weight:700;
+  line-height:1.25;
+}
+.clinical-os .clinical-editorial-warning::before {
+  content:"!";
+  display:grid;
+  width:15px;
+  height:15px;
+  place-items:center;
+  flex:0 0 auto;
+  color:#07131a;
+  background:#e9b75d;
+  border-radius:50%;
+  font-size:.45rem;
+  font-weight:900;
+}
