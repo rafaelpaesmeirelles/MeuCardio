@@ -5,7 +5,64 @@
 .acoes-mobile__fundo,
 .acoes-mobile { display: none; }
 
+/* Assistente Pessoal transversal — aparece nos módulos de desktop sem virar
+   uma bolha de chatbot genérica. A forma em pílula comunica continuidade da
+   rotina profissional e mantém o conteúdo clínico como protagonista. */
+.assistente-pessoal-launcher {
+  position: fixed;
+  z-index: 23;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.62rem;
+  width: min(310px, calc(100vw - 2rem));
+  min-height: 58px;
+  padding: 0.48rem 0.7rem 0.48rem 0.5rem;
+  color: #e9f1ff;
+  border: 1px solid rgba(151, 121, 224, 0.24);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(173, 126, 255, 0.15), transparent 35%),
+    linear-gradient(135deg, rgba(32, 29, 55, 0.97), rgba(10, 31, 43, 0.97));
+  box-shadow: 0 24px 55px -28px rgba(48, 31, 89, 0.92), 0 10px 30px -24px rgba(6, 25, 35, 0.8);
+  backdrop-filter: blur(18px);
+  text-decoration: none;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+.assistente-pessoal-launcher:hover {
+  color: #fff;
+  border-color: rgba(185, 154, 255, 0.46);
+  box-shadow: 0 28px 62px -26px rgba(74, 48, 132, 0.96), 0 12px 32px -24px rgba(6, 25, 35, 0.82);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+.assistente-pessoal-launcher__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #d6c4ff;
+  border: 1px solid rgba(190, 160, 255, 0.18);
+  border-radius: 13px;
+  background: rgba(168, 125, 255, 0.11);
+}
+.assistente-pessoal-launcher__icon svg { width: 20px; height: 20px; }
+.assistente-pessoal-launcher__text { min-width: 0; }
+.assistente-pessoal-launcher__text strong,
+.assistente-pessoal-launcher__text small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.assistente-pessoal-launcher__text strong { color: #f2ecff; font-size: 0.76rem; letter-spacing: 0.005em; }
+.assistente-pessoal-launcher__text small { margin-top: 0.08rem; color: #9d93b1; font-size: 0.61rem; }
+.assistente-pessoal-launcher__arrow { width: 15px; height: 15px; color: #786e8e; }
+
 @media (max-width: 1023px) {
+  .assistente-pessoal-launcher { display: none; }
   body.acoes-clinicas-abertas { overflow: hidden; }
 
   .barra-mobile--command {
@@ -217,5 +274,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .acoes-mobile { animation: none !important; }
+  .assistente-pessoal-launcher,
+  .acoes-mobile { transition: none !important; animation: none !important; }
+}
+
+@media print {
+  .assistente-pessoal-launcher { display: none !important; }
 }
