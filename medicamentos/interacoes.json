@@ -1172,5 +1172,53 @@
     "conduta": "Evitar uso crônico concomitante quando possível; se necessário, monitorizar pressão arterial e função renal (creatinina, potássio), com atenção redobrada em idoso, paciente em uso de diurético ou com função renal reduzida.",
     "fonte": "Bula FDA/DailyMed do ZESTRIL (lisinopril, Upsher-Smith Laboratories, SPL setid 838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8), seção Drug Interactions (7.3) — texto verbatim: 'coadministration of NSAIDs, including selective COX-2 inhibitors, with ACE inhibitors, including lisinopril, may result in deterioration of renal function, including possible acute renal failure' e 'The antihypertensive effect of ACE inhibitors, including lisinopril, may be attenuated by NSAIDs.' Consultado via API pública do DailyMed em 12/08/2026.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "apixabana-aine",
+    "farmacos": [
+      "apixabana"
+    ],
+    "classe_oposta": "AINE (anti-inflamatório não esteroidal) de uso crônico, ou antiagregante plaquetário/fibrinolítico/heparina",
+    "gravidade": "grave",
+    "efeito": "Aumento do risco de sangramento. A bula do ELIQUIS (apixabana) afirma textualmente: \"Coadministration of antiplatelet agents, fibrinolytics, heparin, aspirin, and chronic NSAID use increases the risk of bleeding.\" No ensaio ARISTOTLE, o uso concomitante de AAS elevou o sangramento maior anual de 1,8% para 3,4% em pacientes usando apixabana; no APPRAISE-2 (apixabana associada a antiplaquetário em síndrome coronariana aguda recente), sangramento maior de 2,8%/ano (apixabana) vs. 0,6%/ano (placebo) em terapia antiplaquetária única, e 5,9%/ano vs. 2,5%/ano em dupla terapia antiplaquetária.",
+    "conduta": "Evitar uso crônico de AINE junto com apixabana quando possível — usar analgesia alternativa para dor. Quando a combinação com antiagregante for clinicamente necessária (ex.: pós-SCA/pós-stent), a decisão deve pesar risco isquêmico contra risco hemorrágico caso a caso, com monitorização clínica atenta a sinais de sangramento.",
+    "fonte": "ELIQUIS (apixaban) — bula profissional FDA/DailyMed, E.R. Squibb & Sons LLC, setid e9481622-7cc6-418a-acb6-c5450daae9b0, seções DRUG INTERACTIONS e CLINICAL STUDIES (ARISTOTLE, APPRAISE-2) — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rivaroxabana-aine",
+    "farmacos": [
+      "rivaroxabana"
+    ],
+    "classe_oposta": "AINE (anti-inflamatório não esteroidal), AAS, inibidor do P2Y12, dupla antiagregação ou outro fármaco que prejudique a hemostasia",
+    "gravidade": "grave",
+    "efeito": "Aumento do risco de sangramento. A bula do XARELTO (rivaroxabana), seção 5.2 (Risk of Bleeding), afirma: \"Concomitant use of other drugs that impair hemostasis increases the risk of bleeding. These include aspirin, P2Y12 platelet inhibitors, dual antiplatelet therapy, other antithrombotic agents, fibrinolytic therapy, non-steroidal anti-inflammatory drugs (NSAIDs).\" A seção 7.4 (Drug Interactions) é ainda mais direta: \"Anticoagulants and NSAIDs/Aspirin: Avoid concomitant use.\"",
+    "conduta": "Evitar a combinação quando possível, conforme orientação literal da bula. Quando AAS em dose baixa for parte de indicação aprovada específica (ex.: doença arterial coronariana ou periférica estável, esquema de dose vascular de rivaroxabana), a associação é prevista pela própria bula — fora desses cenários aprovados, a orientação é evitar. Monitorar sinais de sangramento em qualquer combinação mantida.",
+    "fonte": "XARELTO (rivaroxaban) — bula profissional FDA/DailyMed, Janssen Pharmaceuticals Inc., setid 10db92f9-2300-4a80-836b-673e1ae91610, seções 5.2 (Risk of Bleeding) e 7.4 (Drug Interactions) — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dabigatrana-aine",
+    "farmacos": [
+      "dabigatrana-etexilato"
+    ],
+    "classe_oposta": "AINE de uso crônico, antiagregante plaquetário, heparina ou fibrinolítico",
+    "gravidade": "moderada",
+    "efeito": "Aumento do risco de sangramento. A bula do PRADAXA (dabigatrana etexilato), seção 5.2 (Warnings and Precautions), lista como fator de risco de sangramento: \"the concomitant use of other drugs that increase the risk of bleeding (e.g., anti-platelet agents, heparin, fibrinolytic therapy, and chronic use of NSAIDs).\" **Nota de procedência**: diferente de apixabana e rivaroxabana, cujas bulas trazem seção dedicada de DRUG INTERACTIONS citando AINE explicitamente, a bula do PRADAXA registra esse risco dentro de Warnings and Precautions, não de uma seção de interação com orientação de conduta separada — classificado como gravidade `moderada` em vez de `grave` por essa diferença de ênfase na própria fonte, não porque o mecanismo farmacológico do risco seja menor.",
+    "conduta": "Monitorar sinais e sintomas de sangramento sempre que dabigatrana for associada a AINE de uso crônico, antiagregante, heparina ou fibrinolítico. Preferir analgesia alternativa ao AINE quando possível.",
+    "fonte": "PRADAXA (dabigatran etexilate mesylate) — bula profissional FDA/DailyMed, Boehringer Ingelheim Pharmaceuticals Inc., setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9, seção 5.2 Warnings and Precautions — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "edoxabana-aine",
+    "farmacos": [
+      "edoxabana"
+    ],
+    "classe_oposta": "AINE, AAS em dose baixa (≤100mg/dia), tienopiridínico (ex.: clopidogrel), ISRS ou IRSN",
+    "gravidade": "grave",
+    "efeito": "Aumento do risco de sangramento. A bula do SAVAYSA (edoxabana), seção 7.1 (Drug Interactions), afirma: \"Co-administration of anticoagulants, antiplatelet drugs, thrombolytics and SSRIs or SNRIs may increase the risk of bleeding.\" Nos estudos clínicos do programa de registro, o uso concomitante de AAS em dose baixa (≤100mg/dia) ou tienopiridínico, e de AINE, foi permitido e resultou em taxas maiores de sangramento clinicamente relevante — a bula recomenda monitorização cuidadosa de sangramento em pacientes que precisam de tratamento crônico com AAS em dose baixa e/ou AINE.",
+    "conduta": "Monitorar cuidadosamente sinais de sangramento quando edoxabana for combinada a AAS em dose baixa e/ou AINE de uso crônico, conforme orientação literal da bula — a combinação foi estudada e é permitida, mas com risco hemorrágico aumentado documentado.",
+    "fonte": "SAVAYSA (edoxaban tosylate) — bula profissional FDA/DailyMed, Daiichi Sankyo Inc., setid e77d3400-56ad-11e3-949a-0800200c9a66, seção 7.1 Drug Interactions — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
   }
 ]
