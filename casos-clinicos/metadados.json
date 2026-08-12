@@ -14672,5 +14672,170 @@
       "Chen J, Duan W, Liu P, et al. Schizophrenia, bipolar disorder and major depressive disorder are probably not risk factors for cardiovascular disease: A Mendelian randomized study. J Affect Disord. 2025;377:184-196. DOI: 10.1016/j.jad.2025.02.069. PMID: 39983779."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "doenca-coronariana-cronica-sob-anticoagulacao-oral-adicionar-aspirina-o-ensaio-aquatic",
+    "titulo": "Doença coronariana crônica de alto risco já anticoagulado: vale manter a aspirina?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem, 71 anos, doença coronariana crônica de alto risco (lesão multiarterial documentada, sem evento agudo ou PCI nos últimos 3 anos), em fibrilação atrial permanente sob anticoagulação oral crônica. Vem em consulta de rotina tomando, além do anticoagulante, aspirina 100 mg/dia \"para proteger o coração\", prescrita há anos por outro médico. Não há stent recente nem síndrome coronariana aguda recente. O paciente pergunta se pode continuar assim indefinidamente.",
+    "pergunta": "Com base no ensaio AQUATIC (NEJM 2025), qual conduta é mais bem sustentada pela evidência nesta situação específica?",
+    "opcoes": [
+      "Manter a aspirina indefinidamente junto com o anticoagulante — a associação sempre reduz eventos isquêmicos em doença coronariana, independentemente do tempo desde o último evento",
+      "No AQUATIC (872 pacientes com doença coronariana crônica de alto risco já em anticoagulação oral), adicionar aspirina ao anticoagulante NÃO reduziu o desfecho isquêmico composto (16,9% vs. 12,1%, HR 1,53, a favor do placebo) e AUMENTOU mortalidade por qualquer causa (HR 1,72) e sangramento maior (HR 3,35) — nesta população específica (doença crônica estabelecida, sem evento/PCI recente), a evidência favorece suspender a aspirina e manter só o anticoagulante",
+      "Trocar a aspirina por um segundo anticoagulante em vez de suspender, já que a terapia antitrombótica combinada é sempre superior à monoterapia em doença coronariana",
+      "O AQUATIC não se aplica a este paciente porque ele tem fibrilação atrial, e o ensaio só testou pacientes sem arritmia associada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O AQUATIC (Lemesle G et al., N Engl J Med. 2025;393(16):1578-1588, PMID 40888725) randomizou 872 pacientes com doença coronariana crônica de ALTO RISCO já em anticoagulação oral crônica (por FA, prótese valvar ou TEV — o ensaio não exclui por etiologia da anticoagulação) para aspirina (n=433) ou placebo (n=439) adicionados ao anticoagulante. O resultado foi incomum: os três desfechos duros apontaram contra a aspirina, não só um deles. O composto isquêmico (morte CV, IAM, AVC, embolia sistêmica, revascularização ou isquemia aguda de membro) ocorreu em 16,9% com aspirina vs. 12,1% com placebo (HR ajustado 1,53; IC95% 1,07-2,18; p=0,02) — ou seja, adicionar aspirina PIOROU o desfecho isquêmico, não melhorou. A mortalidade por qualquer causa também foi maior com aspirina (13,4% vs. 8,4%, HR 1,72; IC95% 1,14-2,58) e o sangramento maior foi mais que triplicado (10,2% vs. 3,4%, HR 3,35; IC95% 1,87-6,00). O racional biológico é que, na doença crônica estável sem evento/PCI recente, a via trombótica predominante já está coberta pelo anticoagulante isolado, e a aspirina só soma toxicidade sem proteção adicional relevante. É essencial não extrapolar esse achado para o período peri-PCI ou pós-síndrome coronariana aguda recente, onde a terapia antitrombótica combinada continua sendo padrão (ex.: AUGUSTUS) — a população do AQUATIC é especificamente doença crônica estabelecida. A alternativa (c) inverte a lição do estudo (mais antitrombótico não é sempre melhor) e a (d) está errada porque FA é justamente um dos motivos de anticoagulação incluídos na população do ensaio.",
+    "source_refs": [
+      "Lemesle G, Didier R, Steg PG, et al. Aspirin in Patients with Chronic Coronary Syndrome Receiving Oral Anticoagulation (AQUATIC). N Engl J Med. 2025;393(16):1578-1588. DOI: 10.1056/NEJMoa2507532. PMID: 40888725. NCT04217447."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "inibidores-do-fator-xi-xia-na-fa-a-metanalise-2026-menos-sangramento-mas-mais-avc",
+    "titulo": "Inibidores do fator XI/XIa na fibrilação atrial: a promessa de menos sangramento se confirma?",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Um médico residente lê, num congresso, que os inibidores do fator XI/XIa (uma nova classe de anticoagulante em desenvolvimento para fibrilação atrial) prometem dissociar a proteção antitrombótica do risco de sangramento — uma espécie de \"anticoagulante mais seguro\". Ele pergunta ao preceptor se já existe alguma dessas moléculas disponível para prescrever a um paciente com FA e alto risco de sangramento.",
+    "pergunta": "Com base na metanálise de 2026 (Heart Lung, 4 ensaios, 16.852 pacientes) que reuniu os dados publicados da classe, qual é a resposta clinicamente correta?",
+    "opcoes": [
+      "Sim — asundexiana e abelacimabe já estão aprovados para uso clínico rotineiro em pacientes com FA e alto risco hemorrágico",
+      "Nenhum representante da classe está aprovado para uso clínico; a metanálise mostra que a classe reduz sangramento maior (OR 0,30) e CRNM (OR 0,38) de forma robusta e consistente (I²=0%), mas está associada a AUMENTO significativo de AVC isquêmico (OR 3,20; IC95% 1,85-5,55; p=0,004) — um sinal de classe, não de uma molécula isolada, que já havia interrompido precocemente o maior dos ensaios (OCEANIC-AF) por inferioridade de eficácia",
+      "A classe já demonstrou superioridade completa sobre os DOAC estabelecidos, tanto em eficácia quanto em segurança, e deve substituí-los assim que aprovada",
+      "O sinal de mais AVC isquêmico é exclusivo da asundexiana; abelacimabe e milvexian, por serem moléculas diferentes, certamente estarão livres desse problema"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise de 2026 (de Alcântara JPTL et al., Heart Lung. 2026;78:102739, PMID 41734570) reuniu os ensaios randomizados publicados até fevereiro de 2025 comparando inibidores do fator XI/XIa (OCEANIC-AF/asundexiana, AZALEA-TIMI 71/abelacimabe, PACIFIC-AF/asundexiana fase 2) contra DOAC estabelecidos na FA. O resultado é consistente entre os três ensaios com dado quantitativo (I²=0% em todos os desfechos, ausência de heterogeneidade): sangramento maior (ISTH) 0,40% vs. 1,32% (OR 0,30; IC95% 0,20-0,43; p<0,001) e sangramento clinicamente relevante não maior 1,53% vs. 3,94% (OR 0,38; p<0,001) — reduções grandes e robustas. Mas o AVC isquêmico foi significativamente MAIOR com a classe: 1,12% vs. 0,35% (OR 3,20; IC95% 1,85-5,55; p=0,004). Isso não é um achado isolado do OCEANIC-AF (que já havia sido interrompido precocemente por inferioridade de eficácia, HR 3,79 para AVC/embolia sistêmica) — a ausência de heterogeneidade entre os ensaios (I²=0%) sugere que o problema é de CLASSE farmacológica, não de uma molécula específica, o que torna a alternativa (d) incorreta. A redução de mortalidade por todas as causas (OR 0,81, p=0,021), apesar de estatisticamente significativa, foi numericamente modesta e, segundo os próprios autores, insuficiente para compensar a preocupação com o excesso de AVC dentro do racional de benefício clínico líquido. Nenhum representante da classe está aprovado para uso clínico em nenhum país até a data desta metanálise — são medicações de pesquisa clínica, o que torna as alternativas (a) e (c) incorretas.",
+    "source_refs": [
+      "de Alcântara JPTL, Götz GWXDR, Amaral PEO, Cecchetti G, Marques GL. Factor XI inhibitors versus direct oral anticoagulants for the prevention of thromboembolic events and safety in patients with atrial fibrillation: A systematic review and meta-analysis of randomized controlled trials. Heart Lung. 2026;78:102739. DOI: 10.1016/j.hrtlng.2026.102739. PMID: 41734570",
+      "Piccini JP, Patel MR, Steffel J, et al; OCEANIC-AF Investigators. Asundexian versus Apixaban in Patients with Atrial Fibrillation. N Engl J Med. 2025;392(1):23-32. DOI: 10.1056/NEJMoa2407105. PMID: 39225267"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-pararrenal-sem-colo-para-evar-a-endoprotese-ramificada-de-prateleira-tambe",
+    "titulo": "Aneurisma pararrenal sem colo adequado para EVAR: a endoprótese ramificada de prateleira TAMBE",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Homem, 73 anos, aneurisma de aorta pararrenal de 60 mm, sem colo justarrenal seguro para fixação de EVAR infrarrenal convencional. O cirurgião vascular discute duas opções: cirurgia aberta (com morbimortalidade relevante neste paciente de risco cirúrgico elevado) ou uma endoprótese ramificada de quatro ramos \"de prateleira\" (off-the-shelf, sem fabricação sob medida), que dispensaria as semanas de espera de um dispositivo fenestrado customizado.",
+    "pergunta": "Com base no estudo pivotal da endoprótese TAMBE (GORE EXCLUDER Thoracoabdominal Branch Endoprosthesis), qual afirmação resume corretamente os resultados e as limitações do dispositivo neste cenário?",
+    "opcoes": [
+      "O sucesso técnico foi de apenas 60%, o que torna a TAMBE inviável como alternativa à cirurgia aberta nesta anatomia",
+      "O sucesso técnico foi de 99% e não houve mortalidade relacionada à lesão em 30 dias, mas eventos adversos maiores ocorreram em 6,9% dos pacientes (incluindo 2 casos de paraplegia) e a patência do ramo renal em 1 ano (89,8-90,8%) foi inferior à do tronco celíaco e mesentérica superior (97-99%) — dados que sustentam o uso da TAMBE como opção endovascular viável, mas com discussão explícita de risco medular e de reintervenção antes do procedimento",
+      "O estudo comparou diretamente a TAMBE contra cirurgia aberta em ensaio randomizado, demonstrando superioridade estatística da via endovascular em todos os desfechos",
+      "A TAMBE está validada e aprovada para tratar qualquer extensão de aneurisma toracoabdominal, incluindo as extensões I a III de Crawford, com os mesmos resultados de segurança"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo pivotal da TAMBE (Farber MA et al., J Vasc Surg. 2024;80(5):1326-1335, PMID 38904579, com seguimento de 1 ano em J Vasc Surg. 2025;82(3):740-749, PMID 40480617) foi um ensaio prospectivo, multicêntrico, de braço único, SEM comparador direto com cirurgia aberta — o que já invalida a alternativa (c). Em 102 pacientes com aneurisma pararrenal (~42%) ou toracoabdominal extensão IV (~58%), o sucesso técnico foi de 99% (uma única falha, por insucesso de cateterização renal esquerda) e não houve mortalidade relacionada à lesão nem isquemia intestinal grave em 30 dias — o que descarta a alternativa (a). Mas a segurança não foi absoluta: eventos adversos maiores ocorreram em 7 pacientes (6,9%), incluindo 2 casos de paraplegia, 1 AVC incapacitante e 2 casos de insuficiência renal exigindo diálise, além de 1 ruptura intraoperatória — risco real que deve ser comunicado ao paciente antes do procedimento, coerente com qualquer reparo endovascular extenso que interrompa ramos segmentares da aorta. Em 1 ano, a sobrevida livre de mortalidade por qualquer causa foi de 94,1%, sem endoleak tipo I/III, mas a patência do ramo renal (89,8% esquerdo, 90,8% direito) foi menor que a do tronco celíaco e da mesentérica superior (97-99%) — o ramo renal é estruturalmente o mais vulnerável nesta plataforma, com oclusão de pelo menos um ramo-alvo em 14,7% dos pacientes em 1 ano. O documento também é explícito que o estudo NÃO cobre aneurisma toracoabdominal extensão I a III de Crawford (anatomia mais extensa, com mais vasos viscerais), o que torna a alternativa (d) incorreta — generalizar os resultados para essa anatomia mais complexa não é sustentado por este ensaio.",
+    "source_refs": [
+      "Farber MA, Matsumura JS, Han S, Makaroun MS, Suckow BD, Timaran CH, Mendes BC, Oderich GS. Early outcomes from the pivotal trial of a four-branch off-the shelf solution to treat complex abdominal and type IV thoracoabdominal aortic aneurysms. J Vasc Surg. 2024;80(5):1326-1335.e4. DOI: 10.1016/j.jvs.2024.05.020. PMID: 38904579.",
+      "Farber MA, Han S, Makaroun MS, Matsumura JS, Mendes BC, Oderich GS, Sanchez LA, Suckow BD, Timaran CH. One-year outcomes from the pivotal trial of a four-branch off-the-shelf solution to treat pararenal and extent IV thoracoabdominal aortic aneurysms. J Vasc Surg. 2025;82(3):740-749.e2. DOI: 10.1016/j.jvs.2025.05.016. PMID: 40480617."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escolha-entre-cdi-subcutaneo-e-transvenoso-sem-indicacao-de-estimulacao-o-praetorian-xl",
+    "titulo": "CDI subcutâneo ou transvenoso, sem necessidade de estimulação: o que o seguimento de 7 anos do PRAETORIAN-XL muda?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 38 anos, cardiomiopatia com indicação de CDI em prevenção primária, sem necessidade de estimulação antibradicardia, ressincronização ou estimulação antitaquicárdica (ATP). O eletrofisiologista discute a escolha entre CDI subcutâneo (S-ICD) e CDI transvenoso convencional, e ela pergunta se existe alguma diferença de segurança comprovada em estudo comparativo direto entre os dois, considerando que ela é jovem e vai conviver com o dispositivo por décadas.",
+    "pergunta": "Com base no ensaio PRAETORIAN e sua extensão de seguimento PRAETORIAN-XL (mediana de 87,5 meses, ~7,3 anos), qual afirmação é a mais precisa?",
+    "opcoes": [
+      "O S-ICD foi estatisticamente superior ao transvenoso no desfecho primário combinado (complicação relacionada a dispositivo + choque inapropriado) tanto em 4 quanto em 7,3 anos de seguimento",
+      "No desfecho combinado amplo, as duas tecnologias foram estatisticamente equivalentes em ~4 anos (HR 0,99) e também em ~7,3 anos (p=0,15); a diferença aparece só no recorte mais específico de complicação MAIOR e complicação relacionada a ELETRODO, significativamente mais frequentes no transvenoso — sem que isso torne o S-ICD superior no desfecho primário do estudo",
+      "O CDI transvenoso não apresentou nenhuma desvantagem em nenhum recorte de complicação ao longo dos 7,3 anos de seguimento",
+      "Como a paciente não tem indicação de estimulação, o resultado do PRAETORIAN-XL não se aplica a ela de forma alguma"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PRAETORIAN original (Knops RE et al., N Engl J Med. 2020;383(6):526-536, PMID 32757521; 849 pacientes, 426 S-ICD e 423 transvenoso) mostrou, em seguimento médio de 49,1 meses, não inferioridade do S-ICD no desfecho primário combinado (complicação relacionada a dispositivo + choque inapropriado): incidência estimada de 15,1% (S-ICD) vs. 15,7% (transvenoso), HR 0,99 (IC95% 0,71-1,39), sem superioridade estatística (p=0,95). A extensão PRAETORIAN-XL (Olde Nordkamp LRA et al., Circulation. 2025;152(3):172-182, PMID 40279654), com seguimento de mediana 87,5 meses (~7,3 anos), confirmou essa equivalência no desfecho combinado amplo (subdistribution HR 0,73; IC95% 0,48-1,12; p=0,15 — não significativo), o que descarta a alternativa (a). A diferença só apareceu em recorte mais específico: complicações maiores e complicações relacionadas a eletrodo foram significativamente mais frequentes no grupo transvenoso (p=0,03 e p<0,001, respectivamente), e a análise \"as-treated\" também favoreceu o S-ICD (HR 0,64; IC95% 0,41-0,99; p=0,047) — o que descarta a alternativa (c). É essencial não superinterpretar esse recorte mais estreito como se fosse o resultado principal do estudo: o desfecho primário combinado NÃO atingiu significância estatística, então dizer que \"S-ICD é sempre superior no longo prazo\" extrapola o que o próprio resultado sustenta. A alternativa (d) está errada porque é exatamente essa a população elegível do ensaio — pacientes SEM indicação de estimulação —, tornando o resultado diretamente aplicável a esta paciente.",
+    "source_refs": [
+      "Olde Nordkamp LRA, de Veld JA, Ghani A, Yap SC, van Erven L, Boersma LVA, Wilde AAM, Knops RE; PRAETORIAN-XL Investigators. Device-Related Complications in Transvenous Versus Subcutaneous Defibrillator Therapy During Long-Term Follow-Up: The PRAETORIAN-XL Trial. Circulation. 2025;152(3):172-182. DOI: 10.1161/CIRCULATIONAHA.125.074576. PMID: 40279654",
+      "Knops RE, Olde Nordkamp LRA, Delnoy PHM, et al; PRAETORIAN Investigators. Subcutaneous or Transvenous Defibrillator Therapy. N Engl J Med. 2020;383(6):526-536. DOI: 10.1056/NEJMoa1915932. PMID: 32757521"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "predicao-pre-hospitalar-de-choque-cardiogenico-no-iamcst-o-escore-early-shock",
+    "titulo": "Antes de chegar ao hospital: dá para prever quem vai chocar no IAMCST?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Homem, 82 anos, é atendido pelo SAMU com quadro de infarto com supradesnivelamento de ST de parede anterior. Na avaliação pré-hospitalar: frequência cardíaca 112 bpm, pressão arterial sistólica 85 mmHg, história de insuficiência cardíaca prévia. Ainda não há acesso a exame de sangue nem a ecocardiograma nesse momento — só os dados que a equipe do SAMU já coleta rotineiramente.",
+    "pergunta": "Com base no escore EARLY SHOCK (JAHA 2025), qual é a aplicação clínica correta desses dados pré-hospitalares?",
+    "opcoes": [
+      "O escore exige troponina e lactato para ser calculado, então não pode ser aplicado neste momento pré-hospitalar",
+      "Os dados apresentados (idade ≥80, FC ≥100 bpm, PAS <90 mmHg, IC prévia, infarto anterior) são justamente os componentes do EARLY SHOCK — um escore com boa discriminação (estatística C 0,87) derivado de 2.736 pacientes com IAMCST, que usa só dado pré-hospitalar de rotina para estimar risco de choque cardiogênico intra-hospitalar e permitir ativação precoce do time de choque; ainda assim, o próprio estudo declara que a validação externa está pendente",
+      "O EARLY SHOCK substitui a classificação SCAI de estágios do choque cardiogênico, tornando-a obsoleta",
+      "Como o escore já foi validado externamente em múltiplos países, o resultado pode ser aplicado com confiança máxima independentemente do sistema de saúde local"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O EARLY SHOCK (Yang C et al., J Am Heart Assoc. 2025;14(19):e040681, PMID 40792594) foi derivado de uma coorte retrospectiva com dados prospectivos de 2.736 pacientes consecutivos com IAMCST submetidos a angioplastia primária em Vancouver (Canadá), dos quais 415 (15,2%) desenvolveram choque cardiogênico intra-hospitalar. O modelo completo (Modelo 1) identificou 8 preditores independentes — todos obtidos sem exame laboratorial: idade ≥80 anos (OR 2,48), diálise em curso (OR 4,53), IC prévia (OR 2,56), FC ≥100 bpm (OR 3,25), PAS <90 mmHg (OR 22,41) ou 90-109 mmHg (OR 8,65), parada cardíaca pré-hospitalar (OR 17,56) e infarto anterior (OR 1,60) — com estatística C de 0,87 (discriminação considerada excelente) e ponto de corte ótimo em escore ≥18 (sensibilidade 0,79, especificidade 0,83). Isso descarta a alternativa (a): o escore é justamente desenhado para ser calculado SEM exame de sangue, no ambiente pré-hospitalar. O paciente do caso reúne pelo menos 4 desses fatores (idade ≥80, FC ≥100, PAS <90, IC prévia, infarto anterior), o que na prática elevaria substancialmente sua pontuação. O EARLY SHOCK é complementar, não substituto, da classificação SCAI: o EARLY SHOCK PREDIZ quem vai chocar (antes do choque se instalar), enquanto o SCAI CLASSIFICA a gravidade de quem já está em choque — são ferramentas para momentos diferentes, o que descarta a alternativa (c). Por fim, o próprio estudo é explícito: \"a validação externa do sistema de escore está pendente para aplicação mais ampla\" — a coorte é de um único sistema de saúde canadense, o que descarta a alternativa (d) e reforça cautela antes de aplicar o corte de pontos de forma automática em outro sistema de atendimento.",
+    "source_refs": [
+      "Yang C, Lee T, Kochan A, et al. Prehospital Prediction of Cardiogenic Shock Among Patients With ST-Segment-Elevation Myocardial Infarction: The EARLY SHOCK Score. J Am Heart Assoc. 2025;14(19):e040681. DOI: 10.1161/JAHA.124.040681. PMID: 40792594. PMCID: PMC12684621."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-pos-trombotica-ja-estabelecida-com-obstrucao-iliaca-o-ensaio-c-tract",
+    "titulo": "Síndrome pós-trombótica moderada a grave, meses depois: vale desobstruir a veia ilíaca com stent?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 45 anos, TVP proximal esquerda há 2 anos, tratada com anticoagulação adequada. Hoje apresenta síndrome pós-trombótica moderada a grave (edema crônico, dor, hiperpigmentação, claudicação venosa), já em uso de meia de compressão e venoativo sem melhora satisfatória. Angiotomografia confirma obstrução crônica de veia ilíaca esquerda. O time discute se colocar um stent para desobstruir a veia traria benefício adicional ao cuidado clínico padrão que ela já recebe.",
+    "pergunta": "Com base no ensaio C-TRACT (NEJM 2026), qual afirmação resume corretamente a evidência para essa decisão?",
+    "opcoes": [
+      "O C-TRACT testou a mesma pergunta do ATTRACT — trombólise precoce na fase aguda da TVP para prevenir síndrome pós-trombótica — e não se aplica a este cenário, que já é síndrome pós-trombótica estabelecida",
+      "Em 225 pacientes com síndrome pós-trombótica moderada/grave e obstrução ilíaca confirmada por imagem, adicionar terapia endovascular (stent ilíaco) ao cuidado padrão reduziu a gravidade em 6 meses pelo VCSS (8,1 vs. 10,0; p=0,001) e melhorou qualidade de vida específica (VEINES-QOL, +14,5 pontos; p<0,001) e geral (SF-36, +6,1 pontos; p<0,001), mas às custas de mais sangramento (11,6% vs. 3,6%; p=0,03) — o benefício é real, mas vem com custo de segurança que precisa ser discutido com a paciente",
+      "O estudo não encontrou nenhuma diferença entre terapia endovascular e cuidado padrão em nenhum desfecho, tornando a intervenção fútil neste cenário",
+      "O stent ilíaco eliminou por completo o risco de sangramento em comparação ao cuidado padrão isolado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O C-TRACT (Vedantham S et al.; C-TRACT Trial Investigators. N Engl J Med. 2026;394(23):2293-2304, PMID 41972998) é o primeiro ensaio randomizado a testar terapia endovascular PARA TRATAR a síndrome pós-trombótica (SPT) JÁ ESTABELECIDA — diferente do ATTRACT (já documentado nesta biblioteca), que testou trombólise farmacomecânica PRECOCE na fase aguda da TVP para PREVENIR a SPT. São perguntas clínicas distintas, o que descarta a alternativa (a): o cenário da paciente (SPT já instalada há 2 anos, com obstrução ilíaca confirmada) é exatamente a população do C-TRACT, não do ATTRACT. No C-TRACT, 225 pacientes com SPT moderada/grave e obstrução de veia ilíaca confirmada por imagem foram randomizados para terapia endovascular (stent + terapia antitrombótica intensificada) + cuidado padrão, versus cuidado padrão isolado. O desfecho primário (gravidade pelo escore VCSS em 6 meses, avaliadores cegos) favoreceu o grupo endovascular: 8,1±5,1 vs. 10,0±4,9 (diferença ajustada -2,0; p=0,001). Qualidade de vida específica de doença venosa (VEINES-QOL) e geral (SF-36 físico) também melhoraram significativamente (+14,5 e +6,1 pontos, respectivamente; p<0,001 nos dois). Isso descarta a alternativa (c). Mas o sangramento até 6 meses foi mais que triplicado no grupo endovascular (11,6% vs. 3,6%; p=0,03) — achado estatisticamente significativo que precisa ser pesado contra o ganho em gravidade e qualidade de vida, o que descarta a alternativa (d), que afirma o oposto do que os dados mostram. Nota importante: o VCSS (usado no C-TRACT) não é o mesmo instrumento que o escore de Villalta, também usado na avaliação da SPT — são escalas distintas de gravidade venosa.",
+    "source_refs": [
+      "Vedantham S, Kahn SR, Marston WA, et al; C-TRACT Trial Investigators. Endovascular Therapy for Post-Thrombotic Syndrome — A Randomized Trial. N Engl J Med. 2026;394(23):2293-2304. DOI: 10.1056/NEJMoa2519001. PMID: 41972998. PMCID: PMC13078690."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mieloma-multiplo-em-escalonamento-de-teclistamabe-hipotensao-sem-sinais-classicos-de-slc",
+    "titulo": "Mieloma múltiplo em step-up dosing de teclistamabe: hipotensão sem síndrome de liberação de citocinas evidente é seguro ignorar?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 64 anos, mieloma múltiplo recidivado/refratário, internado para a fase de escalonamento de dose (step-up dosing) do teclistamabe, um anticorpo biespecífico anti-BCMA/CD3. No dia 4 de internação (segunda dose de escalonamento), apresenta hipotensão (PA 88/54 mmHg) sem febre e sem os outros critérios clássicos de síndrome de liberação de citocinas (SLC) segundo a graduação ASTCT. A equipe assistente considera que, por não preencher critério formal de SLC, o quadro provavelmente não tem relação cardiovascular relevante com a medicação.",
+    "pergunta": "Com base na análise de farmacovigilância FAERS 2026 sobre anticorpos biespecíficos direcionadores de células T (BsAbs), essa conclusão da equipe está correta?",
+    "opcoes": [
+      "Sim — sem os critérios clássicos de SLC (febre, necessidade de suporte hemodinâmico), não há motivo para preocupação cardiovascular específica com o BsAb",
+      "Não — na análise de farmacovigilância (7.647 notificações, 1.408 com evento cardiovascular), muitas complicações cardiovasculares ocorreram INDEPENDENTEMENTE da presença de SLC clinicamente evidente; além disso, os eventos cardiovasculares tendem a ocorrer mais precocemente (mediana de 7 dias) que os não cardiovasculares (15 dias) — justamente na janela do escalonamento de dose em que este paciente está —, e teclistamabe é o agente anti-BCMA com o sinal mais forte de miocardite entre os avaliados",
+      "Essa hipotensão é certamente miocardite, e o diagnóstico não precisa de investigação adicional",
+      "Anticorpos biespecíficos têm o mesmo perfil de toxicidade cardiovascular do amivantamabe, então a conduta deve seguir o protocolo desse outro fármaco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A análise de farmacovigilância mais recente e específica sobre a classe (Munir M et al., Am J Hematol. 2026, PMID 42499150), cruzando registros do FDA Adverse Event Reporting System de dezembro de 2014 a setembro de 2025, encontrou 1.408 (18,4%) de 7.647 notificações relacionadas a BsAbs envolvendo evento cardiovascular, com 447 (5,8%) fatais. Dois achados são diretamente relevantes a este caso: primeiro, os eventos cardiovasculares ocorreram mais precocemente que os não cardiovasculares (mediana de 7 dias vs. 15 dias) — concentrando o risco justamente na fase de step-up dosing, que é onde este paciente está, no dia 4. Segundo, e mais importante para a pergunta: muitas complicações cardiovasculares surgiram INDEPENDENTEMENTE da presença de SLC clinicamente evidente — ou seja, a ausência de febre e dos demais critérios ASTCT de SLC NÃO afasta risco cardiovascular, o que torna a alternativa (a) incorreta. Além disso, na estratificação por agente/alvo da mesma análise, os BsAbs anti-BCMA/GPRC5D (teclistamabe, elranatamabe, talquetamabe, usados no mieloma múltiplo) tiveram associação mais forte com choque e miocardite, e o teclistamabe especificamente apresentou o sinal de miocardite mais forte entre os agentes analisados — reforçando que este paciente, com este fármaco, nesta janela temporal, merece vigilância cardiovascular ativa (considerar troponina, peptídeo natriurético, avaliação de função ventricular), não descarte automático por ausência de SLC formal. A alternativa (c) está errada porque hipotensão isolada sem outros achados não fecha diagnóstico de miocardite sem investigação — o documento não sustenta esse salto diagnóstico. A alternativa (d) está errada porque o amivantamabe é um biespecífico EGFR-MET, SEM braço anti-CD3 e SEM recrutamento de células T — mecanismo e perfil de toxicidade completamente diferentes dos T-cell engagers como o teclistamabe.",
+    "source_refs": [
+      "Munir M, et al. Cardiovascular Toxicity Associated With Bispecific Antibodies in Hematological Malignancies. Am J Hematol. 2026 Jul 24. PMID 42499150. doi:10.1002/ajh.70449",
+      "TECVAYLI (teclistamab-cqyv) — bula/rótulo do FDA, DailyMed (National Library of Medicine), setid 54e0f974-ccee-44ea-9254-40e9883cee1e",
+      "Lee DW, Santomasso BD, Locke FL, et al. ASTCT Consensus Grading for Cytokine Release Syndrome and Neurologic Toxicity Associated with Immune Effector Cells. Biol Blood Marrow Transplant. 2019;25(4):625-638. PMID 30592986"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "historia-de-diabetes-gestacional-isolada-e-risco-de-avc-a-longo-prazo-coorte-sueca-de-coirmas",
+    "titulo": "Só teve diabetes gestacional, sem pré-eclâmpsia: isso conta na anamnese de risco de AVC décadas depois?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 58 anos, vem à consulta cardiológica de rotina. Nega hipertensão, diabetes atual ou tabagismo. Na anamnese obstétrica, relata que teve diabetes mellitus gestacional em uma das duas gestações, há cerca de 28 anos, sem pré-eclâmpsia, sem parto pré-termo e sem recém-nascido pequeno para idade gestacional. O médico considera que, por não ter tido pré-eclâmpsia — o antecedente obstétrico mais classicamente associado a risco cardiovascular tardio —, essa história não altera a estratificação de risco dela.",
+    "pergunta": "Com base na coorte sueca de coirmãs (Eur Heart J 2025, 2,2 milhões de mulheres, seguimento até 46 anos), essa conclusão está correta?",
+    "opcoes": [
+      "Sim — apenas pré-eclâmpsia e outros distúrbios hipertensivos gestacionais têm associação relevante com AVC a longo prazo; diabetes gestacional isolado não altera o risco",
+      "Não — no estudo, diabetes gestacional teve a MAIOR magnitude de associação com AVC entre os cinco desfechos gestacionais adversos avaliados (HR ajustado 1,86; IC95% 1,69-2,04), numericamente maior até que pré-eclâmpsia (HR 1,36) e distúrbios hipertensivos não pré-eclâmpsia (HR 1,82); o risco persistiu significativo mesmo 30 a 46 anos após o parto, e sobreviveu, ainda que atenuado, à análise de coirmãs (controle por fatores familiares compartilhados)",
+      "O estudo mostrou que o excesso de risco é inteiramente explicado por fatores genéticos familiares compartilhados, não pela gestação em si, então a história obstétrica pode ser desconsiderada",
+      "O risco de AVC associado a desfechos gestacionais adversos se concentra nos primeiros 10 anos após o parto e já não é relevante para esta paciente, 28 anos depois"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A coorte nacional sueca de Crump C et al. (Eur Heart J. 2025;46(33):3290-3300, PMID 40569854), com 2.201.393 mulheres seguidas por até 46 anos (48 milhões de pessoas-ano), testou cinco desfechos gestacionais adversos simultaneamente quanto ao risco de AVC a longo prazo: diabetes gestacional (HR 1,86; IC95% 1,69-2,04), outros distúrbios hipertensivos não pré-eclâmpsia (HR 1,82; IC95% 1,67-1,98), parto pré-termo (HR 1,40; IC95% 1,36-1,45), pré-eclâmpsia (HR 1,36; IC95% 1,31-1,41) e pequeno para idade gestacional (HR 1,26; IC95% 1,22-1,29). O achado central para este caso é que a diabetes gestacional teve a MAIOR magnitude de associação com AVC entre os cinco — numericamente maior até que a pré-eclâmpsia, o antecedente mais classicamente lembrado na anamnese cardiovascular —, o que torna a alternativa (a) incorreta: a paciente do caso, com diabetes gestacional isolada, está justamente no grupo com maior HR ajustado do estudo. Dois achados reforçam que a associação não é artefato: os HRs permaneceram significativamente elevados mesmo 30 a 46 anos após o parto (não se concentram nos primeiros 10-20 anos, o que descarta a alternativa d — esta paciente, 28 anos após o parto, está exatamente dentro dessa janela de risco ainda elevado); e a análise de coirmãs (comparando irmãs entre si, controlando por fatores genéticos e ambientais compartilhados da infância) mostrou que o excesso de risco foi APENAS PARCIALMENTE explicado por esses fatores familiares — ou seja, persistiu mesmo com esse controle, o que descarta a alternativa (c), que afirma explicação familiar completa. A mensagem prática é que diabetes gestacional merece peso semelhante (ou até maior, pela magnitude do HR) ao de pré-eclâmpsia na anamnese cardiovascular de rotina, mesmo décadas após o parto.",
+    "source_refs": [
+      "Crump C, Sundquist J, Sundquist K. Adverse pregnancy outcomes and long-term risk of stroke: a Swedish nationwide co-sibling study. Eur Heart J. 2025;46(33):3290-3300. DOI: 10.1093/eurheartj/ehaf366. PMID: 40569854"
+    ],
+    "review_status": "revisado"
   }
 ]
