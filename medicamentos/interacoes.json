@@ -1416,5 +1416,77 @@
     "conduta": "Não coadministrar. A bula contraindica o uso de tadalafila com qualquer forma de nitrato orgânico, regular ou intermitente. Diferente da sildenafila (cuja bula não estabelece prazo seguro), a bula da tadalafila define explicitamente que devem se passar PELO MENOS 48 HORAS após a última dose de tadalafila antes de considerar administrar nitrato, e mesmo assim só sob supervisão médica com monitorização hemodinâmica.",
     "fonte": "Rótulos aprovados pelo FDA/DailyMed para ADCIRCA (tadalafil, United Therapeutics, setid ff61b237-be8e-461b-8114-78c52a8ad0ae) — \"ADCIRCA is contraindicated in patients who are using any form of organic nitrate... Do not use nitrates within 48 hours of the last dose of ADCIRCA\" — e CIALIS (tadalafil, Eli Lilly, setid bcd8f8ab-81a2-4891-83db-24a0b0e25895), mesma janela de 48 horas. Consultados via API pública do DailyMed em 12/08/2026.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "digoxina-diltiazem",
+    "farmacos": [
+      "digoxina",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "moderada",
+    "efeito": "O diltiazem eleva a concentração sérica de digoxina — em grau menor do que o já registrado nesta base para o verapamil (que também inibe a glicoproteína P/eliminação renal da digoxina, com maior potência).",
+    "conduta": "Medir a digoxinemia antes de iniciar o diltiazem; se necessário, reduzir a dose de digoxina em cerca de 15-30% ou espaçar a frequência de administração, e manter monitorização clínica e laboratorial.",
+    "fonte": "Bula FDA/DailyMed de LANOXIN (digoxin, ADVANZ Pharma (US) Corp., SPL setid d91e3646-4c63-4512-ab22-db39c085c4dc), seção 7.2 (Pharmacokinetic Drug Interactions) — tabela de fármacos que aumentam a concentração sérica de digoxina lista o diltiazem com aumento de 20%, com a orientação: \"Measure serum digoxin concentrations before initiating concomitant drugs. Reduce digoxin concentrations by decreasing the dose by approximately 15-30% or by modifying the dosing frequency and continue monitoring.\" Distinção de magnitude com o verapamil já registrada na entrada `verapamil-digoxina` desta base. Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "metoprolol-diltiazem",
+    "farmacos": [
+      "metoprolol",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "moderada",
+    "efeito": "O diltiazem, como a digitális, a clonidina e o verapamil, retarda a condução atrioventricular e reduz a frequência cardíaca; associado ao betabloqueio do metoprolol, o efeito é aditivo e aumenta o risco de bradicardia — mesmo padrão de interação já registrado nesta base para bisoprolol, carvedilol e propranolol com verapamil/diltiazem.",
+    "conduta": "Monitorizar frequência cardíaca e condução atrioventricular (ECG) ao associar; cautela redobrada ou evitar a combinação em paciente com doença do nó sinusal ou distúrbio de condução AV preexistente.",
+    "fonte": "Bula FDA/DailyMed de TOPROL-XL (metoprolol succinate extended-release, Aralez Pharmaceuticals US Inc., SPL setid 991fe00b-498b-400e-9e5b-921cb07d9b2c), seção 7.3 (Drug Interactions) — texto verbatim: \"Digitalis glycosides, clonidine, diltiazem, and verapamil slow atrioventricular conduction and decrease heart rate. Concomitant use with beta-blockers can increase the risk of bradycardia.\" Mesmo texto confirmado na bula genérica de metoprolol tartarato (Cardinal Health 107, LLC, SPL setid 6399f2c3-7799-4f8b-b8b7-8d2137b1f852), seção 7.4. Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propranolol-agonista-beta2-inalado",
+    "farmacos": [
+      "propranolol"
+    ],
+    "classe_oposta": "agonista beta-2 adrenérgico inalado, de curta ou longa duração (ex.: salbutamol/albuterol, formoterol, salmeterol)",
+    "gravidade": "grave",
+    "efeito": "O propranolol, betabloqueador não seletivo, antagoniza diretamente a broncodilatação mediada por receptores beta-2 — a bula do broncodilatador declara que o betabloqueador não apenas bloqueia o efeito pulmonar do agonista beta-2, como também pode, por si só, provocar broncoespasmo grave em paciente com asma.",
+    "conduta": "Evitar betabloqueador não seletivo (como o propranolol) em paciente com asma ou broncoespasmo reativo; se o uso for indispensável em outro contexto (ex.: tremor essencial, profilaxia de enxaqueca), preferir um betabloqueador cardiosseletivo em dose baixa e reavaliar a resposta broncodilatadora do paciente ao agonista beta-2 inalado.",
+    "fonte": "Bula FDA/DailyMed de VENTOLIN HFA (albuterol sulfate, RemedyRepack Inc., SPL setid 2ed73618-be3a-4331-9509-6401258f791f), seção 7.1 (Drug Interactions) — texto verbatim: \"Beta-blockers not only block the pulmonary effect of beta-agonists, such as VENTOLIN HFA, but may also produce severe bronchospasm in patients with asthma.\" Mecanismo de antagonismo competitivo pelo receptor beta confirmado na bula FDA/DailyMed de PROPRANOLOL HYDROCHLORIDE TABLET (Major Pharmaceuticals, SPL setid e7218c9b-b9b8-4cf0-a2c7-c759ad3a65ba), que descreve o propranolol como \"a nonselective beta-adrenergic receptor blocking agent\" que \"specifically competes with beta-adrenergic receptor agonist agents for available receptor sites\", e adverte que ele \"may provoke a bronchial asthmatic attack by blocking bronchodilation produced by endogenous and exogenous catecholamine stimulation of beta-receptors\". Consultados via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dronedarona-digoxina",
+    "farmacos": [
+      "dronedarona",
+      "digoxina"
+    ],
+    "gravidade": "grave",
+    "efeito": "A dronedarona inibe a glicoproteína P, aumentando a exposição plasmática à digoxina; a própria bula acrescenta que a digoxina, por sua vez, pode potencializar os efeitos eletrofisiológicos da dronedarona (como a redução da condução do nó atrioventricular) — interação bidirecional.",
+    "conduta": "Considerar suspender a digoxina ao iniciar dronedarona. Se a digoxina for mantida, reduzir a dose pela metade, monitorizar a digoxinemia de perto e observar sinais clínicos de toxicidade digitálica.",
+    "fonte": "Bula FDA/DailyMed de MULTAQ (dronedarone, sanofi-aventis U.S. LLC, SPL setid 7fa41601-7fb5-4155-8e50-2ae903f0d2d6), seção 7.3 (Digoxin) — texto verbatim: \"Dronedarone increased digoxin exposure by inhibiting the P-gp transporter... Consider discontinuing digoxin. If digoxin treatment is continued, halve the dose of digoxin, monitor serum levels closely, and observe for toxicity.\" Seção 7.1 acrescenta: \"Digoxin can potentiate the electrophysiologic effects of dronedarone (such as decreased AV-node conduction)\", com a mesma orientação de ajuste de dose. A bula não especifica a magnitude numérica (fold-increase) do aumento de exposição à digoxina — não fabricado aqui. Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propafenona-digoxina",
+    "farmacos": [
+      "propafenona-cloridrato",
+      "digoxina"
+    ],
+    "gravidade": "grave",
+    "efeito": "A propafenona reduz a depuração da digoxina e eleva de forma acentuada e variável sua exposição sistêmica em equilíbrio — a bula quantifica o aumento da AUC da digoxina entre 60% e 270%, com queda de depuração entre 31% e 67%.",
+    "conduta": "Monitorizar a digoxinemia de todo paciente que iniciar propafenona em uso concomitante de digoxina, e ajustar a dose de digoxina conforme o nível sérico e a resposta clínica — a magnitude do efeito varia muito de paciente para paciente, o que torna a monitorização individual indispensável.",
+    "fonte": "Bula FDA/DailyMed de PROPAFENONE HYDROCHLORIDE TABLET (Strides Pharma Science Limited, SPL setid c65253ab-937f-4982-b841-69c2b9f9ccdb), seção Drug Interactions — texto verbatim: \"Concomitant use of propafenone and digoxin increased steady-state serum digoxin exposure (AUC) in patients by 60% to 270%, and decreased the clearance of digoxin by 31% to 67%... Monitor plasma digoxin levels of patients receiving propafenone and adjust digoxin dosage as needed.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propafenona-betabloqueador",
+    "farmacos": [
+      "propafenona-cloridrato"
+    ],
+    "classe_oposta": "betabloqueador metabolizado pelo CYP2D6 (propranolol, metoprolol)",
+    "gravidade": "moderada",
+    "efeito": "A propafenona é inibidora do CYP2D6 e eleva de forma substancial a concentração plasmática de betabloqueadores metabolizados por essa via — a bula quantifica aumento de 113% para o propranolol e de 100% a 400% para o metoprolol em uso concomitante.",
+    "conduta": "Ao associar propafenona a propranolol ou metoprolol, vigiar sinais de betabloqueio excessivo (bradicardia, hipotensão, fadiga) e considerar redução da dose do betabloqueador; a própria bula registra que, nos estudos clínicos com propafenona de liberação imediata, pacientes em uso concomitante de betabloqueador não tiveram incidência aumentada de efeitos adversos — a interação farmacocinética é bem documentada, mas o excesso clínico correspondente não foi tão marcado nos ensaios.",
+    "fonte": "Bula FDA/DailyMed de PROPAFENONE HYDROCHLORIDE TABLET (Strides Pharma Science Limited, SPL setid c65253ab-937f-4982-b841-69c2b9f9ccdb), seção Drug Interactions — texto verbatim: \"...increased propranolol plasma concentrations at steady state by 113%\"; para o metoprolol, concentrações aumentadas \"by 100% to 400%\"; e \"in clinical trials using propafenone immediate release tablets, subjects who were receiving beta-blockers concurrently did not experience an increased incidence of side effects\". Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
   }
 ]
