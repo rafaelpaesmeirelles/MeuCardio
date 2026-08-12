@@ -14302,5 +14302,210 @@
       "Sheldon RS, Morillo CA, Klingenheben T, Krahn AD, Sheldon A, Rose MS. Age-dependent effect of β-blockers in preventing vasovagal syncope. Circ Arrhythm Electrophysiol. 2012;5(5):920-926. DOI: 10.1161/CIRCEP.112.974386. PMID: 22972872"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "ivus-em-pci-complexa-de-alto-risco-ivus-chip-versus-renovate-complex-pci",
+    "titulo": "IVUS rotineira em PCI complexa de alto risco: o que os dois maiores ensaios mostram, juntos?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Cardiologista intervencionista planeja PCI complexa de múltiplos vasos com calcificação extensa e bifurcação em paciente de alto risco. Um colega defende usar IVUS rotineiramente, citando que \"os estudos já provaram que a imagem intravascular reduz falha do vaso-alvo em PCI complexa\".",
+    "pergunta": "Considerando os dois maiores ensaios randomizados disponíveis sobre imagem intravascular em PCI complexa — o RENOVATE-COMPLEX-PCI (seguimento de 5 anos) e o IVUS-CHIP (mais recente e maior) — qual afirmação é a mais precisa?",
+    "opcoes": [
+      "Os dois ensaios convergem e comprovam definitivamente que a IVUS reduz falha do vaso-alvo em toda PCI complexa, sem exceção",
+      "Os dois ensaios testam a mesma pergunta central em populações rotuladas de forma semelhante e chegam a direções opostas: o RENOVATE-COMPLEX-PCI mostrou benefício sustentado da imagem em 5 anos (10,5% vs. 14,9%, HR 0,68, p=0,009), mas o IVUS-CHIP, maior (n=2.020) e com seguimento mais recente (mediana 19 meses), foi neutro (13,9% vs. 11,1%, HR 1,25, IC95% 0,97-1,60, p=0,08), com a estimativa pontual desfavorável à imagem — a evidência atual não sustenta afirmar benefício robusto e consistente da IVUS em toda PCI complexa",
+      "O IVUS-CHIP prova que a imagem intravascular é prejudicial em PCI complexa e o uso deve ser abandonado",
+      "A imagem intravascular nunca foi testada em ensaio clínico randomizado nessa população"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RENOVATE-COMPLEX-PCI (n=1.639, seguimento mediano 5,3 anos) mostrou benefício sustentado da PCI guiada por imagem intravascular sobre angiografia isolada em falha do vaso-alvo (10,5% vs. 14,9%; HR 0,68, IC95% 0,51-0,91; p=0,009). O IVUS-CHIP (Diletti R et al., N Engl J Med 2026;394(22):2200-2211, PMID 41911016), ensaio maior (n=2.020, randomização 1:1) e com critérios pré-especificados de otimização de stent, testou exatamente a mesma pergunta em PCI complexa de alto risco (\"CHIP\") e não confirmou o benefício em seguimento mediano de 19 meses: falha do vaso-alvo em 13,9% (IVUS) vs. 11,1% (angiografia), HR 1,25 (IC95% 0,97-1,60; p=0,08) — resultado neutro, com a estimativa pontual na direção OPOSTA à hipótese de benefício. Os dois estudos não podem ser lidos isoladamente: não permitem afirmar que a imagem intravascular nunca ajuda (o RENOVATE mostrou benefício real), nem que deve ser rotina em toda PCI complexa (o IVUS-CHIP, maior e mais recente, não confirmou isso no seguimento disponível até agora). Uma hipótese de leitura — não demonstrada por nenhum dos dois estudos — é que o seguimento muito mais longo do RENOVATE (5,3 anos vs. 19 meses) tenha captado um benefício tardio e cumulativo que o IVUS-CHIP ainda não teve tempo de mostrar. A imagem intravascular continua sendo ferramenta válida de otimização procedimental (aposição, expansão, cobertura do stent), mas a promessa de redução robusta e precoce de falha do vaso-alvo em toda PCI complexa não está estabelecida de forma consistente entre os dois maiores ensaios disponíveis.",
+    "source_refs": [
+      "Diletti R, Daemen J, Van Mieghem NM, et al.; IVUS-CHIP Investigators. Intravascular Ultrasound-Guided or Angiography-Guided Complex High-Risk PCI. N Engl J Med. 2026;394(22):2200-2211. DOI: 10.1056/NEJMoa2601521. PMID: 41911016."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-e-cancer-escolha-de-anticoagulante-conforme-controle-do-vka-start2",
+    "titulo": "FA e câncer: trocar varfarina bem controlada por DOAC \"porque é mais moderno\"?",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 74 anos, câncer de mama em quimioterapia ativa, fibrilação atrial permanente, em uso de varfarina há anos com tempo em faixa terapêutica (TiTR) de 78% nos últimos 6 meses, sem nenhum episódio de sangramento. Ela pergunta se deveria trocar para um DOAC, \"porque ouviu dizer que é mais moderno e melhor\".",
+    "pergunta": "Segundo o registro START2 (Menichelli et al., Cancer 2026), que estratificou a comparação DOAC-versus-VKA pela qualidade do controle do VKA (TiTR), qual conduta está mais alinhada com a evidência para ESSA paciente específica, com TiTR ≥70%?",
+    "opcoes": [
+      "Trocar para DOAC imediatamente e sem ressalva — o estudo mostrou benefício uniforme de mortalidade em qualquer cenário, sem custo adicional",
+      "Manter a varfarina sempre, porque DOAC nunca deve ser usado em paciente oncológico",
+      "Considerar a troca com cautela, ponderando risco e benefício com a paciente: no estrato de TiTR ≥70% (controle já excelente), o DOAC mostrou sinal de menor mortalidade, mas risco de eventos cardiovasculares semelhante e risco de SANGRAMENTO MAIOR do que o VKA bem controlado — diferente do estrato de TiTR <70%, onde o DOAC foi favorável em mortalidade e eventos cardiovasculares sem esse sinal de mais sangramento",
+      "A escolha de anticoagulante, uma vez feita, nunca deve ser reavaliada durante o tratamento oncológico"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O registro START2 (Menichelli D et al., Cancer. 2026;132(14):e70501, PMID 42411384), com 1.605 pacientes pareados por escore de propensão, encontrou que, na comparação geral, DOAC associou-se a menor mortalidade por todas as causas (HR 0,37; p<0,001) e menos eventos cardiovasculares (sHR 0,58; p=0,005) que VKA, com risco de sangramento semelhante. Mas ao estratificar os usuários de VKA por qualidade de controle (TiTR <70% vs. ≥70%), o achado se divide: no estrato de TiTR <70% (controle inadequado), o DOAC foi favorável em mortalidade E eventos cardiovasculares, sem sinal de excesso de sangramento. No estrato de TiTR ≥70% (controle já excelente — exatamente o perfil desta paciente), o DOAC ainda mostrou sinal de menor mortalidade, mas o risco de eventos cardiovasculares foi semelhante e o risco de SANGRAMENTO foi maior do que com o VKA bem controlado. Os próprios autores concluem: \"DOAC podem reduzir a mortalidade em pacientes com FA e câncer independentemente do TiTR. O uso de DOAC em pacientes com alto risco de sangramento e bom TiTR deve ser cauteloso.\" Para uma paciente com VKA já muito bem controlado (TiTR 78%) e sem sangramento prévio, a troca automática \"porque é mais moderno\" ignora justamente o subgrupo em que este estudo observacional (não um ensaio randomizado — PSM reduz mas não elimina confundimento residual) mostrou um preço a pagar em sangramento, especialmente relevante em paciente com plaquetopenia relacionada a quimioterapia.",
+    "source_refs": [
+      "Menichelli D, Cormaci VMD, Gazzaniga G, et al; START2 Registry Investigators. Direct oral anticoagulants and warfarin in atrial fibrillation patients with cancer by anticoagulation quality. Cancer. 2026;132(14):e70501. DOI: 10.1002/cncr.70501. PMCID: PMC13338909. PMID: 42411384"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipercalemia-na-icfer-quelante-de-potassio-para-manter-espironolactona-sinal-do-realize-k",
+    "titulo": "Quelante de potássio controlou a hipercalemia na ICFEr: o acompanhamento clínico pode relaxar?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Paciente com ICFEr (FEVE 30%), em terapia otimizada exceto pelo antagonista mineralocorticoide (MRA), por hipercalemia recorrente com espironolactona. Inicia-se sódio zircônio ciclosilicato (SZC) para permitir manter espironolactona em dose plena. Após alguns meses, com o potássio bem controlado, a equipe discute se o acompanhamento clínico pode ser espaçado, já que \"o problema principal — o potássio — está resolvido\".",
+    "pergunta": "O que o REALIZE-K (ensaio de retirada randomizada, SZC vs. placebo, na otimização de espironolactona) acrescenta a essa decisão?",
+    "opcoes": [
+      "Confirma exatamente o mesmo resultado do DIAMOND (patiromer): controle de potássio sem nenhuma outra ressalva de segurança",
+      "Mostra que quelantes de potássio nunca devem ser usados na ICFEr, pela alta taxa de eventos adversos",
+      "Apesar de controle de potássio muito superior ao placebo (71% vs. 36% de resposta terapêutica ótima; OR 4,45) e de manutenção de dose mais alta de espironolactona (81% vs. 50% com ≥25mg/dia), o REALIZE-K mostrou, como desfecho exploratório e não pré-planejado como primário, MAIS eventos de piora da IC no grupo SZC (11% vs. 3% dos pacientes; p=0,034 nominal, ensaio subdimensionado para esse desfecho) — controle laboratorial bem-sucedido do potássio não é garantia automática de menos evento clínico, e o acompanhamento clínico ativo continua necessário, não apenas o laboratorial",
+      "O REALIZE-K prova que a espironolactona deve ser suspensa definitivamente sempre que houver qualquer episódio de hipercalemia, independentemente do uso de quelante"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O REALIZE-K (Kosiborod MN et al., J Am Coll Cardiol. 2025;85(10):971-984, PMID 39566872) randomizou 203 pacientes que atingiram normocalemia com SZC e espironolactona ≥25mg/dia para continuar SZC (n=102) ou trocar para placebo (n=101) por 6 meses. O controle de potássio foi muito superior com SZC: resposta terapêutica ótima em 71% vs. 36% (OR 4,45; p<0,001), e mais pacientes mantiveram dose ≥25mg/dia de espironolactona (81% vs. 50%; OR 4,33; p<0,001). Mas o desfecho exploratório de morte cardiovascular ou piora da IC (hospitalização/visita urgente) ocorreu em 11% do grupo SZC (11 eventos: 1 morte CV, 10 eventos de IC) contra 3% do grupo placebo (3 eventos: 1 morte CV, 2 eventos de IC), p nominal (log-rank) = 0,034. Os próprios autores classificam o ensaio como subdimensionado (underpowered) para esse desfecho — o número absoluto de eventos é pequeno e o intervalo de confiança em torno do resultado é necessariamente largo —, mas afirmam explicitamente que esse número maior de eventos de IC no grupo SZC \"deve ser fatorado na tomada de decisão clínica\". Isso contrasta com o DIAMOND (patiromer), cujo desfecho de morbidade relacionada favoreceu o quelante (win ratio 1,53), sem esse sinal desfavorável — os dois ensaios não são diretamente comparáveis (populações e definições de desfecho diferentes), mas a divergência de sinal é real. A mensagem prática: manter dose alta de MRA com o auxílio de um quelante continua exigindo acompanhamento clínico ativo, não só laboratorial — o controle bem-sucedido do potássio não elimina, por si só, a necessidade de vigilância clínica.",
+    "source_refs": [
+      "Kosiborod MN, Cherney DZI, Desai AS, Testani JM, Verma S, Chinnakondepalli K, et al. Sodium Zirconium Cyclosilicate for Management of Hyperkalemia During Spironolactone Optimization in Patients With Heart Failure (REALIZE-K). J Am Coll Cardiol. 2025;85(10):971-984. DOI: 10.1016/j.jacc.2024.11.014. PMID: 39566872",
+      "Butler J, Anker SD, Lund LH, Coats AJS, Filippatos G, Siddiqi TJ, et al. Patiromer for the management of hyperkalemia in heart failure with reduced ejection fraction: the DIAMOND trial. Eur Heart J. 2022;43(41):4362-4373. DOI: 10.1093/eurheartj/ehac401. PMID: 35900838"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "descarga-ventricular-esquerda-durante-ecmo-va-impella-ou-balao-intra-aortico-coorte-jroad-dpc",
+    "titulo": "\"Está provado que Impella é sempre melhor que balão intra-aórtico na ECMO-VA\": correto?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente em choque cardiogênico refratário por miocardite fulminante, em ECMO venoarterial (ECMO-VA), necessitando de estratégia de descarga (unloading) do ventrículo esquerdo. Ao revisar a coorte nacional japonesa JROAD-DPC (Ito et al., 2026), um intensivista conclui que \"está provado que Impella é superior ao balão intra-aórtico (IABP) e deve ser sempre a primeira escolha de descarga, em qualquer causa de choque\".",
+    "pergunta": "Essa conclusão está integralmente correta?",
+    "opcoes": [
+      "Sim — é um ensaio clínico randomizado definitivo, e a mortalidade foi claramente menor com Impella em todos os subgrupos de causa do choque",
+      "Não integralmente — é coorte observacional retrospectiva (não randomizada, ponderada por escore de propensão); o benefício de mortalidade hospitalar (OR 0,86, IC95% 0,75-0,99) na coorte geral existiu, mas a diferença estatisticamente significativa por causa do choque só apareceu em insuficiência cardíaca (OR 0,66) e arritmia (OR 0,62) — não nas demais etiologias —, e o Impella também se associou a quase o dobro de dias de internação (22 vs. 12), de duração de suporte (7 vs. 4 dias) e de custo (US$56,1 mil vs. US$27,3 mil); confusão residual por indicação não pode ser excluída num banco administrativo de faturamento",
+      "Não — o estudo na verdade mostrou que o balão intra-aórtico é superior ao Impella em mortalidade hospitalar",
+      "A combinação de dispositivo de descarga com ECMO-VA nunca foi estudada nesse cenário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Ito R et al. (J Am Heart Assoc. 2026;15(15):e047993, PMID 42535545) analisaram 18.906 pacientes do banco administrativo japonês JROAD-DPC (2012-2023) em choque cardiogênico tratados com ECMO-VA combinada a Impella (n=1.688) ou IABP (n=17.218), com ponderação por escore de propensão — NÃO é ensaio randomizado. A mortalidade hospitalar foi menor com Impella na coorte geral (57,3% vs. 67,2%; OR 0,86, IC95% 0,75-0,99), mas a análise por causa do choque só mostrou diferença estatisticamente significativa em dois subgrupos: insuficiência cardíaca (OR 0,66, IC95% 0,47-0,91) e arritmia (OR 0,62, IC95% 0,42-0,91) — o próprio estudo não relata diferença significativa nas demais causas. O preço do Impella foi concreto: tempo de internação quase o dobro (mediana 22 vs. 12 dias), duração de suporte quase o dobro (7 vs. 4 dias) e custo total quase o dobro (US$56,1 mil vs. US$27,3 mil) — sinal indireto de que a coorte tratada com Impella pode ter incluído pacientes clinicamente mais complexos, não necessariamente que o dispositivo por si só prolongue a internação. Sendo dado observacional de banco de faturamento (não registro clínico dedicado), confusão residual por indicação é possível: centros que dispõem de Impella podem selecionar pacientes diferentes, e a gravidade real pode não estar totalmente capturada pelas variáveis do banco. A mortalidade hospitalar continua alta em qualquer braço (57-67%), o que já orienta a expectativa da conversa com a família independentemente do dispositivo escolhido.",
+    "source_refs": [
+      "Ito R, Kondo T, Kazama S, et al. Left Ventricular Unloading With Impella Versus Intra-Aortic Balloon Pump in Cardiogenic Shock Requiring Venoarterial Extracorporeal Membrane Oxygenation. J Am Heart Assoc. 2026;15(15):e047993. DOI: 10.1161/JAHA.125.047993. Epub 2026 Jul 31. PMID: 42535545"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tep-de-risco-intermediario-alto-trombectomia-mecanica-ou-so-anticoagulacao-storm-pe",
+    "titulo": "TEP de risco intermediário-alto: trombectomia mecânica já deveria ser rotina, segundo o STORM-PE?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Paciente com TEP agudo, normotenso, relação VD/VE 1,3 à angiotomografia de tórax e troponina elevada — perfil de risco intermediário-alto. Um colega, citando o ensaio STORM-PE, argumenta que a trombectomia mecânica por aspiração assistida por computador \"já deveria ser rotina nesse perfil, porque o estudo provou que reduz mais a sobrecarga do ventrículo direito e tem a mesma segurança que só anticoagular\".",
+    "pergunta": "Essa leitura do STORM-PE está correta?",
+    "opcoes": [
+      "Sim, sem ressalvas — tanto o desfecho primário quanto a segurança foram comprovados superiores com a trombectomia mecânica",
+      "Não integralmente — o desfecho primário (variação da relação VD/VE em 48h) é um substituto de imagem, não um desfecho clínico duro; o ensaio tem apenas 100 pacientes (47 vs. 53), sem poder estatístico para desfecho clínico; a diferença em eventos adversos maiores em 7 dias não foi significativa (4,3% vs. 7,5%; p=0,681 — resultado esperado de um estudo sem poder para essa comparação, não prova de equivalência de segurança); e ocorreram DUAS mortes relacionadas ao TEP no braço de trombectomia mecânica (nenhuma relatada no braço de anticoagulação isolada) — um sinal que precisa ser esclarecido por um ensaio maior antes de considerar a intervenção rotina, não descartado por ser numericamente pequeno",
+      "Não — o STORM-PE mostrou que a trombectomia mecânica piora a relação VD/VE em comparação com a anticoagulação isolada",
+      "O STORM-PE testou TEP de alto risco com hipotensão/choque, não de risco intermediário-alto normotenso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O STORM-PE (Lookstein RA et al.; Circulation. 2026;153(1):21-34, PMID 41183181) randomizou 100 pacientes com TEP de risco intermediário-alto normotenso para trombectomia por aspiração assistida por computador (CAVT) + anticoagulação (n=47) versus anticoagulação isolada (n=53). O desfecho primário — redução da relação VD/VE em 48h — foi maior com CAVT (0,52 ± 0,37 vs. 0,24 ± 0,40; diferença 0,27, IC95% 0,12-0,43; p<0,001), e houve normalização mais precoce dos sinais vitais. Mas esse desfecho é um substituto (surrogate) de imagem, não mortalidade, descompensação clínica ou qualidade de vida a longo prazo. Em eventos adversos maiores em 7 dias, NÃO houve diferença estatística (4,3% vs. 7,5%; p=0,681) — mas um ensaio de 100 pacientes não tem poder para provar equivalência de segurança, apenas para não detectar diferença. Mais relevante: duas mortes relacionadas ao TEP ocorreram no braço de trombectomia mecânica (nenhuma no braço de anticoagulação isolada) — número absoluto pequeno demais para conclusão estatística, mas exatamente o tipo de sinal que um ensaio maior (como o PE-TRACT, patrocinado pelo NIH e ainda sem resultados publicados) precisa esclarecer antes de a intervenção mecânica ser considerada rotina nessa população. Reduzir mais a dilatação do VD em 48h não prova, por si só, um desfecho clínico melhor — e a ausência de diferença estatística em segurança, num estudo pequeno, não é prova de segurança equivalente.",
+    "source_refs": [
+      "Lookstein RA, Konstantinides SV, Weinberg I, et al; STORM-PE Trial Investigators. Randomized Controlled Trial of Mechanical Thrombectomy With Anticoagulation Versus Anticoagulation Alone for Acute Intermediate-High Risk Pulmonary Embolism: Primary Outcomes From the STORM-PE Trial. Circulation. 2026;153(1):21-34. DOI: 10.1161/CIRCULATIONAHA.125.077232. PMID: 41183181. Epub 2025 Nov 3 — abstract completo conferido via PubMed E-utilities em 12/08/2026 (esearch + efetch, texto integral do resumo estruturado)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "revumenibe-e-prolongamento-de-qtc-quando-suspender-e-quando-reduzir-a-dose",
+    "titulo": "Revumenibe e QTcF 490ms na semana 2: suspender definitivamente ou interromper e reiniciar?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente em uso de revumenibe (inibidor de menina) para leucemia mieloide aguda recidivada com rearranjo de KMT2A. No ECG de vigilância da semana 2 de tratamento, o QTcF está em 490 ms, sem sintomas. Potássio sérico 3,7 mEq/L, magnésio normal.",
+    "pergunta": "Conforme o alerta em quadro da bula do FDA para o revumenibe (Revuforj), qual a conduta correta diante de QTcF 490 ms nesse momento?",
+    "opcoes": [
+      "Descontinuar o revumenibe permanentemente, já que qualquer QTcF acima de 480 ms exige suspensão definitiva do fármaco",
+      "Interromper a dose e reiniciar na MESMA dose após correção eletrolítica: a faixa QTcF 480-500 ms exige interrupção com reinício na mesma dose (só QTcF >500 ms exige reinício em dose reduzida, e só arritmia com risco de vida exige descontinuação permanente); e mesmo com potássio 3,7 mEq/L (faixa 3,6-3,9 mEq/L da bula), a conduta é suplementar potássio e manter a terapia, não suspender por esse valor isolado",
+      "Nenhuma ação é necessária além de observação, já que o paciente está assintomático",
+      "Aumentar a dose do revumenibe, pois o prolongamento de QTc não tem relação com a dose do fármaco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A bula do FDA para o revumenibe (Revuforj, atualizada em fevereiro de 2026) traz alerta em quadro (nível mais alto de advertência regulatória) para QTc prolongation e Torsades de Pointes, com protocolo explícito de conduta por faixa de QTcF: QTcF 480-500 ms → interromper a dose e reiniciar NA MESMA DOSE após correção eletrolítica; QTcF >500 ms → interromper e reiniciar em nível de dose REDUZIDO; arritmia com risco de vida → descontinuar PERMANENTEMENTE. Não iniciar o fármaco se o QTcF basal exceder 450 ms. Quanto ao potássio, a bula estabelece limiares específicos: 3,6-3,9 mEq/L → suplementar e manter a terapia; ≤3,5 mEq/L → suplementar e reavaliar em até 24h. Este risco não é teórico: um relato de caso publicado em 2026 (Keller CL et al., Ochsner Journal, PMID 42311583) documenta prolongamento de QTc induzido por revumenibe evoluindo para múltiplos episódios de torsades de pointes e arritmias ventriculares — complicação potencialmente fatal, já descrita na prática clínica, não apenas sinal de estudo de fase inicial. Nos ensaios pivotais AUGMENT-101 (coorte com rearranjo de KMT2A), prolongamento de QTc grau ≥3 ocorreu em 13,8% dos pacientes. A monitorização eletrocardiográfica obrigatória é: ECG basal antes de iniciar, ECG semanal nas primeiras 4 semanas, e ECG mensal a partir de então — o caso descrito, na semana 2, está exatamente dentro dessa janela de vigilância mais intensa.",
+    "source_refs": [
+      "Issa GC, Aldoss I, DiPersio J, et al. Menin Inhibition With Revumenib for KMT2A-Rearranged Relapsed or Refractory Acute Leukemia (AUGMENT-101). J Clin Oncol. 2025;43(1):75-84. PMID 39121437. doi:10.1200/JCO.24.00826",
+      "Keller CL, et al. Revumenib-Induced QTc Prolongation Leading to Multiple Episodes of Torsades de Pointes and Ventricular Arrhythmias. Ochsner J. 2026;26(2):167-172. PMID 42311583. doi:10.31486/toj.25.0100",
+      "REVUFORJ (revumenib) — bula/rótulo do FDA, DailyMed (National Library of Medicine), setid 6eb3cdbc-0e74-477d-82d6-3bb172d3f63f, atualizada em 04/02/2026"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-aortica-pura-grave-alto-risco-cirurgico-candidato-a-tavi-dedicado-align-ar",
+    "titulo": "Regurgitação aórtica pura grave, alto risco cirúrgico: prótese TAVI convencional ou dispositivo dedicado?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 81 anos, regurgitação aórtica pura grave sintomática (sem estenose associada, sem cálcio valvar relevante à tomografia), considerado alto risco cirúrgico pelo heart team. Um membro da equipe sugere implantar uma prótese TAVI convencional balão-expansível, já usada rotineiramente no serviço para estenose aórtica, argumentando que \"a técnica de implante é a mesma\".",
+    "pergunta": "Com base no ALIGN-AR (sistema Trilogy) e no panorama histórico de dispositivos convencionais versus dedicados em regurgitação aórtica pura, qual é a conduta mais alinhada com a evidência disponível?",
+    "opcoes": [
+      "Usar a prótese convencional já disponível no serviço, já que o mecanismo de implante é essencialmente idêntico ao usado na estenose aórtica",
+      "Preferir, quando disponível, um dispositivo transcateter DEDICADO para regurgitação aórtica nativa (como a válvula Trilogy, ancorada por clipes que capturam os folhetos nativos, sem depender de cálcio) — próteses convencionais usadas fora de bula em RA pura têm histórico de resultado sensivelmente pior (metanálise: mortalidade em 30 dias de até 16,9% com dispositivos de 1ª geração, contra 4,7% com dispositivo dedicado; migração valvar de até 19,0% contra 3,0%), e o ALIGN-AR (n=700, alto risco cirúrgico) atingiu as duas metas pré-especificadas de segurança em 30 dias e mortalidade em 1 ano especificamente com o dispositivo dedicado — sem esquecer de discutir com o paciente a taxa de novo marca-passo definitivo (21,6%) observada no ensaio",
+      "Não oferecer nenhum tratamento transcateter a este paciente, já que apenas a cirurgia é validada em regurgitação aórtica pura, em qualquer risco cirúrgico",
+      "O ALIGN-AR é um ensaio randomizado que provou a superioridade do dispositivo dedicado sobre a cirurgia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Diferente da estenose aórtica calcificada (onde toda a experiência de TAVI foi construída), a regurgitação aórtica pura geralmente não tem cálcio para ancorar uma prótese convencional por atrito radial, e o anel costuma ser maior e mais complacente — por isso dispositivos de estenose usados off-label em RA pura têm histórico de alto risco de má-posição, migração e vazamento paravalvular. Uma metanálise de 19 estudos observacionais (Bacigalupi E et al., J Am Heart Assoc. 2025;14(21):e038659, PMID 41147394) mostra a evolução por geração de dispositivo: mortalidade em 30 dias de 16,9% (1ª geração off-label) para 4,7% (dispositivo dedicado); migração valvar de 19,0% para 3,0%. O ALIGN-AR (Makkar RR et al., Lancet. 2025;406(10521):2757-2771, PMID 41260228), ensaio prospectivo de braço único (não randomizado contra cirurgia) com a válvula Trilogy — dedicada, ancorada por clipes nos folhetos nativos — incluiu 700 pacientes de alto risco cirúrgico e atingiu as duas metas coprimárias pré-especificadas: composto de segurança em 30 dias de 24,0% (meta de não inferioridade a 40,5%, p<0,0001) e mortalidade em 1 ano de 7,7% (meta de superioridade a 25,0%, p<0,0001), com zero RA grave residual. O custo real a discutir: taxa de novo marca-passo definitivo de 21,6% (mais de 1 em cada 5 pacientes), maior que a observada em TAVI contemporâneo balão-expansível para estenose. É essencial não confundir \"meta de performance histórica atingida\" com \"não inferior à cirurgia em ensaio randomizado\" — são comparações estruturalmente diferentes, e o padrão-ouro continua sendo a cirurgia; o dispositivo dedicado é a alternativa validada para quem, como este paciente, não é bom candidato cirúrgico.",
+    "source_refs": [
+      "Makkar RR, Thourani VH, Vahl TP, et al; ALIGN-AR Investigators. Transcatheter aortic valve implantation with the Trilogy valve for symptomatic native aortic regurgitation (ALIGN-AR): a pivotal, multicentre, single-arm, investigational device exemption study. Lancet. 2025;406(10521):2757-2771. DOI: 10.1016/S0140-6736(25)02215-9. PMID: 41260228. Abstract completo conferido no PubMed via E-utilities em 12/08/2026.",
+      "Bacigalupi E, Scorpiglione L, Prendergast BD, et al; Heart Team study group. Dedicated Versus Conventional Devices in Patients With Pure Native Aortic Regurgitation: A Systematic Review and Meta-Analysis. J Am Heart Assoc. 2025;14(21):e038659. DOI: 10.1161/JAHA.124.038659. PMID: 41147394. Abstract completo conferido no PubMed via E-utilities em 12/08/2026 — usado como evidência complementar do panorama histórico (dispositivos convencionais vs. dedicados), não como fonte do desfecho principal deste documento."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "carga-de-doenca-cardiovascular-na-gestacao-interpretando-uma-coorte-temporal-de-19-anos",
+    "titulo": "Prevalência de doença cardiovascular na gestação subiu 7 vezes em 19 anos: isso prova causalidade do tempo?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Um residente lê que, numa coorte americana de prontuário eletrônico com 56.833 gestações (2001-2019), a prevalência ajustada por idade de doença cardiovascular materna subiu de 1% para 7% ao longo do período — um aumento de 7 vezes —, e conclui que \"isso prova que a gestação está ficando cada vez mais perigosa para o coração, de forma causal e linear, ano após ano\".",
+    "pergunta": "Essa interpretação do estudo de Lau et al. (Circulation 2025) está correta?",
+    "opcoes": [
+      "Sim, o desenho do estudo prova causalidade direta e isolada do tempo sobre o risco cardiovascular gestacional",
+      "Não integralmente — é coorte observacional/descritiva de prontuário eletrônico (não um ensaio de intervenção); o próprio desenho do estudo não separa quanto do aumento de 7 vezes reflete mudança real na saúde cardiovascular das gestantes (idade materna mais avançada, mais obesidade e diabetes na população geral) de quanto reflete melhora na captura diagnóstica ao longo de 19 anos de evolução do prontuário eletrônico e da codificação — a DIREÇÃO da tendência é robusta e clinicamente relevante, mas a magnitude exata da contribuição de cada fator não pode ser isolada só com este desenho",
+      "Não — o estudo na verdade mostrou queda na prevalência de doença cardiovascular materna ao longo do período",
+      "O estudo não tem nenhuma relevância clínica, é apenas um exercício epidemiológico sem aplicação prática"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Lau ES et al. (Circulation. 2025;152(15):1044-1055, PMID 41048030) analisaram 56.833 gestações em 38.996 mulheres (2001-2019, coorte multi-institucional de prontuário eletrônico de atenção primária) e encontraram aumento estatisticamente significativo tanto na prevalência ajustada por idade de comorbidade/doença cardiovascular materna (1% em 2001 para 7% em 2019) quanto na incidência de complicação cardiovascular relacionada à gestação (11% para 13%, p<0,001) — na coorte total, aproximadamente 1 em cada 6-7 gestações teve alguma complicação cardiovascular associada. O próprio estudo, contudo, é descritivo/epidemiológico, não um ensaio de intervenção, e seu desenho não permite separar quanto do aumento de prevalência reflete mudança real na saúde cardiovascular de base das gestantes (idade materna mais avançada, maior prevalência de obesidade e diabetes) de quanto reflete melhora na captura diagnóstica ao longo de quase duas décadas de evolução de prontuário eletrônico e codificação. O achado robusto e clinicamente acionável não é a magnitude exata do número, mas a DIREÇÃO da tendência e a amplificação de risco por comorbidade de base: mulheres com hipertensão prévia tiveram complicação cardiovascular no primeiro ano pós-parto em 23% dos casos, contra 5% sem essa carga de base (mais de 4 vezes) — reforçando a gestação como janela de identificação precoce de risco cardiovascular que se estende ao resto da vida da mulher, e não apenas um período de risco transitório. Extrapolar os números absolutos diretamente para a realidade obstétrica brasileira, sem ajuste, também seria um erro — a coorte vem de um sistema de atenção primária americano com perfil demográfico próprio.",
+    "source_refs": [
+      "Lau ES, D'Souza V, Zhao Y, Reeder C, Goldberg R, Flores M, Economy KE, Maddah M, Khurshid S, Ellinor PT, Ho JE. Contemporary Burden of Cardiovascular Disease in Pregnancy: Insights From a Real-World Pregnancy Electronic Health Record Cohort. Circulation. 2025;152(15):1044-1055. DOI: 10.1161/CIRCULATIONAHA.125.074692. PMID: 41048030 — coorte multi-institucional de prontuário eletrônico, 56.833 gestações em 38.996 mulheres, 2001-2019, erratum publicado em Circulation 2026;153(2):e11"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "combinacao-de-finerenona-e-empagliflozina-na-drc-diabetica-a-empagliflozina-reduz-a-hipercalemia-confidence",
+    "titulo": "Associar iSGLT2 \"neutraliza\" o risco de hipercalemia da finerenona? O que o CONFIDENCE mostrou",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Paciente com doença renal crônica e diabetes tipo 2, albuminúria significativa, já em uso de IECA. O nefrologista propõe iniciar finerenona e empagliflozina simultaneamente. Um colega comenta que \"associar o iSGLT2 é uma forma inteligente de neutralizar o risco de hipercalemia da finerenona, pela ação caliurética do SGLT2i\", e sugere reduzir a frequência de dosagem de potássio no seguimento.",
+    "pergunta": "O ensaio CONFIDENCE (e sua análise secundária pré-especificada de hiperpotassemia) sustenta essa expectativa de que a empagliflozina reduziria o risco de hipercalemia da finerenona?",
+    "opcoes": [
+      "Sim — a combinação eliminou completamente o risco de hiperpotassemia associado à finerenona isolada",
+      "Não — apesar da plausibilidade mecanística (natriurese/caliurese do iSGLT2), a análise secundária pré-especificada do CONFIDENCE não encontrou diferença estatisticamente significativa na incidência de hiperpotassemia entre a combinação (15,1%) e a finerenona isolada (18,8%; p=0,85 para as chances de desenvolver hiperpotassemia, p=0,91 para a variação média de potássio) — a vigilância laboratorial de potássio deve continuar exatamente com o mesmo rigor quando os dois fármacos são combinados, sem redução de frequência",
+      "Não — a combinação aumenta drasticamente e de forma estatisticamente significativa o risco de hiperpotassemia em relação à finerenona isolada",
+      "O CONFIDENCE não avaliou hiperpotassemia em nenhum momento do desenho do estudo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CONFIDENCE (Agarwal R et al.; N Engl J Med. 2025;393(6):533-543, PMID 40470996) randomizou pacientes com DRC, albuminúria e diabetes tipo 2 em três braços (finerenona isolada, empagliflozina isolada, ou combinação) e mostrou que a combinação reduziu a albuminúria em 29% a mais que finerenona isolada e 32% a mais que empagliflozina isolada (p<0,001 nas duas comparações) — respaldo direto, pela primeira vez em ensaio randomizado dedicado, à recomendação da ESC 2023 de associar as duas classes desde o início. Mas a análise secundária pré-especificada de segurança (Agarwal R et al.; J Am Coll Cardiol. 2026, PMID 41493296) testou especificamente a hipótese de que a empagliflozina reduziria a hiperpotassemia induzida pela finerenona, pela plausibilidade mecanística de natriurese/caliurese do iSGLT2 — e NÃO confirmou essa expectativa: hiperpotassemia ocorreu em 15,1% da combinação, 18,8% da finerenona isolada e 9,7% da empagliflozina isolada, sem diferença estatisticamente significativa entre combinação e finerenona isolada (p=0,85 para as chances de hiperpotassemia; p=0,91 para a variação média de potássio). A análise de mediação também mostrou que o benefício da combinação sobre a albuminúria não dependeu do grau de variação do potássio. Ou seja: associar o iSGLT2 não é uma estratégia validada para \"neutralizar\" ou reduzir a necessidade de vigilância da hiperpotassemia da finerenona — a monitorização laboratorial de potássio, já recomendada na monografia da finerenona, deve continuar exatamente igual, sem redução de rigor, quando os dois fármacos são combinados.",
+    "source_refs": [
+      "Agarwal R, Green JB, Heerspink HJL, Mann JFE, McGill JB, Mottl AK, Rosenstock J, Rossing P, Vaduganathan M, Brinker M, Edfors R, Li N, Scheerer MF, Scott C, Nangaku M; CONFIDENCE Investigators. Finerenone with Empagliflozin in Chronic Kidney Disease and Type 2 Diabetes. N Engl J Med. 2025;393(6):533-543. DOI: 10.1056/NEJMoa2410659. PMID: 40470996 — NCT05254002, randomizado 1:1:1, três braços, 180 dias, financiamento Bayer",
+      "Agarwal R, Kolkhof P, Bakris G, et al. Risk of Hyperkalemia With Empagliflozin, Finerenone, or Both: Secondary Analysis of the CONFIDENCE Randomized Trial. J Am Coll Cardiol. 2026. PMID: 41493296 — análise secundária pré-especificada de hiperpotassemia e mediação causal"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-resistente-quarto-farmaco-quando-espironolactona-nao-e-tolerada-diretriz-brasileira-2025",
+    "titulo": "Ginecomastia dolorosa com espironolactona em hipertensão resistente: qual a próxima alternativa validada?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com hipertensão resistente confirmada por MAPA (após exclusão de pseudorresistência), em terapia tripla otimizada com IECA + bloqueador de canal de cálcio di-hidropiridínico de ação prolongada + clortalidona, desenvolve ginecomastia dolorosa após espironolactona 25mg/dia introduzida como quarto fármaco. Reduzir a dose para 12,5mg/dia não resolveu o sintoma.",
+    "pergunta": "Segundo o Capítulo 12 da Diretriz Brasileira de Hipertensão Arterial 2025 (SBC/SBN/SBH), qual alternativa tem respaldo de ensaio randomizado de não inferioridade à espironolactona para esse cenário, com uma ressalva prática relevante para o Brasil?",
+    "opcoes": [
+      "Suspender definitivamente o quarto fármaco e manter apenas a terapia tripla, já que não existe alternativa validada ao antagonista mineralocorticoide",
+      "Amilorida (até 10mg/dia) — mostrou-se NÃO INFERIOR à espironolactona (até 25mg/dia) na redução da PA sistólica domiciliar em pacientes com hipertensão resistente já em terapia tripla, com taxas semelhantes de controle pressórico (<130mmHg); a ressalva prática relevante é que, no Brasil, a amilorida só está disponível nas doses de 2,5mg e 5mg, em combinação fixa com hidroclorotiazida ou clortalidona — limitação real para reproduzir exatamente o esquema testado no ensaio",
+      "Furosemida em substituição ao IECA, já que reduz mais a volemia do que qualquer antagonista mineralocorticoide",
+      "Dobrar a dose de clortalidona, abandonando de vez a estratégia de bloqueio do eixo mineralocorticoide"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Diretriz Brasileira de Hipertensão Arterial 2025 (Brandão AA et al., Arq Bras Cardiol. 2025;122(9):e20250624, PMID 41294179), no Capítulo 12, recomenda espironolactona 25-50mg/dia como quarto fármaco preferencial na hipertensão resistente, considerando o estado de hiperaldosteronismo relativo que caracteriza essa condição. Quando a ginecomastia dolorosa (efeito adverso mais comum, por atividade antiandrogênica) não responde à redução para 12,5mg/dia, a diretriz cita alternativas: a eplerenona (sem efeitos hormonais, mas com potência anti-hipertensiva menor) e a AMILORIDA (10 a 20mg/dia), que um ensaio randomizado (Lee et al., citado na diretriz) mostrou ser NÃO INFERIOR à espironolactona (até 25mg/dia) na redução da PA sistólica domiciliar, com taxas de controle pressórico (<130mmHg) semelhantes entre os grupos, tanto em aferições domiciliares quanto de consultório. A diretriz registra explicitamente uma limitação prática relevante para reproduzir esse esquema no Brasil: a amilorida só está disponível nas doses de 2,5mg e 5mg, sempre em combinação fixa com hidroclorotiazida ou clortalidona — não existe apresentação isolada nas doses testadas no ensaio, o que exige adaptação da prescrição. Vale lembrar que a própria diretriz distingue hipertensão resistente (HR, mais dependente de volume e hiperaldosteronismo) de hipertensão refratária (HRf, mais dependente de hiperatividade simpática, que responde melhor a simpatolítico de ação central, alfabloqueador ou betabloqueador) — a escolha do quarto e quinto fármaco segue essa lógica fisiopatológica, não uma lista genérica de opções.",
+    "source_refs": [
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Texto completo em inglês consultado via PDF de acesso aberto publicado pelo próprio periódico (abccardiol.org), Capítulo 12 (Resistant and Refractory Hypertension, páginas 101-106), metodologia GRADE — força de recomendação (Strong/Weak) e certeza da evidência (High/Moderate/Low), não classe/nível ESC"
+    ],
+    "review_status": "revisado"
   }
 ]
