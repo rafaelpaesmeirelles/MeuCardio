@@ -5,9 +5,13 @@ editorial posterior. A fronteira de segurança de publicação fica na
 reconciliação: apenas `review_status=revisado` é publicado e qualquer registro
 que deixe de estar revisado é despublicado.
 
-Para a RC de lançamento, a exceção é deliberadamente estreita: somente os dez
-medicamentos conhecidos abaixo podem permanecer pendentes. Um novo pendente em
-qualquer manifesto volta a quebrar o gate e exige decisão editorial explícita.
+A exceção estreita usada durante a RC de lançamento (dez medicamentos
+conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
+validação científica completa dos dez contra fonte primária (bula/rótulo/
+PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. A
+allowlist abaixo está vazia de propósito: qualquer novo pendente em qualquer
+manifesto quebra o gate e exige a mesma disciplina de verificação, não uma
+reabertura silenciosa da exceção.
 """
 
 from __future__ import annotations
@@ -32,18 +36,7 @@ MANIFESTS = (
     "doencas/metadados.json",
     "triagem-sintomas/metadados.json",
 )
-PENDENTES_MEDICAMENTOS_RC = {
-    "lercanidipino-cloridrato",
-    "nisoldipina",
-    "isradipina",
-    "lacidipino",
-    "nadroparina-calcica",
-    "lorundrostat",
-    "enlicitide",
-    "cagrilintida",
-    "danicamtiv",
-    "istaroxime",
-}
+PENDENTES_MEDICAMENTOS_RC: set[str] = set()
 
 
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
