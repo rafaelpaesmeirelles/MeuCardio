@@ -4,6 +4,7 @@ import { api, type Usuario } from "./api";
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const COMMAND_HISTORY_KEY = "corvia:command-history:v1";
 const COMMAND_HISTORY_OWNER_KEY = "corvia:command-history-owner:v1";
+const COMMAND_HISTORY_SESSION_KEY = "corvia:command-history-session:v1";
 const ASSISTANT_ENTRY_KEYS = [
   "corvia:assistant-entry-mode:v1",
   "corvia:assistant-entry-question:v1",
@@ -27,21 +28,31 @@ async function mensagemLogin(res: Response): Promise<string> {
 }
 
 /**
- * A Home pode guardar localmente os últimos comandos para permitir “continuar
- * de onde parei”. Como um comando pode conter contexto clínico digitado pelo
- * médico, esse histórico nunca pode sobreviver à troca de conta no mesmo
- * navegador. O owner local é apenas o id interno; nenhum dado do usuário é
- * copiado para ele.
+ * A Home usa um pequeno histórico local para “continuar de onde parei”. Como
+ * o médico pode digitar contexto clínico, ele recebe duas barreiras extras:
+ *
+ * 1. nunca atravessa troca de conta no mesmo navegador;
+ * 2. nunca atravessa uma nova sessão do navegador. O payload continua em
+ *    localStorage apenas para sobreviver a reload/PWA refresh dentro da mesma
+ *    sessão; um marcador em sessionStorage o invalida quando a sessão termina.
+ *
+ * O owner contém somente o id interno do usuário, nunca nome/e-mail/paciente.
  */
 function vincularContextoLocal(usuario: Usuario) {
   try {
-    const ownerAtual = window.localStorage.getItem(COMMAND_HISTORY_OWNER_KEY);
     const novoOwner = String(usuario.id);
-    if (ownerAtual !== novoOwner) {
+    const ownerAtual = window.localStorage.getItem(COMMAND_HISTORY_OWNER_KEY);
+    const sessaoAtual = window.sessionStorage.getItem(COMMAND_HISTORY_SESSION_KEY);
+    const mudouConta = ownerAtual !== novoOwner;
+    const novaSessaoDoBrowser = sessaoAtual !== novoOwner;
+
+    if (mudouConta || novaSessaoDoBrowser) {
       window.localStorage.removeItem(COMMAND_HISTORY_KEY);
       ASSISTANT_ENTRY_KEYS.forEach((chave) => window.sessionStorage.removeItem(chave));
     }
+
     window.localStorage.setItem(COMMAND_HISTORY_OWNER_KEY, novoOwner);
+    window.sessionStorage.setItem(COMMAND_HISTORY_SESSION_KEY, novoOwner);
   } catch {
     // Armazenamento local é opcional; a autenticação nunca depende dele.
   }
@@ -51,6 +62,7 @@ function limparContextoLocal() {
   try {
     window.localStorage.removeItem(COMMAND_HISTORY_KEY);
     window.localStorage.removeItem(COMMAND_HISTORY_OWNER_KEY);
+    window.sessionStorage.removeItem(COMMAND_HISTORY_SESSION_KEY);
     ASSISTANT_ENTRY_KEYS.forEach((chave) => window.sessionStorage.removeItem(chave));
   } catch {
     // Nada a fazer quando o browser bloqueia storage.
@@ -93,7 +105,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Login é um ponto seguro para uma recarga completa. O parâmetro único
     // evita reaproveitamento do documento HTML por caches intermediários; o
     // Caddy e o service worker também revalidam o shell. O AuthProvider da
-    // nova página vincula/limpa o histórico local antes de expor a sessão.
+    // nova página vincula/limpa o contexto local antes de expor a sessão.
     window.location.replace(`/?login=${Date.now()}`);
   }
 
