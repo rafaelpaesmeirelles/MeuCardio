@@ -79,9 +79,17 @@ export default function CommandCenterBridge() {
     }
 
     function prenderFocoAcoes(evento: KeyboardEvent) {
-      if (evento.key !== "Tab") return;
       const dialogo = document.querySelector<HTMLElement>(".acoes-mobile");
       if (!dialogo) return;
+
+      if (evento.key === "Escape") {
+        requestAnimationFrame(() => {
+          document.querySelector<HTMLElement>(".barra-mobile__acao")?.focus();
+        });
+        return;
+      }
+      if (evento.key !== "Tab") return;
+
       const focaveis = Array.from(
         dialogo.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'),
       ).filter((elemento) => elemento.offsetParent !== null);
