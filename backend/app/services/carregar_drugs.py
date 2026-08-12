@@ -36,8 +36,13 @@ def carregar(caminho_json: str) -> dict:
         for d in drogas:
             existente = db.query(Drug).filter(Drug.slug == d["slug"]).first()
             if existente:
+                # O manifesto versionado é a fonte canônica também para o
+                # review_status. Se um verbete voltar a `pendente_revisao`,
+                # esse estado precisa chegar ao banco para que a reconciliação
+                # o despublique. Preservar o status antigo poderia manter
+                # conteúdo não revisado visível depois de uma regressão.
                 for k, v in d.items():
-                    if k not in ("slug", "review_status") and k in _COLUNAS_DRUG:
+                    if k != "slug" and k in _COLUNAS_DRUG:
                         setattr(existente, k, v)
                 atualizados += 1
             else:
