@@ -22527,5 +22527,137 @@
         "por_que": "Fecha a trilha no sentido oposto das etapas anteriores: em vez de decidir começar um procedimento ou fármaco, decidir compartilhadamente TIRAR um medicamento da polifarmácia — cenário do consenso científico AHA 2026, cada vez mais comum no cardiopata idoso."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-do-esporte-fundamentos-triagem-e-diferenciacao",
+    "titulo": "Cardiologia do Esporte: fundamentos, triagem pré-participação e diferenciação da zona cinzenta",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Sair sabendo estruturar a avaliação cardiovascular do atleta do início ao fim: como a triagem pré-participação seleciona quem investigar, como diferenciar o remodelamento fisiológico do coração de atleta da cardiomiopatia hipertrófica na zona cinzenta, como interpretar dois achados de alarme muito comuns na prática (extrassístole ventricular e síncope ao esforço) e como a cadeia de sobrevivência com DEA fecha o ciclo quando a prevenção falha.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "triagem-cardiovascular-pre-participacao-ecg-atleta-aha-acc-2025",
+        "por_que": "Ponto de entrada de toda a trilha: é a triagem pré-participação com ECG, na abordagem contemporânea AHA/ACC 2025, que decide quem segue para investigação adicional e quem está liberado para competir."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+        "por_que": "O achado mais comum que a triagem gera é hipertrofia ventricular esquerda de significado incerto. Este documento é o guia de imagem multimodal para não desqualificar um atleta saudável nem liberar um portador de cardiomiopatia hipertrófica não reconhecida."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-exercicio-esporte-competitivo",
+        "por_que": "Quando a diferenciação da etapa anterior conclui pela doença, e não pela adaptação, é aqui que entra a decisão compartilhada sobre exercício e participação esportiva competitiva no portador confirmado de cardiomiopatia hipertrófica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "morte-subita-cardiaca-no-atleta-triagem-causas-arritmogenicas-e-eletrofisiologia-esportiva",
+        "por_que": "Alarga o horizonte para além da cardiomiopatia hipertrófica: reúne as demais causas arritmogênicas de morte súbita no atleta e o campo emergente da eletrofisiologia esportiva."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "extrassistoles-e-arritmias-ventriculares-no-atleta",
+        "por_que": "Achado de consultório muito mais frequente que a doença estrutural rara: ensina a distinguir a extrassístole ventricular benigna do atleta daquela que exige investigação adicional."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "sincope-durante-exercicio-atleta-avaliacao-retorno-esporte",
+        "por_que": "Sintoma de alarme que qualquer um dos quadros anteriores pode anteceder — síncope durante o esforço, ao contrário da síncope situacional comum, nunca deve ser assumida como benigna sem avaliação dirigida."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
+        "por_que": "Fecha a trilha no cenário em que toda a triagem e a estratificação de risco não evitaram o evento: a cadeia de sobrevivência com desfibrilador em campo é o que determina se a parada cardíaca no esporte tem desfecho favorável."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiopatia-congenita-risco-arritmico-e-reintervencao-percutanea",
+    "titulo": "Cardiopatia congênita do adulto: risco arrítmico tardio e reintervenção percutânea",
+    "tema": "Cardiopatias congênitas",
+    "objetivo": "Sair sabendo acompanhar o adulto com cardiopatia congênita operada na infância além do pós-operatório imediato: reconhecer a história natural de lesões residuais comuns, estratificar o risco arrítmico e de morte súbita tardia na Tetralogia de Fallot operada, e conhecer as duas frentes de reintervenção percutânea que hoje evitam reoperação — via pulmonar e valva atrioventricular.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "comunicacao-interventricular-no-adulto-historia-natural-fechamento-tardio-e-prolapso-aortico",
+        "por_que": "Abre pela lesão mais comum de todas: história natural da comunicação interventricular não operada na infância, quando o fechamento tardio ainda se justifica e o risco de prolapso da valva aórtica que pode mudar essa decisão."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+        "por_que": "Situa o seguimento de longo prazo de duas lesões corrigidas na infância — Tetralogia de Fallot e coarctação de aorta — antes de aprofundar no risco específico que motiva a etapa seguinte."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-arritmico-e-morte-subita-na-tetralogia-de-fallot-operada",
+        "por_que": "Aprofunda o ponto mais temido do seguimento tardio de Fallot: como estratificar risco arrítmico e de morte súbita décadas depois da correção cirúrgica, quando o paciente já não é mais acompanhado como criança."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "melody-10-anos-valva-pulmonar-transcateter",
+        "por_que": "Uma das causas de disfunção tardia que motiva reintervenção na Fallot operada é a via de saída do ventrículo direito — a valva pulmonar transcateter Melody, com 10 anos de seguimento, é a alternativa percutânea consolidada à reoperação."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "reparo-transcateter-borda-a-borda-teer-de-valva-atrioventricular-em-cardiopatia-congenita-do-adulto",
+        "por_que": "Fecha a trilha na fronteira mais recente da reintervenção percutânea em cardiopatia congênita: o reparo borda a borda de valva atrioventricular, técnica emprestada da cardiologia estrutural do adulto e adaptada à anatomia congênita."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardio-oncologia-hemato-oncologia-de-fronteira-car-t-biespecificos-e-inibidor-de-menina",
+    "titulo": "Cardio-oncologia: as toxicidades cardiovasculares das terapias hemato-oncológicas mais recentes — do CAR-T ao inibidor de menina",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Sair sabendo reconhecer que cada nova classe de terapia hemato-oncológica de imunoterapia direcionada carrega toxicidade cardiovascular própria e não intercambiável: síndrome de liberação de citocinas do CAR-T, o mesmo mecanismo se estendendo a anticorpos biespecíficos direcionadores de células T, tromboembolismo venoso e reação de infusão de um anticorpo biespecífico de tumor sólido, e o prolongamento de QTc que diferencia os dois inibidores de menina hoje disponíveis.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-de-car-t-sindrome-de-liberacao-de-citocinas-e-inibidores-de-vegf",
+        "por_que": "Abre pelo paradigma fundador: a síndrome de liberação de citocinas do CAR-T é o mecanismo de toxicidade que as etapas seguintes vão reencontrar, sob nova roupagem, em classes de fármacos mais recentes."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-de-anticorpos-biespecificos-direcionadores-de-celulas-t-em-neoplasias-hematologicas",
+        "por_que": "Estende o mesmo mecanismo de liberação de citocinas para os anticorpos biespecíficos direcionadores de células T em neoplasias hematológicas — uma classe mais nova que o CAR-T, sem infusão de células geneticamente modificadas, mas com risco cardiovascular equivalente."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "amivantamabe-e-lazertinibe-tromboembolismo-venoso-e-reacoes-relacionadas-a-infusao",
+        "por_que": "Muda de cenário — tumor sólido, não hematológico — e de mecanismo: o anticorpo biespecífico amivantamabe associado ao lazertinibe traz tromboembolismo venoso e reação relacionada à infusão como as toxicidades cardiovasculares que dominam o manejo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao",
+        "por_que": "Fecha o giro pelas classes mais novas com uma molécula pequena oral, não um anticorpo: o inibidor de menina revumenibe, cujo prolongamento de QTc é efeito de classe declarado em bula e pode coexistir com a síndrome de diferenciação, outro evento adverso característico."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-menina-revumenibe-ziftomenibe-e-prolongamento-do-qtc",
+        "por_que": "Encerra mostrando que o prolongamento de QTc não é efeito uniforme de toda a classe de inibidores de menina: a comparação direta entre revumenibe e ziftomenibe, pelo ensaio KOMET-007, é o dado que evita generalizar risco de um agente para o outro."
+      }
+    ]
   }
 ]
