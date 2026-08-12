@@ -83,7 +83,19 @@ body.corvia-route--agenda .agenda-insights__mobilidade { background:radial-gradi
 body.corvia-route--agenda .agenda-insights__mobilidade button { margin-top:.35rem; color:#ba9eff; background:transparent; border:0 !important; padding:0; font:inherit; font-size:.5rem; cursor:pointer; }
 
 @media (max-width:900px) {
-  body.corvia-route--agenda .agenda-integrada { gap:.45rem; }
+  body.corvia-route--agenda .agenda-integrada,
+  body.corvia-route--agenda .agenda-ferramentas,
+  body.corvia-route--agenda .agenda-filtros,
+  body.corvia-route--agenda .agenda-layout,
+  body.corvia-route--agenda .agenda-calendario,
+  body.corvia-route--agenda .agenda-grade,
+  body.corvia-route--agenda .agenda-grade--semana {
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box;
+  }
+  body.corvia-route--agenda .agenda-integrada { gap:.45rem; overflow-x:hidden; }
   body.corvia-route--agenda .agenda-cabecalho { padding:.58rem; align-items:flex-start; }
   body.corvia-route--agenda .agenda-cabecalho h1 { font-size:.92rem; }
   body.corvia-route--agenda .agenda-cabecalho h1 + p { display:none; }
@@ -94,15 +106,22 @@ body.corvia-route--agenda .agenda-insights__mobilidade button { margin-top:.35re
   body.corvia-route--agenda .agenda-status span:nth-child(3) { display:none; }
   body.corvia-route--agenda .agenda-contas-destaque { display:none !important; }
   body.corvia-route--agenda .agenda-ferramentas { display:grid; gap:.35rem; }
-  body.corvia-route--agenda .agenda-navegacao { width:100%; }
-  body.corvia-route--agenda .agenda-navegacao h2 { overflow:hidden; text-overflow:ellipsis; }
-  body.corvia-route--agenda .agenda-visoes { width:100%; overflow-x:auto; }
-  body.corvia-route--agenda .agenda-filtros { grid-template-columns:1fr auto; padding:.35rem; }
+  body.corvia-route--agenda .agenda-navegacao { width:100%; min-width:0; }
+  body.corvia-route--agenda .agenda-navegacao h2 { min-width:0; overflow:hidden; text-overflow:ellipsis; }
+  body.corvia-route--agenda .agenda-visoes { width:100%; max-width:100%; overflow-x:auto; }
+  body.corvia-route--agenda .agenda-filtros { grid-template-columns:minmax(0,1fr) auto; padding:.35rem; overflow:hidden; }
+  body.corvia-route--agenda .agenda-filtros > *,
+  body.corvia-route--agenda .agenda-filtros label,
+  body.corvia-route--agenda .agenda-filtros input,
+  body.corvia-route--agenda .agenda-filtros select,
+  body.corvia-route--agenda .agenda-filtro-contas,
+  body.corvia-route--agenda .agenda-filtro-contas > button { min-width:0!important; max-width:100%!important; }
   body.corvia-route--agenda .agenda-filtros > label:nth-child(2) { display:none; }
   body.corvia-route--agenda .agenda-layout { display:block; }
   body.corvia-route--agenda .agenda-insights { display:none !important; }
-  body.corvia-route--agenda .agenda-grade--semana { grid-template-columns:1fr !important; }
+  body.corvia-route--agenda .agenda-calendario { overflow-x:hidden!important; }
+  body.corvia-route--agenda .agenda-grade--semana { grid-template-columns:1fr!important; }
   body.corvia-route--agenda .agenda-dia { min-height:70px; }
   body.corvia-route--agenda .agenda-dia > header { position:sticky; top:58px; z-index:2; background:#071a25; }
-  body.corvia-route--agenda .agenda-evento { display:grid; grid-template-columns:45px 1fr auto; }
+  body.corvia-route--agenda .agenda-evento { display:grid; grid-template-columns:45px minmax(0,1fr) auto; }
 }
