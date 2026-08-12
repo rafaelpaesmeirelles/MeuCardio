@@ -1,0 +1,226 @@
+/* Launch polish — assinatura final da Home sem alterar os módulos legados. */
+.launch-mobile-dock,
+.launch-mobile-actions,
+.launch-mobile-actions-backdrop { display: none; }
+
+@media (max-width: 899px) {
+  .command-center-active .barra-mobile {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    min-height: var(--barra-inferior);
+    background: rgba(5, 18, 27, 0.94);
+    border-top: 1px solid rgba(128, 184, 198, 0.13);
+    box-shadow: 0 -18px 48px -30px rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+  }
+  .command-center-active .barra-mobile a,
+  .command-center-active .barra-mobile button {
+    color: #75909b;
+    background: transparent;
+    border: 0;
+  }
+  .command-center-active .barra-mobile a.ativo {
+    color: #8ce4ea;
+    background: rgba(57, 194, 209, 0.075);
+  }
+  .command-center-active .barra-mobile a:hover,
+  .command-center-active .barra-mobile button:hover { color: #dff8fa; }
+
+  .launch-mobile-dock {
+    position: fixed;
+    z-index: 23;
+    right: 0.75rem;
+    bottom: calc(var(--barra-inferior) + 0.7rem + env(safe-area-inset-bottom));
+    left: 0.75rem;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.55rem;
+    pointer-events: none;
+  }
+  .launch-mobile-dock > * { pointer-events: auto; }
+
+  .launch-mobile-dock__action {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 50px;
+    padding: 0.35rem 0.78rem 0.35rem 0.38rem;
+    color: #06151d;
+    border: 1px solid rgba(96, 224, 231, 0.42);
+    border-radius: 999px;
+    background: linear-gradient(145deg, #64e3e7, #27aab9);
+    box-shadow: 0 16px 38px -20px rgba(44, 195, 207, 0.95);
+    font-size: 0.72rem;
+    cursor: pointer;
+  }
+  .launch-mobile-dock__action > span {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(3, 28, 35, 0.14);
+  }
+  .launch-mobile-dock__action svg { width: 18px; height: 18px; }
+  .launch-mobile-dock__action strong { color: #04171d; }
+  .launch-mobile-dock__action.ativo { filter: brightness(1.08); }
+
+  .launch-mobile-dock__assistant {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.58rem;
+    min-width: 0;
+    min-height: 50px;
+    padding: 0.42rem 0.72rem 0.42rem 0.45rem;
+    color: #efe9ff;
+    border: 1px solid rgba(177, 145, 255, 0.24);
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(49, 34, 75, 0.96), rgba(18, 32, 47, 0.96));
+    box-shadow: 0 18px 42px -26px rgba(149, 108, 238, 0.9);
+    backdrop-filter: blur(18px);
+  }
+  .launch-mobile-dock__assistant:hover { text-decoration: none; border-color: rgba(190, 159, 255, 0.4); }
+  .launch-mobile-dock__assistant > span:first-child {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #d6c4ff;
+    background: rgba(169, 134, 255, 0.14);
+  }
+  .launch-mobile-dock__assistant > span:nth-child(2) { min-width: 0; }
+  .launch-mobile-dock__assistant strong,
+  .launch-mobile-dock__assistant small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .launch-mobile-dock__assistant strong { color: #eee7ff; font-size: 0.7rem; }
+  .launch-mobile-dock__assistant small { margin-top: 0.05rem; color: #9287ad; font-size: 0.56rem; }
+  .launch-mobile-dock__assistant > svg { width: 14px; color: #786d91; }
+
+  .launch-mobile-actions-backdrop {
+    position: fixed;
+    z-index: 45;
+    inset: 0;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 7, 12, 0.66);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.18s ease, visibility 0.18s ease;
+  }
+  .launch-mobile-actions-backdrop.ativo { opacity: 1; visibility: visible; }
+
+  .launch-mobile-actions {
+    position: fixed;
+    z-index: 46;
+    right: 0.5rem;
+    bottom: calc(var(--barra-inferior) + 0.45rem + env(safe-area-inset-bottom));
+    left: 0.5rem;
+    display: block;
+    padding: 0.9rem;
+    color: #eaf4f6;
+    border: 1px solid rgba(127, 187, 201, 0.17);
+    border-radius: 20px;
+    background:
+      radial-gradient(460px 160px at 75% -20%, rgba(57, 194, 209, 0.13), transparent 72%),
+      linear-gradient(160deg, rgba(10, 29, 41, 0.99), rgba(6, 20, 30, 0.99));
+    box-shadow: 0 28px 70px -24px rgba(0, 0, 0, 0.95);
+    transform: translateY(calc(100% + 2rem));
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.22s ease, opacity 0.18s ease, visibility 0.18s ease;
+  }
+  .launch-mobile-actions.ativo { transform: translateY(0); opacity: 1; visibility: visible; }
+  .launch-mobile-actions > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .launch-mobile-actions > header p {
+    margin: 0 0 0.08rem;
+    color: #58bdca;
+    font: 700 0.58rem/1.2 var(--fonte-dados);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+  .launch-mobile-actions > header strong { color: #ecf6f8; font-size: 0.9rem; }
+  .launch-mobile-actions > header button {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(135, 187, 199, 0.12);
+    border-radius: 11px;
+    color: #829ba5;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .launch-mobile-actions__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+  .launch-mobile-actions__grid a {
+    display: flex;
+    min-height: 88px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.35rem;
+    color: #dfecef;
+    border: 1px solid rgba(127, 184, 197, 0.1);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.027);
+    text-align: center;
+  }
+  .launch-mobile-actions__grid a:hover { text-decoration: none; border-color: rgba(65, 198, 211, 0.28); background: rgba(57,194,209,0.055); }
+  .launch-mobile-actions__grid a > span {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    color: #6bd4dd;
+    background: rgba(57,194,209,0.09);
+  }
+  .launch-mobile-actions__grid a:nth-child(4) > span { color: #ff7b84; background: rgba(244,93,105,0.11); }
+  .launch-mobile-actions__grid strong { color: #e7f1f3; font-size: 0.64rem; line-height: 1.2; }
+
+  .launch-mobile-actions__assistant {
+    display: grid;
+    grid-template-columns: auto minmax(0,1fr) auto;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 54px;
+    margin-top: 0.65rem;
+    padding: 0.55rem 0.7rem;
+    color: #ede6ff;
+    border: 1px solid rgba(175, 142, 255, 0.2);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(143, 96, 230, 0.11), rgba(57,194,209,0.045));
+  }
+  .launch-mobile-actions__assistant:hover { text-decoration: none; }
+  .launch-mobile-actions__assistant > svg:first-child { color: #c6adff; }
+  .launch-mobile-actions__assistant > svg:last-child { width: 15px; color: #776c8d; }
+  .launch-mobile-actions__assistant strong { display: block; color: #f1ebff; font-size: 0.72rem; }
+  .launch-mobile-actions__assistant small { display: block; margin-top: 0.05rem; color: #827b91; font-size: 0.58rem; }
+
+  /* O conteúdo ganha espaço para o dock sem esconder a última linha da Home. */
+  .command-center-active .conteudo { padding-bottom: calc(var(--barra-inferior) + 5.4rem + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 420px) {
+  .launch-mobile-dock { right: 0.5rem; left: 0.5rem; gap: 0.4rem; }
+  .launch-mobile-dock__action { padding-right: 0.62rem; }
+  .launch-mobile-dock__assistant { padding-right: 0.58rem; }
+  .launch-mobile-dock__assistant small { display: none; }
+  .launch-mobile-actions__grid { gap: 0.42rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-mobile-actions,
+  .launch-mobile-actions-backdrop { transition: none !important; }
+}
