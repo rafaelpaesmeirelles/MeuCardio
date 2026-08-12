@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+/**
+ * Classifica intenção/contexto visual, não estrutura de banco de dados.
+ * A ordem importa apenas quando um prefixo é subconjunto de outro.
+ */
 const ROUTES: Array<[string, string]> = [
+  // Trabalho executável
   ["/documentos", "documentos"],
   ["/avaliacao-preoperatoria", "documentos"],
   ["/round", "pacientes"],
@@ -10,22 +15,51 @@ const ROUTES: Array<[string, string]> = [
   ["/corvia-mail", "mail"],
   ["/caixa-de-email", "mail"],
   ["/assistente", "assistente"],
-  ["/sincronizacao", "integracoes"],
-  ["/minha-conta", "conta"],
-  ["/assinatura", "conta"],
-  ["/admin", "admin"],
-  ["/usuarios-online", "rede"],
-  ["/telediagnostico", "telediagnostico"],
-  ["/fila-telediagnostico", "telediagnostico"],
+
+  // Conhecimento/contexto onde Intelligence agrega relações
+  ["/medicamentos", "conhecimento"],
+  ["/interacoes", "conhecimento"],
+  ["/exames", "conhecimento"],
+  ["/evidencias", "conhecimento"],
+  ["/estudos", "conhecimento"],
+  ["/diretrizes", "conhecimento"],
   ["/biblioteca", "conhecimento"],
   ["/doencas", "conhecimento"],
   ["/casos-clinicos", "conhecimento"],
   ["/trilhas", "conhecimento"],
+  ["/cursos", "conhecimento"],
+  ["/favoritos", "conhecimento"],
+
+  // Ferramentas de decisão/consulta: workspace amplo, sem rail decorativo
+  ["/calculadoras", "ferramentas"],
   ["/checklists", "ferramentas"],
   ["/fluxogramas", "ferramentas"],
   ["/triagem-sintomas", "ferramentas"],
+  ["/condicoes", "ferramentas"],
   ["/material-paciente", "ferramentas"],
   ["/galeria", "ferramentas"],
+  ["/apresentacao", "ferramentas"],
+  ["/busca", "ferramentas"],
+
+  // Emergência tem identidade e shell próprios; não herda regras genéricas.
+  ["/emergencia", "emergencia"],
+
+  // Comunicação/rede e trabalho remoto
+  ["/usuarios-online", "rede"],
+  ["/telediagnostico", "telediagnostico"],
+  ["/fila-telediagnostico", "telediagnostico"],
+
+  // Conta, integrações, segurança e gestão
+  ["/sincronizacao", "integracoes"],
+  ["/minha-conta", "conta"],
+  ["/assinatura", "conta"],
+  ["/verificacao-identidade", "conta"],
+  ["/indicadores", "conta"],
+  ["/admin", "admin"],
+
+  // Políticas institucionais autenticadas não precisam de Intelligence.
+  ["/privacidade", "geral"],
+  ["/termos", "geral"],
 ];
 
 export default function ClinicalRouteContext() {
