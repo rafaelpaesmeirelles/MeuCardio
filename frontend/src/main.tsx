@@ -6,6 +6,7 @@ import { AuthProvider } from "./lib/auth";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
+import "./styles/clinical-command-center.css";
 import "./styles/produto.css";
 import "./styles/tour.css";
 
