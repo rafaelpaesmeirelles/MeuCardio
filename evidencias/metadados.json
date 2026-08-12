@@ -44174,5 +44174,81 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cirurgia-urgente-na-trombose-obstrutiva-de-protese-mecanica-em-paciente-criticamente-enfermo",
+    "statement": "Troca valvar urgente ou de emergência é recomendada para trombose obstrutiva de prótese valvar mecânica em paciente criticamente enfermo, sem comorbidade grave que contraindique cirurgia.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. Seção 11.4.4 (Thrombosis) e Figura 10 (Management of left-sided obstructive and non-obstructive mechanical prosthetic thrombosis) — texto conferido nesta sessão (12/08/2026).",
+    "theme": "Valvopatias",
+    "tags": [
+      "trombose de prótese valvar",
+      "prótese mecânica",
+      "cirurgia cardíaca de emergência",
+      "ESC/EACTS 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fibrinolise-na-trombose-obstrutiva-de-protese-mecanica-quando-cirurgia-nao-esta-disponivel",
+    "statement": "Fibrinólise (ativador de plasminogênio tecidual recombinante, 10 mg em bolus seguido de 90 mg em 90 minutos, com heparina não fracionada; ou estreptoquinase 1.500.000 U em 60 minutos, sem heparina não fracionada) deve ser considerada quando a cirurgia não está disponível ou é de risco muito alto, ou para trombose de prótese em posição direita (tricúspide/pulmonar).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. Seção 11.4.4 (Thrombosis) — texto conferido nesta sessão (12/08/2026).",
+    "theme": "Valvopatias",
+    "tags": [
+      "trombose de prótese valvar",
+      "fibrinólise",
+      "prótese mecânica",
+      "ESC/EACTS 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cirurgia-para-trombo-nao-obstrutivo-grande-de-protese-mecanica-complicado-por-embolismo",
+    "statement": "Cirurgia deve ser considerada para trombo não obstrutivo de prótese valvar mecânica maior que 10 mm, complicado por evento embólico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. Seção 11.4.4 (Thrombosis) — texto conferido nesta sessão (12/08/2026).",
+    "theme": "Valvopatias",
+    "tags": [
+      "trombose de prótese valvar",
+      "trombo não obstrutivo",
+      "embolismo",
+      "ESC/EACTS 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "profilaxia-antibiotica-pode-ser-considerada-em-procedimento-nao-odontologico-de-alto-risco",
+    "statement": "Em pacientes de alto risco para endocardite infecciosa submetidos a procedimentos médicos não odontológicos (gastrointestinais, geniturinários, dermatológicos e de manejo de ferida), a profilaxia antibiótica pode ser considerada de forma individualizada — a força-tarefa elevou essa recomendação de Classe III (não recomendada, diretriz anterior) para Classe IIb, sem evidência causal direta comprovada entre bacteremia desses procedimentos e endocardite infecciosa subsequente. A medida preventiva central segue sendo garantir ambiente operacional asséptico durante o procedimento e tratar infecção ativa antes de procedimento eletivo em paciente de alto risco.",
+    "recommendation_class": "IIb",
+    "evidence_level": "?",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 · PMID: 37622656. Seção 3.3.2 (Non-dental procedures) e Recommendation Table 2 — classe IIb (elevada de Classe III da diretriz anterior) confirmada nesta sessão (12/08/2026) via texto de academic.oup.com; a letra do nível de evidência (A/B/C) associada a esta linha específica da Recommendation Table 2 não foi possível confirmar nesta sessão (a tabela completa não foi acessível por WebFetch, que recusou reproduzi-la por direitos autorais) — VERIFICAÇÃO HUMANA NECESSÁRIA para a letra exata do nível.",
+    "theme": "Endocardite",
+    "tags": [
+      "profilaxia antibiótica",
+      "endocardite infecciosa",
+      "procedimento não odontológico",
+      "ESC 2023"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
