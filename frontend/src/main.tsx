@@ -17,6 +17,7 @@ import "./styles/clinical-pages-v2.css";
 import "./styles/clinical-medications-v2.css";
 import "./styles/clinical-knowledge-v2.css";
 import "./styles/clinical-evidence-v2.css";
+import "./styles/clinical-work-v2.css";
 import "./styles/clinical-mobile-nav-v2.css";
 import "./styles/public-clinical-command-v2.css";
 
