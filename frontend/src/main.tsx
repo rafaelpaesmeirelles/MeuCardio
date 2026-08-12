@@ -101,6 +101,41 @@ document.addEventListener("submit", (evento) => {
   }
 }, { capture: true });
 
+/** A action sheet móvel se comporta como diálogo de verdade também no teclado. */
+document.addEventListener("click", (evento) => {
+  const alvo = evento.target instanceof Element ? evento.target : null;
+  if (alvo?.closest(".barra-mobile__acao")) {
+    requestAnimationFrame(() => {
+      document.querySelector<HTMLElement>(".acoes-mobile header button")?.focus();
+    });
+    return;
+  }
+
+  if (alvo?.closest(".acoes-mobile__fundo") || alvo?.closest(".acoes-mobile > header > button")) {
+    requestAnimationFrame(() => {
+      document.querySelector<HTMLElement>(".barra-mobile__acao")?.focus();
+    });
+  }
+}, { capture: true });
+
+document.addEventListener("keydown", (evento) => {
+  if (evento.key !== "Tab") return;
+  const dialogo = document.querySelector<HTMLElement>(".acoes-mobile");
+  if (!dialogo) return;
+  const focaveis = Array.from(dialogo.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+    .filter((elemento) => elemento.offsetParent !== null);
+  if (!focaveis.length) return;
+  const primeiro = focaveis[0];
+  const ultimo = focaveis[focaveis.length - 1];
+  if (evento.shiftKey && document.activeElement === primeiro) {
+    evento.preventDefault();
+    ultimo.focus();
+  } else if (!evento.shiftKey && document.activeElement === ultimo) {
+    evento.preventDefault();
+    primeiro.focus();
+  }
+}, { capture: true });
+
 (window as unknown as { __corviaVerificarAtualizacao?: () => void }).__corviaVerificarAtualizacao = () => {
   void verificarAtualizacaoCompleta(true);
 };
