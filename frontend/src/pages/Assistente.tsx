@@ -54,7 +54,12 @@ function modoDaUrl(search: string): Modo | null {
   return valor === "clinica" || valor === "pessoal" ? valor : null;
 }
 
-function consumirEntradaInicial(search: string): EntradaInicial {
+/**
+ * Leitura deliberadamente sem side effects: React StrictMode pode avaliar o
+ * initializer mais de uma vez em desenvolvimento. O hint é removido somente
+ * no effect de montagem, depois de o estado inicial já estar definido.
+ */
+function lerEntradaInicial(search: string): EntradaInicial {
   const params = new URLSearchParams(search);
   const perguntaUrl = (params.get("pergunta") || "").trim();
   const modoUrl = modoDaUrl(search);
@@ -71,9 +76,6 @@ function consumirEntradaInicial(search: string): EntradaInicial {
       modoHint = modoBruto === "clinica" || modoBruto === "pessoal" ? modoBruto : null;
       perguntaHint = perguntaBruta;
     }
-    sessionStorage.removeItem(ASSISTANT_ENTRY_MODE_KEY);
-    sessionStorage.removeItem(ASSISTANT_ENTRY_QUESTION_KEY);
-    sessionStorage.removeItem(ASSISTANT_ENTRY_AT_KEY);
   } catch {
     // Entrada contextual é uma melhoria de UX, não requisito de funcionamento.
   }
@@ -82,6 +84,16 @@ function consumirEntradaInicial(search: string): EntradaInicial {
   if (modoUrl) return { modo: modoUrl, pergunta: "" };
   if (hintRecente && perguntaHint) return { modo: "clinica", pergunta: perguntaHint };
   return { modo: modoHint, pergunta: "" };
+}
+
+function limparEntradaInicial() {
+  try {
+    sessionStorage.removeItem(ASSISTANT_ENTRY_MODE_KEY);
+    sessionStorage.removeItem(ASSISTANT_ENTRY_QUESTION_KEY);
+    sessionStorage.removeItem(ASSISTANT_ENTRY_AT_KEY);
+  } catch {
+    // Storage pode estar bloqueado; a navegação segue normalmente.
+  }
 }
 
 function Escolha({ onEscolher }: { onEscolher: (modo: Modo) => void }) {
@@ -160,7 +172,7 @@ function ConsentimentoPessoal({
 
 export default function Assistente() {
   const { search } = useLocation();
-  const [entradaInicial] = useState<EntradaInicial>(() => consumirEntradaInicial(search));
+  const [entradaInicial] = useState<EntradaInicial>(() => lerEntradaInicial(search));
   const [status, setStatus] = useState<Status | null>(null);
   const [modo, setModo] = useState<Modo | null>(entradaInicial.modo);
   const [mostrarConsentimento, setMostrarConsentimento] = useState(false);
@@ -176,6 +188,10 @@ export default function Assistente() {
   const [usarInternet, setUsarInternet] = useState(entradaInicial.modo === "pessoal");
   const fim = useRef<HTMLDivElement>(null);
   const entradaUrlProcessada = useRef("");
+
+  useEffect(() => {
+    limparEntradaInicial();
+  }, []);
 
   useEffect(() => {
     api.get<Status>("/ai/status").then(setStatus).catch(() => setStatus(null));
