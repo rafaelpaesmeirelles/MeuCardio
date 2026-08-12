@@ -22,6 +22,7 @@ import "./styles/clinical-mobile-nav-v2.css";
 import "./styles/public-clinical-command-v2.css";
 import "./styles/clinical-command-center-canonical.css";
 import "./styles/clinical-mobile-more-canonical.css";
+import "./styles/corvia-mail-clinical-command.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
