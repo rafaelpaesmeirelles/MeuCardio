@@ -1,0 +1,177 @@
+/* ======================================================================
+   Clinical Command coverage for the long tail of knowledge routes.
+   These pages keep their mature domain logic while sharing one visual OS.
+   ====================================================================== */
+
+.clinical-os .painel__grupo,
+.clinical-os .biblioteca__grupo,
+.clinical-os .guia-areas,
+.clinical-os .guia-outros,
+.clinical-os [class^="exame-"],
+.clinical-os [class^="evidencia-"],
+.clinical-os [class^="estudo-"],
+.clinical-os [class^="trilha-"],
+.clinical-os [class^="caso-"],
+.clinical-os [class^="checklist-"],
+.clinical-os [class^="galeria-"],
+.clinical-os [class^="material-"],
+.clinical-os [class^="fluxograma-"],
+.clinical-os [class^="triagem-"],
+.clinical-os [class^="condicoes-"],
+.clinical-os [class^="calculadora-"] {
+  border-color: var(--cos-line) !important;
+}
+
+.clinical-os .painel__grupo {
+  margin-top: .95rem;
+  padding: .9rem;
+  background: linear-gradient(145deg, rgba(10,31,43,.72), rgba(6,22,31,.78));
+  border: 1px solid var(--cos-line);
+  border-radius: 15px;
+}
+.clinical-os .painel__grupo h2 { margin-top:0;color:#ebf8fa;font-size:1.02rem }
+.clinical-os .painel__grupo-sub { color:#7f9aa4!important;font-size:.76rem!important }
+.clinical-os .painel__funcoes { gap:.55rem }
+.clinical-os .painel__funcao {
+  color:#d7e8eb!important;
+  background:rgba(255,255,255,.018)!important;
+  border-color:var(--cos-line)!important;
+  box-shadow:none!important;
+}
+.clinical-os .painel__funcao:hover { background:rgba(66,202,216,.035)!important;border-color:rgba(66,202,216,.19)!important }
+.clinical-os .painel__funcao--destaque { box-shadow:inset 3px 0 var(--cos-cyan)!important }
+.clinical-os .painel__funcao--breve { box-shadow:inset 3px 0 rgba(159,137,255,.55)!important }
+.clinical-os .painel__breve { color:#8fdce2!important;background:rgba(66,202,216,.07)!important;border-color:rgba(66,202,216,.14)!important }
+
+/* Tabs and legacy filter chips become dense controls instead of white pills. */
+.clinical-os .painel__temas { gap:.35rem!important }
+.clinical-os .painel__tema {
+  min-height:30px!important;
+  padding:.3rem .5rem!important;
+  color:#8da8b1!important;
+  background:rgba(255,255,255,.018)!important;
+  border:1px solid var(--cos-line)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+  font-size:.65rem!important;
+  line-height:1.2!important;
+}
+.clinical-os button.painel__tema { cursor:pointer }
+.clinical-os .painel__tema:hover { color:#d6f4f6!important;background:rgba(66,202,216,.045)!important;border-color:rgba(66,202,216,.18)!important }
+.clinical-os .painel__tema[aria-selected="true"],
+.clinical-os .painel__tema.is-active { color:#e7fbfc!important;background:rgba(66,202,216,.08)!important;border-color:rgba(66,202,216,.24)!important }
+
+/* Disease guide */
+.clinical-os .guia-areas { margin-top:.9rem;padding:.9rem;background:linear-gradient(145deg,rgba(10,31,43,.8),rgba(6,22,31,.84));border:1px solid var(--cos-line);border-radius:15px }
+.clinical-os .guia-areas__topo { display:flex;justify-content:space-between;gap:1rem;align-items:flex-start }
+.clinical-os .guia-areas__topo h2,.clinical-os .guia-outros h2 { color:#edf9fb }
+.clinical-os .guia-areas__topo>p,.clinical-os .guia-outros p { color:#7e99a3!important }
+.clinical-os .guia-areas__grade { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;margin-top:.7rem }
+.clinical-os .guia-area { display:grid;grid-template-columns:38px minmax(0,1fr);gap:.65rem;align-items:start }
+.clinical-os .guia-area__marca { display:grid;place-items:center;width:38px;height:38px;color:#8ce5ea;background:rgba(66,202,216,.075);border:1px solid rgba(66,202,216,.14);border-radius:10px;font:700 .63rem/1 var(--fonte-dados) }
+.clinical-os .guia-area h3 { margin:.05rem 0;color:#e8f6f8;font-size:.83rem }
+.clinical-os .guia-area p { margin:.15rem 0;color:#7d99a3!important;font-size:.68rem }
+.clinical-os .guia-area small { color:#698690 }
+.clinical-os .guia-area .botao { grid-column:1/-1;justify-self:start;min-height:32px;padding:.36rem .52rem;font-size:.64rem }
+.clinical-os .guia-outros { background:linear-gradient(145deg,rgba(11,34,47,.9),rgba(7,23,33,.94))!important }
+
+/* Long-form clinical documents */
+.clinical-os .documento,
+.clinical-os .conteudo-clinico,
+.clinical-os .artigo-clinico,
+.clinical-os .exame-detalhe,
+.clinical-os .evidencia-detalhe,
+.clinical-os .estudo-detalhe,
+.clinical-os .trilha-detalhe,
+.clinical-os .caso-detalhe {
+  color:#b9cfd4;
+}
+.clinical-os .documento h1,.clinical-os .documento h2,.clinical-os .documento h3,
+.clinical-os .conteudo-clinico h1,.clinical-os .conteudo-clinico h2,.clinical-os .conteudo-clinico h3,
+.clinical-os .artigo-clinico h1,.clinical-os .artigo-clinico h2,.clinical-os .artigo-clinico h3 { color:#eefafb }
+.clinical-os .documento p,.clinical-os .documento li,
+.clinical-os .conteudo-clinico p,.clinical-os .conteudo-clinico li,
+.clinical-os .artigo-clinico p,.clinical-os .artigo-clinico li { color:#9cb4bc }
+.clinical-os .documento a,.clinical-os .conteudo-clinico a,.clinical-os .artigo-clinico a { color:var(--cos-cyan-2) }
+.clinical-os .documento hr,.clinical-os .conteudo-clinico hr,.clinical-os .artigo-clinico hr { border-color:var(--cos-line) }
+
+/* Knowledge cards */
+.clinical-os .biblioteca__card,
+.clinical-os .exame-card,
+.clinical-os .evidencia-card,
+.clinical-os .estudo-card,
+.clinical-os .trilha-card,
+.clinical-os .caso-card,
+.clinical-os .checklist-card,
+.clinical-os .galeria-card,
+.clinical-os .material-card,
+.clinical-os .fluxograma-card,
+.clinical-os .condicoes-card {
+  color:#d8e9ec!important;
+  background:linear-gradient(145deg,rgba(12,35,48,.9),rgba(7,24,34,.94))!important;
+  border-color:var(--cos-line)!important;
+  box-shadow:none!important;
+}
+.clinical-os .biblioteca__card:hover,
+.clinical-os .exame-card:hover,
+.clinical-os .evidencia-card:hover,
+.clinical-os .estudo-card:hover,
+.clinical-os .trilha-card:hover,
+.clinical-os .caso-card:hover,
+.clinical-os .checklist-card:hover,
+.clinical-os .galeria-card:hover,
+.clinical-os .material-card:hover,
+.clinical-os .fluxograma-card:hover,
+.clinical-os .condicoes-card:hover { border-color:rgba(66,202,216,.2)!important;background:rgba(66,202,216,.035)!important }
+
+/* Search / library / gallery: dense results, no light islands */
+.clinical-os .busca__campo,.clinical-os .biblioteca__filtros,.clinical-os .galeria__filtros,.clinical-os .filtros-conteudo {
+  color:#c8dade!important;background:rgba(8,27,39,.84)!important;border-color:var(--cos-line)!important;box-shadow:none!important
+}
+.clinical-os .busca__resultado,.clinical-os .resultado-busca {
+  color:#d4e6e9!important;background:rgba(255,255,255,.018)!important;border-color:var(--cos-line)!important
+}
+.clinical-os .busca__resultado:hover,.clinical-os .resultado-busca:hover { background:rgba(66,202,216,.035)!important;border-color:rgba(66,202,216,.18)!important }
+.clinical-os .galeria img { border-color:var(--cos-line);border-radius:11px }
+
+/* Checklists: actionable but calm. */
+.clinical-os [class*="checklist"] input[type="checkbox"] { accent-color:#42cad8 }
+.clinical-os .checklist-item { color:#c1d5da;background:rgba(255,255,255,.018)!important;border-color:var(--cos-line)!important }
+.clinical-os .checklist-item.is-done,.clinical-os .checklist-item:has(input:checked) { color:#78949e;background:rgba(93,210,164,.025)!important }
+
+/* Clinical cases and tracks can use a subtle violet secondary signal. */
+.clinical-os .caso-card,.clinical-os .trilha-card { box-shadow:inset 2px 0 rgba(159,137,255,.34)!important }
+.clinical-os .caso-card .eyebrow,.clinical-os .trilha-card .eyebrow { color:#b6a9ff }
+
+/* Patient material: preview cards can remain warmer, but stay inside the OS. */
+.clinical-os .material-card { background:linear-gradient(145deg,rgba(13,36,47,.92),rgba(9,26,34,.96))!important }
+.clinical-os .material-preview,.clinical-os [class*="material-preview"] { color:#1d2b31;background:#f7fbfb!important;border-radius:12px;box-shadow:0 18px 48px rgba(0,0,0,.25) }
+
+/* Empty / warning / loading legacy states */
+.clinical-os .vazio,.clinical-os .aviso,.clinical-os .erro,.clinical-os .carregando {
+  color:#8ca6af!important;background:rgba(255,255,255,.018)!important;border-color:var(--cos-line)!important;box-shadow:none!important
+}
+.clinical-os .erro { color:#ff9ead!important;background:rgba(240,68,93,.055)!important;border-color:rgba(240,68,93,.16)!important }
+.clinical-os .aviso { color:#d3b87f!important;background:rgba(239,188,98,.045)!important;border-color:rgba(239,188,98,.14)!important }
+
+/* Modal / drawer surfaces used by legacy workflows. */
+.clinical-os [role="dialog"]:not(.cos-assistant-panel),
+.clinical-os .modal,
+.clinical-os [class$="__modal"],
+.clinical-os [class*="__modal "] {
+  color:#dcecef;
+  background:linear-gradient(180deg,#0a2331,#071923)!important;
+  border-color:var(--cos-line)!important;
+  box-shadow:0 26px 80px rgba(0,0,0,.42)!important;
+}
+.clinical-os .modal-backdrop,.clinical-os [class*="backdrop"] { backdrop-filter:blur(5px) }
+
+@media(max-width:900px){
+  .clinical-os .painel__grupo{padding:.75rem;border-radius:13px}
+  .clinical-os .painel__temas{display:flex;flex-wrap:nowrap!important;overflow-x:auto;padding-bottom:.2rem;scrollbar-width:none}
+  .clinical-os .painel__temas::-webkit-scrollbar{display:none}
+  .clinical-os .painel__tema{flex:0 0 auto}
+  .clinical-os .guia-areas__topo{display:grid}
+  .clinical-os .guia-areas__grade{grid-template-columns:1fr}
+  .clinical-os .grade--2,.clinical-os .grade--3{grid-template-columns:1fr!important}
+}
