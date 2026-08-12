@@ -83,6 +83,15 @@ document.addEventListener("submit", (evento) => {
   const entrada = formulario.querySelector<HTMLInputElement>('input[aria-label="Comando clínico universal"]');
   const pergunta = entrada?.value.trim();
   if (!pergunta) return;
+
+  // Mantém exatamente a mesma fronteira semântica usada pelo classificador da
+  // Home. Ações e pesquisas comuns não deixam um hint que possa contaminar uma
+  // visita subsequente ao Assistente.
+  const normal = pergunta.toLocaleLowerCase("pt-BR").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const parecePergunta = /^(qual|como|quando|por que|porque|compare|resuma|explique|analise|revisar?)\b/.test(normal)
+    || pergunta.includes("?");
+  if (!parecePergunta) return;
+
   try {
     sessionStorage.setItem(ASSISTANT_ENTRY_QUESTION_KEY, pergunta);
     sessionStorage.setItem(ASSISTANT_ENTRY_MODE_KEY, "clinica");
