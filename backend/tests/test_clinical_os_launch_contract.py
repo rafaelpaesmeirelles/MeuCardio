@@ -44,3 +44,17 @@ def test_drawer_e_assistente_tem_empilhamento_deterministico_e_abertura_exclusiv
     assert "setAssistente(false); setConta(false); setDrawer(true);" in shell
     assert "setDrawer(false); setConta(false); setAssistente(true);" in shell
     assert "setDrawer(false); setAssistente(true);" in shell
+
+
+def test_drawer_movel_prende_foco_e_devolve_ao_disparador():
+    shell = SHELL.read_text(encoding="utf-8")
+
+    assert "drawerRef = useRef<HTMLElement>(null)" in shell
+    assert "fecharDrawerRef = useRef<HTMLButtonElement>(null)" in shell
+    assert "disparadorDrawerRef = useRef<HTMLElement | null>(null)" in shell
+    assert 'if (evento.key !== "Tab") return;' in shell
+    assert "document.activeElement === primeiro" in shell
+    assert "document.activeElement === ultimo" in shell
+    assert "requestAnimationFrame(() => fecharDrawerRef.current?.focus())" in shell
+    assert "requestAnimationFrame(() => disparadorDrawerRef.current?.focus())" in shell
+    assert 'if (evento.key === "Escape")' in shell
