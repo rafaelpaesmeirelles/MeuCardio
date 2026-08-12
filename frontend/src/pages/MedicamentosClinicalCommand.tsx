@@ -325,7 +325,7 @@ export default function MedicamentosClinicalCommand() {
       setComparacao(resposta);
       requestAnimationFrame(() => document.getElementById("comparacao-medicamentos")?.scrollIntoView({ behavior: "smooth", block: "start" }));
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível comparar os medicamentos."));
+      setErro(e instanceof ApiError ? e.message : "Não foi possível comparar os medicamentos.");
     } finally {
       setCarregando(false);
     }
