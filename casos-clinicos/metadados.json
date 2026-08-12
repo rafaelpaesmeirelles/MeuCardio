@@ -14507,5 +14507,170 @@
       "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Texto completo em inglês consultado via PDF de acesso aberto publicado pelo próprio periódico (abccardiol.org), Capítulo 12 (Resistant and Refractory Hypertension, páginas 101-106), metodologia GRADE — força de recomendação (Strong/Weak) e certeza da evidência (High/Moderate/Low), não classe/nível ESC"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "civ-perimembranosa-pequena-no-adulto-prolapso-aortico-progressivo-quando-fechar",
+    "titulo": "CIV perimembranosa pequena no adulto: quando o shunt pequeno não é o problema",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 34 anos, com comunicação interventricular (CIV) perimembranosa pequena e restritiva, conhecida desde a infância, nunca operada por ser considerada 'sem repercussão hemodinâmica'. Assintomática, sem sobrecarga de volume de VE ao ecocardiograma seriado. No exame de rotina deste ano, o ecocardiograma mostra insuficiência aórtica leve-moderada nova, com prolapso da cúspide coronariana direita adjacente ao defeito — achado ausente no exame de 3 anos atrás. Qp:Qs estimado em 1,3, sem sinais de hipertensão pulmonar.",
+    "pergunta": "Qual a interpretação mais correta deste achado e a conduta recomendada?",
+    "opcoes": [
+      "Como o shunt continua pequeno (Qp:Qs 1,3) e a paciente está assintomática, não há indicação de fechamento nem de mudança na periodicidade do seguimento",
+      "O prolapso progressivo de cúspide aórtica associado a CIV perimembranosa/subarterial é uma indicação de fechamento independente do tamanho do shunt e da sobrecarga de volume do VE — a paciente deve ser encaminhada para avaliação de fechamento (cirúrgico ou percutâneo, conforme anatomia)",
+      "Solicitar apenas troca da valva aórtica isoladamente, já que o defeito septal é pequeno demais para justificar qualquer intervenção",
+      "Aumentar o intervalo de seguimento ecocardiográfico, já que CIV pequena e restritiva tem baixo risco hemodinâmico documentado na literatura"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "CIV pequena e restritiva não é sinônimo de 'sem necessidade de seguimento' — defeitos perimembranosos (sobretudo tipo 2, com extensão superior-anterior) e subarteriais têm associação bem descrita com prolapso progressivo da cúspide coronariana direita ou não coronariana, por efeito Venturi do próprio jato de shunt sobre o tecido valvar adjacente, independentemente do tamanho do defeito. Diferente da CIV moderada/grande com sobrecarga de volume de VE (cuja indicação de fechamento depende da sobrecarga hemodinâmica), a indicação de fechamento por prolapso valvar progressivo com insuficiência aórtica é reconhecida na prática contemporânea mesmo em defeito pequeno e sem sobrecarga de volume relevante — o corte exato de gravidade de regurgitação aórtica que define o momento ideal de fechar é *VERIFICAÇÃO HUMANA NECESSÁRIA* frente à tabela completa da diretriz, mas a progressão documentada já configura indicação de encaminhamento para avaliação, não de aumentar o intervalo entre exames.",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+      "Nguyen TVN, Ho SY, Do TN. Applied Anatomy of Perimembranous Ventricular Septal Defect for Transcatheter Device Closure. JACC Asia. 2026;6(7):1019-1032. DOI: 10.1016/j.jacasi.2026.03.002. PMID: 42412691."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tetralogia-fallot-operada-assintomatica-qrs-prolongado-qual-escore-de-risco-arritmico-usar",
+    "titulo": "Tetralogia de Fallot operada, assintomática, com QRS prolongado: qual escore de risco decide o CDI?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Homem, 34 anos, tetralogia de Fallot reparada aos 2 anos de idade, acompanhamento regular em centro de cardiopatia congênita do adulto. Assintomático, sem taquicardia ventricular sustentada nem parada cardíaca prévias (sem indicação de CDI por prevenção secundária). ECG mostra QRS de 186 ms (bloqueio de ramo direito). Holter de 24h com extrassístoles ventriculares frequentes, sem TVNS. Ressonância cardíaca: disfunção moderada de VD (FE 38%), regurgitação pulmonar moderada a grave, sem quantificação de realce tardio disponível no serviço.",
+    "pergunta": "Qual a conduta mais alinhada com a evidência mais recente (2025-2026) sobre estratificação de risco arrítmico neste cenário?",
+    "opcoes": [
+      "Indicar CDI em prevenção primária de forma automática, já que QRS ≥ 180 ms tem sensibilidade de 100% para taquicardia ventricular sustentada e morte súbita na coorte histórica de Gatzoulis et al. (1995)",
+      "Não indicar CDI nem investigar mais, porque o paciente é assintomático e nunca teve evento arrítmico documentado",
+      "Reconhecer que os escores multivariados publicados (PACES/HRS 2014, PREVENTION-ACHD, escore espanhol, CORRELATE) frequentemente discordam entre si (até 41% dos pacientes classificados de forma diferente conforme o critério usado, segundo Kakarla et al. 2026) e conduzir a decisão por avaliação multidisciplinar combinando múltiplos marcadores, considerando estudo eletrofisiológico invasivo com mapeamento eletroanatômico antes de decisão definitiva sobre CDI",
+      "Solicitar apenas repetição do Holter em 6 meses, sem qualquer outra investigação, já que TVNS é o único marcador validado de risco nesta população"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O achado histórico de Gatzoulis et al. (1995) — QRS ≥ 180 ms com sensibilidade de 100% para evento maligno numa coorte pequena — tem alta sensibilidade e baixa especificidade: muitos pacientes com QRS prolongado nunca terão evento, e o corte não deve ser usado como decisão automática e isolada de CDI. O consenso PACES/HRS 2014 já recomendava considerar múltiplos fatores em conjunto, não um único marcador. A evidência mais recente reforça essa cautela de forma direta: Kakarla et al. (Heart Rhythm, 2026) mostraram que, ao aplicar 5 escores publicados e 3 diretrizes de manejo simultaneamente numa coorte de 156 pacientes com rTOF, 41% (64/156) tiveram classificação de risco discordante conforme o critério usado — o mesmo paciente era 'alto risco' por um escore e 'baixo risco' por outro em quase metade dos casos, e nenhum critério isolado previu todos os eventos observados. Diante de marcadores intermediários (QRS prolongado, disfunção de VD moderada, extrassístoles frequentes sem TVNS), a conduta recomendada pela literatura é discussão multidisciplinar e considerar estudo eletrofisiológico invasivo com mapeamento antes de decisão definitiva — não a aplicação automática de um único corte numérico.",
+    "source_refs": [
+      "Gatzoulis MA, Till JA, Somerville J, Redington AN. Mechanoelectrical interaction in tetralogy of Fallot. QRS prolongation relates to right ventricular size and predicts malignant ventricular arrhythmias and sudden death. Circulation. 1995;92(2):231-237. DOI: 10.1161/01.cir.92.2.231. PMID: 7600655.",
+      "Khairy P, Van Hare GF, Balaji S, et al. PACES/HRS Expert Consensus Statement on the Recognition and Management of Arrhythmias in Adult Congenital Heart Disease. Heart Rhythm. 2014;11(10):e102-e165. DOI: 10.1016/j.hrthm.2014.05.009. PMID: 24814377.",
+      "Kakarla J, Ishikita A, Suszko A, Wald R, Nair K. Risk scores inconsistently predict sudden death and ventricular arrhythmias in repaired tetralogy of Fallot. Heart Rhythm. 2026;23(2):296-305. DOI: 10.1016/j.hrthm.2025.02.041. PMID: 40043861."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fontan-com-regurgitacao-atrioventricular-sistemica-grave-cirurgia-ou-teer",
+    "titulo": "Circulação de Fontan com regurgitação valvar atrioventricular sistêmica grave: reoperação ou TEER?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 27 anos, ventrículo único com circulação de Fontan estabelecida na infância (três cirurgias cardíacas prévias, incluindo a derivação cavopulmonar total). Nos últimos 2 anos, desenvolveu regurgitação progressiva e agora grave da valva atrioventricular sistêmica, com queda de tolerância ao exercício. Equipe assistente discute risco de nova esternotomia nesta paciente já com múltiplas cirurgias prévias e considera reparo transcateter borda a borda (TEER) como alternativa.",
+    "pergunta": "Qual afirmação está mais alinhada com a evidência disponível (2026) sobre TEER de valva atrioventricular em cardiopatia congênita do adulto neste cenário?",
+    "opcoes": [
+      "TEER deve ser descartado de imediato, porque os critérios de seleção de paciente usados na valva mitral degenerativa da população geral não se aplicam à valva atrioventricular de Fontan, sem nenhuma adaptação possível",
+      "TEER é hoje alternativa razoável ao reparo cirúrgico convencional em paciente de alto risco operatório como esta (múltiplas cirurgias prévias), desde que a seleção seja feita por equipe multidisciplinar com expertise estrutural em ACHD, com planejamento de imagem dedicado e atenção à fisiologia de baixa pressão venosa central que sustenta o fluxo pulmonar passivo do Fontan — qualquer elevação aguda de gradiente transvalvar (estenose iatrogênica) pode ser mal tolerada nessa circulação",
+      "A cirurgia convencional está definitivamente superada por TEER em todo paciente com ACHD e regurgitação atrioventricular, independentemente do risco operatório",
+      "TEER só pode ser considerado em transposição corrigida congenitamente (ccTGA), nunca em circulação de Fontan"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A revisão de 2026 (Parekh DR, Methodist Debakey Cardiovasc J) descreve o TEER como alternativa em expansão ao reparo cirúrgico convencional especificamente para o subgrupo de ACHD com alto risco operatório — esternotomias prévias, disfunção ventricular já estabelecida ou fragilidade hemodinâmica própria da lesão, como é o caso da circulação de Fontan. A seleção exige equipe multidisciplinar combinando expertise estrutural em ACHD, imagem cardiovascular avançada e experiência procedural específica — não apenas a experiência em TEER na valva mitral degenerativa da população geral, dada a diferença de anatomia e de risco. Na circulação de Fontan especificamente, a fisiologia de baixa pressão venosa central que sustenta o fluxo pulmonar passivo torna qualquer complicação hemodinâmica aguda (como estenose iatrogênica por excesso de aposição de folhetos) potencialmente mal tolerada, o que reforça — mas não contraindica — a necessidade de seleção cuidadosa. O reparo cirúrgico convencional permanece a primeira linha quando o risco operatório é aceitável; o TEER é opção adicional para o subgrupo de risco elevado, não substituição estabelecida da indicação cirúrgica.",
+    "source_refs": [
+      "Parekh DR. Transcatheter Edge-to-Edge Repair in Adult Congenital Heart Disease: Anatomic Challenges, Device Adaptations, and Emerging Evidence. Methodist Debakey Cardiovasc J. 2026;22(3):98-107. DOI: 10.14797/mdcvj.1840. PMID: 42403554."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-pulmonar-mal-controlada-apesar-de-tripla-terapia-denervacao-da-arteria-pulmonar-e-opcao",
+    "titulo": "HAP mal controlada apesar de terapia otimizada: a denervação da artéria pulmonar já é opção validada?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 41 anos, hipertensão arterial pulmonar idiopática, classe funcional OMS III apesar de terapia tripla otimizada (via óxido nítrico/GMPc, via da endotelina e via da prostaciclina). Sem melhora relevante de capacidade funcional no último ano. O médico assistente pesquisa a denervação da artéria pulmonar (PADN) como opção adjuvante, e encontra uma metanálise de 2026 (9 estudos, 454 pacientes) mostrando ganho médio de 92 metros no teste de caminhada de 6 minutos e queda de 11,84 mmHg na pressão arterial pulmonar média com o procedimento.",
+    "pergunta": "Com base nesses dados, qual é a interpretação clínica correta sobre oferecer PADN a esta paciente agora?",
+    "opcoes": [
+      "A melhora funcional e hemodinâmica robusta (p<0,001 nos desfechos de TC6M, mPAP, RVP e débito cardíaco) já é evidência suficiente para adotar PADN como conduta padrão adjuvante em HAP mal controlada",
+      "A melhora funcional e hemodinâmica é real e estatisticamente significativa, mas a mesma metanálise não mostrou redução significativa de mortalidade por todas as causas (OR 0,53, IC95% cruzando a unidade, p=0,12) — a PADN deve ser discutida como estratégia intervencionista emergente, idealmente dentro de protocolo de pesquisa ou centro especializado, e não como alternativa validada à terapia farmacológica estabelecida",
+      "Como a mortalidade não caiu de forma significativa, os dados de melhora funcional devem ser descartados por completo e a PADN não deve ser mencionada à paciente",
+      "A PADN deve substituir a terapia farmacológica tripla já em uso, já que reduziu RVP em 4,88 unidades Wood, muito mais do que qualquer fármaco isolado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise de 2026 mostra um padrão que exige leitura cuidadosa: melhora consistente e estatisticamente robusta em desfechos funcionais e hemodinâmicos (TC6M +92 m, mPAP -11,84 mmHg, RVP -4,88 UW, débito cardíaco +0,55 L/min, todos p<0,001), e menor risco de piora clínica e re-hospitalização — mas SEM redução significativa de mortalidade por todas as causas (OR 0,53, IC95% cruzando a unidade, p=0,12). Os próprios autores da metanálise concluem que o impacto da PADN sobre sobrevida em longo prazo permanece incerto e que são necessários ensaios randomizados multicêntricos maiores. Além disso, a amostra combinada é pequena (454 pacientes) e heterogênea (mistura de ensaios randomizados e estudos observacionais, com técnicas de PADN não idênticas entre centros). A conduta correta é reconhecer a PADN como estratégia intervencionista emergente e promissora, sem tratá-la como substituto validado da terapia farmacológica estabelecida nem descartar o sinal funcional por ausência de dado de mortalidade — as duas coisas coexistem na mesma evidência.",
+    "source_refs": [
+      "Cekirdekci EI, Onar LC. Clinical and Hemodynamic Effects of Pulmonary Artery Denervation in Pulmonary Hypertension Despite Optimized Pharmacotherapy: An Updated Systematic Review and Meta-Analysis. J Clin Med. 2026;15(7):2619. DOI: 10.3390/jcm15072619. PMID: 41976921."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "inibicao-de-tph1-na-hap-o-que-o-ensaio-elevate-2-mostrou-sobre-a-via-serotoninergica",
+    "titulo": "Inibir a serotonina periférica trata HAP? O que o ELEVATE-2 mostrou sobre o rodatristate etila",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Durante revisão de literatura sobre novos alvos terapêuticos em hipertensão arterial pulmonar (HAP), um residente encontra referências à plausibilidade fisiopatológica da serotonina periférica no remodelamento vascular pulmonar (a serotonina estimula proliferação de células musculares lisas vasculares) e pergunta se algum inibidor da síntese de serotonina já foi testado clinicamente para tratar HAP.",
+    "pergunta": "O que o ensaio ELEVATE-2 (fase 2b, rodatristate etila, inibidor da triptofano-hidroxilase 1/TPH1) mostrou sobre essa hipótese?",
+    "opcoes": [
+      "O ensaio confirmou a hipótese: rodatristate etila reduziu a resistência vascular pulmonar de forma dose-dependente e significativa em relação ao placebo, sustentando seu uso clínico",
+      "O resultado foi neutro — não houve diferença significativa entre rodatristate etila e placebo na variação da resistência vascular pulmonar em 24 semanas",
+      "O resultado foi de PIORA: os dois braços ativos (300 mg e 600 mg) tiveram aumento muito maior da resistência vascular pulmonar do que o placebo (+63,1% e +64,2% vs. +5,8%), com gradiente dose-dependente de eventos adversos e um óbito no braço de menor dose, levando ao encerramento precoce da extensão aberta",
+      "O ensaio não avaliou desfecho hemodinâmico, apenas qualidade de vida, e por isso não permite conclusão sobre eficácia"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O ELEVATE-2 (Sitbon O et al., Lancet Respir Med 2024) é um exemplo importante de hipótese fisiopatológica plausível que não se confirmou clinicamente — e, mais que isso, mostrou sinal de dano. No desfecho primário (variação percentual da RVP do basal até a semana 24), tanto o grupo de rodatristate etila 300 mg (+63,1%) quanto o de 600 mg (+64,2%) tiveram piora muito maior da RVP do que o placebo (+5,8%) — o resultado favoreceu o placebo em ambas as doses ativas. Houve gradiente dose-dependente de eventos adversos (81% no placebo, 92% em 300 mg, 100% em 600 mg) e um óbito por evento adverso no braço de 300 mg. A extensão aberta foi encerrada precocemente após revisão dos dados não cegados pelo patrocinador — decisão consistente com resultado de dano, não uma interrupção administrativa neutra. Os próprios autores concluem que inibir TPH1 (reduzindo a serotonina periférica) teve efeito negativo sobre a hemodinâmica pulmonar nesta população, e que rodatristate etila não deve ser considerado terapia para HAP. Isso não invalida toda a hipótese da via serotoninérgica na HAP (outros compostos/mecanismos têm histórico distinto), mas encerra especificamente esta via com este composto.",
+    "source_refs": [
+      "Sitbon O, Skride A, Feldman J, et al. Safety and efficacy of rodatristat ethyl for the treatment of pulmonary arterial hypertension (ELEVATE-2): a dose-ranging, randomised, multicentre, phase 2b trial. Lancet Respir Med. 2024;12(11):865-876. DOI: 10.1016/S2213-2600(24)00226-1. PMID: 39307144."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiloidose-al-cardiaca-biomarcadores-muito-elevados-strain-decide-a-urgencia-do-transplante",
+    "titulo": "Amiloidose AL com biomarcadores cardíacos muito elevados: o strain decide a urgência do encaminhamento para transplante",
+    "tema": "Calculadoras",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, amiloidose de cadeia leve (AL) recém-diagnosticada, com acometimento cardíaco. NT-proBNP 12.400 ng/L, hs-TnT 68 ng/L (ambos acima dos limiares de Mayo). Iniciando esquema de primeira linha com daratumumabe. Ecocardiograma com strain longitudinal global (LS) de −7,5%.",
+    "pergunta": "Segundo o AL-ISS (2026), qual é o estadiamento deste paciente e a implicação prática mais direta desse estadiamento?",
+    "opcoes": [
+      "Estágio IIIA, porque NT-proBNP e hs-TnT estão ambos elevados — o strain não é necessário para definir o estágio neste caso",
+      "Estágio IIIB, porque o strain de −7,5% é mais negativo que o corte de −9%, indicando função contrátil ainda relativamente preservada apesar dos biomarcadores muito elevados",
+      "Estágio IIIC, porque NT-proBNP ≥ 8.500 ng/L, hs-TnT ≥ 50 ng/L e LS ≥ −9% (neste caso, −7,5%, valor menos negativo que −9%, indicando contração já bastante comprometida) — esse subgrupo tem sobrevida mediana de apenas 7 meses mesmo na era do daratumumabe, e os autores recomendam consideração precoce de avaliação para transplante cardíaco nos pacientes elegíveis",
+      "O AL-ISS não pode ser aplicado neste caso porque o paciente já iniciou tratamento com daratumumabe antes da estratificação"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O AL-ISS introduz dois estágios novos (IIIB e IIIC) que subdividem o antigo estágio III do estadiamento de Mayo usando um terceiro parâmetro, o strain longitudinal global (LS) ao ecocardiograma, com corte em −9%. A leitura do strain é contraintuitiva: como o strain normal é fortemente negativo (em torno de −20%), quanto MENOS negativo (mais próximo de zero), PIOR a função contrátil longitudinal. Neste caso, NT-proBNP (12.400 ng/L) está acima de 8.500 ng/L e hs-TnT (68 ng/L) acima de 50 ng/L — os dois critérios de biomarcador para IIIB ou IIIC estão presentes. O LS de −7,5% é MENOS negativo (mais próximo de zero) que o corte de −9%, ou seja, LS ≥ −9%, o que define estágio IIIC (o mais grave), não IIIB. O estágio IIIC representa apenas 5% da coorte de validação, mas tem sobrevida mediana de 7 meses mesmo sob tratamento com daratumumabe — os autores recomendam consideração precoce de avaliação para transplante cardíaco nos pacientes elegíveis desse subgrupo. É importante não confundir a direção do corte: LS ≥ −9% (valor menos negativo) é o pior prognóstico, não o melhor, e essa é justamente a armadilha mais citada do escore.",
+    "source_refs": [
+      "Khwaja J, Kirkwood AA, Milani P, et al. New Validated Staging System for Light Chain (AL) Amyloidosis With Stage IIIC Defining Ultra-Poor Risk: AL International Staging System. J Clin Oncol. 2026;44(4):311-320. DOI: 10.1200/JCO-25-02558. PMID: 41353737."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-persistente-candidata-a-ablacao-o-escore-apple-prediz-bem-a-recorrencia",
+    "titulo": "Antes da ablação de FA persistente: o escore APPLE prediz bem a chance de recorrência?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 62 anos, fibrilação atrial persistente sintomática apesar de terapia antiarrítmica, sendo avaliada para ablação por cateter. TFG estimada 52 mL/min/1,73m², diâmetro de átrio esquerdo 45 mm, fração de ejeção 48%. O cardiologista calcula o escore APPLE (idade >65, FA persistente, TFGe <60, diâmetro de AE ≥43mm, FE <50% = 1 ponto cada) para orientar a expectativa da paciente sobre recorrência pós-ablação.",
+    "pergunta": "Qual afirmação descreve corretamente o desempenho e as limitações do escore APPLE neste cenário?",
+    "opcoes": [
+      "O APPLE score foi validado especificamente para decidir se a paciente deve ou não ser submetida à ablação — pontuação alta contraindica o procedimento",
+      "O APPLE score serve para estimar prognóstico de recorrência PÓS-ablação (não para selecionar quem deve ser ablacionado); tem discriminação moderada na validação original (AUC ~0,63) e uma coorte recente de 2025, restrita a FA persistente, mostrou desempenho substancialmente pior (AUC 0,506, próximo do acaso) — a discriminação do escore não é uniforme entre subtipos de FA, e essa paciente com FA persistente está exatamente na população em que o desempenho documentado foi mais fraco",
+      "O escore APPLE tem discriminação excelente (AUC > 0,90) e deve ser usado como critério único para prever recorrência em qualquer subtipo de FA",
+      "O escore APPLE e o CHA2DS2-VASc medem a mesma coisa e podem ser usados de forma intercambiável para estimar risco de recorrência arrítmica pós-ablação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O APPLE score (Kornej et al., 2015) foi derivado e validado para estimar a PROBABILIDADE DE RECORRÊNCIA de FA após ablação por cateter — não para decidir se o procedimento deve ou não ser indicado. Na derivação e validação externa original, o desempenho foi moderado (AUC 0,634 na derivação, 0,624 na validação externa), superando CHADS2 e CHA2DS2-VASc para essa pergunta específica (que são escores desenhados para risco de AVC, não de recorrência arrítmica — pergunta clínica completamente diferente). Um dado importante e recente (Cui et al., Front Cardiovasc Med, dezembro de 2025) testou o APPLE numa coorte contemporânea de 300 pacientes com FA PERSISTENTE (a mesma condição desta paciente) e encontrou AUC de apenas 0,506 — praticamente equivalente ao acaso. Isso não invalida o escore em geral (a coorte original tinha 62% de FA paroxística, população mais heterogênea), mas mostra que a discriminação não é estável em toda população de FA, e a paciente do caso está exatamente no subgrupo (FA persistente) em que o desempenho documentado foi mais fraco. A conduta correta é usar o escore com essa ressalva explícita na conversa com a paciente, não como número definitivo.",
+    "source_refs": [
+      "Kornej J, Hindricks G, Shoemaker MB, et al. The APPLE score: a novel and simple score for the prediction of rhythm outcomes after catheter ablation of atrial fibrillation. Clin Res Cardiol. 2015;104(10):871-876. DOI: 10.1007/s00392-015-0856-x. PMID: 25876528.",
+      "Cui W, Bin X, Ning L, Xie J. Construction and validation of a regularized logistic regression model for predicting late recurrence after ablation in persistent atrial fibrillation: a clinical parameter approach. Front Cardiovasc Med. 2025;12:1713560. DOI: 10.3389/fcvm.2025.1713560. PMID: 41458987."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "depressao-e-risco-de-insuficiencia-cardiaca-incidente-associacao-nao-e-causalidade-comprovada",
+    "titulo": "Depressão aumenta o risco de desenvolver insuficiência cardíaca? Como comunicar um achado de certeza 'muito baixa'",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 50 anos, sem doença cardiovascular conhecida, em acompanhamento por transtorno depressivo maior há 5 anos, pergunta ao cardiologista se a depressão em si aumenta o risco de ele desenvolver insuficiência cardíaca (IC) no futuro, tendo lido uma reportagem sobre uma metanálise de 2,6 milhões de pessoas mostrando essa associação.",
+    "pergunta": "Como comunicar corretamente este achado ao paciente, com base nas duas fontes disponíveis (metanálise de coortes observacionais e estudo de randomização mendeliana)?",
+    "opcoes": [
+      "Afirmar que está comprovado que a depressão causa insuficiência cardíaca, já que a metanálise de 2,6 milhões de participantes encontrou HR 1,25 estatisticamente significativo",
+      "Descartar completamente qualquer relação, já que a randomização mendeliana não encontrou associação causal genética entre transtorno depressivo maior e doença cardiovascular",
+      "Explicar que há associação epidemiológica robusta e consistente entre depressão e maior incidência de IC (HR 1,25, IC95% 1,13-1,38, robusta em múltiplas análises de subgrupo), mas que os próprios autores da metanálise classificam essa evidência como de certeza 'muito baixa' pelo sistema GRADE, e que um estudo de randomização mendeliana não confirmou via causal genética direta — a conclusão mais honesta é que a depressão deve ser vista como MARCADOR de maior atenção ao risco de IC, justificando rastreio mais atento, sem afirmar causalidade comprovada",
+      "Recomendar apenas tratamento farmacológico intensivo da depressão como estratégia comprovada de prevenção primária de insuficiência cardíaca"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Este caso ilustra uma armadilha de comunicação médica: um achado estatisticamente significativo e robusto (HR 1,25, IC95% 1,13-1,38, estável em múltiplas análises de subgrupo por 11 estudos de coorte com 2.635.205 participantes) não é o mesmo que uma prova de causalidade de alta certeza. Os próprios autores da metanálise (Gu et al., 2025) classificam a certeza da evidência como 'muito baixa' pelo sistema GRADE, apesar do tamanho amostral expressivo — refletindo heterogeneidade elevada entre estudos (I²=87%) não explicada pelos moderadores clássicos testados (diabetes, hipertensão, tabagismo, IMC). Um estudo independente de randomização mendeliana (Chen et al., 2025), método menos suscetível a confundimento reverso, não encontrou evidência de associação causal genética entre transtorno depressivo maior e doença cardiovascular, incluindo IC especificamente. As duas coisas podem ser verdadeiras ao mesmo tempo: depressão pode ser um marcador clínico útil de maior risco (via mecanismos comportamentais, farmacológicos, inflamatórios ou confundimento residual não capturado pela randomização mendeliana) sem que a predisposição genética à depressão seja, por si, causa direta de IC — distinção que os próprios autores da randomização mendeliana propõem explicitamente. Na prática: vale rastrear IC de forma mais atenta no paciente com depressão, mas não afirmar causalidade comprovada ao comunicar o achado.",
+    "source_refs": [
+      "Gu H, Zhu L, Wang Q. Association between depression and heart failure: A meta-analysis of cohort studies with 2.6 million participants. Pak J Med Sci. 2025;41(10):2953-2964. DOI: 10.12669/pjms.41.10.12723. PMID: 41244542.",
+      "Chen J, Duan W, Liu P, et al. Schizophrenia, bipolar disorder and major depressive disorder are probably not risk factors for cardiovascular disease: A Mendelian randomized study. J Affect Disord. 2025;377:184-196. DOI: 10.1016/j.jad.2025.02.069. PMID: 39983779."
+    ],
+    "review_status": "revisado"
   }
 ]
