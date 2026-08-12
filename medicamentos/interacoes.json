@@ -840,5 +840,41 @@
     "conduta": "Antes de iniciar sildenafila, o paciente deve estar hemodinamicamente estável com o alfa-bloqueador; nessa situação, iniciar sildenafila em 25 mg. Se o paciente já usa uma dose otimizada de inibidor da PDE5 e será iniciado o alfa-bloqueador, começar o alfa-bloqueador na menor dose e titular gradualmente.",
     "fonte": "Rotulagem aprovada pelo FDA para sildenafil/VIAGRA, seções 2.3 e 5.5. A rotulagem vigente especifica início da sildenafila em 25 mg quando coadministrada com alfa-bloqueador e descreve o risco de hipotensão sintomática; VYBRIQUE (sildenafil oral film), FDA 2025, seção 5.5, confirma as mesmas precauções.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "digoxina-claritromicina-ou-eritromicina",
+    "farmacos": [
+      "digoxina"
+    ],
+    "classe_oposta": "macrolídeo — claritromicina ou eritromicina",
+    "gravidade": "grave",
+    "efeito": "Aumento acentuado da exposição à digoxina por inibição da glicoproteína P (P-gp) intestinal, tubular renal e biliar-intestinal, das quais a digoxina é substrato — reduz sua eliminação e aumenta sua absorção. Claritromicina eleva a AUC da digoxina em cerca de 70%; eritromicina, em cerca de 100% (dobra a concentração sérica). Risco de intoxicação digitálica (náusea, vômito, arritmias, distúrbio visual).",
+    "conduta": "Medir a concentração sérica de digoxina antes de iniciar o macrolídeo. Reduzir a dose de digoxina em aproximadamente 30 a 50% ao associar claritromicina ou eritromicina, e monitorar sinais de toxicidade digitálica e a concentração sérica durante e após o curso do antibiótico. Ao suspender o macrolídeo, reavaliar a necessidade de retornar à dose prévia de digoxina.",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para digoxin tablets (mesmo setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4 já citado nas `references` do verbete `digoxina` desta mesma base), seção 7 (Drug Interactions) — consultado via WebFetch em 12/08/2026. Texto verbatim: \"Digoxin is a substrate of P-glycoprotein... Clarithromycin: Digoxin AUC increase 70%... Erythromycin: digoxin serum concentration increase 100%... Reduce digoxin concentrations by decreasing dose by approximately 30 to 50%.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "atorvastatina-claritromicina-ou-eritromicina",
+    "farmacos": [
+      "atorvastatina-calcica"
+    ],
+    "classe_oposta": "macrolídeo — claritromicina ou eritromicina (inibidor do CYP3A4)",
+    "gravidade": "moderada",
+    "efeito": "Aumento da exposição à atorvastatina por inibição do CYP3A4 hepático/intestinal (e possivelmente de transportadores), elevando o risco de miopatia e rabdomiólise. Claritromicina eleva a AUC da atorvastatina em 4,54 vezes e o Cmax em 5,38 vezes; eritromicina tem magnitude menor (aumento de AUC de cerca de 1,33 vez).",
+    "conduta": "Em pacientes usando claritromicina ou itraconazol (outro inibidor forte do CYP3A4), não exceder 20 mg/dia de atorvastatina. Monitorar sinais e sintomas de miopatia (mialgia, fraqueza muscular, urina escura), sobretudo no início da terapia combinada ou durante titulação de dose de qualquer um dos dois fármacos. Considerar suspensão temporária da estatina durante curso curto de macrolídeo, quando clinicamente possível.",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para LIPITOR® (atorvastatin calcium), seção Drug Interactions — consultado via WebFetch em 12/08/2026. Texto verbatim: \"Atorvastatin plasma levels were significantly increased with concomitant administration of LIPITOR with select azole antifungals or macrolide antibiotics, due to inhibition of CYP3A4 and/or transporters... In patients taking clarithromycin or itraconazole, do not exceed LIPITOR 20 mg.\" Mesmo padrão de interação (classe CYP3A4) já registrado nesta base para `amiodarona-sinvastatina` e `sinvastatina-verapamil-ou-diltiazem`.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hidroclorotiazida-litio",
+    "farmacos": [
+      "hidroclorotiazida"
+    ],
+    "classe_oposta": "lítio (carbonato de lítio)",
+    "gravidade": "moderada",
+    "efeito": "Diuréticos tiazídicos reduzem a depuração renal do lítio por promoverem reabsorção proximal compensatória de sódio e, junto com ele, de lítio (que é manuseado pelo túbulo renal de forma semelhante ao sódio) — elevando a concentração sérica de lítio e o risco de toxicidade (tremor, ataxia, confusão, arritmia, em casos graves convulsão e coma).",
+    "conduta": "Evitar a combinação quando possível; se necessária, monitorar a litemia com maior frequência ao iniciar, ajustar dose ou suspender o diurético, e reduzir a dose de lítio de forma antecipada, reavaliando por nível sérico. Reforçar orientação sobre sinais de intoxicação por lítio ao paciente.",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para carbonato de lítio (Lithane), seção PRECAUTIONS — consultado via WebFetch em 12/08/2026. Texto verbatim: \"Caution should be used when lithium and diuretics or angiotensin converting enzyme (ACE) inhibitors are used concomitantly because sodium loss may reduce the renal clearance of lithium and increase serum lithium levels with risk of lithium toxicity.\" **Nota de procedência**: o rótulo consultado usa o termo genérico \"diuretics\", sem nomear tiazídicos especificamente nem quantificar a magnitude do efeito em número — a tiazida é a classe de diurético classicamente mais implicada nesta interação na farmacologia clínica (mecanismo de reabsorção proximal de sódio/lítio), mas o valor percentual exato de redução de clearance não foi confirmado contra fonte primária quantitativa nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para a magnitude numérica específica, se necessária.",
+    "review_status": "revisado"
   }
 ]
