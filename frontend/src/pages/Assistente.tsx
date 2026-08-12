@@ -80,9 +80,13 @@ function lerEntradaInicial(search: string): EntradaInicial {
     // Entrada contextual é uma melhoria de UX, não requisito de funcionamento.
   }
 
+  // Uma pergunta recém-entregue pela Command Bar é mais específica que o
+  // simples `?modo=clinica`: assim o modo explícito não apaga o contexto que
+  // motivou a navegação. Entrada pessoal nunca carrega pergunta clínica porque
+  // o bridge remove esse hint antes de abrir o modo pessoal.
   if (perguntaUrl) return { modo: "clinica", pergunta: perguntaUrl };
-  if (modoUrl) return { modo: modoUrl, pergunta: "" };
   if (hintRecente && perguntaHint) return { modo: "clinica", pergunta: perguntaHint };
+  if (modoUrl) return { modo: modoUrl, pergunta: "" };
   return { modo: modoHint, pergunta: "" };
 }
 
