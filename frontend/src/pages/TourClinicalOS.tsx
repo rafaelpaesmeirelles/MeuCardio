@@ -34,7 +34,7 @@ function MiniSidebar({ ativo = "Início" }: { ativo?: string }) {
     ["Clínica", "clinica"],
     ["Trabalho", "pacientes"],
     ["Conhecimento", "conhecimento"],
-    ["CorVIA AI", "assistente"],
+    ["Assistente", "assistente"],
   ];
   return (
     <div className="cos-tour-mock__side">
@@ -56,7 +56,7 @@ function MockHome() {
           <small>Conhecimento, decisão e ação a partir do mesmo ponto.</small>
           <div className="cos-tour-command"><b>✦</b><span>Pergunte, pesquise ou execute uma ação...</span><em>↗</em></div>
           <div className="cos-tour-quick">
-            {[["prescricao","Prescrever"],["documento","Documento"],["calculadora","Calculadoras"],["emergencia","Emergências"],["medicamento","Medicamentos"],["assistente","CorVIA AI"]].map(([icone,nome]) => <span key={nome}><Icone nome={icone as NomeIcone} /><b>{nome}</b></span>)}
+            {[["prescricao","Prescrever"],["documento","Documento"],["calculadora","Calculadoras"],["emergencia","Emergências"],["medicamento","Medicamentos"],["assistente","Assistente"]].map(([icone,nome]) => <span key={nome}><Icone nome={icone as NomeIcone} /><b>{nome}</b></span>)}
           </div>
           <div className="cos-tour-recent"><span>Continuar de onde parei</span><i>ICFER</i><i>Sacubitril/valsartana</i><i>Evidências</i><i>CHA₂DS₂-VASc</i></div>
         </div>
