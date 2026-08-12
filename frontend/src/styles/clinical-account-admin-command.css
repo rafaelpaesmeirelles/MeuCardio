@@ -1,0 +1,101 @@
+/* Account, subscription and administration — trustworthy Clinical OS surfaces. */
+body.corvia-route--conta .clinical-os .pagina,
+body.corvia-route--admin .clinical-os .cos-content { width:min(100%,1180px); max-width:1180px; margin:0 auto; }
+
+/* Minha Conta */
+body.corvia-route--conta .clinical-os .conta__cabecalho {
+  display:flex; align-items:center; justify-content:space-between; gap:.8rem;
+  margin-bottom:.65rem; padding:.68rem .76rem;
+  background:linear-gradient(145deg,rgba(10,31,43,.96),rgba(6,23,33,.98));
+  border:1px solid rgba(126,183,201,.09); border-radius:11px;
+}
+body.corvia-route--conta .clinical-os .conta__cabecalho .eyebrow { margin:0 0 .04rem; color:#62d8df; font-size:.51rem; }
+body.corvia-route--conta .clinical-os .conta__cabecalho h1 { margin:0; color:#f0fafb; font-size:1.05rem; letter-spacing:-.03em; }
+body.corvia-route--conta .clinical-os .conta__cabecalho .conta__logout { min-height:30px; padding:.3rem .5rem; font-size:.5rem; }
+
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] {
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.5rem !important;
+  max-width:none !important;
+  align-items:start;
+}
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao {
+  min-width:0;
+  margin:0;
+  padding:.68rem .72rem;
+  background:linear-gradient(145deg,rgba(10,31,43,.95),rgba(6,23,33,.98));
+  border-color:rgba(126,183,201,.085);
+  border-radius:10px;
+  box-shadow:none;
+}
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao h2 {
+  margin-top:0!important;
+  color:#dbecef;
+  font-size:.72rem;
+}
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao p { font-size:.55rem!important; line-height:1.42; }
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao label { font-size:.55rem; }
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao input,
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao select,
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao textarea { min-height:34px; font-size:.55rem; }
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao .botao { min-height:29px; padding:.3rem .48rem!important; font-size:.5rem!important; }
+
+/* Long profile form gets the full row; security/billing remain compact. */
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome),
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(input[type="file"]),
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(table) { grid-column:1 / -1; }
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome) .grade--3,
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome) .grade--2 { gap:.38rem; }
+body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome) {
+  background:radial-gradient(circle at 100% 0%,rgba(56,202,213,.04),transparent 16rem),linear-gradient(145deg,rgba(10,31,43,.96),rgba(6,23,33,.98));
+}
+body.corvia-route--conta .clinical-os .pagina img[alt="Corvia"] { filter:none; }
+
+/* Keep white only where the user is literally previewing an outbound email/document. */
+body.corvia-route--conta .clinical-os .cartao [style*="background: \"#fff\""] { box-shadow:0 10px 28px rgba(0,0,0,.16); }
+
+/* Admin */
+body.corvia-route--admin .clinical-os .cos-content > h1 {
+  margin:.08rem 0 .3rem; color:#f2fbfc; font-size:1.3rem; letter-spacing:-.035em;
+}
+body.corvia-route--admin .clinical-os .cos-content > a.cartao--clinico {
+  max-width:none!important; min-height:82px; padding:.7rem .78rem;
+  background:radial-gradient(circle at 100% 0%,rgba(76,159,255,.06),transparent 14rem),linear-gradient(145deg,rgba(10,31,43,.95),rgba(6,23,33,.98));
+}
+body.corvia-route--admin .clinical-os .cos-content > a.cartao--clinico strong { color:#dff8fa; font-size:.7rem; }
+body.corvia-route--admin .clinical-os .cos-content > a.cartao--clinico p { font-size:.55rem!important; }
+body.corvia-route--admin .clinical-os .cos-content > h2 { margin:1rem 0 .25rem!important; color:#dcebed; font-size:.78rem; }
+body.corvia-route--admin .clinical-os .cos-content > h2 .selo { vertical-align:middle; }
+body.corvia-route--admin .clinical-os .cos-content > h2 + p { margin-top:0; color:#748f98!important; font-size:.56rem; }
+body.corvia-route--admin .clinical-os .grade { gap:.42rem; }
+body.corvia-route--admin .clinical-os .cartao {
+  padding:.62rem .7rem;
+  background:linear-gradient(145deg,rgba(10,31,43,.94),rgba(6,23,33,.98));
+  border-color:rgba(126,183,201,.08);
+  box-shadow:none;
+}
+body.corvia-route--admin .clinical-os .cartao--clinico { border-left:2px solid rgba(56,202,213,.16); }
+body.corvia-route--admin .clinical-os .cartao strong { color:#dbecef; font-size:.64rem; }
+body.corvia-route--admin .clinical-os .cartao p,
+body.corvia-route--admin .clinical-os .cartao div { color:#7f99a2; }
+body.corvia-route--admin .clinical-os .cartao label { font-size:.54rem; }
+body.corvia-route--admin .clinical-os .cartao input,
+body.corvia-route--admin .clinical-os .cartao select,
+body.corvia-route--admin .clinical-os .cartao textarea { min-height:34px; font-size:.54rem; }
+body.corvia-route--admin .clinical-os .cartao .botao { min-height:28px; padding:.28rem .44rem!important; font-size:.49rem!important; }
+body.corvia-route--admin .clinical-os .selo { padding:.18rem .35rem; font-size:.44rem; }
+body.corvia-route--admin .clinical-os .selo--revisado { color:#8ae2b8; background:rgba(120,217,157,.06); border-color:rgba(120,217,157,.12); }
+body.corvia-route--admin .clinical-os .selo--pendente { color:#e8be72; background:rgba(240,170,60,.06); border-color:rgba(240,170,60,.12); }
+
+@media(max-width:900px){
+  body.corvia-route--conta .clinical-os .pagina,
+  body.corvia-route--admin .clinical-os .cos-content { width:100%; max-width:none; }
+  body.corvia-route--conta .clinical-os .conta__cabecalho { padding:.55rem; }
+  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] { grid-template-columns:1fr; }
+  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome),
+  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(input[type="file"]),
+  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(table) { grid-column:auto; }
+  body.corvia-route--admin .clinical-os .grade--2,
+  body.corvia-route--admin .clinical-os .grade--3 { grid-template-columns:1fr; }
+}
