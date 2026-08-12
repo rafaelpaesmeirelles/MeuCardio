@@ -1109,5 +1109,68 @@
     "gravidade": "moderada",
     "fonte": "Bula FDA/DailyMed de DOBUTAMINE INJECTION (Hospira Inc., SPL setid 89becb0c-da60-4f43-0a98-29ff7a9eca58), seção Drug Interactions — texto verbatim: \"Animal studies indicate that dobutamine may be ineffective if the patient has recently received a β-blocking drug. In such a case, the peripheral vascular resistance may increase.\" Consultado via API pública do DailyMed em 12/08/2026.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "digoxina-diuretico-caliuretico",
+    "farmacos": [
+      "digoxina",
+      "furosemida"
+    ],
+    "classe_oposta": "diurético caliurético — de alça (ex.: furosemida, bumetanida) ou tiazídico (ex.: hidroclorotiazida)",
+    "gravidade": "moderada",
+    "efeito": "A depleção de potássio (e de magnésio) causada por diurético caliurético potencializa a toxicidade da digoxina, sobretudo o efeito arritmogênico miocárdico — não é interação farmacocinética (não altera a concentração sérica de digoxina), é sinergismo de toxicidade por hipocalemia/hipomagnesemia.",
+    "conduta": "Monitorizar potássio e magnésio séricos em paciente que usa digoxina junto com diurético de alça ou tiazídico, repondo eletrólitos conforme necessário; vigiar sinais de toxicidade digitálica (arritmia, distúrbio visual, náusea) mais de perto quando houver hipocalemia.",
+    "fonte": "Bula FDA/DailyMed do LANOXIN (digoxin, ADVANZ Pharma, SPL setid d91e3646-4c63-4512-ab22-db39c085c4dc), seção Warnings and Precautions (5.3): 'Low body weight, advanced age or impaired renal function, hypokalemia, hypercalcemia, or hypomagnesemia may predispose to digoxin toxicity.' Combinada com a bula FDA/DailyMed de furosemida em comprimidos (Preferred Pharmaceuticals, SPL setid a23fc1e0-2d16-43a8-a34e-f6505dcd6316), seção Precautions: 'Digitalis therapy may exaggerate metabolic effects of hypokalemia, especially myocardial effects.' — e da bula FDA/DailyMed de losartana potássica/hidroclorotiazida (RemedyRepack, SPL setid 446e6998-01f6-4de0-be57-7fecf5448e95), seção Overdosage: 'If digitalis has also been administered, hypokalemia may accentuate cardiac arrhythmias.' Consultadas via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dabigatrana-verapamil",
+    "farmacos": [
+      "dabigatrana-etexilato",
+      "verapamil-cloridrato"
+    ],
+    "classe_oposta": null,
+    "gravidade": "moderada",
+    "efeito": "Verapamil é inibidor da glicoproteína P (P-gp), transportador que limita a absorção intestinal da dabigatrana — a associação aumenta a exposição plasmática à dabigatrana. Apesar disso, a bula distingue verapamil de outros inibidores de P-gp mais potentes (dronedarona, cetoconazol sistêmico): para a indicação de fibrilação atrial não valvar, verapamil **não exige ajuste de dose**, mesmo com função renal reduzida — diferente de dronedarona/cetoconazol, que exigem redução para 75 mg 2x/dia com clearance de creatinina entre 30 e 50 mL/min, e são evitados abaixo de 30 mL/min.",
+    "conduta": "Na fibrilação atrial não valvar, uso concomitante com verapamil não exige redução de dose da dabigatrana segundo a bula. Já nas indicações de TEV (tratamento/prevenção de recorrência de TVP/TEP) e profilaxia em cirurgia de quadril, a bula recomenda evitar qualquer inibidor de P-gp — incluindo verapamil — em paciente com clearance de creatinina < 50 mL/min; nesse cenário, considerar anticoagulante alternativo ou espaçar os horários de administração.",
+    "fonte": "Bula FDA/DailyMed do PRADAXA (dabigatran etexilate mesylate, Boehringer Ingelheim, SPL setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9), seção Drug Interactions (7.1-7.3) — texto: 'The use of the P-gp inhibitors verapamil, amiodarone, quinidine, clarithromycin, and ticagrelor does not require a dosage adjustment of PRADAXA' (7.1, FA não valvar); 'reduce the dosage of PRADAXA to 75 mg twice daily when administered concomitantly with' dronedarona ou cetoconazol sistêmico em CrCl 30-50 mL/min, evitar combinação em CrCl 15-30 mL/min; 'Avoid use of PRADAXA and P-gp inhibitors in patients with CrCl < 50 mL/min' (7.2, TEV). Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "riociguato-nitrato-organico",
+    "farmacos": [
+      "riociguato"
+    ],
+    "classe_oposta": "nitrato orgânico ou doador de óxido nítrico, em qualquer forma (ex.: nitroglicerina, mononitrato ou dinitrato de isossorbida, nitrito de amila)",
+    "gravidade": "contraindicada",
+    "efeito": "Somam-se dois vasodilatadores atuando por vias convergentes no relaxamento da musculatura lisa vascular (riociguato estimula diretamente a guanilato ciclase solúvel, sensibilizando-a ao óxido nítrico endógeno) — risco de hipotensão grave.",
+    "conduta": "Contraindicado pela bula, em qualquer forma de nitrato ou doador de óxido nítrico. Não associar.",
+    "fonte": "Bula FDA/DailyMed do ADEMPAS (riociguat, Bayer HealthCare Pharmaceuticals, SPL setid 7b57509a-3d5d-41d4-8fed-1471e26372a3), seção Contraindications e Drug Interactions — texto verbatim: 'Co-administration of Adempas with nitrates or nitric oxide donors (such as amyl nitrite) in any form is contraindicated' e, na seção de interações, '...contraindicated because of hypotension.' Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "riociguato-inibidor-de-pde5-ou-dipiridamol-teofilina",
+    "farmacos": [
+      "riociguato",
+      "dipiridamol"
+    ],
+    "classe_oposta": "inibidor específico da fosfodiesterase-5 (sildenafila, tadalafila, vardenafila) ou inibidor não específico de fosfodiesterase (dipiridamol, teofilina)",
+    "gravidade": "contraindicada",
+    "efeito": "Somam-se dois mecanismos que elevam o GMP cíclico na musculatura lisa vascular — o inibidor de PDE5 (específico) ou o inibidor não específico de fosfodiesterase (dipiridamol, teofilina) reduz a degradação do GMPc, enquanto o riociguato estimula sua síntese — risco de hipotensão grave.",
+    "conduta": "Contraindicado pela bula. Não associar riociguato a inibidor de PDE5 (específico ou não específico, incluindo dipiridamol e teofilina).",
+    "fonte": "Bula FDA/DailyMed do ADEMPAS (riociguat, Bayer HealthCare Pharmaceuticals, SPL setid 7b57509a-3d5d-41d4-8fed-1471e26372a3), seção Contraindications — texto verbatim: 'Concomitant administration of Adempas with specific PDE-5 inhibitors (such as sildenafil, tadalafil, or vardenafil) or nonspecific PDE 5 inhibitors (such as dipyridamole or theophylline) is contraindicated... because of hypotension.' Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lisinopril-aine",
+    "farmacos": [
+      "lisinopril"
+    ],
+    "classe_oposta": "AINE (anti-inflamatório não esteroidal, incluindo inibidor seletivo da COX-2)",
+    "gravidade": "moderada",
+    "efeito": "AINE, incluindo inibidor seletivo da COX-2, pode atenuar o efeito anti-hipertensivo do IECA e, combinado a ele, pode causar deterioração da função renal, incluindo insuficiência renal aguda — risco maior em idoso, paciente com depleção de volume (inclusive por uso de diurético) ou função renal já comprometida ('efeito tríplice', quando associado também a diurético).",
+    "conduta": "Evitar uso crônico concomitante quando possível; se necessário, monitorizar pressão arterial e função renal (creatinina, potássio), com atenção redobrada em idoso, paciente em uso de diurético ou com função renal reduzida.",
+    "fonte": "Bula FDA/DailyMed do ZESTRIL (lisinopril, Upsher-Smith Laboratories, SPL setid 838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8), seção Drug Interactions (7.3) — texto verbatim: 'coadministration of NSAIDs, including selective COX-2 inhibitors, with ACE inhibitors, including lisinopril, may result in deterioration of renal function, including possible acute renal failure' e 'The antihypertensive effect of ACE inhibitors, including lisinopril, may be attenuated by NSAIDs.' Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
   }
 ]
