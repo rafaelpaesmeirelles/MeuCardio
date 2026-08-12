@@ -29,6 +29,12 @@ type Status = {
   ferramentas_consentidas: boolean;
 };
 type ConversaResumo = { id: number; titulo: string; modo: Modo; updated_at: string };
+type EntradaInicial = { modo: Modo | null; pergunta: string };
+
+const ASSISTANT_ENTRY_MODE_KEY = "corvia:assistant-entry-mode:v1";
+const ASSISTANT_ENTRY_QUESTION_KEY = "corvia:assistant-entry-question:v1";
+const ASSISTANT_ENTRY_AT_KEY = "corvia:assistant-entry-at:v1";
+const ASSISTANT_ENTRY_TTL_MS = 8_000;
 
 const SUGESTOES: Record<Modo, string[]> = {
   clinica: [
@@ -46,6 +52,36 @@ const SUGESTOES: Record<Modo, string[]> = {
 function modoDaUrl(search: string): Modo | null {
   const valor = new URLSearchParams(search).get("modo");
   return valor === "clinica" || valor === "pessoal" ? valor : null;
+}
+
+function consumirEntradaInicial(search: string): EntradaInicial {
+  const params = new URLSearchParams(search);
+  const perguntaUrl = (params.get("pergunta") || "").trim();
+  const modoUrl = modoDaUrl(search);
+
+  let modoHint: Modo | null = null;
+  let perguntaHint = "";
+  let hintRecente = false;
+  try {
+    const modoBruto = sessionStorage.getItem(ASSISTANT_ENTRY_MODE_KEY);
+    const perguntaBruta = (sessionStorage.getItem(ASSISTANT_ENTRY_QUESTION_KEY) || "").trim();
+    const em = Number(sessionStorage.getItem(ASSISTANT_ENTRY_AT_KEY) || "0");
+    hintRecente = Number.isFinite(em) && Date.now() - em >= 0 && Date.now() - em <= ASSISTANT_ENTRY_TTL_MS;
+    if (hintRecente) {
+      modoHint = modoBruto === "clinica" || modoBruto === "pessoal" ? modoBruto : null;
+      perguntaHint = perguntaBruta;
+    }
+    sessionStorage.removeItem(ASSISTANT_ENTRY_MODE_KEY);
+    sessionStorage.removeItem(ASSISTANT_ENTRY_QUESTION_KEY);
+    sessionStorage.removeItem(ASSISTANT_ENTRY_AT_KEY);
+  } catch {
+    // Entrada contextual é uma melhoria de UX, não requisito de funcionamento.
+  }
+
+  if (perguntaUrl) return { modo: "clinica", pergunta: perguntaUrl };
+  if (modoUrl) return { modo: modoUrl, pergunta: "" };
+  if (hintRecente && perguntaHint) return { modo: "clinica", pergunta: perguntaHint };
+  return { modo: modoHint, pergunta: "" };
 }
 
 function Escolha({ onEscolher }: { onEscolher: (modo: Modo) => void }) {
@@ -124,11 +160,12 @@ function ConsentimentoPessoal({
 
 export default function Assistente() {
   const { search } = useLocation();
+  const [entradaInicial] = useState<EntradaInicial>(() => consumirEntradaInicial(search));
   const [status, setStatus] = useState<Status | null>(null);
-  const [modo, setModo] = useState<Modo | null>(() => modoDaUrl(search));
+  const [modo, setModo] = useState<Modo | null>(entradaInicial.modo);
   const [mostrarConsentimento, setMostrarConsentimento] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
-  const [pergunta, setPergunta] = useState("");
+  const [pergunta, setPergunta] = useState(entradaInicial.pergunta);
   const [conversa, setConversa] = useState<number | null>(null);
   const [pensando, setPensando] = useState(false);
   const [etapa, setEtapa] = useState("");
@@ -136,7 +173,7 @@ export default function Assistente() {
   const [historico, setHistorico] = useState<ConversaResumo[]>([]);
   const [mostrarHistorico, setMostrarHistorico] = useState(false);
   const [modeloEscolhido, setModeloEscolhido] = useState("");
-  const [usarInternet, setUsarInternet] = useState(() => modoDaUrl(search) === "pessoal");
+  const [usarInternet, setUsarInternet] = useState(entradaInicial.modo === "pessoal");
   const fim = useRef<HTMLDivElement>(null);
   const entradaUrlProcessada = useRef("");
 
@@ -164,6 +201,7 @@ export default function Assistente() {
 
     if (perguntaRecebida) {
       setModo("clinica");
+      setMostrarConsentimento(false);
       setUsarInternet(false);
       setPergunta(perguntaRecebida);
       setMensagens([]);
@@ -175,27 +213,28 @@ export default function Assistente() {
 
     if (solicitado) {
       setModo(solicitado);
+      setMostrarConsentimento(solicitado === "pessoal" && !status.ferramentas_consentidas);
       setUsarInternet(solicitado === "pessoal");
       setMensagens([]);
       setConversa(null);
       setMostrarHistorico(false);
       setErro("");
-      if (solicitado === "pessoal" && !status.ferramentas_consentidas) {
-        setMostrarConsentimento(true);
-      }
     }
   }, [search, status]);
 
+  useEffect(() => {
+    if (!status || entradaInicial.modo !== "pessoal" || status.ferramentas_consentidas) return;
+    setMostrarConsentimento(true);
+  }, [entradaInicial.modo, status]);
+
   function escolherModo(escolhido: Modo) {
     setModo(escolhido);
+    setMostrarConsentimento(escolhido === "pessoal" && !!status && !status.ferramentas_consentidas);
     setUsarInternet(escolhido === "pessoal");
     setMensagens([]);
     setConversa(null);
     setMostrarHistorico(false);
     setErro("");
-    if (escolhido === "pessoal" && status && !status.ferramentas_consentidas) {
-      setMostrarConsentimento(true);
-    }
   }
 
   function trocarAssistente() {
