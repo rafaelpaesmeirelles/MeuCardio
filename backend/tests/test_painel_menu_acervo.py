@@ -104,19 +104,27 @@ def test_dry_run_nao_altera_banco(monkeypatch):
 
 def test_ordem_do_menu_alerta_e_deploy():
     root = Path(__file__).resolve().parents[2]
-    shell = (root / "frontend/src/components/Shell.tsx").read_text(encoding="utf-8")
-    painel = (root / "frontend/src/pages/Painel.tsx").read_text(encoding="utf-8")
-    shell_css = (root / "frontend/src/styles/shell.css").read_text(encoding="utf-8")
+    shell = (root / "frontend/src/components/ShellClinicalOSLaunch.tsx").read_text(encoding="utf-8")
+    painel = (root / "frontend/src/pages/PainelClinicalOS.tsx").read_text(encoding="utf-8")
+    clinical_css = (root / "frontend/src/styles/clinical-os.css").read_text(encoding="utf-8")
     emergencia_css = (root / "frontend/src/styles/emergencia.css").read_text(encoding="utf-8")
     deploy = (root / "deploy.sh").read_text(encoding="utf-8")
 
-    assert ': [PAINEL, ...NAV_BASE, INDICADORES, CONTA];' in shell
-    assert "INDICADORES,\n        ADMIN,\n        CONTA," in shell
-    assert shell.index("PAINEL,\n        ...NAV_BASE") < shell.index("{ to: \"/fila-telediagnostico\"")
+    # A ordem do Clinical OS é deliberada: decisão -> prática -> conhecimento
+    # -> comunicação -> gestão. Admin entra dentro de gestão e nunca toma o
+    # lugar da navegação clínica do assinante.
+    assert shell.index('id: "decisao"') < shell.index('id: "pratica"')
+    assert shell.index('id: "pratica"') < shell.index('id: "conhecimento"')
+    assert shell.index('id: "conhecimento"') < shell.index('id: "comunicacao"')
+    assert shell.index('id: "comunicacao"') < shell.index('id: "gestao"')
+    assert 'secao.id !== "gestao"' in shell
+    assert '{ to: "/admin", rotulo: "Administração"' in shell
+    assert '{ to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico"' in shell
+
     assert "Acervo de produção abaixo do inventário certificado" not in painel
-    assert 'className="topo__emergencia"' in shell
-    assert ".topo__emergencia {" in shell_css
-    assert ".emerg-atalho {" not in shell_css
+    assert 'className="cos-emergency"' in shell
+    assert ".cos-emergency" in clinical_css
+    assert ".emerg-atalho {" not in clinical_css
     assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia_css)) == 1
     assert "padding: 0.8rem 1.15rem" in emergencia_css
     assert "app.commands.publish_preserved_content" in deploy
