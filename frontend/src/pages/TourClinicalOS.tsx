@@ -85,7 +85,7 @@ function MockAssistant() {
     <div className="cos-tour-mock cos-tour-mock--assistant">
       <div className="cos-tour-assistant-bg"><MiniTop /></div>
       <aside className="cos-tour-assistant-panel">
-        <header><span>✦</span><div><small>Seu copiloto de rotina</small><strong>Assistente Pessoal</strong></div><b>×</b></header>
+        <header><span>✦</span><div><small>Seu copiloto de rotina · exemplo ilustrativo</small><strong>Assistente Pessoal</strong></div><b>×</b></header>
         <section><span className="cos-tour-kicker">Seu dia</span><div className="cos-tour-assistant-metrics"><i><b>4</b><small>compromissos</small></i><i><b>14:00</b><small>próximo horário</small></i></div><div className="cos-tour-assistant-next"><Icone nome="agenda"/><span><small>Próximo compromisso</small><strong>Consultório</strong><em>14:00</em></span></div></section>
         <section><span className="cos-tour-kicker">Deslocamento</span><div className="cos-tour-route"><Icone nome="pin"/><span><small>Próximo local</small><strong>Consultório</strong></span></div><div className="cos-tour-assistant-metrics cos-tour-assistant-metrics--3"><i><b>27 min</b><small>trajeto</small></i><i><b>12 km</b><small>distância</small></i><i><b>13:18</b><small>saída sugerida</small></i></div></section>
         <section className="cos-tour-assistant-links"><em><Icone nome="documento"/>Documentos<b>→</b></em><em><Icone nome="mail"/>CorVIA Mail<b>→</b></em><em><Icone nome="favorito"/>Favoritos<b>→</b></em></section>
@@ -321,7 +321,7 @@ export default function TourClinicalOS() {
             </div>
             <p className="cos-tour-welcome__kicker">Bem-vindo ao CorVIA Clinical OS</p>
             <h1>Um sistema que começa pelo que você precisa resolver.</h1>
-            <p className="cos-tour-welcome__lead">Não é só prontuário. Não é só IA. Não é só conteúdo. É o seu workspace clínico para pesquisar, decidir, executar e organizar o trabalho médico.</p>
+            <p className="cos-tour-welcome__lead">Não é prontuário. Não é só IA. Não é só conteúdo. É o seu workspace clínico para pesquisar, decidir, executar e organizar o trabalho médico.</p>
             {usuario?.convidado && <p className="cos-tour-welcome__entitlement">Acesso de médico convidado ativo conforme as permissões da sua conta.</p>}
             {usuario?.investidor && <p className="cos-tour-welcome__entitlement">Modo investidor: conheça a arquitetura completa; CorVIA Mail permanece demonstrativo e sem operações reais.</p>}
             <div className="cos-tour-welcome__pillars"><span>Conhecimento</span><i>→</i><span>Contexto</span><i>→</i><span>Decisão</span><i>→</i><span>Ação</span><i>→</i><span>Assistência</span></div>
