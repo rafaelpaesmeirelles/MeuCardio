@@ -10,6 +10,7 @@ import "./styles/clinical-os.css";
 import "./styles/clinical-os-polish.css";
 import "./styles/produto.css";
 import "./styles/tour.css";
+import "./styles/tour-clinical-os.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
