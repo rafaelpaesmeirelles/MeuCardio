@@ -1354,5 +1354,67 @@
     "conduta": "Evitar o uso concomitante; se o paciente já usa erva-de-são-joão e a suspende, ou se inicia o fitoterápico em uso de varfarina, monitorar o INR com mais frequência, pelo risco de variação relevante do efeito anticoagulante.",
     "fonte": "Bula FDA/DailyMed de varfarina sódica (genérico, setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057), seção de interações com botânicos e Tabela de interações CYP450: \"Some botanicals may decrease the effects of warfarin sodium (e.g., co-enzyme Q10, St. John's wort, ginseng)\" — St. John's wort listado como indutor de CYP1A2 e CYP3A4. Consultado via API pública do DailyMed em 12/08/2026.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "varfarina-sulfametoxazol-trimetoprima",
+    "farmacos": [
+      "varfarina-sodica"
+    ],
+    "classe_oposta": "sulfametoxazol-trimetoprima (co-trimoxazol)",
+    "gravidade": "grave",
+    "efeito": "A trimetoprima-sulfametoxazol inibe o CYP2C9 hepático, reduzindo o metabolismo do enantiômero S da varfarina (o mais potente farmacologicamente) e potencializando de forma marcada o efeito anticoagulante — associação bem documentada por elevação relevante do INR e relatos de sangramento.",
+    "conduta": "Evitar a combinação quando possível; se for clinicamente necessária (ex.: tratamento de infecção urinária em paciente anticoagulado), monitorar o INR de perto durante e após o curso do antibiótico, com ajuste da dose de varfarina conforme necessário.",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para COUMADIN (warfarin sodium, Bristol-Myers Squibb, setid 91fa852c-b43d-4a55-983b-74aa6827125d), Tabela 2 de interações medicamentosas — trimetoprima-sulfametoxazol listado como inibidor do CYP2C9, com o texto: \"Inhibitors of CYP2C9 ... have the potential to increase the effect (increase INR) of warfarin\" e a orientação geral \"Closely monitor INR when starting or stopping any antibiotic or antifungal in patients taking warfarin.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "varfarina-metronidazol-ou-fluconazol",
+    "farmacos": [
+      "varfarina-sodica"
+    ],
+    "classe_oposta": "metronidazol ou fluconazol",
+    "gravidade": "grave",
+    "efeito": "Metronidazol e fluconazol são inibidores do CYP2C9 e reduzem o clearance do enantiômero S da varfarina, potencializando o efeito anticoagulante e aumentando o INR — mesma classe de mecanismo do sulfametoxazol-trimetoprima, listada na mesma tabela de interações da bula.",
+    "conduta": "Ao iniciar ou suspender metronidazol ou fluconazol em paciente anticoagulado com varfarina, monitorar o INR de perto (a bula recomenda vigilância ao iniciar OU parar qualquer antibiótico ou antifúngico) e ajustar a dose conforme necessário.",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para COUMADIN (warfarin sodium, Bristol-Myers Squibb, setid 91fa852c-b43d-4a55-983b-74aa6827125d), Tabela 2 de interações medicamentosas — metronidazol e fluconazol listados como inibidores do CYP2C9, com a mesma orientação de monitorização estreita do INR. Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "isglt2-insulina-ou-sulfonilureia",
+    "farmacos": [
+      "empagliflozina",
+      "dapagliflozina",
+      "canagliflozina"
+    ],
+    "classe_oposta": "insulina ou secretagogo de insulina (sulfonilureia)",
+    "gravidade": "moderada",
+    "efeito": "Os inibidores de SGLT2 potencializam o efeito hipoglicemiante da insulina e dos secretagogos de insulina (sulfonilureias), aumentando a incidência de hipoglicemia observada nos estudos clínicos de cada fármaco quando associado a essas classes.",
+    "conduta": "Considerar redução da dose de insulina ou do secretagogo (sulfonilureia) ao associar um inibidor de SGLT2, para reduzir o risco de hipoglicemia; orientar o paciente a reconhecer e tratar sinais de hipoglicemia.",
+    "fonte": "Rótulos aprovados pelo FDA/DailyMed: JARDIANCE (empagliflozin, Boehringer Ingelheim, setid faf3dd6a-9cd0-39c2-0d2e-232cb3f67565) — \"The risk of hypoglycemia may be lowered by a reduction in the dose of sulfonylurea (or other concomitantly administered insulin secretagogues) or insulin\"; FARXIGA (dapagliflozin, AstraZeneca, setid 72ad22ae-efe6-4cd6-a302-98aaee423d69), seção 5.4/7 — \"A lower dose of insulin or insulin secretagogue may be required to minimize the risk of hypoglycemia\"; INVOKANA (canagliflozin, Janssen, setid b9057d3b-b104-4f09-8a61-c61ef9d4a3f3), seção 5.5 — \"Consider a lower dose of insulin or the insulin secretagogue to reduce the risk of hypoglycemia when used in combination with INVOKANA\". Consultados via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sinvastatina-inibidor-forte-cyp3a4",
+    "farmacos": [
+      "sinvastatina"
+    ],
+    "classe_oposta": "inibidor forte do CYP3A4 — antifúngico azólico (itraconazol, cetoconazol, posaconazol, voriconazol), macrolídeo (claritromicina, eritromicina), inibidor de protease do HIV (nelfinavir, ritonavir, darunavir/ritonavir), inibidor de protease do HCV (boceprevir, telaprevir), nefazodona ou produto com cobicistate",
+    "gravidade": "contraindicada",
+    "efeito": "Inibição acentuada do CYP3A4 eleva de forma marcada a exposição sistêmica à sinvastatina, aumentando substancialmente o risco de miopatia e rabdomiólise — categoria de risco distinta e mais grave do que a de inibidores moderados (amiodarona, verapamil, diltiazem), que exigem apenas limite de dose.",
+    "conduta": "A associação é contraindicada pela bula. Se o inibidor forte do CYP3A4 for indispensável (ex.: curso de antifúngico azólico sistêmico), suspender temporariamente a sinvastatina durante o tratamento com o inibidor.",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para ZOCOR (simvastatin, Organon LLC, setid 8f55d5de-5a4f-4a39-8c84-c53976dd6af9), seções Contraindications e Drug Interactions — texto: \"Concomitant use of strong CYP3A4 inhibitors (select azole anti-fungals, macrolide antibiotics, anti-viral medications, and nefazodone) with ZOCOR is contraindicated\", com a orientação de suspender temporariamente a sinvastatina durante o curso do inibidor forte quando este for inevitável. Distinção com os inibidores moderados (verapamil/diltiazem/dronedarona: limite de 10 mg/dia; amiodarona/anlodipino/ranolazina: limite de 20 mg/dia) já registrada nas entradas `amiodarona-sinvastatina` e `sinvastatina-verapamil-ou-diltiazem` desta base. Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tadalafila-nitrato-organico",
+    "farmacos": [
+      "tadalafila-hap"
+    ],
+    "classe_oposta": "doador de óxido nítrico — nitrato ou nitrito orgânico em qualquer forma (ex.: nitroglicerina, mononitrato ou dinitrato de isossorbida)",
+    "gravidade": "contraindicada",
+    "efeito": "A tadalafila potencializa o efeito hipotensor dos nitratos pela mesma via NO-GMPc que a sildenafila, com risco de queda pressórica grave e potencialmente fatal — mecanismo idêntico ao já registrado para sildenafila, mas com janela de segurança mais bem definida na bula.",
+    "conduta": "Não coadministrar. A bula contraindica o uso de tadalafila com qualquer forma de nitrato orgânico, regular ou intermitente. Diferente da sildenafila (cuja bula não estabelece prazo seguro), a bula da tadalafila define explicitamente que devem se passar PELO MENOS 48 HORAS após a última dose de tadalafila antes de considerar administrar nitrato, e mesmo assim só sob supervisão médica com monitorização hemodinâmica.",
+    "fonte": "Rótulos aprovados pelo FDA/DailyMed para ADCIRCA (tadalafil, United Therapeutics, setid ff61b237-be8e-461b-8114-78c52a8ad0ae) — \"ADCIRCA is contraindicated in patients who are using any form of organic nitrate... Do not use nitrates within 48 hours of the last dose of ADCIRCA\" — e CIALIS (tadalafil, Eli Lilly, setid bcd8f8ab-81a2-4891-83db-24a0b0e25895), mesma janela de 48 horas. Consultados via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
   }
 ]
