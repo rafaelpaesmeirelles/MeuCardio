@@ -9,26 +9,16 @@ export default function LogoCorviaMail({ tamanho = "normal" }: { tamanho?: "norm
   if (compacto) {
     return (
       <span className="corvia-mail-mark" role="img" aria-label="CorVIA Mail">
-        <img src="/corviamail-icone.svg" alt="" aria-hidden="true" style={{ height: 28, width: "auto" }} />
+        <img src="/corviamail-icone.svg" alt="" aria-hidden="true" />
       </span>
     );
   }
 
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.6rem" }}>
-      <img src="/corviamail-icone.svg" alt="" aria-hidden="true" style={{ height: 48, width: "auto" }} />
-      <span style={{
-        fontFamily: "Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif",
-        fontWeight: 700, fontSize: "1.6rem", letterSpacing: "-0.01em", lineHeight: 1,
-      }}>
-        <span style={{ color: "var(--primaria)" }}>Corv</span>
-        <span style={{ color: "var(--acao)" }}>IA</span>
-        <span style={{
-          color: "var(--acento)", fontWeight: 500, marginLeft: "0.24em",
-          fontFamily: "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
-        }}>
-          Mail
-        </span>
+    <div className="corvia-mail-logo" role="img" aria-label="CorVIA Mail">
+      <img src="/corviamail-icone.svg" alt="" aria-hidden="true" />
+      <span className="corvia-mail-logo__wordmark">
+        <span>Corv</span><b>IA</b><em>Mail</em>
       </span>
     </div>
   );
