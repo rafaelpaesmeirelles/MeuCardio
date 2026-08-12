@@ -154,7 +154,7 @@ def _navigation_paths(shell_source: str) -> set[str]:
     paths.update(
         re.findall(r'<NavLink\s+to="([^"]+)"[^>]*role="menuitem"', shell_source)
     )
-    if 'className="cos-nav__home"' in shell_source:
+    if "cos-nav__home" in shell_source:
         paths.add("/")
     return paths
 
