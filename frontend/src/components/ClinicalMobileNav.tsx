@@ -24,6 +24,7 @@ const TRABALHO: LinkItem[] = [
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
+  { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/favoritos", label: "Favoritos", icon: "favorito" },
 ];
 
