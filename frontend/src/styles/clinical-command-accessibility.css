@@ -11,6 +11,11 @@
   outline-offset: 3px;
 }
 
+/* O botão de Emergência já ocupa o canto inferior direito no Shell legado.
+   O Assistente Pessoal fica deliberadamente à esquerda dele, preservando o
+   acesso de prioridade máxima e também a pilha vertical do CorVIA Chat. */
+.assistente-pessoal-launcher { right: 5.4rem; }
+
 .command-center .quick-action,
 .command-center .radar-card,
 .command-center .context-card,
