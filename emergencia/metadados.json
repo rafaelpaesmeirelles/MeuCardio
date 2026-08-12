@@ -768,5 +768,45 @@
       "bradicardia-pediatrica-com-pulso"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "prolongamento-de-qtc-por-inibidor-de-menina-revumenibe",
+    "titulo": "Prolongamento de QTc/torsades de pointes por inibidor de menina (revumenibe)",
+    "gatilho": "QTcF alargado ou torsades de pointes em paciente sob revumenibe (leucemia mieloide aguda com rearranjo de KMT2A ou mutação de NPM1) — alerta em quadro da bula",
+    "ordem": 113,
+    "documento_slug": "inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao",
+    "fluxograma_slug": "fluxograma-torsades-de-pointes-e-qt-longo-adquirido",
+    "relacionados": [
+      "torsades-de-pointes-e-qt-longo-adquirido",
+      "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas",
+      "prolongamento-qt-por-ribociclibe-e-risco-de-torsades"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tep-de-risco-intermediario-alto-decisao-de-trombectomia",
+    "titulo": "TEP de risco intermediário-alto: decisão sobre trombectomia mecânica",
+    "gatilho": "TEP agudo normotenso com relação VD/VE ≥1,0 na angiotomografia e biomarcador cardíaco elevado (risco intermediário-alto) — decisão entre anticoagulação isolada e escalonamento para trombectomia mecânica por cateter",
+    "ordem": 114,
+    "documento_slug": "trombectomia-mecanica-versus-anticoagulacao-isolada-no-tep-de-risco-intermediario-alto-storm-pe",
+    "fluxograma_slug": "",
+    "relacionados": [
+      "tromboembolismo-pulmonar",
+      "sangramento-maior-em-paciente-anticoagulado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "falha-aguda-de-teer-mitral-com-choque-ou-edema-pulmonar",
+    "titulo": "Falha aguda de TEER mitral (SLDA) com recorrência de insuficiência mitral e choque/edema pulmonar",
+    "gatilho": "Dispneia súbita, novo edema pulmonar, hipotensão/choque ou novo sopro de insuficiência mitral após MitraClip/PASCAL — suspeita de single-leaflet device attachment, perda de inserção ou lesão de folheto",
+    "ordem": 115,
+    "documento_slug": "falha-aguda-de-teer-mitral-slda-e-insuficiencia-mitral-recorrente",
+    "fluxograma_slug": "fluxograma-falha-aguda-de-teer-mitral-slda-e-insuficiencia-mitral-recorrente",
+    "relacionados": [
+      "insuficiencia-cardiaca-aguda-descompensada",
+      "choque-cardiogenico"
+    ],
+    "review_status": "revisado"
   }
 ]

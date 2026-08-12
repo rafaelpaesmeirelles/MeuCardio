@@ -3101,5 +3101,242 @@
       }
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Prevenção e lipídios citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "acompanhamento-pos-teer-em-valva-atrioventricular",
+    "condicao": "Acompanhamento após reparo transcateter borda a borda (TEER) de valva mitral ou tricúspide",
+    "resumo": "O que checar antes da alta e no seguimento precoce após TEER mitral (MitraClip/PASCAL) ou tricúspide (TriClip), incluindo os sinais de falha mecânica aguda (SLDA) que exigem reavaliação imediata e a leitura honesta do que o benefício demonstrado nos ensaios pivotais cobre — qualidade de vida — e do que não cobre — desfecho duro em 1 ano.",
+    "documento_origem": "valvopatias-atualizacao-diretriz-esceacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI 10.1093/eurheartj/ehaf194. PMID 40878295 — Recommendation Table 9 (indicação de TEER em IM/IT) e seção de seguimento pós-intervenção.",
+      "Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — TRILUMINATE Pivotal, incluindo os números de qualidade de vida, gravidade da IT em 30 dias e segurança em 30 dias.",
+      "Freitas-Ferraz AB, Bernier M, Ibrahim R, et al. Complications of the Percutaneous Mitral Valve Edge-To-Edge Repair: Role of Transesophageal Echocardiography. J Clin Med. 2022. PMID: 36012985.",
+      "Praz F, Braun D, Unterhuber M, et al. Incidence and standardised definitions of mitral valve leaflet adverse events after transcatheter mitral valve repair: the EXPAND study. EuroIntervention. 2021. PMID: 34031024."
+    ],
+    "itens": [
+      {
+        "id": "teer-heart-team-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de TEER documentada como discutida pelo Heart Valve Team, com registro da etiologia da regurgitação (primária, secundária/funcional ou, na mitral, a entidade atrial reconhecida pela diretriz 2025) e da ausência de disfunção grave de VD/VE que tornaria o procedimento fútil",
+        "origem_secao": "Nova classificacao insuficiencia mitral / Papel heart team reforcado"
+      },
+      {
+        "id": "teer-eco-alta",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico antes da alta registrando grau residual da regurgitação e gradiente transvalvar — na tricúspide, referência do TRILUMINATE é que a maioria dos respondedores atinge IT moderada ou menos já aos 30 dias",
+        "origem_secao": "Resultado — reducao da gravidade da it / Seguimento pos intervencao"
+      },
+      {
+        "id": "teer-sinais-slda",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de falha mecânica aguda a relatar de imediato — dispneia súbita ou rapidamente progressiva, novo edema pulmonar, ou sopro de regurgitação novo/mais intenso — que podem indicar single-leaflet device attachment (SLDA), perda de inserção ou lesão de folheto, mesmo após alta com resultado inicial satisfatório",
+        "origem_secao": "Quando suspeitar (falha aguda de TEER mitral)"
+      },
+      {
+        "id": "teer-retorno-imagem-suspeita",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se dispneia nova, edema pulmonar ou IM/IT recorrente no seguimento precoce: ecocardiograma transtorácico urgente e, se a anatomia não estiver totalmente esclarecida, avançar para ecocardiograma transesofágico — SLDA isolada sem lesão importante de folheto pode ser resgatável com clip adicional em casos selecionados",
+        "origem_secao": "Ecocardiografia é o exame decisivo / SLDA isolada pode ser resgatada"
+      },
+      {
+        "id": "teer-expectativa-desfecho",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado, na tricúspide, sobre o que o ensaio pivotal demonstra: melhora consistente de sintomas e qualidade de vida (KCCQ) e segurança em 30 dias, sem redução demonstrada de mortalidade ou hospitalização por IC no seguimento de 1 ano — não apresentar o procedimento como redução comprovada de desfecho duro",
+        "origem_secao": "Leitura clínica honesta do resultado (TRILUMINATE)"
+      },
+      {
+        "id": "teer-antitrombotico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Esquema antitrombótico pós-procedimento definido e registrado, considerando indicação prévia de anticoagulação (ex.: fibrilação atrial) independente do procedimento valvar",
+        "origem_secao": "Doenca valvar mista e antitromboticos"
+      },
+      {
+        "id": "teer-retorno-centro-especializado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno estruturado agendado em Heart Valve Center de alto volume, com data definida",
+        "origem_secao": "Centros especializados"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Valvopatias e Cardiologia geriátrica citados em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "checklist-preoperatorio-em-uso-de-agonista-de-glp-1",
+    "condicao": "Avaliação pré-operatória do paciente em uso de agonista de receptor de GLP-1 (semaglutida, liraglutida, dulaglutida, tirzepatida)",
+    "resumo": "O que checar antes de sedação, anestesia geral ou procedimento endoscópico eletivo em paciente em uso de GLP-1, a partir da orientação multissocietária de 2024 sobre risco de aspiração por esvaziamento gástrico retardado — a orientação é explícita em se declarar consenso de prática, não diretriz baseada em evidência forte.",
+    "documento_origem": "agonistas-de-receptor-de-glp-1-no-perioperatorio-orientacao-multissocietaria-2024",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kindel TL, Wang AY, Wadhwa A, et al; American Gastroenterological Association; American Society for Metabolic and Bariatric Surgery; American Society of Anesthesiologists; International Society of Perioperative Care of Patients with Obesity; Society of American Gastrointestinal and Endoscopic Surgeons. Multi-society clinical practice guidance for the safe use of glucagon-like peptide-1 receptor agonists in the perioperative period. Surgical Endoscopy. 2024 Oct 29;39(1):180-183. DOI: 10.1007/s00464-024-11263-2. PMID: 39370500."
+    ],
+    "itens": [
+      {
+        "id": "glp1-triagem-fase-tratamento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar fase do tratamento (escalonamento de dose versus manutenção), dose atual e formulação (diária versus semanal) — doses mais altas e formulação semanal associam-se a maior efeito colateral gastrointestinal",
+        "origem_secao": "Triagem de sintomas antes de decidir a conduta"
+      },
+      {
+        "id": "glp1-triagem-sintomas-gi",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Triagem ativa de sintomas gastrointestinais atuais — náusea, vômito, dor abdominal, dispepsia, constipação — e de comorbidades que predispõem a esvaziamento gástrico lentificado (gastroparesia diabética, dismotilidade intestinal, doença de Parkinson), com antecedência suficiente ao procedimento para permitir ajuste de conduta",
+        "origem_secao": "Triagem de sintomas antes de decidir a conduta"
+      },
+      {
+        "id": "glp1-suspensao-conforme-formulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Suspensão programada conforme a formulação: diária suspensa no dia do procedimento; semanal suspensa uma semana antes — registrando que a duração necessária de suspensão é declarada desconhecida pelo próprio documento, e o prazo segue orientação prévia de sociedade de anestesiologia, não estudo farmacocinético dedicado",
+        "origem_secao": "Tempo de suspensão antes do procedimento"
+      },
+      {
+        "id": "glp1-risco-glicemico-suspensao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente diabético, ponderar o risco de descompensação glicêmica da suspensão contra o risco de aspiração — a orientação multissocietária trata só do risco de aspiração, não do impacto glicêmico da suspensão",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "glp1-dieta-liquida-24h",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Considerar dieta líquida por pelo menos 24 horas antes do procedimento quando o risco de esvaziamento gástrico retardado parecer elevado",
+        "origem_secao": "Mitigação do risco de aspiração"
+      },
+      {
+        "id": "glp1-reavaliacao-dia-procedimento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reavaliar sintomas sugestivos de esvaziamento gástrico retardado (náusea, vômito, plenitude gástrica, dor abdominal) no próprio dia do procedimento, independentemente de a suspensão prévia ter sido cumprida — a suspensão isolada não é garantia de estômago vazio",
+        "origem_secao": "No dia do procedimento"
+      },
+      {
+        "id": "glp1-decisao-compartilhada-suspeita",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Quando houver suspeita de esvaziamento gástrico retardado no dia do procedimento, decidir em conjunto com o anestesiologista entre indução em sequência rápida com intubação traqueal ou adiamento do procedimento, considerando risco individual e urgência",
+        "origem_secao": "Mitigação do risco de aspiração"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Perioperatório citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "inicio-de-terapia-combinada-com-isglt2-e-finerenona-na-drc-diabetica",
+    "condicao": "Início simultâneo de inibidor de SGLT2 e finerenona no paciente com diabetes tipo 2, doença renal crônica e albuminúria",
+    "resumo": "O que checar ao iniciar as duas classes de nefroproteção juntas, a partir do CONFIDENCE — o primeiro ensaio randomizado a testar a combinação simultânea contra cada componente isolado, com atenção específica à monitorização de potássio, que a combinação não reduz.",
+    "documento_origem": "confidence-combinacao-de-finerenona-e-empagliflozina-na-doenca-renal-cronica-diabetica",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Agarwal R, Green JB, Heerspink HJL, et al; CONFIDENCE Investigators. Finerenone with Empagliflozin in Chronic Kidney Disease and Type 2 Diabetes. N Engl J Med. 2025;393(6):533-543. DOI: 10.1056/NEJMoa2410659. PMID: 40470996.",
+      "Agarwal R, Kolkhof P, Bakris G, et al. Risk of Hyperkalemia With Empagliflozin, Finerenone, or Both: Secondary Analysis of the CONFIDENCE Randomized Trial. J Am Coll Cardiol. 2026. PMID: 41493296."
+    ],
+    "itens": [
+      {
+        "id": "confidence-criterios-elegibilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar os três critérios da população do ensaio antes de considerar a combinação: TFGe entre 30 e 90 mL/min/1,73m², relação albumina-creatinina urinária entre 100 e ≤5.000 mg/g, diabetes tipo 2, já em uso de inibidor do sistema renina-angiotensina",
+        "origem_secao": "Desenho do ensaio"
+      },
+      {
+        "id": "confidence-potassio-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio sérico basal registrado antes de iniciar a combinação — a vigilância laboratorial de potássio já recomendada para finerenona isolada continua exatamente igual quando os dois fármacos são combinados, sem redução de rigor",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "confidence-nao-presumir-protecao-hiperk",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não presumir que a empagliflozina associada reduz o risco de hiperpotassemia da finerenona — a análise secundária pré-especificada do CONFIDENCE não encontrou diferença significativa na incidência de hiperpotassemia entre combinação (15,1%) e finerenona isolada (18,8%), p=0,85",
+        "origem_secao": "Hiperpotassemia sob combinação: não piora, mas também não melhora"
+      },
+      {
+        "id": "confidence-reavaliacao-potassio-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação de potássio sérico agendada no seguimento inicial, seguindo o mesmo esquema já usado para finerenona isolada nesta prática — o ensaio não define um cronograma laboratorial próprio para a combinação distinto do já praticado para cada componente",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "confidence-nao-tratar-como-desfecho-duro",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao explicar a decisão ao paciente, não apresentar a redução adicional de albuminúria da combinação (29-32% maior que cada componente isolado) como equivalente a redução comprovada de eventos renais ou cardiovasculares — o desfecho primário do CONFIDENCE foi variação de albuminúria em 180 dias, um substituto, não um desfecho duro",
+        "origem_secao": "O que este ensaio NÃO mostrou / Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Diabetes e cardiologia citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "alta-pos-implante-de-marcapasso-sem-eletrodo-leadless",
+    "condicao": "Alta e primeiro seguimento após implante de marcapasso sem eletrodo (leadless), unicameral ou bicameral",
+    "resumo": "O que checar antes da alta e no seguimento inicial após implante de marcapasso leadless (Micra, Aveir), distinto do marcapasso transvenoso convencional por ausência de bolsa/eletrodo e por bateria não substituível isoladamente ao fim da vida útil.",
+    "documento_origem": "marcapasso-sem-eletrodo-e-manejo-perioperatorio-de-dispositivo-cardiaco",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Leadless pacemakers at 5-year follow-up: the Micra transcatheter pacing system post-approval registry. European Heart Journal. 2024;45(14):1241.",
+      "Knops RE, Reddy VY, Ip JE, et al; Aveir DR i2i Study Investigators. A Dual-Chamber Leadless Pacemaker. N Engl J Med. 2023;388(25):2360-2370. DOI: 10.1056/NEJMoa2300080. PMID: 37212442.",
+      "Chinitz LA, et al. AccelAV. Heart Rhythm. 2023;20(1):46-54. PMID: 36075532."
+    ],
+    "itens": [
+      {
+        "id": "leadless-indicacao-registrada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Indicação do leadless em vez de marcapasso transvenoso documentada quando presente um dos cenários que motivam a escolha: hemodiálise crônica em curso ou esperada, problema de acesso venoso superior, estilo de vida ativo com baixa expectativa de percentual de estimulação, fragilidade com alto risco de sangramento/infecção, endocardite valvar prévia, ou infecção de dispositivo prévio exigindo extração",
+        "origem_secao": "Marcapasso leadless — indicacoes"
+      },
+      {
+        "id": "leadless-compatibilidade-rm",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Compatibilidade condicional com ressonância magnética e o modo RM do dispositivo conferidos e registrados no cartão/carteira do paciente, para consulta antes de qualquer exame de imagem futuro",
+        "origem_secao": "Ressonancia magnetica em dispositivo MRI-condicional"
+      },
+      {
+        "id": "leadless-sitio-acesso-vascular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sítio de acesso vascular (femoral, no implante transcateter) inspecionado antes da alta quanto a hematoma ou sangramento — cuidado de acesso vascular pós-procedimento percutâneo, não de bolsa de gerador como no marcapasso transvenoso convencional",
+        "origem_secao": "Marcapasso leadless — indicacoes"
+      },
+      {
+        "id": "leadless-orientacao-fim-vida-util",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que, ao fim da vida útil da bateria, a conduta usual é o implante de um novo dispositivo leadless — frequentemente deixando o anterior em posição — e não a troca isolada de bateria como em gerador convencional de bolsa",
+        "origem_secao": "Bateria não substituível isoladamente"
+      },
+      {
+        "id": "leadless-sincronia-av-se-bicameral",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Nos modelos com sincronia atrioventricular (Micra AV/AV2, Aveir DR): checagem programada da sincronia AV no seguimento, já que o desempenho do algoritmo de detecção do evento atrial mecânico é o que sustenta a estimulação sincronizada nesse desenho sem eletrodo atrial",
+        "origem_secao": "Sincronia AV comparativa"
+      },
+      {
+        "id": "leadless-retorno-interrogacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno estruturado agendado para interrogação do dispositivo (limiar de estimulação, impedância, status da bateria), com data definida",
+        "origem_secao": "Compreensão de características do dispositivo"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Dispositivos citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
