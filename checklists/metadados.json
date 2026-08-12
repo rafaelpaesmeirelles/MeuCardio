@@ -3517,5 +3517,202 @@
       }
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Dispositivos citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "seguimento-e-decisao-de-intervencao-em-estenose-aortica-fetal",
+    "condicao": "Seguimento de estenose aórtica fetal — do rastreio inicial à decisão sobre intervenção cardíaca fetal (valvuloplastia aórtica por balão)",
+    "resumo": "O que checar no seguimento de um feto com estenose aórtica, da classificação inicial (leve vs. grave com fisiologia evolutiva para síndrome do coração esquerdo hipoplásico) até a decisão de oferecer valvuloplastia aórtica fetal — incluindo os cortes numéricos e a linha de conduta específica para o feto hidrópico, dados do Registro Internacional de Intervenção Cardíaca Fetal (IFCIR, 2026).",
+    "documento_origem": "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gijtenbeek M, Morris SA, Herberg U, et al. Technical Success of Fetal Aortic Valvuloplasty in Relation to Center Volumes: A Report From the International Fetal Cardiac Intervention Registry. Circulation: Cardiovascular Interventions. 2026 Jun 9. DOI: 10.1161/CIRCINTERVENTIONS.125.015593. PMID: 42261657.",
+      "Moon-Grady AJ, Tulzer A, Armstrong AK, et al. Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry. Ultrasound in Obstetrics & Gynecology. 2026;68(1):99-106. DOI: 10.1002/uog.70245. PMID: 42281210.",
+      "Papneja K, et al. Outcomes of Fetuses with Mild Aortic Stenosis: A Multicenter Study. Journal of the American Society of Echocardiography. 2026. PMID: 41033361."
+    ],
+    "itens": [
+      {
+        "id": "eaf-classificacao-inicial-gravidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estenose aórtica fetal classificada explicitamente como leve ou grave/evolutiva no laudo do ecocardiograma fetal inicial — a distinção define o percurso de seguimento; não deixar sem classificação registrada",
+        "origem_secao": "Estenose aórtica fetal \"leve\": qual achado no rastreio prediz intervenção pós-natal"
+      },
+      {
+        "id": "eaf-gradiente-pico-valva-aortica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Gradiente de pico da valva aórtica registrado em cada ecocardiograma fetal seriado — todo feto com gradiente de pico > 12,5 mmHg no exame inicial evoluiu para intervenção valvar pós-natal no primeiro ano de vida nesta coorte (n=22); usar como sinal de alerta para intensificar seguimento, não como limiar automático isolado (amostra pequena)",
+        "origem_secao": "Estenose aórtica fetal \"leve\": qual achado no rastreio prediz intervenção pós-natal"
+      },
+      {
+        "id": "eaf-sem-alta-do-pre-natal-em-caso-leve",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Caso classificado como \"estenose aórtica leve\" mantido em seguimento ecocardiográfico seriado, sem alta do pré-natal — 8 de 22 fetos (36,4%) com estenose leve nesta coorte precisaram de intervenção valvar pós-natal no primeiro ano, metade deles já crítica/canal-dependente ao nascer",
+        "origem_secao": "O que isso muda na prática"
+      },
+      {
+        "id": "eaf-indice-esfericidade-ve",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Índice de esfericidade do ventrículo esquerdo (formato globoso vs. elipsoide alongado) registrado no ecocardiograma fetal — ventrículo mais esférico associou-se a maior chance de intervenção pós-natal (p=0,045) nesta coorte",
+        "origem_secao": "Estenose aórtica fetal \"leve\": qual achado no rastreio prediz intervenção pós-natal"
+      },
+      {
+        "id": "eaf-avaliacao-centro-especializado",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Estenose aórtica fetal grave com fisiologia evolutiva para síndrome do coração esquerdo hipoplásico encaminhada a centro com experiência em intervenção cardíaca fetal — a decisão de onde tratar não deve se basear apenas no volume numérico do centro: maior volume não prediz maior sucesso técnico, mas prediz menor mortalidade periprocedimento",
+        "origem_secao": "Valvuloplastia aórtica fetal: sucesso técnico não depende do volume do centro"
+      },
+      {
+        "id": "eaf-peso-idade-gestacional-antes-de-antecipar",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Peso fetal estimado e idade gestacional considerados antes de antecipar o procedimento — maior peso fetal e maior idade gestacional no momento da valvuloplastia favoreceram o resultado nesta coorte; não antecipar a intervenção além do necessário quando a fisiologia permitir aguardar",
+        "origem_secao": "O que isso muda na prática"
+      },
+      {
+        "id": "eaf-hidropisia-informacao-dos-dois-numeros",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Se o feto já está hidrópico: família informada explicitamente dos dois números antes da decisão — sobrevida até a alta com intervenção 35,6% (24/61 na valvuloplastia aórtica isolada) contra 5,6% (1/18) sem intervenção, e óbito fetal relacionado ao próprio procedimento em 20,5% dos casos intervidos",
+        "origem_secao": "Intervenção no feto hidrópico: sobrevida menor, mas ainda assim maior que a conduta expectante"
+      },
+      {
+        "id": "eaf-natureza-observacional-dos-dados",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Decisão compartilhada registra que os dados de benefício vêm de registro observacional multicêntrico, sem randomização — sujeitos a viés de seleção; não foi feito ensaio randomizado entre intervir e não intervir no feto hidrópico, por questão ética",
+        "origem_secao": "Limitações declaradas nas próprias fontes"
+      }
+    ]
+  },
+  {
+    "slug": "seguimento-de-disturbio-de-conducao-apos-tavi-decisao-de-marcapasso",
+    "condicao": "Seguimento de novo distúrbio de condução (bloqueio de ramo, prolongamento de PR/QRS ou BAV) após TAVI, incluindo a decisão sobre marcapasso permanente",
+    "resumo": "O que checar nas primeiras 48 horas e no seguimento ambulatorial após TAVI diante de qualquer distúrbio de condução novo — quando o BAV completo/alto grau persistente indica marcapasso, quando o novo BRE exige só estratificação, e o que fazer diante de síncope tardia após a alta, segundo a ESC 2021 de estimulação cardíaca.",
+    "documento_origem": "bloqueio-av-e-disturbio-de-conducao-apos-tavi",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Glikson M, Nielsen JC, Kronborg MB, et al.; ESC Scientific Document Group. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430."
+    ],
+    "itens": [
+      {
+        "id": "tavi-bav-rbbb-previo-registrado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença ou ausência de bloqueio de ramo direito (RBBB) pré-existente ao TAVI registrada explicitamente — é um dos marcadores mais fortes de necessidade de pacing após o procedimento",
+        "origem_secao": "RBBB prévio aumenta o risco"
+      },
+      {
+        "id": "tavi-bav-ecg-seriado-48h",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG seriado nas primeiras 48 horas após TAVI, com progressão de PR e QRS comparada ao ECG basal e ao pós-procedimento imediato — alta rápida baseada em um único ECG isolado é armadilha explícita da diretriz",
+        "origem_secao": "Evolução durante as primeiras 48 horas"
+      },
+      {
+        "id": "tavi-bav-completo-24-48h-marcapasso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "BAV completo ou de alto grau persistente por 24-48 horas após TAVI encaminhado para marcapasso permanente — não usar a janela de 24-48h para retardar pacing temporário em paciente instável",
+        "origem_secao": "BAV completo ou de alto grau persistente"
+      },
+      {
+        "id": "tavi-bloqueio-ramo-alternante-marcapasso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Novo bloqueio de ramo alternante após TAVI reconhecido como indicação de marcapasso permanente, sem aguardar critério adicional — implica doença extensa do sistema His-Purkinje e alto risco de progressão para BAV completo",
+        "origem_secao": "Bloqueio de ramo alternante"
+      },
+      {
+        "id": "tavi-novo-bre-qrs-pr-estratificacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Novo BRE após TAVI com QRS > 150 ms ou PR > 240 ms (sem progressão adicional) encaminhado para monitorização ambulatorial contínua de ECG por 7-30 dias ou estudo eletrofisiológico — nem todo novo BRE exige marcapasso, e transformar em implante automático é armadilha explícita da diretriz",
+        "origem_secao": "Novo BRE após TAVI"
+      },
+      {
+        "id": "tavi-bav-eef-hv-70ms",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Quando indicado estudo eletrofisiológico, valor de HV registrado — HV ≥ 70 ms pode ser considerado achado positivo que favorece pacing permanente",
+        "origem_secao": "Novo BRE após TAVI"
+      },
+      {
+        "id": "tavi-bav-orientacao-sincope-tardia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente e cuidador orientados, na alta, a procurar avaliação imediata diante de síncope, pré-síncope ou queda inexplicada após TAVI — sinal de possível BAV tardio, que não deve ser atribuído automaticamente a fragilidade ou hipotensão ortostática",
+        "origem_secao": "Síncope após alta"
+      },
+      {
+        "id": "tavi-bav-marcapasso-profilatico-nao-indicado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que não foi implantado marcapasso profilático antes do TAVI em paciente assintomático sem indicação convencional estabelecida — armadilha explícita da diretriz",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ]
+  },
+  {
+    "slug": "avaliacao-pre-indicacao-de-terapia-investigacional-na-hap-refrataria-seralutinibe-ou-padn",
+    "condicao": "Avaliação antes de oferecer, dentro de protocolo de pesquisa, seralutinibe inalado ou denervação da artéria pulmonar (PADN) a paciente com hipertensão arterial pulmonar refratária apesar de terapia otimizada",
+    "resumo": "O que checar antes de considerar seralutinibe (inibidor de quinase inalado, fase 2/3 em curso) ou denervação da artéria pulmonar por cateter (procedimento investigacional) na HAP mal controlada apesar de tratamento farmacológico otimizado — nenhuma das duas é terapia aprovada ou estabelecida para uso rotineiro; este checklist é para participação em protocolo de pesquisa ou registro, não para prescrição/indicação assistencial padrão.",
+    "documento_origem": "seralutinib-inibidor-de-quinase-inalado-na-hap-torrey",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Frantz RP, McLaughlin VV, Sahay S, et al. Seralutinib in adults with pulmonary arterial hypertension (TORREY): a randomised, double-blind, placebo-controlled phase 2 trial. Lancet Respir Med. 2024;12(7):523-534. DOI: 10.1016/S2213-2600(24)00072-9. PMID: 38705167.",
+      "Sitbon O, Sahay S, Escribano Subías P, et al. Seralutinib for the Treatment of Pulmonary Arterial Hypertension in Adults: TORREY Open-Label Extension Study. Adv Ther. 2025;42(10):5104-5123. DOI: 10.1007/s12325-025-03297-2. PMID: 40788460.",
+      "Cekirdekci EI, Onar LC. Clinical and Hemodynamic Effects of Pulmonary Artery Denervation in Pulmonary Hypertension Despite Optimized Pharmacotherapy: An Updated Systematic Review and Meta-Analysis. J Clin Med. 2026;15(7):2619. DOI: 10.3390/jcm15072619. PMID: 41976921."
+    ],
+    "itens": [
+      {
+        "id": "hap-inv-natureza-investigacional-explicada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente informado explicitamente de que seralutinibe e PADN NÃO são terapia aprovada nem estabelecida para uso rotineiro na HAP — seralutinibe tem evidência de fase 2 (RVP como desfecho substituto, sem poder para mortalidade/hospitalização) com fase 3 (PROSERA) ainda em andamento; PADN é procedimento investigacional sem confirmação de benefício em mortalidade",
+        "origem_secao": "Próximo passo já em curso / Mensagem prática"
+      },
+      {
+        "id": "hap-inv-terapia-de-base-otimizada-confirmada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente já está em terapia de base otimizada para HAP antes de considerar qualquer via investigacional — as duas evidências foram geradas em pacientes já tratados, como adjuvante, não como substituto da terapia estabelecida",
+        "origem_secao": "Desenho — TORREY (fase 2) / Racional"
+      },
+      {
+        "id": "hap-inv-classe-funcional-rvp-elegibilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Para seralutinibe: classe funcional (II ou III), RVP basal (≥ 400 dyn·s/cm⁵ no TORREY) e distância no teste de caminhada de 6 minutos conferidas contra os critérios do protocolo de pesquisa vigente (PROSERA), não contra os critérios da fase 2 já encerrada",
+        "origem_secao": "Desenho — TORREY (fase 2)"
+      },
+      {
+        "id": "hap-inv-consentimento-informado-riscos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Consentimento informado específico de pesquisa obtido, cobrindo os eventos adversos já observados — tosse foi a causa mais comum de descontinuação do seralutinibe na extensão aberta (12,2% dos pacientes); heterogeneidade técnica entre centros e ausência de confirmação de benefício em mortalidade explicitadas para PADN",
+        "origem_secao": "Extensão aberta (OLE) — dados de longo prazo / O que o resultado sustenta — e o que não sustenta"
+      },
+      {
+        "id": "hap-inv-nao-substitui-terapia-estabelecida",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Nenhuma das duas vias investigacionais substitui a indicação de terapia farmacológica combinada já estabelecida por diretriz, nem retarda o encaminhamento para transplante quando este já estiver indicado — via investigacional é adjuvante em avaliação, não alternativa validada",
+        "origem_secao": "Mensagem prática"
+      },
+      {
+        "id": "hap-inv-seguimento-nt-probnp-tc6m",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se incluído em seralutinibe: NT-proBNP e distância no teste de caminhada de 6 minutos registrados em cada reavaliação — os dois acompanharam a resposta hemodinâmica na extensão aberta do TORREY",
+        "origem_secao": "Extensão aberta (OLE) — dados de longo prazo"
+      }
+    ]
   }
 ]

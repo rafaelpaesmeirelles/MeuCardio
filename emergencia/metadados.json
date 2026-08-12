@@ -848,5 +848,33 @@
       "queda-de-plaquetas-em-uso-de-heparina-suspeita-de-hit"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "risco-pre-hospitalar-de-choque-cardiogenico-no-iamcst-escore-early-shock",
+    "titulo": "Risco pré-hospitalar de choque cardiogênico no IAMCST (escore EARLY SHOCK)",
+    "gatilho": "Paciente com IAMCST ainda no atendimento pré-hospitalar/porta de emergência, antes de qualquer sinal franco de choque — PAS < 110 mmHg, FC ≥ 100 bpm, idade ≥ 80 anos, diálise em curso, insuficiência cardíaca prévia, infarto de localização anterior ou parada cardíaca pré-hospitalar aumentam o risco de choque cardiogênico intra-hospitalar (15,2% da coorite de derivação) e justificam ativação precoce do time de choque antes da chegada ao hospital",
+    "ordem": 119,
+    "documento_slug": "escore-early-shock-predicao-pre-hospitalar-de-choque-cardiogenico-no-iamcst",
+    "fluxograma_slug": "fluxograma-choque-cardiogenico-estagios-scai",
+    "relacionados": [
+      "choque-cardiogenico",
+      "sindrome-coronariana-aguda",
+      "classificacao-scai-de-estagios-do-choque-cardiogenico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bloqueio-atrioventricular-agudo-e-sangramento-maior-apos-troca-valvar-transcateter-tricuspide-evoque",
+    "titulo": "Bloqueio atrioventricular agudo ou sangramento maior após troca valvar transcateter tricúspide (sistema EVOQUE)",
+    "gatilho": "Bradicardia sintomática, síncope ou novo BAV de alto grau/completo, ou sinal de sangramento maior (queda de hemoglobina, hematoma expansivo, sangramento em sítio de acesso), nas horas a dias após implante de bioprótese tricúspide transcateter (TTVR, sistema EVOQUE) — implante de marca-passo definitivo novo ocorreu em 17,4% e sangramento grave em 15,4% dos pacientes no TRISCEND II, contra 2,3% e 5,3% no grupo controle",
+    "ordem": 120,
+    "documento_slug": "insuficiencia-tricuspide-grave-triscend-ii-e-a-troca-valvar-transcateter-com-o-sistema-evoque",
+    "fluxograma_slug": "",
+    "relacionados": [
+      "bradiarritmia-e-bloqueio-av",
+      "sangramento-maior-em-paciente-anticoagulado",
+      "falha-aguda-de-teer-mitral-com-choque-ou-edema-pulmonar"
+    ],
+    "review_status": "revisado"
   }
 ]
