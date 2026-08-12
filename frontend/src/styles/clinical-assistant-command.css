@@ -1,0 +1,116 @@
+/* CorVIA Assistente — two modes, one Clinical OS workspace. */
+body.corvia-route--assistente .clinical-os .cos-content { width:100%; max-width:none; padding-inline:.85rem; }
+body.corvia-route--assistente .ia-escolha { width:min(100%,1080px); margin:0 auto; padding:.35rem 0 1.2rem; }
+body.corvia-route--assistente .ia-escolha > .eyebrow { margin:0; color:#68dce2; font-size:.55rem; }
+body.corvia-route--assistente .ia-escolha > h1 { margin:.08rem 0 .9rem; color:#f3fbfc; font-size:clamp(1.55rem,2.5vw,2.25rem); letter-spacing:-.045em; }
+body.corvia-route--assistente .ia-escolha__cartoes { display:grid; grid-template-columns:1fr 1fr; gap:.72rem; }
+body.corvia-route--assistente .ia-escolha__cartao {
+  position:relative; min-height:210px; padding:1rem 1.05rem!important; overflow:hidden;
+  color:#dcebed!important; background:
+    radial-gradient(circle at 100% 0%,rgba(56,202,213,.08),transparent 15rem),
+    linear-gradient(145deg,rgba(10,31,43,.98),rgba(6,23,33,.99))!important;
+  border:1px solid rgba(56,202,213,.12)!important; border-radius:14px!important; box-shadow:none!important;
+  text-align:left!important;
+}
+body.corvia-route--assistente .ia-escolha__cartao:nth-child(2) {
+  background:radial-gradient(circle at 100% 0%,rgba(161,124,245,.11),transparent 15rem),linear-gradient(145deg,rgba(16,28,47,.98),rgba(7,22,34,.99))!important;
+  border-color:rgba(161,124,245,.13)!important;
+}
+body.corvia-route--assistente .ia-escolha__cartao:hover { transform:translateY(-1px); border-color:rgba(56,202,213,.26)!important; }
+body.corvia-route--assistente .ia-escolha__cartao:nth-child(2):hover { border-color:rgba(161,124,245,.27)!important; }
+body.corvia-route--assistente .ia-escolha__cartao p { max-width:48ch; color:#839da6!important; font-size:.69rem; line-height:1.5; }
+body.corvia-route--assistente .ia-escolha__cartao::after {
+  content:""; position:absolute; right:-3rem; bottom:-3.4rem; width:10rem; height:10rem; border-radius:50%;
+  border:1px solid rgba(56,202,213,.06); box-shadow:0 0 0 28px rgba(56,202,213,.018),0 0 0 58px rgba(56,202,213,.01); pointer-events:none;
+}
+body.corvia-route--assistente .ia-escolha__cartao:nth-child(2)::after { border-color:rgba(161,124,245,.07); box-shadow:0 0 0 28px rgba(161,124,245,.018),0 0 0 58px rgba(161,124,245,.01); }
+
+body.corvia-route--assistente .ia { display:grid; grid-template-rows:auto auto minmax(0,1fr) auto auto; width:min(100%,1180px); min-height:calc(100dvh - 92px); margin:0 auto; color:#dcebed; }
+body.corvia-route--assistente .ia__topo {
+  display:flex; align-items:center; justify-content:space-between; gap:.8rem; margin-bottom:.5rem; padding:.6rem .68rem;
+  background:linear-gradient(145deg,rgba(10,31,43,.97),rgba(6,23,33,.99))!important;
+  border:1px solid rgba(126,183,201,.09)!important; border-radius:11px; box-shadow:none!important;
+}
+body.corvia-route--assistente .ia__topo h1 { margin:0!important; color:#f1fbfc; font-size:.92rem; letter-spacing:-.025em; }
+body.corvia-route--assistente .ia__topo .eyebrow { color:#6bdce2; font-size:.52rem; }
+body.corvia-route--assistente .ia__topo select { min-height:30px; padding:.28rem .4rem!important; font-size:.52rem!important; }
+body.corvia-route--assistente .ia__topo label { color:#78939c!important; font-size:.52rem!important; }
+body.corvia-route--assistente .ia__topo .botao { min-height:29px; padding:.3rem .46rem!important; font-size:.5rem!important; }
+body.corvia-route--assistente .ia__topo .selo { padding:.26rem .42rem; color:#7edfe5; background:rgba(56,202,213,.055); border:1px solid rgba(56,202,213,.09); font-size:.48rem; }
+body.corvia-route--assistente .ia__link-trocar { color:#8da7af!important; text-decoration:none!important; }
+body.corvia-route--assistente .ia__link-trocar:hover { color:#75e2e7!important; }
+
+body.corvia-route--assistente .ia__aviso-ferramentas {
+  margin:0 0 .5rem; padding:.48rem .6rem; color:#a99be0; background:rgba(161,124,245,.045); border:1px solid rgba(161,124,245,.09); border-radius:8px; font-size:.55rem;
+}
+body.corvia-route--assistente .ia > .cartao {
+  margin:0 0 .5rem!important; max-height:210px!important; padding:.42rem .52rem;
+  background:rgba(255,255,255,.015); border-color:rgba(126,183,201,.07); box-shadow:none;
+}
+
+body.corvia-route--assistente .ia__conversa {
+  min-height:420px; max-height:calc(100dvh - 250px); overflow:auto; padding:.8rem .9rem 1rem;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(56,202,213,.025),transparent 18rem),
+    linear-gradient(180deg,rgba(5,20,30,.72),rgba(4,17,25,.58));
+  border:1px solid rgba(126,183,201,.07); border-radius:11px;
+  scrollbar-width:thin; scrollbar-color:rgba(126,183,201,.12) transparent;
+}
+body.corvia-route--assistente .ia__abertura { width:min(100%,760px); margin:2.1rem auto 0; text-align:center; }
+body.corvia-route--assistente .ia__abertura > p:first-child { margin:0 auto .45rem; max-width:62ch; color:#93aab2; font-size:.69rem; line-height:1.5; }
+body.corvia-route--assistente .ia__privacidade { margin:.35rem auto .8rem!important; max-width:68ch; color:#607d87!important; font-size:.54rem!important; }
+body.corvia-route--assistente .ia__sugestoes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.4rem; }
+body.corvia-route--assistente .ia__sugestao {
+  min-height:64px; padding:.5rem .55rem!important; color:#a9c2c8!important; background:rgba(255,255,255,.018)!important;
+  border:1px solid rgba(126,183,201,.07)!important; border-radius:9px!important; font-size:.56rem!important; line-height:1.35;
+}
+body.corvia-route--assistente .ia__sugestao:hover { color:#e7f9fb!important; background:rgba(56,202,213,.04)!important; border-color:rgba(56,202,213,.17)!important; }
+
+body.corvia-route--assistente .ia__msg { width:min(86%,780px); margin:.55rem 0; padding:.68rem .76rem; border-radius:11px; font-size:.66rem; line-height:1.58; }
+body.corvia-route--assistente .ia__msg--assistant {
+  margin-right:auto; color:#c8dce1; background:rgba(56,202,213,.035); border:1px solid rgba(56,202,213,.08);
+}
+body.corvia-route--assistente .ia__msg--user {
+  margin-left:auto; color:#e4f1f3; background:rgba(76,159,255,.07); border:1px solid rgba(76,159,255,.11);
+}
+body.corvia-route--assistente .ia__msg p:first-child { margin-top:0; }
+body.corvia-route--assistente .ia__msg p:last-child { margin-bottom:0; }
+body.corvia-route--assistente .ia__msg h1,
+body.corvia-route--assistente .ia__msg h2,
+body.corvia-route--assistente .ia__msg h3 { color:#edf9fb; }
+body.corvia-route--assistente .ia__msg code { color:#8ce8ec; background:rgba(56,202,213,.05); }
+body.corvia-route--assistente .ia__fontes { margin-top:.65rem; padding-top:.55rem; border-top:1px solid rgba(126,183,201,.06); }
+body.corvia-route--assistente .ia__fontes .eyebrow { margin:0 0 .3rem; color:#66828c; font-size:.46rem; }
+body.corvia-route--assistente .ia__fonte { display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:.35rem; min-height:34px; padding:.3rem .35rem; color:#8fa8b0; background:rgba(255,255,255,.012); border:1px solid rgba(126,183,201,.05); border-radius:7px; text-decoration:none; font-size:.51rem; }
+body.corvia-route--assistente .ia__fonte + .ia__fonte { margin-top:.24rem; }
+body.corvia-route--assistente .ia__fonte__marca { color:#70dce2; }
+
+body.corvia-route--assistente .ia__envio {
+  position:sticky; bottom:0; z-index:4; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.42rem; margin-top:.48rem; padding:.44rem;
+  background:rgba(5,19,28,.94); border:1px solid rgba(126,183,201,.09); border-radius:11px; backdrop-filter:blur(14px);
+}
+body.corvia-route--assistente .ia__envio textarea { min-height:52px; max-height:140px; resize:vertical; padding:.55rem .62rem; font-size:.62rem; line-height:1.4; }
+body.corvia-route--assistente .ia__envio .botao { align-self:stretch; min-width:82px; }
+body.corvia-route--assistente .ia__rodape { margin:.32rem 0 0; color:#57727c; font-size:.48rem; text-align:center; }
+body.corvia-route--assistente .ia__erro { margin:.38rem 0; color:#ff99a8; font-size:.55rem; }
+
+@media (max-width:900px) {
+  body.corvia-route--assistente .clinical-os .cos-content { padding-inline:.55rem; }
+  body.corvia-route--assistente .ia-escolha__cartoes { grid-template-columns:1fr; }
+  body.corvia-route--assistente .ia-escolha__cartao { min-height:145px; padding:.78rem!important; }
+  body.corvia-route--assistente .ia { min-height:calc(100dvh - 130px); }
+  body.corvia-route--assistente .ia__topo { align-items:flex-start; padding:.52rem; }
+  body.corvia-route--assistente .ia__topo > div:last-child { max-width:47%; justify-content:flex-end; }
+  body.corvia-route--assistente .ia__topo select,
+  body.corvia-route--assistente .ia__topo label { display:none; }
+  body.corvia-route--assistente .ia__topo .selo { display:none; }
+  body.corvia-route--assistente .ia__conversa { min-height:55dvh; max-height:none; padding:.55rem .5rem .7rem; }
+  body.corvia-route--assistente .ia__abertura { margin-top:1rem; }
+  body.corvia-route--assistente .ia__sugestoes { grid-template-columns:1fr; }
+  body.corvia-route--assistente .ia__sugestao { min-height:48px; text-align:left; }
+  body.corvia-route--assistente .ia__msg { width:92%; padding:.55rem .6rem; font-size:.61rem; }
+  body.corvia-route--assistente .ia__envio { bottom:64px; grid-template-columns:minmax(0,1fr) 64px; }
+  body.corvia-route--assistente .ia__envio textarea { min-height:46px; }
+  body.corvia-route--assistente .ia__envio .botao { min-width:0; padding-inline:.35rem; }
+  body.corvia-route--assistente .ia__rodape { padding-bottom:4.4rem; }
+}
