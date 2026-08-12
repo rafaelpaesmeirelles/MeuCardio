@@ -912,5 +912,42 @@
     "conduta": "Monitorar o potássio sérico periodicamente ao associar; a bula do COZAAR (losartana) recomenda cautela nesse uso concomitante. Evitar suplementação empírica de potássio sem indicação clínica clara e sem monitorização.",
     "fonte": "Rótulo do FDA/DailyMed do COZAAR (losartana potássica), Organon LLC, setid 9949448f-c3b9-44ee-94ed-c1aca8c90f39, seção Drug Interactions e Warnings and Precautions — lido diretamente via DailyMed em 12/08/2026 (mesma fonte já usada para `bp_evidence_source` e `half_life_note` do registro da losartana). Texto verbatim: \"Coadministration of losartan with other drugs that raise serum potassium levels may result in hyperkalemia. Monitor serum potassium in such patients\"; e, na orientação ao paciente: \"Advise patients receiving COZAAR not to use potassium supplements or salt substitutes containing potassium without consulting their healthcare provider.\"",
     "review_status": "revisado"
+  },
+  {
+    "slug": "nicorandil-inibidor-de-pde5",
+    "farmacos": [
+      "nicorandil"
+    ],
+    "classe_oposta": "inibidor da fosfodiesterase-5 (sildenafila, tadalafila, vardenafila) ou estimulador da guanilato ciclase solúvel (ex.: riociguato)",
+    "gravidade": "contraindicada",
+    "efeito": "Potencialização do efeito nitrato-símile do nicorandil (o fármaco tem porção estrutural de nitrato orgânico) — risco de queda grave e potencialmente fatal da pressão arterial, mesmo mecanismo já conhecido para nitratos orgânicos clássicos.",
+    "conduta": "Contraindicado. Não associar nicorandil a inibidor de PDE5 nem a estimulador da guanilato ciclase solúvel, pelo mesmo motivo que contraindica nitrato orgânico com essas classes.",
+    "fonte": "Contraindicação e interação já registradas nos campos `contraindications`/`interactions` do verbete `nicorandil` deste catálogo, com a mesma fonte primária (rótulo/bula de nicorandil) — reproduzida aqui de forma estruturada, sem alteração de conteúdo.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eplerenona-inibidor-forte-cyp3a4",
+    "farmacos": [
+      "eplerenona"
+    ],
+    "classe_oposta": "inibidor forte do CYP3A (ex.: cetoconazol, itraconazol, nefazodona, troleandomicina, claritromicina, ritonavir, nelfinavir)",
+    "gravidade": "contraindicada",
+    "efeito": "Aumento acentuado da exposição à eplerenona — com cetoconazol 200mg 2x/dia, Cmax da eplerenona aumentou 1,7 vez e AUC aumentou 5,4 vezes em relação à eplerenona isolada.",
+    "conduta": "Contraindicado pelo rótulo: 'Do not use INSPRA with drugs that are strong inhibitors of CYP3A'.",
+    "fonte": "Rótulo FDA/DailyMed do INSPRA (eplerenona), Viatris Specialty LLC, setid 1a52bedc-8e2c-4116-a296-a87770676b4a, seção DRUG INTERACTIONS, consultado nesta sessão em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eplerenona-inibidor-moderado-cyp3a4",
+    "farmacos": [
+      "eplerenona",
+      "verapamil-cloridrato"
+    ],
+    "classe_oposta": "outro inibidor moderado do CYP3A (ex.: eritromicina, saquinavir, fluconazol)",
+    "gravidade": "moderada",
+    "efeito": "Aumento da exposição à eplerenona — inibidores moderados do CYP3A (incluindo verapamil, fármaco cardiológico de uso comum) produziram aumento de AUC de 100% a 190% em estudo citado pelo rótulo do INSPRA.",
+    "conduta": "Não contraindicado, mas exige limite de dose: em insuficiência cardíaca com FE reduzida pós-IAM, não exceder 25mg 1x/dia; em hipertensão, iniciar com 25mg 1x/dia, podendo subir a no máximo 25mg 2x/dia conforme resposta pressórica.",
+    "fonte": "Rótulo FDA/DailyMed do INSPRA (eplerenona), Viatris Specialty LLC, setid 1a52bedc-8e2c-4116-a296-a87770676b4a, seção DRUG INTERACTIONS, consultado nesta sessão em 12/08/2026.",
+    "review_status": "revisado"
   }
 ]
