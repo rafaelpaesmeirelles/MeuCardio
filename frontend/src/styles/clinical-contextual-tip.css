@@ -1,0 +1,55 @@
+/* Dicas de primeira visita dentro do Clinical OS: informativas, nunca um card claro desconectado. */
+.clinical-os .dica-ctx {
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  box-sizing:border-box;
+  gap:.6rem;
+  margin:0 0 .65rem;
+  padding:.6rem .66rem;
+  color:#b8cdd2;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(56,202,213,.055),transparent 10rem),
+    linear-gradient(145deg,rgba(10,31,43,.96),rgba(6,23,33,.98));
+  border:1px solid rgba(56,202,213,.11);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:none;
+}
+.clinical-os .dica-ctx__icone {
+  width:30px;
+  height:30px;
+  color:#72dfe5;
+  background:rgba(56,202,213,.065);
+  border:1px solid rgba(56,202,213,.10);
+  border-radius:8px;
+}
+.clinical-os .dica-ctx__texto { min-width:0; overflow-wrap:anywhere; }
+.clinical-os .dica-ctx__titulo {
+  margin:0 0 .08rem;
+  color:#dff3f5;
+  font-size:.62rem;
+  font-weight:750;
+}
+.clinical-os .dica-ctx__corpo {
+  margin:0;
+  color:#78949d;
+  font-size:.55rem;
+  line-height:1.42;
+  overflow-wrap:anywhere;
+}
+.clinical-os .dica-ctx__corpo strong { color:#9bcbd0; }
+.clinical-os .dica-ctx__fechar {
+  width:28px;
+  height:28px;
+  color:#738e97;
+  border-radius:7px;
+}
+.clinical-os .dica-ctx__fechar:hover { color:#e4f8fa; background:rgba(56,202,213,.055); }
+
+@media(max-width:520px){
+  .clinical-os .dica-ctx { grid-template-columns:minmax(0,1fr) auto; gap:.45rem; padding:.52rem .55rem; }
+  .clinical-os .dica-ctx__icone { display:none; }
+  .clinical-os .dica-ctx__titulo { font-size:.6rem; }
+  .clinical-os .dica-ctx__corpo { font-size:.54rem; }
+}
