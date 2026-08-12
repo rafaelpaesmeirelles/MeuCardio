@@ -9133,5 +9133,153 @@
       "vigilância cardio-oncológica",
       "reprodutibilidade"
     ]
+  },
+  {
+    "slug": "criterios-eletrocardiograficos-de-hipertrofia-ventricular-esquerda-sokolow-lyon-e-cornell",
+    "name": "Critérios eletrocardiográficos de hipertrofia ventricular esquerda (Sokolow-Lyon e Cornell)",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Critérios de voltagem no ECG de 12 derivações usados para rastrear hipertrofia ventricular esquerda (HVE) como marcador de lesão de órgão-alvo na hipertensão arterial — soma de amplitudes de onda R e S em derivações específicas.",
+    "reference_range": "Critério de Sokolow-Lyon positivo: S em V1 + R em V5 ou V6 ≥ 35 mm (ou, como critério alternativo, R em aVL ≥ 11 mm). Critério de voltagem de Cornell: R em aVL + S em V3 > 28 mm em homens ou > 20 mm em mulheres. Produto de Cornell (voltagem de Cornell × duração do QRS) > 2.440 mm×ms.",
+    "indications": "Rastreio de HVE em paciente hipertenso, como parte da avaliação de lesão de órgão-alvo — exame de triagem inicial, de baixo custo e amplamente disponível, geralmente anterior ao ecocardiograma quando este é indicado para confirmação e quantificação da massa ventricular.",
+    "interpretation": "A presença de qualquer critério de voltagem positivo levanta suspeita de HVE e reforça a indicação de controle pressórico mais rigoroso e de investigação ecocardiográfica confirmatória. A ausência de critério positivo NÃO exclui HVE com segurança — ver limitações.",
+    "limitations": "Especificidade relativamente alta, mas sensibilidade baixa para detectar HVE confirmada por ecocardiograma: uma revisão sistemática de 21 estudos (5.608 pacientes hipertensos, PMID 17726091) encontrou razão de verossimilhança negativa entre 0,85 e 0,91 para os principais índices eletrocardiográficos (Sokolow-Lyon, Cornell, Cornell-produto, Gubner, Romhilt-Estes) — ou seja, um resultado negativo reduz pouco a probabilidade pós-teste de HVE, e a conclusão explícita dos autores é que critérios eletrocardiográficos não devem ser usados para EXCLUIR HVE no paciente hipertenso. A amplitude de onda também é influenciada por idade, sexo, biotipo (obesidade reduz a amplitude, por maior distância entre eletrodo e coração) e etnia, o que piora o desempenho dos pontos de corte fixos nesses subgrupos.",
+    "source_refs": [
+      "Hancock EW, Deal BJ, Mirvis DM, et al. AHA/ACCF/HRS recommendations for the standardization and interpretation of the electrocardiogram: part V: electrocardiogram changes associated with cardiac chamber hypertrophy. J Am Coll Cardiol. 2009;53(11):992-1002. DOI: 10.1016/j.jacc.2008.12.015. PMID: 19281932.",
+      "Pewsner D, Jüni P, Egger M, et al. Accuracy of electrocardiography in diagnosis of left ventricular hypertrophy in arterial hypertension: systematic review. BMJ. 2007;335(7622):711. DOI: 10.1136/bmj.39276.636354.AE. PMID: 17726091."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hipertrofia ventricular esquerda",
+      "sokolow-lyon",
+      "cornell",
+      "eletrocardiograma",
+      "hipertensão",
+      "lesão de órgão-alvo"
+    ]
+  },
+  {
+    "slug": "padrao-eletrocardiografico-de-brugada-tipo-1-e-tipo-2",
+    "name": "Padrão eletrocardiográfico de Brugada (tipo 1 e tipo 2)",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Alteração eletrocardiográfica nas derivações precordiais direitas (V1-V2) que constitui o marcador diagnóstico da síndrome de Brugada — canalopatia hereditária associada a risco de taquicardia/fibrilação ventricular e morte súbita em coração estruturalmente normal.",
+    "reference_range": "Padrão tipo 1 (coved, \"em abóbada\"): supradesnivelamento do ponto J ≥ 2 mm com segmento ST descendente convexo seguido de onda T negativa, em uma ou mais derivações entre V1-V2 (posicionadas no 2º, 3º ou 4º espaço intercostal), espontâneo ou induzido por teste farmacológico com bloqueador de canal de sódio. Padrão tipo 2 (\"saddle-back\", em sela): supradesnivelamento do ponto J ≥ 2 mm com segmento ST em formato de sela — elevação inicial seguida de depressão ≥ 1 mm e nova elevação, com onda T positiva ou bifásica. O consenso de 2012 unificou os antigos tipos 2 e 3 num único padrão tipo 2, por baixa reprodutibilidade da distinção entre eles.",
+    "indications": "Investigação de síncope inexplicada, parada cardiorrespiratória abortada por fibrilação ventricular, ou história familiar de morte súbita em paciente jovem sem cardiopatia estrutural identificável; achado incidental que motiva avaliação especializada mesmo em paciente assintomático.",
+    "interpretation": "O diagnóstico de síndrome de Brugada exige padrão tipo 1 (espontâneo ou induzido por teste farmacológico) associado a pelo menos um critério clínico: síncope, respiração agônica noturna, parada cardíaca abortada, taquicardia ventricular polimórfica documentada, ou história familiar de morte súbita antes dos 45 anos ou de padrão tipo 1 em familiar de primeiro grau. O padrão tipo 2 isolado NÃO fecha o diagnóstico — é indicação de teste farmacológico provocativo, na tentativa de convertê-lo em tipo 1.",
+    "limitations": "O padrão eletrocardiográfico pode ser dinâmico e intermitente — ausente num traçado e presente noutro, influenciado por febre, uso de determinados fármacos (antiarrítmicos de classe I, antidepressivos tricíclicos, entre outros) e tônus autonômico — e às vezes só aparece quando as derivações precordiais direitas são posicionadas mais alto (2º espaço intercostal) do que a posição-padrão. Exige diagnóstico diferencial obrigatório com \"fenocópias\" de Brugada — padrão eletrocardiográfico semelhante por causa reversível, como distúrbio eletrolítico, isquemia aguda, embolia pulmonar ou compressão mediastinal — e com bloqueio de ramo direito, coração de atleta e pectus excavatum, que também podem mimetizar o padrão.",
+    "source_refs": [
+      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-1963. DOI: 10.1016/j.hrthm.2013.05.014. PMID: 24011539.",
+      "Bayés de Luna A, Brugada J, Baranchuk A, et al. Current electrocardiographic criteria for diagnosis of Brugada pattern: a consensus report. J Electrocardiol. 2012;45(5):433-442. DOI: 10.1016/j.jelectrocard.2012.06.004. PMID: 22920782."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "síndrome de brugada",
+      "padrão de brugada",
+      "eletrocardiograma",
+      "morte súbita cardíaca",
+      "canalopatia",
+      "arritmias"
+    ]
+  },
+  {
+    "slug": "avaliacao-da-funcao-diastolica-do-ventriculo-esquerdo-por-ecocardiograma-ase-eacvi-2016",
+    "name": "Avaliação da função diastólica do ventrículo esquerdo por ecocardiograma Doppler (algoritmo ASE/EACVI 2016)",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Conjunto de parâmetros ecocardiográficos Doppler que avaliam o enchimento e o relaxamento do ventrículo esquerdo — usado tanto para graduar disfunção diastólica em paciente com fração de ejeção reduzida/doença miocárdica conhecida, quanto para determinar, em paciente com fração de ejeção preservada, se a função diastólica é normal ou está alterada. É etapa central no algoritmo diagnóstico da insuficiência cardíaca com fração de ejeção preservada (ICFEp).",
+    "reference_range": "Em paciente com fração de ejeção normal, quatro variáveis são avaliadas: velocidade e' septal < 7 cm/s ou lateral < 10 cm/s; razão E/e' média > 14; velocidade de regurgitação tricúspide > 2,8 m/s; índice de volume do átrio esquerdo > 34 mL/m². Função diastólica normal: 0 ou 1 variável alterada. Disfunção diastólica presente: mais de 2 variáveis alteradas. Resultado indeterminado: exatamente 2 variáveis alteradas.",
+    "indications": "Paciente com sintomas sugestivos de insuficiência cardíaca e fração de ejeção preservada (suspeita de ICFEp); avaliação inicial de qualquer disfunção miocárdica — cardiomiopatia, doença coronariana, valvopatia — em que o padrão de enchimento do ventrículo esquerdo tem implicação prognóstica e terapêutica.",
+    "interpretation": "Em paciente com fração de ejeção reduzida ou doença miocárdica estrutural já conhecida, o algoritmo usa a razão E/A e a razão E/e' para graduar a disfunção diastólica em grau I (padrão de relaxamento alterado, pressões de enchimento normais), grau II (padrão pseudonormal) e grau III (padrão restritivo, pressões de enchimento elevadas) — graus mais altos associam-se a pior prognóstico.",
+    "limitations": "Fibrilação atrial, doença valvar mitral significativa (estenose ou regurgitação relevante), prótese mitral, marca-passo com estimulação ventricular contínua e cardiomiopatia hipertrófica alteram a validade de vários dos parâmetros do algoritmo básico de quatro variáveis, exigindo abordagem alternativa não coberta por ele. A razão E/e' tem desempenho pior para estimar a pressão de enchimento em paciente com função sistólica hiperdinâmica.",
+    "source_refs": [
+      "Nagueh SF, Smiseth OA, Appleton CP, et al. Recommendations for the Evaluation of Left Ventricular Diastolic Function by Echocardiography: An Update from the American Society of Echocardiography and the European Association of Cardiovascular Imaging. J Am Soc Echocardiogr. 2016;29(4):277-314. DOI: 10.1016/j.echo.2016.01.011. PMID: 27037982."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "função diastólica",
+      "ecocardiograma",
+      "ASE/EACVI",
+      "insuficiência cardíaca",
+      "ICFEp",
+      "E/e'"
+    ]
+  },
+  {
+    "slug": "pet-ct-com-fdg-na-sarcoidose-cardiaca",
+    "name": "PET-CT com ¹⁸F-FDG na sarcoidose cardíaca",
+    "category": "imagem",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Captação miocárdica de fluorodesoxiglicose marcada com flúor-18 (¹⁸F-FDG) — traçador que se acumula em células inflamatórias ativas (macrófagos de granuloma) — usada para identificar inflamação miocárdica ativa na sarcoidose cardíaca, geralmente combinada com estudo de perfusão em repouso no protocolo híbrido de \"perfusão/metabolismo\".",
+    "reference_range": "Não se aplica valor numérico único de referência — a interpretação é qualitativa/semiquantitativa, por padrão de captação (focal; focal sobreposta a defeito de perfusão, chamado padrão em \"mismatch\", o mais sugestivo de sarcoidose ativa; ou difusa, de menor especificidade) e por SUV (standardized uptake value) máximo, sem ponto de corte universalmente validado.",
+    "indications": "Investigação de sarcoidose cardíaca em paciente com sarcoidose extracardíaca confirmada por biópsia e suspeita clínica de acometimento cardíaco — arritmia ventricular inexplicada, bloqueio atrioventricular avançado em paciente jovem, ou disfunção ventricular sem outra causa identificada; monitorização de resposta à imunossupressão.",
+    "interpretation": "O padrão de \"mismatch\" perfusão-metabolismo — defeito de perfusão em repouso associado a captação de FDG na mesma região — é o achado mais sugestivo de inflamação ativa sobreposta a substrato de fibrose/necrose já estabelecida, e orienta tanto o diagnóstico quanto a decisão de iniciar imunossupressor.",
+    "limitations": "Exige preparo dietético rigoroso (dieta pobre em carboidratos e rica em gordura e/ou jejum prolongado) para suprimir a captação fisiológica de glicose pelo miocárdio normal, que de outra forma se sobrepõe ao sinal inflamatório e compromete a leitura — uma revisão sistemática de 2020 encontrou grande heterogeneidade nos protocolos de preparo usados nos estudos publicados, sem um único protocolo definitivo validado (PMID 30088196). Envolve radiação ionizante e tem custo e disponibilidade mais restritos que a ressonância cardíaca, exame de escolha inicial quando a função renal permite o uso de gadolínio.",
+    "source_refs": [
+      "Birnie DH, Sauer WH, Bogun F, et al. HRS expert consensus statement on the diagnosis and management of arrhythmias associated with cardiac sarcoidosis. Heart Rhythm. 2014;11(7):1305-1323. DOI: 10.1016/j.hrthm.2014.03.043. PMID: 24819193.",
+      "Atterton-Evans V, Turner J, Vivanti A, Robertson T. Variances of dietary preparation for suppression of physiological 18F-FDG myocardial uptake in the presence of cardiac sarcoidosis: A systematic review. J Nucl Cardiol. 2020;27(2):481-489. DOI: 10.1007/s12350-018-1379-4. PMID: 30088196."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "sarcoidose cardíaca",
+      "PET-CT",
+      "FDG",
+      "inflamação miocárdica",
+      "cardiomiopatias",
+      "medicina nuclear"
+    ]
+  },
+  {
+    "slug": "baixa-voltagem-do-qrs-e-discordancia-voltagem-massa-no-ecg-pista-para-amiloidose-cardiaca",
+    "name": "Baixa voltagem do QRS e discordância voltagem-massa no ECG — pista para amiloidose cardíaca",
+    "category": "metodo_grafico",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Achado eletrocardiográfico clássico, embora não universal, da amiloidose cardíaca — amplitude de QRS desproporcionalmente baixa em relação à espessura miocárdica vista ao ecocardiograma, refletindo a infiltração amiloide como tecido eletricamente \"inerte\" que aumenta a massa ventricular sem gerar voltagem correspondente.",
+    "reference_range": "Baixa voltagem definida classicamente como amplitude de QRS ≤ 5 mm nas derivações periféricas ou ≤ 10 mm nas precordiais. No estudo AC-TIVE (170 pacientes com hipertrofia ventricular e achado ecocardiográfico sugestivo de amiloidose, 55 confirmados), a combinação de baixa voltagem de QRS com septo interventricular ≥ 1,6 cm teve especificidade de 100% e valor preditivo positivo de 100% para o diagnóstico; a razão entre a soma de todas as voltagens do QRS e a espessura da parede ventricular esquerda, com corte < 7,8, foi o índice mais sensível (94%, VPN 97%, acurácia 82%).",
+    "indications": "Paciente com hipertrofia ventricular esquerda inexplicada ao ecocardiograma — sobretudo se desproporcional à história de hipertensão —, especialmente quando associada a outros sinais de alerta: fração de ejeção preservada com strain longitudinal reduzido em padrão apical poupado, espessamento valvar, derrame pericárdico, ou manifestação extracardíaca como síndrome do túnel do carpo bilateral.",
+    "interpretation": "A discordância entre baixa voltagem eletrocardiográfica e espessura parietal aumentada é mais específica do que sensível — sua presença reforça fortemente a suspeita de amiloidose cardíaca e justifica avançar para cintilografia com pirofosfato de tecnécio (rastreio de ATTR) ou dosagem de cadeias leves livres séricas (rastreio de AL); sua ausência não afasta o diagnóstico, porque cerca de metade dos pacientes com amiloidose cardíaca confirmada não apresenta a baixa voltagem clássica.",
+    "limitations": "Bloqueio de ramo, ritmo de marca-passo, obesidade e derrame pleural ou pericárdico também reduzem a amplitude do QRS por outros mecanismos, então o achado isolado não é específico de amiloidose fora do contexto de hipertrofia ventricular inexplicada. O índice combinado validado no estudo AC-TIVE (PMID 37858441) é de uma coorte italiana única e ainda não foi validado externamente.",
+    "source_refs": [
+      "Pagura L, Porcari A, Cameli M, et al. ECG/echo indexes in the diagnostic approach to amyloid cardiomyopathy: A head-to-head comparison from the AC-TIVE study. Eur J Intern Med. 2024;122:68-77. DOI: 10.1016/j.ejim.2023.09.026. PMID: 37858441.",
+      "Hancock EW, Deal BJ, Mirvis DM, et al. AHA/ACCF/HRS recommendations for the standardization and interpretation of the electrocardiogram: part V: electrocardiogram changes associated with cardiac chamber hypertrophy. J Am Coll Cardiol. 2009;53(11):992-1002. DOI: 10.1016/j.jacc.2008.12.015. PMID: 19281932."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "amiloidose cardíaca",
+      "baixa voltagem",
+      "eletrocardiograma",
+      "discordância voltagem-massa",
+      "cardiomiopatias",
+      "AC-TIVE"
+    ]
+  },
+  {
+    "slug": "ck-mb-no-diagnostico-de-reinfarto-e-infarto-periprocedimento",
+    "name": "CK-MB (creatina quinase fração MB) no diagnóstico de reinfarto e infarto periprocedimento",
+    "category": "laboratorial",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Isoenzima da creatina quinase predominante no músculo cardíaco — biomarcador de necrose miocárdica com cinética de elevação e normalização mais rápida que a troponina, hoje reservado a situações clínicas específicas em que essa cinética mais curta é vantajosa, e não mais recomendado como biomarcador de primeira linha no diagnóstico do infarto agudo do miocárdio.",
+    "reference_range": "Eleva-se em 4-6 horas após a lesão miocárdica, com pico em 12-24 horas e retorno aos valores basais em cerca de 48-72 horas — janela muito mais curta do que a da troponina de alta sensibilidade, que permanece elevada por vários dias após um infarto.",
+    "indications": "Diagnóstico de reinfarto (novo evento isquêmico agudo ocorrendo dias após um infarto índice) e de infarto periprocedimento (relacionado a intervenção coronária percutânea ou a cirurgia de revascularização miocárdica) — cenários em que a troponina, ainda elevada pelo evento index, perde capacidade de discriminar uma nova elevação aguda. Também considerado quando a dosagem de troponina não está disponível.",
+    "interpretation": "Numa suspeita de reinfarto, uma nova elevação de CK-MB acima do limite superior de referência — ou um novo pico após período de queda documentada — é mais interpretável do que uma nova dosagem isolada de troponina, que pode simplesmente refletir a cauda de eliminação lenta do evento anterior. A 4ª Definição Universal de Infarto do Miocárdio (2018) formaliza o uso de variação de biomarcador (incluindo CK-MB como alternativa) para caracterizar especificamente esses dois cenários.",
+    "limitations": "Menos sensível e menos específico para o miocárdio do que a troponina de alta sensibilidade — a mesma isoenzima está presente no músculo esquelético, e pode se elevar por trauma muscular, exercício extenuante, doença renal e outras causas não cardíacas, motivo pelo qual deixou de ser o biomarcador de primeira linha nas diretrizes atuais de síndrome coronariana aguda. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao percentual exato de variação (rise) exigido pela 4ª Definição Universal para caracterizar reinfarto e infarto periprocedimento — o resumo indexado consultado nesta sessão não trouxe esse número, que consta do texto completo do documento.",
+    "source_refs": [
+      "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth Universal Definition of Myocardial Infarction (2018). Circulation. 2018;138(20):e618-e651. DOI: 10.1161/CIR.0000000000000617. PMID: 30571511."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "CK-MB",
+      "creatina quinase",
+      "reinfarto",
+      "infarto periprocedimento",
+      "biomarcador",
+      "doença coronariana"
+    ]
   }
 ]
