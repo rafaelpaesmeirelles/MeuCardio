@@ -31,87 +31,85 @@ type SecaoNav = {
   itens: ItemNav[];
 };
 
+/**
+ * O menu do lançamento deixa de descrever a implementação interna e passa a
+ * organizar o CorVIA pela intenção do médico. Paciente é um contexto de
+ * trabalho, não o centro universal do produto.
+ */
 const SECOES_BASE: SecaoNav[] = [
   {
-    id: "decisao",
-    rotulo: "Decisão clínica",
+    id: "clinica",
+    rotulo: "Clínica",
     icone: "clinica",
     itens: [
-      { to: "/assistente", rotulo: "Assistente", icone: "assistente" },
-      { to: "/doencas", rotulo: "Guia de doenças", icone: "doencas" },
-      { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
-      { to: "/condicoes", rotulo: "Condições especiais", icone: "check" },
-      { to: "/calculadoras", rotulo: "Calculadoras e escores", icone: "calculadora" },
-      { to: "/interacoes", rotulo: "Interações medicamentosas", icone: "medicamento" },
+      { to: "/biblioteca", rotulo: "Biblioteca clínica", icone: "conhecimento" },
+      { to: "/doencas", rotulo: "Condições e doenças", icone: "doencas" },
       { to: "/medicamentos", rotulo: "Medicamentos", icone: "medicamento" },
-      { to: "/fluxogramas", rotulo: "Fluxogramas clínicos", icone: "seta" },
-      { to: "/diretrizes", rotulo: "Alertas de diretriz", icone: "evidencia" },
-    ],
-  },
-  {
-    id: "pratica",
-    rotulo: "Pacientes e prática",
-    icone: "pacientes",
-    itens: [
-      { to: "/agenda", rotulo: "Agenda", icone: "agenda" },
-      { to: "/round", rotulo: "Round hospitalar", icone: "round" },
-      { to: "/receituario", rotulo: "Prescrição eletrônica", icone: "prescricao" },
-      { to: "/avaliacao-preoperatoria", rotulo: "Avaliação pré-operatória", icone: "clinica" },
-      { to: "/documentos", rotulo: "Documentos", icone: "documento" },
       { to: "/exames", rotulo: "Exames e marcadores", icone: "clinica" },
-      { to: "/checklists", rotulo: "Checklist de alta", icone: "check" },
-      { to: "/material-paciente", rotulo: "Material ao paciente", icone: "documento" },
-      { to: "/telediagnostico", rotulo: "Laudo e consultoria", icone: "evidencia" },
-    ],
-  },
-  {
-    id: "conhecimento",
-    rotulo: "Conhecimento",
-    icone: "conhecimento",
-    itens: [
-      { to: "/biblioteca", rotulo: "Biblioteca científica", icone: "conhecimento" },
-      { to: "/busca", rotulo: "Busca avançada", icone: "busca" },
       { to: "/evidencias", rotulo: "Evidências", icone: "evidencia" },
-      { to: "/estudos", rotulo: "Estudos", icone: "evidencia" },
+      { to: "/estudos", rotulo: "Estudos", icone: "curso" },
+      { to: "/diretrizes", rotulo: "Guidelines e alertas", icone: "evidencia" },
+      { to: "/calculadoras", rotulo: "Calculadoras e escores", icone: "calculadora" },
+      { to: "/emergencia", rotulo: "Emergências", icone: "emergencia" },
+      { to: "/checklists", rotulo: "Checklists", icone: "check" },
       { to: "/casos-clinicos", rotulo: "Casos clínicos", icone: "doencas" },
-      { to: "/galeria", rotulo: "Galeria de imagens", icone: "galeria" },
-      { to: "/trilhas", rotulo: "Trilhas de estudo", icone: "seta" },
-      { to: "/cursos", rotulo: "Cursos", icone: "curso" },
-      { to: "/apresentacao", rotulo: "Modo apresentação", icone: "documento" },
+      { to: "/trilhas", rotulo: "Trilhas", icone: "seta" },
+      { to: "/interacoes", rotulo: "Interações medicamentosas", icone: "medicamento" },
+      { to: "/condicoes", rotulo: "Condições especiais", icone: "check" },
+      { to: "/fluxogramas", rotulo: "Fluxogramas clínicos", icone: "seta" },
+      { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
     ],
   },
   {
-    id: "comunicacao",
-    rotulo: "Comunicação",
-    icone: "comunicacao",
-    itens: [
-      { to: "/corvia-mail", rotulo: "Corvia Mail", icone: "mail" },
-      { to: "/usuarios-online", rotulo: "Rede profissional", icone: "pacientes" },
-    ],
-  },
-  {
-    id: "gestao",
-    rotulo: "Gestão",
+    id: "trabalho",
+    rotulo: "Trabalho",
     icone: "gestao",
     itens: [
-      { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
+      { to: "/round", rotulo: "Pacientes e round", icone: "pacientes" },
+      { to: "/receituario", rotulo: "Prescrição", icone: "prescricao" },
+      { to: "/documentos", rotulo: "Documentos e solicitações", icone: "documento" },
+      { to: "/agenda", rotulo: "Agenda", icone: "agenda" },
+      { to: "/corvia-mail", rotulo: "CorVIA Mail", icone: "mail" },
+      { to: "/avaliacao-preoperatoria", rotulo: "Avaliação pré-operatória", icone: "clinica" },
+      { to: "/telediagnostico", rotulo: "Laudo e consultoria", icone: "evidencia" },
+      { to: "/material-paciente", rotulo: "Material para paciente", icone: "documento" },
+    ],
+  },
+  {
+    id: "inteligencia",
+    rotulo: "Inteligência",
+    icone: "assistente",
+    itens: [
+      { to: "/assistente", rotulo: "Assistentes CorVIA", icone: "assistente" },
+      { to: "/busca", rotulo: "Busca universal", icone: "busca" },
+    ],
+  },
+  {
+    id: "mais",
+    rotulo: "Mais",
+    icone: "mais",
+    itens: [
       { to: "/favoritos", rotulo: "Favoritos", icone: "favorito" },
+      { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
+      { to: "/usuarios-online", rotulo: "Rede profissional", icone: "pacientes" },
+      { to: "/galeria", rotulo: "Galeria de imagens", icone: "galeria" },
+      { to: "/cursos", rotulo: "Cursos", icone: "curso" },
+      { to: "/apresentacao", rotulo: "Modo apresentação", icone: "documento" },
+      { to: "/sincronizacao", rotulo: "Sincronizar contas", icone: "sincronizar" },
       { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" },
-      { to: "/sincronizacao", rotulo: "Sincronize suas contas", icone: "sincronizar" },
-      // Tour completo (issue #52): o primeiro acesso mostra só o Quick Start
-      // de cinco telas; o passeio longo fica aqui, disponível quando o médico
-      // quiser, em vez de ser empurrado no primeiro minuto de uso.
       { to: "/tour", rotulo: "Conheça a plataforma", icone: "curso" },
     ],
   },
 ];
 
-const PAINEL: ItemNav = { to: "/", rotulo: "Hoje", icone: "hoje", fim: true };
-const INDICADORES: ItemNav = { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" };
-const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" };
-const NAV_BASE: ItemNav[] = SECOES_BASE.flatMap((secao) => secao.itens).filter(
-  (item) => item.to !== INDICADORES.to && item.to !== CONTA.to,
-);
+const ACOES_MOBILE: ItemNav[] = [
+  { to: "/receituario", rotulo: "Prescrever", icone: "prescricao" },
+  { to: "/documentos", rotulo: "Solicitar exames", icone: "documento" },
+  { to: "/documentos", rotulo: "Criar documento", icone: "documento" },
+  { to: "/calculadoras", rotulo: "Calculadoras", icone: "calculadora" },
+  { to: "/emergencia", rotulo: "Emergência", icone: "emergencia" },
+  { to: "/medicamentos", rotulo: "Medicamentos", icone: "medicamento" },
+];
 
 function iniciais(nome?: string) {
   return (nome || "Médico")
@@ -133,7 +131,7 @@ function Navegacao({
   const secaoAtiva = secoes.find((secao) =>
     secao.itens.some((item) => pathname === item.to || pathname.startsWith(`${item.to}/`)),
   )?.id;
-  const [aberta, setAberta] = useState(secaoAtiva || "decisao");
+  const [aberta, setAberta] = useState(secaoAtiva || "clinica");
 
   useEffect(() => {
     if (secaoAtiva) setAberta(secaoAtiva);
@@ -149,8 +147,8 @@ function Navegacao({
       >
         <span className="nav-clinica__hoje-logo"><IconeHoje /></span>
         <span className="nav-clinica__hoje-texto">
-          <strong>Hoje</strong>
-          <small>Seu dia clínico</small>
+          <strong>Início</strong>
+          <small>Clinical Command Center</small>
         </span>
       </NavLink>
 
@@ -178,7 +176,7 @@ function Navegacao({
             >
               {secao.itens.map((item) => (
                 <NavLink
-                  key={item.to}
+                  key={`${secao.id}-${item.to}-${item.rotulo}`}
                   to={item.to}
                   end={item.fim}
                   tabIndex={expandida ? undefined : -1}
@@ -205,6 +203,7 @@ export default function Shell() {
   const naEmergencia = location.pathname.startsWith("/emergencia");
   const [pendentes, setPendentes] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
+  const [acoesAberto, setAcoesAberto] = useState(false);
   const [menuContaAberto, setMenuContaAberto] = useState(false);
   const [saindoPeloMenu, setSaindoPeloMenu] = useState(false);
   const [buscaTopo, setBuscaTopo] = useState("");
@@ -226,7 +225,10 @@ export default function Shell() {
 
   useEffect(() => setFotoCabecalhoQuebrada(false), [usuario?.photo_url]);
 
-  useEffect(() => setMenuContaAberto(false), [location.pathname]);
+  useEffect(() => {
+    setMenuContaAberto(false);
+    setAcoesAberto(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!menuContaAberto) return;
@@ -264,6 +266,19 @@ export default function Shell() {
     document.addEventListener("keydown", atalhoBusca);
     return () => document.removeEventListener("keydown", atalhoBusca);
   }, []);
+
+  useEffect(() => {
+    if (!acoesAberto) return;
+    function fecharComEscape(evento: KeyboardEvent) {
+      if (evento.key === "Escape") setAcoesAberto(false);
+    }
+    document.addEventListener("keydown", fecharComEscape);
+    document.body.classList.add("acoes-clinicas-abertas");
+    return () => {
+      document.removeEventListener("keydown", fecharComEscape);
+      document.body.classList.remove("acoes-clinicas-abertas");
+    };
+  }, [acoesAberto]);
 
   useEffect(() => {
     if (menuAberto) {
@@ -310,6 +325,7 @@ export default function Shell() {
 
   async function encerrarSessao() {
     setMenuAberto(false);
+    setAcoesAberto(false);
     setMenuContaAberto(false);
     setSaindoPeloMenu(true);
     try {
@@ -329,42 +345,23 @@ export default function Shell() {
   }
 
   const secoes = useMemo(() => {
-    const ADMIN: ItemNav = {
-      to: "/admin", rotulo: "Administração", icone: "gestao", badge: pendentes,
-    };
-    const nav: ItemNav[] = usuario?.role === "admin"
-      ? [
-        PAINEL,
-        ...NAV_BASE,
-        INDICADORES,
-        ADMIN,
-        CONTA,
-      ]
-      : [PAINEL, ...NAV_BASE, INDICADORES, CONTA];
-
-    if (usuario?.role === "admin") {
-      nav.splice(nav.length - 1, 0, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia", indisponivel: true });
-    }
     if (usuario?.role !== "admin") return SECOES_BASE;
-    const extrasGestao = nav.filter((item) => item.to === "/admin" || item.to === "/fila-telediagnostico");
-    return SECOES_BASE.map((secao) =>
-      secao.id !== "gestao"
-        ? secao
-        : {
-            ...secao,
-            itens: [
-              ...secao.itens,
-              ...extrasGestao,
-            ],
-          },
-    );
+    return SECOES_BASE.map((secao) => secao.id !== "mais" ? secao : {
+      ...secao,
+      itens: [
+        ...secao.itens,
+        { to: "/admin", rotulo: "Administração", icone: "gestao" as NomeIcone, badge: pendentes },
+        { to: "/admin/usuarios", rotulo: "Assinantes", icone: "pacientes" as NomeIcone },
+        { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia" as NomeIcone, indisponivel: true },
+      ],
+    });
   }, [pendentes, usuario?.role]);
 
   const recursosDaConta = useMemo(() => {
     const recursos: ItemNav[] = [
       { to: "/agenda", rotulo: "Agenda integrada", icone: "agenda" },
       { to: "/assinatura", rotulo: "Assinatura e plano", icone: "check" },
-      { to: "/corvia-mail", rotulo: "Corvia Mail", icone: "mail" },
+      { to: "/corvia-mail", rotulo: "CorVIA Mail", icone: "mail" },
       { to: "/documentos", rotulo: "Documentos", icone: "documento" },
       { to: "/favoritos", rotulo: "Favoritos", icone: "favorito" },
       { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" },
@@ -397,14 +394,16 @@ export default function Shell() {
     else itens[(atual - 1 + itens.length) % itens.length].focus();
   }
 
+  const interfaceBloqueada = menuAberto || acoesAberto;
+
   return (
     <div className="app-clinico">
       <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
 
       <aside className="lateral" aria-label="Navegação principal">
-        <NavLink to="/" className="lateral__marca" aria-label="Corvia — ir para Hoje">
+        <NavLink to="/" className="lateral__marca" aria-label="CorVIA — ir para o Clinical Command Center">
           <span className="lateral__logo"><img src="/corvia-logo-compacta.png" alt="" /></span>
-          <span className="lateral__produto">Ecossistema Clínico Cardiológico</span>
+          <span className="lateral__produto">Clinical Workspace</span>
         </NavLink>
         <Navegacao secoes={secoes} />
         <div className="lateral__rodape">
@@ -412,11 +411,11 @@ export default function Shell() {
             <Icone nome="sair" />
             <span>Sair do sistema</span>
           </button>
-          <span>Suporte à decisão, não substitui julgamento clínico.</span>
+          <span>Conhecimento, contexto, decisão, ação e assistência.</span>
         </div>
       </aside>
 
-      <div className="shell-principal" aria-hidden={menuAberto || undefined}>
+      <div className="shell-principal" aria-hidden={interfaceBloqueada || undefined}>
         <header className="topo">
           <button
             ref={abrirMenuRef}
@@ -429,7 +428,7 @@ export default function Shell() {
             <Icone nome="menu" />
           </button>
 
-          <NavLink to="/" className="topo__marca-mobile" aria-label="Corvia — ir para Hoje">
+          <NavLink to="/" className="topo__marca-mobile" aria-label="CorVIA — ir para o início">
             <img src="/corvia-logo-compacta.png" alt="" />
           </NavLink>
 
@@ -439,8 +438,8 @@ export default function Shell() {
               ref={buscaRef}
               value={buscaTopo}
               onChange={(e) => setBuscaTopo(e.target.value)}
-              placeholder="Buscar condição, fármaco, escore ou diretriz"
-              aria-label="Buscar em toda a Corvia"
+              placeholder="Buscar em todo o CorVIA"
+              aria-label="Buscar em todo o CorVIA"
             />
             <kbd aria-hidden="true">⌘ K</kbd>
             <button type="submit" aria-label="Executar busca"><Icone nome="seta" /></button>
@@ -457,7 +456,7 @@ export default function Shell() {
                 <span>Emergência</span>
               </button>
             )}
-            <NavLink to="/corvia-mail" className="topo__icone" aria-label="Abrir Corvia Mail">
+            <NavLink to="/corvia-mail" className="topo__icone" aria-label="Abrir CorVIA Mail">
               <img className="topo__mail-logo" src="/corviamail-icone.svg" alt="" />
             </NavLink>
             <div className="topo__conta" ref={contaRef}>
@@ -548,7 +547,7 @@ export default function Shell() {
         aria-hidden={!menuAberto}
       >
         <div className="gaveta__topo">
-          <img src="/corvia-logo-compacta.png" alt="Corvia" className="gaveta__logo" />
+          <img src="/corvia-logo-compacta.png" alt="CorVIA" className="gaveta__logo" />
           <button
             ref={fecharRef}
             type="button"
@@ -561,16 +560,39 @@ export default function Shell() {
         </div>
         <Navegacao secoes={secoes} aoNavegar={() => setMenuAberto(false)} />
         <button type="button" className="gaveta__sair" onClick={encerrarSessao}>
-          <Icone nome="sair" /> Sair da Corvia
+          <Icone nome="sair" /> Sair da CorVIA
         </button>
       </aside>
 
-      <nav className="barra-mobile" aria-label="Atalhos principais" aria-hidden={menuAberto || undefined}>
-        <NavLink to="/" end><IconeHoje /><span>Hoje</span></NavLink>
-        <NavLink to="/round"><Icone nome="pacientes" /><span>Pacientes</span></NavLink>
+      {acoesAberto && (
+        <>
+          <button className="acoes-mobile__fundo" type="button" aria-label="Fechar ações rápidas" onClick={() => setAcoesAberto(false)} />
+          <section className="acoes-mobile" role="dialog" aria-modal="true" aria-label="Ações rápidas">
+            <header>
+              <div><small>O que você precisa fazer agora?</small><strong>Ações rápidas</strong></div>
+              <button type="button" onClick={() => setAcoesAberto(false)} aria-label="Fechar"><Icone nome="fechar" /></button>
+            </header>
+            <div className="acoes-mobile__grade">
+              {ACOES_MOBILE.map((acao, index) => (
+                <NavLink key={`${acao.to}-${index}`} to={acao.to} onClick={() => setAcoesAberto(false)}>
+                  <span><Icone nome={acao.icone} /></span>
+                  <strong>{acao.rotulo}</strong>
+                </NavLink>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
+      <nav className="barra-mobile barra-mobile--command" aria-label="Atalhos principais" aria-hidden={interfaceBloqueada || undefined}>
+        <NavLink to="/" end><IconeHoje /><span>Início</span></NavLink>
         <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
+        <button type="button" className="barra-mobile__acao" onClick={() => setAcoesAberto(true)} aria-expanded={acoesAberto}>
+          <span className="barra-mobile__acao-icone"><Icone nome="mais" /></span><span>Ação</span>
+        </button>
+        <NavLink to="/assistente?modo=pessoal"><Icone nome="assistente" /><span>Assistente</span></NavLink>
         <button type="button" onClick={() => setMenuAberto(true)} aria-expanded={menuAberto}>
-          <Icone nome="mais" /><span>Mais</span>
+          <Icone nome="menu" /><span>Mais</span>
         </button>
       </nav>
 
