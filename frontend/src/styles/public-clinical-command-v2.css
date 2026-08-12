@@ -1,0 +1,160 @@
+/* Public face of the same CorVIA Clinical OS. No disconnected white SaaS shell. */
+.produto,
+.login {
+  --public-bg:#041019;
+  --public-panel:#081b27;
+  --public-panel-2:#0b2331;
+  --public-line:rgba(148,205,219,.14);
+  --public-text:#f2fbfc;
+  --public-muted:#91aab4;
+  --public-cyan:#42cad8;
+  --public-cyan-2:#78e5eb;
+  color:var(--public-text);
+  background:
+    radial-gradient(circle at 78% 4%,rgba(66,202,216,.09),transparent 30rem),
+    linear-gradient(180deg,#041019,#061722 58%,#041019);
+}
+
+/* ---------- Landing ---------- */
+.produto { min-height:100vh; }
+.produto .produto-nav {
+  position:sticky;top:0;z-index:30;
+  background:rgba(4,16,25,.88);
+  border-bottom:1px solid var(--public-line);
+  backdrop-filter:blur(18px) saturate(130%);
+}
+.produto .produto-nav__marca span,
+.produto .produto-nav nav a,
+.produto .produto-link { color:#9eb7bf; }
+.produto .produto-nav nav a:hover,.produto .produto-link:hover { color:#e9f9fa; }
+.produto .produto-botao {
+  color:#03131b;
+  background:linear-gradient(135deg,#42cad8,#78e5eb);
+  border-color:transparent;
+  box-shadow:0 12px 28px -18px rgba(66,202,216,.75);
+}
+.produto .produto-botao--secundario {
+  color:#caedf0;
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--public-line);
+  box-shadow:none;
+}
+.produto .produto-hero {
+  min-height:calc(100vh - 72px);
+  align-items:center;
+  background:
+    radial-gradient(circle at 76% 26%,rgba(66,202,216,.08),transparent 22rem),
+    transparent;
+}
+.produto .produto-hero__conteudo h1 { color:var(--public-text);letter-spacing:-.05em; }
+.produto .produto-hero__subtitulo { color:#9bb2ba; }
+.produto .produto-selo { color:var(--public-cyan-2); }
+.produto .produto-selo span { background:var(--public-cyan);box-shadow:0 0 0 6px rgba(66,202,216,.08); }
+.produto .produto-hero__garantias { color:#829fa8; }
+.produto .produto-hero__garantias svg { color:#5dd2a4; }
+.produto .produto-demo {
+  overflow:hidden;
+  background:linear-gradient(145deg,rgba(10,31,43,.96),rgba(5,18,27,.98));
+  border:1px solid var(--public-line);
+  box-shadow:0 30px 90px rgba(0,0,0,.32);
+}
+.produto .produto-demo__barra { background:#071923;border-bottom-color:var(--public-line); }
+.produto .produto-demo__busca { color:#718e98;background:rgba(255,255,255,.025);border-color:var(--public-line); }
+.produto .produto-demo__corpo aside { color:#78949e;background:#06151e;border-right-color:var(--public-line); }
+.produto .produto-demo__corpo aside strong { color:#e5f6f8;background:rgba(66,202,216,.09); }
+.produto .produto-demo__painel { background:radial-gradient(circle at 80% 0%,rgba(66,202,216,.055),transparent 18rem),#081b27; }
+.produto .produto-demo__saudacao small { color:var(--public-cyan-2); }
+.produto .produto-demo__saudacao strong { color:#effbfc; }
+.produto .produto-demo__saudacao span { color:#7e9aa4; }
+.produto .produto-demo__atalhos span,
+.produto .produto-demo__cards span { color:#bfd4da;background:rgba(255,255,255,.025);border-color:var(--public-line); }
+.produto .produto-demo__atalhos .ativo { color:#eaffff;background:rgba(66,202,216,.1);border-color:rgba(66,202,216,.2); }
+.produto .produto-demo__cards .escuro { background:#06151e; }
+.produto .produto-demo__cards small,.produto .produto-demo__cards i { color:#718d97; }
+.produto .produto-faixa { color:#73919b;background:#06151e;border-block:1px solid var(--public-line); }
+.produto .produto-faixa strong { color:#c6dade; }
+.produto .produto-faixa i { background:var(--public-line); }
+.produto .produto-secao,.produto .produto-qualidade { background:transparent; }
+.produto .produto-secao__cabecalho h2,.produto .produto-qualidade__texto h2 { color:#eefafb; }
+.produto .produto-secao__cabecalho>p:last-child,.produto .produto-qualidade__texto>p { color:#91aab4; }
+.produto .produto-pilares article {
+  background:linear-gradient(145deg,rgba(12,35,48,.92),rgba(7,24,34,.96));
+  border-color:var(--public-line);
+  box-shadow:none;
+}
+.produto .produto-pilares article h3 { color:#eefafb; }
+.produto .produto-pilares article p,.produto .produto-pilares article li { color:#8ea8b1; }
+.produto .produto-pilares__icone { color:var(--public-cyan-2);background:rgba(66,202,216,.08);border-color:rgba(66,202,216,.16); }
+.produto .produto-fluxo { background:linear-gradient(145deg,#071c28,#04141d);border-block:1px solid var(--public-line); }
+.produto .produto-fluxo__intro h2,.produto .produto-fluxo ol h3 { color:#eefafb; }
+.produto .produto-fluxo__intro p,.produto .produto-fluxo ol p { color:#8ca6af; }
+.produto .produto-fluxo ol li { border-color:var(--public-line); }
+.produto .produto-fluxo ol li>span { color:var(--public-cyan); }
+.produto .produto-qualidade__centro { color:#02131b;background:linear-gradient(145deg,#53d3df,#8ceaf0); }
+.produto .produto-qualidade__orbita { border-color:rgba(66,202,216,.18); }
+.produto .produto-qualidade__nota { color:#9bb4bc;background:#081c28;border-color:var(--public-line); }
+.produto .produto-qualidade__texto li { color:#9ab2ba; }
+.produto .produto-cta { background:linear-gradient(120deg,#0a3041,#071c28);border:1px solid rgba(66,202,216,.16);box-shadow:0 24px 70px rgba(0,0,0,.22); }
+.produto .produto-cta h2 { color:#f4feff; }
+.produto .produto-cta p,.produto .produto-cta__entrar { color:#a8c2c8; }
+.produto .produto-botao--claro { color:#03131b;background:#dff9fb; }
+.produto .produto-rodape { color:#718e98;background:#031019;border-top:1px solid var(--public-line); }
+.produto .produto-rodape a { color:#91aab4; }
+
+/* ---------- Login ---------- */
+.login.login--entrar { min-height:100vh; }
+.login .login-vitrine {
+  background:
+    radial-gradient(circle at 22% 20%,rgba(66,202,216,.13),transparent 21rem),
+    radial-gradient(circle at 82% 70%,rgba(159,137,255,.055),transparent 18rem),
+    linear-gradient(145deg,#061d29,#031018);
+  border-right:1px solid var(--public-line);
+}
+.login .login-vitrine__marca small { color:var(--public-cyan-2); }
+.login .login-vitrine__conteudo h1 { color:#f2fbfc;letter-spacing:-.045em; }
+.login .login-vitrine__conteudo h1 em { color:#78e5eb; }
+.login .login-vitrine__descricao { color:#95afb7; }
+.login .login-vitrine__beneficios li { color:#b7cdd2; }
+.login .login-vitrine__beneficios svg { color:#5dd2a4; }
+.login .login-vitrine__rodape { color:#66838d;border-top-color:var(--public-line); }
+.login .login-acesso {
+  background:
+    radial-gradient(circle at 88% 6%,rgba(66,202,216,.045),transparent 18rem),
+    #061722;
+}
+.login .login-acesso__topo { border-bottom:1px solid rgba(148,205,219,.08); }
+.login .login-acesso__conhecer { color:#9bb5bd; }
+.login .login-acesso__conteudo { color:#d8e8ec; }
+.login .login-acesso__introducao h2 { color:#f2fbfc;letter-spacing:-.04em; }
+.login .login-acesso__introducao>p:last-child { color:#8da6af; }
+.login .login-formulario label { color:#b6cbd1; }
+.login .login-formulario input {
+  color:#f1fbfc;
+  background:rgba(2,14,21,.58);
+  border-color:rgba(148,205,219,.16);
+}
+.login .login-formulario input::placeholder { color:#627f89; }
+.login .login-formulario input:focus { border-color:rgba(66,202,216,.52);box-shadow:0 0 0 3px rgba(66,202,216,.07); }
+.login .login-senha button,.login .login-campo__esqueci { color:#8fd8de; }
+.login .login-permanecer { background:rgba(255,255,255,.02);border-color:var(--public-line); }
+.login .login-permanecer label { color:#d7e7ea; }
+.login .login-permanecer p { color:#708d97; }
+.login .login-formulario__entrar { color:#03131b;background:linear-gradient(135deg,#42cad8,#78e5eb);box-shadow:0 14px 32px -18px rgba(66,202,216,.8); }
+.login .login-formulario__entrar:disabled { opacity:.5; }
+.login .login-acesso__novo { border-top-color:var(--public-line); }
+.login .login-acesso__novo span,.login .login-acesso__seguranca { color:#718e98; }
+.login .login-acesso__novo a { color:#90e2e7; }
+.login .login-acesso__rodape { color:#637f89;border-top-color:var(--public-line); }
+.login .login-acesso__rodape a { color:#819ca6; }
+.login .login-marca-mobile small { color:var(--public-cyan-2); }
+.login .login-marca-mobile h1 { color:#edf9fb; }
+.login .login-marca-mobile h1 strong { color:#79e3e9; }
+.login .login-marca-mobile__pulso path { stroke:#42cad8; }
+
+@media(max-width:900px){
+  .produto .produto-nav nav{display:none}
+  .produto .produto-hero{min-height:auto;padding-top:2.2rem}
+  .produto .produto-demo{margin-top:1.2rem}
+  .produto .produto-hero__conteudo h1{font-size:clamp(2.15rem,10vw,3.4rem)}
+  .login .login-acesso{min-height:100dvh}
+}
