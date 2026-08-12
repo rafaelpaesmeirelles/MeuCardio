@@ -6037,5 +6037,93 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "mapa-hipertensao-noturna-padrao-nao-dipper",
+    "title": "MAPA — Padrão não-dipper com hipertensão noturna predominante",
+    "modality": "Monitorização Ambulatorial da Pressão Arterial (MAPA)",
+    "theme": "Hipertensão",
+    "file_path": "diagrama/mapa-hipertensao-noturna-padrao-nao-dipper.jpg",
+    "findings": "Registro de MAPA de 24 horas em homem de 66 anos: as barras vermelhas marcam leituras acima do limiar (140/90 mmHg no período diurno, sombreado em amarelo; 120/80 mmHg no período noturno, sombreado em azul, das 23h às 7h). No período diurno a pressão fica predominantemente dentro da meta, com picos isolados; no período noturno a maioria das leituras permanece elevada, sem a queda fisiológica esperada do sono — o padrão descrito na própria fonte como hipertensão noturna predominante.",
+    "teaching_points": "A pressão arterial normal cai 10-20% durante o sono (padrão \"dipper\"). Quando essa queda não ocorre (\"não-dipper\", <10% de redução) ou a pressão sobe à noite (\"riser\"), o risco cardiovascular aumenta de forma independente da média de 24 horas — é um dos motivos pelos quais a MAPA agrega informação que a medida de consultório não capta. Neste traçado, o contraste é visual: a faixa noturna (fundo azul) concentra bem mais barras vermelhas que a diurna, mesmo com frequência cardíaca (traço azul, painel inferior) na faixa normal, o que afasta taquicardia como fator de confusão isolado. Achado de relevância prática: hipertensão predominantemente noturna pode passar despercebida por medida casual de consultório ou mesmo por MRPA malfeita (sem aferição durante o sono), e é um cenário em que a MAPA muda a conduta — inclusive orientando o horário de administração do anti-hipertensivo.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ambulatory_blood_pressure_monitoring._Elevated_nocturnal_BP._-_es.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Jmarchn, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "mapa",
+      "hipertensão noturna",
+      "padrão não-dipper",
+      "monitorização ambulatorial da pressão arterial",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cteph-angiografia-pulmonar-subtracao-digital",
+    "title": "Angiografia pulmonar por subtração digital — hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "modality": "Angiografia pulmonar (subtração digital)",
+    "theme": "Hipertensão pulmonar",
+    "file_path": "angiografia/cteph-angiografia-pulmonar-subtracao-digital.jpg",
+    "findings": "Angiografias pulmonares seletivas por subtração digital, quatro painéis (A-D) com projeções ântero-posterior e lateral das artérias pulmonares direita e esquerda em paciente com hipertensão pulmonar tromboembólica crônica (CTEPH). Os achados clássicos de doença tromboembólica crônica organizada são visíveis: irregularidade e afilamento abrupto de ramos (\"pruning\"), bandas e teias intraluminais, e áreas de amputação vascular com redução da perfusão periférica — em contraste com o padrão de arborização fina e progressiva de uma árvore pulmonar normal.",
+    "teaching_points": "A angiografia pulmonar por subtração digital continua sendo um dos métodos de referência para mapear a extensão e a localização (proximal vs. distal) da doença tromboembólica antes de decidir entre endarterectomia pulmonar cirúrgica, angioplastia pulmonar por balão ou tratamento clínico com riociguate — a decisão terapêutica na CTEPH depende diretamente de onde a obstrução está, não só de haver hipertensão pulmonar. As teias e bandas intraluminais (setas descritas na literatura de origem) diferenciam a obstrução crônica organizada do êmbolo agudo, que tipicamente aparece como falha de enchimento lisa e recente, não como rede fibrosada. Esta imagem complementa, com o método de referência para decisão cirúrgica, os demais achados de CTEPH já catalogados nesta galeria (radiografia com artérias pulmonares centrais proeminentes e a peça de endarterectomia).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CTEPH_pulmonary_artery_angiogram_(PA_angiogram).tif",
+    "license": "CC BY-SA 4.0",
+    "attribution": "ICA CTEPH, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "cteph",
+      "hipertensão pulmonar tromboembólica crônica",
+      "angiografia pulmonar",
+      "subtração digital",
+      "endarterectomia pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dilatacao-de-arteria-pulmonar-doppler-continuo-valva-pulmonar",
+    "title": "Ecocardiograma — Doppler contínuo transpulmonar em caso de dilatação da artéria pulmonar",
+    "modality": "Ecocardiograma",
+    "theme": "Hipertensão pulmonar",
+    "file_path": "ecocardiograma/dilatacao-de-arteria-pulmonar-doppler-continuo-valva-pulmonar.jpg",
+    "findings": "Doppler contínuo do fluxo transpulmonar (via valva pulmonar), com mapa de fluxo em cores no painel superior (visão paraesternal eixo curto) e o traçado espectral no painel principal. Medidas exibidas pelo próprio equipamento: velocidade máxima (PV Vmax) 2,30 m/s, velocidade média (PV Vmean) 1,68 m/s, gradiente de pico (PV maxPG) 21,2 mmHg, gradiente médio (PV meanPG) 11,2 mmHg, integral velocidade-tempo (PV VTI) 62,0 cm e frequência cardíaca de 42,6 bpm. Caso catalogado na fonte sob o título \"Dilated pulmonary artery\" (artéria pulmonar dilatada).",
+    "teaching_points": "⚠️ VERIFICAÇÃO HUMANA NECESSÁRIA quanto à etiologia específica: a fonte (CardioNetworks ECHOpedia) identifica o caso apenas pelo achado anatômico — dilatação da artéria pulmonar — sem declarar a causa de base. Dilatação da artéria pulmonar principal é achado inespecífico, compatível com hipertensão pulmonar de qualquer etiologia, mas também com regurgitação pulmonar significativa, comunicações com hiperfluxo pulmonar ou dilatação idiopática/pós-estenótica — a interpretação definitiva depende de correlacionar este traçado com as demais janelas ecocardiográficas do exame completo (estimativa de pressão sistólica de VD pelo jato de insuficiência tricúspide, tempo de aceleração pulmonar, septo interventricular) e com o quadro clínico, não deste único traçado isolado. O valor didático está no achado em si — a artéria pulmonar dilatada é um sinal indireto e frequentemente subvalorizado de hipertensão pulmonar ao ecocardiograma transtorácico de rotina, que complementa a medida direta de pressão pelo jato de insuficiência tricúspide.",
+    "source_name": "Wikimedia Commons / CardioNetworks ECHOpedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dilated_pulmonary_artery_E00384_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks Secretariat, cortesia do AMC Echolab, Academic Medical Center, Holanda — via Wikimedia Commons, CC BY-SA 3.0.",
+    "tags": [
+      "hipertensão pulmonar",
+      "artéria pulmonar dilatada",
+      "doppler contínuo",
+      "valva pulmonar",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "disfuncao-diastolica-padroes-doppler-mitral-e-tecidual",
+    "title": "Diagrama — Padrões de Doppler mitral e tecidual na avaliação da função diastólica",
+    "modality": "Diagrama esquemático (Doppler pulsado e tecidual)",
+    "theme": "Insuficiência cardíaca",
+    "file_path": "diagrama/disfuncao-diastolica-padroes-doppler-mitral-e-tecidual.png",
+    "findings": "Três painéis lado a lado comparam o fluxo mitral ao Doppler pulsado (ondas E e A, registro superior de cada painel) com o Doppler tecidual do anel mitral (ondas S', e' e a', registro inferior) em três cenários de função diastólica. A fonte descreve os três como: função diastólica normal (E e e' altos, relação E/e' normal); disfunção sem elevação de pressão de enchimento (E e e' baixos, relação E/e' normal); e disfunção com elevação de pressão de enchimento (E alto, e' baixo, relação E/e' alta, com S' reduzida).",
+    "teaching_points": "A relação E/e' (fluxo transmitral dividido pela velocidade do anel mitral ao Doppler tecidual) é o parâmetro central para estimar a pressão de enchimento do ventrículo esquerdo de forma não invasiva — pilar do diagnóstico de insuficiência cardíaca com fração de ejeção preservada (ICFEp), onde a fração de ejeção normal não exclui elevação da pressão de enchimento. O diagrama isola o raciocínio que confunde muitos residentes: olhar só a onda E do Doppler mitral pode enganar, porque ela reflete tanto a função de relaxamento do ventrículo quanto a pressão na aurícula esquerda — dois fatores que empurram a onda E em direções opostas conforme a fase da disfunção diastólica evolui (pseudonormalização). É a velocidade e' do Doppler tecidual, pouco dependente da pré-carga, que permite distinguir se uma onda E normal reflete função diastólica normal ou disfunção já pseudonormalizada — e é exatamente essa distinção que os três painéis comparam lado a lado.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Diastolic_function.png",
+    "license": "CC BY-SA 3.0 / GFDL 1.2+",
+    "attribution": "Astoylen, via Wikimedia Commons — CC BY-SA 3.0 / GNU Free Documentation License 1.2 ou posterior.",
+    "tags": [
+      "função diastólica",
+      "doppler tecidual",
+      "relação e/e'",
+      "icfep",
+      "pressão de enchimento do ventrículo esquerdo"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
