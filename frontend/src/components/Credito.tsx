@@ -1,6 +1,7 @@
 export default function Credito({ compacto = false }: { compacto?: boolean }) {
   return (
     <p
+      className="credito"
       style={{
         fontSize: compacto ? "0.7rem" : "0.76rem",
         color: "var(--texto-secundario)",
