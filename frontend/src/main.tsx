@@ -34,6 +34,7 @@ import "./styles/clinical-account-admin-command.css";
 import "./styles/clinical-editorial-safety.css";
 import "./styles/clinical-contextual-tip.css";
 import "./styles/clinical-agenda-final-polish.css";
+import "./styles/clinical-brand-final.css";
 import "./styles/clinical-overlay-safety.css";
 import "./styles/clinical-command-center-compat.css";
 
