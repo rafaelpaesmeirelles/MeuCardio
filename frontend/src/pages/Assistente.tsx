@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { type MouseEvent as ReactMouseEvent, useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { api } from "../lib/api";
@@ -8,19 +8,25 @@ import LogoAssistenteClinica, { IconeAssistenteClinica } from "../components/Log
 import LogoAssistentePessoal, { IconeAssistentePessoal } from "../components/LogoAssistentePessoal";
 
 type Modo = "clinica" | "pessoal";
-
-type Fonte = {
-  referencia: string; slug: string; titulo: string; tema: string; review_status: string;
-};
+type Fonte = { referencia: string; slug: string; titulo: string; tema: string; review_status: string };
 type FontePubmed = { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string };
 type Mensagem = {
-  papel: "user" | "assistant"; conteudo: string; fontes?: Fonte[]; fontesPubmed?: FontePubmed[];
+  papel: "user" | "assistant";
+  conteudo: string;
+  fontes?: Fonte[];
+  fontesPubmed?: FontePubmed[];
   truncado?: boolean;
 };
 type Status = {
-  ativo: boolean; provedor: string; modelo: string; modelos_disponiveis: string[];
-  limite_diario: number; usado_hoje: number; restante_hoje: number;
-  ferramentas_disponiveis_instalacao: boolean; ferramentas_consentidas: boolean;
+  ativo: boolean;
+  provedor: string;
+  modelo: string;
+  modelos_disponiveis: string[];
+  limite_diario: number;
+  usado_hoje: number;
+  restante_hoje: number;
+  ferramentas_disponiveis_instalacao: boolean;
+  ferramentas_consentidas: boolean;
 };
 type ConversaResumo = { id: number; titulo: string; modo: Modo; updated_at: string };
 
@@ -37,12 +43,11 @@ const SUGESTOES: Record<Modo, string[]> = {
   ],
 };
 
-/** Seletor exibido toda vez que o assinante entra em "Assistente" — decisão
- * do Rafael em 07/08/2026 (Trabalho 15): renomear a página única para
- * abrigar dois modos, em vez de duas páginas separadas. Clínica mantém
- * exatamente o comportamento de sempre (base institucional + PubMed, sem
- * ferramentas); Pessoal é novo — sem base científica, com acesso à agenda/
- * e-mail do próprio médico quando ele autorizar. */
+function modoDaUrl(search: string): Modo | null {
+  const valor = new URLSearchParams(search).get("modo");
+  return valor === "clinica" || valor === "pessoal" ? valor : null;
+}
+
 function Escolha({ onEscolher }: { onEscolher: (modo: Modo) => void }) {
   return (
     <div className="ia-escolha">
@@ -52,15 +57,15 @@ function Escolha({ onEscolher }: { onEscolher: (modo: Modo) => void }) {
         <button className="ia-escolha__cartao" onClick={() => onEscolher("clinica")}>
           <LogoAssistenteClinica />
           <p>
-            Conteúdo médico/científico — base da Corvia, PubMed e busca na internet
+            Conteúdo médico/científico — base da CorVIA, PubMed e busca na internet
             focada em literatura. As respostas vêm com as fontes usadas.
           </p>
         </button>
         <button className="ia-escolha__cartao" onClick={() => onEscolher("pessoal")}>
           <LogoAssistentePessoal />
           <p>
-            Rotina do dia a dia — agenda, compromissos, deslocamento, e-mail e
-            temas gerais. Não é fonte de conteúdo clínico.
+            Rotina profissional — agenda, compromissos, deslocamento, e-mail e temas
+            gerais. Não é fonte de conteúdo clínico.
           </p>
         </button>
       </div>
@@ -68,14 +73,9 @@ function Escolha({ onEscolher }: { onEscolher: (modo: Modo) => void }) {
   );
 }
 
-/** Consentimento individual para o Assistente Pessoal mexer em agenda/e-mail
- * — a rota já existia (PUT /api/ai/ferramentas/consentimento, Trabalho 5),
- * só nunca tinha tela que a chamasse. Aparece na primeira vez que o médico
- * entra em modo Pessoal sem ter concedido ainda; "usar sem essas
- * ferramentas" deixa seguir como assistente geral, sem tocar em agenda/
- * e-mail, e pode ser ativado depois pelo aviso dentro do chat. */
 function ConsentimentoPessoal({
-  instalado, onDecidir,
+  instalado,
+  onDecidir,
 }: {
   instalado: boolean;
   onDecidir: (ativar: boolean) => void;
@@ -99,7 +99,7 @@ function ConsentimentoPessoal({
         <p style={{ marginTop: 0 }}>
           Para ajudar na sua rotina, o Assistente Pessoal pode acessar a sua própria agenda
           (ver, criar, reagendar e cancelar compromisso, saber o próximo local e o trânsito
-          até lá) e ler a sua caixa do CorvIA Mail — sempre a sua conta, nunca a de outra
+          até lá) e ler a sua caixa do CorVIA Mail — sempre a sua conta, nunca a de outra
           pessoa. Nada disso é enviado por conta própria: ele só age quando você pedir na
           conversa.
         </p>
@@ -123,8 +123,9 @@ function ConsentimentoPessoal({
 }
 
 export default function Assistente() {
+  const { search } = useLocation();
   const [status, setStatus] = useState<Status | null>(null);
-  const [modo, setModo] = useState<Modo | null>(null);
+  const [modo, setModo] = useState<Modo | null>(() => modoDaUrl(search));
   const [mostrarConsentimento, setMostrarConsentimento] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
   const [pergunta, setPergunta] = useState("");
@@ -134,22 +135,56 @@ export default function Assistente() {
   const [erro, setErro] = useState("");
   const [historico, setHistorico] = useState<ConversaResumo[]>([]);
   const [mostrarHistorico, setMostrarHistorico] = useState(false);
-  // "" = Automático (recomendado) — o backend escolhe o modelo pela pergunta.
   const [modeloEscolhido, setModeloEscolhido] = useState("");
-  // A base CorvIA e o PubMed continuam sempre ativos no modo Clínica. A
-  // pesquisa web do Claude é uma etapa aprofundada e opcional ali, mas é o
-  // recurso central do modo Pessoal — por isso nasce ligada nesse modo.
-  const [usarInternet, setUsarInternet] = useState(false);
+  const [usarInternet, setUsarInternet] = useState(() => modoDaUrl(search) === "pessoal");
   const fim = useRef<HTMLDivElement>(null);
+  const entradaUrlProcessada = useRef("");
 
   useEffect(() => {
     api.get<Status>("/ai/status").then(setStatus).catch(() => setStatus(null));
   }, []);
-  useEffect(() => { fim.current?.scrollIntoView({ behavior: "smooth" }); }, [mensagens, pensando]);
+
+  useEffect(() => {
+    fim.current?.scrollIntoView({ behavior: "smooth" });
+  }, [mensagens, pensando]);
 
   const recarregarHistorico = (m: Modo) =>
     api.get<ConversaResumo[]>(`/ai/conversas?modo=${m}`).then(setHistorico).catch(() => {});
-  useEffect(() => { if (modo) recarregarHistorico(modo); }, [modo]);
+
+  useEffect(() => {
+    if (modo) recarregarHistorico(modo);
+  }, [modo]);
+
+  useEffect(() => {
+    if (!status || entradaUrlProcessada.current === search) return;
+    entradaUrlProcessada.current = search;
+    const params = new URLSearchParams(search);
+    const solicitado = modoDaUrl(search);
+    const perguntaRecebida = (params.get("pergunta") || "").trim();
+
+    if (perguntaRecebida) {
+      setModo("clinica");
+      setUsarInternet(false);
+      setPergunta(perguntaRecebida);
+      setMensagens([]);
+      setConversa(null);
+      setMostrarHistorico(false);
+      setErro("");
+      return;
+    }
+
+    if (solicitado) {
+      setModo(solicitado);
+      setUsarInternet(solicitado === "pessoal");
+      setMensagens([]);
+      setConversa(null);
+      setMostrarHistorico(false);
+      setErro("");
+      if (solicitado === "pessoal" && !status.ferramentas_consentidas) {
+        setMostrarConsentimento(true);
+      }
+    }
+  }, [search, status]);
 
   function escolherModo(escolhido: Modo) {
     setModo(escolhido);
@@ -174,11 +209,12 @@ export default function Assistente() {
   async function abrirConversa(id: number) {
     const c = await api.get<{
       modo: Modo;
-      mensagens: { papel: "user" | "assistant"; conteudo: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[] }[]
+      mensagens: { papel: "user" | "assistant"; conteudo: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[] }[];
     }>(`/ai/conversas/${id}`);
     setConversa(id);
     setMensagens(c.mensagens.map((m) => ({
-      ...m, fontes: m.fontes.length ? m.fontes : undefined,
+      ...m,
+      fontes: m.fontes.length ? m.fontes : undefined,
       fontesPubmed: m.fontes_pubmed?.length ? m.fontes_pubmed : undefined,
     })));
     setMostrarHistorico(false);
@@ -190,7 +226,7 @@ export default function Assistente() {
     setMostrarHistorico(false);
   }
 
-  async function apagarConversa(id: number, e: React.MouseEvent) {
+  async function apagarConversa(id: number, e: ReactMouseEvent) {
     e.stopPropagation();
     await api.delete(`/ai/conversas/${id}`);
     if (conversa === id) novaConversa();
@@ -205,13 +241,13 @@ export default function Assistente() {
     setMensagens((m) => [...m, { papel: "user", conteudo: texto }, { papel: "assistant", conteudo: "" }]);
     setPensando(true);
     setEtapa(modo === "clinica" ? "Preparando a consulta clínica…" : "Preparando a resposta…");
-    // Sinaliza para main.tsx que um streaming está em andamento: se o
-    // service worker trocar de versão nesse meio-tempo, a recarga da página
-    // fica pendente em vez de cortar a resposta no meio (ver main.tsx).
     (window as unknown as { __streamAtivo?: boolean }).__streamAtivo = true;
+
     try {
       await api.stream("/ai/perguntar/stream", {
-        pergunta: texto, conversation_id: conversa, modo,
+        pergunta: texto,
+        conversation_id: conversa,
+        modo,
         modelo: status?.provedor === "anthropic" && modeloEscolhido ? modeloEscolhido : undefined,
         usar_internet: status?.provedor === "anthropic" ? usarInternet : false,
       }, (evento) => {
@@ -219,10 +255,6 @@ export default function Assistente() {
           setEtapa(evento.etapa || "Consultando fontes…");
         } else if (evento.tipo === "delta") {
           setEtapa("");
-          // Acrescenta o pedaço à última mensagem (a bolha do assistente
-          // criada vazia acima) em vez de esperar o texto inteiro — é o que
-          // faz a resposta aparecer sendo "digitada" e mantém a conexão viva
-          // numa pergunta longa.
           setMensagens((m) => {
             const copia = [...m];
             const ultima = copia[copia.length - 1];
@@ -235,14 +267,15 @@ export default function Assistente() {
             const copia = [...m];
             const ultima = copia[copia.length - 1];
             copia[copia.length - 1] = {
-              ...ultima, fontes: evento.fontes,
+              ...ultima,
+              fontes: evento.fontes,
               fontesPubmed: evento.fontes_pubmed?.length ? evento.fontes_pubmed : undefined,
               truncado: evento.truncado,
             };
             return copia;
           });
           setStatus((s) => s && { ...s, usado_hoje: s.usado_hoje + 1, restante_hoje: s.restante_hoje - 1 });
-          if (modo) recarregarHistorico(modo);
+          recarregarHistorico(modo);
         } else if (evento.tipo === "erro") {
           setErro(evento.detalhe ?? "Não foi possível consultar o assistente.");
           setMensagens((m) => m.slice(0, -1));
@@ -323,31 +356,21 @@ export default function Assistente() {
                 style={{ padding: "0.35rem 0.5rem", fontSize: "0.82rem" }}
               >
                 <option value="">Automático (recomendado)</option>
-                {status.modelos_disponiveis.map((m) => (
-                  <option key={m} value={m}>{m}</option>
-                ))}
+                {status.modelos_disponiveis.map((m) => <option key={m} value={m}>{m}</option>)}
               </select>
               <label style={{ display: "flex", alignItems: "center", gap: 4, fontSize: "0.82rem" }}>
-                <input
-                  type="checkbox"
-                  checked={usarInternet}
-                  onChange={(e) => setUsarInternet(e.target.checked)}
-                />
+                <input type="checkbox" checked={usarInternet} onChange={(e) => setUsarInternet(e.target.checked)} />
                 Pesquisa web {modo === "clinica" ? "aprofundada (mais lenta)" : ""}
               </label>
             </>
           )}
-          <button className="botao botao--secundario" style={{ padding: "0.35rem 0.7rem", fontSize: "0.82rem" }}
-                  onClick={novaConversa}>
+          <button className="botao botao--secundario" style={{ padding: "0.35rem 0.7rem", fontSize: "0.82rem" }} onClick={novaConversa}>
             + Nova
           </button>
-          <button className="botao botao--secundario" style={{ padding: "0.35rem 0.7rem", fontSize: "0.82rem" }}
-                  onClick={() => setMostrarHistorico((v) => !v)}>
+          <button className="botao botao--secundario" style={{ padding: "0.35rem 0.7rem", fontSize: "0.82rem" }} onClick={() => setMostrarHistorico((v) => !v)}>
             Histórico ({historico.length})
           </button>
-          <span className="selo dado">
-            {status.restante_hoje} de {status.limite_diario} hoje
-          </span>
+          <span className="selo dado">{status.restante_hoje} de {status.limite_diario} hoje</span>
         </div>
       </header>
 
@@ -366,26 +389,32 @@ export default function Assistente() {
       {mostrarHistorico && (
         <div className="cartao" style={{ marginBottom: "0.8rem", maxHeight: 260, overflowY: "auto" }}>
           {historico.length === 0 ? (
-            <p style={{ margin: 0, color: "var(--texto-secundario)", fontSize: "0.88rem" }}>
-              Nenhuma conversa anterior ainda.
-            </p>
-          ) : (
-            historico.map((c) => (
-              <div key={c.id}
-                   onClick={() => abrirConversa(c.id)}
-                   style={{
-                     display: "flex", justifyContent: "space-between", alignItems: "center",
-                     padding: "0.5rem 0.3rem", borderBottom: "1px solid var(--borda)",
-                     cursor: "pointer", background: conversa === c.id ? "var(--fundo)" : "transparent",
-                   }}>
-                <span style={{ fontSize: "0.88rem" }}>{c.titulo}</span>
-                <button className="botao botao--secundario" style={{ padding: "0.2rem 0.5rem", fontSize: "0.76rem" }}
-                        onClick={(e) => apagarConversa(c.id, e)} aria-label="Apagar conversa">
-                  ✕
-                </button>
-              </div>
-            ))
-          )}
+            <p style={{ margin: 0, color: "var(--texto-secundario)", fontSize: "0.88rem" }}>Nenhuma conversa anterior ainda.</p>
+          ) : historico.map((c) => (
+            <div
+              key={c.id}
+              onClick={() => abrirConversa(c.id)}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "0.5rem 0.3rem",
+                borderBottom: "1px solid var(--borda)",
+                cursor: "pointer",
+                background: conversa === c.id ? "var(--fundo)" : "transparent",
+              }}
+            >
+              <span style={{ fontSize: "0.88rem" }}>{c.titulo}</span>
+              <button
+                className="botao botao--secundario"
+                style={{ padding: "0.2rem 0.5rem", fontSize: "0.76rem" }}
+                onClick={(e) => apagarConversa(c.id, e)}
+                aria-label="Apagar conversa"
+              >
+                ✕
+              </button>
+            </div>
+          ))}
         </div>
       )}
 
@@ -417,9 +446,7 @@ export default function Assistente() {
             )}
             <div className="ia__sugestoes">
               {SUGESTOES[modo].map((s) => (
-                <button key={s} className="ia__sugestao" onClick={() => setPergunta(s)}>
-                  {s}
-                </button>
+                <button key={s} className="ia__sugestao" onClick={() => setPergunta(s)}>{s}</button>
               ))}
             </div>
           </div>
@@ -428,52 +455,45 @@ export default function Assistente() {
         {mensagens.map((m, i) => (
           <div key={i} className={`ia__msg ia__msg--${m.papel}`}>
             {m.papel === "assistant" ? (
-              // Bolha do assistente nasce vazia (enviar() já a insere antes do
-              // primeiro pedaço chegar) — mostra os três pontinhos nela mesma
-              // em vez de uma bolha extra embaixo, enquanto não há texto.
               m.conteudo === "" && pensando && i === mensagens.length - 1 ? (
                 <span className="ia__carregando">
                   <span className="ia__pensando" aria-hidden="true"><span /><span /><span /></span>
                   <small role="status">{etapa || "Preparando resposta…"}</small>
                 </span>
               ) : (
-              <>
-                <Markdown remarkPlugins={[remarkGfm]}>{m.conteudo}</Markdown>
-                {m.truncado && (
-                  <p className="selo selo--pendente" style={{ display: "inline-block", marginTop: 4 }}>
-                    Resposta cortada por limite de tamanho — pode estar incompleta. Peça para continuar.
-                  </p>
-                )}
-                {m.fontes && m.fontes.length > 0 && (
-                  <div className="ia__fontes">
-                    <p className="eyebrow">Fontes consultadas</p>
-                    {m.fontes.map((f) => (
-                      <Link key={f.slug} to={`/biblioteca/${f.slug}`} className="ia__fonte">
-                        <span className="dado ia__fonte__marca">{f.referencia}</span>
-                        <span>{f.titulo}</span>
-                        {f.review_status === "verificacao_humana_necessaria" && (
-                          <span className="selo selo--pendente">verificar</span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-                {m.fontesPubmed && m.fontesPubmed.length > 0 && (
-                  <div className="ia__fontes">
-                    <p className="eyebrow">Literatura pública (PubMed) — fonte externa, não institucional</p>
-                    {m.fontesPubmed.map((f) => (
-                      <a key={f.pmid} href={f.url} target="_blank" rel="noopener noreferrer" className="ia__fonte">
-                        <span className="dado ia__fonte__marca">PM</span>
-                        <span>{f.titulo} — {f.autores} et al. {f.revista}, {f.ano}</span>
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </>
+                <>
+                  <Markdown remarkPlugins={[remarkGfm]}>{m.conteudo}</Markdown>
+                  {m.truncado && (
+                    <p className="selo selo--pendente" style={{ display: "inline-block", marginTop: 4 }}>
+                      Resposta cortada por limite de tamanho — pode estar incompleta. Peça para continuar.
+                    </p>
+                  )}
+                  {m.fontes && m.fontes.length > 0 && (
+                    <div className="ia__fontes">
+                      <p className="eyebrow">Fontes consultadas</p>
+                      {m.fontes.map((f) => (
+                        <Link key={f.slug} to={`/biblioteca/${f.slug}`} className="ia__fonte">
+                          <span className="dado ia__fonte__marca">{f.referencia}</span>
+                          <span>{f.titulo}</span>
+                          {f.review_status === "verificacao_humana_necessaria" && <span className="selo selo--pendente">verificar</span>}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                  {m.fontesPubmed && m.fontesPubmed.length > 0 && (
+                    <div className="ia__fontes">
+                      <p className="eyebrow">Literatura pública (PubMed) — fonte externa, não institucional</p>
+                      {m.fontesPubmed.map((f) => (
+                        <a key={f.pmid} href={f.url} target="_blank" rel="noopener noreferrer" className="ia__fonte">
+                          <span className="dado ia__fonte__marca">PM</span>
+                          <span>{f.titulo} — {f.autores} et al. {f.revista}, {f.ano}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </>
               )
-            ) : (
-              m.conteudo
-            )}
+            ) : m.conteudo}
           </div>
         ))}
         <div ref={fim} />
@@ -487,16 +507,17 @@ export default function Assistente() {
           value={pergunta}
           onChange={(e) => setPergunta(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(); }
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault();
+              void enviar();
+            }
           }}
           placeholder={modo === "clinica"
             ? "Descreva a dúvida clínica, sem identificar o paciente…"
             : "Pergunte sobre sua agenda, e-mail ou qualquer tema do dia a dia…"}
           aria-label="Pergunta"
         />
-        <button className="botao" onClick={enviar} disabled={!pergunta.trim() || pensando}>
-          Enviar
-        </button>
+        <button className="botao" onClick={() => void enviar()} disabled={!pergunta.trim() || pensando}>Enviar</button>
       </div>
       <p className="ia__rodape">
         {modo === "clinica"
