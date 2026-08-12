@@ -1,19 +1,25 @@
-/** Logo do CorvIA Mail — envelope com o coração-ECG da marca no lugar de
- * encontro da aba, escolhido pelo Rafael em 30/07/2026. O ícone é um SVG
- * fixo (`/corviamail-icone.svg`, só navy + vermelho — cores já oficiais);
- * a palavra "CorvIA Mail" é texto de verdade, não parte do arquivo, para
- * não depender de fonte embutida no SVG e continuar selecionável/acessível.
- * O "Mail" em teal reaproveita o papel de acento do sistema de tokens —
- * mesma lógica das opções de logo apresentadas ao Rafael antes da escolha. */
+/** Logo do CorVIA Mail.
+ * Em superfícies de marca completas, combina ícone + wordmark. No modo
+ * compacto (topbar da caixa de entrada), o nome já aparece na identidade da
+ * conta ao lado; por isso exibimos somente o símbolo e evitamos duplicidade.
+ */
 export default function LogoCorviaMail({ tamanho = "normal" }: { tamanho?: "normal" | "compacto" }) {
   const compacto = tamanho === "compacto";
+
+  if (compacto) {
+    return (
+      <span className="corvia-mail-mark" role="img" aria-label="CorVIA Mail">
+        <img src="/corviamail-icone.svg" alt="" aria-hidden="true" style={{ height: 28, width: "auto" }} />
+      </span>
+    );
+  }
+
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: compacto ? "0.4rem" : "0.6rem" }}>
-      <img src="/corviamail-icone.svg" alt="" aria-hidden="true"
-           style={{ height: compacto ? 28 : 48, width: "auto" }} />
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.6rem" }}>
+      <img src="/corviamail-icone.svg" alt="" aria-hidden="true" style={{ height: 48, width: "auto" }} />
       <span style={{
         fontFamily: "Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif",
-        fontWeight: 700, fontSize: compacto ? "1.1rem" : "1.6rem", letterSpacing: "-0.01em", lineHeight: 1,
+        fontWeight: 700, fontSize: "1.6rem", letterSpacing: "-0.01em", lineHeight: 1,
       }}>
         <span style={{ color: "var(--primaria)" }}>Corv</span>
         <span style={{ color: "var(--acao)" }}>IA</span>
