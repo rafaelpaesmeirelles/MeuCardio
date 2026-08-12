@@ -808,5 +808,45 @@
       "choque-cardiogenico"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "tromboembolismo-venoso-agudo-por-amivantamabe-e-lazertinibe",
+    "titulo": "Tromboembolismo venoso agudo em uso de amivantamabe + lazertinibe",
+    "gatilho": "Edema assimétrico de membro, dispneia súbita ou dor torácica pleurítica em paciente sob amivantamabe + lazertinibe (câncer de pulmão EGFR-mutado) — TEV ocorreu em 36% dos pacientes no ensaio pivotal MARIPOSA, contra 8% no braço comparador",
+    "ordem": 116,
+    "documento_slug": "amivantamabe-e-lazertinibe-tromboembolismo-venoso-e-reacoes-relacionadas-a-infusao",
+    "fluxograma_slug": "fluxograma-tromboembolismo-pulmonar-agudo-associado-ao-cancer-e-trombocitopenia",
+    "relacionados": [
+      "tromboembolismo-pulmonar",
+      "sangramento-maior-em-paciente-anticoagulado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-de-diferenciacao-por-inibidor-de-menina-revumenibe",
+    "titulo": "Síndrome de diferenciação por inibidor de menina (revumenibe)",
+    "gatilho": "Febre, dispneia, edema ou hipotensão em paciente sob revumenibe (leucemia mieloide aguda com rearranjo de KMT2A ou mutação de NPM1) — evento adverso grau ≥3 em 16,0% na coorte NPM1-mutada, mecanismo compartilhado com a síndrome de diferenciação por gilteritinibe",
+    "ordem": 117,
+    "documento_slug": "inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao",
+    "fluxograma_slug": "fluxograma-sindrome-de-diferenciacao-por-gilteritinibe",
+    "relacionados": [
+      "prolongamento-de-qtc-por-inibidor-de-menina-revumenibe",
+      "insuficiencia-cardiaca-aguda-descompensada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-e-cardiotoxicidade-aguda-por-anticorpo-biespecifico-direcionador-de-celulas-t",
+    "titulo": "Choque e cardiotoxicidade aguda por anticorpo biespecífico direcionador de células T (BsAb)",
+    "gatilho": "Febre e hipotensão, arritmia nova (ex.: fibrilação atrial com mosunetuzumabe), suspeita de miocardite (sobretudo com teclistamabe/agentes anti-BCMA) ou CIVD (com blinatumomabe) durante o escalonamento de dose de anticorpo biespecífico anti-CD3 — evento cardiovascular ocorreu em 18,4% das notificações de farmacovigilância, mediana de 7 dias após o início, e parte relevante sem síndrome de liberação de citocinas clinicamente evidente",
+    "ordem": 118,
+    "documento_slug": "cardiotoxicidade-de-anticorpos-biespecificos-direcionadores-de-celulas-t-em-neoplasias-hematologicas",
+    "fluxograma_slug": "fluxograma-sindrome-de-liberacao-de-citocinas-car-t-com-choque",
+    "relacionados": [
+      "sindrome-de-liberacao-de-citocinas-car-t-com-choque",
+      "fibrilacao-atrial-de-alta-resposta",
+      "queda-de-plaquetas-em-uso-de-heparina-suspeita-de-hit"
+    ],
+    "review_status": "revisado"
   }
 ]

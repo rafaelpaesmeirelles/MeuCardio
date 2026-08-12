@@ -3338,5 +3338,184 @@
       }
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Dispositivos citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "pre-alta-pos-revascularizacao-transcarotidea-tcar",
+    "condicao": "Pré-alta após revascularização transcarotídea (TCAR) por estenose de carótida",
+    "resumo": "O que checar antes da alta após TCAR — modalidade de stenting carotídeo com fluxo reverso protegido, técnica distinta da endarterectomia e do stent transfemoral convencional já cobertos na base — com foco no sinal reprodutível desta evidência (infarto do miocárdio) e nas complicações de acesso e de nervo craniano próprias da técnica.",
+    "documento_origem": "revascularizacao-transcarotidea-tcar-tecnica-e-evidencia-comparativa-2024-2026",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lyden SP, et al. Thirty-day outcomes following transcarotid artery revascularization with integrated embolic protection: The PERFORMANCE III study. J Vasc Surg. 2026 May 26:S0741-5214(26)01170-5. DOI: 10.1016/j.jvs.2026.05.027. PMID: 42203082.",
+      "Jim J, Dermody M, Peterson B, Berman SS, Mouawad NJ, Ricotta J, et al. Prospective, Multicenter Evaluation of Transcarotid Artery Revascularization in Standard-Risk Patients: 30-Day Outcomes of the ROADSTER 3 Study. Ann Neurol. 2026;99(3):705-712. DOI: 10.1002/ana.78104. PMID: 41277872.",
+      "Jiang ZC, Hu QF, Huang JM, et al. Transcarotid Artery Revascularization for Asymptomatic Carotid Stenosis: A Systematic Review and Meta-Analysis. Transl Stroke Res. 2026;17(3):63. DOI: 10.1007/s12975-026-01457-2. PMID: 42262421."
+    ],
+    "itens": [
+      {
+        "id": "tcar-exame-neurologico-pre-pos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exame neurológico focal comparado entre o basal pré-procedimento e a avaliação pré-alta — o desfecho neurológico é o que orienta a decisão na maioria dos protocolos, mesmo não sendo o sinal mais consistente desta evidência",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "tcar-sitio-acesso-cervical",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sítio de acesso cervical (base do pescoço) inspecionado quanto a hematoma expansivo, sangramento ou sinais de compressão de via aérea antes da alta — acesso direto de artéria carótida comum, distinto do acesso femoral do stent transfemoral convencional",
+        "origem_secao": "O que é, e onde se encaixa"
+      },
+      {
+        "id": "tcar-lesao-nervo-craniano",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Função de nervo craniano avaliada antes da alta (voz/deglutição/desvio de língua) — complicação relatada em até 0,6% dos casos no ROADSTER 3, geralmente resolvida em até 6 meses, mas que precisa ser identificada e documentada na alta para orientar o seguimento",
+        "origem_secao": "ROADSTER 3 — expansão para risco cirúrgico padrão"
+      },
+      {
+        "id": "tcar-vigilancia-infarto-miocardio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Vigilância clínica para infarto do miocárdio periprocedimento (dor torácica, dispneia, troponina se houver suspeita clínica) — é o sinal mais consistente e reprodutível entre os quatro estudos desta técnica, mais do que o desfecho neurológico isolado",
+        "origem_secao": "Síntese — o que os quatro estudos, juntos, sustentam"
+      },
+      {
+        "id": "tcar-antiagregacao-dupla",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Esquema antiagregante/antitrombótico pós-stent carotídeo revisado e prescrito conforme a mesma indicação já usada para CAS transfemoral — este documento não define esquema próprio de antiagregação para a TCAR, então usar o já estabelecido no documento de estenose de carótida ESC 2024 da base",
+        "origem_secao": "VERIFICAÇÃO HUMANA NECESSÁRIA"
+      },
+      {
+        "id": "tcar-nao-tratar-como-superioridade-comprovada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao orientar o paciente sobre a técnica, não afirmar que a TCAR é \"comprovadamente mais segura\" que a endarterectomia — os dados de segurança de PERFORMANCE III e ROADSTER 3 são de estudos de braço único, sem grupo comparador, e não demonstram superioridade neurológica sobre a cirurgia aberta",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "tcar-retorno-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno estruturado agendado, com data definida, para reavaliação clínica e de imagem (ex.: duplex de carótida) do sítio tratado",
+        "origem_secao": "Síntese — o que os quatro estudos, juntos, sustentam"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Aorta e doença arterial periférica citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "inicio-de-amivantamabe-e-lazertinibe-profilaxia-obrigatoria-de-tev",
+    "condicao": "Início de amivantamabe associado a lazertinibe no câncer de pulmão de não pequenas células com mutação de EGFR",
+    "resumo": "O que checar ao iniciar a combinação amivantamabe + lazertinibe — anticorpo biespecífico EGFR-MET associado a inibidor de tirosina-quinase, com tromboembolismo venoso em 36% e reação relacionada à infusão em 63% dos pacientes no ensaio pivotal MARIPOSA, e profilaxia anticoagulante obrigatória pela bula do FDA.",
+    "documento_origem": "amivantamabe-e-lazertinibe-tromboembolismo-venoso-e-reacoes-relacionadas-a-infusao",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cho BC, Felip E, Hayashi H, et al. Amivantamab plus Lazertinib in Previously Untreated EGFR-Mutated Advanced NSCLC (MARIPOSA). N Engl J Med. 2024;391(16):1486-1498. PMID 38924756. doi:10.1056/NEJMoa2403614",
+      "Yang JC, et al. Overall Survival with Amivantamab-Lazertinib in EGFR-Mutated Advanced NSCLC (MARIPOSA). N Engl J Med. 2025;393(17):1681-1693. PMID 40923797. doi:10.1056/NEJMoa2503001",
+      "RYBREVANT (amivantamab-vmjw) — bula/rótulo do FDA, DailyMed (National Library of Medicine), setid 1466c070-9f97-4fa4-a955-6a6b59981fb8"
+    ],
+    "itens": [
+      {
+        "id": "amivantamabe-risco-basal-tev-sangramento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Risco basal de tromboembolismo venoso e de sangramento avaliado antes de iniciar a combinação, e contraindicação a anticoagulação afastada — TEV ocorreu em 36% dos pacientes com a combinação, contra 8% no braço de monoterapia com osimertinibe (bula RYBREVANT/FDA)",
+        "origem_secao": "Monitorização — síntese prática"
+      },
+      {
+        "id": "amivantamabe-profilaxia-anticoagulante-obrigatoria",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação profilática prescrita para os primeiros 4 meses de tratamento, com antagonista de vitamina K explicitamente EXCLUÍDO como opção — a bula do FDA não nomeia um agente preferencial específico entre os demais, então a escolha do anticoagulante fica a critério clínico",
+        "origem_secao": "Tratamento — profilaxia obrigatória de TEV"
+      },
+      {
+        "id": "amivantamabe-estrutura-primeira-infusao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Infraestrutura pronta para interromper ou reduzir a velocidade de infusão disponível antes da primeira infusão — reação relacionada à infusão ocorreu em 63% dos pacientes, predominantemente na primeira infusão, com espectro de calafrios/dispneia/hipotensão até reação com risco de vida",
+        "origem_secao": "Manejo agudo das reações relacionadas à infusão"
+      },
+      {
+        "id": "amivantamabe-vigilancia-tvp-tep",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de TVP/TEP a relatar de imediato (edema assimétrico de membro, dispneia súbita, dor torácica pleurítica) ao longo de todo o tratamento, não só nos primeiros 4 meses de profilaxia",
+        "origem_secao": "Monitorização — síntese prática"
+      },
+      {
+        "id": "amivantamabe-suspeita-tev-conduta",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Fluxo de confirmação por imagem definido para suspeita de TEV (angiotomografia de tórax ou doppler venoso), com conduta subsequente conforme o protocolo já estabelecido de TEV oncológico da base",
+        "origem_secao": "Monitorização — síntese prática"
+      },
+      {
+        "id": "amivantamabe-nao-relaxar-por-eficacia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Profilaxia anticoagulante tratada como parte do desenho terapêutico, não como conduta opcional — é ela que sustenta o perfil de benefício-risco favorável (HR 0,75 para mortalidade, 60% vs. 51% de sobrevida global em 3 anos) documentado no ensaio MARIPOSA; omiti-la altera essa relação",
+        "origem_secao": "Armadilha de leitura"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Cardio-oncologia citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "acompanhamento-pos-implante-de-cdi-extravascular-ev-icd",
+    "condicao": "Acompanhamento após implante de cardiodesfibrilador extravascular (EV-ICD)",
+    "resumo": "O que checar após o implante de EV-ICD — terceira via de desfibrilador implantável, com eletrodo em mediastino anterior por via substernal, sem contato com coração ou vasos, mas com capacidade de estimulação antitaquicárdica (ATP) que o CDI subcutâneo não tem — incluindo a vigilância para choque inapropriado, cuja taxa cumulativa cresce de 9,8% em 1 ano para 17,5% em 3 anos.",
+    "documento_origem": "cdi-extravascular-ev-icd-estudo-pivotal-e-seguimento-de-longo-prazo",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Friedman P, Murgatroyd F, Boersma LVA, Manlucu J, O'Donnell D, Knight BP, Clémenty N, Leclercq C, Amin A, Merkely B, Birgersdotter-Green U, Kalscheur M, Krahn AD, Lever N, Wright DJ, Ellenbogen K, Kanuru N, Meyer TE, Cerkvenik J, Perschbacher D, Wilde AAM; Extravascular ICD Pivotal Study Investigators. Performance and Safety of the Extravascular Implantable Cardioverter Defibrillator Through Long-Term Follow-Up: Final Results From the Pivotal Study. Circulation. 2025;151(4):322-332. DOI: 10.1161/CIRCULATIONAHA.124.071795. PMID: 39327797"
+    ],
+    "itens": [
+      {
+        "id": "ev-icd-nao-indicado-se-bradicardia-permanente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de indicação concomitante de estimulação antibradicardia permanente confirmada antes/no momento do implante — assim como o CDI subcutâneo, o EV-ICD não oferece essa capacidade; paciente com essa indicação não é candidato ao sistema isoladamente",
+        "origem_secao": "Limitações"
+      },
+      {
+        "id": "ev-icd-sitio-substernal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sítio de implante substernal (mediastino anterior) inspecionado antes da alta quanto a dor, hematoma ou sinais de deslocamento de eletrodo — complicação relatada em 2,8% dos pacientes no estudo pivotal",
+        "origem_secao": "Resultados do estudo pivotal — desfecho de 3 anos"
+      },
+      {
+        "id": "ev-icd-orientacao-ausencia-comparacao-randomizada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao orientar o paciente sobre a escolha do sistema, não afirmar superioridade comprovada sobre CDI transvenoso ou subcutâneo — o estudo pivotal é uma coorte de braço único, sem grupo comparador randomizado contemporâneo",
+        "origem_secao": "Limitações"
+      },
+      {
+        "id": "ev-icd-programacao-choque-inapropriado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programação de detecção revisada no seguimento com atenção à taxa cumulativa de choque inapropriado, que cresce de 9,8% em 1 ano para 17,5% em 3 anos — sinal de que a curva de aprendizado de programação segue sendo ajustada ao longo da experiência com o sistema",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "ev-icd-interrogacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno estruturado agendado, com data definida, para interrogação do dispositivo e revisão de eventuais episódios de terapia (choque ou ATP) registrados",
+        "origem_secao": "Resultados do estudo pivotal — desfecho de 3 anos"
+      },
+      {
+        "id": "ev-icd-diretriz-indicacao-nao-conferida",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Indicação de EV-ICD frente às outras duas vias (transvenoso e subcutâneo) discutida em Heart Team/eletrofisiologia — a classificação formal de indicação por diretriz específica para o EV-ICD não foi conferida na fonte desta sessão",
+        "origem_secao": "Limitações"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Dispositivos citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
