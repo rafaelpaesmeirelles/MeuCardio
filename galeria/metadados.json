@@ -6125,5 +6125,72 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tep-defeito-de-enchimento-arteria-pulmonar-esquerda-angiotc",
+    "title": "Angiotomografia de tórax — Defeito de enchimento (êmbolo) na artéria pulmonar esquerda",
+    "modality": "Angiotomografia",
+    "theme": "Tromboembolismo",
+    "file_path": "tc/tep-defeito-de-enchimento-arteria-pulmonar-esquerda-angiotc.png",
+    "findings": "Corte coronal de angiotomografia de tórax com contraste, evidenciando defeito de enchimento intraluminal (área hipoatenuante, sem realce pelo contraste) na artéria pulmonar esquerda, indicado por seta vermelha sobreposta pelo autor da imagem — achado direto de tromboembolismo pulmonar agudo. As artérias pulmonares direita e os ramos lobares/segmentares de ambos os pulmões estão preenchidos normalmente pelo contraste (hiperatenuantes, sem falha de enchimento), o que caracteriza acometimento unilateral neste corte, diferente do padrão de êmbolo em sela (bilateral, na bifurcação do tronco da artéria pulmonar) já catalogado nesta galeria.",
+    "teaching_points": "A angiotomografia de artérias pulmonares (angio-TC) é o exame de escolha para diagnóstico de tromboembolismo pulmonar (TEP) agudo quando há disponibilidade e ausência de contraindicação ao contraste iodado — o defeito de enchimento intraluminal é o sinal direto e definidor do diagnóstico, distinto dos sinais indiretos (dilatação de câmaras direitas, refluxo de contraste para a veia cava inferior, opacidades em cunha de infarto pulmonar). Este achado complementa, na galeria, o caso já catalogado de êmbolo \"em sela\" (impactado na bifurcação do tronco da artéria pulmonar, tipicamente bilateral e associado a maior gravidade hemodinâmica) — aqui o êmbolo está mais distalmente, num ramo lobar/segmentar de um único pulmão, ilustrando que o TEP agudo tem espectro anatômico variável, e a extensão/localização do trombo (central vs. lobar vs. segmentar) é parte da estratificação de risco e da decisão terapêutica, junto com os parâmetros clínicos e de sobrecarga de ventrículo direito.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:PELeftMark.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "James Heilman, MD (Doc James), via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "angiotomografia",
+      "defeito de enchimento",
+      "artéria pulmonar",
+      "TEP agudo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "amiloidose-cardiaca-al-padrao-em-tempestade-de-neve-4-camaras",
+    "title": "Ecocardiograma transtorácico — Amiloidose cardíaca AL, padrão de textura miocárdica em \"tempestade de neve\", corte apical de 4 câmaras",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiomiopatias",
+    "file_path": "ecocardiograma/amiloidose-cardiaca-al-padrao-em-tempestade-de-neve-4-camaras.jpg",
+    "findings": "Ecocardiograma transtorácico bidimensional, corte apical de 4 câmaras, em paciente com amiloidose sistêmica de cadeia leve (AL) confirmada. A fonte (relato de caso publicado, PMC3641022) descreve hipertrofia ventricular esquerda aparente com textura miocárdica em \"tempestade de neve\" (\"snowstorm\" appearance) — o padrão granular/cintilante clássico e historicamente descrito da infiltração amiloide, atribuído ao espessamento e à textura reflectiva anômala do miocárdio infiltrado por fibrilas amiloides.",
+    "teaching_points": "O padrão granular/cintilante (\"sparkling\"/\"tempestade de neve\") ao ecocardiograma bidimensional foi historicamente um dos primeiros sinais descritos de amiloidose cardíaca, décadas antes da disseminação da ressonância com realce tardio e da cintilografia com pirofosfato — mas tem sensibilidade limitada (pode estar ausente em fase inicial da doença) e não é exclusivo de amiloidose, podendo aparecer também em outras cardiomiopatias hipertróficas/infiltrativas, então não deve ser usado isoladamente para fechar diagnóstico. Este achado complementa, nesta galeria, o espessamento parietal ao modo-M, o padrão restritivo ao Doppler mitral, o \"apical sparing\" ao strain longitudinal, a cintilografia com Tc-PYP e a histologia com vermelho-congo já catalogados (majoritariamente sob o recorte de amiloidose senil/ATTR do idoso) — aqui a imagem vem de um caso de amiloidose AL (cadeia leve), etiologia distinta da ATTR (transtirretina) tanto em fisiopatologia (imunoglobulina monoclonal vs. proteína transtirretina mal dobrada) quanto em tratamento (quimioterapia dirigida ao clone de plasmócitos vs. estabilizadores de transtirretina/silenciadores de RNA) — o achado ecocardiográfico de hipertrofia com textura anômala é compartilhado entre as duas etiologias, mas a confirmação etiológica exige a investigação complementar (eletroforese de proteínas, cadeias leves livres, cintilografia com PYP, biópsia) já descrita nos outros itens desta galeria.",
+    "source_name": "Wikimedia Commons / PubMed Central (PMC3641022)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Echocardiographic_findings_of_primary_systemic_AL_amyloidosis.jpg",
+    "license": "CC BY 2.0",
+    "attribution": "Chen Wang et al., relato de caso em acesso aberto (PMC3641022), via Wikimedia Commons — CC BY 2.0.",
+    "tags": [
+      "amiloidose cardíaca",
+      "amiloidose AL",
+      "cadeia leve",
+      "hipertrofia ventricular esquerda",
+      "ecocardiograma",
+      "cardiomiopatia infiltrativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-suboclusiva-de-descendente-anterior-proximal-pos-aspiracao-de-trombo",
+    "title": "Angiografia coronária — Estenose suboclusiva de artéria descendente anterior proximal, após aspiração de trombo",
+    "modality": "Angiografia",
+    "theme": "Doença coronariana",
+    "file_path": "angiografia/estenose-suboclusiva-de-descendente-anterior-proximal-pos-aspiracao-de-trombo.jpg",
+    "findings": "Angiografia coronária seletiva evidenciando estenose suboclusiva (grau crítico) no segmento proximal da artéria descendente anterior, já após aspiração de trombo (trombectomia por aspiração) — com preenchimento contrastado dos ramos distais preservado, compatível com fluxo residual anterógrado restabelecido após a trombectomia, mas com lesão estenótica de alto grau ainda presente no segmento proximal, exigindo intervenção definitiva (angioplastia com implante de stent).",
+    "teaching_points": "A trombectomia por aspiração manual é uma ferramenta adjuvante no tratamento percutâneo do infarto com supradesnivelamento de ST quando há carga trombótica volumosa visível à angiografia — remove o trombo intraluminal e permite melhor avaliação angiográfica da lesão aterosclerótica subjacente (a estenose real muitas vezes fica mascarada pelo trombo sobreposto antes da aspiração), mas não substitui a angioplastia com stent, que trata a placa e a estenose residual, como evidenciado nesta imagem. Esta imagem complementa, na galeria, a angiografia de suboclusão crítica de tronco de coronária esquerda já catalogada — aqui o vaso acometido é a descendente anterior proximal, território anatômico distinto (área de risco correspondente à parede anterior/septal do ventrículo esquerdo, não à totalidade do território irrigado pelo tronco), o que ilustra ao leitor que a angiografia coronária descreve a lesão vaso a vaso, e a gravidade clínica de uma suboclusão depende tanto do grau da estenose quanto de qual território miocárdico o vaso acometido irriga.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:High_degree_stenosis_in_proximal_LAD.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Usuário 6129bm, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "doença coronariana",
+      "angiografia coronária",
+      "descendente anterior",
+      "trombectomia por aspiração",
+      "síndrome coronariana aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
