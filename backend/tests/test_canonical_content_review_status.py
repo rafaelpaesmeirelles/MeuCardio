@@ -1,4 +1,10 @@
-"""Garante que o corpus liberado pelo proprietário permaneça explicitamente revisado."""
+"""Garante status editorial explícito sem confundir corpus canônico com publicação.
+
+O repositório pode preservar verbetes em `pendente_revisao` para revisão
+editorial posterior. A fronteira de segurança de publicação fica na
+reconciliação: apenas `review_status=revisado` é publicado e qualquer registro
+que deixe de estar revisado é despublicado.
+"""
 
 from __future__ import annotations
 
@@ -22,18 +28,32 @@ MANIFESTS = (
     "doencas/metadados.json",
     "triagem-sintomas/metadados.json",
 )
+STATUS_EDITORIAIS = {"revisado", "pendente_revisao"}
 
 
-def test_todos_os_manifestos_canonicos_estao_revisados():
-    pendentes: list[str] = []
+def test_todos_os_manifestos_canonicos_tem_status_editorial_explicito_e_valido():
+    invalidos: list[str] = []
     for relative_path in MANIFESTS:
         records = json.loads((REPOSITORY_ROOT / relative_path).read_text(encoding="utf-8"))
         for record in records:
-            if record.get("review_status") != "revisado":
+            status = record.get("review_status")
+            if status not in STATUS_EDITORIAIS:
                 identifier = record.get("slug") or record.get("title") or record.get("titulo")
-                pendentes.append(f"{relative_path}:{identifier}:{record.get('review_status')}")
+                invalidos.append(f"{relative_path}:{identifier}:{status}")
 
-    assert pendentes == []
+    assert invalidos == []
+
+
+def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
+    conflitos: list[str] = []
+    for relative_path in MANIFESTS:
+        records = json.loads((REPOSITORY_ROOT / relative_path).read_text(encoding="utf-8"))
+        for record in records:
+            if record.get("review_status") != "revisado" and record.get("published") is True:
+                identifier = record.get("slug") or record.get("title") or record.get("titulo")
+                conflitos.append(f"{relative_path}:{identifier}")
+
+    assert conflitos == []
 
 
 def test_todos_os_documentos_markdown_estao_revisados():
