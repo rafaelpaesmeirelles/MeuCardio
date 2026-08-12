@@ -21475,5 +21475,83 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rager-2026-decisao-compartilhada-e-ferramentas-de-decisao-no-fechamento-do-apendice-atrial",
+    "title": "Rager et al. (2026) — Decisão compartilhada e ferramentas de decisão no fechamento percutâneo do apêndice atrial esquerdo: auditoria do NCDR LAAO Registry",
+    "study_type": "registro_prospectivo",
+    "authors": "Rager JB, Huang CY, Zimmerman S, Dhruva SS, Freeman JV, Matlock DD, Minges K, Sandhu A, Spatz ES, Varosy P, Caverly TJ.",
+    "journal": "JAMA Netw Open",
+    "year": 2026,
+    "doi": "10.1001/jamanetworkopen.2025.56937",
+    "pmid": "41686441",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41686441/",
+    "summary": "Estudo de coorte com dados do NCDR LAAO Registry (registro nacional americano de fechamento percutâneo do apêndice atrial esquerdo), cobrindo 147.296 encontros de pacientes em primeiro implante de dispositivo pLAAO, de 01/10/2022 a 30/06/2024 (idade média 76,6 anos, DP 7,7; 58,8% do sexo masculino), descrevendo a tendência de relato de decisão compartilhada (SDM) associada a uso de ferramenta de apoio à decisão (decision aid, DA) e identificando fatores associados à sua implementação, num contexto em que o CMS (Centers for Medicare & Medicaid Services) exige formalmente SDM + DA documentado como condição de reembolso do procedimento.",
+    "key_findings": "SDM + DA relatado em 95.305 encontros (64,7% do total). A taxa de relato subiu ao longo do período: de 62,5% em outubro de 2022 para 75,0% em junho de 2024. Variação institucional muito ampla: a probabilidade estimada de relato de SDM + DA por instituição variou de 0,1% a 76,4%, atribuída principalmente ao nível institucional, não a características do paciente. Pacientes com Medicare não tiveram maior chance de SDM + DA relatado do que pacientes sem Medicare, sem diferença estatisticamente significativa, apesar de ser justamente o beneficiário do Medicare a quem a exigência de reembolso está atrelada.",
+    "clinical_implications": "A exigência regulatória de decisão compartilhada documentada não garante, por si só, que a conversa estruturada de fato aconteça — a variação institucional de 0,1% a 76,4% aponta para barreira de processo (fluxo de trabalho, tempo de consulta, treinamento de equipe), não de intenção clínica individual, e a ausência de efeito do status de Medicare sobre a taxa de relato é o achado mais contraintuitivo: se a exigência de reembolso fosse o principal motor da conformidade, o grupo diretamente sujeito a ela deveria ter taxa maior, e não teve.",
+    "limitations": "Estudo observacional de registro, não ensaio clínico — mede relato de SDM + DA, não a qualidade da conversa nem o desfecho da decisão (arrependimento, conflito decisório, conhecimento retido pelo paciente). O relato é auto-reportado pelo centro no registro, sujeito a viés de documentação na direção de superestimar a conformidade real. Contexto americano, ligado à exigência específica do CMS, sem equivalente direto no sistema brasileiro — o achado clínico (variação institucional ampla, exigência formal não garante conversa real) generaliza, o mecanismo administrativo específico não. Sem dado sobre desfecho clínico do procedimento em si.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "decisão compartilhada",
+      "fechamento de apêndice atrial esquerdo",
+      "fibrilação atrial",
+      "ferramenta de decisão",
+      "NCDR LAAO Registry",
+      "CMS"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "didomenico-2026-consenso-aha-desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia",
+    "title": "DiDomenico et al. (2026) — Desprescrição em pacientes com doença cardiovascular e polifarmácia: declaração científica da American Heart Association",
+    "study_type": "consenso",
+    "authors": "DiDomenico RJ, Marrs JC, Bress AP, Denfeld QE, Dobesh PP, Effron MB, Goyal P, Onyebeke C, Peterson JK, Petrovic M; American Heart Association Clinical Pharmacology Committee of the Council on Clinical Cardiology; Council on Cardiovascular and Stroke Nursing; Council on Cardiovascular Surgery and Anesthesia; and Council on Quality of Care and Outcomes Research.",
+    "journal": "Circulation",
+    "year": 2026,
+    "doi": "10.1161/CIR.0000000000001459",
+    "pmid": "42417036",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42417036/",
+    "summary": "Primeira declaração científica da American Heart Association dedicada especificamente à desprescrição em pacientes cardiovasculares com polifarmácia — publicação eletrônica antecipada em Circulation, 2026, ainda sem volume/fascículo/páginas atribuídos no momento desta consulta. Síntese e recomendação de prática baseada em revisão de literatura (não ensaio clínico único), revisando as consequências da polifarmácia ao longo de toda a vida, com considerações específicas para populações pediátrica, adulta e idosa, e propondo estratégias de desprescrição adaptadas a cada uma.",
+    "key_findings": "A polifarmácia em pacientes cardiovasculares ocorre com frequência em todas as faixas etárias e pode levar a prescrição inapropriada e desfechos adversos; apesar de reconhecida como problema há décadas, a orientação sobre como manejá-la — inclusive quando e como iniciar desprescrição — é limitada, e é essa lacuna que motiva o documento. Desprescrição pode melhorar desfechos e se aplica tanto a medicamentos cardiovasculares quanto a não cardiovasculares. Quatro estratégias centrais descritas em nível de resumo: observar sinais clínicos e gatilhos que sugerem revisão da lista de medicamentos; usar ferramentas de desprescrição validadas; engajar-se em decisão compartilhada com o paciente sobre a retirada do medicamento; e envolver toda a equipe multidisciplinar de saúde para endereçar as barreiras à desprescrição.",
+    "clinical_implications": "A retirada deliberada e planejada de um medicamento que já não traz benefício líquido ao paciente — ou cujo risco passou a superar o benefício — é uma conversa clinicamente distinta de prescrever, e precisa ser nomeada explicitamente como decisão ativa de cuidado, não como retirada de cuidado; sem essa contextualização, o paciente pode interpretar a desprescrição como abandono ou sinal de piora, especialmente o idoso com múltiplas comorbidades. VERIFICAÇÃO HUMANA NECESSÁRIA: o resumo estruturado indexado no PubMed não nomeia as ferramentas de desprescrição validadas nem detalha os gatilhos clínicos específicos por classe de medicamento cardiovascular — essas especificações estão no texto integral, atrás de acesso pago em ahajournals.org e sem depósito em PMC, não verificado nesta sessão.",
+    "limitations": "Consenso/declaração científica de sociedade, não ensaio clínico com desfecho primário próprio — a força da recomendação vem de síntese de literatura existente, não de resultado experimental único mensurável. O resumo estruturado disponível não traz números (taxas de evento, tamanho de efeito, corte quantitativo para decisão). Os estudos que embasam o documento se concentram sobretudo em adultos idosos, viés de cobertura reconhecido pelo próprio texto. Texto integral não verificado nesta sessão.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "desprescrição",
+      "polifarmácia",
+      "decisão compartilhada",
+      "AHA",
+      "declaração científica",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pathak-2025-preferencia-do-paciente-entre-denervacao-renal-e-farmacoterapia-na-hipertensao",
+    "title": "Pathak et al. (2025) — Impacto da redução pressórica esperada na preferência do paciente entre farmacoterapia e denervação renal",
+    "study_type": "estudo_de_coorte",
+    "authors": "Pathak A, Weber MA, Poulos C, Cohen SA, DeBruin V, Kandzari DE.",
+    "journal": "J Hypertens",
+    "year": 2025,
+    "doi": "10.1097/HJH.0000000000003872",
+    "pmid": "39324951",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39324951/",
+    "summary": "Modelagem de preferência do paciente construída a partir dos achados de um experimento de escolha discreta (discrete choice experiment) conduzido previamente, aplicada a três perfis clínicos de hipertensão — paciente virgem de tratamento, paciente com pressão arterial não controlada em uso de um a três anti-hipertensivos, e paciente com hipertensão resistente a fármacos —, estimando a probabilidade de o paciente escolher denervação renal por cateter em vez de iniciar ou escalar farmacoterapia, a partir de atributos de tratamento como redução esperada da pressão sistólica, duração do efeito, risco de efeitos colaterais reversíveis do medicamento e risco de dor/equimose/lesão vascular do procedimento.",
+    "key_findings": "Probabilidade estimada de escolher a intervenção (denervação renal) em vez de farmacoterapia: 17,2% no paciente virgem de tratamento, 23,7% no paciente com hipertensão moderada já em farmacoterapia, e 41,8% no paciente com hipertensão resistente a fármacos. A variável dominante em todos os três perfis foi a redução esperada de pressão arterial, não o risco do procedimento nem os efeitos colaterais do medicamento. A preferência pela intervenção aumentou quando o modelo incluía não adesão ao medicamento ou maior redução de pressão sistólica em 3 anos versus 1 ano. Pressão arterial basal, efeitos colaterais dos medicamentos e riscos do procedimento tiveram pouca influência na decisão.",
+    "clinical_implications": "A conversa de decisão compartilhada sobre denervação renal deveria priorizar a apresentação lado a lado da magnitude de redução pressórica esperada com cada estratégia — a variável que de fato pesa na escolha do paciente — em vez de concentrar tempo detalhando o risco do procedimento ou o efeito colateral do medicamento. Na hipertensão resistente, quase metade dos pacientes modelados (41,8%) prefere a intervenção, o que torna essa a população em que mais vale garantir que a conversa sobre denervação renal aconteça de forma explícita, em vez de presumir que o paciente prefere continuar escalando medicação. Histórico de não adesão ao tratamento é informação relevante para essa conversa, não apenas dado de prontuário.",
+    "limitations": "Modelagem, não ensaio clínico randomizado de preferência observada — os percentuais vêm de um modelo construído sobre dados de um DCE anterior, não de decisões reais tomadas por pacientes reais diante da escolha concreta. Valores de algumas variáveis do modelo vieram, em parte, de opinião de especialista, não exclusivamente de dados empíricos. Não mede desfecho clínico real (controle pressórico ou desfecho cardiovascular a longo prazo), apenas preferência. Os três perfis clínicos são simplificações representativas, sem capturar toda a variabilidade de comorbidade, idade e contexto social da prática real.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "denervação renal",
+      "hipertensão resistente",
+      "preferência do paciente",
+      "decisão compartilhada",
+      "experimento de escolha discreta",
+      "hipertensão"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
