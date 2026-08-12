@@ -4,6 +4,10 @@ O repositório pode preservar verbetes em `pendente_revisao` para revisão
 editorial posterior. A fronteira de segurança de publicação fica na
 reconciliação: apenas `review_status=revisado` é publicado e qualquer registro
 que deixe de estar revisado é despublicado.
+
+Para a RC de lançamento, a exceção é deliberadamente estreita: somente os dez
+medicamentos conhecidos abaixo podem permanecer pendentes. Um novo pendente em
+qualquer manifesto volta a quebrar o gate e exige decisão editorial explícita.
 """
 
 from __future__ import annotations
@@ -28,20 +32,41 @@ MANIFESTS = (
     "doencas/metadados.json",
     "triagem-sintomas/metadados.json",
 )
-STATUS_EDITORIAIS = {"revisado", "pendente_revisao"}
+PENDENTES_MEDICAMENTOS_RC = {
+    "lercanidipino-cloridrato",
+    "nisoldipina",
+    "isradipina",
+    "lacidipino",
+    "nadroparina-calcica",
+    "lorundrostat",
+    "enlicitide",
+    "cagrilintida",
+    "danicamtiv",
+    "istaroxime",
+}
 
 
-def test_todos_os_manifestos_canonicos_tem_status_editorial_explicito_e_valido():
+def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
     invalidos: list[str] = []
+    pendentes_encontrados: set[str] = set()
     for relative_path in MANIFESTS:
         records = json.loads((REPOSITORY_ROOT / relative_path).read_text(encoding="utf-8"))
         for record in records:
             status = record.get("review_status")
-            if status not in STATUS_EDITORIAIS:
-                identifier = record.get("slug") or record.get("title") or record.get("titulo")
-                invalidos.append(f"{relative_path}:{identifier}:{status}")
+            identifier = record.get("slug") or record.get("title") or record.get("titulo")
+            if status == "revisado":
+                continue
+            if (
+                relative_path == "medicamentos/metadados.json"
+                and status == "pendente_revisao"
+                and identifier in PENDENTES_MEDICAMENTOS_RC
+            ):
+                pendentes_encontrados.add(str(identifier))
+                continue
+            invalidos.append(f"{relative_path}:{identifier}:{status}")
 
     assert invalidos == []
+    assert pendentes_encontrados == PENDENTES_MEDICAMENTOS_RC
 
 
 def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
