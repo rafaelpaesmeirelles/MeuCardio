@@ -7,6 +7,7 @@ import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
 import "./styles/clinical-command-center.css";
+import "./styles/clinical-command-launch-polish.css";
 import "./styles/produto.css";
 import "./styles/tour.css";
 
@@ -63,5 +64,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <App />
       </AuthProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
