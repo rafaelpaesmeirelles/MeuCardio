@@ -175,6 +175,8 @@ export default function ClinicalCommandCenter() {
   const [statusEmail, setStatusEmail] = useState<StatusEmail | null>(null);
   const [contaEmail, setContaEmail] = useState<ContaEmail | null>(null);
   const [emailsPendentes, setEmailsPendentes] = useState<MensagemEmail[]>([]);
+  const [assistantConsultado, setAssistantConsultado] = useState(false);
+  const [assistantCarregando, setAssistantCarregando] = useState(false);
   const [historico, setHistorico] = useState<HistoricoComando[]>(() => lerHistorico());
 
   useEffect(() => {
@@ -182,6 +184,8 @@ export default function ClinicalCommandCenter() {
     return () => document.body.classList.remove("command-center-active");
   }, []);
 
+  // Primeira dobra: apenas conhecimento/curadoria. A rotina privada do médico
+  // não dispara requests nem geolocalização até ele escolher Assistente.
   useEffect(() => {
     const total = (rota: string) => api.get<ListaComTotal>(rota).then((r) => r.total ?? 0).catch(() => null);
     api.get<Catalogo>("/library/catalog").then(setCatalogo).catch(() => setCatalogo(null));
@@ -192,18 +196,33 @@ export default function ClinicalCommandCenter() {
     api.get<GuidelineNotifications>("/guideline-updates/me?include_read=true")
       .then((r) => setGuidelines((r.items ?? []).filter((item) => !item.read_at)))
       .catch(() => setGuidelines([]));
-    api.get<Agendamento[]>("/appointments").then(setAgenda).catch(() => setAgenda([]));
-    api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
-    api.get<ConfiguracaoMapa>("/agenda/mobility/map-config").then(setConfiguracaoMapa).catch(() => setConfiguracaoMapa(null));
-    api.get<ProximoLocal[]>("/agenda/workday/next-locations").then(setProximosLocais).catch(() => setProximosLocais([]));
-    api.get<StatusEmail>("/billing/status-email").then(setStatusEmail).catch(() => setStatusEmail(null));
-    api.get<ContaEmail>("/email/conta").then(setContaEmail).catch(() => setContaEmail(null));
-    api.get<ResumoEmail>("/email/resumo")
-      .then((r) => setEmailsPendentes(r.disponivel ? (r.pendentes ?? []) : []))
-      .catch(() => setEmailsPendentes([]));
   }, []);
 
+  // Agenda, mobilidade e Mail são lazy by intent. Além de deixar a Home muito
+  // mais leve, isso evita pedir geolocalização quando o médico entrou apenas
+  // para estudar, pesquisar ou prescrever.
   useEffect(() => {
+    if (railMode !== "assistant" || assistantConsultado) return;
+    setAssistantConsultado(true);
+    setAssistantCarregando(true);
+
+    const tarefas: Promise<unknown>[] = [
+      api.get<Agendamento[]>("/appointments").then(setAgenda).catch(() => setAgenda([])),
+      api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null)),
+      api.get<ConfiguracaoMapa>("/agenda/mobility/map-config").then(setConfiguracaoMapa).catch(() => setConfiguracaoMapa(null)),
+      api.get<ProximoLocal[]>("/agenda/workday/next-locations").then(setProximosLocais).catch(() => setProximosLocais([])),
+      api.get<StatusEmail>("/billing/status-email").then(setStatusEmail).catch(() => setStatusEmail(null)),
+      api.get<ContaEmail>("/email/conta").then(setContaEmail).catch(() => setContaEmail(null)),
+      api.get<ResumoEmail>("/email/resumo")
+        .then((r) => setEmailsPendentes(r.disponivel ? (r.pendentes ?? []) : []))
+        .catch(() => setEmailsPendentes([])),
+    ];
+
+    void Promise.allSettled(tarefas).finally(() => setAssistantCarregando(false));
+  }, [assistantConsultado, railMode]);
+
+  useEffect(() => {
+    if (railMode !== "assistant" || assistantCarregando) return;
     if (!mobilidade?.enabled || !mobilidade.automatic_foreground_refresh || !navigator.geolocation) return;
     let ativo = true;
     const atualizar = () => navigator.geolocation.getCurrentPosition(
@@ -229,7 +248,7 @@ export default function ClinicalCommandCenter() {
     );
     atualizar();
     return () => { ativo = false; };
-  }, [mobilidade]);
+  }, [assistantCarregando, mobilidade, railMode]);
 
   const primeiroNome = usuario?.full_name?.trim().split(/\s+/)[0] || "Doutor(a)";
   const agora = Date.now();
@@ -417,52 +436,61 @@ export default function ClinicalCommandCenter() {
           <div className="rail-panel rail-panel--assistant">
             <header><span><Icone nome="assistente" /></span><div><p>Assistente Pessoal</p><strong>Sua rotina profissional, sem perder o contexto</strong></div></header>
 
-            <section className="assistant-block">
-              <div className="assistant-block__title"><span><Icone nome="agenda" /></span><div><strong>Seu dia</strong><small>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"} hoje</small></div></div>
-              {proximo ? (
-                <Link to="/agenda" className="assistant-next">
-                  <span className="assistant-next__time">{hora(proximo.scheduled_at)}</span>
-                  <span><strong>{proximo.patient_name || abreviarTipo(proximo.appointment_type)}</strong><small>{abreviarTipo(proximo.appointment_type)} · próximo compromisso</small></span>
-                  <Icone nome="chevron" />
-                </Link>
-              ) : <p className="assistant-empty">Nenhum compromisso futuro carregado.</p>}
-            </section>
+            {assistantCarregando ? (
+              <div className="assistant-loading" role="status" aria-live="polite">
+                <span><Icone nome="sincronizar" /></span>
+                <div><strong>Atualizando sua rotina…</strong><small>Agenda, deslocamento e comunicação são carregados somente agora.</small></div>
+              </div>
+            ) : (
+              <>
+                <section className="assistant-block">
+                  <div className="assistant-block__title"><span><Icone nome="agenda" /></span><div><strong>Seu dia</strong><small>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"} hoje</small></div></div>
+                  {proximo ? (
+                    <Link to="/agenda" className="assistant-next">
+                      <span className="assistant-next__time">{hora(proximo.scheduled_at)}</span>
+                      <span><strong>{proximo.patient_name || abreviarTipo(proximo.appointment_type)}</strong><small>{abreviarTipo(proximo.appointment_type)} · próximo compromisso</small></span>
+                      <Icone nome="chevron" />
+                    </Link>
+                  ) : <p className="assistant-empty">Nenhum compromisso futuro carregado.</p>}
+                </section>
 
-            <section className="assistant-block">
-              <div className="assistant-block__title"><span><Icone nome="rota" /></span><div><strong>Deslocamento</strong><small>Somente quando você autoriza localização</small></div></div>
-              {proximoLocal ? (
-                <>
-                  <div className="assistant-route-summary">
-                    <strong>{proximoLocal.location.name}</strong>
-                    <span>Início às {hora(proximoLocal.starts_at)}</span>
-                    {rota && <span>{Math.ceil(rota.duration_seconds / 60)} min · {(rota.distance_meters / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} km</span>}
-                    {saidaRecomendada && <em>Saída sugerida: {saidaRecomendada.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</em>}
-                  </div>
-                  {rota && origemDeslocamento && (
-                    <div className="assistant-map">
-                      <MapaDeslocamento
-                        rotas={deslocamento?.routes ?? []}
-                        origem={origemDeslocamento}
-                        destino={{ name: proximoLocal.location.name, latitude: proximoLocal.location.latitude, longitude: proximoLocal.location.longitude }}
-                        provider={deslocamento?.provider}
-                        updatedAt={deslocamento?.updated_at}
-                        googleMapsApiKey={configuracaoMapa?.api_key}
-                      />
-                    </div>
+                <section className="assistant-block">
+                  <div className="assistant-block__title"><span><Icone nome="rota" /></span><div><strong>Deslocamento</strong><small>Somente quando você autoriza localização</small></div></div>
+                  {proximoLocal ? (
+                    <>
+                      <div className="assistant-route-summary">
+                        <strong>{proximoLocal.location.name}</strong>
+                        <span>Início às {hora(proximoLocal.starts_at)}</span>
+                        {rota && <span>{Math.ceil(rota.duration_seconds / 60)} min · {(rota.distance_meters / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} km</span>}
+                        {saidaRecomendada && <em>Saída sugerida: {saidaRecomendada.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</em>}
+                      </div>
+                      {rota && origemDeslocamento && (
+                        <div className="assistant-map">
+                          <MapaDeslocamento
+                            rotas={deslocamento?.routes ?? []}
+                            origem={origemDeslocamento}
+                            destino={{ name: proximoLocal.location.name, latitude: proximoLocal.location.latitude, longitude: proximoLocal.location.longitude }}
+                            provider={deslocamento?.provider}
+                            updatedAt={deslocamento?.updated_at}
+                            googleMapsApiKey={configuracaoMapa?.api_key}
+                          />
+                        </div>
+                      )}
+                      {!rota && <p className="assistant-empty">{erroLocalizacao || (mobilidade?.enabled ? "Destino conhecido; estimativa de trânsito ainda indisponível." : "Ative mobilidade na Agenda para receber horários de saída.")}</p>}
+                    </>
+                  ) : <p className="assistant-empty">Cadastre locais/rotina na Agenda para o assistente preparar deslocamentos.</p>}
+                </section>
+
+                <section className="assistant-block">
+                  <div className="assistant-block__title"><span><Icone nome="mail" /></span><div><strong>Comunicação</strong><small>CorVIA Mail</small></div></div>
+                  {assinaturaEmailAtiva ? (
+                    <Link to="/caixa-de-email" className="assistant-inline-link"><strong>{emailsPendentes.length}</strong><span>mensagem{emailsPendentes.length === 1 ? "" : "ns"} pendente{emailsPendentes.length === 1 ? "" : "s"}</span><Icone nome="chevron" /></Link>
+                  ) : (
+                    <Link to="/corvia-mail" className="assistant-inline-link"><Icone nome="mail" /><span>Configurar CorVIA Mail</span><Icone nome="chevron" /></Link>
                   )}
-                  {!rota && <p className="assistant-empty">{erroLocalizacao || (mobilidade?.enabled ? "Destino conhecido; estimativa de trânsito ainda indisponível." : "Ative mobilidade na Agenda para receber horários de saída.")}</p>}
-                </>
-              ) : <p className="assistant-empty">Cadastre locais/rotina na Agenda para o assistente preparar deslocamentos.</p>}
-            </section>
-
-            <section className="assistant-block">
-              <div className="assistant-block__title"><span><Icone nome="mail" /></span><div><strong>Comunicação</strong><small>CorVIA Mail</small></div></div>
-              {assinaturaEmailAtiva ? (
-                <Link to="/caixa-de-email" className="assistant-inline-link"><strong>{emailsPendentes.length}</strong><span>mensagem{emailsPendentes.length === 1 ? "" : "ns"} pendente{emailsPendentes.length === 1 ? "" : "s"}</span><Icone nome="chevron" /></Link>
-              ) : (
-                <Link to="/corvia-mail" className="assistant-inline-link"><Icone nome="mail" /><span>Configurar CorVIA Mail</span><Icone nome="chevron" /></Link>
-              )}
-            </section>
+                </section>
+              </>
+            )}
 
             <Link to="/assistente?modo=pessoal" className="rail-primary rail-primary--assistant"><Icone nome="assistente" /> Abrir meu Assistente Pessoal</Link>
           </div>
