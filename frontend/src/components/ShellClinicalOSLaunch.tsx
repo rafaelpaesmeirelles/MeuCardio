@@ -112,6 +112,10 @@ function iniciais(nome?: string) {
   return (nome || "Médico").trim().split(/\s+/).slice(0, 2).map((parte) => parte[0]?.toUpperCase()).join("");
 }
 
+function chaveContextosRecentes(userId?: number) {
+  return userId ? `corvia:contextos-recentes:${userId}` : "";
+}
+
 function destino(valor: string) {
   const termo = valor.trim();
   const normalizado = termo.toLocaleLowerCase("pt-BR");
@@ -227,13 +231,21 @@ export default function ShellClinicalOSLaunch() {
 
   useEffect(() => {
     if (location.pathname === "/" || location.pathname.startsWith("/admin")) return;
+    const chave = chaveContextosRecentes(usuario?.id);
+    if (!chave) return;
     const contexto = meta(location.pathname);
     const novo: Recente = { path: location.pathname, titulo: contexto.titulo, detalhe: contexto.detalhe, icone: contexto.icone, visitadoEm: Date.now() };
     try {
-      const anteriores = JSON.parse(localStorage.getItem("corvia:contextos-recentes") || "[]") as Recente[];
-      localStorage.setItem("corvia:contextos-recentes", JSON.stringify([novo, ...anteriores.filter((item) => item.path !== novo.path)].slice(0, 6)));
-    } catch { /* armazenamento é melhoria, não requisito de navegação */ }
-  }, [location.pathname]);
+      const anteriores = JSON.parse(sessionStorage.getItem(chave) || "[]") as Recente[];
+      sessionStorage.setItem(chave, JSON.stringify([novo, ...anteriores.filter((item) => item.path !== novo.path)].slice(0, 6)));
+    } catch { /* continuidade é melhoria; navegação nunca depende do storage */ }
+  }, [location.pathname, usuario?.id]);
+
+  useEffect(() => {
+    function abrirAssistentePessoal() { setAssistente(true); }
+    window.addEventListener("corvia:abrir-assistente-pessoal", abrirAssistentePessoal);
+    return () => window.removeEventListener("corvia:abrir-assistente-pessoal", abrirAssistentePessoal);
+  }, []);
 
   useEffect(() => {
     function teclado(evento: KeyboardEvent) {
