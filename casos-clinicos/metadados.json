@@ -14837,5 +14837,176 @@
       "Crump C, Sundquist J, Sundquist K. Adverse pregnancy outcomes and long-term risk of stroke: a Swedish nationwide co-sibling study. Eur Heart J. 2025;46(33):3290-3300. DOI: 10.1093/eurheartj/ehaf366. PMID: 40569854"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "enlicitide-inibidor-oral-de-pcsk9-superior-a-bempedoico-e-ezetimiba-falta-desfecho-cv",
+    "titulo": "Enlicitide oral supera bempedoico e ezetimiba em redução de LDL — mas falta um dado",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, doença arterial coronariana estabelecida (IAM prévio há 3 anos), em uso de estatina de alta intensidade em dose máxima tolerada. LDL-c persiste em 98 mg/dL, acima da meta. Já tentou associar ezetimiba, com resposta insuficiente. Você está avaliando as opções de escalonamento: associar ácido bempedoico, aguardar disponibilidade do novo inibidor oral de PCSK9 (enlicitide) ou intensificar diretamente para um inibidor injetável de PCSK9 (evolocumabe/alirocumabe).",
+    "pergunta": "Qual afirmação sobre a enlicitide (inibidor oral de PCSK9) está correta, com base no programa CORALreef (Lipids, AddOn e HeFH)?",
+    "opcoes": [
+      "A enlicitide já demonstrou redução de MACE (morte cardiovascular, IAM, AVC) em ensaio de desfecho cardiovascular dedicado, assim como evolocumabe no FOURIER",
+      "No CORALreef AddOn, a enlicitide reduziu o LDL-c de forma superior ao ácido bempedoico, à ezetimiba isolada e à combinação dos dois (-64,6% vs. -6,3%, -27,8% e -36,5%, respectivamente) — mas nenhum dos três ensaios de fase 3 do programa teve desfecho cardiovascular maior como objetivo primário ou secundário",
+      "A enlicitide é um anticorpo monoclonal, estruturalmente igual a evolocumabe e alirocumabe, só que formulado para administração oral",
+      "A magnitude de redução do LDL-c da enlicitide é bem inferior à dos inibidores injetáveis de PCSK9, o que a torna indicada apenas como alternativa de última linha"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A enlicitide (MK-0616) não é um anticorpo, e sim um peptídeo macrocíclico (peptidomimético) desenhado com permeabilidade intestinal para resistir à degradação digestiva e ser absorvido por via oral — o mecanismo final (bloqueio da interação PCSK9-LDLR) é o mesmo dos anticorpos, mas a via de chegada é estruturalmente nova. No CORALreef AddOn (301 pacientes já em estatina, comparando enlicitide 20mg/dia contra bempedoico 180mg, ezetimiba 10mg, ou a combinação dos dois por 56 dias), a enlicitide foi superior a cada comparador isoladamente (p<0,001 para todos): -64,6% vs. -6,3% (bempedoico), -27,8% (ezetimiba) e -36,5% (bempedoico+ezetimiba) — redução quase o dobro da combinação. No CORALreef Lipids (2.909 pacientes, placebo-controlado), a diferença ajustada foi de -55,8 pontos percentuais (IC95% -60,9 a -50,7). Apesar da magnitude comparável à dos inibidores injetáveis, o ponto crítico é que **nenhum dos três ensaios do programa CORALreef (Lipids, AddOn, HeFH) teve MACE como desfecho** — todos mediram variação de LDL-c e demais lipídeos. Isso contrasta diretamente com evolocumabe (FOURIER) e alirocumabe (ODYSSEY OUTCOMES), que já têm ensaio de desfecho cardiovascular maduro publicado. A extrapolação de benefício clínico a partir da redução de LDL-c segue a mesma lógica já validada para a classe de hipolipemiantes em geral, mas não foi demonstrada diretamente para a enlicitide até a data de publicação destes ensaios.",
+    "source_refs": [
+      "Navar AM, Mikhailova E, Catapano AL, Banka P, Blom DJ, Cadena A, et al; CORALreef Lipids Investigators. A Placebo-Controlled Trial of the Oral PCSK9 Inhibitor Enlicitide. N Engl J Med. 2026;394(6):529-539. DOI: 10.1056/NEJMoa2511002. PMID: 41879224",
+      "Catapano AL, Mikhailova E, Navar AM, Banka P, Corral P, Saxena M, et al; CORALreef AddOn Investigators. Oral PCSK9 Inhibitor Enlicitide Versus Oral Nonstatin Therapies: A Phase 3 Randomized Clinical Trial. J Am Coll Cardiol. 2026;88(3):340-352. DOI: 10.1016/j.jacc.2026.03.036. PMID: 42017875",
+      "Ballantyne CM, Gellis L, Tardif JC, Banka P, Navar AM, Asprusten EA, et al. Efficacy and Safety of Oral PCSK9 Inhibitor Enlicitide in Adults With Heterozygous Familial Hypercholesterolemia: A Randomized Clinical Trial. JAMA. 2026;335(2):129-139. DOI: 10.1001/jama.2025.20620. PMID: 41206969",
+      "Arnaboldi L, Tang Z, Ferri N, Corsini A. New frontiers in the treatment of hypercholesterolaemia: oral inhibition of PCSK9. Eur Heart J Suppl. 2026;28(Suppl 5):v95-v99. DOI: 10.1093/eurheartjsupp/suag035. PMID: 42099491"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cagrisema-reducao-pressorica-no-redefine-1-hipertensao-resistente-sem-significancia",
+    "titulo": "CagriSema reduziu a pressão arterial no REDEFINE 1 — mas não comprovadamente na hipertensão resistente",
+    "tema": "Farmacologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 52 anos, obesidade grau II (IMC 34 kg/m²), hipertensão resistente em uso de 4 classes de anti-hipertensivo, com PA de consultório ainda em 158/96 mmHg. Sem diabetes tipo 2. Está considerando iniciar CagriSema (cagrilintida + semaglutida) visando perda de peso, e comenta ter lido que o medicamento também 'trata a pressão alta resistente'.",
+    "pergunta": "Como comunicar corretamente a esta paciente — cujo perfil corresponde ao subgrupo de hipertensão resistente do REDEFINE 1 — o que a análise pressórica de Verma et al. (Hypertension 2026) realmente mostrou?",
+    "opcoes": [
+      "Dizer que o CagriSema já demonstrou reduzir a pressão de forma comprovada especificamente na hipertensão resistente, com base na razão de chances de 1,7 encontrada no subgrupo com essa condição (n=167)",
+      "Explicar que, na população geral do REDEFINE 1 (sem diabetes tipo 2), o CagriSema reduziu PAS/PAD de forma expressiva (-10,9/-5,4 mmHg vs. placebo em 68 semanas) e permitiu reduzir ou suspender anti-hipertensivo em parte dos pacientes — mas que, no subgrupo específico de hipertensão resistente (n=167), o resultado (razão de chances 1,7, IC95% 0,7-4,4) não atingiu significância estatística; o achado é promissor, não comprovado nesse subgrupo específico",
+      "Informar que o efeito pressórico do CagriSema decorre do bloqueio direto do receptor de GLP-1, o mesmo mecanismo farmacológico da semaglutida isolada, já bem estabelecido para hipertensão resistente",
+      "Dizer que o REDEFINE 1 já demonstrou redução de eventos cardiovasculares maiores (MACE) associada ao efeito pressórico observado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A amilina age por receptores AMYR (receptor de calcitonina associado a RAMPs), mecanismo distinto do receptor de GLP-1 — ação complementar, não redundante, sobre saciedade e esvaziamento gástrico. No REDEFINE 1 (3.417 adultos sem diabetes tipo 2), a análise pressórica secundária de Verma et al. mostrou redução de PAS de -10,9 mmHg e PAD de -5,4 mmHg com CagriSema vs. placebo na semana 68, com 63,0% atingindo meta pressórica (vs. 32,0% no placebo) e 39,6% reduzindo/suspendendo anti-hipertensivo (vs. 18,8% no placebo) — achados robustos na população geral do ensaio. Porém, no subgrupo pré-especificado com hipertensão resistente no início do estudo (n=167), a razão de chances de atingir meta pressórica foi de 1,7, mas com IC95% de 0,7 a 4,4 — **intervalo cruzando a unidade, portanto sem significância estatística formal**. Isso não é resultado negativo, é resultado sem poder estatístico suficiente nesse subgrupo específico, e não deve ser comunicado como benefício comprovado. Além disso, nenhum ensaio do programa REDEFINE (1 ou 2) teve MACE como desfecho — o desfecho primário do REDEFINE 1 foi peso corporal, e a análise pressórica é secundária/post hoc.",
+    "source_refs": [
+      "Rejili M, Hussain MS, Khan Y, Haouala F, Ganesan S, Sahoo S, Pal A, Arora V. Amylin receptors as therapeutic targets in obesity: Emerging peptide-based strategies. Vasc Pharmacol. 2026;162:107563. DOI: 10.1016/j.vph.2025.107563. PMID: 41344603",
+      "Verma S, Böttcher M, Brown P, Dicker D, Rubino D, Sbraccia P, Sharma AM, Smedegaard L, Sørrig R, Garvey WT. CagriSema Reduces Blood Pressure in Adults With Overweight or Obesity: REDEFINE 1. Hypertension. 2026;83(2):e26055. DOI: 10.1161/HYPERTENSIONAHA.125.26055. PMID: 41328546",
+      "Garvey WT, Blüher M, Osorto Contreras CK, Davies MJ, Winning Lehmann E, Pietiläinen KH, Rubino D, Sbraccia P, Wadden T, Zeuthen N, Wilding JPH; REDEFINE 1 Study Group. Coadministered Cagrilintide and Semaglutide in Adults with Overweight or Obesity. N Engl J Med. 2025;393(7):635-647. DOI: 10.1056/NEJMoa2502081. PMID: 40544433"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escolha-entre-revumenibe-e-ziftomenibe-conforme-risco-de-prolongamento-de-qtc",
+    "titulo": "Revumenibe ou ziftomenibe? A diferença de risco de QTc entre os dois inibidores de menina",
+    "tema": "Farmacologia",
+    "nivel": "avançado",
+    "enunciado": "Interconsulta de cardiologia solicitada pela hematologia: paciente com leucemia mieloide aguda recidivada, elegível para inibidor de menina. O hematologista pergunta se, do ponto de vista cardiológico, a escolha entre revumenibe (indicado para rearranjo de KMT2A) e ziftomenibe (indicado para mutação de NPM1) — nos casos em que o perfil molecular permitir considerar qualquer um dos dois — deveria levar em conta diferença de risco cardiológico entre os agentes.",
+    "pergunta": "Com base nos dados de segurança do AUGMENT-101 (revumenibe) e do KOMET-007 (ziftomenibe), qual orientação está correta?",
+    "opcoes": [
+      "Os dois agentes têm risco de QTc equivalente, então a escolha deve ser guiada apenas pelo perfil molecular da leucemia, sem diferença de intensidade de monitorização cardiológica",
+      "No AUGMENT-101, 13,8% dos pacientes tiveram QTc prolongado de grau ≥3 com revumenibe (n=94); no KOMET-007, apenas 1 de 67 pacientes (grau 1, leve) teve QTc atribuído ao ziftomenibe — os desenhos e populações diferem, o que limita comparação formal direta, mas a magnitude da diferença é grande o suficiente para orientar monitorização cardiológica mais intensa com revumenibe",
+      "O ziftomenibe tem risco de QTc maior que o revumenibe segundo os dados publicados, devendo por isso ser reservado a pacientes sem nenhum risco cardiovascular associado",
+      "Qualquer prolongamento de QTc detectado durante o uso de inibidor de menina exige suspensão imediata do fármaco, independentemente do agente ou do contexto clínico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O revumenibe e o ziftomenibe compartilham o mecanismo de bloqueio da interação menina-KMT2A, mas os dados de segurança de QTc divergem de forma clinicamente relevante. No AUGMENT-101 (fase II registro-habilitante do revumenibe, N=94), QTc grau ≥3 ocorreu em 13,8% dos pacientes, e um relato de caso publicado (Keller et al.) descreve múltiplos episódios de torsades de pointes manejados com marca-passo definitivo e cardioversor-desfibrilador vestível, em vez de suspensão imediata, dada a ausência de alternativa terapêutica. Já no KOMET-007 (fase 1 do ziftomenibe associado a venetoclax e azacitidina, N=67), apenas 1 de 67 pacientes (1,5%) teve QTc atribuído ao ziftomenibe, de grau 1 (leve) — QTc sequer figurou entre os eventos adversos grau ≥3 mais comuns, dominados por citopenias. Os dois ensaios têm desenhos, populações e comparadores diferentes, o que limita comparação formal direta, mas a magnitude é grande o suficiente para orientar a intensidade da monitorização cardiológica de cada agente — não deve ser tratada como efeito de classe uniforme. É importante também considerar a síndrome de diferenciação (evento adverso característico da mesma classe, presente nos dois agentes) como diagnóstico diferencial de sintoma cardiopulmonar agudo, e nunca automatizar a suspensão do fármaco diante de QTc prolongado sem decisão conjunta com a equipe assistente, dada a frequente ausência de alternativa terapêutica nesses pacientes.",
+    "source_refs": [
+      "Issa GC, Aldoss I, Thirman MJ, DiPersio J, Arellano M, Blachly JS, et al. Menin Inhibition With Revumenib for KMT2A-Rearranged Relapsed or Refractory Acute Leukemia (AUGMENT-101). J Clin Oncol. 2025;43(1):75-84. DOI: 10.1200/JCO.24.00826. PMID: 39121437",
+      "Keller CL, Hermanson KC, Tawwater JC, Schuller RM, St Pierre DJ, Naina HV, Alzghari SK. Revumenib-Induced QTc Prolongation Leading to Multiple Episodes of Torsades de Pointes and Ventricular Arrhythmias. Ochsner J. 2026;26(2):167-172. DOI: 10.31486/toj.25.0100. PMID: 42311583, PMCID: PMC13271193",
+      "Wang ES, Erba HP, Zeidan AM, Roboz GJ, Altman JK, Advani AS, et al. Ziftomenib with venetoclax and azacitidine in relapsed/refractory NPM1-mutated acute myeloid leukemia. Blood. 2026 Jun 2:blood.2026034043. DOI: 10.1182/blood.2026034043. PMID: 42227701"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "suspensao-de-agonista-de-glp-1-antes-de-endoscopia-diario-versus-semanal",
+    "titulo": "Suspender o GLP-1 antes da endoscopia: o prazo depende da formulação, mas não é garantia",
+    "tema": "Perioperatório",
+    "nivel": "básico",
+    "enunciado": "Paciente em uso de semaglutida semanal para diabetes tipo 2, ainda na fase de escalonamento de dose, agendado para endoscopia digestiva alta eletiva sob sedação em 5 dias. Está assintomático, sem náusea, vômito, dor abdominal ou constipação, e sem gastroparesia diabética conhecida.",
+    "pergunta": "Conforme a orientação multissocietária de 2024 (AGA/ASMBS/ASA/ISPCOP/SAGES), qual é a conduta mais adequada?",
+    "opcoes": [
+      "Como o paciente está assintomático, prosseguir com a sedação sem qualquer avaliação ou ajuste adicional, independentemente do prazo de suspensão",
+      "A formulação semanal deveria ter sido suspensa uma semana antes do procedimento; como esse prazo não será cumprido, reavaliar sintomas de esvaziamento gástrico retardado antes do procedimento, considerar dieta líquida nas 24h anteriores, e discutir com a equipe anestésica a possibilidade de indução em sequência rápida ou adiamento — com reavaliação de sintomas também no próprio dia do procedimento, independentemente da suspensão prévia",
+      "Suspender definitivamente a semaglutida, já que agonistas de receptor de GLP-1 são formalmente contraindicados para qualquer paciente que necessite de sedação",
+      "Antecipar a endoscopia para o mesmo dia, já que a formulação semanal não tem risco relevante de esvaziamento gástrico retardado enquanto o paciente estiver assintomático"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A orientação multissocietária de 2024 (publicação conjunta de cinco sociedades americanas) recomenda suspender a formulação semanal de agonista de GLP-1 uma semana antes do procedimento (e a formulação diária, no próprio dia), mas o próprio documento é explícito quanto à limitação: 'a duração necessária de suspensão da terapia é desconhecida' — os intervalos seguem orientação prévia de sociedade de anestesiologia, não um estudo farmacocinético dedicado. Diante de um prazo que não será cumprido (5 dias restantes para uma suspensão que deveria ter ocorrido 7 dias antes), a conduta correta não é ignorar a questão nem cancelar automaticamente: é reavaliar ativamente sintomas gastrointestinais e fatores de risco para esvaziamento gástrico lentificado, considerar dieta líquida nas 24 horas anteriores como medida de precaução, e — em decisão compartilhada entre anestesiologista e equipe assistente — considerar indução em sequência rápida com intubação traqueal ou adiar o procedimento, se houver suspeita de conteúdo gástrico retido. Fundamental: independentemente do cumprimento do prazo, todo paciente deve ser reavaliado no dia do procedimento quanto a sintomas sugestivos de esvaziamento gástrico retardado — a suspensão prévia, isoladamente, não é garantia de estômago vazio.",
+    "source_refs": [
+      "Kindel TL, Wang AY, Wadhwa A, Schulman AR, Sharaiha RZ, Kroh M, Ghanem OM, Levy S, Joshi GP, LaMasters TL; American Gastroenterological Association; American Society for Metabolic and Bariatric Surgery; American Society of Anesthesiologists; International Society of Perioperative Care of Patients with Obesity; Society of American Gastrointestinal and Endoscopic Surgeons. Multi-society clinical practice guidance for the safe use of glucagon-like peptide-1 receptor agonists in the perioperative period. Surgical Endoscopy. 2024 Oct 29;39(1):180-183. DOI: 10.1007/s00464-024-11263-2. PMID: 39370500 (também publicado simultaneamente em Surg Obes Relat Dis. 2024;20(12):1183-1186, PMID 39482213; Clin Gastroenterol Hepatol 2025, PMID 39480373)"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anemia-pre-operatoria-em-cirurgia-abdominal-aberta-ferro-endovenoso-nao-reduz-transfusao-preventt",
+    "titulo": "Anemia pré-operatória na cirurgia abdominal aberta: o que o PREVENTT realmente mostrou sobre ferro endovenoso",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com hemoglobina de 105 g/L, identificada em consulta de avaliação pré-operatória 3 semanas antes de colectomia aberta eletiva por neoplasia colorretal. Um colega sugere administrar ferro endovenoso agora, afirmando que isso 'vai evitar a necessidade de transfusão' durante a cirurgia.",
+    "pergunta": "Com base no PREVENTT (Lancet, 2020), ensaio randomizado, duplo-cego, controlado com placebo, como avaliar essa afirmação?",
+    "opcoes": [
+      "A afirmação está correta: o PREVENTT demonstrou que uma dose única de carboximaltose férrica endovenosa, administrada 10-42 dias antes da cirurgia, reduz de forma significativa transfusão sanguínea e morte",
+      "A afirmação não é sustentada pelo PREVENTT: neste ensaio (n=487, cirurgia abdominal aberta eletiva maior), dose única de ferro endovenoso (1.000mg de carboximaltose férrica) não reduziu o composto transfusão/morte (29% vs. 28% no placebo; RR 1,03, IC95% 0,78-1,37; p=0,84) nem o número de transfusões — mas a investigação da CAUSA da anemia (nesta paciente, possível sangramento oculto pela própria neoplasia colorretal) continua indicada, independentemente deste resultado",
+      "O PREVENTT avaliou apenas ferro oral, não ferro endovenoso, portanto o ensaio não se aplica a este caso",
+      "O resultado negativo do PREVENTT significa que corrigir a anemia pré-operatória por qualquer via é irrelevante, e a investigação etiológica pode ser adiada para depois da cirurgia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PREVENTT (46 centros do Reino Unido, 487 pacientes randomizados 1:1 para dose única de 1.000mg de carboximaltose férrica endovenosa ou placebo, administrada 10 a 42 dias antes de cirurgia abdominal aberta eletiva maior) é um resultado negativo com desenho robusto: composto morte ou transfusão sanguínea em 29% (ferro) vs. 28% (placebo), RR 1,03 (IC95% 0,78-1,37), p=0,84; número de transfusões sem diferença significativa (rate ratio 0,98, IC95% 0,68-1,43, p=0,93). Isso não significa que corrigir a anemia antes da cirurgia seja irrelevante em toda circunstância — significa que, nesta população e neste desenho específico (dose única, janela de 10-42 dias, cirurgia abdominal aberta), a correção farmacológica isolada da anemia não se traduziu em menos transfusão ou morte. O estudo não testa outras formas de correção (ferro oral, agente estimulador de eritropoiese, tratamento da causa de base), nem invalida a recomendação de investigar a causa da anemia — pelo contrário, nesta paciente com neoplasia colorretal conhecida, a investigação de sangramento oculto continua clinicamente indicada independentemente deste desfecho negativo.",
+    "source_refs": [
+      "Richards T, Baikady RR, Clevenger B, Butcher A, Abeysiri S, Chau M, Macdougall IC, Murphy G, Swinson R, Collier T, Van Dyck L, Browne J, Bradbury A, Dodd M, Evans R, Brealey D, Anker SD, Klein A; PREVENTT investigators. Preoperative intravenous iron to treat anaemia before major abdominal surgery (PREVENTT): a randomised, double-blind, controlled trial. Lancet. 2020 Oct 24;396(10259):1353-1361. DOI: 10.1016/S0140-6736(20)31539-7. PMID: 32896294. PMCID: PMC7581899"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "documentar-decisao-compartilhada-no-fechamento-do-apendice-atrial-nao-e-o-mesmo-que-realiza-la",
+    "titulo": "Documentar \"decisão compartilhada\" no fechamento do apêndice atrial não é o mesmo que realizá-la",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Serviço de hemodinâmica com taxa de relato de decisão compartilhada + ferramenta de decisão (SDM + DA) de 98% nos prontuários de fechamento percutâneo de apêndice atrial esquerdo. Residentes relatam informalmente que, na prática, a 'conversa' costuma ser um formulário assinado rapidamente na sala de espera, sem explicação estruturada da troca de riscos entre o paciente e a equipe.",
+    "pergunta": "À luz do achado de Rager et al. (JAMA Netw Open 2026, dados do NCDR LAAO Registry, 147.296 encontros de primeiro implante percutâneo), como interpretar essa situação institucional?",
+    "opcoes": [
+      "Como a taxa de relato está bem acima da média nacional observada no registro (64,7%), não há motivo de preocupação — documentação alta já é evidência suficiente de decisão compartilhada real",
+      "A alta taxa de relato de SDM + DA (mesmo satisfazendo formalmente a exigência de reembolso do pagador americano) não garante que a conversa estruturada de fato ocorreu — o estudo mostrou variação institucional de 0,1% a 76,4% entre centros e nenhuma diferença de taxa por status de Medicare, sugerindo que exigência formal e conversa real podem divergir; vale investigar o processo do serviço, não presumir qualidade pela taxa de documentação",
+      "O achado do estudo não tem nenhuma relevância para a prática brasileira, já que a exigência regulatória avaliada é exclusivamente do CMS americano",
+      "A decisão compartilhada no fechamento de apêndice atrial deve seguir exatamente o mesmo roteiro já validado para escolha de anticoagulante oral, já que o objetivo final (prevenção de AVC cardioembólico) é o mesmo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo de Rager et al. (coorte de 147.296 encontros do NCDR LAAO Registry, 01/10/2022 a 30/06/2024) encontrou relato de SDM + ferramenta de decisão em 64,7% dos encontros, com tendência de melhora ao longo do tempo (62,5% para 75,0%), mas com variação institucional muito ampla — a probabilidade estimada por instituição variou de 0,1% a 76,4%, atribuída principalmente ao nível institucional, não a características do paciente. O achado mais contraintuitivo é que pacientes com Medicare — justamente o grupo para o qual a exigência de reembolso está atrelada ao relato de SDM + DA — não tiveram maior chance de relato do que pacientes sem Medicare. Isso sugere que o mecanismo desenhado especificamente para garantir a decisão compartilhada (exigência de reembolso) não produziu o efeito esperado, e levanta duas leituras possíveis que o estudo não distingue: relato sem conversa real (documentação como exercício de conformidade administrativa) ou barreira genuína de fluxo de trabalho. A conduta correta diante de uma taxa alta de documentação formal não é presumir qualidade — é investigar o processo real do serviço, já que a variação de 0,1% a 76,4% no estudo indica que o problema mais provável é estrutural (tempo, fluxo, treinamento da equipe), não desinteresse individual do paciente ou do médico. O fechamento de apêndice atrial, além disso, é uma decisão estruturalmente distinta de escolha farmacológica: troca risco periprocedural concentrado e imediato por risco contínuo de sangramento sob anticoagulante — natureza diferente da decisão coberta por ferramentas de escolha de anticoagulante oral já existentes.",
+    "source_refs": [
+      "Rager JB, Huang CY, Zimmerman S, Dhruva SS, Freeman JV, Matlock DD, Minges K, Sandhu A, Spatz ES, Varosy P, Caverly TJ. Shared Decision-Making and Patient Decision Aids for Percutaneous Left Atrial Appendage Occlusion. JAMA Netw Open. 2026;9(2):e2556937. DOI: 10.1001/jamanetworkopen.2025.56937. PMID: 41686441"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "terapia-hormonal-da-menopausa-quando-a-idade-e-o-tempo-desde-a-menopausa-mudam-a-resposta",
+    "titulo": "Terapia hormonal da menopausa: por que \"2 anos\" e \"15 anos\" desde a última menstruação não são a mesma paciente",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Duas pacientes encaminhadas pelo ginecologista para avaliação cardiovascular antes de iniciar terapia hormonal por sintomas vasomotores intensos. Paciente A: 49 anos, há 2 anos da última menstruação, sem fatores de risco cardiovascular relevantes. Paciente B: 68 anos, há 15 anos da menopausa, hipertensa, deseja iniciar terapia hormonal \"para proteger o coração\", depois de ler uma reportagem sobre o assunto.",
+    "pergunta": "Com base na hipótese do momento (timing hypothesis) e nos ensaios WHI, ELITE e DOPS, qual conduta é mais adequada?",
+    "opcoes": [
+      "Recusar terapia hormonal às duas pacientes, já que o WHI demonstrou de forma definitiva que a terapia hormonal aumenta o risco cardiovascular em qualquer idade e a qualquer tempo desde a menopausa",
+      "Prescrever terapia hormonal à Paciente B com o objetivo de reduzir risco cardiovascular, já que ela é hipertensa e se beneficiaria de proteção vascular adicional",
+      "Considerar terapia hormonal individualizada (preferencialmente por via transdérmica) para a Paciente A, com o objetivo de alívio sintomático — perfil mais favorável descrito no estrato de menopausa recente do ELITE e na coorte do DOPS — e NÃO oferecer terapia hormonal à Paciente B com o objetivo de prevenção cardiovascular, uso que nenhuma das fontes atuais sustenta em qualquer idade ou tempo desde a menopausa",
+      "Indicar terapia hormonal por via oral (não transdérmica) para as duas pacientes, já que a via de administração não influencia o perfil de risco cardiovascular segundo os ensaios citados"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O WHI (16.608 mulheres, idade média ~63 anos, portanto em média mais de 10 anos após a menopausa) foi interrompido precocemente por excesso de eventos coronarianos, AVC, tromboembolismo venoso e câncer de mama — resultado que segue válido, mas que reflete uma população mais velha e mais distante da menopausa do que a maioria das mulheres que hoje procuram TH por sintoma vasomotor. O ELITE (643 mulheres, estratificadas por tempo desde a menopausa) mostrou que estradiol oral reduziu a progressão da espessura íntima-média carotídea no estrato de menopausa recente (<6 anos), mas não no estrato tardio (≥10 anos) — mesmo desfecho substituto, resultado oposto conforme o tempo desde a menopausa. O DOPS (1.006 mulheres recém-menopausadas, seguimento de 16 anos) mostrou redução do composto morte/infarto/IC nesse grupo iniciado precocemente, sem excesso de eventos adversos graves nessa coorte específica. A síntese de 2026 (Buzduga et al.) é explícita: 'a TH não deve ser usada para prevenção cardiovascular' em nenhuma faixa etária — o benefício potencial descrito nos estratos de início precoce é para alívio de sintoma vasomotor e prevenção de osteoporose, com perfil de risco mais favorável, particularmente com estrogênio transdérmico (menor risco tromboembólico/AVC que a via oral). A Paciente B representa exatamente o cenário em que o ELITE não mostrou benefício vascular (menopausa tardia) e no qual a indicação de TH para 'proteção cardiovascular' não é sustentada por nenhuma das fontes — o WHI não foi superado pelo ELITE e pelo DOPS, e sim complementado pela distinção de população que esses ensaios trazem.",
+    "source_refs": [
+      "Buzduga CM, Bobu AM, Covali R, Costea CF, Cucu AI, Graur M, Patrascanu E, Solomon-Condriuc I, Carauleanu A. Menopausal Hormone Therapy and Cardiovascular Risk: Current Evidence and Clinical Implications. Med Sci (Basel). 2026;14(2):298. DOI: 10.3390/medsci14020298. PMID: 42346837. PMCID: PMC13303810",
+      "Rossouw JE, Anderson GL, Prentice RL, et al. Risks and benefits of estrogen plus progestin in healthy postmenopausal women: principal results From the Women's Health Initiative randomized controlled trial. JAMA. 2002;288(3):321-333. DOI: 10.1001/jama.288.3.321. PMID: 12117397",
+      "Hodis HN, Mack WJ, Henderson VW, et al. Vascular Effects of Early versus Late Postmenopausal Treatment with Estradiol. N Engl J Med. 2016;374(13):1221-1231. DOI: 10.1056/NEJMoa1505241. PMID: 27028912. PMCID: PMC4921205",
+      "Schierbeck LL, Rejnmark L, Tofteng CL, et al. Effect of hormone replacement therapy on cardiovascular events in recently postmenopausal women: randomised trial. BMJ. 2012;345:e6409. DOI: 10.1136/bmj.e6409. PMID: 23048011"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-aortica-fetal-leve-gradiente-acima-de-12-5-mmhg-preve-intervencao-pos-natal",
+    "titulo": "Estenose aórtica fetal \"leve\": o gradiente que prevê intervenção pós-natal",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Ecocardiograma fetal de rotina, 26 semanas, identifica estenose aórtica classificada como leve, com gradiente de pico de 14 mmHg na valva aórtica e ventrículo esquerdo com morfologia mais globosa (índice de esfericidade reduzido) que o habitual para a idade gestacional. Função ventricular preservada, sem hidropisia. Os pais perguntam se, sendo classificada como \"leve\", o caso pode receber alta do acompanhamento fetal especializado.",
+    "pergunta": "Com base no estudo de Papneja et al. (J Am Soc Echocardiogr 2026, multicêntrico, n=22 fetos com estenose aórtica leve), qual é a conduta mais adequada?",
+    "opcoes": [
+      "Dar alta do seguimento fetal especializado, já que a estenose foi classificada como leve e a função ventricular está preservada",
+      "Manter seguimento ecocardiográfico seriado, sem alta: no estudo, todos os fetos com gradiente de pico da valva aórtica acima de 12,5 mmHg no ecocardiograma fetal inicial evoluíram para intervenção valvar pós-natal no primeiro ano de vida, e um índice de esfericidade ventricular esquerdo menor (ventrículo mais globoso) também se associou a maior chance de intervenção (p=0,045) — este feto reúne os dois sinais de alerta",
+      "Indicar valvuloplastia aórtica fetal (intervenção intraútero) imediatamente, já que gradiente acima de 12,5 mmHg já é critério estabelecido de intervenção intraútero segundo o estudo",
+      "O gradiente de pico da valva aórtica não tem valor preditivo nesta população segundo o estudo — apenas a hidropisia fetal seria critério relevante de acompanhamento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo multicêntrico retrospectivo de Papneja et al. (4 centros, 2009-2019, 22 fetos com estenose aórtica classificada como leve no ecocardiograma fetal inicial, idade gestacional mediana de 24,7 semanas), 8 dos 22 fetos (36,4%) precisaram de intervenção valvar aórtica pós-natal no primeiro ano de vida — e, desses 8, metade (4/8) já chegou com estenose aórtica crítica (canal-dependente) ao nascimento. O preditor mais forte identificado foi o gradiente de pico da valva aórtica no ecocardiograma fetal inicial e final, com diferença estatisticamente significativa entre quem precisou e quem não precisou de intervenção (p=0,0017 no exame inicial; p=0,0016 no final) — e **todos** os fetos com gradiente de pico >12,5 mmHg no exame inicial evoluíram para intervenção no primeiro ano de vida. Um índice de esfericidade ventricular esquerdo menor (ventrículo mais globoso, em vez de elipsoide alongado) também se associou a maior chance de intervenção (p=0,045). Este é exatamente o achado que motiva manter seguimento ecocardiográfico seriado — não alta — em todo caso classificado como \"leve\", especialmente quando o gradiente já se aproxima ou ultrapassa 12,5 mmHg, como neste feto (14 mmHg, já acima do limiar, e com ventrículo mais globoso). A amostra do estudo é pequena (n=22), o que significa que os cortes numéricos devem ser usados como sinal de alerta clínico para intensificar acompanhamento, não como limiar automático isolado de intervenção intraútero — a decisão de intervir intraútero é reservada a casos de estenose aórtica GRAVE com fisiologia evolutiva para síndrome do coração esquerdo hipoplásico, cenário distinto do caso aqui descrito (estenose leve, função preservada, sem hidropisia).",
+    "source_refs": [
+      "Papneja K, et al. Outcomes of Fetuses with Mild Aortic Stenosis: A Multicenter Study. Journal of the American Society of Echocardiography. 2026 (publicação de janeiro). PMID: 41033361",
+      "Gijtenbeek M, Morris SA, Herberg U, et al. Technical Success of Fetal Aortic Valvuloplasty in Relation to Center Volumes: A Report From the International Fetal Cardiac Intervention Registry. Circulation: Cardiovascular Interventions. 2026 Jun 9. DOI: 10.1161/CIRCINTERVENTIONS.125.015593. PMID: 42261657"
+    ],
+    "review_status": "revisado"
   }
 ]
