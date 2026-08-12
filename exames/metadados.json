@@ -9436,5 +9436,129 @@
       "disfunção ventricular",
       "triagem"
     ]
+  },
+  {
+    "slug": "bnp-vs-nt-probnp-interferencia-do-sacubitril-valsartana",
+    "name": "BNP versus NT-proBNP — diferença analítica prática e interferência do sacubitril-valsartana (ARNI)",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Comparação mecanística entre as duas moléculas derivadas do mesmo pró-hormônio (proBNP), clivado em BNP — o peptídeo biologicamente ativo de 32 aminoácidos, que é substrato da enzima neprilisina e por ela degradado no sangue — e NT-proBNP — o fragmento N-terminal inativo de 76 aminoácidos, que não é substrato da neprilisina e por isso não é degradado por ela.",
+    "reference_range": "Não é objeto deste registro repetir os cortes diagnósticos de NT-proBNP (já cadastrados no registro dedicado 'NT-proBNP' desta base) — o valor deste registro é a diferença de comportamento analítico entre as duas moléculas, não uma faixa numérica própria.",
+    "indications": "Sempre que o paciente estiver em uso de sacubitril-valsartana (inibidor da neprilisina/receptor de angiotensina, ARNI) e for necessário interpretar um peptídeo natriurético para diagnóstico, prognóstico ou monitorização de insuficiência cardíaca — a escolha entre BNP e NT-proBNP deixa de ser indiferente nesse cenário.",
+    "interpretation": "Como a neprilisina é farmacologicamente inibida pela sacubitril-valsartana, a degradação fisiológica do BNP fica reduzida, e o BNP circulante tende a subir ou deixar de cair como seria esperado com a melhora clínica — refletindo o efeito farmacológico do inibidor da neprilisina sobre o próprio biomarcador, não necessariamente piora do quadro. O NT-proBNP, por não ser substrato da neprilisina, permanece confiável para acompanhar o estresse de parede ventricular nesse contexto. Por isso, no paciente em uso de ARNI, o NT-proBNP — e não o BNP — é o peptídeo natriurético preferido para diagnóstico, prognóstico e monitorização evolutiva.",
+    "limitations": "A declaração científica de 2023 da Heart Failure Association (ESC)/Heart Failure Society of America/Japanese Heart Failure Society sobre peptídeos natriuréticos trata esse ponto como parte central da orientação prática sobre o uso terapêutico dos ARNI. A revisão de Lippi e Sanchis-Gomar pondera que, como o BNP também reflete a potência cardiorrenal da própria neprilisina inibida, medir BNP e NT-proBNP em conjunto (não isoladamente) pode acrescentar informação em pacientes sob ARNI — mas isso não é consenso fechado, e a orientação prática mais simples e amplamente adotada continua sendo priorizar o NT-proBNP nesse cenário. Uma elevação de BNP logo após o início do ARNI não deve ser interpretada de forma automática como descompensação sem correlação com o exame clínico.",
+    "source_refs": [
+      "Lippi G, Sanchis-Gomar F. Monitoring B-type natriuretic peptide in patients undergoing therapy with neprilysin inhibitors. An emerging challenge? Int J Cardiol. 2016;219:111-114. DOI: 10.1016/j.ijcard.2016.06.019. PMID: 27317994.",
+      "Tsutsui H, Albert NM, Coats AJS, et al. Natriuretic Peptides: Role in the Diagnosis and Management of Heart Failure: A Scientific Statement From the Heart Failure Association of the European Society of Cardiology, Heart Failure Society of America and Japanese Heart Failure Society. J Card Fail. 2023;29(5):787-804. DOI: 10.1016/j.cardfail.2023.02.009. PMID: 37117140."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "sacubitril-valsartana",
+      "arni",
+      "neprilisina",
+      "insuficiência cardíaca",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "doppler-transcraniano-com-contraste-shunt-direita-esquerda-fop",
+    "name": "Doppler transcraniano com contraste (bolhas) na detecção de shunt direita-esquerda / forame oval patente",
+    "category": "metodo_grafico",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Monitorização por Doppler da artéria cerebral média em busca de sinais de embolia de alta intensidade (microbolhas) após injeção intravenosa periférica de solução salina agitada, com e sem manobra de Valsalva — detecta passagem de shunt direita-esquerda (cardíaco, tipicamente por forame oval patente, ou pulmonar) para a circulação cerebral, sem visualizar a anatomia do defeito.",
+    "reference_range": "Resultado positivo é a detecção de sinais de embolia de alta intensidade cruzando para o fluxo cerebral dentro de poucos segundos da injeção, classificados de forma semiquantitativa (contagem/grau dos sinais) conforme o protocolo do laboratório de neurossonologia. Não há um número único de sinais universalmente adotado por todos os serviços — a magnitude do shunt costuma ser descrita, não só a presença/ausência.",
+    "indications": "Rastreio de shunt direita-esquerda em investigação de AVC criptogênico ou embolia paradoxal (fonte embólica indeterminada), como teste de triagem não invasivo, tipicamente antes ou em paralelo ao ecocardiograma transesofágico com contraste — já cadastrado nesta base para Cardiopatias congênitas.",
+    "interpretation": "Metanálise de 2026 (5 estudos primários, pacientes majoritariamente com AVC criptogênico) encontrou sensibilidade combinada de 94,8% (IC95% 91-98%) e especificidade de 89,7% (IC95% 85-94%) do Doppler transcraniano com contraste comparado ao ecocardiograma transesofágico (padrão-ouro), com razão de verossimilhança positiva ~9, negativa ~0,06 e área sob a curva ROC sumária ~0,97 — desempenho robusto, próximo ao do ETE. Um estudo comparativo direto de 2026 (130 pacientes com AVC embólico de origem indeterminada, submetidos a pelo menos 3 dos 4 métodos) encontrou sensibilidade de 100% e valor preditivo negativo de 100% para o Doppler transcraniano, com especificidade moderada (75%, subindo a 81% ao excluir shunt extracardíaco/PFO leve) — sem diferença estatística significativa de desempenho global entre Doppler transcraniano, ecocardiograma transtorácico e ecocardiograma transesofágico nesse estudo (os três superiores à angiotomografia cardíaca isolada).",
+    "limitations": "Um Doppler transcraniano negativo reduz bastante a probabilidade de shunt clinicamente significativo, mas um resultado positivo deve, segundo a própria metanálise de 2026, ser seguido de ecocardiograma transesofágico confirmatório para caracterização anatômica do defeito (tamanho, presença de aneurisma de septo interatrial) — informação que o método não fornece. O exame depende de janela acústica temporal adequada, ausente em parcela dos pacientes, o que limita sua exequibilidade em alguns casos. O método detecta a fisiologia do shunt (passagem de bolha), não distingue com segurança, por si só, origem cardíaca de origem pulmonar sem um protocolo específico de cronometragem do trânsito das bolhas.",
+    "source_refs": [
+      "Yavuz YE, Tatar S, Akilli H, Alsancak Y, İçli A, Küçükkendirci H. Diagnostic Accuracy of Contrast-enhanced Transcranial Doppler for Patent Foramen Ovale Detection in Adults: Systematic Review and Meta-analysis. J Cardiovasc Echogr. 2026;36(2):89-100. DOI: 10.4103/jcecho.jcecho_128_25. PMID: 42389413.",
+      "Ravi V, Pirahanchi Y, Jazayeri SB, Rice E, Meyer DM, Agrawal K, Modir R, Hemmen T, Meyer BC, Bavarsad Shahripour R. Comparative Accuracy of TCD, TTE, TEE, and Cardiac CT in Detecting Right-to-Left Shunt in Embolic Stroke of Undetermined Source. Neurol Clin Pract. 2026;16(3):e200604. DOI: 10.1212/CPJ.0000000000200604. PMID: 41908736."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doppler transcraniano",
+      "forame oval patente",
+      "shunt direita-esquerda",
+      "avc criptogênico",
+      "embolia paradoxal",
+      "microbolhas"
+    ]
+  },
+  {
+    "slug": "escore-de-calcio-coronariano-automatizado-por-inteligencia-artificial",
+    "name": "Escore de cálcio coronariano automatizado por inteligência artificial (deep learning) em TC de tórax não sincronizada",
+    "category": "imagem",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Quantificação automática do escore de cálcio coronariano (Agatston) por modelo de aprendizado profundo (deep learning), aplicado retrospectivamente a tomografias de tórax NÃO sincronizadas ao ECG e sem protocolo cardíaco dedicado — inclusive TC de rotina, TC de rastreio e TC de avaliação de COVID-19 —, extraindo informação de risco cardiovascular de um exame já realizado por outro motivo ('achado oportunista').",
+    "reference_range": "Não é um exame com faixa de referência própria — o resultado é o mesmo Agatston do escore de cálcio tradicional (ver registro dedicado desta base), só que obtido por segmentação automatizada em vez de leitura manual em TC dedicada. Desempenho medido no estudo de validação: concordância quase perfeita com a leitura manual (coeficiente de correlação intraclasse 0,987 para o escore contínuo; kappa de Cohen 0,86-0,95 para a categoria de risco); F1-score de 0,956 para detectar CAC>100 e 0,967 para CAC>300; validação externa em duas coortes independentes com kappa 0,8 e F1-score 0,928.",
+    "indications": "Extrair valor prognóstico cardiovascular adicional de uma TC de tórax já realizada por outra indicação (rastreio de câncer de pulmão, investigação de sintoma respiratório, avaliação de COVID-19), sem exposição a radiação nem custo adicional de um exame dedicado — sobretudo em paciente sem doença aterosclerótica estabelecida, em que o escore de cálcio ainda pode reclassificar risco.",
+    "interpretation": "Estudo brasileiro (Instituto do Coração — InCor/HCFMUSP), treinado e validado em 2.132 tomografias de tórax de três protocolos distintos (rotina, TC-cálcio dedicada e TC-COVID) de pacientes sem doença aterosclerótica estabelecida, demonstrou desempenho de quantificação automatizada equivalente ao da leitura manual especializada, sustentando a proposta de estratificação de risco cardiovascular oportunista e de baixo custo em qualquer TC de tórax realizada na prática clínica contemporânea, inclusive as não pensadas originalmente para essa finalidade.",
+    "limitations": "Estudo retrospectivo de centro único para o treinamento e validação interna, com validação externa em apenas duas coortes adicionais; o padrão de referência usado foi a anotação manual por observadores experientes, não uma segunda TC dedicada em todos os casos. A incorporação rotineira desse tipo de leitura automatizada ao laudo radiológico ainda não é padrão na maioria dos serviços, e supervisão humana continua sendo necessária. O desempenho do modelo pode variar em aparelhos e protocolos de aquisição não representados no treinamento original.",
+    "source_refs": [
+      "Mineo E, Assuncao-Jr AN, Grego da Silva CF, Liberato G, Dantas-Jr RN, Graves CV, Gutierrez MA, Nomura CH. Automated Coronary Artery Calcium Scoring Using Deep Learning: Validation Across Diverse Chest CT Protocols. Acad Radiol. 2025;32(12):7177-7186. DOI: 10.1016/j.acra.2025.09.009. PMID: 40998657."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "escore de cálcio coronariano",
+      "inteligência artificial",
+      "deep learning",
+      "tc de tórax não sincronizada",
+      "rastreio oportunista",
+      "prevenção cardiovascular"
+    ]
+  },
+  {
+    "slug": "st2-soluvel-sst2-na-insuficiencia-cardiaca",
+    "name": "ST2 solúvel (sST2) na estratificação prognóstica da insuficiência cardíaca crônica",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Concentração sérica da forma solúvel do receptor ST2 (membro da família de receptores de interleucina-1), liberada por miócitos e fibroblastos cardíacos submetidos a sobrecarga mecânica — biomarcador de fibrose e remodelamento miocárdico, mecanisticamente distinto e complementar aos peptídeos natriuréticos (que refletem estresse de parede, não fibrose).",
+    "reference_range": "Corte clínico validado e homologado pela FDA norte-americana: 35 ng/mL (ensaio Presage ST2), confirmado em estudo de 2023 que também validou dois ensaios point-of-care mais recentes (AFIAS ST2 e ichroma ST2) fortemente correlacionados com o ensaio de referência (r = 0,82 e 0,81).",
+    "indications": "Estratificação prognóstica adicional na insuficiência cardíaca crônica ambulatorial, como complemento aos peptídeos natriuréticos — não como substituto, e não como ferramenta diagnóstica isolada (o valor do sST2 demonstrado na literatura é prognóstico, não de rule-in/rule-out diagnóstico).",
+    "interpretation": "Metanálise de 2017 (7 estudos, 6.372 pacientes para mortalidade por qualquer causa) encontrou HR 1,75 (IC95% 1,37-2,22) para óbito por qualquer causa e HR 1,79 (IC95% 1,22-2,63) para óbito cardiovascular a cada duplicação do sST2 — com poder preditivo maior nos estudos em que os pacientes recebiam tratamento farmacológico guiado por diretriz vigente. Atualização de 2026 (17 estudos) confirmou o achado: HR 1,03 (IC95% 1,02-1,04) por unidade para mortalidade por qualquer causa, HR 1,46 (IC95% 1,33-1,61) para o composto mortalidade/reinternação por IC, e HR 1,50 (IC95% 1,30-1,74) para mortalidade cardiovascular/reinternação — com bom valor prognóstico mantido em subgrupos por etnia, sexo, fração de ejeção e tempo de seguimento.",
+    "limitations": "As metanálises registram heterogeneidade significativa entre estudos (atribuída, na análise de 2017, sobretudo a diferenças de tratamento farmacológico entre as coortes) — o sST2 não deve ser lido como número isolado e definitivo, e sim integrado à avaliação clínica. É biomarcador de valor prognóstico consolidado, não de diagnóstico de insuficiência cardíaca. A padronização entre plataformas comerciais foi validada apenas recentemente (2023) para os ensaios point-of-care mais novos, e a adoção clínica de rotina do sST2 ainda é menor que a dos peptídeos natriuréticos.",
+    "source_refs": [
+      "Aimo A, Vergaro G, Passino C, Ripoli A, Ky B, Miller WL, Bayes-Genis A, Anand I, Januzzi JL, Emdin M. Prognostic Value of Soluble Suppression of Tumorigenicity-2 in Chronic Heart Failure: A Meta-Analysis. JACC Heart Fail. 2017;5(4):280-286. DOI: 10.1016/j.jchf.2016.09.010. PMID: 27816512.",
+      "Zhang Y, Liu Y, Yang Y, Peng L, Zhong P, Jiang X. The prognostic value of circulating soluble ST2 in patients with chronic heart failure. J Int Med Res. 2026;54(1):3000605251406969. DOI: 10.1177/03000605251406969. PMID: 41529919.",
+      "Kim H, Lee TH, Hur M, Kim HJ, Yang HS, Lee KR, Somma SD. Performance Evaluation of AFIAS ST2 and Ichroma ST2 Assays in Comparison with Presage ST2 Assay. Rev Cardiovasc Med. 2023;24(4):100. DOI: 10.31083/j.rcm2404100. PMID: 39076257."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "st2 solúvel",
+      "sst2",
+      "insuficiência cardíaca",
+      "biomarcador de fibrose",
+      "remodelamento miocárdico",
+      "prognóstico"
+    ]
+  },
+  {
+    "slug": "galectina-3-na-insuficiencia-cardiaca",
+    "name": "Galectina-3 na estratificação prognóstica da insuficiência cardíaca",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Concentração sérica de galectina-3, lectina secretada por macrófagos ativados, envolvida na ativação de fibroblastos e na fibrose miocárdica — biomarcador de remodelamento estrutural do miocárdio, e não de estresse hemodinâmico agudo (ao contrário dos peptídeos natriuréticos).",
+    "reference_range": "Sem corte diagnóstico único consensualmente validado nas fontes consultadas para este registro — a evidência disponível descreve relação dose-resposta contínua com o desfecho, não um limiar categórico. Onde um serviço adotar corte próprio, deve declarar a origem dele: VERIFICAÇÃO HUMANA NECESSÁRIA para qualquer valor de corte numérico usado localmente.",
+    "indications": "Estratificação prognóstica adicional na insuficiência cardíaca, na mesma lógica adjunta (não substitutiva) do sST2 — biomarcador de fibrose/remodelamento a ser somado, não trocado, pelos peptídeos natriuréticos já estabelecidos.",
+    "interpretation": "Metanálise de 2024 (24 estudos de coorte) encontrou associação significativa entre galectina-3 elevada e maior mortalidade por qualquer causa em longo prazo (HR 1,65; IC95% 1,28-2,13, comparando os grupos de maior e menor nível) e maior risco do composto mortalidade/reinternação por IC (HR 1,52; IC95% 1,15-2,00). Em análise contínua, cada 1 ng/mL de aumento na galectina-3 associou-se a 4% mais risco de óbito por qualquer causa (HR 1,04; IC95% 1,02-1,06) e 3% mais risco do composto mortalidade/reinternação (HR 1,03; IC95% 1,02-1,04); um aumento de 1 desvio-padrão associou-se a 29% mais risco de óbito e 22% mais risco do composto. A galectina-3 mostrou correlação positiva moderada com o NT-proBNP (r = 0,48) e correlação negativa fraca com a taxa de filtração glomerular estimada (r = -0,39).",
+    "limitations": "Heterogeneidade elevada entre os estudos incluídos (I² de 66% a 76% conforme o desfecho analisado) — a evidência é de estudos observacionais de coorte, sem validação em ensaio clínico randomizado que guie conduta terapêutica pelo valor do biomarcador. A correlação negativa com a função renal estimada é um fator de confusão relevante: paciente com doença renal crônica concomitante tende a ter galectina-3 mais alta por motivo não exclusivamente cardíaco, o que exige cautela na interpretação isolada. Não é biomarcador específico de fibrose cardíaca — eleva-se também em outras condições fibróticas e inflamatórias sistêmicas.",
+    "source_refs": [
+      "Cheng W, Maciej R, Thiele H, Büttner P. Galectin-3 levels and long-term all-cause mortality and hospitalization in heart failure patients: a meta-analysis. ESC Heart Fail. 2024;11(5):2566-2577. DOI: 10.1002/ehf2.14813. PMID: 38698741."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "galectina-3",
+      "insuficiência cardíaca",
+      "biomarcador de fibrose",
+      "remodelamento miocárdico",
+      "prognóstico"
+    ]
   }
 ]
