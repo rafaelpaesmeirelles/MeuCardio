@@ -152,3 +152,12 @@ com mutação de FLT3 — mas a **apresentação clínica e o manejo agudo (cort
 hemodinâmico) convergem**, porque ambas resultam do mesmo fenômeno final: diferenciação abrupta de
 blastos leucêmicos sob terapia-alvo eficaz. Reconhecer o padrão clínico não depende de saber qual
 via molecular foi bloqueada.
+
+## Nem todo inibidor de menina tem o mesmo risco de QTc
+O revumenibe não é o único inibidor de menina em uso clínico avançado — o **ziftomenibe**, aprovado
+para leucemia mieloide aguda recidivada/refratária com mutação de NPM1, mostrou um sinal de QTc
+bem menor no ensaio KOMET-007 (Wang et al., Blood 2026, PMID 42227701, n=67): só 1 evento de QTc
+(grau 1, leve) atribuído ao fármaco, contra 13,8% de QTc grau ≥3 do revumenibe no AUGMENT-101 acima.
+Ver `content/Farmacologia/inibidores-de-menina-revumenibe-ziftomenibe-e-prolongamento-do-qtc.md`
+para a comparação completa entre os dois agentes — não tratar o prolongamento de QTc como efeito
+uniforme de toda a classe.
