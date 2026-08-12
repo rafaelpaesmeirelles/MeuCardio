@@ -1,7 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
-import { Carregando, Vazio } from "../components/Estado";
+import { Carregando } from "../components/Estado";
+import {
+  ClinicalContextLink,
+  ClinicalEmpty,
+  ClinicalMetric,
+  ClinicalPageHeader,
+  ClinicalSection,
+} from "../components/ClinicalCommandPrimitives";
 
 type Item = { slug: string; name: string; category: string; theme: string; tags: string[] };
 type Taxonomia = {
@@ -10,14 +17,15 @@ type Taxonomia = {
   subtypes: { theme: string; count: number }[];
 };
 
-const RÓTULO_CATEGORIA: Record<string, string> = {
+const ROTULO_CATEGORIA: Record<string, string> = {
   laboratorial: "Laboratorial",
   metodo_grafico: "Método gráfico",
   imagem: "Imagem",
 };
 
 function rotuloTipo(valor: string) {
-  return RÓTULO_CATEGORIA[valor] ?? valor.replaceAll("_", " ");
+  const base = ROTULO_CATEGORIA[valor] ?? valor.replaceAll("_", " ");
+  return base.charAt(0).toLocaleUpperCase("pt-BR") + base.slice(1);
 }
 
 export default function Exames() {
@@ -70,112 +78,103 @@ export default function Exames() {
     return [...mapa.entries()].sort(([a], [b]) => a.localeCompare(b, "pt-BR"));
   }, [itens]);
 
-  function escolherTipo(valor: string) {
+  const total = useMemo(() => taxonomia.reduce((soma, tipo) => soma + tipo.count, 0), [taxonomia]);
+  const totalSubtipos = useMemo(() => new Set(taxonomia.flatMap((tipo) => tipo.subtypes.map((item) => item.theme))).size, [taxonomia]);
+
+  function alterarCategoria(valor: string) {
     const proximo = new URLSearchParams(params);
     if (valor) proximo.set("tipo", valor); else proximo.delete("tipo");
     proximo.delete("subtipo");
     setParams(proximo);
   }
 
-  function escolherSubtipo(valor: string) {
+  function alterarSubtipo(valor: string) {
     const proximo = new URLSearchParams(params);
     if (valor) proximo.set("subtipo", valor); else proximo.delete("subtipo");
     setParams(proximo);
   }
 
   return (
-    <>
-      <p className="eyebrow">Exames</p>
-      <h1>Marcadores e exames cardiológicos</h1>
-      <p style={{ color: "var(--texto-secundario)", maxWidth: "68ch" }}>
-        Conteúdo organizado por tipo e subtipo, com indicação, interpretação,
-        limitações e fontes para cada exame.
-      </p>
-
-      <input
-        value={busca}
-        onChange={(e) => setBusca(e.target.value)}
-        placeholder="Buscar nome, tipo, subtipo ou assunto…"
-        aria-label="Buscar exame"
-        style={{ maxWidth: 520, marginTop: "0.8rem" }}
+    <div className="cc-page cc-exams-page">
+      <ClinicalPageHeader
+        eyebrow="Diagnóstico e monitorização"
+        title="Exames"
+        description="Marcadores, métodos gráficos e imagem organizados para chegar da indicação à interpretação, limitações e conexões clínicas."
+        icon="clinica"
+        actions={[
+          { to: "/documentos", label: "Solicitar exames", icon: "documento", tone: "primary" },
+          { to: "/assistente", label: "Discutir contexto", icon: "assistente" },
+        ]}
+        meta={<><span className="selo">{total || "—"} exames</span><span className="selo">interpretação estruturada</span></>}
       />
 
-      <div style={{ marginTop: "0.9rem" }}>
-        <p className="eyebrow" style={{ marginBottom: "0.35rem" }}>Tipo</p>
-        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-          <button
-            className={`botao ${categoria ? "botao--secundario" : ""}`}
-            style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-            onClick={() => escolherTipo("")}
-          >
-            Todos
-          </button>
-          {taxonomia.map((tipo) => (
-            <button
-              key={tipo.category}
-              className={`botao ${categoria === tipo.category ? "" : "botao--secundario"}`}
-              style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-              onClick={() => escolherTipo(tipo.category)}
-            >
-              {rotuloTipo(tipo.category)} ({tipo.count})
-            </button>
-          ))}
-        </div>
+      <div className="cc-metrics">
+        <ClinicalMetric label="Catálogo" value={total || "—"} detail="exames e marcadores" icon="clinica" />
+        <ClinicalMetric label="Tipos" value={taxonomia.length || "—"} detail="grandes categorias" icon="documento" />
+        <ClinicalMetric label="Subtipos" value={totalSubtipos || "—"} detail="áreas diagnósticas" icon="evidencia" />
+        <ClinicalMetric label="Seleção" value={itens?.length ?? "…"} detail="resultados atuais" icon="busca" />
       </div>
 
-      {subtiposDisponiveis.length > 1 && (
-        <div style={{ marginTop: "0.8rem" }}>
-          <p className="eyebrow" style={{ marginBottom: "0.35rem" }}>Subtipo</p>
-          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-            <button
-              className={`botao ${subtipo ? "botao--secundario" : ""}`}
-              style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-              onClick={() => escolherSubtipo("")}
-            >
-              Todos
-            </button>
-            {subtiposDisponiveis.map((item) => (
-              <button
-                key={item.theme}
-                className={`botao ${subtipo === item.theme ? "" : "botao--secundario"}`}
-                style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-                onClick={() => escolherSubtipo(item.theme)}
-              >
-                {item.theme} ({item.count})
-              </button>
-            ))}
-          </div>
+      <ClinicalSection eyebrow="Encontrar exame" title="Do nome ao contexto diagnóstico" description="Filtros compactos preservam a área de leitura e funcionam melhor no celular.">
+        <div className="cc-filter-grid cc-filter-grid--3">
+          <label>
+            <span>Nome, tipo ou assunto</span>
+            <input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: NT-proBNP, ecocardiograma, isquemia…" aria-label="Buscar exame" />
+          </label>
+          <label>
+            <span>Tipo</span>
+            <select value={categoria} onChange={(e) => alterarCategoria(e.target.value)}>
+              <option value="">Todos os tipos</option>
+              {taxonomia.map((tipo) => <option key={tipo.category} value={tipo.category}>{rotuloTipo(tipo.category)} ({tipo.count})</option>)}
+            </select>
+          </label>
+          <label>
+            <span>Subtipo</span>
+            <select value={subtipo} onChange={(e) => alterarSubtipo(e.target.value)}>
+              <option value="">Todos os subtipos</option>
+              {subtiposDisponiveis.map((item) => <option key={item.theme} value={item.theme}>{item.theme} ({item.count})</option>)}
+            </select>
+          </label>
         </div>
-      )}
+        <div className="cc-filter-summary"><span>{itens?.length ?? "…"} resultados</span>{(busca || categoria || subtipo) && <button type="button" onClick={() => { setBusca(""); setParams(new URLSearchParams(), { replace: true }); }}>Limpar filtros</button>}</div>
+      </ClinicalSection>
 
-      <div style={{ marginTop: "1.2rem" }}>
+      <ClinicalSection eyebrow="Catálogo" title={subtipo || (categoria ? rotuloTipo(categoria) : "Marcadores e exames cardiológicos")} description="Abra um item para revisar indicação, interpretação, limitações e fontes.">
         {itens === null ? (
-          <Carregando />
+          <Carregando texto="Consultando exames…" />
         ) : itens.length === 0 ? (
-          <Vazio titulo="Nenhum exame encontrado" acao="Tente outro termo, tipo ou subtipo." />
-        ) : grupos.map(([chave, exames]) => {
-          const [tipo, tema] = chave.split("|||");
-          return (
-            <section key={chave} style={{ marginBottom: "1.3rem" }}>
-              <p className="eyebrow" style={{ margin: 0 }}>{rotuloTipo(tipo)}</p>
-              <h2 style={{ marginTop: "0.2rem" }}>{tema}</h2>
-              <div className="grade grade--2">
-                {exames.map((exame) => (
-                  <Link key={exame.slug} to={`/exames/${exame.slug}`} className="cartao" style={{ textDecoration: "none" }}>
-                    <p className="eyebrow">{rotuloTipo(exame.category)} · {exame.theme}</p>
-                    <strong>{exame.name}</strong>
-                    {exame.tags.length > 0 && (
-                      <p style={{ color: "var(--texto-secundario)", fontSize: "0.8rem", marginBottom: 0 }}>
-                        {exame.tags.slice(0, 4).join(" · ")}
-                      </p>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
-    </>
+          <ClinicalEmpty title="Nenhum exame encontrado" description="Tente outro termo, tipo ou subtipo." />
+        ) : (
+          <div className="cc-exam-groups">
+            {grupos.map(([chave, exames]) => {
+              const [tipo, tema] = chave.split("|||");
+              return (
+                <section key={chave} className="cc-exam-group">
+                  <div className="cc-exam-group__heading"><div><p className="eyebrow">{rotuloTipo(tipo)}</p><h3>{tema}</h3></div><span>{exames.length}</span></div>
+                  <div className="cc-exam-grid">
+                    {exames.map((exame) => (
+                      <Link key={exame.slug} to={`/exames/${exame.slug}`} className="cc-exam-card">
+                        <small>{rotuloTipo(exame.category)} · {exame.theme}</small>
+                        <strong>{exame.name}</strong>
+                        {exame.tags.length > 0 && <span>{exame.tags.slice(0, 3).join(" · ")}</span>}
+                        <i>↗</i>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+        )}
+      </ClinicalSection>
+
+      <ClinicalSection eyebrow="Conhecimento conectado" title="Do exame à decisão">
+        <div className="cc-context-grid">
+          <ClinicalContextLink to="/documentos" icon="documento" title="Solicitar exames" detail="Transformar decisão em pedido" />
+          <ClinicalContextLink to="/doencas" icon="doencas" title="Condições" detail="Interpretar dentro da doença" />
+          <ClinicalContextLink to="/evidencias" icon="evidencia" title="Evidências" detail="Recomendações de uso" />
+        </div>
+      </ClinicalSection>
+    </div>
   );
 }
