@@ -18,7 +18,7 @@ descreve o quadro que faz o médico abrir aquele protocolo, não o que fazer.
 
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, DateTime, Integer, String
+from sqlalchemy import Boolean, DateTime, Integer, String, Text
 from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -32,7 +32,11 @@ class EmergencyProtocol(Base):
     slug: Mapped[str] = mapped_column(String(160), unique=True, index=True)
     titulo: Mapped[str] = mapped_column(String(300))
     # Sinal de reconhecimento — o que faz abrir este protocolo, não a conduta.
-    gatilho: Mapped[str | None] = mapped_column(String(400), nullable=True)
+    # Alguns quadros de emergência exigem descrição mais longa que 400
+    # caracteres para não perder precisão sob pressão (registros reais
+    # excedem) — Text desde migração f71q20260812, mesmo padrão de
+    # 72abcfc8df81 (drugs.drug_class).
+    gatilho: Mapped[str | None] = mapped_column(Text, nullable=True)
     ordem: Mapped[int] = mapped_column(Integer, default=99, index=True)
 
     documento_slug: Mapped[str] = mapped_column(String(255), index=True)

@@ -20,7 +20,11 @@ class ScientificStudy(Base):
     study_type: Mapped[str] = mapped_column(String(60))
     # ensaio_clinico | revisao_sistematica | metanalise | consenso | coorte | caso_controle
 
-    authors: Mapped[str | None] = mapped_column(String(300), nullable=True)  # "Sobrenome AB et al."
+    # "Sobrenome AB et al." na maioria, mas consenso multissocietário/comitê
+    # de diretriz costuma listar autoria completa + sociedades por extenso
+    # (registros reais excedem 300 caracteres) — Text desde migração
+    # f71q20260812, mesmo padrão de 72abcfc8df81 (drugs.drug_class).
+    authors: Mapped[str | None] = mapped_column(Text, nullable=True)  # "Sobrenome AB et al."
     journal: Mapped[str] = mapped_column(String(200))
     year: Mapped[int] = mapped_column(Integer)
     doi: Mapped[str | None] = mapped_column(String(120), nullable=True)

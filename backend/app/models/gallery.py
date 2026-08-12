@@ -18,8 +18,12 @@ class GalleryImage(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(String(255), unique=True, index=True)
     title: Mapped[str] = mapped_column(String(300))
-    modality: Mapped[str] = mapped_column(String(40), index=True)
-    # ECG | Ecocardiograma | TC | RM | Radiografia | Cateterismo | Doppler | Patologia
+    # Categoria curta na maioria dos casos (ECG | Ecocardiograma | TC | RM |
+    # Radiografia | Cateterismo | Doppler | Patologia), mas alguns achados
+    # não se encaixam num rótulo fixo de 40 caracteres (ex.: "Monitorização
+    # Ambulatorial da Pressão Arterial (MAPA)") — Text desde migração
+    # f71q20260812, mesmo padrão de 72abcfc8df81 (drugs.drug_class).
+    modality: Mapped[str] = mapped_column(Text, index=True)
     theme: Mapped[str] = mapped_column(String(80), index=True)  # mesmo vocabulário de Document.theme
     findings: Mapped[str] = mapped_column(Text)  # descrição dos achados, em português, texto próprio
     teaching_points: Mapped[str | None] = mapped_column(Text, nullable=True)
