@@ -1,0 +1,149 @@
+/* Documents & Requests Command Center — action first, templates second. */
+body.corvia-route--documentos .clinical-os .cos-content {
+  --doc-cyan:#58d6dd;
+  --doc-purple:#b79aff;
+  --doc-blue:#71aef4;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .eyebrow:first-child { margin:0; color:#5fd8df; }
+body.corvia-route--documentos .clinical-os .cos-content > h1 {
+  margin:.06rem 0 .16rem;
+  color:#f2fbfc;
+  font-size:clamp(1.4rem,2vw,1.9rem);
+  letter-spacing:-.04em;
+}
+body.corvia-route--documentos .clinical-os .cos-content > h1 + p {
+  margin:0 0 .82rem;
+  color:#7d98a1 !important;
+  font-size:.68rem;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .eyebrow[style*="marginTop: \"1.2rem\""] { margin-top:.75rem !important; }
+
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 {
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.52rem;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button {
+  position:relative;
+  display:grid;
+  min-height:126px;
+  align-content:end;
+  padding:.78rem;
+  overflow:hidden;
+  text-align:left !important;
+  border-radius:11px;
+  cursor:pointer;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button::after {
+  content:"";
+  position:absolute;
+  top:-2.3rem;
+  right:-2rem;
+  width:8rem;
+  height:8rem;
+  border-radius:50%;
+  background:rgba(56,202,213,.055);
+  pointer-events:none;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button:nth-child(2)::after { background:rgba(161,124,245,.06); }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button:nth-child(3)::after { background:rgba(76,159,255,.06); }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button strong { position:relative; z-index:1; color:#effafb; font-size:.82rem; }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button p { position:relative; z-index:1; max-width:34ch; color:#748e97 !important; font-size:.55rem !important; line-height:1.38; }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button:hover { transform:translateY(-1px); border-color:rgba(56,202,213,.2) !important; }
+
+/* Models stay useful but visually subordinate. */
+body.corvia-route--documentos .clinical-os .cos-content > .grade--2 {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.45rem;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--2 > button.cartao {
+  min-height:78px;
+  padding:.62rem .72rem;
+  background:rgba(255,255,255,.015);
+  border-style:dashed;
+  cursor:pointer;
+}
+body.corvia-route--documentos .clinical-os .cos-content > .grade--2 > button.cartao strong { color:#cfdfe3; font-size:.68rem; }
+body.corvia-route--documentos .clinical-os .cos-content > .grade--2 > button.cartao p { color:#6e8992 !important; font-size:.53rem !important; }
+
+/* Active creation flow behaves like a dedicated command surface. */
+body.corvia-route--documentos .clinical-os #fluxo-documento {
+  margin-top:.7rem;
+  padding-top:.12rem;
+  scroll-margin-top:76px;
+}
+body.corvia-route--documentos .clinical-os #fluxo-documento > .cartao {
+  padding:.8rem;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(56,202,213,.045),transparent 14rem),
+    linear-gradient(145deg,rgba(9,30,42,.98),rgba(5,21,31,.99));
+  border-color:rgba(56,202,213,.12);
+  border-radius:12px;
+}
+body.corvia-route--documentos .clinical-os #fluxo-documento label { font-size:.58rem; }
+body.corvia-route--documentos .clinical-os #fluxo-documento textarea { min-height:190px; line-height:1.48; }
+body.corvia-route--documentos .clinical-os #fluxo-documento .cartao {
+  box-shadow:none;
+  background:rgba(255,255,255,.014);
+}
+body.corvia-route--documentos .clinical-os #fluxo-documento pre {
+  max-height:320px;
+  overflow:auto;
+  color:#c8dce0 !important;
+  background:#04131d !important;
+  border:1px solid rgba(126,183,201,.08) !important;
+}
+
+body.corvia-route--documentos .clinical-os #modelos-salvos {
+  margin-top:1rem !important;
+  padding-top:.82rem;
+  border-top:1px solid rgba(126,183,201,.07);
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos > h2,
+body.corvia-route--documentos .clinical-os #modelos-salvos + * h2 {
+  color:#dbecef;
+  font-size:.82rem;
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos .cartao {
+  margin-bottom:.35rem !important;
+  padding:.55rem .65rem;
+  background:rgba(255,255,255,.014);
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos .cartao strong { font-size:.62rem; }
+body.corvia-route--documentos .clinical-os #modelos-salvos .cartao .eyebrow { color:#687f88; font-size:.45rem; }
+body.corvia-route--documentos .clinical-os #modelos-salvos .botao { min-height:26px; padding:.25rem .45rem !important; font-size:.48rem !important; }
+
+/* Generated archive reads like a compact document ledger. */
+body.corvia-route--documentos .clinical-os #modelos-salvos ~ h2 {
+  margin-top:1.35rem !important;
+  color:#dbecef;
+  font-size:.82rem;
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos ~ .grade--2 {
+  padding:.5rem;
+  background:rgba(255,255,255,.012);
+  border:1px solid rgba(126,183,201,.06);
+  border-radius:9px;
+}
+body.corvia-route--documentos .clinical-os #modelos-salvos ~ section .cartao,
+body.corvia-route--documentos .clinical-os #modelos-salvos ~ .cartao {
+  background:rgba(255,255,255,.013);
+}
+
+@media (max-width:900px) {
+  body.corvia-route--documentos .clinical-os .cos-content > h1 { font-size:1rem; }
+  body.corvia-route--documentos .clinical-os .cos-content > h1 + p { font-size:.56rem; margin-bottom:.62rem; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 { grid-template-columns:repeat(3,minmax(0,1fr)); gap:.32rem; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button { min-height:88px; padding:.45rem .34rem; align-content:center; text-align:center !important; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button::after { width:5rem; height:5rem; right:-1.8rem; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button strong { font-size:.54rem; line-height:1.15; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--3 > button p { display:none; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--2 > button.cartao { min-height:66px; padding:.45rem; }
+  body.corvia-route--documentos .clinical-os .cos-content > .grade--2 > button.cartao p { display:none; }
+  body.corvia-route--documentos .clinical-os #fluxo-documento > .cartao { padding:.58rem; }
+  body.corvia-route--documentos .clinical-os #fluxo-documento .grade--2 { grid-template-columns:1fr; }
+  body.corvia-route--documentos .clinical-os #fluxo-documento textarea { min-height:160px; }
+}
