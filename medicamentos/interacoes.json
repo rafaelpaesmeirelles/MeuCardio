@@ -1220,5 +1220,55 @@
     "conduta": "Monitorar cuidadosamente sinais de sangramento quando edoxabana for combinada a AAS em dose baixa e/ou AINE de uso crônico, conforme orientação literal da bula — a combinação foi estudada e é permitida, mas com risco hemorrágico aumentado documentado.",
     "fonte": "SAVAYSA (edoxaban tosylate) — bula profissional FDA/DailyMed, Daiichi Sankyo Inc., setid e77d3400-56ad-11e3-949a-0800200c9a66, seção 7.1 Drug Interactions — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
     "review_status": "revisado"
+  },
+  {
+    "slug": "sacubitrilvalsartana-espironolactona-ou-eplerenona",
+    "farmacos": [
+      "sacubitrilvalsartana",
+      "espironolactona",
+      "eplerenona"
+    ],
+    "classe_oposta": null,
+    "gravidade": "moderada",
+    "efeito": "Aumento do risco de hiperpotassemia. A bula profissional FDA/DailyMed do ENTRESTO (sacubitril/valsartana), seção 7.2 (Potassium-Sparing Diuretics), afirma textualmente: \"As with other drugs that block angiotensin II or its effects, concomitant use of potassium-sparing diuretics (e.g., spironolactone, triamterene, amiloride), potassium supplements, or salt substitutes containing potassium may lead to increases in serum potassium.\" A seção 5.5 (Hyperkalemia) reforça que a hiperpotassemia pode ocorrer pela ação do próprio sacubitril/valsartana sobre o SRAA, com risco maior em insuficiência renal grave, diabetes, hipoaldosteronismo ou dieta rica em potássio — exatamente o cenário clínico da insuficiência cardíaca com FE reduzida, em que sacubitril/valsartana e um antagonista mineralocorticoide (espironolactona ou eplerenona) são dois dos quatro pilares farmacológicos frequentemente prescritos juntos.",
+    "conduta": "Monitorar potássio sérico periodicamente ao associar sacubitril/valsartana a espironolactona ou eplerenona — combinação terapêutica desejada e comum no tratamento da insuficiência cardíaca com fração de ejeção reduzida (dois dos quatro pilares), mas que exige vigilância ativa de hiperpotassemia, sobretudo em insuficiência renal, diabetes ou dieta rica em potássio. Redução de dose ou interrupção temporária de qualquer um dos fármacos pode ser necessária conforme o nível de potássio.",
+    "fonte": "ENTRESTO (sacubitril and valsartan) — bula profissional FDA/DailyMed, Novartis Pharmaceuticals Corporation, setid 000dc81d-ab91-450c-8eae-8eb74e72296f, seções 5.5 e 7.2 — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "metformina-cloridrato-contraste-iodado",
+    "farmacos": [
+      "metformina-cloridrato"
+    ],
+    "classe_oposta": "contraste iodado (procedimento radiológico, incluindo cateterismo/angiografia coronariana)",
+    "gravidade": "grave",
+    "efeito": "Risco aumentado de acidose láctica associada à metformina, por lesão renal aguda induzida por contraste que reduz a depuração do fármaco. A bula profissional FDA/DailyMed do cloridrato de metformina lista, entre os fatores de risco para acidose láctica associada à metformina: \"having a radiological study with contrast\" — junto com insuficiência renal, idade acima de 65 anos, insuficiência cardíaca congestiva aguda, uso excessivo de álcool e doença hepática. Cenário de alta relevância cardiológica: cateterismo cardíaco, angioplastia coronariana e angiotomografia coronariana usam contraste iodado, frequentemente por via intra-arterial (o maior risco descrito na bula).",
+    "conduta": "Texto verbatim da seção 2.4 (Discontinuation for Iodinated Contrast Imaging Procedures) da bula: descontinuar a metformina no momento do procedimento, ou antes dele, em pacientes com TFGe entre 30 e 60 mL/min/1,73m², em pacientes com história de doença hepática, alcoolismo ou insuficiência cardíaca, ou em pacientes que receberão contraste iodado por via intra-arterial. Reavaliar a TFGe 48 horas após o procedimento; reiniciar a metformina somente se a função renal estiver estável.",
+    "fonte": "Metformin Hydrochloride Tablets — bula profissional FDA/DailyMed, RemedyRepack Inc., setid 1e8136e0-cc98-41e4-ad4b-a8fc27fb4daa, seções 2.4 e 5.1 (Warning: Lactic Acidosis) — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "espironolactona-suplemento-de-potassio-ou-substituto-de-sal",
+    "farmacos": [
+      "espironolactona"
+    ],
+    "classe_oposta": "suplemento de potássio, substituto de sal contendo potássio, ou dieta rica em potássio",
+    "gravidade": "grave",
+    "efeito": "Risco de hiperpotassemia grave. A bula profissional FDA/DailyMed do ALDACTONE (espironolactona), seção 7.1 (Drugs and Supplements Increasing Serum Potassium), afirma textualmente: \"Concomitant administration of ALDACTONE with potassium supplementation, salt substitutes containing potassium, a diet rich in potassium, or drugs that can increase potassium... may lead to severe hyperkalemia.\" A própria seção 7.1 orienta: \"In general, discontinue potassium supplementation in heart failure patients who start ALDACTONE.\" A seção 17 (Patient Counseling Information) recomenda explicitamente orientar o paciente a evitar suplementos de potássio e alimentos ricos em potássio, incluindo substitutos de sal — risco pouco reconhecido pelo paciente, que pode usar 'sal light'/'sal light de potássio' sem informar o médico.",
+    "conduta": "Suspender suplementação de potássio ao iniciar espironolactona em paciente com insuficiência cardíaca, salvo indicação específica com monitorização próxima. Orientar ativamente o paciente a evitar substitutos de sal contendo potássio ('sal light') e dieta muito rica em potássio. Monitorar potássio sérico dentro de 1 semana do início ou de qualquer titulação de dose, e regularmente depois — mais frequente se houver outro fator de risco de hiperpotassemia (IECA, BRA, AINE, insuficiência renal).",
+    "fonte": "ALDACTONE (spironolactone) — bula profissional FDA/DailyMed, Pfizer Laboratories Div Pfizer Inc, setid 0fed2822-3a03-4b64-9857-c682fcd462bc, seções 5.1, 7.1 e 17 — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ticagrelor-inibidor-forte-cyp3a",
+    "farmacos": [
+      "ticagrelor"
+    ],
+    "classe_oposta": "inibidor forte do CYP3A (ex.: cetoconazol, itraconazol, voriconazol, claritromicina, nefazodona, ritonavir, saquinavir, nelfinavir, indinavir, atazanavir, telitromicina)",
+    "gravidade": "contraindicada",
+    "efeito": "Aumento substancial da exposição ao ticagrelor, elevando o risco de dispneia, sangramento e outros eventos adversos. A bula profissional FDA/DailyMed do BRILINTA (ticagrelor), seção 7.1 (Strong CYP3A Inhibitors), afirma textualmente: \"Strong CYP3A inhibitors substantially increase ticagrelor exposure and so increase the risk of dyspnea, bleeding, and other adverse events. Avoid use of strong inhibitors of CYP3A.\" A mesma seção de interações (7) também lista, para referência cruzada: pacientes recebendo mais de 40 mg/dia de sinvastatina ou lovastatina podem ter risco aumentado de efeitos adversos relacionados à estatina; a concentração plasmática de rosuvastatina pode aumentar; e o nível de digoxina deve ser monitorado ao iniciar ou alterar a dose de ticagrelor.",
+    "conduta": "Evitar o uso concomitante de ticagrelor com inibidor forte do CYP3A — a bula orienta EVITAR, não apenas ajustar dose ou monitorar. Em paciente que precise de um antiplaquetário P2Y12 e já use um desses inibidores fortes (comum em uso de antifúngico azólico sistêmico ou de alguns antirretrovirais), considerar antiplaquetário alternativo não dependente de CYP3A4 na mesma magnitude.",
+    "fonte": "BRILINTA (ticagrelor) — bula profissional FDA/DailyMed, AstraZeneca Pharmaceuticals LP, setid f7b3f443-e83d-4bf2-0e96-023448fed9a8, seções 7.1 e 12.3 — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
+    "review_status": "revisado"
   }
 ]
