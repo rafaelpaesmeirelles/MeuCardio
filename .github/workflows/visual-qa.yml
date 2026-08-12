@@ -1,0 +1,250 @@
+name: Visual QA — Clinical OS
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/visual-qa.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    name: Desktop + mobile screenshots
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      ENVIRONMENT: test
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: meucardio_visual
+      POSTGRES_PASSWORD: visual-test
+      POSTGRES_DB: meucardio_visual
+      REDIS_URL: redis://redis:6379/0
+      STORAGE_ENCRYPTION_KEY: MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+      JWT_SECRET: chave-visual-qa-nao-usar-em-producao
+      ADMIN_EMAIL: visual-qa@teste.local
+      ADMIN_PASSWORD: visual-qa-seguro-123
+      AI_ENABLED: "false"
+      MAIL360_CLIENT_ID: id-de-teste
+      MAIL360_CLIENT_SECRET: secret-de-teste
+      MAIL360_REFRESH_TOKEN: refresh-de-teste
+      CORVIA_MAIL_PRECO_CENTAVOS: "1000"
+      STRIPE_SECRET_KEY: sk_test_dummy
+      STRIPE_WEBHOOK_SECRET: whsec_visual_dummy
+      PUBLIC_URL: http://127.0.0.1:8080
+      UPLOADS_DIR: /tmp/corvia-visual/uploads
+      EXAMES_DIR: /tmp/corvia-visual/exames-pacientes
+      DOCUMENTOS_DIR: /tmp/corvia-visual/documentos-emitidos
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Create isolated runtime environment
+        run: |
+          cat > .env <<'ENV'
+          ENVIRONMENT=test
+          POSTGRES_HOST=db
+          POSTGRES_PORT=5432
+          POSTGRES_USER=meucardio_visual
+          POSTGRES_PASSWORD=visual-test
+          POSTGRES_DB=meucardio_visual
+          REDIS_URL=redis://redis:6379/0
+          STORAGE_ENCRYPTION_KEY=MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+          JWT_SECRET=chave-visual-qa-nao-usar-em-producao
+          ADMIN_EMAIL=visual-qa@teste.local
+          ADMIN_PASSWORD=visual-qa-seguro-123
+          AI_ENABLED=false
+          MAIL360_CLIENT_ID=id-de-teste
+          MAIL360_CLIENT_SECRET=secret-de-teste
+          MAIL360_REFRESH_TOKEN=refresh-de-teste
+          CORVIA_MAIL_PRECO_CENTAVOS=1000
+          STRIPE_SECRET_KEY=sk_test_dummy
+          STRIPE_WEBHOOK_SECRET=whsec_visual_dummy
+          PUBLIC_URL=http://127.0.0.1:8080
+          UPLOADS_DIR=/tmp/corvia-visual/uploads
+          EXAMES_DIR=/tmp/corvia-visual/exames-pacientes
+          DOCUMENTOS_DIR=/tmp/corvia-visual/documentos-emitidos
+          ENV
+
+      - name: Start isolated CorVIA stack
+        run: docker compose up -d --build db redis backend frontend nginx
+
+      - name: Wait for HTTP readiness
+        run: |
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8080/api/ready >/dev/null; then
+              exit 0
+            fi
+            sleep 3
+          done
+          docker compose ps
+          docker compose logs --no-color backend frontend nginx
+          exit 1
+
+      - name: Create visual QA administrator
+        run: |
+          docker compose exec -T backend python -m app.commands.create_admin \
+            --email visual-qa@teste.local \
+            --password visual-qa-seguro-123 \
+            --name "Dr. Visual QA"
+
+      - name: Install ephemeral Chromium runner
+        run: |
+          mkdir -p /tmp/corvia-visual-qa
+          cd /tmp/corvia-visual-qa
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund playwright@1.54.2
+          npx playwright install --with-deps chromium
+
+      - name: Capture canonical surfaces
+        run: |
+          mkdir -p visual-qa/screenshots
+          cat > /tmp/corvia-visual-qa/capture.mjs <<'JS'
+          import { chromium } from 'playwright';
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const base = 'http://127.0.0.1:8080';
+          const out = path.join(process.env.GITHUB_WORKSPACE, 'visual-qa', 'screenshots');
+          const reportPath = path.join(process.env.GITHUB_WORKSPACE, 'visual-qa', 'report.json');
+          fs.mkdirSync(out, { recursive: true });
+
+          const desktopRoutes = [
+            ['home', '/'],
+            ['medicamentos', '/medicamentos'],
+            ['evidencias', '/evidencias'],
+            ['pacientes', '/round'],
+            ['agenda', '/agenda'],
+            ['documentos', '/documentos'],
+            ['mail', '/corvia-mail'],
+            ['emergencia', '/emergencia'],
+          ];
+          const mobileRoutes = [
+            ['home', '/'],
+            ['medicamentos', '/medicamentos'],
+            ['pacientes', '/round'],
+            ['agenda', '/agenda'],
+            ['emergencia', '/emergencia'],
+          ];
+          const forbiddenVisibleText = [
+            'websearch',
+            'texto integral não lido nesta sessão',
+            'texto integral nao lido nesta sessao',
+            'registro_prospectivo',
+            'coorte_retrospectiva',
+          ];
+
+          const browser = await chromium.launch({ headless: true });
+          const report = { pages: [], pageErrors: [], failures: [] };
+
+          async function login(viewport) {
+            const context = await browser.newContext({ viewport, colorScheme: 'dark', locale: 'pt-BR' });
+            const page = await context.newPage();
+            page.on('pageerror', (error) => report.pageErrors.push(String(error)));
+            await page.goto(`${base}/entrar`, { waitUntil: 'domcontentloaded' });
+            await page.locator('#email').fill('visual-qa@teste.local');
+            await page.locator('#senha').fill('visual-qa-seguro-123');
+            await page.locator('button[type="submit"]').click();
+            await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
+            await page.waitForTimeout(900);
+            return { context, page };
+          }
+
+          async function inspectAndCapture(page, mode, name, route) {
+            await page.goto(`${base}${route}`, { waitUntil: 'domcontentloaded' });
+            await page.waitForTimeout(1200);
+            const metrics = await page.evaluate((forbidden) => {
+              const text = (document.body?.innerText || '').toLocaleLowerCase('pt-BR');
+              const fixed = [...document.querySelectorAll('*')]
+                .filter((element) => {
+                  const style = getComputedStyle(element);
+                  const rect = element.getBoundingClientRect();
+                  return style.position === 'fixed' && style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+                })
+                .slice(0, 30)
+                .map((element) => ({
+                  tag: element.tagName.toLowerCase(),
+                  className: typeof element.className === 'string' ? element.className : '',
+                  aria: element.getAttribute('aria-label') || '',
+                }));
+              return {
+                path: location.pathname,
+                width: innerWidth,
+                scrollWidth: document.documentElement.scrollWidth,
+                height: innerHeight,
+                forbidden: forbidden.filter((needle) => text.includes(needle)),
+                fixed,
+              };
+            }, forbiddenVisibleText);
+            report.pages.push({ mode, name, route, ...metrics });
+            if (metrics.scrollWidth > metrics.width + 12) {
+              report.failures.push(`${mode}/${name}: overflow horizontal ${metrics.scrollWidth}px > ${metrics.width}px`);
+            }
+            if (metrics.forbidden.length) {
+              report.failures.push(`${mode}/${name}: texto interno visível: ${metrics.forbidden.join(', ')}`);
+            }
+            await page.screenshot({ path: path.join(out, `${mode}-${name}.png`), fullPage: false });
+          }
+
+          try {
+            const desktop = await login({ width: 1440, height: 1000 });
+            for (const [name, route] of desktopRoutes) await inspectAndCapture(desktop.page, 'desktop', name, route);
+            await desktop.context.close();
+
+            const mobile = await login({ width: 390, height: 844 });
+            for (const [name, route] of mobileRoutes) await inspectAndCapture(mobile.page, 'mobile', name, route);
+
+            await mobile.page.goto(`${base}/`, { waitUntil: 'domcontentloaded' });
+            await mobile.page.waitForTimeout(700);
+            await mobile.page.locator('.cc-mobile-nav button').last().click();
+            await mobile.page.waitForTimeout(250);
+            await mobile.page.screenshot({ path: path.join(out, 'mobile-mais.png'), fullPage: false });
+            const moreVisible = await mobile.page.locator('.cc-mobile-more').isVisible();
+            if (!moreVisible) report.failures.push('mobile/mais: action sheet não abriu');
+
+            await mobile.page.locator('.cc-mobile-more__assistant').click();
+            await mobile.page.waitForTimeout(900);
+            await mobile.page.screenshot({ path: path.join(out, 'mobile-assistente-pessoal.png'), fullPage: false });
+            const assistantVisible = await mobile.page.locator('.cos-assistant-panel').isVisible().catch(() => false);
+            if (!assistantVisible) report.failures.push('mobile/assistente: painel pessoal não abriu');
+            const navVisibleWithAssistant = await mobile.page.locator('.cc-mobile-nav').isVisible().catch(() => false);
+            if (navVisibleWithAssistant) report.failures.push('mobile/assistente: bottom nav continua competindo com overlay');
+            await mobile.context.close();
+          } catch (error) {
+            report.failures.push(`capture runner: ${error?.stack || error}`);
+          } finally {
+            await browser.close();
+          }
+
+          if (report.pageErrors.length) report.failures.push(`page errors: ${report.pageErrors.join(' | ')}`);
+          fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+          console.log(JSON.stringify(report, null, 2));
+          if (report.failures.length) process.exitCode = 1;
+          JS
+          cd /tmp/corvia-visual-qa
+          node capture.mjs
+
+      - name: Upload visual QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: corvia-clinical-os-visual-qa
+          path: visual-qa/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Show stack logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail=250 backend frontend nginx
+
+      - name: Stop isolated stack
+        if: always()
+        run: docker compose down -v --remove-orphans
