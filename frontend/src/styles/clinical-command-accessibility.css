@@ -2,10 +2,10 @@
 .command-center a:focus-visible,
 .command-center button:focus-visible,
 .command-center input:focus-visible,
-.launch-mobile-dock a:focus-visible,
-.launch-mobile-dock button:focus-visible,
-.launch-mobile-actions a:focus-visible,
-.launch-mobile-actions button:focus-visible {
+.barra-mobile--command a:focus-visible,
+.barra-mobile--command button:focus-visible,
+.acoes-mobile a:focus-visible,
+.acoes-mobile button:focus-visible {
   outline: 3px solid #66e0e7;
   outline-offset: 3px;
 }
@@ -33,8 +33,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .command-center *,
-  .launch-mobile-dock *,
-  .launch-mobile-actions * {
+  .barra-mobile--command *,
+  .acoes-mobile * {
     scroll-behavior: auto !important;
   }
 }
