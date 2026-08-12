@@ -1270,5 +1270,89 @@
     "conduta": "Evitar o uso concomitante de ticagrelor com inibidor forte do CYP3A — a bula orienta EVITAR, não apenas ajustar dose ou monitorar. Em paciente que precise de um antiplaquetário P2Y12 e já use um desses inibidores fortes (comum em uso de antifúngico azólico sistêmico ou de alguns antirretrovirais), considerar antiplaquetário alternativo não dependente de CYP3A4 na mesma magnitude.",
     "fonte": "BRILINTA (ticagrelor) — bula profissional FDA/DailyMed, AstraZeneca Pharmaceuticals LP, setid f7b3f443-e83d-4bf2-0e96-023448fed9a8, seções 7.1 e 12.3 — texto lido diretamente via DailyMed nesta sessão (12/08/2026).",
     "review_status": "revisado"
+  },
+  {
+    "slug": "semaglutida-insulina-ou-sulfonilureia",
+    "farmacos": [
+      "semaglutida"
+    ],
+    "classe_oposta": "insulina ou secretagogo de insulina (sulfonilureia, ex.: glibenclamida, gliclazida, glimepirida)",
+    "gravidade": "moderada",
+    "efeito": "A semaglutida estimula a liberação de insulina de forma dependente de glicose; associada a insulina ou sulfonilureia, aumenta o risco de hipoglicemia, incluindo hipoglicemia grave.",
+    "conduta": "Ao iniciar a semaglutida, considerar reduzir a dose do secretagogo de insulina (como sulfonilureia) ou da insulina concomitante para reduzir o risco de hipoglicemia — a bula não especifica percentual de redução, ajuste individualizado.",
+    "fonte": "Bula FDA/DailyMed de OZEMPIC (semaglutide, Novo Nordisk, setid adec4fd2-6858-4c99-91d4-531f5f2a2d79), seção 7.1 (Drug Interactions): \"Patients receiving OZEMPIC in combination with an insulin secretagogue (e.g., sulfonylurea) or insulin may have an increased risk of hypoglycemia, including severe hypoglycemia. When initiating OZEMPIC, consider reducing the dose of concomitantly administered insulin secretagogue (such as sulfonylureas) or insulin to reduce the risk of hypoglycemia.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dulaglutida-insulina-ou-sulfonilureia",
+    "farmacos": [
+      "dulaglutida"
+    ],
+    "classe_oposta": "insulina ou secretagogo de insulina (sulfonilureia, ex.: glibenclamida, gliclazida, glimepirida)",
+    "gravidade": "moderada",
+    "efeito": "A dulaglutida potencializa a secreção de insulina glicose-dependente; a associação com insulina ou sulfonilureia aumenta o risco de hipoglicemia.",
+    "conduta": "Ao iniciar a dulaglutida, considerar reduzir a dose do secretagogo de insulina (como sulfonilureia) ou da insulina concomitante para reduzir o risco de hipoglicemia.",
+    "fonte": "Bula FDA/DailyMed de TRULICITY (dulaglutide, Eli Lilly and Company, setid 463050bd-2b1c-40f5-b3c3-0a04bb433309), seção 7.2 (Drug Interactions): \"When initiating TRULICITY, consider reducing the dose of concomitantly administered insulin secretagogues (such as sulfonylureas) or insulin to reduce the risk of hypoglycemia.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "liraglutida-insulina-ou-sulfonilureia",
+    "farmacos": [
+      "liraglutida"
+    ],
+    "classe_oposta": "insulina ou secretagogo de insulina (sulfonilureia, ex.: glibenclamida, gliclazida, glimepirida)",
+    "gravidade": "moderada",
+    "efeito": "A liraglutida estimula a liberação de insulina em presença de glicemia elevada; associada a insulina ou sulfonilureia, aumenta o risco de hipoglicemia, incluindo hipoglicemia grave.",
+    "conduta": "Ao iniciar a liraglutida, considerar reduzir a dose do secretagogo de insulina (como sulfonilureia) ou da insulina concomitante para reduzir o risco de hipoglicemia.",
+    "fonte": "Bula FDA/DailyMed de VICTOZA (liraglutide, Novo Nordisk, setid 5a9ef4ea-c76a-4d34-a604-27c5b505f5a4), seção 7.2 (Drug Interactions): \"VICTOZA stimulates insulin release in the presence of elevated blood glucose concentrations. Patients receiving VICTOZA in combination with an insulin secretagogue (e.g., sulfonylurea) or insulin may have an increased risk of hypoglycemia, including severe hypoglycemia. When initiating VICTOZA, consider reducing the dose of concomitantly administered insulin secretagogues (such as sulfonylureas) or insulin to reduce the risk of hypoglycemia.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "canagliflozina-diuretico-de-alca",
+    "farmacos": [
+      "canagliflozina"
+    ],
+    "classe_oposta": "diurético de alça (ex.: furosemida, bumetanida)",
+    "gravidade": "moderada",
+    "efeito": "Paciente em uso de diurético de alça está entre os grupos identificados pela bula com risco aumentado de depleção de volume e hipotensão ao usar canagliflozina — efeito de precaução farmacodinâmica, não interação farmacocinética.",
+    "conduta": "Antes de iniciar a canagliflozina em paciente já em uso de diurético de alça, avaliar e corrigir o estado volêmico; monitorar sinais de depleção de volume e hipotensão após o início da associação.",
+    "fonte": "Bula FDA/DailyMed de INVOKANA (canagliflozin, Janssen Pharmaceuticals, setid b9057d3b-b104-4f09-8a61-c61ef9d4a3f3), seção 5.3 (Warnings and Precautions — Hypotension): \"Patients with impaired renal function (eGFR less than 60 mL/min/1.73 m2), elderly patients, or patients on loop diuretics may be at increased risk for volume depletion or hypotension. Before initiating INVOKANA in patients with one or more of these characteristics, assess and correct volume status.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rosuvastatina-ciclosporina",
+    "farmacos": [
+      "rosuvastatina-calcica"
+    ],
+    "classe_oposta": "ciclosporina",
+    "gravidade": "grave",
+    "efeito": "A ciclosporina aumenta em cerca de 7 vezes a exposição sistêmica à rosuvastatina, elevando o risco de miopatia e rabdomiólise.",
+    "conduta": "Em paciente em uso de ciclosporina, não exceder a dose de rosuvastatina de 5 mg uma vez ao dia — limite explícito da bula.",
+    "fonte": "Bula FDA/DailyMed de rosuvastatina cálcica (genérico, Zhejiang Yongtai Pharmaceutical Co., setid 40c2900e-4659-49ce-ba4b-5df529b3c53b), seção Drug Interactions: \"Cyclosporine increased rosuvastatin exposure 7-fold. In patients taking cyclosporine, do not exceed a dosage of rosuvastatin tablets 5 mg once daily. The risk of myopathy and rhabdomyolysis is increased with concomitant use.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "varfarina-ginkgo-biloba",
+    "farmacos": [
+      "varfarina-sodica"
+    ],
+    "classe_oposta": "Ginkgo biloba (fitoterápico)",
+    "gravidade": "moderada",
+    "efeito": "O Ginkgo biloba pode causar sangramento mesmo isoladamente, por propriedades antiplaquetárias/fibrinolíticas próprias; associado à varfarina, soma-se ao risco hemorrágico do anticoagulante.",
+    "conduta": "Monitorar o INR com mais frequência ao iniciar ou suspender o uso de Ginkgo biloba; orientar o paciente a informar o uso de qualquer fitoterápico antes de associá-lo à varfarina.",
+    "fonte": "Bula FDA/DailyMed de varfarina sódica (genérico, setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057), seção de interações com botânicos: \"Some botanicals may cause bleeding events when taken alone (e.g., garlic and Ginkgo biloba) and may have anticoagulant, antiplatelet, and/or fibrinolytic properties (...) More frequent INR monitoring should be performed when starting or stopping botanicals.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "varfarina-erva-de-sao-joao",
+    "farmacos": [
+      "varfarina-sodica"
+    ],
+    "classe_oposta": "erva-de-são-joão / hipérico (Hypericum perforatum)",
+    "gravidade": "grave",
+    "efeito": "A erva-de-são-joão é indutora de CYP1A2 e CYP3A4 e reduz o efeito anticoagulante da varfarina, com risco de INR subterapêutico e eventos tromboembólicos.",
+    "conduta": "Evitar o uso concomitante; se o paciente já usa erva-de-são-joão e a suspende, ou se inicia o fitoterápico em uso de varfarina, monitorar o INR com mais frequência, pelo risco de variação relevante do efeito anticoagulante.",
+    "fonte": "Bula FDA/DailyMed de varfarina sódica (genérico, setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057), seção de interações com botânicos e Tabela de interações CYP450: \"Some botanicals may decrease the effects of warfarin sodium (e.g., co-enzyme Q10, St. John's wort, ginseng)\" — St. John's wort listado como indutor de CYP1A2 e CYP3A4. Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
   }
 ]
