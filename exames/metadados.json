@@ -9281,5 +9281,160 @@
       "biomarcador",
       "doença coronariana"
     ]
+  },
+  {
+    "slug": "reserva-de-fluxo-coronariano-cfr-e-indice-de-resistencia-microvascular-imr-na-disfuncao-microvascular",
+    "name": "Reserva de fluxo coronariano (CFR) e índice de resistência microvascular (IMR) na disfunção microvascular coronariana (ANOCA/INOCA)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Avaliação invasiva da fisiologia da microcirculação coronariana durante o cateterismo, feita com fio-guia de pressão-temperatura após excluir estenose epicárdica funcionalmente significativa (FFR > 0,80). A CFR é a razão entre o fluxo coronariano máximo (hiperemia induzida, classicamente por adenosina) e o fluxo em repouso, obtida por termodiluição ou Doppler; o IMR é calculado a partir da pressão distal e do tempo médio de trânsito do bolus salino durante hiperemia máxima, e reflete especificamente a resistência da microcirculação, sendo menos dependente das condições hemodinâmicas sistêmicas do que a CFR isolada. Em conjunto, os dois parâmetros permitem distinguir disfunção microvascular estrutural de causas puramente funcionais em pacientes com angina e artérias coronárias sem obstrução significativa (ANOCA) ou isquemia sem doença coronariana obstrutiva (INOCA).",
+    "reference_range": "CFR < 2,0 e IMR > 25 definem disfunção microvascular coronariana pelos critérios COVADIS de angina microvascular (Ong P et al., Int J Cardiol. 2018;250:16-20, PMID 29031990) — cortes reafirmados numa revisão de 2026 sobre classificação por endótipo da doença coronariana funcional (El Khatib O et al., Front Cardiovasc Med. 2026;13:1811419, PMID 42548607), que também cita a razão de resistência hiperêmica (HMR) > 2,5 mmHg/cm/s como parâmetro Doppler alternativo ao IMR por termodiluição.",
+    "indications": "Paciente com angina ou equivalente anginoso, evidência objetiva de isquemia (teste funcional ou alterações eletrocardiográficas) e coronariografia sem estenose obstrutiva (< 50% de diâmetro, ou FFR > 0,80 quando a lesão for intermediária) — cenário de ANOCA/INOCA contemplado na Diretriz ESC 2024 de Síndromes Coronarianas Crônicas (Vrints C, Andreotti F, Koskinas KC, et al. Eur Heart J. 2024;45(36):3415-3537, PMID 39210710), que incorpora a avaliação funcional invasiva da microcirculação ao algoritmo diagnóstico da angina sem obstrução coronariana relevante, ao lado do teste provocativo com acetilcolina para vasoespasmo.",
+    "interpretation": "CFR baixa com IMR elevado indica disfunção microvascular estrutural (endótipo mais associado a hipertrofia, fibrose e pior prognóstico); CFR baixa com IMR normal sugere componente predominantemente funcional/vasomotor. Resultado normal nos dois parâmetros, combinado a teste de acetilcolina negativo, aponta para outro mecanismo de dor torácica e reforça a busca de causa não coronariana. O achado de disfunção microvascular reclassifica o paciente de 'artérias normais' para uma causa estrutural tratável da angina, com implicação terapêutica (uso preferencial de betabloqueador e IECA/BRA sobre nitrato, que pode piorar sintomas nessa população).",
+    "limitations": "Procedimento invasivo, disponível apenas em laboratórios de hemodinâmica com fio-guia de pressão-temperatura e treinamento específico — não é exame de triagem. A hiperemia com adenosina pode ser desconfortável e a medida de IMR por termodiluição é sensível à técnica de injeção do bolus salino. Os cortes de CFR e IMR foram derivados e validados predominantemente por consenso de especialistas (COVADIS) e coortes observacionais, não por ensaio clínico randomizado que teste conduta guiada pelo resultado versus conduta empírica.",
+    "source_refs": [
+      "Ong P, Camici PG, Beltrame JF, et al. International standardization of diagnostic criteria for microvascular angina. Int J Cardiol. 2018;250:16-20. PMID: 29031990 — critérios COVADIS, cortes de CFR e IMR conferidos via PubMed E-utilities.",
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. PMID: 39210710 — conferido via PubMed E-utilities (título, revista, volume, página, autoria).",
+      "El Khatib O, Al Azzoni A, Shantouf R, Atallah B, et al. Functional coronary vascular disease: endotype-based classification, diagnosis, and targeted management. Front Cardiovasc Med. 2026;13:1811419. PMID: 42548607 — texto integral em acesso aberto (PMC), cortes de CFR/IMR/HMR conferidos diretamente no artigo."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cfr",
+      "imr",
+      "disfunção microvascular",
+      "anoca",
+      "inoca",
+      "angina microvascular",
+      "doença coronariana"
+    ]
+  },
+  {
+    "slug": "teste-provocativo-com-acetilcolina-no-diagnostico-de-vasoespasmo-coronariano",
+    "name": "Teste provocativo com acetilcolina no diagnóstico de vasoespasmo coronariano (angina vasospástica/variante)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Teste invasivo realizado durante o cateterismo cardíaco: doses incrementais de acetilcolina são infundidas seletivamente na artéria coronária, e o diâmetro luminal é medido por angiografia quantitativa antes e depois de cada dose, junto com o registro simultâneo do eletrocardiograma e dos sintomas do paciente. A acetilcolina normalmente causa vasodilatação dependente do endotélio; num endotélio disfuncionante ou numa artéria hiper-reativa, a resposta se inverte para vasoconstrição — reproduzindo o mecanismo do vasoespasmo espontâneo sob condições controladas e monitoradas.",
+    "reference_range": "Critérios diagnósticos COVADIS para angina vasospástica (Beltrame JF, Crea F, Kaski JC, et al. Eur Heart J. 2017;38(33):2565-2568, PMID 26245334), reunindo três elementos simultâneos durante o teste: (1) redução do diâmetro coronariano ≥ 90% em relação ao diâmetro basal (vasoconstrição focal ou difusa); (2) reprodução dos sintomas anginosos habituais do paciente; (3) alterações eletrocardiográficas isquêmicas concomitantes (desnivelamento de ST, novas ondas U ou arritmia).",
+    "indications": "Paciente com angina em repouso, muitas vezes noturna ou de madrugada, com ou sem elevação transitória de ST em episódios espontâneos, e coronariografia sem estenose obstrutiva significativa — mesmo cenário de ANOCA/INOCA em que a Diretriz ESC 2024 de Síndromes Coronarianas Crônicas (Vrints C et al., Eur Heart J. 2024;45(36):3415-3537, PMID 39210710) recomenda o teste de reatividade coronariana como parte do algoritmo funcional invasivo, ao lado da avaliação de CFR/IMR para disfunção microvascular — os dois endótipos podem coexistir no mesmo paciente.",
+    "interpretation": "Teste positivo (os três critérios COVADIS presentes) confirma angina vasospástica e orienta o tratamento com bloqueador de canal de cálcio como primeira linha, evitando betabloqueador não seletivo (pode piorar o vasoespasmo por bloqueio beta-2 sem oposição alfa) — implicação terapêutica oposta à da disfunção microvascular pura, o que reforça a importância de diferenciar os dois endótipos com testes distintos em vez de tratar 'ANOCA' como entidade única. Vasoconstrição focal epicárdica e vasoconstrição difusa microvascular durante o teste podem ser distinguidas pela extensão angiográfica do espasmo.",
+    "limitations": "Procedimento invasivo com risco de induzir arritmia ventricular ou espasmo prolongado durante o teste, exigindo monitorização contínua e disponibilidade imediata de nitrato intracoronariano para reversão — deve ser realizado por equipe experiente em centro com suporte de emergência. Contraindicado em disfunção ventricular esquerda grave, estenose de tronco de coronária esquerda não tratada e gestação. Resultado negativo não exclui vasoespasmo se a dose máxima testada não reproduzir a condição do episódio espontâneo (por exemplo, espasmo desencadeado por outro estímulo, como hiperventilação ou frio).",
+    "source_refs": [
+      "Beltrame JF, Crea F, Kaski JC, et al.; Coronary Vasomotion Disorders International Study Group (COVADIS). International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. PMID: 26245334 — critérios conferidos via PubMed E-utilities.",
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. PMID: 39210710 — conferido via PubMed E-utilities.",
+      "El Khatib O, Al Azzoni A, Shantouf R, Atallah B, et al. Functional coronary vascular disease: endotype-based classification, diagnosis, and targeted management. Front Cardiovasc Med. 2026;13:1811419. PMID: 42548607 — descreve os critérios de positividade (>90% de vasoconstrição, reprodução dos sintomas, alterações isquêmicas de ECG) conferidos em caso clínico ilustrativo dentro do próprio corpus de PMC citado por este item."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "acetilcolina",
+      "vasoespasmo coronariano",
+      "angina variante",
+      "angina de prinzmetal",
+      "anoca",
+      "doença coronariana"
+    ]
+  },
+  {
+    "slug": "reserva-de-fluxo-fracionada-derivada-de-angiotomografia-ffr-ct",
+    "name": "Reserva de fluxo fracionada derivada de angiotomografia coronariana (FFR-CT)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Estimativa não invasiva da repercussão funcional de uma estenose coronariana, calculada por dinâmica de fluidos computacional (CFD) aplicada às imagens de angiotomografia de coronárias (CCTA) já adquiridas — sem contraste, fármaco vasodilatador ou procedimento adicional. O software reconstrói o modelo tridimensional da árvore coronariana a partir da CCTA e simula o fluxo sob hiperemia simulada, gerando um valor de FFR estimado em qualquer ponto do vaso, análogo ao FFR invasivo medido por fio-guia de pressão no cateterismo.",
+    "reference_range": "Mesmo corte do FFR invasivo: FFR-CT ≤ 0,80 indica repercussão funcional significativa da estenose. No registro ADVANCE (4.430 pacientes com CCTA e desfecho em 1 ano, análise de quantificação de placa por inteligência artificial associada ao FFR-CT), volume total de placa acima de 564 mm³ associou-se a eventos cardíacos maiores/revascularização tardia (HR ajustado 1,515; p = 0,0126), e percentual de volume de ateroma acima de 37,17% associou-se a morte cardiovascular/infarto (HR 4,53; p = 0,0005) — o FFR-CT anormal teve valor preditivo incremental sobre a estenose luminal isolada (Dundas J et al. Circ Cardiovasc Imaging. 2024;17(3). PMID 38469689).",
+    "indications": "Paciente com dor torácica e probabilidade pré-teste intermediária submetido a CCTA que revela estenose de significado incerto (tipicamente 30-90% de redução de diâmetro), como alternativa não invasiva ao teste funcional de isquemia (cintilografia, eco de estresse, RM de estresse) ou à avaliação invasiva com FFR/iFR — a Diretriz ESC 2024 de Síndromes Coronarianas Crônicas (Vrints C et al., Eur Heart J. 2024;45(36):3415-3537, PMID 39210710) incorpora a CCTA com análise funcional complementar ao algoritmo diagnóstico inicial da doença coronariana estável. Validação clínica original no ensaio PLATFORM (Douglas PS, De Bruyne B, et al. J Am Coll Cardiol. 2016;68(5):435-445, PMID 27470449), que reduziu a proporção de cateterismos invasivos sem doença obstrutiva quando a estratégia era guiada por FFR-CT.",
+    "interpretation": "FFR-CT > 0,80 tem alto valor preditivo negativo para isquemia relacionada à lesão, permitindo tratamento clínico sem cateterismo diagnóstico adicional na maioria dos casos. FFR-CT ≤ 0,80 identifica a lesão como funcionalmente significativa e direciona o paciente ao cateterismo com intenção terapêutica, evitando o cateterismo puramente diagnóstico. O resultado deve ser interpretado junto com a qualidade técnica da CCTA de base — artefato de movimento, calcificação intensa ou baixa relação sinal-ruído comprometem a simulação computacional.",
+    "limitations": "Depende inteiramente da qualidade da CCTA original — não corrige erro de aquisição, e calcificação coronariana extensa (escore de cálcio muito elevado) reduz a acurácia da simulação. É estimativa computacional, não medida direta de pressão; processamento é feito em servidor externo do fabricante, com tempo de resposta de horas, não em tempo real durante o exame. Validação mais robusta em doença uniarterial ou biarterial do que em doença triarterial ou de tronco de coronária esquerda extensa.",
+    "source_refs": [
+      "Douglas PS, De Bruyne B, Pontone G, et al. 1-Year Outcomes of FFRCT-Guided Care in Patients With Suspected Coronary Disease: The PLATFORM Study. J Am Coll Cardiol. 2016;68(5):435-445. PMID: 27470449 — conferido via PubMed E-utilities.",
+      "Dundas J, Sathianathan J, Hopewell J, et al. Interaction of AI-Enabled Quantitative Coronary Plaque Volumes on Coronary CT Angiography, FFR(CT), and Clinical Outcomes (ADVANCE registry). Circ Cardiovasc Imaging. 2024;17(3). PMID: 38469689 — abstract completo conferido via PubMed E-utilities, n=4.430 e hazard ratios conferidos.",
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. PMID: 39210710 — conferido via PubMed E-utilities."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ffr-ct",
+      "angiotomografia",
+      "ccta",
+      "fluxo fracionado",
+      "doença coronariana",
+      "avaliação funcional não invasiva"
+    ]
+  },
+  {
+    "slug": "eletrocardiograma-por-inteligencia-artificial-ia-ecg-na-triagem-de-disfuncao-sistolica-do-ventriculo-esquerdo",
+    "name": "Eletrocardiograma por inteligência artificial (IA-ECG) na triagem de disfunção sistólica assintomática do ventrículo esquerdo",
+    "category": "metodo_grafico",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Aplicação de um algoritmo de aprendizado profundo (rede neural convolucional) diretamente sobre o traçado bruto de um eletrocardiograma de 12 derivações convencional, sem necessidade de exame de imagem, para estimar a probabilidade de fração de ejeção do ventrículo esquerdo reduzida. O modelo foi treinado e validado pareando ECGs a ecocardiogramas contemporâneos de uma mesma instituição (Mayo Clinic), aprendendo padrões sutis no traçado que precedem a disfunção estrutural detectável.",
+    "reference_range": "O algoritmo original (Attia ZI et al. Nat Med. 2019;25(1):70-74, PMID 30617318), treinado em 44.959 pares ECG-ecocardiograma e testado em 52.870 pacientes independentes para identificar fração de ejeção ≤ 35%, teve área sob a curva ROC de 0,93, sensibilidade de 86,3% e especificidade de 85,7%. Pacientes sem disfunção ventricular no exame basal que tiveram o algoritmo positivo apresentaram risco 4,1 vezes maior (IC95% 3,3-5,0) de desenvolver disfunção ventricular no seguimento.",
+    "indications": "Triagem oportunista de disfunção sistólica assintomática em atenção primária, a partir de um ECG já obtido por outro motivo — testada prospectivamente no ensaio clínico randomizado pragmático EAGLE (Yao X et al. Nat Med. 2021;27(5):815-819, PMID 33958795), com 22.641 pacientes em 120 equipes de 45 clínicas/hospitais: o braço com alerta de IA-ECG ao médico teve mais diagnóstico novo de fração de ejeção ≤ 50% em 90 dias (2,1% vs. 1,6%; OR 1,32; IC95% 1,01-1,61; p = 0,007), diferença que ficou mais pronunciada no subgrupo de alto risco sinalizado pelo algoritmo (19,5% vs. 14,5%; OR 1,43; p = 0,01) — sem aumento relevante do pedido de ecocardiograma na população geral (19,2% vs. 18,2%), mas com mais ecocardiograma solicitado especificamente nos pacientes com IA-ECG positivo (49,6% vs. 38,1%; p < 0,001). Uma versão do mesmo algoritmo aplicada a smartwatch (single-lead) também foi validada prospectivamente (Attia ZI et al. Nat Med. 2022;28(12):2497-2503, PMID 36376461), e uma extensão para triagem em população obstétrica foi publicada em 2024 (Adedinsewo DA et al. Nat Med. 2024;30. PMID 39223284).",
+    "interpretation": "Resultado positivo (probabilidade alta) não é diagnóstico — é gatilho para confirmação por ecocardiograma, exatamente como usado no desenho do EAGLE. O valor prático está na baixa carga adicional (o ECG já foi feito por outro motivo) e na capacidade de sinalizar disfunção pré-clínica antes do aparecimento de sintomas, numa janela em que a intervenção farmacológica tem maior chance de alterar a trajetória da doença.",
+    "limitations": "Algoritmo proprietário, com desempenho dependente da população de treinamento (predominantemente norte-americana) — validação externa em outras populações é limitada. Falso positivo gera ecocardiograma desnecessário; falso negativo não exclui disfunção emergente, e o modelo não deve substituir avaliação clínica em paciente sintomático. Ganho absoluto de detecção no EAGLE foi modesto (0,5 ponto percentual na população geral), concentrado no subgrupo já sinalizado como de risco.",
+    "source_refs": [
+      "Attia ZI, Kapa S, Lopez-Jimenez F, et al. Screening for cardiac contractile dysfunction using an artificial intelligence-enabled electrocardiogram. Nat Med. 2019;25(1):70-74. PMID: 30617318 — AUC, sensibilidade e especificidade conferidos via PubMed E-utilities.",
+      "Yao X, Rushlow DR, Inselman JW, et al. ECG AI-Guided Screening for Low Ejection Fraction (EAGLE): a pragmatic cluster randomized trial. Nat Med. 2021;27(5):815-819. PMID: 33958795 — números do desfecho primário e dos subgrupos conferidos via PubMed E-utilities.",
+      "Attia ZI, Harmon DM, Behr ER, Friedman PA. Prospective evaluation of smartwatch-enabled detection of left ventricular dysfunction. Nat Med. 2022;28(12):2497-2503. PMID: 36376461.",
+      "Adedinsewo DA, et al. Artificial intelligence guided screening for cardiomyopathies in an obstetric population. Nat Med. 2024;30. PMID: 39223284 — citado como extensão mais recente do mesmo algoritmo, título e data conferidos via PubMed E-utilities."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ia-ecg",
+      "inteligência artificial",
+      "fração de ejeção reduzida",
+      "triagem",
+      "insuficiência cardíaca",
+      "eagle trial"
+    ]
+  },
+  {
+    "slug": "troponina-de-alta-sensibilidade-point-of-care-poc-na-emergencia",
+    "name": "Troponina de alta sensibilidade point-of-care (POC) na emergência",
+    "category": "laboratorial",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Dosagem de troponina cardíaca por ensaio de alta sensibilidade realizada junto ao leito ou no próprio setor de emergência, em analisador portátil, com resultado em cerca de 15-20 minutos — em vez de enviar a amostra ao laboratório central, cujo tempo de retorno (transporte, processamento, liberação) costuma superar 1 hora. O objetivo é permitir os mesmos algoritmos de descarte/confirmação rápida (0h/1h ou 0h/2h) usados com o ensaio laboratorial, mas com decisão clínica mais precoce.",
+    "reference_range": "Estudo multicêntrico com o ensaio POC hs-cTnI PATHFAST, já ajustado aos cortes exigidos pela FDA (relato mínimo de 4 ng/L, e não mais 3 ng/L): no algoritmo 0h/1h (1.532 pacientes elegíveis, 13% com infarto confirmado), sensibilidade de 100% (IC95% 98,2-100%), especificidade de 96,5% (IC95% 95,3-97,3%) e valor preditivo negativo de 100% (IC95% 99,6-100%), com 56% dos pacientes triados para descarte; no algoritmo 0h/2h (1.207 pacientes, 12% com infarto), sensibilidade de 100% (IC95% 97,5-100%), especificidade de 97,5% (IC95% 96,3-98,2%) e VPN de 100% (IC95% 99,4-100%), com 55% triados para descarte (Koechlin L, Boeddinghaus J, et al. J Am Heart Assoc. 2025;14(6):e039164. PMID 40079304).",
+    "indications": "Paciente com dor torácica aguda em pronto-socorro ou unidade de emergência sem laboratório central de resposta rápida disponível 24h, especialmente em serviços de menor porte ou atenção primária de urgência — um estudo piloto de viabilidade (199 pacientes, atenção primária de emergência em Oslo) mostrou reprodutibilidade alta (coeficiente de variação < 10%) quando operado por pessoal não laboratorial, com taxa de erro do dispositivo de 0,5% (Johannessen TR, et al. Cardiology. 2026;151. PMID 40058362).",
+    "interpretation": "Resultado dentro da faixa de descarte, seguindo o mesmo algoritmo validado para o ensaio (0h/1h ou 0h/2h conforme o dispositivo), tem desempenho equivalente ao ensaio laboratorial central para excluir infarto agudo do miocárdio quando o dispositivo é FDA-aprovado/validado especificamente para esse uso — nem todo ensaio POC de troponina tem sensibilidade analítica suficiente para os algoritmos rápidos, e usar um ensaio POC não validado para 0h/1h pode gerar falso descarte.",
+    "limitations": "Nem todos os ensaios POC de troponina têm a mesma sensibilidade analítica dos ensaios laboratoriais centrais de alta sensibilidade — historicamente, a maioria dos dispositivos POC não atingia a sensibilidade exigida para os algoritmos rápidos, o que motivou a própria FDA a modificar o corte de relato do ensaio PATHFAST citado acima. Os cortes numéricos não são intercambiáveis entre fabricantes de POC, assim como já ocorre entre ensaios laboratoriais de bancada — o algoritmo validado para um dispositivo específico não pode ser aplicado a outro sem validação própria. Requer controle de qualidade e calibração no próprio ponto de uso, com risco de erro operacional maior do que num laboratório central automatizado.",
+    "source_refs": [
+      "Koechlin L, Boeddinghaus J, Nestelberger T, et al. Impact of Food and Drug Administration Regulations on the Performance of Guideline-Recommended Pathways Using a Point-of-Care High-Sensitivity Cardiac Troponin I Assay. J Am Heart Assoc. 2025;14(6):e039164. PMID: 40079304 — números de sensibilidade, especificidade e VPN conferidos em texto integral de acesso aberto (PMC12132715).",
+      "Johannessen TR, et al. One-Hour Troponin Using a High-Sensitivity Point-of-Care Assay in Emergency Primary Care. Cardiology. 2026;151. PMID: 40058362 — abstract conferido via PubMed E-utilities."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "point-of-care",
+      "poc",
+      "emergência",
+      "alta sensibilidade",
+      "doença coronariana"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-point-of-care-focus-guiado-por-inteligencia-artificial-na-triagem-de-disfuncao-ventricular",
+    "name": "Ecocardiograma point-of-care (FoCUS) guiado por inteligência artificial na triagem de disfunção ventricular esquerda por não especialista",
+    "category": "imagem",
+    "theme": "Geral",
+    "what_it_measures": "Ecocardiograma focado (FoCUS), realizado à beira do leito por médico não especializado em ecocardiografia, com o auxílio de um algoritmo de inteligência artificial que orienta em tempo real o posicionamento do transdutor (guia o operador até a janela acústica adequada) e interpreta automaticamente as imagens adquiridas para estimar dilatação e função sistólica do ventrículo esquerdo — reduzindo a dependência da curva de aprendizado tradicionalmente exigida para adquirir e interpretar imagens ecocardiográficas com qualidade diagnóstica.",
+    "reference_range": "Estudo em duas etapas (coorte de derivação/teste com 496 adultos encaminhados para ecocardiograma diagnóstico, seguida de validação prospectiva em 344 indivíduos), comparando a aquisição por operador novato guiado por IA contra ecocardiograma formal interpretado por dois ecocardiografistas cegos como referência: sensibilidade de 96,2% e especificidade de 95,4% na etapa de derivação (valor preditivo negativo de 99,8%), com apenas 15,1% dos casos exigindo revisão por especialista; na validação prospectiva, sensibilidade de 100% e especificidade de 99,4%. Tempo mediano de exame de 4 minutos, com janelas acústicas adequadas obtidas em 95,0% (IA) e 97,4% (especialista) dos indivíduos (Kane CJ, et al. 'Smarter FoCUS: AI-guided focused cardiac ultrasound enables novice detection of left ventricular dysfunction'. Eur Heart J Digit Health. 2026;7. PMID 42169733).",
+    "indications": "Triagem de disfunção ventricular esquerda moderada a grave (dilatação de VE ou FEVE < 40%) em ambiente sem acesso imediato a ecocardiografista — pronto-socorro, atenção primária, enfermaria geral — por médico sem treinamento formal em ecocardiografia, como primeira camada de rastreio antes de encaminhar ao ecocardiograma completo. Distinto do ecocardiograma point-of-care tradicional (avaliação qualitativa 'a olho' por operador treinado, já coberto nesta base para avaliação de volemia e choque em Terapia intensiva): aqui a interpretação é assistida por algoritmo, o que amplia o uso a operadores sem experiência prévia em ecocardiografia.",
+    "interpretation": "Resultado negativo (sem dilatação/disfunção) tem alto valor preditivo negativo e permite descartar disfunção ventricular relevante sem exame formal na maioria dos casos. Resultado positivo ou indeterminado deve ser sempre confirmado por ecocardiograma completo interpretado por especialista — o próprio desenho do estudo usa a revisão especializada como rede de segurança para os 15% de casos mais difíceis, não elimina o ecocardiografista do fluxo.",
+    "limitations": "Validado até aqui em coortes de um único centro/algoritmo, sem confirmação externa multicêntrica ampla; desempenho pode variar por biotipo do paciente, qualidade da janela acústica e modelo específico do transdutor/software usado (nem todo aparelho de POCUS tem o algoritmo de guia embarcado). Não avalia valvopatia, derrame pericárdico com repercussão hemodinâmica ou disfunção diastólica com o mesmo rigor da avaliação de função sistólica global — segue sendo exame focado, não substitui ecocardiograma completo quando a pergunta clínica for mais ampla que 'a função do VE está reduzida?'.",
+    "source_refs": [
+      "Kane CJ, Behnami D, Nair A, et al. Smarter FoCUS: AI-guided focused cardiac ultrasound enables novice detection of left ventricular dysfunction. Eur Heart J Digit Health. 2026;7. PMID: 42169733 — números de sensibilidade, especificidade, VPN e tempo de exame conferidos via PubMed E-utilities."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pocus",
+      "focus",
+      "ecocardiograma point-of-care",
+      "inteligência artificial",
+      "disfunção ventricular",
+      "triagem"
+    ]
   }
 ]
