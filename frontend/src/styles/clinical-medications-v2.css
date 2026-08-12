@@ -1,0 +1,33 @@
+.clinical-os .cc-drugs-page .cc-inline-alert {
+  padding: .72rem .8rem;
+  color: #ffd4db;
+  background: rgba(240,68,93,.08);
+  border: 1px solid rgba(240,68,93,.2);
+  border-radius: 11px;
+}
+.clinical-os .cc-drug-detail { display: grid; gap: .8rem; scroll-margin-top: 82px; }
+.clinical-os .cc-clinical-list { display:grid;gap:.38rem;margin:0;padding-left:1.05rem; }
+.clinical-os .cc-clinical-list li { padding-left:.08rem;color:#92adb6; }
+.clinical-os .cc-clinical-list li::marker { color:var(--cos-cyan); }
+.clinical-os .cc-clinical-list .clinical-richtext { display:inline; }
+.clinical-os .cc-clinical-list .clinical-richtext p { display:inline;margin:0; }
+.clinical-os .cc-source-note { margin-top:.65rem;padding:.6rem .7rem;background:rgba(255,255,255,.018);border:1px solid var(--cos-line);border-radius:10px; }
+.clinical-os .cc-table-wrap { width:100%;overflow:auto; }
+.clinical-os .cc-compare-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.62rem; }
+.clinical-os .cc-compare-card { padding:.78rem;background:rgba(255,255,255,.02);border:1px solid var(--cos-line);border-radius:13px; }
+.clinical-os .cc-compare-card__head { display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;padding-bottom:.58rem;border-bottom:1px solid var(--cos-line); }
+.clinical-os .cc-compare-card__head h3 { margin:.1rem 0 0;font-size:.94rem; }
+.clinical-os .cc-compare-card dl { display:grid;gap:.48rem;margin:.62rem 0 0; }
+.clinical-os .cc-compare-card dl > div { display:grid;grid-template-columns:86px minmax(0,1fr);gap:.5rem;align-items:start; }
+.clinical-os .cc-compare-card dt { color:#718e98;font:700 .6rem/1.4 var(--fonte-dados);text-transform:uppercase;letter-spacing:.04em; }
+.clinical-os .cc-compare-card dd { min-width:0;margin:0;color:#c5dadd;font-size:.72rem; }
+.clinical-os .cc-mini-bar { height:5px;margin-top:.27rem;overflow:hidden;background:rgba(255,255,255,.04);border-radius:99px; }
+.clinical-os .cc-mini-bar > span { display:block;height:100%;background:linear-gradient(90deg,var(--cos-cyan),var(--cos-blue));border-radius:99px; }
+.clinical-os .cc-compare-warnings { margin-top:.7rem;padding:.65rem;background:rgba(239,188,98,.045);border:1px solid rgba(239,188,98,.14);border-radius:11px; }
+.clinical-os .cc-footnote { margin:.7rem 0 0;color:#6f8994;font-size:.68rem; }
+.clinical-os .cc-text-link { display:inline-block;margin-top:.35rem;color:var(--cos-cyan-2);font-size:.72rem;font-weight:700; }
+@media(max-width:900px){
+  .clinical-os .cc-drug-detail{scroll-margin-top:64px}
+  .clinical-os .cc-compare-grid{grid-template-columns:1fr}
+  .clinical-os .cc-compare-card dl>div{grid-template-columns:78px minmax(0,1fr)}
+}
