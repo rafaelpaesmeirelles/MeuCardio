@@ -15008,5 +15008,172 @@
       "Gijtenbeek M, Morris SA, Herberg U, et al. Technical Success of Fetal Aortic Valvuloplasty in Relation to Center Volumes: A Report From the International Fetal Cardiac Intervention Registry. Circulation: Cardiovascular Interventions. 2026 Jun 9. DOI: 10.1161/CIRCINTERVENTIONS.125.015593. PMID: 42261657"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "tcar-revascularizacao-transcarotidea-fluxo-reverso-e-risco-de-infarto",
+    "titulo": "TCAR em alto risco cirúrgico: o que a evidência comparativa realmente mostra",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Homem, 74 anos, estenose de carótida interna direita sintomática (AIT há 3 semanas), 75% ao doppler. Antecedentes: doença arterial coronariana prévia com stent, DPOC moderada, considerado de alto risco cirúrgico pela equipe de anestesia. A equipe vascular discute revascularização por via endovascular e cogita a revascularização transcarotídea (TCAR) em vez do stent transfemoral convencional (CAS) ou da endarterectomia (CEA).",
+    "pergunta": "Com base nos estudos comparativos mais recentes sobre TCAR (PERFORMANCE III, ROADSTER 3, estudo nacional de emulação de ensaio-alvo e metanálise TCAR × CEA × CAS transfemoral), qual afirmação está correta para orientar esta decisão?",
+    "opcoes": [
+      "TCAR demonstrou superioridade estatística sobre CEA para o desfecho neurológico (AVC/morte) em ensaio clínico randomizado, o que justifica preferi-la sempre no paciente de alto risco cirúrgico",
+      "TCAR não demonstrou superioridade neurológica sobre CEA nos desenhos comparativos disponíveis (AVC e morte comparáveis), mas o sinal mais consistente entre os estudos foi a redução de infarto do miocárdio periprocedimento com TCAR em relação a CEA — especialmente no subgrupo de alto risco cirúrgico, coerente entre a metanálise e o estudo nacional de emulação de ensaio-alvo (HR 0,76 para IAM neste subgrupo)",
+      "Como PERFORMANCE III e ROADSTER 3 superaram a meta de desempenho pré-especificada em eventos maiores de 30 dias, isso prova que TCAR é superior à CEA e à CAS transfemoral em qualquer nível de risco cirúrgico",
+      "A TCAR já tem classe de recomendação própria (I ou IIa), distinta da CAS transfemoral, estabelecida por sociedade europeia, o que a torna a técnica preferencial sobre CEA nesta diretriz"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "PERFORMANCE III (146 pacientes) e ROADSTER 3 (344 pacientes, risco cirúrgico padrão) são estudos de braço único, sem grupo comparador — mostram baixa taxa de evento maior em 30 dias (0,7% e 0,6-0,9% conforme a análise) superando a meta de desempenho histórica, mas isso prova viabilidade e segurança absoluta, não superioridade sobre outra técnica. O estudo nacional de emulação de ensaio-alvo (113.994 pacientes de CEA e 12.613 de TCAR) não encontrou diferença global de morbidade composta em 90 dias entre TCAR e CEA, mas no subgrupo de alto risco encontrou HR 0,76 (IC 0,58-0,98) favorecendo TCAR para infarto do miocárdio — achado reforçado pela metanálise dedicada à estenose assintomática, que também mostrou menor frequência de infarto do miocárdio em 30 dias após TCAR em relação a CEA, com risco significativamente menor de AVC, morte e do composto de TCAR em relação à CAS transfemoral. Em nenhum dos desenhos comparativos houve superioridade neurológica de TCAR sobre CEA — o desfecho de AVC e morte foi comparável entre as duas técnicas. Além disso, a ESC não publicou, até o momento desta literatura, classe de recomendação própria (I/IIa/IIb/III) distinguindo a TCAR da CAS transfemoral genérica — a TCAR entra hoje sob a mesma classe geral de recomendação da CAS.",
+    "source_refs": [
+      "Lyden SP, et al. Thirty-day outcomes following transcarotid artery revascularization with integrated embolic protection: The PERFORMANCE III study. J Vasc Surg. 2026 May 26:S0741-5214(26)01170-5. DOI: 10.1016/j.jvs.2026.05.027. PMID: 42203082.",
+      "Jim J, Dermody M, Peterson B, Berman SS, Mouawad NJ, Ricotta J, et al. Prospective, Multicenter Evaluation of Transcarotid Artery Revascularization in Standard-Risk Patients: 30-Day Outcomes of the ROADSTER 3 Study. Ann Neurol. 2026;99(3):705-712. DOI: 10.1002/ana.78104. PMID: 41277872.",
+      "Sakowitz S, Vadlakonda A, Bakhtiyar SS, Sanaiha Y, Coaston T, deVirgilio C, Malas M, Benharash P. Transcarotid Artery Revascularization Versus Carotid Endarterectomy With and Without High-Risk Criteria: A National Target Trial. Ann Surg. 2025 Jul 3. DOI: 10.1097/SLA.0000000000006825.",
+      "Jiang ZC, Hu QF, Huang JM, et al. Transcarotid Artery Revascularization for Asymptomatic Carotid Stenosis: A Systematic Review and Meta-Analysis. Transl Stroke Res. 2026;17(3):63. DOI: 10.1007/s12975-026-01457-2. PMID: 42262421."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ev-icd-substernal-atp-vs-s-icd-escolha-de-sistema",
+    "titulo": "CDI extravascular (EV-ICD) ou subcutâneo (S-ICD): o que muda sem indicação de estimulação",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem, 42 anos, cardiomiopatia dilatada não isquêmica, FEVE 30%, indicação de cardiodesfibrilador implantável (CDI) em prevenção primária. Sem indicação de estimulação antibradicardia permanente nem de ressincronização. Já teve um episódio de taquicardia ventricular monomórfica sustentada, que terminou espontaneamente antes de qualquer intervenção. O paciente pede para evitar eletrodo intravascular, citando um familiar que teve endocardite de eletrodo de CDI transvenoso.",
+    "pergunta": "Comparando com o CDI subcutâneo (S-ICD), qual é o diferencial clínico central do sistema extravascular (EV-ICD, implante substernal) mais relevante para este paciente?",
+    "opcoes": [
+      "O EV-ICD, assim como o S-ICD, não oferece estimulação antitaquicárdica (ATP) — a única diferença entre os dois sistemas é a via de implante",
+      "O EV-ICD mantém o eletrodo no mediastino anterior, próximo ao coração mas sem contato intracardíaco, o que preserva a capacidade de estimulação antitaquicárdica (ATP) — no estudo pivotal, o ATP teve sucesso em 77,1% dos episódios tratados, uma terapia indolor que o S-ICD, por não ter eletrodo em contato com o coração, não oferece; é justamente o cenário deste paciente, que já teve um episódio de TV monomórfica passível de terminação por overdrive pacing",
+      "O EV-ICD permite estimulação antibradicardia permanente, ao contrário do S-ICD, o que o torna equivalente ao CDI transvenoso para qualquer indicação futura de marca-passo",
+      "A taxa de choque inapropriado do EV-ICD é menor que a do S-ICD em todos os prazos de seguimento já publicados, o que torna o EV-ICD sempre preferível ao S-ICD"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O EV-ICD ocupa um espaço intermediário entre o CDI transvenoso e o S-ICD: o eletrodo fica fora do coração e dos vasos (evitando fratura, endocardite de eletrodo e obstrução venosa do sistema transvenoso), mas próximo o suficiente ao coração para permitir ATP — diferença central em relação ao S-ICD, que não tem essa capacidade por não ter eletrodo em contato com o coração. No estudo pivotal (316 pacientes, 299 implantes bem-sucedidos, seguimento de 3 anos), o sucesso da ATP foi de 77,1% (37 de 48 episódios) e o sucesso da terapia de choque foi de 100% (27 de 27 episódios). A liberdade de complicação maior foi de 91,9% em 1 ano e 89,0% em 3 anos, mas a taxa de choque inapropriado CRESCEU entre 1 e 3 anos (9,8% para 17,5% cumulativo) — o que contradiz a afirmação de que o EV-ICD é sempre superior ao S-ICD nesse desfecho em todos os prazos; não há, nas fontes consultadas, ensaio randomizado comparando diretamente os dois sistemas. Assim como o S-ICD, o EV-ICD NÃO permite estimulação antibradicardia permanente — paciente com indicação concomitante de marca-passo definitivo não é candidato a nenhum dos dois sistemas isoladamente.",
+    "source_refs": [
+      "Friedman P, Murgatroyd F, Boersma LVA, Manlucu J, O'Donnell D, Knight BP, Clémenty N, Leclercq C, Amin A, Merkely B, Birgersdotter-Green U, Kalscheur M, Krahn AD, Lever N, Wright DJ, Ellenbogen K, Kanuru N, Meyer TE, Cerkvenik J, Perschbacher D, Wilde AAM; Extravascular ICD Pivotal Study Investigators. Performance and Safety of the Extravascular Implantable Cardioverter Defibrillator Through Long-Term Follow-Up: Final Results From the Pivotal Study. Circulation. 2025;151(4):322-332. DOI: 10.1161/CIRCULATIONAHA.124.071795. PMID: 39327797"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lorundrostat-inibidor-da-aldosterona-sintase-hipertensao-resistente-vigilancia-de-potassio",
+    "titulo": "Lorundrostat na hipertensão resistente: um segundo inibidor da aldosterona sintase, ainda investigacional",
+    "tema": "Hipertensão",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 58 anos, hipertensão resistente (uso de 4 anti-hipertensivos, incluindo espironolactona 25mg/dia), com PA de consultório ainda em 152/94mmHg. Depois de ler uma reportagem sobre um \"novo inibidor da aldosterona sintase\" testado em hipertensão resistente, pergunta se pode substituir a espironolactona por ele.",
+    "pergunta": "Com base nos ensaios ADVANCE-HTN (NEJM 2025) e LAUNCH-HTN (JAMA 2025) do lorundrostat, qual orientação está correta para esta paciente?",
+    "opcoes": [
+      "O lorundrostat já está aprovado pela FDA e tem registro confirmado na Anvisa para hipertensão resistente, podendo substituir a espironolactona hoje",
+      "O lorundrostat reduziu a pressão arterial de forma consistente e estatisticamente significativa em relação a placebo nos dois ensaios (diferença ajustada de até -9,1mmHg no LAUNCH-HTN, p<0,001), mas segue investigacional — o NDA está em revisão pela FDA, sem aprovação vigente e sem registro confirmado na Anvisa, não podendo ser prescrito fora de protocolo de pesquisa; o perfil de segurança documentado inclui hiperpotassemia (5-7% com K>6,0mmol/L no ADVANCE-HTN) e, no LAUNCH-HTN, também hiponatremia e queda de função renal",
+      "Por atuar pelo mesmo mecanismo da espironolactona (bloqueio do receptor mineralocorticoide), o lorundrostat poderia ser combinado livremente com ela, sem risco adicional de hiperpotassemia",
+      "Como o LAUNCH-HTN é um ensaio de fase 3 com resultado positivo, ele demonstrou superioridade direta do lorundrostat sobre o baxdrostat, o outro inibidor da aldosterona sintase já em desenvolvimento avançado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O lorundrostat é um inibidor oral e seletivo da aldosterona sintase (CYP11B2) — mecanismo distinto da espironolactona, que bloqueia o receptor mineralocorticoide a jusante, sem reduzir a síntese de aldosterona. No ADVANCE-HTN (285 participantes, fase 2), a diferença ajustada por placebo na PAS ambulatorial de 24h foi de -7,9mmHg (dose estável) e -6,5mmHg (ajuste de dose), com hiperpotassemia (K>6,0mmol/L) em 5-7% dos participantes de lorundrostat, contra nenhum no placebo. No LAUNCH-HTN (1.083 participantes, fase 3), a diferença no desfecho primário (PA de consultório na semana 6) foi de -9,1mmHg (IC95% -13,3 a -4,9; p<0,001), com hiponatremia, hiperpotassemia e redução de função renal mais frequentes com lorundrostat do que com placebo. Segundo comunicado institucional da Mineralys Therapeutics (fonte não revisada por pares), o NDA foi aceito pela FDA com data-alvo PDUFA de 22 de dezembro de 2026 — não há aprovação da FDA até o momento, e não foi localizado registro na Anvisa, o que exige verificação humana antes de qualquer afirmação de disponibilidade no Brasil. Não existe ensaio clínico randomizado comparando diretamente lorundrostat e baxdrostat — qualquer comparação de magnitude entre os dois programas é entre desenhos distintos, não uma equivalência ou superioridade direta.",
+    "source_refs": [
+      "Laffin LJ, Kopjar B, Melgaard C, Wolski K, Ibbitson J, Bhikam S, et al; Advance-HTN Investigators. Lorundrostat Efficacy and Safety in Patients with Uncontrolled Hypertension. N Engl J Med. 2025;392(18):1813-1823. DOI: 10.1056/NEJMoa2501440. PMID: 40267417",
+      "Saxena M, Laffin L, Borghi C, Fernandez Fernandez B, Ghali JK, Kopjar B, et al; Launch-HTN Investigators. Lorundrostat in Participants With Uncontrolled Hypertension and Treatment-Resistant Hypertension: The Launch-HTN Randomized Clinical Trial. JAMA. 2025;334(5):409-418. DOI: 10.1001/jama.2025.9413. PMID: 40587141. PMCID: PMC12210145."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "terapia-assistida-por-psilocibina-avaliacao-cardiovascular-pre-sessao",
+    "titulo": "Avaliação cardiovascular antes de terapia assistida por psilocibina",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 46 anos, depressão resistente a tratamento, encaminhado por psiquiatra para avaliação cardiovascular antes de iniciar terapia assistida por psilocibina em centro especializado, com produto farmacêutico padronizado e sessão supervisionada. Antecedentes: hipertensão controlada (130/80mmHg em uso de losartana), sem doença coronariana conhecida, ECG de repouso normal.",
+    "pergunta": "Com base na revisão de Szarpak et al. (2026) sobre segurança cardiovascular da psilocibina, qual orientação está correta para esta avaliação pré-sessão?",
+    "opcoes": [
+      "A psilocibina não tem efeito hemodinâmico relevante documentado, então nenhuma avaliação ou monitorização adicional é necessária além do ECG de repouso já realizado",
+      "Deve-se considerar, na decisão de elegibilidade e no plano de monitorização durante a sessão, o pico hipertensivo agudo esperado (elevação média de aproximadamente 19,0mmHg na PAS e 8,7mmHg na PAD, com pico entre 60-90 minutos após a dose, resolvendo em 4-6 horas) — mesmo em paciente com hipertensão hoje controlada",
+      "A lesão valvular por psilocibina já está clinicamente estabelecida na literatura, exigindo ecocardiograma obrigatório em todo paciente antes de qualquer sessão de terapia assistida",
+      "Como o produto usado nos ensaios é farmacêutico e padronizado, o perfil de risco cardiovascular documentado nesses estudos supervisionados pode ser extrapolado com segurança para o uso recreativo de cogumelos não regulados"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A revisão de Szarpak et al. (buscas atualizadas até 10/07/2026) descreve, em estudos supervisionados, aumento pressórico médio de aproximadamente 19,0mmHg na PAS e 8,7mmHg na PAD, com pico de efeito entre 60-90 minutos após a dose, geralmente resolvendo em 4-6 horas — achado que deve entrar explicitamente na avaliação de risco cardiovascular pré-sessão (hipertensão não controlada, doença coronariana ativa, arritmia significativa e valvopatia preexistente mudam a relação risco-benefício) e no plano de monitorização de sinais vitais durante a janela de maior efeito. A preocupação com valvulopatia mediada por 5-HT2B é biologicamente plausível sob exposição crônica, mas lesão valvular clínica NÃO foi estabelecida para a psilocibina especificamente (distinto do que já se sabe sobre MDMA) — não há indicação de ecocardiograma obrigatório baseada nesse mecanismo para psilocibina isoladamente. Cogumelos não regulados podem ter teor de alcaloide ativo variando em mais de uma ordem de grandeza entre preparações, o que invalida qualquer extrapolação de segurança do produto farmacêutico padronizado (usado nos ensaios) para o uso recreativo não supervisionado.",
+    "source_refs": [
+      "Szarpak L, Pruc M, Swieczkowski D, Rybczynski B, Pieta A, Cubała WJ. Cardiovascular safety of psilocybin in psychiatric practice: a narrative review. Eur J Clin Pharmacol. 2026 Aug 1;82(8):223. DOI: 10.1007/s00228-026-04151-2. PMID: 42538465"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hiit-remodelamento-cardiaco-rapido-atleta-jovem-zona-cinzenta",
+    "titulo": "Espessamento de parede após 7 semanas de HIIT: adaptação fisiológica ou achado a investigar?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 19 anos, atleta amador de corrida, intensificou o treino há 7 semanas com um programa estruturado de treinamento intervalado de alta intensidade (HIIT). Ecocardiograma de rotina mostra espessura da parede posterior do ventrículo esquerdo e do septo interventricular aumentadas em cerca de 11% em relação a exame anterior, sem dilatação de câmara, além de discreto aumento do diâmetro do átrio esquerdo. Assintomático, sem história familiar de morte súbita ou cardiomiopatia.",
+    "pergunta": "Com base no estudo de Venckunas et al. (2025, atletas jovens submetidos a 7 semanas de HIIT estruturado), qual é a interpretação mais adequada deste achado?",
+    "opcoes": [
+      "O achado é necessariamente patológico e exige investigação imediata para cardiomiopatia hipertrófica, já que remodelamento cardíaco de causa fisiológica exigiria anos de treinamento para se manifestar",
+      "O achado é compatível com adaptação fisiológica ao treinamento: no estudo, um volume relativamente modesto de HIIT (127 km em 8,5 horas de treino efetivo ao longo de 7 semanas, 21 sessões) já foi suficiente para induzir aumento de aproximadamente 11% na espessura de parede ventricular e dilatação atrial esquerda mensuráveis em atletas jovens saudáveis — o remodelamento pode ocorrer em semanas, não apenas em anos de treinamento",
+      "Como o estudo definiu um limiar quantitativo de volume de treino acima do qual o remodelamento deixaria de ser fisiológico, basta comparar este caso a esse corte numérico para descartar patologia com segurança",
+      "O estudo mostrou que apenas o diâmetro atrial esquerdo aumentaria com HIIT de curto prazo, sem espessamento de parede associado, o que tornaria este achado atípico e mais sugestivo de patologia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de Venckunas et al. (2025), atletas amadores jovens (idade média 18,2 anos) submetidos a 21 sessões de HIIT de corrida ao longo de 7 semanas (127km em 8,5 horas de treino efetivo) apresentaram aumento de aproximadamente 11% na espessura da parede posterior do VE e do septo interventricular, sem dilatação de câmara, além de aumento do diâmetro do átrio esquerdo — exatamente o padrão descrito neste caso, e os autores concluem que o remodelamento cardíaco induzido por treinamento de alta intensidade pode ocorrer em semanas, não apenas em anos. Nenhum dos estudos que documentam esse fenômeno definiu um limiar quantitativo (volume, intensidade ou duração de HIIT) acima do qual o remodelamento deixaria de ser fisiológico — onde a prática exigir esse corte, a decisão deve seguir os critérios de diferenciação de zona cinzenta (coração de atleta vs. cardiomiopatia hipertrófica) já descritos nesta pasta, não um número extraído deste estudo isolado. O estudo mostrou espessamento de parede E dilatação atrial associados, não apenas um dos dois achados isoladamente. A ausência de sintomas e de história familiar de morte súbita reforça a leitura de adaptação, mas não substitui a correlação com o histórico de treino recente ao interpretar o exame.",
+    "source_refs": [
+      "Venckunas T, Gumauskiene B, Muanjai P, Cadefau JA, Kamandulis S. High-Intensity Interval Training Improves Cardiovascular Fitness and Induces Left-Ventricular Hypertrophy During Off-Season. J Funct Morphol Kinesiol. 2025;10(3):271. PMID: 40700207. DOI: 10.3390/jfmk10030271."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "calcificacao-anular-mitral-grave-tendyne-summit-mac-alternativa-transcateter",
+    "titulo": "Calcificação anular mitral grave e risco cirúrgico proibitivo: o que o SUMMIT-MAC mostrou",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 79 anos, doença renal crônica em hemodiálise, hiperparatireoidismo secundário, calcificação anular mitral (MAC) grave ao ecocardiograma com regurgitação mitral significativa (≥2+) e sintomas de insuficiência cardíaca (NYHA III). A heart team considera risco cirúrgico proibitivo para troca valvar mitral convencional, pela dificuldade técnica de implantar anel protético num anel calcificado.",
+    "pergunta": "Com base no estudo SUMMIT-MAC (Sorajja et al., JACC 2026), qual afirmação está correta sobre a troca valvar mitral transcateter com o sistema Tendyne nesta população?",
+    "opcoes": [
+      "O estudo é um ensaio randomizado que comparou o sistema Tendyne diretamente contra a cirurgia convencional e demonstrou superioridade estatística",
+      "O estudo é de braço único (sem grupo comparador randomizado, comparado contra meta de performance histórica), mas atingiu o desfecho primário — liberdade de mortalidade por qualquer causa e hospitalização por IC em 12 meses — em 60,4% dos 103 pacientes, contra uma meta pré-especificada de 43% (p=0,0002), com melhora funcional expressiva (NYHA I/II de 30,6% para 87,5%, p<0,0001); ainda assim, a mortalidade em 30 dias (6,8%) não é desprezível e precisa ser discutida com a paciente, dado o alto risco basal da população",
+      "A mortalidade em 30 dias reportada no estudo foi próxima de zero, o que torna o procedimento praticamente livre de risco periprocedimental nesta população de alto risco",
+      "Este mesmo corpo de evidência também sustenta o uso do sistema Tendyne em regurgitação mitral primária degenerativa sem calcificação anular relevante"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O SUMMIT-MAC (103 pacientes, idade média 78,0 anos, 55% mulheres, regurgitação mitral ≥2+ em 97% na avaliação basal) é o primeiro relato prospectivo de resultados primários de troca valvar mitral transcateter dedicada à calcificação anular mitral grave — um estudo de braço único contra meta de performance histórica, não um ensaio randomizado contra cirurgia ou tratamento clínico. Sucesso técnico de 94,2%, desfecho primário (liberdade de mortalidade/hospitalização por IC em 12 meses) de 60,4% contra a meta de 43% (p=0,0002), classe funcional NYHA I/II subindo de 30,6% para 87,5% (p<0,0001) e ganho médio no escore KCCQ de 18,7±24,4 pontos (p<0,0001). A mortalidade em 30 dias foi de 6,8% — reflete o alto risco basal da população (idade avançada, MAC grave, risco cirúrgico proibitivo por definição de inclusão) e deve ser comunicada ao lado do benefício funcional, não tratada como desprezível. A população estudada é especificamente MAC grave com disfunção mitral significativa — o estudo não se estende a regurgitação mitral primária (degenerada dos folhetos) sem calcificação anular relevante, onde outras rotas já cobertas na base (reparo cirúrgico, TEER) têm evidência própria.",
+    "source_refs": [
+      "Sorajja P, Thourani VH, Rogers JH, et al. Transcatheter Mitral Valve Replacement for Severe Mitral Annular Calcification: Primary Outcomes From the SUMMIT-MAC Study. J Am Coll Cardiol. 2026;87(23):3243-3256. DOI: 10.1016/j.jacc.2025.10.025. PMID: 41194751."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "natriurese-guiada-titulacao-precoce-de-diuretico-na-ic-aguda",
+    "titulo": "Sódio urinário pontual abaixo de 70 mmol/L na IC aguda: intensificar já ou esperar o balanço do dia?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, internado por insuficiência cardíaca aguda descompensada, iniciado furosemida endovenosa. Duas horas após a primeira dose, é colhida amostra de urina pontual (spot) para dosagem de sódio urinário, com resultado de 48 mmol/L. A equipe discute se deve aguardar o balanço hídrico completo de 24 horas antes de qualquer ajuste de dose.",
+    "pergunta": "Com base no protocolo de natriurese guiada testado nos ensaios PUSH-AHF e ENACT-HF, qual conduta está mais alinhada com a evidência disponível?",
+    "opcoes": [
+      "Aguardar o balanço hídrico completo de 24 horas antes de qualquer decisão, já que o sódio urinário pontual não tem valor preditivo sobre a resposta diurética",
+      "Como o sódio urinário pontual (48 mmol/L) está abaixo do corte de 70 mmol/L usado nos dois ensaios, a resposta é considerada insuficiente — intensificar a terapia (dobrar a dose de diurético de alça ou associar um segundo mecanismo, como tiazídico ou acetazolamida) antes de esperar o balanço do dia inteiro; no ENACT-HF, o protocolo padronizado guiado por natriurese associou-se a internação mais curta (5,8 vs. 7,0 dias, p=0,036)",
+      "O PUSH-AHF demonstrou que a terapia guiada por natriurese reduz mortalidade e reinternação por IC em 180 dias, o que justifica a intensificação como estratégia formal de redução de desfecho duro",
+      "Um sódio urinário pontual baixo indica necessidade imediata de ultrafiltração, independentemente da resposta a diurético em dose otimizada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O protocolo testado no PUSH-AHF e replicado no ENACT-HF mede o sódio urinário pontual poucas horas após a primeira dose de diurético (2 horas é o ponto mais usado); valor abaixo de 70 mmol/L prediz resistência e autoriza intensificar a terapia — dobrar a dose de diurético de alça ou associar um segundo mecanismo — antes de esperar o balanço hídrico do dia inteiro. O ENACT-HF (401 pacientes, 29 centros em 18 países) mostrou, com o protocolo padronizado, maior natriurese em 1 dia (282 vs. 174 mmol) e 2 dias (538 vs. 365 mmol), maior diurese em 2 dias (5.776 vs. 4.381 mL) e internação mais curta (5,8 vs. 7,0 dias, razão ajustada 0,87, p=0,036). No entanto, o PUSH-AHF (310 pacientes, o único desenhado com poder para desfecho duro) foi NEUTRO no composto de mortalidade por qualquer causa ou reinternação por IC em 180 dias (HR 0,92, IC95% 0,62-1,38, p=0,698) — não existe hoje ensaio que prove que guiar por natriurese reduz morte ou reinternação; o que existe é evidência consistente de descongestão mais rápida e completa. A conduta baseada no protocolo é intensificar a terapia diurética (dose maior ou segundo mecanismo), não indicar ultrafiltração diretamente a partir de um único valor de sódio urinário.",
+    "source_refs": [
+      "Ter Maaten JM, Beldhuis IE, van der Meer P, Krikken JA, Postmus D, Coster JE, et al. Natriuresis-guided diuretic therapy in acute heart failure: a pragmatic randomized trial (PUSH-AHF). Nat Med. 2023;29(10):2625-2632. DOI: 10.1038/s41591-023-02532-z. PMID: 37640861",
+      "Dauw J, Charaya K, Lelonek M, Zegri-Reiriz I, Nasr S, Paredes-Paucar CP, et al. Protocolized Natriuresis-Guided Decongestion Improves Diuretic Response: The Multicenter ENACT-HF Study. Circ Heart Fail. 2024;17(1):e011105. DOI: 10.1161/CIRCHEARTFAILURE.123.011105. PMID: 38179728"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trastuzumab-deruxtecan-tosse-nova-diagnostico-diferencial-ild-vs-cardiotoxicidade",
+    "titulo": "Tosse e dispneia novas sob trastuzumabe deruxtecana: cardíaco ou pulmonar?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 54 anos, câncer de mama HER2-positivo metastático, em tratamento com trastuzumabe deruxtecana (T-DXd) há 4 meses. Retorna com tosse seca nova e dispneia progressiva há 2 semanas, sem febre. O ecocardiograma mais recente mostra FEVE preservada (58%), sem queda em relação ao exame basal.",
+    "pergunta": "Com base no perfil de segurança do T-DXd, qual é a conduta mais adequada diante deste quadro respiratório novo?",
+    "opcoes": [
+      "Como a FEVE está preservada, o quadro respiratório não pode ser atribuído ao T-DXd — investigar apenas causas cardíacas alternativas",
+      "Investigar prontamente doença pulmonar intersticial (ILD)/pneumonite relacionada ao fármaco — efeito adverso com alerta em quadro (boxed warning) na bula, presente em 10,5-12,1% dos pacientes nos ensaios pivotais (DESTINY-Breast03 e -04), com desfecho fatal numa fração desses casos —, após excluir outras causas de infiltrado pulmonar (infecção, progressão tumoral, edema, radioterapia prévia); se confirmada, a conduta por gravidade pode incluir descontinuação permanente já a partir de grau 2, com corticosteroide precoce",
+      "Manter o T-DXd sem investigação pulmonar adicional, já que o efeito respiratório do fármaco é apenas teórico e nunca foi confirmado em ensaio clínico",
+      "O eixo pulmonar e o eixo cardíaco do T-DXd compartilham o mesmo mecanismo de dano (bloqueio da via HER2/HER4-neurregulina-1 no cardiomiócito), então a FEVE preservada já afasta toxicidade pulmonar relacionada ao fármaco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A doença pulmonar intersticial (ILD)/pneumonite é a marca registrada de segurança do T-DXd, com alerta em quadro (boxed warning) na bula — o nível mais alto de advertência regulatória. Nos ensaios pivotais, ocorreu em 12,1% dos pacientes no DESTINY-Breast04 (0,8% com desfecho fatal) e em 10,5% no DESTINY-Breast03 (nenhum evento grau 4-5 nesse ensaio); a bula do FDA converge com esses números por regime de dose (10-12% conforme o esquema, fatalidade de 0,3-0,9%). O diagnóstico é de exclusão — outras causas de infiltrado/lesão pulmonar (infecção, progressão tumoral, edema, radioterapia prévia) precisam ser afastadas antes de atribuir o achado ao fármaco. A conduta por gravidade, conforme a bula: grau 1 (assintomático) interrompe até resolução, com decisão de manter ou reduzir dose conforme o tempo de resolução; grau ≥2 (sintomático, como neste caso) exige descontinuação PERMANENTE, com corticosteroide iniciado assim que a suspeita surgir. O mecanismo de dano pulmonar do T-DXd é atribuído (em modelo pré-clínico de outro conjugado anticorpo-fármaco) à liberação do payload citotóxico no tecido pulmonar por captação Fcγ-mediada por macrófago alveolar — mecanismo INDEPENDENTE do bloqueio da via HER2/HER4-neurregulina-1 que causa a toxicidade cardíaca. É exatamente essa distinção que a armadilha de leitura do documento de origem alerta: um cardiologista que conheça só o perfil do trastuzumabe convencional tende a monitorizar apenas com ecocardiograma seriado, mas o risco de maior impacto clínico do T-DXd está no eixo pulmonar, independente do resultado da FEVE.",
+    "source_refs": [
+      "Trastuzumab Deruxtecan versus Trastuzumab Emtansine for Breast Cancer (DESTINY-Breast03) · Cortés J et al. · N Engl J Med. 2022;386(12):1143-1154 · PMID 35320644 · doi:10.1056/NEJMoa2115022",
+      "Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer (DESTINY-Breast04) · Modi S et al. · N Engl J Med. 2022;387(1):9-20 · PMID 35665782 · doi:10.1056/NEJMoa2203690",
+      "ENHERTU (fam-trastuzumab deruxtecan-nxki) — bula/rótulo do FDA, DailyMed (National Library of Medicine), setid 7e67e73e-ddf4-4e4d-8b50-09d7514910b6 · https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7e67e73e-ddf4-4e4d-8b50-09d7514910b6"
+    ],
+    "review_status": "revisado"
   }
 ]
