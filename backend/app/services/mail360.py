@@ -72,17 +72,28 @@ def _obter_access_token() -> str:
     if _token_cache["token"] and agora < float(_token_cache["expira_em"]):
         return str(_token_cache["token"])
 
-    with httpx.Client(timeout=TIMEOUT) as cliente:
-        # JSON, não form-encoded — `/access-token` devolve 400
-        # `JSON_PARSE_ERROR` com `data=` (confirmado em 30/07/2026 contra a
-        # API real). Diferente da maioria dos endpoints OAuth por aí.
-        resp = cliente.post(TOKEN_URL, json={
-            "client_id": settings.mail360_client_id,
-            "client_secret": settings.mail360_client_secret,
-            "refresh_token": settings.mail360_refresh_token,
-        })
-        resp.raise_for_status()
-        dados = (resp.json() or {}).get("data") or {}
+    try:
+        with httpx.Client(timeout=TIMEOUT) as cliente:
+            # JSON, não form-encoded — `/access-token` devolve 400
+            # `JSON_PARSE_ERROR` com `data=` (confirmado em 30/07/2026 contra a
+            # API real). Diferente da maioria dos endpoints OAuth por aí.
+            resp = cliente.post(TOKEN_URL, json={
+                "client_id": settings.mail360_client_id,
+                "client_secret": settings.mail360_client_secret,
+                "refresh_token": settings.mail360_refresh_token,
+            })
+            resp.raise_for_status()
+            dados = (resp.json() or {}).get("data") or {}
+    except httpx.HTTPStatusError as e:
+        log.error(
+            "Mail360 access-token devolveu %s: %s",
+            e.response.status_code,
+            e.response.text[:300],
+        )
+        raise Mail360Error(f"Mail360 devolveu erro {e.response.status_code} ao renovar a sessão.") from e
+    except httpx.HTTPError as e:
+        log.error("Mail360 access-token falhou: %s", e)
+        raise Mail360Error("Não foi possível renovar a sessão do Mail360.") from e
 
     token = dados.get("access_token")
     if not token:
