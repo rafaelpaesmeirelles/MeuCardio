@@ -1,0 +1,255 @@
+/* CorVIA Mail — Clinical Command Center skin.
+   Keeps the mailbox/security model intact; only replaces the legacy light visual layer. */
+
+.clinical-os .conteudo:has(.cmp-shell) {
+  max-width: none;
+  padding: .72rem .82rem 1rem;
+  background: transparent;
+}
+
+.clinical-os .cmp-shell {
+  --cmp-red: #38cad5;
+  --cmp-red-dark: #28aeb9;
+  --cmp-ink: #edf8fa;
+  --cmp-muted: #76919b;
+  --cmp-line: rgba(126,183,201,.10);
+  --cmp-soft: #071925;
+  --cmp-panel: #081d2a;
+  --cmp-shadow: 0 24px 58px rgba(0,0,0,.24);
+  color: var(--cmp-ink);
+}
+
+.clinical-os .cmp-topbar {
+  height: 60px;
+  margin-bottom: .55rem;
+  padding: .38rem .62rem;
+  color: #eaf7f9;
+  background: linear-gradient(145deg, rgba(9,28,40,.98), rgba(5,20,30,.99));
+  border-color: rgba(126,183,201,.10);
+  border-radius: 12px;
+  box-shadow: inset 0 1px rgba(255,255,255,.02), 0 14px 32px rgba(0,0,0,.12);
+}
+.clinical-os .cmp-brand strong { color: #f1fbfc; }
+.clinical-os .cmp-brand small,
+.clinical-os .cmp-user small { color: #718d97; }
+.clinical-os .cmp-global-search input {
+  min-height: 38px;
+  color: #eaf6f8;
+  background: rgba(255,255,255,.026);
+  border: 1px solid rgba(126,183,201,.08);
+}
+.clinical-os .cmp-global-search input::placeholder { color: #66818b; }
+.clinical-os .cmp-global-search input:focus {
+  background: rgba(255,255,255,.038);
+  border-color: rgba(56,202,213,.28);
+  box-shadow: 0 0 0 3px rgba(56,202,213,.045);
+}
+.clinical-os .cmp-global-search span { color: #6f8a94; }
+.clinical-os .cmp-user>button { color: #78929b; }
+.clinical-os .cmp-user>button:hover { color: #7ae6eb; background: rgba(56,202,213,.06); }
+
+.clinical-os .cmp-alert {
+  color: #d7e7ea;
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(126,183,201,.08);
+}
+.clinical-os .cmp-alert--error { color: #ff9caa; background: rgba(239,80,98,.07); border-color: rgba(239,80,98,.16); }
+.clinical-os .cmp-alert--ok { color: #8fe4be; background: rgba(120,217,157,.06); border-color: rgba(120,217,157,.14); }
+.clinical-os .cmp-alert--warn { color: #f0c778; background: rgba(240,170,60,.06); border-color: rgba(240,170,60,.14); }
+
+.clinical-os .cmp-workspace {
+  grid-template-columns: 58px 196px minmax(300px,380px) minmax(390px,1fr);
+  height: calc(100dvh - 94px);
+  min-height: 560px;
+  max-height: none;
+  background: #071925;
+  border-color: rgba(126,183,201,.11);
+  border-radius: 14px;
+  box-shadow: var(--cmp-shadow);
+}
+
+.clinical-os .cmp-accounts {
+  gap: .5rem;
+  padding: .72rem .35rem;
+  background: #04131d;
+  border-right-color: rgba(126,183,201,.07);
+}
+.clinical-os .cmp-account { border-radius: 10px; }
+.clinical-os .cmp-account:hover { background: rgba(255,255,255,.035); }
+.clinical-os .cmp-account.is-active {
+  background: rgba(56,202,213,.08);
+  border-color: rgba(56,202,213,.18);
+  box-shadow: none;
+}
+.clinical-os .cmp-account__corvia,
+.clinical-os .cmp-account--all>span { background: rgba(56,202,213,.12); color: #7ae5ea; }
+.clinical-os .cmp-account.is-active .cmp-account--all>span { background: #1e8994; color: #fff; }
+.clinical-os .cmp-accounts__rule { background: rgba(126,183,201,.09); }
+
+.clinical-os .cmp-sidebar {
+  padding: .75rem .58rem;
+  background: #061722;
+  border-right-color: rgba(126,183,201,.08);
+}
+.clinical-os .cmp-compose-primary {
+  min-height: 38px;
+  margin: .05rem .08rem .78rem;
+  color: #031218;
+  background: linear-gradient(135deg, #31c3ce, #5fdde4);
+  border-radius: 9px;
+  box-shadow: 0 12px 26px -20px rgba(56,202,213,.85);
+}
+.clinical-os .cmp-compose-primary:hover { color: #021014; background: #76e4e9; }
+.clinical-os .cmp-sidebar__section>p { color: #56737d; }
+.clinical-os .cmp-sidebar__section>button { color: #91aab2; }
+.clinical-os .cmp-sidebar__section>button>span { color: #67838c; }
+.clinical-os .cmp-sidebar__section>button:hover { color: #e7f6f8; background: rgba(255,255,255,.028); }
+.clinical-os .cmp-sidebar__section>button.is-active {
+  color: #dffcff;
+  background: linear-gradient(90deg, rgba(56,202,213,.12), rgba(56,202,213,.03));
+  box-shadow: inset 2px 0 #38cad5;
+}
+.clinical-os .cmp-sidebar__section>button.is-active>span { color: #67dce3; }
+.clinical-os .cmp-sidebar__section>button>b { color: #829aa3; background: rgba(255,255,255,.035); }
+.clinical-os .cmp-account-card {
+  color: #b9ccd2;
+  background: rgba(255,255,255,.018);
+  border-color: rgba(126,183,201,.07);
+}
+.clinical-os .cmp-account-card small { color: #5d7a84; }
+.clinical-os .cmp-account-card>span { color: #78929c; }
+.clinical-os .cmp-account-card em { color: #7bdcb7; }
+.clinical-os .cmp-account-card button { color: #6bddE3; }
+.clinical-os .cmp-sidebar__privacy { color: #718a94; background: rgba(255,255,255,.018); }
+.clinical-os .cmp-sidebar__privacy strong { color: #a8bec5; }
+
+.clinical-os .cmp-list {
+  background: #081b27;
+  border-right-color: rgba(126,183,201,.08);
+}
+.clinical-os .cmp-list__header { padding: .8rem .78rem .48rem; }
+.clinical-os .cmp-list__header p { color: #708b95; }
+.clinical-os .cmp-list__header h2 { color: #eef9fb; font-size: .94rem; }
+.clinical-os .cmp-list__header>button {
+  color: #7d98a1;
+  background: rgba(255,255,255,.018);
+  border-color: rgba(126,183,201,.08);
+}
+.clinical-os .cmp-list__header>button:hover { color: #72e2e7; border-color: rgba(56,202,213,.18); }
+.clinical-os .cmp-list__filters { border-bottom-color: rgba(126,183,201,.06); }
+.clinical-os .cmp-list__filters button { color: #718c95; }
+.clinical-os .cmp-list__filters button:hover { color: #d9ecef; background: rgba(255,255,255,.025); }
+.clinical-os .cmp-list__filters button.is-active { color: #9ef1f4; background: rgba(56,202,213,.07); }
+.clinical-os .cmp-bulk { color: #acc0c6; background: rgba(56,202,213,.045); border-color: rgba(56,202,213,.08); }
+.clinical-os .cmp-bulk strong { color: #78e2e7; }
+.clinical-os .cmp-bulk button { color: #9db3ba; background: rgba(255,255,255,.02); border-color: rgba(126,183,201,.08); }
+
+.clinical-os .cmp-message {
+  background: #081b27;
+  border-bottom-color: rgba(126,183,201,.055);
+}
+.clinical-os .cmp-message:hover { background: #0a202d; }
+.clinical-os .cmp-message.is-active {
+  background: linear-gradient(90deg, rgba(56,202,213,.08), rgba(56,202,213,.018));
+  box-shadow: inset 2px 0 #38cad5;
+}
+.clinical-os .cmp-message.is-unread:before { background: #58d9e0; }
+.clinical-os .cmp-message__open { color: #d9e9ec; }
+.clinical-os .cmp-message__meta strong { color: #dcebed; }
+.clinical-os .cmp-message.is-unread .cmp-message__meta strong,
+.clinical-os .cmp-message.is-unread .cmp-message__body>b { color: #f4fbfc; }
+.clinical-os .cmp-message__meta time,
+.clinical-os .cmp-message__body>small { color: #6f8992; }
+.clinical-os .cmp-message__body>b { color: #b8cbd0; }
+.clinical-os .cmp-message__tags i { color: #78939c; background: rgba(255,255,255,.025); }
+.clinical-os .cmp-star { color: #526e78; }
+.clinical-os .cmp-star.is-active { color: #f1b751; }
+
+.clinical-os .cmp-reader { background: #091e2b; }
+.clinical-os .cmp-reader__empty { color: #728c95; }
+.clinical-os .cmp-reader__empty>span { color: #67dce3; background: rgba(56,202,213,.06); }
+.clinical-os .cmp-reader__empty h2 { color: #d8e9ec; }
+.clinical-os .cmp-reader__toolbar {
+  color: #b7cbd0;
+  background: rgba(8,27,39,.95);
+  border-bottom-color: rgba(126,183,201,.07);
+}
+.clinical-os .cmp-reader__toolbar button {
+  color: #8ea8b0;
+  background: rgba(255,255,255,.018);
+  border-color: rgba(126,183,201,.08);
+}
+.clinical-os .cmp-reader__toolbar button:hover { color: #74e1e7; border-color: rgba(56,202,213,.18); }
+.clinical-os .cmp-reader__toolbar .danger { color: #ff8796; }
+.clinical-os .cmp-reader__header { border-bottom-color: rgba(126,183,201,.06); }
+.clinical-os .cmp-reader__header>p { color: #55d2da; }
+.clinical-os .cmp-reader__header h1 { color: #f0fafb; }
+.clinical-os .cmp-reader__sender strong { color: #d8e8eb; }
+.clinical-os .cmp-reader__sender small,
+.clinical-os .cmp-reader__sender time { color: #728d96; }
+.clinical-os .cmp-reader__content { color: #b9ccd2; }
+.clinical-os .cmp-reader__text { color: #b9ccd2; }
+.clinical-os .cmp-reader__html {
+  min-height: 410px;
+  background: #fff;
+  border: 0;
+  border-radius: 9px;
+}
+.clinical-os .cmp-privacy { color: #8ca4ac; background: rgba(255,255,255,.022); }
+.clinical-os .cmp-privacy button { color: #70dce2; }
+.clinical-os .cmp-reader__footer { border-top-color: rgba(126,183,201,.06); }
+.clinical-os .cmp-reply { color: #031218; background: #50d4dc; }
+.clinical-os .cmp-reply--secondary { color: #9eb5bc; background: rgba(255,255,255,.018); border-color: rgba(126,183,201,.08); }
+.clinical-os .cmp-attachments { color: #a6bbc1; background: rgba(255,255,255,.015); border-bottom-color: rgba(126,183,201,.06); }
+
+/* Composer/dialogs inherit the same command-center depth. */
+.clinical-os .cmp-compose,
+.clinical-os .cmp-modal,
+.clinical-os [class^="cmp-dialog"] {
+  color: #dcebee;
+  background: #081d2a;
+  border-color: rgba(126,183,201,.11);
+  box-shadow: 0 26px 70px rgba(0,0,0,.35);
+}
+
+@media (max-width: 1180px) and (min-width: 901px) {
+  .clinical-os .cmp-workspace { grid-template-columns: 54px 174px minmax(285px,340px) minmax(350px,1fr); }
+  .clinical-os .cmp-topbar { grid-template-columns: minmax(200px,.8fr) minmax(270px,1.2fr) minmax(200px,.75fr); }
+}
+
+@media (max-width: 900px) {
+  .clinical-os .conteudo:has(.cmp-shell) { padding: .5rem .5rem 5.1rem; }
+  .clinical-os .cmp-topbar {
+    height: 52px;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: .4rem;
+    margin-bottom: .42rem;
+    border-radius: 10px;
+  }
+  .clinical-os .cmp-global-search { display: none; }
+  .clinical-os .cmp-brand>span { display: none; }
+  .clinical-os .cmp-user>div { display: none; }
+  .clinical-os .cmp-workspace {
+    display: grid;
+    grid-template-columns: 46px minmax(0,1fr);
+    height: calc(100dvh - 122px);
+    min-height: 470px;
+    border-radius: 11px;
+  }
+  .clinical-os .cmp-accounts { grid-column: 1; }
+  .clinical-os .cmp-sidebar { display: none; }
+  .clinical-os .cmp-list { grid-column: 2; border-right: 0; }
+  .clinical-os .cmp-reader {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    display: none;
+    background: #081d2a;
+  }
+  .clinical-os .cmp-reader.has-message { display: block; }
+  .clinical-os .cmp-message { grid-template-columns: 20px minmax(0,1fr) 26px; }
+  .clinical-os .cmp-message__open { grid-template-columns: 32px minmax(0,1fr); padding-block: .65rem; }
+  .clinical-os .cmp-reader__header,
+  .clinical-os .cmp-reader__content,
+  .clinical-os .cmp-reader__footer { padding-inline: .85rem; }
+}
