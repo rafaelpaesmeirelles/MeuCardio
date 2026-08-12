@@ -15,6 +15,7 @@ import "./styles/tour-clinical-os.css";
 import "./styles/clinical-command-center-v2.css";
 import "./styles/clinical-pages-v2.css";
 import "./styles/clinical-medications-v2.css";
+import "./styles/clinical-knowledge-v2.css";
 import "./styles/clinical-mobile-nav-v2.css";
 
 let swRecargaPendente = false;
