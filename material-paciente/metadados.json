@@ -3561,5 +3561,393 @@
       "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest (TTM). N Engl J Med. 2013;369(23):2197-2206. PMID: 24237006",
       "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. PMID: 34133859"
     ]
+  },
+  {
+    "slug": "por-que-meu-exame-de-calcio-no-coracao-importa",
+    "titulo": "Por que meu exame de cálcio no coração importa",
+    "subtitulo": "O que a tomografia de escore de cálcio coronariano mede, e o que significa um resultado zero",
+    "tema": "Prevenção e lipídios",
+    "documento_slug": "escore-de-calcio-coronariano-o-que-o-mesa-mediu-e-o-que-significa-um-escore-zero",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o exame de escore de cálcio coronariano: o que ele mede, para quem ele é indicado e o que um resultado zero — ou um resultado alto — muda na sua conduta.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "O escore de cálcio coronariano é uma tomografia do coração, feita sem contraste e sem necessidade de internação, que mede a quantidade de cálcio depositada dentro das paredes das artérias que irrigam o coração.",
+          "Esse cálcio é um sinal de que já existe alguma placa de gordura (aterosclerose) ali, mesmo que pequena. O exame não mede se a artéria está entupida nem substitui um teste de esforço — ele serve para uma pergunta diferente: o quanto de aterosclerose você já acumulou ao longo da vida.",
+          "É usado principalmente quando ainda não está claro se você precisa começar um remédio para colesterol (estatina) — ajuda a desempatar essa decisão."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que isso importa",
+        "paragrafos": [
+          "Muita gente calcula o risco cardiovascular só com fatores como idade, pressão, colesterol e se fuma ou não. Isso funciona bem na maioria dos casos, mas em algumas pessoas — principalmente quando o risco calculado fica numa faixa intermediária, nem claramente baixo nem claramente alto — esse cálculo sozinho não é suficiente para decidir.",
+          "O escore de cálcio ajuda a refinar essa decisão porque olha diretamente para a artéria da pessoa, e não só para fatores de risco calculados. Um estudo com mais de 6.700 pessoas (o estudo MESA) mostrou que o escore de cálcio prevê melhor quem vai ter um evento cardiovascular do que os fatores de risco isolados.",
+          "Um resultado de escore ZERO é uma notícia boa e concreta: significa baixíssima probabilidade de eventos cardiovasculares nos próximos anos, e em muitos casos permite adiar com segurança o início de uma estatina — mesmo em quem tem colesterol alto. Já um escore elevado reforça a necessidade de tratamento mais intenso."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como é feito o exame",
+        "paragrafos": [
+          "É uma tomografia computadorizada rápida (poucos minutos), sem necessidade de contraste venoso, sem agulha e sem preparo especial na maioria dos casos.",
+          "O resultado sai em um número (o escore), que seu médico vai interpretar junto com seus outros fatores de risco — não é um número que se lê sozinho, fora do contexto clínico."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que você pode fazer",
+        "paragrafos": [
+          "O exame não é para todo mundo — pergunte ao seu médico se ele faz sentido no seu caso, geralmente quando a decisão de iniciar estatina ainda está em dúvida."
+        ],
+        "itens": [
+          "Não peça o exame por conta própria sem conversar antes com seu médico sobre se ele muda alguma decisão no seu caso",
+          "Se o resultado vier zero, não interprete como \"posso parar de me cuidar\" — controle de pressão, atividade física e não fumar continuam importando",
+          "Se o resultado vier alto, não entre em pânico: é uma informação para ajustar o tratamento com seu médico, não um diagnóstico de doença grave imediata",
+          "Leve o resultado numérico exato à consulta seguinte — é ele, não uma impressão geral, que orienta a conduta"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova, em aperto, que piora com esforço — procure atendimento",
+      "Falta de ar nova ou que piorou, principalmente ao esforço",
+      "O escore de cálcio não é exame de emergência: sintomas como estes acima não esperam pelo resultado de um exame agendado"
+    ],
+    "perguntas": [
+      "Meu risco cardiovascular está em uma faixa em que esse exame ajudaria a decidir alguma coisa?",
+      "Se o resultado vier zero, isso muda a necessidade de eu tomar estatina agora?",
+      "Se o resultado vier alto, isso muda meu tratamento além do colesterol?",
+      "Com que frequência esse exame precisa ser repetido, se for o caso?"
+    ],
+    "fontes": [
+      "Detrano R et al. Coronary calcium as a predictor of coronary events in four racial or ethnic groups. N Engl J Med. 2008;358(13):1336-1345 (estudo MESA)",
+      "Sandesara PB et al. Clinical significance of zero coronary artery calcium in individuals with LDL cholesterol ≥190 mg/dL. Atherosclerosis. 2020;292:224-229"
+    ]
+  },
+  {
+    "slug": "o-que-e-lpa-e-por-que-so-preciso-medir-uma-vez",
+    "titulo": "O que é Lp(a) e por que só preciso medir uma vez",
+    "subtitulo": "Um exame de sangue genético que, diferente do colesterol comum, não precisa ser repetido todo ano",
+    "tema": "Prevenção e lipídios",
+    "documento_slug": "lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre a Lipoproteína(a) — Lp(a): por que ela é diferente do colesterol comum, por que a recomendação é medir uma única vez na vida, e o que um resultado alto muda na sua conduta.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Lipoproteína(a), ou Lp(a), é um tipo de partícula de gordura no sangue, parecida com o LDL (\"colesterol ruim\"), mas com uma diferença importante: sua quantidade no sangue é determinada quase inteiramente pela genética — mais de 90%, segundo o principal consenso científico sobre o tema —, e não pela dieta, pelo exercício ou pela maioria dos remédios usados para baixar colesterol.",
+          "Por ser genética, a concentração de Lp(a) já está praticamente estabelecida desde a infância (por volta dos 5 anos de idade) e se mantém estável ao longo de toda a vida adulta, com poucas exceções."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que isso importa",
+        "paragrafos": [
+          "Uma Lp(a) elevada é um fator de risco cardiovascular independente — ou seja, mesmo que seu LDL e seus outros exames estejam bons, uma Lp(a) alta pode aumentar seu risco de infarto, AVC e também de um problema menos conhecido: o estreitamento da valva aórtica do coração (estenose aórtica) por acúmulo de cálcio.",
+          "É exatamente por essa estabilidade genética ao longo da vida que a principal recomendação científica sobre o tema é diferente de qualquer outro exame de lipídios: dosar a Lp(a) UMA VEZ na vida adulta é suficiente para a grande maioria das pessoas — repetir o exame todo ano, como se faz com o colesterol comum, não melhora a previsão de risco.",
+          "Hoje ainda não existe, aprovado e disponível no Brasil, um remédio específico para baixar a Lp(a) — mas saber que ela está alta muda a estratégia: reforça a importância de controlar com mais rigor os outros fatores de risco que SÃO modificáveis (LDL, pressão, tabagismo)."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o resultado significa",
+        "paragrafos": [
+          "Seu médico vai interpretar o número dentro de faixas de risco. Em termos gerais, quanto mais alta a Lp(a), maior a contribuição dela para o seu risco cardiovascular — não existe um único limiar rígido que separe \"risco\" de \"ausência de risco\", é uma relação contínua."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que você pode fazer",
+        "paragrafos": [
+          "Se você nunca dosou Lp(a), pergunte ao seu médico se faz sentido pedir — principalmente se você tem histórico familiar de infarto ou AVC precoce."
+        ],
+        "itens": [
+          "Peça ao seu médico para checar se você já tem uma dosagem de Lp(a) registrada — se sim, não é preciso repetir",
+          "Se você tem parente próximo (pai, mãe, irmão) com doença cardiovascular precoce, converse sobre dosar sua Lp(a)",
+          "Se o resultado vier alto, pergunte quais dos SEUS outros fatores de risco modificáveis merecem controle mais rigoroso por causa disso",
+          "Não procure comprar suplemento ou remédio \"para baixar Lp(a)\" por conta própria — hoje não há terapia aprovada específica para isso"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Este é um exame de rastreamento, não de emergência — não há sintoma direto de Lp(a) alta",
+      "Dor no peito, falta de ar súbita ou sinais de AVC (fraqueza de um lado do corpo, fala embolada) exigem atendimento imediato, independentemente de qualquer exame agendado"
+    ],
+    "perguntas": [
+      "Eu já tenho uma dosagem de Lp(a) registrada, ou preciso pedir pela primeira vez?",
+      "Meu resultado está em qual faixa de risco?",
+      "Isso muda a intensidade do tratamento dos meus outros fatores de risco?",
+      "Algum dos meus filhos ou parentes próximos deveria considerar dosar também?"
+    ],
+    "fontes": [
+      "Kronenberg F et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946"
+    ]
+  },
+  {
+    "slug": "por-que-meu-remedio-para-diabetes-tambem-protege-meu-coracao",
+    "titulo": "Por que meu remédio para diabetes também protege meu coração",
+    "subtitulo": "Como os inibidores de SGLT2 passaram de \"remédio para açúcar\" a remédio que reduz internação por problema no coração",
+    "tema": "Diabetes e cardiologia",
+    "documento_slug": "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre os inibidores de SGLT2 (medicamentos como empagliflozina e dapagliflozina): por que, além de controlar o açúcar, eles reduzem internação por problemas do coração e ajudam a proteger o rim.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Os inibidores de SGLT2 (\"glifozinas\" — empagliflozina, dapagliflozina e outros da mesma classe) são remédios que fazem o rim eliminar açúcar (glicose) pela urina, reduzindo a glicemia. Foram criados originalmente como remédio para diabetes tipo 2.",
+          "Só que, em grandes estudos com milhares de pacientes, essa classe de remédio mostrou fazer bem mais do que baixar o açúcar: ela reduz internação por insuficiência cardíaca e, em algumas situações, reduz morte cardiovascular — mesmo em quem não tem insuficiência cardíaca diagnosticada."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que isso importa",
+        "paragrafos": [
+          "Um estudo com mais de 7.000 pessoas com diabetes tipo 2 e doença cardiovascular já estabelecida (o EMPA-REG OUTCOME) mostrou, com a empagliflozina, redução de 38% na morte cardiovascular e de 35% na internação por insuficiência cardíaca, em comparação a quem tomou placebo.",
+          "Um segundo estudo, ainda maior, com mais de 17.000 pessoas, a maioria SEM doença cardiovascular já diagnosticada (o DECLARE-TIMI 58), confirmou que a dapagliflozina reduz o risco combinado de morte cardiovascular e internação por insuficiência cardíaca — o achado que mais se repete entre os estudos dessa classe de remédio é justamente a redução de internação por problema no coração.",
+          "Por isso, hoje esses remédios não são vistos apenas como \"remédio para açúcar\": são recomendados para proteção cardiovascular em quem tem diabetes com risco cardiovascular, e também são usados no tratamento da própria insuficiência cardíaca, mesmo em quem não tem diabetes."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Efeitos que merecem atenção",
+        "paragrafos": [
+          "Como todo remédio, os inibidores de SGLT2 têm efeitos que você deve conhecer, para saber o que observar — isso não significa que você deva parar de tomar por conta própria:"
+        ],
+        "itens": [
+          "Infecção genital (mais comum em mulheres) — geralmente tratável, avise seu médico se notar coceira ou desconforto",
+          "Em situações raras, um tipo de descompensação do diabetes chamado cetoacidose \"euglicêmica\" — pode acontecer mesmo com açúcar não muito alto, e por isso avise a equipe médica sobre náusea, vômito ou mal-estar importante, principalmente se estiver doente, cirúrgico ou comendo pouco"
+        ]
+      },
+      {
+        "titulo": "O que você pode fazer",
+        "paragrafos": [
+          "Se você tem diabetes e esse remédio foi prescrito, ele provavelmente está aí por mais de um motivo — não pense nele só como \"remédio para açúcar\"."
+        ],
+        "itens": [
+          "Não pare de tomar o remédio por conta própria, mesmo se sua glicemia estiver controlada — o benefício cardiovascular é uma razão separada para continuar",
+          "Suspenda temporariamente e avise seu médico se ficar muito doente, sem conseguir comer ou beber, ou antes de uma cirurgia programada — pergunte com antecedência a orientação exata",
+          "Mantenha boa higiene íntima para reduzir o risco de infecção genital",
+          "Se você tem insuficiência cardíaca (mesmo sem diabetes), pergunte ao seu médico se esse remédio também está indicado no seu caso"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Náusea, vômito, dor abdominal ou respiração muito rápida — pode ser sinal de cetoacidose, procure atendimento",
+      "Falta de ar nova ou que piorou, inchaço nas pernas — pode ser sinal de descompensação do coração, converse com seu médico",
+      "Febre, dor ou vermelhidão na região genital — procure avaliação médica"
+    ],
+    "perguntas": [
+      "Esse remédio foi indicado para controlar meu açúcar, proteger meu coração, ou os dois?",
+      "O que devo fazer com esse remédio se eu ficar doente ou for operar?",
+      "Quais sinais de alerta eu devo observar nas primeiras semanas de uso?",
+      "Esse remédio também ajuda a proteger meu rim no meu caso?"
+    ],
+    "fontes": [
+      "Zinman B et al. Empagliflozin, cardiovascular outcomes, and mortality in type 2 diabetes (EMPA-REG OUTCOME). N Engl J Med. 2015;373(22):2117-2128",
+      "Wiviott SD et al. Dapagliflozin and cardiovascular outcomes in type 2 diabetes (DECLARE-TIMI 58). N Engl J Med. 2019;380(4):347-357"
+    ]
+  },
+  {
+    "slug": "insuficiencia-cardiaca-depois-do-parto-cardiomiopatia-periparto",
+    "titulo": "Insuficiência cardíaca depois do parto: o que é a cardiomiopatia periparto",
+    "subtitulo": "Por que falta de ar e inchaço depois de ter um bebê nem sempre são \"normais da pós-gravidez\"",
+    "tema": "Gravidez",
+    "documento_slug": "cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre a cardiomiopatia periparto: uma forma de insuficiência cardíaca que pode surgir no fim da gravidez ou nos meses após o parto, em mulher sem doença cardíaca prévia conhecida — como reconhecer e por que não deve ser confundida com o cansaço normal do puerpério.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "A cardiomiopatia periparto é uma forma de insuficiência cardíaca — o coração perde parte da sua força de bombear sangue — que aparece no final da gravidez ou, mais frequentemente, nos meses seguintes ao parto, em mulheres que não tinham problema de coração conhecido antes.",
+          "É uma condição rara, mas séria, e o grande desafio é que os primeiros sintomas — cansaço, falta de ar, inchaço nas pernas — podem, à primeira vista, parecer só o cansaço esperado de quem acabou de ter um bebê. É exatamente essa semelhança que atrasa o diagnóstico se ninguém estiver alerta para ela."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que isso importa",
+        "paragrafos": [
+          "Diferente do cansaço comum do pós-parto, os sintomas da cardiomiopatia periparto tendem a ser progressivos — pioram, em vez de melhorar aos poucos — e vêm acompanhados de sinais que não são esperados numa recuperação normal, como falta de ar mesmo ao deitar, ou acordar à noite engasgada.",
+          "O reconhecimento precoce muda o desfecho: quando identificada e tratada a tempo, boa parte das mulheres recupera função do coração com o tratamento correto. Quando a condição evolui sem ser reconhecida, pode chegar a um quadro grave, de choque, que exige internação em UTI e, em casos mais graves, suporte avançado ao coração.",
+          "Não é algo que a mulher ou a família devam diagnosticar sozinhos — mas saber que essa possibilidade existe é o que leva a procurar atendimento a tempo, em vez de esperar \"passar sozinho\"."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Sinais de alerta para procurar o médico",
+        "paragrafos": [
+          "Estes sinais, no final da gravidez ou nos meses após o parto, merecem avaliação médica — não espere a próxima consulta de rotina:"
+        ],
+        "itens": [
+          "Falta de ar que piora progressivamente, principalmente ao se deitar ou ao fazer esforço leve",
+          "Precisar de mais travesseiros para dormir, ou acordar à noite com falta de ar",
+          "Inchaço novo ou que piora nas pernas ou nos pés",
+          "Palpitação — sensação de coração acelerado ou batendo de forma irregular",
+          "Cansaço muito maior do que o esperado, mesmo com repouso",
+          "Tosse persistente, principalmente à noite ou deitada"
+        ]
+      },
+      {
+        "titulo": "O que você pode fazer",
+        "paragrafos": [
+          "O puerpério já é um período de sintomas físicos esperados — por isso é importante saber a diferença entre o que é esperado e o que não é:"
+        ],
+        "itens": [
+          "Não normalize falta de ar importante como \"só cansaço de mãe de primeira viagem\" — procure avaliação se o sintoma for progressivo",
+          "Se você já teve pressão alta na gravidez (pré-eclâmpsia), gravidez múltipla ou é de raça negra, converse com seu médico — são fatores associados a maior risco",
+          "Se você já teve cardiomiopatia periparto numa gravidez anterior, é fundamental o aconselhamento antes de uma nova gravidez, com avaliação da função do coração",
+          "Leve toda queixa de falta de ar ou inchaço à consulta de pós-parto, mesmo que pareça pequena"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar intensa, que aparece em repouso ou impede de deitar — procure atendimento de emergência",
+      "Dor no peito",
+      "Desmaio ou sensação forte de que vai desmaiar",
+      "Palpitação que não passa",
+      "Inchaço que piora rapidamente"
+    ],
+    "perguntas": [
+      "Os sintomas que estou sentindo são esperados do pós-parto, ou merecem investigação do coração?",
+      "Eu tenho algum fator que aumenta meu risco para essa condição?",
+      "Se eu for diagnosticada, isso significa que não posso ter mais filhos?",
+      "Quanto tempo leva, em geral, para o coração se recuperar quando o tratamento é iniciado a tempo?"
+    ],
+    "fontes": [
+      "De Backer J, Haugaa KH, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025"
+    ]
+  },
+  {
+    "slug": "o-pequeno-aparelho-implantado-para-descobrir-a-causa-do-meu-desmaio",
+    "titulo": "O pequeno aparelho implantado para descobrir a causa do meu desmaio",
+    "subtitulo": "O que é o monitor cardíaco implantável (loop recorder) e por que ele pode ser indicado quando os exames de rotina não encontram a causa",
+    "tema": "Dispositivos",
+    "documento_slug": "monitor-cardiaco-implantavel-na-sincope-inexplicada-o-registro-picture",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o monitor cardíaco implantável (loop recorder): um pequeno dispositivo colocado sob a pele para registrar o ritmo do coração por meses, usado quando desmaios recorrentes não têm causa esclarecida pelos exames convencionais.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "O monitor cardíaco implantável — também chamado de loop recorder — é um pequeno dispositivo, do tamanho aproximado de um pendrive, implantado logo abaixo da pele do peito, num procedimento simples, rápido e que não exige internação.",
+          "Ele fica registrando continuamente o ritmo do seu coração por meses, e pode ser deixado no lugar por até alguns anos. A diferença para os exames de curta duração (como o Holter de 24 ou 48 horas) é justamente essa: ele consegue \"pegar\" um evento que só acontece raramente, o que um exame de um ou dois dias muitas vezes não consegue."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que isso importa",
+        "paragrafos": [
+          "Muitas pessoas com desmaios (síncope) recorrentes passam por vários médicos e muitos exames sem chegar a uma causa clara — um estudo europeu com mais de 500 pacientes mostrou que, antes do implante, os pacientes já tinham sido vistos, em média, por 3 especialistas e submetidos a uma mediana de 13 exames diferentes.",
+          "Nesse mesmo estudo, quando o desmaio se repetia depois do implante, o monitor conseguiu explicar a causa em 78% das vezes em que houve um novo evento registrado — a maior parte delas (75%) revelando uma causa relacionada ao próprio ritmo do coração.",
+          "Ou seja: quando os exames de rotina não encontram a causa, isso não significa que não exista explicação — muitas vezes significa apenas que o evento é raro demais para ter sido \"flagrado\" no curto tempo dos exames convencionais. É exatamente esse o problema que o monitor implantável resolve."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como é o procedimento",
+        "paragrafos": [
+          "É feito com anestesia local, geralmente em poucos minutos, sem necessidade de internação. Você volta para casa no mesmo dia.",
+          "O dispositivo registra automaticamente ritmos anormais, e também pode ser ativado manualmente por você (com um pequeno controle) logo depois de sentir um sintoma, para marcar aquele momento no registro.",
+          "As informações são revisadas periodicamente pela sua equipe médica — em muitos serviços, de forma remota, sem você precisar ir ao consultório só para isso."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que você pode fazer",
+        "paragrafos": [
+          "Enquanto estiver com o monitor implantado, sua colaboração ajuda a equipe a interpretar melhor os registros:"
+        ],
+        "itens": [
+          "Ative o dispositivo com o controle assim que sentir um sintoma (desmaio, tontura forte, palpitação), sempre que estiver em condições de fazê-lo",
+          "Anote a data, hora e o que estava fazendo quando o sintoma ocorreu — ajuda a equipe a interpretar o registro",
+          "Compareça às revisões agendadas, mesmo que não tenha tido nenhum sintoma novo",
+          "Pergunte à sua equipe médica como funciona o acompanhamento remoto no seu caso, se disponível"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Novo desmaio, principalmente sem aviso prévio ou com machucado — procure atendimento e ative o dispositivo se estiver em condições",
+      "Dor no peito ou palpitação que não passa",
+      "Sinais de infecção no local do implante: vermelhidão, calor ou secreção — avise sua equipe médica"
+    ],
+    "perguntas": [
+      "Por quanto tempo esse monitor vai ficar implantado no meu caso?",
+      "Como e quando vou saber se ele encontrou alguma coisa?",
+      "O que devo fazer no momento em que sinto um sintoma?",
+      "Esse dispositivo tem alguma restrição para minhas atividades do dia a dia?"
+    ],
+    "fontes": [
+      "Edvardsson N et al.; PICTURE Study Investigators. Use of an implantable loop recorder to increase the diagnostic yield in unexplained syncope: results from the PICTURE registry. Europace. 2011;13(2):262-269",
+      "Linker NJ et al.; PICTURE Study Investigators. Early versus delayed implantation of a loop recorder in patients with unexplained syncope. Int J Cardiol. 2013;170(2):146-151"
+    ]
+  },
+  {
+    "slug": "meu-familiar-esta-com-um-aparelho-de-suporte-ao-coracao-o-que-isso-significa",
+    "titulo": "Meu familiar está com um aparelho de suporte ao coração: o que isso significa",
+    "subtitulo": "Balão intra-aórtico, bomba (Impella) ou ECMO: entenda para que servem esses aparelhos na UTI cardiológica",
+    "tema": "Terapia intensiva",
+    "documento_slug": "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples, para a família de quem está internado na UTI cardiológica, sobre os aparelhos de suporte mecânico temporário ao coração — balão intra-aórtico, bomba tipo Impella e ECMO — e para que servem cada um deles.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Quando o coração de uma pessoa fica temporariamente fraco demais para bombear sangue suficiente para o corpo — um quadro chamado choque cardiogênico —, a equipe médica pode usar um aparelho que ajuda o coração a fazer esse trabalho, enquanto o tratamento de base age ou enquanto se decide o próximo passo.",
+          "Existem alguns tipos diferentes desses aparelhos, e é comum a família ouvir nomes como \"balão\", \"Impella\" ou \"ECMO\" sem saber exatamente o que cada um faz. Todos têm o mesmo objetivo geral — sustentar a circulação sanguínea — mas funcionam de formas diferentes e são escolhidos conforme a gravidade e o tipo do problema."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Os principais tipos, em linguagem simples",
+        "paragrafos": [
+          "Não é preciso entender os detalhes técnicos — o que importa saber é que a escolha de qual aparelho usar é feita pela equipe médica, com base no tipo e na gravidade do problema do seu familiar:"
+        ],
+        "itens": [
+          "Balão intra-aórtico: um balão fino, inserido por uma artéria da perna, que infla e desinfla no ritmo do coração para ajudar o sangue a circular. É o suporte mais simples e mais usado há mais tempo.",
+          "Bomba tipo Impella: um dispositivo em forma de pequena bomba, colocado dentro do coração por um cateter, que bombeia sangue ativamente para ajudar o coração a trabalhar.",
+          "ECMO (circulação extracorpórea): o suporte mais completo, que pode substituir temporariamente parte do trabalho do coração e, às vezes, também do pulmão. É usado nos casos mais graves, quando os outros suportes não são suficientes."
+        ]
+      },
+      {
+        "titulo": "Por que isso importa",
+        "paragrafos": [
+          "Esses aparelhos não \"curam\" o problema de base — eles ganham tempo. Enquanto o coração está sendo sustentado por um deles, a equipe trabalha para tratar a causa do choque (por exemplo, um infarto), ou para o coração se recuperar sozinho, ou ainda para decidir se algum tratamento mais definitivo será necessário.",
+          "É normal que a equipe médica troque de estratégia durante a internação — passar de um tipo de suporte para outro, por exemplo — conforme a resposta do paciente. Isso faz parte do acompanhamento cuidadoso, não é necessariamente sinal de piora.",
+          "É esperado que exista bastante equipamento ao redor do leito, muitos alarmes e uma equipe grande cuidando do seu familiar ao mesmo tempo — isso reflete o nível de monitorização contínua que esse tipo de suporte exige, não deve ser interpretado, por si só, como sinal de que o quadro está piorando."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que a família pode fazer",
+        "paragrafos": [
+          "O período com um desses suportes costuma ser de muita ansiedade para a família. Algumas orientações práticas:"
+        ],
+        "itens": [
+          "Peça à equipe explicações em linguagem simples sempre que não entender algum termo ou aparelho",
+          "Pergunte especificamente qual é o objetivo do suporte usado no momento (ganhar tempo até recuperação, até decisão, ou até outro tratamento)",
+          "Respeite os horários de visita e as orientações da equipe de UTI — elas existem para proteger o paciente, que está em estado delicado",
+          "Cuide também de si mesmo durante esse período — é um momento exaustivo, e buscar apoio (familiares, amigos, psicólogo) ajuda a atravessá-lo"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Este material é para a família de paciente já internado sob cuidado especializado — qualquer dúvida sobre mudança no quadro deve ser levada diretamente à equipe da UTI, presente 24 horas por dia"
+    ],
+    "perguntas": [
+      "Qual desses aparelhos meu familiar está usando, e por quê?",
+      "Qual é o objetivo desse suporte no momento — recuperação do coração, ponte para decisão, ou ponte para outro tratamento?",
+      "Por quanto tempo, em média, esse tipo de suporte costuma ser necessário?",
+      "O que eu devo observar ou perguntar nas próximas visitas?"
+    ],
+    "fontes": [
+      "Protocolo de suporte circulatório mecânico temporário no choque cardiogênico, biblioteca Corvia (Terapia intensiva)",
+      "Ostadal P et al. Extracorporeal Membrane Oxygenation in the Therapy of Cardiogenic Shock (ECMO-CS). Circulation. 2023;147(6):454-464",
+      "Thiele H et al. Extracorporeal Life Support in Infarct-Related Cardiogenic Shock (ECLS-SHOCK). N Engl J Med. 2023;389(14):1286-1297"
+    ]
   }
 ]
