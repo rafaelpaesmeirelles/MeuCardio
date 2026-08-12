@@ -20,6 +20,16 @@ def test_contexto_recente_e_temporario_e_separado_por_usuario():
         assert 'localStorage.setItem("corvia:contextos-recentes"' not in fonte
 
 
+def test_logout_remove_contexto_recente_somente_do_usuario_atual():
+    fonte = SHELL.read_text(encoding="utf-8")
+
+    inicio = fonte.index("async function encerrar()")
+    chave = fonte.index("chaveContextosRecentes(usuario?.id)", inicio)
+    remocao = fonte.index("sessionStorage.removeItem(chave)", inicio)
+    logout = fonte.index("await sair()", inicio)
+    assert inicio < chave < remocao < logout
+
+
 def test_home_abre_assistente_pessoal_sem_transformar_em_rota_clinica():
     shell = SHELL.read_text(encoding="utf-8")
     painel = PAINEL.read_text(encoding="utf-8")
@@ -40,12 +50,14 @@ def test_dados_pessoais_so_sao_carregados_quando_assistente_esta_aberto():
     assert "if (!aberto) return null;" in fonte
 
 
-def test_geolocalizacao_exige_acao_explicita_do_medico():
+def test_geolocalizacao_exige_acao_explicita_e_mobilidade_autorizada():
     fonte = ASSISTENTE.read_text(encoding="utf-8")
 
     inicio_funcao = fonte.index("function atualizarDeslocamento()")
+    preferencia_disponivel = fonte.index("if (!mobilidade)", inicio_funcao)
+    preferencia_ativa = fonte.index("if (!mobilidade.enabled)", inicio_funcao)
     geolocalizacao = fonte.index("navigator.geolocation.getCurrentPosition", inicio_funcao)
     botao = fonte.index("onClick={atualizarDeslocamento}")
-    assert inicio_funcao < geolocalizacao < botao
+    assert inicio_funcao < preferencia_disponivel < preferencia_ativa < geolocalizacao < botao
     assert "automatic_foreground_refresh" in fonte  # preferência lida, não usada para disparar GPS
     assert fonte.count("navigator.geolocation.getCurrentPosition") == 1
