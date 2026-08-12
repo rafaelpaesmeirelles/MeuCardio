@@ -4,6 +4,11 @@ import { api, type Usuario } from "./api";
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const COMMAND_HISTORY_KEY = "corvia:command-history:v1";
 const COMMAND_HISTORY_OWNER_KEY = "corvia:command-history-owner:v1";
+const ASSISTANT_ENTRY_KEYS = [
+  "corvia:assistant-entry-mode:v1",
+  "corvia:assistant-entry-question:v1",
+  "corvia:assistant-entry-at:v1",
+] as const;
 
 type Estado = {
   usuario: Usuario | null;
@@ -34,6 +39,7 @@ function vincularContextoLocal(usuario: Usuario) {
     const novoOwner = String(usuario.id);
     if (ownerAtual !== novoOwner) {
       window.localStorage.removeItem(COMMAND_HISTORY_KEY);
+      ASSISTANT_ENTRY_KEYS.forEach((chave) => window.sessionStorage.removeItem(chave));
     }
     window.localStorage.setItem(COMMAND_HISTORY_OWNER_KEY, novoOwner);
   } catch {
@@ -45,6 +51,7 @@ function limparContextoLocal() {
   try {
     window.localStorage.removeItem(COMMAND_HISTORY_KEY);
     window.localStorage.removeItem(COMMAND_HISTORY_OWNER_KEY);
+    ASSISTANT_ENTRY_KEYS.forEach((chave) => window.sessionStorage.removeItem(chave));
   } catch {
     // Nada a fazer quando o browser bloqueia storage.
   }
