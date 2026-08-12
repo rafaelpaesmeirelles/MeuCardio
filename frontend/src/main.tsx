@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import AssistentePessoalLauncher from "./components/AssistentePessoalLauncher";
 import CommandCenterBridge from "./components/CommandCenterBridge";
 import { AuthProvider } from "./lib/auth";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
@@ -64,6 +65,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <AuthProvider>
         <CommandCenterBridge />
+        <AssistentePessoalLauncher />
         <App />
       </AuthProvider>
     </BrowserRouter>
