@@ -59,6 +59,23 @@ document.addEventListener("click", () => void verificarAtualizacaoCompleta(false
 document.addEventListener("keydown", () => void verificarAtualizacaoCompleta(false), { capture: true });
 
 /**
+ * Na Home, ⌘/Ctrl+K e “/” pertencem à Clinical Command Bar: é a entrada
+ * universal para buscar, perguntar e agir. Em qualquer outro módulo, ⌘/Ctrl+K
+ * continua funcionando na busca global do Shell como antes.
+ */
+document.addEventListener("keydown", (evento) => {
+  if (!document.body.classList.contains("command-center-active")) return;
+  const alvo = evento.target instanceof HTMLElement ? evento.target : null;
+  const editando = !!alvo?.closest('input, textarea, select, [contenteditable="true"]');
+  const atalhoComando = (evento.metaKey || evento.ctrlKey) && evento.key.toLowerCase() === "k";
+  const atalhoBarra = evento.key === "/" && !evento.metaKey && !evento.ctrlKey && !evento.altKey && !editando;
+  if (!atalhoComando && !atalhoBarra) return;
+  evento.preventDefault();
+  evento.stopImmediatePropagation();
+  document.querySelector<HTMLInputElement>('input[aria-label="Comando clínico universal"]')?.focus();
+}, { capture: true });
+
+/**
  * A Home possui duas entradas que devem manter intenção ao abrir o Assistente:
  * 1) o CTA explícito do rail de Assistente Pessoal; 2) uma pergunta digitada
  * na Clinical Command Bar que o classificador encaminha ao Assistente Clínica.
