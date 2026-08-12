@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
+      COMPOSE_PROJECT_NAME: corvia_visual_qa
       ENVIRONMENT: test
       POSTGRES_HOST: db
       POSTGRES_PORT: "5432"
@@ -46,10 +47,13 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Create isolated runtime environment
         run: |
           cat > .env <<'ENV'
+          COMPOSE_PROJECT_NAME=corvia_visual_qa
           ENVIRONMENT=test
           POSTGRES_HOST=db
           POSTGRES_PORT=5432
@@ -74,19 +78,69 @@ jobs:
           DOCUMENTOS_DIR=/tmp/corvia-visual/documentos-emitidos
           ENV
 
-      - name: Start isolated CorVIA stack
-        run: docker compose up -d --build db redis backend frontend nginx
+      - name: Start isolated data and API stack
+        run: docker compose up -d --build db redis backend
 
-      - name: Wait for HTTP readiness
+      - name: Build production frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Serve production build through isolated Nginx
+        run: |
+          mkdir -p visual-qa
+          cat > visual-qa/nginx.conf <<'NGINX'
+          server {
+            listen 80;
+            server_name _;
+            root /usr/share/nginx/html;
+            index index.html;
+
+            add_header X-Content-Type-Options "nosniff" always;
+            add_header X-Frame-Options "DENY" always;
+            add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+            add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://*.corvia.med.br; frame-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'" always;
+
+            location /api/ {
+              proxy_pass http://backend:8000/api/;
+              proxy_http_version 1.1;
+              proxy_set_header Host $host;
+              proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header X-Forwarded-Proto $scheme;
+              proxy_buffering off;
+            }
+
+            location /uploads/ {
+              proxy_pass http://backend:8000/uploads/;
+              proxy_set_header Host $host;
+            }
+
+            location / {
+              try_files $uri $uri/ /index.html;
+            }
+          }
+          NGINX
+          docker run -d --name corvia-visual-nginx \
+            --network corvia_visual_qa_default \
+            -p 8080:80 \
+            -v "$PWD/frontend/dist:/usr/share/nginx/html:ro" \
+            -v "$PWD/visual-qa/nginx.conf:/etc/nginx/conf.d/default.conf:ro" \
+            nginx:1.27-alpine
+
+      - name: Wait for production HTTP readiness
         run: |
           for attempt in $(seq 1 60); do
-            if curl --fail --silent http://127.0.0.1:8080/api/ready >/dev/null; then
+            if curl --fail --silent http://127.0.0.1:8080/api/ready >/dev/null \
+              && curl --fail --silent http://127.0.0.1:8080/entrar >/dev/null; then
               exit 0
             fi
-            sleep 3
+            sleep 2
           done
           docker compose ps
-          docker compose logs --no-color backend frontend nginx
+          docker compose logs --no-color backend
+          docker logs corvia-visual-nginx || true
           exit 1
 
       - name: Create visual QA administrator
@@ -149,7 +203,7 @@ jobs:
             const context = await browser.newContext({ viewport, colorScheme: 'dark', locale: 'pt-BR' });
             const page = await context.newPage();
             page.on('pageerror', (error) => report.pageErrors.push(String(error)));
-            await page.goto(`${base}/entrar`, { waitUntil: 'domcontentloaded' });
+            await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
             await page.locator('#email').fill('visual-qa@teste.local');
             await page.locator('#senha').fill('visual-qa-seguro-123');
             await page.locator('button[type="submit"]').click();
@@ -159,8 +213,8 @@ jobs:
           }
 
           async function inspectAndCapture(page, mode, name, route) {
-            await page.goto(`${base}${route}`, { waitUntil: 'domcontentloaded' });
-            await page.waitForTimeout(1200);
+            await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
+            await page.waitForTimeout(700);
             const metrics = await page.evaluate((forbidden) => {
               const text = (document.body?.innerText || '').toLocaleLowerCase('pt-BR');
               const fixed = [...document.querySelectorAll('*')]
@@ -202,8 +256,8 @@ jobs:
             const mobile = await login({ width: 390, height: 844 });
             for (const [name, route] of mobileRoutes) await inspectAndCapture(mobile.page, 'mobile', name, route);
 
-            await mobile.page.goto(`${base}/`, { waitUntil: 'domcontentloaded' });
-            await mobile.page.waitForTimeout(700);
+            await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
+            await mobile.page.waitForTimeout(500);
             await mobile.page.locator('.cc-mobile-nav button').last().click();
             await mobile.page.waitForTimeout(250);
             await mobile.page.screenshot({ path: path.join(out, 'mobile-mais.png'), fullPage: false });
@@ -211,7 +265,7 @@ jobs:
             if (!moreVisible) report.failures.push('mobile/mais: action sheet não abriu');
 
             await mobile.page.locator('.cc-mobile-more__assistant').click();
-            await mobile.page.waitForTimeout(900);
+            await mobile.page.waitForTimeout(700);
             await mobile.page.screenshot({ path: path.join(out, 'mobile-assistente-pessoal.png'), fullPage: false });
             const assistantVisible = await mobile.page.locator('.cos-assistant-panel').isVisible().catch(() => false);
             if (!assistantVisible) report.failures.push('mobile/assistente: painel pessoal não abriu');
@@ -243,8 +297,12 @@ jobs:
 
       - name: Show stack logs on failure
         if: failure()
-        run: docker compose logs --no-color --tail=250 backend frontend nginx
+        run: |
+          docker compose logs --no-color --tail=250 backend
+          docker logs corvia-visual-nginx || true
 
       - name: Stop isolated stack
         if: always()
-        run: docker compose down -v --remove-orphans
+        run: |
+          docker rm -f corvia-visual-nginx 2>/dev/null || true
+          docker compose down -v --remove-orphans
