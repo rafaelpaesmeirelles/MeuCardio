@@ -1,0 +1,40 @@
+/* Accessibility hardening específico do Command Center. */
+.command-center a:focus-visible,
+.command-center button:focus-visible,
+.command-center input:focus-visible,
+.launch-mobile-dock a:focus-visible,
+.launch-mobile-dock button:focus-visible,
+.launch-mobile-actions a:focus-visible,
+.launch-mobile-actions button:focus-visible {
+  outline: 3px solid #66e0e7;
+  outline-offset: 3px;
+}
+
+.command-center .quick-action,
+.command-center .radar-card,
+.command-center .context-card,
+.command-center .clinical-areas a,
+.command-center .intelligence-metrics a,
+.command-center .rail-callout,
+.command-center .rail-primary,
+.command-center .assistant-next,
+.command-center .assistant-inline-link {
+  transition: transform 0.16s ease, border-color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+@media (hover: hover) {
+  .command-center .quick-action:hover,
+  .command-center .radar-card:hover,
+  .command-center .context-card:hover,
+  .command-center .clinical-areas a:hover {
+    box-shadow: 0 18px 36px -30px rgba(57, 194, 209, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .command-center *,
+  .launch-mobile-dock *,
+  .launch-mobile-actions * {
+    scroll-behavior: auto !important;
+  }
+}
