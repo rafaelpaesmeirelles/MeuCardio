@@ -73,7 +73,7 @@ const ACOES: AcaoRapida[] = [
   { nome: "Emergências", descricao: "Condutas rápidas", to: "/emergencia", icone: "emergencia", tom: "red" },
   { nome: "Medicamentos", descricao: "Doses e interações", to: "/medicamentos", icone: "medicamento", tom: "green" },
   { nome: "Guidelines", descricao: "Diretrizes atuais", to: "/diretrizes", icone: "evidencia", tom: "amber" },
-  { nome: "CorVIA AI", descricao: "Pergunte ao CorVIA", to: "/assistente", icone: "assistente", tom: "purple" },
+  { nome: "CorVIA AI", descricao: "Pergunte ao CorVIA", to: "/assistente?modo=clinica", icone: "assistente", tom: "purple" },
 ];
 
 const AREAS = [
@@ -148,8 +148,9 @@ function classificarComando(termo: string): { to: string; tipo: HistoricoComando
   if (/emerg|choque|parada|sca|infarto agudo/.test(normal)) return { to: "/emergencia", tipo: "acao" };
   if (/agenda|compromisso|consulta de hoje/.test(normal)) return { to: "/agenda", tipo: "acao" };
   if (/mail|email|e-mail/.test(normal)) return { to: "/corvia-mail", tipo: "acao" };
+  if (/^(abrir|ver|buscar|procurar) paciente\b|^meus pacientes\b|^round\b/.test(normal)) return { to: "/round", tipo: "acao" };
   if (/^(qual|como|quando|por que|porque|compare|resuma|explique|analise|revisar?)\b/.test(normal) || termo.includes("?")) {
-    return { to: "/assistente", tipo: "assistente" };
+    return { to: "/assistente?modo=clinica", tipo: "assistente" };
   }
   return { to: `/busca?q=${encodeURIComponent(termo)}`, tipo: "busca" };
 }
@@ -189,7 +190,7 @@ export default function ClinicalCommandCenter() {
       .then((r) => { setEstudos(r.items ?? []); setEstudosTotal(r.total ?? null); })
       .catch(() => { setEstudos([]); setEstudosTotal(null); });
     api.get<GuidelineNotifications>("/guideline-updates/me?include_read=true")
-      .then((r) => setGuidelines((r.items ?? []).filter((item) => !item.read_at).slice(0, 3)))
+      .then((r) => setGuidelines((r.items ?? []).filter((item) => !item.read_at)))
       .catch(() => setGuidelines([]));
     api.get<Agendamento[]>("/appointments").then(setAgenda).catch(() => setAgenda([]));
     api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
@@ -271,7 +272,7 @@ export default function ClinicalCommandCenter() {
             <span className="command-hero__signal" aria-hidden="true" />
             <div>
               <p>{dataLonga()}</p>
-              <h1 id="command-title">{saudacao()}, {primeiroNome}. <span aria-hidden="true">👋</span></h1>
+              <h1 id="command-title">{saudacao()}, {primeiroNome}.</h1>
               <strong>O que você precisa resolver agora?</strong>
             </div>
           </div>
@@ -296,7 +297,7 @@ export default function ClinicalCommandCenter() {
         <section className="command-section" aria-labelledby="acoes-rapidas">
           <header className="command-section__header">
             <div><p className="command-kicker">Atalhos universais</p><h2 id="acoes-rapidas">Ações rápidas</h2></div>
-            <Link to="/favoritos"><Icone nome="configuracao" /> Personalizar</Link>
+            <Link to="/favoritos"><Icone nome="favorito" /> Favoritos</Link>
           </header>
           <div className="quick-actions">
             {ACOES.map((acao) => (
@@ -410,7 +411,7 @@ export default function ClinicalCommandCenter() {
               <span><strong>Explorar relações</strong><small>Veja o “Tudo com Tudo” a partir de qualquer tema.</small></span>
               <Icone nome="seta" />
             </Link>
-            <Link to="/assistente" className="rail-primary"><Icone nome="assistente" /> Pergunte qualquer coisa ao CorVIA</Link>
+            <Link to="/assistente?modo=clinica" className="rail-primary"><Icone nome="assistente" /> Pergunte qualquer coisa ao CorVIA</Link>
           </div>
         ) : (
           <div className="rail-panel rail-panel--assistant">
@@ -463,7 +464,7 @@ export default function ClinicalCommandCenter() {
               )}
             </section>
 
-            <Link to="/assistente" className="rail-primary rail-primary--assistant"><Icone nome="assistente" /> Abrir meu Assistente Pessoal</Link>
+            <Link to="/assistente?modo=pessoal" className="rail-primary rail-primary--assistant"><Icone nome="assistente" /> Abrir meu Assistente Pessoal</Link>
           </div>
         )}
       </aside>
