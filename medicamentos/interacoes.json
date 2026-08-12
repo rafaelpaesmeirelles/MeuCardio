@@ -876,5 +876,41 @@
     "conduta": "Evitar a combinação quando possível; se necessária, monitorar a litemia com maior frequência ao iniciar, ajustar dose ou suspender o diurético, e reduzir a dose de lítio de forma antecipada, reavaliando por nível sérico. Reforçar orientação sobre sinais de intoxicação por lítio ao paciente.",
     "fonte": "Rótulo aprovado pelo FDA/DailyMed para carbonato de lítio (Lithane), seção PRECAUTIONS — consultado via WebFetch em 12/08/2026. Texto verbatim: \"Caution should be used when lithium and diuretics or angiotensin converting enzyme (ACE) inhibitors are used concomitantly because sodium loss may reduce the renal clearance of lithium and increase serum lithium levels with risk of lithium toxicity.\" **Nota de procedência**: o rótulo consultado usa o termo genérico \"diuretics\", sem nomear tiazídicos especificamente nem quantificar a magnitude do efeito em número — a tiazida é a classe de diurético classicamente mais implicada nesta interação na farmacologia clínica (mecanismo de reabsorção proximal de sódio/lítio), mas o valor percentual exato de redução de clearance não foi confirmado contra fonte primária quantitativa nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para a magnitude numérica específica, se necessária.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "furosemida-aine",
+    "farmacos": [
+      "furosemida"
+    ],
+    "classe_oposta": "AINE (anti-inflamatório não esteroidal, ex. indometacina, ibuprofeno)",
+    "gravidade": "moderada",
+    "efeito": "Redução do efeito natriurético e anti-hipertensivo da furosemida por inibição da síntese de prostaglandinas renais, que participam da resposta diurética. Há relatos de caso de aumento de ureia, creatinina sérica e potássio sérico, além de ganho de peso, quando furosemida foi usada em conjunto com AINE — risco maior ainda quando associado a IECA/BRA (\"triple whammy\": diurético + bloqueador do SRAA + AINE), por reduzir a perfusão renal compensatória.",
+    "conduta": "Evitar a combinação quando possível, sobretudo em paciente idoso, hipovolêmico, com insuficiência cardíaca ou já em uso de IECA/BRA. Se necessária, monitorar função renal (ureia, creatinina), potássio sérico e resposta diurética/pressórica; considerar dose mínima eficaz de AINE pelo menor tempo possível.",
+    "fonte": "Rótulo do FDA/DailyMed para furosemide injection, solution (Hospira, Inc., setid 39fd32f2-6bb7-4a65-d298-e48d26bc80c7), seção Drug Interactions — lido diretamente via DailyMed em 12/08/2026. Texto verbatim: \"Coadministration of indomethacin may reduce the natriuretic and antihypertensive effects of furosemide in some patients by inhibiting prostaglandin synthesis\"; e, na seção 12.3: \"There are case reports of patients who developed increased BUN, serum creatinine and serum potassium levels, and weight gain when furosemide was used in conjunction with NSAIDs.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sotalol-antiarritmico-classe-ia-ou-iii",
+    "farmacos": [
+      "sotalol"
+    ],
+    "classe_oposta": "outro antiarrítmico de classe Ia ou classe III (ex. disopiramida, quinidina, procainamida, amiodarona) ou outro fármaco que prolonga o QT",
+    "gravidade": "contraindicada",
+    "efeito": "Prolongamento aditivo do intervalo QT e do período refratário, aumentando o risco de arritmia ventricular grave, sobretudo torsades de pointes — o próprio sotalol já carrega esse risco isoladamente (ver `adverse_effects`/`notes` do registro do sotalol), e a soma com outro antiarrítmico classe Ia/III potencializa o efeito.",
+    "conduta": "Não associar. A bula recomenda suspender o antiarrítmico classe I ou III em uso por pelo menos 3 meias-vidas antes de iniciar sotalol. Se a troca de antiarrítmico for necessária, fazer sob monitorização eletrocardiográfica (QT/QTc) e, idealmente, internação — mesma cautela já registrada para a titulação inicial do próprio sotalol.",
+    "fonte": "Rótulo do FDA/DailyMed para sotalol hydrochloride tablet (setid 9a36d95c-6e93-4e57-befe-b5274f359244), seção 7.1 Drug Interactions — lido diretamente via DailyMed em 12/08/2026. Texto verbatim: \"Discontinue Class I or Class III antiarrhythmic agents for at least three half-lives prior to dosing with sotalol. Class Ia antiarrhythmic drugs, such as disopyramide, quinidine and procainamide, and other Class III drugs (for example, amiodarone) are not recommended as concomitant therapy with sotalol hydrochloride, because of their potential to prolong refractoriness.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "losartana-diuretico-poupador-de-potassio-ou-suplemento-de-potassio",
+    "farmacos": [
+      "losartana-potassica"
+    ],
+    "classe_oposta": "diurético poupador de potássio (ex. espironolactona, amilorida) ou suplemento de potássio",
+    "gravidade": "moderada",
+    "efeito": "Bloqueadores do receptor de angiotensina II, como a losartana, reduzem a secreção de aldosterona e podem elevar o potássio sérico; associados a diurético poupador de potássio ou a suplementação de potássio, o risco de hipercalemia aumenta, especialmente em paciente com insuficiência renal ou diabetes.",
+    "conduta": "Monitorar o potássio sérico periodicamente ao associar; a bula do COZAAR (losartana) recomenda cautela nesse uso concomitante. Evitar suplementação empírica de potássio sem indicação clínica clara e sem monitorização.",
+    "fonte": "Rótulo do FDA/DailyMed do COZAAR (losartana potássica), Organon LLC, setid 9949448f-c3b9-44ee-94ed-c1aca8c90f39, seção Drug Interactions e Warnings and Precautions — lido diretamente via DailyMed em 12/08/2026 (mesma fonte já usada para `bp_evidence_source` e `half_life_note` do registro da losartana). Texto verbatim: \"Coadministration of losartan with other drugs that raise serum potassium levels may result in hyperkalemia. Monitor serum potassium in such patients\"; e, na orientação ao paciente: \"Advise patients receiving COZAAR not to use potassium supplements or salt substitutes containing potassium without consulting their healthcare provider.\"",
+    "review_status": "revisado"
   }
 ]
