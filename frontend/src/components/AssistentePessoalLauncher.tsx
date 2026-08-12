@@ -15,6 +15,7 @@ export default function AssistentePessoalLauncher() {
   const { pathname } = useLocation();
 
   if (!usuario) return null;
+  if (usuario.profile_completion_required || usuario.kyc_required || usuario.onboarding_pendente) return null;
   if (pathname === "/" || pathname.startsWith("/assistente") || pathname.startsWith("/emergencia") || pathname.startsWith("/tour")) {
     return null;
   }
