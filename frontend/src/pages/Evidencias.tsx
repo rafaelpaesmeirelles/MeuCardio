@@ -1,8 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
-import { Carregando, Vazio } from "../components/Estado";
+import { Carregando } from "../components/Estado";
+import ClinicalText from "../components/ClinicalText";
 import { rotuloClasseCurto, rotuloNivel } from "../lib/evidencia";
+import {
+  ClinicalContextLink,
+  ClinicalEmpty,
+  ClinicalMetric,
+  ClinicalPageHeader,
+  ClinicalSection,
+} from "../components/ClinicalCommandPrimitives";
 
 type Item = {
   slug: string;
@@ -17,22 +25,24 @@ type Item = {
   doi: string | null;
 };
 
-const COR_CLASSE: Record<string, { fundo: string; texto: string }> = {
-  I: { fundo: "var(--primaria)", texto: "var(--branco)" },
-  IIa: { fundo: "var(--acento)", texto: "var(--branco)" },
-  IIb: { fundo: "var(--acento-claro)", texto: "var(--primaria)" },
-  III: { fundo: "var(--alerta)", texto: "var(--branco)" },
-};
-const COR_CLASSE_PADRAO = { fundo: "var(--fundo)", texto: "var(--texto)" };
+type Tema = { theme: string; count: number };
+
+function classeTone(classe: string) {
+  if (classe === "I") return "is-class-i";
+  if (classe === "IIa") return "is-class-iia";
+  if (classe === "IIb") return "is-class-iib";
+  if (classe === "III") return "is-class-iii";
+  return "";
+}
 
 export default function Evidencias() {
-  const [temas, setTemas] = useState<{ theme: string; count: number }[]>([]);
+  const [temas, setTemas] = useState<Tema[]>([]);
   const [tema, setTema] = useState("");
   const [busca, setBusca] = useState("");
   const [itens, setItens] = useState<Item[] | null>(null);
 
   useEffect(() => {
-    api.get<{ theme: string; count: number }[]>("/evidence/themes").then(setTemas);
+    api.get<Tema[]>("/evidence/themes").then(setTemas);
   }, []);
 
   useEffect(() => {
@@ -46,95 +56,85 @@ export default function Evidencias() {
     return () => clearTimeout(atraso);
   }, [tema, busca]);
 
-  return (
-    <>
-      <p className="eyebrow">Evidências</p>
-      <h1>Banco de recomendações</h1>
-      <p style={{ color: "var(--texto-secundario)", maxWidth: "68ch" }}>
-        Recomendações pontuais com resumo clínico, classe, nível de evidência e
-        acesso verificável ao documento de origem.
-      </p>
+  const total = useMemo(() => temas.reduce((soma, item) => soma + item.count, 0), [temas]);
+  const sociedades = useMemo(() => new Set((itens ?? []).map((item) => item.society).filter(Boolean)).size, [itens]);
+  const anos = useMemo(() => (itens ?? []).map((item) => item.year).filter(Boolean), [itens]);
+  const maisRecente = anos.length ? Math.max(...anos) : null;
 
-      <input
-        value={busca}
-        onChange={(e) => setBusca(e.target.value)}
-        placeholder="Buscar recomendação, diretriz ou assunto…"
-        aria-label="Buscar evidência"
-        style={{ maxWidth: 520, marginTop: "0.8rem" }}
+  return (
+    <div className="cc-page cc-evidence-page">
+      <ClinicalPageHeader
+        eyebrow="Decisão baseada em evidências"
+        title="Banco de recomendações"
+        description="Recomendações pontuais com classe, nível de evidência, resumo clínico e acesso verificável ao documento de origem."
+        icon="evidencia"
+        actions={[
+          { to: "/estudos", label: "Estudos", icon: "evidencia" },
+          { to: "/diretrizes", label: "Guidelines", icon: "documento", tone: "primary" },
+        ]}
+        meta={<><span className="selo">{total || "—"} recomendações</span><span className="selo">origem rastreável</span></>}
       />
 
-      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "0.8rem 0 1.2rem" }}>
-        <button
-          className={`botao ${tema ? "botao--secundario" : ""}`}
-          style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-          onClick={() => setTema("")}
-        >
-          Todos
-        </button>
-        {temas.map((t) => (
-          <button
-            key={t.theme}
-            className={`botao ${tema === t.theme ? "" : "botao--secundario"}`}
-            style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-            onClick={() => setTema(t.theme)}
-          >
-            {t.theme} ({t.count})
-          </button>
-        ))}
+      <div className="cc-metrics">
+        <ClinicalMetric label="Recomendações" value={total || "—"} detail="catálogo estruturado" icon="evidencia" />
+        <ClinicalMetric label="Temas" value={temas.length || "—"} detail="áreas e assuntos" icon="doencas" />
+        <ClinicalMetric label="Sociedades" value={sociedades || "—"} detail="na seleção atual" icon="conhecimento" />
+        <ClinicalMetric label="Mais recente" value={maisRecente || "—"} detail="na seleção atual" icon="agenda" />
       </div>
 
-      {itens === null ? (
-        <Carregando />
-      ) : itens.length === 0 ? (
-        <Vazio titulo="Nenhuma evidência encontrada" acao="Tente outro termo ou tema." />
-      ) : (
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.7rem" }}>
-          {itens.map((e) => (
-            <article key={e.slug} className="cartao" style={{ display: "flex", gap: 12, alignItems: "start" }}>
-              <span className="selo" style={{
-                background: (COR_CLASSE[e.recommendation_class] ?? COR_CLASSE_PADRAO).fundo,
-                color: (COR_CLASSE[e.recommendation_class] ?? COR_CLASSE_PADRAO).texto,
-                minWidth: 46,
-                textAlign: "center",
-                flexShrink: 0,
-              }}>
-                {rotuloClasseCurto(e.recommendation_class)}
-              </span>
-              <div style={{ minWidth: 0, flex: 1 }}>
-                <p className="eyebrow" style={{ margin: 0 }}>
-                  {e.society} {e.year} · {rotuloNivel(e.evidence_level)} · {e.theme}
-                </p>
-                <h2 style={{ fontSize: "1rem", margin: "0.35rem 0" }}>{e.statement}</h2>
-                {/* 07/08/2026: `summary` cai no fallback do backend (e.summary
-                 * or e.statement) enquanto o campo não for preenchido de fato
-                 * — hoje é o caso das 1.870 evidências publicadas. Sem esta
-                 * checagem, o enunciado aparecia repetido logo abaixo de si
-                 * mesmo em todo card da listagem. */}
-                {e.summary.trim() !== e.statement.trim() && (
-                  <p style={{ color: "var(--texto-secundario)", margin: "0.35rem 0 0.6rem", lineHeight: 1.5 }}>
-                    {e.summary}
-                  </p>
-                )}
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <Link className="botao botao--secundario" to={`/evidencias/${e.slug}`}>
-                    Ver análise completa
-                  </Link>
-                  {e.source_url && (
-                    <a
-                      className="botao botao--secundario"
-                      href={e.source_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Abrir documento original ↗
-                    </a>
-                  )}
-                </div>
-              </div>
-            </article>
-          ))}
+      <ClinicalSection eyebrow="Encontrar recomendação" title="Pesquise sem atravessar uma parede de filtros" description="Busca e tema ficam disponíveis de forma compacta; o restante da tela é reservado para decisão clínica.">
+        <div className="cc-filter-grid cc-filter-grid--3">
+          <label>
+            <span>Recomendação, diretriz ou assunto</span>
+            <input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: anticoagulação, ICFER, hipertensão…" aria-label="Buscar evidência" />
+          </label>
+          <label>
+            <span>Tema clínico</span>
+            <select value={tema} onChange={(e) => setTema(e.target.value)}>
+              <option value="">Todos os temas</option>
+              {temas.map((item) => <option key={item.theme} value={item.theme}>{item.theme} ({item.count})</option>)}
+            </select>
+          </label>
+          <div className="cc-filterbar__result">{itens?.length ?? "…"} resultado{itens?.length === 1 ? "" : "s"}</div>
         </div>
-      )}
-    </>
+        <div className="cc-filter-summary">
+          <span>{tema || "todo o catálogo"}</span>
+          {(busca || tema) && <button type="button" onClick={() => { setBusca(""); setTema(""); }}>Limpar filtros</button>}
+        </div>
+      </ClinicalSection>
+
+      <ClinicalSection eyebrow="Recomendações" title={tema || "O que a evidência recomenda?"} description="Abra a análise completa ou vá diretamente ao documento original quando disponível.">
+        {itens === null ? (
+          <Carregando texto="Consultando recomendações…" />
+        ) : itens.length === 0 ? (
+          <ClinicalEmpty title="Nenhuma evidência encontrada" description="Tente outro termo ou tema." />
+        ) : (
+          <div className="cc-recommendation-list">
+            {itens.map((item) => (
+              <Link key={item.slug} to={`/evidencias/${item.slug}`} className="cc-recommendation-row">
+                <span className="cc-recommendation-row__copy">
+                  <small>{item.society} {item.year} · {item.theme}</small>
+                  <strong>{item.statement}</strong>
+                  {item.summary.trim() !== item.statement.trim() && <ClinicalText compact>{item.summary}</ClinicalText>}
+                </span>
+                <span className="cc-recommendation-row__meta">
+                  <span className={`cc-evidence-class ${classeTone(item.recommendation_class)}`}>{rotuloClasseCurto(item.recommendation_class)}</span>
+                  <span>{rotuloNivel(item.evidence_level)}</span>
+                  {item.doi && <span>DOI</span>}
+                </span>
+              </Link>
+            ))}
+          </div>
+        )}
+      </ClinicalSection>
+
+      <ClinicalSection eyebrow="Conhecimento conectado" title="Da recomendação ao contexto">
+        <div className="cc-context-grid">
+          <ClinicalContextLink to="/estudos" icon="evidencia" title="Estudos" detail="Literatura que sustenta a decisão" />
+          <ClinicalContextLink to="/diretrizes" icon="documento" title="Guidelines" detail="Documento e sociedade de origem" />
+          <ClinicalContextLink to="/assistente" icon="assistente" title="Assistente Clínica" detail="Discutir aplicação prática" />
+        </div>
+      </ClinicalSection>
+    </div>
   );
 }
