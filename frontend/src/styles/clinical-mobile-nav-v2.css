@@ -1,0 +1,74 @@
+@media (min-width: 901px) {
+  .cc-mobile-nav { display: none; }
+}
+
+@media (max-width: 900px) {
+  .clinical-os .cos-mobilebar { display: none !important; }
+
+  .cc-mobile-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 96;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-height: 64px;
+    padding: .3rem max(.34rem, env(safe-area-inset-right)) calc(.22rem + env(safe-area-inset-bottom)) max(.34rem, env(safe-area-inset-left));
+    color: #718d97;
+    background: rgba(4,16,25,.97);
+    border-top: 1px solid rgba(148,205,219,.22);
+    box-shadow: 0 -16px 42px rgba(0,0,0,.3);
+    backdrop-filter: blur(18px) saturate(135%);
+  }
+
+  .cc-mobile-nav > a,
+  .cc-mobile-nav > button {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: .16rem;
+    min-width: 0;
+    min-height: 52px;
+    padding: .18rem .08rem;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    border-radius: 10px;
+    font: 700 .6rem/1.15 var(--fonte-texto, system-ui, sans-serif);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .cc-mobile-nav svg { width: 19px; height: 19px; }
+  .cc-mobile-nav > a[aria-current="page"] { color: #dffbfc; background: rgba(66,202,216,.07); }
+
+  .cc-mobile-nav__search { color: #d8fbfd !important; }
+  .cc-mobile-nav__search-icon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    margin-top: -13px;
+    color: #03131b;
+    background: linear-gradient(145deg, #49cfdb, #8be9ee);
+    border: 3px solid #061722;
+    border-radius: 13px;
+    box-shadow: 0 9px 24px -12px rgba(66,202,216,.95);
+  }
+  .cc-mobile-nav__search-icon svg { width: 18px; height: 18px; }
+
+  .cc-mobile-nav__assistant-icon {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    color: #78e5eb;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .clinical-os .cos-content {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom) + 1.1rem) !important;
+  }
+}
