@@ -1,1 +1,1 @@
-export { default } from "./ClinicalCommandCenter";
+export { default } from "./LaunchHome";
