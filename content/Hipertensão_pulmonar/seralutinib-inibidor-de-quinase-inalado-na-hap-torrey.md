@@ -16,7 +16,7 @@ A terapia específica hoje disponível para hipertensão arterial pulmonar (HAP)
 ## Desenho — TORREY (fase 2)
 Ensaio fase 2, randomizado, multicêntrico, multinacional, duplo-cego, controlado por placebo, em 40 centros hospitalares e comunitários. Pacientes com HAP (Grupo 1 da OMS), classe funcional II ou III, RVP ≥ 400 dyn·s/cm⁵ e distância no teste de caminhada de 6 minutos entre 150 e 550 m, já em terapia de base para HAP, foram randomizados 1:1 para seralutinibe (60 mg 2×/dia por 2 semanas, escalonado para 90 mg 2×/dia conforme tolerância) ou placebo, por inalador de pó seco, 2×/dia durante 24 semanas. Randomização estratificada por RVP basal (< 800 vs. ≥ 800 dyn·s/cm⁵). Desfecho primário: variação da RVP do basal até a semana 24.
 
-De 151 pacientes triados, **86** foram randomizados (44 seralutinibe, 42 placebo) — população predominantemente feminina (44/46 mulheres nos dois braços somados). Registro: NCT04456998.
+De 151 pacientes triados, **86** foram randomizados (44 seralutinibe, 42 placebo) — população predominantemente feminina (**78/86**, ou 90,7%: 40 de 44 no braço seralutinibe, 38 de 42 no braço placebo; 4 homens em cada braço). Registro: NCT04456998.
 
 ## Resultado — desfecho primário
 | Grupo | Variação média (mínimos quadrados) da RVP, semana 24 |

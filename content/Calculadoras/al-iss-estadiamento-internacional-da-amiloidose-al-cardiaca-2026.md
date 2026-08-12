@@ -26,11 +26,13 @@ Os biomarcadores usam os limiares já validados do estadiamento de Mayo: **NT-pr
 
 | Estágio | Critério | Sobrevida em 1 ano | Sobrevida em 2 anos | Sobrevida em 3 anos | Sobrevida mediana |
 |---|---|---|---|---|---|
-| **I** | NT-proBNP **e** hs-TnT, os dois **abaixo** do limiar | 96% (IC95% 94-98) | 93% (90-95) | 89% (85-92) | Não atingida |
-| **II** | NT-proBNP ≥ 332 ng/L **ou** hs-TnT ≥ 50 ng/L (só um dos dois elevado) | 89% (87-91) | 81% (78-83) | 76% (73-79) | Não atingida |
-| **IIIA** | NT-proBNP **entre** 332 e 8.500 ng/L **e** hs-TnT ≥ 50 ng/L (os dois elevados, NT-proBNP moderado) | 75% (72-78) | 66% (63-70) | 60% (56-63) | 67 meses |
-| **IIIB** | NT-proBNP ≥ 8.500 ng/L **e** hs-TnT ≥ 50 ng/L **e** LS **< −9%** (strain preservado, apesar dos biomarcadores muito elevados) | 62% (56-69) | 50% (43-57) | 44% (37-51) | 26 meses |
-| **IIIC** | NT-proBNP ≥ 8.500 ng/L **e** hs-TnT ≥ 50 ng/L **e** LS **≥ −9%** (strain já bastante comprometido) | 34% (26-43) | 26% (18-34) | 21% (14-29) | **7 meses** |
+| **I** | NT-proBNP **e** hs-TnT, os dois **abaixo** do limiar | 95% (IC95% 91-97) | 92% (87-95) | 90% (85-93) | Não atingida |
+| **II** | NT-proBNP ≥ 332 ng/L **ou** hs-TnT ≥ 50 ng/L (só um dos dois elevado) | 89%* | 81% (77-84) | 77% (74-80) | Não atingida |
+| **IIIA** | NT-proBNP **entre** 332 e 8.500 ng/L **e** hs-TnT ≥ 50 ng/L (os dois elevados, NT-proBNP moderado) | 78% (74-82) | 69% (64-74) | 63% (58-68) | 67 meses (48-NR) |
+| **IIIB** | NT-proBNP ≥ 8.500 ng/L **e** hs-TnT ≥ 50 ng/L **e** LS **< −9%** (strain preservado, apesar dos biomarcadores muito elevados) | 64% (56-70) | 50% (42-58) | 43% (34-51) | 26 meses (19-41) |
+| **IIIC** | NT-proBNP ≥ 8.500 ng/L **e** hs-TnT ≥ 50 ng/L **e** LS **≥ −9%** (strain já bastante comprometido) | 39% (29-49) | 30% (20-39) | 23% (14-33) | **7 meses (4-11)** |
+
+Todos os valores acima são da coluna "Total Validation (n = 1.920)" da Table 3 do artigo (texto completo, PMC12834270) — os únicos números com fonte primária conferida linha a linha; uma versão anterior deste documento continha uma tabela com valores próximos, mas não idênticos aos publicados, corrigida nesta revisão. *O IC95% da sobrevida em 1 ano do estágio II está impresso como "97 a 92" no artigo original (ordem invertida) — reproduzido aqui sem correção por não ser possível confirmar qual dos dois números é a errata tipográfica sem acesso ao dado bruto dos autores.
 
 **Como ler o strain**: o strain longitudinal global normal é fortemente negativo (em torno de −20%). Quanto **menos negativo** (mais próximo de zero), **pior** a função contrátil longitudinal. Por isso LS ≥ −9% (valor mais próximo de zero, contração mais comprometida) define o estágio mais grave, IIIC, e LS < −9% (ainda razoavelmente negativo) define o IIIB, de gravidade intermediária dentro do grupo de biomarcadores muito elevados.
 
