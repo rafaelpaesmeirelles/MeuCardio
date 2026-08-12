@@ -158,6 +158,14 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
 
   function atualizarDeslocamento() {
     setErroRota("");
+    if (!mobilidade) {
+      setErroRota("Não foi possível confirmar a autorização de mobilidade. Abra a Agenda e revise essa preferência antes de usar sua localização.");
+      return;
+    }
+    if (!mobilidade.enabled) {
+      setErroRota("Ative a mobilidade na Agenda antes de solicitar sua localização.");
+      return;
+    }
     if (!navigator.geolocation) {
       setErroRota("Localização não disponível neste dispositivo.");
       return;
@@ -277,7 +285,7 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
         </div>
 
         <footer className="cos-assistant-panel__footer">
-          <Link to="/assistente" onClick={onClose}><span className="cos-assistant-panel__spark">✦</span><span><strong>Precisa pensar um caso?</strong><small>Abra a CorVIA AI para assistência clínica contextual.</small></span><Icone nome="seta" /></Link>
+          <Link to="/assistente" onClick={onClose}><span className="cos-assistant-panel__spark">✦</span><span><strong>Precisa pensar um caso?</strong><small>Abra o Assistente para assistência clínica contextual.</small></span><Icone nome="seta" /></Link>
         </footer>
       </aside>
     </>
