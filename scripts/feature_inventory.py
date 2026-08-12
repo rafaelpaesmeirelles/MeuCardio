@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / "frontend/src/App.tsx"
-SHELL = ROOT / "frontend/src/components/Shell.tsx"
+SHELL = ROOT / "frontend/src/components/ShellClinicalOSLaunch.tsx"
 MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
@@ -33,13 +33,8 @@ EXPECTED_APP_ROUTES = {
     "/round", "/agenda", "/documentos", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
-    # issue #52 — ficha administrativa completa do assinante.
     "/admin/usuarios", "/admin/usuarios/:id",
-    # Trabalho 13 (tour guiado) e Trabalho 11/12 (gate de identidade
-    # pós-pagamento) — as duas são redirecionamento de gate, não item de
-    # menu, por isso não entram em EXPECTED_NAV_ROUTES.
     "/tour", "/verificacao-identidade",
-    # Trabalho 16 (07/08/2026): item próprio no menu (seção Gestão).
     "/sincronizacao",
 }
 
@@ -51,29 +46,13 @@ EXPECTED_NAV_ROUTES = {
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
     "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
-    "/sincronizacao",
-    # issue #52 — ficha administrativa completa do assinante, item de menu
-    # próprio (Shell.tsx); "/admin/usuarios/:id" é destino de clique numa
-    # linha da lista, não item de menu, por isso fica de fora daqui.
-    "/admin/usuarios",
-    # Issue #52 (11/08/2026): o tour deixou de ser SÓ um gate de primeiro
-    # acesso. O onboarding obrigatório virou um Quick Start de cinco telas;
-    # o tour completo passou a ser opcional e reaberto pelo menu (Gestão ›
-    # Conheça a plataforma), por isso `/tour` agora é também destino de
-    # navegação, não apenas rota de redirecionamento.
-    "/tour",
+    "/sincronizacao", "/admin/usuarios", "/tour",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
     "health.router", "auth.router", "browser_session.router", "password_reset.router",
     "sessions.router", "billing.router", "admin.router", "service_orders.router",
-    "partner_courses.router", "email_api.router",
-    # CorvIA Mail — renovação/persistência da sessão própria da caixa
-    # (commits 866f0caa/940a812c, 09/08/2026). Faltava aqui — lacuna
-    # pré-existente à branch de estabilização (issue #52), encontrada e
-    # fechada na subfase 8 (Release Candidate), mesmo padrão de
-    # `related_content.router` logo abaixo.
-    "email_session.router", "documentos_publicos.router",
+    "partner_courses.router", "email_api.router", "email_session.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
     "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",
@@ -83,25 +62,16 @@ EXPECTED_BACKEND_ROUTERS = {
     "checklists.router", "study_tracks.router", "exportacao.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
     "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
-    "avaliacao_preoperatoria.router", "chat_session.router_ws",
-    # Trabalho 11 (06/08/2026): verificação de identidade pós-pagamento (KYC).
-    "kyc.router",
-    # Tarefa #54 (08/08/2026): Hub "Tudo sobre este tema" (`GET /api/relacionados`).
-    # Faltava aqui — lacuna pré-existente encontrada e fechada durante a tarefa
-    # #53 (timeline de evolução do conhecimento), sem relação direta com ela.
-    "related_content.router",
-    # Grafo de Conhecimento Clínico Universal (issue #52, nova fase, 11/08/2026):
-    # `GET /api/grafo/relacionados` — camada persistida/tipada, distinta do
-    # cruzamento em tempo de consulta de `related_content.router` acima.
-    "knowledge_graph.router",
-    # Cadastro de paciente reutilizável entre documentos (12/08/2026):
-    # `GET/POST/PUT/DELETE /api/pacientes` — ver
-    # `backend/app/models/patient_profile.py`.
-    "patient_profiles.router",
+    "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
+    "related_content.router", "knowledge_graph.router", "patient_profiles.router",
 }
 
 EXPECTED_SUPPORT_FILES = {
     "frontend/src/components/ChatFlutuante.tsx",
+    "frontend/src/components/PersonalAssistantPanel.tsx",
+    "frontend/src/components/ShellClinicalOSLaunch.tsx",
+    "frontend/src/pages/PainelClinicalOS.tsx",
+    "frontend/src/pages/TourClinicalOS.tsx",
     "frontend/src/pages/Admin.tsx",
     "frontend/src/pages/Apresentacao.tsx",
     "frontend/src/pages/Assistente.tsx",
@@ -172,6 +142,23 @@ def assert_exact(label: str, actual: set[str], expected: set[str]) -> None:
         )
 
 
+def _navigation_paths(shell_source: str) -> set[str]:
+    """Inventaria destinos do modelo de menu do Clinical OS sem contar atalhos FAB.
+
+    Os itens principais/admin continuam declarados como objetos ``to:``. Home e
+    itens do menu de conta são JSX porque dependem de layout/estado; entram aqui
+    explicitamente. O atalho flutuante de Emergência não é menu e permanece
+    protegido pela rota React e pelos testes próprios de emergência.
+    """
+    paths = set(re.findall(r'\bto:\s*"([^"]+)"', shell_source))
+    paths.update(
+        re.findall(r'<NavLink\s+to="([^"]+)"[^>]*role="menuitem"', shell_source)
+    )
+    if "cos-nav__home" in shell_source:
+        paths.add("/")
+    return paths
+
+
 def main() -> int:
     app_source = APP.read_text(encoding="utf-8")
     shell_source = SHELL.read_text(encoding="utf-8")
@@ -186,7 +173,7 @@ def main() -> int:
         route_paths.add("/")
     assert_exact("Rotas React", route_paths, EXPECTED_APP_ROUTES)
 
-    nav_paths = set(re.findall(r'\bto:\s*"([^"]+)"', shell_source))
+    nav_paths = _navigation_paths(shell_source)
     assert_exact("Destinos de navegação", nav_paths, EXPECTED_NAV_ROUTES)
 
     backend_routers = set(

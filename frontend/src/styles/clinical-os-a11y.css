@@ -1,0 +1,27 @@
+/* Clinical OS — accessibility safeguards kept separate from visual polish. */
+
+/* A translated off-canvas drawer still exists in the accessibility tree and
+   can receive keyboard focus. Visibility removes it from interaction while
+   closed without changing the visual component contract. */
+.cos-drawer {
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform .22s ease, visibility 0s linear .22s;
+}
+
+.cos-drawer.is-open {
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform .22s ease, visibility 0s linear 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinical-os *,
+  .clinical-os *::before,
+  .clinical-os *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -6,8 +6,12 @@ import { AuthProvider } from "./lib/auth";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
+import "./styles/clinical-os.css";
+import "./styles/clinical-os-polish.css";
+import "./styles/clinical-os-a11y.css";
 import "./styles/produto.css";
 import "./styles/tour.css";
+import "./styles/tour-clinical-os.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
@@ -45,9 +49,6 @@ document.addEventListener("visibilitychange", () => {
 });
 window.addEventListener("pageshow", () => void verificarAtualizacaoCompleta(true));
 
-// Qualquer interação relevante também consulta a versão, limitada internamente
-// a uma chamada a cada 5 segundos. Assim uma aba aberta por horas percebe um
-// deploy mesmo sem mudança de rota, sem transformar cada clique em tráfego.
 document.addEventListener("click", () => void verificarAtualizacaoCompleta(false), { capture: true });
 document.addEventListener("keydown", () => void verificarAtualizacaoCompleta(false), { capture: true });
 
