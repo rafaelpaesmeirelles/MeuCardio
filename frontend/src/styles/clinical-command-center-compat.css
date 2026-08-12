@@ -1,0 +1,16 @@
+/* Compatibility bridge while legacy page wrappers are progressively retired. */
+
+/* The V2 layer intentionally limits legacy pages to a reading width. Home is
+   the one full-width command surface and must use the entire workspace. */
+.clinical-os .cos-content > .ccc-home {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* Canonical desktop navigation owns the left rail; legacy sidebar remains in
+   the DOM only because its mobile implementation is still consumed by older
+   routes during migration. */
+@media (min-width: 901px) {
+  .clinical-os .cos-content:has(> .ccc-home) { max-width: none; }
+}
