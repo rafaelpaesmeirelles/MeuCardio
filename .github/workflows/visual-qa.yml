@@ -216,12 +216,17 @@ jobs:
             await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
             await page.waitForTimeout(700);
             const metrics = await page.evaluate((forbidden) => {
+              const visible = (element) => {
+                if (!element) return false;
+                const style = getComputedStyle(element);
+                const rect = element.getBoundingClientRect();
+                return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+              };
               const text = (document.body?.innerText || '').toLocaleLowerCase('pt-BR');
               const fixed = [...document.querySelectorAll('*')]
                 .filter((element) => {
                   const style = getComputedStyle(element);
-                  const rect = element.getBoundingClientRect();
-                  return style.position === 'fixed' && style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+                  return style.position === 'fixed' && visible(element);
                 })
                 .slice(0, 30)
                 .map((element) => ({
@@ -229,6 +234,16 @@ jobs:
                   className: typeof element.className === 'string' ? element.className : '',
                   aria: element.getAttribute('aria-label') || '',
                 }));
+              const emergency = document.querySelector('.emerg');
+              const emergencyRect = emergency && visible(emergency)
+                ? (() => { const r = emergency.getBoundingClientRect(); return { left:r.left, top:r.top, right:r.right, bottom:r.bottom }; })()
+                : null;
+              const legacyFabVisible = [
+                document.querySelector('button[aria-label^="Abrir o CorvIA Chat"]'),
+                document.querySelector('section[aria-label="CorvIA Chat"]'),
+                document.querySelector('.cos-emergency-fab'),
+              ].some(visible);
+              const creditVisible = visible(document.querySelector('.credito'));
               return {
                 path: location.pathname,
                 width: innerWidth,
@@ -236,6 +251,9 @@ jobs:
                 height: innerHeight,
                 forbidden: forbidden.filter((needle) => text.includes(needle)),
                 fixed,
+                emergencyRect,
+                legacyFabVisible,
+                creditVisible,
               };
             }, forbiddenVisibleText);
             report.pages.push({ mode, name, route, ...metrics });
@@ -244,6 +262,17 @@ jobs:
             }
             if (metrics.forbidden.length) {
               report.failures.push(`${mode}/${name}: texto interno visível: ${metrics.forbidden.join(', ')}`);
+            }
+            if (metrics.legacyFabVisible) {
+              report.failures.push(`${mode}/${name}: FAB legado visível sobre o Clinical OS`);
+            }
+            if (metrics.creditVisible) {
+              report.failures.push(`${mode}/${name}: crédito institucional visível dentro do workspace`);
+            }
+            if (mode === 'desktop' && name === 'emergencia') {
+              if (!metrics.emergencyRect || metrics.emergencyRect.left < 200 || metrics.emergencyRect.top < 50) {
+                report.failures.push(`desktop/emergencia: modo está sob a sidebar/topbar (${JSON.stringify(metrics.emergencyRect)})`);
+              }
             }
             await page.screenshot({ path: path.join(out, `${mode}-${name}.png`), fullPage: false });
           }
