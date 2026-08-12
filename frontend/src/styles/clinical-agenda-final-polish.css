@@ -1,0 +1,26 @@
+/* Final Agenda polish discovered by real mobile screenshot review. */
+body.corvia-route--agenda .clinical-os .agenda-filtros label,
+body.corvia-route--agenda .clinical-os .agenda-busca {
+  color:#7f9aa3!important;
+  background:rgba(2,14,21,.46)!important;
+  border:1px solid rgba(126,183,201,.09)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+body.corvia-route--agenda .clinical-os .agenda-busca input,
+body.corvia-route--agenda .clinical-os .agenda-filtros label input,
+body.corvia-route--agenda .clinical-os .agenda-filtros label select {
+  color:#dcebed!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+body.corvia-route--agenda .clinical-os .agenda-busca input::placeholder {
+  color:#607c86!important;
+}
+body.corvia-route--agenda .clinical-os .agenda-filtro-contas > button {
+  color:#9fb6bd!important;
+  background:rgba(255,255,255,.018)!important;
+  border-color:rgba(126,183,201,.08)!important;
+}
