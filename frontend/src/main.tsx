@@ -23,6 +23,7 @@ import "./styles/public-clinical-command-v2.css";
 import "./styles/clinical-command-center-canonical.css";
 import "./styles/clinical-mobile-more-canonical.css";
 import "./styles/corvia-mail-clinical-command.css";
+import "./styles/corvia-mail-brand.css";
 import "./styles/clinical-command-center-compat.css";
 
 let swRecargaPendente = false;
