@@ -120,7 +120,19 @@ jobs:
 
       - name: Run pytest
         working-directory: backend
-        run: python -m pytest -q
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest -q --tb=short 2>&1 | tee pytest-output.txt
+
+      - name: Upload pytest failure report
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: backend-pytest-failure
+          path: backend/pytest-output.txt
+          if-no-files-found: error
+          retention-days: 7
 
       - name: Exercise live HTTP release flow
         working-directory: backend
