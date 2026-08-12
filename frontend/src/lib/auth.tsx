@@ -2,6 +2,8 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from "
 import { api, type Usuario } from "./api";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
+const COMMAND_HISTORY_KEY = "corvia:command-history:v1";
+const COMMAND_HISTORY_OWNER_KEY = "corvia:command-history-owner:v1";
 
 type Estado = {
   usuario: Usuario | null;
@@ -19,6 +21,35 @@ async function mensagemLogin(res: Response): Promise<string> {
   return typeof detail === "string" && detail.trim() ? detail : "E-mail ou senha incorretos.";
 }
 
+/**
+ * A Home pode guardar localmente os últimos comandos para permitir “continuar
+ * de onde parei”. Como um comando pode conter contexto clínico digitado pelo
+ * médico, esse histórico nunca pode sobreviver à troca de conta no mesmo
+ * navegador. O owner local é apenas o id interno; nenhum dado do usuário é
+ * copiado para ele.
+ */
+function vincularContextoLocal(usuario: Usuario) {
+  try {
+    const ownerAtual = window.localStorage.getItem(COMMAND_HISTORY_OWNER_KEY);
+    const novoOwner = String(usuario.id);
+    if (ownerAtual !== novoOwner) {
+      window.localStorage.removeItem(COMMAND_HISTORY_KEY);
+    }
+    window.localStorage.setItem(COMMAND_HISTORY_OWNER_KEY, novoOwner);
+  } catch {
+    // Armazenamento local é opcional; a autenticação nunca depende dele.
+  }
+}
+
+function limparContextoLocal() {
+  try {
+    window.localStorage.removeItem(COMMAND_HISTORY_KEY);
+    window.localStorage.removeItem(COMMAND_HISTORY_OWNER_KEY);
+  } catch {
+    // Nada a fazer quando o browser bloqueia storage.
+  }
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [usuario, setUsuario] = useState<Usuario | null>(null);
   const [carregando, setCarregando] = useState(true);
@@ -26,8 +57,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     api
       .get<Usuario>("/auth/me", { silencioso401: true })
-      .then(setUsuario)
-      .catch(() => setUsuario(null))
+      .then((autenticado) => {
+        vincularContextoLocal(autenticado);
+        setUsuario(autenticado);
+      })
+      .catch(() => {
+        limparContextoLocal();
+        setUsuario(null);
+      })
       .finally(() => setCarregando(false));
   }, []);
 
@@ -48,17 +85,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     // Login é um ponto seguro para uma recarga completa. O parâmetro único
     // evita reaproveitamento do documento HTML por caches intermediários; o
-    // Caddy e o service worker também revalidam o shell.
+    // Caddy e o service worker também revalidam o shell. O AuthProvider da
+    // nova página vincula/limpa o histórico local antes de expor a sessão.
     window.location.replace(`/?login=${Date.now()}`);
   }
 
   async function sair() {
-    await api.logout();
-    setUsuario(null);
+    try {
+      await api.logout();
+    } finally {
+      limparContextoLocal();
+      setUsuario(null);
+    }
   }
 
   function recarregar() {
-    api.get<Usuario>("/auth/me").then(setUsuario).catch(() => setUsuario(null));
+    api.get<Usuario>("/auth/me")
+      .then((autenticado) => {
+        vincularContextoLocal(autenticado);
+        setUsuario(autenticado);
+      })
+      .catch(() => {
+        limparContextoLocal();
+        setUsuario(null);
+      });
   }
 
   return (
