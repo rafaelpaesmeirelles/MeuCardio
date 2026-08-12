@@ -26,3 +26,13 @@
   font-size:.45rem;
   font-weight:900;
 }
+
+/* O catálogo não deve derivar "N revisados" simplesmente do número total de
+   itens. O status editorial continua explícito em cada card/verbete. */
+.clinical-os .cc-drugs-page .cc-page-header__meta .selo:first-child {
+  font-size:0;
+}
+.clinical-os .cc-drugs-page .cc-page-header__meta .selo:first-child::after {
+  content:"Status de revisão por item";
+  font-size:.5rem;
+}
