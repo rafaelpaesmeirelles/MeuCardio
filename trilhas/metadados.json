@@ -22659,5 +22659,119 @@
         "por_que": "Encerra mostrando que o prolongamento de QTc não é efeito uniforme de toda a classe de inibidores de menina: a comparação direta entre revumenibe e ziftomenibe, pelo ensaio KOMET-007, é o dado que evita generalizar risco de um agente para o outro."
       }
     ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-mecanismos-experimentais-alem-dos-quatro-pilares",
+    "titulo": "Insuficiência cardíaca: mecanismos experimentais além dos quatro pilares — ativador de miosina, inotrópico de mecanismo duplo e terapia gênica",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo situar três frentes experimentais de mecanismo distinto que buscam ir além dos quatro pilares farmacológicos já consolidados na ICFEr: os ativadores de miosina cardíaca (a rejeição do omecamtiv mecarbil pelo FDA e a segunda geração, danicamtiv, numa população genética diferente), os inotrópicos no choque cardiogênico precoce (do suporte adrenérgico clássico ao mecanismo duplo do istaroxime, pensado para evitar a arritmia que os adrenérgicos causam) e a fronteira mais distante, a terapia gênica intracoronariana com vetor AAV cardiotrópico.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "omecamtiv-mecarbil-ativador-da-miosina-cardiaca-galactic-hf-e-a-rejeicao-do-fda",
+        "por_que": "Abre pelo precedente que qualquer ativador de miosina cardíaco precisa enfrentar: o omecamtiv mecarbil chegou à fase 3 (GALACTIC-HF) e foi rejeitado pelo FDA — entender por que é o que dá contexto para avaliar a segunda geração da classe."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "danicamtiv-ativador-seletivo-da-miosina-cardiaca-na-cardiomiopatia-dilatada-ensaio-de-fase-2",
+        "por_que": "A segunda geração de ativador de miosina, testada não na ICFEr geral do GALACTIC-HF, mas numa população definida por variante genética sarcomérica — molécula distinta, população distinta, e ainda em fase 2 aberta, sem grupo placebo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "suporte-inotropico-na-ic-aguda-descompensada-optime-chf-e-o-sinal-na-etiologia-isquemica",
+        "por_que": "Muda de eixo — da contratilidade sarcomérica crônica para o suporte inotrópico agudo. Fixa o que já é prática consolidada (dobutamina/milrinona) e o sinal de dano que o OPTIME-CHF encontrou na etiologia isquêmica, para servir de contraste ao próximo passo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "istaroxime-inotropo-lusitropo-de-mecanismo-duplo-no-choque-cardiogenico-precoce-programa-seismic",
+        "por_que": "É a resposta investigacional ao problema deixado pelo passo anterior: um inotrópico/lusitrópico de mecanismo duplo (estimula SERCA2a, inibe a Na⁺/K⁺-ATPase) desenhado para não depender da hiperativação adrenérgica que os inotrópicos clássicos usam — e que os próprios autores do programa SEISMiC associam a arritmia maligna."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "terapia-genica-com-vetor-aav-cardiotropico-ab-1002-ensaio-de-fase-1",
+        "por_que": "Fecha na fronteira mais distante de todas: em vez de agir sobre um receptor ou uma proteína contrátil, o AB-1002 modifica a expressão gênica intracelular do cardiomiócito por infusão intracoronariana única de vetor viral — ainda fase 1, mas mecanismo que nenhuma das etapas anteriores usa."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-alcool-veia-de-marshall-e-sangramento-pos-tavr",
+    "titulo": "Fibrilação atrial: três frentes recentes e distintas — álcool, ablação adjuvante da veia de Marshall e sangramento pós-TAVR",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair conhecendo três acréscimos recentes que não se cruzam clinicamente entre si, mas que qualquer cardiologista que acompanhe fibrilação atrial vai encontrar: a relação dose-dependente entre álcool e risco de FA — e a síndrome do coração em férias como sua expressão aguda mais conhecida —, a ablação com etanol da veia de Marshall como adjuvante técnico na FA persistente, e o escore HARHP, que estima risco de sangramento maior num cenário cada vez mais comum, a FA que aparece depois do TAVR.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "consumo-de-alcool-e-risco-de-fibrilacao-atrial-metanalise-em-rede-2026",
+        "por_que": "Começa pela epidemiologia: a metanálise em rede de 2026 estabelece a relação dose-dependente entre consumo de álcool e risco de FA, o dado de base que sustenta a orientação de reduzir ingesta como parte do manejo de fatores de risco modificáveis."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sindrome-do-coracao-em-ferias-e-fibrilacao-atrial-induzida-por-alcool",
+        "por_que": "Da relação crônica de dose para a expressão aguda: a síndrome do coração em férias é o quadro clínico que o cardiologista de pronto-socorro reconhece — episódio de FA em quem bebeu acima do habitual, tipicamente sem cardiopatia estrutural de base."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ablacao-com-etanol-da-veia-de-marshall-como-adjuvante-na-fa-persistente-registro-real-af",
+        "por_que": "Muda de assunto por completo, e o contraste é proposital: aqui o etanol não é fator de risco, é ferramenta terapêutica — infundido na veia de Marshall como adjuvante à ablação por cateter na FA persistente, técnica documentada no registro real-world REAL-AF."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "escore-harhp-risco-de-sangramento-maior-na-fa-pos-tavr-envisage-tavi-af",
+        "por_que": "Fecha com uma terceira frente independente das duas primeiras: o escore HARHP, derivado do ENVISAGE-TAVI AF, estima risco de sangramento maior num cenário que cresce junto com o volume de TAVR — o paciente que desenvolve FA depois do implante valvar transcateter e precisa de anticoagulação."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-revascularizacao-completa-guiada-por-fisiologia-e-angina-refrataria",
+    "titulo": "Doença coronariana: revascularização completa guiada por fisiologia no IAM multiarterial, e o dispositivo para quem não pode ser revascularizado",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo a evolução da evidência de revascularização completa no IAM multiarterial — da comprovação inicial (COMPLETE) ao refinamento por fisiologia e idade (FIRE) e ao alerta de longo prazo sobre adiar lesão não culpada com FFR >0,80 (DANAMI-3-PRIMULTI em 10 anos) —, a estratégia antiplaquetária que segue a revascularização completa precoce (TARGET-FIRST), e, para quem a revascularização não resolve, o dispositivo mais recente para angina refratária, o reducer de seio coronário A-FLUX.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "revascularizacao-completa-versus-somente-lesao-culpada-no-iam-multiarterial-o-ensaio-complete",
+        "por_que": "Começa pelo ensaio que estabeleceu revascularização completa como estratégia superior a tratar só a lesão culpada no IAM multiarterial — o COMPLETE é a base sobre a qual todo refinamento posterior se apoia."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fire-revascularizacao-completa-guiada-por-fisiologia-em-idosos-com-iam",
+        "por_que": "Refina a pergunta do COMPLETE em duas dimensões ao mesmo tempo: idade avançada, subgrupo sub-representado nos ensaios anteriores, e revascularização guiada por fisiologia (FFR) em vez de decisão puramente angiográfica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "danami-3-primulti-10-anos-ffr-guiada-revascularizacao-completa-stemi",
+        "por_que": "Introduz a tensão que a etapa anterior não mostra: o seguimento de 10 anos do DANAMI-3-PRIMULTI sugere que adiar a PCI de lesão não culpada quando o FFR é >0,80 custa caro no longo prazo — dado que qualifica, sem contradizer, a mensagem de 'revascularizar tudo' guiado por fisiologia."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "target-first-monoterapia-p2y12-apos-revascularizacao-completa-no-iam-baixo-risco",
+        "por_que": "Depois de decidir revascularizar tudo, a pergunta prática seguinte é por quanto tempo manter DAPT dupla: o TARGET-FIRST testa monoterapia precoce com inibidor de P2Y12 no IAM de baixo risco já com revascularização completa realizada."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "a-flux-reducer-de-seio-coronario-angina-refrataria-primeiro-uso-humano",
+        "por_que": "Fecha com o cenário oposto ao das quatro etapas anteriores: quando revascularização — completa ou não — não é opção, o reducer de seio coronário autoexpansível A-FLUX é o dispositivo mais recente para angina refratária por disfunção microvascular ou DAC obstrutiva, testado agora em primeiro uso humano."
+      }
+    ]
   }
 ]
