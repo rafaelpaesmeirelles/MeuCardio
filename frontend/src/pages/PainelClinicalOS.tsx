@@ -42,7 +42,7 @@ const ACOES: AcaoRapida[] = [
   { to: "/emergencia", titulo: "Emergências", detalhe: "Protocolos de risco imediato", icone: "emergencia" },
   { to: "/medicamentos", titulo: "Medicamentos", detalhe: "Busca, segurança e evidência", icone: "medicamento" },
   { to: "/diretrizes", titulo: "Guidelines", detalhe: "Diretrizes e alertas clínicos", icone: "evidencia" },
-  { to: "/assistente", titulo: "CorVIA AI", detalhe: "Pergunte usando contexto clínico", icone: "assistente" },
+  { to: "/assistente", titulo: "Assistente", detalhe: "Pergunte usando contexto clínico", icone: "assistente" },
 ];
 
 const EXPLORAR = [
@@ -300,7 +300,7 @@ export default function PainelClinicalOS() {
 
       <section className="cos-home-closer">
         <div><span className="cos-home-closer__spark">✦</span><div><p className="eyebrow">CorVIA</p><h2>Você não precisa decorar onde cada função mora.</h2><p>Comece pelo problema. O sistema aproxima o conhecimento e a ação.</p></div></div>
-        <Link to="/assistente">Perguntar à CorVIA AI <Icone nome="seta" /></Link>
+        <Link to="/assistente">Perguntar ao Assistente <Icone nome="seta" /></Link>
       </section>
     </div>
   );
