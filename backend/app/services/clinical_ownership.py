@@ -21,6 +21,7 @@ nunca reintroduzida por engano num endpoint disperso.
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
+from app.models.patient_profile import PatientProfile
 from app.models.round import Patient
 
 
@@ -41,3 +42,17 @@ def patient_for_user(
     if not allow_archived and patient.archived_at is not None:
         raise HTTPException(status_code=410, detail="Paciente removido do round.")
     return patient
+
+
+def patient_profile_for_user(profile_id: int, db: Session, user) -> PatientProfile:
+    """Mesma regra e mesma forma de resposta de `patient_for_user`, agora
+    para o cadastro de paciente reutilizável entre documentos
+    (`PatientProfile`, 12/08/2026) — só `owner_id == user.id`, 404 (nunca
+    403) tanto para id inexistente quanto para paciente de outro médico.
+    É este ponto único que garante, no backend, que a busca/seleção de
+    paciente na geração de documento nunca alcança cadastro alheio — o
+    filtro do frontend nunca é a proteção real."""
+    perfil = db.get(PatientProfile, profile_id)
+    if not perfil or perfil.owner_id != user.id:
+        raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+    return perfil

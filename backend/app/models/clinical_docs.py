@@ -79,6 +79,19 @@ class GeneratedDocument(Base):
     # "recriar baseado neste" pré-preencher o formulário em vez de começar
     # vazio. Nulo/`{}` para documento gerado antes desta tarefa.
     variables: Mapped[dict] = mapped_column(JSONB, default=dict, nullable=True)
+    # Acrescentado em 12/08/2026 (seleção de paciente universal). `patient_
+    # profile_id` é só um PONTEIRO de conveniência (ex.: "outros documentos
+    # deste paciente") — nunca a fonte de verdade do conteúdo já emitido.
+    # `ON DELETE SET NULL`: apagar o cadastro do paciente não pode apagar
+    # nem invalidar documento histórico, só perder o atalho de navegação.
+    # `patient_snapshot_cifrado` É a fonte de verdade: um JSON cifrado com
+    # os dados do paciente EFETIVAMENTE usados nesta emissão, no mesmo
+    # cofre AES-256-GCM (chaveado por `id`, como `patient_name_cifrado`) —
+    # nunca reconstruído a partir do estado atual de `PatientProfile`.
+    patient_profile_id: Mapped[int | None] = mapped_column(
+        ForeignKey("patient_profiles.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    patient_snapshot_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

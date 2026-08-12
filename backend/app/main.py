@@ -9,7 +9,7 @@ from app.api import (
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
     service_orders, sessions, specialty_guides, studies, timeline, billing, guidelines, indicadores,
     checklists, study_tracks, exportacao, emergencia, receituario, clinical_cases, agenda_integrada,
-    related_content, knowledge_graph,
+    related_content, knowledge_graph, patient_profiles,
 )
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
@@ -61,7 +61,7 @@ ROUTERS_ASSINANTES = (
     study_tracks.router, exportacao.router, emergencia.router, receituario.router,
     clinical_cases.router, specialty_guides.router, chat.router, assinatura.router,
     agenda_integrada.router, kyc.router, avaliacao_preoperatoria.router,
-    related_content.router, knowledge_graph.router,
+    related_content.router, knowledge_graph.router, patient_profiles.router,
 )
 
 for router in ROUTERS_LIVRES:

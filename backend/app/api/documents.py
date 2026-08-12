@@ -1,11 +1,11 @@
 import asyncio
 import re
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Literal
 
 from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -20,7 +20,8 @@ from app.models.patient_document_email_send import (
     CANAL_AUTO_CONTATO_CORVIA, CANAL_PROPRIO_CORVIA_MAIL, TIPO_DOCUMENTO_GERADO,
     PatientDocumentEmailSend,
 )
-from app.services import anexo_email_proprio, cofre, emails, envio_documento_email
+from app.services import anexo_email_proprio, cofre, documentos_avulsos, emails, envio_documento_email
+from app.services import patient_profile_service
 from app.services.assinatura import divulgacao_email
 from app.services.clinical_ownership import patient_for_user
 from app.services.assinatura import emissao as assinatura_emissao
@@ -30,6 +31,25 @@ from app.services.professional_profile import (
 
 router = APIRouter(prefix="/api/document-templates", tags=["documentos"])
 VALIDADE_LINK_DIAS = 7
+
+# Tipos de `GeneratedDocument.doc_type` que NÃO vêm de um `DocumentTemplate`
+# (12/08/2026 — Solicitar exames / Documento em branco). "atestado" para o
+# atalho rápido de atestado continua usando o mesmo valor que os modelos já
+# usavam (`DOC_TYPE_ATESTADO`) — o que diferencia um atestado emitido por
+# modelo de um emitido pelo atalho é `template_id` ser `None`, não o tipo.
+DOC_TYPE_ATESTADO = "atestado"
+DOC_TYPE_SOLICITACAO_EXAMES = "solicitacao_exames"
+DOC_TYPE_DOCUMENTO_LIVRE = "documento_livre"
+
+# Título impresso no PDF (cabeçalho central, ver `_cabecalho` em
+# `pdf_documento.py`) por `doc_type` — documento sem entrada aqui usa
+# `g.title` (é o caso do documento em branco, cujo título É o corpo do
+# título escolhido pelo médico na hora de emitir).
+_TITULOS_DOC_TYPE = {
+    "atestado": "Atestado",
+    "laudo": "Laudo",
+    DOC_TYPE_SOLICITACAO_EXAMES: documentos_avulsos.TITULO_SOLICITACAO_EXAMES,
+}
 
 
 class TemplateIn(BaseModel):
@@ -81,6 +101,17 @@ class GerarDocumentoIn(BaseModel):
     variables: dict[str, str] = {}
     patient_name: str | None = None
     endereco: str | None = None
+    # Acrescentados em 12/08/2026 (seleção de paciente universal + "modelo
+    # é ponto de partida editável, nunca documento final imutável"):
+    # `patient_profile_id` puxa o cadastro reutilizável (ver
+    # `app.services.patient_profile_service`); `corpo_final`, quando
+    # presente e não vazio, é o texto que o médico efetivamente revisou/
+    # editou na tela antes de gerar — substitui por inteiro o resultado da
+    # substituição de `{{variavel}}` no corpo do MODELO salvo. O modelo em
+    # si (`DocumentTemplate.body`) nunca é alterado por este campo — é
+    # só o que vai para ESTE documento gerado.
+    patient_profile_id: int | None = None
+    corpo_final: str | None = None
 
 
 @router.post("/gerar", status_code=201)
@@ -95,36 +126,253 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
 
-    corpo = t.body
-    faltando = []
-    for variavel in set(re.findall(r"\{\{(\w+)\}\}", corpo)):
-        valor = dados.variables.get(variavel)
-        if valor is None or valor == "":
-            faltando.append(variavel)
-        else:
-            corpo = corpo.replace(f"{{{{{variavel}}}}}", valor)
-    if faltando:
-        raise HTTPException(status_code=422, detail=f"Faltam variáveis: {', '.join(faltando)}")
+    nome_paciente_perfil, snapshot, profile_id = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=dados.patient_name,
+    )
+
+    if dados.corpo_final is not None and dados.corpo_final.strip():
+        # O médico já revisou/editou o texto na tela (Tarefa de 12/08/2026,
+        # "modelo é ponto de partida, nunca documento final imutável") —
+        # este é o texto que vale, sem passar pela substituição de
+        # `{{variavel}}` de novo (ela já rodou no cliente para montar a
+        # prévia editável). O modelo salvo nunca é tocado aqui.
+        corpo = dados.corpo_final
+    else:
+        variaveis_disponiveis = {
+            **patient_profile_service.variaveis_paciente(snapshot),
+            **{k: v for k, v in dados.variables.items() if v not in (None, "")},
+        }
+        corpo = t.body
+        faltando = []
+        for variavel in set(re.findall(r"\{\{(\w+)\}\}", corpo)):
+            valor = variaveis_disponiveis.get(variavel)
+            # Variável `paciente_*` nunca bloqueia a geração por estar
+            # vazia — o cadastro do paciente pode genuinamente não ter
+            # aquele dado (ex.: sem CPF cadastrado); ela só entra "faltando"
+            # se não for uma variável de paciente reconhecida.
+            if (valor is None or valor == "") and variavel not in patient_profile_service.NOMES_VARIAVEIS_PACIENTE:
+                faltando.append(variavel)
+            else:
+                corpo = corpo.replace(f"{{{{{variavel}}}}}", valor or "")
+        if faltando:
+            raise HTTPException(status_code=422, detail=f"Faltam variáveis: {', '.join(faltando)}")
 
     gerado = GeneratedDocument(
         patient_id=dados.patient_id, template_id=t.id, created_by=user.id,
         doc_type=t.doc_type, title=t.title, rendered_body=corpo,
         endereco_exibido=dados.endereco, variables=dados.variables,
+        patient_profile_id=profile_id,
     )
     db.add(gerado)
     db.flush()
-    nome_paciente = (dados.patient_name or dados.variables.get("nome_paciente") or
+    nome_paciente = (nome_paciente_perfil or dados.patient_name or dados.variables.get("nome_paciente") or
                      dados.variables.get("paciente") or dados.variables.get("nome") or "").strip()
     if nome_paciente:
         gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
+    if snapshot:
+        gerado.patient_snapshot_cifrado = patient_profile_service.cifrar_snapshot(snapshot, gerado.id)
     db.commit()
     db.refresh(gerado)
     return {
         "id": gerado.id, "title": gerado.title, "doc_type": gerado.doc_type,
         "rendered_body": gerado.rendered_body, "created_at": gerado.created_at,
         "patient_name": nome_paciente or None,
+        "patient_profile_id": profile_id,
         "medico": document_identity(user),
     }
+
+
+def _persistir_gerado(
+    db: Session, user, *, doc_type: str, title: str, corpo: str,
+    endereco: str | None, patient_name: str | None, patient_profile_id: int | None, variables: dict,
+    audit_action: str, audit_detail: dict,
+) -> dict:
+    """Ponto único de gravação dos três caminhos de entrada SEM modelo
+    (solicitação de exames, atestado rápido, documento em branco) — mesma
+    forma de resposta de `gerar_documento`, `template_id=None` é o que
+    distingue estes de um documento gerado a partir de `DocumentTemplate`.
+    Resolve o paciente (cadastro reutilizável OU nome avulso) pelo mesmo
+    ponto único que o fluxo de modelo usa — ver
+    `patient_profile_service.resolver_paciente_documento`."""
+    if endereco not in (None, "residencial", "profissional"):
+        raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
+
+    nome_paciente_resolvido, snapshot, profile_id = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=patient_profile_id, patient_name_avulso=patient_name,
+    )
+
+    gerado = GeneratedDocument(
+        patient_id=None, template_id=None, created_by=user.id,
+        doc_type=doc_type, title=title, rendered_body=corpo,
+        endereco_exibido=endereco, variables=variables,
+        patient_profile_id=profile_id,
+    )
+    db.add(gerado)
+    db.flush()
+    nome_paciente = (nome_paciente_resolvido or "").strip()
+    if nome_paciente:
+        gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
+    if snapshot:
+        gerado.patient_snapshot_cifrado = patient_profile_service.cifrar_snapshot(snapshot, gerado.id)
+    db.add(AuditLog(
+        user_id=user.id, action=audit_action, entity="generated_document",
+        entity_id=str(gerado.id), detail=audit_detail,
+    ))
+    db.commit()
+    db.refresh(gerado)
+    return {
+        "id": gerado.id, "title": gerado.title, "doc_type": gerado.doc_type,
+        "rendered_body": gerado.rendered_body, "created_at": gerado.created_at,
+        "patient_name": nome_paciente or None,
+        "patient_profile_id": profile_id,
+        "medico": document_identity(user),
+    }
+
+
+@router.get("/exames-sugeridos")
+def exames_sugeridos(user=Depends(current_user)):
+    """Lista estática de sugestão para o campo de exame da solicitação —
+    NUNCA um catálogo fechado, ver `app.services.documentos_avulsos`. O
+    campo sempre aceita texto livre além destas opções."""
+    return documentos_avulsos.EXAMES_SUGERIDOS
+
+
+class SolicitacaoExamesIn(BaseModel):
+    patient_name: str | None = None
+    patient_profile_id: int | None = None
+    exames: list[str] = Field(min_length=1)
+    indicacao: str | None = None
+    cid: str | None = None
+    prioridade: Literal["rotina", "urgente"] = "rotina"
+    observacoes: str | None = None
+    endereco: str | None = None
+    # Texto que o médico revisou/editou na tela antes de gerar (mesma ideia
+    # de `GerarDocumentoIn.corpo_final`) — quando presente, substitui o
+    # corpo composto automaticamente a partir dos campos estruturados
+    # acima. Os campos estruturados continuam sendo gravados em
+    # `variables`, para "recriar baseado neste" reabrir o formulário certo.
+    corpo_final: str | None = None
+
+
+@router.post("/gerar-exames", status_code=201)
+def gerar_solicitacao_exames(
+    dados: SolicitacaoExamesIn, db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Solicitação de exames avulsa — sem exigir `DocumentTemplate` prévio
+    (pedido do Rafael, 12/08/2026). `exames` sempre aceita item digitado
+    livremente, além da lista de sugestão de `/exames-sugeridos`."""
+    exames = [e.strip() for e in dados.exames if e and e.strip()]
+    if not exames:
+        raise HTTPException(status_code=422, detail="Informe ao menos um exame.")
+
+    indicacao = (dados.indicacao or "").strip() or None
+    cid = (dados.cid or "").strip() or None
+    observacoes = (dados.observacoes or "").strip() or None
+    patient_name = (dados.patient_name or "").strip() or None
+
+    corpo = documentos_avulsos.montar_corpo_solicitacao_exames(
+        exames=exames, indicacao=indicacao, cid=cid,
+        prioridade=dados.prioridade, observacoes=observacoes, patient_name=patient_name,
+    )
+    if dados.corpo_final is not None and dados.corpo_final.strip():
+        corpo = dados.corpo_final
+    return _persistir_gerado(
+        db, user, doc_type=DOC_TYPE_SOLICITACAO_EXAMES, title=documentos_avulsos.TITULO_SOLICITACAO_EXAMES,
+        corpo=corpo, endereco=dados.endereco, patient_name=patient_name,
+        patient_profile_id=dados.patient_profile_id,
+        variables={
+            "exames": exames, "indicacao": indicacao, "cid": cid,
+            "prioridade": dados.prioridade, "observacoes": observacoes,
+            "patient_name": patient_name,
+        },
+        audit_action="gerar_solicitacao_exames",
+        audit_detail={"quantidade_exames": len(exames), "prioridade": dados.prioridade},
+    )
+
+
+class AtestadoRapidoIn(BaseModel):
+    patient_name: str | None = None
+    patient_profile_id: int | None = None
+    dias_afastamento: int | None = Field(default=None, ge=1, le=365)
+    data_inicio: date | None = None
+    data_fim: date | None = None
+    cid: str | None = None
+    observacoes: str | None = None
+    endereco: str | None = None
+    corpo_final: str | None = None
+
+    @model_validator(mode="after")
+    def _valida_periodo(self):
+        if not self.dias_afastamento and not (self.data_inicio and self.data_fim):
+            raise ValueError(
+                "Informe a quantidade de dias de afastamento (com data de início opcional) "
+                "ou um período completo (data de início e data de fim)."
+            )
+        if self.data_inicio and self.data_fim and self.data_fim < self.data_inicio:
+            raise ValueError("A data final não pode ser anterior à data inicial.")
+        return self
+
+
+@router.post("/gerar-atestado", status_code=201)
+def gerar_atestado_rapido(
+    dados: AtestadoRapidoIn, db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Atalho de "Emitir atestado médico" — o mesmo documento que um modelo
+    de atestado geraria, sem exigir que o médico crie o modelo antes. Usa o
+    mesmo `doc_type` ("atestado") dos modelos; `template_id=None` é o que
+    diferencia este caminho na hora de "recriar baseado neste"."""
+    cid = (dados.cid or "").strip() or None
+    observacoes = (dados.observacoes or "").strip() or None
+    patient_name = (dados.patient_name or "").strip() or None
+
+    corpo = documentos_avulsos.montar_corpo_atestado(
+        patient_name=patient_name, dias_afastamento=dados.dias_afastamento,
+        data_inicio=dados.data_inicio, data_fim=dados.data_fim,
+        cid=cid, observacoes=observacoes,
+    )
+    if dados.corpo_final is not None and dados.corpo_final.strip():
+        corpo = dados.corpo_final
+    return _persistir_gerado(
+        db, user, doc_type=DOC_TYPE_ATESTADO, title="Atestado médico",
+        corpo=corpo, endereco=dados.endereco, patient_name=patient_name,
+        patient_profile_id=dados.patient_profile_id,
+        variables={
+            "dias_afastamento": dados.dias_afastamento,
+            "data_inicio": dados.data_inicio.isoformat() if dados.data_inicio else None,
+            "data_fim": dados.data_fim.isoformat() if dados.data_fim else None,
+            "cid": cid, "observacoes": observacoes, "patient_name": patient_name,
+        },
+        audit_action="gerar_atestado_rapido",
+        audit_detail={"dias_afastamento": dados.dias_afastamento},
+    )
+
+
+class DocumentoLivreIn(BaseModel):
+    titulo: str = Field(min_length=1, max_length=200)
+    corpo: str = Field(min_length=1)
+    patient_name: str | None = None
+    patient_profile_id: int | None = None
+    endereco: str | None = None
+
+
+@router.post("/gerar-livre", status_code=201)
+def gerar_documento_livre(
+    dados: DocumentoLivreIn, db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Documento em branco — só título + corpo em texto livre (o campo
+    `corpo` JÁ É o "conteúdo final editável": não há builder automático
+    a sobrepor, o médico controla o texto por inteiro desde o início).
+    Paciente opcional. Não cria `DocumentTemplate` nenhum (é emissão
+    avulsa e imediata; "salvar como modelo" fica para uma rodada futura)."""
+    patient_name = (dados.patient_name or "").strip() or None
+    return _persistir_gerado(
+        db, user, doc_type=DOC_TYPE_DOCUMENTO_LIVRE, title=dados.titulo.strip(),
+        corpo=dados.corpo, endereco=dados.endereco, patient_name=patient_name,
+        patient_profile_id=dados.patient_profile_id,
+        variables={"titulo": dados.titulo.strip(), "corpo": dados.corpo, "patient_name": patient_name},
+        audit_action="gerar_documento_livre",
+        audit_detail={"titulo": dados.titulo.strip()},
+    )
 
 
 def _obter_gerado(gid: int, db: Session, user) -> GeneratedDocument:
@@ -194,6 +442,15 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
         "tem_email_destinatario": g.destinatario_email_cifrado is not None,
         "template_id": g.template_id, "variables": g.variables,
         "patient_name": cofre.decifrar_campo(g.patient_name_cifrado, g.id) if g.patient_name_cifrado else None,
+        # Acrescentados em 12/08/2026: `patient_profile_id` é o atalho de
+        # navegação (nulo se o cadastro foi apagado depois, ou se o
+        # documento nunca teve paciente cadastrado). `patient_snapshot` é
+        # o dado CONGELADO no momento da emissão — nunca uma releitura
+        # ao vivo de `PatientProfile` — usado tanto na prévia "Dados do
+        # paciente utilizados neste documento" quanto em "recriar baseado
+        # neste".
+        "patient_profile_id": g.patient_profile_id,
+        "patient_snapshot": patient_profile_service.decifrar_snapshot(g.patient_snapshot_cifrado, g.id),
     }
 
 
@@ -222,7 +479,7 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
 
     emissor = user
     medico = document_identity(emissor)
-    titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
+    titulo = _TITULOS_DOC_TYPE.get(g.doc_type, g.title)
     pdf_visual = documento_generico(
         titulo=titulo, corpo=g.rendered_body, medico=medico,
         endereco=resolver_endereco(emissor, g.endereco_exibido),
@@ -392,7 +649,7 @@ def envio_paciente_gerado(
         divulgacao = divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(registro))
 
     g.destinatario_email_cifrado = cofre.cifrar_campo(dados.email_paciente, g.id)
-    titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
+    titulo = _TITULOS_DOC_TYPE.get(g.doc_type, g.title)
 
     if dados.canal == CANAL_AUTO_CONTATO_CORVIA:
         link = DocumentShareLink(
