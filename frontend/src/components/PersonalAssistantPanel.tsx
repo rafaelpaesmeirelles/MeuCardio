@@ -50,6 +50,23 @@ type Deslocamento = {
   tips: string[];
 };
 
+type MensagemEmail = {
+  messageId?: string;
+  id?: string;
+  subject?: string;
+  fromAddress?: string;
+  sender?: string;
+  receivedTime?: string;
+  sentDateInGMT?: string;
+  date?: string;
+};
+
+type ResumoEmail = {
+  disponivel: boolean;
+  email_address: string | null;
+  pendentes: MensagemEmail[];
+};
+
 type Props = {
   aberto: boolean;
   onClose: () => void;
@@ -66,26 +83,46 @@ function tipoCompromisso(tipo: string) {
     || "Compromisso";
 }
 
+function dataDoEmail(mensagem: MensagemEmail) {
+  const bruto = mensagem.receivedTime ?? mensagem.sentDateInGMT ?? mensagem.date;
+  if (!bruto) return null;
+  const numero = Number(bruto);
+  const data = Number.isFinite(numero) && String(bruto).length > 8 ? new Date(numero) : new Date(bruto);
+  return Number.isNaN(data.getTime()) ? null : data;
+}
+
+function dataCurtaDoEmail(mensagem: MensagemEmail) {
+  const data = dataDoEmail(mensagem);
+  if (!data) return "";
+  return data.toDateString() === new Date().toDateString()
+    ? data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })
+    : data.toLocaleDateString("pt-BR", { day: "2-digit", month: "short" });
+}
+
 export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
   const [agenda, setAgenda] = useState<Agendamento[] | null>(null);
   const [locais, setLocais] = useState<ProximoLocal[]>([]);
   const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
   const [deslocamento, setDeslocamento] = useState<Deslocamento | null>(null);
+  const [resumoEmail, setResumoEmail] = useState<ResumoEmail | null | undefined>(undefined);
   const [carregandoRota, setCarregandoRota] = useState(false);
   const [erroRota, setErroRota] = useState("");
 
   useEffect(() => {
     if (!aberto) return;
     let ativo = true;
+    setResumoEmail(undefined);
     Promise.all([
       api.get<Agendamento[]>("/appointments").catch(() => []),
       api.get<ProximoLocal[]>("/agenda/workday/next-locations").catch(() => []),
       api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").catch(() => null),
-    ]).then(([compromissos, proximos, preferencias]) => {
+      api.get<ResumoEmail>("/email/resumo").catch(() => null),
+    ]).then(([compromissos, proximos, preferencias, email]) => {
       if (!ativo) return;
       setAgenda(compromissos);
       setLocais(proximos);
       setMobilidade(preferencias);
+      setResumoEmail(email);
     });
     return () => { ativo = false; };
   }, [aberto]);
@@ -145,10 +182,14 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
     );
   }
 
+  if (!aberto) return null;
+
+  const emailsPendentes = resumoEmail?.pendentes ?? [];
+
   return (
     <>
-      <div className={`cos-assistant-backdrop${aberto ? " is-visible" : ""}`} onClick={onClose} aria-hidden="true" />
-      <aside className={`cos-assistant-panel${aberto ? " is-open" : ""}`} aria-hidden={!aberto} aria-label="Assistente Pessoal CorVIA">
+      <div className="cos-assistant-backdrop is-visible" onClick={onClose} aria-hidden="true" />
+      <aside className="cos-assistant-panel is-open" aria-label="Assistente Pessoal CorVIA">
         <header className="cos-assistant-panel__head">
           <div className="cos-assistant-panel__brand">
             <span className="cos-assistant-panel__spark">✦</span>
@@ -198,6 +239,30 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
               </>
             ) : (
               <div className="cos-assistant-empty"><strong>Nenhum local de trabalho futuro configurado.</strong><small>Cadastre sua rotina e endereços na Agenda para receber assistência de deslocamento.</small><Link to="/agenda" onClick={onClose}>Configurar na Agenda <Icone nome="seta" /></Link></div>
+            )}
+          </section>
+
+          <section className="cos-assistant-card">
+            <div className="cos-assistant-card__head"><span><Icone nome="mail" /></span><div><p className="eyebrow">Comunicação</p><h3>O que merece sua atenção</h3></div></div>
+            {resumoEmail === undefined ? (
+              <p className="cos-assistant-state">Verificando seu CorVIA Mail…</p>
+            ) : resumoEmail?.disponivel ? (
+              <>
+                <div className="cos-assistant-briefing__summary">
+                  <div><strong>{emailsPendentes.length}</strong><span>{emailsPendentes.length === 1 ? "mensagem pendente" : "mensagens pendentes"}</span></div>
+                  <div><strong>{resumoEmail.email_address ? "Ativo" : "—"}</strong><span>CorVIA Mail</span></div>
+                </div>
+                {emailsPendentes.slice(0, 2).map((mensagem, indice) => (
+                  <div className="cos-assistant-next" key={mensagem.messageId ?? mensagem.id ?? `${mensagem.subject}-${indice}`}>
+                    <span><Icone nome="mail" /></span>
+                    <div><small>{mensagem.fromAddress ?? mensagem.sender ?? "Mensagem recebida"}{dataCurtaDoEmail(mensagem) ? ` · ${dataCurtaDoEmail(mensagem)}` : ""}</small><strong>{mensagem.subject || "Sem assunto"}</strong></div>
+                  </div>
+                ))}
+                {emailsPendentes.length === 0 && <p className="cos-assistant-state">Nenhuma mensagem pendente no resumo atual.</p>}
+                <Link to="/corvia-mail" onClick={onClose} className="cos-assistant-link">Abrir CorVIA Mail <Icone nome="seta" /></Link>
+              </>
+            ) : (
+              <div className="cos-assistant-empty"><strong>Resumo do Mail indisponível agora.</strong><small>O Assistente continua útil para agenda e deslocamento sem depender do e-mail.</small><Link to="/corvia-mail" onClick={onClose}>Abrir CorVIA Mail <Icone nome="seta" /></Link></div>
             )}
           </section>
 
