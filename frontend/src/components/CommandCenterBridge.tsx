@@ -21,6 +21,7 @@ function guardarEntradaAssistente(modo: "clinica" | "pessoal", pergunta?: string
  * Mantém fora do `main.tsx` os comportamentos exclusivos da nova experiência:
  * - ⌘/Ctrl+K e `/` focam a Command Bar quando a Home está ativa;
  * - pergunta da Command Bar chega pré-preenchida ao Assistente Clínica;
+ * - uma pergunta em “Continuar de onde parei” volta com o texto preservado;
  * - CTA do rail abre diretamente o Assistente Pessoal;
  * - action sheet móvel recebe foco e o mantém enquanto estiver aberto.
  *
@@ -43,9 +44,18 @@ export default function CommandCenterBridge() {
 
     function aoCliqueAssistente(evento: MouseEvent) {
       const alvo = evento.target instanceof Element ? evento.target : null;
-      if (alvo?.closest(".rail-primary--assistant")) {
+      if (!alvo) return;
+
+      if (alvo.closest(".rail-primary--assistant")) {
         guardarEntradaAssistente("pessoal");
+        return;
       }
+
+      const retomada = alvo.closest<HTMLElement>(".context-card");
+      const pergunta = retomada?.querySelector<HTMLElement>(".context-card__type--assistente")
+        ? retomada.querySelector<HTMLElement>("strong")?.textContent?.trim()
+        : "";
+      if (pergunta) guardarEntradaAssistente("clinica", pergunta);
     }
 
     function aoEnviarComando(evento: SubmitEvent) {
