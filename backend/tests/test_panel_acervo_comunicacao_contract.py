@@ -1,56 +1,54 @@
-"""Gates de fonte para o total do acervo e acessos de comunicação no Painel."""
+"""Gates de fonte para acervo e acessos de comunicação no Clinical OS."""
 
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-PAINEL = REPO_ROOT / "frontend/src/pages/Painel.tsx"
+PAINEL = REPO_ROOT / "frontend/src/pages/PainelClinicalOS.tsx"
 BIBLIOTECA = REPO_ROOT / "frontend/src/pages/Biblioteca.tsx"
 GUIA_DOENCAS = REPO_ROOT / "frontend/src/pages/GuiaDoencas.tsx"
-SHELL = REPO_ROOT / "frontend/src/components/Shell.tsx"
+SHELL = REPO_ROOT / "frontend/src/components/ShellClinicalOSLaunch.tsx"
 APP = REPO_ROOT / "frontend/src/App.tsx"
 CHAT = REPO_ROOT / "frontend/src/components/ChatFlutuante.tsx"
+ASSISTENTE_PESSOAL = REPO_ROOT / "frontend/src/components/PersonalAssistantPanel.tsx"
 
 
 def _fonte(caminho: Path) -> str:
     return caminho.read_text(encoding="utf-8")
 
 
-def test_painel_usa_catalogo_canônico_em_vez_de_somar_temas():
+def test_painel_usa_catalogo_canonico_em_vez_de_somar_temas():
     fonte = _fonte(PAINEL)
 
     assert 'api.get<Catalogo>("/library/catalog")' in fonte
-    assert 'valor={catalogo?.published_total ?? catalogo?.total ?? null}' in fonte
+    assert 'catalogo?.published_total ?? catalogo?.total ?? "—"' in fonte
     assert "temas?.reduce" not in fonte
-    assert 'rotulo="conteúdos publicados"' in fonte
+    assert "conteúdos no catálogo" in fonte
 
 
-def test_painel_usa_contagem_transversal_nas_areas_especializadas():
-    fonte = _fonte(PAINEL)
-
-    assert 'api.get<AreaCountsResponse>("/library/area-counts")' in fonte
-    assert "contagensAreas.find((item) => item.id === area.areaId)" in fonte
-    assert "em ${contagem.collections} coleções" in fonte
-
-
-def test_biblioteca_e_guia_exibem_totais_consolidados_por_area():
+def test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca():
+    painel = _fonte(PAINEL)
     biblioteca = _fonte(BIBLIOTECA)
     guia = _fonte(GUIA_DOENCAS)
 
+    # No Clinical Command Center, áreas são pontos de entrada. A contagem
+    # transversal continua tendo fonte canônica única nas páginas que a exibem.
+    assert 'api.get<AreaCountsResponse>("/library/area-counts")' not in painel
     assert 'api.get<AreaCountsResponse>("/library/area-counts")' in biblioteca
     assert "Conteúdos por área clínica" in biblioteca
     assert 'api.get<AreaCountsResponse>("/library/area-counts")' in guia
     assert "conteúdos em {areaCount.collections} coleções" in guia
 
 
-def test_painel_expoe_mail_e_chat_com_acesso_acionavel():
-    fonte = _fonte(PAINEL)
+def test_comunicacao_permanece_acionavel_no_shell_e_no_assistente_pessoal():
+    shell = _fonte(SHELL)
+    assistente = _fonte(ASSISTENTE_PESSOAL)
 
-    assert 'nome: "CorvIA Chat"' in fonte
-    assert 'acao: "abrir-chat"' in fonte
-    assert 'button[aria-label^="Abrir o CorvIA Chat"]' in fonte
-    assert 'nome: "CorvIA Mail"' in fonte
-    assert 'to: "/corvia-mail"' in fonte
+    assert '{ to: "/corvia-mail", rotulo: "CorVIA Mail"' in shell
+    assert 'aria-label="CorVIA Mail"' in shell
+    assert "<ChatFlutuante />" in shell
+    assert "CorVIA Mail" in assistente
+    assert "/corvia-mail" in assistente
 
 
 def test_rotas_menu_e_widget_de_comunicacao_continuam_publicados():
