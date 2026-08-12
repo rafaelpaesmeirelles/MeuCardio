@@ -95,9 +95,13 @@ def test_atualizacao_com_campo_de_documentacao_tambem_nao_quebra(db, tmp_path):
     farmaco = db.query(Drug).filter(Drug.slug == "farmaco-existente-teste").first()
     assert farmaco.generic_name == "Fármaco Existente Atualizado"
     assert farmaco.brand_names == ["MARCA NOVA"]
-    # review_status é explicitamente preservado do lado do banco, não do JSON
-    # (mesma regra já documentada no projeto para review_status em geral).
-    assert farmaco.review_status == "pendente_revisao"
+    # O manifesto canônico é a fonte de verdade também para review_status:
+    # se o JSON promove ou regride um verbete, o banco precisa acompanhar
+    # para que `reconcile_content --publish-reviewed` publique/despublique
+    # de forma coerente. `review_note` continua sendo só documentação e não
+    # ganha persistência implícita.
+    assert farmaco.review_status == "revisado"
+    assert not hasattr(farmaco, "review_note") or "review_note" not in Drug.__table__.columns.keys()
 
 
 def test_registro_novo_com_chave_editorial_totalmente_arbitraria_nao_derruba_a_carga(db, tmp_path):
