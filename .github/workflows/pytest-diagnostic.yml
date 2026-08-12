@@ -10,6 +10,11 @@ permissions:
 
 jobs:
   first-failure:
+    name: First failure shard ${{ matrix.shard }}/4
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
     runs-on: ubuntu-latest
     timeout-minutes: 20
     services:
@@ -73,17 +78,29 @@ jobs:
       - name: Apply migrations
         working-directory: backend
         run: python -m app.commands.migrate
-      - name: Stop on first pytest failure
+      - name: Run shard and stop on first failure
         working-directory: backend
         shell: bash
+        env:
+          SHARD: ${{ matrix.shard }}
         run: |
           set -o pipefail
-          python -m pytest -q -x --tb=short 2>&1 | tee first-failure.txt
+          mapfile -t TEST_FILES < <(python - <<'PY'
+          import os
+          from pathlib import Path
+          shard = int(os.environ['SHARD'])
+          files = sorted(str(p) for p in Path('tests').glob('test_*.py'))
+          for path in files[shard::4]:
+              print(path)
+          PY
+          )
+          printf 'Shard %s: %s test files\n' "$SHARD" "${#TEST_FILES[@]}"
+          python -m pytest -q -x --tb=short "${TEST_FILES[@]}" 2>&1 | tee "first-failure-shard-${SHARD}.txt"
       - name: Upload first failure
         if: failure()
         uses: actions/upload-artifact@v6
         with:
-          name: pytest-first-failure
-          path: backend/first-failure.txt
+          name: pytest-first-failure-${{ matrix.shard }}
+          path: backend/first-failure-shard-${{ matrix.shard }}.txt
           if-no-files-found: error
           retention-days: 2
