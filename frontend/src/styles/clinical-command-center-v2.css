@@ -1,0 +1,657 @@
+/* ======================================================================
+   CorVIA — Clinical Command Center V2
+   Canonical launch direction: proposal 1 from the approved concept board.
+   This layer is intentionally loaded last and is scoped to .clinical-os.
+   ====================================================================== */
+
+.clinical-os {
+  --cos-bg: #041019;
+  --cos-bg-2: #061722;
+  --cos-bg-3: #081e2b;
+  --cos-panel: #081b27;
+  --cos-panel-2: #0b2331;
+  --cos-panel-3: #0d2a39;
+  --cos-panel-hover: #102f40;
+  --cos-line: rgba(148, 205, 219, .12);
+  --cos-line-strong: rgba(148, 205, 219, .22);
+  --cos-line-focus: rgba(69, 210, 223, .42);
+  --cos-text: #f2fbfc;
+  --cos-text-2: #d6e8ec;
+  --cos-muted: #91aab4;
+  --cos-muted-2: #6d8994;
+  --cos-cyan: #42cad8;
+  --cos-cyan-2: #78e5eb;
+  --cos-cyan-soft: rgba(66, 202, 216, .10);
+  --cos-blue: #4ea2f8;
+  --cos-violet: #9f89ff;
+  --cos-green: #5dd2a4;
+  --cos-amber: #efbc62;
+  --cos-red: #f0445d;
+  --cos-red-soft: rgba(240, 68, 93, .11);
+  --cos-shadow: 0 22px 60px rgba(0, 0, 0, .22);
+  --cos-shadow-soft: 0 14px 34px rgba(0, 0, 0, .14);
+  --cos-radius-xs: 9px;
+  --cos-radius-sm: 12px;
+  --cos-radius: 16px;
+  --cos-radius-lg: 22px;
+  --primaria: var(--cos-text);
+  --primaria-escura: var(--cos-text);
+  --acao: var(--cos-cyan);
+  --acao-hover: var(--cos-cyan-2);
+  --acento: var(--cos-cyan);
+  --acento-claro: var(--cos-cyan-2);
+  --fundo: var(--cos-bg);
+  --superficie: var(--cos-panel);
+  --texto: var(--cos-text);
+  --texto-secundario: var(--cos-muted);
+  --borda: var(--cos-line);
+  --linha: var(--cos-line);
+  --fundo-suave: var(--cos-bg-2);
+  color: var(--cos-text);
+  background:
+    radial-gradient(circle at 62% -8%, rgba(66, 202, 216, .09), transparent 28rem),
+    radial-gradient(circle at 102% 20%, rgba(78, 162, 248, .045), transparent 30rem),
+    linear-gradient(180deg, var(--cos-bg) 0%, #05151f 55%, #061722 100%);
+}
+
+/* ---------- Shell: high-density physician workspace ---------- */
+.clinical-os .cos-sidebar {
+  width: 252px;
+  min-width: 252px;
+  background:
+    linear-gradient(180deg, rgba(10, 31, 43, .96), rgba(4, 17, 25, .99));
+  border-right-color: var(--cos-line);
+  box-shadow: 14px 0 44px rgba(0,0,0,.14);
+}
+.clinical-os .cos-shell { margin-left: 252px; }
+.clinical-os .cos-brand {
+  min-height: 78px;
+  padding: .85rem 1rem;
+  background: rgba(255,255,255,.012);
+}
+.clinical-os .cos-brand__mark {
+  width: 40px;
+  height: 40px;
+  flex-basis: 40px;
+  border-radius: 11px;
+}
+.clinical-os .cos-brand__text strong { font-size: 1.24rem; }
+.clinical-os .cos-brand__text small { color: var(--cos-cyan); }
+.clinical-os .cos-nav { padding: .7rem .65rem 1rem; }
+.clinical-os .cos-nav__home {
+  min-height: 48px;
+  margin-bottom: .55rem;
+  border-radius: 11px;
+}
+.clinical-os .cos-nav-group__trigger { min-height: 39px; border-radius: 10px; }
+.clinical-os .cos-nav-group__items a { min-height: 34px; border-radius: 8px; }
+.clinical-os .cos-nav__home.is-active,
+.clinical-os .cos-nav-group__items a.is-active {
+  background: linear-gradient(100deg, rgba(66,202,216,.14), rgba(78,162,248,.04));
+  box-shadow: inset 2px 0 var(--cos-cyan);
+}
+.clinical-os .cos-sidebar__footer { background: rgba(0,0,0,.08); }
+.clinical-os .cos-assistant-sidebar,
+.clinical-os .cos-relations {
+  border-radius: 11px;
+  background: rgba(255,255,255,.025);
+}
+.clinical-os .cos-assistant-sidebar {
+  border-color: rgba(66,202,216,.2);
+  background: linear-gradient(115deg, rgba(66,202,216,.11), rgba(159,137,255,.035));
+}
+
+.clinical-os .cos-topbar {
+  min-height: 68px;
+  padding: .62rem 1rem;
+  background: rgba(4,16,25,.88);
+  border-bottom-color: var(--cos-line);
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+.clinical-os .cos-command-mini {
+  min-height: 42px;
+  max-width: 720px;
+  background: rgba(255,255,255,.033);
+  border-color: rgba(148,205,219,.13);
+}
+.clinical-os .cos-command-mini:focus-within {
+  border-color: var(--cos-line-focus);
+  background: rgba(255,255,255,.045);
+}
+.clinical-os .cos-personal-trigger,
+.clinical-os .cos-emergency,
+.clinical-os .cos-topbar__icon {
+  border-color: var(--cos-line);
+  background: rgba(255,255,255,.025);
+}
+.clinical-os .cos-personal-trigger { background: rgba(66,202,216,.07); }
+
+/* ---------- Workspace ---------- */
+.clinical-os .cos-workspace {
+  min-height: calc(100vh - 68px);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.008) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,.006) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.clinical-os .cos-content {
+  min-width: 0;
+  padding: clamp(1.05rem, 2vw, 1.7rem);
+  background:
+    radial-gradient(circle at 82% 0%, rgba(66,202,216,.028), transparent 21rem),
+    transparent;
+}
+.clinical-os .cos-intelligence {
+  background: rgba(5,19,28,.72);
+  border-left: 1px solid var(--cos-line);
+}
+.clinical-os .cos-intelligence__card,
+.clinical-os .cos-intelligence__graph,
+.clinical-os .cos-intelligence__ask {
+  border-color: var(--cos-line);
+  background: linear-gradient(145deg, rgba(255,255,255,.034), rgba(255,255,255,.014));
+  box-shadow: none;
+}
+.clinical-os .cos-intelligence__card {
+  box-shadow: inset 0 1px rgba(255,255,255,.025);
+}
+
+/* ---------- Canonical page rhythm ---------- */
+.clinical-os .cos-content > :not(.cos-home):not(.credito):not(.credito--compacto) {
+  width: min(100%, 1240px);
+  margin-inline: auto;
+}
+.clinical-os .cos-content > p.eyebrow:first-child,
+.clinical-os .cos-content > div > p.eyebrow:first-child,
+.clinical-os .cos-content article > p.eyebrow:first-child,
+.clinical-os .cos-content section > p.eyebrow:first-child {
+  margin-top: 0;
+}
+.clinical-os .cos-content > h1,
+.clinical-os .cos-content > div > h1:first-of-type {
+  max-width: 25ch;
+  margin: .08rem 0 .48rem;
+  color: var(--cos-text);
+  font-size: clamp(1.82rem, 2.7vw, 2.65rem);
+  letter-spacing: -.045em;
+}
+.clinical-os .cos-content > h1 + p,
+.clinical-os .cos-content > div > h1:first-of-type + p {
+  max-width: 76ch;
+  color: var(--cos-muted);
+  font-size: .94rem;
+}
+.clinical-os .eyebrow {
+  color: var(--cos-cyan-2);
+  font-size: .66rem;
+  letter-spacing: .16em;
+}
+
+/* ---------- Cards / panels / list rows ---------- */
+.clinical-os .cartao,
+.clinical-os [class$="__card"],
+.clinical-os [class*="__card "],
+.clinical-os [class$="__cartao"],
+.clinical-os [class*="__cartao "] {
+  color: var(--cos-text);
+  background: linear-gradient(145deg, rgba(12,35,48,.94), rgba(8,26,37,.96));
+  border-color: var(--cos-line);
+  box-shadow: inset 0 1px rgba(255,255,255,.018), var(--cos-shadow-soft);
+}
+.clinical-os .cartao {
+  padding: 1rem 1.05rem;
+  border-radius: var(--cos-radius);
+}
+.clinical-os .cartao:hover {
+  border-color: rgba(148,205,219,.19);
+}
+.clinical-os .cartao p,
+.clinical-os .cartao li,
+.clinical-os article p,
+.clinical-os article li { color: #9fb5bd; }
+.clinical-os .cartao strong,
+.clinical-os article strong { color: #effbfc; }
+.clinical-os .grade { gap: .8rem; }
+.clinical-os .grade--2,
+.clinical-os .grade--3 { align-items: stretch; }
+
+/* ---------- Forms ---------- */
+.clinical-os label { color: #b6cbd1; font-size: .78rem; }
+.clinical-os input,
+.clinical-os select,
+.clinical-os textarea {
+  color: var(--cos-text);
+  background: rgba(3,15,23,.58);
+  border-color: rgba(148,205,219,.16);
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(255,255,255,.012);
+}
+.clinical-os input::placeholder,
+.clinical-os textarea::placeholder { color: #66828d; }
+.clinical-os input:hover,
+.clinical-os select:hover,
+.clinical-os textarea:hover { border-color: rgba(148,205,219,.25); }
+.clinical-os input:focus,
+.clinical-os select:focus,
+.clinical-os textarea:focus {
+  border-color: rgba(66,202,216,.52);
+  box-shadow: 0 0 0 3px rgba(66,202,216,.07);
+}
+.clinical-os select option { color: var(--cos-text); background: #081b27; }
+.clinical-os .botao {
+  color: #03131b;
+  background: linear-gradient(135deg, #43cad8, #69dbe3);
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px -18px rgba(66,202,216,.7);
+}
+.clinical-os .botao:hover { color: #021117; background: #78e5eb; }
+.clinical-os .botao--secundario {
+  color: #c8f5f8;
+  background: rgba(66,202,216,.055);
+  border-color: rgba(66,202,216,.2);
+  box-shadow: none;
+}
+.clinical-os .botao--secundario:hover { color: #fff; background: rgba(66,202,216,.11); }
+.clinical-os .botao--perigo { color: #fff; background: #d73f56; }
+
+/* ---------- Tables ---------- */
+.clinical-os table {
+  color: #d9e9ec;
+  background: rgba(5,18,27,.42);
+  border-color: var(--cos-line);
+  border-radius: 13px;
+}
+.clinical-os th {
+  padding: .7rem .72rem;
+  color: #86a7b1;
+  background: rgba(255,255,255,.018);
+  border-bottom: 1px solid var(--cos-line);
+  font: 700 .66rem/1.3 var(--fonte-dados);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.clinical-os td {
+  padding: .72rem;
+  border-bottom: 1px solid rgba(148,205,219,.075);
+}
+.clinical-os tbody tr:last-child td { border-bottom: 0; }
+.clinical-os tbody tr:hover td { background: rgba(66,202,216,.028); }
+
+/* ---------- Scientific long-form reading ---------- */
+.clinical-os article blockquote,
+.clinical-os .clinical-richtext blockquote {
+  margin: .85rem 0;
+  padding: .7rem .85rem;
+  color: #c5d9de;
+  background: rgba(66,202,216,.045);
+  border-left: 3px solid rgba(66,202,216,.45);
+  border-radius: 0 10px 10px 0;
+}
+.clinical-os .clinical-richtext { min-width: 0; color: #a7bdc4; }
+.clinical-os .clinical-richtext > :first-child { margin-top: 0; }
+.clinical-os .clinical-richtext > :last-child { margin-bottom: 0; }
+.clinical-os .clinical-richtext p { margin: 0 0 .62rem; color: #a7bdc4; }
+.clinical-os .clinical-richtext strong { color: #edf9fb; }
+.clinical-os .clinical-richtext em { color: #c8dce0; }
+.clinical-os .clinical-richtext code {
+  padding: .08rem .3rem;
+  color: #bff6fa;
+  background: rgba(66,202,216,.075);
+  border: 1px solid rgba(66,202,216,.12);
+  border-radius: 5px;
+  font: .88em/1.4 var(--fonte-dados);
+}
+.clinical-os .clinical-richtext ul,
+.clinical-os .clinical-richtext ol { margin: .35rem 0 .8rem; padding-left: 1.2rem; }
+.clinical-os .clinical-richtext li + li { margin-top: .28rem; }
+.clinical-os .clinical-richtext--compact p { margin-bottom: .35rem; }
+.clinical-os .clinical-richtext a { color: var(--cos-cyan-2); text-decoration: underline; text-decoration-color: rgba(120,229,235,.32); }
+
+/* ---------- Status / badges ---------- */
+.clinical-os .selo {
+  color: #8faab3;
+  background: rgba(255,255,255,.02);
+  border-color: var(--cos-line);
+}
+.clinical-os .selo--revisado {
+  color: #8ee7c1;
+  background: rgba(93,210,164,.075);
+  border-color: rgba(93,210,164,.24);
+}
+.clinical-os .selo--pendente {
+  color: #ff9aaa;
+  background: rgba(240,68,93,.08);
+  border-color: rgba(240,68,93,.24);
+}
+
+/* ---------- Home becomes the command center hero ---------- */
+.clinical-os .cos-home { max-width: 1320px; margin: 0 auto; }
+.clinical-os .cos-home-hero {
+  overflow: hidden;
+  border: 1px solid rgba(148,205,219,.13);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 85% 18%, rgba(66,202,216,.13), transparent 18rem),
+    linear-gradient(145deg, rgba(11,35,49,.98), rgba(5,18,27,.96));
+  box-shadow: var(--cos-shadow);
+}
+.clinical-os .cos-home-hero__question { color: #e9f8fa; }
+.clinical-os .cos-home-command__field {
+  background: rgba(2,13,20,.58);
+  border-color: rgba(120,229,235,.18);
+}
+.clinical-os .cos-home-assistant-spotlight,
+.clinical-os .cos-home-panel,
+.clinical-os .cos-quick-action,
+.clinical-os .cos-recent-card {
+  background: linear-gradient(145deg, rgba(12,35,48,.92), rgba(7,24,34,.95));
+  border-color: var(--cos-line);
+}
+.clinical-os .cos-quick-action.is-primary {
+  background: linear-gradient(135deg, rgba(26,126,143,.9), rgba(14,86,105,.95));
+  border-color: rgba(120,229,235,.27);
+}
+.clinical-os .cos-quick-action.is-emergency {
+  background: linear-gradient(135deg, rgba(96,28,42,.78), rgba(45,18,29,.92));
+  border-color: rgba(240,68,93,.22);
+}
+
+/* ---------- Scientific/catalog pages: filters are compact, not giant chips ---------- */
+.clinical-os .cos-content button:not(.botao):not(.cos-personal-trigger):not(.cos-emergency):not(.cos-topbar__icon):not(.cos-account__trigger):not(.cos-nav-group__trigger):not(.cos-signout):not(.cos-assistant-sidebar):not(.cos-drawer__assistant):not(.cos-mobilebar__assistant) {
+  color: inherit;
+}
+.clinical-os .cos-content [style*="border-radius: 999"],
+.clinical-os .cos-content [style*="borderRadius: 999"] {
+  border-color: var(--cos-line) !important;
+  background: rgba(255,255,255,.025) !important;
+}
+.clinical-os [role="tablist"] {
+  padding: .25rem;
+  background: rgba(3,15,23,.48);
+  border: 1px solid var(--cos-line);
+  border-radius: 12px;
+}
+.clinical-os [role="tab"] {
+  min-height: 36px;
+  color: #78949e;
+  border-radius: 9px;
+}
+.clinical-os [role="tab"][aria-selected="true"] {
+  color: #ecfbfc;
+  background: rgba(66,202,216,.09);
+}
+
+/* ---------- Mail: professional workspace should feel native, not a white page ---------- */
+.clinical-os .cmp-shell {
+  min-height: calc(100vh - 104px);
+  overflow: hidden;
+  background: #061722;
+  border: 1px solid var(--cos-line);
+  border-radius: 18px;
+  box-shadow: var(--cos-shadow);
+}
+.clinical-os .cmp-topbar {
+  color: #eaf8fa;
+  background: #081b27;
+  border-bottom-color: var(--cos-line);
+}
+.clinical-os .cmp-workspace { background: #061722; }
+.clinical-os .cmp-sidebar {
+  color: #9cb5bd;
+  background: #071923;
+  border-right-color: var(--cos-line);
+}
+.clinical-os .cmp-list {
+  background: #081b27;
+  border-right-color: var(--cos-line);
+}
+.clinical-os .cmp-reader { background: #0a202d; }
+.clinical-os .cmp-message { border-bottom-color: rgba(148,205,219,.08); }
+.clinical-os .cmp-message:hover,
+.clinical-os .cmp-message.is-active { background: rgba(66,202,216,.055); }
+.clinical-os .cmp-message__body strong,
+.clinical-os .cmp-message__body b { color: #e9f8fa; }
+.clinical-os .cmp-message__body small { color: #7f9ba5; }
+.clinical-os .cmp-list__header,
+.clinical-os .cmp-reader__header { border-bottom-color: var(--cos-line); background: rgba(255,255,255,.012); }
+.clinical-os .cmp-compose-primary { background: linear-gradient(135deg, #2ab4c4, #43cad8); color: #03141c; }
+.clinical-os .cmp-reader__html { background: white; border-radius: 10px; }
+
+/* ---------- Agenda / docs / prescription / patient workspaces ---------- */
+.clinical-os [class*="agenda"],
+.clinical-os [class*="document"],
+.clinical-os [class*="receit"],
+.clinical-os [class*="round"],
+.clinical-os [class*="paciente"] { border-color: var(--cos-line); }
+.clinical-os [class*="agenda"] [class$="__card"],
+.clinical-os [class*="agenda"] [class*="cartao"],
+.clinical-os [class*="document"] [class$="__card"],
+.clinical-os [class*="receit"] [class$="__card"],
+.clinical-os [class*="round"] [class$="__card"] {
+  background: linear-gradient(145deg, rgba(12,35,48,.92), rgba(7,24,34,.95));
+}
+.clinical-os [class*="preview"],
+.clinical-os [class*="folha"],
+.clinical-os [class*="papel"] {
+  color: #14252d;
+  background: #fff;
+  box-shadow: 0 22px 60px rgba(0,0,0,.32);
+}
+
+/* ---------- Assistant ---------- */
+.clinical-os [class*="assistente"] [class$="__card"],
+.clinical-os [class*="assistant"] [class$="__card"] {
+  background: linear-gradient(145deg, rgba(12,35,48,.96), rgba(7,23,34,.97));
+}
+.clinical-os .cos-assistant-panel {
+  background: linear-gradient(180deg, #091e2b, #061722);
+  border-left-color: var(--cos-line);
+  box-shadow: -22px 0 64px rgba(0,0,0,.28);
+}
+
+/* ---------- Admin / account ---------- */
+.clinical-os [class^="admin"],
+.clinical-os [class*=" admin"],
+.clinical-os [class*="conta"],
+.clinical-os [class*="assinatura"] { border-color: var(--cos-line); }
+.clinical-os [class*="admin-"] input,
+.clinical-os [class*="admin-"] select,
+.clinical-os [class*="conta"] input,
+.clinical-os [class*="conta"] select { background: rgba(3,15,23,.56); }
+
+/* ---------- Emergency keeps its own red identity ---------- */
+.clinical-os--emergency .cos-content {
+  padding: 0;
+  background: #061722;
+}
+.clinical-os--emergency .cos-topbar { border-bottom-color: rgba(240,68,93,.2); }
+
+/* ---------- Desktop floating tools: small, separated, never on content ---------- */
+@media (min-width: 901px) {
+  .clinical-os button[aria-label^="Abrir o CorvIA Chat"] {
+    right: 18px !important;
+    bottom: 22px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border: 1px solid rgba(148,205,219,.15) !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,.28) !important;
+  }
+  .clinical-os .cos-emergency-fab {
+    right: 18px;
+    bottom: 76px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ---------- Mobile is a designed mode, not stacked desktop ---------- */
+@media (max-width: 900px) {
+  .clinical-os {
+    --cos-mobilebar-h: 64px;
+    min-height: 100dvh;
+  }
+  .clinical-os .cos-sidebar { display: none; }
+  .clinical-os .cos-shell { margin-left: 0; }
+  .clinical-os .cos-topbar {
+    position: sticky;
+    min-height: 58px;
+    padding: .48rem .58rem;
+    grid-template-columns: 38px 38px minmax(0,1fr) auto;
+    gap: .36rem;
+  }
+  .clinical-os .cos-topbar__menu,
+  .clinical-os .cos-topbar__mobile-brand { display: grid; place-items: center; }
+  .clinical-os .cos-topbar__menu {
+    width: 36px;
+    height: 36px;
+    color: #cbe0e5;
+    background: transparent;
+    border: 0;
+    border-radius: 9px;
+  }
+  .clinical-os .cos-topbar__mobile-brand {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--cos-line);
+    border-radius: 9px;
+    background: rgba(255,255,255,.025);
+  }
+  .clinical-os .cos-topbar__mobile-brand img { width: 25px; height: 25px; object-fit: contain; }
+  .clinical-os .cos-command-mini {
+    min-width: 0;
+    width: 100%;
+    min-height: 38px;
+    grid-template-columns: 17px minmax(0,1fr) 30px;
+    padding-left: .62rem;
+  }
+  .clinical-os .cos-command-mini kbd { display: none; }
+  .clinical-os .cos-command-mini input { min-width: 0; font-size: .78rem; }
+  .clinical-os .cos-topbar__actions { gap: .25rem; }
+  .clinical-os .cos-personal-trigger { display: none; }
+  .clinical-os .cos-emergency {
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0;
+  }
+  .clinical-os .cos-emergency span { display: none; }
+  .clinical-os .cos-topbar__icon { display: none; }
+  .clinical-os .cos-account__identity,
+  .clinical-os .cos-account__trigger > svg { display: none; }
+  .clinical-os .cos-account__trigger { min-height: 36px; padding: 2px; }
+  .clinical-os .cos-account__trigger > img,
+  .clinical-os .cos-account__avatar { width: 32px; height: 32px; border-radius: 9px; }
+
+  .clinical-os .cos-workspace { display: block; min-height: calc(100dvh - 58px); }
+  .clinical-os .cos-intelligence { display: none; }
+  .clinical-os .cos-content {
+    width: 100%;
+    padding: .9rem .8rem calc(var(--cos-mobilebar-h) + 1.1rem);
+  }
+  .clinical-os .cos-content > :not(.cos-home):not(.credito):not(.credito--compacto) { width: 100%; }
+  .clinical-os .cos-content > h1,
+  .clinical-os .cos-content > div > h1:first-of-type { font-size: 1.72rem; }
+  .clinical-os .cos-content > h1 + p,
+  .clinical-os .cos-content > div > h1:first-of-type + p { font-size: .86rem; }
+  .clinical-os .grade { gap: .62rem; }
+  .clinical-os .grade--2,
+  .clinical-os .grade--3 { grid-template-columns: 1fr !important; }
+  .clinical-os .cartao { padding: .9rem; border-radius: 14px; }
+  .clinical-os table { display: block; max-width: 100%; overflow-x: auto; }
+
+  .clinical-os .cos-mobilebar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 95;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    min-height: var(--cos-mobilebar-h);
+    padding: .32rem max(.35rem, env(safe-area-inset-right)) calc(.24rem + env(safe-area-inset-bottom)) max(.35rem, env(safe-area-inset-left));
+    background: rgba(4,16,25,.96);
+    border-top: 1px solid var(--cos-line-strong);
+    box-shadow: 0 -16px 40px rgba(0,0,0,.24);
+    backdrop-filter: blur(18px) saturate(130%);
+  }
+  .clinical-os .cos-mobilebar > a,
+  .clinical-os .cos-mobilebar > button {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: .18rem;
+    min-width: 0;
+    min-height: 52px;
+    padding: .25rem .1rem;
+    color: #718d97;
+    background: transparent;
+    border: 0;
+    border-radius: 10px;
+    font-size: .61rem;
+    font-weight: 700;
+  }
+  .clinical-os .cos-mobilebar > a svg,
+  .clinical-os .cos-mobilebar > button svg { width: 19px; height: 19px; }
+  .clinical-os .cos-mobilebar > a.active,
+  .clinical-os .cos-mobilebar > a[aria-current="page"] { color: #dffbfc; background: rgba(66,202,216,.075); }
+  .clinical-os .cos-mobilebar__assistant { color: #d8fbfd !important; }
+  .clinical-os .cos-mobilebar__assistant > span:first-child {
+    display: grid;
+    place-items: center;
+    width: 31px;
+    height: 31px;
+    color: #041019;
+    background: linear-gradient(145deg, #53d4df, #91edf1);
+    border-radius: 11px;
+    box-shadow: 0 8px 22px -12px rgba(66,202,216,.95);
+  }
+
+  .clinical-os .cos-drawer {
+    width: min(86vw, 360px);
+    background: linear-gradient(180deg, #071b27, #04131c);
+    border-right: 1px solid var(--cos-line);
+    box-shadow: 24px 0 60px rgba(0,0,0,.4);
+  }
+  .clinical-os .cos-drawer-backdrop { background: rgba(0,8,13,.68); backdrop-filter: blur(5px); }
+
+  /* Critical fix from real-device QA: floating tools cannot cover content. */
+  .clinical-os button[aria-label^="Abrir o CorvIA Chat"],
+  .clinical-os .cos-emergency-fab { display: none !important; }
+
+  .clinical-os .cmp-shell {
+    min-height: calc(100dvh - 58px - var(--cos-mobilebar-h) - 1.2rem);
+    border-radius: 14px;
+  }
+  .clinical-os .cmp-workspace { display: block; }
+  .clinical-os .cmp-sidebar { display: none; }
+  .clinical-os .cmp-list { border-right: 0; min-height: 56vh; }
+  .clinical-os .cmp-reader { min-height: 52vh; }
+  .clinical-os .cmp-topbar { padding-inline: .7rem; }
+
+  .clinical-os .cos-home-hero { border-radius: 17px; }
+  .clinical-os .cos-home-hero__intro h1 { font-size: 1.78rem; }
+  .clinical-os .cos-home-hero__question { font-size: 1.12rem; }
+  .clinical-os .cos-home-command__examples { overflow-x: auto; flex-wrap: nowrap; padding-bottom: .2rem; scrollbar-width: none; }
+  .clinical-os .cos-home-command__examples::-webkit-scrollbar { display: none; }
+  .clinical-os .cos-quick-grid,
+  .clinical-os .cos-recent-grid { grid-template-columns: 1fr 1fr !important; gap: .58rem; }
+  .clinical-os .cos-quick-action,
+  .clinical-os .cos-recent-card { min-height: 92px; padding: .75rem; }
+  .clinical-os .cos-quick-action__copy small,
+  .clinical-os .cos-recent-card__copy small { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+}
+
+@media (max-width: 560px) {
+  .clinical-os .cos-topbar { grid-template-columns: 36px 34px minmax(0,1fr) auto; }
+  .clinical-os .cos-command-mini input::placeholder { color: transparent; }
+  .clinical-os .cos-content { padding-inline: .68rem; }
+  .clinical-os .cos-quick-grid,
+  .clinical-os .cos-recent-grid { grid-template-columns: 1fr 1fr !important; }
+  .clinical-os .cos-quick-action__arrow,
+  .clinical-os .cos-recent-card__arrow { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinical-os *, .clinical-os *::before, .clinical-os *::after { scroll-behavior: auto !important; }
+}
