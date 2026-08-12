@@ -22395,5 +22395,137 @@
         "por_que": "Documento novo, e o fechamento da trilha: recua no tempo até um fator de risco pré-natal comum e potencialmente modificável — a obesidade central no início da gestação —, que antecede tanto o diabetes quanto a hipertensão gestacional discutidos nas etapas anteriores, e mostra a limitação do IMC isolado como medida de adiposidade na gestante."
       }
     ]
+  },
+  {
+    "slug": "trilha-dispositivos-cdi-extravascular-subcutaneo-e-marcapasso-sem-eletrodo-atrial",
+    "titulo": "CDI extravascular, subcutâneo e marca-passo sem eletrodo atrial: a nova geração de dispositivos",
+    "tema": "Dispositivos",
+    "objetivo": "Sair sabendo situar as três alternativas mais recentes ao implante transvenoso clássico — CDI subcutâneo, CDI extravascular e marca-passo sem eletrodo — dentro do que cada uma resolve, do que ainda não resolve, e de que forma a comunicação implante-a-implante começa a juntar as duas frentes de marca-passo sem eletrodo.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+        "por_que": "Ponto de partida obrigatório: sem os fundamentos de indicação e tipo de CDI, as comparações seguintes ficam soltas. É a base sobre a qual toda alternativa de nova geração é julgada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cdi-prevencao-primaria-esc-2022",
+        "por_que": "O mesmo raciocínio de indicação em árvore de decisão — fixa quando um CDI está indicado antes de discutir qual tecnologia de CDI escolher."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cdi-subcutaneo-versus-transvenoso-seguimento-de-longo-prazo-o-ensaio-praetorian-xl",
+        "por_que": "O PRAETORIAN-XL é o seguimento de longo prazo que faltava para o CDI subcutâneo — mostra se a vantagem de evitar o eletrodo intravascular se sustenta com os anos, não só no curto prazo do ensaio original."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cdi-extravascular-ev-icd-estudo-pivotal-e-seguimento-de-longo-prazo",
+        "por_que": "Uma terceira via, mais nova que o subcutâneo: eletrodo fora do coração e fora da veia, mas ainda capaz de estimulação antitaquicardia — o que o subcutâneo não faz. Comparar os dois em sequência mostra o trade-off real entre as duas famílias extravasculares."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "marca-passo-sem-eletrodo-atrial-isolado-para-disfuncao-do-no-sinusal-aveir-ar-e-o-registro-arrive",
+        "por_que": "Muda de família de dispositivo: marca-passo sem eletrodo, agora isolado no átrio, para disfunção do nó sinusal — outro problema estrutural de miniaturização, cronologicamente o mais recente da trilha."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "marca-passo-sem-eletrodo-bicameral-com-comunicacao-implante-a-implante-o-estudo-aveir-dr-i2i",
+        "por_que": "Fecha a trilha mostrando para onde a tecnologia caminha: comunicação implante-a-implante entre dois marca-passos sem eletrodo, unindo o atrial isolado da etapa anterior a um par funcionalmente bicameral sem nenhum eletrodo transvenoso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-terapia-intensiva-choque-cardiogenico-predicao-precoce-e-neuroprognostico-pos-parada",
+    "titulo": "Choque cardiogênico: predição precoce, suporte circulatório mecânico e neuroprognóstico pós-parada",
+    "tema": "Terapia intensiva",
+    "objetivo": "Sair sabendo estadiar o choque cardiogênico, reconhecê-lo antes que ele se instale por completo, escolher entre balão intra-aórtico e Impella como descarga ventricular durante ECMO-VA, e aplicar o algoritmo multimodal correto para prognosticar o paciente que sobrevive à parada cardiorrespiratória.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "classificacao-scai-de-estagios-do-choque-cardiogenico",
+        "por_que": "Começa aqui porque toda decisão de suporte mecânico e todo escore de predição desta trilha só fazem sentido depois de estadiar o choque pela classificação SCAI, hoje a linguagem comum da área."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "escore-early-shock-predicao-pre-hospitalar-de-choque-cardiogenico-no-iamcst",
+        "por_que": "Antes de tratar o choque já instalado, o EARLY SHOCK mostra como prever — ainda na fase pré-hospitalar do IAMCST — quem vai evoluir para ele, abrindo janela para intervir mais cedo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais",
+        "por_que": "Estabelece o que a ECMO-VA de fato agrega no choque do infarto, com os dois ensaios pivotais e a metanálise de dados individuais — a base sem a qual a etapa seguinte, sobre COMO descarregar o ventrículo esquerdo durante essa ECMO, não tem contexto."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "impella-versus-balao-intra-aortico-como-estrategia-de-descarga-ventricular-esquerda-durante-ecmo-va",
+        "por_que": "A pergunta prática de quem já decidiu pela ECMO-VA: qual dispositivo usar para descarregar o ventrículo esquerdo. Comparação direta entre Impella e balão intra-aórtico numa coorte nacional, com o limite do dado observacional declarado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+        "por_que": "Muda de fase clínica: do suporte circulatório durante o choque para o cuidado do paciente que sobrevive à parada. O TTM e o TTM2 são o alicerce do manejo de temperatura sobre o qual o neuroprognóstico da etapa final é construído."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "neuroprognostico-multimodal-pos-parada-cardiorrespiratoria-algoritmo-erc-esicm-2021-e-a-atualizacao-aha-2025",
+        "por_que": "Termina a trilha na pergunta que fecha o ciclo assistencial do choque e da parada: quando é seguro afirmar mau prognóstico neurológico. O algoritmo multimodal ERC-ESICM 2021, com o que a atualização AHA 2025 acrescenta, é o que evita tanto o pessimismo prematuro quanto a obstinação sem base."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-comunicacao-clinica-decisao-compartilhada-em-procedimento-e-desprescricao",
+    "titulo": "Decisão compartilhada em procedimento de alto risco e na desprescrição da polifarmácia",
+    "tema": "Comunicação clínica",
+    "objetivo": "Sair sabendo o que as ferramentas formais de apoio à decisão realmente entregam, e aplicar decisão compartilhada estruturada em três cenários concretos da prática recente: fechamento percutâneo do apêndice atrial esquerdo, escolha entre denervação renal e farmacoterapia na hipertensão, e desprescrição de medicamento cardiovascular na polifarmácia.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "ferramentas-de-apoio-a-decisao-eficacia-real-revisao-cochrane",
+        "por_que": "Começa pela pergunta que costuma ser pulada: ferramenta formal de apoio à decisão funciona de verdade, e o quanto? A revisão Cochrane dá a régua realista contra a qual julgar as três aplicações concretas que vêm a seguir."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "como-apresentar-reducao-de-risco-ao-paciente-relativo-absoluto-ou-frequencia-natural",
+        "por_que": "Antes de aplicar decisão compartilhada a um procedimento, o médico precisa saber comunicar o número de risco sem distorcer a percepção do paciente — habilidade transversal às três decisões que a trilha aborda na sequência."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "decisao-compartilhada-e-ferramentas-de-decisao-no-fechamento-percutaneo-do-apendice-atrial-esquerdo",
+        "por_que": "Primeiro cenário concreto, e o mais formal dos três: a decisão compartilhada aqui não é boa prática opcional, é exigência de registro (CMS/NCDR LAAO Registry) para o procedimento acontecer."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "preferencia-do-paciente-entre-denervacao-renal-e-farmacoterapia-na-hipertensao-o-que-pesa-na-decisao",
+        "por_que": "Segundo cenário: uma decisão entre procedimento e medicamento, medida por um discrete choice experiment — mostra o que realmente pesa na cabeça do paciente, que nem sempre é o que o médico presume."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia-consenso-cientifico-aha-2026",
+        "por_que": "Fecha a trilha no sentido oposto das etapas anteriores: em vez de decidir começar um procedimento ou fármaco, decidir compartilhadamente TIRAR um medicamento da polifarmácia — cenário do consenso científico AHA 2026, cada vez mais comum no cardiopata idoso."
+      }
+    ]
   }
 ]
