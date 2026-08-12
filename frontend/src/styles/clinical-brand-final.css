@@ -1,0 +1,27 @@
+/* Final brand polish from real mobile screenshot review.
+   Keep the existing approved asset; add an explicit wordmark beside it so the
+   compact header reads as CorVIA rather than relying on tiny pixels in the PNG. */
+@media (max-width:900px) {
+  .clinical-os .cos-topbar__mobile-brand {
+    display:inline-flex!important;
+    align-items:center;
+    gap:.38rem;
+    min-width:0;
+    color:#edf9fb;
+    text-decoration:none;
+  }
+  .clinical-os .cos-topbar__mobile-brand::after {
+    content:"CorVIA";
+    color:#f1fbfc;
+    font-size:.82rem;
+    font-weight:750;
+    letter-spacing:-.025em;
+    line-height:1;
+  }
+  .clinical-os .cos-topbar__mobile-brand img {
+    width:26px!important;
+    height:26px!important;
+    object-fit:contain;
+    flex:0 0 auto;
+  }
+}
