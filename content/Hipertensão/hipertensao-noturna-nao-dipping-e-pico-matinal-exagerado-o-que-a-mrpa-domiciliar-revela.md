@@ -4,7 +4,7 @@ slug: hipertensao-noturna-nao-dipping-e-pico-matinal-exagerado-o-que-a-mrpa-domi
 theme: "Hipertensão"
 kind: estudo
 review_status: revisado
-source_refs: ["Tomitani N, Hoshide S, Kario K. Association of nocturnal hypertension, non-dipping, and exaggerated morning blood pressure surge with home blood pressure monitoring parameters. Am J Hypertens. 2026 Aug 8:hpag099. DOI: 10.1093/ajh/hpag099. PMID: 42569922. Abstract completo conferido no PubMed via E-utilities em 11/08/2026."]
+source_refs: ["Tomitani N, Hoshide S, Kario K. Association of nocturnal hypertension, non-dipping, and exaggerated morning surge with home blood pressure monitoring: The HI-JAMP Study. Am J Hypertens. 2026 Aug 8:hpag099. DOI: 10.1093/ajh/hpag099. PMID: 42569922. Abstract completo conferido no PubMed via E-utilities em 11/08/2026 — título corrigido em auditoria (onda 14) para o título verbatim do PubMed, que era paráfrase na versão anterior."]
 legacy_source: "Documento novo, 11/08/2026. Preenche lacuna real do tema: os documentos já publicados sobre MAPA/MRPA (jaleco branco, mascarada, automedida guiando titulação — TASMINH4/HOME BP) não cobriam padrão noturno/dipping/pico matinal, nem a pergunta prática de quando a automedida domiciliar (MRPA), mais barata e acessível, já sinaliza esses padrões sem precisar de MAPA de 24 horas."
 ---
 

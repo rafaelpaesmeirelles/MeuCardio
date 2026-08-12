@@ -764,8 +764,8 @@
     ],
     "gravidade": "moderada",
     "efeito": "Verapamil e diltiazem são inibidores moderados do CYP3A4 e elevam a exposição sistêmica à sinvastatina, aumentando o risco de miopatia dose-dependente.",
-    "conduta": "Com uso concomitante de verapamil ou diltiazem, a dose de sinvastatina não deve exceder 20 mg/dia — limite explícito da bula.",
-    "fonte": "Bula para o profissional de saúde — Sinvastatina (genérico), Merck S/A, item 6 (Interações Medicamentosas): \"Verapamil ou diltiazem: dose de sinvastatina não deve exceder 20 mg/dia.\"",
+    "conduta": "Com uso concomitante de verapamil ou diltiazem, a dose de sinvastatina não deve exceder 10 mg/dia — limite explícito da bula (corrigido em auditoria da onda 14; o valor de 20 mg/dia registrado antes estava trocado com o limite que vale para amiodarona/anlodipino/ranolazina).",
+    "fonte": "Rótulo aprovado pelo FDA/DailyMed para ZOCOR (simvastatin, Organon LLC, setid 8f55d5de-5a4f-4a39-8c84-c53976dd6af9), Seção 2.5 (Dosage Modifications Due to Drug Interactions): \"Do not exceed ZOCOR 10 mg once daily\" com verapamil, diltiazem ou dronedarona — distinto do limite de 20 mg/dia que a mesma tabela define para amiodarona, anlodipino ou ranolazina (ver entrada `amiodarona-sinvastatina`). Verificado via DailyMed em 12/08/2026.",
     "review_status": "revisado"
   },
   {
