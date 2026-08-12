@@ -217,6 +217,9 @@ export default function ShellClinicalOSLaunch() {
   const [fotoQuebrada, setFotoQuebrada] = useState(false);
   const buscaRef = useRef<HTMLInputElement>(null);
   const contaRef = useRef<HTMLDivElement>(null);
+  const drawerRef = useRef<HTMLElement>(null);
+  const fecharDrawerRef = useRef<HTMLButtonElement>(null);
+  const disparadorDrawerRef = useRef<HTMLElement | null>(null);
 
   const naEmergencia = location.pathname.startsWith("/emergencia");
   const foco = ["/emergencia", "/receituario", "/documentos", "/agenda", "/round", "/corvia-mail", "/caixa-de-email", "/avaliacao-preoperatoria"].some((prefixo) => location.pathname.startsWith(prefixo));
@@ -250,11 +253,43 @@ export default function ShellClinicalOSLaunch() {
   useEffect(() => {
     function teclado(evento: KeyboardEvent) {
       if ((evento.ctrlKey || evento.metaKey) && evento.key.toLocaleLowerCase() === "k") { evento.preventDefault(); buscaRef.current?.focus(); }
-      if (evento.key === "Escape") { setDrawer(false); setConta(false); setAssistente(false); }
+      if (evento.key === "Escape") { setConta(false); setAssistente(false); }
     }
     document.addEventListener("keydown", teclado);
     return () => document.removeEventListener("keydown", teclado);
   }, []);
+
+  useEffect(() => {
+    if (!drawer) return;
+    requestAnimationFrame(() => fecharDrawerRef.current?.focus());
+
+    function prenderFoco(evento: KeyboardEvent) {
+      if (evento.key === "Escape") {
+        evento.preventDefault();
+        fecharDrawer(true);
+        return;
+      }
+      if (evento.key !== "Tab") return;
+      const elementos = Array.from(
+        drawerRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((elemento) => elemento.offsetParent !== null);
+      if (elementos.length === 0) return;
+      const primeiro = elementos[0];
+      const ultimo = elementos[elementos.length - 1];
+      if (evento.shiftKey && document.activeElement === primeiro) {
+        evento.preventDefault();
+        ultimo.focus();
+      } else if (!evento.shiftKey && document.activeElement === ultimo) {
+        evento.preventDefault();
+        primeiro.focus();
+      }
+    }
+
+    document.addEventListener("keydown", prenderFoco);
+    return () => document.removeEventListener("keydown", prenderFoco);
+  }, [drawer]);
 
   useEffect(() => {
     if (!conta) return;
@@ -272,6 +307,18 @@ export default function ShellClinicalOSLaunch() {
     ...secao,
     itens: [...secao.itens, { to: "/admin", rotulo: "Administração", icone: "gestao" as NomeIcone, badge: pendentes }, { to: "/admin/usuarios", rotulo: "Assinantes", icone: "pacientes" as NomeIcone }, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia" as NomeIcone }],
   }), [pendentes, usuario?.role]);
+
+  function abrirDrawer(disparador: HTMLElement) {
+    disparadorDrawerRef.current = disparador;
+    setAssistente(false); setConta(false); setDrawer(true);
+  }
+
+  function fecharDrawer(restaurarFoco: boolean) {
+    setDrawer(false);
+    if (restaurarFoco) {
+      requestAnimationFrame(() => disparadorDrawerRef.current?.focus());
+    }
+  }
 
   function executar(evento: FormEvent) {
     evento.preventDefault();
@@ -305,7 +352,7 @@ export default function ShellClinicalOSLaunch() {
 
       <div className="cos-shell">
         <header className="cos-topbar">
-          <button type="button" className="cos-topbar__menu" onClick={() => { setAssistente(false); setConta(false); setDrawer(true); }} aria-label="Abrir navegação"><Icone nome="menu" /></button>
+          <button type="button" className="cos-topbar__menu" onClick={(evento) => abrirDrawer(evento.currentTarget)} aria-label="Abrir navegação"><Icone nome="menu" /></button>
           <NavLink to="/" className="cos-topbar__mobile-brand" aria-label="CorVIA — início"><img src="/corvia-logo-compacta.png" alt="" /></NavLink>
           <form className="cos-command-mini" role="search" onSubmit={executar}><Icone nome="busca" /><input ref={buscaRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pesquisar ou executar uma ação..." aria-label="Pesquisar ou executar uma ação" /><kbd>⌘ K</kbd><button type="submit" aria-label="Executar"><Icone nome="seta" /></button></form>
           <div className="cos-topbar__actions">
@@ -327,10 +374,10 @@ export default function ShellClinicalOSLaunch() {
         </div>
       </div>
 
-      <div className={`cos-drawer-backdrop${drawer ? " is-visible" : ""}`} onClick={() => setDrawer(false)} aria-hidden="true" />
-      <aside className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/corvia-logo-compacta.png" alt="CorVIA" /></NavLink><button type="button" onClick={() => setDrawer(false)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
+      <div className={`cos-drawer-backdrop${drawer ? " is-visible" : ""}`} onClick={() => fecharDrawer(true)} aria-hidden="true" />
+      <aside ref={drawerRef} className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/corvia-logo-compacta.png" alt="CorVIA" /></NavLink><button ref={fecharDrawerRef} type="button" onClick={() => fecharDrawer(true)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
 
-      <nav className="cos-mobilebar" aria-label="Ações principais"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><button type="button" className="cos-mobilebar__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span>Assistente</span></button><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button type="button" onClick={() => { setAssistente(false); setDrawer(true); }}><Icone nome="mais" /><span>Mais</span></button></nav>
+      <nav className="cos-mobilebar" aria-label="Ações principais"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><button type="button" className="cos-mobilebar__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span>Assistente</span></button><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button type="button" onClick={(evento) => abrirDrawer(evento.currentTarget)}><Icone nome="mais" /><span>Mais</span></button></nav>
 
       <PersonalAssistantPanel aberto={assistente} onClose={() => setAssistente(false)} />
       <BoasVindas />
