@@ -21,9 +21,24 @@ const MARCADORES_EDITORIAIS = [
   "verificacao humana necessaria",
 ];
 
+const MARCADORES_VERIFICACAO = [
+  "verificação humana necessária",
+  "verificacao humana necessaria",
+];
+
+/** Retorna true quando o texto de origem ainda carrega uma pendência clínica
+ * explícita. A informação operacional continua fora do corpo assistencial,
+ * mas a superfície precisa sinalizar a pendência em vez de deixar um selo de
+ * revisão criar falsa certeza editorial. */
+export function temVerificacaoHumana(valor?: string | null) {
+  if (!valor) return false;
+  const normalizado = valor.toLocaleLowerCase("pt-BR");
+  return MARCADORES_VERIFICACAO.some((marcador) => normalizado.includes(marcador));
+}
+
 /**
  * Conteúdo clínico pode carregar trilhas editoriais úteis para auditoria, mas
- * essas trilhas não pertencem à superfície assistencial. Preservamos o texto
+ * essas trilhas não pertencem ao corpo assistencial. Preservamos o texto
  * original no backend e removemos apenas o sufixo operacional da apresentação.
  */
 export function textoParaSuperficieClinica(valor?: string | null) {
@@ -48,7 +63,16 @@ export function textoParaSuperficieClinica(valor?: string | null) {
 
 export default function ClinicalText({ children, className = "", fallback = "Sem dado publicado.", compact = false }: Props) {
   const texto = textoParaSuperficieClinica(children);
-  if (!texto) return <p className={className}>{fallback}</p>;
+  const verificacaoPendente = temVerificacaoHumana(children);
+
+  if (!texto) {
+    return (
+      <div className={`clinical-richtext${compact ? " clinical-richtext--compact" : ""}${className ? ` ${className}` : ""}`}>
+        <p>{fallback}</p>
+        {verificacaoPendente && <p className="clinical-editorial-warning" role="status">Revisão editorial pendente neste trecho.</p>}
+      </div>
+    );
+  }
 
   return (
     <div className={`clinical-richtext${compact ? " clinical-richtext--compact" : ""}${className ? ` ${className}` : ""}`}>
@@ -62,6 +86,7 @@ export default function ClinicalText({ children, className = "", fallback = "Sem
       >
         {texto}
       </ReactMarkdown>
+      {verificacaoPendente && <p className="clinical-editorial-warning" role="status">Revisão editorial pendente neste trecho.</p>}
     </div>
   );
 }
