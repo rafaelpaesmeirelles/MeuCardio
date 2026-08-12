@@ -9560,5 +9560,130 @@
       "remodelamento miocárdico",
       "prognóstico"
     ]
+  },
+  {
+    "slug": "nt-probnp-biomarcadores-pos-exercicio-atleta",
+    "name": "NT-proBNP e outros biomarcadores de estresse miocárdico após exercício prolongado no atleta",
+    "category": "laboratorial",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "NT-proBNP (peptídeo natriurético tipo B N-terminal), com menção a galectina-3 e ST2 como marcadores complementares de fibrose e remodelamento, medidos em atleta após esforço prolongado ou muito intenso (ex.: ultramaratona), para diferenciar resposta biológica fisiológica ao exercício de achado que exige investigação cardiovascular.",
+    "reference_range": "Não há ponto de corte validado específico para o contexto pós-exercício no atleta — faixas de referência específicas para esse cenário ainda não estão estabelecidas. Dados de revisão clínica de 2026: após ultramaratona de 60 km, o NT-proBNP teve aumento mediano de 3,5 vezes o valor basal, com a proporção de indivíduos acima do limite diagnóstico saltando de 0% no pré-prova para 28% no pós-prova (p = 0,016). Galectina-3 aumentou em média 2,4 vezes, com 67% dos participantes acima do limite diagnóstico (p < 0,001); ST2 (corte clínico de referência de 35 ng/mL) ficou acima desse corte em 92,7% dos participantes após a corrida.",
+    "indications": "Atleta sintomático (dispneia desproporcional, dor torácica, síncope) após esforço prolongado, ou investigação de possível disfunção ventricular no pós-exercício. Não é exame de rastreamento de rotina em atleta assintomático.",
+    "interpretation": "Ao contrário da troponina (pico entre 2 e 6 horas, retorno ao basal em até 24 horas em padrão fisiológico), o NT-proBNP tem cinética mais lenta — atinge pico mais tardiamente e permanece elevado por até 72 horas após esforço intenso, em padrão de adaptação fisiológica. O critério cinético proposto pela revisão distingue: padrão fisiológico é retorno ao basal em 24 a 72 horas, com ECG e imagem normais e sem sintomas; padrão preocupante é elevação que persiste além de 72 horas ou com trajetória ascendente, associada a alteração de ECG/imagem ou a sintomas (dor torácica, dispneia desproporcional, síncope). A abordagem recomendada é amostragem seriada — basal, 3 horas e 24 horas pós-exercício —, e elevação prolongada além de 72 horas ou apresentação sintomática exige investigação adicional (correlação com ECG e ecocardiograma).",
+    "limitations": "Não existe algoritmo único validado nem faixa de referência específica estabelecida para o contexto esportivo. Uma dosagem isolada nas primeiras horas não define a trajetória — o NT-proBNP pode continuar subindo depois que a troponina já iniciou o declínio, e repetir a dosagem cedo demais não permite 'descartar' elevação patológica. Galectina-3 e ST2 não têm papel estabelecido de triagem rotineira no atleta assintomático; a fonte os cita apenas como evidência adicional da magnitude da resposta biológica ao esforço extremo, não como recomendação de uso clínico de rotina. Não aplicar ao atleta pós-esforço os mesmos pontos de corte de NT-proBNP validados para triagem de insuficiência cardíaca em população sintomática não atleta, sem considerar o contexto temporal do exame.",
+    "source_refs": [
+      "Wu C, Zhao Y, Zhao Y. Cardiac biomarkers in athletes and active individuals: a clinical review of exercise-induced elevations and diagnostic interpretation. Front Physiol. 2026;17:1868998. DOI: 10.3389/fphys.2026.1868998. PMID: 42516255."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "NT-proBNP",
+      "biomarcadores",
+      "atleta",
+      "exercício",
+      "galectina-3",
+      "ST2",
+      "cardiologia do esporte"
+    ]
+  },
+  {
+    "slug": "troponina-alta-sensibilidade-pos-exercicio-intenso-atleta",
+    "name": "Troponina de alta sensibilidade após exercício intenso no atleta",
+    "category": "laboratorial",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "hs-cTnI e hs-cTnT medidas após exercício prolongado ou muito intenso (maratona, ultramaratona, ciclismo de longa distância), para diferenciar elevação por adaptação fisiológica ao esforço de injúria miocárdica associada a síndrome coronariana aguda.",
+    "reference_range": "Meta-análise de 2023 (13 estudos, 824 maratonistas): hs-cTnI e hs-cTnT aumentam significativamente após a prova, com retorno de hs-cTnT ao basal entre 72 e 96 horas na análise agregada. Estudo prospectivo de 2024 com corredores não elite da Maratona de Pequim: mais de 72% apresentaram hs-cTnI acima do percentil 99 após a prova, com normalização de achados laboratoriais e ecocardiográficos em 2 semanas de seguimento. Em coorte de 97 ciclistas recreacionais, 95-96% preencheram critério laboratorial isolado de infarto agudo do miocárdio (hs-cTnT) às 3 horas pós-prova, avaliando apenas o valor de troponina, sem outro critério clínico associado.",
+    "indications": "Atleta que procura atendimento após maratona, ultramaratona ou esforço extremo com sintomas sugestivos de síndrome coronariana aguda — dor torácica típica ou persistente, dispneia desproporcional, síncope ou instabilidade hemodinâmica, alteração isquêmica no ECG, arritmia significativa. Não é exame de rastreamento de rotina após treino ou competição em atleta assintomático.",
+    "interpretation": "Ultrapassar o percentil 99 após exercício intenso não é raro e não deve ser automaticamente equiparado a síndrome coronariana aguda — em padrão fisiológico, a troponina retorna ao basal em até 24 horas. Estudo que comparou 45 corredores pós-maratona a 84 pacientes com IAM tipo 1 mostrou que, apesar de 82% dos corredores terem cTnT total acima do limite superior de referência, a proporção de formas longas/intactas da molécula liberada foi muito menor do que nos pacientes com IAM — reforçando que a liberação pós-exercício tem características biológicas distintas da necrose miocárdica típica do IAM tipo 1 (achado fisiopatológico de grupo, não um teste clínico capaz de descartar infarto em um indivíduo). A interpretação depende de sintomas, ECG, cinética seriada, risco basal — incluindo aterosclerose coronária conhecida — e imagem quando indicada, nunca do valor isolado.",
+    "limitations": "A alta frequência de elevação transitória (mais de 70-95% conforme o estudo e o cenário) cria risco de investigação excessiva quando não há pergunta clínica adequada — não dosar troponina de rotina em atleta assintomático após treino ou competição, sem papel estabelecido como estratégia de rastreamento cardiovascular. O achado de composição molecular distinta entre troponina pós-exercício e pós-IAM (Airaksinen 2024) é informação fisiopatológica de grupo, não um teste validado para decisão individual. Em atleta com aterosclerose coronária conhecida (ex.: atleta master), o achado pós-exercício não deve ser usado isoladamente para tranquilizar nem para alarmar.",
+    "source_refs": [
+      "Dong X, et al. The association between marathon running and high-sensitivity cardiac troponin: A systematic review and meta-analysis. J Back Musculoskelet Rehabil. 2023;36:1023-1031. DOI: 10.3233/BMR-220352. PMID: 37248881.",
+      "Wang X, et al. Exercise-induced cardiac troponin elevations and cardiac ventricular dysfunction assessed by tissue Doppler echocardiography and speckle tracking among non-elite runners in Beijing marathon. J Sci Med Sport. 2024;27:508-514. DOI: 10.1016/j.jsams.2024.04.005. PMID: 38697867.",
+      "Airaksinen KEJ, et al. Composition of cardiac troponin release differs after marathon running and myocardial infarction. Open Heart. 2024. PMID: 39551608.",
+      "Janssen SLJE, et al. Exercise-induced cardiac troponin release in athletes with versus without coronary atherosclerosis. Am J Physiol Heart Circ Physiol. 2024;326:H1045-H1052. DOI: 10.1152/ajpheart.00021.2024. PMID: 38363583."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "hs-cTn",
+      "atleta",
+      "maratona",
+      "exercício",
+      "cardiologia do esporte"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-coracao-atleta-feminina-parametros-referencia",
+    "name": "Ecocardiograma no coração da atleta feminina — parâmetros de referência específicos por sexo",
+    "category": "imagem",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "Dimensões e função biventricular ao ecocardiograma transtorácico — volume diastólico final indexado, massa ventricular esquerda indexada, volume atrial esquerdo indexado, espessura parietal — em mulheres atletas, comparadas a mulheres sedentárias e a atletas homens, para estabelecer referência de remodelamento estrutural fisiológico específica do sexo feminino.",
+    "reference_range": "Meta-análise de 2026 (41 estudos, 11.956 atletas mulheres, 14.014 atletas homens, 549 mulheres não atletas): comparadas às não atletas, as atletas apresentaram maior volume diastólico final indexado do VE (72,5 vs. 55,4 mL/m²), maior massa ventricular esquerda indexada (80,8 vs. 62,1 g/m²) e maior volume atrial esquerdo indexado (29,2 vs. 22,4 mL/m²). Nos atletas homens, a massa ventricular esquerda indexada foi cerca de 21% maior do que nas atletas mulheres.",
+    "indications": "Avaliação do remodelamento cardíaco induzido pelo treinamento em mulheres atletas, na triagem pré-participação ou na investigação de achado inesperado (hipertrofia, dilatação) — sempre com referência específica de sexo, não a referência masculina nem a de mulher sedentária.",
+    "interpretation": "O grau de remodelamento estrutural induzido pelo treino é menor nas mulheres do que nos homens, mas real e mensurável em relação a mulheres sedentárias — estudo comparativo de 2024 com 1.096 indivíduos (360 atletas olímpicas, 410 atletas homens, 130 mulheres sedentárias, 196 homens sedentários) mostrou nas atletas, em relação às não atletas, menor frequência cardíaca de repouso, PR mais longo, maior voltagem de R e T, mais bloqueio incompleto de ramo direito, mais critérios elétricos de hipertrofia ventricular esquerda, repolarização precoce e inversão anterior de T mais frequentes, além de maiores dimensões cavitárias biventriculares e maior espessura parietal do VE. A modalidade esportiva influencia principalmente a estrutura — dimensões de VE/VD e espessura parietal aumentam progressivamente das modalidades de habilidade/potência para as mistas e de endurance —, com efeito menos marcado sobre o ECG nas mulheres do que nos homens. Etnia também modifica a interpretação: na meta-análise de 2026, inversão de onda T foi mais frequente em atletas negras (15,2%) do que em brancas (5,4%), atletas das ilhas do Pacífico (2,6%) e atletas Métis (0,7%).",
+    "limitations": "Achados que exigem avaliação adicional, independente do sexo: hipertrofia desproporcional ao tipo de treinamento, disfunção sistólica, dilatação ventricular associada a função anormal, inversões de T em território não compatível com padrão reconhecido de atleta, ectopia ventricular complexa, síncope ou palpitações significativas, história familiar de cardiomiopatia ou morte súbita, e fibrose ou outro achado patológico na ressonância cardíaca. Sexo, ancestralidade, território da inversão de T, sintomas, história familiar e imagem devem ser integrados — nenhum critério isolado, incluindo sexo ou etnia, classifica sozinho um achado como fisiológico ou patológico; a diferença de prevalência de inversão de T por ancestralidade não significa que toda inversão em atleta negra seja fisiológica.",
+    "source_refs": [
+      "D'Ascenzi F, et al. Electrical and structural remodelling in female athlete's heart: A comparative study in women vs men athletes and controls. Int J Cardiol. 2024;400:131808. DOI: 10.1016/j.ijcard.2024.131808. PMID: 38262482.",
+      "Laurier N, et al. Normal echocardiographic and electrocardiographic indices in young female athletes: a meta-analysis across sex, types of sports, races, and ethnicities. Eur J Prev Cardiol. 2026;33:1332-1344. DOI: 10.1093/eurjpc/zwaf755. PMID: 41289042."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "coração de atleta",
+      "atleta feminina",
+      "remodelamento cardíaco",
+      "cardiologia do esporte"
+    ]
+  },
+  {
+    "slug": "tcpe-interpretacao-funcional-atleta",
+    "name": "Teste cardiopulmonar de exercício (TCPE) no atleta — interpretação funcional",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "Resposta cardiovascular, ventilatória e metabólica integrada durante esforço progressivo — consumo de oxigênio de pico, limiares ventilatórios, relação ventilação/produção de CO₂, pulso de oxigênio, resposta cronotrópica, comportamento da pressão arterial, saturação e eventual arritmia ou sintoma — em atleta, para investigar queda de desempenho, dispneia/fadiga inexplicada ou reserva funcional real.",
+    "reference_range": "Não há valor de corte único aplicável — a interpretação depende de modalidade, nível de treinamento, sexo, tamanho corporal e demanda específica do esporte. Estudo de 2025 com atletas de elite (rastreamento antes dos Jogos Europeus de 2023 e dos Jogos Olímpicos de 2024) mostrou que a classificação esportiva baseada apenas em adaptação morfológica não captura integralmente a heterogeneidade funcional observada no TCPE.",
+    "indications": "Dispneia ou fadiga sem explicação clara; queda de desempenho em atleta previamente estável; diferenciação entre limitação cardiovascular, ventilatória e descondicionamento; avaliação funcional em cardiopatia conhecida; acompanhamento após miocardite ou outra doença cardiovascular; definição objetiva de resposta ao tratamento; prescrição individualizada de exercício; decisão de retorno ao esporte, sempre integrado — não isolado — à estratificação de risco etiológica.",
+    "interpretation": "Um valor considerado normal em referência de população geral pode representar limitação real em atleta altamente treinado, e valores extremos podem ser fisiológicos quando coerentes com a modalidade e o restante da avaliação — por exemplo, consumo de oxigênio muito elevado é esperado em endurance, enquanto atletas de força/potência têm padrão funcional distinto sem representar doença. O consenso EAPC/EACVI de 2026 reforça a combinação do TCPE com imagem de exercício (ecocardiografia sob esforço, ressonância cardíaca de exercício) quando a avaliação em repouso não explica sintomas ou suspeita hemodinâmica. A declaração AHA/ACC 2025 recomenda que testes de esforço usados para decisão esportiva atinjam, sempre que possível, esforço máximo e reproduzam a demanda da modalidade.",
+    "limitations": "O TCPE fornece um marcador objetivo de recuperação funcional, mas não substitui avaliação etiológica nem estratificação de risco específica da doença — desempenho alto não exclui substrato arrítmico, e desempenho reduzido não define sozinho contraindicação ao esporte. A declaração AHA/ACC 2025 não encontrou dados suficientes para recomendar teste de esforço como rastreamento primário de rotina em todo atleta assintomático — continua sendo teste de segunda linha, dirigido por achado clínico ou eletrocardiográfico prévio, e não uma triagem universal indiscriminada.",
+    "source_refs": [
+      "Squeo MR, et al. Cardiopulmonary Exercise Testing in Elite Athletes: Rethinking Sports Classification. J Clin Med. 2025;14:4655. DOI: 10.3390/jcm14134655. PMID: 40649028.",
+      "D'Ascenzi F, et al. Indications, protocols, and interpretation of cardiovascular imaging for the evaluation and management of athletes: EAPC/EACVI consensus, Part 1 — Exercise imaging. Eur Heart J Cardiovasc Imaging. 2026. DOI: 10.1093/ehjci/jeag130. PMID: 42332973.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151:e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tcpe",
+      "teste cardiopulmonar de exercício",
+      "atleta",
+      "consumo de oxigênio",
+      "cardiologia do esporte"
+    ]
+  },
+  {
+    "slug": "ecg-triagem-pre-participacao-esportiva-aha-acc-2025",
+    "name": "Eletrocardiograma de 12 derivações na triagem cardiovascular pré-participação esportiva (AHA/ACC 2025)",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "ECG de 12 derivações interpretado com critérios específicos para atleta — não os critérios de população geral —, como componente possível, não obrigatório, da avaliação cardiovascular pré-participação esportiva, ao lado de história cardiovascular/familiar direcionada e exame físico.",
+    "reference_range": "Não se aplica corte numérico único — o exame é interpretado por padrão qualitativo. Achados considerados adaptação fisiológica do treinamento (voltagem aumentada, repolarização precoce, entre outros) são distintos de achados que justificam investigação dirigida: padrões específicos de inversão de onda T, depressão difusa de segmento ST, ondas Q patológicas e bloqueio completo de ramo esquerdo.",
+    "indications": "A declaração científica AHA/ACC 2025 considera razoável incluir o ECG de 12 derivações no rastreamento pré-participação, porque ele aumenta a detecção de doença cardíaca potencialmente relevante em atleta assintomático em comparação com história e exame físico isolados — recomendação condicionada à disponibilidade de profissional treinado em critérios contemporâneos específicos do atleta e de via organizada de investigação dos achados anormais.",
+    "interpretation": "O ECG de atleta não deve ser interpretado com os critérios de população geral — o treinamento físico produz adaptações elétricas fisiológicas que podem ser confundidas com anormalidade se lidas fora desse contexto. Quando o ECG é anormal pelos critérios específicos do atleta, a investigação subsequente deve ser orientada pelo padrão encontrado e pelo contexto clínico — sintomas, história familiar, exame físico. A declaração de 2025 não encontrou dados suficientes para recomendar ecocardiograma, teste de esforço ou monitorização ambulatorial de ritmo como rastreamento primário de rotina para todo atleta assintomático; esses métodos seguem como teste de segunda linha, dirigido pelo achado do ECG ou pela clínica, não como rastreamento universal indiscriminado.",
+    "limitations": "Mesmo um ECG corretamente interpretado não detecta todas as causas de parada cardíaca súbita — algumas condições são eletricamente silenciosas, como certas anomalias coronarianas, aortopatias, doença valvar relevante e algumas arritmias induzidas por catecolaminas. Um programa de ECG sem interpretação especializada e sem via organizada de investigação subsequente gera falso positivo, exame desnecessário, ansiedade, custo e afastamento esportivo indevido. Nenhum programa de triagem elimina o risco de morte súbita — por isso, plano de emergência com desfibrilador externo automático disponível é parte indissociável da prevenção, independente do modelo de triagem adotado.",
+    "source_refs": [
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. J Am Coll Cardiol. 2025;85(10):1059-1108. DOI: 10.1016/j.jacc.2024.12.025. PMID: 39976316.",
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151:e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecg",
+      "triagem pré-participação",
+      "atleta",
+      "morte súbita",
+      "cardiologia do esporte"
+    ]
   }
 ]
