@@ -1,6 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { api, ApiError } from "../lib/api";
-import { Carregando, Erro, Vazio } from "../components/Estado";
+import { Carregando, Erro } from "../components/Estado";
+import {
+  ClinicalContextLink,
+  ClinicalEmpty,
+  ClinicalMetric,
+  ClinicalPageHeader,
+  ClinicalSection,
+} from "../components/ClinicalCommandPrimitives";
 
 type Atualizacao = {
   id: number;
@@ -28,6 +35,12 @@ function dataBr(valor: string) {
   return new Date(valor).toLocaleDateString("pt-BR", { timeZone: "UTC" });
 }
 
+function statusLabel(status: Atualizacao["status"]) {
+  if (status === "revisada") return "Revisada";
+  if (status === "aguardando_revisao") return "Aguardando revisão";
+  return "Detectada";
+}
+
 export default function Diretrizes() {
   const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
   const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
@@ -47,15 +60,10 @@ export default function Diretrizes() {
 
   async function marcarLida(id: number) {
     try {
-      const resposta = await api.post<{ notification_id: number; read_at: string }>(
-        `/guideline-updates/${id}/read`,
-        {},
-      );
+      const resposta = await api.post<{ notification_id: number; read_at: string }>(`/guideline-updates/${id}/read`, {});
       setNotificacoes((atual) => atual ? {
         ...atual,
-        items: atual.items.map((item) => item.notification_id === id
-          ? { ...item, read_at: resposta.read_at }
-          : item),
+        items: atual.items.map((item) => item.notification_id === id ? { ...item, read_at: resposta.read_at } : item),
       } : atual);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível marcar o alerta como lido.");
@@ -66,77 +74,79 @@ export default function Diretrizes() {
   if (!atualizacoes || !notificacoes) return <Carregando texto="Verificando publicações oficiais…" />;
 
   const naoLidas = notificacoes.items.filter((item) => !item.read_at);
+  const revisadas = atualizacoes.items.filter((item) => item.status === "revisada").length;
+  const organizacoes = useMemo(() => new Set(atualizacoes.items.map((item) => item.org).filter(Boolean)).size, [atualizacoes.items]);
 
   return (
-    <>
-      <p className="eyebrow">Diretrizes</p>
-      <h1>Alertas de novas diretrizes</h1>
-      <p style={{ maxWidth: "72ch", color: "var(--texto-secundario)" }}>
-        Este painel mostra somente publicações oficiais com data igual ou posterior a{" "}
-        <strong>10/08/2026</strong>. A detecção automática confirma que a publicação existe;
-        ela não modifica recomendações, doses ou protocolos da Corvia sem revisão clínica humana.
-      </p>
+    <div className="cc-page cc-guidelines-page">
+      <ClinicalPageHeader
+        eyebrow="Guidelines"
+        title="Diretrizes e alertas clínicos"
+        description="Publicações oficiais detectadas com rastreabilidade. Nenhuma recomendação, dose ou protocolo muda na CorVIA sem revisão clínica humana."
+        icon="documento"
+        actions={[
+          { to: "/evidencias", label: "Evidências", icon: "evidencia" },
+          { to: "/estudos", label: "Estudos", icon: "evidencia", tone: "primary" },
+        ]}
+        meta={<><span className="selo">monitoramento oficial</span><span className="selo">revisão humana</span></>}
+      />
+
+      <div className="cc-metrics">
+        <ClinicalMetric label="Publicações" value={atualizacoes.items.length} detail={`desde ${dataBr(atualizacoes.cutoff)}`} icon="documento" />
+        <ClinicalMetric label="Novas para você" value={naoLidas.length} detail="alertas ainda não lidos" icon="evidencia" />
+        <ClinicalMetric label="Revisadas" value={revisadas} detail="análise clínica concluída" icon="check" />
+        <ClinicalMetric label="Organizações" value={organizacoes} detail="fontes oficiais detectadas" icon="documento" />
+      </div>
 
       {naoLidas.length > 0 && (
-        <section style={{ marginTop: "1.2rem" }}>
-          <p className="eyebrow">Novos para você</p>
-          <div style={{ display: "grid", gap: "0.8rem" }}>
+        <ClinicalSection eyebrow="Seu radar clínico" title="Novos para você" description="Priorize o que foi publicado desde sua última revisão.">
+          <div className="cc-guideline-alerts">
             {naoLidas.map((item) => (
-              <article key={item.notification_id} className="cartao painel__funcao painel__funcao--destaque">
-                <p className="eyebrow" style={{ margin: 0 }}>
-                  {item.guideline.org} · publicado em {dataBr(item.guideline.published_at)}
-                </p>
-                <strong>{item.guideline.title}</strong>
-                <span>{item.message}</span>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  {item.guideline.url && (
-                    <a className="botao" href={item.guideline.url} target="_blank" rel="noopener noreferrer">
-                      Abrir publicação oficial ↗
-                    </a>
-                  )}
-                  <button className="botao botao--secundario" onClick={() => marcarLida(item.notification_id)}>
-                    Marcar como lido
-                  </button>
+              <article key={item.notification_id} className="cc-guideline-alert">
+                <div className="cc-guideline-alert__copy">
+                  <small>{item.guideline.org} · {dataBr(item.guideline.published_at)}</small>
+                  <strong>{item.guideline.title}</strong>
+                  <p>{item.message}</p>
+                </div>
+                <div className="cc-guideline-alert__actions">
+                  {item.guideline.url && <a className="botao" href={item.guideline.url} target="_blank" rel="noopener noreferrer">Abrir oficial ↗</a>}
+                  <button className="botao botao--secundario" type="button" onClick={() => void marcarLida(item.notification_id)}>Marcar como lido</button>
                 </div>
               </article>
             ))}
           </div>
-        </section>
+        </ClinicalSection>
       )}
 
-      <section className="painel__grupo">
-        <h2>Publicações identificadas desde 10/08/2026</h2>
-        <p className="painel__grupo-sub">
-          Itens aguardando revisão clínica permanecem claramente rotulados; nenhum conteúdo da plataforma é atualizado em silêncio.
-        </p>
+      <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="Itens não revisados permanecem explicitamente rotulados; detecção não equivale a mudança clínica.">
         {atualizacoes.items.length === 0 ? (
-          <Vazio
-            titulo="Nenhuma nova diretriz oficial identificada"
-            acao="A rotina continuará consultando automaticamente as fontes oficiais."
-          />
+          <ClinicalEmpty title="Nenhuma nova diretriz oficial identificada" description="A rotina de monitoramento continua consultando as fontes oficiais." />
         ) : (
-          <div className="painel__funcoes">
+          <div className="cc-guideline-list">
             {atualizacoes.items.map((item) => (
-              <article key={item.id} className="cartao painel__funcao">
-                <p className="eyebrow" style={{ margin: 0 }}>
-                  {item.org} · {dataBr(item.published_at)}
-                </p>
-                <strong>{item.title}</strong>
-                <span>
-                  {item.status === "revisada"
-                    ? "Revisão clínica concluída."
-                    : "Publicação detectada; análise clínica aguardando revisão humana."}
-                </span>
-                {item.url && (
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    Documento oficial ↗
-                  </a>
-                )}
+              <article key={item.id} className="cc-guideline-row">
+                <div>
+                  <small>{item.org} · {dataBr(item.published_at)}</small>
+                  <strong>{item.title}</strong>
+                  <span>{item.status === "revisada" ? "Revisão clínica concluída." : "Publicação detectada; análise clínica aguardando revisão humana."}</span>
+                </div>
+                <div className="cc-guideline-row__side">
+                  <span className={`selo ${item.status === "revisada" ? "selo--revisado" : "selo--pendente"}`}>{statusLabel(item.status)}</span>
+                  {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Documento oficial ↗</a>}
+                </div>
               </article>
             ))}
           </div>
         )}
-      </section>
-    </>
+      </ClinicalSection>
+
+      <ClinicalSection eyebrow="Conhecimento conectado" title="Da diretriz à decisão">
+        <div className="cc-context-grid">
+          <ClinicalContextLink to="/evidencias" icon="evidencia" title="Evidências" detail="Recomendações estruturadas" />
+          <ClinicalContextLink to="/estudos" icon="evidencia" title="Estudos" detail="Literatura que sustenta a recomendação" />
+          <ClinicalContextLink to="/assistente" icon="assistente" title="Assistente Clínica" detail="Discutir impacto na prática" />
+        </div>
+      </ClinicalSection>
+    </div>
   );
 }
