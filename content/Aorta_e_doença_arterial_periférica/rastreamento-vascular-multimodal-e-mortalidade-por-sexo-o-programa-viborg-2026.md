@@ -5,7 +5,7 @@ theme: "Aorta e doença arterial periférica"
 kind: estudo
 review_status: revisado
 source_refs: ["Dahl M, Høgh A, Refsgaard J, Bredsgaard M, Moeslund NJ, Svenstrup D, Kinnerup MB, Mejldal A, Lindholt JS. Multi-modality non-invasive cardiovascular screening and sex-specific outcomes: the Viborg Screening Program. Eur Heart J. 2026 Apr 28:ehag309. DOI: 10.1093/eurheartj/ehag309. PMID: 42048256. Abstract conferido via PubMed E-utilities (esummary e efetch) em duas buscas independentes, com convergência total dos números."]
-legacy_source: "Documento novo, 12/08/2026. Complementa `aneurisma-de-aorta-abdominal-rastreamento-seguimento-e-indicacao-de-reparo.md` (que detalha intervalos de rastreamento de AAA já diagnosticado) com evidência de mortalidade de um programa de rastreamento vascular MULTIMODAL — incluindo AAA, doença arterial periférica e estenose carotídea — na população geral de 67 anos, com achado sexo-específico ausente até aqui na base."]
+legacy_source: "Documento novo, 12/08/2026. Complementa `aneurisma-de-aorta-abdominal-rastreamento-seguimento-e-indicacao-de-reparo.md` (que detalha intervalos de rastreamento de AAA já diagnosticado) com evidência de mortalidade de um programa de rastreamento vascular MULTIMODAL — incluindo AAA, doença arterial periférica e estenose carotídea — na população geral de 67 anos, com achado sexo-específico ausente até aqui na base."
 ---
 
 # Rastreamento Vascular Multimodal e Mortalidade por Sexo: o Programa Viborg (2026)
