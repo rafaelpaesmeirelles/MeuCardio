@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { api } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
+import ClinicalText from "../components/ClinicalText";
+import {
+  ClinicalContextLink,
+  ClinicalEmpty,
+  ClinicalMetric,
+  ClinicalPageHeader,
+  ClinicalSection,
+} from "../components/ClinicalCommandPrimitives";
 
 type Item = { slug: string; nome: string };
-
 type Verificada = {
   slug: string;
   gravidade: "contraindicada" | "grave" | "moderada" | "leve";
@@ -13,9 +20,7 @@ type Verificada = {
   classe_oposta: string | null;
   farmacos: Item[];
 };
-
 type Mencao = { de: Item; cita: Item[]; texto: string };
-
 type Resultado = {
   selecionados: Item[];
   verificadas: Verificada[];
@@ -30,6 +35,28 @@ const ROTULO: Record<Verificada["gravidade"], string> = {
   moderada: "Moderada",
   leve: "Leve",
 };
+
+function tone(gravidade: Verificada["gravidade"]) {
+  if (gravidade === "contraindicada" || gravidade === "grave") return "is-danger";
+  if (gravidade === "moderada") return "is-warning";
+  return "is-info";
+}
+
+function InteractionCard({ item, classe = false }: { item: Verificada; classe?: boolean }) {
+  return (
+    <article className={`cc-interaction-card ${tone(item.gravidade)}`}>
+      <div className="cc-interaction-card__head">
+        <div><small>{classe ? "Aviso de classe" : "Interação verificada"}</small><strong>{item.farmacos.map((f) => f.nome).join(" + ")}{item.classe_oposta && ` + ${item.classe_oposta}`}</strong></div>
+        <span>{ROTULO[item.gravidade]}</span>
+      </div>
+      <div className="cc-interaction-card__body">
+        <div><b>Efeito</b><ClinicalText compact>{item.efeito}</ClinicalText></div>
+        <div><b>Conduta</b><ClinicalText compact>{item.conduta}</ClinicalText></div>
+        <div className="cc-interaction-card__source"><b>Fonte</b><ClinicalText compact>{item.fonte}</ClinicalText></div>
+      </div>
+    </article>
+  );
+}
 
 export default function Interacoes() {
   const [lista, setLista] = useState<Item[] | null>(null);
@@ -47,9 +74,7 @@ export default function Interacoes() {
 
   function alternar(slug: string) {
     setResultado(null);
-    setEscolhidos((atual) =>
-      atual.includes(slug) ? atual.filter((s) => s !== slug) : [...atual, slug],
-    );
+    setEscolhidos((atual) => atual.includes(slug) ? atual.filter((s) => s !== slug) : [...atual, slug]);
   }
 
   async function checar() {
@@ -57,181 +82,105 @@ export default function Interacoes() {
     setErro("");
     try {
       setResultado(await api.post<Resultado>("/drugs/interacoes", { slugs: escolhidos }));
-    } catch (e: any) {
-      setErro(e.message);
+    } catch (e: unknown) {
+      setErro(e instanceof Error ? e.message : "Não foi possível verificar as interações.");
     } finally {
       setChecando(false);
     }
   }
 
   if (erro && !lista) return <Erro mensagem={erro} />;
-  if (!lista) return <Carregando />;
+  if (!lista) return <Carregando texto="Abrindo segurança medicamentosa…" />;
 
-  const filtrada = busca
-    ? lista.filter((d) => d.nome.toLowerCase().includes(busca.toLowerCase()))
-    : lista;
-  const nomeDe = (s: string) => lista.find((d) => d.slug === s)?.nome ?? s;
+  const filtrada = useMemo(() => {
+    const termo = busca.trim().toLocaleLowerCase("pt-BR");
+    if (!termo) return lista.slice(0, 24);
+    return lista.filter((d) => d.nome.toLocaleLowerCase("pt-BR").includes(termo)).slice(0, 40);
+  }, [lista, busca]);
+  const nomeDe = (slug: string) => lista.find((d) => d.slug === slug)?.nome ?? slug;
 
   return (
-    <>
-      <p className="eyebrow">Medicamentos</p>
-      <h1>Checador de interação</h1>
-      <p style={{ maxWidth: "68ch", color: "var(--texto-secundario)" }}>
-        Monte a lista do que o paciente já usa e do que você vai prescrever. O
-        sistema separa o que está <strong>verificado contra bula</strong> do que é
-        apenas <strong>menção no texto</strong>, sem gravidade atribuída.
-      </p>
+    <div className="cc-page cc-interactions-page">
+      <ClinicalPageHeader
+        eyebrow="Segurança medicamentosa"
+        title="Interações"
+        description="Monte a combinação em uso ou planejada. A CorVIA separa interação verificada, aviso de classe e simples menção textual — sem inventar gravidade."
+        icon="medicamento"
+        actions={[
+          { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
+          { to: "/receituario", label: "Prescrever", icon: "prescricao", tone: "primary" },
+        ]}
+        meta={<><span className="selo">2–10 fármacos</span><span className="selo">fonte nominal</span></>}
+      />
 
-      <div className="cartao" style={{ marginTop: "1rem" }}>
-        <label htmlFor="busca-farmaco">
-          <strong>Selecione de 2 a 10 medicamentos</strong>
-        </label>
-        <input
-          id="busca-farmaco"
-          value={busca}
-          onChange={(e) => setBusca(e.target.value)}
-          placeholder="Filtrar pelo nome…"
-          style={{ marginTop: "0.4rem" }}
-        />
+      <ClinicalSection eyebrow="Combinação" title="Quais medicamentos estão no contexto?" description="Pesquise e adicione. No celular, mostramos resultados relevantes em lista compacta em vez de uma nuvem com todo o catálogo.">
+        <div className="cc-interaction-builder">
+          <div className="cc-interaction-builder__search">
+            <label htmlFor="cc-interaction-search">Buscar medicamento</label>
+            <input id="cc-interaction-search" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: apixabana, AAS, amiodarona…" autoComplete="off" />
+          </div>
+          <div className="cc-interaction-builder__count"><strong>{escolhidos.length}/10</strong><small>selecionados</small></div>
+          <button className="botao" type="button" disabled={escolhidos.length < 2 || checando} onClick={() => void checar()}>{checando ? "Checando…" : "Verificar combinação"}</button>
+        </div>
 
         {escolhidos.length > 0 && (
-          <div className="painel__temas" style={{ marginTop: "0.6rem" }}>
-            {escolhidos.map((s) => (
-              <button key={s} className="painel__tema" onClick={() => alternar(s)}>
-                {nomeDe(s)} <span className="dado">✕</span>
-              </button>
-            ))}
+          <div className="cc-selected-drugs" aria-label="Medicamentos selecionados">
+            {escolhidos.map((slug) => <button key={slug} type="button" onClick={() => alternar(slug)}>{nomeDe(slug)} <span>×</span></button>)}
           </div>
         )}
 
-        <div
-          style={{
-            marginTop: "0.6rem",
-            maxHeight: "14rem",
-            overflowY: "auto",
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0.35rem",
-          }}
-        >
-          {filtrada.map((d) => (
-            <button
-              key={d.slug}
-              className="painel__tema"
-              onClick={() => alternar(d.slug)}
-              disabled={!escolhidos.includes(d.slug) && escolhidos.length >= 10}
-              style={escolhidos.includes(d.slug) ? { borderColor: "var(--acento)" } : undefined}
-            >
-              {d.nome}
-            </button>
-          ))}
+        <div className="cc-drug-picker">
+          {filtrada.map((drug) => {
+            const selecionado = escolhidos.includes(drug.slug);
+            return (
+              <button key={drug.slug} type="button" className={selecionado ? "is-selected" : ""} onClick={() => alternar(drug.slug)} disabled={!selecionado && escolhidos.length >= 10}>
+                <span>{drug.nome}</span><i>{selecionado ? "Remover" : "Adicionar"}</i>
+              </button>
+            );
+          })}
         </div>
-
-        <button
-          className="botao"
-          style={{ marginTop: "0.8rem" }}
-          disabled={escolhidos.length < 2 || checando}
-          onClick={checar}
-        >
-          {checando ? "Checando…" : `Checar ${escolhidos.length} medicamentos`}
-        </button>
-      </div>
+      </ClinicalSection>
 
       {erro && <Erro mensagem={erro} />}
 
-      {resultado && (
+      {resultado ? (
         <>
-          <section className="painel__grupo">
-            <h2>Interações verificadas</h2>
-            <p className="painel__grupo-sub">
-              Com gravidade e fonte nominal — é o único bloco em que o sistema afirma algo.
-            </p>
-            {resultado.verificadas.length === 0 ? (
-              <div className="cartao">
-                <strong>Nenhuma interação verificada entre os selecionados.</strong>
-                <p style={{ margin: "0.4rem 0 0", fontSize: "0.88rem" }}>{resultado.aviso}</p>
-              </div>
-            ) : (
-              <div style={{ display: "grid", gap: "0.7rem" }}>
-                {resultado.verificadas.map((v) => (
-                  <article
-                    key={v.slug}
-                    className={`cartao painel__funcao${
-                      v.gravidade === "contraindicada" || v.gravidade === "grave"
-                        ? " painel__funcao--destaque"
-                        : ""
-                    }`}
-                  >
-                    <strong>
-                      {v.farmacos.map((f) => f.nome).join(" + ")}
-                      {v.classe_oposta && ` + ${v.classe_oposta}`}{" "}
-                      <span className="painel__breve">{ROTULO[v.gravidade]}</span>
-                    </strong>
-                    <span><strong>Efeito:</strong> {v.efeito}</span>
-                    <span><strong>Conduta:</strong> {v.conduta}</span>
-                    <span style={{ fontSize: "0.78rem" }}><strong>Fonte:</strong> {v.fonte}</span>
-                  </article>
-                ))}
-              </div>
-            )}
-          </section>
+          <div className="cc-metrics">
+            <ClinicalMetric label="Verificadas" value={resultado.verificadas.length} detail="gravidade atribuída" icon="check" />
+            <ClinicalMetric label="Avisos de classe" value={resultado.avisos_de_classe.length} detail="dependem de outro fármaco/classe" icon="medicamento" />
+            <ClinicalMetric label="Menções" value={resultado.mencoes.length} detail="sem gravidade atribuída" icon="documento" />
+            <ClinicalMetric label="Fármacos" value={resultado.selecionados.length} detail="combinação analisada" icon="medicamento" />
+          </div>
+
+          <ClinicalSection eyebrow="Verificado" title="Interações com gravidade e fonte" description="Este é o bloco em que o sistema afirma uma interação estruturada.">
+            {resultado.verificadas.length === 0 ? <ClinicalEmpty title="Nenhuma interação verificada entre os selecionados" description={resultado.aviso} /> : <div className="cc-interaction-results">{resultado.verificadas.map((item) => <InteractionCard key={item.slug} item={item} />)}</div>}
+          </ClinicalSection>
 
           {resultado.avisos_de_classe.length > 0 && (
-            <section className="painel__grupo">
-              <h2>Avisos de classe</h2>
-              <p className="painel__grupo-sub">
-                Dependem do que o paciente usa <strong>fora desta lista</strong>: um dos
-                lados é uma classe inteira, não um fármaco que você selecionou.
-              </p>
-              <div style={{ display: "grid", gap: "0.7rem" }}>
-                {resultado.avisos_de_classe.map((v) => (
-                  <article key={v.slug} className="cartao painel__funcao">
-                    <strong>
-                      {v.farmacos.map((f) => f.nome).join(" + ")}
-                      {v.classe_oposta && ` + ${v.classe_oposta}`}{" "}
-                      <span className="painel__breve">{ROTULO[v.gravidade]}</span>
-                    </strong>
-                    <span><strong>Efeito:</strong> {v.efeito}</span>
-                    <span><strong>Conduta:</strong> {v.conduta}</span>
-                    <span style={{ fontSize: "0.78rem" }}><strong>Fonte:</strong> {v.fonte}</span>
-                  </article>
-                ))}
-              </div>
-            </section>
+            <ClinicalSection eyebrow="Contexto adicional" title="Avisos de classe" description="Um dos lados é uma classe inteira, não necessariamente outro fármaco que você selecionou.">
+              <div className="cc-interaction-results">{resultado.avisos_de_classe.map((item) => <InteractionCard key={item.slug} item={item} classe />)}</div>
+            </ClinicalSection>
           )}
 
-          <section className="painel__grupo">
-            <h2>Menções na bula, sem gravidade atribuída</h2>
-            <p className="painel__grupo-sub">
-              Trechos do texto de interações dos fármacos escolhidos que citam outro da
-              mesma lista. É o que a bula diz — a Corvia não classificou.
-            </p>
-            {resultado.mencoes.length === 0 ? (
-              <p style={{ fontSize: "0.88rem", color: "var(--texto-secundario)" }}>
-                Nenhuma menção cruzada no texto dos selecionados.
-              </p>
-            ) : (
-              <div style={{ display: "grid", gap: "0.7rem" }}>
-                {resultado.mencoes.map((m, i) => (
-                  <article key={i} className="cartao painel__funcao painel__funcao--breve">
-                    <strong>
-                      {m.de.nome} → cita {m.cita.map((c) => c.nome).join(", ")}
-                    </strong>
-                    <span>{m.texto}</span>
-                  </article>
-                ))}
-              </div>
-            )}
-          </section>
+          <ClinicalSection eyebrow="Menções" title="Citadas no texto, sem gravidade atribuída" description="A CorVIA mostra o vínculo textual, mas não converte menção em classificação clínica.">
+            {resultado.mencoes.length === 0 ? <ClinicalEmpty title="Nenhuma menção cruzada" /> : <div className="cc-mention-list">{resultado.mencoes.map((m, i) => <article key={`${m.de.slug}-${i}`}><strong>{m.de.nome} → {m.cita.map((c) => c.nome).join(", ")}</strong><ClinicalText compact>{m.texto}</ClinicalText></article>)}</div>}
+          </ClinicalSection>
 
-          <p
-            className="cartao"
-            style={{ marginTop: "1rem", fontSize: "0.85rem", color: "var(--texto-secundario)" }}
-          >
-            {resultado.aviso}
-          </p>
+          <div className="cc-inline-note"><ClinicalText compact>{resultado.aviso}</ClinicalText></div>
         </>
+      ) : (
+        <ClinicalSection eyebrow="Resultado" title="A análise aparece aqui">
+          <ClinicalEmpty title="Selecione pelo menos dois medicamentos" description="A verificação só é executada quando você pedir; nada é inferido em segundo plano." />
+        </ClinicalSection>
       )}
-    </>
+
+      <ClinicalSection eyebrow="Próximo passo" title="Continue sem perder o contexto">
+        <div className="cc-context-grid">
+          <ClinicalContextLink to="/medicamentos" icon="medicamento" title="Verbetes" detail="Revisar dose e contraindicações" />
+          <ClinicalContextLink to="/receituario" icon="prescricao" title="Prescrição" detail="Preparar a ação clínica" />
+          <ClinicalContextLink to="/assistente" icon="assistente" title="Assistente Clínica" detail="Discutir a combinação" />
+        </div>
+      </ClinicalSection>
+    </div>
   );
 }
