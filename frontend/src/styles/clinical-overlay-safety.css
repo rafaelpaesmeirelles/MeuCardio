@@ -1,38 +1,56 @@
-/* CorVIA mobile overlay contract: one primary overlay at a time, no FAB above content. */
-@media (max-width: 900px) {
-  /* ChatFlutuante still uses inline fixed positioning. Semantic selectors are
-     intentional here: they neutralize the legacy widget without relying on a
-     class it does not currently expose. Access remains available in Mais →
-     Rede profissional. */
-  .clinical-os button[aria-label^="Abrir o CorvIA Chat"],
-  .clinical-os section[aria-label="CorvIA Chat"] {
-    display: none !important;
+/* CorVIA overlay contract: command surfaces stay clean; utilities do not float above clinical content. */
+
+/* Both actions remain fully reachable in canonical navigation: Emergency is in
+   topbar/sidebar and Rede profissional is in Mais. Their legacy FABs are
+   therefore redundant and visually compete with the Clinical Command Center. */
+.clinical-os button[aria-label^="Abrir o CorvIA Chat"],
+.clinical-os section[aria-label="CorvIA Chat"],
+.clinical-os .cos-emergency-fab {
+  display:none!important;
+}
+
+/* Institutional credit belongs to the public/product surface, not after every
+   authenticated clinical workspace. */
+.clinical-os .credito { display:none!important; }
+
+/* Emergency keeps its own visual identity and fixed fast-reading surface, but
+   on desktop it must respect the canonical navigation/topbar so the physician
+   can always leave the mode without browser controls. Internal emergency CSS,
+   offline behavior and content are untouched. */
+@media (min-width:901px) {
+  body.corvia-route--emergencia .clinical-os .emerg {
+    top:62px!important;
+    right:0!important;
+    bottom:0!important;
+    left:var(--ccc-nav-w)!important;
+    width:auto!important;
+    height:auto!important;
+    box-sizing:border-box;
+    z-index:70!important;
   }
+}
 
-  /* Topbar already exposes Emergency and the canonical mobile menu exposes the
-     Emergency Command Center. A second FAB would cover page actions. */
-  .clinical-os .cos-emergency-fab { display: none !important; }
-
+@media (max-width:900px) {
   /* While the Personal Assistant/drawer owns the viewport, remove the bottom
      navigation and More trigger from pointer/focus competition. */
   body.menu-clinico-aberto .cc-mobile-nav,
   body.menu-clinico-aberto .cc-mobile-menu-trigger {
-    visibility: hidden !important;
-    pointer-events: none !important;
+    visibility:hidden!important;
+    pointer-events:none!important;
   }
 
   /* The More sheet itself is the active modal surface. */
   body.cc-mobile-more-open .cc-mobile-menu-trigger,
   body.cc-mobile-more-open .cc-mobile-nav {
-    pointer-events: none !important;
+    pointer-events:none!important;
   }
 
-  .clinical-os .cos-assistant-backdrop { z-index: 128 !important; }
-  .clinical-os .cos-assistant-panel { z-index: 130 !important; }
-  .cc-mobile-more-backdrop { z-index: 138 !important; }
-  .cc-mobile-more { z-index: 140 !important; }
+  .clinical-os .cos-assistant-backdrop { z-index:128!important; }
+  .clinical-os .cos-assistant-panel { z-index:130!important; }
+  .cc-mobile-more-backdrop { z-index:138!important; }
+  .cc-mobile-more { z-index:140!important; }
 
-  /* Any modal opened inside a working surface remains above nav but below no
-     unrelated floating utility, because those utilities are disabled above. */
-  .clinical-os [role="dialog"][aria-modal="true"] { z-index: 150; }
+  /* Any modal opened inside a working surface remains above navigation; no
+     unrelated floating utility survives to compete with it. */
+  .clinical-os [role="dialog"][aria-modal="true"] { z-index:150; }
 }
