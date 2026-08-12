@@ -448,7 +448,7 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
     if not _texto(destinatario.get("endereco")):
         erros.append("Informe o endereço completo do paciente.")
     if not _texto(destinatario.get("documento")):
-        erros.append("Informe CPF ou passaporte do paciente.")
+        erros.append("Informe o CPF do paciente.")
     if not itens:
         erros.append("A receita precisa conter ao menos um medicamento.")
     for indice, item in enumerate(itens, start=1):

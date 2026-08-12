@@ -17,6 +17,7 @@ from app.core.uploads import UploadRejected, validate_file
 from app.models.audit import AuditLog
 from app.models.assinatura import DocumentoEmitido
 from app.models.clinical_docs import Prescription
+from app.models.cmed import CmedApresentacao
 from app.models.compartilhamento import DocumentShareLink
 from app.models.drug import Drug
 from app.models.email_account import EmailAccount
@@ -28,7 +29,7 @@ from app.models.receituario import (
     ControlledSubstance, PrescriptionDocument, PrescriptionRecipient,
     PrescriptionRule, PrescriptionType,
 )
-from app.services import anexo_email_proprio, cofre
+from app.services import anexo_email_proprio, cmed_precos, cofre
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.assinatura.provedor import _MANUAL_EXTERNO
 from app.services.classificacao_receituario import (
@@ -47,6 +48,12 @@ VALIDADE_LINK_DIAS = 7
 
 class ItemIn(BaseModel):
     drug_slug: str | None = None
+    # Item do catálogo prescritivo amplo (CMED) SEM `Drug` clínico
+    # correspondente — id de `cmed_apresentacoes`, nunca texto livre. É a
+    # única forma de resolver `substancia` para um item sem `drug_slug`: o
+    # cliente nunca manda a substância diretamente (ver `_resolver`), porque
+    # texto livre não pode decidir se um item é controlado ou não.
+    cmed_apresentacao_id: int | None = None
     descricao: str = ""
     apresentacao: str = ""
     quantidade: str = ""
@@ -98,11 +105,30 @@ def _carregar_regras(db: Session) -> tuple[dict[str, Substancia], list[Regra], s
 
 
 def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
-    """Resolve substância para regras e mantém intacto o produto escolhido."""
+    """Resolve substância para regras e mantém intacto o produto escolhido.
+
+    `substancia` é o campo que decide se um item é controlado (Portaria
+    344/98) — por isso ela NUNCA vem de texto livre do cliente, só de duas
+    fontes resolvidas aqui, no servidor, contra o banco:
+
+    1. `drug_slug` — catálogo clínico (176 fármacos), via `Drug.generic_name`.
+    2. `cmed_apresentacao_id` — catálogo prescritivo amplo (qualquer
+       apresentação real da CMED, com ou sem `Drug` clínico correspondente),
+       via `CmedApresentacao.substancia_cmed`.
+
+    `ItemIn` não tem (e nunca deve ganhar) um campo `substancia` de texto
+    livre: se um cliente mandasse isso, bastaria escrever qualquer nome pra
+    escapar da classificação de um item que na verdade é controlado. Um item
+    sem `drug_slug` válido e sem `cmed_apresentacao_id` válido fica sem
+    substância resolvida — `classificar()` já trata isso como pendência de
+    revisão humana (recusa/ignora o texto livre), nunca como "não
+    controlado" por omissão.
+    """
     resolvidos: list[ItemPrescrito] = []
     for i in itens:
         substancia = None
         drug_id = None
+        cmed_apresentacao_id = None
         apresentacao = i.apresentacao
         if i.drug_slug:
             d = db.query(Drug).filter(Drug.slug == i.drug_slug).first()
@@ -111,6 +137,15 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
                 drug_id = d.id
                 if not apresentacao and d.presentations:
                     apresentacao = d.presentations[0]
+        elif i.cmed_apresentacao_id is not None:
+            linha = db.query(CmedApresentacao).filter(
+                CmedApresentacao.id == i.cmed_apresentacao_id
+            ).first()
+            if linha:
+                substancia = linha.substancia_cmed
+                cmed_apresentacao_id = linha.id
+                if not apresentacao:
+                    apresentacao = cmed_precos.apresentacao_legivel(linha.apresentacao)
         quantidade = "" if i.uso_continuo else (i.quantidade or "").strip()
         quantidade_extenso = "" if i.uso_continuo else (i.quantidade_extenso or "").strip()
         quantidade_impressa = quantidade
@@ -130,6 +165,7 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
             uf=(i.uf or "").strip().upper() or None,
             cmed_version=(i.cmed_version or "").strip() or None,
             drug_id=drug_id,
+            cmed_apresentacao_id=cmed_apresentacao_id,
         ))
     return resolvidos
 
@@ -169,6 +205,13 @@ def _item_snapshot(item: ItemPrescrito) -> dict:
         "pmc_snapshot": item.pmc_snapshot,
         "uf": item.uf,
         "cmed_version": item.cmed_version,
+        # Rastreabilidade da origem: qual dos dois catálogos resolveu a
+        # substância deste item. Nunca os dois ao mesmo tempo (`_resolver`
+        # só preenche um). Snapshot puro — reimportar a CMED ou editar o
+        # `Drug` depois não muda o que já foi impresso/assinado.
+        "drug_id": item.drug_id,
+        "cmed_apresentacao_id": item.cmed_apresentacao_id,
+        "tem_conteudo_clinico": item.drug_id is not None,
     }
     if any((item.brand_name, item.manufacturer, item.ggrem, item.cmed_version, item.pmc_snapshot)):
         snapshot["cmed_snapshot"] = {

@@ -6,12 +6,20 @@ import Icone from "../components/Icone";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 
+type PrecoCmedSugestao = { valor: number | null; rotulo: string };
 type Farmaco = {
-  slug: string; nome: string; marca?: string | null; fabricante?: string | null;
-  fonte?: string;
+  // `slug` nulo = candidato só do catálogo prescritivo amplo (CMED), sem
+  // página clínica aprofundada — `tem_conteudo_clinico` é o sinal explícito.
+  slug: string | null; nome: string; marca?: string | null; fabricante?: string | null;
+  fonte?: string; tem_conteudo_clinico?: boolean;
+  cmed_apresentacao_id?: number | null;
+  apresentacao?: string | null; apresentacao_cmed?: string | null;
+  ggrem?: string | null; registro?: string | null; substancia?: string | null;
+  preco?: PrecoCmedSugestao | null;
 };
 type Item = {
-  drug_slug?: string; descricao: string; apresentacao: string;
+  drug_slug?: string; cmed_apresentacao_id?: number;
+  descricao: string; apresentacao: string;
   quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
   uso_continuo: boolean;
   brand_name?: string; manufacturer?: string; ggrem?: string;
@@ -65,7 +73,8 @@ type HistoricoResposta = {
   items: HistoricoItem[]; page: number; page_size: number; has_more: boolean; total: number;
 };
 type ItemOriginal = {
-  drug_slug: string | null; descricao: string; apresentacao: string;
+  drug_slug: string | null; cmed_apresentacao_id?: number | null;
+  descricao: string; apresentacao: string;
   quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
   uso_continuo?: boolean;
   brand_name?: string | null; manufacturer?: string | null; ggrem?: string | null;
@@ -515,6 +524,11 @@ export default function Receituario() {
     setBuscaFarmaco((atuais) => atuais.map((item, indice) => indice === i ? valor : item));
     setMarcaConsultada((atuais) => atuais.map((item, indice) => indice === i ? null : item));
     atualizarItem(i, "drug_slug", undefined);
+    // Some o cartão de confirmação "só CMED" (`it.cmed_apresentacao_id && !it.drug_slug`)
+    // assim que o médico volta a digitar — sem isto, ele ficava preso na
+    // tela mesmo depois de o texto de busca já não corresponder mais à
+    // apresentação escolhida antes.
+    atualizarItem(i, "cmed_apresentacao_id", undefined);
     atualizarItem(i, "descricao", valor);
     setApresentacoes((atuais) => atuais.map((item, indice) => indice === i ? null : item));
 
@@ -528,8 +542,12 @@ export default function Receituario() {
     setSugestoesFarmaco((atuais) => atuais.map((item, indice) => indice === i ? undefined : item));
     temporizadoresBusca.current[i] = window.setTimeout(() => {
       api.get<{
-        slug: string; generic_name: string; brand_name: string | null;
-        manufacturer: string | null; source: string;
+        slug: string | null; generic_name: string; brand_name: string | null;
+        manufacturer: string | null; source: string; tem_conteudo_clinico?: boolean;
+        cmed_apresentacao_id?: number | null;
+        apresentacao?: string | null; apresentacao_cmed?: string | null;
+        ggrem?: string | null; registro?: string | null; substancia?: string | null;
+        preco?: PrecoCmedSugestao | null;
       }[]>(`/drugs/sugestoes?q=${encodeURIComponent(valor.trim())}`)
         .then((resultado) => {
           if (sequenciasBusca.current[i] !== sequencia) return;
@@ -537,6 +555,11 @@ export default function Receituario() {
             ? resultado.map((s) => ({
                 slug: s.slug, nome: s.generic_name, marca: s.brand_name,
                 fabricante: s.manufacturer, fonte: s.source,
+                tem_conteudo_clinico: s.tem_conteudo_clinico,
+                cmed_apresentacao_id: s.cmed_apresentacao_id,
+                apresentacao: s.apresentacao, apresentacao_cmed: s.apresentacao_cmed,
+                ggrem: s.ggrem, registro: s.registro, substancia: s.substancia,
+                preco: s.preco,
               }))
             : item));
         })
@@ -550,18 +573,46 @@ export default function Receituario() {
 
   function escolherFarmaco(i: number, f: Farmaco) {
     setPrevia(null);
+    if (f.slug) {
+      // Catálogo clínico: fluxo em 2 passos, como já era — escolhe o
+      // genérico aqui, e a apresentação comercial específica logo abaixo
+      // (`escolherApresentacao`, via `/drugs/{slug}/apresentacoes`).
+      setItens((lista) => lista.map((it, idx) => idx === i
+        ? { drug_slug: f.slug ?? undefined, cmed_apresentacao_id: undefined,
+            descricao: f.nome, apresentacao: "",
+            quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
+            posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo }
+        : it));
+      setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? (f.marca ?? f.nome) : v));
+      setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? (f.marca ?? null) : valor));
+      setSugestoesFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? [] : valor));
+      setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
+      api.get<RespostaApresentacoes>(`/drugs/${f.slug}/apresentacoes${usuario?.council_state ? `?uf=${usuario.council_state}` : ""}`)
+        .then((r) => setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v)))
+        .catch(() => setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v)));
+      return;
+    }
+
+    // Só catálogo prescritivo amplo (CMED, sem página clínica): a sugestão
+    // já É a apresentação comercial específica — não existe segundo passo
+    // pra desdobrar (não há `/apresentacoes` sem `slug`), então tudo é
+    // preenchido de uma vez, incluindo marca/laboratório/preço já
+    // conhecidos da própria sugestão.
     setItens((lista) => lista.map((it, idx) => idx === i
-      ? { drug_slug: f.slug, descricao: f.nome, apresentacao: "",
+      ? {
+          drug_slug: undefined, cmed_apresentacao_id: f.cmed_apresentacao_id ?? undefined,
+          descricao: f.marca ?? f.nome, apresentacao: f.apresentacao ?? "",
           quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
-          posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo }
+          posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo,
+          brand_name: f.marca ?? undefined, manufacturer: f.fabricante ?? undefined,
+          ggrem: f.ggrem ?? undefined, pmc_snapshot: f.preco?.valor ?? undefined,
+          uf: usuario?.council_state ?? undefined,
+        }
       : it));
     setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? (f.marca ?? f.nome) : v));
     setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? (f.marca ?? null) : valor));
     setSugestoesFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? [] : valor));
-    setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
-    api.get<RespostaApresentacoes>(`/drugs/${f.slug}/apresentacoes${usuario?.council_state ? `?uf=${usuario.council_state}` : ""}`)
-      .then((r) => setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v)))
-      .catch(() => setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v)));
+    setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v));
   }
 
   function escolherApresentacao(i: number, ap: ApresentacaoCmed, resp: RespostaApresentacoes) {
@@ -593,6 +644,26 @@ export default function Receituario() {
     setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? null : valor));
   }
 
+  function trocarMedicamento(i: number) {
+    // Só para item resolvido pelo catálogo prescritivo amplo (CMED, sem
+    // `Drug` clínico) — não existe "genérico sem marca" pra voltar (a
+    // sugestão já É a apresentação específica), então a única saída é
+    // limpar o item por completo e deixar o médico buscar de novo.
+    setPrevia(null);
+    setItens((lista) => lista.map((it, idx) => idx === i
+      ? {
+          drug_slug: undefined, cmed_apresentacao_id: undefined,
+          descricao: "", apresentacao: "",
+          quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
+          posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo,
+        }
+      : it));
+    setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? "" : v));
+    setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? null : valor));
+    setSugestoesFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? [] : valor));
+    setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v));
+  }
+
   function adicionarItem() {
     setItens((l) => [...l, { ...ITEM_VAZIO }]);
     setBuscaFarmaco((b) => [...b, ""]);
@@ -611,11 +682,12 @@ export default function Receituario() {
     setPrevia(null);
   }
 
-  const itensValidos = itens.filter((it) => it.descricao.trim() || it.drug_slug);
+  const itensValidos = itens.filter((it) => it.descricao.trim() || it.drug_slug || it.cmed_apresentacao_id);
   const pedido = {
     destinatario: { nome, endereco: endereco || undefined, documento: documento || undefined },
     itens: itensValidos.map((it) => ({
-      drug_slug: it.drug_slug, descricao: it.descricao, apresentacao: it.apresentacao,
+      drug_slug: it.drug_slug, cmed_apresentacao_id: it.cmed_apresentacao_id,
+      descricao: it.descricao, apresentacao: it.apresentacao,
       quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
       posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo,
       brand_name: it.brand_name, manufacturer: it.manufacturer, ggrem: it.ggrem,
@@ -676,6 +748,7 @@ export default function Receituario() {
     const novosItens: Item[] = d.itens_originais.length > 0
       ? d.itens_originais.map((i) => ({
           drug_slug: i.drug_slug ?? undefined,
+          cmed_apresentacao_id: i.cmed_apresentacao_id ?? undefined,
           descricao: i.brand_name ?? i.descricao,
           apresentacao: i.apresentacao ?? "",
           quantidade: i.quantidade ?? "",
@@ -745,7 +818,7 @@ export default function Receituario() {
                 <input value={endereco} onChange={(e) => setEndereco(e.target.value)} autoComplete="street-address" />
               </div>
               <div className="prescricao-campo">
-                <label>CPF ou passaporte</label>
+                <label>CPF do Paciente</label>
                 <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
               </div>
               <div className="prescricao-campo">
@@ -780,7 +853,14 @@ export default function Receituario() {
                 autoComplete="off"
               />
               {(() => {
-                if (!buscaFarmaco[i] || it.drug_slug) return null;
+                // Some por inteiro assim que o item já tem substância
+                // resolvida — catálogo clínico (`drug_slug`) OU catálogo
+                // prescritivo amplo (`cmed_apresentacao_id`). Sem essa
+                // segunda condição, escolher uma sugestão só-CMED reabria a
+                // mesma lista de sugestões (ela só some quando `drug_slug`
+                // existe) e ainda por cima mostrava "não consta na base"
+                // logo depois de o item ter sido resolvido com sucesso.
+                if (!buscaFarmaco[i] || it.drug_slug || it.cmed_apresentacao_id) return null;
                 if (buscaFarmaco[i].trim().length < 2) {
                   return <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Digite ao menos 2 caracteres.</p>;
                 }
@@ -797,19 +877,30 @@ export default function Receituario() {
                 }
                 return (
                   <div className="prescricao-sugestoes" role="listbox" aria-label="Sugestões de medicamentos">
-                    {sugestoes.map((f) => (
-                      <button key={`${f.slug}:${f.marca ?? ""}:${f.fabricante ?? ""}`} type="button"
-                              style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", background: "transparent", cursor: "pointer" }}
-                              onClick={() => escolherFarmaco(i, f)}>
-                        <strong>{f.marca ?? f.nome}</strong>
-                        {f.marca && <span> — {f.nome}</span>}
-                        {(f.fabricante || f.fonte) && (
-                          <small style={{ display: "block", color: "var(--texto-secundario)" }}>
-                            {[f.fabricante, f.fonte].filter(Boolean).join(" · ")}
-                          </small>
-                        )}
-                      </button>
-                    ))}
+                    {sugestoes.map((f) => {
+                      const rotuloPrincipal = f.marca ?? f.nome;
+                      const generico = f.marca && normalizarBusca(f.marca) !== normalizarBusca(f.nome) ? f.nome : null;
+                      return (
+                        <button
+                          key={`${f.slug ?? "cmed"}:${f.cmed_apresentacao_id ?? ""}:${f.marca ?? ""}:${f.fabricante ?? ""}`}
+                          type="button"
+                          style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", background: "transparent", cursor: "pointer" }}
+                          onClick={() => escolherFarmaco(i, f)}>
+                          <strong>{rotuloPrincipal}</strong>
+                          {generico && <span> ({generico})</span>}
+                          {f.apresentacao && <span> — {f.apresentacao}</span>}
+                          {(f.fabricante || f.tem_conteudo_clinico === false || f.fonte) && (
+                            <small style={{ display: "block", color: "var(--texto-secundario)" }}>
+                              {[
+                                f.fabricante,
+                                f.tem_conteudo_clinico === false ? "sem conteúdo clínico aprofundado no site ainda" : null,
+                                f.fonte,
+                              ].filter(Boolean).join(" · ")}
+                            </small>
+                          )}
+                        </button>
+                      );
+                    })}
                   </div>
                 );
               })()}
@@ -882,6 +973,28 @@ export default function Receituario() {
                   </div>
                 );
               })()}
+
+              {it.cmed_apresentacao_id && !it.drug_slug && (
+                <div style={{ marginTop: "0.4rem", padding: "0.4rem 0.6rem", border: "1px solid var(--linha)", borderRadius: 6 }}>
+                  <p style={{ margin: 0, fontSize: "0.86rem" }}>
+                    <strong>{it.brand_name ?? it.descricao}</strong>
+                    {it.manufacturer && <> — {it.manufacturer}</>}
+                    {it.pmc_snapshot != null && (
+                      <> · {it.pmc_snapshot.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</>
+                    )}
+                  </p>
+                  <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>{it.apresentacao}</p>
+                  <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
+                    Da lista de preços da CMED — sem página clínica aprofundada no site ainda.
+                    A classificação de controlado (Portaria 344/98) já funciona normalmente para
+                    este item.
+                  </p>
+                  <button type="button" className="botao botao--secundario" style={{ marginTop: "0.3rem", fontSize: "0.82rem" }}
+                          onClick={() => trocarMedicamento(i)}>
+                    Trocar medicamento
+                  </button>
+                </div>
+              )}
 
               <div className="grade grade--2" style={{ marginTop: "0.4rem" }}>
                 <div>

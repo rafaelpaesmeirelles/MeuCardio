@@ -150,25 +150,47 @@ class TestEndpointApresentacoes:
         db.add(versao)
         db.commit()
         db.refresh(versao)
-        db.add(CmedApresentacao(
+        linha = CmedApresentacao(
             cmed_versao_id=versao.id, drug_id=d.id,
             substancia_cmed="TARTARATO DE METOPROLOL", laboratorio="AstraZeneca",
             produto="SELOKEN", apresentacao="100 MG COM CT BL AL X 30",
             ggrem="456", restricao_hospitalar=False, pmc_por_aliquota={},
-        ))
+        )
+        db.add(linha)
         db.commit()
+        db.refresh(linha)
 
         resposta = client.get(
             "/api/drugs/sugestoes?q=selok",
             headers={"Authorization": f"Bearer {token}"},
         )
         assert resposta.status_code == 200, resposta.text
+        # A resposta ganhou campos novos (issue de lançamento — catálogo
+        # prescritivo amplo da CMED, com ou sem `Drug` clínico
+        # correspondente): `tem_conteudo_clinico`/`cmed_apresentacao_id`
+        # distinguem o tipo de candidato, e o restante é o mesmo dado que já
+        # sai em `/drugs/{slug}/apresentacoes`, só antecipado pro
+        # autocomplete — este candidato tem `Drug` clínico, então
+        # `tem_conteudo_clinico` é `True` e `slug` continua presente.
         assert resposta.json()[0] == {
             "slug": "metoprolol-autocomplete",
             "generic_name": "Metoprolol",
             "brand_name": "SELOKEN",
             "manufacturer": "AstraZeneca",
             "source": "CMED 20260801",
+            "tem_conteudo_clinico": True,
+            "cmed_apresentacao_id": linha.id,
+            "apresentacao": "100 mg — comprimido — caixa com 30 comprimidos",
+            "apresentacao_cmed": "100 MG COM CT BL AL X 30",
+            "ggrem": "456",
+            "registro": None,
+            "substancia": "Metoprolol",
+            "preco": {
+                "valor": None,
+                "rotulo": "Sem preço ao consumidor publicado (uso restrito hospitalar).",
+                "fonte_icms": "cmed_sem_pmc",
+            },
+            "cmed_publicado_em": "20260801",
         }
 
     def test_substancia_sem_presenca_na_cmed_avisa_em_vez_de_falhar(self, client, criar_usuario, db):

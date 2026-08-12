@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
+from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -91,17 +92,48 @@ def list_drugs(
     ]
 
 
+def _nome_legivel_substancia(bruto: str) -> str:
+    """'CLORIDRATO DE BUPROPIONA' -> 'Cloridrato de bupropiona'.
+
+    Sentence case simples sobre o texto cru da CMED — combinação (";") vira
+    "; " entre os componentes, cada um com a mesma regra. Não tenta separar
+    sal de base (isso é decisão de conteúdo editorial, feita à mão nos 176
+    fármacos do catálogo clínico) — só torna o texto legível numa sugestão.
+    """
+    partes = []
+    for parte in (bruto or "").split(";"):
+        p = parte.strip().lower()
+        if p:
+            p = p[0].upper() + p[1:]
+        partes.append(p)
+    return "; ".join(p for p in partes if p)
+
+
 @router.get("/sugestoes")
 def sugerir_medicamentos(
     q: str = Query(..., min_length=2, max_length=80),
     db: Session = Depends(get_db),
-    _=Depends(current_user),
+    user=Depends(current_user),
 ):
-    """Autocomplete por DCB ou marca, com marcas atualizadas pela CMED.
+    """Autocomplete por DCB ou marca — catálogo clínico (176 fármacos, com
+    página aprofundada) MAIS o universo amplo de apresentações reais da CMED,
+    mesmo sem `Drug` clínico correspondente (issue de lançamento: Nebido,
+    Bup XL, sertralina genérica e qualquer outra apresentação real da CMED
+    precisam ser prescritíveis, não só os 176 fármacos de cardiologia
+    aprofundados).
 
-    O catálogo editorial ajuda mesmo antes da primeira importação CMED. Quando
-    há CMED, a versão mais recente prevalece como fonte dos nomes comerciais;
-    ela é atualizada pelo mesmo pipeline mensal/cron já usado para preços.
+    Dois tipos de candidato na mesma lista, distinguidos por
+    `tem_conteudo_clinico`:
+    - **catálogo clínico** (`slug` presente): tem página aprofundada
+      (mecanismo, dose, interação...) além de poder ser prescrito.
+    - **só CMED** (`slug` nulo, `cmed_apresentacao_id` presente): existe na
+      lista de preços oficial da ANVISA e pode ser prescrito de ponta a
+      ponta, mas não tem conteúdo clínico aprofundado no site ainda.
+
+    Busca por princípio ativo OU nome comercial, sem distinguir acento nem
+    maiúscula/minúscula dos dois lados — antes só o nome comercial era
+    comparado, e sempre por padrão cru (sem `unaccent`), o que fazia termo de
+    busca com acento diferente do gravado na planilha da CMED nunca bater.
     """
     from app.services.professional_profile import normalize_search_text
 
@@ -115,42 +147,101 @@ def sugerir_medicamentos(
             candidatos.append({
                 "slug": droga.slug, "generic_name": droga.generic_name,
                 "brand_name": None, "manufacturer": None, "source": "catálogo clínico",
+                "tem_conteudo_clinico": True, "cmed_apresentacao_id": None,
+                "apresentacao": None, "apresentacao_cmed": None, "ggrem": None,
+                "registro": None, "substancia": droga.generic_name, "preco": None,
+                "cmed_publicado_em": None,
             })
         for marca in droga.brand_names or []:
             if termo in normalize_search_text(marca):
                 candidatos.append({
                     "slug": droga.slug, "generic_name": droga.generic_name,
                     "brand_name": marca, "manufacturer": None, "source": "catálogo clínico",
+                    "tem_conteudo_clinico": True, "cmed_apresentacao_id": None,
+                    "apresentacao": None, "apresentacao_cmed": None, "ggrem": None,
+                    "registro": None, "substancia": droga.generic_name, "preco": None,
+                    "cmed_publicado_em": None,
                 })
 
     versao = db.query(CmedVersao).order_by(CmedVersao.id.desc()).first()
     if versao:
+        padrao = f"%{termo}%"
         linhas = (
             db.query(CmedApresentacao)
             .filter(
                 CmedApresentacao.cmed_versao_id == versao.id,
-                CmedApresentacao.drug_id.is_not(None),
-                CmedApresentacao.produto.ilike(f"%{q.strip()}%"),
+                or_(
+                    func.unaccent(CmedApresentacao.produto).ilike(func.unaccent(padrao)),
+                    func.unaccent(CmedApresentacao.substancia_cmed).ilike(func.unaccent(padrao)),
+                ),
             )
             .order_by(CmedApresentacao.produto, CmedApresentacao.laboratorio)
-            .limit(80)
+            .limit(200)
             .all()
         )
+        uf_usada = (user.council_state or "").upper() or None
         for linha in linhas:
-            droga = por_id.get(linha.drug_id)
+            droga = por_id.get(linha.drug_id) if linha.drug_id else None
             if droga:
+                # Já tem página clínica — mesma forma de antes, só que agora
+                # também alcançável buscando pelo princípio ativo, não só
+                # pela marca.
                 candidatos.append({
                     "slug": droga.slug, "generic_name": droga.generic_name,
                     "brand_name": linha.produto, "manufacturer": linha.laboratorio,
                     "source": f"CMED {versao.publicado_em}",
+                    "tem_conteudo_clinico": True, "cmed_apresentacao_id": linha.id,
+                    "apresentacao": cmed_precos.apresentacao_legivel(linha.apresentacao),
+                    "apresentacao_cmed": linha.apresentacao,
+                    "ggrem": linha.ggrem, "registro": linha.registro,
+                    "substancia": droga.generic_name,
+                    "preco": cmed_precos.preco_pmc(linha.pmc_por_aliquota, uf_usada),
+                    "cmed_publicado_em": versao.publicado_em,
+                })
+            elif cmed_precos.eh_combinacao(linha.substancia_cmed):
+                # Combinação de dose fixa sem `Drug` clínico — a
+                # classificação de controlado (`classificar()`) só sabe ler
+                # UMA substância por item; `substancia_cmed` de combinação
+                # vem com ";" separando os componentes, e `normalizar()`
+                # nunca bateria contra uma entrada de `ControlledSubstance`
+                # (que é sempre um princípio isolado). Oferecer essa
+                # apresentação aqui classificaria silenciosamente como
+                # "comum" uma combinação que pode conter substância
+                # controlada — mesmo risco que `cmed_precos.casar_substancia`
+                # já evita do lado do casamento com `Drug` (`eh_combinacao`).
+                # Fica de fora até existir suporte a item multi-substância.
+                continue
+            else:
+                # Sem `Drug` clínico — candidato "só CMED": prescritível de
+                # ponta a ponta (a classificação de controlado roda sobre
+                # `substancia_cmed`, não sobre a existência de conteúdo
+                # clínico), sem página aprofundada.
+                candidatos.append({
+                    "slug": None, "generic_name": _nome_legivel_substancia(linha.substancia_cmed),
+                    "brand_name": linha.produto, "manufacturer": linha.laboratorio,
+                    "source": f"CMED {versao.publicado_em}",
+                    "tem_conteudo_clinico": False, "cmed_apresentacao_id": linha.id,
+                    "apresentacao": cmed_precos.apresentacao_legivel(linha.apresentacao),
+                    "apresentacao_cmed": linha.apresentacao,
+                    "ggrem": linha.ggrem, "registro": linha.registro,
+                    "substancia": linha.substancia_cmed,
+                    "preco": cmed_precos.preco_pmc(linha.pmc_por_aliquota, uf_usada),
+                    "cmed_publicado_em": versao.publicado_em,
                 })
 
-    unicos: dict[tuple[str, str, str], dict] = {}
+    unicos: dict[tuple, dict] = {}
     for item in candidatos:
-        chave = (
-            item["slug"], normalize_search_text(item.get("brand_name")),
-            normalize_search_text(item.get("manufacturer")),
-        )
+        if item["cmed_apresentacao_id"] is not None and not item["tem_conteudo_clinico"]:
+            # Só CMED: cada apresentação (marca+laboratório+dose+embalagem) é
+            # um candidato distinto — não existe um segundo passo (como
+            # `/drugs/{slug}/apresentacoes`) para desdobrar depois, então a
+            # sugestão precisa já ser a apresentação específica.
+            chave: tuple = ("cmed_ap", item["cmed_apresentacao_id"])
+        else:
+            chave = (
+                item["slug"], normalize_search_text(item.get("brand_name")),
+                normalize_search_text(item.get("manufacturer")),
+            )
         atual = unicos.get(chave)
         if atual is None or str(item["source"]).startswith("CMED"):
             unicos[chave] = item

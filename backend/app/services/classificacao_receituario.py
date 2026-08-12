@@ -15,13 +15,40 @@ TIPO_COMUM = "COMUM"
 
 
 def normalizar(nome: str) -> str:
-    """Normaliza nomes para casamento entre medicamentos, CMED e listas."""
+    """Normaliza nomes para casamento entre medicamentos, CMED e listas.
+
+    O prefixo de sal/éster (formato "<SAL/ÉSTER> DE <SUBSTÂNCIA>", como a CMED
+    grava) precisa ser removido para casar contra o nome-base das listas da
+    Portaria 344/98 (ex.: `ControlledSubstance.nome_normalizado`, que é
+    `normalizar("Testosterona")`). Lista conferida uma a uma contra
+    `controlados/listas-344-98.json`: nenhum item da norma começa com um
+    destes prefixos + " de " — ampliar a lista não corta o próprio nome de
+    nenhuma substância regulada, só o sal/éster de apresentação comercial.
+
+    Achado real que motivou a ampliação (09/08/2026): "UNDECILATO DE
+    TESTOSTERONA" (Nebido, Lista C5) não normalizava para "testosterona" —
+    caía em TIPO_COMUM, sem exigir Receita de Controle Especial. Os ésteres de
+    andrógenos/anabolizantes abaixo (undecilato, cipionato, enantato,
+    propionato, fenilpropionato/fempropionato — as duas grafias, CMED não é
+    consistente —, isocaproato, decanoato, valerato) cobrem as apresentações
+    comerciais reais de Testosterona, Nandrolona, Drostanolona e Boldenona
+    (todas Lista C5). Varredura do mesmo tipo achou mais três gaps do mesmo
+    defeito em outras listas, cada um confirmado como o nome real de
+    apresentação comercial de uma substância já presente na norma: `citrato`
+    (Citrato de Fentanila, Lista A1 — opioide, é a forma mais prescrita),
+    `fumarato` (Fumarato de Quetiapina, Lista C1), `hemitartarato`
+    (Hemitartarato de Zolpidem, Lista B1) e `dimesilato` (Dimesilato de
+    Lisdexanfetamina, Lista A3).
+    """
     n = unicodedata.normalize("NFD", nome or "")
     n = "".join(c for c in n if unicodedata.category(c) != "Mn").lower()
     n = re.sub(r"\([^)]*\)", " ", n)
     n = re.sub(r"^\s*(cloridrato|besilato|maleato|sulfato|sodica|sodico|"
                r"potassica|calcica|mesilato|tartarato|succinato|acetato|"
-               r"fosfato|nitrato|bromidrato)\s+de\s+", " ", n)
+               r"fosfato|nitrato|bromidrato|undecilato|cipionato|enantato|"
+               r"propionato|fenilpropionato|fempropionato|isocaproato|"
+               r"decanoato|valerato|citrato|fumarato|hemitartarato|"
+               r"dimesilato)\s+de\s+", " ", n)
     n = re.sub(r"[^a-z0-9 ]+", " ", n)
     return re.sub(r"\s+", " ", n).strip()
 
@@ -43,6 +70,10 @@ class ItemPrescrito:
     uf: str | None = None
     cmed_version: str | None = None
     drug_id: int | None = None
+    # Preenchido só quando o item veio do catálogo prescritivo amplo (CMED)
+    # SEM `Drug` clínico correspondente — rastreabilidade até a linha exata
+    # da planilha que originou a `substancia` usada na classificação.
+    cmed_apresentacao_id: int | None = None
 
 
 @dataclass
