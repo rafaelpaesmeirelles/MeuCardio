@@ -523,8 +523,8 @@
     "classe_oposta": "sinvastatina acima de 40 mg por dia",
     "gravidade": "contraindicada",
     "efeito": "O ácido bempedoico aumenta a exposição à sinvastatina, e com ela o risco de toxicidade muscular.",
-    "conduta": "Contraindicado acima de 40 mg de sinvastatina por dia. Abaixo desse teto a associação é permitida. Vale igualmente para o ácido bempedoico isolado e para a associação com ezetimiba.",
-    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do NILEMDO (ácido bempedoico) e do NUSTENDI (ácido bempedoico + ezetimiba), secção 4.3 em ambos — os dois trazem a mesma contraindicação.",
+    "conduta": "O RCM europeu recomenda, como posologia padrão, limitar a sinvastatina a 20 mg/dia quando associada ao ácido bempedoico (secção 4.2). Até 40 mg/dia só é aceito em hipercolesterolemia grave com alto risco cardiovascular, quando o paciente não atingiu a meta com doses menores e o benefício supera o risco (mesma secção). Acima de 40 mg/dia a associação é formalmente contraindicada (secção 4.3) — miosite com CPK > 10x LSN foi relatada com sinvastatina 40 mg de fundo (secção 4.4). Vale igualmente para o ácido bempedoico isolado e para a associação com ezetimiba.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em inglês (PDF oficial), do NILEMDO (ácido bempedoico, Daiichi Sankyo) — secção 4.2 (\"simvastatin dose should be limited to 20 mg daily (or 40 mg daily for patients with severe hypercholesterolaemia and high risk for cardiovascular complications... when the benefits are expected to outweigh the potential risks)\"), secção 4.3 (\"Concomitant use with simvastatin > 40 mg daily\" como contraindicação) e secção 4.4 (\"Doses of simvastatin > 40 mg should not be used with Nilemdo\"). Corrigido em auditoria do 15º lote: a versão anterior citava só o limiar de contraindicação (>40 mg) e dizia \"abaixo desse teto a associação é permitida\", o que sugeria 40 mg como dose padrão aceitável — a posologia recomendada pelo próprio RCM é 20 mg/dia, com 40 mg reservado a um subgrupo específico de pacientes. Mesma contraindicação consta no RCM do NUSTENDI (ácido bempedoico + ezetimiba).",
     "review_status": "revisado"
   },
   {
@@ -1487,6 +1487,55 @@
     "efeito": "A propafenona é inibidora do CYP2D6 e eleva de forma substancial a concentração plasmática de betabloqueadores metabolizados por essa via — a bula quantifica aumento de 113% para o propranolol e de 100% a 400% para o metoprolol em uso concomitante.",
     "conduta": "Ao associar propafenona a propranolol ou metoprolol, vigiar sinais de betabloqueio excessivo (bradicardia, hipotensão, fadiga) e considerar redução da dose do betabloqueador; a própria bula registra que, nos estudos clínicos com propafenona de liberação imediata, pacientes em uso concomitante de betabloqueador não tiveram incidência aumentada de efeitos adversos — a interação farmacocinética é bem documentada, mas o excesso clínico correspondente não foi tão marcado nos ensaios.",
     "fonte": "Bula FDA/DailyMed de PROPAFENONE HYDROCHLORIDE TABLET (Strides Pharma Science Limited, SPL setid c65253ab-937f-4982-b841-69c2b9f9ccdb), seção Drug Interactions — texto verbatim: \"...increased propranolol plasma concentrations at steady state by 113%\"; para o metoprolol, concentrações aumentadas \"by 100% to 400%\"; e \"in clinical trials using propafenone immediate release tablets, subjects who were receiving beta-blockers concurrently did not experience an increased incidence of side effects\". Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anlodipino-besilato-sinvastatina",
+    "farmacos": [
+      "anlodipino-besilato",
+      "sinvastatina"
+    ],
+    "classe_oposta": null,
+    "gravidade": "moderada",
+    "efeito": "O anlodipino inibe parcialmente o CYP3A4 e eleva a exposição sistêmica à sinvastatina, aumentando o risco de miopatia e rabdomiólise de forma dose-dependente.",
+    "conduta": "Em uso concomitante com anlodipino, não exceder 20 mg/dia de sinvastatina — mesmo limite que a bula estabelece para amiodarona e ranolazina, e o dobro do limite de 10 mg/dia fixado para verapamil/diltiazem (já registrado nesta base em `sinvastatina-verapamil-ou-diltiazem`). Monitorar sinais de miopatia (mialgia, fraqueza, urina escura).",
+    "fonte": "Rótulo aprovado pelo FDA para ZOCOR (simvastatin, Organon), DailyMed (setid e59bf31f-d880-4d9e-b6c2-5a18a53718f9), Tabela 2 de interações medicamentosas — texto: \"Amiodarone, Amlodipine, or Ranolazine: Do not exceed simvastatin 20 mg daily\". Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cilostazol-inibidor-cyp3a4-ou-cyp2c19",
+    "farmacos": [
+      "cilostazol"
+    ],
+    "classe_oposta": "inibidor do CYP3A4 (ex.: cetoconazol, itraconazol, eritromicina, diltiazem) ou do CYP2C19 (ex.: ticlopidina, fluconazol, omeprazol)",
+    "gravidade": "grave",
+    "efeito": "Inibição do metabolismo do cilostazol pelas duas vias enzimáticas responsáveis por sua depuração, elevando a exposição sistêmica e o risco de efeitos adversos dose-dependentes (cefaleia, diarreia, palpitação).",
+    "conduta": "Reduzir o cilostazol para 50 mg duas vezes ao dia enquanto durar a associação com qualquer um desses inibidores, fortes ou moderados. Independente de interação medicamentosa, o cilostazol é contraindicado em insuficiência cardíaca de qualquer gravidade — inibidores da fosfodiesterase III da mesma classe farmacológica foram associados a menor sobrevida nesse cenário.",
+    "fonte": "Rótulo aprovado pelo FDA para cilostazol (genérico, AvKARE), DailyMed (setid dc7c2c25-36a1-e3fd-e053-2995a90adabc) — texto verbatim: \"Reduce dose to 50 mg twice daily when coadministered with strong or moderate inhibitors of CYP3A4 (e.g., ketoconazole, itraconazole, erythromycin, and diltiazem) or inhibitors of CYP2C19 (e.g., ticlopidine, fluconazole, and omeprazole)\"; e boxed warning: \"Cilostazol tablets are contraindicated in patients with heart failure of any severity.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sacubitrilvalsartana-aine",
+    "farmacos": [
+      "sacubitrilvalsartana"
+    ],
+    "classe_oposta": "AINE (anti-inflamatório não esteroidal, incluindo inibidor seletivo da COX-2)",
+    "gravidade": "moderada",
+    "efeito": "Em paciente idoso, com depleção de volume (inclusive por diurético) ou função renal já comprometida, o AINE combinado ao sacubitril-valsartana pode piorar a função renal, incluindo insuficiência renal aguda — mesmo mecanismo já registrado nesta base para IECA (`lisinopril-aine`), porque o bloqueio da angiotensina II reduz a compensação renal dependente de prostaglandina que o AINE também bloqueia.",
+    "conduta": "Evitar uso crônico concomitante quando possível, sobretudo no idoso, no paciente em uso de diurético ou com função renal reduzida. Quando necessário, monitorizar função renal periodicamente — a bula descreve o efeito como geralmente reversível.",
+    "fonte": "Rótulo aprovado pelo FDA para ENTRESTO (sacubitril/valsartana, Novartis), DailyMed (setid 000dc81d-ab91-450c-8eae-8eb74e72296f), secção 7.3 — texto verbatim: \"In patients who are elderly, volume-depleted (including those on diuretic therapy), or with compromised renal function, concomitant use of NSAIDs, including COX-2 inhibitors, with ENTRESTO may result in worsening of renal function, including possible acute renal failure... These effects are usually reversible. Monitor renal function periodically.\" Consultado via API pública do DailyMed em 12/08/2026.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icosapente-etila-anticoagulante-ou-antiplaquetario",
+    "farmacos": [
+      "icosapente-etila"
+    ],
+    "classe_oposta": "anticoagulante (ex.: varfarina) e/ou antiplaquetário (ex.: AAS, clopidogrel)",
+    "gravidade": "moderada",
+    "efeito": "Ácidos graxos ômega-3 em dose de prescrição prolongam o tempo de sangramento; no ensaio pivotal REDUCE-IT, sangramento ocorreu em 3% dos pacientes em icosapente etila contra 2% no placebo, a maioria não grave.",
+    "conduta": "Não há redução de dose nem contraindicação — a bula orienta apenas monitorizar sinais de sangramento em quem usa icosapente etila junto de anticoagulante e/ou antiplaquetário, atenção redobrada em quem já tem risco hemorrágico aumentado por outro motivo.",
+    "fonte": "Rótulo aprovado pelo FDA para VASCEPA (icosapent ethyl, Amarin Pharma), DailyMed (setid 9c1a2828-1583-4414-ab22-a60480e8e508), secção 7.1 — texto verbatim: \"Monitor patients receiving VASCEPA and concomitant anticoagulants and/or antiplatelet agents for bleeding.\" Consultado via API pública do DailyMed em 12/08/2026.",
     "review_status": "revisado"
   }
 ]
