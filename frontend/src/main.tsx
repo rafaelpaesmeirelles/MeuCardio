@@ -41,6 +41,7 @@ import "./styles/clinical-canonical-fidelity.css";
 import "./styles/clinical-home-board-fidelity.css";
 import "./styles/clinical-shell-board-fidelity.css";
 import "./styles/clinical-medication-board-fidelity.css";
+import "./styles/clinical-patient-board-fidelity.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
