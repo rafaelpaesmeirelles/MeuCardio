@@ -1,0 +1,57 @@
+/* Personal Assistant — commute fidelity to approved board. */
+.cos-assistant-panel {
+  width: min(430px, calc(100vw - 18px));
+  background: radial-gradient(circle at 80% 0%,rgba(161,124,245,.08),transparent 18rem),linear-gradient(180deg,#0b1728,#06131e 72%);
+  border-left-color: rgba(161,124,245,.13);
+}
+.cos-assistant-panel__head {
+  min-height: 53px;
+  background: rgba(9,18,34,.95);
+  border-bottom-color: rgba(161,124,245,.10);
+}
+.cos-assistant-panel__brand small { color:#7e6fa6!important; font-size:.47rem; }
+.cos-assistant-panel__brand strong { color:#e9e1ff; font-size:.67rem; }
+.cos-assistant-panel__spark { color:#bea1ff; }
+.cos-assistant-panel__body { gap:8px; padding:9px; }
+.cos-assistant-briefing,
+.cos-assistant-card {
+  background: rgba(255,255,255,.018);
+  border-color: rgba(161,124,245,.07);
+  border-radius:9px;
+}
+.cos-assistant-card--commute { padding-bottom:8px; }
+.cos-assistant-map { margin:7px 0 8px; overflow:hidden; border:1px solid rgba(126,183,201,.08); border-radius:8px; }
+.cos-assistant-map .deslocamento-painel { margin:0; background:#071724; border:0; border-radius:0; }
+.cos-assistant-map .deslocamento-mapa { min-height:150px; max-height:180px; border-radius:0; }
+.cos-assistant-map .deslocamento-mapa svg,
+.cos-assistant-map .deslocamento-mapa__google { min-height:150px; height:150px; }
+.cos-assistant-map .deslocamento-opcoes,
+.cos-assistant-map .deslocamento-painel__rodape { display:none; }
+.cos-assistant-route--board {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:5px;
+  padding:0;
+  background:transparent;
+  border:0;
+}
+.cos-assistant-route--board > div {
+  display:grid;
+  gap:2px;
+  min-width:0;
+  padding:7px;
+  background:rgba(255,255,255,.018);
+  border:1px solid rgba(161,124,245,.06);
+  border-radius:7px;
+}
+.cos-assistant-route--board small { color:#7b6a9c!important; font-size:.42rem; text-transform:uppercase; }
+.cos-assistant-route--board strong { overflow:hidden; color:#e2d7ff; font-size:.64rem; text-overflow:ellipsis; white-space:nowrap; }
+.cos-assistant-destination { background:rgba(161,124,245,.035); border-color:rgba(161,124,245,.075); }
+.cos-assistant-route-button { border-color:rgba(161,124,245,.12); background:rgba(161,124,245,.06); color:#d8c8ff; }
+
+@media (max-width:900px) {
+  .cos-assistant-panel { width:100vw; max-width:none; }
+  .cos-assistant-map .deslocamento-mapa,
+  .cos-assistant-map .deslocamento-mapa svg,
+  .cos-assistant-map .deslocamento-mapa__google { min-height:180px; height:180px; max-height:180px; }
+}
