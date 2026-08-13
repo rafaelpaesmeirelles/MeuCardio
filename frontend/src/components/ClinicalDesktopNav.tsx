@@ -77,39 +77,30 @@ export default function ClinicalDesktopNav() {
           <Icone nome="busca" /><span>Buscar</span>
         </NavLink>
 
-        <div className="ccc-nav__section">
-          <p>Clínica</p>
-          {CLINICA.map((item) => <Item key={item.to} item={item} />)}
-        </div>
-
-        <div className="ccc-nav__section">
-          <p>Trabalho</p>
-          {TRABALHO.map((item) => <Item key={item.to} item={item} />)}
-        </div>
+        <div className="ccc-nav__section"><p>Clínica</p>{CLINICA.map((item) => <Item key={item.to} item={item} />)}</div>
+        <div className="ccc-nav__section"><p>Trabalho</p>{TRABALHO.map((item) => <Item key={item.to} item={item} />)}</div>
 
         <div className="ccc-nav__section ccc-nav__section--utilities">
           <Item item={{ to: "/assistente", label: "Assistente Clínica", icon: "assistente" }} />
           <Item item={{ to: "/favoritos", label: "Favoritos", icon: "favorito" }} />
           <details className="ccc-nav__more">
-            <summary className="ccc-nav__item">
-              <Icone nome="mais" /><span>Mais</span><Icone nome="chevron" className="ccc-nav__more-chevron" />
-            </summary>
+            <summary className="ccc-nav__item"><Icone nome="mais" /><span>Mais</span><Icone nome="chevron" className="ccc-nav__more-chevron" /></summary>
             <div className="ccc-nav__more-items">
               {MAIS.map((item) => <Item key={item.to} item={item} />)}
               <Item item={{ to: "/minha-conta", label: "Minha conta", icon: "conta" }} />
               <Item item={{ to: "/assinatura", label: "Assinatura", icon: "check" }} />
-              {usuario?.role === "admin" && <Item item={{ to: "/admin", label: "Administração", icon: "gestao" }} />}
+              {usuario?.role === "admin" && <>
+                <Item item={{ to: "/admin", label: "Administração", icon: "gestao" }} />
+                <Item item={{ to: "/admin/usuarios", label: "Assinantes", icon: "pacientes" }} />
+                <Item item={{ to: "/fila-telediagnostico", label: "Fila de telediagnóstico", icon: "evidencia" }} />
+              </>}
             </div>
           </details>
         </div>
       </nav>
 
       <div className="ccc-nav__footer ccc-nav__plan">
-        {usuario?.photo_url ? (
-          <img className="ccc-nav__plan-photo" src={assetUrl(usuario.photo_url)} alt="" />
-        ) : (
-          <span className="ccc-nav__plan-avatar">{iniciais(usuario?.full_name)}</span>
-        )}
+        {usuario?.photo_url ? <img className="ccc-nav__plan-photo" src={assetUrl(usuario.photo_url)} alt="" /> : <span className="ccc-nav__plan-avatar">{iniciais(usuario?.full_name)}</span>}
         <span className="ccc-nav__plan-copy"><strong>Plano Premium</strong><small>CorVIA Clinical OS</small></span>
       </div>
     </aside>
