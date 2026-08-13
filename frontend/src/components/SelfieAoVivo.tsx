@@ -26,13 +26,53 @@ export default function SelfieAoVivo({ arquivo, onCapturar, onLimpar }: Props) {
     return () => URL.revokeObjectURL(url);
   }, [arquivo]);
 
-  function desligarCamera() {
+  /** Só para os tracks — sem setState. Usada no cleanup de desmontagem,
+   * onde atualizar estado é desnecessário (o componente já está saindo) e
+   * pode gerar aviso do React de setState em componente desmontado. */
+  function pararTracks() {
     streamRef.current?.getTracks().forEach((faixa) => faixa.stop());
     streamRef.current = null;
+  }
+
+  function desligarCamera() {
+    pararTracks();
     setAtiva(false);
   }
 
-  useEffect(() => () => desligarCamera(), []);
+  // Desmontagem do componente: só libera a câmera, nunca mexe em estado.
+  useEffect(() => () => pararTracks(), []);
+
+  // O <video> só existe no DOM quando `ativa === true` (ver JSX abaixo) —
+  // conectar o stream aqui, num efeito que roda DEPOIS de `ativa` virar
+  // true, garante que o elemento já está montado. Antes, `srcObject` era
+  // atribuído dentro de `ligarCamera()`, antes de `setAtiva(true)` surtir
+  // efeito: nesse instante `videoRef.current` ainda era `null`.
+  useEffect(() => {
+    if (!ativa) return;
+    const video = videoRef.current;
+    if (!video || !streamRef.current) return;
+    video.srcObject = streamRef.current;
+    video.play().catch(() => {
+      // Falha de autoplay isolada (não é erro de permissão de câmera — esse
+      // já foi tratado em ligarCamera()); com `muted` a política de autoplay
+      // do navegador quase sempre permite, então não reexibe `erro` aqui.
+    });
+  }, [ativa]);
+
+  function mensagemDeErroCamera(erroCapturado: unknown): string {
+    if (erroCapturado instanceof DOMException) {
+      if (erroCapturado.name === "NotAllowedError") {
+        return "Permissão da câmera negada. Autorize o acesso à câmera nas configurações do navegador e tente de novo.";
+      }
+      if (erroCapturado.name === "NotFoundError") {
+        return "Nenhuma câmera foi encontrada neste dispositivo.";
+      }
+      if (erroCapturado.name === "NotReadableError") {
+        return "A câmera está sendo usada por outro aplicativo, ou não foi possível acessá-la. Feche outros programas que usem a câmera e tente de novo.";
+      }
+    }
+    return "Não foi possível acessar a câmera — confira a permissão do navegador e tente de novo.";
+  }
 
   async function ligarCamera() {
     setErro("");
@@ -42,17 +82,13 @@ export default function SelfieAoVivo({ arquivo, onCapturar, onLimpar }: Props) {
     }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } },
+        video: { facingMode: { ideal: "user" }, width: { ideal: 640 }, height: { ideal: 480 } },
         audio: false,
       });
       streamRef.current = stream;
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        await videoRef.current.play();
-      }
       setAtiva(true);
-    } catch {
-      setErro("Não foi possível acessar a câmera — confira a permissão do navegador e tente de novo.");
+    } catch (erroCapturado) {
+      setErro(mensagemDeErroCamera(erroCapturado));
     }
   }
 

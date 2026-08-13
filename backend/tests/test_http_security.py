@@ -146,3 +146,24 @@ def test_proxy_de_producao_define_politicas_essenciais():
     assert "https://maps.googleapis.com" in caddy
     assert "Strict-Transport-Security" in caddy
     assert "-Server" in caddy
+
+
+def test_proxy_de_producao_libera_camera_para_selfie_do_kyc():
+    """Guarda de regressão: até 13/08/2026 o `Permissions-Policy` bloqueava
+    `camera=()` para a aplicação inteira, o que derrubava `getUserMedia()` na
+    Selfie ao vivo do KYC (SelfieAoVivo.tsx) — a câmera nunca chegava a pedir
+    permissão. O header próprio (`camera=(self)`) precisa acompanhar sempre a
+    origem do site; as demais políticas restritas (microfone, USB, pagamento)
+    continuam bloqueadas — este teste falha se qualquer uma delas afrouxar
+    junto, ou se `camera=()` voltar a aparecer."""
+    repo_root = Path(__file__).resolve().parents[2]
+    caddy = (repo_root / "infra" / "Caddyfile").read_text(encoding="utf-8")
+    nginx = (repo_root / "infra" / "nginx" / "default.conf").read_text(encoding="utf-8")
+
+    for nome, conteudo in (("Caddyfile", caddy), ("nginx/default.conf", nginx)):
+        assert "camera=(self)" in conteudo, f"{nome}: câmera não liberada para a origem própria"
+        assert "camera=()" not in conteudo, f"{nome}: câmera continua bloqueada (camera=())"
+        assert "microphone=()" in conteudo, f"{nome}: microfone não pode ter sido liberado"
+        assert "payment=()" in conteudo, f"{nome}: payment não pode ter sido liberado"
+        assert "usb=()" in conteudo, f"{nome}: usb não pode ter sido liberado"
+        assert "geolocation=(self)" in conteudo, f"{nome}: geolocation=(self) não pode ter regredido"

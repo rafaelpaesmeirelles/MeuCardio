@@ -232,6 +232,14 @@ jobs:
         working-directory: frontend
         run: node --test scripts/check-rendering-security.test.mjs
 
+      - name: Enforce KYC selfie camera lifecycle contract
+        working-directory: frontend
+        run: node scripts/check-camera-lifecycle.mjs
+
+      - name: Test the KYC selfie camera lifecycle contract
+        working-directory: frontend
+        run: node --test scripts/check-camera-lifecycle.test.mjs
+
       - name: Enforce route-level code splitting
         working-directory: frontend
         run: node scripts/check-route-splitting.mjs
