@@ -18,14 +18,34 @@ const CLINICA: LinkItem[] = [
   { to: "/checklists", label: "Checklists", icon: "check" },
   { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
   { to: "/trilhas", label: "Trilhas", icon: "seta" },
+  { to: "/triagem-sintomas", label: "Triagem", icon: "triagem" },
+  { to: "/interacoes", label: "Interações", icon: "medicamento" },
+  { to: "/condicoes", label: "Condições especiais", icon: "check" },
+  { to: "/fluxogramas", label: "Fluxogramas", icon: "seta" },
 ];
 
 const TRABALHO: LinkItem[] = [
+  { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
+  { to: "/avaliacao-preoperatoria", label: "Pré-operatório", icon: "clinica" },
+  { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
-  { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
+  { to: "/material-paciente", label: "Material ao paciente", icon: "documento" },
   { to: "/favoritos", label: "Favoritos", icon: "favorito" },
+];
+
+const MAIS: LinkItem[] = [
+  { to: "/biblioteca", label: "Biblioteca", icon: "conhecimento" },
+  { to: "/galeria", label: "Galeria", icon: "galeria" },
+  { to: "/cursos", label: "Cursos", icon: "curso" },
+  { to: "/apresentacao", label: "Apresentação", icon: "documento" },
+  { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
+  { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
+  { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
+  { to: "/minha-conta", label: "Minha conta", icon: "conta" },
+  { to: "/assinatura", label: "Assinatura", icon: "check" },
+  { to: "/tour", label: "Conheça a plataforma", icon: "curso" },
 ];
 
 export default function ClinicalMobileNav() {
@@ -35,11 +55,6 @@ export default function ClinicalMobileNav() {
   const closeRef = useRef<HTMLButtonElement>(null);
   const sheetRef = useRef<HTMLElement>(null);
 
-  function abrirAssistente() {
-    setMaisAberto(false);
-    window.dispatchEvent(new Event("corvia:abrir-assistente-pessoal"));
-  }
-
   function fecharMais(restaurar = true) {
     setMaisAberto(false);
     if (restaurar) requestAnimationFrame(() => triggerRef.current?.focus());
@@ -48,7 +63,6 @@ export default function ClinicalMobileNav() {
   useEffect(() => {
     document.body.classList.toggle("cc-mobile-more-open", maisAberto);
     if (!maisAberto) return () => document.body.classList.remove("cc-mobile-more-open");
-
     requestAnimationFrame(() => closeRef.current?.focus());
     function teclado(evento: KeyboardEvent) {
       if (evento.key === "Escape") {
@@ -57,69 +71,34 @@ export default function ClinicalMobileNav() {
         return;
       }
       if (evento.key !== "Tab") return;
-      const elementos = Array.from(
-        sheetRef.current?.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])') ?? [],
-      ).filter((elemento) => elemento.offsetParent !== null);
+      const elementos = Array.from(sheetRef.current?.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])') ?? [])
+        .filter((elemento) => elemento.offsetParent !== null);
       if (!elementos.length) return;
       const primeiro = elementos[0];
       const ultimo = elementos[elementos.length - 1];
-      if (evento.shiftKey && document.activeElement === primeiro) {
-        evento.preventDefault();
-        ultimo.focus();
-      } else if (!evento.shiftKey && document.activeElement === ultimo) {
-        evento.preventDefault();
-        primeiro.focus();
-      }
+      if (evento.shiftKey && document.activeElement === primeiro) { evento.preventDefault(); ultimo.focus(); }
+      else if (!evento.shiftKey && document.activeElement === ultimo) { evento.preventDefault(); primeiro.focus(); }
     }
     document.addEventListener("keydown", teclado);
-    return () => {
-      document.removeEventListener("keydown", teclado);
-      document.body.classList.remove("cc-mobile-more-open");
-    };
+    return () => { document.removeEventListener("keydown", teclado); document.body.classList.remove("cc-mobile-more-open"); };
   }, [maisAberto]);
 
   function SheetLink({ item }: { item: LinkItem }) {
-    return (
-      <NavLink to={item.to} onClick={() => setMaisAberto(false)}>
-        <span><Icone nome={item.icon} /></span>
-        <strong>{item.label}</strong>
-      </NavLink>
-    );
+    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}</strong></NavLink>;
   }
 
   return (
     <>
-      <button
-        type="button"
-        className="cc-mobile-menu-trigger"
-        onClick={() => setMaisAberto(true)}
-        aria-label="Abrir menu do CorVIA"
-        aria-expanded={maisAberto}
-      >
+      <button type="button" className="cc-mobile-menu-trigger" onClick={() => setMaisAberto(true)} aria-label="Abrir menu do CorVIA" aria-expanded={maisAberto}>
         <Icone nome="menu" />
       </button>
 
       <nav className="cc-mobile-nav" aria-label="Navegação principal móvel">
-        <NavLink to="/" end>
-          <IconeHoje />
-          <span>Início</span>
-        </NavLink>
-        <NavLink to="/busca">
-          <Icone nome="busca" />
-          <span>Buscar</span>
-        </NavLink>
-        <NavLink to="/round">
-          <Icone nome="pacientes" />
-          <span>Pacientes</span>
-        </NavLink>
-        <NavLink to="/agenda">
-          <Icone nome="agenda" />
-          <span>Agenda</span>
-        </NavLink>
-        <button ref={triggerRef} type="button" onClick={() => setMaisAberto(true)} aria-expanded={maisAberto}>
-          <Icone nome="mais" />
-          <span>Mais</span>
-        </button>
+        <NavLink to="/" end><IconeHoje /><span>Início</span></NavLink>
+        <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
+        <NavLink to="/round"><Icone nome="pacientes" /><span>Pacientes</span></NavLink>
+        <NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink>
+        <button ref={triggerRef} type="button" onClick={() => setMaisAberto(true)} aria-expanded={maisAberto}><Icone nome="mais" /><span>Mais</span></button>
       </nav>
 
       {maisAberto && (
@@ -131,27 +110,20 @@ export default function ClinicalMobileNav() {
               <button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button>
             </header>
 
-            <button type="button" className="cc-mobile-more__assistant" onClick={abrirAssistente}>
-              <span className="cc-mobile-more__spark">✦</span>
-              <span><strong>Assistente Pessoal</strong><small>Agenda, deslocamento, pendências e briefing</small></span>
-              <Icone nome="seta" />
-            </button>
-
             <section className="cc-mobile-more__section">
               <p>Clínica</p>
-              <div className="cc-mobile-more__grid">
-                {CLINICA.map((item) => <SheetLink key={item.to} item={item} />)}
-              </div>
+              <div className="cc-mobile-more__grid">{CLINICA.map((item) => <SheetLink key={item.to} item={item} />)}</div>
             </section>
 
             <section className="cc-mobile-more__section">
-              <p>Trabalho e conta</p>
+              <p>Trabalho</p>
+              <div className="cc-mobile-more__grid">{TRABALHO.map((item) => <SheetLink key={item.to} item={item} />)}</div>
+            </section>
+
+            <section className="cc-mobile-more__section">
+              <p>Mais</p>
               <div className="cc-mobile-more__grid">
-                {TRABALHO.map((item) => <SheetLink key={item.to} item={item} />)}
-                <SheetLink item={{ to: "/material-paciente", label: "Material ao paciente", icon: "documento" }} />
-                <SheetLink item={{ to: "/galeria", label: "Galeria", icon: "galeria" }} />
-                <SheetLink item={{ to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" }} />
-                <SheetLink item={{ to: "/minha-conta", label: "Minha conta", icon: "conta" }} />
+                {MAIS.map((item) => <SheetLink key={item.to} item={item} />)}
                 {usuario?.role === "admin" && <SheetLink item={{ to: "/admin", label: "Administração", icon: "gestao" }} />}
               </div>
             </section>
