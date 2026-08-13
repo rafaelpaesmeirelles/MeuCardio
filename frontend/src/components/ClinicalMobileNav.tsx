@@ -28,6 +28,7 @@ const TRABALHO: LinkItem[] = [
   { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
+  { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
   { to: "/avaliacao-preoperatoria", label: "Pré-operatório", icon: "clinica" },
   { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
