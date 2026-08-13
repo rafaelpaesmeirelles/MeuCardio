@@ -23,75 +23,18 @@
     border-radius: 11px;
   }
   .clinical-os .cos-command-mini > svg { width: 16px; color: #8da7af; }
-  .clinical-os .cos-command-mini input {
-    min-height: 36px;
-    padding: 0;
-    color: #eaf7f9;
-    background: transparent;
-    border: 0;
-    font-size: .7rem;
-  }
-  .clinical-os .cos-command-mini kbd {
-    padding: 3px 6px;
-    color: #758f98;
-    background: rgba(255,255,255,.025);
-    border: 1px solid rgba(126,183,201,.07);
-    border-radius: 6px;
-    font-size: .54rem;
-  }
-  .clinical-os .cos-command-mini button {
-    display: grid;
-    width: 28px;
-    height: 28px;
-    place-items: center;
-    padding: 0;
-    color: #74e1e7;
-    background: transparent;
-    border: 0;
-  }
-  .clinical-os .cos-topbar__actions {
-    grid-column: 3;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 8px;
-  }
-  .clinical-os .cos-topbar__icon {
-    display: grid;
-    width: 36px;
-    height: 36px;
-    min-height: 36px;
-    place-items: center;
-    padding: 0;
-    color: #b3c8ce;
-    background: rgba(255,255,255,.018);
-    border: 1px solid rgba(126,183,201,.09);
-    border-radius: 50%;
-    text-decoration: none;
-  }
-  .clinical-os .cos-topbar__icon:hover {
-    color: #ebfdff;
-    background: rgba(56,202,213,.05);
-    border-color: rgba(56,202,213,.17);
-  }
+  .clinical-os .cos-command-mini input { min-height: 36px; padding: 0; color: #eaf7f9; background: transparent; border: 0; font-size: .7rem; }
+  .clinical-os .cos-command-mini kbd { padding: 3px 6px; color: #758f98; background: rgba(255,255,255,.025); border: 1px solid rgba(126,183,201,.07); border-radius: 6px; font-size: .54rem; }
+  .clinical-os .cos-command-mini button { display: grid; width: 28px; height: 28px; place-items: center; padding: 0; color: #74e1e7; background: transparent; border: 0; }
+  .clinical-os .cos-topbar__actions { grid-column: 3; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+  .clinical-os .cos-topbar__icon { display: grid; width: 36px; height: 36px; min-height: 36px; place-items: center; padding: 0; color: #b3c8ce; background: rgba(255,255,255,.018); border: 1px solid rgba(126,183,201,.09); border-radius: 50%; text-decoration: none; }
+  .clinical-os .cos-topbar__icon:hover { color: #ebfdff; background: rgba(56,202,213,.05); border-color: rgba(56,202,213,.17); }
   .clinical-os .cos-topbar__icon svg { width: 16px; height: 16px; }
   .clinical-os .cos-topbar__quick { color: #d7e7ea; }
   .clinical-os .cos-topbar__notifications { position: relative; }
-  .clinical-os .cos-account__trigger {
-    min-height: 40px;
-    gap: 8px;
-    padding: 3px 7px 3px 4px;
-    color: #d7e7ea;
-    background: transparent;
-    border: 0;
-    border-radius: 10px;
-  }
+  .clinical-os .cos-account__trigger { min-height: 40px; gap: 8px; padding: 3px 7px 3px 4px; color: #d7e7ea; background: transparent; border: 0; border-radius: 10px; }
   .clinical-os .cos-account__trigger > img,
-  .clinical-os .cos-account__avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-  }
+  .clinical-os .cos-account__avatar { width: 32px; height: 32px; border-radius: 50%; }
   .clinical-os .cos-account__identity { min-width: 106px; gap: 1px; }
   .clinical-os .cos-account__identity strong { color: #eef8fa; font-size: .6rem; font-weight: 650; }
   .clinical-os .cos-account__identity small { color: #6f8992; font-size: .48rem; }
@@ -99,45 +42,17 @@
 }
 
 @media (max-width: 900px) {
-  .clinical-os .cos-topbar {
-    display: flex;
-    min-height: 58px;
-    align-items: center;
-    padding: calc(7px + env(safe-area-inset-top)) 52px 7px 12px;
-    background: rgba(2,12,19,.98);
-    border-bottom: 1px solid rgba(126,183,201,.07);
-  }
+  .clinical-os .cos-topbar { display: flex; min-height: 58px; align-items: center; padding: calc(7px + env(safe-area-inset-top)) 52px 7px 12px; background: rgba(2,12,19,.98); border-bottom: 1px solid rgba(126,183,201,.07); }
   .clinical-os .cos-command-mini,
   .clinical-os .cos-topbar__actions,
   .clinical-os .cos-topbar__menu { display: none !important; }
-  .clinical-os .cos-topbar__mobile-brand {
-    display: inline-flex !important;
-    min-height: 34px;
-    align-items: center;
-    gap: 7px;
-    color: #f2fbfc !important;
-    text-decoration: none !important;
-  }
-  .clinical-os .cos-topbar__mobile-brand img {
-    width: 25px !important;
-    height: 25px !important;
-    object-fit: contain;
-  }
-  .clinical-os .cos-topbar__mobile-brand span {
-    color: #f4fbfc;
-    font-size: .78rem;
-    font-weight: 650;
-    letter-spacing: -.035em;
-  }
-  .cc-mobile-menu-trigger {
-    top: calc(12px + env(safe-area-inset-top));
-    right: 12px;
-    width: 32px;
-    height: 32px;
-    color: #9fb7bf;
-    background: transparent;
-    border-color: transparent;
-  }
+  .clinical-os .cos-topbar__mobile-brand { display: inline-flex !important; min-height: 34px; align-items: center; gap: 7px; color: #f2fbfc !important; text-decoration: none !important; }
+  .clinical-os .cos-topbar__mobile-brand img { display: none !important; }
+  .clinical-os .cos-topbar__mobile-brand::before { content: ""; display: block; width: 27px; height: 27px; flex: 0 0 27px; background: url('/corvia-mark-canonical.svg') center / contain no-repeat; filter: drop-shadow(0 0 7px rgba(56,202,213,.12)); }
+  .clinical-os .cos-topbar__mobile-brand span { color: #f4fbfc; font-size: .78rem; font-weight: 650; letter-spacing: -.035em; }
+  .cc-mobile-menu-trigger { top: calc(12px + env(safe-area-inset-top)); right: 12px; width: 32px; height: 32px; color: #9fb7bf; background: transparent; border-color: transparent; }
   .cc-mobile-menu-trigger:hover { background: rgba(255,255,255,.025); border-color: rgba(126,183,201,.08); }
   .cc-mobile-more__head img { width: 28px !important; height: 28px !important; object-fit: contain; }
+  .clinical-os .cos-drawer__head a img { display:none!important; }
+  .clinical-os .cos-drawer__head a::before { content:""; display:block; width:30px; height:30px; background:url('/corvia-mark-canonical.svg') center/contain no-repeat; }
 }
