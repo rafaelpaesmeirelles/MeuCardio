@@ -58,6 +58,19 @@ export default function Diretrizes() {
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
   }, []);
 
+  const naoLidas = useMemo(
+    () => (notificacoes?.items ?? []).filter((item) => !item.read_at),
+    [notificacoes?.items],
+  );
+  const revisadas = useMemo(
+    () => (atualizacoes?.items ?? []).filter((item) => item.status === "revisada").length,
+    [atualizacoes?.items],
+  );
+  const organizacoes = useMemo(
+    () => new Set((atualizacoes?.items ?? []).map((item) => item.org).filter(Boolean)).size,
+    [atualizacoes?.items],
+  );
+
   async function marcarLida(id: number) {
     try {
       const resposta = await api.post<{ notification_id: number; read_at: string }>(`/guideline-updates/${id}/read`, {});
@@ -72,10 +85,6 @@ export default function Diretrizes() {
 
   if (erro) return <Erro mensagem={erro} />;
   if (!atualizacoes || !notificacoes) return <Carregando texto="Verificando publicações oficiais…" />;
-
-  const naoLidas = notificacoes.items.filter((item) => !item.read_at);
-  const revisadas = atualizacoes.items.filter((item) => item.status === "revisada").length;
-  const organizacoes = useMemo(() => new Set(atualizacoes.items.map((item) => item.org).filter(Boolean)).size, [atualizacoes.items]);
 
   return (
     <div className="cc-page cc-guidelines-page">
