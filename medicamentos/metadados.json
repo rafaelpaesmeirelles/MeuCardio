@@ -602,6 +602,8 @@
     "dosing": {
       "dose_ajuste_renal_especifico": "**Hipertensão, sem disfunção renal**: dose inicial 50 mg 1x/dia, titular até 100 mg/dia após 1–2 semanas se resposta insuficiente. Doses acima de 100 mg/dia não trazem benefício adicional de PA e aumentam efeito colateral (fadiga). **Ajuste renal** (atenolol tem eliminação predominantemente renal, diferente de metoprolol/carvedilol que são majoritariamente hepáticos): - ClCr 15–35 mL/min/1,73m²: dose máxima 50 mg/dia - ClCr < 15 mL/min/1,73m²: dose máxima 25 mg/dia - Hemodiálise: 25–50 mg após cada sessão, sob supervisão hospitalar (o fármaco é dialisável, diferente do propranolol) **Idosos**: considerar iniciar com 25 mg/dia. Fonte: rótulo do atenolol aprovado pelo FDA (DailyMed). A versão anterior citava convergência com três fontes independentes sem nomeá-las, o que não é rastreável — a referência agora é o rótulo, com identificador."
     },
+    "hepatic_adjustment": "Não há metabolismo hepático significativo do atenolol — mais de 90% da dose absorvida chega inalterada à circulação sistêmica —, de modo que não ocorre acúmulo em hepatopatia e nenhum ajuste de dose é necessário por disfunção hepática isolada; diferente do propranolol e do carvedilol, a eliminação é predominantemente renal, e é ali que o ajuste deve ser feito (ver `renal_adjustment`). Fonte: rótulo do TENORMIN (atenolol) aprovado pelo FDA.",
+    "renal_adjustment": "Eliminação predominantemente renal: em ClCr 15-35 mL/min/1,73m², dose máxima de 50 mg/dia (meia-vida 16-27h); em ClCr <15 mL/min/1,73m², dose máxima de 25 mg/dia (meia-vida >27h) — o acúmulo significativo ocorre quando o ClCr cai abaixo de 35 mL/min/1,73m², daí a necessidade do ajuste. Em hemodiálise, administrar 25 mg ou 50 mg após cada sessão, sob supervisão hospitalar, pelo risco de queda acentuada da pressão arterial. Fonte: rótulo do TENORMIN (atenolol) aprovado pelo FDA — cortes confirmados por busca independente nesta sessão.",
     "notes": {
       "Particularidade diferenca metoprolol": "Diferente do metoprolol succinato, atenolol não possui evidência robusta de redução de mortalidade em insuficiência cardíaca crônica, não sendo recomendado como opção de primeira linha entre os betabloqueadores baseados em evidência para ICFER (bisoprolol, carvedilol, metoprolol succinato)"
     },
@@ -1143,6 +1145,8 @@
       "pediatria": "Segurança e eficácia não estabelecidas",
       "fonte": "bula do BLOPRESS (candesartana cilexetila, Abbott Laboratórios do Brasil), item 8. **Corrigido em 31/07/2026**: a versão anterior (fonte FDA/Atacand) usava 16 mg como dose inicial única para hipertensão — a bula brasileira diferencia 'hipertensão' geral (início 4-16 mg) de 'hipertensão essencial' (início 8 mg), e detalha ajuste renal/hepático que a versão anterior não tinha"
     },
+    "hepatic_adjustment": "Não é necessário ajuste de dose inicial em insuficiência hepática leve; em insuficiência hepática moderada (Child-Pugh B), a AUC da candesartana aumenta 145% e a Cmax 73% em relação a indivíduos com função hepática normal, devendo-se considerar dose inicial menor nesses pacientes. Fonte: resumo de características do produto (SmPC/EMC) e rótulo aprovado pelo FDA para ATACAND (candesartana cilexetila).",
+    "renal_adjustment": "Em insuficiência renal, incluindo pacientes em hemodiálise, a dose inicial recomendada é de 4 mg/dia, com início do tratamento sob supervisão médica próxima; em insuficiência cardíaca com disfunção renal associada, a AUC da candesartana foi 36% e 65% maior, e a Cmax 15% e 55% maior, respectivamente em disfunção renal leve e moderada, em comparação à função renal normal — confirmados por busca independente nesta sessão. VERIFICAÇÃO HUMANA NECESSÁRIA quanto a um corte numérico de ClCr para contraindicação formal, não localizado nesta sessão. Fonte: resumo de características do produto (SmPC/EMC) e rótulo aprovado pelo FDA para ATACAND (candesartana cilexetila).",
     "outcomes": {
       "Evidencia pivotal charm": "Programa CHARM avaliou candesartana em amplo espectro de IC (FEVI reduzida e preservada, tolerantes e intolerantes a IECA), demonstrando redução de mortalidade cardiovascular e hospitalizações por IC, sendo um dos BRAs com maior corpo de evidência em insuficiência cardíaca"
     },
@@ -1316,6 +1320,8 @@
       "dose maxima idosos": "50 mg/dia, em doses fracionadas 2x/dia",
       "fonte": "rótulo do carvedilol aprovado pelo FDA (DailyMed)"
     },
+    "hepatic_adjustment": "Contraindicado em disfunção hepática grave: pacientes com insuficiência hepática grave (cirrose) apresentam aumento de 4 a 7 vezes nos níveis plasmáticos de carvedilol em comparação a indivíduos saudáveis, achado farmacocinético que fundamenta a contraindicação formal do rótulo. Fonte: rótulo do COREG (carvedilol) aprovado pelo FDA.",
+    "renal_adjustment": "Carvedilol é metabolizado majoritariamente pelo fígado, com menos de 2% da dose excretada inalterada na urina — não há recomendação específica de ajuste de dose por função renal, e o rótulo do FDA não define corte numérico de clearance. Em paciente com insuficiência cardíaca, se houver piora da função renal durante o tratamento, a orientação é reduzir a dose ou descontinuar o carvedilol. Fonte: rótulo do COREG (carvedilol) aprovado pelo FDA.",
     "outcomes": {
       "Evidencia pivotal copernicus": "Estudo COPERNICUS demonstrou redução de mortalidade com carvedilol mesmo em pacientes com IC grave (classe funcional IV), população em que outros betabloqueadores têm evidência mais limitada"
     },
@@ -5683,6 +5689,8 @@
       "retirada": "nunca suspender abruptamente — reduzir gradualmente ao longo de 1-2 semanas, pelo risco de piora de angina ou infarto de rebote",
       "fonte": "Bula profissional brasileira do INDERAL (item Posologia e Modo de Usar); rótulo aprovado pelo FDA (DailyMed, setid c751ee54-27b4-4ed7-829a-ced735c41312) para pós-infarto e detalhe de diálise"
     },
+    "hepatic_adjustment": "Em cirrose, a depuração de primeira passagem do propranolol cai de forma acentuada: em estudo com 7 pacientes cirróticos vs. 9 controles saudáveis (80 mg VO a cada 8h por 7 doses), a concentração de propranolol livre no estado de equilíbrio aumentou 3 vezes e a meia-vida subiu de 4 para 11 horas; em outra série, AUC e meia-vida aumentaram 6x e 4x, e a biodisponibilidade 3x (83% vs. 27%) em cirróticos. O rótulo orienta cautela e considerar redução de dose em insuficiência hepática. Fonte: rótulo do propranolol aprovado pelo FDA.",
+    "renal_adjustment": "O rótulo não traz tabela numérica de ajuste por clearance de creatinina — orienta cautela ao selecionar a dose inicial em insuficiência renal significativa, pela possível meia-vida prolongada; a insuficiência renal crônica reduz a atividade do citocromo P450 hepático, diminuindo o clearance de primeira passagem do propranolol, e a fração livre (não ligada a proteínas) não é removida de forma significativa por diálise. VERIFICAÇÃO HUMANA NECESSÁRIA quanto a um corte numérico de ClCr para ajuste formal, não localizado nesta sessão. Fonte: rótulo do propranolol aprovado pelo FDA e bula profissional do INDERAL (AstraZeneca).",
     "notes": {
       "Particularidade farmacologica": "Alta lipossolubilidade permite atravessar barreira hematoencefálica com facilidade, explicando eficácia em tremor essencial e enxaqueca, mas também maior risco de efeitos adversos no SNC (fadiga, pesadelos, depressão) comparado a betabloqueadores hidrofílicos (atenolol)",
       "Manejo de broncoespasmo se ocorrer": "A bula, apesar de contraindicar formalmente histórico de asma/broncoespasmo (item mais restritivo que o de betabloqueadores cardiosseletivos como metoprolol/nebivolol, cujas bulas permitem uso cauteloso em asmático sem alternativa), descreve conduta caso o broncoespasmo ocorra: broncodilatador agonista beta-2 (ex.: salbutamol) em dose alta, IV ou inalatório; aminofilina IV e/ou ipratrópio nebulizado; glucagon 1-2mg IV também descrito com efeito broncodilatador; oxigênio ou ventilação artificial em caso grave."
@@ -6716,6 +6724,7 @@
       "insuficiencia renal leve moderada": "Não exceder 40 mg/dia",
       "fonte": "EMA — Telmisartan Teva Pharma"
     },
+    "renal_adjustment": "Não é necessário ajuste de dose inicial em pacientes idosos ou com insuficiência renal, incluindo os em hemodiálise; a telmisartana não é removida do sangue por hemofiltração, ou seja, não é dialisável. Fonte: rótulo do telmisartan/MICARDIS aprovado pelo FDA.",
     "outcomes": {
       "Evidencia pivotal ontarget": "Estudo ONTARGET comparou telmisartana 80mg/dia ao ramipril 10mg/dia em pacientes de alto risco cardiovascular, estabelecendo eficácia comparável com melhor tolerabilidade (menor tosse e angioedema) que IECA"
     },
@@ -7067,6 +7076,8 @@
       "ajuste hepatico": "Nenhum ajuste em insuficiência hepática não biliar sem colestase; cautela em doses >80mg 2x/dia em insuficiência leve-moderada; AUC dobra em cirrose/obstrução biliar",
       "fonte": "Saúde Direta/Medley — Bula Profissional"
     },
+    "hepatic_adjustment": "Não é necessário ajuste de dose inicial em insuficiência hepática leve a moderada, incluindo pacientes com distúrbio biliar obstrutivo, mas a exposição está aumentada nesse grupo — pacientes com hepatopatia crônica leve a moderada têm o dobro da AUC de voluntários saudáveis —, por isso recomenda-se cautela na posologia; a bula não traz dado para insuficiência hepática grave. Fonte: rótulo do DIOVAN (valsartana) aprovado pelo FDA.",
+    "renal_adjustment": "Não é necessário ajuste de dose em insuficiência renal leve (ClCr 60-90 mL/min) ou moderada (ClCr 30-60 mL/min); não há estudos em insuficiência renal grave (ClCr <10 mL/min), devendo-se ter cautela na posologia nesse cenário. A valsartana não é removida do plasma por hemodiálise. Fonte: rótulo do DIOVAN (valsartana) aprovado pelo FDA.",
     "outcomes": {
       "Evidencia pivotal val heft": "5.010 pacientes com ICFER classes II-IV NYHA; valsartana reduziu morbidade em 13,2% vs. placebo, com redução de 27,5% no risco de primeira hospitalização por IC; mortalidade total foi similar entre grupos; maior benefício em pacientes não tratados com IECA ou betabloqueador; a tripla combinação (IECA+BB+BRA) mostrou tendência desfavorável",
       "Evidencia pivotal valiant": "14.703 pacientes pós-IAM com disfunção ventricular/IC; valsartana foi tão eficaz quanto captopril na redução de mortalidade por todas as causas (19,9% vs. 19,5%); combinação valsartana+captopril não agregou benefício e aumentou efeitos adversos"
