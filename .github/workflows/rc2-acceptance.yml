@@ -6,7 +6,21 @@ on:
     paths:
       - ".github/workflows/rc2-acceptance.yml"
       - "frontend/**"
+      - "backend/**"
       - "scripts/feature_inventory.py"
+      - "content/**"
+      - "galeria/**"
+      - "exames/**"
+      - "evidencias/**"
+      - "estudos/**"
+      - "medicamentos/**"
+      - "checklists/**"
+      - "casos-clinicos/**"
+      - "trilhas/**"
+      - "material-paciente/**"
+      - "emergencia/**"
+      - "doencas/**"
+      - "triagem-sintomas/**"
 
 permissions:
   contents: read
@@ -113,10 +127,10 @@ jobs:
           docker compose exec -T backend python - <<'PY'
           from app.services.carregar_drugs import carregar as carregar_drugs
           from app.services.carregar_emergencia import carregar as carregar_emergencia
-          total_drugs = carregar_drugs('/medicamentos/metadados.json')
+          resultado_drugs = carregar_drugs('/medicamentos/metadados.json')
           carregar_emergencia()
-          assert total_drugs >= 200, total_drugs
-          print({'drugs': total_drugs, 'emergency': 'loaded'})
+          assert resultado_drugs.get('total', 0) >= 200, resultado_drugs
+          print({'drugs': resultado_drugs, 'emergency': 'loaded'})
           PY
 
       - name: Reconcile versioned corpus
@@ -193,7 +207,7 @@ jobs:
           const routes = [
             '/', '/apresentacao', '/biblioteca', '/doencas', '/triagem-sintomas', '/fluxogramas',
             '/diretrizes', '/busca', '/calculadoras', '/medicamentos', '/interacoes', '/condicoes',
-            '/galeria', '/exames', '/evidencias', '/estudos', '/trilhas', '/material-paciente',
+            '/galeria', '/exames', '/evidencias', '/estudos', '/trilhas', '/trilhas/timeline', '/material-paciente',
             '/emergencia', '/casos-clinicos', '/checklists', '/indicadores', '/cursos', '/favoritos',
             '/assistente', '/round', '/agenda', '/documentos', '/avaliacao-preoperatoria', '/receituario',
             '/assinatura', '/minha-conta', '/sincronizacao', '/telediagnostico', '/caixa-de-email',
@@ -305,6 +319,9 @@ jobs:
               await page.locator('.emerg-command__layout').waitFor({ state: 'visible', timeout: 10000 });
               await page.screenshot({ path: path.join(out, 'desktop-emergency-command.png'), fullPage: false });
             }
+
+            await page.goto(`${base}/trilhas/timeline`, { waitUntil: 'networkidle' });
+            await page.screenshot({ path: path.join(out, 'desktop-science-timeline.png'), fullPage: false });
 
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await page.locator('.ccc-assistant-input').click();
