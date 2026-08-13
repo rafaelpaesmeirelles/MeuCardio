@@ -80,7 +80,7 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
     return (agenda ?? []).filter((item) => item.status !== "cancelado" && +new Date(item.scheduled_at) >= agora).sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at))[0];
   }, [agenda]);
   const proximoLocal = useMemo(() => proximo ? locais.find((item) => item.source === "appointment" && item.appointment_id === proximo.id) ?? null : null, [locais, proximo]);
-  const rota = deslocamento?.destination?.appointment_id === proximo?.id ? deslocamento.routes?.[0] ?? null : null;
+  const rota = deslocamento?.destination?.appointment_id === proximo?.id ? deslocamento?.routes?.[0] ?? null : null;
   const saidaRecomendada = proximoLocal && rota && proximo ? new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + proximoLocal.arrival_buffer_minutes * 60) * 1000) : null;
   const chegadaPrevista = rota ? new Date((deslocamento?.updated_at ? new Date(deslocamento.updated_at).getTime() : Date.now()) + rota.duration_seconds * 1000) : null;
 

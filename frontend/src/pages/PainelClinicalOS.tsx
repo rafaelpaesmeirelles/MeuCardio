@@ -151,7 +151,7 @@ export default function PainelClinicalOS() {
   const proximo = useMemo(() => agenda.filter((item) => item.status !== "cancelado" && +new Date(item.scheduled_at) >= Date.now()).sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at))[0], [agenda]);
   const destino = useMemo(() => proximo ? proximosLocais.find((item) => item.source === "appointment" && item.appointment_id === proximo.id) ?? null : null, [proximo, proximosLocais]);
   const pendencias = useMemo(() => agenda.filter((item) => ["pendente", "pending_external", "proposed"].includes(item.status)).length, [agenda]);
-  const rota = deslocamento?.destination?.appointment_id === proximo?.id ? deslocamento.routes?.[0] : undefined;
+  const rota = deslocamento?.destination?.appointment_id === proximo?.id ? deslocamento?.routes?.[0] : undefined;
   const saidaRecomendada = destino && rota ? new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + destino.arrival_buffer_minutes * 60) * 1000) : null;
   const chegadaPrevista = rota ? new Date((deslocamento?.updated_at ? new Date(deslocamento.updated_at).getTime() : Date.now()) + rota.duration_seconds * 1000) : null;
 
