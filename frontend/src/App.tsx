@@ -28,7 +28,7 @@ const Documento = lazy(() => import("./pages/Documento"));
 const Busca = lazy(() => import("./pages/Busca"));
 const Calculadoras = lazy(() => import("./pages/Calculadoras"));
 const Calculadora = lazy(() => import("./pages/Calculadora"));
-const Medicamentos = lazy(() => import("./pages/Medicamentos"));
+const Medicamentos = lazy(() => import("./pages/MedicamentosClinicalCommand"));
 const Interacoes = lazy(() => import("./pages/Interacoes"));
 const Condicoes = lazy(() => import("./pages/Condicoes"));
 const Round = lazy(() => import("./pages/RoundGerenciavel"));
@@ -78,12 +78,6 @@ export default function App() {
   const { usuario, carregando } = useAuth();
   const location = useLocation();
 
-  // Pedido do Rafael, 07/08/2026: a cada página interna aberta (troca de
-  // rota), verifica se há versão nova do app — barato (GET condicional do
-  // sw.js) e não recarrega nada por si só; só dispara reload se houver
-  // mesmo uma versão nova (ver `verificarAtualizacaoDoServiceWorker` e o
-  // listener de `controllerchange` em main.tsx). É o mesmo gancho usado no
-  // login e no foco/retomada da aba — três gatilhos, um mecanismo só.
   useEffect(() => {
     (window as unknown as { __corviaVerificarAtualizacao?: () => void })
       .__corviaVerificarAtualizacao?.();
@@ -113,17 +107,10 @@ export default function App() {
     return <Navigate to="/minha-conta" replace />;
   }
 
-  // KYC obrigatório pós-pagamento (Trabalho 11/12, 06/08/2026) — só passa
-  // daqui quem já teve o cadastro liberado (checagem automática do
-  // conselho, ou já aprovado pelo Rafael). Vem DEPOIS do gate de perfil
-  // acima de propósito: sem profissão/conselho preenchidos, o KYC nem
-  // teria o que checar.
   if (usuario.kyc_required && location.pathname !== "/verificacao-identidade") {
     return <Navigate to="/verificacao-identidade" replace />;
   }
 
-  // Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026) — só depois
-  // do perfil e do KYC resolvidos, uma única vez por assinante.
   if (usuario.onboarding_pendente && location.pathname !== "/tour") {
     return <Navigate to="/tour" replace />;
   }
@@ -185,21 +172,11 @@ export default function App() {
           <Route path="privacidade" element={<PoliticaPrivacidade />} />
           <Route path="termos" element={<TermosUso />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
-          {usuario.role === "admin" && (
-            <Route path="admin/usuarios" element={<AdminAssinantes />} />
-          )}
-          {usuario.role === "admin" && (
-            <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />
-          )}
-          {usuario.role === "admin" && (
-            <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
-          )}
-          {usuario.role === "admin" && (
-            <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />
-          )}
+          {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
+          {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}
+          {usuario.role === "admin" && <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />}
+          {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
         </Route>
-        {/* Fora do <Shell />, de propósito — layout de tela cheia própria,
-            sem sidebar/topo por trás (Trabalho 13, 06/08/2026). */}
         <Route path="/tour" element={<Tour />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
