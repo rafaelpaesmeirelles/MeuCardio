@@ -14,6 +14,7 @@ on:
       - "evidencias/**"
       - "estudos/**"
       - "medicamentos/**"
+      - "controlados/**"
       - "checklists/**"
       - "casos-clinicos/**"
       - "trilhas/**"
@@ -115,11 +116,12 @@ jobs:
         run: |
           BACKEND_ID="$(docker compose ps -q backend)"
           test -n "$BACKEND_ID"
-          for dir in galeria exames evidencias estudos medicamentos checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas; do
+          for dir in galeria exames evidencias estudos medicamentos controlados checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas; do
             test -e "$dir"
             docker cp "$dir" "$BACKEND_ID:/$dir"
           done
           docker compose exec -T backend test -f /medicamentos/metadados.json
+          docker compose exec -T backend test -f /controlados/listas-344-98.json
           docker compose exec -T backend test -f /emergencia/metadados.json
 
       - name: Load official clinical stores
@@ -209,7 +211,7 @@ jobs:
             '/diretrizes', '/busca', '/calculadoras', '/medicamentos', '/interacoes', '/condicoes',
             '/galeria', '/exames', '/evidencias', '/estudos', '/trilhas', '/trilhas/timeline', '/material-paciente',
             '/emergencia', '/casos-clinicos', '/checklists', '/indicadores', '/cursos', '/favoritos',
-            '/assistente', '/round', '/agenda', '/documentos', '/avaliacao-preoperatoria', '/receituario',
+            '/assistente', '/round', '/agenda', '/documentos', '/exportar', '/avaliacao-preoperatoria', '/receituario',
             '/assinatura', '/minha-conta', '/sincronizacao', '/telediagnostico', '/caixa-de-email',
             '/corvia-mail', '/usuarios-online', '/admin', '/admin/usuarios', '/fila-telediagnostico'
           ];
@@ -305,6 +307,11 @@ jobs:
               await page.goto(`${base}/medicamentos?slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
               await page.locator('.mc-command').waitFor({ state: 'visible', timeout: 15000 });
               await page.screenshot({ path: path.join(out, 'desktop-medication-command.png'), fullPage: false });
+
+              await page.goto(`${base}/exportar?tipo=medicamento&slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
+              await page.getByText('Montar o PDF').waitFor({ state: 'visible', timeout: 15000 });
+              await page.waitForTimeout(700);
+              await page.screenshot({ path: path.join(out, 'desktop-content-export.png'), fullPage: false });
             }
 
             await page.goto(`${base}/round`, { waitUntil: 'networkidle' });
@@ -335,6 +342,17 @@ jobs:
             const labels = await mobile.page.locator('.cc-mobile-nav > * span').allTextContents();
             const expected = ['Início', 'Buscar', 'Pacientes', 'Agenda', 'Mais'];
             if (JSON.stringify(labels.slice(0, 5)) !== JSON.stringify(expected)) fail(`mobile/nav divergente: ${JSON.stringify(labels.slice(0, 5))}`);
+
+            if (selected?.slug) {
+              await mobile.page.goto(`${base}/exportar?tipo=medicamento&slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
+              await mobile.page.getByText('Montar o PDF').waitFor({ state: 'visible', timeout: 15000 });
+              await mobile.page.waitForTimeout(700);
+              const exportState = await mobile.page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));
+              if (exportState.scrollWidth > exportState.width + 16) fail(`/exportar mobile: overflow horizontal ${exportState.scrollWidth} > ${exportState.width}`);
+              await mobile.page.screenshot({ path: path.join(out, 'mobile-content-export.png'), fullPage: false });
+            }
+
+            await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await mobile.page.locator('.ccc-mobile-summary__card--assistant').click();
             await mobile.page.locator('.cos-assistant-panel.is-open').waitFor({ state: 'visible', timeout: 10000 });
             await mobile.page.screenshot({ path: path.join(out, 'mobile-personal-assistant.png'), fullPage: false });
