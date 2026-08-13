@@ -3714,5 +3714,90 @@
         "origem_secao": "Extensão aberta (OLE) — dados de longo prazo"
       }
     ]
+  },
+  {
+    "slug": "retomada-de-anticoagulacao-na-fa-apos-hemorragia-intracraniana",
+    "condicao": "Retomada de anticoagulação na fibrilação atrial após hemorragia intracraniana",
+    "resumo": "O que checar antes de decidir reiniciar (ou não) o anticoagulante oral num sobrevivente de hemorragia intracraniana espontânea com FA e indicação formal de anticoagulação — decisão sem resposta única, apoiada pela evidência randomizada mais recente (SoSTART, COCROACH, PRESTIGE-AF).",
+    "documento_origem": "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Veltkamp R, Korompoki E, Harvey KH, et al. Direct oral anticoagulants versus no anticoagulation for the prevention of stroke in survivors of intracerebral haemorrhage with atrial fibrillation (PRESTIGE-AF). Lancet. 2025;405(10482):927-936. PMID: 40023176.",
+      "SoSTART Collaboration. Effects of oral anticoagulation for atrial fibrillation after spontaneous intracranial haemorrhage in the UK. Lancet Neurol. 2021;20(10):842-853. PMID: 34487722.",
+      "Al-Shahi Salman R, Stephen J, Tierney JF, et al. Effects of oral anticoagulation in people with atrial fibrillation after spontaneous intracranial haemorrhage (COCROACH): individual participant data meta-analysis. Lancet Neurol. 2023;22(12):1140-1149. PMID: 37839434."
+    ],
+    "itens": [
+      {
+        "id": "sitio-hemorragia-classificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Localização da hemorragia classificada e documentada — lobar (associada a angiopatia amiloide) vs. profunda (hipertensiva); os ensaios estratificaram por essa distinção, e ela não deve ser tratada como o mesmo risco",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "cha2ds2vasc-confirmado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "CHA₂DS₂-VASc confirmado e documentado — é o critério de inclusão de indicação de anticoagulação usado nos ensaios de referência (SoSTART exigiu ≥2)",
+        "origem_secao": "SoSTART (2021)"
+      },
+      {
+        "id": "rankin-modificado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Escala de Rankin modificada avaliada — o PRESTIGE-AF incluiu só pacientes com Rankin ≤4; grau de incapacidade prévia é parte da decisão de risco-benefício",
+        "origem_secao": "PRESTIGE-AF (2025)"
+      },
+      {
+        "id": "discussao-risco-isquemico-vs-hemorragico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Conversa documentada com paciente/família cobrindo os dois lados com números reais: redução de AVC isquêmico (HR 0,05-0,27 nos três estudos) contra aumento de recorrência hemorrágica (HR 1,80-10,89, com falha formal de não inferioridade no maior ensaio) — nenhum dos três demonstrou benefício líquido claro em desfecho global",
+        "origem_secao": "O que os tres dizem juntos"
+      },
+      {
+        "id": "classe-doac-vs-avk",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se a decisão for reiniciar, preferir DOAC — foi a classe usada em 99% dos participantes do COCROACH e a totalidade do PRESTIGE-AF; o SoSTART, o único com antagonista de vitamina K numa parcela dos pacientes, teve o resultado mais fraco entre os três",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "alternativa-mecanica-considerada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Oclusão do apêndice atrial esquerdo considerada e discutida como alternativa, com a ressalva explícita de que nenhum ensaio de oclusão randomizou sobreviventes de hemorragia intracraniana — extrapolação é raciocínio, não evidência direta",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "timing-nao-e-recomendacao-de-prazo",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Ciente de que a mediana de reinício no SoSTART foi de 115 dias após o evento — é o dado disponível sobre o momento, não uma recomendação de prazo fixo a seguir cegamente",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "controle-pressorico-otimizado",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Controle da pressão arterial otimizado antes de reiniciar — fator de risco modificável para recorrência de hemorragia intracraniana em qualquer decisão de retomar antitrombótico",
+        "origem_secao": "Limites que precisam acompanhar qualquer citacao"
+      },
+      {
+        "id": "reavaliacao-de-imagem-recente",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Imagem cerebral de controle recente disponível para confirmar estabilização da hemorragia antes de reiniciar o anticoagulante",
+        "origem_secao": "avaliacao"
+      },
+      {
+        "id": "seguimento-programado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento programado com reavaliação clínica e neurológica após a retomada — decisão de alto risco nos dois sentidos, não é 'iniciar e esquecer'",
+        "origem_secao": "Como isso se traduz na conduta"
+      }
+    ]
   }
 ]
