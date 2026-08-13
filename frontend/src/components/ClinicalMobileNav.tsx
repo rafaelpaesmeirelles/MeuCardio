@@ -6,44 +6,48 @@ import { IconeHoje } from "./IdentidadeClinica";
 
 type LinkItem = { to: string; label: string; icon: NomeIcone };
 
-const CLINICA: LinkItem[] = [
+const CLINICA_DECISAO: LinkItem[] = [
   { to: "/doencas", label: "Condições", icon: "doencas" },
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
-  { to: "/evidencias", label: "Evidências", icon: "evidencia" },
-  { to: "/estudos", label: "Estudos", icon: "evidencia" },
-  { to: "/diretrizes", label: "Guidelines", icon: "conhecimento" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
   { to: "/emergencia", label: "Emergências", icon: "emergencia" },
   { to: "/checklists", label: "Checklists", icon: "check" },
-  { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
-  { to: "/trilhas", label: "Trilhas", icon: "seta" },
   { to: "/triagem-sintomas", label: "Triagem", icon: "triagem" },
   { to: "/interacoes", label: "Interações", icon: "medicamento" },
   { to: "/condicoes", label: "Condições especiais", icon: "check" },
   { to: "/fluxogramas", label: "Fluxogramas", icon: "seta" },
-];
-
-const TRABALHO: LinkItem[] = [
-  { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
-  { to: "/receituario", label: "Prescrição", icon: "prescricao" },
-  { to: "/documentos", label: "Documentos", icon: "documento" },
-  { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
   { to: "/avaliacao-preoperatoria", label: "Pré-operatório", icon: "clinica" },
-  { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
-  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
-  { to: "/material-paciente", label: "Material ao paciente", icon: "documento" },
-  { to: "/favoritos", label: "Favoritos", icon: "favorito" },
 ];
 
-const MAIS: LinkItem[] = [
+const ESTUDO_APRENDIZAGEM: LinkItem[] = [
+  { to: "/evidencias", label: "Evidências", icon: "evidencia" },
+  { to: "/estudos", label: "Estudos", icon: "evidencia" },
+  { to: "/diretrizes", label: "Guidelines", icon: "conhecimento" },
+  { to: "/timeline", label: "Timeline", icon: "seta" },
+  { to: "/trilhas", label: "Trilhas", icon: "seta" },
+  { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
   { to: "/biblioteca", label: "Biblioteca", icon: "conhecimento" },
   { to: "/galeria", label: "Galeria", icon: "galeria" },
   { to: "/cursos", label: "Cursos", icon: "curso" },
   { to: "/apresentacao", label: "Apresentação", icon: "documento" },
+];
+
+const TRABALHO_ASSISTENCIA: LinkItem[] = [
+  { to: "/receituario", label: "Prescrição", icon: "prescricao" },
+  { to: "/documentos", label: "Documentos", icon: "documento" },
+  { to: "/material-paciente", label: "Material ao paciente", icon: "documento" },
+  { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
+  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
+  { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
   { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
   { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
+];
+
+const GLOBAL: LinkItem[] = [
+  { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
+  { to: "/favoritos", label: "Favoritos", icon: "favorito" },
   { to: "/minha-conta", label: "Minha conta", icon: "conta" },
   { to: "/assinatura", label: "Assinatura", icon: "check" },
   { to: "/tour", label: "Conheça a plataforma", icon: "curso" },
@@ -84,9 +88,10 @@ export default function ClinicalMobileNav() {
     <nav className="cc-mobile-nav" aria-label="Navegação principal móvel"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><NavLink to="/round"><Icone nome="pacientes" /><span>Pacientes</span></NavLink><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button ref={triggerRef} type="button" onClick={() => setMaisAberto(true)} aria-expanded={maisAberto}><Icone nome="mais" /><span>Mais</span></button></nav>
     {maisAberto && <><div className="cc-mobile-more-backdrop is-open" aria-hidden="true" onClick={() => fecharMais(true)} /><aside ref={sheetRef} className="cc-mobile-more is-open" role="dialog" aria-modal="true" aria-label="Mais áreas do CorVIA">
       <header className="cc-mobile-more__head"><div><img src="/corvia-mark-canonical.svg" alt="" /><span><strong>CorVIA</strong><small>Clinical OS do médico</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
-      <section className="cc-mobile-more__section"><p>Clínica</p><div className="cc-mobile-more__grid">{CLINICA.map((item) => <SheetLink key={item.to} item={item} />)}</div></section>
-      <section className="cc-mobile-more__section"><p>Trabalho</p><div className="cc-mobile-more__grid">{TRABALHO.map((item) => <SheetLink key={item.to} item={item} />)}</div></section>
-      <section className="cc-mobile-more__section"><p>Mais</p><div className="cc-mobile-more__grid">{MAIS.map((item) => <SheetLink key={item.to} item={item} />)}{usuario?.role === "admin" && <><SheetLink item={{ to: "/admin", label: "Administração", icon: "gestao" }} /><SheetLink item={{ to: "/admin/usuarios", label: "Assinantes", icon: "pacientes" }} /><SheetLink item={{ to: "/fila-telediagnostico", label: "Fila telediagnóstico", icon: "evidencia" }} /></>}</div></section>
+      <section className="cc-mobile-more__section"><p>Clínica & Decisão</p><div className="cc-mobile-more__grid">{CLINICA_DECISAO.map((item) => <SheetLink key={item.to} item={item} />)}</div></section>
+      <section className="cc-mobile-more__section"><p>Estudo & Aprendizagem</p><div className="cc-mobile-more__grid">{ESTUDO_APRENDIZAGEM.map((item) => <SheetLink key={item.to} item={item} />)}</div></section>
+      <section className="cc-mobile-more__section"><p>Trabalho & Assistência</p><div className="cc-mobile-more__grid">{TRABALHO_ASSISTENCIA.map((item) => <SheetLink key={item.to} item={item} />)}</div></section>
+      <section className="cc-mobile-more__section"><p>CorVIA Clinical OS</p><div className="cc-mobile-more__grid">{GLOBAL.map((item) => <SheetLink key={item.to} item={item} />)}{usuario?.role === "admin" && <><SheetLink item={{ to: "/admin", label: "Administração", icon: "gestao" }} /><SheetLink item={{ to: "/admin/usuarios", label: "Assinantes", icon: "pacientes" }} /><SheetLink item={{ to: "/fila-telediagnostico", label: "Fila telediagnóstico", icon: "evidencia" }} /></>}</div></section>
     </aside></>}
   </>;
 }
