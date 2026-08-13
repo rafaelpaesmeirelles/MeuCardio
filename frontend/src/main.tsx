@@ -40,6 +40,7 @@ import "./styles/clinical-command-center-compat.css";
 import "./styles/clinical-canonical-fidelity.css";
 import "./styles/clinical-home-board-fidelity.css";
 import "./styles/clinical-shell-board-fidelity.css";
+import "./styles/clinical-medication-board-fidelity.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
