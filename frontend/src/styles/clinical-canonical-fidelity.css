@@ -1,0 +1,302 @@
+/* CorVIA RC2 — canonical fidelity layer.
+   Loaded LAST. The approved Clinical Command Center board is the visual source
+   of truth for every authenticated surface. This file deliberately normalizes
+   legacy primitives instead of allowing a second visual language to survive. */
+
+:root {
+  --corvia-bg: #020b12;
+  --corvia-bg-2: #04131d;
+  --corvia-panel: #071925;
+  --corvia-panel-2: #0a202d;
+  --corvia-panel-3: #0c2635;
+  --corvia-line: rgba(126,183,201,.12);
+  --corvia-line-strong: rgba(126,207,219,.22);
+  --corvia-text: #f4fbfc;
+  --corvia-text-2: #c8dce2;
+  --corvia-muted: #7e99a3;
+  --corvia-cyan: #38cad5;
+  --corvia-cyan-2: #74e1e7;
+  --corvia-violet: #a17cf5;
+  --corvia-red: #ef5062;
+  --corvia-amber: #f0aa3c;
+  --corvia-green: #78d99d;
+}
+
+/* ---------- shell / brand ---------- */
+.clinical-os {
+  color: var(--corvia-text-2);
+  background: var(--corvia-bg);
+}
+.clinical-os .cos-shell,
+.clinical-os .cos-workspace,
+.clinical-os .cos-content {
+  background: var(--corvia-bg);
+}
+.clinical-os .cos-content {
+  color: var(--corvia-text-2);
+}
+
+.ccc-nav__brand {
+  min-height: 88px;
+  gap: .72rem;
+  padding: 1rem .85rem .88rem;
+  border-bottom: 1px solid rgba(126,183,201,.07);
+}
+.ccc-nav__brand-mark {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+.ccc-nav__brand-mark img {
+  width: 39px !important;
+  height: 39px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 0 9px rgba(56,202,213,.08));
+}
+.ccc-nav__brand-copy {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  gap: .12rem;
+}
+.ccc-nav__brand-copy strong {
+  margin: 0;
+  color: #fff;
+  font-family: var(--fonte-display, Inter, system-ui, sans-serif);
+  font-size: 1.34rem;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.ccc-nav__brand-copy small {
+  color: #8ea6ae;
+  font-size: .58rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.ccc-nav__plan {
+  min-height: 62px;
+  gap: .55rem;
+  padding: .62rem .78rem;
+}
+.ccc-nav__plan-photo,
+.ccc-nav__plan-avatar {
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  border: 1px solid rgba(126,207,219,.18);
+  border-radius: 50%;
+}
+.ccc-nav__plan-photo { object-fit: cover; }
+.ccc-nav__plan-avatar {
+  display: grid;
+  place-items: center;
+  color: #dffbfc;
+  background: #0a2a38;
+  font-size: .62rem;
+  font-weight: 800;
+}
+.ccc-nav__plan-copy { display: grid; gap: .05rem; min-width: 0; }
+.ccc-nav__plan-copy strong { color: #eaf7f9; font-size: .62rem; }
+.ccc-nav__plan-copy small { color: #6f8992; font-size: .52rem; }
+
+/* ---------- universal authenticated primitives ---------- */
+.clinical-os h1,
+.clinical-os h2,
+.clinical-os h3,
+.clinical-os h4,
+.clinical-os h5,
+.clinical-os h6 { color: var(--corvia-text); }
+.clinical-os p,
+.clinical-os li,
+.clinical-os dd { color: var(--corvia-text-2); }
+.clinical-os .eyebrow { color: var(--corvia-cyan); }
+.clinical-os a { color: var(--corvia-cyan-2); }
+
+.clinical-os .cartao,
+.clinical-os .cc-section,
+.clinical-os .cc-page-header,
+.clinical-os .cc-detail-card,
+.clinical-os .cc-entity-card,
+.clinical-os .cc-compare-card,
+.clinical-os .clinical-card,
+.clinical-os .painel,
+.clinical-os .bloco {
+  color: var(--corvia-text-2);
+  background: linear-gradient(145deg, rgba(9,29,41,.98), rgba(6,22,32,.99));
+  border-color: var(--corvia-line) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.018), 0 18px 40px rgba(0,0,0,.08);
+}
+
+.clinical-os .cc-page-header {
+  border-radius: 12px;
+}
+.clinical-os .cc-page-header__description,
+.clinical-os .cc-section__heading > div > p,
+.clinical-os .cc-footnote,
+.clinical-os small { color: var(--corvia-muted); }
+.clinical-os .cc-page-header__icon,
+.clinical-os .cc-context-link > span:first-child,
+.clinical-os .cc-metric__top svg {
+  color: var(--corvia-cyan);
+  background: rgba(56,202,213,.07);
+  border-color: rgba(56,202,213,.10);
+}
+
+.clinical-os input:not([type="checkbox"]):not([type="radio"]),
+.clinical-os select,
+.clinical-os textarea {
+  color: var(--corvia-text);
+  background: rgba(255,255,255,.025);
+  border-color: rgba(126,183,201,.13);
+  box-shadow: none;
+}
+.clinical-os input::placeholder,
+.clinical-os textarea::placeholder { color: #66838d; }
+.clinical-os input:focus,
+.clinical-os select:focus,
+.clinical-os textarea:focus {
+  border-color: rgba(56,202,213,.48);
+  box-shadow: 0 0 0 3px rgba(56,202,213,.055);
+}
+.clinical-os label { color: #a8bec5; }
+
+.clinical-os .botao,
+.clinical-os button.botao {
+  color: #03131b;
+  background: linear-gradient(135deg, #2bc1cc, #65dce3);
+  border-color: rgba(91,221,229,.52);
+  box-shadow: 0 9px 22px -16px rgba(56,202,213,.75);
+}
+.clinical-os .botao:hover { background: linear-gradient(135deg, #48d0da, #7de5eb); }
+.clinical-os .botao--secundario {
+  color: #b7d0d6;
+  background: rgba(255,255,255,.025);
+  border-color: rgba(126,183,201,.13);
+}
+.clinical-os .botao--secundario:hover {
+  color: #eafcff;
+  background: rgba(56,202,213,.06);
+  border-color: rgba(56,202,213,.25);
+}
+.clinical-os .botao--perigo {
+  color: #fff;
+  background: rgba(239,80,98,.85);
+  border-color: rgba(239,80,98,.9);
+}
+
+.clinical-os .selo {
+  color: #9bb2ba;
+  background: rgba(255,255,255,.022);
+  border-color: rgba(126,183,201,.10);
+}
+.clinical-os .selo--revisado {
+  color: #88e5c0;
+  background: rgba(120,217,157,.06);
+  border-color: rgba(120,217,157,.16);
+}
+.clinical-os .selo--pendente {
+  color: #ff9aa6;
+  background: rgba(239,80,98,.06);
+  border-color: rgba(239,80,98,.16);
+}
+
+/* ---------- tables ---------- */
+.clinical-os table {
+  width: 100%;
+  color: var(--corvia-text-2);
+  background: rgba(5,20,29,.52);
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--corvia-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.clinical-os thead { background: rgba(56,202,213,.035); }
+.clinical-os th {
+  color: #93aeb7;
+  border-bottom: 1px solid var(--corvia-line) !important;
+  font-size: .64rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.clinical-os td { border-bottom-color: rgba(126,183,201,.07) !important; }
+.clinical-os tbody tr:hover { background: rgba(56,202,213,.022); }
+
+/* ---------- tabs / chips / pills ---------- */
+.clinical-os [role="tablist"] {
+  border-color: rgba(126,183,201,.10) !important;
+}
+.clinical-os [role="tab"],
+.clinical-os .aba,
+.clinical-os .pill,
+.clinical-os .chip {
+  color: #8da5ae;
+  background: transparent;
+  border-color: rgba(126,183,201,.09);
+}
+.clinical-os [role="tab"][aria-selected="true"],
+.clinical-os .aba.ativa,
+.clinical-os .pill.ativa,
+.clinical-os .chip.ativo {
+  color: #e9fdff;
+  background: rgba(56,202,213,.065);
+  border-color: rgba(56,202,213,.20);
+}
+
+/* ---------- contextual rail: same grammar as the approved board ---------- */
+.clinical-os .cos-intelligence {
+  color: var(--corvia-text-2);
+  background: linear-gradient(180deg, rgba(7,25,36,.98), rgba(4,16,24,.98));
+  border-left-color: rgba(126,183,201,.08);
+}
+.clinical-os .cos-intelligence__card,
+.clinical-os .cos-intelligence__graph,
+.clinical-os .cos-intelligence__context {
+  background: rgba(255,255,255,.018);
+  border-color: rgba(126,183,201,.09);
+}
+.clinical-os .cos-intelligence__status,
+.clinical-os .cos-intelligence__card .eyebrow { color: var(--corvia-cyan); }
+
+/* ---------- admin is still CorVIA, never a generic admin panel ---------- */
+body.corvia-route--admin .clinical-os .cos-content,
+body.corvia-route--conta .clinical-os .cos-content,
+body.corvia-route--integracoes .clinical-os .cos-content {
+  background:
+    radial-gradient(circle at 92% 0%, rgba(76,159,255,.035), transparent 24rem),
+    var(--corvia-bg);
+}
+body.corvia-route--admin .clinical-os .cartao,
+body.corvia-route--conta .clinical-os .cartao,
+body.corvia-route--integracoes .clinical-os .cartao {
+  background: linear-gradient(145deg, #09202d, #061721);
+}
+
+/* ---------- emergency keeps its semantic red, with the same construction quality ---------- */
+body.corvia-route--emergencia .clinical-os {
+  --corvia-cyan: #ef5062;
+  --corvia-cyan-2: #ff9aa6;
+}
+
+/* ---------- mobile canonical continuity ---------- */
+@media (max-width: 900px) {
+  .clinical-os .cos-content {
+    width: 100%;
+    max-width: none;
+    padding-inline: .72rem !important;
+    background: var(--corvia-bg);
+  }
+  .clinical-os .cartao,
+  .clinical-os .cc-section,
+  .clinical-os .cc-page-header,
+  .clinical-os .cc-detail-card,
+  .clinical-os .cc-entity-card {
+    border-radius: 10px;
+  }
+  .clinical-os table { min-width: 620px; }
+}
