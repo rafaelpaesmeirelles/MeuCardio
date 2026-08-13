@@ -97,6 +97,15 @@ jobs:
           docker compose logs --no-color --tail=250 backend
           exit 1
 
+      - name: Mount complete versioned scientific corpus in isolated backend
+        run: |
+          BACKEND_ID="$(docker compose ps -q backend)"
+          test -n "$BACKEND_ID"
+          for dir in galeria exames evidencias estudos medicamentos checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas; do
+            test -e "$dir"
+            docker cp "$dir" "$BACKEND_ID:/$dir"
+          done
+
       - name: Create administrator
         run: |
           docker compose exec -T backend python -m app.commands.create_admin \
@@ -185,7 +194,7 @@ jobs:
           async function login(viewport) {
             const context = await browser.newContext({ viewport, colorScheme: 'dark', locale: 'pt-BR' });
             const page = await context.newPage();
-            page.on('pageerror', (e) => report.pageErrors.push(String(e)));
+            page.on('pageerror', (e) => report.pageErrors.push(`${page.url()} :: ${String(e)}`));
             await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
             await page.locator('#email').fill('rc2-acceptance@teste.local');
             await page.locator('#senha').fill('rc2-acceptance-seguro-123');
@@ -235,7 +244,6 @@ jobs:
                   const text = document.body?.innerText || '';
                   return {
                     path: location.pathname,
-                    text,
                     width: innerWidth,
                     scrollWidth: document.documentElement.scrollWidth,
                     stuck: /carregando a tela/i.test(text),
