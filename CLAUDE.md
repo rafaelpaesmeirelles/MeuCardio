@@ -1,5 +1,45 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🐛 DÍVIDA TÉCNICA CONHECIDA, 13/08/2026: `stripe_customer_id` órfão na assinatura da conta administrativa
+> Achado ao investigar por que `/minha-conta` devolvia 503 no histórico de faturas para o admin
+> (`rafael@corvia.med.br`, `user.id = 1`). **Investigado a fundo, autorizado pelo Rafael, e
+> deliberadamente NÃO corrigido** — ele pediu para só documentar, sem mexer em banco de produção,
+> sem criar `Customer` novo, sem alterar assinatura e sem deploy.
+>
+> **O que existe hoje**: a `Subscription` de `kind="meucardio"` do admin (a que tem
+> `stripe_customer_id` preenchido) tem `status="inativo"` e **`stripe_subscription_id = None`** —
+> ou seja, esse admin nunca teve, nas duas linhas de `Subscription` que possui (a outra é o add-on
+> `kind="email"` do CorVIA Mail, sem `customer_id` nenhum), uma assinatura Stripe de verdade
+> vinculada. Só sobrou um `customer_id` solto, gravado em 28/07/2026 — bem no início da integração
+> Stripe deste projeto, quando ainda havia bastante uso de modo teste documentado neste mesmo
+> arquivo (inclusive um registro de "cliente descartável, depois apagado" na seção do Customer
+> Portal).
+>
+> **Verificado por 4 vias independentes, direto na chave `sk_live_` de produção, só leitura —
+> nenhuma bate**: o `customer_id` gravado não existe mais no Stripe (`No such customer`);
+> `stripe.Customer.list(email=...)` pelo e-mail exato do admin devolve zero; `Customer.search` pelo
+> nome completo devolve zero; e a varredura das 16 `Checkout Session` que existem hoje na conta,
+> filtrando por `metadata.user_id == "1"`, também devolve zero. **Não há candidato ambíguo — não há
+> candidato nenhum.** Hipótese mais provável (não confirmada, não é fato registrado em banco):
+> resíduo de um `Customer` de teste anterior à virada para chave live, nunca limpo deste registro
+> específico. **O ID completo não está registrado aqui de propósito** — quem precisar dele, está na
+> coluna `stripe_customer_id` da `Subscription` `id=2` no banco de produção.
+>
+> **Confirmado que o problema fica contido, não vaza para o resto da conta**: `GET
+> /api/billing/faturas` (`app/api/billing.py`) captura `stripe.error.StripeError` amplamente e
+> devolve 503 limpo, só a lista de faturas fica vazia — nunca um 500 cru, nunca afeta o resto da
+> resposta. `POST /api/billing/portal` (botão "Gerenciar assinatura") usaria o mesmo `customer_id`
+> quebrado e também trata o erro (`except stripe.error.InvalidRequestError` → 503), com a única
+> ressalva de que a mensagem atribui a causa a "configuração do portal" em vez de "customer
+> inexistente" — cosmético, não é falha de segurança nem de dado. Login, sessão e acesso deste admin
+> não dependem do Stripe (`role == "admin"` dá acesso completo por fora da cobrança) — confirmado
+> também ao vivo: `/minha-conta` renderiza por completo (foto, logo, assinatura digital,
+> sincronização de contas), só a seção de histórico de faturas fica indisponível.
+>
+> **Pendência real para o Rafael decidir, sem pressa**: limpar esse `customer_id` órfão (zerar o
+> campo, ou criar um `Customer` novo de verdade caso ele queira testar cobrança real nessa conta) —
+> nenhuma ação foi tomada além desta documentação.
+
 > ## ✅ CONCLUÍDO, 09/08/2026: exclusão definitiva dos 34+1 duplicados/órfãos acumulados no dia
 > Pedido do Rafael: **"o que for conteudo cientifico repetido, errado e inutil pode apagar"** —
 > primeira autorização deste tipo no dia (até aqui, duplicata só era despublicada/marcada
