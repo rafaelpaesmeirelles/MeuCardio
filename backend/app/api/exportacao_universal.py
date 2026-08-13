@@ -78,9 +78,17 @@ class PedidoEnvioEmail(PedidoExportacao):
     cc: str | None = Field(default=None, max_length=320)
     cco: str | None = Field(default=None, max_length=320)
 
-    @field_validator("para", "cc", "cco")
+    @field_validator("para")
     @classmethod
-    def email_valido(cls, valor: str | None) -> str | None:
+    def destinatario_valido(cls, valor: str) -> str:
+        valor = valor.strip().lower()
+        if not valor or not _EMAIL_RE.fullmatch(valor):
+            raise ValueError("Endereço de e-mail inválido.")
+        return valor
+
+    @field_validator("cc", "cco")
+    @classmethod
+    def email_opcional_valido(cls, valor: str | None) -> str | None:
         if valor is None:
             return None
         valor = valor.strip().lower()
@@ -248,7 +256,7 @@ def enviar_conteudo_por_email(
     except anexo_email_proprio.AnexoIndisponivel as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
-    assunto = (dados.assunto or f"{arquivo.titulo} — CorVIA").strip()
+    assunto = re.sub(r"[\r\n]+", " ", (dados.assunto or f"{arquivo.titulo} — CorVIA")).strip()
     mensagem = (dados.mensagem or "Segue em anexo o conteúdo exportado do CorVIA.").strip()
     corpo, formato = montar_corpo_com_assinatura(mensagem, montar_assinatura_html(user))
     try:
