@@ -39,6 +39,7 @@ const ROUTES: Array<[string, string]> = [
   ["/material-paciente", "ferramentas"],
   ["/galeria", "ferramentas"],
   ["/apresentacao", "ferramentas"],
+  ["/exportar", "ferramentas"],
   ["/busca", "ferramentas"],
 
   // Emergência tem identidade e shell próprios; não herda regras genéricas.
