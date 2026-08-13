@@ -102,7 +102,7 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
     setResumoEmail(undefined);
     Promise.all([
       api.get<Agendamento[]>("/appointments").catch(() => []),
-      api.get<ProximoLocal[]>("/agenda/workday/next-locations").catch(() => []),
+      api.get<ProximoLocal[]>("/agenda/workday/next-locations?limit=10").catch(() => []),
       api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").catch(() => null),
       api.get<ConfiguracaoMapa>("/agenda/mobility/map-config").catch(() => null),
       api.get<ResumoEmail>("/email/resumo").catch(() => null),
@@ -129,22 +129,32 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
     return (agenda ?? []).filter((item) => item.status !== "cancelado" && +new Date(item.scheduled_at) >= agora).sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at))[0];
   }, [agenda]);
 
-  const proximoLocal = locais[0] ?? null;
-  const rota = deslocamento?.routes?.[0] ?? null;
-  const saidaRecomendada = proximoLocal && rota ? new Date(new Date(proximoLocal.starts_at).getTime() - (rota.duration_seconds + proximoLocal.arrival_buffer_minutes * 60) * 1000) : null;
-  const chegadaPrevista = rota ? new Date(Date.now() + rota.duration_seconds * 1000) : null;
+  const proximoLocal = useMemo(() => proximo ? locais.find((item) => item.source === "appointment" && item.appointment_id === proximo.id) ?? null : null, [locais, proximo]);
+  const rota = deslocamento?.destination?.appointment_id === proximo?.id ? deslocamento.routes?.[0] ?? null : null;
+  const saidaRecomendada = proximoLocal && rota && proximo ? new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + proximoLocal.arrival_buffer_minutes * 60) * 1000) : null;
+  const chegadaPrevista = rota ? new Date((deslocamento?.updated_at ? new Date(deslocamento.updated_at).getTime() : Date.now()) + rota.duration_seconds * 1000) : null;
 
   function atualizarDeslocamento() {
     setErroRota("");
     if (!mobilidade) { setErroRota("Não foi possível confirmar a autorização de mobilidade. Abra a Agenda e revise essa preferência antes de usar sua localização."); return; }
     if (!mobilidade.enabled) { setErroRota("Ative a mobilidade na Agenda antes de solicitar sua localização."); return; }
+    if (!proximo) { setErroRota("Nenhum compromisso futuro encontrado."); return; }
+    if (!proximoLocal || proximoLocal.appointment_id !== proximo.id) { setErroRota("O compromisso exibido não possui um destino vinculável. Complete o local na Agenda."); return; }
+    if (proximoLocal.location.latitude == null || proximoLocal.location.longitude == null) { setErroRota("O local deste compromisso ainda não possui coordenadas utilizáveis."); return; }
     if (!navigator.geolocation) { setErroRota("Localização não disponível neste dispositivo."); return; }
     setCarregandoRota(true);
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const ponto = { latitude: position.coords.latitude, longitude: position.coords.longitude };
         setOrigem(ponto);
-        api.post<Deslocamento>("/agenda/mobility/commute", ponto).then(setDeslocamento).catch(() => setErroRota("Não foi possível calcular o deslocamento agora.")).finally(() => setCarregandoRota(false));
+        api.post<Deslocamento>("/agenda/mobility/commute-appointment", { ...ponto, appointment_id: proximo.id }).then((resultado) => {
+          if (resultado.destination?.appointment_id !== proximo.id) {
+            setDeslocamento(null);
+            setErroRota("A rota retornada não corresponde ao compromisso exibido e foi descartada.");
+            return;
+          }
+          setDeslocamento(resultado);
+        }).catch(() => setErroRota("Não foi possível calcular o deslocamento agora.")).finally(() => setCarregandoRota(false));
       },
       (erro) => { setCarregandoRota(false); setErroRota(erro.code === erro.PERMISSION_DENIED ? "Permissão de localização bloqueada neste dispositivo." : "Localização temporariamente indisponível."); },
       { enableHighAccuracy: false, timeout: 12000, maximumAge: 120000 },
@@ -173,15 +183,15 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
 
           <section className="cos-assistant-card cos-assistant-card--commute">
             <div className="cos-assistant-card__head"><span><Icone nome="rota" /></span><div><p className="eyebrow">Deslocamento</p><h3>Chegue no tempo certo</h3></div></div>
-            {proximoLocal ? <>
-              <div className="cos-assistant-destination"><Icone nome="pin" /><div><small>Próximo local</small><strong>{proximoLocal.location.name}</strong><span>Início às {new Date(proximoLocal.starts_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</span></div></div>
+            {proximoLocal && proximo ? <>
+              <div className="cos-assistant-destination"><Icone nome="pin" /><div><small>Destino do compromisso</small><strong>{proximoLocal.location.name}</strong><span>{tipoCompromisso(proximo.appointment_type)} às {new Date(proximo.scheduled_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</span></div></div>
               {rota && deslocamento ? <>
                 <div className="cos-assistant-map"><MapaDeslocamento rotas={deslocamento.routes} origem={origem} destino={{ name: proximoLocal.location.name, latitude: proximoLocal.location.latitude, longitude: proximoLocal.location.longitude }} provider={deslocamento.provider} updatedAt={deslocamento.updated_at} googleMapsApiKey={configMapa?.api_key} /></div>
-                <div className="cos-assistant-route cos-assistant-route--board"><div><small>Sair às</small><strong>{saidaRecomendada?.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) || "—"}</strong></div><div><small>Chegada prevista</small><strong>{chegadaPrevista?.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) || "—"}</strong></div><div><small>Trânsito</small><strong>{rota.congestion || (rota.traffic_delay_seconds > 120 ? "moderado" : "normal")}</strong></div></div>
+                <div className="cos-assistant-route cos-assistant-route--board"><div><small>Sair às</small><strong>{saidaRecomendada?.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) || "—"}</strong></div><div><small>Chegada prevista</small><strong>{chegadaPrevista?.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) || "—"}</strong></div><div><small>Trânsito</small><strong>{rota.congestion || "atualizado"}</strong></div></div>
               </> : <button type="button" className="cos-assistant-route-button" onClick={atualizarDeslocamento} disabled={carregandoRota}><Icone nome="rota" /> {carregandoRota ? "Calculando rota…" : "Calcular deslocamento agora"}</button>}
               {erroRota && <p className="cos-assistant-warning">{erroRota}</p>}
               {!mobilidade?.enabled && <p className="cos-assistant-hint">Você pode ativar a mobilidade na Agenda para deixar este briefing mais automático.</p>}
-            </> : <div className="cos-assistant-empty"><strong>Nenhum local de trabalho futuro configurado.</strong><small>Cadastre sua rotina e endereços na Agenda para receber assistência de deslocamento.</small><Link to="/agenda" onClick={onClose}>Configurar na Agenda <Icone nome="seta" /></Link></div>}
+            </> : <div className="cos-assistant-empty"><strong>{proximo ? "Este compromisso não possui um destino vinculável." : "Nenhum compromisso futuro encontrado."}</strong><small>{proximo ? "Complete o endereço/local desse mesmo compromisso na Agenda. O CorVIA não substitui por outro destino." : "Cadastre seu próximo compromisso na Agenda para receber assistência de deslocamento."}</small><Link to="/agenda" onClick={onClose}>Abrir Agenda <Icone nome="seta" /></Link></div>}
           </section>
 
           <section className="cos-assistant-card">
