@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Falha a CI quando uma funcionalidade publicada desaparece da aplicação.
 
-Este inventário protege a superfície funcional; ele não substitui testes de
-comportamento. Rotas novas exigem revisão explícita do baseline para que menus,
-permissões e documentação não se afastem silenciosamente do produto publicado.
+O inventário protege tanto a existência das rotas quanto a discoverability nas
+navegações CANÔNICAS que o usuário realmente vê. Não é permitido validar uma
+sidebar legada escondida por CSS e concluir, por engano, que a feature continua
+acessível.
 """
 
 from __future__ import annotations
@@ -14,7 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / "frontend/src/App.tsx"
-SHELL = ROOT / "frontend/src/components/ShellClinicalOSLaunch.tsx"
+DESKTOP_NAV = ROOT / "frontend/src/components/ClinicalDesktopNav.tsx"
+MOBILE_NAV = ROOT / "frontend/src/components/ClinicalMobileNav.tsx"
 MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
@@ -70,6 +72,8 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/components/ChatFlutuante.tsx",
     "frontend/src/components/PersonalAssistantPanel.tsx",
     "frontend/src/components/ShellClinicalOSLaunch.tsx",
+    "frontend/src/components/ClinicalDesktopNav.tsx",
+    "frontend/src/components/ClinicalMobileNav.tsx",
     "frontend/src/pages/PainelClinicalOS.tsx",
     "frontend/src/pages/TourClinicalOS.tsx",
     "frontend/src/pages/Admin.tsx",
@@ -137,31 +141,23 @@ def assert_exact(label: str, actual: set[str], expected: set[str]) -> None:
     missing = sorted(expected - actual)
     unexpected = sorted(actual - expected)
     if missing or unexpected:
-        raise AssertionError(
-            f"{label} divergiu. Ausentes={missing}; novos_nao_revisados={unexpected}"
-        )
+        raise AssertionError(f"{label} divergiu. Ausentes={missing}; novos_nao_revisados={unexpected}")
 
 
-def _navigation_paths(shell_source: str) -> set[str]:
-    """Inventaria destinos do modelo de menu do Clinical OS sem contar atalhos FAB.
-
-    Os itens principais/admin continuam declarados como objetos ``to:``. Home e
-    itens do menu de conta são JSX porque dependem de layout/estado; entram aqui
-    explicitamente. O atalho flutuante de Emergência não é menu e permanece
-    protegido pela rota React e pelos testes próprios de emergência.
-    """
-    paths = set(re.findall(r'\bto:\s*"([^"]+)"', shell_source))
-    paths.update(
-        re.findall(r'<NavLink\s+to="([^"]+)"[^>]*role="menuitem"', shell_source)
-    )
-    if "cos-nav__home" in shell_source:
-        paths.add("/")
-    return paths
+def _navigation_paths(*sources: str) -> set[str]:
+    """Inventaria destinos das navegações canônicas visíveis desktop/mobile."""
+    paths: set[str] = set()
+    for source in sources:
+        paths.update(re.findall(r'\bto:\s*"([^"]+)"', source))
+        paths.update(re.findall(r'<NavLink\s+to="([^"]+)"', source))
+        paths.update(re.findall(r'<Link\s+to="([^"]+)"', source))
+    return {normalize_route(path) for path in paths}
 
 
 def main() -> int:
     app_source = APP.read_text(encoding="utf-8")
-    shell_source = SHELL.read_text(encoding="utf-8")
+    desktop_nav_source = DESKTOP_NAV.read_text(encoding="utf-8")
+    mobile_nav_source = MOBILE_NAV.read_text(encoding="utf-8")
     main_source = MAIN.read_text(encoding="utf-8")
 
     route_paths = {
@@ -173,42 +169,28 @@ def main() -> int:
         route_paths.add("/")
     assert_exact("Rotas React", route_paths, EXPECTED_APP_ROUTES)
 
-    nav_paths = _navigation_paths(shell_source)
-    assert_exact("Destinos de navegação", nav_paths, EXPECTED_NAV_ROUTES)
+    nav_paths = _navigation_paths(desktop_nav_source, mobile_nav_source)
+    assert_exact("Destinos da navegação canônica visível", nav_paths, EXPECTED_NAV_ROUTES)
 
-    backend_routers = set(
-        re.findall(r"\b([a-z0-9_]+\.(?:router|router_ws))\b", main_source)
-    )
+    backend_routers = set(re.findall(r"\b([a-z0-9_]+\.(?:router|router_ws))\b", main_source))
     assert_exact("Routers FastAPI", backend_routers, EXPECTED_BACKEND_ROUTERS)
 
-    eager_pages = set(
-        re.findall(r'import\s+\w+\s+from\s+"\./pages/([^"]+)"', app_source)
-    )
-    lazy_pages = set(
-        re.findall(
-            r'lazy\s*\(\s*\(\)\s*=>\s*import\s*\(\s*"\./pages/([^"]+)"\s*\)\s*\)',
-            app_source,
-        )
-    )
+    eager_pages = set(re.findall(r'import\s+\w+\s+from\s+"\./pages/([^"]+)"', app_source))
+    lazy_pages = set(re.findall(r'lazy\s*\(\s*\(\)\s*=>\s*import\s*\(\s*"\./pages/([^"]+)"\s*\)\s*\)', app_source))
     imported_pages = eager_pages | lazy_pages
-    missing_pages = sorted(
-        page for page in imported_pages
-        if not (ROOT / "frontend/src/pages" / f"{page}.tsx").is_file()
-    )
+    missing_pages = sorted(page for page in imported_pages if not (ROOT / "frontend/src/pages" / f"{page}.tsx").is_file())
     if missing_pages:
         raise AssertionError(f"Páginas importadas ausentes: {missing_pages}")
     if len(imported_pages) < 51:
-        raise AssertionError(
-            f"Apenas {len(imported_pages)} páginas registradas no App.tsx; mínimo publicado: 51"
-        )
+        raise AssertionError(f"Apenas {len(imported_pages)} páginas registradas no App.tsx; mínimo publicado: 51")
 
     missing_support = sorted(path for path in EXPECTED_SUPPORT_FILES if not (ROOT / path).is_file())
     if missing_support:
         raise AssertionError(f"Arquivos funcionais de suporte ausentes: {missing_support}")
 
     print(
-        "Inventário funcional íntegro: "
-        f"{len(route_paths)} rotas React, {len(nav_paths)} destinos de menu, "
+        "Inventário funcional íntegro e discoverable: "
+        f"{len(route_paths)} rotas React, {len(nav_paths)} destinos nas navegações canônicas visíveis, "
         f"{len(backend_routers)} routers FastAPI, {len(imported_pages)} páginas importadas "
         f"e {len(EXPECTED_SUPPORT_FILES)} artefatos críticos."
     )
