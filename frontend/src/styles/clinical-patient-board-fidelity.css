@@ -1,0 +1,170 @@
+/* Patient Command Center — direct fidelity to the approved board. */
+
+.pc-command {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  background: #03111a;
+  border: 1px solid rgba(126,183,201,.10);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.pc-command__header {
+  display: grid;
+  grid-template-columns: 40px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 61px;
+  padding: 8px 10px;
+  background: linear-gradient(180deg,#071923,#05141d);
+  border-bottom: 1px solid rgba(126,183,201,.08);
+}
+.pc-command__avatar {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  color: #d8f7f9;
+  background: linear-gradient(145deg,#153b49,#0b2633);
+  border: 1px solid rgba(126,207,219,.15);
+  border-radius: 50%;
+  font-size: .58rem;
+  font-weight: 800;
+}
+.pc-command__identity { min-width: 0; }
+.pc-command__identity h1 { margin: 0; color: #f3fbfc; font-size: .78rem; font-weight: 650; }
+.pc-command__identity p { margin: 1px 0; color: #839ba4 !important; font-size: .49rem; }
+.pc-command__identity small { color: #617e88 !important; font-size: .44rem; }
+.pc-command__quick-icons { display: flex; gap: 5px; }
+.pc-command__quick-icons a,
+.pc-command__quick-icons button {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  padding: 0;
+  color: #7fdfe4 !important;
+  background: rgba(56,202,213,.04);
+  border: 1px solid rgba(126,183,201,.08);
+  border-radius: 8px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.pc-command__quick-icons svg { width: 14px; height: 14px; }
+.pc-command__tabs {
+  display: flex;
+  min-height: 35px;
+  align-items: stretch;
+  padding: 0 8px;
+  background: #061720;
+  border-bottom: 1px solid rgba(126,183,201,.08);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.pc-command__tabs::-webkit-scrollbar { display: none; }
+.pc-command__tabs button,
+.pc-command__tabs a {
+  position: relative;
+  display: grid;
+  min-height: 35px;
+  place-items: center;
+  padding: 0 10px;
+  color: #718d97 !important;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-size: .47rem;
+  white-space: nowrap;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.pc-command__tabs .is-active { color: #63d9df !important; }
+.pc-command__tabs .is-active::after { content:""; position:absolute; right:8px; bottom:0; left:8px; height:2px; background:#38cad5; border-radius:999px; }
+.pc-command__body { display: grid; grid-template-columns: minmax(0,1fr) 180px; gap: 8px; padding: 9px; }
+.pc-command__summary { display: grid; gap: 8px; min-width: 0; }
+.pc-command__clinical-summary,
+.pc-command__meds,
+.pc-command__actions {
+  background: linear-gradient(145deg,#08202c,#061722);
+  border: 1px solid rgba(126,183,201,.08);
+  border-radius: 9px;
+}
+.pc-command__clinical-summary,
+.pc-command__meds { padding: 10px; }
+.pc-command__clinical-summary > small,
+.pc-command__meds > small,
+.pc-command__actions > small {
+  display: block;
+  margin-bottom: 7px;
+  color: #5cd7de !important;
+  font-size: .44rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.pc-command__columns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pc-command__columns section { display: grid; align-content: start; gap: 4px; min-width: 0; }
+.pc-command__columns section > span:first-child { color: #6e8993; font-size: .45rem; }
+.pc-command__columns section > strong { overflow: hidden; color: #d9e7ea; font-size: .52rem; line-height: 1.3; text-overflow: ellipsis; }
+.pc-command__columns section > span:not(:first-child) { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 7px; padding: 3px 0; border-bottom: 1px solid rgba(126,183,201,.045); }
+.pc-command__columns section > span strong { color: #c6d6da; font-size: .48rem; }
+.pc-command__columns section > span small { color: #849ba3 !important; font-size: .47rem; }
+.pc-command__meds { display: grid; gap: 4px; }
+.pc-command__meds > small { margin-bottom: 3px; }
+.pc-command__meds > span { color: #aabfc5; font-size: .5rem; }
+.pc-command__actions { display: grid; align-content: start; gap: 4px; padding: 9px; }
+.pc-command__actions > small { color: #7d98a1 !important; }
+.pc-command__actions a,
+.pc-command__actions button {
+  display: grid;
+  width: 100%;
+  min-height: 30px;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px;
+  color: #b6c9ce !important;
+  background: rgba(255,255,255,.016);
+  border: 1px solid rgba(126,183,201,.055);
+  border-radius: 7px;
+  font: inherit;
+  font-size: .47rem;
+  text-align: left;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.pc-command__actions a:hover,
+.pc-command__actions button:hover { color:#e9fbfc !important; background:rgba(56,202,213,.04); border-color:rgba(56,202,213,.13); }
+.pc-command__actions svg { width: 13px; color: #65d9df; }
+
+.ccc-patient-command--board .ccc-patient-command__manager { max-width: 1040px; margin: 0 auto; }
+.ccc-patient-command--board .ccc-patient-command__active-row { grid-template-columns: minmax(0,1fr) auto; }
+.ccc-patient-command__select {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 38px minmax(0,1fr);
+  align-items: center;
+  gap: .55rem;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ccc-patient-command__active-row.is-selected { background: rgba(56,202,213,.035); border-color: rgba(56,202,213,.13); }
+.ccc-patient-command--board .ccc-patient-command__clinical { max-width: 1040px; margin: 0 auto; }
+
+@media (max-width: 900px) {
+  .pc-command { border-radius: 10px; }
+  .pc-command__header { grid-template-columns: 36px minmax(0,1fr) auto; gap: 6px; padding-inline: 7px; }
+  .pc-command__avatar { width: 34px; height: 34px; }
+  .pc-command__quick-icons a:nth-child(2),
+  .pc-command__quick-icons a:nth-child(3) { display: none; }
+  .pc-command__body { grid-template-columns: 1fr; padding: 7px; }
+  .pc-command__actions { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .pc-command__actions > small { grid-column: 1 / -1; }
+  .pc-command__columns { gap: 8px; }
+  .ccc-patient-command__select { grid-template-columns: 32px minmax(0,1fr); gap: .4rem; }
+}
