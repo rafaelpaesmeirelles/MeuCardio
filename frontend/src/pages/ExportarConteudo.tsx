@@ -176,7 +176,7 @@ export default function ExportarConteudo() {
   }
 
   return (
-    <div style={{ maxWidth: 1080 }}>
+    <div style={{ maxWidth: 1080, minWidth: 0 }}>
       <p className="eyebrow">Produção clínica e científica</p>
       <h1>Exportar conteúdo</h1>
       <p className="subtitulo" style={{ maxWidth: "76ch" }}>
@@ -184,14 +184,14 @@ export default function ExportarConteudo() {
         Você pode gerar só com a marca CorVIA ou acrescentar sua identificação profissional.
       </p>
 
-      <section className="cartao" style={{ marginTop: "1rem" }}>
+      <section className="cartao" style={{ marginTop: "1rem", minWidth: 0 }}>
         <p className="eyebrow">1 · Localizar conteúdo</p>
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 2fr) minmax(180px, 1fr)", gap: 10 }}>
-          <label>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10 }}>
+          <label style={{ minWidth: 0 }}>
             <strong>Buscar</strong>
             <input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: insuficiência cardíaca, sacubitril, PARADIGM-HF…" />
           </label>
-          <label>
+          <label style={{ minWidth: 0 }}>
             <strong>Tipo</strong>
             <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
               <option value="">Todos os tipos</option>
@@ -204,17 +204,17 @@ export default function ExportarConteudo() {
         {carregando ? <div style={{ marginTop: 14 }}><Carregando texto="Buscando conteúdo…" /></div> : !catalogo?.itens.length ? (
           <div style={{ marginTop: 14 }}><Vazio titulo="Nenhum conteúdo encontrado" acao="Altere o termo ou o tipo de conteúdo." /></div>
         ) : (
-          <div style={{ display: "grid", gap: 8, marginTop: 14, maxHeight: 430, overflowY: "auto", paddingRight: 3 }}>
+          <div style={{ display: "grid", gap: 8, marginTop: 14, maxHeight: 430, overflowY: "auto", paddingRight: 3, minWidth: 0 }}>
             {catalogo.itens.map((item) => {
               const selecionado = chavesSelecionadas.has(chave(item));
               return (
-                <article className="cartao" key={chave(item)} style={{ padding: "0.8rem", display: "flex", gap: 12, alignItems: "center" }}>
-                  <div style={{ minWidth: 0, flex: 1 }}>
+                <article className="cartao" key={chave(item)} style={{ padding: "0.8rem", display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center", minWidth: 0 }}>
+                  <div style={{ minWidth: 0, flex: "1 1 260px", overflowWrap: "anywhere" }}>
                     <p className="eyebrow" style={{ marginBottom: 3 }}>{item.rotulo_tipo}{item.tema ? ` · ${item.tema}` : ""}</p>
                     <strong style={{ display: "block" }}>{item.titulo}</strong>
                     {item.detalhe && <span className="dado" style={{ display: "block", marginTop: 3 }}>{item.detalhe}</span>}
                   </div>
-                  <button className="botao botao--secundario" type="button" onClick={() => adicionar(item)} disabled={selecionado}>
+                  <button className="botao botao--secundario" type="button" onClick={() => adicionar(item)} disabled={selecionado} style={{ flex: "0 0 auto" }}>
                     {selecionado ? "Adicionado" : "Adicionar"}
                   </button>
                 </article>
@@ -224,25 +224,27 @@ export default function ExportarConteudo() {
         )}
       </section>
 
-      <section className="cartao" style={{ marginTop: "1rem" }}>
+      <section className="cartao" style={{ marginTop: "1rem", minWidth: 0 }}>
         <p className="eyebrow">2 · Montar o PDF</p>
         {!selecionados.length ? (
           <p className="dado">Adicione um ou mais conteúdos. O PDF pode misturar medicamento, guideline, evidência, estudo, exame, checklist, timeline e outras áreas.</p>
         ) : (
-          <ol style={{ listStyle: "none", padding: 0, margin: "0.7rem 0", display: "grid", gap: 7 }}>
+          <ol style={{ listStyle: "none", padding: 0, margin: "0.7rem 0", display: "grid", gap: 7, minWidth: 0 }}>
             {selecionados.map((item, index) => (
-              <li className="cartao" key={chave(item)} style={{ padding: "0.7rem", display: "flex", alignItems: "center", gap: 9 }}>
+              <li className="cartao" key={chave(item)} style={{ padding: "0.7rem", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 9, minWidth: 0 }}>
                 <strong style={{ minWidth: 28 }}>{index + 1}.</strong>
-                <div style={{ minWidth: 0, flex: 1 }}><span className="dado">{item.rotulo_tipo}</span><strong style={{ display: "block" }}>{item.titulo}</strong></div>
-                <button type="button" className="botao botao--secundario" onClick={() => mover(index, -1)} disabled={index === 0} aria-label="Mover para cima">↑</button>
-                <button type="button" className="botao botao--secundario" onClick={() => mover(index, 1)} disabled={index === selecionados.length - 1} aria-label="Mover para baixo">↓</button>
-                <button type="button" className="botao botao--secundario" onClick={() => remover(index)}>Remover</button>
+                <div style={{ minWidth: 0, flex: "1 1 260px", overflowWrap: "anywhere" }}><span className="dado">{item.rotulo_tipo}</span><strong style={{ display: "block" }}>{item.titulo}</strong></div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
+                  <button type="button" className="botao botao--secundario" onClick={() => mover(index, -1)} disabled={index === 0} aria-label="Mover para cima">↑</button>
+                  <button type="button" className="botao botao--secundario" onClick={() => mover(index, 1)} disabled={index === selecionados.length - 1} aria-label="Mover para baixo">↓</button>
+                  <button type="button" className="botao botao--secundario" onClick={() => remover(index)}>Remover</button>
+                </div>
               </li>
             ))}
           </ol>
         )}
 
-        <label style={{ display: "block", marginTop: 10 }}>
+        <label style={{ display: "block", marginTop: 10, minWidth: 0 }}>
           <strong>Título do PDF (opcional)</strong>
           <input value={titulo} onChange={(e) => setTitulo(e.target.value.slice(0, 180))} placeholder={selecionados.length > 1 ? "Ex.: Atualização em insuficiência cardíaca" : "Usar título do conteúdo"} />
         </label>
@@ -255,7 +257,7 @@ export default function ExportarConteudo() {
         </button>
       </section>
 
-      <section className="cartao" style={{ marginTop: "1rem" }}>
+      <section className="cartao" style={{ marginTop: "1rem", minWidth: 0 }}>
         <p className="eyebrow">3 · Enviar diretamente por e-mail</p>
         {!mail ? <Carregando texto="Verificando CorVIA Mail…" /> : !mail.disponivel ? (
           <div>
@@ -264,19 +266,19 @@ export default function ExportarConteudo() {
           </div>
         ) : (
           <>
-            <p className="dado">O PDF será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 10, marginTop: 10 }}>
-              <label style={{ gridColumn: "1 / -1" }}><strong>Para</strong><input type="email" value={para} onChange={(e) => setPara(e.target.value)} placeholder="destinatario@exemplo.com" /></label>
-              <label><strong>CC (opcional)</strong><input type="email" value={cc} onChange={(e) => setCc(e.target.value)} /></label>
-              <label><strong>CCO (opcional)</strong><input type="email" value={cco} onChange={(e) => setCco(e.target.value)} /></label>
-              <label style={{ gridColumn: "1 / -1" }}><strong>Assunto (opcional)</strong><input value={assunto} onChange={(e) => setAssunto(e.target.value.slice(0, 240))} placeholder="O CorVIA sugere o título do PDF" /></label>
-              <label style={{ gridColumn: "1 / -1" }}><strong>Mensagem</strong><textarea rows={4} value={mensagem} onChange={(e) => setMensagem(e.target.value.slice(0, 5000))} /></label>
+            <p className="dado">O PDF será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>, sem exigir download prévio. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10, marginTop: 10, minWidth: 0 }}>
+              <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Para</strong><input type="email" value={para} onChange={(e) => setPara(e.target.value)} placeholder="destinatario@exemplo.com" /></label>
+              <label style={{ minWidth: 0 }}><strong>CC (opcional)</strong><input type="email" value={cc} onChange={(e) => setCc(e.target.value)} /></label>
+              <label style={{ minWidth: 0 }}><strong>CCO (opcional)</strong><input type="email" value={cco} onChange={(e) => setCco(e.target.value)} /></label>
+              <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Assunto (opcional)</strong><input value={assunto} onChange={(e) => setAssunto(e.target.value.slice(0, 240))} placeholder="O CorVIA sugere o título do PDF" /></label>
+              <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Mensagem</strong><textarea rows={4} value={mensagem} onChange={(e) => setMensagem(e.target.value.slice(0, 5000))} /></label>
             </div>
             <button className="botao botao--acao" type="button" onClick={enviarEmail} disabled={!selecionados.length || !para.trim() || enviando} style={{ marginTop: 14 }}>
               {enviando ? "Gerando e enviando…" : "Gerar PDF e enviar pelo CorVIA Mail"}
             </button>
             {envio?.enviado && (
-              <div className="cartao" style={{ marginTop: 12 }}>
+              <div className="cartao" style={{ marginTop: 12, overflowWrap: "anywhere" }}>
                 <strong>Enviado com sucesso.</strong>
                 <p className="dado" style={{ marginBottom: 0 }}>De {envio.remetente} para {envio.para} · {envio.arquivo}</p>
               </div>
