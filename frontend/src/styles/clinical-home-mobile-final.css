@@ -1,0 +1,5 @@
+/* Final mobile fidelity against the approved HOME MOBILE board. */
+@media (max-width: 900px) {
+  .ccc-home--board .ccc-section__head a { display: none !important; }
+  .ccc-home--board .ccc-updates-section { display: none !important; }
+}
