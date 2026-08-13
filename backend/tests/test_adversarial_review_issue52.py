@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 from app.models.agenda import CalendarIntegration
 from app.models.email_account import EmailAccount
+from app.models.kyc import KycVerification
 from app.models.subscription import PLANO_BASICO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
 from app.core.security import create_access_token
 
@@ -529,9 +530,28 @@ class TestSoftGateDoTour:
         """Confirma que onboarding_pendente=True nunca bloqueia nenhuma
         rota de API — para investidor e para usuário comum igualmente.
         Não é fraqueza introduzida por esta issue: é o mesmo mecanismo
-        (redirecionamento só no frontend) que qualquer usuário já tinha."""
+        (redirecionamento só no frontend) que qualquer usuário já tinha.
+
+        Setup do investidor atualizado em 13/08/2026: "investidor isento de
+        KYC deixa de existir... passa a ter KYC de identidade pessoal
+        simplificado e automático" (pedido do Rafael) — um investidor
+        RECÉM marcado, sem KycVerification nenhuma, tem
+        `onboarding_pendente=False` (não True), porque `_onboarding_pendente`
+        consulta `_kyc_required` primeiro, e investidor agora precisa do
+        mesmo KYC resolvido que convidado já precisava (ver
+        `test_entitlement_convidado_investidor.py::TestOnboardingConvidadoInvestidor`,
+        que cobre exatamente essa transição). Para exercitar de fato o
+        cenário "onboarding pendente" aqui, o KYC do investidor precisa
+        estar resolvido primeiro — só então `onboarding_pendente` vira True
+        e a asserção de segurança real deste teste (API nunca bloqueia por
+        causa disso) continua sendo exercitada como sempre foi."""
         investidor, token_investidor = criar_usuario(email="tour.investidor@teste.local")
         _marcar(db, investidor, investidor=True)
+        db.add(KycVerification(
+            owner_id=investidor.id, doc_profissional_frente=None, doc_profissional_verso=None,
+            selfie="dummy", status="aprovado",
+        ))
+        db.commit()
         assert client.get("/api/auth/me", headers=_headers(token_investidor)).json()["onboarding_pendente"] is True
         # Mesmo com onboarding pendente, a rota de produto funciona normalmente.
         resp = client.get(ROTA_GATED, headers=_headers(token_investidor))

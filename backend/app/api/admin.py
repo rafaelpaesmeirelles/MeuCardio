@@ -286,6 +286,13 @@ class NovoUsuario(BaseModel):
     profile_completion_required: bool = False
     role: str = "medico"  # admin | medico | residente | leitor
     password: str
+    # "normal" (fluxo de cobrança/KYC normal) | "convidado" (isento de
+    # pagamento, KYC completo automático) | "investidor" (isento de
+    # pagamento, KYC pessoal simplificado automático) — 13/08/2026, matriz
+    # pedida pelo Rafael. Um único campo de três valores em vez de dois
+    # booleanos garante por construção que nunca existe a combinação
+    # inválida convidado=true + investidor=true.
+    tipo_acesso: str = "normal"
 
     @field_validator("professional_title")
     @classmethod
@@ -304,6 +311,14 @@ class NovoUsuario(BaseModel):
         if value and (len(value) != 2 or not value.isalpha()):
             raise ValueError("UF inválida.")
         return value or None
+
+    @field_validator("tipo_acesso")
+    @classmethod
+    def _tipo_acesso(cls, value: str) -> str:
+        value = (value or "normal").strip().lower()
+        if value not in ("normal", "convidado", "investidor"):
+            raise ValueError('Tipo de acesso inválido — use "normal", "convidado" ou "investidor".')
+        return value
 
 
 class SenhaTemporaria(BaseModel):
@@ -388,6 +403,7 @@ def decidir_solicitacao(
 
 @router.post("/users", status_code=201)
 def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    from app.api.auth import _perfil_completo
     from app.core.security import hash_password
     from app.models.user import User
 
@@ -400,6 +416,9 @@ def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depen
         raise HTTPException(status_code=422, detail="Perfil inválido.")
     if db.query(User).filter(User.email == email).first():
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
+
+    convidado = dados.tipo_acesso == "convidado"
+    investidor = dados.tipo_acesso == "investidor"
 
     novo = User(
         email=email, full_name=dados.full_name.strip(), crm=dados.crm,
@@ -415,14 +434,30 @@ def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depen
         workplace_notes=(dados.workplace_notes or "").strip() or None,
         include_workplace_on_documents=dados.include_workplace_on_documents,
         profile_completion_required=dados.profile_completion_required,
+        convidado=convidado, investidor=investidor,
         role=dados.role, password_hash=hash_password(dados.password), is_active=True,
     )
+    # Convidado/investidor: nunca confiar no booleano cru vindo do
+    # formulário — sempre recalculado por `_perfil_completo` (a mesma
+    # função que decide o gate real em `atualizar_me`), porque o admin
+    # nunca colhe CPF/data de nascimento na criação direta, então os dois
+    # tipos SEMPRE precisam completar o perfil no primeiro acesso. "normal"
+    # preserva o comportamento de sempre — o que o admin marcar no
+    # formulário, sem recálculo (não é a regra nova pedida).
+    if convidado or investidor:
+        novo.profile_completion_required = not _perfil_completo(novo)
     db.add(novo)
     db.flush()
-    db.add(AuditLog(user_id=admin.id, action="criar_usuario", entity="user",
-                    entity_id=str(novo.id), detail={"email": email, "role": dados.role}))
+    db.add(AuditLog(
+        user_id=admin.id, action="criar_usuario", entity="user",
+        entity_id=str(novo.id),
+        detail={"email": email, "role": dados.role, "tipo_acesso": dados.tipo_acesso},
+    ))
     db.commit()
-    return {"id": novo.id, "email": novo.email, "full_name": novo.full_name, "role": novo.role}
+    return {
+        "id": novo.id, "email": novo.email, "full_name": novo.full_name, "role": novo.role,
+        "tipo_acesso": dados.tipo_acesso, "convidado": novo.convidado, "investidor": novo.investidor,
+    }
 
 
 @router.patch("/users/{user_id}/ativo")

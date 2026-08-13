@@ -53,10 +53,39 @@ const MENSAGEM_POR_STATUS: Record<string, { titulo: string; corpo: string; tom: 
   },
 };
 
-function Cartao({ status, aoContinuar, aoReenviar }: {
-  status: StatusKyc; aoContinuar: () => void; aoReenviar: () => void;
+/** Convidado e investidor (13/08/2026, pedido do Rafael) nunca dependem de
+ * revisão administrativa — `submeter()` no backend já garante que uma
+ * submissão válida termina sempre em "aprovado", nunca em
+ * "aguardando_revisao"/"liberado_*". Por isso a mensagem para os dois tipos
+ * é fixa e nunca menciona "administrador vai revisar"/"aguardando
+ * confirmação manual"/"em análise"/"revisão final" — mesmo no caso raro de
+ * um registro LEGADO (anterior a esta correção) ainda estar num desses
+ * status, o texto abaixo continua não fazendo essa menção. */
+function mensagemPara(status: StatusKyc, ehAcessoAutomatico: boolean) {
+  if (ehAcessoAutomatico) {
+    if (status.status === "aprovado" || status.liberado) {
+      return {
+        titulo: "Identidade confirmada",
+        tom: "sucesso" as const,
+        corpo: "Identidade confirmada. Seu acesso ao CorVIA foi liberado automaticamente.",
+      };
+    }
+    if (status.status === "rejeitado") {
+      return MENSAGEM_POR_STATUS.rejeitado;
+    }
+    return {
+      titulo: "Confirmando sua identidade",
+      tom: "info" as const,
+      corpo: "Estamos confirmando seus dados — isso é concluído automaticamente, sem espera.",
+    };
+  }
+  return status.status ? MENSAGEM_POR_STATUS[status.status] ?? null : null;
+}
+
+function Cartao({ status, ehAcessoAutomatico, aoContinuar, aoReenviar }: {
+  status: StatusKyc; ehAcessoAutomatico: boolean; aoContinuar: () => void; aoReenviar: () => void;
 }) {
-  const info = status.status ? MENSAGEM_POR_STATUS[status.status] : null;
+  const info = mensagemPara(status, ehAcessoAutomatico);
   if (!info) return null;
   const cor = info.tom === "sucesso" ? "var(--sucesso)" : info.tom === "alerta" ? "var(--alerta)" : "var(--texto)";
 
@@ -73,7 +102,9 @@ function Cartao({ status, aoContinuar, aoReenviar }: {
         </p>
       )}
       {status.liberado && (
-        <button className="botao" style={{ width: "100%" }} onClick={aoContinuar}>Continuar</button>
+        <button className="botao" style={{ width: "100%" }} onClick={aoContinuar}>
+          {ehAcessoAutomatico ? "Entrar no CorVIA" : "Continuar"}
+        </button>
       )}
       {status.status === "rejeitado" && (
         <button className="botao" style={{ width: "100%" }} onClick={aoReenviar}>Reenviar documentos</button>
@@ -82,7 +113,10 @@ function Cartao({ status, aoContinuar, aoReenviar }: {
   );
 }
 
-function Formulario({ aoEnviar }: { aoEnviar: () => void }) {
+type TipoConta = "normal" | "convidado" | "investidor";
+
+function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: () => void }) {
+  const ehInvestidor = tipoConta === "investidor";
   const [tipoPessoal, setTipoPessoal] = useState<TipoDocumentoPessoal>("fotos");
   const [docProfFrente, setDocProfFrente] = useState<File | null>(null);
   const [docProfVerso, setDocProfVerso] = useState<File | null>(null);
@@ -96,15 +130,18 @@ function Formulario({ aoEnviar }: { aoEnviar: () => void }) {
   const documentoPessoalCompleto = tipoPessoal === "fotos"
     ? !!docPessoalFrente && !!docPessoalVerso
     : !!docPessoalDigital;
-  const pronto = !!docProfFrente && !!docProfVerso && !!selfie && documentoPessoalCompleto;
+  // Investidor (13/08/2026, KYC pessoal simplificado) nunca precisa do
+  // documento profissional — nem exige, nem mostra o campo abaixo.
+  const documentoProfissionalCompleto = ehInvestidor || (!!docProfFrente && !!docProfVerso);
+  const pronto = documentoProfissionalCompleto && !!selfie && documentoPessoalCompleto;
 
   async function enviar() {
     setErro("");
     setEnviando(true);
     try {
       await api.uploadMultiplo("/kyc/submeter", {
-        doc_profissional_frente: docProfFrente,
-        doc_profissional_verso: docProfVerso,
+        doc_profissional_frente: ehInvestidor ? null : docProfFrente,
+        doc_profissional_verso: ehInvestidor ? null : docProfVerso,
         selfie,
         doc_pessoal_frente: tipoPessoal === "fotos" ? docPessoalFrente : null,
         doc_pessoal_verso: tipoPessoal === "fotos" ? docPessoalVerso : null,
@@ -118,24 +155,34 @@ function Formulario({ aoEnviar }: { aoEnviar: () => void }) {
     }
   }
 
+  const titulo = ehInvestidor
+    ? "Confirme sua identidade"
+    : tipoConta === "convidado"
+    ? "Confirme seus dados e sua identidade"
+    : "Confirme sua identidade profissional";
+
   return (
     <div className="cartao">
-      <h1 style={{ fontSize: "1.2rem", margin: "0 0 0.4rem" }}>Confirme sua identidade profissional</h1>
+      <h1 style={{ fontSize: "1.2rem", margin: "0 0 0.4rem" }}>{titulo}</h1>
       <p style={{ margin: "0 0 1rem", fontSize: "0.9rem" }}>
-        Etapa obrigatória, exigida uma única vez por assinante, para proteger pacientes e colegas
-        contra uso indevido de documentos assinados na plataforma. Seus arquivos ficam cifrados e
-        são vistos só por quem revisa o seu cadastro.
+        Etapa obrigatória, exigida uma única vez, para proteger pacientes e colegas contra uso
+        indevido de documentos assinados na plataforma. Seus arquivos ficam cifrados e são vistos
+        só por quem administra a Corvia.
       </p>
 
-      <CampoArquivo
-        rotulo="Documento profissional — frente"
-        descricao="Carteira do conselho de classe, válida em todo o território nacional."
-        valor={docProfFrente} onSelecionar={setDocProfFrente}
-      />
-      <CampoArquivo
-        rotulo="Documento profissional — verso"
-        valor={docProfVerso} onSelecionar={setDocProfVerso}
-      />
+      {!ehInvestidor && (
+        <>
+          <CampoArquivo
+            rotulo="Documento profissional — frente"
+            descricao="Carteira do conselho de classe, válida em todo o território nacional."
+            valor={docProfFrente} onSelecionar={setDocProfFrente}
+          />
+          <CampoArquivo
+            rotulo="Documento profissional — verso"
+            valor={docProfVerso} onSelecionar={setDocProfVerso}
+          />
+        </>
+      )}
 
       <div style={{ marginTop: "1rem" }}>
         <label style={{ display: "block", marginBottom: "0.4rem" }}>Documento pessoal</label>
@@ -222,14 +269,23 @@ export default function VerificacaoIdentidade() {
 
   if (carregando) return <p className="eyebrow">Carregando…</p>;
 
+  // Convidado/investidor (13/08/2026) — nunca dependem de aprovação
+  // administrativa; ver `mensagemPara`/`Cartao` acima e `Formulario` abaixo,
+  // os dois já cientes do tipo de conta.
+  const tipoConta: TipoConta = usuario?.investidor ? "investidor" : usuario?.convidado ? "convidado" : "normal";
+  const ehAcessoAutomatico = tipoConta !== "normal";
+
   return (
     <div className="pagina" style={{ maxWidth: 560 }}>
       {status && !mostrarFormulario && (
         <div style={{ marginBottom: "1rem" }}>
-          <Cartao status={status} aoContinuar={continuar} aoReenviar={() => setMostrarFormulario(true)} />
+          <Cartao
+            status={status} ehAcessoAutomatico={ehAcessoAutomatico}
+            aoContinuar={continuar} aoReenviar={() => setMostrarFormulario(true)}
+          />
         </div>
       )}
-      {mostrarFormulario && <Formulario aoEnviar={recarregarStatus} />}
+      {mostrarFormulario && <Formulario tipoConta={tipoConta} aoEnviar={recarregarStatus} />}
       <p className="eyebrow" style={{ marginTop: "1rem" }}>
         Olá, {usuario?.full_name?.split(" ")[0]} — esta etapa é obrigatória para todos os assinantes,
         independente da profissão ou do plano.

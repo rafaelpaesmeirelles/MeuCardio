@@ -563,7 +563,7 @@ function AbaAssinatura({ a }: { a: Assinatura }) {
   );
 }
 
-function AbaDocumentos({ kyc, aoAtualizar }: { kyc: Kyc; aoAtualizar: () => void }) {
+function AbaDocumentos({ kyc, conta, aoAtualizar }: { kyc: Kyc; conta: Conta; aoAtualizar: () => void }) {
   const [visualizando, setVisualizando] = useState<number | null>(null);
 
   if (!kyc.existe) {
@@ -636,8 +636,19 @@ function AbaDocumentos({ kyc, aoAtualizar }: { kyc: Kyc; aoAtualizar: () => void
         )}
       </div>
 
-      {kyc.status && KYC_PENDE_DECISAO.has(kyc.status) && kyc.id !== null && (
-        <PainelDecisaoKyc kycId={kyc.id} aoDecidido={aoAtualizar} />
+      {(conta.convidado || conta.investidor) ? (
+        // Convidado/investidor (13/08/2026) nunca dependem de decisão do
+        // admin — `submeter()` no backend já garante aprovação automática
+        // numa submissão válida. Informativo apenas, sem os botões
+        // Aprovar/Rejeitar/Solicitar reenvio, mesmo no caso raro de um
+        // registro legado ainda estar num status pendente de decisão.
+        <p style={{ marginTop: "0.8rem", color: "var(--texto-secundario)", fontSize: "0.9rem" }}>
+          {conta.investidor ? "Investidor" : "Convidado"} — acesso automático concedido.
+        </p>
+      ) : (
+        kyc.status && KYC_PENDE_DECISAO.has(kyc.status) && kyc.id !== null && (
+          <PainelDecisaoKyc kycId={kyc.id} aoDecidido={aoAtualizar} />
+        )
       )}
 
       {visualizando !== null && (
@@ -767,7 +778,7 @@ export default function AdminFichaAssinante() {
       {aba === "pessoais" && <AbaDadosPessoais d={ficha.dados_pessoais} />}
       {aba === "profissional" && <AbaProfissional d={ficha.dados_profissionais} />}
       {aba === "assinatura" && <AbaAssinatura a={ficha.assinatura} />}
-      {aba === "documentos" && <AbaDocumentos kyc={ficha.kyc} aoAtualizar={carregar} />}
+      {aba === "documentos" && <AbaDocumentos kyc={ficha.kyc} conta={ficha.conta} aoAtualizar={carregar} />}
       {aba === "historico" && <AbaHistorico historico={ficha.historico} />}
 
       <p style={{ marginTop: "1.6rem" }}>

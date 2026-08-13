@@ -63,15 +63,21 @@ def meu_status(db: Session = Depends(get_db), user: User = Depends(current_user)
 
 @router.post("/submeter", status_code=201)
 async def submeter_verificacao(
-    doc_profissional_frente: UploadFile = File(...),
-    doc_profissional_verso: UploadFile = File(...),
     selfie: UploadFile = File(...),
+    doc_profissional_frente: UploadFile | None = File(None),
+    doc_profissional_verso: UploadFile | None = File(None),
     doc_pessoal_frente: UploadFile | None = File(None),
     doc_pessoal_verso: UploadFile | None = File(None),
     doc_pessoal_digital: UploadFile | None = File(None),
     db: Session = Depends(get_db),
     user: User = Depends(current_user),
 ):
+    """Documento profissional é opcional NA ASSINATURA HTTP desde
+    13/08/2026 (matriz convidado/investidor pedida pelo Rafael) — investidor
+    não envia documento profissional (KYC pessoal simplificado: só documento
+    pessoal + selfie). A exigência dinâmica por tipo de conta é aplicada
+    logo abaixo: continua obrigatório para convidado e assinante normal,
+    exatamente como antes."""
     docs = verificacao.DocumentosSubmissao(
         doc_profissional_frente=await _ler(doc_profissional_frente),
         doc_profissional_verso=await _ler(doc_profissional_verso),
@@ -80,8 +86,17 @@ async def submeter_verificacao(
         doc_pessoal_verso=await _ler(doc_pessoal_verso),
         doc_pessoal_digital=await _ler(doc_pessoal_digital),
     )
-    if not docs.doc_profissional_frente or not docs.doc_profissional_verso or not docs.selfie:
-        raise HTTPException(status_code=422, detail="Documento profissional (frente e verso) e selfie são obrigatórios.")
+    if not docs.selfie:
+        raise HTTPException(status_code=422, detail="Selfie ao vivo é obrigatória.")
+    if not user.investidor and (not docs.doc_profissional_frente or not docs.doc_profissional_verso):
+        raise HTTPException(status_code=422, detail="Documento profissional (frente e verso) é obrigatório.")
+    if user.investidor and (docs.doc_profissional_frente or docs.doc_profissional_verso):
+        # Não é erro do titular — só não faz sentido guardar documento
+        # profissional de uma conta que, por desenho, nunca deveria ter
+        # esse campo exigido nem exibido no frontend. Ignora em silêncio em
+        # vez de rejeitar, para não travar quem por algum motivo enviou.
+        docs.doc_profissional_frente = None
+        docs.doc_profissional_verso = None
 
     try:
         registro = verificacao.submeter(db, user, docs)

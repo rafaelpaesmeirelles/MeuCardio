@@ -325,15 +325,34 @@ class TestOnboardingConvidadoInvestidor:
         assert corpo["kyc_required"] is False
         assert corpo["onboarding_pendente"] is True
 
-    def test_investidor_novo_tem_onboarding_pendente_sem_precisar_de_kyc(
+    def test_investidor_novo_sem_kyc_resolvido_ainda_nao_ve_onboarding(
         self, client, db, criar_usuario
     ):
-        """Investidor é o único caso isento de KYC (`_kyc_required` tem
-        `if user.investidor: return False` explícito) — por isso, ao
-        contrário do convidado acima, o tour já aparece de imediato."""
+        """Corrigido em 13/08/2026 (pedido do Rafael: "investidor isento de
+        KYC deixa de existir... passa a ter KYC de identidade pessoal
+        simplificado e automático") — `_kyc_required` não tem mais
+        `if user.investidor: return False`. Investidor agora segue
+        EXATAMENTE o mesmo padrão do convidado (ver teste acima): o tour só
+        aparece depois do KYC (pessoal simplificado, para ele) estar
+        resolvido — nunca antes."""
         alvo, token = criar_usuario()
         alvo.investidor = True
         db.commit()
+        assert alvo.onboarding_visto is False
+
+        resp = client.get("/api/auth/me", headers=_headers(token))
+        assert resp.status_code == 200
+        corpo = resp.json()
+        assert corpo["kyc_required"] is True
+        assert corpo["onboarding_pendente"] is False
+
+    def test_investidor_com_kyc_ja_resolvido_tem_onboarding_pendente(
+        self, client, db, criar_usuario
+    ):
+        alvo, token = criar_usuario()
+        alvo.investidor = True
+        db.commit()
+        _liberar_kyc(db, alvo.id)
         assert alvo.onboarding_visto is False
 
         resp = client.get("/api/auth/me", headers=_headers(token))
@@ -346,6 +365,7 @@ class TestOnboardingConvidadoInvestidor:
         alvo, token = criar_usuario()
         alvo.investidor = True
         db.commit()
+        _liberar_kyc(db, alvo.id)  # 13/08/2026 — investidor agora também precisa de KYC resolvido
         assert client.get("/api/auth/me", headers=_headers(token)).json()["onboarding_pendente"] is True
 
         # Nome exato da rota, conferido em app/api/auth.py:
@@ -363,6 +383,7 @@ class TestOnboardingConvidadoInvestidor:
         alvo, token = criar_usuario()
         alvo.investidor = True
         db.commit()
+        _liberar_kyc(db, alvo.id)  # 13/08/2026 — investidor agora também precisa de KYC resolvido
         client.post("/api/auth/me/onboarding-concluido", headers=_headers(token))
 
         resp = client.get("/api/auth/me", headers=_headers(token))

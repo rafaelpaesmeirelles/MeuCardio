@@ -33,8 +33,13 @@ class KycVerification(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), unique=True, index=True)
 
-    doc_profissional_frente: Mapped[str] = mapped_column(String(120))
-    doc_profissional_verso: Mapped[str] = mapped_column(String(120))
+    # Opcional desde a migração f72r20260813 — investidor (`users.investidor`)
+    # não envia documento profissional, só documento pessoal + selfie ("KYC
+    # pessoal simplificado"). Convidado e assinante normal continuam
+    # exigidos a enviá-lo; a obrigatoriedade dinâmica por tipo de conta é
+    # aplicada em `app/services/kyc/verificacao.py::submeter()`.
+    doc_profissional_frente: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    doc_profissional_verso: Mapped[str | None] = mapped_column(String(120), nullable=True)
     # Documento pessoal: OU as duas fotos, OU o PDF do documento digital —
     # nunca os dois conjuntos, a rota decide qual veio e zera o outro par.
     doc_pessoal_frente: Mapped[str | None] = mapped_column(String(120), nullable=True)

@@ -270,6 +270,12 @@ export default function Admin() {
     workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
     include_workplace_on_documents: false, profile_completion_required: false,
     role: "medico", password: "",
+    // "normal" (cobrança/KYC normal) | "convidado" (isento de pagamento,
+    // KYC completo automático) | "investidor" (isento de pagamento, KYC
+    // pessoal simplificado automático) — 13/08/2026, matriz pedida pelo
+    // Rafael. Um campo só garante por construção que nunca existe a
+    // combinação inválida convidado+investidor ao mesmo tempo.
+    tipo_acesso: "normal" as "normal" | "convidado" | "investidor",
   });
 
   const [pedidosGoogle, setPedidosGoogle] = useState<PedidoTesteGoogle[] | null>(null);
@@ -304,12 +310,13 @@ export default function Admin() {
         profile_completion_required: novo.profile_completion_required,
         role: novo.role,
         password: novo.password,
+        tipo_acesso: novo.tipo_acesso,
       });
       setNovo({ email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
         council_number: "", council_state: "", specialty: "", professional_title: "",
         workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
         include_workplace_on_documents: false, profile_completion_required: false,
-        role: "medico", password: "" });
+        role: "medico", password: "", tipo_acesso: "normal" });
       recarregar();
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível criar o usuário.");
@@ -420,7 +427,49 @@ export default function Admin() {
 
           <div className="cartao cartao--clinico" style={{ marginTop: "0.8rem", maxWidth: 560 }}>
             <p className="eyebrow">Nova conta</p>
-            <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+
+            <fieldset style={{ border: "1px solid var(--borda)", borderRadius: 8, padding: "0.7rem 0.9rem", margin: 0 }}>
+              <legend style={{ padding: "0 0.3rem", fontWeight: 650 }}>Tipo de acesso</legend>
+              <label style={{ display: "flex", gap: 8, alignItems: "flex-start", fontWeight: 400, marginTop: 4 }}>
+                <input type="radio" name="tipo-acesso" style={{ width: "auto", marginTop: 3 }}
+                       checked={novo.tipo_acesso === "normal"}
+                       onChange={() => setNovo({ ...novo, tipo_acesso: "normal" })} />
+                <span>
+                  <strong>Assinante normal</strong>
+                  <br /><small style={{ color: "var(--texto-secundario)" }}>
+                    Fluxo normal de cobrança/Stripe, KYC normal, regras normais existentes.
+                  </small>
+                </span>
+              </label>
+              <label style={{ display: "flex", gap: 8, alignItems: "flex-start", fontWeight: 400, marginTop: 8 }}>
+                <input type="radio" name="tipo-acesso" style={{ width: "auto", marginTop: 3 }}
+                       checked={novo.tipo_acesso === "convidado"}
+                       onChange={() => setNovo({ ...novo, tipo_acesso: "convidado" })} />
+                <span>
+                  <strong>Convidado — acesso gratuito</strong>
+                  <br /><small style={{ color: "var(--texto-secundario)" }}>
+                    Nunca cobra. No primeiro acesso completa perfil pessoal + profissional e envia
+                    documento pessoal, documento profissional (frente/verso) e selfie ao vivo — aprovação
+                    automática assim que a submissão for válida, sem revisão de admin.
+                  </small>
+                </span>
+              </label>
+              <label style={{ display: "flex", gap: 8, alignItems: "flex-start", fontWeight: 400, marginTop: 8 }}>
+                <input type="radio" name="tipo-acesso" style={{ width: "auto", marginTop: 3 }}
+                       checked={novo.tipo_acesso === "investidor"}
+                       onChange={() => setNovo({ ...novo, tipo_acesso: "investidor" })} />
+                <span>
+                  <strong>Investidor — acesso gratuito/demonstração</strong>
+                  <br /><small style={{ color: "var(--texto-secundario)" }}>
+                    Nunca cobra. No primeiro acesso completa só dados pessoais e envia documento
+                    pessoal + selfie ao vivo — sem profissão/conselho/registro/UF/RQE/documento
+                    profissional. Aprovação automática, sem revisão de admin.
+                  </small>
+                </span>
+              </label>
+            </fieldset>
+
+            <div className="grade grade--2" style={{ marginTop: "0.9rem" }}>
               <div>
                 <label htmlFor="nome">Nome completo</label>
                 <input id="nome" value={novo.full_name}

@@ -87,10 +87,17 @@ def test_convidado_com_crm_e_aprovado_automaticamente(db, criar_usuario):
     assert registro not in verificacao.listar_pendentes(db)
 
 
-def test_convidado_nao_rebaixa_aprovacao_ja_confirmada_por_checagem(db, criar_usuario):
-    """O atalho do convidado só age sobre 'aguardando_revisao' — se a
-    checagem de conselho já liberou por outro caminho (ex.: profissão sem
-    checagem automática), o status dela prevalece, sem sobrescrever."""
+def test_convidado_aprova_mesmo_quando_checagem_ja_liberou_por_outro_caminho(db, criar_usuario):
+    """Corrigido em 13/08/2026 (pedido do Rafael: "toda submissão válida
+    deve terminar definitivamente em aprovado, independentemente do
+    resultado informativo da checagem automática do conselho") — antes, o
+    atalho do convidado só agia sobre 'aguardando_revisao': se a checagem
+    de conselho já tivesse liberado por outro caminho (ex.: profissão sem
+    checagem automática, como aqui), o convidado ficava parado em
+    'liberado_sem_checagem', que `listar_pendentes()` inclui na fila do
+    admin — exatamente a dependência de revisão humana que devia ter sido
+    eliminada. Agora sempre termina em 'aprovado', qualquer que seja o
+    resultado (só informativo) da checagem."""
     user, _ = criar_usuario()
     user.council_name = "CREFITO"
     user.council_number = "98765"
@@ -99,7 +106,9 @@ def test_convidado_nao_rebaixa_aprovacao_ja_confirmada_por_checagem(db, criar_us
     db.commit()
     registro = verificacao.submeter(db, user, _docs())
     db.commit()
-    assert registro.status == "liberado_sem_checagem"
+    assert registro.status == "aprovado"
+    assert registro.aprovado_por is None
+    assert registro not in verificacao.listar_pendentes(db)
 
 
 def test_profissao_sem_conselho_com_checagem_e_liberada_mesmo_sem_confirmar(db, criar_usuario):

@@ -64,15 +64,20 @@ def _kyc_required(db: Session, user: User) -> bool:
     de OUTRA pessoa (o Rafael aprovando pela fila do admin), então um valor
     guardado ficaria velho até o próximo `PATCH /me` do próprio médico.
 
-    Investidor nunca precisa de KYC (issue #52) — não é um médico real
-    passando pelo fluxo de credencial profissional, é conta de avaliação
-    do produto; exigir documento/selfie dele não faz sentido nenhum."""
+    Investidor JÁ FOI isento de KYC por completo (issue #52) — decisão
+    revertida em 13/08/2026, pedido do Rafael: "investidor isento de KYC
+    deixa de existir. Ele passa a ter KYC de identidade pessoal simplificado
+    e automático." Investidor não é um médico credenciado, mas ainda
+    precisa provar quem é (documento pessoal + selfie ao vivo) — a
+    diferença para convidado/assinante normal está em QUAIS documentos são
+    exigidos (`app/services/kyc/verificacao.py::submeter`), não em ser
+    isento do KYC inteiro. A aprovação, para ambos convidado e investidor,
+    é automática assim que a submissão estiver tecnicamente completa —
+    nunca depende de revisão do admin (ver `submeter()`)."""
     from app.services.entitlement import tem_acesso_ao_produto
     from app.services.kyc import verificacao as kyc_verificacao
 
     if user.role == "admin":
-        return False
-    if user.investidor:
         return False
     if not tem_acesso_ao_produto(db, user):
         return False
@@ -153,6 +158,15 @@ class DadosPessoais(BaseModel):
     """Dados que o próprio titular pode corrigir sem alterar sua identidade de acesso."""
 
     full_name: str
+    # Preenchimento ÚNICO, não edição — só aceito quando o campo ainda está
+    # None no banco (13/08/2026, conta criada diretamente pelo admin nunca
+    # colhe CPF/data de nascimento; convidado/investidor completam no
+    # primeiro acesso). Quem se autocadastra já chega com os dois desde
+    # `SolicitacaoAcesso`, então nunca passa por este caminho — e uma vez
+    # preenchido, `atualizar_me` rejeita qualquer tentativa de mudar,
+    # exatamente para não virar campo livremente editável depois.
+    birth_date: date | None = None
+    cpf: str | None = None
     profession: str | None = None
     council_name: str | None = None
     council_number: str | None = None
@@ -256,13 +270,21 @@ _CAMPOS_ENDERECO_PROFISSIONAL = (
 )
 
 
-def _perfil_profissional_completo(user: User) -> bool:
-    """Só libera o primeiro acesso quando a identificação profissional é utilizável."""
+def _nome_real(user: User) -> bool:
     nome = (user.full_name or "").strip()
     nome_normalizado = nome.casefold()
-    nome_real = len(nome.split()) >= 2 and nome_normalizado not in {
+    return len(nome.split()) >= 2 and nome_normalizado not in {
         "novo usuário", "nova usuária", "usuário provisório", "usuária provisória",
     }
+
+
+def _perfil_profissional_completo(user: User) -> bool:
+    """Identificação profissional utilizável — nome real + profissão +
+    conselho + número + UF (ou o par de campos livres quando o conselho é
+    "OUTRO"). Não inclui dados pessoais (CPF/data de nascimento) — ver
+    `_dados_pessoais_completos`, checado separadamente porque convidado e
+    assinante normal precisam dos dois, mas investidor só precisa deste
+    aqui não, só do pessoal (ver `_perfil_completo`)."""
     # "OUTRO" não tem UF de 2 letras que sirva — o par de campos livres
     # (conselho + estado/região) é quem completa a identificação aqui
     # (08/08/2026, pedido do Rafael). Qualquer outro conselho continua
@@ -274,12 +296,47 @@ def _perfil_profissional_completo(user: User) -> bool:
         else bool((user.council_state or "").strip())
     )
     return bool(
-        nome_real
+        _nome_real(user)
         and (user.profession or "").strip()
         and (user.council_name or "").strip()
         and (user.council_number or "").strip()
         and estado_ok
     )
+
+
+def _dados_pessoais_completos(user: User) -> bool:
+    """Nome real + CPF + data de nascimento. Conta autocadastrada já chega
+    com os dois (`SolicitacaoAcesso`, mais abaixo) — só conta criada
+    diretamente pelo admin (`POST /api/admin/users`, que nunca colhe esses
+    dois campos) pode chegar aqui sem eles. Usado isoladamente só para
+    investidor (13/08/2026, pedido do Rafael: "investidor... deve completar
+    somente os dados pessoais necessários") — convidado e assinante normal
+    passam por `_perfil_completo`, que também exige o profissional."""
+    return bool(_nome_real(user) and (user.cpf or "").strip() and user.birth_date)
+
+
+def _perfil_completo(user: User) -> bool:
+    """Dispatcher por tipo de conta (13/08/2026, matriz convidado/investidor/
+    normal pedida pelo Rafael) — só libera o primeiro acesso quando o perfil
+    exigido daquele tipo específico está utilizável:
+    - investidor: só dados pessoais (nome, CPF, data de nascimento) — nunca
+      profissão/conselho/registro/UF/RQE/documento profissional;
+    - convidado: dados pessoais E profissionais — convidado criado
+      diretamente pelo admin não tem CPF/data de nascimento preenchidos
+      (o admin não colhe isso na criação), então o pessoal entra aqui como
+      exigência nova, além do profissional que já era exigido;
+    - assinante normal: EXATAMENTE a regra de sempre, só profissional
+      (`_perfil_profissional_completo`) — deliberadamente sem o pessoal
+      aqui, para não criar uma exigência nova para quem já tinha o fluxo
+      funcionando (quem se autocadastra já chega com CPF/data de nascimento
+      desde o cadastro; quem é criado pelo admin como "normal" nunca teve
+      essa exigência e não deve passar a ter, pedido explícito do Rafael de
+      não alterar o fluxo do assinante normal)."""
+    if user.investidor:
+        return _dados_pessoais_completos(user)
+    if user.convidado:
+        return _dados_pessoais_completos(user) and _perfil_profissional_completo(user)
+    return _perfil_profissional_completo(user)
 
 
 @router.patch("/me")
@@ -288,6 +345,27 @@ def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
     antes = {campo: getattr(user, campo) for campo in _ROTULOS_CADASTRO}
     endereco_residencial_antes = tuple(getattr(user, c) for c in _CAMPOS_ENDERECO_RESIDENCIAL)
     endereco_profissional_antes = tuple(getattr(user, c) for c in _CAMPOS_ENDERECO_PROFISSIONAL)
+
+    # Preenchimento único de CPF/data de nascimento — só quando o campo
+    # ainda está None (conta criada diretamente pelo admin nunca colhe os
+    # dois). Rejeita qualquer tentativa de MUDAR um valor já preenchido:
+    # não é para virar campo livremente editável depois do primeiro envio.
+    if dados.birth_date is not None:
+        if user.birth_date is not None and user.birth_date != dados.birth_date:
+            raise HTTPException(status_code=422, detail="Data de nascimento já cadastrada não pode ser alterada por aqui.")
+        if dados.birth_date >= date.today():
+            raise HTTPException(status_code=422, detail="Data de nascimento inválida.")
+        user.birth_date = dados.birth_date
+    if dados.cpf is not None:
+        cpf_limpo = limpar_cpf(dados.cpf)
+        if user.cpf is not None and user.cpf != cpf_limpo:
+            raise HTTPException(status_code=422, detail="CPF já cadastrado não pode ser alterado por aqui.")
+        if user.cpf is None:
+            if not cpf_valido(dados.cpf):
+                raise HTTPException(status_code=422, detail="CPF inválido — confira os números digitados.")
+            if db.query(User).filter(User.cpf == cpf_limpo, User.id != user.id).first():
+                raise HTTPException(status_code=409, detail="Já existe uma conta com este CPF.")
+            user.cpf = cpf_limpo
 
     user.full_name = dados.full_name
     user.profession = (dados.profession or "").strip() or None
@@ -322,7 +400,7 @@ def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
     user.practice_zip = (dados.practice_zip or "").strip() or None
     user.practice_phone = (dados.practice_phone or "").strip() or None
 
-    user.profile_completion_required = not _perfil_profissional_completo(user)
+    user.profile_completion_required = not _perfil_completo(user)
 
     mudancas = [
         {"campo": rotulo, "antigo": antes[campo], "novo": getattr(user, campo)}

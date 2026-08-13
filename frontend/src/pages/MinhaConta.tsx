@@ -189,6 +189,16 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
   const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
   const [ok, setOk] = useState(false);
+  // Preenchimento único de CPF/data de nascimento (13/08/2026) — só aparece
+  // quando o campo ainda está vazio no perfil (conta criada diretamente
+  // pelo admin nunca colhe os dois; convidado/investidor completam no
+  // primeiro acesso). O backend (`PATCH /auth/me`) rejeita qualquer
+  // tentativa de MUDAR um valor já preenchido — não é para virar campo
+  // livremente editável depois do primeiro envio.
+  const [cpf, setCpf] = useState("");
+  const [nascimento, setNascimento] = useState("");
+  const precisaCpf = !perfil.cpf_mascarado;
+  const precisaNascimento = !perfil.birth_date;
 
   function set<K extends keyof typeof dados>(campo: K, valor: (typeof dados)[K]) {
     setDados((d) => ({ ...d, [campo]: valor }));
@@ -226,6 +236,11 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
         practice_state: profissional.state || null,
         practice_zip: profissional.zip.trim() || null,
         practice_phone: practicePhone.trim() || null,
+        // undefined vira ausência da chave no JSON (JSON.stringify omite),
+        // que o backend trata como "não está preenchendo agora" — nunca
+        // envia null nem string vazia quando o campo já está definitivo.
+        cpf: precisaCpf && cpf.trim() ? cpf.trim() : undefined,
+        birth_date: precisaNascimento && nascimento ? nascimento : undefined,
       });
       aoSalvar(atualizado);
       setOk(true);
@@ -251,81 +266,90 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
         </p>
       )}
 
-      <label htmlFor="conta-tratamento" style={{ marginTop: "0.8rem" }}>Como deseja ser chamado(a)</label>
-      <select id="conta-tratamento" value={dados.professional_title} onChange={(e) => set("professional_title", e.target.value)}>
-        {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
-      </select>
-
-      <label htmlFor="conta-profissao" style={{ marginTop: "0.8rem" }}>Profissão</label>
-      <input id="conta-profissao" value={dados.profession} onChange={(e) => set("profession", e.target.value)} />
-
-      <div className="grade grade--3" style={{ marginTop: "0.8rem" }}>
-        <div>
-          <label htmlFor="conta-conselho">Conselho</label>
-          <select id="conta-conselho" value={dados.council_name} onChange={(e) => set("council_name", e.target.value)}>
-            {CONSELHOS.map((c) => <option key={c} value={c}>{c}</option>)}
+      {/* Investidor (13/08/2026, KYC pessoal simplificado) não tem — nem
+         exige — identificação profissional nenhuma: nunca é médico
+         credenciado, é conta de avaliação do produto. Todo este bloco some
+         por completo para ele, do título de tratamento até o local de
+         trabalho; convidado e assinante normal continuam vendo tudo. */}
+      {!perfil.investidor && (
+        <>
+          <label htmlFor="conta-tratamento" style={{ marginTop: "0.8rem" }}>Como deseja ser chamado(a)</label>
+          <select id="conta-tratamento" value={dados.professional_title} onChange={(e) => set("professional_title", e.target.value)}>
+            {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
           </select>
-        </div>
-        <div>
-          <label htmlFor="conta-numero">Nº de registro</label>
-          <input id="conta-numero" value={dados.council_number} onChange={(e) => set("council_number", e.target.value)} />
-        </div>
-        {!ehOutro && (
-          <div>
-            <label htmlFor="conta-uf">Estado</label>
-            <select id="conta-uf" value={dados.council_state} onChange={(e) => set("council_state", e.target.value)}>
-              <option value="">—</option>
-              {UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
-            </select>
-          </div>
-        )}
-      </div>
 
-      {ehOutro && (
-        <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
-          <div>
-            <label htmlFor="conta-conselho-outro">Qual conselho</label>
-            <input id="conta-conselho-outro" placeholder="Ex.: Ordem dos Farmacêuticos"
-                   value={dados.council_name_other}
-                   onChange={(e) => set("council_name_other", e.target.value)} />
+          <label htmlFor="conta-profissao" style={{ marginTop: "0.8rem" }}>Profissão</label>
+          <input id="conta-profissao" value={dados.profession} onChange={(e) => set("profession", e.target.value)} />
+
+          <div className="grade grade--3" style={{ marginTop: "0.8rem" }}>
+            <div>
+              <label htmlFor="conta-conselho">Conselho</label>
+              <select id="conta-conselho" value={dados.council_name} onChange={(e) => set("council_name", e.target.value)}>
+                {CONSELHOS.map((c) => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="conta-numero">Nº de registro</label>
+              <input id="conta-numero" value={dados.council_number} onChange={(e) => set("council_number", e.target.value)} />
+            </div>
+            {!ehOutro && (
+              <div>
+                <label htmlFor="conta-uf">Estado</label>
+                <select id="conta-uf" value={dados.council_state} onChange={(e) => set("council_state", e.target.value)}>
+                  <option value="">—</option>
+                  {UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
+                </select>
+              </div>
+            )}
           </div>
-          <div>
-            <label htmlFor="conta-conselho-estado-outro">Estado/região</label>
-            <input id="conta-conselho-estado-outro" placeholder="Ex.: São Paulo"
-                   value={dados.council_state_other}
-                   onChange={(e) => set("council_state_other", e.target.value)} />
+
+          {ehOutro && (
+            <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+              <div>
+                <label htmlFor="conta-conselho-outro">Qual conselho</label>
+                <input id="conta-conselho-outro" placeholder="Ex.: Ordem dos Farmacêuticos"
+                       value={dados.council_name_other}
+                       onChange={(e) => set("council_name_other", e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor="conta-conselho-estado-outro">Estado/região</label>
+                <input id="conta-conselho-estado-outro" placeholder="Ex.: São Paulo"
+                       value={dados.council_state_other}
+                       onChange={(e) => set("council_state_other", e.target.value)} />
+              </div>
+            </div>
+          )}
+
+          <div className="grade grade--2" style={{ marginTop: "0.8rem" }}>
+            <div>
+              <label htmlFor="conta-especialidade">
+                Especialidade <span className="eyebrow">(opcional)</span>
+              </label>
+              <input id="conta-especialidade" value={dados.specialty} onChange={(e) => set("specialty", e.target.value)} />
+            </div>
+            <div>
+              <label htmlFor="conta-rqe">
+                RQE <span className="eyebrow">(opcional)</span>
+              </label>
+              <input id="conta-rqe" value={dados.rqe} onChange={(e) => set("rqe", e.target.value)}
+                     placeholder="Registro de qualificação de especialista" />
+            </div>
           </div>
-        </div>
+
+          <h3 style={{ marginTop: "1.4rem", marginBottom: 0 }}>Local de trabalho</h3>
+          <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+            <div><label>Instituição, clínica ou consultório</label><input value={dados.workplace_name} onChange={(e) => set("workplace_name", e.target.value)} /></div>
+            <div><label>Setor/unidade</label><input value={dados.workplace_department} onChange={(e) => set("workplace_department", e.target.value)} /></div>
+            <div><label>Cargo/função</label><input value={dados.workplace_role} onChange={(e) => set("workplace_role", e.target.value)} /></div>
+            <div><label>Outras informações</label><input value={dados.workplace_notes} onChange={(e) => set("workplace_notes", e.target.value)} /></div>
+          </div>
+          <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: "0.6rem" }}>
+            <input type="checkbox" style={{ width: "auto" }} checked={dados.include_workplace_on_documents}
+                   onChange={(e) => set("include_workplace_on_documents", e.target.checked)} />
+            Incluir essas informações em receitas, laudos, atestados e demais documentos
+          </label>
+        </>
       )}
-
-      <div className="grade grade--2" style={{ marginTop: "0.8rem" }}>
-        <div>
-          <label htmlFor="conta-especialidade">
-            Especialidade <span className="eyebrow">(opcional)</span>
-          </label>
-          <input id="conta-especialidade" value={dados.specialty} onChange={(e) => set("specialty", e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor="conta-rqe">
-            RQE <span className="eyebrow">(opcional)</span>
-          </label>
-          <input id="conta-rqe" value={dados.rqe} onChange={(e) => set("rqe", e.target.value)}
-                 placeholder="Registro de qualificação de especialista" />
-        </div>
-      </div>
-
-      <h3 style={{ marginTop: "1.4rem", marginBottom: 0 }}>Local de trabalho</h3>
-      <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
-        <div><label>Instituição, clínica ou consultório</label><input value={dados.workplace_name} onChange={(e) => set("workplace_name", e.target.value)} /></div>
-        <div><label>Setor/unidade</label><input value={dados.workplace_department} onChange={(e) => set("workplace_department", e.target.value)} /></div>
-        <div><label>Cargo/função</label><input value={dados.workplace_role} onChange={(e) => set("workplace_role", e.target.value)} /></div>
-        <div><label>Outras informações</label><input value={dados.workplace_notes} onChange={(e) => set("workplace_notes", e.target.value)} /></div>
-      </div>
-      <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: "0.6rem" }}>
-        <input type="checkbox" style={{ width: "auto" }} checked={dados.include_workplace_on_documents}
-               onChange={(e) => set("include_workplace_on_documents", e.target.checked)} />
-        Incluir essas informações em receitas, laudos, atestados e demais documentos
-      </label>
 
       <h3 style={{ marginTop: "1.4rem", marginBottom: 0 }}>Endereço residencial</h3>
       <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
@@ -347,13 +371,34 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
                onChange={(e) => { setPracticePhone(e.target.value); setOk(false); }} />
       </div>
 
+      {(precisaCpf || precisaNascimento) && (
+        <div className="grade grade--2" style={{ marginTop: "1rem" }}>
+          {precisaCpf && (
+            <div>
+              <label htmlFor="conta-cpf">CPF</label>
+              <input id="conta-cpf" value={cpf} onChange={(e) => { setCpf(e.target.value); setOk(false); }}
+                     placeholder="000.000.000-00" />
+            </div>
+          )}
+          {precisaNascimento && (
+            <div>
+              <label htmlFor="conta-nascimento">Data de nascimento</label>
+              <input id="conta-nascimento" type="date" value={nascimento}
+                     onChange={(e) => { setNascimento(e.target.value); setOk(false); }} />
+            </div>
+          )}
+        </div>
+      )}
+
       <p style={{ fontSize: "0.86rem", opacity: 0.8, margin: "1.2rem 0 0" }}>
         E-mail de acesso: <strong>{perfil.email}</strong>
         {perfil.cpf_mascarado && <> · CPF: <strong>{perfil.cpf_mascarado}</strong></>}
       </p>
       <p style={{ fontSize: "0.82rem", opacity: 0.7, marginTop: "0.3rem" }}>
-        E-mail, CPF e data de nascimento são os dados conferidos na aprovação do cadastro —
-        para alterá-los, fale com a administração.
+        {precisaCpf || precisaNascimento
+          ? "Preencha CPF e data de nascimento acima uma única vez — depois de salvos, só a administração pode alterá-los."
+          : "E-mail, CPF e data de nascimento são os dados conferidos na aprovação do cadastro — " +
+            "para alterá-los, fale com a administração."}
       </p>
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
