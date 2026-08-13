@@ -1,0 +1,211 @@
+/* Medication Command Center — direct fidelity to the approved board. */
+
+.mc-command {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  color: #d9e9ec;
+}
+.mc-command__header {
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 8px 10px;
+  background: linear-gradient(180deg,#071923,#05141d);
+  border: 1px solid rgba(126,183,201,.10);
+  border-radius: 12px 12px 0 0;
+}
+.mc-command__back,
+.mc-command__favorite {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  color: #9ab2ba;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.mc-command__back svg { width: 15px; transform: rotate(180deg); }
+.mc-command__favorite { color: #859ea7 !important; border-color: rgba(126,183,201,.09); text-decoration: none !important; }
+.mc-command__favorite svg { width: 15px; }
+.mc-command__back:hover,
+.mc-command__favorite:hover { color: #e9fbfc !important; background: rgba(56,202,213,.045); border-color: rgba(56,202,213,.13); }
+.mc-command__identity { min-width: 0; }
+.mc-command__identity h1 { margin: 0; color: #f4fbfc; font-size: 1rem; font-weight: 650; letter-spacing: -.035em; }
+.mc-command__identity p { margin: 2px 0 0; overflow: hidden; color: #728e98 !important; font-size: .53rem; white-space: nowrap; text-overflow: ellipsis; }
+.mc-command__actions { display: flex; align-items: center; gap: 6px; }
+.mc-command__prescribe {
+  display: inline-flex;
+  min-height: 31px;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  color: #e7fcfd !important;
+  background: rgba(56,202,213,.12);
+  border: 1px solid rgba(56,202,213,.22);
+  border-radius: 8px;
+  font-size: .54rem;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.mc-command__prescribe svg { width: 14px; }
+
+.mc-command__tabs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-height: 38px;
+  padding: 0 9px;
+  background: #061720;
+  border-right: 1px solid rgba(126,183,201,.10);
+  border-bottom: 1px solid rgba(126,183,201,.10);
+  border-left: 1px solid rgba(126,183,201,.10);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.mc-command__tabs::-webkit-scrollbar { display: none; }
+.mc-command__tabs button {
+  position: relative;
+  min-height: 37px;
+  padding: 0 10px;
+  color: #718d97;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-size: .5rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.mc-command__tabs button.is-active { color: #6fe0e6; }
+.mc-command__tabs button.is-active::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  left: 8px;
+  height: 2px;
+  background: #38cad5;
+  border-radius: 999px;
+}
+
+.mc-command__grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.7fr) minmax(220px,.8fr);
+  gap: 8px;
+  padding: 9px;
+  background: #03111a;
+  border-right: 1px solid rgba(126,183,201,.09);
+  border-left: 1px solid rgba(126,183,201,.09);
+}
+.mc-command__primary,
+.mc-command__intelligence {
+  overflow: hidden;
+  background: linear-gradient(145deg,#08202c,#061722);
+  border: 1px solid rgba(126,183,201,.09);
+  border-radius: 9px;
+}
+.mc-command__primary-block { padding: 10px 11px; border-bottom: 1px solid rgba(126,183,201,.07); }
+.mc-command__primary-block:last-child { border-bottom: 0; }
+.mc-command__primary-block > small,
+.mc-command__intelligence section > small {
+  display: block;
+  margin-bottom: 5px;
+  color: #4ecfd7 !important;
+  font-size: .45rem;
+  font-weight: 800;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+.mc-command__primary-block > strong { display: block; margin-bottom: 4px; color: #f0f8fa; font-size: .65rem; line-height: 1.35; }
+.mc-command__primary-block .clinical-richtext,
+.mc-command__primary-block .clinical-richtext p { margin: 0; color: #91aab2 !important; font-size: .53rem; line-height: 1.45; }
+.mc-command__primary-block--dose .clinical-richtext p { color: #d9e8eb !important; font-size: .58rem; }
+.mc-command__primary-block--evidence > strong { color: #dcebee; }
+.mc-command__primary-block--evidence > p { margin: 3px 0 0; color: #738f99 !important; font-size: .49rem; }
+
+.mc-command__intelligence {
+  background: radial-gradient(circle at 100% 0%,rgba(161,124,245,.08),transparent 12rem),linear-gradient(150deg,#0c1d2d,#071722);
+  border-color: rgba(161,124,245,.11);
+}
+.mc-command__intelligence > header {
+  display: flex;
+  min-height: 35px;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 9px;
+  color: #bfa3ff;
+  border-bottom: 1px solid rgba(161,124,245,.08);
+}
+.mc-command__intelligence > header span { font-size: .8rem; }
+.mc-command__intelligence > header strong { font-size: .53rem; }
+.mc-command__intelligence section { padding: 9px; border-bottom: 1px solid rgba(126,183,201,.055); }
+.mc-command__intelligence section:last-child { border-bottom: 0; }
+.mc-command__intelligence section > small { color: #9980d1 !important; }
+.mc-command__intelligence section > p { margin: 0; color: #718c96 !important; font-size: .49rem; }
+.mc-command__intel-item,
+.mc-command__condition {
+  display: grid;
+  grid-template-columns: 7px minmax(0,1fr);
+  gap: 6px;
+  align-items: start;
+  padding: 4px 0;
+  color: #aebfc5 !important;
+  text-decoration: none !important;
+}
+.mc-command__intel-item i,
+.mc-command__condition i { width: 5px; height: 5px; margin-top: 5px; background: #54d3db; border-radius: 50%; }
+.mc-command__intel-item .clinical-richtext,
+.mc-command__intel-item .clinical-richtext p,
+.mc-command__condition span { margin: 0; color: #9fb2ba !important; font-size: .48rem; line-height: 1.35; }
+.mc-command__condition:last-child i { background: #ef5062; }
+
+.mc-command__facts {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 7px;
+  padding: 0 9px 9px;
+  background: #03111a;
+  border-right: 1px solid rgba(126,183,201,.09);
+  border-bottom: 1px solid rgba(126,183,201,.09);
+  border-left: 1px solid rgba(126,183,201,.09);
+  border-radius: 0 0 12px 12px;
+}
+.mc-command__facts article {
+  display: grid;
+  gap: 2px;
+  min-height: 62px;
+  align-content: center;
+  padding: 8px;
+  background: rgba(255,255,255,.016);
+  border: 1px solid rgba(126,183,201,.06);
+  border-radius: 8px;
+}
+.mc-command__facts small { color: #66838d !important; font-size: .43rem; text-transform: uppercase; }
+.mc-command__facts strong { overflow: hidden; color: #e3f0f2; font-size: .59rem; line-height: 1.25; text-overflow: ellipsis; }
+.mc-command__facts span { color: #718b94; font-size: .45rem; line-height: 1.25; }
+
+.mc-command__details { margin-top: 10px; }
+.mc-command + .carregando { margin-top: 10px; }
+
+@media (min-width: 901px) {
+  .cc-drugs-page--detail { width: 100%; max-width: none !important; padding: 10px 12px 20px; }
+}
+
+@media (max-width: 900px) {
+  .cc-drugs-page--detail { padding-top: 6px; }
+  .mc-command { max-width: none; }
+  .mc-command__header { grid-template-columns: 30px minmax(0,1fr) auto; gap: 7px; padding-inline: 6px; }
+  .mc-command__identity h1 { font-size: .82rem; }
+  .mc-command__identity p { font-size: .46rem; }
+  .mc-command__prescribe { padding-inline: 7px; }
+  .mc-command__prescribe svg { display: none; }
+  .mc-command__grid { grid-template-columns: 1fr; padding: 7px; }
+  .mc-command__intelligence { order: 2; }
+  .mc-command__facts { grid-template-columns: repeat(2,minmax(0,1fr)); padding: 0 7px 7px; }
+  .mc-command__tabs { padding-inline: 3px; }
+  .mc-command__tabs button { padding-inline: 8px; }
+}
