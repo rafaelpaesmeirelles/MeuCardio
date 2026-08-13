@@ -9,14 +9,34 @@ medicamentos em um tema clínico quando a indicação revisada do próprio verbe
 sustenta explicitamente a relação.
 """
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user
-from app.services.connected_content import buscar_relacionados_contextuais
+from app.services.connected_content import (
+    buscar_relacionados_contextuais,
+    buscar_relacionados_do_medicamento,
+)
 
 router = APIRouter(prefix="/api/relacionados", tags=["relacionados"])
+
+
+@router.get("/medicamento/{slug}")
+def relacionados_medicamento(
+    slug: str,
+    db: Session = Depends(get_db),
+    _=Depends(current_user),
+):
+    """All published ecosystem fronts safely connected to one medication.
+
+    The traversal starts only from explicit clinical topics supported by the
+    medication's structured indications. It never uses generic text similarity.
+    """
+    resultado = buscar_relacionados_do_medicamento(db, slug)
+    if resultado is None:
+        raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
+    return resultado
 
 
 @router.get("")
