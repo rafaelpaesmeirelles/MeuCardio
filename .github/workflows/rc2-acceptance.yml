@@ -80,7 +80,7 @@ jobs:
           DOCUMENTOS_DIR=/tmp/corvia-rc2/documentos-emitidos
           ENV
 
-      - name: Start isolated database, Redis and backend
+      - name: Start isolated backend stack
         run: docker compose up -d --build db redis backend
 
       - name: Wait for backend readiness
@@ -97,7 +97,7 @@ jobs:
           docker compose logs --no-color --tail=250 backend
           exit 1
 
-      - name: Mount complete versioned scientific corpus in isolated backend
+      - name: Mount complete versioned corpus
         run: |
           BACKEND_ID="$(docker compose ps -q backend)"
           test -n "$BACKEND_ID"
@@ -105,17 +105,29 @@ jobs:
             test -e "$dir"
             docker cp "$dir" "$BACKEND_ID:/$dir"
           done
+          docker compose exec -T backend test -f /medicamentos/metadados.json
+          docker compose exec -T backend test -f /emergencia/metadados.json
 
-      - name: Create administrator
+      - name: Load official clinical stores
+        run: |
+          docker compose exec -T backend python - <<'PY'
+          from app.services.carregar_drugs import carregar as carregar_drugs
+          from app.services.carregar_emergencia import carregar as carregar_emergencia
+          total_drugs = carregar_drugs('/medicamentos/metadados.json')
+          carregar_emergencia()
+          assert total_drugs >= 200, total_drugs
+          print({'drugs': total_drugs, 'emergency': 'loaded'})
+          PY
+
+      - name: Reconcile versioned corpus
+        run: docker compose exec -T backend python -m app.commands.reconcile_content --publish-reviewed
+
+      - name: Create acceptance administrator
         run: |
           docker compose exec -T backend python -m app.commands.create_admin \
             --email rc2-acceptance@teste.local \
             --password rc2-acceptance-seguro-123 \
             --name "Dr. Visual QA"
-
-      - name: Reconcile and publish real versioned corpus
-        run: |
-          docker compose exec -T backend python -m app.commands.reconcile_content --publish-reviewed | tee /tmp/rc2-reconcile.json
 
       - name: Build production frontend
         working-directory: frontend
@@ -123,7 +135,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: Serve production frontend
+      - name: Serve production build
         run: |
           mkdir -p rc2-acceptance
           cat > rc2-acceptance/nginx.conf <<'NGINX'
@@ -165,7 +177,7 @@ jobs:
           npm install --no-audit --no-fund playwright@1.54.2
           npx playwright install --with-deps chromium
 
-      - name: Authenticate, seed clinical state and certify all surfaces
+      - name: Authenticate, seed clinical state and certify every route
         run: |
           mkdir -p rc2-acceptance/screenshots
           cat > /tmp/corvia-rc2-playwright/acceptance.mjs <<'JS'
@@ -200,13 +212,17 @@ jobs:
             await page.locator('#senha').fill('rc2-acceptance-seguro-123');
             await page.locator('button[type="submit"]').click();
             await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
-            await page.waitForTimeout(600);
+            await page.waitForTimeout(500);
             return { context, page };
           }
 
           async function requestJson(page, url, options = {}) {
             return await page.evaluate(async ({ url, options }) => {
-              const response = await fetch(url, { credentials: 'include', headers: { 'Content-Type': 'application/json', ...(options.headers || {}) }, ...options });
+              const response = await fetch(url, {
+                credentials: 'include',
+                headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+                ...options,
+              });
               const text = await response.text();
               let body = null;
               try { body = text ? JSON.parse(text) : null; } catch { body = text; }
@@ -214,15 +230,17 @@ jobs:
             }, { url, options });
           }
 
+          function fail(message) { report.failures.push(message); }
+
           try {
             const desktop = await login({ width: 1440, height: 1000 });
-            const { page } = desktop;
+            const page = desktop.page;
 
             const patient = await requestJson(page, '/api/round/patients', {
               method: 'POST',
-              body: JSON.stringify({ record_number: 'RC2-0001', initials: 'J.S.', bed: '12', unit: 'Enfermaria' })
+              body: JSON.stringify({ record_number: 'RC2-0001', initials: 'J.S.', bed: '12', unit: 'Enfermaria' }),
             });
-            if (!patient.ok) report.failures.push(`seed paciente: HTTP ${patient.status}`);
+            if (!patient.ok) fail(`seed paciente: HTTP ${patient.status}`);
             if (patient.ok && patient.body?.id) {
               const patch = await requestJson(page, `/api/round/patients/${patient.body.id}`, {
                 method: 'PATCH',
@@ -230,16 +248,16 @@ jobs:
                   diagnostic_hypothesis: ['ICFER', 'Hipertensão Arterial', 'Fibrilação Atrial'],
                   medications: ['Sacubitril/Valsartana 49/51 mg 12/12 h', 'Metoprolol succinato 50 mg/dia', 'Rivaroxabana 20 mg/dia'],
                   labs: { Ecocardiograma: 'FE 35%', Creatinina: '1,1 mg/dL', 'K+': '4,6 mEq/L' },
-                  plan: 'Otimizar terapia e reavaliar.'
-                })
+                  plan: 'Otimizar terapia e reavaliar.',
+                }),
               });
-              if (!patch.ok) report.failures.push(`seed contexto paciente: HTTP ${patch.status}`);
+              if (!patch.ok) fail(`seed contexto paciente: HTTP ${patch.status}`);
             }
 
             for (const route of routes) {
               try {
                 await page.goto(`${base}${route}`, { waitUntil: 'networkidle', timeout: 25000 });
-                await page.waitForTimeout(500);
+                await page.waitForTimeout(450);
                 const state = await page.evaluate(() => {
                   const text = document.body?.innerText || '';
                   return {
@@ -248,23 +266,27 @@ jobs:
                     scrollWidth: document.documentElement.scrollWidth,
                     stuck: /carregando a tela/i.test(text),
                     serverError: /internal server error|application error|erro 500/i.test(text),
+                    shell: !!document.querySelector('.clinical-os'),
                   };
                 });
-                report.routes.push({ route, path: state.path, scrollWidth: state.scrollWidth, width: state.width });
-                if (state.path === '/entrar') report.failures.push(`${route}: perdeu sessão`);
-                if (state.stuck) report.failures.push(`${route}: preso em Carregando a tela`);
-                if (state.serverError) report.failures.push(`${route}: erro de servidor visível`);
-                if (state.scrollWidth > state.width + 16 && route !== '/agenda') report.failures.push(`${route}: overflow horizontal ${state.scrollWidth} > ${state.width}`);
+                report.routes.push({ route, ...state });
+                if (state.path === '/entrar') fail(`${route}: perdeu sessão`);
+                if (state.stuck) fail(`${route}: preso em Carregando a tela`);
+                if (state.serverError) fail(`${route}: erro de servidor visível`);
+                if (!state.shell && !route.startsWith('/tour')) fail(`${route}: fora do shell canônico`);
+                if (state.scrollWidth > state.width + 16 && route !== '/agenda') fail(`${route}: overflow horizontal ${state.scrollWidth} > ${state.width}`);
               } catch (e) {
-                report.failures.push(`${route}: ${e}`);
+                fail(`${route}: ${e}`);
               }
             }
 
-            await page.goto(`${base}/medicamentos`, { waitUntil: 'networkidle' });
-            const drug = await requestJson(page, '/api/drugs');
-            const drugs = Array.isArray(drug.body) ? drug.body : [];
+            await page.goto(`${base}/`, { waitUntil: 'networkidle' });
+            await page.screenshot({ path: path.join(out, 'desktop-home.png'), fullPage: false });
+
+            const drugResponse = await requestJson(page, '/api/drugs');
+            const drugs = Array.isArray(drugResponse.body) ? drugResponse.body : [];
             const selected = drugs.find((d) => /sacubitril/i.test(d.generic_name || '')) || drugs[0];
-            if (!selected?.slug) report.failures.push('medicamentos: corpus real não retornou slug');
+            if (!selected?.slug) fail('medicamentos: loader oficial não retornou slug');
             else {
               await page.goto(`${base}/medicamentos?slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
               await page.locator('.mc-command').waitFor({ state: 'visible', timeout: 15000 });
@@ -277,11 +299,12 @@ jobs:
 
             await page.goto(`${base}/emergencia`, { waitUntil: 'networkidle' });
             const firstProtocol = page.locator('.emerg__alvo').first();
-            if (await firstProtocol.count()) {
+            if (!await firstProtocol.count()) fail('emergencia: loader oficial não retornou protocolos');
+            else {
               await firstProtocol.click();
               await page.locator('.emerg-command__layout').waitFor({ state: 'visible', timeout: 10000 });
               await page.screenshot({ path: path.join(out, 'desktop-emergency-command.png'), fullPage: false });
-            } else report.failures.push('emergencia: nenhum protocolo após reconcile');
+            }
 
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await page.locator('.ccc-assistant-input').click();
@@ -291,17 +314,21 @@ jobs:
 
             const mobile = await login({ width: 390, height: 844 });
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
+            await mobile.page.screenshot({ path: path.join(out, 'mobile-home.png'), fullPage: false });
+            const labels = await mobile.page.locator('.cc-mobile-nav > * span').allTextContents();
+            const expected = ['Início', 'Buscar', 'Pacientes', 'Agenda', 'Mais'];
+            if (JSON.stringify(labels.slice(0, 5)) !== JSON.stringify(expected)) fail(`mobile/nav divergente: ${JSON.stringify(labels.slice(0, 5))}`);
             await mobile.page.locator('.ccc-mobile-summary__card--assistant').click();
             await mobile.page.locator('.cos-assistant-panel.is-open').waitFor({ state: 'visible', timeout: 10000 });
             await mobile.page.screenshot({ path: path.join(out, 'mobile-personal-assistant.png'), fullPage: false });
             await mobile.context.close();
           } catch (e) {
-            report.failures.push(`acceptance runner: ${e?.stack || e}`);
+            fail(`acceptance runner: ${e?.stack || e}`);
           } finally {
             await browser.close();
           }
 
-          if (report.pageErrors.length) report.failures.push(`page errors: ${report.pageErrors.join(' | ')}`);
+          if (report.pageErrors.length) fail(`page errors: ${report.pageErrors.join(' | ')}`);
           fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
           console.log(JSON.stringify(report, null, 2));
           if (report.failures.length) process.exitCode = 1;
