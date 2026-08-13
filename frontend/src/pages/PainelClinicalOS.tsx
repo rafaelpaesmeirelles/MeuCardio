@@ -53,7 +53,11 @@ function saudacao() {
   if (hora < 18) return "Boa tarde";
   return "Boa noite";
 }
-function primeiroNome(nome?: string) { return nome?.trim().split(/\s+/)[0] || "Doutor(a)"; }
+function primeiroNome(nome?: string) {
+  const partes = (nome || "").trim().split(/\s+/).filter(Boolean);
+  const primeira = /^(dr|dra)\.?$/i.test(partes[0] || "") ? partes[1] : partes[0];
+  return primeira || "Doutor(a)";
+}
 function chaveContextosRecentes(userId?: number) { return userId ? `corvia:contextos-recentes:${userId}` : ""; }
 function mesmoDia(a: Date, b: Date) { return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
 function horario(valor?: string | null) { if (!valor) return "—"; const data = new Date(valor); return Number.isNaN(data.getTime()) ? "—" : data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }); }
