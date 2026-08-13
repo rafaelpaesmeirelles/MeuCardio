@@ -61,6 +61,7 @@ const UsuariosOnline = lazy(() => import("./pages/UsuariosOnline"));
 const GuiaDoencas = lazy(() => import("./pages/GuiaDoencas"));
 const GuiaDoenca = lazy(() => import("./pages/GuiaDoenca"));
 const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
+const ExportarConteudo = lazy(() => import("./pages/ExportarConteudo"));
 const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
@@ -159,6 +160,7 @@ export default function App() {
           <Route path="round" element={<Round />} />
           <Route path="agenda" element={<Agenda />} />
           <Route path="documentos" element={<Templates />} />
+          <Route path="exportar" element={<ExportarConteudo />} />
           <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
           <Route path="receituario" element={<Receituario />} />
           <Route path="assinatura" element={<Assinatura />} />
