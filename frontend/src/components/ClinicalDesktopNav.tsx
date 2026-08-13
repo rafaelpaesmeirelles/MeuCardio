@@ -3,11 +3,7 @@ import { useAuth } from "../lib/auth";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
-type NavItem = {
-  to: string;
-  label: string;
-  icon: NomeIcone;
-};
+type NavItem = { to: string; label: string; icon: NomeIcone };
 
 const CLINICA: NavItem[] = [
   { to: "/doencas", label: "Condições", icon: "doencas" },
@@ -31,12 +27,27 @@ const TRABALHO: NavItem[] = [
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
 ];
 
+const MAIS: NavItem[] = [
+  { to: "/triagem-sintomas", label: "Triagem de sintomas", icon: "triagem" },
+  { to: "/interacoes", label: "Interações medicamentosas", icon: "medicamento" },
+  { to: "/condicoes", label: "Condições especiais", icon: "check" },
+  { to: "/fluxogramas", label: "Fluxogramas clínicos", icon: "seta" },
+  { to: "/biblioteca", label: "Biblioteca científica", icon: "conhecimento" },
+  { to: "/material-paciente", label: "Material para paciente", icon: "documento" },
+  { to: "/avaliacao-preoperatoria", label: "Avaliação pré-operatória", icon: "clinica" },
+  { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
+  { to: "/indicadores", label: "Meus indicadores", icon: "indicadores" },
+  { to: "/galeria", label: "Galeria", icon: "galeria" },
+  { to: "/cursos", label: "Cursos", icon: "curso" },
+  { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
+  { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
+  { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
+  { to: "/tour", label: "Conheça a plataforma", icon: "curso" },
+];
+
 function Item({ item }: { item: NavItem }) {
   return (
-    <NavLink
-      to={item.to}
-      className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}
-    >
+    <NavLink to={item.to} className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}>
       <Icone nome={item.icon} />
       <span>{item.label}</span>
     </NavLink>
@@ -46,28 +57,19 @@ function Item({ item }: { item: NavItem }) {
 export default function ClinicalDesktopNav() {
   const { usuario } = useAuth();
 
-  function abrirAssistente() {
-    window.dispatchEvent(new Event("corvia:abrir-assistente-pessoal"));
-  }
-
   return (
     <aside className="ccc-nav" aria-label="Navegação principal do CorVIA">
       <NavLink to="/" className="ccc-nav__brand" aria-label="CorVIA — Início">
         <img src="/corvia-logo-compacta.png" alt="" />
-        <span>
-          <strong>CorVIA</strong>
-          <small>Clinical OS do médico</small>
-        </span>
+        <span><strong>CorVIA</strong><small>Clinical OS do médico</small></span>
       </NavLink>
 
       <nav className="ccc-nav__scroll">
         <NavLink to="/" end className={({ isActive }) => `ccc-nav__item ccc-nav__home${isActive ? " is-active" : ""}`}>
-          <IconeHoje />
-          <span>Início</span>
+          <IconeHoje /><span>Início</span>
         </NavLink>
         <NavLink to="/busca" className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}>
-          <Icone nome="busca" />
-          <span>Buscar</span>
+          <Icone nome="busca" /><span>Buscar</span>
         </NavLink>
 
         <div className="ccc-nav__section">
@@ -81,22 +83,14 @@ export default function ClinicalDesktopNav() {
         </div>
 
         <div className="ccc-nav__section ccc-nav__section--utilities">
-          <button type="button" className="ccc-nav__item ccc-nav__assistant" onClick={abrirAssistente}>
-            <Icone nome="assistente" />
-            <span>Assistente</span>
-          </button>
+          <Item item={{ to: "/assistente", label: "Assistente Clínica", icon: "assistente" }} />
           <Item item={{ to: "/favoritos", label: "Favoritos", icon: "favorito" }} />
           <details className="ccc-nav__more">
             <summary className="ccc-nav__item">
-              <Icone nome="mais" />
-              <span>Mais</span>
-              <Icone nome="chevron" className="ccc-nav__more-chevron" />
+              <Icone nome="mais" /><span>Mais</span><Icone nome="chevron" className="ccc-nav__more-chevron" />
             </summary>
             <div className="ccc-nav__more-items">
-              <Item item={{ to: "/material-paciente", label: "Material para paciente", icon: "documento" }} />
-              <Item item={{ to: "/galeria", label: "Galeria", icon: "galeria" }} />
-              <Item item={{ to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" }} />
-              <Item item={{ to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" }} />
+              {MAIS.map((item) => <Item key={item.to} item={item} />)}
               <Item item={{ to: "/minha-conta", label: "Minha conta", icon: "conta" }} />
               <Item item={{ to: "/assinatura", label: "Assinatura", icon: "check" }} />
               {usuario?.role === "admin" && <Item item={{ to: "/admin", label: "Administração", icon: "gestao" }} />}
@@ -105,12 +99,9 @@ export default function ClinicalDesktopNav() {
         </div>
       </nav>
 
-      <div className="ccc-nav__footer">
-        <span className="ccc-nav__footer-mark">✦</span>
-        <span>
-          <strong>Clinical Command Center</strong>
-          <small>Conhecimento → decisão → ação</small>
-        </span>
+      <div className="ccc-nav__footer ccc-nav__plan">
+        <span className="ccc-nav__plan-avatar">{(usuario?.full_name || "R").trim().slice(0, 1).toUpperCase()}</span>
+        <span><strong>Plano Premium</strong><small>CorVIA Clinical OS</small></span>
       </div>
     </aside>
   );
