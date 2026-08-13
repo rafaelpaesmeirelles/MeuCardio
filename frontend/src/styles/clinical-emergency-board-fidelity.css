@@ -1,0 +1,84 @@
+/* Emergency Command Center — fidelity to approved board. */
+.emerg-command { max-width: 1050px; margin-inline: auto; }
+.emerg-command__layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 180px;
+  gap: 8px;
+  align-items: start;
+}
+.emerg-command__main {
+  min-width: 0;
+  overflow: hidden;
+  background: linear-gradient(160deg,#130d13,#090e13);
+  border: 1px solid rgba(239,80,98,.18);
+  border-radius: 10px;
+}
+.emerg-command__hero {
+  padding: 13px 14px 12px;
+  background: radial-gradient(circle at 0 0,rgba(239,80,98,.16),transparent 18rem),linear-gradient(145deg,#351219,#180d12);
+  border-bottom: 1px solid rgba(239,80,98,.16);
+}
+.emerg-command__hero > small { display:flex; align-items:center; gap:5px; color:#ff8291!important; font-size:.48rem; font-weight:800; text-transform:uppercase; letter-spacing:.06em; }
+.emerg-command__hero > small svg { width:13px; }
+.emerg-command__hero h1 { margin:7px 0 3px!important; color:#fff5f6!important; font-size:1.05rem!important; letter-spacing:-.035em; }
+.emerg-command__hero p { margin:0; color:#c4949b!important; font-size:.54rem; }
+.emerg-command__steps { padding:8px; }
+.emerg-command__steps .emerg__secao { margin:0 0 5px; border:0; background:transparent; }
+.emerg-command__steps .emerg__secaoTitulo {
+  display:grid;
+  width:100%;
+  min-height:31px;
+  grid-template-columns:22px 1fr;
+  align-items:center;
+  gap:6px;
+  padding:4px 7px;
+  color:#d9b6bc;
+  background:rgba(239,80,98,.035);
+  border:1px solid rgba(239,80,98,.08);
+  border-radius:7px;
+  font-size:.51rem;
+  text-align:left;
+}
+.emerg-command__steps .emerg__secaoTitulo.aberta { color:#fff0f2; background:rgba(239,80,98,.07); border-color:rgba(239,80,98,.18); }
+.emerg-command__step-number { display:grid; width:20px; height:20px; place-items:center; color:#fff; background:#d63f51; border-radius:50%; font-size:.45rem; font-weight:800; }
+.emerg-command__steps .emerg__corpo { margin:4px 0 7px 28px; padding:7px 8px; color:#b9a6aa; background:rgba(255,255,255,.015); border-left:1px solid rgba(239,80,98,.13); border-radius:0 6px 6px 0; font-size:.52rem; }
+.emerg-command__steps .emerg__corpo p,
+.emerg-command__steps .emerg__corpo li { color:#bca9ad!important; font-size:.52rem; line-height:1.5; }
+
+.emerg-command__quick {
+  display:grid;
+  gap:5px;
+  padding:9px;
+  background:linear-gradient(145deg,#160f14,#0b1116);
+  border:1px solid rgba(239,80,98,.12);
+  border-radius:9px;
+}
+.emerg-command__quick > small { margin:0 0 3px; color:#9d7279!important; font-size:.43rem; font-weight:800; text-transform:uppercase; letter-spacing:.06em; }
+.emerg-command__quick a {
+  display:grid;
+  min-height:30px;
+  grid-template-columns:20px 1fr;
+  align-items:center;
+  gap:6px;
+  padding:5px 6px;
+  color:#c7aeb3!important;
+  background:rgba(239,80,98,.025);
+  border:1px solid rgba(239,80,98,.07);
+  border-radius:6px;
+  font-size:.48rem;
+  text-decoration:none!important;
+}
+.emerg-command__quick a:hover { color:#fff1f3!important; background:rgba(239,80,98,.07); border-color:rgba(239,80,98,.16); }
+.emerg-command__quick a svg { width:13px; color:#ef6676; }
+.emerg-command__footer { display:flex; min-height:43px; align-items:center; gap:15px; margin-top:8px; padding:7px 11px; color:#ff7182; background:rgba(239,80,98,.055); border:1px solid rgba(239,80,98,.09); border-radius:9px; overflow:hidden; }
+.emerg-command__footer strong { flex:0 0 auto; font-size:.52rem; }
+.emerg-command__ecg { position:relative; display:block; min-width:120px; height:22px; flex:1; opacity:.8; background:linear-gradient(90deg,transparent 0 8%,#d94a5d 8% 9%,transparent 9% 18%,#d94a5d 18% 19%,transparent 19% 30%,#d94a5d 30% 31%,transparent 31% 100%); }
+.emerg-command__ecg::after { content:""; position:absolute; inset:9px 0 auto; height:1px; background:rgba(239,80,98,.4); box-shadow:14px -5px 0 -0.2px #ef5062,24px 0 0 -0.2px #ef5062,33px -11px 0 -0.2px #ef5062,43px 8px 0 -0.2px #ef5062,52px -2px 0 -0.2px #ef5062; }
+
+@media (max-width:900px) {
+  .emerg-command__layout { grid-template-columns:1fr; }
+  .emerg-command__quick { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .emerg-command__quick > small { grid-column:1/-1; }
+  .emerg-command__quick a { grid-template-columns:16px 1fr; padding-inline:4px; }
+  .emerg-command__footer { gap:8px; }
+}
