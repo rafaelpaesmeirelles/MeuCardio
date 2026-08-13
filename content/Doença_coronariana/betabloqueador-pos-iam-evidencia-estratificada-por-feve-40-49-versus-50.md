@@ -15,7 +15,7 @@ Na era contemporânea de reperfusão, estatinas de alta intensidade e prevençã
 
 O ponto clínico que emerge dos dados atuais é mais específico:
 
-- **FEVE 40–49%:** há sinal randomizado de benefício do betabloqueador;
+- **FEVE 40–49%:** há sinal randomizado de benefício do betabloqueador, ainda com incerteza residual pelo tamanho muito menor da base de evidência;
 - **FEVE ≥50%:** a melhor síntese randomizada disponível não demonstra redução de morte, novo IAM ou insuficiência cardíaca quando não existe outra indicação para a classe.
 
 Essa distinção é relevante porque uma análise que mistura FEVE 40–49% e FEVE ≥50% pode produzir uma resposta média que não representa adequadamente nenhum dos dois estratos.
@@ -50,7 +50,7 @@ O desfecho composto de morte por qualquer causa, novo IAM ou insuficiência card
 Não houve heterogeneidade detectável do efeito entre os quatro ensaios (**p de interação tratamento × estudo = 0,95**).
 
 ### Leitura clínica
-Neste estrato, os dados randomizados agrupados sustentam benefício do betabloqueador mesmo sem insuficiência cardíaca clínica. O tamanho da amostra é muito menor que o disponível para FEVE normal, mas o resultado é diretamente direcionado ao grupo 40–49% e evita diluí-lo dentro de uma população mais ampla.
+Neste estrato, os dados randomizados agrupados mostram um **sinal favorável** ao betabloqueador mesmo sem insuficiência cardíaca clínica. A estimativa é estatisticamente significativa, porém a base de evidência é muito menor que a disponível para FEVE normal; por isso, o achado deve ser interpretado como evidência promissora e diretamente direcionada ao grupo 40–49%, mas ainda com incerteza residual, e não como prova definitiva de benefício universal nesse estrato.
 
 ## FEVE ≥50%: meta-análise individual de cinco RCTs
 Em contraste, a meta-análise individual publicada no NEJM em 2026 reuniu **17.801 pacientes** com IAM recente, **FEVE ≥50%** e nenhuma outra indicação para betabloqueador, provenientes de REBOOT, REDUCE-AMI, BETAMI, DANBLOCK e CAPITAL-RCT.
@@ -81,11 +81,11 @@ Os dados contemporâneos são mais coerentes quando interpretados por estrato de
 | Situação pós-IAM | Evidência randomizada contemporânea | Leitura prática |
 |---|---|---|
 | **FEVE <40%** | Benefício de betabloqueadores já estabelecido por corpo histórico e pela terapêutica da disfunção ventricular/IC | Manter indicação quando tolerado e não contraindicado |
-| **FEVE 40–49%, sem IC clínica** | IPD meta-análise: HR 0,75 para morte/IAM/IC | Há sinal de benefício; não deve ser assimilado automaticamente ao grupo de FEVE normal |
+| **FEVE 40–49%, sem IC clínica** | IPD meta-análise: HR 0,75 para morte/IAM/IC | Há sinal randomizado de benefício, com incerteza residual; não deve ser assimilado automaticamente ao grupo de FEVE normal |
 | **FEVE ≥50%, sem outra indicação** | IPD meta-análise: HR 0,97, neutro | Não há benefício prognóstico demonstrado para uso rotineiro apenas pelo antecedente de IAM |
 | **Qualquer FEVE + outra indicação** | Pergunta diferente dos ensaios de retirada/omissão | Angina, arritmia, hipertensão, IC ou outra indicação devem ser avaliadas separadamente |
 
-O resultado positivo do BETAMI–DANBLOCK em FEVE ≥40% é **compatível** com a possibilidade de efeito diferente conforme a FEVE, mas não deve ser usado sozinho para afirmar que o benefício global foi causado pelo subgrupo 40–49%. A sustentação dessa leitura vem da análise individual específica de FEVE 40–49% e da análise separada, muito maior, de FEVE ≥50%.
+O resultado positivo do BETAMI–DANBLOCK em FEVE ≥40% é **compatível** com a possibilidade de efeito diferente conforme a FEVE, mas não deve ser usado sozinho para afirmar que o benefício global foi causado pelo subgrupo 40–49%. A sustentação dessa hipótese vem da análise individual específica de FEVE 40–49% e da análise separada, muito maior, de FEVE ≥50%; a diferença de volume de informação entre os estratos recomenda cautela quanto à certeza do efeito no grupo 40–49%.
 
 ## O que esses estudos não autorizam concluir
 - Não justificam suspender abruptamente betabloqueador em paciente já tratado.
@@ -95,4 +95,4 @@ O resultado positivo do BETAMI–DANBLOCK em FEVE ≥40% é **compatível** com 
 - Não transformam FEVE em único determinante da decisão: frequência cardíaca, pressão arterial, angina, arritmia, tolerabilidade e comorbidades continuam relevantes.
 
 ## Mensagem prática
-A evidência randomizada contemporânea favorece uma decisão **estratificada por FEVE**. Após IAM e na ausência de outra indicação para betabloqueador, o grupo **40–49% não deve ser tratado como equivalente ao grupo ≥50%**: a meta-análise individual mostra benefício no primeiro, enquanto a síntese de 17.801 pacientes com FEVE ≥50% é neutra para morte, IAM ou insuficiência cardíaca.
+A evidência randomizada contemporânea favorece uma decisão **estratificada por FEVE**. Após IAM e na ausência de outra indicação para betabloqueador, o grupo **40–49% não deve ser tratado como equivalente ao grupo ≥50%**: a meta-análise individual mostra um sinal favorável no primeiro, ainda com incerteza residual pela base menor de evidência, enquanto a síntese de 17.801 pacientes com FEVE ≥50% é neutra para morte, IAM ou insuficiência cardíaca.
