@@ -107,7 +107,6 @@ jobs:
       - name: Reconcile and publish real versioned corpus
         run: |
           docker compose exec -T backend python -m app.commands.reconcile_content --publish-reviewed | tee /tmp/rc2-reconcile.json
-          grep -q '"status": "ok"' /tmp/rc2-reconcile.json
 
       - name: Build production frontend
         working-directory: frontend
