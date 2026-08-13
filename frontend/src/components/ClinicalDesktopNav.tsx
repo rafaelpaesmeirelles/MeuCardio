@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../lib/auth";
+import { assetUrl } from "../lib/api";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
@@ -54,14 +55,18 @@ function Item({ item }: { item: NavItem }) {
   );
 }
 
+function iniciais(nome?: string) {
+  return (nome || "R").trim().split(/\s+/).slice(0, 2).map((parte) => parte[0]?.toUpperCase()).join("");
+}
+
 export default function ClinicalDesktopNav() {
   const { usuario } = useAuth();
 
   return (
     <aside className="ccc-nav" aria-label="Navegação principal do CorVIA">
       <NavLink to="/" className="ccc-nav__brand" aria-label="CorVIA — Início">
-        <img src="/corvia-logo-compacta.png" alt="" />
-        <span><strong>CorVIA</strong><small>Clinical OS do médico</small></span>
+        <span className="ccc-nav__brand-mark"><img src="/logo-marca.png" alt="" /></span>
+        <span className="ccc-nav__brand-copy"><strong>CorVIA</strong><small>Clinical OS do médico</small></span>
       </NavLink>
 
       <nav className="ccc-nav__scroll">
@@ -100,8 +105,12 @@ export default function ClinicalDesktopNav() {
       </nav>
 
       <div className="ccc-nav__footer ccc-nav__plan">
-        <span className="ccc-nav__plan-avatar">{(usuario?.full_name || "R").trim().slice(0, 1).toUpperCase()}</span>
-        <span><strong>Plano Premium</strong><small>CorVIA Clinical OS</small></span>
+        {usuario?.photo_url ? (
+          <img className="ccc-nav__plan-photo" src={assetUrl(usuario.photo_url)} alt="" />
+        ) : (
+          <span className="ccc-nav__plan-avatar">{iniciais(usuario?.full_name)}</span>
+        )}
+        <span className="ccc-nav__plan-copy"><strong>Plano Premium</strong><small>CorVIA Clinical OS</small></span>
       </div>
     </aside>
   );
