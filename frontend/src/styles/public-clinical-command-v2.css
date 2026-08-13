@@ -190,6 +190,78 @@
 .login .login-marca-mobile h1 strong { color:#79e3e9; }
 .login .login-marca-mobile__pulso path { stroke:#42cad8; }
 
+/* ---------- /solicitar-acesso — mesmo shell de /entrar (login-vitrine +
+   login-acesso), sem variante própria: reaproveita .login puro, então tudo
+   que já é regra de .login acima (painel escuro, campo/select branco) vale
+   aqui direto, sem duplicar seletor. Só o que é específico desta tela
+   (seções do formulário, aviso do próximo passo, confirmação pós-envio)
+   entra abaixo. Adicionado em .login (arquivo global, carregado antes de
+   qualquer CSS de rota) de propósito — CSS de componente de rota
+   (SolicitarAcesso importaria um .css próprio) perde a disputa de cascata
+   contra este arquivo quando o seletor colide (medido ao vivo em produção
+   com /entrar: .login-campo label, declarado em login.css, local à rota,
+   nunca vence .login-formulario label, declarado aqui). */
+.login-formulario__secao { display: grid; gap: .85rem; }
+.login-formulario__secao + .login-formulario__secao {
+  margin-top: .3rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(148,205,219,.1);
+}
+.login-formulario__secao-titulo { margin: 0; color: #eefafb; font-size: .78rem; font-weight: 750; letter-spacing: .02em; }
+.login-formulario__secao-nota { margin: -.4rem 0 0; color: #7e98a1; font-size: .68rem; line-height: 1.45; }
+
+.login-formulario__aviso {
+  display: flex;
+  gap: .6rem;
+  align-items: flex-start;
+  padding: .8rem .9rem;
+  color: #c9dfe4;
+  background: rgba(66,202,216,.055);
+  border: 1px solid rgba(66,202,216,.16);
+  border-radius: 11px;
+  font-size: .74rem;
+  line-height: 1.5;
+}
+.login-formulario__aviso svg { flex: 0 0 auto; margin-top: .1rem; color: #5fd4dc; }
+.login-formulario__aviso strong { color: #eefafb; }
+
+.login-formulario__checavel {
+  display: flex;
+  gap: .6rem;
+  align-items: flex-start;
+  padding: .7rem .8rem;
+  background: rgba(255,255,255,.02);
+  border: 1px solid var(--public-line);
+  border-radius: 10px;
+}
+.login-formulario__checavel input[type="checkbox"] { width: 18px; height: 18px; min-height: 0; margin: .12rem 0 0; accent-color: var(--teal-600); cursor: pointer; }
+.login-formulario__checavel label { display: block; margin: 0; color: #d7e7ea; font-size: .78rem; font-weight: 700; cursor: pointer; }
+.login-formulario__checavel p { margin: .2rem 0 0; color: #7e98a1; font-size: .68rem; line-height: 1.4; }
+
+/* Confirmação pós-envio — mesmo shell, o painel troca o formulário por uma
+   mensagem dinâmica conforme a resposta REAL do servidor (`acesso_imediato`)
+   — nunca um texto fixo de "aguardando aprovação" para quem, por
+   pré-autorização de e-mail, já foi liberado na hora (bug corrigido em
+   14/08/2026: a tela antiga sempre mostrava a mensagem genérica). */
+.login-confirmacao { display: grid; gap: 1rem; max-width: 420px; }
+.login-confirmacao__selo {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  color: #03131b;
+  background: linear-gradient(135deg,#42cad8,#78e5eb);
+  border-radius: 14px;
+}
+.login-confirmacao__selo--pendente { color: #eefafb; background: rgba(255,255,255,.06); border: 1px solid var(--public-line); }
+.login-confirmacao h2 { margin: 0; color: #f2fbfc; font-size: 1.5rem; letter-spacing: -.03em; }
+.login-confirmacao p { margin: 0; color: #a8c2c8; font-size: .86rem; line-height: 1.55; }
+
+@media (max-width: 640px) {
+  .login-formulario__secao + .login-formulario__secao { padding-top: .9rem; }
+  .login-confirmacao h2 { font-size: 1.3rem; }
+}
+
 @media(max-width:900px){
   .produto .produto-nav nav{display:none}
   .produto .produto-hero{min-height:auto;padding-top:2.2rem}
