@@ -24,7 +24,7 @@ const ESTUDO_APRENDIZAGEM: LinkItem[] = [
   { to: "/evidencias", label: "Evidências", icon: "evidencia" },
   { to: "/estudos", label: "Estudos", icon: "evidencia" },
   { to: "/diretrizes", label: "Guidelines", icon: "conhecimento" },
-  { to: "/timeline", label: "Timeline", icon: "seta" },
+  { to: "/trilhas/timeline", label: "Timeline", icon: "seta" },
   { to: "/trilhas", label: "Trilhas", icon: "seta" },
   { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
   { to: "/biblioteca", label: "Biblioteca", icon: "conhecimento" },
