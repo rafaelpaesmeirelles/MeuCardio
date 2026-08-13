@@ -6,44 +6,48 @@ import { IconeHoje } from "./IdentidadeClinica";
 
 type NavItem = { to: string; label: string; icon: NomeIcone };
 
-const CLINICA: NavItem[] = [
+const CLINICA_DECISAO: NavItem[] = [
   { to: "/doencas", label: "Condições", icon: "doencas" },
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
-  { to: "/evidencias", label: "Evidências", icon: "evidencia" },
-  { to: "/estudos", label: "Estudos", icon: "evidencia" },
-  { to: "/diretrizes", label: "Guidelines", icon: "conhecimento" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
   { to: "/emergencia", label: "Emergências", icon: "emergencia" },
   { to: "/checklists", label: "Checklists", icon: "check" },
-  { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
-  { to: "/trilhas", label: "Trilhas", icon: "seta" },
-];
-
-const TRABALHO: NavItem[] = [
-  { to: "/round", label: "Pacientes", icon: "pacientes" },
-  { to: "/receituario", label: "Prescrição", icon: "prescricao" },
-  { to: "/documentos", label: "Documentos e Solicitações", icon: "documento" },
-  { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
-  { to: "/agenda", label: "Agenda", icon: "agenda" },
-  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
-];
-
-const MAIS: NavItem[] = [
   { to: "/triagem-sintomas", label: "Triagem de sintomas", icon: "triagem" },
   { to: "/interacoes", label: "Interações medicamentosas", icon: "medicamento" },
   { to: "/condicoes", label: "Condições especiais", icon: "check" },
   { to: "/fluxogramas", label: "Fluxogramas clínicos", icon: "seta" },
-  { to: "/biblioteca", label: "Biblioteca científica", icon: "conhecimento" },
-  { to: "/material-paciente", label: "Material para paciente", icon: "documento" },
   { to: "/avaliacao-preoperatoria", label: "Avaliação pré-operatória", icon: "clinica" },
-  { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
-  { to: "/indicadores", label: "Meus indicadores", icon: "indicadores" },
+];
+
+const ESTUDO_APRENDIZAGEM: NavItem[] = [
+  { to: "/evidencias", label: "Evidências", icon: "evidencia" },
+  { to: "/estudos", label: "Estudos", icon: "evidencia" },
+  { to: "/diretrizes", label: "Guidelines", icon: "conhecimento" },
+  { to: "/timeline", label: "Timeline", icon: "seta" },
+  { to: "/trilhas", label: "Trilhas", icon: "seta" },
+  { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
+  { to: "/biblioteca", label: "Biblioteca científica", icon: "conhecimento" },
   { to: "/galeria", label: "Galeria", icon: "galeria" },
   { to: "/cursos", label: "Cursos", icon: "curso" },
   { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
+];
+
+const TRABALHO_ASSISTENCIA: NavItem[] = [
+  { to: "/round", label: "Pacientes", icon: "pacientes" },
+  { to: "/receituario", label: "Prescrição", icon: "prescricao" },
+  { to: "/documentos", label: "Documentos e Solicitações", icon: "documento" },
+  { to: "/material-paciente", label: "Material para paciente", icon: "documento" },
+  { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
+  { to: "/agenda", label: "Agenda", icon: "agenda" },
+  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
+  { to: "/telediagnostico", label: "Laudo e consultoria", icon: "evidencia" },
+  { to: "/indicadores", label: "Meus indicadores", icon: "indicadores" },
   { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
+];
+
+const MAIS: NavItem[] = [
   { to: "/tour", label: "Conheça a plataforma", icon: "curso" },
 ];
 
@@ -66,8 +70,9 @@ export default function ClinicalDesktopNav() {
       <nav className="ccc-nav__scroll">
         <NavLink to="/" end className={({ isActive }) => `ccc-nav__item ccc-nav__home${isActive ? " is-active" : ""}`}><IconeHoje /><span>Início</span></NavLink>
         <NavLink to="/busca" className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}><Icone nome="busca" /><span>Buscar</span></NavLink>
-        <div className="ccc-nav__section"><p>Clínica</p>{CLINICA.map((item) => <Item key={item.to} item={item} />)}</div>
-        <div className="ccc-nav__section"><p>Trabalho</p>{TRABALHO.map((item) => <Item key={item.to} item={item} />)}</div>
+        <div className="ccc-nav__section"><p>Clínica & Decisão</p>{CLINICA_DECISAO.map((item) => <Item key={item.to} item={item} />)}</div>
+        <div className="ccc-nav__section"><p>Estudo & Aprendizagem</p>{ESTUDO_APRENDIZAGEM.map((item) => <Item key={item.to} item={item} />)}</div>
+        <div className="ccc-nav__section"><p>Trabalho & Assistência</p>{TRABALHO_ASSISTENCIA.map((item) => <Item key={item.to} item={item} />)}</div>
         <div className="ccc-nav__section ccc-nav__section--utilities">
           <Item item={{ to: "/assistente", label: "Assistente Clínica", icon: "assistente" }} />
           <Item item={{ to: "/favoritos", label: "Favoritos", icon: "favorito" }} />
