@@ -28,3 +28,9 @@ frontend/android/app/build/outputs/
 infra/backup/dumps/
 infra/backup/backup.log
 *.tsbuildinfo
+
+# artefatos runtime da sincronização automática (agenda_sync_cron.sh, cron a
+# cada 15 min) — nunca versionados, sempre recriados; deixar de propósito
+# fora do controle de versão evita que reapareçam em git status a cada ciclo
+infra/agenda_sync_cron.lock
+infra/agenda_sync_cron.log
