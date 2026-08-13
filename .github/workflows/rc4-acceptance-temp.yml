@@ -83,7 +83,9 @@ jobs:
       - name: Mount and reconcile canonical corpus
         run: |
           BACKEND_ID="$(docker compose ps -q backend)"
-          for dir in content galeria exames evidencias estudos medicamentos controlados checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas; do
+          # /content já é um bind mount somente leitura no docker-compose canônico.
+          # Os demais corpora históricos não são montados e precisam ser copiados.
+          for dir in galeria exames evidencias estudos medicamentos controlados checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas; do
             docker cp "$dir" "$BACKEND_ID:/$dir"
           done
           docker compose exec -T backend python -m pytest -q tests/test_canonical_content_review_status.py
