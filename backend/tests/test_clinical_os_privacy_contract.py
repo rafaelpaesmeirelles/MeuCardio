@@ -44,7 +44,7 @@ def test_dados_pessoais_so_sao_carregados_quando_assistente_esta_aberto():
     fonte = ASSISTENTE.read_text(encoding="utf-8")
 
     guarda = fonte.index("if (!aberto) return;")
-    agenda = fonte.index('api.get<Agendamento[]>("/appointments")')
+    agenda = fonte.index('api.get<AgendamentoIntegrado[]>("/agenda/appointments")')
     mail = fonte.index('api.get<ResumoEmail>("/email/resumo")')
     assert guarda < agenda < mail
     assert "if (!aberto) return null;" in fonte

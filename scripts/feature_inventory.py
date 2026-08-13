@@ -42,7 +42,7 @@ EXPECTED_APP_ROUTES = {
 
 EXPECTED_NAV_ROUTES = {
     "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
-    "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras",
+    "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras", "/emergencia",
     "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
