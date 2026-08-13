@@ -24,6 +24,7 @@ const TRABALHO: NavItem[] = [
   { to: "/round", label: "Pacientes", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos e Solicitações", icon: "documento" },
+  { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
   { to: "/agenda", label: "Agenda", icon: "agenda" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
 ];
