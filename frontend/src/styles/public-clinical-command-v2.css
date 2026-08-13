@@ -135,6 +135,38 @@
 }
 .login .login-formulario input::placeholder { color:#627f89; }
 .login .login-formulario input:focus { border-color:rgba(66,202,216,.52);box-shadow:0 0 0 3px rgba(66,202,216,.07); }
+
+/* Correção de contraste, 13/08/2026: a regra acima (herdada do desenho
+   escuro original desta seção) deixava o texto digitado quase branco
+   (#f1fbfc) sobre fundo que, em autofill do Chrome/Samsung Internet/Safari
+   (credencial salva) e em alguns navegadores móveis, é substituído pelo
+   próprio agente por um fundo claro — texto quase invisível. Regra mais
+   específica que `.login .login-formulario input`
+   (.login.login--entrar, não só .login) para vencer a cascata de forma
+   definitiva, sem depender de ordem de import: fundo branco, texto navy
+   escuro, sempre — inclusive sob autofill, onde `color` sozinho não
+   basta (o WebKit ignora `color` em campo autofilled; só
+   `-webkit-text-fill-color` o sobrescreve). Usa os tokens canônicos que
+   batem exatamente com os valores pedidos (--navy-900 = #082637,
+   --teal-600 = #167d92, --white = #ffffff). */
+.login.login--entrar .login-formulario input {
+  color: var(--navy-900);
+  -webkit-text-fill-color: var(--navy-900);
+  caret-color: var(--teal-600);
+  background: var(--white);
+}
+.login.login--entrar .login-formulario input::placeholder {
+  color: #6f858e;
+  -webkit-text-fill-color: #6f858e;
+  opacity: 1;
+}
+.login.login--entrar .login-formulario input:-webkit-autofill,
+.login.login--entrar .login-formulario input:-webkit-autofill:hover,
+.login.login--entrar .login-formulario input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--navy-900);
+  caret-color: var(--teal-600);
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+}
 .login .login-senha button,.login .login-campo__esqueci { color:#8fd8de; }
 .login .login-permanecer { background:rgba(255,255,255,.02);border-color:var(--public-line); }
 .login .login-permanecer label { color:#d7e7ea; }

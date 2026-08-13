@@ -240,6 +240,14 @@ jobs:
         working-directory: frontend
         run: node --test scripts/check-camera-lifecycle.test.mjs
 
+      - name: Enforce login input contrast contract
+        working-directory: frontend
+        run: node scripts/check-login-input-contrast.mjs
+
+      - name: Test the login input contrast contract
+        working-directory: frontend
+        run: node --test scripts/check-login-input-contrast.test.mjs
+
       - name: Enforce route-level code splitting
         working-directory: frontend
         run: node scripts/check-route-splitting.mjs
