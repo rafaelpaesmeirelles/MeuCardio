@@ -2,9 +2,11 @@
 
 Pedido do Rafael, 08/08/2026: a partir de 1 item, o usuário precisa visualizar
 tudo que o ecossistema tem sobre aquele tópico e acessar o que quiser
-imediatamente. A lógica de cruzamento em si (o que conta como "mesmo tema" em
-cada uma das doze frentes) vive em `app.services.related_content` — este
-arquivo é só a casca HTTP.
+imediatamente. A lógica de cruzamento em si vive em
+`app.services.connected_content`: ela preserva as consultas por metadado
+estruturado das doze frentes, canonicaliza aliases históricos e só admite
+medicamentos em um tema clínico quando a indicação revisada do próprio verbete
+sustenta explicitamente a relação.
 """
 
 from fastapi import APIRouter, Depends, Query
@@ -12,7 +14,7 @@ from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user
-from app.services.related_content import buscar_relacionados
+from app.services.connected_content import buscar_relacionados_contextuais
 
 router = APIRouter(prefix="/api/relacionados", tags=["relacionados"])
 
@@ -27,4 +29,6 @@ def relacionados(
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
-    return buscar_relacionados(db, tema, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug)
+    return buscar_relacionados_contextuais(
+        db, tema, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug
+    )
