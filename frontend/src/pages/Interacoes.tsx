@@ -72,6 +72,17 @@ export default function Interacoes() {
       .catch((e) => setErro(e.message));
   }, []);
 
+  const filtrada = useMemo(() => {
+    const fonte = lista ?? [];
+    const termo = busca.trim().toLocaleLowerCase("pt-BR");
+    if (!termo) return fonte.slice(0, 24);
+    return fonte.filter((d) => d.nome.toLocaleLowerCase("pt-BR").includes(termo)).slice(0, 40);
+  }, [lista, busca]);
+
+  function nomeDe(slug: string) {
+    return (lista ?? []).find((d) => d.slug === slug)?.nome ?? slug;
+  }
+
   function alternar(slug: string) {
     setResultado(null);
     setEscolhidos((atual) => atual.includes(slug) ? atual.filter((s) => s !== slug) : [...atual, slug]);
@@ -91,13 +102,6 @@ export default function Interacoes() {
 
   if (erro && !lista) return <Erro mensagem={erro} />;
   if (!lista) return <Carregando texto="Abrindo segurança medicamentosa…" />;
-
-  const filtrada = useMemo(() => {
-    const termo = busca.trim().toLocaleLowerCase("pt-BR");
-    if (!termo) return lista.slice(0, 24);
-    return lista.filter((d) => d.nome.toLocaleLowerCase("pt-BR").includes(termo)).slice(0, 40);
-  }, [lista, busca]);
-  const nomeDe = (slug: string) => lista.find((d) => d.slug === slug)?.nome ?? slug;
 
   return (
     <div className="cc-page cc-interactions-page">
