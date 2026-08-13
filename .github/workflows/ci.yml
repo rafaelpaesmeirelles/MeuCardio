@@ -248,6 +248,14 @@ jobs:
         working-directory: frontend
         run: node --test scripts/check-login-input-contrast.test.mjs
 
+      - name: Enforce admin ficha (Histórico) contrast and legible rendering
+        working-directory: frontend
+        run: node scripts/check-admin-ficha-historico.mjs
+
+      - name: Test the admin ficha (Histórico) contract
+        working-directory: frontend
+        run: node --test scripts/check-admin-ficha-historico.test.mjs
+
       - name: Enforce route-level code splitting
         working-directory: frontend
         run: node scripts/check-route-splitting.mjs

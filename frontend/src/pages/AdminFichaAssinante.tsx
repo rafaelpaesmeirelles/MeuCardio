@@ -661,9 +661,51 @@ function AbaDocumentos({ kyc, conta, aoAtualizar }: { kyc: Kyc; conta: Conta; ao
   );
 }
 
+// Rótulo de campo do AuditLog.detail, legível — não é dicionário exaustivo
+// de tradução, só "snake_case" → "Frase com inicial maiúscula", suficiente
+// porque a maioria das chaves já nasce em português no backend (ex.:
+// "tipo_acesso", "observacao", "plano_anterior").
+function humanizarChaveDetalhe(chave: string): string {
+  const texto = chave.replaceAll("_", " ");
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+// AuditLog.detail é um JSON livre por ação (definido caso a caso no
+// backend) — nunca um formato único conhecido de antemão. Em vez de despejar
+// o objeto cru (bug corrigido em 14/08/2026: aparecia como JSON bruto,
+// ilegível para quem não é desenvolvedor), cada valor primitivo vira uma
+// linha rotulada; valor desconhecido/aninhado cai no fallback de
+// JSON.stringify SÓ para aquele valor específico, nunca para o registro
+// inteiro — mantém "nunca dump cru" mesmo para o formato que não se
+// consegue formatar melhor.
+function formatarValorDetalhe(valor: unknown): string {
+  if (valor === null || valor === undefined || valor === "") return "—";
+  if (typeof valor === "boolean") return valor ? "Sim" : "Não";
+  if (Array.isArray(valor)) {
+    return valor.length ? valor.map(formatarValorDetalhe).join(", ") : "—";
+  }
+  if (typeof valor === "object") return JSON.stringify(valor);
+  return String(valor);
+}
+
+function DetalheHistorico({ detail }: { detail: Record<string, unknown> }) {
+  const entradas = Object.entries(detail).filter(([, v]) => v !== null && v !== undefined && v !== "");
+  if (entradas.length === 0) return null;
+  return (
+    <dl className="admin-ficha__historico-detalhe">
+      {entradas.map(([chave, valor]) => (
+        <div key={chave} className="admin-ficha__historico-detalhe-linha">
+          <dt>{humanizarChaveDetalhe(chave)}</dt>
+          <dd>{formatarValorDetalhe(valor)}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 function AbaHistorico({ historico }: { historico: HistoricoItem[] }) {
   if (historico.length === 0) {
-    return <p style={{ color: "var(--texto-secundario)" }}>Nenhuma ação registrada para este usuário ainda.</p>;
+    return <p style={{ color: "var(--texto-secundario)" }}>Nenhum evento registrado para este assinante até o momento.</p>;
   }
   return (
     <ul className="admin-ficha__historico">
@@ -673,9 +715,7 @@ function AbaHistorico({ historico }: { historico: HistoricoItem[] }) {
           <p className="admin-ficha__historico-meta">
             {formatarDataHora(h.created_at)} · {h.admin_nome ?? "sistema"}
           </p>
-          {h.detail && Object.keys(h.detail).length > 0 && (
-            <pre className="admin-ficha__historico-detalhe">{JSON.stringify(h.detail, null, 2)}</pre>
-          )}
+          {h.detail && <DetalheHistorico detail={h.detail} />}
         </li>
       ))}
     </ul>

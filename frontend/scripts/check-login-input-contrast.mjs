@@ -7,14 +7,23 @@ import { fileURLToPath } from "node:url";
 // color:#f1fbfc (quase branco) herdado do desenho escuro original desta
 // seção; em autofill do Chrome/Samsung Internet/Safari (credencial salva) e
 // em alguns navegadores móveis, o fundo passava a ser claro — texto quase
-// invisível. A correção acrescentou uma regra mais específica
-// (.login.login--entrar .login-formulario input) com fundo branco e texto
-// navy escuro, inclusive sob autofill (-webkit-text-fill-color, já que
-// `color` sozinho não tem efeito em campo autofilled no WebKit).
+// invisível. A correção original acrescentou uma segunda declaração do
+// MESMO seletor (.login .login-formulario input), mais abaixo no arquivo,
+// com fundo branco e texto navy escuro, inclusive sob autofill
+// (-webkit-text-fill-color, já que `color` sozinho não tem efeito em campo
+// autofilled no WebKit) — o CSS resolve por ORDEM DE DECLARAÇÃO quando a
+// especificidade empata, então a segunda declaração vence.
+//
+// Generalizada em 14/08/2026: a regra corrigida deixou de ser escopada a
+// `.login.login--entrar` — qualquer tela que reaproveite `.login-formulario`
+// (ex.: /solicitar-acesso) herda a correção automaticamente, sem precisar
+// de uma variante nova a cada página. Cobre também `<select>`, que a versão
+// de 13/08/2026 não precisava tratar (só /entrar tem `<input>`) mas as
+// telas com mais campos têm.
 //
 // Este script NÃO reimplementa um motor de CSS — extrai as declarações da
-// regra mais específica por texto, resolve tokens simples (var(--x)) contra
-// tokens.css, e calcula o contraste WCAG entre `color` e `background`
+// última ocorrência do seletor por texto, resolve tokens simples (var(--x))
+// contra tokens.css, e calcula o contraste WCAG entre `color` e `background`
 // (ou -webkit-text-fill-color/-webkit-box-shadow, sob autofill), para pegar
 // qualquer regressão de texto claro sobre fundo claro — não só a
 // reintrodução literal dos valores antigos.
@@ -64,9 +73,16 @@ function contraste(hexA, hexB) {
  * sendo um entre vários separados por vírgula compartilhando o mesmo corpo
  * (ex.: a própria regra de :-webkit-autofill/:hover/:focus). */
 function corpoDoSeletor(css, seletorLiteral) {
+  // A ÚLTIMA ocorrência, não a primeira: o CSS resolve por ordem de
+  // declaração quando a especificidade empata, e este arquivo tem
+  // propositalmente duas declarações do mesmo seletor (a escura original,
+  // mais acima, e a correção, mais abaixo) — pegar a primeira checaria a
+  // regra errada, a que o próprio bug corrigido em 13/08/2026 mostrou que
+  // nunca vale de fato.
   const escapado = seletorLiteral.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp(`${escapado}\\s*(?:,[^{]*)?\\{([^}]*)\\}`);
-  return re.exec(css)?.[1] ?? null;
+  const re = new RegExp(`${escapado}\\s*(?:,[^{]*)?\\{([^}]*)\\}`, "g");
+  const ocorrencias = [...css.matchAll(re)];
+  return ocorrencias.length ? ocorrencias[ocorrencias.length - 1][1] : null;
 }
 
 function declaracao(corpo, propriedade) {
@@ -78,10 +94,10 @@ export function validateLoginInputContrast(css, tokensCss) {
   const failures = [];
   const tokens = resolverTokens(tokensCss);
 
-  const corpoBase = corpoDoSeletor(css, ".login.login--entrar .login-formulario input");
+  const corpoBase = corpoDoSeletor(css, ".login .login-formulario input");
   if (!corpoBase) {
     failures.push(
-      "não encontrei a regra .login.login--entrar .login-formulario input — precisa ser mais " +
+      "não encontrei a regra .login .login-formulario input — precisa ser mais " +
         "específica que .login .login-formulario input para vencer a cascata de forma definitiva",
     );
     return failures;
@@ -93,7 +109,7 @@ export function validateLoginInputContrast(css, tokensCss) {
   const caret = declaracao(corpoBase, "caret-color");
 
   if (!cor || !fundo) {
-    failures.push(".login.login--entrar .login-formulario input precisa declarar `color` e `background`");
+    failures.push(".login .login-formulario input precisa declarar `color` e `background`");
   } else {
     const corResolvida = resolverCor(cor, tokens);
     const fundoResolvido = resolverCor(fundo, tokens);
@@ -121,14 +137,14 @@ export function validateLoginInputContrast(css, tokensCss) {
     failures.push("falta caret-color visível na regra base (cursor precisa ser identificável, teal ou navy)");
   }
 
-  const corpoPlaceholder = corpoDoSeletor(css, ".login.login--entrar .login-formulario input::placeholder");
+  const corpoPlaceholder = corpoDoSeletor(css, ".login .login-formulario input::placeholder");
   if (!corpoPlaceholder) {
     failures.push("falta a regra ::placeholder correspondente, com cor secundária visível");
   } else if (!declaracao(corpoPlaceholder, "-webkit-text-fill-color")) {
     failures.push("::placeholder também precisa de -webkit-text-fill-color (mesmo motivo do campo em si)");
   }
 
-  const corpoAutofill = corpoDoSeletor(css, ".login.login--entrar .login-formulario input:-webkit-autofill");
+  const corpoAutofill = corpoDoSeletor(css, ".login .login-formulario input:-webkit-autofill");
   if (!corpoAutofill) {
     failures.push(
       "falta tratamento de :-webkit-autofill — é o gatilho mais comum do bug real (credencial salva no " +

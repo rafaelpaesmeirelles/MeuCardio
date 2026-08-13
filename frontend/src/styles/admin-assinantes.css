@@ -43,9 +43,10 @@
 
 .admin-assinantes__tabela-wrap {
   overflow-x: auto;
+  color: var(--texto);
+  background: var(--superficie);
   border: 1px solid var(--borda);
   border-radius: var(--r);
-  background: var(--superficie);
 }
 .admin-assinantes__tabela {
   width: 100%;
@@ -100,7 +101,20 @@
 .selo--neutro { color: var(--texto-secundario); border-color: var(--borda); background: var(--superficie-suave, #f4f7f8); }
 .selo--info { color: var(--acento); border-color: var(--acento-claro); background: var(--acento-tinta); }
 
-/* Ficha do assinante */
+/* Ficha do assinante — este arquivo inteiro foi escrito assumindo o tema
+   claro antigo (texto escuro ambiente, `--texto`/`--superficie` do
+   tokens.css), mas a página é hoje renderizada dentro do shell escuro
+   `.clinical-os` (clinical-os.css), cujo `color: var(--cos-text)` ambiente
+   é quase branco. Qualquer bloco aqui que declare um fundo claro
+   (`--superficie`, `--superficie-suave`, `--white`, `--slate-100`) SEM
+   também declarar `color` explícito herda esse branco ambiente por cima de
+   um fundo claro — texto invisível, só perceptível ao selecionar (bug
+   real reportado na aba Histórico em 14/08/2026, mas presente em qualquer
+   superfície clara desta ficha que não fixasse a própria cor). Corrigido
+   fixando `color: var(--texto)` em cada contêiner de fundo claro, para que
+   todo descendente sem cor própria herde escuro — nunca o branco do shell.
+   Ver frontend/scripts/check-admin-ficha-historico.mjs, que trava essa
+   regra para as superfícies claras conhecidas desta ficha. */
 .admin-ficha__voltar { display: inline-block; margin-bottom: 0.6rem; font-size: 0.86rem; }
 .admin-ficha__cabecalho {
   display: flex;
@@ -109,6 +123,7 @@
   justify-content: space-between;
   gap: 0.8rem;
   padding: 1.1rem 1.25rem;
+  color: var(--texto);
   background: var(--superficie);
   border: 1px solid var(--borda);
   border-radius: var(--r);
@@ -172,6 +187,10 @@
 
 .admin-ficha__assinaturas-wrap { overflow-x: auto; margin-top: 0.6rem; }
 .admin-ficha__assinaturas {
+  /* Sem fundo próprio — fica sobre o ambiente escuro do .clinical-os, cujo
+     `color` claro (herdado) já é o correto para `td` aqui. Só `th` tem
+     fundo próprio claro, e já fixa a cor certa abaixo. Não acrescentar
+     `color` escuro aqui: apagaria o texto de `td` sobre o fundo escuro. */
   width: 100%;
   min-width: 680px;
   border-collapse: collapse;
@@ -231,6 +250,7 @@
 .admin-ficha__decisao {
   margin-top: 1.4rem;
   padding: 1rem 1.1rem;
+  color: var(--texto);
   background: var(--superficie-suave, #f4f7f8);
   border: 1px solid var(--borda);
   border-radius: var(--r);
@@ -257,19 +277,36 @@
   border-radius: 50%;
 }
 .admin-ficha__historico-item:last-child { padding-bottom: 0; }
-.admin-ficha__historico-acao { font-weight: 700; }
+.admin-ficha__historico-acao { color: var(--texto); font-weight: 700; }
 .admin-ficha__historico-meta { color: var(--texto-secundario); font-size: 0.78rem; margin: 0.1rem 0 0.2rem; }
+/* Lista rotulada (chave/valor), não mais um <pre> de JSON cru — ver
+   DetalheHistorico em AdminFichaAssinante.tsx (bug corrigido 14/08/2026). */
 .admin-ficha__historico-detalhe {
-  margin: 0.3rem 0 0;
-  padding: 0.5rem 0.65rem;
-  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+  margin: 0.4rem 0 0;
+  padding: 0.55rem 0.7rem;
+  color: var(--texto);
   background: var(--superficie-suave, #f4f7f8);
-  border-radius: 6px;
-  font-family: var(--fonte-dados);
-  font-size: 0.74rem;
-  white-space: pre-wrap;
-  word-break: break-word;
+  border-radius: 8px;
+  font-size: 0.78rem;
 }
+.admin-ficha__historico-detalhe-linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  overflow-wrap: anywhere;
+}
+.admin-ficha__historico-detalhe-linha dt {
+  color: var(--texto-secundario);
+  font-family: var(--fonte-dados);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.admin-ficha__historico-detalhe-linha dt::after { content: ":"; }
+.admin-ficha__historico-detalhe-linha dd { margin: 0; }
 
 /* Visualizador de documento — imagem via <img src="blob:...">, PDF via
    <iframe src="blob:...">, nunca srcDoc/innerHTML (política de
@@ -290,6 +327,7 @@
   flex-direction: column;
   width: min(96vw, 980px);
   height: min(90vh, 780px);
+  color: var(--texto);
   background: var(--white);
   border-radius: var(--r);
   box-shadow: var(--sombra-lg);
