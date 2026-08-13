@@ -38,6 +38,7 @@ import "./styles/clinical-brand-final.css";
 import "./styles/clinical-overlay-safety.css";
 import "./styles/clinical-command-center-compat.css";
 import "./styles/clinical-canonical-fidelity.css";
+import "./styles/clinical-home-board-fidelity.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
