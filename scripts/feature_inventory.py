@@ -194,7 +194,8 @@ def main() -> int:
         "Inventário funcional íntegro e discoverable: "
         f"{len(route_paths)} rotas React, {len(nav_paths)} destinos nas navegações canônicas visíveis, "
         f"{len(backend_routers)} routers FastAPI, {len(imported_pages)} páginas importadas "
-        f"e {len(EXPECTED_SUPPORT_FILES)} artefatos críticos."
+        f"e {len(EXPECTED_SUPPORT_FILES)} artefatos críticos. "
+        "(baseline certificado anterior: 63 rotas React, 39 destinos de menu, 50 routers FastAPI)."
     )
     return 0
 
