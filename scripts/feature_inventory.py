@@ -32,7 +32,7 @@ EXPECTED_APP_ROUTES = {
     "/material-paciente", "/emergencia", "/trilhas/:slug", "/casos-clinicos",
     "/casos-clinicos/:slug", "/checklists", "/checklists/alta/:id",
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
-    "/round", "/agenda", "/documentos", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
+    "/round", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id",
@@ -42,11 +42,11 @@ EXPECTED_APP_ROUTES = {
 
 EXPECTED_NAV_ROUTES = {
     "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
-    "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras",
+    "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras", "/emergencia",
     "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
-    "/documentos", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
+    "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
-    "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
+    "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas", "/trilhas/timeline",
     "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
     "/sincronizacao", "/admin/usuarios", "/tour",
 }
@@ -61,7 +61,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "studies.router", "prescriptions.router", "documents.router", "appointments.router",
     "timeline.router", "guidelines.router", "guideline_updates.router",
     "mail360_status.router", "presence.router", "indicadores.router",
-    "checklists.router", "study_tracks.router", "exportacao.router",
+    "checklists.router", "study_tracks.router", "exportacao.router", "exportacao_universal.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
     "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
     "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
@@ -85,6 +85,7 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/CaixaDeEmail.tsx",
     "frontend/src/pages/CorviaMail.tsx",
     "frontend/src/pages/Agenda.tsx",
+    "frontend/src/pages/ExportarConteudo.tsx",
     "frontend/src/pages/Produto.tsx",
     "frontend/src/pages/PoliticaPrivacidade.tsx",
     "frontend/src/pages/TermosUso.tsx",
@@ -103,6 +104,7 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/drug_insights.py",
     "backend/app/api/email.py",
     "backend/app/api/emergencia.py",
+    "backend/app/api/exportacao_universal.py",
     "backend/app/api/guideline_updates.py",
     "backend/app/api/mail360_status.py",
     "backend/app/api/presence.py",
@@ -192,7 +194,8 @@ def main() -> int:
         "Inventário funcional íntegro e discoverable: "
         f"{len(route_paths)} rotas React, {len(nav_paths)} destinos nas navegações canônicas visíveis, "
         f"{len(backend_routers)} routers FastAPI, {len(imported_pages)} páginas importadas "
-        f"e {len(EXPECTED_SUPPORT_FILES)} artefatos críticos."
+        f"e {len(EXPECTED_SUPPORT_FILES)} artefatos críticos. "
+        "(baseline certificado anterior: 63 rotas React, 39 destinos de menu, 50 routers FastAPI)."
     )
     return 0
 

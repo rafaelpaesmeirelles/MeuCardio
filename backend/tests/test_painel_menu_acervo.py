@@ -110,9 +110,8 @@ def test_ordem_do_menu_alerta_e_deploy():
     emergencia_css = (root / "frontend/src/styles/emergencia.css").read_text(encoding="utf-8")
     deploy = (root / "deploy.sh").read_text(encoding="utf-8")
 
-    # A ordem do Clinical OS é deliberada: decisão -> prática -> conhecimento
-    # -> comunicação -> gestão. Admin entra dentro de gestão e nunca toma o
-    # lugar da navegação clínica do assinante.
+    # A ordem do Clinical OS legado continua protegida como fallback; a
+    # navegação canônica visível é certificada separadamente no inventário.
     assert shell.index('id: "decisao"') < shell.index('id: "pratica"')
     assert shell.index('id: "pratica"') < shell.index('id: "conhecimento"')
     assert shell.index('id: "conhecimento"') < shell.index('id: "comunicacao"')
@@ -122,7 +121,9 @@ def test_ordem_do_menu_alerta_e_deploy():
     assert '{ to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico"' in shell
 
     assert "Acervo de produção abaixo do inventário certificado" not in painel
-    assert 'className="cos-emergency"' in shell
+    # O botão publicado usa hoje o seletor específico `cos-emergency-fab`;
+    # o teste anterior ainda exigia a classe removida `cos-emergency`.
+    assert 'className="cos-emergency-fab"' in shell
     assert ".cos-emergency" in clinical_css
     assert ".emerg-atalho {" not in clinical_css
     assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia_css)) == 1

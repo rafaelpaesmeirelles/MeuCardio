@@ -23,7 +23,9 @@ def test_painel_usa_catalogo_canonico_em_vez_de_somar_temas():
     assert 'api.get<Catalogo>("/library/catalog")' in fonte
     assert 'catalogo?.published_total ?? catalogo?.total ?? "—"' in fonte
     assert "temas?.reduce" not in fonte
-    assert "conteúdos no catálogo" in fonte
+    # O copy da prancha canônica mudou, mas a métrica continua vindo do
+    # catálogo transversal único — este é o contrato que importa.
+    assert "conteúdos clínicos disponíveis" in fonte
 
 
 def test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca():

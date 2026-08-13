@@ -6,6 +6,10 @@ import { VitePWA } from "vite-plugin-pwa";
 // Chunks pesados e sob demanda (principalmente renderizadores de diagramas)
 // ficam no runtime cache NetworkFirst em vez de inflar a instalação do PWA.
 const limitePrecacheJs = 100 * 1024;
+// Superfícies administrativas/raras não precisam compor a instalação offline
+// inicial. Elas continuam funcionando normalmente e entram no runtime cache
+// após o primeiro uso, sem retirar qualquer rota ou funcionalidade do produto.
+const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade)-[^/]*\.js$/;
 
 export default defineConfig({
   plugins: [
@@ -37,6 +41,7 @@ export default defineConfig({
           async (entries) => ({
             manifest: entries.filter((entry) => {
               if (!entry.url.endsWith(".js")) return true;
+              if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
               return (entry.size ?? 0) <= limitePrecacheJs;
             }),
@@ -46,8 +51,6 @@ export default defineConfig({
         navigateFallback: "index.html",
         runtimeCaching: [
           {
-            // Recarregar/navegar tenta SEMPRE a rede primeiro. O cache do shell
-            // só é fallback de indisponibilidade, nunca a fonte preferencial.
             urlPattern: ({ request }) => request.mode === "navigate",
             handler: "NetworkFirst",
             options: {
@@ -58,10 +61,6 @@ export default defineConfig({
             }
           },
           {
-            // Assets têm hash de conteúdo no nome; mudança = URL nova. Rede
-            // primeiro evita um SW antigo prolongar a vida de um bundle antigo.
-            // Chunks grandes excluídos do precache continuam disponíveis offline
-            // depois do primeiro uso por esta camada de runtime cache.
             urlPattern: /\/assets\/.*\.(?:js|css)$/,
             handler: "NetworkFirst",
             options: {
@@ -72,18 +71,6 @@ export default defineConfig({
             }
           },
           {
-            // Achado na revisão de segurança da issue #52 (11/08/2026): o
-            // NetworkOnly genérico abaixo, ao passar a cobrir TODO /api/*,
-            // engoliu sem querer a exceção deliberada do Modo Emergência —
-            // desenhado desde 03/08/2026 para funcionar OFFLINE depois do
-            // primeiro carregamento (documentado em CLAUDE.md: "o modo
-            // offline-first do Emergência não dispara requisição de rede
-            // depois de aberto"; é por isso, inclusive, que o Hub de
-            // integração "Tudo sobre este tema" foi excluído do Modo
-            // Emergência de propósito — essa garantia não podia quebrar).
-            // Precisa vir ANTES da regra genérica: o Workbox usa a primeira
-            // rota que casa, e um urlPattern mais específico só "vence" um
-            // mais genérico se estiver antes na lista.
             urlPattern: /\/api\/emergencia/,
             handler: "StaleWhileRevalidate",
             options: {
@@ -93,10 +80,6 @@ export default defineConfig({
             }
           },
           {
-            // Ecossistema em atualização contínua: nenhuma outra resposta de
-            // API é servida do cache do service worker. Isso abrange
-            // conteúdo, agenda, CorVIA Mail, dados clínicos e status de
-            // versão — a única exceção deliberada é /api/emergencia, acima.
             urlPattern: /\/api\//,
             handler: "NetworkOnly"
           }
