@@ -11,6 +11,7 @@ from app.core.security import current_user
 from app.models.cmed import CmedApresentacao, CmedVersao
 from app.models.drug import Drug
 from app.services.cmed_precos import preco_pmc
+from app.services.pricing.kairos_provider import api_snapshot_for
 
 router = APIRouter(prefix="/api/drug-insights", tags=["medicamentos"])
 
@@ -107,6 +108,7 @@ def _payload(db: Session, drug: Drug, uf: str | None, versao: CmedVersao | None)
         "references": drug.references or [],
         "review_status": drug.review_status,
         "cmed": _cmed(db, drug, uf, versao),
+        "kairos": api_snapshot_for(drug),
     }
 
 
@@ -147,5 +149,6 @@ def compare(
             "A redução de pressão arterial provém de fontes e populações que podem ser heterogêneas; não representa resposta individual.",
             "Meia-vida e duração de ação são grandezas diferentes e não devem ser interpretadas como equivalentes.",
             "Preço CMED é teto regulatório de referência, não preço final da farmácia.",
+            "K@iros é uma fonte licenciada complementar de inteligência de mercado; não substitui o teto regulatório oficial da CMED/ANVISA.",
         ],
     }
