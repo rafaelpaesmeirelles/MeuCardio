@@ -1,8 +1,9 @@
 """Sincronização manual robusta de uma conta externa.
 
-Separada do router histórico da Agenda para poder evoluir sem duplicar a
-semântica antiga de ``sync-all`` (que sempre tentava calendário primeiro e,
-por isso, não servia para Yahoo mail-only).
+O endpoint canônico é ``sync-live``. Durante a estabilização mantemos também
+``sync-all`` como alias compatível para superfícies antigas da Agenda. O router
+deste módulo é registrado antes do router legado, de modo que ambos os botões
+usem a mesma implementação capability-aware (inclusive Yahoo mail-only).
 """
 from __future__ import annotations
 
@@ -21,6 +22,7 @@ router = APIRouter(prefix="/api/agenda", tags=["sincronizacao-contas"])
 
 
 @router.post("/integrations/{integration_id}/sync-live")
+@router.post("/integrations/{integration_id}/sync-all", include_in_schema=False)
 def sync_live(
     integration_id: int,
     full: bool = False,
