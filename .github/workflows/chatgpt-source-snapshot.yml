@@ -42,6 +42,14 @@ jobs:
             patch --dry-run -p1 --batch < /tmp/rc72.patch
             patch -p1 --batch < /tmp/rc72.patch
 
+            # Normalize the single trailing-whitespace issue found by the
+            # release gate without changing any test semantics.
+            python3 - <<'PY'
+          from pathlib import Path
+          p = Path("backend/tests/test_adversarial_review_issue52.py")
+          p.write_text(p.read_text().rstrip() + "\n")
+          PY
+
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
