@@ -6,6 +6,7 @@ experiência reportada: endereço -> local/rota, recorrência nativa e envio de
 e-mail somente após pedido explícito.
 """
 from datetime import date
+from pathlib import Path
 
 from app.models.agenda import AvailabilityRule, CalendarCommitmentSeries, CalendarLocation
 from app.models.audit import AuditLog
@@ -15,6 +16,10 @@ from app.services.ia.assistant_tools import ASSISTANT_TOOLS_SCHEMA, executar_too
 
 def _nomes_tools() -> set[str]:
     return {item["name"] for item in ASSISTANT_TOOLS_SCHEMA}
+
+
+def _tool(nome: str) -> dict:
+    return next(item for item in ASSISTANT_TOOLS_SCHEMA if item["name"] == nome)
 
 
 def _geo_falso(endereco: str) -> dict:
@@ -40,6 +45,24 @@ class TestCatalogoAssistentePessoalV2:
             "mail_enviar_mensagem",
             "mail_responder_mensagem",
         }.issubset(nomes)
+
+    def test_schema_instrui_modelo_a_nao_pedir_location_id_ou_numero_de_semanas(self):
+        resolver = _tool("agenda_resolver_local")["description"]
+        rotina = _tool("agenda_criar_rotina_semanal")["description"]
+        recorrente = _tool("agenda_criar_compromisso_recorrente")["description"]
+
+        assert "NÃO peça latitude/longitude nem location_id" in resolver
+        assert "NÃO pergunte por quantas semanas" in rotina
+        assert "sem término" in rotina
+        assert "NÃO pergunte automaticamente quantas semanas" in recorrente
+
+    def test_compose_de_producao_habilita_tools_mas_mantem_consentimento_individual(self):
+        compose = (Path(__file__).resolve().parents[2] / "docker-compose.prod.yml").read_text(encoding="utf-8")
+        assert 'AI_ASSISTANT_TOOLS_ENABLED: "true"' in compose
+        # A segunda trava continua obrigatória no executor/RAG; habilitar a
+        # instalação não equivale a conceder consentimento ao usuário.
+        source = (Path(__file__).resolve().parents[1] / "app/services/rag.py").read_text(encoding="utf-8")
+        assert "ia_ferramentas_consent_em" in source
 
 
 class TestResolucaoAutomaticaDeLocal:
@@ -178,7 +201,6 @@ class TestCorviaMailComConfirmacaoExplicita:
             AuditLog.action == "ia_tool_mail_enviar_mensagem",
         ).one()
         assert log.detail["sucesso"] is False
-        # PII/conteúdo da mensagem não entra no AuditLog central.
         assert "para" not in log.detail["argumentos"]
         assert "assunto" not in log.detail["argumentos"]
         assert "corpo" not in log.detail["argumentos"]
