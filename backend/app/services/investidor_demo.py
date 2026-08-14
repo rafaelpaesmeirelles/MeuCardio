@@ -89,7 +89,6 @@ class InvestidorReadOnlyMiddleware:
 
 
 _listeners_registrados = False
-_patches_aplicados = False
 
 
 def _preparar_investidor(target: User) -> None:
@@ -156,40 +155,6 @@ def _registrar_listeners() -> None:
     _listeners_registrados = True
 
 
-def _patch_auth_runtime() -> None:
-    """Substitui apenas os gates antigos sem duplicar endpoints de auth."""
-    global _patches_aplicados
-    if _patches_aplicados:
-        return
-
-    from app.api import auth
-
-    kyc_original = auth._kyc_required
-    perfil_original = auth._perfil_completo
-    payload_original = auth.profile_payload
-
-    def kyc_required_investidor(db, user):
-        if bool(getattr(user, "investidor", False)):
-            return False
-        return kyc_original(db, user)
-
-    def perfil_completo_investidor(user):
-        if bool(getattr(user, "investidor", False)):
-            return True
-        return perfil_original(user)
-
-    def profile_payload_investidor(user):
-        payload = payload_original(user)
-        if bool(getattr(user, "investidor", False)):
-            payload["profile_completion_required"] = False
-        return payload
-
-    auth._kyc_required = kyc_required_investidor
-    auth._perfil_completo = perfil_completo_investidor
-    auth.profile_payload = profile_payload_investidor
-    _patches_aplicados = True
-
-
 def configurar_modo_investidor() -> None:
+    """Registra invariantes de modelo; gates de auth vivem em app/api/auth.py."""
     _registrar_listeners()
-    _patch_auth_runtime()

@@ -12,7 +12,6 @@ from unittest.mock import patch
 
 from app.models.agenda import CalendarIntegration
 from app.models.email_account import EmailAccount
-from app.models.kyc import KycVerification
 from app.models.subscription import PLANO_BASICO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
 from app.core.security import create_access_token
 
@@ -32,100 +31,78 @@ def _marcar(db, user, **flags):
     return user
 
 
+def _converter_investidor(db, user) -> str:
+    """Converte e emite uma sessão NOVA.
+
+    A conversão redefine a senha para CorVIAOS e, por desenho de segurança,
+    revoga tokens app emitidos antes da troca de senha.
+    """
+    _marcar(db, user, investidor=True)
+    return create_access_token(user.email, scope="app")
+
+
 def _mailbox_token(email_address: str) -> str:
     return create_access_token(email_address, scope="email")
 
 
 # ---------------------------------------------------------------------------
-# ACHADO PRINCIPAL: combo convidado=True + investidor=True vaza metadado de
-# e-mail REAL via GET /email/resumo, porque essa rota nunca checa
-# `investidor` — só checa `assinatura_email_ativa()`, que retorna True para
-# convidado sem considerar se o mesmo usuário também está marcado investidor.
+# Conversão CONVIDADO -> INVESTIDOR: a matriz definitiva é mutuamente exclusiva.
+# A conversão remove o grant de convidado, revoga a sessão app anterior e
+# preserva o bloqueio de qualquer acesso a caixa real.
 # ---------------------------------------------------------------------------
 
 
-class TestComboConvidadoInvestidorVazaResumoReal:
-    def test_resumo_da_caixa_nao_vaza_mensagem_real_quando_usuario_e_convidado_e_investidor(
+class TestConversaoConvidadoParaInvestidor:
+    def test_conversao_desmarca_convidado_revoga_sessao_e_nao_vaza_resumo_real(
         self, client, db, criar_usuario, monkeypatch_mail360,
     ):
-        """CORRIGIDO após esta revisão — era um vazamento real, comprovado
-        antes da correção e revertido aqui para provar a correção.
-
-        Sequência, plausível de um admin real cometer sem saber das
-        consequências (nada no backend impede as duas flags juntas):
-
-        1. Admin marca usuário como CONVIDADO — ganha CorvIA Mail real,
-           provisiona caixa nativa de verdade.
-        2. Admin (ex.: revisão de acesso, decide também dar acesso de
-           avaliação de investidor, ou erro de operação) marca o MESMO
-           usuário como INVESTIDOR também, sem desmarcar convidado.
-        3. `GET /email/resumo` (usado pelo cartão "Hoje" do Painel) é
-           chamado com a sessão principal (current_user).
-
-        Antes da correção, `resumo_da_caixa` nunca checava `investidor` —
-        só `assinatura_email_ativa()`, que concede acesso via convidado sem
-        excluir o caso de o mesmo usuário também ser investidor — e a rota
-        consultava o Mail360 de verdade, vazando remetente/assunto/horário
-        reais. Corrigido com uma guarda de `investidor` no topo da função
-        (app/api/email.py::resumo_da_caixa), mesma regra que
-        `current_email_account` e `GET /email/conta` já aplicavam."""
-        user, token = criar_usuario()
+        user, token_antigo = criar_usuario()
         _marcar(db, user, convidado=True)
 
         ativado = client.post(
             "/api/email/conta",
             json={"senha": "senha-longa-123", "aceite_lgpd": True, "local_part": "combo.vazamento"},
-            headers=_headers(token),
+            headers=_headers(token_antigo),
         )
         assert ativado.status_code == 201, ativado.text
 
-        # Agora o admin também concede investidor, sem desmarcar convidado —
-        # nada no backend impede essa combinação.
-        _marcar(db, user, investidor=True)
-        assert user.convidado is True
+        token_investidor = _converter_investidor(db, user)
+        assert user.convidado is False
         assert user.investidor is True
 
-        resp = client.get("/api/email/resumo", headers=_headers(token))
+        # A troca para a senha fixa CorVIAOS revoga a sessão app anterior.
+        antigo = client.get("/api/auth/me", headers=_headers(token_antigo))
+        assert antigo.status_code == 401
+
+        resp = client.get("/api/email/resumo", headers=_headers(token_investidor))
         assert resp.status_code == 200
-        corpo = resp.json()
+        assert resp.json() == {"disponivel": False, "email_address": None, "pendentes": []}
 
-        # investidor vence o combo — nunca vê dado real, mesmo sendo
-        # convidado também. Mesmo padrão de GET /email/conta.
-        assert corpo == {"disponivel": False, "email_address": None, "pendentes": []}
-
-    def test_minha_conta_ainda_prioriza_investidor_no_combo_mas_resumo_diverge_dela(
+    def test_email_conta_prioriza_demo_depois_da_conversao(
         self, client, db, criar_usuario,
     ):
-        """Documenta a inconsistência interna: `GET /email/conta` (mesma
-        issue, mesmo arquivo) checa `investidor` PRIMEIRO e devolve modo
-        demonstração mesmo no combo — só `GET /email/resumo` diverge dessa
-        regra. Ou seja, não é um design consciente de "convidado sempre
-        vence no combo": é uma rota que ficou fora da varredura."""
-        user, token = criar_usuario()
-        _marcar(db, user, convidado=True, investidor=True)
+        user, _ = criar_usuario()
+        _marcar(db, user, convidado=True)
+        token = _converter_investidor(db, user)
 
         conta = client.get("/api/email/conta", headers=_headers(token))
         assert conta.status_code == 200
         assert conta.json()["modo_demonstracao"] is True
         assert conta.json()["email_address"] == "investidor.demo@corvia.med.br"
+        assert user.convidado is False
 
-    def test_current_email_account_continua_bloqueando_operacoes_reais_no_combo(
+    def test_mailbox_real_preexistente_fica_bloqueada_apos_conversao(
         self, client, db, criar_usuario,
     ):
-        """Contraprova, para não superestimar o achado: as rotas que passam
-        por current_email_account (enviar, responder, ler mensagem, anexos,
-        contas externas) continuam corretamente bloqueadas no combo, porque
-        essa dependency checa `investidor` sem condicionar a `convidado`.
-        O vazamento é estritamente limitado a GET /email/resumo (metadado:
-        remetente/assunto/horário de até 3 mensagens, nunca corpo/anexo)."""
-        user, token = criar_usuario()
+        user, _ = criar_usuario()
         conta = EmailAccount(
             user_id=user.id, email_address="combo-real@corvia.med.br",
             mail360_account_key="account-key-combo", password_hash="hash", status="ativa",
         )
         db.add(conta)
         db.commit()
-        _marcar(db, user, convidado=True, investidor=True)
+        _marcar(db, user, convidado=True)
+        _converter_investidor(db, user)
 
         mailbox_token = _mailbox_token(conta.email_address)
         resp = client.get("/api/email/pastas", headers=_headers(mailbox_token))
@@ -232,20 +209,23 @@ class TestPaymentBypass:
         assert sub_convidado.status == "ativo"
         assert sub_convidado.stripe_subscription_id is None
 
-        investidor, token_investidor = criar_usuario(email="poluicao.investidor@teste.local")
-        _marcar(db, investidor, investidor=True)
+        investidor, _ = criar_usuario(email="poluicao.investidor@teste.local")
+        token_investidor = _converter_investidor(db, investidor)
         with patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao, \
              patch("app.api.billing.stripe.Customer.create") as criar_cliente:
-            client.post("/api/billing/checkout?plano=completo", headers=_headers(token_investidor))
+            resp_investidor = client.post(
+                "/api/billing/checkout?plano=completo",
+                headers=_headers(token_investidor),
+            )
             criar_sessao.assert_not_called()
             criar_cliente.assert_not_called()
+        assert resp_investidor.status_code == 403
         sub_investidor = (
             db.query(Subscription)
             .filter(Subscription.user_id == investidor.id, Subscription.kind == TIPO_MEUCARDIO)
             .first()
         )
-        assert sub_investidor is not None
-        assert sub_investidor.status != "ativo"
+        assert sub_investidor is None
 
     def test_trocar_plano_recusa_convidado_sem_falar_com_stripe(self, client, db, criar_usuario):
         alvo, token = criar_usuario()
@@ -277,13 +257,13 @@ class TestPaymentBypass:
         produto que a regra de negócio diz que essa conta nunca usa.
         Corrigido com o mesmo padrão do `/billing/checkout`: bloqueio
         explícito de investidor ANTES de qualquer chamada ao Stripe."""
-        alvo, token = criar_usuario()
-        _marcar(db, alvo, investidor=True)
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
         with patch("app.api.billing.stripe.Customer.create") as criar_cliente, \
              patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
             resp = client.post("/api/billing/checkout-email", headers=_headers(token))
 
-        assert resp.status_code == 409, resp.text
+        assert resp.status_code == 403, resp.text
         criar_cliente.assert_not_called()
         criar_sessao.assert_not_called()
 
@@ -316,8 +296,8 @@ class TestIDOR:
         investidor nunca resolve para outro usuário mesmo tentando token
         adulterado/reaproveitado."""
         outro, _ = criar_usuario(email="outro.idor@teste.local")
-        investidor, token_investidor = criar_usuario(email="investidor.idor@teste.local")
-        _marcar(db, investidor, investidor=True)
+        investidor, _ = criar_usuario(email="investidor.idor@teste.local")
+        token_investidor = _converter_investidor(db, investidor)
 
         resp = client.get("/api/auth/me", headers=_headers(token_investidor))
         assert resp.status_code == 200
@@ -340,17 +320,17 @@ class TestIDOR:
         db.commit()
         db.refresh(integracao)
 
-        investidor, token_investidor = criar_usuario(email="investidor.integracao@teste.local")
-        _marcar(db, investidor, investidor=True)
+        investidor, _ = criar_usuario(email="investidor.integracao@teste.local")
+        token_investidor = _converter_investidor(db, investidor)
 
         resp = client.patch(
             f"/api/agenda/integrations/{integracao.id}/preferencias",
             json={"sync_mail": True},
             headers=_headers(token_investidor),
         )
-        # _integration() filtra por owner_id == user.id — integração de
-        # outro dono nunca aparece, 404 e não 403 (não vaza existência).
-        assert resp.status_code == 404
+        # O modo Investidor é barrado globalmente ANTES de qualquer mutação
+        # ou resolução do recurso. O mesmo 403 é devolvido para qualquer id.
+        assert resp.status_code == 403
         db.refresh(integracao)
         assert integracao.sync_mail is False
 
@@ -415,8 +395,8 @@ class TestAdminVsEntitlementConfusion:
     def test_investidor_nao_acessa_rotas_admin_mesmo_tendo_acesso_ao_produto(
         self, client, db, criar_usuario,
     ):
-        investidor, token = criar_usuario(email="investidor.naoadmin@teste.local")
-        _marcar(db, investidor, investidor=True)
+        investidor, _ = criar_usuario(email="investidor.naoadmin@teste.local")
+        token = _converter_investidor(db, investidor)
         resp = client.get("/api/admin/users", headers=_headers(token))
         assert resp.status_code == 403
 
@@ -527,32 +507,19 @@ class TestSoftGateDoTour:
     def test_onboarding_pendente_e_so_sinal_de_frontend_api_nao_bloqueia(
         self, client, db, criar_usuario,
     ):
-        """Confirma que onboarding_pendente=True nunca bloqueia nenhuma
-        rota de API — para investidor e para usuário comum igualmente.
-        Não é fraqueza introduzida por esta issue: é o mesmo mecanismo
-        (redirecionamento só no frontend) que qualquer usuário já tinha.
+        """Investidor é isento de perfil/KYC e vai diretamente ao tour.
 
-        Setup do investidor atualizado em 13/08/2026: "investidor isento de
-        KYC deixa de existir... passa a ter KYC de identidade pessoal
-        simplificado e automático" (pedido do Rafael) — um investidor
-        RECÉM marcado, sem KycVerification nenhuma, tem
-        `onboarding_pendente=False` (não True), porque `_onboarding_pendente`
-        consulta `_kyc_required` primeiro, e investidor agora precisa do
-        mesmo KYC resolvido que convidado já precisava (ver
-        `test_entitlement_convidado_investidor.py::TestOnboardingConvidadoInvestidor`,
-        que cobre exatamente essa transição). Para exercitar de fato o
-        cenário "onboarding pendente" aqui, o KYC do investidor precisa
-        estar resolvido primeiro — só então `onboarding_pendente` vira True
-        e a asserção de segurança real deste teste (API nunca bloqueia por
-        causa disso) continua sendo exercitada como sempre foi."""
-        investidor, token_investidor = criar_usuario(email="tour.investidor@teste.local")
-        _marcar(db, investidor, investidor=True)
-        db.add(KycVerification(
-            owner_id=investidor.id, doc_profissional_frente=None, doc_profissional_verso=None,
-            selfie="dummy", status="aprovado",
-        ))
-        db.commit()
-        assert client.get("/api/auth/me", headers=_headers(token_investidor)).json()["onboarding_pendente"] is True
-        # Mesmo com onboarding pendente, a rota de produto funciona normalmente.
+        O tour continua sendo um soft-gate de UX: enquanto
+        onboarding_pendente=True, GETs de produto permanecem disponíveis.
+        """
+        investidor, _ = criar_usuario(email="tour.investidor@teste.local")
+        token_investidor = _converter_investidor(db, investidor)
+
+        me = client.get("/api/auth/me", headers=_headers(token_investidor))
+        assert me.status_code == 200
+        assert me.json()["kyc_required"] is False
+        assert me.json()["profile_completion_required"] is False
+        assert me.json()["onboarding_pendente"] is True
+
         resp = client.get(ROTA_GATED, headers=_headers(token_investidor))
         assert resp.status_code == 200

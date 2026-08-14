@@ -47,15 +47,24 @@ def test_link_publico_preserva_modelo_da_receita_controle_especial():
     assert "cid=doc.cid" in source
 
 
-def test_admin_envia_todos_os_campos_profissionais_ao_backend():
+def test_admin_envia_campos_profissionais_para_contas_reais_e_os_omite_no_investidor():
     source = (ROOT.parent / "frontend/src/pages/Admin.tsx").read_text(encoding="utf-8")
-    for field in (
+    assert 'const investidor = novo.tipo_acesso === "investidor"' in source
+
+    campos_texto = (
         "profession", "council_name", "council_number", "council_state",
         "specialty", "professional_title", "workplace_name",
         "workplace_department", "workplace_role", "workplace_notes",
-        "include_workplace_on_documents", "profile_completion_required",
-    ):
-        assert f"{field}: novo.{field}" in source, field
+    )
+    for field in campos_texto:
+        assert f"{field}: investidor ? null : " in source, field
+        assert f"novo.{field}" in source, field
+
+    for field in ("include_workplace_on_documents", "profile_completion_required"):
+        assert f"{field}: investidor ? false : novo.{field}" in source, field
+
+    assert 'password: investidor ? "CorVIAOS" : novo.password' in source
+    assert 'role: investidor ? "leitor" : novo.role' in source
 
 
 def test_rce_respeita_opt_in_do_local_de_trabalho():

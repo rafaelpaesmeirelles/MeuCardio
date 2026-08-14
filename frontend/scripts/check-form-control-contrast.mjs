@@ -5,9 +5,11 @@ import process from "node:process";
 const raiz = process.cwd();
 const cssPath = path.join(raiz, "src/styles/clinical-form-control-contrast.css");
 const assistantCssPath = path.join(raiz, "src/styles/clinical-assistant-command.css");
+const assistantPagePath = path.join(raiz, "src/pages/Assistente.tsx");
 const mainPath = path.join(raiz, "src/main.tsx");
 const css = fs.readFileSync(cssPath, "utf8");
 const assistantCss = fs.readFileSync(assistantCssPath, "utf8");
+const assistantPage = fs.readFileSync(assistantPagePath, "utf8");
 const main = fs.readFileSync(mainPath, "utf8");
 
 function exigir(condicao, mensagem) {
@@ -23,6 +25,7 @@ const ultimoImportCss = [...main.matchAll(/^import "\.\/styles\/[^\"]+\.css";$/g
 
 exigir(fs.existsSync(cssPath), "clinical-form-control-contrast.css precisa existir.");
 exigir(fs.existsSync(assistantCssPath), "clinical-assistant-command.css precisa existir.");
+exigir(fs.existsSync(assistantPagePath), "Assistente.tsx precisa existir.");
 exigir(indiceContrato >= 0, "main.tsx precisa importar o contrato global de contraste.");
 exigir(indiceContrato === ultimoImportCss, "o contrato de contraste precisa ser a última folha CSS importada.");
 
@@ -59,6 +62,17 @@ exigir(blocoEnvio.includes("background:#071a25"), "composer do Assistente precis
 exigir(blocoEnvio.includes("backdrop-filter:none"), "composer do Assistente não pode voltar ao efeito translúcido de vidro.");
 exigir(blocoTextarea.includes("background:#0b2230!important"), "textarea do Assistente precisa manter superfície escura legível.");
 exigir(blocoTextarea.includes("color:#eef9fa!important"), "textarea do Assistente precisa manter texto claro legível.");
+
+// Clínica e Pessoal usam o MESMO workspace/composer. Se alguém voltar a
+// renderizar um composer específico por modo, uma das duas variantes pode
+// regredir visualmente sem o checker perceber.
+const ocorrenciasComposer = assistantPage.match(/className="ia__envio"/g) ?? [];
+exigir(ocorrenciasComposer.length === 1,
+  "Assistente Clínica e Pessoal devem compartilhar um único composer canônico.");
+exigir(assistantPage.includes('modo === "clinica" ? "Clínica" : "Pessoal"'),
+  "Assistente.tsx precisa continuar atendendo os dois modos no mesmo workspace.");
+exigir(assistantPage.includes('placeholder={modo === "clinica"'),
+  "o composer compartilhado precisa continuar contextualizando Clínica e Pessoal.");
 
 if (!process.exitCode) {
   console.log("OK: contrato global de contraste e composer canônico do Assistente estão protegidos.");

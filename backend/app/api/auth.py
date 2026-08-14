@@ -56,28 +56,17 @@ _cpf_mascarado = cpf_mascarado
 
 
 def _kyc_required(db: Session, user: User) -> bool:
-    """Gate de KYC obrigatório (Trabalho 12, 06/08/2026) — só se aplica a
-    quem tem acesso ao produto (assinatura paga ou convidado; ver
-    `app/services/entitlement.py::tem_acesso_ao_produto`, a mesma decisão
-    usada por `assinante_ativo()`). Calculado toda vez, nunca persistido:
-    diferente de `profile_completion_required`, o KYC pode mudar por ação
-    de OUTRA pessoa (o Rafael aprovando pela fila do admin), então um valor
-    guardado ficaria velho até o próximo `PATCH /me` do próprio médico.
+    """Gate de KYC obrigatório.
 
-    Investidor JÁ FOI isento de KYC por completo (issue #52) — decisão
-    revertida em 13/08/2026, pedido do Rafael: "investidor isento de KYC
-    deixa de existir. Ele passa a ter KYC de identidade pessoal simplificado
-    e automático." Investidor não é um médico credenciado, mas ainda
-    precisa provar quem é (documento pessoal + selfie ao vivo) — a
-    diferença para convidado/assinante normal está em QUAIS documentos são
-    exigidos (`app/services/kyc/verificacao.py::submeter`), não em ser
-    isento do KYC inteiro. A aprovação, para ambos convidado e investidor,
-    é automática assim que a submissão estiver tecnicamente completa —
-    nunca depende de revisão do admin (ver `submeter()`)."""
+    Investidor é uma conta global de demonstração somente leitura: não
+    informa documentos, selfie, CPF, nascimento ou credenciais profissionais
+    e portanto nunca entra no fluxo de KYC. Convidado e assinante normal
+    mantêm o gate real, calculado a cada requisição.
+    """
     from app.services.entitlement import tem_acesso_ao_produto
     from app.services.kyc import verificacao as kyc_verificacao
 
-    if user.role == "admin":
+    if user.role == "admin" or user.investidor:
         return False
     if not tem_acesso_ao_produto(db, user):
         return False
@@ -85,16 +74,12 @@ def _kyc_required(db: Session, user: User) -> bool:
 
 
 def _onboarding_pendente(db: Session, user: User) -> bool:
-    """Tour guiado do primeiro acesso (Trabalho 13, 06/08/2026; estendido
-    para convidado/investidor na issue #52) — só depois do KYC estar
-    resolvido, para as duas telas nunca disputarem o mesmo momento (o
-    App.tsx checa perfil → KYC → tour, nessa ordem, mas calcular já
-    considerando isso aqui evita depender só da ordem do frontend).
+    """Tour guiado do primeiro acesso.
 
-    Antes desta função consultar `tem_acesso_ao_produto`, um convidado sem
-    `Subscription` nunca via `onboarding_pendente=true` — o tour obrigatório
-    simplesmente nunca aparecia para ele. Corrigido usando a mesma decisão
-    central de `assinante_ativo()`/`_kyc_required()`."""
+    Convidado/assinante só chegam ao tour depois de resolver eventual KYC.
+    Investidor é isento de perfil/KYC, portanto nasce com tour pendente e
+    segue diretamente para ele após o login.
+    """
     if _kyc_required(db, user):
         return False
     if user.role == "admin":
@@ -142,6 +127,9 @@ def _perfil(db: Session, user: User) -> dict:
         "instagram_handle": user.instagram_handle,
         "instagram_photo_url": user.instagram_photo_url,
         **profile_payload(user),
+        # Investidor nunca abre gate de perfil, mesmo se a conta convertida
+        # carregar dados legados/parciais ou um valor antigo persistido.
+        "profile_completion_required": False if user.investidor else user.profile_completion_required,
         "boas_vindas_pendente": user.boas_vindas_pendente,
         "assinatura_metodo_preferido": user.assinatura_metodo_preferido,
         "kyc_required": _kyc_required(db, user),
@@ -305,35 +293,20 @@ def _perfil_profissional_completo(user: User) -> bool:
 
 
 def _dados_pessoais_completos(user: User) -> bool:
-    """Nome real + CPF + data de nascimento. Conta autocadastrada já chega
-    com os dois (`SolicitacaoAcesso`, mais abaixo) — só conta criada
-    diretamente pelo admin (`POST /api/admin/users`, que nunca colhe esses
-    dois campos) pode chegar aqui sem eles. Usado isoladamente só para
-    investidor (13/08/2026, pedido do Rafael: "investidor... deve completar
-    somente os dados pessoais necessários") — convidado e assinante normal
-    passam por `_perfil_completo`, que também exige o profissional."""
+    """Nome real + CPF + data de nascimento para contas que os exigem."""
     return bool(_nome_real(user) and (user.cpf or "").strip() and user.birth_date)
 
 
 def _perfil_completo(user: User) -> bool:
-    """Dispatcher por tipo de conta (13/08/2026, matriz convidado/investidor/
-    normal pedida pelo Rafael) — só libera o primeiro acesso quando o perfil
-    exigido daquele tipo específico está utilizável:
-    - investidor: só dados pessoais (nome, CPF, data de nascimento) — nunca
-      profissão/conselho/registro/UF/RQE/documento profissional;
-    - convidado: dados pessoais E profissionais — convidado criado
-      diretamente pelo admin não tem CPF/data de nascimento preenchidos
-      (o admin não colhe isso na criação), então o pessoal entra aqui como
-      exigência nova, além do profissional que já era exigido;
-    - assinante normal: EXATAMENTE a regra de sempre, só profissional
-      (`_perfil_profissional_completo`) — deliberadamente sem o pessoal
-      aqui, para não criar uma exigência nova para quem já tinha o fluxo
-      funcionando (quem se autocadastra já chega com CPF/data de nascimento
-      desde o cadastro; quem é criado pelo admin como "normal" nunca teve
-      essa exigência e não deve passar a ter, pedido explícito do Rafael de
-      não alterar o fluxo do assinante normal)."""
+    """Dispatcher do gate de perfil por tipo de conta.
+
+    - Investidor: sempre completo para fins de acesso; é demonstração sem
+      coleta de dados pessoais ou profissionais.
+    - Convidado: dados pessoais E profissionais.
+    - Assinante normal: preserva a regra profissional histórica.
+    """
     if user.investidor:
-        return _dados_pessoais_completos(user)
+        return True
     if user.convidado:
         return _dados_pessoais_completos(user) and _perfil_profissional_completo(user)
     return _perfil_profissional_completo(user)

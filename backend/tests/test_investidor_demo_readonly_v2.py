@@ -146,6 +146,44 @@ def test_converter_conta_existente_em_investidor_redefine_matriz(db):
     assert verify_password("SenhaAntiga123", user.password_hash) is False
 
 
+def test_converter_revoga_sessao_anterior_e_novo_login_corviaos_funciona(client, db):
+    user = User(
+        email="sessao-pre-conversao@teste.local",
+        full_name="Conta Antes da Conversão",
+        role="medico",
+        password_hash=hash_password("SenhaAntiga123"),
+        is_active=True,
+        investidor=False,
+    )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    token_antigo = create_access_token(user.email, scope="app")
+
+    assert client.get("/api/auth/me", headers=_headers(token_antigo)).status_code == 200
+
+    user.investidor = True
+    db.commit()
+    db.refresh(user)
+
+    # A redefinição para a senha fixa é uma mudança de credencial real:
+    # sessions_valid_after invalida tokens emitidos antes da conversão.
+    assert client.get("/api/auth/me", headers=_headers(token_antigo)).status_code == 401
+
+    login = client.post(
+        "/api/auth/login",
+        data={"username": user.email, "password": "CorVIAOS"},
+    )
+    assert login.status_code == 200, login.text
+    token_novo = login.json()["access_token"]
+
+    me = client.get("/api/auth/me", headers=_headers(token_novo))
+    assert me.status_code == 200
+    assert me.json()["investidor"] is True
+    assert me.json()["kyc_required"] is False
+    assert me.json()["onboarding_pendente"] is True
+
+
 def test_investidor_mantem_senha_fixa_mesmo_se_codigo_legado_tentar_trocar(db):
     user, _ = _investidor(db)
     hash_fixo = user.password_hash

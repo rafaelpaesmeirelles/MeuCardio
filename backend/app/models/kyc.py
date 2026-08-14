@@ -33,11 +33,10 @@ class KycVerification(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), unique=True, index=True)
 
-    # Opcional desde a migração f72r20260813 — investidor (`users.investidor`)
-    # não envia documento profissional, só documento pessoal + selfie ("KYC
-    # pessoal simplificado"). Convidado e assinante normal continuam
-    # exigidos a enviá-lo; a obrigatoriedade dinâmica por tipo de conta é
-    # aplicada em `app/services/kyc/verificacao.py::submeter()`.
+    # Campos de arquivo podem ser nulos porque Convidado admite dispensas KYC
+    # individuais configuradas pelo admin. A obrigatoriedade efetiva é
+    # validada no backend em `services/kyc/verificacao.py`; ausência de arquivo
+    # sem dispensa continua falhando fechado. Investidor não participa do KYC.
     doc_profissional_frente: Mapped[str | None] = mapped_column(String(120), nullable=True)
     doc_profissional_verso: Mapped[str | None] = mapped_column(String(120), nullable=True)
     # Documento pessoal: OU as duas fotos, OU o PDF do documento digital —
@@ -45,7 +44,7 @@ class KycVerification(Base):
     doc_pessoal_frente: Mapped[str | None] = mapped_column(String(120), nullable=True)
     doc_pessoal_verso: Mapped[str | None] = mapped_column(String(120), nullable=True)
     doc_pessoal_digital: Mapped[str | None] = mapped_column(String(120), nullable=True)
-    selfie: Mapped[str] = mapped_column(String(120))
+    selfie: Mapped[str | None] = mapped_column(String(120), nullable=True)
 
     # "aguardando_revisao" (padrão) | "liberado_conselho_ok" (checagem
     # automática confirmou registro ativo — hoje só existe para CRM) |

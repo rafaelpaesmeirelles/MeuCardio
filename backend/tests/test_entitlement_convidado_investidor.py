@@ -23,6 +23,7 @@ há documento publicado, o que basta para provar o gate.
 """
 from unittest.mock import patch
 
+from app.core.security import create_access_token
 from app.models.kyc import KycVerification
 from app.models.round import Patient
 from app.models.subscription import (
@@ -34,6 +35,14 @@ ROTA_GATED = "/api/library/themes"
 
 def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
+
+
+def _converter_investidor(db, user) -> str:
+    user.investidor = True
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return create_access_token(user.email, scope="app")
 
 
 def _subscription_do_usuario(db, user_id: int) -> Subscription | None:
@@ -180,17 +189,15 @@ class TestConvidado:
 
 class TestInvestidor:
     def test_investidor_ativo_tem_acesso(self, client, db, criar_usuario):
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
 
         resp = client.get(ROTA_GATED, headers=_headers(token))
         assert resp.status_code == 200
 
     def test_revogar_investidor_bloqueia_acesso(self, client, db, criar_usuario):
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
         assert client.get(ROTA_GATED, headers=_headers(token)).status_code == 200
 
         alvo.investidor = False
@@ -199,12 +206,11 @@ class TestInvestidor:
         resp = client.get(ROTA_GATED, headers=_headers(token))
         assert resp.status_code == 402
 
-    def test_checkout_investidor_nunca_ativa_subscription_e_retorna_investidor_true(
+    def test_checkout_investidor_e_bloqueado_sem_criar_subscription(
         self, client, db, criar_usuario
     ):
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
 
         with patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao, \
              patch("app.api.billing.stripe.Customer.create") as criar_cliente:
@@ -214,20 +220,8 @@ class TestInvestidor:
             criar_sessao.assert_not_called()
             criar_cliente.assert_not_called()
 
-        assert resp.status_code == 200
-        corpo = resp.json()
-        assert corpo["investidor"] is True
-        assert corpo["checkout_url"] is None
-
-        sub = _subscription_do_usuario(db, alvo.id)
-        assert sub is not None
-        # Criada (pelo helper `_obter_ou_criar_assinatura`) mas nunca ativada
-        # — investidor não pode aparecer como assinante pago em nenhuma
-        # métrica que consulte `Subscription.status`.
-        assert sub.status != "ativo"
-        assert sub.status == "inativo"
-        assert sub.stripe_customer_id is None
-        assert sub.stripe_subscription_id is None
+        assert resp.status_code == 403
+        assert _subscription_do_usuario(db, alvo.id) is None
 
     def test_marcar_investidor_nao_altera_role(self, client, db, criar_usuario):
         _, token_admin = criar_usuario(email="admin@teste.local", role="admin")
@@ -242,13 +236,13 @@ class TestInvestidor:
         db.refresh(alvo)
         assert alvo.role == "medico"
         assert alvo.investidor is True
+        assert alvo.convidado is False
+        assert alvo.profile_completion_required is False
 
     def test_investidor_nao_acessa_dado_de_outro_medico(self, client, db, criar_usuario):
-        """Mesmo padrão de isolamento de `test_clinical_tenant_isolation.py`
-        (round.py, posse por `Patient.created_by`) — investidor tem acesso ao
-        PRODUTO, não a dado clínico de outro médico."""
+        """Acesso ao produto não concede acesso a dados clínicos alheios."""
         dono, token_dono = criar_usuario(email="dono.paciente@teste.local")
-        dono.convidado = True  # só para o dono ter entitlement e poder criar o paciente
+        dono.convidado = True
         db.commit()
 
         criado = client.post(
@@ -264,9 +258,8 @@ class TestInvestidor:
         assert criado.status_code == 201, criado.text
         patient_id = criado.json()["id"]
 
-        investidor, token_investidor = criar_usuario(email="investidor.leitor@teste.local")
-        investidor.investidor = True
-        db.commit()
+        investidor, _ = criar_usuario(email="investidor.leitor@teste.local")
+        token_investidor = _converter_investidor(db, investidor)
 
         listagem = client.get("/api/round/patients", headers=_headers(token_investidor))
         assert listagem.status_code == 200
@@ -287,18 +280,6 @@ class TestOnboardingConvidadoInvestidor:
     def test_convidado_recem_marcado_sem_kyc_resolvido_ainda_nao_ve_onboarding(
         self, client, db, criar_usuario
     ):
-        """Achado ao escrever este teste, registrado explicitamente: um
-        convidado RECÉM marcado (sem nenhuma `KycVerification`) tem
-        `onboarding_pendente=False`, não True — `_onboarding_pendente`
-        (app/api/auth.py) consulta `_kyc_required` PRIMEIRO, e para
-        convidado (ao contrário de investidor) `_kyc_required` não tem
-        bypass automático: só fica False depois que `liberado_para_uso()`
-        confirma um `KycVerification` resolvido (o que hoje só acontece
-        de fato após `POST /kyc/submeter`, que a essa altura já aprova
-        automaticamente para convidado — ver `verificacao.submeter`). Ou
-        seja, o tour do convidado só aparece DEPOIS do KYC dele estar
-        resolvido, exatamente como o docstring de `_onboarding_pendente`
-        descreve ("só depois do KYC estar resolvido")."""
         alvo, token = criar_usuario()
         alvo.convidado = True
         db.commit()
@@ -325,51 +306,36 @@ class TestOnboardingConvidadoInvestidor:
         assert corpo["kyc_required"] is False
         assert corpo["onboarding_pendente"] is True
 
-    def test_investidor_novo_sem_kyc_resolvido_ainda_nao_ve_onboarding(
+    def test_investidor_novo_e_isento_de_kyc_e_vai_direto_ao_tour(
         self, client, db, criar_usuario
     ):
-        """Corrigido em 13/08/2026 (pedido do Rafael: "investidor isento de
-        KYC deixa de existir... passa a ter KYC de identidade pessoal
-        simplificado e automático") — `_kyc_required` não tem mais
-        `if user.investidor: return False`. Investidor agora segue
-        EXATAMENTE o mesmo padrão do convidado (ver teste acima): o tour só
-        aparece depois do KYC (pessoal simplificado, para ele) estar
-        resolvido — nunca antes."""
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
-        assert alvo.onboarding_visto is False
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
 
         resp = client.get("/api/auth/me", headers=_headers(token))
         assert resp.status_code == 200
         corpo = resp.json()
-        assert corpo["kyc_required"] is True
-        assert corpo["onboarding_pendente"] is False
-
-    def test_investidor_com_kyc_ja_resolvido_tem_onboarding_pendente(
-        self, client, db, criar_usuario
-    ):
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
-        _liberar_kyc(db, alvo.id)
-        assert alvo.onboarding_visto is False
-
-        resp = client.get("/api/auth/me", headers=_headers(token))
-        assert resp.status_code == 200
-        corpo = resp.json()
+        assert corpo["profile_completion_required"] is False
         assert corpo["kyc_required"] is False
         assert corpo["onboarding_pendente"] is True
 
+    def test_kyc_legado_nao_reabre_gate_do_investidor(
+        self, client, db, criar_usuario
+    ):
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
+        _liberar_kyc(db, alvo.id)
+
+        resp = client.get("/api/auth/me", headers=_headers(token))
+        assert resp.status_code == 200
+        assert resp.json()["kyc_required"] is False
+        assert resp.json()["onboarding_pendente"] is True
+
     def test_concluir_onboarding_marca_visto_e_zera_pendente(self, client, db, criar_usuario):
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
-        _liberar_kyc(db, alvo.id)  # 13/08/2026 — investidor agora também precisa de KYC resolvido
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
         assert client.get("/api/auth/me", headers=_headers(token)).json()["onboarding_pendente"] is True
 
-        # Nome exato da rota, conferido em app/api/auth.py:
-        # POST /api/auth/me/onboarding-concluido (não é PATCH /auth/me/onboarding).
         resp = client.post("/api/auth/me/onboarding-concluido", headers=_headers(token))
         assert resp.status_code == 200
         assert resp.json() == {"onboarding_pendente": False}
@@ -380,10 +346,8 @@ class TestOnboardingConvidadoInvestidor:
     def test_onboarding_pendente_continua_false_apos_nova_consulta_me(
         self, client, db, criar_usuario
     ):
-        alvo, token = criar_usuario()
-        alvo.investidor = True
-        db.commit()
-        _liberar_kyc(db, alvo.id)  # 13/08/2026 — investidor agora também precisa de KYC resolvido
+        alvo, _ = criar_usuario()
+        token = _converter_investidor(db, alvo)
         client.post("/api/auth/me/onboarding-concluido", headers=_headers(token))
 
         resp = client.get("/api/auth/me", headers=_headers(token))
@@ -508,9 +472,9 @@ class TestSeguranca:
     def test_convidado_e_investidor_cada_um_so_ve_o_proprio_me(self, client, db, criar_usuario):
         convidado, token_convidado = criar_usuario(email="so.convidado.me@teste.local")
         convidado.convidado = True
-        investidor, token_investidor = criar_usuario(email="so.investidor.me@teste.local")
-        investidor.investidor = True
         db.commit()
+        investidor, _ = criar_usuario(email="so.investidor.me@teste.local")
+        token_investidor = _converter_investidor(db, investidor)
 
         resp_convidado = client.get("/api/auth/me", headers=_headers(token_convidado))
         assert resp_convidado.status_code == 200

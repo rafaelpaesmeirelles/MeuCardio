@@ -36,6 +36,11 @@ def _marcar(db, user, **flags):
     return user
 
 
+def _converter_investidor(db, user) -> str:
+    _marcar(db, user, investidor=True)
+    return create_access_token(user.email, scope="app")
+
+
 def _mailbox_token(email_address: str) -> str:
     return create_access_token(email_address, scope="email")
 
@@ -47,8 +52,8 @@ class TestInvestidorAbreInterfaceEmModoDemonstracao:
     def test_get_conta_investidor_devolve_modo_demonstracao_sem_tocar_email_account(
         self, client, db, criar_usuario,
     ):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.get("/api/email/conta", headers=_headers(token))
         assert resp.status_code == 200
         corpo = resp.json()
@@ -59,8 +64,8 @@ class TestInvestidorAbreInterfaceEmModoDemonstracao:
         assert db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first() is None
 
     def test_demo_pastas_e_mensagens_sao_dado_sintetico_sem_pii(self, client, db, criar_usuario):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
 
         pastas = client.get("/api/email/demo/pastas", headers=_headers(token))
         assert pastas.status_code == 200
@@ -81,8 +86,8 @@ class TestInvestidorAbreInterfaceEmModoDemonstracao:
         assert "content" in detalhe.json()
 
     def test_demo_mensagem_inexistente_devolve_404(self, client, db, criar_usuario):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.get("/api/email/demo/mensagens/nao-existe", headers=_headers(token))
         assert resp.status_code == 404
 
@@ -94,8 +99,8 @@ class TestInvestidorAbreInterfaceEmModoDemonstracao:
 
 class TestInvestidorBloqueadoEmOperacaoRealDeEmail:
     def test_provisionar_caixa_nativa_e_403(self, client, db, criar_usuario, monkeypatch_mail360):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.post(
             "/api/email/conta",
             json={"senha": "senha-longa-123", "aceite_lgpd": True, "local_part": "investidor.teste"},
@@ -108,8 +113,8 @@ class TestInvestidorBloqueadoEmOperacaoRealDeEmail:
         assert db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first() is None
 
     def test_conectar_yahoo_e_403(self, client, db, criar_usuario):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.post(
             "/api/email/conectar-yahoo",
             json={"endereco": "investidor@yahoo.com", "senha_de_app": "abcd-efgh-ijkl-mnop", "consent_accepted": True},
@@ -119,8 +124,8 @@ class TestInvestidorBloqueadoEmOperacaoRealDeEmail:
         assert db.query(CalendarIntegration).filter(CalendarIntegration.owner_id == user.id).count() == 0
 
     def test_oauth_start_google_com_mail_true_e_403(self, client, db, criar_usuario):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.get(
             "/api/agenda/oauth/google/start",
             params={"mail": "true", "consent_accepted": "true"},
@@ -128,24 +133,21 @@ class TestInvestidorBloqueadoEmOperacaoRealDeEmail:
         )
         assert resp.status_code == 403
 
-    def test_oauth_start_google_sem_mail_nao_e_bloqueado_para_investidor(self, client, db, criar_usuario):
-        """Investidor tem Agenda real e completa (fora do escopo desta
-        restrição, que é só sobre e-mail) — só `mail=True` é barrado."""
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+    def test_oauth_start_google_sem_mail_tambem_e_403_para_investidor(self, client, db, criar_usuario):
+        """Agenda também é demonstração: nenhum OAuth externo pode iniciar,
+        mesmo quando a integração pede apenas calendário e não e-mail."""
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.get(
             "/api/agenda/oauth/google/start",
             params={"mail": "false", "consent_accepted": "true"},
             headers=_headers(token),
         )
-        # Não é 403 (o bloqueio de investidor não se aplica); o que vier
-        # depois (200 com URL, ou erro de configuração do provedor OAuth no
-        # ambiente de teste) é irrelevante para esta prova.
-        assert resp.status_code != 403
+        assert resp.status_code == 403
 
     def test_apple_connect_com_mail_true_e_403(self, client, db, criar_usuario):
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         resp = client.post(
             "/api/agenda/integrations/apple",
             json={
@@ -227,14 +229,11 @@ class TestInvestidorBloqueadoEmOperacaoRealDeEmail:
 
 
 class TestInvestidorPreferenciasDeSincronizacaoNuncaLiberamEmail:
-    def test_ligar_sync_mail_em_integracao_sem_read_mail_e_422(self, client, db, criar_usuario):
-        """Trava estrutural (PATCH /integrations/{id}/preferencias): mesmo
-        que o investidor conecte uma conta Google só para AGENDA
-        (mail=False, permitido), a capacidade `read_mail` nunca foi
-        concedida — então nunca é possível ligar `sync_mail` depois, mesmo
-        pedindo explicitamente."""
-        user, token = criar_usuario()
-        _marcar(db, user, investidor=True)
+    def test_ligar_sync_mail_e_bloqueado_pelo_readonly_global(self, client, db, criar_usuario):
+        """Mesmo uma integração legada/preexistente não pode ser alterada:
+        PATCH nasce fail-closed para Investidor antes de validar capacidades."""
+        user, _ = criar_usuario()
+        token = _converter_investidor(db, user)
         integracao = CalendarIntegration(
             owner_id=user.id, provider="google_calendar", display_name="Agenda de teste",
             status="connected", enabled=True,
@@ -249,7 +248,9 @@ class TestInvestidorPreferenciasDeSincronizacaoNuncaLiberamEmail:
             json={"sync_mail": True},
             headers=_headers(token),
         )
-        assert resp.status_code == 422
+        assert resp.status_code == 403
+        db.refresh(integracao)
+        assert integracao.sync_mail is False
 
 
 # --------------------------------------------------------------------- CONVIDADO --

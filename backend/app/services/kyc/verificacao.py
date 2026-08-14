@@ -15,13 +15,26 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.models.audit import AuditLog
 from app.models.kyc import KycVerification
+from app.models.kyc_waiver import KycRequirementWaiver
 from app.models.user import User
 from app.services import cofre
 from app.services.kyc import council_check
 
 
 class DocumentoPessoalIncompleto(ValueError):
-    """Nem o par frente/verso nem o PDF digital foram enviados por completo."""
+    """Nem uma via pessoal enviada/dispensada satisfez o requisito."""
+
+
+class DocumentoProfissionalIncompleto(ValueError):
+    """Um requisito de documento profissional não enviado nem dispensado."""
+
+
+class SelfieObrigatoria(ValueError):
+    """Selfie não enviada e sem dispensa administrativa válida."""
+
+
+class InvestidorNaoFazKyc(PermissionError):
+    """Conta Investidor é demonstração somente leitura e não submete KYC."""
 
 
 def _raiz() -> Path:
@@ -30,29 +43,152 @@ def _raiz() -> Path:
 
 @dataclass
 class DocumentosSubmissao:
-    # Opcionais desde 13/08/2026 — investidor não envia documento
-    # profissional (KYC pessoal simplificado). A obrigatoriedade por tipo de
-    # conta é aplicada em `app/api/kyc.py`, antes de chegar aqui; `submeter`
-    # abaixo confia que quem chamou já validou isso.
+    # Opcionais no dataclass para permitir validação na borda HTTP e
+    # diferentes combinações de documento pessoal. Contas reais continuam
+    # exigindo o documento profissional no endpoint.
     doc_profissional_frente: bytes | None = None
     doc_profissional_verso: bytes | None = None
-    selfie: bytes = b""
+    selfie: bytes | None = None
     doc_pessoal_frente: bytes | None = None
     doc_pessoal_verso: bytes | None = None
     doc_pessoal_digital: bytes | None = None
 
 
-def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerification:
-    """Substitui uma submissão anterior do mesmo usuário, se houver — o
-    médico pode reenviar se algo foi rejeitado. Falha alto se o documento
-    pessoal não veio completo (nem o par frente/verso, nem o PDF digital) —
-    nunca aceita uma submissão pela metade."""
-    tem_par_fotos = docs.doc_pessoal_frente is not None and docs.doc_pessoal_verso is not None
-    tem_digital = docs.doc_pessoal_digital is not None
-    if not tem_par_fotos and not tem_digital:
-        raise DocumentoPessoalIncompleto(
-            "Envie a frente e o verso do documento pessoal, ou o PDF do documento digital (gov.br/CNH Digital)."
+WAIVER_FIELDS = (
+    "professional_front", "professional_back", "personal_front",
+    "personal_back", "personal_digital", "selfie",
+)
+
+
+def _waivers_vazias() -> dict[str, bool]:
+    return {campo: False for campo in WAIVER_FIELDS}
+
+
+def dispensas_aplicaveis(db: Session, user: User) -> dict[str, bool]:
+    """Retorna dispensas efetivas; só Convidado pode recebê-las.
+
+    Ausência de configuração é fail-closed (todos os requisitos permanecem).
+    """
+    if not user.convidado or user.investidor:
+        return _waivers_vazias()
+    linha = db.get(KycRequirementWaiver, user.id)
+    if linha is None:
+        return _waivers_vazias()
+    return {campo: bool(getattr(linha, campo)) for campo in WAIVER_FIELDS}
+
+
+def requisitos_publicos(db: Session, user: User) -> dict[str, bool]:
+    """Mapa de campos obrigatórios para a UI; backend continua fonte da verdade."""
+    waivers = dispensas_aplicaveis(db, user)
+    return {campo: not dispensado for campo, dispensado in waivers.items()}
+
+
+def _requisitos_satisfeitos_por_arquivos(
+    *,
+    professional_front: bool,
+    professional_back: bool,
+    personal_front: bool,
+    personal_back: bool,
+    personal_digital: bool,
+    selfie: bool,
+    waivers: dict[str, bool],
+) -> bool:
+    profissional_ok = (
+        (professional_front or waivers["professional_front"])
+        and (professional_back or waivers["professional_back"])
+    )
+    fotos_pessoais_ok = (
+        (personal_front or waivers["personal_front"])
+        and (personal_back or waivers["personal_back"])
+    )
+    digital_ok = personal_digital or waivers["personal_digital"]
+    selfie_ok = selfie or waivers["selfie"]
+    return profissional_ok and (fotos_pessoais_ok or digital_ok) and selfie_ok
+
+
+def registro_satisfaz_requisitos(registro: KycVerification | None, waivers: dict[str, bool]) -> bool:
+    if registro is None:
+        return _requisitos_satisfeitos_por_arquivos(
+            professional_front=False, professional_back=False,
+            personal_front=False, personal_back=False, personal_digital=False,
+            selfie=False, waivers=waivers,
         )
+    return _requisitos_satisfeitos_por_arquivos(
+        professional_front=bool(registro.doc_profissional_frente),
+        professional_back=bool(registro.doc_profissional_verso),
+        personal_front=bool(registro.doc_pessoal_frente),
+        personal_back=bool(registro.doc_pessoal_verso),
+        personal_digital=bool(registro.doc_pessoal_digital),
+        selfie=bool(registro.selfie), waivers=waivers,
+    )
+
+
+def _validar_submissao(user: User, docs: DocumentosSubmissao, waivers: dict[str, bool]) -> tuple[bool, bool]:
+    if user.investidor:
+        raise InvestidorNaoFazKyc("Conta Investidor não participa do fluxo de KYC.")
+
+    if not docs.doc_profissional_frente and not waivers["professional_front"]:
+        raise DocumentoProfissionalIncompleto("Documento profissional — frente é obrigatório.")
+    if not docs.doc_profissional_verso and not waivers["professional_back"]:
+        raise DocumentoProfissionalIncompleto("Documento profissional — verso é obrigatório.")
+    if not docs.selfie and not waivers["selfie"]:
+        raise SelfieObrigatoria("Selfie ao vivo é obrigatória.")
+
+    fotos_ok = (
+        (bool(docs.doc_pessoal_frente) or waivers["personal_front"])
+        and (bool(docs.doc_pessoal_verso) or waivers["personal_back"])
+    )
+    digital_ok = bool(docs.doc_pessoal_digital) or waivers["personal_digital"]
+    if not fotos_ok and not digital_ok:
+        raise DocumentoPessoalIncompleto(
+            "Envie a frente e o verso do documento pessoal (salvo itens dispensados), "
+            "ou o PDF digital, salvo dispensa administrativa correspondente."
+        )
+    return fotos_ok, digital_ok
+
+
+def reavaliar_convidado_com_dispensas(db: Session, user: User, *, admin_id: int | None = None) -> KycVerification | None:
+    """Reavalia imediatamente o KYC após alteração administrativa de dispensas.
+
+    Se todos os requisitos remanescentes já estiverem satisfeitos, aprova sem
+    revisão manual. Se uma dispensa removida torna um documento novamente
+    obrigatório e ele não existe, exige reenvio. Assim a configuração tem
+    efeito real no backend e nunca é apenas cosmética de frontend.
+    """
+    if not user.convidado or user.investidor:
+        return obter(db, user)
+    waivers = dispensas_aplicaveis(db, user)
+    registro = obter(db, user)
+    satisfaz = registro_satisfaz_requisitos(registro, waivers)
+
+    if satisfaz and registro is None:
+        registro = KycVerification(owner_id=user.id, selfie=None)
+        db.add(registro)
+        db.flush()
+
+    if registro is None:
+        return None
+
+    agora = datetime.now(timezone.utc)
+    if satisfaz:
+        registro.status = "aprovado"
+        registro.liberado_em = agora
+        registro.aprovado_em = agora
+        registro.aprovado_por = admin_id
+        registro.nota_revisao = "Aprovação automática — todos os requisitos KYC não dispensados estão satisfeitos."
+    elif registro.status == "aprovado":
+        registro.status = "reenvio_solicitado"
+        registro.liberado_em = None
+        registro.aprovado_em = None
+        registro.aprovado_por = None
+        registro.nota_revisao = "Dispensas KYC alteradas: envie os requisitos que voltaram a ser obrigatórios."
+    return registro
+
+
+def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerification:
+    """Substitui a submissão anterior e aplica dispensas apenas a Convidado."""
+    waivers = dispensas_aplicaveis(db, user)
+    fotos_ok, digital_ok = _validar_submissao(user, docs, waivers)
 
     existente = db.query(KycVerification).filter(KycVerification.owner_id == user.id).first()
     eh_reenvio = existente is not None
@@ -67,12 +203,12 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
     raiz = _raiz()
     nome_prof_frente = cofre.guardar(docs.doc_profissional_frente, user.id, raiz=raiz) if docs.doc_profissional_frente else None
     nome_prof_verso = cofre.guardar(docs.doc_profissional_verso, user.id, raiz=raiz) if docs.doc_profissional_verso else None
-    nome_selfie = cofre.guardar(docs.selfie, user.id, raiz=raiz)
+    nome_selfie = cofre.guardar(docs.selfie, user.id, raiz=raiz) if docs.selfie else None
     nome_pessoal_frente = cofre.guardar(docs.doc_pessoal_frente, user.id, raiz=raiz) if docs.doc_pessoal_frente else None
     nome_pessoal_verso = cofre.guardar(docs.doc_pessoal_verso, user.id, raiz=raiz) if docs.doc_pessoal_verso else None
     nome_pessoal_digital = cofre.guardar(docs.doc_pessoal_digital, user.id, raiz=raiz) if docs.doc_pessoal_digital else None
 
-    registro = existente or KycVerification(owner_id=user.id)
+    registro = existente or KycVerification(owner_id=user.id, selfie=None)
     registro.doc_profissional_frente = nome_prof_frente
     registro.doc_profissional_verso = nome_prof_verso
     registro.doc_pessoal_frente = nome_pessoal_frente
@@ -88,104 +224,55 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
         db.add(registro)
     db.flush()
 
-    if user.investidor:
-        # KYC pessoal simplificado (13/08/2026, pedido do Rafael): investidor
-        # não é médico credenciado, não tem conselho/registro nenhum — checar
-        # conselho profissional dele não faz sentido, e por isso NUNCA roda
-        # aqui (diferente de convidado, ver ramo abaixo, onde a checagem
-        # roda só como informação). Aprovação DEFINITIVA e automática assim
-        # que documento pessoal + selfie chegam completos — nunca depende
-        # de revisão do admin. "investidor isento de KYC deixa de existir...
-        # passa a ter KYC de identidade pessoal simplificado e automático."
-        registro.conselho_check_status = "nao_verificado"
-        registro.conselho_check_detalhe = None
-        registro.conselho_check_em = None
-        registro.status = "aprovado"
+    resultado = council_check.checar_conselho(
+        user.council_name, user.council_number or "", user.council_state or "",
+    )
+    registro.conselho_check_status = resultado.status
+    registro.conselho_check_detalhe = resultado.detalhe
+    registro.conselho_check_em = resultado.verificado_em
+    if resultado.status == council_check.STATUS_ATIVO_CONFIRMADO:
+        registro.status = "liberado_conselho_ok"
         registro.liberado_em = datetime.now(timezone.utc)
-        registro.aprovado_em = datetime.now(timezone.utc)
+    elif resultado.status == council_check.STATUS_INDISPONIVEL_PARA_CONSELHO:
+        registro.status = "liberado_sem_checagem"
+        registro.liberado_em = datetime.now(timezone.utc)
+
+    if user.convidado:
+        agora = datetime.now(timezone.utc)
+        registro.status = "aprovado"
+        registro.liberado_em = agora
+        registro.aprovado_em = agora
         registro.aprovado_por = None
         registro.nota_revisao = (
-            "Aprovação automática — conta investidor (KYC pessoal simplificado, "
-            "sem checagem de conselho e sem revisão administrativa)."
+            "Aprovação automática — conta Convidado; todos os requisitos KYC "
+            f"não dispensados foram satisfeitos. Conselho: {resultado.status}."
         )
-    else:
-        # Checagem de conselho — melhor esforço, nunca bloqueia a submissão.
-        # Para convidado, o resultado é só informação/auditoria (nunca
-        # decide o status final dele, ver bloco abaixo); para assinante
-        # normal, decide os três estados de sempre.
-        resultado = council_check.checar_conselho(
-            user.council_name, user.council_number or "", user.council_state or "",
-        )
-        registro.conselho_check_status = resultado.status
-        registro.conselho_check_detalhe = resultado.detalhe
-        registro.conselho_check_em = resultado.verificado_em
-        if resultado.status == council_check.STATUS_ATIVO_CONFIRMADO:
-            registro.status = "liberado_conselho_ok"
-            registro.liberado_em = datetime.now(timezone.utc)
-        elif resultado.status == council_check.STATUS_INDISPONIVEL_PARA_CONSELHO:
-            # Só profissões não-médicas caem aqui (CRM sempre tenta a
-            # checagem real, mesmo que hoje falhe por falta de credencial —
-            # nesse caso o status é STATUS_ERRO_CHECAGEM, não este). Sem
-            # nenhuma checagem automática possível para o conselho, libera
-            # mesmo assim — decisão do Rafael em 06/08/2026 — porque o
-            # escopo de prescrição dessas profissões já é restrito por
-            # padrão (`app/services/kyc/escopo_profissional.py`), o que
-            # reduz o risco de liberar sem confirmação. A informação segue
-            # marcada como não verificada na fila de revisão manual.
-            registro.status = "liberado_sem_checagem"
-            registro.liberado_em = datetime.now(timezone.utc)
 
-        # Médico convidado (08/08/2026, pedido do Rafael) — aprovação
-        # DEFINITIVA automática, SEMPRE, qualquer que tenha sido o resultado
-        # (só informativo) da checagem de conselho acima. Corrigido em
-        # 13/08/2026: antes só auto-aprovava quando a checagem deixava o
-        # status em "aguardando_revisao" — se o conselho confirmasse
-        # (liberado_conselho_ok) ou fosse indisponível (liberado_sem_checagem),
-        # o convidado ficava parado num desses dois estados, que
-        # `listar_pendentes()` inclui na fila do admin — exatamente a
-        # dependência de revisão humana que o Rafael pediu para eliminar.
-        # "Para convidado, toda submissão válida deve terminar definitivamente
-        # em aprovado, independentemente do resultado informativo da
-        # checagem automática do conselho."
-        if user.convidado:
-            registro.status = "aprovado"
-            registro.liberado_em = datetime.now(timezone.utc)
-            registro.aprovado_em = datetime.now(timezone.utc)
-            registro.aprovado_por = None
-            registro.nota_revisao = (
-                "Aprovação automática — conta marcada como convidado (checagem de conselho "
-                f"é só informativa para este tipo de conta; resultado: {resultado.status})."
-            )
-
-    # Auditoria da submissão em si — achado no hardening desta fase (issue #52):
-    # nem o primeiro envio nem o reenvio geravam AuditLog. Nunca registra bytes/
-    # conteúdo do documento, só o fato de que o titular enviou/reenviou.
+    dispensadas = [campo for campo, ativo in waivers.items() if ativo]
     db.add(AuditLog(
         user_id=user.id, action="kyc_reenvio" if eh_reenvio else "kyc_submissao",
         entity="kyc_verifications", entity_id=str(registro.id),
-        detail={"owner_id": user.id, "documento_pessoal": "digital" if tem_digital else "fotos"},
+        detail={
+            "owner_id": user.id,
+            "documento_pessoal": "digital" if docs.doc_pessoal_digital else "fotos" if (docs.doc_pessoal_frente or docs.doc_pessoal_verso) else "dispensado",
+            "dispensas_aplicadas": dispensadas,
+        },
     ))
-    if registro.status == "aprovado" and (user.convidado or user.investidor):
+    if registro.status == "aprovado" and user.convidado:
         db.add(AuditLog(
-            user_id=user.id,
-            action="aprovacao_automatica_investidor" if user.investidor else "aprovacao_automatica_convidado",
+            user_id=user.id, action="aprovacao_automatica_convidado",
             entity="kyc_verifications", entity_id=str(registro.id),
-            detail={"owner_id": user.id},
+            detail={"owner_id": user.id, "dispensas_aplicadas": dispensadas},
         ))
 
     for nome_antigo in arquivos_antigos:
         if nome_antigo:
             cofre.apagar(nome_antigo, raiz=raiz)
     if arquivos_antigos:
-        # Os arquivos substituídos pelo reenvio são apagados do cofre acima —
-        # é uma exclusão real de dado sensível, precisa do mesmo tipo de
-        # rastro que uma exclusão por retenção teria.
         db.add(AuditLog(
             user_id=user.id, action="kyc_delete", entity="kyc_verifications",
             entity_id=str(registro.id),
-            detail={"motivo": "reenvio_substituiu_arquivos_anteriores", "quantidade": len(
-                [a for a in arquivos_antigos if a]
-            )},
+            detail={"motivo": "reenvio_substituiu_arquivos_anteriores", "quantidade": len([a for a in arquivos_antigos if a])},
         ))
 
     return registro
@@ -214,11 +301,10 @@ def listar_pendentes(db: Session) -> list[KycVerification]:
     inclui tanto o que já está liberado (por checagem confirmada ou por
     checagem indisponível) quanto o que está travado esperando revisão.
 
-    Convidado e investidor são excluídos explicitamente (13/08/2026, pedido
-    do Rafael: "nenhum dos dois deve aparecer na fila de KYC pendente") —
-    `submeter()` já os leva direto a "aprovado" numa submissão válida, então
-    eles não deveriam aparecer aqui de qualquer forma; o filtro por `User`
-    é defensivo, cobrindo também registro LEGADO que tenha ficado parado em
+    Convidado é excluído porque toda submissão válida termina aprovada.
+    Investidor é excluído porque não participa de KYC; o filtro também cobre
+    eventual registro legado anterior à regra definitiva. O filtro por `User`
+    é defensivo, cobrindo ainda registro que tenha ficado parado em
     "aguardando_revisao"/"liberado_conselho_ok"/"liberado_sem_checagem" de
     antes desta correção (ex.: convidado cuja checagem de conselho havia
     confirmado o registro antes de 13/08, ficando em "liberado_conselho_ok"

@@ -15,6 +15,106 @@ type Usuario = {
   investidor: boolean;
 };
 
+type KycWaiverConfig = {
+  professional_front: boolean;
+  professional_back: boolean;
+  personal_front: boolean;
+  personal_back: boolean;
+  personal_digital: boolean;
+  selfie: boolean;
+};
+
+type KycWaiverResponse = {
+  user_id: number;
+  convidado: boolean;
+  waivers: KycWaiverConfig;
+  kyc_status?: string | null;
+};
+
+const KYC_WAIVERS_VAZIAS: KycWaiverConfig = {
+  professional_front: false,
+  professional_back: false,
+  personal_front: false,
+  personal_back: false,
+  personal_digital: false,
+  selfie: false,
+};
+
+const ROTULOS_KYC_WAIVER: Array<[keyof KycWaiverConfig, string]> = [
+  ["professional_front", "Documento profissional — frente"],
+  ["professional_back", "Documento profissional — verso"],
+  ["personal_front", "Documento pessoal — frente"],
+  ["personal_back", "Documento pessoal — verso"],
+  ["personal_digital", "Documento pessoal digital (PDF)"],
+  ["selfie", "Selfie ao vivo"],
+];
+
+function KycWaiversEditor({ u }: { u: Usuario }) {
+  const [aberto, setAberto] = useState(false);
+  const [waivers, setWaivers] = useState<KycWaiverConfig>({ ...KYC_WAIVERS_VAZIAS });
+  const [carregado, setCarregado] = useState(false);
+  const [salvando, setSalvando] = useState(false);
+  const [erro, setErro] = useState("");
+  const [status, setStatus] = useState<string | null>(null);
+
+  async function alternarPainel() {
+    const proximo = !aberto;
+    setAberto(proximo);
+    if (proximo && !carregado) {
+      setErro("");
+      try {
+        const r = await api.get<KycWaiverResponse>(`/admin/users/${u.id}/kyc-waivers`);
+        setWaivers(r.waivers);
+        setCarregado(true);
+      } catch (e) {
+        setErro(e instanceof Error ? e.message : "Não foi possível carregar as dispensas KYC.");
+      }
+    }
+  }
+
+  async function salvar() {
+    setSalvando(true);
+    setErro("");
+    try {
+      const r = await api.put<KycWaiverResponse>(`/admin/users/${u.id}/kyc-waivers`, waivers);
+      setWaivers(r.waivers);
+      setStatus(r.kyc_status ?? null);
+    } catch (e) {
+      setErro(e instanceof Error ? e.message : "Não foi possível salvar as dispensas KYC.");
+    } finally {
+      setSalvando(false);
+    }
+  }
+
+  if (!u.convidado) return null;
+  return (
+    <div style={{ marginTop: 8 }}>
+      <button className="botao botao--secundario" style={{ padding: "0.3rem 0.65rem" }} onClick={alternarPainel}>
+        {aberto ? "Fechar dispensas KYC" : "Dispensas KYC"}
+      </button>
+      {aberto && (
+        <div style={{ border: "1px solid var(--borda)", borderRadius: 8, padding: "0.65rem", marginTop: 8 }}>
+          <div style={{ fontSize: "0.78rem", color: "var(--texto-secundario)", marginBottom: 6 }}>
+            Marque somente requisitos dispensados para este Convidado. O backend reavalia o KYC imediatamente.
+          </div>
+          {ROTULOS_KYC_WAIVER.map(([campo, rotulo]) => (
+            <label key={campo} style={{ display: "flex", gap: 7, alignItems: "center", fontWeight: 400, marginTop: 5 }}>
+              <input type="checkbox" style={{ width: "auto" }} checked={waivers[campo]}
+                     onChange={(e) => setWaivers({ ...waivers, [campo]: e.target.checked })} />
+              <span>Dispensar {rotulo}</span>
+            </label>
+          ))}
+          {status && <div className="eyebrow" style={{ marginTop: 7 }}>KYC após reavaliação: {status}</div>}
+          {erro && <div style={{ color: "var(--alerta)", fontSize: "0.8rem", marginTop: 7 }}>{erro}</div>}
+          <button className="botao" style={{ marginTop: 8 }} disabled={salvando || !carregado} onClick={salvar}>
+            {salvando ? "Salvando…" : "Salvar dispensas"}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 type PreAutorizacaoConvidado = {
   id: number; email: string | null; nome_completo: string | null;
   incluir_corvia_mail: boolean; observacao: string | null;
@@ -276,6 +376,7 @@ export default function Admin() {
     tipo_acesso: "normal" as "normal" | "convidado" | "investidor",
   });
 
+  const [waiversNovo, setWaiversNovo] = useState<KycWaiverConfig>({ ...KYC_WAIVERS_VAZIAS });
   const [pedidosGoogle, setPedidosGoogle] = useState<PedidoTesteGoogle[] | null>(null);
 
   const recarregar = () =>
@@ -310,12 +411,14 @@ export default function Admin() {
         role: investidor ? "leitor" : novo.role,
         password: investidor ? "CorVIAOS" : novo.password,
         tipo_acesso: novo.tipo_acesso,
+        kyc_waivers: novo.tipo_acesso === "convidado" ? waiversNovo : null,
       });
       setNovo({ email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
         council_number: "", council_state: "", specialty: "", professional_title: "",
         workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
         include_workplace_on_documents: false, profile_completion_required: false,
         role: "medico", password: "", tipo_acesso: "normal" });
+      setWaiversNovo({ ...KYC_WAIVERS_VAZIAS });
       recarregar();
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível criar o usuário.");
@@ -474,6 +577,22 @@ export default function Admin() {
               </label>
             </fieldset>
 
+            {novo.tipo_acesso === "convidado" && (
+              <fieldset style={{ border: "1px solid var(--borda)", borderRadius: 8, padding: "0.7rem 0.9rem", marginTop: "0.8rem" }}>
+                <legend style={{ padding: "0 0.3rem", fontWeight: 650 }}>Dispensas KYC individuais</legend>
+                <small style={{ color: "var(--texto-secundario)" }}>
+                  Opcional. Requisitos não marcados continuam obrigatórios; quando todos os requisitos remanescentes forem válidos, a aprovação é automática.
+                </small>
+                {ROTULOS_KYC_WAIVER.map(([campo, rotulo]) => (
+                  <label key={campo} style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 7 }}>
+                    <input type="checkbox" style={{ width: "auto" }} checked={waiversNovo[campo]}
+                           onChange={(e) => setWaiversNovo({ ...waiversNovo, [campo]: e.target.checked })} />
+                    <span>Dispensar {rotulo}</span>
+                  </label>
+                ))}
+              </fieldset>
+            )}
+
             <div className="grade grade--2" style={{ marginTop: "0.9rem" }}>
               <div>
                 <label htmlFor="nome">Nome da conta</label>
@@ -619,6 +738,7 @@ export default function Admin() {
                     {u.council_name && ` · ${u.council_name} ${u.council_number}/${u.council_state}`}
                     {u.crm && !u.council_name && ` · CRM ${u.crm}`}
                   </div>
+                  <KycWaiversEditor u={u} />
                   {u.status === "rejeitado" && u.rejection_note && (
                     <div style={{ fontSize: "0.8rem", color: "var(--alerta)" }}>
                       Rejeitado: {u.rejection_note}

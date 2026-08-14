@@ -10,9 +10,9 @@ cobrança e de KYC:
   profissional + documento pessoal + selfie), aprovação SEMPRE automática
   assim que a submissão é tecnicamente válida — nunca depende de revisão
   do admin, nunca aparece na fila.
-- investidor: nunca cobra (`User.investidor`), KYC PESSOAL SIMPLIFICADO (só
-  documento pessoal + selfie, sem documento profissional/conselho/
-  registro/UF/RQE), aprovação SEMPRE automática, nunca aparece na fila.
+- investidor: conta global de demonstração somente leitura, sem perfil,
+  CPF/nascimento, dados profissionais, documentos, selfie ou KYC; senha fixa
+  CorVIAOS; vai diretamente ao tour e nunca executa operações persistentes.
 
 Reutiliza User.convidado/User.investidor e `app/services/entitlement.py`
 (fonte central de entitlement) já existentes — nenhum mecanismo de
@@ -55,18 +55,6 @@ def _arquivos_completos(**overrides):
     base = {
         "doc_profissional_frente": ("frente.jpg", _jpeg((255, 0, 0)), "image/jpeg"),
         "doc_profissional_verso": ("verso.jpg", _jpeg((0, 255, 0)), "image/jpeg"),
-        "selfie": ("selfie.jpg", _jpeg((0, 0, 255)), "image/jpeg"),
-        "doc_pessoal_frente": ("id-frente.jpg", _jpeg((255, 255, 0)), "image/jpeg"),
-        "doc_pessoal_verso": ("id-verso.jpg", _jpeg((255, 0, 255)), "image/jpeg"),
-    }
-    base.update(overrides)
-    return base
-
-
-def _arquivos_investidor(**overrides):
-    """Sem documento profissional — o único conjunto que investidor deve
-    conseguir enviar com sucesso."""
-    base = {
         "selfie": ("selfie.jpg", _jpeg((0, 0, 255)), "image/jpeg"),
         "doc_pessoal_frente": ("id-frente.jpg", _jpeg((255, 255, 0)), "image/jpeg"),
         "doc_pessoal_verso": ("id-verso.jpg", _jpeg((255, 0, 255)), "image/jpeg"),
@@ -135,7 +123,9 @@ class TestCriacaoDiretaPeloAdmin:
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         assert criado.convidado is False
         assert criado.investidor is True
-        assert criado.profile_completion_required is True
+        assert criado.profile_completion_required is False
+        assert criado.status == "aprovado"
+        assert criado.onboarding_visto is False
 
     def test_tipo_acesso_invalido_e_422_nunca_cria_combinacao_invalida(self, client, db, admin):
         """Não existe forma de mandar convidado=true + investidor=true — um
@@ -179,8 +169,8 @@ class TestNuncaChamaStripe:
             resp = client.post("/api/billing/checkout?plano=completo", headers=_headers(token_criado))
             criar_sessao.assert_not_called()
             criar_cliente.assert_not_called()
-        assert resp.status_code == 200
-        assert resp.json()["checkout_url"] is None
+        assert resp.status_code == 403
+        assert db.query(Subscription).filter(Subscription.user_id == criado.id).first() is None
 
     def test_normal_criado_pelo_admin_continua_chamando_stripe(self, client, db, admin):
         _, token_admin = admin
@@ -278,131 +268,71 @@ class TestKycConvidado:
 
 
 class TestKycInvestidor:
-    def test_investidor_nao_exige_documentacao_profissional(self, client, db, admin):
+    def _criar(self, client, db, admin):
         _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-
-        resp = client.post("/api/kyc/submeter", files=_arquivos_investidor(), headers=_headers(token_criado))
-        assert resp.status_code == 201, resp.text
-
-    def test_api_aceita_investidor_sem_doc_profissional_frente_e_verso(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-
-        resp = client.post("/api/kyc/submeter", files=_arquivos_investidor(), headers=_headers(token_criado))
-        registro = db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first()
-        assert resp.status_code == 201
-        assert registro.doc_profissional_frente is None
-        assert registro.doc_profissional_verso is None
-
-    def test_investidor_sem_selfie_e_422(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-
-        arquivos = _arquivos_investidor()
-        del arquivos["selfie"]
-        resp = client.post("/api/kyc/submeter", files=arquivos, headers=_headers(token_criado))
-        assert resp.status_code == 422
-
-    def test_investidor_sem_documento_pessoal_e_422(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-
-        arquivos = _arquivos_investidor()
-        del arquivos["doc_pessoal_frente"]
-        del arquivos["doc_pessoal_verso"]
-        resp = client.post("/api/kyc/submeter", files=arquivos, headers=_headers(token_criado))
-        assert resp.status_code == 422
-
-    def test_investidor_submissao_completa_aprova_automaticamente_sem_admin(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-
-        resp = client.post("/api/kyc/submeter", files=_arquivos_investidor(), headers=_headers(token_criado))
-        assert resp.status_code == 201, resp.text
-        corpo = resp.json()
-        assert corpo["status"] == "aprovado"
-        assert corpo["liberado"] is True
-
-        registro = db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first()
-        assert registro.aprovado_por is None
-        assert registro.conselho_check_status == "nao_verificado"  # nunca chega a checar conselho
-
-    def test_investidor_nao_aparece_na_fila_de_kyc_pendente(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-        client.post("/api/kyc/submeter", files=_arquivos_investidor(), headers=_headers(token_criado))
-
-        resp = client.get("/api/admin/kyc", headers=_headers(token_admin))
-        assert resp.status_code == 200
-        assert criado.id not in {item["user_id"] for item in resp.json()}
-
-    def test_investidor_gera_auditlog_de_aprovacao_automatica(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-        client.post("/api/kyc/submeter", files=_arquivos_investidor(), headers=_headers(token_criado))
-
-        registros = db.query(AuditLog).filter(AuditLog.action == "aprovacao_automatica_investidor").all()
-        assert len(registros) == 1
-        assert registros[0].user_id == criado.id
-
-    def test_investidor_nunca_passa_por_admin_kyc_aprovar(self, client, db, admin):
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-        client.post("/api/kyc/submeter", files=_arquivos_investidor(), headers=_headers(token_criado))
-
-        assert not db.query(AuditLog).filter(AuditLog.action == "kyc_aprovado").count()
-
-    def test_investidor_com_documento_profissional_enviado_e_ignorado_sem_erro(self, client, db, admin):
-        """Se por algum motivo o investidor enviar documento profissional
-        mesmo (frontend não deveria pedir), a API não trava — ignora em
-        silêncio, sem gravar o documento."""
-        _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
-                    headers=_headers(token_admin))
-        criado = db.query(User).filter(User.email == "novo@teste.local").first()
-        token_criado = _token_para(criado)
-
         resp = client.post(
-            "/api/kyc/submeter", files=_arquivos_completos(), headers=_headers(token_criado),
+            "/api/admin/users",
+            json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
+            headers=_headers(token_admin),
         )
         assert resp.status_code == 201, resp.text
-        registro = db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first()
-        assert registro.doc_profissional_frente is None
-        assert registro.doc_profissional_verso is None
-        assert registro.status == "aprovado"
+        criado = db.query(User).filter(User.email == "novo@teste.local").first()
+        return criado, _token_para(criado), token_admin
+
+    def test_investidor_e_isento_de_kyc_e_vai_direto_ao_tour(self, client, db, admin):
+        criado, token_criado, _ = self._criar(client, db, admin)
+
+        me = client.get("/api/auth/me", headers=_headers(token_criado))
+        assert me.status_code == 200
+        corpo = me.json()
+        assert corpo["profile_completion_required"] is False
+        assert corpo["kyc_required"] is False
+        assert corpo["onboarding_pendente"] is True
+        assert db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first() is None
+
+    def test_investidor_nao_pode_submeter_kyc_mesmo_com_arquivos_completos(self, client, db, admin):
+        criado, token_criado, _ = self._criar(client, db, admin)
+
+        resp = client.post(
+            "/api/kyc/submeter",
+            files=_arquivos_completos(),
+            headers=_headers(token_criado),
+        )
+        assert resp.status_code == 403
+        assert db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first() is None
+
+    def test_investidor_nao_pode_submeter_selfie_ou_documento_parcial(self, client, db, admin):
+        criado, token_criado, _ = self._criar(client, db, admin)
+        resp = client.post(
+            "/api/kyc/submeter",
+            files={"selfie": ("selfie.jpg", _jpeg((0, 0, 255)), "image/jpeg")},
+            headers=_headers(token_criado),
+        )
+        assert resp.status_code == 403
+        assert db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first() is None
+
+    def test_investidor_nunca_aparece_na_fila_de_kyc(self, client, db, admin):
+        criado, _, token_admin = self._criar(client, db, admin)
+        fila = client.get("/api/admin/kyc", headers=_headers(token_admin))
+        assert fila.status_code == 200
+        assert criado.id not in {item["user_id"] for item in fila.json()}
+
+    def test_investidor_nao_gera_audit_de_aprovacao_automatica_kyc(self, client, db, admin):
+        criado, token_criado, _ = self._criar(client, db, admin)
+        client.post("/api/kyc/submeter", files=_arquivos_completos(), headers=_headers(token_criado))
+
+        assert db.query(AuditLog).filter(
+            AuditLog.user_id == criado.id,
+            AuditLog.action.in_(("aprovacao_automatica_investidor", "kyc_aprovado")),
+        ).count() == 0
 
 
 def _dar_assinatura_ativa(db, user_id: int) -> None:
     """KYC só se aplica a quem já tem acesso ao produto (`_kyc_required`
     consulta `tem_acesso_ao_produto`) — assinante "normal" precisa de uma
     Subscription ativa antes de `/api/kyc/submeter` responder qualquer coisa
-    além de 402, ao contrário de convidado/investidor, que têm acesso pelo
-    próprio flag."""
+    além de 402. Convidado tem acesso pelo próprio flag; Investidor também
+    tem entitlement de leitura, mas mutações permanecem barradas globalmente."""
     db.add(Subscription(user_id=user_id, kind="meucardio", plano="basico", status="ativo"))
     db.commit()
 
@@ -465,25 +395,24 @@ class TestNormalPreservaFluxoAtual:
 
 
 class TestPerfilCompletoPorTipoDeConta:
-    def test_investidor_so_precisa_de_dados_pessoais(self):
+    def test_investidor_e_considerado_completo_sem_dados_pessoais_ou_profissionais(self):
         from app.api.auth import _perfil_completo
-        from datetime import date
 
         u = User(
-            email="i@teste.local", full_name="Investidor Completo", role="medico",
-            password_hash="x", investidor=True, cpf="12345678900", birth_date=date(1990, 1, 1),
+            email="i@teste.local", full_name="Investidor Demonstração", role="leitor",
+            password_hash="x", investidor=True,
         )
-        assert _perfil_completo(u) is True  # sem profissão/conselho — não deve bloquear
+        assert _perfil_completo(u) is True
 
-    def test_investidor_sem_cpf_nao_esta_completo(self):
+    def test_investidor_nao_reabre_gate_mesmo_com_dados_legados_parciais(self):
         from app.api.auth import _perfil_completo
         from datetime import date
 
         u = User(
-            email="i2@teste.local", full_name="Investidor Sem CPF", role="medico",
+            email="i2@teste.local", full_name="Investidor Legado", role="medico",
             password_hash="x", investidor=True, birth_date=date(1990, 1, 1),
         )
-        assert _perfil_completo(u) is False
+        assert _perfil_completo(u) is True
 
     def test_convidado_precisa_de_pessoal_e_profissional(self):
         from app.api.auth import _perfil_completo
@@ -519,7 +448,7 @@ class TestPerfilCompletoPorTipoDeConta:
 class TestPreenchimentoUnicoCpfNascimento:
     def test_preenche_cpf_quando_ausente(self, client, db, admin):
         _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
                     headers=_headers(token_admin))
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         token_criado = _token_para(criado)
@@ -532,7 +461,7 @@ class TestPreenchimentoUnicoCpfNascimento:
 
     def test_rejeita_mudar_cpf_ja_preenchido(self, client, db, admin):
         _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
                     headers=_headers(token_admin))
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         token_criado = _token_para(criado)
@@ -547,7 +476,7 @@ class TestPreenchimentoUnicoCpfNascimento:
 
     def test_reenviar_o_mesmo_cpf_ja_preenchido_nao_e_erro(self, client, db, admin):
         _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
                     headers=_headers(token_admin))
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         token_criado = _token_para(criado)
@@ -560,7 +489,7 @@ class TestPreenchimentoUnicoCpfNascimento:
 
     def test_cpf_invalido_e_422(self, client, db, admin):
         _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
                     headers=_headers(token_admin))
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         token_criado = _token_para(criado)
@@ -571,7 +500,7 @@ class TestPreenchimentoUnicoCpfNascimento:
 
     def test_data_de_nascimento_futura_e_422(self, client, db, admin):
         _, token_admin = admin
-        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "investidor"},
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
                     headers=_headers(token_admin))
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         token_criado = _token_para(criado)

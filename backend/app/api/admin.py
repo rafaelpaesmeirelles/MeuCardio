@@ -268,6 +268,20 @@ def publicar_conteudo(
 # pendente — inativa, sem acesso a nada — até um admin conferir os dados
 # profissionais (conselho de classe, número de registro) e aprovar.
 
+
+class KycWaiversPayload(BaseModel):
+    """Dispensas KYC por requisito, aplicáveis exclusivamente a Convidado."""
+    professional_front: bool = False
+    professional_back: bool = False
+    personal_front: bool = False
+    personal_back: bool = False
+    personal_digital: bool = False
+    selfie: bool = False
+
+    def as_dict(self) -> dict[str, bool]:
+        return {campo: bool(getattr(self, campo)) for campo in kyc_verificacao.WAIVER_FIELDS}
+
+
 class NovoUsuario(BaseModel):
     email: str
     full_name: str
@@ -287,12 +301,11 @@ class NovoUsuario(BaseModel):
     role: str = "medico"  # admin | medico | residente | leitor
     password: str
     # "normal" (fluxo de cobrança/KYC normal) | "convidado" (isento de
-    # pagamento, KYC completo automático) | "investidor" (isento de
-    # pagamento, KYC pessoal simplificado automático) — 13/08/2026, matriz
-    # pedida pelo Rafael. Um único campo de três valores em vez de dois
-    # booleanos garante por construção que nunca existe a combinação
-    # inválida convidado=true + investidor=true.
+    # pagamento, KYC completo automático) | "investidor" (demonstração global
+    # somente leitura, sem perfil/KYC). Um único campo de três valores garante
+    # por construção que nunca existe convidado=true + investidor=true.
     tipo_acesso: str = "normal"
+    kyc_waivers: KycWaiversPayload | None = None
 
     @field_validator("professional_title")
     @classmethod
@@ -437,21 +450,32 @@ def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depen
         convidado=convidado, investidor=investidor,
         role=dados.role, password_hash=hash_password(dados.password), is_active=True,
     )
-    # Convidado/investidor: nunca confiar no booleano cru vindo do
-    # formulário — sempre recalculado por `_perfil_completo` (a mesma
-    # função que decide o gate real em `atualizar_me`), porque o admin
-    # nunca colhe CPF/data de nascimento na criação direta, então os dois
-    # tipos SEMPRE precisam completar o perfil no primeiro acesso. "normal"
-    # preserva o comportamento de sempre — o que o admin marcar no
-    # formulário, sem recálculo (não é a regra nova pedida).
-    if convidado or investidor:
+    # Fonte de verdade do primeiro acesso:
+    # - Investidor nunca coleta/completa perfil e vai direto ao tour.
+    # - Convidado criado pelo admin precisa completar dados pessoais +
+    #   profissionais conforme `_perfil_completo`.
+    # - Normal preserva o valor explícito do fluxo histórico.
+    if investidor:
+        novo.profile_completion_required = False
+    elif convidado:
         novo.profile_completion_required = not _perfil_completo(novo)
     db.add(novo)
     db.flush()
+    if dados.kyc_waivers is not None:
+        if not convidado:
+            raise HTTPException(status_code=422, detail="Dispensas KYC só podem ser configuradas para Convidado.")
+        from app.models.kyc_waiver import KycRequirementWaiver
+        linha = KycRequirementWaiver(owner_id=novo.id, **dados.kyc_waivers.as_dict())
+        db.add(linha)
+        db.flush()
+        kyc_verificacao.reavaliar_convidado_com_dispensas(db, novo, admin_id=admin.id)
     db.add(AuditLog(
         user_id=admin.id, action="criar_usuario", entity="user",
         entity_id=str(novo.id),
-        detail={"email": email, "role": dados.role, "tipo_acesso": dados.tipo_acesso},
+        detail={
+            "email": email, "role": dados.role, "tipo_acesso": dados.tipo_acesso,
+            "kyc_waivers": dados.kyc_waivers.as_dict() if dados.kyc_waivers is not None else None,
+        },
     ))
     db.commit()
     return {
@@ -495,7 +519,12 @@ def alternar_convidado(
     alvo = db.get(User, user_id)
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if convidado and alvo.investidor:
+        raise HTTPException(status_code=409, detail="Investidor e Convidado são tipos de acesso mutuamente exclusivos.")
     alvo.convidado = convidado
+    db.flush()
+    if convidado:
+        kyc_verificacao.reavaliar_convidado_com_dispensas(db, alvo, admin_id=admin.id)
     db.add(AuditLog(
         user_id=admin.id, action="guest_access_granted" if convidado else "guest_access_revoked",
         entity="user", entity_id=str(alvo.id), detail={"email": alvo.email},
@@ -504,16 +533,79 @@ def alternar_convidado(
     return {"id": alvo.id, "convidado": alvo.convidado}
 
 
+def _dump_kyc_waivers(db: Session, user_id: int) -> dict[str, bool]:
+    from app.models.kyc_waiver import KycRequirementWaiver
+    linha = db.get(KycRequirementWaiver, user_id)
+    if linha is None:
+        return {campo: False for campo in kyc_verificacao.WAIVER_FIELDS}
+    return {campo: bool(getattr(linha, campo)) for campo in kyc_verificacao.WAIVER_FIELDS}
+
+
+@router.get("/users/{user_id}/kyc-waivers")
+def obter_kyc_waivers(
+    user_id: int, db: Session = Depends(get_db), _=Depends(require_admin),
+):
+    alvo = db.get(User, user_id)
+    if alvo is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    return {"user_id": alvo.id, "convidado": alvo.convidado, "waivers": _dump_kyc_waivers(db, alvo.id)}
+
+
+@router.put("/users/{user_id}/kyc-waivers")
+def configurar_kyc_waivers(
+    user_id: int, dados: KycWaiversPayload,
+    db: Session = Depends(get_db), admin=Depends(require_admin),
+):
+    """Configura dispensas individuais de KYC para um Convidado.
+
+    A alteração é reavaliada imediatamente no backend: se todos os requisitos
+    remanescentes já estiverem satisfeitos, o KYC termina em ``aprovado``;
+    retirar uma dispensa que torne um documento ausente obrigatório reabre o
+    gate com ``reenvio_solicitado``.
+    """
+    from app.models.kyc_waiver import KycRequirementWaiver
+
+    alvo = db.get(User, user_id)
+    if alvo is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if alvo.investidor:
+        raise HTTPException(status_code=409, detail="Investidor não participa do fluxo de KYC.")
+    if not alvo.convidado:
+        raise HTTPException(status_code=409, detail="Dispensas KYC individuais são exclusivas de contas Convidado.")
+
+    valores = dados.as_dict()
+    linha = db.get(KycRequirementWaiver, alvo.id)
+    if linha is None:
+        linha = KycRequirementWaiver(owner_id=alvo.id, **valores)
+        db.add(linha)
+    else:
+        for campo, valor in valores.items():
+            setattr(linha, campo, valor)
+    db.flush()
+    registro = kyc_verificacao.reavaliar_convidado_com_dispensas(db, alvo, admin_id=admin.id)
+    db.add(AuditLog(
+        user_id=admin.id, action="kyc_waivers_updated", entity="user",
+        entity_id=str(alvo.id), detail={"waivers": valores, "kyc_status": registro.status if registro else None},
+    ))
+    db.commit()
+    return {
+        "user_id": alvo.id,
+        "convidado": True,
+        "waivers": _dump_kyc_waivers(db, alvo.id),
+        "kyc_status": registro.status if registro else None,
+    }
+
+
 @router.patch("/users/{user_id}/investidor")
 def alternar_investidor(
     user_id: int, investidor: bool, db: Session = Depends(get_db), admin=Depends(require_admin)
 ):
-    """Marca/desmarca uma conta como investidor (issue #52) — acesso
-    cortesia de demonstração via `tem_acesso_ao_produto()`, sem checkout,
-    sem cobrança. Nunca eleva `role` (não vira admin), nunca exige KYC
-    (`_kyc_required` trata investidor como isento — ver app/api/auth.py).
-    Reversível a qualquer momento; desmarcar remove o acesso administrativo
-    a menos que o usuário também tenha assinatura paga em dia."""
+    """Marca/desmarca uma conta como Investidor.
+
+    É acesso de demonstração global somente leitura, sem checkout, cobrança,
+    perfil ou KYC. Nunca eleva `role`; ao conceder, as invariantes do modelo
+    fixam senha CorVIAOS, status aprovado, convidado=False e tour pendente.
+    """
     from app.models.user import User
 
     alvo = db.get(User, user_id)

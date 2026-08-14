@@ -12,12 +12,32 @@ import SelfieAoVivo from "../components/SelfieAoVivo";
  * esperando a revisão manual do Rafael — esta tela só reflete o que
  * `GET /api/kyc/status` diz, nunca decide por conta própria. */
 
+type KycWaiverConfig = {
+  professional_front: boolean;
+  professional_back: boolean;
+  personal_front: boolean;
+  personal_back: boolean;
+  personal_digital: boolean;
+  selfie: boolean;
+};
+
+const SEM_DISPENSAS: KycWaiverConfig = {
+  professional_front: false,
+  professional_back: false,
+  personal_front: false,
+  personal_back: false,
+  personal_digital: false,
+  selfie: false,
+};
+
 type StatusKyc = {
   status: string | null;
   liberado: boolean;
   conselho_check_status?: string | null;
   criado_em?: string | null;
   nota_revisao?: string | null;
+  waivers?: KycWaiverConfig;
+  requirements?: KycWaiverConfig;
 };
 
 type TipoDocumentoPessoal = "fotos" | "digital";
@@ -51,16 +71,16 @@ const MENSAGEM_POR_STATUS: Record<string, { titulo: string; corpo: string; tom: 
     tom: "alerta",
     corpo: "Alguma informação ou documento não pôde ser confirmado. Reveja a nota abaixo e envie novamente.",
   },
+  reenvio_solicitado: {
+    titulo: "Complete os requisitos restantes",
+    tom: "alerta",
+    corpo: "A configuração de requisitos mudou ou um item precisa ser reenviado. Envie somente o que continua obrigatório.",
+  },
 };
 
-/** Convidado e investidor (13/08/2026, pedido do Rafael) nunca dependem de
- * revisão administrativa — `submeter()` no backend já garante que uma
- * submissão válida termina sempre em "aprovado", nunca em
- * "aguardando_revisao"/"liberado_*". Por isso a mensagem para os dois tipos
- * é fixa e nunca menciona "administrador vai revisar"/"aguardando
- * confirmação manual"/"em análise"/"revisão final" — mesmo no caso raro de
- * um registro LEGADO (anterior a esta correção) ainda estar num desses
- * status, o texto abaixo continua não fazendo essa menção. */
+/** Convidado nunca depende de revisão administrativa: uma submissão que
+ * satisfaz todos os requisitos não dispensados termina automaticamente em
+ * aprovado. Investidor não entra nesta tela, pois não participa do KYC. */
 function mensagemPara(status: StatusKyc, ehAcessoAutomatico: boolean) {
   if (ehAcessoAutomatico) {
     if (status.status === "aprovado" || status.liberado) {
@@ -70,8 +90,8 @@ function mensagemPara(status: StatusKyc, ehAcessoAutomatico: boolean) {
         corpo: "Identidade confirmada. Seu acesso ao CorVIA foi liberado automaticamente.",
       };
     }
-    if (status.status === "rejeitado") {
-      return MENSAGEM_POR_STATUS.rejeitado;
+    if (status.status === "rejeitado" || status.status === "reenvio_solicitado") {
+      return MENSAGEM_POR_STATUS[status.status];
     }
     return {
       titulo: "Confirmando sua identidade",
@@ -93,7 +113,7 @@ function Cartao({ status, ehAcessoAutomatico, aoContinuar, aoReenviar }: {
     <div className="cartao">
       <h1 style={{ fontSize: "1.2rem", margin: "0 0 0.4rem", color: cor }}>{info.titulo}</h1>
       <p style={{ margin: "0 0 0.8rem" }}>{info.corpo}</p>
-      {status.status === "rejeitado" && status.nota_revisao && (
+      {(status.status === "rejeitado" || status.status === "reenvio_solicitado") && status.nota_revisao && (
         <p style={{
           background: "var(--fundo-alerta, #FBEAEA)", borderRadius: 6, padding: "0.6rem 0.8rem",
           fontSize: "0.88rem", margin: "0 0 0.8rem",
@@ -106,17 +126,18 @@ function Cartao({ status, ehAcessoAutomatico, aoContinuar, aoReenviar }: {
           {ehAcessoAutomatico ? "Entrar no CorVIA" : "Continuar"}
         </button>
       )}
-      {status.status === "rejeitado" && (
-        <button className="botao" style={{ width: "100%" }} onClick={aoReenviar}>Reenviar documentos</button>
+      {(status.status === "rejeitado" || status.status === "reenvio_solicitado") && (
+        <button className="botao" style={{ width: "100%" }} onClick={aoReenviar}>Enviar requisitos pendentes</button>
       )}
     </div>
   );
 }
 
-type TipoConta = "normal" | "convidado" | "investidor";
+type TipoConta = "normal" | "convidado";
 
-function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: () => void }) {
-  const ehInvestidor = tipoConta === "investidor";
+function Formulario({ tipoConta, waivers, aoEnviar }: {
+  tipoConta: TipoConta; waivers: KycWaiverConfig; aoEnviar: () => void;
+}) {
   const [tipoPessoal, setTipoPessoal] = useState<TipoDocumentoPessoal>("fotos");
   const [docProfFrente, setDocProfFrente] = useState<File | null>(null);
   const [docProfVerso, setDocProfVerso] = useState<File | null>(null);
@@ -127,21 +148,24 @@ function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: (
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState("");
 
-  const documentoPessoalCompleto = tipoPessoal === "fotos"
-    ? !!docPessoalFrente && !!docPessoalVerso
-    : !!docPessoalDigital;
-  // Investidor (13/08/2026, KYC pessoal simplificado) nunca precisa do
-  // documento profissional — nem exige, nem mostra o campo abaixo.
-  const documentoProfissionalCompleto = ehInvestidor || (!!docProfFrente && !!docProfVerso);
-  const pronto = documentoProfissionalCompleto && !!selfie && documentoPessoalCompleto;
+  const fotosPessoaisCompletas =
+    (waivers.personal_front || !!docPessoalFrente) &&
+    (waivers.personal_back || !!docPessoalVerso);
+  const documentoDigitalCompleto = waivers.personal_digital || !!docPessoalDigital;
+  const documentoPessoalCompleto = fotosPessoaisCompletas || documentoDigitalCompleto;
+  const documentoProfissionalCompleto =
+    (waivers.professional_front || !!docProfFrente) &&
+    (waivers.professional_back || !!docProfVerso);
+  const selfieCompleta = waivers.selfie || !!selfie;
+  const pronto = documentoProfissionalCompleto && selfieCompleta && documentoPessoalCompleto;
 
   async function enviar() {
     setErro("");
     setEnviando(true);
     try {
       await api.uploadMultiplo("/kyc/submeter", {
-        doc_profissional_frente: ehInvestidor ? null : docProfFrente,
-        doc_profissional_verso: ehInvestidor ? null : docProfVerso,
+        doc_profissional_frente: docProfFrente,
+        doc_profissional_verso: docProfVerso,
         selfie,
         doc_pessoal_frente: tipoPessoal === "fotos" ? docPessoalFrente : null,
         doc_pessoal_verso: tipoPessoal === "fotos" ? docPessoalVerso : null,
@@ -155,9 +179,7 @@ function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: (
     }
   }
 
-  const titulo = ehInvestidor
-    ? "Confirme sua identidade"
-    : tipoConta === "convidado"
+  const titulo = tipoConta === "convidado"
     ? "Confirme seus dados e sua identidade"
     : "Confirme sua identidade profissional";
 
@@ -170,19 +192,16 @@ function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: (
         só por quem administra a Corvia.
       </p>
 
-      {!ehInvestidor && (
-        <>
-          <CampoArquivo
-            rotulo="Documento profissional — frente"
-            descricao="Carteira do conselho de classe, válida em todo o território nacional."
-            valor={docProfFrente} onSelecionar={setDocProfFrente}
-          />
-          <CampoArquivo
-            rotulo="Documento profissional — verso"
-            valor={docProfVerso} onSelecionar={setDocProfVerso}
-          />
-        </>
-      )}
+      {!waivers.professional_front ? (
+        <CampoArquivo
+          rotulo="Documento profissional — frente"
+          descricao="Carteira do conselho de classe, válida em todo o território nacional."
+          valor={docProfFrente} onSelecionar={setDocProfFrente}
+        />
+      ) : <Dispensado rotulo="Documento profissional — frente" />}
+      {!waivers.professional_back ? (
+        <CampoArquivo rotulo="Documento profissional — verso" valor={docProfVerso} onSelecionar={setDocProfVerso} />
+      ) : <Dispensado rotulo="Documento profissional — verso" />}
 
       <div style={{ marginTop: "1rem" }}>
         <label style={{ display: "block", marginBottom: "0.4rem" }}>Documento pessoal</label>
@@ -198,19 +217,25 @@ function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: (
         </div>
         {tipoPessoal === "fotos" ? (
           <>
-            <CampoArquivo rotulo="Frente" valor={docPessoalFrente} onSelecionar={setDocPessoalFrente} />
-            <CampoArquivo rotulo="Verso" valor={docPessoalVerso} onSelecionar={setDocPessoalVerso} />
+            {!waivers.personal_front
+              ? <CampoArquivo rotulo="Frente" valor={docPessoalFrente} onSelecionar={setDocPessoalFrente} />
+              : <Dispensado rotulo="Documento pessoal — frente" />}
+            {!waivers.personal_back
+              ? <CampoArquivo rotulo="Verso" valor={docPessoalVerso} onSelecionar={setDocPessoalVerso} />
+              : <Dispensado rotulo="Documento pessoal — verso" />}
           </>
-        ) : (
+        ) : !waivers.personal_digital ? (
           <CampoArquivo
             rotulo="PDF do documento digital" aceitar="application/pdf"
             descricao="Baixado do app gov.br ou do app CNH Digital."
             valor={docPessoalDigital} onSelecionar={setDocPessoalDigital}
           />
-        )}
+        ) : <Dispensado rotulo="Documento pessoal digital (PDF)" />}
       </div>
 
-      <SelfieAoVivo arquivo={selfie} onCapturar={setSelfie} onLimpar={() => setSelfie(null)} />
+      {!waivers.selfie
+        ? <SelfieAoVivo arquivo={selfie} onCapturar={setSelfie} onLimpar={() => setSelfie(null)} />
+        : <Dispensado rotulo="Selfie ao vivo" />}
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem", marginTop: "0.8rem" }}>{erro}</p>}
 
@@ -218,6 +243,15 @@ function Formulario({ tipoConta, aoEnviar }: { tipoConta: TipoConta; aoEnviar: (
               disabled={!pronto || enviando} onClick={enviar}>
         {enviando ? "Enviando…" : "Enviar para verificação"}
       </button>
+    </div>
+  );
+}
+
+function Dispensado({ rotulo }: { rotulo: string }) {
+  return (
+    <div style={{ marginTop: "0.6rem", padding: "0.55rem 0.7rem", border: "1px solid var(--borda)", borderRadius: 7 }}>
+      <span className="selo selo--revisado">Dispensado pelo administrador</span>
+      <span style={{ marginLeft: 7, fontSize: "0.86rem" }}>{rotulo}</span>
     </div>
   );
 }
@@ -251,7 +285,7 @@ export default function VerificacaoIdentidade() {
     try {
       const s = await api.get<StatusKyc>("/kyc/status");
       setStatus(s);
-      setMostrarFormulario(!s.status || s.status === "rejeitado");
+      setMostrarFormulario(!s.status || s.status === "rejeitado" || s.status === "reenvio_solicitado");
     } finally {
       setCarregando(false);
     }
@@ -269,11 +303,14 @@ export default function VerificacaoIdentidade() {
 
   if (carregando) return <p className="eyebrow">Carregando…</p>;
 
-  // Convidado/investidor (13/08/2026) — nunca dependem de aprovação
-  // administrativa; ver `mensagemPara`/`Cartao` acima e `Formulario` abaixo,
-  // os dois já cientes do tipo de conta.
-  const tipoConta: TipoConta = usuario?.investidor ? "investidor" : usuario?.convidado ? "convidado" : "normal";
-  const ehAcessoAutomatico = tipoConta !== "normal";
+  // Investidor nunca participa do KYC; este ramo é apenas defesa contra
+  // navegação manual para a rota enquanto a sessão de demonstração estiver ativa.
+  if (usuario?.investidor) {
+    return <p className="eyebrow">Modo Investidor não exige verificação de identidade.</p>;
+  }
+  const tipoConta: TipoConta = usuario?.convidado ? "convidado" : "normal";
+  const ehAcessoAutomatico = tipoConta === "convidado";
+  const waivers = status?.waivers ?? SEM_DISPENSAS;
 
   return (
     <div className="pagina" style={{ maxWidth: 560 }}>
@@ -285,10 +322,10 @@ export default function VerificacaoIdentidade() {
           />
         </div>
       )}
-      {mostrarFormulario && <Formulario tipoConta={tipoConta} aoEnviar={recarregarStatus} />}
+      {mostrarFormulario && <Formulario tipoConta={tipoConta} waivers={waivers} aoEnviar={recarregarStatus} />}
       <p className="eyebrow" style={{ marginTop: "1rem" }}>
-        Olá, {usuario?.full_name?.split(" ")[0]} — esta etapa é obrigatória para todos os assinantes,
-        independente da profissão ou do plano.
+        Olá, {usuario?.full_name?.split(" ")[0]} — esta etapa se aplica a contas reais sujeitas ao KYC;
+        requisitos individualmente dispensados pelo administrador não precisam ser enviados.
       </p>
     </div>
   );

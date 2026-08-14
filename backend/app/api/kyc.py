@@ -12,6 +12,7 @@ from app.core.security import current_user
 from app.core.uploads import UploadRejected, validate_file
 from app.models.kyc import KycVerification
 from app.models.user import User
+from app.services.investidor_demo import MENSAGEM_MODO_INVESTIDOR
 from app.services.kyc import verificacao
 
 router = APIRouter(prefix="/api/kyc", tags=["verificação de identidade"])
@@ -38,9 +39,15 @@ async def _ler(arquivo: UploadFile | None) -> bytes | None:
     return conteudo
 
 
-def _status_publico(registro: KycVerification | None) -> dict:
+def _status_publico(registro: KycVerification | None, *, waivers: dict[str, bool] | None = None) -> dict:
+    extras = {}
+    if waivers is not None:
+        extras = {
+            "waivers": waivers,
+            "requirements": {campo: not ativo for campo, ativo in waivers.items()},
+        }
     if registro is None:
-        return {"status": None, "liberado": False}
+        return {"status": None, "liberado": False, **extras}
     return {
         "status": registro.status,
         "liberado": verificacao.liberado_para_uso(registro),
@@ -53,17 +60,21 @@ def _status_publico(registro: KycVerification | None) -> dict:
         "nota_revisao": (
             registro.nota_revisao if registro.status in ("rejeitado", "reenvio_solicitado") else None
         ),
+        **extras,
     }
 
 
 @router.get("/status")
 def meu_status(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    return _status_publico(verificacao.obter(db, user))
+    return _status_publico(
+        verificacao.obter(db, user),
+        waivers=verificacao.dispensas_aplicaveis(db, user) if user.convidado else None,
+    )
 
 
 @router.post("/submeter", status_code=201)
 async def submeter_verificacao(
-    selfie: UploadFile = File(...),
+    selfie: UploadFile | None = File(None),
     doc_profissional_frente: UploadFile | None = File(None),
     doc_profissional_verso: UploadFile | None = File(None),
     doc_pessoal_frente: UploadFile | None = File(None),
@@ -72,12 +83,14 @@ async def submeter_verificacao(
     db: Session = Depends(get_db),
     user: User = Depends(current_user),
 ):
-    """Documento profissional é opcional NA ASSINATURA HTTP desde
-    13/08/2026 (matriz convidado/investidor pedida pelo Rafael) — investidor
-    não envia documento profissional (KYC pessoal simplificado: só documento
-    pessoal + selfie). A exigência dinâmica por tipo de conta é aplicada
-    logo abaixo: continua obrigatório para convidado e assinante normal,
-    exatamente como antes."""
+    """Submete KYC apenas para contas reais.
+
+    Investidor é demonstração sem KYC e recebe 403 também aqui, além da
+    barreira global do middleware, para defesa em profundidade.
+    """
+    if user.investidor:
+        raise HTTPException(status_code=403, detail=MENSAGEM_MODO_INVESTIDOR)
+
     docs = verificacao.DocumentosSubmissao(
         doc_profissional_frente=await _ler(doc_profissional_frente),
         doc_profissional_verso=await _ler(doc_profissional_verso),
@@ -86,22 +99,17 @@ async def submeter_verificacao(
         doc_pessoal_verso=await _ler(doc_pessoal_verso),
         doc_pessoal_digital=await _ler(doc_pessoal_digital),
     )
-    if not docs.selfie:
-        raise HTTPException(status_code=422, detail="Selfie ao vivo é obrigatória.")
-    if not user.investidor and (not docs.doc_profissional_frente or not docs.doc_profissional_verso):
-        raise HTTPException(status_code=422, detail="Documento profissional (frente e verso) é obrigatório.")
-    if user.investidor and (docs.doc_profissional_frente or docs.doc_profissional_verso):
-        # Não é erro do titular — só não faz sentido guardar documento
-        # profissional de uma conta que, por desenho, nunca deveria ter
-        # esse campo exigido nem exibido no frontend. Ignora em silêncio em
-        # vez de rejeitar, para não travar quem por algum motivo enviou.
-        docs.doc_profissional_frente = None
-        docs.doc_profissional_verso = None
-
     try:
         registro = verificacao.submeter(db, user, docs)
-    except verificacao.DocumentoPessoalIncompleto as exc:
+    except (
+        verificacao.DocumentoPessoalIncompleto,
+        verificacao.DocumentoProfissionalIncompleto,
+        verificacao.SelfieObrigatoria,
+    ) as exc:
         db.rollback()
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     db.commit()
-    return _status_publico(registro)
+    return _status_publico(
+        registro,
+        waivers=verificacao.dispensas_aplicaveis(db, user) if user.convidado else None,
+    )

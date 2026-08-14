@@ -266,8 +266,8 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
         </p>
       )}
 
-      {/* Investidor (13/08/2026, KYC pessoal simplificado) não tem — nem
-         exige — identificação profissional nenhuma: nunca é médico
+      {/* Investidor é demonstração somente leitura e não participa de perfil/KYC;
+         não tem identificação profissional: nunca é médico
          credenciado, é conta de avaliação do produto. Todo este bloco some
          por completo para ele, do título de tratamento até o local de
          trabalho; convidado e assinante normal continuam vendo tudo. */}
