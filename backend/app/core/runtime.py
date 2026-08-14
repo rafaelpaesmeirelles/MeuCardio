@@ -77,11 +77,18 @@ def validar_configuracao_de_execucao(settings) -> None:
         erros.append("SMTP_HOST/SMTP_USER/SMTP_PASSWORD são obrigatórios em produção")
 
     smtp_from = (getattr(settings, "smtp_from", "") or "").lower()
+    smtp_host = (getattr(settings, "smtp_host", "") or "").strip().lower()
     smtp_user = (getattr(settings, "smtp_user", "") or "").strip().lower()
     if EMAIL_TRANSACIONAL_CANONICO not in smtp_from:
         erros.append("SMTP_FROM deve usar contato@corvia.med.br")
-    if smtp_user != EMAIL_TRANSACIONAL_CANONICO:
-        erros.append("SMTP_USER deve autenticar a conta contato@corvia.med.br")
+
+    # O endereço visível/remetente e a identidade usada para autenticar no
+    # servidor SMTP são conceitos diferentes. Provedores de relay podem exigir
+    # um usuário técnico. A Resend, por exemplo, autentica com usuário literal
+    # ``resend`` e a API key como senha; o remetente continua sendo a conta
+    # verificada ``contato@corvia.med.br`` via SMTP_FROM.
+    if smtp_host == "smtp.resend.com" and smtp_user != "resend":
+        erros.append("SMTP_USER deve ser resend quando SMTP_HOST=smtp.resend.com")
 
     if erros:
         detalhes = "\n".join(f"- {erro}" for erro in erros)
