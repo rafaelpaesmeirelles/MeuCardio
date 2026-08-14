@@ -2,8 +2,30 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import Icone from "../components/Icone";
-import GrafoConstelacao from "../components/GrafoConstelacao";
+import PreHomeBrand from "../components/PreHomeBrand";
 import "../styles/login.css";
+import "../styles/prehome-canonical.css";
+
+const BENEFICIOS = [
+  {
+    icon: "check" as const,
+    title: "Acesso protegido",
+    detail: "O link seguro é entregue somente ao canal externo configurado para a conta.",
+    tone: "cyan" as const,
+  },
+  {
+    icon: "conta" as const,
+    title: "Exclusivo para você",
+    detail: "O token é temporário, de uso único e vinculado à sua conta profissional.",
+    tone: "violet" as const,
+  },
+  {
+    icon: "sincronizar" as const,
+    title: "Seu ambiente, seus dados",
+    detail: "A recuperação não depende da caixa CorVIA e não revela se uma conta existe.",
+    tone: "green" as const,
+  },
+];
 
 export default function EsqueciSenha() {
   const [email, setEmail] = useState("");
@@ -23,62 +45,63 @@ export default function EsqueciSenha() {
   }
 
   return (
-    <main className="login login--recovery">
-      <section className="login-vitrine" aria-labelledby="recovery-vitrine-titulo">
-        <div className="login-vitrine__luz login-vitrine__luz--um" aria-hidden="true" />
-        <div className="login-vitrine__luz login-vitrine__luz--dois" aria-hidden="true" />
-        <Link to="/" className="login-vitrine__marca" aria-label="CorVIA — página inicial">
-          <img src="/corvia-logo.png" alt="CorVIA" />
-          <small>Clinical OS do médico</small>
-        </Link>
-        <div className="login-vitrine__conteudo">
-          <h1 id="recovery-vitrine-titulo">Recupere o acesso.<br /><em>Sem depender da caixa CorVIA.</em></h1>
-          <p className="login-vitrine__descricao">
-            O segundo e-mail existe justamente para continuar acessível quando o login ou o CorVIA Mail não estiverem disponíveis.
-          </p>
-          <GrafoConstelacao variante="escuro" className="login-vitrine__grafo" />
-          <ul className="login-vitrine__beneficios">
-            <li><Icone nome="check" aria-hidden="true" />Link de redefinição de uso único</li>
-            <li><Icone nome="check" aria-hidden="true" />Entrega no canal externo cadastrado</li>
-            <li><Icone nome="check" aria-hidden="true" />Senha nunca enviada por e-mail</li>
-          </ul>
-        </div>
-        <footer className="login-vitrine__rodape"><span>CorVIA — Clinical OS do médico</span><span>Acesso protegido</span></footer>
-      </section>
+    <main className="login prehome prehome--recovery">
+      <PreHomeBrand
+        title={<>Recupere seu acesso com <strong>segurança</strong></>}
+        description={<>Retome o controle do seu Clinical Command Center com um fluxo independente, protegido e rastreável.</>}
+        benefits={BENEFICIOS}
+        trustTitle="Segurança que protege o que importa"
+        trustText="Seu acesso profissional e os dados do seu ambiente permanecem protegidos."
+      />
 
-      <section className="login-acesso" aria-labelledby="recovery-titulo">
-        <div className="login-acesso__topo">
-          <Link to="/" aria-label="CorVIA — início"><img src="/corvia-logo-compacta.png" alt="CorVIA" /></Link>
-          <Link to="/entrar" className="login-acesso__conhecer"><span>Voltar ao login</span><Icone nome="seta" aria-hidden="true" /></Link>
-        </div>
-
-        <div className="login-acesso__conteudo">
-          <div className="login-acesso__introducao">
-            <p className="eyebrow">Segurança da conta</p>
-            <h2 id="recovery-titulo">Redefinir sua senha.</h2>
-            <p>Informe o e-mail de login ou o segundo e-mail de recuperação cadastrado.</p>
-          </div>
+      <section className="prehome-access" aria-labelledby="recovery-titulo">
+        <div className="prehome-card">
+          <header className="prehome-card__header">
+            <p className="prehome-card__eyebrow"><Icone nome="sincronizar" /> Segurança da conta</p>
+            <h2 id="recovery-titulo">Esqueci minha senha</h2>
+            <p>
+              Informe o e-mail da sua conta de acesso ou o segundo e-mail cadastrado.
+              Se houver uma conta ativa, enviaremos o link ao canal externo seguro.
+            </p>
+          </header>
 
           {enviado ? (
-            <div className="login-confirmacao">
-              <div className="login-confirmacao__selo"><Icone nome="check" aria-hidden="true" width={24} height={24} /></div>
+            <div className="prehome-confirmation" role="status">
+              <div className="prehome-confirmation__icon"><Icone nome="check" /></div>
               <h2>Confira seu canal de recuperação</h2>
               <p>
-                Se o endereço estiver vinculado a uma conta ativa, enviamos um link de redefinição ao canal seguro cadastrado. O link vale por 1 hora.
+                Se o endereço estiver vinculado a uma conta ativa, o link de redefinição foi enviado ao canal seguro cadastrado. Ele vale por tempo limitado e é de uso único.
               </p>
-              <p className="login-formulario__secao-nota">
-                Não recebeu? Verifique spam/lixo eletrônico. Se continuar sem chegar, contate contato@corvia.med.br.
-              </p>
-              <Link to="/entrar" className="login-formulario__entrar" style={{ width: "fit-content" }}><span>Voltar ao login</span><Icone nome="seta" /></Link>
+              <div className="prehome-info">
+                <Icone nome="mail" />
+                <p>Não recebeu? Verifique spam ou lixo eletrônico. Se continuar sem chegar, fale com contato@corvia.med.br.</p>
+              </div>
+              <Link to="/entrar" className="prehome-primary"><span>Voltar ao login</span><Icone nome="seta" /></Link>
             </div>
           ) : (
             <form className="login-formulario" onSubmit={enviar}>
-              <div className="login-formulario__secao">
-                <div className="login-campo">
-                  <label htmlFor="email">E-mail de login ou recuperação</label>
-                  <input id="email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="nome@exemplo.com" required autoFocus />
-                </div>
+              <div className="login-campo">
+                <label htmlFor="email">E-mail</label>
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="seu@email.com"
+                  required
+                  autoFocus
+                />
               </div>
+
+              <div className="prehome-info">
+                <Icone nome="check" />
+                <p>
+                  <strong>Por que pedimos seu e-mail?</strong><br />
+                  Para localizar a conta sem expor sua existência e encaminhar a recuperação somente para o canal externo protegido.
+                </p>
+              </div>
+
               <button className="login-formulario__entrar" type="submit" disabled={!email.includes("@") || enviando}>
                 <span>{enviando ? "Solicitando…" : "Enviar link de redefinição"}</span>
                 {!enviando && <Icone nome="seta" aria-hidden="true" />}
@@ -87,13 +110,23 @@ export default function EsqueciSenha() {
             </form>
           )}
 
-          <p className="login-acesso__seguranca"><Icone nome="check" aria-hidden="true" /> A resposta é deliberadamente igual para endereços existentes e inexistentes.</p>
+          {!enviado && (
+            <div className="prehome-card__actions">
+              <div className="prehome-divider">ou</div>
+              <Link to="/entrar" className="prehome-secondary">← Voltar ao login</Link>
+              <a href="mailto:contato@corvia.med.br" className="prehome-link" style={{ textAlign: "center" }}>
+                Preciso de ajuda com meu acesso
+              </a>
+            </div>
+          )}
+
+          <footer className="prehome-card__footer"><Icone nome="check" /> Ambiente seguro para uso profissional</footer>
         </div>
 
-        <footer className="login-acesso__rodape">
-          <span>© {new Date().getFullYear()} CorVIA</span>
-          <nav aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
-        </footer>
+        <nav className="prehome-legal" aria-label="Links institucionais">
+          <Link to="/privacidade">Privacidade</Link>
+          <Link to="/termos">Termos</Link>
+        </nav>
       </section>
     </main>
   );
