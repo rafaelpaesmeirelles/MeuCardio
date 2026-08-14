@@ -1,27 +1,29 @@
 """Instagram opcional no cadastro (tarefa #43, 08/08/2026).
 
-Cobre: o campo é opcional e normalizado em `POST /auth/solicitar-acesso`; a
-busca best-effort da foto pública (`app/services/instagram_profile.py`)
-nunca sai para a rede de verdade nos testes (monkeypatch), e cobre os
-caminhos de sucesso, perfil privado/inexistente e falha de rede — em nenhum
-deles o cadastro é afetado.
+Cobre: o campo é opcional e normalizado no cadastro canônico com recuperação;
+a busca best-effort da foto pública nunca sai para a rede de verdade nos testes,
+e nenhuma falha dela pode afetar a criação da conta.
 """
 from app.models.user import User
 from app.services import instagram_profile
+
+
+CADASTRO = "/api/auth/solicitar-acesso-com-recuperacao"
 
 
 def _payload(**overrides):
     base = dict(
         full_name="Ana Paula Souza", birth_date="1985-03-20", cpf="111.444.777-35",
         profession="Médica", council_name="CRM", council_number="55555", council_state="SP",
-        email="ana@teste.local", password="senha-forte-123",
+        email="ana@teste.local", recovery_email="ana.recuperacao@externo.test",
+        password="senha-forte-123",
     )
     base.update(overrides)
     return base
 
 
 def test_instagram_handle_e_opcional(client, db):
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload())
+    resp = client.post(CADASTRO, json=_payload())
     assert resp.status_code == 201, resp.text
     user = db.query(User).filter(User.email == "ana@teste.local").first()
     assert user.instagram_handle is None
@@ -30,8 +32,9 @@ def test_instagram_handle_e_opcional(client, db):
 
 def test_instagram_handle_normaliza_arroba_e_espacos(client, db, monkeypatch):
     monkeypatch.setattr(instagram_profile, "_baixar_foto_publica", lambda handle: None)
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload(
+    resp = client.post(CADASTRO, json=_payload(
         instagram_handle="  @dra.ana_paula  ", email="ana2@teste.local",
+        recovery_email="ana2.recuperacao@externo.test",
     ))
     assert resp.status_code == 201, resp.text
     user = db.query(User).filter(User.email == "ana2@teste.local").first()
@@ -39,25 +42,22 @@ def test_instagram_handle_normaliza_arroba_e_espacos(client, db, monkeypatch):
 
 
 def test_instagram_handle_com_caractere_invalido_e_rejeitado(client):
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload(
+    resp = client.post(CADASTRO, json=_payload(
         instagram_handle="usuario com espaço", email="ana3@teste.local",
+        recovery_email="ana3.recuperacao@externo.test",
     ))
     assert resp.status_code == 422
 
 
 def test_instagram_handle_muito_longo_e_rejeitado(client):
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload(
+    resp = client.post(CADASTRO, json=_payload(
         instagram_handle="a" * 31, email="ana4@teste.local",
+        recovery_email="ana4.recuperacao@externo.test",
     ))
     assert resp.status_code == 422
 
 
 def test_cadastro_com_handle_busca_foto_em_segundo_plano_e_salva(client, db, monkeypatch, tmp_path):
-    """TestClient roda BackgroundTasks de forma síncrona antes de devolver a
-    resposta — por isso o monkeypatch abaixo troca só a chamada de rede
-    (`_baixar_foto_publica`), nunca `buscar_e_salvar_foto` em si, garantindo
-    que o resto do pipeline real (validação de imagem, escrita em disco,
-    persistência no banco) é exercitado de verdade."""
     monkeypatch.setattr(instagram_profile.settings, "uploads_dir", str(tmp_path))
 
     pixel_jpeg = bytes.fromhex(
@@ -69,8 +69,9 @@ def test_cadastro_com_handle_busca_foto_em_segundo_plano_e_salva(client, db, mon
     )
     monkeypatch.setattr(instagram_profile, "_baixar_foto_publica", lambda handle: pixel_jpeg)
 
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload(
+    resp = client.post(CADASTRO, json=_payload(
         instagram_handle="dra.ana", email="ana5@teste.local",
+        recovery_email="ana5.recuperacao@externo.test",
     ))
     assert resp.status_code == 201, resp.text
 
@@ -84,14 +85,12 @@ def test_cadastro_com_handle_busca_foto_em_segundo_plano_e_salva(client, db, mon
 
 
 def test_cadastro_com_handle_e_busca_falhando_nao_afeta_cadastro(client, db, monkeypatch, tmp_path):
-    """Perfil privado, inexistente, endpoint fora do ar — qualquer falha da
-    busca best-effort não pode derrubar o cadastro nem deixar `photo_url`
-    inconsistente."""
     monkeypatch.setattr(instagram_profile.settings, "uploads_dir", str(tmp_path))
     monkeypatch.setattr(instagram_profile, "_baixar_foto_publica", lambda handle: None)
 
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload(
+    resp = client.post(CADASTRO, json=_payload(
         instagram_handle="perfil_privado_ou_inexistente", email="ana6@teste.local",
+        recovery_email="ana6.recuperacao@externo.test",
     ))
     assert resp.status_code == 201, resp.text
 
@@ -101,9 +100,6 @@ def test_cadastro_com_handle_e_busca_falhando_nao_afeta_cadastro(client, db, mon
 
 
 def test_baixar_foto_publica_devolve_none_em_erro_de_rede(monkeypatch):
-    """`_baixar_foto_publica` de verdade (não mockada) precisa engolir
-    qualquer exceção de rede — é o contrato que faz o resto do pipeline
-    poder tratar 'sem foto' e 'erro de rede' da mesma forma."""
     import httpx
 
     def _explode(*args, **kwargs):
@@ -133,14 +129,9 @@ def test_host_de_cdn_confiavel_aceita_dominios_da_meta():
 
 
 def test_host_de_cdn_confiavel_rejeita_dominio_arbitrario_ou_nao_https():
-    """Achado de auditoria (issue #52, subfase 8, defesa em profundidade):
-    `url_foto` vem do corpo da resposta do Instagram, não de um valor fixo
-    nosso — sem esta checagem, uma resposta inesperada (endpoint mudado,
-    comprometido) faria o servidor buscar QUALQUER destino que a resposta
-    contivesse."""
     assert not instagram_profile._host_de_cdn_confiavel("https://cdninstagram.com.attacker.test/x.jpg")
     assert not instagram_profile._host_de_cdn_confiavel("https://169.254.169.254/latest/meta-data/")
-    assert not instagram_profile._host_de_cdn_confiavel("http://cdninstagram.com/x.jpg")  # http, não https
+    assert not instagram_profile._host_de_cdn_confiavel("http://cdninstagram.com/x.jpg")
     assert not instagram_profile._host_de_cdn_confiavel("not-a-url")
     assert not instagram_profile._host_de_cdn_confiavel("")
 
@@ -163,8 +154,6 @@ def test_baixar_foto_publica_nao_busca_url_de_host_nao_confiavel(monkeypatch):
 
     monkeypatch.setattr(instagram_profile.httpx, "get", _get)
     assert instagram_profile._baixar_foto_publica("handle_qualquer") is None
-    # Só a chamada ao endpoint fixo do Instagram — a segunda chamada (buscar
-    # a própria imagem) nunca acontece contra um host não confiável.
     assert chamadas == [instagram_profile._ENDPOINT]
 
 
@@ -194,7 +183,9 @@ def test_baixar_foto_publica_busca_imagem_de_host_confiavel(monkeypatch):
 
 
 def test_perfil_expoe_instagram_handle_e_foto(client, db):
-    resp = client.post("/api/auth/solicitar-acesso", json=_payload(email="ana7@teste.local"))
+    resp = client.post(CADASTRO, json=_payload(
+        email="ana7@teste.local", recovery_email="ana7.recuperacao@externo.test"
+    ))
     assert resp.status_code == 201
 
     from app.core.security import create_access_token
