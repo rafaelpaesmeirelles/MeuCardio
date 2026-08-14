@@ -129,6 +129,38 @@ def test_sync_live_route_works_for_mail_only_account(client, db, criar_usuario, 
     assert any(c["componente"] == "mail" and c["ok"] for c in payload["componentes"])
 
 
+def test_legacy_sync_all_button_routes_through_same_mail_only_supervisor(
+    client, db, criar_usuario, monkeypatch,
+):
+    """A tela Agenda ainda usa o path histórico /sync-all. Enquanto ela é
+    migrada visualmente, o path precisa cair no supervisor novo e funcionar
+    para Yahoo em vez de tentar calendário e retornar read_not_supported."""
+    user, token = criar_usuario(email="sync.yahoo.legacy-button@teste.local")
+    _subscribe(db, user.id)
+    item = _yahoo(db, user)
+    chamadas = []
+    monkeypatch.setattr(
+        account_sync.yahoo_mail,
+        "diagnose",
+        lambda _cred: chamadas.append("mail") or {"ok": True},
+    )
+    monkeypatch.setattr(
+        account_sync,
+        "sync_integration",
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError("alias legado não deve chamar calendário Yahoo")),
+    )
+
+    response = client.post(
+        f"/api/agenda/integrations/{item.id}/sync-all?full=false",
+        headers=_headers(token),
+        json={},
+    )
+
+    assert response.status_code == 200
+    assert response.json()["ok"] is True
+    assert chamadas == ["mail"]
+
+
 def test_sync_live_is_tenant_scoped(client, db, criar_usuario, monkeypatch):
     owner, _ = criar_usuario(email="sync.owner@teste.local")
     outro, token_outro = criar_usuario(email="sync.outro@teste.local")
