@@ -36,6 +36,10 @@ services:
     environment:
       ENVIRONMENT: production
       DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
+      # Release Clinical OS: tools reais do Assistente Pessoal ficam disponíveis
+      # em produção, ainda condicionadas ao consentimento individual do médico
+      # (users.ia_ferramentas_consent_em) e bloqueadas para Investidor.
+      AI_ASSISTANT_TOOLS_ENABLED: "true"
     depends_on:
       db:
         condition: service_healthy
