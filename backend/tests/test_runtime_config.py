@@ -15,7 +15,8 @@ def _settings(**alteracoes):
         "database_url": "postgresql+psycopg://corvia:senha-banco-segura@db:5432/corvia",
         "storage_encryption_key": CHAVE_FERNET_VALIDA,
         "smtp_configurado": True,
-        "smtp_user": "contato@corvia.med.br",
+        "smtp_host": "smtp.resend.com",
+        "smtp_user": "resend",
         "smtp_from": "CorVIA <contato@corvia.med.br>",
     }
     valores.update(alteracoes)
@@ -58,6 +59,13 @@ def test_producao_recusa_smtp_ausente_ou_remetente_errado(monkeypatch):
     assert "contato@corvia.med.br" in mensagem
 
 
+def test_producao_resend_exige_usuario_tecnico_resend(monkeypatch):
+    monkeypatch.setenv("ENVIRONMENT", "production")
+    with pytest.raises(RuntimeError) as exc:
+        validar_configuracao_de_execucao(_settings(smtp_user="contato@corvia.med.br"))
+    assert "SMTP_USER deve ser resend" in str(exc.value)
+
+
 def test_producao_aceita_configuracao_segura(monkeypatch):
     monkeypatch.setenv("ENVIRONMENT", "production")
     validar_configuracao_de_execucao(_settings())
@@ -73,6 +81,7 @@ def test_desenvolvimento_mantem_defaults_locais(monkeypatch):
             database_url="postgresql+psycopg://meucardio:meucardio@db:5432/meucardio",
             storage_encryption_key="",
             smtp_configurado=False,
+            smtp_host="",
             smtp_user="",
             smtp_from="",
         )
