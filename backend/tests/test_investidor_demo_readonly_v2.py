@@ -43,19 +43,29 @@ def test_investidor_nasce_sem_perfil_sem_kyc_e_com_senha_fixa(client, db):
     assert corpo["onboarding_pendente"] is True
 
 
-def test_investidor_pode_concluir_tour_e_depois_ir_para_home(client, db):
+def test_investidor_conclui_tour_na_sessao_sem_persistir_no_banco(client, db):
     user, token = _investidor(db)
 
     resp = client.post("/api/auth/me/onboarding-concluido", headers=_headers(token))
     assert resp.status_code == 200, resp.text
+    assert resp.json() == {"onboarding_pendente": False}
 
     db.expire_all()
     atualizado = db.get(User, user.id)
-    assert atualizado.onboarding_visto is True
+    # Contrato absoluto de demonstração: concluir o tour não altera a conta.
+    assert atualizado.onboarding_visto is False
 
+    # A MESMA sessão/token, porém, recebe o estado efêmero e chega à Home.
     resp = client.get("/api/auth/me", headers=_headers(token))
     assert resp.status_code == 200
     assert resp.json()["onboarding_pendente"] is False
+
+    # Sem o cookie efêmero, o backend volta a refletir o estado persistente
+    # intacto. Isso prova que não transformamos a simulação em gravação oculta.
+    client.cookies.clear()
+    resp = client.get("/api/auth/me", headers=_headers(token))
+    assert resp.status_code == 200
+    assert resp.json()["onboarding_pendente"] is True
 
 
 def test_investidor_get_de_leitura_funciona_mas_put_operacional_e_403(client, db):
@@ -196,8 +206,6 @@ def test_converter_revoga_sessao_anterior_e_novo_login_corviaos_funciona(client,
     db.commit()
     db.refresh(user)
 
-    # A redefinição para a senha fixa é uma mudança de credencial real:
-    # sessions_valid_after invalida tokens emitidos antes da conversão.
     assert client.get("/api/auth/me", headers=_headers(token_antigo)).status_code == 401
 
     login = client.post(
