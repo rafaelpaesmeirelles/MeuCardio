@@ -14,6 +14,7 @@ from app.api import (
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
+from app.core.oauth_session_recovery import OAuthSessionRecoveryMiddleware
 from app.core.observability import ObservabilityMiddleware, configure_observability_logging
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
@@ -46,6 +47,12 @@ app.add_middleware(UploadSecurityMiddleware)
 app.add_middleware(CourseUploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
 app.add_middleware(ObservabilityMiddleware)
+# O round-trip OAuth acontece fora do domínio CorVIA. Depois que o callback
+# consumiu com sucesso o state de uso único, reemitimos a sessão HttpOnly da
+# mesma conta antes de voltar ao SPA. Isto elimina o retorno indevido a
+# /entrar observado com Google/Microsoft sem transformar state em login
+# genérico nem aceitar user_id vindo do navegador.
+app.add_middleware(OAuthSessionRecoveryMiddleware)
 # Última barreira antes dos routers: qualquer endpoint novo que faça escrita
 # nasce fail-closed para User.investidor, inclusive routers "livres" como
 # billing/auth/email. As únicas escritas permitidas são o estado mínimo do tour
