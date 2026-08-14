@@ -1,0 +1,248 @@
+/* CorVIA Clinical OS — release hardening 14/08/2026
+   Source of truth: prancha canônica aprovada pelo usuário.
+   Este arquivo é carregado por último para eliminar limites legados de largura
+   e trazer TODA a jornada de acesso para o mesmo navy/teal do Clinical OS. */
+
+/* ====================================================================== */
+/* 1. Páginas internas: usar de verdade a largura disponível no notebook. */
+/* ====================================================================== */
+
+@media (min-width: 901px) {
+  .clinical-os .cos-content {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-inline: clamp(1rem, 1.35vw, 1.55rem) !important;
+  }
+
+  .clinical-os .cos-content > :not(.credito):not(.credito--compacto),
+  .clinical-os .cc-page,
+  .clinical-os .cos-home,
+  .clinical-os [class$="-command-page"],
+  .clinical-os [class*="-command-page "] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+  }
+
+  /* Os wrappers clínicos antigos tinham 1120–1260px centralizados e eram a
+     causa das faixas laterais vazias em notebook. A largura de leitura de
+     parágrafo continua limitada em cada artigo; o GRID da página não. */
+  .clinical-os .cc-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* A prancha foi desenhada para informação médica densa, mas não para texto
+     de 8px. O fidelity pass anterior reduzia diversos rótulos a .45–.62rem.
+     Corrigimos somente a Home/rails canônicos, preservando hierarquia. */
+  .ccc-home--board .ccc-home__welcome p { font-size: .76rem !important; }
+  .ccc-home--board .ccc-section__head h2 { font-size: .72rem !important; }
+  .ccc-home--board .ccc-action strong { font-size: .78rem !important; }
+  .ccc-home--board .ccc-action small { font-size: .64rem !important; }
+  .ccc-home--board .ccc-recent__card strong { font-size: .72rem !important; }
+  .ccc-home--board .ccc-recent__meta,
+  .ccc-home--board .ccc-recent__card small { font-size: .6rem !important; }
+  .ccc-home--board .ccc-update strong { font-size: .78rem !important; }
+  .ccc-home--board .ccc-update p,
+  .ccc-home--board .ccc-update > span { font-size: .64rem !important; }
+  .ccc-home__intelligence .ccc-rail-card > header > span,
+  .ccc-home__assistant .ccc-rail-card > header > span { font-size: .68rem !important; }
+  .ccc-home__intelligence .ccc-intelligence-list strong { font-size: .76rem !important; }
+  .ccc-home__intelligence .ccc-intelligence-list p { font-size: .61rem !important; }
+  .ccc-intelligence-metrics small { font-size: .58rem !important; }
+  .ccc-assistant-block > small { font-size: .55rem !important; }
+  .ccc-assistant-row strong { font-size: .68rem !important; }
+  .ccc-assistant-row p { font-size: .59rem !important; }
+  .ccc-assistant-inline-action { font-size: .56rem !important; }
+  .ccc-assistant-checks span { font-size: .61rem !important; }
+  .ccc-assistant-input { font-size: .62rem !important; }
+  .clinical-os .cos-command-mini input { font-size: .78rem !important; }
+  .clinical-os .cos-account__identity strong { font-size: .68rem !important; }
+  .clinical-os .cos-account__identity small { font-size: .56rem !important; }
+
+  /* Navegação também estava pequena demais no monitor físico embora parecesse
+     correta na prancha reduzida. */
+  .ccc-nav__item { font-size: .78rem !important; }
+  .ccc-nav__section > p { font-size: .62rem !important; }
+  .ccc-nav__more-items .ccc-nav__item { font-size: .74rem !important; }
+}
+
+/* ====================================================================== */
+/* 2. Login, cadastro e recuperação: uma única linguagem visual canônica. */
+/* ====================================================================== */
+
+.login,
+.login--entrar,
+.login--solicitar-acesso,
+.login--recovery {
+  color: #dcecef;
+  background:
+    radial-gradient(circle at 72% 5%, rgba(56,202,213,.07), transparent 28rem),
+    linear-gradient(145deg, #020b12 0%, #03111a 52%, #041722 100%) !important;
+}
+
+.login--entrar,
+.login--solicitar-acesso,
+.login--recovery {
+  display: grid;
+  grid-template-columns: minmax(480px, 1.02fr) minmax(430px, .98fr);
+  width: 100%;
+  min-height: 100dvh;
+  padding: 0;
+  place-items: stretch;
+  overflow: hidden;
+}
+
+.login-vitrine {
+  color: #dcecef !important;
+  background:
+    radial-gradient(circle at 75% 14%, rgba(56,202,213,.14), transparent 24rem),
+    radial-gradient(circle at 8% 86%, rgba(31,103,132,.18), transparent 30rem),
+    linear-gradient(155deg, #041722 0%, #03111a 58%, #020c13 100%) !important;
+  border-right: 1px solid rgba(126,183,201,.10);
+}
+
+.login-vitrine::before {
+  background-image:
+    linear-gradient(rgba(126,183,201,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126,183,201,.025) 1px, transparent 1px) !important;
+}
+
+.login-vitrine__marca img {
+  width: clamp(160px, 12vw, 205px) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 16px rgba(56,202,213,.06));
+}
+
+.login-acesso {
+  color: #dcecef !important;
+  background:
+    radial-gradient(circle at 96% 4%, rgba(161,124,245,.045), transparent 20rem),
+    linear-gradient(160deg, #061823 0%, #04131e 58%, #03101a 100%) !important;
+  border-left: 0 !important;
+}
+.login-acesso::before {
+  background: linear-gradient(transparent, rgba(126,183,201,.12) 18%, rgba(126,183,201,.12) 82%, transparent) !important;
+}
+
+.login-acesso__conteudo { width: min(100%, 500px) !important; }
+.login-acesso__introducao h2,
+.login-campo label,
+.login-permanecer label,
+.login-confirmacao h2,
+.login-formulario__secao-titulo { color: #eef8fa !important; }
+.login-acesso__introducao > p:last-child,
+.login-formulario__secao-nota,
+.login-acesso__novo > span,
+.login-acesso__seguranca,
+.login-confirmacao p { color: #8fa7b0 !important; }
+.login-acesso__conhecer,
+.login-campo__esqueci,
+.login-acesso__novo a { color: #72dce3 !important; }
+.login-acesso__novo,
+.login-acesso__rodape { border-color: rgba(126,183,201,.10) !important; }
+.login-acesso__rodape,
+.login-acesso__rodape a { color: #718c96 !important; }
+
+.login-campo input,
+.login-campo select,
+.login-campo textarea,
+.login-formulario > input,
+.login-formulario .grade > input {
+  color: #eaf5f7 !important;
+  background: linear-gradient(180deg, rgba(12,34,47,.92), rgba(8,26,37,.92)) !important;
+  border-color: rgba(126,183,201,.15) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.018) !important;
+}
+.login-campo input::placeholder,
+.login-campo textarea::placeholder,
+.login-formulario > input::placeholder,
+.login-formulario .grade > input::placeholder { color: #667f89 !important; }
+.login-campo input:hover,
+.login-campo select:hover,
+.login-campo textarea:hover,
+.login-formulario > input:hover,
+.login-formulario .grade > input:hover {
+  background: #0b2634 !important;
+  border-color: rgba(126,207,219,.24) !important;
+}
+.login-campo input:focus,
+.login-campo select:focus,
+.login-campo textarea:focus,
+.login-formulario > input:focus,
+.login-formulario .grade > input:focus {
+  background: #0b2634 !important;
+  border-color: #38cad5 !important;
+  box-shadow: 0 0 0 3px rgba(56,202,213,.08) !important;
+}
+.login-campo select option { color: #eaf5f7; background: #071925; }
+
+.login-permanecer,
+.login-formulario__secao,
+.login-formulario__aviso,
+.login-confirmacao {
+  background: rgba(255,255,255,.018) !important;
+  border-color: rgba(126,183,201,.10) !important;
+}
+.login-formulario__erro {
+  color: #ffbac2 !important;
+  background: rgba(239,80,98,.08) !important;
+  border-color: rgba(239,80,98,.20) !important;
+}
+.login-senha button { color: #72dce3 !important; }
+.login-senha button:hover { background: rgba(56,202,213,.06) !important; }
+
+.login-formulario__entrar {
+  color: #021017 !important;
+  background: linear-gradient(135deg, #22bac7, #4cd7df) !important;
+  border-color: #38cad5 !important;
+  box-shadow: 0 14px 32px -20px rgba(56,202,213,.8) !important;
+}
+.login-formulario__entrar:hover:not(:disabled) {
+  box-shadow: 0 18px 36px -18px rgba(56,202,213,.9) !important;
+}
+
+.login-confirmacao__selo {
+  color: #72e0e6 !important;
+  background: rgba(56,202,213,.08) !important;
+  border-color: rgba(56,202,213,.18) !important;
+}
+.login-confirmacao__selo--pendente {
+  color: #f2b45d !important;
+  background: rgba(240,170,60,.08) !important;
+  border-color: rgba(240,170,60,.18) !important;
+}
+
+/* Cartões públicos legados restantes não podem voltar ao branco/admin cru. */
+.login__cartao {
+  color: #dcecef !important;
+  background: linear-gradient(160deg, #081d2a, #061721) !important;
+  border: 1px solid rgba(126,183,201,.12) !important;
+  box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
+}
+.login__cartao h1,
+.login__cartao h2,
+.login__cartao label { color: #eef8fa !important; }
+
+@media (max-width: 900px) {
+  .login--entrar,
+  .login--solicitar-acesso,
+  .login--recovery {
+    display: block;
+    min-height: 100svh;
+    overflow: visible;
+  }
+  .login--entrar .login-vitrine,
+  .login--solicitar-acesso .login-vitrine,
+  .login--recovery .login-vitrine { display: none !important; }
+  .login-acesso {
+    min-height: 100svh;
+    padding-inline: clamp(1rem, 5vw, 1.5rem) !important;
+  }
+  .login-acesso__conteudo { width: 100% !important; max-width: 520px; }
+}
