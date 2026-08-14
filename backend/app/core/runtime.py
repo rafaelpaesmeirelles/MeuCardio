@@ -47,7 +47,7 @@ def validar_configuracao_de_execucao(settings) -> None:
         erros.append("JWT_SECRET deve ser aleatório e ter ao menos 32 caracteres")
 
     admin_password = settings.admin_password or ""
-    if admin_password.lower() in SENHAS_ADMIN_INSEGUROS or len(admin_password) < 12:
+    if admin_password.lower() in SENHAS_ADMIN_INSEGURAS or len(admin_password) < 12:
         erros.append("ADMIN_PASSWORD deve ser exclusiva e ter ao menos 12 caracteres")
 
     if (settings.admin_email or "").lower().endswith(".local"):
@@ -58,7 +58,7 @@ def validar_configuracao_de_execucao(settings) -> None:
     except Exception:
         erros.append("DATABASE_URL é inválida")
     else:
-        if senha_banco.lower() in SENHAS_BANCO_INSEGUROS:
+        if senha_banco.lower() in SENHAS_BANCO_INSEGURAS:
             erros.append("a senha do PostgreSQL não pode usar valor padrão")
 
     chave = (settings.storage_encryption_key or "").strip()
