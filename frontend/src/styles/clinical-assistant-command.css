@@ -48,12 +48,15 @@ body.corvia-route--assistente .ia > .cartao {
   background:rgba(255,255,255,.015); border-color:rgba(126,183,201,.07); box-shadow:none;
 }
 
+/* Conversation and composer are deliberately one continuous command surface.
+   The composer used to be sticky/translucent, which made it look detached from
+   the panel and allowed the page/background to bleed through. */
 body.corvia-route--assistente .ia__conversa {
   min-height:420px; max-height:calc(100dvh - 250px); overflow:auto; padding:.8rem .9rem 1rem;
   background:
     radial-gradient(circle at 50% 0%,rgba(56,202,213,.025),transparent 18rem),
-    linear-gradient(180deg,rgba(5,20,30,.72),rgba(4,17,25,.58));
-  border:1px solid rgba(126,183,201,.07); border-radius:11px;
+    linear-gradient(180deg,#071a25,#061721);
+  border:1px solid rgba(126,183,201,.10); border-bottom:0; border-radius:11px 11px 0 0;
   scrollbar-width:thin; scrollbar-color:rgba(126,183,201,.12) transparent;
 }
 body.corvia-route--assistente .ia__abertura { width:min(100%,760px); margin:2.1rem auto 0; text-align:center; }
@@ -86,11 +89,30 @@ body.corvia-route--assistente .ia__fonte + .ia__fonte { margin-top:.24rem; }
 body.corvia-route--assistente .ia__fonte__marca { color:#70dce2; }
 
 body.corvia-route--assistente .ia__envio {
-  position:sticky; bottom:0; z-index:4; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.42rem; margin-top:.48rem; padding:.44rem;
-  background:rgba(5,19,28,.94); border:1px solid rgba(126,183,201,.09); border-radius:11px; backdrop-filter:blur(14px);
+  position:relative; bottom:auto; z-index:1; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.5rem;
+  margin-top:0; padding:.52rem;
+  background:#071a25; border:1px solid rgba(126,183,201,.10); border-top:1px solid rgba(56,202,213,.12);
+  border-radius:0 0 11px 11px; box-shadow:0 10px 28px rgba(0,0,0,.14); backdrop-filter:none;
 }
-body.corvia-route--assistente .ia__envio textarea { min-height:52px; max-height:140px; resize:vertical; padding:.55rem .62rem; font-size:.62rem; line-height:1.4; }
-body.corvia-route--assistente .ia__envio .botao { align-self:stretch; min-width:82px; }
+body.corvia-route--assistente .ia__envio textarea {
+  min-height:52px; max-height:140px; resize:vertical; padding:.62rem .7rem;
+  color:#eef9fa!important; -webkit-text-fill-color:#eef9fa!important; caret-color:#4ed6df;
+  background:#0b2230!important; border:1px solid rgba(126,183,201,.18)!important; border-radius:9px!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.015)!important; font-size:.62rem; line-height:1.4;
+}
+body.corvia-route--assistente .ia__envio textarea::placeholder { color:#6f8c96!important; -webkit-text-fill-color:#6f8c96!important; }
+body.corvia-route--assistente .ia__envio textarea:hover { border-color:rgba(83,213,223,.32)!important; }
+body.corvia-route--assistente .ia__envio textarea:focus {
+  color:#fff!important; -webkit-text-fill-color:#fff!important; background:#0d2634!important;
+  border-color:#42cad8!important; box-shadow:0 0 0 3px rgba(66,202,216,.10)!important; outline:none;
+}
+body.corvia-route--assistente .ia__envio .botao {
+  align-self:stretch; min-width:88px; padding-inline:.82rem!important; color:#f7ffff!important;
+  background:linear-gradient(180deg,#15aebd,#0b8e9e)!important; border:1px solid rgba(99,229,235,.30)!important;
+  border-radius:9px!important; box-shadow:0 7px 18px rgba(6,126,140,.16)!important;
+}
+body.corvia-route--assistente .ia__envio .botao:hover:not(:disabled) { background:linear-gradient(180deg,#1bb9c8,#0d98a8)!important; }
+body.corvia-route--assistente .ia__envio .botao:disabled { color:#6e8790!important; background:#0c2833!important; border-color:rgba(126,183,201,.10)!important; box-shadow:none!important; opacity:1; }
 body.corvia-route--assistente .ia__rodape { margin:.32rem 0 0; color:#57727c; font-size:.48rem; text-align:center; }
 body.corvia-route--assistente .ia__erro { margin:.38rem 0; color:#ff99a8; font-size:.55rem; }
 
@@ -109,8 +131,8 @@ body.corvia-route--assistente .ia__erro { margin:.38rem 0; color:#ff99a8; font-s
   body.corvia-route--assistente .ia__sugestoes { grid-template-columns:1fr; }
   body.corvia-route--assistente .ia__sugestao { min-height:48px; text-align:left; }
   body.corvia-route--assistente .ia__msg { width:92%; padding:.55rem .6rem; font-size:.61rem; }
-  body.corvia-route--assistente .ia__envio { bottom:64px; grid-template-columns:minmax(0,1fr) 64px; }
+  body.corvia-route--assistente .ia__envio { bottom:auto; grid-template-columns:minmax(0,1fr) 70px; padding:.44rem; }
   body.corvia-route--assistente .ia__envio textarea { min-height:46px; }
-  body.corvia-route--assistente .ia__envio .botao { min-width:0; padding-inline:.35rem; }
+  body.corvia-route--assistente .ia__envio .botao { min-width:0; padding-inline:.35rem!important; }
   body.corvia-route--assistente .ia__rodape { padding-bottom:4.4rem; }
 }
