@@ -6,7 +6,6 @@ from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user, hash_password, require_admin, verify_password
-from app.models.account_recovery import AccountRecoveryEmail
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import account_recovery, emails
@@ -113,10 +112,8 @@ def admin_atualizar_email_recuperacao(
 
 
 # -------------------------------------------------------------------------
-# Cadastro novo com segundo canal obrigatório. Mantemos a rota histórica
-# intacta por compatibilidade interna, mas toda interface CorVIA passa a usar
-# esta versão. Ela reutiliza a regra canônica de cadastro em auth.py e apenas
-# adiciona, na mesma requisição, o canal externo independente.
+# Cadastro novo com segundo canal obrigatório. A interface pública usa esta
+# versão; o canal externo é persistido separadamente do login.
 # -------------------------------------------------------------------------
 
 from app.api.auth import SolicitacaoAcesso, solicitar_acesso  # noqa: E402
@@ -163,13 +160,16 @@ def solicitar_acesso_com_recuperacao(
         raise HTTPException(status_code=409, detail=str(exc)) from exc
 
     background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
+    # Convidado pré-autorizado pode sair do cadastro já aprovado. Nesse caso
+    # não existe decisão administrativa futura para disparar a boas-vindas.
+    if bool(resultado.get("acesso_imediato")):
+        background_tasks.add_task(account_recovery.enviar_acesso_aprovado, user.id)
     return resultado
 
 
 # Rota segura para a criação pelo Admin. O endpoint legado /api/admin/users
-# continua existindo para compatibilidade, mas a UI de criação deve usar esta
-# variante porque ela exige o segundo canal e dispara o e-mail de primeiro
-# acesso sem transmitir senha em texto.
+# continua existindo por compatibilidade, mas o fluxo endurecido exige o
+# segundo canal e dispara o primeiro acesso sem transmitir senha em texto.
 from app.api.admin import NovoUsuario, criar_usuario  # noqa: E402
 
 
