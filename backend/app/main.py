@@ -11,6 +11,7 @@ from app.api import (
     checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, clinical_cases, agenda_integrada,
     related_content, knowledge_graph, patient_profiles,
 )
+from app.core.canonical_registration import CanonicalRegistrationMiddleware
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
@@ -62,6 +63,9 @@ app.add_middleware(InvestidorReadOnlyMiddleware)
 # HttpOnly de sessão vinculado ao token atual, sem persistir flags no banco.
 # Também classifica o início de OAuth como ação operacional read-only bloqueada.
 app.add_middleware(InvestidorEphemeralUxMiddleware)
+# A URL antiga de autocadastro vira um tombstone HTTP: toda conta real criada
+# pela interface/API pública precisa fornecer segundo e-mail externo.
+app.add_middleware(CanonicalRegistrationMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
