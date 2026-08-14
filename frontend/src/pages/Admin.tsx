@@ -25,6 +25,9 @@ type KycWaiverResponse = {
 
 type RecoveryResponse = { user_id: number; login_email: string; recovery_email: string | null };
 type EmailStatus = {
+  email_transacional_configurado: boolean;
+  email_transacional_provider: "mail360" | "smtp" | null;
+  mail360_configurado: boolean; mail360_transacional_configurado: boolean;
   smtp_configurado: boolean; smtp_from_canonico: boolean; smtp_user_canonico: boolean;
   smtp_host_configurado: boolean;
   ultimos_envios: Array<{ tipo: string; sucesso: boolean; erro: string | null; created_at: string; destino_dominio: string }>;
@@ -239,23 +242,32 @@ function EmailTransacionalPanel() {
   const [mensagem, setMensagem] = useState("");
   const [erro, setErro] = useState("");
   const [testando, setTestando] = useState(false);
-  const carregar = () => api.get<EmailStatus>("/admin/account-access/email-status").then(setStatus).catch((e) => setErro(e instanceof Error ? e.message : "Falha ao consultar SMTP."));
+  const carregar = () => api.get<EmailStatus>("/admin/account-access/email-status").then(setStatus).catch((e) => setErro(e instanceof Error ? e.message : "Falha ao consultar o canal transacional."));
   useEffect(() => { carregar(); }, []);
   async function testar() {
     setTestando(true); setErro(""); setMensagem("");
-    try { await api.post("/admin/account-access/email-probe", { email: destino.trim().toLowerCase() }); setMensagem(`Servidor confirmou envio por contato@corvia.med.br para ${destino.trim()}. Confirme também o recebimento externo.`); carregar(); }
-    catch (e) { setErro(e instanceof Error ? e.message : "O SMTP não confirmou o envio."); }
+    try {
+      await api.post("/admin/account-access/email-probe", { email: destino.trim().toLowerCase() });
+      setMensagem(`Provedor confirmou envio por contato@corvia.med.br para ${destino.trim()}. Confirme também o recebimento externo.`);
+      carregar();
+    } catch (e) { setErro(e instanceof Error ? e.message : "O provedor transacional não confirmou o envio."); }
     finally { setTestando(false); }
   }
-  const verde = status && status.smtp_configurado && status.smtp_from_canonico && status.smtp_user_canonico && status.smtp_host_configurado;
+  const verde = Boolean(status?.email_transacional_configurado && status?.smtp_from_canonico);
+  const provider = status?.email_transacional_provider === "mail360" ? "Mail360 Native" : status?.email_transacional_provider === "smtp" ? "SMTP" : "não configurado";
+  const providerOk = status?.email_transacional_provider === "mail360"
+    ? Boolean(status.mail360_configurado && status.mail360_transacional_configurado)
+    : status?.email_transacional_provider === "smtp"
+      ? Boolean(status.smtp_configurado && status.smtp_host_configurado)
+      : false;
   return <div className="cartao cartao--clinico" style={{ marginTop: "0.8rem", maxWidth: 760 }}>
     <p className="eyebrow">E-mail transacional</p><h2 style={{ margin: "0.2rem 0 0.5rem", fontSize: "1rem" }}>contato@corvia.med.br</h2>
     {status ? <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
-      <span className={`selo ${status.smtp_configurado ? "selo--revisado" : "selo--pendente"}`}>SMTP {status.smtp_configurado ? "configurado" : "ausente"}</span>
-      <span className={`selo ${status.smtp_user_canonico ? "selo--revisado" : "selo--pendente"}`}>autenticação {status.smtp_user_canonico ? "canônica" : "incorreta"}</span>
+      <span className={`selo ${providerOk ? "selo--revisado" : "selo--pendente"}`}>{provider} {providerOk ? "configurado" : "indisponível"}</span>
+      <span className={`selo ${status.email_transacional_configurado ? "selo--revisado" : "selo--pendente"}`}>canal {status.email_transacional_configurado ? "ativo" : "bloqueado"}</span>
       <span className={`selo ${status.smtp_from_canonico ? "selo--revisado" : "selo--pendente"}`}>remetente {status.smtp_from_canonico ? "correto" : "incorreto"}</span>
-    </div> : <Carregando texto="Consultando SMTP…" />}
-    <p style={{ color: "var(--texto-secundario)", fontSize: "0.8rem", margin: "0.6rem 0" }}>{verde ? "Configuração declarada completa. Faça um probe para provar a entrega real." : "Bloqueador de release: o canal transacional ainda não está completamente configurado."}</p>
+    </div> : <Carregando texto="Consultando canal transacional…" />}
+    <p style={{ color: "var(--texto-secundario)", fontSize: "0.8rem", margin: "0.6rem 0" }}>{verde ? "Configuração declarada completa. Faça um probe para provar envio e confirme o recebimento externo." : "Bloqueador de release: o canal transacional ainda não está completamente configurado."}</p>
     <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}><input type="email" placeholder="e-mail externo para teste" value={destino} onChange={(e) => setDestino(e.target.value)} style={{ flex: "1 1 260px" }} /><button className="botao" disabled={!emailValido(destino) || testando || !verde} onClick={testar}>{testando ? "Testando…" : "Enviar teste real"}</button></div>
     {mensagem && <p style={{ color: "var(--sucesso)", fontSize: "0.8rem", marginTop: 7 }}>{mensagem}</p>}{erro && <p style={{ color: "var(--alerta)", fontSize: "0.8rem", marginTop: 7 }}>{erro}</p>}
   </div>;
