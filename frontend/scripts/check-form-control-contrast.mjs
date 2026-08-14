@@ -4,8 +4,10 @@ import process from "node:process";
 
 const raiz = process.cwd();
 const cssPath = path.join(raiz, "src/styles/clinical-form-control-contrast.css");
+const assistantCssPath = path.join(raiz, "src/styles/clinical-assistant-command.css");
 const mainPath = path.join(raiz, "src/main.tsx");
 const css = fs.readFileSync(cssPath, "utf8");
+const assistantCss = fs.readFileSync(assistantCssPath, "utf8");
 const main = fs.readFileSync(mainPath, "utf8");
 
 function exigir(condicao, mensagem) {
@@ -20,6 +22,7 @@ const indiceContrato = main.indexOf(importContrato);
 const ultimoImportCss = [...main.matchAll(/^import "\.\/styles\/[^\"]+\.css";$/gm)].at(-1)?.index ?? -1;
 
 exigir(fs.existsSync(cssPath), "clinical-form-control-contrast.css precisa existir.");
+exigir(fs.existsSync(assistantCssPath), "clinical-assistant-command.css precisa existir.");
 exigir(indiceContrato >= 0, "main.tsx precisa importar o contrato global de contraste.");
 exigir(indiceContrato === ultimoImportCss, "o contrato de contraste precisa ser a última folha CSS importada.");
 
@@ -45,6 +48,18 @@ exigir(!/\.clinical-os[\s\S]*?\{[^}]*color:\s*var\(--texto\)/m.test(css),
 exigir(!/\.clinical-os[\s\S]*?\{[^}]*background(?:-color)?:\s*var\(--superficie\)/m.test(css),
   "o contrato final não pode usar var(--superficie) para campos do Clinical OS.");
 
+// O composer do Assistente é uma superfície estrutural do Command Center,
+// não uma barra flutuante de vidro. Protege o bug fotografado em produção:
+// sticky + rgba/backdrop-filter deixavam o campo transparente e fora do painel.
+const blocoEnvio = assistantCss.match(/body\.corvia-route--assistente \.ia__envio\s*\{([^}]*)\}/m)?.[1] ?? "";
+const blocoTextarea = assistantCss.match(/body\.corvia-route--assistente \.ia__envio textarea\s*\{([^}]*)\}/m)?.[1] ?? "";
+exigir(blocoEnvio.includes("position:relative"), "composer do Assistente precisa permanecer integrado ao fluxo do painel.");
+exigir(blocoEnvio.includes("bottom:auto"), "composer do Assistente não pode voltar a ficar ancorado à viewport.");
+exigir(blocoEnvio.includes("background:#071a25"), "composer do Assistente precisa usar superfície navy sólida canônica.");
+exigir(blocoEnvio.includes("backdrop-filter:none"), "composer do Assistente não pode voltar ao efeito translúcido de vidro.");
+exigir(blocoTextarea.includes("background:#0b2230!important"), "textarea do Assistente precisa manter superfície escura legível.");
+exigir(blocoTextarea.includes("color:#eef9fa!important"), "textarea do Assistente precisa manter texto claro legível.");
+
 if (!process.exitCode) {
-  console.log("OK: contrato global de contraste dos campos está ativo e importado por último.");
+  console.log("OK: contrato global de contraste e composer canônico do Assistente estão protegidos.");
 }
