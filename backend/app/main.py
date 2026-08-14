@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    admin, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
+    account_sync, admin, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
     calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_session, evidence,
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
@@ -74,7 +74,7 @@ ROUTERS_ASSINANTES = (
     mail360_status.router, presence.router, indicadores.router, checklists.router,
     study_tracks.router, exportacao.router, exportacao_universal.router, emergencia.router, receituario.router,
     clinical_cases.router, specialty_guides.router, chat.router, assinatura.router,
-    agenda_integrada.router, kyc.router, avaliacao_preoperatoria.router,
+    agenda_integrada.router, account_sync.router, kyc.router, avaliacao_preoperatoria.router,
     related_content.router, knowledge_graph.router, patient_profiles.router,
 )
 
