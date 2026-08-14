@@ -1,0 +1,9 @@
+{% extends "_base.html" %}
+{% from "_macros.html" import botao %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}. Seu acesso ao CorVIA Clinical OS foi criado.</p>
+<p style="margin:0 0 6px;"><strong>Seu e-mail de login:</strong> {{ email_login }}</p>
+<p style="margin:0 0 16px;">Use o botão abaixo para escolher sua própria senha e concluir o primeiro acesso.</p>
+{{ botao("Configurar meu acesso", link) }}
+<p style="margin:0;font-size:13px;color:#55666F;">Este link vale por 48 horas. Por segurança, o CorVIA nunca envia senha em texto por e-mail.</p>
+{% endblock %}
