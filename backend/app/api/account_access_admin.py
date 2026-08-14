@@ -113,14 +113,23 @@ def email_status(
     db: Session = Depends(get_db),
     _admin: User = Depends(require_admin),
 ):
-    """Diagnóstico sem segredo: configuração + últimos resultados de envio."""
+    """Diagnóstico sem segredo: provider ativo + últimos resultados de envio.
+
+    Mantém os campos SMTP legados para compatibilidade do painel existente,
+    mas nunca retorna credenciais, account_key ou tokens Mail360.
+    """
     ultimos = (
         db.query(EmailLog)
         .order_by(EmailLog.created_at.desc())
         .limit(20)
         .all()
     )
+    provider = settings.email_transacional_provider_efetivo
     return {
+        "email_transacional_configurado": bool(settings.email_transacional_configurado),
+        "email_transacional_provider": provider or None,
+        "mail360_configurado": bool(settings.mail360_configurado),
+        "mail360_transacional_configurado": bool(settings.mail360_transacional_configurado),
         "smtp_configurado": bool(settings.smtp_configurado),
         "smtp_from_canonico": "contato@corvia.med.br" in (settings.smtp_from or "").lower(),
         "smtp_user_canonico": (settings.smtp_user or "").strip().lower() == "contato@corvia.med.br",
@@ -147,16 +156,20 @@ def email_probe(
     db: Session = Depends(get_db),
     admin: User = Depends(require_admin),
 ):
-    """Smoke SMTP real e síncrono; retorna falha em vez de falso sucesso."""
-    if not settings.smtp_configurado:
-        raise HTTPException(status_code=503, detail="SMTP transacional não configurado.")
+    """Smoke real e síncrono do provider ativo; nunca retorna falso sucesso."""
+    if not settings.email_transacional_configurado:
+        raise HTTPException(status_code=503, detail="Canal transacional não configurado.")
     ok = account_recovery.enviar_teste_transacional(dados.email, admin.id)
     if not ok:
         raise HTTPException(
             status_code=502,
-            detail="O servidor SMTP não confirmou o envio. Consulte email-status/logs.",
+            detail="O provedor transacional não confirmou o envio. Consulte email-status/logs.",
         )
-    return {"ok": True, "remetente": "contato@corvia.med.br"}
+    return {
+        "ok": True,
+        "provider": settings.email_transacional_provider_efetivo,
+        "remetente": "contato@corvia.med.br",
+    }
 
 
 @router.post("/users/{user_id}/enviar-recuperacao")
