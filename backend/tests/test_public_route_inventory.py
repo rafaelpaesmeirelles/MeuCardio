@@ -43,7 +43,13 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("POST", "/api/auth/sair"): (
         "Limpeza idempotente do cookie HttpOnly mesmo quando expirado ou revogado."
     ),
-    ("POST", "/api/auth/solicitar-acesso"): "Autocadastro anterior à autenticação.",
+    ("POST", "/api/auth/solicitar-acesso"): (
+        "URL legada mantida como tombstone fail-closed: middleware responde 410 e não cria conta "
+        "sem segundo e-mail externo."
+    ),
+    ("POST", "/api/auth/solicitar-acesso-com-recuperacao"): (
+        "Autocadastro canônico anterior à autenticação; exige segundo e-mail externo de recuperação."
+    ),
     ("POST", "/api/auth/esqueci-senha"): "Início da recuperação de credencial.",
     ("POST", "/api/auth/redefinir-senha"): "Conclusão da recuperação por token descartável.",
     ("POST", "/api/auth/reenviar-ativacao"): "Reenvio de ativação para conta ainda sem sessão.",
@@ -67,14 +73,6 @@ def _dependency_tree_contains_auth(dependant) -> bool:
 
 
 def _public_routes() -> set[tuple[str, str]]:
-    """Inventaria a superfície HTTP efetiva, inclusive routers incluídos.
-
-    Desde o FastAPI 0.137, ``router.routes`` forma uma árvore e a API pública
-    ``iter_route_contexts`` materializa prefixos e dependências herdados de
-    ``include_router``. O ponto de entrada correto é ``app.router.routes``;
-    ``app.routes`` é uma compatibilidade herdada do Starlette e não representa
-    necessariamente a árvore efetiva do router FastAPI.
-    """
     routes: set[tuple[str, str]] = set()
     for route_context in iter_route_contexts(app.router.routes):
         path = route_context.path
@@ -100,3 +98,9 @@ def test_public_routes_are_explicitly_allowlisted():
 
 def test_every_public_route_has_a_reviewable_rationale():
     assert all(reason.strip() for reason in PUBLIC_ROUTE_RATIONALES.values())
+
+
+def test_legacy_signup_is_fail_closed_without_recovery_channel(client):
+    resposta = client.post("/api/auth/solicitar-acesso", json={})
+    assert resposta.status_code == 410
+    assert "segundo e-mail" in resposta.json()["detail"]
