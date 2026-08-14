@@ -131,6 +131,12 @@ def _antes_de_atualizar(_mapper, _connection, target: User) -> None:
     target.convidado = False
     target.profile_completion_required = False
 
+    # Navegar pela demo faz current_user atualizar last_seen_at como telemetria
+    # normal do produto. Para o Investidor isso também precisa ser passivo:
+    # restaura o valor anterior antes do flush, sem alterar o core compartilhado
+    # de autenticação/presença dos demais usuários.
+    _restaurar_valor_anterior(estado, "last_seen_at", target)
+
     # Senha fixa: qualquer rota antiga, reset público ou edição administrativa
     # que tente trocar a senha é neutralizada no modelo. Também restauramos o
     # marco de revogação que o listener de User.password_hash teria alterado,
