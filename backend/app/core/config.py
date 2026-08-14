@@ -124,19 +124,16 @@ class Settings(BaseSettings):
 
     embedding_dim: int = 1536  # text-embedding-3-small
 
-    # --- E-mail (opcional) --------------------------------------------------
-    # Se ficar em branco, o sistema não tenta enviar e-mail — reset de senha e
-    # notificação de solicitação de acesso continuam funcionando pelo painel
-    # de admin, sem depender disso.
+    # --- E-mail transacional -----------------------------------------------
+    # `auto` prefere Mail360 quando a conta institucional Native estiver
+    # configurada; caso contrário usa SMTP. Também é possível fixar
+    # explicitamente `mail360` ou `smtp` em produção.
+    email_transacional_provider: str = "auto"  # auto | mail360 | smtp
     smtp_host: str = ""
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    # "Corvia <contato@corvia.med.br>" — aprovado pelo Rafael em 02/08/2026
-    # (ver emails-transacionais-spec.md). O valor real de produção já está
-    # gravado no .env do servidor; este default só evita divergir em quem
-    # rodar sem `.env` configurado (dev local, teste).
-    smtp_from: str = "Corvia <contato@corvia.med.br>"
+    smtp_from: str = "CorVIA <contato@corvia.med.br>"
     public_url: str = "https://corvia.med.br"
 
     # --- Caixa de e-mail do assinante — Zoho Mail360 (Tarefa 28) ------------
@@ -148,10 +145,18 @@ class Settings(BaseSettings):
     mail360_client_secret: str = ""
     mail360_refresh_token: str = ""
     mail360_dominio: str = "corvia.med.br"
+    # Identificador opaco da caixa Native `contato@corvia.med.br`. Não é
+    # segredo de autenticação, mas permanece em configuração de produção e
+    # nunca é exposto pelo diagnóstico administrativo.
+    mail360_transactional_account_key: str = ""
 
     @property
     def mail360_configurado(self) -> bool:
         return bool(self.mail360_client_id and self.mail360_client_secret and self.mail360_refresh_token)
+
+    @property
+    def mail360_transacional_configurado(self) -> bool:
+        return bool(self.mail360_configurado and self.mail360_transactional_account_key)
 
     # CorvIA Mail é cobrado à parte da assinatura principal (decisão do
     # Rafael, 30/07/2026). Preço em centavos, de propósito deixado em 0
@@ -208,6 +213,24 @@ class Settings(BaseSettings):
     def smtp_configurado(self) -> bool:
         return bool(self.smtp_host and self.smtp_user and self.smtp_password)
 
+    @property
+    def email_transacional_provider_efetivo(self) -> str:
+        provider = (self.email_transacional_provider or "auto").strip().lower()
+        if provider == "mail360":
+            return "mail360" if self.mail360_transacional_configurado else ""
+        if provider == "smtp":
+            return "smtp" if self.smtp_configurado else ""
+        if provider == "auto":
+            if self.mail360_transacional_configurado:
+                return "mail360"
+            if self.smtp_configurado:
+                return "smtp"
+        return ""
+
+    @property
+    def email_transacional_configurado(self) -> bool:
+        return bool(self.email_transacional_provider_efetivo)
+
     # --- Assinatura digital de documento clínico (Tarefa 4) -----------------
     # Mesma filosofia do Mail360/SMTP acima: em branco, o provedor fica
     # indisponível — a emissão devolve 409 explicando, nunca assina de
@@ -217,7 +240,6 @@ class Settings(BaseSettings):
     # credencial preenchida) quando o Rafael conseguir a credencial daquele
     # provedor — até 02/08/2026, nenhum tinha.
     assinatura_metodo_padrao: str = "MANUAL"
-
     vidaas_client_id: str = ""
     vidaas_client_secret: str = ""
 
