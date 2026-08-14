@@ -6,22 +6,10 @@ import GrafoConstelacao from "../components/GrafoConstelacao";
 import CampoSenha from "../components/CampoSenha";
 import "../styles/login.css";
 
-// Reformulado em 14/08/2026 para o padrão canônico do CorVIA — mesmo shell
-// de Entrar.tsx (login-vitrine + login-acesso), não uma tela isolada com
-// cartão branco genérico. Continua sendo SÓ o autocadastro (pessoa sem
-// conta ainda) — não confundir com a conclusão de cadastro de uma conta já
-// criada pelo admin (isso é MinhaConta.tsx + VerificacaoIdentidade.tsx,
-// telas próprias, não tocadas aqui). Investidor nunca chega nesta tela —
-// só existe via criação direta pelo admin (ver CLAUDE.md, 14/08/2026).
-//
-// O único tipo de conta que pode sair diferente de "normal" AQUI é o
-// convidado por pré-autorização de e-mail (`ConvidadoPreAutorizado`,
-// `app/api/auth.py::solicitar_acesso`) — e o formulário em si não muda por
-// causa disso (o backend só resolve isso DEPOIS do envio, por e-mail
-// batido contra a pré-autorização; não há como o formulário saber antes).
-// O que muda é a tela de confirmação: antes ela sempre dizia "aguardando
-// aprovação do administrador", mesmo quando a resposta real já trazia
-// `acesso_imediato: true` — bug corrigido aqui, lendo o campo de verdade.
+// Cadastro profissional no mesmo shell visual do Clinical OS. O segundo
+// e-mail é obrigatório porque o login pode ser uma caixa @corvia.med.br que
+// depende do próprio acesso à plataforma; recuperação não pode depender do
+// recurso que está bloqueado.
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
 const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
@@ -44,17 +32,11 @@ export default function SolicitarAcesso() {
   const [dados, setDados] = useState({
     full_name: "", birth_date: "", cpf: "", profession: "Médico(a)",
     council_name: "CRM", council_number: "", council_state: "",
-    // Só usados quando council_name === "Outro" — o conselho digitado por
-    // extenso e o estado/região em texto livre, já que a UF de 2 letras não
-    // serve pra conselho fora do padrão brasileiro (08/08/2026).
     council_name_other: "", council_state_other: "",
     specialty: "", professional_title: "", workplace_name: "", workplace_department: "",
     workplace_role: "", workplace_notes: "", include_workplace_on_documents: false,
-    // Opcional (tarefa #43, 08/08/2026): só entra se o médico digitar. Nunca
-    // buscado/adivinhado pelo sistema — é o próprio texto que vai pro
-    // backend, que normaliza (tira "@", valida caracteres).
     instagram_handle: "",
-    email: "", password: "",
+    email: "", recovery_email: "", password: "",
   });
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
@@ -66,6 +48,9 @@ export default function SolicitarAcesso() {
 
   const ehOutro = dados.council_name === "Outro";
   const senhaFraca = dados.password.length > 0 && dados.password.length < 8;
+  const emailLogin = dados.email.trim().toLowerCase();
+  const emailRecuperacao = dados.recovery_email.trim().toLowerCase();
+  const emailRecuperacaoValido = emailRecuperacao.includes("@") && emailRecuperacao !== emailLogin;
   const conselhoCompleto = ehOutro
     ? dados.council_name_other.trim() && dados.council_state_other.trim()
     : dados.council_state;
@@ -73,7 +58,7 @@ export default function SolicitarAcesso() {
     dados.full_name.trim().split(" ").length >= 2 &&
     dados.birth_date && dados.cpf.replace(/\D/g, "").length === 11 &&
     dados.profession.trim() && dados.council_number.trim() && conselhoCompleto &&
-    dados.email.includes("@") && dados.password.length >= 8;
+    emailLogin.includes("@") && emailRecuperacaoValido && dados.password.length >= 8;
 
   async function enviar(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
@@ -81,8 +66,10 @@ export default function SolicitarAcesso() {
     setErro("");
     setEnviando(true);
     try {
-      const r = await api.post<RespostaEnvio>("/auth/solicitar-acesso", {
+      const r = await api.post<RespostaEnvio>("/auth/solicitar-acesso-com-recuperacao", {
         ...dados,
+        email: emailLogin,
+        recovery_email: emailRecuperacao,
         specialty: dados.specialty.trim() || null,
         council_state: ehOutro ? null : dados.council_state,
         council_name_other: ehOutro ? dados.council_name_other.trim() : null,
@@ -127,7 +114,7 @@ export default function SolicitarAcesso() {
 
           <ul className="login-vitrine__beneficios">
             <li><Icone nome="check" aria-hidden="true" />Verificação de identidade uma única vez</li>
-            <li><Icone nome="check" aria-hidden="true" />Dados protegidos, nunca compartilhados</li>
+            <li><Icone nome="check" aria-hidden="true" />Canal externo independente para recuperar o acesso</li>
             <li><Icone nome="check" aria-hidden="true" />Acesso liberado assim que confirmado</li>
           </ul>
         </div>
@@ -164,7 +151,7 @@ export default function SolicitarAcesso() {
           <div className="login-acesso__introducao">
             <p className="eyebrow">Solicitação de acesso</p>
             <h2 id="login-acesso-titulo">Solicitar acesso ao CorVIA.</h2>
-            <p>Preencha seus dados reais do seu conselho de classe para começar.</p>
+            <p>Preencha seus dados reais e mantenha um segundo e-mail independente para segurança da conta.</p>
           </div>
 
           <form className="login-formulario" onSubmit={enviar}>
@@ -281,12 +268,29 @@ export default function SolicitarAcesso() {
             </div>
 
             <div className="login-formulario__secao">
-              <h3 className="login-formulario__secao-titulo">Acesso</h3>
+              <h3 className="login-formulario__secao-titulo">Acesso e recuperação</h3>
 
               <div className="login-campo">
-                <label htmlFor="email">E-mail (será seu login)</label>
+                <label htmlFor="email">E-mail de login</label>
                 <input id="email" type="email" autoComplete="username" value={dados.email}
                        onChange={(e) => set("email", e.target.value)} required />
+              </div>
+
+              <div className="login-campo">
+                <label htmlFor="recovery-email">Segundo e-mail para recuperação de acesso</label>
+                <input id="recovery-email" type="email" autoComplete="email" value={dados.recovery_email}
+                       onChange={(e) => set("recovery_email", e.target.value)}
+                       placeholder="Use um e-mail externo ao CorVIA" required />
+                <p className="login-formulario__secao-nota">
+                  Obrigatório e diferente do login. Se seu login for uma caixa @corvia.med.br,
+                  use aqui Gmail, Outlook, iCloud ou outro endereço que continue acessível mesmo
+                  quando você estiver fora do CorVIA.
+                </p>
+                {dados.recovery_email.length > 0 && !emailRecuperacaoValido && (
+                  <p className="login-formulario__secao-nota" style={{ color: "#e8a1ab" }}>
+                    Informe um e-mail válido e diferente do e-mail de login.
+                  </p>
+                )}
               </div>
 
               <div className="login-campo">
@@ -305,9 +309,8 @@ export default function SolicitarAcesso() {
               <Icone nome="documento" aria-hidden="true" />
               <p>
                 <strong>Próximo passo:</strong> depois de enviar, seu registro no conselho de
-                classe passa por conferência. Se o seu e-mail já tiver sido liberado
-                antecipadamente por um administrador do CorVIA, seu acesso é concedido na hora —
-                do contrário, você recebe a confirmação por e-mail assim que for aprovado.
+                classe passa por conferência. O segundo e-mail recebe uma confirmação de segurança
+                e será usado para recuperação da conta. O CorVIA nunca envia sua senha em texto.
               </p>
             </div>
 
@@ -326,8 +329,8 @@ export default function SolicitarAcesso() {
           </div>
 
           <p className="login-acesso__seguranca">
-            <Icone nome="check" aria-hidden="true" /> Seus dados são usados só para confirmar sua
-            identidade profissional.
+            <Icone nome="check" aria-hidden="true" /> Seus dados são usados para confirmar sua
+            identidade profissional e proteger o acesso à conta.
           </p>
         </div>
 
@@ -344,11 +347,6 @@ export default function SolicitarAcesso() {
   );
 }
 
-// Tela de confirmação, dinâmica pela resposta REAL do servidor — nunca um
-// texto fixo assumindo fila de aprovação, porque o convidado por
-// pré-autorização de e-mail já sai com o acesso liberado na hora
-// (`acesso_imediato: true`), e mostrar "aguardando aprovação" pra essa
-// pessoa seria simplesmente falso (bug corrigido em 14/08/2026).
 function TelaConfirmacao({ acessoImediato }: { acessoImediato: boolean }) {
   return (
     <main className="login login--solicitar-acesso">
@@ -389,14 +387,13 @@ function TelaConfirmacao({ acessoImediato }: { acessoImediato: boolean }) {
             </h2>
             {acessoImediato ? (
               <p>
-                Seus dados foram registrados e o seu acesso ao CorVIA já está liberado. Você pode
-                entrar agora mesmo com o e-mail e a senha que acabou de cadastrar.
+                Seus dados foram registrados e o acesso ao CorVIA já está liberado. Seu segundo
+                e-mail também foi registrado como canal independente de recuperação.
               </p>
             ) : (
               <p>
                 Seus dados foram registrados. Um administrador vai conferir seu registro no
-                conselho de classe antes de liberar o acesso — você recebe a confirmação por
-                e-mail quando isso acontecer.
+                conselho de classe. Seu segundo e-mail já ficou protegido como canal de recuperação.
               </p>
             )}
             <Link to="/entrar" className="login-formulario__entrar" style={{ width: "fit-content" }}>
