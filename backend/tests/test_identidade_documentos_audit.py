@@ -63,8 +63,14 @@ def test_admin_envia_campos_profissionais_para_contas_reais_e_os_omite_no_invest
     for field in ("include_workplace_on_documents", "profile_completion_required"):
         assert f"{field}: investidor ? false : novo.{field}" in source, field
 
-    assert 'password: investidor ? "CorVIAOS" : novo.password' in source
+    # Investidor mantém a credencial global definida pelo produto. Contas reais
+    # não recebem senha escolhida/exibida pelo Admin: nasce uma credencial
+    # provisória aleatória e o titular escolhe a própria senha pelo link de uso único.
+    assert 'password: investidor ? "CorVIAOS" : senhaProvisoriaAleatoria()' in source
     assert 'role: investidor ? "leitor" : novo.role' in source
+    assert 'api.post("/auth/admin/criar-usuario-com-recuperacao"' in source
+    assert 'recovery_email: novo.recovery_email.trim().toLowerCase()' in source
+    assert 'if (investidor) await api.post("/admin/users", payload)' in source
 
 
 def test_rce_respeita_opt_in_do_local_de_trabalho():
