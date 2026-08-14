@@ -25,7 +25,6 @@ from app.services.agenda_integrada.domain import integration_credentials, sync_i
 from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
 
 PROVEDORES_OAUTH = {"google_calendar", "microsoft_365"}
-PROVEDORES_IMAP = {"yahoo_mail", "apple_icloud"}
 ERROS_REAUTENTICACAO = {
     "reauth_required", "invalid_grant", "interaction_required", "consent_required",
     "oauth_refresh_token_missing",
@@ -78,9 +77,10 @@ def _heartbeat_mail(db: Session, item: CalendarIntegration) -> dict[str, Any]:
 def sincronizar_conta(db: Session, item: CalendarIntegration, *, full: bool = False) -> dict[str, Any]:
     """Executa somente os componentes que a conta realmente suporta.
 
-    Retorna 200-style payload mesmo quando um componente transitório falha;
-    quem chama consegue mostrar a pendência sem fazer o botão parecer inerte.
-    ``reauth_required`` continua explícito no payload e no estado persistido.
+    ``sync_mail`` é preferência de VISIBILIDADE/uso da caixa, não autorização
+    para deixar a credencial apodrecer. Se a conta concedeu ``read_mail``, o
+    heartbeat roda mesmo com a preferência de exibição desligada; assim a
+    conexão continua pronta para quando o médico reativar o e-mail.
     """
     if not settings.agenda_integrations_enabled:
         raise ConnectorError("integration_disabled", "Integrações externas estão desativadas.", status_code=409)
@@ -95,10 +95,10 @@ def sincronizar_conta(db: Session, item: CalendarIntegration, *, full: bool = Fa
     teve_sucesso = False
     reauth = False
 
-    # Heartbeat/renovação de e-mail. Gmail/Outlook não copiam mensagem para o
-    # banco: a caixa externa é proxy ao vivo. O heartbeat prova que a conexão
-    # continua válida e renova OAuth antes de expirar.
-    if item.sync_mail and capacidades.get("read_mail"):
+    # Manutenção da conexão de e-mail é independente da opção "mostrar e-mail"
+    # na caixa unificada. Gmail/Outlook renovam OAuth; Yahoo/iCloud validam a
+    # senha específica de app. Mensagens continuam sendo lidas ao vivo.
+    if capacidades.get("read_mail"):
         algum_aplicavel = True
         try:
             detalhe = _heartbeat_mail(db, item)
@@ -117,9 +117,8 @@ def sincronizar_conta(db: Session, item: CalendarIntegration, *, full: bool = Fa
             componentes.append(_erro_dict("mail", codigo, str(exc), reauth=is_reauth))
             reauth = reauth or is_reauth
 
-    # Calendário só é chamado se o conector declara leitura. Isto é o que faz
-    # "Sincronizar agora" funcionar também em Yahoo mail-only sem cair em
-    # read_not_supported.
+    # Calendário só é chamado se o conector declara leitura. Isto faz
+    # "Sincronizar agora" funcionar em Yahoo mail-only sem read_not_supported.
     if item.sync_calendar and capacidades.get("read_appointments"):
         algum_aplicavel = True
         try:
@@ -166,8 +165,6 @@ def sincronizar_conta(db: Session, item: CalendarIntegration, *, full: bool = Fa
     elif teve_sucesso and not erros:
         _marcar_sucesso(db, item)
     elif teve_sucesso:
-        # Sucesso parcial: conexão continua válida e elegível para o próximo
-        # ciclo; preservamos o erro do componente que faltou.
         primeiro = erros[0]
         item.last_success_at = datetime.now(timezone.utc)
         _marcar_erro(db, item, primeiro["codigo"], primeiro["mensagem"], reauth=False)
