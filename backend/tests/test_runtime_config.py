@@ -14,6 +14,9 @@ def _settings(**alteracoes):
         "admin_email": "admin@corvia.med.br",
         "database_url": "postgresql+psycopg://corvia:senha-banco-segura@db:5432/corvia",
         "storage_encryption_key": CHAVE_FERNET_VALIDA,
+        "smtp_configurado": True,
+        "smtp_user": "contato@corvia.med.br",
+        "smtp_from": "CorVIA <contato@corvia.med.br>",
     }
     valores.update(alteracoes)
     return SimpleNamespace(**valores)
@@ -40,6 +43,21 @@ def test_producao_recusa_defaults_inseguros(monkeypatch):
     assert "STORAGE_ENCRYPTION_KEY" in mensagem
 
 
+def test_producao_recusa_smtp_ausente_ou_remetente_errado(monkeypatch):
+    monkeypatch.setenv("ENVIRONMENT", "production")
+    with pytest.raises(RuntimeError) as exc:
+        validar_configuracao_de_execucao(_settings(
+            smtp_configurado=False,
+            smtp_user="outra-conta@corvia.med.br",
+            smtp_from="CorVIA <outra-conta@corvia.med.br>",
+        ))
+    mensagem = str(exc.value)
+    assert "SMTP_HOST/SMTP_USER/SMTP_PASSWORD" in mensagem
+    assert "SMTP_FROM" in mensagem
+    assert "SMTP_USER" in mensagem
+    assert "contato@corvia.med.br" in mensagem
+
+
 def test_producao_aceita_configuracao_segura(monkeypatch):
     monkeypatch.setenv("ENVIRONMENT", "production")
     validar_configuracao_de_execucao(_settings())
@@ -54,5 +72,8 @@ def test_desenvolvimento_mantem_defaults_locais(monkeypatch):
             admin_email="admin@meucardio.local",
             database_url="postgresql+psycopg://meucardio:meucardio@db:5432/meucardio",
             storage_encryption_key="",
+            smtp_configurado=False,
+            smtp_user="",
+            smtp_from="",
         )
     )
