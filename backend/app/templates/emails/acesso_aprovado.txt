@@ -1,0 +1,8 @@
+Olá, {{ nome }}.
+
+Seu acesso ao CorVIA Clinical OS foi aprovado e já está liberado.
+
+E-mail de login: {{ email_login }}
+Entrar no CorVIA: {{ link_login }}
+
+Use a senha que você definiu no cadastro. O CorVIA nunca envia sua senha por e-mail.
