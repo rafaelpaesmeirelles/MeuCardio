@@ -250,7 +250,19 @@
 .admin-ficha__decisao {
   margin-top: 1.4rem;
   padding: 1rem 1.1rem;
-  color: var(--texto);
+  /* --texto NÃO é seguro aqui — dentro de .clinical-os, o "compatibility
+     layer" (clinical-os-polish.css/clinical-command-center-v2.css)
+     REDEFINE --texto/--superficie/--texto-secundario por completo para o
+     tema escuro (--texto vira quase branco). --superficie-suave nunca é
+     redefinida (sempre cai no fallback literal #f4f7f8, claro de verdade),
+     então o fundo aqui é sempre claro — mas `color: var(--texto)` virava
+     quase branco sobre esse claro, reintroduzindo o bug mesmo depois do
+     primeiro fix (14/08/2026, achado ao inspecionar produção com token de
+     admin real, não só rodando o checker local). Usar sempre um token
+     BRUTO (--slate-950/--slate-700/--navy-900/--white), nunca um token de
+     PAPEL SEMÂNTICO (--texto/--superficie/--borda/--acento), para texto
+     sobre uma superfície desta ficha cujo fundo é garantidamente claro. */
+  color: var(--slate-950);
   background: var(--superficie-suave, #f4f7f8);
   border: 1px solid var(--borda);
   border-radius: var(--r);
@@ -282,12 +294,15 @@
 /* Lista rotulada (chave/valor), não mais um <pre> de JSON cru — ver
    DetalheHistorico em AdminFichaAssinante.tsx (bug corrigido 14/08/2026). */
 .admin-ficha__historico-detalhe {
+  /* Mesma ressalva de --texto/--superficie de .admin-ficha__decisao, acima
+     — token bruto sempre, nunca semântico, quando o fundo é claro de
+     verdade dentro de .clinical-os. */
   display: flex;
   flex-direction: column;
   gap: 0.22rem;
   margin: 0.4rem 0 0;
   padding: 0.55rem 0.7rem;
-  color: var(--texto);
+  color: var(--slate-950);
   background: var(--superficie-suave, #f4f7f8);
   border-radius: 8px;
   font-size: 0.78rem;
@@ -299,14 +314,21 @@
   overflow-wrap: anywhere;
 }
 .admin-ficha__historico-detalhe-linha dt {
-  color: var(--texto-secundario);
+  color: var(--slate-700);
   font-family: var(--fonte-dados);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 .admin-ficha__historico-detalhe-linha dt::after { content: ":"; }
-.admin-ficha__historico-detalhe-linha dd { margin: 0; }
+/* color explícito aqui, não só herdado do <dl> pai — .clinical-os dd (bare
+   tag, clinical-canonical-fidelity.css) declara var(--corvia-text-2) claro
+   e, mesmo com especificidade menor, é a ÚNICA regra que define `color`
+   em <dd> quando esta regra não o faz — herança nunca compete com uma
+   declaração direta, por mais fraca que seja. Achado ao verificar o fix
+   anterior num harness estático com o CSS de produção real, depois que a
+   inspeção ao vivo já tinha achado o bug irmão de --texto/--superficie. */
+.admin-ficha__historico-detalhe-linha dd { margin: 0; color: var(--slate-950); }
 
 /* Visualizador de documento — imagem via <img src="blob:...">, PDF via
    <iframe src="blob:...">, nunca srcDoc/innerHTML (política de
@@ -323,11 +345,15 @@
   background: rgba(6, 25, 35, 0.72);
 }
 .admin-visualizador__painel {
+  /* --white nunca é redefinido pelo compat layer de .clinical-os (só os
+     tokens de PAPEL semântico são) — o fundo aqui é sempre branco de
+     verdade, então o texto precisa de um token bruto escuro, não --texto
+     (mesma ressalva de .admin-ficha__decisao, acima). */
   display: flex;
   flex-direction: column;
   width: min(96vw, 980px);
   height: min(90vh, 780px);
-  color: var(--texto);
+  color: var(--slate-950);
   background: var(--white);
   border-radius: var(--r);
   box-shadow: var(--sombra-lg);

@@ -62,10 +62,20 @@ function contraste(hexA, hexB) {
   return (claro + 0.05) / (escuro + 0.05);
 }
 
+// Comentário de CSS pode citar outro seletor em prosa (ex.: "mesma ressalva
+// de .admin-ficha__decisao, acima") — sem remover comentários antes, a
+// vírgula da prosa é lida como lista de seletores e o "corpo" capturado
+// vira um trecho arbitrário do arquivo até o próximo `{` real, não a regra
+// pedida. Aconteceu de verdade com os próprios comentários que documentam
+// o bug corrigido em 14/08/2026 — descoberto rodando este checker.
+function removerComentarios(css) {
+  return css.replace(/\/\*[\s\S]*?\*\//g, "");
+}
+
 function corpoDoSeletor(css, seletorLiteral) {
   const escapado = seletorLiteral.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const re = new RegExp(`${escapado}\\s*(?:,[^{]*)?\\{([^}]*)\\}`);
-  return re.exec(css)?.[1] ?? null;
+  return re.exec(removerComentarios(css))?.[1] ?? null;
 }
 
 function declaracao(corpo, propriedade) {
@@ -73,12 +83,38 @@ function declaracao(corpo, propriedade) {
   return re.exec(corpo)?.[1]?.trim() ?? null;
 }
 
-// Cada contêiner de fundo claro desta ficha que precisa de `color` escuro
-// explícito — a lista é exaustiva, não um exemplo: qualquer novo bloco de
-// fundo claro acrescentado a este arquivo deveria entrar aqui também.
-const SUPERFICIES_CLARAS = [
-  ".admin-assinantes__tabela-wrap",
-  ".admin-ficha__cabecalho",
+// 🚨 Achado ao inspecionar PRODUÇÃO com um token de admin real (14/08/2026,
+// depois do primeiro fix): `.clinical-os` tem uma camada de compatibilidade
+// (clinical-os-polish.css/clinical-command-center-v2.css, comentada como
+// "compatibility layer for modules that predate the launch shell") que
+// REDEFINE por completo os tokens de PAPEL SEMÂNTICO de tokens.css só
+// dentro de `.clinical-os` — `--texto` deixa de ser `--slate-950` (escuro)
+// e vira `#eef8fa`/`--cos-text` (quase branco); `--texto-secundario` vira
+// um cinza claro; `--superficie` deixa de ser branco e vira um painel
+// escuro. **`color: var(--texto)` resolvido só contra tokens.css (como a
+// primeira versão deste checker fazia) diz "está escuro, tá tudo bem" —
+// e no navegador real, dentro de .clinical-os, é quase branco.** Foi
+// exatamente esse falso-positivo que deixou .admin-ficha__decisao,
+// .admin-ficha__historico-detalhe e .admin-visualizador__painel
+// PASSAREM no checker e CONTINUAREM quebrados em produção.
+//
+// Tokens BRUTOS (--slate-950, --slate-700, --navy-900, --white, hex
+// literal) nunca são redefinidos pela camada de compatibilidade — são a
+// única fonte segura de cor para uma superfície cujo fundo é claro DE
+// VERDADE (não "claro segundo tokens.css, mas escuro dentro do shell").
+const TOKENS_SEMANTICOS_AMBIGUOS = ["--texto", "--texto-secundario", "--superficie", "--acento"];
+
+// Grupo 1 — fundo declarado com var(--superficie), que a camada de
+// compatibilidade redefine para um painel ESCURO dentro de .clinical-os:
+// aqui `color: var(--texto)` é correto (também vira claro, acompanhando o
+// fundo) — confirmado ao vivo em produção (cabeçalho da ficha legível).
+const SUPERFICIES_QUE_ACOMPANHAM_O_TEMA = [".admin-ficha__cabecalho", ".admin-assinantes__tabela-wrap"];
+
+// Grupo 2 — fundo com fallback literal (var(--superficie-suave, #f4f7f8))
+// ou var(--white), NENHUM dos dois redefinido pela camada de
+// compatibilidade: o fundo é claro sempre, dentro ou fora de .clinical-os.
+// Texto aqui PRECISA de token bruto escuro — nunca --texto/--superficie.
+const SUPERFICIES_SEMPRE_CLARAS = [
   ".admin-ficha__decisao",
   ".admin-ficha__historico-detalhe",
   ".admin-visualizador__painel",
@@ -88,12 +124,7 @@ export function validateAdminFichaContrast(css, tokensCss) {
   const failures = [];
   const tokens = resolverTokens(tokensCss);
 
-  for (const seletor of SUPERFICIES_CLARAS) {
-    const corpo = corpoDoSeletor(css, seletor);
-    if (!corpo) {
-      failures.push(`não encontrei a regra ${seletor} em admin-assinantes.css`);
-      continue;
-    }
+  function conferirCorpo(seletor, corpo, { exigirTokenBruto }) {
     const cor = declaracao(corpo, "color");
     const fundo = declaracao(corpo, "background");
     if (!cor) {
@@ -101,9 +132,21 @@ export function validateAdminFichaContrast(css, tokensCss) {
         `${seletor} declara um fundo claro sem \`color\` explícito — herda o texto quase-branco ` +
           "ambiente do shell .clinical-os, ficando ilegível sobre este fundo claro",
       );
-      continue;
+      return;
     }
-    if (!fundo) continue; // sem fundo próprio declarado nesta regra — nada a conferir aqui
+    if (exigirTokenBruto) {
+      const usaTokenAmbiguo = TOKENS_SEMANTICOS_AMBIGUOS.some((t) => cor.includes(`var(${t})`));
+      if (usaTokenAmbiguo) {
+        failures.push(
+          `${seletor}: color usa um token de PAPEL semântico (${cor}) — dentro de .clinical-os esses ` +
+            "tokens são redefinidos para o tema escuro (ver comentário no topo deste checker) e este " +
+            "fundo é claro sempre; use um token BRUTO (--slate-950, --slate-700, --navy-900, --white) " +
+            "ou hex literal, nunca --texto/--texto-secundario/--superficie/--acento aqui",
+        );
+        return;
+      }
+    }
+    if (!fundo) return; // sem fundo próprio declarado nesta regra — nada a conferir aqui
     const corResolvida = resolverCor(cor, tokens);
     const fundoResolvido = resolverCor(fundo, tokens);
     if (/^#/.test(corResolvida) && /^#/.test(fundoResolvido)) {
@@ -114,6 +157,36 @@ export function validateAdminFichaContrast(css, tokensCss) {
             `${razao.toFixed(2)}:1 — abaixo do mínimo WCAG AA de 4.5:1`,
         );
       }
+    }
+  }
+
+  for (const seletor of SUPERFICIES_QUE_ACOMPANHAM_O_TEMA) {
+    const corpo = corpoDoSeletor(css, seletor);
+    if (!corpo) { failures.push(`não encontrei a regra ${seletor} em admin-assinantes.css`); continue; }
+    conferirCorpo(seletor, corpo, { exigirTokenBruto: false });
+  }
+  for (const seletor of SUPERFICIES_SEMPRE_CLARAS) {
+    const corpo = corpoDoSeletor(css, seletor);
+    if (!corpo) { failures.push(`não encontrei a regra ${seletor} em admin-assinantes.css`); continue; }
+    conferirCorpo(seletor, corpo, { exigirTokenBruto: true });
+  }
+
+  // O rótulo (dt) e o valor (dd) dentro do detalhe do histórico são a
+  // mesma armadilha, por dois motivos DIFERENTES: dt porque
+  // --texto-secundario também é redefinido pela camada de compatibilidade;
+  // dd porque, mesmo herdando color:var(--slate-950) do <dl> pai corrigido
+  // acima, existe uma regra GLOBAL `.clinical-os dd { color:
+  // var(--corvia-text-2) }` (bare tag, clinical-canonical-fidelity.css)
+  // que é a ÚNICA declaração de `color` em <dd> quando esta regra local
+  // não declara a sua própria — herança nunca compete com uma declaração
+  // direta, por mais fraca a especificidade. dd PRECISA de color explícito
+  // aqui, não pode confiar em herdar do <dl>.
+  for (const seletorAninhado of [".admin-ficha__historico-detalhe-linha dt", ".admin-ficha__historico-detalhe-linha dd"]) {
+    const corpo = corpoDoSeletor(css, seletorAninhado);
+    if (!corpo) {
+      failures.push(`não encontrei a regra ${seletorAninhado}`);
+    } else {
+      conferirCorpo(seletorAninhado, corpo, { exigirTokenBruto: true });
     }
   }
 
@@ -184,6 +257,33 @@ export function validateHistoricoRendering(tsx) {
   return failures;
 }
 
+// A mesma armadilha do CSS (token de PAPEL semântico redefinido pela
+// camada de compatibilidade de .clinical-os) também aparece em `style={{}}`
+// inline — achado ao verificar o fix ao vivo em produção: PainelDecisaoKyc
+// tinha `color: "var(--texto-secundario)"` num <p> dentro de
+// .admin-ficha__decisao (fundo sempre claro), ficando quase branco sobre
+// claro mesmo depois do CSS corrigido. Inline style vence QUALQUER regra
+// externa, então nem a correção do CSS ajudaria aqui.
+export function validateInlineStyleTokens(tsx) {
+  const failures = [];
+  const corpo = corpoDaFuncao(tsx, "PainelDecisaoKyc");
+  if (!corpo) {
+    failures.push("não encontrei a função PainelDecisaoKyc em AdminFichaAssinante.tsx");
+    return failures;
+  }
+  for (const token of TOKENS_SEMANTICOS_AMBIGUOS) {
+    if (corpo.includes(`var(${token})`)) {
+      failures.push(
+        `PainelDecisaoKyc usa var(${token}) num style inline — este componente renderiza dentro de ` +
+          ".admin-ficha__decisao, fundo sempre claro; dentro de .clinical-os esse token é redefinido para " +
+          "o tema escuro (ver check-admin-ficha-historico.mjs) e um style inline vence qualquer correção " +
+          "de CSS externo. Use um token bruto (--slate-700, --slate-950) direto no style.",
+      );
+    }
+  }
+  return failures;
+}
+
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
 
 if (isMain) {
@@ -195,6 +295,7 @@ if (isMain) {
   const failures = [
     ...validateAdminFichaContrast(css, tokensCss),
     ...validateHistoricoRendering(tsx),
+    ...validateInlineStyleTokens(tsx),
   ];
   if (failures.length) {
     console.error("Falha no contrato da ficha do assinante (aba Histórico e superfícies claras):\n");

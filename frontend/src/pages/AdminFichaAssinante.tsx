@@ -410,7 +410,13 @@ function PainelDecisaoKyc({ kycId, aoDecidido }: { kycId: number; aoDecidido: ()
   return (
     <div className="admin-ficha__decisao">
       <p className="eyebrow" style={{ margin: "0 0 0.3rem" }}>Decisão de verificação de identidade</p>
-      <p style={{ margin: 0, color: "var(--texto-secundario)", fontSize: "0.88rem" }}>
+      {/* --texto-secundario NÃO é seguro aqui — este <p> está dentro de
+         .admin-ficha__decisao, um fundo claro de verdade (var(--superficie-suave,
+         #f4f7f8), nunca redefinido). Dentro de .clinical-os, --texto-secundario é
+         redefinido pela camada de compatibilidade para um tom claro, pensado para
+         fundo escuro — token bruto (--slate-700) aqui, mesma causa raiz do bug de
+         14/08/2026 no CSS deste arquivo. */}
+      <p style={{ margin: 0, color: "var(--slate-700)", fontSize: "0.88rem" }}>
         Confira os documentos acima antes de decidir. A decisão fica registrada no histórico do
         assinante.
       </p>
