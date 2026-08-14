@@ -72,6 +72,25 @@ services:
       start_period: 20s
     restart: unless-stopped
 
+  # Supervisor permanente de Google/Microsoft/Apple/Yahoo. Calendário e
+  # contatos usam sync incremental; e-mail externo continua proxy ao vivo e
+  # recebe heartbeat/renovação de credencial. O worker espera o backend ficar
+  # saudável para nunca disputar migrations no startup.
+  agenda-sync:
+    build:
+      context: ./backend
+    env_file: .env
+    environment:
+      ENVIRONMENT: production
+      DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
+      AGENDA_BACKGROUND_SYNC_ENABLED: "true"
+      AGENDA_SYNC_INTERVAL_SECONDS: "60"
+    depends_on:
+      backend:
+        condition: service_healthy
+    command: ["python", "-m", "app.services.agenda_sync_worker"]
+    restart: unless-stopped
+
   frontend-build:
     build:
       context: ./frontend
