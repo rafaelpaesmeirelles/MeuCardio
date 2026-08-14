@@ -1,14 +1,13 @@
 """Ponto único de acesso às tools do Assistente Pessoal — Agenda e CorVIA Mail.
 
-Duas travas precisam estar de acordo antes de uma pergunta sequer OFERECER
-estas tools ao modelo (verificado em ``rag.py``, não aqui):
+Três travas precisam estar de acordo antes de uma tool produzir efeito:
 1. ``settings.ai_assistant_tools_enabled`` — decisão de instalação/admin;
-2. ``user.ia_ferramentas_consent_em`` não nulo — consentimento individual.
+2. ``user.ia_ferramentas_consent_em`` não nulo — consentimento individual;
+3. ``user.investidor`` precisa ser falso — conta demo nunca produz efeito.
 
-A camada avançada acrescenta resolução/cadastro de locais, geocodificação,
-rotinas/recorrências nativas e ações explícitas de CorVIA Mail. Ela continua
-reutilizando as mesmas funções de domínio/rotas usadas pelas telas, sem um
-caminho de persistência paralelo.
+A seleção das tools pelo modelo continua ocorrendo em ``rag.py``. A checagem de
+Investidor vive TAMBÉM aqui, no executor, para que chamadas internas/diretas não
+possam contornar o middleware HTTP. Defesa em profundidade, fail-closed.
 """
 from __future__ import annotations
 
@@ -16,6 +15,7 @@ from sqlalchemy.orm import Session
 
 from app.models.audit import AuditLog
 from app.models.user import User
+from app.services.entitlement import MENSAGEM_MODO_INVESTIDOR
 from app.services.ia.agenda_tools import AGENDA_TOOLS_SCHEMA, executar_tool_agenda
 from app.services.ia.assistant_automation_tools import (
     ASSISTANT_AUTOMATION_TOOLS_SCHEMA,
@@ -70,6 +70,15 @@ _ARGUMENTOS_SEGUROS_PARA_AUDITORIA = {
 
 def executar_tool_assistente(nome: str, argumentos: dict, db: Session, user: User) -> dict:
     argumentos = argumentos or {}
+
+    # Boundary guard explícito. Não delegar esta propriedade somente ao HTTP:
+    # o executor é reutilizável por RAG/testes/jobs e deve ser seguro sozinho.
+    if bool(getattr(user, "investidor", False)):
+        return {
+            "erro": "modo_investidor_read_only",
+            "mensagem": MENSAGEM_MODO_INVESTIDOR,
+        }
+
     if nome in AUTOMATION_TOOL_NAMES:
         resultado = executar_tool_automation(nome, argumentos, db, user)
     elif nome.startswith("agenda_"):
