@@ -48,6 +48,7 @@ import "./styles/clinical-home-mobile-final.css";
 import "./styles/clinical-full-viewport.css";
 import "./styles/clinical-release-hardening.css";
 import "./styles/prehome-register-bridge.css";
+import "./styles/prehome-fidelity-polish.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
