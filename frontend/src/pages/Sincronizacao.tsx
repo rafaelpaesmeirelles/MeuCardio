@@ -18,6 +18,13 @@ type IntegracaoExterna = {
   last_error_message: string | null;
 };
 type CapacidadesSync = { connectors: Array<{ provider: string; oauth_configured?: boolean }> };
+type ResultadoSync = {
+  ok: boolean;
+  status: string;
+  reauth_required?: boolean;
+  mensagem?: string;
+  componentes?: Array<{ componente: string; ok: boolean; codigo?: string }>;
+};
 
 const PROVEDORES_SINCRONIZAVEIS = ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"] as const;
 const PROVEDOR_LOGO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
@@ -26,28 +33,14 @@ const PROVEDOR_LOGO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> 
 const PROVEDOR_NOME: Record<string, string> = {
   google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud", yahoo_mail: "Yahoo Mail",
 };
-// Chave curta que conectarOAuth()/os formulários Apple e Yahoo esperam, a
-// partir do nome completo do provider que a API devolve.
 const PROVEDOR_CHAVE_CONEXAO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
   google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo",
 };
 
-/** Trabalho 16 (07/08/2026), item próprio do menu ("Sincronize suas
- * contas", seção Gestão, posição inferior do menu lateral — pedido do
- * Rafael em 07/08/2026): conectar/gerenciar contas Google, Microsoft,
- * Apple e Yahoo num só lugar — múltiplas contas por empresa, escolher o
- * que cada uma sincroniza (agenda, contatos, e-mail) e desconectar quando
- * quiser. A conexão em si (OAuth do Google/Microsoft, formulário de senha
- * específica de app da Apple/Yahoo) reaproveita exatamente as mesmas rotas
- * já usadas pelo painel de configuração da Agenda — o retorno do OAuth do
- * Google/Microsoft sempre pousa em `/agenda` (é o `redirect_uri` fixo
- * cadastrado no provedor), então logo após conectar por aqui o navegador
- * passa brevemente pela Agenda antes — comportamento esperado, não um
- * bug desta tela.
- *
- * O que aparece aqui é só a CONEXÃO e a preferência de sincronização; a
- * ESCOLHA de qual conta VER em cada momento é feita na própria Agenda e no
- * CorvIA Mail (cada um com seu seletor de contas, combinável à vontade). */
+/** Central única para conectar e acompanhar contas externas. O backend mantém
+ * OAuth/IMAP vivo em segundo plano e esta tela apenas mostra o estado atual.
+ * E-mail externo é proxy ao vivo: "sincronizar" uma conta mail-only verifica
+ * credencial/heartbeat; não copia a caixa para o banco CorVIA. */
 export default function Sincronizacao() {
   const [integracoes, setIntegracoes] = useState<IntegracaoExterna[] | null>(null);
   const [capacidades, setCapacidades] = useState<CapacidadesSync | null>(null);
@@ -71,17 +64,28 @@ export default function Sincronizacao() {
     setIntegracoes(i);
     setCapacidades(c);
   }
-  useEffect(() => { carregar().catch(() => {}); }, []);
 
-  // Volta do redirecionamento OAuth do Google/Microsoft (que sempre pousa
-  // em /agenda) — se o usuário for trazido de volta para cá por algum
-  // link, ainda tratamos os parâmetros por segurança, mas o caminho normal
-  // é o aviso aparecer na própria Agenda.
+  useEffect(() => {
+    carregar().catch(() => {});
+    // Reflete heartbeat/sync do worker sem exigir F5. A sincronização em si
+    // ocorre no servidor; este timer apenas atualiza os indicadores da tela.
+    const timer = window.setInterval(() => carregar().catch(() => {}), 30_000);
+    return () => window.clearInterval(timer);
+  }, []);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const conectada = params.get("conta_conectada");
     const falha = params.get("conta_erro");
-    if (conectada) setMensagem(`Conta ${PROVEDOR_NOME[conectada] || "externa"} conectada.`);
+    const sincronizacao = params.get("sincronizacao");
+    if (conectada) {
+      setMensagem(
+        sincronizacao === "pendente"
+          ? `Conta ${PROVEDOR_NOME[conectada] || "externa"} conectada; a sincronização continuará automaticamente em segundo plano.`
+          : `Conta ${PROVEDOR_NOME[conectada] || "externa"} conectada e sincronizada.`,
+      );
+      carregar().catch(() => {});
+    }
     if (falha) setErro("Não foi possível concluir a conexão com a conta externa.");
     if (conectada || falha) window.history.replaceState({}, "", window.location.pathname);
   }, []);
@@ -105,7 +109,7 @@ export default function Sincronizacao() {
       await api.post("/agenda/integrations/apple", { ...apple, contacts: true });
       setApple({ apple_id: "", app_specific_password: "", consent_accepted: false, mail: false, mail_consent_accepted: false });
       setFormAberto(null);
-      setMensagem("Conta Apple conectada.");
+      setMensagem("Conta Apple conectada. A manutenção da conexão passa a ser automática.");
       await carregar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o iCloud.");
@@ -118,27 +122,25 @@ export default function Sincronizacao() {
       await api.post("/email/conectar-yahoo", yahoo);
       setYahoo({ endereco: "", senha_de_app: "", consent_accepted: false });
       setFormAberto(null);
-      setMensagem("Conta Yahoo conectada.");
+      setMensagem("Conta Yahoo conectada. O e-mail é consultado ao vivo e a credencial será verificada continuamente.");
       await carregar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível conectar a Yahoo.");
     }
   }
 
-  /** Trabalho 16, ajuste de 07/08/2026 — Rafael reportou que "clicar em
-   * sincronizar não resulta em nada": esta página nasceu só com Conectar +
-   * preferências, sem nenhuma ação de "buscar agora" — quem já estava
-   * conectado (ex.: Microsoft de véspera) não tinha como pedir uma nova
-   * busca por aqui, só na tela antiga da Agenda. Mesma rota que a Agenda já
-   * usa (`sincronizarConta`), para não duplicar comportamento. Contas só de
-   * e-mail (Yahoo) não têm este botão — a leitura delas é sempre ao vivo,
-   * feita no momento de abrir o CorvIA Mail, não por sincronização prévia. */
   async function sincronizarConta(id: number) {
     setSincronizando(id); setErro(""); setMensagem("");
     try {
-      await api.post(`/agenda/integrations/${id}/sync-all?full=false`, {});
+      const r = await api.post<ResultadoSync>(`/agenda/integrations/${id}/sync-live?full=false`, {});
       await carregar();
-      setMensagem("Agenda e contatos atualizados agora.");
+      if (r.reauth_required) {
+        setErro("A autorização desta conta precisa ser renovada. Use Reconectar.");
+      } else if (r.ok) {
+        setMensagem("Conta verificada e sincronizada agora.");
+      } else {
+        setMensagem(r.mensagem || "Conta verificada; um componente ficará para a próxima tentativa automática.");
+      }
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível sincronizar agora.");
     } finally {
@@ -146,17 +148,6 @@ export default function Sincronizacao() {
     }
   }
 
-  /** 07/08/2026 — achado ao reproduzir de novo o "ressincronizar não funciona"
-   * que o Rafael reportou: a conta meirellesemaluf@gmail.com está com
-   * `enabled: false` no banco (token OAuth revogado/expirado — mesma causa
-   * de sempre para esse código de erro). "Sincronizar agora" chamava
-   * `/sync-all` sem checar isso primeiro, e o backend responde 409
-   * `integration_disabled` ANTES de tentar qualquer coisa com o provedor —
-   * clicar não "não levava a nada" por acaso, sempre falhava, só que o erro
-   * genérico não dizia por quê nem o que fazer. As três rotas de conexão
-   * (`complete_oauth`, `/integrations/apple`, `/conectar-yahoo`) já fazem
-   * upsert pela MESMA conta (owner + provider + identificador externo) —
-   * reconectar não cria duplicata, revive esta mesma linha. */
   function reconectar(item: IntegracaoExterna) {
     const chave = PROVEDOR_CHAVE_CONEXAO[item.provider];
     if (chave === "google" || chave === "microsoft") { conectarOAuth(chave); return; }
@@ -196,16 +187,19 @@ export default function Sincronizacao() {
       <p className="eyebrow">Sincronize suas contas</p>
       <h1>Sincronização de contas</h1>
       <p style={{ maxWidth: "62ch", color: "var(--texto-secundario)" }}>
-        Conecte Google, Microsoft, Apple e Yahoo — quantas contas quiser, de uma ou de várias
-        empresas ao mesmo tempo — e escolha exatamente o que cada uma sincroniza com a Agenda e o
-        CorvIA Mail. Altere ou desconecte quando quiser. Para escolher o que VER em cada momento
-        (uma conta, várias, ou todas juntas), use o seletor de contas dentro da própria Agenda ou
-        do CorvIA Mail.
+        Conecte Google, Microsoft, Apple e Yahoo — quantas contas quiser — e escolha o que cada
+        uma integra à Agenda e ao CorvIA Mail. Depois de conectada, a conta permanece vinculada:
+        OAuth é renovado automaticamente, Yahoo/iCloud recebem heartbeat de credencial e a Agenda
+        é atualizada continuamente em segundo plano. O CorvIA Mail consulta caixas externas ao vivo.
       </p>
 
       <div className="cartao" style={{ maxWidth: 720 }}>
         {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
         {mensagem && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>{mensagem}</p>}
+        <p style={{ marginTop: 0, fontSize: "0.78rem", color: "var(--texto-secundario)" }}>
+          <span className="selo">Sincronização contínua</span>{" "}
+          Alterações de calendário são buscadas automaticamente pelo servidor; e-mail externo é lido diretamente no provedor.
+        </p>
 
         <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.84rem", margin: "0 0 0.6rem" }}>
           <input type="checkbox" checked={consentimento} onChange={(e) => setConsentimento(e.target.checked)} />
@@ -289,8 +283,8 @@ export default function Sincronizacao() {
             </label>
             <p style={{ fontSize: "0.78rem", color: "var(--texto-secundario)", margin: "0.5rem 0" }}>
               Pode conectar mais de uma conta Yahoo. Gere a senha em login.yahoo.com → Segurança da
-              conta → Senhas de aplicativos de terceiros. A Yahoo só sincroniza e-mail, sem calendário
-              nem contatos.
+              conta → Senhas de aplicativos de terceiros. A Yahoo integra e-mail; a caixa é consultada
+              diretamente no provedor e a credencial é verificada continuamente.
             </p>
             <button className="botao" disabled={!yahoo.endereco || !yahoo.senha_de_app || !yahoo.consent_accepted}
                     onClick={conectarYahoo}>
@@ -305,6 +299,7 @@ export default function Sincronizacao() {
         )}
         {conectadas.map((item) => {
           const cap = item.capabilities || {};
+          const temComponenteSincronizavel = Boolean(cap.read_appointments || cap.read_contacts || cap.read_mail);
           return (
             <div key={item.id} className="cartao" style={{ marginBottom: "0.6rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
@@ -314,12 +309,12 @@ export default function Sincronizacao() {
                   <span className="eyebrow" style={{ margin: 0 }}>{PROVEDOR_NOME[item.provider]}</span>
                 </span>
                 <span style={{ display: "flex", gap: 6 }}>
-                  {!item.enabled ? (
+                  {!item.enabled || item.status === "reauth_required" ? (
                     <button className="botao" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
                             onClick={() => reconectar(item)}>
                       Reconectar
                     </button>
-                  ) : cap.read_appointments && (
+                  ) : temComponenteSincronizavel && (
                     <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
                             disabled={sincronizando === item.id} onClick={() => sincronizarConta(item.id)}>
                       {sincronizando === item.id ? "Sincronizando…" : "Sincronizar agora"}
@@ -331,23 +326,23 @@ export default function Sincronizacao() {
                   </button>
                 </span>
               </div>
-              {!item.enabled ? (
+              {!item.enabled || item.status === "reauth_required" ? (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
-                  Conta desconectada — o acesso expirou ou foi revogado do lado do provedor.
-                  Clique em "Reconectar" para retomar a sincronização desta mesma conta.
+                  A autorização desta conta precisa ser renovada. Clique em "Reconectar"; os dados locais
+                  já sincronizados não são apagados por isso.
                 </p>
               ) : item.last_success_at ? (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--texto-secundario)" }}>
-                  Última sincronização: {new Date(item.last_success_at).toLocaleString("pt-BR")}
+                  Conexão ativa · última verificação/sincronização: {new Date(item.last_success_at).toLocaleString("pt-BR")}
                 </p>
-              ) : cap.read_appointments ? (
+              ) : temComponenteSincronizavel ? (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
-                  Ainda sem sincronização bem-sucedida — clique em "Sincronizar agora".
+                  Conectada; aguardando a primeira verificação automática. Você também pode usar "Sincronizar agora".
                 </p>
               ) : null}
-              {item.enabled && item.last_error_message && (
+              {item.enabled && item.status !== "reauth_required" && item.last_error_message && (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
-                  Última falha: {item.last_error_message}
+                  Última pendência: {item.last_error_message}
                 </p>
               )}
               <p className="eyebrow" style={{ margin: 0 }}>O que sincronizar desta conta</p>
