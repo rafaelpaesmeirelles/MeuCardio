@@ -1,0 +1,30 @@
+name: Release final gate dispatcher
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  dispatch-mandatory-gates:
+    name: Dispatch RC2 + Visual QA + Corpus on main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch mandatory workflows against current main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          FINAL_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          test "$current_main" = "$FINAL_SHA"
+
+          gh workflow run rc2-acceptance.yml --repo "$REPOSITORY" --ref main
+          gh workflow run visual-qa.yml --repo "$REPOSITORY" --ref main
+          gh workflow run corpus-database.yml --repo "$REPOSITORY" --ref main
+
+          echo "Dispatched mandatory release gates for main SHA ${FINAL_SHA}."
