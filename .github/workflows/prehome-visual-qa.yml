@@ -1,0 +1,281 @@
+name: Pre-home Visual QA — Canonical CorVIA
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/prehome-visual-qa.yml"
+      - "frontend/src/pages/Entrar.tsx"
+      - "frontend/src/pages/SolicitarAcesso.tsx"
+      - "frontend/src/pages/EsqueciSenha.tsx"
+      - "frontend/src/pages/RedefinirSenha.tsx"
+      - "frontend/src/components/PreHomeBrand.tsx"
+      - "frontend/src/styles/login.css"
+      - "frontend/src/styles/prehome-canonical.css"
+      - "frontend/src/styles/prehome-register-bridge.css"
+      - "frontend/src/main.tsx"
+
+permissions:
+  contents: read
+
+jobs:
+  prehome-visual-qa:
+    name: Login + signup + recovery desktop/mobile
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      COMPOSE_PROJECT_NAME: corvia_prehome_qa
+      ENVIRONMENT: test
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: meucardio_prehome
+      POSTGRES_PASSWORD: prehome-test
+      POSTGRES_DB: meucardio_prehome
+      REDIS_URL: redis://redis:6379/0
+      STORAGE_ENCRYPTION_KEY: MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+      JWT_SECRET: chave-prehome-qa-nao-usar-em-producao
+      ADMIN_EMAIL: prehome-qa@teste.local
+      ADMIN_PASSWORD: prehome-qa-seguro-123
+      AI_ENABLED: "false"
+      MAIL360_CLIENT_ID: id-de-teste
+      MAIL360_CLIENT_SECRET: secret-de-teste
+      MAIL360_REFRESH_TOKEN: refresh-de-teste
+      CORVIA_MAIL_PRECO_CENTAVOS: "1000"
+      STRIPE_SECRET_KEY: sk_test_dummy
+      STRIPE_WEBHOOK_SECRET: whsec_prehome_dummy
+      PUBLIC_URL: http://127.0.0.1:8081
+      UPLOADS_DIR: /tmp/corvia-prehome/uploads
+      EXAMES_DIR: /tmp/corvia-prehome/exames
+      DOCUMENTOS_DIR: /tmp/corvia-prehome/documentos
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Create isolated runtime environment
+        run: |
+          cat > .env <<'ENV'
+          COMPOSE_PROJECT_NAME=corvia_prehome_qa
+          ENVIRONMENT=test
+          POSTGRES_HOST=db
+          POSTGRES_PORT=5432
+          POSTGRES_USER=meucardio_prehome
+          POSTGRES_PASSWORD=prehome-test
+          POSTGRES_DB=meucardio_prehome
+          REDIS_URL=redis://redis:6379/0
+          STORAGE_ENCRYPTION_KEY=MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+          JWT_SECRET=chave-prehome-qa-nao-usar-em-producao
+          ADMIN_EMAIL=prehome-qa@teste.local
+          ADMIN_PASSWORD=prehome-qa-seguro-123
+          AI_ENABLED=false
+          MAIL360_CLIENT_ID=id-de-teste
+          MAIL360_CLIENT_SECRET=secret-de-teste
+          MAIL360_REFRESH_TOKEN=refresh-de-teste
+          CORVIA_MAIL_PRECO_CENTAVOS=1000
+          STRIPE_SECRET_KEY=sk_test_dummy
+          STRIPE_WEBHOOK_SECRET=whsec_prehome_dummy
+          PUBLIC_URL=http://127.0.0.1:8081
+          UPLOADS_DIR=/tmp/corvia-prehome/uploads
+          EXAMES_DIR=/tmp/corvia-prehome/exames
+          DOCUMENTOS_DIR=/tmp/corvia-prehome/documentos
+          ENV
+
+      - name: Start isolated backend
+        run: docker compose up -d --build db redis backend
+
+      - name: Build production frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Serve production build
+        run: |
+          mkdir -p prehome-qa
+          cat > prehome-qa/nginx.conf <<'NGINX'
+          server {
+            listen 80;
+            server_name _;
+            root /usr/share/nginx/html;
+            index index.html;
+            add_header X-Content-Type-Options "nosniff" always;
+            add_header X-Frame-Options "DENY" always;
+            add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+            location /api/ {
+              proxy_pass http://backend:8000/api/;
+              proxy_http_version 1.1;
+              proxy_set_header Host $host;
+              proxy_set_header X-Forwarded-Proto $scheme;
+            }
+            location / { try_files $uri $uri/ /index.html; }
+          }
+          NGINX
+          docker run -d --name corvia-prehome-nginx \
+            --network corvia_prehome_qa_default \
+            -p 8081:80 \
+            -v "$PWD/frontend/dist:/usr/share/nginx/html:ro" \
+            -v "$PWD/prehome-qa/nginx.conf:/etc/nginx/conf.d/default.conf:ro" \
+            nginx:1.27-alpine
+
+      - name: Wait for HTTP readiness
+        run: |
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8081/api/ready >/dev/null \
+              && curl --fail --silent http://127.0.0.1:8081/entrar >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose logs --no-color backend
+          docker logs corvia-prehome-nginx || true
+          exit 1
+
+      - name: Install isolated Chromium runner
+        run: |
+          mkdir -p /tmp/corvia-prehome-qa
+          cd /tmp/corvia-prehome-qa
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund playwright@1.54.2
+          npx playwright install --with-deps chromium
+
+      - name: Capture and validate approved pre-home family
+        run: |
+          mkdir -p prehome-qa/screenshots
+          cat > /tmp/corvia-prehome-qa/capture.mjs <<'JS'
+          import { chromium } from 'playwright';
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const base = 'http://127.0.0.1:8081';
+          const out = path.join(process.env.GITHUB_WORKSPACE, 'prehome-qa', 'screenshots');
+          const reportPath = path.join(process.env.GITHUB_WORKSPACE, 'prehome-qa', 'report.json');
+          const routes = [
+            ['login', '/entrar', 'canonical'],
+            ['cadastro', '/solicitar-acesso', 'signup'],
+            ['esqueci-senha', '/esqueci-senha', 'canonical'],
+            ['redefinir-senha', '/redefinir-senha?token=visual-qa-token', 'canonical'],
+          ];
+          const viewports = [
+            ['notebook-1366x768', { width: 1366, height: 768 }],
+            ['desktop-1440x900', { width: 1440, height: 900 }],
+            ['mobile-390x844', { width: 390, height: 844 }],
+          ];
+          const browser = await chromium.launch({ headless: true });
+          const report = { pages: [], pageErrors: [], failures: [] };
+
+          function channel(rgb) {
+            const m = String(rgb || '').match(/rgba?\((\d+)[, ]+(\d+)[, ]+(\d+)/i);
+            if (!m) return null;
+            return [Number(m[1]), Number(m[2]), Number(m[3])];
+          }
+          function luminance(rgb) {
+            const c = channel(rgb);
+            if (!c) return null;
+            const linear = c.map((value) => {
+              const s = value / 255;
+              return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+            });
+            return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+          }
+
+          for (const [viewportName, viewport] of viewports) {
+            const context = await browser.newContext({ viewport, colorScheme: 'dark', locale: 'pt-BR' });
+            const page = await context.newPage();
+            page.on('pageerror', (error) => report.pageErrors.push(`${viewportName}: ${String(error)}`));
+
+            for (const [name, route, family] of routes) {
+              await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
+              await page.waitForTimeout(500);
+              const metrics = await page.evaluate(({ family, viewportName }) => {
+                const visible = (selector) => {
+                  const element = document.querySelector(selector);
+                  if (!element) return false;
+                  const style = getComputedStyle(element);
+                  const rect = element.getBoundingClientRect();
+                  return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+                };
+                const sample = family === 'canonical'
+                  ? document.querySelector('.prehome-card')
+                  : document.querySelector('.login--solicitar-acesso .login-acesso__conteudo');
+                const brand = family === 'canonical'
+                  ? document.querySelector('.prehome-brand')
+                  : document.querySelector('.login--solicitar-acesso .login-vitrine');
+                const style = sample ? getComputedStyle(sample) : null;
+                const brandStyle = brand ? getComputedStyle(brand) : null;
+                const isMobile = viewportName.startsWith('mobile');
+                return {
+                  width: innerWidth,
+                  height: innerHeight,
+                  scrollWidth: document.documentElement.scrollWidth,
+                  sampleVisible: Boolean(sample) && sample.getBoundingClientRect().width > 0,
+                  brandVisible: Boolean(brand) && brand.getBoundingClientRect().width > 0,
+                  sampleBackground: style?.backgroundColor || '',
+                  sampleColor: style?.color || '',
+                  brandBackground: brandStyle?.backgroundColor || '',
+                  canonicalMain: visible('.prehome'),
+                  signupMain: visible('.login--solicitar-acesso'),
+                  logo: family === 'canonical' ? visible('.prehome-brand__logo') : visible('.login-vitrine__marca'),
+                  hologram: family === 'canonical' ? visible('.prehome-brand__hologram') : true,
+                  expectedMobile: isMobile,
+                  bodyText: document.body?.innerText || '',
+                };
+              }, { family, viewportName });
+
+              const sampleLum = luminance(metrics.sampleBackground);
+              report.pages.push({ viewportName, name, route, ...metrics, bodyText: undefined, sampleLuminance: sampleLum });
+              if (metrics.scrollWidth > metrics.width + 4) {
+                report.failures.push(`${viewportName}/${name}: overflow horizontal ${metrics.scrollWidth}px > ${metrics.width}px`);
+              }
+              if (!metrics.sampleVisible) report.failures.push(`${viewportName}/${name}: painel transacional não renderizou`);
+              if (!metrics.brandVisible) report.failures.push(`${viewportName}/${name}: área de marca não renderizou`);
+              if (!metrics.logo) report.failures.push(`${viewportName}/${name}: marca CorVIA não está visível`);
+              if (family === 'canonical' && !metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell prehome canônico ausente`);
+              if (family === 'signup' && !metrics.signupMain) report.failures.push(`${viewportName}/${name}: shell de cadastro ausente`);
+              if (!metrics.expectedMobile && family === 'canonical' && !metrics.hologram) {
+                report.failures.push(`${viewportName}/${name}: holograma/brand hero ausente no desktop`);
+              }
+              if (sampleLum !== null && sampleLum > 0.15) {
+                report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
+              }
+              if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
+              await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });
+            }
+            await context.close();
+          }
+
+          await browser.close();
+          if (report.pageErrors.length) report.failures.push(`page errors: ${report.pageErrors.join(' | ')}`);
+          fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+          console.log(JSON.stringify(report, null, 2));
+          if (report.failures.length) process.exitCode = 1;
+          JS
+          cd /tmp/corvia-prehome-qa
+          node capture.mjs
+
+      - name: Upload pre-home QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: corvia-prehome-canonical-visual-qa
+          path: prehome-qa/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Show logs on failure
+        if: failure()
+        run: |
+          docker compose logs --no-color --tail=200 backend
+          docker logs corvia-prehome-nginx || true
+
+      - name: Stop isolated stack
+        if: always()
+        run: |
+          docker rm -f corvia-prehome-nginx 2>/dev/null || true
+          docker compose down -v --remove-orphans
