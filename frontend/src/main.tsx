@@ -46,8 +46,8 @@ import "./styles/clinical-emergency-board-fidelity.css";
 import "./styles/clinical-assistant-board-fidelity.css";
 import "./styles/clinical-home-mobile-final.css";
 import "./styles/clinical-full-viewport.css";
-import "./styles/clinical-form-control-contrast.css";
 import "./styles/clinical-release-hardening.css";
+import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
