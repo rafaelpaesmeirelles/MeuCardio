@@ -1,13 +1,8 @@
 """Modo Investidor — demonstração global somente leitura.
 
-Esta é a barreira central de segurança para contas ``User.investidor``.
-O frontend pode esconder/desabilitar ações para melhorar a UX, mas a decisão
-real vive aqui: uma conta de demonstração pode navegar e ler o produto, nunca
-executar operações reais.
-
-A configuração também substitui, em runtime, a regra antiga de primeiro
-acesso que exigia dados pessoais + KYC simplificado do investidor. A conta
-investidor agora vai diretamente ao tour e, depois, ao Clinical OS.
+O frontend pode esconder/desabilitar ações para UX, mas a barreira real é
+servidor-side: investidor navega e conhece o produto sem criar, alterar,
+excluir, enviar, conectar, sincronizar, gerar, emitir, assinar ou exportar.
 """
 from __future__ import annotations
 
@@ -24,9 +19,7 @@ MENSAGEM_MODO_INVESTIDOR = (
     "Modo investidor: esta conta é somente para visualização da plataforma."
 )
 
-# Únicas escritas de estado toleradas para a experiência de demonstração.
-# Nenhuma delas cria/edita dado clínico, documento, integração, cobrança ou
-# conteúdo operacional.
+# Únicas escritas persistentes necessárias à própria experiência de entrada.
 _ESCRITAS_UX_PERMITIDAS = {
     "/api/auth/sessao",
     "/api/auth/login",
@@ -35,9 +28,9 @@ _ESCRITAS_UX_PERMITIDAS = {
     "/api/auth/me/boas-vindas-vista",
 }
 
-# GETs normalmente são leitura, mas OAuth usa GET para iniciar uma operação
-# externa com efeito colateral. Esse caminho precisa ser bloqueado também.
+
 def _get_com_efeito_colateral(path: str) -> bool:
+    # OAuth externo começa por GET, mas cria estado e inicia conexão real.
     return path.startswith("/api/agenda/oauth/") and path.endswith("/start")
 
 
@@ -51,11 +44,10 @@ def _token_da_requisicao(request: Request) -> str | None:
 
 
 class InvestidorReadOnlyMiddleware:
-    """Bloqueia toda mutação real feita por um investidor autenticado.
+    """Fail-closed para qualquer mutação futura da API.
 
-    A checagem é global de propósito. Assim novos endpoints operacionais
-    adicionados no futuro nascem fail-closed para investidor sem depender de
-    alguém lembrar de colocar uma checagem específica na rota.
+    POST/PUT/PATCH/DELETE novos ficam automaticamente bloqueados para
+    investidor, sem depender de o autor do endpoint lembrar da regra.
     """
 
     def __init__(self, app):
@@ -70,15 +62,13 @@ class InvestidorReadOnlyMiddleware:
         path = request.url.path
         method = request.method.upper()
 
-        # Só inspeciona API. Assets/SPA continuam totalmente passivos.
         if path.startswith("/api/"):
-            bloquear_metodo = method not in {"GET", "HEAD", "OPTIONS"}
-            bloquear_get = method == "GET" and _get_com_efeito_colateral(path)
+            mutacao = method not in {"GET", "HEAD", "OPTIONS"}
+            get_operacional = method == "GET" and _get_com_efeito_colateral(path)
             precisa_checar = (
-                (bloquear_metodo and path not in _ESCRITAS_UX_PERMITIDAS)
-                or bloquear_get
+                (mutacao and path not in _ESCRITAS_UX_PERMITIDAS)
+                or get_operacional
             )
-
             if precisa_checar:
                 token = _token_da_requisicao(request)
                 if token:
@@ -102,8 +92,8 @@ _listeners_registrados = False
 _patches_aplicados = False
 
 
-def _preparar_novo_investidor(target: User) -> None:
-    """Matriz canônica aplicada ao criar/converter uma conta em investidor."""
+def _preparar_investidor(target: User) -> None:
+    """Matriz aplicada ao criar ou converter uma conta para Investidor."""
     target.investidor = True
     target.convidado = False
     target.is_active = True
@@ -115,7 +105,13 @@ def _preparar_novo_investidor(target: User) -> None:
 
 def _antes_de_inserir(_mapper, _connection, target: User) -> None:
     if bool(getattr(target, "investidor", False)):
-        _preparar_novo_investidor(target)
+        _preparar_investidor(target)
+
+
+def _restaurar_valor_anterior(estado, atributo: str, target: User) -> None:
+    historico = estado.attrs[atributo].history
+    if historico.has_changes() and historico.deleted:
+        setattr(target, atributo, historico.deleted[0])
 
 
 def _antes_de_atualizar(_mapper, _connection, target: User) -> None:
@@ -124,21 +120,25 @@ def _antes_de_atualizar(_mapper, _connection, target: User) -> None:
     concedendo_agora = bool(target.investidor and historico_investidor.has_changes())
 
     if concedendo_agora:
-        _preparar_novo_investidor(target)
+        _preparar_investidor(target)
         return
 
     if not bool(getattr(target, "investidor", False)):
         return
 
-    # Mesmo em registros legados, investidor nunca volta a exigir perfil.
+    # Enquanto for Investidor, não pode simultaneamente voltar a Convidado e
+    # nunca deve reabrir gate de perfil/KYC por dado legado.
+    target.convidado = False
     target.profile_completion_required = False
 
-    # Senha do modo demonstração é fixa. Se qualquer rota antiga/admin tentar
-    # trocá-la enquanto a conta continuar investidor, restaura o hash anterior.
-    # A conversão inicial é tratada acima e recebe um novo hash de CorVIAOS.
-    historico_senha = estado.attrs.password_hash.history
-    if historico_senha.has_changes() and historico_senha.deleted:
-        target.password_hash = historico_senha.deleted[0]
+    # Senha fixa: qualquer rota antiga, reset público ou edição administrativa
+    # que tente trocar a senha é neutralizada no modelo. Também restauramos o
+    # marco de revogação que o listener de User.password_hash teria alterado,
+    # evitando invalidar a sessão por uma troca que não aconteceu.
+    estado_senha = estado.attrs.password_hash.history
+    if estado_senha.has_changes() and estado_senha.deleted:
+        target.password_hash = estado_senha.deleted[0]
+        _restaurar_valor_anterior(estado, "sessions_valid_after", target)
 
 
 def _registrar_listeners() -> None:
@@ -151,12 +151,7 @@ def _registrar_listeners() -> None:
 
 
 def _patch_auth_runtime() -> None:
-    """Atualiza os gates já usados por /auth/me sem duplicar o endpoint.
-
-    As funções de ``auth.py`` consultam esses nomes no namespace do módulo em
-    tempo de execução. Trocá-los aqui mantém um único endpoint e evita uma
-    segunda implementação de perfil/onboarding.
-    """
+    """Substitui apenas os gates antigos sem duplicar endpoints de auth."""
     global _patches_aplicados
     if _patches_aplicados:
         return
@@ -190,6 +185,5 @@ def _patch_auth_runtime() -> None:
 
 
 def configurar_modo_investidor() -> None:
-    """Chamado uma vez no bootstrap da API."""
     _registrar_listeners()
     _patch_auth_runtime()
