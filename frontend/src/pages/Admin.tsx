@@ -270,11 +270,9 @@ export default function Admin() {
     workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
     include_workplace_on_documents: false, profile_completion_required: false,
     role: "medico", password: "",
-    // "normal" (cobrança/KYC normal) | "convidado" (isento de pagamento,
-    // KYC completo automático) | "investidor" (isento de pagamento, KYC
-    // pessoal simplificado automático) — 13/08/2026, matriz pedida pelo
-    // Rafael. Um campo só garante por construção que nunca existe a
-    // combinação inválida convidado+investidor ao mesmo tempo.
+    // Normal mantém cobrança/KYC. Convidado mantém cortesia operacional com
+    // KYC completo automático. Investidor é DEMO observacional: sem KYC,
+    // sem conclusão de perfil, senha fixa CorVIAOS e tour direto.
     tipo_acesso: "normal" as "normal" | "convidado" | "investidor",
   });
 
@@ -291,25 +289,26 @@ export default function Admin() {
   async function criar() {
     setErro("");
     setEnviando(true);
+    const investidor = novo.tipo_acesso === "investidor";
     try {
       await api.post("/admin/users", {
         email: novo.email.trim(),
         full_name: novo.full_name.trim(),
-        crm: novo.crm.trim() || null,
-        profession: novo.profession.trim() || null,
-        council_name: novo.council_name || null,
-        council_number: novo.council_number.trim() || null,
-        council_state: novo.council_state || null,
-        specialty: novo.specialty.trim() || null,
-        professional_title: novo.professional_title || null,
-        workplace_name: novo.workplace_name.trim() || null,
-        workplace_department: novo.workplace_department.trim() || null,
-        workplace_role: novo.workplace_role.trim() || null,
-        workplace_notes: novo.workplace_notes.trim() || null,
-        include_workplace_on_documents: novo.include_workplace_on_documents,
-        profile_completion_required: novo.profile_completion_required,
-        role: novo.role,
-        password: novo.password,
+        crm: investidor ? null : (novo.crm.trim() || null),
+        profession: investidor ? null : (novo.profession.trim() || null),
+        council_name: investidor ? null : (novo.council_name || null),
+        council_number: investidor ? null : (novo.council_number.trim() || null),
+        council_state: investidor ? null : (novo.council_state || null),
+        specialty: investidor ? null : (novo.specialty.trim() || null),
+        professional_title: investidor ? null : (novo.professional_title || null),
+        workplace_name: investidor ? null : (novo.workplace_name.trim() || null),
+        workplace_department: investidor ? null : (novo.workplace_department.trim() || null),
+        workplace_role: investidor ? null : (novo.workplace_role.trim() || null),
+        workplace_notes: investidor ? null : (novo.workplace_notes.trim() || null),
+        include_workplace_on_documents: investidor ? false : novo.include_workplace_on_documents,
+        profile_completion_required: investidor ? false : novo.profile_completion_required,
+        role: investidor ? "leitor" : novo.role,
+        password: investidor ? "CorVIAOS" : novo.password,
         tipo_acesso: novo.tipo_acesso,
       });
       setNovo({ email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
@@ -343,9 +342,6 @@ export default function Admin() {
     }
   }
 
-  // Investidor (issue #52) — acesso de AVALIAÇÃO, distinto do convidado
-  // (acesso completo gratuito, inclusive CorvIA Mail real). Rótulos abaixo
-  // deixam essa diferença explícita para quem concede o acesso pelo painel.
   async function alternarInvestidor(u: Usuario) {
     try {
       await api.patch(`/admin/users/${u.id}/investidor?investidor=${!u.investidor}`, {});
@@ -355,8 +351,12 @@ export default function Admin() {
     }
   }
 
-  const senhaFraca = novo.password.length > 0 && novo.password.length < 8;
-  const podeCriar = novo.email && novo.full_name && novo.password.length >= 8 && !enviando;
+  const investidorNovo = novo.tipo_acesso === "investidor";
+  const senhaFraca = !investidorNovo && novo.password.length > 0 && novo.password.length < 8;
+  const podeCriar = Boolean(
+    novo.email.trim() && novo.full_name.trim() &&
+    (investidorNovo || novo.password.length >= 8) && !enviando
+  );
 
   const pendentes = lista?.filter((u) => u.status === "pendente") ?? [];
   const decididos = lista?.filter((u) => u.status !== "pendente") ?? [];
@@ -421,8 +421,8 @@ export default function Admin() {
 
           <h2 style={{ marginTop: "1.6rem" }}>Criar conta diretamente</h2>
           <p style={{ color: "var(--texto-secundario)", maxWidth: "58ch" }}>
-            Pula a fila de solicitação — a conta já nasce aprovada. Repasse a senha
-            temporária por um canal seguro.
+            A conta já nasce aprovada. Convidados seguem o onboarding próprio; Investidor
+            entra diretamente no tour com a credencial fixa de demonstração.
           </p>
 
           <div className="cartao cartao--clinico" style={{ marginTop: "0.8rem", maxWidth: 560 }}>
@@ -449,21 +449,26 @@ export default function Admin() {
                   <strong>Convidado — acesso gratuito</strong>
                   <br /><small style={{ color: "var(--texto-secundario)" }}>
                     Nunca cobra. No primeiro acesso completa perfil pessoal + profissional e envia
-                    documento pessoal, documento profissional (frente/verso) e selfie ao vivo — aprovação
-                    automática assim que a submissão for válida, sem revisão de admin.
+                    os requisitos de KYC aplicáveis; a aprovação é automática, sem revisão final do admin.
                   </small>
                 </span>
               </label>
               <label style={{ display: "flex", gap: 8, alignItems: "flex-start", fontWeight: 400, marginTop: 8 }}>
                 <input type="radio" name="tipo-acesso" style={{ width: "auto", marginTop: 3 }}
                        checked={novo.tipo_acesso === "investidor"}
-                       onChange={() => setNovo({ ...novo, tipo_acesso: "investidor" })} />
+                       onChange={() => setNovo({
+                         ...novo,
+                         tipo_acesso: "investidor",
+                         role: "leitor",
+                         profile_completion_required: false,
+                         password: "",
+                       })} />
                 <span>
-                  <strong>Investidor — acesso gratuito/demonstração</strong>
+                  <strong>Investidor — demonstração somente leitura</strong>
                   <br /><small style={{ color: "var(--texto-secundario)" }}>
-                    Nunca cobra. No primeiro acesso completa só dados pessoais e envia documento
-                    pessoal + selfie ao vivo — sem profissão/conselho/registro/UF/RQE/documento
-                    profissional. Aprovação automática, sem revisão de admin.
+                    Nunca cobra. Não completa dados, não envia documento e não faz selfie/KYC.
+                    Entra direto no tour e depois pode conhecer toda a plataforma sem gerar, editar,
+                    enviar, conectar, sincronizar ou persistir operações reais.
                   </small>
                 </span>
               </label>
@@ -471,7 +476,7 @@ export default function Admin() {
 
             <div className="grade grade--2" style={{ marginTop: "0.9rem" }}>
               <div>
-                <label htmlFor="nome">Nome completo</label>
+                <label htmlFor="nome">Nome da conta</label>
                 <input id="nome" value={novo.full_name}
                        onChange={(e) => setNovo({ ...novo, full_name: e.target.value })} />
               </div>
@@ -480,92 +485,115 @@ export default function Admin() {
                 <input id="email" type="email" value={novo.email}
                        onChange={(e) => setNovo({ ...novo, email: e.target.value })} />
               </div>
-              <div>
-                <label htmlFor="tratamento-admin">Como será chamado(a)</label>
-                <select id="tratamento-admin" value={novo.professional_title}
-                        onChange={(e) => setNovo({ ...novo, professional_title: e.target.value })}>
-                  {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
-                </select>
-              </div>
-              <div>
-                <label htmlFor="profissao-admin">Profissão</label>
-                <input id="profissao-admin" value={novo.profession}
-                       onChange={(e) => setNovo({ ...novo, profession: e.target.value })} />
-              </div>
-              <div>
-                <label htmlFor="conselho-admin">Conselho</label>
-                <select id="conselho-admin" value={novo.council_name}
-                        onChange={(e) => setNovo({ ...novo, council_name: e.target.value })}>
-                  {CONSELHOS.map((c) => <option key={c} value={c}>{c}</option>)}
-                </select>
-              </div>
-              <div>
-                <label htmlFor="registro-admin">Nº de registro</label>
-                <input id="registro-admin" value={novo.council_number}
-                       onChange={(e) => setNovo({ ...novo, council_number: e.target.value })} />
-              </div>
-              <div>
-                <label htmlFor="uf-admin">UF</label>
-                <select id="uf-admin" value={novo.council_state}
-                        onChange={(e) => setNovo({ ...novo, council_state: e.target.value })}>
-                  <option value="">—</option>{UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
-                </select>
-              </div>
-              <div>
-                <label htmlFor="especialidade-admin">Especialidade</label>
-                <input id="especialidade-admin" value={novo.specialty}
-                       onChange={(e) => setNovo({ ...novo, specialty: e.target.value })} />
-              </div>
-              <div>
-                <label htmlFor="crm">CRM legado (opcional)</label>
-                <input id="crm" value={novo.crm}
-                       onChange={(e) => setNovo({ ...novo, crm: e.target.value })} />
-              </div>
-              <div>
-                <label htmlFor="perfil">Perfil</label>
-                <select id="perfil" value={novo.role}
-                        onChange={(e) => setNovo({ ...novo, role: e.target.value })}>
-                  {PERFIS.map((p) => <option key={p.valor} value={p.valor}>{p.rotulo}</option>)}
-                </select>
-              </div>
-            </div>
-            <h3 style={{ fontSize: "1rem", marginTop: "1rem" }}>Local de trabalho (opcional)</h3>
-            <div className="grade grade--2">
-              <input placeholder="Instituição, clínica ou consultório" value={novo.workplace_name}
-                     onChange={(e) => setNovo({ ...novo, workplace_name: e.target.value })} />
-              <input placeholder="Setor/unidade" value={novo.workplace_department}
-                     onChange={(e) => setNovo({ ...novo, workplace_department: e.target.value })} />
-              <input placeholder="Cargo/função" value={novo.workplace_role}
-                     onChange={(e) => setNovo({ ...novo, workplace_role: e.target.value })} />
-              <input placeholder="Outras informações" value={novo.workplace_notes}
-                     onChange={(e) => setNovo({ ...novo, workplace_notes: e.target.value })} />
-            </div>
-            <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
-              <input type="checkbox" style={{ width: "auto" }} checked={novo.include_workplace_on_documents}
-                     onChange={(e) => setNovo({ ...novo, include_workplace_on_documents: e.target.checked })} />
-              Incluir local de trabalho nos documentos
-            </label>
-            <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
-              <input type="checkbox" style={{ width: "auto" }} checked={novo.profile_completion_required}
-                     onChange={(e) => setNovo({ ...novo, profile_completion_required: e.target.checked })} />
-              No primeiro acesso, direcionar para completar dados pessoais e profissionais
-            </label>
-            <div style={{ marginTop: "0.9rem" }}>
-              <label htmlFor="senha">Senha temporária</label>
-              <input id="senha" type="text" value={novo.password}
-                     onChange={(e) => setNovo({ ...novo, password: e.target.value })}
-                     aria-describedby="senha-ajuda" />
-              <span id="senha-ajuda" style={{ fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
-                Mínimo 8 caracteres. Fica visível aqui de propósito, para você copiar e repassar.
-              </span>
-              {senhaFraca && (
-                <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>
-                  Muito curta.
-                </p>
+
+              {!investidorNovo && (
+                <>
+                  <div>
+                    <label htmlFor="tratamento-admin">Como será chamado(a)</label>
+                    <select id="tratamento-admin" value={novo.professional_title}
+                            onChange={(e) => setNovo({ ...novo, professional_title: e.target.value })}>
+                      {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="profissao-admin">Profissão</label>
+                    <input id="profissao-admin" value={novo.profession}
+                           onChange={(e) => setNovo({ ...novo, profession: e.target.value })} />
+                  </div>
+                  <div>
+                    <label htmlFor="conselho-admin">Conselho</label>
+                    <select id="conselho-admin" value={novo.council_name}
+                            onChange={(e) => setNovo({ ...novo, council_name: e.target.value })}>
+                      {CONSELHOS.map((c) => <option key={c} value={c}>{c}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="registro-admin">Nº de registro</label>
+                    <input id="registro-admin" value={novo.council_number}
+                           onChange={(e) => setNovo({ ...novo, council_number: e.target.value })} />
+                  </div>
+                  <div>
+                    <label htmlFor="uf-admin">UF</label>
+                    <select id="uf-admin" value={novo.council_state}
+                            onChange={(e) => setNovo({ ...novo, council_state: e.target.value })}>
+                      <option value="">—</option>{UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="especialidade-admin">Especialidade</label>
+                    <input id="especialidade-admin" value={novo.specialty}
+                           onChange={(e) => setNovo({ ...novo, specialty: e.target.value })} />
+                  </div>
+                  <div>
+                    <label htmlFor="crm">CRM legado (opcional)</label>
+                    <input id="crm" value={novo.crm}
+                           onChange={(e) => setNovo({ ...novo, crm: e.target.value })} />
+                  </div>
+                  <div>
+                    <label htmlFor="perfil">Perfil</label>
+                    <select id="perfil" value={novo.role}
+                            onChange={(e) => setNovo({ ...novo, role: e.target.value })}>
+                      {PERFIS.map((p) => <option key={p.valor} value={p.valor}>{p.rotulo}</option>)}
+                    </select>
+                  </div>
+                </>
               )}
             </div>
+
+            {!investidorNovo && (
+              <>
+                <h3 style={{ fontSize: "1rem", marginTop: "1rem" }}>Local de trabalho (opcional)</h3>
+                <div className="grade grade--2">
+                  <input placeholder="Instituição, clínica ou consultório" value={novo.workplace_name}
+                         onChange={(e) => setNovo({ ...novo, workplace_name: e.target.value })} />
+                  <input placeholder="Setor/unidade" value={novo.workplace_department}
+                         onChange={(e) => setNovo({ ...novo, workplace_department: e.target.value })} />
+                  <input placeholder="Cargo/função" value={novo.workplace_role}
+                         onChange={(e) => setNovo({ ...novo, workplace_role: e.target.value })} />
+                  <input placeholder="Outras informações" value={novo.workplace_notes}
+                         onChange={(e) => setNovo({ ...novo, workplace_notes: e.target.value })} />
+                </div>
+                <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
+                  <input type="checkbox" style={{ width: "auto" }} checked={novo.include_workplace_on_documents}
+                         onChange={(e) => setNovo({ ...novo, include_workplace_on_documents: e.target.checked })} />
+                  Incluir local de trabalho nos documentos
+                </label>
+                <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
+                  <input type="checkbox" style={{ width: "auto" }} checked={novo.profile_completion_required}
+                         onChange={(e) => setNovo({ ...novo, profile_completion_required: e.target.checked })} />
+                  No primeiro acesso, direcionar para completar dados pessoais e profissionais
+                </label>
+              </>
+            )}
+
+            {investidorNovo ? (
+              <div className="cartao" style={{ marginTop: "0.9rem", borderColor: "rgba(66,202,216,.28)" }}>
+                <p className="eyebrow">Credencial fixa da demonstração</p>
+                <strong style={{ fontFamily: "var(--fonte-dados)", fontSize: "1.05rem" }}>CorVIAOS</strong>
+                <p style={{ margin: "0.35rem 0 0", color: "var(--texto-secundario)", fontSize: "0.82rem" }}>
+                  Não há senha temporária nem troca obrigatória. A conta é protegida pelo modo global
+                  somente leitura e não deve conter dados clínicos ou operacionais reais.
+                </p>
+              </div>
+            ) : (
+              <div style={{ marginTop: "0.9rem" }}>
+                <label htmlFor="senha">Senha temporária</label>
+                <input id="senha" type="text" value={novo.password}
+                       onChange={(e) => setNovo({ ...novo, password: e.target.value })}
+                       aria-describedby="senha-ajuda" />
+                <span id="senha-ajuda" style={{ fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
+                  Mínimo 8 caracteres. Fica visível aqui de propósito, para você copiar e repassar.
+                </span>
+                {senhaFraca && (
+                  <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>
+                    Muito curta.
+                  </p>
+                )}
+              </div>
+            )}
+
             <button className="botao" style={{ marginTop: "1rem" }} onClick={criar} disabled={!podeCriar}>
-              {enviando ? "Criando…" : "Criar conta"}
+              {enviando ? "Criando…" : investidorNovo ? "Criar conta Investidor" : "Criar conta"}
             </button>
           </div>
 
@@ -582,8 +610,8 @@ export default function Admin() {
                     </span>
                   )}
                   {u.investidor && (
-                    <span className="selo selo--pendente" style={{ marginLeft: 6 }} title="Acesso de avaliação — CorvIA Mail em modo demonstração, sem envio/recebimento real">
-                      investidor — acesso de avaliação
+                    <span className="selo selo--pendente" style={{ marginLeft: 6 }} title="Demonstração global — somente visualização, sem operações reais">
+                      investidor — somente visualização
                     </span>
                   )}
                   <div style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
@@ -609,7 +637,7 @@ export default function Admin() {
                     </button>
                     <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
                             onClick={() => alternarInvestidor(u)}
-                            title="Acesso de avaliação — CorvIA Mail só em modo demonstração, sem enviar/receber e-mail real.">
+                            title="Demonstração somente leitura — sem KYC, sem cobrança e sem operações reais.">
                       {u.investidor ? "Remover investidor" : "Marcar investidor"}
                     </button>
                     <button className="botao botao--secundario" style={{ padding: "0.35rem 0.75rem" }}
