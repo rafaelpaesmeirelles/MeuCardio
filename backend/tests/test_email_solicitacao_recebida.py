@@ -1,9 +1,9 @@
-"""Tarefa #42 do backlog: e-mail de "solicitação de acesso recebida",
-disparado por `POST /api/auth/solicitar-acesso` (backend/app/api/auth.py),
-ANTES de qualquer aprovação de admin. Mesmo padrão dos outros 13 e-mails
-transacionais de `app/services/emails.py`: Jinja2 (HTML + texto puro),
-`EmailLog` para idempotência, envio via `BackgroundTasks` com sessão própria
-do banco.
+"""E-mails disparados no autocadastro canônico com recuperação externa.
+
+A solicitação pendente continua gerando a confirmação histórica para o e-mail
+de login e o novo fluxo também confirma o segundo canal externo. Os testes
+identificam a mensagem pelo destinatário/tipo em vez de depender da ordem das
+BackgroundTasks.
 """
 import smtplib
 
@@ -12,21 +12,21 @@ from app.models.user import User
 from app.services import emails
 
 
+CADASTRO = "/api/auth/solicitar-acesso-com-recuperacao"
+
+
 def _payload(**overrides):
     base = dict(
         full_name="João da Silva", birth_date="1980-01-01", cpf="529.982.247-25",
         profession="Médico", council_name="CRM", council_number="123456",
-        council_state="SP", email="joao@teste.local", password="senha-forte-123",
+        council_state="SP", email="joao@teste.local",
+        recovery_email="joao.recuperacao@externo.test", password="senha-forte-123",
     )
     base.update(overrides)
     return base
 
 
 class _SMTPFalso:
-    """Mesmo dublê de `test_apple_mail.py`/`test_yahoo_mail.py`, adaptado
-    para `emails.smtplib.SMTP` (que usa `with ... as servidor`, não a versão
-    já em contexto das outras duas)."""
-
     def __init__(self, enviados: list, *, falhar: bool = False):
         self._enviados = enviados
         self._falhar = falhar
@@ -60,10 +60,7 @@ def _configurar_smtp(monkeypatch, enviados: list, *, falhar: bool = False):
 
 
 def test_solicitar_acesso_dispara_email_e_grava_log_sem_smtp(client, db):
-    """Ambiente de teste não configura SMTP (conftest.py não define
-    smtp_host/user/password) — o envio real não é tentado, mas o `EmailLog`
-    é gravado do mesmo jeito, mesmo comportamento das outras 13 funções."""
-    resposta = client.post("/api/auth/solicitar-acesso", json=_payload())
+    resposta = client.post(CADASTRO, json=_payload())
     assert resposta.status_code == 201, resposta.text
 
     user = db.query(User).filter(User.email == "joao@teste.local").first()
@@ -81,14 +78,25 @@ def test_solicitar_acesso_dispara_email_e_grava_log_sem_smtp(client, db):
     assert log.sucesso is False
     assert log.erro == "SMTP não configurado"
 
+    canal = (
+        db.query(EmailLog)
+        .filter(EmailLog.user_id == user.id, EmailLog.tipo == "canal_recuperacao_confirmado")
+        .first()
+    )
+    assert canal is not None
+    assert canal.destinatario == "joao.recuperacao@externo.test"
 
-def test_solicitar_acesso_dispara_email_com_sucesso_quando_smtp_configurado(client, db, monkeypatch):
+
+def test_solicitar_acesso_dispara_emails_com_sucesso_quando_smtp_configurado(client, db, monkeypatch):
     enviados: list = []
     _configurar_smtp(monkeypatch, enviados)
 
     resposta = client.post(
-        "/api/auth/solicitar-acesso",
-        json=_payload(full_name="Maria Oliveira", email="maria@teste.local"),
+        CADASTRO,
+        json=_payload(
+            full_name="Maria Oliveira", email="maria@teste.local",
+            recovery_email="maria.recuperacao@externo.test",
+        ),
     )
     assert resposta.status_code == 201, resposta.text
 
@@ -104,53 +112,48 @@ def test_solicitar_acesso_dispara_email_com_sucesso_quando_smtp_configurado(clie
     assert log.sucesso is True
     assert log.erro is None
 
-    assert len(enviados) == 1
-    mensagem = enviados[0]
-    assert mensagem["To"] == "maria@teste.local"
-    assert mensagem["Subject"] == "Corvia — solicitação de acesso recebida"
+    por_destino = {mensagem["To"]: mensagem for mensagem in enviados}
+    assert "maria@teste.local" in por_destino
+    assert "maria.recuperacao@externo.test" in por_destino
 
+    mensagem = por_destino["maria@teste.local"]
+    assert mensagem["Subject"] == "Corvia — solicitação de acesso recebida"
     corpo = mensagem.get_body(preferencelist=("plain",)).get_content()
     assert "Maria" in corpo
     assert "CRM" in corpo
     assert "123456" in corpo
     assert "SP" in corpo
     assert "administrador" in corpo.lower()
-
-    corpo_html = mensagem.get_body(preferencelist=("html",)).get_content()
-    assert "CRM" in corpo_html
+    assert "CRM" in mensagem.get_body(preferencelist=("html",)).get_content()
 
 
 def test_solicitacao_recebida_com_conselho_outro_mostra_texto_livre(client, monkeypatch, db):
-    """Conselho "Outro" tem que aparecer com o texto livre digitado no
-    cadastro na EXIBIÇÃO do e-mail (mesma regra de `council_display`,
-    08/08/2026) — nunca o literal "OUTRO" que fica gravado no banco."""
     enviados: list = []
     _configurar_smtp(monkeypatch, enviados)
 
     resposta = client.post(
-        "/api/auth/solicitar-acesso",
+        CADASTRO,
         json=dict(
             full_name="Ana Souza", birth_date="1985-05-05", cpf="345.987.621-28",
             profession="Farmacêutica", council_name="Outro", council_number="99",
             council_name_other="Ordem dos Farmacêuticos", council_state_other="Lisboa",
-            email="ana@teste.local", password="senha-forte-123",
+            email="ana@teste.local", recovery_email="ana.recuperacao@externo.test",
+            password="senha-forte-123",
         ),
     )
     assert resposta.status_code == 201, resposta.text
 
     user = db.query(User).filter(User.email == "ana@teste.local").first()
-    assert user.council_name == "OUTRO"  # gravado literal, decide o escopo de prescrição
+    assert user.council_name == "OUTRO"
 
-    assert len(enviados) == 1
-    corpo = enviados[0].get_body(preferencelist=("plain",)).get_content()
+    mensagem = next(item for item in enviados if item["To"] == "ana@teste.local")
+    corpo = mensagem.get_body(preferencelist=("plain",)).get_content()
     assert "Ordem dos Farmacêuticos" in corpo
     assert "Lisboa" in corpo
     assert "OUTRO" not in corpo
 
 
 def test_enviar_solicitacao_recebida_e_idempotente(db, monkeypatch):
-    """Segunda chamada com a mesma `chave_idempotencia` não reenvia nem
-    duplica o `EmailLog` — mesmo mecanismo das outras 13 funções."""
     enviados: list = []
     _configurar_smtp(monkeypatch, enviados)
 
@@ -181,8 +184,6 @@ def test_enviar_solicitacao_recebida_usuario_inexistente_nao_quebra(db):
 
 
 def test_enviar_solicitacao_recebida_falha_de_smtp_nao_propaga(db, monkeypatch):
-    """O envio nunca deve bloquear/derrubar quem chamou, mesmo com o SMTP
-    configurado e a tentativa falhando de verdade (não só "não configurado")."""
     enviados: list = []
     _configurar_smtp(monkeypatch, enviados, falhar=True)
 
