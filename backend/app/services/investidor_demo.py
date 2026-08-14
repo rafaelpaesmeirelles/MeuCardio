@@ -3,8 +3,17 @@
 O frontend pode esconder/desabilitar ações para UX, mas a barreira real é
 servidor-side: investidor navega e conhece o produto sem criar, alterar,
 excluir, enviar, conectar, sincronizar, gerar, emitir, assinar ou exportar.
+
+A Agenda merece uma regra adicional: uma conta convertida posteriormente em
+Investidor pode possuir compromissos/locais/pacientes reais antigos. Nenhuma
+leitura da demo pode consultar esses registros. O middleware intercepta a
+superfície GET da Agenda antes dos routers e devolve somente um corpus
+sintético conhecido; rota nova não catalogada falha fechada.
 """
 from __future__ import annotations
+
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 from starlette.requests import Request
 from starlette.responses import JSONResponse
@@ -18,25 +27,27 @@ SENHA_FIXA_INVESTIDOR = "CorVIAOS"
 MENSAGEM_MODO_INVESTIDOR = (
     "Modo investidor: esta conta é somente para visualização da plataforma."
 )
+MENSAGEM_AGENDA_DEMO = (
+    "Modo investidor: esta leitura da Agenda não faz parte do corpus sintético de demonstração."
+)
 
-# Únicas escritas persistentes necessárias à própria experiência de entrada.
-_ESCRITAS_UX_PERMITIDAS = {
+# Login/sessão/logout são infraestrutura de autenticação, não operações do
+# produto. Onboarding/boas-vindas NÃO ficam aqui: para Investidor são
+# simulados em memória/HTTP abaixo, sem persistir flags no banco.
+_ESCRITAS_AUTH_PERMITIDAS = {
     "/api/auth/sessao",
     "/api/auth/login",
     "/api/auth/sair",
-    "/api/auth/me/onboarding-concluido",
-    "/api/auth/me/boas-vindas-vista",
+}
+
+_ESCRITAS_UX_SIMULADAS = {
+    "/api/auth/me/onboarding-concluido": {"onboarding_pendente": False},
+    "/api/auth/me/boas-vindas-vista": {"boas_vindas_pendente": False},
 }
 
 
 def _get_com_efeito_colateral(path: str) -> bool:
-    """GETs que não são leitura passiva para a conta Investidor.
-
-    Além do OAuth (que cria estado/conexão), algumas rotas GET entregam um
-    artefato operacional pronto para uso fora da plataforma. A conta demo pode
-    conhecer a superfície, mas não pode baixar exame/material real, emitir PDF
-    nem obter uma prescrição pronta para impressão.
-    """
+    """GETs que não são leitura passiva para a conta Investidor."""
     if path.startswith("/api/agenda/oauth/") and path.endswith("/start"):
         return True
 
@@ -49,8 +60,6 @@ def _get_com_efeito_colateral(path: str) -> bool:
     if path.startswith("/api/prescriptions/") and path.endswith("/imprimir"):
         return True
 
-    # Materiais de cursos são anexos para download. A página/ementa do curso
-    # continua navegável; só a exportação do arquivo é bloqueada.
     partes = [parte for parte in path.split("/") if parte]
     if len(partes) == 5 and partes[:2] == ["api", "cursos"] and partes[3] == "material":
         return True
@@ -67,12 +76,172 @@ def _token_da_requisicao(request: Request) -> str | None:
     return request.cookies.get(AUTH_COOKIE_NAME)
 
 
-class InvestidorReadOnlyMiddleware:
-    """Fail-closed para qualquer mutação futura da API.
+def _agenda_demo(path: str):
+    """Retorna somente dados sintéticos, nunca linhas do tenant.
 
-    POST/PUT/PATCH/DELETE novos ficam automaticamente bloqueados para
-    investidor, sem depender de o autor do endpoint lembrar da regra.
+    IDs negativos reservam um namespace que não colide com PKs reais. Datas
+    são próximas ao dia da visualização para a demonstração continuar útil sem
+    qualquer job que persista/atualize registros.
     """
+    tz = ZoneInfo("America/Sao_Paulo")
+    agora = datetime.now(tz)
+    inicio = agora.replace(hour=8, minute=0, second=0, microsecond=0)
+    if inicio < agora:
+        inicio += timedelta(days=1)
+    fim = inicio + timedelta(minutes=40)
+    reuniao = inicio.replace(hour=14) + timedelta(days=1)
+    reuniao_fim = reuniao + timedelta(hours=1)
+
+    local = {
+        "id": -101,
+        "name": "Clínica demonstrativa CorVIA",
+        "timezone": "America/Sao_Paulo",
+        "address": {
+            "street": "Endereço demonstrativo",
+            "number": "100",
+            "city": "Ribeirão Preto",
+            "state": "SP",
+        },
+        "latitude": None,
+        "longitude": None,
+        "default_arrival_buffer_minutes": 15,
+        "color": "#38CAD5",
+        "active": True,
+    }
+    service = {
+        "id": -201,
+        "location_id": -101,
+        "code": "consulta-demo",
+        "name": "Consulta demonstrativa",
+        "duration_minutes": 40,
+        "visit_mode": "presencial",
+        "payment_mode": "nao_informado",
+        "private_price_cents": None,
+        "allow_extra_slot": False,
+        "color": "#38CAD5",
+        "active": True,
+    }
+    appointment = {
+        "id": -301,
+        "calendar_kind": "appointment",
+        "patient_name": "Paciente demonstrativo",
+        "patient_phone": None,
+        "starts_at": inicio.isoformat(),
+        "ends_at": fim.isoformat(),
+        "duration_minutes": 40,
+        "appointment_type": "consulta",
+        "status": "confirmado",
+        "notes": "Conteúdo sintético do Modo Demonstração.",
+        "location": local,
+        "service": service,
+        "visit_mode": "presencial",
+        "payment_mode": "nao_informado",
+        "price_cents": None,
+        "source": "demo",
+        "integration_id": None,
+        "sync_status": "demo",
+        "conflict_reason": None,
+        "version": 1,
+        "color": "#38CAD5",
+    }
+    commitment = {
+        "id": "demo-commitment-1",
+        "calendar_kind": "commitment",
+        "series_id": -401,
+        "occurrence_date": reuniao.date().isoformat(),
+        "title": "Reunião demonstrativa",
+        "patient_name": None,
+        "patient_phone": None,
+        "starts_at": reuniao.isoformat(),
+        "ends_at": reuniao_fim.isoformat(),
+        "duration_minutes": 60,
+        "appointment_type": "reuniao",
+        "status": "confirmado",
+        "notes": "Conteúdo sintético do Modo Demonstração.",
+        "location": local,
+        "service": None,
+        "visit_mode": "presencial",
+        "payment_mode": "nao_informado",
+        "price_cents": None,
+        "source": "corvia_manual",
+        "integration_id": None,
+        "sync_status": "demo",
+        "conflict_reason": None,
+        "version": 1,
+        "recurrence": "weekly",
+        "blocks_scheduling": True,
+        "is_exception": False,
+        "color": "#A17CF5",
+    }
+
+    respostas = {
+        "/api/agenda/appointments": [appointment],
+        "/api/agenda/locations": [local],
+        "/api/agenda/services": [service],
+        # Nunca listar integração real nem estado/identificador de provedor.
+        "/api/agenda/integrations": [],
+        "/api/agenda/capabilities": {
+            "integrations_enabled": False,
+            "external_writes_enabled": False,
+            "traffic_configured": False,
+            "traffic_provider": "demo",
+            "google_oauth_modo_teste": False,
+            "connectors": [],
+        },
+        "/api/agenda/mobility/preferences": {
+            "enabled": False,
+            "consent_at": None,
+            "automatic_foreground_refresh": False,
+            "refresh_interval_minutes": 15,
+            "traffic_configured": False,
+        },
+        "/api/agenda/work-routines": [
+            {
+                "id": -501,
+                "location_id": -101,
+                "service_id": -201,
+                "weekday": inicio.weekday(),
+                "start_time": "08:00:00",
+                "end_time": "12:00:00",
+                "label": "Rotina demonstrativa",
+                "routine_type": "atendimento",
+                "visit_mode": "presencial",
+                "arrival_buffer_minutes": 15,
+                "planning_notes": "Conteúdo sintético.",
+                "active": True,
+                "location": local,
+                "service": service,
+            }
+        ],
+        "/api/agenda/commitment-series": [
+            {
+                "id": -401,
+                "title": "Reunião demonstrativa",
+                "category": "reuniao",
+                "location_id": -101,
+                "location": local,
+                "timezone": "America/Sao_Paulo",
+                "starts_on": reuniao.date().isoformat(),
+                "start_time": "14:00:00",
+                "duration_minutes": 60,
+                "recurrence": "weekly",
+                "recurrence_interval": 1,
+                "weekdays": [reuniao.weekday()],
+                "month_day": None,
+                "ends_on": None,
+                "blocks_scheduling": True,
+                "color": "#A17CF5",
+                "active": True,
+            }
+        ],
+        "/api/agenda/commitments": [commitment],
+        "/api/agenda/google-teste/status": {"status": None},
+    }
+    return respostas.get(path)
+
+
+class InvestidorReadOnlyMiddleware:
+    """Fail-closed para mutações e leituras operacionais futuras."""
 
     def __init__(self, app):
         self.app = app
@@ -87,26 +256,44 @@ class InvestidorReadOnlyMiddleware:
         method = request.method.upper()
 
         if path.startswith("/api/"):
-            mutacao = method not in {"GET", "HEAD", "OPTIONS"}
-            get_operacional = method == "GET" and _get_com_efeito_colateral(path)
-            precisa_checar = (
-                (mutacao and path not in _ESCRITAS_UX_PERMITIDAS)
-                or get_operacional
-            )
-            if precisa_checar:
-                token = _token_da_requisicao(request)
-                if token:
-                    db = SessionLocal()
-                    try:
-                        user = usuario_por_token_app(db, token)
-                        if user is not None and bool(getattr(user, "investidor", False)):
+            token = _token_da_requisicao(request)
+            user = None
+            db = None
+            if token:
+                db = SessionLocal()
+                try:
+                    user = usuario_por_token_app(db, token)
+                    investidor = user is not None and bool(getattr(user, "investidor", False))
+
+                    if investidor:
+                        # Agenda: interceptação ANTES do router. Uma conta que
+                        # já foi normal nunca consegue vazar agenda histórica.
+                        if method == "GET" and path.startswith("/api/agenda/"):
+                            demo = _agenda_demo(path)
+                            response = JSONResponse(
+                                status_code=200 if demo is not None else 403,
+                                content=demo if demo is not None else {"detail": MENSAGEM_AGENDA_DEMO},
+                            )
+                            await response(scope, receive, send)
+                            return
+
+                        # Flags de UX retornam sucesso sem tocar no modelo/DB.
+                        if method not in {"GET", "HEAD", "OPTIONS"} and path in _ESCRITAS_UX_SIMULADAS:
+                            response = JSONResponse(status_code=200, content=_ESCRITAS_UX_SIMULADAS[path])
+                            await response(scope, receive, send)
+                            return
+
+                        mutacao = method not in {"GET", "HEAD", "OPTIONS"}
+                        get_operacional = method == "GET" and _get_com_efeito_colateral(path)
+                        if (mutacao and path not in _ESCRITAS_AUTH_PERMITIDAS) or get_operacional:
                             response = JSONResponse(
                                 status_code=403,
                                 content={"detail": MENSAGEM_MODO_INVESTIDOR},
                             )
                             await response(scope, receive, send)
                             return
-                    finally:
+                finally:
+                    if db is not None:
                         db.close()
 
         await self.app(scope, receive, send)
@@ -146,12 +333,7 @@ def _owner_e_investidor(connection, owner_id: int | None) -> bool:
 
 
 def _quarentenar_integracoes_existentes(connection, owner_id: int | None) -> None:
-    """Desativa integrações reais já existentes ao converter uma conta.
-
-    Não apaga credenciais nem dados: a mudança é reversível pelo administrador,
-    mas elimina imediatamente qualquer leitura/escrita/sincronização externa
-    durante o modo demonstração.
-    """
+    """Desativa integrações reais já existentes ao converter uma conta."""
     if owner_id is None:
         return
     from app.models.agenda import CalendarIntegration
@@ -199,21 +381,12 @@ def _antes_de_atualizar(_mapper, _connection, target: User) -> None:
     if not bool(getattr(target, "investidor", False)):
         return
 
-    # Enquanto for Investidor, não pode simultaneamente voltar a Convidado e
-    # nunca deve reabrir gate de perfil/KYC por dado legado.
     target.convidado = False
     target.profile_completion_required = False
 
-    # Navegar pela demo faz current_user atualizar last_seen_at como telemetria
-    # normal do produto. Para o Investidor isso também precisa ser passivo:
-    # restaura o valor anterior antes do flush, sem alterar o core compartilhado
-    # de autenticação/presença dos demais usuários.
+    # Telemetria e senha continuam passivas na demo.
     _restaurar_valor_anterior(estado, "last_seen_at", target)
 
-    # Senha fixa: qualquer rota antiga, reset público ou edição administrativa
-    # que tente trocar a senha é neutralizada no modelo. Também restauramos o
-    # marco de revogação que o listener de User.password_hash teria alterado,
-    # evitando invalidar a sessão por uma troca que não aconteceu.
     estado_senha = estado.attrs.password_hash.history
     if estado_senha.has_changes() and estado_senha.deleted:
         target.password_hash = estado_senha.deleted[0]
