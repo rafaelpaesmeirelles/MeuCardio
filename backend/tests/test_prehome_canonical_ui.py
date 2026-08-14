@@ -24,7 +24,8 @@ def test_auth_pages_use_canonical_prehome_shell():
 def test_signup_keeps_recovery_and_existing_functional_fields():
     signup = _read("pages/SolicitarAcesso.tsx")
     # O redesign é apenas visual: não pode simplificar o formulário removendo
-    # identidade profissional, CPF/conselho ou o segundo canal de recuperação.
+    # identidade profissional, CPF/conselho, local de trabalho ou o segundo
+    # canal de recuperação já validados no fluxo real.
     assert 'recovery_email' in signup
     assert 'cpf' in signup
     assert 'council_number' in signup
@@ -51,14 +52,28 @@ def test_canonical_prehome_palette_is_dark_and_board_aligned():
     assert "background: linear-gradient(150deg, #fff" not in css
 
 
-def test_registration_bridge_overrides_legacy_light_panel_without_losing_form():
+def test_registration_bridge_preserves_form_and_uses_canonical_surface():
     css = _read("styles/prehome-register-bridge.css")
+    polish = _read("styles/prehome-fidelity-polish.css")
     assert ".login--solicitar-acesso .login-acesso" in css
     assert "#f2f7fb" in css
-    assert "prehome" not in _read("pages/SolicitarAcesso.tsx") or "recovery_email" in _read("pages/SolicitarAcesso.tsx")
+    assert ".login--solicitar-acesso .login-vitrine__grafo" in polish
+    assert "corvia-mark-canonical.svg" in polish
+
+
+def test_notebook_and_mobile_fidelity_guards_exist():
+    polish = _read("styles/prehome-fidelity-polish.css")
+    assert "@media (min-width: 901px) and (max-height: 960px)" in polish
+    assert "@media (max-width: 430px)" in polish
+    assert ".prehome-brand__benefits" in polish
+    assert ".prehome--login .prehome-card" in polish
 
 
 def test_no_browser_scale_or_zoom_workaround_in_prehome_styles():
-    css = (_read("styles/prehome-canonical.css") + _read("styles/prehome-register-bridge.css")).lower()
+    css = (
+        _read("styles/prehome-canonical.css")
+        + _read("styles/prehome-register-bridge.css")
+        + _read("styles/prehome-fidelity-polish.css")
+    ).lower()
     assert "zoom:" not in css
     assert "scale(" not in css
