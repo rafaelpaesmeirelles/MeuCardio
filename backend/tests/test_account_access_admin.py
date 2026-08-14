@@ -1,5 +1,6 @@
 """Controle administrativo de recuperação e e-mail transacional."""
 
+from app.api import account_access_admin
 from app.services import account_recovery
 
 
@@ -42,10 +43,55 @@ def test_email_status_nao_expoe_credenciais(client, criar_usuario):
     assert resposta.status_code == 200, resposta.text
     payload = resposta.json()
     serializado = str(payload).lower()
-    assert "smtp_password" not in serializado
+    for segredo in (
+        "smtp_password",
+        "mail360_client_secret",
+        "mail360_refresh_token",
+        "mail360_transactional_account_key",
+        "access_token",
+    ):
+        assert segredo not in serializado
     assert "password" not in serializado
+    assert "email_transacional_configurado" in payload
+    assert "email_transacional_provider" in payload
+    assert "mail360_configurado" in payload
+    assert "mail360_transacional_configurado" in payload
+    # Mantidos por compatibilidade com versões anteriores do painel.
     assert "smtp_user_canonico" in payload
     assert "smtp_from_canonico" in payload
+
+
+def test_email_probe_funciona_com_provider_mail360_sem_smtp(
+    client, criar_usuario, monkeypatch
+):
+    _, admin_token = criar_usuario(email="admin.mail360.probe@teste.local", role="admin")
+    settings = account_access_admin.settings
+    monkeypatch.setattr(settings, "email_transacional_provider", "mail360")
+    monkeypatch.setattr(settings, "mail360_client_id", "client-id-teste")
+    monkeypatch.setattr(settings, "mail360_client_secret", "client-secret-teste")
+    monkeypatch.setattr(settings, "mail360_refresh_token", "refresh-token-teste")
+    monkeypatch.setattr(settings, "mail360_transactional_account_key", "account-key-teste")
+    monkeypatch.setattr(settings, "smtp_host", "")
+    monkeypatch.setattr(settings, "smtp_user", "")
+    monkeypatch.setattr(settings, "smtp_password", "")
+    monkeypatch.setattr(
+        account_recovery,
+        "enviar_teste_transacional",
+        lambda email, admin_id: True,
+    )
+
+    resposta = client.post(
+        "/api/admin/account-access/email-probe",
+        json={"email": "externo@teste.local"},
+        headers=_headers(admin_token),
+    )
+    assert resposta.status_code == 200, resposta.text
+    payload = resposta.json()
+    assert payload == {
+        "ok": True,
+        "provider": "mail360",
+        "remetente": "contato@corvia.med.br",
+    }
 
 
 def test_admin_reset_exige_segundo_canal(client, criar_usuario):
