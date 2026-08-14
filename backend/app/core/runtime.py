@@ -81,7 +81,7 @@ def validar_configuracao_de_execucao(settings) -> None:
     except Exception:
         erros.append("DATABASE_URL é inválida")
     else:
-        if senha_banco.lower() in SENHAS_BANCO_INSEGUROS:
+        if senha_banco.lower() in SENHAS_BANCO_INSEGURAS:
             erros.append("a senha do PostgreSQL não pode usar valor padrão")
 
     chave = (settings.storage_encryption_key or "").strip()
