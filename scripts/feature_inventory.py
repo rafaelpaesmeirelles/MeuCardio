@@ -73,6 +73,7 @@ EXPECTED_BACKEND_ROUTERS = {
 }
 
 EXPECTED_SUPPORT_FILES = {
+    ".github/workflows/release-final-dispatch.yml",
     "frontend/src/components/ChatFlutuante.tsx",
     "frontend/src/components/PersonalAssistantPanel.tsx",
     "frontend/src/components/ShellClinicalOSLaunch.tsx",
@@ -123,6 +124,7 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/models/specialty_guide.py",
     "backend/app/models/agenda.py",
     "backend/app/services/account_recovery.py",
+    "backend/app/services/release_certification.py",
     "backend/app/services/perioperative_calculators.py",
     "backend/app/services/account_sync.py",
     "backend/tests/test_account_recovery_email.py",
