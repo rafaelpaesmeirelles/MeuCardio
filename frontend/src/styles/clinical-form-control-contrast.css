@@ -6,6 +6,10 @@
    fundo branco. Esta folha é importada POR ÚLTIMO e fecha o contrato visual
    dos controles editáveis do sistema, inclusive autofill do navegador.
 
+   A prancha canônica aprovada também define as superfícies PRÉ-LOGIN como
+   navy/teal. Portanto login, cadastro e recuperação usam o MESMO par escuro +
+   texto claro; não existe mais exceção branca anterior ao Clinical OS.
+
    `#root` é deliberado: existem muitas regras históricas com `!important`.
    O ID eleva a especificidade do contrato final para que nenhuma folha
    legada volte a produzir combinações ilegíveis por acidente.
@@ -75,30 +79,44 @@
   opacity: .72;
 }
 
-/* Login/autocadastro usam superfície CLARA deliberadamente. Também ficam
-   protegidos contra a mesma regressão, mas com o par inverso: papel branco +
-   tinta navy. Isso cobre /entrar e /solicitar-acesso sem misturar o tema do
-   Clinical OS autenticado. */
+/* Pré-login canônico: mesma família navy/teal do Clinical OS. */
 #root .login input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
 #root .login select,
 #root .login textarea {
-  color: #082637 !important;
-  -webkit-text-fill-color: #082637 !important;
-  caret-color: #167d92;
-  background-color: #ffffff !important;
+  color: #eaf5f7 !important;
+  -webkit-text-fill-color: #eaf5f7 !important;
+  caret-color: #42cad8;
+  background-color: #0b1f2b !important;
+  border-color: rgba(166, 211, 222, .22) !important;
 }
 
 #root .login input::placeholder,
 #root .login textarea::placeholder {
-  color: #718690 !important;
-  -webkit-text-fill-color: #718690 !important;
+  color: #78949f !important;
+  -webkit-text-fill-color: #78949f !important;
   opacity: 1;
+}
+
+#root .login input:hover,
+#root .login select:hover,
+#root .login textarea:hover {
+  border-color: rgba(114, 224, 231, .38) !important;
+}
+
+#root .login input:focus,
+#root .login select:focus,
+#root .login textarea:focus {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: #0d2633 !important;
+  border-color: #42cad8 !important;
+  box-shadow: 0 0 0 3px rgba(66, 202, 216, .13) !important;
 }
 
 #root .login select option,
 #root .login select optgroup {
-  color: #16242c !important;
-  background: #ffffff !important;
+  color: #eaf5f7 !important;
+  background: #0b1f2b !important;
 }
 
 #root .login input:-webkit-autofill,
@@ -106,10 +124,10 @@
 #root .login input:-webkit-autofill:focus,
 #root .login textarea:-webkit-autofill,
 #root .login select:-webkit-autofill {
-  -webkit-text-fill-color: #082637 !important;
-  caret-color: #167d92 !important;
-  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
-  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #eaf5f7 !important;
+  caret-color: #42cad8 !important;
+  -webkit-box-shadow: 0 0 0 1000px #0b1f2b inset !important;
+  box-shadow: 0 0 0 1000px #0b1f2b inset !important;
 }
 
 /* Checkbox/radio/range/color não recebem a caixa de texto acima. */
