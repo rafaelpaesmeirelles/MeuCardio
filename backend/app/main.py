@@ -74,7 +74,11 @@ ROUTERS_ASSINANTES = (
     mail360_status.router, presence.router, indicadores.router, checklists.router,
     study_tracks.router, exportacao.router, exportacao_universal.router, emergencia.router, receituario.router,
     clinical_cases.router, specialty_guides.router, chat.router, assinatura.router,
-    agenda_integrada.router, account_sync.router, kyc.router, avaliacao_preoperatoria.router,
+    # account_sync vem ANTES de agenda_integrada durante a janela de
+    # compatibilidade porque expõe também o alias legado /sync-all. Assim os
+    # botões antigos da Agenda passam pelo mesmo supervisor capability-aware
+    # do /sync-live sem duplicar a regra de sincronização.
+    account_sync.router, agenda_integrada.router, kyc.router, avaliacao_preoperatoria.router,
     related_content.router, knowledge_graph.router, patient_profiles.router,
 )
 
