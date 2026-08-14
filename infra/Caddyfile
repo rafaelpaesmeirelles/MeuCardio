@@ -9,8 +9,20 @@
 		reverse_proxy backend:8000
 	}
 
-	handle_path /galeria/* {
-		root * /galeria
+	# /galeria serve dois propósitos: assets de imagem e rota SPA /galeria/:slug.
+	# Só interceptamos aqui quando o caminho solicitado é um arquivo real no
+	# volume /galeria. Slugs/deep-links inexistentes no filesystem seguem para
+	# o fallback SPA abaixo, evitando 404 do Caddy em reload/URL direta.
+	@galeria_estatica {
+		path /galeria/*
+		not path /galeria/
+		file {
+			root /
+			try_files {path}
+		}
+	}
+	handle @galeria_estatica {
+		root * /
 		file_server
 		header Cache-Control "public, max-age=2592000"
 	}
