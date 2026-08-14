@@ -5,10 +5,11 @@ botão. O CorVIA Mail externo continua sendo proxy ao vivo; para ele o worker
 faz heartbeat/renovação de credencial. Calendário/contatos usam os cursores
 incrementais existentes.
 
-O intervalo é propositalmente curto para experiência quase em tempo real, mas
-não promete push instantâneo de provedores que não oferecem webhook/IDLE já
-homologado no produto. Falha de uma conta ou de uma rodada nunca mata o
-processo: a próxima rodada tenta novamente.
+Falha isolada de uma conta nunca mata o processo. Já falha estrutural da
+rodada inteira (por exemplo banco indisponível) é diferente: após cinco ciclos
+consecutivos o processo sai com erro para que ``restart: unless-stopped`` do
+Docker o recrie. Assim o supervisor não fica "vivo" porém inutilizado para
+sempre.
 """
 from __future__ import annotations
 
@@ -26,6 +27,7 @@ from app.services.agenda_integrada.connectors import ConnectorError
 log = logging.getLogger("corvia.agenda_sync_worker")
 _PARAR = False
 _ESTADOS_ELEGIVEIS = ("connected", "error")
+_MAX_FALHAS_FATAL_RODADA = 5
 
 
 def _parar(_signum, _frame) -> None:  # noqa: ANN001
@@ -69,8 +71,6 @@ def sincronizar_rodada() -> dict:
                     )
             except ConnectorError as exc:
                 db.rollback()
-                # Conta que exige interação humana é retirada das rodadas pela
-                # própria mudança de status; transitórios seguem elegíveis.
                 resultado["com_pendencia"] += 1
                 log.warning(
                     "agenda-sync falha integration_id=%s provider=%s code=%s: %s",
@@ -98,6 +98,7 @@ def executar() -> None:
     signal.signal(signal.SIGINT, _parar)
 
     intervalo = _intervalo_segundos()
+    falhas_fatais_consecutivas = 0
     log.info(
         "agenda-sync worker iniciado enabled=%s intervalo=%ss",
         settings.agenda_background_sync_enabled,
@@ -109,15 +110,28 @@ def executar() -> None:
         if settings.agenda_background_sync_enabled:
             try:
                 resultado = sincronizar_rodada()
+                falhas_fatais_consecutivas = 0
                 log.info(
                     "agenda-sync rodada concluida sincronizadas=%s pendencias=%s puladas=%s",
                     resultado.get("sincronizadas"),
                     resultado.get("com_pendencia"),
                     resultado.get("puladas"),
                 )
-            except Exception:  # noqa: BLE001 — supervisor não morre por uma rodada
-                log.exception("agenda-sync rodada falhou inesperadamente")
+            except Exception:  # noqa: BLE001 — erro estrutural da rodada inteira
+                falhas_fatais_consecutivas += 1
+                log.exception(
+                    "agenda-sync rodada falhou inesperadamente (%s/%s)",
+                    falhas_fatais_consecutivas,
+                    _MAX_FALHAS_FATAL_RODADA,
+                )
+                if falhas_fatais_consecutivas >= _MAX_FALHAS_FATAL_RODADA:
+                    raise RuntimeError(
+                        "agenda-sync acumulou falhas estruturais consecutivas; "
+                        "encerrando para reinício pelo supervisor Docker"
+                    )
         else:
+            # Produção força true no compose; se alguém remover essa proteção,
+            # o log deixa explícito que a sincronização permanente foi desativada.
             log.warning("agenda-sync está desativado por configuração")
 
         gasto = time.monotonic() - inicio
