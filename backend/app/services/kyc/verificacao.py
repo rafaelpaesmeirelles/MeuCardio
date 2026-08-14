@@ -244,7 +244,7 @@ def submeter(db: Session, user: User, docs: DocumentosSubmissao) -> KycVerificat
         registro.aprovado_em = agora
         registro.aprovado_por = None
         registro.nota_revisao = (
-            "Aprovação automática — conta Convidado; todos os requisitos KYC "
+            "Aprovação automática — conta convidado; todos os requisitos KYC "
             f"não dispensados foram satisfeitos. Conselho: {resultado.status}."
         )
 
