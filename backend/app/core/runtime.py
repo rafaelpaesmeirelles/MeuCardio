@@ -15,6 +15,7 @@ from cryptography.fernet import Fernet
 from sqlalchemy.engine import make_url
 
 AMBIENTES_VALIDOS = {"development", "test", "production"}
+PROVEDORES_EMAIL_TRANSACIONAL = {"auto", "smtp", "mail360"}
 SEGREDOS_JWT_INSEGUROS = {"", "dev-only-change-me", "gere-com-openssl-rand-hex-32"}
 SENHAS_ADMIN_INSEGURAS = {"", "troque-esta-senha", "admin", "password"}
 SENHAS_BANCO_INSEGURAS = {"", "meucardio", "troque-esta-senha", "postgres", "password"}
@@ -29,6 +30,28 @@ def ambiente_atual() -> str:
             f"ENVIRONMENT inválido: {ambiente!r}. Valores permitidos: {permitidos}."
         )
     return ambiente
+
+
+def _provider_email_efetivo(settings) -> tuple[str, str]:
+    """Resolve o transporte sem consultar rede nem expor credenciais.
+
+    Retorna ``(provider_solicitado, provider_efetivo)``. Em ``auto`` o
+    Mail360 Native institucional tem precedência porque é o provedor real do
+    domínio CorVIA; SMTP permanece fallback compatível.
+    """
+    solicitado = (getattr(settings, "email_transacional_provider", "auto") or "auto").strip().lower()
+    smtp_ok = bool(getattr(settings, "smtp_configurado", False))
+    mail360_ok = bool(getattr(settings, "mail360_transacional_configurado", False))
+    if solicitado == "mail360":
+        return solicitado, "mail360" if mail360_ok else ""
+    if solicitado == "smtp":
+        return solicitado, "smtp" if smtp_ok else ""
+    if solicitado == "auto":
+        if mail360_ok:
+            return solicitado, "mail360"
+        if smtp_ok:
+            return solicitado, "smtp"
+    return solicitado, ""
 
 
 def validar_configuracao_de_execucao(settings) -> None:
@@ -58,7 +81,7 @@ def validar_configuracao_de_execucao(settings) -> None:
     except Exception:
         erros.append("DATABASE_URL é inválida")
     else:
-        if senha_banco.lower() in SENHAS_BANCO_INSEGURAS:
+        if senha_banco.lower() in SENHAS_BANCO_INSEGUROS:
             erros.append("a senha do PostgreSQL não pode usar valor padrão")
 
     chave = (settings.storage_encryption_key or "").strip()
@@ -71,10 +94,23 @@ def validar_configuracao_de_execucao(settings) -> None:
             erros.append("STORAGE_ENCRYPTION_KEY não é uma chave Fernet válida")
 
     # Recuperação de senha, confirmação de acesso e avisos de segurança são
-    # funcionalidade crítica. Em produção não aceitamos modo best-effort
-    # silenciosamente desconfigurado.
-    if not bool(getattr(settings, "smtp_configurado", False)):
-        erros.append("SMTP_HOST/SMTP_USER/SMTP_PASSWORD são obrigatórios em produção")
+    # críticos. O transporte pode ser o Mail360 Native institucional ou SMTP,
+    # mas nunca pode existir um falso sucesso sem um provider configurado.
+    solicitado, efetivo = _provider_email_efetivo(settings)
+    if solicitado not in PROVEDORES_EMAIL_TRANSACIONAL:
+        erros.append("EMAIL_TRANSACIONAL_PROVIDER deve ser auto, mail360 ou smtp")
+    elif not efetivo:
+        if solicitado == "mail360":
+            erros.append(
+                "MAIL360_CLIENT_ID/MAIL360_CLIENT_SECRET/MAIL360_REFRESH_TOKEN/"
+                "MAIL360_TRANSACTIONAL_ACCOUNT_KEY são obrigatórios para e-mail transacional via Mail360"
+            )
+        elif solicitado == "smtp":
+            erros.append("SMTP_HOST/SMTP_USER/SMTP_PASSWORD são obrigatórios para e-mail transacional via SMTP")
+        else:
+            erros.append(
+                "SMTP_HOST/SMTP_USER/SMTP_PASSWORD ou Mail360 transacional configurado são obrigatórios em produção"
+            )
 
     smtp_from = (getattr(settings, "smtp_from", "") or "").lower()
     smtp_host = (getattr(settings, "smtp_host", "") or "").strip().lower()
@@ -82,12 +118,10 @@ def validar_configuracao_de_execucao(settings) -> None:
     if EMAIL_TRANSACIONAL_CANONICO not in smtp_from:
         erros.append("SMTP_FROM deve usar contato@corvia.med.br")
 
-    # O endereço visível/remetente e a identidade usada para autenticar no
-    # servidor SMTP são conceitos diferentes. Provedores de relay podem exigir
-    # um usuário técnico. A Resend, por exemplo, autentica com usuário literal
-    # ``resend`` e a API key como senha; o remetente continua sendo a conta
-    # verificada ``contato@corvia.med.br`` via SMTP_FROM.
-    if smtp_host == "smtp.resend.com" and smtp_user != "resend":
+    # Esta regra só se aplica quando SMTP é o transporte efetivamente usado.
+    # Assim uma configuração Resend antiga/incompleta não bloqueia o Mail360
+    # explicitamente selecionado e validado.
+    if efetivo == "smtp" and smtp_host == "smtp.resend.com" and smtp_user != "resend":
         erros.append("SMTP_USER deve ser resend quando SMTP_HOST=smtp.resend.com")
 
     if erros:
