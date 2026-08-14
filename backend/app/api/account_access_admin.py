@@ -50,6 +50,64 @@ class DestinatarioProbe(BaseModel):
             raise ValueError(str(exc)) from exc
 
 
+class RecoveryEmailPayload(BaseModel):
+    recovery_email: str
+
+    @field_validator("recovery_email")
+    @classmethod
+    def _email(cls, value: str) -> str:
+        try:
+            return account_recovery.validar_email_basico(value)
+        except ValueError as exc:
+            raise ValueError(str(exc)) from exc
+
+
+@router.get("/users/{user_id}/recovery-email")
+def admin_obter_recovery_email(
+    user_id: int,
+    db: Session = Depends(get_db),
+    _admin: User = Depends(require_admin),
+):
+    user = db.get(User, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    return {
+        "user_id": user.id,
+        "login_email": user.email,
+        "recovery_email": account_recovery.obter_email_recuperacao(db, user.id),
+    }
+
+
+@router.put("/users/{user_id}/recovery-email")
+def admin_definir_recovery_email(
+    user_id: int,
+    dados: RecoveryEmailPayload,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    _admin: User = Depends(require_admin),
+):
+    user = db.get(User, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if user.investidor:
+        raise HTTPException(
+            status_code=409,
+            detail="Conta Investidor é demonstração global e não deve receber dados pessoais de recuperação.",
+        )
+    try:
+        registro = account_recovery.definir_email_recuperacao(db, user, dados.recovery_email)
+        db.commit()
+    except ValueError as exc:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
+    return {
+        "user_id": user.id,
+        "login_email": user.email,
+        "recovery_email": registro.email,
+    }
+
+
 @router.get("/account-access/email-status")
 def email_status(
     db: Session = Depends(get_db),
@@ -111,6 +169,8 @@ def admin_enviar_recuperacao(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if user.investidor:
+        raise HTTPException(status_code=409, detail="Investidor não possui recuperação pessoal.")
     if not user.is_active:
         raise HTTPException(status_code=409, detail="A conta está desativada; reative antes do reset.")
     if account_recovery.obter_email_recuperacao(db, user.id) is None:
@@ -134,6 +194,8 @@ def admin_reenviar_acesso(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if user.investidor:
+        raise HTTPException(status_code=409, detail="Investidor usa a credencial global de demonstração.")
     if not user.is_active or user.status != "aprovado":
         raise HTTPException(status_code=409, detail="O acesso ainda não está aprovado/ativo.")
     ok = account_recovery.enviar_acesso_aprovado(user.id)
