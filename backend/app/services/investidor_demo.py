@@ -30,8 +30,32 @@ _ESCRITAS_UX_PERMITIDAS = {
 
 
 def _get_com_efeito_colateral(path: str) -> bool:
-    # OAuth externo começa por GET, mas cria estado e inicia conexão real.
-    return path.startswith("/api/agenda/oauth/") and path.endswith("/start")
+    """GETs que não são leitura passiva para a conta Investidor.
+
+    Além do OAuth (que cria estado/conexão), algumas rotas GET entregam um
+    artefato operacional pronto para uso fora da plataforma. A conta demo pode
+    conhecer a superfície, mas não pode baixar exame/material real, emitir PDF
+    nem obter uma prescrição pronta para impressão.
+    """
+    if path.startswith("/api/agenda/oauth/") and path.endswith("/start"):
+        return True
+
+    if path.startswith("/api/document-templates/gerados/") and path.endswith("/pdf"):
+        return True
+    if path.startswith("/api/material-paciente/") and path.endswith("/pdf"):
+        return True
+    if path.startswith("/api/pedidos/") and path.endswith("/exame"):
+        return True
+    if path.startswith("/api/prescriptions/") and path.endswith("/imprimir"):
+        return True
+
+    # Materiais de cursos são anexos para download. A página/ementa do curso
+    # continua navegável; só a exportação do arquivo é bloqueada.
+    partes = [parte for parte in path.split("/") if parte]
+    if len(partes) == 5 and partes[:2] == ["api", "cursos"] and partes[3] == "material":
+        return True
+
+    return False
 
 
 def _token_da_requisicao(request: Request) -> str | None:

@@ -1,5 +1,6 @@
 """Regressões do modo Investidor definitivo — somente visualização."""
 from app.core.security import create_access_token, hash_password, verify_password
+from app.models.audit import AuditLog
 from app.models.user import User
 
 
@@ -101,6 +102,35 @@ def test_investidor_nao_inicia_oauth_da_agenda_por_get(client, db):
     )
     assert resp.status_code == 403, resp.text
     assert "somente para visualização" in resp.json()["detail"]
+
+
+def test_investidor_bloqueia_gets_que_entregam_artefato_operacional(client, db):
+    _, token = _investidor(db)
+
+    for path in (
+        "/api/document-templates/gerados/999/pdf",
+        "/api/material-paciente/demo/pdf",
+        "/api/pedidos/999/exame",
+        "/api/prescriptions/999/imprimir",
+        "/api/cursos/demo/material/999",
+    ):
+        resp = client.get(path, headers=_headers(token), follow_redirects=False)
+        assert resp.status_code == 403, f"{path}: {resp.status_code} {resp.text}"
+        assert "somente para visualização" in resp.json()["detail"]
+
+
+def test_investidor_gets_de_navegacao_nao_persistem_auditoria(client, db):
+    user, token = _investidor(db)
+
+    receitas = client.get("/api/receituario", headers=_headers(token))
+    documentos = client.get("/api/document-templates/gerados", headers=_headers(token))
+
+    assert receitas.status_code == 200, receitas.text
+    assert documentos.status_code == 200, documentos.text
+    assert db.query(AuditLog).filter(
+        AuditLog.user_id == user.id,
+        AuditLog.action.in_(["listar_receituarios", "listar_documentos_gerados"]),
+    ).count() == 0
 
 
 def test_investidor_nao_gera_exportacao_prescricao_ou_documento(client, db):

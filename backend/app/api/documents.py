@@ -415,15 +415,16 @@ def listar_gerados(
     inicio = (page - 1) * page_size
     items = filtrados[inicio:inicio + page_size]
     has_more = inicio + page_size < len(filtrados)
-    db.add(AuditLog(
-        user_id=user.id, action="listar_documentos_gerados", entity="generated_document",
-        detail={
-            "count": len(items), "total_filtrado": len(filtrados),
-            "filtro_nome": bool(nome), "filtro_tipo": tipo,
-            "page": page, "page_size": page_size,
-        },
-    ))
-    db.commit()
+    if not getattr(user, "investidor", False):
+        db.add(AuditLog(
+            user_id=user.id, action="listar_documentos_gerados", entity="generated_document",
+            detail={
+                "count": len(items), "total_filtrado": len(filtrados),
+                "filtro_nome": bool(nome), "filtro_tipo": tipo,
+                "page": page, "page_size": page_size,
+            },
+        ))
+        db.commit()
     return {
         "items": items,
         "page": page,

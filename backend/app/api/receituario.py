@@ -432,15 +432,18 @@ def listar(
     inicio = (page - 1) * page_size
     items = filtrados[inicio:inicio + page_size]
     has_more = inicio + page_size < len(filtrados)
-    db.add(AuditLog(
-        user_id=user.id, action="listar_receituarios", entity="prescription",
-        detail={
-            "count": len(items), "total_filtrado": len(filtrados),
-            "filtro_nome": bool(nome), "filtro_tipo": tipo,
-            "page": page, "page_size": page_size,
-        },
-    ))
-    db.commit()
+    # Leitura da conta Investidor deve ser realmente passiva: não persiste
+    # telemetria/auditoria. Demais contas mantêm o trilho de auditoria normal.
+    if not getattr(user, "investidor", False):
+        db.add(AuditLog(
+            user_id=user.id, action="listar_receituarios", entity="prescription",
+            detail={
+                "count": len(items), "total_filtrado": len(filtrados),
+                "filtro_nome": bool(nome), "filtro_tipo": tipo,
+                "page": page, "page_size": page_size,
+            },
+        ))
+        db.commit()
     return {
         "items": items,
         "page": page,
@@ -465,9 +468,10 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
             destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
         if dest.documento_cifrado:
             destinatario["documento"] = cofre.decifrar_campo(dest.documento_cifrado, presc.id)
-        db.add(AuditLog(user_id=user.id, action="ler_destinatario_receita",
-                        entity="prescription", entity_id=str(presc.id)))
-        db.commit()
+        if not getattr(user, "investidor", False):
+            db.add(AuditLog(user_id=user.id, action="ler_destinatario_receita",
+                            entity="prescription", entity_id=str(presc.id)))
+            db.commit()
 
     docs = db.query(PrescriptionDocument).filter(
         PrescriptionDocument.prescription_id == presc.id).all()
