@@ -18,9 +18,11 @@ from app.core.observability import ObservabilityMiddleware, configure_observabil
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 from app.core.uploads import UploadSecurityMiddleware
+from app.services.investidor_demo import InvestidorReadOnlyMiddleware, configurar_modo_investidor
 
 configure_observability_logging()
 validar_configuracao_de_execucao(settings)
+configurar_modo_investidor()
 
 app = FastAPI(
     title="Corvia — API",
@@ -44,6 +46,11 @@ app.add_middleware(UploadSecurityMiddleware)
 app.add_middleware(CourseUploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
 app.add_middleware(ObservabilityMiddleware)
+# Última barreira antes dos routers: qualquer endpoint novo que faça escrita
+# nasce fail-closed para User.investidor, inclusive routers "livres" como
+# billing/auth/email. As únicas escritas permitidas são o estado mínimo do tour
+# e logout/login, definidas explicitamente no middleware.
+app.add_middleware(InvestidorReadOnlyMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
