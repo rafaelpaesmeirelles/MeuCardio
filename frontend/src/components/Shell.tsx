@@ -2,6 +2,7 @@ import ClinicalDesktopNav from "./ClinicalDesktopNav";
 import ClinicalMobileNav from "./ClinicalMobileNav";
 import ClinicalPresentationGuard from "./ClinicalPresentationGuard";
 import ClinicalRouteContext from "./ClinicalRouteContext";
+import InvestorDemoBanner from "./InvestorDemoBanner";
 import ShellClinicalOSLaunch from "./ShellClinicalOSLaunch";
 
 export default function Shell() {
@@ -12,6 +13,7 @@ export default function Shell() {
       <ShellClinicalOSLaunch />
       <ClinicalMobileNav />
       <ClinicalPresentationGuard />
+      <InvestorDemoBanner />
     </>
   );
 }
