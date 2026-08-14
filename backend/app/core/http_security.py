@@ -50,9 +50,6 @@ class RateLimitRule:
     window_seconds: int
 
 
-# Limites deliberadamente conservadores: bloqueiam automação agressiva sem
-# interferir no uso humano normal. A cota diária da IA continua sendo a regra
-# de produto; este limite curto é apenas proteção contra rajadas.
 _LOGIN_RULE = RateLimitRule("login", limit=10, window_seconds=300)
 _RECOVERY_RULE = RateLimitRule("recuperacao", limit=5, window_seconds=3600)
 _PUBLIC_DOCUMENT_RULE = RateLimitRule("documento-publico", limit=120, window_seconds=60)
@@ -86,8 +83,6 @@ def _origens_permitidas(scope: Scope, headers: Headers) -> set[str]:
         if origin
     }
 
-    # Inclui o host efetivamente atendido. Isso cobre o domínio com e sem www,
-    # além de homologação, sem abrir curingas de origem.
     host = headers.get("host")
     if host:
         proto = headers.get("x-forwarded-proto") or scope.get("scheme", "http")
@@ -123,9 +118,6 @@ def _requer_validacao_de_origem(scope: Scope, headers: Headers) -> bool:
     if _tem_cookie_de_sessao(headers):
         return True
 
-    # Login/logout da interface também são protegidos contra login-CSRF quando
-    # a chamada tem metadados de navegador. CLI e integrações sem Sec-Fetch-Site
-    # continuam usando os endpoints compatíveis.
     path = str(scope.get("path", ""))
     return path in _BROWSER_ONLY_PATHS and headers.get("sec-fetch-site") is not None
 
@@ -142,6 +134,7 @@ def _regra_para(method: str, path: str) -> RateLimitRule | None:
         "/api/auth/reenviar-ativacao",
         "/api/auth/redefinir-senha",
         "/api/auth/solicitar-acesso",
+        "/api/auth/solicitar-acesso-com-recuperacao",
     }:
         return _RECOVERY_RULE
     if method == "GET" and path.startswith("/api/documentos-publicos/"):
@@ -154,8 +147,6 @@ def _regra_para(method: str, path: str) -> RateLimitRule | None:
 def _identificador_cliente(scope: Scope, headers: Headers) -> str:
     forwarded = headers.get("x-forwarded-for")
     if forwarded:
-        # Usa o último salto. O proxy de produção substitui/normaliza o header;
-        # escolher o último evita confiar no primeiro valor injetado pelo cliente.
         client_ip = forwarded.split(",")[-1].strip()
     else:
         client = scope.get("client")
