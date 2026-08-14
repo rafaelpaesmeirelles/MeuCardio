@@ -13,6 +13,7 @@ rodada tenta novamente.
 from __future__ import annotations
 
 import logging
+import os
 import signal
 import time
 
@@ -28,11 +29,22 @@ def _parar(_signum, _frame) -> None:  # noqa: ANN001
     _PARAR = True
 
 
+def _intervalo_segundos() -> int:
+    # Mantém compatibilidade com instalações cujo Settings ainda não exponha
+    # um campo próprio; o compose de produção injeta a variável explicitamente.
+    bruto = os.getenv("AGENDA_SYNC_INTERVAL_SECONDS", "60")
+    try:
+        valor = int(bruto)
+    except ValueError:
+        valor = 60
+    return max(15, min(valor, 3600))
+
+
 def executar() -> None:
     signal.signal(signal.SIGTERM, _parar)
     signal.signal(signal.SIGINT, _parar)
 
-    intervalo = max(15, min(int(settings.agenda_sync_interval_seconds), 3600))
+    intervalo = _intervalo_segundos()
     log.info(
         "agenda-sync worker iniciado enabled=%s intervalo=%ss",
         settings.agenda_background_sync_enabled,
