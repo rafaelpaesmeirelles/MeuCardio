@@ -20,6 +20,7 @@ from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 from app.core.uploads import UploadSecurityMiddleware
 from app.services.investidor_demo import InvestidorReadOnlyMiddleware, configurar_modo_investidor
+from app.services.investidor_ephemeral_ux import InvestidorEphemeralUxMiddleware
 
 configure_observability_logging()
 validar_configuracao_de_execucao(settings)
@@ -53,11 +54,14 @@ app.add_middleware(ObservabilityMiddleware)
 # /entrar observado com Google/Microsoft sem transformar state em login
 # genérico nem aceitar user_id vindo do navegador.
 app.add_middleware(OAuthSessionRecoveryMiddleware)
-# Última barreira antes dos routers: qualquer endpoint novo que faça escrita
-# nasce fail-closed para User.investidor, inclusive routers "livres" como
-# billing/auth/email. As únicas escritas permitidas são infraestrutura de auth;
-# flags de UX do Investidor são simuladas sem persistência no próprio middleware.
+# Barreira fail-closed de produto: qualquer endpoint novo que faça escrita
+# nasce bloqueado para User.investidor, inclusive routers "livres" como
+# billing/auth/email.
 app.add_middleware(InvestidorReadOnlyMiddleware)
+# Camada exterior e estritamente efêmera: conclui tour/boas-vindas por cookie
+# HttpOnly de sessão vinculado ao token atual, sem persistir flags no banco.
+# Também classifica o início de OAuth como ação operacional read-only bloqueada.
+app.add_middleware(InvestidorEphemeralUxMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
