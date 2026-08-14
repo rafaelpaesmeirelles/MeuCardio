@@ -46,6 +46,7 @@ import "./styles/clinical-emergency-board-fidelity.css";
 import "./styles/clinical-assistant-board-fidelity.css";
 import "./styles/clinical-home-mobile-final.css";
 import "./styles/clinical-full-viewport.css";
+import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
@@ -97,5 +98,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <App />
       </AuthProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
