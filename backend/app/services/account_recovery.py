@@ -10,8 +10,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 
-from sqlalchemy import or_
-
+from app.core.config import settings
 from app.core.db import SessionLocal
 from app.models.account_recovery import AccountRecoveryEmail
 from app.models.password_reset import PasswordResetToken
@@ -123,7 +122,7 @@ def enviar_recuperacao_senha(user_id: int) -> bool:
             destinatario=destino,
             assunto="CorVIA — redefinição de senha",
             template="recuperar_senha",
-            contexto={"link": f"{emails.settings.public_url}/redefinir-senha?token={token.token}"},
+            contexto={"link": f"{settings.public_url}/redefinir-senha?token={token.token}"},
             user_id=user.id,
         )
     finally:
@@ -149,7 +148,7 @@ def enviar_confirmacao_canal_recuperacao(user_id: int) -> bool:
             contexto={
                 "nome": user.full_name,
                 "email_login": user.email,
-                "link_login": f"{emails.settings.public_url}/entrar",
+                "link_login": f"{settings.public_url}/entrar",
             },
             user_id=user.id,
             chave_idempotencia=f"canal_recuperacao_confirmado:{user.id}:{destino}",
@@ -181,9 +180,61 @@ def enviar_primeiro_acesso(user_id: int) -> bool:
             contexto={
                 "nome": user.full_name,
                 "email_login": user.email,
-                "link": f"{emails.settings.public_url}/redefinir-senha?token={token.token}",
+                "link": f"{settings.public_url}/redefinir-senha?token={token.token}",
             },
             user_id=user.id,
+        )
+    finally:
+        db.close()
+
+
+def enviar_acesso_aprovado(user_id: int) -> bool:
+    """Avisa quem se autocadastrou que o acesso foi liberado.
+
+    A pessoa já escolheu a própria senha no cadastro; portanto não criamos nem
+    transmitimos outra credencial. Informamos o login e o botão de acesso no
+    segundo canal externo sempre que disponível.
+    """
+    db = SessionLocal()
+    try:
+        user = db.get(User, user_id)
+        if user is None or not user.is_active or user.status != "aprovado":
+            return False
+        destino = destinatario_seguro(db, user)
+        return emails._enviar(
+            db,
+            tipo="acesso_aprovado",
+            destinatario=destino,
+            assunto="CorVIA — seu acesso está liberado",
+            template="acesso_aprovado",
+            contexto={
+                "nome": user.full_name,
+                "email_login": user.email,
+                "link_login": f"{settings.public_url}/entrar",
+            },
+            user_id=user.id,
+            chave_idempotencia=f"acesso_aprovado:{user.id}",
+        )
+    finally:
+        db.close()
+
+
+def enviar_teste_transacional(destinatario: str, admin_user_id: int | None = None) -> bool:
+    """Smoke real do SMTP usado pelo release gate; não inclui segredo/token."""
+    destinatario = validar_email_basico(destinatario)
+    db = SessionLocal()
+    try:
+        return emails._enviar(
+            db,
+            tipo="smtp_probe",
+            destinatario=destinatario,
+            assunto="CorVIA — teste do canal transacional",
+            template="smtp_probe",
+            contexto={
+                "remetente": "contato@corvia.med.br",
+                "data_hora": datetime.now(timezone.utc).isoformat(),
+            },
+            user_id=admin_user_id,
         )
     finally:
         db.close()
