@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from starlette.requests import Request
 from starlette.responses import JSONResponse
-from sqlalchemy import event, inspect
+from sqlalchemy import event, inspect, select, update
 
 from app.core.db import SessionLocal
 from app.core.security import AUTH_COOKIE_NAME, hash_password, usuario_por_token_app
@@ -126,6 +126,55 @@ def _preparar_investidor(target: User) -> None:
     target.password_hash = hash_password(SENHA_FIXA_INVESTIDOR)
 
 
+def _neutralizar_integracao_real(target) -> None:
+    """Mantém qualquer integração externa inerte enquanto o dono for Investidor."""
+    target.enabled = False
+    target.write_enabled = False
+    target.contacts_enabled = False
+    target.sync_calendar = False
+    target.sync_mail = False
+
+
+def _owner_e_investidor(connection, owner_id: int | None) -> bool:
+    if owner_id is None:
+        return False
+    return bool(
+        connection.execute(
+            select(User.investidor).where(User.id == owner_id)
+        ).scalar_one_or_none()
+    )
+
+
+def _quarentenar_integracoes_existentes(connection, owner_id: int | None) -> None:
+    """Desativa integrações reais já existentes ao converter uma conta.
+
+    Não apaga credenciais nem dados: a mudança é reversível pelo administrador,
+    mas elimina imediatamente qualquer leitura/escrita/sincronização externa
+    durante o modo demonstração.
+    """
+    if owner_id is None:
+        return
+    from app.models.agenda import CalendarIntegration
+
+    connection.execute(
+        update(CalendarIntegration)
+        .where(CalendarIntegration.owner_id == owner_id)
+        .values(
+            enabled=False,
+            write_enabled=False,
+            contacts_enabled=False,
+            sync_calendar=False,
+            sync_mail=False,
+        )
+    )
+
+
+def _antes_de_salvar_integracao(_mapper, connection, target) -> None:
+    """Defesa em profundidade contra criação/reativação interna para Investidor."""
+    if _owner_e_investidor(connection, getattr(target, "owner_id", None)):
+        _neutralizar_integracao_real(target)
+
+
 def _antes_de_inserir(_mapper, _connection, target: User) -> None:
     if bool(getattr(target, "investidor", False)):
         _preparar_investidor(target)
@@ -144,6 +193,7 @@ def _antes_de_atualizar(_mapper, _connection, target: User) -> None:
 
     if concedendo_agora:
         _preparar_investidor(target)
+        _quarentenar_integracoes_existentes(_connection, target.id)
         return
 
     if not bool(getattr(target, "investidor", False)):
@@ -174,8 +224,12 @@ def _registrar_listeners() -> None:
     global _listeners_registrados
     if _listeners_registrados:
         return
+    from app.models.agenda import CalendarIntegration
+
     event.listen(User, "before_insert", _antes_de_inserir)
     event.listen(User, "before_update", _antes_de_atualizar)
+    event.listen(CalendarIntegration, "before_insert", _antes_de_salvar_integracao)
+    event.listen(CalendarIntegration, "before_update", _antes_de_salvar_integracao)
     _listeners_registrados = True
 
 
