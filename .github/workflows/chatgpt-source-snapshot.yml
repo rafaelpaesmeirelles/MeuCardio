@@ -1,0 +1,25 @@
+name: ChatGPT source snapshot
+
+on:
+  push:
+    branches:
+      - agent/chatgpt-investidor-demo-readonly-20260813
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload working tree snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatgpt-source-snapshot
+          path: |
+            backend
+            frontend
+            .github/workflows
+          retention-days: 1
+          include-hidden-files: true
