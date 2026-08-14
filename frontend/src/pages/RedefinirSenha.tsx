@@ -36,7 +36,7 @@ export default function RedefinirSenha() {
 
   const conteudo = !token ? (
     <div className="login-confirmacao">
-      <div className="login-confirmacao__selo login-confirmacao__selo--pendente"><Icone nome="alerta" aria-hidden="true" width={24} height={24} /></div>
+      <div className="login-confirmacao__selo login-confirmacao__selo--pendente"><Icone nome="emergencia" aria-hidden="true" width={24} height={24} /></div>
       <h2>Link inválido.</h2>
       <p>O token de redefinição não está presente. Solicite um novo link pelo canal seguro.</p>
       <Link to="/esqueci-senha" className="login-formulario__entrar" style={{ width: "fit-content" }}><span>Solicitar novo link</span><Icone nome="seta" /></Link>
