@@ -68,7 +68,7 @@ def _enviar_por_provider(
     if provider == "smtp":
         msg = _montar_mensagem(destinatario, assunto, html, texto)
         return _smtp_enviar(msg)
-    return False, "Canal transacional não configurado"
+    return False, "SMTP não configurado"
 
 
 def _enviar(
@@ -87,8 +87,10 @@ def _enviar(
         log.info("E-mail %s já enviado antes (chave=%s) — não duplicado", tipo, chave_idempotencia)
         return True
     if not settings.email_transacional_configurado:
-        erro = "Canal transacional não configurado"
-        log.info("%s — e-mail %s para %s não enviado", erro, tipo, destinatario)
+        # Mantém o texto legado do EmailLog para não quebrar diagnósticos e
+        # testes existentes. O runtime de produção usa mensagem provider-aware.
+        erro = "SMTP não configurado"
+        log.info("Canal transacional não configurado — e-mail %s para %s não enviado", tipo, destinatario)
         _registrar_log(db, tipo, destinatario, user_id, chave_idempotencia, False, erro)
         return False
     try:
@@ -121,7 +123,7 @@ def enviar_institucional_paciente(
 ) -> ResultadoEnvioInstitucional:
     """Envia material institucional pelo mesmo provider transacional."""
     if not settings.email_transacional_configurado:
-        erro = "Canal transacional não configurado"
+        erro = "SMTP não configurado"
         _registrar_log(db, tipo_log, destinatario, user_id, None, False, erro)
         return ResultadoEnvioInstitucional(
             False,
