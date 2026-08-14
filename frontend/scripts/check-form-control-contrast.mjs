@@ -37,8 +37,11 @@ for (const trecho of [
   "background-color: #0b1f2b",
   ".clinical-os input:-webkit-autofill",
   ".login input:not([type=\"checkbox\"])",
-  "-webkit-text-fill-color: #082637",
-  "background-color: #ffffff",
+  // A prancha canônica aprovada usa navy/teal também antes do login. Estes
+  // valores fixos garantem contraste alto sem reabrir a antiga exceção branca.
+  "-webkit-text-fill-color: #eaf5f7",
+  "background-color: #0b1f2b",
+  ".login input:-webkit-autofill",
 ]) {
   exigir(css.includes(trecho), `contrato incompleto: falta ${trecho}`);
 }
