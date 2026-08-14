@@ -1,0 +1,7 @@
+/* CorVIA Clinical OS — full viewport fidelity */
+.clinical-os .conteudo.cos-content{width:100%;min-width:0;max-width:none;margin:0}
+.clinical-os .cos-content>:not(.credito):not(.credito--compacto){width:100%;max-width:none;margin-inline:0}
+.clinical-os .cos-home{width:100%;max-width:none;margin-inline:0}
+.clinical-os .cos-content article>p,.clinical-os .cos-content article>ul,.clinical-os .cos-content article>ol,.clinical-os .cos-content article>blockquote{max-width:82ch}
+@media(min-width:1440px){.clinical-os .cos-content{padding-inline:clamp(1.25rem,1.55vw,2rem)}}
+@media(max-width:900px){.clinical-os .conteudo.cos-content,.clinical-os .cos-content>:not(.credito):not(.credito--compacto),.clinical-os .cos-home{width:100%;max-width:none;margin-inline:0}}

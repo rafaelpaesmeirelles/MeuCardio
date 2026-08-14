@@ -45,6 +45,7 @@ import "./styles/clinical-patient-board-fidelity.css";
 import "./styles/clinical-emergency-board-fidelity.css";
 import "./styles/clinical-assistant-board-fidelity.css";
 import "./styles/clinical-home-mobile-final.css";
+import "./styles/clinical-full-viewport.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
