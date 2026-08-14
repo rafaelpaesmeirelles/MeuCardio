@@ -1,0 +1,8 @@
+Olá, {{ nome }}. Seu acesso ao CorVIA Clinical OS foi criado.
+
+Seu e-mail de login: {{ email_login }}
+
+Escolha sua própria senha e conclua o primeiro acesso:
+{{ link }}
+
+Este link vale por 48 horas. Por segurança, o CorVIA nunca envia senha em texto por e-mail.
