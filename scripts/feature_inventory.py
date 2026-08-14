@@ -66,6 +66,10 @@ EXPECTED_BACKEND_ROUTERS = {
     "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
     "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
     "related_content.router", "knowledge_graph.router", "patient_profiles.router",
+    # Revisado em 14/08/2026 (RC PR #74): sync-live/sync-all capability-aware.
+    # Registrado em ROUTERS_ASSINANTES (assinante_ativo), escopo por owner_id
+    # com teste negativo de IDOR em tests/test_account_sync_realtime.py.
+    "account_sync.router",
 }
 
 EXPECTED_SUPPORT_FILES = {
@@ -111,11 +115,14 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/receituario.py",
     "backend/app/api/service_orders.py",
     "backend/app/api/clinical_cases.py",
+    "backend/app/api/account_sync.py",
     "backend/app/api/agenda_integrada.py",
     "backend/app/api/specialty_guides.py",
     "backend/app/models/specialty_guide.py",
     "backend/app/models/agenda.py",
     "backend/app/services/perioperative_calculators.py",
+    "backend/app/services/account_sync.py",
+    "backend/tests/test_account_sync_realtime.py",
     "backend/app/services/agenda_integrada/connectors.py",
     "backend/app/services/agenda_integrada/domain.py",
     "backend/app/services/agenda_integrada/traffic.py",
