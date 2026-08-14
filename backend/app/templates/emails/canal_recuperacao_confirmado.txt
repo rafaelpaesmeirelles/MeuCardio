@@ -1,0 +1,11 @@
+Olá, {{ nome }}.
+
+Este endereço foi confirmado como o e-mail secundário de recuperação da sua conta CorVIA.
+
+Seu e-mail de login: {{ email_login }}
+
+Se você perder o acesso ao login ou à caixa CorVIA Mail, os links de recuperação serão enviados para este endereço.
+
+Acessar o CorVIA: {{ link_login }}
+
+Por segurança, o CorVIA nunca envia sua senha por e-mail.
