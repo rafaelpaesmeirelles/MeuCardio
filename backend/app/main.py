@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    account_sync, admin, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
+    account_access_admin, account_sync, admin, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
     calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_session, evidence,
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
@@ -55,15 +55,18 @@ app.add_middleware(ObservabilityMiddleware)
 app.add_middleware(OAuthSessionRecoveryMiddleware)
 # Última barreira antes dos routers: qualquer endpoint novo que faça escrita
 # nasce fail-closed para User.investidor, inclusive routers "livres" como
-# billing/auth/email. As únicas escritas permitidas são o estado mínimo do tour
-# e logout/login, definidas explicitamente no middleware.
+# billing/auth/email. As únicas escritas permitidas são infraestrutura de auth;
+# flags de UX do Investidor são simuladas sem persistência no próprio middleware.
 app.add_middleware(InvestidorReadOnlyMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
-    sessions.router, billing.router, admin.router, service_orders.router,
-    partner_courses.router, email_api.router, email_session.router, documentos_publicos.router, cmed.router,
-    agenda_integrada.oauth_callback_router,
+    sessions.router, billing.router,
+    # Precisa preceder admin.router: substitui somente /users/{id}/decidir para
+    # acrescentar a notificação transacional sem quebrar o frontend existente.
+    account_access_admin.router, admin.router,
+    service_orders.router, partner_courses.router, email_api.router, email_session.router,
+    documentos_publicos.router, cmed.router, agenda_integrada.oauth_callback_router,
 )
 
 ROUTERS_ASSINANTES = (
