@@ -83,7 +83,6 @@ class TestConvidado:
         _, token_admin = criar_usuario(email="admin@teste.local", role="admin")
         alvo, token_alvo = criar_usuario(email="convidado@teste.local")
 
-        # Baseline: sem grant nenhum, bloqueado.
         antes = client.get(ROTA_GATED, headers=_headers(token_alvo))
         assert antes.status_code == 402
 
@@ -93,17 +92,12 @@ class TestConvidado:
         )
         assert resp_admin.status_code == 200
 
-        # Nenhuma outra chamada entre o grant e o acesso — nem checkout, nem
-        # /billing/status, nem recarregar o token.
         depois = client.get(ROTA_GATED, headers=_headers(token_alvo))
         assert depois.status_code == 200
 
     def test_convidado_com_acesso_permitido_sem_jamais_visitar_billing_status(
         self, client, db, criar_usuario
     ):
-        """O acesso não pode depender de uma checagem/cache disparada por
-        `/billing/status` (ou qualquer tela de "assinatura") — só o flag no
-        banco, consultado a cada requisição por `tem_acesso_ao_produto`."""
         alvo, token = criar_usuario()
         alvo.convidado = True
         db.commit()
@@ -118,11 +112,7 @@ class TestConvidado:
         alvo.convidado = True
         db.commit()
 
-        # Nenhuma chamada a /billing/checkout nesta rodada, nenhuma
-        # Subscription criada manualmente — prova que o acesso não depende
-        # de nenhuma das duas coisas.
         assert _subscription_do_usuario(db, alvo.id) is None
-
         resp = client.get(ROTA_GATED, headers=_headers(token))
         assert resp.status_code == 200
         assert _subscription_do_usuario(db, alvo.id) is None
@@ -156,8 +146,6 @@ class TestConvidado:
     def test_revogar_convidado_mas_manter_assinatura_ativa_continua_com_acesso(
         self, client, db, criar_usuario
     ):
-        """O acesso passa a vir da assinatura, não mais do grant — provado
-        revogando o flag e confirmando que o acesso sobrevive."""
         alvo, token = criar_usuario()
         alvo.convidado = True
         db.add(Subscription(user_id=alvo.id, kind=TIPO_MEUCARDIO, plano=PLANO_BASICO, status="ativo"))
@@ -177,10 +165,6 @@ class TestConvidado:
         db.commit()
 
         resp = client.get(ROTA_GATED, headers=_headers(token))
-        # is_active=False derruba a resolução do token ANTES de chegar em
-        # assinante_ativo (usuario_por_token_app filtra is_active=True) — o
-        # bloqueio acontece em current_user, daí 401, não 402. De todo modo,
-        # o efeito prático é o mesmo: acesso negado, sem exceção para convidado.
         assert resp.status_code == 401
 
 
@@ -240,7 +224,6 @@ class TestInvestidor:
         assert alvo.profile_completion_required is False
 
     def test_investidor_nao_acessa_dado_de_outro_medico(self, client, db, criar_usuario):
-        """Acesso ao produto não concede acesso a dados clínicos alheios."""
         dono, token_dono = criar_usuario(email="dono.paciente@teste.local")
         dono.convidado = True
         db.commit()
@@ -331,7 +314,9 @@ class TestOnboardingConvidadoInvestidor:
         assert resp.json()["kyc_required"] is False
         assert resp.json()["onboarding_pendente"] is True
 
-    def test_concluir_onboarding_marca_visto_e_zera_pendente(self, client, db, criar_usuario):
+    def test_concluir_onboarding_investidor_e_efemero_e_zera_pendente_na_sessao(
+        self, client, db, criar_usuario
+    ):
         alvo, _ = criar_usuario()
         token = _converter_investidor(db, alvo)
         assert client.get("/api/auth/me", headers=_headers(token)).json()["onboarding_pendente"] is True
@@ -341,7 +326,7 @@ class TestOnboardingConvidadoInvestidor:
         assert resp.json() == {"onboarding_pendente": False}
 
         db.refresh(alvo)
-        assert alvo.onboarding_visto is True
+        assert alvo.onboarding_visto is False
 
     def test_onboarding_pendente_continua_false_apos_nova_consulta_me(
         self, client, db, criar_usuario
@@ -409,8 +394,6 @@ class TestBillingRegressao:
         )
         assert r2.status_code == 200
 
-        # O admin nunca chamou /billing/checkout por nenhum dos dois — o
-        # simples grant não cria (e muito menos ativa) nenhuma Subscription.
         assert _subscription_do_usuario(db, convidado.id) is None
         assert _subscription_do_usuario(db, investidor.id) is None
         ativos = (
@@ -460,8 +443,6 @@ class TestSeguranca:
         assert r2.status_code == 403
 
     def test_header_inventado_nao_concede_acesso(self, client, criar_usuario):
-        """`assinante_ativo` só consulta `tem_acesso_ao_produto(db, user)` —
-        nenhum header do cliente é lido para decidir acesso."""
         _, token = criar_usuario()
         resp = client.get(
             ROTA_GATED,
