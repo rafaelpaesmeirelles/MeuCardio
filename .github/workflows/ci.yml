@@ -248,6 +248,10 @@ jobs:
         working-directory: frontend
         run: node --test scripts/check-login-input-contrast.test.mjs
 
+      - name: Enforce global form-control contrast contract
+        working-directory: frontend
+        run: node scripts/check-form-control-contrast.mjs
+
       - name: Enforce admin ficha (Histórico) contrast and legible rendering
         working-directory: frontend
         run: node scripts/check-admin-ficha-historico.mjs
