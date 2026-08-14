@@ -1,50 +1,221 @@
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator, model_validator
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.core.security import current_user, hash_password
+from app.core.security import current_user, hash_password, require_admin, verify_password
+from app.models.account_recovery import AccountRecoveryEmail
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
-from app.services import emails
+from app.services import account_recovery, emails
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 
 class SolicitacaoReset(BaseModel):
+    # Pode ser o e-mail de login OU o segundo e-mail de recuperação. O nome do
+    # campo fica "email" por compatibilidade com o frontend e clientes antigos.
     email: str
 
 
 @router.post("/esqueci-senha", status_code=202)
 def esqueci_senha(dados: SolicitacaoReset, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
-    """Sempre responde 202, exista ou não o e-mail — não confirma pra quem
-    pergunta se um e-mail está cadastrado (evita enumeração de usuários).
+    """Sempre responde 202, exista ou não o endereço — evita enumeração.
 
-    O e-mail em si (item 3 do spec de e-mails transacionais) sai em
-    background: a resposta não espera o SMTP, e `emails.enviar_recuperar_senha`
-    cria o próprio `PasswordResetToken` (validade de 1h) numa sessão de banco
-    própria — não a `db` desta rota, que pode já estar liberada quando o
-    background task rodar."""
-    email = dados.email.strip().lower()
-    user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
+    A busca aceita o login e o segundo canal externo. Quando a conta tem um
+    e-mail de recuperação cadastrado, o link é SEMPRE entregue nele; isso
+    evita o ciclo em que a pessoa perde o Clinical OS e, junto, perde também
+    a caixa ``@corvia.med.br`` usada como login.
+    """
+    user = account_recovery.encontrar_usuario_por_identificador(db, dados.email)
     if user:
-        background_tasks.add_task(emails.enviar_recuperar_senha, user.id)
-    return {"nota": "Se o e-mail existir e estiver ativo, um link de redefinição foi gerado."}
+        background_tasks.add_task(account_recovery.enviar_recuperacao_senha, user.id)
+    return {
+        "nota": "Se o endereço estiver vinculado a uma conta ativa, enviaremos um link de redefinição ao canal seguro cadastrado."
+    }
 
 
 @router.post("/reenviar-ativacao", status_code=202)
 def reenviar_ativacao(dados: SolicitacaoReset, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
-    """Item 2 do spec de e-mails transacionais — mesmo padrão anti-enumeração
-    de `esqueci_senha`: responde 202 sempre. Só reenvia para conta que ainda
-    não foi ativada (`is_active is False`); conta já ativa não tem link de
-    ativação para reenviar."""
+    """Item 2 do spec de e-mails transacionais — padrão anti-enumeração."""
     email = dados.email.strip().lower()
     user = db.query(User).filter(User.email == email, User.is_active.is_(False)).first()
     if user:
         background_tasks.add_task(emails.enviar_reenvio_ativacao, user.id)
     return {"nota": "Se houver uma conta pendente de ativação com este e-mail, um novo link foi enviado."}
+
+
+class EmailRecuperacaoPayload(BaseModel):
+    recovery_email: str
+
+    @field_validator("recovery_email")
+    @classmethod
+    def _email(cls, value: str) -> str:
+        try:
+            return account_recovery.validar_email_basico(value)
+        except ValueError as exc:
+            raise ValueError(str(exc)) from exc
+
+
+class EmailRecuperacaoDoTitular(EmailRecuperacaoPayload):
+    senha_atual: str
+
+
+@router.get("/email-recuperacao")
+def obter_email_recuperacao(
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    return {"recovery_email": account_recovery.obter_email_recuperacao(db, user.id)}
+
+
+@router.put("/email-recuperacao")
+def atualizar_email_recuperacao(
+    dados: EmailRecuperacaoDoTitular,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    """Troca sensível: exige a senha atual e confirma no novo canal."""
+    if not verify_password(dados.senha_atual, user.password_hash):
+        raise HTTPException(status_code=400, detail="Senha atual incorreta.")
+    try:
+        registro = account_recovery.definir_email_recuperacao(db, user, dados.recovery_email)
+        db.commit()
+    except ValueError as exc:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
+    return {"recovery_email": registro.email}
+
+
+@router.put("/admin/users/{user_id}/email-recuperacao")
+def admin_atualizar_email_recuperacao(
+    user_id: int,
+    dados: EmailRecuperacaoPayload,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    _admin: User = Depends(require_admin),
+):
+    """Permite recuperar uma conta já bloqueada sem pedir que o titular entre."""
+    user = db.get(User, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    try:
+        registro = account_recovery.definir_email_recuperacao(db, user, dados.recovery_email)
+        db.commit()
+    except ValueError as exc:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
+    return {"user_id": user.id, "recovery_email": registro.email}
+
+
+# -------------------------------------------------------------------------
+# Cadastro novo com segundo canal obrigatório. Mantemos a rota histórica
+# intacta por compatibilidade interna, mas toda interface CorVIA passa a usar
+# esta versão. Ela reutiliza a regra canônica de cadastro em auth.py e apenas
+# adiciona, na mesma requisição, o canal externo independente.
+# -------------------------------------------------------------------------
+
+from app.api.auth import SolicitacaoAcesso, solicitar_acesso  # noqa: E402
+
+
+class SolicitacaoAcessoComRecuperacao(SolicitacaoAcesso):
+    recovery_email: str
+
+    @field_validator("recovery_email")
+    @classmethod
+    def _recovery(cls, value: str) -> str:
+        try:
+            return account_recovery.validar_email_basico(value)
+        except ValueError as exc:
+            raise ValueError(str(exc)) from exc
+
+    @model_validator(mode="after")
+    def _diferente_do_login(self):
+        if self.recovery_email == self.email.strip().lower():
+            raise ValueError("O e-mail de recuperação precisa ser diferente do e-mail de login.")
+        return self
+
+
+@router.post("/solicitar-acesso-com-recuperacao", status_code=201)
+def solicitar_acesso_com_recuperacao(
+    dados: SolicitacaoAcessoComRecuperacao,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+):
+    recovery_email = account_recovery.normalizar_email(dados.recovery_email)
+    if account_recovery.email_ja_em_uso(db, recovery_email):
+        raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
+
+    base = SolicitacaoAcesso(**dados.model_dump(exclude={"recovery_email"}))
+    resultado = solicitar_acesso(base, background_tasks, db)
+    user = db.query(User).filter(User.email == base.email).first()
+    if user is None:
+        raise HTTPException(status_code=500, detail="Cadastro criado sem vínculo de recuperação. Operação abortada.")
+    try:
+        account_recovery.definir_email_recuperacao(db, user, recovery_email)
+        db.commit()
+    except ValueError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+    background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
+    return resultado
+
+
+# Rota segura para a criação pelo Admin. O endpoint legado /api/admin/users
+# continua existindo para compatibilidade, mas a UI de criação deve usar esta
+# variante porque ela exige o segundo canal e dispara o e-mail de primeiro
+# acesso sem transmitir senha em texto.
+from app.api.admin import NovoUsuario, criar_usuario  # noqa: E402
+
+
+class NovoUsuarioComRecuperacao(NovoUsuario):
+    recovery_email: str
+
+    @field_validator("recovery_email")
+    @classmethod
+    def _admin_recovery(cls, value: str) -> str:
+        try:
+            return account_recovery.validar_email_basico(value)
+        except ValueError as exc:
+            raise ValueError(str(exc)) from exc
+
+    @model_validator(mode="after")
+    def _admin_diferente_do_login(self):
+        if self.recovery_email == self.email.strip().lower():
+            raise ValueError("O e-mail de recuperação precisa ser diferente do e-mail de login.")
+        return self
+
+
+@router.post("/admin/criar-usuario-com-recuperacao", status_code=201)
+def admin_criar_usuario_com_recuperacao(
+    dados: NovoUsuarioComRecuperacao,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    admin: User = Depends(require_admin),
+):
+    recovery_email = account_recovery.normalizar_email(dados.recovery_email)
+    if account_recovery.email_ja_em_uso(db, recovery_email):
+        raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
+
+    base = NovoUsuario(**dados.model_dump(exclude={"recovery_email"}))
+    resultado = criar_usuario(base, db, admin)
+    user = db.get(User, resultado["id"])
+    if user is None:
+        raise HTTPException(status_code=500, detail="Usuário criado sem vínculo de recuperação. Operação abortada.")
+    try:
+        account_recovery.definir_email_recuperacao(db, user, recovery_email)
+        db.commit()
+    except ValueError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+    background_tasks.add_task(account_recovery.enviar_primeiro_acesso, user.id)
+    return {**resultado, "recovery_email": recovery_email}
 
 
 class RedefinirSenha(BaseModel):
@@ -54,13 +225,7 @@ class RedefinirSenha(BaseModel):
 
 @router.post("/redefinir-senha")
 def redefinir_senha(dados: RedefinirSenha, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
-    """`registro.alvo` decide QUAL senha muda: 'conta' é o comportamento
-    original (senha da conta Corvia); 'email' é a senha própria da caixa
-    de e-mail (Tarefa 28) — reaproveita o mesmo token e o mesmo formulário
-    de redefinição em vez de duplicar a peça inteira. 'ativacao' (02/08/2026)
-    é o link de boas-vindas: além de definir a senha, ativa a conta
-    (`is_active = True`) — é o único momento em que uma conta criada via
-    assinatura passa a poder logar."""
+    """`registro.alvo` decide QUAL senha muda: conta, e-mail ou ativação."""
     if len(dados.nova_senha) < 8:
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
     registro = db.query(PasswordResetToken).filter(PasswordResetToken.token == dados.token).first()
@@ -82,11 +247,6 @@ def redefinir_senha(dados: RedefinirSenha, background_tasks: BackgroundTasks, db
         if registro.alvo == "ativacao":
             user.is_active = True
         else:
-            # 'conta': troca genuína de senha de quem já podia logar —
-            # dispara a confirmação de segurança (item 4 do spec). Uma
-            # ativação de conta nova não manda essa confirmação: não é
-            # "sua senha foi alterada", é a primeira senha sendo criada, e
-            # o próprio e-mail de boas-vindas já cobre esse momento.
             background_tasks.add_task(emails.enviar_senha_alterada, user.id)
 
     registro.used = True
@@ -96,8 +256,7 @@ def redefinir_senha(dados: RedefinirSenha, background_tasks: BackgroundTasks, db
 
 @router.get("/reset-pendentes")
 def listar_resets_pendentes(db: Session = Depends(get_db), admin: User = Depends(current_user)):
-    """Painel de apoio pro admin: enquanto não há SMTP configurado, os links
-    de reset ficam visíveis aqui pra repasse manual (WhatsApp, telefone etc.)."""
+    """Painel de apoio pro admin; nunca expõe senha ou hash."""
     if admin.role != "admin":
         raise HTTPException(status_code=403, detail="Só administradores.")
     agora = datetime.now(timezone.utc)
