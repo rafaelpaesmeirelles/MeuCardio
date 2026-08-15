@@ -6,9 +6,9 @@ import { useAuth } from "../lib/auth";
 import "../styles/login.css";
 
 const BENEFICIOS = [
-  { icon: "check" as const, title: "Segurança e privacidade", detail: "Acesso profissional protegido, com privacidade e rastreabilidade.", tone: "cyan" as const },
-  { icon: "conhecimento" as const, title: "Evidências atualizadas", detail: "Guidelines, literatura e protocolos integrados ao seu fluxo de decisão.", tone: "violet" as const },
-  { icon: "assistente" as const, title: "Produtividade clínica", detail: "Ferramentas inteligentes para reduzir tarefas e apoiar o melhor cuidado.", tone: "green" as const },
+  { icon: "assistente" as const, title: "Inteligência clínica", detail: "Contexto e apoio à decisão no mesmo ambiente.", tone: "cyan" as const },
+  { icon: "evidencia" as const, title: "Evidências atualizadas", detail: "Guidelines, literatura e protocolos conectados.", tone: "violet" as const },
+  { icon: "check" as const, title: "Segurança e privacidade", detail: "Acesso profissional protegido e rastreável.", tone: "green" as const },
 ];
 
 export default function Entrar() {
@@ -37,16 +37,16 @@ export default function Entrar() {
   return (
     <main className="login prehome prehome--login">
       <PreHomeBrand
-        title={<>Entre no <strong>CorVIA</strong></>}
-        description={<>Acesse o Clinical Command Center completo e tome decisões com mais segurança, evidência e eficiência.</>}
+        title={<>Tudo o que o cardiologista precisa. <strong>Em um só lugar.</strong></>}
+        description={<>Seu Clinical OS conecta conhecimento, decisão, assistência e rotina sem tirar o médico do centro.</>}
         benefits={BENEFICIOS}
       />
       <section className="prehome-access" aria-labelledby="login-acesso-titulo">
-        <div className="prehome-card">
+        <div className="prehome-card prehome-card--login">
           <header className="prehome-card__header">
             <p className="prehome-card__eyebrow"><Icone nome="conta" /> Acesso profissional</p>
-            <h2 id="login-acesso-titulo">Entrar no CorVIA</h2>
-            <p>Use suas credenciais para acessar o seu Command Center clínico.</p>
+            <h2 id="login-acesso-titulo">Bem-vindo de volta</h2>
+            <p>Acesse sua conta para continuar no CorVIA Clinical OS.</p>
           </header>
           <form className="login-formulario" onSubmit={enviar}>
             <div className="login-campo">
@@ -63,19 +63,19 @@ export default function Entrar() {
               </div>
             </div>
             <div className="prehome-card__inline-actions">
-              <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Manter conectado</label>
+              <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Lembrar-me</label>
               <Link to="/esqueci-senha" className="prehome-link">Esqueci minha senha</Link>
             </div>
             {erro && <p id="login-erro" className="login-formulario__erro" role="alert">{erro}</p>}
             <button className="login-formulario__entrar" type="submit" disabled={enviando || !email.trim() || !senha}>
-              <span>{enviando ? "Abrindo seu Clinical OS…" : "Entrar"}</span>{!enviando && <Icone nome="seta" aria-hidden="true" />}{enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
+              <span>{enviando ? "Abrindo seu Clinical OS…" : "Entrar na minha conta"}</span>{!enviando && <Icone nome="seta" aria-hidden="true" />}{enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
             </button>
           </form>
           <div className="prehome-card__actions">
-            <div className="prehome-divider">ou</div>
-            <Link to="/solicitar-acesso" className="prehome-secondary"><Icone nome="conta" /> Primeiro acesso ou cadastro</Link>
+            <div className="prehome-divider">ou continue com</div>
+            <Link to="/solicitar-acesso" className="prehome-secondary"><Icone nome="conta" /> Solicitar acesso</Link>
           </div>
-          <footer className="prehome-card__footer"><Icone nome="check" /><span>Ambiente seguro para uso profissional · pressione Enter para entrar</span></footer>
+          <footer className="prehome-card__footer"><Icone nome="check" /><span>Seus dados estão protegidos · ambiente profissional em conformidade com a LGPD</span></footer>
         </div>
         <nav className="prehome-legal" aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
       </section>
