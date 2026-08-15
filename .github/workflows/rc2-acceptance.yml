@@ -353,7 +353,9 @@ jobs:
             }
 
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
-            await mobile.page.locator('.ccc-mobile-summary__card--assistant').click();
+            await mobile.page.locator('.cc-mobile-nav button').last().click();
+            await mobile.page.locator('.cc-mobile-more__assistant').waitFor({ state: 'visible', timeout: 10000 });
+            await mobile.page.locator('.cc-mobile-more__assistant').click();
             await mobile.page.locator('.cos-assistant-panel.is-open').waitFor({ state: 'visible', timeout: 10000 });
             await mobile.page.screenshot({ path: path.join(out, 'mobile-personal-assistant.png'), fullPage: false });
             await mobile.context.close();

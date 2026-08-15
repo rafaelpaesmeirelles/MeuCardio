@@ -12,16 +12,41 @@ LAUNCH_FILES = [
 ]
 A11Y = ROOT / "frontend/src/styles/clinical-os-a11y.css"
 SHELL = LAUNCH_FILES[0]
+PAINEL = LAUNCH_FILES[2]
 TOUR = LAUNCH_FILES[-1]
+MOBILE_NAV = ROOT / "frontend/src/components/ClinicalMobileNav.tsx"
 
 
-def test_launch_expoe_um_unico_nome_para_o_assistente():
-    for caminho in LAUNCH_FILES:
-        fonte = caminho.read_text(encoding="utf-8")
-        assert "CorVIA AI" not in fonte, caminho
-
+def test_launch_preserva_taxonomia_aprovada_dos_assistentes():
+    painel = PAINEL.read_text(encoding="utf-8")
     tour = TOUR.read_text(encoding="utf-8")
-    assert "CorVIA Chat" in tour  # comunicação profissional continua sendo produto separado
+
+    # A prancha canônica aprovada usa CorVIA AI como ação rápida que abre a
+    # Assistente Clínica. Isso é distinto do Assistente Pessoal da Home e do
+    # CorVIA Chat, que permanece produto de comunicação profissional.
+    assert 'titulo: "CorVIA AI"' in painel
+    assert 'detalhe: "Assistente Clínica"' in painel
+    assert "Assistente Pessoal" in painel
+    assert "CorVIA Chat" in tour
+
+
+def test_mobile_preserva_assistente_pessoal_sem_alterar_bottom_bar_aprovada():
+    mobile = MOBILE_NAV.read_text(encoding="utf-8")
+    shell = SHELL.read_text(encoding="utf-8")
+
+    # A bottom bar aprovada continua exatamente Início/Buscar/Pacientes/Agenda/Mais.
+    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    positions = [mobile.index(f"<span>{label}</span>") for label in labels]
+    assert positions == sorted(positions)
+
+    # O Assistente Pessoal não some: fica acessível no menu Mais e aciona o
+    # controlador real do Shell, enquanto /assistente continua Assistente Clínica.
+    assert 'className="cc-mobile-more__assistant"' in mobile
+    assert "Assistente Pessoal" in mobile
+    assert 'document.querySelector<HTMLButtonElement>(".cos-assistant-sidebar")?.click();' in mobile
+    assert 'to: "/assistente", label: "Assistente Clínica"' in mobile
+    assert 'className="cos-assistant-sidebar"' in shell
+    assert "setAssistente(true)" in shell
 
 
 def test_tour_nao_posiciona_corvia_como_prontuario_e_identifica_dados_de_mock():

@@ -1,0 +1,59 @@
+/* Fluxo de autenticação CorVIA — referência final da prancha aprovada.
+   Carregar após login.css/login-fullscreen-social.css em cada rota de acesso. */
+:root{--arf-bg:#010712;--arf-panel:#061321;--arf-panel2:#081827;--arf-line:rgba(101,153,194,.24);--arf-text:#f1f6fb;--arf-muted:#8293a7;--arf-blue:#166fff;--arf-cyan:#22d7e6;--arf-violet:#976aff;--arf-green:#35d69a}
+
+.login.prehome{background:radial-gradient(circle at 14% 45%,rgba(13,112,220,.12),transparent 30%),radial-gradient(circle at 82% 16%,rgba(105,67,229,.08),transparent 28%),linear-gradient(138deg,#01050b,#02101c 50%,#020811)!important}
+.prehome-brand{background:radial-gradient(circle at 48% 46%,rgba(15,113,217,.14),transparent 31%),radial-gradient(circle at 68% 70%,rgba(118,65,232,.09),transparent 29%),linear-gradient(155deg,#020812,#031322 58%,#020b14)!important;border-right-color:rgba(93,151,190,.15)!important}
+.prehome-brand__logo{align-items:center!important}.prehome-brand__logo img{filter:drop-shadow(0 0 9px rgba(30,211,226,.17))}.prehome-brand__logo small{color:#92a5b8!important;letter-spacing:.30em!important}
+.prehome-brand__badge{display:none!important}.prehome-brand__copy h1{font-weight:630!important;letter-spacing:-.035em!important}.prehome-brand__copy h1 strong{color:#1e80ff!important}.prehome-brand__pillars{border-top:1px solid rgba(97,152,190,.09);border-bottom:1px solid rgba(97,152,190,.07);padding-block:4px}.prehome-pillar>span{color:#32cfff!important}.prehome-pillar strong{color:#dce7f0!important;font-weight:600!important}.prehome-pillar small{display:none!important}.prehome-brand__hologram{filter:drop-shadow(0 18px 36px rgba(13,80,176,.08))}.prehome-brand__heart{width:68%!important;max-height:310px}.prehome-brand__heart-glow{width:67%!important;height:68%!important;background:radial-gradient(circle,rgba(244,47,92,.14),rgba(18,126,255,.14) 49%,transparent 72%)!important}.prehome-brand__pulse{opacity:.55}.prehome-brand__journey-kicker{color:#5ddce4!important}.prehome-brand__journey h2{font-weight:620!important}.prehome-brand__journey h2 strong{color:#54e4e9!important}.prehome-brand__footer{color:#5e7387!important}
+
+.prehome-access{background:radial-gradient(circle at 70% 12%,rgba(99,65,214,.07),transparent 27%),linear-gradient(145deg,rgba(2,8,15,.92),rgba(4,13,23,.99))!important}
+.prehome-card{background:linear-gradient(155deg,rgba(8,23,39,.985),rgba(4,15,27,.99))!important;border:1px solid rgba(95,155,200,.30)!important;border-radius:14px!important;box-shadow:0 28px 80px -46px #000,inset 0 1px rgba(255,255,255,.02)!important}
+.prehome-card__eyebrow{color:#b7c7d5!important;letter-spacing:.09em!important}.prehome-card__header h2{color:#f2f6fb!important;font-weight:650!important;letter-spacing:-.04em!important}.prehome-card__header>p:last-child{color:#9aa8b8!important;line-height:1.45!important}
+.login-campo label{color:#e7edf3!important;font-weight:650!important}.login-campo input,.login-campo select,.login-campo textarea,.login-senha{background:#0a1c28!important;border:1px solid rgba(104,157,194,.30)!important;border-radius:9px!important;color:#f2f6fa!important;box-shadow:none!important}.login-campo input::placeholder,.login-campo textarea::placeholder{color:#728794!important}.login-campo input:focus,.login-campo select:focus,.login-campo textarea:focus,.login-senha:focus-within{border-color:#39d5e1!important;box-shadow:0 0 0 2px rgba(33,211,225,.11)!important;outline:none!important}.login-senha input{background:transparent!important;border:0!important;box-shadow:none!important}.login-senha button{color:#50d7df!important}
+.prehome-card__inline-actions{align-items:center!important}.prehome-card__inline-actions label{color:#ccd7df!important}.prehome-link{color:#55d9e1!important}.prehome-divider{color:#758797!important}.prehome-divider:before,.prehome-divider:after{background:rgba(101,153,194,.16)!important}.login-formulario__entrar,.prehome-primary{min-height:46px!important;background:linear-gradient(90deg,#176ff0,#1b6ff7 58%,#26a8bd)!important;border:1px solid rgba(65,191,226,.42)!important;border-radius:8px!important;color:#f4f9fb!important;box-shadow:0 16px 32px -22px rgba(20,112,255,.9)!important;font-weight:680!important}.login-formulario__entrar:hover:not(:disabled),.prehome-primary:hover{filter:brightness(1.07)}.login-formulario__entrar:disabled{opacity:.62}.prehome-secondary,.prehome-social__button{background:#071827!important;border-color:rgba(101,153,194,.23)!important;border-radius:9px!important;color:#e1eaf1!important}.prehome-secondary:hover,.prehome-social__button:hover{border-color:rgba(44,211,226,.42)!important;background:#0a2031!important}.prehome-card__footer{color:#7e90a1!important;border-top-color:rgba(101,153,194,.11)!important}.prehome-card__footer svg{color:#50d8df!important}.prehome-info{background:rgba(7,25,40,.64)!important;border-color:rgba(101,153,194,.16)!important;border-radius:9px!important}.prehome-confirmation__icon{color:#48d9a4!important;border-color:rgba(72,217,164,.28)!important;background:rgba(72,217,164,.055)!important}
+
+/* login social: exatamente integrado ao mesmo card */
+.prehome-social{gap:7px!important}.prehome-social__button{min-height:42px!important;font-size:.62rem!important}.prehome-secondary{min-height:42px!important}.prehome--login .prehome-card__footer{margin-top:11px!important;padding-top:11px!important}
+
+/* Cadastro: mantém todos os campos reais, mas com a densidade visual da prancha. */
+.prehome--register .prehome-card--register{max-width:720px!important}.prehome--register .login-formulario__secao{background:rgba(6,21,34,.43)!important;border-color:rgba(101,153,194,.12)!important;border-radius:10px!important}.prehome--register .login-formulario__secao-titulo{color:#83dfe5!important}.prehome-steps{border-bottom-color:rgba(101,153,194,.11)!important}.prehome-step i{background:#061522!important;border-color:rgba(101,153,194,.20)!important}.prehome-step--active i{color:#fff!important;background:#176ff0!important;border-color:#399be8!important}
+
+@media(min-width:821px){
+  .login.prehome{grid-template-columns:minmax(400px,39%) minmax(540px,61%)!important}
+  .prehome-brand{padding:32px clamp(30px,3.8vw,58px) 24px!important}
+  .prehome-brand__content{grid-template-rows:auto auto minmax(180px,1fr) auto!important;gap:12px!important;padding:30px 0 40px!important}
+  .prehome-brand__copy h1{font-size:clamp(1.65rem,2.25vw,2.35rem)!important;line-height:1.06!important}
+  .prehome-brand__hologram{width:min(100%,325px)!important;min-height:230px!important;margin:-8px auto!important}
+  .prehome-brand__journey{margin-top:-7px!important}
+  .prehome-brand__journey h2{font-size:1rem!important}
+  .prehome-access{padding:24px clamp(26px,3.5vw,52px)!important}
+  .prehome-card{width:min(100%,510px)!important;padding:26px 25px!important}
+  .prehome-card--register{width:min(100%,720px)!important;max-height:calc(100dvh - 48px);overflow:auto}
+  .prehome-card__header{margin-bottom:18px!important}
+  .prehome-card__header h2{font-size:1.72rem!important}
+  .login-formulario{gap:13px!important}
+  .login-campo{gap:6px!important}
+  .login-campo input,.login-campo select{min-height:46px!important;padding:9px 12px!important}
+}
+
+@media(max-width:820px){
+  .login.prehome{display:block!important;min-height:100svh!important;overflow:visible!important}
+  .prehome-brand{min-height:330px!important;padding:18px 18px 20px!important;border-right:0!important;border-bottom:1px solid rgba(101,153,194,.10)!important}
+  .prehome-brand__logo img{width:38px!important;height:38px!important}.prehome-brand__logo strong{font-size:1.52rem!important}.prehome-brand__logo small{font-size:.48rem!important}
+  .prehome-brand__content{grid-template-columns:minmax(0,1.15fr) minmax(112px,.85fr)!important;grid-template-rows:auto auto auto!important;gap:8px 10px!important;padding:14px 0 0!important}
+  .prehome-brand__copy{grid-column:1/-1!important;text-align:left!important}.prehome-brand__copy h1{font-size:1.28rem!important;line-height:1.08!important}
+  .prehome-brand__pillars{grid-column:1!important;grid-row:2!important;grid-template-columns:1fr 1fr!important;gap:5px!important;padding:0!important;border:0!important}
+  .prehome-pillar{min-height:47px!important;align-content:center!important;justify-items:start!important;gap:2px!important;padding:5px 6px!important;text-align:left!important;background:rgba(7,24,39,.52)!important;border:1px solid rgba(84,151,187,.12)!important;border-radius:7px!important}.prehome-pillar+.prehome-pillar:before{display:none!important}.prehome-pillar>span{width:18px!important;height:18px!important}.prehome-pillar>span svg{width:15px!important;height:15px!important}.prehome-pillar strong{font-size:.44rem!important}
+  .prehome-brand__hologram{grid-column:2!important;grid-row:2!important;width:100%!important;min-height:116px!important;margin:0!important}.prehome-brand__heart{width:68%!important;max-height:132px!important}.prehome-brand__journey{grid-column:1/-1!important;grid-row:3!important;justify-items:start!important;margin:0!important;text-align:left!important}.prehome-brand__journey-kicker{font-size:.42rem!important}.prehome-brand__journey h2{font-size:.79rem!important}.prehome-brand__journey>p:last-child{display:none!important}.prehome-brand__footer{display:none!important}
+  .prehome-access{min-height:auto!important;padding:14px 12px 24px!important}
+  .prehome-card,.prehome-card--register{width:min(100%,600px)!important;padding:19px 16px!important;border-radius:12px!important}
+  .prehome-card__header{margin-bottom:15px!important}.prehome-card__header h2{font-size:1.55rem!important}.prehome-card__header>p:last-child{font-size:.72rem!important}.login-formulario{gap:12px!important}.login-campo input,.login-campo select{min-height:48px!important;font-size:.82rem!important}.prehome-social{grid-template-columns:repeat(2,minmax(0,1fr))!important}.prehome-legal{padding-top:10px!important}
+  .prehome--fullscreen{height:auto!important;max-height:none!important;overflow:visible!important}.prehome--fullscreen>.prehome-brand{height:auto!important;min-height:330px!important}.prehome--fullscreen>.prehome-access{height:auto!important;min-height:auto!important}.prehome--fullscreen .prehome-card--login{max-height:none!important;overflow:visible!important}
+}
+
+@media(max-width:520px){
+  .prehome-brand{min-height:306px!important;padding:16px 15px 18px!important}.prehome-brand__content{padding-top:12px!important}.prehome-brand__copy h1{font-size:1.18rem!important}.prehome-brand__hologram{min-height:102px!important}.prehome-brand__heart{max-height:116px!important}.prehome-card,.prehome-card--register{padding:18px 15px!important}.prehome-card__header h2{font-size:1.42rem!important}.login-campo input,.login-campo select{min-height:46px!important}.login-formulario__entrar,.prehome-primary{min-height:45px!important}.prehome-social__button{min-height:40px!important}
+}
+
+@media(prefers-reduced-motion:reduce){.prehome-brand__heart{animation:none!important}}

@@ -10,10 +10,10 @@ const limitePrecacheJs = 100 * 1024;
 // inicial. Elas continuam funcionando normalmente e entram no runtime cache
 // após o primeiro uso, sem retirar qualquer rota ou funcionalidade do produto.
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade)-[^/]*\.js$/;
-// A tela de entrada depende de backend/rede por definição (senha e provedores
-// externos). Não há ganho em precacheá-la; JS/CSS continuam carregando
-// normalmente e entram no runtime cache após o primeiro acesso online.
-const loginSomenteOnline = /(?:^|\/)Entrar-[^/]*\.(?:js|css)$/;
+// Login, cadastro e recuperação de acesso dependem de backend/rede por
+// definição. Mantemos o identificador histórico do contrato de CI e tornamos
+// cada chunk explícito para que esse comportamento seja auditável no código.
+const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|login-[^/]*|SolicitarAcesso-[^/]*|EsqueciSenha-[^/]*|RedefinirSenha-[^/]*)\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [

@@ -43,11 +43,11 @@ EXPECTED_APP_ROUTES = {
 EXPECTED_NAV_ROUTES = {
     "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
     "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras", "/emergencia",
-    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
+    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/caixa-de-email", "/cursos",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas", "/trilhas/timeline",
-    "/usuarios-online", "/minha-conta", "/assinatura", "/admin", "/fila-telediagnostico",
+    "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico",
     "/sincronizacao", "/admin/usuarios", "/tour",
 }
 

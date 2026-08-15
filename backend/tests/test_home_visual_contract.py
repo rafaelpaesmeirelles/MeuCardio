@@ -15,48 +15,72 @@ def test_anonymous_root_enters_canonical_login_not_legacy_marketing_landing():
     assert '<Route path="/" element={<Produto />} />' not in app
 
 
-def test_authenticated_home_is_full_panel_with_displacement_and_fronts():
+def test_authenticated_home_matches_reference_board_structure():
     panel = _read("pages/PainelClinicalOS.tsx")
-    css = _read("styles/clinical-home-mobile-final.css")
+    final_css = _read("styles/clinical-reference-board-final.css")
+    main = _read("main.tsx")
 
     for token in (
+        'ccc-reference-board',
         'className="ccc-command"',
-        'className="ccc-actions"',
-        'className="ccc-mobile-summary"',
-        'className="ccc-recent"',
-        'className="ccc-updates"',
+        'ccc-actions-section',
+        'ccc-reference-summary',
+        'aria-label="Próximo Deslocamento"',
+        'ccc-reference-commute__map',
+        '<MapaDeslocamento',
+        'ccc-reference-updates',
+        'ccc-module-directory',
         'aria-label="CorVIA Intelligence"',
         'aria-label="Assistente Pessoal"',
-        'ccc-home-fronts',
-        'Clínica & Decisão',
-        'Estudo & Aprendizagem',
-        'Trabalho & Assistência',
-        'Tudo com Tudo',
-        'ccc-mobile-commute',
-        '<MapaDeslocamento',
-        '"/agenda/mobility/commute-appointment"',
+        'ccc-reference-trust',
     ):
         assert token in panel
 
-    assert '.ccc-mobile-commute {' in css
-    assert 'display: grid;' in css
-    assert '.ccc-home--board .ccc-updates-section { display: block !important; }' in css
+    for title in (
+        "Clínica & Decisão",
+        "Estudo & Aprendizagem",
+        "Trabalho & Assistência",
+        "Ferramentas & Produtividade",
+        "Rede & Conectividade",
+        "Administração & Conta",
+    ):
+        assert title in panel
+
+    assert '.ccc-reference-commute' in final_css
+    assert '.ccc-module-directory__grid' in final_css
+    assert '.ccc-reference-summary > .ccc-reference-commute { order: 1; }' in final_css
+    assert '.ccc-reference-summary > .ccc-reference-day { order: 2; }' in final_css
+    assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 3; }' in final_css
+
+    # O override final precisa vir depois de todas as camadas históricas da Home
+    # e antes do contrato global de contraste dos formulários.
+    reference_import = 'import "./styles/clinical-reference-board-final.css";'
+    contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
+    assert reference_import in main
+    assert main.index(reference_import) < main.index(contrast_import)
 
 
-def test_mobile_home_contains_displacement_between_day_and_assistant():
+def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
     panel = _read("pages/PainelClinicalOS.tsx")
-    start = panel.index('className="ccc-mobile-summary"')
-    end = panel.index('className="ccc-section ccc-recent-section"')
-    mobile = panel[start:end]
+    app = _read("App.tsx")
 
-    seu_dia = mobile.index("Seu dia")
-    deslocamento = mobile.index("Deslocamento")
-    assistente = mobile.index("Assistente")
-    atualizacoes = mobile.index("Atualizações")
-    assert seu_dia < deslocamento < assistente < atualizacoes
+    routes = (
+        "/doencas", "/medicamentos", "/exames", "/calculadoras", "/emergencia",
+        "/checklists", "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
+        "/avaliacao-preoperatoria", "/evidencias", "/estudos", "/diretrizes",
+        "/trilhas/timeline", "/trilhas", "/casos-clinicos", "/biblioteca", "/galeria",
+        "/cursos", "/apresentacao", "/round", "/receituario", "/documentos",
+        "/material-paciente", "/agenda", "/corvia-mail", "/caixa-de-email",
+        "/telediagnostico", "/indicadores", "/exportar", "/favoritos", "/busca",
+        "/assistente", "/usuarios-online", "/sincronizacao", "/minha-conta", "/assinatura",
+        "/tour", "/admin", "/admin/usuarios", "/fila-telediagnostico",
+    )
+    for route in routes:
+        assert f'to: "{route}"' in panel
+        assert f'path="{route.lstrip("/")}' in app or f'path="{route}"' in app
 
 
-def test_home_full_functions_are_not_removed_again():
+def test_home_full_mobility_functions_are_not_removed_during_visual_rebuild():
     panel = _read("pages/PainelClinicalOS.tsx")
     for token in (
         'mobilidade.automatic_foreground_refresh',
@@ -66,5 +90,40 @@ def test_home_full_functions_are_not_removed_again():
         'rota.distance_meters',
         'rota.traffic_delay_seconds',
         'rota.duration_seconds + destino.arrival_buffer_minutes * 60',
+        '"/agenda/mobility/commute-appointment"',
     ):
         assert token in panel
+
+
+def test_navigation_matches_reference_six_area_information_architecture():
+    desktop = _read("components/ClinicalDesktopNav.tsx")
+    mobile = _read("components/ClinicalMobileNav.tsx")
+    nav_css = _read("styles/clinical-navigation-reference-final.css")
+
+    for source in (desktop, mobile):
+        for title in (
+            "Clínica & Decisão",
+            "Estudos & Educação",
+            "Trabalho & Assistência",
+            "Ferramentas & Produtividade",
+            "Rede & Conectividade",
+        ):
+            assert title in source
+        for route in (
+            "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
+            "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
+            "/indicadores", "/galeria", "/cursos", "/apresentacao",
+            "/usuarios-online", "/sincronizacao", "/exportar", "/assistente",
+            "/favoritos", "/minha-conta", "/assinatura", "/tour",
+        ):
+            assert route in source
+
+    assert "Administração" in desktop
+    assert "Administração & Conta" in mobile
+    assert ".ccc-nav--reference" in nav_css
+    assert ".cc-mobile-more__grid" in nav_css
+
+    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    positions = [mobile.index(f"<span>{label}</span>") for label in labels]
+    assert positions == sorted(positions)
+    assert len(positions) == 5
