@@ -1,0 +1,104 @@
+/* Ajustes finais de fidelidade contra a prancha canônica aprovada.
+   Esta folha fecha conflitos residuais das camadas históricas sem remover conteúdo. */
+
+@media (min-width: 901px) {
+  .ccc-reference-board .ccc-reference-commute {
+    grid-template-areas: "head head" "details map" !important;
+    grid-template-rows: auto minmax(0, 1fr) !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute > header {
+    grid-area: head !important;
+    display: flex !important;
+    min-width: 0;
+    align-items: center !important;
+    justify-content: space-between;
+    padding: 0 0 6px;
+    border-bottom: 1px solid rgba(112, 173, 198, .08);
+  }
+
+  .ccc-reference-board .ccc-reference-commute > header > span:first-child {
+    display: block !important;
+    min-width: 0;
+  }
+
+  .ccc-reference-board .ccc-reference-commute > header small {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .ccc-reference-board .ccc-reference-commute > header strong,
+  .ccc-reference-board .ccc-reference-commute > header p,
+  .ccc-reference-board .ccc-reference-commute > header .ccc-mobile-commute__icon {
+    display: none !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__map {
+    min-height: 100% !important;
+    max-height: none !important;
+    height: 100% !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__map > * {
+    min-height: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  /* A prancha móvel exige as oito ações rápidas imediatamente após a busca. */
+  .ccc-reference-board .ccc-actions-section {
+    display: block !important;
+  }
+
+  .ccc-reference-board .ccc-actions-section .ccc-actions {
+    display: grid !important;
+  }
+
+  /* O resumo do Assistente Pessoal pertence à experiência desktop; no mobile
+     a prancha usa Ações rápidas → Próximo deslocamento → Seu dia → Atualizações. */
+  .ccc-reference-board .ccc-reference-summary > .ccc-reference-assistant-summary,
+  .ccc-reference-board .ccc-reference-summary > .ccc-mobile-summary__card--assistant {
+    display: none !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__metrics > span {
+    padding: 5px 4px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .ccc-reference-board .ccc-action {
+    min-height: 68px !important;
+    padding-block: 6px !important;
+  }
+
+  .ccc-reference-board .ccc-action__icon {
+    width: 31px !important;
+    height: 31px !important;
+  }
+
+  .ccc-reference-board .ccc-action strong {
+    font-size: .5rem !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__map,
+  .ccc-reference-board .ccc-reference-commute__map > * {
+    min-height: 150px !important;
+    height: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__metrics small {
+    font-size: .38rem !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__metrics strong {
+    font-size: .52rem !important;
+  }
+}
