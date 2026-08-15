@@ -9,11 +9,16 @@ def read(relative: str) -> str:
     return (FRONTEND / relative).read_text(encoding="utf-8")
 
 
-def test_prehome_approved_visual_contract_is_loaded_last():
+def test_prehome_approved_visual_contract_precedes_global_contrast_guard():
     main = read("main.tsx")
-    import_line = 'import "./styles/prehome-approved-auth-flow.css";'
-    assert import_line in main
-    assert main.index(import_line) > main.index('import "./styles/clinical-form-control-contrast.css";')
+    prehome = 'import "./styles/prehome-approved-auth-flow.css";'
+    contrast = 'import "./styles/clinical-form-control-contrast.css";'
+    assert prehome in main
+    assert contrast in main
+    # O contrato global de contraste é intencionalmente a última folha CSS.
+    # O tema aprovado controla composição/paleta; o guard final protege a
+    # legibilidade de inputs/autofill em toda a aplicação.
+    assert main.index(prehome) < main.index(contrast)
 
 
 def test_prehome_brand_matches_approved_corvia_identity():
