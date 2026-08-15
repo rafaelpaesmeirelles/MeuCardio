@@ -4,6 +4,7 @@ import Icone from "../components/Icone";
 import PreHomeBrand from "../components/PreHomeBrand";
 import { useAuth } from "../lib/auth";
 import "../styles/login.css";
+import "../styles/login-fullscreen-social.css";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
