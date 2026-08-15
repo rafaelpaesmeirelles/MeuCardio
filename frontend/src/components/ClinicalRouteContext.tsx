@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 /**
- * Classifica intenção/contexto visual, não estrutura de banco de dados.
+ * Classifica intenção/contexto sem autorizar linguagens visuais paralelas.
+ * Toda rota autenticada permanece subordinada à prancha canônica do Clinical OS.
  * A ordem importa apenas quando um prefixo é subconjunto de outro.
  */
 const ROUTES: Array<[string, string]> = [
@@ -30,7 +31,7 @@ const ROUTES: Array<[string, string]> = [
   ["/cursos", "conhecimento"],
   ["/favoritos", "conhecimento"],
 
-  // Ferramentas de decisão/consulta: workspace amplo, sem rail decorativo
+  // Ferramentas de decisão/consulta
   ["/calculadoras", "ferramentas"],
   ["/checklists", "ferramentas"],
   ["/fluxogramas", "ferramentas"],
@@ -42,7 +43,7 @@ const ROUTES: Array<[string, string]> = [
   ["/exportar", "ferramentas"],
   ["/busca", "ferramentas"],
 
-  // Emergência tem identidade e shell próprios; não herda regras genéricas.
+  // Emergência preserva semântica clínica e acento de risco, mas usa o mesmo shell canônico.
   ["/emergencia", "emergencia"],
 
   // Comunicação/rede e trabalho remoto
@@ -58,7 +59,7 @@ const ROUTES: Array<[string, string]> = [
   ["/indicadores", "conta"],
   ["/admin", "admin"],
 
-  // Políticas institucionais autenticadas não precisam de Intelligence.
+  // Políticas institucionais autenticadas também permanecem no canvas canônico.
   ["/privacidade", "geral"],
   ["/termos", "geral"],
 ];
