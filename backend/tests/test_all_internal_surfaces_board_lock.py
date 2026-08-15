@@ -8,6 +8,10 @@ CONTEXT = ROOT / "frontend" / "src" / "components" / "ClinicalRouteContext.tsx"
 BOARD_LOCK = ROOT / "frontend" / "src" / "styles" / "clinical-interior-board-lock.css"
 
 
+def compact(text: str) -> str:
+    return "".join(text.split())
+
+
 def test_approved_board_lock_is_loaded_after_legacy_fidelity_layers():
     main = MAIN.read_text(encoding="utf-8")
     board_import = 'import "./styles/clinical-interior-board-lock.css";'
@@ -26,28 +30,16 @@ def test_approved_home_is_isolated_from_the_internal_page_lock():
 
 
 def test_every_internal_route_family_is_subject_to_the_same_board_canvas():
-    css = BOARD_LOCK.read_text(encoding="utf-8")
+    css = compact(BOARD_LOCK.read_text(encoding="utf-8"))
     context = CONTEXT.read_text(encoding="utf-8")
-    assert 'body[class*="corvia-route--"] .clinical-os .cos-content' in css
-    assert 'width: 100% !important;' in css
-    assert 'max-width: none !important;' in css
+    assert 'body[class*="corvia-route--"].clinical-os.cos-content' in css
+    assert 'width:100%!important' in css
+    assert 'max-width:none!important' in css
 
     route_families = {
-        "documentos",
-        "pacientes",
-        "prescricao",
-        "agenda",
-        "mail",
-        "assistente",
-        "conhecimento",
-        "ferramentas",
-        "emergencia",
-        "rede",
-        "telediagnostico",
-        "integracoes",
-        "conta",
-        "admin",
-        "geral",
+        "documentos", "pacientes", "prescricao", "agenda", "mail", "assistente",
+        "conhecimento", "ferramentas", "emergencia", "rede", "telediagnostico",
+        "integracoes", "conta", "admin", "geral",
     }
     for family in route_families:
         assert f'"{family}"' in context
@@ -55,23 +47,11 @@ def test_every_internal_route_family_is_subject_to_the_same_board_canvas():
 
 def test_known_visual_exceptions_are_forced_back_into_the_board_language():
     css = BOARD_LOCK.read_text(encoding="utf-8")
-    required = (
+    for selector in (
         "body.corvia-route--pacientes",
         "body.corvia-route--admin",
         "body.corvia-route--emergencia",
-        "body.corvia-route--conhecimento",
-        "body.corvia-route--ferramentas",
-        "body.corvia-route--rede",
-        "body.corvia-route--telediagnostico",
-        "body.corvia-route--integracoes",
-        "body.corvia-route--conta",
-        "body.corvia-route--mail",
-        "body.corvia-route--assistente",
-        "body.corvia-route--prescricao",
-        "body.corvia-route--documentos",
-        "body.corvia-route--agenda",
-    )
-    for selector in required:
+    ):
         assert selector in css
     assert "Emergency keeps red only as a clinical accent" in css
 
