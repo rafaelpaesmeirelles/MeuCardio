@@ -5,8 +5,9 @@ revisão profissional, KYC ou assinatura. O e-mail confirmado pelo provedor
 precisa corresponder a uma conta CorVIA existente e ativa.
 
 Google/Microsoft podem reutilizar as credenciais OAuth já existentes da Agenda
-quando não houver cliente de login dedicado. Apple e GitHub são habilitados
-somente quando suas credenciais próprias estiverem configuradas no ambiente.
+quando não houver cliente de login dedicado. Apple, Yahoo e GitHub são
+habilitados somente quando suas credenciais próprias estiverem configuradas no
+ambiente.
 """
 from __future__ import annotations
 
@@ -34,6 +35,7 @@ _STATE_COOKIE = "corvia_social_state"
 _NONCE_COOKIE = "corvia_social_nonce"
 _PROVIDER_COOKIE = "corvia_social_provider"
 _COOKIE_MAX_AGE = 10 * 60
+_SUPPORTED = {"google", "microsoft", "apple", "yahoo", "github"}
 
 _GOOGLE_AUTH = "https://accounts.google.com/o/oauth2/v2/auth"
 _GOOGLE_TOKEN = "https://oauth2.googleapis.com/token"
@@ -42,6 +44,9 @@ _MICROSOFT_USERINFO = "https://graph.microsoft.com/oidc/userinfo"
 _APPLE_AUTH = "https://appleid.apple.com/auth/authorize"
 _APPLE_TOKEN = "https://appleid.apple.com/auth/token"
 _APPLE_JWKS = "https://appleid.apple.com/auth/keys"
+_YAHOO_AUTH = "https://api.login.yahoo.com/oauth2/request_auth"
+_YAHOO_TOKEN = "https://api.login.yahoo.com/oauth2/get_token"
+_YAHOO_USERINFO = "https://api.login.yahoo.com/openid/v1/userinfo"
 _GITHUB_AUTH = "https://github.com/login/oauth/authorize"
 _GITHUB_TOKEN = "https://github.com/login/oauth/access_token"
 _GITHUB_USER = "https://api.github.com/user"
@@ -73,6 +78,8 @@ def _provider_credentials(provider: str) -> tuple[str, str]:
         return _microsoft_credentials()
     if provider == "apple":
         return _env("APPLE_SIGNIN_CLIENT_ID"), _env("APPLE_SIGNIN_KEY_ID")
+    if provider == "yahoo":
+        return _env("YAHOO_SIGNIN_CLIENT_ID"), _env("YAHOO_SIGNIN_CLIENT_SECRET")
     if provider == "github":
         return _env("GITHUB_SIGNIN_CLIENT_ID"), _env("GITHUB_SIGNIN_CLIENT_SECRET")
     return "", ""
@@ -177,6 +184,8 @@ def _auth_url(provider: str, state: str, nonce: str) -> str:
         return f"{_microsoft_authority()}/authorize?{urlencode({'client_id': client_id, 'redirect_uri': redirect_uri, 'response_type': 'code', 'response_mode': 'query', 'scope': 'openid profile email', 'state': state, 'nonce': nonce, 'prompt': 'select_account'})}"
     if provider == "apple":
         return f"{_APPLE_AUTH}?{urlencode({'client_id': client_id, 'redirect_uri': redirect_uri, 'response_type': 'code', 'response_mode': 'form_post', 'scope': 'name email', 'state': state, 'nonce': nonce})}"
+    if provider == "yahoo":
+        return f"{_YAHOO_AUTH}?{urlencode({'client_id': client_id, 'redirect_uri': redirect_uri, 'response_type': 'code', 'scope': 'openid profile email', 'state': state, 'nonce': nonce})}"
     if provider == "github":
         return f"{_GITHUB_AUTH}?{urlencode({'client_id': client_id, 'redirect_uri': redirect_uri, 'scope': 'read:user user:email', 'state': state, 'allow_signup': 'false'})}"
     raise HTTPException(status_code=404, detail="Provedor de login não suportado.")
@@ -199,6 +208,9 @@ async def _exchange(provider: str, code: str) -> dict[str, Any]:
     elif provider == "apple":
         payload.update({"client_secret": _apple_client_secret(), "grant_type": "authorization_code"})
         url = _APPLE_TOKEN
+    elif provider == "yahoo":
+        payload.update({"client_secret": client_secret, "grant_type": "authorization_code"})
+        url = _YAHOO_TOKEN
     elif provider == "github":
         payload.update({"client_secret": client_secret})
         url = _GITHUB_TOKEN
@@ -257,6 +269,13 @@ async def _identity(provider: str, token: dict[str, Any], nonce: str) -> tuple[s
                 if response.status_code >= 400 or not email:
                     raise HTTPException(status_code=400, detail="A Microsoft não devolveu um e-mail utilizável.")
                 return email, str(body.get("sub") or email)
+            if provider == "yahoo":
+                response = await client.get(_YAHOO_USERINFO)
+                body = response.json() if response.status_code < 400 else {}
+                email = str(body.get("email") or body.get("preferred_username") or "")
+                if response.status_code >= 400 or not email or body.get("email_verified") is not True:
+                    raise HTTPException(status_code=400, detail="O Yahoo não confirmou o e-mail desta conta.")
+                return email, str(body.get("sub") or email)
             if provider == "github":
                 user_response = await client.get(_GITHUB_USER)
                 email_response = await client.get(_GITHUB_EMAILS)
@@ -280,6 +299,7 @@ def providers() -> dict[str, list[dict[str, Any]]]:
         ("google", "Google"),
         ("microsoft", "Microsoft"),
         ("apple", "Apple"),
+        ("yahoo", "Yahoo"),
         ("github", "GitHub"),
     ]
     return {"providers": [{"id": key, "label": label, "enabled": _configured(key)} for key, label in catalog]}
@@ -288,7 +308,7 @@ def providers() -> dict[str, list[dict[str, Any]]]:
 @router.get("/{provider}/start")
 def start(provider: str) -> RedirectResponse:
     provider = provider.lower().strip()
-    if provider not in {"google", "microsoft", "apple", "github"}:
+    if provider not in _SUPPORTED:
         raise HTTPException(status_code=404, detail="Provedor de login não suportado.")
     if not _configured(provider):
         raise HTTPException(status_code=503, detail="Este provedor ainda não está configurado no CorVIA.")
@@ -302,7 +322,7 @@ def start(provider: str) -> RedirectResponse:
 @router.api_route("/{provider}/callback", methods=["GET", "POST"])
 async def callback(provider: str, request: Request, db: Session = Depends(get_db)) -> RedirectResponse:
     provider = provider.lower().strip()
-    if provider not in {"google", "microsoft", "apple", "github"}:
+    if provider not in _SUPPORTED:
         return _login_error("unsupported_provider", provider)
     if request.method == "POST":
         form = await request.form()
