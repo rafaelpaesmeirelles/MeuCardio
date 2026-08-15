@@ -10,6 +10,10 @@ def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def compact(value: str) -> str:
+    return "".join(value.split())
+
+
 def test_social_login_router_is_publicly_registered():
     main = read(BACKEND / "main.py")
     assert "social_login" in main
@@ -70,15 +74,25 @@ def test_apple_uses_signed_client_secret_and_verified_identity_token():
 
 def test_login_screen_uses_dynamic_viewport_and_social_buttons():
     login = read(FRONTEND / "pages" / "Entrar.tsx")
-    css = read(FRONTEND / "styles" / "login-fullscreen-social.css")
+    css = compact(read(FRONTEND / "styles" / "login-fullscreen-social.css"))
     assert 'prehome--login prehome--fullscreen' in login
     assert 'login-fullscreen-social.css' in login
     assert '/auth/social/providers' in login
     assert '/auth/social/${provider}/start' in login
     for provider in ("google", "microsoft", "apple", "yahoo", "github"):
         assert provider in login
-    assert "height: 100dvh" in css
-    assert "min-height: 100svh" in css
-    assert "@media (max-width: 820px)" in css
+    assert "height:100dvh" in css
+    assert "min-height:100svh" in css
+    assert "@media(max-width:820px)" in css
     assert ".prehome-social__button" in css
     assert ".prehome-social__mark--yahoo" in css
+
+
+def test_login_route_stays_online_first_instead_of_inflating_pwa_preload():
+    vite = read(ROOT / "frontend" / "vite.config.ts")
+    assert "loginSomenteOnline" in vite
+    assert "Entrar-[^/]*" in vite
+    assert "(?:js|css)" in vite
+    assert "if (loginSomenteOnline.test(entry.url)) return false" in vite
+    assert 'urlPattern: /\\/assets\\/.*\\.(?:js|css)$/' in vite
+    assert 'handler: "NetworkFirst"' in vite
