@@ -116,10 +116,11 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     home = (ROOT / "frontend/src/pages/PainelClinicalOS.tsx").read_text(encoding="utf-8")
     assistant = (ROOT / "frontend/src/components/PersonalAssistantPanel.tsx").read_text(encoding="utf-8")
     mobile_nav = (ROOT / "frontend/src/components/ClinicalMobileNav.tsx").read_text(encoding="utf-8")
-    css = (ROOT / "frontend/src/styles/clinical-home-mobile-final.css").read_text(encoding="utf-8")
+    css = (ROOT / "frontend/src/styles/clinical-reference-board-final.css").read_text(encoding="utf-8")
     endpoint = (ROOT / "backend/app/api/agenda_mobility_targeted.py").read_text(encoding="utf-8")
 
-    # O mesmo appointment_id controla destino e resposta, no Home e no Assistente.
+    # O mesmo appointment_id continua controlando destino e resposta nesta fase visual.
+    # O PR funcional de next-target é separado para não mascarar regressão visual com mudança de API.
     assert 'item.appointment_id === proximo.id' in home
     assert 'resultado.destination?.appointment_id !== proximo.id' in home
     assert 'item.appointment_id === proximo.id' in assistant
@@ -153,30 +154,31 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert '"latitude"' not in audit_block
     assert '"longitude"' not in audit_block
 
-    # Mini mapa é contido no card; a lista detalhada fica fora do preview compacto.
+    # O mapa agora possui área obrigatória no Próximo Deslocamento inclusive mobile.
     assert "<MapaDeslocamento" in home
-    assert ".ccc-mobile-commute__map" in css
-    assert "overflow: hidden" in css
-    assert ".ccc-mobile-commute__map .deslocamento-rotas" in css
+    assert "ccc-reference-commute__map" in home
+    assert ".ccc-reference-commute__map" in css
+    assert 'grid-template-areas: "head" "map" "details"' in css
+    assert "min-height: 185px" in css
 
-    # Ordem mobile canônica e bottom nav imutável.
-    seu_dia = home.index("<small>Seu dia</small>")
-    deslocamento = home.index("<small>Deslocamento</small>", seu_dia)
-    assistente = home.index("<small>Assistente</small>", deslocamento)
-    atualizacoes = home.index("<small>Atualizações</small>", assistente)
-    assert seu_dia < deslocamento < assistente < atualizacoes
+    # Ordem visual mobile canônica da prancha: Deslocamento -> Seu Dia -> Atualizações.
+    assert '.ccc-reference-summary > .ccc-reference-commute { order: 1; }' in css
+    assert '.ccc-reference-summary > .ccc-reference-day { order: 2; }' in css
+    assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 3; }' in css
 
+    # Bottom bar imutável.
     labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
     posicoes = [mobile_nav.index(f"<span>{label}</span>") for label in labels]
     assert posicoes == sorted(posicoes)
     assert len(posicoes) == 5
 
-    # A Home ganhou densidade sem apagar as três frentes nem Tudo com Tudo.
-    assert "Clínica & Decisão" in home
-    assert "Estudo & Aprendizagem" in home
-    assert "Trabalho & Assistência" in home
-    assert "Tudo com Tudo" in home
-    assert ".ccc-home--board .ccc-updates-section { display: block !important; }" in css
+    # A Home ganhou densidade sem apagar macroáreas nem Tudo com Tudo.
+    for token in (
+        "Clínica & Decisão", "Estudo & Aprendizagem", "Trabalho & Assistência",
+        "Ferramentas & Produtividade", "Rede & Conectividade", "Administração & Conta",
+        "Integração Tudo com Tudo",
+    ):
+        assert token in home
 
 
 def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
@@ -185,15 +187,17 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
 
     for fonte in (desktop, mobile):
         assert "Clínica & Decisão" in fonte
-        assert "Estudo & Aprendizagem" in fonte
         assert "Trabalho & Assistência" in fonte
+        assert "Ferramentas & Produtividade" in fonte
+        assert "Rede & Conectividade" in fonte
         for rota in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
             "/indicadores", "/galeria", "/cursos", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar",
+            "/assistente", "/favoritos", "/minha-conta", "/assinatura", "/tour",
         ):
             assert rota in fonte
 
-    for global_route in ("/assistente", "/favoritos", "/minha-conta", "/assinatura", "/tour"):
-        assert global_route in desktop and global_route in mobile
+    assert "Estudos & Educação" in desktop and "Estudos & Educação" in mobile
+    assert "Administração" in desktop and "Administração & Conta" in mobile
