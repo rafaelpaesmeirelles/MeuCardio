@@ -115,6 +115,14 @@
   padding-bottom: 1px;
 }
 
+.prehome-social__mark--yahoo {
+  color: #fff;
+  background: #6001d2;
+  box-shadow: 0 0 12px rgba(96,1,210,.22);
+  font-size: .58rem;
+  letter-spacing: -.04em;
+}
+
 .prehome-social__mark--github {
   color: #f6f8fa;
   background: #24292f;
