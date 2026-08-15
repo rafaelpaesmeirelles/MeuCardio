@@ -157,16 +157,20 @@ export default function MapaDeslocamento({
   const urlNavegacao = destinoValido
     ? `https://www.google.com/maps/dir/?api=1${origem ? `&origin=${origem.latitude},${origem.longitude}` : ""}&destination=${destino.latitude},${destino.longitude}&travelmode=driving&dir_action=navigate`
     : null;
-  const deveUsarGoogleMap = provider === "Google Maps";
+  const deveUsarGoogleMap = provider === "Google Maps" || provider === "google_maps";
+  const temGeometria = geometrias.some((rota) => rota.length > 1);
 
   useEffect(() => {
-    if (!deveUsarGoogleMap || !googleMapsApiKey || !mapaRef.current || geometrias.every((rota) => rota.length < 2)) return;
+    if (!deveUsarGoogleMap || !googleMapsApiKey || !mapaRef.current || !destinoValido) return;
     let descartado = false;
     let sobreposicoes: any[] = [];
     setEstadoMapa("carregando");
     carregarGoogleMaps(googleMapsApiKey).then((google) => {
-      if (descartado || !mapaRef.current) return;
+      if (descartado || !mapaRef.current || destino.latitude == null || destino.longitude == null) return;
+      const destinoLatLng = { lat: destino.latitude, lng: destino.longitude };
       const map = new google.maps.Map(mapaRef.current, {
+        center: destinoLatLng,
+        zoom: 14,
         disableDefaultUI: true,
         zoomControl: true,
         gestureHandling: "cooperative",
@@ -200,7 +204,7 @@ export default function MapaDeslocamento({
         polyline.addListener("click", () => setSelecionada(indice));
         sobreposicoes.push(polyline);
       });
-      (rotaAtual.traffic_segments || []).forEach((trecho) => {
+      (rotaAtual?.traffic_segments || []).forEach((trecho) => {
         const ate = trecho.end_index == null ? geometrias[indiceSelecionado].length : trecho.end_index + 1;
         const pontos = geometrias[indiceSelecionado].slice(trecho.start_index, ate);
         if (pontos.length < 2) return;
@@ -213,13 +217,18 @@ export default function MapaDeslocamento({
           zIndex: 30,
         }));
       });
-      const principal = geometrias[indiceSelecionado];
+      const principal = geometrias[indiceSelecionado] || [];
       if (principal.length) {
-        sobreposicoes.push(new google.maps.Marker({ map, position: { lat: principal[0][0], lng: principal[0][1] }, title: "Sua localização" }));
-        const ultimo = principal[principal.length - 1];
-        sobreposicoes.push(new google.maps.Marker({ map, position: { lat: ultimo[0], lng: ultimo[1] }, title: destino.name }));
+        const primeiro = principal[0];
+        sobreposicoes.push(new google.maps.Marker({ map, position: { lat: primeiro[0], lng: primeiro[1] }, title: "Sua localização" }));
+      } else if (origem) {
+        limites.extend({ lat: origem.latitude, lng: origem.longitude });
+        sobreposicoes.push(new google.maps.Marker({ map, position: { lat: origem.latitude, lng: origem.longitude }, title: "Sua localização" }));
       }
-      map.fitBounds(limites, 42);
+      limites.extend(destinoLatLng);
+      sobreposicoes.push(new google.maps.Marker({ map, position: destinoLatLng, title: destino.name }));
+      if (temGeometria || origem) map.fitBounds(limites, 42);
+      else { map.setCenter(destinoLatLng); map.setZoom(14); }
       setEstadoMapa("pronto");
     }).catch(() => { if (!descartado) setEstadoMapa("erro"); });
     return () => {
@@ -227,16 +236,16 @@ export default function MapaDeslocamento({
       sobreposicoes.forEach((item) => item.setMap?.(null));
       sobreposicoes = [];
     };
-  }, [deveUsarGoogleMap, destino.name, geometrias, googleMapsApiKey, indiceSelecionado, rotaAtual]);
+  }, [deveUsarGoogleMap, destino.latitude, destino.longitude, destino.name, destinoValido, geometrias, googleMapsApiKey, indiceSelecionado, origem, rotaAtual, temGeometria]);
 
   return (
     <div className="deslocamento-painel">
-      <div className="deslocamento-mapa" aria-label={`Mapa do percurso até ${destino.name}`}>
-        {deveUsarGoogleMap && googleMapsApiKey && geometrias.some((rota) => rota.length > 1) ? (
+      <div className="deslocamento-mapa" aria-label={temGeometria ? `Mapa do percurso até ${destino.name}` : `Mapa do destino ${destino.name}`}>
+        {deveUsarGoogleMap && googleMapsApiKey && destinoValido ? (
           <>
             <div ref={mapaRef} className="deslocamento-mapa__google" />
-            {estadoMapa === "carregando" && <div className="deslocamento-mapa__status">Carregando mapa e trânsito…</div>}
-            {estadoMapa === "erro" && <div className="deslocamento-mapa__status">O mapa não pôde ser carregado. As rotas continuam disponíveis ao lado.</div>}
+            {estadoMapa === "carregando" && <div className="deslocamento-mapa__status">Carregando mapa{temGeometria ? " e trânsito" : " do destino"}…</div>}
+            {estadoMapa === "erro" && <div className="deslocamento-mapa__status">O mapa não pôde ser carregado agora.</div>}
           </>
         ) : !deveUsarGoogleMap && pontosAtuais.length > 1 ? (
           <svg viewBox="0 0 800 340" role="img" aria-labelledby="mapa-deslocamento-titulo mapa-deslocamento-desc">
@@ -259,7 +268,7 @@ export default function MapaDeslocamento({
             ))}
             <path d={caminho(pontosAtuais)} fill="none" stroke="rgba(0,16,23,.68)" strokeWidth="13" strokeLinecap="round" strokeLinejoin="round" />
             <path d={caminho(pontosAtuais)} fill="none" stroke={CORES_ROTAS[indiceSelecionado] || CORES_ROTAS[0]} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-            {(rotaAtual.traffic_segments || []).map((trecho, indice) => {
+            {(rotaAtual?.traffic_segments || []).map((trecho, indice) => {
               const ate = trecho.end_index == null ? pontosAtuais.length : trecho.end_index + 1;
               const pontos = pontosAtuais.slice(trecho.start_index, ate);
               return pontos.length > 1 ? <path key={`trafego-${indice}`} d={caminho(pontos)} fill="none" stroke={corTrecho(trecho.speed)} strokeWidth="8" strokeLinecap="round" /> : null;
@@ -268,20 +277,20 @@ export default function MapaDeslocamento({
             {fim && <g transform={`translate(${fim[0]} ${fim[1]})`} filter="url(#mapa-sombra)"><path d="M0 15C-3 10-12 0-12-9A12 12 0 1 1 12-9C12 0 3 10 0 15Z" fill="#fb7185" /><circle cy="-9" r="4" fill="white" /></g>}
           </svg>
         ) : (
-          <div className="deslocamento-mapa__indisponivel"><Icone nome="rota" /><span>{deveUsarGoogleMap ? "Configure a chave pública do Google Maps para exibir o mapa neste painel." : "Traçado cartográfico indisponível nesta atualização."}</span>{urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Ver percurso no Google Maps</a>}</div>
+          <div className="deslocamento-mapa__indisponivel"><Icone nome="rota" /><span>{deveUsarGoogleMap ? "Configure a chave pública do Google Maps para exibir o mapa neste painel." : destinoValido ? "Mapa interativo indisponível para o provedor atual." : "Destino ainda sem coordenadas para exibir no mapa."}</span>{urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Ver destino no Google Maps</a>}</div>
         )}
         <div className="deslocamento-mapa__legenda">
           <span><i className="livre" />Livre</span><span><i className="lento" />Lento</span><span><i className="parado" />Congestionado</span>
         </div>
         <div className="deslocamento-mapa__fonte">
-          <span>{provider || "Rotas"}</span>
+          <span>{provider || "Mapa do destino"}</span>
           {updatedAt && <time dateTime={updatedAt}>Atualizado às {new Date(updatedAt).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</time>}
         </div>
       </div>
 
       <div className="deslocamento-rotas" aria-label="Comparação das rotas">
         <div className="deslocamento-rotas__cabecalho">
-          <div><strong>{rotas.length} {rotas.length === 1 ? "rota disponível" : "rotas disponíveis"}</strong><span>Selecione para comparar no mapa</span></div>
+          <div><strong>{rotas.length} {rotas.length === 1 ? "rota disponível" : "rotas disponíveis"}</strong><span>{rotas.length ? "Selecione para comparar no mapa" : "Use sua localização para calcular o percurso"}</span></div>
           {urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Abrir navegação <Icone nome="seta" /></a>}
         </div>
         <div className="deslocamento-rotas__lista">

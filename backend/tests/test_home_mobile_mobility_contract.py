@@ -119,14 +119,15 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     css = (ROOT / "frontend/src/styles/clinical-reference-board-final.css").read_text(encoding="utf-8")
     endpoint = (ROOT / "backend/app/api/agenda_mobility_targeted.py").read_text(encoding="utf-8")
 
-    # O mesmo appointment_id continua controlando destino e resposta nesta fase visual.
-    # O PR funcional de next-target é separado para não mascarar regressão visual com mudança de API.
-    assert 'item.appointment_id === proximo.id' in home
-    assert 'resultado.destination?.appointment_id !== proximo.id' in home
-    assert 'item.appointment_id === proximo.id' in assistant
-    assert 'resultado.destination?.appointment_id !== proximo.id' in assistant
-    assert '"/agenda/mobility/commute-appointment"' in home
-    assert '"/agenda/mobility/commute-appointment"' in assistant
+    # Home e Assistente usam o mesmo alvo canônico e falham fechado pelo target_key exato.
+    for source in (home, assistant):
+        assert '"/agenda/mobility/prepare-next-target"' in source
+        assert '"/agenda/mobility/next-target"' in source
+        assert '"/agenda/mobility/commute-target"' in source
+        assert "target_key" in source
+        assert "destination?.target_key" in source
+    assert 'resultado.destination?.target_key !== targetKey' in home
+    assert 'resultado.destination?.target_key !== targetKey' in assistant
 
     # Disabled não deve alcançar geolocation; auto-refresh exige preferência e foreground.
     inicio_funcao = home.index("const calcularDeslocamento")
@@ -146,7 +147,8 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert "rota.distance_meters" in home
     assert "rota.traffic_delay_seconds" in home
     assert "rota.duration_seconds + destino.arrival_buffer_minutes * 60" in home
-    assert 'find((item) => item.source === "appointment"' in home
+    assert "const destino = proximoAlvo" in home
+    assert "const targetKey = destino?.target_key || null" in home
 
     # Coordenadas só entram na chamada ao provider; auditoria guarda provider/status.
     audit_start = endpoint.index("_audit(")

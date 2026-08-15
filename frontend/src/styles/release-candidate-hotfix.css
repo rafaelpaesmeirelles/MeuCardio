@@ -1,0 +1,65 @@
+/* Release-candidate hardening after PR #86 review.
+   Keep this layer narrow: it fixes four concrete regressions without changing the approved visual language. */
+
+@media (min-width: 901px) {
+  /* Desktop already has the canonical topbar search. Remove the duplicate Home search
+     from layout and focus order instead of visually clipping focusable controls. */
+  .ccc-reference-board .ccc-home__main > .ccc-command,
+  .ccc-reference-board .ccc-home__main > .ccc-examples {
+    display: none !important;
+  }
+
+  /* The compact Home map is a preview, not the full route picker. Keeping the route
+     chooser inside a fixed-height card squeezed/clipped both the map and alternatives. */
+  .ccc-reference-commute__map .deslocamento-rotas,
+  .ccc-reference-commute__map .mapa-deslocamento__rotas,
+  .ccc-reference-commute__map [class*="deslocamento-rotas"] {
+    display: none !important;
+  }
+
+  .ccc-reference-commute__map,
+  .ccc-reference-commute__map > * {
+    min-height: 238px !important;
+    height: 238px !important;
+    max-height: 238px !important;
+    overflow: hidden !important;
+  }
+
+  /* The line previously rendered “Em N min” using journey duration, not time until
+     recommended departure. Hide that misleading countdown; “Saída às” remains the
+     authoritative recommendation and travel duration is already shown in metrics. */
+  .ccc-reference-commute__route > span:first-child > p {
+    display: none !important;
+  }
+}
+
+/* The desktop authentication grid used hard minima totalling 940px from 821px upward.
+   Allow both tracks to shrink safely in the narrow-desktop/tablet-landscape interval. */
+@media (min-width: 821px) and (max-width: 939px) {
+  .login.prehome {
+    grid-template-columns: minmax(0, 39%) minmax(0, 61%) !important;
+    overflow-x: hidden !important;
+  }
+
+  .prehome-brand,
+  .prehome-access {
+    min-width: 0 !important;
+  }
+
+  .prehome-brand {
+    padding-left: clamp(20px, 3vw, 30px) !important;
+    padding-right: clamp(20px, 3vw, 30px) !important;
+  }
+
+  .prehome-access {
+    padding-left: clamp(18px, 2.5vw, 26px) !important;
+    padding-right: clamp(18px, 2.5vw, 26px) !important;
+  }
+
+  .prehome-card,
+  .prehome-card--register {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
