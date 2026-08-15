@@ -15,9 +15,6 @@ def test_prehome_approved_visual_contract_precedes_global_contrast_guard():
     contrast = 'import "./styles/clinical-form-control-contrast.css";'
     assert prehome in main
     assert contrast in main
-    # O contrato global de contraste é intencionalmente a última folha CSS.
-    # O tema aprovado controla composição/paleta; o guard final protege a
-    # legibilidade de inputs/autofill em toda a aplicação.
     assert main.index(prehome) < main.index(contrast)
 
 
@@ -52,11 +49,12 @@ def test_login_copy_and_all_real_auth_controls_remain_available():
 
 def test_approved_prehome_css_keeps_desktop_mobile_and_dark_contracts():
     css = read("styles/prehome-approved-auth-flow.css")
-    assert "grid-template-columns: minmax(430px, 42%) minmax(520px, 58%)" in css
+    compact = "".join(css.split())
+    assert "grid-template-columns:minmax(430px,42%)minmax(520px,58%)" in compact
     assert ".prehome-brand__pillars" in css
     assert ".prehome-brand__hologram" in css
     assert ".prehome-card" in css
-    assert "@media (max-width: 820px)" in css
-    assert ".login.prehome { display: block;" in css
+    assert "@media(max-width:820px)" in compact
+    assert ".login.prehome{display:block;min-height:100svh}" in compact
     assert ".cos-tour" in css
-    assert "--auth-bg: #020710" in css
+    assert "--auth-bg:#020710" in compact
