@@ -52,6 +52,7 @@ import "./styles/prehome-reference-final.css";
 import "./styles/clinical-reference-board-final.css";
 import "./styles/clinical-navigation-reference-final.css";
 import "./styles/clinical-reference-fidelity-release.css";
+import "./styles/release-candidate-hotfix.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
