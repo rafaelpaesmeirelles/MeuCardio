@@ -28,20 +28,44 @@ def test_social_login_never_auto_provisions_or_bypasses_account_status():
 
 def test_provider_catalog_supports_mainstream_account_login():
     social = read(BACKEND / "api" / "social_login.py")
-    for provider in ("google", "microsoft", "apple", "github"):
+    for provider in ("google", "microsoft", "apple", "yahoo", "github"):
         assert f'("{provider}",' in social
-    assert "GOOGLE_SIGNIN_CLIENT_ID" in social
-    assert "MICROSOFT_SIGNIN_CLIENT_ID" in social
-    assert "APPLE_SIGNIN_CLIENT_ID" in social
-    assert "GITHUB_SIGNIN_CLIENT_ID" in social
+    for variable in (
+        "GOOGLE_SIGNIN_CLIENT_ID",
+        "MICROSOFT_SIGNIN_CLIENT_ID",
+        "APPLE_SIGNIN_CLIENT_ID",
+        "YAHOO_SIGNIN_CLIENT_ID",
+        "GITHUB_SIGNIN_CLIENT_ID",
+    ):
+        assert variable in social
 
 
 def test_external_email_is_verified_before_corvia_session():
     social = read(BACKEND / "api" / "social_login.py")
     assert 'body.get("email_verified")' in social
     assert 'claims.get("email_verified"' in social
+    assert 'body.get("email_verified") is not True' in social
     assert 'item.get("verified")' in social
     assert "gravar_cookie_sessao(response, create_access_token(user.email, scope=\"app\"))" in social
+
+
+def test_yahoo_uses_official_openid_connect_endpoints():
+    social = read(BACKEND / "api" / "social_login.py")
+    assert "https://api.login.yahoo.com/oauth2/request_auth" in social
+    assert "https://api.login.yahoo.com/oauth2/get_token" in social
+    assert "https://api.login.yahoo.com/openid/v1/userinfo" in social
+    assert "'scope': 'openid profile email'" in social
+    assert "'nonce': nonce" in social
+
+
+def test_apple_uses_signed_client_secret_and_verified_identity_token():
+    social = read(BACKEND / "api" / "social_login.py")
+    assert "https://appleid.apple.com/auth/authorize" in social
+    assert "https://appleid.apple.com/auth/token" in social
+    assert "https://appleid.apple.com/auth/keys" in social
+    assert 'algorithm="ES256"' in social
+    assert 'algorithms=["RS256"]' in social
+    assert 'issuer="https://appleid.apple.com"' in social
 
 
 def test_login_screen_uses_dynamic_viewport_and_social_buttons():
@@ -51,9 +75,10 @@ def test_login_screen_uses_dynamic_viewport_and_social_buttons():
     assert 'login-fullscreen-social.css' in login
     assert '/auth/social/providers' in login
     assert '/auth/social/${provider}/start' in login
-    for provider in ("google", "microsoft", "apple", "github"):
-        assert f'provider === "{provider}"' in login or f'"{provider}" |' in login or f'| "{provider}"' in login
+    for provider in ("google", "microsoft", "apple", "yahoo", "github"):
+        assert provider in login
     assert "height: 100dvh" in css
     assert "min-height: 100svh" in css
     assert "@media (max-width: 820px)" in css
     assert ".prehome-social__button" in css
+    assert ".prehome-social__mark--yahoo" in css
