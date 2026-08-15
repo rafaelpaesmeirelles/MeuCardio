@@ -5,12 +5,14 @@ on:
   pull_request:
     paths:
       - ".github/workflows/prehome-visual-qa.yml"
+      - "frontend/src/App.tsx"
       - "frontend/src/pages/Entrar.tsx"
       - "frontend/src/pages/SolicitarAcesso.tsx"
       - "frontend/src/pages/EsqueciSenha.tsx"
       - "frontend/src/pages/RedefinirSenha.tsx"
       - "frontend/src/components/PreHomeBrand.tsx"
       - "frontend/src/styles/login.css"
+      - "frontend/src/styles/prepanel-final.css"
       - "frontend/src/main.tsx"
 
 permissions:
@@ -189,16 +191,19 @@ jobs:
                   return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
                 };
                 const sample = document.querySelector('.prehome-card');
-                const brand = document.querySelector('.prehome-brand');
                 const style = sample ? getComputedStyle(sample) : null;
                 return {
                   width: innerWidth, height: innerHeight,
                   scrollWidth: document.documentElement.scrollWidth,
-                  sampleVisible: visible('.prehome-card'), brandVisible: visible('.prehome-brand'),
+                  sampleVisible: visible('.prehome-card'),
+                  brandVisible: visible('.prehome-brand'),
+                  platformBadge: visible('.prehome-showcase__badge'),
+                  heartVisible: visible('.prehome-showcase__heart'),
+                  commandPreview: visible('.prehome-mini'),
                   sampleBackground: style?.backgroundColor || '',
-                  canonicalMain: visible('.prehome'), logo: visible('.prehome-brand__logo'),
-                  hologram: visible('.prehome-brand__hologram'),
-                  isMobile: viewportName.startsWith('mobile'), bodyText: document.body?.innerText || '',
+                  canonicalMain: visible('.prehome'),
+                  isMobile: viewportName.startsWith('mobile'),
+                  bodyText: document.body?.innerText || '',
                 };
               }, viewportName);
               const sampleLum = luminance(metrics.sampleBackground);
@@ -206,9 +211,10 @@ jobs:
               if (metrics.scrollWidth > metrics.width + 4) report.failures.push(`${viewportName}/${name}: overflow horizontal ${metrics.scrollWidth}px > ${metrics.width}px`);
               if (!metrics.sampleVisible) report.failures.push(`${viewportName}/${name}: painel transacional não renderizou`);
               if (!metrics.brandVisible) report.failures.push(`${viewportName}/${name}: área de marca não renderizou`);
-              if (!metrics.logo) report.failures.push(`${viewportName}/${name}: marca CorVIA não está visível`);
+              if (!metrics.platformBadge) report.failures.push(`${viewportName}/${name}: selo da plataforma aprovada não renderizou`);
+              if (!metrics.heartVisible) report.failures.push(`${viewportName}/${name}: coração clínico aprovado não renderizou`);
               if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell prehome canônico ausente`);
-              if (!metrics.isMobile && !metrics.hologram) report.failures.push(`${viewportName}/${name}: hero holográfico ausente no desktop`);
+              if (!metrics.isMobile && !metrics.commandPreview) report.failures.push(`${viewportName}/${name}: preview do Clinical Command Center ausente no desktop`);
               if (sampleLum !== null && sampleLum > 0.15) report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
               if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
               await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });
