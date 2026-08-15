@@ -9,7 +9,7 @@ import "../styles/login-fullscreen-social.css";
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
 type SocialProvider = {
-  id: "google" | "microsoft" | "apple" | "github";
+  id: "google" | "microsoft" | "apple" | "yahoo" | "github";
   label: string;
   enabled: boolean;
 };
@@ -34,6 +34,7 @@ function MarcaProvider({ provider }: { provider: SocialProvider["id"] }) {
     return <span className="prehome-social__mark prehome-social__mark--microsoft" aria-hidden="true"><i /><i /><i /><i /></span>;
   }
   if (provider === "apple") return <span className="prehome-social__mark prehome-social__mark--apple" aria-hidden="true"></span>;
+  if (provider === "yahoo") return <span className="prehome-social__mark prehome-social__mark--yahoo" aria-hidden="true">Y!</span>;
   if (provider === "github") return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
   return <span className="prehome-social__mark prehome-social__mark--google" aria-hidden="true">G</span>;
 }
@@ -129,7 +130,7 @@ export default function Entrar() {
           <div className="prehome-card__actions">
             {(providersAtivos.length > 0 || carregandoProviders) && <div className="prehome-divider">ou entre com sua conta</div>}
             {providersAtivos.length > 0 && (
-              <div className={`prehome-social prehome-social--${Math.min(providersAtivos.length, 4)}`} aria-label="Entrar com conta externa">
+              <div className={`prehome-social prehome-social--${Math.min(providersAtivos.length, 5)}`} aria-label="Entrar com conta externa">
                 {providersAtivos.map((provider) => (
                   <button key={provider.id} type="button" className="prehome-social__button" onClick={() => entrarCom(provider.id)} aria-label={`Entrar com ${provider.label}`}>
                     <MarcaProvider provider={provider.id} />
