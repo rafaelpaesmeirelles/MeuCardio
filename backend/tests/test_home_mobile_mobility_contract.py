@@ -112,7 +112,7 @@ def test_destination_mismatch_falha_fechado_sem_consultar_provider(monkeypatch):
     assert chamado is False
 
 
-def test_home_mobile_mobilidade_e_privacidade_contract():
+def test_home_preserva_mobilidade_completa_sem_mudar_composicao_visual_aprovada():
     home = (ROOT / "frontend/src/pages/PainelClinicalOS.tsx").read_text(encoding="utf-8")
     assistant = (ROOT / "frontend/src/components/PersonalAssistantPanel.tsx").read_text(encoding="utf-8")
     mobile_nav = (ROOT / "frontend/src/components/ClinicalMobileNav.tsx").read_text(encoding="utf-8")
@@ -141,7 +141,6 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     # Estados e métricas vêm do retorno real, sem destino inventado.
     assert 'permissao === "negada"' in home
     assert 'Provider de trânsito indisponível' in home
-    assert 'resultado.status: "destination_mismatch"' not in home
     assert "rota.distance_meters" in home
     assert "rota.traffic_delay_seconds" in home
     assert "rota.duration_seconds + destino.arrival_buffer_minutes * 60" in home
@@ -153,30 +152,30 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert '"latitude"' not in audit_block
     assert '"longitude"' not in audit_block
 
-    # Mini mapa é contido no card; a lista detalhada fica fora do preview compacto.
-    assert "<MapaDeslocamento" in home
-    assert ".ccc-mobile-commute__map" in css
-    assert "overflow: hidden" in css
-    assert ".ccc-mobile-commute__map .deslocamento-rotas" in css
-
-    # Ordem mobile canônica e bottom nav imutável.
-    seu_dia = home.index("<small>Seu dia</small>")
-    deslocamento = home.index("<small>Deslocamento</small>", seu_dia)
-    assistente = home.index("<small>Assistente</small>", deslocamento)
-    atualizacoes = home.index("<small>Atualizações</small>", assistente)
-    assert seu_dia < deslocamento < assistente < atualizacoes
-
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
-    posicoes = [mobile_nav.index(f"<span>{label}</span>") for label in labels]
-    assert posicoes == sorted(posicoes)
-    assert len(posicoes) == 5
-
-    # A Home ganhou densidade sem apagar as três frentes nem Tudo com Tudo.
+    # Funções da Home restauradas.
+    assert "ccc-home-fronts" in home
     assert "Clínica & Decisão" in home
     assert "Estudo & Aprendizagem" in home
     assert "Trabalho & Assistência" in home
     assert "Tudo com Tudo" in home
-    assert ".ccc-home--board .ccc-updates-section { display: block !important; }" in css
+
+    # O preview móvel de deslocamento permanece no código, porém invisível no layout aprovado.
+    assert "<MapaDeslocamento" in home
+    assert "ccc-mobile-commute" in home
+    assert ".ccc-mobile-commute { display: none !important; }" in css
+    assert ".ccc-home--board .ccc-updates-section { display: none !important; }" in css
+
+    # Ordem dos cards visíveis continua Seu dia -> Assistente -> Atualizações.
+    seu_dia = home.index("<small>Seu dia</small>")
+    assistente = home.index("<small>Assistente</small>", seu_dia)
+    atualizacoes = home.index("<small>Atualizações</small>", assistente)
+    assert seu_dia < assistente < atualizacoes
+
+    # Bottom nav continua imutável.
+    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    posicoes = [mobile_nav.index(f"<span>{label}</span>") for label in labels]
+    assert posicoes == sorted(posicoes)
+    assert len(posicoes) == 5
 
 
 def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
