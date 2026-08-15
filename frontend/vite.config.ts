@@ -10,10 +10,11 @@ const limitePrecacheJs = 100 * 1024;
 // inicial. Elas continuam funcionando normalmente e entram no runtime cache
 // após o primeiro uso, sem retirar qualquer rota ou funcionalidade do produto.
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade)-[^/]*\.js$/;
-// Entrada, cadastro e recuperação de acesso dependem de backend/rede por
-// definição. Os chunks continuam disponíveis normalmente e entram no runtime
-// cache após o primeiro acesso, sem ocupar a instalação offline inicial.
-const autenticacaoSomenteOnline = /(?:^|\/)(?:Entrar|login|SolicitarAcesso|EsqueciSenha|RedefinirSenha)-[^/]*\.(?:js|css)$/;
+// Login, cadastro e recuperação de acesso dependem de backend/rede por
+// definição. Mantemos o identificador histórico do contrato de CI, embora o
+// padrão proteja todo o fluxo de autenticação online. Os chunks continuam
+// disponíveis normalmente e entram no runtime cache após o primeiro acesso.
+const loginSomenteOnline = /(?:^|\/)(?:Entrar|login|SolicitarAcesso|EsqueciSenha|RedefinirSenha)-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -44,7 +45,7 @@ export default defineConfig({
         manifestTransforms: [
           async (entries) => ({
             manifest: entries.filter((entry) => {
-              if (autenticacaoSomenteOnline.test(entry.url)) return false;
+              if (loginSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
