@@ -18,6 +18,13 @@ def test_approved_board_lock_is_loaded_after_legacy_fidelity_layers():
     assert main.index(board_import) > main.index('import "./styles/clinical-reference-fidelity-release.css";')
 
 
+def test_approved_home_is_isolated_from_the_internal_page_lock():
+    context = CONTEXT.read_text(encoding="utf-8")
+    assert 'if (pathname === "/")' in context
+    assert 'document.body.dataset.corviaRoute = "home"' in context
+    assert 'document.body.classList.add(classe)' in context
+
+
 def test_every_internal_route_family_is_subject_to_the_same_board_canvas():
     css = BOARD_LOCK.read_text(encoding="utf-8")
     context = CONTEXT.read_text(encoding="utf-8")
