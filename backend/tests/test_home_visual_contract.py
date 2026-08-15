@@ -86,11 +86,14 @@ def test_home_full_mobility_functions_are_not_removed_during_visual_rebuild():
         'mobilidade.automatic_foreground_refresh',
         'mobilidade.refresh_interval_minutes',
         'document.visibilityState !== "visible"',
-        'resultado.destination?.appointment_id !== proximo.id',
+        'resultado.destination?.target_key !== targetKey',
         'rota.distance_meters',
         'rota.traffic_delay_seconds',
         'rota.duration_seconds + destino.arrival_buffer_minutes * 60',
-        '"/agenda/mobility/commute-appointment"',
+        '"/agenda/mobility/prepare-next-target"',
+        '"/agenda/mobility/next-target"',
+        '"/agenda/mobility/commute-target"',
+        'const targetKey = destino?.target_key || null',
     ):
         assert token in panel
 
