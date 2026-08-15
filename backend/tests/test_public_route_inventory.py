@@ -38,6 +38,21 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
         "Retorno servidor-a-servidor da Microsoft; autorizado por estado de alta entropia, "
         "uso único, armazenado somente como SHA-256 e com expiração de dez minutos."
     ),
+    ("GET", "/api/auth/social/providers"): (
+        "Catálogo pré-login; expõe somente nomes e disponibilidade booleana dos provedores, nunca credenciais."
+    ),
+    ("GET", "/api/auth/social/{provider}/start"): (
+        "Início público do OAuth/OIDC; gera state e nonce aleatórios em cookies HttpOnly de curta duração "
+        "antes de redirecionar ao provedor."
+    ),
+    ("GET", "/api/auth/social/{provider}/callback"): (
+        "Callback OAuth/OIDC de Google, Microsoft, Yahoo e GitHub; exige state/nonce do fluxo e só emite "
+        "sessão para e-mail externo verificado que corresponda a conta CorVIA ativa e aprovada."
+    ),
+    ("POST", "/api/auth/social/{provider}/callback"): (
+        "Callback form_post necessário ao Sign in with Apple; aplica o mesmo state/nonce, validação do "
+        "identity token e vínculo com conta CorVIA existente do callback GET."
+    ),
     ("POST", "/api/auth/login"): "Emissão Bearer para integrações e clientes externos.",
     ("POST", "/api/auth/sessao"): "Emissão da sessão web em cookie HttpOnly antes da autenticação.",
     ("POST", "/api/auth/sair"): (

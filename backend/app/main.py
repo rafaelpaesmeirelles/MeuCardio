@@ -7,7 +7,7 @@ from app.api import (
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_session, evidence,
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
-    service_orders, sessions, specialty_guides, studies, timeline, billing, guidelines, indicadores,
+    service_orders, sessions, social_login, specialty_guides, studies, timeline, billing, guidelines, indicadores,
     checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, clinical_cases, agenda_integrada,
     related_content, knowledge_graph, patient_profiles,
 )
@@ -68,7 +68,7 @@ app.add_middleware(InvestidorEphemeralUxMiddleware)
 app.add_middleware(CanonicalRegistrationMiddleware)
 
 ROUTERS_LIVRES = (
-    health.router, auth.router, browser_session.router, password_reset.router,
+    health.router, auth.router, browser_session.router, social_login.router, password_reset.router,
     sessions.router, billing.router,
     # Precisa preceder admin.router: substitui somente /users/{id}/decidir para
     # acrescentar a notificação transacional sem quebrar o frontend existente.

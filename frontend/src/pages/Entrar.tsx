@@ -1,9 +1,18 @@
-import { useState, type FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Icone from "../components/Icone";
 import PreHomeBrand from "../components/PreHomeBrand";
 import { useAuth } from "../lib/auth";
 import "../styles/login.css";
+import "../styles/login-fullscreen-social.css";
+
+const BASE = import.meta.env.VITE_API_URL ?? "/api";
+
+type SocialProvider = {
+  id: "google" | "microsoft" | "apple" | "yahoo" | "github";
+  label: string;
+  enabled: boolean;
+};
 
 const BENEFICIOS = [
   { icon: "assistente" as const, title: "Inteligência clínica", detail: "Contexto e apoio à decisão no mesmo ambiente.", tone: "cyan" as const },
@@ -11,14 +20,56 @@ const BENEFICIOS = [
   { icon: "check" as const, title: "Segurança e privacidade", detail: "Acesso profissional protegido e rastreável.", tone: "green" as const },
 ];
 
+const ERROS_SOCIAIS: Record<string, string> = {
+  provider_denied: "A autenticação externa foi cancelada.",
+  invalid_callback: "Não foi possível validar o retorno do provedor. Tente novamente.",
+  invalid_state: "A sessão de autenticação expirou ou não pôde ser confirmada. Tente novamente.",
+  identity_failed: "O provedor não conseguiu confirmar sua identidade.",
+  account_not_linked: "O e-mail confirmado pelo provedor não corresponde a uma conta CorVIA aprovada. Entre com o mesmo e-mail cadastrado ou solicite acesso.",
+  unsupported_provider: "Este provedor de autenticação não está disponível.",
+};
+
+function MarcaProvider({ provider }: { provider: SocialProvider["id"] }) {
+  if (provider === "microsoft") {
+    return <span className="prehome-social__mark prehome-social__mark--microsoft" aria-hidden="true"><i /><i /><i /><i /></span>;
+  }
+  if (provider === "apple") return <span className="prehome-social__mark prehome-social__mark--apple" aria-hidden="true"></span>;
+  if (provider === "yahoo") return <span className="prehome-social__mark prehome-social__mark--yahoo" aria-hidden="true">Y!</span>;
+  if (provider === "github") return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
+  return <span className="prehome-social__mark prehome-social__mark--google" aria-hidden="true">G</span>;
+}
+
 export default function Entrar() {
   const { entrar } = useAuth();
+  const [params] = useSearchParams();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [permanecerConectado, setPermanecerConectado] = useState(false);
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
+  const [providers, setProviders] = useState<SocialProvider[]>([]);
+  const [carregandoProviders, setCarregandoProviders] = useState(true);
+
+  useEffect(() => {
+    const code = params.get("social_error") || "";
+    if (code) setErro(ERROS_SOCIAIS[code] || "Não foi possível entrar com esta conta externa.");
+  }, [params]);
+
+  useEffect(() => {
+    let ativo = true;
+    fetch(`${BASE}/auth/social/providers`, { credentials: "include", cache: "no-store" })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("providers");
+        return response.json() as Promise<{ providers?: SocialProvider[] }>;
+      })
+      .then((body) => { if (ativo) setProviders(Array.isArray(body.providers) ? body.providers : []); })
+      .catch(() => { if (ativo) setProviders([]); })
+      .finally(() => { if (ativo) setCarregandoProviders(false); });
+    return () => { ativo = false; };
+  }, []);
+
+  const providersAtivos = useMemo(() => providers.filter((provider) => provider.enabled), [providers]);
 
   async function enviar(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
@@ -34,8 +85,13 @@ export default function Entrar() {
     }
   }
 
+  function entrarCom(provider: SocialProvider["id"]) {
+    setErro("");
+    window.location.assign(`${BASE}/auth/social/${provider}/start`);
+  }
+
   return (
-    <main className="login prehome prehome--login">
+    <main className="login prehome prehome--login prehome--fullscreen">
       <PreHomeBrand
         title={<>Tudo o que o cardiologista precisa. <strong>Em um só lugar.</strong></>}
         description={<>Seu Clinical OS conecta conhecimento, decisão, assistência e rotina sem tirar o médico do centro.</>}
@@ -72,7 +128,17 @@ export default function Entrar() {
             </button>
           </form>
           <div className="prehome-card__actions">
-            <div className="prehome-divider">ou continue com</div>
+            {(providersAtivos.length > 0 || carregandoProviders) && <div className="prehome-divider">ou entre com sua conta</div>}
+            {providersAtivos.length > 0 && (
+              <div className={`prehome-social prehome-social--${Math.min(providersAtivos.length, 5)}`} aria-label="Entrar com conta externa">
+                {providersAtivos.map((provider) => (
+                  <button key={provider.id} type="button" className="prehome-social__button" onClick={() => entrarCom(provider.id)} aria-label={`Entrar com ${provider.label}`}>
+                    <MarcaProvider provider={provider.id} />
+                    <span>{provider.label}</span>
+                  </button>
+                ))}
+              </div>
+            )}
             <Link to="/solicitar-acesso" className="prehome-secondary"><Icone nome="conta" /> Solicitar acesso</Link>
           </div>
           <footer className="prehome-card__footer"><Icone nome="check" /><span>Seus dados estão protegidos · ambiente profissional em conformidade com a LGPD</span></footer>
