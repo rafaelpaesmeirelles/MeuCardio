@@ -287,11 +287,10 @@ jobs:
             await desktop.page.goto(`${base}/`, { waitUntil: 'networkidle' });
             const desktopBrand = await desktop.page.locator('.ccc-nav__brand-copy strong').textContent().catch(() => null);
             if (desktopBrand?.trim() !== 'CorVIA') report.failures.push(`desktop/home: branding lateral inválido (${desktopBrand})`);
-            const desktopMore = desktop.page.locator('.ccc-nav__more summary');
-            await desktopMore.click();
             const requiredDesktopLinks = ['/triagem-sintomas','/interacoes','/condicoes','/fluxogramas','/biblioteca','/avaliacao-preoperatoria','/telediagnostico','/indicadores','/cursos','/apresentacao','/admin','/admin/usuarios','/fila-telediagnostico'];
             for (const href of requiredDesktopLinks) {
-              if (!await desktop.page.locator(`.ccc-nav a[href="${href}"]`).count()) report.failures.push(`desktop/nav: feature sem acesso visível ${href}`);
+              const link = desktop.page.locator(`.ccc-nav a[href="${href}"]`).first();
+              if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/nav: feature sem acesso visível ${href}`);
             }
             await desktop.context.close();
 
