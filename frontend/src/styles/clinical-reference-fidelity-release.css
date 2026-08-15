@@ -74,12 +74,13 @@
 
 @media (max-width: 900px) {
   /* A prancha móvel exige as oito ações rápidas imediatamente após a busca.
-     Reverte qualquer regra histórica que tenha transformado a seção em conteúdo
-     somente-desktop, sem alterar o JSX nem o inventário funcional. */
+     O canonical legado aplicava order:4 via :nth-of-type, com especificidade
+     maior, empurrando a seção para baixo apesar de ela continuar no DOM. */
   body.ccc-home-active .clinical-os .cos-content .ccc-reference-board .ccc-actions-section {
     display: block !important;
     position: relative !important;
     inset: auto !important;
+    order: 2 !important;
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
@@ -107,6 +108,22 @@
 
   body.ccc-home-active .clinical-os .cos-content .ccc-reference-board .ccc-actions-section .ccc-action {
     display: grid !important;
+  }
+
+  body.ccc-home-active .clinical-os .cos-content .ccc-reference-board .ccc-reference-summary {
+    order: 3 !important;
+  }
+
+  body.ccc-home-active .clinical-os .cos-content .ccc-reference-board .ccc-reference-updates {
+    order: 4 !important;
+  }
+
+  body.ccc-home-active .clinical-os .cos-content .ccc-reference-board .ccc-module-directory {
+    order: 5 !important;
+  }
+
+  body.ccc-home-active .clinical-os .cos-content .ccc-reference-board .ccc-reference-trust {
+    order: 6 !important;
   }
 
   /* O resumo do Assistente Pessoal pertence à experiência desktop; no mobile
