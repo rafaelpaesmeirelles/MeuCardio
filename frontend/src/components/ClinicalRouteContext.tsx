@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 /**
  * Classifica intenção/contexto sem autorizar linguagens visuais paralelas.
  * Toda rota autenticada permanece subordinada à prancha canônica do Clinical OS.
+ * A Home aprovada é isolada do lock de páginas internas para não sofrer regressão.
  * A ordem importa apenas quando um prefixo é subconjunto de outro.
  */
 const ROUTES: Array<[string, string]> = [
@@ -68,10 +69,18 @@ export default function ClinicalRouteContext() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const grupo = ROUTES.find(([prefixo]) => pathname === prefixo || pathname.startsWith(`${prefixo}/`))?.[1] ?? "geral";
-    const classe = `corvia-route--${grupo}`;
     const anteriores = Array.from(document.body.classList).filter((item) => item.startsWith("corvia-route--"));
     anteriores.forEach((item) => document.body.classList.remove(item));
+
+    if (pathname === "/") {
+      document.body.dataset.corviaRoute = "home";
+      return () => {
+        if (document.body.dataset.corviaRoute === "home") delete document.body.dataset.corviaRoute;
+      };
+    }
+
+    const grupo = ROUTES.find(([prefixo]) => pathname === prefixo || pathname.startsWith(`${prefixo}/`))?.[1] ?? "geral";
+    const classe = `corvia-route--${grupo}`;
     document.body.classList.add(classe);
     document.body.dataset.corviaRoute = grupo;
     return () => {
