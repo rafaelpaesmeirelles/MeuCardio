@@ -27,38 +27,71 @@ const PILARES: Array<{ icon: NomeIcone; title: string; detail: string }> = [
 
 function CoracaoHolografico() {
   return (
-    <svg className="prehome-brand__heart" viewBox="0 0 320 360" role="img" aria-label="Coração digital do CorVIA">
+    <svg className="prehome-brand__heart" viewBox="0 0 360 420" role="img" aria-label="Coração anatômico digital do CorVIA">
       <defs>
-        <linearGradient id="corvia-heart-main" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#12dce7" />
-          <stop offset="0.48" stopColor="#2088ff" />
-          <stop offset="0.72" stopColor="#8b5cf6" />
+        <linearGradient id="corvia-anatomy-main" x1=".12" y1=".08" x2=".88" y2=".94">
+          <stop offset="0" stopColor="#1be3ee" />
+          <stop offset=".31" stopColor="#148eff" />
+          <stop offset=".58" stopColor="#4a67ff" />
+          <stop offset=".78" stopColor="#9b5cf7" />
           <stop offset="1" stopColor="#ff416c" />
         </linearGradient>
-        <linearGradient id="corvia-heart-vein" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#72f5ff" />
-          <stop offset="1" stopColor="#ff5477" />
+        <linearGradient id="corvia-anatomy-red" x1=".1" y1="0" x2=".75" y2="1">
+          <stop offset="0" stopColor="#ff8aa0" />
+          <stop offset=".45" stopColor="#ff476e" />
+          <stop offset="1" stopColor="#ff214f" />
         </linearGradient>
-        <radialGradient id="corvia-heart-core" cx="50%" cy="45%" r="55%">
-          <stop offset="0" stopColor="#fc4b75" stopOpacity=".72" />
-          <stop offset=".55" stopColor="#285ff4" stopOpacity=".25" />
-          <stop offset="1" stopColor="#071425" stopOpacity="0" />
+        <linearGradient id="corvia-anatomy-blue" x1=".12" y1="0" x2=".75" y2="1">
+          <stop offset="0" stopColor="#62f1ff" />
+          <stop offset=".48" stopColor="#168eff" />
+          <stop offset="1" stopColor="#3557ff" />
+        </linearGradient>
+        <radialGradient id="corvia-anatomy-core" cx="54%" cy="49%" r="56%">
+          <stop offset="0" stopColor="#f94570" stopOpacity=".30" />
+          <stop offset=".42" stopColor="#245bff" stopOpacity=".13" />
+          <stop offset="1" stopColor="#03101f" stopOpacity="0" />
         </radialGradient>
-        <filter id="corvia-heart-glow" x="-80%" y="-80%" width="260%" height="260%">
-          <feGaussianBlur stdDeviation="5" result="blur" />
+        <filter id="corvia-anatomy-glow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="4.5" result="blur" />
           <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
+        <filter id="corvia-anatomy-soft" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="12" />
+        </filter>
       </defs>
-      <ellipse cx="160" cy="182" rx="121" ry="136" fill="url(#corvia-heart-core)" opacity=".78" />
-      <path className="heart-body" d="M168 88c-18-29-51-36-76-18-31 22-39 69-23 109 22 57 78 103 98 120 7 6 17 6 24 0 22-19 75-67 94-126 14-44 1-91-34-108-27-13-58-4-73 23-2 3-8 3-10 0Z" fill="rgba(12,33,65,.78)" stroke="url(#corvia-heart-main)" strokeWidth="4.2" filter="url(#corvia-heart-glow)" />
-      <path d="M151 91c-3-31 1-58 15-72 11-11 27-13 36-3 11 13 2 31-7 45-8 13-9 29-6 45" fill="none" stroke="#1ecff2" strokeWidth="8" strokeLinecap="round" opacity=".9" />
-      <path d="M178 88c7-31 18-54 34-65 13-9 29-6 34 6 6 16-8 28-20 39-11 10-17 24-18 40" fill="none" stroke="#217bff" strokeWidth="7" strokeLinecap="round" opacity=".88" />
-      <path d="M201 93c15-27 31-43 48-47 15-3 28 5 29 18 1 16-15 23-29 30-12 6-21 17-27 30" fill="none" stroke="#8d55ff" strokeWidth="7" strokeLinecap="round" opacity=".84" />
-      <path d="M137 103c-19-17-43-23-59-15-15 7-20 24-10 36 10 11 26 8 40 5 13-3 27 0 40 9" fill="none" stroke="#26c8ff" strokeWidth="6" strokeLinecap="round" opacity=".8" />
-      <path d="M110 133c36 22 56 44 60 72 4 30-3 57 5 84" fill="none" stroke="url(#corvia-heart-vein)" strokeWidth="3.4" strokeLinecap="round" filter="url(#corvia-heart-glow)" />
-      <path d="M211 126c-30 25-45 52-43 84 2 25 16 45 11 77" fill="none" stroke="#ff4d73" strokeWidth="3" strokeLinecap="round" filter="url(#corvia-heart-glow)" />
-      <path d="M96 174c22 4 42 14 58 31M91 205c27 2 48 11 66 27M214 158c-18 7-32 20-42 38M228 190c-24 7-39 22-52 43" fill="none" stroke="#55e7ff" strokeWidth="1.8" opacity=".82" />
-      <circle cx="112" cy="137" r="5" fill="#4cecff" /><circle cx="205" cy="130" r="5" fill="#a878ff" /><circle cx="174" cy="207" r="5" fill="#ff5276" />
+
+      <ellipse cx="184" cy="236" rx="132" ry="145" fill="url(#corvia-anatomy-core)" opacity=".95" />
+      <ellipse cx="183" cy="356" rx="108" ry="24" fill="#1d75ff" opacity=".13" filter="url(#corvia-anatomy-soft)" />
+
+      {/* vasos da base e grandes vasos */}
+      <path d="M160 129C143 99 143 64 160 41c11-15 29-20 42-12 16 10 15 31 6 47-10 18-16 38-11 61" fill="none" stroke="url(#corvia-anatomy-blue)" strokeWidth="14" strokeLinecap="round" filter="url(#corvia-anatomy-glow)" />
+      <path d="M197 124c4-34 15-70 39-91 17-15 40-14 50 1 11 17 0 37-17 51-19 15-31 34-35 56" fill="none" stroke="url(#corvia-anatomy-red)" strokeWidth="15" strokeLinecap="round" filter="url(#corvia-anatomy-glow)" />
+      <path d="M225 141c17-35 38-57 63-62 20-4 37 8 38 25 1 20-19 29-37 36-15 6-27 17-35 32" fill="none" stroke="#9c5fff" strokeWidth="12" strokeLinecap="round" opacity=".92" filter="url(#corvia-anatomy-glow)" />
+      <path d="M139 139c-27-23-56-30-77-19-19 10-24 31-11 46 13 15 34 9 51 6 18-3 35 2 51 14" fill="none" stroke="#28d8ef" strokeWidth="11" strokeLinecap="round" opacity=".90" filter="url(#corvia-anatomy-glow)" />
+
+      {/* massa miocárdica anatômica assimétrica */}
+      <path d="M172 127c-36-18-82-5-103 29-21 35-13 79 8 112 18 29 43 48 63 71 14 16 23 36 31 55 3 8 14 9 19 2 17-24 38-46 57-69 26-31 48-68 52-109 4-39-13-78-47-94-26-12-56-8-80 3Z" fill="rgba(5,24,45,.88)" stroke="url(#corvia-anatomy-main)" strokeWidth="4.3" filter="url(#corvia-anatomy-glow)" />
+      <path d="M171 135c-17 22-27 47-28 75-2 51 30 93 38 142 7-35 3-75 19-106 14-27 39-44 68-55-14-35-44-61-79-64-7 0-13 3-18 8Z" fill="rgba(255,55,91,.055)" stroke="#ff5275" strokeWidth="1.5" opacity=".88" />
+      <path d="M166 139c-35-11-69 4-83 32-13 27-5 59 12 83 18 25 42 43 57 70-4-36-13-72-7-107 5-31 14-55 21-78Z" fill="rgba(26,144,255,.055)" stroke="#2bcff1" strokeWidth="1.4" opacity=".86" />
+
+      {/* septo e coronárias principais */}
+      <path d="M172 148c-9 32-8 65 2 96 12 36 11 74 8 112" fill="none" stroke="#ff4a70" strokeWidth="3.8" strokeLinecap="round" filter="url(#corvia-anatomy-glow)" />
+      <path d="M166 150c-19 21-29 47-30 76-1 35 15 69 22 103" fill="none" stroke="#31dbee" strokeWidth="3.2" strokeLinecap="round" filter="url(#corvia-anatomy-glow)" />
+      <path d="M173 173c23 5 44 18 58 38 15 21 23 49 21 76" fill="none" stroke="#ff5878" strokeWidth="2.8" strokeLinecap="round" />
+      <path d="M165 184c-25 4-45 17-58 37-11 18-16 39-14 61" fill="none" stroke="#3fe4f2" strokeWidth="2.6" strokeLinecap="round" />
+      <path d="M188 221c25 10 42 28 52 51M151 231c-22 8-37 23-46 43M195 254c19 9 31 22 39 39M149 268c-17 8-29 20-37 34M189 291c16 10 25 21 31 34M157 306c-12 7-21 16-27 26" fill="none" stroke="#7eefff" strokeWidth="1.6" opacity=".68" />
+
+      {/* veias e artérias superficiais */}
+      <path d="M114 159c17 8 31 20 41 36M91 190c23 6 42 19 56 38M263 169c-22 7-42 23-55 43M277 205c-25 8-45 24-58 45" fill="none" stroke="#4fb7ff" strokeWidth="1.8" opacity=".65" />
+      <path d="M208 142c8 20 8 39 2 58" fill="none" stroke="#ff657f" strokeWidth="3" opacity=".85" />
+
+      <g filter="url(#corvia-anatomy-glow)">
+        <circle cx="146" cy="187" r="4" fill="#52edff" />
+        <circle cx="207" cy="205" r="4" fill="#ff5679" />
+        <circle cx="184" cy="258" r="4" fill="#a66eff" />
+        <circle cx="130" cy="274" r="3" fill="#54e9f7" />
+        <circle cx="229" cy="277" r="3" fill="#ff4d72" />
+      </g>
     </svg>
   );
 }
