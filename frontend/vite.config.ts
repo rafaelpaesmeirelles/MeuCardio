@@ -10,6 +10,10 @@ const limitePrecacheJs = 100 * 1024;
 // inicial. Elas continuam funcionando normalmente e entram no runtime cache
 // após o primeiro uso, sem retirar qualquer rota ou funcionalidade do produto.
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade)-[^/]*\.js$/;
+// A tela de entrada depende de backend/rede por definição (senha e provedores
+// externos). Não há ganho em precacheá-la; JS/CSS continuam carregando
+// normalmente e entram no runtime cache após o primeiro acesso online.
+const loginSomenteOnline = /(?:^|\/)Entrar-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -40,6 +44,7 @@ export default defineConfig({
         manifestTransforms: [
           async (entries) => ({
             manifest: entries.filter((entry) => {
+              if (loginSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
