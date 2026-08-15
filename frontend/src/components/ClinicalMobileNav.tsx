@@ -88,6 +88,13 @@ export default function ClinicalMobileNav() {
 
   function fecharMais(restaurar = true) { setMaisAberto(false); if (restaurar) requestAnimationFrame(() => triggerRef.current?.focus()); }
 
+  function abrirAssistentePessoal() {
+    setMaisAberto(false);
+    requestAnimationFrame(() => {
+      document.querySelector<HTMLButtonElement>(".cos-assistant-sidebar")?.click();
+    });
+  }
+
   useEffect(() => {
     document.body.classList.toggle("cc-mobile-more-open", maisAberto);
     if (!maisAberto) return () => document.body.classList.remove("cc-mobile-more-open");
@@ -122,6 +129,7 @@ export default function ClinicalMobileNav() {
       <div className="cc-mobile-more-backdrop is-open" aria-hidden="true" onClick={() => fecharMais(true)} />
       <aside ref={sheetRef} className="cc-mobile-more is-open" role="dialog" aria-modal="true" aria-label="Todas as áreas do CorVIA">
         <header className="cc-mobile-more__head"><div><img src="/corvia-mark-canonical.svg" alt="" /><span><strong>CorVIA</strong><small>Clinical OS</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
+        <button type="button" className="cc-mobile-more__assistant" onClick={abrirAssistentePessoal}><span className="cc-mobile-more__assistant-icon">✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamentos e pendências</small></span><Icone nome="seta" /></button>
         {secoes.map((secao) => {
           const itens = secao.items.filter((item) => !item.adminOnly || usuario?.role === "admin");
           return <section key={secao.title} className="cc-mobile-more__section"><p>{secao.title}</p><div className="cc-mobile-more__grid">{itens.map((item) => <SheetLink key={`${secao.title}-${item.label}-${item.to}`} item={item} />)}</div></section>;
