@@ -29,15 +29,61 @@
   border-color: rgba(161,124,245,.12) !important;
 }
 .ccc-home-fronts__connections span { color: #bea1ff; }
-
-/* A lógica de mobilidade permanece montada para o Assistente/Agenda, mas o
-   card móvel extra que alterou a composição aprovada da Home fica oculto. */
-.ccc-mobile-commute { display: none !important; }
+.ccc-mobile-commute { display: none; }
 
 @media (max-width: 900px) {
   .clinical-os .cos-topbar__mobile-brand::after { content: none !important; display: none !important; }
   .ccc-home--board .ccc-section__head a { display: none !important; }
-  .ccc-home--board .ccc-updates-section { display: none !important; }
+  .ccc-home--board .ccc-updates-section { display: block !important; }
+  .ccc-mobile-summary { gap: 8px; }
+
+  .ccc-mobile-commute {
+    display: grid;
+    width: 100%;
+    min-width: 0;
+    gap: 9px;
+    padding: 11px;
+    color: #eaf5f7;
+    background: radial-gradient(circle at 92% -10%, rgba(56,202,213,.10), transparent 12rem), linear-gradient(145deg,#092430,#061821);
+    border: 1px solid rgba(96,217,223,.13);
+    border-radius: 11px;
+    overflow: hidden;
+  }
+  .ccc-mobile-commute > header { display: grid; grid-template-columns: minmax(0,1fr) 36px; gap: 9px; align-items: center; }
+  .ccc-mobile-commute > header > span:first-child { display: grid; min-width: 0; gap: 2px; }
+  .ccc-mobile-commute > header small { color: #60d9df; font-size: .46rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+  .ccc-mobile-commute > header strong { overflow: hidden; color: #eefafa; font-size: .68rem; text-overflow: ellipsis; white-space: nowrap; }
+  .ccc-mobile-commute > header p { margin: 0; overflow: hidden; color: #8198a1; font-size: .5rem; text-overflow: ellipsis; white-space: nowrap; }
+  .ccc-mobile-commute__icon { display: grid; width: 36px; height: 36px; place-items: center; color: #65dce3; background: rgba(56,202,213,.075); border: 1px solid rgba(96,217,223,.08); border-radius: 9px; }
+  .ccc-mobile-commute__icon svg { width: 17px; height: 17px; }
+
+  .ccc-mobile-commute__metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; }
+  .ccc-mobile-commute__metrics > span { display: grid; min-width: 0; gap: 2px; padding: 7px; background: rgba(255,255,255,.022); border: 1px solid rgba(126,183,201,.065); border-radius: 8px; }
+  .ccc-mobile-commute__metrics small { color: #65818b; font-size: .42rem; font-weight: 750; text-transform: uppercase; }
+  .ccc-mobile-commute__metrics strong { overflow: hidden; color: #e8f6f7; font-size: .57rem; text-overflow: ellipsis; white-space: nowrap; }
+
+  .ccc-mobile-commute__state { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 8px; align-items: center; min-height: 50px; padding: 8px; background: rgba(255,255,255,.018); border: 1px solid rgba(126,183,201,.06); border-radius: 8px; }
+  .ccc-mobile-commute__state > span { display: grid; width: 30px; height: 30px; place-items: center; color: #72dce3; background: rgba(56,202,213,.06); border-radius: 7px; }
+  .ccc-mobile-commute__state > span svg { width: 14px; height: 14px; }
+  .ccc-mobile-commute__state p { min-width: 0; margin: 0; color: #8aa0a8; font-size: .51rem; line-height: 1.35; overflow-wrap: anywhere; }
+  .ccc-mobile-commute__state.is-loading > span { animation: ccc-commute-spin 1.1s linear infinite; }
+  @keyframes ccc-commute-spin { to { transform: rotate(360deg); } }
+
+  .ccc-mobile-commute__map { min-width: 0; max-height: 176px; overflow: hidden; border-radius: 8px; }
+  .ccc-mobile-commute__map .deslocamento-painel { display: block; min-width: 0; }
+  .ccc-mobile-commute__map .deslocamento-mapa { min-height: 150px; height: 150px; border-radius: 8px; overflow: hidden; }
+  .ccc-mobile-commute__map .deslocamento-mapa__google { min-height: 150px; height: 150px; }
+  .ccc-mobile-commute__map .deslocamento-mapa svg { width: 100%; height: 150px; display: block; }
+  .ccc-mobile-commute__map .deslocamento-rotas,
+  .ccc-mobile-commute__map .deslocamento-mapa__legenda { display: none; }
+  .ccc-mobile-commute__map .deslocamento-mapa__fonte { font-size: .42rem; }
+
+  .ccc-mobile-commute > footer { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+  .ccc-mobile-commute > footer a,
+  .ccc-mobile-commute > footer button { display: inline-flex; min-height: 30px; align-items: center; justify-content: center; gap: 4px; padding: 6px 9px; color: #87e5e9; background: rgba(56,202,213,.055); border: 1px solid rgba(96,217,223,.10); border-radius: 8px; font: inherit; font-size: .48rem; font-weight: 750; text-decoration: none; }
+  .ccc-mobile-commute > footer button { cursor: pointer; }
+  .ccc-mobile-commute > footer button:disabled { opacity: .55; cursor: default; }
+  .ccc-mobile-commute > footer svg { width: 11px; height: 11px; }
 
   .ccc-home-fronts { margin-top: 13px !important; }
   .ccc-home-fronts__grid { grid-template-columns: 1fr 1fr; gap: 7px; }
@@ -49,6 +95,8 @@
 }
 
 @media (max-width: 390px) {
+  .ccc-mobile-commute { padding: 9px; }
+  .ccc-mobile-commute__metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .ccc-home-fronts__grid { grid-template-columns: 1fr; }
   .ccc-home-fronts__grid > a { min-height: 96px; }
 }

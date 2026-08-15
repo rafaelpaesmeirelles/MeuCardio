@@ -15,11 +15,10 @@ def test_anonymous_root_enters_canonical_login_not_legacy_marketing_landing():
     assert '<Route path="/" element={<Produto />} />' not in app
 
 
-def test_authenticated_home_preserves_approved_board_and_full_functions():
+def test_authenticated_home_is_full_panel_with_displacement_and_fronts():
     panel = _read("pages/PainelClinicalOS.tsx")
     css = _read("styles/clinical-home-mobile-final.css")
 
-    # Estrutura visual canônica da prancha permanece presente.
     for token in (
         'className="ccc-command"',
         'className="ccc-actions"',
@@ -28,48 +27,44 @@ def test_authenticated_home_preserves_approved_board_and_full_functions():
         'className="ccc-updates"',
         'aria-label="CorVIA Intelligence"',
         'aria-label="Assistente Pessoal"',
-    ):
-        assert token in panel
-
-    # As funções que existiam antes do rollback não podem desaparecer.
-    for token in (
         'ccc-home-fronts',
         'Clínica & Decisão',
         'Estudo & Aprendizagem',
         'Trabalho & Assistência',
         'Tudo com Tudo',
+        'ccc-mobile-commute',
+        '<MapaDeslocamento',
         '"/agenda/mobility/commute-appointment"',
-        'mobilidade.automatic_foreground_refresh',
-        'mobilidade.refresh_interval_minutes',
-        'document.visibilityState !== "visible"',
-        'resultado.destination?.appointment_id !== proximo.id',
     ):
         assert token in panel
 
-    # O card móvel de mapa pode continuar no DOM para manter a lógica completa,
-    # mas não pode alterar a composição visual aprovada da Home.
-    assert 'ccc-mobile-commute' in panel
-    assert '.ccc-mobile-commute { display: none !important; }' in css
+    assert '.ccc-mobile-commute {' in css
+    assert 'display: grid;' in css
+    assert '.ccc-home--board .ccc-updates-section { display: block !important; }' in css
 
 
-def test_mobile_home_visible_order_matches_approved_board():
+def test_mobile_home_contains_displacement_between_day_and_assistant():
     panel = _read("pages/PainelClinicalOS.tsx")
-    css = _read("styles/clinical-home-mobile-final.css")
     start = panel.index('className="ccc-mobile-summary"')
     end = panel.index('className="ccc-section ccc-recent-section"')
     mobile = panel[start:end]
 
     seu_dia = mobile.index("Seu dia")
+    deslocamento = mobile.index("Deslocamento")
     assistente = mobile.index("Assistente")
     atualizacoes = mobile.index("Atualizações")
-    assert seu_dia < assistente < atualizacoes
-    assert '.ccc-mobile-commute { display: none !important; }' in css
-    assert '.ccc-home--board .ccc-updates-section { display: none !important; }' in css
+    assert seu_dia < deslocamento < assistente < atualizacoes
 
 
-def test_home_fronts_are_available_without_replacing_canonical_top_composition():
+def test_home_full_functions_are_not_removed_again():
     panel = _read("pages/PainelClinicalOS.tsx")
-    fronts = panel.index('className="ccc-section ccc-home-fronts"')
-    updates = panel.index('className="ccc-section ccc-updates-section"')
-    intelligence = panel.index('aria-label="CorVIA Intelligence"')
-    assert updates < fronts < intelligence
+    for token in (
+        'mobilidade.automatic_foreground_refresh',
+        'mobilidade.refresh_interval_minutes',
+        'document.visibilityState !== "visible"',
+        'resultado.destination?.appointment_id !== proximo.id',
+        'rota.distance_meters',
+        'rota.traffic_delay_seconds',
+        'rota.duration_seconds + destino.arrival_buffer_minutes * 60',
+    ):
+        assert token in panel
