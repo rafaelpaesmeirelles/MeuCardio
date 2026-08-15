@@ -11,10 +11,9 @@ const limitePrecacheJs = 100 * 1024;
 // após o primeiro uso, sem retirar qualquer rota ou funcionalidade do produto.
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade)-[^/]*\.js$/;
 // Login, cadastro e recuperação de acesso dependem de backend/rede por
-// definição. Mantemos o identificador histórico do contrato de CI, embora o
-// padrão proteja todo o fluxo de autenticação online. Os chunks continuam
-// disponíveis normalmente e entram no runtime cache após o primeiro acesso.
-const loginSomenteOnline = /(?:^|\/)(?:Entrar|login|SolicitarAcesso|EsqueciSenha|RedefinirSenha)-[^/]*\.(?:js|css)$/;
+// definição. Mantemos o identificador histórico do contrato de CI e tornamos
+// cada chunk explícito para que esse comportamento seja auditável no código.
+const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|login-[^/]*|SolicitarAcesso-[^/]*|EsqueciSenha-[^/]*|RedefinirSenha-[^/]*)\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
