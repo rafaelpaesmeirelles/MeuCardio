@@ -34,7 +34,7 @@ export default function PreHomeBrand({ title, description }: Props) {
           <span key={p.label}><Icone nome={p.icon} /><small>{p.label}<br />{p.line2}</small></span>
         ))}
       </div>
-      <img className="prehome-showcase__art" src="/corvia-prehome-showcase.svg" alt="" aria-hidden="true" />
+      <img className="prehome-showcase__art prehome-showcase__heart prehome-mini" src="/corvia-prehome-showcase.svg" alt="" aria-hidden="true" />
       <div className="prehome-showcase__context" aria-hidden="true"><span>{title}</span><small>{description}</small></div>
     </section>
   );
