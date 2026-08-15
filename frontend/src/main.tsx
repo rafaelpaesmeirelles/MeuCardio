@@ -49,6 +49,7 @@ import "./styles/clinical-full-viewport.css";
 import "./styles/clinical-release-hardening.css";
 import "./styles/login.css";
 import "./styles/prepanel-final.css";
+import "./styles/prehome-typography-polish.css";
 import "./styles/clinical-home-approved-command-center.css";
 import "./styles/clinical-form-control-contrast.css";
 
