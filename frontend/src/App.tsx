@@ -89,7 +89,7 @@ export default function App() {
     return (
       <RotasSuspensas>
         <Routes>
-          <Route path="/" element={<Produto />} />
+          <Route path="/" element={<Navigate to="/entrar" replace />} />
           <Route path="/produto" element={<Produto />} />
           <Route path="/entrar" element={<Entrar />} />
           <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
