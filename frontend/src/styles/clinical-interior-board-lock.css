@@ -1,5 +1,4 @@
 body[class*="corvia-route--"] .clinical-os .cos-content{width:100%!important;max-width:none!important;min-width:0;padding:.72rem .82rem 1rem!important}
-body[class*="corvia-route--"] .clinical-os .cos-content>*{min-width:0}
 body[class*="corvia-route--"] .clinical-os .cos-content :where(.pagina,.cc-page,.ccc-patient-command,.emerg){width:100%;max-width:none}
 body[class*="corvia-route--"] .clinical-os .cos-content :where(.cartao,.cartao--clinico,.cc-section,.cc-page-header,.cc-detail-card,.cc-entity-card){border-radius:8px!important;border-color:rgba(100,159,186,.13)!important;box-shadow:none!important}
 body[class*="corvia-route--"] .clinical-os .cos-content :where(.grade,.cc-card-grid,.cc-metrics,.cc-context-grid){gap:.55rem;align-items:stretch}
@@ -8,7 +7,6 @@ body[class*="corvia-route--"] .clinical-os .cos-content .grade--3{grid-template-
 body.corvia-route--pacientes .clinical-os .ccc-patient-command__clinical{width:100%!important;max-width:none!important}
 body.corvia-route--pacientes .clinical-os :where(.ccc-patient-command__header,.ccc-patient-command__manager,.ccc-patient-command__clinical .cartao--clinico),body.corvia-route--admin .clinical-os :where(form.cartao,section.cartao){background:linear-gradient(145deg,rgba(8,27,40,.97),rgba(4,18,29,.99))!important;border:1px solid rgba(100,159,186,.13)!important;border-radius:8px!important;box-shadow:none!important}
 body.corvia-route--pacientes .clinical-os .ccc-patient-command__clinical .cartao--clinico{border-left:1px solid rgba(100,159,186,.13)!important}
-body.corvia-route--admin .clinical-os .cos-content{display:grid;gap:.58rem}
 /* Emergency keeps red only as a clinical accent */
 body.corvia-route--emergencia .clinical-os .emerg{background:transparent!important}
 body.corvia-route--emergencia .clinical-os :where(.emerg__topo,.emerg__busca,.emerg__lista li,.emerg-command__hero,.emerg__diagrama,.emerg__secao,.emerg-command__quick){color:#d8e8eb;background:linear-gradient(145deg,rgba(8,27,40,.97),rgba(4,18,29,.99))!important;border-color:rgba(100,159,186,.13)!important;border-radius:8px!important;box-shadow:none!important}
