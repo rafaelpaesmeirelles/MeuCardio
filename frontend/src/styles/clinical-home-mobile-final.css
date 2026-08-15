@@ -1,6 +1,54 @@
 /* Final mobile fidelity against the approved HOME MOBILE board. */
+
+.ccc-home-fronts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.ccc-home-fronts__grid > a {
+  display: grid;
+  min-width: 0;
+  min-height: 112px;
+  align-content: start;
+  gap: 5px;
+  padding: 11px;
+  color: #dcecef;
+  background: linear-gradient(145deg, rgba(9,32,45,.92), rgba(6,23,33,.92));
+  border: 1px solid rgba(126,183,201,.09);
+  border-radius: 10px;
+  text-decoration: none;
+}
+.ccc-home-fronts__grid > a:hover { border-color: rgba(96,217,223,.22); transform: translateY(-1px); }
+.ccc-home-fronts__grid small { color: #64818b; font-size: .48rem; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; }
+.ccc-home-fronts__grid strong { color: #edf7f8; font-size: .69rem; line-height: 1.25; }
+.ccc-home-fronts__grid p { margin: 0; color: #8198a1; font-size: .52rem; line-height: 1.42; }
+.ccc-home-fronts__grid span { display: flex; align-items: center; gap: 4px; margin-top: auto; color: #63d8df; font-size: .5rem; font-weight: 750; }
+.ccc-home-fronts__grid span svg { width: 11px; height: 11px; }
+.ccc-home-fronts__connections {
+  background: radial-gradient(circle at 100% 0%, rgba(161,124,245,.10), transparent 10rem), linear-gradient(145deg,#101c31,#071722) !important;
+  border-color: rgba(161,124,245,.12) !important;
+}
+.ccc-home-fronts__connections span { color: #bea1ff; }
+
+/* A lógica de mobilidade permanece montada para o Assistente/Agenda, mas o
+   card móvel extra que alterou a composição aprovada da Home fica oculto. */
+.ccc-mobile-commute { display: none !important; }
+
 @media (max-width: 900px) {
   .clinical-os .cos-topbar__mobile-brand::after { content: none !important; display: none !important; }
   .ccc-home--board .ccc-section__head a { display: none !important; }
   .ccc-home--board .ccc-updates-section { display: none !important; }
+
+  .ccc-home-fronts { margin-top: 13px !important; }
+  .ccc-home-fronts__grid { grid-template-columns: 1fr 1fr; gap: 7px; }
+  .ccc-home-fronts__grid > a { min-height: 112px; padding: 9px; }
+  .ccc-home-fronts__grid small { font-size: .43rem; }
+  .ccc-home-fronts__grid strong { font-size: .59rem; }
+  .ccc-home-fronts__grid p { display: -webkit-box; overflow: hidden; font-size: .48rem; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+  .ccc-home-fronts__grid span { font-size: .45rem; }
+}
+
+@media (max-width: 390px) {
+  .ccc-home-fronts__grid { grid-template-columns: 1fr; }
+  .ccc-home-fronts__grid > a { min-height: 96px; }
 }

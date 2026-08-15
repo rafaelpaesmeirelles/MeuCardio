@@ -112,17 +112,40 @@ def test_destination_mismatch_falha_fechado_sem_consultar_provider(monkeypatch):
     assert chamado is False
 
 
-def test_mobilidade_avancada_permanece_no_assistente_sem_redesenhar_home():
+def test_home_mobile_mobilidade_e_privacidade_contract():
     home = (ROOT / "frontend/src/pages/PainelClinicalOS.tsx").read_text(encoding="utf-8")
     assistant = (ROOT / "frontend/src/components/PersonalAssistantPanel.tsx").read_text(encoding="utf-8")
     mobile_nav = (ROOT / "frontend/src/components/ClinicalMobileNav.tsx").read_text(encoding="utf-8")
     css = (ROOT / "frontend/src/styles/clinical-home-mobile-final.css").read_text(encoding="utf-8")
     endpoint = (ROOT / "backend/app/api/agenda_mobility_targeted.py").read_text(encoding="utf-8")
 
-    # A mobilidade avançada continua funcional no Assistente/Agenda e no backend.
+    # O mesmo appointment_id controla destino e resposta, no Home e no Assistente.
+    assert 'item.appointment_id === proximo.id' in home
+    assert 'resultado.destination?.appointment_id !== proximo.id' in home
     assert 'item.appointment_id === proximo.id' in assistant
     assert 'resultado.destination?.appointment_id !== proximo.id' in assistant
+    assert '"/agenda/mobility/commute-appointment"' in home
     assert '"/agenda/mobility/commute-appointment"' in assistant
+
+    # Disabled não deve alcançar geolocation; auto-refresh exige preferência e foreground.
+    inicio_funcao = home.index("const calcularDeslocamento")
+    fim_funcao = home.index("useEffect(() => {", inicio_funcao)
+    funcao = home[inicio_funcao:fim_funcao]
+    assert funcao.index("!mobilidade?.enabled") < funcao.index("navigator.geolocation")
+    assert "mobilidade.automatic_foreground_refresh" in home
+    assert "mobilidade.refresh_interval_minutes" in home
+    assert 'document.visibilityState !== "visible"' in home
+    assert 'document.addEventListener("visibilitychange"' in home
+    assert "chamadaRotaEmCurso.current" in home
+
+    # Estados e métricas vêm do retorno real, sem destino inventado.
+    assert 'permissao === "negada"' in home
+    assert 'Provider de trânsito indisponível' in home
+    assert 'resultado.status: "destination_mismatch"' not in home
+    assert "rota.distance_meters" in home
+    assert "rota.traffic_delay_seconds" in home
+    assert "rota.duration_seconds + destino.arrival_buffer_minutes * 60" in home
+    assert 'find((item) => item.source === "appointment"' in home
 
     # Coordenadas só entram na chamada ao provider; auditoria guarda provider/status.
     audit_start = endpoint.index("_audit(")
@@ -130,31 +153,30 @@ def test_mobilidade_avancada_permanece_no_assistente_sem_redesenhar_home():
     assert '"latitude"' not in audit_block
     assert '"longitude"' not in audit_block
 
-    # O painel autenticado volta à composição aprovada anterior ao enriquecimento.
-    assert "<MapaDeslocamento" not in home
-    assert "ccc-mobile-commute" not in home
-    assert "ccc-home-fronts" not in home
-    assert "Clínica & Decisão" not in home
-    assert "Estudo & Aprendizagem" not in home
-    assert "Trabalho & Assistência" not in home
+    # Mini mapa é contido no card; a lista detalhada fica fora do preview compacto.
+    assert "<MapaDeslocamento" in home
+    assert ".ccc-mobile-commute__map" in css
+    assert "overflow: hidden" in css
+    assert ".ccc-mobile-commute__map .deslocamento-rotas" in css
 
-    # Ordem mobile aprovada: Seu dia -> Assistente -> Atualizações.
+    # Ordem mobile canônica e bottom nav imutável.
     seu_dia = home.index("<small>Seu dia</small>")
-    assistente = home.index("<small>Assistente</small>", seu_dia)
+    deslocamento = home.index("<small>Deslocamento</small>", seu_dia)
+    assistente = home.index("<small>Assistente</small>", deslocamento)
     atualizacoes = home.index("<small>Atualizações</small>", assistente)
-    assert seu_dia < assistente < atualizacoes
-    assert "<small>Deslocamento</small>" not in home[seu_dia:atualizacoes]
+    assert seu_dia < deslocamento < assistente < atualizacoes
 
-    # CSS final volta a ser somente a guarda de fidelidade da prancha mobile.
-    assert "Final mobile fidelity against the approved HOME MOBILE board" in css
-    assert ".ccc-home--board .ccc-updates-section { display: none !important; }" in css
-    assert "ccc-mobile-commute" not in css
-
-    # Bottom nav continua imutável.
     labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
     posicoes = [mobile_nav.index(f"<span>{label}</span>") for label in labels]
     assert posicoes == sorted(posicoes)
     assert len(posicoes) == 5
+
+    # A Home ganhou densidade sem apagar as três frentes nem Tudo com Tudo.
+    assert "Clínica & Decisão" in home
+    assert "Estudo & Aprendizagem" in home
+    assert "Trabalho & Assistência" in home
+    assert "Tudo com Tudo" in home
+    assert ".ccc-home--board .ccc-updates-section { display: block !important; }" in css
 
 
 def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
