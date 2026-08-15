@@ -52,7 +52,7 @@ EXPECTED_NAV_ROUTES = {
 }
 
 EXPECTED_BACKEND_ROUTERS = {
-    "health.router", "auth.router", "browser_session.router", "password_reset.router",
+    "health.router", "auth.router", "browser_session.router", "social_login.router", "password_reset.router",
     "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "service_orders.router",
     "partner_courses.router", "email_api.router", "email_session.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
@@ -119,6 +119,7 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/clinical_cases.py",
     "backend/app/api/account_sync.py",
     "backend/app/api/agenda_integrada.py",
+    "backend/app/api/social_login.py",
     "backend/app/api/specialty_guides.py",
     "backend/app/models/account_recovery.py",
     "backend/app/models/specialty_guide.py",
