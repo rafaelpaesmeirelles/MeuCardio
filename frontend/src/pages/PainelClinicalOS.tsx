@@ -15,14 +15,18 @@ type Paciente = { id: number };
 type Agendamento = { id: number; patient_name: string | null; scheduled_at: string; appointment_type: string; status: string };
 type PreferenciaMobilidade = { enabled: boolean; automatic_foreground_refresh: boolean; refresh_interval_minutes: number; traffic_configured: boolean };
 type ProximoLocal = {
+  target_key: string;
+  target_type: "appointment" | "work_routine" | "commitment" | string;
   appointment_id: number | null;
   routine_id: number | null;
+  commitment_id?: string | null;
   starts_at: string;
   ends_at: string | null;
   service_name: string;
-  source: "work_routine" | "appointment";
+  title?: string;
+  source: "work_routine" | "appointment" | "commitment";
   arrival_buffer_minutes: number;
-  location: { id: number; name: string; address: Record<string, string>; latitude: number | null; longitude: number | null };
+  location: { id: number; name: string; address: Record<string, string>; latitude: number | null; longitude: number | null } | null;
 };
 type Deslocamento = { status: string; provider?: string; updated_at?: string; destination: ProximoLocal | null; routes: RotaDeslocamento[]; tips: string[] };
 type Origem = { latitude: number; longitude: number } | null;
@@ -176,7 +180,7 @@ export default function PainelClinicalOS() {
   const [estudos, setEstudos] = useState<number | null>(null);
   const [pacientes, setPacientes] = useState<number | null>(null);
   const [agenda, setAgenda] = useState<Agendamento[]>([]);
-  const [proximosLocais, setProximosLocais] = useState<ProximoLocal[]>([]);
+  const [proximoAlvo, setProximoAlvo] = useState<ProximoLocal | null>(null);
   const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
   const [deslocamento, setDeslocamento] = useState<Deslocamento | null>(null);
   const [origem, setOrigem] = useState<Origem>(null);
@@ -204,7 +208,7 @@ export default function PainelClinicalOS() {
     api.get<Contagem>("/studies?limit=1").then((r) => setEstudos(r.total ?? null)).catch(() => setEstudos(null));
     api.get<Paciente[]>("/round/patients").then((r) => setPacientes(r.length)).catch(() => setPacientes(null));
     api.get<Array<{ id: number; patient_name: string | null; starts_at: string; appointment_type: string; status: string }>>("/agenda/appointments").then((items) => setAgenda(items.map((item) => ({ id: item.id, patient_name: item.patient_name, scheduled_at: item.starts_at, appointment_type: item.appointment_type, status: item.status })))).catch(() => setAgenda([]));
-    api.get<ProximoLocal[]>("/agenda/workday/next-locations?limit=10").then(setProximosLocais).catch(() => setProximosLocais([]));
+    api.post<ProximoLocal | null>("/agenda/mobility/prepare-next-target", {}).catch(() => api.get<ProximoLocal | null>("/agenda/mobility/next-target")).then(setProximoAlvo).catch(() => setProximoAlvo(null));
     api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
     api.get<ConfigMapa>("/agenda/mobility/map-config").then(setConfigMapa).catch(() => setConfigMapa(null));
   }, []);
@@ -232,17 +236,25 @@ export default function PainelClinicalOS() {
 
   const contextos = useMemo(() => recentes.length ? recentes : CONTEXTOS_INICIAIS, [recentes]);
   const compromissosHoje = useMemo(() => agenda.filter((item) => item.status !== "cancelado" && mesmoDia(new Date(item.scheduled_at), new Date())).sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at)), [agenda]);
-  const proximo = useMemo(() => agenda.filter((item) => item.status !== "cancelado" && +new Date(item.scheduled_at) >= Date.now()).sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at))[0], [agenda]);
-  const destino = useMemo(() => proximo ? proximosLocais.find((item) => item.source === "appointment" && item.appointment_id === proximo.id) ?? null : null, [proximo, proximosLocais]);
+  const proximoAgenda = useMemo(() => agenda.filter((item) => item.status !== "cancelado" && +new Date(item.scheduled_at) >= Date.now()).sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at))[0], [agenda]);
+  const proximo = useMemo<Agendamento | undefined>(() => proximoAlvo ? ({
+    id: proximoAlvo.appointment_id || 0,
+    patient_name: proximoAlvo.title || proximoAlvo.location?.name || proximoAlvo.service_name || null,
+    scheduled_at: proximoAlvo.starts_at,
+    appointment_type: proximoAlvo.service_name || "Compromisso",
+    status: "confirmado",
+  }) : proximoAgenda, [proximoAlvo, proximoAgenda]);
+  const destino = proximoAlvo;
+  const targetKey = destino?.target_key || null;
   const pendencias = useMemo(() => agenda.filter((item) => ["pendente", "pending_external", "proposed"].includes(item.status)).length, [agenda]);
-  const rota = deslocamento?.destination?.appointment_id === proximo?.id ? deslocamento?.routes?.[0] : undefined;
+  const rota = deslocamento?.destination?.target_key === targetKey ? deslocamento?.routes?.[0] : undefined;
   const saidaRecomendada = destino && rota && proximo ? new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + destino.arrival_buffer_minutes * 60) * 1000) : null;
   const chegadaPrevista = rota ? new Date((deslocamento?.updated_at ? new Date(deslocamento.updated_at).getTime() : Date.now()) + rota.duration_seconds * 1000) : null;
   const destinoMapeavel = Boolean(destino?.location && destino.location.latitude != null && destino.location.longitude != null);
+  const provedorMapa = deslocamento?.provider || configMapa?.provider;
 
   const calcularDeslocamento = useCallback((solicitarPermissao = false) => {
-    if (!mobilidade?.enabled || !proximo || !destino || destino.appointment_id !== proximo.id) return;
-    if (destino.location.latitude == null || destino.location.longitude == null) return;
+    if (!mobilidade?.enabled || !proximo || !destino || !targetKey || !destino.location) return;
     if (!navigator.geolocation || chamadaRotaEmCurso.current) return;
     if (!solicitarPermissao && permissao !== "concedida") return;
 
@@ -253,18 +265,26 @@ export default function PainelClinicalOS() {
       const origemAtual = { latitude: position.coords.latitude, longitude: position.coords.longitude };
       setOrigem(origemAtual);
       setPermissao("concedida");
-      api.post<Deslocamento>("/agenda/mobility/commute-appointment", {
+      api.post<Deslocamento>("/agenda/mobility/commute-target", {
         ...origemAtual,
-        appointment_id: proximo.id,
+        target_key: targetKey,
       }).then((resultado) => {
-        if (resultado.destination?.appointment_id !== proximo.id) {
+        if (resultado.destination?.target_key !== targetKey) {
           setDeslocamento({ ...resultado, status: "destination_mismatch", destination: null, routes: [] });
           setErroRota("O destino retornado não corresponde ao compromisso exibido.");
           return;
         }
         setDeslocamento(resultado);
+        setProximoAlvo(resultado.destination);
         ultimaRotaEm.current = Date.now();
-        if (!resultado.routes?.length && resultado.status !== "ok") setErroRota("O provedor não retornou uma rota utilizável.");
+        if (!resultado.routes?.length && resultado.status !== "ok") {
+          const mensagem = resultado.status === "destination_not_geocoded"
+            ? "Não foi possível localizar com segurança o endereço deste compromisso. Complete o local na Agenda."
+            : resultado.status === "destination_without_location"
+              ? "Este compromisso ainda não possui um local definido."
+              : "O provedor não retornou uma rota utilizável.";
+          setErroRota(mensagem);
+        }
       }).catch(() => {
         setErroRota("Não foi possível atualizar a rota agora.");
       }).finally(() => {
@@ -277,10 +297,10 @@ export default function PainelClinicalOS() {
       chamadaRotaEmCurso.current = false;
       setCalculandoRota(false);
     }, { enableHighAccuracy: false, timeout: 8000, maximumAge: 120000 });
-  }, [destino, mobilidade?.enabled, permissao, proximo]);
+  }, [destino, mobilidade?.enabled, permissao, proximo, targetKey]);
 
   useEffect(() => {
-    if (!mobilidade?.enabled || !mobilidade.automatic_foreground_refresh || permissao !== "concedida" || !destino || destino.appointment_id !== proximo?.id) return;
+    if (!mobilidade?.enabled || !mobilidade.automatic_foreground_refresh || permissao !== "concedida" || !destino || !targetKey) return;
     const intervaloMs = Math.max(2, mobilidade.refresh_interval_minutes || 5) * 60000;
     const atualizarSeVisivel = () => {
       if (document.visibilityState !== "visible") return;
@@ -292,7 +312,7 @@ export default function PainelClinicalOS() {
     const visibilidade = () => { if (document.visibilityState === "visible") atualizarSeVisivel(); };
     document.addEventListener("visibilitychange", visibilidade);
     return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", visibilidade); };
-  }, [calcularDeslocamento, destino, mobilidade?.automatic_foreground_refresh, mobilidade?.enabled, mobilidade?.refresh_interval_minutes, permissao, proximo?.id]);
+  }, [calcularDeslocamento, destino, mobilidade?.automatic_foreground_refresh, mobilidade?.enabled, mobilidade?.refresh_interval_minutes, permissao, targetKey]);
 
   function executar(evento: FormEvent) { evento.preventDefault(); if (comando.trim().length < 2) return; navigate(destinoDoComando(comando)); }
   function usarExemplo(texto: string) { setComando(texto); inputRef.current?.focus(); }
@@ -302,8 +322,8 @@ export default function PainelClinicalOS() {
     ? "Sem compromisso futuro"
     : !destino
       ? "Este compromisso não possui endereço/local disponível para rota"
-      : destino.location.latitude == null || destino.location.longitude == null
-        ? "Local sem coordenadas configuradas"
+      : !destino.location
+        ? "Este compromisso ainda não possui local definido"
         : !mobilidade?.enabled
           ? "Mobilidade desabilitada"
           : permissao === "negada"
@@ -314,7 +334,7 @@ export default function PainelClinicalOS() {
                 ? "Calculando rota com trânsito atual..."
                 : rota
                   ? `${Math.ceil(rota.duration_seconds / 60)} min · ${(rota.distance_meters / 1000).toFixed(1)} km · trânsito ${transito(rota.congestion)}`
-                  : erroRota || "Rota ainda não calculada";
+                  : erroRota || (destino.location.latitude == null || destino.location.longitude == null ? "Localizando destino para calcular a rota" : "Mapa pronto · permita sua localização para calcular a rota");
 
   const grupos = MODULOS.map((grupo) => ({ ...grupo, items: grupo.items.filter((item) => !item.adminOnly || usuario?.role === "admin") })).filter((grupo) => grupo.items.length);
 
@@ -344,14 +364,14 @@ export default function PainelClinicalOS() {
 
           <article className="ccc-mobile-commute ccc-reference-commute" aria-label="Próximo Deslocamento">
             <header>
-              <span><small>Próximo Deslocamento</small><strong>{destino?.location.name || proximo?.patient_name || "Próximo compromisso"}</strong>{proximo && <p>{proximo.appointment_type} · {horario(proximo.scheduled_at)}</p>}</span>
+              <span><small>Próximo Deslocamento</small><strong>{destino?.location?.name || proximo?.patient_name || "Próximo compromisso"}</strong>{proximo && <p>{proximo.appointment_type} · {horario(proximo.scheduled_at)}</p>}</span>
               <span className="ccc-mobile-commute__icon"><Icone nome="rota" /></span>
             </header>
             <div className="ccc-reference-commute__details">
               <div className="ccc-reference-commute__route">
                 <span><small>Saída às</small><strong>{saidaRecomendada ? horario(saidaRecomendada.toISOString()) : "—"}</strong><p>{rota ? `Em ${Math.ceil(rota.duration_seconds / 60)} min` : "Horário calculado com trânsito"}</p></span>
                 <span className="ccc-reference-commute__point"><i className="is-origin" /><small>Origem</small><strong>{origem ? "Sua localização atual" : "Localização atual"}</strong></span>
-                <span className="ccc-reference-commute__point"><i className="is-destination" /><small>Destino</small><strong>{destino?.location.name || "A definir"}</strong><p>{enderecoDestino(destino)}</p></span>
+                <span className="ccc-reference-commute__point"><i className="is-destination" /><small>Destino</small><strong>{destino?.location?.name || "A definir"}</strong><p>{enderecoDestino(destino)}</p></span>
               </div>
               <div className="ccc-mobile-commute__metrics">
                 <span><small>Tempo estimado</small><strong>{rota ? `${Math.ceil(rota.duration_seconds / 60)} min` : "—"}</strong></span>
@@ -360,10 +380,10 @@ export default function PainelClinicalOS() {
                 <span><small>Chegada</small><strong>{chegadaPrevista ? horario(chegadaPrevista.toISOString()) : "—"}</strong></span>
               </div>
               {!rota && <div className={`ccc-mobile-commute__state${calculandoRota ? " is-loading" : ""}`}><span><Icone nome={calculandoRota ? "sincronizar" : destinoMapeavel ? "rota" : "pin"} /></span><p>{descricaoDeslocamento}</p></div>}
-              <footer><Link to="/agenda">{rota ? "Ver rota" : "Abrir Agenda"} <Icone nome="seta" /></Link>{mobilidade?.enabled && destino && destino.location.latitude != null && destino.location.longitude != null && (!mobilidade.automatic_foreground_refresh || !rota || erroRota) && <button type="button" onClick={() => calcularDeslocamento(true)} disabled={calculandoRota}>{calculandoRota ? "Atualizando..." : rota ? "Atualizar rota" : "Calcular rota"}</button>}</footer>
+              <footer><Link to="/agenda">{rota ? "Ver rota" : "Abrir Agenda"} <Icone nome="seta" /></Link>{mobilidade?.enabled && destino?.location && (!mobilidade.automatic_foreground_refresh || !rota || erroRota) && <button type="button" onClick={() => calcularDeslocamento(true)} disabled={calculandoRota}>{calculandoRota ? "Atualizando..." : permissao === "negada" ? "Tentar novamente" : rota ? "Atualizar rota" : "Calcular rota"}</button>}</footer>
             </div>
             <div className="ccc-mobile-commute__map ccc-reference-commute__map">
-              {destinoMapeavel && destino ? <MapaDeslocamento rotas={deslocamento?.routes || []} origem={origem} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={deslocamento?.provider || configMapa?.provider} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /> : <div className="ccc-reference-map-empty"><Icone nome="rota" /><strong>Mapa do próximo deslocamento</strong><span>{descricaoDeslocamento}</span></div>}
+              {destinoMapeavel && destino?.location ? <MapaDeslocamento rotas={deslocamento?.routes || []} origem={origem} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /> : <div className="ccc-reference-map-empty"><Icone nome="rota" /><strong>Mapa do próximo deslocamento</strong><span>{descricaoDeslocamento}</span></div>}
             </div>
           </article>
 
@@ -417,8 +437,11 @@ export default function PainelClinicalOS() {
           <header><span><span className="ccc-spark">✦</span> Assistente Pessoal</span><span className="ccc-assistant-window-controls" aria-hidden="true"><i>−</i><i>×</i></span></header>
           <div className="ccc-assistant-greeting"><span className="ccc-spark">✦</span><div><strong>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}!</strong><small>Aqui está o resumo do seu dia.</small></div></div>
           <div className="ccc-assistant-block"><small>Seu dia</small><div className="ccc-assistant-row"><span><Icone nome="agenda" /></span><div><strong>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"}</strong><p>{proximo ? `${dataCurta(proximo.scheduled_at)} · ${horario(proximo.scheduled_at)}` : "Nenhum compromisso pendente"}</p></div></div></div>
-          <div className="ccc-assistant-block"><small>Próximo compromisso</small><div className="ccc-assistant-row"><span><Icone nome="pin" /></span><div><strong>{destino?.location.name || proximo?.patient_name || "Agenda disponível"}</strong><p>{destino ? `${destino.service_name} · ${horario(proximo?.scheduled_at)}` : proximo ? `${proximo.appointment_type} · ${horario(proximo.scheduled_at)}` : "Sem próximo compromisso definido"}</p></div></div><Link to="/agenda" className="ccc-assistant-inline-action">Ver agenda</Link></div>
-          <div className="ccc-assistant-block"><small>Deslocamento</small><div className="ccc-assistant-row"><span><Icone nome="rota" /></span><div><strong>{saidaRecomendada ? `Sair às ${horario(saidaRecomendada.toISOString())}` : descricaoDeslocamento}</strong><p>{rota ? `${Math.ceil(rota.duration_seconds / 60)} min · ${(rota.distance_meters / 1000).toFixed(1)} km${rota.traffic_delay_seconds > 0 ? ` · +${Math.ceil(rota.traffic_delay_seconds / 60)} min` : ""}` : "A rota nunca é substituída por outro compromisso."}</p></div></div><Link to="/agenda" className="ccc-assistant-inline-action">Ver rota</Link></div>
+          <div className="ccc-assistant-block"><small>Próximo compromisso</small><div className="ccc-assistant-row"><span><Icone nome="pin" /></span><div><strong>{destino?.location?.name || proximo?.patient_name || "Agenda disponível"}</strong><p>{destino ? `${destino.service_name} · ${horario(proximo?.scheduled_at)}` : proximo ? `${proximo.appointment_type} · ${horario(proximo.scheduled_at)}` : "Sem próximo compromisso definido"}</p></div></div><Link to="/agenda" className="ccc-assistant-inline-action">Ver agenda</Link></div>
+          <div className="ccc-assistant-block ccc-assistant-block--commute"><small>Próximo Deslocamento</small><div className="ccc-assistant-row"><span><Icone nome="rota" /></span><div><strong>{saidaRecomendada ? `Sair às ${horario(saidaRecomendada.toISOString())}` : descricaoDeslocamento}</strong><p>{rota ? `${Math.ceil(rota.duration_seconds / 60)} min · ${(rota.distance_meters / 1000).toFixed(1)} km${rota.traffic_delay_seconds > 0 ? ` · +${Math.ceil(rota.traffic_delay_seconds / 60)} min` : ""}` : destinoMapeavel ? "Destino localizado no mapa; rota depende da localização atual." : "A rota nunca é substituída por outro compromisso."}</p></div></div>
+            {destinoMapeavel && destino?.location && <div className="ccc-assistant-commute-map"><MapaDeslocamento rotas={deslocamento?.routes || []} origem={origem} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /></div>}
+            <div className="ccc-assistant-commute-actions"><Link to="/agenda" className="ccc-assistant-inline-action">Ver agenda</Link>{mobilidade?.enabled && destino?.location && <button type="button" className="ccc-assistant-inline-action" onClick={() => calcularDeslocamento(true)} disabled={calculandoRota}>{calculandoRota ? "Atualizando…" : rota ? "Atualizar rota" : "Calcular rota"}</button>}</div>
+          </div>
           <div className="ccc-assistant-block"><small>Pendências</small><div className="ccc-assistant-checks"><span><i />{pendencias} agendamento{pendencias === 1 ? "" : "s"} a revisar</span><span><i />{pacientes ?? 0} paciente{pacientes === 1 ? "" : "s"} no round</span></div></div>
           <button type="button" className="ccc-assistant-input" onClick={abrirAssistentePessoal}><span>Pergunte ou peça algo...</span><Icone nome="assistente" /></button>
         </section>
