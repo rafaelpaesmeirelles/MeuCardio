@@ -27,7 +27,10 @@ export default function PreHomeBrand({
   celebratory = false,
 }: Props) {
   return (
-    <section className={`prehome-brand${celebratory ? " prehome-brand--celebratory" : ""}`}>
+    <section
+      className={`prehome-brand${celebratory ? " prehome-brand--celebratory" : ""}`}
+      style={{ alignSelf: "start" }}
+    >
       <div className="prehome-brand__aurora prehome-brand__aurora--cyan" aria-hidden="true" />
       <div className="prehome-brand__aurora prehome-brand__aurora--violet" aria-hidden="true" />
 
@@ -46,16 +49,8 @@ export default function PreHomeBrand({
         </div>
 
         <div className="prehome-brand__hologram" aria-hidden="true">
-          <div className="prehome-brand__hud prehome-brand__hud--left">
-            <span />
-            <span />
-            <span />
-          </div>
-          <div className="prehome-brand__hud prehome-brand__hud--right">
-            <span />
-            <span />
-            <span />
-          </div>
+          <div className="prehome-brand__hud prehome-brand__hud--left"><span /><span /><span /></div>
+          <div className="prehome-brand__hud prehome-brand__hud--right"><span /><span /><span /></div>
           <div className="prehome-brand__heart-glow" />
           <img src="/corvia-mark-canonical.svg" alt="" />
           <svg className="prehome-brand__pulse" viewBox="0 0 240 42" focusable="false">
@@ -69,23 +64,15 @@ export default function PreHomeBrand({
         <div className="prehome-brand__benefits">
           {benefits.map((benefit) => (
             <div className="prehome-benefit" data-tone={benefit.tone ?? "cyan"} key={benefit.title}>
-              <span className="prehome-benefit__icon">
-                <Icone nome={benefit.icon} aria-hidden="true" />
-              </span>
-              <span>
-                <strong>{benefit.title}</strong>
-                <small>{benefit.detail}</small>
-              </span>
+              <span className="prehome-benefit__icon"><Icone nome={benefit.icon} aria-hidden="true" /></span>
+              <span><strong>{benefit.title}</strong><small>{benefit.detail}</small></span>
             </div>
           ))}
         </div>
 
         <div className="prehome-brand__trust">
           <Icone nome="check" aria-hidden="true" />
-          <span>
-            <strong>{trustTitle}</strong>
-            <small>{trustText}</small>
-          </span>
+          <span><strong>{trustTitle}</strong><small>{trustText}</small></span>
         </div>
       </div>
 
