@@ -11,6 +11,8 @@ type Documento = {
   review_status: string;
 };
 
+type FormatoApresentacao = "pdf" | "pptx";
+
 function baixar(blob: Blob, nome: string) {
   const url = URL.createObjectURL(blob);
   const ancora = document.createElement("a");
@@ -23,13 +25,10 @@ function baixar(blob: Blob, nome: string) {
 export default function Apresentacao() {
   const [documentos, setDocumentos] = useState<Documento[] | null>(null);
   const [busca, setBusca] = useState("");
-  // 07/08/2026, pedido do Rafael: toda ferramenta de busca do site precisa de
-  // pelo menos duas formas de refinar — aqui, além do termo livre, filtrar
-  // por tema (já presente em cada documento do catálogo), igual ao padrão
-  // já usado em Busca.tsx e nas páginas de listagem da biblioteca.
   const [tema, setTema] = useState("");
   const [selecionado, setSelecionado] = useState<Documento | null>(null);
   const [anotacao, setAnotacao] = useState("");
+  const [formato, setFormato] = useState<FormatoApresentacao>("pdf");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
   const [tentativa, setTentativa] = useState(0);
@@ -63,9 +62,9 @@ export default function Apresentacao() {
     try {
       const blob = await api.blobPost(
         `/biblioteca/${selecionado.slug}/apresentacao`,
-        { anotacao: anotacao.trim() },
+        { anotacao: anotacao.trim(), formato },
       );
-      baixar(blob, `${selecionado.slug}-apresentacao.pdf`);
+      baixar(blob, `${selecionado.slug}-apresentacao.${formato}`);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível gerar a apresentação.");
     } finally {
@@ -80,98 +79,64 @@ export default function Apresentacao() {
     <>
       <p className="eyebrow">Aula e round</p>
       <h1>Modo Apresentação</h1>
-      <p style={{ color: "var(--texto-secundario)", maxWidth: "68ch" }}>
-        Escolha um documento ou fluxograma publicado e gere um PDF em paisagem,
-        com a marca Corvia, seus dados profissionais e sua logo cadastrada.
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "72ch" }}>
+        Escolha um documento ou fluxograma publicado e gere a apresentação com a marca CorVIA,
+        seus dados profissionais e sua logo. Use PDF para projetar ou PowerPoint para editar livremente antes da aula.
       </p>
 
       <div className="grade grade--2" style={{ alignItems: "start", marginTop: "1rem" }}>
         <section>
           <div className="filtros-conteudo">
             <label><strong>Procurar assunto</strong>
-              <input
-                id="busca-apresentacao"
-                value={busca}
-                onChange={(e) => setBusca(e.target.value)}
-                placeholder="Ex.: insuficiência cardíaca, fibrilação atrial, fluxograma…"
-              />
+              <input id="busca-apresentacao" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: insuficiência cardíaca, fibrilação atrial, fluxograma…" />
             </label>
             <label><strong>Área/tema</strong>
               <select value={tema} onChange={(e) => setTema(e.target.value)}>
                 <option value="">Todas as áreas ({documentos?.length ?? 0})</option>
-                {temas.map(([nome, contagem]) => (
-                  <option key={nome} value={nome}>{nome} ({contagem})</option>
-                ))}
+                {temas.map(([nome, contagem]) => <option key={nome} value={nome}>{nome} ({contagem})</option>)}
               </select>
             </label>
           </div>
 
           <div style={{ display: "grid", gap: "0.55rem", marginTop: "0.8rem", maxHeight: "68vh", overflowY: "auto", paddingRight: 4 }}>
-            {filtrados.length === 0 ? (
-              <Vazio titulo="Nenhum documento encontrado" acao="Tente outro termo." />
-            ) : filtrados.map((documento) => (
-              <button
-                type="button"
-                key={documento.slug}
-                className="cartao"
-                onClick={() => { setSelecionado(documento); setErro(""); }}
-                aria-pressed={selecionado?.slug === documento.slug}
-                style={{
-                  textAlign: "left",
-                  cursor: "pointer",
-                  width: "100%",
-                  borderLeft: selecionado?.slug === documento.slug
-                    ? "4px solid var(--acento)"
-                    : undefined,
-                }}
-              >
-                <p className="eyebrow" style={{ margin: 0 }}>
-                  {documento.theme} · {documento.kind}
-                </p>
+            {filtrados.length === 0 ? <Vazio titulo="Nenhum documento encontrado" acao="Tente outro termo." /> : filtrados.map((documento) => (
+              <button type="button" key={documento.slug} className="cartao" onClick={() => { setSelecionado(documento); setErro(""); }} aria-pressed={selecionado?.slug === documento.slug}
+                style={{ textAlign: "left", cursor: "pointer", width: "100%", borderLeft: selecionado?.slug === documento.slug ? "4px solid var(--acento)" : undefined }}>
+                <p className="eyebrow" style={{ margin: 0 }}>{documento.theme} · {documento.kind}</p>
                 <strong>{documento.title}</strong>
-                {documento.summary && (
-                  <span style={{ display: "block", marginTop: 4, fontSize: "0.84rem", color: "var(--texto-secundario)" }}>
-                    {documento.summary}
-                  </span>
-                )}
+                {documento.summary && <span style={{ display: "block", marginTop: 4, fontSize: "0.84rem", color: "var(--texto-secundario)" }}>{documento.summary}</span>}
               </button>
             ))}
           </div>
         </section>
 
         <section className="cartao" style={{ position: "sticky", top: "1rem" }}>
-          {!selecionado ? (
-            <Vazio
-              titulo="Selecione um documento"
-              acao="O título, o resumo e o tipo aparecerão aqui antes da geração."
-            />
-          ) : (
+          {!selecionado ? <Vazio titulo="Selecione um documento" acao="O título, o resumo e o tipo aparecerão aqui antes da geração." /> : (
             <>
               <p className="eyebrow" style={{ margin: 0 }}>Documento selecionado</p>
               <h2 style={{ marginTop: "0.35rem" }}>{selecionado.title}</h2>
-              <p style={{ color: "var(--texto-secundario)" }}>
-                {selecionado.theme} · {selecionado.kind}
-              </p>
+              <p style={{ color: "var(--texto-secundario)" }}>{selecionado.theme} · {selecionado.kind}</p>
               {selecionado.summary && <p>{selecionado.summary}</p>}
 
-              <label htmlFor="anotacao-apresentacao" style={{ marginTop: "0.8rem" }}>
-                Anotação do apresentador (opcional)
-              </label>
-              <textarea
-                id="anotacao-apresentacao"
-                rows={5}
-                value={anotacao}
-                maxLength={2000}
-                onChange={(e) => setAnotacao(e.target.value)}
-                placeholder="Ex.: discutir com a equipe o caso do leito 12."
-              />
-              <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
-                A anotação entra em página própria, não é salva e não altera o conteúdo científico.
-              </p>
+              <fieldset style={{ border: 0, padding: 0, margin: "1rem 0" }}>
+                <legend style={{ fontWeight: 700, marginBottom: "0.5rem" }}>Formato de saída</legend>
+                <label style={{ display: "flex", alignItems: "flex-start", gap: 9, marginBottom: "0.6rem", fontWeight: 400 }}>
+                  <input type="radio" name="formato-modo-apresentacao" checked={formato === "pdf"} onChange={() => setFormato("pdf")} />
+                  <span><strong>PDF</strong><small style={{ display: "block", color: "var(--texto-secundario)", marginTop: 2 }}>Pronto para projetar, compartilhar ou arquivar.</small></span>
+                </label>
+                <label style={{ display: "flex", alignItems: "flex-start", gap: 9, fontWeight: 400 }}>
+                  <input type="radio" name="formato-modo-apresentacao" checked={formato === "pptx"} onChange={() => setFormato("pptx")} />
+                  <span><strong>PowerPoint editável (.pptx)</strong><small style={{ display: "block", color: "var(--texto-secundario)", marginTop: 2 }}>Slides nativos: altere textos, ordem, cortes e acrescente conteúdo próprio no PowerPoint.</small></span>
+                </label>
+              </fieldset>
+
+              <label htmlFor="anotacao-apresentacao" style={{ marginTop: "0.8rem" }}>Anotação do apresentador (opcional)</label>
+              <textarea id="anotacao-apresentacao" rows={5} value={anotacao} maxLength={2000} onChange={(e) => setAnotacao(e.target.value)} placeholder="Ex.: discutir com a equipe o caso do leito 12." />
+              <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>A anotação entra em página/slide próprio, não é salva e não altera o conteúdo científico.</p>
 
               {erro && <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>}
               <button className="botao" style={{ width: "100%", marginTop: "0.9rem" }} onClick={gerar} disabled={gerando}>
-                {gerando ? "Gerando PDF…" : "Gerar apresentação em PDF"}
+                {gerando ? "Gerando…" : formato === "pptx" ? "Gerar PowerPoint editável" : "Gerar apresentação em PDF"}
               </button>
             </>
           )}
