@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
+import PreHomeBrand from "./components/PreHomeBrand";
 import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
 
@@ -67,11 +68,22 @@ const TermosUso = lazy(() => import("./pages/TermosUso"));
 const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
 const Tour = lazy(() => import("./pages/Tour"));
 
+const BENEFICIOS_GATE = [
+  { icon: "assistente" as const, title: "Inteligência clínica", detail: "Contexto, evidência e ação conectados.", tone: "cyan" as const },
+  { icon: "conhecimento" as const, title: "Evidências atualizadas", detail: "Conteúdo clínico rastreável e revisado.", tone: "violet" as const },
+  { icon: "check" as const, title: "Segurança profissional", detail: "Identidade, acesso e dados protegidos.", tone: "green" as const },
+];
+
 function RotasSuspensas({ children }: { children: ReactNode }) {
+  return <Suspense fallback={<Carregando texto="Carregando a tela…" />}>{children}</Suspense>;
+}
+
+function GatePrePainel({ children, titulo, descricao }: { children: ReactNode; titulo: ReactNode; descricao: ReactNode }) {
   return (
-    <Suspense fallback={<Carregando texto="Carregando a tela…" />}>
-      {children}
-    </Suspense>
+    <div className="prepanel-gate">
+      <div className="prepanel-gate__main">{children}</div>
+      <PreHomeBrand title={titulo} description={descricao} benefits={BENEFICIOS_GATE} />
+    </div>
   );
 }
 
@@ -80,11 +92,11 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    (window as unknown as { __corviaVerificarAtualizacao?: () => void })
-      .__corviaVerificarAtualizacao?.();
+    (window as unknown as { __corviaVerificarAtualizacao?: () => void }).__corviaVerificarAtualizacao?.();
   }, [location.pathname]);
 
   if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
+
   if (!usuario) {
     return (
       <RotasSuspensas>
@@ -104,16 +116,34 @@ export default function App() {
     );
   }
 
-  if (usuario.profile_completion_required && location.pathname !== "/minha-conta") {
-    return <Navigate to="/minha-conta" replace />;
+  if (usuario.profile_completion_required) {
+    return (
+      <RotasSuspensas>
+        <GatePrePainel titulo={<>Complete seu <strong>perfil profissional</strong></>} descricao={<>Uma etapa única para personalizar documentos, contexto e identidade clínica.</>}>
+          <MinhaConta />
+        </GatePrePainel>
+      </RotasSuspensas>
+    );
   }
 
-  if (usuario.kyc_required && location.pathname !== "/verificacao-identidade") {
-    return <Navigate to="/verificacao-identidade" replace />;
+  if (usuario.kyc_required) {
+    return (
+      <RotasSuspensas>
+        <GatePrePainel titulo={<>Confirme sua <strong>identidade</strong></>} descricao={<>Proteção profissional antes de liberar documentos e recursos clínicos.</>}>
+          <VerificacaoIdentidade />
+        </GatePrePainel>
+      </RotasSuspensas>
+    );
   }
 
-  if (usuario.onboarding_pendente && location.pathname !== "/tour") {
-    return <Navigate to="/tour" replace />;
+  if (usuario.onboarding_pendente) {
+    return (
+      <RotasSuspensas>
+        <GatePrePainel titulo={<>Conheça seu <strong>Clinical OS</strong></>} descricao={<>Um início guiado antes de entrar no Command Center completo.</>}>
+          <Tour />
+        </GatePrePainel>
+      </RotasSuspensas>
+    );
   }
 
   return (
