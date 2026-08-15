@@ -6,10 +6,11 @@ precisa corresponder a uma conta CorVIA existente e ativa.
 
 Google/Microsoft podem reutilizar as credenciais OAuth já existentes da Agenda
 quando não houver cliente de login dedicado. Apple e GitHub são habilitados
-somente quando suas credenciais próprias estiverem configuradas.
+somente quando suas credenciais próprias estiverem configuradas no ambiente.
 """
 from __future__ import annotations
 
+import os
 import secrets
 from datetime import datetime, timedelta, timezone
 from typing import Any
@@ -47,17 +48,21 @@ _GITHUB_USER = "https://api.github.com/user"
 _GITHUB_EMAILS = "https://api.github.com/user/emails"
 
 
+def _env(name: str) -> str:
+    return (os.getenv(name) or "").strip()
+
+
 def _google_credentials() -> tuple[str, str]:
     return (
-        settings.google_signin_client_id or settings.google_oauth_client_id,
-        settings.google_signin_client_secret or settings.google_oauth_client_secret,
+        _env("GOOGLE_SIGNIN_CLIENT_ID") or settings.google_oauth_client_id,
+        _env("GOOGLE_SIGNIN_CLIENT_SECRET") or settings.google_oauth_client_secret,
     )
 
 
 def _microsoft_credentials() -> tuple[str, str]:
     return (
-        settings.microsoft_signin_client_id or settings.microsoft_oauth_client_id,
-        settings.microsoft_signin_client_secret or settings.microsoft_oauth_client_secret,
+        _env("MICROSOFT_SIGNIN_CLIENT_ID") or settings.microsoft_oauth_client_id,
+        _env("MICROSOFT_SIGNIN_CLIENT_SECRET") or settings.microsoft_oauth_client_secret,
     )
 
 
@@ -67,9 +72,9 @@ def _provider_credentials(provider: str) -> tuple[str, str]:
     if provider == "microsoft":
         return _microsoft_credentials()
     if provider == "apple":
-        return settings.apple_signin_client_id, settings.apple_signin_key_id
+        return _env("APPLE_SIGNIN_CLIENT_ID"), _env("APPLE_SIGNIN_KEY_ID")
     if provider == "github":
-        return settings.github_signin_client_id, settings.github_signin_client_secret
+        return _env("GITHUB_SIGNIN_CLIENT_ID"), _env("GITHUB_SIGNIN_CLIENT_SECRET")
     return "", ""
 
 
@@ -79,8 +84,8 @@ def _configured(provider: str) -> bool:
         return bool(
             client_id
             and client_secret
-            and settings.apple_signin_team_id
-            and settings.apple_signin_private_key
+            and _env("APPLE_SIGNIN_TEAM_ID")
+            and _env("APPLE_SIGNIN_PRIVATE_KEY")
         )
     return bool(client_id and client_secret)
 
@@ -90,7 +95,7 @@ def _redirect_uri(provider: str) -> str:
 
 
 def _microsoft_authority() -> str:
-    tenant = (settings.microsoft_signin_tenant or settings.microsoft_oauth_tenant or "common").strip()
+    tenant = (_env("MICROSOFT_SIGNIN_TENANT") or settings.microsoft_oauth_tenant or "common").strip()
     if not tenant or not all(ch.isalnum() or ch in {"-", "."} for ch in tenant):
         raise HTTPException(status_code=503, detail="Tenant Microsoft de login inválido.")
     return f"https://login.microsoftonline.com/{tenant}/oauth2/v2.0"
@@ -147,19 +152,19 @@ def _valid_user(db: Session, email: str) -> User | None:
 
 
 def _apple_client_secret() -> str:
-    raw_key = settings.apple_signin_private_key.replace("\\n", "\n").strip()
+    raw_key = _env("APPLE_SIGNIN_PRIVATE_KEY").replace("\\n", "\n")
     now = datetime.now(timezone.utc)
     return jwt.encode(
         {
-            "iss": settings.apple_signin_team_id,
+            "iss": _env("APPLE_SIGNIN_TEAM_ID"),
             "iat": now,
             "exp": now + timedelta(minutes=10),
             "aud": "https://appleid.apple.com",
-            "sub": settings.apple_signin_client_id,
+            "sub": _env("APPLE_SIGNIN_CLIENT_ID"),
         },
         raw_key,
         algorithm="ES256",
-        headers={"kid": settings.apple_signin_key_id},
+        headers={"kid": _env("APPLE_SIGNIN_KEY_ID")},
     )
 
 
@@ -222,7 +227,7 @@ async def _identity(provider: str, token: dict[str, Any], nonce: str) -> tuple[s
                 id_token,
                 signing_key.key,
                 algorithms=["RS256"],
-                audience=settings.apple_signin_client_id,
+                audience=_env("APPLE_SIGNIN_CLIENT_ID"),
                 issuer="https://appleid.apple.com",
             )
         except (jwt.PyJWTError, ValueError) as exc:
