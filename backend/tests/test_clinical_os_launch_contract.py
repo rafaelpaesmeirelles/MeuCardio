@@ -12,16 +12,21 @@ LAUNCH_FILES = [
 ]
 A11Y = ROOT / "frontend/src/styles/clinical-os-a11y.css"
 SHELL = LAUNCH_FILES[0]
+PAINEL = LAUNCH_FILES[2]
 TOUR = LAUNCH_FILES[-1]
 
 
-def test_launch_expoe_um_unico_nome_para_o_assistente():
-    for caminho in LAUNCH_FILES:
-        fonte = caminho.read_text(encoding="utf-8")
-        assert "CorVIA AI" not in fonte, caminho
-
+def test_launch_preserva_taxonomia_aprovada_dos_assistentes():
+    painel = PAINEL.read_text(encoding="utf-8")
     tour = TOUR.read_text(encoding="utf-8")
-    assert "CorVIA Chat" in tour  # comunicação profissional continua sendo produto separado
+
+    # A prancha canônica aprovada usa CorVIA AI como ação rápida que abre a
+    # Assistente Clínica. Isso é distinto do Assistente Pessoal da Home e do
+    # CorVIA Chat, que permanece produto de comunicação profissional.
+    assert 'titulo: "CorVIA AI"' in painel
+    assert 'detalhe: "Assistente Clínica"' in painel
+    assert "Assistente Pessoal" in painel
+    assert "CorVIA Chat" in tour
 
 
 def test_tour_nao_posiciona_corvia_como_prontuario_e_identifica_dados_de_mock():
