@@ -50,11 +50,12 @@ def test_login_copy_and_all_real_auth_controls_remain_available():
 def test_approved_prehome_css_keeps_desktop_mobile_and_dark_contracts():
     css = read("styles/prehome-approved-auth-flow.css")
     compact = "".join(css.split())
-    assert "grid-template-columns:minmax(430px,42%)minmax(520px,58%)" in compact
+    assert "grid-template-columns:minmax(430px,42%)minmax(520px,58%)!important" in compact
     assert ".prehome-brand__pillars" in css
     assert ".prehome-brand__hologram" in css
     assert ".prehome-card" in css
     assert "@media(max-width:820px)" in compact
-    assert ".login.prehome{display:block;min-height:100svh}" in compact
+    assert ".login.prehome{display:block!important;min-height:100svh}" in compact
+    assert ".prehome-brand__benefits,.prehome-brand__trust{display:none!important}" in compact
     assert ".cos-tour" in css
     assert "--auth-bg:#020710" in compact
