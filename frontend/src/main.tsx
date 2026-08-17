@@ -54,6 +54,7 @@ import "./styles/clinical-navigation-reference-final.css";
 import "./styles/clinical-reference-fidelity-release.css";
 import "./styles/release-candidate-hotfix.css";
 import "./styles/clinical-interior-board-lock.css";
+import "./styles/postdeploy-home-density.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;

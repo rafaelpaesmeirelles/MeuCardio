@@ -1,0 +1,103 @@
+/* CorVIA Clinical OS — correções pós-deploy da Home.
+   Escopo deliberadamente estreito: corrige enquadramento/densidade em desktop
+   e notebook sem alterar conteúdo, backend, inventário funcional ou mobile. */
+
+@media (min-width: 901px) {
+  /* A prancha aprovada tem uma faixa superior em três colunas
+     (workspace + Intelligence + Assistente) e, abaixo dela, faixas que usam
+     toda a largura útil. No release, .ccc-home__main encapsulava também
+     Atualizações/Diretório/Pilares; por isso essas seções ficavam presas só
+     à primeira coluna e sobrava uma grande área morta sob os dois rails.
+
+     display: contents preserva o DOM/semântica e permite ao grid raiz posicionar
+     cada seção na faixa correta sem mover JSX nem remover funcionalidade. */
+  .ccc-reference-board .ccc-home__main {
+    display: contents !important;
+  }
+
+  .ccc-reference-board .ccc-home__welcome {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .ccc-reference-board .ccc-actions-section {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .ccc-reference-board .ccc-reference-summary {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: stretch;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: start !important;
+    height: max-content !important;
+    min-height: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-home__assistant {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    align-self: start !important;
+    height: max-content !important;
+    min-height: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-reference-updates {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    width: 100%;
+  }
+
+  .ccc-reference-board .ccc-module-directory {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    width: 100%;
+  }
+
+  .ccc-reference-board .ccc-reference-trust {
+    grid-column: 1 / -1;
+    grid-row: 6;
+    width: 100%;
+  }
+
+  /* O strip canônico reservava sempre seis tracks. Quando o backend entrega
+     menos cards reais, os tracks vazios continuavam ocupando largura.
+     auto-fit colapsa apenas tracks sem item e redistribui a faixa inteira. */
+  .ccc-reference-board .ccc-reference-update-strip {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    align-items: stretch !important;
+  }
+
+  .ccc-reference-board .ccc-reference-update-strip > * {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* O breakpoint legado <=1280 escondia contextos recentes, reduzindo ainda
+     mais a densidade justamente em notebooks. São dados reais já existentes. */
+  .ccc-reference-board .ccc-reference-update-strip .ccc-reference-context {
+    display: grid !important;
+  }
+
+  /* Rails estritamente content-driven: nenhuma camada histórica pode forçar
+     altura artificial dentro do painel. */
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-card,
+  .ccc-reference-board .ccc-home__assistant .ccc-assistant-card {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-list,
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-graph,
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-metrics {
+    flex: 0 0 auto !important;
+  }
+}
