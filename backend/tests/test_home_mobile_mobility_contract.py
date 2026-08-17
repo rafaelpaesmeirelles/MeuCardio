@@ -166,7 +166,8 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     # Ordem visual mobile canônica da prancha: Deslocamento -> Seu Dia -> Atualizações.
     assert '.ccc-reference-summary > .ccc-reference-commute { order: 1; }' in css
     assert '.ccc-reference-summary > .ccc-reference-day { order: 2; }' in css
-    assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 3; }' in css
+    assert '.ccc-reference-summary > .ccc-reference-assistant-summary { order: 3; }' in css
+    assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 4; }' in css
 
     # Bottom bar imutável.
     labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]

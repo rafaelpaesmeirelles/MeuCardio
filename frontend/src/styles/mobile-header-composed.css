@@ -1,0 +1,67 @@
+/* Header mobile composto — logo à esquerda, busca no centro, nome + avatar à
+   direita (PR #89, item 8). Antes, o canonical ocultava a busca e o bloco de
+   ações no mobile, deixando o centro do topo vazio e a conta sem nome.
+   Nenhuma função removida: os ícones de ação rápida do desktop continuam
+   ocultos no mobile como já eram; hambúrguer, marca e menu de conta seguem. */
+
+@media (max-width: 900px) {
+  .clinical-os .cos-topbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* esquerda: logo (só o mark no telefone — o box herdado tem width fixa de
+     36px e o wordmark textual vazava dele, ficando por baixo da busca central) */
+  .clinical-os .cos-topbar__mobile-brand {
+    order: 0;
+    flex: 0 0 auto;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .clinical-os .cos-topbar__mobile-brand span { display: none; }
+
+  /* centro: barra de busca (reexibida; o canonical a escondia) */
+  .clinical-os .cos-command-mini {
+    display: flex !important;
+    order: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 38px;
+    margin: 0;
+  }
+  .clinical-os .cos-command-mini input { min-width: 0; font-size: .74rem; }
+  .clinical-os .cos-command-mini kbd { display: none !important; }
+
+  /* direita: nome + avatar (o v2 escondia a identidade inteira) */
+  .clinical-os .cos-topbar__actions {
+    display: flex !important;
+    order: 2;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+  .clinical-os .cos-topbar__icon { display: none !important; } /* estado mobile atual preservado */
+  .clinical-os .cos-account__identity {
+    display: grid !important;
+    max-width: clamp(64px, 22vw, 128px);
+  }
+  .clinical-os .cos-account__identity strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .66rem;
+  }
+  .clinical-os .cos-account__identity small { display: none; } /* papel fica para o menu */
+  .clinical-os .cos-account__trigger > svg { display: none; }
+  .clinical-os .cos-account__trigger { gap: 6px; min-height: 36px; padding: 2px 4px; }
+
+  /* hambúrguer no topo, por último — shell-board-fidelity e mobile-more-canonical
+     o ocultavam no mobile (menu só pelo "Mais" inferior); o header composto o
+     devolve ao topo sem remover a barra inferior */
+  .clinical-os .cos-topbar__menu { display: grid !important; order: 3; flex: 0 0 auto; margin-left: 0; }
+}
+
+/* Larguras muito estreitas: nome encurta mais para a busca seguir legível. */
+@media (max-width: 380px) {
+  .clinical-os .cos-account__identity { max-width: 58px; }
+}

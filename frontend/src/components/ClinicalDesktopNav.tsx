@@ -12,7 +12,6 @@ const CLINICA_DECISAO: NavItem[] = [
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
-  { to: "/interacoes", label: "Interações", icon: "medicamento" },
   { to: "/emergencia", label: "Emergências", icon: "emergencia" },
   { to: "/checklists", label: "Checklists", icon: "check" },
   { to: "/triagem-sintomas", label: "Triagem de sintomas", icon: "triagem" },

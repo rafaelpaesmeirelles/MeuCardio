@@ -116,6 +116,15 @@ export default function MapaDeslocamento({
   const [selecionada, setSelecionada] = useState(0);
   const [estadoMapa, setEstadoMapa] = useState<"carregando" | "pronto" | "erro">("carregando");
   const mapaRef = useRef<HTMLDivElement>(null);
+  // A instância do Google Map vive em ref e é criada UMA vez por montagem:
+  // atualizações de rota/origem/seleção só redesenham sobreposições. Recriar o
+  // mapa a cada dado novo apagava os tiles por segundos (flicker) e rebaixava
+  // tiles/API em todo refresh.
+  const googleRef = useRef<any>(null);
+  const mapaInstanciaRef = useRef<any>(null);
+  const sobreposicoesRef = useRef<any[]>([]);
+  const enquadramentoRef = useRef<string>("");
+  const [mapaVersao, setMapaVersao] = useState(0);
   const indiceSelecionado = Math.min(selecionada, Math.max(0, rotas.length - 1));
   const geometrias = useMemo(() => rotas.map((rota) => {
     const geometria = rota.geometry;
@@ -160,16 +169,26 @@ export default function MapaDeslocamento({
   const deveUsarGoogleMap = provider === "Google Maps" || provider === "google_maps";
   const temGeometria = geometrias.some((rota) => rota.length > 1);
 
+  // Efeito de CRIAÇÃO: instancia o mapa uma única vez enquanto o widget estiver
+  // montado (ou quando chave/provedor/validade do destino mudarem de verdade).
   useEffect(() => {
-    if (!deveUsarGoogleMap || !googleMapsApiKey || !mapaRef.current || !destinoValido) return;
+    if (!deveUsarGoogleMap || !googleMapsApiKey || !mapaRef.current || !destinoValido) {
+      if (mapaInstanciaRef.current) {
+        sobreposicoesRef.current.forEach((item) => item.setMap?.(null));
+        sobreposicoesRef.current = [];
+        mapaInstanciaRef.current = null;
+        enquadramentoRef.current = "";
+      }
+      return;
+    }
+    if (mapaInstanciaRef.current) return; // preserva a instância entre atualizações de dados
     let descartado = false;
-    let sobreposicoes: any[] = [];
     setEstadoMapa("carregando");
     carregarGoogleMaps(googleMapsApiKey).then((google) => {
       if (descartado || !mapaRef.current || destino.latitude == null || destino.longitude == null) return;
-      const destinoLatLng = { lat: destino.latitude, lng: destino.longitude };
-      const map = new google.maps.Map(mapaRef.current, {
-        center: destinoLatLng,
+      googleRef.current = google;
+      mapaInstanciaRef.current = new google.maps.Map(mapaRef.current, {
+        center: { lat: destino.latitude, lng: destino.longitude },
         zoom: 14,
         disableDefaultUI: true,
         zoomControl: true,
@@ -186,6 +205,31 @@ export default function MapaDeslocamento({
           { featureType: "water", elementType: "geometry", stylers: [{ color: "#082b38" }] },
         ],
       });
+      setEstadoMapa("pronto");
+      setMapaVersao((versao) => versao + 1);
+    }).catch(() => { if (!descartado) setEstadoMapa("erro"); });
+    return () => { descartado = true; };
+  }, [deveUsarGoogleMap, destinoValido, googleMapsApiKey, destino.latitude, destino.longitude]);
+
+  // Limpeza única na desmontagem do componente.
+  useEffect(() => () => {
+    sobreposicoesRef.current.forEach((item) => item.setMap?.(null));
+    sobreposicoesRef.current = [];
+    mapaInstanciaRef.current = null;
+    googleRef.current = null;
+  }, []);
+
+  // Efeito de ATUALIZAÇÃO: redesenha rotas/markers sobre a MESMA instância;
+  // reenquadra (fitBounds) apenas quando a geometria de fato muda.
+  useEffect(() => {
+    const google = googleRef.current;
+    const map = mapaInstanciaRef.current;
+    if (!google || !map || destino.latitude == null || destino.longitude == null) return;
+    sobreposicoesRef.current.forEach((item) => item.setMap?.(null));
+    const sobreposicoes: any[] = [];
+    sobreposicoesRef.current = sobreposicoes;
+    {
+      const destinoLatLng = { lat: destino.latitude, lng: destino.longitude };
       const limites = new google.maps.LatLngBounds();
       geometrias.flat().forEach(([lat, lng]) => limites.extend({ lat, lng }));
       const ordem = geometrias.map((_, indice) => indice).sort((a, b) => Number(a === indiceSelecionado) - Number(b === indiceSelecionado));
@@ -227,16 +271,17 @@ export default function MapaDeslocamento({
       }
       limites.extend(destinoLatLng);
       sobreposicoes.push(new google.maps.Marker({ map, position: destinoLatLng, title: destino.name }));
-      if (temGeometria || origem) map.fitBounds(limites, 42);
-      else { map.setCenter(destinoLatLng); map.setZoom(14); }
-      setEstadoMapa("pronto");
-    }).catch(() => { if (!descartado) setEstadoMapa("erro"); });
-    return () => {
-      descartado = true;
-      sobreposicoes.forEach((item) => item.setMap?.(null));
-      sobreposicoes = [];
-    };
-  }, [deveUsarGoogleMap, destino.latitude, destino.longitude, destino.name, destinoValido, geometrias, googleMapsApiKey, indiceSelecionado, origem, rotaAtual, temGeometria]);
+      const assinaturaEnquadramento = JSON.stringify([
+        destino.latitude, destino.longitude,
+        geometrias.map((rota) => [rota.length, rota[0], rota[rota.length - 1]]),
+      ]);
+      if (assinaturaEnquadramento !== enquadramentoRef.current) {
+        enquadramentoRef.current = assinaturaEnquadramento;
+        if (temGeometria || origem) map.fitBounds(limites, 42);
+        else { map.setCenter(destinoLatLng); map.setZoom(14); }
+      }
+    }
+  }, [destino.latitude, destino.longitude, destino.name, geometrias, indiceSelecionado, mapaVersao, origem, rotaAtual, temGeometria]);
 
   return (
     <div className="deslocamento-painel">

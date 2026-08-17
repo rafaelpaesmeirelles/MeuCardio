@@ -12,7 +12,7 @@ const CLINICA_DECISAO: LinkItem[] = [
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
-  { to: "/interacoes", label: "Interações", icon: "medicamento" },
+  { to: "/interacoes", label: "Interações medicamentosas", icon: "medicamento" },
   { to: "/emergencia", label: "Emergências", icon: "emergencia" },
   { to: "/checklists", label: "Checklists", icon: "check" },
   { to: "/triagem-sintomas", label: "Triagem", icon: "triagem" },

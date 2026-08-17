@@ -332,8 +332,11 @@ body.ccc-home-active .cos-content {
   .ccc-reference-summary { order: 3; display: flex !important; flex-direction: column; gap: 10px !important; margin: 0 !important; }
   .ccc-reference-summary > .ccc-reference-commute { order: 1; }
   .ccc-reference-summary > .ccc-reference-day { order: 2; }
-  .ccc-reference-summary > .ccc-reference-updates-summary { order: 3; }
-  .ccc-reference-summary > .ccc-reference-assistant-summary { display: none !important; }
+  .ccc-reference-summary > .ccc-reference-assistant-summary { order: 3; }
+  .ccc-reference-summary > .ccc-reference-updates-summary { order: 4; }
+  /* O card do Assistente PERMANECE visível no mobile: aqui não existe o rail
+     lateral, e este card é a única entrada da seção (Seu dia → Assistente →
+     Atualizações). Ocultá-lo é correto apenas no desktop (min-width: 901px). */
 
   .ccc-reference-summary .ccc-mobile-summary__card { display: grid !important; min-height: 88px !important; grid-template-columns: minmax(0,1fr) 38px; align-items: center; gap: 9px; padding: 11px 12px !important; border-radius: 10px !important; text-align: left; text-decoration: none !important; }
   .ccc-reference-summary .ccc-mobile-summary__card small { color: #6f8994 !important; font-size: .51rem !important; font-weight: 850; letter-spacing: .05em; text-transform: uppercase; }

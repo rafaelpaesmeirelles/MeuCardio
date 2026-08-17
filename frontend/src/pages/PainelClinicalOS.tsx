@@ -249,7 +249,9 @@ export default function PainelClinicalOS() {
   const pendencias = useMemo(() => agenda.filter((item) => ["pendente", "pending_external", "proposed"].includes(item.status)).length, [agenda]);
   const rota = deslocamento?.destination?.target_key === targetKey ? deslocamento?.routes?.[0] : undefined;
   const saidaRecomendada = destino && rota && proximo ? new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + destino.arrival_buffer_minutes * 60) * 1000) : null;
-  const chegadaPrevista = rota ? new Date((deslocamento?.updated_at ? new Date(deslocamento.updated_at).getTime() : Date.now()) + rota.duration_seconds * 1000) : null;
+  // Chegada PLANEJADA: horário do compromisso menos o buffer de chegada do local.
+  // Referencial único do card (o mesmo de "Saída às") — nunca "agora + duração".
+  const chegadaPrevista = rota && proximo && destino ? new Date(new Date(proximo.scheduled_at).getTime() - destino.arrival_buffer_minutes * 60000) : null;
   const destinoMapeavel = Boolean(destino?.location && destino.location.latitude != null && destino.location.longitude != null);
   const provedorMapa = deslocamento?.provider || configMapa?.provider;
 
@@ -263,7 +265,8 @@ export default function PainelClinicalOS() {
     setErroRota(null);
     navigator.geolocation.getCurrentPosition((position) => {
       const origemAtual = { latitude: position.coords.latitude, longitude: position.coords.longitude };
-      setOrigem(origemAtual);
+      // Preserva a referência quando a posição não mudou — evita redesenho do mapa à toa.
+      setOrigem((atual) => atual && atual.latitude === origemAtual.latitude && atual.longitude === origemAtual.longitude ? atual : origemAtual);
       setPermissao("concedida");
       api.post<Deslocamento>("/agenda/mobility/commute-target", {
         ...origemAtual,
@@ -275,7 +278,9 @@ export default function PainelClinicalOS() {
           return;
         }
         setDeslocamento(resultado);
-        setProximoAlvo(resultado.destination);
+        // Mantém a referência do alvo quando o conteúdo é idêntico — o objeto novo
+        // a cada refresh invalidava deps e recriava o mapa sem necessidade.
+        setProximoAlvo((atual) => atual && resultado.destination && JSON.stringify(atual) === JSON.stringify(resultado.destination) ? atual : resultado.destination);
         ultimaRotaEm.current = Date.now();
         if (!resultado.routes?.length && resultado.status !== "ok") {
           const mensagem = resultado.status === "destination_not_geocoded"

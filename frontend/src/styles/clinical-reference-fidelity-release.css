@@ -70,6 +70,29 @@
     min-height: 100% !important;
     height: 100% !important;
   }
+
+  /* shell.css reserva uma 2ª coluna (minmax(310px,.85fr)) para o seletor de
+     rotas, que o release-candidate-hotfix oculta no desktop — a trilha vazia
+     deixava ~350px mortos à direita do mapa. Uma coluna só: o mapa preenche
+     toda a área reservada (mesmo padrão já provado no mobile em
+     clinical-home-mobile-final.css). */
+  .ccc-reference-board .ccc-reference-commute__map .deslocamento-painel {
+    display: block !important;
+    min-width: 0;
+    margin: 0 !important;
+  }
+  .ccc-reference-board .ccc-reference-commute__map .deslocamento-mapa {
+    height: 100% !important;
+    min-height: 100% !important;
+    border: 0;
+    border-radius: 0;
+  }
+  .ccc-reference-board .ccc-reference-commute__map .deslocamento-mapa__google,
+  .ccc-reference-board .ccc-reference-commute__map .deslocamento-mapa svg {
+    width: 100%;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -126,12 +149,10 @@
     order: 6 !important;
   }
 
-  /* O resumo do Assistente Pessoal pertence à experiência desktop; no mobile
-     a prancha usa Ações rápidas → Próximo deslocamento → Seu dia → Atualizações. */
-  .ccc-reference-board .ccc-reference-summary > .ccc-reference-assistant-summary,
-  .ccc-reference-board .ccc-reference-summary > .ccc-mobile-summary__card--assistant {
-    display: none !important;
-  }
+  /* No mobile o card do Assistente FICA VISÍVEL: sem o rail lateral do desktop,
+     ele é a única entrada da seção na sequência canônica Seu dia → Assistente →
+     Atualizações. A ocultação vale somente para o desktop (min-width: 901px),
+     onde o rail dedicado já existe. */
 
   .ccc-reference-board .ccc-mobile-commute__metrics {
     display: grid !important;

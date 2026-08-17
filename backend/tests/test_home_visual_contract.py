@@ -50,7 +50,8 @@ def test_authenticated_home_matches_reference_board_structure():
     assert '.ccc-module-directory__grid' in final_css
     assert '.ccc-reference-summary > .ccc-reference-commute { order: 1; }' in final_css
     assert '.ccc-reference-summary > .ccc-reference-day { order: 2; }' in final_css
-    assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 3; }' in final_css
+    assert '.ccc-reference-summary > .ccc-reference-assistant-summary { order: 3; }' in final_css
+    assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 4; }' in final_css
 
     # O override final precisa vir depois de todas as camadas históricas da Home
     # e antes do contrato global de contraste dos formulários.

@@ -14,6 +14,15 @@ import "./styles/tour.css";
 import "./styles/tour-clinical-os.css";
 import "./styles/clinical-command-center-v2.css";
 import "./styles/clinical-pages-v2.css";
+// Folhas de página *-v2 que existiam no repositório mas nunca entraram no
+// bundle (regressão real: /interacoes, /calculadoras, /exames e /diretrizes
+// renderizavam a metade inferior SEM estilo — chips/cards brancos do
+// user-agent sobre o dark). A posição aqui preserva a cascata: antes das
+// camadas de fidelidade/hotfix e do form-control-contrast (sempre último).
+import "./styles/clinical-interactions-v2.css";
+import "./styles/clinical-tools-v2.css";
+import "./styles/clinical-exams-v2.css";
+import "./styles/clinical-guidelines-v2.css";
 import "./styles/clinical-medications-v2.css";
 import "./styles/clinical-knowledge-v2.css";
 import "./styles/clinical-evidence-v2.css";
@@ -55,6 +64,7 @@ import "./styles/clinical-reference-fidelity-release.css";
 import "./styles/release-candidate-hotfix.css";
 import "./styles/clinical-interior-board-lock.css";
 import "./styles/postdeploy-home-density.css";
+import "./styles/mobile-header-composed.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
