@@ -20,7 +20,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.png", "apple-touch-icon.png", "logo-horizontal.png", "brasao.png"],
+      includeAssets: ["favicon.png", "apple-touch-icon.png", "corvia-mark-canonical.svg"],
       manifest: {
         name: "CorVIA — Clinical OS do médico",
         short_name: "CorVIA",
