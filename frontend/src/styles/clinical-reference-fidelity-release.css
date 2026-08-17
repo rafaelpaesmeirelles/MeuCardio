@@ -126,12 +126,10 @@
     order: 6 !important;
   }
 
-  /* O resumo do Assistente Pessoal pertence à experiência desktop; no mobile
-     a prancha usa Ações rápidas → Próximo deslocamento → Seu dia → Atualizações. */
-  .ccc-reference-board .ccc-reference-summary > .ccc-reference-assistant-summary,
-  .ccc-reference-board .ccc-reference-summary > .ccc-mobile-summary__card--assistant {
-    display: none !important;
-  }
+  /* No mobile o card do Assistente FICA VISÍVEL: sem o rail lateral do desktop,
+     ele é a única entrada da seção na sequência canônica Seu dia → Assistente →
+     Atualizações. A ocultação vale somente para o desktop (min-width: 901px),
+     onde o rail dedicado já existe. */
 
   .ccc-reference-board .ccc-mobile-commute__metrics {
     display: grid !important;
