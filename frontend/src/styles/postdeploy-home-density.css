@@ -1,0 +1,57 @@
+/* CorVIA Clinical OS — correções pós-deploy da Home.
+   Escopo deliberadamente estreito: corrige densidade/enquadramento em notebook
+   sem alterar conteúdo, sem redesenhar a prancha e sem tocar no mobile. */
+
+@media (min-width: 901px) {
+  /* O strip canônico assumia sempre seis tracks. Em produção, quando há menos
+     atualizações reais, os tracks vazios permaneciam reservados e criavam área
+     morta. auto-fit colapsa somente tracks sem conteúdo e redistribui a largura
+     entre os cards existentes. */
+  .ccc-reference-board .ccc-reference-update-strip {
+    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)) !important;
+    align-items: stretch !important;
+  }
+
+  .ccc-reference-board .ccc-reference-update-strip > * {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* O breakpoint anterior ocultava contextos recentes em notebooks <=1280px,
+     justamente quando eles ajudam a ocupar o painel com dados reais. Mantê-los
+     visíveis evita um strip quase vazio sem fabricar conteúdo. */
+  .ccc-reference-board .ccc-reference-update-strip .ccc-reference-context {
+    display: grid !important;
+  }
+
+  /* Garante que o rail de Intelligence seja estritamente content-driven.
+     Nenhuma altura do grid/legado pode esticar o painel e produzir um bloco
+     visual vazio abaixo de seus dados reais. */
+  .ccc-reference-board .ccc-home__intelligence {
+    align-self: start !important;
+    height: max-content !important;
+    min-height: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-card {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-list,
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-graph,
+  .ccc-reference-board .ccc-home__intelligence .ccc-intelligence-metrics {
+    flex: 0 0 auto !important;
+  }
+}
+
+/* Em larguras realmente compactas de notebook, prioriza uma matriz equilibrada
+   em vez de cards estreitos. O limiar usa o viewport porque esta camada é um
+   fallback para browsers sem container queries; a regra auto-fit continua sendo
+   a principal proteção contra tracks vazios. */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .ccc-reference-board .ccc-reference-update-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
