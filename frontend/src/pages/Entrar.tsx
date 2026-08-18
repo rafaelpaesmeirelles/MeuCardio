@@ -6,6 +6,7 @@ import { useAuth } from "../lib/auth";
 import "../styles/login.css";
 import "../styles/login-fullscreen-social.css";
 import "../styles/prehome-reference-final.css";
+import "../styles/login-viewport-refinement.css";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
@@ -14,6 +15,8 @@ type SocialProvider = {
   label: string;
   enabled: boolean;
 };
+
+const ORDEM_PROVEDORES: SocialProvider["id"][] = ["google", "microsoft", "apple", "yahoo", "github"];
 
 const BENEFICIOS = [
   { icon: "assistente" as const, title: "Inteligência clínica", detail: "Contexto e apoio à decisão no mesmo ambiente.", tone: "cyan" as const },
@@ -31,13 +34,39 @@ const ERROS_SOCIAIS: Record<string, string> = {
 };
 
 function MarcaProvider({ provider }: { provider: SocialProvider["id"] }) {
-  if (provider === "microsoft") {
-    return <span className="prehome-social__mark prehome-social__mark--microsoft" aria-hidden="true"><i /><i /><i /><i /></span>;
+  if (provider === "google") {
+    return (
+      <span className="prehome-social__mark prehome-social__mark--google" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.4-.18-2.06H12v3.9h5.38a4.6 4.6 0 0 1-2 3.02v2.53h3.24c1.9-1.75 2.98-4.33 2.98-7.39Z" />
+          <path fill="#34A853" d="M12 22c2.7 0 4.97-.9 6.62-2.38l-3.24-2.53c-.9.6-2.05.96-3.38.96-2.6 0-4.81-1.76-5.6-4.13H3.06v2.61A10 10 0 0 0 12 22Z" />
+          <path fill="#FBBC05" d="M6.4 13.92A6 6 0 0 1 6.08 12c0-.67.12-1.32.32-1.92V7.47H3.06A10 10 0 0 0 2 12c0 1.61.38 3.13 1.06 4.53l3.34-2.61Z" />
+          <path fill="#EA4335" d="M12 5.95c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.64 9.64 0 0 0 12 2 10 10 0 0 0 3.06 7.47l3.34 2.61C7.19 7.71 9.4 5.95 12 5.95Z" />
+        </svg>
+      </span>
+    );
   }
-  if (provider === "apple") return <span className="prehome-social__mark prehome-social__mark--apple" aria-hidden="true"></span>;
+  if (provider === "microsoft") {
+    return (
+      <span className="prehome-social__mark prehome-social__mark--microsoft" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path fill="#F35325" d="M2 2h9v9H2z" /><path fill="#81BC06" d="M13 2h9v9h-9z" />
+          <path fill="#05A6F0" d="M2 13h9v9H2z" /><path fill="#FFBA08" d="M13 13h9v9h-9z" />
+        </svg>
+      </span>
+    );
+  }
+  if (provider === "apple") {
+    return (
+      <span className="prehome-social__mark prehome-social__mark--apple" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.34-.24 2.2.74 2.96.74.74 0 1.89-1.06 3.19-.9.54.02 2.06.22 3.03 1.64-2.62 1.52-2.2 4.97.45 6.03-.53 1.4-1.21 2.79-1.63 3.46ZM12.03 7.25c-.15-2.08 1.55-3.8 3.49-3.97.27 2.41-2.18 4.21-3.49 3.97Z" />
+        </svg>
+      </span>
+    );
+  }
   if (provider === "yahoo") return <span className="prehome-social__mark prehome-social__mark--yahoo" aria-hidden="true">Y!</span>;
-  if (provider === "github") return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
-  return <span className="prehome-social__mark prehome-social__mark--google" aria-hidden="true">G</span>;
+  return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
 }
 
 export default function Entrar() {
@@ -70,7 +99,12 @@ export default function Entrar() {
     return () => { ativo = false; };
   }, []);
 
-  const providersAtivos = useMemo(() => providers.filter((provider) => provider.enabled), [providers]);
+  const providersAtivos = useMemo(
+    () => providers
+      .filter((provider) => provider.enabled)
+      .sort((a, b) => ORDEM_PROVEDORES.indexOf(a.id) - ORDEM_PROVEDORES.indexOf(b.id)),
+    [providers],
+  );
 
   async function enviar(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
