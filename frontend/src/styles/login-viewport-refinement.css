@@ -31,19 +31,34 @@
   .prehome--fullscreen .prehome-card__footer,.prehome--fullscreen .prehome-legal{font-size:.65rem!important}
 }
 
-/* Login mobile aprovado: o conteúdo flui no fundo da página, sem os dois grandes containers externos. */
+/* Login mobile aprovado: conteúdo integral sobre uma única superfície, sem os dois containers externos. */
 @media(max-width:820px){
+  .login.prehome.prehome--login{
+    background:radial-gradient(circle at 50% 27%,rgba(13,112,220,.10),transparent 34%),linear-gradient(180deg,#020b14 0%,#020914 46%,#010712 100%)!important;
+  }
   .prehome--login>.prehome-brand{
-    background:transparent!important;
+    background:none!important;
+    border:0!important;
     border-bottom:0!important;
+    box-shadow:none!important;
+    outline:0!important;
   }
   .prehome--login>.prehome-access{
-    background:transparent!important;
+    background:none!important;
+    border:0!important;
+    box-shadow:none!important;
+    outline:0!important;
   }
   .prehome--login .prehome-card--login{
-    background:transparent!important;
+    background:none!important;
     border:0!important;
     border-radius:0!important;
     box-shadow:none!important;
+    outline:0!important;
+  }
+  .prehome--login .prehome-card--login::before,
+  .prehome--login .prehome-card--login::after{
+    display:none!important;
+    content:none!important;
   }
 }
