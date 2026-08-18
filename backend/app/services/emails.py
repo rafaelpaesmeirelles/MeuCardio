@@ -1,9 +1,8 @@
 """Roteador de transporte para e-mails institucionais do CorVIA.
 
 O conteúdo/template e as funções públicas permanecem no módulo histórico
-``emails_legacy`` sem alteração. Este arquivo troca somente a camada de
-transporte: Mail360 Native institucional ou SMTP. A separação mantém o hotfix
-pequeno e auditável e evita duplicar regras de token, idempotência e EmailLog.
+``emails_legacy``. Este arquivo garante transporte e identidade institucional
+canônica antes do envio, sem alterar regras de token, idempotência e EmailLog.
 """
 
 from __future__ import annotations
@@ -16,8 +15,6 @@ from app.services.mail360 import Mail360Error, enviar_mensagem as enviar_mensage
 
 log = logging.getLogger("meucardio.emails")
 
-# Compatibilidade explícita para testes e consumidores que acessam os helpers
-# internos do módulo histórico.
 settings = _legacy.settings
 smtplib = _legacy.smtplib
 _renderizar = _legacy._renderizar
@@ -29,29 +26,36 @@ _reply_to_da_plataforma = _legacy._reply_to_da_plataforma
 _texto_simples_de_html = _legacy._texto_simples_de_html
 
 
+def _normalizar_branding(valor: str) -> str:
+    """Remove resíduos textuais/visuais da identidade anterior antes do envio."""
+    return (
+        valor.replace("Corvia — O caminho do coração", "CorVIA — Clinical OS")
+        .replace("CorvIA — O Caminho do Coração", "CorVIA — Clinical OS")
+        .replace("CorvIA — O caminho do coração", "CorVIA — Clinical OS")
+        .replace("Corvia —", "CorVIA —")
+        .replace("à Corvia", "ao CorVIA")
+        .replace("no Corvia", "no CorVIA")
+        .replace("do Corvia", "do CorVIA")
+    )
+
+
 def _mail360_enviar(destinatario: str, assunto: str, html: str) -> tuple[bool, str | None]:
     """Envia pela caixa Native institucional ``contato@corvia.med.br``."""
     remetente = _reply_to_da_plataforma()
-    html_mail360 = html.replace(
-        "cid:corvia-logo",
-        f"{settings.public_url.rstrip('/')}/corvia-logo.png",
-    )
     try:
         enviar_mensagem_mail360(
             settings.mail360_transactional_account_key,
             remetente,
             destinatario,
-            assunto,
-            html_mail360,
+            _normalizar_branding(assunto),
+            _normalizar_branding(html),
             mail_format="html",
         )
         return True, None
     except Mail360Error as exc:
-        # Mail360Error já traduz falhas do provedor sem incluir token/secret.
         log.warning("Falha Mail360 transacional para %s: %s", destinatario, exc)
         return False, str(exc)
     except Exception as exc:  # noqa: BLE001
-        # Não persistir a mensagem arbitrária de uma exceção inesperada.
         log.exception("Falha inesperada no Mail360 transacional para %s", destinatario)
         return False, f"Mail360: {type(exc).__name__}"
 
@@ -62,6 +66,9 @@ def _enviar_por_provider(
     html: str,
     texto: str,
 ) -> tuple[bool, str | None]:
+    assunto = _normalizar_branding(assunto)
+    html = _normalizar_branding(html)
+    texto = _normalizar_branding(texto)
     provider = settings.email_transacional_provider_efetivo
     if provider == "mail360":
         return _mail360_enviar(destinatario, assunto, html)
@@ -87,14 +94,12 @@ def _enviar(
         log.info("E-mail %s já enviado antes (chave=%s) — não duplicado", tipo, chave_idempotencia)
         return True
     if not settings.email_transacional_configurado:
-        # Mantém o texto legado do EmailLog para não quebrar diagnósticos e
-        # testes existentes. O runtime de produção usa mensagem provider-aware.
         erro = "SMTP não configurado"
         log.info("Canal transacional não configurado — e-mail %s para %s não enviado", tipo, destinatario)
         _registrar_log(db, tipo, destinatario, user_id, chave_idempotencia, False, erro)
         return False
     try:
-        html, texto = _renderizar(template, {**contexto, "assunto": assunto})
+        html, texto = _renderizar(template, {**contexto, "assunto": _normalizar_branding(assunto)})
     except Exception as exc:  # noqa: BLE001
         log.exception("Falha ao renderizar template de e-mail %s", template)
         _registrar_log(
@@ -127,17 +132,14 @@ def enviar_institucional_paciente(
         _registrar_log(db, tipo_log, destinatario, user_id, None, False, erro)
         return ResultadoEnvioInstitucional(
             False,
-            "O envio automático pela Corvia ainda não está disponível neste servidor.",
+            "O envio automático pelo CorVIA ainda não está disponível neste servidor.",
         )
-    texto = _texto_simples_de_html(html)
+    html = _normalizar_branding(html)
+    texto = _normalizar_branding(_texto_simples_de_html(html))
     sucesso, erro = _enviar_por_provider(destinatario, assunto, html, texto)
     _registrar_log(db, tipo_log, destinatario, user_id, None, sucesso, erro)
     return ResultadoEnvioInstitucional(sucesso, erro)
 
 
-# As funções públicas importadas acima foram definidas em emails_legacy e,
-# portanto, consultam o namespace daquele módulo ao executar. Redirecionar o
-# helper ali garante que todas elas usem este transporte sem reescrever o
-# conteúdo científico/contratual dos templates nem a lógica dos tokens.
 _legacy._enviar = _enviar
 _legacy.enviar_institucional_paciente = enviar_institucional_paciente
