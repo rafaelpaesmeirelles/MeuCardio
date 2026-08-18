@@ -1,10 +1,8 @@
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
-import HomePendingActionsPortal from "./components/HomePendingActionsPortal";
 import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
-import "./styles/canonical-brand-standard.css";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
 const Produto = lazy(() => import("./pages/Produto"));
@@ -119,74 +117,71 @@ export default function App() {
   }
 
   return (
-    <>
-      <HomePendingActionsPortal />
-      <RotasSuspensas>
-        <Routes>
-          <Route element={<Shell />}>
-            <Route index element={<Painel />} />
-            <Route path="apresentacao" element={<Apresentacao />} />
-            <Route path="biblioteca" element={<Biblioteca />} />
-            <Route path="biblioteca/:slug" element={<Documento />} />
-            <Route path="doencas" element={<GuiaDoencas />} />
-            <Route path="doencas/:slug" element={<GuiaDoenca />} />
-            <Route path="triagem-sintomas" element={<TriagemSintomas />} />
-            <Route path="fluxogramas" element={<Fluxogramas />} />
-            <Route path="diretrizes" element={<Diretrizes />} />
-            <Route path="busca" element={<Busca />} />
-            <Route path="calculadoras" element={<Calculadoras />} />
-            <Route path="calculadoras/:slug" element={<Calculadora />} />
-            <Route path="medicamentos" element={<Medicamentos />} />
-            <Route path="interacoes" element={<Interacoes />} />
-            <Route path="condicoes" element={<Condicoes />} />
-            <Route path="galeria" element={<Galeria />} />
-            <Route path="galeria/:slug" element={<ImagemGaleria />} />
-            <Route path="exames" element={<Exames />} />
-            <Route path="exames/:slug" element={<Exame />} />
-            <Route path="evidencias" element={<Evidencias />} />
-            <Route path="evidencias/:slug" element={<Evidencia />} />
-            <Route path="estudos" element={<Estudos />} />
-            <Route path="estudos/:slug" element={<Estudo />} />
-            <Route path="trilhas" element={<Trilhas />} />
-            <Route path="trilhas/timeline" element={<TimelineDoencas />} />
-            <Route path="material-paciente" element={<MaterialPaciente />} />
-            <Route path="emergencia" element={<Emergencia />} />
-            <Route path="trilhas/:slug" element={<Trilha />} />
-            <Route path="casos-clinicos" element={<CasosClinicos />} />
-            <Route path="casos-clinicos/:slug" element={<CasoClinico />} />
-            <Route path="checklists" element={<Checklists />} />
-            <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
-            <Route path="indicadores" element={<Indicadores />} />
-            <Route path="cursos" element={<Cursos />} />
-            <Route path="cursos/:slug" element={<Navigate to="/cursos" replace />} />
-            <Route path="favoritos" element={<Favoritos />} />
-            <Route path="assistente" element={<Assistente />} />
-            <Route path="round" element={<Round />} />
-            <Route path="agenda" element={<Agenda />} />
-            <Route path="documentos" element={<Templates />} />
-            <Route path="exportar" element={<ExportarConteudo />} />
-            <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
-            <Route path="receituario" element={<Receituario />} />
-            <Route path="assinatura" element={<Assinatura />} />
-            <Route path="minha-conta" element={<MinhaConta />} />
-            <Route path="sincronizacao" element={<Sincronizacao />} />
-            <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
-            <Route path="telediagnostico" element={<Telediagnostico />} />
-            <Route path="caixa-de-email" element={<CaixaDeEmail />} />
-            <Route path="corvia-mail" element={<CorviaMail />} />
-            <Route path="usuarios-online" element={<UsuariosOnline />} />
-            <Route path="privacidade" element={<PoliticaPrivacidade />} />
-            <Route path="termos" element={<TermosUso />} />
-            {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
-            {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
-            {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}
-            {usuario.role === "admin" && <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />}
-            {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
-          </Route>
-          <Route path="/tour" element={<Tour />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </RotasSuspensas>
-    </>
+    <RotasSuspensas>
+      <Routes>
+        <Route element={<Shell />}>
+          <Route index element={<Painel />} />
+          <Route path="apresentacao" element={<Apresentacao />} />
+          <Route path="biblioteca" element={<Biblioteca />} />
+          <Route path="biblioteca/:slug" element={<Documento />} />
+          <Route path="doencas" element={<GuiaDoencas />} />
+          <Route path="doencas/:slug" element={<GuiaDoenca />} />
+          <Route path="triagem-sintomas" element={<TriagemSintomas />} />
+          <Route path="fluxogramas" element={<Fluxogramas />} />
+          <Route path="diretrizes" element={<Diretrizes />} />
+          <Route path="busca" element={<Busca />} />
+          <Route path="calculadoras" element={<Calculadoras />} />
+          <Route path="calculadoras/:slug" element={<Calculadora />} />
+          <Route path="medicamentos" element={<Medicamentos />} />
+          <Route path="interacoes" element={<Interacoes />} />
+          <Route path="condicoes" element={<Condicoes />} />
+          <Route path="galeria" element={<Galeria />} />
+          <Route path="galeria/:slug" element={<ImagemGaleria />} />
+          <Route path="exames" element={<Exames />} />
+          <Route path="exames/:slug" element={<Exame />} />
+          <Route path="evidencias" element={<Evidencias />} />
+          <Route path="evidencias/:slug" element={<Evidencia />} />
+          <Route path="estudos" element={<Estudos />} />
+          <Route path="estudos/:slug" element={<Estudo />} />
+          <Route path="trilhas" element={<Trilhas />} />
+          <Route path="trilhas/timeline" element={<TimelineDoencas />} />
+          <Route path="material-paciente" element={<MaterialPaciente />} />
+          <Route path="emergencia" element={<Emergencia />} />
+          <Route path="trilhas/:slug" element={<Trilha />} />
+          <Route path="casos-clinicos" element={<CasosClinicos />} />
+          <Route path="casos-clinicos/:slug" element={<CasoClinico />} />
+          <Route path="checklists" element={<Checklists />} />
+          <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
+          <Route path="indicadores" element={<Indicadores />} />
+          <Route path="cursos" element={<Cursos />} />
+          <Route path="cursos/:slug" element={<Navigate to="/cursos" replace />} />
+          <Route path="favoritos" element={<Favoritos />} />
+          <Route path="assistente" element={<Assistente />} />
+          <Route path="round" element={<Round />} />
+          <Route path="agenda" element={<Agenda />} />
+          <Route path="documentos" element={<Templates />} />
+          <Route path="exportar" element={<ExportarConteudo />} />
+          <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
+          <Route path="receituario" element={<Receituario />} />
+          <Route path="assinatura" element={<Assinatura />} />
+          <Route path="minha-conta" element={<MinhaConta />} />
+          <Route path="sincronizacao" element={<Sincronizacao />} />
+          <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
+          <Route path="telediagnostico" element={<Telediagnostico />} />
+          <Route path="caixa-de-email" element={<CaixaDeEmail />} />
+          <Route path="corvia-mail" element={<CorviaMail />} />
+          <Route path="usuarios-online" element={<UsuariosOnline />} />
+          <Route path="privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="termos" element={<TermosUso />} />
+          {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
+          {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
+          {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}
+          {usuario.role === "admin" && <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />}
+          {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
+        </Route>
+        <Route path="/tour" element={<Tour />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </RotasSuspensas>
   );
 }
