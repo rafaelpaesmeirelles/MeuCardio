@@ -1,0 +1,24 @@
+/* Identidade CorVIA: em toda wordmark textual, "VIA" permanece azul canônico. */
+.prehome-brand__logo strong,
+.ccc-nav__brand-copy>strong,
+.cc-mobile-more__head>div>span>strong,
+.cos-brand__text>strong,
+.cos-topbar__mobile-brand>span,
+.cos-tour__brand strong {
+  position:relative;
+  display:inline-block;
+}
+
+.prehome-brand__logo strong::after,
+.ccc-nav__brand-copy>strong::after,
+.cc-mobile-more__head>div>span>strong::after,
+.cos-brand__text>strong::after,
+.cos-topbar__mobile-brand>span::after,
+.cos-tour__brand strong::after {
+  position:absolute;
+  top:0;
+  right:0;
+  content:"VIA";
+  color:#128df4;
+  pointer-events:none;
+}
