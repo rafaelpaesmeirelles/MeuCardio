@@ -75,21 +75,33 @@ def test_menu_sem_duplicidade_de_interacoes():
 
 
 def test_header_mobile_composto():
-    """Header mobile: logo à esquerda, busca no centro, nome + avatar à direita.
+    """Header mobile: logo à esquerda, busca no centro, 1º nome + avatar à direita.
 
     O canonical ocultava a busca e as ações no mobile (centro vazio, conta sem
     nome). A camada mobile-header-composed reexibe busca e identidade com
-    ellipsis, preservando hambúrguer e ocultação dos ícones de desktop.
+    ellipsis. Pelo item 9: SEM hambúrguer no topo mobile (navegação principal é
+    a barra inferior / "Mais") e só o PRIMEIRO nome ao lado do avatar; o
+    desktop segue com o nome completo.
     """
     main = (ROOT / "frontend/src/main.tsx").read_text(encoding="utf-8")
     css = (ROOT / "frontend/src/styles/mobile-header-composed.css").read_text(encoding="utf-8")
+    shell = (ROOT / "frontend/src/components/ShellClinicalOSLaunch.tsx").read_text(encoding="utf-8")
     assert 'import "./styles/mobile-header-composed.css";' in main
     # antes do form-control-contrast (que precisa seguir por último)
     assert main.index("mobile-header-composed.css") < main.index("clinical-form-control-contrast.css")
     assert ".clinical-os .cos-command-mini" in css and "display: flex !important" in css
     assert ".clinical-os .cos-account__identity" in css
     assert "text-overflow: ellipsis" in css
-    assert ".clinical-os .cos-topbar__menu" in css  # hambúrguer preservado
+    # item 9: hambúrguer fora do topo mobile — e nada no lugar dele
+    assert ".clinical-os .cos-topbar__menu { display: none !important; }" in css
+    assert "display: grid !important; order: 3" not in css  # a regra que o reexibia não pode voltar
+    # item 9: primeiro nome no mobile, nome completo no desktop
+    assert "cos-account__nome-curto" in shell and "cos-account__nome-completo" in shell
+    assert "primeiroNome(usuario?.full_name)" in shell
+    assert ".cos-account__nome-curto { display: none; }" in css  # default desktop
+    assert ".clinical-os .cos-account__nome-completo { display: none; }" in css  # mobile
+    # a extração pula título honorífico e nunca devolve vazio para nome não vazio
+    assert "(dr|dra|prof|profa)" in shell
 
 
 def test_css_de_pagina_entra_no_bundle():

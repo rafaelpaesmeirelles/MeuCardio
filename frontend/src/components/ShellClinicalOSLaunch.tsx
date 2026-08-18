@@ -112,6 +112,14 @@ function iniciais(nome?: string) {
   return (nome || "Médico").trim().split(/\s+/).slice(0, 2).map((parte) => parte[0]?.toUpperCase()).join("");
 }
 
+function primeiroNome(nome?: string) {
+  // Pula título honorífico ("Dr.", "Dra.", "Prof.") para não exibi-lo sozinho;
+  // se o nome for só o título, cai no primeiro termo cru em vez de vazio.
+  const partes = (nome || "").trim().split(/\s+/).filter(Boolean);
+  const semTitulo = partes.filter((parte) => !/^(dr|dra|prof|profa)\.?$/i.test(parte));
+  return semTitulo[0] ?? partes[0] ?? "";
+}
+
 function chaveContextosRecentes(userId?: number) {
   return userId ? `corvia:contextos-recentes:${userId}` : "";
 }
@@ -344,7 +352,7 @@ export default function ShellClinicalOSLaunch() {
             <div className="cos-account" ref={contaRef}>
               <button type="button" className="cos-account__trigger" onClick={() => setConta((valor) => !valor)} aria-haspopup="menu" aria-expanded={conta}>
                 {usuario?.photo_url && !fotoQuebrada ? <img src={assetUrl(usuario.photo_url)} alt="" onError={() => setFotoQuebrada(true)} /> : <span className="cos-account__avatar">{iniciais(usuario?.full_name)}</span>}
-                <span className="cos-account__identity"><strong>{usuario?.full_name}</strong><small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small></span><Icone nome="chevron" />
+                <span className="cos-account__identity"><strong><span className="cos-account__nome-completo">{usuario?.full_name}</span><span className="cos-account__nome-curto">{primeiroNome(usuario?.full_name)}</span></strong><small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small></span><Icone nome="chevron" />
               </button>
               {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{usuario?.full_name}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/assinatura" role="menuitem"><Icone nome="check" />Assinatura e plano</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
             </div>
