@@ -117,7 +117,7 @@ def test_solicitar_acesso_dispara_emails_com_sucesso_quando_smtp_configurado(cli
     assert "maria.recuperacao@externo.test" in por_destino
 
     mensagem = por_destino["maria@teste.local"]
-    assert mensagem["Subject"] == "Corvia — solicitação de acesso recebida"
+    assert mensagem["Subject"] == "CorVIA — solicitação de acesso recebida"
     corpo = mensagem.get_body(preferencelist=("plain",)).get_content()
     assert "Maria" in corpo
     assert "CRM" in corpo
