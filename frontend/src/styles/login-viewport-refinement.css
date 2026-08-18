@@ -30,3 +30,20 @@
   .prehome--fullscreen .prehome-card__header p{font-size:.78rem!important}
   .prehome--fullscreen .prehome-card__footer,.prehome--fullscreen .prehome-legal{font-size:.65rem!important}
 }
+
+/* Login mobile aprovado: o conteúdo flui no fundo da página, sem os dois grandes containers externos. */
+@media(max-width:820px){
+  .prehome--login>.prehome-brand{
+    background:transparent!important;
+    border-bottom:0!important;
+  }
+  .prehome--login>.prehome-access{
+    background:transparent!important;
+  }
+  .prehome--login .prehome-card--login{
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+}
