@@ -38,7 +38,7 @@ export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
         {medico.specialty && <span className="doc-cabecalho__especialidade">{medico.specialty}</span>}
         {local.map((linha) => <span key={linha}>{linha}</span>)}
       </div>
-      <img className="doc-cabecalho__logo" src="/corvia-logo.png" alt="Corvia — O caminho do coração" />
+      <img className="doc-cabecalho__logo" src="/corvia-logo-canonical.svg" alt="CorVIA Clinical OS" />
     </header>
   );
 }

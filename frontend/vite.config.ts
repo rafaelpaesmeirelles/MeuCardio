@@ -2,17 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
-// O precache mantém o shell e chunks clínicos pequenos disponíveis sem rede.
-// Chunks pesados e sob demanda (principalmente renderizadores de diagramas)
-// ficam no runtime cache NetworkFirst em vez de inflar a instalação do PWA.
 const limitePrecacheJs = 100 * 1024;
-// Superfícies administrativas/raras não precisam compor a instalação offline
-// inicial. Elas continuam funcionando normalmente e entram no runtime cache
-// após o primeiro uso, sem retirar qualquer rota ou funcionalidade do produto.
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade)-[^/]*\.js$/;
-// Login, cadastro e recuperação de acesso dependem de backend/rede por
-// definição. Mantemos o identificador histórico do contrato de CI e tornamos
-// cada chunk explícito para que esse comportamento seja auditável no código.
 const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|login-[^/]*|SolicitarAcesso-[^/]*|EsqueciSenha-[^/]*|RedefinirSenha-[^/]*)\.(?:js|css)$/;
 
 export default defineConfig({
@@ -20,7 +11,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.png", "apple-touch-icon.png", "corvia-mark-canonical.svg"],
+      includeAssets: ["corvia-mark-canonical.svg", "corvia-logo-canonical.svg", "corvia-logo-canonical-dark.svg"],
       manifest: {
         name: "CorVIA — Clinical OS do médico",
         short_name: "CorVIA",
@@ -32,9 +23,8 @@ export default defineConfig({
         orientation: "portrait",
         start_url: "/",
         icons: [
-          { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
-          { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
-          { src: "/icon-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" }
+          { src: "/corvia-mark-canonical.svg", sizes: "any", type: "image/svg+xml", purpose: "any" },
+          { src: "/corvia-mark-canonical.svg", sizes: "any", type: "image/svg+xml", purpose: "maskable" }
         ]
       },
       workbox: {

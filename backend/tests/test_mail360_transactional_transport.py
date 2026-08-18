@@ -90,8 +90,8 @@ def test_email_transacional_usa_conta_native_mail360(db, monkeypatch):
     assert account_key == "account-key-transacional-teste"
     assert remetente == "contato@corvia.med.br"
     assert para == user.email
-    assert assunto == "Corvia — solicitação de acesso recebida"
-    assert "https://corvia.med.br/corvia-logo.png" in html
+    assert assunto == "CorVIA — solicitação de acesso recebida"
+    assert "https://corvia.med.br/corvia-logo-canonical.svg" in html
     assert "cid:corvia-logo" not in html
     assert kwargs["mail_format"] == "html"
 

@@ -10,7 +10,7 @@ export default function Credito({ compacto = false }: { compacto?: boolean }) {
         lineHeight: 1.6,
       }}
     >
-      Corvia — O Caminho do Coração
+      CorVIA — Clinical OS
       <br />
       Todos os Direitos Reservados
       <br />
