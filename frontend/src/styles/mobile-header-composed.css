@@ -1,8 +1,13 @@
-/* Header mobile composto — logo à esquerda, busca no centro, nome + avatar à
-   direita (PR #89, item 8). Antes, o canonical ocultava a busca e o bloco de
-   ações no mobile, deixando o centro do topo vazio e a conta sem nome.
-   Nenhuma função removida: os ícones de ação rápida do desktop continuam
-   ocultos no mobile como já eram; hambúrguer, marca e menu de conta seguem. */
+/* Header mobile composto — logo à esquerda, busca no centro, primeiro nome +
+   avatar à direita (PR #89 item 8; refinado pelo item 9). Antes, o canonical
+   ocultava a busca e o bloco de ações no mobile, deixando o centro do topo
+   vazio e a conta sem nome. Nenhuma função de navegação se perde: a navegação
+   principal mobile é a barra inferior + "Mais", e os ícones de ação rápida do
+   desktop continuam ocultos no mobile como já eram. */
+
+/* Nome curto (primeiro nome) existe no DOM para o mobile; no desktop vale o
+   nome completo — este par é o interruptor, fora de media query de propósito. */
+.cos-account__nome-curto { display: none; }
 
 @media (max-width: 900px) {
   .clinical-os .cos-topbar {
@@ -55,10 +60,14 @@
   .clinical-os .cos-account__trigger > svg { display: none; }
   .clinical-os .cos-account__trigger { gap: 6px; min-height: 36px; padding: 2px 4px; }
 
-  /* hambúrguer no topo, por último — shell-board-fidelity e mobile-more-canonical
-     o ocultavam no mobile (menu só pelo "Mais" inferior); o header composto o
-     devolve ao topo sem remover a barra inferior */
-  .clinical-os .cos-topbar__menu { display: grid !important; order: 3; flex: 0 0 auto; margin-left: 0; }
+  /* Item 9: sem hambúrguer no topo mobile — a navegação principal segue pela
+     barra inferior / "Mais", como o canonical já fazia. Nenhum ícone entra no
+     lugar dele. */
+  .clinical-os .cos-topbar__menu { display: none !important; }
+
+  /* Item 9: só o primeiro nome ao lado do avatar no mobile. */
+  .clinical-os .cos-account__nome-completo { display: none; }
+  .clinical-os .cos-account__nome-curto { display: inline; }
 }
 
 /* Larguras muito estreitas: nome encurta mais para a busca seguir legível. */
