@@ -22147,5 +22147,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "fame-3-cinco-anos-pci-guiada-por-ffr-versus-cabg-na-doenca-trivascular",
+    "title": "FAME 3 em 5 Anos: PCI Guiada por FFR versus CABG na Doença Coronariana Trivascular",
+    "study_type": "ensaio_clinico",
+    "authors": "Fearon WF, Zimmermann FM, Ding VY, et al; FAME 3 Investigators",
+    "journal": "Lancet",
+    "year": 2025,
+    "doi": null,
+    "pmid": "40174598",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40174598/",
+    "summary": "Seguimento de 5 anos do ensaio randomizado, aberto, multicêntrico (48 centros) FAME 3, que comparou PCI guiada por FFR com stent farmacológico de geração atual (n=757) versus CABG (n=743) em 1.500 pacientes com doença coronariana trivascular sem lesão de tronco de coronária esquerda. A publicação original (NEJM 2022, PMID 34735046) reportou desfecho de 1 ano diferente (composto incluindo revascularização não planejada, desfavorável à PCI); este artigo usa um desfecho primário mais restrito em 5 anos.",
+    "key_findings": "Desfecho primário composto (morte/AVC/IAM) em 5 anos: 16,0% (PCI) vs. 14,1% (CABG), HR 1,16 (IC95% 0,89-1,52), p=0,27 — sem diferença estatisticamente significativa. Mortalidade por todas as causas sem diferença significativa. Infarto do miocárdio e revascularização repetida maiores no grupo PCI; AVC maior no grupo CABG.",
+    "clinical_implications": "Quando a PCI é guiada por fisiologia (FFR) e não angiografia isolada, o composto de morte/AVC/IAM em 5 anos não diferencia estatisticamente as duas estratégias na doença trivascular — à custa de um perfil de risco residual diferente entre elas (mais reintervenção/IAM na PCI, mais AVC na CABG). Reforça decisão compartilhada por perfil de risco do paciente, não superioridade de uma estratégia em bloco.",
+    "limitations": "O desfecho primário do artigo de 5 anos é diferente do desfecho primário do artigo de 1 ano (que incluía revascularização não planejada) — comparação direta entre os dois números do artigo original e do de 5 anos não é válida sem essa ressalva. O desfecho de 5 anos não foi pré-especificado com poder estatístico formal para esse horizonte. Estudo aberto (sem cegamento), o que é inerente à comparação entre PCI e cirurgia.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "FAME 3",
+      "FFR",
+      "PCI",
+      "CABG",
+      "doença trivascular",
+      "revascularização"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
