@@ -15382,5 +15382,49 @@
       "Documento 'icfer-classificacao-diagnostico-quatro-pilares' desta biblioteca (cortes de NT-proBNP ambulatorial e agudo)."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-cardiorrenal-tipo-1-creatinina-subindo-suspender-ieca-espironolactona",
+    "titulo": "IC aguda com creatinina subindo sob diurético: suspender IECA e espironolactona por reflexo?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "(Caso educacional fictício, elaborado para fins de ensino; não corresponde a paciente real.) Mulher, 74 anos, internada por IC aguda descompensada (ICFEr, FEVE 28%), em uso crônico de IECA e espironolactona antes da internação. Recebeu diurético de alça intravenoso em dose otimizada, com boa resposta (perda de 2,5 kg em 48h, diurese mantida). No 3º dia, a creatinina sobe de 1,1 para 1,6 mg/dL. PA 118/74 mmHg, sem hipotensão, sem sinais de hipoperfusão periférica, sem uso de contraste ou nefrotóxico novo, diurese ainda adequada.",
+    "pergunta": "Qual conduta está mais alinhada com a evidência sobre síndrome cardiorrenal tipo 1?",
+    "opcoes": [
+      "Suspender IECA e espironolactona imediatamente, pois a piora renal indica toxicidade direta e irreversível desses fármacos",
+      "Manter IECA e espironolactona, e investigar primeiro causas secundárias reversíveis da piora renal (diurese excessiva/hipovolemia relativa, hipotensão, nefrotóxico associado, doença renovascular) antes de suspender qualquer classe por reflexo",
+      "Suspender o diurético de alça e reduzir a dose, sem investigar nenhuma outra causa da piora renal",
+      "Indicar ultrafiltração imediatamente, já que qualquer piora renal sob diurético já define indicação de terapia mecânica de resgate"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A piora da função renal durante o tratamento diurético da IC aguda descompensada — síndrome cardiorrenal tipo 1 — é frequente (entre 27% e 40% dos internados por IC aguda desenvolvem lesão renal aguda, segundo o consenso ADQI que originou essa classificação) e, na maioria das vezes, é hemodinâmica e reversível — não toxicidade direta e definitiva. A armadilha é suspender IECA/BRA/espironolactona ao primeiro sinal de queda da função renal sem antes excluir causa secundária: diurese excessiva, hipotensão persistente, nefrotóxico associado ou doença renovascular de base. Essas são exatamente as classes que reduzem mortalidade a longo prazo na ICFEr — suspendê-las por reflexo troca um benefício de sobrevida comprovado por um risco renal que costuma ser transitório. Ultrafiltração também não é resposta automática a uma elevação inicial e não complicada de creatinina: no CARRESS-HF, a ultrafiltração foi inferior à terapia farmacológica escalonada, com maior piora renal e mais eventos adversos graves — é recurso de resgate para quando a estratégia farmacológica falha, não a primeira resposta a uma creatinina em ascensão.",
+    "source_refs": [
+      "Ronco C, McCullough P, Anker SD, et al., for the Acute Dialysis Quality Initiative (ADQI) consensus group. Cardio-renal syndromes: report from the consensus conference of the Acute Dialysis Quality Initiative. Eur Heart J. 2010;31(6):703-711. DOI: 10.1093/eurheartj/ehp507. PMID: 20037146",
+      "Bart BA, Goldsmith SR, Lee KL, et al. Ultrafiltration in decompensated heart failure with cardiorenal syndrome (CARRESS-HF). N Engl J Med. 2012;367(24):2296-2304. DOI: 10.1056/NEJMoa1210357. PMID: 23131078",
+      "Documento 'sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca' desta biblioteca."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "troca-rotineira-furosemida-torasemida-alta-ic-transform-hf",
+    "titulo": "Trocar furosemida por torasemida na alta, visando menos reinternação: a evidência randomizada sustenta a troca rotineira?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "(Caso educacional fictício, elaborado para fins de ensino; não corresponde a paciente real.) Homem, 67 anos, internado por IC aguda descompensada (ICFEr, FEVE 32%), estabilizado com furosemida oral antes da alta. O residente sugere trocar por torasemida, citando 'melhor biodisponibilidade oral e menos reinternação' com base em estudos observacionais antigos. Não há suspeita de má absorção intestinal por edema de parede nem outro motivo clínico específico para a troca — só a preferência pelo fármaco.",
+    "pergunta": "A troca rotineira de furosemida por torasemida na alta, baseada nesse argumento, está sustentada pelo maior ensaio randomizado disponível sobre o tema?",
+    "opcoes": [
+      "Sim — ensaios randomizados mostram menor mortalidade e menos hospitalização com torasemida",
+      "Não — o TRANSFORM-HF, o maior ensaio randomizado comparando os dois, não encontrou diferença de mortalidade, hospitalização, sintomas ou qualidade de vida entre torasemida e furosemida; a troca rotineira não tem base em desfecho duro, embora a biodisponibilidade oral mais previsível da torasemida continue sendo argumento plausível em situações específicas, como suspeita de má absorção intestinal — cenário que o ensaio não isolou",
+      "Não — a torasemida é inferior à furosemida em desfechos duros e deve ser evitada",
+      "A resposta depende exclusivamente da fração de ejeção: torasemida só teria respaldo em ICFEp"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O TRANSFORM-HF (2.859 pacientes, 60 hospitais dos EUA) randomizou pacientes internados por IC para torasemida ou furosemida na alta e não encontrou diferença: mortalidade por qualquer causa em 12 meses de 26,1% com torasemida vs. 26,2% com furosemida (HR 1,02; IC95% 0,89-1,18), e variação do escore de sintomas KCCQ-CSS em 12 meses de apenas 0,06 pontos entre os grupos (p=0,96) — bem abaixo da diferença mínima clinicamente importante de cerca de 5 pontos. A leitura correta não é 'os dois fármacos são farmacologicamente idênticos': o desenho pragmático e aberto do ensaio teve descontinuação e cruzamento crescentes entre os braços ao longo do seguimento, o que tende a diluir qualquer diferença real que exista. O resultado responde à pergunta pragmática — na forma como os dois fármacos são de fato prescritos e mantidos na prática, a diferença não se traduziu em desfecho mensurável — não elimina o argumento farmacocinético da torasemida (biodisponibilidade oral mais previsível, útil quando há suspeita de má absorção intestinal por edema de parede), que simplesmente não foi isolado nem testado neste ensaio. Não há, portanto, base de desfecho duro para trocar por rotina o paciente estável.",
+    "source_refs": [
+      "Mentz RJ, Anstrom KJ, Eisenstein EL, et al; TRANSFORM-HF Investigators. Effect of Torsemide vs Furosemide After Discharge on All-Cause Mortality in Patients Hospitalized With Heart Failure: The TRANSFORM-HF Randomized Clinical Trial. JAMA. 2023;329(3):214-223. DOI: 10.1001/jama.2022.23924. PMID: 36648467",
+      "Mentz RJ, Ambrosy AP, Fudim M, et al; TRANSFORM-HF Investigators. Effect of Torsemide Versus Furosemide on Symptoms and Quality of Life Among Patients Hospitalized for Heart Failure: The TRANSFORM-HF Randomized Clinical Trial. Circulation. 2023;148(2):124-134. DOI: 10.1161/CIRCULATIONAHA.123.064842. PMID: 37212600",
+      "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
+    ],
+    "review_status": "revisado"
   }
 ]
