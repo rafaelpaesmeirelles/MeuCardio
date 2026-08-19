@@ -44353,5 +44353,382 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "aha-2022-hidralazina-isossorbida-pacientes-negros-nyha-iii-iv",
+    "statement": "Em pacientes autodeclarados negros com insuficiência cardíaca e fração de ejeção reduzida, classe funcional NYHA III ou IV, que permanecem sintomáticos apesar de terapia otimizada com inibidor da ECA/BRA ou INRA, betabloqueador e antagonista mineralocorticoide, é recomendada a adição de hidralazina combinada com dinitrato de isossorbida para reduzir morbidade e mortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "hidralazina",
+      "dinitrato de isossorbida",
+      "a-heft",
+      "icfer",
+      "quatro pilares",
+      "aha-acc-hfsa",
+      "divergencia esc"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe (I) já estava documentada em 'hidralazina-dinitrato-de-isossorbida-em-negros-com-insuficiencia-cardiaca-o-ensaio-a-heft' desta biblioteca, atribuída a uma tabela comparativa publicada (PMC10192289) que reproduz lado a lado ESC 2021 e AHA/ACC/HFSA 2022 — o texto integral da diretriz não pôde ser lido naquela sessão. O nível de evidência (A) faltava; foi confirmado nesta sessão cruzando duas fontes secundárias independentes de PMC10192289 (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia, ambas citando 'Class 1, Level A' verbatim), convergentes entre si e com a classe já registrada. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente. A ESC 2021/2023 não tem recomendação equivalente restrita a este subgrupo racial autodeclarado — ponto de divergência real entre as duas diretrizes, não apenas de fonte, já documentado no corpo do documento acima. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "aha-2022-vericiguat-icfer-alto-risco-piora-recente",
+    "statement": "Em pacientes selecionados de alto risco com insuficiência cardíaca e fração de ejeção reduzida e piora recente da insuficiência cardíaca, já em terapia otimizada, vericiguate pode ser considerado para reduzir hospitalização por insuficiência cardíaca e morte cardiovascular.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "vericiguate",
+      "victoria",
+      "icfer",
+      "piora recente",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe e nível (IIb, B-R) confirmados por fonte secundária que cita o texto da recomendação verbatim nesta sessão ('Class 2b, Level of Evidence: B-R'), convergente com a base declarada pela própria diretriz (ensaio VICTORIA, mesmo ensaio já documentado em profundidade em 'vericiguate-e-o-ensaio-victoria-quinto-mecanismo-na-icfer-de-alto-risco' desta biblioteca). A ESC (já na versão 2021) recomenda a mesma conduta com a mesma classe (IIb, nível B na escala ESC de três letras) — convergência real entre as duas sociedades, não divergência; a diferença de notação (B-R vs. B) reflete só o sistema de graduação mais granular da AHA, não uma diferença de força de recomendação. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "aha-2022-quelantes-de-potassio-para-hipercalemia-na-icfer",
+    "statement": "Em pacientes com insuficiência cardíaca que apresentam hipercalemia (potássio sérico ≥5,5 mEq/L) em uso de inibidor do sistema renina-angiotensina-aldosterona (IECA, BRA ou INRA), o quelante de potássio (patiromer ou sódio zircônio ciclosilicato) pode ser considerado para facilitar a manutenção do bloqueio do SRAA — mas a eficácia dessa estratégia em melhorar desfechos clínicos permanece incerta.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "hipercalemia",
+      "quelante de potássio",
+      "patiromer",
+      "sódio zircônio ciclosilicato",
+      "mra",
+      "sraa",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe (IIb) e nível (B-R) confirmados por convergência de múltiplas buscas WebSearch independentes, reproduzindo o mesmo texto verbatim da recomendação e a mesma classificação, a partir de fontes secundárias distintas (Medscape, revisão em Heart Failure Reviews, material de slide oficial da diretriz via Medtelligence). Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — mesma limitação já documentada no review_note de 'aha-2022-peptideos-natriureticos-diagnostico-dispneia'. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "aha-2022-monitorizacao-de-potassio-e-funcao-renal-com-mra",
+    "statement": "Em pacientes com insuficiência cardíaca com fração de ejeção reduzida em uso de antagonista mineralocorticoide, o potássio sérico e a função renal devem ser monitorizados no início do tratamento e ao longo de toda a terapia, com ajuste da dose de diuréticos quando necessário, para minimizar o risco de hipercalemia e de disfunção renal.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "mra",
+      "espironolactona",
+      "eplerenona",
+      "monitorização",
+      "função renal",
+      "hipercalemia",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe (I) e nível (A) confirmados por buscas WebSearch independentes com texto verbatim consistente ('serum potassium and renal function should be monitored at baseline and throughout therapy... class 1, level A'). Acesso ao texto primário bloqueado pelo proxy deste ambiente. A recomendação-irmã sobre limiar de suspensão do MRA por hipercalemia refratária foi investigada e teve fontes secundárias divergentes quanto ao corte exato — por isso NÃO foi proposta como item separado nesta rodada; precisa de acesso ao texto integral da diretriz para arbitrar com segurança. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "aha-2022-diureticos-para-alivio-da-congestao",
+    "statement": "Em pacientes com insuficiência cardíaca e retenção de fluidos, diuréticos são recomendados para aliviar a congestão, melhorar os sintomas e prevenir a piora da insuficiência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "diuretico",
+      "congestao",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe e nível de evidência (I/B-NR) confirmados cruzando o registro do PubMed (PMID 35363499, mesmo já usado nos demais registros AHA/ACC/HFSA deste acervo) com múltiplas fontes secundárias independentes e convergentes nesta sessão (síntese oficial de bolso da diretriz e cobertura por publicação especializada em cardiologia, verificado de forma independente duas vezes). Acesso direto ao texto integral da diretriz (ahajournals.org, PMC, hfsa.org, acc.org) bloqueado pelo proxy de rede deste ambiente, mesma limitação já documentada nos registros anteriores desta missão. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "accaha2025-htn-confirmacao-diagnostica-por-mapa-ou-mrpa",
+    "statement": "Em adultos com suspeita de hipertensão, a confirmação diagnóstica deve ser feita por medida fora do consultório — MAPA (ambulatorial) ou MRPA (residencial) —, ambas fornecendo informação válida e distinta da medida de consultório para confirmar o diagnóstico de hipertensão.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "mapa",
+      "mrpa",
+      "diagnostico fora do consultorio",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (I/A) confirmados por >=2 buscas WebSearch independentes e convergentes, citando a mesma formulação da recomendação. Acesso ao texto integral (ahajournals.org, JACC, PMC, professional.heart.org) bloqueado pelo proxy de rede deste ambiente. Diverge de ESC 2024 (mesma indicação já publicada no acervo, Classe I mas Nível B) e SBC 2025 (Forte/Alta) só no nível de evidência atribuído, não na recomendação em si — divergência de grau, não de conduta. Valores numéricos exatos dos limiares diagnósticos por método (consultório/MAPA/MRPA) não foram incluídos no statement por não terem sido confirmados com a mesma segurança nesta sessão. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "accaha2025-htn-primeira-linha-farmacologica-4-classes-neutra-por-raca",
+    "statement": "As quatro classes farmacológicas de primeira linha para tratamento da hipertensão são: diuréticos tiazídicos/similares (clortalidona, indapamida, hidroclorotiazida), bloqueadores de canal de cálcio diidropiridínicos de longa ação (anlodipino, nifedipino), inibidores da ECA e bloqueadores do receptor de angiotensina II — recomendadas para todo paciente sem indicação compulsória específica, com escolha baseada em comorbidade e tolerabilidade individual, não em raça (revertendo o algoritmo estratificado por raça da diretriz de 2017, que a 2025 substitui formalmente).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "primeira linha",
+      "tiazidico",
+      "ieca",
+      "bra",
+      "bcc diidropiridinico",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (I/A) e a lista das 4 classes confirmados por >=2 buscas WebSearch independentes e convergentes. Acesso ao texto integral bloqueado pelo proxy deste ambiente. A afirmação de que a seleção por raça do algoritmo de 2017 foi revertida vem de fonte secundária convergente, não da leitura direta comparada dos dois textos originais. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "accaha2025-htn-meta-pas-130-com-estimulo-a-120-em-risco-cv-aumentado",
+    "statement": "Em adultos com hipertensão e risco cardiovascular aumentado (risco em 10 anos pelo escore PREVENT ≥7,5%), a meta é PAS <130mmHg, com estímulo a atingir PAS <120mmHg se bem tolerado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "meta pressorica",
+      "risco cardiovascular",
+      "escore prevent",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (I/A) confirmados por >=2 buscas WebSearch independentes, mesma formulação exata em ambas. Acesso ao texto integral bloqueado pelo proxy deste ambiente. A meta de PAD <80mmHg no mesmo estrato de risco tem nível de evidência diferente (B-R) segundo a mesma fonte e não está incluída neste registro — ver registro complementar se necessário. Contraste explícito com o registro accaha2025-htn-mesma-meta-pressorica-rebaixada-a-iib-em-risco-cv-baixo (mesma meta numérica, classe rebaixada em risco baixo). Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "accaha2025-htn-mesma-meta-pressorica-rebaixada-a-iib-em-risco-cv-baixo",
+    "statement": "Em adultos com hipertensão e risco cardiovascular baixo (PREVENT <7,5%), a mesma meta pressórica de <130/80mmHg pode ser considerada, com força de recomendação e nível de evidência mais baixos que no estrato de risco aumentado — a meta numérica não muda, mas a força da recomendação sim.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "meta pressorica",
+      "risco cardiovascular baixo",
+      "escore prevent",
+      "divergencia sbc-aha",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (IIb/B-NR) confirmados por >=2 buscas WebSearch independentes, mesma formulação em ambas. Divergência registrada de propósito: a SBC 2025 já publicada no acervo (meta-pressorica-universal-has-2025) trata a meta de 130/80 como recomendação de força alta de modo quase universal; a AHA/ACC 2025 rebaixa a mesma meta para Classe IIb quando o risco calculado pelo PREVENT é baixo. Não se afirma qual sociedade está 'certa' — as duas posições ficam registradas lado a lado para o leitor comparar. Acesso ao texto integral bloqueado pelo proxy deste ambiente. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
+    "published": true
+  },
+  {
+    "slug": "esc2025-gravidez-manejo-conjunto-pregnancy-heart-team-cardio-oncologia",
+    "statement": "É recomendado que gestantes com câncer que necessitam de terapia oncológica cardiotóxica sejam manejadas conjuntamente pela Pregnancy Heart Team e pela equipe de cardio-oncologia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Recommendation Table 22 (cardio-oncologia e gravidez).",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "cardio-oncologia",
+      "pregnancy heart team",
+      "quimioterapia cardiotóxica"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Verificado nesta sessão por duas buscas WebSearch independentes, ambas retornando a mesma redação e o mesmo número de tabela ('Recommendation Table 22'), classe e nível idênticos. WebFetch está bloqueado neste ambiente para o texto integral da diretriz; a verificação foi feita por convergência de buscas, não por leitura direta do PDF. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "esc2025-gravidez-hbpm-fa-alto-risco-tromboembolico",
+    "statement": "Heparina de baixo peso molecular é indicada na fibrilação atrial de alto risco tromboembólico durante a gestação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de arritmias na gestação.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "fibrilação atrial",
+      "anticoagulação",
+      "hbpm",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Verificado nesta sessão por três buscas WebSearch independentes com contextos de busca diferentes (uma sobre válvula mecânica, duas sobre FA/anticoagulação na gestação), todas retornando a mesma formulação ('LMWH is indicated in high-risk AF'), classe e nível idênticos. Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "esc2025-gravidez-doac-contraindicados",
+    "statement": "Anticoagulantes orais diretos (DOAC) não são recomendados durante a gestação.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Recommendation Table 4 ('Recommendation for direct oral anticoagulants and pregnancy'). ",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "doac",
+      "anticoagulante oral direto",
+      "gestação",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe III e nível C confirmados diretamente na Recommendation Table 4 da diretriz ESC 2025; redação ajustada para preservar o enunciado normativo exato (“não recomendados”), sem extrapolar para contraindicação absoluta."
+  },
+  {
+    "slug": "esc2025-gravidez-manutencao-vka-2-3-trimestre-protese-mecanica",
+    "statement": "Durante o segundo e o terceiro trimestres, até a 36ª semana, a manutenção do antagonista da vitamina K deve ser considerada em gestantes com prótese valvar mecânica sob maior risco de trombose.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de anticoagulação/prótese valvar mecânica na gestação. ",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "prótese valvar mecânica",
+      "antagonista de vitamina k",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe IIa e nível C confirmados diretamente na Recommendation Table 19 da diretriz ESC 2025; o enunciado foi corrigido para incluir “até a 36ª semana” e “maior risco de trombose”."
+  },
+  {
+    "slug": "esc2025-gravidez-hbpm-ajustada-alternativa-vka-protese-mecanica",
+    "statement": "Durante o segundo e o terceiro trimestres, a manutenção de heparina de baixo peso molecular com monitorização de anti-Xa e ajuste de dose pode ser considerada em gestantes com prótese valvar mecânica sob menor risco de trombose.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de anticoagulação/prótese valvar mecânica na gestação. ",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "prótese valvar mecânica",
+      "hbpm",
+      "anti-xa",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe IIb e nível C confirmados diretamente na Recommendation Table 19 da diretriz ESC 2025; redação alinhada à tabela original."
+  },
+  {
+    "slug": "esc2025-gravidez-bromocriptina-adjuvante-cardiomiopatia-periparto",
+    "statement": "Bromocriptina pode ser considerada em adição ao tratamento otimizado da insuficiência cardíaca para aumentar a recuperação da função ventricular esquerda em mulheres com cardiomiopatia periparto.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de cardiomiopatia periparto.  Ver também o registro EORP PPCM (van der Meer P et al., Eur Heart J 2025;46(11):1017-1027, DOI 10.1093/eurheartj/ehae559) como base observacional adicional, cadastrado em estudos/metadados.json sob o slug eorp-ppcm-registro-bromocriptina-cardiomiopatia-periparto.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "bromocriptina",
+      "cardiomiopatia periparto",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe IIb e nível B confirmados diretamente na Recommendation Table 7 da diretriz ESC 2025; redação corrigida para incluir o objetivo e o contexto do tratamento adjuvante."
+  },
+  {
+    "slug": "esc2020-esporte-reabilitacao-cardiaca-exercicio-classe-i",
+    "statement": "Programas de reabilitação cardíaca com exercício físico são recomendados para pacientes com doença isquêmica, insuficiência cardíaca ou dispositivo de assistência ventricular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease: The Task Force on sports cardiology and exercise in patients with cardiovascular disease of the European Society of Cardiology (ESC). Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 34020769 — confirmado por buscas independentes convergentes. Nível A para doença isquêmica/IC/DAV; Nível B especificamente para pós-transplante cardíaco — este registro cobre o Nível A geral.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "esc 2020",
+      "reabilitação cardíaca",
+      "exercício físico",
+      "insuficiência cardíaca",
+      "doença isquêmica"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe I e nível A confirmados na diretriz ESC 2020 para programas de exercício/reabilitação em doença coronariana, insuficiência cardíaca e dispositivo de assistência ventricular. A recomendação pós-transplante foi separada em registro próprio por possuir nível B."
+  },
+  {
+    "slug": "esc2020-esporte-reabilitacao-cardiaca-pos-transplante-classe-i",
+    "statement": "Programas de reabilitação cardíaca com exercício físico são recomendados para pacientes após transplante cardíaco.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease: The Task Force on sports cardiology and exercise in patients with cardiovascular disease of the European Society of Cardiology (ESC). Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 34020769.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "esc 2020",
+      "reabilitação cardíaca",
+      "exercício físico",
+      "transplante cardíaco"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe I e nível B confirmados na diretriz ESC 2020 para programas de exercício/reabilitação após transplante cardíaco; separado do registro geral de nível A para evitar atribuição incorreta do nível de evidência."
+  },
+  {
+    "slug": "esc2020-esporte-participacao-competitiva-sca-cronica-baixo-risco",
+    "statement": "A participação em esporte competitivo ou de lazer deve ser considerada, de forma individualizada, em pessoas com doença coronariana crônica e baixo risco de eventos adversos induzidos pelo exercício; podem existir restrições para modalidades de alta intensidade em pessoas com mais de 60 anos.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease: The Task Force on sports cardiology and exercise in patients with cardiovascular disease of the European Society of Cardiology (ESC). Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 34020769 — confirmado por buscas independentes convergentes.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "esc 2020",
+      "síndrome coronariana crônica",
+      "esporte competitivo",
+      "liberação esportiva"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe IIa e nível C confirmados na tabela de recomendações para exercício em síndrome coronariana crônica da diretriz ESC 2020; redação alinhada ao texto integral e às restrições etárias descritas."
   }
 ]
