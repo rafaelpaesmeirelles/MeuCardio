@@ -44353,5 +44353,128 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "esc2025-gravidez-manejo-conjunto-pregnancy-heart-team-cardio-oncologia",
+    "statement": "É recomendado que gestantes com câncer que necessitam de terapia oncológica cardiotóxica sejam manejadas conjuntamente pela Pregnancy Heart Team e pela equipe de cardio-oncologia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Recommendation Table 22 (cardio-oncologia e gravidez).",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "cardio-oncologia",
+      "pregnancy heart team",
+      "quimioterapia cardiotóxica"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Verificado nesta sessão por duas buscas WebSearch independentes, ambas retornando a mesma redação e o mesmo número de tabela ('Recommendation Table 22'), classe e nível idênticos. WebFetch está bloqueado neste ambiente para o texto integral da diretriz; a verificação foi feita por convergência de buscas, não por leitura direta do PDF."
+  },
+  {
+    "slug": "esc2025-gravidez-hbpm-fa-alto-risco-tromboembolico",
+    "statement": "Heparina de baixo peso molecular é indicada na fibrilação atrial de alto risco tromboembólico durante a gestação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de arritmias na gestação.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "fibrilação atrial",
+      "anticoagulação",
+      "hbpm",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Verificado nesta sessão por três buscas WebSearch independentes com contextos de busca diferentes (uma sobre válvula mecânica, duas sobre FA/anticoagulação na gestação), todas retornando a mesma formulação ('LMWH is indicated in high-risk AF'), classe e nível idênticos."
+  },
+  {
+    "slug": "esc2025-gravidez-doac-contraindicados",
+    "statement": "O uso de anticoagulantes orais diretos (DOAC) é contraindicado durante a gestação; os dados de desfecho vêm principalmente de bancos de farmacovigilância, e os efeitos fetais e a segurança de agentes reversores específicos permanecem debatidos.",
+    "recommendation_class": "III",
+    "evidence_level": "?",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Recommendation Table 4 ('Recommendation for direct oral anticoagulants and pregnancy'). VERIFICAÇÃO HUMANA NECESSÁRIA: a letra do nível de evidência não foi localizada com certeza nas buscas realizadas nesta sessão — não deve ser assumida sem conferir a diretriz original.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "doac",
+      "anticoagulante oral direto",
+      "gestação",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "A classe (III, contraindicado) foi confirmada por quatro buscas WebSearch independentes e convergentes ('contraindicated'/'not recommended', repetido em todas). O nível de evidência (letra A/B/C) não foi confirmado em nenhuma busca com citação direta do texto — por convenção ESC costuma ser C na ausência de estudo randomizado em gestante, mas isso é inferência, não citação, por isso o campo fica '?' em vez de um valor assumido."
+  },
+  {
+    "slug": "esc2025-gravidez-manutencao-vka-2-3-trimestre-protese-mecanica",
+    "statement": "Manter o antagonista de vitamina K no segundo e terceiro trimestres deve ser considerado em gestante com prótese valvar mecânica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "?",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de anticoagulação/prótese valvar mecânica na gestação. VERIFICAÇÃO HUMANA NECESSÁRIA: letra do nível de evidência não confirmada nesta sessão.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "prótese valvar mecânica",
+      "antagonista de vitamina k",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Classe IIa confirmada por duas buscas WebSearch independentes, incluindo uma fonte especializada da própria ESC sobre antitrombóticos, com a mesma redação. Nível de evidência não confirmado por letra explícita em nenhuma busca — campo '?' em vez de valor assumido, mesmo padrão já usado no repositório para o intervalo de 3 semanas na profilaxia secundária de febre reumática (AHA 2009)."
+  },
+  {
+    "slug": "esc2025-gravidez-hbpm-ajustada-alternativa-vka-protese-mecanica",
+    "statement": "Heparina de baixo peso molecular em dose ajustada, duas vezes ao dia, com monitorização regular do nível de anti-Xa, pode ser considerada como alternativa ao antagonista de vitamina K no segundo e terceiro trimestres, quando o risco de trombose valvar é baixo, em gestante com prótese valvar mecânica.",
+    "recommendation_class": "IIb",
+    "evidence_level": "?",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de anticoagulação/prótese valvar mecânica na gestação. VERIFICAÇÃO HUMANA NECESSÁRIA: letra do nível de evidência não confirmada nesta sessão.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "prótese valvar mecânica",
+      "hbpm",
+      "anti-xa",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Classe IIb confirmada junto com o item de manutenção do VKA (mesma fonte, mesma busca), como alternativa condicional de menor força. Nível de evidência não confirmado por letra explícita — campo '?'."
+  },
+  {
+    "slug": "esc2025-gravidez-bromocriptina-adjuvante-cardiomiopatia-periparto",
+    "statement": "Bromocriptina pode ser considerada como terapia adjuvante na cardiomiopatia periparto.",
+    "recommendation_class": "IIb",
+    "evidence_level": "?",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "Task force on the management of cardiovascular disease and pregnancy of the ESC. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294 — confirmado por buscas independentes convergentes (listagem PubMed, Oxford Academic, escardio.org, ACC, PMC13147266). Há errata publicada (Eur Heart J 2026;47(7):812, DOI 10.1093/eurheartj/ehaf1011), não conferida quanto a impacto neste item específico. Capítulo de cardiomiopatia periparto. VERIFICAÇÃO HUMANA NECESSÁRIA: letra do nível de evidência não confirmada nesta sessão. Ver também o registro EORP PPCM (van der Meer P et al., Eur Heart J 2025;46(11):1017-1027, DOI 10.1093/eurheartj/ehae559) como base observacional adicional, cadastrado em estudos/metadados.json sob o slug eorp-ppcm-registro-bromocriptina-cardiomiopatia-periparto.",
+    "theme": "Gravidez",
+    "tags": [
+      "esc 2025",
+      "bromocriptina",
+      "cardiomiopatia periparto",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Classe IIb confirmada por duas buscas WebSearch independentes com a mesma classe. Nível de evidência não confirmado por letra explícita — campo '?'. O corpo de evidência observacional que provavelmente sustenta esta recomendação (registro EORP PPCM, 552 pacientes) foi cadastrado separadamente como ScientificStudy nesta mesma PR, com a ressalva de que não existe ainda RCT dedicado concluído (REBIRTH, em andamento, resultado não esperado antes de 2029)."
   }
 ]

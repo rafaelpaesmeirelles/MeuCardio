@@ -22147,5 +22147,53 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "eorp-ppcm-registro-bromocriptina-cardiomiopatia-periparto",
+    "title": "Registro EORP PPCM — Bromocriptina no Tratamento da Cardiomiopatia Periparto",
+    "study_type": "estudo_de_coorte",
+    "authors": "van der Meer P, van Essen BJ, Viljoen C, Böhm M, Jackson A, Hilfiker-Kleiner D, et al.",
+    "journal": "European Heart Journal",
+    "year": 2025,
+    "doi": "10.1093/eurheartj/ehae559",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11905762/",
+    "summary": "Registro observacional multicêntrico da ESC (EORP PPCM), com 552 pacientes com cardiomiopatia periparto enroladas entre 2012 e 2018, seguimento obrigatório de 6 meses. 85 pacientes (15%) foram tratadas com bromocriptina além do cuidado padrão, numa decisão não randomizada dos centros participantes. Análise ajustada por ponderação de probabilidade inversa (IPW) e imputação múltipla para reduzir confusão por indicação.",
+    "key_findings": "Desfecho composto primário (óbito, reinternação hospitalar, ou disfunção sistólica grave persistente com FEVE <35% aos 6 meses) ocorreu em 18/82 (22%) no grupo bromocriptina + cuidado padrão versus 136/409 (33%) no grupo cuidado padrão isolado (p=0,044). Sem aumento do risco de eventos tromboembólicos com bromocriptina.",
+    "clinical_implications": "É provavelmente a base empírica observacional direta por trás da recomendação Classe IIb da ESC 2025 para bromocriptina adjuvante na cardiomiopatia periparto (cadastrada em evidencias/metadados.json, tema Gravidez). O ensaio randomizado dedicado (REBIRTH) segue em andamento, sem resultado esperado antes de 2029 — não existe ainda RCT concluído sustentando esta terapia, apenas dado observacional ajustado.",
+    "limitations": "Estudo observacional — mesmo com ponderação por probabilidade inversa e imputação múltipla, sujeito a confusão residual por indicação (centros que escolheram tratar podem diferir sistematicamente dos que não escolheram). Diferença entre o N randomizado inicial (85) e o N analisado no desfecho (82) sugere perda de seguimento não detalhada nas buscas desta sessão. Não há HR/OR ajustado exato disponível, apenas a comparação de proporções brutas.",
+    "theme": "Gravidez",
+    "tags": [
+      "eorp ppcm",
+      "bromocriptina",
+      "cardiomiopatia periparto",
+      "registro observacional",
+      "esc"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "recorrencia-familiar-de-cardiopatia-congenita-coorte-nacional-sueca",
+    "title": "Recorrência Familiar de Cardiopatia Congênita — Coorte de Registro Nacional Sueco",
+    "study_type": "estudo_de_coorte",
+    "authors": "Kazamia K, Ekberg S, Dietrich CE, Eliasson H, Wahren-Herlenius M, Bergman G.",
+    "journal": "European Heart Journal",
+    "year": 2026,
+    "doi": "10.1093/eurheartj/ehaf1048",
+    "url": "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehaf1048/8417266",
+    "summary": "Coorte caso-controle populacional retrospectiva, com dados de registros nacionais de saúde e de população da Suécia, ligando parentes (mãe, pai, irmãos completos, meio-irmãos, prole) de indivíduos com cardiopatia congênita. 51.778 indivíduos com cardiopatia congênita nascidos entre 1987 e 2017, comparados a 522.543 controles pareados.",
+    "key_findings": "Cardiopatia congênita em um parente de primeiro grau associa-se a maior chance de cardiopatia congênita no indivíduo-índice, com odds ratio ajustada crescendo conforme mais parentes são afetados: mãe OR 3,12, irmão completo OR 3,22, prole OR 3,18 — associação mais fraca para pai e meio-irmãos. IC95% e valor de p exatos não foram confirmados de forma independente nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar precisão estatística).",
+    "clinical_implications": "Fornece dado quantitativo populacional, muito mais robusto que a estimativa antiga de recorrência familiar (~4%) que ainda circula na prática clínica, diretamente aplicável ao aconselhamento genético/reprodutivo de mulher com cardiopatia congênita que engravida ou planeja engravidar — a mesma pergunta de recorrência fetal que a gestante com CHD costuma trazer à consulta.",
+    "limitations": "IC95% e p exatos não confirmados nesta sessão de verificação — apenas os pontos de OR foram corroborados por buscas independentes convergentes; consultar a publicação original antes de citar precisão estatística. Coorte de registro sueco, com possível limitação de generalização a sistemas de saúde e populações diferentes. PMID não incluído neste registro por não ter sido corroborado como número isolado por segunda busca independente — usar o DOI como identificador primário.",
+    "theme": "Gravidez",
+    "tags": [
+      "cardiopatia congênita",
+      "recorrência familiar",
+      "aconselhamento genético",
+      "coorte sueca",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
