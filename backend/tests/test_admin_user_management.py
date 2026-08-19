@@ -143,23 +143,25 @@ def test_exclui_usuario_gratuito_e_caixa_mail360_por_account_key(client, db, cri
         status="ativa",
     ))
     db.commit()
+    alvo_id = alvo.id
+    alvo_email = alvo.email
 
     chamadas = []
     monkeypatch.setattr(mail360, "_chamar", lambda metodo, caminho, **kwargs: chamadas.append((metodo, caminho)) or {})
 
     resposta = _delete(
         client,
-        f"/api/admin/user-management/{alvo.id}",
+        f"/api/admin/user-management/{alvo_id}",
         token_admin,
-        {"confirmar_email": alvo.email, "excluir_corvia_mail": True},
+        {"confirmar_email": alvo_email, "excluir_corvia_mail": True},
     )
 
     assert resposta.status_code == 200, resposta.text
     assert resposta.json()["corvia_mail_excluido"] is True
     assert chamadas == [("DELETE", "/accounts/mail-key-lenira")]
     db.expire_all()
-    assert db.get(User, alvo.id) is None
-    assert db.query(EmailAccount).filter(EmailAccount.user_id == alvo.id).count() == 0
+    assert db.get(User, alvo_id) is None
+    assert db.query(EmailAccount).filter(EmailAccount.user_id == alvo_id).count() == 0
 
 
 def test_falha_mail360_mantem_conta_local(client, db, criar_usuario, monkeypatch):
