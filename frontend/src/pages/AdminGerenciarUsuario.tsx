@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ApiError, api } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 
-
 type CorviaMail = {
   id: number;
   email_address: string;
@@ -36,6 +35,11 @@ type UsuarioGerenciavel = {
   corvia_mail: CorviaMail | null;
 };
 
+type CampoTexto =
+  | "profession" | "council_name" | "council_number" | "council_state"
+  | "specialty" | "rqe" | "professional_title" | "workplace_name"
+  | "workplace_department" | "workplace_role" | "workplace_notes";
+
 const PERFIS = [
   ["medico", "Médico"],
   ["residente", "Residente"],
@@ -48,7 +52,7 @@ const TIPOS = [
   ["investidor", "Investidor — demonstração"],
 ] as const;
 
-const CAMPOS_TEXTO: Array<[keyof UsuarioGerenciavel, string, string]> = [
+const CAMPOS_TEXTO: Array<[CampoTexto, string, string]> = [
   ["profession", "Profissão", "Ex.: Médico"],
   ["council_name", "Conselho", "Ex.: CRM"],
   ["council_number", "Número do conselho", ""],
@@ -76,6 +80,9 @@ export default function AdminGerenciarUsuario() {
   const [novaSenha, setNovaSenha] = useState("");
   const [senha2, setSenha2] = useState("");
   const [alterandoSenha, setAlterandoSenha] = useState(false);
+  const [novaSenhaMail, setNovaSenhaMail] = useState("");
+  const [senhaMail2, setSenhaMail2] = useState("");
+  const [alterandoSenhaMail, setAlterandoSenhaMail] = useState(false);
   const [confirmarEmail, setConfirmarEmail] = useState("");
   const [confirmarExclusao, setConfirmarExclusao] = useState(false);
   const [excluindo, setExcluindo] = useState(false);
@@ -134,10 +141,24 @@ export default function AdminGerenciarUsuario() {
     try {
       await api.post(`/admin/users/${id}/senha`, { password: novaSenha });
       setNovaSenha(""); setSenha2("");
-      setMensagem("Senha alterada. As sessões anteriores dessa conta foram revogadas.");
+      setMensagem("Senha do Clinical OS alterada. As sessões anteriores foram revogadas.");
     } catch (e) {
       setErro(mensagemErro(e, "Não foi possível alterar a senha."));
     } finally { setAlterandoSenha(false); }
+  }
+
+  async function trocarSenhaMail() {
+    if (!id || !usuario?.corvia_mail) return;
+    if (novaSenhaMail.length < 8) { setErro("A nova senha do CorVIA Mail precisa ter pelo menos 8 caracteres."); return; }
+    if (novaSenhaMail !== senhaMail2) { setErro("As duas senhas do CorVIA Mail não conferem."); return; }
+    setAlterandoSenhaMail(true); setErro(""); setMensagem("");
+    try {
+      await api.post(`/admin/user-management/${id}/corvia-mail/senha`, { password: novaSenhaMail });
+      setNovaSenhaMail(""); setSenhaMail2("");
+      setMensagem("Senha do CorVIA Mail alterada. As sessões anteriores da caixa foram revogadas.");
+    } catch (e) {
+      setErro(mensagemErro(e, "Não foi possível alterar a senha do CorVIA Mail."));
+    } finally { setAlterandoSenhaMail(false); }
   }
 
   async function excluirDefinitivamente() {
@@ -167,8 +188,8 @@ export default function AdminGerenciarUsuario() {
       <p className="eyebrow" style={{ marginTop: "1rem" }}>Administração · usuário #{usuario.id}</p>
       <h1>Gerenciar conta</h1>
       <p style={{ color: "var(--texto-secundario)", maxWidth: "72ch" }}>
-        Edite os dados cadastrados, redefina a senha ou remova definitivamente contas gratuitas/de demonstração.
-        Exclusão é protegida por confirmação explícita e remove também a caixa nativa do CorVIA Mail quando existir.
+        Edite dados, redefina as senhas do Clinical OS e do CorVIA Mail e, quando permitido,
+        remova definitivamente contas gratuitas ou de demonstração.
       </p>
 
       {mensagem && <div className="cartao" style={{ marginBottom: 12, borderColor: "rgba(52,211,153,.35)" }}>{mensagem}</div>}
@@ -184,7 +205,10 @@ export default function AdminGerenciarUsuario() {
           <div><label>Perfil</label><select value={usuario.role} onChange={(e) => alterar("role", e.target.value)}>{PERFIS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
           <div><label>Tipo de acesso</label><select value={usuario.tipo_acesso} onChange={(e) => alterar("tipo_acesso", e.target.value as UsuarioGerenciavel["tipo_acesso"])}>{TIPOS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
           {CAMPOS_TEXTO.map(([campo, rotulo, placeholder]) => (
-            <div key={campo}><label>{rotulo}</label><input placeholder={placeholder} value={String(usuario[campo] ?? "")} onChange={(e) => alterar(campo, e.target.value as never)} /></div>
+            <div key={campo}>
+              <label>{rotulo}</label>
+              <input placeholder={placeholder} value={usuario[campo] ?? ""} onChange={(e) => setUsuario((u) => u ? { ...u, [campo]: e.target.value } : u)} />
+            </div>
           ))}
         </div>
         <label style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12, fontWeight: 500 }}>
@@ -204,12 +228,27 @@ export default function AdminGerenciarUsuario() {
         <button className="botao botao--secundario" style={{ marginTop: 12 }} disabled={alterandoSenha || novaSenha.length < 8 || novaSenha !== senha2} onClick={trocarSenha}>{alterandoSenha ? "Alterando…" : "Alterar senha"}</button>
       </section>
 
+      {usuario.corvia_mail && (
+        <section className="cartao" style={{ maxWidth: 900, marginTop: 16 }}>
+          <p className="eyebrow">Senha do CorVIA Mail</p>
+          <strong>{usuario.corvia_mail.email_address}</strong>
+          <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem" }}>
+            A caixa possui senha própria, independente do Clinical OS. A redefinição também revoga sessões anteriores do e-mail.
+          </p>
+          <div className="grade grade--2">
+            <div><label>Nova senha do e-mail</label><input type="password" value={novaSenhaMail} autoComplete="new-password" onChange={(e) => setNovaSenhaMail(e.target.value)} /></div>
+            <div><label>Confirmar senha do e-mail</label><input type="password" value={senhaMail2} autoComplete="new-password" onChange={(e) => setSenhaMail2(e.target.value)} /></div>
+          </div>
+          <button className="botao botao--secundario" style={{ marginTop: 12 }} disabled={alterandoSenhaMail || novaSenhaMail.length < 8 || novaSenhaMail !== senhaMail2} onClick={trocarSenhaMail}>{alterandoSenhaMail ? "Alterando…" : "Alterar senha do CorVIA Mail"}</button>
+        </section>
+      )}
+
       <section className="cartao" style={{ maxWidth: 900, marginTop: 16, borderColor: "rgba(251,113,133,.5)" }}>
         <p className="eyebrow" style={{ color: "#fb7185" }}>Zona de exclusão definitiva</p>
         <h2 style={{ marginTop: 4 }}>Excluir usuário do CorVIA</h2>
         <p style={{ color: "var(--texto-secundario)" }}>
           Esta ação é irreversível. Remove a conta local e, se houver, a caixa nativa do CorVIA Mail.
-          Contas administrativas e contas com cobrança/assinatura Stripe vinculada são bloqueadas.
+          Contas administrativas e qualquer conta com cobrança Stripe relevante são bloqueadas.
         </p>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
           <span className={`selo ${usuario.gratuito ? "selo--sucesso" : "selo--atencao"}`}>{usuario.gratuito ? "Conta sem cobrança ativa" : "Revisar cobrança"}</span>
