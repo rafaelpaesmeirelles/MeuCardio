@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../lib/auth";
-import { api } from "../lib/api";
+import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
@@ -75,22 +75,13 @@ const CONTA_ADMIN: LinkItem[] = [
 export default function ClinicalMobileNav() {
   const { usuario } = useAuth();
   const [maisAberto, setMaisAberto] = useState(false);
-  const [pendentesAssinatura,setPendentesAssinatura]=useState(0);
-  const [ehRafael,setEhRafael]=useState(false);
+  const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const sheetRef = useRef<HTMLElement>(null);
 
-  useEffect(()=>{
-    if(usuario?.role!=="admin")return;
-    api.get<{rafael_signer:boolean}>("/prescricao-especial/capacidades").then(async c=>{
-      setEhRafael(c.rafael_signer);
-      if(c.rafael_signer){const itens=await api.get<unknown[]>("/prescricao-especial/pendentes");setPendentesAssinatura(itens.length);}
-    }).catch(()=>{});
-  },[usuario?.role]);
-
   const contaAdmin=CONTA_ADMIN
-    .filter(item=>item.to!=="/receitas-para-assinatura"||ehRafael)
+    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
 
   const secoes: MobileSection[] = [
@@ -129,7 +120,7 @@ export default function ClinicalMobileNav() {
   }, [maisAberto]);
 
   function SheetLink({ item }: { item: LinkItem }) {
-    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<em aria-label={`${item.badge} pendentes`} style={{marginLeft:6,fontStyle:"normal",fontSize:11,padding:"2px 6px",borderRadius:999,background:"var(--cor-primaria)",color:"#fff"}}>{item.badge}</em>}</strong></NavLink>;
+    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<em className="rx-queue-badge" aria-label={`${item.badge} pendentes`}>{item.badge}</em>}</strong></NavLink>;
   }
 
   return <>

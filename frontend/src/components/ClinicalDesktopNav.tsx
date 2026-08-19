@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../lib/auth";
-import { api, assetUrl } from "../lib/api";
+import { assetUrl } from "../lib/api";
+import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
@@ -78,7 +78,7 @@ function Item({ item }: { item: NavItem }) {
   return (
     <NavLink to={item.to} className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}>
       <Icone nome={item.icon} /><span>{item.label}</span>
-      {!!item.badge && <span aria-label={`${item.badge} pendentes`} style={{marginLeft:"auto",minWidth:20,height:20,padding:"0 6px",borderRadius:999,display:"inline-flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,background:"var(--cor-primaria)",color:"#fff"}}>{item.badge}</span>}
+      {!!item.badge && <span className="rx-queue-badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}
     </NavLink>
   );
 }
@@ -95,19 +95,10 @@ function iniciais(nome?: string) {
 
 export default function ClinicalDesktopNav() {
   const { usuario } = useAuth();
-  const [pendentesAssinatura,setPendentesAssinatura]=useState(0);
-  const [ehRafael,setEhRafael]=useState(false);
-
-  useEffect(()=>{
-    if(usuario?.role!=="admin")return;
-    api.get<{rafael_signer:boolean}>("/prescricao-especial/capacidades").then(async c=>{
-      setEhRafael(c.rafael_signer);
-      if(c.rafael_signer){const itens=await api.get<unknown[]>("/prescricao-especial/pendentes");setPendentesAssinatura(itens.length);}
-    }).catch(()=>{});
-  },[usuario?.role]);
+  const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
 
   const administracao=ADMINISTRACAO
-    .filter(item=>item.to!=="/receitas-para-assinatura"||ehRafael)
+    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
 
   const sections: NavSection[] = [

@@ -14,10 +14,13 @@ def test_dedicated_signature_queue_is_routed_and_in_both_navigation_surfaces():
     app = (ROOT / "frontend" / "src" / "App.tsx").read_text(encoding="utf-8")
     desktop = (ROOT / "frontend" / "src" / "components" / "ClinicalDesktopNav.tsx").read_text(encoding="utf-8")
     mobile = (ROOT / "frontend" / "src" / "components" / "ClinicalMobileNav.tsx").read_text(encoding="utf-8")
+    badge = (ROOT / "frontend" / "src" / "hooks" / "usePrescriptionQueueBadge.ts").read_text(encoding="utf-8")
     page = (ROOT / "frontend" / "src" / "pages" / "ReceitasParaAssinatura.tsx").read_text(encoding="utf-8")
 
     for source in (app, desktop, mobile):
         assert "receitas-para-assinatura" in source
     assert "queueOnly" in page
-    assert "/prescricao-especial/pendentes" in desktop
-    assert "/prescricao-especial/pendentes" in mobile
+    assert "usePrescriptionQueueBadge" in desktop
+    assert "usePrescriptionQueueBadge" in mobile
+    assert "/prescricao-especial/pendentes" in badge
+    assert "setInterval" in badge
