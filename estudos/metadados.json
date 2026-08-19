@@ -22147,5 +22147,58 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "troca-valvar-tricuspide-transcateter-no-mundo-real-registro-sts-acc-tvt",
+    "title": "Troca Valvar Tricúspide Transcateter no Mundo Real: Registro STS/ACC TVT",
+    "study_type": "registro_prospectivo",
+    "authors": "Makkar RR, et al.",
+    "journal": "JAMA",
+    "year": 2026,
+    "doi": null,
+    "pmid": "41973411",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41973411/",
+    "summary": "Coorte observacional retrospectiva de todos os pacientes consecutivos submetidos a troca valvar tricúspide transcateter (TTVR, sistema EVOQUE) nos Estados Unidos, registrados no STS/ACC TVT Registry entre fevereiro de 2024 e março de 2025 (primeiro ano completo de uso pós-aprovação regulatória). 1.034 pacientes, 82 centros, idade média 77 anos, 69% mulheres, 11% pacientes negros.",
+    "key_findings": "Regurgitação tricúspide praticamente eliminada em praticamente todos os pacientes em 30 dias. Mortalidade, AVC e sangramento em 30 dias consistentes com os observados no ensaio pivotal TRISCEND II. Necessidade de novo marca-passo nitidamente menor do que a observada no ensaio randomizado.",
+    "clinical_implications": "Confirma, em escala nacional (82 centros) e no primeiro ano de disponibilidade comercial, que os resultados de segurança e eficácia do TRISCEND II são reprodutíveis fora do ambiente controlado do ensaio — evidência de generalização real-world que faltava para essa tecnologia.",
+    "limitations": "Seguimento de apenas 30 dias, sem dado de médio ou longo prazo. Estudo observacional, sem grupo comparador randomizado, sem possibilidade de inferência causal. Possível viés de seleção de centros pioneiros na adoção da tecnologia, de maior volume/experiência em estrutural.",
+    "theme": "Valvopatias",
+    "tags": [
+      "TTVR",
+      "EVOQUE",
+      "insuficiência tricúspide",
+      "registro",
+      "mundo real",
+      "STS/ACC TVT"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "troca-valvar-aortica-precoce-na-estenose-aortica-assintomatica-grave-metanalise-de-4-rcts",
+    "title": "Troca Valvar Aórtica Precoce na Estenose Aórtica Assintomática Grave: Metanálise de 4 Ensaios Randomizados",
+    "study_type": "metanalise",
+    "authors": "Song Q, Liu R, Yang K, Tu X, Tan H, Fan C, Li X",
+    "journal": "Journal of the American Heart Association",
+    "year": 2025,
+    "doi": "10.1161/JAHA.125.041283",
+    "pmid": "40831305",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40831305/",
+    "summary": "Metanálise de 4 ensaios randomizados controlados (RECOVERY, AVATAR, EARLY TAVR, EVOLVED), 1.427 pacientes com estenose aórtica grave assintomática, comparando troca valvar precoce versus vigilância clínica. Dois dos quatro ensaios eram cirúrgicos (RECOVERY, AVATAR) e dois baseados em TAVI/critério de imagem (EARLY TAVR, EVOLVED).",
+    "key_findings": "Desfecho composto (morte por qualquer causa, hospitalização cardiovascular, AVC, IAM): 29,2% (intervenção precoce) vs. 53,7% (vigilância), RR 0,56 (IC95% 0,49-0,64). Mortalidade por todas as causas: 10,0% vs. 13,7%, RR 0,74 (IC95% 0,55-0,99). Benefício de sobrevida mais consistente no subgrupo de trials cirúrgicos que no subgrupo baseado em TAVI/imagem. Mortalidade cardiovascular isolada não confirmada com segurança (VERIFICAÇÃO HUMANA NECESSÁRIA).",
+    "clinical_implications": "Síntese mais robusta disponível hoje da pergunta 'operar cedo ou vigiar' na EAo grave assintomática — reforça a direção já refletida na diretriz ESC/EACTS 2025, que cita EARLY TAVR/EVOLVED apenas de passagem sem números pooled. Existem ao menos duas outras metanálises publicadas em janela próxima com os mesmos 4 RCTs e títulos quase idênticos (PMID 40054514, PMID 39641732) — números dessas duas NÃO estão citados neste registro por não terem sido desambiguados com confiança; ver corpo do documento para o alerta completo sobre risco de atribuição cruzada.",
+    "limitations": "Heterogeneidade de intervenção entre os 4 trials pooled (2 cirúrgicos, 2 baseados em TAVI/imagem) — benefício de sobrevida mais consistente no subgrupo cirúrgico, limitando extrapolação uniforme do RR agregado. Existência de metanálises concorrentes dos mesmos trials, com risco de divergência numérica entre elas conforme método estatístico.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica assintomática",
+      "AVR precoce",
+      "RECOVERY",
+      "AVATAR",
+      "EARLY TAVR",
+      "EVOLVED",
+      "metanálise"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
