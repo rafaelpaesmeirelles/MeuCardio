@@ -33,14 +33,12 @@
 @media (max-width:900px) {
   /* While the Personal Assistant/drawer owns the viewport, remove the bottom
      navigation and More trigger from pointer/focus competition. */
-  body.menu-clinico-aberto .cc-mobile-nav,
-  body.menu-clinico-aberto .cc-mobile-menu-trigger {
+  body.menu-clinico-aberto .cc-mobile-nav {
     visibility:hidden!important;
     pointer-events:none!important;
   }
 
   /* The More sheet itself is the active modal surface. */
-  body.cc-mobile-more-open .cc-mobile-menu-trigger,
   body.cc-mobile-more-open .cc-mobile-nav {
     pointer-events:none!important;
   }

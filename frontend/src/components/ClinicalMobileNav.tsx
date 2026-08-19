@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../lib/auth";
+import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
-type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean };
+type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number };
 type MobileSection = { title: string; items: LinkItem[] };
 
 const CLINICA_DECISAO: LinkItem[] = [
@@ -68,14 +69,20 @@ const CONTA_ADMIN: LinkItem[] = [
   { to: "/admin", label: "Administração", icon: "gestao", adminOnly: true },
   { to: "/admin/usuarios", label: "Usuários & Permissões", icon: "pacientes", adminOnly: true },
   { to: "/fila-telediagnostico", label: "Fila telediagnóstico", icon: "evidencia", adminOnly: true },
+  { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
 ];
 
 export default function ClinicalMobileNav() {
   const { usuario } = useAuth();
   const [maisAberto, setMaisAberto] = useState(false);
+  const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const sheetRef = useRef<HTMLElement>(null);
+
+  const contaAdmin=CONTA_ADMIN
+    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
+    .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
 
   const secoes: MobileSection[] = [
     { title: "Clínica & Decisão", items: CLINICA_DECISAO },
@@ -83,7 +90,7 @@ export default function ClinicalMobileNav() {
     { title: "Trabalho & Assistência", items: TRABALHO_ASSISTENCIA },
     { title: "Ferramentas & Produtividade", items: FERRAMENTAS },
     { title: "Rede & Conectividade", items: REDE },
-    { title: "Administração & Conta", items: CONTA_ADMIN },
+    { title: "Administração & Conta", items: contaAdmin },
   ];
 
   function fecharMais(restaurar = true) { setMaisAberto(false); if (restaurar) requestAnimationFrame(() => triggerRef.current?.focus()); }
@@ -113,11 +120,10 @@ export default function ClinicalMobileNav() {
   }, [maisAberto]);
 
   function SheetLink({ item }: { item: LinkItem }) {
-    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}</strong></NavLink>;
+    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}</strong></NavLink>;
   }
 
   return <>
-    <button type="button" className="cc-mobile-menu-trigger" onClick={() => setMaisAberto(true)} aria-label="Abrir menu do CorVIA" aria-expanded={maisAberto}><Icone nome="menu" /></button>
     <nav className="cc-mobile-nav" aria-label="Navegação principal móvel">
       <NavLink to="/" end><IconeHoje /><span>Início</span></NavLink>
       <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>

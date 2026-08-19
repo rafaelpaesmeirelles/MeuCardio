@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { assetUrl } from "../lib/api";
+import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
-type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean };
+type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number };
 type NavSection = { title: string; items: NavItem[] };
 
 const CLINICA_DECISAO: NavItem[] = [
@@ -65,6 +66,7 @@ const ADMINISTRACAO: NavItem[] = [
   { to: "/admin", label: "Painel administrativo", icon: "gestao", adminOnly: true },
   { to: "/admin/usuarios", label: "Usuários & Permissões", icon: "pacientes", adminOnly: true },
   { to: "/fila-telediagnostico", label: "Fila de telediagnóstico", icon: "evidencia", adminOnly: true },
+  { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
   { to: "/minha-conta", label: "Configurações / Minha Conta", icon: "conta" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
   { to: "/assinatura", label: "Planos & Assinatura", icon: "check" },
@@ -76,6 +78,7 @@ function Item({ item }: { item: NavItem }) {
   return (
     <NavLink to={item.to} className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}>
       <Icone nome={item.icon} /><span>{item.label}</span>
+      {!!item.badge && <span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}
     </NavLink>
   );
 }
@@ -92,13 +95,19 @@ function iniciais(nome?: string) {
 
 export default function ClinicalDesktopNav() {
   const { usuario } = useAuth();
+  const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
+
+  const administracao=ADMINISTRACAO
+    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
+    .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
+
   const sections: NavSection[] = [
     { title: "Clínica & Decisão", items: CLINICA_DECISAO },
     { title: "Estudos & Educação", items: ESTUDO_EDUCACAO },
     { title: "Trabalho & Assistência", items: TRABALHO_ASSISTENCIA },
     { title: "Ferramentas & Produtividade", items: FERRAMENTAS_PRODUTIVIDADE },
     { title: "Rede & Conectividade", items: REDE_CONECTIVIDADE },
-    { title: "Administração", items: ADMINISTRACAO },
+    { title: "Administração", items: administracao },
   ];
 
   return (
