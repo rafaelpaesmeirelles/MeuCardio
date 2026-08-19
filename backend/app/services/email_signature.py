@@ -20,7 +20,10 @@ from typing import Any
 from app.core.config import settings
 from app.services.professional_profile import council_display, professional_name, workplace_lines
 
-LOGO_CORVIA_URL = "https://corvia.med.br/corvia-logo-compacta.png"
+# Asset canônico atual do produto. URL absoluta porque a mesma assinatura é
+# renderizada fora do SPA (clientes de e-mail), mas continua servida pelo
+# domínio público da própria CorVIA.
+LOGO_CORVIA_URL = f"{settings.public_url.rstrip('/')}/corvia-logo-canonical.svg"
 
 
 def _endereco_profissional(user: Any) -> str | None:
