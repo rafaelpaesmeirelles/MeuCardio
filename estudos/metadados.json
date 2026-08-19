@@ -22147,5 +22147,82 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "danicamtiv-ativador-de-miosina-cardiaca-na-cardiomiopatia-dilatada-fase-2",
+    "title": "Danicamtiv, Ativador Seletivo da Miosina Cardíaca, na Cardiomiopatia Dilatada: Ensaio Fase 2 Aberto",
+    "study_type": "ensaio_clinico",
+    "authors": "VERIFICAÇÃO HUMANA NECESSÁRIA — primeiro autor não confirmado com segurança nesta sessão",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2025,
+    "doi": "10.1016/j.jacc.2025.09.1511",
+    "pmid": "41217321",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41217321/",
+    "summary": "Ensaio fase 2a, aberto, sem grupo placebo concorrente, de danicamtiv (ativador seletivo da miosina cardíaca) em 41 pacientes com cardiomiopatia dilatada, divididos em três coortes por causa genética (MYH7 n=12, TTN n=14, outras causas n=15). FEVE basal média 33,4% ± 8,0%. Danicamtiv oral em dois períodos de tratamento (25 mg 2x/dia; depois ajuste para 10 ou 50 mg 2x/dia), 5-8 dias cada.",
+    "key_findings": "Variação absoluta média da FEVE do basal ao fim do Período 2, por subgrupo genético: MYH7 +8,8 pontos percentuais (p=0,001); TTN +5,9 pontos percentuais (p=0,005); outras causas +4,4 pontos percentuais (sem significância estatística). Deformação longitudinal global (GLS): MYH7 +2,1% (p=0,008); TTN e outras causas sem significância. Eventos adversos emergentes de tratamento em 22/41 (53,7%), todos leves a moderados; 1 descontinuação por evento adverso.",
+    "clinical_implications": "Sinal farmacodinâmico precoce, coerente com o mecanismo proposto (ativação da miosina cardíaca beneficiando mais quem tem mutação diretamente ligada ao motor contrátil), mas não é prova de eficácia clínica — amostra pequena, sem braço placebo. O ensaio confirmatório fase 2b/3 (KINSHIP-DCM) iniciou em fevereiro de 2026, sem resultado publicado até a data deste registro. Danicamtiv não está aprovado para uso clínico em nenhuma diretriz.",
+    "limitations": "Desenho aberto, sem grupo placebo concorrente — comparação contra o próprio basal do paciente, mais vulnerável a viés que ensaio randomizado. Amostra pequena (n=41) dividida em três subgrupos genéticos, com poder estatístico limitado especialmente no subgrupo de causas não sarcoméricas. Duração de tratamento curta (5-8 dias por período).",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "danicamtiv",
+      "ativador de miosina cardíaca",
+      "cardiomiopatia dilatada",
+      "MYH7",
+      "TTN",
+      "fase 2"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "acoramidis-extensao-aberta-de-54-meses-do-attribute-cm",
+    "title": "Acoramidis na Amiloidose Cardíaca por Transtirretina: Extensão Aberta de 54 Meses do ATTRibute-CM",
+    "study_type": "ensaio_clinico",
+    "authors": "Soman P, Cuddy SAM, Gillmore JD, et al.",
+    "journal": "JAMA Cardiology",
+    "year": 2026,
+    "doi": "10.1001/jamacardio.2026.0819",
+    "pmid": null,
+    "url": null,
+    "summary": "Extensão aberta (OLE) de 54 meses do ensaio pivotal ATTRibute-CM de acoramidis em amiloidose cardíaca por transtirretina. Dos 632 pacientes randomizados originalmente, 438 completaram os 30 meses do estudo-mãe e 389 entraram na extensão, seguidos até o mês 54: grupo acoramidis contínuo (n=263) versus grupo início tardio, placebo→acoramidis a partir do mês 30 (n=126). Não há grupo placebo real além do mês 30 — comparação é entre iniciar tratamento cedo vs. tarde, não entre tratar vs. nunca tratar.",
+    "key_findings": "Mortalidade por todas as causas: redução de risco relativo de ≈45% com acoramidis contínuo vs. início tardio (taxas absolutas citadas: 26% vs. 44%). Mortalidade cardiovascular: redução de risco relativo de ≈49% (19% vs. 34%). Benefício de risco relativo crescente ao longo do seguimento. HR numérico com IC95% não confirmado com segurança nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA). Estabilização tetramérica de TTR in vitro: acoramidis ≈90-93%, tafamidis com padrão pico 49%/vale 36%. Não existe ensaio randomizado head-to-head entre acoramidis e tafamidis.",
+    "clinical_implications": "Reforça o valor de iniciar tratamento com estabilizador de TTR o quanto antes na ATTR-CM — o atraso de 30 meses no início do tratamento custou mortalidade mensurável e crescente ao longo do tempo. Não estabelece superioridade de acoramidis sobre tafamidis, pela ausência de comparação direta randomizada.",
+    "limitations": "Extensão aberta sem grupo placebo verdadeiro além do mês 30 (todo paciente placebo trocou para acoramidis nesse ponto). Comparação é entre início precoce e início tardio da mesma molécula, não entre tratamento e ausência de tratamento. PMID exato não confirmado com segurança nesta sessão.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "acoramidis",
+      "ATTRibute-CM",
+      "amiloidose cardíaca",
+      "transtirretina",
+      "ATTR-CM",
+      "extensão aberta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
+    "title": "Safety and Efficacy of Aficamten in Patients With Nonobstructive Hypertrophic Cardiomyopathy: A 96-Week Analysis From FOREST-HCM",
+    "study_type": "ensaio_clinico",
+    "authors": null,
+    "journal": "Journal of Cardiac Failure",
+    "year": 2025,
+    "doi": null,
+    "pmid": "41027504",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41027504/",
+    "summary": "Resultados de 96 semanas do FOREST-HCM, ensaio fase 2 aberto (sem grupo placebo concorrente) de aficamten em pacientes com cardiomiopatia hipertrófica NÃO obstrutiva sintomática (NYHA II-III) apesar de terapia otimizada, FEVE preservada — população sem terapia farmacológica aprovada dirigida ao mecanismo até a data deste registro. Publicado no Journal of Cardiac Failure, setembro de 2025.",
+    "key_findings": "Mais de 79% dos pacientes melhoraram pelo menos uma classe funcional NYHA em relação ao basal; 74,1% dos que melhoraram estavam assintomáticos (NYHA classe I) na semana 96. KCCQ-CSS melhorou em média 11,2 pontos. FEVE <50% ocorreu em 4 pacientes ao longo do período de tratamento, todos os episódios reversíveis após redução de dose ou interrupção curta. Perfil de segurança consistente com o já descrito para aficamten na forma obstrutiva.",
+    "clinical_implications": "Sinal favorável de fase 2 aberta em população sem alternativa farmacológica aprovada dirigida ao mecanismo. Não estabelece eficácia por ausência de grupo controle cego — o ensaio fase 3 randomizado e controlado por placebo dedicado a essa população (ACACIA-HCM) só tem resultado topline por comunicado do patrocinador, sem manuscrito revisado por pares até a data deste registro, e por isso não é citado com números neste documento.",
+    "limitations": "Desenho aberto, sem grupo placebo concorrente — desfecho subjetivo (classe funcional NYHA) reportado sem cegamento é vulnerável a viés de expectativa. Estudo de fase 2, não confirmatório.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "aficamten",
+      "cardiomiopatia hipertrófica não obstrutiva",
+      "CMH-nO",
+      "inibidor de miosina cardíaca",
+      "FOREST-HCM"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
