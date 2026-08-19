@@ -22147,5 +22147,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "broadway-obicetrapibe-inibidor-de-cetp-reducao-de-ldl",
+    "title": "BROADWAY — Obicetrapibe, Inibidor de CETP de Nova Geração: Redução de LDL em Risco Cardiovascular Alto",
+    "study_type": "ensaio_clinico",
+    "authors": "Nicholls SJ, Nelson AJ, Ditmarsch M, et al; BROADWAY Investigators.",
+    "journal": "New England Journal of Medicine",
+    "year": 2025,
+    "doi": "10.1056/NEJMoa2415820",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2415820",
+    "summary": "Ensaio de fase 3, randomizado, duplo-cego, controlado por placebo, multicêntrico (NCT05142722), com 2.530 pacientes com doença cardiovascular aterosclerótica estabelecida ou hipercolesterolemia familiar heterozigótica, todos em terapia hipolipemiante na dose máxima tolerada (a maioria em estatina, muitos também em ezetimiba). Randomizados 2:1 para obicetrapibe 10 mg/dia (n=1.686) ou placebo (n=844). Idade média 65 anos, 34% mulheres, LDL basal médio 98 mg/dL. Duração do tratamento: 365 dias. Financiamento: NewAmsterdam Pharma.",
+    "key_findings": "Desfecho primário (variação percentual média do LDL do basal ao dia 84): -29,9% com obicetrapibe versus +2,7% com placebo — diferença de 32,6 pontos percentuais (p<0,001). Efeito consistente independentemente da terapia de base (estatina isolada, estatina + ezetimiba, ou hipercolesterolemia familiar). Segurança em 365 dias: incidência de eventos adversos semelhante entre os grupos, sem o sinal de elevação pressórica que levou à interrupção do torcetrapibe (inibidor de CETP de primeira geração).",
+    "clinical_implications": "Obicetrapibe é inibidor de CETP (proteína de transferência de éster de colesterol) que reduz LDL de forma robusta e reprodutível (~30% adicional sobre terapia hipolipemiante já otimizada), sem o sinal de dano cardiovascular que interrompeu o torcetrapibe. Mas o desfecho primário do BROADWAY é um marcador substituto (LDL), não evento clínico — o ensaio não tem poder estatístico para desfecho cardiovascular. Obicetrapibe não está aprovado para uso clínico em nenhuma diretriz de dislipidemia atual e não deve ser prescrito fora de estudo clínico: a classe de inibidores de CETP já teve quatro fracassos anteriores em desfecho cardiovascular (torcetrapibe interrompido por excesso de mortalidade; dalcetrapibe e evacetrapibe neutros apesar de reduzir LDL/elevar HDL; anacetrapibe com benefício modesto mas nunca comercializado por acúmulo tecidual). O ensaio de desfecho cardiovascular dedicado (PREVAIL, NCT05202509, 9.541 participantes) segue em andamento, com conclusão primária estimada para novembro de 2026 — é o único capaz de responder se a redução de LDL se traduz em redução de eventos.",
+    "limitations": "Desfecho primário é substituto (variação de LDL), não evento clínico — sem poder estatístico para MACE. Seguimento curto (365 dias) não permite extrapolar segurança de longo prazo, mesma limitação que os ensaios de fase 2/3 do torcetrapibe tinham antes do dano em desfecho aparecer. Uma análise agrupada exploratória e não pré-especificada de BROADWAY com o ensaio irmão BROOKLYN (JACC 2025, PMID 40888776) sugeriu sinal direcional de redução de MACE (HR 0,77; IC95% 0,54-1,11; p=0,16, sem significância estatística) — não deve ser tratada como evidência de redução de eventos cardiovasculares, é hipótese-geradora, não confirmatória. Financiado pelo fabricante (NewAmsterdam Pharma).",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "broadway",
+      "obicetrapibe",
+      "inibidor de cetp",
+      "ldl",
+      "hipercolesterolemia familiar",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
