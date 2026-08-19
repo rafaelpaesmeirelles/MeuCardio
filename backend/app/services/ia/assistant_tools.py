@@ -11,6 +11,8 @@ possam contornar o middleware HTTP. Defesa em profundidade, fail-closed.
 """
 from __future__ import annotations
 
+import logging
+
 from sqlalchemy.orm import Session
 
 from app.models.audit import AuditLog
@@ -28,6 +30,8 @@ from app.services.ia.assistant_batch_tools import (
     executar_tool_batch,
 )
 from app.services.ia.mail_tools import MAIL_TOOLS_SCHEMA, executar_tool_mail
+
+log = logging.getLogger("meucardio.ai.assistant_tools")
 
 ASSISTANT_TOOLS_SCHEMA: list[dict] = [
     *AGENDA_TOOLS_SCHEMA,
@@ -89,18 +93,29 @@ def executar_tool_assistente(nome: str, argumentos: dict, db: Session, user: Use
             "mensagem": MENSAGEM_MODO_INVESTIDOR,
         }
 
-    if nome in BATCH_TOOL_NAMES:
-        resultado = executar_tool_batch(nome, argumentos, db, user)
-    elif nome in AUTOMATION_TOOL_NAMES:
-        resultado = executar_tool_automation(nome, argumentos, db, user)
-    elif nome.startswith("agenda_"):
-        resultado = executar_tool_agenda(nome, argumentos, db, user)
-    elif nome.startswith("mail_"):
-        resultado = executar_tool_mail(nome, argumentos, db, user)
-    else:
+    # Contrato do Assistente: falha interna de uma tool nunca pode derrubar a
+    # resposta inteira do provedor. O modelo recebe um resultado de erro
+    # estruturado, pode explicar a falha e encerrar o turno de forma útil.
+    try:
+        if nome in BATCH_TOOL_NAMES:
+            resultado = executar_tool_batch(nome, argumentos, db, user)
+        elif nome in AUTOMATION_TOOL_NAMES:
+            resultado = executar_tool_automation(nome, argumentos, db, user)
+        elif nome.startswith("agenda_"):
+            resultado = executar_tool_agenda(nome, argumentos, db, user)
+        elif nome.startswith("mail_"):
+            resultado = executar_tool_mail(nome, argumentos, db, user)
+        else:
+            resultado = {
+                "erro": "tool_desconhecida",
+                "mensagem": f"'{nome}' não é uma ferramenta do assistente.",
+            }
+    except Exception as exc:
+        log.exception("Falha interna na tool do Assistente Pessoal: %s", nome)
         resultado = {
-            "erro": "tool_desconhecida",
-            "mensagem": f"'{nome}' não é uma ferramenta do assistente.",
+            "erro": "falha_interna_tool",
+            "mensagem": "Não foi possível concluir esta etapa da automação. Tente novamente ou revise os dados informados.",
+            "tipo": type(exc).__name__,
         }
 
     if nome in _TOOLS_DE_ESCRITA:
