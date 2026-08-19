@@ -82,6 +82,46 @@ _ARGUMENTOS_SEGUROS_PARA_AUDITORIA = {
 }
 
 
+def _rollback_seguro(db: Session) -> None:
+    try:
+        db.rollback()
+    except Exception:  # pragma: no cover - proteção de boundary; nunca troca o erro original
+        log.exception("Falha ao executar rollback após erro de tool do Assistente Pessoal")
+
+
+def _auditar_tool_seguro(nome: str, argumentos: dict, resultado: dict, db: Session, user: User) -> None:
+    if nome not in _TOOLS_DE_ESCRITA:
+        return
+
+    campos = _ARGUMENTOS_SEGUROS_PARA_AUDITORIA.get(nome, ())
+    argumentos_auditoria = dict(argumentos)
+    if nome == "agenda_criar_rotinas_em_lote":
+        rotinas = argumentos.get("rotinas")
+        argumentos_auditoria = {"total_solicitado": len(rotinas) if isinstance(rotinas, list) else 0}
+
+    try:
+        db.add(AuditLog(
+            user_id=user.id,
+            action=f"ia_tool_{nome}",
+            entity="ia_assistant_tool",
+            entity_id=(
+                str(argumentos.get("appointment_id"))
+                if argumentos.get("appointment_id") is not None
+                else None
+            ),
+            detail={
+                "argumentos": {chave: argumentos_auditoria.get(chave) for chave in campos},
+                "sucesso": "erro" not in resultado,
+            },
+        ))
+        db.commit()
+    except Exception:
+        # A auditoria é importante, mas nunca pode transformar um resultado
+        # estruturado de erro em nova exceção que derrube o streaming inteiro.
+        _rollback_seguro(db)
+        log.exception("Falha ao persistir auditoria da tool do Assistente Pessoal: %s", nome)
+
+
 def executar_tool_assistente(nome: str, argumentos: dict, db: Session, user: User) -> dict:
     argumentos = argumentos or {}
 
@@ -111,6 +151,11 @@ def executar_tool_assistente(nome: str, argumentos: dict, db: Session, user: Use
                 "mensagem": f"'{nome}' não é uma ferramenta do assistente.",
             }
     except Exception as exc:
+        # Se a exceção veio de flush/commit do SQLAlchemy, a sessão pode estar
+        # inválida. Limpar a transação AQUI é indispensável antes de tentar
+        # auditar; sem isso, PendingRollbackError escapa e o frontend fica sem
+        # resposta, exatamente o comportamento visto em produção.
+        _rollback_seguro(db)
         log.exception("Falha interna na tool do Assistente Pessoal: %s", nome)
         resultado = {
             "erro": "falha_interna_tool",
@@ -118,26 +163,5 @@ def executar_tool_assistente(nome: str, argumentos: dict, db: Session, user: Use
             "tipo": type(exc).__name__,
         }
 
-    if nome in _TOOLS_DE_ESCRITA:
-        campos = _ARGUMENTOS_SEGUROS_PARA_AUDITORIA.get(nome, ())
-        argumentos_auditoria = dict(argumentos)
-        if nome == "agenda_criar_rotinas_em_lote":
-            rotinas = argumentos.get("rotinas")
-            argumentos_auditoria = {"total_solicitado": len(rotinas) if isinstance(rotinas, list) else 0}
-        db.add(AuditLog(
-            user_id=user.id,
-            action=f"ia_tool_{nome}",
-            entity="ia_assistant_tool",
-            entity_id=(
-                str(argumentos.get("appointment_id"))
-                if argumentos.get("appointment_id") is not None
-                else None
-            ),
-            detail={
-                "argumentos": {chave: argumentos_auditoria.get(chave) for chave in campos},
-                "sucesso": "erro" not in resultado,
-            },
-        ))
-        db.commit()
-
+    _auditar_tool_seguro(nome, argumentos, resultado, db, user)
     return resultado
