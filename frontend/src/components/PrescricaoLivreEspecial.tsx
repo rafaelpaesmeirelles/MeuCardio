@@ -1,88 +1,23 @@
 import { useEffect, useState } from "react";
-import { api, ApiError } from "../lib/api";
+import { api } from "../lib/api";
 
-type Cap = { enabled: boolean; allows_self: boolean; rafael_signer: boolean };
-type Prov = { codigo: string; nome: string; nivel: string; disponivel: boolean };
-type Rx = {
-  id: number; patient_name: string | null; body: string; mode: "propria" | "rafael";
-  status: string; originator_name: string | null; review_note: string | null;
-  signed: boolean; awaiting_external_signature: boolean;
-};
-const ROT: Record<string, string> = {
-  pronta_assinatura: "Pronta para assinatura", pendente_assinatura: "Aguardando Dr. Rafael",
-  aprovada: "Aprovada", devolvida: "Devolvida", recusada: "Recusada",
-  aguardando_assinatura_externa: "Aguardando PDF assinado", assinado: "Assinada",
-};
-function abrir(b: Blob, imprimir = false) {
-  const u = URL.createObjectURL(b);
-  if (imprimir) window.open(u, "_blank", "noopener,noreferrer");
-  else { const a = document.createElement("a"); a.href = u; a.download = "receituario.pdf"; a.click(); }
-  setTimeout(() => URL.revokeObjectURL(u), 5000);
-}
+type Cap={enabled:boolean;allows_self:boolean;rafael_signer:boolean};
+type Rx={id:number;patient_name:string|null;body:string;mode:"propria"|"rafael";status:string;originator_name:string|null;review_note:string|null;signed:boolean;awaiting_external_signature:boolean};
+type Pv={codigo:string;nome:string;nivel:string;disponivel:boolean};
+const L:Record<string,string>={pronta_assinatura:"Pronta para assinatura",pendente_assinatura:"Aguardando Dr. Rafael",aprovada:"Aprovada",devolvida:"Devolvida",recusada:"Recusada",aguardando_assinatura_externa:"Aguardando PDF assinado",assinado:"Assinada"};
 
-export default function PrescricaoLivreEspecial() {
-  const [cap, setCap] = useState<Cap>();
-  const [prov, setProv] = useState<Prov[]>([]);
-  const [mine, setMine] = useState<Rx[]>([]);
-  const [fila, setFila] = useState<Rx[]>([]);
-  const [pac, setPac] = useState(""); const [body, setBody] = useState("");
-  const [mode, setMode] = useState<"propria" | "rafael">("rafael");
-  const [edit, setEdit] = useState<number>(); const [metodo, setMetodo] = useState<Record<number, string>>({});
-  const [erro, setErro] = useState("");
-
-  async function load() {
-    const c = await api.get<Cap>("/prescricao-especial/capacidades"); setCap(c);
-    if (c.enabled) setMine(await api.get<Rx[]>("/prescricao-especial/minhas"));
-    if (c.rafael_signer) setFila(await api.get<Rx[]>("/prescricao-especial/pendentes"));
-  }
-  useEffect(() => { load().catch(() => setCap({ enabled: false, allows_self: false, rafael_signer: false })); api.get<Prov[]>("/assinatura/provedores").then(setProv).catch(() => {}); }, []);
-  useEffect(() => { if (cap?.enabled && !cap.allows_self) setMode("rafael"); }, [cap]);
-  const disponiveis = prov.filter(p => p.disponivel);
-  const metodoRx = (r: Rx) => metodo[r.id] || disponiveis.find(p => p.codigo === "A1_ARQUIVO" && (r.mode !== "rafael" || p.nivel === "qualificada"))?.codigo || disponiveis.find(p => r.mode !== "rafael" || p.nivel === "qualificada")?.codigo || "A1_ARQUIVO";
-  const falha = (e: unknown) => setErro(e instanceof ApiError ? e.message : "Não foi possível concluir.");
-
-  async function salvar() {
-    setErro(""); try {
-      const payload = { patient_name: pac.trim(), body: body.trim() };
-      if (edit) await api.put(`/prescricao-especial/${edit}`, payload);
-      else await api.post("/prescricao-especial", { ...payload, mode });
-      setPac(""); setBody(""); setEdit(undefined); await load();
-    } catch (e) { falha(e); }
-  }
-  async function decisao(r: Rx, action: "aprovar" | "devolver" | "recusar") {
-    const note = action === "aprovar" ? null : prompt(action === "devolver" ? "Orientação para correção:" : "Motivo da recusa:");
-    if (action !== "aprovar" && !note?.trim()) return;
-    try { await api.post(`/prescricao-especial/${r.id}/decisao`, { action, note }); await load(); } catch (e) { falha(e); }
-  }
-  async function emitir(r: Rx) {
-    try { abrir(await api.blobPost(`/prescricao-especial/${r.id}/emitir`, { metodo: metodoRx(r), endereco: "profissional" })); await load(); } catch (e) { falha(e); }
-  }
-  async function externa(r: Rx, f?: File) { if (f) try { await api.upload(`/prescricao-especial/${r.id}/assinatura-externa`, "arquivo", f); await load(); } catch (e) { falha(e); } }
-  async function pdf(r: Rx, print = false) { try { abrir(await api.blob(`/prescricao-especial/${r.id}/pdf`), print); } catch (e) { falha(e); } }
-  async function email(r: Rx) {
-    const to = prompt("E-mail do destinatário:"); if (!to?.trim()) return;
-    try { const x = await api.post<{ enviado: boolean; link: string | null }>(`/prescricao-especial/${r.id}/enviar-email`, { email: to.trim() }); if (!x.enviado && x.link) prompt("Copie o link seguro:", x.link); } catch (e) { falha(e); }
-  }
-
-  if (!cap || (!cap.enabled && !cap.rafael_signer)) return null;
-  const seletor = (r: Rx) => <select value={metodoRx(r)} onChange={e => setMetodo({ ...metodo, [r.id]: e.target.value })}>{disponiveis.filter(p => r.mode !== "rafael" || (p.nivel === "qualificada" && p.codigo !== "MANUAL")).map(p => <option key={p.codigo} value={p.codigo}>{p.nome}</option>)}</select>;
-  const card = (r: Rx, filaRafael = false) => <div key={r.id} className="cartao" style={{ marginTop: ".5rem", padding: ".7rem" }}>
-    <strong>{r.patient_name}{filaRafael && ` · preparado por ${r.originator_name ?? "usuário"}`}</strong> <span className="eyebrow">{ROT[r.status] ?? r.status}</span>
-    <p style={{ whiteSpace: "pre-wrap" }}>{r.body}</p>{r.review_note && <p style={{ color: "var(--alerta)" }}>{r.review_note}</p>}
-    {filaRafael && r.status === "pendente_assinatura" && <p><button className="botao" onClick={() => decisao(r, "aprovar")}>Aprovar</button> <button className="botao botao--secundario" onClick={() => decisao(r, "devolver")}>Devolver</button> <button className="botao botao--secundario" onClick={() => decisao(r, "recusar")}>Recusar</button></p>}
-    {(r.status === "pronta_assinatura" || (filaRafael && r.status === "aprovada")) && <p>{seletor(r)} <button className="botao" onClick={() => emitir(r)}>Emitir/assinar</button></p>}
-    {r.status === "devolvida" && !filaRafael && <button className="botao botao--secundario" onClick={() => { setEdit(r.id); setPac(r.patient_name ?? ""); setBody(r.body); }}>Corrigir</button>}
-    {r.awaiting_external_signature && <label className="botao botao--secundario">Enviar PDF assinado <input hidden type="file" accept="application/pdf" onChange={e => externa(r, e.target.files?.[0])} /></label>}
-    {r.signed && !filaRafael && <p><button className="botao botao--secundario" onClick={() => pdf(r)}>Download</button> <button className="botao botao--secundario" onClick={() => pdf(r, true)}>Imprimir</button> <button className="botao botao--secundario" onClick={() => email(r)}>E-mail</button></p>}
-  </div>;
-
-  return <div className="cartao" style={{ marginBottom: "1rem" }}>
-    <p className="eyebrow">Prescrição livre</p>{erro && <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>}
-    {cap.enabled && <><label>Paciente</label><input value={pac} onChange={e => setPac(e.target.value)} /><label>Prescrição livre</label><textarea rows={8} value={body} onChange={e => setBody(e.target.value)} placeholder="Digite livremente a prescrição, posologia e orientações…" />
-      {!edit && cap.allows_self && <><label>Emissão</label><select value={mode} onChange={e => setMode(e.target.value as "propria" | "rafael")}><option value="propria">Minhas credenciais/assinatura</option><option value="rafael">Enviar ao Dr. Rafael</option></select></>}
-      {!cap.allows_self && <p className="eyebrow">Emissão somente pelo Dr. Rafael</p>}
-      <button className="botao" disabled={!pac.trim() || !body.trim()} onClick={salvar}>{edit ? "Enviar correção" : mode === "rafael" ? "Enviar ao Dr. Rafael" : "Criar para emissão"}</button>
-      {mine.length > 0 && <div><p className="eyebrow">Minhas prescrições livres</p>{mine.map(r => card(r))}</div>}</>}
-    {cap.rafael_signer && fila.length > 0 && <div><p className="eyebrow">Aguardando sua assinatura</p>{fila.map(r => card(r, true))}</div>}
-  </div>;
+export default function PrescricaoLivreEspecial(){
+ const[c,setC]=useState<Cap>();const[m,setM]=useState<Rx[]>([]);const[f,setF]=useState<Rx[]>([]);const[p,setP]=useState<Pv[]>([]);const[n,setN]=useState("");const[t,setT]=useState("");const[modo,setModo]=useState<"propria"|"rafael">("rafael");const[ed,setEd]=useState<number>();const[e,setE]=useState("");
+ async function load(){const x=await api.get<Cap>("/prescricao-especial/capacidades");setC(x);if(x.enabled)setM(await api.get<Rx[]>("/prescricao-especial/minhas"));if(x.rafael_signer)setF(await api.get<Rx[]>("/prescricao-especial/pendentes"));}
+ useEffect(()=>{load().catch(()=>{});api.get<Pv[]>("/assinatura/provedores").then(setP).catch(()=>{});},[]);useEffect(()=>{if(c&&!c.allows_self)setModo("rafael")},[c]);
+ if(!c||(!c.enabled&&!c.rafael_signer))return null;
+ const err=(x:unknown)=>setE(x instanceof Error?x.message:"Falha na operação.");
+ const save=async()=>{try{const x={patient_name:n.trim(),body:t.trim()};ed?await api.put(`/prescricao-especial/${ed}`,x):await api.post("/prescricao-especial",{...x,mode:modo});setN("");setT("");setEd(undefined);await load()}catch(x){err(x)}};
+ const decide=async(r:Rx,a:string)=>{const note=a==="aprovar"?null:prompt(a==="devolver"?"Orientação para correção:":"Motivo da recusa:");if(a!=="aprovar"&&!note)return;try{await api.post(`/prescricao-especial/${r.id}/decisao`,{action:a,note});await load()}catch(x){err(x)}};
+ const emit=async(r:Rx)=>{const q=p.filter(x=>x.disponivel&&(r.mode!=="rafael"||(x.nivel==="qualificada"&&x.codigo!=="MANUAL")));const def=q.find(x=>x.codigo==="A1_ARQUIVO")?.codigo||q[0]?.codigo;if(!def)return setE("Nenhuma assinatura disponível.");const metodo=prompt(`Método de assinatura (${q.map(x=>x.codigo).join(", ")}):`,def);if(!metodo)return;try{const b=await api.blobPost(`/prescricao-especial/${r.id}/emitir`,{metodo,endereco:"profissional"});const u=URL.createObjectURL(b);window.open(u,"_blank","noopener,noreferrer");await load()}catch(x){err(x)}};
+ const upload=async(r:Rx,z?:File)=>{if(z)try{await api.upload(`/prescricao-especial/${r.id}/assinatura-externa`,"arquivo",z);await load()}catch(x){err(x)}};
+ const pdf=async(r:Rx)=>{try{const b=await api.blob(`/prescricao-especial/${r.id}/pdf`),u=URL.createObjectURL(b);window.open(u,"_blank","noopener,noreferrer")}catch(x){err(x)}};
+ const mail=async(r:Rx)=>{const to=prompt("E-mail do destinatário:");if(to)try{const x=await api.post<{enviado:boolean;link:string|null}>(`/prescricao-especial/${r.id}/enviar-email`,{email:to});if(!x.enviado&&x.link)prompt("Copie o link seguro:",x.link)}catch(x){err(x)}};
+ const card=(r:Rx,dr=false)=><div className="cartao" key={r.id} style={{marginTop:6}}><strong>{r.patient_name}{dr&&` · ${r.originator_name??"usuário"}`}</strong> · {L[r.status]||r.status}<p style={{whiteSpace:"pre-wrap"}}>{r.body}</p>{r.review_note&&<p>{r.review_note}</p>}{dr&&r.status==="pendente_assinatura"&&<p><button className="botao" onClick={()=>decide(r,"aprovar")}>Aprovar</button> <button className="botao botao--secundario" onClick={()=>decide(r,"devolver")}>Devolver</button> <button className="botao botao--secundario" onClick={()=>decide(r,"recusar")}>Recusar</button></p>}{(r.status==="pronta_assinatura"||(dr&&r.status==="aprovada"))&&<button className="botao" onClick={()=>emit(r)}>Emitir/assinar</button>}{r.status==="devolvida"&&!dr&&<button className="botao" onClick={()=>{setEd(r.id);setN(r.patient_name||"");setT(r.body)}}>Corrigir</button>}{r.awaiting_external_signature&&<label className="botao">Enviar PDF assinado<input hidden type="file" accept="application/pdf" onChange={x=>upload(r,x.target.files?.[0])}/></label>}{r.signed&&!dr&&<p><button className="botao" onClick={()=>pdf(r)}>Abrir/Imprimir/Download</button> <button className="botao botao--secundario" onClick={()=>mail(r)}>E-mail</button></p>}</div>;
+ return <div className="cartao" style={{marginBottom:12}}><p className="eyebrow">Prescrição livre</p>{e&&<p role="alert">{e}</p>}{c.enabled&&<><input placeholder="Paciente" value={n} onChange={x=>setN(x.target.value)}/><textarea rows={7} placeholder="Digite livremente a prescrição, posologia e orientações…" value={t} onChange={x=>setT(x.target.value)}/>{!ed&&c.allows_self&&<select value={modo} onChange={x=>setModo(x.target.value as "propria"|"rafael")}><option value="propria">Emitir com minhas credenciais</option><option value="rafael">Enviar ao Dr. Rafael</option></select>}{!c.allows_self&&<p>Emissão somente pelo Dr. Rafael.</p>}<button className="botao" disabled={!n.trim()||!t.trim()} onClick={save}>{ed?"Enviar correção":modo==="rafael"?"Enviar ao Dr. Rafael":"Criar para emissão"}</button>{m.map(x=>card(x))}</>}{c.rafael_signer&&f.map(x=>card(x,true))}</div>;
 }
