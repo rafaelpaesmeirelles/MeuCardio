@@ -120,13 +120,16 @@ body.corvia-route--assistente .ia__erro { margin:.38rem 0; color:#ff99a8; font-s
   body.corvia-route--assistente .clinical-os .cos-content { padding-inline:.55rem; }
   body.corvia-route--assistente .ia-escolha__cartoes { grid-template-columns:1fr; }
   body.corvia-route--assistente .ia-escolha__cartao { min-height:145px; padding:.78rem!important; }
-  body.corvia-route--assistente .ia { min-height:calc(100dvh - 130px); }
+  /* O chat deve ocupar a janela útil inteira no mobile. O override anterior
+     trocou `height` por `min-height`, fazendo o grid encolher ao conteúdo e
+     deixando um grande vazio entre o composer e a navegação inferior. */
+  body.corvia-route--assistente .ia { height:calc(100dvh - 190px); min-height:0; overflow:hidden; }
   body.corvia-route--assistente .ia__topo { align-items:flex-start; padding:.52rem; }
   body.corvia-route--assistente .ia__topo > div:last-child { max-width:47%; justify-content:flex-end; }
   body.corvia-route--assistente .ia__topo select,
   body.corvia-route--assistente .ia__topo label { display:none; }
   body.corvia-route--assistente .ia__topo .selo { display:none; }
-  body.corvia-route--assistente .ia__conversa { min-height:55dvh; max-height:none; padding:.55rem .5rem .7rem; }
+  body.corvia-route--assistente .ia__conversa { min-height:0; max-height:none; overflow-y:auto; padding:.55rem .5rem .7rem; }
   body.corvia-route--assistente .ia__abertura { margin-top:1rem; }
   body.corvia-route--assistente .ia__sugestoes { grid-template-columns:1fr; }
   body.corvia-route--assistente .ia__sugestao { min-height:48px; text-align:left; }
@@ -134,5 +137,5 @@ body.corvia-route--assistente .ia__erro { margin:.38rem 0; color:#ff99a8; font-s
   body.corvia-route--assistente .ia__envio { bottom:auto; grid-template-columns:minmax(0,1fr) 70px; padding:.44rem; }
   body.corvia-route--assistente .ia__envio textarea { min-height:46px; }
   body.corvia-route--assistente .ia__envio .botao { min-width:0; padding-inline:.35rem!important; }
-  body.corvia-route--assistente .ia__rodape { padding-bottom:4.4rem; }
+  body.corvia-route--assistente .ia__rodape { padding-bottom:0; }
 }

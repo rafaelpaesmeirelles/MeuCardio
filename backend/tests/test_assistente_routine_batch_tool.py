@@ -89,6 +89,9 @@ def test_executor_nao_deixa_keyerror_da_tool_derrubar_o_provedor(monkeypatch):
         def commit(self):
             pass
 
+        def rollback(self):
+            pass
+
     def explodir(*args, **kwargs):
         raise KeyError("formatted_address")
 
@@ -102,3 +105,47 @@ def test_executor_nao_deixa_keyerror_da_tool_derrubar_o_provedor(monkeypatch):
 
     assert resultado["erro"] == "falha_interna_tool"
     assert resultado["tipo"] == "KeyError"
+
+
+def test_executor_faz_rollback_e_auditoria_nao_rederruba_stream(monkeypatch):
+    class UserFake:
+        id = 9
+        investidor = False
+
+    class DbFake:
+        def __init__(self):
+            self.falhou = False
+            self.rollbacks = 0
+            self.commits = 0
+            self.itens = []
+
+        def add(self, item):
+            self.itens.append(item)
+
+        def commit(self):
+            self.commits += 1
+            if self.falhou:
+                raise RuntimeError("PendingRollbackError simulado")
+
+        def rollback(self):
+            self.rollbacks += 1
+            self.falhou = False
+
+    db = DbFake()
+
+    def falhar_em_transacao(*args, **kwargs):
+        db.falhou = True
+        raise KeyError("formatted_address")
+
+    monkeypatch.setattr(assistant_tools, "executar_tool_batch", falhar_em_transacao)
+    resultado = assistant_tools.executar_tool_assistente(
+        "agenda_criar_rotinas_em_lote",
+        {"rotinas": [{"dias_semana": ["segunda"], "hora_inicio": "09:00", "hora_fim": "12:00", "titulo": "Hospital"}]},
+        db,
+        UserFake(),
+    )
+
+    assert resultado["erro"] == "falha_interna_tool"
+    assert resultado["tipo"] == "KeyError"
+    assert db.rollbacks == 1
+    assert db.commits == 1
