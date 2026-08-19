@@ -6,7 +6,7 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from fastapi.responses import Response
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -21,7 +21,7 @@ from app.models.user import User
 from app.services import cofre, emails, envio_documento_email
 from app.services.assinatura import divulgacao_email
 from app.services.assinatura import emissao as assinatura_emissao
-from app.services.professional_profile import document_identity, normalize_search_text, professional_name
+from app.services.professional_profile import document_identity, professional_name
 
 router = APIRouter(prefix="/api/prescricao-especial", tags=["prescrição especial"])
 
@@ -29,6 +29,14 @@ DOC_TYPE = "prescricao_livre_especial"
 TITULO = "Receituário"
 VALIDADE_LINK_DIAS = 7
 TAMANHO_MAXIMO_PDF_ASSINADO = 15 * 1024 * 1024
+
+# Identidade privilegiada do Dr. Rafael: somente identificadores de login
+# estáveis (não editáveis pela tela de perfil). Nome, CRM e UF são dados
+# profissionais editáveis e não podem conceder autorização de assinatura.
+_Rafael_LOGIN_EMAILS = {
+    "rafael@cardiobeneribeirao.com.br",
+    "rafael@corvia.med.br",
+}
 
 # A permissão é deliberadamente nominal e fechada. O endereço CorVIA Mail é
 # usado como identidade estável da conta, independentemente do e-mail externo
@@ -60,22 +68,23 @@ def _perfil_especial(db: Session, user: User) -> dict | None:
 
 
 def _eh_rafael(user: User) -> bool:
-    nome = normalize_search_text(user.full_name)
-    crm = str(user.council_number or "").strip()
-    uf = str(user.council_state or "").strip().upper()
     return bool(
         user.role == "admin"
-        and (
-            (crm == "138266" and uf == "SP")
-            or nome == "rafael paes meirelles"
-            or nome == "dr rafael paes meirelles"
-        )
+        and user.is_active
+        and (user.email or "").strip().lower() in _Rafael_LOGIN_EMAILS
     )
 
 
 def _rafael(db: Session) -> User:
-    candidatos = db.query(User).filter(User.role == "admin", User.is_active.is_(True)).all()
-    encontrados = [u for u in candidatos if _eh_rafael(u)]
+    encontrados = (
+        db.query(User)
+        .filter(
+            User.role == "admin",
+            User.is_active.is_(True),
+            User.email.in_(sorted(_Rafael_LOGIN_EMAILS)),
+        )
+        .all()
+    )
     if len(encontrados) != 1:
         raise HTTPException(
             status_code=409,
@@ -127,6 +136,10 @@ def _serializar(db: Session, g: GeneratedDocument) -> dict:
     emitido = assinatura_emissao.buscar(
         db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id,
     )
+    disponivel = bool(
+        emitido
+        and (emitido.assinado_em is not None or _status(g) == "emitida_manual")
+    )
     return {
         "id": g.id,
         "patient_name": _paciente(g),
@@ -141,6 +154,7 @@ def _serializar(db: Session, g: GeneratedDocument) -> dict:
         "created_at": g.created_at,
         "signed_at": emitido.assinado_em if emitido else None,
         "signed": bool(emitido and emitido.assinado_em is not None),
+        "pdf_available": disponivel,
         "method": emitido.metodo if emitido else None,
         "awaiting_external_signature": bool(
             emitido and emitido.assinado_em is None and _status(g) == "aguardando_assinatura_externa"
@@ -159,15 +173,22 @@ def _autoriza_leitura(g: GeneratedDocument, user: User) -> bool:
     return user.id in {_origem_id(g), _signer_id(g)}
 
 
-class CriarIn(BaseModel):
+class _TextoPrescricaoMixin(BaseModel):
     patient_name: str = Field(min_length=2, max_length=200)
     body: str = Field(min_length=3, max_length=12000)
+
+    @field_validator("patient_name", "body", mode="before")
+    @classmethod
+    def _normalizar_texto_obrigatorio(cls, value):
+        return value.strip() if isinstance(value, str) else value
+
+
+class CriarIn(_TextoPrescricaoMixin):
     mode: Literal["propria", "rafael"]
 
 
-class AtualizarIn(BaseModel):
-    patient_name: str = Field(min_length=2, max_length=200)
-    body: str = Field(min_length=3, max_length=12000)
+class AtualizarIn(_TextoPrescricaoMixin):
+    pass
 
 
 class DecisaoIn(BaseModel):
@@ -214,7 +235,7 @@ def criar(dados: CriarIn, db: Session = Depends(get_db), user: User = Depends(cu
         created_by=signer.id if dados.mode == "rafael" else user.id,
         doc_type=DOC_TYPE,
         title=TITULO,
-        rendered_body=dados.body.strip(),
+        rendered_body=dados.body,
         endereco_exibido="profissional",
         variables={
             "special_prescription": True,
@@ -227,7 +248,7 @@ def criar(dados: CriarIn, db: Session = Depends(get_db), user: User = Depends(cu
     )
     db.add(g)
     db.flush()
-    g.patient_name_cifrado = cofre.cifrar_campo(dados.patient_name.strip(), g.id)
+    g.patient_name_cifrado = cofre.cifrar_campo(dados.patient_name, g.id)
     db.add(AuditLog(
         user_id=user.id,
         action="criar_prescricao_livre_especial",
@@ -276,8 +297,8 @@ def corrigir(gid: int, dados: AtualizarIn, db: Session = Depends(get_db), user: 
     if assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id):
         raise HTTPException(status_code=409, detail="Documento já emitido não pode ser alterado.")
 
-    g.rendered_body = dados.body.strip()
-    g.patient_name_cifrado = cofre.cifrar_campo(dados.patient_name.strip(), g.id)
+    g.rendered_body = dados.body
+    g.patient_name_cifrado = cofre.cifrar_campo(dados.patient_name, g.id)
     _set_meta(g, status="pendente_assinatura", review_note=None)
     db.add(AuditLog(
         user_id=user.id, action="corrigir_prescricao_livre_especial",
@@ -368,8 +389,16 @@ def emitir(gid: int, dados: EmitirIn, db: Session = Depends(get_db), user: User 
         criado_por=user.id,
         data_emissao=data_emissao,
     )
-    novo_status = "assinado" if emitido.registro.assinado_em is not None else "aguardando_assinatura_externa"
-    _set_meta(g, status=novo_status, signed_by=user.id, issued_at=data_emissao.isoformat())
+    if emitido.registro.assinado_em is not None:
+        novo_status = "assinado"
+    elif dados.metodo == "MANUAL":
+        if modo != "propria":
+            raise HTTPException(status_code=409, detail="Emissão manual não é permitida no fluxo delegado.")
+        novo_status = "emitida_manual"
+    else:
+        novo_status = "aguardando_assinatura_externa"
+    _set_meta(g, status=novo_status, signed_by=user.id if novo_status == "assinado" else None,
+              issued_at=data_emissao.isoformat())
     db.add(AuditLog(
         user_id=user.id, action="emitir_prescricao_livre_especial",
         entity="generated_document", entity_id=str(g.id),
@@ -396,6 +425,13 @@ async def assinatura_externa(
     if _status(g) != "aguardando_assinatura_externa":
         raise HTTPException(status_code=409, detail="Esta receita não aguarda assinatura externa.")
 
+    registro_original = assinatura_emissao.buscar(
+        db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id,
+    )
+    if registro_original is None or registro_original.assinado_em is not None:
+        raise HTTPException(status_code=409, detail="O PDF original desta receita não está disponível para assinatura externa.")
+    pdf_original = assinatura_emissao.ler_bytes(registro_original)
+
     conteudo = await arquivo.read(TAMANHO_MAXIMO_PDF_ASSINADO + 1)
     if len(conteudo) > TAMANHO_MAXIMO_PDF_ASSINADO:
         raise HTTPException(status_code=413, detail="O PDF assinado precisa ter no máximo 15 MB.")
@@ -407,6 +443,15 @@ async def assinatura_externa(
         raise HTTPException(status_code=erro.status_code, detail=erro.detail) from None
     if not conteudo.startswith(b"%PDF-"):
         raise HTTPException(status_code=422, detail="Envie o PDF assinado, não uma imagem.")
+    # O Assinador ITI/PAdES trabalha por atualização incremental: os bytes
+    # do documento que saiu da CorVIA permanecem como prefixo exato e a
+    # assinatura é acrescentada. Isso impede aceitar um PDF assinado de
+    # outra receita apenas porque sua assinatura criptográfica é válida.
+    if not conteudo.startswith(pdf_original):
+        raise HTTPException(
+            status_code=422,
+            detail="O PDF enviado não corresponde à receita emitida pela CorVIA. Assine e devolva exatamente o arquivo original.",
+        )
 
     try:
         emitido = await asyncio.to_thread(
@@ -440,8 +485,8 @@ def pdf(gid: int, db: Session = Depends(get_db), user: User = Depends(current_us
     registro = assinatura_emissao.buscar(
         db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id,
     )
-    if not registro or registro.assinado_em is None:
-        raise HTTPException(status_code=409, detail="A receita ainda não foi assinada.")
+    if not registro or (registro.assinado_em is None and _status(g) != "emitida_manual"):
+        raise HTTPException(status_code=409, detail="A receita ainda não está disponível para impressão/download.")
     conteudo = assinatura_emissao.ler_bytes(registro)
     return Response(
         content=conteudo,
@@ -463,8 +508,8 @@ def enviar_email(
     registro = assinatura_emissao.buscar(
         db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id,
     )
-    if not registro or registro.assinado_em is None:
-        raise HTTPException(status_code=409, detail="A receita ainda não foi assinada.")
+    if not registro or (registro.assinado_em is None and _status(g) != "emitida_manual"):
+        raise HTTPException(status_code=409, detail="A receita ainda não está disponível para envio.")
 
     signer = db.get(User, _signer_id(g))
     link = DocumentShareLink(
@@ -478,7 +523,7 @@ def enviar_email(
     db.refresh(link)
     url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
     divulgacao = None
-    if registro.nivel == "qualificada":
+    if registro.assinado_em is not None and registro.nivel == "qualificada":
         divulgacao = divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(registro))
     html = emails.montar_html_documento_disponivel(
         nome_medico=professional_name(signer) if signer else "CorVIA",

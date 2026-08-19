@@ -17,6 +17,7 @@ from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
 from app.core.oauth_session_recovery import OAuthSessionRecoveryMiddleware
 from app.core.observability import ObservabilityMiddleware, configure_observability_logging
+from app.core.prescricao_especial_isolation import PrescricaoEspecialIsolationMiddleware
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 from app.core.uploads import UploadSecurityMiddleware
@@ -63,6 +64,10 @@ app.add_middleware(InvestidorReadOnlyMiddleware)
 # HttpOnly de sessão vinculado ao token atual, sem persistir flags no banco.
 # Também classifica o início de OAuth como ação operacional read-only bloqueada.
 app.add_middleware(InvestidorEphemeralUxMiddleware)
+# Prescrições livres especiais reutilizam GeneratedDocument apenas como
+# armazenamento. Elas nunca podem cair nas rotas genéricas de documentos,
+# que não conhecem aprovação/delegação nem o requisito de assinatura.
+app.add_middleware(PrescricaoEspecialIsolationMiddleware)
 # A URL antiga de autocadastro vira um tombstone HTTP: toda conta real criada
 # pela interface/API pública precisa fornecer segundo e-mail externo.
 app.add_middleware(CanonicalRegistrationMiddleware)

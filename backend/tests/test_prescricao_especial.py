@@ -1,3 +1,6 @@
+import pytest
+from pydantic import ValidationError
+
 from app.api import prescricao_especial
 from app.models.email_account import EmailAccount
 
@@ -24,9 +27,9 @@ def test_natalia_lenira_podem_propria_e_rafael_wladmir_somente_rafael(db, criar_
     assert prescricao_especial._perfil_especial(db, wladmir)["permite_propria"] is False
 
 
-def test_rafael_resolve_somente_admin_com_identidade_profissional(db, criar_usuario):
+def test_rafael_resolve_somente_por_identidade_de_login_estavel(db, criar_usuario):
     rafael, _ = criar_usuario(
-        email="rafael@teste.local",
+        email="rafael@cardiobeneribeirao.com.br",
         full_name="Rafael Paes Meirelles",
         role="admin",
     )
@@ -36,6 +39,12 @@ def test_rafael_resolve_somente_admin_com_identidade_profissional(db, criar_usua
     db.commit()
 
     outro, _ = criar_usuario(email="outro-admin@teste.local", full_name="Outro Admin", role="admin")
+    outro.full_name = "Rafael Paes Meirelles"
+    outro.council_name = "CRM"
+    outro.council_number = "138266"
+    outro.council_state = "SP"
+    db.commit()
+
     assert prescricao_especial._eh_rafael(rafael) is True
     assert prescricao_especial._eh_rafael(outro) is False
     assert prescricao_especial._rafael(db).id == rafael.id
@@ -43,7 +52,7 @@ def test_rafael_resolve_somente_admin_com_identidade_profissional(db, criar_usua
 
 def test_documento_delegado_e_propriedade_do_rafael_e_origem_fica_auditavel(db, criar_usuario):
     rafael, _ = criar_usuario(
-        email="rafael@teste.local", full_name="Rafael Paes Meirelles", role="admin"
+        email="rafael@cardiobeneribeirao.com.br", full_name="Rafael Paes Meirelles", role="admin"
     )
     rafael.council_number = "138266"
     rafael.council_state = "SP"
@@ -98,3 +107,18 @@ def test_wladmir_nao_pode_criar_para_assinatura_propria(db, criar_usuario):
         assert exc.status_code == 403
     else:
         raise AssertionError("Wladmir não pode emitir com credenciais próprias")
+
+
+def test_texto_obrigatorio_e_validado_depois_do_trim():
+    with pytest.raises(ValidationError):
+        prescricao_especial.CriarIn(patient_name="   ", body="texto válido", mode="propria")
+    with pytest.raises(ValidationError):
+        prescricao_especial.CriarIn(patient_name="Paciente", body="   ", mode="propria")
+
+    dados = prescricao_especial.CriarIn(
+        patient_name="  Paciente Teste  ",
+        body="  Losartana 50 mg\n1 comprimido ao dia.  ",
+        mode="propria",
+    )
+    assert dados.patient_name == "Paciente Teste"
+    assert dados.body == "Losartana 50 mg\n1 comprimido ao dia."
