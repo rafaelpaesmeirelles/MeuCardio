@@ -44353,5 +44353,49 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "aha-2022-hidralazina-isossorbida-pacientes-negros-nyha-iii-iv",
+    "statement": "Em pacientes autodeclarados negros com insuficiência cardíaca e fração de ejeção reduzida, classe funcional NYHA III ou IV, que permanecem sintomáticos apesar de terapia otimizada com inibidor da ECA/BRA ou INRA, betabloqueador e antagonista mineralocorticoide, é recomendada a adição de hidralazina combinada com dinitrato de isossorbida para reduzir morbidade e mortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "hidralazina",
+      "dinitrato de isossorbida",
+      "a-heft",
+      "icfer",
+      "quatro pilares",
+      "aha-acc-hfsa",
+      "divergencia esc"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe (I) já estava documentada em 'hidralazina-dinitrato-de-isossorbida-em-negros-com-insuficiencia-cardiaca-o-ensaio-a-heft' desta biblioteca, atribuída a uma tabela comparativa publicada (PMC10192289) que reproduz lado a lado ESC 2021 e AHA/ACC/HFSA 2022 — o texto integral da diretriz não pôde ser lido naquela sessão. O nível de evidência (A) faltava; foi confirmado nesta sessão cruzando duas fontes secundárias independentes de PMC10192289 (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia, ambas citando 'Class 1, Level A' verbatim), convergentes entre si e com a classe já registrada. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente. A ESC 2021/2023 não tem recomendação equivalente restrita a este subgrupo racial autodeclarado — ponto de divergência real entre as duas diretrizes, não apenas de fonte, já documentado no corpo do documento acima.",
+    "published": false
+  },
+  {
+    "slug": "aha-2022-vericiguat-icfer-alto-risco-piora-recente",
+    "statement": "Em pacientes selecionados de alto risco com insuficiência cardíaca e fração de ejeção reduzida e piora recente da insuficiência cardíaca, já em terapia otimizada, vericiguate pode ser considerado para reduzir hospitalização por insuficiência cardíaca e morte cardiovascular.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "vericiguate",
+      "victoria",
+      "icfer",
+      "piora recente",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe e nível (IIb, B-R) confirmados por fonte secundária que cita o texto da recomendação verbatim nesta sessão ('Class 2b, Level of Evidence: B-R'), convergente com a base declarada pela própria diretriz (ensaio VICTORIA, mesmo ensaio já documentado em profundidade em 'vericiguate-e-o-ensaio-victoria-quinto-mecanismo-na-icfer-de-alto-risco' desta biblioteca). A ESC (já na versão 2021) recomenda a mesma conduta com a mesma classe (IIb, nível B na escala ESC de três letras) — convergência real entre as duas sociedades, não divergência; a diferença de notação (B-R vs. B) reflete só o sistema de graduação mais granular da AHA, não uma diferença de força de recomendação.",
+    "published": false
   }
 ]
