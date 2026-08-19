@@ -22147,5 +22147,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "vanish2-ablacao-como-terapia-inicial-vs-antiarritmico-na-tv",
+    "title": "VANISH2 — Ablação por Cateter como Terapia Inicial versus Antiarrítmico na Taquicardia Ventricular",
+    "study_type": "ensaio_clinico",
+    "authors": "Sapp JL, Tang ASL, Parkash R, Stevenson WG, Healey JS, Gula L, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2025,
+    "doi": "10.1056/NEJMoa2409501",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2409501",
+    "summary": "Ensaio internacional, randomizado 1:1, com 416 pacientes com infarto do miocárdio prévio, CDI e taquicardia ventricular (TV) clinicamente significativa (tempestade elétrica, choque apropriado, estimulação antitaquicardia do CDI, ou TV sustentada encerrada por atendimento de emergência) — sem exigir falha prévia de antiarrítmico. Comparou ablação por cateter como terapia inicial (realizada em até 14 dias da randomização, n=203) versus terapia antiarrítmica com sotalol ou amiodarona por critérios pré-especificados (n=213). Seguimento mediano de 4,3 anos.",
+    "key_findings": "Desfecho primário composto (morte por qualquer causa durante todo o seguimento, ou — após 14 dias da randomização — tempestade elétrica, choque apropriado do CDI ou TV sustentada tratada por intervenção médica): 50,7% (103/203) no grupo ablação versus 60,6% (129/213) no grupo antiarrítmico — HR 0,75 (IC95% 0,58-0,97; p=0,03). Eventos adversos em 30 dias: 2 mortes (1,0%) e 23 eventos não fatais (11,3%) no braço ablação; no braço antiarrítmico, 1 morte por toxicidade pulmonar (0,5%) e 46 eventos não fatais (21,6%) — o dobro de eventos adversos não fatais no braço farmacológico.",
+    "clinical_implications": "Move a indicação de ablação por cateter de 'depois que o antiarrítmico falhou' para 'primeira linha' em paciente com infarto prévio, CDI e TV clinicamente significativa — o desenho testa deliberadamente esse momento mais precoce, ao contrário do VANISH original (2016), que só randomizava após falha de antiarrítmico. O perfil de segurança também favorece a ablação: menos da metade dos eventos adversos não fatais do braço farmacológico, e a única morte atribuída a tratamento no braço antiarrítmico foi por toxicidade pulmonar da amiodarona.",
+    "limitations": "Sem diferença de mortalidade isolada demonstrada com significância — o ganho está no desfecho composto, movido em parte por eventos como choque apropriado do CDI, que são em parte marcador de recorrência de arritmia. População restrita a infarto prévio com CDI já implantado; não testa cardiomiopatia não isquêmica nem paciente sem CDI. Antiarrítmico do braço comparador limitado a sotalol/amiodarona por critérios pré-especificados, não abrangendo todo o arsenal farmacológico possível.",
+    "theme": "Arritmias",
+    "tags": [
+      "vanish2",
+      "taquicardia ventricular",
+      "ablação por cateter",
+      "cardiopatia isquêmica",
+      "terapia inicial",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "survive-vt-ablacao-de-substrato-vs-antiarritmico-apos-choque-do-cdi",
+    "title": "SURVIVE-VT — Ablação de Substrato versus Antiarrítmico após Choque Apropriado do CDI",
+    "study_type": "ensaio_clinico",
+    "authors": "Arenal Á, Ávila P, Jiménez-Candil J, Tercedor L, Calvo D, Arribas F, et al.",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2022,
+    "doi": "10.1016/j.jacc.2022.01.050",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2022.01.050",
+    "summary": "Ensaio randomizado com 144 pacientes com cardiomiopatia isquêmica e choque apropriado do CDI (mediana de 70 anos, 96% homens) — confirmação independente, com desenho diferente, da estratégia de ablação em primeira linha testada pelo VANISH2. Comparou ablação de substrato endocárdica completa (n=71) versus terapia antiarrítmica (n=73: amiodarona associada a betabloqueador, amiodarona isolada, ou sotalol com ou sem betabloqueador).",
+    "key_findings": "Desfecho primário em 24 meses (composto de morte cardiovascular, choque apropriado do CDI, internação não planejada por piora de insuficiência cardíaca, ou complicação grave relacionada ao tratamento): 28,2% no grupo ablação versus 46,6% no grupo antiarrítmico — HR 0,52 (IC95% 0,30-0,90; p=0,021). O componente que dirigiu o resultado foi a redução de complicações graves relacionadas ao tratamento: 9,9% vs. 28,8% (HR 0,30; IC95% 0,13-0,71; p=0,006). Sem diferença significativa em mortalidade cardíaca isolada (HR 0,93; IC95% 0,19-4,61; p=0,929) nem em internação por insuficiência cardíaca isolada (HR 0,56; IC95% 0,23-1,35; p=0,198).",
+    "clinical_implications": "Confirma, com desfecho construído de outra forma, o achado do VANISH2 de que a ablação em primeira linha (aqui, logo após o primeiro choque apropriado do CDI) supera o antiarrítmico no desfecho composto. Mas a leitura precisa ser cuidadosa: o desfecho primário inclui a toxicidade do próprio tratamento farmacológico como componente — como a amiodarona é mais tóxica que o procedimento, parte do benefício medido reflete evitar a droga, não suprimir mais arritmia. É clinicamente relevante da mesma forma (o paciente se beneficia), mas não equivale a dizer que a ablação suprimiu mais episódios de TV do que o antiarrítmico.",
+    "limitations": "Amostra pequena (144 pacientes) para um desfecho composto de 4 componentes. Ausência de diferença isolada em mortalidade cardíaca e em internação por IC limita a força da conclusão sobre esses desfechos duros isoladamente. A inclusão de 'complicação grave relacionada ao tratamento' no desfecho primário mistura eficácia antiarrítmica com toxicidade farmacológica, exigindo leitura cuidadosa de qual mecanismo está sendo medido.",
+    "theme": "Arritmias",
+    "tags": [
+      "survive-vt",
+      "taquicardia ventricular",
+      "ablação de substrato",
+      "cardiopatia isquêmica",
+      "choque do cdi",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
