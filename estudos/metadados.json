@@ -22147,5 +22147,32 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "shep-clortalidona-na-hipertensao-sistolica-isolada-do-idoso",
+    "title": "SHEP — Clortalidona na Hipertensão Sistólica Isolada do Idoso Reduz AVC em 36%",
+    "study_type": "ensaio_clinico",
+    "authors": "SHEP Cooperative Research Group",
+    "journal": "JAMA",
+    "year": 1991,
+    "doi": null,
+    "pmid": "2046107",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/2046107/",
+    "summary": "Ensaio multicêntrico, randomizado, duplo-cego, controlado por placebo, com 4.736 pessoas com 60 anos ou mais e hipertensão sistólica isolada (PAS 160-219mmHg, PAD <90mmHg) — 2.365 no braço ativo, 2.371 no placebo. O braço ativo recebeu clortalidona 12,5mg/dia como droga de step 1 (dose dobrada se PAS não caísse abaixo de 160mmHg; atenolol ou reserpina como step 2 se necessário), comparado a placebo. Seguimento médio de 4,5 anos.",
+    "key_findings": "PAS média em 5 anos: 155mmHg (placebo) vs. 143mmHg (tratamento ativo). Incidência de AVC total em 5 anos: 8,2/100 (placebo) vs. 5,2/100 (ativo) — redução relativa de 36% no risco de AVC total, com benefício absoluto de 30 eventos evitados por 1.000 pacientes tratados em 5 anos. Eventos cardiovasculares maiores também reduzidos, com benefício absoluto de 55/1.000 em 5 anos.",
+    "clinical_implications": "Primeira demonstração randomizada robusta de que tratar hipertensão sistólica isolada no idoso — então frequentemente subtratada, por preocupação equivocada com hipotensão diastólica — reduz AVC e eventos cardiovasculares maiores. É a base histórica sobre a qual diretrizes posteriores (incluindo HYVET, já documentado neste acervo, e a própria diretriz AHA/ACC 2025 de hipertensão) construíram a recomendação de tratar PAS elevada no idoso independentemente da PAD.",
+    "limitations": "Ensaio de 1991: medida de pressão arterial em consultório da época, sem confirmação sistemática por MAPA/MRPA como o padrão atual exige. População majoritariamente branca/americana, anterior às diretrizes modernas de risco cardiovascular calculado por escore (tipo PREVENT).",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensao sistolica isolada",
+      "idoso",
+      "clortalidona",
+      "avc",
+      "shep",
+      "ensaio classico"
+    ],
+    "review_status": "revisado",
+    "review_note": "PMID, autoria, periódico, n (2.365/2.371), redução de AVC (36%) e benefício absoluto (30/1.000) reconfirmados nesta sessão por WebSearch independente, além da verificação inicial do agente de pesquisa — convergência total. Campo doi deixado vazio de propósito: a primeira verificação encontrou o DOI numa única passada de busca, sem confirmação convergente por uma segunda fonte independente; PMID é o identificador com confiança sólida.",
+    "published": false
   }
 ]

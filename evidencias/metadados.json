@@ -44353,5 +44353,88 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "accaha2025-htn-confirmacao-diagnostica-por-mapa-ou-mrpa",
+    "statement": "Em adultos com suspeita de hipertensão, a confirmação diagnóstica deve ser feita por medida fora do consultório — MAPA (ambulatorial) ou MRPA (residencial) —, ambas fornecendo informação válida e distinta da medida de consultório para confirmar o diagnóstico de hipertensão.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "mapa",
+      "mrpa",
+      "diagnostico fora do consultorio",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (I/A) confirmados por >=2 buscas WebSearch independentes e convergentes, citando a mesma formulação da recomendação. Acesso ao texto integral (ahajournals.org, JACC, PMC, professional.heart.org) bloqueado pelo proxy de rede deste ambiente. Diverge de ESC 2024 (mesma indicação já publicada no acervo, Classe I mas Nível B) e SBC 2025 (Forte/Alta) só no nível de evidência atribuído, não na recomendação em si — divergência de grau, não de conduta. Valores numéricos exatos dos limiares diagnósticos por método (consultório/MAPA/MRPA) não foram incluídos no statement por não terem sido confirmados com a mesma segurança nesta sessão.",
+    "published": false
+  },
+  {
+    "slug": "accaha2025-htn-primeira-linha-farmacologica-4-classes-neutra-por-raca",
+    "statement": "As quatro classes farmacológicas de primeira linha para tratamento da hipertensão são: diuréticos tiazídicos/similares (clortalidona, indapamida, hidroclorotiazida), bloqueadores de canal de cálcio diidropiridínicos de longa ação (anlodipino, nifedipino), inibidores da ECA e bloqueadores do receptor de angiotensina II — recomendadas para todo paciente sem indicação compulsória específica, com escolha baseada em comorbidade e tolerabilidade individual, não em raça (revertendo o algoritmo estratificado por raça da diretriz de 2017, que a 2025 substitui formalmente).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "primeira linha",
+      "tiazidico",
+      "ieca",
+      "bra",
+      "bcc diidropiridinico",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (I/A) e a lista das 4 classes confirmados por >=2 buscas WebSearch independentes e convergentes. Acesso ao texto integral bloqueado pelo proxy deste ambiente. A afirmação de que a seleção por raça do algoritmo de 2017 foi revertida vem de fonte secundária convergente, não da leitura direta comparada dos dois textos originais.",
+    "published": false
+  },
+  {
+    "slug": "accaha2025-htn-meta-pas-130-com-estimulo-a-120-em-risco-cv-aumentado",
+    "statement": "Em adultos com hipertensão e risco cardiovascular aumentado (risco em 10 anos pelo escore PREVENT ≥7,5%), a meta é PAS <130mmHg, com estímulo a atingir PAS <120mmHg se bem tolerado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "meta pressorica",
+      "risco cardiovascular",
+      "escore prevent",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (I/A) confirmados por >=2 buscas WebSearch independentes, mesma formulação exata em ambas. Acesso ao texto integral bloqueado pelo proxy deste ambiente. A meta de PAD <80mmHg no mesmo estrato de risco tem nível de evidência diferente (B-R) segundo a mesma fonte e não está incluída neste registro — ver registro complementar se necessário. Contraste explícito com o registro accaha2025-htn-mesma-meta-pressorica-rebaixada-a-iib-em-risco-cv-baixo (mesma meta numérica, classe rebaixada em risco baixo).",
+    "published": false
+  },
+  {
+    "slug": "accaha2025-htn-mesma-meta-pressorica-rebaixada-a-iib-em-risco-cv-baixo",
+    "statement": "Em adultos com hipertensão e risco cardiovascular baixo (PREVENT <7,5%), a mesma meta pressórica de <130/80mmHg é recomendada, porém com força de recomendação e nível de evidência mais baixos que no estrato de risco aumentado — a meta numérica não muda, mas a força da recomendação sim.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2025,
+    "guideline_title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+    "reference": "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "theme": "Hipertensão",
+    "tags": [
+      "meta pressorica",
+      "risco cardiovascular baixo",
+      "escore prevent",
+      "divergencia sbc-aha",
+      "aha-acc-2025"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe/nível (IIb/B-NR) confirmados por >=2 buscas WebSearch independentes, mesma formulação em ambas. Divergência registrada de propósito: a SBC 2025 já publicada no acervo (meta-pressorica-universal-has-2025) trata a meta de 130/80 como recomendação de força alta de modo quase universal; a AHA/ACC 2025 rebaixa a mesma meta para Classe IIb quando o risco calculado pelo PREVENT é baixo. Não se afirma qual sociedade está 'certa' — as duas posições ficam registradas lado a lado para o leitor comparar. Acesso ao texto integral bloqueado pelo proxy deste ambiente.",
+    "published": false
   }
 ]
