@@ -6,10 +6,20 @@ def _headers(token: str) -> dict[str, str]:
 
 
 def test_investidor_tour_reabre_em_cada_nova_sessao(client, db, criar_usuario):
-    user, token_1 = criar_usuario(email="investidor@corvia.med.br", full_name="Investidor CorVIA", role="leitor")
+    user, _token_pre_conversao = criar_usuario(
+        email="investidor@corvia.med.br",
+        full_name="Investidor CorVIA",
+        role="leitor",
+    )
     user.investidor = True
     user.onboarding_visto = True  # estado legado não pode pular o tour de um novo login
     db.commit()
+
+    # Converter a conta para Investidor redefine a senha fixa de demonstração e,
+    # por contrato de segurança, revoga sessões emitidas antes da conversão.
+    # O primeiro token válido deste cenário precisa representar o login feito
+    # DEPOIS dessa conversão, não o token auxiliar criado pelo fixture antes dela.
+    token_1 = create_access_token(user.email, scope="app")
 
     primeiro_me = client.get("/api/auth/me", headers=_headers(token_1))
     assert primeiro_me.status_code == 200

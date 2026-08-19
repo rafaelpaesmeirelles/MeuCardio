@@ -58,7 +58,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "cmed.router", "library.router", "search.router", "calculators.router",
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
     "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",
-    "studies.router", "prescriptions.router", "documents.router", "appointments.router",
+    "studies.router", "prescriptions.router", "prescricao_especial.router", "documents.router", "appointments.router",
     "timeline.router", "guidelines.router", "guideline_updates.router",
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router", "exportacao_universal.router",

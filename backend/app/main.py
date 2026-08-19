@@ -8,7 +8,7 @@ from app.api import (
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
     service_orders, sessions, social_login, specialty_guides, studies, timeline, billing, guidelines, indicadores,
-    checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, clinical_cases, agenda_integrada,
+    checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada,
     related_content, knowledge_graph, patient_profiles,
 )
 from app.core.canonical_registration import CanonicalRegistrationMiddleware
@@ -89,6 +89,7 @@ ROUTERS_ASSINANTES = (
     appointments.router, timeline.router, guidelines.router, guideline_updates.router,
     mail360_status.router, presence.router, indicadores.router, checklists.router,
     study_tracks.router, exportacao.router, exportacao_universal.router, emergencia.router, receituario.router,
+    prescricao_especial.router,
     clinical_cases.router, specialty_guides.router, chat.router, assinatura.router,
     # account_sync vem ANTES de agenda_integrada durante a janela de
     # compatibilidade porque expõe também o alias legado /sync-all. Assim os
