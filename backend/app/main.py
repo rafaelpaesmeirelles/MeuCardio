@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    account_access_admin, account_sync, admin, admin_user_management, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
+    account_access_admin, account_sync, admin, admin_user_delete as _admin_user_delete, admin_user_management, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
     calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_session, evidence,
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
@@ -67,12 +67,17 @@ app.add_middleware(InvestidorEphemeralUxMiddleware)
 # pela interface/API pública precisa fornecer segundo e-mail externo.
 app.add_middleware(CanonicalRegistrationMiddleware)
 
+# Override interno do mesmo DELETE já publicado; não cria rota pública nova.
+# Fica antes do router administrativo legado para o Starlette resolver este
+# handler na mesma URL, preservando o contrato externo e o inventário canônico.
+ADMIN_USER_DELETE_ROUTER = getattr(_admin_user_delete, "router")
+
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, social_login.router, password_reset.router,
     sessions.router, billing.router,
     # Precisa preceder admin.router: substitui somente /users/{id}/decidir para
     # acrescentar a notificação transacional sem quebrar o frontend existente.
-    account_access_admin.router, admin.router, admin_user_management.router,
+    account_access_admin.router, admin.router, ADMIN_USER_DELETE_ROUTER, admin_user_management.router,
     service_orders.router, partner_courses.router, email_api.router, email_session.router,
     documentos_publicos.router, cmed.router, agenda_integrada.oauth_callback_router,
 )
