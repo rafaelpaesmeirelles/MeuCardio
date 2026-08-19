@@ -8,6 +8,12 @@ persistir estado algum faria o reload voltar ao tour para sempre.
 A solução é um cookie HttpOnly de sessão vinculado criptograficamente ao token
 de autenticação atual. Ele existe apenas no navegador/sessão, não toca banco,
 não sobrevive como estado da conta e deixa de valer quando o token muda.
+
+Regra de produto: toda NOVA sessão autenticada de Investidor deve começar no
+tour, mesmo que ``onboarding_visto`` tenha valor legado ``True`` no banco. O
+usuário pode assistir ou pular; depois dessa decisão, navega normalmente até a
+sessão terminar. No próximo login, um novo token invalida o marcador anterior e
+o tour volta a ser obrigatório como primeira tela.
 """
 from __future__ import annotations
 
@@ -114,24 +120,26 @@ class InvestidorEphemeralUxMiddleware:
                         return
 
                     if method == "GET" and path == "/api/auth/me":
-                        tour_concluido = request.cookies.get(_COOKIE_ONBOARDING) == marcador
+                        tour_concluido_nesta_sessao = request.cookies.get(_COOKIE_ONBOARDING) == marcador
                         boas_vindas_vistas = request.cookies.get(_COOKIE_BOAS_VINDAS) == marcador
-                        if tour_concluido or boas_vindas_vistas:
-                            # Import local evita acoplamento/ciclo no carregamento do app.
-                            from app.api.auth import _perfil
 
-                            perfil = _perfil(db, user)
-                            if tour_concluido:
-                                perfil["onboarding_pendente"] = False
-                            if boas_vindas_vistas:
-                                perfil["boas_vindas_pendente"] = False
-                            response = JSONResponse(
-                                status_code=200,
-                                content=jsonable_encoder(perfil),
-                                headers={"Cache-Control": "no-store"},
-                            )
-                            await response(scope, receive, send)
-                            return
+                        # Import local evita acoplamento/ciclo no carregamento do app.
+                        from app.api.auth import _perfil
+
+                        perfil = _perfil(db, user)
+                        # Fonte de verdade para Investidor: o tour é obrigatório
+                        # uma vez por token/sessão, independentemente de qualquer
+                        # valor persistido legado em onboarding_visto.
+                        perfil["onboarding_pendente"] = not tour_concluido_nesta_sessao
+                        if boas_vindas_vistas:
+                            perfil["boas_vindas_pendente"] = False
+                        response = JSONResponse(
+                            status_code=200,
+                            content=jsonable_encoder(perfil),
+                            headers={"Cache-Control": "no-store"},
+                        )
+                        await response(scope, receive, send)
+                        return
             finally:
                 db.close()
 
