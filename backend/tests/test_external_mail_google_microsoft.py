@@ -15,6 +15,8 @@ paginação/mapeamento de campo/payload deste arquivo.
 Toda chamada de rede é interceptada via monkeypatch de `httpx.request` no
 próprio módulo — nenhuma chamada real ao Gmail/Graph.
 """
+import base64
+
 import httpx
 import pytest
 
@@ -26,6 +28,8 @@ class _Integration:
     def __init__(self, provider):
         self.provider = provider
         self.id = 1
+        self.display_name = "Médico <medico@corvia.med.br>"
+        self.external_account_id = "conta-1"
 
 
 @pytest.fixture(autouse=True)
@@ -258,6 +262,38 @@ def test_send_message_microsoft_builds_graph_payload_with_cc_bcc(monkeypatch):
     assert payload["toRecipients"] == [{"emailAddress": {"address": "a@x.com"}}]
     assert payload["ccRecipients"] == [{"emailAddress": {"address": "b@x.com"}}]
     assert payload["bccRecipients"] == [{"emailAddress": {"address": "c@x.com"}}]
+
+
+def test_send_message_google_smime_usa_mime_bruto_base64url(monkeypatch):
+    bruto = b"From: medico@corvia.med.br\r\nContent-Type: multipart/signed\r\n\r\ncorpo"
+    monkeypatch.setattr(external_mail.smime, "montar_mensagem_assinada", lambda *a, **k: bruto)
+    chamadas = _mock_request(
+        monkeypatch,
+        lambda method, url, kwargs: httpx.Response(200, json={"id": "signed-1"}),
+    )
+
+    resultado = external_mail.send_message(
+        None, _Integration("google_calendar"), to="paciente@x.com",
+        subject="Retorno", html="<p>Olá</p>", user=object(), assinar_smime=True,
+    )
+
+    assert resultado == {"id": "signed-1", "assinado_smime": True}
+    assert base64.urlsafe_b64decode(chamadas[0]["json"]["raw"] + "==") == bruto
+
+
+def test_send_message_microsoft_smime_usa_mime_bruto_base64(monkeypatch):
+    bruto = b"From: medico@corvia.med.br\r\nContent-Type: multipart/signed\r\n\r\ncorpo"
+    monkeypatch.setattr(external_mail.smime, "montar_mensagem_assinada", lambda *a, **k: bruto)
+    chamadas = _mock_request(monkeypatch, lambda method, url, kwargs: httpx.Response(202))
+
+    resultado = external_mail.send_message(
+        None, _Integration("microsoft_365"), to="paciente@x.com",
+        subject="Retorno", html="<p>Olá</p>", user=object(), assinar_smime=True,
+    )
+
+    assert resultado == {"sent": True, "assinado_smime": True}
+    assert chamadas[0]["headers"]["Content-Type"] == "text/plain"
+    assert base64.b64decode(chamadas[0]["content"]) == bruto
 
 
 @pytest.mark.parametrize("provider", ["google_calendar", "microsoft_365"])

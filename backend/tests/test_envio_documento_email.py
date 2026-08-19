@@ -46,15 +46,20 @@ class TestRoteamentoParaContaNativa:
         assert resultado.assinado_smime is False
         assert len(chamadas) == 1
 
-    def test_smime_pedido_na_nativa_e_ignorado_sem_erro(self, db, criar_usuario, monkeypatch):
+    def test_smime_pedido_sem_a1_falha_sem_enviar(self, db, criar_usuario, monkeypatch):
         user, _ = criar_usuario()
         _conta_nativa(db, user)
-        monkeypatch.setattr(envio_documento_email.mail360, "enviar_mensagem", lambda *a, **k: None)
+        chamadas = []
+        monkeypatch.setattr(
+            envio_documento_email.mail360, "enviar_mensagem",
+            lambda *a, **k: chamadas.append((a, k)),
+        )
         resultado = envio_documento_email.enviar(
             db, user, destinatario="p@x.com", assunto="a", corpo_html="<p>x</p>", assinar_smime=True,
         )
-        assert resultado.enviado is True
-        assert resultado.assinado_smime is False  # nunca finge que assinou
+        assert resultado.enviado is False
+        assert "certificado A1" in resultado.erro
+        assert chamadas == []
 
     def test_sem_conta_nativa_ativa_falha_com_mensagem_clara(self, db, criar_usuario):
         user, _ = criar_usuario()
@@ -72,6 +77,7 @@ class TestRoteamentoParaYahooEICloud:
         user.email_conta_padrao_envio = str(integ.id)
         db.commit()
 
+        monkeypatch.setattr(envio_documento_email.certificado_a1, "obter", lambda db, user: object())
         capturado = {}
         def _fake_send(credentials, *, to, subject, html, db, user, assinar_smime, **kw):
             capturado.update(assinar_smime=assinar_smime, to=to)
@@ -85,7 +91,7 @@ class TestRoteamentoParaYahooEICloud:
         assert resultado.assinado_smime is True
         assert capturado["assinar_smime"] is True
 
-    def test_suporta_smime_verdadeiro_so_para_yahoo_apple(self, db, criar_usuario):
+    def test_suporta_smime_para_apple(self, db, criar_usuario):
         user, _ = criar_usuario()
         integ = _integracao(db, user, "apple_icloud")
         user.email_conta_padrao_envio = str(integ.id)
@@ -104,27 +110,31 @@ class TestRoteamentoParaYahooEICloud:
 
 
 class TestRoteamentoParaGoogleEMicrosoft:
-    def test_conta_padrao_microsoft_usa_external_mail_sem_smime(self, db, criar_usuario, monkeypatch):
+    def test_conta_padrao_microsoft_honra_smime(self, db, criar_usuario, monkeypatch):
         user, _ = criar_usuario()
         integ = _integracao(db, user, "microsoft_365")
         user.email_conta_padrao_envio = str(integ.id)
         db.commit()
 
-        chamadas = []
-        monkeypatch.setattr(
-            envio_documento_email.external_mail, "send_message",
-            lambda *a, **k: chamadas.append((a, k)),
-        )
+        monkeypatch.setattr(envio_documento_email.certificado_a1, "obter", lambda db, user: object())
+        capturado = {}
+
+        def _fake_send(*args, **kwargs):
+            capturado.update(kwargs)
+            return {"sent": True, "assinado_smime": True}
+
+        monkeypatch.setattr(envio_documento_email.external_mail, "send_message", _fake_send)
         resultado = envio_documento_email.enviar(
             db, user, destinatario="p@x.com", assunto="a", corpo_html="<p>x</p>", assinar_smime=True,
         )
         assert resultado.enviado is True
-        assert resultado.assinado_smime is False  # Graph API não suporta — pedido é ignorado
-        assert len(chamadas) == 1
+        assert resultado.assinado_smime is True
+        assert capturado["assinar_smime"] is True
+        assert capturado["user"] is user
 
-    def test_suporta_smime_falso_para_google_microsoft(self, db, criar_usuario):
+    def test_suporta_smime_para_google_microsoft(self, db, criar_usuario):
         user, _ = criar_usuario()
         integ = _integracao(db, user, "google_calendar")
         user.email_conta_padrao_envio = str(integ.id)
         db.commit()
-        assert envio_documento_email.suporta_smime(db, user) is False
+        assert envio_documento_email.suporta_smime(db, user) is True
