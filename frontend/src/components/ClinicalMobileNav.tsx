@@ -124,7 +124,6 @@ export default function ClinicalMobileNav() {
   }
 
   return <>
-    <button type="button" className="cc-mobile-menu-trigger" onClick={() => setMaisAberto(true)} aria-label="Abrir menu do CorVIA" aria-expanded={maisAberto}><Icone nome="menu" /></button>
     <nav className="cc-mobile-nav" aria-label="Navegação principal móvel">
       <NavLink to="/" end><IconeHoje /><span>Início</span></NavLink>
       <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>

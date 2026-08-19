@@ -1,6 +1,5 @@
 /* Canonical CorVIA mobile action sheet. Loaded after the command-center layer. */
 
-.cc-mobile-menu-trigger,
 .cc-mobile-more,
 .cc-mobile-more-backdrop { display: none; }
 
@@ -8,22 +7,6 @@
 
 @media (max-width: 900px) {
   .clinical-os .cos-topbar__menu { display: none !important; }
-
-  .cc-mobile-menu-trigger {
-    position: fixed;
-    top: calc(.7rem + env(safe-area-inset-top));
-    right: .72rem;
-    z-index: 112;
-    display: grid;
-    width: 34px;
-    height: 34px;
-    place-items: center;
-    color: #a7c0c8;
-    background: rgba(255,255,255,.025);
-    border: 1px solid rgba(126,183,201,.09);
-    border-radius: 9px;
-  }
-  .cc-mobile-menu-trigger svg { width: 18px; height: 18px; }
 
   .cc-mobile-more-backdrop {
     position: fixed;
