@@ -12,6 +12,7 @@ import "./styles/clinical-os-a11y.css";
 import "./styles/produto.css";
 import "./styles/tour.css";
 import "./styles/tour-clinical-os.css";
+import "./styles/tour-branding-hotfix.css";
 import "./styles/clinical-command-center-v2.css";
 import "./styles/clinical-pages-v2.css";
 // Folhas de página *-v2 que existiam no repositório mas nunca entraram no
