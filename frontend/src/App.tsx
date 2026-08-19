@@ -55,7 +55,7 @@ const MinhaConta = lazy(() => import("./pages/MinhaConta"));
 const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
 const FilaTelediagnostico = lazy(() => import("./pages/FilaTelediagnostico"));
-const ReceitasParaAssinatura = lazy(() => import("./pages/ReceitasParaAssinatura"));
+const ReceitasParaAssinatura = lazy(() => import("./components/PrescricaoLivreEspecial"));
 const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
 const CorviaMail = lazy(() => import("./pages/CorviaMail"));
 const Receituario = lazy(() => import("./pages/Receituario"));

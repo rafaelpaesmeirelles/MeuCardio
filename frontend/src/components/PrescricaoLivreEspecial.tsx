@@ -7,7 +7,7 @@ type Rx={id:number;patient_name:string|null;body:string;mode:"propria"|"rafael";
 type Pv={codigo:string;nome:string;nivel:string;disponivel:boolean};
 const L:Record<string,string>={pronta_assinatura:"Pronta para assinatura",pendente_assinatura:"Aguardando Dr. Rafael",aprovada:"Aprovada",devolvida:"Devolvida",recusada:"Recusada",aguardando_assinatura_externa:"Aguardando PDF assinado",emitida_manual:"Emitida para assinatura manual",assinado:"Assinada"};
 
-export default function PrescricaoLivreEspecial({queueOnly=false}:{queueOnly?:boolean}){
+export default function PrescricaoLivreEspecial({queueOnly=location.pathname==="/receitas-para-assinatura"}:{queueOnly?:boolean}){
  const[c,setC]=useState<Cap>();const[m,setM]=useState<Rx[]>([]);const[f,setF]=useState<Rx[]>([]);const[p,setP]=useState<Pv[]>([]);const[n,setN]=useState("");const[t,setT]=useState("");const[modo,setModo]=useState<"propria"|"rafael">("rafael");const[ed,setEd]=useState<number>();const[e,setE]=useState("");const[loadingQueue,setLoadingQueue]=useState(queueOnly);
  async function load(){setE("");const x=await api.get<Cap>("/prescricao-especial/capacidades");setC(x);if(!queueOnly&&x.enabled)setM(await api.get<Rx[]>("/prescricao-especial/minhas"));if(x.rafael_signer){setLoadingQueue(true);try{const pending=await api.get<Rx[]>("/prescricao-especial/pendentes");setF(pending);window.dispatchEvent(new CustomEvent(RX_QUEUE_CHANGED,{detail:pending.length}));}finally{setLoadingQueue(false)}}}
  useEffect(()=>{load().catch(x=>{setLoadingQueue(false);err(x)});api.get<Pv[]>("/assinatura/provedores").then(setP).catch(()=>{});},[queueOnly]);useEffect(()=>{if(c&&!c.allows_self)setModo("rafael")},[c]);
