@@ -75,7 +75,13 @@ for (const path of await listarArquivos(dist.pathname)) {
 // canônico da Home adicionou somente CSS e levou o precache a 2817655 B,
 // 1655 B acima do teto anterior (0,06%). O novo limite preserva um orçamento
 // explícito e estreito, sem mascarar crescimento substancial futuro.
-const maxPrecacheBytes = 2775 * 1024;
+//
+// Ajustado de 2775 KB para 2785 KB em 18/08/2026: a nova rota administrativa
+// lazy AdminGerenciarUsuario adicionou um chunk próprio de ~9,6 KB e levou o
+// precache certificado a 2849827 B. O entrypoint principal e o limite de chunks
+// opcionais permanecem inalterados; este acréscimo revisado é restrito à nova
+// funcionalidade e mantém margem mínima para detectar crescimento não intencional.
+const maxPrecacheBytes = 2785 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
