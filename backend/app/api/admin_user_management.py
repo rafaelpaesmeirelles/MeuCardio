@@ -10,10 +10,10 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.core.security import require_admin
+from app.core.security import hash_password, require_admin
 from app.models.audit import AuditLog
 from app.models.email_account import EmailAccount
-from app.models.subscription import Subscription, TIPO_EMAIL, TIPO_MEUCARDIO
+from app.models.subscription import Subscription
 from app.models.user import User
 from app.services import mail360
 from app.services.mail360 import Mail360Error
@@ -93,6 +93,10 @@ class AtualizarUsuario(BaseModel):
         return value or None
 
 
+class SenhaAdministrativa(BaseModel):
+    password: str = Field(min_length=8, max_length=256)
+
+
 class ExcluirUsuario(BaseModel):
     confirmar_email: str = Field(min_length=3, max_length=255)
     excluir_corvia_mail: bool = True
@@ -107,9 +111,10 @@ _STATUS_PAGOS_RELEVANTES = {"ativo", "teste", "pendente", "inadimplente", "suspe
 
 
 def _assinaturas_pagas(db: Session, user_id: int) -> list[Subscription]:
+    # Qualquer vínculo Stripe relevante bloqueia exclusão, inclusive curso.
+    # Não descartamos histórico financeiro só porque não é a assinatura principal.
     return db.query(Subscription).filter(
         Subscription.user_id == user_id,
-        Subscription.kind.in_([TIPO_MEUCARDIO, TIPO_EMAIL]),
         Subscription.status.in_(_STATUS_PAGOS_RELEVANTES),
         (Subscription.stripe_subscription_id.is_not(None) | Subscription.stripe_customer_id.is_not(None)),
     ).all()
@@ -121,7 +126,7 @@ def _pode_excluir(db: Session, alvo: User, admin: User) -> tuple[bool, str | Non
     if alvo.role == "admin":
         return False, "Contas administrativas não podem ser excluídas por esta rotina."
     if _assinaturas_pagas(db, alvo.id):
-        return False, "Existe assinatura/cobrança vinculada. Cancele e trate o vínculo financeiro antes da exclusão definitiva."
+        return False, "Existe assinatura/cobrança Stripe vinculada. Cancele e trate o vínculo financeiro antes da exclusão definitiva."
     return True, None
 
 
@@ -188,8 +193,7 @@ def atualizar_usuario(
     if alvo.id == admin.id or alvo.role == "admin":
         raise HTTPException(status_code=409, detail="Use o fluxo administrativo próprio para contas de administrador.")
 
-    email = dados.email
-    existente = db.query(User).filter(User.email == email, User.id != alvo.id).first()
+    existente = db.query(User).filter(User.email == dados.email, User.id != alvo.id).first()
     if existente:
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
 
@@ -202,7 +206,7 @@ def atualizar_usuario(
     }
 
     alvo.full_name = dados.full_name.strip()
-    alvo.email = email
+    alvo.email = dados.email
     alvo.role = dados.role
     alvo.birth_date = dados.birth_date
     alvo.cpf = (dados.cpf or "").strip() or None
@@ -248,6 +252,34 @@ def atualizar_usuario(
     return _resumo(alvo, db, admin)
 
 
+@router.post("/{user_id}/corvia-mail/senha")
+def redefinir_senha_corvia_mail(
+    user_id: int,
+    dados: SenhaAdministrativa,
+    db: Session = Depends(get_db),
+    admin=Depends(require_admin),
+):
+    alvo = db.get(User, user_id)
+    if not alvo:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if alvo.id == admin.id or alvo.role == "admin":
+        raise HTTPException(status_code=409, detail="Use o fluxo próprio da conta administrativa.")
+    conta = db.query(EmailAccount).filter(EmailAccount.user_id == user_id).first()
+    if not conta:
+        raise HTTPException(status_code=404, detail="Este usuário não possui uma caixa CorVIA Mail nativa.")
+
+    conta.password_hash = hash_password(dados.password)
+    db.add(AuditLog(
+        user_id=admin.id,
+        action="admin_redefinir_senha_corvia_mail",
+        entity="email_account",
+        entity_id=str(conta.id),
+        detail={"user_id": user_id, "email_address": conta.email_address},
+    ))
+    db.commit()
+    return {"user_id": user_id, "email_address": conta.email_address, "senha_redefinida": True}
+
+
 def _preparar_referencias_para_exclusao(db: Session, user_id: int) -> None:
     # Histórico administrativo deve sobreviver; apenas solta a FK do ator.
     db.execute(update(AuditLog).where(AuditLog.user_id == user_id).values(user_id=None))
@@ -260,7 +292,9 @@ def _preparar_referencias_para_exclusao(db: Session, user_id: int) -> None:
     if "google_test_user_requests" in nomes:
         db.execute(text("DELETE FROM google_test_user_requests WHERE user_id = :uid"), {"uid": user_id})
 
-    # Legados sem ON DELETE CASCADE.
+    # Legados sem ON DELETE CASCADE. Só chegamos aqui depois de confirmar que
+    # não existe vínculo Stripe relevante, portanto nenhum histórico financeiro
+    # ativo é descartado silenciosamente.
     db.execute(delete(Subscription).where(Subscription.user_id == user_id))
     db.execute(delete(EmailAccount).where(EmailAccount.user_id == user_id))
 
