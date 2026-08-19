@@ -1,4 +1,5 @@
 from app.services.ia import assistant_batch_tools as batch
+from app.services.ia import assistant_tools
 from app.services.ia.assistant_tools import ASSISTANT_TOOLS_SCHEMA
 
 
@@ -71,3 +72,33 @@ def test_lote_para_no_primeiro_erro_e_reporta_parcial(monkeypatch):
     assert resultado["erro"] == "lote_parcial"
     assert resultado["total_criado"] == 1
     assert len(resultado["resultados"]) == 2
+
+
+def test_executor_nao_deixa_keyerror_da_tool_derrubar_o_provedor(monkeypatch):
+    class UserFake:
+        id = 7
+        investidor = False
+
+    class DbFake:
+        def __init__(self):
+            self.itens = []
+
+        def add(self, item):
+            self.itens.append(item)
+
+        def commit(self):
+            pass
+
+    def explodir(*args, **kwargs):
+        raise KeyError("formatted_address")
+
+    monkeypatch.setattr(assistant_tools, "executar_tool_batch", explodir)
+    resultado = assistant_tools.executar_tool_assistente(
+        "agenda_criar_rotinas_em_lote",
+        {"rotinas": [{"dias_semana": ["segunda"], "hora_inicio": "09:00", "hora_fim": "12:00", "titulo": "Hospital"}]},
+        DbFake(),
+        UserFake(),
+    )
+
+    assert resultado["erro"] == "falha_interna_tool"
+    assert resultado["tipo"] == "KeyError"
