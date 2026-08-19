@@ -44,6 +44,12 @@ def _payload(usuario: User, **mudancas):
     return dados
 
 
+def _delete(client, url: str, token: str, payload: dict):
+    # Starlette/httpx nesta versão não aceita json= no atalho client.delete().
+    # request() preserva o corpo JSON do DELETE sem mudar o contrato da API.
+    return client.request("DELETE", url, headers=_headers(token), json=payload)
+
+
 def test_edita_dados_e_tipo_de_acesso(client, db, criar_usuario):
     _, token_admin = _admin(criar_usuario)
     alvo, _ = criar_usuario(email="natalia@teste.local", full_name="Natalia")
@@ -81,10 +87,11 @@ def test_edita_dados_e_tipo_de_acesso(client, db, criar_usuario):
 
 def test_nao_permite_excluir_admin_nem_propria_conta(client, criar_usuario):
     admin, token_admin = _admin(criar_usuario)
-    resposta = client.delete(
+    resposta = _delete(
+        client,
         f"/api/admin/user-management/{admin.id}",
-        headers=_headers(token_admin),
-        json={"confirmar_email": admin.email, "excluir_corvia_mail": True},
+        token_admin,
+        {"confirmar_email": admin.email, "excluir_corvia_mail": True},
     )
     assert resposta.status_code == 409
 
@@ -101,10 +108,11 @@ def test_bloqueia_exclusao_com_cobranca_stripe(client, db, criar_usuario):
     ))
     db.commit()
 
-    resposta = client.delete(
+    resposta = _delete(
+        client,
         f"/api/admin/user-management/{alvo.id}",
-        headers=_headers(token_admin),
-        json={"confirmar_email": alvo.email, "excluir_corvia_mail": True},
+        token_admin,
+        {"confirmar_email": alvo.email, "excluir_corvia_mail": True},
     )
     assert resposta.status_code == 409
     assert db.get(User, alvo.id) is not None
@@ -114,10 +122,11 @@ def test_confirmacao_exige_email_exato(client, db, criar_usuario):
     _, token_admin = _admin(criar_usuario)
     alvo, _ = criar_usuario(email="carol@teste.local")
 
-    resposta = client.delete(
+    resposta = _delete(
+        client,
         f"/api/admin/user-management/{alvo.id}",
-        headers=_headers(token_admin),
-        json={"confirmar_email": "outra@teste.local", "excluir_corvia_mail": True},
+        token_admin,
+        {"confirmar_email": "outra@teste.local", "excluir_corvia_mail": True},
     )
     assert resposta.status_code == 422
     assert db.get(User, alvo.id) is not None
@@ -138,10 +147,11 @@ def test_exclui_usuario_gratuito_e_caixa_mail360_por_account_key(client, db, cri
     chamadas = []
     monkeypatch.setattr(mail360, "_chamar", lambda metodo, caminho, **kwargs: chamadas.append((metodo, caminho)) or {})
 
-    resposta = client.delete(
+    resposta = _delete(
+        client,
         f"/api/admin/user-management/{alvo.id}",
-        headers=_headers(token_admin),
-        json={"confirmar_email": alvo.email, "excluir_corvia_mail": True},
+        token_admin,
+        {"confirmar_email": alvo.email, "excluir_corvia_mail": True},
     )
 
     assert resposta.status_code == 200, resposta.text
@@ -168,10 +178,11 @@ def test_falha_mail360_mantem_conta_local(client, db, criar_usuario, monkeypatch
         raise Mail360Error("indisponível")
 
     monkeypatch.setattr(mail360, "_chamar", falhar)
-    resposta = client.delete(
+    resposta = _delete(
+        client,
         f"/api/admin/user-management/{alvo.id}",
-        headers=_headers(token_admin),
-        json={"confirmar_email": alvo.email, "excluir_corvia_mail": True},
+        token_admin,
+        {"confirmar_email": alvo.email, "excluir_corvia_mail": True},
     )
 
     assert resposta.status_code == 502
