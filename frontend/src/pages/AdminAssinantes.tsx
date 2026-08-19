@@ -104,8 +104,8 @@ type Filtros = {
   status: string;
   kycStatus: string;
   subscriptionStatus: string;
-  convidado: string; // "" | "sim" | "nao"
-  investidor: string; // "" | "sim" | "nao"
+  convidado: string;
+  investidor: string;
   page: number;
 };
 
@@ -121,8 +121,6 @@ export default function AdminAssinantes() {
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState("");
 
-  // Debounce da busca por texto: só entra nos filtros (e dispara requisição)
-  // depois de 400ms sem digitar, e sempre volta para a página 1.
   useEffect(() => {
     const id = setTimeout(() => {
       setFiltros((f) => (f.q === qInput.trim() ? f : { ...f, q: qInput.trim(), page: 1 }));
@@ -166,159 +164,53 @@ export default function AdminAssinantes() {
     <>
       <p className="eyebrow">Administração</p>
       <h1>Assinantes</h1>
-      <p style={{ color: "var(--texto-secundario)", maxWidth: "70ch" }}>
-        Ficha administrativa completa de cada cadastro — dados pessoais e profissionais,
-        assinatura, verificação de identidade (KYC) e histórico de decisões. Clique numa
-        linha para abrir a ficha.
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "76ch" }}>
+        Consulte a ficha completa ou use <strong>Gerenciar</strong> para alterar dados/senha e, quando permitido,
+        excluir definitivamente contas gratuitas ou de demonstração junto com o CorVIA Mail.
       </p>
 
       <div className="admin-assinantes__filtros">
-        <div className="admin-assinantes__campo admin-assinantes__campo--busca">
-          <label htmlFor="aa-busca">Buscar</label>
-          <input
-            id="aa-busca"
-            type="search"
-            placeholder="Nome, e-mail, CPF ou nº do conselho"
-            value={qInput}
-            onChange={(e) => setQInput(e.target.value)}
-          />
-        </div>
-        <div className="admin-assinantes__campo">
-          <label htmlFor="aa-status">Status da conta</label>
-          <select id="aa-status" value={filtros.status} onChange={(e) => aplicar({ status: e.target.value })}>
-            <option value="">Todos</option>
-            {Object.entries(STATUS_CONTA).map(([v, r]) => <option key={v} value={v}>{r}</option>)}
-          </select>
-        </div>
-        <div className="admin-assinantes__campo">
-          <label htmlFor="aa-kyc">Verificação (KYC)</label>
-          <select id="aa-kyc" value={filtros.kycStatus} onChange={(e) => aplicar({ kycStatus: e.target.value })}>
-            <option value="">Todos</option>
-            {Object.entries(STATUS_KYC).map(([v, r]) => <option key={v} value={v}>{r}</option>)}
-          </select>
-        </div>
-        <div className="admin-assinantes__campo">
-          <label htmlFor="aa-assinatura">Assinatura</label>
-          <select id="aa-assinatura" value={filtros.subscriptionStatus} onChange={(e) => aplicar({ subscriptionStatus: e.target.value })}>
-            <option value="">Todas</option>
-            {Object.entries(STATUS_ASSINATURA).map(([v, r]) => <option key={v} value={v}>{r}</option>)}
-          </select>
-        </div>
-        <div className="admin-assinantes__campo">
-          <label htmlFor="aa-convidado">Convidado</label>
-          <select id="aa-convidado" value={filtros.convidado} onChange={(e) => aplicar({ convidado: e.target.value })}>
-            <option value="">Indiferente</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </div>
-        <div className="admin-assinantes__campo">
-          <label htmlFor="aa-investidor">Investidor</label>
-          <select id="aa-investidor" value={filtros.investidor} onChange={(e) => aplicar({ investidor: e.target.value })}>
-            <option value="">Indiferente</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </div>
-        {filtroAtivo && (
-          <button type="button" className="admin-assinantes__limpar" onClick={limparFiltros}>
-            Limpar filtros
-          </button>
-        )}
+        <div className="admin-assinantes__campo admin-assinantes__campo--busca"><label htmlFor="aa-busca">Buscar</label><input id="aa-busca" type="search" placeholder="Nome, e-mail, CPF ou nº do conselho" value={qInput} onChange={(e) => setQInput(e.target.value)} /></div>
+        <div className="admin-assinantes__campo"><label htmlFor="aa-status">Status da conta</label><select id="aa-status" value={filtros.status} onChange={(e) => aplicar({ status: e.target.value })}><option value="">Todos</option>{Object.entries(STATUS_CONTA).map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
+        <div className="admin-assinantes__campo"><label htmlFor="aa-kyc">Verificação (KYC)</label><select id="aa-kyc" value={filtros.kycStatus} onChange={(e) => aplicar({ kycStatus: e.target.value })}><option value="">Todos</option>{Object.entries(STATUS_KYC).map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
+        <div className="admin-assinantes__campo"><label htmlFor="aa-assinatura">Assinatura</label><select id="aa-assinatura" value={filtros.subscriptionStatus} onChange={(e) => aplicar({ subscriptionStatus: e.target.value })}><option value="">Todas</option>{Object.entries(STATUS_ASSINATURA).map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
+        <div className="admin-assinantes__campo"><label htmlFor="aa-convidado">Convidado</label><select id="aa-convidado" value={filtros.convidado} onChange={(e) => aplicar({ convidado: e.target.value })}><option value="">Indiferente</option><option value="sim">Sim</option><option value="nao">Não</option></select></div>
+        <div className="admin-assinantes__campo"><label htmlFor="aa-investidor">Investidor</label><select id="aa-investidor" value={filtros.investidor} onChange={(e) => aplicar({ investidor: e.target.value })}><option value="">Indiferente</option><option value="sim">Sim</option><option value="nao">Não</option></select></div>
+        {filtroAtivo && <button type="button" className="admin-assinantes__limpar" onClick={limparFiltros}>Limpar filtros</button>}
       </div>
 
       {erro && <Erro mensagem={erro} />}
 
-      {carregando && !resposta ? (
-        <Carregando texto="Carregando assinantes…" />
-      ) : resposta && resposta.items.length === 0 ? (
+      {carregando && !resposta ? <Carregando texto="Carregando assinantes…" /> : resposta && resposta.items.length === 0 ? (
         <Vazio titulo="Nenhum assinante encontrado" acao="Ajuste os filtros ou o termo de busca." />
       ) : resposta ? (
         <>
-          <p className="admin-assinantes__resumo">
-            Mostrando {inicio}–{fim} de {resposta.total}
-            {carregando ? " · atualizando…" : ""}
-          </p>
+          <p className="admin-assinantes__resumo">Mostrando {inicio}–{fim} de {resposta.total}{carregando ? " · atualizando…" : ""}</p>
           <div className="admin-assinantes__tabela-wrap">
             <table className="admin-assinantes__tabela">
-              <thead>
-                <tr>
-                  <th>Nome / e-mail</th>
-                  <th>CPF</th>
-                  <th>Conselho</th>
-                  <th>Profissão</th>
-                  <th>Cadastro</th>
-                  <th>Status conta</th>
-                  <th>KYC</th>
-                  <th>Assinatura</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Nome / e-mail</th><th>CPF</th><th>Conselho</th><th>Profissão</th><th>Cadastro</th><th>Status conta</th><th>KYC</th><th>Assinatura</th><th>Ações</th></tr></thead>
               <tbody>
                 {resposta.items.map((u) => (
-                  <tr
-                    key={u.id}
-                    className="admin-assinantes__linha"
-                    tabIndex={0}
-                    role="link"
-                    aria-label={`Abrir ficha de ${u.full_name}`}
-                    onClick={() => navigate(`/admin/usuarios/${u.id}`)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        navigate(`/admin/usuarios/${u.id}`);
-                      }
-                    }}
-                  >
-                    <td>
-                      <span className="admin-assinantes__nome">{u.full_name}</span>
-                      <span className="admin-assinantes__sub">{u.email}</span>
-                      {(u.convidado || u.investidor) && (
-                        <span className="admin-assinantes__badges">
-                          {u.convidado && <span className="selo selo--info">Convidado</span>}
-                          {u.investidor && <span className="selo selo--info">Investidor</span>}
-                        </span>
-                      )}
-                    </td>
+                  <tr key={u.id} className="admin-assinantes__linha" tabIndex={0} role="link" aria-label={`Abrir ficha de ${u.full_name}`} onClick={() => navigate(`/admin/usuarios/${u.id}`)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navigate(`/admin/usuarios/${u.id}`); } }}>
+                    <td><span className="admin-assinantes__nome">{u.full_name}</span><span className="admin-assinantes__sub">{u.email}</span>{(u.convidado || u.investidor) && <span className="admin-assinantes__badges">{u.convidado && <span className="selo selo--info">Convidado</span>}{u.investidor && <span className="selo selo--info">Investidor</span>}</span>}</td>
                     <td className="dado">{u.cpf_mascarado ?? "—"}</td>
                     <td>{u.council_name ? `${u.council_name} ${u.council_number ?? ""}/${u.council_state ?? ""}` : "—"}</td>
                     <td>{u.profession ?? "—"}</td>
                     <td>{formatarData(u.created_at)}</td>
                     <td><span className={seloContaClasse(u.status)}>{STATUS_CONTA[u.status] ?? u.status}</span></td>
                     <td><span className={seloKycClasse(u.kyc_status)}>{u.kyc_status ? (STATUS_KYC[u.kyc_status] ?? u.kyc_status) : "Sem KYC"}</span></td>
-                    <td>
-                      <span className={seloAssinaturaClasse(u.subscription_status)}>
-                        {u.subscription_status ? (STATUS_ASSINATURA[u.subscription_status] ?? u.subscription_status) : "Sem assinatura"}
-                      </span>
-                      {u.subscription_plano && (
-                        <span className="admin-assinantes__sub">
-                          {PLANO_ROTULO[u.subscription_plano] ?? u.subscription_plano}
-                          {u.subscription_periodicidade ? ` · ${u.subscription_periodicidade}` : ""}
-                        </span>
-                      )}
-                    </td>
+                    <td><span className={seloAssinaturaClasse(u.subscription_status)}>{u.subscription_status ? (STATUS_ASSINATURA[u.subscription_status] ?? u.subscription_status) : "Sem assinatura"}</span>{u.subscription_plano && <span className="admin-assinantes__sub">{PLANO_ROTULO[u.subscription_plano] ?? u.subscription_plano}{u.subscription_periodicidade ? ` · ${u.subscription_periodicidade}` : ""}</span>}</td>
+                    <td><button type="button" className="botao botao--secundario" style={{ padding: ".35rem .65rem", whiteSpace: "nowrap" }} onClick={(e) => { e.stopPropagation(); navigate(`/admin/usuarios/${u.id}/gerenciar`); }} onKeyDown={(e) => e.stopPropagation()}>Gerenciar</button></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-
           <div className="admin-assinantes__paginacao">
             <span className="eyebrow" style={{ margin: 0 }}>Página {resposta.page}</span>
             <div className="admin-assinantes__paginacao-botoes">
-              <button
-                type="button" className="botao botao--secundario"
-                disabled={resposta.page <= 1 || carregando}
-                onClick={() => setFiltros((f) => ({ ...f, page: f.page - 1 }))}
-              >
-                ← Anterior
-              </button>
-              <button
-                type="button" className="botao botao--secundario"
-                disabled={!resposta.has_more || carregando}
-                onClick={() => setFiltros((f) => ({ ...f, page: f.page + 1 }))}
-              >
-                Próxima →
-              </button>
+              <button type="button" className="botao botao--secundario" disabled={resposta.page <= 1 || carregando} onClick={() => setFiltros((f) => ({ ...f, page: f.page - 1 }))}>← Anterior</button>
+              <button type="button" className="botao botao--secundario" disabled={!resposta.has_more || carregando} onClick={() => setFiltros((f) => ({ ...f, page: f.page + 1 }))}>Próxima →</button>
             </div>
           </div>
         </>
