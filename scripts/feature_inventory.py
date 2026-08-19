@@ -34,7 +34,7 @@ EXPECTED_APP_ROUTES = {
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
     "/round", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
-    "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
+    "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
     "/tour", "/verificacao-identidade",
     "/sincronizacao",
@@ -47,7 +47,7 @@ EXPECTED_NAV_ROUTES = {
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas", "/trilhas/timeline",
-    "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico",
+    "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
     "/sincronizacao", "/admin/usuarios", "/tour",
 }
 
