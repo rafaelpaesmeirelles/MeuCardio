@@ -4,7 +4,7 @@ import logging
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel, EmailStr, Field, field_validator
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import delete, inspect, text, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
@@ -23,9 +23,19 @@ log = logging.getLogger("meucardio.admin-user-management")
 router = APIRouter(prefix="/api/admin/user-management", tags=["administração de usuários"])
 
 
+def _email_valido(value: str) -> str:
+    value = (value or "").strip().lower()
+    if not value or "@" not in value or value.startswith("@") or value.endswith("@"):
+        raise ValueError("E-mail inválido.")
+    local, dominio = value.rsplit("@", 1)
+    if not local or "." not in dominio or dominio.startswith(".") or dominio.endswith("."):
+        raise ValueError("E-mail inválido.")
+    return value
+
+
 class AtualizarUsuario(BaseModel):
     full_name: str = Field(min_length=2, max_length=255)
-    email: EmailStr
+    email: str = Field(min_length=3, max_length=255)
     role: str
     birth_date: date | None = None
     cpf: str | None = Field(default=None, max_length=14)
@@ -42,6 +52,11 @@ class AtualizarUsuario(BaseModel):
     workplace_notes: str | None = Field(default=None, max_length=500)
     is_active: bool
     tipo_acesso: str
+
+    @field_validator("email")
+    @classmethod
+    def _email(cls, value: str) -> str:
+        return _email_valido(value)
 
     @field_validator("role")
     @classmethod
@@ -79,8 +94,13 @@ class AtualizarUsuario(BaseModel):
 
 
 class ExcluirUsuario(BaseModel):
-    confirmar_email: EmailStr
+    confirmar_email: str = Field(min_length=3, max_length=255)
     excluir_corvia_mail: bool = True
+
+    @field_validator("confirmar_email")
+    @classmethod
+    def _email(cls, value: str) -> str:
+        return _email_valido(value)
 
 
 _STATUS_PAGOS_RELEVANTES = {"ativo", "teste", "pendente", "inadimplente", "suspenso", "pausado"}
@@ -168,7 +188,7 @@ def atualizar_usuario(
     if alvo.id == admin.id or alvo.role == "admin":
         raise HTTPException(status_code=409, detail="Use o fluxo administrativo próprio para contas de administrador.")
 
-    email = str(dados.email).strip().lower()
+    email = dados.email
     existente = db.query(User).filter(User.email == email, User.id != alvo.id).first()
     if existente:
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
@@ -281,7 +301,7 @@ def excluir_usuario(
     pode, motivo = _pode_excluir(db, alvo, admin)
     if not pode:
         raise HTTPException(status_code=409, detail=motivo or "Exclusão não permitida.")
-    if str(dados.confirmar_email).strip().lower() != alvo.email.strip().lower():
+    if dados.confirmar_email != alvo.email.strip().lower():
         raise HTTPException(status_code=422, detail="Digite exatamente o e-mail de login da conta para confirmar a exclusão.")
 
     conta_email = db.query(EmailAccount).filter(EmailAccount.user_id == alvo.id).first()
