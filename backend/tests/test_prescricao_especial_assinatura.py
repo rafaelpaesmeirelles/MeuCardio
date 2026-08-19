@@ -1,3 +1,4 @@
+import asyncio
 import io
 
 import pytest
@@ -53,8 +54,7 @@ def test_pdf_manual_emitido_fica_disponivel_sem_fingir_assinatura(db, criar_usua
     assert serializado["pdf_available"] is True
 
 
-@pytest.mark.asyncio
-async def test_upload_externo_rejeita_pdf_assinado_de_outro_documento(db, criar_usuario, monkeypatch):
+def test_upload_externo_rejeita_pdf_assinado_de_outro_documento(db, criar_usuario, monkeypatch):
     user, _ = criar_usuario(email="externo@teste.local")
     g = _doc(db, user.id, status="aguardando_assinatura_externa")
     registro = DocumentoEmitido(
@@ -79,6 +79,6 @@ async def test_upload_externo_rejeita_pdf_assinado_de_outro_documento(db, criar_
 
     upload = UploadFile(filename="assinado.pdf", file=io.BytesIO(b"%PDF-outro-documento-assinado"))
     with pytest.raises(HTTPException) as exc:
-        await prescricao_especial.assinatura_externa(g.id, upload, db=db, user=user)
+        asyncio.run(prescricao_especial.assinatura_externa(g.id, upload, db=db, user=user))
     assert exc.value.status_code == 422
     assert "não corresponde" in str(exc.value.detail)
