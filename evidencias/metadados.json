@@ -44353,5 +44353,46 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "esc2020-esporte-reabilitacao-cardiaca-exercicio-classe-i",
+    "statement": "Programas de reabilitação cardíaca com exercício físico são recomendados para pacientes com doença isquêmica, insuficiência cardíaca ou dispositivo de assistência ventricular; e especificamente para pacientes pós-transplante cardíaco.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease: The Task Force on sports cardiology and exercise in patients with cardiovascular disease of the European Society of Cardiology (ESC). Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 34020769 — confirmado por buscas independentes convergentes. Nível A para doença isquêmica/IC/DAV; Nível B especificamente para pós-transplante cardíaco — este registro cobre o Nível A geral. VERIFICAÇÃO HUMANA NECESSÁRIA: a formulação exata da recomendação (paráfrase, não citação literal da tabela) e o número da tabela na diretriz não foram confirmados por leitura direta do texto integral nesta sessão — WebFetch bloqueado para o Oxford Academic.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "esc 2020",
+      "reabilitação cardíaca",
+      "exercício físico",
+      "insuficiência cardíaca",
+      "doença isquêmica"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Classe I confirmada por 3 buscas WebSearch independentes e convergentes ('Class I A... I B (transplante)'), incluindo confirmação de que a diretriz usa formalmente o sistema Classe I-III/Nível A-C (não é consenso sem graduação). O texto do statement é paráfrase fiel do conteúdo, não citação literal — recomenda-se conferir a redação exata na tabela original antes de publicar."
+  },
+  {
+    "slug": "esc2020-esporte-participacao-competitiva-sca-cronica-baixo-risco",
+    "statement": "A participação em esporte competitivo é razoável em indivíduos com síndrome coronariana crônica e baixo risco de eventos durante o esforço, exceto em atividades de demanda cardiovascular muito alta e em pessoas mais idosas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease: The Task Force on sports cardiology and exercise in patients with cardiovascular disease of the European Society of Cardiology (ESC). Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 34020769 — confirmado por buscas independentes convergentes. VERIFICAÇÃO HUMANA NECESSÁRIA: formulação exata e número da tabela não confirmados por leitura direta do texto integral.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "esc 2020",
+      "síndrome coronariana crônica",
+      "esporte competitivo",
+      "liberação esportiva"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "review_note": "Classe IIa/Nível C confirmados por 2 buscas WebSearch independentes com o mesmo achado textual ('IIa C'). Mesma ressalva do item anterior sobre paráfrase vs. citação literal."
   }
 ]
