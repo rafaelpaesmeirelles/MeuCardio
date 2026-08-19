@@ -22147,5 +22147,33 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "dea-hf-diurese-intravenosa-ambulatorial-ic-cronica-congestao-refrataria",
+    "title": "DEA-HF — Eficácia da Diurese Intravenosa Ambulatorial em Pacientes com Insuficiência Cardíaca Crônica e Congestão Refratária",
+    "study_type": "ensaio_clinico",
+    "authors": "Gruber A, Abbo AR, Volis I, Aronson D, Girerd N, Kristensen SL, Zukermann R, Alberkant N, Sitnitsky E, Kruger A, Khasis P, Bravo E, Elad B, Helmer Levin L, Caspi O.",
+    "journal": "ESC Heart Failure",
+    "year": 2025,
+    "doi": "10.1002/ehf2.15358",
+    "pmid": "40660874",
+    "url": "https://doi.org/10.1002/ehf2.15358",
+    "summary": "Ensaio prospectivo, randomizado, aberto, cross-over, unicêntrico, com 42 pacientes ambulatoriais com insuficiência cardíaca crônica sintomática e congestão apesar de terapia guiada por diretriz e diurético oral já otimizado, comparando três regimes diuréticos semanais de alta intensidade, uma vez por semana durante 3 semanas consecutivas, em ordem randomizada: furosemida intravenosa 250mg isolada; furosemida intravenosa 250mg + metolazona oral 5mg; furosemida intravenosa 250mg + acetazolamida intravenosa 500mg. Desfecho primário: excreção de sódio urinário total em 6 horas.",
+    "key_findings": "Excreção de sódio em 6h (desfecho primário): furosemida+metolazona 4.691mg vs. furosemida isolada 3.835mg (p=0,015) vs. furosemida+acetazolamida 3.584mg (p=0,001) — sem diferença significativa entre furosemida isolada e +acetazolamida. Volume urinário: 1,84L (metolazona) vs. 1,71L (isolada) vs. 1,58L (acetazolamida). Piora de função renal: 39% (metolazona) vs. 16% (isolada) vs. 2,6% (acetazolamida), sem nenhum evento exigindo internação, hiponatremia, discalemia ou hipotensão sintomática em qualquer braço. Ao final das três semanas de tratamento, peso corporal médio caiu de 85,5kg para 83,1kg, com queda significativa de NT-proBNP e de linhas B ao ultrassom pulmonar.",
+    "clinical_implications": "Demonstra que uma estratégia ambulatorial de diurese intravenosa semanal de alta intensidade descongestiona, de forma mensurável, o paciente com IC crônica refratária ao diurético oral — cenário de cuidado (evitar ou abreviar internação) distinto de toda a evidência de descongestão hospitalar já catalogada neste acervo (DOSE-AHF, CARRESS-HF, ADVOR, CLOROTIC, PUSH-AHF, ENACT-HF). A escolha do segundo fármaco envolve troca explícita: metolazona natriuretiza mais, à custa de mais piora de função renal (sem repercussão clínica grave neste ensaio); acetazolamida não superou a furosemida isolada em natriurese, mas com o melhor perfil renal dos três braços.",
+    "limitations": "Amostra pequena (n=42), estudo unicêntrico, desenho cross-over aberto (não cegado — a combinação de fármacos dificulta cegamento efetivo), sem poder estatístico para desfechos clínicos duros (hospitalização, mortalidade); o desfecho primário é substituto (excreção de sódio), não clínico.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "dea-hf",
+      "diurese ambulatorial",
+      "congestao refrataria",
+      "metolazona",
+      "acetazolamida",
+      "furosemida",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "review_note": "Autoria/veículo/DOI/PMID/desenho conferidos por convergência de múltiplas fontes independentes nesta sessão (PubMed, PMC, Wiley Online Library/ESC Heart Failure). Números do desfecho primário e de segurança conferidos por 2 fontes secundárias independentes e concordantes. Acesso direto ao texto completo via PubMed/PMC/Oxford Academic bloqueado pelo proxy de rede deste ambiente. Cuidado: existe um ensaio de sigla parecida, ADA-HF (Clin Res Cardiol 2026, cenário hospitalar, acetazolamida como poupador de cloreto) — estudo distinto, não usado como fonte aqui.",
+    "published": false
   }
 ]

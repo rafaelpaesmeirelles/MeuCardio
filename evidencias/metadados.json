@@ -44353,5 +44353,25 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "aha-2022-diureticos-para-alivio-da-congestao",
+    "statement": "Em pacientes com insuficiência cardíaca e retenção de fluidos, diuréticos são recomendados para aliviar a congestão, melhorar os sintomas e prevenir a piora da insuficiência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "diuretico",
+      "congestao",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe e nível de evidência (I/B-NR) confirmados cruzando o registro do PubMed (PMID 35363499, mesmo já usado nos demais registros AHA/ACC/HFSA deste acervo) com múltiplas fontes secundárias independentes e convergentes nesta sessão (síntese oficial de bolso da diretriz e cobertura por publicação especializada em cardiologia, verificado de forma independente duas vezes). Acesso direto ao texto integral da diretriz (ahajournals.org, PMC, hfsa.org, acc.org) bloqueado pelo proxy de rede deste ambiente, mesma limitação já documentada nos registros anteriores desta missão.",
+    "published": false
   }
 ]
