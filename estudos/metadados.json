@@ -22147,5 +22147,32 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "diamond-patiromer-hipercalemia-icfer",
+    "title": "DIAMOND — Patiromer para Manejo da Hipercalemia na Insuficiência Cardíaca com Fração de Ejeção Reduzida",
+    "study_type": "ensaio_clinico",
+    "authors": "Butler J, Anker SD, Lund LH, Coats AJS, Filippatos G, Siddiqi TJ, et al.; DIAMOND Investigators",
+    "journal": "European Heart Journal",
+    "year": 2022,
+    "doi": "10.1093/eurheartj/ehac401",
+    "pmid": "35900838",
+    "url": "https://doi.org/10.1093/eurheartj/ehac401",
+    "summary": "Ensaio de retirada randomizada em pacientes com ICFEr e hipercalemia atual ou prévia relacionada a bloqueio do SRAA: 1.642 pacientes triados, 1.195 entraram numa fase de run-in aberta com patiromer e otimização de IECA/BRA/INRA e antagonista mineralocorticoide; 878 (84,6%) atingiram a dose-alvo de bloqueio do SRAA e foram randomizados 1:1, duplo-cego, para continuar patiromer (n=439) ou trocar para placebo (n=439), seguimento mediano de 27 semanas.",
+    "key_findings": "Variação ajustada média do potássio sérico (desfecho primário): +0,03 mmol/L (patiromer) vs. +0,13 mmol/L (placebo), p<0,001. Redução de risco relativo de 37% no tempo até evento de hipercalemia e redução de 34% no total de eventos de hipercalemia. Redução de 38% no tempo até redução de dose do antagonista mineralocorticoide. Incidência de hipercalemia >5,5 mEq/L: 13,9% (patiromer) vs. 19,4% (placebo). Eventos adversos semelhantes entre os grupos.",
+    "clinical_implications": "Hipercalemia recorrente não precisa significar suspensão definitiva do bloqueio do SRAA/antagonista mineralocorticoide: o patiromer reduz a recorrência de hipercalemia e permite manter a dose-alvo dessas classes, que têm benefício de mortalidade comprovado na ICFEr. O desenho de retirada randomizada enriquece a amostra com quem já tolerou e atingiu a dose-alvo no run-in — o resultado descreve quem tolera a estratégia combinada, não a população geral com hipercalemia.",
+    "limitations": "Desfecho primário é laboratorial (variação de potássio), não um desfecho cardiovascular duro. Apenas 84,6% dos que entraram no run-in atingiram a dose-alvo e foram randomizados, o que limita a generalização para quem não tolera essa fase inicial. O ensaio testou especificamente patiromer, não outros quelantes de potássio.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "diamond",
+      "patiromer",
+      "hipercalemia",
+      "sraa",
+      "mra",
+      "icfer",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

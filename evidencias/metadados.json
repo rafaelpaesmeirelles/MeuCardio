@@ -44353,5 +44353,51 @@
     "review_status": "revisado",
     "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
     "published": false
+  },
+  {
+    "slug": "aha-2022-quelantes-de-potassio-para-hipercalemia-na-icfer",
+    "statement": "Em pacientes com insuficiência cardíaca que apresentam hipercalemia (potássio sérico ≥5,5 mEq/L) em uso de inibidor do sistema renina-angiotensina-aldosterona (IECA, BRA ou INRA), o quelante de potássio (patiromer ou sódio zircônio ciclosilicato) pode ser considerado para facilitar a manutenção do bloqueio do SRAA — mas a eficácia dessa estratégia em melhorar desfechos clínicos permanece incerta.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "hipercalemia",
+      "quelante de potássio",
+      "patiromer",
+      "sódio zircônio ciclosilicato",
+      "mra",
+      "sraa",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe (IIb) e nível (B-R) confirmados por convergência de múltiplas buscas WebSearch independentes, reproduzindo o mesmo texto verbatim da recomendação e a mesma classificação, a partir de fontes secundárias distintas (Medscape, revisão em Heart Failure Reviews, material de slide oficial da diretriz via Medtelligence). Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — mesma limitação já documentada no review_note de 'aha-2022-peptideos-natriureticos-diagnostico-dispneia'.",
+    "published": false
+  },
+  {
+    "slug": "aha-2022-monitorizacao-de-potassio-e-funcao-renal-com-mra",
+    "statement": "Em pacientes com insuficiência cardíaca com fração de ejeção reduzida em uso de antagonista mineralocorticoide, o potássio sérico e a função renal devem ser monitorizados no início do tratamento e ao longo de toda a terapia, com ajuste da dose de diuréticos quando necessário, para minimizar o risco de hipercalemia e de disfunção renal.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "mra",
+      "espironolactona",
+      "eplerenona",
+      "monitorização",
+      "função renal",
+      "hipercalemia",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe (I) e nível (A) confirmados por buscas WebSearch independentes com texto verbatim consistente ('serum potassium and renal function should be monitored at baseline and throughout therapy... class 1, level A'). Acesso ao texto primário bloqueado pelo proxy deste ambiente. A recomendação-irmã sobre limiar de suspensão do MRA por hipercalemia refratária foi investigada e teve fontes secundárias divergentes quanto ao corte exato — por isso NÃO foi proposta como item separado nesta rodada; precisa de acesso ao texto integral da diretriz para arbitrar com segurança.",
+    "published": false
   }
 ]
