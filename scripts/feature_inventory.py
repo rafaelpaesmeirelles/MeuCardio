@@ -35,7 +35,7 @@ EXPECTED_APP_ROUTES = {
     "/round", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
-    "/admin/usuarios", "/admin/usuarios/:id",
+    "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
     "/tour", "/verificacao-identidade",
     "/sincronizacao",
 }
@@ -53,7 +53,7 @@ EXPECTED_NAV_ROUTES = {
 
 EXPECTED_BACKEND_ROUTERS = {
     "health.router", "auth.router", "browser_session.router", "social_login.router", "password_reset.router",
-    "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "service_orders.router",
+    "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "admin_user_management.router", "service_orders.router",
     "partner_courses.router", "email_api.router", "email_session.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
@@ -66,9 +66,6 @@ EXPECTED_BACKEND_ROUTERS = {
     "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
     "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
     "related_content.router", "knowledge_graph.router", "patient_profiles.router",
-    # Revisado em 14/08/2026 (RC PR #74): sync-live/sync-all capability-aware.
-    # Registrado em ROUTERS_ASSINANTES (assinante_ativo), escopo por owner_id
-    # com teste negativo de IDOR em tests/test_account_sync_realtime.py.
     "account_sync.router",
 }
 
@@ -82,6 +79,7 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/PainelClinicalOS.tsx",
     "frontend/src/pages/TourClinicalOS.tsx",
     "frontend/src/pages/Admin.tsx",
+    "frontend/src/pages/AdminGerenciarUsuario.tsx",
     "frontend/src/pages/Apresentacao.tsx",
     "frontend/src/pages/Assistente.tsx",
     "frontend/src/pages/Assinatura.tsx",
@@ -104,6 +102,7 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/Telediagnostico.tsx",
     "frontend/src/pages/UsuariosOnline.tsx",
     "backend/app/api/account_access_admin.py",
+    "backend/app/api/admin_user_management.py",
     "backend/app/api/assinatura.py",
     "backend/app/api/avaliacao_preoperatoria.py",
     "backend/app/api/chat.py",

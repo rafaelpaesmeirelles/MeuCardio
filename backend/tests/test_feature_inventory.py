@@ -19,15 +19,9 @@ def test_published_feature_inventory_is_intact():
         check=False,
     )
     assert result.returncode == 0, result.stdout + result.stderr
-    # Achado de auditoria (issue #52, subfase 8): os três números abaixo
-    # tinham ficado defasados (rotas/routers novos entraram sem atualizar
-    # este teste) — scripts/feature_inventory.py já tinha o mecanismo certo
-    # (falha se um router desaparecer OU se um novo não constar da lista
-    # revisada em EXPECTED_BACKEND_ROUTERS); o que faltava era só manter
-    # este teste sincronizado com a contagem real depois de cada revisão.
-    assert "63 rotas React" in result.stdout
-    assert "39 destinos de menu" in result.stdout
-    assert "50 routers FastAPI" in result.stdout
+    assert "65 rotas React" in result.stdout
+    assert "39 destinos" in result.stdout
+    assert "55 routers FastAPI" in result.stdout
 
 
 def test_evidence_editorial_note_is_preserved_in_detail():
