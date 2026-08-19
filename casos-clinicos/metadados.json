@@ -15338,5 +15338,49 @@
       "Chen SH, Yeh CY, Chiang-Lin YP, Huang CJ, Chuang SY, Wu CC, Pan WH, Ma Y, Liang L, Cheng HM. Clinical Modifiers of Salt Sensitivity: A Metaregression and Risk Translation Study. Hypertension. 2026 Jul 23. DOI: 10.1161/HYPERTENSIONAHA.126.27410. PMID: 42488947."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "estagio-b-alteracao-estrutural-assintomatica-muda-a-conduta",
+    "titulo": "Alteração estrutural sem sintoma: isso já é insuficiência cardíaca?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "básico",
+    "enunciado": "(Caso educacional fictício, elaborado para fins de ensino; não corresponde a paciente real.) Mulher de 61 anos, hipertensa há 12 anos com controle irregular, sem queixa de dispneia, edema ou fadiga desproporcional para a idade — nega limitação em atividades habituais. Ecocardiograma de rotina solicitado pelo cardiologista mostra hipertrofia ventricular esquerda concêntrica moderada, com fração de ejeção preservada (62%) e função diastólica levemente alterada. NT-proBNP dosado no mesmo dia: 140 pg/mL (acima do valor de referência ambulatorial de 125 pg/mL, sem sinal de descompensação aguda).",
+    "pergunta": "Como classificar esta paciente segundo o estadiamento por estágios (A a D)?",
+    "opcoes": [
+      "Estágio A — está apenas em risco, porque não tem sintoma nenhum de insuficiência cardíaca",
+      "Estágio B — tem alteração estrutural cardíaca (hipertrofia) e biomarcador acima do corte, mas nenhum sintoma ou sinal de insuficiência cardíaca",
+      "Estágio C — toda hipertrofia ventricular esquerda já caracteriza insuficiência cardíaca estabelecida",
+      "Não se aplica estadiamento nenhum enquanto a fração de ejeção estiver preservada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Esta paciente já saiu do Estágio A (só fator de risco, sem alteração estrutural) porque o ecocardiograma mostrou hipertrofia ventricular esquerda — uma alteração estrutural cardíaca real — e o NT-proBNP está acima do corte de referência. Como ela não tem nenhum sintoma ou sinal de insuficiência cardíaca (não há dispneia, edema ou fadiga atribuível a isso), ela não preenche critério de Estágio C: o estágio correto é o B — 'pré-IC'. A diferença entre B e C não é a presença de alteração estrutural (que os dois têm), é a presença de sintoma ou sinal atual ou prévio de insuficiência cardíaca — que só o Estágio C tem. Essa distinção importa na prática porque o Estágio B já concentra boa parte do valor de intervir cedo (controle rigoroso de pressão arterial, tratamento de fatores de risco), antes de a doença se tornar sintomática — e é justamente a fase mais comumente subdiagnosticada, porque a paciente não tem queixa nenhuma que a leve a procurar atendimento por conta própria.",
+    "source_refs": [
+      "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+      "Documento 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc' desta biblioteca.",
+      "Documento 'disfuncao-diastolica-assintomatica-estagio-b-de-ic-com-icfep-incipiente' desta biblioteca."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "peptideo-natriuretico-normal-em-dispneia-afasta-ic",
+    "titulo": "Peptídeo natriurético normal em paciente dispneico: ainda vale investigar insuficiência cardíaca?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "básico",
+    "enunciado": "(Caso educacional fictício, elaborado para fins de ensino; não corresponde a paciente real.) Homem de 54 anos, sem cardiopatia conhecida, procura o pronto-socorro com dispneia progressiva há 3 dias, sem dor torácica, sem febre. Exame físico sem estertores, sem edema de membros inferiores, saturação de oxigênio 96% em ar ambiente. NT-proBNP dosado: 210 pg/mL — abaixo do corte de 300 pg/mL usado no contexto agudo/pronto-socorro.",
+    "pergunta": "O que este resultado de NT-proBNP permite concluir, de forma mais apropriada?",
+    "opcoes": [
+      "Confirma insuficiência cardíaca aguda descompensada, e o tratamento com diurético deve começar imediatamente",
+      "Torna insuficiência cardíaca improvável como causa da dispneia na maioria dos cenários, e reforça a busca por outra causa (pulmonar, por exemplo)",
+      "É inconclusivo e não deve influenciar a investigação em nenhum sentido",
+      "Só teria valor se tivesse sido dosado o BNP em vez do NT-proBNP"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A dosagem de peptídeo natriurético (BNP ou NT-proBNP) em paciente com dispneia é uma recomendação de Classe I, Nível A: útil tanto para apoiar quanto para EXCLUIR o diagnóstico de insuficiência cardíaca. Um valor abaixo do corte de referência para o contexto (300 pg/mL de NT-proBNP no cenário agudo/pronto-socorro, distinto do corte ambulatorial de 125 pg/mL) torna a insuficiência cardíaca uma causa improvável para a dispneia na maioria dos cenários — não a exclui com certeza absoluta (a interpretação ainda precisa considerar função renal, idade e obesidade, que alteram o valor basal do biomarcador), mas desloca a probabilidade pré-teste o suficiente para justificar investigar outras causas de dispneia aguda, como doença pulmonar, antes de assumir que o quadro é cardíaco. Iniciar diurético neste cenário, sem outro achado que sustente descompensação cardíaca, não é a conduta apoiada pelo resultado apresentado.",
+    "source_refs": [
+      "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+      "Registro de evidência 'aha-2022-peptideos-natriureticos-diagnostico-dispneia' desta biblioteca.",
+      "Documento 'icfer-classificacao-diagnostico-quatro-pilares' desta biblioteca (cortes de NT-proBNP ambulatorial e agudo)."
+    ],
+    "review_status": "revisado"
   }
 ]

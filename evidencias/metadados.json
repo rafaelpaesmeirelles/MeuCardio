@@ -44331,5 +44331,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "aha-2022-peptideos-natriureticos-diagnostico-dispneia",
+    "statement": "Em pacientes que se apresentam com dispneia, a dosagem de peptídeo natriurético (BNP ou NT-proBNP) é útil para apoiar o diagnóstico ou a exclusão de insuficiência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "diagnostico",
+      "peptideo natriuretico",
+      "bnp",
+      "nt-probnp",
+      "dispneia",
+      "aha-acc-hfsa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Classe e nível de evidência (I/A) confirmados cruzando o registro do PubMed (PMID 35363499) com pelo menos duas fontes secundárias independentes e convergentes (resumo oficial da diretriz e cobertura por publicação especializada em cardiologia) nesta sessão. Acesso direto ao texto integral (ahajournals.org, PMC, hfsa.org) bloqueado pelo proxy de rede deste ambiente — ver nota metodológica em 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'.",
+    "published": false
   }
 ]
