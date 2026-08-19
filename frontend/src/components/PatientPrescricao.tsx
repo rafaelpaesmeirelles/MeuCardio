@@ -1,8 +1,9 @@
 import CabecalhoDocumento from "./CabecalhoDocumento";
-import PrescricaoLivreEspecial from "./PrescricaoLivreEspecial";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
+
+const PrescricaoLivreEspecial = lazy(() => import("./PrescricaoLivreEspecial"));
 
 type ItemDrug = {
   drug_name: string; presentation: string; posology: string; orientation: string;
@@ -110,7 +111,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
 
   return (
     <>
-      <PrescricaoLivreEspecial />
+      <Suspense fallback={null}><PrescricaoLivreEspecial /></Suspense>
       <div className="cartao" style={{ background: "var(--fundo)" }}>
         <p className="eyebrow" style={{ margin: 0 }}>Prescrição</p>
 
