@@ -44528,7 +44528,7 @@
   },
   {
     "slug": "accaha2025-htn-mesma-meta-pressorica-rebaixada-a-iib-em-risco-cv-baixo",
-    "statement": "Em adultos com hipertensão e risco cardiovascular baixo (PREVENT <7,5%), a mesma meta pressórica de <130/80mmHg é recomendada, porém com força de recomendação e nível de evidência mais baixos que no estrato de risco aumentado — a meta numérica não muda, mas a força da recomendação sim.",
+    "statement": "Em adultos com hipertensão e risco cardiovascular baixo (PREVENT <7,5%), a mesma meta pressórica de <130/80mmHg pode ser considerada, com força de recomendação e nível de evidência mais baixos que no estrato de risco aumentado — a meta numérica não muda, mas a força da recomendação sim.",
     "recommendation_class": "IIb",
     "evidence_level": "B-NR",
     "society": "AHA/ACC",
@@ -44672,7 +44672,7 @@
   },
   {
     "slug": "esc2020-esporte-reabilitacao-cardiaca-exercicio-classe-i",
-    "statement": "Programas de reabilitação cardíaca com exercício físico são recomendados para pacientes com doença isquêmica, insuficiência cardíaca ou dispositivo de assistência ventricular; e especificamente para pacientes pós-transplante cardíaco.",
+    "statement": "Programas de reabilitação cardíaca com exercício físico são recomendados para pacientes com doença isquêmica, insuficiência cardíaca ou dispositivo de assistência ventricular.",
     "recommendation_class": "I",
     "evidence_level": "A",
     "society": "ESC",
@@ -44689,7 +44689,27 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Classe I e nível A confirmados na diretriz ESC 2020 para programas de exercício/reabilitação em doença coronariana e insuficiência cardíaca; a recomendação pós-transplante possui nível B e permanece explicitamente distinguida no texto."
+    "review_note": "Classe I e nível A confirmados na diretriz ESC 2020 para programas de exercício/reabilitação em doença coronariana, insuficiência cardíaca e dispositivo de assistência ventricular. A recomendação pós-transplante foi separada em registro próprio por possuir nível B."
+  },
+  {
+    "slug": "esc2020-esporte-reabilitacao-cardiaca-pos-transplante-classe-i",
+    "statement": "Programas de reabilitação cardíaca com exercício físico são recomendados para pacientes após transplante cardíaco.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease: The Task Force on sports cardiology and exercise in patients with cardiovascular disease of the European Society of Cardiology (ESC). Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 34020769.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "esc 2020",
+      "reabilitação cardíaca",
+      "exercício físico",
+      "transplante cardíaco"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "review_note": "Classe I e nível B confirmados na diretriz ESC 2020 para programas de exercício/reabilitação após transplante cardíaco; separado do registro geral de nível A para evitar atribuição incorreta do nível de evidência."
   },
   {
     "slug": "esc2020-esporte-participacao-competitiva-sca-cronica-baixo-risco",

@@ -22229,33 +22229,6 @@
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
   },
   {
-    "slug": "momentum-3-lvad-fluxo-centrifugo-vs-axial",
-    "title": "MOMENTUM 3 — LVAD de fluxo centrífugo (HeartMate 3) versus fluxo axial (HeartMate II)",
-    "study_type": "ensaio_clinico",
-    "authors": "Mehra MR et al.; MOMENTUM 3 Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2019,
-    "doi": "10.1056/NEJMoa1900486",
-    "pmid": "30883052",
-    "url": "https://doi.org/10.1056/NEJMoa1900486",
-    "summary": "Ensaio randomizado, aberto, multicêntrico (relatório final), com 1.028 pacientes com IC avançada candidatos a dispositivo de assistência ventricular esquerda (LVAD), comparando bomba de fluxo centrífugo com levitação magnética total (HeartMate 3, n=516) contra bomba de fluxo axial (HeartMate II, n=512), independentemente da intenção de uso (ponte ou terapia de destino).",
-    "key_findings": "Desfecho primário (sobrevida em 2 anos livre de AVC incapacitante ou reoperação por mau funcionamento do dispositivo): 76,9% (HeartMate 3) vs. 64,8% (HeartMate II) (RR 0,84; IC95% 0,78-0,91; p<0,001). Troca de bomba em 2 anos: 2,3% vs. 11,3% (RR 0,21; IC95% 0,11-0,38; p<0,001), refletindo sobretudo quase eliminação da trombose de bomba. Uma coorte de acesso continuado de 2.200 implantes (2021) confirmou desempenho equivalente ou melhor fora do ambiente controlado do ensaio, mesmo em pacientes mais graves.",
-    "clinical_implications": "Estabeleceu a tecnologia de bomba (levitação magnética total) como determinante de desfecho na terapia com LVAD, tornando o HeartMate 3 o dispositivo padrão atual — o HeartMate II não é mais comercializado para novo implante. Complementa (não substitui) a decisão sobre indicar ou não LVAD, que depende de critérios de gravidade e elegibilidade já cobertos em documento próprio desta biblioteca.",
-    "limitations": "Ensaio aberto (não cego), o que pode influenciar decisões de manejo perioperatório e de reoperação de forma não totalmente controlada; testa qual bomba implantar, não se implantar é indicado.",
-    "theme": "Insuficiência cardíaca",
-    "tags": [
-      "momentum 3",
-      "lvad",
-      "heartmate 3",
-      "heartmate ii",
-      "dispositivo de assistência ventricular",
-      "ensaio clínico"
-    ],
-    "review_status": "revisado",
-    "published": true,
-    "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
-  },
-  {
     "slug": "comet-carvedilol-vs-metoprolol-tartarato",
     "title": "COMET — Carvedilol versus metoprolol tartarato na insuficiência cardíaca crônica",
     "study_type": "ensaio_clinico",
@@ -22657,7 +22630,7 @@
     "summary": "Registro observacional multicêntrico da ESC (EORP PPCM), com 552 pacientes com cardiomiopatia periparto enroladas entre 2012 e 2018, seguimento obrigatório de 6 meses. 85 pacientes (15%) foram tratadas com bromocriptina além do cuidado padrão, numa decisão não randomizada dos centros participantes. Análise ajustada por ponderação de probabilidade inversa (IPW) e imputação múltipla para reduzir confusão por indicação.",
     "key_findings": "Desfecho composto primário (óbito, reinternação hospitalar, ou disfunção sistólica grave persistente com FEVE <35% aos 6 meses) ocorreu em 18/82 (22%) no grupo bromocriptina + cuidado padrão versus 136/409 (33%) no grupo cuidado padrão isolado (p=0,044). Sem aumento do risco de eventos tromboembólicos com bromocriptina.",
     "clinical_implications": "É provavelmente a base empírica observacional direta por trás da recomendação Classe IIb da ESC 2025 para bromocriptina adjuvante na cardiomiopatia periparto (cadastrada em evidencias/metadados.json, tema Gravidez). O ensaio randomizado dedicado (REBIRTH) segue em andamento, sem resultado esperado antes de 2029 — não existe ainda RCT concluído sustentando esta terapia, apenas dado observacional ajustado.",
-    "limitations": "Estudo observacional — mesmo com ponderação por probabilidade inversa e imputação múltipla, sujeito a confusão residual por indicação (centros que escolheram tratar podem diferir sistematicamente dos que não escolheram). Diferença entre o N randomizado inicial (85) e o N analisado no desfecho (82) sugere perda de seguimento não detalhada nas buscas desta sessão. Não há HR/OR ajustado exato disponível, apenas a comparação de proporções brutas.",
+    "limitations": "Estudo observacional — mesmo com ponderação por probabilidade inversa e imputação múltipla, sujeito a confusão residual por indicação (centros que escolheram tratar podem diferir sistematicamente dos que não escolheram). Dos 85 pacientes tratados com bromocriptina, 82 integraram a análise do desfecho; essa diferença deve ser considerada ao interpretar as proporções. Não há HR/OR ajustado exato disponível, apenas a comparação de proporções brutas.",
     "theme": "Gravidez",
     "tags": [
       "eorp ppcm",
@@ -23234,7 +23207,7 @@
     "title": "SOUL — Semaglutida Oral e Desfechos de Insuficiência Cardíaca no Diabetes Tipo 2",
     "study_type": "ensaio_clinico",
     "authors": null,
-    "journal": "JAMA Cardiology",
+    "journal": "JAMA Internal Medicine",
     "year": 2026,
     "doi": "10.1001/jamainternmed.2025.7774",
     "pmid": "41627802",
