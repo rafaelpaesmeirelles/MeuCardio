@@ -22773,5 +22773,64 @@
         "por_que": "Fecha com o cenário oposto ao das quatro etapas anteriores: quando revascularização — completa ou não — não é opção, o reducer de seio coronário autoexpansível A-FLUX é o dispositivo mais recente para angina refratária por disfunção microvascular ou DAC obstrutiva, testado agora em primeiro uso humano."
       }
     ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-do-risco-ao-diagnostico-e-classificacao",
+    "titulo": "Insuficiência cardíaca: do risco ao diagnóstico e à classificação",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Trilha de nível básico, pensada para quem está começando a estudar insuficiência cardíaca — cobre a sequência anterior ao tratamento: como as sociedades descrevem o paciente em risco antes do diagnóstico (estadiamento), o papel do peptídeo natriurético na confirmação ou exclusão diagnóstica, a classificação por fração de ejeção e o reconhecimento da fase pré-sintomática (Estágio B) e da ICFEp, encerrando com dois casos de prática. As trilhas já publicadas sobre este tema partem, em geral, do paciente já classificado; esta cobre o intervalo anterior a isso.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "revisao": "Curadoria de itens já publicados nesta biblioteca (documentos e evidência), complementada por 1 documento e 1 registro de evidência novos desta mesma rodada — todos com fonte primária conferida (ver 'estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc'). Nenhum item da trilha é conteúdo novo por si só, conforme a natureza de curadoria deste tipo de conteúdo.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc",
+        "por_que": "Ponto de partida: introduz o estadiamento por estágios A a D (AHA/ACC/HFSA) e como ESC 2021/2023 e SBC descrevem o mesmo paciente em risco, antes de qualquer diagnóstico de IC estabelecida."
+      },
+      {
+        "ordem": 2,
+        "item_type": "evidencia",
+        "item_slug": "aha-2022-peptideos-natriureticos-diagnostico-dispneia",
+        "por_que": "A recomendação de Classe I que fundamenta o uso de BNP/NT-proBNP como primeiro filtro diagnóstico em paciente com dispneia — tanto para apoiar quanto para excluir insuficiência cardíaca."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "icfer-classificacao-diagnostico-quatro-pilares",
+        "por_que": "Traz os cortes numéricos de NT-proBNP por contexto (ambulatorial e agudo) e a classificação por fração de ejeção (ICFEr/ICFEml/ICFEp) que organiza toda a conduta terapêutica posterior."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "disfuncao-diastolica-assintomatica-estagio-b-de-ic-com-icfep-incipiente",
+        "por_que": "Aprofunda o Estágio B — a fase estrutural, ainda sem sintoma — que é a mais comumente subdiagnosticada por não gerar queixa espontânea do paciente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "hfa-peff-algoritmo-diagnostico-para-icfep-esc-2019",
+        "por_que": "Quando a fração de ejeção é preservada e o quadro é ambíguo, este algoritmo estruturado (HFA-PEFF) organiza a confirmação diagnóstica passo a passo."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "segunda-definicao-universal-insuficiencia-cardiaca-2026",
+        "por_que": "Consolida a definição universal de IC e formaliza a categoria de 'IC com fração de ejeção melhorada' (HFimpEF) — o fechamento conceitual da classificação iniciada nas etapas anteriores."
+      },
+      {
+        "ordem": 7,
+        "item_type": "caso_clinico",
+        "item_slug": "estagio-b-alteracao-estrutural-assintomatica-muda-a-conduta",
+        "por_que": "Primeiro caso de prática: testa a distinção entre Estágio A, B e C a partir de um achado estrutural assintomático."
+      },
+      {
+        "ordem": 8,
+        "item_type": "caso_clinico",
+        "item_slug": "peptideo-natriuretico-normal-em-dispneia-afasta-ic",
+        "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
+      }
+    ]
   }
 ]
