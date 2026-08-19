@@ -257,6 +257,11 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         # digital embutida é conferida de verdade em verificacao_pdf.py).
         "receituario.py",
         "documents.py",
+        # Prescrição livre especial: a devolução do PDF assinado também usa
+        # o fluxo externo existente, com leitura limitada a 15 MB + 1 byte,
+        # validação real do PDF por validate_file() e conferência criptográfica
+        # da assinatura antes da persistência. Não é upload genérico da app.
+        "prescricao_especial.py",
     }
 
     assert policy_for("POST", "/api/auth/me/foto") is not None
