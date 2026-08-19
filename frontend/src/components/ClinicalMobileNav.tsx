@@ -120,7 +120,7 @@ export default function ClinicalMobileNav() {
   }, [maisAberto]);
 
   function SheetLink({ item }: { item: LinkItem }) {
-    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<em className="rx-queue-badge" aria-label={`${item.badge} pendentes`}>{item.badge}</em>}</strong></NavLink>;
+    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}</strong></NavLink>;
   }
 
   return <>

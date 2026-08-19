@@ -78,7 +78,7 @@ function Item({ item }: { item: NavItem }) {
   return (
     <NavLink to={item.to} className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}>
       <Icone nome={item.icon} /><span>{item.label}</span>
-      {!!item.badge && <span className="rx-queue-badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}
+      {!!item.badge && <span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}
     </NavLink>
   );
 }
