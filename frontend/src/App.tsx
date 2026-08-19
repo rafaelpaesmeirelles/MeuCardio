@@ -55,6 +55,7 @@ const MinhaConta = lazy(() => import("./pages/MinhaConta"));
 const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
 const FilaTelediagnostico = lazy(() => import("./pages/FilaTelediagnostico"));
+const ReceitasParaAssinatura = lazy(() => import("./pages/ReceitasParaAssinatura"));
 const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
 const CorviaMail = lazy(() => import("./pages/CorviaMail"));
 const Receituario = lazy(() => import("./pages/Receituario"));
@@ -179,6 +180,7 @@ export default function App() {
           {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios/:id/gerenciar" element={<AdminGerenciarUsuario />} />}
           {usuario.role === "admin" && <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />}
+          {usuario.role === "admin" && <Route path="receitas-para-assinatura" element={<ReceitasParaAssinatura />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
         </Route>
         <Route path="/tour" element={<Tour />} />
