@@ -36,6 +36,7 @@ const Assistente = lazy(() => import("./pages/Assistente"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminAssinantes = lazy(() => import("./pages/AdminAssinantes"));
 const AdminFichaAssinante = lazy(() => import("./pages/AdminFichaAssinante"));
+const AdminGerenciarUsuario = lazy(() => import("./pages/AdminGerenciarUsuario"));
 const SolicitarAcesso = lazy(() => import("./pages/SolicitarAcesso"));
 const EsqueciSenha = lazy(() => import("./pages/EsqueciSenha"));
 const RedefinirSenha = lazy(() => import("./pages/RedefinirSenha"));
@@ -176,6 +177,7 @@ export default function App() {
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}
+          {usuario.role === "admin" && <Route path="admin/usuarios/:id/gerenciar" element={<AdminGerenciarUsuario />} />}
           {usuario.role === "admin" && <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
         </Route>
