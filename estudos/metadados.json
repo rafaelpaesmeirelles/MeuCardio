@@ -23562,5 +23562,29 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais",
+    "title": "Sarcopenia e Risco Cardiovascular: Metanálise de Estudos Longitudinais",
+    "study_type": "metanalise",
+    "authors": null,
+    "journal": "Canadian Journal of Cardiology",
+    "year": 2026,
+    "doi": null,
+    "pmid": "41833723",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41833723/",
+    "summary": "Metanálise de estudos longitudinais observacionais (busca em PubMed, Embase, Web of Science, até janeiro de 2024) avaliando risco de eventos cardiovasculares associado a sarcopenia.",
+    "key_findings": "Sarcopenia associada a risco relativo ajustado (aRR) de 1,63 (IC95% 1,30-2,04) para eventos cardiovasculares.",
+    "clinical_implications": "Número robusto o suficiente para justificar triagem de sarcopenia (massa/força/desempenho muscular) como parte da avaliação de risco cardiovascular no idoso, como fator modificador adicional aos escores de risco tradicionais.",
+    "limitations": "Estudos observacionais — confundimento residual possível mesmo com ajuste estatístico. Heterogeneidade provável entre definições de sarcopenia usadas nos estudos-fonte, não detalhada de forma granular nesta síntese.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "sarcopenia",
+      "risco cardiovascular",
+      "metanálise",
+      "fragilidade"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
