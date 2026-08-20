@@ -34,7 +34,7 @@ from app.models.rag import AIConversation, AIMessage, DocumentChunk
 from app.services.ia.assistant_tools import ASSISTANT_TOOLS_SCHEMA, executar_tool_assistente
 from app.services.ia.provedor import obter_provedor, obter_provedor_embeddings
 
-log = logging.getLogger("meucardio.rag")
+log = logging.getLogger("corvia.rag")
 
 MAX_CHARS = 1400
 MIN_CHARS = 200
@@ -786,11 +786,16 @@ def perguntar_stream(
     )
     primeiro_token_ms: int | None = None
     for evento in gerador:
-        if "delta" in evento:
+        # O provedor também emite eventos de status ao iniciar uma tool de
+        # agenda/e-mail. Antes, qualquer evento que não fosse ``delta`` caía
+        # no ramo de ``final`` e ``evento["final"]`` levantava KeyError.
+        if "status" in evento:
+            yield {"status": evento["status"]}
+        elif "delta" in evento:
             if primeiro_token_ms is None:
                 primeiro_token_ms = round((time.perf_counter() - inicio) * 1000)
             yield {"delta": evento["delta"]}
-        else:
+        elif "final" in evento:
             resposta = evento["final"]
             log.info(
                 "ai_stream_completed modo=%s model=%s internet=%s sources_ms=%s first_token_ms=%s total_ms=%s chunks=%s pubmed=%s",
@@ -808,3 +813,5 @@ def perguntar_stream(
                 "tokens_saida": resposta.tokens_saida,
                 "truncado": resposta.truncado,
             }}
+        else:
+            raise ValueError("Evento inválido recebido do provedor de IA.")

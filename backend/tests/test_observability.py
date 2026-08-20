@@ -2,6 +2,7 @@ import io
 import json
 import logging
 import re
+import sys
 
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse
@@ -122,6 +123,29 @@ def test_formatter_ignora_campos_nao_aprovados():
     assert "evento_seguro" in output
     assert "nao-pode-aparecer" not in output
     assert "authorization" not in output
+
+
+def test_formatter_registra_stack_sem_mensagem_sensivel_de_logging_exception():
+    formatter = CorviaJsonFormatter()
+    try:
+        raise KeyError("cpf=123.456.789-00 senha=segredo-absoluto")
+    except KeyError:
+        record = logging.LogRecord(
+            name="corvia.ai",
+            level=logging.ERROR,
+            pathname=__file__,
+            lineno=1,
+            msg="ai_stream_failed",
+            args=(),
+            exc_info=sys.exc_info(),
+        )
+
+    event = json.loads(formatter.format(record))
+    assert event["error_type"] == "KeyError"
+    assert event["error_stack"]
+    serialized = json.dumps(event, ensure_ascii=False)
+    assert "segredo-absoluto" not in serialized
+    assert "123.456.789-00" not in serialized
 
 
 def test_auditoria_recebe_request_id_do_contexto(db):

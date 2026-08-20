@@ -15,7 +15,7 @@ from app.models.audit import AuditLog
 from app.models.rag import AIConversation, AIMessage
 from app.services import rag
 
-log = logging.getLogger("meucardio.ai")
+log = logging.getLogger("corvia.ai")
 
 router = APIRouter(prefix="/api/ai", tags=["ia"])
 
