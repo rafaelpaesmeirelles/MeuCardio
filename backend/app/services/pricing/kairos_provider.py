@@ -86,8 +86,13 @@ def _record_matches(drug: Drug, record: dict) -> bool:
     return all(token in substance_tokens for token in generic_tokens)
 
 
-def records_for_drug(drug: Drug, path: Path | None = None) -> tuple[dict, list[dict]]:
-    snapshot = load_snapshot(path)
+def records_for_drug(
+    drug: Drug,
+    path: Path | None = None,
+    *,
+    snapshot: dict | None = None,
+) -> tuple[dict, list[dict]]:
+    snapshot = snapshot or load_snapshot(path)
     records = [record for record in snapshot.get("records", []) if _record_matches(drug, record)]
     return snapshot, records
 
@@ -151,4 +156,48 @@ def api_snapshot_for(drug: Drug, path: Path | None = None) -> dict:
         "licensed_use": bool(snapshot.get("licensed_use")),
         "regulatory_note": snapshot.get("regulatory_note"),
         "records": records,
+    }
+
+
+def prescription_options_for(
+    drug: Drug,
+    path: Path | None = None,
+    *,
+    snapshot: dict | None = None,
+) -> dict:
+    """Return audited K@iros presentations for the prescribing UI.
+
+    K@iros publishes PMC by ICMS bracket.  Until CorVIA has a verified tax
+    mapping for every UF, the UI receives the literal minimum/maximum across
+    the published brackets instead of attributing an unverified rate to a
+    state.  This remains market intelligence and never overwrites CMED data.
+    """
+    snapshot, records = records_for_drug(drug, path, snapshot=snapshot)
+    options: list[dict] = []
+    for record in records:
+        for presentation in record.get("presentations", []):
+            prices = {
+                region: _decimal_br(str(presentation[field]))
+                for field, (price_type, region) in PRICE_FIELDS.items()
+                if price_type == "pmc" and presentation.get(field) not in (None, "")
+            }
+            if not prices:
+                continue
+            minimum = min(prices.values())
+            maximum = max(prices.values())
+            options.append({
+                "produto": record.get("product"),
+                "laboratorio": record.get("laboratory"),
+                "apresentacao": presentation.get("presentation"),
+                "preco_minimo": float(minimum),
+                "preco_maximo": float(maximum),
+                "precos_por_icms": {region: float(value) for region, value in prices.items()},
+                "pagina_fonte": record.get("page"),
+            })
+    return {
+        "fonte": "K@iros",
+        "tipo_fonte": "inteligencia_de_mercado",
+        "edicao": snapshot.get("issue"),
+        "competencia": snapshot.get("competence"),
+        "opcoes": options,
     }
