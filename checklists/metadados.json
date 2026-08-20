@@ -8424,5 +8424,241 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "abcdef-sedacao-delirium-uti-cardiologica",
+    "condicao": "Sedação e rastreio de delirium na UTI cardiológica (pacote ABCDEF)",
+    "resumo": "Aplicação sistemática dos seis componentes do pacote ABCDEF na UTI cardiológica pós-cirúrgica, com RASS como meta objetiva de sedação e CAM-ICU como rastreio estruturado de delirium.",
+    "documento_origem": "protocolo-abcdef-sedacao-e-delirium-na-uti-cardiologica-rass-e-cam-icu",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pun BT, Balas MC, Barnes-Daly MA, Thompson JL, Aldrich JM, Barr J, et al; Ely EW. Caring for Critically Ill Patients with the ABCDEF Bundle: Results of the ICU Liberation Collaborative in Over 15,000 Adults. Crit Care Med. 2019;47(1):3-14. DOI: 10.1097/CCM.0000000000003482. PMID: 30339549",
+      "Sessler CN, Gosnell MS, Grap MJ, Brophy GM, O'Neal PV, Keane KA, Tesoro EP, Elswick RK. The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients. Am J Respir Crit Care Med. 2002;166(10):1338-1344. DOI: 10.1164/rccm.2107138. PMID: 12421743",
+      "Ely EW, Margolin R, Francis J, May L, Truman B, Dittus R, Speroff T, Gautam S, Bernard GR, Inouye SK. Evaluation of delirium in critically ill patients: validation of the Confusion Assessment Method for the Intensive Care Unit (CAM-ICU). Crit Care Med. 2001;29(7):1370-1379. DOI: 10.1097/00003246-200107000-00012. PMID: 11445689"
+    ],
+    "itens": [
+      {
+        "id": "abcdef-dor-avaliada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Componente A do pacote aplicado — dor avaliada, prevenida e tratada de forma sistemática, não apenas quando o paciente verbaliza queixa",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-teste-despertar-respiracao-coordenado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Componente B aplicado — despertar espontâneo e teste de respiração espontânea realizados de forma coordenada, não isolada",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-rass-meta-registrada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Meta de sedação definida em nível objetivo de RASS (tipicamente 0 a −2, salvo indicação contrária) e registrada como alvo compartilhado pela equipe, não deixada à impressão subjetiva",
+        "origem_secao": "RASS — Richmond Agitation-Sedation Scale (componentes B e C)"
+      },
+      {
+        "id": "abcdef-rass-aplicado-por-turno",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "RASS aplicado e documentado com frequência regular (por turno), permitindo titular sedação por meta numérica em vez de impressão clínica",
+        "origem_secao": "RASS — Richmond Agitation-Sedation Scale (componentes B e C)"
+      },
+      {
+        "id": "abcdef-camicu-aplicada-sistematicamente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "CAM-ICU aplicada de forma sistemática (tipicamente a cada turno), inclusive em paciente em ventilação mecânica que não consegue verbalizar",
+        "origem_secao": "CAM-ICU — Confusion Assessment Method for the ICU (componente D)"
+      },
+      {
+        "id": "abcdef-delirium-hipoativo-considerado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Delirium hipoativo (paciente quieto, sonolento, sem agitação) considerado ativamente na CAM-ICU, sem ser confundido com sedação adequada ou fadiga pós-operatória",
+        "origem_secao": "O que a CAM-ICU acrescenta que a impressão clínica não dá"
+      },
+      {
+        "id": "abcdef-mobilizacao-precoce",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Componente E aplicado — mobilização e exercício precoces avaliados diariamente, ponderando a restrição de drenos, marca-passo temporário ou balão intra-aórtico quando presentes",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-engajamento-familia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Componente F aplicado — família engajada e informada sobre o estado de sedação/delirium do paciente, não apenas comunicada ao final da internação",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-escolha-sedativo-nao-substitui-pacote",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Escolha de sedativo específico (ex.: dexmedetomidina) tratada como decisão dentro do componente C, não como sinônimo do pacote ABCDEF inteiro — os outros cinco componentes seguem exigidos independentemente do fármaco escolhido",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Pun BT et al. Crit Care Med. 2019;47(1):3-14 (PMID 30339549), Sessler CN et al. Am J Respir Crit Care Med. 2002;166(10):1338-1344 (PMID 12421743) e Ely EW et al. Crit Care Med. 2001;29(7):1370-1379 (PMID 11445689), em 20/08/2026."
+  },
+  {
+    "slug": "ecmo-va-indicacao-choque-cardiogenico-infarto",
+    "condicao": "Decisão de indicar ECMO venoarterial no choque cardiogênico do infarto",
+    "resumo": "Pontos a considerar antes de instalar ECMO venoarterial no choque cardiogênico do infarto com circulação espontânea, a partir da evidência randomizada consistentemente neutra para sobrevida e com dano hemorrágico/vascular mensurável.",
+    "documento_origem": "ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thiele H, Zeymer U, Akin I, Behnes M, Rassaf T, Mahabadi AA, et al; ECLS-SHOCK Investigators. Extracorporeal Life Support in Infarct-Related Cardiogenic Shock. N Engl J Med. 2023;389(14):1286-1297. DOI: 10.1056/NEJMoa2307227. PMID: 37634145",
+      "Ostadal P, Rokyta R, Karasek J, Kruger A, Vondrakova D, Janotka M, et al; ECMO-CS Investigators. Extracorporeal Membrane Oxygenation in the Therapy of Cardiogenic Shock: Results of the ECMO-CS Randomized Clinical Trial. Circulation. 2023;147(6):454-464. DOI: 10.1161/CIRCULATIONAHA.122.062949. PMID: 36335478",
+      "Zeymer U, Freund A, Hochadel M, Ostadal P, Belohlavek J, Rokyta R, et al. Venoarterial extracorporeal membrane oxygenation in patients with infarct-related cardiogenic shock: an individual patient data meta-analysis of randomised trials. Lancet. 2023;402(10410):1338-1346. DOI: 10.1016/S0140-6736(23)01607-0. PMID: 37643628"
+    ],
+    "itens": [
+      {
+        "id": "ecmova-nao-instalar-por-reflexo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "ECMO venoarterial NÃO instalado por reflexo ao diagnóstico de choque cardiogênico do infarto — benefício de sobrevida não demonstrado em ECLS-SHOCK (RR 0,98; IC95% 0,80-1,19; p=0,81), ECMO-CS (HR 0,72; IC95% 0,46-1,12; p=0,21) nem na metanálise de dados individuais (OR 0,93; IC95% 0,66-1,29)",
+        "origem_secao": "Como isso muda a decisão à beira do leito"
+      },
+      {
+        "id": "ecmova-estrategia-de-resgate-considerada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Estratégia inicialmente conservadora, com ECMO reservado para quem deteriorar, considerada como alternativa não inferior à implantação imediata — no ECMO-CS, 23 de 59 pacientes (39%) do braço conservador acabaram recebendo VA-ECMO de resgate",
+        "origem_secao": "Ecmo-cs — implantação imediata versus estratégia conservadora"
+      },
+      {
+        "id": "ecmova-etiologia-infarto-confirmada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Etiologia do choque confirmada como relacionada a infarto agudo do miocárdio, com revascularização precoce planejada — é a população específica testada nos três estudos; outra etiologia (miocardite fulminante, intoxicação por cardiodepressor, pós-cardiotomia) não foi avaliada por essa evidência",
+        "origem_secao": "O que isso significa, e o que NÃO significa"
+      },
+      {
+        "id": "ecmova-finalidade-declarada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Quando indicado, finalidade do suporte declarada explicitamente (ponte para decisão, para recuperação, para transplante ou para dispositivo definitivo) — sem finalidade definida não há critério de desmame nem de retirada",
+        "origem_secao": "Como isso muda a decisão à beira do leito"
+      },
+      {
+        "id": "ecmova-risco-sangramento-discutido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Risco de sangramento moderado a grave discutido com a família antes do implante — 23,4% no braço ECMO do ECLS-SHOCK (vs. 9,6% no controle; RR 2,44) e OR 2,44 (IC95% 1,55-3,84) na metanálise de dados individuais",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ecmova-risco-vascular-discutido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Risco de complicação vascular periférica exigindo intervenção discutido com a família — 11,0% no braço ECMO do ECLS-SHOCK (vs. 3,8%; RR 2,86) e OR 3,53 (IC95% 1,70-7,34) na metanálise de dados individuais",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ecmova-nao-confundido-com-ecpr",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Cenário clínico distinguido de parada cardiorrespiratória refratária (ECPR) — a evidência deste checklist é sobre choque cardiogênico do infarto com circulação espontânea, não sobre RCP extracorpórea",
+        "origem_secao": "O descompasso entre uso e evidência"
+      },
+      {
+        "id": "ecmova-estagio-scai-documentado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Estágio SCAI do choque documentado antes da decisão de suporte mecânico, para orientar a gravidade e a urgência da conduta",
+        "origem_secao": "Como isso muda a decisão à beira do leito"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Thiele H et al. N Engl J Med. 2023;389(14):1286-1297 (PMID 37634145), Ostadal P et al. Circulation. 2023;147(6):454-464 (PMID 36335478) e Zeymer U et al. Lancet. 2023;402(10410):1338-1346 (PMID 37643628), em 20/08/2026."
+  },
+  {
+    "slug": "miocardite-por-ici-emergencia",
+    "condicao": "Miocardite por inibidor de checkpoint imune — atendimento de emergência",
+    "resumo": "Reconhecimento imediato, suspensão do ICI, investigação e corticoterapia precoce na suspeita de miocardite associada a inibidor de checkpoint imune, segundo a ESC 2025.",
+    "documento_origem": "miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Schulz-Menger J, Collini V, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf192",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43:4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568"
+    ],
+    "itens": [
+      {
+        "id": "mioici-suspeita-clinica-considerada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de miocardite considerada em todo paciente em uso de ICI com troponina nova ou progressivamente elevada, alteração nova do ECG (bloqueio AV, baixa voltagem, alteração de ST-T ou arritmia ventricular), dispneia/IC sem outra explicação, síncope, palpitação, choque ou sintomas associados a miosite",
+        "origem_secao": "Suspeita clínica"
+      },
+      {
+        "id": "mioici-ici-suspenso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Inibidor de checkpoint imune suspenso diante de suspeita relevante, enquanto o diagnóstico é esclarecido",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "mioici-ecg-telemetria-troponina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações realizado, telemetria contínua instalada e troponina seriada solicitada",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "mioici-ecocardiograma-precoce",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma precoce realizado; ressonância cardíaca (CMR) considerada quando clinicamente viável, sem atrasar o tratamento na forma grave",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "mioici-diagnosticos-concorrentes-investigados",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnósticos concorrentes que mudam conduta investigados — síndrome coronariana aguda, TEP, sepse e progressão tumoral",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "mioici-uti-se-instabilidade",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Na apresentação com bloqueio avançado, TV/FV, edema pulmonar, baixo débito ou choque, paciente encaminhado a UTI/unidade cardiológica monitorizada com manejo paralelo da complicação hemodinâmica/arrítmica",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "mioici-corticoide-precoce-nao-atrasado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Corticoterapia com metilprednisolona IV iniciada precocemente, sem aguardar confirmação por CMR ou biópsia quando a apresentação é grave e a probabilidade clínica é alta",
+        "origem_secao": "Corticoide"
+      },
+      {
+        "id": "mioici-dose-corticoide-por-gravidade",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Dose de corticoide definida pela gravidade — forma não grave: metilprednisolona 500-1000 mg/dia IV por 3 dias com redução para prednisona oral; forma grave: metilprednisolona IV 7-14 mg/kg/dia por 3 dias, seguida de prednisona ~1 mg/kg/dia",
+        "origem_secao": "Corticoide"
+      },
+      {
+        "id": "mioici-resposta-reavaliada-em-24-48h",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Resposta clínica/biomarcadora reavaliada em aproximadamente 24-48 horas; escalada de imunossupressão em centro experiente (micofenolato, globulina antitimócito, abatacepte) considerada se não houver resposta",
+        "origem_secao": "Falha de resposta"
+      },
+      {
+        "id": "mioici-feve-preservada-nao-exclui",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "FEVE preservada não usada para excluir o diagnóstico — arritmia, bloqueio e elevação de troponina podem ocorrer com FEVE ainda normal",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Schulz-Menger J, Collini V, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf192, em 20/08/2026."
   }
 ]
