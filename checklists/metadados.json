@@ -3714,5 +3714,289 @@
         "origem_secao": "Extensão aberta (OLE) — dados de longo prazo"
       }
     ]
+  },
+  {
+    "slug": "profilaxia-antibiotica-odontologica-em-paciente-de-alto-risco-de-endocardite",
+    "condicao": "Profilaxia antibiótica antes de procedimento odontológico em paciente de alto risco de endocardite infecciosa",
+    "resumo": "O que checar antes de prescrever profilaxia antibiótica pré-procedimento odontológico em paciente cardiopata: se a condição cardíaca é de fato de alto risco (Classe I/IIa/IIb), se o procedimento planejado tem risco real de bacteremia, e qual esquema usar conforme alergia — derivado da diretriz ESC 2023.",
+    "documento_origem": "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Profilaxia antibacteriana para prevenção da endocardite bacteriana após procedimentos dentários · Cochrane Library · 2022 · https://www.cochranelibrary.com/es/cdsr/doi/10.1002/14651858.CD003813.pub5/full/pt",
+      "Endocardite Infecciosa: Ainda mais Desafios que Certezas · PMC · 2022 · https://pmc.ncbi.nlm.nih.gov/articles/PMC9368884/",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656 — Recommendation Table 1 e Table 6, texto integral conferido diretamente em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "pae-condicao-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem condição cardíaca de alto risco Classe I: válvula protética (incluindo transcateter) ou material protético em reparo valvar; endocardite infecciosa prévia; cardiopatia congênita cianótica não tratada, ou tratada com shunt/conduto/prótese residual (só nos primeiros 6 meses se sem defeito residual); ou dispositivo de assistência ventricular",
+        "origem_secao": "Populacao alvo alto risco"
+      },
+      {
+        "id": "pae-condicao-recomendacao-fraca",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a indicação for transplante cardíaco (Classe IIb, sem exigir valvulopatia estrutural associada) ou reparo transcateter de valva mitral/tricúspide (Classe IIa): discutido que a força da recomendação é menor",
+        "origem_secao": "Populacao alvo alto risco"
+      },
+      {
+        "id": "pae-procedimento-elegivel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o procedimento odontológico planejado envolve manipulação de tecido gengival, região periapical dentária ou perfuração da mucosa oral — não indicado para procedimento de rotina sem risco significativo de bacteremia",
+        "origem_secao": "Procedimentos indicados"
+      },
+      {
+        "id": "pae-alergia-checada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Alergia a penicilina/ampicilina checada; se houver história de anafilaxia, angioedema ou urticária com penicilina/ampicilina, cefalosporina evitada e substituída por azitromicina/claritromicina ou doxiciclina",
+        "origem_secao": "Esquema padrao — corrigido em 30/07/2026 contra o texto integral da diretriz"
+      },
+      {
+        "id": "pae-esquema-primeira-escolha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Sem alergia: amoxicilina VO 2 g (primeira escolha), dose única, 30-60 minutos antes do procedimento — ou ampicilina IM/IV 2 g, ou cefazolina/ceftriaxona IM/IV 1 g como alternativa",
+        "origem_secao": "Esquema padrao — corrigido em 30/07/2026 contra o texto integral da diretriz"
+      },
+      {
+        "id": "pae-esquema-alergia-sem-clindamicina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Com alergia a penicilina/ampicilina: cefalexina VO 2 g, ou azitromicina/claritromicina VO 500 mg, ou doxiciclina VO 100 mg (ou cefazolina/ceftriaxona IM/IV 1 g se via oral impossível) — clindamicina NÃO prescrita como alternativa, decisão explícita da força-tarefa ESC 2023 pelo risco de C. difficile",
+        "origem_secao": "Esquema padrao — corrigido em 30/07/2026 contra o texto integral da diretriz"
+      },
+      {
+        "id": "pae-orientacao-evidencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que a revisão sistemática Cochrane (2022) não encontrou evidência conclusiva de ensaio clínico randomizado comprovando eficácia da profilaxia — a indicação é baseada em consenso de especialistas e plausibilidade biológica",
+        "origem_secao": "Evidencia controversa"
+      },
+      {
+        "id": "pae-comunicacao-dentista",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Comunicação estabelecida entre cardiologista e cirurgião-dentista antes do procedimento invasivo planejado, para confirmar a classificação de risco do paciente",
+        "origem_secao": "Abordagem multidisciplinar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-agudo-de-intoxicacao-digitalica-e-indicacao-de-anticorpo-fab",
+    "condicao": "Manejo agudo de intoxicação digitálica e indicação de anticorpo antidigoxina (Fab)",
+    "resumo": "O que checar diante de suspeita de intoxicação digitálica: achado eletrocardiográfico patognomônico, classificação em aguda vs. crônica, interpretação do potássio sérico e as três vias de cálculo de dose do anticorpo Fab (dose ingerida, nível sérico ou empírica).",
+    "documento_origem": "intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cardiac Glycoside (Digoxin) Toxicity. StatPearls, NCBI Bookshelf, NBK459165 — seção de manifestações clínicas e achados eletrocardiográficos, consultada em 30/07/2026",
+      "Digoxin Immune Fab. StatPearls, NCBI Bookshelf, NBK556101 — seção de indicações e fórmulas de dose, consultada em 30/07/2026"
+    ],
+    "itens": [
+      {
+        "id": "dig-ecg-bidirecional",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG revisado à procura de taquicardia ventricular bidirecional (alternância do eixo do QRS a cada batimento, através das fibras do ramo esquerdo) — achado patognomônico, embora relativamente raro; extrassístole ventricular é a manifestação cardíaca mais comum",
+        "origem_secao": "Achado eletrocardiografico patognomonico"
+      },
+      {
+        "id": "dig-classificacao-aguda-cronica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cenário classificado como intoxicação aguda (ingestão >10 mg em adulto ou >4 mg/>0,1 mg/kg em criança; ou nível sérico em estado estável ≥10 ng/mL) ou crônica (nível sérico >6 ng/mL em adulto ou >4 ng/mL em criança) — a distinção muda o limiar de tratamento e a interpretação do potássio",
+        "origem_secao": "Distincao entre intoxicacao aguda e cronica"
+      },
+      {
+        "id": "dig-potassio-marcador",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio sérico dosado e interpretado como marcador de gravidade na intoxicação aguda (bloqueio da Na+/K+-ATPase impede entrada de potássio na célula) — não corrigido isoladamente com medidas usuais antes de considerar o Fab",
+        "origem_secao": "Distincao entre intoxicacao aguda e cronica"
+      },
+      {
+        "id": "dig-indicacao-fab",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de anticorpo antidigoxina (Fab) checada: dose ingerida fatal ou nível sérico compatível com intoxicação aguda/crônica; complicação com risco de vida em qualquer cenário (bradicardia sintomática, assistolia, bloqueio AV refratário a atropina, taquicardia ventricular); ou potássio >5,5 mEq/L em adulto (>6 mEq/L em criança)",
+        "origem_secao": "Indicacoes de anticorpo antidigoxina (fab)"
+      },
+      {
+        "id": "dig-dose-por-ingestao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se dose ingerida conhecida: número de frascos de Fab calculado pela carga corporal total (dose ingerida em mg × 0,8, dividida por 0,5 mg de digoxina ligada por frasco)",
+        "origem_secao": "Formulas de dose"
+      },
+      {
+        "id": "dig-dose-por-nivel-serico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se concentração sérica conhecida: número de frascos calculado por concentração (ng/mL) × peso (kg) ÷ 100",
+        "origem_secao": "Formulas de dose"
+      },
+      {
+        "id": "dig-dose-empirica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se nível desconhecido e paciente com complicação de risco de vida: considerada dose empírica de 10 frascos em adulto ou 5 frascos em criança <20 kg, sem aguardar confirmação laboratorial",
+        "origem_secao": "Formulas de dose"
+      },
+      {
+        "id": "dig-orientacao-nao-corrigir-k",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe orientada a não corrigir hiperpotassemia leve com medidas usuais (insulina/glicose, resina) antes de considerar o Fab na intoxicação aguda — o próprio antídoto já reduz o potássio ao neutralizar a digoxina livre",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "dig-orientacao-nao-descartar-por-nivel-normal",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe orientada a não descartar o diagnóstico por nível sérico 'normal' — o diagnóstico é primariamente clínico e a correlação entre nível sérico e gravidade não é absoluta, especialmente na toxicidade crônica",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "estratificacao-de-risco-mwho-na-primeira-consulta-de-pre-natal-cardiologico",
+    "condicao": "Estratificação de risco mWHO 2.0 na primeira consulta de pré-natal cardiológico",
+    "resumo": "O que definir logo na primeira avaliação da gestante cardiopata — classe de risco mWHO 2.0, equipe multidisciplinar e local de seguimento —, distinto do checklist de alta do puerpério, que trata do momento pós-parto.",
+    "documento_origem": "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "De Backer J, Haugaa KH, Hasselberg NE et al. ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025. doi: 10.1093/eurheartj/ehaf193.",
+      "How to set up a pregnancy heart team · International Journal of Cardiology Congenital Heart Disease · 2025 · https://pmc.ncbi.nlm.nih.gov/articles/PMC12664424/"
+    ],
+    "itens": [
+      {
+        "id": "mwho-classe-determinada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificação de risco mWHO 2.0 determinada e documentada na primeira consulta, a partir da cardiopatia específica da paciente",
+        "origem_secao": "Contexto"
+      },
+      {
+        "id": "mwho-exemplos-conferidos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lesão/cardiopatia da paciente conferida contra os exemplos descritos em cada classe (I a IV) da tabela mWHO 2.0, e não classificada só por impressão clínica geral",
+        "origem_secao": "mWHO classe I / mWHO classe II / mWHO classe II-III / mWHO classe III / mWHO classe IV"
+      },
+      {
+        "id": "mwho-fe-classificada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houver disfunção ventricular esquerda: fração de ejeção quantificada e classificada pela mWHO — FE 30-45% corresponde à classe II-III, FE <30% à classe III",
+        "origem_secao": "mWHO classe II-III / mWHO classe III"
+      },
+      {
+        "id": "mwho-equipe-coracao-gravidez",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Classe mWHO II-III ou superior: encaminhamento à equipe multidisciplinar de coração e gravidez (pregnancy heart team), integrando cardiologia e obstetrícia de alto risco",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "mwho-anestesia-obstetrica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se indicado pela gravidade da cardiopatia: anestesiologia obstétrica incorporada à equipe de coração e gravidez",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "mwho-centro-referencia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Local de acompanhamento pré-natal definido conforme a classe de risco — quanto mais alta a classe, maior a necessidade de seguimento em centro de referência com experiência em cardiopatia e gestação",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "mwho-classe-iv-decisao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se classe mWHO IV (ex.: síndrome de Eisenmenger, estenose mitral grave, dilatação aórtica grave >45 mm no Marfan ou >50 mm em valva bicúspide): processo de decisão compartilhada sobre a possibilidade de interrupção da gravidez documentado",
+        "origem_secao": "mWHO classe IV"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "aplicacao-do-lifes-essential-8-na-avaliacao-de-saude-cardiovascular",
+    "condicao": "Avaliação de saúde cardiovascular na consulta com o construto Life's Essential 8 (AHA)",
+    "resumo": "Checklist para aplicar os 8 componentes do construto de saúde cardiovascular da AHA numa consulta de rotina, incluindo a armadilha de confundi-lo com escore de risco de evento — distinto do checklist de triagem pré-participação esportiva, que decide sobre incluir ECG na liberação para esporte de um atleta específico.",
+    "documento_origem": "lifes-essential-8-o-novo-construto-de-saude-cardiovascular-da-aha",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lloyd-Jones DM, Allen NB, Anderson CAM, et al. Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation. 2022;146(5):e18-e43. DOI: 10.1161/CIR.0000000000001078. PMID: 35766027"
+    ],
+    "itens": [
+      {
+        "id": "le8-oito-componentes-avaliados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Os 8 componentes avaliados e pontuados individualmente na consulta: dieta, atividade física, exposição à nicotina, sono, IMC, lipídios sanguíneos, glicemia e pressão arterial",
+        "origem_secao": "Os oito componentes"
+      },
+      {
+        "id": "le8-sono-nao-negligenciado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sono incluído como componente pleno da avaliação, com o mesmo peso dos outros 7 na média final — não tratado como item periférico ou opcional por ser o componente mais recente do construto",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "le8-escore-composto-calculado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore composto calculado como a média não ponderada dos 8 componentes (0 a 100), com o componente mais deficitário identificado para direcionar a intervenção prioritária",
+        "origem_secao": "Aplicação prática na consulta cardiológica"
+      },
+      {
+        "id": "le8-nao-substitui-risco-absoluto",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que o Life's Essential 8 mede saúde cardiovascular atual, e não substitui os escores de risco absoluto de evento (SCORE2, Pooled Cohort Equations) — os dois são complementares, não intercambiáveis",
+        "origem_secao": "Aplicação prática na consulta cardiológica / Armadilhas clínicas"
+      },
+      {
+        "id": "le8-determinantes-sociais",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Escore baixo interpretado à luz dos determinantes sociais de saúde (acesso a alimentação adequada, segurança para atividade física, moradia estável, acesso a cuidado de saúde) — não atribuído unicamente a falta de esforço individual do paciente",
+        "origem_secao": "O contexto que o documento passa a incorporar explicitamente"
+      },
+      {
+        "id": "le8-saude-psicologica-considerada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Saúde psicológica considerada como fator que interage com a capacidade de sustentar mudança de comportamento nos 8 componentes, ainda que não pontuada como um nono componente formal",
+        "origem_secao": "O contexto que o documento passa a incorporar explicitamente"
+      },
+      {
+        "id": "le8-nicotina-ampla",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Exposição à nicotina investigada de forma ampla, incluindo cigarro eletrônico/vaporizador, não restrita à pergunta tradicional sobre tabagismo em cigarro convencional",
+        "origem_secao": "Os oito componentes"
+      },
+      {
+        "id": "le8-monitoramento-longitudinal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reaplicação do escore agendada para consulta futura, para acompanhar trajetória de melhora ou piora ao longo do tempo nos mesmos 8 domínios",
+        "origem_secao": "Aplicação prática na consulta cardiológica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
