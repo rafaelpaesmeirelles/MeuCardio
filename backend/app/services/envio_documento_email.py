@@ -74,15 +74,23 @@ def enviar(
     assinar_smime: bool = False,
 ) -> ResultadoEnvio:
     integracao = _integracao_padrao_externa(db, user)
+    certificado = None
+
+    # Uma exigência explícita de S/MIME continua fail-closed: antes de avaliar
+    # o transporte, confirme que há A1. A preferência geral do perfil é
+    # diferente: significa "assinar quando compatível" e não bloqueia Mail360.
+    if assinar_smime:
+        certificado = certificado_a1.obter(db, user)
+        if certificado is None:
+            return ResultadoEnvio(
+                False,
+                "Não há certificado A1 conectado para assinar digitalmente este e-mail por S/MIME.",
+            )
 
     if integracao is None:
-        # Conta padrão nativa (ou nenhuma preferência gravada). O PDF clínico
-        # já está assinado por PAdES; a preferência geral por S/MIME não torna
-        # Mail360 incompatível com o envio. Só uma exigência explícita deste
-        # envio deve falhar fechada.
         conta = db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
         if not conta or conta.status != "ativa":
-            return ResultadoEnvio(False, "Sua caixa do CorVIA Mail não está ativa.")
+            return ResultadoEnvio(False, "Sua caixa do CorvIA Mail não está ativa.")
         if assinar_smime:
             return ResultadoEnvio(
                 False,
@@ -105,11 +113,13 @@ def enviar(
         return ResultadoEnvio(False, "Sua conta padrão de envio não tem permissão de envio.")
 
     assinatura_obrigatoria = bool(assinar_smime or user.email_assinatura_digital_ativa)
-    if assinatura_obrigatoria and certificado_a1.obter(db, user) is None:
-        return ResultadoEnvio(
-            False,
-            "Não há certificado A1 conectado para assinar digitalmente este e-mail por S/MIME.",
-        )
+    if assinatura_obrigatoria and certificado is None:
+        certificado = certificado_a1.obter(db, user)
+        if certificado is None:
+            return ResultadoEnvio(
+                False,
+                "Não há certificado A1 conectado para assinar digitalmente este e-mail por S/MIME.",
+            )
 
     modulo_imap = _PROVEDORES_IMAP.get(integracao.provider)
     if modulo_imap:
