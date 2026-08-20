@@ -240,3 +240,66 @@ def test_geocodifica_destino_existente_sem_inventar_coordenadas(monkeypatch):
     assert location.latitude == -21.175 and location.longitude == -47.810
     assert db.commits == 1
     assert audits == [{"provider": "google_geocoding", "status": "ok"}]
+
+
+def test_commute_from_saved_location_uses_exact_preference_without_live_coordinates(monkeypatch):
+    preference = type("Preference", (), {
+        "day_start_origin_mode": "saved_location", "day_start_location_id": 11,
+    })()
+    origin = type("Location", (), {"id": 11})()
+    target = {
+        "target_key": "appointment:42", "arrival_buffer_minutes": 15,
+        "location": {"id": 31, "latitude": -21.20, "longitude": -47.82},
+    }
+    monkeypatch.setattr(targeted, "_find_target", lambda *args, **kwargs: target)
+    monkeypatch.setattr(targeted, "_ensure_geocoded", lambda db, user, item: item)
+    monkeypatch.setattr(targeted, "_saved_location", lambda *args, **kwargs: origin)
+    monkeypatch.setattr(targeted, "_geocoded_location", lambda *args, **kwargs: {
+        "id": 11, "name": "Casa", "latitude": -21.10, "longitude": -47.80,
+    })
+    calls = []
+    monkeypatch.setattr(targeted, "traffic_eta", lambda **kwargs: calls.append(kwargs) or {
+        "status": "ok", "provider": "teste", "routes": [], "tips": [],
+    })
+    monkeypatch.setattr(targeted, "_audit", lambda *args, **kwargs: None)
+
+    result = targeted.commute_target_from_location(
+        targeted.CommuteFromLocationIn(origin_location_id=11, target_key="appointment:42"),
+        db=_DB(preference=preference), user=_User(),
+    )
+
+    assert result["origin_location"]["name"] == "Casa"
+    assert calls == [{
+        "origin_latitude": -21.10, "origin_longitude": -47.80,
+        "destination_latitude": -21.20, "destination_longitude": -47.82,
+        "arrival_buffer_minutes": 15,
+    }]
+
+
+def test_commute_return_uses_last_target_and_selected_destination(monkeypatch):
+    preference = type("Preference", (), {"day_end_destination_location_id": 12})()
+    destination_model = type("Location", (), {"id": 12, "name": "Hotel"})()
+    origin_target = {
+        "target_key": "appointment:42", "starts_at": datetime.now(timezone.utc),
+        "ends_at": datetime.now(timezone.utc) + timedelta(hours=1),
+        "location": {"id": 31, "name": "Hospital", "latitude": -21.20, "longitude": -47.82},
+    }
+    monkeypatch.setattr(targeted, "_find_day_target", lambda *args, **kwargs: origin_target)
+    monkeypatch.setattr(targeted, "_ensure_geocoded", lambda db, user, item: item)
+    monkeypatch.setattr(targeted, "_saved_location", lambda *args, **kwargs: destination_model)
+    monkeypatch.setattr(targeted, "_geocoded_location", lambda *args, **kwargs: {
+        "id": 12, "name": "Hotel", "latitude": -21.11, "longitude": -47.81,
+    })
+    monkeypatch.setattr(targeted, "traffic_eta", lambda **kwargs: {
+        "status": "ok", "provider": "teste", "routes": [], "tips": [],
+    })
+    monkeypatch.setattr(targeted, "_audit", lambda *args, **kwargs: None)
+
+    result = targeted.commute_return(
+        targeted.CommuteReturnIn(origin_target_key="appointment:42", destination_location_id=12),
+        db=_DB(preference=preference), user=_User(),
+    )
+
+    assert result["destination"]["target_key"] == "return:appointment:42:12"
+    assert result["destination"]["location"]["name"] == "Hotel"
+    assert result["origin_location"]["name"] == "Hospital"

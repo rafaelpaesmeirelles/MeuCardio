@@ -147,8 +147,9 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert "rota.distance_meters" in home
     assert "rota.traffic_delay_seconds" in home
     assert "rota.duration_seconds + destino.arrival_buffer_minutes * 60" in home
-    assert "const destino = proximoAlvo" in home
-    assert "const targetKey = destino?.target_key || null" in home
+    assert "const destino = deslocamento &&" in home
+    assert "const targetKey = destinoPlanejado?.target_key || null" in home
+    assert 'target_type: "day_return"' in home
 
     # Coordenadas só entram na chamada ao provider; auditoria guarda provider/status.
     audit_start = endpoint.index("_audit(")

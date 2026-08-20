@@ -249,6 +249,15 @@ class MobilityPreference(Base):
     automatic_foreground_refresh: Mapped[bool] = mapped_column(Boolean, default=True)
     refresh_interval_minutes: Mapped[int] = mapped_column(Integer, default=5)
     travel_mode: Mapped[str] = mapped_column(String(30), default="driving")
+    day_start_origin_mode: Mapped[str] = mapped_column(
+        String(30), default="current_location",
+    )
+    day_start_location_id: Mapped[int | None] = mapped_column(
+        ForeignKey("calendar_locations.id", ondelete="SET NULL"), nullable=True,
+    )
+    day_end_destination_location_id: Mapped[int | None] = mapped_column(
+        ForeignKey("calendar_locations.id", ondelete="SET NULL"), nullable=True,
+    )
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora, onupdate=_agora)
 
 
