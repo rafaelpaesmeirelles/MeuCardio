@@ -22832,5 +22832,109 @@
         "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
       }
     ]
+  },
+  {
+    "slug": "trilha-perioperatorio-algoritmo-aha-acc-2024-condicao-por-condicao",
+    "titulo": "Perioperatório: o algoritmo AHA/ACC 2024 condição por condição — da triagem à decisão terapêutica",
+    "tema": "Perioperatório",
+    "objetivo": "Sair sabendo percorrer o algoritmo integrado da AHA/ACC 2024 na ordem em que ele de fato é aplicado — da triagem entre emergência cirúrgica, condição cardíaca aguda e modificador de risco, pela decisão de dosar biomarcador, até as árvores específicas para insuficiência cardíaca, valvopatia, fibrilação atrial e timing de PCI/DAPT antes de cirurgia não cardíaca.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024",
+        "por_que": "Abre a trilha pela visão geral da diretriz — a abordagem escalonada que evita investigação cardiovascular indiscriminada e organiza toda a sequência de decisão que os próximos passos detalham condição a condição."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "condicoes-cardiacas-agudas-e-modificadores-de-risco-aha-acc-2024-arvore",
+        "por_que": "Aplica o primeiro corte do algoritmo, antes de qualquer escore: separar emergência cirúrgica, condição cardíaca aguda que pode exigir pausa, e modificador de risco que muda o planejamento sem impedir a cirurgia — a bifurcação inicial de que dependem todas as árvores seguintes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "biomarcadores-preoperatorios-bnp-ntprobnp-troponina-arvore-de-decisao",
+        "por_que": "Uma vez triado o paciente estável mas com modificador de risco, decide quando medir BNP/NT-proBNP ou troponina e como o limiar da AHA/ACC 2024 integra o resultado à investigação — o degrau seguinte da mesma abordagem escalonada do passo 1."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-preoperatorio-eco-gdmt-sglt2-arvore-aha-acc-2024",
+        "por_que": "Percorre a primeira árvore de doença estrutural específica da diretriz — insuficiência cardíaca, o modificador de risco mais dependente de biomarcador e função ventricular —, decidindo entre IC estável e descompensada e o manejo de GDMT/SGLT2 antes da cirurgia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "valvopatia-grave-cirurgia-nao-cardiaca-arvore-aha-acc-2024",
+        "por_que": "Aplica a segunda árvore de doença estrutural da diretriz — valvopatia moderada/grave —, cujo risco a própria AHA/ACC 2024 reconhece que RCRI e Gupta MICA não capturam, reforçando por que cada condição precisa de árvore própria em vez de um escore único."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-perioperatoria-pos-operatoria-arvore-aha-acc-2024",
+        "por_que": "Move de doença estrutural para arritmia, aplicando a mesma lógica de árvore específica à FA pré-existente estável versus FA nova pós-operatória, com decisão de controle de frequência/ritmo e anticoagulação."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "pci-stent-dapt-timing-cirurgia-nao-cardiaca-arvore-aha-acc-2024",
+        "por_que": "Fecha a trilha na decisão terapêutica mais frequente do dia a dia perioperatório — timing de cirurgia não cardíaca após PCI/stent e manejo de DAPT —, reunindo tempo de PCI, tipo de stent e risco de sangramento versus trombose que os passos anteriores prepararam o terreno para decidir."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-geral-nutricao-emergente-ultraprocessados-adocantes-tmao-e-jejum-intermitente",
+    "titulo": "Geral: nutrição emergente — ultraprocessados, adoçantes, TMAO e jejum intermitente na pergunta do consultório",
+    "tema": "Geral",
+    "objetivo": "Sair sabendo responder com números às perguntas de consultório sobre exposições dietéticas modernas e controversas — carne processada, alimento ultraprocessado, adoçante artificial, xilitol, TMAO derivado da colina, microplástico em placa aterosclerótica e jejum intermitente —, e distinguir associação observacional robusta de sinal mecanístico preliminar e de resumo de congresso ainda não publicado em periódico revisado por pares.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "carne-vermelha-e-carne-processada-e-risco-cardiovascular",
+        "por_que": "Abre a trilha pela pergunta mais clássica de consultório sobre dieta e risco cardiovascular, estabelecendo a distinção metodológica entre carne vermelha in natura e carne processada que orienta a leitura dos passos seguintes, mais recentes e menos consolidados."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "alimento-ultraprocessado-e-risco-cardiovascular-coorte-nutrinet-sante",
+        "por_que": "Amplia o ângulo do passo anterior da categoria de alimento (carne) para a classificação NOVA de processamento industrial, que testa se o grau de processamento prediz risco cardiovascular além do que sódio, açúcar e gordura saturada já capturam."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "adocantes-artificiais-e-risco-cardiovascular-coorte-nutrinet-sante",
+        "por_que": "Detalha, dentro do universo ultraprocessado do passo anterior, o aditivo mais recomendado como substituto do açúcar — testando na mesma coorte francesa se a troca de açúcar por adoçante é neutra ou tem risco cardiovascular próprio."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "xilitol-e-risco-cardiovascular-protrombotico-metabolomica-e-mecanismo-plaquetario",
+        "por_que": "Aprofunda o adoçante artificial do passo anterior com um desenho mais mecanístico — metabolômica não direcionada e ativação plaquetária —, complementando a associação epidemiológica ampla do estudo anterior com evidência de mecanismo biológico direto para uma molécula específica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "metabolismo-microbiano-intestinal-da-fosfatidilcolina-tmao-e-risco-cardiovascular",
+        "por_que": "Fecha o par mecanístico do passo anterior mostrando, num desenho controlado com desafio alimentar e supressão da microbiota por antibiótico, como a mesma linha de pesquisa em metabolômica plasmática já havia demonstrado esse tipo de mecanismo antes, para outro metabólito — o TMAO derivado da colina da dieta."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "microplasticos-e-nanoplasticos-em-placa-ateromatosa-e-risco-cardiovascular",
+        "por_que": "Estende a pergunta 'o que está na minha comida' para além do metabolismo microbiano dos passos anteriores — mede, pela primeira vez em humanos, partícula plástica dentro da própria placa aterosclerótica e associa isso a desfecho clínico no seguimento."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "jejum-intermitente-restricao-de-tempo-alimentar-e-risco-cardiovascular",
+        "por_que": "Fecha a trilha invertendo o eixo dos seis passos anteriores — de 'o que' o paciente come para 'quando' come —, e modela como separar, na prática de consultório, o dado que já circula na imprensa leiga (resumo de congresso) do artigo revisado por pares publicado depois pelo mesmo grupo."
+      }
+    ]
   }
 ]
