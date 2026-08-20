@@ -5543,5 +5543,236 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "confirmacao-diagnostica-de-hipertensao-arterial-antes-de-rotular-o-paciente",
+    "condicao": "Confirmação diagnóstica de hipertensão arterial antes de rotular o paciente",
+    "resumo": "Passos para não fechar o diagnóstico de hipertensão sustentada só pela PA de consultório — classificação por estágio, indicação de MAPA/MRPA conforme o estágio, e a diferenciação entre hipertensão do jaleco branco e hipertensão mascarada, com a decisão formal de quando (e se) tratar cada uma com fármaco.",
+    "documento_origem": "hipertensao-do-jaleco-branco-e-mascarada-mapa-mrpa-prevalencia-e-decisao-terapeutica",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESH Guidelines for the management of arterial hypertension. Mancia G, Kreutz R, Brunström M, Burnier M, Grassi G, et al. J Hypertens. 2023;41(12):1874-2071. DOI: 10.1097/HJH.0000000000003480. PMID: 37345492 — Seções 14.2 (Hipertensão do jaleco branco), 14.3 (Hipertensão mascarada), 14.4 (WUCH/MUCH), Tabela 4 (cortes diagnósticos) e Tabela 5 (indicações clínicas)",
+      "Stergiou GS, Asayama K, Thijs L, Kollias A, Niiranen TJ, Hozawa A, et al. Prognosis of white-coat and masked hypertension: International Database of HOme blood pressure in relation to Cardiovascular Outcome (IDHOCO). Hypertension. 2014;63(4):675-682. DOI: 10.1161/HYPERTENSIONAHA.113.02741. PMID: 24420553",
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong AC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624"
+    ],
+    "itens": [
+      {
+        "id": "hd-classificacao-consultorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "PA de consultório classificada segundo os limiares da diretriz (normal <120/80; pré-hipertensão 120–139/80–89; estágio 1 140–159/90–99; estágio 2 160–179/100–109; estágio 3 ≥180/110) antes de qualquer decisão diagnóstica ou terapêutica",
+        "origem_secao": "hipertensao-arterial-classificacao-diagnostico-metas.md — Classificação da pressão arterial (consultório, ≥ 18 anos)"
+      },
+      {
+        "id": "hd-mapa-mrpa-indicado-por-estagio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "MAPA ou MRPA solicitada conforme o estágio: indicada em pré-hipertensão (risco de hipertensão mascarada) e em HAS estágio 1 ou 2 (risco de hipertensão do avental branco); dispensável em estágio 3 ou crise hipertensiva, quando o tratamento pode ser iniciado diretamente",
+        "origem_secao": "hipertensao-arterial-classificacao-diagnostico-metas.md — Conduta de seguimento por classificação"
+      },
+      {
+        "id": "hd-excecao-loa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico fechado sem esperar MAPA/MRPA apenas quando o paciente já tiver lesão de órgão-alvo ou doença cardiovascular estabelecida — nesse caso o diagnóstico pode ser confirmado de imediato",
+        "origem_secao": "hipertensao-arterial-classificacao-diagnostico-metas.md — Diagnóstico"
+      },
+      {
+        "id": "hd-cortes-mapa-mrpa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Resultado do MAPA/MRPA interpretado pelos cortes exatos da ESH 2023 (consultório ≥140/90; MAPA vigília ≥135/85; MAPA sono ≥120/70; MAPA 24h ≥130/80; MRPA ≥135/85), idealmente confirmando com os dois métodos quando disponíveis",
+        "origem_secao": "Cortes diagnósticos exatos (Tabela 4, ESH 2023)"
+      },
+      {
+        "id": "hd-avental-branco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "PA de consultório elevada (≥140/90) com MAPA e/ou MRPA normais, em paciente sem tratamento anti-hipertensivo, classificada como hipertensão do jaleco branco — não hipertensão sustentada",
+        "origem_secao": "Cortes diagnósticos exatos (Tabela 4, ESH 2023)"
+      },
+      {
+        "id": "hd-mascarada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "PA de consultório normal (<140/90) com MAPA e/ou MRPA elevados registrada como hipertensão mascarada — PA de consultório na faixa normal-alta é, por si só, gatilho para solicitar MAPA/MRPA",
+        "origem_secao": "Prevalência — números da própria diretriz"
+      },
+      {
+        "id": "hd-much-em-tratado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente já em tratamento com PA controlada no consultório, considerada a possibilidade de MUCH (masked uncontrolled hypertension) antes de presumir bom controle — no banco IDACO/IDHOCO a forma mascarada foi quase o dobro mais prevalente em tratados que em não tratados (31,9% vs. 19,2%)",
+        "origem_secao": "Prevalência — números da própria diretriz"
+      },
+      {
+        "id": "hd-decisao-tratar-farmaco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Decisão de tratar hipertensão do jaleco branco ou mascarada com fármaco registrada como Classe II, Nível C — considerada apenas se houver lesão de órgão-alvo ou risco cardiovascular particularmente elevado, nunca automática pela PA de consultório isolada",
+        "origem_secao": "Por que isso muda a decisão de tratar — a recomendação formal da ESH 2023"
+      },
+      {
+        "id": "hd-estilo-vida-sempre",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Intervenção no estilo de vida e seguimento mais próximo indicados (Classe I) mesmo quando a decisão for não tratar com fármaco, tanto na hipertensão do jaleco branco quanto na mascarada",
+        "origem_secao": "Por que isso muda a decisão de tratar — a recomendação formal da ESH 2023"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "inicio-de-tratamento-farmacologico-de-primeira-linha-na-hipertensao-arterial",
+    "condicao": "Início de tratamento farmacológico de primeira linha na hipertensão arterial",
+    "resumo": "Sequência de decisão para o paciente que ainda não está em anti-hipertensivo: quando iniciar farmacoterapia, quando começar já com terapia combinada em vez de monoterapia, quais classes usar de primeira linha, e a meta pressórica sem limite inferior fixo — com base na Diretriz Brasileira de Hipertensão Arterial 2025.",
+    "documento_origem": "hipertensao-arterial-classificacao-diagnostico-metas",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong AC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624",
+      "Jamerson K, Weber MA, Bakris GL, Dahlöf B, Pitt B, et al; ACCOMPLISH Trial Investigators. Benazepril plus amlodipine or hydrochlorothiazide for hypertension in high-risk patients. N Engl J Med. 2008;359(23):2417-2428. DOI: 10.1056/NEJMoa0806182. PMID: 19052124"
+    ],
+    "itens": [
+      {
+        "id": "hi-indicacao-inicio",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Indicação de início de tratamento medicamentoso verificada pelo critério correto: PA ≥140/90mmHg trata desde o diagnóstico; PA 130–139/80–89mmHg com alto risco cardiovascular trata se não houver controle após 3 meses de medidas não medicamentosas; idosos ≥60 anos (incluindo ≥80) tratam a partir de PAS ≥140mmHg, com individualização em hipotensão ortostática, fragilidade moderada/grave ou expectativa de vida <3 anos",
+        "origem_secao": "Quando iniciar medicação"
+      },
+      {
+        "id": "hi-nao-medicamentoso-desde-pre-hipertensao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Medidas não medicamentosas (peso adequado, intervenção dietética, redução de sódio e aumento de potássio por alimentos naturais, atividade física, redução de álcool, cessação do tabagismo, redução de estresse) indicadas desde PA ≥120/80mmHg, já na pré-hipertensão — não apenas quando a medicação é iniciada",
+        "origem_secao": "Tratamento — Não medicamentoso"
+      },
+      {
+        "id": "hi-mono-ou-combinacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Decisão entre monoterapia e terapia combinada verificada pelos critérios exatos: monoterapia reservada a PA 130–139/80–89 com alto risco cardiovascular, estágio 1 com risco cardiovascular baixo, idosos ≥80 anos, pacientes frágeis ou hipotensão ortostática sintomática — todos os demais hipertensos iniciam com terapia combinada (dois fármacos em dose baixa)",
+        "origem_secao": "Escolha inicial: monoterapia ou combinação"
+      },
+      {
+        "id": "hi-classes-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Classe(s) escolhida(s) entre as três de primeira linha — IECA ou BRA, bloqueador de canal de cálcio, diurético; combinação inicial, quando indicada, é IECA/BRA + diurético ou IECA/BRA + bloqueador de canal de cálcio",
+        "origem_secao": "Classes de escolha"
+      },
+      {
+        "id": "hi-betabloqueador-restrito",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador não prescrito como escolha inicial sem indicação específica — confirmada ausência de insuficiência cardíaca, angina, fibrilação atrial, diálise ou desejo de engravidar antes de incluí-lo no esquema",
+        "origem_secao": "Classes de escolha"
+      },
+      {
+        "id": "hi-meta-pressorica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Meta pressórica de <130/80mmHg registrada para o paciente, sem limite inferior fixo — se a PAS cair abaixo de 120mmHg e o paciente estiver assintomático, a medicação é mantida, não reduzida reativamente",
+        "origem_secao": "Meta — a mudança mais importante desta diretriz"
+      },
+      {
+        "id": "hi-triplice-antes-de-resistente",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se o controle não for atingido aumentando as doses da combinação inicial, terapia tripla (IECA/BRA + diurético + bloqueador de canal de cálcio) considerada como próximo passo, antes de rotular o paciente como hipertensão resistente",
+        "origem_secao": "Escolha inicial: monoterapia ou combinação"
+      },
+      {
+        "id": "hi-evidencia-accomplish",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Na escolha entre IECA/BRA + diurético e IECA/BRA + bloqueador de canal de cálcio, considerada a evidência do ACCOMPLISH (n=11.506; desfecho primário 9,6% vs. 11,8%; HR 0,80, IC95% 0,72–0,90; p<0,001) de menor risco cardiovascular combinado com a combinação com bloqueador de canal de cálcio, obtida com pressão arterial praticamente equalizada entre os grupos — sem que isso torne a combinação com diurético incorreta, ambas seguem válidas na diretriz",
+        "origem_secao": "escolha-do-anti-hipertensivo-de-primeira-linha-allhat-ascot-bpla-e-accomplish.md — ACCOMPLISH (2008): a pergunta certa: qual COMBINAÇÃO"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "rastreio-de-hiperaldosteronismo-primario-no-hipertenso-relacao-aldosterona-renina",
+    "condicao": "Rastreio de hiperaldosteronismo primário no hipertenso (relação aldosterona-renina)",
+    "resumo": "Protocolo ambulatorial de rastreio da causa secundária de hipertensão mais prevalente e mais subdiagnosticada — quem rastrear, as condições que evitam falso-negativo/positivo na relação aldosterona-renina, e a escolha e o preparo do teste confirmatório, com base nas diretrizes da Endocrine Society (2016/2025).",
+    "documento_origem": "aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Funder JW, Carey RM, Mantero F, Murad MH, Reincke M, Shibata H, Stowasser M, Young WF Jr. The Management of Primary Aldosteronism: Case Detection, Diagnosis, and Treatment: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2016;101(5):1889-1916. PMID: 26934393",
+      "Adler GK, Stowasser M, Correa RR, Khan N, Kline G, McGowan MJ, Mulatero P, Murad MH, Touyz RM, Vaidya A, Williams TA, Yang J, Young WF Jr, Zennaro MC, Brito JP. Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2025;110(9):2453-2495. PMID: 40658480 (diretriz que sucede Funder et al. 2016; correção de unidade em figura, sem mudança de conteúdo: J Clin Endocrinol Metab. 2025;110(11):e3933-e3934, PMID: 40880123)",
+      "Käyser SC, Dekkers T, Groenewoud HJ, van der Wilt GJ, Bakx JC, van der Wel MC, Hermus AR, Lenders JW, Deinum J. Study Heterogeneity and Estimation of Prevalence of Primary Aldosteronism: A Systematic Review and Meta-Regression Analysis. J Clin Endocrinol Metab. 2016;101(7):2826-2835. PMID: 27172433",
+      "Monticone S, Burrello J, Tizzani D, Bertello C, Viola A, Buffolo F, Gabetti L, Mengozzi G, Williams TA, Rabbia F, Veglio F, Mulatero P. Prevalence and Clinical Manifestations of Primary Aldosteronism Encountered in Primary Care Practice. J Am Coll Cardiol. 2017;69(14):1811-1820. PMID: 28385310",
+      "Douma S, Petidis K, Doumas M, Papaefthimiou P, Triantafyllou A, Kartali N, Papadopoulos N, Vogiatzis K, Zamboulis C. Prevalence of primary hyperaldosteronism in resistant hypertension: a retrospective observational study. Lancet. 2008;371(9628):1921-1926. PMID: 18539224"
+    ],
+    "itens": [
+      {
+        "id": "hp-criterio-rastreio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente rastreado por preencher pelo menos um dos critérios da diretriz de 2016: PA sustentada >150/100mmHg em três medidas em dias diferentes; hipertensão resistente (PA>140/90 em uso de 3 anti-hipertensivos incluindo diurético) ou PA controlada com 4 ou mais anti-hipertensivos; hipopotassemia espontânea ou induzida por diurético; incidentaloma adrenal; apneia do sono; história familiar de hipertensão de início precoce ou AVC antes dos 40 anos; ou parente de primeiro grau de paciente com aldosteronismo primário",
+        "origem_secao": "Aldosteronismo primário — quem rastrear"
+      },
+      {
+        "id": "hp-prevalencia-justifica-rastreio-amplo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Rastreio considerado mesmo fora dos seis critérios de alto risco, dado que a prevalência de hiperaldosteronismo primário aumenta com a gravidade da hipertensão (3,9% no estágio 1 a 11,8% no estágio 3, Monticone et al.) e chega a 11,3% na hipertensão resistente (Douma et al.) — a diretriz de 2025 sugere rastreio em todo hipertenso, como recomendação condicional de qualidade baixa",
+        "origem_secao": "hiperaldosteronismo-primario-subdiagnosticado-prevalencia-real-e-rastreio-por-arr.md — O gradiente por gravidade da hipertensão; aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society.md — Atualização das diretrizes"
+      },
+      {
+        "id": "hp-suspender-antagonista",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antagonista do receptor mineralocorticoide (espironolactona/eplerenona) suspenso por pelo menos 4 semanas antes da coleta da relação aldosterona-renina",
+        "origem_secao": "Relação aldosterona-renina (ARR) — condições do teste"
+      },
+      {
+        "id": "hp-corrigir-potassio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Potássio corrigido para meta de 4,0 mmol/L antes do teste — hipopotassemia falseia o resultado da ARR",
+        "origem_secao": "Relação aldosterona-renina (ARR) — condições do teste"
+      },
+      {
+        "id": "hp-condicoes-coleta",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Coleta da ARR realizada pela manhã, com o paciente em pé há pelo menos 2 horas e sentado por 5 a 15 minutos imediatamente antes da coleta",
+        "origem_secao": "Relação aldosterona-renina (ARR) — condições do teste"
+      },
+      {
+        "id": "hp-corte-laboratorio-proprio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Resultado interpretado com o corte de referência do laboratório específico conferido, e não assumido como universal — a diretriz reconhece variabilidade substancial entre laboratórios e métodos de dosagem em torno do corte de referência de 30 (ou 750 em unidades mistas)",
+        "origem_secao": "Relação aldosterona-renina (ARR) — condições do teste"
+      },
+      {
+        "id": "hp-teste-confirmatorio-preparo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se ARR positiva: teste confirmatório escolhido com as condições específicas verificadas — por exemplo, na infusão salina sentada o cortisol pós-infusão precisa ser menor que o basal, e na supressão com fludrocortisona a atividade de renina plasmática precisa ser <1 ng/mL/h com cortisol às 10h menor que às 7h, nos dois casos para excluir efeito confundidor do ACTH",
+        "origem_secao": "Testes confirmatórios e seus cortes"
+      },
+      {
+        "id": "hp-excecao-dispensa-teste",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Antes de solicitar teste confirmatório, verificado se o paciente já preenche a exceção que dispensa o teste: hipopotassemia espontânea, renina plasmática indetectável e aldosterona plasmática >20 ng/dL (550 pmol/L) simultaneamente — combinação suficiente para diagnóstico direto pela diretriz de 2016",
+        "origem_secao": "Exceção — diagnóstico sem teste confirmatório"
+      },
+      {
+        "id": "hp-encaminhamento-subtipo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Diagnóstico confirmado encaminhado para definição de subtipo (unilateral vs. bilateral), com amostragem de veia adrenal considerada em centro de referência antes de indicar adrenalectomia — a maioria dos casos rastreados é hiperplasia bilateral, potencialmente tratável clinicamente com antagonista do receptor mineralocorticoide sem cirurgia",
+        "origem_secao": "hiperaldosteronismo-primario-subdiagnosticado-prevalencia-real-e-rastreio-por-arr.md — O gradiente por gravidade da hipertensão; Por que o rastreio por ARR fica atrás da própria diretriz"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
