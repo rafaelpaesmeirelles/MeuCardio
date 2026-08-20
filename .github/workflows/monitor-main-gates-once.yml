@@ -1,0 +1,55 @@
+name: Monitor main gates (one-time)
+
+on:
+  push:
+    branches:
+      - release/claude-content-batch-20260820-final
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  report:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: release/claude-content-batch-20260820-final
+      - name: Snapshot current main release gates
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          main_sha="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          gh run list --repo "$REPOSITORY" --branch main --limit 60 \
+            --json databaseId,name,status,conclusion,headSha,event,createdAt,url \
+            > /tmp/runs.json
+          python - "$main_sha" /tmp/runs.json <<'PY'
+          import json, sys
+          from pathlib import Path
+          main_sha = sys.argv[1]
+          runs = json.load(open(sys.argv[2], encoding='utf-8'))
+          wanted = {
+              'Release final gate dispatcher',
+              'CI',
+              'RC2 Acceptance — Canonical CorVIA',
+              'Visual QA — Clinical OS',
+              'Corpus database reconciliation',
+              'Corpus inventory',
+          }
+          selected = [r for r in runs if r.get('headSha') == main_sha and r.get('name') in wanted]
+          report = {'main_sha': main_sha, 'runs': selected}
+          Path('.github/main_gate_report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/main_gate_report.json
+          git commit -m "chore(release): snapshot main gate status"
+          git push origin HEAD:release/claude-content-batch-20260820-final
