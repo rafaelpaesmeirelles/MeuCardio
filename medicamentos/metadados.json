@@ -3273,7 +3273,12 @@
     "review_status": "revisado",
     "generic_name": "Furosemida",
     "brand_names": [
-      "Lasix"
+      "Lasix",
+      "Neosemid",
+      "Furosemida (Genérico) — Teuto",
+      "Furosemida (Genérico) — Cimed",
+      "Furosemida (Genérico) — Geolab",
+      "Furosemida (Genérico) — Neo Química (Brainfarma)"
     ],
     "drug_class": "Diurético de alça",
     "mechanism": "Bloqueia o sistema cotransportador Na+/K+/2Cl- localizado na membrana celular luminal do ramo ascendente da alça de Henle, produzindo efeito diurético potente com início de ação rápido e curta duração. Na insuficiência cardíaca, além do efeito diurético, promove redução aguda de pré-carga por dilatação da capacidade venosa (ação mediada por prostaglandina, que requer função renal adequada), além de reduzir reatividade vascular a catecolaminas",
@@ -3327,7 +3332,14 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA (DailyMed) para furosemida, seção Clinical Pharmacology — via oral.",
     "sbp_reduction_mmhg": -7.9,
     "dbp_reduction_mmhg": -4.4,
-    "bp_evidence_source": "Musini VM et al. Blood pressure-lowering efficacy of loop diuretics for primary hypertension (revisão sistemática Cochrane). PMID: 26000442. Meta-análise de 9 ensaios randomizados com cinco diuréticos de alça diferentes (furosemida, cicletanina, piretanida, indacrinona, etozolina) em 460 pacientes com PA basal média de 162/103 mmHg, seguimento médio de 8,8 semanas: melhor estimativa de -7,9 mmHg sistólica (IC95% -10,4 a -5,4) e -4,4 mmHg diastólica (IC95% -5,9 a -2,8) vs. placebo. **Declarado explicitamente pelos próprios revisores como evidência de qualidade BAIXA** (poucos ensaios, alto risco de viés, provável viés de publicação) e como possível superestimativa do efeito real — é dado de CLASSE de diuréticos de alça, não específico e isolado da furosemida (que é um dos cinco fármacos incluídos, não o único). Furosemida não é considerada agente de primeira linha para hipertensão primária isolada — a indicação central deste catálogo (ver `indications`) é edema/congestão, com o efeito pressórico como resultado secundário à depleção de volume, não o desfecho primariamente estudado nos ensaios da revisão."
+    "bp_evidence_source": "Musini VM et al. Blood pressure-lowering efficacy of loop diuretics for primary hypertension (revisão sistemática Cochrane). PMID: 26000442. Meta-análise de 9 ensaios randomizados com cinco diuréticos de alça diferentes (furosemida, cicletanina, piretanida, indacrinona, etozolina) em 460 pacientes com PA basal média de 162/103 mmHg, seguimento médio de 8,8 semanas: melhor estimativa de -7,9 mmHg sistólica (IC95% -10,4 a -5,4) e -4,4 mmHg diastólica (IC95% -5,9 a -2,8) vs. placebo. **Declarado explicitamente pelos próprios revisores como evidência de qualidade BAIXA** (poucos ensaios, alto risco de viés, provável viés de publicação) e como possível superestimativa do efeito real — é dado de CLASSE de diuréticos de alça, não específico e isolado da furosemida (que é um dos cinco fármacos incluídos, não o único). Furosemida não é considerada agente de primeira linha para hipertensão primária isolada — a indicação central deste catálogo (ver `indications`) é edema/congestão, com o efeito pressórico como resultado secundário à depleção de volume, não o desfecho primariamente estudado nos ensaios da revisão.",
+    "commercial_presentations": [
+      "Neosemid® 40 mg — comprimidos, embalagem com 20 (Neo Química/Brainfarma). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Furosemida (Genérico) 40 mg — comprimidos, embalagem com 20 (Teuto). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Furosemida (Genérico) 40 mg — comprimidos, embalagem com 30 (Cimed). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Furosemida (Genérico) 40 mg — comprimidos, embalagem com 20 (Geolab). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Furosemida (Genérico) 40 mg — comprimidos, embalagem com 30 (Neo Química/Brainfarma). Fonte: WebSearch — sessão de 20/08/2026. NOTA: 'Diurisa' foi deliberadamente NÃO incluída — verificada como combinação furosemida+amilorida, não furosemida isolada."
+    ]
   },
   {
     "slug": "genfibrozila",
@@ -4337,7 +4349,12 @@
     "pregnancy": "**Categoria de risco D. Contraindicado no segundo e terceiro trimestres** (item 4 formal da bula); no **primeiro trimestre o uso não é recomendado** — é advertência, não contraindicação formal do item 4, mesma distinção já documentada para outros IECA/BRA. Fármacos que atuam no sistema renina-angiotensina no segundo/terceiro trimestre reduzem a função renal fetal e aumentam morbidade e morte fetal/neonatal: oligoidrâmnio, hipoplasia pulmonar, deformação óssea fetal, deformação craniana, anúria, hipotensão e insuficiência renal neonatal. Ao confirmar a gravidez, suspender o mais rápido possível; se exposição ocorreu no segundo/terceiro trimestre, recomenda-se ultrassonografia para avaliar função renal e crânio fetais. Recém-nascido exposto in utero deve ser monitorizado para oligúria/hipotensão, com diálise ou exsanguineotransfusão como recurso se necessário. Paciente planejando engravidar deve trocar para anti-hipertensivo com perfil de segurança estabelecido na gestação. Fonte: bula profissional brasileira do COZAAR (losartana potássica, Organon, 2023), item 5. ADVERTÊNCIAS E PRECAUÇÕES — confirmada agora contra o texto real, mais completa que o resumo anterior deste registro.",
     "lactation": "**Uso não recomendado durante a amamentação** — não há dados de uso de losartana neste período. A bula recomenda tratamento alternativo com perfil de segurança melhor estabelecido, **especialmente se o lactente for recém-nascido ou prematuro**; onde o uso for mesmo assim considerado, fica a critério e acompanhamento do médico. Mais restritivo que o registro anterior deste campo, que dizia apenas \"informar o médico, sem conduta mais específica\". Fonte: bula profissional brasileira do COZAAR (Organon, 2023).",
     "brand_names": [
-      "Cozaar — nome comercial citado no rótulo FDA/DailyMed e na bula profissional brasileira (Organon), já referenciados neste registro"
+      "Cozaar — nome comercial citado no rótulo FDA/DailyMed e na bula profissional brasileira (Organon), já referenciados neste registro",
+      "Aradois",
+      "Corus",
+      "Losartana Potássica (Genérico) — Germed",
+      "Losartana Potássica (Genérico) — Medley (Sanofi Medley)",
+      "Losartana Potássica (Genérico) — EMS"
     ],
     "half_life_hours": 7.5,
     "half_life_note": "Meia-vida bifásica: a losartana (fármaco original) tem meia-vida de eliminação de 1,5 a 2 horas; o metabólito ativo principal (EXP3174/E-3174), responsável pela maior parte do efeito farmacológico e 10 a 40 vezes mais potente que a losartana, tem meia-vida terminal estimada de 6 a 9 horas. O valor de 7,5h registrado no campo é o ponto médio da faixa do metabólito ativo, por ser ele o determinante clínico da duração do efeito (dose única diária). Fonte: rótulo FDA/DailyMed do COZAAR (losartana potássica), seção Clinical Pharmacology/Pharmacokinetics.",
@@ -4354,6 +4371,13 @@
       "Anti-hipertensivos, diuréticos e outros agentes que reduzam a pressão arterial: efeito hipotensor aditivo, esperado farmacologicamente.",
       "Suplementos de potássio, diuréticos poupadores de potássio (ex.: espironolactona, amilorida) ou substitutos de sal contendo potássio: risco aumentado de hipercalemia, pelo mesmo mecanismo de redução da secreção de aldosterona induzida por bloqueio do sistema renina-angiotensina.",
       "Lítio: relatos de aumento reversível das concentrações séricas de lítio e toxicidade com uso concomitante de inibidores da ECA e, por mecanismo semelhante, com antagonistas do receptor de angiotensina II — recomenda-se monitorização cuidadosa dos níveis séricos de lítio."
+    ],
+    "commercial_presentations": [
+      "Aradois® 25 mg/50 mg/100 mg — comprimidos revestidos, embalagem com 30 (Biolab Sanus Farmacêutica). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Corus® 25 mg/50 mg — comprimidos revestidos, embalagem com 14 ou 30 (Biosintética/Aché). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Losartana Potássica (Genérico) 50 mg — comprimidos revestidos, embalagem com 30 (Germed, registro MS 1058308280201). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Losartana Potássica (Genérico) 50 mg — comprimidos revestidos, embalagem com 30 (Medley/Sanofi Medley Farmacêutica). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Losartana Potássica (Genérico) 50 mg — comprimidos revestidos (EMS). VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao tamanho exato de embalagem. Fonte: WebSearch — sessão de 20/08/2026."
     ]
   },
   {
@@ -4678,7 +4702,12 @@
     "pregnancy": "**Categoria de risco C.** Só deve ser usado na gravidez se **absolutamente necessário**. Betabloqueadores podem causar efeitos adversos como **bradicardia no feto, no recém-nascido e em crianças sob aleitamento materno**. Fonte: bula do SELOZOK (succinato de metoprolol, AstraZeneca).",
     "lactation": "Só usar se absolutamente necessário. O risco descrito é o mesmo da gravidez — **bradicardia no lactente** —, embora a bula registre que a quantidade de metoprolol que chega ao lactente pelo leite parece pequena. Fonte: bula do SELOZOK (succinato de metoprolol, AstraZeneca).",
     "brand_names": [
-      "Selozok (succinato) e Seloken/Seloken injetável (tartarato) — já citados nas referências deste registro (AstraZeneca do Brasil)"
+      "Selozok (succinato) e Seloken/Seloken injetável (tartarato) — já citados nas referências deste registro (AstraZeneca do Brasil)",
+      "Succinato de Metoprolol (Genérico) — Biolab",
+      "Succinato de Metoprolol (Genérico) — Medley (Sanofi Medley)",
+      "Succinato de Metoprolol (Genérico) — Neo Química (Brainfarma)",
+      "Tartarato de Metoprolol (Genérico) — EMS",
+      "Tartarato de Metoprolol (Genérico) — Prati-Donaduzzi"
     ],
     "half_life_hours": 5.0,
     "half_life_note": "Meia-vida de aproximadamente 3 a 7 horas para o succinato (liberação prolongada) e de 3 a 4 horas para o tartarato (liberação imediata) — em metabolizadores lentos de CYP2D6 (5-10% da população, já mencionado em `mechanism` deste verbete), a meia-vida do tartarato pode se estender a 7-9 horas. O valor de 5,0h registrado é o ponto médio aproximado da faixa do succinato. Fonte: rótulo do FDA (metoprolol succinato/tartarato), obtido via resultado sintetizado de busca.",
@@ -4692,6 +4721,13 @@
       "Frequência cardíaca e pressão arterial, sobretudo no início do tratamento e a cada aumento de dose na titulação de insuficiência cardíaca (já detalhado no esquema de `dosing.ic titulacao` deste verbete)",
       "Sinais de descompensação de insuficiência cardíaca (edema, dispneia, ganho de peso) durante a titulação — a IC deve estar clinicamente estável antes de cada aumento de dose",
       "Glicemia em paciente diabético insulinizado — o metoprolol pode mascarar os sinais adrenérgicos de hipoglicemia (taquicardia, tremor), já mencionado em `adverse_effects` deste verbete"
+    ],
+    "commercial_presentations": [
+      "Succinato de Metoprolol (Genérico) 25 mg/50 mg/100 mg — comprimidos revestidos de liberação prolongada, embalagem com 30 (Biolab). Fonte: WebSearch, não bulário oficial consultado diretamente — sessão de 20/08/2026.",
+      "Succinato de Metoprolol (Genérico) 50 mg — comprimidos revestidos de liberação prolongada, embalagem com 30 (Medley/Sanofi Medley). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Succinato de Metoprolol (Genérico) 50 mg/100 mg — comprimidos revestidos de liberação prolongada, embalagem com 30 (Neo Química/Brainfarma). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Tartarato de Metoprolol (Genérico) 100 mg — comprimidos, embalagem com 20 (EMS). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Tartarato de Metoprolol (Genérico) 100 mg — comprimidos, embalagem com 30 (Prati-Donaduzzi). Fonte: WebSearch — sessão de 20/08/2026."
     ]
   },
   {
@@ -7127,7 +7163,10 @@
     "pregnancy": "**Contraindicado durante a gravidez. Categoria de risco D** — o fármaco demonstrou evidências positivas de risco fetal humano; o benefício só justificaria o risco em doença grave ou ameaçadora à vida sem alternativa mais segura. Fonte: bula para o profissional de saúde da valsartana (Brainfarma).",
     "lactation": "**Contraindicado para uso por lactantes**, conforme a seção de contraindicações da bula. Fonte: bula para o profissional de saúde da valsartana (Brainfarma).",
     "brand_names": [
-      "Diovan"
+      "Diovan",
+      "Brasart",
+      "Valsartana (Genérico) — Biolab",
+      "Valsartana (Genérico) — Teuto"
     ],
     "half_life_hours": 6.0,
     "half_life_note": "Meia-vida de eliminação de aproximadamente 6 horas (cinética de decaimento bi-exponencial após administração intravenosa). Em idosos, a exposição (AUC) é 70% maior e a meia-vida é 35% mais longa que em jovens — relevante para ajuste de dose em geriátrico. Fonte: rótulo do FDA/DailyMed para DIOVAN (valsartana), Novartis Pharmaceuticals Corporation (setid 5ddba454-f3e6-43c2-a7a6-58365d297213), seção Clinical Pharmacology/Pharmacokinetics — lida diretamente via DailyMed (não resultado sintetizado de busca) em 11/08/2026.",
@@ -7136,7 +7175,12 @@
     "duration_of_action_source": "Rótulo do DIOVAN (valsartana), FDA/DailyMed, seção Clinical Pharmacology.",
     "sbp_reduction_mmhg": -8.6,
     "dbp_reduction_mmhg": -5.1,
-    "bp_evidence_source": "Análise agrupada (pooled) de 9 ensaios randomizados, duplo-cegos, controlados por placebo, dose fixa (N=4.278): redução de PA a partir do basal, com subtração de placebo, de -6,8/-3,9 mmHg (80mg), **-8,6/-5,1 mmHg (160mg — valor registrado em `sbp_reduction_mmhg`/`dbp_reduction_mmhg`, por ser a dose inicial usual mais alta já registrada em `dosing.hipertensao inicial`)** e -9,0/-6,4 mmHg (320mg — dose máxima). A curva dose-resposta mostra ganho incremental modesto acima de 160mg. Fonte: rótulo do DIOVAN (valsartana), FDA/DailyMed, seção Clinical Studies (14), citando análise pooled de ensaios de dose fixa em hipertensão essencial."
+    "bp_evidence_source": "Análise agrupada (pooled) de 9 ensaios randomizados, duplo-cegos, controlados por placebo, dose fixa (N=4.278): redução de PA a partir do basal, com subtração de placebo, de -6,8/-3,9 mmHg (80mg), **-8,6/-5,1 mmHg (160mg — valor registrado em `sbp_reduction_mmhg`/`dbp_reduction_mmhg`, por ser a dose inicial usual mais alta já registrada em `dosing.hipertensao inicial`)** e -9,0/-6,4 mmHg (320mg — dose máxima). A curva dose-resposta mostra ganho incremental modesto acima de 160mg. Fonte: rótulo do DIOVAN (valsartana), FDA/DailyMed, seção Clinical Studies (14), citando análise pooled de ensaios de dose fixa em hipertensão essencial.",
+    "commercial_presentations": [
+      "Brasart® 80 mg/160 mg/320 mg — comprimidos revestidos (EMS Sigma Pharma). Fonte: WebSearch — sessão de 20/08/2026.",
+      "Valsartana (Genérico) 320 mg — comprimidos revestidos (registrante Biolab, fabricação sob contrato por Blisfarma Indústria Farmacêutica). VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao tamanho de embalagem e demais dosagens desta linha. Fonte: WebSearch — sessão de 20/08/2026.",
+      "Valsartana (Genérico) 80 mg/160 mg — comprimidos revestidos, embalagem com 30 (Laboratório Teuto Brasileiro). Fonte: WebSearch — sessão de 20/08/2026."
+    ]
   },
   {
     "slug": "varfarina-sodica",
@@ -7144,7 +7188,9 @@
     "generic_name": "Varfarina sódica (grafia alternativa: warfarina)",
     "brand_names": [
       "Marevan",
-      "Coumadin"
+      "Coumadin",
+      "Varfarina Sódica (Genérico) — União Química",
+      "Varfarina Sódica (Genérico) — Teuto Brasileiro"
     ],
     "drug_class": "Anticoagulante oral — antagonista da vitamina K",
     "mechanism": "Inibe a vitamina K epóxido redutase, bloqueando a regeneração da vitamina K reduzida necessária à carboxilação dos fatores de coagulação II, VII, IX e X, além das proteínas anticoagulantes C e S. A queda mais rápida da proteína C, de meia-vida curta, é o que explica o estado transitoriamente pró-trombótico do início do tratamento.",
@@ -7223,7 +7269,9 @@
       "Comprimido 7,5 mg (embalagem com 30 comprimidos)"
     ],
     "commercial_presentations": [
-      "Marevan® (varfarina sódica), bula aprovada pela ANVISA em 26/11/2020. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Fabricante/detentor de registro e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Marevan® (varfarina sódica), bula aprovada pela ANVISA em 26/11/2020. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Fabricante/detentor de registro e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Varfarina Sódica (Genérico) 5 mg — comprimidos, embalagem com 30 (União Química Farmacêutica Nacional). Fonte: WebSearch, corroborado por estudo de equivalência terapêutica UNIFESP — sessão de 20/08/2026.",
+      "Varfarina Sódica (Genérico) 5 mg — comprimidos (Laboratório Teuto Brasileiro). VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao tamanho exato da embalagem. Fonte: WebSearch — sessão de 20/08/2026."
     ]
   },
   {
