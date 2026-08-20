@@ -860,6 +860,9 @@
     ],
     "commercial_presentations": [
       "NÃO localizado registro/comercialização regular no Brasil nesta sessão. A Diretriz Brasileira de Antiagregantes Plaquetários e Anticoagulantes em Cardiologia (Sociedade Brasileira de Cardiologia, publicada em Arquivos Brasileiros de Cardiologia, disponível em scielo.br) afirma textualmente que \"a bivalirudina ainda não está disponível para utilização no Brasil\", ao discutir os achados do estudo HORIZONS-AMI. Internacionalmente comercializada como Angiox® (Europa) / Angiomax® (EUA). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA se algum registro foi concedido desde a publicação da diretriz consultada, antes de orientar disponibilidade."
+    ],
+    "brand_names": [
+      "Não foi encontrada nenhuma marca com página de bula/produto ativa em bulários brasileiros consultados (ConsultaRemédios, CliqueFarma, BulasMed) — o nome só aparece em listas de interação medicamentosa de outros fármacos, nunca como produto próprio, e fontes jurídicas sobre importação de medicamento tratam a bivalirudina como item que exige uso compassivo/importação por pessoa física. Não foi possível confirmar diretamente no bulário eletrônico da ANVISA neste ambiente (acesso bloqueado). VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar definitivamente ausente do mercado brasileiro."
     ]
   },
   {
@@ -1997,6 +2000,10 @@
     ],
     "commercial_presentations": [
       "DICORANTIL® (fosfato de disopiramida), Sanofi-Aventis Farmacêutica Ltda. — cápsulas 100 mg (Dicorantil), comprimidos de liberação prolongada 250 mg (Dicorantil-F) e solução injetável 100 mg (Dicorantil Injetável), historicamente registrados na ANVISA. Fonte de bula datada de 2014 (bulas.med.br); listagem ainda aparece em farmácias de varejo online (drogariaminasbrasil.com.br) nesta sessão, mas não foi possível confirmar produção/comercialização ativa em 2026 nem status atual do registro ANVISA. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se o registro segue ativo e se o produto continua em produção antes de orientar disponibilidade."
+    ],
+    "brand_names": [
+      "Dicorantil (cápsulas 100 mg, laboratório Sanofi-Aventis)",
+      "Dicorantil-F (fosfato de disopiramida — cápsulas, injetável e comprimidos 250 mg, laboratório Sanofi-Aventis)"
     ]
   },
   {
@@ -2198,6 +2205,9 @@
     ],
     "commercial_presentations": [
       "Multaq® (sanofi-aventis). Fonte consultada nesta sessão (news.med.br, ago/2026) indica que o registro sanitário do Multaq® está CANCELADO/CADUCO na ANVISA, e o produto não é mais produzido nem comercializado em território nacional. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA o status atual do registro antes de orientar prescrição, pela relevância clínica da indisponibilidade."
+    ],
+    "brand_names": [
+      "Multaq (comprimido revestido 400 mg, laboratório Sanofi-Aventis) — registro confirmado pela existência de alerta de segurança específico da própria ANVISA sobre Multaq/dronedarona (risco hepático e cardiovascular)"
     ]
   },
   {
@@ -3148,6 +3158,9 @@
     ],
     "commercial_presentations": [
       "Tambocor® e genéricos (mercados internacionais, ex. EUA/Europa) — NÃO localizado registro ativo de comercialização regular no Brasil nesta sessão. Fontes consultadas indicam que o acesso no país se dá por importação regulamentada por pessoa física ou instituição autorizada, conforme a RDC ANVISA nº 81/2008 (medicamento não registrado). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se há registro ativo antes de informar o fármaco como disponível em farmácia comum no Brasil."
+    ],
+    "brand_names": [
+      "Sem registro ativo na ANVISA nem constante na Rename 2022, conforme recomendação do Ministério Público Federal (PR-PA) pedindo ao Ministério da Saúde que estude viabilizar acesso para arritmia pediátrica. Disponível hoje apenas por importação de medicamento não registrado. VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar disponível para prescrição no Brasil."
     ]
   },
   {
@@ -12969,7 +12982,9 @@
     "slug": "lovastatina",
     "review_status": "revisado",
     "generic_name": "Lovastatina",
-    "brand_names": [],
+    "brand_names": [
+      "Lovastatina Sandoz (genérico, comprimidos 10 mg e 20 mg) — página de bula e de preço ativas em bulários consultados em 2026. RESSALVA: uma fonte de 2021 (InfoSUS/SC) afirma que a lovastatina não teria registro sanitário ativo e foi excluída de incorporação no SUS, o que contradiz a evidência de venda ativa do genérico Sandoz encontrada nesta pesquisa — a marca de referência histórica (Mevacor, MSD) parece não estar mais comercializada. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar a situação regulatória atual antes de usar em prescrição."
+    ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "A lovastatina é uma LACTONA INATIVA (pró-fármaco), transformada por hidrólise no fígado na forma ácida ativa, onde exerce sua ação farmacológica — mesmo padrão farmacocinético da sinvastatina neste catálogo, e diferente da pravastatina (que já circula na forma ativa). Essa ativação seletiva no fígado faz com que a concentração plasmática da droga ativa seja de apenas cerca de 5% da dose administrada, o que limita a ação farmacológica extra-hepática. Atua por inibição competitiva e reversível da enzima HMG-CoA redutase, reduzindo a síntese de colesterol intra-hepático; a diminuição do colesterol intracelular induz aumento da síntese de receptores hepáticos de LDL, com maior captação e menores níveis plasmáticos de colesterol LDL — o mesmo mecanismo final compartilhado por toda a classe. A inibição da síntese de colesterol hepático não afeta os níveis dos hormônios esteroides sintetizados a partir do colesterol em outros órgãos. É lipofílica (ao contrário da pravastatina, hidrofílica) e é SUBSTRATO do citocromo P450 3A4, sofrendo extensa extração hepática de primeira passagem — via metabólica responsável pelas interações mais graves da classe (inibidores potentes do CYP3A4 são CONTRAINDICADOS com lovastatina, ver `interactions`). O efeito redutor de colesterol é dependente da dose: numa faixa de 10-30% de redução do colesterol total, 20-45% de redução do LDL-C e 10-30% de redução de triglicérides, com elevação de 7-15% do HDL-C, conforme a dose. Como a redução de colesterol é dose-dependente e cumulativa, recomenda-se aguardar 4-6 semanas para avaliar o efeito pleno de cada dose antes de ajustá-la. Fontes: bula LOVASTATINA (genérico, laboratório distribuidor Farmacam, citando P.R. Vade-mécum 2004/2005 como referência bibliográfica — fonte secundária, declarada como tal, texto sucinto sem data de aprovação de bula visível); bula Lovastatina Sandoz (síntese via mirror bula.com.br, consultada nesta sessão em 11/08/2026); rótulo FDA/DailyMed de lovastatina (genérico), National Library of Medicine, seção Clinical Pharmacology — usado para complementar a farmacocinética (ligação proteica, excreção) que as fontes brasileiras não detalham com a mesma profundidade da pravastatina/fluvastatina deste catálogo.",
     "presentations": [
@@ -14077,5 +14092,128 @@
     "sbp_reduction_mmhg": -14.9,
     "dbp_reduction_mmhg": -7.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), ensaios comparativos de 6 semanas, redução pressórica corrigida por placebo: **Edarbi 80 mg** -14,9/-7,5 mmHg (PA de consultório) e -14,3/-9,4 mmHg (MAPA de 24h); **Edarbi 40 mg** -14,6/-6,2 mmHg (consultório) e -13,2/-8,6 mmHg (MAPA); comparadores ativos no mesmo ensaio — **olmesartana 40 mg** -11,4/-5,3 mmHg (consultório) e **valsartana 320 mg** -9,5/-4,4 mmHg (consultório), ambos numericamente inferiores à azilsartana 80 mg nesse ensaio. Valores numéricos registrados nos campos deste item são os da dose-alvo de 80 mg, medida em PA de consultório (-14,9/-7,5 mmHg). Consultado nesta sessão."
+  },
+  {
+    "slug": "omeprazol",
+    "review_status": "revisado",
+    "generic_name": "Omeprazol",
+    "brand_names": [
+      "Omeprazol (Genérico) — EMS, Neo Química, Prati-Donaduzzi (marca comercial \"Pratiprazol\"), Brainfarma, Geolab",
+      "Losec — AstraZeneca (referência histórica)",
+      "Omeprazol sódico — Eurofarma"
+    ],
+    "drug_class": "Inibidor da bomba de prótons (IBP), da família dos benzimidazóis substituídos",
+    "mechanism": "Inibe irreversivelmente a enzima H⁺/K⁺-ATPase (bomba de prótons) das células parietais gástricas, bloqueando a etapa final da secreção de ácido clorídrico, independentemente do estímulo que a desencadeia (histamina, gastrina ou acetilcolina). Não é fármaco cardiológico — entra no catálogo pela relevância direta ao cardiologista: gastroproteção do paciente em dupla antiagregação plaquetária (DAPT) pós-síndrome coronariana aguda/stent, e pela interação farmacocinética relevante com clopidogrel (ver `interactions`).",
+    "presentations": [
+      "Cápsula dura de liberação retardada (microesferas gastrorresistentes) — apresentações usuais de 20 mg e 40 mg"
+    ],
+    "indications": [
+      "Doença do refluxo gastroesofágico (DRGE)",
+      "Profilaxia/tratamento de úlcera ou erosão gastroduodenal associada a AAS/AINE em paciente cardiopata sob antiagregação",
+      "Prevenção de sangramento digestivo alto em paciente de alto risco (ex.: síndrome coronariana aguda em uso de dupla antiagregação plaquetária)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade conhecida ao omeprazol ou a componentes da fórmula"
+    ],
+    "interactions": [
+      "Clopidogrel — INTERAÇÃO RELEVANTE PARA O CARDIOLOGISTA: clopidogrel é pró-fármaco ativado pela CYP2C19; omeprazol é inibidor potente/moderado dessa mesma enzima, reduzindo a formação do metabólito ativo do clopidogrel e seu efeito antiplaquetário. A FDA incluiu aviso em quadro (boxed warning) recomendando evitar o uso concomitante de omeprazol (e esomeprazol) com clopidogrel; estudo observacional associou o uso concomitante a maior risco de AVC isquêmico. Quando IBP é necessário em paciente com clopidogrel, a literatura secundária consultada indica preferência por pantoprazol (menor interferência na CYP2C19) — VERIFICAÇÃO HUMANA NECESSÁRIA contra a bula/diretriz primária antes de usar essa recomendação de troca de forma prescritiva."
+    ],
+    "adverse_effects": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA — não foi possível, nesta pesquisa, ler a seção de reações adversas da bula profissional completa (bloqueio de acesso à rede a bulários oficiais); não preencher de memória."
+    ],
+    "monitoring": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA — texto literal da seção de precauções/monitorização da bula brasileira não foi lido diretamente nesta pesquisa."
+    ],
+    "notes": {
+      "fonte_da_pesquisa": "Dados desta entrada vêm de bulários públicos secundários (ConsultaRemédios, comunicado da Prati-Donaduzzi) e de um documento de referência de interação medicamentosa do VA (Departamento de Assuntos de Veteranos dos EUA) que cita a bula/boxed warning da FDA, mais o texto da bula brasileira de clopidogrel (MedicinaNet/Plavix) — não da leitura direta do PDF completo da bula brasileira de omeprazol, que ficou bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
+    },
+    "references": [
+      "ConsultaRemédios. Bula de Omeprazol. Acessado em 2026. https://consultaremedios.com.br/omeprazol/bula",
+      "Prati-Donaduzzi. Comunicado à imprensa (Pratiprazol). https://www.pratidonaduzzi.com.br/imprensa/noticias/item/2340",
+      "U.S. Department of Veterans Affairs, Pharmacy Benefits Management Services. Clopidogrel and Omeprazole/Esomeprazole Drug Interaction. Rev. fev/2024. https://www.va.gov/formularyadvisor/DOC_PDF/CRE_Clopidogrel_and_Omeprazole_Drug_Interaction_Rev_Feb_2024.pdf",
+      "MedicinaNet. Interações medicamentosas — bula profissional de Plavix (clopidogrel). https://bula.medicinanet.com.br/bula/detalhes/4136/interacoes_medicamentosas_plavix.htm"
+    ]
+  },
+  {
+    "slug": "insulina-humana-nph",
+    "review_status": "revisado",
+    "generic_name": "Insulina humana isofana (NPH — Neutral Protamine Hagedorn)",
+    "brand_names": [
+      "Novolin N — Novo Nordisk",
+      "Humulin N — Eli Lilly do Brasil",
+      "Insulina Humana Recombinante NPH — Fiocruz/Biomm (genérico/nacional)",
+      "Insuman Basal — Sanofi (apresentação em caneta pré-cheia)"
+    ],
+    "drug_class": "Insulina humana de ação intermediária (suspensão)",
+    "mechanism": "Insulina humana (recombinante, biossintética) complexada com protamina, o que retarda sua absorção subcutânea e prolonga o efeito em relação à insulina regular. Regula o metabolismo da glicose ligando-se ao receptor de insulina, promovendo captação periférica de glicose (principalmente músculo e tecido adiposo) e inibindo a produção hepática de glicose. Não é fármaco cardiológico — entra no catálogo pela relevância direta ao manejo do paciente diabético internado com síndrome coronariana aguda, no perioperatório de cirurgia cardíaca, e em protocolos hospitalares de ajuste glicêmico.",
+    "presentations": [
+      "Suspensão injetável 100 UI/mL — frasco-ampola de 10 mL; refil/Penfill de 3 mL para caneta; caneta descartável pré-cheia de 3 mL, conforme a marca"
+    ],
+    "indications": [
+      "Diabetes mellitus tipo 1 e tipo 2 que necessitam de insulinoterapia para controle glicêmico",
+      "Manejo do paciente diabético internado com síndrome coronariana aguda",
+      "Perioperatório de cirurgia cardíaca",
+      "Protocolos de infusão/ajuste glicêmico hospitalar"
+    ],
+    "contraindications": [
+      "Hipersensibilidade à insulina ou a qualquer componente da formulação",
+      "Hipoglicemia (contraindicação absoluta de administração enquanto o paciente está hipoglicêmico)"
+    ],
+    "interactions": [
+      "Betabloqueadores — mascaram os sintomas adrenérgicos de alarme da hipoglicemia (taquicardia, tremor), dificultando o reconhecimento de hipoglicemia pelo próprio paciente; efeito descrito como menos pronunciado com beta-1 seletivos do que com não seletivos. Monitorização glicêmica mais rigorosa recomendada quando os dois são usados juntos.",
+      "Diuréticos tiazídicos e corticosteroides — podem antagonizar o efeito hipoglicemiante da insulina (elevam a glicemia)"
+    ],
+    "adverse_effects": [
+      "Hipoglicemia é a reação adversa mais frequente da classe — VERIFICAÇÃO HUMANA NECESSÁRIA para lista completa de reações adversas da bula brasileira, não lida integralmente nesta pesquisa por bloqueio de acesso à rede."
+    ],
+    "monitoring": [
+      "Glicemia capilar/monitorização contínua conforme protocolo institucional — VERIFICAÇÃO HUMANA NECESSÁRIA para o texto literal de monitorização da bula brasileira, não lido diretamente nesta pesquisa."
+    ],
+    "notes": {
+      "fonte_da_pesquisa": "Dados desta entrada vêm de bulários públicos secundários (bula.com.br, ConsultaRemédios/Humulin N) e de um resumo de farmacologia de betabloqueadores (Sanar Med) — não da leitura direta do PDF completo da bula profissional de nenhum dos quatro fabricantes citados, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA ou a bula impressa antes de tratar como fonte primária plena."
+    },
+    "references": [
+      "Bula.com.br. Insulina Humana Recombinante NPH. https://bula.com.br/original/insulina-humana-recombinante-nph",
+      "ConsultaRemédios. Bula de Humulin N. https://consultaremedios.com.br/humulin-n/bula",
+      "Sanar Med. Resumo de betabloqueadores (mascaramento de sintomas de hipoglicemia). https://sanarmed.com/resumo-de-beta-bloqueadores/"
+    ]
+  },
+  {
+    "slug": "paracetamol",
+    "review_status": "revisado",
+    "generic_name": "Paracetamol (acetaminofeno)",
+    "brand_names": [
+      "Tylenol — Johnson & Johnson (referência)",
+      "Paracetamol (Genérico) — Neo Química, EMS, Prati-Donaduzzi, Geolab"
+    ],
+    "drug_class": "Analgésico e antipirético (mecanismo distinto dos anti-inflamatórios não esteroidais clássicos)",
+    "mechanism": "Inibe a síntese de prostaglandinas, predominantemente no sistema nervoso central, elevando o limiar de dor (analgesia) e atuando no centro hipotalâmico termorregulador (antipirese). Ao contrário dos AINEs, tem efeito anti-inflamatório periférico mínimo e não inibe de forma significativa a COX periférica/plaquetária — por isso é considerado, na literatura secundária consultada, a alternativa analgésica preferida ao AINE no paciente cardiopata (evitando retenção hidrossalina, piora de função renal e interferência antiplaquetária que os AINEs podem causar). Não é fármaco cardiológico — entra no catálogo pela relevância direta ao cardiologista como opção analgésica de primeira linha no cardiopata e pela interação com varfarina.",
+    "presentations": [
+      "Comprimidos 500 mg e 750 mg; solução em gotas 200 mg/mL (frasco 15 mL); suspensão oral pediátrica (frasco 60 mL)"
+    ],
+    "indications": [
+      "Analgesia e antipirese em paciente cardiopata, como alternativa de primeira linha ao AINE (relativamente contraindicado/desaconselhado no cardiopata, sobretudo com IC, HAS mal controlada, DRC ou em uso de anti-hipertensivo/diurético)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade ao paracetamol ou a componente da fórmula",
+      "Insuficiência hepática grave"
+    ],
+    "interactions": [
+      "Varfarina — uso de paracetamol em dose alta (>2 g/dia) por vários dias consecutivos pode potencializar o efeito anticoagulante da varfarina, elevando o INR e o risco de sangramento; recomenda-se monitorização do INR 3 a 5 dias após início do uso concomitante em paciente varfarinizado"
+    ],
+    "adverse_effects": [
+      "Hepatotoxicidade em dose alta/uso prolongado ou associado a álcool — alerta técnico da própria ANVISA sobre paracetamol e risco hepático. VERIFICAÇÃO HUMANA NECESSÁRIA para lista completa de reações adversas da bula brasileira, não lida integralmente nesta pesquisa."
+    ],
+    "renal_adjustment": "Sem ajuste renal padronizado identificado nesta pesquisa — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+    "hepatic_adjustment": "Em hepatopatas leves/moderados, etilismo crônico, desnutrição ou idade acima de 65 anos, a literatura secundária consultada indica reduzir a dose máxima diária para 3 g/dia (dose máxima padrão em adulto saudável: 4 g/dia ou 75 mg/kg/dia) — VERIFICAÇÃO HUMANA NECESSÁRIA contra a bula/diretriz primária antes de usar esse ajuste de forma prescritiva.",
+    "notes": {
+      "fonte_da_pesquisa": "Dados desta entrada vêm de bulários públicos secundários (ConsultaRemédios) e de páginas institucionais (alerta da ANVISA sobre hepatotoxicidade, página educativa da Tylenol/J&J) — não da leitura direta do PDF completo da bula profissional de nenhum fabricante, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
+    },
+    "references": [
+      "ConsultaRemédios. Bula de Paracetamol. https://consultaremedios.com.br/paracetamol/bula",
+      "ANVISA. Alerta técnico sobre paracetamol e risco hepático. http://antigo.anvisa.gov.br/en/informacoes-tecnicas13",
+      "Tylenol/Johnson & Johnson Brasil. Entendendo paracetamol e os danos no fígado. https://www.tylenol.com.br/alivio-seguro/sobre-paracetamol/entendendo-paracetamol-e-os-danos-no-figado",
+      "ConsultaRemédios. Bula de Varfarina Sódica (para a interação). https://consultaremedios.com.br/varfarina-sodica/bula"
+    ]
   }
 ]
