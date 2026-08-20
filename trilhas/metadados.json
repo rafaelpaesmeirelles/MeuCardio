@@ -22832,5 +22832,143 @@
         "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
       }
     ]
+  },
+  {
+    "slug": "trilha-sincope-no-idoso-diagnostico-diferencial-biomarcadores-e-risco-de-queda",
+    "titulo": "Síncope no idoso: diagnóstico diferencial ampliado, biomarcadores e o desfecho da queda",
+    "tema": "Síncope",
+    "objetivo": "Sair sabendo por que a síncope no idoso é um problema diagnóstico à parte — pela amnésia frequente do episódio e pela sobreposição com crise epiléptica e com gatilhos situacionais —, aplicar regras de decisão clínica e biomarcadores para objetivar o risco na emergência, usar o escore ROMEO para decidir quando pedir ecocardiograma, e reconhecer que a fratura por queda é um desfecho com risco próprio, independente da causa da síncope ter sido esclarecida.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-no-idoso-armadilhas-diagnosticas-e-diferencial-com-queda-inexplicada",
+        "por_que": "Abre a trilha pela premissa que quebra no idoso: ele frequentemente não relata com clareza ter perdido a consciência, e as diretrizes recomendam investigar queda inexplicada com o mesmo rigor de síncope inexplicada. Essa incerteza de relato é o motivo pelo qual o diferencial precisa ser mais cuidadoso nas próximas duas etapas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sincope-versus-crise-epileptica-diagnostico-diferencial-e-assistolia-ictal-esc-2018",
+        "por_que": "A confusão pós-ictal e a amnésia do episódio — que no idoso já são mais prováveis por si só, como a etapa anterior mostrou — tornam a crise epiléptica o diferencial mais facilmente confundido com síncope. A Tabela 10 da ESC 2018 fecha esse ponto com critérios objetivos (mioclonia, mordedura de língua, duração da confusão)."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+        "por_que": "Depois de afastar crise epiléptica, o segundo refinamento do diferencial é identificar gatilho situacional — nictúria, esforço evacuatório e tosse são especialmente comuns no idoso — porque cada mecanismo orienta uma conduta prática diferente, não apenas rotular como 'reflexa' de forma genérica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "regras-de-decisao-clinica-na-sincope-de-emergencia-sfsr-csrs-egsys-comparadas",
+        "por_que": "Com a causa provável mais bem delimitada pelas três etapas anteriores, a trilha passa da precisão diagnóstica para a objetivação do risco: comparar SFSR, Canadian Syncope Risk Score e EGSyS lado a lado mostra por que nenhuma se tornou universal e como escolher entre elas na emergência."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "biomarcadores-cardiacos-nt-probnp-e-troponina-na-estratificacao-de-risco-da-sincope",
+        "por_que": "Aprofunda um único componente das regras de decisão da etapa anterior — a troponina do CSRS — mostrando o que NT-proBNP acrescenta isoladamente e quando combinado ao escore já validado, refinando a estratificação além do que a regra clínica sozinha oferece."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia",
+        "por_que": "As regras de decisão e os biomarcadores das duas etapas anteriores estimam risco de evento adverso geral, mas não respondem a uma pergunta prática específica e recorrente no idoso: pedir ecocardiograma ou não. O ROMEO é a única ferramenta desta base dedicada a essa decisão pontual."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "sincope-e-risco-de-fratura-por-queda-o-que-os-estudos-de-coorte-mostram",
+        "por_que": "Fecha a trilha lembrando que todo o percurso diagnóstico anterior não esgota o cuidado: mesmo quando a causa é esclarecida e o risco de evento cardíaco é baixo, os dois estudos de coorte mostram que a síncope carrega risco próprio de fratura por queda no pós-alta — desfecho que, no idoso, muitas vezes é o que efetivamente traz o paciente de volta ao sistema de saúde."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-pulmonar-cteph-operavel-do-cateterismo-a-decisao-cirurgica",
+    "titulo": "Hipertensão pulmonar: CTEPH operável — do cateterismo cardíaco direito à decisão do Heart Team",
+    "tema": "Hipertensão pulmonar",
+    "objetivo": "Sair sabendo interpretar corretamente a medida hemodinâmica que confirma o diagnóstico de CTEPH, aplicar os critérios que definem operabilidade e a lógica da decisão em Heart Team especializado, situar os números reais de sobrevida que sustentam a endarterectomia como tratamento potencialmente curativo, e conduzir a anticoagulação e o seguimento por biomarcador depois da decisão terapêutica.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cateterismo-cardiaco-direito-na-hipertensao-pulmonar-tecnica-armadilhas-e-seguranca",
+        "por_que": "Ponto de partida da trilha: todo critério de operabilidade e todo dado de sobrevida das etapas seguintes depende de um valor de PAPm/POCP/RVP obtido por cateterismo — este documento mostra como a técnica (zero do transdutor, medida da POCP) pode reclassificar o fenótipo hemodinâmico sem que a fisiologia tenha mudado, e por isso vem antes de qualquer decisão clínica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+        "por_que": "Com a técnica de medida já entendida, esta etapa situa a CTEPH como grupo 4 — definição, incidência, exame de rastreamento (cintilografia V/Q) e confirmação — e já introduz o transplante pulmonar como desfecho de reserva, que reaparece no fim da trilha quando nenhuma via terapêutica anterior resolve."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+        "por_que": "O núcleo da trilha: por que a diretriz manda avaliar TODO paciente com CTEPH para endarterectomia pulmonar antes de qualquer terapia farmacológica, e por que essa decisão não é binária — exige Heart Team especializado avaliando extensão anatômica, risco cirúrgico individual e comorbidade, não um corte automático de exame de imagem."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016",
+        "por_que": "Depois de entender COMO se decide operar, esta etapa traz os números reais que justificam a decisão: registro prospectivo de 679 pacientes, comparando sobrevida entre os 404 operados e os 275 não operados na mesma coorte — é o dado concreto por trás da afirmação de que a endarterectomia é potencialmente curativa."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-na-hipertensao-arterial-pulmonar-idiopatica-compera-versus-reveal",
+        "por_que": "Contraste deliberado: na CTEPH (grupo 4, já vista nesta trilha) a anticoagulação vitalícia é consensual; este documento mostra que a mesma pergunta na HAP idiopática (grupo 1) carrega quase 30 anos de evidência só observacional, com COMPERA e REVEAL chegando a conclusões opostas — ensina a não generalizar a certeza de manejo de um grupo etiológico para outro."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "nt-probnp-diferenca-minima-importante-pah-ph-ild-2026",
+        "por_que": "Fecha a trilha no seguimento longitudinal: depois de diagnosticar, decidir operabilidade, tratar e definir a política de anticoagulação, esta etapa ensina a interpretar a queda do NT-proBNP ao longo do acompanhamento — que magnitude de redução é clinicamente relevante, e não apenas um número que caiu."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-arritmias-tecnicas-de-ablacao-alem-do-endocardico-padrao",
+    "titulo": "Arritmias: quando o endocárdico padrão não basta — mecanismos curáveis, abordagem epicárdica e a nova energia de ablação",
+    "tema": "Arritmias",
+    "objetivo": "Sair sabendo reconhecer dois mecanismos de taquicardia ventricular idiopática curáveis por ablação simples (fascicular sensível a verapamil e reentrada de ramo), identificar quando a abordagem endocárdica falha e o substrato exige acesso epicárdico — tanto na TV estrutural chagásica/não isquêmica quanto no próprio substrato eletricamente anormal da síndrome de Brugada —, e situar a ablação por campo pulsado como a energia nova que já se aplica a esse espectro.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "taquicardia-ventricular-fascicular-belhassen-diagnostico-resposta-ao-verapamil-e-ablacao",
+        "por_que": "Entrada pelo mecanismo mais simples e mais frequentemente esquecido: uma TV de QRS relativamente estreito, em coração estruturalmente normal, que responde a verapamil e cura com ablação pontual do fascículo — a exceção que confirma por que nem toda TV exige mapeamento extenso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "taquicardia-ventricular-por-reentrada-de-ramo-diagnostico-ablacao-do-ramo-direito-e-resultado",
+        "por_que": "Segundo mecanismo idiopático curável, mas de lógica oposta ao fascicular: o circuito usa o próprio sistema de condução (ramo direito/esquerdo), quase sempre em cardiopatia estrutural de base, e se resolve ablando o ramo direito — prepara a virada da trilha para quando o substrato deixa de ser 'simples'."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ablacao-epicardica-de-taquicardia-ventricular-na-cardiomiopatia-chagasica-e-nao-isquemica",
+        "por_que": "Do mecanismo pontual para o substrato estrutural extenso: na cardiomiopatia chagásica e não isquêmica o circuito costuma ser subepicárdico, e o endocárdico isolado falha — é aqui que a decisão de acesso epicárdico entra na prática, com seus riscos próprios (pericárdico, coronário)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "ablacao-do-substrato-epicardico-na-sindrome-de-brugada-nademanee-e-pappone",
+        "por_que": "Mesma técnica de acesso epicárdico, aplicada a uma doença de natureza diferente: não é cicatriz de cardiopatia estrutural, é o substrato eletricamente anormal da via de saída do VD que sustenta o padrão de Brugada — mostra que a abordagem epicárdica não é exclusiva de TV pós-infarto/chagásica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ablacao-por-campo-pulsado-em-taquicardia-ventricular-e-extrassistole-idiopatica",
+        "por_que": "Fecha a trilha com a energia nova que atravessa todo o espectro visto — da TV idiopática pontual ao substrato epicárdico extenso —, com o potencial (e as limitações ainda em avaliação) de mudar o perfil de segurança dessas ablações mais complexas."
+      }
+    ]
   }
 ]
