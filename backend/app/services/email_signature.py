@@ -23,7 +23,10 @@ from app.services.professional_profile import council_display, professional_name
 # Asset canônico atual do produto. URL absoluta porque a mesma assinatura é
 # renderizada fora do SPA (clientes de e-mail), mas continua servida pelo
 # domínio público da própria CorVIA.
-LOGO_CORVIA_URL = f"{settings.public_url.rstrip('/')}/corvia-logo-canonical.svg"
+# Clientes de e-mail e alguns navegadores bloqueiam SVG remoto dentro de
+# mensagens/assinaturas. Este PNG é uma renderização direta do SVG canônico,
+# não uma marca paralela nem o asset legado.
+LOGO_CORVIA_URL = f"{settings.public_url.rstrip('/')}/corvia-logo-canonical.png"
 
 
 def _endereco_profissional(user: Any) -> str | None:

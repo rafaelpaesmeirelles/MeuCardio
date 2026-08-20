@@ -5,6 +5,7 @@ import { Carregando, Erro, Vazio } from "../components/Estado";
 import Icone from "../components/Icone";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
+import PrescricaoLivreEspecial from "../components/PrescricaoLivreEspecial";
 
 type PrecoCmedSugestao = { valor: number | null; rotulo: string };
 type Farmaco = {
@@ -216,15 +217,15 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         </p>
       )}
       {doc.tipo === "RCE" && (
-        <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Modelo físico Anvisa V2: duas vias completas, com frente e verso para cada página
-          numerada da prescrição.
-        </p>
+        <>
+          <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
+            Modelo Anvisa V2: duas vias, frente e verso em cada página.
+          </p>
+        </>
       )}
       {temC5 && (
         <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
-          Lista C5: emissão somente por CRM/CRO e com CPF do prescritor, endereço e telefone
-          profissionais, endereço do paciente e CID preenchidos.
+          Lista C5: exige CRM/CRO, CPF, endereço e telefone profissionais, endereço do paciente e CID.
         </p>
       )}
 
@@ -240,8 +241,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         <div style={{ marginTop: "0.6rem" }}>
           {doc.tipo === "RCE" ? (
             <p className="eyebrow" style={{ margin: "0.3rem 0" }}>
-              A RCE usa automaticamente o endereço profissional cadastrado. Para Lista C5,
-              endereço e telefone profissionais são obrigatórios.
+              Usa o endereço profissional cadastrado; na Lista C5, endereço e telefone são obrigatórios.
             </p>
           ) : (
             <>
@@ -799,6 +799,8 @@ export default function Receituario() {
           Histórico
         </button>
       </div>
+
+      {aba === "nova" && !criado && <PrescricaoLivreEspecial />}
 
       {aba === "historico" ? (
         <HistoricoReceituario onAbrir={abrirDoHistorico} onRecriar={recriarDoHistorico} />

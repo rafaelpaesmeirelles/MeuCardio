@@ -745,13 +745,14 @@ type AssinaturaEmail = {
   ativa: boolean;
   incluir_telefone: boolean;
   incluir_endereco: boolean;
+  certificado_a1_conectado: boolean;
+  assinatura_digital_ativa: boolean;
   pre_visualizacao: AssinaturaPreview | null;
 };
 
-/** Assinatura anexada ao final de todo e-mail enviado pelo CorvIA Mail (caixa
- * nativa e contas Google/Microsoft conectadas) — logo Corvia, logo
- * profissional se houver, nome e CRM. Desligada por padrão; telefone e
- * endereço do consultório são opções à parte, mesmo com a assinatura ligada. */
+/** Rodapé visual anexado a todo e-mail enviado pelo CorvIA Mail. Com A1,
+ * Google/Microsoft/Yahoo/iCloud também usam S/MIME; a caixa nativa fica
+ * bloqueada para nunca degradar silenciosamente para envio sem assinatura. */
 function PreferenciaAssinaturaEmail() {
   const [dados, setDados] = useState<AssinaturaEmail | null>(null);
   const [salvando, setSalvando] = useState(false);
@@ -779,8 +780,8 @@ function PreferenciaAssinaturaEmail() {
     <div className="cartao">
       <h2 style={{ margin: "0 0 0.2rem" }}>Assinatura de e-mail</h2>
       <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
-        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM ao final de
-        todo e-mail enviado pelo CorvIA Mail — caixa nativa e contas Google/Microsoft conectadas.
+        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM. Quando um
+        certificado A1 estiver conectado, os envios compatíveis também serão assinados digitalmente por S/MIME.
       </p>
 
       <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.7rem" }}>
@@ -790,6 +791,14 @@ function PreferenciaAssinaturaEmail() {
         />
         Incluir assinatura nos e-mails que eu enviar
       </label>
+
+      {dados.ativa && (
+        <p style={{ margin: "0.55rem 0 0", fontSize: "0.8rem", color: dados.assinatura_digital_ativa ? "var(--sucesso)" : "var(--texto-secundario)" }}>
+          {dados.assinatura_digital_ativa
+            ? "Assinatura digital S/MIME ativa com seu A1. Google, Microsoft, Yahoo e iCloud enviam assinados; a caixa nativa é bloqueada para não enviar sem assinatura."
+            : "Assinatura visual ativa. Conecte seu certificado A1 acima para ativar também a assinatura digital S/MIME."}
+        </p>
+      )}
 
       {dados.ativa && (
         <div style={{ marginTop: "0.5rem", paddingLeft: "1.6rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
@@ -827,7 +836,7 @@ function PreferenciaAssinaturaEmail() {
                   style={{ maxHeight: 48, maxWidth: 160, display: "block", marginBottom: 6 }}
                 />
               )}
-              <img src={dados.pre_visualizacao.logo_corvia_url} alt="Corvia" style={{ height: 22, display: "block" }} />
+              <img src="/corvia-logo-canonical.svg" alt="Corvia" style={{ height: 22, display: "block" }} />
             </div>
             <div style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "12.5px", color: "#3a4750" }}>
               <strong style={{ color: "#0b2e45" }}>{dados.pre_visualizacao.nome}</strong>

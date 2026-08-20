@@ -48,7 +48,8 @@ def test_assinatura_ligada_contem_nome_e_logo_corvia(db, criar_usuario):
     html = montar_assinatura_html(user)
     assert html is not None
     assert "Dra. Ana Souza" in html
-    assert "corvia-logo-canonical.svg" in html
+    assert "corvia-logo-canonical.png" in html
+    assert "corvia-logo-compacta.png" not in html
 
 
 def test_telefone_e_endereco_sao_opt_in_independentes_da_assinatura(db, criar_usuario):
@@ -129,6 +130,8 @@ def test_get_assinatura_comeca_desligada(client, criar_usuario):
     assert resposta.status_code == 200
     corpo = resposta.json()
     assert corpo["ativa"] is False
+    assert corpo["certificado_a1_conectado"] is False
+    assert corpo["assinatura_digital_ativa"] is False
     assert corpo["pre_visualizacao"] is None
 
 
@@ -146,7 +149,8 @@ def test_put_assinatura_liga_e_reflete_na_pre_visualizacao(client, criar_usuario
     # isso em JSX, nunca dangerouslySetInnerHTML (política de
     # scripts/check-rendering-security.mjs).
     assert corpo["pre_visualizacao"]["nome"] == "Bruno Lima"
-    assert corpo["pre_visualizacao"]["logo_corvia_url"].endswith("corvia-logo-canonical.svg")
+    assert corpo["pre_visualizacao"]["logo_corvia_url"].endswith("corvia-logo-canonical.png")
+    assert corpo["assinatura_digital_ativa"] is False
 
     status = client.get("/api/email/assinatura", headers=_headers(token))
     assert status.json()["ativa"] is True
@@ -179,8 +183,6 @@ def test_enviar_sem_assinatura_mantem_texto_e_plaintext(client, db, criar_usuari
 
 
 def test_enviar_com_assinatura_ativa_anexa_html(client, db, criar_usuario, monkeypatch_mail360):
-    from app.core.db import SessionLocal
-
     user, _ = criar_usuario(full_name="Carla Dias")
     token_app = create_access_token(user.email, scope="app")
     client.put(
@@ -198,4 +200,26 @@ def test_enviar_com_assinatura_ativa_anexa_html(client, db, criar_usuario, monke
     assert enviada["mail_format"] == "html"
     assert "Texto simples" in enviada["corpo"]
     assert "Carla Dias" in enviada["corpo"]
-    assert "corvia-logo-canonical.svg" in enviada["corpo"]
+    assert "corvia-logo-canonical.png" in enviada["corpo"]
+
+
+def test_caixa_nativa_bloqueia_envio_quando_smime_esta_ativo(
+    client, db, criar_usuario, monkeypatch_mail360, monkeypatch,
+):
+    from app.api import email as email_api
+
+    user, _ = criar_usuario(full_name="Rafael Médico")
+    user.email_assinatura_ativa = True
+    db.commit()
+    token = _token_email(client, db, user, monkeypatch_mail360)
+    monkeypatch.setattr(email_api.certificado_a1, "obter", lambda db, user: object())
+
+    resposta = client.post(
+        "/api/email/mensagens",
+        json={"para": "destino@example.com", "assunto": "Oi", "corpo_html": "Texto", "anexos": []},
+        headers=_headers(token),
+    )
+
+    assert resposta.status_code == 409
+    assert "não aceita" in resposta.json()["detail"]
+    assert monkeypatch_mail360["mensagens_enviadas"] == []

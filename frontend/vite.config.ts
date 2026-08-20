@@ -31,6 +31,9 @@ export default defineConfig({
         skipWaiting: true,
         clientsClaim: true,
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
+        // O PNG existe para clientes de e-mail que não renderizam SVG, mas
+        // não precisa ocupar o precache offline do aplicativo.
+        globIgnores: ["corvia-logo-canonical.png", "corvia-logo.png"],
         manifestTransforms: [
           async (entries) => ({
             manifest: entries.filter((entry) => {

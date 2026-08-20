@@ -561,10 +561,10 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
             "A geração deste modelo numerado só será liberada após integração "
             "oficial e validação do número atribuído ao prescritor."
         )
-    if doc.tipo_codigo == "RCE" and dados.metodo != "MANUAL":
+    if doc.tipo_codigo == "RCE" and dados.metodo not in {"MANUAL", "A1_ARQUIVO"}:
         bloqueios.append(
-            "A RCE disponível nesta etapa é o modelo físico para impressão e "
-            "assinatura manual. A emissão eletrônica aguarda o SNCR."
+            "A RCE aceita assinatura manual ou assinatura eletrônica qualificada "
+            "ICP-Brasil com o certificado A1 conectado à conta."
         )
 
     disponivel, motivo_indisponivel = provedor.disponivel()
