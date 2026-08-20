@@ -8424,5 +8424,224 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "desprescricao-anti-hipertensiva-e-simplificacao-no-idoso-polimedicado",
+    "condicao": "Desprescrição e simplificação anti-hipertensiva no idoso polimedicado",
+    "resumo": "O que checar antes de acrescentar mais um anti-hipertensivo num idoso em polifarmácia fora de meta — confirmar adesão real, avaliar elegibilidade para retirar 1 fármaco (OPTIMISE) e considerar combinação em comprimido único quando o obstáculo é o número de comprimidos, não de classes.",
+    "documento_origem": "polifarmacia-anti-hipertensiva-e-adesao-no-idoso-desprescrever-simplificar-ou-manter",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sheppard JP, Burt J, Lown M, Temple E, Lowe R, Fraser R, Allen J, Ford GA, Heneghan C, Hobbs FDR, Jowett S, Kodabuckus S, Little P, Mant J, Mollison J, Payne RA, Williams M, Yu LM, McManus RJ; OPTIMISE Investigators. Effect of Antihypertensive Medication Reduction vs Usual Care on Short-term Blood Pressure Control in Patients With Hypertension Aged 80 Years and Older: The OPTIMISE Randomized Clinical Trial. JAMA. 2020;323(20):2039-2051. DOI: 10.1001/jama.2020.4871. PMID: 32453368",
+      "Parati G, Kjeldsen S, Coca A, Cushman WC, Wang J. Adherence to Single-Pill Versus Free-Equivalent Combination Therapy in Hypertension: A Systematic Review and Meta-Analysis. Hypertension. 2021;77(2):692-705. DOI: 10.1161/HYPERTENSIONAHA.120.15781. PMID: 33390044",
+      "Tomaszewski M, White C, Patel P, Masca N, Damani R, Hepworth J, Samani NJ, Gupta P, Madira W, Stanley A, Williams B. High rates of non-adherence to antihypertensive treatment revealed by high-performance liquid chromatography-tandem mass spectrometry (HP LC-MS/MS) urine analysis. Heart. 2014;100(11):855-861. DOI: 10.1136/heartjnl-2013-305063. PMID: 24694797"
+    ],
+    "itens": [
+      {
+        "id": "polif-confirmar-adesao-antes-escalonar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de escalonar dose ou acrescentar classe anti-hipertensiva em paciente polimedicado fora de meta, investigar não adesão — prevalência medida objetivamente por espectrometria de massa em urina foi de 25% (10,1% total, 14,9% parcial) num centro especializado em hipertensão",
+        "origem_secao": "Quanto da resistência é na verdade não adesão — o dado objetivo"
+      },
+      {
+        "id": "polif-suspeita-clinica-nao-adesao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Onde não houver método objetivo de dosagem disponível, considerar suspeita clínica de não adesão (queda abrupta de pressão em consulta observada, discordância entre MAPA e resposta esperada) e perguntar diretamente sobre custo, efeito colateral não relatado e número real de comprimidos tomados por dia",
+        "origem_secao": "Quanto da resistência é na verdade não adesão — o dado objetivo"
+      },
+      {
+        "id": "polif-criterios-elegibilidade-reducao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferir os critérios de elegibilidade do OPTIMISE antes de propor retirada de fármaco: idade de 80 anos ou mais, sistólica de consultório já abaixo de 150 mmHg, uso de pelo menos 2 anti-hipertensivos, e o médico já considerando apropriada a redução",
+        "origem_secao": "A polifarmácia pode ser revertida com segurança? O ensaio OPTIMISE"
+      },
+      {
+        "id": "polif-retirar-um-farmaco-por-vez",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se elegível, retirar 1 fármaco de cada vez, não vários simultaneamente — foi o desenho testado no ensaio (retirada de 1 fármaco vs. cuidado usual sem mudança mandatória)",
+        "origem_secao": "A polifarmácia pode ser revertida com segurança? O ensaio OPTIMISE"
+      },
+      {
+        "id": "polif-reavaliacao-estruturada-12-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação estruturada agendada em prazo definido (o ensaio usou 12 semanas) após a retirada — a redução só se manteve em 66,3% dos participantes, e em 1 a cada 3 casos foi necessário reintroduzir o fármaco retirado",
+        "origem_secao": "A polifarmácia pode ser revertida com segurança? O ensaio OPTIMISE"
+      },
+      {
+        "id": "polif-alertar-elevacao-esperada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente e equipe informados de que a não inferioridade do desfecho binário (sistólica < 150 mmHg) conviveu com elevação média real da sistólica de 3,4 mmHg (IC95% 1,1 a 5,8 mmHg) no grupo de redução — não inferior não significa sem custo pressórico",
+        "origem_secao": "A polifarmácia pode ser revertida com segurança? O ensaio OPTIMISE"
+      },
+      {
+        "id": "polif-considerar-spc-quando-problema-e-numero-de-comprimidos",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Quando o obstáculo à adesão é o número de comprimidos, não o número de classes clinicamente necessárias, priorizar combinação em comprimido único (SPC) em vez de somar comprimidos separados, se houver apresentação comercial correspondente — metanálise mostrou adesão significativamente melhor com SPC em 18 de 23 estudos e persistência melhor em 14 de 16",
+        "origem_secao": "Quando a saída é simplificar, não retirar: adesão a combinação em comprimido único"
+      },
+      {
+        "id": "polif-nao-desprescrever-fora-de-meta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não extrapolar a estratégia de retirada para pacientes fora do critério de inclusão do OPTIMISE — fora de meta pressórica, mais jovens, ou sem que o médico já considere apropriada a redução",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento já verificado e publicado nesta base (polifarmacia-anti-hipertensiva-e-adesao-no-idoso-desprescrever-simplificar-ou-manter, que reúne Sheppard JP et al. JAMA 2020 — ensaio OPTIMISE, Parati G et al. Hypertension 2021 e Tomaszewski M et al. Heart 2014), com a seção de origem registrada em cada item, em 20/08/2026."
+  },
+  {
+    "slug": "suspensao-de-anticoagulacao-apos-ablacao-sem-recorrencia-alone-af",
+    "condicao": "Avaliação para suspensão de anticoagulação oral após ablação bem-sucedida de FA",
+    "resumo": "O que confirmar antes de considerar suspender a anticoagulação oral em paciente sem recorrência documentada após ablação de fibrilação atrial, com base no ensaio randomizado ALONE-AF — distinto do checklist geral de acompanhamento pós-ablação, que trata da manutenção obrigatória da anticoagulação nos primeiros meses.",
+    "documento_origem": "alone-af-suspensao-da-anticoagulacao-apos-ablacao-bem-sucedida-de-fibrilacao-atrial",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kim D, Shim J, Choi EK, et al; ALONE-AF Investigators. Long-Term Anticoagulation Discontinuation After Catheter Ablation for Atrial Fibrillation: The ALONE-AF Randomized Clinical Trial. JAMA. 2025;334(14):1246-1254. DOI: 10.1001/jama.2025.14679. PMID: 40886309. NCT04432220"
+    ],
+    "itens": [
+      {
+        "id": "alone-confirmar-ausencia-recorrencia-documentada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar ausência documentada de recorrência de arritmia atrial após ablação, com vigilância de ritmo de intensidade adequada — é pré-requisito de elegibilidade do ensaio, não presunção clínica de sucesso do procedimento",
+        "origem_secao": "Limites críticos"
+      },
+      {
+        "id": "alone-calcular-cha2ds2-vasc",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular CHA₂DS₂-VASc antes de considerar a suspensão — a população do ensaio tinha escore médio de 2,1 ± 1,0, risco tromboembólico médio relativamente baixo a moderado, e o resultado não deve ser extrapolado automaticamente para escore muito alto",
+        "origem_secao": "Limites críticos"
+      },
+      {
+        "id": "alone-excluir-avc-previo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir AVC/AIT prévio ou múltiplas comorbidades tromboembólicas antes de considerar a suspensão — esses grupos podem ter relação risco-benefício distinta e não estão adequadamente representados pela média do ensaio",
+        "origem_secao": "Limites críticos / Armadilhas clínicas"
+      },
+      {
+        "id": "alone-discutir-risco-beneficio-individualizado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutir com o paciente que o desfecho composto (AVC, embolia sistêmica ou sangramento maior) favoreceu a suspensão em 2 anos (0,3% vs. 2,2%) sobretudo pela redução de sangramento maior (0 vs. 5 pacientes), e que o componente isquêmico isolado foi raro e inconclusivo (diferença de AVC isquêmico com IC95% cruzando o zero, −1,6 a 0,6) — o ensaio não demonstra que suspender reduz AVC",
+        "origem_secao": "Resultado primário / Componentes do desfecho"
+      },
+      {
+        "id": "alone-nao-tratar-como-suspensao-rotineira",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não tratar o resultado do ensaio como autorização para suspensão rotineira em todo paciente pós-ablação — a evidência ainda não sustenta isso; a decisão é individualizada, dentro dos critérios de seleção do estudo",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "alone-manter-estrategia-vigilancia-apos-suspender",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se optar por suspender, manter estratégia estruturada de vigilância de ritmo — a lógica do estudo pressupõe seleção cuidadosa e vigilância contínua, não interrupção indiscriminada sem seguimento",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "alone-nao-confundir-assintomatico-com-sem-recorrencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não considerar ausência de sintomas equivalente a ausência de recorrência eletrocardiográfica — FA silenciosa não é descartada só pela ausência de queixa do paciente",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento já verificado e publicado nesta base (alone-af-suspensao-da-anticoagulacao-apos-ablacao-bem-sucedida-de-fibrilacao-atrial, ensaio ALONE-AF, Kim D et al. JAMA 2025, PMID 40886309), com a seção de origem registrada em cada item, em 20/08/2026."
+  },
+  {
+    "slug": "infusao-de-nitroprussiato-na-emergencia-hipertensiva-dose-e-toxicidade",
+    "condicao": "Infusão de nitroprussiato de sódio na emergência hipertensiva — dose e vigilância de toxicidade",
+    "resumo": "Tetos de dose (adulto vs. pediátrico, infusão curta vs. prolongada), técnica de retirada e limites laboratoriais de cianeto/tiocianato pela bula brasileira do nitroprussiato — checklist deliberadamente sem indicação clínica de quando usar o fármaco, porque o documento de origem não cobre esse ponto.",
+    "documento_origem": "nitroprussiato-na-emergencia-hipertensiva-tetos-e-toxicidade-pela-bula-brasileira",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bula do NITROPRUS (nitroprusseto de sódio, Cristália Produtos Químicos Farmacêuticos Ltda.), seção de posologia e instruções de posologia especial"
+    ],
+    "itens": [
+      {
+        "id": "nitroprus-dose-inicial-titulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar infusão entre 0,3 e 1 mcg/kg/min, titulando conforme resposta pressórica, com dose média em torno de 3 mcg/kg/min — velocidade na qual a bula registra redução da pressão a 60-70% do nível pré-tratamento",
+        "origem_secao": "Posologia padrão, para infusão de até 3 horas"
+      },
+      {
+        "id": "nitroprus-teto-adulto-infusao-curta",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Respeitar o teto de dose de adulto para infusão de até 3 horas fixado pela bula brasileira, 8 mcg/kg/min — não confundir com o teto de 10 mcg/kg/min, que é o limite pediátrico, não o de adulto",
+        "origem_secao": "Posologia padrão, para infusão de até 3 horas"
+      },
+      {
+        "id": "nitroprus-teto-infusao-prolongada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em terapêutica de dias ou semanas, não ultrapassar a velocidade média de 2,5 mcg/kg/min (equivalente a 3,6 mg/kg/dia) — teto bem mais baixo que o de infusão curta, e é o que rege o paciente que permanece na bomba",
+        "origem_secao": "Infusão prolongada — outro teto, muito mais baixo"
+      },
+      {
+        "id": "nitroprus-bomba-infusao-obrigatoria",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Administrar por microrregulador de gotas ou bomba de infusão, com ajuste guiado por medidas frequentes da pressão arterial — exigência da bula, pela instalação rápida e intensidade do efeito hipotensor",
+        "origem_secao": "A retirada é parte da prescrição"
+      },
+      {
+        "id": "nitroprus-retirada-gradual",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Nunca interromper subitamente — retirar ao longo de 10 a 30 minutos para evitar efeito rebote de elevação excessiva da pressão; ao interromper, a pressão volta imediatamente aos valores prévios",
+        "origem_secao": "A retirada é parte da prescrição"
+      },
+      {
+        "id": "nitroprus-monitorar-cianeto",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em infusão lenta, monitorar nível de cianeto — limites de tolerância de 100 mcg/100 mL no sangue e 8 mcg/100 mL no plasma",
+        "origem_secao": "Toxicidade — os limites que os protocolos de bolso não trazem"
+      },
+      {
+        "id": "nitroprus-monitorar-tiocianato",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em infusão por mais de 3 dias, monitorar tiocianato — não deve exceder 6 mg/100 mL; níveis muito elevados podem ser reduzidos rapidamente com hemodiálise",
+        "origem_secao": "Toxicidade — os limites que os protocolos de bolso não trazem"
+      },
+      {
+        "id": "nitroprus-antidoto-se-ultrapassar-limites",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se os limites de cianeto/tiocianato forem ultrapassados, ou sempre que forem administradas doses acima das recomendadas, empregar os antídotos, terapêutica ou preventivamente, conforme a bula",
+        "origem_secao": "Toxicidade — os limites que os protocolos de bolso não trazem"
+      },
+      {
+        "id": "nitroprus-ajustar-dose-idoso",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em idosos, considerar que a dose necessária para a mesma redução pressórica tende a ser menor — podem ser mais sensíveis ao efeito hipotensor",
+        "origem_secao": "Idosos"
+      },
+      {
+        "id": "nitroprus-nao-cobre-indicacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA — este documento de origem não define quando usar nitroprussiato (em qual emergência hipertensiva é o agente de escolha, e contra quais alternativas) nem o alvo terapêutico de redução pressórica; confirmar indicação e meta por diretriz específica de emergência hipertensiva antes de iniciar a infusão",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento já verificado e publicado nesta base (nitroprussiato-na-emergencia-hipertensiva-tetos-e-toxicidade-pela-bula-brasileira, fonte: bula do NITROPRUS, Cristália), com a seção de origem registrada em cada item. Um item (indicação clínica e alvo terapêutico) permanece marcado VERIFICAÇÃO HUMANA NECESSÁRIA porque o documento de origem declara explicitamente não cobrir esse ponto — nenhuma indicação foi inventada. Em 20/08/2026."
   }
 ]
