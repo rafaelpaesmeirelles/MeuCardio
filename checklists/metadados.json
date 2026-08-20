@@ -5543,5 +5543,236 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "duracao-de-dapt-apos-sca-decisao-por-risco-hemorragico-e-isquemico",
+    "condicao": "Duração da dupla antiagregação (DAPT) após síndrome coronariana aguda — decisão por risco hemorrágico e isquêmico",
+    "resumo": "Como decidir a duração da DAPT após SCA — do padrão de 12 meses ao encurtamento por alto risco hemorrágico ou ao prolongamento por alto risco isquêmico — derivado do complemento de duração de DAPT desta biblioteca.",
+    "documento_origem": "sindrome-coronariana-aguda-duracao-de-dapt-complemento-final",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Valgimigli M, Frigoli E, Heg D, et al. Dual Antiplatelet Therapy after PCI in Patients at High Bleeding Risk. N Engl J Med. 2021;385(18):1643-1655. DOI 10.1056/NEJMoa2108749. PMID 34449185 — números do MASTER DAPT conferidos contra o abstract indexado em 30/07/2026.",
+      "Ge Z, Kan J, Gao X, et al. Extended Clopidogrel Monotherapy vs DAPT in Patients With Acute Coronary Syndromes at High Ischemic and Bleeding Risk: The OPT-BIRISK Randomized Clinical Trial. JAMA Cardiol. 2024;9(6):523-531. PMID 38630489 — números conferidos contra o abstract indexado em 30/07/2026.",
+      "Terapia antiplaquetária dupla para o cardiologista geral · European Society of Cardiology · 2023 · https://www.escardio.org/Councils/Council-for-Cardiology-Practice-(CCP)/Cardiopractice/dual-antiplatelet-therapy-for-the-general-cardiologist — fonte da composição do escore PRECISE-DAPT (página da sociedade, não a publicação original do escore)."
+    ],
+    "itens": [
+      {
+        "id": "dapt-padrao-12m",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Duração padrão de 12 meses de DAPT registrada como ponto de partida, independente do tratamento ter sido clínico, por ICP ou cirúrgico, e do tipo de stent (única recomendação Classe I mantida após quase duas décadas de evidência)",
+        "origem_secao": "Duracao padrao dapt"
+      },
+      {
+        "id": "dapt-precise-score",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore PRECISE-DAPT calculado a partir dos 5 componentes (idade, depuração de creatinina, hemoglobina, contagem de leucócitos, sangramento prévio) para estimar risco de sangramento — fonte secundária (página da ESC Council for Cardiology Practice, não a publicação original do escore): VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao ponto de corte numérico exato antes de decisão isolada por este escore",
+        "origem_secao": "Escore precise dapt"
+      },
+      {
+        "id": "dapt-hbr-encurtada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se alto risco hemorrágico (HBR): considerada DAPT abreviada de 1 a 6 meses com transição para monoterapia — no MASTER DAPT, 1 mês de DAPT seguido de suspensão reduziu sangramento maior/clinicamente relevante não maior em 335 dias (6,5% vs. 9,4%, IC95% -4,40 a -1,24pp, p<0,001), sem aumento de eventos isquêmicos e com eventos clínicos adversos líquidos não inferiores (7,5% vs. 7,7%)",
+        "origem_secao": "Dapt curta alto risco sangramento"
+      },
+      {
+        "id": "dapt-isquemico-prolongada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se alto risco isquêmico sem risco hemorrágico relevante: considerado prolongamento da DAPT além de 12 meses (Classe IIb), com o paciente informado de que o ganho isquêmico (NNT 60-80) vem às custas de mais sangramento (NNH 80-100)",
+        "origem_secao": "Dapt prolongada alto risco isquemico"
+      },
+      {
+        "id": "dapt-duplo-risco-birisk",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se alto risco isquêmico E alto risco hemorrágico simultâneos: considerada, após 9-12 meses de DAPT, a transição para monoterapia com clopidogrel em vez de manter DAPT completa — no OPT-BIRISK essa troca reduziu sangramento BARC 2/3/5 (2,5% vs. 3,3% com DAPT continuada; RR 0,75, IC95% 0,57-0,97)",
+        "origem_secao": "Dapt alem de 12 meses alto risco duplo"
+      },
+      {
+        "id": "dapt-nao-sca-nao-aplicar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o caso é de SCA antes de aplicar este algoritmo — a redução padrão para 6 meses de ICP eletiva não-SCA (ACC/AHA) NÃO se aplica a quem teve síndrome coronariana aguda, que mantém o padrão de 12 meses",
+        "origem_secao": "Dapt curta pos icp eletiva nao sca"
+      },
+      {
+        "id": "dapt-registro-plano",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Duração final da DAPT decidida (padrão, abreviada ou prolongada) e o prazo de reavaliação registrados por escrito na alta ou na consulta, não deixados implícitos",
+        "origem_secao": "Sintese algoritmo decisao"
+      }
+    ],
+    "revisao": "Proposta reunida por pesquisa dedicada em 20/08/2026, a partir do documento técnico já revisado e publicado desta biblioteca. Todos os números e classes de recomendação são citação literal do documento de origem (PMIDs 34449185 e 38630489 já conferidos contra o abstract indexado do PubMed na revisão daquele documento, em 30/07/2026, e reconferidos por grep direto contra o corpo do documento nesta integração). Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+  },
+  {
+    "slug": "investigacao-diagnostica-de-minoca-suspeita-de-scad",
+    "condicao": "Investigação diagnóstica do MINOCA (infarto sem doença coronariana obstrutiva), incluindo suspeita de SCAD",
+    "resumo": "Passo a passo da investigação quando a angiografia mostra artérias não obstrutivas num infarto agudo, incluindo quando indicar ressonância cardíaca e quando suspeitar de dissecção espontânea de coronária (SCAD), derivado da diretriz ESC 2023 e do scientific statement da AHA sobre SCAD.",
+    "documento_origem": "minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+      "Hayes SN, Kim ESH, Saw J, et al. Spontaneous Coronary Artery Dissection: Current State of the Science: A Scientific Statement From the American Heart Association. Circulation. 2018;137(19):e523-e557. DOI: 10.1161/CIR.0000000000000564. PMID: 29472380."
+    ],
+    "itens": [
+      {
+        "id": "minoca-definicao-trabalho",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "MINOCA tratado como diagnóstico de trabalho inicial, não diagnóstico final — infarto com estenose <50% em todos os vasos epicárdicos maiores exige investigação da causa real antes de encerrar o caso",
+        "origem_secao": "MINOCA — o que é"
+      },
+      {
+        "id": "minoca-tres-grupos-causa",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Causa subjacente ativamente buscada nos três grupos possíveis: coronariana (SCAD, ruptura de placa não obstrutiva, espasmo, embolia/trombo espontâneo), cardíaca não coronariana (takotsubo, miocardite, trauma cardíaco) e não cardíaca (sepse, AVC, TEP — lesão miocárdica tipo 2, não infarto tipo 1)",
+        "origem_secao": "MINOCA — investigação diagnóstica"
+      },
+      {
+        "id": "minoca-rm-cardiaca",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ressonância magnética cardíaca solicitada quando o diagnóstico final permanece incerto após a angiografia invasiva (Classe I, Nível B)",
+        "origem_secao": "MINOCA — investigação diagnóstica"
+      },
+      {
+        "id": "minoca-scad-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de SCAD levantada ativamente em mulher, sobretudo em idade entre 45-53 anos ou no terceiro trimestre/primeiras 6 semanas pós-parto — SCAD é a causa mais comum de infarto associado à gestação (43% dos casos de IAM na gravidez)",
+        "origem_secao": "SCAD — epidemiologia"
+      },
+      {
+        "id": "minoca-scad-imagem-intracoronaria",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se SCAD é suspeitada: imagem intracoronária considerada, com OCT preferida sobre IVUS pela resolução espacial para visualizar o hematoma intramural e o falso lúmen (Classe IIa, Nível C)",
+        "origem_secao": "SCAD — diagnóstico"
+      },
+      {
+        "id": "minoca-scad-conduta-conservadora",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em SCAD clinicamente estável e sem isquemia em curso: conduta conservadora (sem PCI/CABG) adotada como estratégia preferida — intervenção mecânica em tecido dissecado teve falha técnica de até 53% e CABG de emergência em até 13% em séries independentes",
+        "origem_secao": "SCAD — conduta: conservadora é a estratégia preferida"
+      },
+      {
+        "id": "minoca-scad-indicacao-invasiva",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Conduta invasiva (PCI ou cirurgia) reservada às indicações específicas: dissecção de tronco de coronária esquerda, instabilidade hemodinâmica, isquemia em curso apesar de tratamento clínico, ou choque cardiogênico",
+        "origem_secao": "SCAD — conduta: conservadora é a estratégia preferida"
+      },
+      {
+        "id": "minoca-scad-observacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Observação hospitalar de 3 a 5 dias mantida para detectar extensão da dissecção, cujo risco é de 5-10% nos primeiros 7 dias",
+        "origem_secao": "SCAD — conduta: conservadora é a estratégia preferida"
+      },
+      {
+        "id": "minoca-scad-fmd",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Após diagnóstico de SCAD: rastreio de displasia fibromuscular em outros territórios vasculares (renal, cerebrovascular) encaminhado, já que coexiste em 25-86% das coortes conforme o método de imagem usado",
+        "origem_secao": "SCAD — epidemiologia / Armadilhas clínicas"
+      },
+      {
+        "id": "minoca-nao-encerrar-sem-causa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrado que MINOCA com troponina elevada e coronária não obstrutiva não é encerrado como 'sem causa cardíaca' sem completar a investigação acima — a RM cardíaca muda a conduta com frequência relevante",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Proposta reunida por pesquisa dedicada em 20/08/2026, a partir do documento técnico já revisado e publicado desta biblioteca. Classes/níveis de recomendação e números epidemiológicos são citação literal do documento de origem (PMIDs 37622654 e 29472380 já conferidos naquele documento em 30/07/2026, um deles contra o texto integral em PMC, e reconferidos por grep direto contra o corpo do documento nesta integração). Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+  },
+  {
+    "slug": "decisao-entre-pci-e-cabg-no-tronco-ou-doenca-trivascular-heart-team",
+    "condicao": "Decisão entre PCI e CABG na doença de tronco de coronária esquerda ou trivascular — discussão do Heart Team",
+    "resumo": "O que reunir e verificar antes de levar o caso de tronco de coronária esquerda ou doença trivascular ao Heart Team, incluindo o cálculo do escore SYNTAX e o efeito do diabetes na escolha, derivado da diretriz ESC/EACTS 2018 de revascularização miocárdica.",
+    "documento_origem": "revascularizacao-tronco-e-multiarterial-pci-vs-cabg-esceacts-2018",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "2018 ESC/EACTS Guidelines on myocardial revascularization · Neumann FJ, Sousa-Uva M, Ahlsson A, et al.; ESC Scientific Document Group · European Heart Journal · 2019;40(2):87-165 · DOI: 10.1093/eurheartj/ehy394 · PMID: 30165437.",
+      "FREEDOM: Farkouh ME, Domanski M, Sleeper LA, et al. N Engl J Med. 2012;367(25):2375-2384. PMID: 23121323.",
+      "EXCEL: Stone GW, Sabik JF, Serruys PW, et al. N Engl J Med. 2016;375(23):2223-2235. PMID: 27797291.",
+      "NOBLE: Mäkikallio T, Holm NR, Lindsay M, et al. Lancet. 2016;388(10061):2743-2752. PMID: 27810312.",
+      "Lin S, Su X, Ma H, et al. Real-Time Heart Team for Revascularization in Complex Coronary Artery Disease: The EHEART Randomized Trial. J Am Coll Cardiol. 2026;87(24):3467-3479. DOI: 10.1016/j.jacc.2026.01.010. PMID: 41778947."
+    ],
+    "itens": [
+      {
+        "id": "pcicabg-syntax-calculado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore SYNTAX calculado a partir da angiografia (dominância coronariana, peso por segmento, grau de estenose, trifurcação, bifurcação, lesão aorto-ostial, tortuosidade, calcificação, trombo, doença difusa) e classificado em baixo (0-22), intermediário (23-32) ou alto (≥33)",
+        "origem_secao": "O escore SYNTAX — o que avalia"
+      },
+      {
+        "id": "pcicabg-tronco-classe",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se tronco de coronária esquerda: recomendação de PCI conferida por faixa de SYNTAX — Classe I A (0-22), Classe IIa A (23-32), Classe III B/contraindicada (≥33); CABG permanece Classe I A nas três faixas",
+        "origem_secao": "Tronco de coronaria esquerda — a decisao muda com a complexidade"
+      },
+      {
+        "id": "pcicabg-trivascular-diabetes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se doença trivascular: presença de diabetes verificada antes de aplicar o corte de SYNTAX — diabetes rebaixa PCI de Classe I A (SYNTAX baixo, sem diabetes) para Classe IIb A (SYNTAX baixo, com diabetes), e SYNTAX >22 é Classe III A para PCI com ou sem diabetes",
+        "origem_secao": "Doenca trivascular — corte mais rigido que o do tronco, e o diabetes muda tudo"
+      },
+      {
+        "id": "pcicabg-classe3-nao-absoluta",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se PCI cai em Classe III (tronco SYNTAX alto ou trivascular SYNTAX >22): verificado se há contraindicação cirúrgica documentada ou recusa do paciente após aconselhamento adequado — é a única situação em que a diretriz ainda permite considerar PCI nessa faixa",
+        "origem_secao": "Tronco de coronaria esquerda — a decisao muda com a complexidade"
+      },
+      {
+        "id": "pcicabg-revascularizacao-completa",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Completude da revascularização priorizada na escolha entre CABG e PCI (Classe IIa, Nível B) — reduz mortalidade tardia, IAM e nova revascularização",
+        "origem_secao": "Revascularizacao completa e PCI guiada por FFR"
+      },
+      {
+        "id": "pcicabg-ffr-guiada",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se optado por PCI multiarterial: revascularização guiada por FFR/iwFR considerada para selecionar as lesões funcionalmente relevantes a tratar (Classe IIa, Nível B), em vez de guiar só pela angiografia",
+        "origem_secao": "Revascularizacao completa e PCI guiada por FFR"
+      },
+      {
+        "id": "pcicabg-discussao-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Caso levado a discussão multidisciplinar do Heart Team, com participação documentada de cirurgião cardíaco e cardiologista intervencionista, antes de a estratégia ser definida",
+        "origem_secao": "EHEART: Heart Team em Tempo Real na Doença Coronariana Complexa"
+      },
+      {
+        "id": "pcicabg-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão compartilhada com o paciente documentada por escrito, incluindo a explicação de que EXCEL (equivalente aos 3 anos, com risco tardio pendendo para CABG) e NOBLE (pior com PCI) não convergem no tronco com SYNTAX intermediário",
+        "origem_secao": "Tronco: EXCEL e NOBLE nao convergem, e a diretriz nao reconcilia"
+      },
+      {
+        "id": "pcicabg-syntax-residual",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se optado por PCI: meta de SYNTAX residual ≤8 registrada como objetivo do procedimento — SYNTAX residual >8 associou-se a mais morte, IAM e AVC em 5 anos em análise post-hoc do ensaio SYNTAX",
+        "origem_secao": "O escore SYNTAX — o que avalia"
+      }
+    ],
+    "revisao": "Proposta reunida por pesquisa dedicada em 20/08/2026, a partir do documento técnico já revisado e publicado desta biblioteca. Classes/níveis de recomendação e números dos ensaios (FREEDOM PMID 23121323, EXCEL PMID 27797291, NOBLE PMID 27810312) são citação literal do documento de origem, conferido tabela por tabela contra o PDF integral em 01/08/2026; o item de Heart Team em tempo real deriva do documento EHEART (PMID 41778947) já publicado no mesmo tema. Todos os números e classes reconferidos por grep direto contra o corpo do documento nesta integração. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
   }
 ]
