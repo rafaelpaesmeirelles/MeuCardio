@@ -40,7 +40,7 @@ const TRABALHO_ASSISTENCIA: NavItem[] = [
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
   { to: "/agenda", label: "Agenda", icon: "agenda" },
-    { to: "/caixa-de-email", label: "CorVIA Mail", icon: "mail" },
+  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
   { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/telediagnostico", label: "Telediagnóstico & Consultoria", icon: "evidencia" },
 ];
