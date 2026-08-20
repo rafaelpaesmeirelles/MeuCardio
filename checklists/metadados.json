@@ -8424,5 +8424,298 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-inicial-do-choque-cardiogenico",
+    "condicao": "Reconhecimento e manejo inicial do choque cardiogênico (diagnóstico, estadiamento SCAI e escolha de droga vasoativa)",
+    "resumo": "O que checar nas primeiras horas de suspeita ou confirmação de choque cardiogênico — critérios diagnósticos, estadiamento SCAI A-E com os cortes numéricos oficiais, escolha e titulação de droga vasoativa por perfil receptor, e a decisão de revascularização precoce quando a causa é infarto agudo do miocárdio. Complementa, sem repetir, os checklists já existentes de alta pós-choque cardiogênico e de manejo diário/desmame de suporte circulatório mecânico.",
+    "documento_origem": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a",
+      "Dobutamine injection — rótulo aprovado pelo FDA, DailyMed SPL setid 559367ef-5c20-99ea-e063-6294a90a4ff2",
+      "Dopamine hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid 1f306ad2-3606-4525-5a8a-ce78f426c1a2, seção Dosage and Administration",
+      "Bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção de posologia, conferida em 29/07/2026",
+      "Timerman S, Bernoche C, Santos Filho RD, Malachias MVB, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663. DOI: 10.5935/abc.20190203. PMID: 31621787 — seções 12.5 (drogas vasoativas) e 7.11.1 (choque cardiogênico, estudo SHOCK e IABP-SHOCK II)",
+      "SCAI clinical expert consensus statement on the classification of cardiogenic shock · SCAI/ACC/AHA/SCCM/STS · 2019 · 10.1002/ccd.28329",
+      "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update. J Soc Cardiovasc Angiogr Interv. 2022 — SCAI SHOCK Bedside Checklist 2022, endossado por ACC/ACEP/AHA/ESC-ACVC/ISHLT/SCCM/STS"
+    ],
+    "itens": [
+      {
+        "id": "chc-criterios-diagnosticos",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Hipotensão persistente com evidência de hipoperfusão tecidual (extremidades frias, oligúria, alteração do estado mental, elevação de lactato) documentada na presença de disfunção cardíaca primária, não apenas hipotensão isolada",
+        "origem_secao": "Critérios diagnósticos gerais"
+      },
+      {
+        "id": "chc-estagio-scai-inicial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estágio SCAI (A a E) atribuído no momento da avaliação inicial, combinando exame físico, marcador bioquímico (lactato, função renal/hepática) e hemodinâmica conforme o checklist oficial SCAI 2022 — não apenas impressão clínica global",
+        "origem_secao": "Critérios numéricos por estágio (checklist oficial SCAI 2022)"
+      },
+      {
+        "id": "chc-modificador-a-parada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houve parada cardiorrespiratória associada, o modificador 'A' (Arrest) foi acrescentado ao estágio SCAI (ex.: C+A), independentemente da duração do episódio",
+        "origem_secao": "Modificador A: parada cardíaca"
+      },
+      {
+        "id": "chc-vasopressor-primeira-escolha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Noradrenalina usada como vasopressor de primeira escolha quando há hipotensão associada ao choque (PAS < 70 mmHg) — dobutamina isolada não foi usada nesse cenário, pelo risco de agravar a hipotensão",
+        "origem_secao": "Drogas vasoativas por perfil receptor — noradrenalina"
+      },
+      {
+        "id": "chc-noradrenalina-titulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Noradrenalina iniciada em 0,05-0,1 mcg/kg/min, titulada em incrementos de 0,05-0,1 mcg/kg/min a cada 5-15 min, com meta de PAM ≥ 65 mmHg",
+        "origem_secao": "Drogas vasoativas por perfil receptor — noradrenalina"
+      },
+      {
+        "id": "chc-dobutamina-indice-cardiaco",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se dobutamina foi utilizada como inotrópico, a titulação foi guiada pelo índice cardíaco, não pela pressão arterial média isoladamente, e a meia-vida curta (~2 min) foi considerada no ajuste de dose",
+        "origem_secao": "Drogas vasoativas por perfil receptor — dobutamina"
+      },
+      {
+        "id": "chc-milrinona-ajuste-renal",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se milrinona foi utilizada, dose de ataque e manutenção conforme bula (ataque 50 mcg/kg em 10 minutos, manutenção 0,375-0,750 mcg/kg/min), com ajuste obrigatório para clearance de creatinina < 50 mL/min",
+        "origem_secao": "Drogas vasoativas por perfil receptor — milrinona"
+      },
+      {
+        "id": "chc-milrinona-incompatibilidade",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se milrinona e furosemida/bumetanida foram prescritas ao mesmo tempo, confirmado que não são administradas pela mesma linha de infusão (precipitam em contato)",
+        "origem_secao": "Drogas vasoativas por perfil receptor — milrinona, incompatibilidade relevante"
+      },
+      {
+        "id": "chc-vasopressina-adjuvante",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se vasopressina foi acrescentada como adjuvante, a dose foi fixa (0,01-0,04 unidades/min, não ajustada por peso) e a indicação surgiu quando a noradrenalina já estava próxima de 0,25-0,5 mcg/kg/min sem atingir a meta de PAM",
+        "origem_secao": "Drogas vasoativas por perfil receptor — vasopressina"
+      },
+      {
+        "id": "chc-revascularizacao-precoce-iam",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se a etiologia foi infarto agudo do miocárdio, revascularização precoce (até 6 horas) considerada com base no estudo SHOCK, que demonstrou redução de mortalidade em 6 meses frente ao tratamento clínico inicial com revascularização tardia (após 54 horas)",
+        "origem_secao": "Revascularização no choque cardiogênico pós-IAM"
+      },
+      {
+        "id": "chc-bia-nao-rotineiro",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Balão intra-aórtico não indicado de forma rotineira sem individualização — o IABP-SHOCK II não demonstrou redução de mortalidade em 30 dias com uso rotineiro de BIA no choque cardiogênico",
+        "origem_secao": "Suporte circulatório mecânico"
+      },
+      {
+        "id": "chc-reconhecimento-precoce",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecimento precoce dos sinais de choque cardiogênico documentado antes de deterioração hemodinâmica irreversível, permitindo considerar suporte circulatório mecânico em tempo oportuno",
+        "origem_secao": "Princípio reconhecimento precoce; Armadilhas clínicas"
+      },
+      {
+        "id": "chc-internacao-uti",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de choque cardiogênico levou à internação em unidade de terapia intensiva cardiológica com capacidade de suporte hemodinâmico avançado",
+        "origem_secao": "Critérios internação"
+      },
+      {
+        "id": "chc-reavaliacao-dinamica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação dinâmica do estágio SCAI programada ao longo da internação, não apenas na admissão — estágio basal mais baixo se associa a maior incidência de escalonamento e menor tempo até o estágio máximo",
+        "origem_secao": "Trajetória clínica (documento de classificação SCAI)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Cada item deriva literalmente do texto dos dois documentos de origem já verificados e publicados nesta base (choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas e classificacao-scai-de-estagios-do-choque-cardiogenico), sem dado novo ou de memória. Complementa os checklists já existentes de alta pós-choque cardiogênico e de manejo diário/desmame de suporte circulatório mecânico, cobrindo o momento de reconhecimento e manejo inicial que nenhum dos dois aborda diretamente. Itens marcados obrigatorio:false dependem de o fármaco/dispositivo (dobutamina, milrinona, vasopressina, BIA) ter sido de fato utilizado no caso."
+  },
+  {
+    "slug": "protocolo-abcdef-sedacao-e-delirium-na-uti-cardiologica",
+    "condicao": "Sedação e rastreio de delirium na UTI cardiológica (pacote ABCDEF)",
+    "resumo": "Os seis componentes do pacote ABCDEF (dor, despertar/respiração espontânea, escolha de sedação, delirium, mobilização precoce, engajamento familiar) e os dois instrumentos que os operacionalizam à beira do leito — RASS para profundidade de sedação e CAM-ICU para rastreio sistemático de delirium, incluindo o hipoativo, facilmente confundido com sedação adequada.",
+    "documento_origem": "protocolo-abcdef-sedacao-e-delirium-na-uti-cardiologica-rass-e-cam-icu",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pun BT, Balas MC, Barnes-Daly MA, Thompson JL, Aldrich JM, Barr J, et al; Ely EW. Caring for Critically Ill Patients with the ABCDEF Bundle: Results of the ICU Liberation Collaborative in Over 15,000 Adults. Crit Care Med. 2019;47(1):3-14. DOI: 10.1097/CCM.0000000000003482. PMID: 30339549. PMCID: PMC6298815",
+      "Sessler CN, Gosnell MS, Grap MJ, Brophy GM, O'Neal PV, Keane KA, Tesoro EP, Elswick RK. The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients. Am J Respir Crit Care Med. 2002;166(10):1338-1344. DOI: 10.1164/rccm.2107138. PMID: 12421743",
+      "Ely EW, Margolin R, Francis J, May L, Truman B, Dittus R, Speroff T, Gautam S, Bernard GR, Inouye SK. Evaluation of delirium in critically ill patients: validation of the Confusion Assessment Method for the Intensive Care Unit (CAM-ICU). Crit Care Med. 2001;29(7):1370-1379. DOI: 10.1097/00003246-200107000-00012. PMID: 11445689"
+    ],
+    "itens": [
+      {
+        "id": "sed-pacote-completo-nao-so-sedativo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pacote ABCDEF aplicado como conjunto de seis componentes (dor, despertar/respiração espontânea coordenados, escolha de sedação mais leve, delirium, mobilização precoce, família) — não reduzido apenas à escolha de um sedativo",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco; Armadilhas clínicas"
+      },
+      {
+        "id": "sed-dor-avaliada-sistematicamente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dor avaliada, prevenida e tratada de forma sistemática (componente A) — avaliação estruturada torna a dor mais visível, não menos frequente, sem que isso signifique que o pacote a causa",
+        "origem_secao": "Resultados, com desempenho COMPLETO do pacote — exceção honesta sobre dor"
+      },
+      {
+        "id": "sed-despertar-respiracao-espontanea",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Despertar e teste de respiração espontânea coordenados diariamente quando aplicável (componente B), não deixados a critério isolado de sedação contínua",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco — componente B"
+      },
+      {
+        "id": "sed-rass-meta-registrada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Meta de sedação definida por RASS (escala de 10 níveis, +4 a -5), tipicamente entre 0 e -2 salvo indicação contrária, como alvo numérico compartilhado pela equipe — não guiada apenas por impressão clínica",
+        "origem_secao": "RASS — Richmond Agitation-Sedation Scale (componentes B e C); Armadilhas clínicas"
+      },
+      {
+        "id": "sed-rass-aplicabilidade-cardiologica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a RASS foi validada nominalmente em subgrupo de cirurgia cardíaca e de UTI coronariana (não apenas extrapolada de população geral de UTI), com confiabilidade interobservador alta nesses subgrupos (r=0,922-0,983; kappa=0,64-0,82)",
+        "origem_secao": "RASS — por que isso importa especificamente para a UTI cardiológica"
+      },
+      {
+        "id": "sed-cam-icu-por-turno",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Delirium rastreado sistematicamente pela CAM-ICU (não por impressão clínica subjetiva), tipicamente a cada turno, incluindo em pacientes em ventilação mecânica e não verbais",
+        "origem_secao": "CAM-ICU — Confusion Assessment Method for the ICU (componente D); Armadilhas clínicas"
+      },
+      {
+        "id": "sed-delirium-hipoativo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Delirium hipoativo (paciente quieto, sonolento, sem agitação) especificamente considerado no rastreio — é o subtipo mais comum e mais facilmente confundido com sedação adequada ou fadiga pós-operatória sem instrumento estruturado",
+        "origem_secao": "O que a CAM-ICU acrescenta que a impressão clínica não dá"
+      },
+      {
+        "id": "sed-mobilizacao-precoce",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Mobilização e exercício precoces (componente E) considerados e documentados, avaliando a tensão real entre imobilizar por dispositivos (drenos, marca-passo temporário, balão intra-aórtico) e mobilizar precocemente",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco — contexto da UTI cardiológica pós-cirúrgica"
+      },
+      {
+        "id": "sed-engajamento-familia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Engajamento e empoderamento da família (componente F) incluído no plano de cuidado, não tratado como item à parte do pacote",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco — componente F"
+      },
+      {
+        "id": "sed-escolha-sedativo-nao-confundida-com-pacote",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Escolha de sedativo específico (por exemplo dexmedetomidina) tratada como decisão pontual e independente da aplicação do pacote ABCDEF como um todo — o benefício de sobrevida do estudo de Pun et al. não isola qual componente é responsável pela associação observada",
+        "origem_secao": "Limites — o que este documento NÃO afirma; Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados literalmente do documento de origem já verificado e publicado nesta base (protocolo-abcdef-sedacao-e-delirium-na-uti-cardiologica-rass-e-cam-icu), com a seção de origem registrada em cada item. O documento distingue explicitamente o pacote ABCDEF (associação em coorte observacional, 68 UTIs mistas, não ensaio randomizado, não recorte específico de UTI cardiológica) da validação da RASS (inclui subgrupo de cirurgia cardíaca/coronariana) e da CAM-ICU (validada em UTI médica e coronariana, não em UTI de cirurgia cardíaca) — nenhuma extrapolação além do que a fonte afirma foi incluída neste checklist."
+  },
+  {
+    "slug": "cuidados-nas-primeiras-24-a-72-horas-pos-parada-cardiorrespiratoria",
+    "condicao": "Cuidados hemodinâmicos, respiratórios e de temperatura nas primeiras 24 a 72 horas após retorno da circulação espontânea (RCE), antes da avaliação de prognóstico neurológico",
+    "resumo": "O que checar no paciente comatoso após RCE, antes de qualquer declaração de prognóstico neurológico: controle de temperatura evitando febre (TTM e TTM2), metas de pressão arterial média e de oxigenação dentro das faixas testadas pelo ensaio BOX, e a decisão sobre coronariografia imediata quando o ECG pós-ressuscitação não mostra supra de ST (COACT e TOMAHAWK). Complementa, sem repetir, o checklist já existente de neuroprognóstico multimodal, que trata do momento de declarar prognóstico, não do manejo das primeiras horas.",
+    "documento_origem": "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest (TTM). N Engl J Med. 2013;369(23):2197-2206. DOI: 10.1056/NEJMoa1310519. PMID: 24237006",
+      "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859",
+      "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-Pressure Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1456-1466. DOI: 10.1056/NEJMoa2208687. PMID: 36027564",
+      "Schmidt H, Kjaergaard J, Hassager C, et al. Oxygen Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1467-1476. DOI: 10.1056/NEJMoa2208686. PMID: 36027567",
+      "Lemkes JS, Janssens GN, van der Hoeven NW, Jewbali LSD, Dubois EA, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057",
+      "Desch S, Freund A, Akin I, Behnes M, Preusch MR, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570"
+    ],
+    "itens": [
+      {
+        "id": "rce-evitar-febre-nao-hipotermia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Alvo de controle de temperatura definido como evitar febre (com qualquer método disponível, tratando ativamente se ultrapassar o limiar), não induzir hipotermia agressiva a 33°C — nem o TTM (33°C vs. 36°C) nem o TTM2 (hipotermia vs. normotermia com tratamento precoce de febre) demonstraram benefício de mortalidade ou função neurológica com hipotermia induzida",
+        "origem_secao": "Consequência prática; Lendo os dois juntos (TTM e TTM2)"
+      },
+      {
+        "id": "rce-hipotermia-risco-arritmia",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se hipotermia induzida a 33°C foi escolhida, monitorização para arritmia com repercussão hemodinâmica reforçada — foi mais comum no grupo hipotermia do TTM2 (24% vs. 17%, p<0,001)",
+        "origem_secao": "TTM2 (2021) — Segurança"
+      },
+      {
+        "id": "rce-pam-alvo-dentro-da-faixa-testada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Meta de pressão arterial média mantida dentro de faixa fisiologicamente aceitável, evitando hipotensão franca (abaixo de 63 mmHg) — o ensaio BOX não mostrou diferença de desfecho entre mirar PAM de 63 mmHg ou 77 mmHg, então elevar a meta além do necessário para evitar hipotensão não é alavanca terapêutica isolada",
+        "origem_secao": "Resultado do eixo pressão arterial (Kjaergaard et al., 2022); Consequência prática"
+      },
+      {
+        "id": "rce-oxigenacao-evitar-extremos",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Meta de oxigenação na ventilação mecânica mantida evitando hipoxemia franca (abaixo de 9 kPa) e sem necessidade de liberar para PaO2 muito acima de 13-14 kPa — o ensaio BOX não mostrou diferença de desfecho entre meta restritiva (9-10 kPa) e liberal (13-14 kPa) dentro dessas faixas",
+        "origem_secao": "Resultado do eixo oxigenação (Schmidt et al., 2022); Armadilhas clínicas"
+      },
+      {
+        "id": "rce-ecg-pos-ressuscitacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG pós-ressuscitação obtido e revisado para presença ou ausência de supradesnivelamento de ST",
+        "origem_secao": "A decisão das primeiras horas"
+      },
+      {
+        "id": "rce-supra-st-cateterismo-imediato",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o ECG pós-ressuscitação mostra supra de ST, coronariografia imediata indicada sem a ressalva dos itens seguintes — COACT e TOMAHAWK excluíram esses pacientes por desenho",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "rce-sem-supra-st-nao-priorizar-cateterismo-imediato",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o ECG pós-ressuscitação não mostra supra de ST e não há instabilidade hemodinâmica ou elétrica persistente, coronariografia imediata não priorizada sobre a estabilização inicial — COACT e TOMAHAWK não demonstraram benefício da estratégia imediata, e o TOMAHAWK mostrou sinal desfavorável não descartado (óbito em 30 dias: HR 1,28, IC95% 1,00-1,63, p=0,06)",
+        "origem_secao": "COACT (2019); TOMAHAWK (2021) — o segundo, e mais preocupante; Síntese prática"
+      },
+      {
+        "id": "rce-prioridade-cuidado-pos-parada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Nas primeiras horas sem supra de ST, prioridade dada ao cuidado pós-parada (controle de temperatura, ventilação, hemodinâmica e avaliação neurológica) em vez de consumir esse tempo com coronariografia imediata — no COACT, a estratégia imediata atrasou o tempo até a temperatura-alvo (5,4h vs. 4,7h)",
+        "origem_secao": "Síntese prática; O que ler com cuidado no TOMAHAWK"
+      },
+      {
+        "id": "rce-choque-via-propria",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Se há instabilidade hemodinâmica persistente ou choque cardiogênico associado, conduzido pela via própria de estadiamento SCAI e suporte circulatório mecânico, não pela lógica dos ensaios de coronariografia pós-parada sem supra de ST, que não incluíram esse cenário",
+        "origem_secao": "Síntese prática; Limites (documento de coronariografia pós-parada)"
+      },
+      {
+        "id": "rce-neuroprognostico-momento-correto",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Avaliação de prognóstico neurológico não antecipada para dentro das primeiras 24-72 horas — encaminhada para o momento e o protocolo multimodal já cobertos no checklist de neuroprognóstico pós-parada desta mesma base, só depois de excluídos fatores confundidores (sedação residual, hipotermia, distúrbio metabólico)",
+        "origem_secao": "Documento de origem (controle de temperatura) — O que este documento não cobre; checklist neuroprognostico-pos-parada-cardiorrespiratoria-antes-de-declarar-prognostico já existente nesta base"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados literalmente dos três documentos de origem já verificados e publicados nesta base (controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2, metas-de-pressao-arterial-e-de-oxigenacao-pos-parada-cardiorrespiratoria-o-ensaio-box e coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk), com a seção de origem registrada em cada item. Deliberadamente não repete o checklist já publicado neroprognostico-pos-parada-cardiorrespiratoria-antes-de-declarar-prognostico — este cobre o manejo hemodinâmico/respiratório/temperatura e a decisão de coronariografia das primeiras horas, aquele cobre especificamente o momento e o método de declarar prognóstico neurológico; o último item deste checklist aponta explicitamente para essa fronteira."
   }
 ]
