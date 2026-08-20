@@ -601,7 +601,13 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do TENORMIN® (atenolol), seção CLINICAL PHARMACOLOGY — **lido diretamente nesta sessão (11/08/2026)**: 'the elimination half-life of oral TENORMIN is approximately 6 to 7 hours' (confirma o valor já registrado em `half_life_note`) e 'following oral doses of 50 mg or 100 mg, both beta-blocking and antihypertensive effects persist for at least 24 hours' — esta última frase é a fonte direta do racional de dose única diária, apesar da meia-vida de 6-7h. O rótulo NÃO traz, nesta seção, um estudo de dose-resposta formal com n/PMID citável separadamente — o valor '22/15 mmHg' registrado em `bp_evidence_source` vem de outra publicação (PMID 340136), não desta seção do rótulo.",
     "sbp_reduction_mmhg": -22.0,
     "dbp_reduction_mmhg": -15.0,
-    "bp_evidence_source": "Estudo de dose-resposta duplo-cego, cruzado, em atenção primária, 98 pacientes com hipertensão leve a moderada, comparando atenolol 50/100/200 mg/dia contra placebo: com a dose de **100 mg/dia** (a que produziu o maior efeito hipotensor, com platô — doses maiores até 300 mg não trouxeram redução proporcionalmente maior), diferença de **22/15 mmHg** ao final da fase duplo-cega e de 25/16 mmHg na observação final, **confirmadas nesta sessão (12/08/2026) como valores corrigidos contra o efeito placebo** (desenho cruzado comparando cada dose contra placebo; os valores citados representam o efeito líquido do tratamento ativo, não uma diferença bruta pré/pós). Fonte: Gostick NK, Mayhew SR, Million R, Sagar D, Suxena SR, Ingram DF, Barmer NP. A dose-response study of atenolol in mild to moderate hypertension in general practice. Curr Med Res Opin. 1977. PMID 340136 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão."
+    "bp_evidence_source": "Estudo de dose-resposta duplo-cego, cruzado, em atenção primária, 98 pacientes com hipertensão leve a moderada, comparando atenolol 50/100/200 mg/dia contra placebo: com a dose de **100 mg/dia** (a que produziu o maior efeito hipotensor, com platô — doses maiores até 300 mg não trouxeram redução proporcionalmente maior), diferença de **22/15 mmHg** ao final da fase duplo-cega e de 25/16 mmHg na observação final, **confirmadas nesta sessão (12/08/2026) como valores corrigidos contra o efeito placebo** (desenho cruzado comparando cada dose contra placebo; os valores citados representam o efeito líquido do tratamento ativo, não uma diferença bruta pré/pós). Fonte: Gostick NK, Mayhew SR, Million R, Sagar D, Suxena SR, Ingram DF, Barmer NP. A dose-response study of atenolol in mild to moderate hypertension in general practice. Curr Med Res Opin. 1977. PMID 340136 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão.",
+    "brand_names": [
+      "Atenol",
+      "Ateno",
+      "Angipress",
+      "atenolol (Genérico)"
+    ]
   },
   {
     "slug": "atorvastatina-calcica",
@@ -1489,7 +1495,13 @@
     "duration_of_action_source": "Já documentado no campo `notes.Farmacocinetica` deste mesmo registro (não é pesquisa nova desta sessão) — sourced, nas referências gerais do registro, a materiais de bulário/protocolo já citados (Afya Cardiologia; Protocolo de Uso de Clopidogrel, Secretaria de Saúde do DF). Reaproveitado aqui só para popular os campos estruturados novos, sem verificação adicional nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica. Clopidogrel é antiagregante plaquetário inibidor do receptor P2Y12, sem mecanismo de ação hemodinâmico direto — redução de pressão arterial sistêmica não é desfecho estudado nos ensaios pivotais (CAPRIE, CURE, CLARITY, COMMIT, já citados no próprio registro) nem clinicamente relevante para esta classe."
+    "bp_evidence_source": "Não se aplica. Clopidogrel é antiagregante plaquetário inibidor do receptor P2Y12, sem mecanismo de ação hemodinâmico direto — redução de pressão arterial sistêmica não é desfecho estudado nos ensaios pivotais (CAPRIE, CURE, CLARITY, COMMIT, já citados no próprio registro) nem clinicamente relevante para esta classe.",
+    "brand_names": [
+      "Plavix",
+      "Iscover",
+      "Clopiplax",
+      "bissulfato de clopidogrel (Genérico)"
+    ]
   },
   {
     "slug": "clortalidona",
@@ -2430,7 +2442,13 @@
     "duration_of_action_source": "**Confirmado nesta sessão (WebFetch, 12/08/2026) por leitura direta da rotulagem FDA/DailyMed de VASOTEC® (enalapril maleate), seção CLINICAL PHARMACOLOGY**: texto verbatim — \"At recommended doses, antihypertensive effects have been maintained for at least 24 hours.\" O mesmo rótulo alerta que em alguns pacientes o efeito pode diminuir perto do fim do intervalo de dosagem, o que pode justificar ajuste de dose ou posologia 2x/dia — nuance já coerente com a observação de duração variável já registrada em `duration_of_action_note`. Confirma o valor de 24h já registrado neste campo com fonte primária FDA lida na íntegra (não é a bula do RENITEC brasileira especificamente, mas é o rótulo do mesmo princípio ativo).",
     "sbp_reduction_mmhg": -20.7,
     "dbp_reduction_mmhg": -9.6,
-    "bp_evidence_source": "Ensaio randomizado, duplo-cego, controlado por placebo (8 semanas), comparando moxonidina e enalapril 20 mg 1x/dia em hipertensão essencial leve a moderada: redução média da PA em posição sentada com enalapril de 21,9 ± 17,1/11,9 ± 7,5 mmHg, contra 1,2 ± 14,4/2,3 ± 7,0 mmHg com placebo (p<0,001) — redução líquida corrigida por placebo de aproximadamente **-20,7 mmHg (PAS) e -9,6 mmHg (PAD)**, calculada nesta sessão pela diferença entre os dois grupos do próprio artigo (o artigo não apresenta o valor já corrigido pronto). **Fonte**: Prichard BN, Jäger BA, Luszick JH, et al. Placebo-controlled comparison of the efficacy and tolerability of once-daily moxonidine and enalapril in mild-to-moderate essential hypertension. Blood Press. 1997;6(4):235-242. PMID: 9050976 (PMID conferido por busca direta nesta sessão, em 10/08/2026). O valor reflete a dose de 20 mg/dia num único ensaio de 8 semanas com n moderado — pode não representar a média de todos os ensaios de enalapril. revisão sistemática Cochrane de Heran BS et al., \"Blood pressure lowering efficacy of angiotensin converting enzyme (ACE) inhibitors for primary hypertension\", Cochrane Database Syst Rev. 2008;(4):CD003823, PMID 18843651 (lida via PubMed E-utilities nesta sessão, 12/08/2026) — agrega 92 ensaios de 14 IECA diferentes (incluindo enalapril, mas sem estimativa isolada por fármaco no abstract: \"The data do not suggest that any one ACE inhibitor is better or worse at lowering BP\"). A estimativa de CLASSE (todos os IECA reunidos), na metade da dose máxima recomendada pelo fabricante ou acima, é de **-8/-5 mmHg** (sistólica/diastólica) — bem menor que o -20,7/-9,6 mmHg do ensaio isolado de enalapril 20mg citado acima. **A divergência entre o valor de classe (Cochrane, agregado) e o valor do ensaio único de enalapril permanece sem explicação — pode refletir diferença de dose, desenho, duração (8 semanas vs. média dos 92 ensaios) ou apenas variabilidade de um único estudo pequeno — e por isso a VERIFICAÇÃO HUMANA NECESSÁRIA continua válida para decidir qual valor é mais representativo do enalapril especificamente.**"
+    "bp_evidence_source": "Ensaio randomizado, duplo-cego, controlado por placebo (8 semanas), comparando moxonidina e enalapril 20 mg 1x/dia em hipertensão essencial leve a moderada: redução média da PA em posição sentada com enalapril de 21,9 ± 17,1/11,9 ± 7,5 mmHg, contra 1,2 ± 14,4/2,3 ± 7,0 mmHg com placebo (p<0,001) — redução líquida corrigida por placebo de aproximadamente **-20,7 mmHg (PAS) e -9,6 mmHg (PAD)**, calculada nesta sessão pela diferença entre os dois grupos do próprio artigo (o artigo não apresenta o valor já corrigido pronto). **Fonte**: Prichard BN, Jäger BA, Luszick JH, et al. Placebo-controlled comparison of the efficacy and tolerability of once-daily moxonidine and enalapril in mild-to-moderate essential hypertension. Blood Press. 1997;6(4):235-242. PMID: 9050976 (PMID conferido por busca direta nesta sessão, em 10/08/2026). O valor reflete a dose de 20 mg/dia num único ensaio de 8 semanas com n moderado — pode não representar a média de todos os ensaios de enalapril. revisão sistemática Cochrane de Heran BS et al., \"Blood pressure lowering efficacy of angiotensin converting enzyme (ACE) inhibitors for primary hypertension\", Cochrane Database Syst Rev. 2008;(4):CD003823, PMID 18843651 (lida via PubMed E-utilities nesta sessão, 12/08/2026) — agrega 92 ensaios de 14 IECA diferentes (incluindo enalapril, mas sem estimativa isolada por fármaco no abstract: \"The data do not suggest that any one ACE inhibitor is better or worse at lowering BP\"). A estimativa de CLASSE (todos os IECA reunidos), na metade da dose máxima recomendada pelo fabricante ou acima, é de **-8/-5 mmHg** (sistólica/diastólica) — bem menor que o -20,7/-9,6 mmHg do ensaio isolado de enalapril 20mg citado acima. **A divergência entre o valor de classe (Cochrane, agregado) e o valor do ensaio único de enalapril permanece sem explicação — pode refletir diferença de dose, desenho, duração (8 semanas vs. média dos 92 ensaios) ou apenas variabilidade de um único estudo pequeno — e por isso a VERIFICAÇÃO HUMANA NECESSÁRIA continua válida para decidir qual valor é mais representativo do enalapril especificamente.**",
+    "brand_names": [
+      "Renitec",
+      "Vasopril",
+      "Angiopril",
+      "maleato de enalapril (Genérico)"
+    ]
   },
   {
     "slug": "enoxaparina-sodica",
@@ -2655,7 +2673,11 @@
     "duration_of_action_source": "BREVIBLOC (esmolol hydrochloride) injection — rótulo aprovado pelo FDA, DailyMed SPL setid 220a07b8-5c68-41a3-8705-fd91f14c50b4 — mesma fonte já citada em `dosing`/`references` deste verbete.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Esmolol tem indicação registrada para controle de hipertensão perioperatória (ver `dosing.perioperatorio controle imediato`, titulável até 300 mcg/kg/min especificamente para hipertensão) — redução de PA é desfecho clinicamente relevante e esperado, mas **confirmado nesta sessão que o rótulo primário não fornece o valor quantificado em mmHg**: o rótulo do FDA para BREVIBLOC (esmolol hidrocloreto injetável, Baxter Healthcare — setid 220a07b8-5c68-41a3-8705-fd91f14c50b4), lido diretamente via DailyMed em 12/08/2026, descreve na seção Clinical Studies só a taquicardia supraventricular (\"decréscimos significativos de PA ocorreram em 20-50% dos pacientes\", sem mmHg absoluto), e na Clinical Pharmacology traz parâmetros hemodinâmicos de angiografia por radionuclídeo e cateterismo cardíaco que citam \"redução da pressão arterial sistólica\" sem valor numérico específico. Não há, no rótulo vigente, um número consolidado de queda pressórica em mmHg para a indicação de hipertensão perioperatória — mantido como VERIFICAÇÃO HUMANA NECESSÁRIA, agora como ausência confirmada na fonte primária, não como lacuna de busca."
+    "bp_evidence_source": "Esmolol tem indicação registrada para controle de hipertensão perioperatória (ver `dosing.perioperatorio controle imediato`, titulável até 300 mcg/kg/min especificamente para hipertensão) — redução de PA é desfecho clinicamente relevante e esperado, mas **confirmado nesta sessão que o rótulo primário não fornece o valor quantificado em mmHg**: o rótulo do FDA para BREVIBLOC (esmolol hidrocloreto injetável, Baxter Healthcare — setid 220a07b8-5c68-41a3-8705-fd91f14c50b4), lido diretamente via DailyMed em 12/08/2026, descreve na seção Clinical Studies só a taquicardia supraventricular (\"decréscimos significativos de PA ocorreram em 20-50% dos pacientes\", sem mmHg absoluto), e na Clinical Pharmacology traz parâmetros hemodinâmicos de angiografia por radionuclídeo e cateterismo cardíaco que citam \"redução da pressão arterial sistólica\" sem valor numérico específico. Não há, no rótulo vigente, um número consolidado de queda pressórica em mmHg para a indicação de hipertensão perioperatória — mantido como VERIFICAÇÃO HUMANA NECESSÁRIA, agora como ausência confirmada na fonte primária, não como lacuna de busca.",
+    "brand_names": [
+      "Brevibloc",
+      "Brevibloc Diluído"
+    ]
   },
   {
     "slug": "espironolactona",
@@ -3459,7 +3481,12 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para hidralazina — seção de uso clínico/farmacologia, referente à administração intravenosa em emergência hipertensiva.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Buscas desta sessão encontraram valores dispersos e de procedência heterogênea para a queda pressórica com hidralazina intravenosa (uma fonte agregadora não primária cita ~18-22/11-15 mmHg; um estudo isolado, de identificação incompleta nesta sessão, relatou 24/9 mmHg com desvio-padrão muito amplo, ~29/15 mmHg) — nenhuma delas tem qualidade equivalente à meta-análise usada para furosemida/loop diuréticos (`bp_evidence_source` do registro `furosemida`) ou ao dado de rótulo FDA usado para labetalol (`bp_evidence_source` do registro `labetalol`), e por isso não foram lançadas aqui como número confiável. Isso é coerente com um achado real e já documentado na literatura de hipertensão: as **diretrizes ACC/AHA de 2017 registram explicitamente a imprevisibilidade de resposta da hidralazina** como motivo para não ser fármaco de primeira linha no tratamento agudo — a própria variabilidade de resposta, e não uma lacuna de busca, é o que torna difícil declarar um valor único e confiável de queda de PA em mmHg."
+    "bp_evidence_source": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Buscas desta sessão encontraram valores dispersos e de procedência heterogênea para a queda pressórica com hidralazina intravenosa (uma fonte agregadora não primária cita ~18-22/11-15 mmHg; um estudo isolado, de identificação incompleta nesta sessão, relatou 24/9 mmHg com desvio-padrão muito amplo, ~29/15 mmHg) — nenhuma delas tem qualidade equivalente à meta-análise usada para furosemida/loop diuréticos (`bp_evidence_source` do registro `furosemida`) ou ao dado de rótulo FDA usado para labetalol (`bp_evidence_source` do registro `labetalol`), e por isso não foram lançadas aqui como número confiável. Isso é coerente com um achado real e já documentado na literatura de hipertensão: as **diretrizes ACC/AHA de 2017 registram explicitamente a imprevisibilidade de resposta da hidralazina** como motivo para não ser fármaco de primeira linha no tratamento agudo — a própria variabilidade de resposta, e não uma lacuna de busca, é o que torna difícil declarar um valor único e confiável de queda de PA em mmHg.",
+    "brand_names": [
+      "Apresolina",
+      "Nepresol",
+      "cloridrato de hidralazina (Genérico)"
+    ]
   },
   {
     "slug": "hidroclorotiazida",
@@ -4698,7 +4725,11 @@
     "interactions": [
       "Inibidores da fosfodiesterase-5 (sildenafila, tadalafila, vardenafila) — risco de hipotensão grave por potencialização do efeito vasodilatador via óxido nítrico/GMPc; a bula brasileira do MONOCORDIL trata este risco em Interações Medicamentosas (não no item formal de contraindicações), mas já registrado em `notes.Precaucoes` deste verbete com o mesmo peso clínico de uma contraindicação absoluta."
     ],
-    "hepatic_adjustment": "Não há orientação de ajuste hepático específico na bula profissional brasileira do MONOCORDIL, já citada nas referências deste registro — diferente do dinitrato de isossorbida (que depende de metabolismo hepático de primeira passagem para ativação), o mononitrato já é a forma ativa, o que reduz a relevância teórica da função hepática sobre sua farmacocinética."
+    "hepatic_adjustment": "Não há orientação de ajuste hepático específico na bula profissional brasileira do MONOCORDIL, já citada nas referências deste registro — diferente do dinitrato de isossorbida (que depende de metabolismo hepático de primeira passagem para ativação), o mononitrato já é a forma ativa, o que reduz a relevância teórica da função hepática sobre sua farmacocinética.",
+    "brand_names": [
+      "Monocordil",
+      "mononitrato de isossorbida (Genérico)"
+    ]
   },
   {
     "slug": "nebivolol-cloridrato",
@@ -5155,7 +5186,11 @@
     "dbp_reduction_mmhg": -6.5,
     "bp_evidence_source": "Rótulo FDA para olmesartana medoxomila, seção 14.1 (Adult Hypertension) — sete ensaios placebo-controlados, 2.145 pacientes com olmesartana e 548 com placebo: dose de **20 mg/dia** produziu redução média de PA em vale (trough), corrigida pelo placebo, de **\"about 10/6 mmHg\"**; a dose de **40 mg/dia** produziu **\"about 12/7 mmHg\"** — texto exato do rótulo: \"Olmesartan medoxomil doses greater than 40 mg had little additional effect.\" A resposta é dose-dependente, com início em até uma semana e efeito majoritariamente manifesto em duas semanas. Os valores registrados nos campos (-11,0/-6,5) são o ponto médio entre as doses de 20 e 40 mg, consistente com o mesmo teto de dose já registrado em `dosing.hipertensao dose maxima` deste verbete. Fonte: rótulo FDA/DailyMed do olmesartana medoxomila (genérico espelhando o rótulo original do BENICAR®/Daiichi Sankyo), setid 812d2d57-14d6-48a9-9687-85c2d125197e, **texto lido diretamente via API v2 do DailyMed nesta sessão (12/08/2026)**, confirmando os valores acima linha a linha.",
     "renal_adjustment": "Não é necessário ajuste na insuficiência renal leve a moderada (ClCr 30-90 mL/min) — mesmo conteúdo já registrado em `dosing.Ajuste renal` deste verbete, aqui estruturado como campo próprio. Em insuficiência renal grave (ClCr<40) ou possível depleção de volume, iniciar sob supervisão cuidadosa com dose inicial menor (já registrado em `notes.Insuficiencia hepatica grave` deste verbete, que trata os dois casos juntos). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
-    "hepatic_adjustment": "Não é necessário ajuste, mesmo em disfunção hepática grave — cautela recomendada, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave (mesmo conteúdo já registrado em `dosing.Ajuste hepático` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro."
+    "hepatic_adjustment": "Não é necessário ajuste, mesmo em disfunção hepática grave — cautela recomendada, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave (mesmo conteúdo já registrado em `dosing.Ajuste hepático` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
+    "brand_names": [
+      "Benicar",
+      "olmesartana medoxomila (Genérico)"
+    ]
   },
   {
     "slug": "pentoxifilina",
@@ -5306,7 +5341,11 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para ACEON (perindopril erbumine), seção Clinical Pharmacology (WebSearch, 10/08/2026).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Rótulo profissional aprovado pelo FDA para ACEON (perindopril erbumina — sal erbumina, não arginina/argininaerbumina como o registrado no campo `generic_name` deste verbete; mesma base ativa perindopril, farmacologicamente equivalente, salificação diferente), DailyMed, setid 97a9e8bf-91ed-4256-97d4-f9504bb01373, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026: 'doses of 8 mg and 16 mg per day gave supine, trough blood pressure reductions of 9 to 15/5 to 6 mm Hg' — pacientes com PA basal em torno de 150/100 mmHg. O rótulo também registra que o efeito pressórico de vale corresponde a cerca de 75-100% do efeito de pico, para doses de 2 a 16 mg. **VERIFICAÇÃO HUMANA NECESSÁRIA quanto à conversão de dose** entre a erbumina (ACEON, referência americana) e a argininaerbumina/arginina (apresentação registrada neste catálogo, mais comum no Brasil e na Europa) — as doses miligrama a miligrama NÃO são diretamente intercambiáveis entre os dois sais (2mg de perindopril arginina ~ equivalência distinta de 2mg de perindopril erbumina, por peso molecular do sal); os valores de mmHg acima são apresentados como o efeito farmacológico documentado da molécula, não como equivalência de dose miligrama a miligrama entre sais. O EUROPA (já citado no campo `outcomes` deste registro) continua sendo ensaio de desfecho cardiovascular, não um ensaio dedicado de redução pressórica. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente."
+    "bp_evidence_source": "Rótulo profissional aprovado pelo FDA para ACEON (perindopril erbumina — sal erbumina, não arginina/argininaerbumina como o registrado no campo `generic_name` deste verbete; mesma base ativa perindopril, farmacologicamente equivalente, salificação diferente), DailyMed, setid 97a9e8bf-91ed-4256-97d4-f9504bb01373, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026: 'doses of 8 mg and 16 mg per day gave supine, trough blood pressure reductions of 9 to 15/5 to 6 mm Hg' — pacientes com PA basal em torno de 150/100 mmHg. O rótulo também registra que o efeito pressórico de vale corresponde a cerca de 75-100% do efeito de pico, para doses de 2 a 16 mg. **VERIFICAÇÃO HUMANA NECESSÁRIA quanto à conversão de dose** entre a erbumina (ACEON, referência americana) e a argininaerbumina/arginina (apresentação registrada neste catálogo, mais comum no Brasil e na Europa) — as doses miligrama a miligrama NÃO são diretamente intercambiáveis entre os dois sais (2mg de perindopril arginina ~ equivalência distinta de 2mg de perindopril erbumina, por peso molecular do sal); os valores de mmHg acima são apresentados como o efeito farmacológico documentado da molécula, não como equivalência de dose miligrama a miligrama entre sais. O EUROPA (já citado no campo `outcomes` deste registro) continua sendo ensaio de desfecho cardiovascular, não um ensaio dedicado de redução pressórica. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente.",
+    "brand_names": [
+      "Acertil",
+      "perindopril arginina (Genérico)"
+    ]
   },
   {
     "slug": "prasugrel",
@@ -5763,7 +5802,11 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para ALTACE (ramipril), Clinical Pharmacology, consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": -6.0,
     "dbp_reduction_mmhg": -4.0,
-    "bp_evidence_source": "Rótulo profissional aprovado pelo FDA para ramipril (DailyMed, genérico, setid d6d57158-e8f9-4c91-8317-0374e0c87d33, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026 — a busca anterior, em 10/08/2026, havia sido interrompida por esgotamento de orçamento de WebSearch e bloqueio de proxy de rede, registrado abaixo como histórico): 'lowering supine or standing systolic and diastolic blood pressures 24 hours after dosing by about 6/4 mmHg more than placebo' — estudos controlados de 4 a 12 semanas, dose única diária de 2,5 a 10 mg, sem detalhamento por degrau de dose além dessa faixa. O ensaio HOPE (já citado em `outcomes` deste registro) é ensaio de DESFECHO CARDIOVASCULAR, não um ensaio dedicado de redução pressórica — o benefício cardiovascular observado no HOPE excedeu o que essa queda pressórica modesta isoladamente explicaria, achado citado na literatura como sustentação de um efeito 'além da redução pressórica' do ramipril, mas este campo registra o valor de queda pressórica em si, do rótulo FDA, não uma interpretação sobre o HOPE. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness durante aquele lote e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) para todos os domínios tentados — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente."
+    "bp_evidence_source": "Rótulo profissional aprovado pelo FDA para ramipril (DailyMed, genérico, setid d6d57158-e8f9-4c91-8317-0374e0c87d33, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026 — a busca anterior, em 10/08/2026, havia sido interrompida por esgotamento de orçamento de WebSearch e bloqueio de proxy de rede, registrado abaixo como histórico): 'lowering supine or standing systolic and diastolic blood pressures 24 hours after dosing by about 6/4 mmHg more than placebo' — estudos controlados de 4 a 12 semanas, dose única diária de 2,5 a 10 mg, sem detalhamento por degrau de dose além dessa faixa. O ensaio HOPE (já citado em `outcomes` deste registro) é ensaio de DESFECHO CARDIOVASCULAR, não um ensaio dedicado de redução pressórica — o benefício cardiovascular observado no HOPE excedeu o que essa queda pressórica modesta isoladamente explicaria, achado citado na literatura como sustentação de um efeito 'além da redução pressórica' do ramipril, mas este campo registra o valor de queda pressórica em si, do rótulo FDA, não uma interpretação sobre o HOPE. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness durante aquele lote e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) para todos os domínios tentados — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente.",
+    "brand_names": [
+      "Naprix",
+      "ramipril (Genérico)"
+    ]
   },
   {
     "slug": "ranolazina",
@@ -7891,6 +7934,9 @@
     "bp_evidence_source": "Fenilefrina é vasopressor (AUMENTA a pressão arterial por agonismo alfa-1 seletivo) — a direção do efeito é positiva, ao contrário da maioria dos fármacos deste lote, mas a bula e as fontes farmacocinéticas consultadas nesta sessão descrevem o uso como titulado ao efeito clínico desejado ('controle da pressão arterial'), sem um valor fixo de elevação em mmHg por dose/infusão — comum em vasopressores usados sob titulação individual (ex.: profilaxia de hipotensão na raquianestesia, onde a meta costuma ser manter a PAS acima de um percentual do basal, não uma elevação fixa em mmHg). VERIFICAÇÃO HUMANA NECESSÁRIA para um valor numérico específico de elevação pressórica por dose, que não foi localizado nesta sessão.",
     "presentations": [
       "Solução injetável de 10 mg/mL (1%), ampola para uso subcutâneo, intramuscular ou intravenoso — já descrita em dosing."
+    ],
+    "brand_names": [
+      "Fenilefrin (uso injetável/vasopressor)"
     ]
   },
   {
@@ -7941,6 +7987,11 @@
     "bp_evidence_source": "Hipotensão consta como reação adversa comum ao dipiridamol IV (ver adverse_effects, 'Reacoes adversas mais comuns'), mas sem dado sistemático de magnitude de queda pressórica em mmHg na fonte consultada — o efeito vasodilatador é primariamente coronariano/regional (é a base do próprio teste de perfusão), não um efeito anti-hipertensivo sistêmico quantificado. Fonte: bula profissional brasileira do Persantin® injetável, seção 9 (Reações Adversas).",
     "presentations": [
       "Ampola de 2 mL contendo 10 mg de dipiridamol (5 mg/mL), uso exclusivamente intravenoso para a indicação de estresse farmacológico — já descrita em dosing."
+    ],
+    "brand_names": [
+      "Persantin",
+      "Persantin Injetável",
+      "dipiridamol (Genérico)"
     ]
   },
   {
@@ -12363,7 +12414,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para sulfato de quinidina (DailyMed, setid b0d6341b-d880-4f0b-8844-bc788c03004a) — mesma fonte de `dosing` e `half_life_note`, sem valor isolado de duração de ação farmacodinâmica publicado separadamente.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — quinidina é antiarrítmico classe Ia sem indicação nem estudo de redução pressórica sistêmica; hipotensão é listada como sinal de alerta para redução/suspensão de dose (ver campo `monitoring`), não como desfecho terapêutico buscado."
+    "bp_evidence_source": "Não se aplica — quinidina é antiarrítmico classe Ia sem indicação nem estudo de redução pressórica sistêmica; hipotensão é listada como sinal de alerta para redução/suspensão de dose (ver campo `monitoring`), não como desfecho terapêutico buscado.",
+    "brand_names": [
+      "Não tem registro comercial ativo na ANVISA (bulários públicos consultados confirmam ausência de apresentação vigente; marcas históricas como Quinicardine/Duriles/Cardinor não estão mais disponíveis). Uso hoje depende de importação individual sob RDC nº 81/2008 — VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar disponível para prescrição no Brasil."
+    ]
   },
   {
     "slug": "mexiletina-cloridrato",
@@ -12437,7 +12491,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para cloridrato de mexiletina (DailyMed, setid a61a07f6-0b48-4dcd-ad42-5d90f6e69ab1) — mesma fonte de `dosing` e `half_life_note`, sem valor isolado de duração de ação farmacodinâmica publicado separadamente.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — mexiletina é antiarrítmico classe Ib sem indicação nem estudo de redução pressórica sistêmica; seu uso terapêutico (arritmia ventricular ameaçadora à vida, e mais recentemente síndrome do QT longo tipo 2/3) não envolve pressão arterial como desfecho."
+    "bp_evidence_source": "Não se aplica — mexiletina é antiarrítmico classe Ib sem indicação nem estudo de redução pressórica sistêmica; seu uso terapêutico (arritmia ventricular ameaçadora à vida, e mais recentemente síndrome do QT longo tipo 2/3) não envolve pressão arterial como desfecho.",
+    "brand_names": [
+      "Sem registro ativo de comercialização no Brasil, segundo fontes consultadas — disponível apenas por importação individual sob RDC nº 81/2008. VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar disponível para prescrição no Brasil."
+    ]
   },
   {
     "slug": "procainamida-cloridrato",
@@ -12506,7 +12563,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para cloridrato de procainamida (DailyMed, setid 17e47845-daad-434c-a784-6d3875b0d704) — mesma fonte de `dosing` e `half_life_note`; a própria estrutura da posologia (infusão titulada, não dose fixa redosada em intervalo constante) é o que impede um valor numérico único, não uma lacuna de busca desta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como desfecho terapêutico — procainamida é antiarrítmico classe Ia usado para taquiarritmia ventricular/QRS largo (ver `indications` e `outcomes`), e a bula lista **hipotensão como efeito adverso a monitorar** (ver `adverse_effects` e `monitoring`), não como alvo pressórico buscado."
+    "bp_evidence_source": "Não se aplica como desfecho terapêutico — procainamida é antiarrítmico classe Ia usado para taquiarritmia ventricular/QRS largo (ver `indications` e `outcomes`), e a bula lista **hipotensão como efeito adverso a monitorar** (ver `adverse_effects` e `monitoring`), não como alvo pressórico buscado.",
+    "brand_names": [
+      "Único registro histórico encontrado (marca 'Procamide', Zambon) consta como VENCIDO no bulário consultado; nenhuma marca com registro ativo localizada. VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar disponível para prescrição no Brasil."
+    ]
   },
   {
     "slug": "lercanidipino-cloridrato",
@@ -13315,7 +13375,10 @@
     "sbp_reduction_mmhg": -9.1,
     "dbp_reduction_mmhg": -3.4,
     "bp_evidence_source": "LAUNCH-HTN (Saxena et al., JAMA 2025, PMID 40587141): diferença ajustada por placebo de -9,1mmHg na PAS de consultório automatizada, semana 6, grupo combinado de 50mg vs. placebo (IC95% -13,3 a -4,9; p<0,001), n=1.083. PAD (diastólica): desfecho exploratório pré-especificado do LAUNCH-HTN, semana 6 — grupo combinado 50mg vs. placebo: -8,6mmHg (IC95% -9,9 a -7,3) vs. -5,2mmHg (IC95% -7,4 a -3,0); diferença ajustada por placebo de -3,4mmHg (IC95% -5,9 a -0,8; p=0,01).",
-    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): dois ensaios pivotais (ADVANCE-HTN PMID 40267417, LAUNCH-HTN PMID 40587141) reconferidos linha a linha, sem divergência. Duas lacunas corrigidas: half_life_hours (antes null 'sem fonte', agora 10-12h via PMID 39152532, estudo de fase 1); dbp_reduction_mmhg (antes null, agora -3,4mmHg, desfecho exploratório pré-especificado já presente no artigo do LAUNCH-HTN citado). Duas correções editoriais menores: classificação da referência Cunningham/Lam (editorial, não revisão narrativa) e errata do LAUNCH-HTN identificada como correção trivial de grafia, sem impacto clínico. Status regulatório confirmado (NDA aceito FDA, PDUFA 22/12/2026, ainda sem aprovação). Campos VERIFICAÇÃO HUMANA NECESSÁRIA (contraindicações, interações, gravidez, lactação, monitorização de prática clínica, registro ANVISA) mantidos — fármaco ainda sem bula aprovada."
+    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): dois ensaios pivotais (ADVANCE-HTN PMID 40267417, LAUNCH-HTN PMID 40587141) reconferidos linha a linha, sem divergência. Duas lacunas corrigidas: half_life_hours (antes null 'sem fonte', agora 10-12h via PMID 39152532, estudo de fase 1); dbp_reduction_mmhg (antes null, agora -3,4mmHg, desfecho exploratório pré-especificado já presente no artigo do LAUNCH-HTN citado). Duas correções editoriais menores: classificação da referência Cunningham/Lam (editorial, não revisão narrativa) e errata do LAUNCH-HTN identificada como correção trivial de grafia, sem impacto clínico. Status regulatório confirmado (NDA aceito FDA, PDUFA 22/12/2026, ainda sem aprovação). Campos VERIFICAÇÃO HUMANA NECESSÁRIA (contraindicações, interações, gravidez, lactação, monitorização de prática clínica, registro ANVISA) mantidos — fármaco ainda sem bula aprovada.",
+    "brand_names": [
+      "Fármaco ainda em análise regulatória (NDA em revisão pela FDA na data da pesquisa, sem aprovação confirmada mesmo nos EUA) — sem registro na ANVISA."
+    ]
   },
   {
     "slug": "enlicitide",
@@ -13376,7 +13439,10 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Não aplicável — enlicitide é inibidor de PCSK9 indicado para redução de LDL-colesterol, atuando sobre o receptor de LDL hepático, não sobre a pressão arterial sistêmica. Nenhum dos três ensaios pivotais citados neste registro (CORALreef Lipids, AddOn, HeFH) reporta desfecho de pressão arterial sistólica/diastólica.",
-    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): ACHADO CRÍTICO — a enlicitide deixou de ser fármaco investigacional, foi aprovada pela FDA em 15/07/2026 sob a marca LIPFENDRA® (NDA 220848, Merck Sharp & Dohme), confirmado por 4 fontes independentes convergentes. O registro inteiro foi reescrito para refletir a bula aprovada, que resolveu a maioria dos campos antes marcados VERIFICAÇÃO HUMANA NECESSÁRIA: contraindicações (nenhuma formal), interações (lista nomeada de fármacos testados sem interação), gravidez (Categoria/conduta explícita), lactação, posologia completa (jejum, janela de 30min, dose esquecida), meia-vida (efetiva 14h, terminal 244h), farmacocinética completa. Os três ensaios pivotais (CORALreef Lipids/AddOn/HeFH, PMIDs 41879224/42017875/41206969) já estavam 100% corretos e não precisaram de correção numérica. Status regulatório brasileiro (ANVISA) permanece VERIFICAÇÃO HUMANA NECESSÁRIA — aprovação muito recente, sem indício de submissão no Brasil ainda."
+    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): ACHADO CRÍTICO — a enlicitide deixou de ser fármaco investigacional, foi aprovada pela FDA em 15/07/2026 sob a marca LIPFENDRA® (NDA 220848, Merck Sharp & Dohme), confirmado por 4 fontes independentes convergentes. O registro inteiro foi reescrito para refletir a bula aprovada, que resolveu a maioria dos campos antes marcados VERIFICAÇÃO HUMANA NECESSÁRIA: contraindicações (nenhuma formal), interações (lista nomeada de fármacos testados sem interação), gravidez (Categoria/conduta explícita), lactação, posologia completa (jejum, janela de 30min, dose esquecida), meia-vida (efetiva 14h, terminal 244h), farmacocinética completa. Os três ensaios pivotais (CORALreef Lipids/AddOn/HeFH, PMIDs 41879224/42017875/41206969) já estavam 100% corretos e não precisaram de correção numérica. Status regulatório brasileiro (ANVISA) permanece VERIFICAÇÃO HUMANA NECESSÁRIA — aprovação muito recente, sem indício de submissão no Brasil ainda.",
+    "brand_names": [
+      "Aprovado pela FDA em 2026 sob a marca 'Lipfendra' nos EUA — sem registro na ANVISA até a data desta pesquisa."
+    ]
   },
   {
     "slug": "cagrilintida",
@@ -13433,7 +13499,10 @@
     "sbp_reduction_mmhg": -10.9,
     "dbp_reduction_mmhg": -5.4,
     "bp_evidence_source": "Verma et al., Hypertension 2026 (PMID 41328546), análise secundária/post hoc do REDEFINE 1 (n=3.417, sem diabetes tipo 2): PAS -10,9mmHg e PAD -5,4mmHg com CagriSema (combinação cagrilintida+semaglutida) vs. -2,8mmHg e -1,7mmHg com placebo, variação basal-semana 68. **ATENÇÃO — estes valores são da COMBINAÇÃO CagriSema, não da cagrilintida isolada**: os braços de monoterapia (semaglutida isolada, cagrilintida isolada) não foram o foco desta análise pressórica específica, e o documento-fonte não faz comparação direta cabeça a cabeça entre CagriSema e semaglutida isolada quanto a pressão arterial. Não atribuir este efeito à cagrilintida isoladamente sem verificação adicional.",
-    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): todos os números já presentes (perda de peso, PA, efeitos GI, subgrupo de hipertensão resistente) reconferidos contra os abstracts primários (PMID 40544433, PMID 41328546) sem divergência. Lacunas preenchidas: dose de monoterapia no REDEFINE 1 (2,4mg semanal, n=302, detalhada por braço); meia-vida (159-195h, PMID 33894838, antes null); ausência de interação farmacocinética relevante entre cagrilintida e semaglutida na coadministração. Contraindicações, interações com outras classes, gravidez, lactação, monitorização e duração de ação permanecem VERIFICAÇÃO HUMANA NECESSÁRIA (sem bula aprovada). Status regulatório (sem aprovação FDA/EMA/ANVISA confirmada) mantido correto."
+    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): todos os números já presentes (perda de peso, PA, efeitos GI, subgrupo de hipertensão resistente) reconferidos contra os abstracts primários (PMID 40544433, PMID 41328546) sem divergência. Lacunas preenchidas: dose de monoterapia no REDEFINE 1 (2,4mg semanal, n=302, detalhada por braço); meia-vida (159-195h, PMID 33894838, antes null); ausência de interação farmacocinética relevante entre cagrilintida e semaglutida na coadministração. Contraindicações, interações com outras classes, gravidez, lactação, monitorização e duração de ação permanecem VERIFICAÇÃO HUMANA NECESSÁRIA (sem bula aprovada). Status regulatório (sem aprovação FDA/EMA/ANVISA confirmada) mantido correto.",
+    "brand_names": [
+      "Sem aprovação da FDA, EMA ou ANVISA até a data desta pesquisa (inclusive na associação com semaglutida, CagriSema)."
+    ]
   },
   {
     "slug": "danicamtiv",
@@ -13485,7 +13554,10 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "VERIFICAÇÃO HUMANA NECESSÁRIA — o artigo-fonte (ensaio de fase 2, PMID 41217321) não reporta desfecho de pressão arterial sistólica/diastólica; os desfechos avaliados foram FEVE e outros parâmetros ecocardiográficos, não hemodinâmica sistêmica de PA. Diferente de tafamidis (estabilizador estrutural sem alvo vascular), o danicamtiv atua sobre a contratilidade cardíaca, o que pode ter efeito hemodinâmico indireto sobre a pressão arterial — mas isso não foi medido nem relatado na fonte consultada nesta sessão, por isso os campos numéricos ficam nulos em vez de \"não aplicável\".",
-    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): núcleo quantitativo reconferido número a número contra o abstract real do PMID 41217321 e ClinicalTrials.gov (NCT04572893) — n=41, FEVE basal 33,4%±8,0%, coortes 12 MYH7/14 TTN/15 outras causas (decomposta em 5 outras genéticas + 10 não genéticas), variação de FEVE por coorte com IC95%, TEAEs 22/41 (53,7%), sem divergência. Adicionada distinção explícita com mavacamten (Camzyos) — inibidor de miosina cardíaca, classe/indicação opostas — que faltava ao lado da já existente distinção com omecamtiv mecarbil. Campos VERIFICAÇÃO HUMANA NECESSÁRIA (contraindicações, interações, gravidez, lactação, meia-vida, PA) confirmados corretamente marcados — abstract de fato não traz esses dados. Sem bula/registro regulatório: fase 2, sem produto aprovado."
+    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): núcleo quantitativo reconferido número a número contra o abstract real do PMID 41217321 e ClinicalTrials.gov (NCT04572893) — n=41, FEVE basal 33,4%±8,0%, coortes 12 MYH7/14 TTN/15 outras causas (decomposta em 5 outras genéticas + 10 não genéticas), variação de FEVE por coorte com IC95%, TEAEs 22/41 (53,7%), sem divergência. Adicionada distinção explícita com mavacamten (Camzyos) — inibidor de miosina cardíaca, classe/indicação opostas — que faltava ao lado da já existente distinção com omecamtiv mecarbil. Campos VERIFICAÇÃO HUMANA NECESSÁRIA (contraindicações, interações, gravidez, lactação, meia-vida, PA) confirmados corretamente marcados — abstract de fato não traz esses dados. Sem bula/registro regulatório: fase 2, sem produto aprovado.",
+    "brand_names": [
+      "Fármaco investigacional (também referido como MYK-491), sem aprovação regulatória em nenhum país até a data desta pesquisa."
+    ]
   },
   {
     "slug": "istaroxime",
@@ -13549,7 +13621,10 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "O desfecho primário de eficácia do SEISMiC — AUC da PAS da linha de base até 6 e 24h — TEM valor numérico publicado: nas primeiras 6h, AUC de PAS 62,0mmHg·hora (EP 6,59) com istaroxime vs. 36,4mmHg·hora (EP 7,11) com placebo; diferença +25,6mmHg·hora (IC95% 7,2 a 44,0; p=0,007), a favor do istaroxime (Biegus J, Mebazaa A, Metra M, Pagnesi M, Chioncel O, et al. Safety and efficacy intravenous istaroxime up to 60 hours for patients with pre-cardiogenic shock. J Heart Lung Transplant. 2025;44(10):1569-1580. DOI: 10.1016/j.healun.2025.05.013. PMID: 40451596). O efeito é de ELEVAÇÃO pressórica, coerente com o uso em população hipotensa (PAS 70-100mmHg, pré-choque cardiogênico) — por isso os campos sbp_reduction_mmhg/dbp_reduction_mmhg deste registro (que medem REDUÇÃO de PA por anti-hipertensivo) permanecem corretamente nulos e não devem ser preenchidos com este dado. Não comparar estes campos entre fármacos de classes tão diferentes.",
-    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): os 3 PMIDs já citados (39375885, 41085472, 42138657) reconferidos, todos batendo. Encontrada 4ª publicação não citada (Biegus J, Mebazaa A, Metra M, Pagnesi M, Chioncel O, et al. Safety and efficacy intravenous istaroxime up to 60 hours for patients with pre-cardiogenic shock. J Heart Lung Transplant. 2025;44(10):1569-1580. DOI: 10.1016/j.healun.2025.05.013. PMID: 40451596) que resolve outcomes/bp_evidence_source vazios com o número absoluto do desfecho primário (AUC da PAS +25,6mmHg·hora, p=0,007, n=90) e revela dado de segurança arrítmica favorável (sem arritmia maligna ao Holter). Regimes numéricos das Partes A/B, antes marcados como 'não detalhados na fonte', na verdade já constavam no texto completo em PMC — corrigido. Campos genuinamente sem dado (gravidez, lactação, meia-vida, interações formais, número absoluto de eventos arrítmicos da análise dedicada PMID 42138657) permanecem VERIFICAÇÃO HUMANA NECESSÁRIA, corretamente."
+    "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): os 3 PMIDs já citados (39375885, 41085472, 42138657) reconferidos, todos batendo. Encontrada 4ª publicação não citada (Biegus J, Mebazaa A, Metra M, Pagnesi M, Chioncel O, et al. Safety and efficacy intravenous istaroxime up to 60 hours for patients with pre-cardiogenic shock. J Heart Lung Transplant. 2025;44(10):1569-1580. DOI: 10.1016/j.healun.2025.05.013. PMID: 40451596) que resolve outcomes/bp_evidence_source vazios com o número absoluto do desfecho primário (AUC da PAS +25,6mmHg·hora, p=0,007, n=90) e revela dado de segurança arrítmica favorável (sem arritmia maligna ao Holter). Regimes numéricos das Partes A/B, antes marcados como 'não detalhados na fonte', na verdade já constavam no texto completo em PMC — corrigido. Campos genuinamente sem dado (gravidez, lactação, meia-vida, interações formais, número absoluto de eventos arrítmicos da análise dedicada PMID 42138657) permanecem VERIFICAÇÃO HUMANA NECESSÁRIA, corretamente.",
+    "brand_names": [
+      "Agente inotrópico investigacional, em fase de ensaios clínicos (fase II/III), sem aprovação regulatória em nenhum país até a data desta pesquisa."
+    ]
   },
   {
     "slug": "treprostinila",
@@ -13808,7 +13883,11 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para fosinopril sodium tablets (DailyMed, genérico, setid ff1323cc-7ad8-488d-94a7-a11555db78a7), seções 2 (posologia 1x/dia) e 14 (efeito mantido 24h após a dose), consultado nesta sessão.",
     "sbp_reduction_mmhg": -8.5,
     "dbp_reduction_mmhg": -6.5,
-    "bp_evidence_source": "Rótulo aprovado pelo FDA para fosinopril sodium tablets (DailyMed, genérico, setid ff1323cc-7ad8-488d-94a7-a11555db78a7), seção 14: 'once daily doses of 20 mg to 80 mg lowered supine or seated systolic and diastolic blood pressures 24 hours after dosing by an average of 8-9/6-7 mmHg more than placebo'. **Atenção**: esse dado placebo-corrigido cobre a faixa de dose de 20 a 80 mg — não a dose inicial de 10 mg citada em `dosing`. Os valores numéricos registrados nos campos (-8,5/-6,5 mmHg) são o ponto médio da faixa 8-9/6-7 mmHg informada pelo rótulo. Consultado nesta sessão."
+    "bp_evidence_source": "Rótulo aprovado pelo FDA para fosinopril sodium tablets (DailyMed, genérico, setid ff1323cc-7ad8-488d-94a7-a11555db78a7), seção 14: 'once daily doses of 20 mg to 80 mg lowered supine or seated systolic and diastolic blood pressures 24 hours after dosing by an average of 8-9/6-7 mmHg more than placebo'. **Atenção**: esse dado placebo-corrigido cobre a faixa de dose de 20 a 80 mg — não a dose inicial de 10 mg citada em `dosing`. Os valores numéricos registrados nos campos (-8,5/-6,5 mmHg) são o ponto médio da faixa 8-9/6-7 mmHg informada pelo rótulo. Consultado nesta sessão.",
+    "brand_names": [
+      "Monopril",
+      "fosinopril sódico (Genérico)"
+    ]
   },
   {
     "slug": "trandolapril",
@@ -13875,7 +13954,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para trandolapril tablets (DailyMed, genérico, Lupin Pharmaceuticals, setid 8143a6cf-dadc-4ef7-a8db-d16d7150ad34), seções 2 e 14, consultado nesta sessão.",
     "sbp_reduction_mmhg": -8.5,
     "dbp_reduction_mmhg": -4.5,
-    "bp_evidence_source": "Rótulo aprovado pelo FDA para trandolapril tablets (DailyMed, genérico, Lupin Pharmaceuticals, setid 8143a6cf-dadc-4ef7-a8db-d16d7150ad34), seção 14, estudo de monoterapia de 6 semanas: 'once-daily doses of 2 to 4 mg lowered supine or standing systolic/diastolic blood pressure 24 hours after dosing by an average 7 to 10/4 to 5 mmHg below placebo responses in non-black patients' e '2 to 4 mg lowered blood pressure 4 to 6/3 to 4 mmHg in black patients' — **efeito pressórico consistentemente menor em pacientes negros na mesma faixa de dose**, achado que a própria bula registra e que espelha a distinção de dose inicial (ver `dosing`). Os valores numéricos registrados nos campos (-8,5/-4,5 mmHg) são o ponto médio da faixa informada para pacientes não negros (7-10/4-5 mmHg); a faixa menor observada em pacientes negros (4-6/3-4 mmHg) fica registrada aqui por extenso, não nos campos numéricos, que comportam um único par de valores. Consultado nesta sessão."
+    "bp_evidence_source": "Rótulo aprovado pelo FDA para trandolapril tablets (DailyMed, genérico, Lupin Pharmaceuticals, setid 8143a6cf-dadc-4ef7-a8db-d16d7150ad34), seção 14, estudo de monoterapia de 6 semanas: 'once-daily doses of 2 to 4 mg lowered supine or standing systolic/diastolic blood pressure 24 hours after dosing by an average 7 to 10/4 to 5 mmHg below placebo responses in non-black patients' e '2 to 4 mg lowered blood pressure 4 to 6/3 to 4 mmHg in black patients' — **efeito pressórico consistentemente menor em pacientes negros na mesma faixa de dose**, achado que a própria bula registra e que espelha a distinção de dose inicial (ver `dosing`). Os valores numéricos registrados nos campos (-8,5/-4,5 mmHg) são o ponto médio da faixa informada para pacientes não negros (7-10/4-5 mmHg); a faixa menor observada em pacientes negros (4-6/3-4 mmHg) fica registrada aqui por extenso, não nos campos numéricos, que comportam um único par de valores. Consultado nesta sessão.",
+    "brand_names": [
+      "Odrik"
+    ]
   },
   {
     "slug": "quinapril-cloridrato",
@@ -13944,7 +14026,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para quinapril hydrochloride tablets (DailyMed, genérico, Aurobindo Pharma Limited, setid 93e6e668-5306-4f26-81d8-cbc3a7a5e787), Farmacologia Clínica/'Pharmacodynamics and Clinical Effects', consultado nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**Ausência confirmada de dado placebo-corrigido, não lacuna de busca.** O rótulo aprovado pelo FDA para quinapril hydrochloride tablets (DailyMed, genérico, Aurobindo Pharma Limited, setid 93e6e668-5306-4f26-81d8-cbc3a7a5e787) não traz seção 14 (Clinical Studies) — a única informação de eficácia pressórica está na Farmacologia Clínica: 'in multiple-dose studies, 10 to 80 mg per day in single or divided doses lowered systolic and diastolic blood pressure throughout the dosing interval, with a trough effect of about 5 to 11/3 to 7 mm Hg' e 'while the dose-response relationship is relatively flat, doses of 40 to 80 mg were somewhat more effective at trough than 10 to 20 mg'. **Esse texto descreve o efeito absoluto de vale, sem menção a comparação com placebo** (diferente do texto de fosinopril, trandolapril e azilsartana neste mesmo lote, que dizem explicitamente 'more than placebo'/'below placebo'). Consultado e reconferido especificamente nesta sessão para confirmar a ausência dessa comparação antes de deixar os campos numéricos como `null`."
+    "bp_evidence_source": "**Ausência confirmada de dado placebo-corrigido, não lacuna de busca.** O rótulo aprovado pelo FDA para quinapril hydrochloride tablets (DailyMed, genérico, Aurobindo Pharma Limited, setid 93e6e668-5306-4f26-81d8-cbc3a7a5e787) não traz seção 14 (Clinical Studies) — a única informação de eficácia pressórica está na Farmacologia Clínica: 'in multiple-dose studies, 10 to 80 mg per day in single or divided doses lowered systolic and diastolic blood pressure throughout the dosing interval, with a trough effect of about 5 to 11/3 to 7 mm Hg' e 'while the dose-response relationship is relatively flat, doses of 40 to 80 mg were somewhat more effective at trough than 10 to 20 mg'. **Esse texto descreve o efeito absoluto de vale, sem menção a comparação com placebo** (diferente do texto de fosinopril, trandolapril e azilsartana neste mesmo lote, que dizem explicitamente 'more than placebo'/'below placebo'). Consultado e reconferido especificamente nesta sessão para confirmar a ausência dessa comparação antes de deixar os campos numéricos como `null`.",
+    "brand_names": [
+      "Accupril"
+    ]
   },
   {
     "slug": "azilsartana-medoxomila",
@@ -13998,6 +14083,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), consultado nesta sessão.",
     "sbp_reduction_mmhg": -14.9,
     "dbp_reduction_mmhg": -7.5,
-    "bp_evidence_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), ensaios comparativos de 6 semanas, redução pressórica corrigida por placebo: **Edarbi 80 mg** -14,9/-7,5 mmHg (PA de consultório) e -14,3/-9,4 mmHg (MAPA de 24h); **Edarbi 40 mg** -14,6/-6,2 mmHg (consultório) e -13,2/-8,6 mmHg (MAPA); comparadores ativos no mesmo ensaio — **olmesartana 40 mg** -11,4/-5,3 mmHg (consultório) e **valsartana 320 mg** -9,5/-4,4 mmHg (consultório), ambos numericamente inferiores à azilsartana 80 mg nesse ensaio. Valores numéricos registrados nos campos deste item são os da dose-alvo de 80 mg, medida em PA de consultório (-14,9/-7,5 mmHg). Consultado nesta sessão."
+    "bp_evidence_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), ensaios comparativos de 6 semanas, redução pressórica corrigida por placebo: **Edarbi 80 mg** -14,9/-7,5 mmHg (PA de consultório) e -14,3/-9,4 mmHg (MAPA de 24h); **Edarbi 40 mg** -14,6/-6,2 mmHg (consultório) e -13,2/-8,6 mmHg (MAPA); comparadores ativos no mesmo ensaio — **olmesartana 40 mg** -11,4/-5,3 mmHg (consultório) e **valsartana 320 mg** -9,5/-4,4 mmHg (consultório), ambos numericamente inferiores à azilsartana 80 mg nesse ensaio. Valores numéricos registrados nos campos deste item são os da dose-alvo de 80 mg, medida em PA de consultório (-14,9/-7,5 mmHg). Consultado nesta sessão.",
+    "brand_names": [
+      "Edarbi",
+      "azilsartana medoxomila potássica (Genérico)"
+    ]
   }
 ]
