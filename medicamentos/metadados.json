@@ -623,7 +623,7 @@
       "Ablok"
     ],
     "commercial_presentations": [
-      "Ablok® (Biolab Sanus Farmacêutica Ltda.), comprimido de 25 mg, 50 mg e 100 mg, embalagens com 30 comprimidos. Também disponível como genérico/similar (Lei nº 9.787/1999) por Medley (Sanofi) e Aché. VERIFICAÇÃO HUMANA NECESSÁRIA: número de registro ANVISA e data de bula não confirmados nesta sessão por fonte primária (WebFetch/curl ao bulário bloqueados pelo proxy do ambiente) — confirmado só por mirrors de bulário/drogaria."
+      "Ablok® (Biolab Sanus), comprimidos de 25 mg, 50 mg e 100 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
     ]
   },
   {
@@ -867,9 +867,7 @@
     "commercial_presentations": [
       "NÃO localizado registro/comercialização regular no Brasil nesta sessão. A Diretriz Brasileira de Antiagregantes Plaquetários e Anticoagulantes em Cardiologia (Sociedade Brasileira de Cardiologia, publicada em Arquivos Brasileiros de Cardiologia, disponível em scielo.br) afirma textualmente que \"a bivalirudina ainda não está disponível para utilização no Brasil\", ao discutir os achados do estudo HORIZONS-AMI. Internacionalmente comercializada como Angiox® (Europa) / Angiomax® (EUA). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA se algum registro foi concedido desde a publicação da diretriz consultada, antes de orientar disponibilidade."
     ],
-    "brand_names": [
-      "Não foi encontrada nenhuma marca com página de bula/produto ativa em bulários brasileiros consultados (ConsultaRemédios, CliqueFarma, BulasMed) — o nome só aparece em listas de interação medicamentosa de outros fármacos, nunca como produto próprio, e fontes jurídicas sobre importação de medicamento tratam a bivalirudina como item que exige uso compassivo/importação por pessoa física. Não foi possível confirmar diretamente no bulário eletrônico da ANVISA neste ambiente (acesso bloqueado). VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar definitivamente ausente do mercado brasileiro."
-    ]
+    "brand_names": []
   },
   {
     "slug": "bosentana",
@@ -1527,7 +1525,7 @@
       "Plavix"
     ],
     "commercial_presentations": [
-      "Plavix® (Sanofi Medley Farmacêutica Ltda.), comprimido revestido de 75 mg (equivalente a 97,875 mg de bissulfato de clopidogrel), embalagens com 7, 14, 28 ou 98 comprimidos. Não existe apresentação comercial de 300 mg — a dose de ataque de 300 mg é obtida com 4 comprimidos de 75 mg, não é um produto separado. Também disponível como genérico/similar por Aché, Aurobindo Pharma do Brasil, Novartis e Legrand. VERIFICAÇÃO HUMANA NECESSÁRIA: Iscover® (Bristol-Myers Squibb, mesma molécula, historicamente co-comercializado com Plavix) teve status de comercialização atual no Brasil não confirmado nesta sessão. Número de registro ANVISA não confirmado."
+      "Plavix® (Sanofi Medley), comprimido revestido de 75 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
     ]
   },
   {
@@ -2013,10 +2011,7 @@
     "commercial_presentations": [
       "DICORANTIL® (fosfato de disopiramida), Sanofi-Aventis Farmacêutica Ltda. — cápsulas 100 mg (Dicorantil), comprimidos de liberação prolongada 250 mg (Dicorantil-F) e solução injetável 100 mg (Dicorantil Injetável), historicamente registrados na ANVISA. Fonte de bula datada de 2014 (bulas.med.br); listagem ainda aparece em farmácias de varejo online (drogariaminasbrasil.com.br) nesta sessão, mas não foi possível confirmar produção/comercialização ativa em 2026 nem status atual do registro ANVISA. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se o registro segue ativo e se o produto continua em produção antes de orientar disponibilidade."
     ],
-    "brand_names": [
-      "Dicorantil (cápsulas 100 mg, laboratório Sanofi-Aventis)",
-      "Dicorantil-F (fosfato de disopiramida — cápsulas, injetável e comprimidos 250 mg, laboratório Sanofi-Aventis)"
-    ]
+    "brand_names": []
   },
   {
     "slug": "dobutamina",
@@ -2218,9 +2213,7 @@
     "commercial_presentations": [
       "Multaq® (sanofi-aventis). Fonte consultada nesta sessão (news.med.br, ago/2026) indica que o registro sanitário do Multaq® está CANCELADO/CADUCO na ANVISA, e o produto não é mais produzido nem comercializado em território nacional. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA o status atual do registro antes de orientar prescrição, pela relevância clínica da indisponibilidade."
     ],
-    "brand_names": [
-      "Multaq (comprimido revestido 400 mg, laboratório Sanofi-Aventis) — registro confirmado pela existência de alerta de segurança específico da própria ANVISA sobre Multaq/dronedarona (risco hepático e cardiovascular)"
-    ]
+    "brand_names": []
   },
   {
     "slug": "dulaglutida",
@@ -2501,7 +2494,7 @@
       "Renitec"
     ],
     "commercial_presentations": [
-      "Renitec® (Merck Sharp & Dohme Farmacêutica Ltda. / Organon do Brasil Farmacêutica Ltda.), comprimidos de 5 mg e 10 mg em caixas com 30 unidades, e 20 mg em caixas com 10 ou 30 unidades. Também comercializado como genérico (Lei nº 9.787/1999) por Cristália, Geolab, Biolab Sanus, Medley, EMS e Cimed, em comprimidos de 5 mg, 10 mg e 20 mg — apresentações e embalagens específicas de cada genérico não conferidas nesta sessão, VERIFICAÇÃO HUMANA NECESSÁRIA. Número de registro ANVISA não confirmado nesta sessão. Existe relato de marcas adicionais (Pressocord®, Pressomede®) em resultado de busca agregada, sem laboratório identificado — VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar essas duas marcas ou incluí-las em brand_names."
+      "Renitec® (Organon), comprimidos de 5 mg, 10 mg e 20 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
     ]
   },
   {
@@ -2743,7 +2736,7 @@
       "Brevibloc"
     ],
     "commercial_presentations": [
-      "Brevibloc® (Cristália Produtos Químicos Farmacêuticos Ltda., marca sob licença da Bristol Myers Squibb Company) — duas apresentações: Brevibloc® 250 mg/mL, solução concentrada para diluição, caixa com 10 ampolas de 10 mL; e Brevibloc® Diluído 10 mg/mL, solução pronta para infusão, caixa com 20 ou 25 frascos-ampola de 10 mL. Único fabricante localizado nesta sessão, sem genérico de outro laboratório encontrado. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado por mirrors e pelo domínio do próprio fabricante nos resultados de busca, sem leitura direta da bula (WebFetch bloqueado). Número de registro ANVISA não confirmado."
+      "Brevibloc® (Cristália), solução injetável 250 mg/mL em ampola de 10 mL e solução 10 mg/mL em frasco-ampola de 10 mL — apresentações identificadas em documentação oficial CMED/Anvisa."
     ]
   },
   {
@@ -3188,9 +3181,7 @@
     "commercial_presentations": [
       "Tambocor® e genéricos (mercados internacionais, ex. EUA/Europa) — NÃO localizado registro ativo de comercialização regular no Brasil nesta sessão. Fontes consultadas indicam que o acesso no país se dá por importação regulamentada por pessoa física ou instituição autorizada, conforme a RDC ANVISA nº 81/2008 (medicamento não registrado). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se há registro ativo antes de informar o fármaco como disponível em farmácia comum no Brasil."
     ],
-    "brand_names": [
-      "Sem registro ativo na ANVISA nem constante na Rename 2022, conforme recomendação do Ministério Público Federal (PR-PA) pedindo ao Ministério da Saúde que estude viabilizar acesso para arritmia pediátrica. Disponível hoje apenas por importação de medicamento não registrado. VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar disponível para prescrição no Brasil."
-    ]
+    "brand_names": []
   },
   {
     "slug": "fondaparinux-sodico",
@@ -3571,7 +3562,7 @@
       "Apresolina"
     ],
     "commercial_presentations": [
-      "Apresolina® (Novartis Biociências S.A.), drágeas de 25 mg e 50 mg de cloridrato de hidralazina, embalagens com 20 unidades. Não foi localizada, nesta sessão, versão genérica comercializada no varejo brasileiro — VERIFICAÇÃO HUMANA NECESSÁRIA antes de afirmar que não existe (pode ser limitação da busca, não do mercado). Número de registro ANVISA não confirmado nesta sessão."
+      "Apresolina® (União Química), comprimidos de 25 mg e 50 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
     ]
   },
   {
@@ -4815,12 +4806,8 @@
       "Inibidores da fosfodiesterase-5 (sildenafila, tadalafila, vardenafila) — risco de hipotensão grave por potencialização do efeito vasodilatador via óxido nítrico/GMPc; a bula brasileira do MONOCORDIL trata este risco em Interações Medicamentosas (não no item formal de contraindicações), mas já registrado em `notes.Precaucoes` deste verbete com o mesmo peso clínico de uma contraindicação absoluta."
     ],
     "hepatic_adjustment": "Não há orientação de ajuste hepático específico na bula profissional brasileira do MONOCORDIL, já citada nas referências deste registro — diferente do dinitrato de isossorbida (que depende de metabolismo hepático de primeira passagem para ativação), o mononitrato já é a forma ativa, o que reduz a relevância teórica da função hepática sobre sua farmacocinética.",
-    "brand_names": [
-      "Monocordil"
-    ],
-    "commercial_presentations": [
-      "Monocordil® (Laboratórios Baldacci Ltda.), comprimidos de 20 mg e 40 mg, embalagens com 20 ou 30 unidades; existe também apresentação Monocordil Retard, cápsulas de 50 mg, embalagem com 30 unidades — confiança média quanto ao laboratório e à existência do Retard, não localizada bula oficial direta da Baldacci nesta sessão, VERIFICAÇÃO HUMANA NECESSÁRIA. Também disponível como genérico (Lei nº 9.787/1999) por Aché, Zydus Nikkho Farmacêutica, Biosintética e Biolab Sanus, comprimidos de 20 mg (embalagens de 20 ou 30 unidades) e 40 mg (embalagem de 30 unidades). Número de registro ANVISA não confirmado nesta sessão."
-    ]
+    "brand_names": [],
+    "commercial_presentations": []
   },
   {
     "slug": "nebivolol-cloridrato",
@@ -5279,10 +5266,10 @@
     "renal_adjustment": "Não é necessário ajuste na insuficiência renal leve a moderada (ClCr 30-90 mL/min) — mesmo conteúdo já registrado em `dosing.Ajuste renal` deste verbete, aqui estruturado como campo próprio. Em insuficiência renal grave (ClCr<40) ou possível depleção de volume, iniciar sob supervisão cuidadosa com dose inicial menor (já registrado em `notes.Insuficiencia hepatica grave` deste verbete, que trata os dois casos juntos). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
     "hepatic_adjustment": "Não é necessário ajuste, mesmo em disfunção hepática grave — cautela recomendada, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave (mesmo conteúdo já registrado em `dosing.Ajuste hepático` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
     "brand_names": [
-      "Benicar"
+      "Benicar ODT"
     ],
     "commercial_presentations": [
-      "Benicar® (Daiichi Sankyo Brasil Farmacêutica Ltda.), comprimidos revestidos de 20 mg e 40 mg, embalagens com 10 ou 30 unidades. Também disponível como genérico (Eurofarma Laboratórios S.A.), comprimidos revestidos de 20 mg e 40 mg, embalagens com 30 unidades. Número de registro ANVISA não confirmado nesta sessão. Não confundir com as combinações de dose fixa Benicar® HCT (olmesartana + hidroclorotiazida), Benicar® Triplo e as versões de combinação da EMS (olmesartana + hidroclorotiazida; olmesartana + besilato de anlodipino), que são produtos distintos."
+      "Benicar ODT® (Daiichi Sankyo), comprimido orodispersível de 40 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
     ]
   },
   {
@@ -5902,11 +5889,10 @@
     "dbp_reduction_mmhg": -4.0,
     "bp_evidence_source": "Rótulo profissional aprovado pelo FDA para ramipril (DailyMed, genérico, setid d6d57158-e8f9-4c91-8317-0374e0c87d33, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026 — a busca anterior, em 10/08/2026, havia sido interrompida por esgotamento de orçamento de WebSearch e bloqueio de proxy de rede, registrado abaixo como histórico): 'lowering supine or standing systolic and diastolic blood pressures 24 hours after dosing by about 6/4 mmHg more than placebo' — estudos controlados de 4 a 12 semanas, dose única diária de 2,5 a 10 mg, sem detalhamento por degrau de dose além dessa faixa. O ensaio HOPE (já citado em `outcomes` deste registro) é ensaio de DESFECHO CARDIOVASCULAR, não um ensaio dedicado de redução pressórica — o benefício cardiovascular observado no HOPE excedeu o que essa queda pressórica modesta isoladamente explicaria, achado citado na literatura como sustentação de um efeito 'além da redução pressórica' do ramipril, mas este campo registra o valor de queda pressórica em si, do rótulo FDA, não uma interpretação sobre o HOPE. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness durante aquele lote e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) para todos os domínios tentados — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente.",
     "brand_names": [
-      "Triatec",
       "Naprix"
     ],
     "commercial_presentations": [
-      "Triatec® (Sanofi-Aventis Farmacêutica Ltda.), comprimidos sulcados de 2,5 mg e 5 mg em embalagens com 15 ou 30 unidades; a apresentação de 10 mg é comercializada sob o nome Triatec® Prevent, cápsulas, embalagens com 15 ou 30 unidades — VERIFICAÇÃO HUMANA NECESSÁRIA quanto à composição exata de excipiente/forma do Prevent. Naprix® (Libbs Farmacêutica Ltda.), comprimidos de 2,5 mg, 5 mg e 10 mg. Ecator® (Torrent do Brasil Ltda.), cápsulas de 2,5 mg, 5 mg e 10 mg — confiança média, não localizada bula oficial direta da Torrent nesta sessão, VERIFICAÇÃO HUMANA NECESSÁRIA. Também disponível como genérico (Sanofi-Medley), comprimido 5 mg, caixa com 60 unidades. Número de registro ANVISA não confirmado nesta sessão. Não confundir com as combinações de dose fixa Naprix D® (ramipril + hidroclorotiazida) e Naprix A® (ramipril + besilato de anlodipino), que são produtos distintos."
+      "Naprix® (Libbs), comprimidos de 2,5 mg, 5 mg e 10 mg, embalagens com 30 unidades — consta na base CMED/Anvisa consultada em 2026. Triatec® não é listado aqui como ativo: a lista oficial de referências excluídas registra cancelamento das apresentações de 2,5 mg e 5 mg e suspensão/cancelamento de apresentações históricas."
     ]
   },
   {
@@ -6187,8 +6173,7 @@
     "review_status": "revisado",
     "generic_name": "Sacubitril/Valsartana",
     "brand_names": [
-      "Entresto",
-      "Neparvis"
+      "Entresto"
     ],
     "drug_class": "Inibidor da neprilisina e do receptor de angiotensina (INRA/ARNI)",
     "mechanism": "Inibe simultaneamente a neprilisina (via sacubitril), enzima que degrada peptídeos natriuréticos e bradicinina, e bloqueia o receptor AT1 de angiotensina II (via valsartana), resultando em maior natriurese, vasodilatação e redução de remodelamento cardíaco comparado a IECA/BRA isolados",
@@ -6238,11 +6223,7 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "O ensaio de dose-resposta em hipertensão que embasou a escolha da dose do LCZ696/sacubitril-valsartana antes do PARADIGM-HF (Ruilope LM et al., Lancet. 2010;375(9722):1255-1266) comparou LCZ696 a valsartana isolada em paciente hipertenso, com redução de PA MAIOR no grupo LCZ696. O campo `outcomes` deste registro já cita o PARADIGM-HF, que é um ensaio de DESFECHO em ICFEr, não um ensaio dedicado de redução pressórica — não confundir os dois. **Reconfirmado pelo rótulo FDA (Entresto) em 12/08/2026**: a seção de Farmacologia Clínica não traz dado sistemático de redução de PAS/PAD em população hipertensa geral na dose-alvo — o único dado quantitativo de PA no rótulo é de um estudo específico de interação medicamentosa com sildenafila em paciente hipertenso: adição de sildenafila ao Entresto produziu redução ADICIONAL de aproximadamente 5/4 mmHg (sistólica/diastólica), além do efeito basal do próprio Entresto (não quantificado isoladamente nessa mesma passagem). **Não é lacuna de busca — é ausência confirmada, na fonte primária consultada, de um valor isolado de redução pressórica do Entresto na dose-alvo padrão.** Os campos numéricos permanecem `null` de propósito. Para o valor exato do ensaio Ruilope 2010 (que testaria diretamente essa pergunta), recomenda-se consultar o artigo primário (DOI: 10.1016/S0140-6736(10)60566-3), não reconfirmado nesta sessão. Rótulo FDA (ENTRESTO, sacubitril/valsartana), DailyMed setid 000dc81d-ab91-450c-8eae-8eb74e72296f, seção 12.3 Clinical Pharmacology — consultado via WebFetch em 12/08/2026 (a tentativa anterior desta biblioteca havia sido bloqueada por proxy de rede e esgotamento de orçamento; o bloqueio não se repetiu nesta sessão).",
-    "commercial_presentations": [
-      "NEPARVIS® 50 mg — comprimido revestido, embalagem com 28 unidades (Novartis).",
-      "NEPARVIS® 100 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis).",
-      "NEPARVIS® 200 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis)."
-    ]
+    "commercial_presentations": []
   },
   {
     "slug": "selexipague",
@@ -8064,7 +8045,7 @@
       "Fenilefrin"
     ],
     "commercial_presentations": [
-      "Fenilefrin® (Cristália Produtos Químicos Farmacêuticos Ltda.), solução injetável 10 mg/mL, ampola de vidro de 1 mL, uso subcutâneo/intramuscular/intravenoso; embalagens hospitalares com 25 ou 50 ampolas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado por mirrors de bulário e listagem do próprio domínio do fabricante nos resultados de busca, mas sem leitura direta do PDF da bula nesta sessão (WebFetch bloqueado). Número de registro ANVISA não confirmado."
+      "Fenilefrin® (Cristália), solução injetável 10 mg/mL, ampola de 1 mL, embalagem hospitalar — apresentação identificada em documentação oficial CMED/Anvisa."
     ]
   },
   {
@@ -8116,11 +8097,9 @@
     "presentations": [
       "Ampola de 2 mL contendo 10 mg de dipiridamol (5 mg/mL), uso exclusivamente intravenoso para a indicação de estresse farmacológico — já descrita em dosing."
     ],
-    "brand_names": [
-      "Persantin"
-    ],
+    "brand_names": [],
     "commercial_presentations": [
-      "Persantin® injetável (Mawdsleys Pharmaceuticals do Brasil Ltda.), solução 10 mg/2 mL, cartucho com 5 ampolas de vidro de 2 mL, uso intravenoso — indicado como agente de estresse farmacológico em teste ergométrico/cintilografia/ecocardiografia de estresse. A apresentação oral (drágea 75 mg) foi DESCONTINUADA em 2015 (comunicado oficial da Boehringer Ingelheim) e o registro cancelado em 2021 — não citar como disponível. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só por mirrors de bulário/registro (WebFetch ao bulário oficial bloqueado pelo proxy do ambiente nesta sessão), não por bula primária. Número de registro ANVISA não confirmado."
+      "Persantin® — marca histórica de dipiridamol. A lista oficial de medicamentos de referência excluídos da Anvisa publicada em 2026 registra cancelamento das apresentações orais (75 mg/100 mg) e também da solução injetável 5 mg/mL (10 mg/2 mL; registro da Mawdsleys cancelado em 02/06/2023). Não exibir como apresentação ativa."
     ]
   },
   {
@@ -12555,7 +12534,8 @@
     "bp_evidence_source": "Não se aplica — quinidina é antiarrítmico classe Ia sem indicação nem estudo de redução pressórica sistêmica; hipotensão é listada como sinal de alerta para redução/suspensão de dose (ver campo `monitoring`), não como desfecho terapêutico buscado.",
     "commercial_presentations": [
       "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marcas historicamente registradas (Quinicardine, Cardinor, Quinax, Duriles, Secuquidin, INAL) aparecem com registro ANVISA vencido/cancelado em múltiplos mirrors independentes consultados — padrão consistente entre fontes, sugerindo fármaco hoje só acessível por importação (RDC de medicamento não registrado). VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente) — antes de afirmar indisponibilidade total, confirmar diretamente com a ANVISA."
-    ]
+    ],
+    "brand_names": []
   },
   {
     "slug": "mexiletina-cloridrato",
@@ -12632,7 +12612,8 @@
     "bp_evidence_source": "Não se aplica — mexiletina é antiarrítmico classe Ib sem indicação nem estudo de redução pressórica sistêmica; seu uso terapêutico (arritmia ventricular ameaçadora à vida, e mais recentemente síndrome do QT longo tipo 2/3) não envolve pressão arterial como desfecho.",
     "commercial_presentations": [
       "Nenhum medicamento com registro ANVISA localizado no Brasil nesta sessão (20/08/2026). Fonte secundária de literatura médica (artigo indexado no PMC, sobre síndrome do QT longo tipo 3 em neonato) afirma explicitamente que a mexiletina não está disponível comercialmente no Brasil, exigindo importação direta conforme RDC 81/2008. VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente)."
-    ]
+    ],
+    "brand_names": []
   },
   {
     "slug": "procainamida-cloridrato",
@@ -12704,7 +12685,8 @@
     "bp_evidence_source": "Não se aplica como desfecho terapêutico — procainamida é antiarrítmico classe Ia usado para taquiarritmia ventricular/QRS largo (ver `indications` e `outcomes`), e a bula lista **hipotensão como efeito adverso a monitorar** (ver `adverse_effects` e `monitoring`), não como alvo pressórico buscado.",
     "commercial_presentations": [
       "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marca histórica Procamide® (Zambon Laboratórios Farmacêuticos Ltda.) aparece com registro ANVISA vencido em mirror consultado. VERIFICAÇÃO HUMANA NECESSÁRIA: as fontes secundárias disponíveis divergem entre si sobre a concentração exata da apresentação histórica (500mg/2mL vs. 10mg/mL/10mL vs. comprimido 300mg citados em fontes diferentes) — sinal de baixa confiabilidade, por isso nenhum valor de dose/concentração foi registrado aqui. Não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente)."
-    ]
+    ],
+    "brand_names": []
   },
   {
     "slug": "lercanidipino-cloridrato",
@@ -13089,9 +13071,7 @@
     "slug": "lovastatina",
     "review_status": "revisado",
     "generic_name": "Lovastatina",
-    "brand_names": [
-      "Lovastatina Sandoz (genérico, comprimidos 10 mg e 20 mg) — página de bula e de preço ativas em bulários consultados em 2026. RESSALVA: uma fonte de 2021 (InfoSUS/SC) afirma que a lovastatina não teria registro sanitário ativo e foi excluída de incorporação no SUS, o que contradiz a evidência de venda ativa do genérico Sandoz encontrada nesta pesquisa — a marca de referência histórica (Mevacor, MSD) parece não estar mais comercializada. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar a situação regulatória atual antes de usar em prescrição."
-    ],
+    "brand_names": [],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "A lovastatina é uma LACTONA INATIVA (pró-fármaco), transformada por hidrólise no fígado na forma ácida ativa, onde exerce sua ação farmacológica — mesmo padrão farmacocinético da sinvastatina neste catálogo, e diferente da pravastatina (que já circula na forma ativa). Essa ativação seletiva no fígado faz com que a concentração plasmática da droga ativa seja de apenas cerca de 5% da dose administrada, o que limita a ação farmacológica extra-hepática. Atua por inibição competitiva e reversível da enzima HMG-CoA redutase, reduzindo a síntese de colesterol intra-hepático; a diminuição do colesterol intracelular induz aumento da síntese de receptores hepáticos de LDL, com maior captação e menores níveis plasmáticos de colesterol LDL — o mesmo mecanismo final compartilhado por toda a classe. A inibição da síntese de colesterol hepático não afeta os níveis dos hormônios esteroides sintetizados a partir do colesterol em outros órgãos. É lipofílica (ao contrário da pravastatina, hidrofílica) e é SUBSTRATO do citocromo P450 3A4, sofrendo extensa extração hepática de primeira passagem — via metabólica responsável pelas interações mais graves da classe (inibidores potentes do CYP3A4 são CONTRAINDICADOS com lovastatina, ver `interactions`). O efeito redutor de colesterol é dependente da dose: numa faixa de 10-30% de redução do colesterol total, 20-45% de redução do LDL-C e 10-30% de redução de triglicérides, com elevação de 7-15% do HDL-C, conforme a dose. Como a redução de colesterol é dose-dependente e cumulativa, recomenda-se aguardar 4-6 semanas para avaliar o efeito pleno de cada dose antes de ajustá-la. Fontes: bula LOVASTATINA (genérico, laboratório distribuidor Farmacam, citando P.R. Vade-mécum 2004/2005 como referência bibliográfica — fonte secundária, declarada como tal, texto sucinto sem data de aprovação de bula visível); bula Lovastatina Sandoz (síntese via mirror bula.com.br, consultada nesta sessão em 11/08/2026); rótulo FDA/DailyMed de lovastatina (genérico), National Library of Medicine, seção Clinical Pharmacology — usado para complementar a farmacocinética (ligação proteica, excreção) que as fontes brasileiras não detalham com a mesma profundidade da pravastatina/fluvastatina deste catálogo.",
     "presentations": [
@@ -14009,9 +13989,7 @@
     "sbp_reduction_mmhg": -8.5,
     "dbp_reduction_mmhg": -6.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para fosinopril sodium tablets (DailyMed, genérico, setid ff1323cc-7ad8-488d-94a7-a11555db78a7), seção 14: 'once daily doses of 20 mg to 80 mg lowered supine or seated systolic and diastolic blood pressures 24 hours after dosing by an average of 8-9/6-7 mmHg more than placebo'. **Atenção**: esse dado placebo-corrigido cobre a faixa de dose de 20 a 80 mg — não a dose inicial de 10 mg citada em `dosing`. Os valores numéricos registrados nos campos (-8,5/-6,5 mmHg) são o ponto médio da faixa 8-9/6-7 mmHg informada pelo rótulo. Consultado nesta sessão.",
-    "brand_names": [
-      "Monopril"
-    ],
+    "brand_names": [],
     "commercial_presentations": [
       "Monopril® (Bristol-Myers Squibb), comprimidos de 10 mg e 20 mg, embalagens com 30 comprimidos. VERIFICAÇÃO HUMANA NECESSÁRIA: fonte é mirror de bulário e agregador de preço, não bula oficial do laboratório nem bulário eletrônico ANVISA consultado diretamente nesta sessão; status de comercialização atual no Brasil não confirmado com segurança (a marca foi descontinuada nos EUA, restando só genérico lá — não está claro se o mesmo já ocorreu no Brasil). Não confundir com Monoplus® (fosinopril + hidroclorotiazida), que é combinação de dose fixa, não o princípio isolado. Número de registro ANVISA não confirmado."
     ]
@@ -14082,9 +14060,7 @@
     "sbp_reduction_mmhg": -8.5,
     "dbp_reduction_mmhg": -4.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para trandolapril tablets (DailyMed, genérico, Lupin Pharmaceuticals, setid 8143a6cf-dadc-4ef7-a8db-d16d7150ad34), seção 14, estudo de monoterapia de 6 semanas: 'once-daily doses of 2 to 4 mg lowered supine or standing systolic/diastolic blood pressure 24 hours after dosing by an average 7 to 10/4 to 5 mmHg below placebo responses in non-black patients' e '2 to 4 mg lowered blood pressure 4 to 6/3 to 4 mmHg in black patients' — **efeito pressórico consistentemente menor em pacientes negros na mesma faixa de dose**, achado que a própria bula registra e que espelha a distinção de dose inicial (ver `dosing`). Os valores numéricos registrados nos campos (-8,5/-4,5 mmHg) são o ponto médio da faixa informada para pacientes não negros (7-10/4-5 mmHg); a faixa menor observada em pacientes negros (4-6/3-4 mmHg) fica registrada aqui por extenso, não nos campos numéricos, que comportam um único par de valores. Consultado nesta sessão.",
-    "brand_names": [
-      "Gopten"
-    ],
+    "brand_names": [],
     "commercial_presentations": [
       "Gopten® (Abbott Laboratórios do Brasil Ltda., marca originalmente da Knoll, incorporada pela Abbott em 2002), cápsula de 2 mg, embalagem com 20 cápsulas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só em mirrors de bulário, não em bula oficial do laboratório nem no bulário eletrônico ANVISA consultado diretamente nesta sessão; dosagens de 0,5 mg e 4 mg (existentes em outros países) não confirmadas para o mercado brasileiro. Marca 'Odrik', encontrada em fontes europeias (França/Espanha/Portugal), não incluída aqui por falta de confirmação de comercialização no Brasil. Número de registro ANVISA não confirmado."
     ]
@@ -14157,11 +14133,9 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "**Ausência confirmada de dado placebo-corrigido, não lacuna de busca.** O rótulo aprovado pelo FDA para quinapril hydrochloride tablets (DailyMed, genérico, Aurobindo Pharma Limited, setid 93e6e668-5306-4f26-81d8-cbc3a7a5e787) não traz seção 14 (Clinical Studies) — a única informação de eficácia pressórica está na Farmacologia Clínica: 'in multiple-dose studies, 10 to 80 mg per day in single or divided doses lowered systolic and diastolic blood pressure throughout the dosing interval, with a trough effect of about 5 to 11/3 to 7 mm Hg' e 'while the dose-response relationship is relatively flat, doses of 40 to 80 mg were somewhat more effective at trough than 10 to 20 mg'. **Esse texto descreve o efeito absoluto de vale, sem menção a comparação com placebo** (diferente do texto de fosinopril, trandolapril e azilsartana neste mesmo lote, que dizem explicitamente 'more than placebo'/'below placebo'). Consultado e reconferido especificamente nesta sessão para confirmar a ausência dessa comparação antes de deixar os campos numéricos como `null`.",
-    "brand_names": [
-      "Accupril"
-    ],
+    "brand_names": [],
     "commercial_presentations": [
-      "Accupril® (Pfizer), comprimido revestido de 10 mg e comprimido revestido de 20 mg, embalagens com 28 comprimidos. VERIFICAÇÃO HUMANA NECESSÁRIA: fonte é mirror de bulário e um PDF hospedado fora do domínio oficial da Pfizer Brasil, não confirmado diretamente contra o bulário eletrônico ANVISA nesta sessão — pode conter versão desatualizada de bula. Número de registro ANVISA não confirmado."
+      "Accupril® (Pfizer), 10 mg e 20 mg — marca histórica no Brasil. A Lista de Medicamentos de Referência excluídos da Anvisa publicada em 2026 registra cancelamento do registro em 19/06/2015. Não tratar como apresentação comercial ativa."
     ]
   },
   {
@@ -14217,9 +14191,7 @@
     "sbp_reduction_mmhg": -14.9,
     "dbp_reduction_mmhg": -7.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), ensaios comparativos de 6 semanas, redução pressórica corrigida por placebo: **Edarbi 80 mg** -14,9/-7,5 mmHg (PA de consultório) e -14,3/-9,4 mmHg (MAPA de 24h); **Edarbi 40 mg** -14,6/-6,2 mmHg (consultório) e -13,2/-8,6 mmHg (MAPA); comparadores ativos no mesmo ensaio — **olmesartana 40 mg** -11,4/-5,3 mmHg (consultório) e **valsartana 320 mg** -9,5/-4,4 mmHg (consultório), ambos numericamente inferiores à azilsartana 80 mg nesse ensaio. Valores numéricos registrados nos campos deste item são os da dose-alvo de 80 mg, medida em PA de consultório (-14,9/-7,5 mmHg). Consultado nesta sessão.",
-    "brand_names": [
-      "Edarbi"
-    ],
+    "brand_names": [],
     "commercial_presentations": [
       "Edarbi® — nome comercial confirmado por múltiplas fontes brasileiras de consumo. VERIFICAÇÃO HUMANA NECESSÁRIA: o laboratório responsável pelo registro no Brasil NÃO foi confirmado com segurança nesta sessão — buscas trouxeram atribuições contraditórias (uma síntese de busca citou 'Eurofarma', outra citou 'Takeda Pharma A/S/Takeda Ireland', mas esta última parece derivar de documento regulatório europeu, não necessariamente do registro brasileiro). Dosagens de 20 mg, 40 mg e 80 mg aparecem majoritariamente em fontes internacionais, sem confirmação de quais estão registradas/comercializadas no Brasil. Um catálogo comercial brasileiro (GTIN 7896641809057) lista 'azilsartana medoxomila potássica 40 mg, caixa com 30 comprimidos' sob nomenclatura de substância, sugerindo possível existência de versão genérica — não confirmado. Número de registro ANVISA não confirmado. Não usar este registro para decisão de prescrição sem confirmação direta no bulário ANVISA."
     ]
@@ -14247,13 +14219,15 @@
       "Hipersensibilidade conhecida ao omeprazol ou a componentes da fórmula"
     ],
     "interactions": [
-      "Clopidogrel — INTERAÇÃO RELEVANTE PARA O CARDIOLOGISTA: clopidogrel é pró-fármaco ativado pela CYP2C19; omeprazol é inibidor potente/moderado dessa mesma enzima, reduzindo a formação do metabólito ativo do clopidogrel e seu efeito antiplaquetário. A FDA incluiu aviso em quadro (boxed warning) recomendando evitar o uso concomitante de omeprazol (e esomeprazol) com clopidogrel; estudo observacional associou o uso concomitante a maior risco de AVC isquêmico. Quando IBP é necessário em paciente com clopidogrel, a literatura secundária consultada indica preferência por pantoprazol (menor interferência na CYP2C19) — VERIFICAÇÃO HUMANA NECESSÁRIA contra a bula/diretriz primária antes de usar essa recomendação de troca de forma prescritiva."
+      "Clopidogrel — evitar uso concomitante segundo o rótulo oficial: omeprazol inibe CYP2C19 e reduz a formação do metabólito ativo do clopidogrel, diminuindo sua atividade antiplaquetária; separar as tomadas por 12 horas não elimina a interação. Considerar alternativa terapêutica conforme o contexto clínico."
     ],
     "adverse_effects": [
-      "VERIFICAÇÃO HUMANA NECESSÁRIA — não foi possível, nesta pesquisa, ler a seção de reações adversas da bula profissional completa (bloqueio de acesso à rede a bulários oficiais); não preencher de memória."
+      "Cefaleia, dor abdominal, náusea, diarreia, vômitos e flatulência (reações comuns em adultos).",
+      "Nefrite tubulointersticial aguda, diarreia associada a C. difficile, hipomagnesemia, deficiência de vitamina B12 em uso prolongado e fraturas relacionadas a uso prolongado/alta dose são advertências relevantes do rótulo."
     ],
     "monitoring": [
-      "VERIFICAÇÃO HUMANA NECESSÁRIA — texto literal da seção de precauções/monitorização da bula brasileira não foi lido diretamente nesta pesquisa."
+      "Em tratamento prolongado ou em pacientes usando digoxina/diuréticos, considerar magnésio sérico antes e periodicamente durante o tratamento.",
+      "Investigar deficiência de vitamina B12 quando houver quadro clínico compatível em uso prolongado; suspeitar de nefrite tubulointersticial aguda diante de disfunção renal inexplicada."
     ],
     "notes": {
       "fonte_da_pesquisa": "Dados desta entrada vêm de bulários públicos secundários (ConsultaRemédios, comunicado da Prati-Donaduzzi) e de um documento de referência de interação medicamentosa do VA (Departamento de Assuntos de Veteranos dos EUA) que cita a bula/boxed warning da FDA, mais o texto da bula brasileira de clopidogrel (MedicinaNet/Plavix) — não da leitura direta do PDF completo da bula brasileira de omeprazol, que ficou bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
@@ -14262,8 +14236,11 @@
       "ConsultaRemédios. Bula de Omeprazol. Acessado em 2026. https://consultaremedios.com.br/omeprazol/bula",
       "Prati-Donaduzzi. Comunicado à imprensa (Pratiprazol). https://www.pratidonaduzzi.com.br/imprensa/noticias/item/2340",
       "U.S. Department of Veterans Affairs, Pharmacy Benefits Management Services. Clopidogrel and Omeprazole/Esomeprazole Drug Interaction. Rev. fev/2024. https://www.va.gov/formularyadvisor/DOC_PDF/CRE_Clopidogrel_and_Omeprazole_Drug_Interaction_Rev_Feb_2024.pdf",
-      "MedicinaNet. Interações medicamentosas — bula profissional de Plavix (clopidogrel). https://bula.medicinanet.com.br/bula/detalhes/4136/interacoes_medicamentosas_plavix.htm"
-    ]
+      "MedicinaNet. Interações medicamentosas — bula profissional de Plavix (clopidogrel). https://bula.medicinanet.com.br/bula/detalhes/4136/interacoes_medicamentosas_plavix.htm",
+      "DailyMed/FDA. Omeprazole delayed-release capsules, prescribing information (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/"
+    ],
+    "renal_adjustment": "O rótulo não estabelece redução posológica rotineira específica por função renal; vigiar nefrite tubulointersticial aguda como evento adverso potencial.",
+    "hepatic_adjustment": "Na manutenção de cicatrização de esofagite erosiva, o rótulo recomenda 10 mg uma vez ao dia em insuficiência hepática Child-Pugh A, B ou C."
   },
   {
     "slug": "insulina-humana-nph",
@@ -14291,14 +14268,16 @@
       "Hipoglicemia (contraindicação absoluta de administração enquanto o paciente está hipoglicêmico)"
     ],
     "interactions": [
-      "Betabloqueadores — mascaram os sintomas adrenérgicos de alarme da hipoglicemia (taquicardia, tremor), dificultando o reconhecimento de hipoglicemia pelo próprio paciente; efeito descrito como menos pronunciado com beta-1 seletivos do que com não seletivos. Monitorização glicêmica mais rigorosa recomendada quando os dois são usados juntos.",
-      "Diuréticos tiazídicos e corticosteroides — podem antagonizar o efeito hipoglicemiante da insulina (elevam a glicemia)"
+      "Diuréticos tiazídicos e corticosteroides — podem antagonizar o efeito hipoglicemiante da insulina (elevam a glicemia)",
+      "Betabloqueadores e outros antiadrenérgicos podem atenuar ou abolir sinais e sintomas de hipoglicemia; aumentar a frequência de monitorização de glicose. Betabloqueadores também podem aumentar ou reduzir o efeito hipoglicemiante da insulina."
     ],
     "adverse_effects": [
-      "Hipoglicemia é a reação adversa mais frequente da classe — VERIFICAÇÃO HUMANA NECESSÁRIA para lista completa de reações adversas da bula brasileira, não lida integralmente nesta pesquisa por bloqueio de acesso à rede."
+      "Hipoglicemia (reação adversa mais comum; formas graves podem causar convulsão, coma ou morte).",
+      "Hipocalemia, reações de hipersensibilidade, reação no local de injeção, lipodistrofia, prurido, rash, ganho de peso e edema."
     ],
     "monitoring": [
-      "Glicemia capilar/monitorização contínua conforme protocolo institucional — VERIFICAÇÃO HUMANA NECESSÁRIA para o texto literal de monitorização da bula brasileira, não lido diretamente nesta pesquisa."
+      "Monitorização de glicose; intensificar a frequência quando houver mudança do esquema, padrão alimentar, atividade física, fármacos concomitantes, insuficiência renal/hepática ou redução da percepção de hipoglicemia.",
+      "Monitorar potássio em pacientes com risco de hipocalemia."
     ],
     "notes": {
       "fonte_da_pesquisa": "Dados desta entrada vêm de bulários públicos secundários (bula.com.br, ConsultaRemédios/Humulin N) e de um resumo de farmacologia de betabloqueadores (Sanar Med) — não da leitura direta do PDF completo da bula profissional de nenhum dos quatro fabricantes citados, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA ou a bula impressa antes de tratar como fonte primária plena."
@@ -14306,8 +14285,11 @@
     "references": [
       "Bula.com.br. Insulina Humana Recombinante NPH. https://bula.com.br/original/insulina-humana-recombinante-nph",
       "ConsultaRemédios. Bula de Humulin N. https://consultaremedios.com.br/humulin-n/bula",
-      "Sanar Med. Resumo de betabloqueadores (mascaramento de sintomas de hipoglicemia). https://sanarmed.com/resumo-de-beta-bloqueadores/"
-    ]
+      "Sanar Med. Resumo de betabloqueadores (mascaramento de sintomas de hipoglicemia). https://sanarmed.com/resumo-de-beta-bloqueadores/",
+      "DailyMed/FDA. HUMULIN N (human insulin isophane/NPH), prescribing information (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921"
+    ],
+    "renal_adjustment": "Não há dose fixa de ajuste no rótulo; insuficiência renal aumenta o risco de hipoglicemia e pode exigir ajustes mais frequentes de dose e monitorização mais frequente de glicose.",
+    "hepatic_adjustment": "Não há dose fixa de ajuste no rótulo; insuficiência hepática aumenta o risco de hipoglicemia e pode exigir ajustes mais frequentes de dose e monitorização mais frequente de glicose."
   },
   {
     "slug": "paracetamol",
@@ -14333,10 +14315,11 @@
       "Varfarina — uso de paracetamol em dose alta (>2 g/dia) por vários dias consecutivos pode potencializar o efeito anticoagulante da varfarina, elevando o INR e o risco de sangramento; recomenda-se monitorização do INR 3 a 5 dias após início do uso concomitante em paciente varfarinizado"
     ],
     "adverse_effects": [
-      "Hepatotoxicidade em dose alta/uso prolongado ou associado a álcool — alerta técnico da própria ANVISA sobre paracetamol e risco hepático. VERIFICAÇÃO HUMANA NECESSÁRIA para lista completa de reações adversas da bula brasileira, não lida integralmente nesta pesquisa."
+      "Hepatotoxicidade grave pode ocorrer em superdose, uso concomitante de múltiplos produtos contendo paracetamol ou consumo importante de álcool.",
+      "Reações cutâneas graves e hipersensibilidade são advertências de rotulagem."
     ],
-    "renal_adjustment": "Sem ajuste renal padronizado identificado nesta pesquisa — VERIFICAÇÃO HUMANA NECESSÁRIA.",
-    "hepatic_adjustment": "Em hepatopatas leves/moderados, etilismo crônico, desnutrição ou idade acima de 65 anos, a literatura secundária consultada indica reduzir a dose máxima diária para 3 g/dia (dose máxima padrão em adulto saudável: 4 g/dia ou 75 mg/kg/dia) — VERIFICAÇÃO HUMANA NECESSÁRIA contra a bula/diretriz primária antes de usar esse ajuste de forma prescritiva.",
+    "renal_adjustment": "O rótulo OTC consultado não define um esquema numérico universal de ajuste por função renal; em doença renal avançada, individualizar dose/intervalo conforme protocolo clínico e formulação utilizada.",
+    "hepatic_adjustment": "Doença hepática exige avaliação médica antes do uso. Não foi adotado neste catálogo um teto reduzido universal não sustentado pelo rótulo consultado; respeitar o limite total diário da formulação e evitar duplicidade entre produtos com paracetamol.",
     "notes": {
       "fonte_da_pesquisa": "Dados desta entrada vêm de bulários públicos secundários (ConsultaRemédios) e de páginas institucionais (alerta da ANVISA sobre hepatotoxicidade, página educativa da Tylenol/J&J) — não da leitura direta do PDF completo da bula profissional de nenhum fabricante, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
     },
@@ -14344,7 +14327,8 @@
       "ConsultaRemédios. Bula de Paracetamol. https://consultaremedios.com.br/paracetamol/bula",
       "ANVISA. Alerta técnico sobre paracetamol e risco hepático. http://antigo.anvisa.gov.br/en/informacoes-tecnicas13",
       "Tylenol/Johnson & Johnson Brasil. Entendendo paracetamol e os danos no fígado. https://www.tylenol.com.br/alivio-seguro/sobre-paracetamol/entendendo-paracetamol-e-os-danos-no-figado",
-      "ConsultaRemédios. Bula de Varfarina Sódica (para a interação). https://consultaremedios.com.br/varfarina-sodica/bula"
+      "ConsultaRemédios. Bula de Varfarina Sódica (para a interação). https://consultaremedios.com.br/varfarina-sodica/bula",
+      "DailyMed/FDA. Acetaminophen 500 mg OTC labeling (consultado em 20/08/2026): alerta de hepatotoxicidade e precaução com varfarina. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=175495fd-c561-f813-e063-6294a90aac80"
     ]
   },
   {
@@ -14368,14 +14352,13 @@
       "DSTs não complicadas por Chlamydia trachomatis e Neisseria gonorrhoeae"
     ],
     "contraindications": [
-      "Hipersensibilidade conhecida à azitromicina, à eritromicina e/ou a qualquer antibiótico macrolídeo (hipersensibilidade cruzada bem descrita)"
+      "Hipersensibilidade à azitromicina, eritromicina, outros macrolídeos/cetolídeos ou excipientes.",
+      "História de icterícia colestática ou disfunção hepática associada previamente ao uso de azitromicina."
     ],
     "interactions": [
-      "Prolongamento de QT / Torsades de Pointes — RISCO PRÓPRIO DA CLASSE, RELEVANTE AO CARDIOLOGISTA: alerta da FDA (março/2013) por risco de arritmia fatal; estudo citado nesta pesquisa mostrou HR 2,49 para morte cardiovascular vs. amoxicilina, concentrado nos dias 1-5 de uso (coincidindo com pico plasmático). Contraindicado/desaconselhado em paciente com prolongamento de QT conhecido, hipocalemia, hipomagnesemia, bradicardia, ou em uso de antiarrítmico.",
-      "Amiodarona — interação classificada como grave nas fontes consultadas: risco aumentado de prolongamento de QT e arritmia.",
-      "Digoxina — azitromicina (como outros macrolídeos) eleva níveis séricos de substratos da glicoproteína-P, incluindo digoxina; monitorização clínica dos níveis séricos de digoxina recomendada durante e após o tratamento.",
-      "Varfarina — estudo farmacocinético formal não mostrou alteração do efeito anticoagulante de dose única de varfarina, mas há relatos pós-comercialização de potencialização da anticoagulação com cumarínicos; atenção à frequência de monitorização do TP/INR recomendada.",
-      "Estatinas — diferente de claritromicina/eritromicina, a azitromicina não inibe a CYP3A4 de forma relevante, então teoricamente não eleva níveis de estatina; há, porém, relatos raros de rabdomiólise associados a azitromicina + atorvastatina/sinvastatina em fontes secundárias consultadas. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à magnitude real desse risco específico — as fontes consultadas não são unânimes."
+      "Fármacos que prolongam QT/antiarrítmicos classe IA ou III — risco aditivo de prolongamento de QT e torsades de pointes; ponderar risco especialmente com hipocalemia, hipomagnesemia, bradicardia, QT longo conhecido ou insuficiência cardíaca descompensada.",
+      "Varfarina/cumarínicos — relatos pós-comercialização sugerem potencialização; monitorar TP/INR cuidadosamente durante o uso concomitante.",
+      "Digoxina — não houve estudo específico suficiente no rótulo; como interações foram observadas com outros macrolídeos, recomenda-se monitorização clínica cuidadosa quando associada."
     ],
     "notes": {
       "fonte_da_pesquisa": "Dados vêm de bulários públicos secundários (bulas.med.br para Zitromax/Azitromicina Di-Hidratada Eurofarma), do FDA Drug Safety Communication de março/2013 e de um artigo do NEJM sobre risco cardiovascular de azitromicina — não da leitura direta do PDF completo de nenhuma bula brasileira, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
@@ -14383,7 +14366,16 @@
     "references": [
       "Bulas.med.br. Interações medicamentosas — Azitromicina e Zitromax. https://www.bulas.med.br/p/detalhamento-das-bulas/1245459/interacoes-medicamentosas-azitromicina.htm ; https://www.bulas.med.br/p/detalhamento-das-bulas/1224759/interacoes-medicamentosas-zitromax.htm",
       "FDA Drug Safety Communication, março/2013 — Azithromycin (Zithromax) and risk of potentially fatal heart rhythms. https://www.fda.gov/media/85787/download",
-      "Ray WA et al. Azithromycin and the risk of cardiovascular death. N Engl J Med. https://www.nejm.org/doi/full/10.1056/NEJMp1302726"
+      "Ray WA et al. Azithromycin and the risk of cardiovascular death. N Engl J Med. https://www.nejm.org/doi/full/10.1056/NEJMp1302726",
+      "DailyMed/FDA. ZITHROMAX/azithromycin prescribing information, revisão 2026 (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/"
+    ],
+    "adverse_effects": [
+      "Diarreia, náusea, dor abdominal e vômitos são as reações mais comuns.",
+      "Hepatotoxicidade, reações alérgicas/cutâneas graves, prolongamento de QT/torsades de pointes e diarreia associada a C. difficile são advertências relevantes."
+    ],
+    "monitoring": [
+      "Avaliar fatores de risco para prolongamento de QT e corrigir hipocalemia/hipomagnesemia quando pertinente.",
+      "Monitorar TP/INR se associada a varfarina/cumarínicos e interromper diante de sinais de hepatite clinicamente relevante."
     ]
   },
   {
@@ -14405,29 +14397,30 @@
       "Processos inflamatórios e dolorosos, reumáticos e não reumáticos (osteoartrite, artrite reumatoide, dor pós-operatória/pós-traumática, dismenorreia)"
     ],
     "contraindications": [
-      "Insuficiência cardíaca grave — contraindicação explícita de bula (Cataflam/Voltaren, Novartis)",
-      "Doença cardiovascular estabelecida (hipertensão não controlada, ICC, doença isquêmica cardíaca estabelecida, doença arterial periférica) — bula recomenda que o tratamento geralmente não seja indicado nesses casos",
-      "Úlcera péptica/sangramento ou perfuração GI ativos ou história",
-      "Insuficiência hepática ou renal grave",
-      "Último trimestre de gestação"
+      "Hipersensibilidade conhecida ao diclofenaco.",
+      "História de asma, urticária ou reação alérgica após aspirina ou outro AINE.",
+      "Uso no contexto de cirurgia de revascularização miocárdica (CABG).",
+      "Evitar no terceiro trimestre de gestação pelo risco fetal associado aos AINEs."
     ],
     "interactions": [
-      "IECA / BRA / diuréticos ('triple whammy') — diclofenaco reduz o efeito anti-hipertensivo desses fármacos e aumenta o risco de hipercalemia quando associado a IECA/BRA; a combinação com qualquer AINE deve ser evitada pelo risco aumentado de lesão renal aguda.",
-      "Diuréticos poupadores de potássio — risco aumentado de hipercalemia.",
-      "Varfarina — potencializa o efeito anticoagulante, com risco aumentado de sangramento; monitorização estreita recomendada (estudos clínicos formais não mostram alteração consistente da ação anticoagulante, mas há relatos isolados de sangramento aumentado em uso concomitante).",
-      "Digoxina — diclofenaco pode elevar as concentrações plasmáticas de digoxina; monitorização dos níveis séricos recomendada.",
-      "Lítio — eleva a litemia; monitorização dos níveis séricos necessária."
+      "IECA/BRA/betabloqueadores — pode reduzir o efeito anti-hipertensivo; em idosos, hipovolêmicos ou com disfunção renal, associação com IECA/BRA aumenta o risco de deterioração da função renal.",
+      "Diuréticos — pode reduzir o efeito natriurético; a combinação AINE + bloqueador do SRAA + diurético aumenta o risco de lesão renal aguda em pacientes suscetíveis.",
+      "Anticoagulantes/antiagregantes e outros fármacos que interferem na hemostasia — aumenta risco de sangramento; monitorar clinicamente.",
+      "Digoxina — pode elevar a concentração sérica e prolongar a meia-vida da digoxina; monitorar níveis séricos.",
+      "Lítio — pode elevar concentrações de lítio; monitorar níveis séricos."
     ],
     "notes": {
       "alerta_regulatorio": "Revisão de segurança de AINEs pelo PRAC/EMA (2013) detectou aumento discreto de eventos cardiovasculares com diclofenaco, comparável ao observado com inibidores seletivos de COX-2. Estimativa citada na revisão: 3 casos adicionais de infarto do miocárdio por 1.000 pacientes com risco cardiovascular moderado tratados por 1 ano com diclofenaco (vs. nenhum tratamento). O PRAC recomendou que o diclofenaco NÃO seja usado em pacientes com doença cardiovascular grave (IC classe NYHA II-IV, doença isquêmica cardíaca, doença arterial periférica ou cerebrovascular); recomendação geral de menor dose efetiva pelo menor tempo possível.",
-      "fonte_da_pesquisa": "Dados vêm de bulas profissionais (resumo via busca) de Voltaren/Cataflam (Novartis) e Biofenac CLR (Aché), da nota informativa do PRAC/EMA/AEMPS de 2013, e de bulas.med.br para interações — não da leitura direta do PDF completo, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
+      "fonte_da_pesquisa": "Dados vêm de bulas profissionais (resumo via busca) de Voltaren/Cataflam (Novartis) e Biofenac CLR (Aché), da nota informativa do PRAC/EMA/AEMPS de 2013, e de bulas.med.br para interações — não da leitura direta do PDF completo, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena.",
+      "alerta_cardiovascular": "AINEs aumentam o risco de eventos trombóticos cardiovasculares e podem causar ou piorar hipertensão, retenção hídrica e insuficiência cardíaca. Em insuficiência cardíaca grave, o rótulo orienta evitar diclofenaco salvo quando o benefício esperado superar o risco, com monitorização de piora clínica. Usar a menor dose efetiva pelo menor tempo possível."
     },
     "references": [
       "Novartis Brasil. Bula profissional Voltaren (comprimido SR) e Cataflam (drágea). https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-VOLTAREN-Comprimido-de-Liberacao-Modificada-SR-Medico.pdf ; https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Dragea-Medico.pdf",
       "Aché. Bula Biofenac CLR. https://www.ache.com.br/wp-content/uploads/application/pdf/Bula-Biofenac-CLR.pdf",
       "EMA/PRAC, referral — Diclofenac, article 31 referral, new safety advice. https://www.ema.europa.eu/pt/documents/referral/diclofenac-article-31-referral-new-safety-advice-diclofenac_pt.pdf",
       "AEMPS. Nota informativa 2013, diclofenaco e risco cardiovascular. https://www.aemps.gob.es/informa/notasinformativas/medicamentosusohumano-3/seguridad-1/2013/ni-muh_fv_16-2013-diclofenaco/",
-      "Bulas.med.br. Interações medicamentosas — diclofenaco potássico. https://www.bulas.med.br/p/detalhamento-das-bulas/1116454/interacoes-medicamentosas-diclofenaco-potassico-comprimidos-generico.htm"
+      "Bulas.med.br. Interações medicamentosas — diclofenaco potássico. https://www.bulas.med.br/p/detalhamento-das-bulas/1116454/interacoes-medicamentosas-diclofenaco-potassico-comprimidos-generico.htm",
+      "DailyMed/FDA. Diclofenac sodium prescribing information, revisão 2026 (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a237198-ca24-4159-b570-b5a23c8e91b0"
     ]
   },
   {
@@ -14450,19 +14443,17 @@
       "Alívio (resgate) sintomático de broncoespasmo agudo"
     ],
     "contraindications": [
-      "Hipertensão pulmonar",
-      "Cardiomiopatia hipertrófica obstrutiva ou qualquer obstrução da via de saída do ventrículo esquerdo (ex.: estenose aórtica)"
+      "Hipersensibilidade conhecida ao salbutamol/albuterol ou a componentes da formulação."
     ],
     "interactions": [
-      "Betabloqueadores não seletivos (ex.: propranolol) — a bula do Aerolin (GSK) afirma explicitamente que salbutamol não deve ser usado com betabloqueador não seletivo: antagonismo farmacológico direto, com risco de broncoespasmo grave pelo lado do betabloqueador e perda de efeito broncodilatador do salbutamol. Um betabloqueador cardiosseletivo é citado nas fontes consultadas como antídoto preferido em caso de superdosagem de salbutamol — uso pontual sob monitorização, não uso crônico concomitante.",
-      "Diuréticos (tiazídicos/de alça) e corticosteroides — podem potencializar a hipocalemia induzida pelo salbutamol; atenção especial em paciente já hipocalêmico, pelo risco aumentado de taquicardia/arritmia. Monitorização de potássio sérico recomendada.",
-      "Antiarrítmicos/xantinas (ex.: aminofilina/teofilina) — hipocalemia pode ser potencializada em uso concomitante, aumentando risco de arritmia.",
-      "Digoxina — VERIFICAÇÃO HUMANA NECESSÁRIA: não foi confirmado nesta pesquisa um mecanismo/orientação específica de bula sobre interação direta salbutamol-digoxina; o risco teórico relevante é indireto, via hipocalemia predispondo a toxicidade digitálica, mas isso não foi confirmado como afirmação literal de bula."
+      "Betabloqueadores — podem bloquear o efeito broncodilatador e, sobretudo os não seletivos, precipitar broncoespasmo em pacientes com asma; quando betabloqueio for imprescindível, considerar agente cardiosseletivo com cautela.",
+      "Diuréticos não poupadores de potássio — podem potencializar hipocalemia e alterações de ECG induzidas por agonistas beta-2; considerar monitorização do potássio em pacientes de risco.",
+      "Digoxina — estudos do rótulo demonstraram redução média de 16% (albuterol IV) e 22% (oral) nos níveis séricos após dose única em voluntários previamente tratados com digoxina; o significado clínico crônico é incerto, mas é prudente reavaliar níveis séricos.",
+      "IMAO e antidepressivos tricíclicos — podem potencializar os efeitos cardiovasculares do salbutamol; usar com cautela."
     ],
     "adverse_effects": [
-      "Taquicardia (comum)",
-      "Arritmias, incluindo fibrilação atrial, taquicardia supraventricular e extrassístoles (menos comum)",
-      "Em casos graves: isquemia cardíaca, insuficiência cardíaca e cardiomiopatia (descrito nas fontes consultadas, sem frequência quantificada nesta pesquisa)"
+      "Tremor, nervosismo, taquicardia/palpitações e cefaleia podem ocorrer.",
+      "Pode produzir efeitos cardiovasculares clinicamente significativos (alterações de frequência cardíaca/pressão/ECG), hipocalemia e, raramente, broncoespasmo paradoxal ou hipersensibilidade."
     ],
     "notes": {
       "cautela_nao_contraindicacao_absoluta": "Uso com cautela (não contraindicação absoluta nas fontes consultadas) em: cardiopatia grave (especialmente infarto do miocárdio recente), doença arterial coronariana, taquiarritmia, hipertensão arterial grave não tratada, aneurisma, diabetes de difícil controle, feocromocitoma, hipertireoidismo descontrolado, hipocalemia não tratada.",
@@ -14470,7 +14461,12 @@
     },
     "references": [
       "GSK Brasil. Bula Aerolin spray/comprimido/xarope. https://br.gsk.com/media/5wtj4ekh/aerolin-spray.pdf ; https://br.gsk.com/media/1qld0wqj/aerolin-comprimido.pdf ; https://br.gsk.com/media/lnenqw1w/aerolin-xarope.pdf",
-      "CIMA/AEMPS (Espanha). Ficha técnica Salbutamol Aldo-Unión — referência farmacológica de classe, não bula brasileira. https://cima.aemps.es/cima/pdfs/es/ft/65850/FT_65850.ht.pdf"
+      "CIMA/AEMPS (Espanha). Ficha técnica Salbutamol Aldo-Unión — referência farmacológica de classe, não bula brasileira. https://cima.aemps.es/cima/pdfs/es/ft/65850/FT_65850.ht.pdf",
+      "DailyMed/FDA. Albuterol sulfate HFA prescribing information, revisão 2025/2026 (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/"
+    ],
+    "monitoring": [
+      "Em pacientes com doença cardiovascular, usar com cautela e monitorar frequência cardíaca, sintomas e pressão conforme o contexto.",
+      "Considerar potássio sérico quando houver uso em altas doses, associação com diurético não poupador de potássio ou outro fator de risco para hipocalemia; reavaliar digoxinemia quando clinicamente indicado."
     ]
   }
 ]
