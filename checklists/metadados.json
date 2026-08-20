@@ -3714,5 +3714,191 @@
         "origem_secao": "Extensão aberta (OLE) — dados de longo prazo"
       }
     ]
+  },
+  {
+    "slug": "plano-de-emergencia-com-dea-no-evento-esportivo",
+    "condicao": "Plano de emergência com DEA em ambiente e evento esportivo (clube, escola, treino, competição)",
+    "resumo": "Estrutura mínima de um plano de ação de emergência para parada cardíaca súbita no esporte — reconhecimento imediato, localização e acesso real ao DEA, papéis definidos por escrito e simulação periódica; não basta a instituição possuir um desfibrilador.",
+    "documento_origem": "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Association between basic life support and survival in sports-related sudden cardiac arrest: a meta-analysis. PMID 36285872.",
+      "Outcomes after sudden cardiac arrest in sports centres with and without on-site external defibrillators. Heart. 2018. PMID 29463609. DOI 10.1136/heartjnl-2017-312441.",
+      "Pelto HF, Drezner JA. Design and Implementation of an Emergency Action Plan for Sudden Cardiac Arrest in Sport. J Cardiovasc Transl Res. 2020. PMID 32300931. DOI 10.1007/s12265-020-09988-1.",
+      "Petek BJ et al. Survival Outcomes After Sudden Cardiac Arrest in Young Competitive Athletes From the United States. JACC. 2025. PMID 40162942. DOI 10.1016/j.jacc.2025.03.006."
+    ],
+    "itens": [
+      {
+        "id": "dea-reconhecimento-imediato",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Atleta que colapsa subitamente e está inconsciente/não responsivo tratado como possível parada cardíaca até prova em contrário, sem aguardar certeza diagnóstica",
+        "origem_secao": "Reconhecimento: não esperar \"certeza diagnóstica\""
+      },
+      {
+        "id": "dea-sequencia-de-resposta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Sequência seguida sem atraso: reconhecer o colapso, acionar emergência, iniciar compressões torácicas, trazer e aplicar o DEA imediatamente, seguir as instruções do aparelho minimizando interrupções das compressões",
+        "origem_secao": "Reconhecimento: não esperar \"certeza diagnóstica\""
+      },
+      {
+        "id": "dea-localizacao-acessivel",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "DEA em localização fixa e sinalizada, com acesso sem chave ou barreira administrativa durante as atividades, considerando a distância real até quadra, campo, piscina, arquibancada e áreas de treino",
+        "origem_secao": "Onde o DEA deve estar"
+      },
+      {
+        "id": "dea-disponivel-em-treinos",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "DEA disponível também nos treinos, não apenas nas competições",
+        "origem_secao": "Onde o DEA deve estar"
+      },
+      {
+        "id": "dea-checagem-periodica",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Checagem periódica de bateria, pás e funcionamento do DEA",
+        "origem_secao": "Onde o DEA deve estar"
+      },
+      {
+        "id": "dea-meta-3-minutos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Meta de intervalo entre colapso e primeiro choque inferior a 3 minutos sempre que possível, testada por simulação real e não presumida em planta baixa",
+        "origem_secao": "Meta operacional"
+      },
+      {
+        "id": "dea-papeis-definidos",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Plano escrito definindo previamente quem reconhece e inicia a RCP, quem busca o DEA e quem aciona o serviço de emergência com instrução clara de acesso ao local",
+        "origem_secao": "Plano de ação de emergência"
+      },
+      {
+        "id": "dea-acesso-equipe-externa",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Via de acesso da equipe de emergência ao local considerada no plano — portões fechados, controle de acesso, corredores estreitos, multidão e distância entre ambulância e área de jogo podem consumir minutos críticos",
+        "origem_secao": "Como a equipe de emergência entra"
+      },
+      {
+        "id": "dea-equipamento-esportivo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Protocolo específico definido para modalidades com capacete, protetores ou outros equipamentos, permitindo exposição rápida do tórax e acesso à via aérea sem atraso desnecessário",
+        "origem_secao": "Como lidar com equipamentos esportivos"
+      },
+      {
+        "id": "dea-simulacao-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Plano ensaiado por simulação, com treinamento pelo menos anual; instituições de alto volume podem se beneficiar de simulações mais frequentes",
+        "origem_secao": "Simulação periódica"
+      },
+      {
+        "id": "dea-eventos-extensos",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Para corridas de rua, ciclismo, trilhas, esportes aquáticos e provas com percurso longo: considerados pontos móveis/fixos de desfibrilação, equipes médicas distribuídas, comunicação eficiente e acesso do resgate ao trajeto — um único DEA na largada não representa cobertura adequada",
+        "origem_secao": "Esportes em áreas extensas ou remotas"
+      },
+      {
+        "id": "dea-pos-ressuscitacao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Retorno ao esporte não discutido antes da investigação etiológica completa do sobrevivente — avaliação para doença estrutural, coronariana, canalopatia, cardiomiopatia e outras causas, com decisão posterior sobre tratamento, CDI quando indicado e eventual retorno",
+        "origem_secao": "Depois da ressuscitação"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "sincope-no-atleta-avaliacao-antes-do-retorno-ao-esporte",
+    "condicao": "Avaliação de síncope no atleta antes de decidir o retorno à prática esportiva",
+    "resumo": "Diferenciação pelo momento do episódio em relação ao esforço, sinais de alarme que ampliam a investigação, e por que a liberação esportiva deve vir depois — nunca antes — do esclarecimento diagnóstico.",
+    "documento_origem": "sincope-durante-exercicio-atleta-avaliacao-retorno-esporte",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297."
+    ],
+    "itens": [
+      {
+        "id": "sincope-atleta-momento-do-episodio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Momento do episódio em relação ao exercício caracterizado com precisão — síncope durante o exercício tratada como sinal de alarme até exclusão de causa cardíaca relevante, distinta da síncope pós-esforço imediato, que pode ocorrer por redução abrupta do retorno venoso e reflexo vasovagal",
+        "origem_secao": "Por que o momento do episódio importa"
+      },
+      {
+        "id": "sincope-atleta-nao-so-a-palavra-desmaio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História detalhada colhida além da palavra \"desmaio\": sintomas premonitórios, presença de dor torácica ou palpitação, relação com a intensidade do exercício, antecedentes familiares de morte súbita e forma de recuperação após o evento",
+        "origem_secao": "Por que o momento do episódio importa"
+      },
+      {
+        "id": "sincope-atleta-sinais-de-alarme",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisados os sinais que aumentam a preocupação: síncope durante o esforço, ausência de pródromos típicos de mecanismo reflexo, palpitação imediatamente antes do evento, dor torácica ou dispneia desproporcional, ECG anormal, cardiopatia estrutural conhecida, história familiar de morte súbita prematura ou canalopatia/cardiomiopatia, arritmia induzida pelo exercício, ou episódios recorrentes sem explicação convincente",
+        "origem_secao": "Sinais que aumentam preocupação"
+      },
+      {
+        "id": "sincope-atleta-investigacao-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação iniciada por história direcionada, exame físico e ECG de 12 derivações interpretado segundo critérios específicos do atleta",
+        "origem_secao": "Investigação"
+      },
+      {
+        "id": "sincope-atleta-investigacao-dirigida",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Conforme os achados: investigação ampliada com ecocardiograma, teste de esforço máximo reproduzindo a demanda fisiológica da modalidade, monitorização ambulatorial, ressonância cardíaca, angiotomografia coronária e estudo genético quando há suspeita fenotípica ou familiar apropriada",
+        "origem_secao": "Investigação"
+      },
+      {
+        "id": "sincope-atleta-uso-do-esforco-para-reproduzir-sintomas",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Exercício utilizado de forma específica para reproduzir sintomas e definir risco, conforme o consenso HRS 2024 de arritmias no atleta",
+        "origem_secao": "Investigação"
+      },
+      {
+        "id": "sincope-atleta-restricao-temporaria",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Retorno ao treino competitivo intenso não liberado antes de esclarecer causas cardíacas relevantes de síncope inexplicada durante o exercício — restrição inicial como medida de segurança enquanto o diagnóstico é estabelecido, não proibição permanente",
+        "origem_secao": "Quando interromper temporariamente a prática"
+      },
+      {
+        "id": "sincope-atleta-criterios-de-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno condicionado ao diagnóstico final estabelecido, tratamento quando necessário, ausência de arritmia relevante em avaliação apropriada e risco residual específico da doença",
+        "origem_secao": "Retorno ao esporte"
+      },
+      {
+        "id": "sincope-atleta-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão de retorno construída como decisão compartilhada com o atleta, documentando incertezas e medidas de mitigação de risco, evitando exclusão universal automática",
+        "origem_secao": "Retorno ao esporte"
+      },
+      {
+        "id": "sincope-atleta-liberacao-apos-avaliacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferido que a liberação esportiva vem depois da avaliação diagnóstica, não antes — síncope durante o exercício é sinal de alarme, e síncope pós-esforço não é automaticamente benigna, ainda que frequentemente tenha mecanismo reflexo",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
