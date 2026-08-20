@@ -1,0 +1,32 @@
+name: Stabilize product frontend once
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.event.pull_request.head.ref == 'fix/product-stabilization-20260820' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: fix/product-stabilization-20260820
+          fetch-depth: 0
+      - name: Apply frontend stabilization patches
+        run: |
+          python .github/scripts/stabilize_product_frontend.py
+          git diff --check
+      - name: Commit patches
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend backend/tests/test_product_stabilization_frontend_contract.py
+          if ! git diff --cached --quiet; then
+            git commit -m "fix: stabilize mail, connected accounts and clinical UI"
+            git push origin HEAD:fix/product-stabilization-20260820
+          fi
