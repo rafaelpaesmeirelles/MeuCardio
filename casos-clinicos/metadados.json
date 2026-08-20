@@ -15426,5 +15426,251 @@
       "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-aortica-com-bloqueio-atrioventricular-novo-extensao-perianular",
+    "titulo": "Endocardite de prótese aórtica com bloqueio atrioventricular novo: o TEE negativo encerra a investigação?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, com prótese valvar aórtica biológica implantada há 2 anos, internado há 10 dias com endocardite infecciosa por estafilococo coagulase-negativo, em antibioticoterapia dirigida e clinicamente estável. No 10º dia, desenvolve bloqueio atrioventricular de 2º grau Mobitz II, antes ausente. Ecocardiograma transtorácico e, em seguida, transesofágico não evidenciam abscesso ou pseudoaneurisma; a vegetação identificada é pequena.",
+    "pergunta": "Qual a interpretação e conduta mais apropriada diante desse bloqueio atrioventricular novo?",
+    "opcoes": [
+      "Como o ecocardiograma transesofágico já foi negativo para abscesso, considerar a extensão perianular afastada e apenas encaminhar para avaliação de marca-passo definitivo",
+      "Reconhecer o bloqueio atrioventricular novo como sinal de provável extensão perianular (risco relativo de 2,55 na coorte que descreveu esse fator), lembrando que a sensibilidade combinada de TTE+TEE para abscesso/pseudoaneurisma é de apenas 63% — e por isso solicitar tomografia computadorizada cardíaca complementar e discutir com a equipe de endocardite",
+      "Concluir que a vegetação pequena afasta extensão perianular relevante, já que o tamanho da vegetação é diretamente proporcional ao risco dessa complicação",
+      "Repetir apenas um novo ecocardiograma transtorácico em 72 horas e aguardar evolução clínica antes de qualquer outro exame"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Bloqueio atrioventricular novo em endocardite de valva aórtica é sinal de alarme para extensão perianular, não achado incidental: na coorte de Graupner et al. (J Am Coll Cardiol 2002;39(7):1204-11, PMID 11923047), o desenvolvimento de bloqueio atrioventricular teve risco relativo de 2,55 (IC95% 1,91-3,41) para complicação perivalvular, e a frequência de extensão perianular foi quase o dobro em prótese valvar (55%) versus valva nativa (29%) — exatamente o cenário deste paciente. A ecocardiografia isolada, mesmo combinando TTE e TEE, tem sensibilidade de apenas 63% (especificidade 90%) para abscesso/pseudoaneurisma confirmado cirurgicamente; a tomografia computadorizada cardíaca sozinha chega a 81%, e a combinação dos dois métodos atingiu 100% de sensibilidade na coorte de Hryniewiecki et al. (Eur Radiol 2019;29(8):4368-4376, PMID 30643945). Um TEE negativo isolado, portanto, não encerra a investigação nesse contexto de alta suspeita. A opção C está invertida: a mesma coorte mostrou que vegetações pequenas foram, se algo, mais frequentes nos pacientes com extensão perianular (RR 1,45) — tamanho de vegetação e complicação perivalvular são achados independentes, não um substituto do outro. A opção A trata o bloqueio como problema puramente elétrico, ignorando que ele deve disparar investigação de imagem adicional e comunicação à equipe de endocardite antes de qualquer decisão sobre marca-passo, já que a causa de base (infecção não controlada por extensão perianular) muda a indicação cirúrgica.",
+    "source_refs": [
+      "Graupner C, Vilacosta I, SanRomán J, Ronderos R, Sarriá C, Fernández C, Mújica R, Sanz O, Sanmartín JV, Pinto AG. Periannular extension of infective endocarditis. J Am Coll Cardiol. 2002;39(7):1204-11. DOI: 10.1016/s0735-1097(02)01747-3 · PMID: 11923047",
+      "Hryniewiecki T, Zatorska K, Abramczuk E, Zakrzewski D, Szymański P, Kuśmierczyk M, Michałowska I. The usefulness of cardiac CT in the diagnosis of perivalvular complications in patients with infective endocarditis. Eur Radiol. 2019;29(8):4368-4376. DOI: 10.1007/s00330-018-5965-2 · PMID: 30643945"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "avc-embolico-em-paciente-com-cancer-e-vegetacao-mitral-hemocultura-negativa-nbte",
+    "titulo": "AVC embólico em paciente com câncer pancreático e vegetação mitral: endocardite infecciosa ou NBTE?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 62 anos, com adenocarcinoma de pâncreas metastático, é admitida por AVC isquêmico embólico agudo. O ecocardiograma transesofágico mostra pequena vegetação na valva mitral, sem disfunção valvar e sem perfuração de folheto. Três conjuntos de hemoculturas seriadas retornam negativos.",
+    "pergunta": "Qual a interpretação diagnóstica mais provável e a conduta terapêutica mais adequada?",
+    "opcoes": [
+      "Endocardite infecciosa com hemocultura negativa — iniciar esquema antibiótico empírico prolongado, já que AVC embólico com vegetação valvar é apresentação típica dessa entidade",
+      "Endocardite trombótica não bacteriana (NBTE) associada à malignidade — tratar o câncer de base (intervenção mais importante para prevenir recorrência), considerar anticoagulação individualizada e evitar anticoagulante oral direto",
+      "Iniciar rivaroxabana em dose plena, opção mais prática para anticoagulação ambulatorial nesse contexto",
+      "Não anticoagular e não investigar a causa de base, pois vegetação valvar em paciente oncológico não tem implicação terapêutica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro é característico de endocardite trombótica não bacteriana (NBTE): a diretriz ESC 2023 (Delgado V et al., Eur Heart J. 2023;44(39):3948-4042, PMID 37622656, seção 12.12) descreve que 41% dos pacientes com NBTE têm câncer — sendo adenocarcinoma de pulmão, mama e pâncreas os mais frequentes entre os oncológicos — e que AVC é a apresentação mais comum na admissão (60%), com a valva mitral mais acometida (62%) que a aórtica (24%). A ausência de disfunção valvar e de perfuração de folheto é o critério mais importante para diferenciar a vegetação de Libman-Sacks/NBTE de endocardite infecciosa bacteriana verdadeira, que causa disfunção e pode perfurar o folheto — reforçando o diagnóstico diante de hemoculturas seriadas negativas. Tratar a doença de base (aqui, o câncer) é a intervenção mais importante para prevenir recorrência, mais que o antitrombótico isolado; a anticoagulação deve ser considerada, ponderada contra risco de sangramento, com heparina de baixo peso molecular, HNF ou antagonista de vitamina K — não há dado que sustente DOAC em NBTE, e em paciente com antifosfolípide trombótico a rivaroxabana foi associada a mais eventos tromboembólicos e sangramento maior em ensaio randomizado, o que descarta a opção C. A opção A erra o diagnóstico: tratar como endocardite infecciosa bacteriana ignoraria que a fisiopatologia aqui é trombótica, e a própria diretriz ESC 2023 (seção 12.11) afirma que não há dado que sustente antitrombótico especificamente por endocardite infecciosa bacteriana — a lógica terapêutica das duas entidades é oposta.",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656 — seção 12.12 (Non-bacterial thrombotic endocarditis) e Recommendation Table 22"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "febre-e-bacteremia-por-s-aureus-anos-apos-oclusor-de-cia-infeccao-tardia-de-dispositivo",
+    "titulo": "Febre e bacteremia por S. aureus 3 anos após oclusor de CIA: implante antigo afasta infecção de dispositivo?",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 40 anos, com oclusor percutâneo de comunicação interatrial implantado há 3 anos, é internado por febre baixa intermitente há 6 semanas. Duas hemoculturas isoladas com intervalo mostram Staphylococcus aureus, sem foco cutâneo, urinário ou pulmonar identificado ao exame.",
+    "pergunta": "Qual a interpretação mais adequada da bacteremia nesse paciente, e a conduta diagnóstica a seguir?",
+    "opcoes": [
+      "Como o implante foi há 3 anos — muito além da janela de 6 meses de maior risco descrita para infecção de dispositivo de fechamento —, afastar o oclusor como causa e concentrar a investigação em outro foco",
+      "Considerar a bacteremia por Staphylococcus aureus como possível marcador de infecção do dispositivo mesmo com implante antigo, já que infecção tardia pode ocorrer meses a anos após o implante com apresentação sutil, e solicitar ecocardiograma transesofágico dirigido ao oclusor",
+      "Tratar como bacteremia isolada de foco indeterminado com 2 semanas de antibiótico oral, sem exame de imagem adicional",
+      "Solicitar apenas hemograma seriado, já que dispositivo de fechamento praticamente nunca infecta após completar a endotelização"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A ciência advisory da AHA sobre infecções de dispositivos cardiovasculares não valvares (Chesdachai S et al., J Am Heart Assoc. 2026;15(11):e050147, PMID 41988961) descreve que a infecção de oclusor de fechamento ocorre tipicamente nos primeiros 6 meses após o implante, antes da endotelização completa, mas pode ocorrer meses a anos depois — e nesse caso costuma se apresentar com sinais sutis e inespecíficos, como a febre baixa intermitente deste paciente. O documento é explícito: passados os 6 meses, o dispositivo sai do radar mental do médico, e é justamente aí que a apresentação deixa de ser óbvia — o que torna a opção A (e a D) um erro de raciocínio, não uma conclusão segura. Staphylococcus aureus é o patógeno mais frequentemente relatado nessas infecções, e a própria fonte afirma que infecção de corrente sanguínea é comum e pode ser marcador de infecção do dispositivo — em portador desses implantes, bacteremia não se explica sozinha, o que exige investigação dirigida. O ecocardiograma transesofágico é a modalidade primária para detectar vegetação na maioria dos dispositivos de fechamento (a limitação específica citada no documento é para oclusor de canal arterial persistente, não para oclusor de comunicação interatrial). A opção C ignora que o manejo dessas infecções geralmente exige 4 a 6 semanas de antimicrobiano dirigido, além de a investigação de imagem ser necessária antes de definir a conduta, inclusive quanto à eventual necessidade de explante cirúrgico.",
+    "source_refs": [
+      "Chesdachai S, Ghobrial J, El-Chami MF, Dionne A, Lok CE, et al; American Heart Association Committee on Rheumatic Fever, Endocarditis, and Kawasaki Disease. Infections of Selected Nonvalvular Cardiovascular Devices: A Science Advisory From the American Heart Association. J Am Heart Assoc. 2026;15(11):e050147. DOI: 10.1161/JAHA.126.050147. PMID: 41988961"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "coreia-de-sydenham-isolada-e-suficiente-para-diagnostico-de-febre-reumatica",
+    "titulo": "Coreia isolada, sem outros achados: já é febre reumática?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Menina de 11 anos é levada ao ambulatório por movimentos involuntários, irregulares, dos membros e da face, que pioram quando ela fica ansiosa na consulta e que os pais notam que somem enquanto ela dorme. Há também labilidade emocional e leve dificuldade de concentração na escola, iniciadas de forma insidiosa há cerca de 5 semanas. Não há relato de dor articular, febre, rash ou nódulos subcutâneos em nenhum momento. A mãe não recorda nenhum episódio recente de dor de garganta, e um ASLO colhido hoje está normal. O exame neurológico confirma coreia generalizada leve a moderada, sem outros achados focais, e as principais causas alternativas de coreia (lúpus, doença de Wilson, uso de fármaco, coreia gravídica/por pílula — não aplicável na idade) foram afastadas pela história e por exames iniciais.",
+    "pergunta": "Diante desse quadro, qual a conduta diagnóstica correta em relação à febre reumática?",
+    "opcoes": [
+      "Não há febre reumática, pois falta um segundo critério maior ou menor associado à coreia para fechar o diagnóstico pelos critérios de Jones",
+      "Não há febre reumática, pois a ausência de antecedente reconhecido de faringite e o ASLO normal no momento atual afastam infecção estreptocócica recente, pré-requisito obrigatório mesmo para coreia isolada",
+      "A coreia isolada, uma vez excluídas outras causas no contexto clínico compatível, já é por si só diagnóstica de febre reumática, sem exigir outro critério maior/menor nem evidência laboratorial de infecção estreptocócica recente — e a ausência de relato de faringite é esperada, dada a latência longa da coreia",
+      "O diagnóstico exige antiestreptolisina O elevada colhida em fase aguda; como o exame de hoje é normal, deve-se repetir a sorologia em 2 semanas antes de considerar qualquer diagnóstico"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A coreia de Sydenham é a única manifestação maior da febre reumática que, isolada, já fecha o diagnóstico — não é necessário nenhum outro critério maior ou menor associado, nem confirmação laboratorial de infecção estreptocócica recente, desde que outras causas de coreia tenham sido razoavelmente excluídas no contexto clínico compatível (é diagnóstico de exclusão dentro desse contexto). Isso é coerente com a própria biologia da coreia: ela tem a latência mais longa entre as manifestações maiores da febre reumática, surgindo tipicamente 4 a 8 semanas após a faringite estreptocócica (contra 2-3 semanas de artrite e cardite) — na prática, é comum que o paciente ou a família não relacione o quadro neurológico a uma infecção de garganta já esquecida, e um ASLO colhido só agora, semanas depois, pode perfeitamente já ter normalizado sem que isso afaste o diagnóstico. As opções que exigem critério adicional, antecedente reconhecido de faringite ou sorologia positiva no momento atual invertem essa lógica clínica específica da coreia.",
+    "source_refs": [
+      "Tariq S, Niaz F, Waseem S, Shaikh TG, Ahmed SH, Irfan M, Nashwan AJ, Ullah I. Managing and treating Sydenham chorea: A systematic review. Brain Behav. 2023;13(6):e3035. DOI: 10.1002/brb3.3035. PMID: 37150977; PMCID: PMC10275551."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crianca-com-febre-prolongada-conjuntivite-e-rash-febre-reumatica-ou-doenca-de-kawasaki",
+    "titulo": "Criança com febre prolongada, conjuntivite e rash: febre reumática ou doença de Kawasaki?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Menino de 3 anos é trazido ao pronto-socorro com febre há 5 dias, sem remissão espontânea. Ao exame: injeção conjuntival bilateral não exsudativa, lábios eritematosos e fissurados, língua em morango, rash polimorfo no tronco, discreto edema de mãos e pés, e um linfonodo cervical único, endurecido, de 2 cm, à direita. Não há relato de dor ou edema articular. Não há antecedente claro de faringite ou infecção de pele nas semanas anteriores. VHS e PCR estão elevados. A equipe discute se deveria aguardar o resultado de uma cultura de orofaringe antes de decidir a conduta.",
+    "pergunta": "Qual é a interpretação e a conduta mais adequadas para este caso?",
+    "opcoes": [
+      "O quadro sugere febre reumática aguda com cardite subclínica; deve-se aguardar a cultura de orofaringe e, se positiva, iniciar antibiótico e anti-inflamatório, sem indicação de imunoglobulina intravenosa",
+      "O quadro preenche o padrão típico de doença de Kawasaki (febre ≥5 dias mais 4 dos 5 critérios clínicos principais: conjuntivite não exsudativa, alteração orolabial, rash polimorfo, edema de extremidades e linfadenopatia cervical); o tratamento com imunoglobulina intravenosa e AAS em dose anti-inflamatória deve ser iniciado sem esperar a confirmação de estreptococo, pela janela terapêutica que evita aneurisma coronariano",
+      "Como a artrite está ausente, nenhuma das duas hipóteses (febre reumática ou Kawasaki) é sustentável, e a investigação deve se voltar para outras causas de febre prolongada na infância antes de qualquer tratamento direcionado",
+      "O achado de linfadenopatia cervical isolada já é suficiente para descartar Kawasaki, já que esse critério pertence exclusivamente ao diagnóstico de febre reumática aguda"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro é o padrão-ouro de doença de Kawasaki completa pelo AHA Scientific Statement de 2017 (McCrindle et al., PMID 28356445): febre ≥5 dias associada a ≥4 dos 5 critérios clínicos principais — aqui presentes os cinco: conjuntivite bilateral não exsudativa, alteração orolabial (lábios fissurados, língua em morango), rash polimorfo, edema de extremidades e linfadenopatia cervical (tipicamente unilateral, como neste caso, ≥1,5 cm). O órgão-alvo do dano cardíaco em Kawasaki é a artéria coronária, com risco de aneurisma em até ≈25% dos casos não tratados, e a imunoglobulina intravenosa reduz esse risco de forma dependente do tempo — por isso o tratamento não deve esperar a confirmação de infecção estreptocócica, que é a investigação relevante para febre reumática, não para Kawasaki. A ausência de artrite migratória de grandes articulações (achado clássico da febre reumática, que aqui não está presente) e a presença de conjuntivite não exsudativa, alteração orolabial e linfadenopatia — nenhuma delas critério da febre reumática aguda — apontam para Kawasaki, não para febre reumática. Aguardar cultura de orofaringe atrasaria a IVIG dentro da janela ideal (até o 10º dia de doença), o que é exatamente o erro que este diferencial busca evitar.",
+    "source_refs": [
+      "McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445.",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-mitral-jovem-reparo-valvar-tem-desfecho-superior-a-substituicao",
+    "titulo": "Cardiopatia reumática mitral em paciente jovem: o reparo valvar tem desfecho superior à substituição?",
+    "tema": "Febre reumática",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 24 anos, com sequela de febre reumática na infância, é encaminhada para cirurgia por estenose e insuficiência mitral reumática grave, sintomática, com espessamento subvalvar acentuado e calcificação leve dos folhetos. Por ser jovem, o cardiologista assistente sugere que o cirurgião priorize o reparo valvar em vez da troca por prótese, citando a superioridade já estabelecida do reparo sobre a substituição na regurgitação mitral degenerativa e argumentando que o mesmo deveria valer aqui, evitando anticoagulação vitalícia com prótese mecânica.",
+    "pergunta": "O que a evidência disponível sobre doença mitral reumática mostra em relação a essa extrapolação?",
+    "opcoes": [
+      "A extrapolação está correta: como na degenerativa, o reparo mitral reumático mostra menor mortalidade operatória e menor taxa de reoperação do que a substituição, e deve ser sempre priorizado",
+      "A extrapolação não é sustentada pela evidência específica: reparo e substituição mitral na doença reumática mostraram desfechos semelhantes em mortalidade operatória, morbidade, sobrevida em longo prazo e complicações tardias relacionadas à valva, incluindo taxa de reoperação comparável — a superioridade do reparo é bem estabelecida na degenerativa, mas o papel do reparo na doença reumática permanece controverso, e a valva reumática é tecnicamente menos passível de reparo durável por sua complexidade anatômica",
+      "A extrapolação está parcialmente correta, mas somente em pacientes acima de 40 anos, faixa etária em que o reparo reumático já demonstrou superioridade consistente sobre a substituição",
+      "Não há dado comparativo entre reparo e substituição na doença mitral reumática; toda a evidência disponível é exclusiva da doença degenerativa, e a decisão deve se basear apenas em preferência da equipe cirúrgica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Ao contrário da doença mitral degenerativa, em que o reparo tem superioridade já estabelecida sobre a substituição, essa vantagem não pode ser simplesmente extrapolada para a doença mitral reumática. A comparação direta entre reparo e substituição mitral em doença reumática (European Journal of Cardio-Thoracic Surgery) mostrou desfechos semelhantes entre as duas estratégias em mortalidade operatória, morbidade, sobrevida de longo prazo e complicações tardias relacionadas à valva, com taxa de reoperação comparável — e a conclusão da literatura é que o papel do reparo na doença valvar reumática permanece controverso. Isso se explica, em parte, porque a doença mitral reumática é tecnicamente menos passível de reparo durável (as técnicas necessárias para um resultado bem-sucedido são mais complexas do que na degenerativa), e não está claro se a durabilidade satisfatória obtida em valvas reumáticas e calcificadas se traduz, de fato, em sobrevida melhor comparada à substituição. Quando indicado, o reparo mitral reumático deve ser considerado apenas em centro valvar abrangente, por equipe experiente — o que reforça que a decisão não é automática só pela idade da paciente.",
+    "source_refs": [
+      "Long-term outcomes after surgery for rheumatic mitral valve disease: valve repair versus mechanical valve replacement · European Journal of Cardio-Thoracic Surgery · https://academic.oup.com/ejcts/article/37/5/1039/599391",
+      "Challenges in rheumatic valvular disease: Surgical strategies for mitral valve preservation · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC4448063/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquicardiomiopatia-por-extrassistoles-ventriculares-qual-a-carga-que-justifica-ablacao",
+    "titulo": "FEVE reduzida sem causa estrutural, mas com muitas extrassístoles: quando pensar em taquicardiomiopatia por ExSV?",
+    "tema": "Cardiomiopatias",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 52 anos, encaminhado por FEVE de 34% ao ecocardiograma de rotina, sem antecedente de doença coronariana, valvopatia ou uso de cardiotóxico. Ecocardiograma realizado há 3 anos era normal. A investigação etiológica (coronariografia sem lesões, ressonância cardíaca sem sinais de infiltração ou isquemia, triagem laboratorial) não identificou causa estrutural para a disfunção. O Holter de 24 horas evidenciou extrassístoles ventriculares (ExSV) monomórficas frequentes, totalizando 28% de todos os batimentos registrados no período.",
+    "pergunta": "Com base no estudo de referência que quantificou a relação entre carga de extrassístoles ventriculares e função de ventrículo esquerdo (Baman et al., Heart Rhythm 2010, 174 pacientes com ExSV idiopáticas frequentes), qual das afirmações abaixo está correta sobre este paciente?",
+    "opcoes": [
+      "Como a carga de ExSV (28%) está acima do corte de 24% identificado no estudo como o que melhor discrimina disfunção ventricular, a hipótese de cardiomiopatia induzida por ExSV (uma forma reversível de taquicardiomiopatia) deve ser ativamente considerada, com indicação de ablação por cateter do foco ectópico como conduta definitiva.",
+      "Cargas de ExSV abaixo de 33% nunca foram associadas a disfunção ventricular no estudo, então a causa da FEVE reduzida deste paciente é necessariamente outra, não a arritmia.",
+      "O estudo de Baman et al. não encontrou relação estatisticamente significativa entre carga de ExSV e função de VE; a extrassistolia é achado incidental neste caso e não modifica a conduta.",
+      "Como a FEVE média dos pacientes com disfunção no estudo foi de 0,37 ± 0,10, uma FEVE de 34% (0,34) está fora da faixa esperada para taquicardiomiopatia por ExSV, tornando esse diagnóstico pouco provável."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Correta a opção 1. No estudo de Baman et al. (Heart Rhythm, 2010; PMID 20348027), 174 pacientes com ExSV idiopáticas frequentes foram avaliados por Holter de 24h e ecocardiograma: 57/174 (33%) tinham disfunção sistólica de VE, com FEVE média de 0,37 ± 0,10 nesse subgrupo. Uma carga de ExSV acima de 24% do total de batimentos foi o corte que melhor separou os pacientes com função reduzida (carga média 33% ± 13%) dos com função preservada (carga média 13% ± 12%) — e o menor valor de carga já associado a cardiomiopatia reversível identificado no estudo foi 10%, o que reforça não tratar 24% como limiar rígido de segurança abaixo dele. O paciente do caso, com 28% de carga (acima do corte de 24%) e nenhuma outra causa estrutural identificada, preenche o perfil clínico de taquicardiomiopatia por ExSV — condição reversível cujo tratamento definitivo, segundo o documento-fonte, é a ablação por cateter do foco ectópico quando a carga está acima dos patamares associados a disfunção. A opção 2 está errada porque o próprio estudo mostra disfunção associada a cargas bem abaixo de 33%, inclusive a partir de 10%. A opção 3 inverte o resultado do estudo, que demonstrou associação estatisticamente relevante (o corte de 24% foi justamente o que melhor discriminou os dois grupos). A opção 4 interpreta mal o dado: 0,34 está dentro de um desvio-padrão da média (0,37 ± 0,10, ou seja, 0,27–0,47), portanto plenamente compatível com a faixa observada no subgrupo com disfunção, não fora dela.",
+    "source_refs": [
+      "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. PMID: 20348027.",
+      "Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026 Jul 7. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-apical-na-chagasica-basta-para-anticoagular-ou-e-o-trombo-que-importa",
+    "titulo": "Aneurisma apical na cardiomiopatia chagásica: a estrutura sozinha já justifica anticoagulação?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, cardiomiopatia chagásica crônica confirmada por sorologia e clínica, classe funcional NYHA II, FEVE 42%. Ecocardiograma transtorácico de rotina evidencia aneurisma apical de ventrículo esquerdo, sem trombo visível no momento do exame. O médico assistente questiona se a mera presença do aneurisma apical já justificaria, por si só, anticoagulação plena, independentemente de haver ou não trombo intracavitário.",
+    "pergunta": "Segundo a coorte prospectiva de Teixeira Tupinambás et al. (Heart, 2026; 518 pacientes com cardiomiopatia chagásica crônica, HC-UFMG, 2007–2022) sobre o papel do aneurisma apical e do trombo de ventrículo esquerdo no AVC cardioembólico, qual afirmação está correta?",
+    "opcoes": [
+      "Na análise multivariável, o aneurisma apical isoladamente foi o preditor independente mais forte de AVC cardioembólico prévio, superando classe funcional NYHA e FEVE — a presença do aneurisma já basta para indicar anticoagulação.",
+      "Na análise pareada (genetic matching), o aneurisma apical se associou significativamente ao AVC cardioembólico, mas 63,3% dessa associação foi mediada pela formação de trombo de VE — o achado desloca o foco da vigilância clínica para a detecção ativa do trombo, não apenas para o registro estrutural do aneurisma.",
+      "Nem o aneurisma apical nem o trombo de VE tiveram qualquer associação com AVC cardioembólico nesta coorte, o que refuta por completo a hipótese histórica de risco embólico ligado ao aneurisma.",
+      "O aneurisma apical foi associado de forma independente ao desfecho combinado de óbito ou transplante cardíaco no seguimento médio de 4,9 anos, tornando-se por si só um marcador prognóstico de mortalidade nesta população."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Correta a opção 2. No estudo (PMID 42521491), na análise multivariável de admissão, classe funcional NYHA III/IV, menor FEVE e trombo de VE — mas NÃO o aneurisma apical isoladamente — associaram-se de forma independente a AVC cardioembólico (CE) prévio (73/518 pacientes, 14,1%). Já na análise pareada por genetic matching, o aneurisma apical SE associou significativamente ao AVC CE, e a análise de mediação causal mostrou que 63,3% dessa associação passa pela formação de trombo de VE — ou seja, o aneurisma aumenta o risco majoritariamente através do trombo que favorece formar, não por mecanismo direto independente. Essa é a mensagem central do estudo: vigilância e decisão de anticoagulação devem se apoiar na detecção ativa do trombo, não apenas no registro estrutural do aneurisma. A opção 1 inverte o achado da análise multivariável (o aneurisma isolado NÃO foi preditor independente; NYHA, FEVE e trombo foram). A opção 3 está errada porque houve, sim, associação significativa na análise pareada. A opção 4 também inverte o resultado: no seguimento (174 óbitos, 22 transplantes em 4,9 anos), os preditores independentes do composto óbito/transplante foram NYHA III/IV, insuficiência cardíaca direita, aumento de átrio esquerdo e menor FEVE — nem AVC CE prévio nem aneurisma apical se associaram a esse desfecho combinado.",
+    "source_refs": [
+      "Teixeira Tupinambás J, Rocha MOC, Lage TAR, et al. Cardioembolic stroke in Chagas cardiomyopathy: the interplay between apical aneurysm, left ventricular thrombus and clinical outcomes. Heart. 2026 Jul 28:heartjnl-2026-328159. DOI: 10.1136/heartjnl-2026-328159. PMID: 42521491."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cicatriz-subepicardica-em-anel-sem-dilatacao-ndlvc-por-desmoplakina",
+    "titulo": "Disfunção regional de VE não dilatado, cicatriz subepicárdica em anel e história familiar de morte súbita: DCM ou outra categoria?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 38 anos, assintomática do ponto de vista cardiovascular, procura avaliação após a morte súbita da irmã, aos 40 anos, de causa não esclarecida. Ecocardiograma mostra ventrículo esquerdo com dimensões normais (não dilatado), hipocinesia discreta das paredes inferolateral e lateral, FEVE 48%. Angiotomografia coronariana sem lesões obstrutivas. Ressonância cardíaca com realce tardio subepicárdico em padrão de \"anel\" acometendo as mesmas paredes. Painel genético identifica variante patogênica em desmoplakina (DSP).",
+    "pergunta": "Segundo a nomenclatura da diretriz ESC 2023 de cardiomiopatias (Arbelo E, Protonotarios A, Gimeno JR, et al., Eur Heart J 2023), como este fenótipo deve ser classificado, e o que caracteriza o padrão de imagem observado?",
+    "opcoes": [
+      "Cardiomiopatia dilatada (DCM) clássica — qualquer variante patogênica em gene de desmossomo associada a disfunção regional de VE se enquadra nessa categoria, independentemente de haver ou não dilatação da câmara.",
+      "Cardiomiopatia ventricular esquerda não dilatada (NDLVC) — definida pela presença de cicatriz/substituição gordurosa não isquêmica de VE (com ou sem alteração de contratilidade) OU hipocinesia global isolada sem cicatriz; o padrão de realce tardio subepicárdico em anel é característico de variantes em desmoplakina (DSP), filamina C (FLNC) e fosfolambano (PLN).",
+      "Cardiomiopatia restritiva (RCM) — a presença de disfunção biventricular com volumes diastólicos normais ou reduzidos e espessura de parede normal define a entidade, exigindo diferenciação de amiloidose cardíaca.",
+      "Hipertrabeculação (ex-LVNC) — a ESC 2023 classifica essa entidade como traço fenotípico associado a variantes de proteínas do sarcômero, disco Z, citoesqueleto e envelope nuclear, sem relação descrita com desmoplakina."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Correta a opção 2. A ESC 2023 (Seção 3.1) define NDLVC como presença de cicatriz/substituição gordurosa não isquêmica de VE — independentemente de haver alteração segmentar ou global de contratilidade — OU hipocinesia global isolada de VE sem cicatriz. É exatamente a categoria criada para pacientes com doença miocárdica documentada por imagem/genética que não se encaixam nas definições clássicas de DCM ou ARVC. A própria diretriz traz, como exemplo trabalhado (Figura 4), um padrão de realce tardio subepicárdico em 'anel' associado a variante em desmoplakina (DSP) identificando NDLVC relacionada a DSP, autossômica dominante, com FE limítrofe-baixa — cenário reproduzido neste caso. A Figura 3 da mesma diretriz mostra que variantes em DSP, filamina C (FLNC) e fosfolambano (PLN) cursam com esse padrão característico de realce subepicárdico em anel, enquanto variantes em titina (TTN), BAG3, lamina A/C (LMNA), distrofina (DMD), RBM20 e miocardite têm padrão mais heterogêneo, com cicatriz geralmente menor (às vezes ausente) e FE mais baixa. A opção 1 está errada porque o ponto central da NDLVC é justamente NÃO exigir dilatação — chamá-la de DCM contradiz a própria razão de a categoria existir. A opção 3 está errada porque RCM exige fisiologia restritiva com espessura de parede normal, quadro clínico distinto do descrito (disfunção regional sistólica, não padrão restritivo). A opção 4 está errada porque o padrão de realce em anel associado a DSP/FLNC/PLN é justamente da categoria NDLVC, não da hipertrabeculação — que é caracterizada por trabeculação proeminente do VE, achado de imagem completamente diferente do descrito no caso.",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-associada-a-dialise-ecg-atipico-diagnostico-e-conduta",
+    "titulo": "Dor torácica em paciente em hemodiálise há 4 meses: o ECG normal afasta pericardite?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, em hemodiálise há 4 meses por doença renal crônica terminal, comparece à sessão de diálise referindo dor torácica pleurítica e dispneia há 3 dias, associadas a febre baixa. Ao exame: atrito pericárdico discreto, sem turgência jugular ou hipotensão. O ECG não mostra supradesnivelamento difuso de ST nem infradesnivelamento de PR — apenas alterações inespecíficas de repolarização, já presentes em traçados anteriores e atribuídas à hipertrofia ventricular esquerda. O ecocardiograma mostra derrame pericárdico leve a moderado, sem sinais de tamponamento. As sessões de diálise da última semana foram realizadas regularmente, sem falha de acesso vascular relatada.",
+    "pergunta": "Considerando o tempo desde o início da diálise e o quadro apresentado, qual é a classificação correta e a conduta terapêutica prioritária?",
+    "opcoes": [
+      "Pericardite urêmica (por definição, início dentro das primeiras 8 semanas de diálise); indicar pericardiocentese imediata, independentemente do volume do derrame",
+      "Pericardite associada à diálise (o quadro surge após 8 semanas ou mais de diálise de manutenção); intensificar a diálise (diária, por 10-14 dias), que tem taxa de sucesso descrita entre 76% e 100%",
+      "A ausência de supradesnivelamento difuso de ST e de infradesnivelamento de PR no ECG afasta pericardite; investigar outra causa para a dor torácica antes de tratar",
+      "Iniciar corticosteroide em dose plena como terapia de primeira linha, já que o AINE é formalmente contraindicado em doença renal crônica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O paciente está há 4 meses em diálise — muito além do corte de 8 semanas que define a pericardite urêmica —, o que classifica o quadro como pericardite ASSOCIADA À DIÁLISE, tipicamente ligada a diálise inadequada (Peride et al., J Clin Med 2025, PMID 40943703). A intervenção com maior evidência de eficácia nessa forma é a diálise intensiva (diária, por 10 a 14 dias), com eficácia descrita entre 76% e 100% (a maioria dos estudos em torno de 85%) e recorrência em até 15% dos casos — taxa considerada aceitável frente à mortalidade da pericardite não tratada nesse contexto (88-100%). A opção 0 erra a classificação (urêmica é <8 semanas) e generaliza pericardiocentese para qualquer derrame, quando a indicação é para derrame sintomático de grande volume ou risco de tamponamento. A opção 2 é a armadilha central do documento-fonte: no paciente em diálise, os padrões clássicos de ECG (ST difuso, PR infra) são INCOMUMENTE observados — predominam alterações inespecíficas atribuíveis a hipertrofia ventricular esquerda ou distúrbio eletrolítico —, e a ausência do padrão clássico NÃO afasta o diagnóstico, ao contrário do que se assume na pericardite aguda de outras etiologias. A opção 3 inverte a fonte: AINEs e AAS constituem a terapia farmacológica inicial (com escolha individualizada por contraindicações), e corticosteroide é reservado como segunda linha, em doses baixas a moderadas.",
+    "source_refs": [
+      "Peride I, et al. Understanding Hemodialysis-Associated Pericarditis: Causes, Symptoms, and Management Strategies. J Clin Med. 2025;14(17):5944. DOI: 10.3390/jcm14175944. PMID: 40943703. PMCID: PMC12428787 — texto completo lido via PMC em 12/08/2026.",
+      "Chugh S, Bhaskaran A, Kumar A, et al. Uremic- and Dialysis-Associated Pericarditis. Cardiol Rev. 2021;29(6):310-313. PMID: 33337656 — abstract conferido no PubMed em 12/08/2026, usado só para confirmar a nomenclatura das duas entidades distintas."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-peri-infarto-precoce-conduta-terapeutica-vs-dressler",
+    "titulo": "Dor pleurítica no 2º dia pós-angioplastia primária: qual anti-inflamatório escolher, e por quê não os de sempre?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, admitido há 2 dias com IAM com supradesnível do ST (parede anterior), submetido a angioplastia primária com sucesso. No 2º dia de internação, evolui com dor torácica pleurítica, que piora em decúbito e melhora ao sentar-se inclinado para frente, associada a atrito pericárdico à ausculta. Não há elevação adicional de troponina além do esperado pelo próprio infarto, e o ECG seriado não mostra sinais de reinfarto. Firmado o diagnóstico de pericardite peri-infarto precoce.",
+    "pergunta": "Qual esquema anti-inflamatório é o mais indicado nesta janela precoce pós-STEMI, e qual é o racional para evitar as opções habituais da pericardite idiopática?",
+    "opcoes": [
+      "Ibuprofeno 600-800 mg a cada 6 horas associado a colchicina, por ter início de ação mais rápido que o AAS nesse contexto",
+      "AAS em dose anti-inflamatória (750-1000 mg a cada 6 horas) associado a colchicina, evitando AINE não seletivo e corticoide, que podem interferir na cicatrização miocárdica e, teoricamente, aumentar o risco de afinamento de parede e ruptura nessa janela",
+      "Prednisolona 0,2-0,5 mg/kg/dia como terapia de primeira linha, por ser a opção mais eficaz para controle rápido dos sintomas",
+      "Suspender toda terapia anti-inflamatória e aguardar resolução espontânea, já que a pericardite peri-infarto é sempre autolimitada e não deve ser tratada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na pericardite peri-infarto (precoce, dias 1-4 após o IAM, por contiguidade com o miocárdio necrosado — distinta da síndrome de Dressler, tardia e autoimune, que surge 1 a 6 semanas depois), a diretriz de síndrome coronariana aguda recomenda evitar AINE não seletivo e corticoide nos primeiros dias pós-STEMI, pelo risco teórico de interferência na cicatrização miocárdica e afinamento de parede, favorecendo o AAS em dose anti-inflamatória (750-1000 mg a cada 6h) associado a colchicina (0,6 mg a cada 12h por 3 meses) — Malik J et al., Am Heart J Plus 2021;12:100068, PMID 38559602. A opção do ibuprofeno é justamente o AINE não seletivo que se quer evitar nessa janela. A prednisolona é reservada como segunda linha (nem sequer na fase precoce, quando o AAS já é a opção preferencial) e a corticoterapia de rotina em pericardite não é a conduta de primeira escolha em nenhuma das duas formas. Suspender todo tratamento está errado porque a terapia anti-inflamatória reduz sintomas e recorrência (10-15% dos casos recorrem, e cerca de 2% progride para constrição) — o esquema simplesmente muda de fármaco, não desaparece. Já na síndrome de Dressler tardia, semanas depois com a cicatrização mais consolidada, o esquema de AINE/colchicina/corticoide de segunda linha se aplica com menos restrição — é essa distinção temporal que orienta a escolha do fármaco.",
+    "source_refs": [
+      "Malik J, Zaidi SMJ, Rana AS, Haider A, Tahir S. Post-cardiac injury syndrome: An evidence-based approach to diagnosis and treatment · American Heart Journal Plus: Cardiology Research and Practice · 2021 · 12:100068 · DOI: 10.1016/j.ahjo.2021.100068 · PMID: 38559602"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miopericardite-pos-vacina-mrna-risco-comparado-a-infeccao-por-sars-cov-2",
+    "titulo": "Adolescente com dor torácica 3 dias após a 2ª dose de vacina de mRNA: o que dizer aos pais hesitantes?",
+    "tema": "Pericárdio",
+    "nivel": "básico",
+    "enunciado": "Adolescente do sexo masculino, 15 anos, previamente hígido, procura o pronto-socorro com dor torácica e mal-estar 3 dias após receber a segunda dose de vacina de mRNA contra COVID-19 (BNT162b2). Ao exame, discreta taquicardia, sem instabilidade hemodinâmica. Troponina levemente elevada, ECG com alteração inespecífica de ST, ecocardiograma com função sistólica preservada. É firmado o diagnóstico de miopericardite pós-vacinal, com evolução favorável e alta hospitalar em poucos dias. Os pais, hesitantes quanto à segurança da vacina, perguntam se deveriam ter evitado a segunda dose diante desse risco.",
+    "pergunta": "Com base nos dados da coorte PCORnet (MMWR 2022), qual afirmação resume corretamente o risco cardíaco comparado entre a vacina e a infecção natural por SARS-CoV-2, nesta faixa etária e sexo?",
+    "opcoes": [
+      "O risco de miocardite é semelhante entre a vacina e a infecção natural pelo SARS-CoV-2 nessa faixa etária, então vacinar ou não vacinar não muda o risco cardíaco",
+      "Em homens de 12-17 anos, a incidência de miocardite após infecção por SARS-CoV-2 foi de 1,8 a 5,6 vezes maior do que após a segunda dose da vacina — o risco cardíaco da própria doença supera o da vacina, mesmo no grupo de maior risco vacinal",
+      "O risco de miocardite após a vacina é maior do que após a infecção nessa faixa etária, o que justifica evitar a segunda dose em adolescentes do sexo masculino",
+      "A miopericardite pós-vacinal nessa faixa etária tem, em geral, evolução grave, com disfunção ventricular persistente e prognóstico reservado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A coorte PCORnet (40 sistemas de saúde americanos, janeiro de 2021 a janeiro de 2022) mediu miocardite tanto após a vacina quanto após a infecção pelo SARS-CoV-2, nas mesmas faixas etárias e por sexo. Em homens de 12-17 anos — o grupo de maior risco absoluto pós-vacinal (22,0-35,9 casos por 100.000 após a 2ª dose) —, a incidência após INFECÇÃO foi de 50,1-64,9 por 100.000: os próprios autores relatam que o risco de desfecho cardíaco foi de 1,8 a 5,6 vezes maior após infecção do que após a segunda dose da vacina nesse grupo, e ainda mais desproporcional (razão de risco de 2,2 a 115,2) nos demais grupos por idade e sexo (Block JP et al., MMWR 2022;71(14):517-523). Ou seja: mesmo no subgrupo de maior risco vacinal, a doença que a vacina previne apresenta risco cardíaco maior do que a própria vacina — o que responde diretamente à opção 0 (não são riscos semelhantes) e à opção 2 (a relação é o inverso do afirmado). Quanto ao curso clínico, a maioria dos casos em pessoas com menos de 21 anos tem manifestação leve e remissão rápida dos sintomas, com disfunção sistólica leve a moderada quando presente — não o quadro grave e persistente descrito na opção 3.",
+    "source_refs": [
+      "Block JP, Boehmer TK, Forrest CB, et al. Cardiac Complications After SARS-CoV-2 Infection and mRNA COVID-19 Vaccination — PCORnet, United States, January 2021-January 2022. MMWR Morb Mortal Wkly Rep. 2022;71(14):517-523. DOI: 10.15585/mmwr.mm7114e1 — números conferidos contra o texto do artigo em 30/07/2026.",
+      "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297."
+    ],
+    "review_status": "revisado"
   }
 ]
