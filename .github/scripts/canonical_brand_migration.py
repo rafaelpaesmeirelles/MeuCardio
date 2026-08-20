@@ -134,7 +134,7 @@ if marker not in brand_test:
 
         def test_frontend_sources_do_not_reference_legacy_brand_assets_or_runtime_swaps():
             frontend = ROOT / "frontend" / "src"
-            source = "\n".join(
+            source = "\\n".join(
                 path.read_text(encoding="utf-8")
                 for path in frontend.rglob("*")
                 if path.is_file() and path.suffix in {".ts", ".tsx", ".css", ".html"}
