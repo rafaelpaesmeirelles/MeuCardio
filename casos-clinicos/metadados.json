@@ -15426,5 +15426,108 @@
       "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "espessura-parietal-13mm-atleta-endurance-cmh-versus-coracao-de-atleta",
+    "titulo": "Espessura parietal de 13 mm em corredor de endurance: coração de atleta ou cardiomiopatia hipertrófica?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 24 anos, corredor de longa distância há 8 anos (>60 km/semana), assintomático, sem história familiar de morte súbita cardíaca ou cardiomiopatia. Ecocardiograma de rotina mostra espessura de parede posterior do VE e septo interventricular de 13 mm, sem dilatação de câmara, função sistólica normal, sem obstrução de via de saída.",
+    "pergunta": "Qual abordagem é mais consistente com a literatura atual sobre diferenciação de coração de atleta e cardiomiopatia hipertrófica na 'zona cinzenta'?",
+    "opcoes": [
+      "Espessura ≥13 mm em atleta é, por definição, patológica e exige diagnóstico imediato de cardiomiopatia hipertrófica",
+      "Nenhuma investigação adicional é necessária, já que qualquer espessamento em atleta assintomático é sempre fisiológico",
+      "O achado cai na zona cinzenta descrita na literatura — a diferenciação exige avaliação multimodal (ecocardiografia com deformação miocárdica, ressonância cardíaca, resposta ao destreinamento, padrão de enchimento diastólico, história familiar e genética), não um corte de espessura isolado",
+      "Basta repetir o ecocardiograma em 5 anos, sem necessidade de qualquer outro exame no momento atual"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A literatura de diferenciação de coração de atleta vs. cardiomiopatia hipertrófica (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890) descreve exatamente esse cenário como 'zona cinzenta' — remodelamento mais pronunciado que o discreto padrão fisiológico típico, mas sem critério isolado que separe com certeza as duas condições. A avaliação recomendada é multimodal: imagem cardiovascular avançada (ecocardiografia com strain, ressonância magnética cardíaca), avaliação de história familiar e, quando indicado, teste genético — nunca um único corte numérico de espessura parietal. Os limiares numéricos exatos usados nos algoritmos hierárquicos do próprio artigo não estão detalhados no resumo indexado, e o documento correspondente desta base marca isso como VERIFICAÇÃO HUMANA NECESSÁRIA para quem for reproduzir cortes exatos — reforçando que a decisão não deve se apoiar em um número isolado.",
+    "source_refs": [
+      "Pagourelias ED, et al. A concise guide of contemporary cardiovascular imaging practices to differentiate athlete's heart in the gray zone. Heart Fail Rev. 2025;30(6):1215-1224. PMID: 40576890."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "morte-subita-atleta-jovem-bebida-energetica-autopsia-molecular",
+    "titulo": "Morte súbita em atleta jovem após consumo de bebida energética: o papel da autópsia molecular",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 19 anos, jogador de futebol amador, sem doença cardíaca conhecida, sofre parada cardíaca súbita durante partida, após ter consumido duas latas de bebida energética antes do jogo. Reanimação malsucedida. A família pergunta se algum exame pode esclarecer a causa e o risco para os demais familiares.",
+    "pergunta": "Qual é a conduta mais consistente com a literatura atual sobre morte súbita cardíaca no atleta jovem nesse cenário?",
+    "opcoes": [
+      "Encerrar a investigação, já que a causa mais provável é intoxicação aguda por cafeína, sem necessidade de investigação genética",
+      "Realizar autópsia molecular (teste genético no próprio falecido) e, quando indicado, rastreamento em familiares — bebidas energéticas e estimulantes podem ser gatilho de arritmia maligna especialmente em corações geneticamente predispostos, e a morte súbita pode ser a primeira manifestação de uma síndrome arritmogênica hereditária latente",
+      "Investigar apenas os pais, sem necessidade de qualquer exame no próprio atleta falecido",
+      "Como o consumo de bebida energética já explica o evento, nenhuma avaliação familiar é indicada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Costantino et al. (Mol Diagn Ther 2026, PMID 42481905) revisam a morte súbita cardíaca no atleta como frequentemente ligada a síndromes arritmogênicas hereditárias latentes, muitas vezes sem manifestação clínica prévia — a própria morte súbita pode ser o primeiro sinal. Os autores destacam explicitamente que altas doses de certas substâncias, isoladas ou combinadas, podem ser gatilhos significativos de arritmia maligna em corações geneticamente predispostos — consumo de bebida energética não exclui, e pode até revelar, uma condição genética subjacente. A autópsia molecular (no falecido) e o rastreamento em familiares permitem identificar precocemente parentes em risco e adotar medidas preventivas. Sessa et al. (Exp Mol Pathol 2026, PMID 42456408) reforçam separadamente que o consumo de bebidas energéticas e 'smart drugs' vem crescendo entre atletas e é gatilho arritmogênico relevante em menores de 35 anos. Encerrar a investigação atribuindo o evento só ao estimulante, sem avaliação genética, deixaria de identificar risco real para a família.",
+    "source_refs": [
+      "Costantino A, et al. Multidisciplinary and Personalized Molecular Diagnosis to Solving Sudden Death During Sport. Mol Diagn Ther. 2026 Jul 21. PMID: 42481905.",
+      "Sessa F, et al. Charged to death: Energy drinks, smart drugs, and sudden cardiac death. Exp Mol Pathol. 2026;147:105068. PMID: 42456408."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "commotio-cordis-jovem-taco-de-beisebol-conduta-e-prognostico",
+    "titulo": "Colapso após impacto de bola no peito em jogo de beisebol: commotio cordis",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente, 14 anos, sexo masculino, é atingido por uma bola de beisebol na região precordial durante o jogo e colapsa imediatamente, sem pulso palpável. Um DEA está disponível no local e a equipe técnica é treinada em RCP.",
+    "pergunta": "Com base na revisão mais recente sobre commotio cordis, qual afirmação está correta sobre este cenário?",
+    "opcoes": [
+      "Commotio cordis ocorre quase exclusivamente fora do contexto esportivo, então este diagnóstico é pouco provável",
+      "A sobrevida é uniformemente baixa (menos de 10%) mesmo com RCP e DEA imediatos, tornando a intervenção pouco relevante para o prognóstico",
+      "RCP e DEA imediatos elevam a taxa de sobrevida para mais de 50% nas séries mais recentes — acesso rápido a desfibrilador e treinamento em RCP de equipes técnicas são intervenções com impacto prognóstico real e mensurável",
+      "O predomínio de casos é igual entre os sexos, sem diferença relevante entre contexto esportivo e não esportivo"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A revisão de 2026 sobre commotio cordis (Dickey GJ et al., J Am Heart Assoc, PMID 41717928) mostra que 69,6% dos 434 casos analisados (302 casos) ocorreram em contexto esportivo — é, portanto, cenário predominantemente esportivo, não o oposto. O achado com maior implicação prática direta da revisão: tratamento com RCP e desfibrilador externo automático (DEA) elevou a taxa de sobrevida para mais de 50% nas séries mais recentes, um ganho substancial frente a séries históricas mais antigas com sobrevida muito menor — reforçando a importância de acesso rápido a DEA e treinamento em RCP para equipes técnicas, árbitros e responsáveis por eventos esportivos, exatamente como estava disponível neste cenário. O predomínio é amplamente masculino, tanto no contexto esportivo (94%) quanto fora dele (93%) — não há equivalência entre os sexos.",
+    "source_refs": [
+      "Dickey GJ, Dorian P, Fedder SP, et al. Revisiting Commotio Cordis: Novel Insight Into Clinical Variability, Diagnosis, Epidemiology, and Prevention. J Am Heart Assoc. 2026;15(5):e045115. PMID: 41717928."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-triatleta-veterano-avaliacao-e-restricao-esportiva",
+    "titulo": "Fibrilação atrial em triatleta veterano: FA 'isolada' do exercício ou algo mais precisa ser investigado?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 52 anos, triatleta amador há mais de 15 anos, treinando rotineiramente mais de 12 horas semanais, procura atendimento por palpitações intermitentes. ECG durante episódio confirma fibrilação atrial paroxística. Assintomático fora dos episódios, sem hipertensão, obesidade ou diagnóstico prévio de apneia do sono.",
+    "pergunta": "Qual conduta está mais alinhada ao consenso de especialistas de 2024 sobre arritmias no atleta (HRS/demais sociedades)?",
+    "opcoes": [
+      "Classificar automaticamente como 'FA isolada do atleta' e liberar para esporte sem investigação adicional, já que treinamento intenso de endurance é causa suficiente e nenhuma outra avaliação agrega valor",
+      "Investigar ativamente cardiomiopatia estrutural, canalopatia, apneia obstrutiva do sono e outros fatores convencionais de risco de FA, mesmo no atleta com longo histórico de endurance — FA em atleta jovem ou de meia-idade não deve ser automaticamente classificada como isolada",
+      "Proibir definitivamente qualquer atividade esportiva competitiva, pois FA é sempre considerada arritmia letal no atleta",
+      "Suspender o esporte apenas se houver sintomas incapacitantes, independentemente de qualquer avaliação de frequência ventricular ou padrão da FA"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso de especialistas de 2024 sobre arritmias no atleta (Lampert R et al., Heart Rhythm 2024, PMID 38763377) descreve relação não linear entre exercício e FA — volumes de treinamento de endurance superiores a 10 horas semanais por muitos anos, como neste caso, são reconhecidos como fenótipo de risco aumentado. Ainda assim, o documento é explícito: FA em atleta jovem ou de meia-idade NÃO deve ser automaticamente classificada como 'FA isolada' — a avaliação deve procurar ativamente cardiomiopatia estrutural, canalopatia, taquicardia supraventricular concomitante, hipertensão, obesidade, apneia obstrutiva do sono e história familiar, mesmo quando o padrão sugere causa relacionada ao exercício. O consenso também esclarece que FA associada ao esporte NÃO é, por si só, considerada arritmia letal, e a decisão sobre continuar a prática deve ser guiada por sintomas, frequência ventricular ao esforço, padrão da FA, cardiopatia associada e resposta ao tratamento — não uma proibição automática nem uma liberação automática sem avaliação.",
+    "source_refs": [
+      "Lampert R, Chung EH, Ackerman MJ, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21(10):e151-e252. PMID: 38763377."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-durante-corrida-competitiva-anomalia-coronaria-suspeita",
+    "titulo": "Síncope durante prova de corrida em jovem atleta: quando suspeitar de anomalia coronária congênita",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 17 anos, corredora competitiva, apresenta síncope súbita durante o esforço máximo de uma prova, com recuperação espontânea em poucos minutos. ECG de repouso e exame físico inicial sem alterações relevantes. Sem sintomas em repouso ou esforço submáximo.",
+    "pergunta": "Qual é a implicação clínica mais importante de síncope especificamente DURANTE o esforço (não após) num atleta jovem, à luz da literatura sobre anomalias coronárias congênitas no atleta?",
+    "opcoes": [
+      "Síncope durante o esforço é sempre benigna (vasovagal) e não exige investigação diferente de síncope pós-esforço",
+      "Síncope durante o esforço máximo é sinal de alarme que exige investigação de causas estruturais/arritmogênicas potencialmente graves, incluindo anomalias coronárias congênitas — cuja apresentação pode ser sutil, com ECG de repouso normal, e cujo risco está ligado a características anatômicas específicas (trajeto interarterial, origem do seio oposto, componente intramural), não a um rótulo único",
+      "Anomalias coronárias congênitas só se manifestam em crianças pequenas, nunca em adolescentes ou adultos jovens competindo em alto nível",
+      "Basta repetir o ECG de repouso em consulta ambulatorial de rotina, sem necessidade de investigação adicional dirigida"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A literatura de cardiologia do esporte distingue explicitamente síncope durante o esforço (sinal de alarme) de síncope pós-esforço (mais frequentemente benigna/vasovagal) — documento correspondente desta base sobre síncope no atleta trata esses dois cenários como categorias de risco diferentes. Quanto às anomalias coronárias congênitas especificamente: Kim JH et al. (Circulation 2025, PMID 39973614) e Petek BJ et al. (Circulation 2025, PMID 41021664) descrevem que o termo 'anomalia coronária' engloba fenótipos muito diferentes, e que características anatômicas — origem do seio oposto, trajeto interarterial, componente intramural, óstio em fenda, ângulo agudo de origem, compressão dinâmica durante exercício — são potencialmente mais relevantes ao risco do que o rótulo diagnóstico isolado. O ECG de repouso normal NÃO exclui anomalia coronária — é achado esperado na maioria dos casos, e a suspeita deve ser levantada pela história de síncope ou dor torácica relacionada especificamente ao esforço máximo, prosseguindo para imagem dirigida (angiotomografia coronariana ou ressonância cardíaca), conforme Daems JJN et al. (JACC Case Rep 2025, PMID 40579103).",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025. PMID: 39973614.",
+      "Petek BJ, et al. Sudden Cardiac Arrest and Death Secondary to Congenital Coronary Artery Abnormalities in Young Competitive Athletes. Circulation. 2025. PMID: 41021664.",
+      "Daems JJN, et al. Multimodality Imaging in Anomalous Aortic Origin of the Coronary Arteries: Lessons From 4 Athlete Cases. JACC Case Rep. 2025. PMID: 40579103."
+    ],
+    "review_status": "revisado"
   }
 ]

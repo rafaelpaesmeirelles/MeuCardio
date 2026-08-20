@@ -22832,5 +22832,45 @@
         "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
       }
     ]
+  },
+  {
+    "slug": "trilha-arritmias-e-doenca-eletrica-no-atleta",
+    "titulo": "Arritmias e Doença Elétrica no Atleta: da Fibrilação Atrial às Canalopatias e Dispositivos",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Cobrir o espectro de arritmias no atleta que a primeira trilha desta pasta não aprofunda: fibrilação atrial do endurance, canalopatias hereditárias (QT longo, CPVT), síndrome de Brugada, bradiarritmias fisiológicas versus patológicas, e a decisão sobre participação esportiva no portador de CDI/marca-passo — sair sabendo quando restringir o esporte por doença elétrica e quando a restrição não é justificada pela evidência.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "bradicardia-bloqueio-conducao-atleta",
+        "por_que": "Ponto de partida: bradicardia sinusal e certos graus de bloqueio de condução são achados esperados e fisiológicos no atleta bem treinado — este documento estabelece a fronteira entre o esperado e o que exige investigação, antes de entrar nas arritmias genuinamente patológicas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-atleta-endurance-hrs-2024",
+        "por_que": "A arritmia sustentada mais comum ligada ao próprio treinamento: relação não linear entre volume de endurance e risco de FA, e por que FA no atleta nunca deve ser rotulada automaticamente como 'isolada' sem investigação."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "canalopatias-qt-longo-cpvt-esporte-retorno",
+        "por_que": "Diferente da FA do endurance, as canalopatias (QT longo, taquicardia ventricular polimórfica catecolaminérgica) são doença elétrica hereditária primária — a decisão de retorno ao esporte segue lógica de risco genético, não de volume de treinamento."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "brugada-participacao-esportiva-estratificacao-risco",
+        "por_que": "Segunda canalopatia de alto peso na estratificação de risco de morte súbita no atleta, com abordagem de participação esportiva própria, distinta do QT longo/CPVT da etapa anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cdi-sicd-participacao-esportiva-atleta",
+        "por_que": "Fecha a trilha na pergunta prática que decorre de qualquer uma das condições anteriores quando um desfibrilador já foi implantado: o portador de CDI (transvenoso ou subcutâneo) pode voltar a competir, e sob quais condições."
+      }
+    ]
   }
 ]
