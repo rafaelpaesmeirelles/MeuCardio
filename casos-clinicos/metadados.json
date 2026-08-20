@@ -15426,5 +15426,598 @@
       "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "espessura-parietal-13mm-atleta-endurance-cmh-versus-coracao-de-atleta",
+    "titulo": "Espessura parietal de 13 mm em corredor de endurance: coração de atleta ou cardiomiopatia hipertrófica?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 24 anos, corredor de longa distância há 8 anos (>60 km/semana), assintomático, sem história familiar de morte súbita cardíaca ou cardiomiopatia. Ecocardiograma de rotina mostra espessura de parede posterior do VE e septo interventricular de 13 mm, sem dilatação de câmara, função sistólica normal, sem obstrução de via de saída.",
+    "pergunta": "Qual abordagem é mais consistente com a literatura atual sobre diferenciação de coração de atleta e cardiomiopatia hipertrófica na 'zona cinzenta'?",
+    "opcoes": [
+      "Espessura ≥13 mm em atleta é, por definição, patológica e exige diagnóstico imediato de cardiomiopatia hipertrófica",
+      "Nenhuma investigação adicional é necessária, já que qualquer espessamento em atleta assintomático é sempre fisiológico",
+      "O achado cai na zona cinzenta descrita na literatura — a diferenciação exige avaliação multimodal (ecocardiografia com deformação miocárdica, ressonância cardíaca, resposta ao destreinamento, padrão de enchimento diastólico, história familiar e genética), não um corte de espessura isolado",
+      "Basta repetir o ecocardiograma em 5 anos, sem necessidade de qualquer outro exame no momento atual"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A literatura de diferenciação de coração de atleta vs. cardiomiopatia hipertrófica (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890) descreve esse cenário como 'zona cinzenta' — remodelamento mais pronunciado que o padrão fisiológico típico, mas sem critério isolado que separe com certeza as duas condições. A avaliação é multimodal: imagem cardiovascular avançada (ecocardiografia com strain e ressonância magnética cardíaca), história familiar e, quando indicado, teste genético — nunca um único corte numérico de espessura parietal. O próprio artigo ilustra fenótipos distintos com a mesma espessura de 13 mm, reforçando que a decisão não deve se apoiar em um número isolado.",
+    "source_refs": [
+      "Pagourelias ED, et al. A concise guide of contemporary cardiovascular imaging practices to differentiate athlete's heart in the gray zone. Heart Fail Rev. 2025;30(6):1215-1224. PMID: 40576890."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "morte-subita-atleta-jovem-bebida-energetica-autopsia-molecular",
+    "titulo": "Morte súbita em atleta jovem após consumo de bebida energética: o papel da autópsia molecular",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 19 anos, jogador de futebol amador, sem doença cardíaca conhecida, sofre parada cardíaca súbita durante partida, após ter consumido duas latas de bebida energética antes do jogo. Reanimação malsucedida. A família pergunta se algum exame pode esclarecer a causa e o risco para os demais familiares.",
+    "pergunta": "Qual é a conduta mais consistente com a literatura atual sobre morte súbita cardíaca no atleta jovem nesse cenário?",
+    "opcoes": [
+      "Encerrar a investigação, já que a causa mais provável é intoxicação aguda por cafeína, sem necessidade de investigação genética",
+      "Realizar autópsia molecular (teste genético no próprio falecido) e, quando indicado, rastreamento em familiares — bebidas energéticas e estimulantes podem ser gatilho de arritmia maligna especialmente em corações geneticamente predispostos, e a morte súbita pode ser a primeira manifestação de uma síndrome arritmogênica hereditária latente",
+      "Investigar apenas os pais, sem necessidade de qualquer exame no próprio atleta falecido",
+      "Como o consumo de bebida energética já explica o evento, nenhuma avaliação familiar é indicada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Costantino et al. (Mol Diagn Ther 2026, PMID 42481905) revisam a morte súbita cardíaca no atleta como frequentemente ligada a síndromes arritmogênicas hereditárias latentes, muitas vezes sem manifestação clínica prévia — a própria morte súbita pode ser o primeiro sinal. Os autores destacam explicitamente que altas doses de certas substâncias, isoladas ou combinadas, podem ser gatilhos significativos de arritmia maligna em corações geneticamente predispostos — consumo de bebida energética não exclui, e pode até revelar, uma condição genética subjacente. A autópsia molecular (no falecido) e o rastreamento em familiares permitem identificar precocemente parentes em risco e adotar medidas preventivas. Sessa et al. (Exp Mol Pathol 2026, PMID 42456408) reforçam separadamente que o consumo de bebidas energéticas e 'smart drugs' vem crescendo entre atletas e é gatilho arritmogênico relevante em menores de 35 anos. Encerrar a investigação atribuindo o evento só ao estimulante, sem avaliação genética, deixaria de identificar risco real para a família.",
+    "source_refs": [
+      "Costantino A, et al. Multidisciplinary and Personalized Molecular Diagnosis to Solving Sudden Death During Sport. Mol Diagn Ther. 2026 Jul 21. PMID: 42481905.",
+      "Sessa F, et al. Charged to death: Energy drinks, smart drugs, and sudden cardiac death. Exp Mol Pathol. 2026;147:105068. PMID: 42456408."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "commotio-cordis-jovem-taco-de-beisebol-conduta-e-prognostico",
+    "titulo": "Colapso após impacto de bola no peito em jogo de beisebol: commotio cordis",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente, 14 anos, sexo masculino, é atingido por uma bola de beisebol na região precordial durante o jogo e colapsa imediatamente, sem pulso palpável. Um DEA está disponível no local e a equipe técnica é treinada em RCP.",
+    "pergunta": "Com base na revisão mais recente sobre commotio cordis, qual afirmação está correta sobre este cenário?",
+    "opcoes": [
+      "Commotio cordis ocorre quase exclusivamente fora do contexto esportivo, então este diagnóstico é pouco provável",
+      "A sobrevida é uniformemente baixa (menos de 10%) mesmo com RCP e DEA imediatos, tornando a intervenção pouco relevante para o prognóstico",
+      "RCP e DEA imediatos elevam a taxa de sobrevida para mais de 50% nas séries mais recentes — acesso rápido a desfibrilador e treinamento em RCP de equipes técnicas são intervenções com impacto prognóstico real e mensurável",
+      "O predomínio de casos é igual entre os sexos, sem diferença relevante entre contexto esportivo e não esportivo"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A revisão de 2026 sobre commotio cordis (Dickey GJ et al., J Am Heart Assoc, PMID 41717928) mostra que 69,6% dos 434 casos analisados (302 casos) ocorreram em contexto esportivo — é, portanto, cenário predominantemente esportivo, não o oposto. O achado com maior implicação prática direta da revisão: tratamento com RCP e desfibrilador externo automático (DEA) elevou a taxa de sobrevida para mais de 50% nas séries mais recentes, um ganho substancial frente a séries históricas mais antigas com sobrevida muito menor — reforçando a importância de acesso rápido a DEA e treinamento em RCP para equipes técnicas, árbitros e responsáveis por eventos esportivos, exatamente como estava disponível neste cenário. O predomínio é amplamente masculino, tanto no contexto esportivo (94%) quanto fora dele (93%) — não há equivalência entre os sexos.",
+    "source_refs": [
+      "Dickey GJ, Dorian P, Fedder SP, et al. Revisiting Commotio Cordis: Novel Insight Into Clinical Variability, Diagnosis, Epidemiology, and Prevention. J Am Heart Assoc. 2026;15(5):e045115. PMID: 41717928."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-triatleta-veterano-avaliacao-e-restricao-esportiva",
+    "titulo": "Fibrilação atrial em triatleta veterano: FA 'isolada' do exercício ou algo mais precisa ser investigado?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 52 anos, triatleta amador há mais de 15 anos, treinando rotineiramente mais de 12 horas semanais, procura atendimento por palpitações intermitentes. ECG durante episódio confirma fibrilação atrial paroxística. Assintomático fora dos episódios, sem hipertensão, obesidade ou diagnóstico prévio de apneia do sono.",
+    "pergunta": "Qual conduta está mais alinhada ao consenso de especialistas de 2024 sobre arritmias no atleta (HRS/demais sociedades)?",
+    "opcoes": [
+      "Classificar automaticamente como 'FA isolada do atleta' e liberar para esporte sem investigação adicional, já que treinamento intenso de endurance é causa suficiente e nenhuma outra avaliação agrega valor",
+      "Investigar ativamente cardiomiopatia estrutural, canalopatia, apneia obstrutiva do sono e outros fatores convencionais de risco de FA, mesmo no atleta com longo histórico de endurance — FA em atleta jovem ou de meia-idade não deve ser automaticamente classificada como isolada",
+      "Proibir definitivamente qualquer atividade esportiva competitiva, pois FA é sempre considerada arritmia letal no atleta",
+      "Suspender o esporte apenas se houver sintomas incapacitantes, independentemente de qualquer avaliação de frequência ventricular ou padrão da FA"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso de especialistas de 2024 sobre arritmias no atleta (Lampert R et al., Heart Rhythm 2024, PMID 38763377) descreve relação não linear entre exercício e FA — volumes de treinamento de endurance superiores a 10 horas semanais por muitos anos, como neste caso, são reconhecidos como fenótipo de risco aumentado. Ainda assim, o documento é explícito: FA em atleta jovem ou de meia-idade NÃO deve ser automaticamente classificada como 'FA isolada' — a avaliação deve procurar ativamente cardiomiopatia estrutural, canalopatia, taquicardia supraventricular concomitante, hipertensão, obesidade, apneia obstrutiva do sono e história familiar, mesmo quando o padrão sugere causa relacionada ao exercício. O consenso também esclarece que FA associada ao esporte NÃO é, por si só, considerada arritmia letal, e a decisão sobre continuar a prática deve ser guiada por sintomas, frequência ventricular ao esforço, padrão da FA, cardiopatia associada e resposta ao tratamento — não uma proibição automática nem uma liberação automática sem avaliação.",
+    "source_refs": [
+      "Lampert R, Chung EH, Ackerman MJ, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21(10):e151-e252. PMID: 38763377."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-durante-corrida-competitiva-anomalia-coronaria-suspeita",
+    "titulo": "Síncope durante prova de corrida em jovem atleta: quando suspeitar de anomalia coronária congênita",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 17 anos, corredora competitiva, apresenta síncope súbita durante o esforço máximo de uma prova, com recuperação espontânea em poucos minutos. ECG de repouso e exame físico inicial sem alterações relevantes. Sem sintomas em repouso ou esforço submáximo.",
+    "pergunta": "Qual é a implicação clínica mais importante de síncope especificamente DURANTE o esforço (não após) num atleta jovem, à luz da literatura sobre anomalias coronárias congênitas no atleta?",
+    "opcoes": [
+      "Síncope durante o esforço é sempre benigna (vasovagal) e não exige investigação diferente de síncope pós-esforço",
+      "Síncope durante o esforço máximo é sinal de alarme que exige investigação de causas estruturais/arritmogênicas potencialmente graves, incluindo anomalias coronárias congênitas — cuja apresentação pode ser sutil, com ECG de repouso normal, e cujo risco está ligado a características anatômicas específicas (trajeto interarterial, origem do seio oposto, componente intramural), não a um rótulo único",
+      "Anomalias coronárias congênitas só se manifestam em crianças pequenas, nunca em adolescentes ou adultos jovens competindo em alto nível",
+      "Basta repetir o ECG de repouso em consulta ambulatorial de rotina, sem necessidade de investigação adicional dirigida"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A literatura de cardiologia do esporte distingue explicitamente síncope durante o esforço (sinal de alarme) de síncope pós-esforço (mais frequentemente benigna/vasovagal) — documento correspondente desta base sobre síncope no atleta trata esses dois cenários como categorias de risco diferentes. Quanto às anomalias coronárias congênitas especificamente: Kim JH et al. (Circulation 2025, PMID 39973614) e Petek BJ et al. (Circulation 2025, PMID 41021664) descrevem que o termo 'anomalia coronária' engloba fenótipos muito diferentes, e que características anatômicas — origem do seio oposto, trajeto interarterial, componente intramural, óstio em fenda, ângulo agudo de origem, compressão dinâmica durante exercício — são potencialmente mais relevantes ao risco do que o rótulo diagnóstico isolado. O ECG de repouso normal NÃO exclui anomalia coronária — é achado esperado na maioria dos casos, e a suspeita deve ser levantada pela história de síncope ou dor torácica relacionada especificamente ao esforço máximo, prosseguindo para imagem dirigida (angiotomografia coronariana ou ressonância cardíaca), conforme Daems JJN et al. (JACC Case Rep 2025, PMID 40579103).",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025. PMID: 39973614.",
+      "Petek BJ, et al. Sudden Cardiac Arrest and Death Secondary to Congenital Coronary Artery Abnormalities in Young Competitive Athletes. Circulation. 2025. PMID: 41021664.",
+      "Daems JJN, et al. Multimodality Imaging in Anomalous Aortic Origin of the Coronary Arteries: Lessons From 4 Athlete Cases. JACC Case Rep. 2025. PMID: 40579103."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-aortica-com-bloqueio-atrioventricular-novo-extensao-perianular",
+    "titulo": "Endocardite de prótese aórtica com bloqueio atrioventricular novo: o TEE negativo encerra a investigação?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, com prótese valvar aórtica biológica implantada há 2 anos, internado há 10 dias com endocardite infecciosa por estafilococo coagulase-negativo, em antibioticoterapia dirigida e clinicamente estável. No 10º dia, desenvolve bloqueio atrioventricular de 2º grau Mobitz II, antes ausente. Ecocardiograma transtorácico e, em seguida, transesofágico não evidenciam abscesso ou pseudoaneurisma; a vegetação identificada é pequena.",
+    "pergunta": "Qual a interpretação e conduta mais apropriada diante desse bloqueio atrioventricular novo?",
+    "opcoes": [
+      "Como o ecocardiograma transesofágico já foi negativo para abscesso, considerar a extensão perianular afastada e apenas encaminhar para avaliação de marca-passo definitivo",
+      "Reconhecer o bloqueio atrioventricular novo como sinal de provável extensão perianular (risco relativo de 2,55 na coorte que descreveu esse fator), lembrando que a sensibilidade combinada de TTE+TEE para abscesso/pseudoaneurisma é de apenas 63% — e por isso solicitar tomografia computadorizada cardíaca complementar e discutir com a equipe de endocardite",
+      "Concluir que a vegetação pequena afasta extensão perianular relevante, já que o tamanho da vegetação é diretamente proporcional ao risco dessa complicação",
+      "Repetir apenas um novo ecocardiograma transtorácico em 72 horas e aguardar evolução clínica antes de qualquer outro exame"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Bloqueio atrioventricular novo em endocardite de valva aórtica é sinal de alarme para extensão perianular, não achado incidental: na coorte de Graupner et al. (J Am Coll Cardiol 2002;39(7):1204-11, PMID 11923047), o desenvolvimento de bloqueio atrioventricular teve risco relativo de 2,55 (IC95% 1,91-3,41) para complicação perivalvular, e a frequência de extensão perianular foi quase o dobro em prótese valvar (55%) versus valva nativa (29%) — exatamente o cenário deste paciente. A ecocardiografia isolada, mesmo combinando TTE e TEE, tem sensibilidade de apenas 63% (especificidade 90%) para abscesso/pseudoaneurisma confirmado cirurgicamente; a tomografia computadorizada cardíaca sozinha chega a 81%, e a combinação dos dois métodos atingiu 100% de sensibilidade na coorte de Hryniewiecki et al. (Eur Radiol 2019;29(8):4368-4376, PMID 30643945). Um TEE negativo isolado, portanto, não encerra a investigação nesse contexto de alta suspeita. A opção C está invertida: a mesma coorte mostrou que vegetações pequenas foram, se algo, mais frequentes nos pacientes com extensão perianular (RR 1,45) — tamanho de vegetação e complicação perivalvular são achados independentes, não um substituto do outro. A opção A trata o bloqueio como problema puramente elétrico, ignorando que ele deve disparar investigação de imagem adicional e comunicação à equipe de endocardite antes de qualquer decisão sobre marca-passo, já que a causa de base (infecção não controlada por extensão perianular) muda a indicação cirúrgica.",
+    "source_refs": [
+      "Graupner C, Vilacosta I, SanRomán J, Ronderos R, Sarriá C, Fernández C, Mújica R, Sanz O, Sanmartín JV, Pinto AG. Periannular extension of infective endocarditis. J Am Coll Cardiol. 2002;39(7):1204-11. DOI: 10.1016/s0735-1097(02)01747-3 · PMID: 11923047",
+      "Hryniewiecki T, Zatorska K, Abramczuk E, Zakrzewski D, Szymański P, Kuśmierczyk M, Michałowska I. The usefulness of cardiac CT in the diagnosis of perivalvular complications in patients with infective endocarditis. Eur Radiol. 2019;29(8):4368-4376. DOI: 10.1007/s00330-018-5965-2 · PMID: 30643945"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "avc-embolico-em-paciente-com-cancer-e-vegetacao-mitral-hemocultura-negativa-nbte",
+    "titulo": "AVC embólico em paciente com câncer pancreático e vegetação mitral: endocardite infecciosa ou NBTE?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 62 anos, com adenocarcinoma de pâncreas metastático, é admitida por AVC isquêmico embólico agudo. O ecocardiograma transesofágico mostra pequena vegetação na valva mitral, sem disfunção valvar e sem perfuração de folheto. Três conjuntos de hemoculturas seriadas retornam negativos.",
+    "pergunta": "Qual a interpretação diagnóstica mais provável e a conduta terapêutica mais adequada?",
+    "opcoes": [
+      "Endocardite infecciosa com hemocultura negativa — iniciar esquema antibiótico empírico prolongado, já que AVC embólico com vegetação valvar é apresentação típica dessa entidade",
+      "Endocardite trombótica não bacteriana (NBTE) associada à malignidade — tratar o câncer de base (intervenção mais importante para prevenir recorrência), considerar anticoagulação individualizada e evitar anticoagulante oral direto",
+      "Iniciar rivaroxabana em dose plena, opção mais prática para anticoagulação ambulatorial nesse contexto",
+      "Não anticoagular e não investigar a causa de base, pois vegetação valvar em paciente oncológico não tem implicação terapêutica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro é característico de endocardite trombótica não bacteriana (NBTE): a diretriz ESC 2023 (Delgado V et al., Eur Heart J. 2023;44(39):3948-4042, PMID 37622656, seção 12.12) descreve que 41% dos pacientes com NBTE têm câncer — sendo adenocarcinoma de pulmão, mama e pâncreas os mais frequentes entre os oncológicos — e que AVC é a apresentação mais comum na admissão (60%), com a valva mitral mais acometida (62%) que a aórtica (24%). A ausência de disfunção valvar e de perfuração de folheto é o critério mais importante para diferenciar a vegetação de Libman-Sacks/NBTE de endocardite infecciosa bacteriana verdadeira, que causa disfunção e pode perfurar o folheto — reforçando o diagnóstico diante de hemoculturas seriadas negativas. Tratar a doença de base (aqui, o câncer) é a intervenção mais importante para prevenir recorrência, mais que o antitrombótico isolado; a anticoagulação deve ser considerada, ponderada contra risco de sangramento, com heparina de baixo peso molecular, HNF ou antagonista de vitamina K — não há dado que sustente DOAC em NBTE, e em paciente com antifosfolípide trombótico a rivaroxabana foi associada a mais eventos tromboembólicos e sangramento maior em ensaio randomizado, o que descarta a opção C. A opção A erra o diagnóstico: tratar como endocardite infecciosa bacteriana ignoraria que a fisiopatologia aqui é trombótica, e a própria diretriz ESC 2023 (seção 12.11) afirma que não há dado que sustente antitrombótico especificamente por endocardite infecciosa bacteriana — a lógica terapêutica das duas entidades é oposta.",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656 — seção 12.12 (Non-bacterial thrombotic endocarditis) e Recommendation Table 22"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "febre-e-bacteremia-por-s-aureus-anos-apos-oclusor-de-cia-infeccao-tardia-de-dispositivo",
+    "titulo": "Febre e bacteremia por S. aureus 3 anos após oclusor de CIA: implante antigo afasta infecção de dispositivo?",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 40 anos, com oclusor percutâneo de comunicação interatrial implantado há 3 anos, é internado por febre baixa intermitente há 6 semanas. Duas hemoculturas isoladas com intervalo mostram Staphylococcus aureus, sem foco cutâneo, urinário ou pulmonar identificado ao exame.",
+    "pergunta": "Qual a interpretação mais adequada da bacteremia nesse paciente, e a conduta diagnóstica a seguir?",
+    "opcoes": [
+      "Como o implante foi há 3 anos — muito além da janela de 6 meses de maior risco descrita para infecção de dispositivo de fechamento —, afastar o oclusor como causa e concentrar a investigação em outro foco",
+      "Considerar a bacteremia por Staphylococcus aureus como possível marcador de infecção do dispositivo mesmo com implante antigo, já que infecção tardia pode ocorrer meses a anos após o implante com apresentação sutil, e solicitar ecocardiograma transesofágico dirigido ao oclusor",
+      "Tratar como bacteremia isolada de foco indeterminado com 2 semanas de antibiótico oral, sem exame de imagem adicional",
+      "Solicitar apenas hemograma seriado, já que dispositivo de fechamento praticamente nunca infecta após completar a endotelização"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A ciência advisory da AHA sobre infecções de dispositivos cardiovasculares não valvares (Chesdachai S et al., J Am Heart Assoc. 2026;15(11):e050147, PMID 41988961) descreve que a infecção de oclusor de fechamento ocorre tipicamente nos primeiros 6 meses após o implante, antes da endotelização completa, mas pode ocorrer meses a anos depois — e nesse caso costuma se apresentar com sinais sutis e inespecíficos, como a febre baixa intermitente deste paciente. O documento é explícito: passados os 6 meses, o dispositivo sai do radar mental do médico, e é justamente aí que a apresentação deixa de ser óbvia — o que torna a opção A (e a D) um erro de raciocínio, não uma conclusão segura. Staphylococcus aureus é o patógeno mais frequentemente relatado nessas infecções, e a própria fonte afirma que infecção de corrente sanguínea é comum e pode ser marcador de infecção do dispositivo — em portador desses implantes, bacteremia não se explica sozinha, o que exige investigação dirigida. O ecocardiograma transesofágico é a modalidade primária para detectar vegetação na maioria dos dispositivos de fechamento (a limitação específica citada no documento é para oclusor de canal arterial persistente, não para oclusor de comunicação interatrial). A opção C ignora que o manejo dessas infecções geralmente exige 4 a 6 semanas de antimicrobiano dirigido, além de a investigação de imagem ser necessária antes de definir a conduta, inclusive quanto à eventual necessidade de explante cirúrgico.",
+    "source_refs": [
+      "Chesdachai S, Ghobrial J, El-Chami MF, Dionne A, Lok CE, et al; American Heart Association Committee on Rheumatic Fever, Endocarditis, and Kawasaki Disease. Infections of Selected Nonvalvular Cardiovascular Devices: A Science Advisory From the American Heart Association. J Am Heart Assoc. 2026;15(11):e050147. DOI: 10.1161/JAHA.126.050147. PMID: 41988961"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "coreia-de-sydenham-isolada-e-suficiente-para-diagnostico-de-febre-reumatica",
+    "titulo": "Coreia isolada, sem outros achados: já é febre reumática?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Menina de 11 anos é levada ao ambulatório por movimentos involuntários, irregulares, dos membros e da face, que pioram quando ela fica ansiosa na consulta e que os pais notam que somem enquanto ela dorme. Há também labilidade emocional e leve dificuldade de concentração na escola, iniciadas de forma insidiosa há cerca de 5 semanas. Não há relato de dor articular, febre, rash ou nódulos subcutâneos em nenhum momento. A mãe não recorda nenhum episódio recente de dor de garganta, e um ASLO colhido hoje está normal. O exame neurológico confirma coreia generalizada leve a moderada, sem outros achados focais, e as principais causas alternativas de coreia (lúpus, doença de Wilson, uso de fármaco, coreia gravídica/por pílula — não aplicável na idade) foram afastadas pela história e por exames iniciais.",
+    "pergunta": "Diante desse quadro, qual a conduta diagnóstica correta em relação à febre reumática?",
+    "opcoes": [
+      "Não há febre reumática, pois falta um segundo critério maior ou menor associado à coreia para fechar o diagnóstico pelos critérios de Jones",
+      "Não há febre reumática, pois a ausência de antecedente reconhecido de faringite e o ASLO normal no momento atual afastam infecção estreptocócica recente, pré-requisito obrigatório mesmo para coreia isolada",
+      "A coreia isolada, uma vez excluídas outras causas no contexto clínico compatível, já é por si só diagnóstica de febre reumática, sem exigir outro critério maior/menor nem evidência laboratorial de infecção estreptocócica recente — e a ausência de relato de faringite é esperada, dada a latência longa da coreia",
+      "O diagnóstico exige antiestreptolisina O elevada colhida em fase aguda; como o exame de hoje é normal, deve-se repetir a sorologia em 2 semanas antes de considerar qualquer diagnóstico"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A coreia de Sydenham é a única manifestação maior da febre reumática que, isolada, já fecha o diagnóstico — não é necessário nenhum outro critério maior ou menor associado, nem confirmação laboratorial de infecção estreptocócica recente, desde que outras causas de coreia tenham sido razoavelmente excluídas no contexto clínico compatível (é diagnóstico de exclusão dentro desse contexto). Isso é coerente com a própria biologia da coreia: ela tem a latência mais longa entre as manifestações maiores da febre reumática, surgindo tipicamente 4 a 8 semanas após a faringite estreptocócica (contra 2-3 semanas de artrite e cardite) — na prática, é comum que o paciente ou a família não relacione o quadro neurológico a uma infecção de garganta já esquecida, e um ASLO colhido só agora, semanas depois, pode perfeitamente já ter normalizado sem que isso afaste o diagnóstico. As opções que exigem critério adicional, antecedente reconhecido de faringite ou sorologia positiva no momento atual invertem essa lógica clínica específica da coreia.",
+    "source_refs": [
+      "Tariq S, Niaz F, Waseem S, Shaikh TG, Ahmed SH, Irfan M, Nashwan AJ, Ullah I. Managing and treating Sydenham chorea: A systematic review. Brain Behav. 2023;13(6):e3035. DOI: 10.1002/brb3.3035. PMID: 37150977; PMCID: PMC10275551."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crianca-com-febre-prolongada-conjuntivite-e-rash-febre-reumatica-ou-doenca-de-kawasaki",
+    "titulo": "Criança com febre prolongada, conjuntivite e rash: febre reumática ou doença de Kawasaki?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Menino de 3 anos é trazido ao pronto-socorro com febre há 5 dias, sem remissão espontânea. Ao exame: injeção conjuntival bilateral não exsudativa, lábios eritematosos e fissurados, língua em morango, rash polimorfo no tronco, discreto edema de mãos e pés, e um linfonodo cervical único, endurecido, de 2 cm, à direita. Não há relato de dor ou edema articular. Não há antecedente claro de faringite ou infecção de pele nas semanas anteriores. VHS e PCR estão elevados. A equipe discute se deveria aguardar o resultado de uma cultura de orofaringe antes de decidir a conduta.",
+    "pergunta": "Qual é a interpretação e a conduta mais adequadas para este caso?",
+    "opcoes": [
+      "O quadro sugere febre reumática aguda com cardite subclínica; deve-se aguardar a cultura de orofaringe e, se positiva, iniciar antibiótico e anti-inflamatório, sem indicação de imunoglobulina intravenosa",
+      "O quadro preenche o padrão típico de doença de Kawasaki (febre ≥5 dias mais 4 dos 5 critérios clínicos principais: conjuntivite não exsudativa, alteração orolabial, rash polimorfo, edema de extremidades e linfadenopatia cervical); o tratamento com imunoglobulina intravenosa e AAS em dose anti-inflamatória deve ser iniciado sem esperar a confirmação de estreptococo, pela janela terapêutica que evita aneurisma coronariano",
+      "Como a artrite está ausente, nenhuma das duas hipóteses (febre reumática ou Kawasaki) é sustentável, e a investigação deve se voltar para outras causas de febre prolongada na infância antes de qualquer tratamento direcionado",
+      "O achado de linfadenopatia cervical isolada já é suficiente para descartar Kawasaki, já que esse critério pertence exclusivamente ao diagnóstico de febre reumática aguda"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro é o padrão-ouro de doença de Kawasaki completa pelo AHA Scientific Statement de 2017 (McCrindle et al., PMID 28356445): febre ≥5 dias associada a ≥4 dos 5 critérios clínicos principais — aqui presentes os cinco: conjuntivite bilateral não exsudativa, alteração orolabial (lábios fissurados, língua em morango), rash polimorfo, edema de extremidades e linfadenopatia cervical (tipicamente unilateral, como neste caso, ≥1,5 cm). O órgão-alvo do dano cardíaco em Kawasaki é a artéria coronária, com risco de aneurisma em até ≈25% dos casos não tratados, e a imunoglobulina intravenosa reduz esse risco de forma dependente do tempo — por isso o tratamento não deve esperar a confirmação de infecção estreptocócica, que é a investigação relevante para febre reumática, não para Kawasaki. A ausência de artrite migratória de grandes articulações (achado clássico da febre reumática, que aqui não está presente) e a presença de conjuntivite não exsudativa, alteração orolabial e linfadenopatia — nenhuma delas critério da febre reumática aguda — apontam para Kawasaki, não para febre reumática. Aguardar cultura de orofaringe atrasaria a IVIG dentro da janela ideal (até o 10º dia de doença), o que é exatamente o erro que este diferencial busca evitar.",
+    "source_refs": [
+      "McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445.",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-mitral-jovem-reparo-valvar-tem-desfecho-superior-a-substituicao",
+    "titulo": "Cardiopatia reumática mitral em paciente jovem: o reparo valvar tem desfecho superior à substituição?",
+    "tema": "Febre reumática",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 24 anos, com sequela de febre reumática na infância, é encaminhada para cirurgia por estenose e insuficiência mitral reumática grave, sintomática, com espessamento subvalvar acentuado e calcificação leve dos folhetos. Por ser jovem, o cardiologista assistente sugere que o cirurgião priorize o reparo valvar em vez da troca por prótese, citando a superioridade já estabelecida do reparo sobre a substituição na regurgitação mitral degenerativa e argumentando que o mesmo deveria valer aqui, evitando anticoagulação vitalícia com prótese mecânica.",
+    "pergunta": "O que a evidência disponível sobre doença mitral reumática mostra em relação a essa extrapolação?",
+    "opcoes": [
+      "A extrapolação está correta: como na degenerativa, o reparo mitral reumático mostra menor mortalidade operatória e menor taxa de reoperação do que a substituição, e deve ser sempre priorizado",
+      "A extrapolação não é sustentada pela evidência específica: reparo e substituição mitral na doença reumática mostraram desfechos semelhantes em mortalidade operatória, morbidade, sobrevida em longo prazo e complicações tardias relacionadas à valva, incluindo taxa de reoperação comparável — a superioridade do reparo é bem estabelecida na degenerativa, mas o papel do reparo na doença reumática permanece controverso, e a valva reumática é tecnicamente menos passível de reparo durável por sua complexidade anatômica",
+      "A extrapolação está parcialmente correta, mas somente em pacientes acima de 40 anos, faixa etária em que o reparo reumático já demonstrou superioridade consistente sobre a substituição",
+      "Não há dado comparativo entre reparo e substituição na doença mitral reumática; toda a evidência disponível é exclusiva da doença degenerativa, e a decisão deve se basear apenas em preferência da equipe cirúrgica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Ao contrário da doença mitral degenerativa, em que o reparo tem superioridade já estabelecida sobre a substituição, essa vantagem não pode ser simplesmente extrapolada para a doença mitral reumática. A comparação direta entre reparo e substituição mitral em doença reumática (European Journal of Cardio-Thoracic Surgery) mostrou desfechos semelhantes entre as duas estratégias em mortalidade operatória, morbidade, sobrevida de longo prazo e complicações tardias relacionadas à valva, com taxa de reoperação comparável — e a conclusão da literatura é que o papel do reparo na doença valvar reumática permanece controverso. Isso se explica, em parte, porque a doença mitral reumática é tecnicamente menos passível de reparo durável (as técnicas necessárias para um resultado bem-sucedido são mais complexas do que na degenerativa), e não está claro se a durabilidade satisfatória obtida em valvas reumáticas e calcificadas se traduz, de fato, em sobrevida melhor comparada à substituição. Quando indicado, o reparo mitral reumático deve ser considerado apenas em centro valvar abrangente, por equipe experiente — o que reforça que a decisão não é automática só pela idade da paciente.",
+    "source_refs": [
+      "Long-term outcomes after surgery for rheumatic mitral valve disease: valve repair versus mechanical valve replacement · European Journal of Cardio-Thoracic Surgery · https://academic.oup.com/ejcts/article/37/5/1039/599391",
+      "Challenges in rheumatic valvular disease: Surgical strategies for mitral valve preservation · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC4448063/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquicardiomiopatia-por-extrassistoles-ventriculares-qual-a-carga-que-justifica-ablacao",
+    "titulo": "FEVE reduzida sem causa estrutural, mas com muitas extrassístoles: quando pensar em taquicardiomiopatia por ExSV?",
+    "tema": "Cardiomiopatias",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 52 anos, encaminhado por FEVE de 34% ao ecocardiograma de rotina, sem antecedente de doença coronariana, valvopatia ou uso de cardiotóxico. Ecocardiograma realizado há 3 anos era normal. A investigação etiológica (coronariografia sem lesões, ressonância cardíaca sem sinais de infiltração ou isquemia, triagem laboratorial) não identificou causa estrutural para a disfunção. O Holter de 24 horas evidenciou extrassístoles ventriculares (ExSV) monomórficas frequentes, totalizando 28% de todos os batimentos registrados no período.",
+    "pergunta": "Com base no estudo de referência que quantificou a relação entre carga de extrassístoles ventriculares e função de ventrículo esquerdo (Baman et al., Heart Rhythm 2010, 174 pacientes com ExSV idiopáticas frequentes), qual das afirmações abaixo está correta sobre este paciente?",
+    "opcoes": [
+      "Como a carga de ExSV (28%) está acima do corte de 24% identificado no estudo como o que melhor discrimina disfunção ventricular, a hipótese de cardiomiopatia induzida por ExSV (uma forma reversível de taquicardiomiopatia) deve ser ativamente considerada, com indicação de ablação por cateter do foco ectópico como conduta definitiva.",
+      "Cargas de ExSV abaixo de 33% nunca foram associadas a disfunção ventricular no estudo, então a causa da FEVE reduzida deste paciente é necessariamente outra, não a arritmia.",
+      "O estudo de Baman et al. não encontrou relação estatisticamente significativa entre carga de ExSV e função de VE; a extrassistolia é achado incidental neste caso e não modifica a conduta.",
+      "Como a FEVE média dos pacientes com disfunção no estudo foi de 0,37 ± 0,10, uma FEVE de 34% (0,34) está fora da faixa esperada para taquicardiomiopatia por ExSV, tornando esse diagnóstico pouco provável."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Correta a opção 1. No estudo de Baman et al. (Heart Rhythm, 2010; PMID 20348027), 174 pacientes com ExSV idiopáticas frequentes foram avaliados por Holter de 24h e ecocardiograma: 57/174 (33%) tinham disfunção sistólica de VE, com FEVE média de 0,37 ± 0,10 nesse subgrupo. Uma carga de ExSV acima de 24% do total de batimentos foi o corte que melhor separou os pacientes com função reduzida (carga média 33% ± 13%) dos com função preservada (carga média 13% ± 12%) — e o menor valor de carga já associado a cardiomiopatia reversível identificado no estudo foi 10%, o que reforça não tratar 24% como limiar rígido de segurança abaixo dele. O paciente do caso, com 28% de carga (acima do corte de 24%) e nenhuma outra causa estrutural identificada, preenche o perfil clínico de taquicardiomiopatia por ExSV — condição reversível cujo tratamento definitivo, segundo o documento-fonte, é a ablação por cateter do foco ectópico quando a carga está acima dos patamares associados a disfunção. A opção 2 está errada porque o próprio estudo mostra disfunção associada a cargas bem abaixo de 33%, inclusive a partir de 10%. A opção 3 inverte o resultado do estudo, que demonstrou associação estatisticamente relevante (o corte de 24% foi justamente o que melhor discriminou os dois grupos). A opção 4 interpreta mal o dado: 0,34 está dentro de um desvio-padrão da média (0,37 ± 0,10, ou seja, 0,27–0,47), portanto plenamente compatível com a faixa observada no subgrupo com disfunção, não fora dela.",
+    "source_refs": [
+      "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. PMID: 20348027.",
+      "Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026 Jul 7. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-apical-na-chagasica-basta-para-anticoagular-ou-e-o-trombo-que-importa",
+    "titulo": "Aneurisma apical na cardiomiopatia chagásica: a estrutura sozinha já justifica anticoagulação?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, cardiomiopatia chagásica crônica confirmada por sorologia e clínica, classe funcional NYHA II, FEVE 42%. Ecocardiograma transtorácico de rotina evidencia aneurisma apical de ventrículo esquerdo, sem trombo visível no momento do exame. O médico assistente questiona se a mera presença do aneurisma apical já justificaria, por si só, anticoagulação plena, independentemente de haver ou não trombo intracavitário.",
+    "pergunta": "Segundo a coorte prospectiva de Teixeira Tupinambás et al. (Heart, 2026; 518 pacientes com cardiomiopatia chagásica crônica, HC-UFMG, 2007–2022) sobre o papel do aneurisma apical e do trombo de ventrículo esquerdo no AVC cardioembólico, qual afirmação está correta?",
+    "opcoes": [
+      "Na análise multivariável, o aneurisma apical isoladamente foi o preditor independente mais forte de AVC cardioembólico prévio, superando classe funcional NYHA e FEVE — a presença do aneurisma já basta para indicar anticoagulação.",
+      "Na análise pareada (genetic matching), o aneurisma apical se associou significativamente ao AVC cardioembólico, mas 63,3% dessa associação foi mediada pela formação de trombo de VE — o achado desloca o foco da vigilância clínica para a detecção ativa do trombo, não apenas para o registro estrutural do aneurisma.",
+      "Nem o aneurisma apical nem o trombo de VE tiveram qualquer associação com AVC cardioembólico nesta coorte, o que refuta por completo a hipótese histórica de risco embólico ligado ao aneurisma.",
+      "O aneurisma apical foi associado de forma independente ao desfecho combinado de óbito ou transplante cardíaco no seguimento médio de 4,9 anos, tornando-se por si só um marcador prognóstico de mortalidade nesta população."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Correta a opção 2. No estudo (PMID 42521491), na análise multivariável de admissão, classe funcional NYHA III/IV, menor FEVE e trombo de VE — mas NÃO o aneurisma apical isoladamente — associaram-se de forma independente a AVC cardioembólico (CE) prévio (73/518 pacientes, 14,1%). Já na análise pareada por genetic matching, o aneurisma apical SE associou significativamente ao AVC CE, e a análise de mediação causal mostrou que 63,3% dessa associação passa pela formação de trombo de VE — ou seja, o aneurisma aumenta o risco majoritariamente através do trombo que favorece formar, não por mecanismo direto independente. Essa é a mensagem central do estudo: vigilância e decisão de anticoagulação devem se apoiar na detecção ativa do trombo, não apenas no registro estrutural do aneurisma. A opção 1 inverte o achado da análise multivariável (o aneurisma isolado NÃO foi preditor independente; NYHA, FEVE e trombo foram). A opção 3 está errada porque houve, sim, associação significativa na análise pareada. A opção 4 também inverte o resultado: no seguimento (174 óbitos, 22 transplantes em 4,9 anos), os preditores independentes do composto óbito/transplante foram NYHA III/IV, insuficiência cardíaca direita, aumento de átrio esquerdo e menor FEVE — nem AVC CE prévio nem aneurisma apical se associaram a esse desfecho combinado.",
+    "source_refs": [
+      "Teixeira Tupinambás J, Rocha MOC, Lage TAR, et al. Cardioembolic stroke in Chagas cardiomyopathy: the interplay between apical aneurysm, left ventricular thrombus and clinical outcomes. Heart. 2026 Jul 28:heartjnl-2026-328159. DOI: 10.1136/heartjnl-2026-328159. PMID: 42521491."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cicatriz-subepicardica-em-anel-sem-dilatacao-ndlvc-por-desmoplakina",
+    "titulo": "Disfunção regional de VE não dilatado, cicatriz subepicárdica em anel e história familiar de morte súbita: DCM ou outra categoria?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 38 anos, assintomática do ponto de vista cardiovascular, procura avaliação após a morte súbita da irmã, aos 40 anos, de causa não esclarecida. Ecocardiograma mostra ventrículo esquerdo com dimensões normais (não dilatado), hipocinesia discreta das paredes inferolateral e lateral, FEVE 48%. Angiotomografia coronariana sem lesões obstrutivas. Ressonância cardíaca com realce tardio subepicárdico em padrão de \"anel\" acometendo as mesmas paredes. Painel genético identifica variante patogênica em desmoplakina (DSP).",
+    "pergunta": "Segundo a nomenclatura da diretriz ESC 2023 de cardiomiopatias (Arbelo E, Protonotarios A, Gimeno JR, et al., Eur Heart J 2023), como este fenótipo deve ser classificado, e o que caracteriza o padrão de imagem observado?",
+    "opcoes": [
+      "Cardiomiopatia dilatada (DCM) clássica — qualquer variante patogênica em gene de desmossomo associada a disfunção regional de VE se enquadra nessa categoria, independentemente de haver ou não dilatação da câmara.",
+      "Cardiomiopatia ventricular esquerda não dilatada (NDLVC) — definida pela presença de cicatriz/substituição gordurosa não isquêmica de VE (com ou sem alteração de contratilidade) OU hipocinesia global isolada sem cicatriz; o padrão de realce tardio subepicárdico em anel é característico de variantes em desmoplakina (DSP), filamina C (FLNC) e fosfolambano (PLN).",
+      "Cardiomiopatia restritiva (RCM) — a presença de disfunção biventricular com volumes diastólicos normais ou reduzidos e espessura de parede normal define a entidade, exigindo diferenciação de amiloidose cardíaca.",
+      "Hipertrabeculação (ex-LVNC) — a ESC 2023 classifica essa entidade como traço fenotípico associado a variantes de proteínas do sarcômero, disco Z, citoesqueleto e envelope nuclear, sem relação descrita com desmoplakina."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Correta a opção 2. A ESC 2023 (Seção 3.1) define NDLVC como presença de cicatriz/substituição gordurosa não isquêmica de VE — independentemente de haver alteração segmentar ou global de contratilidade — OU hipocinesia global isolada de VE sem cicatriz. É exatamente a categoria criada para pacientes com doença miocárdica documentada por imagem/genética que não se encaixam nas definições clássicas de DCM ou ARVC. A própria diretriz traz, como exemplo trabalhado (Figura 4), um padrão de realce tardio subepicárdico em 'anel' associado a variante em desmoplakina (DSP) identificando NDLVC relacionada a DSP, autossômica dominante, com FE limítrofe-baixa — cenário reproduzido neste caso. A Figura 3 da mesma diretriz mostra que variantes em DSP, filamina C (FLNC) e fosfolambano (PLN) cursam com esse padrão característico de realce subepicárdico em anel, enquanto variantes em titina (TTN), BAG3, lamina A/C (LMNA), distrofina (DMD), RBM20 e miocardite têm padrão mais heterogêneo, com cicatriz geralmente menor (às vezes ausente) e FE mais baixa. A opção 1 está errada porque o ponto central da NDLVC é justamente NÃO exigir dilatação — chamá-la de DCM contradiz a própria razão de a categoria existir. A opção 3 está errada porque RCM exige fisiologia restritiva com espessura de parede normal, quadro clínico distinto do descrito (disfunção regional sistólica, não padrão restritivo). A opção 4 está errada porque o padrão de realce em anel associado a DSP/FLNC/PLN é justamente da categoria NDLVC, não da hipertrabeculação — que é caracterizada por trabeculação proeminente do VE, achado de imagem completamente diferente do descrito no caso.",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-associada-a-dialise-ecg-atipico-diagnostico-e-conduta",
+    "titulo": "Dor torácica em paciente em hemodiálise há 4 meses: o ECG normal afasta pericardite?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, em hemodiálise há 4 meses por doença renal crônica terminal, comparece à sessão de diálise referindo dor torácica pleurítica e dispneia há 3 dias, associadas a febre baixa. Ao exame: atrito pericárdico discreto, sem turgência jugular ou hipotensão. O ECG não mostra supradesnivelamento difuso de ST nem infradesnivelamento de PR — apenas alterações inespecíficas de repolarização, já presentes em traçados anteriores e atribuídas à hipertrofia ventricular esquerda. O ecocardiograma mostra derrame pericárdico leve a moderado, sem sinais de tamponamento. As sessões de diálise da última semana foram realizadas regularmente, sem falha de acesso vascular relatada.",
+    "pergunta": "Considerando o tempo desde o início da diálise e o quadro apresentado, qual é a classificação correta e a conduta terapêutica prioritária?",
+    "opcoes": [
+      "Pericardite urêmica (por definição, início dentro das primeiras 8 semanas de diálise); indicar pericardiocentese imediata, independentemente do volume do derrame",
+      "Pericardite associada à diálise (o quadro surge após 8 semanas ou mais de diálise de manutenção); intensificar a diálise (diária, por 10-14 dias), que tem taxa de sucesso descrita entre 76% e 100%",
+      "A ausência de supradesnivelamento difuso de ST e de infradesnivelamento de PR no ECG afasta pericardite; investigar outra causa para a dor torácica antes de tratar",
+      "Iniciar corticosteroide em dose plena como terapia de primeira linha, já que o AINE é formalmente contraindicado em doença renal crônica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O paciente está há 4 meses em diálise — muito além do corte de 8 semanas que define a pericardite urêmica —, o que classifica o quadro como pericardite ASSOCIADA À DIÁLISE, tipicamente ligada a diálise inadequada (Peride et al., J Clin Med 2025, PMID 40943703). A intervenção com maior evidência de eficácia nessa forma é a diálise intensiva (diária, por 10 a 14 dias), com eficácia descrita entre 76% e 100% (a maioria dos estudos em torno de 85%) e recorrência em até 15% dos casos — taxa considerada aceitável frente à mortalidade da pericardite não tratada nesse contexto (88-100%). A opção 0 erra a classificação (urêmica é <8 semanas) e generaliza pericardiocentese para qualquer derrame, quando a indicação é para derrame sintomático de grande volume ou risco de tamponamento. A opção 2 é a armadilha central do documento-fonte: no paciente em diálise, os padrões clássicos de ECG (ST difuso, PR infra) são INCOMUMENTE observados — predominam alterações inespecíficas atribuíveis a hipertrofia ventricular esquerda ou distúrbio eletrolítico —, e a ausência do padrão clássico NÃO afasta o diagnóstico, ao contrário do que se assume na pericardite aguda de outras etiologias. A opção 3 inverte a fonte: AINEs e AAS constituem a terapia farmacológica inicial (com escolha individualizada por contraindicações), e corticosteroide é reservado como segunda linha, em doses baixas a moderadas.",
+    "source_refs": [
+      "Peride I, et al. Understanding Hemodialysis-Associated Pericarditis: Causes, Symptoms, and Management Strategies. J Clin Med. 2025;14(17):5944. DOI: 10.3390/jcm14175944. PMID: 40943703. PMCID: PMC12428787 — texto completo lido via PMC em 12/08/2026.",
+      "Chugh S, Bhaskaran A, Kumar A, et al. Uremic- and Dialysis-Associated Pericarditis. Cardiol Rev. 2021;29(6):310-313. PMID: 33337656 — abstract conferido no PubMed em 12/08/2026, usado só para confirmar a nomenclatura das duas entidades distintas."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-peri-infarto-precoce-conduta-terapeutica-vs-dressler",
+    "titulo": "Dor pleurítica no 2º dia pós-angioplastia primária: qual anti-inflamatório escolher, e por quê não os de sempre?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, admitido há 2 dias com IAM com supradesnível do ST (parede anterior), submetido a angioplastia primária com sucesso. No 2º dia de internação, evolui com dor torácica pleurítica, que piora em decúbito e melhora ao sentar-se inclinado para frente, associada a atrito pericárdico à ausculta. Não há elevação adicional de troponina além do esperado pelo próprio infarto, e o ECG seriado não mostra sinais de reinfarto. Firmado o diagnóstico de pericardite peri-infarto precoce.",
+    "pergunta": "Qual esquema anti-inflamatório é o mais indicado nesta janela precoce pós-STEMI, e qual é o racional para evitar as opções habituais da pericardite idiopática?",
+    "opcoes": [
+      "Ibuprofeno 600-800 mg a cada 6 horas associado a colchicina, por ter início de ação mais rápido que o AAS nesse contexto",
+      "AAS em dose anti-inflamatória (750-1000 mg a cada 6 horas) associado a colchicina, evitando AINE não seletivo e corticoide, que podem interferir na cicatrização miocárdica e, teoricamente, aumentar o risco de afinamento de parede e ruptura nessa janela",
+      "Prednisolona 0,2-0,5 mg/kg/dia como terapia de primeira linha, por ser a opção mais eficaz para controle rápido dos sintomas",
+      "Suspender toda terapia anti-inflamatória e aguardar resolução espontânea, já que a pericardite peri-infarto é sempre autolimitada e não deve ser tratada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na pericardite peri-infarto (precoce, dias 1-4 após o IAM, por contiguidade com o miocárdio necrosado — distinta da síndrome de Dressler, tardia e autoimune, que surge 1 a 6 semanas depois), a diretriz de síndrome coronariana aguda recomenda evitar AINE não seletivo e corticoide nos primeiros dias pós-STEMI, pelo risco teórico de interferência na cicatrização miocárdica e afinamento de parede, favorecendo o AAS em dose anti-inflamatória (750-1000 mg a cada 6h) associado a colchicina (0,6 mg a cada 12h por 3 meses) — Malik J et al., Am Heart J Plus 2021;12:100068, PMID 38559602. A opção do ibuprofeno é justamente o AINE não seletivo que se quer evitar nessa janela. A prednisolona é reservada como segunda linha (nem sequer na fase precoce, quando o AAS já é a opção preferencial) e a corticoterapia de rotina em pericardite não é a conduta de primeira escolha em nenhuma das duas formas. Suspender todo tratamento está errado porque a terapia anti-inflamatória reduz sintomas e recorrência (10-15% dos casos recorrem, e cerca de 2% progride para constrição) — o esquema simplesmente muda de fármaco, não desaparece. Já na síndrome de Dressler tardia, semanas depois com a cicatrização mais consolidada, o esquema de AINE/colchicina/corticoide de segunda linha se aplica com menos restrição — é essa distinção temporal que orienta a escolha do fármaco.",
+    "source_refs": [
+      "Malik J, Zaidi SMJ, Rana AS, Haider A, Tahir S. Post-cardiac injury syndrome: An evidence-based approach to diagnosis and treatment · American Heart Journal Plus: Cardiology Research and Practice · 2021 · 12:100068 · DOI: 10.1016/j.ahjo.2021.100068 · PMID: 38559602"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miopericardite-pos-vacina-mrna-risco-comparado-a-infeccao-por-sars-cov-2",
+    "titulo": "Adolescente com dor torácica 3 dias após a 2ª dose de vacina de mRNA: o que dizer aos pais hesitantes?",
+    "tema": "Pericárdio",
+    "nivel": "básico",
+    "enunciado": "Adolescente do sexo masculino, 15 anos, previamente hígido, procura o pronto-socorro com dor torácica e mal-estar 3 dias após receber a segunda dose de vacina de mRNA contra COVID-19 (BNT162b2). Ao exame, discreta taquicardia, sem instabilidade hemodinâmica. Troponina levemente elevada, ECG com alteração inespecífica de ST, ecocardiograma com função sistólica preservada. É firmado o diagnóstico de miopericardite pós-vacinal, com evolução favorável e alta hospitalar em poucos dias. Os pais, hesitantes quanto à segurança da vacina, perguntam se deveriam ter evitado a segunda dose diante desse risco.",
+    "pergunta": "Com base nos dados da coorte PCORnet (MMWR 2022), qual afirmação resume corretamente o risco cardíaco comparado entre a vacina e a infecção natural por SARS-CoV-2, nesta faixa etária e sexo?",
+    "opcoes": [
+      "O risco de miocardite é semelhante entre a vacina e a infecção natural pelo SARS-CoV-2 nessa faixa etária, então vacinar ou não vacinar não muda o risco cardíaco",
+      "Em homens de 12-17 anos, a incidência de miocardite após infecção por SARS-CoV-2 foi de 1,8 a 5,6 vezes maior do que após a segunda dose da vacina — o risco cardíaco da própria doença supera o da vacina, mesmo no grupo de maior risco vacinal",
+      "O risco de miocardite após a vacina é maior do que após a infecção nessa faixa etária, o que justifica evitar a segunda dose em adolescentes do sexo masculino",
+      "A miopericardite pós-vacinal nessa faixa etária tem, em geral, evolução grave, com disfunção ventricular persistente e prognóstico reservado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A coorte PCORnet (40 sistemas de saúde americanos, janeiro de 2021 a janeiro de 2022) mediu miocardite tanto após a vacina quanto após a infecção pelo SARS-CoV-2, nas mesmas faixas etárias e por sexo. Em homens de 12-17 anos — o grupo de maior risco absoluto pós-vacinal (22,0-35,9 casos por 100.000 após a 2ª dose) —, a incidência após INFECÇÃO foi de 50,1-64,9 por 100.000: os próprios autores relatam que o risco de desfecho cardíaco foi de 1,8 a 5,6 vezes maior após infecção do que após a segunda dose da vacina nesse grupo, e ainda mais desproporcional (razão de risco de 2,2 a 115,2) nos demais grupos por idade e sexo (Block JP et al., MMWR 2022;71(14):517-523). Ou seja: mesmo no subgrupo de maior risco vacinal, a doença que a vacina previne apresenta risco cardíaco maior do que a própria vacina — o que responde diretamente à opção 0 (não são riscos semelhantes) e à opção 2 (a relação é o inverso do afirmado). Quanto ao curso clínico, a maioria dos casos em pessoas com menos de 21 anos tem manifestação leve e remissão rápida dos sintomas, com disfunção sistólica leve a moderada quando presente — não o quadro grave e persistente descrito na opção 3.",
+    "source_refs": [
+      "Block JP, Boehmer TK, Forrest CB, et al. Cardiac Complications After SARS-CoV-2 Infection and mRNA COVID-19 Vaccination — PCORnet, United States, January 2021-January 2022. MMWR Morb Mortal Wkly Rep. 2022;71(14):517-523. DOI: 10.15585/mmwr.mm7114e1 — números conferidos contra o texto do artigo em 30/07/2026.",
+      "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "partner-2a-10-anos-risco-intermediario-tavi-vs-cirurgia",
+    "titulo": "Estenose aórtica de risco intermediário: o que os 10 anos do PARTNER 2A ensinam sobre via de acesso",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 74 anos, estenose aórtica grave sintomática, STS score 5,5% (risco cirúrgico intermediário). Discute-se em Heart Team a escolha entre TAVI e cirurgia (SAVR). O paciente pergunta sobre a durabilidade e a sobrevida de longo prazo de cada opção, citando ter lido sobre um estudo com 10 anos de seguimento. A equipe avalia o acesso vascular do paciente: ilíacas e femorais de bom calibre, sem tortuosidade relevante, permitindo abordagem transfemoral (TF) caso a TAVI seja escolhida.",
+    "pergunta": "Com base no seguimento de 10 anos do PARTNER 2A (risco intermediário), qual afirmação está correta?",
+    "opcoes": [
+      "Em 10 anos, a mortalidade por qualquer causa foi maior no grupo TAVI (86,1% vs. 82,8%; HR 1,13; p=0,02), mas essa diferença não foi significativa no subgrupo transfemoral (83,9% vs. 82,1%; p=0,27) — concentrando-se na via transapical/transaórtica",
+      "Em 10 anos, a mortalidade foi idêntica entre TAVI e cirurgia em todos os subgrupos de acesso, e a reintervenção da valva foi mais frequente no grupo cirúrgico",
+      "O PARTNER 2A usou a prótese SAPIEN 3 (geração atual), o que torna o resultado diretamente extrapolável para a prática de TAVI transfemoral contemporânea em baixo risco",
+      "A reintervenção da valva aórtica em 10 anos foi semelhante entre os grupos (em torno de 2% em ambos), não sustentando maior preocupação com durabilidade no braço TAVI"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PARTNER 2A (Thourani VH et al., J Am Coll Cardiol. 2026;87(23):3309-3321, PMID 42300821), primeiro ensaio randomizado de TAVI a completar 10 anos de seguimento, randomizou 1.910 pacientes de risco intermediário (STS médio 5,8%) para TAVI com a prótese SAPIEN XT (976 TAVI, 76,9% por via transfemoral) ou cirurgia. Em 10 anos, a mortalidade por qualquer causa foi 86,1% no grupo TAVI vs. 82,8% no grupo cirúrgico (HR 1,13; IC95% 1,02-1,25; p=0,02) — porém, ao estratificar por via de acesso, essa diferença NÃO foi significativa no subgrupo transfemoral (83,9% vs. 82,1%; p=0,27), concentrando-se no subgrupo transapical/transaórtico (93,2% vs. 85,1%; p<0,01; p de interação=0,03), que é justamente o cenário deste paciente com acesso femoral favorável — a opção A está correta. A opção B inverte o achado: a mortalidade NÃO foi idêntica entre os grupos no agregado (houve diferença significativa global), e a reintervenção foi mais frequente no braço TAVI (6,3%), não no cirúrgico (1,6%) — o texto-fonte é explícito nesse número (p<0,001). A opção C erra o dado técnico central do estudo: a prótese testada foi a SAPIEN XT, uma geração ANTERIOR à SAPIEN 3 usada nos ensaios atuais de baixo risco (PARTNER 3, Evolut Low Risk) — o próprio documento-fonte alerta explicitamente contra extrapolar este resultado para a prática de TAVI transfemoral com prótese de geração atual, exatamente o erro que essa opção comete. A opção D distorce o número de reintervenção: não foi 'em torno de 2% em ambos' — foi 6,3% (TAVI) vs. 1,6% (cirurgia), uma diferença de quase 4 vezes, não uma equivalência.",
+    "source_refs": [
+      "Thourani VH, von Stein P, Mack MJ, et al; PARTNER 2 Investigators. 10-Year Randomized Outcomes of Transcatheter or Surgical Aortic Valve Replacement in Intermediate-Risk Aortic Stenosis. J Am Coll Cardiol. 2026;87(23):3309-3321. DOI: 10.1016/j.jacc.2026.03.169. PMID: 42300821. NCT01314313 — abstract completo conferido no PubMed em 08/08/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trombose-de-protese-mecanica-obstrutiva-fibrinolise-ou-cirurgia",
+    "titulo": "Trombose de prótese valvar mecânica mitral: fibrinólise ou cirurgia?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 52 anos, prótese mecânica mitral implantada há 6 anos, chega ao pronto-socorro com dispneia progressiva há 3 dias, sem instabilidade hemodinâmica franca. Refere ter interrompido a varfarina por conta própria há cerca de 3 semanas, sem substituição por outro anticoagulante. Ecocardiograma transtorácico e transesofágico confirmam trombose obstrutiva da prótese mitral, com gradiente elevado. A equipe de cirurgia cardíaca está disponível e pode operar prontamente. A paciente não está criticamente enferma no momento da avaliação.",
+    "pergunta": "Diante de trombose obstrutiva de prótese mecânica, com anticoagulação recente claramente inadequada (suspensão da varfarina) e paciente não criticamente enferma, qual é a conduta inicial recomendada pela diretriz ESC/EACTS 2021?",
+    "opcoes": [
+      "Como a causa provável é a anticoagulação subterapêutica recente e a paciente não está criticamente enferma, iniciar heparina não fracionada intravenosa (associada ou não a AAS) e reavaliar sucesso ou falha, antes de indicar fibrinólise ou cirurgia de imediato",
+      "Cirurgia de emergência é a única conduta aceitável, já que se trata de prótese mecânica trombosada, independentemente de instabilidade hemodinâmica ou causa identificável",
+      "Fibrinólise é sempre a primeira escolha em prótese mecânica trombosada, por ser menos invasiva que a cirurgia, com eficácia equivalente e sem diferença relevante em complicações",
+      "Como a cirurgia está prontamente disponível, ela deve ser indicada imediatamente, sem investigar a causa da trombose, pois a diretriz não distingue esse cenário de causa identificável"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A diretriz ESC/EACTS 2021 (Vahanian A et al., Eur Heart J. 2022;43(7):561-632, seção 11.4.4 e Figura 10) separa a árvore de decisão da trombose obstrutiva em ramos distintos conforme o estado clínico e a causa provável. Para o paciente NÃO criticamente enfermo em que a anticoagulação recente foi claramente inadequada (como esta paciente, que suspendeu a varfarina por conta própria há 3 semanas), a conduta recomendada é heparina não fracionada intravenosa ± AAS, com reavaliação de sucesso ou falha — só se essa otimização falhar é que se decide entre fibrinólise e cirurgia. A opção A está correta e reflete exatamente esse ramo específico da árvore. A opção B erra porque a diretriz reserva a cirurgia de emergência para o paciente CRITICAMENTE ENFERMO (instabilidade hemodinâmica) — que não é o caso desta paciente; fora dessa situação, a decisão é individualizada, não automática. A opção C inverte o que os dados de Roudaut et al. (Arch Cardiovasc Dis 2009, PMID 19427604, citados pela própria diretriz) mostram: em 263 episódios de obstrução protética, a mortalidade precoce foi igual entre cirurgia e fibrinólise (10% em ambas), mas o sucesso hemodinâmico foi maior com cirurgia (89% vs. 70,9%) e as complicações embólicas foram muito menores (0,7% vs. 15%) — a fibrinólise NÃO tem eficácia equivalente nem é a primeira escolha padrão na posição esquerda quando a cirurgia está disponível; ela é reservada para quando a cirurgia é indisponível ou de risco muito alto. A opção D também está errada porque a diretriz distingue explicitamente o cenário de anticoagulação subterapêutica recente identificável, que pode responder à simples otimização com heparina intravenosa, sem exigir intervenção imediata — ignorar essa investigação é listado como armadilha clínica no próprio documento-fonte.",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — seção 11.4.4 (Thrombosis) e Figura 10, texto integral obtido e conferido em 11/08/2026.",
+      "Roudaut R, Lafitte S, Roudaut MF, et al. Management of prosthetic heart valve obstruction: fibrinolysis versus surgery. Arch Cardiovasc Dis. 2009;102(4):269-77. DOI: 10.1016/j.acvd.2009.01.007. PMID: 19427604 — abstract conferido via PubMed E-utilities em 11/08/2026, fonte-base citada pela própria diretriz ESC/EACTS 2021 para a recomendação de fibrinólise versus cirurgia."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-sintomatica-beneficio-da-digoxina-dig-rhd",
+    "titulo": "Cardiopatia reumática sintomática: a digoxina reduz morte ou piora de insuficiência cardíaca?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 44 anos, cardiopatia reumática com dupla lesão mitral (estenose moderada a grave associada a regurgitação), fibrilação atrial crônica e classe funcional NYHA II-III, em acompanhamento em serviço de referência. Já em uso de anticoagulante oral e diurético em dose otimizada, permanece sintomática. O cardiologista assistente pergunta se há evidência randomizada, contemporânea e específica de cardiopatia reumática (não extrapolada de outras causas de insuficiência cardíaca) para justificar a adição de digoxina ao esquema.",
+    "pergunta": "De acordo com o ensaio Dig-RHD (JAMA, 2026), qual das afirmações abaixo descreve corretamente o resultado do estudo?",
+    "opcoes": [
+      "A digoxina reduziu o desfecho composto de morte por qualquer causa ou nova/piora de insuficiência cardíaca (HR 0,82; IC95% 0,70-0,97; p=0,02), impulsionado principalmente pela redução de nova/piora de IC, sem redução demonstrada de mortalidade isolada",
+      "A digoxina reduziu significativamente a mortalidade por qualquer causa isoladamente (HR 0,82; IC95% 0,70-0,97; p=0,02), o que justifica sua indicação prioritária mesmo sem impacto sobre desfechos de insuficiência cardíaca",
+      "O ensaio não encontrou benefício da digoxina em nenhum desfecho avaliado, e a suspensão por toxicidade foi proibitivamente alta, inviabilizando o uso do fármaco nessa população",
+      "O benefício da digoxina só foi demonstrado — com significância estatística confirmada por análise de interação pré-especificada — no subgrupo de pacientes em fibrilação atrial, não se aplicando a pacientes em ritmo sinusal"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Dig-RHD (Karthikeyan G et al., JAMA. 2026;335(23):2020-2028, PMID 42106990) randomizou 1.769 pacientes com cardiopatia reumática sintomática (1:1, digoxina vs. placebo) em 12 hospitais terciários da Índia. Após seguimento mediano de 2,1 anos, o desfecho composto (morte por qualquer causa ou nova/piora de IC) ocorreu em 31,4% do grupo digoxina vs. 35,5% do placebo (HR 0,82; IC95% 0,70-0,97; p=0,02) — redução relativa de cerca de 18%, impulsionada principalmente pela redução de nova/piora de insuficiência cardíaca (25,8% vs. 29,2%; HR 0,82; IC95% 0,69-0,98). A mortalidade por qualquer causa, isoladamente, NÃO foi reduzida de forma significativa (10,0% vs. 10,4%; HR 0,94; IC95% 0,70-1,26) — a opção A reflete corretamente essa distinção, central ao resultado do estudo. A opção B inverte exatamente esse ponto: atribui à mortalidade isolada o HR (0,82) que na verdade pertence ao desfecho COMPOSTO. A opção C contraria os números diretamente: houve benefício estatisticamente significativo no desfecho composto e a suspensão por toxicidade foi de apenas 1,1% no grupo digoxina — uma frequência absoluta baixa, não proibitiva. A opção D erra de duas formas: o próprio documento-fonte adverte explicitamente que, apesar de 70% dos participantes terem fibrilação atrial e haver sinal de benefício potencialmente maior nesse subgrupo, o ensaio 'não foi dimensionado para provar interação definitiva por ritmo basal' — ou seja, não há confirmação estatística de interação.",
+    "source_refs": [
+      "Karthikeyan G, Devasenapathy N, Ghosh A, et al.; Dig-RHD Investigators. Digoxin in Patients With Symptomatic Rheumatic Heart Disease: A Randomized Clinical Trial. JAMA. 2026;335(23):2020-2028. DOI: 10.1001/jama.2026.7335. PMID: 42106990. CTRI/2021/04/032858."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "isquemia-aguda-de-membro-perda-sensitiva-alem-dos-artelhos-rutherford-iib",
+    "titulo": "Perna fria e dolorosa há 4 horas, com perda sensitiva além dos artelhos: qual categoria de Rutherford e qual a urgência?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, fibrilação atrial sem anticoagulação regular, chega ao pronto-socorro com dor súbita e intensa na perna esquerda iniciada há cerca de 4 horas. Ao exame, o pé está frio e pálido, com perda de sensibilidade que se estende do tornozelo até o antepé (além dos artelhos) e fraqueza leve à dorsiflexão do hálux, sem paralisia completa. O Doppler não detecta sinal arterial no trajeto tibial, mas o sinal venoso continua audível. A equipe de emergência discute se há tempo para investigação de imagem antes de acionar a equipe vascular.",
+    "pergunta": "Pela classificação de Rutherford para isquemia aguda de membro, em que categoria este quadro se enquadra e qual a conduta que essa categoria determina?",
+    "opcoes": [
+      "Categoria I (viável) — há tempo para investigação de imagem não invasiva antes de decidir a via de revascularização",
+      "Categoria IIa (marginalmente ameaçado) — revascularização pronta, mas não necessariamente na primeira hora, com tempo para avaliar comorbidades",
+      "Categoria IIb (imediatamente ameaçado) — revascularização imediata, sem tempo para investigação extensa",
+      "Categoria III (irreversível) — amputação primária, pois a revascularização arrisca síndrome de reperfusão fatal"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Pela classificação de Rutherford para isquemia aguda de membro (Olinic DM et al., J Clin Med 2019;8(8):1215, PMID 31416204), a categoria IIb — imediatamente ameaçado — é definida por perda sensitiva que vai ALÉM dos artelhos, associada a fraqueza muscular leve a moderada, com Doppler arterial tipicamente inaudível e Doppler venoso ainda audível; o prognóstico é 'salvável apenas com revascularização imediata', e a conduta é revascularização imediata, sem tempo para investigação extensa — é exatamente o quadro descrito. A opção I está errada porque a categoria I (viável) não tem perda sensitiva nem fraqueza muscular, e o Doppler arterial é audível. A opção IIa está errada porque essa categoria exige perda sensitiva MÍNIMA, restrita aos artelhos, e SEM fraqueza muscular — o enunciado descreve perda sensitiva que ultrapassa os artelhos e fraqueza presente, o que já caracteriza IIb, não IIa. A opção III está errada porque a categoria III (irreversível) exige anestesia PROFUNDA, paralisia com RIGIDEZ muscular e ausência de sinal Doppler tanto arterial QUANTO VENOSO — no caso descrito o Doppler venoso continua audível e a fraqueza é apenas leve, sem rigidez, incompatível com dano tecidual já consumado.",
+    "source_refs": [
+      "Olinic DM, Stanek A, Tătaru DA, Homorodean C, Olinic M. Acute Limb Ischemia: An Update on Diagnosis and Management. Journal of Clinical Medicine. 2019;8(8):1215. DOI: 10.3390/jcm8081215. PMID: 31416204"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "isquemia-cronica-ameacadora-de-membro-infrapopliteo-bypass-ou-endovascular-primeiro-basil-2",
+    "titulo": "CLTI com necessidade de revascularização infrapoplítea: bypass venoso ou estratégia endovascular como primeira escolha?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 74 anos, diabético, com isquemia crônica que ameaça o membro (dor isquêmica em repouso e pequena úlcera no calcanhar), tem doença arterial restrita ao território infrapoplíteo, exigindo revascularização abaixo do joelho (com ou sem um procedimento infrainguinal mais proximal adicional). A equipe vascular discute se deve oferecer bypass venoso como primeira estratégia ou tentar primeiro a melhor opção endovascular disponível, reservando a cirurgia para falha do procedimento percutâneo.",
+    "pergunta": "De acordo com o ensaio BASIL-2 (revascularização infrapoplítea na CLTI), qual estratégia inicial produziu melhor sobrevida livre de amputação, e o que impulsionou essa diferença?",
+    "opcoes": [
+      "Bypass venoso foi superior ao endovascular na sobrevida livre de amputação, repetindo o achado do BEST-CLI para esta mesma população",
+      "As duas estratégias foram equivalentes, sem diferença estatística em amputação maior ou morte, semelhante ao BASIL original de 2005",
+      "Estratégia endovascular-first foi superior na sobrevida livre de amputação (63% vs. 53% de amputação maior ou morte; HR ajustado 1,35; IC95% 1,02-1,80; P=0,037), impulsionada predominantemente por maior mortalidade no grupo bypass",
+      "Estratégia endovascular-first foi superior porque reduziu de forma isoladamente significativa a taxa de amputação maior, sem diferença de mortalidade entre os grupos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O BASIL-2 (Bradbury AW et al., Lancet 2023;401(10390):1798-1809, PMID 37116524) randomizou 345 pacientes com CLTI que necessitavam revascularização infrapoplítea para bypass venoso primeiro (n=172) ou melhor tratamento endovascular primeiro (n=173). O desfecho primário — amputação maior acima do tornozelo ou morte por qualquer causa — ocorreu em 63% do grupo bypass contra 53% do grupo endovascular (HR ajustado 1,35; IC95% 1,02-1,80; P=0,037), favorecendo a estratégia endovascular-first. O documento-fonte é explícito que essa diferença foi impulsionada PREDOMINANTEMENTE por maior mortalidade no grupo bypass (53% vs. 45%; HR ajustado 1,37; IC95% 1,00-1,87), não por uma diferença isoladamente dominante em amputações — o que torna a opção D (que atribui a diferença só à amputação, sem diferença de mortalidade) uma leitura invertida do resultado real. A opção A está errada porque inverte o resultado: no BEST-CLI, que estudou pacientes com boa veia safena e anatomia apropriada, o bypass teve menos eventos; o BASIL-2 selecionou pacientes com necessidade de revascularização ABAIXO do joelho e encontrou o oposto — os dois ensaios estudaram populações e territórios distintos. A opção B confunde o BASIL-2 com o BASIL original de 2005 (sem diferença significativa aos 6 meses) — o BASIL-2 encontrou diferença estatisticamente significativa (P=0,037), não equivalência.",
+    "source_refs": [
+      "Bradbury AW, Moakes CA, Popplewell M, et al. A vein bypass first versus a best endovascular treatment first revascularisation strategy for patients with chronic limb threatening ischaemia who required an infra-popliteal revascularisation procedure (BASIL-2): an open-label, randomised, multicentre, phase 3 trial. Lancet. 2023;401(10390):1798-1809. DOI: 10.1016/S0140-6736(23)00462-2. PMID: 37116524. ISRCTN27728689."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-de-arteria-poplitea-assintomatico-de-2-4-cm-o-que-a-evidencia-comparativa-sustenta",
+    "titulo": "Aneurisma de artéria poplítea assintomático de 2,4 cm: o que a evidência comparativa realmente sustenta sobre reparo aberto versus endovascular?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Homem, 66 anos, assintomático, tem um aneurisma de artéria poplítea de 2,4 cm identificado em ultrassom de rotina, sem trombo mural extenso nem sinais de embolização distal. Diante da indicação de reparo eletivo, ele pergunta ao cardiologista se a cirurgia aberta ou o tratamento endovascular tem resultado comprovadamente melhor a longo prazo, tendo lido on-line que um dos dois métodos seria \"claramente superior\".",
+    "pergunta": "Segundo a revisão sistemática Cochrane (Joshi et al., 2019), que reanalisa o único ensaio clínico randomizado disponível comparando reparo aberto e endovascular do aneurisma de artéria poplítea assintomático (Antonello et al., 2005), qual afirmação é sustentada pelo texto?",
+    "opcoes": [
+      "A patência primária em 1 ano foi numericamente maior no reparo aberto (100%) que no endovascular (93,3%), mas a diferença não foi estatisticamente significativa (RR 0,94; IC95% 0,78-1,12), com certeza da evidência classificada como moderada",
+      "O reparo endovascular demonstrou superioridade estatisticamente significativa na patência primária em 4 anos, justificando sua preferência como estratégia inicial",
+      "A revisão Cochrane incorporou vários ensaios randomizados publicados desde 2014, todos favorecendo consistentemente o reparo endovascular",
+      "O tempo de internação hospitalar foi menor no reparo aberto, refletindo menor morbidade perioperatória dessa estratégia em comparação ao endovascular"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A revisão Cochrane (Joshi D et al., Cochrane Database Syst Rev. 2019;12(12):CD010149, PMID 31868929), que reanalisa o único ensaio disponível (Antonello M et al., J Vasc Surg 2005;42(2):185-93, PMID 16102611 — 30 aneurismas em 30 pacientes, randomizados 1:1), reporta patência primária em 1 ano de 93,3% no braço endovascular contra 100% no braço de cirurgia aberta, com RR 0,94 (IC95% 0,78-1,12) e certeza da evidência classificada como MODERADA pelo GRADE — um intervalo de confiança que cruza 1 significa que, apesar da diferença numérica aparente, NÃO há diferença estatisticamente significativa. A opção B está errada porque, em 4 anos, a própria revisão descreve 'sem evidência clara de diferença' entre os grupos (RR 1,00; IC95% 0,76-1,32). A opção C está errada porque o documento-fonte é explícito que a revisão Cochrane 'não encontrou nenhum estudo novo desde a versão anterior da revisão (2014)' — a evidência direta comparativa continua limitada a um único ensaio pequeno, unicêntrico. A opção D inverte o achado: o tempo de internação foi MENOR no braço endovascular (4,3 dias) que no aberto (7,7 dias) — a vantagem processual é do endovascular, não do reparo aberto.",
+    "source_refs": [
+      "Joshi D, Gupta Y, Ganai B, Mortensen C. Endovascular versus open repair of asymptomatic popliteal artery aneurysm. Cochrane Database Syst Rev. 2019;12(12):CD010149. PMID 31868929. DOI 10.1002/14651858.CD010149.pub3",
+      "Antonello M, Frigatti P, Battocchio P, et al. Open repair versus endovascular treatment for asymptomatic popliteal artery aneurysm: results of a prospective randomized study. J Vasc Surg. 2005;42(2):185-93. PMID 16102611. DOI 10.1016/j.jvs.2005.04.049"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rosuvastatina-perioperatoria-em-cirurgia-cardiaca-previne-fibrilacao-atrial-pos-operatoria-stics",
+    "titulo": "Estatina em dose alta antes da cirurgia cardíaca previne fibrilação atrial pós-operatória?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, dislipidêmico mas sem uso prévio de estatina, em ritmo sinusal, está programado para revascularização miocárdica cirúrgica eletiva em 5 dias. Durante a discussão pré-operatória, um dos residentes sugere iniciar rosuvastatina 20 mg/dia já nesta consulta, especificamente para reduzir o risco de fibrilação atrial pós-operatória (FA-PO) e de lesão miocárdica perioperatória, citando metanálises de estudos pequenos que sugeriram esse benefício pelo efeito anti-inflamatório e estabilizador de placa da classe. O paciente não tem outra indicação prévia de estatina (LDL e risco cardiovascular calculado não sustentam início por prevenção primária neste momento).",
+    "pergunta": "Com base no ensaio STICS (Statin Therapy In Cardiac Surgery), qual é a conduta correta?",
+    "opcoes": [
+      "Iniciar rosuvastatina 20 mg/dia agora, pois o STICS confirmou que a terapia perioperatória com estatina reduz significativamente FA-PO e lesão miocárdica, validando as metanálises anteriores",
+      "Não iniciar rosuvastatina com esse objetivo específico: o STICS (n=1.922, pacientes em ritmo sinusal, cirurgia cardíaca eletiva) não mostrou diferença significativa em FA-PO (21,1% vs. 20,5%; OR 1,04; IC95% 0,84-1,30; p=0,72) nem em lesão miocárdica por troponina (AUC 102 vs. 100 ng×hora/mL; p=0,80) entre rosuvastatina e placebo, e ainda houve excesso absoluto de 5,4 pontos percentuais de lesão renal aguda pós-operatória com a droga (p=0,005) — sem indicação prévia de estatina, não há razão baseada no STICS para iniciá-la agora com essa finalidade",
+      "Iniciar rosuvastatina apenas se o paciente tiver LDL ou proteína C-reativa elevados no pré-operatório, já que o STICS mostrou benefício maior nesses subgrupos",
+      "Suspender qualquer estatina que o paciente eventualmente já estivesse usando cronicamente, dado o sinal de lesão renal aguda demonstrado no STICS"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O STICS foi um ensaio randomizado, duplo-cego, controlado por placebo, com 1.922 pacientes em ritmo sinusal programados para cirurgia cardíaca eletiva, randomizados para rosuvastatina 20 mg/dia ou placebo, com dois desfechos primários coprimários: FA-PO em até 5 dias (por Holter contínuo) e lesão miocárdica em até 120 horas (por troponina I seriada). O resultado foi negativo para os dois desfechos primários — FA-PO 21,1% (rosuvastatina) vs. 20,5% (placebo), OR 1,04, IC95% 0,84-1,30, p=0,72; lesão miocárdica (AUC de troponina I) 102 vs. 100 ng×hora/mL, diferença de 1% (IC95% -9 a 13), p=0,80 — e nenhuma análise de subgrupo indicou benefício em qualquer categoria de paciente, o que já invalida a opção C. Houve, além disso, um sinal real de dano: excesso absoluto de 5,4 ± 1,9 pontos percentuais na taxa de lesão renal aguda pós-operatória com rosuvastatina (p=0,005), o único achado estatisticamente significativo do ensaio, e desfavorável ao fármaco. A opção A inverte o resultado do ensaio, tratando-o como confirmação da hipótese das metanálises anteriores quando na verdade o STICS a contraria de forma rigorosa e em escala grande. A opção D também está errada: o ensaio testou início/intensificação perioperatória de estatina com finalidade específica de prevenção de FA-PO/lesão miocárdica — não testou suspensão de estatina crônica já indicada por outro motivo, e o documento-fonte é explícito em dizer que esse resultado não respalda suspender estatina já indicada por outra razão.",
+    "source_refs": [
+      "Zheng Z, Jayaram R, Jiang L, Emberson J, Zhao Y, Li Q, Du J, Guarguagli S, Hill M, Chen Z, Collins R, Casadei B; STICS Investigators. Perioperative Rosuvastatin in Cardiac Surgery. N Engl J Med. 2016;374(18):1744-1753. DOI: 10.1056/NEJMoa1507750. PMID: 27144849 — registro (título, autoria, revista, volume, páginas, números) conferido no PubMed em 07/08/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "portador-de-marcapasso-nao-condicional-pode-fazer-ressonancia-magnetica-magnasafe",
+    "titulo": "Portador de marca-passo não condicional precisa de ressonância magnética: pode fazer o exame?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 74 anos, portadora de marca-passo bicameral convencional (não condicional para ressonância magnética) implantado há 8 anos por doença do nó sinusal, é encaminhada para ressonância magnética de coluna lombar em campo de 1,5 tesla, por lombalgia intensa com radiculopatia refratária ao tratamento conservador. O radiologista recusa o exame de saída, alegando contraindicação absoluta pela presença do dispositivo. A cardiologia é chamada para opinar sobre a segurança do procedimento.",
+    "pergunta": "Com base no registro MagnaSafe, qual afirmação está correta sobre a realização deste exame?",
+    "opcoes": [
+      "A ressonância magnética permanece absolutamente contraindicada em qualquer portador de dispositivo cardíaco eletrônico não condicional para RM, independentemente da região examinada ou de protocolo de reprogramação — o exame deve ser recusado",
+      "A ressonância não torácica em campo de 1,5 tesla pode ser realizada com segurança sob protocolo padronizado de interrogação e reprogramação do dispositivo antes e depois do exame: no MagnaSafe (1.000 exames em portador de marca-passo e 500 em portador de CDI, todos não condicionais), não houve nenhuma morte, falha de eletrodo, perda de captura ou arritmia ventricular durante o exame, e o único evento de falha de gerador foi atribuído a reprogramação não realizada corretamente antes do exame, não ao exame em si",
+      "O MagnaSafe incluiu exames torácicos e não torácicos com taxas de evento equivalentes entre as duas regiões, então a localização do exame não é relevante para a decisão de segurança",
+      "O registro mostrou uma taxa relevante de eventos graves — arritmia ventricular e falha de eletrodo — em cerca de 5% dos exames, o que ainda restringe a indicação a centros terciários com suporte de emergência imediato"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MagnaSafe foi um registro prospectivo, multicêntrico, em pacientes com marca-passo ou CDI não condicional para RM, encaminhados para RM não torácica clinicamente indicada em campo de 1,5 tesla, com o dispositivo interrogado e reprogramado adequadamente antes e depois do exame conforme protocolo padronizado. Em 1.000 exames de RM em portador de marca-passo e 500 em portador de CDI, os desfechos primários (morte, falha de gerador ou eletrodo, arritmia induzida, perda de captura, reset elétrico) não ocorreram em nenhum caso, exceto por um único gerador de CDI que não pôde ser interrogado após o exame e exigiu troca imediata — e esse caso foi atribuído a falha de processo (o dispositivo não havia sido programado corretamente conforme o protocolo antes do exame), não ao exame de RM em si. Eventos secundários, todos autolimitados, ocorreram em pequeno número: 6 casos de fibrilação/flutter atrial autolimitados e 6 casos de reset elétrico parcial entre os 1.500 exames — isso já invalida a opção D, que exagera a taxa de eventos graves quando na verdade não houve nenhum evento grave da natureza descrita. A opção A trata a evidência como se ela não existisse, ignorando que o próprio corpo de evidência do MagnaSafe é a base empírica do consenso multissocietário de 2017 (HRS, com outras 10 sociedades incluindo ACC, AHA e EHRA) que mudou a prática de contraindicação absoluta para decisão de risco-benefício protocolada. A opção C inverte um dado central do desenho do estudo: exames torácicos foram excluídos do protocolo do MagnaSafe por risco percebido maior, não incluídos com resultado equivalente — o registro não oferece dado de segurança para RM torácica em dispositivo não condicional.",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684 — autoria e números conferidos contra o registro indexado (Europe PMC) em 30/07/2026.",
+      "2017 HRS Expert Consensus Statement on Magnetic Resonance Imaging and Radiation Exposure in Patients with Cardiovascular Implantable Electronic Devices. Heart Rhythm. 2017 — citado pela literatura secundária como o consenso multissocietário (11 sociedades, incluindo ACC, AHA, EHRA) que orienta a prática atual; texto integral não obtido nesta sessão."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "magnesio-perioperatorio-profilatico-previne-fibrilacao-atrial-pos-cirurgia-cardiaca-pompae",
+    "titulo": "Infusão profilática de magnésio previne fibrilação atrial após cirurgia cardíaca?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Paciente adulto sem arritmia atrial prévia nem disfunção renal grave está programado para revascularização miocárdica cirúrgica. A equipe de UTI cardiológica propõe iniciar, logo após a indução anestésica, infusão intravenosa de sulfato de magnésio titulada para manter o magnésio sérico entre 1,5 e 2,0 mmol/L, mantida até a alta da UTI, com o objetivo específico de prevenir fibrilação atrial pós-operatória (FA-PO) — prática ainda adotada em alguns serviços por plausibilidade fisiológica.",
+    "pergunta": "Com base no ensaio POMPAE, qual afirmação melhor resume a evidência sobre essa estratégia?",
+    "opcoes": [
+      "A infusão profilática de magnésio deve ser adotada rotineiramente, pois o POMPAE demonstrou redução significativa da incidência de FA pós-operatória em comparação a placebo",
+      "O POMPAE (n=265, interrompido precocemente por futilidade) não mostrou redução de FA-PO com magnésio guiado a alvo sérico de 1,5-2,0 mmol/L em comparação a Ringer lactato (FA em 7 dias: 37,9% vs. 28,6%; RR 1,29; IC95% 0,92-1,83; p=0,15), apesar de separação farmacológica clara entre os grupos — a suplementação profilática rotineira de magnésio para esse fim não é apoiada por este ensaio, o que não significa que magnésio deva ser negado a um paciente com hipomagnesemia verdadeira documentada",
+      "O RR de 1,29 para FA no grupo magnésio, mesmo sem significância estatística, já é evidência suficiente de que o magnésio causa fibrilação atrial e deve ser ativamente evitado no perioperatório de cirurgia cardíaca",
+      "O estudo foi interrompido precocemente porque a dose de magnésio utilizada foi insuficiente para atingir a meta sérica pré-especificada, sugerindo que doses mais altas poderiam ser eficazes em um ensaio futuro"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O POMPAE foi um ensaio randomizado, duplo-cego, placebo-controlado, unicêntrico, em adultos submetidos a CRM e/ou cirurgia valvar sem arritmia atrial prévia ou disfunção renal grave, com sulfato de magnésio IV versus Ringer lactato. O desfecho primário era nova FA-PO com duração ≥5 minutos documentada por ECG em até 7 dias ou antes da alta/óbito. O estudo foi interrompido na análise interina por futilidade após 265 pacientes randomizados. A FA-PO em 7 dias ocorreu em 37,9% do grupo magnésio vs. 28,6% do placebo (RR 1,29; IC95% 0,92-1,83; p=0,15), resultado negativo, com a estimativa pontual favorecendo numericamente o placebo. Isso não foi um caso de dose insuficiente: a intervenção produziu separação farmacológica clara entre os grupos, o alvo terapêutico foi atingido, e mesmo assim não houve benefício — o que invalida diretamente a opção D. A opção A inverte o resultado do ensaio, tratando um achado negativo como positivo. A opção C comete o erro de interpretação que o próprio documento-fonte alerta explicitamente para não cometer: um RR >1 sem significância estatística, cujo intervalo de confiança inclui a ausência de efeito (cruzando 1), não é evidência de que a exposição causa o desfecho. A opção correta também preserva a ressalva clínica presente no documento-fonte: o resultado nulo do POMPAE é específico para a estratégia de suplementação profilática rotineira visando FA-PO, e não equivale a dizer que magnésio nunca deve ser administrado no pós-operatório — corrigir hipomagnesemia verdadeira documentada é uma indicação clínica distinta, não testada por este desenho de estudo.",
+    "source_refs": [
+      "Meerman M, Buijser M, Serpa Neto A, et al. Magnesium Sulfate to Prevent Perioperative Atrial Fibrillation in Cardiac Surgery: A Randomized Clinical Trial. Crit Care Med. 2026;54(7):1635-1646. DOI: 10.1097/CCM.0000000000007162. PMID: 42206948. PMCID: PMC13322146. NCT05669417. Abstract e texto completo conferidos em 08/08/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-programacao-reduz-terapia-inapropriada-madit-rit",
+    "titulo": "Reprogramar o CDI recém-implantado: qual retardo de detecção reduz choque inapropriado e mortalidade?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, cardiomiopatia isquêmica com FEVE de 28%, classe funcional NYHA II sob terapia médica otimizada, recebe um cardiodesfibrilador implantável (CDI) em prevenção primária. No momento da programação do dispositivo, o eletrofisiologista precisa definir os parâmetros de detecção de arritmia — especificamente, a partir de qual frequência cardíaca e após quanto tempo de retardo o CDI deve disparar terapia (estimulação antitaquicardia ou choque). A equipe discute se a programação convencional, com disparo mais precoce, é a opção mais segura, ou se existe evidência randomizada favorecendo retardar a detecção.",
+    "pergunta": "Segundo o MADIT-RIT, comparada à programação convencional (retardo de 2,5 segundos entre 170-199bpm e 1,0 segundo a partir de 200bpm), qual configuração de programação reduziu tanto a terapia inapropriada quanto a mortalidade por qualquer causa?",
+    "opcoes": [
+      "Reduzir o limiar de detecção para 150bpm mantendo o retardo padrão, já que detectar a arritmia mais cedo previne o dano miocárdico cumulativo dos choques repetidos",
+      "A programação de \"terapia de alta frequência\" (retardo de 2,5 segundos, disparando terapia só a partir de FC ≥200bpm) reduziu o risco de terapia inapropriada em HR 0,21 (IC95% 0,13-0,34; p<0,001) e a mortalidade por qualquer causa em HR 0,45 (IC95% 0,24-0,85; p=0,01)",
+      "Apenas a programação de \"terapia retardada\" (retardo de 60 segundos entre 170-199bpm) reduziu significativamente a mortalidade por qualquer causa, já que a terapia de alta frequência não teve nenhum efeito sobre esse desfecho",
+      "Nenhuma das duas estratégias de reprogramação testadas alterou a mortalidade — o MADIT-RIT demonstrou benefício apenas sobre terapia inapropriada, sem qualquer efeito sobre desfechos duros"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MADIT-RIT (Moss AJ et al., N Engl J Med. 2012;367(24):2275-2283, PMID 23131066) randomizou 1.500 pacientes com CDI em prevenção primária para três programações: convencional, terapia de alta frequência (retardo de 2,5s, disparo só a partir de ≥200bpm) e terapia retardada (60s entre 170-199bpm, 12s entre 200-249bpm, 2,5s a partir de 250bpm). A opção correta (B) reproduz literalmente os dois desfechos coprimários do ensaio: terapia de alta frequência reduziu terapia inapropriada em HR 0,21 (IC95% 0,13-0,34; p<0,001) E mortalidade por qualquer causa em HR 0,45 (IC95% 0,24-0,85; p=0,01) — é a única das três configurações testadas que atingiu significância estatística nos dois desfechos ao mesmo tempo. A opção A inverte o achado central do ensaio: 'detectar e tratar mais rápido' não foi a estratégia vencedora — foi justamente tolerar frequências mais altas por mais tempo (dando chance de arritmias autolimitadas resolverem sozinhas) que reduziu tanto choque inapropriado quanto mortalidade; reduzir o limiar para 150bpm não foi sequer um dos braços testados. A opção C troca os papéis dos dois braços experimentais: é a terapia retardada que teve efeito não significativo sobre mortalidade (HR 0,56; IC95% 0,30-1,02; p=0,06 — só tendência), enquanto a terapia de alta frequência foi a que atingiu p=0,01. A opção D nega por completo o efeito sobre mortalidade, mas o próprio desenho do MADIT-RIT trata mortalidade por qualquer causa como desfecho pré-especificado, e a redução com a terapia de alta frequência (55% menos risco) foi grande o bastante para ser clinicamente relevante isoladamente.",
+    "source_refs": [
+      "Moss AJ, Schuger C, Beck CA, et al; MADIT-RIT Trial Investigators. Reduction in inappropriate therapy and mortality through ICD programming. N Engl J Med. 2012;367(24):2275-2283. DOI: 10.1056/NEJMoa1211107. PMID: 23131066"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "apneia-central-do-sono-estimulacao-do-nervo-frenico-remede",
+    "titulo": "Apneia central do sono refratária à CPAP: qual o resultado do ensaio pivotal do sistema remedē?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 66 anos, com insuficiência cardíaca e história de ronco intenso e pausas respiratórias noturnas relatadas pela esposa, é submetido a polissonografia: índice de apneia-hipopneia (IAH) de 47 eventos/hora, com predomínio de eventos centrais e padrão de Cheyne-Stokes. Uma tentativa de CPAP foi malsucedida por intolerância à máscara. A equipe considera o implante de um neuroestimulador transvenoso do nervo frênico (sistema remedē) como alternativa terapêutica.",
+    "pergunta": "No ensaio pivotal do sistema remedē (Costanzo et al., Lancet 2016), qual foi o desfecho primário definido e o resultado obtido aos 6 meses?",
+    "opcoes": [
+      "Redução do índice de apneia-hipopneia (IAH) ≥50% em relação à basal, atingida em 51% dos pacientes com estimulação ativa (35/68) versus 11% dos pacientes com o dispositivo implantado, porém não ativado (8/73) — diferença de 41 pontos percentuais (IC95% 25-54; p<0,0001)",
+      "Redução da mortalidade cardiovascular em 2 anos, com HR de 0,55 favorável ao grupo com estimulação ativa",
+      "O ensaio comparou estimulação transvenosa do nervo frênico contra servoventilação adaptativa (ASV) e não encontrou diferença significativa entre as duas terapias no IAH",
+      "Redução do IAH ≥50% mais frequente no grupo com estimulação ativa, mas sem significância estatística (p=0,08), motivo pelo qual o dispositivo segue apenas em investigação"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Costanzo MR et al., Lancet 2016;388(10048):974-982 (PMID 27598679) randomizaram 151 pacientes com apneia central do sono — todos implantados com o sistema remedē e então randomizados para estimulação ativa ou dispositivo implantado, mas não ativado. O desfecho primário, redução do IAH ≥50% aos 6 meses, ocorreu em 51% (35/68) do grupo ativo versus 11% (8/73) do grupo controle, diferença de 41 pontos percentuais (IC95% 25-54; p<0,0001) — exatamente o texto da opção A. A opção B fabrica um desfecho de mortalidade cardiovascular que o ensaio nunca teve: a própria síntese do documento-fonte é explícita em que o estudo não teve poder nem desenho para desfecho duro de mortalidade ou hospitalização cardiovascular, apenas para o desfecho respiratório (IAH) e segurança do implante. A opção C inventa um comparador que não existe no desenho: o grupo controle não recebeu ASV, recebeu o próprio dispositivo remedē implantado e não ativado — isso preserva o cegamento em relação à intervenção; ASV é a terapia avaliada nos ensaios SERVE-HF e ADVENT-HF, documentos distintos sobre um dispositivo de mecanismo diferente (pressão positiva não invasiva por máscara, não neuroestimulação implantável). A opção D nega a significância estatística do resultado, mas o próprio ensaio relata p<0,0001, muito abaixo do limiar convencional.",
+    "source_refs": [
+      "Costanzo MR, Ponikowski P, Javaheri S, et al. Transvenous neurostimulation for central sleep apnoea: a randomised controlled trial. Lancet. 2016;388(10048):974-982. DOI: 10.1016/S0140-6736(16)30961-8. PMID: 27598679"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anticoagulacao-perioperatoria-em-implante-de-marcapasso-bruise-control",
+    "titulo": "Marca-passo em paciente sob varfarina: suspender e fazer ponte, ou operar anticoagulado?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 74 anos, com fibrilação atrial e escore CHA₂DS₂-VASc de 4 (risco tromboembólico anual estimado acima de 5% ao ano), em uso crônico de varfarina, é encaminhada para implante de marca-passo definitivo por bloqueio atrioventricular sintomático de segundo grau Mobitz II. A equipe cirúrgica discute a estratégia de anticoagulação perioperatória: suspender a varfarina alguns dias antes e fazer ponte com heparina não fracionada até o procedimento, ou operar mantendo a varfarina sem interrupção.",
+    "pergunta": "Com base no ensaio BRUISE CONTROL, qual estratégia mostrou menor risco de hematoma de bolsa clinicamente significativo, sem aumento de eventos tromboembólicos maiores?",
+    "opcoes": [
+      "Suspender a varfarina e fazer ponte com heparina não fracionada no perioperatório, estratégia que reduz o risco de sangramento em relação a operar anticoagulado",
+      "Manter a varfarina sem interrupção durante a cirurgia — hematoma clinicamente significativo ocorreu em 3,5% (12/343) com varfarina continuada versus 16,0% (54/338) com ponte de heparina (risco relativo 0,19; IC95% 0,10-0,36; p<0,001), sem diferença relevante em complicações tromboembólicas maiores entre os grupos",
+      "Trocar a varfarina por um anticoagulante oral direto (DOAC) antes do implante, já que o BRUISE CONTROL demonstrou que os DOAC têm risco de hematoma significativamente menor que a varfarina continuada, em qualquer estratégia perioperatória",
+      "Suspender a varfarina sem nenhuma ponte, aceitando o risco tromboembólico transitório, já que o BRUISE CONTROL não testou nenhuma estratégia de ponte com heparina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O BRUISE CONTROL (Birnie DH et al., N Engl J Med. 2013;368(22):2084-2093, PMID 23659733) randomizou 681 pacientes de alto risco tromboembólico para varfarina continuada (n=343) versus suspensão com ponte de heparina (n=338), e foi interrompido precocemente porque o efeito já era grande o bastante: hematoma clinicamente significativo em 3,5% (12/343) com varfarina continuada versus 16,0% (54/338) com ponte de heparina, risco relativo 0,19 (IC95% 0,10-0,36; p<0,001), com complicações tromboembólicas maiores raras e sem diferença relevante entre os grupos. É exatamente o texto da opção B. A opção A descreve a prática que o próprio ensaio invalidou: é a ponte com heparina, não a varfarina continuada, que causou o excesso de hematoma. A opção C confunde dois estudos distintos da mesma série: a comparação DOAC continuado × varfarina continuada só apareceu na análise combinada de nível individual (Essebag V et al., Circ Arrhythm Electrophysiol. 2019;12(10):e007545, PMID 31610718), que encontrou odds ratio 0,858 (IC95% 0,375-1,963; p=0,717) — SEM diferença significativa entre DOAC e varfarina; o BRUISE CONTROL original nem testou DOAC, só varfarina versus ponte de heparina. A opção D descreve mal o desenho do próprio ensaio: a ponte com heparina é um dos dois braços do estudo, não uma estratégia não testada.",
+    "source_refs": [
+      "Birnie DH, Healey JS, Wells GA, Verma A, Tang AS, Krahn AD, Simpson CS, Ayala-Paredes F, Coutu B, Leiria TL, Essebag V; BRUISE CONTROL Investigators. Pacemaker or defibrillator surgery without interruption of anticoagulation. N Engl J Med. 2013;368(22):2084-2093. DOI: 10.1056/NEJMoa1302946. PMID: 23659733",
+      "Essebag V, Healey JS, Joza J, Nery PB, Kalfon E, Leiria TLL, Verma A, Ayala-Paredes F, Coutu B, Sumner GL, Becker G, Philippon F, Eikelboom J, Sandhu RK, Sapp J, Leather R, Yung D, Thibault B, Simpson CS, Ahmad K, Toal S, Sturmer M, Kavanagh K, Crystal E, Wells GA, Krahn AD, Birnie DH. Effect of Direct Oral Anticoagulants, Warfarin, and Antiplatelet Agents on Risk of Device Pocket Hematoma: Combined Analysis of BRUISE CONTROL 1 and 2. Circ Arrhythm Electrophysiol. 2019;12(10):e007545. DOI: 10.1161/CIRCEP.119.007545. PMID: 31610718"
+    ],
+    "review_status": "revisado"
   }
 ]
