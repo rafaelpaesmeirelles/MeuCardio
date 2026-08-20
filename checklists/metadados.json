@@ -5543,5 +5543,245 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "indicacao-de-cdi-em-prevencao-primaria-criterios-e-momento-certo",
+    "condicao": "Indicação de cardiodesfibrilador implantável (CDI) em prevenção primária — critérios e momento certo",
+    "resumo": "O que confirmar antes de indicar CDI de prevenção primária: etiologia, janela de espera pós-IAM/revascularização, causas reversíveis e evidência que sustenta a indicação na população específica do paciente.",
+    "documento_origem": "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death · European Heart Journal · 2022 · 43(40):3997-4126 · https://academic.oup.com/eurheartj/article/43/40/3997/6675633",
+      "Al-Khatib SM, Stevenson WG, Ackerman MJ, et al. 2017 AHA/ACC/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death. J Am Coll Cardiol. 2018;72(14):e91-e220. DOI: 10.1016/j.jacc.2017.10.054. PMID: 29097296",
+      "Moss AJ, Zareba W, Hall WJ, et al. Prophylactic implantation of a defibrillator in patients with myocardial infarction and reduced ejection fraction (MADIT-II). N Engl J Med. 2002;346(12):877-883. DOI: 10.1056/NEJMoa013474. PMID: 11907286",
+      "Bardy GH, Lee KL, Mark DB, et al; SCD-HeFT Investigators. Amiodarone or an implantable cardioverter-defibrillator for congestive heart failure (SCD-HeFT). N Engl J Med. 2005;352(3):225-237. DOI: 10.1056/NEJMoa043399. PMID: 15659722",
+      "Køber L, Thune JJ, Nielsen JC, et al; DANISH Investigators. Defibrillator implantation in patients with nonischemic systolic heart failure (DANISH). N Engl J Med. 2016;375(13):1221-1230. DOI: 10.1056/NEJMoa1608029. PMID: 27571011",
+      "Hohnloser SH, Kuck KH, Dorian P, et al; DINAMIT Investigators. Prophylactic use of an implantable cardioverter-defibrillator after acute myocardial infarction. N Engl J Med. 2004;351(24):2481-2488. DOI: 10.1056/NEJMoa041489. PMID: 15590950",
+      "Olgin JE, Pletcher MJ, Vittinghoff E, Wranicz J, Malik R, Morin DP, Zweibel S, Buxton AE, Elayi CS, Chung EH, Rashba E, Borggrefe M, Hue TF, Maguire C, Lin F, Simon JA, Hulley S, Lee BK; VEST Investigators. Wearable Cardioverter-Defibrillator after Myocardial Infarction. N Engl J Med. 2018;379(13):1205-1215. DOI: 10.1056/NEJMoa1800781. PMID: 30280654"
+    ],
+    "itens": [
+      {
+        "id": "cdiprim-etiologia-otimizacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Etiologia da cardiopatia definida (isquêmica vs. não isquêmica) e terapia farmacológica otimizada por tempo suficiente antes de indicar o CDI com base na FEVE",
+        "origem_secao": "Avaliação antes do implante"
+      },
+      {
+        "id": "cdiprim-feve-reavaliada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "FEVE reavaliada após terapia otimizada, fora de descompensação aguda, antes de confirmar a indicação",
+        "origem_secao": "Avaliação antes do implante"
+      },
+      {
+        "id": "cdiprim-causas-reversiveis",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Causas reversíveis pesquisadas e excluídas antes de indicar o CDI: isquemia aguda, distúrbio eletrolítico, toxicidade medicamentosa, hipóxia, acidose grave, pró-arritmia, síndrome coronariana aguda, miocardite aguda, sepse, choque metabólico ou outra causa transitória bem definida",
+        "origem_secao": "Avaliação antes do implante — Identificar causas reversíveis"
+      },
+      {
+        "id": "cdiprim-janela-40-dias-iam",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que se passaram pelo menos 40 dias desde o infarto agudo do miocárdio antes de indicar CDI de prevenção primária por FEVE reduzida — o ensaio DINAMIT (implante entre 6-40 dias pós-IAM) não mostrou redução de mortalidade total (HR 1,08; IC95% 0,76-1,55; p=0,66): a redução de morte arrítmica foi compensada por excesso de morte não arrítmica",
+        "origem_secao": "Evidencia pivotal de prevencao primaria — DINAMIT"
+      },
+      {
+        "id": "cdiprim-janela-90-dias-revasc",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que se passaram pelo menos 90 dias desde a revascularização (percutânea ou cirúrgica) antes de indicar CDI de prevenção primária — a diretriz AHA/ACC/HRS 2017 usa o corte de revascularização há menos de 90 dias para definir a janela em que o implante definitivo ainda não está indicado (a própria cirurgia pode tratar parte do substrato arrítmico)",
+        "origem_secao": "Evidencia pivotal de prevencao primaria — CABG-Patch; janela também descrita no documento do colete desfibrilador vestível (fonte AHA/ACC/HRS 2017)"
+      },
+      {
+        "id": "cdiprim-wcd-ponte-explicado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Durante a janela de espera de 40-90 dias em paciente de alto risco, considerado o colete desfibrilador vestível (WCD) como ponte, com a limitação explicada ao paciente: o ensaio VEST não demonstrou redução estatisticamente significativa de morte arrítmica por intenção de tratar (RR 0,67; IC95% 0,37-1,21; p=0,18), e a proteção depende do uso efetivo — adesão mediana de 18 horas/dia no próprio ensaio, não 24h",
+        "origem_secao": "Colete desfibrilador — o que o ensaio VEST mostrou"
+      },
+      {
+        "id": "cdiprim-rmc-nao-isquemica",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em cardiomiopatia dilatada ou cardiomiopatia não dilatada hipocinética, considerada ressonância magnética cardíaca e/ou teste genético antes de decidir — a diretriz ESC 2022 é explícita: a indicação de CDI em prevenção primária nesse grupo não deve ser restrita a uma FEVE ≤35% isolada",
+        "origem_secao": "Avaliação antes do implante — Ressonância cardíaca; ver também o fluxograma ESC 2022 desta pasta"
+      },
+      {
+        "id": "cdiprim-expectativa-vida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Expectativa de vida com qualidade aceitável estimada em mais de aproximadamente 1 ano, sem doença não cardíaca terminal ou insuficiência cardíaca terminal sem opção terapêutica que tornaria o benefício do CDI improvável",
+        "origem_secao": "Avaliação prognóstica — Expectativa de vida"
+      },
+      {
+        "id": "cdiprim-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Conversa de decisão compartilhada registrada, incluindo benefício esperado, possibilidade de choques apropriados e inapropriados, dor e ansiedade, risco de infecção, falha de eletrodo, reoperações, troca futura do gerador e possibilidade de desativação ao final da vida",
+        "origem_secao": "Avaliação prognóstica — Decisão compartilhada"
+      },
+      {
+        "id": "cdiprim-base-evidencia-etiologia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrado no prontuário qual evidência sustenta a indicação na etiologia do paciente: MADIT-II para cardiopatia isquêmica pós-infarto por FEVE ≤30% isolada (mortalidade 14,2% CDI vs. 19,8% controle; HR 0,69); SCD-HeFT para IC classe II-III NYHA com FEVE ≤35% de qualquer etiologia (redução de mortalidade de 23%; HR 0,77); e, em etiologia não isquêmica, ciência de que o DANISH não confirmou redução de mortalidade geral no manejo contemporâneo com TRC amplamente usada (HR 0,87; IC95% 0,68-1,12; p=0,28) — só a redução de morte súbita persistiu (HR 0,50; p=0,005)",
+        "origem_secao": "Evidencia pivotal de prevencao primaria — MADIT-II, SCD-HeFT e DANISH"
+      }
+    ],
+    "revisao": "Derivado do documento já verificado e publicado cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria (seção 'Evidencia pivotal de prevencao primaria', PMIDs de MADIT-II, SCD-HeFT, DANISH, DINAMIT e CABG-Patch já conferidos por E-utilities em 30/07/2026, conforme registrado no próprio documento) e do documento colete-desfibrilador-vestivel-wcd-ponte-de-risco-arritmico-o-ensaio-vest (janela de 40-90 dias e classe IIb do WCD na diretriz AHA/ACC/HRS 2017, PMID 29097296, confirmada por via indireta no algoritmo oficial de resumo da própria diretriz, publicado pelo ACC). Cada item cita a seção de origem. Nenhum corte numérico ou PMID foi inventado. Elaborado como proposta de conteúdo, ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida e precisa ser dada antes da publicação."
+  },
+  {
+    "slug": "avaliacao-pre-implante-de-marcapasso-definitivo",
+    "condicao": "Avaliação pré-implante de marcapasso definitivo",
+    "resumo": "Confirmar a indicação real, excluir causa reversível e decidir o sítio e o modo de estimulação antes do implante — inclusive quando preferir estimulação do sistema de condução em vez da estimulação convencional de ventrículo direito.",
+    "documento_origem": "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Glikson M et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. PMID: 34455430",
+      "Glikson M et al. European Society of Cardiology (ESC) clinical consensus statement on indications for conduction system pacing. Europace. 2025;27(4):euaf050. DOI: 10.1093/europace/euaf050. PMID: 40159278",
+      "Curtis AB, Worley SJ, Adamson PB, et al; BLOCK HF Investigators. Biventricular Pacing for Atrioventricular Block and Systolic Dysfunction. N Engl J Med. 2013;368(17):1585-1593. DOI: 10.1056/NEJMoa1210356. PMID: 23614585"
+    ],
+    "itens": [
+      {
+        "id": "mppre-tipo-bradiarritmia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmado o tipo de bradiarritmia que motiva o implante: doença do nó sinusal sintomática (com correlação clara entre sintoma e bradicardia documentada), BAV de segundo grau Mobitz II, BAV de alto grau ou BAV total — estes três últimos indicam marcapasso independentemente de sintoma, pelo risco de progressão súbita para bloqueio completo com assistolia",
+        "origem_secao": "Quando implantar"
+      },
+      {
+        "id": "mppre-causas-reversiveis",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Excluída causa reversível antes de indicar o implante definitivo: uso de betabloqueador, bloqueador de canal de cálcio não-diidropiridínico, digoxina, distúrbio eletrolítico (potássio, principalmente), hipotireoidismo ou isquemia aguda",
+        "origem_secao": "Quando implantar"
+      },
+      {
+        "id": "mppre-nao-indicacao-benigna",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Confirmado que o achado não é BAV de primeiro grau ou Mobitz I (Wenckebach) assintomático sem PR muito prolongado (geralmente sem indicação), nem bradicardia sinusal ou BAV restrito ao período de sono (achado esperado e benigno na maioria dos casos)",
+        "origem_secao": "Quando implantar"
+      },
+      {
+        "id": "mppre-expectativa-estimulacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estimada a expectativa de percentual de estimulação ventricular esperada após o implante — é o dado que, junto da FEVE, decide entre estimulação convencional de ventrículo direito e estimulação do sistema de condução",
+        "origem_secao": "Estimulação do sistema de condução — a mudança mais relevante desde 2021"
+      },
+      {
+        "id": "mppre-feve-para-sitio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "FEVE registrada antes do implante (acima ou abaixo de 40%) para orientar a escolha do sítio de estimulação em BAV com expectativa de estimulação ventricular >20% — consenso ESC 2025: FEVE >40%, estimulação do sistema de condução 'pode ser apropriada'; FEVE <40%, 'pode ser apropriada' no lugar da estimulação biventricular",
+        "origem_secao": "Estimulação do sistema de condução — a mudança mais relevante desde 2021"
+      },
+      {
+        "id": "mppre-evitar-vd-convencional",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se BAV, FEVE <40% e expectativa de estimulação ventricular >20%, considerada ativamente a estimulação do sistema de condução em vez da estimulação convencional de VD — o consenso ESC 2025 (Europace 2025;27(4):euaf050) inclui, para esse cenário específico, a orientação explícita 'Advice not to do' para estimular o VD de forma convencional",
+        "origem_secao": "Estimulação do sistema de condução — a mudança mais relevante desde 2021"
+      },
+      {
+        "id": "mppre-escolha-his-ramo-esquerdo",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Quando ambas as técnicas de estimulação do sistema de condução estiverem disponíveis: preferida a estimulação do ramo esquerdo em doença valvar aórtica significativa, BAV infra-hissiano ou quando está prevista ablação do nó AV; preferida a estimulação do feixe de His quando é necessário poupar a valva tricúspide (por exemplo, pela perspectiva de troca valvar futura)",
+        "origem_secao": "Estimulação do sistema de condução — a mudança mais relevante desde 2021"
+      },
+      {
+        "id": "mppre-modo-uni-bicameral",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliada a função sinusal e a necessidade de sincronia atrioventricular para escolher entre modo unicameral (VVI/VVIR — aceitável quando não há necessidade de sincronismo AV, por exemplo em fibrilação atrial permanente com BAV associado) e bicameral (DDD/DDDR — preferível quando a função sinusal está preservada, na maioria dos casos de BAV com ritmo sinusal)",
+        "origem_secao": "Escolha entre unicameral e bicameral"
+      },
+      {
+        "id": "mppre-escopo-nao-coberto",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Reconhecido que terapia de ressincronização cardíaca (TRC/CRT), programação e seguimento do dispositivo (monitorização remota, ajuste de parâmetros), complicação de bolsa/infecção de eletrodo e marcapasso temporário em contexto agudo exigem avaliação própria, não cobertos por esta ficha de indicação",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Derivado do documento já verificado e publicado marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao, com a seção de origem registrada em cada item e as três referências primárias (ESC 2021 PMID 34455430, consenso ESC 2025 PMID 40159278, BLOCK HF/Curtis 2013 PMID 23614585) reaproveitadas do documento de origem, onde já constam conferidas contra o texto integral (a nota do próprio documento registra a leitura verbatim do PMC11957271 para as categorias 'Advice to do'/'May be appropriate to do'/'Advice not to do' do consenso de 2025, que não usa a escala Classe/Nível da ESC — por isso nenhum item deste checklist atribui 'Classe' ao consenso de 2025). Nenhum corte numérico ou PMID foi inventado. Elaborado como proposta de conteúdo, ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida e precisa ser dada antes da publicação."
+  },
+  {
+    "slug": "manejo-perioperatorio-de-cdi-ou-marcapasso-em-cirurgia-nao-cardiaca",
+    "condicao": "Manejo perioperatório de paciente com CDI ou marca-passo em cirurgia não cardíaca",
+    "resumo": "O que revisar antes de operar um portador de dispositivo cardíaco eletrônico implantável fora do contexto cardíaco: características do dispositivo, dependência de estimulação, resposta ao ímã e proteção contra interferência eletromagnética do eletrocautério.",
+    "documento_origem": "marcapasso-sem-eletrodo-e-manejo-perioperatorio-de-dispositivo-cardiaco",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Periprocedural Management and Multidisciplinary Care Pathways for Patients With Cardiac Implantable Electronic Devices: A Scientific Statement From the American Heart Association · Circulation · https://www.ahajournals.org/doi/10.1161/CIR.0000000000001264",
+      "Perioperative Management of Patients with Cardiac Implantable Electronic Devices and Utility of Magnet Application · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8836758/"
+    ],
+    "itens": [
+      {
+        "id": "ciedperi-caracteristicas-dispositivo-revisadas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisadas as características do dispositivo antes do procedimento: longevidade da bateria, modo de estimulação programado, resposta a ímã, compatibilidade condicional com ressonância magnética e status de alerta de segurança",
+        "origem_secao": "Avaliação pré-operatória do dispositivo"
+      },
+      {
+        "id": "ciedperi-dependencia-marcapasso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Determinado se o paciente é dependente de marca-passo, pois isso muda o modo de estimulação esperado durante o procedimento: dependente — modo de estimulação assíncrona em frequência acima da sinusal intrínseca (ex.: VOO/DOO); não dependente — modo de estimulação de reserva a 40 bpm (ex.: DDI/VVI)",
+        "origem_secao": "Ressonância magnética em dispositivo MRI-condicional"
+      },
+      {
+        "id": "ciedperi-resposta-ima-confirmada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmada com a equipe responsável pelo dispositivo a resposta esperada ao ímã para o fabricante e modelo específicos deste paciente antes de aplicá-lo — a aplicação de ímã geralmente reverte o marca-passo para modo assíncrono e desabilita a detecção/terapia de taquiarritmia em CDI, mas a resposta pode variar substancialmente conforme tipo de dispositivo, fabricante e modelo, e não deve ser assumida sem essa confirmação",
+        "origem_secao": "Resposta ao ímã"
+      },
+      {
+        "id": "ciedperi-cdi-terapia-desabilitada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em portador de CDI, confirmado que a detecção e a terapia de taquiarritmia foram desabilitadas (por ímã ou reprogramação) antes do uso de eletrocautério, ablação por radiofrequência ou litotripsia",
+        "origem_secao": "Resposta ao ímã; Eletrocautério e interferência eletromagnética"
+      },
+      {
+        "id": "ciedperi-risco-interferencia-eletrocauterio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido o risco de mau funcionamento do dispositivo por interferência eletromagnética do eletrocautério, ablação por radiofrequência ou litotripsia durante o procedimento — pode causar estimulação inapropriada, ausência de estimulação ou falha de desfibrilação",
+        "origem_secao": "Eletrocautério e interferência eletromagnética"
+      },
+      {
+        "id": "ciedperi-trajeto-corrente-eletrocauterio",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Mantido o trajeto de corrente do eletrocautério — entre o sítio cirúrgico e o caminho de aterramento — a distância do dispositivo e dos eletrodos",
+        "origem_secao": "Eletrocautério e interferência eletromagnética"
+      },
+      {
+        "id": "ciedperi-modo-rm-se-aplicavel",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o procedimento envolver ressonância magnética em dispositivo MRI-condicional, confirmado que o modo RM foi selecionado no dispositivo antes do exame — isso também desliga a entrega de terapia nos desfibriladores",
+        "origem_secao": "Ressonância magnética em dispositivo MRI-condicional"
+      },
+      {
+        "id": "ciedperi-reprogramacao-pos-procedimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA — o documento de origem não detalha um protocolo específico de reversão do ímã, reprogramação e interrogação do dispositivo no pós-operatório imediato; confirmar com a equipe responsável pelo dispositivo a checagem e a reativação da terapia (quando aplicável) antes da alta, em vez de presumir reversão automática",
+        "origem_secao": "Avaliação pré-operatória do dispositivo (lacuna não coberta explicitamente pelo documento de origem)"
+      }
+    ],
+    "revisao": "Derivado do documento já verificado e publicado marcapasso-sem-eletrodo-e-manejo-perioperatorio-de-dispositivo-cardiaco, com a seção de origem registrada em cada item e as duas referências reaproveitadas do documento de origem (declaração científica da AHA em Circulation e revisão de manejo perioperatório e uso de ímã no PMC — nenhuma das duas traz PMID no documento de origem, e por isso nenhum foi atribuído aqui). Um item (reprogramação/checagem pós-procedimento) foi marcado explicitamente VERIFICAÇÃO HUMANA NECESSÁRIA em vez de completado por conhecimento geral, porque o documento de origem não detalha esse protocolo específico. Nenhum dado clínico foi inventado. Elaborado como proposta de conteúdo, ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida e precisa ser dada antes da publicação."
   }
 ]
