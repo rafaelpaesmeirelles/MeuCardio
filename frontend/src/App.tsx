@@ -68,6 +68,7 @@ const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
 const Tour = lazy(() => import("./pages/Tour"));
+const ValidarDocumento = lazy(() => import("./pages/ValidarDocumento"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -85,6 +86,18 @@ export default function App() {
     (window as unknown as { __corviaVerificarAtualizacao?: () => void })
       .__corviaVerificarAtualizacao?.();
   }, [location.pathname]);
+
+  const validacaoPublica = location.pathname === "/validar" || location.pathname.startsWith("/validar/");
+  if (validacaoPublica) {
+    return (
+      <RotasSuspensas>
+        <Routes>
+          <Route path="/validar" element={<ValidarDocumento />} />
+          <Route path="/validar/:codigo" element={<ValidarDocumento />} />
+        </Routes>
+      </RotasSuspensas>
+    );
+  }
 
   if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
   if (!usuario) {

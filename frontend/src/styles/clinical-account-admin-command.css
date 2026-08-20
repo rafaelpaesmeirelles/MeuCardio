@@ -13,14 +13,14 @@ body.corvia-route--conta .clinical-os .conta__cabecalho .eyebrow { margin:0 0 .0
 body.corvia-route--conta .clinical-os .conta__cabecalho h1 { margin:0; color:#f0fafb; font-size:1.05rem; letter-spacing:-.03em; }
 body.corvia-route--conta .clinical-os .conta__cabecalho .conta__logout { min-height:30px; padding:.3rem .5rem; font-size:.5rem; }
 
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] {
+body.corvia-route--conta .clinical-os .conta__grid {
   display:grid !important;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:.5rem !important;
   max-width:none !important;
   align-items:start;
 }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao {
+body.corvia-route--conta .clinical-os .conta__grid > .cartao {
   min-width:0;
   margin:0;
   padding:.68rem .72rem;
@@ -29,25 +29,25 @@ body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .
   border-radius:10px;
   box-shadow:none;
 }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao h2 {
+body.corvia-route--conta .clinical-os .conta__grid > .cartao h2 {
   margin-top:0!important;
   color:#dbecef;
   font-size:.72rem;
 }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao p { font-size:.55rem!important; line-height:1.42; }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao label { font-size:.55rem; }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao input,
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao select,
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao textarea { min-height:34px; font-size:.55rem; }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao .botao { min-height:29px; padding:.3rem .48rem!important; font-size:.5rem!important; }
+body.corvia-route--conta .clinical-os .conta__grid > .cartao p { font-size:.55rem!important; line-height:1.42; }
+body.corvia-route--conta .clinical-os .conta__grid > .cartao label { font-size:.55rem; }
+body.corvia-route--conta .clinical-os .conta__grid > .cartao input,
+body.corvia-route--conta .clinical-os .conta__grid > .cartao select,
+body.corvia-route--conta .clinical-os .conta__grid > .cartao textarea { min-height:34px; font-size:.55rem; }
+body.corvia-route--conta .clinical-os .conta__grid > .cartao .botao { min-height:29px; padding:.3rem .48rem!important; font-size:.5rem!important; }
 
 /* Long profile form gets the full row; security/billing remain compact. */
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome),
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(input[type="file"]),
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(table) { grid-column:1 / -1; }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome) .grade--3,
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome) .grade--2 { gap:.38rem; }
-body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome) {
+body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(#conta-nome),
+body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(input[type="file"]),
+body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(table) { grid-column:1 / -1; }
+body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(#conta-nome) .grade--3,
+body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(#conta-nome) .grade--2 { gap:.38rem; }
+body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(#conta-nome) {
   background:radial-gradient(circle at 100% 0%,rgba(56,202,213,.04),transparent 16rem),linear-gradient(145deg,rgba(10,31,43,.96),rgba(6,23,33,.98));
 }
 body.corvia-route--conta .clinical-os .pagina img[alt="Corvia"] { filter:none; }
@@ -92,10 +92,18 @@ body.corvia-route--admin .clinical-os .selo--pendente { color:#e8be72; backgroun
   body.corvia-route--conta .clinical-os .pagina,
   body.corvia-route--admin .clinical-os .cos-content { width:100%; max-width:none; }
   body.corvia-route--conta .clinical-os .conta__cabecalho { padding:.55rem; }
-  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] { grid-template-columns:1fr; }
-  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(#conta-nome),
-  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(input[type="file"]),
-  body.corvia-route--conta .clinical-os .pagina > div[style*="max-width: 560"] > .cartao:has(table) { grid-column:auto; }
+  body.corvia-route--conta .clinical-os .conta__grid { grid-template-columns:1fr; }
+  body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(#conta-nome),
+  body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(input[type="file"]),
+  body.corvia-route--conta .clinical-os .conta__grid > .cartao:has(table) { grid-column:auto; }
   body.corvia-route--admin .clinical-os .grade--2,
   body.corvia-route--admin .clinical-os .grade--3 { grid-template-columns:1fr; }
 }
+
+
+body.corvia-route--conta .clinical-os .conta__grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.62rem;
+  width:100%; max-width:none; align-items:stretch; grid-auto-flow:row dense;
+}
+body.corvia-route--conta .clinical-os .conta__grid > .cartao { height:100%; min-width:0; }
+@media(max-width:900px){ body.corvia-route--conta .clinical-os .conta__grid{grid-template-columns:1fr;} }

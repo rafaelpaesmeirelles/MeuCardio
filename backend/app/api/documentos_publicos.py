@@ -26,6 +26,7 @@ from app.models.receituario import PrescriptionDocument, PrescriptionRecipient
 from app.models.user import User
 from app.services import cofre
 from app.services.assinatura import emissao as assinatura_emissao
+from app.services.assinatura import validacao_publica
 from app.services.professional_profile import document_identity
 
 router = APIRouter(prefix="/api/documentos-publicos", tags=["documentos públicos"])
@@ -133,6 +134,39 @@ def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
     pdf = assinatura_emissao.servir_ou_regerar(
         db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id, regerar=_regerar)
     return pdf, f"documento-{g.id}.pdf"
+
+
+@router.get("/validar/{codigo}")
+def validar_documento_publico(codigo: str, db: Session = Depends(get_db)):
+    registro = validacao_publica.localizar(db, codigo)
+    if registro is None:
+        raise HTTPException(status_code=404, detail="Código de validação inválido ou documento não encontrado.")
+
+    resultado = validacao_publica.validar(registro)
+    return {
+        "codigo": validacao_publica.codigo_documento(
+            tipo=registro.tipo, referencia_id=registro.referencia_id, criado_por=registro.criado_por,
+        ),
+        "valido": resultado.valido,
+        "tipo": registro.tipo,
+        "metodo": registro.metodo,
+        "nivel": registro.nivel,
+        "integridade_hash": resultado.integridade_hash,
+        "assinatura_encontrada": resultado.assinatura_encontrada,
+        "assinatura_intacta": resultado.assinatura_intacta,
+        "estrutura_valida": resultado.estrutura_valida,
+        "cobre_documento_inteiro": resultado.cobre_documento_inteiro,
+        "titular": resultado.titular,
+        "emissor_certificado": resultado.emissor_certificado,
+        "assinado_em": resultado.assinado_em,
+        "qualificada_icp_brasil": resultado.qualificada_icp_brasil,
+        "sha256": resultado.sha256,
+        "aviso": (
+            "A CorVIA confirmou os bytes persistidos e a integridade criptográfica da assinatura "
+            "embutida no PDF. A validação oficial de cadeia de confiança, revogação e requisitos "
+            "adicionais pode ser complementada pelo validador oficial do ITI/ICP-Brasil."
+        ),
+    }
 
 
 @router.get("/{token}")

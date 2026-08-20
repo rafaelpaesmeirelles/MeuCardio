@@ -71,7 +71,7 @@ def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
         "/avaliacao-preoperatoria", "/evidencias", "/estudos", "/diretrizes",
         "/trilhas/timeline", "/trilhas", "/casos-clinicos", "/biblioteca", "/galeria",
         "/cursos", "/apresentacao", "/round", "/receituario", "/documentos",
-        "/material-paciente", "/agenda", "/corvia-mail", "/caixa-de-email",
+        "/material-paciente", "/agenda", "/corvia-mail",
         "/telediagnostico", "/indicadores", "/exportar", "/favoritos", "/busca",
         "/assistente", "/usuarios-online", "/sincronizacao", "/minha-conta", "/assinatura",
         "/tour", "/admin", "/admin/usuarios", "/fila-telediagnostico",

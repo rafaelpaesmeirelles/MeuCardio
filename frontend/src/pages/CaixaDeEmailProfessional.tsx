@@ -294,8 +294,24 @@ export default function CaixaDeEmailProfessional() {
 
   async function excluirMensagem(m: Mensagem) {
     const origem = m.origem ?? contaId; const id = idMensagem(m); if (!id || !window.confirm("Mover esta mensagem para a lixeira?")) return; setAtualizando(true);
-    try { await apiEmail.delete(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`); setMensagens((ls) => ls.filter((x) => !(idMensagem(x) === id && (!combinadas || (x.origem ?? "corvia") === origem)))); if (aberta && idMensagem(aberta) === id) setAberta(null); setAviso("Mensagem removida."); }
+    try { await apiEmail.delete(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`); setMensagens((ls) => ls.filter((x) => !(idMensagem(x) === id && (!combinadas || (x.origem ?? "corvia") === origem)))); if (aberta && idMensagem(aberta) === id) setAberta(null); setSelecionadas((ids) => { const n = new Set(ids); n.delete(id); return n; }); setAviso("Mensagem removida."); }
     catch (e) { setErro(falha(e, "Não foi possível remover a mensagem.")); } finally { setAtualizando(false); }
+  }
+
+  async function excluirSelecionadas() {
+    if (combinadas || selecionadas.size === 0) return;
+    const ids = [...selecionadas];
+    if (!window.confirm(`Mover ${ids.length} ${ids.length === 1 ? "mensagem" : "mensagens"} para a lixeira?`)) return;
+    setAtualizando(true); setErro(null);
+    try {
+      await Promise.all(ids.map((id) => apiEmail.delete(`${prefixo(contaId)}/mensagens/${encodeURIComponent(id)}`)));
+      const removidas = new Set(ids);
+      setMensagens((ls) => ls.filter((m) => !removidas.has(idMensagem(m))));
+      if (aberta && removidas.has(idMensagem(aberta))) setAberta(null);
+      setSelecionadas(new Set());
+      setAviso(`${ids.length} ${ids.length === 1 ? "mensagem removida" : "mensagens removidas"}.`);
+    } catch (e) { setErro(falha(e, "Não foi possível remover todas as mensagens selecionadas.")); }
+    finally { setAtualizando(false); }
   }
 
   function novaMensagem() { const de = contas.find((c) => c.padrao && c.send_mail)?.id ?? contas.find((c) => c.send_mail)?.id ?? "corvia"; setRascunho({ ...RASCUNHO_VAZIO, de }); setAnexos([]); setVerificacoes({}); setMostrarCopias(false); setCompondo(true); }
@@ -358,7 +374,7 @@ export default function CaixaDeEmailProfessional() {
 
       <section className="cmp-list">
         <div className="cmp-list__header"><div><p>{combinadas ? "Caixa unificada" : nomePasta(pastaAtual ?? {})}</p><h2>{filtradas.length} mensagens</h2></div><button onClick={() => void carregarContexto()} disabled={atualizando || carregandoContexto} title="Atualizar">↻</button></div>
-        {!combinadas && selecionadas.size > 0 && <div className="cmp-bulk"><strong>{selecionadas.size}</strong><button onClick={() => void agir("lida", [...selecionadas])}>Lida</button><button onClick={() => void agir("nao_lida", [...selecionadas])}>Não lida</button><button className="danger" onClick={() => { const ids = [...selecionadas]; if (ids.length === 1) { const m = mensagens.find((x) => idMensagem(x) === ids[0]); if (m) void excluirMensagem(m); } }}>Excluir</button></div>}
+        {!combinadas && selecionadas.size > 0 && <div className="cmp-bulk"><strong>{selecionadas.size}</strong><button onClick={() => void agir("lida", [...selecionadas])}>Lida</button><button onClick={() => void agir("nao_lida", [...selecionadas])}>Não lida</button><button className="danger" disabled={atualizando} onClick={() => void excluirSelecionadas()}>Excluir</button></div>}
         <div className="cmp-list__filters"><button className={filtro === "todas" ? "is-active" : ""} onClick={() => setFiltro("todas")}>Todas</button><button className={filtro === "nao_lidas" ? "is-active" : ""} onClick={() => setFiltro("nao_lidas")}>Não lidas</button><button className={filtro === "favoritas" ? "is-active" : ""} onClick={() => setFiltro("favoritas")}>Favoritas</button></div>
         <div className="cmp-list__scroll">{carregandoContexto ? <div className="cmp-state"><Carregando /></div> : filtradas.length === 0 ? <div className="cmp-state"><Vazio titulo="Nenhuma mensagem encontrada" /></div> : filtradas.map((m) => { const id = idMensagem(m); const origem = m.origem ?? contaId; const ativa = aberta && idMensagem(aberta) === id && (aberta.origem ?? contaId) === origem; return <article key={`${origem}-${id}`} className={`cmp-message ${naoLida(m) ? "is-unread" : ""} ${ativa ? "is-active" : ""}`}><label className="cmp-message__check"><input type="checkbox" disabled={!!combinadas} checked={selecionadas.has(id)} onChange={() => setSelecionadas((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; })} /></label><button className="cmp-message__open" onClick={() => void abrirMensagem(m)}><span className="cmp-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(remetente(m))}</span><span className="cmp-message__body"><span className="cmp-message__meta"><strong>{remetente(m)}</strong><time>{dataCurta(m)}</time></span><b>{m.subject ?? "(sem assunto)"}</b><small>{m.summary || "Sem prévia disponível"}</small><span className="cmp-message__tags">{combinadas && <i>{NOMES_PROVEDOR[contas.find((c) => c.id === origem)?.provider ?? m.provider ?? "corvia"]}</i>}{temAnexo(m) && <i>⌕ Anexo</i>}</span></span></button>{!combinadas && contaId === "corvia" && <button className={`cmp-star ${favorita(m) ? "is-active" : ""}`} onClick={() => void agir("sinalizar", [id], { sinalizador: favorita(m) ? "flag_not_set" : "followup" })}>{favorita(m) ? "★" : "☆"}</button>}</article>; })}</div>
       </section>

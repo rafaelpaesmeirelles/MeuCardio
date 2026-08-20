@@ -78,10 +78,21 @@ def assinar_e_persistir(
     rodape`) e persiste o resultado. Só chame depois de confirmar
     `provedor.disponivel()` — esta função não repete a checagem, porque cada
     chamador já monta sua própria lista de `bloqueios` a partir dela."""
+    from app.services.assinatura import validacao_publica
+
+    codigo_validacao = validacao_publica.codigo_documento(
+        tipo=tipo, referencia_id=referencia_id, criado_por=criado_por,
+    )
+    url_validacao = validacao_publica.url_documento(
+        tipo=tipo, referencia_id=referencia_id, criado_por=criado_por,
+    )
     resultado = provedor.assinar(
         pdf_visual,
         medico,
-        {"tipo": tipo, "referencia_id": referencia_id, "layout": layout},
+        {
+            "tipo": tipo, "referencia_id": referencia_id, "layout": layout,
+            "codigo_validacao": codigo_validacao, "url_validacao": url_validacao,
+        },
     )
     if resultado.estado == "indisponivel":
         # Defensivo: não deveria acontecer se o chamador checou disponivel()

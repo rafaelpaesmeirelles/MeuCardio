@@ -101,3 +101,11 @@
     flex: 0 0 auto !important;
   }
 }
+
+
+@media (min-width: 901px) {
+  .ccc-reference-board { align-content:start!important; grid-auto-rows:max-content; row-gap:.62rem!important; }
+  .ccc-reference-board .ccc-home__welcome,
+  .ccc-reference-board .ccc-actions-section,
+  .ccc-reference-board .ccc-reference-summary { margin:0!important; }
+}

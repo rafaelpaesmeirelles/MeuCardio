@@ -18,14 +18,6 @@ type IntegracaoExterna = {
   last_error_message: string | null;
 };
 type CapacidadesSync = { connectors: Array<{ provider: string; oauth_configured?: boolean }> };
-type ResultadoSync = {
-  ok: boolean;
-  status: string;
-  reauth_required?: boolean;
-  mensagem?: string;
-  componentes?: Array<{ componente: string; ok: boolean; codigo?: string }>;
-};
-
 const PROVEDORES_SINCRONIZAVEIS = ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"] as const;
 const PROVEDOR_LOGO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
   google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo",
@@ -46,7 +38,6 @@ export default function Sincronizacao() {
   const [capacidades, setCapacidades] = useState<CapacidadesSync | null>(null);
   const [consentimento, setConsentimento] = useState(false);
   const [conectando, setConectando] = useState<string | null>(null);
-  const [sincronizando, setSincronizando] = useState<number | null>(null);
   const [erro, setErro] = useState("");
   const [mensagem, setMensagem] = useState("");
   const [formAberto, setFormAberto] = useState<"apple" | "yahoo" | null>(null);
@@ -129,25 +120,6 @@ export default function Sincronizacao() {
     }
   }
 
-  async function sincronizarConta(id: number) {
-    setSincronizando(id); setErro(""); setMensagem("");
-    try {
-      const r = await api.post<ResultadoSync>(`/agenda/integrations/${id}/sync-live?full=false`, {});
-      await carregar();
-      if (r.reauth_required) {
-        setErro("A autorização desta conta precisa ser renovada. Use Reconectar.");
-      } else if (r.ok) {
-        setMensagem("Conta verificada e sincronizada agora.");
-      } else {
-        setMensagem(r.mensagem || "Conta verificada; um componente ficará para a próxima tentativa automática.");
-      }
-    } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível sincronizar agora.");
-    } finally {
-      setSincronizando(null);
-    }
-  }
-
   function reconectar(item: IntegracaoExterna) {
     const chave = PROVEDOR_CHAVE_CONEXAO[item.provider];
     if (chave === "google" || chave === "microsoft") { conectarOAuth(chave); return; }
@@ -165,14 +137,15 @@ export default function Sincronizacao() {
     }
   }
 
-  async function desconectar(id: number, nome: string) {
-    if (!window.confirm(`Desconectar ${nome}? Os contatos sincronizados dela serão removidos do Corvia.`)) return;
+  async function removerConta(id: number, nome: string) {
+    if (!window.confirm(`Remover ${nome} do CorVIA? O vínculo e as credenciais salvas no CorVIA serão excluídos, assim como os contatos importados dessa conta. Sua conta no provedor não será apagada.`)) return;
     setErro("");
     try {
       await api.delete(`/agenda/integrations/${id}`);
+      setMensagem("Conta removida do CorVIA.");
       await carregar();
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível desconectar.");
+      setErro(e instanceof ApiError ? e.message : "Não foi possível remover a conta.");
     }
   }
 
@@ -189,8 +162,9 @@ export default function Sincronizacao() {
       <p style={{ maxWidth: "62ch", color: "var(--texto-secundario)" }}>
         Conecte Google, Microsoft, Apple e Yahoo — quantas contas quiser — e escolha o que cada
         uma integra à Agenda e ao CorvIA Mail. Depois de conectada, a conta permanece vinculada:
-        OAuth é renovado automaticamente, Yahoo/iCloud recebem heartbeat de credencial e a Agenda
-        é atualizada continuamente em segundo plano. O CorvIA Mail consulta caixas externas ao vivo.
+        A manutenção é automática: OAuth é renovado em segundo plano, Yahoo/iCloud recebem heartbeat
+        de credencial e o CorVIA Mail consulta caixas externas ao vivo. Reconectar só aparece quando
+        a autorização realmente expirar; para encerrar o vínculo, use Remover conta.
       </p>
 
       <div className="cartao" style={{ maxWidth: 720 }}>
@@ -309,20 +283,14 @@ export default function Sincronizacao() {
                   <span className="eyebrow" style={{ margin: 0 }}>{PROVEDOR_NOME[item.provider]}</span>
                 </span>
                 <span style={{ display: "flex", gap: 6 }}>
-                  {!item.enabled || item.status === "reauth_required" ? (
-                    <button className="botao" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
-                            onClick={() => reconectar(item)}>
+                  {(!item.enabled || item.status === "reauth_required") && (
+                    <button className="botao" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }} onClick={() => reconectar(item)}>
                       Reconectar
-                    </button>
-                  ) : temComponenteSincronizavel && (
-                    <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
-                            disabled={sincronizando === item.id} onClick={() => sincronizarConta(item.id)}>
-                      {sincronizando === item.id ? "Sincronizando…" : "Sincronizar agora"}
                     </button>
                   )}
                   <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
-                          onClick={() => desconectar(item.id, item.display_name)}>
-                    Desconectar
+                          onClick={() => removerConta(item.id, item.display_name)}>
+                    Remover conta
                   </button>
                 </span>
               </div>
@@ -333,11 +301,11 @@ export default function Sincronizacao() {
                 </p>
               ) : item.last_success_at ? (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--texto-secundario)" }}>
-                  Conexão ativa · última verificação/sincronização: {new Date(item.last_success_at).toLocaleString("pt-BR")}
+                  Conectada e ativa · manutenção automática · última verificação: {new Date(item.last_success_at).toLocaleString("pt-BR")}
                 </p>
               ) : temComponenteSincronizavel ? (
                 <p style={{ margin: 0, fontSize: "0.76rem", color: "var(--alerta)" }}>
-                  Conectada; aguardando a primeira verificação automática. Você também pode usar "Sincronizar agora".
+                  Conectada · primeira verificação automática pendente. Não é necessário sincronizar manualmente.
                 </p>
               ) : null}
               {item.enabled && item.status !== "reauth_required" && item.last_error_message && (

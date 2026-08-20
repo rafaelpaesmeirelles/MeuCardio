@@ -94,7 +94,6 @@ const MODULOS: ModuloGrupo[] = [
       { to: "/material-paciente", label: "Material para paciente", icon: "documento" },
       { to: "/agenda", label: "Agenda", icon: "agenda" },
       { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
-      { to: "/caixa-de-email", label: "Caixa de e-mail", icon: "mail" },
       { to: "/telediagnostico", label: "Telediagnóstico", icon: "evidencia" },
       { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
     ],
@@ -114,7 +113,6 @@ const MODULOS: ModuloGrupo[] = [
     title: "Rede & Conectividade", tone: "teal", icon: "sincronizar", items: [
       { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
       { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
-      { to: "/corvia-mail", label: "Comunicação profissional", icon: "mail" },
       { to: "/telediagnostico", label: "Consultoria / Telediagnóstico", icon: "evidencia" },
       { to: "/material-paciente", label: "Compartilhamento com paciente", icon: "documento" },
     ],

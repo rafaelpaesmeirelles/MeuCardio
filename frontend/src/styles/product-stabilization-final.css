@@ -1,0 +1,114 @@
+/* CorVIA — final product stabilization overrides (2026-08-20).
+   Intentionally imported after the historical cascade. Every rule here maps
+   to a production defect reproduced by the directed QA screenshots. */
+
+/* Public document validator: global legacy h1 rules must never turn the
+   heading into navy-on-navy. */
+#root .corvia-validator .corvia-validator__header h1 {
+  color: #f4fbfc !important;
+  -webkit-text-fill-color: #f4fbfc !important;
+}
+#root .corvia-validator .corvia-validator__header > span,
+#root .corvia-validator .corvia-validator__form label {
+  color: #a8bac7 !important;
+  -webkit-text-fill-color: #a8bac7 !important;
+}
+#root .corvia-validator .corvia-validator__form input {
+  color: #eef8fa !important;
+  -webkit-text-fill-color: #eef8fa !important;
+  background: #0e2030 !important;
+}
+
+/* Prescrição: o cartão de item ainda herdava a superfície clara do layout
+   legado, deixando rótulos e produto selecionado praticamente invisíveis. */
+#root .clinical-os .prescricao-item {
+  color: #dcecef !important;
+  background: linear-gradient(145deg, #0c2533, #091c28) !important;
+  border-color: rgba(126, 190, 208, .20) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.02) !important;
+}
+#root .clinical-os .prescricao-item > label,
+#root .clinical-os .prescricao-item > label small,
+#root .clinical-os .prescricao-item .prescricao-item__topo > span {
+  color: #a9c7d0 !important;
+  -webkit-text-fill-color: #a9c7d0 !important;
+}
+#root .clinical-os .prescricao-item .prescricao-item__topo > span {
+  color: #5ad9e2 !important;
+  -webkit-text-fill-color: #5ad9e2 !important;
+}
+#root .clinical-os .prescricao-sugestoes {
+  color: #eaf8fb !important;
+  background: #0a1d29 !important;
+  border-color: rgba(126,190,208,.22) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.22) !important;
+}
+#root .clinical-os .prescricao-sugestoes__cabecalho {
+  color: #8faab4 !important;
+  background: #0d2634 !important;
+  border-color: rgba(126,190,208,.14) !important;
+}
+#root .clinical-os .prescricao-sugestoes button {
+  color: #eaf8fb !important;
+  background: transparent !important;
+  border-color: rgba(126,190,208,.09) !important;
+}
+#root .clinical-os .prescricao-sugestoes button:hover {
+  background: rgba(56,202,213,.08) !important;
+}
+#root .clinical-os .prescricao-sugestoes strong { color: #f4fdff !important; }
+#root .clinical-os .prescricao-sugestoes small { color: #a9c3cb !important; }
+#root .clinical-os .prescricao-continuo {
+  color: #a9c3cb !important;
+  background: rgba(255,255,255,.025) !important;
+  border-color: rgba(126,190,208,.10) !important;
+}
+
+/* Agenda: o drawer de configuração era o último grande bloco branco do
+   Clinical OS. Mantém sticky header/footer, mas na mesma linguagem navy. */
+#root .clinical-os .agenda-modal__painel {
+  color: #dcecef !important;
+  background: #081d29 !important;
+  border-color: rgba(126,190,208,.18) !important;
+}
+#root .clinical-os .agenda-modal__painel > header,
+#root .clinical-os .agenda-modal__painel > footer {
+  color: #eaf8fb !important;
+  background: rgba(8,29,41,.97) !important;
+  border-color: rgba(126,190,208,.12) !important;
+}
+#root .clinical-os .agenda-modal__painel > header h2,
+#root .clinical-os .agenda-modal__painel .agenda-config-section__title h3 {
+  color: #f3fbfc !important;
+  -webkit-text-fill-color: #f3fbfc !important;
+}
+#root .clinical-os .agenda-modal__painel > header > button,
+#root .clinical-os .agenda-config-section__title > span,
+#root .clinical-os .agenda-config-item,
+#root .clinical-os .agenda-config-vazio,
+#root .clinical-os .agenda-config-note {
+  color: #b9d0d6 !important;
+  background: rgba(255,255,255,.035) !important;
+  border-color: rgba(126,190,208,.10) !important;
+}
+#root .clinical-os .agenda-config-item strong,
+#root .clinical-os .agenda-config-note strong { color: #eaf8fb !important; }
+#root .clinical-os .agenda-config-item small,
+#root .clinical-os .agenda-config-note small,
+#root .clinical-os .agenda-config-vazio,
+#root .clinical-os .agenda-config-section__title p { color: #8faab4 !important; }
+#root .clinical-os .agenda-conta-acoes button,
+#root .clinical-os .agenda-rotina__dias button {
+  color: #a9c7d0 !important;
+  background: #0b2330 !important;
+  border-color: rgba(126,190,208,.16) !important;
+}
+#root .clinical-os .agenda-rotina__dias button.ativo {
+  color: #031319 !important;
+  background: #4fd4dd !important;
+  border-color: #4fd4dd !important;
+}
+
+@media (max-width: 760px) {
+  #root .clinical-os .prescricao-item { margin-inline: 0 !important; }
+}

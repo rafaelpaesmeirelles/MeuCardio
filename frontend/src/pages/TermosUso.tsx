@@ -5,7 +5,7 @@ export default function TermosUso() {
   return (
     <main className="legal-page" id="conteudo-principal">
       <header>
-        <Link to="/" aria-label="Voltar ao Corvia"><img src="/corvia-logo-compacta.png" alt="Corvia" /></Link>
+        <Link to="/" aria-label="Voltar ao CorVIA"><img src="/corvia-logo-canonical-dark.svg" alt="CorVIA" /></Link>
         <p className="eyebrow">Uso responsável</p>
         <h1>Termos de Uso — mapas e deslocamento</h1>
         <p>Última atualização: 5 de agosto de 2026.</p>
@@ -33,7 +33,7 @@ export default function TermosUso() {
 
       <section>
         <h2>Localização e escolha do profissional</h2>
-        <p>A função depende de autorização expressa no Corvia e de permissão concedida pelo sistema operacional. O profissional pode desativá-la a qualquer momento. O funcionamento, as categorias de dados e o compartilhamento necessário estão descritos na <Link to="/privacidade">Política de Privacidade de localização e mapas</Link>.</p>
+        <p>A função depende de autorização expressa no CorVIA e de permissão concedida pelo sistema operacional. O profissional pode desativá-la a qualquer momento. O funcionamento, as categorias de dados e o compartilhamento necessário estão descritos na <Link to="/privacidade">Política de Privacidade de localização e mapas</Link>.</p>
       </section>
 
       <section>
@@ -41,7 +41,7 @@ export default function TermosUso() {
         <p>Dúvidas, solicitações ou relato de funcionamento incorreto podem ser enviados para <a href="mailto:contato@corvia.med.br">contato@corvia.med.br</a>.</p>
       </section>
 
-      <footer><Link to="/privacidade">Ler a Política de Privacidade</Link><Link to="/">Voltar ao Corvia</Link></footer>
+      <footer><Link to="/privacidade">Ler a Política de Privacidade</Link><Link to="/">Voltar ao CorVIA</Link></footer>
     </main>
   );
 }
