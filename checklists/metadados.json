@@ -5543,5 +5543,251 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "investigacao-de-sincope-inexplicada-tilt-test-monitor-implantavel-e-eps",
+    "condicao": "Investigação de síncope inexplicada — indicação de teste de inclinação (tilt test), monitor de eventos implantável e estudo eletrofisiológico",
+    "resumo": "Checklist para a via diagnóstica de segunda linha na síncope que permanece inexplicada após a avaliação inicial: protocolo do tilt test, indicação e rendimento diagnóstico do monitor de eventos implantável, indicações formais de estudo eletrofisiológico por classe/nível, e o critério de marca-passo definitivo após tilt test positivo — derivado da ESC 2018 e do protocolo técnico já publicados nesta biblioteca.",
+    "documento_origem": "estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seções sobre o que mudou na investigação diagnóstica, tratamento da síncope reflexa (marca-passo) e estudo eletrofisiológico (seção 4.2.6), texto integral conferido em 30/07/2026 (citação conforme registrada em sincope-diagnostico-e-manejo-esc-2018.md, mesma pasta).",
+      "Tilt testing evolves: faster and still accurate · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/27/2480/7198277 — protocolo técnico do tilt test (fases, tempos, provocação farmacológica).",
+      "Practical Instructions for the 2018 ESC Syncope Guidelines · American College of Cardiology · 2018 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2018/04/04/15/09/practical-instructions-for-the-2018-esc-guidelines-for-syncope — rendimento diagnóstico do monitor de eventos implantável (55% vs. 19%)."
+    ],
+    "itens": [
+      {
+        "id": "sinc-inv-descartar-causa-evidente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que causa reflexa, ortostática ou cardíaca evidente já foi descartada por história, exame físico e ECG antes de indicar teste confirmatório de segunda linha — tilt test é reposicionado pela ESC 2018 como teste CONFIRMATÓRIO, não como teste de rastreio geral",
+        "origem_secao": "sincope-diagnostico-e-manejo-esc-2018.md — 'O que mudou na investigação diagnóstica'"
+      },
+      {
+        "id": "sinc-inv-tilt-indicacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Tilt test indicado quando a suspeita clínica já aponta para síncope reflexa ou tendência a hipotensão — não solicitado como teste de rastreio amplo em síncope de etiologia ainda indefinida",
+        "origem_secao": "sincope-diagnostico-e-manejo-esc-2018.md — 'O que mudou na investigação diagnóstica'"
+      },
+      {
+        "id": "sinc-inv-tilt-protocolo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Protocolo do tilt test conferido: jejum de 2-4 horas antes do exame; fase pré-tilt supina de pelo menos 5 minutos (ou pelo menos 20 minutos se houver canulação venosa); fase de inclinação passiva de pelo menos 20 até 45 minutos",
+        "origem_secao": "Protocolo do tilt test"
+      },
+      {
+        "id": "sinc-inv-tilt-provocacao-farmacologica",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se a fase passiva for negativa: provocação farmacológica realizada com nitroglicerina sublingual (dose fixa de 300-400 mcg, paciente em pé) ou isoproterenol intravenoso (infusão incremental de 1 a 3 mcg/min), por 15-20 minutos",
+        "origem_secao": "Protocolo do tilt test"
+      },
+      {
+        "id": "sinc-inv-tilt-retorno-horizontal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Retorno à posição horizontal ao final do teste realizado de forma rápida (menos de 15 segundos) — tempos maiores prolongam a assistolia precipitada",
+        "origem_secao": "Protocolo do tilt test"
+      },
+      {
+        "id": "sinc-inv-ilr-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Monitor de eventos implantável (loop recorder implantável) indicado quando avaliação abrangente, incluindo tilt test, não identificou a causa da perda transitória de consciência — rendimento diagnóstico de 55% (predominantemente bradiarritmia) contra apenas 19% com testes convencionais (tilt test e estudo eletrofisiológico)",
+        "origem_secao": "Monitor de eventos implantavel (loop recorder implantavel)"
+      },
+      {
+        "id": "sinc-inv-ilr-mais-40-anos-assistolia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente com mais de 40 anos e síncope grave, recorrente e imprevisível (sem pródromo), priorizada a via diagnóstica dedicada à investigação de assistolia (monitor de eventos implantável)",
+        "origem_secao": "sincope-diagnostico-e-manejo-esc-2018.md — 'O que mudou na investigação diagnóstica'"
+      },
+      {
+        "id": "sinc-inv-eps-indicacao",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Estudo eletrofisiológico (EPS) considerado quando a síncope permanece inexplicada após avaliação não invasiva, em paciente com infarto do miocárdio prévio ou outra condição com cicatriz miocárdica (Classe I, Nível B) ou com bloqueio de ramo bifascicular (Classe IIa, Nível B)",
+        "origem_secao": "sincope-diagnostico-e-manejo-esc-2018.md — 'Estudo eletrofisiológico (EPS)'"
+      },
+      {
+        "id": "sinc-inv-eps-limitacao-interpretacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecido que EPS positivo prediz a causa da síncope, mas EPS negativo NÃO exclui síncope arrítmica — avaliação adicional segue necessária; EPS geralmente não é útil em paciente com síncope, ECG normal, sem cardiopatia estrutural e sem palpitação",
+        "origem_secao": "sincope-diagnostico-e-manejo-esc-2018.md — 'Achados-chave de interpretação'"
+      },
+      {
+        "id": "sinc-inv-marcapasso-pos-tilt-positivo",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se marca-passo definitivo for considerado após resposta cardioinibitória ao tilt test (Classe IIb, Nível B): aplicado apenas em paciente com 40 anos ou mais, síncope recorrente, frequente e imprevisível, após falha de terapias alternativas — a resposta do tilt test é o preditor mais forte de eficácia do marca-passo, e resposta negativa associa-se a risco de recorrência mesmo com o dispositivo implantado",
+        "origem_secao": "Marca-passo definitivo apos tilt test positivo"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026, por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem citados em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diagnostico-diferencial-de-hipotensao-ortostatica-e-pots-na-sincope",
+    "condicao": "Diagnóstico diferencial de hipotensão ortostática e síndrome de taquicardia postural (POTS) na síncope",
+    "resumo": "Checklist da técnica do teste em pé ativo e dos critérios diagnósticos formais (classe/nível ESC 2018) para diferenciar os três subtipos de hipotensão ortostática (inicial, clássica, tardia) da síndrome de taquicardia postural (POTS) e da síncope vasovagal, no paciente com síncope ou pré-síncope.",
+    "documento_origem": "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "2018 ESC Guidelines for the diagnosis and management of syncope · European Heart Journal · 2018 · 39(21):1883-1948 · DOI: 10.1093/eurheartj/ehy037 · PMID: 29562304 — seção 4.2.2 (Orthostatic challenge) e tabela de critérios diagnósticos de hipotensão ortostática e POTS, texto integral obtido e conferido em 30/07/2026.",
+      "Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated syncope and the postural tachycardia syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID: 21431947 — definições de OH inicial, clássica e tardia, conferidas contra o abstract e resumos concordantes em 30/07/2026.",
+      "Orthostatic Hypotension. StatPearls, NCBI Bookshelf, NBK448192 — corroboração secundária dos cortes de tempo (15 segundos para OH inicial, 3 minutos para o corte clássico/tardio)."
+    ],
+    "itens": [
+      {
+        "id": "sinc-oh-teste-em-pe-ativo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste em pé ativo (active standing) realizado na avaliação inicial de toda síncope: pressão arterial e frequência cardíaca aferidas de forma intermitente, em supino e durante 3 minutos em pé (Classe I, Nível C)",
+        "origem_secao": "Técnica de aferição"
+      },
+      {
+        "id": "sinc-oh-manter-3-minutos-completos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste em pé mantido pelos 3 minutos completos antes de ser encerrado — interrupção precoce perde o diagnóstico de hipotensão ortostática (OH) tardia, que só se manifesta depois desse ponto",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sinc-oh-criterio-classica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Síncope por OH confirmada quando há queda da pressão arterial sistólica basal ≥20 mmHg ou diastólica ≥10 mmHg, ou queda da sistólica para <90 mmHg, dentro dos primeiros 3 minutos em pé (ou de tilt test), reproduzindo os sintomas espontâneos (Classe I, Nível C)",
+        "origem_secao": "Critérios diagnósticos formais (ESC 2018)"
+      },
+      {
+        "id": "sinc-oh-criterio-tardia",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerada OH tardia quando o mesmo critério pressórico da OH clássica ocorre depois dos 3 minutos iniciais — reflete falha compensatória mais lenta, tipicamente por disautonomia progressiva relacionada à idade, e pode ser confundida com síncope vasovagal tardia se a monitorização for interrompida cedo demais",
+        "origem_secao": "Hipotensão ortostática — os três subtipos, por tempo de instalação"
+      },
+      {
+        "id": "sinc-oh-inicial-monitorizacao-continua",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Para suspeita de OH inicial (queda transitória de PA que dura menos de 15 segundos, rápida demais para esfigmomanômetro convencional): considerada medida contínua batimento a batimento não invasiva (Classe IIb, Nível C)",
+        "origem_secao": "Técnica de aferição"
+      },
+      {
+        "id": "sinc-oh-criterio-pots",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "POTS considerada provável com aumento ortostático de frequência cardíaca >30 bpm (ou para >120 bpm) dentro de 10 minutos em pé, na ausência de hipotensão ortostática, reproduzindo os sintomas espontâneos (Classe IIa, Nível C)",
+        "origem_secao": "Critérios diagnósticos formais (ESC 2018)"
+      },
+      {
+        "id": "sinc-oh-fc-ortostatica-diferencial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Checada a resposta da frequência cardíaca à mudança postural: embotada ou ausente (tipicamente <10 bpm) sugere OH neurogênica; aumento ou exagero da FC sugere anemia ou hipovolemia como causa da OH",
+        "origem_secao": "Técnica de aferição"
+      },
+      {
+        "id": "sinc-oh-pots-versus-vasovagal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Distinguido POTS de síncope vasovagal apesar de os dois compartilharem taquicardia inicial: POTS não cursa com a queda pressórica final característica da vasovagal, e sua história natural é de pré-síncope recorrente (tontura, turvação visual, fadiga, palpitação), raramente com perda completa de consciência",
+        "origem_secao": "POTS — síndrome de taquicardia postural"
+      },
+      {
+        "id": "sinc-oh-nao-atribuir-a-ansiedade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Intolerância ortostática em paciente jovem não atribuída a ansiedade sem exclusão objetiva de POTS por teste em pé ativo",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026, por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "sincope-e-queda-inexplicada-no-idoso-avaliacao-estruturada",
+    "condicao": "Avaliação estruturada de síncope e queda inexplicada no idoso",
+    "resumo": "Checklist para a armadilha diagnóstica mais citada na literatura geriátrica sobre síncope — a dificuldade de diferenciar síncope verdadeira de queda mecânica no idoso por amnésia retrógrada e ausência de testemunha —, incluindo a avaliação multifatorial de risco de queda, a revisão de polifarmácia e o papel do escore ROMEO na indicação de ecocardiograma.",
+    "documento_origem": "sincope-no-idoso-armadilhas-diagnosticas-e-diferencial-com-queda-inexplicada",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rafanelli M, Mossello E, Testa GD, Ungar A. Unexplained falls in the elderly. Minerva Med. 2022;113(2):263-272. DOI: 10.23736/S0026-4806.21.07749-1 · PMID: 34515457.",
+      "Ungar A, Morrione A, Rafanelli M, Ruffolo E, Brunetti MA, Chisciotti VM, Masotti G, Del Rosso A, Marchionni N. The management of syncope in older adults. Minerva Med. 2009;100(4):247-58. PMID: 19749680.",
+      "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304.",
+      "Probst MA, Gibson TA, Weiss RE, et al. Predictors of Clinically Significant Echocardiography Findings in Older Adults with Syncope: A Secondary Analysis. J Hosp Med. 2018;13(12):823-828. DOI: 10.12788/jhm.3082. PMID: 30255862 — números conferidos contra o abstract indexado no PubMed em 08/08/2026 (citação registrada em escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia.md, mesma pasta).",
+      "DeAngelis J, Vargas G, Weiss RE, et al. Predicting Echocardiography Findings in Adults Presenting to the Emergency Department With Syncope: An External Validation of the ROMEO Score. Acad Emerg Med. 2026;33(6):e70366. DOI: 10.1111/acem.70366. PMID: 42340085 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."
+    ],
+    "itens": [
+      {
+        "id": "sinc-ido-existe-explicacao-mecanica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de queda sem relato confiável de perda de consciência, verificado se existe explicação mecânica clara e suficiente (tropeço evidente, obstáculo, degrau) — se não existir, a queda é investigada como síncope inexplicada, com o mesmo rigor diagnóstico (recomendação ESC 2018, reafirmada por Rafanelli et al. 2022)",
+        "origem_secao": "O ponto prático que resume o documento"
+      },
+      {
+        "id": "sinc-ido-nao-descartar-por-amnesia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigação cardiovascular NÃO descartada apenas porque o paciente relata \"não perdeu a consciência\" — amnésia retrógrada para o próprio episódio é comum no idoso, tornando esse relato negativo pouco confiável",
+        "origem_secao": "O obstáculo central: amnésia retrógrada e ausência de testemunha"
+      },
+      {
+        "id": "sinc-ido-testemunha",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrada explicitamente a presença ou ausência de testemunha do evento — sua ausência é frequente no idoso (ao contrário do que costuma ocorrer no adulto jovem) e limita a confiabilidade da história colhida isoladamente",
+        "origem_secao": "O obstáculo central: amnésia retrógrada e ausência de testemunha"
+      },
+      {
+        "id": "sinc-ido-avaliacao-multifatorial-de-queda",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Realizada avaliação multifatorial de risco de queda em paralelo à investigação cardiovascular dirigida (uma não substitui a outra): marcha, equilíbrio e mobilidade; força muscular; função cognitiva; risco de osteoporose; função sensorial (visão, propriocepção); continência urinária; riscos ambientais no domicílio",
+        "origem_secao": "O que muda na avaliação do idoso com queda/síncope"
+      },
+      {
+        "id": "sinc-ido-revisao-de-polifarmacia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisada a lista completa de medicações em uso, incluindo automedicação e fitoterápicos com efeito hipotensor — anti-hipertensivos, diuréticos, antidepressivos tricíclicos e antipsicóticos podem reduzir o limiar para hipotensão postural ou bradicardia reflexa, as duas causas mais prevalentes de síncope nessa faixa etária",
+        "origem_secao": "Polifarmácia como amplificador, não como causa isolada"
+      },
+      {
+        "id": "sinc-ido-causas-mais-prevalentes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerado que as causas mais prevalentes de síncope no idoso são hipotensão ortostática, hipersensibilidade do seio carotídeo, síncope neuromediada e arritmias cardíacas — perfil etiológico distinto do adulto jovem, em que a vasovagal clássica isolada predomina",
+        "origem_secao": "As causas mais prevalentes no idoso — e por que a abordagem estruturada funciona"
+      },
+      {
+        "id": "sinc-ido-nao-restringir-ilr-a-jovem",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Monitor de eventos implantável NÃO reservado apenas para paciente jovem com síncope recorrente — no idoso com queda/síncope inexplicada e sem diagnóstico após avaliação inicial, tem papel reconhecido justamente pela dificuldade de captar o evento por outros meios, na ausência de testemunha e de memória confiável",
+        "origem_secao": "Ferramentas diagnósticas em ascensão nesta população"
+      },
+      {
+        "id": "sinc-ido-romeo-antes-do-eco-de-rotina",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Antes de solicitar ecocardiograma transtorácico de rotina só por causa da síncope no paciente idoso, considerada a aplicação do escore ROMEO (1 ponto cada: insuficiência cardíaca congestiva, doença arterial coronariana, ECG anormal, troponina T de alta sensibilidade >14 pg/mL, NT-proBNP >125 pg/mL) — ROMEO = 0 tem valor preditivo negativo de 98,6% para achado ecocardiográfico clinicamente significativo, permitindo reduzir exame de baixo rendimento diagnóstico",
+        "origem_secao": "escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia.md — 'Como usar na prática'"
+      },
+      {
+        "id": "sinc-ido-diagnostico-definitivo-alcancavel",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ter em mente que abordagem diagnóstica padronizada obtém diagnóstico definitivo em mais de 90% dos pacientes idosos com síncope — a dificuldade desse cenário está na coleta da história (amnésia retrógrada, ausência de testemunha), não na inexistência de causa identificável",
+        "origem_secao": "As causas mais prevalentes no idoso — e por que a abordagem estruturada funciona"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026, por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem citados em source_refs, com a seção de origem registrada em cada item."
   }
 ]
