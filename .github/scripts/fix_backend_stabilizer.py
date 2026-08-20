@@ -3,6 +3,13 @@ from pathlib import Path
 path = Path(__file__).with_name("stabilize_product_backend.py")
 text = path.read_text(encoding="utf-8")
 
+# re.sub treats backslashes in a replacement string as escapes. Our generated
+# source intentionally contains literal \n sequences, so use a callback.
+text = text.replace(
+    "    new, count = re.subn(pattern, replacement, text, count=1, flags=re.S)\n",
+    "    new, count = re.subn(pattern, lambda _match: replacement, text, count=1, flags=re.S)\n",
+)
+
 # Current ResultadoEnvio has only (enviado, erro, assinado_smime), not provider/display fields.
 text = text.replace(
     "    '                False, conta.provider, conta.display_name, False,\\n'\n"
