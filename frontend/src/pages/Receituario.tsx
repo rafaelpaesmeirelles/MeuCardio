@@ -5,6 +5,7 @@ import { Carregando, Erro, Vazio } from "../components/Estado";
 import Icone from "../components/Icone";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
+import PrescricaoLivreEspecial from "../components/PrescricaoLivreEspecial";
 
 type PrecoCmedSugestao = { valor: number | null; rotulo: string };
 type Farmaco = {
@@ -125,6 +126,18 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
   const temC5 = doc.itens.some((item) => String(item.lista ?? "").toUpperCase() === "C5");
+  const provedoresPermitidos = doc.tipo === "RCE"
+    ? (provedores ?? []).filter((p) => ["MANUAL", "A1_ARQUIVO"].includes(p.codigo))
+    : (provedores ?? []);
+
+  useEffect(() => {
+    // RCE digital requer assinatura qualificada. Nesta tela, o caminho
+    // qualificado integrado e validado é o certificado A1 da própria conta.
+    if (doc.tipo === "RCE" && !["MANUAL", "A1_ARQUIVO"].includes(metodo)) {
+      const a1Disponivel = provedores?.some((p) => p.codigo === "A1_ARQUIVO" && p.disponivel);
+      setMetodo(a1Disponivel ? "A1_ARQUIVO" : "MANUAL");
+    }
+  }, [doc.tipo, metodo, provedores]);
 
   async function revisar() {
     setRevisando(true);
@@ -216,10 +229,16 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         </p>
       )}
       {doc.tipo === "RCE" && (
-        <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Modelo físico Anvisa V2: duas vias completas, com frente e verso para cada página
-          numerada da prescrição.
-        </p>
+        <>
+          <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
+            Modelo Anvisa V2: duas vias completas, com frente e verso para cada página
+            numerada da prescrição.
+          </p>
+          <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
+            Para emissão digital, use o certificado A1 ICP-Brasil conectado à sua conta.
+            Assinaturas avançadas sem certificado qualificado não são aceitas para controlados.
+          </p>
+        </>
       )}
       {temC5 && (
         <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
@@ -259,7 +278,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
           <label style={{ marginTop: "0.5rem" }}>Método de assinatura</label>
           <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
-            {(provedores ?? []).map((p) => (
+            {provedoresPermitidos.map((p) => (
               <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
                 {p.nome}{!p.disponivel ? " — indisponível" : ""}
               </option>
@@ -799,6 +818,8 @@ export default function Receituario() {
           Histórico
         </button>
       </div>
+
+      {aba === "nova" && !criado && <PrescricaoLivreEspecial showSignerQueue={false} />}
 
       {aba === "historico" ? (
         <HistoricoReceituario onAbrir={abrirDoHistorico} onRecriar={recriarDoHistorico} />

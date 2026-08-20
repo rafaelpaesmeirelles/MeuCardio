@@ -27,6 +27,33 @@ def test_natalia_lenira_podem_propria_e_rafael_wladmir_somente_rafael(db, criar_
     assert prescricao_especial._perfil_especial(db, wladmir)["permite_propria"] is False
 
 
+@pytest.mark.parametrize(
+    ("email", "nome", "perfil", "permite_propria"),
+    (
+        ("natalia@corvia.med.br", "Natália", "natalia", True),
+        ("lenira@corvia.med.br", "Lenira", "lenira", True),
+        ("wladmir@corvia.med.br", "Wladmir", "wladmir", False),
+    ),
+)
+def test_capacidades_de_digitacao_livre_por_login_estavel(
+    client, criar_usuario, email, nome, perfil, permite_propria,
+):
+    _, token = criar_usuario(email=email, full_name=nome)
+
+    resposta = client.get(
+        "/api/prescricao-especial/capacidades",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+
+    assert resposta.status_code == 200
+    assert resposta.json() == {
+        "enabled": True,
+        "allows_self": permite_propria,
+        "rafael_signer": False,
+        "profile": perfil,
+    }
+
+
 def test_rafael_resolve_somente_por_identidade_de_login_estavel(db, criar_usuario):
     rafael, _ = criar_usuario(
         email="rafael@cardiobeneribeirao.com.br",

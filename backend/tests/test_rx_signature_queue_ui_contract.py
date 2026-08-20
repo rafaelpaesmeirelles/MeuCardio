@@ -24,3 +24,21 @@ def test_dedicated_signature_queue_is_routed_and_in_both_navigation_surfaces():
     assert "usePrescriptionQueueBadge" in mobile
     assert "/prescricao-especial/pendentes" in badge
     assert "setInterval" in badge
+
+
+def test_authorized_users_free_text_prescription_is_exposed_in_global_receituario():
+    receituario = (ROOT / "frontend" / "src" / "pages" / "Receituario.tsx").read_text(encoding="utf-8")
+    composer = (ROOT / "frontend" / "src" / "components" / "PrescricaoLivreEspecial.tsx").read_text(encoding="utf-8")
+
+    assert 'import PrescricaoLivreEspecial from "../components/PrescricaoLivreEspecial"' in receituario
+    assert '<PrescricaoLivreEspecial showSignerQueue={false} />' in receituario
+    assert 'placeholder="Digite livremente a prescrição, posologia e orientações…"' in composer
+    assert '<option value="propria">Emitir com minhas credenciais</option>' in composer
+    assert "Emissão somente pelo Dr. Rafael." in composer
+
+
+def test_rce_ui_offers_manual_and_qualified_a1_without_advanced_signature():
+    receituario = (ROOT / "frontend" / "src" / "pages" / "Receituario.tsx").read_text(encoding="utf-8")
+
+    assert '["MANUAL", "A1_ARQUIVO"].includes(p.codigo)' in receituario
+    assert "Para emissão digital, use o certificado A1 ICP-Brasil" in receituario
