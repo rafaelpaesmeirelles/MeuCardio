@@ -5543,5 +5543,293 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "estratificacao-de-risco-pre-operatorio-com-rcri-gupta-mica-e-dasi",
+    "condicao": "Estratificação de risco cardiovascular pré-operatório com RCRI, Gupta MICA/NSQIP e capacidade funcional (DASI) em cirurgia não cardíaca",
+    "resumo": "Checklist do algoritmo escalonado de avaliação cardiovascular pré-operatória — quando estimar risco com RCRI ou Gupta MICA/NSQIP, quando avaliar capacidade funcional de forma estruturada pelo DASI, e quando (e por que) considerar biomarcador ou teste isquêmico adicional — derivado da diretriz AHA/ACC 2024, que recomenda investigação escalonada e evita exame cardiovascular indiscriminado.",
+    "documento_origem": "algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. PMID: 39316661. DOI: 10.1161/CIR.0000000000001285."
+    ],
+    "itens": [
+      {
+        "id": "risco-preop-emergencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se a cirurgia é emergente; se for, prosseguir diretamente para a cirurgia com manejo perioperatório apropriado, sem aguardar cálculo de escore de risco",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "risco-preop-condicao-ativa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se a cirurgia não for emergente, excluir condição cardiovascular ativa antes de aplicar qualquer escore: síndrome coronariana aguda, arritmia instável ou insuficiência cardíaca descompensada — se presente, tratar a condição aguda e discutir em equipe multidisciplinar adiar a cirurgia, alternativa não invasiva ou paliação",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "risco-preop-ferramenta-validada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Sem condição cardiovascular ativa: estimar o risco perioperatório com ferramenta validada — RCRI ou NSQIP/Gupta MICA",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "risco-preop-modificador",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Checar modificador de risco importante independente do valor numérico do escore: valvopatia grave, hipertensão pulmonar grave, cardiopatia congênita de alto risco, stent ou CABG prévio, AVC recente, dispositivo cardíaco implantável (CIED) ou fragilidade — se presente, encaminhar para avaliação em equipe conforme a condição específica",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "risco-preop-limiar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aplicar o limiar de risco elevado usado na diretriz: tradicionalmente RCRI >1 ou risco calculado de MACE >1% pela ferramenta perioperatória usada — interpretar sempre em conjunto com modificadores de risco, capacidade funcional e contexto cirúrgico, nunca isoladamente",
+        "origem_secao": "Limiar de risco usado na diretriz"
+      },
+      {
+        "id": "risco-preop-capacidade-funcional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se o risco calculado não for baixo (ou houver modificador de risco): avaliar capacidade funcional de forma estruturada, preferencialmente pelo DASI, em cirurgia de risco elevado — capacidade funcional ruim é definida como DASI ≤34 ou capacidade estimada <4 METs",
+        "origem_secao": "Capacidade funcional"
+      },
+      {
+        "id": "risco-preop-prosseguir-dasi-adequado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se DASI >34 / capacidade funcional adequada: em geral prosseguir para a cirurgia; testes adicionais apenas se indicados fora do contexto cirúrgico",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "risco-preop-biomarcador",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se DASI ≤34 ou capacidade funcional desconhecida e um teste adicional puder mudar a decisão ou o manejo: solicitar BNP/NT-proBNP pré-operatório (razoável) e considerar troponina em paciente com doença cardiovascular conhecida, idade ≥65 anos, ou idade ≥45 anos com sintomas sugestivos — considerar anormal troponina acima do percentil 99 do limite superior de referência do ensaio, BNP >92 ng/L ou NT-proBNP ≥300 ng/L",
+        "origem_secao": "Biomarcadores"
+      },
+      {
+        "id": "risco-preop-teste-adicional-condicionado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se biomarcador anormal ou dúvida clínica relevante persistir: considerar teste isquêmico ou angiotomografia coronária (CCTA) apenas quando o resultado tiver potencial real de mudar a conduta — nunca como rotina",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "risco-preop-nao-rotina",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não solicitar teste de estresse/isquêmico de rotina em paciente de baixo risco, com boa capacidade funcional ou submetido a procedimento de baixo risco — o objetivo da avaliação pré-operatória não é 'liberar' o paciente por meio de uma bateria de exames",
+        "origem_secao": "Quando NÃO pedir teste isquêmico de rotina"
+      },
+      {
+        "id": "risco-preop-revascularizacao",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se o teste mostrar anatomia coronária de alto risco / isquemia relevante: discutir em equipe multidisciplinar revascularização (indicada apenas quando já haveria indicação independentemente da cirurgia), adiamento da cirurgia ou estratégia alternativa",
+        "origem_secao": "Árvore de decisão"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado (AHA/ACC 2024, PMID 39316661), com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "manejo-perioperatorio-de-anticoagulante-e-antiagregante-suspensao-e-reinicio",
+    "condicao": "Manejo perioperatório de anticoagulante oral e de antiagregante plaquetário (DAPT pós-stent) — quando suspender, quando fazer ponte e quando retomar",
+    "resumo": "Checklist de decisão para paciente anticoagulado (DOAC ou varfarina) e/ou em uso de antiagregante após stent coronário candidato a cirurgia não cardíaca — quando interromper sem ponte de rotina, os cenários de risco trombótico muito alto que justificam ponte individualizada, o tempo mínimo de espera após implante de stent conforme indicação da PCI, e a janela farmacológica de suspensão/reinício do inibidor de P2Y12 — derivado da diretriz AHA/ACC 2024.",
+    "documento_origem": "anticoagulacao-ponte-heparina-preoperatorio-arvore-aha-acc-2024",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. PMID: 39316661. DOI: 10.1161/CIR.0000000000001285."
+    ],
+    "itens": [
+      {
+        "id": "antitromb-preop-caracterizar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar o anticoagulante ou antiagregante em uso, a indicação clínica, a função renal, o risco hemorrágico do procedimento e a urgência da cirurgia antes de qualquer decisão de suspensão",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "antitromb-preop-manter-se-possivel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Verificar se o procedimento pode ser realizado sem interromper a anticoagulação — se sim, manter conforme protocolo do procedimento e da estratégia anestésica",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "antitromb-preop-doac-avk-ponte-nao-rotina",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Para a maioria dos pacientes em uso de DOAC ou varfarina que precisam interromper para o procedimento: NÃO fazer ponte de rotina com heparina — a ponte pode causar dano por aumentar sangramento e deve ser reservada para risco trombótico muito alto",
+        "origem_secao": "Regra central da diretriz"
+      },
+      {
+        "id": "antitromb-preop-risco-tromboembolico-muito-alto",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Checar se o paciente se enquadra numa das situações de risco trombótico muito alto citadas explicitamente pela diretriz, em que ponte individualizada com HNF/HBPM pode reduzir risco tromboembólico e deve ser considerada: prótese valvar mecânica mitral, trombo de ventrículo esquerdo nos últimos 3 meses, ou fibrilação atrial com AVC recente",
+        "origem_secao": "Regra central da diretriz"
+      },
+      {
+        "id": "antitromb-preop-doac-vs-avk",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Diferenciar a estratégia pelo fármaco: DOAC tem meia-vida relativamente curta e em geral não necessita ponte, com a função renal especialmente relevante para a duração do efeito; varfarina exige tempo maior para redução e recuperação do efeito anticoagulante — os intervalos exatos devem ser definidos pelo fármaco, clearance renal e risco hemorrágico do procedimento, sem janela universal para todos os anticoagulantes",
+        "origem_secao": "DOAC versus varfarina"
+      },
+      {
+        "id": "antitromb-preop-pci-caracterizar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se o paciente tem PCI prévia: confirmar a data, a indicação da PCI (síndrome coronariana aguda ou doença coronária crônica), o tipo de intervenção (angioplastia por balão sem stent, stent metálico/BMS ou stent farmacológico/DES) e quais antiagregantes estão em uso — o simples rótulo 'tem stent' é insuficiente para decidir",
+        "origem_secao": "Cirurgia não cardíaca após PCI"
+      },
+      {
+        "id": "antitromb-preop-pci-janela-30-dias",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Cirurgia eletiva que exija interrupção de aspirina ou de inibidor de P2Y12 em paciente com qualquer stent (BMS ou DES) implantado há ≤30 dias é considerada potencialmente danosa pelo alto risco de trombose de stent e complicações isquêmicas — adiar se clinicamente possível",
+        "origem_secao": "Primeiros 30 dias após qualquer stent"
+      },
+      {
+        "id": "antitromb-preop-pci-janela-des-sca-vs-ccd",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Após os primeiros 30 dias, diferenciar pela indicação do DES: se implantado por síndrome coronariana aguda, preferir adiar cirurgia eletiva com interrupção de antiagregante por ≥12 meses; se implantado por doença coronária crônica, por ≥6 meses; em cirurgia tempo-sensível, considerar a partir de ≥3 meses em pacientes selecionados, após ponderar risco de MACE contra a consequência de adiar",
+        "origem_secao": "Timing recomendado pela AHA/ACC 2024"
+      },
+      {
+        "id": "antitromb-preop-manter-aas",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em paciente com PCI prévia, manter aspirina 75-100 mg durante todo o perioperatório sempre que possível, para reduzir eventos cardíacos",
+        "origem_secao": "Continuação de aspirina e DAPT"
+      },
+      {
+        "id": "antitromb-preop-janela-p2y12",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se o inibidor de P2Y12 precisar ser interrompido, respeitar o tempo mínimo até a recuperação da função plaquetária: clopidogrel 5-7 dias, prasugrel 7-10 dias, ticagrelor 3-5 dias — a janela farmacológica só se aplica depois de decidido que a interrupção é aceitável, nunca como ordem automática de suspender",
+        "origem_secao": "Tempo mínimo aproximado após interrupção para recuperação plaquetária"
+      },
+      {
+        "id": "antitromb-preop-reinicio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "No pós-operatório, confirmar hemostasia adequada antes de reiniciar a anticoagulação; se a hemostasia não estiver adequada, adiar o reinício e reavaliar o sangramento",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "antitromb-preop-encaminhar-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para discussão com especialista/equipe multidisciplinar nas situações de maior complexidade do anticoagulante: prótese mecânica, trombo intracardíaco recente, AVC/tromboembolismo recente, múltiplos fatores de alto risco trombótico, insuficiência renal avançada em uso de DOAC, cirurgia com risco hemorrágico muito alto, anestesia neuraxial, ou cirurgia urgente que não permite aguardar a eliminação do anticoagulante",
+        "origem_secao": "Situações que merecem especialista/equipe multidisciplinar"
+      },
+      {
+        "id": "antitromb-preop-pci-encaminhar-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para discussão multidisciplinar quando o cenário envolver PCI de maior complexidade: cirurgia oncológica ou outra cirurgia tempo-sensível, PCI recente por infarto/síndrome coronariana aguda, PCI complexa, necessidade de interromper DAPT precocemente, cirurgia com risco hemorrágico catastrófico, histórico de trombose de stent, ou impossibilidade de recuperar os detalhes da PCI anterior",
+        "origem_secao": "Situações que exigem discussão multidisciplinar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens sintetizam dois documentos técnicos da mesma pasta que compartilham a mesma citação primária (AHA/ACC 2024, PMID 39316661): 'anticoagulacao-ponte-heparina-preoperatorio-arvore-aha-acc-2024' (documento de origem, itens de anticoagulante oral) e 'pci-stent-dapt-timing-cirurgia-nao-cardiaca-arvore-aha-acc-2024' (itens de stent/DAPT), com a seção de origem exata registrada em cada item."
+  },
+  {
+    "slug": "manejo-perioperatorio-de-betabloqueador-estatina-isglt2-e-ieca-bra-em-uso-cronico",
+    "condicao": "Manejo perioperatório das medicações cardiovasculares crônicas em uso — betabloqueador, estatina, inibidor de SGLT2 e IECA/BRA — antes de cirurgia não cardíaca",
+    "resumo": "Checklist para decidir, fármaco a fármaco, o que manter, o que suspender temporariamente e o que não iniciar apenas por causa da cirurgia — betabloqueador, estatina, inibidor de SGLT2 e bloqueador do SRAA (IECA/BRA) — derivado das diretrizes SBC 2024 e AHA/ACC 2024, distinguindo uso crônico já estabelecido de início novo motivado só pelo procedimento.",
+    "documento_origem": "manejo-medicacoes-cardiovasculares-perioperatorio",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590.",
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. PMID: 39316661. DOI: 10.1161/CIR.0000000000001285."
+    ],
+    "itens": [
+      {
+        "id": "medcronica-preop-betabloqueador-manter",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador em uso crônico: MANTER no perioperatório, sem suspender de rotina — SBC 2024, Classe I, nível B",
+        "origem_secao": "Betabloqueadores"
+      },
+      {
+        "id": "medcronica-preop-betabloqueador-nao-iniciar",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Paciente sem uso prévio de betabloqueador: NÃO iniciar no intervalo de até 7 dias antes da cirurgia apenas por causa do procedimento — SBC 2024, Classe III, nível B; início agudo, em dose fixa e sem titulação, foi o padrão associado a dano em ensaio randomizado de larga escala",
+        "origem_secao": "Betabloqueadores"
+      },
+      {
+        "id": "medcronica-preop-betabloqueador-nova-indicacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se houver nova indicação clínica de betabloqueador independente da cirurgia: iniciar e titular com antecedência suficiente para avaliar tolerância — idealmente mais de 7 dias antes do procedimento — nunca no dia da cirurgia",
+        "origem_secao": "Betabloqueadores"
+      },
+      {
+        "id": "medcronica-preop-estatina-manter",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estatina em uso crônico: MANTER no perioperatório — SBC 2024, Classe I, nível B",
+        "origem_secao": "Estatinas"
+      },
+      {
+        "id": "medcronica-preop-estatina-vascular",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Cirurgia vascular arterial, mesmo sem uso prévio de estatina: SBC 2024 recomenda iniciar — Classe I, nível A",
+        "origem_secao": "Estatinas"
+      },
+      {
+        "id": "medcronica-preop-estatina-indicacao-independente",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Cirurgia não vascular com indicação clínica independente de estatina (doença arterial coronariana, doença cerebrovascular, doença arterial periférica ou diabetes): considerar iniciar conforme prevenção cardiovascular de longo prazo — SBC 2024, Classe IIa, nível C; não introduzir de rotina para toda cirurgia não vascular sem indicação clínica própria",
+        "origem_secao": "Estatinas"
+      },
+      {
+        "id": "medcronica-preop-sglt2-suspender",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de SGLT2 em uso (por diabetes e/ou insuficiência cardíaca): SUSPENDER 3-4 dias antes de cirurgia planejada, para reduzir o risco de acidose metabólica/cetoacidose euglicêmica perioperatória — AHA/ACC 2024, Classe I; reintrodução no pós-operatório deve considerar estabilidade clínica e metabólica",
+        "origem_secao": "Inibidores de SGLT2"
+      },
+      {
+        "id": "medcronica-preop-ieca-bra-has-alto-risco",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "IECA/BRA/outro bloqueador do SRAA em paciente com hipertensão controlada submetido a cirurgia de risco elevado: omitir a dose 24 horas antes pode reduzir hipotensão intraoperatória — AHA/ACC 2024",
+        "origem_secao": "IECA/BRA e outros bloqueadores do SRAA"
+      },
+      {
+        "id": "medcronica-preop-ieca-bra-icfer",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "IECA/BRA como parte do tratamento de insuficiência cardíaca com fração de ejeção reduzida (ICFEr): a continuação perioperatória é razoável — AHA/ACC 2024",
+        "origem_secao": "IECA/BRA e outros bloqueadores do SRAA"
+      },
+      {
+        "id": "medcronica-preop-ieca-bra-individualizar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fora desses dois cenários (HAS controlada em cirurgia de risco elevado / ICFEr): individualizar a decisão de manter versus suspender IECA/BRA, ponderando risco de hipotensão contra perda do benefício clínico — SBC 2024 registra que a evidência para manter versus suspender não é definitiva, com atenção à reintrodução no pós-operatório",
+        "origem_secao": "IECA/BRA e outros bloqueadores do SRAA"
+      },
+      {
+        "id": "medcronica-preop-registrar-por-que",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Para cada medicação cardiovascular crônica revisada no formulário pré-operatório, registrar não apenas 'qual medicamento o paciente usa', mas também 'por que ele usa' — a mesma classe farmacológica pode ter conduta diferente conforme a indicação",
+        "origem_secao": "Regra prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado (SBC 2024 e AHA/ACC 2024), com a seção de origem registrada em cada item."
   }
 ]
