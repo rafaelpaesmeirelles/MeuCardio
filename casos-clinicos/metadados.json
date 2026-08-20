@@ -15426,5 +15426,127 @@
       "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "partner-2a-10-anos-risco-intermediario-tavi-vs-cirurgia",
+    "titulo": "Estenose aórtica de risco intermediário: o que os 10 anos do PARTNER 2A ensinam sobre via de acesso",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 74 anos, estenose aórtica grave sintomática, STS score 5,5% (risco cirúrgico intermediário). Discute-se em Heart Team a escolha entre TAVI e cirurgia (SAVR). O paciente pergunta sobre a durabilidade e a sobrevida de longo prazo de cada opção, citando ter lido sobre um estudo com 10 anos de seguimento. A equipe avalia o acesso vascular do paciente: ilíacas e femorais de bom calibre, sem tortuosidade relevante, permitindo abordagem transfemoral (TF) caso a TAVI seja escolhida.",
+    "pergunta": "Com base no seguimento de 10 anos do PARTNER 2A (risco intermediário), qual afirmação está correta?",
+    "opcoes": [
+      "Em 10 anos, a mortalidade por qualquer causa foi maior no grupo TAVI (86,1% vs. 82,8%; HR 1,13; p=0,02), mas essa diferença não foi significativa no subgrupo transfemoral (83,9% vs. 82,1%; p=0,27) — concentrando-se na via transapical/transaórtica",
+      "Em 10 anos, a mortalidade foi idêntica entre TAVI e cirurgia em todos os subgrupos de acesso, e a reintervenção da valva foi mais frequente no grupo cirúrgico",
+      "O PARTNER 2A usou a prótese SAPIEN 3 (geração atual), o que torna o resultado diretamente extrapolável para a prática de TAVI transfemoral contemporânea em baixo risco",
+      "A reintervenção da valva aórtica em 10 anos foi semelhante entre os grupos (em torno de 2% em ambos), não sustentando maior preocupação com durabilidade no braço TAVI"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PARTNER 2A (Thourani VH et al., J Am Coll Cardiol. 2026;87(23):3309-3321, PMID 42300821), primeiro ensaio randomizado de TAVI a completar 10 anos de seguimento, randomizou 1.910 pacientes de risco intermediário (STS médio 5,8%) para TAVI com a prótese SAPIEN XT (976 TAVI, 76,9% por via transfemoral) ou cirurgia. Em 10 anos, a mortalidade por qualquer causa foi 86,1% no grupo TAVI vs. 82,8% no grupo cirúrgico (HR 1,13; IC95% 1,02-1,25; p=0,02) — porém, ao estratificar por via de acesso, essa diferença NÃO foi significativa no subgrupo transfemoral (83,9% vs. 82,1%; p=0,27), concentrando-se no subgrupo transapical/transaórtico (93,2% vs. 85,1%; p<0,01; p de interação=0,03), que é justamente o cenário deste paciente com acesso femoral favorável — a opção A está correta. A opção B inverte o achado: a mortalidade NÃO foi idêntica entre os grupos no agregado (houve diferença significativa global), e a reintervenção foi mais frequente no braço TAVI (6,3%), não no cirúrgico (1,6%) — o texto-fonte é explícito nesse número (p<0,001). A opção C erra o dado técnico central do estudo: a prótese testada foi a SAPIEN XT, uma geração ANTERIOR à SAPIEN 3 usada nos ensaios atuais de baixo risco (PARTNER 3, Evolut Low Risk) — o próprio documento-fonte alerta explicitamente contra extrapolar este resultado para a prática de TAVI transfemoral com prótese de geração atual, exatamente o erro que essa opção comete. A opção D distorce o número de reintervenção: não foi 'em torno de 2% em ambos' — foi 6,3% (TAVI) vs. 1,6% (cirurgia), uma diferença de quase 4 vezes, não uma equivalência.",
+    "source_refs": [
+      "Thourani VH, von Stein P, Mack MJ, et al; PARTNER 2 Investigators. 10-Year Randomized Outcomes of Transcatheter or Surgical Aortic Valve Replacement in Intermediate-Risk Aortic Stenosis. J Am Coll Cardiol. 2026;87(23):3309-3321. DOI: 10.1016/j.jacc.2026.03.169. PMID: 42300821. NCT01314313 — abstract completo conferido no PubMed em 08/08/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trombose-de-protese-mecanica-obstrutiva-fibrinolise-ou-cirurgia",
+    "titulo": "Trombose de prótese valvar mecânica mitral: fibrinólise ou cirurgia?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 52 anos, prótese mecânica mitral implantada há 6 anos, chega ao pronto-socorro com dispneia progressiva há 3 dias, sem instabilidade hemodinâmica franca. Refere ter interrompido a varfarina por conta própria há cerca de 3 semanas, sem substituição por outro anticoagulante. Ecocardiograma transtorácico e transesofágico confirmam trombose obstrutiva da prótese mitral, com gradiente elevado. A equipe de cirurgia cardíaca está disponível e pode operar prontamente. A paciente não está criticamente enferma no momento da avaliação.",
+    "pergunta": "Diante de trombose obstrutiva de prótese mecânica, com anticoagulação recente claramente inadequada (suspensão da varfarina) e paciente não criticamente enferma, qual é a conduta inicial recomendada pela diretriz ESC/EACTS 2021?",
+    "opcoes": [
+      "Como a causa provável é a anticoagulação subterapêutica recente e a paciente não está criticamente enferma, iniciar heparina não fracionada intravenosa (associada ou não a AAS) e reavaliar sucesso ou falha, antes de indicar fibrinólise ou cirurgia de imediato",
+      "Cirurgia de emergência é a única conduta aceitável, já que se trata de prótese mecânica trombosada, independentemente de instabilidade hemodinâmica ou causa identificável",
+      "Fibrinólise é sempre a primeira escolha em prótese mecânica trombosada, por ser menos invasiva que a cirurgia, com eficácia equivalente e sem diferença relevante em complicações",
+      "Como a cirurgia está prontamente disponível, ela deve ser indicada imediatamente, sem investigar a causa da trombose, pois a diretriz não distingue esse cenário de causa identificável"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A diretriz ESC/EACTS 2021 (Vahanian A et al., Eur Heart J. 2022;43(7):561-632, seção 11.4.4 e Figura 10) separa a árvore de decisão da trombose obstrutiva em ramos distintos conforme o estado clínico e a causa provável. Para o paciente NÃO criticamente enfermo em que a anticoagulação recente foi claramente inadequada (como esta paciente, que suspendeu a varfarina por conta própria há 3 semanas), a conduta recomendada é heparina não fracionada intravenosa ± AAS, com reavaliação de sucesso ou falha — só se essa otimização falhar é que se decide entre fibrinólise e cirurgia. A opção A está correta e reflete exatamente esse ramo específico da árvore. A opção B erra porque a diretriz reserva a cirurgia de emergência para o paciente CRITICAMENTE ENFERMO (instabilidade hemodinâmica) — que não é o caso desta paciente; fora dessa situação, a decisão é individualizada, não automática. A opção C inverte o que os dados de Roudaut et al. (Arch Cardiovasc Dis 2009, PMID 19427604, citados pela própria diretriz) mostram: em 263 episódios de obstrução protética, a mortalidade precoce foi igual entre cirurgia e fibrinólise (10% em ambas), mas o sucesso hemodinâmico foi maior com cirurgia (89% vs. 70,9%) e as complicações embólicas foram muito menores (0,7% vs. 15%) — a fibrinólise NÃO tem eficácia equivalente nem é a primeira escolha padrão na posição esquerda quando a cirurgia está disponível; ela é reservada para quando a cirurgia é indisponível ou de risco muito alto. A opção D também está errada porque a diretriz distingue explicitamente o cenário de anticoagulação subterapêutica recente identificável, que pode responder à simples otimização com heparina intravenosa, sem exigir intervenção imediata — ignorar essa investigação é listado como armadilha clínica no próprio documento-fonte.",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — seção 11.4.4 (Thrombosis) e Figura 10, texto integral obtido e conferido em 11/08/2026.",
+      "Roudaut R, Lafitte S, Roudaut MF, et al. Management of prosthetic heart valve obstruction: fibrinolysis versus surgery. Arch Cardiovasc Dis. 2009;102(4):269-77. DOI: 10.1016/j.acvd.2009.01.007. PMID: 19427604 — abstract conferido via PubMed E-utilities em 11/08/2026, fonte-base citada pela própria diretriz ESC/EACTS 2021 para a recomendação de fibrinólise versus cirurgia."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-sintomatica-beneficio-da-digoxina-dig-rhd",
+    "titulo": "Cardiopatia reumática sintomática: a digoxina reduz morte ou piora de insuficiência cardíaca?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 44 anos, cardiopatia reumática com dupla lesão mitral (estenose moderada a grave associada a regurgitação), fibrilação atrial crônica e classe funcional NYHA II-III, em acompanhamento em serviço de referência. Já em uso de anticoagulante oral e diurético em dose otimizada, permanece sintomática. O cardiologista assistente pergunta se há evidência randomizada, contemporânea e específica de cardiopatia reumática (não extrapolada de outras causas de insuficiência cardíaca) para justificar a adição de digoxina ao esquema.",
+    "pergunta": "De acordo com o ensaio Dig-RHD (JAMA, 2026), qual das afirmações abaixo descreve corretamente o resultado do estudo?",
+    "opcoes": [
+      "A digoxina reduziu o desfecho composto de morte por qualquer causa ou nova/piora de insuficiência cardíaca (HR 0,82; IC95% 0,70-0,97; p=0,02), impulsionado principalmente pela redução de nova/piora de IC, sem redução demonstrada de mortalidade isolada",
+      "A digoxina reduziu significativamente a mortalidade por qualquer causa isoladamente (HR 0,82; IC95% 0,70-0,97; p=0,02), o que justifica sua indicação prioritária mesmo sem impacto sobre desfechos de insuficiência cardíaca",
+      "O ensaio não encontrou benefício da digoxina em nenhum desfecho avaliado, e a suspensão por toxicidade foi proibitivamente alta, inviabilizando o uso do fármaco nessa população",
+      "O benefício da digoxina só foi demonstrado — com significância estatística confirmada por análise de interação pré-especificada — no subgrupo de pacientes em fibrilação atrial, não se aplicando a pacientes em ritmo sinusal"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Dig-RHD (Karthikeyan G et al., JAMA. 2026;335(23):2020-2028, PMID 42106990) randomizou 1.769 pacientes com cardiopatia reumática sintomática (1:1, digoxina vs. placebo) em 12 hospitais terciários da Índia. Após seguimento mediano de 2,1 anos, o desfecho composto (morte por qualquer causa ou nova/piora de IC) ocorreu em 31,4% do grupo digoxina vs. 35,5% do placebo (HR 0,82; IC95% 0,70-0,97; p=0,02) — redução relativa de cerca de 18%, impulsionada principalmente pela redução de nova/piora de insuficiência cardíaca (25,8% vs. 29,2%; HR 0,82; IC95% 0,69-0,98). A mortalidade por qualquer causa, isoladamente, NÃO foi reduzida de forma significativa (10,0% vs. 10,4%; HR 0,94; IC95% 0,70-1,26) — a opção A reflete corretamente essa distinção, central ao resultado do estudo. A opção B inverte exatamente esse ponto: atribui à mortalidade isolada o HR (0,82) que na verdade pertence ao desfecho COMPOSTO. A opção C contraria os números diretamente: houve benefício estatisticamente significativo no desfecho composto e a suspensão por toxicidade foi de apenas 1,1% no grupo digoxina — uma frequência absoluta baixa, não proibitiva. A opção D erra de duas formas: o próprio documento-fonte adverte explicitamente que, apesar de 70% dos participantes terem fibrilação atrial e haver sinal de benefício potencialmente maior nesse subgrupo, o ensaio 'não foi dimensionado para provar interação definitiva por ritmo basal' — ou seja, não há confirmação estatística de interação.",
+    "source_refs": [
+      "Karthikeyan G, Devasenapathy N, Ghosh A, et al.; Dig-RHD Investigators. Digoxin in Patients With Symptomatic Rheumatic Heart Disease: A Randomized Clinical Trial. JAMA. 2026;335(23):2020-2028. DOI: 10.1001/jama.2026.7335. PMID: 42106990. CTRI/2021/04/032858."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "isquemia-aguda-de-membro-perda-sensitiva-alem-dos-artelhos-rutherford-iib",
+    "titulo": "Perna fria e dolorosa há 4 horas, com perda sensitiva além dos artelhos: qual categoria de Rutherford e qual a urgência?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, fibrilação atrial sem anticoagulação regular, chega ao pronto-socorro com dor súbita e intensa na perna esquerda iniciada há cerca de 4 horas. Ao exame, o pé está frio e pálido, com perda de sensibilidade que se estende do tornozelo até o antepé (além dos artelhos) e fraqueza leve à dorsiflexão do hálux, sem paralisia completa. O Doppler não detecta sinal arterial no trajeto tibial, mas o sinal venoso continua audível. A equipe de emergência discute se há tempo para investigação de imagem antes de acionar a equipe vascular.",
+    "pergunta": "Pela classificação de Rutherford para isquemia aguda de membro, em que categoria este quadro se enquadra e qual a conduta que essa categoria determina?",
+    "opcoes": [
+      "Categoria I (viável) — há tempo para investigação de imagem não invasiva antes de decidir a via de revascularização",
+      "Categoria IIa (marginalmente ameaçado) — revascularização pronta, mas não necessariamente na primeira hora, com tempo para avaliar comorbidades",
+      "Categoria IIb (imediatamente ameaçado) — revascularização imediata, sem tempo para investigação extensa",
+      "Categoria III (irreversível) — amputação primária, pois a revascularização arrisca síndrome de reperfusão fatal"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Pela classificação de Rutherford para isquemia aguda de membro (Olinic DM et al., J Clin Med 2019;8(8):1215, PMID 31416204), a categoria IIb — imediatamente ameaçado — é definida por perda sensitiva que vai ALÉM dos artelhos, associada a fraqueza muscular leve a moderada, com Doppler arterial tipicamente inaudível e Doppler venoso ainda audível; o prognóstico é 'salvável apenas com revascularização imediata', e a conduta é revascularização imediata, sem tempo para investigação extensa — é exatamente o quadro descrito. A opção I está errada porque a categoria I (viável) não tem perda sensitiva nem fraqueza muscular, e o Doppler arterial é audível. A opção IIa está errada porque essa categoria exige perda sensitiva MÍNIMA, restrita aos artelhos, e SEM fraqueza muscular — o enunciado descreve perda sensitiva que ultrapassa os artelhos e fraqueza presente, o que já caracteriza IIb, não IIa. A opção III está errada porque a categoria III (irreversível) exige anestesia PROFUNDA, paralisia com RIGIDEZ muscular e ausência de sinal Doppler tanto arterial QUANTO VENOSO — no caso descrito o Doppler venoso continua audível e a fraqueza é apenas leve, sem rigidez, incompatível com dano tecidual já consumado.",
+    "source_refs": [
+      "Olinic DM, Stanek A, Tătaru DA, Homorodean C, Olinic M. Acute Limb Ischemia: An Update on Diagnosis and Management. Journal of Clinical Medicine. 2019;8(8):1215. DOI: 10.3390/jcm8081215. PMID: 31416204"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "isquemia-cronica-ameacadora-de-membro-infrapopliteo-bypass-ou-endovascular-primeiro-basil-2",
+    "titulo": "CLTI com necessidade de revascularização infrapoplítea: bypass venoso ou estratégia endovascular como primeira escolha?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 74 anos, diabético, com isquemia crônica que ameaça o membro (dor isquêmica em repouso e pequena úlcera no calcanhar), tem doença arterial restrita ao território infrapoplíteo, exigindo revascularização abaixo do joelho (com ou sem um procedimento infrainguinal mais proximal adicional). A equipe vascular discute se deve oferecer bypass venoso como primeira estratégia ou tentar primeiro a melhor opção endovascular disponível, reservando a cirurgia para falha do procedimento percutâneo.",
+    "pergunta": "De acordo com o ensaio BASIL-2 (revascularização infrapoplítea na CLTI), qual estratégia inicial produziu melhor sobrevida livre de amputação, e o que impulsionou essa diferença?",
+    "opcoes": [
+      "Bypass venoso foi superior ao endovascular na sobrevida livre de amputação, repetindo o achado do BEST-CLI para esta mesma população",
+      "As duas estratégias foram equivalentes, sem diferença estatística em amputação maior ou morte, semelhante ao BASIL original de 2005",
+      "Estratégia endovascular-first foi superior na sobrevida livre de amputação (63% vs. 53% de amputação maior ou morte; HR ajustado 1,35; IC95% 1,02-1,80; P=0,037), impulsionada predominantemente por maior mortalidade no grupo bypass",
+      "Estratégia endovascular-first foi superior porque reduziu de forma isoladamente significativa a taxa de amputação maior, sem diferença de mortalidade entre os grupos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O BASIL-2 (Bradbury AW et al., Lancet 2023;401(10390):1798-1809, PMID 37116524) randomizou 345 pacientes com CLTI que necessitavam revascularização infrapoplítea para bypass venoso primeiro (n=172) ou melhor tratamento endovascular primeiro (n=173). O desfecho primário — amputação maior acima do tornozelo ou morte por qualquer causa — ocorreu em 63% do grupo bypass contra 53% do grupo endovascular (HR ajustado 1,35; IC95% 1,02-1,80; P=0,037), favorecendo a estratégia endovascular-first. O documento-fonte é explícito que essa diferença foi impulsionada PREDOMINANTEMENTE por maior mortalidade no grupo bypass (53% vs. 45%; HR ajustado 1,37; IC95% 1,00-1,87), não por uma diferença isoladamente dominante em amputações — o que torna a opção D (que atribui a diferença só à amputação, sem diferença de mortalidade) uma leitura invertida do resultado real. A opção A está errada porque inverte o resultado: no BEST-CLI, que estudou pacientes com boa veia safena e anatomia apropriada, o bypass teve menos eventos; o BASIL-2 selecionou pacientes com necessidade de revascularização ABAIXO do joelho e encontrou o oposto — os dois ensaios estudaram populações e territórios distintos. A opção B confunde o BASIL-2 com o BASIL original de 2005 (sem diferença significativa aos 6 meses) — o BASIL-2 encontrou diferença estatisticamente significativa (P=0,037), não equivalência.",
+    "source_refs": [
+      "Bradbury AW, Moakes CA, Popplewell M, et al. A vein bypass first versus a best endovascular treatment first revascularisation strategy for patients with chronic limb threatening ischaemia who required an infra-popliteal revascularisation procedure (BASIL-2): an open-label, randomised, multicentre, phase 3 trial. Lancet. 2023;401(10390):1798-1809. DOI: 10.1016/S0140-6736(23)00462-2. PMID: 37116524. ISRCTN27728689."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-de-arteria-poplitea-assintomatico-de-2-4-cm-o-que-a-evidencia-comparativa-sustenta",
+    "titulo": "Aneurisma de artéria poplítea assintomático de 2,4 cm: o que a evidência comparativa realmente sustenta sobre reparo aberto versus endovascular?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Homem, 66 anos, assintomático, tem um aneurisma de artéria poplítea de 2,4 cm identificado em ultrassom de rotina, sem trombo mural extenso nem sinais de embolização distal. Diante da indicação de reparo eletivo, ele pergunta ao cardiologista se a cirurgia aberta ou o tratamento endovascular tem resultado comprovadamente melhor a longo prazo, tendo lido on-line que um dos dois métodos seria \"claramente superior\".",
+    "pergunta": "Segundo a revisão sistemática Cochrane (Joshi et al., 2019), que reanalisa o único ensaio clínico randomizado disponível comparando reparo aberto e endovascular do aneurisma de artéria poplítea assintomático (Antonello et al., 2005), qual afirmação é sustentada pelo texto?",
+    "opcoes": [
+      "A patência primária em 1 ano foi numericamente maior no reparo aberto (100%) que no endovascular (93,3%), mas a diferença não foi estatisticamente significativa (RR 0,94; IC95% 0,78-1,12), com certeza da evidência classificada como moderada",
+      "O reparo endovascular demonstrou superioridade estatisticamente significativa na patência primária em 4 anos, justificando sua preferência como estratégia inicial",
+      "A revisão Cochrane incorporou vários ensaios randomizados publicados desde 2014, todos favorecendo consistentemente o reparo endovascular",
+      "O tempo de internação hospitalar foi menor no reparo aberto, refletindo menor morbidade perioperatória dessa estratégia em comparação ao endovascular"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A revisão Cochrane (Joshi D et al., Cochrane Database Syst Rev. 2019;12(12):CD010149, PMID 31868929), que reanalisa o único ensaio disponível (Antonello M et al., J Vasc Surg 2005;42(2):185-93, PMID 16102611 — 30 aneurismas em 30 pacientes, randomizados 1:1), reporta patência primária em 1 ano de 93,3% no braço endovascular contra 100% no braço de cirurgia aberta, com RR 0,94 (IC95% 0,78-1,12) e certeza da evidência classificada como MODERADA pelo GRADE — um intervalo de confiança que cruza 1 significa que, apesar da diferença numérica aparente, NÃO há diferença estatisticamente significativa. A opção B está errada porque, em 4 anos, a própria revisão descreve 'sem evidência clara de diferença' entre os grupos (RR 1,00; IC95% 0,76-1,32). A opção C está errada porque o documento-fonte é explícito que a revisão Cochrane 'não encontrou nenhum estudo novo desde a versão anterior da revisão (2014)' — a evidência direta comparativa continua limitada a um único ensaio pequeno, unicêntrico. A opção D inverte o achado: o tempo de internação foi MENOR no braço endovascular (4,3 dias) que no aberto (7,7 dias) — a vantagem processual é do endovascular, não do reparo aberto.",
+    "source_refs": [
+      "Joshi D, Gupta Y, Ganai B, Mortensen C. Endovascular versus open repair of asymptomatic popliteal artery aneurysm. Cochrane Database Syst Rev. 2019;12(12):CD010149. PMID 31868929. DOI 10.1002/14651858.CD010149.pub3",
+      "Antonello M, Frigatti P, Battocchio P, et al. Open repair versus endovascular treatment for asymptomatic popliteal artery aneurysm: results of a prospective randomized study. J Vasc Surg. 2005;42(2):185-93. PMID 16102611. DOI 10.1016/j.jvs.2005.04.049"
+    ],
+    "review_status": "revisado"
   }
 ]
