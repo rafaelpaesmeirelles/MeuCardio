@@ -42,24 +42,6 @@ replace_once(
     '''        assert 'to: "/corvia-mail", label: "CorVIA Mail"' in src\n        assert 'to: "/caixa-de-email", label: "CorVIA Mail"' not in src\n''',
 )
 
-# Explicit S/MIME requests fail first on missing A1; profile preference alone
-# still does not block native Mail360 delivery of the already PAdES-signed PDF.
-replace_once(
-    "backend/app/services/envio_documento_email.py",
-    '''    integracao = _integracao_padrao_externa(db, user)\n\n    if integracao is None:\n''',
-    '''    integracao = _integracao_padrao_externa(db, user)\n    certificado = certificado_a1.obter(db, user) if (assinar_smime or user.email_assinatura_digital_ativa) else None\n    if assinar_smime and certificado is None:\n        return ResultadoEnvio(\n            False,\n            "Não há certificado A1 conectado para assinar digitalmente este e-mail por S/MIME.",\n        )\n\n    if integracao is None:\n''',
-)
-replace_once(
-    "backend/app/services/envio_documento_email.py",
-    'return ResultadoEnvio(False, "Sua caixa do CorVIA Mail não está ativa.")',
-    'return ResultadoEnvio(False, "Sua caixa do CorvIA Mail não está ativa.")',
-)
-replace_once(
-    "backend/app/services/envio_documento_email.py",
-    '''    assinatura_obrigatoria = bool(assinar_smime or user.email_assinatura_digital_ativa)\n    if assinatura_obrigatoria and certificado_a1.obter(db, user) is None:\n''',
-    '''    assinatura_obrigatoria = bool(assinar_smime or user.email_assinatura_digital_ativa)\n    if assinatura_obrigatoria and certificado is None:\n''',
-)
-
 # The validation surface is intentional and public; approve it in the exact
 # feature inventory. The mailbox implementation route remains in App.tsx but
 # is no longer a second visible navigation destination.
