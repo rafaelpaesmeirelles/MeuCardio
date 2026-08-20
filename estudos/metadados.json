@@ -23562,5 +23562,30 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "brain-af-anticoagulacao-nao-reduz-declinio-cognitivo-em-fa-de-baixo-risco",
+    "title": "BRAIN-AF: Anticoagulação Profilática Não Reduz Declínio Cognitivo em FA de Baixo Risco",
+    "study_type": "ensaio_clinico",
+    "authors": null,
+    "journal": "Nature Medicine",
+    "year": 2026,
+    "doi": null,
+    "pmid": "41501492",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41501492/",
+    "summary": "Ensaio multicêntrico, randomizado, duplo-cego, controlado por placebo, testando rivaroxabana vs. placebo em pacientes com FA não valvar e BAIXO risco de AVC (população que hoje tipicamente não recebe anticoagulação). Desfecho primário composto: AVC, AIT ou declínio cognitivo. 1.235 dos 1.424 pacientes planejados recrutados, seguimento mediano 3,7 anos.",
+    "key_findings": "Estudo interrompido por futilidade em análise interina. Desfecho primário em 256/1.235 (20,7%): taxa anual 7,0% com rivaroxabana vs. 6,4% com placebo, HR 1,10, p=0,46 — sem diferença.",
+    "clinical_implications": "Em FA de baixo risco, anticoagulação profilática não reduz declínio cognitivo, AVC ou AIT — desautoriza a hipótese, sustentada por estudos observacionais, de que embolia subclínica silenciosa justificaria anticoagular pacientes de baixo risco para proteção cognitiva. Reforça que a indicação de anticoagulação continua ancorada em CHA₂DS₂-VASc/CHA₂DS₂-VA.",
+    "limitations": "Interrompido precocemente por futilidade — poder estatístico reduzido em relação ao desenho original. População de baixo risco especificamente, não generalizável a FA de risco moderado/alto.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "BRAIN-AF",
+      "anticoagulação",
+      "declínio cognitivo",
+      "FA de baixo risco",
+      "rivaroxabana"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
