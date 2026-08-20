@@ -20,7 +20,7 @@ type Slide = {
 function MiniTop({ contexto = "Clinical Command Center" }: { contexto?: string }) {
   return (
     <div className="cos-tour-mock__top">
-      <span className="cos-tour-mock__brand"><img src="/corvia-logo-compacta.png" alt="" /></span>
+      <span className="cos-tour-mock__brand"><img src="/corvia-mark-canonical.svg" alt="" /></span>
       <span className="cos-tour-mock__search"><Icone nome="busca" /> Pergunte, pesquise ou execute...</span>
       <span className="cos-tour-mock__context">{contexto}</span>
       <span className="cos-tour-mock__avatar">RM</span>
@@ -184,7 +184,7 @@ function MockMobile() {
   return (
     <div className="cos-tour-mock cos-tour-mock--mobile">
       <div className="cos-tour-phone">
-        <header><img src="/corvia-logo-compacta.png" alt=""/><Icone nome="menu"/></header>
+        <header><img src="/corvia-mark-canonical.svg" alt=""/><Icone nome="menu"/></header>
         <main><span className="cos-tour-kicker">Clinical Command Center</span><strong>O que você precisa resolver agora?</strong><div className="cos-tour-mobile-command">✦ <span>Pergunte ou execute...</span></div><div className="cos-tour-mobile-actions">{[["prescricao","Prescrever"],["clinica","Exames"],["documento","Documento"],["emergencia","Emergência"]].map(([icone,nome])=><i key={nome}><Icone nome={icone as NomeIcone}/><b>{nome}</b></i>)}</div><div className="cos-tour-mobile-day"><small>Assistente Pessoal</small><b>Próximo compromisso · 14:00</b><em>Acesso pelo menu e pelo contexto da Home</em></div></main>
         <footer>{nav.map(([icone,nome]) => <i key={nome}><Icone nome={icone}/><small>{nome}</small></i>)}</footer>
       </div>
@@ -268,7 +268,7 @@ export default function TourClinicalOS() {
   return (
     <div className="cos-tour">
       <header className="cos-tour__top">
-        <div className="cos-tour__brand"><img src="/corvia-logo-compacta.png" alt="CorVIA"/><span><strong>CorVIA</strong><small>Clinical OS do médico</small></span></div>
+        <div className="cos-tour__brand"><img src="/corvia-logo-canonical-dark.svg" alt="CorVIA Clinical OS"/></div>
         <div className="cos-tour__mode"><i/><span>{modo === "quick" ? "Início rápido" : "Tour completo"}</span></div>
         <button type="button" className="cos-tour__skip" onClick={() => void concluir()} disabled={concluindo}>{pendente ? "Pular" : "Fechar"}</button>
       </header>
@@ -298,7 +298,7 @@ export default function TourClinicalOS() {
         </section>}
 
         {final && <section className="cos-tour-final">
-          <span className="cos-tour-final__mark"><img src="/corvia-logo-compacta.png" alt="" /></span>
+          <span className="cos-tour-final__mark"><img src="/corvia-mark-canonical.svg" alt="" /></span>
           <p className="cos-tour-welcome__kicker">Agora começa a rotina real</p>
           <h1>Entre pelo problema. O CorVIA aproxima o resto.</h1>
           <p>Pesquise, aprenda, decida, execute e organize seu dia sem precisar pensar primeiro em qual módulo abrir.</p>

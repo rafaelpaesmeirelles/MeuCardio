@@ -331,7 +331,7 @@ export default function ShellClinicalOSLaunch() {
     <div className={`app-clinico clinical-os${foco ? " clinical-os--focus" : ""}${naEmergencia ? " clinical-os--emergency" : ""}`}>
       <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
       <aside className="cos-sidebar" aria-label="Navegação principal">
-        <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/logo-marca.png" alt="" /></span><span className="cos-brand__text"><strong>CorVIA</strong><small>Clinical OS</small></span></NavLink>
+        <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/corvia-mark-canonical.svg" alt="" /></span><span className="cos-brand__text"><strong>CorVIA</strong><small>Clinical OS</small></span></NavLink>
         <Navegacao secoes={secoes} />
         <div className="cos-sidebar__footer">
           <button type="button" className="cos-assistant-sidebar" onClick={() => { setDrawer(false); setConta(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamento e rotina</small></span></button>
@@ -343,7 +343,7 @@ export default function ShellClinicalOSLaunch() {
       <div className="cos-shell">
         <header className="cos-topbar">
           <button type="button" className="cos-topbar__menu" onClick={(evento) => abrirDrawer(evento.currentTarget)} aria-label="Abrir navegação"><Icone nome="menu" /></button>
-          <NavLink to="/" className="cos-topbar__mobile-brand" aria-label="CorVIA — início"><img src="/logo-marca.png" alt="" /><span>CorVIA</span></NavLink>
+          <NavLink to="/" className="cos-topbar__mobile-brand" aria-label="CorVIA — início"><img src="/corvia-mark-canonical.svg" alt="" /><span>CorVIA</span></NavLink>
           <form className="cos-command-mini" role="search" onSubmit={executar}><Icone nome="busca" /><input ref={buscaRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute uma ação..." aria-label="Pergunte, pesquise ou execute uma ação" /><kbd>⌘ K</kbd><button type="submit" aria-label="Executar"><Icone nome="seta" /></button></form>
           <div className="cos-topbar__actions">
             <button type="button" className="cos-topbar__icon cos-topbar__quick" onClick={() => navigate("/documentos")} aria-label="Criar nova ação"><Icone nome="adicionar" /></button>
@@ -365,7 +365,7 @@ export default function ShellClinicalOSLaunch() {
       </div>
 
       <div className={`cos-drawer-backdrop${drawer ? " is-visible" : ""}`} onClick={() => fecharDrawer(true)} aria-hidden="true" />
-      <aside ref={drawerRef} className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/logo-marca.png" alt="CorVIA" /></NavLink><button ref={fecharDrawerRef} type="button" onClick={() => fecharDrawer(true)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
+      <aside ref={drawerRef} className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/corvia-mark-canonical.svg" alt="CorVIA" /></NavLink><button ref={fecharDrawerRef} type="button" onClick={() => fecharDrawer(true)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
 
       <nav className="cos-mobilebar" aria-label="Ações principais"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><button type="button" className="cos-mobilebar__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span>Assistente</span></button><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button type="button" onClick={(evento) => abrirDrawer(evento.currentTarget)}><Icone nome="mais" /><span>Mais</span></button></nav>
 

@@ -40,7 +40,7 @@ export default function Produto() {
     <div className="produto">
       <header className="produto-nav">
         <Link to="/" className="produto-nav__marca" aria-label="CorVIA — início">
-          <img src="/corvia-logo-compacta.png" alt="CorVIA" />
+          <img src="/corvia-logo-canonical.svg" alt="CorVIA" />
           <span>Clinical OS do médico</span>
         </Link>
         <nav aria-label="Navegação da página">
@@ -78,7 +78,7 @@ export default function Produto() {
 
           <div className="produto-demo" aria-label="Prévia do Clinical Command Center CorVIA">
             <div className="produto-demo__barra">
-              <span className="produto-demo__marca"><img src="/corvia-logo-compacta.png" alt="" /></span>
+              <span className="produto-demo__marca"><img src="/corvia-logo-canonical.svg" alt="" /></span>
               <span className="produto-demo__busca"><Icone nome="busca" /> Pergunte, pesquise ou execute uma ação...</span>
               <span className="produto-demo__avatar">RM</span>
             </div>
@@ -187,7 +187,7 @@ export default function Produto() {
       </main>
 
       <footer className="produto-rodape">
-        <img src="/corvia-logo-compacta.png" alt="CorVIA" />
+        <img src="/corvia-logo-canonical.svg" alt="CorVIA" />
         <p>CorVIA — Clinical OS do médico. Apoio ao trabalho profissional; não substitui julgamento clínico nem responsabilidade médica.</p>
         <div><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><Link to="/entrar">Acesso profissional</Link></div>
       </footer>

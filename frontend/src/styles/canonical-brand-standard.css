@@ -1,3 +1,2 @@
-/* Padroniza o símbolo aprovado no login sem alterar dimensões ou estrutura do shell. */
-img[src="/logo-marca.png"]{content:url("/corvia-mark-canonical.svg")}
+/* Identidade canônica no shell: os componentes apontam diretamente para o símbolo aprovado. */
 .cos-brand__mark img,.cos-topbar__mobile-brand img,.cos-drawer__head img{object-fit:contain}
