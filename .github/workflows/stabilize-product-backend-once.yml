@@ -17,18 +17,16 @@ jobs:
         with:
           ref: fix/product-stabilization-20260820
           fetch-depth: 0
-      - name: Apply backend stabilization patches
+      - name: Apply frontend stabilization patches
         run: |
-          python .github/scripts/fix_backend_stabilizer.py
-          python .github/scripts/stabilize_product_backend.py
-          python -m compileall -q backend/app
+          python .github/scripts/stabilize_product_frontend.py
           git diff --check
       - name: Commit patches
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add backend .github/scripts/stabilize_product_backend.py
+          git add frontend backend/tests/test_product_stabilization_frontend_contract.py
           if ! git diff --cached --quiet; then
-            git commit -m "fix: stabilize signed documents, email delivery and geocoding"
+            git commit -m "fix: stabilize mail, connected accounts and clinical UI"
             git push origin HEAD:fix/product-stabilization-20260820
           fi
