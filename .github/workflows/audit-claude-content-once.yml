@@ -1,0 +1,96 @@
+name: Audit Claude content (one-time)
+
+on:
+  push:
+    branches:
+      - release/claude-content-batch-20260820-final
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Build focused audit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main:refs/remotes/origin/main
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          files = [
+              'checklists/metadados.json',
+              'material-paciente/metadados.json',
+              'medicamentos/metadados.json',
+          ]
+          needles = [
+              'VERIFICAÇÃO HUMANA NECESSÁRIA',
+              'Dr. Rafael Paes Meirelles',
+              'CRM-SP 138266',
+              'aprovado para publicação',
+              'aprovada para publicação',
+              'aval clínico individual',
+          ]
+
+          def load_at(ref, path):
+              raw = subprocess.check_output(['git','show',f'{ref}:{path}'], text=True)
+              return json.loads(raw)
+
+          def walk(value, prefix=''):
+              if isinstance(value, dict):
+                  for k,v in value.items():
+                      yield from walk(v, f'{prefix}.{k}' if prefix else k)
+              elif isinstance(value, list):
+                  for i,v in enumerate(value):
+                      yield from walk(v, f'{prefix}[{i}]')
+              elif isinstance(value, str):
+                  yield prefix, value
+
+          report = {'base':'origin/main','files':{},'totals':{}}
+          total_changed = total_markers = total_attribution = 0
+          for path in files:
+              base = load_at('origin/main', path)
+              cur = json.loads(Path(path).read_text(encoding='utf-8'))
+              bmap = {x['slug']:x for x in base}
+              cmap = {x['slug']:x for x in cur}
+              changed = []
+              for slug, rec in cmap.items():
+                  if bmap.get(slug) == rec:
+                      continue
+                  hits = []
+                  for loc, text in walk(rec):
+                      found = [n for n in needles if n.lower() in text.lower()]
+                      if found:
+                          hits.append({'location':loc,'needles':found,'text':text})
+                  changed.append({'slug':slug,'status':'added' if slug not in bmap else 'modified','hits':hits})
+                  total_changed += 1
+                  total_markers += sum('VERIFICAÇÃO HUMANA NECESSÁRIA' in h['needles'] for h in hits)
+                  total_attribution += sum(any(n in h['needles'] for n in needles[1:]) for h in hits)
+              report['files'][path] = {
+                  'before':len(base),'after':len(cur),'changed_records':changed,
+                  'removed':[s for s in bmap if s not in cmap],
+              }
+          report['totals'] = {
+              'changed_records':total_changed,
+              'marker_hits':total_markers,
+              'attribution_hits':total_attribution,
+          }
+          Path('.github/claude_content_audit_report.json').write_text(
+              json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          print(json.dumps(report['totals'], ensure_ascii=False))
+          PY
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/claude_content_audit_report.json
+          git commit -m "chore(content): generate focused Claude audit report"
+          git push origin HEAD:release/claude-content-batch-20260820-final
