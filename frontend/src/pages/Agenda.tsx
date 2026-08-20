@@ -36,7 +36,8 @@ type Servico = {
 
 type Agendamento = {
   id: number | string;
-  calendar_kind?: "appointment" | "commitment";
+  calendar_kind?: "appointment" | "commitment" | "work_routine";
+  routine_id?: number;
   series_id?: number;
   occurrence_date?: string;
   title?: string;
@@ -116,6 +117,11 @@ type PreferenciaMobilidade = {
   consent_at: string | null;
   automatic_foreground_refresh: boolean;
   refresh_interval_minutes: number;
+  day_start_origin_mode: "current_location" | "saved_location";
+  day_start_location_id: number | null;
+  day_start_location: LocalAgenda | null;
+  day_end_destination_location_id: number | null;
+  day_end_destination_location: LocalAgenda | null;
   traffic_configured: boolean;
 };
 
@@ -157,6 +163,7 @@ const STATUS: Record<string, string> = {
 const ORIGEM: Record<string, string> = {
   corvia: "Corvia",
   corvia_manual: "Compromisso manual",
+  work_routine: "Rotina profissional",
   google_calendar: "Google",
   microsoft_365: "Microsoft 365",
   feegow: "Feegow",
@@ -240,15 +247,16 @@ function Evento({ item, aoCancelar, aoAjustar }: {
   aoAjustar: (item: Agendamento) => void;
 }) {
   const compromisso = item.calendar_kind === "commitment";
+  const rotina = item.calendar_kind === "work_routine";
   return (
-    <article className={`agenda-evento agenda-evento--${item.status}${compromisso ? " agenda-evento--compromisso" : ""}`} style={{ "--evento-cor": item.color || item.service?.color || item.location?.color || "#087E8B" } as CSSProperties}>
+    <article className={`agenda-evento agenda-evento--${item.status}${compromisso ? " agenda-evento--compromisso" : ""}${rotina ? " agenda-evento--rotina" : ""}`} style={{ "--evento-cor": item.color || item.service?.color || item.location?.color || "#087E8B" } as CSSProperties}>
       <div className="agenda-evento__hora"><strong>{horario(item.starts_at)}</strong><span>{item.duration_minutes} min</span></div>
       <div className="agenda-evento__corpo">
         <div className="agenda-evento__linha">
-          <h3>{compromisso ? item.title : item.patient_name || "Paciente não informado"}</h3>
-          <span className="agenda-pill">{STATUS[item.status] || item.status}</span>
+          <h3>{compromisso || rotina ? item.title : item.patient_name || "Paciente não informado"}</h3>
+          <span className="agenda-pill">{rotina ? "Rotina" : STATUS[item.status] || item.status}</span>
         </div>
-        <p>{compromisso ? `${item.appointment_type} · ${item.location?.name || "Sem local"}` : `${item.service?.name || item.appointment_type} · ${item.visit_mode === "teleconsulta" ? "Teleconsulta" : item.location?.name || "Local a definir"}`}</p>
+        <p>{compromisso || rotina ? `${item.appointment_type} · ${item.location?.name || "Sem local"}` : `${item.service?.name || item.appointment_type} · ${item.visit_mode === "teleconsulta" ? "Teleconsulta" : item.location?.name || "Local a definir"}`}</p>
         <div className="agenda-evento__meta">
           <span><Icone nome="sincronizar" /> {ORIGEM[item.source] || item.source}</span>
           {item.conflict_reason && <span className="agenda-evento__conflito">Encaixe</span>}
@@ -256,7 +264,7 @@ function Evento({ item, aoCancelar, aoAjustar }: {
           {compromisso && item.recurrence !== "none" && <span>Recorrente{item.is_exception ? " · ajustado" : ""}</span>}
         </div>
       </div>
-      {!['cancelado', 'realizado'].includes(item.status) && (
+      {!rotina && !['cancelado', 'realizado'].includes(item.status) && (
         <button className="agenda-evento__mais" onClick={() => compromisso ? aoAjustar(item) : aoCancelar(item)} aria-label={compromisso ? `Alterar ${item.title}` : `Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
       )}
     </article>
@@ -317,7 +325,7 @@ export default function Agenda() {
   const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false, mail: false, mail_consent_accepted: false });
   const [yahoo, setYahoo] = useState({ endereco: "", senha_de_app: "", consent_accepted: false });
   const [consentimentoContas, setConsentimentoContas] = useState(false);
-  const [novoLocal, setNovoLocal] = useState({ name: "", city: "", state: "", latitude: "", longitude: "" });
+  const [novoLocal, setNovoLocal] = useState({ name: "", street: "", number: "", city: "", state: "", latitude: "", longitude: "" });
   const [novoServico, setNovoServico] = useState({ name: "", code: "", location_id: "", duration_minutes: 30, price: "", allow_extra_slot: false });
   const [novaRotina, setNovaRotina] = useState({
     label: "Rotina de atendimento", location_id: "", service_id: "", weekdays: [0, 1, 2, 3, 4],
@@ -417,7 +425,11 @@ export default function Agenda() {
   async function carregarCompromissos(reference = referencia) {
     const start = somaDias(reference, -90);
     const end = somaDias(reference, 300);
-    setCompromissos(await api.get<Agendamento[]>(`/agenda/commitments?start=${dataApi(start)}&end=${dataApi(end)}`));
+    const [itens, rotinasVisiveis] = await Promise.all([
+      api.get<Agendamento[]>(`/agenda/commitments?start=${dataApi(start)}&end=${dataApi(end)}`),
+      api.get<Agendamento[]>(`/agenda/work-routines/occurrences?start=${dataApi(start)}&end=${dataApi(end)}`),
+    ]);
+    setCompromissos([...itens, ...rotinasVisiveis]);
   }
 
   async function atualizarAgenda() {
@@ -425,7 +437,7 @@ export default function Agenda() {
   }
 
   useEffect(() => { carregar().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível abrir a agenda.")); }, []);
-  useEffect(() => { carregarCompromissos(referencia).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os compromissos pessoais.")); }, [referencia]);
+  useEffect(() => { carregarCompromissos(referencia).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os compromissos e rotinas.")); }, [referencia]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -455,6 +467,7 @@ export default function Agenda() {
   // decidir o que mostrar.
   function chaveOrigem(item: Agendamento): string {
     if (item.calendar_kind === "commitment") return "corvia_manual";
+    if (item.calendar_kind === "work_routine") return "work_routine";
     if (item.integration_id) return String(item.integration_id);
     return item.source || "corvia";
   }
@@ -467,7 +480,7 @@ export default function Agenda() {
     return true;
   }), [agendamentos, compromissos, busca, filtroLocal, contasVisiveis]);
 
-  // Trabalho 16: opções do seletor de contas — Corvia + compromissos
+  // Trabalho 16: opções do seletor de contas — Corvia, rotinas e compromissos
   // pessoais sempre presentes, mais uma entrada por conta externa
   // conectada com sincronização de agenda ligada (a mesma preferência
   // gerenciada em /sincronizacao). Duas contas da mesma empresa aparecem
@@ -475,6 +488,7 @@ export default function Agenda() {
   const opcoesOrigem = useMemo(() => {
     const base: Array<{ chave: string; rotulo: string; provedor?: "google" | "microsoft" | "apple" }> = [
       { chave: "corvia", rotulo: "Atendimentos Corvia" },
+      { chave: "work_routine", rotulo: "Rotinas profissionais" },
       { chave: "corvia_manual", rotulo: "Compromissos pessoais" },
     ];
     const mapaLogo: Record<string, "google" | "microsoft" | "apple"> = {
@@ -679,11 +693,15 @@ export default function Agenda() {
     if (!novoLocal.name.trim()) return;
     await api.post("/agenda/locations", {
       name: novoLocal.name,
-      address: { city: novoLocal.city, state: novoLocal.state.toUpperCase() },
+      address: {
+        street: novoLocal.street.trim() || undefined,
+        number: novoLocal.number.trim() || undefined,
+        city: novoLocal.city.trim(), state: novoLocal.state.toUpperCase(),
+      },
       latitude: novoLocal.latitude ? Number(novoLocal.latitude) : null,
       longitude: novoLocal.longitude ? Number(novoLocal.longitude) : null,
     });
-    setNovoLocal({ name: "", city: "", state: "", latitude: "", longitude: "" });
+    setNovoLocal({ name: "", street: "", number: "", city: "", state: "", latitude: "", longitude: "" });
     await carregar();
   }
 
@@ -732,8 +750,33 @@ export default function Agenda() {
     const updated = await api.put<PreferenciaMobilidade>("/agenda/mobility/preferences", {
       enabled, consent_accepted: enabled, automatic_foreground_refresh: true,
       refresh_interval_minutes: mobilidade?.refresh_interval_minutes || 5, travel_mode: "driving",
+      day_start_origin_mode: mobilidade?.day_start_origin_mode || "current_location",
+      day_start_location_id: mobilidade?.day_start_location_id || null,
+      day_end_destination_location_id: mobilidade?.day_end_destination_location_id || null,
     });
     setMobilidade(updated);
+  }
+
+  async function atualizarPreferenciaMobilidade(changes: Partial<PreferenciaMobilidade>) {
+    if (!mobilidade) return;
+    const next = { ...mobilidade, ...changes };
+    const updated = await api.put<PreferenciaMobilidade>("/agenda/mobility/preferences", {
+      enabled: next.enabled,
+      consent_accepted: next.enabled,
+      automatic_foreground_refresh: next.automatic_foreground_refresh,
+      refresh_interval_minutes: next.refresh_interval_minutes,
+      travel_mode: "driving",
+      day_start_origin_mode: next.day_start_origin_mode,
+      day_start_location_id: next.day_start_location_id,
+      day_end_destination_location_id: next.day_end_destination_location_id,
+    });
+    setMobilidade(updated);
+  }
+
+  async function importarCasa() {
+    await api.post<LocalAgenda>("/agenda/locations/home", {});
+    await carregar();
+    setMensagem("Casa atualizada a partir do endereço residencial de Minha Conta.");
   }
 
   const hoje = new Date();
@@ -826,18 +869,14 @@ export default function Agenda() {
             {contasVisiveis === null ? "Todas as contas" : `${contasVisiveis.size} conta${contasVisiveis.size === 1 ? "" : "s"}`}
           </button>
           {seletorContasAberto && (
-            <div role="menu" style={{
-              position: "absolute", top: "calc(100% + 4px)", left: 0, zIndex: 30,
-              background: "var(--superficie)", border: "1px solid var(--borda)", borderRadius: "var(--r)",
-              padding: "0.5rem 0.7rem", minWidth: 240, boxShadow: "var(--sombra)",
-            }}>
-              <label style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.84rem", padding: "0.2rem 0", fontWeight: 600 }}>
+            <div role="menu" className="agenda-filtro-contas__menu">
+              <label className="agenda-filtro-contas__opcao">
                 <input type="checkbox" checked={contasVisiveis === null} onChange={() => setContasVisiveis(null)} />
                 Todas juntas
               </label>
-              <hr style={{ margin: "0.3rem 0", border: "none", borderTop: "1px solid var(--borda)" }} />
+              <hr />
               {opcoesOrigem.map((opcao) => (
-                <label key={opcao.chave} style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.84rem", padding: "0.2rem 0" }}>
+                <label key={opcao.chave} className="agenda-filtro-contas__opcao">
                   <input type="checkbox"
                          checked={contasVisiveis === null || contasVisiveis.has(opcao.chave)}
                          onChange={(e) => alternarConta(opcao.chave, e.target.checked)} />
@@ -845,7 +884,7 @@ export default function Agenda() {
                   {opcao.rotulo}
                 </label>
               ))}
-              <button type="button" className="botao botao--secundario" style={{ marginTop: "0.4rem", padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+              <button type="button" className="botao botao--secundario agenda-filtro-contas__fechar"
                       onClick={() => setSeletorContasAberto(false)}>
                 Fechar
               </button>
@@ -951,7 +990,7 @@ export default function Agenda() {
 
       {configAberta && <div className="agenda-modal agenda-modal--config" role="dialog" aria-modal="true" aria-labelledby="config-agenda-titulo"><div className="agenda-modal__painel" ref={configModalRef} tabIndex={-1}>
         <header><div><p className="eyebrow">Preferências profissionais</p><h2 id="config-agenda-titulo">Configurar agenda</h2></div><button onClick={() => setConfigAberta(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
-        <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Locais de atendimento</h3><p>Base para disponibilidade, deslocamento e recursos.</p></div><span>{locais.length}</span></div>{locais.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name}</strong><small>{endereco(item)} · {item.latitude ? "GPS configurado" : "GPS pendente"}</small></span></div>)}<div className="agenda-config-form"><input placeholder="Nome do local" value={novoLocal.name} onChange={(e) => setNovoLocal({ ...novoLocal, name: e.target.value })} /><input placeholder="Cidade" value={novoLocal.city} onChange={(e) => setNovoLocal({ ...novoLocal, city: e.target.value })} /><input placeholder="UF" maxLength={2} value={novoLocal.state} onChange={(e) => setNovoLocal({ ...novoLocal, state: e.target.value })} /><details><summary>Coordenadas para trânsito</summary><div><input inputMode="decimal" placeholder="Latitude" value={novoLocal.latitude} onChange={(e) => setNovoLocal({ ...novoLocal, latitude: e.target.value })} /><input inputMode="decimal" placeholder="Longitude" value={novoLocal.longitude} onChange={(e) => setNovoLocal({ ...novoLocal, longitude: e.target.value })} /></div></details><button className="botao botao--secundario" onClick={() => adicionarLocal().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o local."))}>Adicionar local</button></div></section>
+        <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Locais de atendimento e deslocamento</h3><p>Cadastre clínica, hospital, hotel ou outro ponto usado na rotina.</p></div><span>{locais.length}</span></div>{locais.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name}</strong><small>{endereco(item)} · {item.latitude ? "GPS configurado" : "GPS pendente"}</small></span></div>)}<div className="agenda-config-form"><input placeholder="Nome do local (ex.: Hotel)" value={novoLocal.name} onChange={(e) => setNovoLocal({ ...novoLocal, name: e.target.value })} /><input placeholder="Rua" value={novoLocal.street} onChange={(e) => setNovoLocal({ ...novoLocal, street: e.target.value })} /><input placeholder="Número" value={novoLocal.number} onChange={(e) => setNovoLocal({ ...novoLocal, number: e.target.value })} /><input placeholder="Cidade" value={novoLocal.city} onChange={(e) => setNovoLocal({ ...novoLocal, city: e.target.value })} /><input placeholder="UF" maxLength={2} value={novoLocal.state} onChange={(e) => setNovoLocal({ ...novoLocal, state: e.target.value })} /><details><summary>Coordenadas para trânsito</summary><div><input inputMode="decimal" placeholder="Latitude" value={novoLocal.latitude} onChange={(e) => setNovoLocal({ ...novoLocal, latitude: e.target.value })} /><input inputMode="decimal" placeholder="Longitude" value={novoLocal.longitude} onChange={(e) => setNovoLocal({ ...novoLocal, longitude: e.target.value })} /></div></details><button className="botao botao--secundario" onClick={() => adicionarLocal().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o local."))}>Adicionar local</button></div></section>
         <section className="agenda-config-section agenda-rotina">
           <div className="agenda-config-section__title"><div><h3>Rotina profissional</h3><p>Entrada, saída, locais e antecedência para organizar automaticamente cada dia.</p></div><span>{rotinas.filter((item) => item.active).length}</span></div>
           <div className="agenda-rotina__lista">
@@ -987,7 +1026,16 @@ export default function Agenda() {
           </div>
         </section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Catálogo de serviços</h3><p>Duração, preço, modalidade e política de encaixe.</p></div><span>{servicos.length}</span></div>{servicos.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name} · {item.duration_minutes} min</strong><small>{item.visit_mode} · {formatarDinheiro(item.private_price_cents)}{item.allow_extra_slot ? " · aceita encaixe" : ""}</small></span></div>)}<div className="agenda-config-form agenda-config-form--service"><input placeholder="Nome do serviço" value={novoServico.name} onChange={(e) => setNovoServico({ ...novoServico, name: e.target.value, code: e.target.value })} /><select value={novoServico.location_id} onChange={(e) => setNovoServico({ ...novoServico, location_id: e.target.value })}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select><input type="number" min={5} value={novoServico.duration_minutes} onChange={(e) => setNovoServico({ ...novoServico, duration_minutes: Number(e.target.value) })} /><input inputMode="decimal" placeholder="Preço particular" value={novoServico.price} onChange={(e) => setNovoServico({ ...novoServico, price: e.target.value })} /><label className="agenda-check"><input type="checkbox" checked={novoServico.allow_extra_slot} onChange={(e) => setNovoServico({ ...novoServico, allow_extra_slot: e.target.checked })} /> Permitir encaixe</label><button className="botao botao--secundario" onClick={() => adicionarServico().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o serviço."))}>Adicionar serviço</button></div></section>
-        <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Deslocamento inteligente</h3><p>A posição atual não é armazenada; a permissão permanece sob controle do aparelho.</p></div><button className={`agenda-switch${mobilidade?.enabled ? " ativo" : ""}`} role="switch" aria-checked={mobilidade?.enabled || false} onClick={() => alternarMobilidade().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível alterar a mobilidade."))}><span /></button></div><div className="agenda-config-note"><Icone nome="rota" /><span><strong>{mobilidade?.enabled ? "Atualização automática em primeiro plano" : "Recurso desativado"}</strong><small>{capacidades?.traffic_configured ? "Trânsito em tempo real disponível." : "É preciso configurar uma credencial de trânsito no servidor."}</small></span></div></section>
+        <section className="agenda-config-section">
+          <div className="agenda-config-section__title"><div><h3>Deslocamento inteligente</h3><p>Planeje a ida ao primeiro compromisso e o retorno após o último.</p></div><button className={`agenda-switch${mobilidade?.enabled ? " ativo" : ""}`} role="switch" aria-checked={mobilidade?.enabled || false} onClick={() => alternarMobilidade().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível alterar a mobilidade."))}><span /></button></div>
+          <div className="agenda-config-note"><Icone nome="rota" /><span><strong>{mobilidade?.enabled ? "Atualização automática em primeiro plano" : "Recurso desativado"}</strong><small>{capacidades?.traffic_configured ? "Trânsito em tempo real disponível. A posição atual nunca é armazenada." : "É preciso configurar uma credencial de trânsito no servidor."}</small></span></div>
+          <div className="agenda-config-form agenda-config-form--mobility">
+            <button className="botao botao--secundario span-2" onClick={() => importarCasa().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível importar o endereço residencial."))}><Icone nome="pin" /> Adicionar ou atualizar Casa</button>
+            <label>Origem no início do dia<select value={mobilidade?.day_start_origin_mode || "current_location"} onChange={(e) => atualizarPreferenciaMobilidade({ day_start_origin_mode: e.target.value as "current_location" | "saved_location" }).catch((error) => setErro(error instanceof ApiError ? error.message : "Não foi possível salvar a origem."))}><option value="current_location">Onde eu estiver</option><option value="saved_location" disabled={!mobilidade?.day_start_location_id}>Local salvo</option></select></label>
+            <label>Local de partida<select value={mobilidade?.day_start_location_id || ""} onChange={(e) => atualizarPreferenciaMobilidade({ day_start_location_id: e.target.value ? Number(e.target.value) : null, day_start_origin_mode: e.target.value ? "saved_location" : "current_location" }).catch((error) => setErro(error instanceof ApiError ? error.message : "Não foi possível salvar o local de partida."))}><option value="">Usar localização atual</option>{locais.filter((item) => item.active).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
+            <label className="span-2">Destino após o último compromisso<select value={mobilidade?.day_end_destination_location_id || ""} onChange={(e) => atualizarPreferenciaMobilidade({ day_end_destination_location_id: e.target.value ? Number(e.target.value) : null }).catch((error) => setErro(error instanceof ApiError ? error.message : "Não foi possível salvar o destino final."))}><option value="">Não mostrar retorno</option>{locais.filter((item) => item.active).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select><small>Você pode escolher Casa, hotel ou qualquer outro local cadastrado.</small></label>
+          </div>
+        </section>
         <section className="agenda-config-section" ref={contasExternasRef} tabIndex={-1} style={{ scrollMarginTop: "1rem" }}>
           {/* 07/08/2026: este painel duplicava, com texto e comportamento
            * divergentes, a tela dedicada /sincronizacao (Trabalho 16) — Rafael

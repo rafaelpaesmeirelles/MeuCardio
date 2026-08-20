@@ -350,6 +350,15 @@ class MobilityIn(StrictModel):
     automatic_foreground_refresh: bool = True
     refresh_interval_minutes: int = Field(default=5, ge=2, le=60)
     travel_mode: Literal["driving"] = "driving"
+    day_start_origin_mode: Literal["current_location", "saved_location"] = "current_location"
+    day_start_location_id: int | None = Field(default=None, gt=0)
+    day_end_destination_location_id: int | None = Field(default=None, gt=0)
+
+    @model_validator(mode="after")
+    def _saved_origin_requires_location(self):
+        if self.day_start_origin_mode == "saved_location" and self.day_start_location_id is None:
+            raise ValueError("Selecione o local de origem do início do dia.")
+        return self
 
 
 class CommuteIn(StrictModel):
@@ -583,6 +592,65 @@ def _upcoming_routines(db: Session, owner_id: int, *, days: int = 14) -> list[di
     return sorted(result, key=lambda item: item["starts_at"])
 
 
+def _routine_calendar_occurrences(
+    db: Session, owner_id: int, start: date, end: date,
+) -> list[dict]:
+    """Expande rotinas apenas no intervalo visível, sem criar eventos no banco."""
+    rules = db.query(AvailabilityRule).filter(
+        AvailabilityRule.owner_id == owner_id,
+        AvailabilityRule.active.is_(True),
+        or_(AvailabilityRule.valid_from.is_(None), AvailabilityRule.valid_from <= end),
+        or_(AvailabilityRule.valid_until.is_(None), AvailabilityRule.valid_until >= start),
+    ).all()
+    result: list[dict] = []
+    for rule in rules:
+        location = db.get(CalendarLocation, rule.location_id)
+        if not location or not location.active:
+            continue
+        service = db.get(SchedulingService, rule.service_id) if rule.service_id else None
+        zone = ZoneInfo(location.timezone)
+        for offset in range((end - start).days + 1):
+            work_date = start + timedelta(days=offset)
+            if work_date.weekday() != rule.weekday:
+                continue
+            if rule.valid_from and work_date < rule.valid_from:
+                continue
+            if rule.valid_until and work_date > rule.valid_until:
+                continue
+            starts_at = datetime.combine(work_date, rule.start_time, tzinfo=zone)
+            ends_at = datetime.combine(work_date, rule.end_time, tzinfo=zone)
+            result.append({
+                "id": f"work-routine:{rule.id}:{work_date.isoformat()}",
+                "calendar_kind": "work_routine",
+                "routine_id": rule.id,
+                "occurrence_date": work_date,
+                "title": rule.label,
+                "patient_name": None,
+                "patient_phone": None,
+                "starts_at": starts_at.astimezone(timezone.utc),
+                "ends_at": ends_at.astimezone(timezone.utc),
+                "duration_minutes": int((ends_at - starts_at).total_seconds() // 60),
+                "appointment_type": rule.routine_type,
+                "status": "rotina",
+                "notes": rule.planning_notes,
+                "location": _dump_location(location),
+                "service": _dump_service(service) if service else None,
+                "visit_mode": rule.visit_mode,
+                "payment_mode": "nao_aplicavel",
+                "price_cents": None,
+                "source": "work_routine",
+                "integration_id": None,
+                "sync_status": "local_only",
+                "conflict_reason": None,
+                "version": 1,
+                "recurrence": "weekly",
+                "blocks_scheduling": False,
+                "is_exception": False,
+                "color": location.color,
+            })
+    return sorted(result, key=lambda item: item["starts_at"])
+
+
 def _dump_appointment(db: Session, item: Appointment) -> dict:
     location = db.get(CalendarLocation, item.location_id) if item.location_id else None
     service = db.get(SchedulingService, item.service_id) if item.service_id else None
@@ -677,6 +745,58 @@ def create_location(data: LocationIn, professional_id: int | None = None, db: Se
     db.add(item); db.flush()
     _audit(db, user, "agenda_location_create", "calendar_location", item.id, {"owner_id": owner_id})
     db.commit(); db.refresh(item)
+    return _dump_location(item)
+
+
+@router.post("/locations/home")
+def import_home_location(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Cria/atualiza Casa a partir do endereço residencial já consentido no perfil."""
+    address = {
+        "street": user.home_street,
+        "number": user.home_number,
+        "complement": user.home_complement,
+        "neighborhood": user.home_neighborhood,
+        "city": user.home_city,
+        "state": user.home_state,
+        "zip": user.home_zip,
+        "country": "Brasil",
+    }
+    address = {key: value for key, value in address.items() if value}
+    if not address.get("street") or not address.get("city") or not address.get("state"):
+        raise HTTPException(
+            status_code=422,
+            detail="Complete rua, cidade e UF do endereço residencial em Minha Conta.",
+        )
+    item = db.query(CalendarLocation).filter(
+        CalendarLocation.owner_id == user.id,
+        CalendarLocation.name.ilike("Casa"),
+    ).first()
+    if item is None:
+        item = CalendarLocation(
+            owner_id=user.id, name="Casa", timezone=settings.fuso_operacao,
+            address=address, default_arrival_buffer_minutes=0, color="#38CAD5",
+        )
+        db.add(item)
+        action = "agenda_home_location_create"
+    else:
+        if item.address != address:
+            item.latitude = None
+            item.longitude = None
+        item.address = address
+        item.active = True
+        action = "agenda_home_location_update"
+    db.flush()
+    pref = db.query(MobilityPreference).filter(MobilityPreference.owner_id == user.id).first()
+    if pref is None:
+        pref = MobilityPreference(owner_id=user.id)
+        db.add(pref)
+    if pref.day_start_location_id is None:
+        pref.day_start_location_id = item.id
+    if pref.day_end_destination_location_id is None:
+        pref.day_end_destination_location_id = item.id
+    _audit(db, user, action, "calendar_location", item.id)
+    db.commit()
+    db.refresh(item)
     return _dump_location(item)
 
 
@@ -814,6 +934,17 @@ def create_work_routine(data: WorkRoutineIn, professional_id: int | None = None,
     })
     db.commit()
     return [_dump_routine(db, item) for item in created]
+
+
+@router.get("/work-routines/occurrences")
+def list_work_routine_occurrences(
+    start: date = Query(...), end: date = Query(...), professional_id: int | None = None,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    if end < start or (end - start).days > 400:
+        raise HTTPException(status_code=422, detail="Consulte um período entre 1 e 400 dias.")
+    owner_id = _owner_for(db, user, professional_id, "view")
+    return _routine_calendar_occurrences(db, owner_id, start, end)
 
 
 @router.delete("/work-routines/{routine_id}", status_code=204)
@@ -1171,7 +1302,26 @@ def workday_plan(days: int = Query(default=7, ge=1, le=31), professional_id: int
 @router.get("/mobility/preferences")
 def get_mobility(db: Session = Depends(get_db), user: User = Depends(current_user)):
     pref = db.query(MobilityPreference).filter(MobilityPreference.owner_id == user.id).first()
-    return {"enabled": bool(pref and pref.enabled), "consent_version": pref.consent_version if pref else None, "consent_at": pref.consent_at if pref else None, "automatic_foreground_refresh": pref.automatic_foreground_refresh if pref else True, "refresh_interval_minutes": pref.refresh_interval_minutes if pref else 5, "travel_mode": pref.travel_mode if pref else "driving", "traffic_configured": settings.traffic_configured}
+    start_location = db.get(CalendarLocation, pref.day_start_location_id) if pref and pref.day_start_location_id else None
+    end_location = db.get(CalendarLocation, pref.day_end_destination_location_id) if pref and pref.day_end_destination_location_id else None
+    if start_location and (start_location.owner_id != user.id or not start_location.active):
+        start_location = None
+    if end_location and (end_location.owner_id != user.id or not end_location.active):
+        end_location = None
+    return {
+        "enabled": bool(pref and pref.enabled),
+        "consent_version": pref.consent_version if pref else None,
+        "consent_at": pref.consent_at if pref else None,
+        "automatic_foreground_refresh": pref.automatic_foreground_refresh if pref else True,
+        "refresh_interval_minutes": pref.refresh_interval_minutes if pref else 5,
+        "travel_mode": pref.travel_mode if pref else "driving",
+        "day_start_origin_mode": pref.day_start_origin_mode if pref else "current_location",
+        "day_start_location_id": pref.day_start_location_id if pref else None,
+        "day_start_location": _dump_location(start_location) if start_location else None,
+        "day_end_destination_location_id": pref.day_end_destination_location_id if pref else None,
+        "day_end_destination_location": _dump_location(end_location) if end_location else None,
+        "traffic_configured": settings.traffic_configured,
+    }
 
 
 @router.get("/mobility/map-config")
@@ -1193,9 +1343,25 @@ def get_map_config(user: User = Depends(current_user)):
 @router.put("/mobility/preferences")
 def set_mobility(data: MobilityIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
     if data.enabled and not data.consent_accepted: raise HTTPException(status_code=422, detail="É necessário aceitar o uso da localização para cálculo de deslocamento.")
+    location_ids = {
+        location_id for location_id in (
+            data.day_start_location_id, data.day_end_destination_location_id,
+        ) if location_id is not None
+    }
+    if location_ids:
+        owned_ids = {row[0] for row in db.query(CalendarLocation.id).filter(
+            CalendarLocation.owner_id == user.id,
+            CalendarLocation.active.is_(True),
+            CalendarLocation.id.in_(location_ids),
+        ).all()}
+        if owned_ids != location_ids:
+            raise HTTPException(status_code=404, detail="Local de deslocamento não encontrado.")
     pref = db.query(MobilityPreference).filter(MobilityPreference.owner_id == user.id).first()
     if not pref: pref = MobilityPreference(owner_id=user.id); db.add(pref)
     pref.enabled = data.enabled; pref.automatic_foreground_refresh = data.automatic_foreground_refresh; pref.refresh_interval_minutes = data.refresh_interval_minutes; pref.travel_mode = data.travel_mode
+    pref.day_start_origin_mode = data.day_start_origin_mode
+    pref.day_start_location_id = data.day_start_location_id
+    pref.day_end_destination_location_id = data.day_end_destination_location_id
     if data.enabled: pref.consent_version = MOBILITY_CONSENT_VERSION; pref.consent_at = pref.consent_at or datetime.now(timezone.utc); pref.revoked_at = None
     else: pref.revoked_at = datetime.now(timezone.utc)
     _audit(db, user, "mobility_consent_granted" if data.enabled else "mobility_consent_revoked", "mobility_preference", None, {"consent_version": MOBILITY_CONSENT_VERSION})
