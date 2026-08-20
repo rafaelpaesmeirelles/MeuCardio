@@ -22832,5 +22832,57 @@
         "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-do-esporte-canalopatias-e-cardiomiopatias-arritmogenicas",
+    "titulo": "Cardiologia do Esporte: canalopatias, cardiomiopatia arritmogênica e o atleta com CDI",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Sair sabendo estratificar risco e decidir participação esportiva no espectro das doenças arritmogênicas do atleta: distinguir achados estruturais/elétricos comuns e em geral benignos (bradicardia do treinamento, hipertrabeculação, prolapso mitral) do fenótipo arrítmico que exige investigação, reconhecer cardiomiopatia arritmogênica e as duas principais canalopatias (QT longo/CPVT e Brugada) desencadeadas ou agravadas pelo exercício, e saber conduzir a participação esportiva no atleta que já é portador de CDI ou S-ICD.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "bradicardia-bloqueio-conducao-atleta",
+        "por_que": "Ponto de entrada da trilha pelo achado mais frequente e, na maioria das vezes, mais benigno: bradicardia sinusal e pausas ao Holter são adaptação esperada ao treinamento de endurance, e este documento estabelece o princípio — que se repete nas próximas etapas — de que número isolado não define doença do nó sinusal ou distúrbio de condução relevante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertrabeculacao-nao-compactacao-atleta",
+        "por_que": "Segundo achado comum de \"zona cinzenta\", agora de imagem: trabeculações proeminentes do ventrículo esquerdo preenchem critérios morfológicos de não compactação em quase um terço dos atletas de alto rendimento, sem que isso configure cardiomiopatia — mesma lógica da etapa anterior, aplicada a outro exame."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "prolapso-mitral-arritmico-atleta-risco-esporte",
+        "por_que": "Primeira etapa em que um achado estrutural extremamente comum (prolapso mitral) deixa de ser \"apenas adaptação ou variante\" e passa a exigir reconhecimento de um subgrupo com fenótipo arrítmico real — a ponte entre os achados benignos das etapas 1-2 e as doenças arritmogênicas propriamente ditas das etapas seguintes."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte",
+        "por_que": "Já é doença estrutural com risco arrítmico estabelecido, e não apenas um achado a diferenciar: no atleta, em especial na doença relacionada a PKP2, o exercício de endurance intenso acelera a progressão e aumenta o risco de arritmia ventricular — inverte a lógica das etapas anteriores, em que o exercício era o contexto do achado, não um fator que piora a doença."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "canalopatias-qt-longo-cpvt-esporte-retorno",
+        "por_que": "Sai do terreno estrutural para o elétrico puro: QT longo e CPVT ocorrem em coração estruturalmente normal, e no CPVT o próprio exercício é o gatilho direto da arritmia, não apenas um fator de risco — a decisão de retorno ao esporte passa a depender de genótipo, adesão terapêutica e caracterização do gatilho, não de imagem."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "brugada-participacao-esportiva-estratificacao-risco",
+        "por_que": "Segunda canalopatia da trilha, com uma armadilha diferente da do QT longo/CPVT: um padrão eletrocardiográfico de Brugada isolado, achado com frequência em triagem de rotina, não equivale a síndrome clínica nem implica proibição automática — fecha o bloco de doenças primariamente elétricas antes da etapa final, sobre quem já foi tratado com dispositivo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cdi-sicd-participacao-esportiva-atleta",
+        "por_que": "Fecha a trilha no desfecho prático comum a boa parte dos diagnósticos das etapas 3 a 6: quando a estratificação de risco de ACM, canalopatia ou fenótipo arrítmico já resultou em implante de CDI ou S-ICD, a presença do dispositivo não deve ser usada, isoladamente, como motivo de desqualificação esportiva universal — a decisão volta a depender da doença de base e do fenótipo, não do dispositivo em si."
+      }
+    ]
   }
 ]
