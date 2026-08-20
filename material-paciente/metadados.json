@@ -5003,5 +5003,188 @@
       "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation/J Am Coll Cardiol, 2025.",
       "2023 ACC/AHA/ACCP/HFSA guideline sobre reabilitação cardíaca — referência de benefício de reabilitação já citada no acervo de Prevenção e lipídios."
     ]
+  },
+  {
+    "slug": "taquicardia-supraventricular-crise-o-que-fazer",
+    "titulo": "Meu coração dispara do nada: o que é uma taquicardia supraventricular",
+    "subtitulo": "Por que a crise costuma assustar mais do que representa perigo, o que fazer na hora e o que muda no tratamento a longo prazo",
+    "tema": "Arritmias",
+    "documento_slug": "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre a taquicardia supraventricular — a crise de coração acelerado que começa e termina de repente —, o que fazer durante o episódio e as opções de tratamento a longo prazo.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "O coração tem um comando elétrico normal, que nasce numa região chamada nó sinusal e segue um caminho organizado até fazer o coração bater. Na taquicardia supraventricular, um curto-circuito elétrico se forma numa região acima dos ventrículos — por isso o nome 'supraventricular' — e faz o coração disparar muito mais rápido do que o normal, de forma repentina.",
+          "É uma arritmia extremamente comum, e a característica mais marcante dela é justamente essa: a crise costuma começar de uma hora para outra, sem aviso, e também terminar de repente — diferente de um coração que vai acelerando aos poucos, como acontece com esforço físico ou ansiedade.",
+          "Na maioria das vezes, quem tem esse tipo de arritmia não tem nenhum problema estrutural no coração. É um defeito só no 'fiação elétrica', não no músculo cardíaco."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que fazer durante uma crise",
+        "paragrafos": [
+          "Existem manobras que estimulam um nervo do corpo (o nervo vago) e que podem interromper a crise sozinhas, sem remédio nenhum — são chamadas de manobras vagais. Pergunte ao seu médico se você é candidato a aprender alguma delas para usar com segurança fora do hospital; nem toda manobra vagal é indicada para todo mundo, e algumas exigem orientação profissional antes.",
+          "Se a crise não passar com a manobra, o tratamento no pronto-socorro costuma seguir uma sequência: primeiro a manobra vagal supervisionada, depois um medicamento aplicado direto na veia que interrompe a maioria das crises em poucos segundos e, se ainda assim não resolver, outras opções de remédio.",
+          "Uma informação importante para levar ao pronto-socorro: se você já sabe que tem um traçado de ECG com uma alteração chamada 'pré-excitação', avise a equipe — um dos remédios mais usados para interromper a crise deve ser evitado nessa situação específica, e outras opções são usadas no lugar dele."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que muda no tratamento a longo prazo",
+        "paragrafos": [
+          "A grande mudança dos últimos anos é que a ablação por cateter — um procedimento que trata o ponto exato do curto-circuito elétrico, sem cirurgia aberta — passou a ser oferecida como primeira opção para a maioria das pessoas com crises recorrentes, depois de uma conversa clara sobre riscos e benefícios com o médico. Não é mais vista como 'último recurso'.",
+          "Isso não significa que remédio deixou de ter espaço: continua sendo uma opção legítima para quem prefere não fazer o procedimento, tem crises raras e bem toleradas, ou tem alguma contraindicação à ablação.",
+          "Há duas exceções importantes, em que a ablação tem papel pequeno ou nenhum: um tipo de taquicardia sinusal mais acelerada que o normal sem causa aparente, e uma forma de taquicardia atrial com múltiplos focos elétricos. Nesses dois casos específicos, a conversa sobre tratamento segue outro caminho — pergunte ao seu médico qual é exatamente o seu tipo de taquicardia."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio ou quase-desmaio durante a crise",
+      "Dor no peito forte durante a crise, ou que não passa depois que o coração volta ao normal",
+      "Falta de ar intensa junto com a palpitação",
+      "Crise que não termina em poucos minutos, ou que se repete várias vezes seguidas",
+      "Fraqueza ou dormência súbita de um lado do corpo, boca torta, dificuldade de falar — procure emergência imediatamente"
+    ],
+    "perguntas": [
+      "Qual é exatamente o tipo de taquicardia supraventricular que eu tenho?",
+      "Existe alguma manobra vagal que eu posso aprender a fazer com segurança em casa?",
+      "No meu caso, a ablação por cateter é uma opção recomendada, ou é melhor continuar com remédio?",
+      "Meu ECG mostra alguma alteração (como pré-excitação) que eu deveria informar num pronto-socorro?",
+      "Com que frequência as crises justificam eu procurar atendimento, em vez de esperar passar sozinho?"
+    ],
+    "fontes": [
+      "2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720.",
+      "ESC Guidelines for Management of Supraventricular Tachycardia: Key Points. American College of Cardiology, 2019."
+    ]
+  },
+  {
+    "slug": "qt-longo-o-que-significa-e-cuidados-com-medicamentos",
+    "titulo": "Meu exame mostrou QT longo: o que isso significa",
+    "subtitulo": "Por que esse achado do eletrocardiograma importa e por que avisar sobre ele antes de tomar remédio novo",
+    "tema": "Arritmias",
+    "documento_slug": "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o que significa ter o intervalo QT prolongado no eletrocardiograma, as duas formas de isso acontecer (de nascença ou provocado por remédio) e por que esse dado precisa acompanhar você em qualquer atendimento de saúde.",
+    "secoes": [
+      {
+        "titulo": "O que é o intervalo QT",
+        "paragrafos": [
+          "No eletrocardiograma, o intervalo QT mostra o tempo que o coração leva para 'recarregar' eletricamente depois de cada batimento, antes de estar pronto para o próximo. Quando esse tempo fica mais longo do que deveria, chamamos de QT longo.",
+          "Um QT longo importa porque, durante esse período mais demorado de recarga, o coração fica numa janela de maior vulnerabilidade elétrica. Nessa janela, pode surgir uma arritmia grave, chamada torsades de pointes, que causa desmaio e, em casos raros, pode ser perigosa se não for reconhecida."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "As duas formas de ter QT longo",
+        "paragrafos": [
+          "A primeira é de nascença (congênita): a pessoa já nasce com uma característica elétrica do coração que prolonga o QT, muitas vezes de causa genética e às vezes presente em mais de uma pessoa da mesma família. Para chegar a esse diagnóstico, o médico usa uma pontuação que combina o próprio traçado do ECG com a sua história pessoal (por exemplo, se já teve desmaio ligado a esforço ou susto) e a história de familiares próximos.",
+          "A segunda forma é adquirida: o QT fica prolongado por causa de um remédio, de uma alteração no sangue (como potássio baixo) ou dos dois combinados. É a forma mais comum de aparecer num exame de rotina, principalmente em quem está internado ou usando vários remédios ao mesmo tempo.",
+          "As duas formas não se excluem: uma pessoa que já nasceu com uma tendência a QT mais longo pode ficar mais vulnerável ainda diante de um remédio que também prolonga o QT."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que os remédios importam tanto aqui",
+        "paragrafos": [
+          "Várias classes de medicamentos comuns podem prolongar o QT como efeito colateral — entre elas, remédios usados para o próprio coração (antiarrítmicos), para transtornos psiquiátricos, para enjoo, e alguns antibióticos e antifúngicos. Isso não quer dizer que esses remédios sejam proibidos para todo mundo; significa que, em quem já tem QT longo, a escolha do remédio certo precisa levar isso em conta.",
+          "Por isso, se você já sabe que tem QT longo, é importante contar isso a qualquer médico ou dentista antes de receber uma receita nova, e também ao farmacêutico. Existem listas internacionais, mantidas e atualizadas, com os remédios que prolongam o QT — seu cardiologista pode consultá-las junto com você sempre que surgir uma dúvida sobre um remédio novo."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como costuma ser o acompanhamento",
+        "paragrafos": [
+          "Quando o QT longo é de nascença e a pessoa tem sintomas (ou um risco considerado alto pela pontuação do médico), o tratamento de base costuma ser um remédio da família dos betabloqueadores, evitando esforço físico intenso não orientado. Em alguns casos, o médico considera um desfibrilador implantável, e para uma forma genética específica existe um remédio dirigido a essa causa em particular — a decisão sobre cada uma dessas opções é sempre individual, feita pelo cardiologista.",
+          "Quando o QT longo é adquirido, o primeiro passo é identificar e, se possível, retirar a causa (o remédio ou o distúrbio no sangue) — muitas vezes o problema se resolve assim que a causa é corrigida."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio, principalmente se aconteceu durante esforço físico, emoção forte ou um susto (som alto, por exemplo)",
+      "Palpitação seguida de tontura importante ou sensação de quase desmaiar",
+      "Histórico de morte súbita inexplicada em parente próximo antes dos 30 anos — informe isso ao seu médico, mesmo que você nunca tenha tido sintoma",
+      "Qualquer novo remédio prescrito por outro médico sem saber do seu diagnóstico de QT longo — confirme antes de tomar a primeira dose",
+      "Fraqueza ou dormência súbita de um lado do corpo, boca torta, dificuldade de falar — procure emergência imediatamente"
+    ],
+    "perguntas": [
+      "O meu QT longo é de nascença ou foi provocado por algum remédio ou alteração no sangue?",
+      "Existe uma lista de remédios que eu devo evitar? Posso guardar uma cópia para mostrar a outros médicos?",
+      "Alguém da minha família deveria fazer um eletrocardiograma por causa do meu diagnóstico?",
+      "Eu preciso de algum remédio contínuo, ou o acompanhamento é só com exames periódicos?",
+      "Há alguma restrição de atividade física no meu caso?"
+    ],
+    "fontes": [
+      "Schwartz PJ, Moss AJ, Vincent GM, Crampton RS. Diagnostic criteria for the long QT syndrome. Circulation. 1993;88(2):782-784.",
+      "Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184.",
+      "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126.",
+      "Tisdale JE, Jaynes HA, Kingery JR, et al. Development and validation of a risk score to predict QT interval prolongation in hospitalized patients. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487."
+    ]
+  },
+  {
+    "slug": "ablacao-de-taquicardia-supraventricular-o-que-esperar",
+    "titulo": "Vou fazer uma ablação por cateter para taquicardia: o que esperar do procedimento",
+    "subtitulo": "Como funciona a ablação de taquicardia supraventricular (como a AVNRT), as chances reais de sucesso e os riscos que valem a pena perguntar antes",
+    "tema": "Arritmias",
+    "documento_slug": "taquicardia-por-reentrada-nodal-avnrt-ablacao-versus-farmacos-e-escolha-da-energia",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o procedimento de ablação por cateter para taquicardia supraventricular fora da fibrilação atrial — usando a forma mais comum, a AVNRT, como exemplo — cobrindo o que acontece, as chances reais de sucesso e os riscos que merecem conversa antes de decidir.",
+    "secoes": [
+      {
+        "titulo": "O que o procedimento trata",
+        "paragrafos": [
+          "A forma mais comum de taquicardia supraventricular em adultos sem outro problema no coração acontece porque existem, na região perto do nó que comanda a passagem do sinal elétrico entre os átrios e os ventrículos, dois pequenos caminhos elétricos em vez de um só. Esses dois caminhos formam um circuito fechado, e quando o sinal elétrico entra nesse circuito e fica girando nele, o coração dispara.",
+          "A ablação por cateter é feita por dentro dos vasos sanguíneos, com cateteres — fios finos e flexíveis — levados até o interior do coração, sem necessidade de abrir o tórax. O objetivo é aplicar energia bem localizada num desses dois caminhos elétricos (o mais 'lento' dos dois), eliminando o circuito que causa a taquicardia, e deixando o caminho normal intacto."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "As chances reais de sucesso",
+        "paragrafos": [
+          "Em um estudo com mais de mil procedimentos consecutivos dessa mesma ablação, o sucesso aconteceu em cerca de 96 em cada 100 pacientes, com a arritmia voltando em cerca de 4 em cada 100 depois do procedimento.",
+          "Olhando para taquicardias supraventriculares desse tipo de forma mais ampla (reunindo vários estudos), a taxa de sucesso logo no primeiro procedimento fica em torno de 93 em cada 100 pessoas, subindo para cerca de 95 em cada 100 quando se conta quem precisou de um segundo procedimento. A recorrência da arritmia depois de um procedimento bem-sucedido fica em torno de 6 em cada 100."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O risco que mais pesa na conversa com o médico",
+        "paragrafos": [
+          "Um dos dois caminhos elétricos que formam o circuito fica bem próximo da região que comanda todo o ritmo normal do coração. Por isso existe um risco pequeno, mas real, de a ablação atingir essa região por engano e deixar o coração precisando de um marca-passo definitivo depois — é esse risco, mais do que a taxa geral de sucesso, que costuma ser o centro da conversa entre médico e paciente antes do procedimento.",
+          "A energia usada para fazer a ablação pode ser de dois tipos — uma que aquece o tecido (radiofrequência) ou uma que o congela (crioablação) —, e elas têm um perfil de risco um pouco diferente. Nos estudos que compararam as duas, a necessidade de marca-passo definitivo apareceu só no grupo tratado com radiofrequência, nunca no grupo tratado com congelamento; em compensação, alguns desses mesmos estudos sugerem uma chance um pouco maior de a arritmia voltar mais tarde com o congelamento. Não existe uma resposta única sobre qual energia é 'melhor' — é uma troca entre segurança e durabilidade que vale conversar com quem vai fazer o seu procedimento."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Remédio continua sendo uma opção",
+        "paragrafos": [
+          "Mesmo com a ablação sendo hoje a primeira opção oferecida para a maioria das pessoas com esse tipo de taquicardia recorrente, o tratamento com remédio continua sendo uma alternativa legítima para quem prefere não fazer o procedimento agora, tem episódios raros e bem tolerados, ou tem alguma contraindicação a ele. Essa decisão é sempre conversada entre você e o seu médico, pesando riscos e benefícios do seu caso específico."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Sangramento, inchaço crescente ou hematoma grande no local onde o cateter foi introduzido (geralmente a virilha)",
+      "Febre, vermelhidão ou secreção no local da punção",
+      "Tontura muito forte, desmaio ou sensação de o coração bater muito devagar depois do procedimento",
+      "Dor no peito forte ou falta de ar que não melhora",
+      "Palpitações que voltam e não passam"
+    ],
+    "perguntas": [
+      "No meu caso, a taquicardia é a forma mais comum (perto do nó que liga os átrios aos ventrículos) ou outro tipo?",
+      "Qual das duas energias (a que aquece ou a que congela) vocês costumam usar aqui, e por quê?",
+      "Qual é o risco, no meu caso específico, de eu precisar de um marca-passo definitivo depois do procedimento?",
+      "Se a arritmia voltar, o que acontece — dá para repetir o procedimento?",
+      "Existe alguma restrição de atividade nos dias seguintes ao procedimento?"
+    ],
+    "fontes": [
+      "2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720.",
+      "Spector P, Reynolds MR, Calkins H, et al. Meta-analysis of ablation of atrial flutter and supraventricular tachycardia. Am J Cardiol. 2009;104(5):671-677.",
+      "Świętoniowska-Mścisz A, Stec P, Stec S, et al. Efficacy and safety of zero-fluoroscopy approach for ablation of atrioventricular nodal reentry tachycardia. J Interv Card Electrophysiol. 2023;66(5):1231-1242.",
+      "Schwagten B, Knops P, Janse P, et al. Long-term follow-up after catheter ablation for atrioventricular nodal reentrant tachycardia: comparison of cryothermal and radiofrequency energy. J Interv Card Electrophysiol. 2011;30(1):55-61.",
+      "Wells P, Dubuc M, Klein GJ, et al. Intracardiac ablation for AVNRT using a 6 mm distal electrode cryoablation catheter (ICY-AVNRT STUDY). J Cardiovasc Electrophysiol. 2018;29(1):167-176."
+    ]
   }
 ]
