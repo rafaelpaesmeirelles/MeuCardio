@@ -21,7 +21,7 @@ MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
     "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
-    "/privacidade", "/termos",
+    "/privacidade", "/termos", "/validar", "/validar/:codigo",
     "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
     "/doencas", "/doencas/:slug", "/triagem-sintomas",
     "/fluxogramas", "/diretrizes", "/busca", "/calculadoras",
@@ -43,7 +43,7 @@ EXPECTED_APP_ROUTES = {
 EXPECTED_NAV_ROUTES = {
     "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
     "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras", "/emergencia",
-    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/caixa-de-email", "/cursos",
+    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas", "/trilhas/timeline",
@@ -87,6 +87,7 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/Biblioteca.tsx",
     "frontend/src/pages/CaixaDeEmail.tsx",
     "frontend/src/pages/CorviaMail.tsx",
+    "frontend/src/pages/ValidarDocumento.tsx",
     "frontend/src/pages/Agenda.tsx",
     "frontend/src/pages/ExportarConteudo.tsx",
     "frontend/src/pages/Produto.tsx",
