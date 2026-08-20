@@ -1,0 +1,32 @@
+name: Stabilize product backend once
+
+on:
+  push:
+    branches: [fix/product-stabilization-20260820]
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: fix/product-stabilization-20260820
+          fetch-depth: 0
+      - name: Apply backend stabilization patches
+        run: |
+          python .github/scripts/stabilize_product_backend.py
+          python -m compileall -q backend/app
+          git diff --check
+      - name: Commit patches
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backend .github/scripts/stabilize_product_backend.py
+          if ! git diff --cached --quiet; then
+            git commit -m "fix: stabilize signed documents, email delivery and geocoding"
+            git push origin HEAD:fix/product-stabilization-20260820
+          fi
