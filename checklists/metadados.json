@@ -8424,5 +8424,199 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-operabilidade-cirurgica-na-cteph-encaminhamento-ao-heart-team",
+    "condicao": "Hipertensão pulmonar tromboembólica crônica (CTEPH) — avaliação de operabilidade",
+    "resumo": "O que checar ao encaminhar um paciente com CTEPH/doença tromboembólica pulmonar crônica confirmada para decisão de operabilidade em heart team especializado, e quais suposições comuns de consultório NÃO são contraindicação isolada à endarterectomia pulmonar.",
+    "documento_origem": "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kim NH, D'Armini AM, Delcroix M, Jaïs X, Jevnikar M, Madani MM, Matsubara H, Palazzini M, Wiedenroth CB, Simonneau G, Jenkins DP. Chronic thromboembolic pulmonary disease. Eur Respir J. 2024;64(4):2401294. DOI: 10.1183/13993003.01294-2024. PMID: 39209473",
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548",
+      "Kim NH, Delcroix M, Jais X, et al. Chronic thromboembolic pulmonary hypertension. Eur Respir J. 2019;53(1):1801915. PMID: 30545969",
+      "Kawakami T, Matsubara H, Shinke T, et al. Balloon pulmonary angioplasty versus riociguat in inoperable chronic thromboembolic pulmonary hypertension (MR BPA): an open-label, randomised controlled trial. Lancet Respir Med. 2022;10(10):949-960. DOI: 10.1016/S2213-2600(22)00171-0. PMID: 35926544"
+    ],
+    "itens": [
+      {
+        "id": "cteph-encaminhamento-centro-expertise",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Todo paciente com CTEPH/doença tromboembólica pulmonar crônica confirmada — com ou sem hipertensão pulmonar estabelecida — encaminhado a centro de expertise para decisão em heart team multidisciplinar, antes de qualquer definição terapêutica",
+        "origem_secao": "O papel do heart team (equipe multidisciplinar) especializado"
+      },
+      {
+        "id": "cteph-composicao-heart-team",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Confirmar que o heart team que vai decidir a operabilidade inclui cirurgião de endarterectomia pulmonar, intervencionista de angioplastia pulmonar por balão (BPA), especialista em hipertensão pulmonar e radiologista torácico, todos treinados em centro de alto volume",
+        "origem_secao": "Composicao minima da equipe (CTEPH MDT)"
+      },
+      {
+        "id": "cteph-nao-excluir-por-rvp-elevada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não excluir o paciente da avaliação cirúrgica só por RVP pré-operatória muito elevada (> 1.000 dyn·s·cm⁻⁵) — em centros de expertise a mortalidade operatória nesse subgrupo caiu para menos de 5%",
+        "origem_secao": "O que NAO e contraindicacao — desfazendo suposicoes comuns de consultorio"
+      },
+      {
+        "id": "cteph-nao-excluir-por-idade-obesidade-reoperacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não excluir o paciente da avaliação cirúrgica só por idade avançada (> 80 anos), obesidade mórbida ou cirurgia prévia (reoperação) — nenhum dos três é considerado contraindicação isolada à endarterectomia pulmonar",
+        "origem_secao": "O que NAO e contraindicacao — desfazendo suposicoes comuns de consultorio"
+      },
+      {
+        "id": "cteph-distinguir-operavel-tecnicamente-de-indicacao-de-operar",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrar separadamente as três avaliações da decisão final: acessibilidade anatômica (operabilidade técnica), risco cirúrgico individual e vontade do paciente — operabilidade técnica não implica automaticamente indicação de operar (recusa ou comorbidade proibitiva podem afastar a cirurgia mesmo em doença tecnicamente ressecável)",
+        "origem_secao": "Operabilidade tecnica nao e o mesmo que decisao de operar"
+      },
+      {
+        "id": "cteph-nao-atrasar-cirurgia-em-operavel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não atrasar a endarterectomia pulmonar em paciente considerado operável para testar terapia-ponte com riociguate ou angioplastia pulmonar por balão (BPA) antes — não há evidência de benefício nessa estratégia em quem já é candidato à cirurgia",
+        "origem_secao": "Um ponto de seguranca que a fonte destaca de forma explicita"
+      },
+      {
+        "id": "cteph-bpa-riociguate-inoperavel-ou-residual",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Reservar BPA e riociguate para os cenários corretos: doença tecnicamente inoperável (distal, além do alcance seguro do cirurgião), hipertensão pulmonar residual/recorrente após endarterectomia, ou ponte pré-BPA em RVP > 4 UW — nunca como alternativa de primeira linha equivalente à cirurgia em quem é candidato a ela",
+        "origem_secao": "Quando BPA e riociguate entram — inoperabilidade, doenca residual e ponte pre-procedimento"
+      },
+      {
+        "id": "cteph-reavaliacao-pos-eap-3-6-meses",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliar hemodinâmica 3 a 6 meses após a endarterectomia pulmonar para identificar hipertensão pulmonar residual (PAPm ≥ 25 mmHg pós-operatório, relatada em 17% a 51% dos pacientes) — o limiar associado a pior desfecho é PAPm ≥ 38 mmHg e RVP ≥ 5 UW nesse ponto de corte",
+        "origem_secao": "Doenca residual e reavaliacao pos-operatoria"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Kim NH et al. (Eur Respir J. 2024;64(4):2401294, PMID 39209473) e nas ESC/ERS 2022 Guidelines for pulmonary hypertension (PMID 36017548), em 20/08/2026."
+  },
+  {
+    "slug": "rastreio-de-hap-associada-a-esclerose-sistemica-algoritmo-detect",
+    "condicao": "Rastreio de hipertensão arterial pulmonar em esclerose sistêmica (algoritmo DETECT)",
+    "resumo": "Passo a passo do algoritmo DETECT — validado especificamente para a esclerose sistêmica de risco aumentado — para decidir quem encaminhar ao ecocardiograma e, na sequência, ao cateterismo cardíaco direito, sem depender do algoritmo genérico de rastreio de hipertensão pulmonar, que perde quase 1 em cada 3 diagnósticos nessa população.",
+    "documento_origem": "hipertensao-arterial-pulmonar-associada-a-esclerose-sistemica-algoritmo-detect",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Coghlan JG, Denton CP, Grünig E, et al; DETECT study group. Evidence-based detection of pulmonary arterial hypertension in systemic sclerosis: the DETECT study. Ann Rheum Dis. 2014;73(7):1340-1349. DOI: 10.1136/annrheumdis-2013-203301. PMID: 23687283. PMCID: PMC4078756"
+    ],
+    "itens": [
+      {
+        "id": "detect-populacao-elegivel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente pertence à população em que o DETECT foi validado: esclerose sistêmica com mais de 3 anos de doença e DLCO predita < 60% — fora desse subgrupo o algoritmo não deve ser aplicado",
+        "origem_secao": "O algoritmo detect — dois passos"
+      },
+      {
+        "id": "detect-nao-restringir-a-sintomatico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não restringir o rastreio a paciente sintomático — 64% dos casos de HAP confirmados na coorte de validação estavam em classe funcional OMS I/II, ainda pouco sintomáticos",
+        "origem_secao": "Por que rastreio dedicado — epidemiologia e prognostico"
+      },
+      {
+        "id": "detect-passo1-seis-variaveis",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Passo 1 (não ecocardiográfico) — coletar as seis variáveis que determinam encaminhamento ao ecocardiograma: razão CVF% predita/DLCO% predita, telangiectasia atual ou prévia, anticorpo anticentrômero sérico, NT-proBNP sérico, ácido úrico sérico e desvio de eixo para a direita no ECG",
+        "origem_secao": "O algoritmo detect — dois passos"
+      },
+      {
+        "id": "detect-passo2-duas-variaveis-eco",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Passo 2 (ecocardiográfico) — somar ao escore do Passo 1 a área do átrio direito e a velocidade do jato de regurgitação tricúspide para determinar encaminhamento ao cateterismo cardíaco direito",
+        "origem_secao": "O algoritmo detect — dois passos"
+      },
+      {
+        "id": "detect-nao-usar-algoritmo-generico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não aplicar o algoritmo diagnóstico geral de hipertensão pulmonar (baseado em sintoma e ecocardiograma isolado) à esclerose sistêmica esperando a mesma sensibilidade — na mesma coorte ele perdeu 29% dos diagnósticos de HAP, contra 4% do DETECT",
+        "origem_secao": "Desempenho — por que substitui o algoritmo generico nessa populacao"
+      },
+      {
+        "id": "detect-encaminhar-cateterismo-se-positivo",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar ao cateterismo cardíaco direito todo paciente positivo pelo escore combinado dos dois passos — o algoritmo aceita mais cateterismos (62% dos pacientes) exatamente para não perder diagnóstico em doença tipicamente leve e pouco sintomática na apresentação",
+        "origem_secao": "Desempenho — por que substitui o algoritmo generico nessa populacao"
+      },
+      {
+        "id": "detect-comunicar-prognostico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao discutir o rastreio com o paciente, registrar a diferença de sobrevida em 3 anos que justifica a agressividade do protocolo: 94% na esclerose sistêmica sem HAP contra 56% na esclerose sistêmica com HAP confirmada",
+        "origem_secao": "Por que rastreio dedicado — epidemiologia e prognostico"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Coghlan JG et al.; DETECT study group (Ann Rheum Dis. 2014;73(7):1340-1349, PMID 23687283), em 20/08/2026."
+  },
+  {
+    "slug": "prevencao-e-rastreio-de-delirium-pos-operatorio-em-cirurgia-cardiaca",
+    "condicao": "Delirium pós-operatório em cirurgia cardíaca",
+    "resumo": "O que checar antes e depois de uma cirurgia cardíaca em paciente de risco para delirium pós-operatório — fatores de risco rastreáveis no pré-operatório (dois deles do domínio da saúde mental), vigilância sistemática na UTI e a escolha de sedativo com impacto demonstrado na incidência.",
+    "documento_origem": "delirium-pos-operatorio-em-cirurgia-cardiaca-incidencia-fatores-de-risco-e-prevencao",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Chen H, Mo L, Hu H, Ou Y, Luo J. Risk factors of postoperative delirium after cardiac surgery: a meta-analysis. J Cardiothorac Surg. 2021;16(1):113. DOI: 10.1186/s13019-021-01496-w. PMID: 33902644. PMCID: PMC8072735",
+      "Rudolph JL, Inouye SK, Jones RN, Yang FM, Fong TG, Levkoff SE, Marcantonio ER. Delirium: an independent predictor of functional decline after cardiac surgery. J Am Geriatr Soc. 2010;58(4):643-649. DOI: 10.1111/j.1532-5415.2010.02762.x. PMID: 20345866. PMCID: PMC2856754",
+      "Djaiani G, Silverton N, Fedorko L, Carroll J, Styra R, Rao V, Katznelson R. Dexmedetomidine versus Propofol Sedation Reduces Delirium after Cardiac Surgery: A Randomized Controlled Trial. Anesthesiology. 2016;124(2):362-368. DOI: 10.1097/ALN.0000000000000951. PMID: 26575144"
+    ],
+    "itens": [
+      {
+        "id": "delirium-cc-rastreio-depressao-pre-op",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear ativamente sintomas depressivos na avaliação pré-operatória de cirurgia cardíaca — depressão pré-operatória é um dos oito fatores de risco de delirium identificados na metanálise (14 estudos, 13.286 pacientes)",
+        "origem_secao": "Quanto o delirium acontece, e o que prediz — a metanalise de Chen et al. (2021)"
+      },
+      {
+        "id": "delirium-cc-rastreio-cognitivo-pre-op",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear comprometimento cognitivo leve pré-existente na avaliação pré-operatória — é outro dos oito fatores de risco identificados, junto com idade avançada, diabetes, estenose de carótida, classe funcional NYHA III/IV e tempo prolongado de ventilação mecânica/UTI",
+        "origem_secao": "Quanto o delirium acontece, e o que prediz — a metanalise de Chen et al. (2021)"
+      },
+      {
+        "id": "delirium-cc-vigilancia-diaria-cam-icu",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter rastreio sistemático e diário de delirium na UTI pós-operatória com instrumento validado (CAM ou CAM-ICU), não apenas quando o quadro for clinicamente óbvio — a incidência relatada varia de 4,1% a 54,9% conforme a frequência e o instrumento de avaliação usados",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "delirium-cc-discutir-escolha-sedativo",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Discutir com a equipe de anestesia/terapia intensiva a escolha do sedativo em paciente de alto risco: dexmedetomidina reduziu a incidência de delirium contra propofol (17,5% vs. 31,5%; OR 0,46; IC95% 0,23-0,92; p=0,028), com NNT de 7,1",
+        "origem_secao": "Uma intervencao testada em ensaio clinico randomizado: dexmedetomidina reduz o delirium"
+      },
+      {
+        "id": "delirium-cc-nao-minimizar-episodio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar o delirium pós-operatório como evento benigno e autolimitado ao orientar a família — associou-se a maior risco de declínio funcional em 1 mês (RR ajustado 1,8; IC95% 1,2-2,6), independente de idade, cognição, comorbidade e função basal",
+        "origem_secao": "O delirium nao e so um episodio transitorio — ele prediz declinio funcional"
+      },
+      {
+        "id": "delirium-cc-nao-restringir-causa-organica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ao investigar delirium instalado, não restringir a busca a causa metabólica/infecciosa aguda sem considerar a carga de risco pré-operatória já identificada (depressão e comprometimento cognitivo entre os fatores de risco confirmados)",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Chen H et al. (J Cardiothorac Surg. 2021;16(1):113, PMID 33902644), Rudolph JL et al. (J Am Geriatr Soc. 2010;58(4):643-649, PMID 20345866) e Djaiani G et al. (Anesthesiology. 2016;124(2):362-368, PMID 26575144), em 20/08/2026."
   }
 ]
