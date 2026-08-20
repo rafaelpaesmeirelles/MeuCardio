@@ -185,6 +185,29 @@ class TestCanalProprioCorviaMail:
         # PDF real do material — não é link nem string vazia.
         assert anexos_subidos[0][2] > 0  # tamanho do conteúdo subido
 
+    def test_envio_direto_legado_falha_fechado_com_smime_ativo(
+        self, client, db, criar_usuario, monkeypatch_mail360,
+    ):
+        user, token = criar_usuario(email="medico-smime-mat@teste.local")
+        _dar_assinatura_principal(db, user)
+        _ativar_corvia_mail(db, user, "medico-smime-mat@corvia.med.br")
+        m = _material(db, "fibrilacao-atrial-teste-smime")
+        user.email_assinatura_digital_ativa = True
+        db.commit()
+
+        resposta = client.post(
+            f"/api/material-paciente/{m.slug}/enviar-email",
+            headers=_headers(token),
+            json={
+                "email_paciente": "paciente@teste.local",
+                "nome_paciente": "Paciente Teste",
+                "consentimento": True,
+            },
+        )
+        assert resposta.status_code == 409, resposta.text
+        assert "S/MIME" in resposta.text
+        assert monkeypatch_mail360["mensagens_enviadas"] == []
+
 
 class TestLimiteDiario:
     def test_limite_diario_bloqueia_com_429(self, client, db, criar_usuario, monkeypatch):

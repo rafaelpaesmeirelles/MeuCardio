@@ -90,6 +90,18 @@
 .clinical-os [class*="mail-"] .cartao,.clinical-os [class*="corvia-mail"] .cartao{background:linear-gradient(145deg,rgba(12,35,48,.92),rgba(7,24,34,.96))!important;border-color:var(--cos-line)!important}
 .clinical-os .corvia-mail-aviso,.clinical-os .mail-aviso{color:#8eaab3!important;background:rgba(66,202,216,.035)!important;border-color:rgba(66,202,216,.12)!important}
 
+/* ---------- Prescription medication search ---------- */
+.clinical-os .prescricao-sugestoes{
+  color:#dcecef!important;background:#0b2331!important;border-color:rgba(148,205,219,.2)!important;box-shadow:0 14px 32px rgba(0,0,0,.28)!important
+}
+.clinical-os .prescricao-sugestoes button{color:#dcecef!important;background:transparent!important;border-color:rgba(148,205,219,.1)!important}
+.clinical-os .prescricao-sugestoes button strong{color:#f3fbfc!important}
+.clinical-os .prescricao-sugestoes button span{color:#c1d8dd!important}
+.clinical-os .prescricao-sugestoes button small{color:#91adb5!important}
+.clinical-os .prescricao-sugestoes button:hover,.clinical-os .prescricao-sugestoes button:focus-visible{
+  color:#fff!important;background:rgba(66,202,216,.1)!important;outline:2px solid rgba(120,229,235,.55)!important;outline-offset:-2px
+}
+
 @media(max-width:900px){
   .clinical-os .ia-escolha__cartoes{grid-template-columns:1fr}
   .clinical-os .ia-escolha__cartao{min-height:0}

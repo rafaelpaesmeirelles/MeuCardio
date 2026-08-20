@@ -275,6 +275,14 @@ def enviar_material_por_email(
     conta = db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
     if not conta or conta.status != "ativa":
         raise HTTPException(status_code=409, detail="Sua caixa do CorvIA Mail não está ativa.")
+    if user.email_assinatura_digital_ativa:
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "A caixa nativa não suporta assinatura digital S/MIME. "
+                "Envie por uma conta Google, Microsoft, Yahoo ou iCloud conectada."
+            ),
+        )
     if conta.envio_material_suspenso:
         raise HTTPException(
             status_code=409,

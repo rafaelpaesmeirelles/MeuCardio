@@ -625,7 +625,7 @@ type StatusCertificadoA1 = {
  * que não depende de nenhuma conta comercial: o médico já tem (ou compra
  * de qualquer Autoridade Certificadora credenciada) um arquivo .pfx/.p12
  * com a própria chave privada. */
-function CertificadoA1() {
+function CertificadoA1({ aoAlterar }: { aoAlterar: () => void }) {
   const [status, setStatus] = useState<StatusCertificadoA1 | null>(null);
   const [certificadoras, setCertificadoras] = useState<Certificadora[]>([]);
   const [arquivo, setArquivo] = useState<File | null>(null);
@@ -653,6 +653,7 @@ function CertificadoA1() {
       setArquivo(null);
       setSenha("");
       await carregarStatus();
+      aoAlterar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o certificado.");
     } finally {
@@ -666,6 +667,7 @@ function CertificadoA1() {
     try {
       await api.delete("/assinatura/certificado-a1");
       await carregarStatus();
+      aoAlterar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível remover o certificado.");
     } finally {
@@ -756,14 +758,14 @@ type AssinaturaEmail = {
 /** Rodapé visual anexado a todo e-mail enviado pelo CorvIA Mail. Com A1,
  * Google/Microsoft/Yahoo/iCloud também usam S/MIME; a caixa nativa fica
  * bloqueada para nunca degradar silenciosamente para envio sem assinatura. */
-function PreferenciaAssinaturaEmail() {
+function PreferenciaAssinaturaEmail({ revisaoCertificado }: { revisaoCertificado: number }) {
   const [dados, setDados] = useState<AssinaturaEmail | null>(null);
   const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
 
   useEffect(() => {
     api.get<AssinaturaEmail>("/email/assinatura").then(setDados).catch(() => {});
-  }, []);
+  }, [revisaoCertificado]);
 
   async function salvar(proximo: Pick<AssinaturaEmail, "ativa" | "incluir_telefone" | "incluir_endereco" | "assinar_digitalmente">) {
     setSalvando(true);
@@ -1117,6 +1119,7 @@ function Assinatura() {
 }
 
 export default function MinhaConta() {
+  const [revisaoCertificado, setRevisaoCertificado] = useState(0);
   const { usuario, recarregar, sair } = useAuth();
   const navigate = useNavigate();
   const [perfil, setPerfil] = useState<Usuario | null>(usuario);
@@ -1177,8 +1180,8 @@ export default function MinhaConta() {
           }}
         />
         <ResumoSincronizacao />
-        <CertificadoA1 />
-        <PreferenciaAssinaturaEmail />
+        <CertificadoA1 aoAlterar={() => setRevisaoCertificado((valor) => valor + 1)} />
+        <PreferenciaAssinaturaEmail revisaoCertificado={revisaoCertificado} />
         <DadosPessoais
           perfil={perfil}
           aoSalvar={(u) => {

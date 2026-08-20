@@ -27,6 +27,7 @@ from app.services.professional_profile import professional_name, workplace_lines
 
 from .apresentacao import MARCADORES_POR_PAGINA, _fragmentar, _limpar, _secoes
 from .pdf import arvore as arv
+from .pdf.marca import LOGO, logo_disponivel
 
 NAVY = RGBColor(0x0B, 0x2E, 0x45)
 TEAL = RGBColor(0x1C, 0x72, 0x93)
@@ -52,8 +53,20 @@ def _caixa_texto(slide, esquerda, topo, largura, altura):
     return tf
 
 
+def _logo_corvia(slide, esquerda, topo, largura) -> bool:
+    """Insere o asset canônico sem redesenhar ou reinterpretar a marca."""
+    if not logo_disponivel():
+        return False
+    try:
+        slide.shapes.add_picture(str(LOGO), esquerda, topo, width=largura)
+    except (OSError, ValueError):
+        return False
+    return True
+
+
 def _rodape(slide, texto: str) -> None:
-    tf = _caixa_texto(slide, MARGEM, ALTURA - Inches(0.45), LARGURA - 2 * MARGEM, Inches(0.35))
+    _logo_corvia(slide, MARGEM, ALTURA - Inches(0.43), Inches(1.35))
+    tf = _caixa_texto(slide, Inches(2.1), ALTURA - Inches(0.45), LARGURA - Inches(2.7), Inches(0.35))
     p = tf.paragraphs[0]
     p.text = texto
     p.font.size = Pt(10)
@@ -97,6 +110,14 @@ def _capa(prs: Presentation, titulo: str, resumo: str, nome: str, registro: str)
     fundo.line.fill.background()
     fundo.shadow.inherit = False
 
+    if logo_disponivel():
+        placa = slide.shapes.add_shape(1, Inches(0.86), Inches(0.55), Inches(2.85), Inches(0.9))
+        placa.fill.solid()
+        placa.fill.fore_color.rgb = BRANCO
+        placa.line.fill.background()
+        placa.shadow.inherit = False
+        _logo_corvia(slide, Inches(1.02), Inches(0.68), Inches(2.5))
+
     tf = _caixa_texto(slide, Inches(0.9), Inches(2.2), LARGURA - Inches(1.8), Inches(2.2))
     p = tf.paragraphs[0]
     p.text = titulo
@@ -111,10 +132,10 @@ def _capa(prs: Presentation, titulo: str, resumo: str, nome: str, registro: str)
         p2.font.size = Pt(16)
         p2.font.color.rgb = RGBColor(0xCF, 0xDD, 0xE4)
 
-    rodape = " · ".join(x for x in (nome, registro) if x) or "Corvia"
+    rodape = " · ".join(x for x in (nome, registro) if x) or "CorVIA"
     tf3 = _caixa_texto(slide, Inches(0.9), ALTURA - Inches(0.9), LARGURA - Inches(1.8), Inches(0.5))
     p3 = tf3.paragraphs[0]
-    p3.text = f"{rodape}  ·  Corvia · corvia.med.br"
+    p3.text = f"{rodape}  ·  CorVIA — Clinical OS · corvia.med.br"
     p3.font.size = Pt(12)
     p3.font.color.rgb = RGBColor(0x9D, 0xB4, 0xC2)
 
@@ -138,9 +159,9 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
     prs.slide_width = LARGURA
     prs.slide_height = ALTURA
 
-    _capa(prs, doc.title, doc.summary or "", nome or "Corvia", registro)
+    _capa(prs, doc.title, doc.summary or "", nome or "CorVIA", registro)
 
-    rodape_txt = f"Corvia · {doc.theme} · corvia.med.br"
+    rodape_txt = f"CorVIA — Clinical OS · {doc.theme} · corvia.med.br"
     paginas_conteudo = 0
 
     def abrir_slide(titulo: str):
@@ -156,7 +177,7 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
         raiz = arv.montar(fonte)
         slide = abrir_slide("Árvore de decisão")
         if raiz is None:
-            _corpo_com_marcadores(slide, [("paragrafo", "O diagrama não pôde ser convertido em lista com fidelidade. Consulte o fluxograma original na Corvia.")])
+            _corpo_com_marcadores(slide, [("paragrafo", "O diagrama não pôde ser convertido em lista com fidelidade. Consulte o fluxograma original no CorVIA.")])
         else:
             _corpo_com_marcadores(slide, [("item", linha) for linha in arv.em_lista(raiz)])
 
@@ -210,7 +231,7 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
     if doc.gaps:
         blocos.append(("paragrafo", f"⚠ Este documento declara {len(doc.gaps)} ponto(s) pendente(s) de verificação humana."))
     hoje = datetime.now(timezone.utc).astimezone().strftime("%d/%m/%Y")
-    blocos.append(("paragrafo", f"Exportado da Corvia em {hoje}" + (f" por {nome}." if nome else ".")))
+    blocos.append(("paragrafo", f"Exportado do CorVIA em {hoje}" + (f" por {nome}." if nome else ".")))
     _corpo_com_marcadores(slide, blocos)
 
     buffer = BytesIO()

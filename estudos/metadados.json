@@ -14318,7 +14318,8 @@
     "journal": "New England Journal of Medicine",
     "year": 2021,
     "doi": "10.1056/NEJMoa2029980",
-    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2029980",
+    "pmid": "33197159",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33197159/",
     "summary": "Ensaio randomizado canadense com 303 pacientes com fibrilação atrial paroxística sintomática ainda sem tratamento, comparando ablação por cateter com balão de crioterapia (n=154) versus fármaco antiarrítmico como controle inicial de ritmo (n=149). Todos os pacientes receberam monitor cardíaco implantável para detecção contínua de arritmia. Seguimento de 12 meses; desfecho primário: primeira recorrência documentada de taquiarritmia atrial entre os dias 91 e 365.",
     "key_findings": "Recorrência de taquiarritmia atrial em 42,9% do grupo ablação versus 67,8% do grupo antiarrítmico (HR 0,48; IC95% 0,35-0,66; p<0,001). Taquiarritmia atrial sintomática recorreu em 11,0% (ablação) versus 26,2% (antiarrítmico) (HR 0,39; IC95% 0,22-0,68). Mediana do tempo em fibrilação atrial: 0% com ablação versus 0,13% com antiarrítmico. Eventos adversos graves: 3,2% (ablação) versus 4,0% (antiarrítmico).",
     "clinical_implications": "Ablação por cateter com crioballão como terapia INICIAL — antes de qualquer tentativa com antiarrítmico — reduziu significativamente a recorrência de arritmia atrial na FA paroxística sintomática, com segurança comparável ao tratamento farmacológico, monitorada de forma contínua por dispositivo implantável (não por Holter intermitente, que subestima recorrência).",
@@ -14331,7 +14332,7 @@
       "fibrilação atrial paroxística"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true
   },
   {
     "slug": "stop-af-first-crioablacao-como-terapia-inicial-da-fa-paroxistica",
@@ -14341,7 +14342,8 @@
     "journal": "New England Journal of Medicine",
     "year": 2021,
     "doi": "10.1056/NEJMoa2029554",
-    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2029554",
+    "pmid": "33197158",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33197158/",
     "summary": "Ensaio randomizado multicêntrico com 203 pacientes de 18 a 80 anos com fibrilação atrial paroxística ainda sem terapia de controle de ritmo prévia, designados 1:1 para fármaco antiarrítmico (classe I ou III, n=99) ou isolamento das veias pulmonares por crioballão (n=104). Monitorização por ECG, telefone acionado pelo paciente e Holter de 24h ao longo de 12 meses. Desfecho primário de eficácia: sucesso do tratamento (livre de falha do procedimento ou recorrência de arritmia atrial após período de blanking de 90 dias).",
     "key_findings": "Sucesso inicial do procedimento em 97% dos pacientes do grupo ablação. Sucesso do tratamento em 12 meses (Kaplan-Meier): 74,6% (IC95% 65,0-82,0) no grupo ablação versus 45,0% (IC95% 34,6-54,7) no grupo fármaco (p<0,001). Eventos adversos graves relacionados ao procedimento foram incomuns no grupo ablação (estimativa Kaplan-Meier de 1,9%; IC95% 0,5-7,5).",
     "clinical_implications": "Reforça, num segundo ensaio independente publicado simultaneamente ao EARLY-AF, que a ablação por crioballão como terapia de primeira linha é superior ao fármaco antiarrítmico na prevenção de recorrência de arritmia atrial na FA paroxística, com eventos periprocedimento incomuns — os dois ensaios juntos sustentam a mudança de diretriz que passou a colocar a ablação como opção de primeira linha, não apenas de resgate após falha farmacológica.",
@@ -14354,7 +14356,7 @@
       "fibrilação atrial paroxística"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true
   },
   {
     "slug": "nathan-2019-rise-iip-riociguate-em-hp-associada-a-fibrose-pulmonar-idiopatica",
@@ -21878,7 +21880,7 @@
     "summary": "Ensaio de fase 2a, controlado por linha de base (baseline-controlled), aberto (sem grupo placebo concorrente), NCT04572893, avaliando danicamtiv — pequena molécula que potencializa seletivamente a função da miosina cardíaca — em 41 participantes com cardiomiopatia dilatada (FEVE basal média 33,4% ± 8,0%), estratificados em três coortes por causa genética: 12 com variante em MYH7, 14 com variante em TTN, 15 de outras causas. Período de tratamento 1: 25mg 2x/dia por 1 semana; período 2: ajuste para 10mg ou 50mg 2x/dia. Desfecho primário: segurança e tolerabilidade; desfechos secundários: alterações ecocardiográficas estruturais e funcionais.",
     "key_findings": "Eventos adversos emergentes do tratamento em 22 de 41 participantes (53,7%), todos leves ou moderados, com 1 descontinuação. Elevação assintomática de troponina em 3 participantes, todos no coorte de outras causas. Após o período de tratamento 2, em relação à linha de base: aumento da FEVE de 8,8 pontos percentuais (IC95% 5,03-12,64) no coorte MYH7; 5,9 pontos percentuais (IC95% 2,59-9,28) no coorte TTN; e 4,4 pontos percentuais (IC95% -0,90 a 9,73, intervalo cruzando zero, não significativo) no coorte de outras causas.",
     "clinical_implications": "Prova de conceito translacional (do racional mecanístico in vitro ao ensaio clínico) de que a resposta ecocardiográfica ao danicamtiv é maior nos coortes com etiologia genética definida (MYH7, TTN), onde o racional mecanístico é mais direto, e menor e não significativa na coorte de outras causas — sugerindo que o efeito pode depender do mecanismo genético subjacente à disfunção da miosina. Não é ensaio confirmatório de eficácia clínica: o desfecho primário foi segurança/tolerabilidade, não um desfecho clínico duro ou funcional. Molécula distinta do omecamtiv mecarbil (testado em fase 3 no GALACTIC-HF e rejeitado pelo FDA em 2023) — geração posterior, população-alvo e desenho de estudo diferentes.",
-    "limitations": "Estudo aberto, sem grupo placebo — o efeito observado na FEVE não pode ser atribuído com certeza ao fármaco isoladamente (regressão à média, otimização concomitante de terapia e variabilidade de medida ecocardiográfica não são excluídas por este desenho). Amostra pequena (n=41), subdividida em três coortes de 12-15 pacientes. VERIFICAÇÃO HUMANA NECESSÁRIA: não há, até a data desta revisão (12/08/2026), ensaio de fase 3 controlado por placebo nem desfecho clínico duro publicado com danicamtiv.",
+    "limitations": "Estudo aberto, sem grupo placebo — o efeito observado na FEVE não pode ser atribuído com certeza ao fármaco isoladamente (regressão à média, otimização concomitante de terapia e variabilidade de medida ecocardiográfica não são excluídas por este desenho). Amostra pequena (n=41), subdividida em três coortes de 12-15 pacientes, duração curta e desfechos ecocardiográficos substitutos, sem poder para eficácia clínica.",
     "theme": "Insuficiência cardíaca",
     "tags": [
       "danicamtiv",
@@ -21889,7 +21891,7 @@
       "fase 2"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true
   },
   {
     "slug": "istaroxime-seismic-analise-hemodinamica-pre-choque-cardiogenico",
@@ -23832,56 +23834,6 @@
     "published": true
   },
   {
-    "slug": "early-af-crioablacao-vs-antiarritmico-tratamento-inicial-fa-paroxistica",
-    "title": "EARLY-AF — Crioablação ou Antiarrítmico para Tratamento Inicial da Fibrilação Atrial",
-    "study_type": "ensaio_clinico",
-    "authors": "Andrade JG, Wells GA, Deyell MW, Bennett M, Essebag V, et al.; EARLY-AF Investigators.",
-    "journal": "New England Journal of Medicine",
-    "year": 2021,
-    "doi": "10.1056/NEJMoa2029980",
-    "pmid": "33197159",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33197159/",
-    "summary": "NCT02825979. 303 pacientes com FA paroxística sintomática e não tratada, randomizados para crioablação por balão vs. antiarrítmico como controle de ritmo inicial. Todos com monitor cardíaco implantável. Desfecho primário: primeira recorrência documentada de qualquer taquiarritmia atrial entre os dias 91 e 365. Seguimento de 12 meses.",
-    "key_findings": "Recorrência em 1 ano: 66/154 (42,9%) ablação vs. 101/149 (67,8%) antiarrítmico; HR 0,48 (IC95% 0,35-0,66; p<0,001). Recorrência sintomática: 11,0% vs. 26,2%; HR 0,39 (IC95% 0,22-0,68). Eventos adversos graves: 5 (3,2%) vs. 6 (4,0%).",
-    "clinical_implications": "Com monitor cardíaco implantável, a recorrência foi de 42,9% mesmo no braço da ablação — reflete maior rigor de detecção, não mais arritmia. Junto com o STOP AF First (cadastrado nesta mesma PR), estabelece a superioridade da ablação de primeira linha sobre antiarrítmico para manter ritmo sinusal na FA paroxística sintomática.",
-    "limitations": "n=303, pequeno; nenhum ensaio é cego (impossível cegar ablação contra comprimido); população de FA paroxística sintomática virgem de tratamento — não responde sobre FA persistente nem assintomáticos; não avaliou AVC, mortalidade ou insuficiência cardíaca com poder adequado.",
-    "theme": "Fibrilação atrial",
-    "tags": [
-      "early-af",
-      "crioablação",
-      "antiarrítmico",
-      "fa paroxística",
-      "terapia inicial"
-    ],
-    "review_status": "revisado",
-    "published": true
-  },
-  {
-    "slug": "stop-af-first-crioballao-terapia-inicial-fa-paroxistica",
-    "title": "STOP AF First — Crioablação por Balão como Terapia Inicial para Fibrilação Atrial",
-    "study_type": "ensaio_clinico",
-    "authors": "Wazni OM, Dandamudi G, Sood N, Hoyt R, Tyler J, et al.; STOP AF First Investigators.",
-    "journal": "New England Journal of Medicine",
-    "year": 2021,
-    "doi": "10.1056/NEJMoa2029554",
-    "pmid": "33197158",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33197158/",
-    "summary": "NCT03118518. Financiado pela Medtronic. Pacientes de 18-80 anos com FA paroxística sem terapia prévia de controle de ritmo, randomizados 1:1 para antiarrítmico (classe I ou III) ou isolamento de veias pulmonares com criobalão. 203 randomizados e tratados (104 ablação, 99 fármaco). Desfecho primário de eficácia: sucesso do tratamento (ausência de falha inicial do procedimento ou recorrência após blanking de 90 dias).",
-    "key_findings": "Sucesso inicial do procedimento: 97%. Sucesso do tratamento em 12 meses: 74,6% (IC95% 65,0-82,0) ablação vs. 45,0% (IC95% 34,6-54,7) fármaco; p<0,001. Desfecho primário de segurança: 2 eventos no braço de ablação, estimativa KM 1,9% (IC95% 0,5-7,5) em 12 meses.",
-    "clinical_implications": "A comparação entre EARLY-AF (monitor implantável, 42,9% recorrência) e STOP AF First (monitoramento intermitente, 74,6% sucesso) é instrutiva sobre metodologia — mesma terapia e mesma doença, o que muda é o rigor da detecção; comparar taxas entre os dois ensaios diretamente produz conclusão errada.",
-    "limitations": "n=203, pequeno; não cego; financiado pela Medtronic (fabricante do criobalão); FA paroxística sem terapia prévia, não generaliza para persistente/assintomática; usou apenas criobalão, não radiofrequência nem campo pulsado.",
-    "theme": "Fibrilação atrial",
-    "tags": [
-      "stop af first",
-      "crioablação",
-      "antiarrítmico",
-      "fa paroxística",
-      "terapia inicial"
-    ],
-    "review_status": "revisado",
-    "published": true
-  },
-  {
     "slug": "early-af-seguimento-3-anos-progressao-fa-persistente",
     "title": "EARLY-AF — Seguimento de 3 Anos: Progressão da Fibrilação Atrial após Crioablação ou Antiarrítmico",
     "study_type": "ensaio_clinico",
@@ -24203,32 +24155,6 @@
     "published": true
   },
   {
-    "slug": "danicamtiv-ativador-de-miosina-cardiaca-na-cardiomiopatia-dilatada-fase-2",
-    "title": "Danicamtiv, Ativador Seletivo da Miosina Cardíaca, na Cardiomiopatia Dilatada: Ensaio Fase 2 Aberto",
-    "study_type": "ensaio_clinico",
-    "authors": "Lakdawala NK, Hershberger RE, Garcia-Pavia P, et al.",
-    "journal": "Journal of the American College of Cardiology",
-    "year": 2025,
-    "doi": "10.1016/j.jacc.2025.09.1511",
-    "pmid": "41217321",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41217321/",
-    "summary": "Ensaio fase 2a, aberto, sem grupo placebo concorrente, de danicamtiv (ativador seletivo da miosina cardíaca) em 41 pacientes com cardiomiopatia dilatada, divididos em três coortes por causa genética (MYH7 n=12, TTN n=14, outras causas n=15). FEVE basal média 33,4% ± 8,0%. Danicamtiv oral em dois períodos de tratamento (25 mg 2x/dia; depois ajuste para 10 ou 50 mg 2x/dia), 5-8 dias cada.",
-    "key_findings": "Variação absoluta média da FEVE até o fim do Período 2: MYH7 +8,8 pontos percentuais (IC95% 5,03-12,64); TTN +5,9 (IC95% 2,59-9,28); outras causas +4,4 (IC95% -0,90 a 9,73). Eventos adversos emergentes de tratamento em 22/41 (53,7%), leves ou moderados; 1 descontinuação por evento adverso.",
-    "clinical_implications": "Sinal farmacodinâmico precoce, coerente com o mecanismo proposto (ativação da miosina cardíaca beneficiando mais quem tem mutação diretamente ligada ao motor contrátil), mas não é prova de eficácia clínica — amostra pequena, sem braço placebo. O ensaio confirmatório fase 2b/3 (KINSHIP-DCM) iniciou em fevereiro de 2026, sem resultado publicado até a data deste registro. Danicamtiv não está aprovado para uso clínico em nenhuma diretriz.",
-    "limitations": "Desenho aberto, sem grupo placebo concorrente — comparação contra o próprio basal do paciente, mais vulnerável a viés que ensaio randomizado. Amostra pequena (n=41) dividida em três subgrupos genéticos, com poder estatístico limitado especialmente no subgrupo de causas não sarcoméricas. Duração de tratamento curta (5-8 dias por período).",
-    "theme": "Cardiomiopatias",
-    "tags": [
-      "danicamtiv",
-      "ativador de miosina cardíaca",
-      "cardiomiopatia dilatada",
-      "MYH7",
-      "TTN",
-      "fase 2"
-    ],
-    "review_status": "revisado",
-    "published": true
-  },
-  {
     "slug": "acoramidis-extensao-aberta-de-54-meses-do-attribute-cm",
     "title": "Acoramidis na Amiloidose Cardíaca por Transtirretina: Extensão Aberta de 54 Meses do ATTRibute-CM",
     "study_type": "ensaio_clinico",
@@ -24308,7 +24234,7 @@
   {
     "slug": "troca-valvar-tricuspide-transcateter-no-mundo-real-registro-sts-acc-tvt",
     "title": "Troca Valvar Tricúspide Transcateter no Mundo Real: Registro STS/ACC TVT",
-    "study_type": "registro_prospectivo",
+    "study_type": "coorte_retrospectiva",
     "authors": "Makkar RR, Gupta A, O’Neill BP, et al.",
     "journal": "JAMA",
     "year": 2026,
