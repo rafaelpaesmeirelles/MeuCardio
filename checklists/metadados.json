@@ -8424,5 +8424,260 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estenose-mitral-indicacao-de-intervencao-cmp-ou-cirurgia",
+    "condicao": "Estenose mitral grave — indicação de comissurotomia mitral percutânea (CMP) ou cirurgia",
+    "resumo": "O que checar antes de indicar intervenção na estenose mitral reumática clinicamente grave: escore de morfologia valvar e demais características anatômicas desfavoráveis à CMP, contraindicações formais, as três classes de recomendação (sintomático favorável, sintomático de alto risco cirúrgico, assintomático de alto risco) e o corte de área valvar que contraindica DOAC — distinto do corte de gravidade clínica.",
+    "documento_origem": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura 14 e Recommendation Table 8, texto integral obtido e conferido diretamente em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "em-avm-grave",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar que a estenose mitral reumática é clinicamente grave: área valvar mitral (AVM) ≤1,5 cm², associada a fatores clínicos — sintomas, alto risco de tromboembolismo ou risco de descompensação hemodinâmica",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-anatomia-desfavoravel-cmp",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o escore de morfologia valvar de Wilkins (mobilidade, espessamento e calcificação do folheto, espessamento/calcificação do aparato subvalvular — 1 a 4 pontos cada, total de 4 a 16) e verificar as demais características anatômicas desfavoráveis à CMP: escore de Wilkins >8, Cormier grupo 3 (calcificação de qualquer extensão à fluoroscopia) e insuficiência tricúspide grave",
+        "origem_secao": "Escore de morfologia valvar (Wilkins) — resolve lacuna comum na literatura secundária"
+      },
+      {
+        "id": "em-eco-transesofagico-trombo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiograma transesofágico sistematicamente em candidato a CMP, para excluir trombo em átrio esquerdo ou após episódio embólico",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-contraindicacoes-cmp",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir as demais contraindicações formais à CMP: AVM >1,5 cm²; insuficiência mitral mais que leve; calcificação grave ou bicomissural (trombo confinado ao apêndice atrial esquerdo não é contraindicação absoluta, sob condições específicas de anticoagulação e reavaliação por ecocardiograma transesofágico)",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-cmp-sintomatico-favoravel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar CMP em paciente sintomático, na ausência de características desfavoráveis para o procedimento — Classe I, Nível B",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-cmp-alto-risco-cirurgico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar CMP em qualquer paciente sintomático com contraindicação ou alto risco para cirurgia — Classe I, Nível C",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-cirurgia-nao-elegivel-cmp",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar cirurgia da valva mitral em paciente sintomático não elegível para CMP — Classe I, Nível C",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-cmp-assintomatico-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar CMP em paciente assintomático sem características clínicas e anatômicas desfavoráveis, com alto risco tromboembólico (embolia sistêmica prévia, contraste espontâneo denso em AE, FA nova/paroxística) e/ou alto risco de descompensação hemodinâmica (PSAP >50 mmHg em repouso, necessidade de cirurgia não cardíaca de grande porte, gestante ou desejo de gestar) — Classe IIa, Nível C",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-doac-contraindicado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não usar DOAC em paciente com EM e AVM ≤2,0 cm² — corte diferente do usado para definir gravidade clínica da estenose (≤1,5 cm²); manter anticoagulação com antagonista de vitamina K, INR-alvo entre 2 e 3, se houver fibrilação atrial associada",
+        "origem_secao": "Terapia médica"
+      },
+      {
+        "id": "em-mac-nao-cmp",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecer que a estenose mitral degenerativa por calcificação do anel mitral (MAC) não é passível de CMP, porque não há fusão comissural — a decisão nesse subtipo é entre terapia clínica, cirurgia com descalcificação/reconstrução do anel ou TMVI em centro experiente",
+        "origem_secao": "Estenose mitral degenerativa com calcificação do anel mitral (MAC)"
+      },
+      {
+        "id": "em-seguimento-anual-moderada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar seguimento ecocardiográfico transtorácico anual no paciente assintomático com EM clinicamente grave sem intervenção, com intervalo maior (2-3 anos) na estenose moderada — e não interromper o seguimento após CMP bem-sucedida, porque reestenose assintomática pode ocorrer",
+        "origem_secao": "Seguimento"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Valvopatias citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "regurgitacao-mitral-mecanismo-e-indicacao-de-cirurgia-ou-teer",
+    "condicao": "Regurgitação mitral grave — mecanismo, indicação e timing de cirurgia ou TEER",
+    "resumo": "O que checar antes de definir a conduta na regurgitação mitral grave: o mecanismo é a primeira bifurcação — primária, secundária ventricular ou secundária atrial —, porque o mesmo grau de regurgitação tem condutas e classes de recomendação diferentes conforme o mecanismo, incluindo três classes distintas para o mesmo procedimento (M-TEER) e a nova entidade de regurgitação secundária atrial da diretriz 2025.",
+    "documento_origem": "fluxograma-regurgitacao-mitral-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease · European Heart Journal · 2025 · 46(44):4635-4736 · DOI: 10.1093/eurheartj/ehaf194 · PMID: 40878295",
+      "Adamo M, Massussi M, Marsan NA, et al. 2025 ESC/EACTS valvular heart disease guidelines: practical updates on mitral and tricuspid regurgitation · European Heart Journal Supplements · 2026 · 28(Suppl 4):iv83-iv96 · DOI: 10.1093/eurheartjsupp/suag001 · PMID: 42064867",
+      "ESC/EACTS Release New Valvular Heart Disease Guidelines · TCTMD · 2025 · https://www.tctmd.com/news/esceacts-release-new-valvular-heart-disease-guidelines"
+    ],
+    "itens": [
+      {
+        "id": "rm-determinar-mecanismo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Determinar o mecanismo da regurgitação mitral grave antes de decidir a conduta: primária (doença da válvula), secundária ventricular (remodelamento do VE) ou secundária atrial (dilatação do AE por fibrilação atrial) — mesmo grau de regurgitação tem condutas e classes de recomendação diferentes conforme o mecanismo",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "rm-primaria-sintomatica-reparo-cirurgico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na RM primária sintomática, priorizar reparo valvar mitral cirúrgico quando durável e com risco cirúrgico aceitável",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "rm-primaria-teer-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Na RM primária sintomática com alto risco cirúrgico e anatomia favorável, considerar reparo percutâneo borda a borda (M-TEER) — Classe IIa, Nível B",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "rm-primaria-assintomatica-marcadores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na RM primária assintomática, verificar os marcadores de indicação de intervenção: fração de ejeção do VE ≤60%; diâmetro sistólico final do VE ≥40 mm ou indexado ≥20 mm/m²; fibrilação atrial; pressão sistólica de artéria pulmonar >50 mmHg; dilatação significativa do átrio esquerdo; regurgitação tricúspide secundária concomitante",
+        "origem_secao": "Os marcadores de indicação no assintomático"
+      },
+      {
+        "id": "rm-primaria-assintomatica-cirurgia-classe1",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar reparo valvar mitral cirúrgico quando presente pelo menos um dos marcadores de indicação, em centro no qual o reparo durável seja provável — Classe I, Nível B",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "rm-primaria-vigilancia-sem-marcador",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Na ausência de marcador de indicação, manter vigilância clínica e ecocardiográfica seriada em vez de intervir",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "rm-secundaria-ventricular-otimizar-ic",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na RM secundária ventricular, otimizar o tratamento da insuficiência cardíaca — incluindo resolver a indicação de revascularização e de ressincronização — antes de tratar a válvula: parte dos pacientes deixa de ter regurgitação grave só com o tratamento clínico otimizado",
+        "origem_secao": "Por que a secundária ventricular exige o tratamento clínico antes"
+      },
+      {
+        "id": "rm-secundaria-ventricular-teer-sem-dac",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se o paciente permanecer sintomático apesar do tratamento otimizado, hemodinamicamente estável, com FEVE <50% e regurgitação mitral secundária ventricular grave persistente preenchendo critérios clínicos e ecocardiográficos específicos, na ausência de doença arterial coronariana concomitante relevante: indicar reparo percutâneo borda a borda (M-TEER) — Classe I, Nível A",
+        "origem_secao": "Por que a secundária ventricular exige o tratamento clínico antes"
+      },
+      {
+        "id": "rm-secundaria-ventricular-com-dac",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se houver doença arterial coronariana concomitante exigindo revascularização, diferenciar a conduta: cirurgia valvar mitral (Classe I, Nível B) se o paciente já for para cirurgia de revascularização miocárdica (CRM); cirurgia pode ser considerada (Classe IIb, Nível B) na regurgitação moderada associada a CRM; ICP seguida de TEER após reavaliação da regurgitação pode ser considerada (Classe IIb, Nível C) no paciente sintomático com DAC não complexa",
+        "origem_secao": "Por que a secundária ventricular exige o tratamento clínico antes"
+      },
+      {
+        "id": "rm-secundaria-atrial-tratar-causa",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na RM secundária atrial, tratar a causa primeiro: controle do ritmo da fibrilação atrial e tratamento da insuficiência cardíaca",
+        "origem_secao": "A novidade da secundária atrial"
+      },
+      {
+        "id": "rm-secundaria-atrial-cirurgia-ou-teer",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se permanecer sintomático apesar do tratamento otimizado: cirurgia com anuloplastia, ablação de fibrilação atrial e oclusão do apêndice atrial esquerdo, se risco cirúrgico aceitável — Classe IIa, Nível B; reparo percutâneo borda a borda (M-TEER) reservado a quem não é candidato à cirurgia — Classe IIb, Nível B",
+        "origem_secao": "A novidade da secundária atrial"
+      },
+      {
+        "id": "rm-heart-team-toda-decisao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Levar toda decisão entre cirurgia e via percutânea ao Heart Team, considerando risco cirúrgico, anatomia, expectativa de vida, experiência do serviço e preferência informada do paciente — a árvore mostra o caminho da recomendação, não substitui a discussão em equipe",
+        "origem_secao": "O que a árvore não mostra"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Valvopatias citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "estenose-aortica-de-baixo-fluxo-e-baixo-gradiente-avaliacao",
+    "condicao": "Estenose aórtica de baixo fluxo/baixo gradiente — avaliação diagnóstica",
+    "resumo": "O que checar diante de uma estenose aórtica com discordância entre área valvar e gradiente: confirmar os dois subtipos de baixo fluxo/baixo gradiente pela FEVE, medir o volume sistólico indexado, e usar o ecocardiograma sob estresse apenas na janela em que ele de fato diferencia estenose verdadeira de pseudoestenose — nunca no paciente já sintomático com gravidade confirmada.",
+    "documento_origem": "valvopatias-estenose-aortica-e-atualizacoes-gerais-esceacts-2021",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395",
+      "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589); a tabela de indicações do ecocardiograma sob estresse em doenças cardiovasculares não isquêmicas foi conferida linha a linha em 31/07/2026"
+    ],
+    "itens": [
+      {
+        "id": "eao-lflg-confirmar-area-gradiente",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar área valvar aórtica ≤1 cm² (área indexada <0,6 cm²/m²) com gradiente médio <40 mmHg antes de classificar o quadro como baixo fluxo/baixo gradiente",
+        "origem_secao": "Criterios diagnosticos ecocardiograficos detalhados"
+      },
+      {
+        "id": "eao-lflg-vsi",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Medir o volume sistólico indexado (VSi): ≤35 mL/m² confirma o componente de baixo fluxo do quadro",
+        "origem_secao": "Criterios diagnosticos ecocardiograficos detalhados"
+      },
+      {
+        "id": "eao-lflg-classificar-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o subtipo pela FEVE: baixo fluxo/baixo gradiente com fração de ejeção reduzida (FEVE <50%) ou com fração de ejeção preservada (FEVE ≥50%) — a investigação adicional recomendada difere entre os dois subtipos",
+        "origem_secao": "Criterios diagnosticos ecocardiograficos detalhados"
+      },
+      {
+        "id": "eao-lflg-preservada-eco-estresse",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "No subtipo com FEVE preservada, assintomático ou com sintomas leves ou duvidosos, considerar ecocardiograma sob estresse (esforço ou dobutamina) para diferenciar estenose aórtica verdadeira de pseudoestenose — Classe IIb, Nível B (Diretriz Brasileira de Ergometria, SBC 2024)",
+        "origem_secao": "Estenose aortica — Diretriz Brasileira de Ergometria SBC 2024"
+      },
+      {
+        "id": "eao-nao-eco-estresse-se-sintomatica-grave",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não solicitar ecocardiograma de esforço ou com dobutamina se a estenose aórtica grave já é sintomática — Classe III, Nível C: o sintoma já define a indicação de intervenção, e o estresse acrescenta risco sem mudar a conduta",
+        "origem_secao": "Estenose aortica — Diretriz Brasileira de Ergometria SBC 2024"
+      },
+      {
+        "id": "eao-discordancia-parametros",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Lembrar que a discordância entre os parâmetros de gravidade — tipicamente área <1,0 cm² com gradiente médio <40 mmHg — ocorre em 20 a 30% dos casos: decidir intervenção apenas por gradiente ou velocidade isolados é armadilha, a área valvar precisa entrar na conta",
+        "origem_secao": "Criterios diagnosticos ecocardiograficos detalhados"
+      },
+      {
+        "id": "eao-heart-team-decisao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar ao Heart Team para decisão entre TAVI e cirurgia, considerando características clínicas, anatômicas, experiência local e preferência informada do paciente, independentemente do padrão de fluxo/gradiente encontrado",
+        "origem_secao": "Casos intermediarios"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Valvopatias citados em source_refs, com a seção de origem registrada em cada item."
   }
 ]
