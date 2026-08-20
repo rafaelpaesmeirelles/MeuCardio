@@ -251,8 +251,8 @@ class TestGerarDocumento:
             f"/api/document-templates/gerados/{gerado_id}/pdf?metodo=VIDAAS",
             headers={"Authorization": f"Bearer {token}"},
         )
-        assert r2.status_code == 200
-        assert hashlib.sha256(r2.content).hexdigest() == hashlib.sha256(r1.content).hexdigest()
+        assert r2.status_code == 409
+        assert "imutavel" in str(r2.json()["detail"]).lower()
 
         assert db.query(DocumentoEmitido).filter(
             DocumentoEmitido.tipo == "generated_document", DocumentoEmitido.referencia_id == gerado_id,

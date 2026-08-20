@@ -86,7 +86,7 @@ def _emitir_rce(client, db, criar_usuario, *, metodo: str):
         json={
             "destinatario": {
                 "nome": "Paciente Teste",
-                "endereco": "Rua do Paciente, 10, Ribeirão Preto/SP",
+                "endereco": "Rua do Paciente, 10 - Centro - Ribeirão Preto/SP - CEP 14000-000",
                 "documento": "123.456.789-00",
             },
             "itens": [{

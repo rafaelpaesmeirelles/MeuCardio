@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
-from sqlalchemy import or_
+from sqlalchemy import and_, or_
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -733,14 +733,32 @@ def status_teste_google(db: Session = Depends(get_db), user: User = Depends(curr
 
 
 @router.get("/locations")
-def list_locations(professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
+def list_locations(
+    professional_id: int | None = None, active: bool | None = True,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
     owner_id = _owner_for(db, user, professional_id, "view")
-    return [_dump_location(x) for x in db.query(CalendarLocation).filter(CalendarLocation.owner_id == owner_id).order_by(CalendarLocation.name).all()]
+    query = db.query(CalendarLocation).filter(CalendarLocation.owner_id == owner_id)
+    if active is not None:
+        query = query.filter(CalendarLocation.active.is_(active))
+    return [_dump_location(x) for x in query.order_by(CalendarLocation.name).all()]
 
 
 @router.post("/locations", status_code=201)
 def create_location(data: LocationIn, professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "configure")
+    inactive = db.query(CalendarLocation).filter(
+        CalendarLocation.owner_id == owner_id,
+        CalendarLocation.name == data.name,
+        CalendarLocation.active.is_(False),
+    ).first()
+    if inactive:
+        for key, value in data.model_dump().items():
+            setattr(inactive, key, value)
+        inactive.active = True
+        _audit(db, user, "agenda_location_restore", "calendar_location", inactive.id, {"owner_id": owner_id})
+        db.commit(); db.refresh(inactive)
+        return _dump_location(inactive)
     item = CalendarLocation(owner_id=owner_id, **data.model_dump())
     db.add(item); db.flush()
     _audit(db, user, "agenda_location_create", "calendar_location", item.id, {"owner_id": owner_id})
@@ -809,6 +827,82 @@ def update_location(location_id: int, data: LocationIn, professional_id: int | N
     _audit(db, user, "agenda_location_update", "calendar_location", item.id)
     db.commit(); db.refresh(item)
     return _dump_location(item)
+
+
+@router.delete("/locations/{location_id}", status_code=204)
+def disable_location(
+    location_id: int, professional_id: int | None = None,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    """Remove um local das opções novas sem apagar referências históricas."""
+    owner_id = _owner_for(db, user, professional_id, "configure")
+    item = db.query(CalendarLocation).filter(
+        CalendarLocation.id == location_id,
+        CalendarLocation.owner_id == owner_id,
+        CalendarLocation.active.is_(True),
+    ).first()
+    if not item:
+        raise HTTPException(status_code=404, detail="Local não encontrado.")
+
+    today = date.today()
+    blockers = {
+        "rotinas profissionais": db.query(AvailabilityRule).filter(
+            AvailabilityRule.owner_id == owner_id,
+            AvailabilityRule.location_id == location_id,
+            AvailabilityRule.active.is_(True),
+            or_(AvailabilityRule.valid_until.is_(None), AvailabilityRule.valid_until >= today),
+        ).count(),
+        "serviços": db.query(SchedulingService).filter(
+            SchedulingService.owner_id == owner_id,
+            SchedulingService.location_id == location_id,
+            SchedulingService.active.is_(True),
+        ).count(),
+        "recursos": db.query(SchedulingResource).filter(
+            SchedulingResource.owner_id == owner_id,
+            SchedulingResource.location_id == location_id,
+            SchedulingResource.active.is_(True),
+        ).count(),
+        "compromissos recorrentes": db.query(CalendarCommitmentSeries).filter(
+            CalendarCommitmentSeries.owner_id == owner_id,
+            CalendarCommitmentSeries.location_id == location_id,
+            CalendarCommitmentSeries.active.is_(True),
+            or_(
+                and_(
+                    CalendarCommitmentSeries.recurrence == "none",
+                    CalendarCommitmentSeries.starts_on >= today,
+                ),
+                and_(
+                    CalendarCommitmentSeries.recurrence != "none",
+                    or_(
+                        CalendarCommitmentSeries.ends_on.is_(None),
+                        CalendarCommitmentSeries.ends_on >= today,
+                    ),
+                ),
+            ),
+        ).count(),
+    }
+    active_blockers = [f"{count} {label}" for label, count in blockers.items() if count]
+    if active_blockers:
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "Este local ainda está em uso por " + ", ".join(active_blockers)
+                + ". Remova ou altere essas referências antes de excluir o local."
+            ),
+        )
+
+    preference = db.query(MobilityPreference).filter(MobilityPreference.owner_id == owner_id).first()
+    if preference:
+        if preference.day_start_location_id == location_id:
+            preference.day_start_location_id = None
+            preference.day_start_origin_mode = "current_location"
+        if preference.day_end_destination_location_id == location_id:
+            preference.day_end_destination_location_id = None
+
+    item.active = False
+    _audit(db, user, "agenda_location_disable", "calendar_location", item.id, {"owner_id": owner_id})
+    db.commit()
+    return None
 
 
 @router.get("/services")

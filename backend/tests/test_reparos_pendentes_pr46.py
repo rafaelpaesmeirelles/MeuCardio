@@ -57,7 +57,7 @@ def test_rce_paginação_explícita_não_trunca_itens():
         destinatario={
             "nome": "Paciente Teste",
             "documento": "12345678900",
-            "endereco": "Rua A, 1",
+            "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000",
         },
         itens=itens,
         observacoes="Prescrição paginada sem exclusão de itens.",
@@ -66,8 +66,8 @@ def test_rce_paginação_explícita_não_trunca_itens():
         data_emissao=datetime(2026, 8, 4, tzinfo=timezone.utc),
     )
     paginas = len(re.findall(rb"/Type\s*/Page\b", pdf))
-    assert paginas > 4
-    assert paginas % 4 == 0
+    assert paginas > 2
+    assert paginas % 2 == 0
 
     fonte = (ROOT / "backend/app/services/receita_controle_especial.py").read_text(encoding="utf-8")
     assert "itens[:12]" not in fonte
@@ -78,7 +78,7 @@ def test_rce_paginação_explícita_não_trunca_itens():
 def test_rce_exige_conselho_numero_e_uf_completos():
     erros = validar_requisitos_rce(
         medico=_medico(council_number=None, council_state=None, crm=None),
-        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"},
         itens=[_item(1)],
         endereco_profissional=_endereco(),
         cid=None,

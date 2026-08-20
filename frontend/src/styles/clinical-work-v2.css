@@ -92,14 +92,14 @@
 
 /* ---------- Prescription medication search ---------- */
 .clinical-os .prescricao-sugestoes{
-  color:#dcecef!important;background:#0b2331!important;border-color:rgba(148,205,219,.2)!important;box-shadow:0 14px 32px rgba(0,0,0,.28)!important
+  color:#102b3a!important;background:#fff!important;border-color:#bfd2d9!important;box-shadow:0 14px 32px rgba(5,31,43,.16)!important
 }
-.clinical-os .prescricao-sugestoes button{color:#dcecef!important;background:transparent!important;border-color:rgba(148,205,219,.1)!important}
-.clinical-os .prescricao-sugestoes button strong{color:#f3fbfc!important}
-.clinical-os .prescricao-sugestoes button span{color:#c1d8dd!important}
-.clinical-os .prescricao-sugestoes button small{color:#91adb5!important}
+.clinical-os .prescricao-sugestoes button{color:#102b3a!important;background:#fff!important;border-color:#dce7eb!important}
+.clinical-os .prescricao-sugestoes button strong{color:#0a2533!important}
+.clinical-os .prescricao-sugestoes button span{color:#234552!important}
+.clinical-os .prescricao-sugestoes button small{color:#496671!important}
 .clinical-os .prescricao-sugestoes button:hover,.clinical-os .prescricao-sugestoes button:focus-visible{
-  color:#fff!important;background:rgba(66,202,216,.1)!important;outline:2px solid rgba(120,229,235,.55)!important;outline-offset:-2px
+  color:#092532!important;background:#eaf8fa!important;outline:2px solid #42cad8!important;outline-offset:-2px
 }
 
 @media(max-width:900px){

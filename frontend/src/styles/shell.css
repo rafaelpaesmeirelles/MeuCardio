@@ -2018,6 +2018,10 @@
 .prescricao-campo label small,
 .prescricao-item label small,
 .prescricao-bloco > label small { color: var(--texto-secundario); font-size: 0.68rem; font-weight: 500; }
+.prescricao-campo__estado,
+.prescricao-campo__erro { display: block; margin-top: .25rem; font-size: .65rem; line-height: 1.35; }
+.prescricao-campo__estado { color: var(--texto-secundario); }
+.prescricao-campo__erro { color: var(--perigo); }
 .prescricao__nota-legal { margin: 0.8rem 0 0; padding: 0.65rem 0.75rem; color: var(--slate-700); background: var(--amber-50); border-left: 3px solid #c38721; border-radius: 0 var(--r-sm) var(--r-sm) 0; font-size: 0.75rem; }
 .prescricao-item { margin-top: 0.8rem; padding: 1.1rem; background: var(--slate-50); border: 1px solid var(--borda); border-radius: var(--r); }
 .prescricao-item:first-of-type { margin-top: 0; }
@@ -2333,5 +2337,51 @@
   .hoje-card--deslocamento .hoje-card__acao {
     width: 100%;
     justify-content: space-between;
+  }
+}
+
+/* Edição segura dos locais da agenda, sem alterar o shell canônico. */
+.agenda-config-item__acoes {
+  display: flex;
+  gap: .3rem;
+}
+.agenda-config-item__acoes button {
+  min-height: 30px;
+  padding: .25rem .48rem;
+  color: var(--acento);
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-size: .58rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.agenda-config-item__acoes button:last-child {
+  color: var(--perigo);
+}
+.agenda-config-form--editing {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--acento) 45%, var(--borda-forte));
+}
+.agenda-config-form__status {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--acento);
+  font-size: .66rem;
+  font-weight: 850;
+}
+.agenda-config-form__acoes {
+  display: flex;
+  grid-column: 1 / -1;
+  gap: .45rem;
+}
+
+@media (max-width: 760px) {
+  .agenda-config-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .agenda-config-item__acoes {
+    grid-column: 2;
+    flex-wrap: wrap;
   }
 }

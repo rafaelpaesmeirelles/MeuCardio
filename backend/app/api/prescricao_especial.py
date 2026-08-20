@@ -377,18 +377,24 @@ def emitir(gid: int, dados: EmitirIn, db: Session = Depends(get_db), user: User 
         metodo_assinatura=dados.metodo,
         provedor_nome=info.nome,
     )
-    emitido = assinatura_emissao.assinar_e_persistir(
-        db,
-        tipo=assinatura_emissao.TIPO_DOCUMENTO,
-        referencia_id=g.id,
-        metodo=dados.metodo,
-        provedor=provedor,
-        info=info,
-        pdf_visual=pdf_visual,
-        medico=medico,
-        criado_por=user.id,
-        data_emissao=data_emissao,
-    )
+    try:
+        emitido = assinatura_emissao.assinar_e_persistir(
+            db,
+            tipo=assinatura_emissao.TIPO_DOCUMENTO,
+            referencia_id=g.id,
+            metodo=dados.metodo,
+            provedor=provedor,
+            info=info,
+            pdf_visual=pdf_visual,
+            medico=medico,
+            criado_por=user.id,
+            data_emissao=data_emissao,
+        )
+    except assinatura_emissao.AssinaturaNaoDetectada as exc:
+        raise HTTPException(
+            status_code=409,
+            detail=f"A assinatura digital nao pode ser validada: {exc}",
+        ) from exc
     if emitido.registro.assinado_em is not None:
         novo_status = "assinado"
     elif dados.metodo == "MANUAL":
@@ -405,10 +411,14 @@ def emitir(gid: int, dados: EmitirIn, db: Session = Depends(get_db), user: User 
         detail={"originator_id": _origem_id(g), "metodo": dados.metodo, "status": novo_status},
     ))
     db.commit()
+    sufixo = "-assinado" if emitido.registro.assinado_em is not None else ""
     return Response(
         content=emitido.pdf,
         media_type="application/pdf",
-        headers={"Content-Disposition": f'inline; filename="receituario-{g.id}.pdf"'},
+        headers={
+            "Content-Disposition": f'inline; filename="receituario-{g.id}{sufixo}.pdf"',
+            "X-Corvia-Assinatura": "assinada" if emitido.registro.assinado_em is not None else "nao-assinada",
+        },
     )
 
 
@@ -488,10 +498,14 @@ def pdf(gid: int, db: Session = Depends(get_db), user: User = Depends(current_us
     if not registro or (registro.assinado_em is None and _status(g) != "emitida_manual"):
         raise HTTPException(status_code=409, detail="A receita ainda não está disponível para impressão/download.")
     conteudo = assinatura_emissao.ler_bytes(registro)
+    sufixo = "-assinado" if registro.assinado_em is not None else ""
     return Response(
         content=conteudo,
         media_type="application/pdf",
-        headers={"Content-Disposition": f'inline; filename="receituario-{g.id}.pdf"'},
+        headers={
+            "Content-Disposition": f'inline; filename="receituario-{g.id}{sufixo}.pdf"',
+            "X-Corvia-Assinatura": "assinada" if registro.assinado_em is not None else "nao-assinada",
+        },
     )
 
 

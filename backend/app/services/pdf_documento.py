@@ -190,7 +190,7 @@ def _bloco_empresa(c: canvas.Canvas, x: float, y: float) -> float:
     return y
 
 
-LARGURA_LOGO_PESSOAL = 24 * mm
+LARGURA_LOGO_PESSOAL = 18 * mm
 
 
 def _caminho_logo_pessoal(document_logo_url: str | None) -> Path | None:
@@ -212,7 +212,7 @@ def _logo_pessoal(
         largura_px, altura_px = img.getSize()
         escala = min(
             LARGURA_LOGO_PESSOAL / max(1, largura_px),
-            (18 * mm) / max(1, altura_px),
+            (14 * mm) / max(1, altura_px),
         )
         largura = largura_px * escala
         altura = altura_px * escala
@@ -233,33 +233,40 @@ def _logo_pessoal(
 def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: dict,
                         endereco: dict | None) -> float:
     x_texto, y_base_logo = _logo_pessoal(c, x_direita, y, medico)
+    # Empresa e profissional ocupam colunas independentes. Antes deste limite,
+    # `drawRightString()` recebia linhas inteiras (local de trabalho e endereco)
+    # e as projetava por cima da coluna da empresa. A logo pessoal reduzia ainda
+    # mais o espaco sem que o texto fosse quebrado. A fronteira abaixo preserva
+    # um respiro central fixo, com ou sem logo pessoal.
+    x_esquerda = LARGURA / 2 + 5 * mm
+    largura_texto = max(35 * mm, x_texto - x_esquerda)
+
+    def desenhar(texto: str, fonte: str, tamanho: float, entrelinha: float) -> None:
+        nonlocal y
+        for linha in _quebrar(c, texto, fonte, tamanho, largura_texto):
+            c.drawRightString(x_texto, y, linha)
+            y -= entrelinha
 
     c.setFillColorRGB(0, 0, 0)
     c.setFont("Helvetica-Bold", 10.5)
-    c.drawRightString(x_texto, y, professional_name(medico))
-    y -= 4.6 * mm
+    desenhar(professional_name(medico), "Helvetica-Bold", 10.5, 4.6 * mm)
 
     c.setFont("Helvetica", 8.5)
     c.setFillColorRGB(*CINZA)
     if medico.get("profession"):
-        c.drawRightString(x_texto, y, medico["profession"])
-        y -= 3.8 * mm
+        desenhar(medico["profession"], "Helvetica", 8.5, 3.8 * mm)
     if medico.get("specialty"):
-        c.drawRightString(x_texto, y, medico["specialty"])
-        y -= 3.8 * mm
+        desenhar(medico["specialty"], "Helvetica", 8.5, 3.8 * mm)
     for linha in workplace_lines(medico):
-        c.drawRightString(x_texto, y, linha)
-        y -= 3.6 * mm
+        desenhar(linha, "Helvetica", 8.5, 3.6 * mm)
 
     registro = _registro(medico)
     if registro:
-        c.drawRightString(x_texto, y, registro)
-        y -= 3.8 * mm
+        desenhar(registro, "Helvetica", 8.5, 3.8 * mm)
 
     if endereco:
         for linha in _endereco_linhas(endereco):
-            c.drawRightString(x_texto, y, linha)
-            y -= 3.6 * mm
+            desenhar(linha, "Helvetica", 8.5, 3.6 * mm)
 
     return min(y, y_base_logo)
 
@@ -438,11 +445,17 @@ def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | No
     c.drawCentredString(LARGURA / 2, y, f"{local}, {data}" if local else data)
     y -= 10 * mm  # "algumas linhas abaixo", antes do campo de assinatura
 
-    c.setStrokeColorRGB(*LINHA)
-    c.line(LARGURA / 2 - 35 * mm, y, LARGURA / 2 + 35 * mm, y)
-    c.setFont("Helvetica", 7.5)
-    c.setFillColorRGB(*CINZA)
-    c.drawCentredString(LARGURA / 2, y - 4 * mm, legenda)
+    # O A1 recebe uma aparencia visivel criada pelo proprio `PdfSigner`
+    # exatamente nesta area. Desenhar uma linha/legenda por baixo produz a
+    # sobreposicao observada no PDF final e, pior, parece um selo mesmo antes
+    # da operacao criptografica. Para os demais metodos, o campo tradicional
+    # continua inalterado.
+    if not legenda.startswith("Assinado digitalmente por"):
+        c.setStrokeColorRGB(*LINHA)
+        c.line(LARGURA / 2 - 35 * mm, y, LARGURA / 2 + 35 * mm, y)
+        c.setFont("Helvetica", 7.5)
+        c.setFillColorRGB(*CINZA)
+        c.drawCentredString(LARGURA / 2, y - 4 * mm, legenda)
 
     if via:
         c.setFont("Helvetica", 7.5)

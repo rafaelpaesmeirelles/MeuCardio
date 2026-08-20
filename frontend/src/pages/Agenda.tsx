@@ -13,11 +13,31 @@ type LocalAgenda = {
   name: string;
   timezone: string;
   address: Record<string, string>;
+  phone: string | null;
   latitude: number | null;
   longitude: number | null;
   default_arrival_buffer_minutes: number;
   color: string;
   active: boolean;
+};
+
+type LocalForm = {
+  name: string;
+  zip: string;
+  street: string;
+  number: string;
+  complement: string;
+  neighborhood: string;
+  city: string;
+  state: string;
+  phone: string;
+  latitude: string;
+  longitude: string;
+};
+
+const LOCAL_VAZIO: LocalForm = {
+  name: "", zip: "", street: "", number: "", complement: "",
+  neighborhood: "", city: "", state: "", phone: "", latitude: "", longitude: "",
 };
 
 type Servico = {
@@ -239,7 +259,10 @@ function formatarDinheiro(value: number | null) {
 }
 
 function endereco(local: LocalAgenda) {
-  return [local.address?.street, local.address?.number, local.address?.city, local.address?.state].filter(Boolean).join(" · ") || "Endereço não informado";
+  return [
+    local.address?.street, local.address?.number, local.address?.neighborhood,
+    local.address?.city, local.address?.state, local.address?.zip,
+  ].filter(Boolean).join(" · ") || "Endereço não informado";
 }
 
 function Evento({ item, aoCancelar, aoAjustar }: {
@@ -325,7 +348,8 @@ export default function Agenda() {
   const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false, mail: false, mail_consent_accepted: false });
   const [yahoo, setYahoo] = useState({ endereco: "", senha_de_app: "", consent_accepted: false });
   const [consentimentoContas, setConsentimentoContas] = useState(false);
-  const [novoLocal, setNovoLocal] = useState({ name: "", street: "", number: "", city: "", state: "", latitude: "", longitude: "" });
+  const [novoLocal, setNovoLocal] = useState<LocalForm>({ ...LOCAL_VAZIO });
+  const [localEmEdicaoId, setLocalEmEdicaoId] = useState<number | null>(null);
   const [novoServico, setNovoServico] = useState({ name: "", code: "", location_id: "", duration_minutes: 30, price: "", allow_extra_slot: false });
   const [novaRotina, setNovaRotina] = useState({
     label: "Rotina de atendimento", location_id: "", service_id: "", weekdays: [0, 1, 2, 3, 4],
@@ -689,20 +713,63 @@ export default function Agenda() {
     } catch (e) { setErro(e instanceof ApiError ? e.message : "Não foi possível cancelar."); }
   }
 
-  async function adicionarLocal() {
+  function limparFormularioLocal() {
+    setNovoLocal({ ...LOCAL_VAZIO });
+    setLocalEmEdicaoId(null);
+  }
+
+  function editarLocal(item: LocalAgenda) {
+    setLocalEmEdicaoId(item.id);
+    setNovoLocal({
+      name: item.name,
+      zip: item.address?.zip || "",
+      street: item.address?.street || "",
+      number: item.address?.number || "",
+      complement: item.address?.complement || "",
+      neighborhood: item.address?.neighborhood || "",
+      city: item.address?.city || "",
+      state: item.address?.state || "",
+      phone: item.phone || "",
+      latitude: item.latitude == null ? "" : String(item.latitude),
+      longitude: item.longitude == null ? "" : String(item.longitude),
+    });
+  }
+
+  async function salvarLocal() {
     if (!novoLocal.name.trim()) return;
-    await api.post("/agenda/locations", {
-      name: novoLocal.name,
+    const existente = locais.find((item) => item.id === localEmEdicaoId);
+    const payload = {
+      name: novoLocal.name.trim(),
+      timezone: existente?.timezone || "America/Sao_Paulo",
       address: {
+        ...(existente?.address || {}),
+        zip: novoLocal.zip.trim() || undefined,
         street: novoLocal.street.trim() || undefined,
         number: novoLocal.number.trim() || undefined,
-        city: novoLocal.city.trim(), state: novoLocal.state.toUpperCase(),
+        complement: novoLocal.complement.trim() || undefined,
+        neighborhood: novoLocal.neighborhood.trim() || undefined,
+        city: novoLocal.city.trim() || undefined,
+        state: novoLocal.state.trim().toUpperCase() || undefined,
       },
+      phone: novoLocal.phone.trim() || null,
       latitude: novoLocal.latitude ? Number(novoLocal.latitude) : null,
       longitude: novoLocal.longitude ? Number(novoLocal.longitude) : null,
-    });
-    setNovoLocal({ name: "", street: "", number: "", city: "", state: "", latitude: "", longitude: "" });
+      default_arrival_buffer_minutes: existente?.default_arrival_buffer_minutes ?? 15,
+      color: existente?.color || "#087E8B",
+      active: true,
+    };
+    if (localEmEdicaoId) await api.patch(`/agenda/locations/${localEmEdicaoId}`, payload);
+    else await api.post("/agenda/locations", payload);
+    limparFormularioLocal();
     await carregar();
+  }
+
+  async function excluirLocal(item: LocalAgenda) {
+    if (!window.confirm(`Excluir o local “${item.name}”? O histórico da agenda será preservado.`)) return;
+    await api.delete(`/agenda/locations/${item.id}`);
+    if (localEmEdicaoId === item.id) limparFormularioLocal();
+    await carregar();
+    setMensagem(`Local “${item.name}” excluído da agenda.`);
   }
 
   async function adicionarServico() {
@@ -990,7 +1057,34 @@ export default function Agenda() {
 
       {configAberta && <div className="agenda-modal agenda-modal--config" role="dialog" aria-modal="true" aria-labelledby="config-agenda-titulo"><div className="agenda-modal__painel" ref={configModalRef} tabIndex={-1}>
         <header><div><p className="eyebrow">Preferências profissionais</p><h2 id="config-agenda-titulo">Configurar agenda</h2></div><button onClick={() => setConfigAberta(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
-        <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Locais de atendimento e deslocamento</h3><p>Cadastre clínica, hospital, hotel ou outro ponto usado na rotina.</p></div><span>{locais.length}</span></div>{locais.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name}</strong><small>{endereco(item)} · {item.latitude ? "GPS configurado" : "GPS pendente"}</small></span></div>)}<div className="agenda-config-form"><input placeholder="Nome do local (ex.: Hotel)" value={novoLocal.name} onChange={(e) => setNovoLocal({ ...novoLocal, name: e.target.value })} /><input placeholder="Rua" value={novoLocal.street} onChange={(e) => setNovoLocal({ ...novoLocal, street: e.target.value })} /><input placeholder="Número" value={novoLocal.number} onChange={(e) => setNovoLocal({ ...novoLocal, number: e.target.value })} /><input placeholder="Cidade" value={novoLocal.city} onChange={(e) => setNovoLocal({ ...novoLocal, city: e.target.value })} /><input placeholder="UF" maxLength={2} value={novoLocal.state} onChange={(e) => setNovoLocal({ ...novoLocal, state: e.target.value })} /><details><summary>Coordenadas para trânsito</summary><div><input inputMode="decimal" placeholder="Latitude" value={novoLocal.latitude} onChange={(e) => setNovoLocal({ ...novoLocal, latitude: e.target.value })} /><input inputMode="decimal" placeholder="Longitude" value={novoLocal.longitude} onChange={(e) => setNovoLocal({ ...novoLocal, longitude: e.target.value })} /></div></details><button className="botao botao--secundario" onClick={() => adicionarLocal().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o local."))}>Adicionar local</button></div></section>
+        <section className="agenda-config-section">
+          <div className="agenda-config-section__title"><div><h3>Locais de atendimento e deslocamento</h3><p>Cadastre clínica, hospital, hotel ou outro ponto usado na rotina.</p></div><span>{locais.length}</span></div>
+          {locais.map((item) => <div className="agenda-config-item" key={item.id}>
+            <i style={{ background: item.color }} />
+            <span><strong>{item.name}</strong><small>{endereco(item)} · {item.latitude != null && item.longitude != null ? "GPS configurado" : "GPS pendente"}</small></span>
+            <div className="agenda-config-item__acoes">
+              <button type="button" onClick={() => editarLocal(item)} aria-label={`Editar ${item.name}`}>Editar</button>
+              <button type="button" onClick={() => excluirLocal(item).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível excluir o local."))} aria-label={`Excluir ${item.name}`}>Excluir</button>
+            </div>
+          </div>)}
+          <div className={`agenda-config-form${localEmEdicaoId ? " agenda-config-form--editing" : ""}`}>
+            {localEmEdicaoId && <p className="agenda-config-form__status">Editando local cadastrado</p>}
+            <input placeholder="Nome do local (ex.: Hotel)" value={novoLocal.name} onChange={(e) => setNovoLocal({ ...novoLocal, name: e.target.value })} />
+            <input inputMode="numeric" placeholder="CEP" value={novoLocal.zip} onChange={(e) => setNovoLocal({ ...novoLocal, zip: e.target.value })} />
+            <input placeholder="Rua" value={novoLocal.street} onChange={(e) => setNovoLocal({ ...novoLocal, street: e.target.value })} />
+            <input placeholder="Número" value={novoLocal.number} onChange={(e) => setNovoLocal({ ...novoLocal, number: e.target.value })} />
+            <input placeholder="Complemento" value={novoLocal.complement} onChange={(e) => setNovoLocal({ ...novoLocal, complement: e.target.value })} />
+            <input placeholder="Bairro" value={novoLocal.neighborhood} onChange={(e) => setNovoLocal({ ...novoLocal, neighborhood: e.target.value })} />
+            <input placeholder="Cidade" value={novoLocal.city} onChange={(e) => setNovoLocal({ ...novoLocal, city: e.target.value })} />
+            <input placeholder="UF" maxLength={2} value={novoLocal.state} onChange={(e) => setNovoLocal({ ...novoLocal, state: e.target.value })} />
+            <input type="tel" placeholder="Telefone (opcional)" value={novoLocal.phone} onChange={(e) => setNovoLocal({ ...novoLocal, phone: e.target.value })} />
+            <details><summary>Coordenadas para trânsito</summary><div><input inputMode="decimal" placeholder="Latitude" value={novoLocal.latitude} onChange={(e) => setNovoLocal({ ...novoLocal, latitude: e.target.value })} /><input inputMode="decimal" placeholder="Longitude" value={novoLocal.longitude} onChange={(e) => setNovoLocal({ ...novoLocal, longitude: e.target.value })} /></div></details>
+            <div className="agenda-config-form__acoes">
+              {localEmEdicaoId && <button type="button" className="botao botao--secundario" onClick={limparFormularioLocal}>Cancelar</button>}
+              <button type="button" className="botao botao--secundario" onClick={() => salvarLocal().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível salvar o local."))}>{localEmEdicaoId ? "Salvar alterações" : "Adicionar local"}</button>
+            </div>
+          </div>
+        </section>
         <section className="agenda-config-section agenda-rotina">
           <div className="agenda-config-section__title"><div><h3>Rotina profissional</h3><p>Entrada, saída, locais e antecedência para organizar automaticamente cada dia.</p></div><span>{rotinas.filter((item) => item.active).length}</span></div>
           <div className="agenda-rotina__lista">
