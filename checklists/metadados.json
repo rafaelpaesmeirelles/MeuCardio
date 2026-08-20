@@ -8424,5 +8424,240 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "aplicacao-do-cha2ds2-va-e-has-bled-na-decisao-de-anticoagulacao-em-fibrilacao-atrial",
+    "condicao": "Aplicação do CHA2DS2-VA e do HAS-BLED na decisão de anticoagulação em fibrilação atrial",
+    "resumo": "Checklist para uso correto e conjunto dos dois escores da decisão de anticoagular na fibrilação atrial — a pontuação e a interpretação do CHA2DS2-VA (ESC 2024, sem o ponto de sexo feminino do CHA2DS2-VASc), a leitura do HAS-BLED como ferramenta de correção de fatores modificáveis (nunca de exclusão), e a advertência explícita da diretriz de que o escore de sangramento não deve condicionar a decisão de anticoagular.",
+    "documento_origem": "cha2ds2-va",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723",
+      "Lip GYH, Nieuwlaat R, Pisters R, Lane DA, Crijns HJGM. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the Euro Heart Survey on Atrial Fibrillation. Chest. 2010;137(2):263-272. DOI: 10.1378/chest.09-1584. PMID: 19762550",
+      "Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJGM, Lip GYH. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010;138(5):1093-1100. DOI: 10.1378/chest.10-0134. PMID: 20299623"
+    ],
+    "itens": [
+      {
+        "id": "anticoag-fa-cha-variaveis",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "As sete variáveis do CHA2DS2-VA conferidas e pontuadas individualmente: insuficiência cardíaca congestiva/disfunção de VE (1 ponto), hipertensão (1), idade ≥75 anos (2), diabetes mellitus (1), AVC/AIT/tromboembolismo prévio (2), doença vascular — DAC, doença arterial periférica ou placa aórtica (1), idade 65-74 anos (1)",
+        "origem_secao": "Variaveis (cha2ds2-va)"
+      },
+      {
+        "id": "anticoag-fa-cha-sem-sexo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o escore aplicado é o CHA2DS2-VA da ESC 2024, que substitui o CHA2DS2-VASc removendo o sexo feminino como fator de pontuação isolado — escore máximo de 9, sem o ponto adicional de sexo",
+        "origem_secao": "Aplicacao; Formula (cha2ds2-va)"
+      },
+      {
+        "id": "anticoag-fa-cha-interpretacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Interpretação aplicada conforme o escore total, igual para homens e mulheres: ≥2 pontos — anticoagulação geralmente recomendada; 1 ponto — avaliação individualizada; 0 pontos — anticoagulação geralmente não requerida",
+        "origem_secao": "Interpretacao (cha2ds2-va)"
+      },
+      {
+        "id": "anticoag-fa-hasbled-variaveis",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "HAS-BLED calculado com os cortes numéricos do artigo de derivação: hipertensão (PA sistólica não controlada acima de 160 mmHg), função renal anormal (diálise, transplante renal ou creatinina sérica ≥2,26 mg/dL), função hepática anormal (cirrose, ou bilirrubina acima de 2x o limite normal com AST/ALT/fosfatase alcalina acima de 3x), AVC prévio, sangramento prévio ou predisposição (sangramento maior anterior, anemia, trombocitopenia grave ou diátese hemorrágica), INR lábil (só se aplica a quem usa antagonista da vitamina K), idade acima de 65 anos, fármacos (AINE ou antiagregante plaquetário) e álcool (8 ou mais doses padrão por semana) — os dois itens 'A' e os dois itens 'D' pontuam separadamente, escore máximo de 9",
+        "origem_secao": "Variaveis (has-bled)"
+      },
+      {
+        "id": "anticoag-fa-hasbled-corte-3",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "HAS-BLED ≥3 identificado como risco aumentado de sangramento — a conduta correspondente é monitorização mais frequente e correção dos fatores modificáveis, não a suspensão da anticoagulação",
+        "origem_secao": "Interpretacao (has-bled)"
+      },
+      {
+        "id": "anticoag-fa-hasbled-nao-exclui",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que o HAS-BLED alto NÃO foi usado como critério para evitar ou suspender a anticoagulação em paciente com indicação clara pelo CHA2DS2-VA — o escore existe para identificar o que é corrigível (hipertensão não controlada, álcool, AINE, INR mal controlado), não para excluir o paciente do tratamento",
+        "origem_secao": "Principio fundamental de uso correto (has-bled)"
+      },
+      {
+        "id": "anticoag-fa-esc2024-nao-condicionar",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Observado o posicionamento explícito da diretriz ESC 2024: a decisão de anticoagular não deve ser condicionada ao escore de sangramento, priorizando a avaliação individualizada de fatores modificáveis sobre o uso do escore como critério isolado",
+        "origem_secao": "Posicao das diretrizes atuais (has-bled)"
+      },
+      {
+        "id": "anticoag-fa-fatores-modificaveis",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Fatores modificáveis identificados pelo HAS-BLED endereçados na consulta (controle pressórico, revisão de AINE/antiagregante concomitante, orientação sobre consumo de álcool, otimização do tempo em faixa terapêutica se em uso de antagonista da vitamina K)",
+        "origem_secao": "Principio fundamental de uso correto (has-bled)"
+      },
+      {
+        "id": "anticoag-fa-af-care-etapa",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Registrado que o CHA2DS2-VA decide a indicação de anticoagular e o HAS-BLED se encaixa na etapa E (Evaluation) do caminho AF-CARE da ESC 2024, apoiando a reavaliação periódica e a otimização de fatores modificáveis",
+        "origem_secao": "Relacao com o af care (has-bled)"
+      },
+      {
+        "id": "anticoag-fa-registro",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Escore CHA2DS2-VA, escore HAS-BLED e a decisão final de anticoagular (ou não) registrados no prontuário, com data do cálculo",
+        "origem_secao": "Formula (cha2ds2-va; has-bled)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados de dois documentos técnicos companheiros já publicados nesta base — `cha2ds2-va.md` (escore que decide a indicação de anticoagular) e `has-bled.md` (escore complementar de sangramento, que a própria fonte descreve como parte da etapa de avaliação do caminho AF-CARE decidido pelo primeiro) —, com a seção de origem e o documento de procedência registrados em cada item."
+  },
+  {
+    "slug": "aplicacao-do-escore-grace-na-sindrome-coronariana-aguda",
+    "condicao": "Aplicação do escore GRACE 2.0 na síndrome coronariana aguda",
+    "resumo": "Checklist para uso correto do GRACE 2.0 na estratificação de risco da síndrome coronariana aguda (STEMI e AI/NSTEMI) — as oito variáveis clínicas, a diferença estrutural entre o GRACE original (soma de pontos) e o GRACE 2.0 (regressão logística não linear, sem coeficientes publicados no artigo), e o uso do resultado para orientar o timing da estratégia invasiva.",
+    "documento_origem": "grace-20-global-registry-of-acute-coronary-events",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Fox KAA, Fitzgerald G, Puymirat E, et al. Should patients with acute coronary disease be stratified for management according to their risk? Derivation, external validation and outcomes using the updated GRACE risk score. BMJ Open. 2014;4(2):e004425. DOI: 10.1136/bmjopen-2013-004425. PMID: 24561498"
+    ],
+    "itens": [
+      {
+        "id": "grace-oito-variaveis",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "As oito variáveis clínicas do GRACE conferidas e registradas individualmente antes do cálculo: idade, frequência cardíaca, pressão arterial sistólica, creatinina, classe Killip, parada cardíaca na admissão, desvio de segmento ST no ECG e enzimas cardíacas anormais (biomarcador positivo)",
+        "origem_secao": "Variaveis pontuacao"
+      },
+      {
+        "id": "grace-populacao-aplicavel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a estimativa se aplica à síndrome coronariana aguda — tanto STEMI quanto angina instável/NSTEMI —, e não a outro quadro de dor torácica",
+        "origem_secao": "Aplicacao"
+      },
+      {
+        "id": "grace-2-0-nao-e-soma",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o GRACE 2.0 (diferente do escore original por soma de pontos) usa regressão logística com associações não lineares para as quatro variáveis contínuas — idade, pressão arterial sistólica, frequência cardíaca e creatinina —, e por isso o cálculo do 2.0 é feito pela calculadora eletrônica oficial do grupo GRACE, nunca por reconstrução manual da equação",
+        "origem_secao": "Modelo alternativo nao linear"
+      },
+      {
+        "id": "grace-tabela-e-do-original",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a tabela de pontos por faixa e a leitura direta de mortalidade em 6 meses (ex.: escore 88-128 = risco 3-10%) pertencem ao escore GRACE ORIGINAL — o GRACE 2.0 não soma pontos por faixa, usa a regressão logística direta, e não deve ser lido pela mesma tabela",
+        "origem_secao": "Fonte"
+      },
+      {
+        "id": "grace-coeficientes-nao-publicados",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Verificado que os coeficientes explícitos da regressão do GRACE 2.0 não constam no artigo original de derivação — nenhuma equação foi reconstruída manualmente a partir de fonte secundária para estimar o risco",
+        "origem_secao": "Modelo alternativo nao linear"
+      },
+      {
+        "id": "grace-timing-estrategia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Resultado usado para orientar o timing da estratégia invasiva (urgente vs. precoce vs. eletiva), com preferência sobre o TIMI por discriminação prognóstica superior",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "grace-limitacao-complexidade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecida a limitação de exigir as 8 variáveis para o cálculo completo, mais complexo à beira do leito sem calculadora eletrônica do que escores mais simples como o TIMI",
+        "origem_secao": "Limitacoes"
+      },
+      {
+        "id": "grace-registro",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Escore GRACE, faixa de risco correspondente e a decisão de timing de estratégia invasiva decorrente registrados no prontuário",
+        "origem_secao": "Aplicacao pratica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item — incluindo a advertência, já presente no documento técnico, de que os coeficientes do modelo não linear do GRACE 2.0 não estão publicados no artigo original e não devem ser reconstruídos manualmente."
+  },
+  {
+    "slug": "escolha-entre-rcri-e-nsqip-mica-na-avaliacao-de-risco-cardiaco-para-cirurgia-nao-cardiaca",
+    "condicao": "Escolha entre RCRI e NSQIP MICA na avaliação de risco cardíaco pré-operatório para cirurgia não cardíaca",
+    "resumo": "Checklist para decidir entre os dois principais escores de risco cardíaco pré-operatório em cirurgia não cardíaca — os preditores de cada um, os cenários em que o RCRI perde desempenho (cirurgia vascular, predição de morte), a diferença de discriminação entre eles e o critério prático de escolha entre cálculo de cabeça e calculadora eletrônica.",
+    "documento_origem": "escores-de-risco-cardiaco-para-cirurgia-nao-cardiaca-rcri-e-nsqip-mica",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lee TH, Marcantonio ER, Mangione CM, Thomas EJ, Polanczyk CA, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049. PMID: 10477528",
+      "Ford MK, Beattie WS, Wijeysundera DN. Systematic review: prediction of perioperative cardiac complications and mortality by the revised cardiac risk index. Ann Intern Med. 2010;152(1):26-35. PMID: 20048269",
+      "Gupta PK, Gupta H, Sundaram A, Kaushik M, Fang X, et al. Development and validation of a risk calculator for prediction of cardiac risk after surgery. Circulation. 2011;124(4):381-387. PMID: 21730309"
+    ],
+    "itens": [
+      {
+        "id": "rcrinsqip-seis-preditores-rcri",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Os seis preditores independentes do RCRI conferidos individualmente antes de somar: cirurgia de alto risco, história de doença isquêmica do coração, história de insuficiência cardíaca congestiva, história de doença cerebrovascular, tratamento pré-operatório com insulina e creatinina sérica pré-operatória > 2,0 mg/dL",
+        "origem_secao": "O RCRI — o escore mais usado, e por quê"
+      },
+      {
+        "id": "rcrinsqip-cinco-preditores-nsqip",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Os cinco preditores do NSQIP MICA conferidos, quando essa for a ferramenta escolhida: tipo de cirurgia, estado funcional dependente, creatinina anormal, classe ASA e idade crescente",
+        "origem_secao": "NSQIP MICA (2011) — o escore que discrimina melhor, com outro custo"
+      },
+      {
+        "id": "rcrinsqip-elegibilidade-eletiva-estavel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente está estável e o procedimento é eletivo/não urgente antes de aplicar o RCRI — o índice foi derivado nessa população e não foi desenhado para cirurgia de urgência nem para paciente instável",
+        "origem_secao": "Armadilhas clinicas; Limites"
+      },
+      {
+        "id": "rcrinsqip-nao-vascular-isolado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se a cirurgia for vascular: reconhecido que o RCRI perde desempenho nesse cenário (área sob a curva de 0,64, IC95% 0,61-0,66, contra 0,75 na cirurgia não cardíaca mista) e que o julgamento clínico e a avaliação funcional pesam mais na decisão",
+        "origem_secao": "O que a validacao sistematica mostrou — e onde o RCRI falha"
+      },
+      {
+        "id": "rcrinsqip-nao-e-mortalidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que nenhum dos dois escores foi usado para estimar risco de morte isoladamente — o RCRI tem desempenho ruim para esse desfecho (mediana da área sob a curva 0,62, variação 0,54-0,78, com heterogeneidade I²=95% impedindo agrupamento) e o NSQIP MICA foi desenhado para infarto ou parada cardíaca perioperatórios, não para óbito geral",
+        "origem_secao": "O que a validacao sistematica mostrou — e onde o RCRI falha; NSQIP MICA (2011)"
+      },
+      {
+        "id": "rcrinsqip-criterio-de-escolha",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Escolha entre os dois registrada conforme o contexto: RCRI para cálculo de cabeça, à beira do leito, com força em identificar baixo risco (0,4%-0,5% de complicação cardíaca maior com zero fatores); NSQIP MICA quando a calculadora eletrônica está disponível e maior discriminação é necessária (estatística c de 0,874-0,884, contra 0,747 do RCRI no mesmo banco de 2008)",
+        "origem_secao": "Como escolher entre os dois"
+      },
+      {
+        "id": "rcrinsqip-zero-fatores-nao-investiga",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente com zero fatores de risco pelo RCRI, confirmado que não foi solicitada investigação adicional apenas por causa do escore — os próprios autores do índice afirmam que avaliação adicional dificilmente ajuda nesse grupo",
+        "origem_secao": "O RCRI — o escore mais usado, e por quê"
+      },
+      {
+        "id": "rcrinsqip-nao-intercambiaveis",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que os dois escores não são intercambiáveis — populações de derivação, desfechos e variáveis são diferentes (RCRI: coorte de hospital terciário único de 1999, desfecho de complicação cardíaca maior; NSQIP MICA: banco administrativo multicêntrico norte-americano do NSQIP, desfecho de infarto ou parada cardíaca)",
+        "origem_secao": "Limites; Armadilhas clinicas"
+      },
+      {
+        "id": "rcrinsqip-registro",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Escore aplicado, valor calculado e a conduta decorrente registrados no prontuário, com identificação explícita de qual dos dois instrumentos foi usado",
+        "origem_secao": "Como escolher entre os dois"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
