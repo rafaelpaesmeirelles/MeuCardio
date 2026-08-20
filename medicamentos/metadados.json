@@ -490,10 +490,14 @@
       "Comprimido 10 mg (besilato de anlodipino equivalente a 10 mg de anlodipino base)"
     ],
     "commercial_presentations": [
-      "Norvasc® (Viatris Farmacêutica do Brasil Ltda. / Novartis Biociências S.A.), embalagens de 10, 30 ou 60 comprimidos (5 mg) e 30 ou 60 comprimidos (10 mg); numerosos genéricos registrados (ex. Biosintética). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Bula de Norvasc citada com data de aprovação ANVISA 11/05/2026 num dos espelhos consultados — data suspeita (futura em relação a versões anteriores conhecidas do produto); NÃO usar essa data sem confirmação direta no bulário da ANVISA. VERIFICAÇÃO HUMANA NECESSÁRIA para número de registro e data de bula corretos."
+      "Norvasc® (Viatris Farmacêutica do Brasil Ltda. / Novartis Biociências S.A.), embalagens de 10, 30 ou 60 comprimidos (5 mg) e 30 ou 60 comprimidos (10 mg); numerosos genéricos registrados (ex. Biosintética). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Bula de Norvasc citada com data de aprovação ANVISA 11/05/2026 num dos espelhos consultados — data suspeita (futura em relação a versões anteriores conhecidas do produto); NÃO usar essa data sem confirmação direta no bulário da ANVISA. VERIFICAÇÃO HUMANA NECESSÁRIA para número de registro e data de bula corretos.",
+      "Pressat® (besilato de anlodipino) — Laboratório Biolab Sanus Farmacêutica Ltda.: comprimidos de 2,5 mg (embalagens com 30 ou 60 comprimidos), 5 mg (embalagens com 30, 60 ou 90 comprimidos) e 10 mg (embalagens com 30 ou 60 comprimidos). **fonte**: páginas de venda/bula de redes de farmácia (Drogaria São Paulo, Drogarias Pacheco, Drogaria Nossa Farma, Contémfarma) e Farmaindex, convergentes entre si — consultado via WebSearch em 20/08/2026; a bula oficial completa do laboratório não foi lida diretamente nesta sessão.",
+      "Cordarex® (besilato de anlodipino) — Laboratório Biosintética (grupo Aché): comprimidos de 2,5 mg (embalagens com 7, 30 ou 60 comprimidos), 5 mg (6,944 mg de besilato de anlodipino, equivalente a 5 mg de anlodipino base) e 10 mg (13,890 mg de besilato, equivalente a 10 mg de anlodipino base). **fonte**: página oficial do produto no site Aché (ache.com.br/produto/sob-prescricao/cordarex/) e réplicas de bula em Araujo, Farmaindex e ConsultaRemedios, convergentes — consultado via WebSearch em 20/08/2026; bula oficial completa não lida diretamente nesta sessão."
     ],
     "brand_names": [
-      "Norvasc"
+      "Norvasc",
+      "Pressat",
+      "Cordarex"
     ]
   },
   {
@@ -1348,7 +1352,11 @@
     "dbp_reduction_mmhg": -3.0,
     "bp_evidence_source": "Metanálise Cochrane de bloqueadores duais alfa/beta na hipertensão primária (Wong GWK, Laugerotte A, Wright JM. Blood pressure lowering efficacy of dual alpha and beta blockers for primary hypertension. Cochrane Database Syst Rev. 2015 Aug 26;2015(8):CD007449, PMID 26306578): para carvedilol especificamente, redução de -4 mmHg (IC95% -6 a -2) na sistólica e -3 mmHg (IC95% -4 a -2) na diastólica, comparado a placebo (evidência classificada pelos autores como de baixa qualidade). Para o conjunto dos bloqueadores duais (carvedilol + labetalol), a redução combinada foi de -6/-4 mmHg, com queda de 5 bpm na frequência cardíaca — efeito hipotensor menor que o de betabloqueadores não seletivos, beta-1 seletivos, agonistas parciais, tiazídicos ou inibidores do SRAA, conforme os próprios autores destacam. Valores registrados nos campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-4,0/-3,0) são os do carvedilol isolado, não a média combinada com labetalol. Abstract lido diretamente via PubMed E-utilities (efetch) em 11/08/2026 — texto confirmado linha a linha contra o documento primário, não mais resultado sintetizado de busca / DOI não acessado diretamente (Wiley bloqueou o acesso nesta sessão).",
     "brand_names": [
-      "Coreg / Coreg CR (nome comercial internacional, GSK) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)"
+      "Coreg / Coreg CR (nome comercial internacional, GSK) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)",
+      "Divelol"
+    ],
+    "commercial_presentations": [
+      "Divelol® (carvedilol) — Laboratórios Baldacci Ltda.: comprimidos de 3,125 mg (embalagem com 60 comprimidos), 6,25 mg (embalagem com 60 comprimidos), 12,5 mg (embalagem com 60 comprimidos) e 25 mg (embalagens com 14, 30 ou 60 comprimidos). **fonte**: bulas do paciente/profissional hospedadas em lbaldacci.com.br (site oficial do laboratório) e réplicas convergentes em Panvel, Drogaria São Paulo, Drogarias Pacheco, Drogal, ConsultaRemedios e Farmaindex — consultado via WebSearch em 20/08/2026."
     ]
   },
   {
@@ -1594,10 +1602,16 @@
       "Comprimido 50 mg"
     ],
     "commercial_presentations": [
-      "Higroton® (Novartis Biociências S.A.) e genéricos de múltiplos fabricantes (ex. EMS) nas três concentrações; disponível também combinada a atenolol ou amilorida. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Higroton® (Novartis Biociências S.A.) e genéricos de múltiplos fabricantes (ex. EMS) nas três concentrações; disponível também combinada a atenolol ou amilorida. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Clortalil® (clortalidona) — Laboratórios EMS/Germed Farmacêutica: comprimidos de 12,5 mg, 25 mg e 50 mg. **fonte**: BulasMed (páginas dedicadas por dosagem: 12,5 mg e 50 mg) — consultado via WebSearch em 20/08/2026. **VERIFICAÇÃO HUMANA NECESSÁRIA**: o tamanho exato da embalagem por dosagem não foi confirmado com segurança (fontes de varejo mencionam variações entre 60/75/90/500 unidades conforme canal — hospitalar vs. fracionável — sem uma fonte única e definitiva consultada nesta sessão); bula oficial completa não lida diretamente.",
+      "Higromil® (clortalidona) — Laboratório Multilab Indústria e Comércio de Produtos Farmacêuticos Ltda.: comprimidos de 25 mg (embalagem com 42 comprimidos) e 50 mg (embalagem com 28 comprimidos). **fonte**: Remédio Barato (bula do profissional e do paciente, Multilab) e ConsultaRemedios, convergentes — consultado via WebSearch em 20/08/2026; bula oficial completa não lida diretamente.",
+      "Neolidona® (clortalidona) — Laboratório Brainfarma Indústria Química e Farmacêutica S.A. (grupo Hypera, marca Elite): comprimidos de 25 mg (embalagem com 42 comprimidos) e 50 mg (embalagem com 28 comprimidos). **fonte**: Remédio Barato (bula do profissional e do paciente, Brainfarma), ConsultaRemedios e Drogaria São Paulo/Drogarias Pacheco (apresentação 50 mg, 28 comprimidos), convergentes — consultado via WebSearch em 20/08/2026; bula oficial completa não lida diretamente."
     ],
     "brand_names": [
-      "Higroton"
+      "Higroton",
+      "Clortalil",
+      "Higromil",
+      "Neolidona"
     ]
   },
   {
@@ -2744,7 +2758,8 @@
     "review_status": "revisado",
     "generic_name": "Espironolactona",
     "brand_names": [
-      "Aldactone"
+      "Aldactone",
+      "Diacqua"
     ],
     "drug_class": "Antagonista mineralocorticoide (diurético poupador de potássio)",
     "mechanism": "Antagonista farmacológico específico da aldosterona, atuando no túbulo contornado distal e ducto coletor. Diferente do eplerenona (mais moderno e seletivo), tem efeito hormonal adicional por ligação não seletiva a receptores de estrógeno e progesterona, o que explica efeitos adversos como ginecomastia",
@@ -2805,7 +2820,8 @@
     "commercial_presentations": [
       "ALDACTONE® 25 mg — comprimido, embalagem com 30 unidades (Pfizer).",
       "ALDACTONE® 50 mg — comprimido, embalagem com 30 unidades (Pfizer).",
-      "ALDACTONE® 100 mg — comprimido, embalagem com 16 unidades (Pfizer)."
+      "ALDACTONE® 100 mg — comprimido, embalagem com 16 unidades (Pfizer).",
+      "Diacqua® (espironolactona) — Laboratório Momenta Farmacêutica Ltda. (empresa do grupo Eurofarma; registro em nome de Eurofarma Laboratórios S.A.): comprimidos de 25 mg e 50 mg, em embalagens com 30 comprimidos. **fonte**: bula do paciente hospedada em momentafarma.com.br (site oficial do laboratório) e réplicas convergentes em Drogasil, Droga Raia, Farma22, Farmaindex e Pedpharma — consultado via WebSearch em 20/08/2026; bula oficial completa (versão profissional) não lida diretamente nesta sessão."
     ]
   },
   {
@@ -5728,7 +5744,8 @@
     "pregnancy": "**Só usar se for essencial.** A bula não atribui letra de categoria de risco. Diz que não há evidência de teratogenicidade, mas que **os betabloqueadores reduzem a perfusão placentária**, o que pode resultar em morte fetal intrauterina, parto imaturo e parto prematuro. Descreve ainda **hipoglicemia e bradicardia no neonato e bradicardia no feto**, e risco aumentado de complicações cardíacas e pulmonares no neonato no período pós-natal. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção \"Uso durante a gravidez e lactação\".",
     "lactation": "**Amamentação não recomendada.** A bula generaliza para a classe: a maioria dos betabloqueadores, **principalmente os compostos lipofílicos** — o que inclui o propranolol —, passa para o leite materno, em quantidades variáveis; por isso a amamentação não é recomendada após a administração desses compostos. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca).",
     "brand_names": [
-      "Inderal"
+      "Inderal",
+      "Rebaten LA"
     ],
     "presentations": [
       "Comprimido 40 mg (embalagem com 30 comprimidos)",
@@ -5758,7 +5775,8 @@
       "fonte: extrapolado do perfil de segurança já documentado nos campos `contraindications`/`adverse_effects` deste registro — prática de monitorização padrão de classe farmacológica, não citação de bula específica adicional."
     ],
     "commercial_presentations": [
-      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente)."
+      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente).",
+      "Rebaten LA® (cloridrato de propranolol, formulação de LIBERAÇÃO PROLONGADA — diferente da apresentação convencional de comprimido de liberação imediata já cadastrada sob a marca Inderal) — Laboratório EMS Sigma Pharma Ltda.: cápsulas de liberação prolongada de 80 mg e 160 mg, em embalagens com 4 ou 30 cápsulas, para administração em dose única diária. **fonte**: BulasMed (página de posologia do Rebaten LA), Remédio Barato (bula do profissional e do paciente, EMS Sigma Pharma) e ConsultaRemedios, convergentes — consultado via WebSearch em 20/08/2026; bula oficial completa não lida diretamente nesta sessão. **VERIFICAÇÃO HUMANA NECESSÁRIA**: as buscas desta sessão só confirmaram a existência da formulação LA (liberação prolongada) sob o nome Rebaten — não foi possível confirmar com a mesma robustez se existe também uma versão \"Rebaten\" simples (comprimido de liberação imediata, equivalente ao Inderal) comercializada sob o mesmo nome de marca."
     ]
   },
   {
@@ -7335,7 +7353,8 @@
     "pregnancy": "**Só quando absolutamente necessário.** A bula registra que **não há dados adequados** do uso na gravidez e que o verapamil **atravessa a barreira placentária — pode ser medido no cordão umbilical**. Não atribui letra de categoria de risco. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott), seção \"Uso em idosos, crianças e outros grupos de risco\".",
     "lactation": "**Interromper a amamentação.** A bula é afirmativa, não condicional: o verapamil **é excretado no leite humano** e a amamentação deve ser interrompida durante a terapia. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott).",
     "brand_names": [
-      "Dilacoron"
+      "Dilacoron",
+      "Coronaril"
     ],
     "half_life_hours": 5.0,
     "half_life_note": "Meia-vida de eliminação de 2,8 a 7,4 horas após dose única; com doses repetidas (menos de 10 doses a cada 6 horas), a meia-vida aumenta para 4,5 a 12,0 horas, por saturação parcial do metabolismo hepático de primeira passagem — valor registrado em `half_life_hours` (5h) é aproximado ao ponto médio da faixa de dose única, mais representativa do início do tratamento. O metabólito ativo norverapamil (cerca de 20% da atividade cardiovascular do verapamil) tem meia-vida um pouco maior, de 5,7 a 7,3 horas, prolongando discretamente o efeito residual. Fonte: literatura de farmacocinética clínica do verapamil (StatPearls, rótulo FDA/DailyMed), consultada via WebSearch em 2026 — a bula brasileira do DILACORON já citada nas referências deste registro não detalha o valor numérico da meia-vida.",
@@ -7349,7 +7368,8 @@
       "Comprimido revestido 80 mg (embalagem com 30 comprimidos)"
     ],
     "commercial_presentations": [
-      "Dilacoron® (Abbott Laboratórios do Brasil Ltda.), comprimido revestido 80 mg, embalagem com 30 comprimidos; sujeito a controle especial com retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Dilacoron® (Abbott Laboratórios do Brasil Ltda.), comprimido revestido 80 mg, embalagem com 30 comprimidos; sujeito a controle especial com retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Coronaril® (cloridrato de verapamil) — Laboratório EMS Sigma Pharma Ltda.: comprimido revestido de 80 mg (embalagem com 30 comprimidos), e formulações de liberação prolongada de 120 mg e 240 mg. **fonte**: PR Vade Mécum, Farmácia Mix, Sara.com.br (bula do produto, EMS Sigma Pharma) e Clevermed, convergentes — consultado via WebSearch em 20/08/2026; bula oficial completa não lida diretamente nesta sessão. **VERIFICAÇÃO HUMANA NECESSÁRIA**: o tamanho de embalagem das formulações de 120 mg e 240 mg (liberação prolongada) não foi confirmado com a mesma robustez que a de 80 mg."
     ]
   },
   {
@@ -9029,7 +9049,8 @@
     "review_status": "revisado",
     "generic_name": "Indapamida + Perindopril",
     "brand_names": [
-      "COVERSYL PLUS"
+      "COVERSYL PLUS",
+      "Perindopril Erbumina + Indapamida (genérico EMS S/A)"
     ],
     "drug_class": "Combinação: IECA + diurético tiazida-símile (derivado indólico clorosulfamoilado)",
     "mechanism": "O perindopril (sal de terc-butilamina) é convertido em perindoprilato, que inibe a enzima de conversão da angiotensina I em angiotensina II, reduzindo a secreção de aldosterona, elevando a atividade de renina plasmática e reduzindo a resistência periférica total sem retenção hidrossódica nem taquicardia reflexa em tratamento crônico. A indapamida é um diurético do segmento cortical de diluição, quimicamente semelhante às tiazidas, que inibe a reabsorção de sódio, aumentando a excreção urinária de sódio, cloretos e, em menor escala, potássio e magnésio. A combinação resulta em sinergia aditiva dos efeitos anti-hipertensivos, e o IECA reduz o risco de hipocalemia relacionado ao diurético isolado.",
@@ -9102,7 +9123,10 @@
     "half_life_note": "Indapamida isolada: meia-vida em sangue total de aproximadamente 14 horas — valor já registrado e com fonte citada no verbete de monoterapia `indapamida` deste catálogo (rótulo FDA/DailyMed). Perindopril isolado: meia-vida do pró-fármaco de aproximadamente 1,3 hora, mas o metabólito ativo perindoprilato tem declínio multifásico com meia-vida de eliminação TERMINAL de aproximadamente 100 horas (dissociação lenta dos sítios de ligação à ECA) — valor já registrado e com fonte citada no verbete de monoterapia `perindopril-argininaerbumina` deste catálogo. Método: componentes desta associação já têm meia-vida individual verificada e com fonte citada nos respectivos verbetes de monoterapia deste mesmo catálogo (FDA/DailyMed) — reaproveitado aqui em vez de repetir a busca, já que é o mesmo princípio ativo, mesma via oral. Pesquisa desta sessão (12/08/2026) confirmou que o bloqueio de ferramenta de pesquisa registrado em sessão anterior não existe mais.",
     "duration_of_action_hours": null,
     "duration_of_action_note": "Efeito anti-hipertensivo sustentado por 24 horas com dose única diária, mesmo padrão já registrado nos dois verbetes de monoterapia deste catálogo: a indapamida isolada tem efeito anti-hipertensivo sustentado por 24h (a ação diurética propriamente dita é distinta — início em 1-3h, pico em 6h); o perindopril isolado tem inibição da ECA dose-dependente, com inibição máxima de 80-90% persistindo por 10-12h e caindo para ~60% em 24h — cobertura suficiente para dose única diária, mas não completa no mesmo grau do pico.",
-    "duration_of_action_source": null
+    "duration_of_action_source": null,
+    "commercial_presentations": [
+      "Perindopril Erbumina + Indapamida — comprimidos 4 mg (perindopril erbumina) + 1,25 mg (indapamida), genérico, EMS S/A, embalagens com 15, 30 ou 60 comprimidos brancos biconvexos. Registro genérico aprovado pela ANVISA em abril/2018 (mesma dosagem do Coversyl Plus, já cadastrado). Fonte: Agência Brasil, 'Anvisa autoriza venda de novos genéricos para HIV e pressão alta' (abr/2018); CRF-RJ, 'Anvisa registra quatro medicamentos genéricos inéditos'; M2Farma (blog do setor farmacêutico) — buscas via WebSearch realizadas em 20/08/2026 (WebFetch direto às páginas-fonte foi bloqueado pelo proxy de rede desta sessão; a confirmação vem de convergência de 3 fontes independentes nos resultados de busca, não de leitura direta da página)."
+    ]
   },
   {
     "slug": "indapamida-perindopril-argininaerbumina",
@@ -9542,7 +9566,8 @@
     "review_status": "revisado",
     "generic_name": "Anlodipino (besilato) + Ramipril",
     "brand_names": [
-      "NAPRIX A"
+      "NAPRIX A",
+      "Ramipril + Besilato de Anlodipino (genérico Torrent do Brasil Ltda.)"
     ],
     "drug_class": "Combinação: BCC diidropiridínico + IECA",
     "mechanism": "O ramipril inibe a enzima conversora de angiotensina, bloqueando a formação da substância que estimula a contração dos vasos sanguíneos, resultando em relaxamento/dilatação vascular e aumento do suprimento de sangue e oxigênio ao coração. O besilato de anlodipino é um bloqueador de canal de cálcio que atua no movimento de cálcio nas células cardíacas e vasculares, relaxando a musculatura e reduzindo a carga cardíaca. A ação do anlodipino é descrita na bula como proporcionando efeitos aditivos aos do ramipril.",
@@ -9604,7 +9629,11 @@
     "duration_of_action_hours": 24,
     "duration_of_action_note": "Dose única diária conforme bula, compatível com a meia-vida efetiva do ramiprilato (~13-17h) somada ao efeito residual prolongado do anlodipino.",
     "duration_of_action_source": "Bula NAPRIX A (Libbs) já citada em `references`.",
-    "outcomes": "Sem ensaio de desfecho duro dedicado a este produto combinado em dose fixa. Evidência de desfecho para o componente ramipril isolado vem do estudo HOPE (Heart Outcomes Prevention Evaluation, NEJM 2000), com redução de eventos cardiovasculares em pacientes de alto risco — já referenciado em outros documentos deste acervo sobre ramipril; não é um dado do produto combinado NAPRIX A. VERIFICAÇÃO HUMANA NECESSÁRIA se for preciso um desfecho duro específico da combinação de dose fixa."
+    "outcomes": "Sem ensaio de desfecho duro dedicado a este produto combinado em dose fixa. Evidência de desfecho para o componente ramipril isolado vem do estudo HOPE (Heart Outcomes Prevention Evaluation, NEJM 2000), com redução de eventos cardiovasculares em pacientes de alto risco — já referenciado em outros documentos deste acervo sobre ramipril; não é um dado do produto combinado NAPRIX A. VERIFICAÇÃO HUMANA NECESSÁRIA se for preciso um desfecho duro específico da combinação de dose fixa.",
+    "commercial_presentations": [
+      "Ramipril + Besilato de Anlodipino — cápsulas de 2,5 mg (ramipril) + 5 mg (besilato de anlodipino), genérico, Torrent do Brasil Ltda. (importador; fabricado por Torrent Pharmaceuticals Ltd., Índia), embalagem com 30 cápsulas gelatinosas duras. Fonte: listagens de produto em Drogaria São Paulo, Drogarias Pacheco, Drogaria Nova Esperança e consultaremedios.com.br — títulos de produto conferidos em múltiplas farmácias independentes, busca via WebSearch em 20/08/2026 (WebFetch direto bloqueado pelo proxy de rede).",
+      "Ramipril + Besilato de Anlodipino — comprimidos/cápsulas de 5 mg (ramipril) + 5 mg (besilato de anlodipino), genérico, Torrent do Brasil Ltda., embalagem com 30 unidades. Fonte: Drogaria São Paulo, Drogarias Pacheco — busca via WebSearch em 20/08/2026."
+    ]
   },
   {
     "slug": "anlodipino-besilato-telmisartana",
