@@ -8,8 +8,8 @@ def text(path: str) -> str:
 def test_mail_navigation_has_one_user_facing_entry():
     for path in ("frontend/src/components/ClinicalDesktopNav.tsx", "frontend/src/components/ClinicalMobileNav.tsx"):
         src = text(path)
-        assert 'to: "/caixa-de-email", label: "CorVIA Mail"' in src
-        assert 'to: "/corvia-mail", label: "CorVIA Mail"' not in src
+        assert 'to: "/corvia-mail", label: "CorVIA Mail"' in src
+        assert 'to: "/caixa-de-email", label: "CorVIA Mail"' not in src
         assert 'label: "Caixa de e-mail"' not in src
 
 def test_mail_bulk_delete_is_real():
