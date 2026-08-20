@@ -31,7 +31,7 @@ from app.services.ia.assistant_batch_tools import (
 )
 from app.services.ia.mail_tools import MAIL_TOOLS_SCHEMA, executar_tool_mail
 
-log = logging.getLogger("meucardio.ai.assistant_tools")
+log = logging.getLogger("corvia.ai.assistant_tools")
 
 ASSISTANT_TOOLS_SCHEMA: list[dict] = [
     *AGENDA_TOOLS_SCHEMA,

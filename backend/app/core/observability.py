@@ -74,6 +74,13 @@ class CorviaJsonFormatter(logging.Formatter):
             value = getattr(record, field, None)
             if value is not None:
                 payload[field] = value
+        # ``logging.exception`` carrega o traceback em ``exc_info``. Mantemos
+        # apenas tipo e frames (arquivo/linha/função), sem mensagem nem locais,
+        # para diagnosticar produção sem registrar PHI, tokens ou payloads.
+        if record.exc_info and record.exc_info[1] is not None:
+            exc = record.exc_info[1]
+            payload.setdefault("error_type", type(exc).__name__)
+            payload.setdefault("error_stack", _stack_summary(exc))
         return json.dumps(payload, ensure_ascii=False, separators=(",", ":"), default=str)
 
 
