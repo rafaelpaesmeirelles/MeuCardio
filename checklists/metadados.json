@@ -8424,5 +8424,219 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "pericardite-purulenta-bacteriana-diagnostico-e-drenagem",
+    "condicao": "Pericardite purulenta bacteriana",
+    "resumo": "Checklist de suspeita, diagnóstico e tratamento da pericardite purulenta bacteriana — forma rara de curso fulminante em que drenagem mecânica e antibiótico são obrigatórios, não apenas anti-inflamatório.",
+    "documento_origem": "pericardite-purulenta-bacteriana-diagnostico-e-tratamento",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mortalidade de 30-50% (mais alta com tamponamento) e associação com pneumonia/empiema (93,1% com pneumonia precedente, 66,6% com empiema) conferidas por busca cruzada em múltiplas fontes secundárias concordantes (Revista Portuguesa de Cardiologia, American Journal of Medicine, JACC Case Reports 2024, séries de caso indexadas em PMC) em 06/08/2026 — os números de mortalidade e associação com pneumonia vêm de séries históricas amplamente citadas na literatura secundária revisada; não foi possível fixar nesta sessão um único artigo primário verificável por PMID para cada número isolado, o que é sinalizado como VERIFICAÇÃO HUMANA NECESSÁRIA antes de uso como estatística fechada em material formal."
+    ],
+    "itens": [
+      {
+        "id": "ppb-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar pneumonia e/ou empiema pleural concomitante em todo paciente com suspeita de pericardite purulenta — origem pulmonar presente na maioria dos casos descritos na literatura secundária revisada (cerca de 93% com pneumonia precedente, cerca de dois terços com empiema associado).",
+        "origem_secao": "Como o paciente chega — a pista epidemiológica mais importante"
+      },
+      {
+        "id": "ppb-02",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Realizar pericardiocentese com cultura e Gram do líquido pericárdico — é o método diagnóstico definitivo desta forma, não apenas uma medida de alívio sintomático.",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppb-03",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma como exame de imagem de primeira linha, tanto para o diagnóstico inicial (derrame, sinais de tamponamento, loculação) quanto para monitorizar a resposta ao tratamento.",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppb-04",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar antibioticoterapia empírica imediatamente, sem aguardar o resultado da cultura do líquido pericárdico, e ajustar o esquema assim que o agente causal for identificado.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ppb-05",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Providenciar drenagem pericárdica mecânica como parte obrigatória do tratamento — nunca tratar pericardite purulenta apenas com o esquema de AINE + colchicina da forma viral/idiopática.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ppb-06",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Planejar duração habitual de antibiótico de 4 a 6 semanas.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ppb-07",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Considerar drenagem cirúrgica (janela pericárdica) ou, em casos loculados de difícil drenagem por pericardiocentese isolada, fibrinólise intrapericárdica como estratégia complementar, conforme relatos de caso na literatura.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ppb-08",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorizar ativamente tamponamento cardíaco, choque séptico e evolução para pericardite constritiva — as causas de morte mais frequentes descritas nesta forma, cuja mortalidade sem drenagem tende ao óbito segundo a literatura revisada.",
+        "origem_secao": "Prognóstico — por que a suspeita precoce importa tanto"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento \"Pericardite Purulenta Bacteriana: Diagnóstico e Tratamento\" (acervo Corvia), em 20/08/2026."
+  },
+  {
+    "slug": "escolha-de-regra-de-decisao-clinica-na-sincope-de-emergencia",
+    "condicao": "Síncope na emergência — escolha de regra de decisão clínica",
+    "resumo": "Checklist para orientar qual regra de decisão clínica (SFSR, Canadian Syncope Risk Score ou EGSYS) aplicar na síncope de emergência, e os limites de cada uma frente ao julgamento clínico.",
+    "documento_origem": "regras-de-decisao-clinica-na-sincope-de-emergencia-sfsr-csrs-egsys-comparadas",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Quinn JV, Stiell IG, McDermott DA, Sellers KL, Kohn MA, Wells GA. Derivation of the San Francisco Syncope Rule to predict patients with short-term serious outcomes. Ann Emerg Med. 2004;43(2):224-232. DOI: 10.1016/s0196-0644(03)00823-0. PMID: 14747812",
+      "Quinn J, McDermott D, Stiell I, Kohn M, Wells G. Prospective validation of the San Francisco Syncope Rule to predict patients with serious outcomes. Ann Emerg Med. 2006;47(5):448-454. DOI: 10.1016/j.annemergmed.2005.11.019. PMID: 16631985",
+      "Costantino G, Casazza G, Reed M, et al. Syncope risk stratification tools vs clinical judgment: an individual patient data meta-analysis. Am J Med. 2014;127(11):1126.e13-1126.e25. DOI: 10.1016/j.amjmed.2014.05.022. PMID: 24862309",
+      "Thiruganasambandamoorthy V, Kwong K, Wells GA, et al. Development of the Canadian Syncope Risk Score to predict serious adverse events after emergency department assessment of syncope. CMAJ. 2016;188(12):E289-E298. DOI: 10.1503/cmaj.151469. PMID: 27378464",
+      "Del Rosso A, Ungar A, Maggi R, et al. Clinical predictors of cardiac syncope at initial evaluation in patients referred urgently to a general hospital: the EGSYS score. Heart. 2008;94(12):1620-1626. DOI: 10.1136/hrt.2008.143123. PMID: 18519550"
+    ],
+    "itens": [
+      {
+        "id": "sre-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não tratar nenhuma das três regras de decisão clínica (SFSR, CSRS, EGSYS) como substituto do julgamento clínico — a metanálise de dados individuais de Costantino et al. (2014, PMID 24862309) mostrou que nenhuma ferramenta superou o julgamento clínico experiente para prever desfecho grave.",
+        "origem_secao": "A comparação direta que faltava: nenhuma bateu o julgamento clínico"
+      },
+      {
+        "id": "sre-02",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Aplicar a San Francisco Syncope Rule (ECG anormal, dispneia, hematócrito <30%, pressão arterial sistólica <90 mmHg, história de insuficiência cardíaca congestiva) quando o objetivo for triagem rápida com poucas variáveis, aceitando especificidade moderada (56-62%).",
+        "origem_secao": "San Francisco Syncope Rule (SFSR)"
+      },
+      {
+        "id": "sre-03",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Coletar troponina e obter ECG com eixo, duração do QRS e QTc medidos antes de calcular o Canadian Syncope Risk Score — é dessas variáveis mais detalhadas que vem sua discriminação superior (estatística c de 0,88).",
+        "origem_secao": "Canadian Syncope Risk Score (CSRS)"
+      },
+      {
+        "id": "sre-04",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Calcular o Canadian Syncope Risk Score (9 variáveis, pontuação de -3 a +11) quando houver tempo e dados para estratificação mais fina — risco de evento adverso em 30 dias variando de 0,4% no escore -3 a 83,6% no escore 11.",
+        "origem_secao": "Canadian Syncope Risk Score (CSRS)"
+      },
+      {
+        "id": "sre-05",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Usar o EGSYS (6 variáveis, pontuação de -1 a +4) quando a dúvida clínica central for etiológica — probabilidade de causa cardíaca da síncope —, e não apenas risco de desfecho adverso geral.",
+        "origem_secao": "EGSYS"
+      },
+      {
+        "id": "sre-06",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não presumir que a sensibilidade obtida na coorte de derivação de qualquer regra se repete em qualquer centro — validações externas da SFSR já mostraram maior variabilidade entre serviços.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sre-07",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não comparar as três regras como equivalentes sem notar que o EGSYS mede algo diferente (probabilidade de causa cardíaca) do que SFSR e CSRS medem (risco de desfecho adverso geral) — usar o EGSYS para decidir disposição do PS sem essa ressalva é usá-lo fora do desenho pretendido.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sre-08",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Reservar observação prolongada ou internação para os casos identificados como alto risco por qualquer das regras aplicadas, sempre em conjunto com a impressão clínica global do médico assistente.",
+        "origem_secao": "Como usar essa informação na prática"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento \"Regras de Decisão Clínica na Síncope de Emergência: SFSR, Canadian Syncope Risk Score e EGSYS Comparadas\" (acervo Corvia), em 20/08/2026."
+  },
+  {
+    "slug": "investigacao-diagnostica-de-sarcoidose-cardiaca-sbc-2022",
+    "condicao": "Sarcoidose cardíaca",
+    "resumo": "Checklist de investigação diagnóstica e tratamento da sarcoidose cardíaca conforme os critérios da Japanese Circulation Society reproduzidos pela Diretriz de Miocardites da SBC 2022, incluindo o diagnóstico diferencial com miocardite de células gigantes.",
+    "documento_origem": "sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — texto integral acessado em acesso aberto (PMC9352123); os critérios reproduzidos são os da Japanese Circulation Society (SJC) tal como apresentados por essa diretriz, e as classes de recomendação vêm de suas tabelas de terapia imunossupressora e de biópsia endomiocárdica"
+    ],
+    "itens": [
+      {
+        "id": "sarc-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de sarcoidose cardíaca diante de bloqueio atrioventricular avançado em pessoa jovem, arritmia ventricular ou disfunção ventricular de causa não esclarecida.",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "sarc-02",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Aplicar os critérios da Japanese Circulation Society reproduzidos pela diretriz SBC 2022: dois ou mais critérios maiores, ou um critério maior somado a dois ou mais critérios menores, para considerar o envolvimento cardíaco fortemente sugerido.",
+        "origem_secao": "Critérios da SJC para envolvimento cardíaco"
+      },
+      {
+        "id": "sarc-03",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar cintilografia com citrato de 67Ga ou PET com 18F-FDG, e ressonância magnética com gadolínio (realce tardio do miocárdio), como critérios maiores de imagem.",
+        "origem_secao": "Critérios maiores"
+      },
+      {
+        "id": "sarc-04",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerar biópsia endomiocárdica sabendo que resultado negativo NÃO exclui sarcoidose cardíaca — o acometimento é focal e a amostra pode não pegar o granuloma.",
+        "origem_secao": "Os dois grupos de diagnóstico"
+      },
+      {
+        "id": "sarc-05",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Na ausência de granuloma em biópsia cardíaca ou quando o paciente não for submetido a ela, investigar granuloma não caseoso em outros órgãos para fechar o diagnóstico pela via clínica.",
+        "origem_secao": "Os dois grupos de diagnóstico"
+      },
+      {
+        "id": "sarc-06",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de considerar sarcoidose cardíaca ISOLADA, excluir envolvimento respiratório, oftalmológico e cutâneo; confirmar ausência de captação anormal em outros órgãos na cintilografia com 67Ga ou PET-FDG; e tomografia de tórax sem alteração pulmonar nem linfadenopatia hilar/mediastinal (eixo menor maior que 10 mm).",
+        "origem_secao": "Sarcoidose cardíaca ISOLADA"
+      },
+      {
+        "id": "sarc-07",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Iniciar prednisona 30 a 40 mg/dia por 4 a 6 meses (Classe IIa, Nível B) quando o diagnóstico for confirmado; outros imunossupressores associados ao corticosteroide (azatioprina, metotrexato, leflunomida, infliximabe) têm recomendação mais fraca (Classe IIb, Nível C).",
+        "origem_secao": "Tratamento imunossupressor"
+      },
+      {
+        "id": "sarc-08",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diferenciar de miocardite de células gigantes no diagnóstico diferencial — a imunossupressão é Classe IIa na sarcoidose cardíaca e Classe I na miocardite de células gigantes, com transplante cardíaco Classe I apenas nesta última.",
+        "origem_secao": "Comparação com a miocardite de células gigantes"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento \"Sarcoidose Cardíaca: Critérios Diagnósticos, Forma Isolada e Tratamento (SBC 2022)\" (acervo Corvia), em 20/08/2026."
   }
 ]
