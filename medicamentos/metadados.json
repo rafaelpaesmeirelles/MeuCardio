@@ -618,7 +618,13 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do TENORMIN® (atenolol), seção CLINICAL PHARMACOLOGY — **lido diretamente nesta sessão (11/08/2026)**: 'the elimination half-life of oral TENORMIN is approximately 6 to 7 hours' (confirma o valor já registrado em `half_life_note`) e 'following oral doses of 50 mg or 100 mg, both beta-blocking and antihypertensive effects persist for at least 24 hours' — esta última frase é a fonte direta do racional de dose única diária, apesar da meia-vida de 6-7h. O rótulo NÃO traz, nesta seção, um estudo de dose-resposta formal com n/PMID citável separadamente — o valor '22/15 mmHg' registrado em `bp_evidence_source` vem de outra publicação (PMID 340136), não desta seção do rótulo.",
     "sbp_reduction_mmhg": -22.0,
     "dbp_reduction_mmhg": -15.0,
-    "bp_evidence_source": "Estudo de dose-resposta duplo-cego, cruzado, em atenção primária, 98 pacientes com hipertensão leve a moderada, comparando atenolol 50/100/200 mg/dia contra placebo: com a dose de **100 mg/dia** (a que produziu o maior efeito hipotensor, com platô — doses maiores até 300 mg não trouxeram redução proporcionalmente maior), diferença de **22/15 mmHg** ao final da fase duplo-cega e de 25/16 mmHg na observação final, **confirmadas nesta sessão (12/08/2026) como valores corrigidos contra o efeito placebo** (desenho cruzado comparando cada dose contra placebo; os valores citados representam o efeito líquido do tratamento ativo, não uma diferença bruta pré/pós). Fonte: Gostick NK, Mayhew SR, Million R, Sagar D, Suxena SR, Ingram DF, Barmer NP. A dose-response study of atenolol in mild to moderate hypertension in general practice. Curr Med Res Opin. 1977. PMID 340136 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão."
+    "bp_evidence_source": "Estudo de dose-resposta duplo-cego, cruzado, em atenção primária, 98 pacientes com hipertensão leve a moderada, comparando atenolol 50/100/200 mg/dia contra placebo: com a dose de **100 mg/dia** (a que produziu o maior efeito hipotensor, com platô — doses maiores até 300 mg não trouxeram redução proporcionalmente maior), diferença de **22/15 mmHg** ao final da fase duplo-cega e de 25/16 mmHg na observação final, **confirmadas nesta sessão (12/08/2026) como valores corrigidos contra o efeito placebo** (desenho cruzado comparando cada dose contra placebo; os valores citados representam o efeito líquido do tratamento ativo, não uma diferença bruta pré/pós). Fonte: Gostick NK, Mayhew SR, Million R, Sagar D, Suxena SR, Ingram DF, Barmer NP. A dose-response study of atenolol in mild to moderate hypertension in general practice. Curr Med Res Opin. 1977. PMID 340136 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão.",
+    "brand_names": [
+      "Ablok"
+    ],
+    "commercial_presentations": [
+      "Ablok® (Biolab Sanus Farmacêutica Ltda.), comprimido de 25 mg, 50 mg e 100 mg, embalagens com 30 comprimidos. Também disponível como genérico/similar (Lei nº 9.787/1999) por Medley (Sanofi) e Aché. VERIFICAÇÃO HUMANA NECESSÁRIA: número de registro ANVISA e data de bula não confirmados nesta sessão por fonte primária (WebFetch/curl ao bulário bloqueados pelo proxy do ambiente) — confirmado só por mirrors de bulário/drogaria."
+    ]
   },
   {
     "slug": "atorvastatina-calcica",
@@ -1513,7 +1519,13 @@
     "duration_of_action_source": "Já documentado no campo `notes.Farmacocinetica` deste mesmo registro (não é pesquisa nova desta sessão) — sourced, nas referências gerais do registro, a materiais de bulário/protocolo já citados (Afya Cardiologia; Protocolo de Uso de Clopidogrel, Secretaria de Saúde do DF). Reaproveitado aqui só para popular os campos estruturados novos, sem verificação adicional nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica. Clopidogrel é antiagregante plaquetário inibidor do receptor P2Y12, sem mecanismo de ação hemodinâmico direto — redução de pressão arterial sistêmica não é desfecho estudado nos ensaios pivotais (CAPRIE, CURE, CLARITY, COMMIT, já citados no próprio registro) nem clinicamente relevante para esta classe."
+    "bp_evidence_source": "Não se aplica. Clopidogrel é antiagregante plaquetário inibidor do receptor P2Y12, sem mecanismo de ação hemodinâmico direto — redução de pressão arterial sistêmica não é desfecho estudado nos ensaios pivotais (CAPRIE, CURE, CLARITY, COMMIT, já citados no próprio registro) nem clinicamente relevante para esta classe.",
+    "brand_names": [
+      "Plavix"
+    ],
+    "commercial_presentations": [
+      "Plavix® (Sanofi Medley Farmacêutica Ltda.), comprimido revestido de 75 mg (equivalente a 97,875 mg de bissulfato de clopidogrel), embalagens com 7, 14, 28 ou 98 comprimidos. Não existe apresentação comercial de 300 mg — a dose de ataque de 300 mg é obtida com 4 comprimidos de 75 mg, não é um produto separado. Também disponível como genérico/similar por Aché, Aurobindo Pharma do Brasil, Novartis e Legrand. VERIFICAÇÃO HUMANA NECESSÁRIA: Iscover® (Bristol-Myers Squibb, mesma molécula, historicamente co-comercializado com Plavix) teve status de comercialização atual no Brasil não confirmado nesta sessão. Número de registro ANVISA não confirmado."
+    ]
   },
   {
     "slug": "clortalidona",
