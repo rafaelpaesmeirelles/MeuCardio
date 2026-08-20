@@ -38,7 +38,7 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
-    { to: "/caixa-de-email", label: "CorVIA Mail", icon: "mail" },
+  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
   { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/telediagnostico", label: "Telediagnóstico", icon: "evidencia" },
 ];
