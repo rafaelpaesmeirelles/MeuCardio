@@ -5543,5 +5543,238 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "diagnostico-de-icfep-probabilidade-clinica-escore-e-etiologia",
+    "condicao": "Diagnóstico de insuficiência cardíaca com fração de ejeção preservada (ICFEp)",
+    "resumo": "O caminho estruturado que evita os dois erros mais comuns no diagnóstico de ICFEp — descartar o diagnóstico por peptídeo natriurético pouco elevado no paciente obeso, e aceitar a pontuação intermediária do HFA-PEFF sem avançar para teste funcional —, com a etapa de investigação etiológica que costuma ser pulada depois da confirmação funcional. Deliberadamente não é checklist de tratamento: registra o fenótipo e as classes farmacológicas envolvidas, sem repetir doses, que pertencem aos documentos de tratamento já publicados no tema.",
+    "documento_origem": "acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kittleson MM, Panjrath GS, Bates K, Breathett KK, Dixon DL, Januzzi JL Jr, Mohammed SF. Management of Heart Failure With Preserved Ejection Fraction: 2026 ACC Expert Consensus Decision Pathway. J Am Coll Cardiol. Published online July 23, 2026. DOI: 10.1016/j.jacc.2026.06.018. PMID: 42494134.",
+      "Pieske B, Tschöpe C, de Boer RA, et al. How to diagnose heart failure with preserved ejection fraction: the HFA-PEFF diagnostic algorithm. Eur Heart J. 2019;40(40):3297-3317. DOI: 10.1093/eurheartj/ehz641. PMID: 31504452",
+      "Ostrominski JW, Lara Lince FA, Claggett BL, et al. Performance of the HFpEF-ABA, H2FPEF, and HFA-PEFF Algorithms in Heart Failure With Preserved Ejection Fraction: A Participant-Level Pooled Analysis of Randomized Clinical Trials. J Card Fail. 2026. DOI: 10.1016/j.cardfail.2026.03.022. PMID: 41950988"
+    ],
+    "itens": [
+      {
+        "id": "icfep-dx-definicao-universal",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Definição universal confirmada antes de rotular ICFEp: sintomas e/ou sinais compatíveis com insuficiência cardíaca atribuíveis a anormalidade estrutural ou funcional cardíaca, associados a peptídeo natriurético elevado OU evidência objetiva de congestão pulmonar/sistêmica de origem cardíaca — FEVE ≥50% isolada não basta, não existe um teste isolado de ICFEp",
+        "origem_secao": "Diagnóstico: não existe um teste isolado de ICFEp"
+      },
+      {
+        "id": "icfep-dx-natriuretico-obesidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se o paciente é obeso e o peptídeo natriurético não está muito elevado: reconhecido que a obesidade pode reduzir os níveis de peptídeos natriuréticos mesmo com ICFEp presente — BNP/NT-proBNP pouco elevado não exclui o diagnóstico nesse perfil",
+        "origem_secao": "Obesidade altera também o diagnóstico"
+      },
+      {
+        "id": "icfep-dx-nao-atribuir-toda-dispneia-obesidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido e evitado o erro oposto: atribuir toda dispneia de um paciente obeso à ICFEp sem investigação adicional quando a probabilidade permanece intermediária",
+        "origem_secao": "Obesidade altera também o diagnóstico — dois erros devem ser evitados"
+      },
+      {
+        "id": "icfep-dx-hfa-peff-pontuacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Escore HFA-PEFF calculado pelos três domínios (Funcional, Morfológico, Biomarcador — cada um pontuando o critério maior OU menor atingido, sem somar os dois do mesmo domínio): ≤1 ponto torna ICFEp pouco provável e orienta diagnóstico alternativo; 2 a 4 pontos é zona de incerteza que exige teste funcional adicional; ≥5 pontos confirma o diagnóstico sem necessidade de teste funcional",
+        "origem_secao": "Etapa 2 (E) — pontuação ecocardiográfica + biomarcador"
+      },
+      {
+        "id": "icfep-dx-corte-fa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se o paciente está em fibrilação atrial: usado o corte de NT-proBNP/BNP específico para FA — o corte praticamente triplica (NT-proBNP >660pg/mL versus >220pg/mL para critério maior, ou BNP >240 versus >80pg/mL) — nunca o corte de ritmo sinusal, que gera falso-positivo maciço se aplicado errado",
+        "origem_secao": "Armadilhas clínicas — usar o corte de NT-proBNP do ritmo sinusal em paciente com fibrilação atrial"
+      },
+      {
+        "id": "icfep-dx-teste-funcional-zona-incerteza",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se a pontuação da etapa 2 ficou entre 2 e 4 (zona de incerteza): encaminhado para ecocardiograma de estresse diastólico (E/e' médio no pico ≥15) ou teste hemodinâmico invasivo, em vez de aceitar a pontuação intermediária como resposta definitiva",
+        "origem_secao": "Etapa 3 (F1) — teste funcional para os casos indeterminados"
+      },
+      {
+        "id": "icfep-dx-investigacao-etiologica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Depois de confirmado o diagnóstico funcional de ICFEp: investigação etiológica dirigida iniciada (amiloidose cardíaca, doença valvar significativa, pericardite constritiva, cardiomiopatia hipertrófica, doença coronariana contribuinte, hipertensão pulmonar de outra origem) — não considerar o caso encerrado só pela pontuação do escore",
+        "origem_secao": "Etapa 4 (F2) — determinação etiológica"
+      },
+      {
+        "id": "icfep-dx-fenotipo-comorbidades",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fenótipo dominante e comorbidades associadas identificados e registrados (hipertensão, diabetes tipo 2, obesidade, fibrilação atrial, doença arterial coronariana, doença renal crônica, apneia obstrutiva do sono) — o manejo é organizado por fenótipo, não por um protocolo único para toda ICFEp",
+        "origem_secao": "O tratamento passa a ser fenótipo-dirigido"
+      },
+      {
+        "id": "icfep-dx-nao-usar-escore-como-prognostico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que H2FPEF, HFA-PEFF e HFpEF-ABA foram desenvolvidos e validados só para função diagnóstica — não reutilizá-los como escore prognóstico de mortalidade/hospitalização: numa análise agrupada de 15.318 pacientes de 5 ensaios, a capacidade discriminativa individual medida foi baixa (C-statistic entre 0,524 e 0,559)",
+        "origem_secao": "Interpretação prática / Armadilhas clínicas — usar H2FPEF ou HFA-PEFF como se fossem escores validados de mortalidade"
+      },
+      {
+        "id": "icfep-dx-mra-nao-equivalentes",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Antagonista do receptor mineralocorticoide escolhido por evidência específica, não por equivalência de classe: a finerenona (não esteroidal) tem base de evidência do FINEARTS-HF distinta da espironolactona (esteroidal), cujo SPIRIT-HF não demonstrou o mesmo benefício — os dois agentes não devem ser tratados como intercambiáveis na ICFEp/ICFElr",
+        "origem_secao": "Antagonismo do receptor mineralocorticoide: não tratar toda a classe como equivalente"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "encaminhamento-para-avaliacao-de-terapia-avancada-na-insuficiencia-cardiaca-refrataria",
+    "condicao": "Encaminhamento para avaliação de terapia avançada (transplante cardíaco ou dispositivo de assistência ventricular esquerda) na insuficiência cardíaca refratária",
+    "resumo": "Os critérios que decidem SE e QUANDO encaminhar um paciente com IC refratária para avaliação de terapia avançada — indicadores de doença avançada, classificação INTERMACS e o corte de VO2 pico do teste cardiopulmonar de exercício ajustado ao uso de betabloqueador —, distinto dos checklists já publicados nesta base sobre o seguimento DEPOIS do LVAD já implantado ou DEPOIS do transplante já realizado.",
+    "documento_origem": "teste-cardiopulmonar-de-exercicio-na-selecao-do-candidato-a-transplante-cardiaco-vo2-pico-e-o-efeito-do-betabloqueador",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mancini DM, Eisen H, Kussmaul W, Mull R, Edmunds LH Jr, Wilson JR. Value of peak exercise oxygen consumption for optimal timing of cardiac transplantation in ambulatory patients with heart failure. Circulation. 1991;83(3):778-786. DOI: 10.1161/01.cir.83.3.778. PMID: 1999029",
+      "Peterson LR, Schechtman KB, Ewald GA, Geltman EM, de las Fuentes L, Meyer T, Krekeler P, Moore ML, Rogers JG. Timing of cardiac transplantation in patients with heart failure receiving beta-adrenergic blockers. J Heart Lung Transplant. 2003;22(10):1141-1148. DOI: 10.1016/s1053-2498(02)01225-1. PMID: 14550824",
+      "Arena R, Myers J, Abella J, Peberdy MA, Bensimhon D, Chase P, Guazzi M. Development of a ventilatory classification system in patients with heart failure. Circulation. 2007;115(18):2410-2417. DOI: 10.1161/CIRCULATIONAHA.107.686576. PMID: 17452607",
+      "Peled Y, Ducharme A, Kittleson M, Bansal N, Stehlik J, Amdani S, et al. International Society for Heart and Lung Transplantation Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488"
+    ],
+    "itens": [
+      {
+        "id": "ic-avancada-indicadores-gravidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pelo menos um indicador de doença avançada presente e documentado antes do encaminhamento: fração de ejeção do VE <25%, 3 ou mais hospitalizações por IC em um ano, dependência de inotrópico, ou disfunção hepática/renal progressiva atribuída a hipoperfusão por IC",
+        "origem_secao": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante.md — Terapias avancadas — criterios de gravidade"
+      },
+      {
+        "id": "ic-avancada-terapia-clinica-maxima",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia clínica máxima confirmada instituída e mantida antes da avaliação para transplante — pré-requisito citado pela fonte, não uma etapa a pular mesmo diante de quadro grave",
+        "origem_secao": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante.md — Avaliacao para transplante cardiaco"
+      },
+      {
+        "id": "ic-avancada-nao-usar-so-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que a fração de ejeção isolada não deve ser usada como critério único de candidatura a transplante — capacidade funcional e hemodinâmica são igualmente críticas na decisão",
+        "origem_secao": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante.md — Avaliacao para transplante cardiaco"
+      },
+      {
+        "id": "ic-avancada-intermacs",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificação INTERMACS aplicada para estratificar a gravidade e orientar a decisão entre LVAD como ponte para transplante (bridge to transplant) ou terapia de destino (destination therapy)",
+        "origem_secao": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante.md — Terapias avancadas — criterios de gravidade / Dispositivo de assistencia ventricular esquerda (LVAD)"
+      },
+      {
+        "id": "ic-avancada-tcpe-solicitado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste cardiopulmonar de exercício (TCPE) solicitado como parte da decisão de encaminhamento, com esforço validado por razão de troca respiratória (RER) > 1,05 e limiar anaeróbico atingido — teste submáximo não valida o VO2 pico medido",
+        "origem_secao": "Limitações e o que fica em aberto — o critério de esforço máximo (RER > 1,05)"
+      },
+      {
+        "id": "ic-avancada-vo2-corte-betabloqueador",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso atual de betabloqueador conferido antes de aplicar o corte de VO2 pico: VO2 pico ≤12 mL/kg/min em uso de betabloqueador, ou ≤14 mL/kg/min sem betabloqueador (Tabela 4 da diretriz ISHLT 2024) — aplicar o corte de 14 sem checar o betabloqueador pode superestimar a necessidade de transplante imediato",
+        "origem_secao": "O corte precisou ser revisto: Peterson 2003, a era do betabloqueador"
+      },
+      {
+        "id": "ic-avancada-ve-vco2-esforco-submaximo",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se houver dúvida sobre a validade do VO2 pico medido (esforço submáximo, descondicionamento importante, doença pulmonar associada): inclinação VE/VCO2 slope registrada como complemento, já que não depende de esforço máximo — VE/VCO2 ≥45 (classe ventilatória IV) associa-se a sobrevida livre de evento de apenas 44,2% em 2 anos",
+        "origem_secao": "O complemento que não depende do esforço máximo: VE/VCO2 slope"
+      },
+      {
+        "id": "ic-avancada-estabilidade-momento-encaminhamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhamento considerado precocemente, enquanto o paciente ainda está clinicamente estável — desfecho após implante de LVAD em paciente estável é superior ao de paciente em choque cardiogênico agudo ('crash and burn') ou dependente de inotrópico em deterioração",
+        "origem_secao": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante.md — Dispositivo de assistencia ventricular esquerda (LVAD)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-da-estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+    "condicao": "Manejo da estratégia diurética na insuficiência cardíaca aguda descompensada (escalonamento inicial na internação)",
+    "resumo": "A hierarquia de escalonamento sustentada por três ensaios randomizados — dose e via do diurético de alça (DOSE-AHF), diurético escalonado versus ultrafiltração (CARRESS-HF), acetazolamida associada (ADVOR) — e o bloqueio sequencial do néfron com tiazídico para resistência diurética (CLOROTIC), com a monitorização eletrolítica que cada estratégia exige. É checklist do manejo DURANTE a internação, distinto do checklist de alta hospitalar já publicado, que cobre os quatro pilares e o plano de seguimento pós-alta, não a estratégia de descongestão aguda em si.",
+    "documento_origem": "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Felker GM, Lee KL, Bull DA, et al. Diuretic strategies in patients with acute decompensated heart failure (DOSE-AHF). N Engl J Med. 2011;364(9):797-805. DOI: 10.1056/NEJMoa1005419. PMID: 21366472",
+      "Bart BA, Goldsmith SR, Lee KL, et al. Ultrafiltration in decompensated heart failure with cardiorenal syndrome (CARRESS-HF). N Engl J Med. 2012;367(24):2296-2304. DOI: 10.1056/NEJMoa1210357. PMID: 23131078",
+      "Mullens W, Dauw J, Martens P, et al. Acetazolamide in acute decompensated heart failure with volume overload (ADVOR). N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559",
+      "Trullàs JC, Morales-Rull JL, Casado J, Carrera-Izquierdo M, Sánchez-Marteles M, Conde-Martel A, et al. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214",
+      "Ellison DH. The physiologic basis of diuretic synergism: its role in treating diuretic resistance. Ann Intern Med. 1991;114(10):886-894. PMID: 2014951"
+    ],
+    "itens": [
+      {
+        "id": "diuretico-agudo-dose-adequada-base",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diurético de alça intravenoso em dose adequada confirmado como base do tratamento, otimizado antes de qualquer associação — nem bolus versus infusão contínua nem dose baixa versus alta mudaram o desfecho renal de forma significativa no DOSE-AHF, mas a dose alta (2,5x a dose oral prévia) produziu maior diurese",
+        "origem_secao": "DOSE-AHF (2011) — bolus ou infusão contínua, dose baixa ou alta"
+      },
+      {
+        "id": "diuretico-agudo-via-administracao-livre",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a escolha entre bolus a cada 12 horas e infusão contínua pode seguir rotina/preferência do serviço — nenhuma diferença significativa entre as duas vias na avaliação global de sintomas (p=0,47) nem na variação de creatinina em 72h (p=0,45)",
+        "origem_secao": "DOSE-AHF (2011)"
+      },
+      {
+        "id": "diuretico-agudo-monitorar-creatinina-dose-alta",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se optado por dose alta (2,5x a dose oral prévia): função renal monitorizada, ciente de que a piora de creatinina associada é transitória e não se traduziu em diferença estatística de desfecho no DOSE-AHF",
+        "origem_secao": "O que isso significa na prática (DOSE-AHF)"
+      },
+      {
+        "id": "diuretico-agudo-nao-ultrafiltracao-primeira-linha",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ultrafiltração NÃO usada como primeira alternativa à falta de resposta ao diurético — no CARRESS-HF ela foi inferior à terapia farmacológica escalonada, com piora de creatinina (+0,23±0,70 mg/dL vs. -0,04±0,53 mg/dL) e mais eventos adversos graves (72% vs. 57%), sem perder mais peso",
+        "origem_secao": "CARRESS-HF (2012) — diurético escalonado supera a ultrafiltração"
+      },
+      {
+        "id": "diuretico-agudo-acetazolamida-sinais-sobrecarga",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se há sinais clínicos de sobrecarga volêmica (edema, derrame pleural) e a resposta ao diurético de alça está lenta: acetazolamida associada considerada para acelerar a descongestão — descongestão bem-sucedida em 42,2% com acetazolamida vs. 30,5% com placebo (RR 1,46), sem diferença de morte/re-hospitalização",
+        "origem_secao": "ADVOR (2022) — acetazolamida associada ao diurético de alça"
+      },
+      {
+        "id": "diuretico-agudo-bloqueio-sequencial-nefron",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se o diurético de alça já otimizado permanece insuficiente: bloqueio sequencial do néfron com tiazídico (hidroclorotiazida) associado considerado — maior perda de peso em 72h no CLOROTIC (2,3 kg vs. 1,5 kg, p=0,002), à custa de piora renal quase três vezes mais frequente (46,5% vs. 17,2%, p=0,001)",
+        "origem_secao": "resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron.md — Bloqueio sequencial do néfron: tiazídico associado ao diurético de alça"
+      },
+      {
+        "id": "diuretico-agudo-eletrolitos-bloqueio-sequencial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se o bloqueio sequencial do néfron foi iniciado: potássio e creatinina dosados com frequência aumentada (pelo menos diariamente) durante a associação, com reposição proativa de potássio, dado o efeito natriurético somado dos dois diuréticos",
+        "origem_secao": "resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron.md — Monitorização eletrolítica rigorosa"
+      },
+      {
+        "id": "diuretico-agudo-hierarquia-registrada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hierarquia de escalonamento seguida e registrada no prontuário: diurético de alça em dose adequada → acetazolamida ou bloqueio sequencial do néfron quando a resposta é insuficiente → ultrafiltração reservada para quando a estratégia farmacológica escalonada já falhou",
+        "origem_secao": "Lendo os três juntos / Lendo os dois documentos juntos"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
