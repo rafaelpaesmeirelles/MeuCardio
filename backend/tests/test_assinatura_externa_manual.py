@@ -165,10 +165,10 @@ class TestEmitirComGovbr(object):
 
 
 class TestAssinaturaExterna:
-    def _emitir_govbr(self, client, token):
+    def _emitir_govbr(self, client, token, *, descricao: str = "Dipirona"):
         r = client.post(
             "/api/receituario", headers=_headers(token),
-            json={"destinatario": {"nome": "Paciente Teste"}, "itens": [{"descricao": "Dipirona"}]},
+            json={"destinatario": {"nome": "Paciente Teste"}, "itens": [{"descricao": descricao}]},
         )
         doc_id = r.json()["documentos"][0]["id"]
         client.post(f"/api/receituario/documentos/{doc_id}/revisar", headers=_headers(token), json={"confirmar": True})
@@ -243,7 +243,10 @@ class TestAssinaturaExterna:
     def test_upload_de_outro_pdf_assinado_e_rejeitado(self, client, criar_usuario):
         _, token = criar_usuario(role="admin")
         doc_id, _ = self._emitir_govbr(client, token)
-        pdf_de_outro_documento = _assinar_de_verdade(b"%PDF-1.4\noutro documento\n%%EOF")
+        _, outro_pdf_original = self._emitir_govbr(
+            client, token, descricao="Outro medicamento de teste",
+        )
+        pdf_de_outro_documento = _assinar_de_verdade(outro_pdf_original)
 
         r = client.post(
             f"/api/receituario/documentos/{doc_id}/assinatura-externa",

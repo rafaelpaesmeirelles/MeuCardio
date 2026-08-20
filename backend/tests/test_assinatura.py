@@ -47,7 +47,10 @@ class TestCatalogoDeProvedores:
         assert len(provedores) == 14
         por_codigo = {p["codigo"]: p for p in provedores}
 
-        disponiveis = {"MANUAL", "GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+        disponiveis = {
+            "MANUAL", "GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID",
+            "REMOTEID", "A3_TOKEN",
+        }
         for codigo in disponiveis:
             assert por_codigo[codigo]["disponivel"] is True, codigo
             assert por_codigo[codigo]["motivo"] is None, codigo

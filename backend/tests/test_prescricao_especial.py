@@ -3,6 +3,7 @@ from pydantic import ValidationError
 
 from app.api import prescricao_especial
 from app.models.email_account import EmailAccount
+from app.models.subscription import Subscription
 
 
 def test_natalia_lenira_podem_propria_e_rafael_wladmir_somente_rafael(db, criar_usuario):
@@ -36,9 +37,13 @@ def test_natalia_lenira_podem_propria_e_rafael_wladmir_somente_rafael(db, criar_
     ),
 )
 def test_capacidades_de_digitacao_livre_por_login_estavel(
-    client, criar_usuario, email, nome, perfil, permite_propria,
+    client, db, criar_usuario, email, nome, perfil, permite_propria,
 ):
-    _, token = criar_usuario(email=email, full_name=nome)
+    user, token = criar_usuario(email=email, full_name=nome)
+    db.add(Subscription(
+        user_id=user.id, kind="meucardio", plano="basico", status="ativo",
+    ))
+    db.commit()
 
     resposta = client.get(
         "/api/prescricao-especial/capacidades",
