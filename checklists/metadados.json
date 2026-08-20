@@ -5543,5 +5543,242 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "avaliacao-de-risco-cardiovascular-global-em-prevencao-primaria",
+    "condicao": "Avaliação de risco cardiovascular global e decisão terapêutica em prevenção primária, na consulta de rotina",
+    "resumo": "Estratificação de risco (SCORE2/SCORE2-OP ou PREVENT-ASCVD), meta de LDL-C por categoria, e os três exames que reclassificam risco quando a decisão de tratar ainda está em dúvida — Lp(a) uma vez na vida, ApoB seletiva e escore de cálcio coronariano — derivado da diretriz ACC/AHA 2026, da atualização ESC/EAS 2025, do consenso EAS 2022 de Lp(a) e da coorte MESA. Não substitui o checklist de escalonamento em prevenção secundária: aquele cobre titulação de hipolipemiante após evento; este cobre a decisão inicial de tratar, antes de qualquer evento.",
+    "documento_origem": "acc-aha-2026-diretriz-dislipidemia-prevent-lpa-apob-e-metas-ldl",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Blumenthal RS, Morris PB, Gaudino M, et al. 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia. J Am Coll Cardiol. 2026;87(19):2624-2757. DOI: 10.1016/j.jacc.2025.11.016. PMID: 41824590.",
+      "Blumenthal RS, Morris PB, Gaudino M, et al. 2026 Guideline on the Management of Dyslipidemia. Circulation. Published online March 13, 2026. DOI: 10.1161/CIR.0000000000001423.",
+      "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 focused update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190",
+      "Detrano R, Guerci AD, Carr JJ, Bild DE, Burke G, Folsom AR, et al. Coronary calcium as a predictor of coronary events in four racial or ethnic groups. N Engl J Med. 2008;358(13):1336-1345. DOI: 10.1056/NEJMoa072100. PMID: 18367736",
+      "Sandesara PB, Mehta A, O'Neal WT, Kelli HM, Sathiyakumar V, et al. Clinical significance of zero coronary artery calcium in individuals with LDL cholesterol ≥190 mg/dL: The Multi-Ethnic Study of Atherosclerosis. Atherosclerosis. 2020;292:224-229. DOI: 10.1016/j.atherosclerosis.2019.09.014. PMID: 31604582",
+      "Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785. PMCID: PMC9639807"
+    ],
+    "itens": [
+      {
+        "id": "risco-classificacao-direta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente com doença aterosclerótica já estabelecida (IAM prévio, AVC isquêmico, doença arterial periférica), diabetes com lesão de órgão-alvo, doença renal crônica grave ou hipercolesterolemia familiar classificado diretamente como alto ou muito alto risco — sem necessidade de calcular escore",
+        "origem_secao": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025.md — Como estratificar o risco"
+      },
+      {
+        "id": "risco-escore-calculado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Para os demais pacientes: risco cardiovascular calculado por SCORE2 (<70 anos) ou SCORE2-OP (≥70 anos), ou pelas equações PREVENT-ASCVD (30-79 anos) com o modelo Calculate/Personalize/Reclassify — nunca mais pelas antigas Pooled Cohort Equations",
+        "origem_secao": "PREVENT substitui PCE na prevenção primária; dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025.md — Como estratificar o risco"
+      },
+      {
+        "id": "risco-meta-ldl",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Meta de LDL-C explícita registrada conforme categoria de risco: <116 mg/dL (baixo), <100 mg/dL (moderado), <70 mg/dL e redução ≥50% do basal (alto), <55 mg/dL e redução ≥50% do basal (muito alto)",
+        "origem_secao": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025.md — Metas de LDL-colesterol por categoria de risco"
+      },
+      {
+        "id": "risco-discussao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se risco PREVENT-ASCVD em 10 anos entre 3% e <5%: terapia redutora de LDL considerada após discussão clínico-paciente; entre 5% e <10%: terapia deve ser considerada após discussão individualizada",
+        "origem_secao": "As metas de LDL-C voltaram"
+      },
+      {
+        "id": "risco-lpa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lipoproteína(a) dosada ao menos uma vez na vida adulta — não é exame seriado; repetir a dosagem não melhora a predição de risco, exceto em doença renal/hepática ou infecção aguda no momento da coleta; valor ≥50 mg/dL (125 nmol/L) reclassifica o paciente para risco aumentado",
+        "origem_secao": "Lp(a): medir ao menos uma vez; lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022.md — A recomendação central: dosagem única, não seriada"
+      },
+      {
+        "id": "risco-apob",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "ApoB medida quando há discordância entre LDL-C e carga de partículas aterogênicas: triglicerídeos >200 mg/dL, diabetes, LDL-C alcançado <70 mg/dL, ou doença aterosclerótica/síndrome CKM apesar de LDL-C/não-HDL-C aparentemente controlados",
+        "origem_secao": "ApoB: útil quando o LDL-C parece contar apenas parte da história"
+      },
+      {
+        "id": "risco-escore-calcio",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Escore de cálcio coronariano considerado para reclassificar risco quando a decisão terapêutica permanece incerta após avaliação inicial — homens a partir de 40 anos, mulheres a partir de 45 anos; escore zero não é permanente e não autoriza suspender estatina já indicada por LDL-C ≥190 mg/dL",
+        "origem_secao": "CAC: usar para resolver incerteza, não como rastreamento indiscriminado; escore-de-calcio-coronariano-o-que-o-mesa-mediu-e-o-que-significa-um-escore-zero.md — Armadilhas clinicas"
+      },
+      {
+        "id": "risco-hipercolesterolemia-grave",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se LDL-C ≥190 mg/dL e/ou ApoB ≥140 mg/dL: investigadas causas secundárias, considerada hipercolesterolemia familiar e avaliado rastreamento em cascata quando apropriado",
+        "origem_secao": "Hipercolesterolemia grave e hipercolesterolemia familiar"
+      },
+      {
+        "id": "risco-ldl-metodo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "LDL-C estimado no lipidograma padrão preferencialmente por equação Martin/Hopkins ou Sampson/NIH, não mais pela fórmula de Friedewald como método contemporâneo preferencial",
+        "origem_secao": "Estimar LDL-C: Friedewald deixa de ser a opção preferencial"
+      },
+      {
+        "id": "risco-nao-extrapolar",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que ESC/EAS e ACC/AHA usam estruturas próprias de estratificação, definição de risco e algoritmos — meta ou classe de recomendação de uma sociedade não é atribuída à outra por analogia",
+        "origem_secao": "Relação com a ESC/EAS 2025"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs. Não duplica o checklist escalonamento-do-hipolipemiante-em-prevencao-secundaria: aquele cobre titulação farmacológica após evento (prevenção secundária); este cobre a avaliação e a decisão de tratar antes de qualquer evento (prevenção primária)."
+  },
+  {
+    "slug": "manejo-da-intolerancia-a-estatina-avaliacao-e-reexposicao",
+    "condicao": "Avaliação de sintoma muscular associado a estatina (SAMS) e protocolo de reexposição antes de declarar intolerância à classe",
+    "resumo": "Estratificação por CK, cortes que decidem suspender ou continuar, protocolo estruturado de suspensão-reexposição (dechallenge-rechallenge) e o alerta para o diagnóstico diferencial raro e grave (miopatia necrotizante autoimune anti-HMGCR) — derivado do Consenso EAS 2015, do ensaio StatinWISE e da série que caracterizou a síndrome anti-HMGCR.",
+    "documento_origem": "intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Stroes ES, Thompson PD, Corsini A, Vladutiu GD, Raal FJ, Ray KK, Roden M, Stein E, Tokgözoğlu L, Nordestgaard BG, Bruckert E, De Backer G, Krauss RM, Laufs U, Santos RD, Hegele RA, Hovingh GK, Leiter LA, Mach F, März W, Newman CB, Wiklund O, Jacobson TA, Catapano AL, Chapman MJ, Ginsberg HN; European Atherosclerosis Society Consensus Panel. Statin-associated muscle symptoms: impact on statin therapy-European Atherosclerosis Society Consensus Panel Statement on Assessment, Aetiology and Management. Eur Heart J. 2015;36(17):1012-1022. DOI: 10.1093/eurheartj/ehv043. PMID: 25694464. PMCID: PMC4416140",
+      "Nissen SE, Lincoff AM, Brennan D, Ray KK, Mason D, et al; CLEAR Outcomes Investigators. Bempedoic Acid and Cardiovascular Outcomes in Statin-Intolerant Patients. N Engl J Med. 2023;388(15):1353-1364. DOI: 10.1056/NEJMoa2215024. PMID: 36876740",
+      "Herrett E, Williamson E, Brack K, et al; StatinWISE Trial Group. Statin treatment and muscle symptoms: series of randomised, placebo controlled n-of-1 trials. BMJ. 2021;372:n135. DOI: 10.1136/bmj.n135. PMID: 33627334",
+      "Christopher-Stine L, Casciola-Rosen LA, Hong G, Chung T, Corse AM, Mammen AL. A novel autoantibody recognizing 200-kd and 100-kd proteins is associated with an immune-mediated necrotizing myopathy. Arthritis Rheum. 2010;62(9):2757-2766. PMID: 20496415",
+      "Mammen AL, Chung T, Christopher-Stine L, Rosen P, Rosen A, Doering KR, Casciola-Rosen LA. Autoantibodies against 3-hydroxy-3-methylglutaryl-coenzyme A reductase in patients with statin-associated autoimmune myopathy. Arthritis Rheum. 2011;63(3):713-721. PMID: 21360500"
+    ],
+    "itens": [
+      {
+        "id": "int-definicao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sintoma muscular (dor, fraqueza ou cãibra) relacionado a estatina registrado como 'sintoma muscular associado a estatina' (SAMS) e estratificado pela presença ou ausência de elevação de CK — não tratado como diagnóstico automático de intolerância",
+        "origem_secao": "Definição operacional: sintoma muscular estratificado por CK"
+      },
+      {
+        "id": "int-ck-baixo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "CK normal a <4× o limite superior da normalidade (LSN): causalidade incerta, ensaios controlados por placebo não mostram excesso de sintoma muscular nessa faixa — não é, por si só, motivo para suspender a estatina",
+        "origem_secao": "Os cortes de CK que orientam a conduta"
+      },
+      {
+        "id": "int-ck-intermediario",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "CK entre 4× e <10× LSN: se paciente de baixo risco cardiovascular, estatina suspensa e necessidade de tratamento reavaliada; se paciente de alto risco cardiovascular, estatina pode ser continuada com monitorização de CK, suspensa se ultrapassar 10× LSN",
+        "origem_secao": "Os cortes de CK que orientam a conduta"
+      },
+      {
+        "id": "int-ck-alto",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "CK >10× LSN sem causa secundária identificável (ex.: exercício vigoroso): estatina suspensa pelo risco de rabdomiólise; se houver rabdomiólise confirmada, a estatina não deve ser reintroduzida",
+        "origem_secao": "Os cortes de CK que orientam a conduta"
+      },
+      {
+        "id": "int-reexposicao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de declarar intolerância definitiva: protocolo estruturado de suspensão e reexposição documentado — sintoma observado após suspender, reexposição para confirmar reprodutibilidade, e teste de ao menos três estatinas/doses/esquemas diferentes (estatina alternativa, dose menor, dosagem intermitente) antes de abandonar a classe",
+        "origem_secao": "O protocolo de reexposição (dechallenge-rechallenge)"
+      },
+      {
+        "id": "int-nocebo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente informado de que, em ensaio randomizado cego (StatinWISE), a taxa de suspensão por sintoma muscular intolerável foi praticamente igual entre estatina (9%) e placebo (7%) — não declarar intolerância definitiva a partir de relato único, sem reexposição cega",
+        "origem_secao": "O protocolo de reexposição (dechallenge-rechallenge)"
+      },
+      {
+        "id": "int-nao-estatinico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Quando a intolerância é confirmada: dose máxima tolerada de estatina (mesmo que baixa ou intermitente) combinada com terapia hipolipemiante não estatínica para atingir a meta de LDL-C — em vez de abandonar completamente a estatina",
+        "origem_secao": "O que fazer enquanto a intolerância é investigada, ou depois de confirmada"
+      },
+      {
+        "id": "int-alerta-anti-hmgcr",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se CK muito elevada (ordem de milhares de UI/L) não normaliza — ou piora — várias semanas após suspender a estatina: investigada a hipótese de miopatia necrotizante autoimune anti-HMGCR (biópsia muscular e sorologia anti-HMGCR), que não regride só com a suspensão do fármaco e exige imunossupressão",
+        "origem_secao": "miopatia-necrotizante-autoimune-associada-a-estatina-anti-hmgcr.md — Quando suspeitar / Conduta quando confirmada"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs, com um item adicional (int-alerta-anti-hmgcr) derivado do documento complementar de miopatia necrotizante autoimune, já referenciado dentro do próprio documento de origem como diagnóstico diferencial deste protocolo."
+  },
+  {
+    "slug": "inicio-de-estatina-avaliacao-basal-e-monitorizacao-de-seguranca",
+    "condicao": "Avaliação basal e monitorização de segurança ao iniciar estatina (transaminases, sinais de disfunção hepática, risco de diabetes de novo)",
+    "resumo": "O que checar antes de iniciar estatina e o que NÃO monitorizar rotineiramente depois — a mudança de bula da FDA de 2012 que aboliu a dosagem seriada programada de transaminases, os sinais clínicos que de fato indicam investigar, e o risco real (não o relativo) de diabetes de novo. Não duplica o checklist de escalonamento em prevenção secundária: aquele cobre titulação até a meta de LDL; este cobre segurança e triagem laboratorial no momento de iniciar o fármaco, em qualquer contexto de prevenção.",
+    "documento_origem": "hepatotoxicidade-por-estatina-o-fim-da-monitorizacao-rotineira-de-transaminases-e-quando-checar-de-verdade",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "FDA Drug Safety Communication, 28/02/2012 — Important Safety Label Changes to Cholesterol-Lowering Statin Drugs (fda.gov)",
+      "Björnsson ES. Hepatotoxicity of statins and other lipid-lowering agents. Liver Int. 2017;37(2):173-178. doi:10.1111/liv.13308. PMID 27860156",
+      "Bays H, Cohen DE, Chalasani N, Harrison SA; National Lipid Association's Statin Safety Task Force. An assessment by the Statin Liver Safety Task Force: 2014 update. J Clin Lipidol. 2014;8(3 Suppl):S47-57. PMID 24793441",
+      "Sattar N, Preiss D, Murray HM, Welsh P, Buckley BM, de Craen AJ, Seshasai SR, et al. Statins and risk of incident diabetes: a collaborative meta-analysis of randomised statin trials. Lancet. 2010;375(9716):735-742. DOI: 10.1016/S0140-6736(09)61965-6. PMID: 20167359",
+      "Preiss D, Seshasai SR, Welsh P, Murphy SA, Ho JE, Waters DD, DeMicco DA, et al. Risk of incident diabetes with intensive-dose compared with moderate-dose statin therapy: a meta-analysis. JAMA. 2011;305(24):2556-2564. DOI: 10.1001/jama.2011.860. PMID: 21693744"
+    ],
+    "itens": [
+      {
+        "id": "ini-transaminase-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dosagem basal de transaminases (ALT/AST) realizada antes de iniciar a estatina",
+        "origem_secao": "Síntese prática (tabela) — cenário 'Antes de iniciar estatina'"
+      },
+      {
+        "id": "ini-sem-monitorizacao-rotineira",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Confirmado que não há indicação de monitorização periódica programada de transaminases em paciente assintomático em uso de estatina, sem indicação clínica específica — não é mais a recomendação de bula desde a revisão da FDA em 2012",
+        "origem_secao": "Síntese prática (tabela) — cenário 'Em uso de estatina, assintomático, sem indicação clínica específica'"
+      },
+      {
+        "id": "ini-sinais-hepaticos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a procurar avaliação diante de sinais de disfunção hepática — icterícia, fadiga ou mal-estar inexplicado e persistente, dor em hipocôndrio direito, urina escura/fezes claras, anorexia ou náusea persistente — só nesse cenário a dosagem de enzimas hepáticas e a consideração de suspensão são indicadas, não por elevação assintomática isolada",
+        "origem_secao": "Quando de fato investigar: sintomas de disfunção hepática, não elevação assintomática isolada"
+      },
+      {
+        "id": "ini-contraindicacao-hepatica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmada ausência de doença hepática ativa ou insuficiência hepática aguda antes de iniciar — esta é a contraindicação real; doença hepática crônica compensada e estável (incluindo DHGNA/NASH sem descompensação) não contraindica o uso",
+        "origem_secao": "Contraindicação real: doença hepática ativa ou descompensada — não elevação assintomática isolada"
+      },
+      {
+        "id": "ini-elevacao-incidental",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Elevação leve/moderada e assintomática de transaminases em exame incidental contextualizada (magnitude, tendência, outra causa concorrente como esteatose hepática, álcool, outro fármaco) — não tratada como gatilho automático de suspensão",
+        "origem_secao": "Elevação assintomática e transitória de transaminases é comum — e não exige suspensão"
+      },
+      {
+        "id": "ini-risco-diabetes-informado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente informado do risco de diabetes de novo com o número absoluto, não apenas o relativo: 1 caso extra de diabetes a cada 255 pacientes tratados com estatina por 4 anos — e que a decisão de tratar/escalonar não deve mudar por esse risco em paciente de risco moderado, alto ou com doença cardiovascular estabelecida",
+        "origem_secao": "estatina-e-diabetes-de-novo-o-tamanho-real-do-risco-sattar-e-preiss.md — Sattar 2010: o efeito de classe"
+      },
+      {
+        "id": "ini-glicemia-rastreio",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Glicemia rastreada em quem inicia estatina, dado o perfil de risco desses pacientes — achado eventual de diabetes tratado como tal, não atribuído ao fármaco como motivo para suspendê-lo",
+        "origem_secao": "estatina-e-diabetes-de-novo-o-tamanho-real-do-risco-sattar-e-preiss.md — Como isso se traduz na conduta"
+      },
+      {
+        "id": "ini-dose-intensiva-balanco",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Ao escalonar para dose intensiva quando indicada: balanço de risco comunicado — 2,0 casos adicionais de diabetes vs. 6,5 eventos cardiovasculares maiores evitados por 1.000 pacientes-ano (dose intensiva vs. moderada) — sem deixar de escalonar por esse motivo",
+        "origem_secao": "estatina-e-diabetes-de-novo-o-tamanho-real-do-risco-sattar-e-preiss.md — Preiss 2011: existe efeito de dose"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs, com quatro itens derivados do documento complementar de diabetes de novo por estatina, desta mesma pasta. Não duplica o checklist escalonamento-do-hipolipemiante-em-prevencao-secundaria: aquele cobre a titulação farmacológica até a meta de LDL; este cobre a segurança laboratorial e clínica no momento de iniciar o fármaco."
   }
 ]
