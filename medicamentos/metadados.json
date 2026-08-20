@@ -2710,7 +2710,13 @@
     "duration_of_action_source": "BREVIBLOC (esmolol hydrochloride) injection — rótulo aprovado pelo FDA, DailyMed SPL setid 220a07b8-5c68-41a3-8705-fd91f14c50b4 — mesma fonte já citada em `dosing`/`references` deste verbete.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Esmolol tem indicação registrada para controle de hipertensão perioperatória (ver `dosing.perioperatorio controle imediato`, titulável até 300 mcg/kg/min especificamente para hipertensão) — redução de PA é desfecho clinicamente relevante e esperado, mas **confirmado nesta sessão que o rótulo primário não fornece o valor quantificado em mmHg**: o rótulo do FDA para BREVIBLOC (esmolol hidrocloreto injetável, Baxter Healthcare — setid 220a07b8-5c68-41a3-8705-fd91f14c50b4), lido diretamente via DailyMed em 12/08/2026, descreve na seção Clinical Studies só a taquicardia supraventricular (\"decréscimos significativos de PA ocorreram em 20-50% dos pacientes\", sem mmHg absoluto), e na Clinical Pharmacology traz parâmetros hemodinâmicos de angiografia por radionuclídeo e cateterismo cardíaco que citam \"redução da pressão arterial sistólica\" sem valor numérico específico. Não há, no rótulo vigente, um número consolidado de queda pressórica em mmHg para a indicação de hipertensão perioperatória — mantido como VERIFICAÇÃO HUMANA NECESSÁRIA, agora como ausência confirmada na fonte primária, não como lacuna de busca."
+    "bp_evidence_source": "Esmolol tem indicação registrada para controle de hipertensão perioperatória (ver `dosing.perioperatorio controle imediato`, titulável até 300 mcg/kg/min especificamente para hipertensão) — redução de PA é desfecho clinicamente relevante e esperado, mas **confirmado nesta sessão que o rótulo primário não fornece o valor quantificado em mmHg**: o rótulo do FDA para BREVIBLOC (esmolol hidrocloreto injetável, Baxter Healthcare — setid 220a07b8-5c68-41a3-8705-fd91f14c50b4), lido diretamente via DailyMed em 12/08/2026, descreve na seção Clinical Studies só a taquicardia supraventricular (\"decréscimos significativos de PA ocorreram em 20-50% dos pacientes\", sem mmHg absoluto), e na Clinical Pharmacology traz parâmetros hemodinâmicos de angiografia por radionuclídeo e cateterismo cardíaco que citam \"redução da pressão arterial sistólica\" sem valor numérico específico. Não há, no rótulo vigente, um número consolidado de queda pressórica em mmHg para a indicação de hipertensão perioperatória — mantido como VERIFICAÇÃO HUMANA NECESSÁRIA, agora como ausência confirmada na fonte primária, não como lacuna de busca.",
+    "brand_names": [
+      "Brevibloc"
+    ],
+    "commercial_presentations": [
+      "Brevibloc® (Cristália Produtos Químicos Farmacêuticos Ltda., marca sob licença da Bristol Myers Squibb Company) — duas apresentações: Brevibloc® 250 mg/mL, solução concentrada para diluição, caixa com 10 ampolas de 10 mL; e Brevibloc® Diluído 10 mg/mL, solução pronta para infusão, caixa com 20 ou 25 frascos-ampola de 10 mL. Único fabricante localizado nesta sessão, sem genérico de outro laboratório encontrado. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado por mirrors e pelo domínio do próprio fabricante nos resultados de busca, sem leitura direta da bula (WebFetch bloqueado). Número de registro ANVISA não confirmado."
+    ]
   },
   {
     "slug": "espironolactona",
@@ -7969,6 +7975,12 @@
     "bp_evidence_source": "Fenilefrina é vasopressor (AUMENTA a pressão arterial por agonismo alfa-1 seletivo) — a direção do efeito é positiva, ao contrário da maioria dos fármacos deste lote, mas a bula e as fontes farmacocinéticas consultadas nesta sessão descrevem o uso como titulado ao efeito clínico desejado ('controle da pressão arterial'), sem um valor fixo de elevação em mmHg por dose/infusão — comum em vasopressores usados sob titulação individual (ex.: profilaxia de hipotensão na raquianestesia, onde a meta costuma ser manter a PAS acima de um percentual do basal, não uma elevação fixa em mmHg). VERIFICAÇÃO HUMANA NECESSÁRIA para um valor numérico específico de elevação pressórica por dose, que não foi localizado nesta sessão.",
     "presentations": [
       "Solução injetável de 10 mg/mL (1%), ampola para uso subcutâneo, intramuscular ou intravenoso — já descrita em dosing."
+    ],
+    "brand_names": [
+      "Fenilefrin"
+    ],
+    "commercial_presentations": [
+      "Fenilefrin® (Cristália Produtos Químicos Farmacêuticos Ltda.), solução injetável 10 mg/mL, ampola de vidro de 1 mL, uso subcutâneo/intramuscular/intravenoso; embalagens hospitalares com 25 ou 50 ampolas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado por mirrors de bulário e listagem do próprio domínio do fabricante nos resultados de busca, mas sem leitura direta do PDF da bula nesta sessão (WebFetch bloqueado). Número de registro ANVISA não confirmado."
     ]
   },
   {
@@ -8019,6 +8031,12 @@
     "bp_evidence_source": "Hipotensão consta como reação adversa comum ao dipiridamol IV (ver adverse_effects, 'Reacoes adversas mais comuns'), mas sem dado sistemático de magnitude de queda pressórica em mmHg na fonte consultada — o efeito vasodilatador é primariamente coronariano/regional (é a base do próprio teste de perfusão), não um efeito anti-hipertensivo sistêmico quantificado. Fonte: bula profissional brasileira do Persantin® injetável, seção 9 (Reações Adversas).",
     "presentations": [
       "Ampola de 2 mL contendo 10 mg de dipiridamol (5 mg/mL), uso exclusivamente intravenoso para a indicação de estresse farmacológico — já descrita em dosing."
+    ],
+    "brand_names": [
+      "Persantin"
+    ],
+    "commercial_presentations": [
+      "Persantin® injetável (Mawdsleys Pharmaceuticals do Brasil Ltda.), solução 10 mg/2 mL, cartucho com 5 ampolas de vidro de 2 mL, uso intravenoso — indicado como agente de estresse farmacológico em teste ergométrico/cintilografia/ecocardiografia de estresse. A apresentação oral (drágea 75 mg) foi DESCONTINUADA em 2015 (comunicado oficial da Boehringer Ingelheim) e o registro cancelado em 2021 — não citar como disponível. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só por mirrors de bulário/registro (WebFetch ao bulário oficial bloqueado pelo proxy do ambiente nesta sessão), não por bula primária. Número de registro ANVISA não confirmado."
     ]
   },
   {
@@ -12441,7 +12459,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para sulfato de quinidina (DailyMed, setid b0d6341b-d880-4f0b-8844-bc788c03004a) — mesma fonte de `dosing` e `half_life_note`, sem valor isolado de duração de ação farmacodinâmica publicado separadamente.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — quinidina é antiarrítmico classe Ia sem indicação nem estudo de redução pressórica sistêmica; hipotensão é listada como sinal de alerta para redução/suspensão de dose (ver campo `monitoring`), não como desfecho terapêutico buscado."
+    "bp_evidence_source": "Não se aplica — quinidina é antiarrítmico classe Ia sem indicação nem estudo de redução pressórica sistêmica; hipotensão é listada como sinal de alerta para redução/suspensão de dose (ver campo `monitoring`), não como desfecho terapêutico buscado.",
+    "commercial_presentations": [
+      "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marcas historicamente registradas (Quinicardine, Cardinor, Quinax, Duriles, Secuquidin, INAL) aparecem com registro ANVISA vencido/cancelado em múltiplos mirrors independentes consultados — padrão consistente entre fontes, sugerindo fármaco hoje só acessível por importação (RDC de medicamento não registrado). VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente) — antes de afirmar indisponibilidade total, confirmar diretamente com a ANVISA."
+    ]
   },
   {
     "slug": "mexiletina-cloridrato",
@@ -12515,7 +12536,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para cloridrato de mexiletina (DailyMed, setid a61a07f6-0b48-4dcd-ad42-5d90f6e69ab1) — mesma fonte de `dosing` e `half_life_note`, sem valor isolado de duração de ação farmacodinâmica publicado separadamente.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — mexiletina é antiarrítmico classe Ib sem indicação nem estudo de redução pressórica sistêmica; seu uso terapêutico (arritmia ventricular ameaçadora à vida, e mais recentemente síndrome do QT longo tipo 2/3) não envolve pressão arterial como desfecho."
+    "bp_evidence_source": "Não se aplica — mexiletina é antiarrítmico classe Ib sem indicação nem estudo de redução pressórica sistêmica; seu uso terapêutico (arritmia ventricular ameaçadora à vida, e mais recentemente síndrome do QT longo tipo 2/3) não envolve pressão arterial como desfecho.",
+    "commercial_presentations": [
+      "Nenhum medicamento com registro ANVISA localizado no Brasil nesta sessão (20/08/2026). Fonte secundária de literatura médica (artigo indexado no PMC, sobre síndrome do QT longo tipo 3 em neonato) afirma explicitamente que a mexiletina não está disponível comercialmente no Brasil, exigindo importação direta conforme RDC 81/2008. VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente)."
+    ]
   },
   {
     "slug": "procainamida-cloridrato",
@@ -12584,7 +12608,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para cloridrato de procainamida (DailyMed, setid 17e47845-daad-434c-a784-6d3875b0d704) — mesma fonte de `dosing` e `half_life_note`; a própria estrutura da posologia (infusão titulada, não dose fixa redosada em intervalo constante) é o que impede um valor numérico único, não uma lacuna de busca desta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como desfecho terapêutico — procainamida é antiarrítmico classe Ia usado para taquiarritmia ventricular/QRS largo (ver `indications` e `outcomes`), e a bula lista **hipotensão como efeito adverso a monitorar** (ver `adverse_effects` e `monitoring`), não como alvo pressórico buscado."
+    "bp_evidence_source": "Não se aplica como desfecho terapêutico — procainamida é antiarrítmico classe Ia usado para taquiarritmia ventricular/QRS largo (ver `indications` e `outcomes`), e a bula lista **hipotensão como efeito adverso a monitorar** (ver `adverse_effects` e `monitoring`), não como alvo pressórico buscado.",
+    "commercial_presentations": [
+      "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marca histórica Procamide® (Zambon Laboratórios Farmacêuticos Ltda.) aparece com registro ANVISA vencido em mirror consultado. VERIFICAÇÃO HUMANA NECESSÁRIA: as fontes secundárias disponíveis divergem entre si sobre a concentração exata da apresentação histórica (500mg/2mL vs. 10mg/mL/10mL vs. comprimido 300mg citados em fontes diferentes) — sinal de baixa confiabilidade, por isso nenhum valor de dose/concentração foi registrado aqui. Não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente)."
+    ]
   },
   {
     "slug": "lercanidipino-cloridrato",
