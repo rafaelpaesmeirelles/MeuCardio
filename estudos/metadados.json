@@ -23562,5 +23562,30 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "cardioprotecao-guiada-por-nt-probnp-na-antraciclina-ensaio-piloto-randomizado",
+    "title": "Cardioproteção Guiada por NT-proBNP na Antraciclina: Ensaio Piloto Randomizado",
+    "study_type": "ensaio_clinico",
+    "authors": "Xia C, Smith AM, Lefebvre B, et al.",
+    "journal": "JAMA Network Open",
+    "year": 2025,
+    "doi": "10.1001/jamanetworkopen.2025.46201",
+    "pmid": null,
+    "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2842214",
+    "summary": "Ensaio clínico randomizado, multicêntrico, aberto, 1:1 estratificado por tipo de câncer, 100 participantes com câncer de mama ou linfoma iniciando antraciclina. Braço guiado por NT-proBNP medido seriadamente, com terapia neuro-hormonal iniciada/titulada conforme algoritmo pré-definido, vs. cuidado usual. Seguimento de 12 meses.",
+    "key_findings": "Recrutamento e retenção robustos, sem diferença significativa de eventos adversos entre os braços. Aos 3 meses, FEVE foi modestamente maior no braço guiado por NT-proBNP, mas essa diferença diminuiu ao longo do tempo e não foi significativa aos 12 meses.",
+    "clinical_implications": "Primeiro RCT prospectivo (não apenas observacional) testando estratégia guiada por biomarcador em cardioproteção durante antraciclina — resultado neutro no desfecho de FEVE em 12 meses; serve de base para trial confirmatório maior, não para mudança de conduta imediata.",
+    "limitations": "Estudo piloto de viabilidade (N=100), não trial de desfecho definitivo. Desenho aberto, sem cegamento — vulnerável a viés de expectativa na titulação de terapia. Efeito em FEVE não se sustentou até 12 meses.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "NT-proBNP",
+      "cardioproteção",
+      "antraciclina",
+      "biomarcador",
+      "ensaio piloto"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
