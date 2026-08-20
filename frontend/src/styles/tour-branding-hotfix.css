@@ -1,43 +1,26 @@
-/* Tour CorVIA — hotfix canônico de branding/layout.
-   Remove a composição antiga (imagem compacta + texto + pseudo VIA) e usa
-   diretamente os ativos canônicos já publicados. */
-.cos-tour__brand > img,
-.cos-tour__brand > span {
-  display: none !important;
-}
-
-.cos-tour__brand::before {
-  content: "";
+/* Tour CorVIA — branding canônico direto, sem troca de asset em runtime. */
+.cos-tour__brand > img {
   display: block;
   width: clamp(150px, 18vw, 210px);
   height: 48px;
-  flex: 0 0 auto;
-  background: url('/corvia-logo-canonical-dark.svg') left center / contain no-repeat;
-}
-
-/* Os mockups usam somente o símbolo, evitando mini-wordmarks ilegíveis. */
-.cos-tour-mock__brand img,
-.cos-tour-phone > header img,
-.cos-tour-final__mark img {
-  content: url('/corvia-mark-canonical.svg');
   object-fit: contain;
+  object-position: left center;
 }
 
-/* Tablet: preserva o cabeçalho em três zonas sem esmagar a marca. */
 @media (min-width: 701px) and (max-width: 1180px) {
   .cos-tour__top {
     grid-template-columns: minmax(170px, 1fr) auto minmax(100px, 1fr);
     gap: .75rem;
     padding-inline: 1.25rem;
   }
-  .cos-tour__brand::before {
+  .cos-tour__brand > img {
     width: 180px;
     height: 44px;
   }
 }
 
 @media (max-width: 700px) {
-  .cos-tour__brand::before {
+  .cos-tour__brand > img {
     width: 142px;
     height: 38px;
   }

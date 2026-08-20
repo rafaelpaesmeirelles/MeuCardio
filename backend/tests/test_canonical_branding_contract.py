@@ -85,3 +85,21 @@ def test_browser_and_pwa_use_canonical_mark_only():
     assert 'src: "/corvia-mark-canonical.svg"' in vite
     for legacy in ("icon-192.png", "icon-512.png", "icon-maskable.png", "favicon.png", "apple-touch-icon.png"):
         assert legacy not in vite
+
+
+
+def test_frontend_sources_do_not_reference_legacy_brand_assets_or_runtime_swaps():
+    frontend = ROOT / "frontend" / "src"
+    source = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in frontend.rglob("*")
+        if path.is_file() and path.suffix in {".ts", ".tsx", ".css", ".html"}
+    )
+    assert "/logo-marca.png" not in source
+    assert "/corvia-logo-compacta.png" not in source
+
+    shell_brand_css = _read("frontend/src/styles/canonical-brand-standard.css")
+    tour_brand_css = _read("frontend/src/styles/tour-branding-hotfix.css")
+    assert "content:url" not in shell_brand_css.replace(" ", "")
+    assert "content:url" not in tour_brand_css.replace(" ", "")
+    assert "display: none !important" not in tour_brand_css
