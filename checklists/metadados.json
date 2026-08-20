@@ -8424,5 +8424,274 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "hipercolesterolemia-familiar-triagem-diagnostica-e-rastreamento-em-cascata",
+    "condicao": "Triagem diagnóstica de hipercolesterolemia familiar (heterozigota e homozigota) e rastreamento em cascata dos familiares",
+    "resumo": "Escore da Dutch Lipid Clinic Network para diagnóstico clínico, critérios de suspeita de HoFH, metas de LDL-C específicas por categoria e rastreamento em cascata do caso índice — derivado da atualização ESC/EAS 2025 e do consenso EAS/Cuchel 2023 sobre HoFH. Não substitui o checklist de avaliação de risco cardiovascular global em prevenção primária: aquele cobre a decisão inicial de tratar em qualquer paciente e só sinaliza a suspeita de HF quando LDL-C ou ApoB estão muito elevados; este aprofunda especificamente o diagnóstico e o manejo da própria hipercolesterolemia familiar, uma vez suspeitada.",
+    "documento_origem": "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289",
+      "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418",
+      "Nordestgaard BG, Chapman MJ, Humphries SE, et al. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population: guidance for clinicians to prevent coronary heart disease: consensus statement of the European Atherosclerosis Society. Eur Heart J. 2013;34(45):3478-3490. DOI: 10.1093/eurheartj/eht273. PMID: 23956253",
+      "Cuchel M, Raal FJ, Hegele RA, et al. 2023 Update on European Atherosclerosis Society Consensus Statement on Homozygous Familial Hypercholesterolaemia: new treatments and clinical guidance. Eur Heart J. 2023;44(25):2277-2291. DOI: 10.1093/eurheartj/ehad197. PMID: 37130090",
+      "Kronenberg F, Mora S, Stroes ESG, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785"
+    ],
+    "itens": [
+      {
+        "id": "fh-suspeita-criterios",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de HF considerado em: DAC com <55 anos (homens) ou <60 anos (mulheres); parentes com doença cardiovascular precoce fatal ou não fatal; parentes com xantoma tendíneo; LDL-C muito elevado (adultos >190 mg/dL, crianças >150 mg/dL); ou parente de 1º grau de um caso já confirmado — Classe I, Nível C",
+        "origem_secao": "Critérios diagnósticos (Dutch Lipid Clinic Network)"
+      },
+      {
+        "id": "fh-dlcn-escore",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Escore da Dutch Lipid Clinic Network calculado, somando apenas a maior pontuação de cada um dos cinco grupos (história familiar, história clínica, exame físico, LDL-C sem tratamento, análise de DNA) — classificação pela soma total: HF definitiva >8 pontos, provável 6-8, possível 3-5, improvável ≤2",
+        "origem_secao": "Critérios diagnósticos (Dutch Lipid Clinic Network) — tabela de pontuação"
+      },
+      {
+        "id": "fh-confirmacao-dna",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diagnóstico confirmado por análise de DNA quando disponível — Classe I, Nível C; a ausência de teste genético não afasta o diagnóstico clínico já estabelecido pelo escore",
+        "origem_secao": "Critérios diagnósticos (Dutch Lipid Clinic Network)"
+      },
+      {
+        "id": "fh-suspeita-hofh",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Suspeita de HF homozigota (HoFH) levantada quando LDL-C sem tratamento >400 mg/dL (>10 mmol/L), xantoma cutâneo/tendíneo antes dos 10 anos, ou LDL-C compatível com HF heterozigota em ambos os pais; confirmação exige variantes patogênicas bialélicas em LDLR, APOB, PCSK9 ou LDLRAP1 — o diagnóstico fenotípico tem prioridade sobre o resultado genético quando os dois divergem",
+        "origem_secao": "Diagnóstico HF homozigota"
+      },
+      {
+        "id": "fh-meta-ldl-por-categoria",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Meta de LDL-C explícita registrada por categoria: HF de alto risco (sem DCV estabelecida nem outro fator de risco maior) LDL-C <70 mg/dL; HF de risco muito alto (com DCV estabelecida ou com outro fator de risco maior) LDL-C <55 mg/dL e redução ≥50% do basal; risco extremo (evento recorrente em até 2 anos, já em estatina de dose máxima tolerada) LDL-C <40 mg/dL",
+        "origem_secao": "Metas de LDL-C por categoria de risco"
+      },
+      {
+        "id": "fh-crianca-heterozigota",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em crianças e adolescentes com HF heterozigota: teste diagnóstico recomendado a partir dos 5 anos, ou antes se houver suspeita de HoFH (Classe I, Nível C); estatina iniciada entre 8 e 10 anos com orientação dietética, meta de LDL-C <135 mg/dL (<3,5 mmol/L) após os 10 anos (Classe IIa, Nível C)",
+        "origem_secao": "Metas de LDL-C por categoria de risco; Abordagem terapêutica precoce"
+      },
+      {
+        "id": "fh-hofh-tratamento-precoce",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em HoFH: tratamento iniciado assim que possível, idealmente já ao diagnóstico, com estatina de alta intensidade e ezetimiba desde o início — não estatina isolada; meta de LDL-C <70 mg/dL em adultos (<55 mg/dL com fator de risco aterosclerótico adicional) e <115 mg/dL em crianças/adolescentes sem DCV estabelecida",
+        "origem_secao": "Metas de LDL-C por categoria de risco; Abordagem terapêutica precoce"
+      },
+      {
+        "id": "fh-evinacumabe-hofh",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Evinacumabe (anti-ANGPTL3, 15 mg/kg IV a cada 4 semanas) considerado em HoFH a partir de 5 anos de idade que não atinge a meta de LDL-C apesar de dose máxima de terapia hipolipemiante — Classe IIa, Nível B, reduzindo LDL-C em cerca de 50% adicional inclusive em receptor de LDL ausente",
+        "origem_secao": "Novas terapias incorporadas na atualização de 2025"
+      },
+      {
+        "id": "fh-cascata-familiares",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Identificado o caso índice, rastreamento em cascata dos familiares de 1º grau oferecido — Classe I, Nível C — dado o padrão de herança dominante (heterozigota) ou a necessidade de identificar portadores heterozigotos assintomáticos entre os pais de um caso homozigoto",
+        "origem_secao": "Rastreamento familiar em cascata"
+      },
+      {
+        "id": "fh-lpa-dosagem",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Lipoproteína(a) dosada ao menos uma vez na vida adulta, se ainda não dosada — Classe IIa, Nível B; níveis acima de 50 mg/dL (≈105 nmol/L nesta diretriz) são considerados fator de risco cardiovascular potencializador",
+        "origem_secao": "Novidade Lp(a)"
+      },
+      {
+        "id": "fh-centro-especializado",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "HoFH refratária e decisão sobre aférese de LDL conduzidas em centro especializado em lipidologia — manejo é predominantemente ambulatorial, sem critério de internação específico",
+        "origem_secao": "Critérios internação"
+      },
+      {
+        "id": "fh-suplemento-nao-substitui",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que suplemento dietético ou vitamina sem eficácia comprovada de redução de LDL-C não deve ser usado como alternativa à terapia farmacológica — Classe III, Nível B",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Cada item foi conferido contra o texto integral do documento técnico já publicado citado em documento_origem, que por sua vez conferiu PMID/DOI de cada fonte por E-utilities do PubMed antes da publicação — nenhum dado escrito de memória nesta reconciliação. Não duplica o checklist avaliacao-de-risco-cardiovascular-global-em-prevencao-primaria: aquele usa LDL-C/ApoB muito elevados apenas como gatilho para investigar HF e considerar rastreamento em cascata como um item entre vários; este é dedicado à triagem diagnóstica formal (escore DLCN), à distinção HF heterozigota versus homozigota e às metas e terapias específicas da própria hipercolesterolemia familiar."
+  },
+  {
+    "slug": "hipertrigliceridemia-grave-limiar-de-tratamento-para-prevencao-de-pancreatite",
+    "condicao": "Classificação da hipertrigliceridemia grave e decisão terapêutica dirigida à prevenção de pancreatite aguda",
+    "resumo": "Faixas de triglicerídeo, o gradiente de risco de pancreatite medido na coorte de Copenhague e a conduta farmacológica vigente (ACC 2021 ECDP) depois da retirada formal, em 2025, da diretriz da Endocrine Society de 2012 que recomendava fibrato como primeira linha. Não substitui o checklist de escalonamento do hipolipemiante em prevenção secundária: aquele cobre a titulação para meta de LDL-C após evento aterosclerótico; este cobre um desfecho e um limiar de tratamento completamente diferentes — a pancreatite aguda por hipertrigliceridemia grave, sem relação com o LDL-C.",
+    "documento_origem": "hipertrigliceridemia-e-risco-de-pancreatite-aguda-a-coorte-de-copenhague-e-o-limiar-de-tratamento",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pedersen SB, Langsted A, Nordestgaard BG. Nonfasting Mild-to-Moderate Hypertriglyceridemia and Risk of Acute Pancreatitis. JAMA Intern Med. 2016;176(12):1834-1842. DOI: 10.1001/jamainternmed.2016.6875. PMID: 27820614 — errata em JAMA Intern Med. 2024;184(4):453. DOI: 10.1001/jamainternmed.2024.0643. PMID: 38497993 (corrige o limite inferior da quarta faixa de triglicerídeo, de 366 para 266 mg/dL; os valores deste checklist já refletem a correção)",
+      "Berglund L, Brunzell JD, Goldberg AC, et al; Endocrine Society. Evaluation and Treatment of Hypertriglyceridemia: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2012;97(9):2969-2989. DOI: 10.1210/jc.2011-3213. PMID: 22962670 — FORMALMENTE RETIRADA pela Endocrine Society em 16/10/2025, aviso publicado em J Clin Endocrinol Metab. 2026;111(2):e647. DOI: 10.1210/clinem/dgaf644. PMID: 41313251; a classificação por faixa segue reproduzida aqui como referência histórica, não como recomendação terapêutica vigente",
+      "Virani SS, Morris PB, Agarwala A, et al. 2021 ACC Expert Consensus Decision Pathway on the Management of ASCVD Risk Reduction in Patients With Persistent Hypertriglyceridemia: A Report of the American College of Cardiology Solution Set Oversight Committee. J Am Coll Cardiol. 2021;78(9):960-993. DOI: 10.1016/j.jacc.2021.06.011. PMID: 34332805"
+    ],
+    "itens": [
+      {
+        "id": "trig-classificacao-por-faixa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Triglicerídeo classificado por faixa: normal <150 mg/dL; leve 150-199 mg/dL; moderada 200-999 mg/dL; grave 1.000-1.999 mg/dL; muito grave ≥2.000 mg/dL — classificação da Endocrine Society 2012, reproduzida como referência histórica; a diretriz que a originou foi formalmente retirada em 16/10/2025",
+        "origem_secao": "Classificação e limiar de tratamento — Sociedade Endócrina 2012, sua retirada em 2025, e a conduta vigente do ACC 2021"
+      },
+      {
+        "id": "trig-gradiente-de-risco-precoce",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que o risco de pancreatite aguda já se eleva de forma mensurável a partir de 177 mg/dL (2 mmol/L) — HR 2,3 (IC95% 1,3-4,0) em relação a <89 mg/dL, coorte de Copenhague, n=116.550, tendência dose-resposta p=6×10⁻⁸ — muito antes do limiar em que o tratamento farmacológico dirigido está formalmente indicado (>1.000 mg/dL); um gradiente de risco mensurável não equivale, por si só, a indicação de tratamento",
+        "origem_secao": "A coorte de Copenhague — o gradiente de risco, medido em 116.550 pessoas"
+      },
+      {
+        "id": "trig-identificar-risco-500",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente com TG ≥500 mg/dL identificado como sob risco de pancreatite e monitorizado quanto à resposta à terapia, com atenção redobrada acima de 1.000 mg/dL — conforme o 2021 ACC Expert Consensus Decision Pathway",
+        "origem_secao": "RESOLVIDO nesta sessão — existe fonte sucessora, dedicada e vigente"
+      },
+      {
+        "id": "trig-quilomicronemia-manifesta",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Investigada síndrome de quilomicronemia plenamente manifesta (xantoma eruptivo, lipemia retinalis, pancreatite) quando triglicerídeo acima de 1.500 mg/dL",
+        "origem_secao": "RESOLVIDO nesta sessão — existe fonte sucessora, dedicada e vigente"
+      },
+      {
+        "id": "trig-conduta-farmacologica-dirigida",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em adultos de 40-75 anos com risco em 10 anos ≥5%, doença aterosclerótica estabelecida ou diabetes: estatina iniciada ou intensificada, dieta pobre ou muito pobre em gordura enfatizada, e fenofibrato ou ômega-3 prescrito (icosapente etílico ou ésteres etílicos de ácido ômega-3) considerados para reduzir risco de pancreatite — fenofibrato preferido a genfibrozila quando associado a estatina",
+        "origem_secao": "RESOLVIDO nesta sessão — existe fonte sucessora, dedicada e vigente"
+      },
+      {
+        "id": "trig-nao-tratar-faixa-moderada-so-por-pancreatite",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar hipertrigliceridemia moderada (200-999 mg/dL) com fibrato apenas com o objetivo de \"prevenir pancreatite\" — a indicação farmacológica dirigida à pancreatite concentra-se na faixa grave/muito grave (>1.000 mg/dL); na faixa moderada, a conduta de redução de risco cardiovascular segue a diretriz geral de dislipidemia (estatina como base)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "trig-nao-citar-2012-como-vigente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não citar a recomendação de fibrato como primeira linha da Endocrine Society 2012 como diretriz vigente sem a ressalva de retirada formal em 2025 — a conduta terapêutica vigente para prevenção de pancreatite na hipertrigliceridemia grave é a do 2021 ACC Expert Consensus Decision Pathway, que usa o verbo \"consider\", não \"recommend as first-line\", e condiciona fenofibrato/ômega-3 também a critério de risco cardiovascular aterosclerótico",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "trig-nao-confundir-com-cvot",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não confundir esta evidência de prevenção de pancreatite com a evidência de desfecho cardiovascular de fibrato (PROMINENT/ACCORD-Lipid) ou de icosapente etílico (REDUCE-IT) já registrada nesta biblioteca — são perguntas clínicas diferentes; nenhum daqueles ensaios testou prevenção de pancreatite como desfecho",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "trig-reavaliacao-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação laboratorial do triglicerídeo agendada para confirmar resposta à terapia e controle abaixo do limiar de risco de pancreatite",
+        "origem_secao": "RESOLVIDO nesta sessão — existe fonte sucessora, dedicada e vigente"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Cada item foi conferido contra o texto integral do documento técnico já publicado citado em documento_origem, incluindo a nota de retirada formal da diretriz da Endocrine Society 2012 e a fonte sucessora (ACC 2021 ECDP) que a resolve, sem nenhum dado escrito de memória. Não duplica o checklist escalonamento-do-hipolipemiante-em-prevencao-secundaria: aquele cobre titulação de estatina/ezetimiba/PCSK9/bempedoico para meta de LDL-C após evento aterosclerótico; este cobre um desfecho e um limiar terapêutico distintos, ligados ao triglicerídeo e à pancreatite aguda, sem relação com o LDL-C."
+  },
+  {
+    "slug": "hipolipemiantes-em-mulher-em-idade-fertil-gestacao-e-lactacao",
+    "condicao": "Manejo do hipolipemiante ao redor de gravidez planejada, durante a gestação e na lactação",
+    "resumo": "Contraindicação da estatina em mulher em idade fértil sem contracepção eficaz, prazo de suspensão antes da concepção, suspensão imediata em gravidez não planejada, exceção pesada de reintrodução no terceiro trimestre em muito alto risco, e as classes formalmente contraindicadas na gestação e na lactação — derivado das bulas brasileiras de atorvastatina, ezetimiba, evolocumabe e alirocumabe, e da Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025. Não substitui o checklist de escalonamento do hipolipemiante em prevenção secundária nem o de avaliação de risco cardiovascular global: nenhum dos dois trata da restrição específica da gravidez, que muda a conduta antes mesmo de a paciente engravidar.",
+    "documento_origem": "hipolipemiantes-na-mulher-em-idade-fertil-gestacao-e-lactacao",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bula do LÍPITOR (atorvastatina cálcica), seções de contraindicações e de gravidez e amamentação, conferida em 29/07/2026",
+      "Bula do ZETIA (ezetimiba), seção de gravidez e amamentação, conferida em 29/07/2026",
+      "Bula do REPATHA (evolocumabe, Amgen Biotecnologia do Brasil Ltda.), bula do profissional, conferida em 29/07/2026",
+      "Bula do PRALUENT (alirocumabe, Sanofi), conferida em 29/07/2026",
+      "Rached FH, Miname MH, Rocha VZ, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640 — seção de recomendações para o manejo da dislipidemia em gestantes"
+    ],
+    "itens": [
+      {
+        "id": "gest-contracepcao-em-idade-fertil",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Em mulher em idade fértil em uso de estatina: confirmado uso de contracepção eficaz — a bula da atorvastatina restringe o uso a adolescentes e mulheres em idade fértil apenas quando a gravidez for altamente improvável e a paciente estiver usando contracepção eficaz; a restrição começa na possibilidade da gravidez, não só na sua confirmação",
+        "origem_secao": "Estatina — a restrição mais ampla do acervo"
+      },
+      {
+        "id": "gest-suspensao-planejamento",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em gravidez planejada: estatina suspensa 60 dias antes da concepção — recomendação forte, certeza moderada",
+        "origem_secao": "Quando suspender e reintroduzir"
+      },
+      {
+        "id": "gest-suspensao-nao-planejada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em gravidez não planejada, em uso de estatina: suspensão imediata ao confirmar a gestação — recomendação forte, certeza moderada",
+        "origem_secao": "Quando suspender e reintroduzir"
+      },
+      {
+        "id": "gest-reinicio-pos-amamentacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Reinício da estatina programado apenas após o término da amamentação, salvo a exceção de muito alto risco cardiovascular registrada abaixo",
+        "origem_secao": "Quando suspender e reintroduzir"
+      },
+      {
+        "id": "gest-excecao-muito-alto-risco",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em muito alto risco cardiovascular: reintrodução da estatina no terceiro trimestre pode ser considerada de forma individualizada — recomendação condicional, certeza moderada; não é conduta padrão, é exceção pesada caso a caso, e a diretriz nomeia a pravastatina como a de maior evidência de segurança entre as disponíveis, o que não equivale a aprovar seu uso rotineiro",
+        "origem_secao": "Quando suspender e reintroduzir"
+      },
+      {
+        "id": "gest-contraindicacao-formal-classes",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ezetimiba, inibidores de PCSK9 (evolocumabe, alirocumabe), inibidores de ANGPTL3 (evinacumabe), ácido bempedoico e lomitapida contraindicados formalmente em gestantes e lactantes — recomendação forte, certeza moderada",
+        "origem_secao": "Quando suspender e reintroduzir; Inibidores de PCSK9 — o mesmo cuidado, pelo mesmo motivo"
+      },
+      {
+        "id": "gest-associacao-herda-restricao-estatina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em terapia combinada com estatina (ezetimiba + estatina, ou inibidor de PCSK9 + estatina): reconhecido que a restrição da estatina prevalece sobre a orientação mais branda do medicamento associado — ler apenas a bula do associado e concluir que a associação é aceitável na gestação é erro de leitura",
+        "origem_secao": "Ezetimiba — restrição mais branda, mas com uma armadilha; Inibidores de PCSK9 — o mesmo cuidado, pelo mesmo motivo"
+      },
+      {
+        "id": "gest-resinas-alternativa",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Resinas de troca aniônica consideradas aceitáveis na gestação, por perfil de segurança mais favorável (não são absorvidas sistemicamente) — recomendação condicional, certeza baixa",
+        "origem_secao": "Quando suspender e reintroduzir"
+      },
+      {
+        "id": "gest-hipertrigliceridemia-gestacional",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Fenofibrato ou ômega-3 considerados no segundo trimestre especificamente se triglicerídeos >880 mg/dL, pelo risco de pancreatite aguda — recomendação condicional, certeza baixa",
+        "origem_secao": "Quando suspender e reintroduzir"
+      },
+      {
+        "id": "gest-decisao-lactacao-pcsk9",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em lactante para quem inibidor de PCSK9 é necessário: decisão compartilhada entre descontinuar a amamentação ou descontinuar o tratamento, por ausência de dados de excreção no leite humano e impossibilidade de excluir risco ao lactente",
+        "origem_secao": "Inibidores de PCSK9 — o mesmo cuidado, pelo mesmo motivo"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Cada item foi conferido contra o texto integral do documento técnico já publicado citado em documento_origem, que por sua vez cita bula brasileira conferida diretamente e a Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025 — nenhum dado escrito de memória nesta reconciliação. Não duplica nenhum checklist já existente no tema: é o único que trata da restrição da gravidez, que muda a conduta antes mesmo da concepção e não aparece nos checklists de avaliação de risco global nem de escalonamento em prevenção secundária."
   }
 ]
