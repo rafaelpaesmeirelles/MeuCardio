@@ -31,14 +31,8 @@ def test_authorized_users_free_text_prescription_is_exposed_in_global_receituari
     composer = (ROOT / "frontend" / "src" / "components" / "PrescricaoLivreEspecial.tsx").read_text(encoding="utf-8")
 
     assert 'import PrescricaoLivreEspecial from "../components/PrescricaoLivreEspecial"' in receituario
-    assert '<PrescricaoLivreEspecial showSignerQueue={false} />' in receituario
-    assert 'placeholder="Digite livremente a prescrição, posologia e orientações…"' in composer
+    assert "if(queueOnly&&x.rafael_signer)" in composer
+    assert "<PrescricaoLivreEspecial />" in receituario
+    assert 'placeholder="Digite a prescrição, posologia e orientações…"' in composer
     assert '<option value="propria">Emitir com minhas credenciais</option>' in composer
     assert "Emissão somente pelo Dr. Rafael." in composer
-
-
-def test_rce_ui_offers_manual_and_qualified_a1_without_advanced_signature():
-    receituario = (ROOT / "frontend" / "src" / "pages" / "Receituario.tsx").read_text(encoding="utf-8")
-
-    assert '["MANUAL", "A1_ARQUIVO"].includes(p.codigo)' in receituario
-    assert "Para emissão digital, use o certificado A1 ICP-Brasil" in receituario

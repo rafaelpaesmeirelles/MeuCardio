@@ -126,18 +126,6 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
   const temC5 = doc.itens.some((item) => String(item.lista ?? "").toUpperCase() === "C5");
-  const provedoresPermitidos = doc.tipo === "RCE"
-    ? (provedores ?? []).filter((p) => ["MANUAL", "A1_ARQUIVO"].includes(p.codigo))
-    : (provedores ?? []);
-
-  useEffect(() => {
-    // RCE digital requer assinatura qualificada. Nesta tela, o caminho
-    // qualificado integrado e validado é o certificado A1 da própria conta.
-    if (doc.tipo === "RCE" && !["MANUAL", "A1_ARQUIVO"].includes(metodo)) {
-      const a1Disponivel = provedores?.some((p) => p.codigo === "A1_ARQUIVO" && p.disponivel);
-      setMetodo(a1Disponivel ? "A1_ARQUIVO" : "MANUAL");
-    }
-  }, [doc.tipo, metodo, provedores]);
 
   async function revisar() {
     setRevisando(true);
@@ -231,19 +219,13 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
       {doc.tipo === "RCE" && (
         <>
           <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-            Modelo Anvisa V2: duas vias completas, com frente e verso para cada página
-            numerada da prescrição.
-          </p>
-          <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
-            Para emissão digital, use o certificado A1 ICP-Brasil conectado à sua conta.
-            Assinaturas avançadas sem certificado qualificado não são aceitas para controlados.
+            Modelo Anvisa V2: duas vias, frente e verso em cada página.
           </p>
         </>
       )}
       {temC5 && (
         <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
-          Lista C5: emissão somente por CRM/CRO e com CPF do prescritor, endereço e telefone
-          profissionais, endereço do paciente e CID preenchidos.
+          Lista C5: exige CRM/CRO, CPF, endereço e telefone profissionais, endereço do paciente e CID.
         </p>
       )}
 
@@ -259,8 +241,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         <div style={{ marginTop: "0.6rem" }}>
           {doc.tipo === "RCE" ? (
             <p className="eyebrow" style={{ margin: "0.3rem 0" }}>
-              A RCE usa automaticamente o endereço profissional cadastrado. Para Lista C5,
-              endereço e telefone profissionais são obrigatórios.
+              Usa o endereço profissional cadastrado; na Lista C5, endereço e telefone são obrigatórios.
             </p>
           ) : (
             <>
@@ -278,7 +259,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
           <label style={{ marginTop: "0.5rem" }}>Método de assinatura</label>
           <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
-            {provedoresPermitidos.map((p) => (
+            {(provedores ?? []).map((p) => (
               <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
                 {p.nome}{!p.disponivel ? " — indisponível" : ""}
               </option>
@@ -819,7 +800,7 @@ export default function Receituario() {
         </button>
       </div>
 
-      {aba === "nova" && !criado && <PrescricaoLivreEspecial showSignerQueue={false} />}
+      {aba === "nova" && !criado && <PrescricaoLivreEspecial />}
 
       {aba === "historico" ? (
         <HistoricoReceituario onAbrir={abrirDoHistorico} onRecriar={recriarDoHistorico} />
