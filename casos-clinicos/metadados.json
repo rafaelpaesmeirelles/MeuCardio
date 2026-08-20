@@ -15426,5 +15426,130 @@
       "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "brugada-tipo-2-incidental-atleta-assintomatico-triagem",
+    "titulo": "Padrão de Brugada tipo 2 em ECG de triagem: desqualificar o atleta?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 22 anos, corredor amador, ECG de triagem pré-participação mostra padrão eletrocardiográfico tipo 2 de Brugada em V1-V2, achado incidental. Assintomático, nega síncope, palpitações ou episódios noturnos significativos. Sem história familiar de morte súbita cardíaca. Ecocardiograma estrutural sem alterações.",
+    "pergunta": "Com base no expert opinion da Italian Society of Sports Cardiology (SICSport 2025) e no consenso HRS 2024, qual a conduta mais adequada?",
+    "opcoes": [
+      "Desqualificar o atleta de imediato, já que qualquer padrão de Brugada no ECG contraindica participação esportiva competitiva por definição",
+      "Reconhecer que um padrão tipo 2 isolado, sem outros fatores de risco (síncope arrítmica, parada cardíaca prévia, história familiar relevante ou arritmia ventricular documentada), não confirma síndrome de Brugada clínica e não deve produzir desqualificação automática — segue avaliação individualizada, com história detalhada de síncope/palpitações/eventos noturnos, histórico familiar, revisão do ECG, investigação de causas fenocópicas e discussão do risco associado à modalidade",
+      "Indicar implante profilático de cardiodesfibrilador antes de qualquer decisão sobre participação esportiva, já que é a única forma de tornar o atleta elegível",
+      "Liberar o atleta sem qualquer avaliação adicional, pois padrão eletrocardiográfico de Brugada tipo 2 ou 3 é sempre variante fisiológica do coração de atleta e nunca requer investigação especializada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O documento é explícito: 'Padrões tipo 2 ou 3 isolados, sem outros fatores de risco, não confirmam a síndrome e não devem produzir automaticamente desqualificação esportiva' — e 'um padrão eletrocardiográfico de Brugada não equivale automaticamente a síndrome de Brugada clínica nem implica proibição universal de esporte'. A avaliação especializada só é exigida quando há padrão tipo 1 espontâneo, síncope suspeita de mecanismo arrítmico, parada cardíaca prévia, história familiar relevante, arritmia ventricular documentada, febre com acentuação do padrão ou dúvida diagnóstica — nenhum presente neste caso. O processo prático descrito inclui história detalhada, histórico familiar, revisão do ECG, investigação de causas fenocópicas e avaliação eletrofisiológica ou teste farmacológico 'somente quando houver indicação clínica específica' — não de rotina em achado incidental de baixo risco. O CDI, no documento, é discutido no contexto de pacientes já de alto risco (síncope arrítmica ou parada cardíaca prévia), não como pré-requisito de elegibilidade para achado incidental assintomático.",
+    "source_refs": [
+      "Scarà A, et al. Brugada Syndrome in Sports Cardiology: An Expert Opinion Statement of the Italian Society of Sports Cardiology (SICSport). Am J Cardiol. 2025;244:9-17. PMID: 40020769. DOI: 10.1016/j.amjcard.2025.02.031.",
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eaa-atleta-recreacional-hipertrofia-ve-fracao-ejecao-reduzida",
+    "titulo": "Atleta recreacional com hipertrofia de VE e FEVE reduzida: o que perguntar antes de rotular como coração de atleta",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 34 anos, praticante recreacional de musculação há 10 anos, procura avaliação por dispneia leve aos esforços. Nega uso de substâncias na anamnese inicial. Ecocardiograma mostra hipertrofia concêntrica de ventrículo esquerdo com massa aumentada e fração de ejeção de 38%. Perfil lipídico com LDL-C elevado e HDL-C reduzido. Pressão arterial de consultório 148/94 mmHg.",
+    "pergunta": "Segundo a revisão de Meagher, Irwig e Rao (Current Opinion in Cardiology, 2025) sobre cardiotoxicidade de esteroides anabolizantes androgênicos (EAA) em atletas recreacionais, qual afirmação está correta sobre este quadro?",
+    "opcoes": [
+      "Como o paciente nega uso de substâncias, a hipótese de EAA deve ser descartada e a hipertrofia deve ser atribuída inteiramente ao treinamento de força concomitante",
+      "No maior estudo do gênero reunido pela revisão (101 usuários de longo prazo, média de 11±7 anos de uso acumulado, vs. 71 controles não usuários), o determinante mais forte de FEVE reduzida não foi treinamento de força concomitante nem hipertensão — foi a história de uso de EAA (cerca de 11% dos usuários atuais tinham FEVE abaixo de 40%); deve-se investigar ativamente o uso de EAA de forma não julgadora, já que usuários raramente relatam espontaneamente, complementando com testosterona total/livre, FSH, LH, hemograma completo e perfil lipídico",
+      "Mesmo que o uso de EAA seja confirmado, a suspensão abrupta e imediata do composto é sempre a conduta mais segura e deve ser orientada sem ressalvas",
+      "A hipertensão encontrada ao exame é, isoladamente, suficiente para explicar tanto a hipertrofia quanto a fração de ejeção reduzida, sem necessidade de investigar outras causas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A revisão descreve o maior estudo do tipo: 101 usuários de EAA de longo prazo (média de 11±7 anos de uso acumulado) comparados a 71 controles não usuários, mostrando maior massa de VE, pior FEVE e pior função diastólica nos usuários, com cerca de 11% dos usuários atuais com FEVE abaixo de 40%. O texto é explícito: 'o determinante mais forte de FEVE reduzida não foi treinamento de força concomitante nem hipertensão — foi a história de uso de EAA'. A recomendação prática da revisão para qualquer atleta com uso confirmado ou suspeito inclui testosterona total e livre, FSH e LH (tipicamente suprimidos no uso de EAA), hemograma completo, perfil lipídico e provas de função hepática, além de 'criar ambiente seguro e não julgador — usuários raramente relatam espontaneamente'. Sobre a suspensão: o documento alerta que 'suspensão brusca de EAA pode desencadear síndrome de abstinência' e recomenda, para quem usa testosterona associada a outros EAA, 'manter a testosterona e reduzi-la gradualmente (10-20% ao mês, ou mais devagar se não tolerado)' — o oposto de suspensão abrupta sem ressalvas.",
+    "source_refs": [
+      "Meagher S, Irwig MS, Rao P. Anabolic-androgenic steroids among recreational athletes and cardiovascular risk. Curr Opin Cardiol. 2025;40(4):221-229. DOI: 10.1097/HCO.0000000000001235. PMID: 40401476. PMCID: PMC12264803.",
+      "Windfeld-Mathiasen J, Heerfordt IM, Dalhoff KP, et al. Cardiovascular Disease in Anabolic Androgenic Steroid Users. Circulation. 2025;151(12):828-834. PMID: 39945117."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "commotio-cordis-colapso-sem-fratura-esternal-beisebol",
+    "titulo": "Colapso súbito após bolada no tórax, sem fratura esternal: descartar commotio cordis?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente de 14 anos, jogador de beisebol, é atingido por uma bola de arremesso na região pré-cordial e colapsa imediatamente em campo, sem pulso palpável. A equipe técnica inicia ressuscitação cardiopulmonar e aplica um choque com desfibrilador externo automático (DEA) em poucos minutos, com recuperação de ritmo e circulação espontânea. Radiografia de tórax posterior não mostra fratura de costela ou esterno.",
+    "pergunta": "Segundo a revisão de Dickey et al. (Journal of the American Heart Association, 2026; 434 casos reunidos), a ausência de fratura óssea torácica documentada é suficiente para descartar commotio cordis, e qual foi o achado com maior implicação prática para o desfecho deste caso?",
+    "opcoes": [
+      "Sim, a ausência de fratura de costela ou esterno exclui o diagnóstico por definição, e outra causa de colapso deve ser buscada",
+      "A ausência de dano estrutural (fratura de costela/esterno) não deve, por si só, excluir o diagnóstico de commotio cordis — os autores argumentam contra usar esse critério como exclusão, dado que a variabilidade clínica documentada nos 434 casos reunidos é mais ampla do que essa definição estrita permite; e o achado com maior implicação prática foi que ressuscitação cardiopulmonar e DEA imediatos elevaram a taxa de sobrevida para mais de 50% nos anos mais recentes, exatamente a sequência de eventos deste caso",
+      "O caso não se enquadra em commotio cordis, porque esse diagnóstico só é reconhecido em contextos não esportivos, como violência ou acidentes automobilísticos",
+      "Como o mecanismo é predominantemente estrutural (lesão direta ao músculo cardíaco pelo impacto), a prioridade deveria ter sido investigação de contusão miocárdica antes de iniciar RCP/DEA"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A revisão sintetizou 434 casos publicados (100 novos incluídos pela primeira vez), dos quais 302 (69,6%) ocorreram em contexto esportivo, com predomínio masculino de 94% nesse grupo — perfil compatível com este adolescente. O texto afirma diretamente: 'parte das definições de commotio cordis exige ausência de dano estrutural à caixa torácica ou ao esterno como critério diagnóstico. Os autores argumentam contra esse critério — a presença ou ausência de fratura de costela/esterno não deveria, por si só, excluir o diagnóstico'. O mecanismo é elétrico, por acoplamento mecanoelétrico no momento vulnerável da repolarização — não lesão estrutural direta ao coração, o que contradiz a ideia de mecanismo predominantemente estrutural. E o achado com maior implicação prática direta: 'o tratamento com ressuscitação cardiopulmonar e desfibrilador externo automático (DEA) elevou a taxa de sobrevida para mais de 50% nos anos mais recentes' — reforçando a importância de DEA acessível e equipe treinada em RCP em eventos esportivos.",
+    "source_refs": [
+      "Dickey GJ, Dorian P, Fedder SP, et al. Revisiting Commotio Cordis: Novel Insight Into Clinical Variability, Diagnosis, Epidemiology, and Prevention. J Am Heart Assoc. 2026;15(5):e045115. DOI: 10.1161/JAHA.125.045115. PMID: 41717928. PMCID: PMC13055793."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "doenca-coronariana-estavel-assintomatico-liberacao-esporte-competitivo",
+    "titulo": "Coronariopata estável assintomático em repouso quer voltar ao esporte competitivo: basta liberar?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 52 anos, doença arterial coronariana estável, em tratamento clínico otimizado, assintomático em repouso e nas atividades cotidianas, deseja retomar ciclismo competitivo amador. Angiografia prévia mostra lesão coronariana borderline, ainda sem avaliação de significância funcional.",
+    "pergunta": "Segundo o Scientific Statement AHA/ACC 2025 sobre participação esportiva em atletas com anormalidades cardiovasculares, qual conduta está alinhada com a abordagem recomendada?",
+    "opcoes": [
+      "Liberar o esporte competitivo de imediato, já que o paciente está assintomático em repouso, o que é suficiente para afastar risco durante esforço",
+      "A participação esportiva depende menos do diagnóstico anatômico isolado e mais da combinação entre sintomas, função ventricular, controle de fatores de risco e presença de isquemia em esforço; diante de lesão coronariana borderline, a relevância funcional deve ser estabelecida antes de decisões esportivas mais liberais — não se deve liberar esporte intenso apenas porque o paciente está assintomático em repouso, nem usar a angiografia isoladamente como único determinante da capacidade esportiva quando a pergunta é o risco durante esforço máximo",
+      "Indicar revascularização da lesão borderline com o objetivo específico de liberar o atleta para a modalidade, independentemente de haver indicação clínica própria para o procedimento",
+      "Restringir definitivamente qualquer atividade competitiva, já que doença coronariana documentada é contraindicação categórica a esporte competitivo, independentemente da estabilidade clínica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O documento afirma que, em doença coronariana estável, a participação esportiva 'depende menos do simples diagnóstico anatômico e mais da combinação entre sintomas, função ventricular, controle de fatores de risco e presença de isquemia em esforço', e que diante de lesões coronarianas borderline ou obstrutivas, 'a relevância funcional deve ser estabelecida antes de decisões esportivas mais liberais'. A seção 'O que não deve ser feito' lista explicitamente: 'Não liberar esporte intenso apenas porque o paciente está assintomático em repouso'; 'Não usar angiografia isoladamente como único determinante da capacidade esportiva quando a pergunta é risco durante esforço máximo'; e 'Não substituir tratamento clínico otimizado por revascularização feita apenas com o objetivo de liberar o atleta, sem indicação clínica própria'. A posição da EAPC citada no documento reforça que pacientes de doença coronariana e baixo risco podem permanecer ativos e, em situações selecionadas, participar de esportes competitivos — não há contraindicação categórica por diagnóstico isolado.",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297.",
+      "Borjesson M et al. Recommendations for participation in leisure time or competitive sports in athletes-patients with coronary artery disease. Eur Heart J. 2019. PMID 30052887. DOI 10.1093/eurheartj/ehy408."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "inversao-onda-t-atleta-negra-corredora-elite-interpretacao",
+    "titulo": "Inversão de onda T anterior em corredora de elite afrodescendente: variante racial ou achado a investigar?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 24 anos, corredora de endurance de elite, afrodescendente, ECG de triagem mostra inversão de onda T nas derivações anteriores (V1-V4). Assintomática, sem palpitações, síncope ou história familiar de cardiomiopatia ou morte súbita. Ecocardiograma com dimensões biventriculares discretamente aumentadas e função sistólica normal.",
+    "pergunta": "Com base na meta-análise de Laurier et al. (European Journal of Preventive Cardiology, 2026; 41 estudos, 11.956 atletas mulheres) e no estudo comparativo de D'Ascenzi et al. (2024), qual interpretação está correta?",
+    "opcoes": [
+      "Como inversão de onda T é mais frequente em atletas negras (15,2% vs. 5,4% em brancas na meta-análise), toda inversão encontrada nessa população deve ser considerada automaticamente fisiológica, sem necessidade de correlacionar com território, sintomas, história familiar ou imagem",
+      "A maior frequência de inversão de onda T em atletas negras (15,2% na meta-análise de 2026, contra 5,4% nas atletas brancas, 2,6% nas atletas das ilhas do Pacífico e 0,7% nas atletas Métis) não significa que toda inversão em atleta negra seja fisiológica — sexo, ancestralidade, território da inversão, sintomas, história familiar e imagem devem ser integrados na interpretação, evitando critérios simplistas baseados apenas em raça ou sexo",
+      "Como os critérios históricos de coração de atleta foram construídos predominantemente em populações masculinas, o achado deste caso deve ser interpretado usando exclusivamente valores de referência masculinos, por serem mais completos",
+      "O estudo de D'Ascenzi et al. não encontrou nenhuma diferença de remodelamento elétrico ou estrutural entre atletas mulheres e homens, portanto o achado eletrocardiográfico deste caso não pode ser atribuído ao treinamento em nenhuma hipótese"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A meta-análise de 2026 encontrou inversão de onda T mais frequente em atletas negras que em outros grupos étnicos: '15,2% nas atletas negras, 5,4% nas brancas, 2,6% nas atletas das ilhas do Pacífico e 0,7% nas atletas Métis'. O documento é explícito quanto à interpretação: 'Isso não significa que toda inversão de T em atleta negra seja fisiológica. Significa que sexo, ancestralidade, território da inversão, sintomas, história familiar e imagem devem ser integrados, evitando critérios simplistas baseados apenas em raça ou sexo'. Entre os achados que exigem avaliação adicional estão justamente 'inversões de T em territórios não compatíveis com padrões reconhecidos de atleta', o que reforça a necessidade de correlação clínica, não uma regra automática por etnia. O documento também afirma que 'a maior parte dos critérios históricos de coração de atleta foi construída em populações predominantemente masculinas' e que 'interpretar a atleta feminina usando apenas referências masculinas aumenta o risco tanto de sobrediagnóstico quanto de subdiagnóstico' — refutando a opção de usar só referências masculinas. E o estudo de D'Ascenzi et al. (2024) mostrou remodelamento elétrico e estrutural real em mulheres treinadas, ainda que de padrão e magnitude diferentes dos homens (grau de remodelamento estrutural menor nas mulheres) — não ausência de diferença.",
+    "source_refs": [
+      "D'Ascenzi F, et al. Electrical and structural remodelling in female athlete's heart: A comparative study in women vs men athletes and controls. Int J Cardiol. 2024;400:131808. PMID: 38262482. DOI: 10.1016/j.ijcard.2024.131808.",
+      "Laurier N, et al. Normal echocardiographic and electrocardiographic indices in young female athletes: a meta-analysis across sex, types of sports, races, and ethnicities. Eur J Prev Cardiol. 2026;33:1332-1344. PMID: 41289042. DOI: 10.1093/eurjpc/zwaf755."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "habito-marfanoide-dilatacao-aortica-limite-levantador-de-peso",
+    "titulo": "Hábito marfanoide e discreta dilatação aórtica em levantador de peso: liberar treino de força máxima?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 26 anos, levantador de peso competitivo, estatura elevada e hábito marfanoide, sem diagnóstico genético confirmado até o momento. Ecocardiograma mostra diâmetro do seio de Valsalva discretamente acima do limite superior da normalidade em valor absoluto, sem dilatação quando o valor é indexado à superfície corporal. Válvula aórtica trivalva, estruturalmente normal, sem insuficiência. Sem história familiar de aneurisma, dissecção ou morte súbita relacionada à aorta.",
+    "pergunta": "Segundo o Scientific Statement AHA/ACC 2025 e a meta-análise atualizada de 2025 sobre dimensão aórtica em atletas de elite (21 estudos, 9.464 atletas), qual conduta está mais alinhada com a abordagem recomendada?",
+    "opcoes": [
+      "O diâmetro absoluto discretamente aumentado do seio de Valsalva já basta para caracterizar aortopatia patológica e desqualificar definitivamente o atleta de qualquer modalidade",
+      "Reconhecer que atletas de elite podem apresentar diâmetro do seio de Valsalva discretamente maior que controles, e que essa diferença deixa de ser evidente quando indexada à superfície corporal — dimensão absoluta isolada pode superestimar anormalidade em pessoas grandes e altamente treinadas; ainda assim, o componente isométrico e os picos pressóricos do levantamento de peso devem ser considerados na prescrição, com seguimento seriado da aorta por técnica consistente e reavaliação caso surjam sinais de progressão ou de doença hereditária da aorta",
+      "Como a válvula aórtica é estruturalmente normal, a dimensão da aorta deixa de ser relevante e dispensa seguimento, já que os dois eixos (valva e aorta) sempre evoluem de forma acoplada",
+      "Qualquer pequena variação de medida entre exames sucessivos, mesmo realizados por métodos ou planos distintos, deve ser interpretada como progressão real da dilatação aórtica e motivo de desqualificação imediata"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A meta-análise atualizada de 2025 (21 estudos, 9.464 atletas de elite) 'encontrou diâmetro absoluto do seio de Valsalva discretamente maior nos atletas. A diferença deixou de ser evidente quando o diâmetro foi indexado à superfície corporal' — e o documento conclui que 'dimensão absoluta isolada pode superestimar anormalidade em pessoas grandes e altamente treinadas'. Sobre o componente de força: 'Exercícios com componente isométrico importante e esforços máximos podem produzir elevação acentuada da pressão arterial. Em aortopatias hereditárias ou dilatação relevante, essa característica deve ser considerada na escolha e adaptação da modalidade' — sem que isso signifique proibição automática do treinamento resistido. Sobre válvula e aorta, o documento afirma que a válvula bicúspide (por extensão, a avaliação da aorta em qualquer atleta) 'exige avaliação de dois eixos independentes: repercussão valvar... e dimensão e comportamento da aorta', e que 'ausência de disfunção valvar não torna irrelevante uma dilatação aórtica associada' — contradizendo a ideia de que os dois eixos sempre evoluem acoplados. Por fim, sobre variação de medida: 'uma mudança pequena entre exames realizados por métodos ou planos distintos pode representar variabilidade de medida, não progressão verdadeira' — o seguimento deve usar técnica consistente antes de concluir por progressão real.",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297.",
+      "Aortic dimension in elite athletes: updated systematic review and meta-analysis. 2025. PMID 39590649."
+    ],
+    "review_status": "revisado"
   }
 ]
