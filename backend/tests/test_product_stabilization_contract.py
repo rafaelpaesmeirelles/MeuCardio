@@ -32,3 +32,12 @@ def test_saved_locations_are_geocoded_and_have_retry_endpoint():
     assert "_try_geocode_calendar_location" in source
     assert '@router.post("/locations/geocode-pending")' in source
     assert '@router.post("/locations/{location_id}/geocode")' in source
+
+
+def test_background_worker_repairs_legacy_gps_pending_locations():
+    source = text("backend/app/services/agenda_sync_worker.py")
+    assert "_reparar_geocodificacao" in source
+    assert "CalendarLocation.latitude.is_(None)" in source
+    assert "geocode_address(consulta)" in source
+    assert "item.latitude = resultado" in source
+    assert "item.longitude = resultado" in source
