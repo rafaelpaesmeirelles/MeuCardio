@@ -1,0 +1,1529 @@
+{
+  "base": "origin/main",
+  "files": {
+    "checklists/metadados.json": {
+      "before": 76,
+      "after": 112,
+      "changed_records": [
+        {
+          "slug": "avaliacao-e-manejo-agudo-de-taquicardia-supraventricular-paroxistica-na-emergencia",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "investigacao-de-extrassistole-ventricular-frequente-ao-holter",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-agudo-de-bradiarritmia-sintomatica-antes-do-marcapasso-definitivo",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "avaliacao-de-risco-cardiovascular-global-em-prevencao-primaria",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs. Não duplica o checklist escalonamento-do-hipolipemiante-em-prevencao-secundaria: aquele cobre titulação farmacológica após evento (prevenção secundária); este cobre a avaliação e a decisão de tratar antes de qualquer evento (prevenção primária)."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-da-intolerancia-a-estatina-avaliacao-e-reexposicao",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs, com um item adicional (int-alerta-anti-hmgcr) derivado do documento complementar de miopatia necrotizante autoimune, já referenciado dentro do próprio documento de origem como diagnóstico diferencial deste protocolo."
+            }
+          ]
+        },
+        {
+          "slug": "inicio-de-estatina-avaliacao-basal-e-monitorizacao-de-seguranca",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs, com quatro itens derivados do documento complementar de diabetes de novo por estatina, desta mesma pasta. Não duplica o checklist escalonamento-do-hipolipemiante-em-prevencao-secundaria: aquele cobre a titulação farmacológica até a meta de LDL; este cobre a segurança laboratorial e clínica no momento de iniciar o fármaco."
+            }
+          ]
+        },
+        {
+          "slug": "confirmacao-diagnostica-de-hipertensao-arterial-antes-de-rotular-o-paciente",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "inicio-de-tratamento-farmacologico-de-primeira-linha-na-hipertensao-arterial",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "rastreio-de-hiperaldosteronismo-primario-no-hipertenso-relacao-aldosterona-renina",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "inicio-de-isglt2-em-cardiopata-diabetico-avaliacao-basal-e-monitorizacao",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "rastreamento-e-estratificacao-de-risco-cardiovascular-no-diabetico-tipo-2-assintomatico",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-do-risco-arritmico-da-hipoglicemia-no-diabetico-com-doenca-cardiovascular",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "rastreamento-de-depressao-apos-infarto-ou-sindrome-coronariana-aguda",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "avaliacao-de-burnout-ocupacional-e-job-strain-como-fator-de-risco-cardiovascular",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos dois documentos já verificados de Saúde mental e cardiologia citados em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "diferenciacao-de-transtorno-de-panico-como-causa-de-dor-toracica-no-pronto-socorro",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Saúde mental e cardiologia citados em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "diagnostico-de-icfep-probabilidade-clinica-escore-e-etiologia",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "encaminhamento-para-avaliacao-de-terapia-avancada-na-insuficiencia-cardiaca-refrataria",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-da-estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+            }
+          ]
+        },
+        {
+          "slug": "preparo-pre-ablacao-por-cateter-de-fibrilacao-atrial",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "avaliacao-inicial-de-fa-de-inicio-recente-no-pronto-socorro",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item; o corte de 24h é referência cruzada explícita à diretriz ESC 2024/AF-CARE, também já publicada e verificada nesta pasta."
+            }
+          ]
+        },
+        {
+          "slug": "elegibilidade-para-pill-in-the-pocket-cardioversao-quimica-ambulatorial",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "duracao-de-dapt-apos-sca-decisao-por-risco-hemorragico-e-isquemico",
+          "status": "added",
+          "hits": [
+            {
+              "location": "itens[1].texto",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Escore PRECISE-DAPT calculado a partir dos 5 componentes (idade, depuração de creatinina, hemoglobina, contagem de leucócitos, sangramento prévio) para estimar risco de sangramento — fonte secundária (página da ESC Council for Cardiology Practice, não a publicação original do escore): VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao ponto de corte numérico exato antes de decisão isolada por este escore"
+            },
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Proposta reunida por pesquisa dedicada em 20/08/2026, a partir do documento técnico já revisado e publicado desta biblioteca. Todos os números e classes de recomendação são citação literal do documento de origem (PMIDs 34449185 e 38630489 já conferidos contra o abstract indexado do PubMed na revisão daquele documento, em 30/07/2026, e reconferidos por grep direto contra o corpo do documento nesta integração). Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+            }
+          ]
+        },
+        {
+          "slug": "investigacao-diagnostica-de-minoca-suspeita-de-scad",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Proposta reunida por pesquisa dedicada em 20/08/2026, a partir do documento técnico já revisado e publicado desta biblioteca. Classes/níveis de recomendação e números epidemiológicos são citação literal do documento de origem (PMIDs 37622654 e 29472380 já conferidos naquele documento em 30/07/2026, um deles contra o texto integral em PMC, e reconferidos por grep direto contra o corpo do documento nesta integração). Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+            }
+          ]
+        },
+        {
+          "slug": "decisao-entre-pci-e-cabg-no-tronco-ou-doenca-trivascular-heart-team",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Proposta reunida por pesquisa dedicada em 20/08/2026, a partir do documento técnico já revisado e publicado desta biblioteca. Classes/níveis de recomendação e números dos ensaios (FREEDOM PMID 23121323, EXCEL PMID 27797291, NOBLE PMID 27810312) são citação literal do documento de origem, conferido tabela por tabela contra o PDF integral em 01/08/2026; o item de Heart Team em tempo real deriva do documento EHEART (PMID 41778947) já publicado no mesmo tema. Todos os números e classes reconferidos por grep direto contra o corpo do documento nesta integração. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+            }
+          ]
+        },
+        {
+          "slug": "estratificacao-de-risco-e-decisao-terapeutica-no-tep-agudo",
+          "status": "added",
+          "hits": [
+            {
+              "location": "itens[8].texto",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Onde aplicável, a categoria clínica AHA/ACC 2026 (A a E, documento `aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas` desta base) também foi considerada como referência complementar de gravidade — categorias D (falência cardiopulmonar incipiente, subcategorias D1-D2) e E1 (falência cardiopulmonar estabelecida) são onde terapia avançada (trombólise, trombectomia por cateter, embolectomia cirúrgica) é discutida em decisão multidisciplinar; VERIFICAÇÃO HUMANA NECESSÁRIA para qualquer corte numérico dessa classificação — usar só a descrição qualitativa das categorias, nunca inventar limiar"
+            },
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Todos os itens derivados literalmente do documento `tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019` (diretriz ESC/ERS 2019), publicado nesta base, com a seção de origem registrada por item — exceto os itens `tep-risco-categoria-aha-acc-2026` e `tep-risco-pert`, que citam explicitamente o documento complementar `aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas` (também publicado), usado apenas para a descrição qualitativa das categorias A-E e do conceito de PERT. Todos os PMIDs e números centrais (sPESI 6 critérios; PEITHO 1.005 pacientes, 2,6% vs. 5,6%, sangramento extracraniano 6,3% vs. 1,2%; metanálise de Chatterjee OR 2,73 geral e 1,25 em ≤65 anos) reconferidos por grep direto contra o corpo do documento nesta integração. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+            }
+          ]
+        },
+        {
+          "slug": "profilaxia-de-tev-no-paciente-clinico-internado-escore-de-padua",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Todos os itens derivados literalmente do documento `profilaxia-de-tev-no-paciente-clinico-hospitalizado-escore-de-padua-e-profilaxia-estendida`, publicado nesta base, com a seção de origem registrada por item. Os pesos dos 11 critérios do escore de Padua e os números da coorte de derivação (PMID 20738765) e do ensaio MARINER (PMID 30145946) reconferidos por grep direto contra o corpo do documento nesta integração — tabela de pesos, corte ≥4, 39,7%/2,2%/11,0%/0,3%/1,6% e 0,83%/1,10% todos batendo exatamente. Este checklist é de PREVENÇÃO PRIMÁRIA na admissão hospitalar — distinto dos dois já publicados no tema, que tratam de TEP agudo já diagnosticado. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+            }
+          ]
+        },
+        {
+          "slug": "tromboembolismo-venoso-associado-ao-cancer-escolha-do-anticoagulante",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Os itens derivados literalmente do documento `trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante`, publicado nesta base, com a seção de origem registrada por item — exceto o item `tev-cancer-apos-6-meses-dose-reduzida`, que cita explicitamente o documento complementar `anticoagulacao-estendida-em-dose-reduzida-no-tev-do-cancer-o-ensaio-api-cat` (também publicado nesta mesma pasta). Todos os PMIDs e números centrais (CARAVAGGIO 5,6% vs. 7,9%; Hokusai-VTE Cancer 7,9% vs. 11,3% recorrência, 6,9% vs. 4,0% sangramento; API-CAT 2,1% vs. 2,8%, 12,1% vs. 15,6%) reconferidos por grep direto contra o corpo dos documentos nesta integração. Este checklist é ESPECÍFICO de câncer — distinto dos dois já publicados no tema. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+            }
+          ]
+        },
+        {
+          "slug": "indicacao-de-cdi-em-prevencao-primaria-criterios-e-momento-certo",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aval clínico individual"
+              ],
+              "text": "Derivado do documento já verificado e publicado cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria (seção 'Evidencia pivotal de prevencao primaria', PMIDs de MADIT-II, SCD-HeFT, DANISH, DINAMIT e CABG-Patch já conferidos por E-utilities em 30/07/2026, conforme registrado no próprio documento) e do documento colete-desfibrilador-vestivel-wcd-ponte-de-risco-arritmico-o-ensaio-vest (janela de 40-90 dias e classe IIb do WCD na diretriz AHA/ACC/HRS 2017, PMID 29097296, confirmada por via indireta no algoritmo oficial de resumo da própria diretriz, publicado pelo ACC). Cada item cita a seção de origem. Nenhum corte numérico ou PMID foi inventado. Elaborado como proposta de conteúdo, ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida e precisa ser dada antes da publicação."
+            }
+          ]
+        },
+        {
+          "slug": "avaliacao-pre-implante-de-marcapasso-definitivo",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aval clínico individual"
+              ],
+              "text": "Derivado do documento já verificado e publicado marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao, com a seção de origem registrada em cada item e as três referências primárias (ESC 2021 PMID 34455430, consenso ESC 2025 PMID 40159278, BLOCK HF/Curtis 2013 PMID 23614585) reaproveitadas do documento de origem, onde já constam conferidas contra o texto integral (a nota do próprio documento registra a leitura verbatim do PMC11957271 para as categorias 'Advice to do'/'May be appropriate to do'/'Advice not to do' do consenso de 2025, que não usa a escala Classe/Nível da ESC — por isso nenhum item deste checklist atribui 'Classe' ao consenso de 2025). Nenhum corte numérico ou PMID foi inventado. Elaborado como proposta de conteúdo, ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida e precisa ser dada antes da publicação."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-perioperatorio-de-cdi-ou-marcapasso-em-cirurgia-nao-cardiaca",
+          "status": "added",
+          "hits": [
+            {
+              "location": "itens[7].texto",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "VERIFICAÇÃO HUMANA NECESSÁRIA — o documento de origem não detalha um protocolo específico de reversão do ímã, reprogramação e interrogação do dispositivo no pós-operatório imediato; confirmar com a equipe responsável pelo dispositivo a checagem e a reativação da terapia (quando aplicável) antes da alta, em vez de presumir reversão automática"
+            },
+            {
+              "location": "revisao",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA",
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aval clínico individual"
+              ],
+              "text": "Derivado do documento já verificado e publicado marcapasso-sem-eletrodo-e-manejo-perioperatorio-de-dispositivo-cardiaco, com a seção de origem registrada em cada item e as duas referências reaproveitadas do documento de origem (declaração científica da AHA em Circulation e revisão de manejo perioperatório e uso de ímã no PMC — nenhuma das duas traz PMID no documento de origem, e por isso nenhum foi atribuído aqui). Um item (reprogramação/checagem pós-procedimento) foi marcado explicitamente VERIFICAÇÃO HUMANA NECESSÁRIA em vez de completado por conhecimento geral, porque o documento de origem não detalha esse protocolo específico. Nenhum dado clínico foi inventado. Elaborado como proposta de conteúdo, ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida e precisa ser dada antes da publicação."
+            }
+          ]
+        },
+        {
+          "slug": "estratificacao-de-risco-pre-operatorio-com-rcri-gupta-mica-e-dasi",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado (AHA/ACC 2024, PMID 39316661), com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-perioperatorio-de-anticoagulante-e-antiagregante-suspensao-e-reinicio",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens sintetizam dois documentos técnicos da mesma pasta que compartilham a mesma citação primária (AHA/ACC 2024, PMID 39316661): 'anticoagulacao-ponte-heparina-preoperatorio-arvore-aha-acc-2024' (documento de origem, itens de anticoagulante oral) e 'pci-stent-dapt-timing-cirurgia-nao-cardiaca-arvore-aha-acc-2024' (itens de stent/DAPT), com a seção de origem exata registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "manejo-perioperatorio-de-betabloqueador-estatina-isglt2-e-ieca-bra-em-uso-cronico",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266",
+                "aprovado para publicação"
+              ],
+              "text": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado (SBC 2024 e AHA/ACC 2024), com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "investigacao-de-sincope-inexplicada-tilt-test-monitor-implantavel-e-eps",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266"
+              ],
+              "text": "Revisão editorial e documental concluída para publicação em 20/08/2026, por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem citados em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "diagnostico-diferencial-de-hipotensao-ortostatica-e-pots-na-sincope",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266"
+              ],
+              "text": "Revisão editorial e documental concluída para publicação em 20/08/2026, por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        },
+        {
+          "slug": "sincope-e-queda-inexplicada-no-idoso-avaliacao-estruturada",
+          "status": "added",
+          "hits": [
+            {
+              "location": "revisao",
+              "needles": [
+                "Dr. Rafael Paes Meirelles",
+                "CRM-SP 138266"
+              ],
+              "text": "Revisão editorial e documental concluída para publicação em 20/08/2026, por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem citados em source_refs, com a seção de origem registrada em cada item."
+            }
+          ]
+        }
+      ],
+      "removed": []
+    },
+    "material-paciente/metadados.json": {
+      "before": 71,
+      "after": 119,
+      "changed_records": [
+        {
+          "slug": "doenca-coronariana-e-infarto",
+          "status": "modified",
+          "hits": []
+        },
+        {
+          "slug": "vivendo-com-uma-valvula-mecanica-anticoagulacao-e-cuidados-no-dia-a-dia",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "regurgitacao-mitral-o-que-e-e-quando-precisa-ser-corrigida",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "insuficiencia-tricuspide-a-terceira-valvula-e-o-reparo-por-cateter",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cardioversao-eletrica-o-que-esperar",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "fibrilacao-atrial-de-inicio-recente-por-que-as-vezes-o-medico-espera-antes-de-reverter",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "peso-sono-e-alcool-o-que-voce-pode-fazer-pela-sua-fibrilacao-atrial",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "taquicardia-supraventricular-crise-o-que-fazer",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "qt-longo-o-que-significa-e-cuidados-com-medicamentos",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "ablacao-de-taquicardia-supraventricular-o-que-esperar",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "minha-pressao-nao-baixa-mesmo-com-os-remedios-certos",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "remedio-da-pressao-pode-afetar-minha-vida-sexual",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "de-manha-ou-a-noite-horario-do-remedio-da-pressao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "ansiedade-pode-parecer-problema-de-coracao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "burnout-no-trabalho-e-o-seu-coracao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "sindrome-do-coracao-partido-o-que-e-o-takotsubo",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "como-participar-da-decisao-sobre-o-meu-tratamento",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "o-que-perguntar-antes-de-uma-cirurgia-ou-procedimento-no-coracao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "recebi-uma-noticia-dificil-sobre-o-meu-coracao-e-agora",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "fragilidade-e-o-coracao-a-idade-sozinha-nao-decide-o-tratamento",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "quantos-remedios-sao-demais-polifarmacia-no-idoso-cardiopata",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "tontura-depois-de-comer-hipotensao-pos-prandial-no-idoso",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cateterismo-cardiaco-direito-o-que-esperar",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cteph-hipertensao-pulmonar-por-coagulos-antigos",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "vivendo-com-hipertensao-pulmonar-remedios-e-acompanhamento",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "stent-o-que-e-e-o-que-muda-depois-de-coloca-lo",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "por-que-tomar-dois-remedios-para-o-sangue-depois-do-infarto-ou-stent",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "infarto-sem-entupimento-da-arteria-o-que-e-minoca-e-a-dissecacao-espontanea-scad",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "coreia-de-sydenham-quando-a-febre-reumatica-afeta-os-movimentos",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cardiopatia-reumatica-cronica-quando-a-valvula-ja-foi-afetada",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cardiomiopatia-dilatada-por-que-o-coracao-aumenta-de-tamanho",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "miocardite-inflamacao-do-musculo-do-coracao-e-recuperacao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cardiomiopatia-de-takotsubo-sindrome-do-coracao-partido",
+          "status": "added",
+          "hits": [
+            {
+              "location": "secoes[4].paragrafos[2]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "VERIFICAÇÃO HUMANA NECESSÁRIA: este material se baseia num grande registro internacional observacional (não uma diretriz de sociedade médica com recomendações formais de Classe/Nível) — o cardiologista pode ter conduta adicional baseada em orientação de sociedade específica, que este material não cobre."
+            }
+          ]
+        },
+        {
+          "slug": "pericardite-recorrente-quando-a-doenca-volta",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "constricao-pericardica-quando-o-pericardio-aperta-o-coracao",
+          "status": "added",
+          "hits": [
+            {
+              "location": "secoes[3].paragrafos[2]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "O tempo típico de internação e de recuperação depois da cirurgia não está descrito com precisão nas fontes consultadas para este material — VERIFICAÇÃO HUMANA NECESSÁRIA — e deve ser perguntado diretamente à equipe cirúrgica responsável pelo seu caso."
+            }
+          ]
+        },
+        {
+          "slug": "derrame-pericardico-por-cancer-drenagem-janela-pericardica-e-prevencao-de-recidiva",
+          "status": "added",
+          "hits": [
+            {
+              "location": "secoes[2].paragrafos[3]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "VERIFICAÇÃO HUMANA NECESSÁRIA: um estudo específico que comparou os dois métodos encontrou uma diferença de recidiva na direção oposta à ideia geral acima — nenhuma recidiva no grupo de punção simples contra cerca de 1 em cada 3 no grupo de janela cirúrgica —, e os próprios pesquisadores relacionam esse achado ao desenho específico daquele estudo. Por isso esse número não deve ser tomado como regra geral; vale perguntar ao seu médico qual opção é mais indicada no seu caso."
+            }
+          ]
+        },
+        {
+          "slug": "endocardite-em-protese-valvar-por-que-e-diferente",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "endocardite-quando-precisa-de-cirurgia-o-que-esperar",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "endocardite-em-quem-usa-drogas-injetaveis-o-que-muda-no-tratamento",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "embolia-pulmonar-o-que-aconteceu-com-meu-pulmao-e-o-que-esperar-da-recuperacao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "sindrome-pos-trombotica-por-que-minha-perna-ainda-incha-meses-depois",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "viajar-de-aviao-depois-de-trombose-o-que-e-seguro",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "disseccao-de-aorta-a-emergencia-que-muda-tudo",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "perna-subitamente-fria-e-dolorida-isquemia-aguda-de-membro",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "estenose-de-carotida-e-risco-de-avc",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "arritmia-na-gravidez-remedios-seguros-para-o-coracao",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "cardiopatia-congenita-e-gravidez-risco-do-bebe-herdar-o-mesmo-problema",
+          "status": "added",
+          "hits": [
+            {
+              "location": "secoes[2].paragrafos[2]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "`VERIFICAÇÃO HUMANA NECESSÁRIA`: os estudos disponíveis não fornecem, para toda cardiopatia congênita e para as duas situações (mãe afetada ou pai afetado) ao mesmo tempo, um número exato de risco por cada lesão específica — por isso, o número que vale para o seu caso deve ser conversado diretamente com seu cardiologista, que conhece o tipo exato da sua cardiopatia."
+            }
+          ]
+        },
+        {
+          "slug": "valvula-mecanica-e-gravidez-anticoagulante-e-sinais-de-alerta",
+          "status": "added",
+          "hits": []
+        }
+      ],
+      "removed": []
+    },
+    "medicamentos/metadados.json": {
+      "before": 200,
+      "after": 206,
+      "changed_records": [
+        {
+          "slug": "atenolol",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Ablok® (Biolab Sanus Farmacêutica Ltda.), comprimido de 25 mg, 50 mg e 100 mg, embalagens com 30 comprimidos. Também disponível como genérico/similar (Lei nº 9.787/1999) por Medley (Sanofi) e Aché. VERIFICAÇÃO HUMANA NECESSÁRIA: número de registro ANVISA e data de bula não confirmados nesta sessão por fonte primária (WebFetch/curl ao bulário bloqueados pelo proxy do ambiente) — confirmado só por mirrors de bulário/drogaria."
+            }
+          ]
+        },
+        {
+          "slug": "bivalirudina",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "NÃO localizado registro/comercialização regular no Brasil nesta sessão. A Diretriz Brasileira de Antiagregantes Plaquetários e Anticoagulantes em Cardiologia (Sociedade Brasileira de Cardiologia, publicada em Arquivos Brasileiros de Cardiologia, disponível em scielo.br) afirma textualmente que \"a bivalirudina ainda não está disponível para utilização no Brasil\", ao discutir os achados do estudo HORIZONS-AMI. Internacionalmente comercializada como Angiox® (Europa) / Angiomax® (EUA). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA se algum registro foi concedido desde a publicação da diretriz consultada, antes de orientar disponibilidade."
+            },
+            {
+              "location": "brand_names[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Não foi encontrada nenhuma marca com página de bula/produto ativa em bulários brasileiros consultados (ConsultaRemédios, CliqueFarma, BulasMed) — o nome só aparece em listas de interação medicamentosa de outros fármacos, nunca como produto próprio, e fontes jurídicas sobre importação de medicamento tratam a bivalirudina como item que exige uso compassivo/importação por pessoa física. Não foi possível confirmar diretamente no bulário eletrônico da ANVISA neste ambiente (acesso bloqueado). VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar definitivamente ausente do mercado brasileiro."
+            }
+          ]
+        },
+        {
+          "slug": "clopidogrel-bissulfato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Plavix® (Sanofi Medley Farmacêutica Ltda.), comprimido revestido de 75 mg (equivalente a 97,875 mg de bissulfato de clopidogrel), embalagens com 7, 14, 28 ou 98 comprimidos. Não existe apresentação comercial de 300 mg — a dose de ataque de 300 mg é obtida com 4 comprimidos de 75 mg, não é um produto separado. Também disponível como genérico/similar por Aché, Aurobindo Pharma do Brasil, Novartis e Legrand. VERIFICAÇÃO HUMANA NECESSÁRIA: Iscover® (Bristol-Myers Squibb, mesma molécula, historicamente co-comercializado com Plavix) teve status de comercialização atual no Brasil não confirmado nesta sessão. Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "disopiramida",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "duration_of_action_note",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "O próprio registro já documenta, em `dosing.\"dose usual do adulto\"`: para a maioria dos adultos, '150 mg a cada 6 horas' na formulação de liberação imediata, ou '300 mg a cada 12 horas' na de liberação controlada. Valor registrado (6h) corresponde ao intervalo posológico da formulação de liberação imediata (a mais detalhada no restante do registro, inclusive nos ajustes por função renal). Início de efeito terapêutico após dose de ataque de 300 mg citado no próprio registro como '30 minutos a 3 horas'. A formulação de liberação controlada (300 mg a cada 12h) teria duração de ação de aproximadamente 12h — **não lançada no campo numérico** por o registro combinar as duas formulações sob o mesmo slug; **VERIFICAÇÃO HUMANA NECESSÁRIA** para decidir se este campo deve, no futuro, ser desdobrado por formulação, mesma ressalva já registrada para `diltiazem-cloridrato` nesta mesma rodada."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "DICORANTIL® (fosfato de disopiramida), Sanofi-Aventis Farmacêutica Ltda. — cápsulas 100 mg (Dicorantil), comprimidos de liberação prolongada 250 mg (Dicorantil-F) e solução injetável 100 mg (Dicorantil Injetável), historicamente registrados na ANVISA. Fonte de bula datada de 2014 (bulas.med.br); listagem ainda aparece em farmácias de varejo online (drogariaminasbrasil.com.br) nesta sessão, mas não foi possível confirmar produção/comercialização ativa em 2026 nem status atual do registro ANVISA. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se o registro segue ativo e se o produto continua em produção antes de orientar disponibilidade."
+            }
+          ]
+        },
+        {
+          "slug": "dronedarona",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "VERIFICAÇÃO HUMANA NECESSÁRIA: dronedarona é antiarrítmico, não anti-hipertensivo, e nem o RCM da EMA nem os ensaios ATHENA/PALLAS já citados em `outcomes` deste verbete reportam redução de PA sistólica/diastólica como desfecho medido nesta busca. O fármaco tem efeito antiadrenérgico discreto que pode, em tese, reduzir levemente a frequência cardíaca, mas nenhuma fonte consultada nesta sessão quantifica efeito sobre PA — campos deixados `null` por ausência de desfecho de PA no desenho dos estudos localizados, não porque foi medido e deu resultado nulo."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Multaq® (sanofi-aventis). Fonte consultada nesta sessão (news.med.br, ago/2026) indica que o registro sanitário do Multaq® está CANCELADO/CADUCO na ANVISA, e o produto não é mais produzido nem comercializado em território nacional. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário/consulta de produtos da ANVISA o status atual do registro antes de orientar prescrição, pela relevância clínica da indisponibilidade."
+            }
+          ]
+        },
+        {
+          "slug": "enalapril-maleato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Ensaio randomizado, duplo-cego, controlado por placebo (8 semanas), comparando moxonidina e enalapril 20 mg 1x/dia em hipertensão essencial leve a moderada: redução média da PA em posição sentada com enalapril de 21,9 ± 17,1/11,9 ± 7,5 mmHg, contra 1,2 ± 14,4/2,3 ± 7,0 mmHg com placebo (p<0,001) — redução líquida corrigida por placebo de aproximadamente **-20,7 mmHg (PAS) e -9,6 mmHg (PAD)**, calculada nesta sessão pela diferença entre os dois grupos do próprio artigo (o artigo não apresenta o valor já corrigido pronto). **Fonte**: Prichard BN, Jäger BA, Luszick JH, et al. Placebo-controlled comparison of the efficacy and tolerability of once-daily moxonidine and enalapril in mild-to-moderate essential hypertension. Blood Press. 1997;6(4):235-242. PMID: 9050976 (PMID conferido por busca direta nesta sessão, em 10/08/2026). O valor reflete a dose de 20 mg/dia num único ensaio de 8 semanas com n moderado — pode não representar a média de todos os ensaios de enalapril. revisão sistemática Cochrane de Heran BS et al., \"Blood pressure lowering efficacy of angiotensin converting enzyme (ACE) inhibitors for primary hypertension\", Cochrane Database Syst Rev. 2008;(4):CD003823, PMID 18843651 (lida via PubMed E-utilities nesta sessão, 12/08/2026) — agrega 92 ensaios de 14 IECA diferentes (incluindo enalapril, mas sem estimativa isolada por fármaco no abstract: \"The data do not suggest that any one ACE inhibitor is better or worse at lowering BP\"). A estimativa de CLASSE (todos os IECA reunidos), na metade da dose máxima recomendada pelo fabricante ou acima, é de **-8/-5 mmHg** (sistólica/diastólica) — bem menor que o -20,7/-9,6 mmHg do ensaio isolado de enalapril 20mg citado acima. **A divergência entre o valor de classe (Cochrane, agregado) e o valor do ensaio único de enalapril permanece sem explicação — pode refletir diferença de dose, desenho, duração (8 semanas vs. média dos 92 ensaios) ou apenas variabilidade de um único estudo pequeno — e por isso a VERIFICAÇÃO HUMANA NECESSÁRIA continua válida para decidir qual valor é mais representativo do enalapril especificamente.**"
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Renitec® (Merck Sharp & Dohme Farmacêutica Ltda. / Organon do Brasil Farmacêutica Ltda.), comprimidos de 5 mg e 10 mg em caixas com 30 unidades, e 20 mg em caixas com 10 ou 30 unidades. Também comercializado como genérico (Lei nº 9.787/1999) por Cristália, Geolab, Biolab Sanus, Medley, EMS e Cimed, em comprimidos de 5 mg, 10 mg e 20 mg — apresentações e embalagens específicas de cada genérico não conferidas nesta sessão, VERIFICAÇÃO HUMANA NECESSÁRIA. Número de registro ANVISA não confirmado nesta sessão. Existe relato de marcas adicionais (Pressocord®, Pressomede®) em resultado de busca agregada, sem laboratório identificado — VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar essas duas marcas ou incluí-las em brand_names."
+            }
+          ]
+        },
+        {
+          "slug": "esmolol",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Esmolol tem indicação registrada para controle de hipertensão perioperatória (ver `dosing.perioperatorio controle imediato`, titulável até 300 mcg/kg/min especificamente para hipertensão) — redução de PA é desfecho clinicamente relevante e esperado, mas **confirmado nesta sessão que o rótulo primário não fornece o valor quantificado em mmHg**: o rótulo do FDA para BREVIBLOC (esmolol hidrocloreto injetável, Baxter Healthcare — setid 220a07b8-5c68-41a3-8705-fd91f14c50b4), lido diretamente via DailyMed em 12/08/2026, descreve na seção Clinical Studies só a taquicardia supraventricular (\"decréscimos significativos de PA ocorreram em 20-50% dos pacientes\", sem mmHg absoluto), e na Clinical Pharmacology traz parâmetros hemodinâmicos de angiografia por radionuclídeo e cateterismo cardíaco que citam \"redução da pressão arterial sistólica\" sem valor numérico específico. Não há, no rótulo vigente, um número consolidado de queda pressórica em mmHg para a indicação de hipertensão perioperatória — mantido como VERIFICAÇÃO HUMANA NECESSÁRIA, agora como ausência confirmada na fonte primária, não como lacuna de busca."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Brevibloc® (Cristália Produtos Químicos Farmacêuticos Ltda., marca sob licença da Bristol Myers Squibb Company) — duas apresentações: Brevibloc® 250 mg/mL, solução concentrada para diluição, caixa com 10 ampolas de 10 mL; e Brevibloc® Diluído 10 mg/mL, solução pronta para infusão, caixa com 20 ou 25 frascos-ampola de 10 mL. Único fabricante localizado nesta sessão, sem genérico de outro laboratório encontrado. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado por mirrors e pelo domínio do próprio fabricante nos resultados de busca, sem leitura direta da bula (WebFetch bloqueado). Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "espironolactona",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "duration_of_action_note",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "O início do efeito diurético/anti-hipertensivo da espironolactona é sabidamente tardio (dias, não horas) porque seu mecanismo depende de síntese proteica nova no túbulo renal (antagonismo do receptor mineralocorticoide intracelular, com efeito genômico), ao contrário dos diuréticos de alça/tiazídicos, de ação direta no transporte iônico. O rótulo FDA/DailyMed do ALDACTONE, consultado nesta sessão, não define uma janela numérica explícita de 'início de ação' em dias — a bula profissional brasileira (Aldactone, Wyeth) também não traz esse número. Mantido `VERIFICAÇÃO HUMANA NECESSÁRIA` apenas para o valor numérico exato do início de efeito clínico (dias); a afirmação qualitativa de tardio/dependente de síntese proteica está bem estabelecida na farmacologia do fármaco."
+            }
+          ]
+        },
+        {
+          "slug": "flecainida",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Tambocor® e genéricos (mercados internacionais, ex. EUA/Europa) — NÃO localizado registro ativo de comercialização regular no Brasil nesta sessão. Fontes consultadas indicam que o acesso no país se dá por importação regulamentada por pessoa física ou instituição autorizada, conforme a RDC ANVISA nº 81/2008 (medicamento não registrado). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. VERIFICAÇÃO HUMANA NECESSÁRIA — confirmar diretamente no bulário eletrônico da ANVISA se há registro ativo antes de informar o fármaco como disponível em farmácia comum no Brasil."
+            },
+            {
+              "location": "brand_names[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Sem registro ativo na ANVISA nem constante na Rename 2022, conforme recomendação do Ministério Público Federal (PR-PA) pedindo ao Ministério da Saúde que estude viabilizar acesso para arritmia pediátrica. Disponível hoje apenas por importação de medicamento não registrado. VERIFICAÇÃO HUMANA NECESSÁRIA antes de considerar disponível para prescrição no Brasil."
+            }
+          ]
+        },
+        {
+          "slug": "hidralazina",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA.** Buscas desta sessão encontraram valores dispersos e de procedência heterogênea para a queda pressórica com hidralazina intravenosa (uma fonte agregadora não primária cita ~18-22/11-15 mmHg; um estudo isolado, de identificação incompleta nesta sessão, relatou 24/9 mmHg com desvio-padrão muito amplo, ~29/15 mmHg) — nenhuma delas tem qualidade equivalente à meta-análise usada para furosemida/loop diuréticos (`bp_evidence_source` do registro `furosemida`) ou ao dado de rótulo FDA usado para labetalol (`bp_evidence_source` do registro `labetalol`), e por isso não foram lançadas aqui como número confiável. Isso é coerente com um achado real e já documentado na literatura de hipertensão: as **diretrizes ACC/AHA de 2017 registram explicitamente a imprevisibilidade de resposta da hidralazina** como motivo para não ser fármaco de primeira linha no tratamento agudo — a própria variabilidade de resposta, e não uma lacuna de busca, é o que torna difícil declarar um valor único e confiável de queda de PA em mmHg."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Apresolina® (Novartis Biociências S.A.), drágeas de 25 mg e 50 mg de cloridrato de hidralazina, embalagens com 20 unidades. Não foi localizada, nesta sessão, versão genérica comercializada no varejo brasileiro — VERIFICAÇÃO HUMANA NECESSÁRIA antes de afirmar que não existe (pode ser limitação da busca, não do mercado). Número de registro ANVISA não confirmado nesta sessão."
+            }
+          ]
+        },
+        {
+          "slug": "mononitrato-de-isossorbida",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Monocordil® (Laboratórios Baldacci Ltda.), comprimidos de 20 mg e 40 mg, embalagens com 20 ou 30 unidades; existe também apresentação Monocordil Retard, cápsulas de 50 mg, embalagem com 30 unidades — confiança média quanto ao laboratório e à existência do Retard, não localizada bula oficial direta da Baldacci nesta sessão, VERIFICAÇÃO HUMANA NECESSÁRIA. Também disponível como genérico (Lei nº 9.787/1999) por Aché, Zydus Nikkho Farmacêutica, Biosintética e Biolab Sanus, comprimidos de 20 mg (embalagens de 20 ou 30 unidades) e 40 mg (embalagem de 30 unidades). Número de registro ANVISA não confirmado nesta sessão."
+            }
+          ]
+        },
+        {
+          "slug": "olmesartana-medoxomila",
+          "status": "modified",
+          "hits": []
+        },
+        {
+          "slug": "perindopril-argininaerbumina",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Rótulo profissional aprovado pelo FDA para ACEON (perindopril erbumina — sal erbumina, não arginina/argininaerbumina como o registrado no campo `generic_name` deste verbete; mesma base ativa perindopril, farmacologicamente equivalente, salificação diferente), DailyMed, setid 97a9e8bf-91ed-4256-97d4-f9504bb01373, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026: 'doses of 8 mg and 16 mg per day gave supine, trough blood pressure reductions of 9 to 15/5 to 6 mm Hg' — pacientes com PA basal em torno de 150/100 mmHg. O rótulo também registra que o efeito pressórico de vale corresponde a cerca de 75-100% do efeito de pico, para doses de 2 a 16 mg. **VERIFICAÇÃO HUMANA NECESSÁRIA quanto à conversão de dose** entre a erbumina (ACEON, referência americana) e a argininaerbumina/arginina (apresentação registrada neste catálogo, mais comum no Brasil e na Europa) — as doses miligrama a miligrama NÃO são diretamente intercambiáveis entre os dois sais (2mg de perindopril arginina ~ equivalência distinta de 2mg de perindopril erbumina, por peso molecular do sal); os valores de mmHg acima são apresentados como o efeito farmacológico documentado da molécula, não como equivalência de dose miligrama a miligrama entre sais. O EUROPA (já citado no campo `outcomes` deste registro) continua sendo ensaio de desfecho cardiovascular, não um ensaio dedicado de redução pressórica. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente."
+            }
+          ]
+        },
+        {
+          "slug": "ramipril",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Triatec® (Sanofi-Aventis Farmacêutica Ltda.), comprimidos sulcados de 2,5 mg e 5 mg em embalagens com 15 ou 30 unidades; a apresentação de 10 mg é comercializada sob o nome Triatec® Prevent, cápsulas, embalagens com 15 ou 30 unidades — VERIFICAÇÃO HUMANA NECESSÁRIA quanto à composição exata de excipiente/forma do Prevent. Naprix® (Libbs Farmacêutica Ltda.), comprimidos de 2,5 mg, 5 mg e 10 mg. Ecator® (Torrent do Brasil Ltda.), cápsulas de 2,5 mg, 5 mg e 10 mg — confiança média, não localizada bula oficial direta da Torrent nesta sessão, VERIFICAÇÃO HUMANA NECESSÁRIA. Também disponível como genérico (Sanofi-Medley), comprimido 5 mg, caixa com 60 unidades. Número de registro ANVISA não confirmado nesta sessão. Não confundir com as combinações de dose fixa Naprix D® (ramipril + hidroclorotiazida) e Naprix A® (ramipril + besilato de anlodipino), que são produtos distintos."
+            }
+          ]
+        },
+        {
+          "slug": "rivaroxabana",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "duration_of_action_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Inferido do esquema posológico já registrado neste item e da meia-vida já registrada (rótulo FDA para XARELTO). **A bula brasileira confirma (12/08/2026)** que a monitorização de rotina do efeito anticoagulante não é feita por tempo de normalização isolado — quando necessário avaliar exposição/efeito residual (ex. antes de procedimento invasivo), usa-se o teste quantitativo calibrado de anti-fator Xa, não um valor fixo de \"tempo até normalização\" declarado em bula. VERIFICAÇÃO HUMANA NECESSÁRIA remanescente apenas quanto a um valor numérico isolado de duração de efeito anticoagulante, que a bula não declara como dado único (é dependente de dose, função renal e tempo desde a última tomada)."
+            }
+          ]
+        },
+        {
+          "slug": "sacubitrilvalsartana",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "notes.verificacao_humana_necessaria_neparvis_vs_entresto",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Kairos ed. 453 (competência 2026-08, market_intelligence licenciado) lista o produto de sacubitril/valsartana sódica hidratada da Novartis como NEPARVIS, não como Entresto (já cadastrado em brand_names). Não foi confirmado nesta sessão, contra bula/registro ANVISA primário, se NEPARVIS é o nome comercial atual do mesmo produto no Brasil (possível reposicionamento de marca da Novartis) ou uma segunda apresentação comercial distinta da mesma molécula. VERIFICAÇÃO HUMANA NECESSÁRIA antes de tratar as duas marcas como equivalentes em qualquer decisão de prescrição."
+            }
+          ]
+        },
+        {
+          "slug": "ticagrelor",
+          "status": "modified",
+          "hits": []
+        },
+        {
+          "slug": "fenilefrina-cloridrato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Fenilefrina é vasopressor (AUMENTA a pressão arterial por agonismo alfa-1 seletivo) — a direção do efeito é positiva, ao contrário da maioria dos fármacos deste lote, mas a bula e as fontes farmacocinéticas consultadas nesta sessão descrevem o uso como titulado ao efeito clínico desejado ('controle da pressão arterial'), sem um valor fixo de elevação em mmHg por dose/infusão — comum em vasopressores usados sob titulação individual (ex.: profilaxia de hipotensão na raquianestesia, onde a meta costuma ser manter a PAS acima de um percentual do basal, não uma elevação fixa em mmHg). VERIFICAÇÃO HUMANA NECESSÁRIA para um valor numérico específico de elevação pressórica por dose, que não foi localizado nesta sessão."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Fenilefrin® (Cristália Produtos Químicos Farmacêuticos Ltda.), solução injetável 10 mg/mL, ampola de vidro de 1 mL, uso subcutâneo/intramuscular/intravenoso; embalagens hospitalares com 25 ou 50 ampolas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado por mirrors de bulário e listagem do próprio domínio do fabricante nos resultados de busca, mas sem leitura direta do PDF da bula nesta sessão (WebFetch bloqueado). Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "dipiridamol",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Persantin® injetável (Mawdsleys Pharmaceuticals do Brasil Ltda.), solução 10 mg/2 mL, cartucho com 5 ampolas de vidro de 2 mL, uso intravenoso — indicado como agente de estresse farmacológico em teste ergométrico/cintilografia/ecocardiografia de estresse. A apresentação oral (drágea 75 mg) foi DESCONTINUADA em 2015 (comunicado oficial da Boehringer Ingelheim) e o registro cancelado em 2021 — não citar como disponível. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só por mirrors de bulário/registro (WebFetch ao bulário oficial bloqueado pelo proxy do ambiente nesta sessão), não por bula primária. Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "indapamida-perindopril-argininaerbumina",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "half_life_note",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Confirmado por mirror de bula do componente perindopril em 12/08/2026**: a meia-vida terminal da fração não-ligada do perindoprilato (metabólito ativo do perindopril) é de cerca de 17 horas, retardada em idosos e em insuficiência cardíaca ou renal — compatível com a dosagem de 1x/dia. Meia-vida da indapamida, componente diurético tiazídico-símile desta combinação, não confirmada nesta sessão especificamente para esta apresentação — VERIFICAÇÃO HUMANA NECESSÁRIA restrita a esse ponto."
+            }
+          ]
+        },
+        {
+          "slug": "anlodipino-besilato-perindopril-argininaerbumina",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "bp_evidence_source",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Ensaio clínico randomizado de 42 dias (n=837), comparando perindopril arginina/besilato de anlodipino 14 mg/10 mg/dia, perindopril erbumina 16 mg/dia isolado e anlodipino 10 mg/dia isolado: redução de PA sentada de -23,7/-15,7 mmHg com a combinação, contra -13,7/-9,5 mmHg com perindopril isolado e -19,3/-13,2 mmHg com anlodipino isolado — combinação na dose máxima superior às duas monoterapias, com menor incidência de edema de tornozelo do que anlodipino isolado. **Revisão-fonte identificada e confirmada nesta sessão (12/08/2026) via PubMed E-utilities**: Elliott WJ. Rationale for a single-pill combination of perindopril arginine and amlodipine besylate. J Am Soc Hypertens. 2015;9(4):257-265. PMID 25817217 — título, autoria e citação (revista/volume/páginas) confirmados; texto exato do abstract: \"the combination of perindopril and amlodipine is safe and effective, with statistically greater lowering of blood pressure than either agent alone\". **O abstract não traz os valores numéricos específicos do ensaio de 42 dias/837 pacientes citados acima** — esses números vêm do corpo da revisão, não confirmados linha a linha nesta sessão (texto completo não acessado). VERIFICAÇÃO HUMANA NECESSÁRIA apenas para conferência linha a linha desses valores numéricos no texto completo, antes de uso em material impresso para paciente — a identidade e citação bibliográfica da fonte-revisão já estão confirmadas."
+            }
+          ]
+        },
+        {
+          "slug": "quinidina-sulfato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "mechanism",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Deprime a corrente rápida de sódio (INa), desacelerando a despolarização de fase 0 e reduzindo a inclinação da despolarização de fase 4 — o mecanismo clássico de estabilização de membrana da classe Ia. A quinidina também bloqueia canais de potássio (incluindo Ito e IKr), o que na prática cardiológica atual é o que sustenta seu uso mais relevante hoje: normalizar o supradesnivelamento de ST do padrão tipo 1 na síndrome de Brugada e suprimir a vulnerabilidade a fibrilação ventricular idiopática, ao bloquear a corrente transitória de saída de potássio (Ito) responsável pelo entalhe (\"notch\") do potencial de ação epicárdico que gera o substrato arritmogênico dessa síndrome. Fonte do mecanismo clássico: rótulo aprovado pelo FDA para sulfato de quinidina (DailyMed, setid b0d6341b-d880-4f0b-8844-bc788c03004a). O efeito sobre Ito/IKr no contexto de Brugada é conhecimento eletrofisiológico consolidado, coerente com o desfecho observado no estudo de Belhassen et al. (J Cardiovasc Electrophysiol. 1999;10(10):1301-1312, PMID 10515552, ver campo `outcomes`), mas **VERIFICAÇÃO HUMANA NECESSÁRIA**: o texto desta fonte primária não detalha por completo a farmacologia de canal iônico do bloqueio de Ito — a descrição do mecanismo de Ito/IKr aqui reflete eletrofisiologia de canalopatias amplamente aceita na literatura, não uma frase extraída literalmente do rótulo do FDA."
+            },
+            {
+              "location": "presentations[2]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi possível confirmar nesta sessão se há apresentação de quinidina com registro ativo e comercialização corrente no Brasil (ANVISA) — as fontes de bulário eletrônico brasileiro consultadas (consultaremedios.com.br, portal de bulário da ANVISA) bloquearam o acesso automatizado (HTTP 403/Cloudflare) durante esta pesquisa. Este registro é construído sobre rotulagem norte-americana (FDA/DailyMed), não uma bula brasileira — mesmo padrão de transparência já usado no registro de `disopiramida` deste catálogo."
+            },
+            {
+              "location": "indications[3]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Uso contemporâneo mais relevante em cardiologia, distinto das indicações históricas acima**: supressão de tempestade elétrica/fibrilação ventricular recorrente em pacientes com síndrome de Brugada, síndrome do QT curto e fibrilação ventricular idiopática — apoiado por série de casos de longo seguimento (Belhassen B et al., J Cardiovasc Electrophysiol. 1999;10(10):1301-1312, PMID 10515552, ver `outcomes`) e citado no consenso de especialistas HRS/EHRA/APHRS sobre síndromes arrítmicas primárias hereditárias (Priori SG et al., Heart Rhythm. 2013;10(12):e85-108, PMID 23916535). **VERIFICAÇÃO HUMANA NECESSÁRIA**: o resumo indexado no PubMed para o consenso de 2013 é só o \"executive summary\", sem o texto completo das recomendações — não foi possível confirmar nesta sessão a classe/nível de recomendação exatos que o documento atribui à quinidina nesse cenário; a citação aqui é do documento como referência de que o uso é reconhecido pelas sociedades, não da força exata da recomendação."
+            },
+            {
+              "location": "dosing.eletrofisiologia guiada no contexto de brugada ou fibrilacao ventricular idiopatica",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Não há esquema posológico padronizado na rotulagem do FDA para este uso** — o estudo de referência (Belhassen et al., 1999, PMID 10515552) usou administração oral de droga classe Ia (principalmente quinidina) guiada por reindução em estudo eletrofisiológico repetido, sem publicar no resumo indexado a dose exata utilizada. **VERIFICAÇÃO HUMANA NECESSÁRIA** para um esquema de dose específico de \"quinidina em Brugada/tempestade elétrica\" — na prática clínica contemporânea a titulação costuma ser feita sob monitorização de nível sérico e ECG, mas este registro não encontrou fonte primária que declare uma dose-alvo numérica consolidada para esse cenário."
+            },
+            {
+              "location": "outcomes.Consenso HRS/EHRA/APHRS 2013",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Priori SG et al. Executive summary: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):e85-108. PMID: 23916535 — documento de consenso das três sociedades de ritmo cardíaco, citado como referência do uso reconhecido de quinidina nas canalopatias (Brugada, QT curto, FV idiopática). **VERIFICAÇÃO HUMANA NECESSÁRIA**: o registro indexado no PubMed é só o resumo executivo, sem o corpo completo das recomendações graduadas — não foi possível extrair classe/nível de recomendação específicos desta sessão."
+            },
+            {
+              "location": "notes.Disponibilidade",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA** — não foi possível confirmar registro ativo na ANVISA nem apresentação comercial no Brasil nesta sessão (bloqueio de acesso automatizado ao bulário eletrônico da ANVISA e a agregadores de bula brasileiros). Onde disponível, o acesso no Brasil pode depender de importação/manipulação — confirmar antes de orientar prescrição."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marcas historicamente registradas (Quinicardine, Cardinor, Quinax, Duriles, Secuquidin, INAL) aparecem com registro ANVISA vencido/cancelado em múltiplos mirrors independentes consultados — padrão consistente entre fontes, sugerindo fármaco hoje só acessível por importação (RDC de medicamento não registrado). VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente) — antes de afirmar indisponibilidade total, confirmar diretamente com a ANVISA."
+            }
+          ]
+        },
+        {
+          "slug": "mexiletina-cloridrato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "presentations[1]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi possível confirmar nesta sessão registro ativo na ANVISA nem comercialização corrente no Brasil — as fontes de bulário eletrônico brasileiro e agregadores consultados bloquearam o acesso automatizado (HTTP 403) durante esta pesquisa. Este registro é construído sobre rotulagem norte-americana (FDA/DailyMed), não uma bula brasileira. Mexiletina é historicamente citada como fármaco de acesso restrito/por importação em canalopatias raras (LQT3) na prática cardiológica brasileira — confirmar disponibilidade real antes de orientar prescrição."
+            },
+            {
+              "location": "indications[2]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Uso emergente, ainda de segunda linha, em síndrome do QT longo tipo 2 (LQT2)** refratária a betabloqueador: em 96 pacientes com LQT2, mexiletina reduziu significativamente a taxa de eventos arrítmicos (ver números completos em `outcomes`) — Crotti L et al., Circulation. 2024;150(7):531-543 (PMID 38939955). **VERIFICAÇÃO HUMANA NECESSÁRIA**: este é um estudo de coorte/translacional, não um ensaio randomizado, e não corresponde a indicação aprovada em bula — decisão de uso off-label cabe ao especialista em canalopatias."
+            },
+            {
+              "location": "notes.Disponibilidade",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA** — não foi possível confirmar registro ativo na ANVISA nem apresentação comercial no Brasil nesta sessão (bloqueio de acesso automatizado ao bulário eletrônico da ANVISA e a agregadores de bula brasileiros). Mexiletina é fármaco de nicho para canalopatias raras (LQT3, e mais recentemente LQT2 refratário) — onde disponível no Brasil, o acesso costuma depender de importação/manipulação; confirmar antes de orientar prescrição."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Nenhum medicamento com registro ANVISA localizado no Brasil nesta sessão (20/08/2026). Fonte secundária de literatura médica (artigo indexado no PMC, sobre síndrome do QT longo tipo 3 em neonato) afirma explicitamente que a mexiletina não está disponível comercialmente no Brasil, exigindo importação direta conforme RDC 81/2008. VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente)."
+            }
+          ]
+        },
+        {
+          "slug": "procainamida-cloridrato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "presentations[1]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi possível confirmar nesta sessão registro ativo na ANVISA nem comercialização corrente no Brasil — as fontes de bulário eletrônico brasileiro e agregadores consultados bloquearam o acesso automatizado (HTTP 403) durante esta pesquisa. Este registro é construído sobre rotulagem norte-americana (FDA/DailyMed), não uma bula brasileira."
+            },
+            {
+              "location": "notes.Disponibilidade",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**VERIFICAÇÃO HUMANA NECESSÁRIA** — não foi possível confirmar registro ativo na ANVISA nem apresentação comercial no Brasil nesta sessão (bloqueio de acesso automatizado ao bulário eletrônico da ANVISA e a agregadores de bula brasileiros). Confirmar disponibilidade real (inclusive por importação hospitalar) antes de orientar prescrição."
+            },
+            {
+              "location": "duration_of_action_note",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Não registrado como valor único** — ao contrário dos antiarrítmicos orais deste catálogo, a procainamida intravenosa é tipicamente administrada como bolus/infusão de ataque seguida de **infusão contínua de manutenção titulada** (1 a 3 mL/min ou 0,5 a 1,5 mL/min conforme a concentração, ou ~50 mcg/min/kg — ver `dosing`), cujo efeito dura enquanto a infusão for mantida, não um intervalo fixo de redosagem como nos antiarrítmicos orais. A via intramuscular usa redosagem a cada 3-6 horas, mas essa via é secundária na prática cardiológica atual (ver `notes`). **VERIFICAÇÃO HUMANA NECESSÁRIA** se um valor numérico único for exigido pela interface do produto — nenhuma das duas vias (IV contínua, IM fracionada) mapeia de forma unívoca para um único intervalo de horas, ao contrário dos antiarrítmicos orais de dose fixa já cadastrados neste catálogo."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marca histórica Procamide® (Zambon Laboratórios Farmacêuticos Ltda.) aparece com registro ANVISA vencido em mirror consultado. VERIFICAÇÃO HUMANA NECESSÁRIA: as fontes secundárias disponíveis divergem entre si sobre a concentração exata da apresentação histórica (500mg/2mL vs. 10mg/mL/10mL vs. comprimido 300mg citados em fontes diferentes) — sinal de baixa confiabilidade, por isso nenhum valor de dose/concentração foi registrado aqui. Não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente)."
+            }
+          ]
+        },
+        {
+          "slug": "lovastatina",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "brand_names[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Lovastatina Sandoz (genérico, comprimidos 10 mg e 20 mg) — página de bula e de preço ativas em bulários consultados em 2026. RESSALVA: uma fonte de 2021 (InfoSUS/SC) afirma que a lovastatina não teria registro sanitário ativo e foi excluída de incorporação no SUS, o que contradiz a evidência de venda ativa do genérico Sandoz encontrada nesta pesquisa — a marca de referência histórica (Mevacor, MSD) parece não estar mais comercializada. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar a situação regulatória atual antes de usar em prescrição."
+            },
+            {
+              "location": "presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Comprimidos de 20 mg, uso oral (bula Lovastatina Sandoz, MS 1.0047.0393). Fonte secundária (Farmacam/P.R. Vade-mécum) também descreve dose máxima de 80 mg/dia, sem detalhar todas as apresentações intermediárias — **VERIFICAÇÃO HUMANA NECESSÁRIA** para confirmar quais dosagens (10 mg / 20 mg / 40 mg) estão de fato registradas e comercializadas no Brasil em 2026, já que apenas o comprimido de 20 mg foi confirmado com número de registro nesta sessão."
+            },
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Lovastatina [genérico/similar], comprimido de 20 mg, Sandoz do Brasil Indústria Farmacêutica Ltda. (fabricado por Salutas Pharma GmbH, Alemanha), Reg. MS 1.0047.0393 — dado obtido de fonte secundária (mirror bula.com.br) nesta sessão, sem confirmação direta do PDF oficial da bula. **VERIFICAÇÃO HUMANA NECESSÁRIA** para confirmar o registro MS diretamente na base de dados da Anvisa e a atualidade da comercialização em 2026 — o mercado brasileiro de estatinas migrou fortemente para atorvastatina/rosuvastatina/sinvastatina, e a lovastatina tem presença comercial menor e menos documentada nas fontes de bulário consultadas nesta sessão."
+            },
+            {
+              "location": "renal_adjustment",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Insuficiência renal moderada: a bula (fonte Farmacam/P.R. Vade-mécum) afirma que, como a lovastatina não sofre excreção renal significativa, não é necessário modificar a dose. **VERIFICAÇÃO HUMANA NECESSÁRIA** para insuficiência renal GRAVE especificamente — a fonte consultada nesta sessão não distingue graus de insuficiência renal com a granularidade de outras estatinas deste catálogo (ex.: pravastatina)."
+            },
+            {
+              "location": "adverse_effects[5]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Efeito de classe já documentado para as demais estatinas deste catálogo, plausível também para a lovastatina, mas não citado explicitamente na fonte secundária consultada nesta sessão: miopatia/rabdomiólise associada a CK muito elevada (ver `interactions` para os fatores de risco farmacológico) — **VERIFICAÇÃO HUMANA NECESSÁRIA** para uma estimativa de frequência específica da lovastatina, equivalente à disponível para pravastatina/fluvastatina neste catálogo."
+            },
+            {
+              "location": "dosing.hipercolesterolemia_casos_leves_a_moderados",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Fonte secundária (mirror bula.com.br, Lovastatina Sandoz) descreve dose inicial alternativa de 10 mg/dia para casos leves a moderados — **VERIFICAÇÃO HUMANA NECESSÁRIA** para confirmar esse valor diretamente na bula oficial, já que a fonte primária mais completa consultada nesta sessão (Farmacam) descreve 20 mg/dia como dose inicial padrão, sem alternativa de 10 mg explicitada."
+            },
+            {
+              "location": "pregnancy",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Contraindicado.** A bula LOVASTATINA (Farmacam) lista gravidez entre as contraindicações formais, sem detalhar categoria de risco numérica/alfabética explícita no texto consultado. Pelo mecanismo de classe compartilhado com as demais estatinas deste catálogo (inibição da síntese de colesterol, essencial ao desenvolvimento fetal — ver racional já documentado em `pregnancy` de sinvastatina e pravastatina), e por convenção regulatória histórica da classe nos EUA (estatinas classificadas como Categoria X pela FDA antes da revisão de rotulagem de gravidez de 2015), a lovastatina deve ser tratada com a mesma contraindicação absoluta na gestação que as demais estatinas deste catálogo. **VERIFICAÇÃO HUMANA NECESSÁRIA** para o texto exato e a categoria de risco declarados na bula brasileira vigente em 2026, não confirmados com a mesma literalidade que as demais estatinas deste catálogo nesta sessão."
+            },
+            {
+              "location": "lactation",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "**Contraindicado durante a amamentação.** A bula LOVASTATINA (Farmacam) lista lactação entre as contraindicações formais, no mesmo item que a gravidez, sem detalhamento adicional sobre concentração no leite materno no texto consultado nesta sessão. **VERIFICAÇÃO HUMANA NECESSÁRIA** para o racional detalhado (concentração no leite, orientação de suspensão vs. não amamentar) equivalente ao disponível para pravastatina/pitavastatina neste catálogo."
+            },
+            {
+              "location": "half_life_note",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Não confirmado com número exato em nenhuma das fontes consultadas nesta sessão — o rótulo FDA/DailyMed descreve apenas que a radioatividade plasmática declina a cerca de 10% do pico em 24 horas, sem declarar meia-vida terminal numérica única. **VERIFICAÇÃO HUMANA NECESSÁRIA.** Deixado deliberadamente como `null` em vez de um valor de memória não verificado nesta sessão (a literatura secundária cita valores na faixa de 2-4 horas para a fração ácida ativa, mas esse número não foi confirmado contra uma fonte primária nesta sessão e por isso não foi registrado como se fosse verificado)."
+            }
+          ]
+        },
+        {
+          "slug": "fosinopril-sodico",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Monopril® (Bristol-Myers Squibb), comprimidos de 10 mg e 20 mg, embalagens com 30 comprimidos. VERIFICAÇÃO HUMANA NECESSÁRIA: fonte é mirror de bulário e agregador de preço, não bula oficial do laboratório nem bulário eletrônico ANVISA consultado diretamente nesta sessão; status de comercialização atual no Brasil não confirmado com segurança (a marca foi descontinuada nos EUA, restando só genérico lá — não está claro se o mesmo já ocorreu no Brasil). Não confundir com Monoplus® (fosinopril + hidroclorotiazida), que é combinação de dose fixa, não o princípio isolado. Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "trandolapril",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Gopten® (Abbott Laboratórios do Brasil Ltda., marca originalmente da Knoll, incorporada pela Abbott em 2002), cápsula de 2 mg, embalagem com 20 cápsulas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só em mirrors de bulário, não em bula oficial do laboratório nem no bulário eletrônico ANVISA consultado diretamente nesta sessão; dosagens de 0,5 mg e 4 mg (existentes em outros países) não confirmadas para o mercado brasileiro. Marca 'Odrik', encontrada em fontes europeias (França/Espanha/Portugal), não incluída aqui por falta de confirmação de comercialização no Brasil. Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "quinapril-cloridrato",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Accupril® (Pfizer), comprimido revestido de 10 mg e comprimido revestido de 20 mg, embalagens com 28 comprimidos. VERIFICAÇÃO HUMANA NECESSÁRIA: fonte é mirror de bulário e um PDF hospedado fora do domínio oficial da Pfizer Brasil, não confirmado diretamente contra o bulário eletrônico ANVISA nesta sessão — pode conter versão desatualizada de bula. Número de registro ANVISA não confirmado."
+            }
+          ]
+        },
+        {
+          "slug": "azilsartana-medoxomila",
+          "status": "modified",
+          "hits": [
+            {
+              "location": "commercial_presentations[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Edarbi® — nome comercial confirmado por múltiplas fontes brasileiras de consumo. VERIFICAÇÃO HUMANA NECESSÁRIA: o laboratório responsável pelo registro no Brasil NÃO foi confirmado com segurança nesta sessão — buscas trouxeram atribuições contraditórias (uma síntese de busca citou 'Eurofarma', outra citou 'Takeda Pharma A/S/Takeda Ireland', mas esta última parece derivar de documento regulatório europeu, não necessariamente do registro brasileiro). Dosagens de 20 mg, 40 mg e 80 mg aparecem majoritariamente em fontes internacionais, sem confirmação de quais estão registradas/comercializadas no Brasil. Um catálogo comercial brasileiro (GTIN 7896641809057) lista 'azilsartana medoxomila potássica 40 mg, caixa com 30 comprimidos' sob nomenclatura de substância, sugerindo possível existência de versão genérica — não confirmado. Número de registro ANVISA não confirmado. Não usar este registro para decisão de prescrição sem confirmação direta no bulário ANVISA."
+            }
+          ]
+        },
+        {
+          "slug": "omeprazol",
+          "status": "added",
+          "hits": [
+            {
+              "location": "interactions[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Clopidogrel — INTERAÇÃO RELEVANTE PARA O CARDIOLOGISTA: clopidogrel é pró-fármaco ativado pela CYP2C19; omeprazol é inibidor potente/moderado dessa mesma enzima, reduzindo a formação do metabólito ativo do clopidogrel e seu efeito antiplaquetário. A FDA incluiu aviso em quadro (boxed warning) recomendando evitar o uso concomitante de omeprazol (e esomeprazol) com clopidogrel; estudo observacional associou o uso concomitante a maior risco de AVC isquêmico. Quando IBP é necessário em paciente com clopidogrel, a literatura secundária consultada indica preferência por pantoprazol (menor interferência na CYP2C19) — VERIFICAÇÃO HUMANA NECESSÁRIA contra a bula/diretriz primária antes de usar essa recomendação de troca de forma prescritiva."
+            },
+            {
+              "location": "adverse_effects[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "VERIFICAÇÃO HUMANA NECESSÁRIA — não foi possível, nesta pesquisa, ler a seção de reações adversas da bula profissional completa (bloqueio de acesso à rede a bulários oficiais); não preencher de memória."
+            },
+            {
+              "location": "monitoring[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "VERIFICAÇÃO HUMANA NECESSÁRIA — texto literal da seção de precauções/monitorização da bula brasileira não foi lido diretamente nesta pesquisa."
+            }
+          ]
+        },
+        {
+          "slug": "insulina-humana-nph",
+          "status": "added",
+          "hits": [
+            {
+              "location": "adverse_effects[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Hipoglicemia é a reação adversa mais frequente da classe — VERIFICAÇÃO HUMANA NECESSÁRIA para lista completa de reações adversas da bula brasileira, não lida integralmente nesta pesquisa por bloqueio de acesso à rede."
+            },
+            {
+              "location": "monitoring[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Glicemia capilar/monitorização contínua conforme protocolo institucional — VERIFICAÇÃO HUMANA NECESSÁRIA para o texto literal de monitorização da bula brasileira, não lido diretamente nesta pesquisa."
+            }
+          ]
+        },
+        {
+          "slug": "paracetamol",
+          "status": "added",
+          "hits": [
+            {
+              "location": "adverse_effects[0]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Hepatotoxicidade em dose alta/uso prolongado ou associado a álcool — alerta técnico da própria ANVISA sobre paracetamol e risco hepático. VERIFICAÇÃO HUMANA NECESSÁRIA para lista completa de reações adversas da bula brasileira, não lida integralmente nesta pesquisa."
+            },
+            {
+              "location": "renal_adjustment",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Sem ajuste renal padronizado identificado nesta pesquisa — VERIFICAÇÃO HUMANA NECESSÁRIA."
+            },
+            {
+              "location": "hepatic_adjustment",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Em hepatopatas leves/moderados, etilismo crônico, desnutrição ou idade acima de 65 anos, a literatura secundária consultada indica reduzir a dose máxima diária para 3 g/dia (dose máxima padrão em adulto saudável: 4 g/dia ou 75 mg/kg/dia) — VERIFICAÇÃO HUMANA NECESSÁRIA contra a bula/diretriz primária antes de usar esse ajuste de forma prescritiva."
+            }
+          ]
+        },
+        {
+          "slug": "azitromicina",
+          "status": "added",
+          "hits": [
+            {
+              "location": "interactions[4]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Estatinas — diferente de claritromicina/eritromicina, a azitromicina não inibe a CYP3A4 de forma relevante, então teoricamente não eleva níveis de estatina; há, porém, relatos raros de rabdomiólise associados a azitromicina + atorvastatina/sinvastatina em fontes secundárias consultadas. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à magnitude real desse risco específico — as fontes consultadas não são unânimes."
+            }
+          ]
+        },
+        {
+          "slug": "diclofenaco",
+          "status": "added",
+          "hits": []
+        },
+        {
+          "slug": "salbutamol",
+          "status": "added",
+          "hits": [
+            {
+              "location": "interactions[3]",
+              "needles": [
+                "VERIFICAÇÃO HUMANA NECESSÁRIA"
+              ],
+              "text": "Digoxina — VERIFICAÇÃO HUMANA NECESSÁRIA: não foi confirmado nesta pesquisa um mecanismo/orientação específica de bula sobre interação direta salbutamol-digoxina; o risco teórico relevante é indireto, via hipocalemia predispondo a toxicidade digitálica, mas isso não foi confirmado como afirmação literal de bula."
+            }
+          ]
+        }
+      ],
+      "removed": []
+    }
+  },
+  "totals": {
+    "changed_records": 120,
+    "marker_hits": 73,
+    "attribution_hits": 36
+  }
+}
