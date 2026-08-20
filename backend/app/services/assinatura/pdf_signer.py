@@ -43,28 +43,42 @@ _CAMPO_VISIVEL_PADRAO = (170, 20, 425, 88)
 # A RCE já possui um quadro regulamentar de identificação/assinatura. O selo
 # deve ocupar a metade direita desse quadro, sem cobrir comprador ou rodapé.
 _CAMPO_VISIVEL_RCE = (285, 220, 545, 270)
-_SELO_VISIVEL = TextStampStyle(
-    border_width=1,
-    border_color=(0.043, 0.180, 0.271),
-    background=None,
-    background_opacity=1,
-    text_box_style=TextBoxStyle(
-        font_size=8,
-        text_color=(0.043, 0.180, 0.271),
-    ),
-    stamp_text=(
-        "ASSINATURA DIGITAL ICP-BRASIL\n"
-        "%(signer)s\n"
-        "%(ts)s\n"
-        "Assinatura criptografica embutida neste PDF"
-    ),
-    timestamp_format="%d/%m/%Y %H:%M:%S %Z",
-)
+def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None) -> TextStampStyle:
+    """Aparência assinada com um caminho verificável fora do consultório.
+
+    O endereço/código fazem parte da revisão criptografada. Não são desenhados
+    depois da assinatura e, portanto, qualquer alteração também invalida o PDF.
+    """
+    linhas = [
+        "ASSINATURA DIGITAL ICP-BRASIL",
+        "%(signer)s",
+        "%(ts)s",
+    ]
+    if url_validacao:
+        curto = url_validacao.removeprefix("https://").removeprefix("http://")
+        linhas.append(f"Validar: {curto}")
+    if codigo_validacao:
+        linhas.append(f"Codigo: {codigo_validacao}")
+    if not codigo_validacao and not url_validacao:
+        linhas.append("Assinatura criptografica embutida neste PDF")
+    return TextStampStyle(
+        border_width=1,
+        border_color=(0.043, 0.180, 0.271),
+        background=None,
+        background_opacity=1,
+        text_box_style=TextBoxStyle(
+            font_size=6,
+            text_color=(0.043, 0.180, 0.271),
+        ),
+        stamp_text="\n".join(linhas),
+        timestamp_format="%d/%m/%Y %H:%M:%S %Z",
+    )
 
 
 def assinar_pdf(
     pdf_bytes: bytes, *, pfx_bytes: bytes, senha: str, motivo: str, local: str,
     cadeia_der: list[bytes] | None = None, layout: str | None = None,
+    codigo_validacao: str | None = None, url_validacao: str | None = None,
 ) -> bytes:
     """Assinatura PAdES-B (certificado embutido, sem carimbo de tempo).
     Devolve os bytes do PDF já assinado. `pfx_bytes`/`senha` são os mesmos
@@ -97,7 +111,7 @@ def assinar_pdf(
         pdf_signer = signers.PdfSigner(
             metadados,
             signer=signer,
-            stamp_style=_SELO_VISIVEL,
+            stamp_style=_selo_visivel(codigo_validacao, url_validacao),
             new_field_spec=campo_visivel,
         )
         saida = pdf_signer.sign_pdf(escritor)

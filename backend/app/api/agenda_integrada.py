@@ -73,6 +73,7 @@ from app.services.agenda_integrada.recurrence import (
     occurrence_interval,
 )
 from app.services.agenda_integrada.traffic import traffic_eta
+from app.services.agenda_integrada.geocoding import GeocodingError, geocode_address
 from app.services.apple_mail import AppleMailError
 from app.services import apple_mail
 from app.services.cofre import cifrar_campo
@@ -732,6 +733,38 @@ def status_teste_google(db: Session = Depends(get_db), user: User = Depends(curr
     return {"status": item.status, "google_email": item.google_email, "created_at": item.created_at}
 
 
+def _location_geocode_query(item: CalendarLocation) -> str:
+    address = item.address or {}
+    keys = ("street", "number", "complement", "neighborhood", "district", "city", "state", "zip", "postal_code", "country")
+    partes = [str(address.get(key) or "").strip() for key in keys]
+    partes = [parte for parte in partes if parte]
+    if item.name:
+        partes.insert(0, item.name.strip())
+    return ", ".join(dict.fromkeys(partes))
+
+
+def _try_geocode_calendar_location(item: CalendarLocation) -> str | None:
+    if item.latitude is not None and item.longitude is not None:
+        return None
+    consulta = _location_geocode_query(item)
+    if len(consulta) < 5:
+        return "Endereço insuficiente para localizar no mapa."
+    try:
+        resultado = geocode_address(consulta)
+    except GeocodingError as exc:
+        return str(exc)
+    item.latitude = resultado["latitude"]
+    item.longitude = resultado["longitude"]
+    return None
+
+
+def _geocode_response(item: CalendarLocation, erro: str | None = None) -> dict:
+    payload = _dump_location(item)
+    payload["geocoding_status"] = "ok" if item.latitude is not None and item.longitude is not None else "pending"
+    payload["geocoding_message"] = erro
+    return payload
+
+
 @router.get("/locations")
 def list_locations(
     professional_id: int | None = None, active: bool | None = True,
@@ -756,14 +789,16 @@ def create_location(data: LocationIn, professional_id: int | None = None, db: Se
         for key, value in data.model_dump().items():
             setattr(inactive, key, value)
         inactive.active = True
+        erro_geo = _try_geocode_calendar_location(inactive)
         _audit(db, user, "agenda_location_restore", "calendar_location", inactive.id, {"owner_id": owner_id})
         db.commit(); db.refresh(inactive)
-        return _dump_location(inactive)
+        return _geocode_response(inactive, erro_geo)
     item = CalendarLocation(owner_id=owner_id, **data.model_dump())
+    erro_geo = _try_geocode_calendar_location(item)
     db.add(item); db.flush()
     _audit(db, user, "agenda_location_create", "calendar_location", item.id, {"owner_id": owner_id})
     db.commit(); db.refresh(item)
-    return _dump_location(item)
+    return _geocode_response(item, erro_geo)
 
 
 @router.post("/locations/home")
@@ -812,10 +847,51 @@ def import_home_location(db: Session = Depends(get_db), user: User = Depends(cur
         pref.day_start_location_id = item.id
     if pref.day_end_destination_location_id is None:
         pref.day_end_destination_location_id = item.id
+    erro_geo = _try_geocode_calendar_location(item)
     _audit(db, user, action, "calendar_location", item.id)
     db.commit()
     db.refresh(item)
-    return _dump_location(item)
+    return _geocode_response(item, erro_geo)
+
+
+@router.post("/locations/geocode-pending")
+def geocode_pending_locations(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    itens = db.query(CalendarLocation).filter(
+        CalendarLocation.owner_id == user.id,
+        CalendarLocation.active.is_(True),
+        or_(CalendarLocation.latitude.is_(None), CalendarLocation.longitude.is_(None)),
+    ).all()
+    atualizados = 0
+    erros: list[dict[str, object]] = []
+    for item in itens:
+        erro = _try_geocode_calendar_location(item)
+        if erro is None and item.latitude is not None and item.longitude is not None:
+            atualizados += 1
+            _audit(db, user, "agenda_location_geocode", "calendar_location", item.id, {"status": "ok"})
+        else:
+            erros.append({"id": item.id, "name": item.name, "message": erro or "Coordenadas não disponíveis."})
+    db.commit()
+    return {"updated": atualizados, "pending": len(erros), "errors": erros}
+
+
+@router.post("/locations/{location_id}/geocode")
+def geocode_location_now(location_id: int, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    item = db.query(CalendarLocation).filter(
+        CalendarLocation.id == location_id,
+        CalendarLocation.owner_id == user.id,
+        CalendarLocation.active.is_(True),
+    ).first()
+    if item is None:
+        raise HTTPException(status_code=404, detail="Local não encontrado.")
+    item.latitude = None
+    item.longitude = None
+    erro = _try_geocode_calendar_location(item)
+    if erro:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=erro)
+    _audit(db, user, "agenda_location_geocode", "calendar_location", item.id, {"status": "ok"})
+    db.commit(); db.refresh(item)
+    return _geocode_response(item)
 
 
 @router.patch("/locations/{location_id}")
@@ -824,9 +900,10 @@ def update_location(location_id: int, data: LocationIn, professional_id: int | N
     item = db.query(CalendarLocation).filter(CalendarLocation.id == location_id, CalendarLocation.owner_id == owner_id).first()
     if not item: raise HTTPException(status_code=404, detail="Local não encontrado.")
     for key, value in data.model_dump().items(): setattr(item, key, value)
+    erro_geo = _try_geocode_calendar_location(item)
     _audit(db, user, "agenda_location_update", "calendar_location", item.id)
     db.commit(); db.refresh(item)
-    return _dump_location(item)
+    return _geocode_response(item, erro_geo)
 
 
 @router.delete("/locations/{location_id}", status_code=204)

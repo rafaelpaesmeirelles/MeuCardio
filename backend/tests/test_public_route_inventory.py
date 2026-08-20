@@ -30,6 +30,9 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("GET", "/api/documentos-publicos/{token}"): (
         "Download destinado ao paciente, autorizado por token de alta entropia na URL."
     ),
+    ("GET", "/api/documentos-publicos/validar/{codigo}"): (
+        "Validação pública de integridade; o código tem MAC não enumerável e a rota não entrega conteúdo clínico."
+    ),
     ("GET", "/api/agenda/oauth/google/callback"): (
         "Retorno servidor-a-servidor do Google; autorizado por estado de alta entropia, "
         "uso único, armazenado somente como SHA-256 e com expiração de dez minutos."

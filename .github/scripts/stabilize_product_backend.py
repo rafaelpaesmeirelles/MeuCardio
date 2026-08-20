@@ -24,7 +24,7 @@ def replace_once(path: str, old: str, new: str) -> None:
 
 def regex_once(path: str, pattern: str, replacement: str) -> None:
     text = load(path)
-    new, count = re.subn(pattern, replacement, text, count=1, flags=re.S)
+    new, count = re.subn(pattern, lambda _match: replacement, text, count=1, flags=re.S)
     if count != 1:
         raise RuntimeError(f"{path}: regex esperado 1 match, encontrado {count}: {pattern[:100]!r}")
     save(path, new)
@@ -136,13 +136,12 @@ replace_once(
     "backend/app/services/envio_documento_email.py",
     '        if assinatura_obrigatoria:\n'
     '            return ResultadoEnvio(\n'
-    '                False, conta.provider, conta.display_name, False,\n'
-    '                "A caixa nativa CorVIA/Mail360 não aceita S/MIME neste transporte. "\n'
-    '                "Escolha uma conta externa compatível ou desative a assinatura digital do e-mail.",\n'
+    '                False,\n'
+    '                "A caixa nativa CorVIA/Mail360 não aceita S/MIME. Selecione Google, Microsoft, Yahoo ou iCloud como conta padrão.",\n'
     '            )\n',
     '        if assinar_smime:\n'
     '            return ResultadoEnvio(\n'
-    '                False, conta.provider, conta.display_name, False,\n'
+    '                False,\n'
     '                "Este envio exigiu S/MIME explicitamente, mas a caixa nativa CorVIA/Mail360 "\n'
     '                "não aceita S/MIME neste transporte. Escolha uma conta externa compatível.",\n'
     '            )\n'
@@ -197,12 +196,12 @@ replace_once(
 # Home location gets geocoded immediately before commit.
 replace_once(
     "backend/app/api/agenda_integrada.py",
-    '    _audit(db, user, action, "calendar_location", item.id, {"source": "profile_home_address"})\n'
+    '    _audit(db, user, action, "calendar_location", item.id)\n'
     '    db.commit()\n'
     '    db.refresh(item)\n'
     '    return _dump_location(item)\n',
     '    erro_geo = _try_geocode_calendar_location(item)\n'
-    '    _audit(db, user, action, "calendar_location", item.id, {"source": "profile_home_address"})\n'
+    '    _audit(db, user, action, "calendar_location", item.id)\n'
     '    db.commit()\n'
     '    db.refresh(item)\n'
     '    return _geocode_response(item, erro_geo)\n',

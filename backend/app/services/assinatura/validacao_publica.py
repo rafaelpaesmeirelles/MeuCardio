@@ -30,7 +30,8 @@ _CODIGO_RE = re.compile(r"^([RD])(\d+)-([0-9A-F]{16})$")
 
 
 def _mac(tipo: str, referencia_id: int, criado_por: int) -> str:
-    segredo = settings.jwt_secret.encode("utf-8")
+    segredo_base = settings.storage_encryption_key or settings.jwt_secret
+    segredo = segredo_base.encode("utf-8")
     payload = f"corvia-documento-v1:{tipo}:{referencia_id}:{criado_por}".encode("utf-8")
     return hmac.new(segredo, payload, hashlib.sha256).hexdigest().upper()[:16]
 

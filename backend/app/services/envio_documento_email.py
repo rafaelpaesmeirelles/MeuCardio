@@ -96,11 +96,15 @@ def enviar(
         conta = db.query(EmailAccount).filter(EmailAccount.user_id == user.id).first()
         if not conta or conta.status != "ativa":
             return ResultadoEnvio(False, "Sua caixa do CorvIA Mail não está ativa.")
-        if assinatura_obrigatoria:
+        if assinar_smime:
             return ResultadoEnvio(
                 False,
-                "A caixa nativa CorVIA/Mail360 não aceita S/MIME. Selecione Google, Microsoft, Yahoo ou iCloud como conta padrão.",
+                "Este envio exigiu S/MIME explicitamente, mas a caixa nativa CorVIA/Mail360 "
+                "não aceita S/MIME neste transporte. Escolha uma conta externa compatível.",
             )
+        # A preferência do perfil é "assinar quando compatível". O PDF clínico
+        # continua com sua assinatura PAdES; Mail360 só transporta a mensagem
+        # sem uma segunda assinatura S/MIME no envelope do e-mail.
         try:
             mail360.enviar_mensagem(
                 conta.mail360_account_key, conta.email_address, destinatario, assunto, corpo_html,

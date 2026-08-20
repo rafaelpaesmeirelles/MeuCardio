@@ -197,6 +197,8 @@ class CertificadoA1(ProvedorAssinatura):
                     for certificado in carregado.dados.cadeia
                 ],
                 layout=contexto.get("layout"),
+                codigo_validacao=contexto.get("codigo_validacao"),
+                url_validacao=contexto.get("url_validacao"),
             )
         except pdf_signer.FalhaAoAssinar as exc:
             log.error("Falha ao assinar PDF com certificado A1 (owner_id=%s): %s", self._user.id, exc)
