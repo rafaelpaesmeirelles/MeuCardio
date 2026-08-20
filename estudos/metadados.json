@@ -23562,5 +23562,30 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "levoecmo-levosimendana-para-desmame-de-ecmo-va-no-choque-cardiogenico",
+    "title": "LEVOECMO: Levosimendana para Desmame de ECMO Venoarterial no Choque Cardiogênico",
+    "study_type": "ensaio_clinico",
+    "authors": null,
+    "journal": "JAMA",
+    "year": 2026,
+    "doi": null,
+    "pmid": "41324946",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41324946/",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico (11 UTIs na França), testando levosimendana para facilitar o desmame de ECMO venoarterial em 205 adultos com choque cardiogênico agudo grave potencialmente reversível sob VA-ECMO iniciado nas 48h anteriores.",
+    "key_findings": "Desfecho primário — desmame bem-sucedido de ECMO em 30 dias — 68,3% nos dois braços (69/101 levosimendana vs. 71/104 placebo), sem diferença estatística. Sinal de dano: mais arritmia ventricular e mais suspensão do tratamento no braço levosimendana.",
+    "clinical_implications": "Primeiro RCT adequadamente dimensionado, duplo-cego e controlado por placebo a testar especificamente essa prática comum em muitos centros — resultado negativo, com sinal de dano (arritmia ventricular), não sustenta uso rotineiro de levosimendana para facilitar desmame de VA-ECMO.",
+    "limitations": "Estudo francês, monocêntrico por país. População selecionada por 'reversibilidade potencial' do choque, limitando extrapolação para todo paciente em VA-ECMO. Resultado negativo não exclui benefício em subgrupo não pré-especificado.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "levosimendana",
+      "ECMO",
+      "choque cardiogênico",
+      "desmame",
+      "VA-ECMO"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
