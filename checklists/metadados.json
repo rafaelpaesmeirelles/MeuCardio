@@ -5543,5 +5543,268 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "rastreamento-de-depressao-apos-infarto-ou-sindrome-coronariana-aguda",
+    "condicao": "Rastreamento e conduta diante de depressão após infarto do miocárdio ou síndrome coronariana aguda",
+    "resumo": "O que checar no paciente pós-IAM/SCA quanto a depressão: por que rastrear (fator de risco independente robusto), como rastrear (instrumento validado, princípios ACTIVE), o que a evidência de tratamento efetivamente sustenta (segurança farmacológica e melhora do sintoma depressivo, não redução comprovada de reinfarto/mortalidade) e o modelo de cuidado que mostrou maior satisfação do paciente (COPES).",
+    "documento_origem": "depressao-pos-infarto-como-fator-de-risco-cardiovascular-van-melle-e-enrichd",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "van Melle JP, de Jonge P, Spijkerman TA, et al. Prognostic association of depression following myocardial infarction with mortality and cardiovascular events: a meta-analysis. Psychosom Med. 2004;66(6):814-822. DOI: 10.1097/01.psy.0000146294.82810.9c. PMID: 15564344",
+      "Berkman LF, Blumenthal J, Burg M, et al; ENRICHD Investigators. Effects of treating depression and low perceived social support on clinical events after myocardial infarction: the ENRICHD Randomized Trial. JAMA. 2003;289(23):3106-3116. DOI: 10.1001/jama.289.23.3106. PMID: 12813116",
+      "Davidson KW, Rieckmann N, Clemow L, et al. Enhanced depression care for patients with acute coronary syndrome and persistent depressive symptoms: coronary psychosocial evaluation studies randomized controlled trial. Arch Intern Med. 2010;170(7):600-608. DOI: 10.1001/archinternmed.2010.29. PMID: 20386003",
+      "Glassman AH, O'Connor CM, Califf RM, et al; SADHART Group. Sertraline treatment of major depression in patients with acute MI or unstable angina. JAMA. 2002;288(6):701-709. DOI: 10.1001/jama.288.6.701. PMID: 12169073",
+      "Lespérance F, Frasure-Smith N, Koszycki D, et al; CREATE Investigators. Effects of citalopram and interpersonal psychotherapy on depression in patients with coronary artery disease: the CREATE trial. JAMA. 2007;297(4):367-379. DOI: 10.1001/jama.297.4.367. PMID: 17244833",
+      "Angermann CE, Gelbrich G, Störk S, et al; MOOD-HF Study Investigators. Effect of Escitalopram on All-Cause Mortality and Hospitalization in Patients With Heart Failure and Depression: The MOOD-HF Randomized Clinical Trial. JAMA. 2016;315(24):2683-2693. DOI: 10.1001/jama.2016.7635. PMID: 27367876",
+      "Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270"
+    ],
+    "itens": [
+      {
+        "id": "resmen-risco-independente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que depressão pós-IAM é fator de risco cardiovascular independente robusto — metanálise de 22 estudos prospectivos (6.367 pacientes) mostrou OR 2,38 para mortalidade por qualquer causa, OR 2,59 para mortalidade cardíaca e OR 1,95 para novo evento cardiovascular — e não deve ser tratado como mera queixa de qualidade de vida",
+        "origem_secao": "A metanalise de van melle — depressao como fator de risco independente"
+      },
+      {
+        "id": "resmen-rastreio-instrumento-validado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastreamento sistemático de sintoma depressivo realizado com instrumento validado (o consenso ESC 2025 nomeia entre outros HADS, variantes do PHQ e o CDI-SF específico para sofrimento ligado à condição cardíaca) — não deixado a critério informal do profissional",
+        "origem_secao": "Rastreamento: com que instrumento (consenso ESC 2025)"
+      },
+      {
+        "id": "resmen-principio-active-check",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Aplicados os princípios ACTIVE do consenso ESC 2025 no encontro clínico: reconhecer a relação saúde mental-DCV (Acknowledge), checar sistematicamente sintomas de saúde mental (Check) e usar instrumento validado de avaliação (Tools)",
+        "origem_secao": "Os princípios ACTIVE (consenso ESC 2025)"
+      },
+      {
+        "id": "resmen-nao-descartar-por-enrichd",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que o resultado neutro do ENRICHD (sobrevida livre de evento 75,9% vs. 75,8%, sem diferença significativa) não significa que rastrear e tratar depressão pós-IAM seja dispensável — o ensaio testou se aquela intervenção específica (TCC + ISRS quando indicado) reduz evento cardiovascular, não se a depressão deixa de ser fator de risco ou deixa de merecer tratamento por seus próprios méritos",
+        "origem_secao": "Armadilhas clinicas (documento van Melle/ENRICHD)"
+      },
+      {
+        "id": "resmen-nao-prometer-beneficio-cardiovascular",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao indicar tratamento da depressão, não prometido ao paciente redução de mortalidade ou de reinfarto como desfecho esperado — nenhum dos três ensaios farmacológicos dedicados (SADHART, CREATE, MOOD-HF) demonstrou esse benefício; a indicação de tratar é a depressão em si, que é doença e sofrimento por si só",
+        "origem_secao": "O que os tres estabelecem, em separado / Armadilhas clinicas (SADHART/CREATE/MOOD-HF)"
+      },
+      {
+        "id": "resmen-seguranca-sertralina-citalopram",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se optar por antidepressivo em paciente coronariopata: sertralina e citalopram têm segurança cardiovascular estabelecida por ensaio dedicado (SADHART: sem efeito sobre fração de ejeção, QTc ou extrassístoles ventriculares; eventos cardiovasculares adversos graves 14,5% com sertralina vs. 22,4% com placebo) — não extrapolar essa segurança para toda a classe sem verificação",
+        "origem_secao": "SADHART (2002) — a pergunta de SEGURANCA"
+      },
+      {
+        "id": "resmen-icfer-mood-hf-nao-usar-escitalopram",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em paciente com insuficiência cardíaca sistólica crônica (classe II-IV NYHA, FE<45%) e depressão: reconhecido que o MOOD-HF (n=372) não apoia o uso de escitalopram nessa população especificamente — desfecho primário (morte ou internação) sem diferença (HR 0,99; IC95% 0,76-1,27) e sem melhora significativa da depressão frente ao placebo",
+        "origem_secao": "MOOD-HF (2016) — a pergunta de DESFECHO, na insuficiencia cardiaca"
+      },
+      {
+        "id": "resmen-psicoterapia-nao-substitui-manejo-clinico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se psicoterapia for considerada como complemento ao manejo clínico estruturado na doença coronariana: registrado que o CREATE não encontrou benefício adicional da psicoterapia interpessoal sobre o manejo clínico já estruturado (diferença de HAM-D favoreceu o manejo clínico, p=0,06) — achado que não deve ser lido como \"psicoterapia não funciona\" em geral, pois o comparador já era uma intervenção ativa",
+        "origem_secao": "CREATE (2007) — farmaco e psicoterapia, lado a lado / Armadilhas clinicas"
+      },
+      {
+        "id": "resmen-modelo-cuidado-escolha-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Considerado oferecer ao paciente a escolha entre modalidades de tratamento (farmacoterapia e/ou terapia de resolução de problemas) com abordagem escalonada conforme resposta, em vez de protocolo único fixo — modelo testado no COPES, associado a maior satisfação do paciente (54% vs. 19%, OR 5,4) e maior redução de sintomas depressivos (-5,7 vs. -1,9 pontos, p=0,005) frente ao cuidado usual",
+        "origem_secao": "O ensaio / O que o ensaio encontrou (COPES)"
+      },
+      {
+        "id": "resmen-copes-evento-cardiaco-cautela",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se citar a redução de eventos cardíacos adversos maiores do COPES (3/80 no grupo de intervenção vs. 10/77 no cuidado usual, p=0,047) como argumento para o modelo de cuidado escalonado: registrado que os próprios autores descrevem esse achado como \"melhora promissora\", não demonstração definitiva — amostra de eventos pequena (13 no total) e intervalo de confiança do efeito sobre eventos clínicos não relatado separadamente",
+        "origem_secao": "Limitações, declaradas com honestidade (COPES)"
+      },
+      {
+        "id": "resmen-seguimento-estruturado-tem-efeito",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reconhecido que o próprio acompanhamento regular e estruturado tem efeito relevante sobre o sintoma depressivo, independentemente do fármaco — no MOOD-HF a depressão melhorou de forma semelhante nos dois braços (de 20,2 para 11,2 com escitalopram e de 21,4 para 12,5 com placebo), sugerindo valor do contato clínico regular por si só",
+        "origem_secao": "MOOD-HF (2016) — nota sobre o efeito placebo"
+      },
+      {
+        "id": "resmen-cuidador-nao-esquecido",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Considerada a saúde mental do familiar/cuidador do paciente cardiopata como parte do cuidado, não como detalhe negligenciável — o consenso ESC 2025 nomeia essa lacuna explicitamente e recomenda que o serviço cardiovascular considere mecanismo de suporte ao cuidador informal",
+        "origem_secao": "Cuidador: mental health negligenciada, não é detalhe (consenso ESC 2025)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "avaliacao-de-burnout-ocupacional-e-job-strain-como-fator-de-risco-cardiovascular",
+    "condicao": "Avaliação de burnout ocupacional e estresse ocupacional crônico (job strain) como fator de risco cardiovascular",
+    "resumo": "Como incorporar exaustão ocupacional crônica (burnout) e o modelo demanda-controle do trabalho (job strain) na anamnese de risco cardiovascular — dois construtos distintos, cada um com evidência prospectiva própria, com atenção ao efeito de limiar do burnout e à magnitude populacional modesta do job strain frente aos fatores de risco clássicos.",
+    "documento_origem": "burnout-ocupacional-como-fator-de-risco-coronariano",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Toker S, Melamed S, Berliner S, Zeltser D, Shapira I. Burnout and Risk of Coronary Heart Disease: A Prospective Study of 8838 Employees. Psychosom Med. 2012;74(8):840-847. DOI: 10.1097/PSY.0b013e31826c3174. PMID: 23006431",
+      "Kivimäki M, Nyberg ST, Batty GD, et al. (IPD-Work Consortium). Job strain as a risk factor for coronary heart disease: a collaborative meta-analysis of individual participant data. Lancet. 2012;380(9852):1491-1497. DOI: 10.1016/S0140-6736(12)60994-5. PMID: 22981903"
+    ],
+    "itens": [
+      {
+        "id": "buoc-perguntar-exaustao-ocupacional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exaustão ocupacional crônica perguntada ativamente na anamnese de risco cardiovascular, especialmente em pacientes de meia-idade em cargos de alta demanda — é fator de risco independente demonstrado prospectivamente (HR 1,41; IC95% 1,08-1,85 para DAC incidente, coorte de 8.838 empregados), não apenas queixa de qualidade de vida",
+        "origem_secao": "O que fazer com isso na prática (burnout)"
+      },
+      {
+        "id": "buoc-atencao-burnout-alta-intensidade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Atenção redobrada ao paciente com burnout de alta intensidade, não apenas presença de algum grau — o efeito de limiar identificado no quintil superior de burnout (HR 1,79; IC95% 1,05-3,04) é o achado de maior magnitude do estudo, sugerindo que o risco não é um gradiente suave",
+        "origem_secao": "O que fazer com isso na prática / Síntese prática (burnout)"
+      },
+      {
+        "id": "buoc-perguntar-demanda-controle",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Perguntado especificamente sobre demanda e controle no trabalho (ritmo/carga/pressão de prazo versus autonomia de decisão), não apenas \"estresse\" genérico — job strain (alta demanda + baixo controle) é fator de risco independente para DAC incidente demonstrado em metanálise de 197.473 participantes de 13 coortes europeias (HR ajustado multivariável 1,17; IC95% 1,05-1,31)",
+        "origem_secao": "O que fazer com isso na prática (job strain)"
+      },
+      {
+        "id": "buoc-nao-confundir-burnout-job-strain",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que burnout (exaustão medida pelo Shirom-Melamed Burnout Measure) e job strain (demanda-controle de Karasek, medido no início do seguimento) são construtos e instrumentos distintos, com corpos de evidência próprios — não devem ser tratados como sinônimos nem confundidos com o fator psicossocial agregado do INTERHEART",
+        "origem_secao": "Armadilhas clínicas (burnout e job strain)"
+      },
+      {
+        "id": "buoc-calibrar-magnitude-populacional",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao comunicar risco ao paciente com job strain, a magnitude de impacto populacional contextualizada como pequena frente aos fatores de risco clássicos — risco atribuível populacional de apenas 3,4%, o que não deve deslocar a prioridade de rastreio e tratamento de tabagismo, pressão arterial, LDL e glicemia",
+        "origem_secao": "O que fazer com isso na prática / Armadilhas clínicas (job strain)"
+      },
+      {
+        "id": "buoc-nao-superestimar-hr-isolado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Evitado citar isoladamente a estimativa de risco de estudos publicados anteriores à metanálise (HR 1,43) como magnitude do efeito de job strain — a própria metanálise demonstrou viés de publicação inflando esse número; a estimativa mais robusta e ajustada é HR 1,17 (IC95% 1,05-1,31)",
+        "origem_secao": "Armadilhas clínicas (job strain) / Resultados"
+      },
+      {
+        "id": "buoc-nao-tratar-como-diagnostico-psiquiatrico-isolado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que estresse permanente no trabalho e sofrer bullying no trabalho têm associação própria com risco cardiovascular relatada pelo consenso ESC 2025 (OR 2,14 para estresse permanente; aumento de 59% no risco de doença coronariana ou AVC após bullying) — achados de reforço, não substitutos da avaliação individual de burnout/job strain",
+        "origem_secao": "A relação é multidirecional (consenso ESC 2025 — dois achados de estresse ocupacional)"
+      },
+      {
+        "id": "buoc-nao-extrapolar-causalidade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Evitado afirmar mecanismo causal comprovado a partir de estudo observacional único (burnout, coorte israelense) — desenho prospectivo fortalece a evidência de associação temporal, mas não estabelece causalidade",
+        "origem_secao": "Armadilhas clínicas (burnout)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos dois documentos já verificados de Saúde mental e cardiologia citados em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diferenciacao-de-transtorno-de-panico-como-causa-de-dor-toracica-no-pronto-socorro",
+    "condicao": "Diferenciação de transtorno de pânico/ansiedade cardíaca como causa de dor torácica no pronto-socorro ou consultório",
+    "resumo": "O que checar diante de dor torácica com suspeita de origem ansiosa: prevalência real (até 25%), variáveis que aumentam a probabilidade pré-teste, a armadilha do subdiagnóstico quase universal documentado na literatura, a coexistência com doença coronariana verdadeira, o rastreio ativo de ideação suicida e, depois de excluída causa cardíaca aguda, o que a evidência de tratamento da ansiedade cardíaca já instalada sustenta.",
+    "documento_origem": "transtorno-de-panico-como-diagnostico-diferencial-de-dor-toracica-cardiaca",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Fleet RP, Dupuis G, Marchand A, Burelle D, Arsenault A, Beitman BD. Panic disorder in emergency department chest pain patients: prevalence, comorbidity, suicidal ideation, and physician recognition. Am J Med. 1996;101(4):371-380. DOI: 10.1016/S0002-9343(96)00224-0. PMID: 8873507",
+      "Huffman JC, Pollack MH. Predicting panic disorder among patients with chest pain: an analysis of the literature. Psychosomatics. 2003;44(3):222-236. DOI: 10.1176/appi.psy.44.3.222. PMID: 12724504",
+      "Eifert GH, Thompson RN, Zvolensky MJ, et al. The cardiac anxiety questionnaire: development and preliminary validity. Behav Res Ther. 2000;38(10):1039-1053. DOI: 10.1016/s0005-7967(99)00132-1. PMID: 11004742",
+      "Thesen T, Himle JA, Martinsen EW, et al. Effectiveness of Internet-Based Cognitive Behavioral Therapy With Telephone Support for Noncardiac Chest Pain: Randomized Controlled Trial. J Med Internet Res. 2022;24(1):e33631. DOI: 10.2196/33631. PMID: 35072641",
+      "Tyrer P, Tyrer H, Morriss R, et al. Clinical and cost-effectiveness of adapted cognitive behaviour therapy for non-cardiac chest pain: a multicentre, randomised controlled trial (COPIC). Open Heart. 2017;4(1):e000582. DOI: 10.1136/openhrt-2016-000582. PMID: 28674627"
+    ],
+    "itens": [
+      {
+        "id": "panc-nao-descartar-causa-cardiaca-aguda",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação cardíaca aguda conduzida normalmente quando clinicamente indicada, mesmo diante de dor torácica atípica com ansiedade evidente — a suspeita de transtorno de pânico orienta investigação psiquiátrica em paralelo, mas não substitui a investigação cardíaca quando indicada",
+        "origem_secao": "Armadilhas clínicas (transtorno de pânico)"
+      },
+      {
+        "id": "panc-considerar-prevalencia-alta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Transtorno de pânico considerado no diagnóstico diferencial de dor torácica no pronto-socorro — prevalência medida de aproximadamente 25% dos pacientes consecutivos com essa queixa, confirmada em revisão independente da literatura de 1970 a 2001",
+        "origem_secao": "O estudo de prevalência: Fleet et al., 1996 / O que ajuda a suspeitar (Huffman e Pollack)"
+      },
+      {
+        "id": "panc-cinco-variaveis-preditoras",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Suspeita reforçada diante das cinco variáveis associadas a maior taxa de transtorno de pânico identificadas na análise da literatura: ausência de doença arterial coronariana, qualidade atípica da dor torácica, sexo feminino, idade mais jovem e alto nível de ansiedade autorreferida",
+        "origem_secao": "O que ajuda a suspeitar: a análise da literatura de Huffman e Pollack, 2003"
+      },
+      {
+        "id": "panc-dac-nao-exclui-panico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História documentada de doença coronariana NÃO usada para descartar transtorno de pânico — no estudo de referência, 44% dos pacientes com transtorno de pânico também tinham doença arterial coronariana prévia documentada; as duas condições coexistem com frequência relevante",
+        "origem_secao": "Achados principais — Doença coronariana coexistente / O que fazer com isso na prática"
+      },
+      {
+        "id": "panc-ideacao-suicida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ideação suicida perguntada ativamente diante de suspeita de transtorno de pânico — 25% dos pacientes com transtorno de pânico relataram pensamento de se matar na semana anterior à consulta, contra 5% dos sem o transtorno (p=0,0001), diferença mantida mesmo ajustando para depressão maior coexistente",
+        "origem_secao": "Achados principais — Ideação suicida"
+      },
+      {
+        "id": "panc-nao-assumir-reconhecimento-espontaneo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o diagnóstico de transtorno de pânico não costuma ser feito de forma espontânea pelo cardiologista — no estudo de referência, 98% dos casos passaram despercebidos pelos cardiologistas plantonistas do pronto-socorro; procurar ativamente o diagnóstico em vez de esperar que ele apareça sozinho",
+        "origem_secao": "Achados principais — Reconhecimento médico / O que fazer com isso na prática"
+      },
+      {
+        "id": "panc-comorbidade-psiquiatrica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Investigada comorbidade psiquiátrica adicional quando houver diagnóstico de transtorno de pânico — 57% dos pacientes com transtorno de pânico no estudo de referência também preenchiam critério para um ou mais outro transtorno psiquiátrico concomitante",
+        "origem_secao": "Achados principais — Comorbidade psiquiátrica"
+      },
+      {
+        "id": "panc-encaminhamento-apos-exclusao-causa-aguda",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Após exclusão razoável de causa cardíaca aguda, encaminhamento para tratamento estruturado da ansiedade cardíaca considerado quando a dor torácica recorrente e a evitação de esforço por medo cardíaco persistirem — estrutura psicoeducacional/comportamental supera o simples \"tranquilizar e liberar\" em ensaio randomizado (redução significativa de ansiedade cardíaca frente a tratamento habitual sem estrutura, diferença de -3,4 pontos no CAQ; IC95% -5,7 a -1,1; p=0,004)",
+        "origem_secao": "O que fazer com isso na prática (TCC para ansiedade cardíaca) / Ensaio 1 — Thesen et al."
+      },
+      {
+        "id": "panc-nao-prometer-cura-com-um-ensaio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao propor terapia cognitivo-comportamental para ansiedade cardíaca já instalada, não prometido resultado garantido com base em um único ensaio favorável — dois de quatro ensaios randomizados não mostraram superioridade da TCC sobre um comparador ativo (psicoeducação estruturada) no desfecho primário de ansiedade cardíaca",
+        "origem_secao": "Lendo os quatro ensaios juntos, sem escolher vencedor / O que fazer com isso na prática (TCC)"
+      },
+      {
+        "id": "panc-utilizacao-servico-pode-responder",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Considerado que desfechos de utilização de serviço (nova ida à emergência, nova consulta por dor torácica) podem responder à intervenção estruturada mesmo quando a escala de ansiedade não muda de forma estatisticamente significativa — padrão observado no ensaio COPIC (entre duas e três vezes menos dias de internação/consultas/idas à emergência, sem significância estatística formal, amostra pequena)",
+        "origem_secao": "Ensaio 4 — COPIC / O que fazer com isso na prática (TCC)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Saúde mental e cardiologia citados em source_refs, com a seção de origem registrada em cada item."
   }
 ]
