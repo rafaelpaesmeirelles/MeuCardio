@@ -1,0 +1,44 @@
+name: Canonical brand migration PR
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.event.pull_request.head.ref == 'fix/canonical-brand-css-debt-20260820' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - name: Apply migration
+        run: |
+          python .github/scripts/canonical_brand_migration.py
+          git diff --check
+          python -m py_compile .github/scripts/canonical_brand_migration.py backend/tests/test_canonical_branding_contract.py backend/tests/test_frontend_style_debt_budget.py
+
+      - name: Commit migration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/src/components/ShellClinicalOSLaunch.tsx \
+                  frontend/src/pages/TermosUso.tsx \
+                  frontend/src/pages/PoliticaPrivacidade.tsx \
+                  frontend/src/pages/Produto.tsx \
+                  frontend/src/pages/TourClinicalOS.tsx \
+                  frontend/src/styles/canonical-brand-standard.css \
+                  frontend/src/styles/tour-branding-hotfix.css \
+                  backend/tests/test_canonical_branding_contract.py \
+                  backend/tests/test_frontend_style_debt_budget.py
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(ui): canonicalize brand assets and cap CSS debt"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
