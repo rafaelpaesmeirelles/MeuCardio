@@ -115,7 +115,7 @@ export default function ValidarDocumento() {
         )}
 
         <footer>
-          A validação CorVIA confirma integridade criptográfica e os dados presentes na assinatura do PDF. Para validação de cadeia de confiança, revogação e requisitos oficiais adicionais, utilize também o validador oficial do ITI/ICP-Brasil quando aplicável.
+          A CorVIA confirma a integridade e a assinatura do PDF. Para cadeia de confiança e revogação, use também o validador oficial do ITI/ICP-Brasil.
         </footer>
       </section>
     </main>
