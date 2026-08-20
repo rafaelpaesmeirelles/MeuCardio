@@ -1,0 +1,36 @@
+name: Sanitize Claude content PR
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  sanitize:
+    if: github.event.pull_request.head.ref == 'release/claude-content-batch-20260820-final' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+      - name: Apply focused clinical/editorial sanitization
+        run: |
+          python .github/scripts/sanitize_claude_content_batch.py
+          git diff --check
+          python -m json.tool checklists/metadados.json >/dev/null
+          python -m json.tool material-paciente/metadados.json >/dev/null
+          python -m json.tool medicamentos/metadados.json >/dev/null
+      - name: Commit sanitization
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add checklists/metadados.json material-paciente/metadados.json medicamentos/metadados.json
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(content): sanitize Claude batch before publication"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
