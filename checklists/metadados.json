@@ -3714,5 +3714,154 @@
         "origem_secao": "Extensão aberta (OLE) — dados de longo prazo"
       }
     ]
+  },
+  {
+    "slug": "alta-apos-cirurgia-de-revascularizacao-do-miocardio-cabg",
+    "condicao": "Alta após cirurgia de revascularização do miocárdio (CABG)",
+    "resumo": "O que checar antes de dar alta ao paciente submetido a cirurgia de revascularização do miocárdio (ponte de safena/CABG), incluindo terapia antitrombótica de longo prazo, controle de fatores de risco e encaminhamento para reabilitação cardíaca.",
+    "documento_origem": "revascularizacao-tronco-e-multiarterial-pci-vs-cabg-esceacts-2018",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "2018 ESC/EACTS Guidelines on myocardial revascularization. Eur Heart J. 2019;40(2):87-165. DOI: 10.1093/eurheartj/ehy394. PMID: 30165437.",
+      "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes."
+    ],
+    "itens": [
+      {
+        "id": "cabg-aas-vitalicio",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Aspirina em dose baixa mantida indefinidamente, salvo contraindicação documentada",
+        "origem_secao": "Terapia antiplaquetária pós-revascularização"
+      },
+      {
+        "id": "cabg-estatina-alta-intensidade",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estatina de alta intensidade prescrita, com meta de LDL-C documentada",
+        "origem_secao": "Prevenção secundária pós-revascularização"
+      },
+      {
+        "id": "cabg-betabloqueador-fe-reduzida",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se FEVE reduzida: betabloqueador e demais pilares de ICFEr avaliados e iniciados/titulados antes da alta",
+        "origem_secao": "Disfunção ventricular pós-revascularização"
+      },
+      {
+        "id": "cabg-controle-glicemico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se diabético: rastreio/otimização de controle glicêmico documentado, com plano de seguimento definido",
+        "origem_secao": "Diabetes e revascularização"
+      },
+      {
+        "id": "cabg-ferida-esternal",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre cuidados com a ferida esternal e da perna (se veia safena usada), e sobre sinais de infecção a relatar",
+        "origem_secao": "Cuidados de ferida operatória"
+      },
+      {
+        "id": "cabg-restricao-esterno",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre restrição de esforço envolvendo o esterno (não levantar peso, não puxar com os braços) pelo período de consolidação óssea definido pela equipe cirúrgica",
+        "origem_secao": "Recuperação esternal"
+      },
+      {
+        "id": "cabg-reabilitacao-cardiaca",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para reabilitação cardíaca supervisionada realizado antes da alta, não deixado para o paciente buscar por conta própria",
+        "origem_secao": "Reabilitação cardíaca pós-cirúrgica"
+      },
+      {
+        "id": "cabg-cessacao-tabagismo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se tabagista: aconselhamento estruturado de cessação de tabagismo oferecido, com encaminhamento se disponível",
+        "origem_secao": "Prevenção secundária pós-revascularização"
+      },
+      {
+        "id": "cabg-retorno-cardiologia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno com cardiologista agendado nas semanas seguintes à alta, com data definida",
+        "origem_secao": "Seguimento pós-revascularização"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "titulacao-dos-quatro-pilares-na-insuficiencia-cardiaca-com-fracao-de-ejecao-reduzida",
+    "condicao": "Titulação dos quatro pilares na insuficiência cardíaca com fração de ejeção reduzida (ICFEr)",
+    "resumo": "Checklist de acompanhamento da titulação das quatro classes de terapia com benefício de mortalidade comprovado na ICFEr — não é checklist de alta hospitalar, é checklist de seguimento ambulatorial da otimização terapêutica ao longo do tempo.",
+    "documento_origem": "icfer-classificacao-diagnostico-quatro-pilares",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. PMID: 35363499.",
+      "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure."
+    ],
+    "itens": [
+      {
+        "id": "icfer-pilar-1-sraa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibição do SRAA em uso (IECA, BRA ou, preferencialmente quando tolerado, sacubitril-valsartana), com dose atual documentada e comparada à dose-alvo do ensaio de referência",
+        "origem_secao": "Pilar 1 — inibição do SRAA"
+      },
+      {
+        "id": "icfer-pilar-2-betabloqueador",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador com evidência em ICFEr (carvedilol, succinato de metoprolol ou bisoprolol) em uso, com dose atual documentada e comparada à dose-alvo",
+        "origem_secao": "Pilar 2 — betabloqueador"
+      },
+      {
+        "id": "icfer-pilar-3-mra",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antagonista mineralocorticoide (espironolactona ou eplerenona) em uso, com potássio e função renal monitorizados",
+        "origem_secao": "Pilar 3 — antagonista mineralocorticoide"
+      },
+      {
+        "id": "icfer-pilar-4-isglt2",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de SGLT2 (dapagliflozina ou empagliflozina) em uso, independentemente de diagnóstico de diabetes",
+        "origem_secao": "Pilar 4 — inibidor de SGLT2"
+      },
+      {
+        "id": "icfer-pilar-faltante-motivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se algum dos quatro pilares está ausente ou em dose subótima: motivo documentado explicitamente (intolerância, contraindicação, ainda em titulação) — ausência sem motivo registrado não deveria ser aceita como 'decisão definitiva'",
+        "origem_secao": "Barreiras à titulação"
+      },
+      {
+        "id": "icfer-sequencia-nao-obrigatoria",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que os quatro pilares podem ser iniciados em sequência acelerada ou simultânea, conforme tolerância — não é necessário titular um de cada vez até a dose máxima antes de iniciar o próximo",
+        "origem_secao": "Estratégia de início simultâneo vs. sequencial"
+      },
+      {
+        "id": "icfer-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação da titulação agendada em intervalo definido (não deixada em aberto), com plano de próximo ajuste de dose documentado",
+        "origem_secao": "Seguimento de titulação"
+      },
+      {
+        "id": "icfer-funcao-renal-potassio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Função renal e potássio monitorizados após cada ajuste de dose de inibidor do SRAA/MRA, conforme protocolo",
+        "origem_secao": "Segurança da titulação"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
