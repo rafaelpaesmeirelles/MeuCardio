@@ -9,6 +9,8 @@ from app.models.audit import AuditLog
 from app.models.cmed import CmedApresentacao, CmedVersao
 from app.models.drug import Drug
 from app.services import cmed_precos
+from app.services.pricing.kairos_provider import load_snapshot as load_kairos_snapshot
+from app.services.pricing.kairos_provider import prescription_options_for
 
 router = APIRouter(prefix="/api/drugs", tags=["medicamentos"])
 
@@ -198,6 +200,7 @@ def sugerir_medicamentos(
                     "preco": cmed_precos.preco_pmc(linha.pmc_por_aliquota, uf_usada),
                     "cmed_publicado_em": versao.publicado_em,
                 })
+
             elif cmed_precos.eh_combinacao(linha.substancia_cmed):
                 # Combinação de dose fixa sem `Drug` clínico — a
                 # classificação de controlado (`classificar()`) só sabe ler
@@ -229,9 +232,51 @@ def sugerir_medicamentos(
                     "cmed_publicado_em": versao.publicado_em,
                 })
 
+    # A revista licenciada K@iros é a fonte mais recente de inteligência de
+    # mercado disponível ao prescritor. Ela entra como opção própria e
+    # explicitamente rotulada; não sobrescreve nem se mistura ao teto oficial
+    # CMED/ANVISA. O intervalo reflete literalmente as colunas PMC por ICMS da
+    # edição, pois a base ainda não atribui uma alíquota estadual sem fonte.
+    kairos_snapshot = load_kairos_snapshot()
+    for droga in drogas:
+        kairos = prescription_options_for(droga, snapshot=kairos_snapshot)
+        generico_normalizado = normalize_search_text(droga.generic_name)
+        for opcao in kairos["opcoes"]:
+            produto_normalizado = normalize_search_text(opcao.get("produto"))
+            if termo not in generico_normalizado and termo not in produto_normalizado:
+                continue
+            minimo = opcao["preco_minimo"]
+            maximo = opcao["preco_maximo"]
+            rotulo = (
+                f"R$ {minimo:,.2f}" if minimo == maximo
+                else f"R$ {minimo:,.2f} a R$ {maximo:,.2f}"
+            ).replace(",", "X").replace(".", ",").replace("X", ".")
+            candidatos.append({
+                "slug": droga.slug, "generic_name": droga.generic_name,
+                "brand_name": opcao.get("produto"), "manufacturer": opcao.get("laboratorio"),
+                "source": f"K@iros edição {kairos['edicao']} · competência {kairos['competencia']}",
+                "tem_conteudo_clinico": True, "cmed_apresentacao_id": None,
+                "apresentacao": opcao.get("apresentacao"), "apresentacao_cmed": None,
+                "ggrem": None, "registro": None, "substancia": droga.generic_name,
+                "preco": {"valor": None, "rotulo": rotulo},
+                "cmed_publicado_em": None,
+                "price_source": "kairos", "price_min": minimo, "price_max": maximo,
+                "price_reference": f"edição {kairos['edicao']} · competência {kairos['competencia']}",
+                "source_page": opcao.get("pagina_fonte"),
+            })
+
     unicos: dict[tuple, dict] = {}
     for item in candidatos:
-        if item["cmed_apresentacao_id"] is not None and not item["tem_conteudo_clinico"]:
+        if item.get("price_source") == "kairos":
+            # Cada apresentação K@iros tem preço próprio. Não condensar
+            # caixas/dosagens diferentes apenas porque compartilham marca e
+            # laboratório.
+            chave = (
+                "kairos_ap", item["slug"], normalize_search_text(item.get("brand_name")),
+                normalize_search_text(item.get("manufacturer")),
+                normalize_search_text(item.get("apresentacao")),
+            )
+        elif item["cmed_apresentacao_id"] is not None and not item["tem_conteudo_clinico"]:
             # Só CMED: cada apresentação (marca+laboratório+dose+embalagem) é
             # um candidato distinto — não existe um segundo passo (como
             # `/drugs/{slug}/apresentacoes`) para desdobrar depois, então a
@@ -246,9 +291,15 @@ def sugerir_medicamentos(
         if atual is None or str(item["source"]).startswith("CMED"):
             unicos[chave] = item
 
-    def ordem(item: dict) -> tuple[int, str, str]:
+    def ordem(item: dict) -> tuple[int, int, str, str]:
         nome = normalize_search_text(item.get("brand_name") or item["generic_name"])
-        return (0 if nome.startswith(termo) else 1, nome, normalize_search_text(item.get("manufacturer")))
+        fonte = 0 if item.get("price_source") == "kairos" else 1
+        return (
+            0 if nome.startswith(termo) else 1,
+            fonte,
+            nome,
+            normalize_search_text(item.get("manufacturer")),
+        )
 
     return sorted(unicos.values(), key=ordem)[:12]
 
@@ -482,6 +533,7 @@ def apresentacoes_comerciais(
     if not versao:
         return {
             "generic_name": d.generic_name, "uf": None, "cmed_publicado_em": None,
+            "kairos": prescription_options_for(d),
             "apresentacoes": [], "aviso": "Nenhuma lista da CMED foi importada ainda.",
         }
 
@@ -503,6 +555,7 @@ def apresentacoes_comerciais(
     return {
         "generic_name": d.generic_name, "uf": uf_usada, "cmed_versao_id": versao.id,
         "cmed_publicado_em": versao.publicado_em,
+        "kairos": prescription_options_for(d),
         "apresentacoes": apresentacoes,
         "aviso": None if apresentacoes else (
             "Sem apresentação com preço publicado pela CMED para esta substância — "

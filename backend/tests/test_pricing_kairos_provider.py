@@ -1,6 +1,11 @@
 from types import SimpleNamespace
 
-from app.services.pricing.kairos_provider import KairosProvider, load_snapshot, records_for_drug
+from app.services.pricing.kairos_provider import (
+    KairosProvider,
+    load_snapshot,
+    prescription_options_for,
+    records_for_drug,
+)
 
 
 class FakeDb:
@@ -62,3 +67,18 @@ def test_hospital_only_rows_without_pmc_do_not_generate_fabricated_values():
     assert all(item.price > 0 for item in observations)
     # Every observation comes from a literal cell present in the licensed snapshot.
     assert not any(item.metadata.get("estimated") for item in observations)
+
+
+def test_prescription_options_keep_kairos_separate_and_expose_literal_pmc_range():
+    d = drug(6, "Sacubitril/Valsartana", ["Neparvis"])
+
+    result = prescription_options_for(d)
+
+    assert result["fonte"] == "K@iros"
+    assert result["tipo_fonte"] == "inteligencia_de_mercado"
+    assert result["edicao"] == 453
+    assert result["competencia"] == "2026-08"
+    assert result["opcoes"]
+    assert all(option["preco_minimo"] <= option["preco_maximo"] for option in result["opcoes"])
+    assert all(option["precos_por_icms"] for option in result["opcoes"])
+    assert not any("uf" in option for option in result["opcoes"])
