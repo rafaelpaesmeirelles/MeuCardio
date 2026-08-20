@@ -8424,5 +8424,216 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-triagem-inicial-de-pericardite-aguda",
+    "condicao": "Suspeita inicial de pericardite aguda — diagnóstico e triagem de risco (ESC 2025)",
+    "resumo": "Roteiro de diagnóstico e estratificação de risco no primeiro contato com suspeita de pericardite aguda — contagem dos critérios adicionais que classificam definida/possível/improvável, pesquisa ativa das características de alto risco que indicam internação, e escolha da terapia de primeira linha, conforme a árvore de diagnóstico e triagem da diretriz ESC 2025 de miocardite e pericardite. Cenário de PRIMEIRO CONTATO diagnóstico, distinto do checklist de alta já existente, que pressupõe diagnóstico e tratamento já iniciados.",
+    "documento_origem": "fluxograma-pericardite-aguda-esc-2025",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, Adler Y, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis · European Heart Journal · 2025 · 46(40):3952-4041 · DOI: 10.1093/eurheartj/ehaf192 · PMID: 40878297",
+      "Imazio M, Brucato A, Cemin R, et al. A randomized trial of colchicine for acute pericarditis (ICAP) · New England Journal of Medicine · 2013 · 369(16):1522-1528 · PMID: 23992557"
+    ],
+    "itens": [
+      {
+        "id": "diag-avaliacao-inicial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação inicial completa realizada — história, exame físico, radiografia de tórax, biomarcadores, ECG e ecocardiograma (Classe I)",
+        "origem_secao": "Árvore de decisão: diagnóstico e triagem"
+      },
+      {
+        "id": "diag-criterios-adicionais",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Critérios adicionais pesquisados e contados — atrito pericárdico (clínico); depressão de PR ou supradesnivelamento difuso de ST no ECG (lembrando que o pericárdio é eletricamente silencioso, então alteração eletrocardiográfica implica inflamação miocárdica concomitante e obriga investigar miocardite associada); elevação de PCR; derrame pericárdico novo ou em piora, ou edema/realce tardio pericárdico à RM — para classificar como definida (mais de um critério), possível (um critério) ou improvável/afastada (nenhum)",
+        "origem_secao": "Os critérios adicionais que definem o diagnóstico"
+      },
+      {
+        "id": "diag-rm-se-possivel",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se classificada como pericardite possível (apenas um critério adicional), ressonância magnética cardíaca solicitada para documentar a inflamação (Classe I, nível B)",
+        "origem_secao": "Árvore de decisão: diagnóstico e triagem"
+      },
+      {
+        "id": "diag-caracteristicas-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Características de alto risco pesquisadas ativamente — maiores: febre acima de 38°C (HR 3,56), início subagudo (HR 3,97), derrame pericárdico grande acima de 20 mm ao ecocardiograma (HR 2,15), tamponamento cardíaco (HR 2,15), ausência de resposta a AAS/AINE após pelo menos 1 semana de tratamento (HR 2,50); menores: pericardite associada a miocardite, imunodepressão, trauma e uso de anticoagulante oral",
+        "origem_secao": "As características de alto risco que indicam internação"
+      },
+      {
+        "id": "diag-decisao-internacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Decisão registrada — presença de qualquer característica de alto risco: internação hospitalar para monitorização, tratamento e pesquisa etiológica (Classe I, nível B); ausência de qualquer característica de alto risco: tratamento ambulatorial empírico, sem pesquisa etiológica",
+        "origem_secao": "Árvore de decisão: diagnóstico e triagem"
+      },
+      {
+        "id": "diag-tratamento-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia de primeira linha iniciada conforme tolerância — AAS ou AINE em dose plena com inibidor de bomba de prótons, associado à colchicina (Classe I), com plano de desmame de ambos por 3 a 6 meses; se AAS/AINE contraindicados ou não tolerados, corticoide em dose baixa a média associado à colchicina, ou terapia tripla com corticoide, AINE e colchicina (Classe IIa), com desmame por pelo menos 6 meses",
+        "origem_secao": "Árvore de decisão: tratamento"
+      },
+      {
+        "id": "diag-restricao-exercicio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Restrição de exercício físico orientada — acompanha todos os ramos de conduta, independente da escolha terapêutica",
+        "origem_secao": "O que a árvore de tratamento não mostra"
+      },
+      {
+        "id": "diag-reavaliacao-resposta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "No caso ambulatorial sem pesquisa etiológica, reavaliação da resposta ao anti-inflamatório agendada — a própria resposta funciona como teste diagnóstico complementar",
+        "origem_secao": "As características de alto risco que indicam internação"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "avaliacao-diagnostica-por-imagem-da-pericardite-constritiva",
+    "condicao": "Avaliação diagnóstica por imagem da pericardite constritiva",
+    "resumo": "Os cortes ecocardiográficos e tomográficos/RM que sustentam o diagnóstico de constrição, com o parâmetro que separa constrição de restrição e as duas armadilhas que a própria fonte marca — espessura pericárdica normal não exclui, e nenhum achado isolado fecha diagnóstico —, do posicionamento internacional 2024 de imagem multimodal pericárdica.",
+    "documento_origem": "pericardite-constritiva-e-tamponamento-criterios-numericos-por-imagem-2024",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Klein AL, Wang TKM, Cremer PC, Abbate A, Adler Y, et al. Pericardial Diseases: International Position Statement on New Concepts and Advances in Multimodality Cardiac Imaging. JACC Cardiovasc Imaging. 2024 Aug;17(8):937-988. DOI: 10.1016/j.jcmg.2024.04.010. PMID: 39111992 — texto integral em acesso aberto (PMC12156183), endossado pelo ACC Imaging Council e pela Society for Cardiovascular Magnetic Resonance; tabelas de recomendação e de critérios conferidas em 01/08/2026"
+    ],
+    "itens": [
+      {
+        "id": "constr-quatro-criterios-mayo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Os quatro critérios da Mayo pesquisados — variação respiratória do fluxo mitral com predomínio da onda E; desvio septal respirofásico por interdependência ventricular; reversão telediastólica expiratória no fluxo venoso hepático; velocidade e′ medial elevada",
+        "origem_secao": "Pericardite constritiva — os quatro critérios da Mayo"
+      },
+      {
+        "id": "constr-cortes-numericos",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Cortes numéricos conferidos — relação E/A mitral > 0,8; e′ medial mitral > 8 cm/s (normal ou supranormal); relação de reversão telediastólica expiratória na veia hepática > 0,8; variação respirofásica da onda E mitral > 25%; variação respirofásica tricúspide > 40%; espessura pericárdica (TC e mapa T1) > 3 mm — nenhum critério isolado é diagnóstico, conforme a própria tabela de critérios adverte",
+        "origem_secao": "Pericardite constritiva — os quatro critérios da Mayo"
+      },
+      {
+        "id": "constr-annulus-reversus",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Presença de annulus reversus pesquisada — e′ medial MAIOR que e′ lateral, achado que inverte a relação habitual",
+        "origem_secao": "Pericardite constritiva — os quatro critérios da Mayo"
+      },
+      {
+        "id": "constr-gradiente-e-medial",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "e′ medial usada como gradiente contínuo para o diagnóstico diferencial — e′ > 8 cm/s aponta constrição; e′ entre 6 e 8 cm/s com movimento septal respirofásico aponta fisiologia mista; e′ < 6 cm/s, sobretudo sem desvio septal respirofásico, aponta cardiomiopatia restritiva",
+        "origem_secao": "O parâmetro que separa constrição de restrição"
+      },
+      {
+        "id": "constr-espessura-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrado que espessura pericárdica normal NÃO exclui constrição — em série citada pela fonte, a espessura era normal em 18% dos casos com constrição comprovada em cirurgia",
+        "origem_secao": "Duas armadilhas que o próprio documento marca"
+      },
+      {
+        "id": "constr-forma-efusivo-constritiva",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Quando aplicável (paciente que drena bem e não melhora), hipótese de forma efusivo-constritiva considerada — diagnóstico hemodinâmico definido pela falha da pressão atrial direita em cair 10 mmHg, ou em mais de 50%, após a pericardiocentese, ou pela persistência do padrão Doppler de constrição; antes da punção, a persistência inesperada da onda 'V' no registro de pressão atrial direita levanta a suspeita",
+        "origem_secao": "Forma efusivo-constritiva: o diagnóstico é hemodinâmico"
+      },
+      {
+        "id": "constr-conduta-pre-cirurgica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Terapia anti-inflamatória iniciada como tratamento de primeira linha na constrição inflamatória e na forma efusivo-constritiva, antes de indicar cirurgia",
+        "origem_secao": "Pericardiectomia — o que a recomendação proíbe"
+      },
+      {
+        "id": "constr-tipo-pericardiectomia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se pericardiectomia indicada (constrição não inflamatória, ou inflamatória com falha à terapia anti-inflamatória), confirmado que o encaminhamento é para a técnica RADICAL (pericárdio inteiro mais esqueletização dos nervos frênicos) — a pericardiectomia PARCIAL (anterior e/ou diafragmática) é explicitamente 'Not recommended' pela fonte",
+        "origem_secao": "Pericardiectomia — o que a recomendação proíbe"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "drenagem-pericardica-na-pericardite-purulenta-bacteriana",
+    "condicao": "Suspeita ou diagnóstico de pericardite purulenta bacteriana — decisão de drenagem",
+    "resumo": "Confirmação de que a combinação de antibiótico e drenagem mecânica está sendo tratada como obrigatória (não apenas anti-inflamatório) na pericardite purulenta bacteriana, com a decisão entre pericardiocentese e drenagem cirúrgica (janela pericárdica) nos casos loculados ou de difícil drenagem — cenário de curso fulminante e mortalidade muito mais alta que as demais formas de pericardite, distinto dos checklists de pericardite viral/idiopática e de tamponamento já existentes.",
+    "documento_origem": "pericardite-purulenta-bacteriana-diagnostico-e-tratamento",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mortalidade de 30-50% (mais alta com tamponamento) e associação com pneumonia/empiema (93,1% com pneumonia precedente, 66,6% com empiema) conferidas por busca cruzada em múltiplas fontes secundárias concordantes (Revista Portuguesa de Cardiologia, American Journal of Medicine, JACC Case Reports 2024, séries de caso indexadas em PMC) em 06/08/2026 — os números de mortalidade e associação com pneumonia vêm de séries históricas amplamente citadas na literatura secundária revisada; não foi possível fixar nesta sessão um único artigo primário verificável por PMID para cada número isolado, o que é sinalizado como VERIFICAÇÃO HUMANA NECESSÁRIA antes de uso como estatística fechada em material formal."
+    ],
+    "itens": [
+      {
+        "id": "purul-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pista epidemiológica pesquisada ativamente diante de suspeita de pericardite purulenta — pneumonia precedente (descrita em cerca de 93% dos casos em séries históricas) e/ou empiema pleural concomitante (cerca de dois terços); outras vias consideradas: disseminação hematogênica, extensão por contiguidade, trauma e cirurgia intratorácica prévia (VERIFICAÇÃO HUMANA NECESSÁRIA quanto aos percentuais exatos, conforme nota de verificação do documento de origem)",
+        "origem_secao": "Como o paciente chega — a pista epidemiológica mais importante"
+      },
+      {
+        "id": "purul-pericardiocentese-diagnostica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pericardiocentese realizada como método diagnóstico definitivo (não apenas terapêutico), com Gram e cultura do líquido pericárdico enviados para identificar o agente causal",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "purul-eco-primeira-linha",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma realizado como exame de imagem de primeira linha — tanto para o diagnóstico inicial (derrame, sinais de tamponamento, loculação) quanto para monitorizar a resposta ao tratamento",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "purul-antibiotico-empirico-imediato",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antibioticoterapia empírica iniciada de imediato, sem aguardar o resultado da cultura, com plano de ajuste assim que o agente causal for identificado",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "purul-drenagem-obrigatoria",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Drenagem pericárdica mecânica confirmada como parte obrigatória do tratamento, não opcional — sem drenagem, a evolução tende inexoravelmente a piorar",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "purul-duracao-antibiotico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Duração do antibiótico planejada para 4 a 6 semanas",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "purul-indicacao-janela-cirurgica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se derrame loculado ou de difícil drenagem por pericardiocentese isolada, avaliada indicação de drenagem cirúrgica (janela pericárdica); fibrinólise intrapericárdica considerada apenas como estratégia complementar descrita em relatos de caso",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "purul-pesquisa-foco-pulmonar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Foco pulmonar (pneumonia/empiema) investigado e tratado em conjunto com o pericárdio, não isoladamente — a origem pulmonar é a mais comum",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
