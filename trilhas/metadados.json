@@ -22832,5 +22832,425 @@
         "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
       }
     ]
+  },
+  {
+    "slug": "trilha-arritmias-e-doenca-eletrica-no-atleta",
+    "titulo": "Arritmias e Doença Elétrica no Atleta: da Fibrilação Atrial às Canalopatias e Dispositivos",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Cobrir o espectro de arritmias no atleta que a primeira trilha desta pasta não aprofunda: fibrilação atrial do endurance, canalopatias hereditárias (QT longo, CPVT), síndrome de Brugada, bradiarritmias fisiológicas versus patológicas, e a decisão sobre participação esportiva no portador de CDI/marca-passo — sair sabendo quando restringir o esporte por doença elétrica e quando a restrição não é justificada pela evidência.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "bradicardia-bloqueio-conducao-atleta",
+        "por_que": "Ponto de partida: bradicardia sinusal e certos graus de bloqueio de condução são achados esperados e fisiológicos no atleta bem treinado — este documento estabelece a fronteira entre o esperado e o que exige investigação, antes de entrar nas arritmias genuinamente patológicas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-atleta-endurance-hrs-2024",
+        "por_que": "A arritmia sustentada mais comum ligada ao próprio treinamento: relação não linear entre volume de endurance e risco de FA, e por que FA no atleta nunca deve ser rotulada automaticamente como 'isolada' sem investigação."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "canalopatias-qt-longo-cpvt-esporte-retorno",
+        "por_que": "Diferente da FA do endurance, as canalopatias (QT longo, taquicardia ventricular polimórfica catecolaminérgica) são doença elétrica hereditária primária — a decisão de retorno ao esporte segue lógica de risco genético, não de volume de treinamento."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "brugada-participacao-esportiva-estratificacao-risco",
+        "por_que": "Segunda canalopatia de alto peso na estratificação de risco de morte súbita no atleta, com abordagem de participação esportiva própria, distinta do QT longo/CPVT da etapa anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cdi-sicd-participacao-esportiva-atleta",
+        "por_que": "Fecha a trilha na pergunta prática que decorre de qualquer uma das condições anteriores quando um desfibrilador já foi implantado: o portador de CDI (transvenoso ou subcutâneo) pode voltar a competir, e sob quais condições."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-sincope-no-idoso-diagnostico-diferencial-biomarcadores-e-risco-de-queda",
+    "titulo": "Síncope no idoso: diagnóstico diferencial ampliado, biomarcadores e o desfecho da queda",
+    "tema": "Síncope",
+    "objetivo": "Sair sabendo por que a síncope no idoso é um problema diagnóstico à parte — pela amnésia frequente do episódio e pela sobreposição com crise epiléptica e com gatilhos situacionais —, aplicar regras de decisão clínica e biomarcadores para objetivar o risco na emergência, usar o escore ROMEO para decidir quando pedir ecocardiograma, e reconhecer que a fratura por queda é um desfecho com risco próprio, independente da causa da síncope ter sido esclarecida.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-no-idoso-armadilhas-diagnosticas-e-diferencial-com-queda-inexplicada",
+        "por_que": "Abre a trilha pela premissa que quebra no idoso: ele frequentemente não relata com clareza ter perdido a consciência, e as diretrizes recomendam investigar queda inexplicada com o mesmo rigor de síncope inexplicada. Essa incerteza de relato é o motivo pelo qual o diferencial precisa ser mais cuidadoso nas próximas duas etapas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sincope-versus-crise-epileptica-diagnostico-diferencial-e-assistolia-ictal-esc-2018",
+        "por_que": "A confusão pós-ictal e a amnésia do episódio — que no idoso já são mais prováveis por si só, como a etapa anterior mostrou — tornam a crise epiléptica o diferencial mais facilmente confundido com síncope. A Tabela 10 da ESC 2018 fecha esse ponto com critérios objetivos (mioclonia, mordedura de língua, duração da confusão)."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+        "por_que": "Depois de afastar crise epiléptica, o segundo refinamento do diferencial é identificar gatilho situacional — nictúria, esforço evacuatório e tosse são especialmente comuns no idoso — porque cada mecanismo orienta uma conduta prática diferente, não apenas rotular como 'reflexa' de forma genérica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "regras-de-decisao-clinica-na-sincope-de-emergencia-sfsr-csrs-egsys-comparadas",
+        "por_que": "Com a causa provável mais bem delimitada pelas três etapas anteriores, a trilha passa da precisão diagnóstica para a objetivação do risco: comparar SFSR, Canadian Syncope Risk Score e EGSyS lado a lado mostra por que nenhuma se tornou universal e como escolher entre elas na emergência."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "biomarcadores-cardiacos-nt-probnp-e-troponina-na-estratificacao-de-risco-da-sincope",
+        "por_que": "Aprofunda um único componente das regras de decisão da etapa anterior — a troponina do CSRS — mostrando o que NT-proBNP acrescenta isoladamente e quando combinado ao escore já validado, refinando a estratificação além do que a regra clínica sozinha oferece."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia",
+        "por_que": "As regras de decisão e os biomarcadores das duas etapas anteriores estimam risco de evento adverso geral, mas não respondem a uma pergunta prática específica e recorrente no idoso: pedir ecocardiograma ou não. O ROMEO é a única ferramenta desta base dedicada a essa decisão pontual."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "sincope-e-risco-de-fratura-por-queda-o-que-os-estudos-de-coorte-mostram",
+        "por_que": "Fecha a trilha lembrando que todo o percurso diagnóstico anterior não esgota o cuidado: mesmo quando a causa é esclarecida e o risco de evento cardíaco é baixo, os dois estudos de coorte mostram que a síncope carrega risco próprio de fratura por queda no pós-alta — desfecho que, no idoso, muitas vezes é o que efetivamente traz o paciente de volta ao sistema de saúde."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-pulmonar-cteph-operavel-do-cateterismo-a-decisao-cirurgica",
+    "titulo": "Hipertensão pulmonar: CTEPH operável — do cateterismo cardíaco direito à decisão do Heart Team",
+    "tema": "Hipertensão pulmonar",
+    "objetivo": "Sair sabendo interpretar corretamente a medida hemodinâmica que confirma o diagnóstico de CTEPH, aplicar os critérios que definem operabilidade e a lógica da decisão em Heart Team especializado, situar os números reais de sobrevida que sustentam a endarterectomia como tratamento potencialmente curativo, e conduzir a anticoagulação e o seguimento por biomarcador depois da decisão terapêutica.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cateterismo-cardiaco-direito-na-hipertensao-pulmonar-tecnica-armadilhas-e-seguranca",
+        "por_que": "Ponto de partida da trilha: todo critério de operabilidade e todo dado de sobrevida das etapas seguintes depende de um valor de PAPm/POCP/RVP obtido por cateterismo — este documento mostra como a técnica (zero do transdutor, medida da POCP) pode reclassificar o fenótipo hemodinâmico sem que a fisiologia tenha mudado, e por isso vem antes de qualquer decisão clínica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+        "por_que": "Com a técnica de medida já entendida, esta etapa situa a CTEPH como grupo 4 — definição, incidência, exame de rastreamento (cintilografia V/Q) e confirmação — e já introduz o transplante pulmonar como desfecho de reserva, que reaparece no fim da trilha quando nenhuma via terapêutica anterior resolve."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+        "por_que": "O núcleo da trilha: por que a diretriz manda avaliar TODO paciente com CTEPH para endarterectomia pulmonar antes de qualquer terapia farmacológica, e por que essa decisão não é binária — exige Heart Team especializado avaliando extensão anatômica, risco cirúrgico individual e comorbidade, não um corte automático de exame de imagem."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016",
+        "por_que": "Depois de entender COMO se decide operar, esta etapa traz os números reais que justificam a decisão: registro prospectivo de 679 pacientes, comparando sobrevida entre os 404 operados e os 275 não operados na mesma coorte — é o dado concreto por trás da afirmação de que a endarterectomia é potencialmente curativa."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-na-hipertensao-arterial-pulmonar-idiopatica-compera-versus-reveal",
+        "por_que": "Contraste deliberado: na CTEPH (grupo 4, já vista nesta trilha) a anticoagulação vitalícia é consensual; este documento mostra que a mesma pergunta na HAP idiopática (grupo 1) carrega quase 30 anos de evidência só observacional, com COMPERA e REVEAL chegando a conclusões opostas — ensina a não generalizar a certeza de manejo de um grupo etiológico para outro."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "nt-probnp-diferenca-minima-importante-pah-ph-ild-2026",
+        "por_que": "Fecha a trilha no seguimento longitudinal: depois de diagnosticar, decidir operabilidade, tratar e definir a política de anticoagulação, esta etapa ensina a interpretar a queda do NT-proBNP ao longo do acompanhamento — que magnitude de redução é clinicamente relevante, e não apenas um número que caiu."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-arritmias-tecnicas-de-ablacao-alem-do-endocardico-padrao",
+    "titulo": "Arritmias: quando o endocárdico padrão não basta — mecanismos curáveis, abordagem epicárdica e a nova energia de ablação",
+    "tema": "Arritmias",
+    "objetivo": "Sair sabendo reconhecer dois mecanismos de taquicardia ventricular idiopática curáveis por ablação simples (fascicular sensível a verapamil e reentrada de ramo), identificar quando a abordagem endocárdica falha e o substrato exige acesso epicárdico — tanto na TV estrutural chagásica/não isquêmica quanto no próprio substrato eletricamente anormal da síndrome de Brugada —, e situar a ablação por campo pulsado como a energia nova que já se aplica a esse espectro.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "taquicardia-ventricular-fascicular-belhassen-diagnostico-resposta-ao-verapamil-e-ablacao",
+        "por_que": "Entrada pelo mecanismo mais simples e mais frequentemente esquecido: uma TV de QRS relativamente estreito, em coração estruturalmente normal, que responde a verapamil e cura com ablação pontual do fascículo — a exceção que confirma por que nem toda TV exige mapeamento extenso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "taquicardia-ventricular-por-reentrada-de-ramo-diagnostico-ablacao-do-ramo-direito-e-resultado",
+        "por_que": "Segundo mecanismo idiopático curável, mas de lógica oposta ao fascicular: o circuito usa o próprio sistema de condução (ramo direito/esquerdo), quase sempre em cardiopatia estrutural de base, e se resolve ablando o ramo direito — prepara a virada da trilha para quando o substrato deixa de ser 'simples'."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ablacao-epicardica-de-taquicardia-ventricular-na-cardiomiopatia-chagasica-e-nao-isquemica",
+        "por_que": "Do mecanismo pontual para o substrato estrutural extenso: na cardiomiopatia chagásica e não isquêmica o circuito costuma ser subepicárdico, e o endocárdico isolado falha — é aqui que a decisão de acesso epicárdico entra na prática, com seus riscos próprios (pericárdico, coronário)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "ablacao-do-substrato-epicardico-na-sindrome-de-brugada-nademanee-e-pappone",
+        "por_que": "Mesma técnica de acesso epicárdico, aplicada a uma doença de natureza diferente: não é cicatriz de cardiopatia estrutural, é o substrato eletricamente anormal da via de saída do VD que sustenta o padrão de Brugada — mostra que a abordagem epicárdica não é exclusiva de TV pós-infarto/chagásica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ablacao-por-campo-pulsado-em-taquicardia-ventricular-e-extrassistole-idiopatica",
+        "por_que": "Fecha a trilha com a energia nova que atravessa todo o espectro visto — da TV idiopática pontual ao substrato epicárdico extenso —, com o potencial (e as limitações ainda em avaliação) de mudar o perfil de segurança dessas ablações mais complexas."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-saude-mental-depressao-e-solidao-ao-longo-da-trajetoria-da-insuficiencia-cardiaca",
+    "titulo": "Saúde mental e cardiologia: depressão e solidão ao longo da trajetória da insuficiência cardíaca — do risco de adoecer à reinternação",
+    "tema": "Saúde mental e cardiologia",
+    "objetivo": "Sair sabendo que a depressão e o isolamento social atravessam toda a trajetória da insuficiência cardíaca por um ângulo ainda não coberto neste tema: como fator de risco para o desenvolvimento da própria doença, como marcador combinado com a fragilidade no idoso, no comparativo direto entre ativação comportamental e antidepressivo já na IC avançada, na solidão percebida que prediz reinternação independente da gravidade cardíaca, e na intervenção diádica cuidador-paciente que responde estruturalmente a essa cadeia.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "depressao-como-fator-de-risco-para-insuficiencia-cardiaca-incidente-metanalise-de-2-6-milhoes",
+        "por_que": "Abre a trilha no ponto mais precoce da trajetória: depressão, isoladamente, aumenta o risco de uma pessoa SEM insuficiência cardíaca desenvolver a doença no futuro (HR 1,25, metanálise de 2,6 milhões de participantes) — pergunta de rastreio em atenção primária, distinta da depressão pós-infarto ou do tratamento na IC já instalada, que as outras trilhas deste tema já cobrem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sobreposicao-de-fragilidade-e-depressao-como-marcador-de-risco-cardiovascular",
+        "por_que": "Uma vez estabelecido que depressão eleva o risco de IC, este passo mostra como esse risco se amplifica no idoso quando depressão e fragilidade coexistem — a sobreposição das duas eleva a razão de prevalência de doença cardiovascular a 4,86, bem acima de cada condição isolada, justificando rastrear as duas juntas na população mais vulnerável à IC."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ativacao-comportamental-versus-antidepressivo-na-depressao-do-paciente-com-insuficiencia-cardiaca-avancada",
+        "por_que": "Passa do risco para o manejo: no paciente que já tem IC avançada, este é o primeiro ensaio da base a comparar ativação comportamental (psicoterapia estruturada) contra antidepressivo cabeça a cabeça, com análise de adesão — a decisão terapêutica concreta que sucede o reconhecimento de risco dos dois passos anteriores."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "solidao-percebida-e-reinternacao-na-insuficiencia-cardiaca-cronica",
+        "por_que": "Desloca o foco do tratamento farmacológico/psicoterápico para um fator psicossocial de curso — a solidão percebida — que prediz reinternação por IC crônica mesmo sem diferença objetiva de gravidade cardíaca, mostrando que a via de risco não se esgota no diagnóstico psiquiátrico formal tratado no passo anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "intervencoes-diadicas-cuidador-paciente-e-apoio-ao-cuidador-na-insuficiencia-cardiaca",
+        "por_que": "Fecha a trilha com a resposta estrutural às duas lacunas expostas pelos passos anteriores — a exaustão do cuidador que sustenta o autocuidado diário e a solidão do paciente que prediz reinternação: intervenção diádica que trata paciente e cuidador como unidade de cuidado, com meta-regressão mostrando quais desenhos de programa de fato funcionam."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-farmacologia-qt-longo-induzido-por-farmaco-mecanismo-e-gatilhos",
+    "titulo": "Farmacologia do QT longo induzido por fármaco: do mecanismo eletrofisiológico ao gatilho no consultório e na interconsulta",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo explicar por que um fármaco prolonga o QT em nível de canal iônico, reconhecer que o risco varia entre um antiarrítmico usado de propósito para isso e um fármaco de outra especialidade que o faz como efeito colateral, e responder com segurança às duas interconsultas mais comuns sobre QT que chegam ao cardiologista — de fora da cardiologia (opioide, oncologia) e de dentro dela (escolha entre dois antiarrítmicos IV de risco distinto).",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipocalcemia-grave-e-prolongamento-do-qt-mecanismo-de-fase-2-e-reversao-rapida-com-calcio",
+        "por_que": "Abre a trilha pelo mecanismo eletrofisiológico, não pelo fármaco: mostra que o QT pode prolongar por vias distintas (aqui, atraso da fase 2/platô por queda da corrente de cálcio tipo L, diferente do bloqueio de I_Kr na fase 3 que domina o restante da trilha) — vocabulário de fase do potencial de ação que as próximas etapas pressupõem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "indapamida",
+        "por_que": "Primeiro caso de bloqueio de I_Kr propriamente dito, e o mais despercebido: um diurético tiazídico-símile de uso ambulatorial corriqueiro que prolonga QT por mecanismo direto E por hipocalemia — mostra que o risco não está reservado a fármacos 'exóticos', ele já está na prescrição de rotina do próprio cardiologista."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ibutilida",
+        "por_que": "Vira a lógica ao contrário: aqui o bloqueio de canal que prolonga o QT não é efeito colateral a evitar, é o próprio mecanismo terapêutico — um antiarrítmico IV hospitalar usado deliberadamente para reverter FA/flutter recente, com monitorização de QT como parte esperada, não como alarme."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "vernakalanto",
+        "por_que": "Contraste direto com a etapa anterior, mesma indicação (cardioversão química da FA de início recente): um antiarrítmico IV atrial-seletivo, com menor efeito sobre o miocárdio ventricular e por isso menor risco proarrítmico — a etapa que ensina a escolher entre os dois pelo perfil de risco, não só pela eficácia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "metadona-e-prolongamento-do-intervalo-qt",
+        "por_que": "Primeira interconsulta de fora da cardiologia: um opioide de uso crônico (dependência ou dor) cujo risco de QT é dose-dependente mas sem limiar totalmente seguro — o cenário clássico em que outra especialidade pede ao cardiologista para 'liberar o QT', exigindo tudo que as etapas 1 a 4 já ensinaram sobre mecanismo e gradiente de risco."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-menina-revumenibe-ziftomenibe-e-prolongamento-do-qtc",
+        "por_que": "Fecha a trilha com a interconsulta mais nova e mais complexa — a cardio-oncologia: dois inibidores da mesma classe (revumenibe e ziftomenibe) com risco de QTc marcadamente diferente entre si, obrigando a mesma leitura comparativa de risco já treinada no par ibutilida/vernakalanto, agora aplicada a uma classe de fármaco lançada nos últimos anos."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-perioperatorio-algoritmo-aha-acc-2024-condicao-por-condicao",
+    "titulo": "Perioperatório: o algoritmo AHA/ACC 2024 condição por condição — da triagem à decisão terapêutica",
+    "tema": "Perioperatório",
+    "objetivo": "Sair sabendo percorrer o algoritmo integrado da AHA/ACC 2024 na ordem em que ele de fato é aplicado — da triagem entre emergência cirúrgica, condição cardíaca aguda e modificador de risco, pela decisão de dosar biomarcador, até as árvores específicas para insuficiência cardíaca, valvopatia, fibrilação atrial e timing de PCI/DAPT antes de cirurgia não cardíaca.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024",
+        "por_que": "Abre a trilha pela visão geral da diretriz — a abordagem escalonada que evita investigação cardiovascular indiscriminada e organiza toda a sequência de decisão que os próximos passos detalham condição a condição."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "condicoes-cardiacas-agudas-e-modificadores-de-risco-aha-acc-2024-arvore",
+        "por_que": "Aplica o primeiro corte do algoritmo, antes de qualquer escore: separar emergência cirúrgica, condição cardíaca aguda que pode exigir pausa, e modificador de risco que muda o planejamento sem impedir a cirurgia — a bifurcação inicial de que dependem todas as árvores seguintes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "biomarcadores-preoperatorios-bnp-ntprobnp-troponina-arvore-de-decisao",
+        "por_que": "Uma vez triado o paciente estável mas com modificador de risco, decide quando medir BNP/NT-proBNP ou troponina e como o limiar da AHA/ACC 2024 integra o resultado à investigação — o degrau seguinte da mesma abordagem escalonada do passo 1."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-preoperatorio-eco-gdmt-sglt2-arvore-aha-acc-2024",
+        "por_que": "Percorre a primeira árvore de doença estrutural específica da diretriz — insuficiência cardíaca, o modificador de risco mais dependente de biomarcador e função ventricular —, decidindo entre IC estável e descompensada e o manejo de GDMT/SGLT2 antes da cirurgia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "valvopatia-grave-cirurgia-nao-cardiaca-arvore-aha-acc-2024",
+        "por_que": "Aplica a segunda árvore de doença estrutural da diretriz — valvopatia moderada/grave —, cujo risco a própria AHA/ACC 2024 reconhece que RCRI e Gupta MICA não capturam, reforçando por que cada condição precisa de árvore própria em vez de um escore único."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-perioperatoria-pos-operatoria-arvore-aha-acc-2024",
+        "por_que": "Move de doença estrutural para arritmia, aplicando a mesma lógica de árvore específica à FA pré-existente estável versus FA nova pós-operatória, com decisão de controle de frequência/ritmo e anticoagulação."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "pci-stent-dapt-timing-cirurgia-nao-cardiaca-arvore-aha-acc-2024",
+        "por_que": "Fecha a trilha na decisão terapêutica mais frequente do dia a dia perioperatório — timing de cirurgia não cardíaca após PCI/stent e manejo de DAPT —, reunindo tempo de PCI, tipo de stent e risco de sangramento versus trombose que os passos anteriores prepararam o terreno para decidir."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-geral-nutricao-emergente-ultraprocessados-adocantes-tmao-e-jejum-intermitente",
+    "titulo": "Geral: nutrição emergente — ultraprocessados, adoçantes, TMAO e jejum intermitente na pergunta do consultório",
+    "tema": "Geral",
+    "objetivo": "Sair sabendo responder com números às perguntas de consultório sobre exposições dietéticas modernas e controversas — carne processada, alimento ultraprocessado, adoçante artificial, xilitol, TMAO derivado da colina, microplástico em placa aterosclerótica e jejum intermitente —, e distinguir associação observacional robusta de sinal mecanístico preliminar e de resumo de congresso ainda não publicado em periódico revisado por pares.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "carne-vermelha-e-carne-processada-e-risco-cardiovascular",
+        "por_que": "Abre a trilha pela pergunta mais clássica de consultório sobre dieta e risco cardiovascular, estabelecendo a distinção metodológica entre carne vermelha in natura e carne processada que orienta a leitura dos passos seguintes, mais recentes e menos consolidados."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "alimento-ultraprocessado-e-risco-cardiovascular-coorte-nutrinet-sante",
+        "por_que": "Amplia o ângulo do passo anterior da categoria de alimento (carne) para a classificação NOVA de processamento industrial, que testa se o grau de processamento prediz risco cardiovascular além do que sódio, açúcar e gordura saturada já capturam."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "adocantes-artificiais-e-risco-cardiovascular-coorte-nutrinet-sante",
+        "por_que": "Detalha, dentro do universo ultraprocessado do passo anterior, o aditivo mais recomendado como substituto do açúcar — testando na mesma coorte francesa se a troca de açúcar por adoçante é neutra ou tem risco cardiovascular próprio."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "xilitol-e-risco-cardiovascular-protrombotico-metabolomica-e-mecanismo-plaquetario",
+        "por_que": "Aprofunda o adoçante artificial do passo anterior com um desenho mais mecanístico — metabolômica não direcionada e ativação plaquetária —, complementando a associação epidemiológica ampla do estudo anterior com evidência de mecanismo biológico direto para uma molécula específica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "metabolismo-microbiano-intestinal-da-fosfatidilcolina-tmao-e-risco-cardiovascular",
+        "por_que": "Fecha o par mecanístico do passo anterior mostrando, num desenho controlado com desafio alimentar e supressão da microbiota por antibiótico, como a mesma linha de pesquisa em metabolômica plasmática já havia demonstrado esse tipo de mecanismo antes, para outro metabólito — o TMAO derivado da colina da dieta."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "microplasticos-e-nanoplasticos-em-placa-ateromatosa-e-risco-cardiovascular",
+        "por_que": "Estende a pergunta 'o que está na minha comida' para além do metabolismo microbiano dos passos anteriores — mede, pela primeira vez em humanos, partícula plástica dentro da própria placa aterosclerótica e associa isso a desfecho clínico no seguimento."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "jejum-intermitente-restricao-de-tempo-alimentar-e-risco-cardiovascular",
+        "por_que": "Fecha a trilha invertendo o eixo dos seis passos anteriores — de 'o que' o paciente come para 'quando' come —, e modela como separar, na prática de consultório, o dado que já circula na imprensa leiga (resumo de congresso) do artigo revisado por pares publicado depois pelo mesmo grupo."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-do-esporte-canalopatias-e-cardiomiopatias-arritmogenicas",
+    "titulo": "Cardiologia do Esporte: canalopatias, cardiomiopatia arritmogênica e o atleta com CDI",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Sair sabendo estratificar risco e decidir participação esportiva no espectro das doenças arritmogênicas do atleta: distinguir achados estruturais/elétricos comuns e em geral benignos (bradicardia do treinamento, hipertrabeculação, prolapso mitral) do fenótipo arrítmico que exige investigação, reconhecer cardiomiopatia arritmogênica e as duas principais canalopatias (QT longo/CPVT e Brugada) desencadeadas ou agravadas pelo exercício, e saber conduzir a participação esportiva no atleta que já é portador de CDI ou S-ICD.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "bradicardia-bloqueio-conducao-atleta",
+        "por_que": "Ponto de entrada da trilha pelo achado mais frequente e, na maioria das vezes, mais benigno: bradicardia sinusal e pausas ao Holter são adaptação esperada ao treinamento de endurance, e este documento estabelece o princípio — que se repete nas próximas etapas — de que número isolado não define doença do nó sinusal ou distúrbio de condução relevante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertrabeculacao-nao-compactacao-atleta",
+        "por_que": "Segundo achado comum de \"zona cinzenta\", agora de imagem: trabeculações proeminentes do ventrículo esquerdo preenchem critérios morfológicos de não compactação em quase um terço dos atletas de alto rendimento, sem que isso configure cardiomiopatia — mesma lógica da etapa anterior, aplicada a outro exame."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "prolapso-mitral-arritmico-atleta-risco-esporte",
+        "por_que": "Primeira etapa em que um achado estrutural extremamente comum (prolapso mitral) deixa de ser \"apenas adaptação ou variante\" e passa a exigir reconhecimento de um subgrupo com fenótipo arrítmico real — a ponte entre os achados benignos das etapas 1-2 e as doenças arritmogênicas propriamente ditas das etapas seguintes."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte",
+        "por_que": "Já é doença estrutural com risco arrítmico estabelecido, e não apenas um achado a diferenciar: no atleta, em especial na doença relacionada a PKP2, o exercício de endurance intenso acelera a progressão e aumenta o risco de arritmia ventricular — inverte a lógica das etapas anteriores, em que o exercício era o contexto do achado, não um fator que piora a doença."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "canalopatias-qt-longo-cpvt-esporte-retorno",
+        "por_que": "Sai do terreno estrutural para o elétrico puro: QT longo e CPVT ocorrem em coração estruturalmente normal, e no CPVT o próprio exercício é o gatilho direto da arritmia, não apenas um fator de risco — a decisão de retorno ao esporte passa a depender de genótipo, adesão terapêutica e caracterização do gatilho, não de imagem."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "brugada-participacao-esportiva-estratificacao-risco",
+        "por_que": "Segunda canalopatia da trilha, com uma armadilha diferente da do QT longo/CPVT: um padrão eletrocardiográfico de Brugada isolado, achado com frequência em triagem de rotina, não equivale a síndrome clínica nem implica proibição automática — fecha o bloco de doenças primariamente elétricas antes da etapa final, sobre quem já foi tratado com dispositivo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cdi-sicd-participacao-esportiva-atleta",
+        "por_que": "Fecha a trilha no desfecho prático comum a boa parte dos diagnósticos das etapas 3 a 6: quando a estratificação de risco de ACM, canalopatia ou fenótipo arrítmico já resultou em implante de CDI ou S-ICD, a presença do dispositivo não deve ser usada, isoladamente, como motivo de desqualificação esportiva universal — a decisão volta a depender da doença de base e do fenótipo, não do dispositivo em si."
+      }
+    ]
   }
 ]

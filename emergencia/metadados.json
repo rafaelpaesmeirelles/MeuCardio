@@ -876,5 +876,17 @@
       "falha-aguda-de-teer-mitral-com-choque-ou-edema-pulmonar"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-de-kounis-sca-alergica",
+    "titulo": "Síndrome de Kounis — SCA de causa alérgica/anafilática",
+    "gatilho": "Dor torácica, alteração de ECG ou instabilidade hemodinâmica durante ou logo após reação alérgica/anafilática (picada de inseto, contraste iodado, antibiótico, AINE, ou hipersensibilidade a stent coronariano)",
+    "ordem": 121,
+    "documento_slug": "sindrome-de-kounis-sindrome-coronariana-aguda-alergica",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "sindrome-coronariana-aguda"
+    ],
+    "review_status": "revisado"
   }
 ]

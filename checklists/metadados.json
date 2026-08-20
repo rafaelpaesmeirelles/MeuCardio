@@ -3714,5 +3714,1834 @@
         "origem_secao": "Extensão aberta (OLE) — dados de longo prazo"
       }
     ]
+  },
+  {
+    "slug": "alta-apos-cirurgia-de-revascularizacao-do-miocardio-cabg",
+    "condicao": "Alta após cirurgia de revascularização do miocárdio (CABG)",
+    "resumo": "O que checar antes de dar alta ao paciente submetido a cirurgia de revascularização do miocárdio (ponte de safena/CABG), incluindo terapia antitrombótica de longo prazo, controle de fatores de risco e encaminhamento para reabilitação cardíaca.",
+    "documento_origem": "revascularizacao-tronco-e-multiarterial-pci-vs-cabg-esceacts-2018",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "2018 ESC/EACTS Guidelines on myocardial revascularization. Eur Heart J. 2019;40(2):87-165. DOI: 10.1093/eurheartj/ehy394. PMID: 30165437.",
+      "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes."
+    ],
+    "itens": [
+      {
+        "id": "cabg-aas-vitalicio",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Aspirina em dose baixa mantida indefinidamente, salvo contraindicação documentada",
+        "origem_secao": "Terapia antiplaquetária pós-revascularização"
+      },
+      {
+        "id": "cabg-estatina-alta-intensidade",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estatina de alta intensidade prescrita, com meta de LDL-C documentada",
+        "origem_secao": "Prevenção secundária pós-revascularização"
+      },
+      {
+        "id": "cabg-betabloqueador-fe-reduzida",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se FEVE reduzida: betabloqueador e demais pilares de ICFEr avaliados e iniciados/titulados antes da alta",
+        "origem_secao": "Disfunção ventricular pós-revascularização"
+      },
+      {
+        "id": "cabg-controle-glicemico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se diabético: rastreio/otimização de controle glicêmico documentado, com plano de seguimento definido",
+        "origem_secao": "Diabetes e revascularização"
+      },
+      {
+        "id": "cabg-ferida-esternal",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre cuidados com a ferida esternal e da perna (se veia safena usada), e sobre sinais de infecção a relatar",
+        "origem_secao": "Cuidados de ferida operatória"
+      },
+      {
+        "id": "cabg-restricao-esterno",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre restrição de esforço envolvendo o esterno (não levantar peso, não puxar com os braços) pelo período de consolidação óssea definido pela equipe cirúrgica",
+        "origem_secao": "Recuperação esternal"
+      },
+      {
+        "id": "cabg-reabilitacao-cardiaca",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para reabilitação cardíaca supervisionada realizado antes da alta, não deixado para o paciente buscar por conta própria",
+        "origem_secao": "Reabilitação cardíaca pós-cirúrgica"
+      },
+      {
+        "id": "cabg-cessacao-tabagismo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se tabagista: aconselhamento estruturado de cessação de tabagismo oferecido, com encaminhamento se disponível",
+        "origem_secao": "Prevenção secundária pós-revascularização"
+      },
+      {
+        "id": "cabg-retorno-cardiologia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno com cardiologista agendado nas semanas seguintes à alta, com data definida",
+        "origem_secao": "Seguimento pós-revascularização"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "titulacao-dos-quatro-pilares-na-insuficiencia-cardiaca-com-fracao-de-ejecao-reduzida",
+    "condicao": "Titulação dos quatro pilares na insuficiência cardíaca com fração de ejeção reduzida (ICFEr)",
+    "resumo": "Checklist de acompanhamento da titulação das quatro classes de terapia com benefício de mortalidade comprovado na ICFEr — não é checklist de alta hospitalar, é checklist de seguimento ambulatorial da otimização terapêutica ao longo do tempo.",
+    "documento_origem": "icfer-classificacao-diagnostico-quatro-pilares",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. PMID: 35363499.",
+      "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure."
+    ],
+    "itens": [
+      {
+        "id": "icfer-pilar-1-sraa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibição do SRAA em uso (IECA, BRA ou, preferencialmente quando tolerado, sacubitril-valsartana), com dose atual documentada e comparada à dose-alvo do ensaio de referência",
+        "origem_secao": "Pilar 1 — inibição do SRAA"
+      },
+      {
+        "id": "icfer-pilar-2-betabloqueador",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador com evidência em ICFEr (carvedilol, succinato de metoprolol ou bisoprolol) em uso, com dose atual documentada e comparada à dose-alvo",
+        "origem_secao": "Pilar 2 — betabloqueador"
+      },
+      {
+        "id": "icfer-pilar-3-mra",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antagonista mineralocorticoide (espironolactona ou eplerenona) em uso, com potássio e função renal monitorizados",
+        "origem_secao": "Pilar 3 — antagonista mineralocorticoide"
+      },
+      {
+        "id": "icfer-pilar-4-isglt2",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de SGLT2 (dapagliflozina ou empagliflozina) em uso, independentemente de diagnóstico de diabetes",
+        "origem_secao": "Pilar 4 — inibidor de SGLT2"
+      },
+      {
+        "id": "icfer-pilar-faltante-motivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se algum dos quatro pilares está ausente ou em dose subótima: motivo documentado explicitamente (intolerância, contraindicação, ainda em titulação) — ausência sem motivo registrado não deveria ser aceita como 'decisão definitiva'",
+        "origem_secao": "Barreiras à titulação"
+      },
+      {
+        "id": "icfer-sequencia-nao-obrigatoria",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que os quatro pilares podem ser iniciados em sequência acelerada ou simultânea, conforme tolerância — não é necessário titular um de cada vez até a dose máxima antes de iniciar o próximo",
+        "origem_secao": "Estratégia de início simultâneo vs. sequencial"
+      },
+      {
+        "id": "icfer-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação da titulação agendada em intervalo definido (não deixada em aberto), com plano de próximo ajuste de dose documentado",
+        "origem_secao": "Seguimento de titulação"
+      },
+      {
+        "id": "icfer-funcao-renal-potassio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Função renal e potássio monitorizados após cada ajuste de dose de inibidor do SRAA/MRA, conforme protocolo",
+        "origem_secao": "Segurança da titulação"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "confirmacao-de-hipertensao-resistente-verdadeira-antes-de-escalonar",
+    "condicao": "Confirmação de hipertensão resistente verdadeira antes de escalonar tratamento",
+    "resumo": "Os quatro pontos que precisam ser excluídos — técnica de aferição, efeito do avental branco, não aderência e otimização do esquema — antes de rotular um paciente como hipertensão resistente verdadeira e partir para quarta droga, denervação renal ou investigação de causa secundária.",
+    "documento_origem": "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "de la Sierra A, Segura J, Banegas JR, Gorostidi M, de la Cruz JJ, Armario P, Oliveras A, Ruilope LM. Clinical features of 8295 patients with resistant hypertension classified on the basis of ambulatory blood pressure monitoring. Hypertension. 2011;57(5):898-902. DOI: 10.1161/HYPERTENSIONAHA.110.168948. PMID: 21444835",
+      "Jung O, Gechter JL, Wunder C, Paulke A, Bartel C, Geiger H, Toennes SW. Resistant hypertension? Assessment of adherence by toxicological urine analysis. J Hypertens. 2013;31(4):766-774. DOI: 10.1097/HJH.0b013e32835e2286. PMID: 23337469",
+      "Kallioinen N, Hill A, Horswill MS, Ward HE, Watson MO. Sources of inaccuracy in the measurement of adult patients' resting blood pressure in clinical settings: a systematic review. J Hypertens. 2017;35(3):421-441. DOI: 10.1097/HJH.0000000000001197. PMID: 27977471",
+      "Carey RM, Calhoun DA, Bakris GL, Brook RD, Daugherty SL, Dennison-Himmelfarb CR, Egan BM, Flack JM, Gidding SS, Judd E, Lackland DT, Laffer CL, Newton-Cheh C, Smith SM, Taler SJ, Textor SC, Turan TN, White WB. Resistant Hypertension: Detection, Evaluation, and Management: A Scientific Statement From the American Heart Association. Hypertension. 2018;72(5):e53-e90. DOI: 10.1161/HYP.0000000000000084. PMID: 30354828"
+    ],
+    "itens": [
+      {
+        "id": "hr-tecnica-afericao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão reaferida com técnica padronizada (manguito adequado ao braço, paciente sentado com apoio de costas e braço na altura do coração, sem conversa, após 5 minutos de repouso, média de pelo menos duas medidas) antes de qualquer decisão de escalonamento",
+        "origem_secao": "Técnica de aferição inadequada / Algoritmo prático de exclusão, item 1"
+      },
+      {
+        "id": "hr-mapa-mrpa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "MAPA (padrão-ouro) ou automedida domiciliar estruturada solicitada para confirmar a pressão fora do consultório — mais de 1 em cada 3 pacientes 'resistentes' pela pressão de consultório tem pressão ambulatorial normal",
+        "origem_secao": "Efeito do avental branco / Algoritmo prático de exclusão, item 2"
+      },
+      {
+        "id": "hr-orientacao-automedida",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre a técnica correta de automedida domiciliar, caso a MAPA não esteja disponível de imediato",
+        "origem_secao": "Efeito do avental branco"
+      },
+      {
+        "id": "hr-avental-branco-excluido",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se a pressão fora do consultório estiver controlada: classificado como pseudorresistência por avental branco, não hipertensão resistente verdadeira — não escalonar tratamento nem investigar causa secundária com base só na pressão de consultório",
+        "origem_secao": "Algoritmo prático de exclusão, item 2"
+      },
+      {
+        "id": "hr-aderencia-ativa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aderência investigada ativamente (contagem de comprimidos, verificação de reabastecimento na farmácia, questionário validado como Morisky-Green ou, quando disponível, triagem bioquímica) — não apenas perguntar se o paciente toma a medicação certinho",
+        "origem_secao": "Não aderência / Algoritmo prático de exclusão, item 3"
+      },
+      {
+        "id": "hr-esquema-otimizado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Esquema revisado: as três classes centrais (bloqueador de canal de cálcio de ação prolongada, IECA/BRA e diurético adequado à função renal — tiazídico/similar se TFG preservada, de alça se TFG reduzida) confirmadas em dose otimizada",
+        "origem_secao": "Algoritmo prático de exclusão, item 4"
+      },
+      {
+        "id": "hr-substancias-pressoras",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso de substâncias que elevam a pressão checado e registrado — AINE, descongestionantes, corticoide, contraceptivo oral, alcaçuz/regaliz",
+        "origem_secao": "Algoritmo prático de exclusão, item 4"
+      },
+      {
+        "id": "hr-classificacao-final",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Só depois de excluídos os quatro pontos acima (técnica, avental branco, aderência, otimização do esquema): paciente classificado como hipertensão resistente verdadeira, com essa conclusão registrada no prontuário antes de qualquer escalonamento",
+        "origem_secao": "Algoritmo prático de exclusão, item 5"
+      },
+      {
+        "id": "hr-encaminhamento-pos-confirmacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Confirmada a resistência verdadeira: caminho seguinte definido — quarta droga (espironolactona) e, se ainda não controlado, investigação de causa secundária, com prioridade para hiperaldosteronismo primário",
+        "origem_secao": "Algoritmo prático de exclusão, item 5"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "preparo-pre-operatorio-com-bloqueio-alfa-no-feocromocitoma",
+    "condicao": "Preparo pré-operatório com bloqueio alfa antes de cirurgia por feocromocitoma/paraganglioma",
+    "resumo": "Sequência de bloqueio alfa, metas pressóricas e de frequência cardíaca, expansão volêmica e critério para adiar a cirurgia no preparo pré-operatório de PPGL já confirmado, com base no protocolo de titulação do ensaio PRESCRIPT.",
+    "documento_origem": "feocromocitoma-preparo-pre-operatorio-com-bloqueio-alfa-o-ensaio-prescript",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Buitenwerf E, Osinga TE, Timmers HJLM, Lenders JWM, Feelders RA, Eekhoff EMW, Haak HR, Corssmit EPM, Bisschop PHLT, Valk GD, Veldman RG, Dullaart RPF, Links TP, Voogd MF, Wietasch GJKG, Kerstens MN. Efficacy of α-Blockers on Hemodynamic Control during Pheochromocytoma Resection: A Randomized Controlled Trial (PRESCRIPT). J Clin Endocrinol Metab. 2020;105(7):2381-2391. DOI: 10.1210/clinem/dgz188. PMID: 31714582. PMCID: PMC7261201 — ClinicalTrials.gov NCT01379898, 134 pacientes",
+      "Lenders JW, Duh QY, Eisenhofer G, Gimenez-Roqueplo AP, Grebe SK, Murad MH, Naruse M, Pacak K, Young WF Jr; Endocrine Society. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. DOI: 10.1210/jc.2014-1498. PMID: 24893135 — recomendação de bloqueio pré-operatório universal e dieta hipersódica",
+      "Faiçal S, Shiota D. Feocromocitoma: atualização diagnóstica e terapêutica. Rev Assoc Med Bras. 1997;43(3):237-244. DOI: 10.1590/S0104-42301997000300012 — cita literalmente 'A fenoxibenzamina (Dibenzilina – não comercializada no Brasil)'",
+      "Marques RG, Sanjuliani AF. Tratamento cirúrgico da hipertensão arterial secundária com origem na glândula supra-renal. Rev Col Bras Cir. 2006;33(6):401-410. DOI: 10.1590/S0100-69912006000600014 — cita 'a fenoxibenzamina (não disponível em nosso meio)' ao comparar com prazosina/doxazosina/terazosina"
+    ],
+    "itens": [
+      {
+        "id": "feo-diagnostico-confirmado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico bioquímico de feocromocitoma/paraganglioma (PPGL) confirmado antes de iniciar o preparo — este protocolo começa depois da confirmação, não substitui a investigação diagnóstica",
+        "origem_secao": "De onde vem a pergunta, e o que este documento não repete"
+      },
+      {
+        "id": "feo-bloqueio-alfa-iniciado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Bloqueio alfa (fenoxibenzamina ou doxazosina de liberação prolongada) iniciado 2 a 3 semanas antes da cirurgia — nenhum dos dois fármacos demonstrou superioridade no desfecho primário (tempo fora da meta de pressão intraoperatória, p=0,75), escolha pode considerar disponibilidade e experiência do serviço",
+        "origem_secao": "O ensaio PRESCRIPT — desenho / Resultados — o desfecho primário não diferiu"
+      },
+      {
+        "id": "feo-fenoxibenzamina-disponibilidade",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se optar por fenoxibenzamina: disponibilidade confirmada previamente — a literatura brasileira registra que ela não tem comercialização regular no Brasil, com acesso possível só por importação ou farmácia de manipulação sob prescrição especial; doxazosina é alternativa amplamente disponível e validada pelo mesmo ensaio",
+        "origem_secao": "Disponibilidade no Brasil"
+      },
+      {
+        "id": "feo-titulacao-meta-pressorica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Titulação guiada por meta pressórica: <130/80 mmHg em decúbito e PAS entre 90-110 mmHg em pé — evitar titular até PAS em pé <90 mmHg, associado no PRESCRIPT a MAIOR (não menor) instabilidade hemodinâmica intraoperatória",
+        "origem_secao": "O protocolo de titulação, útil como referência prática / Achado exploratório com implicação prática direta"
+      },
+      {
+        "id": "feo-nifedipino-se-necessario",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a meta pressórica não for atingida com a dose máxima do bloqueador alfa (70 mg de fenoxibenzamina 2x/dia ou 24 mg de doxazosina 2x/dia): nifedipino de liberação prolongada 30-90 mg 1x/dia acrescentado",
+        "origem_secao": "O protocolo de titulação, útil como referência prática"
+      },
+      {
+        "id": "feo-betabloqueador-apos-alfa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador (se meta de frequência cardíaca <80 bpm deitado / <100 bpm em pé não atingida) só é iniciado DEPOIS de o bloqueio alfa já estar em curso, nunca antes — betabloqueio isolado sem alfa-bloqueio prévio pode precipitar crise hipertensiva por vasoconstrição alfa sem oposição",
+        "origem_secao": "O protocolo de titulação, útil como referência prática"
+      },
+      {
+        "id": "feo-dieta-hipersodica",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre dieta com pelo menos 15 g de cloreto de sódio por dia durante todo o preparo, para prevenir hipotensão pós-operatória",
+        "origem_secao": "O protocolo de titulação, útil como referência prática"
+      },
+      {
+        "id": "feo-expansao-volemica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "2 litros de soro fisiológico 0,9% por via intravenosa prescritos nas 24 horas antes da cirurgia",
+        "origem_secao": "O protocolo de titulação, útil como referência prática"
+      },
+      {
+        "id": "feo-criterio-adiar-cirurgia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão em decúbito reavaliada no dia anterior à cirurgia — se >160/100 mmHg, cirurgia adiada",
+        "origem_secao": "O protocolo de titulação, útil como referência prática"
+      },
+      {
+        "id": "feo-seguimento-pos-op",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Vigilância pós-operatória de complicação cardiovascular programada nas primeiras 24-48h — no PRESCRIPT, complicação cardiovascular em 30 dias ocorreu em 8,8% (fenoxibenzamina) e 6,9% (doxazosina), sem diferença estatística entre os fármacos, e sem mortalidade em 30 dias em nenhum dos dois grupos",
+        "origem_secao": "Resultados — o desfecho primário não diferiu"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "dor-toracica-na-emergencia-triagem-inicial",
+    "condicao": "Dor torácica na emergência — triagem inicial",
+    "resumo": "O que não pode faltar na avaliação inicial de dor torácica na porta da emergência, antes de qualquer diagnóstico fechado, derivado da Diretriz Brasileira de Dor Torácica na Unidade de Emergência (SBC 2025).",
+    "documento_origem": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral acessado em acesso aberto (PMC12981354) e conferido em 31/07/2026; o escore HEART, as recomendações de classificação do eletrocardiograma, de tempo porta-ECG e de estratificação de risco foram transcritos das tabelas correspondentes"
+    ],
+    "itens": [
+      {
+        "id": "dtx-heart",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore HEART calculado como escore clínico preferencial na dor torácica em investigação de SCA (Classe I, Nível B) — não TIMI nem GRACE",
+        "origem_secao": "O escore preferencial e o HEART"
+      },
+      {
+        "id": "dtx-troponina-convencional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Componente de troponina do HEART pontuado com ensaio convencional (múltiplos do limite superior), não com alta sensibilidade — o algoritmo de alta sensibilidade é rota separada",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "dtx-porta-ecg",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG realizado dentro do tempo porta-ECG monitorado pelo serviço (Classe I, Nível B)",
+        "origem_secao": "Tempo porta-eletrocardiograma"
+      },
+      {
+        "id": "dtx-equivalentes-supra",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG revisado também para os 'equivalentes de supradesnível de ST' (equivalentes de oclusão coronária aguda), não só o supra clássico (Classe I, Nível B)",
+        "origem_secao": "Classificacao do eletrocardiograma"
+      },
+      {
+        "id": "dtx-ecg-diagnostico",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se o ECG tem alterações diagnósticas: paciente encaminhado às diretrizes de tratamento específicas do diagnóstico já estabelecido (Classe I, Nível A)",
+        "origem_secao": "Classificacao do eletrocardiograma"
+      },
+      {
+        "id": "dtx-ecg-nao-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se o ECG é 'não diagnóstico': rota de investigação mais eficiente definida conforme os recursos disponíveis (Classe I, Nível B)",
+        "origem_secao": "Classificacao do eletrocardiograma"
+      },
+      {
+        "id": "dtx-ecg-repetido",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se o ECG é 'preocupante'/limítrofe ou há critérios clínicos de instabilidade: ECG repetido a cada 10 a 20 minutos, com derivações complementares e apoio conforme necessário (Classe I)",
+        "origem_secao": "Classificacao do eletrocardiograma"
+      },
+      {
+        "id": "dtx-tempo-registrado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Tempo porta-ECG registrado pelo serviço, com feedback contínuo à equipe responsável e ação de melhoria implementada quando indicado (Classe I, Nível B)",
+        "origem_secao": "Tempo porta-eletrocardiograma"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "doenca-coronariana-cronica-investigacao-diagnostica-inicial",
+    "condicao": "Doença coronariana crônica estável — investigação diagnóstica inicial",
+    "resumo": "O que não pode faltar na investigação de dor torácica ou dispneia de esforço sem diagnóstico prévio de DAC, quando a via de síndrome coronariana aguda já foi afastada, derivado da diretriz ESC 2024 de síndromes coronarianas crônicas.",
+    "documento_origem": "fluxograma-sindrome-coronariana-cronica-esc-2024",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes · European Heart Journal · 2024 · 45(36):3415-3537 · DOI: 10.1093/eurheartj/ehae177 · PMID: 39210710"
+    ],
+    "itens": [
+      {
+        "id": "dcc-sca-afastada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Quadro compatível com síndrome coronariana aguda ativamente afastado antes de seguir por esta via (o quadro agudo sai desta rota)",
+        "origem_secao": "Árvore de decisão — D1"
+      },
+      {
+        "id": "dcc-avaliacao-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação clínica dirigida, ECG de repouso, exames laboratoriais e ecocardiograma transtorácico realizados — o ecocardiograma é passo obrigatório, não opcional",
+        "origem_secao": "Árvore de decisão — P1 / O que a árvore não mostra"
+      },
+      {
+        "id": "dcc-causa-estrutural",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Causa estrutural alternativa para o sintoma (disfunção de VE, valvopatia) descartada antes de calcular a probabilidade de DAC obstrutiva",
+        "origem_secao": "Árvore de decisão — D2"
+      },
+      {
+        "id": "dcc-rf-cl",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Probabilidade clínica de DAC obstrutiva calculada pelo modelo ponderado por fatores de risco (RF-CL): idade, sexo e sintoma, mais história familiar de DAC, tabagismo, dislipidemia, hipertensão e diabetes",
+        "origem_secao": "O que entra no modelo ponderado por fatores de risco"
+      },
+      {
+        "id": "dcc-cacs",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se disponível, escore de cálcio coronariano incorporado ao cálculo, refinando a classificação (modelo CACS-CL)",
+        "origem_secao": "O que entra no modelo ponderado por fatores de risco"
+      },
+      {
+        "id": "dcc-probabilidade-muito-baixa",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se probabilidade ≤ 5% (muito baixa): considerado adiar o exame de imagem e investigar causa alternativa da dor, em vez de pedir angiotomografia 'por segurança'",
+        "origem_secao": "Árvore de decisão — D3/C3 · Por que a faixa muito baixa mudou a prática"
+      },
+      {
+        "id": "dcc-escolha-exame",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Exame de imagem escolhido conforme a faixa de probabilidade clínica e o objetivo (afastar DAC obstrutiva vs. correlacionar sintoma à isquemia): angiotomografia, imagem funcional de estresse ou cineangiocoronariografia invasiva",
+        "origem_secao": "Árvore de decisão — D3/D4"
+      },
+      {
+        "id": "dcc-pos-teste",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Registrado que a probabilidade pós-teste também conta: exame não invasivo fortemente positivo pode deslocar o paciente para coronariografia mesmo com probabilidade pré-teste apenas moderada",
+        "origem_secao": "O que a árvore não mostra"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-diario-e-desmame-de-suporte-circulatorio-mecanico-no-choque-cardiogenico",
+    "condicao": "Suporte circulatório mecânico temporário no choque cardiogênico (IABP, Impella ou ECMO-VA)",
+    "resumo": "Finalidade do dispositivo declarada, escalonamento e anticoagulação revisados diariamente, pré-requisitos de desescalonamento confirmados antes do desmame, e plano de escalonamento definido antes de eventual falha.",
+    "documento_origem": "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Siopi SA, Antonitsis P, Karapanagiotidis GT, Tagarakis G, Voucharas C, Anastasiadis K. Mechanical circulatory support in cardiogenic shock: a contemporary head-to-head comparison. Heart Fail Rev. 2026;31(1):44. PMID: 41874823. DOI: 10.1007/s10741-026-10612-8 (PMC13013270)",
+      "Møller JE, Sionis A, Aissaoui N, Ariza A, Bělohlávek J, De Backer D, Färber G, Gollmann-Tepeköylü C, Mebazaa A, Price S, Swol J, Thiele H, Hassager C. Step by step daily management of short-term mechanical circulatory support for cardiogenic shock in adults in the intensive cardiac care unit: a clinical consensus statement of the Association for Acute CardioVascular Care of the ESC, the European Society of Intensive Care Medicine, the European branch of the Extracorporeal Life Support Organization, and the European Association for Cardio-Thoracic Surgery. Eur Heart J Acute Cardiovasc Care. 2023;12(7):475-485. PMID: 37315190. DOI: 10.1093/ehjacc/zuad064",
+      "Chioncel O, Parissis J, Mebazaa A, Thiele H, Desch S, Bauersachs J, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock — a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. PMID: 32469155. DOI: 10.1002/ejhf.1922"
+    ],
+    "itens": [
+      {
+        "id": "mcs-finalidade-declarada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Finalidade do suporte circulatório mecânico declarada explicitamente ao instalar o dispositivo — ponte para decisão, recuperação, transplante ou dispositivo definitivo",
+        "origem_secao": "Recomendação sobre uso de ECMO-VA"
+      },
+      {
+        "id": "mcs-sinais-escalonamento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais de necessidade de escalonamento reavaliados diariamente: suporte inotrópico por mais de 48 horas, escore vasoativo-inotrópico (VIS) > 20, pressões de enchimento ventricular elevadas persistentes, congestão pulmonar e piora de lactato",
+        "origem_secao": "Escalonamento e desescalonamento"
+      },
+      {
+        "id": "mcs-anticoagulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação com heparina não fracionada como primeira escolha; bivalirudina ou argatroban reservados para suspeita de plaquetopenia induzida por heparina — heparina de baixo peso molecular e anticoagulante oral direto evitados sob suporte",
+        "origem_secao": "Manejo diário na UTI"
+      },
+      {
+        "id": "mcs-pre-requisitos-desmame",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar desescalonamento, confirmados os quatro pré-requisitos: estabilidade hemodinâmica sem suporte inotrópico/vasopressor, pressões de enchimento baixas, função de órgão-alvo restaurada e causa primária do choque efetivamente tratada",
+        "origem_secao": "Escalonamento e desescalonamento — pré-requisitos para desescalonamento (critérios ESC 2021 citados na revisão de 2026)"
+      },
+      {
+        "id": "mcs-tecnica-desmame",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Desmame conduzido por redução do fluxo do dispositivo pela metade a cada 2-4 horas, com reavaliação hemodinâmica contínua a cada passo",
+        "origem_secao": "Escalonamento e desescalonamento — protocolo de desmame sugerido"
+      },
+      {
+        "id": "mcs-plano-falha-desmame",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Plano de escalonamento definido e discutido antes de eventual falha do desmame — transplante cardíaco, dispositivo de assistência ventricular de longa permanência ou cuidado paliativo — decisão antecipada, não improvisada no momento da falha",
+        "origem_secao": "Escalonamento e desescalonamento"
+      },
+      {
+        "id": "mcs-vd-primaria-vs-secundaria",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houver falência de ventrículo direito sob suporte, diferenciada falência primária (pressões de enchimento do VE normais, responde a suporte dedicado de VD como Impella RP/RP-Flex ou VA-ECMO com descarga do VE) de secundária (pressões de enchimento do VE elevadas — o VE é o alvo do tratamento, não o VD isolado)",
+        "origem_secao": "Falência de ventrículo direito sob suporte mecânico"
+      },
+      {
+        "id": "mcs-iabp-expectativa-realista",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se balão intra-aórtico em uso, reconhecido que o incremento hemodinâmico é modesto (0,5-1 L/min) e que o IABP-SHOCK II não mostrou redução de mortalidade em 30 dias nem em 12 meses — uso reservado a etiologia não isquêmica, estágio SCAI inicial, ponte ou complicação mecânica do infarto, não a escalonamento rotineiro",
+        "origem_secao": "Dispositivos disponíveis — balão intra-aórtico (IABP)"
+      },
+      {
+        "id": "mcs-impella-monitorar-eventos-adversos",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se Impella em uso, monitorados os eventos adversos de maior incidência descritos no DanGer Shock — sangramento, isquemia de membro, hemólise, falha do dispositivo, piora de regurgitação aórtica e necessidade de terapia renal substitutiva",
+        "origem_secao": "Dispositivos disponíveis — dispositivos percutâneos ventrículo esquerdo-para-aorta (Impella)"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs (choque-cardiogenico-suporte-circulatorio-mecanico-temporario.md), lido na íntegra nesta sessão. Itens marcados obrigatorio:false dependem de o recurso (IABP, Impella, desmame em curso, falência de VD) ter sido de fato usado ou identificado no caso — não se aplicam a todo paciente em suporte circulatório mecânico."
+  },
+  {
+    "slug": "neuroprognostico-pos-parada-cardiorrespiratoria-antes-de-declarar-prognostico",
+    "condicao": "Paciente comatoso após retorno da circulação espontânea (RCE), antes de declarar prognóstico neurológico",
+    "resumo": "Confundidores excluídos, avaliação feita no momento correto (≥72h, após reaquecimento se houve TTM), dois ou mais preditores maiores confirmados sem depender de teste isolado, sinais de recuperação buscados ativamente, e mioclonia sempre correlacionada ao padrão de EEG antes de virar preditor.",
+    "documento_origem": "neuroprognostico-multimodal-pos-parada-cardiorrespiratoria-algoritmo-erc-esicm-2021-e-a-atualizacao-aha-2025",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Nolan JP, Sandroni C, Böttiger BW, et al. European Resuscitation Council and European Society of Intensive Care Medicine guidelines 2021: post-resuscitation care. Intensive Care Med. 2021;47(4):369-421. DOI: 10.1007/s00134-021-06368-4. PMID: 33765189. Texto integral lido via PMC7993077",
+      "Hirsch KG, Amorim E, Coppler PJ, et al. Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16_suppl_2):S673-S718. DOI: 10.1161/CIR.0000000000001375. PMID: 41122894",
+      "De Stefano P, Leitinger M, Misirocchi F, Quintard H, Degano G, Trinka E. Myoclonus After Cardiac Arrest: Need for Standardization-A Systematic Review and Research Proposal on Terminology. Crit Care Med. 2025;53(2):e410-e423. DOI: 10.1097/CCM.0000000000006521. PMID: 39773812"
+    ],
+    "itens": [
+      {
+        "id": "np-confundidores-excluidos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confundidores maiores excluídos antes de qualquer teste — sedação residual, bloqueio neuromuscular, hipotermia, hipotensão grave, sepse e distúrbio metabólico/respiratório",
+        "origem_secao": "Ponto de entrada e momento da avaliação"
+      },
+      {
+        "id": "np-momento-correto",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação prognóstica final realizada em paciente comatoso com escore motor da Glasgow (M) ≤ 3, em ≥ 72 horas do RCE — ou após o reaquecimento, se houve controle de temperatura direcionado (TTM)",
+        "origem_secao": "Ponto de entrada e momento da avaliação"
+      },
+      {
+        "id": "np-exame-pupilar",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Reflexo pupilar e corneano avaliados bilateralmente em ≥ 72h; pupilometria quantitativa (índice pupilar neurológico, NPi ≥ 3 considerado normal) usada quando disponível",
+        "origem_secao": "Cada modalidade em detalhe — exame clínico"
+      },
+      {
+        "id": "np-eeg-ssep",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "EEG registrado em todo paciente inconsciente pós-parada, avaliando reatividade de base e padrão altamente maligno (supressão de base, surto-supressão, critérios ACNS); ausência bilateral da onda N20 do SSEP verificada quando indicada",
+        "origem_secao": "Cada modalidade em detalhe — neurofisiologia"
+      },
+      {
+        "id": "np-nse-seriada",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Enolase neuroespecífica (NSE) dosada de forma seriada em 24-48h e 48/72h, nunca interpretada isoladamente — valor > 60 µg/L ou trajetória crescente reforça prognóstico ruim",
+        "origem_secao": "Cada modalidade em detalhe — biomarcador"
+      },
+      {
+        "id": "np-dois-ou-mais-preditores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Prognóstico ruim considerado provável somente com dois ou mais dos seis preditores maiores presentes (pupilar/corneano ausentes, N20 ausente, EEG altamente maligno, NSE > 60 µg/L, status mioclônico ≤72h, lesão anóxica difusa em TC/RM) — nunca decidido por teste isolado",
+        "origem_secao": "Os seis preditores de mau prognóstico"
+      },
+      {
+        "id": "np-sinais-recuperacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais de potencial recuperação buscados ativamente, não só os de mau prognóstico — EEG benigno em até 24h, NSE baixa e decrescente com fibrilação ventricular como ritmo inicial, ausência de restrição de difusão na RM",
+        "origem_secao": "Sinais de potencial recuperação — o contrapeso que evita a previsão falsamente pessimista"
+      },
+      {
+        "id": "np-mioclonia-correlacionada-eeg",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houver mioclonia ≤72h, correlacionada com o padrão de EEG de base (supressivo vs. não supressivo) antes de ser usada como preditor isolado — síndrome de Lance-Adams precoce (EEG não supressivo) tem bom desfecho em 82% dos casos, distinta do status mioclônico com EEG supressivo",
+        "origem_secao": "A nuance de 2025 que muda a leitura do status mioclônico"
+      },
+      {
+        "id": "np-convulsao-tratamento",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se convulsão clínica presente, EEG realizado para diagnosticar crise eletrográfica, com levetiracetam ou valproato de sódio como antiepiléptico de primeira linha — sem profilaxia anticonvulsivante rotineira",
+        "origem_secao": "Metas fisiológicas de suporte que acompanham a fase de neuroprognóstico"
+      },
+      {
+        "id": "np-discussao-separada-documentada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Discussão de limitação de suporte de vida documentada separadamente da discussão de prognóstico neurológico em si, com atenção explícita ao viés de profecia autorrealizável",
+        "origem_secao": "Síntese prática"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs (neuroprognostico-multimodal-pos-parada-cardiorrespiratoria-algoritmo-erc-esicm-2021-e-a-atualizacao-aha-2025.md), lido na íntegra nesta sessão. Itens marcados obrigatorio:false dependem de o recurso (NSE seriada, mioclonia presente, convulsão clínica) estar de fato disponível ou ter ocorrido no caso — não se aplicam a todo paciente em avaliação de neuroprognóstico."
+  },
+  {
+    "slug": "inicio-de-inibidor-de-sglt2-em-cardiologia-avaliacao-basal-e-monitorizacao",
+    "condicao": "Início de inibidor de SGLT2 (dapagliflozina) em cardiologia — avaliação basal e monitorização",
+    "resumo": "Indicação, contraindicações de gravidez/lactação, dose única diária e os dois alertas de segurança que exigem orientação explícita ao paciente — cetoacidose diabética e fasciíte necrosante do períneo — antes de iniciar um dos quatro pilares farmacológicos da ICFEr.",
+    "documento_origem": "dapagliflozina",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "FORXIGA (dapagliflozina) — Bula do Profissional de Saúde, AstraZeneca do Brasil Ltda., itens 4 (Contraindicações), 5 (Advertências e Precauções) e 8 (Posologia e Modo de Usar). https://www.azmed.com.br/content/dam/multibrand/br/pt/azmed-2022/home/bulas-profissionais/bulas/Forxiga_Bula_Profissional.pdf",
+      "McMurray JJV, Solomon SD, Inzucchi SE, et al; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381(21):1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829"
+    ],
+    "itens": [
+      {
+        "id": "isglt2-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação confirmada dentro do escopo aprovado em bula: insuficiência cardíaca crônica (NYHA II-IV, com ou sem diabetes), doença renal crônica ou diabetes mellitus tipo 2 — não indicado para diabetes mellitus tipo 1",
+        "origem_secao": "dapagliflozina.md — Indicacoes cardiologicas"
+      },
+      {
+        "id": "isglt2-gravidez-lactacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Gravidez (2º e 3º trimestres, categoria de risco C — descontinuar se a gravidez for detectada) e lactação (uso contraindicado no aleitamento ou na doação de leite humano) excluídas antes de prescrever",
+        "origem_secao": "dapagliflozina.md — Contraindicacoes"
+      },
+      {
+        "id": "isglt2-tfge-basal",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "TFGe basal registrada: não é necessário ajuste de dose por função renal, mas a eficácia na redução glicêmica é menor com TFGe <45 mL/min/1,73m², e há poucos dados de início do tratamento com TFGe <25 mL/min/1,73m²",
+        "origem_secao": "dapagliflozina.md — Dose; Advertencias e precaucoes"
+      },
+      {
+        "id": "isglt2-dose",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Dose de 10 mg 1x/dia prescrita, a qualquer hora do dia, independentemente das refeições, sem necessidade de ajuste por idade, função hepática (leve, moderada ou grave) ou função renal isoladamente",
+        "origem_secao": "dapagliflozina.md — Dose"
+      },
+      {
+        "id": "isglt2-hipoglicemia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se em uso concomitante de insulina ou sulfonilureia: risco aumentado de hipoglicemia revisado, com redução de dose desses agentes considerada",
+        "origem_secao": "dapagliflozina.md — Advertencias e precaucoes"
+      },
+      {
+        "id": "isglt2-cetoacidose",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de cetoacidose diabética (náusea, vômito, dor abdominal, mal-estar, dispneia) mesmo com glicemia <250 mg/dL, com instrução de suspender e procurar avaliação imediata se surgirem",
+        "origem_secao": "dapagliflozina.md — Advertencias e precaucoes"
+      },
+      {
+        "id": "isglt2-fasciite",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de fasciíte necrosante do períneo (gangrena de Fournier) — dor, vermelhidão ou inchaço genital com febre ou mal-estar —, evento raro porém potencialmente fatal relatado em pós-comercialização, com instrução de suspender imediatamente e procurar atendimento",
+        "origem_secao": "dapagliflozina.md — Advertencias e precaucoes"
+      },
+      {
+        "id": "isglt2-infeccao-genital-volume",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre risco de infecção genital micótica e sobre sinais de depleção de volume durante o uso",
+        "origem_secao": "dapagliflozina.md — Efeitos adversos"
+      },
+      {
+        "id": "isglt2-quatro-pilares",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Quando a indicação for insuficiência cardíaca com fração de ejeção reduzida: combinado à terapia otimizada dos outros três pilares farmacológicos (betabloqueador, IECA/BRA/INRA, antagonista mineralocorticoide), reproduzindo o desenho do DAPA-HF",
+        "origem_secao": "dapagliflozina.md — Significado clinico; Evidencia pivotal dapa hf"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-de-suspeita-de-trombocitopenia-induzida-por-heparina-hit",
+    "condicao": "Manejo de suspeita de trombocitopenia induzida por heparina (HIT)",
+    "resumo": "Do escore 4Ts à escolha do anticoagulante não heparínico: como estimar a probabilidade pré-teste, quando pedir exame confirmatório, por que não transfundir plaqueta e como a fase da doença muda a conduta, diante de queda de plaquetas em vigência de heparina.",
+    "documento_origem": "trombocitopenia-induzida-por-heparina-hit-escore-4ts-fases-e-anticoagulante-nao-heparinico",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cuker A, Arepally GM, Chong BH, Cines DB, Greinacher A, Gruel Y, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia. Blood Adv. 2018;2(22):3360-3392. DOI: 10.1182/bloodadvances.2018024489. PMID: 30482768. PMCID: PMC6258919",
+      "Lo GK, Juhl D, Warkentin TE, Sigouin CS, Eichler P, Greinacher A. Evaluation of pretest clinical score (4 T's) for the diagnosis of heparin-induced thrombocytopenia in two clinical settings. J Thromb Haemost. 2006;4(4):759-765. DOI: 10.1111/j.1538-7836.2006.01787.x. PMID: 16634744",
+      "Capuano I, Riccio E, Buonanno P, Tufano A, Pisani A. Heparin-induced thrombocytopenia: a challenging diagnosis in haemodialysis — state of art and review of the literature. Clin Kidney J. 2026;19(4):sfag062. DOI: 10.1093/ckj/sfag062. PMID: 42111239. PMCID: PMC13153468"
+    ],
+    "itens": [
+      {
+        "id": "hit-escore-4ts",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore 4Ts calculado formalmente diante de queda de plaquetas em vigência de heparina, em vez de julgamento clínico não estruturado — o 4Ts tem sensibilidade 0,921 e especificidade 0,542, contra sensibilidade 0,969 e especificidade de apenas 0,004 do julgamento não estruturado",
+        "origem_secao": "O escore 4Ts: para que serve e o que ele não substitui"
+      },
+      {
+        "id": "hit-padrao-temporal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Padrão temporal da queda de plaquetas caracterizado: HIT típica (5-14 dias do início da heparina), início rápido (em horas, se exposição à heparina nos últimos 30 dias) ou início tardio autoimune (5-10 dias após exposição intraoperatória, mesmo sem heparina mantida no pós-operatório)",
+        "origem_secao": "Quando suspeitar: tempo de evolução"
+      },
+      {
+        "id": "hit-suspender-heparina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Heparina (não fracionada ou de baixo peso molecular) suspensa de imediato diante de escore 4Ts intermediário ou alto, antes mesmo da confirmação laboratorial — a decisão de trocar por anticoagulante não heparínico é clínica, sem esperar o exame",
+        "origem_secao": "Por que essa pergunta chega ao consultório e à UTI"
+      },
+      {
+        "id": "hit-escore-baixo-nao-testar",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se escore 4Ts baixo (0-3 pontos): nenhum exame laboratorial de HIT solicitado nem tratamento empírico iniciado, dado o alto valor preditivo negativo do escore nessa faixa (recomendação forte da diretriz ASH)",
+        "origem_secao": "Consequência prática, também recomendação forte da ASH"
+      },
+      {
+        "id": "hit-imunoensaio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se escore 4Ts intermediário (4-5 pontos) ou alto (≥6 pontos): imunoensaio anti-PF4/heparina solicitado e, se positivo, ensaio funcional confirmatório",
+        "origem_secao": "O escore 4Ts, critério por critério; As cinco fases da HIT"
+      },
+      {
+        "id": "hit-anticoagulante-troca",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulante não heparínico escolhido e dosado pela tabela da diretriz ASH 2018 (argatroban, bivalirudina, danaparoide, fondaparinux ou um DOAC), considerando função renal/hepática e capacidade de monitorização — nunca heparina, nem varfarina isolada nesta fase",
+        "origem_secao": "O anticoagulante de troca: opções e doses, direto da tabela da diretriz"
+      },
+      {
+        "id": "hit-sem-transfusao-plaquetas",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Transfusão profilática de plaquetas evitada — a plaquetopenia da HIT não é o problema principal (é a ativação plaquetária), e a diretriz recomenda contra a transfusão fora de sangramento ativo ou alto risco hemorrágico",
+        "origem_secao": "Transfusão de plaquetas: recomendação contra, não a favor"
+      },
+      {
+        "id": "hit-duracao-anticoagulacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Na HIT isolada (sem trombose documentada): anticoagulação mantida, no mínimo, até a recuperação da contagem de plaquetas (em geral ≥150 × 10⁹/L), sem prolongamento rotineiro por 3 meses ou mais",
+        "origem_secao": "Recuperação de plaqueta e duração da anticoagulação"
+      },
+      {
+        "id": "hit-cirurgia-eletiva",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se cirurgia cardíaca eletiva for necessária: adiada, quando viável, até a fase subaguda B ou remota (ensaio funcional negativo) — nessas fases a diretriz sugere reexposição à heparina só durante o procedimento, em vez de anticoagulante não heparínico ou plasmaférese",
+        "origem_secao": "As cinco fases da HIT — por que a fase muda a conduta"
+      },
+      {
+        "id": "hit-registro-fase",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Fase da HIT registrada (suspeita/aguda/subaguda A/subaguda B/remota) pela combinação de plaqueta, ensaio funcional e imunoensaio, porque a conduta recomendada muda por fase",
+        "origem_secao": "As cinco fases da HIT — por que a fase muda a conduta"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "avaliacao-e-conduta-na-suspeita-de-tamponamento-cardiaco",
+    "condicao": "Suspeita de tamponamento cardíaco (derrame pericárdico com risco de progressão)",
+    "resumo": "Roteiro de avaliação diagnóstica à beira do leito e decisão sobre pericardiocentese de emergência, incluindo o escore ESC 2025 de triagem de risco de progressão de derrame para tamponamento — cenário agudo/emergencial, distinto do checklist de alta após pericardite aguda idiopática já existente.",
+    "documento_origem": "tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pericardial tamponade: A comprehensive emergency medicine and echocardiography review · PubMed · 2022 · https://pubmed.ncbi.nlm.nih.gov/35696801/",
+      "Pericardiocentesis: Overview, Indications, Contraindications · Medscape · https://emedicine.medscape.com/article/80602-overview",
+      "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Recommendation Table 24 (pericardite constritiva), texto integral conferido em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "tampo-eco-achados",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma (padrão-ouro de imagem) realizado, com pesquisa ativa de colapso diastólico do ventrículo direito (achado específico), colapso sistólico do átrio direito (achado sensível), veia cava inferior pletórica e não colapsável (achado sensível) e pulso paradoxal sonográfico",
+        "origem_secao": "Tamponamento cardiaco — diagnostico ecocardiografico"
+      },
+      {
+        "id": "tampo-escore-triagem",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore de triagem ESC 2025 calculado, somando pontos de pelo menos duas categorias diferentes (etiologia, apresentação clínica, imagem) — ortopneia (+3), pulso paradoxal >10 mmHg (+2), derrame circunferencial grande (+3), colapso de átrio esquerdo (+2), doença maligna ou tuberculose (+2 cada) entre os itens de maior peso",
+        "origem_secao": "Escore de triagem — risco de progressão de derrame pericárdico para tamponamento"
+      },
+      {
+        "id": "tampo-decisao-pericardiocentese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Decisão registrada: pericardiocentese imediata considerada se escore >6 pontos somados de pelo menos duas categorias; se ≤6 e paciente estável, terapia anti-inflamatória empírica iniciada com reavaliação programada em vez de pericardiocentese imediata",
+        "origem_secao": "Escore de triagem — risco de progressão de derrame pericárdico para tamponamento"
+      },
+      {
+        "id": "tampo-indicacao-emergencial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado se há indicação emergencial de pericardiocentese independente do tamanho do derrame — instabilidade hemodinâmica, deterioração iminente/parada cardíaca, ou suspeita de doença de base tratável especificamente",
+        "origem_secao": "Tamponamento cardiaco — indicacao de pericardiocentese"
+      },
+      {
+        "id": "tampo-etiologia-provavel",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Etiologia mais provável considerada pela ordem de frequência (neoplasia/malignidade, iatrogênica/trauma, pericardite, tuberculose — a mais comum em países em desenvolvimento), orientando se a pericardiocentese também tem finalidade diagnóstica",
+        "origem_secao": "Tamponamento cardiaco — principais causas"
+      },
+      {
+        "id": "tampo-tecnica-procedimento",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Quando indicada, pericardiocentese realizada guiada por ecocardiografia, no maior e mais superficial bolsão de líquido, sem estruturas vitais interpostas",
+        "origem_secao": "Tamponamento cardiaco — indicacao de pericardiocentese"
+      },
+      {
+        "id": "tampo-reavaliacao-programada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação programada após terapia anti-inflamatória empírica (escore ≤6): se houver melhora, seguimento ambulatorial; se não houver, considerar janela pericárdica",
+        "origem_secao": "Escore de triagem — risco de progressão de derrame pericárdico para tamponamento"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "inicio-de-inibidor-de-il-1-na-pericardite-recorrente-refrataria",
+    "condicao": "Início de inibidor de IL-1 (anakinra ou rilonacepte) na pericardite recorrente refratária",
+    "resumo": "O que confirmar antes e monitorizar ao iniciar terapia anti-IL-1 em paciente com pericardite recorrente resistente à colchicina e dependente de corticosteroide, incluindo a orientação sobre o desfecho esperado se a droga for suspensa após uso prolongado — cenário de doença autoinflamatória crônica, distinto do checklist de alta após pericardite aguda idiopática já existente.",
+    "documento_origem": "inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brucato A, Imazio M, Gattorno M, et al. Effect of Anakinra on Recurrent Pericarditis Among Patients With Colchicine Resistance and Corticosteroid Dependence: The AIRTRIP Randomized Clinical Trial. JAMA. 2016;316(18):1906-1912. DOI: 10.1001/jama.2016.15826. PMID: 27825009 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026.",
+      "Klein AL, Imazio M, Cremer P, et al. Phase 3 Trial of Interleukin-1 Trap Rilonacept in Recurrent Pericarditis (RHAPSODY). N Engl J Med. 2021;384(1):31-41. DOI: 10.1056/NEJMoa2027892. PMID: 33200890 — números conferidos contra o abstract indexado no PubMed em 08/08/2026.",
+      "Trotta L, Imazio M, Bizzi E, et al. Multiyear Recurrent Pericarditis Disease Duration: Clinical Outcomes After Cessation of Long-Term Interleukin-1 Pathway Inhibition Provide Insights for Chronic Management. J Am Heart Assoc. 2026;15(15):e044021. DOI: 10.1161/JAHA.125.044021. PMID: 42517437 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."
+    ],
+    "itens": [
+      {
+        "id": "il1-perfil-populacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente corresponde ao perfil testado nos ensaios pivotais — pericardite recorrente sintomática ativa (≥3 recorrências prévias no AIRTRIP), PCR elevada, e no caso do anakinra especificamente resistência à colchicina e dependência de corticosteroide",
+        "origem_secao": "Anakinra — ensaio AIRTRIP"
+      },
+      {
+        "id": "il1-pcr-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "PCR basal dosada antes de iniciar — é critério de entrada em ambos os ensaios (AIRTRIP e RHAPSODY) e parâmetro usado para acompanhar resposta",
+        "origem_secao": "Rilonacepte — ensaio RHAPSODY (fase 3)"
+      },
+      {
+        "id": "il1-dose-anakinra",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se anakinra escolhido: dose de 2 mg/kg/dia (máximo 100 mg), subcutânea, iniciada com plano de reavaliar resposta em 2 meses antes de decidir continuidade",
+        "origem_secao": "Anakinra — ensaio AIRTRIP"
+      },
+      {
+        "id": "il1-dose-rilonacepte",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se rilonacepte escolhido: fase de rodagem (run-in) aberta iniciada com suspensão da medicação de base, com expectativa de resposta rápida (mediana de 5 dias até resolução/quase resolução da dor, 7 dias até normalização da PCR)",
+        "origem_secao": "Rilonacepte — ensaio RHAPSODY (fase 3)"
+      },
+      {
+        "id": "il1-orientacao-efeito-adverso",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre reação cutânea/local de injeção transitória como efeito adverso mais comum (95,2% dos pacientes com anakinra no AIRTRIP), que em geral não exige descontinuação permanente",
+        "origem_secao": "Anakinra — ensaio AIRTRIP"
+      },
+      {
+        "id": "il1-seguimento-resposta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação de resposta agendada conforme o agente escolhido — critério pré-especificado de resposta ao fim da rodagem (rilonacepte) ou resolução com 2 meses de uso (anakinra) — antes de decidir manutenção em monoterapia",
+        "origem_secao": "Rilonacepte — ensaio RHAPSODY (fase 3)"
+      },
+      {
+        "id": "il1-orientacao-suspensao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente informado, antes de qualquer tentativa futura de suspensão após uso prolongado, que a recorrência é o desfecho mais provável (82% em 17 pacientes), costuma surgir em poucas semanas (mediana de 8,0 semanas) e não meses, e não a exceção",
+        "origem_secao": "O que acontece ao suspender o rilonacepte após uso prolongado — estudo novo, 08/08/2026"
+      },
+      {
+        "id": "il1-plano-recorrencia-pos-suspensao",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Plano registrado para a recorrência pós-suspensão: retomada de inibição da via de IL-1 é a conduta mais frequentemente necessária (8 de 14 casos), já que AINE/colchicina isolados controlaram só uma minoria (2 de 14) na doença avançada e prolongada",
+        "origem_secao": "O que acontece ao suspender o rilonacepte após uso prolongado — estudo novo, 08/08/2026"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "seguimento-tardio-pos-reparo-de-tetralogia-de-fallot-e-coarctacao-de-aorta",
+    "condicao": "Seguimento tardio pós-reparo de Tetralogia de Fallot e pós-reparo de Coarctação de Aorta no adulto",
+    "resumo": "O que checar no acompanhamento de longo prazo do adulto já operado de Tetralogia de Fallot (regurgitação pulmonar crônica, timing de troca valvar) e de Coarctação de Aorta (hipertensão residual, recoarctação, imagem seriada da aorta), como complemento à avaliação inicial em centro de ACHD.",
+    "documento_origem": "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pulmonary Regurgitation after Tetralogy of Fallot Repair: A Diagnostic and Therapeutic Challenge · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC5353440/",
+      "Pulmonary Valve Replacement Timing Following Initial Tetralogy of Fallot Repair: A Systematic Review · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10754298/",
+      "Coarctation of the Aorta: Modern Paradigms Across the Lifespan · Hypertension (AHA) · https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.123.19454",
+      "Coarctation of the Aorta: Diagnosis and Management · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10340190/"
+    ],
+    "itens": [
+      {
+        "id": "tof-regurgitacao-pulmonar-avaliada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Regurgitação pulmonar crônica pesquisada mesmo em paciente assintomático — pode ser bem tolerada por anos antes de intolerância ao exercício, insuficiência cardíaca, taquiarritmia ou morte súbita tardia se surgirem",
+        "origem_secao": "Tetralogia de Fallot — complicacoes tardias"
+      },
+      {
+        "id": "tof-vdfvd-medido",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Volume diastólico final do VD (VDFVD) medido por imagem, considerando o limiar proposto de 150-180 mL/m² como gatilho de discussão de troca valvar pulmonar mesmo em assintomático",
+        "origem_secao": "Tetralogia de Fallot — indicacao e timing de troca valvar pulmonar"
+      },
+      {
+        "id": "tof-encaminhamento-troca-valvar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Paciente sintomático (insuficiência cardíaca) por insuficiência pulmonar crônica encaminhado para troca valvar pulmonar em centro terciário experiente, antes que a disfunção de VD se torne irreversível",
+        "origem_secao": "Tetralogia de Fallot — indicacao e timing de troca valvar pulmonar"
+      },
+      {
+        "id": "coa-hipertensao-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Hipertensão associada à coarctação tratada com inibidor da ECA, bloqueador do receptor de angiotensina ou betabloqueador como primeira linha, conforme diretrizes de ACHD 2008",
+        "origem_secao": "Coarctacao de aorta — tratamento da hipertensao associada"
+      },
+      {
+        "id": "coa-periodicidade-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento clínico agendado com periodicidade mínima anual após reparo cirúrgico ou intervenção percutânea da coarctação",
+        "origem_secao": "Coarctacao de aorta — seguimento de longo prazo"
+      },
+      {
+        "id": "coa-imagem-aorta-toracica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Imagem da aorta torácica (RM ou TC) programada a cada 5 anos ou menos, mesmo com reparo aparentemente satisfatório, para rastrear dilatação ou aneurisma tardio",
+        "origem_secao": "Coarctacao de aorta — seguimento de longo prazo"
+      },
+      {
+        "id": "coa-recoarctacao-hipertensao-residual",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hipertensão residual ou recorrente em repouso ou induzida por exercício investigada; recoarctação excluída antes de tratar a hipertensão agressivamente",
+        "origem_secao": "Coarctacao de aorta — seguimento de longo prazo; Coarctacao de aorta — manejo da recoarctacao"
+      },
+      {
+        "id": "coa-orientacao-arteriopatia-sistemica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que a coarctação representa uma arteriopatia generalizada, com risco cardiovascular aumentado ao longo da vida, justificando acompanhamento vitalício com especialista em ACHD",
+        "origem_secao": "Coarctacao de aorta — seguimento de longo prazo"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "vigilancia-de-complicacoes-tardias-na-circulacao-de-fontan",
+    "condicao": "Vigilância de complicações tardias na circulação de Fontan",
+    "resumo": "O que checar no seguimento crônico do adulto com circulação de Fontan — doença hepática associada a Fontan, enteropatia perdedora de proteína e sinais de falência da circulação — a partir do documento que detalha essas complicações de longo prazo.",
+    "documento_origem": "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Fontan-Associated Liver Disease · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.120.045597",
+      "Protein-losing enteropathy in Fontan circulation: Pathophysiology, outcome and treatment options of a complex condition · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC11658113/"
+    ],
+    "itens": [
+      {
+        "id": "fontan-rastreio-hepatico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastreio de doença hepática associada a Fontan (FALD) considerado no seguimento, dado que fibrose hepática é quase universal e cirrose afeta cerca de 43% dos pacientes 30 anos após a operação",
+        "origem_secao": "Doenca hepatica associada a Fontan (FALD)"
+      },
+      {
+        "id": "fontan-limitacao-biomarcador-imagem",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Interpretação de biomarcadores e de medidas de rigidez hepática feita com cautela, pois costumam subestimar a gravidade da FALD por confusão com a congestão hepática; biópsia hepática permanece padrão-ouro para estadiamento quando indicada",
+        "origem_secao": "Doenca hepatica associada a Fontan (FALD)"
+      },
+      {
+        "id": "fontan-rastreio-epp",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Enteropatia perdedora de proteína (EPP) considerada em paciente com edema, hospitalizações repetidas ou necessidade de reposição intravenosa de proteína — afeta 3-18% dos pacientes com Fontan",
+        "origem_secao": "Enteropatia perdedora de proteina (EPP)"
+      },
+      {
+        "id": "fontan-investigacao-epp-confirmada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se EPP confirmada, investigação hemodinâmica realizada (ecocardiograma, ressonância cardiovascular, tomografia ou cateterismo) para avaliar pressão do circuito de Fontan, resistência vascular pulmonar e débito cardíaco, em busca de causa potencialmente reversível",
+        "origem_secao": "Enteropatia perdedora de proteina (EPP)"
+      },
+      {
+        "id": "fontan-sinais-falencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais de falência da circulação de Fontan investigados — disfunção ventricular, aumento da resistência vascular pulmonar e obstrução da via de Fontan como causas potenciais",
+        "origem_secao": "Fontan em falencia"
+      },
+      {
+        "id": "fontan-seguimento-vitalicio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Acompanhamento vitalício em centro especializado em ACHD mantido, dada a natureza multissistêmica e progressiva das complicações tardias da circulação de Fontan",
+        "origem_secao": "Fontan em falencia; Doenca hepatica associada a Fontan (FALD)"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "avaliacao-de-tvp-ou-tep-suspeita-com-escore-de-wells",
+    "condicao": "Avaliação de suspeita de TVP ou TEP com o escore de Wells",
+    "resumo": "Checklist para aplicação correta do escore de Wells em suspeita de trombose venosa profunda ou embolia pulmonar — distinguindo as duas versões do escore, os critérios completos de cada uma, a armadilha do item que subtrai pontos e o uso correto do D-dímero conforme a categoria de probabilidade.",
+    "documento_origem": "escore-de-wells-dvt-e-embolia-pulmonar-criterios-completos",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Wells PS, Anderson DR, Bormanis J, et al. Value of assessment of pretest probability of deep-vein thrombosis in clinical management. Lancet. 1997;350(9094):1795-1798. DOI: 10.1016/S0140-6736(97)08140-3. PMID: 9428249",
+      "Wells PS, Anderson DR, Rodger M, et al. Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis. N Engl J Med. 2003;349(13):1227-1235. DOI: 10.1056/NEJMoa023153. PMID: 14507948",
+      "Wells PS, Anderson DR, Rodger M, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism: increasing the models utility with the SimpliRED D-dimer. Thromb Haemost. 2000;83(3):416-420. PMID: 10744147"
+    ],
+    "itens": [
+      {
+        "id": "wells-escolher-versao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Versão do escore aplicada corretamente identificada antes de pontuar — Wells de TVP (9 critérios) e Wells de TEP (7 critérios) são escores diferentes, com variáveis e pesos diferentes, apesar do nome comum",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "wells-tvp-nove-criterios",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em suspeita de TVP: os nove critérios do escore original conferidos um a um (câncer ativo, paralisia/imobilização, acamado ≥3 dias ou cirurgia recente, dor à palpação do sistema venoso profundo, perna inteira edemaciada, edema de panturrilha >3cm, edema depressível, veias colaterais superficiais, TVP previamente documentada)",
+        "origem_secao": "Escore de wells para tvp — original (3 niveis)"
+      },
+      {
+        "id": "wells-tvp-diagnostico-alternativo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Item 'diagnóstico alternativo pelo menos tão provável quanto TVP' avaliado e subtraído (-2 pontos) quando presente — é o único critério do escore de TVP que não soma, e omiti-lo infla a probabilidade calculada",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "wells-tep-sete-criterios",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em suspeita de TEP: os sete critérios do escore específico conferidos com os pesos corretos (sinais/sintomas de TVP +3, TEP como diagnóstico mais provável ou igualmente provável +3, FC >100bpm +1,5, imobilização ≥3 dias ou cirurgia nas últimas 4 semanas +1,5, TVP/TEP prévios +1,5, hemoptise +1, neoplasia ativa +1)",
+        "origem_secao": "Escore de wells para tep"
+      },
+      {
+        "id": "wells-interpretacao-consistente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Versão de 3 níveis (baixa/moderada/alta) e versão simplificada de 2 níveis (provável/improvável) não misturadas na mesma decisão clínica — cada uma tem corte e propósito próprios, e a de 2 níveis foi desenhada para combinar com D-dímero",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "wells-ddimero-so-baixo-risco",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "D-dímero usado para excluir o diagnóstico apenas nas categorias de baixa/moderada probabilidade (ou 'TVP/TEP improvável') — não usado para excluir em probabilidade alta (TVP >6 pontos ou TEP >6/>4 conforme a versão), onde o valor preditivo negativo do exame cai",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "wells-registro-escore",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Pontuação total, critérios individuais marcados e categoria de probabilidade resultante registrados no prontuário antes da decisão de exame de imagem",
+        "origem_secao": "Versao simplificada (2 niveis) — a mais usada hoje"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-da-sincope-vasovagal-recorrente",
+    "condicao": "Manejo ambulatorial da síncope vasovagal recorrente",
+    "resumo": "Checklist para o tratamento longitudinal da síncope vasovagal (reflexa) recorrente — ordem de linhas de tratamento, técnica das manobras de contrapressão, a contraindicação formal ao betabloqueador e os cuidados ao considerar fludrocortisona ou midodrina, derivado da seção de tratamento da ESC 2018 e dos ensaios POST/POST 2.",
+    "documento_origem": "tratamento-da-sincope-vasovagal-recorrente-medidas-nao-farmacologicas-e-farmacos",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seção 5.2 (Treatment of reflex syncope), texto integral conferido em 30/07/2026.",
+      "Sheldon RS, Morillo CA, Klingenheben T, et al. Prevention of Syncope Trial (POST): A Randomized, Placebo-Controlled Study of Metoprolol in the Prevention of Vasovagal Syncope. Circulation. 2006;113(9):1164-1170. DOI: 10.1161/CIRCULATIONAHA.105.535161. PMID: 16505178.",
+      "Sheldon R, Raj SR, Rose MS, et al. Fludrocortisone for the Prevention of Vasovagal Syncope: A Randomized, Placebo-Controlled Trial. J Am Coll Cardiol. 2016;68(1):1-9. DOI: 10.1016/j.jacc.2016.04.030. PMID: 27364043."
+    ],
+    "itens": [
+      {
+        "id": "svv-educacao-primeira-linha",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Educação sobre o diagnóstico, reasseguramento sobre o caráter benigno da condição e orientação sobre o risco de recorrência oferecidos como primeira linha (Classe I, Nível B) antes de considerar qualquer fármaco ou dispositivo",
+        "origem_secao": "Primeira linha: educação e modificação de estilo de vida"
+      },
+      {
+        "id": "svv-gatilhos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente treinado a reconhecer e evitar gatilhos e situações desencadeantes (calor, ortostatismo prolongado, desidratação, ambientes lotados, dor/procedimento médico, jejum prolongado)",
+        "origem_secao": "Primeira linha: educação e modificação de estilo de vida"
+      },
+      {
+        "id": "svv-elegibilidade-manobras",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença de pródromo reconhecível e idade abaixo de 60 anos avaliadas antes de indicar manobras físicas de contrapressão (Classe IIa, Nível B) — a manobra depende do paciente perceber o aviso a tempo de executá-la",
+        "origem_secao": "Manobras físicas de contrapressão"
+      },
+      {
+        "id": "svv-treino-manobras",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente elegível treinado na técnica de contração isométrica de pernas ou braços (cruzar as pernas com contração muscular, ou entrelaçar as mãos e puxar os braços em direções opostas) ao primeiro sinal de pródromo",
+        "origem_secao": "Manobras físicas de contrapressão"
+      },
+      {
+        "id": "svv-betabloqueador-contraindicado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador (metoprolol) NÃO prescrito como tratamento da síncope vasovagal — Classe III, Nível A, contraindicação formal confirmada pelo ensaio POST (neutro no desfecho primário, sem margem para indicação mesmo em subgrupo)",
+        "origem_secao": "Betabloqueador (metoprolol) — não indicado (Classe III, Nível A)"
+      },
+      {
+        "id": "svv-fludrocortisona-midodrina-criterio",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se fludrocortisona ou midodrina considerada (Classe IIb, Nível B, nível de evidência mais fraco que as medidas comportamentais): fludrocortisona não usada em hipertensão ou insuficiência cardíaca; midodrina prescrita ciente da posologia de três tomadas diárias e do risco de hipertensão supina, reação pilomotora e sintomas urinários",
+        "origem_secao": "Fludrocortisona — Classe IIb, Nível B"
+      },
+      {
+        "id": "svv-tilt-training-restrito",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Treinamento postural (tilt training, Classe IIb, Nível B) considerado só em paciente jovem, altamente motivado, com sintomas vasovagais recorrentes desencadeados por estresse ortostático — não indicação ampla, e a maioria dos ensaios controlados não mostrou efeito significativo",
+        "origem_secao": "Treinamento postural (tilt training)"
+      },
+      {
+        "id": "svv-marcapasso-fora-de-escopo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Estimulação cardíaca não indicada dentro deste protocolo comportamental/farmacológico — encaminhamento para avaliação de marca-passo reservado ao subgrupo com assistolia documentada, acima de 40 anos, já coberto no verbete de estratificação de risco e monitor de eventos implantável",
+        "origem_secao": "Estimulação cardíaca — fora do escopo deste documento"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "conducao-de-conversa-dificil-e-ma-noticia-em-cardiologia",
+    "condicao": "Condução estruturada de conversa difícil / comunicação de má notícia em Cardiologia",
+    "resumo": "Roteiro em seis etapas (abertura, aviso curto, informação, acolhimento da reação, checagem de compreensão, próximos passos) para conduzir a comunicação de diagnóstico grave, mudança de prognóstico ou objetivo de tratamento — distinto de um checklist de processo de consentimento: aqui o objeto é a condução da conversa em si, não a retenção de itens de risco de um procedimento.",
+    "documento_origem": "roteiro-de-conversa-dificil-em-cardiologia",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baile WF, Buckman R, Lenzi R, Glober G, Beale EA, Kudelka AP. SPIKES — a six-step protocol for delivering bad news: application to the patient with cancer. The Oncologist. 2000;5(4):302-311. PMID: 10964998",
+      "Back AL, Arnold RM, Baile WF, Tulsky JA, Fryer-Edwards K. Approaching difficult communication tasks in oncology. CA Cancer J Clin. 2005;55(3):164-177. DOI: 10.3322/canjclin.55.3.164. PMID: 15890639",
+      "Sobanski PZ, Alt-Epping B, Currow DC, et al. Palliative care for people living with heart failure: European Association for Palliative Care Task Force expert position statement. Cardiovasc Res. 2020;116(1):12-27. DOI: 10.1093/cvr/cvz200. PMID: 31386104"
+    ],
+    "itens": [
+      {
+        "id": "rcd-preparo-dado-na-mao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dado clínico que sustenta a conversa levado já em mãos (fração de ejeção, exame, prognóstico com a incerteza real que ele tem) — conversa conduzida sem o número na cabeça vira vaga, e vaga assusta mais",
+        "origem_secao": "Antes de entrar na sala"
+      },
+      {
+        "id": "rcd-ambiente-privacidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ambiente adequado garantido: sentado, sem balcão no meio, celular no silencioso; se for à beira do leito, cortina fechada",
+        "origem_secao": "Antes de entrar na sala"
+      },
+      {
+        "id": "rcd-quem-paciente-quer-junto",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Perguntado ao paciente quem ele quer que esteja presente, sem presumir que o acompanhante já na sala é quem ele escolheria",
+        "origem_secao": "Antes de entrar na sala"
+      },
+      {
+        "id": "rcd-etapa1-o-que-ja-sabe",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Etapa 1 (Abertura): perguntado o que a pessoa já sabe/entende sobre a situação, antes de informar qualquer coisa",
+        "origem_secao": "Etapa 1 — Abertura: descubra o que a pessoa já sabe"
+      },
+      {
+        "id": "rcd-etapa1-quanto-quer-saber",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Perguntado quanto a pessoa quer saber (todos os detalhes, ou preferir que a família seja informada) — tratado como um direito dela, não como gentileza opcional",
+        "origem_secao": "Etapa 1 — Abertura: descubra o que a pessoa já sabe"
+      },
+      {
+        "id": "rcd-etapa2-aviso-curto",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Etapa 2: frase curta de aviso dada antes da notícia em si, seguida de pausa — notícia grave dita sem aviso costuma não ser ouvida",
+        "origem_secao": "Etapa 2 — O aviso curto antes da notícia"
+      },
+      {
+        "id": "rcd-etapa3-informacao-curta-silencio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Etapa 3: essencial dito em uma ou duas frases, sem jargão não traduzido, e então silêncio mantido — sem preencher o silêncio com mais informação",
+        "origem_secao": "Etapa 3 — A informação: curta, sem jargão, e depois pare"
+      },
+      {
+        "id": "rcd-etapa4-acolher-reacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Etapa 4: reação emocional (choro, silêncio, raiva, negociação) nomeada e acolhida antes de retomar qualquer informação — enquanto a emoção está alta, informação não entra",
+        "origem_secao": "Etapa 4 — Acolher a reação antes de seguir"
+      },
+      {
+        "id": "rcd-etapa5-checar-compreensao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Etapa 5: compreensão verificada pedindo que o paciente reformule com as próprias palavras (ex.: 'como contaria isso para sua filha hoje?'), nunca só perguntando 'ficou claro?'",
+        "origem_secao": "Etapa 5 — Checar o que foi entendido"
+      },
+      {
+        "id": "rcd-etapa6-proximos-passos",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Etapa 6: conversa encerrada com próximos passos concretos (o que muda no tratamento, quando é o retorno, o que é sinal de alarme) e com a frase explícita de que o acompanhamento continua",
+        "origem_secao": "Etapa 6 — Próximos passos concretos"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "graduacao-e-tratamento-da-cardite-reumatica-aguda",
+    "condicao": "Avaliação inicial, graduação de gravidade e tratamento da cardite reumática aguda",
+    "resumo": "Checklist de condução do surto agudo de cardite reumática, a partir da Tabela 39 (exames) e Tabela 40 (tratamento) da Diretriz de Miocardites da SBC 2022 — graduar em subclínica/leve/moderada/grave, exames por classe e nível, erradicação estreptocócica e anti-inflamatório específicos por faixa, e indicação cirúrgica na fase aguda refratária.",
+    "documento_origem": "cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022 · Arquivos Brasileiros de Cardiologia · seção 7 (Cardite Reumática), Tabelas 39 e 40 — texto integral em acesso aberto no PubMed Central"
+    ],
+    "itens": [
+      {
+        "id": "cra-graduar-gravidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cardite graduada em subclínica, leve, moderada ou grave pelos critérios cumulativos — taquicardia desproporcional à febre separa subclínica de leve; sintomas limitantes de IC com regurgitação valvar importante e/ou disfunção sistólica ventricular define grave",
+        "origem_secao": "As quatro faixas de gravidade"
+      },
+      {
+        "id": "cra-exames-classe-i",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações, radiografia de tórax, ecodopplercardiograma transtorácico (mandatório), VHS/PCR e antiestreptolisina O solicitados — todos Classe I na Tabela 39",
+        "origem_secao": "Exames diagnósticos (Tabela 39)"
+      },
+      {
+        "id": "cra-cintilografia-galio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Cintilografia com Gálio-67 considerada como exame de imagem de escolha quando a investigação precisa continuar (IIa, nível B) — é o mais estudado e deve ser o primeiro a ser realizado, antes de antimiosina ou PET",
+        "origem_secao": "Exames diagnósticos (Tabela 39)"
+      },
+      {
+        "id": "cra-troponina-nao-afasta",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que troponina normal NÃO afasta cardite reumática — o dano miocárdico costuma ser pequeno, e por isso troponina como critério diagnóstico é apenas IIb, nível B",
+        "origem_secao": "O erro conceitual mais comum: cardite reumática não é miocardite"
+      },
+      {
+        "id": "cra-erradicacao-estreptococica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Erradicação estreptocócica prescrita para todos os pacientes, independente da faixa de gravidade: penicilina G benzatina IM dose única (dose por peso) ou amoxicilina por 10 dias; eritromicina se alérgico à penicilina",
+        "origem_secao": "Erradicação estreptocócica — Classe I, nível C"
+      },
+      {
+        "id": "cra-anti-inflamatorio-por-faixa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anti-inflamatório escolhido conforme a faixa de gravidade, não um esquema único: AAS ou naproxeno por 2 semanas no subclínico com artrite/pericardite (I, B); prednisona por 4-8 semanas no subclínico a leve (IIb, B); prednisona em dose mais alta por cerca de 12 semanas no moderado a grave (I, B)",
+        "origem_secao": "Anti-inflamatório, por faixa de gravidade"
+      },
+      {
+        "id": "cra-repouso-hospitalizacao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Repouso e hospitalização para controle de sintomas considerados na cardite moderada a grave (IIa, nível C)",
+        "origem_secao": "Medidas de suporte"
+      },
+      {
+        "id": "cra-tratamento-ic",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Tratamento da IC com diurético e drogas de atuação neuro-hormonal (IECA, furosemida, espironolactona, digoxina) iniciado se houver sinais ou sintomas de disfunção ventricular (Classe I, nível C)",
+        "origem_secao": "Medidas de suporte"
+      },
+      {
+        "id": "cra-cirurgia-valvar-aguda",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Cirurgia valvar avaliada nos casos graves e refratários (Classe I, nível B): plástica com técnica que permita crescimento do anel na mitral; prótese mecânica preferencial na aórtica",
+        "origem_secao": "Cirurgia valvar na fase aguda — Classe I, nível B"
+      },
+      {
+        "id": "cra-encaminhar-profilaxia-secundaria",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Profilaxia secundária de longo prazo tratada como decisão à parte, feita no documento próprio do tema — distinta da erradicação estreptocócica do surto, que é dose única",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "profilaxia-antibiotica-odontologica-em-paciente-de-alto-risco-de-endocardite",
+    "condicao": "Profilaxia antibiótica antes de procedimento odontológico em paciente de alto risco de endocardite infecciosa",
+    "resumo": "O que checar antes de prescrever profilaxia antibiótica pré-procedimento odontológico em paciente cardiopata: se a condição cardíaca é de fato de alto risco (Classe I/IIa/IIb), se o procedimento planejado tem risco real de bacteremia, e qual esquema usar conforme alergia — derivado da diretriz ESC 2023.",
+    "documento_origem": "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Profilaxia antibacteriana para prevenção da endocardite bacteriana após procedimentos dentários · Cochrane Library · 2022 · https://www.cochranelibrary.com/es/cdsr/doi/10.1002/14651858.CD003813.pub5/full/pt",
+      "Endocardite Infecciosa: Ainda mais Desafios que Certezas · PMC · 2022 · https://pmc.ncbi.nlm.nih.gov/articles/PMC9368884/",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656 — Recommendation Table 1 e Table 6, texto integral conferido diretamente em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "pae-condicao-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem condição cardíaca de alto risco Classe I: válvula protética (incluindo transcateter) ou material protético em reparo valvar; endocardite infecciosa prévia; cardiopatia congênita cianótica não tratada, ou tratada com shunt/conduto/prótese residual (só nos primeiros 6 meses se sem defeito residual); ou dispositivo de assistência ventricular",
+        "origem_secao": "Populacao alvo alto risco"
+      },
+      {
+        "id": "pae-condicao-recomendacao-fraca",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a indicação for transplante cardíaco (Classe IIb, sem exigir valvulopatia estrutural associada) ou reparo transcateter de valva mitral/tricúspide (Classe IIa): discutido que a força da recomendação é menor",
+        "origem_secao": "Populacao alvo alto risco"
+      },
+      {
+        "id": "pae-procedimento-elegivel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o procedimento odontológico planejado envolve manipulação de tecido gengival, região periapical dentária ou perfuração da mucosa oral — não indicado para procedimento de rotina sem risco significativo de bacteremia",
+        "origem_secao": "Procedimentos indicados"
+      },
+      {
+        "id": "pae-alergia-checada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Alergia a penicilina/ampicilina checada; se houver história de anafilaxia, angioedema ou urticária com penicilina/ampicilina, cefalosporina evitada e substituída por azitromicina/claritromicina ou doxiciclina",
+        "origem_secao": "Esquema padrao — corrigido em 30/07/2026 contra o texto integral da diretriz"
+      },
+      {
+        "id": "pae-esquema-primeira-escolha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Sem alergia: amoxicilina VO 2 g (primeira escolha), dose única, 30-60 minutos antes do procedimento — ou ampicilina IM/IV 2 g, ou cefazolina/ceftriaxona IM/IV 1 g como alternativa",
+        "origem_secao": "Esquema padrao — corrigido em 30/07/2026 contra o texto integral da diretriz"
+      },
+      {
+        "id": "pae-esquema-alergia-sem-clindamicina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Com alergia a penicilina/ampicilina: cefalexina VO 2 g, ou azitromicina/claritromicina VO 500 mg, ou doxiciclina VO 100 mg (ou cefazolina/ceftriaxona IM/IV 1 g se via oral impossível) — clindamicina NÃO prescrita como alternativa, decisão explícita da força-tarefa ESC 2023 pelo risco de C. difficile",
+        "origem_secao": "Esquema padrao — corrigido em 30/07/2026 contra o texto integral da diretriz"
+      },
+      {
+        "id": "pae-orientacao-evidencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que a revisão sistemática Cochrane (2022) não encontrou evidência conclusiva de ensaio clínico randomizado comprovando eficácia da profilaxia — a indicação é baseada em consenso de especialistas e plausibilidade biológica",
+        "origem_secao": "Evidencia controversa"
+      },
+      {
+        "id": "pae-comunicacao-dentista",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Comunicação estabelecida entre cardiologista e cirurgião-dentista antes do procedimento invasivo planejado, para confirmar a classificação de risco do paciente",
+        "origem_secao": "Abordagem multidisciplinar"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-agudo-de-intoxicacao-digitalica-e-indicacao-de-anticorpo-fab",
+    "condicao": "Manejo agudo de intoxicação digitálica e indicação de anticorpo antidigoxina (Fab)",
+    "resumo": "O que checar diante de suspeita de intoxicação digitálica: achado eletrocardiográfico patognomônico, classificação em aguda vs. crônica, interpretação do potássio sérico e as três vias de cálculo de dose do anticorpo Fab (dose ingerida, nível sérico ou empírica).",
+    "documento_origem": "intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cardiac Glycoside (Digoxin) Toxicity. StatPearls, NCBI Bookshelf, NBK459165 — seção de manifestações clínicas e achados eletrocardiográficos, consultada em 30/07/2026",
+      "Digoxin Immune Fab. StatPearls, NCBI Bookshelf, NBK556101 — seção de indicações e fórmulas de dose, consultada em 30/07/2026"
+    ],
+    "itens": [
+      {
+        "id": "dig-ecg-bidirecional",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG revisado à procura de taquicardia ventricular bidirecional (alternância do eixo do QRS a cada batimento, através das fibras do ramo esquerdo) — achado patognomônico, embora relativamente raro; extrassístole ventricular é a manifestação cardíaca mais comum",
+        "origem_secao": "Achado eletrocardiografico patognomonico"
+      },
+      {
+        "id": "dig-classificacao-aguda-cronica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cenário classificado como intoxicação aguda (ingestão >10 mg em adulto ou >4 mg/>0,1 mg/kg em criança; ou nível sérico em estado estável ≥10 ng/mL) ou crônica (nível sérico >6 ng/mL em adulto ou >4 ng/mL em criança) — a distinção muda o limiar de tratamento e a interpretação do potássio",
+        "origem_secao": "Distincao entre intoxicacao aguda e cronica"
+      },
+      {
+        "id": "dig-potassio-marcador",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio sérico dosado e interpretado como marcador de gravidade na intoxicação aguda (bloqueio da Na+/K+-ATPase impede entrada de potássio na célula) — não corrigido isoladamente com medidas usuais antes de considerar o Fab",
+        "origem_secao": "Distincao entre intoxicacao aguda e cronica"
+      },
+      {
+        "id": "dig-indicacao-fab",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de anticorpo antidigoxina (Fab) checada: dose ingerida fatal ou nível sérico compatível com intoxicação aguda/crônica; complicação com risco de vida em qualquer cenário (bradicardia sintomática, assistolia, bloqueio AV refratário a atropina, taquicardia ventricular); ou potássio >5,5 mEq/L em adulto (>6 mEq/L em criança)",
+        "origem_secao": "Indicacoes de anticorpo antidigoxina (fab)"
+      },
+      {
+        "id": "dig-dose-por-ingestao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se dose ingerida conhecida: número de frascos de Fab calculado pela carga corporal total (dose ingerida em mg × 0,8, dividida por 0,5 mg de digoxina ligada por frasco)",
+        "origem_secao": "Formulas de dose"
+      },
+      {
+        "id": "dig-dose-por-nivel-serico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se concentração sérica conhecida: número de frascos calculado por concentração (ng/mL) × peso (kg) ÷ 100",
+        "origem_secao": "Formulas de dose"
+      },
+      {
+        "id": "dig-dose-empirica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se nível desconhecido e paciente com complicação de risco de vida: considerada dose empírica de 10 frascos em adulto ou 5 frascos em criança <20 kg, sem aguardar confirmação laboratorial",
+        "origem_secao": "Formulas de dose"
+      },
+      {
+        "id": "dig-orientacao-nao-corrigir-k",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe orientada a não corrigir hiperpotassemia leve com medidas usuais (insulina/glicose, resina) antes de considerar o Fab na intoxicação aguda — o próprio antídoto já reduz o potássio ao neutralizar a digoxina livre",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "dig-orientacao-nao-descartar-por-nivel-normal",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe orientada a não descartar o diagnóstico por nível sérico 'normal' — o diagnóstico é primariamente clínico e a correlação entre nível sérico e gravidade não é absoluta, especialmente na toxicidade crônica",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "estratificacao-de-risco-mwho-na-primeira-consulta-de-pre-natal-cardiologico",
+    "condicao": "Estratificação de risco mWHO 2.0 na primeira consulta de pré-natal cardiológico",
+    "resumo": "O que definir logo na primeira avaliação da gestante cardiopata — classe de risco mWHO 2.0, equipe multidisciplinar e local de seguimento —, distinto do checklist de alta do puerpério, que trata do momento pós-parto.",
+    "documento_origem": "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "De Backer J, Haugaa KH, Hasselberg NE et al. ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025. doi: 10.1093/eurheartj/ehaf193.",
+      "How to set up a pregnancy heart team · International Journal of Cardiology Congenital Heart Disease · 2025 · https://pmc.ncbi.nlm.nih.gov/articles/PMC12664424/"
+    ],
+    "itens": [
+      {
+        "id": "mwho-classe-determinada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificação de risco mWHO 2.0 determinada e documentada na primeira consulta, a partir da cardiopatia específica da paciente",
+        "origem_secao": "Contexto"
+      },
+      {
+        "id": "mwho-exemplos-conferidos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lesão/cardiopatia da paciente conferida contra os exemplos descritos em cada classe (I a IV) da tabela mWHO 2.0, e não classificada só por impressão clínica geral",
+        "origem_secao": "mWHO classe I / mWHO classe II / mWHO classe II-III / mWHO classe III / mWHO classe IV"
+      },
+      {
+        "id": "mwho-fe-classificada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houver disfunção ventricular esquerda: fração de ejeção quantificada e classificada pela mWHO — FE 30-45% corresponde à classe II-III, FE <30% à classe III",
+        "origem_secao": "mWHO classe II-III / mWHO classe III"
+      },
+      {
+        "id": "mwho-equipe-coracao-gravidez",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Classe mWHO II-III ou superior: encaminhamento à equipe multidisciplinar de coração e gravidez (pregnancy heart team), integrando cardiologia e obstetrícia de alto risco",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "mwho-anestesia-obstetrica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se indicado pela gravidade da cardiopatia: anestesiologia obstétrica incorporada à equipe de coração e gravidez",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "mwho-centro-referencia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Local de acompanhamento pré-natal definido conforme a classe de risco — quanto mais alta a classe, maior a necessidade de seguimento em centro de referência com experiência em cardiopatia e gestação",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "mwho-classe-iv-decisao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se classe mWHO IV (ex.: síndrome de Eisenmenger, estenose mitral grave, dilatação aórtica grave >45 mm no Marfan ou >50 mm em valva bicúspide): processo de decisão compartilhada sobre a possibilidade de interrupção da gravidez documentado",
+        "origem_secao": "mWHO classe IV"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "aplicacao-do-lifes-essential-8-na-avaliacao-de-saude-cardiovascular",
+    "condicao": "Avaliação de saúde cardiovascular na consulta com o construto Life's Essential 8 (AHA)",
+    "resumo": "Checklist para aplicar os 8 componentes do construto de saúde cardiovascular da AHA numa consulta de rotina, incluindo a armadilha de confundi-lo com escore de risco de evento — distinto do checklist de triagem pré-participação esportiva, que decide sobre incluir ECG na liberação para esporte de um atleta específico.",
+    "documento_origem": "lifes-essential-8-o-novo-construto-de-saude-cardiovascular-da-aha",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lloyd-Jones DM, Allen NB, Anderson CAM, et al. Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation. 2022;146(5):e18-e43. DOI: 10.1161/CIR.0000000000001078. PMID: 35766027"
+    ],
+    "itens": [
+      {
+        "id": "le8-oito-componentes-avaliados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Os 8 componentes avaliados e pontuados individualmente na consulta: dieta, atividade física, exposição à nicotina, sono, IMC, lipídios sanguíneos, glicemia e pressão arterial",
+        "origem_secao": "Os oito componentes"
+      },
+      {
+        "id": "le8-sono-nao-negligenciado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sono incluído como componente pleno da avaliação, com o mesmo peso dos outros 7 na média final — não tratado como item periférico ou opcional por ser o componente mais recente do construto",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "le8-escore-composto-calculado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore composto calculado como a média não ponderada dos 8 componentes (0 a 100), com o componente mais deficitário identificado para direcionar a intervenção prioritária",
+        "origem_secao": "Aplicação prática na consulta cardiológica"
+      },
+      {
+        "id": "le8-nao-substitui-risco-absoluto",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que o Life's Essential 8 mede saúde cardiovascular atual, e não substitui os escores de risco absoluto de evento (SCORE2, Pooled Cohort Equations) — os dois são complementares, não intercambiáveis",
+        "origem_secao": "Aplicação prática na consulta cardiológica / Armadilhas clínicas"
+      },
+      {
+        "id": "le8-determinantes-sociais",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Escore baixo interpretado à luz dos determinantes sociais de saúde (acesso a alimentação adequada, segurança para atividade física, moradia estável, acesso a cuidado de saúde) — não atribuído unicamente a falta de esforço individual do paciente",
+        "origem_secao": "O contexto que o documento passa a incorporar explicitamente"
+      },
+      {
+        "id": "le8-saude-psicologica-considerada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Saúde psicológica considerada como fator que interage com a capacidade de sustentar mudança de comportamento nos 8 componentes, ainda que não pontuada como um nono componente formal",
+        "origem_secao": "O contexto que o documento passa a incorporar explicitamente"
+      },
+      {
+        "id": "le8-nicotina-ampla",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Exposição à nicotina investigada de forma ampla, incluindo cigarro eletrônico/vaporizador, não restrita à pergunta tradicional sobre tabagismo em cigarro convencional",
+        "origem_secao": "Os oito componentes"
+      },
+      {
+        "id": "le8-monitoramento-longitudinal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reaplicação do escore agendada para consulta futura, para acompanhar trajetória de melhora ou piora ao longo do tempo nos mesmos 8 domínios",
+        "origem_secao": "Aplicação prática na consulta cardiológica"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "plano-de-emergencia-com-dea-no-evento-esportivo",
+    "condicao": "Plano de emergência com DEA em ambiente e evento esportivo (clube, escola, treino, competição)",
+    "resumo": "Estrutura mínima de um plano de ação de emergência para parada cardíaca súbita no esporte — reconhecimento imediato, localização e acesso real ao DEA, papéis definidos por escrito e simulação periódica; não basta a instituição possuir um desfibrilador.",
+    "documento_origem": "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Association between basic life support and survival in sports-related sudden cardiac arrest: a meta-analysis. PMID 36285872.",
+      "Outcomes after sudden cardiac arrest in sports centres with and without on-site external defibrillators. Heart. 2018. PMID 29463609. DOI 10.1136/heartjnl-2017-312441.",
+      "Pelto HF, Drezner JA. Design and Implementation of an Emergency Action Plan for Sudden Cardiac Arrest in Sport. J Cardiovasc Transl Res. 2020. PMID 32300931. DOI 10.1007/s12265-020-09988-1.",
+      "Petek BJ et al. Survival Outcomes After Sudden Cardiac Arrest in Young Competitive Athletes From the United States. JACC. 2025. PMID 40162942. DOI 10.1016/j.jacc.2025.03.006."
+    ],
+    "itens": [
+      {
+        "id": "dea-reconhecimento-imediato",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Atleta que colapsa subitamente e está inconsciente/não responsivo tratado como possível parada cardíaca até prova em contrário, sem aguardar certeza diagnóstica",
+        "origem_secao": "Reconhecimento: não esperar \"certeza diagnóstica\""
+      },
+      {
+        "id": "dea-sequencia-de-resposta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Sequência seguida sem atraso: reconhecer o colapso, acionar emergência, iniciar compressões torácicas, trazer e aplicar o DEA imediatamente, seguir as instruções do aparelho minimizando interrupções das compressões",
+        "origem_secao": "Reconhecimento: não esperar \"certeza diagnóstica\""
+      },
+      {
+        "id": "dea-localizacao-acessivel",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "DEA em localização fixa e sinalizada, com acesso sem chave ou barreira administrativa durante as atividades, considerando a distância real até quadra, campo, piscina, arquibancada e áreas de treino",
+        "origem_secao": "Onde o DEA deve estar"
+      },
+      {
+        "id": "dea-disponivel-em-treinos",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "DEA disponível também nos treinos, não apenas nas competições",
+        "origem_secao": "Onde o DEA deve estar"
+      },
+      {
+        "id": "dea-checagem-periodica",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Checagem periódica de bateria, pás e funcionamento do DEA",
+        "origem_secao": "Onde o DEA deve estar"
+      },
+      {
+        "id": "dea-meta-3-minutos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Meta de intervalo entre colapso e primeiro choque inferior a 3 minutos sempre que possível, testada por simulação real e não presumida em planta baixa",
+        "origem_secao": "Meta operacional"
+      },
+      {
+        "id": "dea-papeis-definidos",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Plano escrito definindo previamente quem reconhece e inicia a RCP, quem busca o DEA e quem aciona o serviço de emergência com instrução clara de acesso ao local",
+        "origem_secao": "Plano de ação de emergência"
+      },
+      {
+        "id": "dea-acesso-equipe-externa",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Via de acesso da equipe de emergência ao local considerada no plano — portões fechados, controle de acesso, corredores estreitos, multidão e distância entre ambulância e área de jogo podem consumir minutos críticos",
+        "origem_secao": "Como a equipe de emergência entra"
+      },
+      {
+        "id": "dea-equipamento-esportivo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Protocolo específico definido para modalidades com capacete, protetores ou outros equipamentos, permitindo exposição rápida do tórax e acesso à via aérea sem atraso desnecessário",
+        "origem_secao": "Como lidar com equipamentos esportivos"
+      },
+      {
+        "id": "dea-simulacao-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Plano ensaiado por simulação, com treinamento pelo menos anual; instituições de alto volume podem se beneficiar de simulações mais frequentes",
+        "origem_secao": "Simulação periódica"
+      },
+      {
+        "id": "dea-eventos-extensos",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Para corridas de rua, ciclismo, trilhas, esportes aquáticos e provas com percurso longo: considerados pontos móveis/fixos de desfibrilação, equipes médicas distribuídas, comunicação eficiente e acesso do resgate ao trajeto — um único DEA na largada não representa cobertura adequada",
+        "origem_secao": "Esportes em áreas extensas ou remotas"
+      },
+      {
+        "id": "dea-pos-ressuscitacao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Retorno ao esporte não discutido antes da investigação etiológica completa do sobrevivente — avaliação para doença estrutural, coronariana, canalopatia, cardiomiopatia e outras causas, com decisão posterior sobre tratamento, CDI quando indicado e eventual retorno",
+        "origem_secao": "Depois da ressuscitação"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "sincope-no-atleta-avaliacao-antes-do-retorno-ao-esporte",
+    "condicao": "Avaliação de síncope no atleta antes de decidir o retorno à prática esportiva",
+    "resumo": "Diferenciação pelo momento do episódio em relação ao esforço, sinais de alarme que ampliam a investigação, e por que a liberação esportiva deve vir depois — nunca antes — do esclarecimento diagnóstico.",
+    "documento_origem": "sincope-durante-exercicio-atleta-avaliacao-retorno-esporte",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297."
+    ],
+    "itens": [
+      {
+        "id": "sincope-atleta-momento-do-episodio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Momento do episódio em relação ao exercício caracterizado com precisão — síncope durante o exercício tratada como sinal de alarme até exclusão de causa cardíaca relevante, distinta da síncope pós-esforço imediato, que pode ocorrer por redução abrupta do retorno venoso e reflexo vasovagal",
+        "origem_secao": "Por que o momento do episódio importa"
+      },
+      {
+        "id": "sincope-atleta-nao-so-a-palavra-desmaio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História detalhada colhida além da palavra \"desmaio\": sintomas premonitórios, presença de dor torácica ou palpitação, relação com a intensidade do exercício, antecedentes familiares de morte súbita e forma de recuperação após o evento",
+        "origem_secao": "Por que o momento do episódio importa"
+      },
+      {
+        "id": "sincope-atleta-sinais-de-alarme",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisados os sinais que aumentam a preocupação: síncope durante o esforço, ausência de pródromos típicos de mecanismo reflexo, palpitação imediatamente antes do evento, dor torácica ou dispneia desproporcional, ECG anormal, cardiopatia estrutural conhecida, história familiar de morte súbita prematura ou canalopatia/cardiomiopatia, arritmia induzida pelo exercício, ou episódios recorrentes sem explicação convincente",
+        "origem_secao": "Sinais que aumentam preocupação"
+      },
+      {
+        "id": "sincope-atleta-investigacao-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação iniciada por história direcionada, exame físico e ECG de 12 derivações interpretado segundo critérios específicos do atleta",
+        "origem_secao": "Investigação"
+      },
+      {
+        "id": "sincope-atleta-investigacao-dirigida",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Conforme os achados: investigação ampliada com ecocardiograma, teste de esforço máximo reproduzindo a demanda fisiológica da modalidade, monitorização ambulatorial, ressonância cardíaca, angiotomografia coronária e estudo genético quando há suspeita fenotípica ou familiar apropriada",
+        "origem_secao": "Investigação"
+      },
+      {
+        "id": "sincope-atleta-uso-do-esforco-para-reproduzir-sintomas",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Exercício utilizado de forma específica para reproduzir sintomas e definir risco, conforme o consenso HRS 2024 de arritmias no atleta",
+        "origem_secao": "Investigação"
+      },
+      {
+        "id": "sincope-atleta-restricao-temporaria",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Retorno ao treino competitivo intenso não liberado antes de esclarecer causas cardíacas relevantes de síncope inexplicada durante o exercício — restrição inicial como medida de segurança enquanto o diagnóstico é estabelecido, não proibição permanente",
+        "origem_secao": "Quando interromper temporariamente a prática"
+      },
+      {
+        "id": "sincope-atleta-criterios-de-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno condicionado ao diagnóstico final estabelecido, tratamento quando necessário, ausência de arritmia relevante em avaliação apropriada e risco residual específico da doença",
+        "origem_secao": "Retorno ao esporte"
+      },
+      {
+        "id": "sincope-atleta-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão de retorno construída como decisão compartilhada com o atleta, documentando incertezas e medidas de mitigação de risco, evitando exclusão universal automática",
+        "origem_secao": "Retorno ao esporte"
+      },
+      {
+        "id": "sincope-atleta-liberacao-apos-avaliacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferido que a liberação esportiva vem depois da avaliação diagnóstica, não antes — síncope durante o exercício é sinal de alarme, e síncope pós-esforço não é automaticamente benigna, ainda que frequentemente tenha mecanismo reflexo",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
   }
 ]
