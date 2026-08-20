@@ -8424,5 +8424,282 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-terapeutico-da-icfep-fenotipo-dirigido",
+    "condicao": "Manejo terapêutico da insuficiência cardíaca com fração de ejeção preservada (ICFEp), fenótipo-dirigido",
+    "resumo": "O que oferecer, o que não extrapolar e o que não citar como positivo ao tratar ICFEp já diagnosticada — iSGLT2 independente de diabetes, finerenona não intercambiável com espironolactona, ARNI com recomendação fraca e heterogeneidade por sexo, semaglutida só para sintoma/peso no fenótipo obesidade. Complementa o checklist de diagnóstico já publicado nesta base (diagnostico-de-icfep-probabilidade-clinica-escore-e-etiologia), que deliberadamente não cobre tratamento — este cobre só tratamento, e não repete critério diagnóstico.",
+    "documento_origem": "acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kittleson MM, Panjrath GS, Bates K, Breathett KK, Dixon DL, Januzzi JL Jr, Mohammed SF. Management of Heart Failure With Preserved Ejection Fraction: 2026 ACC Expert Consensus Decision Pathway: A Report of the American College of Cardiology Solution Set Oversight Committee. J Am Coll Cardiol. Published online July 23, 2026. DOI: 10.1016/j.jacc.2026.06.018. PMID: 42494134.",
+      "Anker SD, Butler J, Filippatos G, et al; EMPEROR-Preserved Trial Investigators. Empagliflozin in Heart Failure with a Preserved Ejection Fraction. N Engl J Med. 2021;385(16):1451-1461. DOI: 10.1056/NEJMoa2107038. PMID: 34449189",
+      "Solomon SD, McMurray JJV, Claggett B, et al; DELIVER Trial Committees and Investigators. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2022;387(12):1089-1098. DOI: 10.1056/NEJMoa2206286. PMID: 36027570",
+      "Vaduganathan M, Docherty KF, Claggett BL, et al. SGLT-2 inhibitors in patients with heart failure: a comprehensive meta-analysis of five randomised controlled trials. Lancet. 2022;400(10354):757-767. DOI: 10.1016/S0140-6736(22)01429-5. PMID: 36041474",
+      "Solomon SD, McMurray JJV, Vaduganathan M, et al; FINEARTS-HF Committees and Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI: 10.1056/NEJMoa2407107. PMID: 39225278",
+      "Solomon SD, McMurray JJV, Anand IS, et al; PARAGON-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition in Heart Failure with Preserved Ejection Fraction. N Engl J Med. 2019;381(17):1609-1620. DOI: 10.1056/NEJMoa1908655. PMID: 31475794",
+      "McMurray JJV, Jackson AM, Lam CSP, et al. Effects of Sacubitril-Valsartan Versus Valsartan in Women Compared With Men With Heart Failure and Preserved Ejection Fraction: Insights From PARAGON-HF. Circulation. 2020;141(5):338-351. DOI: 10.1161/CIRCULATIONAHA.119.044491. PMID: 31736337",
+      "Pitt B, Pfeffer MA, Assmann SF, Boineau R, Anand IS, et al; TOPCAT Investigators. Spironolactone for heart failure with preserved ejection fraction. N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680",
+      "Pfeffer MA, Claggett B, Assmann SF, Boineau R, Anand IS, et al. Regional variation in patients and outcomes in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT) trial. Circulation. 2015;131(1):34-42. DOI: 10.1161/CIRCULATIONAHA.114.013255. PMID: 25406305",
+      "Yusuf S, Pfeffer MA, Swedberg K, Granger CB, Held P, et al; CHARM Investigators and Committees. Effects of candesartan in patients with chronic heart failure and preserved left-ventricular ejection fraction: the CHARM-Preserved Trial. Lancet. 2003;362(9386):777-781. DOI: 10.1016/S0140-6736(03)14285-7. PMID: 13678871",
+      "Kosiborod MN, Abildstrøm SZ, Borlaug BA, Butler J, Rasmussen S, Davies M, et al; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681"
+    ],
+    "itens": [
+      {
+        "id": "icfep-tx-sglt2-independente-diabetes",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de SGLT2 (empagliflozina ou dapagliflozina) oferecido independentemente da presença de diabetes: EMPEROR-Preserved e DELIVER mostraram benefício consistente com ou sem diabetes; na meta-análise pré-especificada combinando os dois (12.251 pacientes, FEVE >40%), o composto de morte cardiovascular ou hospitalização por IC teve HR 0,80 (IC95% 0,73-0,87), impulsionado sobretudo por menos hospitalização (HR 0,74; IC95% 0,67-0,83)",
+        "origem_secao": "Inibidores de SGLT2 / Emperor-preserved — empagliflozina / Deliver — dapagliflozina / Meta-analise pre-especificada reunindo os dois ensaios"
+      },
+      {
+        "id": "icfep-tx-nao-restringir-por-corte-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Indicação de iSGLT2 não restringida a um corte específico de FEVE dentro do espectro >40% — o DELIVER mostrou resultado semelhante acima e abaixo de FEVE 60%, e a mortalidade cardiovascular isolada só atinge significância quando os dois ensaios são somados (HR 0,88; IC95% 0,77-1,00), não em cada um isoladamente",
+        "origem_secao": "Armadilhas clinicas — restringir a indicação a FEVE especificamente ≤60%"
+      },
+      {
+        "id": "icfep-tx-finerenona-nao-esteroidal",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Finerenona (antagonista NÃO esteroidal do receptor mineralocorticoide) considerada em paciente com FEVE ≥40%, independentemente de diabetes ou doença renal crônica — FINEARTS-HF: razão de taxa 0,84 (IC95% 0,74-0,95; p=0,007) no composto de eventos totais de piora da IC e morte cardiovascular, com benefício vindo sobretudo dos eventos de piora da IC (morte cardiovascular isolada: HR 0,93, sem significância)",
+        "origem_secao": "O ensaio finearts-hf (solomon, nejm 2024)"
+      },
+      {
+        "id": "icfep-tx-monitorar-potassio-finerenona",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Potássio monitorizado ao iniciar ou titular finerenona — o próprio FINEARTS-HF identificou risco aumentado de hipercalemia como efeito adverso relevante do fármaco",
+        "origem_secao": "Armadilhas clinicas — iniciar finerenona sem monitorização de potássio"
+      },
+      {
+        "id": "icfep-tx-mra-nao-intercambiaveis",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Finerenona não tratada como equivalente ou intercambiável com espironolactona/eplerenona (MRA esteroidais): o SPIRIT-HF, com espironolactona na mesma faixa de FEVE, não demonstrou redução do composto de hospitalização por IC e morte cardiovascular e teve mais hipotensão, hipercalemia e alterações renais — a eficácia dos MRA esteroidais nessa população não estava estabelecida antes do FINEARTS-HF, que testou especificamente a molécula não esteroidal",
+        "origem_secao": "Antagonismo do receptor mineralocorticoide: não tratar toda a classe como equivalente"
+      },
+      {
+        "id": "icfep-tx-nao-citar-topcat-como-positivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se espironolactona for a opção escolhida, reconhecido que o TOPCAT foi NEUTRO no desfecho primário na população randomizada inteira (18,6% vs. 20,4%; HR 0,89; IC95% 0,77-1,04; p=0,14) — não citado como ensaio positivo; o mesmo vale para o CHARM-Preserved com candesartana (HR ajustado 0,86; p=0,051). Nos dois, o componente que se moveu de forma consistente foi a internação por IC, não a mortalidade — e a análise regional do TOPCAT que sugere benefício nas Américas é pós-hoc e geradora de hipótese, não confirmação",
+        "origem_secao": "TOPCAT (2014) — espironolactona / A analise regional (2015) / Como ler isso sem exagerar em nenhuma direcao / Onde isso deixa a ICFEp"
+      },
+      {
+        "id": "icfep-tx-arni-recomendacao-fraca",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Sacubitril-valsartana (ARNI) considerado como opção de força FRACA na ICFEp/ICFElr, não extrapolando o benefício robusto do PARADIGM-HF (ICFEr): o PARAGON-HF (FEVE ≥45%) teve desfecho primário formalmente neutro (razão de taxa 0,87; IC95% 0,75-1,01; p=0,06) — é esse resultado neutro, não um sucesso claro, que explica a recomendação fraca (Classe IIb/Nível C) em vez de Classe I",
+        "origem_secao": "O ensaio PARAGON-HF (Solomon, NEJM 2019) / Síntese prática"
+      },
+      {
+        "id": "icfep-tx-arni-heterogeneidade-sexo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se ARNI for considerado, registrada a heterogeneidade de efeito por sexo do PARAGON-HF como parte da decisão individualizada: benefício presente nas mulheres (razão de taxa 0,73; IC95% 0,59-0,90) e ausente nos homens (razão de taxa 1,03; IC95% 0,84-1,25), com interação estatisticamente significativa (p=0,017) — não tratado como achado a ignorar nem como indicação restrita por sexo isoladamente",
+        "origem_secao": "Subanálise por sexo (McMurray, Circulation 2020)"
+      },
+      {
+        "id": "icfep-tx-fenotipo-obesidade-semaglutida",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "No fenótipo ICFEp com obesidade (IMC ≥30 kg/m²), semaglutida 2,4mg 1x/semana considerada especificamente para melhora de SINTOMA e capacidade funcional (STEP-HFpEF: KCCQ-CSS +7,8 pontos, IC95% 4,8-10,9, p<0,001; caminhada de 6 minutos +20,3m) — reconhecido de forma explícita ao paciente que o STEP-HFpEF NÃO demonstrou redução de mortalidade nem de hospitalização por insuficiência cardíaca, desfechos que o ensaio não mediu como coprimários",
+        "origem_secao": "Resultados / Como dimensionar o ganho de 7,8 pontos no kccq — STEP-HFpEF"
+      },
+      {
+        "id": "icfep-tx-diuretico-nao-modifica-prognostico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diurético mantido como tratamento da congestão (objetivo de euvolemia com o menor custo hemodinâmico e renal possível), reavaliado longitudinalmente conforme peso, sinais de congestão, pressão arterial, função renal e resposta às demais terapias — não tratado como terapia modificadora de prognóstico por si só",
+        "origem_secao": "Diurético continua sendo tratamento da congestão, não terapia modificadora de prognóstico por si só"
+      },
+      {
+        "id": "icfep-tx-comorbidades-tratadas-ativamente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Comorbidades do fenótipo tratadas de forma ativa e não só registradas: hipertensão, diabetes tipo 2, fibrilação atrial (com avaliação de prevenção tromboembólica, controle de frequência e possibilidade de controle de ritmo), doença arterial coronariana, doença renal crônica e apneia obstrutiva do sono — a ICFEp de 2026 é tratada como síndrome multissistêmica, não como categoria residual definida só por FEVE ≥50%",
+        "origem_secao": "Fibrilação atrial e ICFEp / ICFEp é uma síndrome multissistêmica / Mensagem prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados exclusivamente dos documentos já verificados e publicados em Insuficiência cardíaca citados em source_refs, com a seção de origem registrada em cada item — nenhum PMID, DOI, número ou afirmação clínica novo em relação ao(s) documento(s) de origem."
+  },
+  {
+    "slug": "rastreio-e-tratamento-da-deficiencia-de-ferro-na-insuficiencia-cardiaca",
+    "condicao": "Rastreio e tratamento da deficiência de ferro na insuficiência cardíaca",
+    "resumo": "O caminho que evita os dois erros mais comuns na deficiência de ferro na IC — rastrear só pela hemoglobina, e tratar a anemia em si com eritropoetina ou ferro oral em vez de repor o ferro por via endovenosa. Reúne os quatro ensaios de ferro IV já publicados nesta base (CONFIRM-HF, AFFIRM-AHF, IRONMAN, HEART-FID) com os dois ensaios que mostram o que NÃO funciona (IRONOUT-HF, ferro oral; RED-HF, eritropoetina) — distinto dos checklists de alta pós-IC descompensada e de titulação dos quatro pilares já publicados, que não detalham a via de reposição de ferro.",
+    "documento_origem": "ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ponikowski P, van Veldhuisen DJ, Comin-Colet J, et al. Beneficial effects of long-term intravenous iron therapy with ferric carboxymaltose in patients with symptomatic heart failure and iron deficiency (CONFIRM-HF). Eur Heart J. 2015;36(11):657-668. DOI: 10.1093/eurheartj/ehu385. PMID: 25176939",
+      "Ponikowski P, Kirwan BA, Anker SD, et al. Ferric carboxymaltose for iron deficiency at discharge after acute heart failure (AFFIRM-AHF). Lancet. 2020;396(10266):1895-1904. DOI: 10.1016/S0140-6736(20)32339-4. PMID: 33197395",
+      "Kalra PR, Cleland JGF, Petrie MC, et al; IRONMAN Study Group. Intravenous ferric derisomaltose in patients with heart failure and iron deficiency in the UK (IRONMAN): an investigator-initiated, prospective, randomised, open-label, blinded-endpoint trial. Lancet. 2022;400(10369):2199-2209. DOI: 10.1016/S0140-6736(22)02083-9. PMID: 36347265",
+      "Mentz RJ, Garg J, Rockhold FW, et al. Ferric Carboxymaltose in Heart Failure with Iron Deficiency. N Engl J Med. 2023;389(11):975-986. DOI: 10.1056/NEJMoa2304968. PMID: 37632463",
+      "Lewis GD, Malhotra R, Hernandez AF, McNulty SE, Smith A, Felker GM, et al; NHLBI Heart Failure Clinical Research Network. Effect of Oral Iron Repletion on Exercise Capacity in Patients With Heart Failure With Reduced Ejection Fraction and Iron Deficiency: The IRONOUT HF Randomized Clinical Trial. JAMA. 2017;317(19):1958-1966. DOI: 10.1001/jama.2017.5427. PMID: 28510680",
+      "Swedberg K, Young JB, Anand IS, Cheng S, Desai AS, Diaz R, Maggioni AP, et al; RED-HF Committees and Investigators. Treatment of anemia with darbepoetin alfa in systolic heart failure. N Engl J Med. 2013;368(13):1210-1219. DOI: 10.1056/NEJMoa1214865. PMID: 23473338"
+    ],
+    "itens": [
+      {
+        "id": "ferro-ic-definicao-deficiencia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Deficiência de ferro definida pelo critério consistente nos ensaios de ferro IV: ferritina sérica <100 μg/L, ou 100-300 μg/L com saturação de transferrina <20% — definição operacional distinta da anemia, que pode ou não estar presente",
+        "origem_secao": "Definicao de deficiencia de ferro nos tres ensaios"
+      },
+      {
+        "id": "ferro-ic-rastrear-por-ferritina-nao-so-hemoglobina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Rastreio feito por ferritina e saturação de transferrina, não só pela hemoglobina — a deficiência de ferro pode estar presente sem que o paciente tenha anemia, e é a ferritina/TSAT, não a hemoglobina, que indica a reposição",
+        "origem_secao": "Armadilhas clinicas — rastrear deficiência de ferro só pela hemoglobina"
+      },
+      {
+        "id": "ferro-ic-restrito-fe-reduzida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de ferro IV verificada em paciente com fração de ejeção reduzida (FEVE ≤45% ambulatorial, ou <50% na alta de IC aguda) — os quatro ensaios de desfecho clínico (CONFIRM-HF, AFFIRM-AHF, IRONMAN, HEART-FID) recrutaram FE reduzida, não ICFEp; não extrapolado sem ressalva para fração de ejeção preservada",
+        "origem_secao": "Armadilhas clinicas — extrapolar os resultados para FEVE preservada"
+      },
+      {
+        "id": "ferro-ic-iv-para-sintoma",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ferro carboximaltose IV oferecido para alívio de sintoma e capacidade funcional em paciente ambulatorial sintomático com deficiência de ferro — é o CONFIRM-HF (desfecho primário positivo e claro: +33±11m na caminhada de 6 minutos na semana 24, p=0,002, mantido na semana 52) que sustenta essa indicação com maior força de evidência",
+        "origem_secao": "Confirm-hf 2015 sintoma e capacidade funcional / Sintese honesta dos tres resultados"
+      },
+      {
+        "id": "ferro-ic-antes-da-alta-affirm",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em paciente hospitalizado por IC aguda descompensada com FEVE <50% e deficiência de ferro, ferro carboximaltose IV considerado antes da alta, uma vez estabilizado — AFFIRM-AHF: hospitalizações totais por IC isoladamente reduzidas (razão de taxas 0,74; IC95% 0,58-0,94; p=0,013), embora o desfecho primário composto (hospitalizações + morte cardiovascular) não tenha atingido significância formal (p=0,059)",
+        "origem_secao": "Affirm-ahf 2020 alta hospitalar por ic aguda"
+      },
+      {
+        "id": "ferro-ic-nao-esperar-reducao-mortalidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Mortalidade cardiovascular NÃO tratada como desfecho reduzido pelo ferro IV — nenhum dos quatro ensaios (CONFIRM-HF, AFFIRM-AHF, IRONMAN, HEART-FID) demonstrou isso isoladamente; o benefício consistente é em hospitalização por IC e sintoma, com o próprio HEART-FID (desfecho hierárquico, win ratio 1,10, IC99% 0,99-1,23, p=0,02) não atingindo o nível de significância pré-especificado de 0,01 — não tratado como resultado positivo apesar do p<0,05 convencional",
+        "origem_secao": "Sintese honesta dos tres resultados / HEART-FID — Resultados / O que NÃO pode ser concluído"
+      },
+      {
+        "id": "ferro-ic-nao-usar-oral",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ferro ORAL não usado como substituto do ferro endovenoso na ICFEr com deficiência de ferro — IRONOUT-HF testou ferro polissacarídeo oral em dose alta (150mg 2x/dia, 16 semanas) e não melhorou VO₂ pico (diferença 21mL/min; IC95% −34 a +76; p=0,46) nem nenhum desfecho secundário (caminhada de 6 minutos, NT-proBNP, KCCQ), todos com p>0,05",
+        "origem_secao": "IRONOUT-HF — Desenho / Resultados — negativo em tudo"
+      },
+      {
+        "id": "ferro-ic-nao-usar-eritropoetina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Agente estimulador da eritropoiese (darbepoetina alfa) NÃO usado para corrigir anemia na IC sistólica — RED-HF (2.278 pacientes, hemoglobina 9,0-12,0 g/dL, alvo de 13 g/dL): nenhum benefício no composto de morte por qualquer causa ou hospitalização por IC (HR 1,01; IC95% 0,90-1,13; p=0,87), efeito neutro em TODOS os subgrupos pré-especificados, e MAIS eventos tromboembólicos (13,5% vs. 10,0%; p=0,01) — risco aumentado sem nenhum benefício demonstrado",
+        "origem_secao": "RED-HF — Resultados"
+      },
+      {
+        "id": "ferro-ic-anemia-marcador-nao-alvo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a anemia na IC é, em grande parte, marcador de gravidade (inflamação, disfunção renal, congestão, desnutrição), não a causa do mau prognóstico — corrigir isoladamente o número da hemoglobina não corrige o que ela está sinalizando; o alvo terapêutico verificado é a deficiência de ferro (ferritina/TSAT), não a hemoglobina em si",
+        "origem_secao": "A licao de raciocinio, que vale alem deste farmaco"
+      },
+      {
+        "id": "ferro-ic-nao-tratar-ensaios-como-confirmacoes-identicas",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "CONFIRM-HF, AFFIRM-AHF, IRONMAN e HEART-FID não apresentados ao paciente como quatro confirmações independentes e concordantes do mesmo desfecho — cada um mediu um desfecho primário diferente (capacidade funcional, desfecho composto pós-alta, desfecho composto ambulatorial, desfecho hierárquico), e três dos quatro não atingiram significância formal na análise principal pré-especificada",
+        "origem_secao": "Sintese honesta dos tres resultados / Armadilhas clinicas — apresentar os três ensaios como confirmações concordantes"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados exclusivamente dos documentos já verificados e publicados em Insuficiência cardíaca citados em source_refs, com a seção de origem registrada em cada item — nenhum PMID, DOI, número ou afirmação clínica novo em relação ao(s) documento(s) de origem."
+  },
+  {
+    "slug": "manejo-da-hiperpotassemia-para-nao-perder-os-quatro-pilares-na-icfer",
+    "condicao": "Manejo da hiperpotassemia para não perder o bloqueio do SRAA e o antagonista mineralocorticoide na ICFEr",
+    "resumo": "A hiperpotassemia é o motivo mais comum, na prática, de dois dos quatro pilares da ICFEr (IECA/BRA/ARNI e antagonista mineralocorticoide) acabarem em dose subótima ou suspensos — este checklist trata a decisão de suspender/reduzir como algo a tornar explícito, com quelante de potássio (patiromer ou sódio zircônio ciclosilicato) como alternativa testada, e regista a divergência de sinal de segurança entre os dois ensaios (DIAMOND e REALIZE-K) sem apagá-la. Distinto do checklist de titulação dos quatro pilares já publicado, que não detalha o manejo específico da barreira de potássio.",
+    "documento_origem": "hipercalemia-como-barreira-ao-bloqueio-do-sraa-o-ensaio-diamond-com-patiromer",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Butler J, Anker SD, Lund LH, Coats AJS, Filippatos G, Siddiqi TJ, et al. Patiromer for the management of hyperkalemia in heart failure with reduced ejection fraction: the DIAMOND trial. Eur Heart J. 2022;43(41):4362-4373. DOI: 10.1093/eurheartj/ehac401. PMID: 35900838",
+      "Kosiborod MN, Cherney DZI, Desai AS, Testani JM, Verma S, Chinnakondepalli K, et al. Sodium Zirconium Cyclosilicate for Management of Hyperkalemia During Spironolactone Optimization in Patients With Heart Failure (REALIZE-K). J Am Coll Cardiol. 2025;85(10):971-984. DOI: 10.1016/j.jacc.2024.11.014. PMID: 39566872",
+      "Petrie MC, Cherney DZI, Desai AS, et al. Sodium zirconium cyclosilicate, hyperkalaemia, and spironolactone optimization in heart failure with reduced ejection fraction: The REALIZE-K open-label run-in phase. Eur J Heart Fail. 2025;27(8):1491-1495. DOI: 10.1002/ejhf.3787. PMID: 40879354",
+      "Kosiborod MN et al. Sodium Zirconium Cyclosilicate in HFrEF and Hyperkalemia: REALIZE-K Design and Baseline Characteristics. JACC Heart Fail. 2024. PMID: 38878009"
+    ],
+    "itens": [
+      {
+        "id": "hipercalemia-ic-problema-real",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que a hiperpotassemia é a principal barreira prática à dose plena de dois dos quatro pilares da ICFEr — IECA/BRA/ARNI e antagonista do receptor mineralocorticoide (espironolactona ou eplerenona) — e que, na prática, isso produz um desfecho silencioso e frequente: dose reduzida ou fármaco suspenso, deixando o paciente sem terapia com benefício de mortalidade comprovado",
+        "origem_secao": "O problema clinico real"
+      },
+      {
+        "id": "hipercalemia-ic-nao-suspender-por-reflexo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Hiperpotassemia recorrente não tratada como motivo automático para suspender o antagonista mineralocorticoide ou reduzir o bloqueio do SRAA — existe alternativa testada (quelante de potássio) à suspensão pura e simples, e a suspensão custa benefício de mortalidade comprovado",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "hipercalemia-ic-decisao-explicita-revisitada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Decisão de suspender ou reduzir a dose de IECA/BRA/ARNI ou de antagonista mineralocorticoide registrada de forma explícita e revisitada, não deixada acontecer por padrão — no braço placebo do DIAMOND, a redução de dose do MRA foi significativamente mais frequente (HR 0,62 a favor do patiromer; IC95% 0,45-0,87; p=0,006), evidenciando que a perda de dose costuma ocorrer sem decisão clínica formal",
+        "origem_secao": "Como isso se traduz na conduta / Resultados — DIAMOND"
+      },
+      {
+        "id": "hipercalemia-ic-patiromer-manter-dose-alvo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Patiromer considerado, em paciente com hiperpotassemia atual ou prévia relacionada ao bloqueio do SRAA, para permitir manter a dose-alvo de IECA/BRA/ARNI e de antagonista mineralocorticoide — DIAMOND: HR 0,63 (IC95% 0,45-0,87; p=0,006) para hiperpotassemia >5,5mmol/L, em pacientes que já tinham tolerado a dose-alvo na fase de run-in com o quelante",
+        "origem_secao": "Resultados — DIAMOND"
+      },
+      {
+        "id": "hipercalemia-ic-run-in-enriquecido",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o desenho de retirada randomizada do DIAMOND (todos recebem patiromer na fase de run-in, e só quem atinge a dose-alvo — 84,6% dos que entraram no run-in — é randomizado) enriquece a amostra com respondedores: o resultado descreve quem tolerou a estratégia, não a população inteira com hiperpotassemia",
+        "origem_secao": "Desenho — atencao ao formato, que muda a interpretacao"
+      },
+      {
+        "id": "hipercalemia-ic-szc-espironolactona-realize-k",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Sódio zircônio ciclosilicato (SZC) considerado como alternativa testada especificamente na otimização da espironolactona (REALIZE-K): resposta terapêutica ótima (normocalemia com espironolactona ≥25mg/dia) em 71% com SZC vs. 36% com placebo (OR 4,45; IC95% 2,89-6,86; p<0,001), com espironolactona ≥25mg/dia mantida em 81% vs. 50%",
+        "origem_secao": "Resultados — controle de potássio muito superior ao placebo (REALIZE-K)"
+      },
+      {
+        "id": "hipercalemia-ic-sinal-eventos-realize-k-nao-ignorado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de adotar o SZC sem ressalva, registrado o sinal exploratório do REALIZE-K de mais eventos de morte cardiovascular ou piora da IC no braço SZC (11% vs. 3% no placebo; p nominal=0,034) — desfecho exploratório, ensaio explicitamente subdimensionado (underpowered) para esse desfecho pelos próprios autores, que ainda assim afirmam que o achado \"deve ser fatorado na tomada de decisão clínica\"",
+        "origem_secao": "O achado que faz este ensaio valer um documento próprio (REALIZE-K)"
+      },
+      {
+        "id": "hipercalemia-ic-nao-igualar-divergencia-diamond-realize-k",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Divergência de sinal entre os dois ensaios de quelante não apagada nem generalizada de um para o outro: o DIAMOND (patiromer) teve desfecho de morbidade relacionada favorável (win ratio 1,53) sem sinal desfavorável de evento de IC; o REALIZE-K (SZC) mostrou sinal numérico desfavorável — os dois não são diretamente comparáveis (populações, desfechos e definições de evento diferentes), mas a divergência está registrada nos dois artigos originais, não interpretada como equivalência entre os fármacos",
+        "origem_secao": "Como ler esse achado sem exagerar nem descartar / REALIZE-K versus DIAMOND, lado a lado"
+      },
+      {
+        "id": "hipercalemia-ic-monitorizacao-mantida",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorização de potássio mantida mesmo com uso de quelante — o quelante reduz a recorrência de hiperpotassemia, não a elimina, nos dois ensaios (DIAMOND e REALIZE-K)",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "hipercalemia-ic-acesso-brasil-verificado",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Disponibilidade e custo do quelante de potássio (patiromer ou sódio zircônio ciclosilicato) no Brasil verificados caso a caso antes de incorporar a estratégia à rotina — nem o DIAMOND nem o REALIZE-K abordam acesso ou cobertura no país, e nenhum dos dois documentos afirma nada sobre isso",
+        "origem_secao": "Como isso se traduz na conduta"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados exclusivamente dos documentos já verificados e publicados em Insuficiência cardíaca citados em source_refs, com a seção de origem registrada em cada item — nenhum PMID, DOI, número ou afirmação clínica novo em relação ao(s) documento(s) de origem."
   }
 ]
