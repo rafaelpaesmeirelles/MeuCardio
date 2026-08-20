@@ -8424,5 +8424,266 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "nao-respondedor-a-ressincronizacao-cardiaca-trc-avaliacao-e-otimizacao",
+    "condicao": "Paciente não respondedor à terapia de ressincronização cardíaca (TRC) — avaliação e otimização",
+    "resumo": "O que checar diante de um paciente que não melhorou após implante de TRC: qual critério de não-resposta se aplica, estimulação biventricular efetiva, indicação original, posição do eletrodo de VE e o que a evidência mostra (e não mostra) sobre otimização, MPP e reposicionamento.",
+    "documento_origem": "nao-respondedores-a-terapia-de-ressincronizacao-cardiaca-definicao-incidencia-e-otimizacao",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Carità P, Corrado E, Pontone G, Curnis A, Bontempi L, Novo G, Guglielmo M, Ciaramitaro G, Assennato P, Novo S, Coppola G. Non-responders to cardiac resynchronization therapy: Insights from multimodality imaging and electrocardiography. A brief review. Int J Cardiol. 2016;225:402-407. PMID 27776243.",
+      "Leclercq C, Burri H, Curnis A, Delnoy PP, Rinaldi CA, Sperzel J, Lee K, Calò L, Vicentini A, Concha JF, Thibault B; MORE-CRT MPP Investigators. Cardiac resynchronization therapy non-responder to responder conversion rate in the more response to cardiac resynchronization therapy with MultiPoint Pacing (MORE-CRT MPP) study. Eur Heart J. 2019 Sep 14. PMID 30859220.",
+      "Barold SS, Ilercil A, Herweg B. Echocardiographic optimization of the atrioventricular and interventricular intervals during cardiac resynchronization. Europace. 2008;10 Suppl 3:iii88-95. PMID 18955406.",
+      "Borgquist R, Mörtsell D, Chaudhry U, Brandt J, Farouq M, Wang L. Repositioning and optimization of left ventricular lead position in nonresponders to cardiac resynchronization therapy is associated with improved ejection fraction, lower NT-proBNP values, and fewer heart failure symptoms. Heart Rhythm O2. 2022 Jun 30;3(5):457-463. PMID 36340500 / PMCID PMC9626901.",
+      "Chung ES, Leon AR, Tavazzi L, Sun JP, Nihoyannopoulos P, Merlino J, Abraham WT, Ghio S, Leclercq C, Bax JJ, Yu CM, Gorcsan J 3rd, St John Sutton M, De Sutter J, Murillo J. Results of the Predictors of Response to CRT (PROSPECT) trial. Circulation. 2008 May 20;117(20):2608-2616. PMID 18458170."
+    ],
+    "itens": [
+      {
+        "id": "trcnr-definir-criterio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado qual critério de não-resposta está sendo usado — ecocardiográfico (redução do volume sistólico final do VE, LVESV, menor que 15% em relação ao basal, reavaliado aos 6 meses) ou clínico (ausência de melhora de classe funcional NYHA, capacidade de exercício, ou piora/manutenção de hospitalizações por IC) — os dois critérios não são intercambiáveis e reportam incidências diferentes de não-resposta.",
+        "origem_secao": "Definição de não-resposta: não existe padrão-ouro único"
+      },
+      {
+        "id": "trcnr-percentual-estimulacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Percentual de estimulação biventricular efetiva conferido na memória do dispositivo (captura próxima de 100%, sem fusão com condução própria, sem ectopia ventricular frequente ou fibrilação atrial com resposta ventricular não controlada competindo com o ritmo estimulado) — é o passo mais barato e o primeiro a checar diante de não-resposta.",
+        "origem_secao": "Causas mais comuns de não-resposta (2. Entrega inadequada da terapia) / Resumo prático, item 1"
+      },
+      {
+        "id": "trcnr-fa-controle",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente com fibrilação atrial não controlada competindo com a estimulação biventricular, considerado controle de frequência farmacológico agressivo ou ablação do nó atrioventricular para restaurar a estimulação biventricular quase constante.",
+        "origem_secao": "Causas mais comuns de não-resposta (2. Entrega inadequada da terapia)"
+      },
+      {
+        "id": "trcnr-reavaliar-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reavaliada a indicação original de TRC — o paciente tinha bloqueio de ramo esquerdo (BRE) verdadeiro e QRS suficientemente alargado? Fenótipo eletrocardiográfico fora do perfil de benefício comprovado nos ensaios pivotais explica parte da não-resposta por desenho, não por falha técnica corrigível.",
+        "origem_secao": "Causas mais comuns de não-resposta (1. Seleção inadequada do paciente) / Resumo prático, item 2"
+      },
+      {
+        "id": "trcnr-imagem-eletrodo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Posição do eletrodo de ventrículo esquerdo e viabilidade miocárdica local investigadas por imagem (ecocardiografia, tomografia computadorizada ou ressonância magnética cardíaca) — eletrodo em posição apical (em vez de lateral/pósterolateral, mais próxima do sítio de ativação elétrica mais tardia) ou sobre área de cicatriz miocárdica transmural é achado corrigível por reposicionamento.",
+        "origem_secao": "Causas mais comuns de não-resposta (3. Posicionamento subótimo do eletrodo de VE) / Resumo prático, item 3"
+      },
+      {
+        "id": "trcnr-ecg-precoce",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Eletrocardiograma pós-implante avaliado quanto à captura do VE e ao estreitamento do QRS, como ferramenta simples e de baixo custo para identificação precoce de possível não-respondedor.",
+        "origem_secao": "Causas mais comuns de não-resposta"
+      },
+      {
+        "id": "trcnr-otimizacao-av",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente com resposta parcial (sub-respondedor), considerada otimização do intervalo atrioventricular guiada por ecocardiograma, reavaliada periodicamente e não apenas ajustada uma única vez no implante — sem expectativa de que a otimização de AV converta quem não respondeu em nenhum grau em respondedor ('otimização de AV não converte não respondedor em respondedor, mas pode converter um sub-respondedor em status melhorado').",
+        "origem_secao": "Otimização de intervalo AV e VV guiada por ecocardiograma"
+      },
+      {
+        "id": "trcnr-otimizacao-vv",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Otimização de rotina do intervalo VV não indicada para todo paciente — considerada apenas em casos selecionados com resposta subótima, usando a integral velocidade-tempo (VTI) na via de saída do VE como parâmetro de ajuste quando realizada; não existe padrão-ouro universalmente aceito para as técnicas de otimização ecocardiográfica.",
+        "origem_secao": "Otimização de intervalo AV e VV guiada por ecocardiograma"
+      },
+      {
+        "id": "trcnr-mpp-nao-automatico",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Estimulação multiponto (MPP) não assumida como solução automática para não-resposta — o ensaio randomizado MORE-CRT MPP não mostrou diferença de conversão de não respondedor para respondedor entre MPP programado a critério médico e estimulação biventricular convencional (31,8% vs. 33,8%; p=0,72); se usada, a estratégia de separação anatômica ampla entre os polos de estimulação é achado de subgrupo promissor (45,6% vs. 26,2%; p=0,006), ainda hipótese-geradora e não confirmatório.",
+        "origem_secao": "Estimulação multiponto (MPP)"
+      },
+      {
+        "id": "trcnr-reposicionamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Nos casos com posição subótima do eletrodo de VE documentada e falha das medidas de otimização acima, considerado encaminhamento para reposicionamento cirúrgico do eletrodo de VE em posição lateral médio-basal — série de 25 pacientes mostrou melhora média de classe funcional NYHA (-0,5 ± 0,5; p<0,001), aumento de FEVE (+5 pontos percentuais; p=0,01), redução de QRS (-36 ms; p<0,001) e de NT-proBNP (-615 ng/L; p=0,03), com reposicionamento bem-sucedido em todos os 25 casos e 1 complicação tardia (infecção local, 4%).",
+        "origem_secao": "Reposicionamento do eletrodo de VE"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base (nao-respondedores-a-terapia-de-ressincronizacao-cardiaca-definicao-incidencia-e-otimizacao), com a seção de origem registrada em cada item e as cinco referências primárias reaproveitadas do documento de origem. Nenhum corte numérico foi incluído sem estar literalmente presente no documento-fonte. Elaborado pela sessão de conteúdo em 20/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
+  },
+  {
+    "slug": "seguimento-remoto-de-cdi-e-crt-d-por-telemonitoramento",
+    "condicao": "Seguimento remoto de cardiodesfibrilador (CDI) ou ressincronizador-desfibrilador (CRT-D) por telemonitoramento",
+    "resumo": "Como incorporar o telemonitoramento automático de dispositivo (transmissão diária e algoritmos multissensores de descompensação) ao seguimento clínico, com o que a evidência randomizada mostra a favor (IN-TIME) e contra (DOT-HF), sem confundir estratificação de risco com prova de mudança de desfecho.",
+    "documento_origem": "telemonitoramento-remoto-de-cdi-e-crt-d-e-desfecho-clinico-o-ensaio-in-time",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Hindricks G, Taborsky M, Glikson M, Heinrich U, Schumacher B, Katz A, Brachmann J, Lewalter T, Goette A, Block M, Kautzner J, Sack S, Husser D, Piorkowski C, Søgaard P, for the IN-TIME study group. Implant-based multiparameter telemonitoring of patients with heart failure (IN-TIME): a randomised controlled trial. Lancet. 2014;384(9943):583-590. DOI: 10.1016/S0140-6736(14)61176-4. PMID: 25131977 — 664 pacientes randomizados, financiado pela Biotronik SE & Co. KG (fabricante do dispositivo)",
+      "Boehmer JP, Hariharan R, Devecchi FG, et al. A Multisensor Algorithm Predicts Heart Failure Events in Patients With Implanted Devices: Results From the MultiSENSE Study. JACC Heart Fail. 2017;5(3):216-225. DOI: 10.1016/j.jchf.2016.12.011. PMID: 28254128",
+      "Gardner RS, Singh JP, Stancak B, et al. HeartLogic Multisensor Algorithm Identifies Patients During Periods of Significantly Increased Risk of Heart Failure Events: Results From the MultiSENSE Study. Circ Heart Fail. 2018;11(7):e004669. DOI: 10.1161/CIRCHEARTFAILURE.117.004669. PMID: 30002113. Correção publicada em Circ Heart Fail. 2018;11(8):e000029, PMID 30354568 — não lida nesta redação",
+      "Hernandez AF, Albert NM, Allen LA, et al; MANAGE-HF Study. Multiple cArdiac seNsors for mAnaGEment of Heart Failure (MANAGE-HF) - Phase I Evaluation of the Integration and Safety of the HeartLogic Multisensor Algorithm in Patients With Heart Failure. J Card Fail. 2022;28(8):1245-1254. DOI: 10.1016/j.cardfail.2022.03.349. PMID: 35460884",
+      "van Veldhuisen DJ, Braunschweig F, Conraads V, et al; DOT-HF Investigators. Intrathoracic impedance monitoring, audible patient alerts, and outcome in patients with heart failure. Circulation. 2011;124(16):1719-1726. DOI: 10.1161/CIRCULATIONAHA.111.043042. PMID: 21931078"
+    ],
+    "itens": [
+      {
+        "id": "tmrd-populacao-elegivel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem insuficiência cardíaca crônica NYHA II-III, fração de ejeção ≤35%, tratamento medicamentoso otimizado e CDI de dupla câmara ou CRT-D recém-implantado, sem fibrilação atrial permanente — perfil da população em que o telemonitoramento automático mostrou redução do escore clínico composto no ensaio IN-TIME.",
+        "origem_secao": "O ensaio (IN-TIME)"
+      },
+      {
+        "id": "tmrd-oferecer-telemonitoramento",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Telemonitoramento automático e diário oferecido como complemento ao cuidado padrão nesse perfil de paciente — no IN-TIME, piora do escore clínico composto em 1 ano ocorreu em 18,9% (63/333) do grupo telemonitoramento vs. 27,2% (90/331) do controle (odds ratio 0,63; IC95% 0,43-0,90; p=0,013), com telemonitoramento somado, não isolado, ao cuidado padrão.",
+        "origem_secao": "Resultados / O que fazer com isso na prática (IN-TIME)"
+      },
+      {
+        "id": "tmrd-nao-substitui-consulta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Explicado ao paciente que o telemonitoramento é ferramenta de detecção precoce, permitindo intervenção antes da descompensação clínica franca, e não elimina a necessidade de consulta de seguimento presencial programada — o ensaio mediu efeito complementar ao cuidado padrão, não isolado dele.",
+        "origem_secao": "O que fazer com isso na prática / Armadilhas clínicas (IN-TIME)"
+      },
+      {
+        "id": "tmrd-alerta-multissensor",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em dispositivo com algoritmo multissensor de descompensação (ex. HeartLogic/MultiSENSE, que combina sons cardíacos, impedância intratorácica, frequência respiratória, frequência cardíaca noturna e nível de atividade física), estado de alerta interpretado como período de risco aumentado — taxa de evento de insuficiência cardíaca dentro do estado de alerta foi 10 vezes maior que fora dele (0,80 vs. 0,08 evento/paciente-ano), com antecedência mediana de 34,0 dias entre o início do estado de alerta e o evento clínico de IC.",
+        "origem_secao": "MultiSENSE — desenvolvimento e validação do índice (Boehmer 2017) / MultiSENSE — risco durante o estado de alerta (Gardner 2018)"
+      },
+      {
+        "id": "tmrd-alerta-nao-e-diagnostico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Estado de alerta do algoritmo multissensor tratado como sinalizador de risco a ser somado à avaliação clínica (exame físico, sintomas, peptídeo natriurético), não como diagnóstico isolado de descompensação — os estudos de validação do MultiSENSE são de desempenho de estratificação de risco em um intervalo de tempo, não ensaios que testaram se agir sobre o alerta muda desfecho.",
+        "origem_secao": "MultiSENSE — risco durante o estado de alerta (leitura correta do resultado) / Sintese pratica"
+      },
+      {
+        "id": "tmrd-combinar-ntprobnp",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Quando disponível, alerta do algoritmo multissensor combinado com dosagem de NT-proBNP para refinar o risco — na sub-análise do MultiSENSE (limiar de 1.000 pg/mL), o grupo de menor risco (NT-proBNP baixo, fora de alerta) teve 0,02 evento/paciente-ano, e o de maior risco (NT-proBNP alto, dentro de alerta) teve 1,00 evento/paciente-ano, diferença de 50 vezes entre os extremos.",
+        "origem_secao": "MultiSENSE — risco durante o estado de alerta e interação com NT-proBNP (Gardner 2018)"
+      },
+      {
+        "id": "tmrd-alerta-aciona-revisao-por-equipe",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Alerta do dispositivo revisado e respondido ativamente pela equipe assistente, não apenas registrado — no MANAGE-HF Fase I (estudo de segurança, sem grupo controle), 74% dos alertas levaram a intensificação da medicação de insuficiência cardíaca pela equipe, com queda de NT-proBNP mediano de 1.316 para 743 pg/mL em 12 meses (p<0,001); ainda não há ensaio randomizado de desfecho publicado para esta conduta especificamente.",
+        "origem_secao": "MANAGE-HF Fase I — segurança da integração clínica, ainda sem desfecho duro"
+      },
+      {
+        "id": "tmrd-nao-usar-alerta-audivel-isolado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Evitado uso de alerta audível direto ao paciente baseado isoladamente em impedância intratorácica (sem os demais sensores) como estratégia de monitorização — no ensaio randomizado DOT-HF, esse desenho não reduziu o desfecho composto de morte por qualquer causa ou hospitalização por IC (29% vs. 20%; HR 1,52; IC95% 0,97-2,37; p=0,063), aumentou hospitalização por IC isoladamente (HR 1,79; IC95% 1,08-2,95; p=0,022) e consultas ambulatoriais não programadas (250 vs. 84; p<0,0001), sem diferença de mortalidade.",
+        "origem_secao": "Contraste — OptiVol isolado e o ensaio DOT-HF, resultado oposto ao esperado"
+      },
+      {
+        "id": "tmrd-nao-misturar-tecnologias",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrado qual tecnologia específica de telemonitoramento/algoritmo o dispositivo do paciente utiliza antes de aplicar a evidência de um estudo a ele — o desempenho de estratificação de risco do MultiSENSE (cinco sensores combinados, alerta dirigido à equipe assistente) não deve ser extrapolado para impedância intratorácica isolada com alerta audível direto ao paciente (tecnologia testada, com resultado neutro/de dano, no DOT-HF), e o resultado do IN-TIME (sistema Biotronik) não deve ser assumido como equivalente entre fabricantes diferentes de telemonitoramento.",
+        "origem_secao": "Armadilhas clinicas (HeartLogic) / Armadilhas clínicas (IN-TIME)"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (telemonitoramento-remoto-de-cdi-e-crt-d-e-desfecho-clinico-o-ensaio-in-time e algoritmo-multissensor-heartlogic-multisense-e-o-contraste-com-optivol-dot-hf), com a seção de origem registrada em cada item e as cinco referências primárias reaproveitadas dos documentos de origem. Nenhum corte numérico foi incluído sem estar literalmente presente nos documentos-fonte. Elaborado pela sessão de conteúdo em 20/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
+  },
+  {
+    "slug": "suspeita-de-infeccao-de-dispositivo-cardiaco-eletronico-implantavel-cied",
+    "condicao": "Investigação e manejo da suspeita de infecção de dispositivo cardíaco eletrônico implantável (CIED)",
+    "resumo": "Do eritema de bolsa à endocardite de eletrodo: como classificar o espectro clínico, por que o ecocardiograma transtorácico normal não afasta o diagnóstico, por que quase toda infecção confirmada exige explante completo do sistema, e o que a evidência mostra sobre tempo de extração, envelope antibiótico e reimplante.",
+    "documento_origem": "infeccao-de-cied-espectro-clinico-biofilme-eco-transesofagico-e-necessidade-de-explante-completo",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Marrie TJ, Nelligan J, Costerton JW. A scanning and transmission electron microscopic study of an infected endocardial pacemaker lead. Circulation. 1982;66(6):1339-1343. DOI: 10.1161/01.cir.66.6.1339. PMID: 7139907",
+      "Victor F, De Place C, Camus C, Le Breton H, Leclercq C, Pavin D, Mabo P, Daubert C. Pacemaker lead infection: echocardiographic features, management, and outcome. Heart. 1999;81(1):82-87. DOI: 10.1136/hrt.81.1.82. PMID: 10220550",
+      "Athan E, Chu VH, Tattevin P, Selton-Suty C, Jones P, Naber C, Miró JM, Ninot S, Fernández-Hidalgo N, Durante-Mangoni E, Spelman D, Hoen B, Lejko-Zupanc T, Cecchi E, Thuny F, Hannan MM, Pappas P, Henry M, Fowler VG Jr, Crowley AL, Wang A; ICE-PCS Investigators. Clinical characteristics and outcome of infective endocarditis involving implantable cardiac devices. JAMA. 2012;307(16):1727-1735. DOI: 10.1001/jama.2012.497. PMID: 22535857",
+      "Lin AY, Kabir C, Ching CK, et al. Early Versus Delayed Lead Extraction in Patients With Infected Cardiovascular Implantable Electronic Devices. JACC Clin Electrophysiol. 2021;7(6):755-763. DOI: 10.1016/j.jacep.2020.11.003. PMID: 33358664",
+      "Kusumoto FM, Schoenfeld MH, Wilkoff BL, et al. 2017 HRS expert consensus statement on cardiovascular implantable electronic device lead management and extraction. Heart Rhythm. 2017;14(12):e503-e551. DOI: 10.1016/j.hrthm.2017.09.001. PMID: 28919379",
+      "Cha YM, Sohail MR, et al. 2026 HRS/AHA/APHRS/EHRA/IDSA/LAHRS/PACES/STS expert consensus statement update on cardiovascular implantable electronic device lead management and extraction. Heart Rhythm. 2026 Aug. DOI: 10.1016/j.hrthm.2026.04.015. PMID: 42034327",
+      "Blomström-Lundqvist C, et al. Update on Cardiovascular Implantable Electronic Device Infections and Their Prevention, Diagnosis, and Management: A Scientific Statement From the American Heart Association. Circulation. 2024. DOI: 10.1161/CIR.0000000000001187. PMID: 38047353",
+      "Randomized Trial of Stand-Alone Use of the Antimicrobial Envelope in High-Risk Cardiac Device Patients (WRAP-IT) · Circulation: Arrhythmia and Electrophysiology · https://www.ahajournals.org/doi/10.1161/CIRCEP.122.011740",
+      "Early Lead Extraction for Infected Implanted Cardiac Electronic Devices: JACC Review Topic of the Week · JACC · 2023 · https://www.jacc.org/doi/10.1016/j.jacc.2023.01.038"
+    ],
+    "itens": [
+      {
+        "id": "ciedinf-classificar-espectro",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificado o quadro dentro do espectro clínico da infecção de CIED — infecção superficial de incisão, infecção de bolso do gerador (incluindo erosão de pele com exposição do gerador ou eletrodos, considerada infecção estabelecida por definição clínica mesmo sem hemocultura positiva), bacteremia relacionada ao dispositivo, ou endocardite relacionada a dispositivo (infecção de eletrodo) — sem tratar cada ponta do espectro como problema isolado, já que um quadro clinicamente 'só de bolso' pode conviver com eletrodo colonizado e bacteremia intermitente sem repercussão clínica óbvia.",
+        "origem_secao": "O espectro clínico: de um sinal local a sepse"
+      },
+      {
+        "id": "ciedinf-hemoculturas-seriadas",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Colhidas pelo menos duas hemoculturas seriadas antes de iniciar antibiótico, como pilar diagnóstico em paralelo à imagem, não em substituição a ela.",
+        "origem_secao": "Diagnóstico — o papel do ecocardiograma transesofágico"
+      },
+      {
+        "id": "ciedinf-ett-normal-nao-exclui",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico (ETT) normal não interpretado como exclusão de vegetação em eletrodo — sensibilidade de apenas 30% (7 de 23 casos) na série de referência, contra 91% (21 de 23 casos) do ecocardiograma transesofágico (ETE); diante de suspeita clínica persistente (bacteremia sem foco, febre recorrente em portador de CIED) mesmo com ETT normal, avançar para ETE.",
+        "origem_secao": "Diagnóstico — o papel do ecocardiograma transesofágico"
+      },
+      {
+        "id": "ciedinf-nao-poupar-eletrodo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de infecção definitiva confirmada de CIED — sistêmica, local, com bacteremia ou com endocardite —, indicada remoção completa do sistema (gerador e todos os eletrodos), incluindo quando o quadro parece clinicamente confinado ao bolso: recomendação Classe I convergente entre AHA, British Heart Rhythm Society, ESC, HRS e EHRA. Retirar só o gerador e manter o(s) eletrodo(s), ou tratar o bolso com antibiótico e reimplantar no mesmo sítio sem remover o sistema antigo, é conduta inadequada diante de infecção confirmada.",
+        "origem_secao": "Por que a infecção 'só de bolsa' também exige explante completo do sistema / Indicação de extração completa do sistema (documento irmão)"
+      },
+      {
+        "id": "ciedinf-cultura-negativa-nao-prova-erradicacao",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Cultura de ponta de eletrodo negativa ou hemocultura que 'esteriliza' sob antibiótico não interpretada como prova de erradicação — o biofilme bacteriano que reveste a porção intravascular do eletrodo protege o inóculo farmacologicamente, inclusive cepas plenamente suscetíveis in vitro no antibiograma convencional, e recidiva após suspensão do antibiótico sem remoção do material é comportamento esperado, não falha inexplicada de tratamento.",
+        "origem_secao": "Por que antibiótico isolado quase nunca resolve — o biofilme no eletrodo"
+      },
+      {
+        "id": "ciedinf-tempo-ate-extracao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Explante completo do sistema priorizado sem atraso evitável — numa coorte dedicada, extração tardia (tempo médio de 15,2 dias em bacterêmicos e 10,7 dias em infecção local) associou-se a mais choque séptico, lesão renal aguda, insuficiência respiratória e insuficiência cardíaca descompensada, e maior mortalidade em 1 ano em ambos os grupos; num registro internacional de endocardite relacionada a dispositivo, remoção precoce associou-se a redução de risco de morte de aproximadamente 58% (HR 0,42; IC95% 0,22-0,82).",
+        "origem_secao": "Mortalidade real associada a atraso ou incompletude do explante"
+      },
+      {
+        "id": "ciedinf-envelope-antibiotico-reimplante",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "No reimplante de novo sistema em paciente de alto risco, considerado uso de envelope antibiótico (minociclina e rifampina, eluindo antibiótico no tecido da bolsa por mais de 7 dias, reabsorvido em 8-12 semanas) — no ensaio WRAP-IT (6.983 pacientes submetidos a revisão, substituição, upgrade ou implante de novo de TRC), infecção maior relacionada ao CIED ocorreu em 32 pacientes no grupo envelope vs. 51 no grupo controle, redução de risco relativo de 40% em 12 meses de seguimento.",
+        "origem_secao": "Prevenção — envelope antibiótico (TYRX) (documento irmão)"
+      },
+      {
+        "id": "ciedinf-intervalo-hemocultura-negativa",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reimplante de novo sistema, quando indicado, postergado até no mínimo 72 horas de hemocultura negativa para infecção local sem evidência de envolvimento valvar, estendido para pelo menos 14 dias de hemocultura negativa quando há evidência de vegetação valvar (endocardite associada ao dispositivo) — recomendação de consenso, grau de evidência C.",
+        "origem_secao": "Momento do reimplante do novo sistema"
+      },
+      {
+        "id": "ciedinf-sitio-contralateral",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Reimplante, quando indicado, realizado em sítio contralateral ao do sistema removido sempre que tecnicamente possível. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à magnitude do benefício quantificado (redução de risco) do reimplante contralateral versus ipsilateral — não confirmada em fonte primária nesta pesquisa.",
+        "origem_secao": "Momento do reimplante do novo sistema"
+      },
+      {
+        "id": "ciedinf-reavaliar-indicacao-novo-dispositivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Após o explante, reavaliada de forma independente se um novo dispositivo é de fato necessário — parte dos pacientes deixa de ter indicação (por exemplo, marca-passo implantado para bradicardia transitória), e reimplantar automaticamente 'no mesmo modelo' sem reavaliar a indicação original é conduta a evitar.",
+        "origem_secao": "Momento do reimplante do novo sistema"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (infeccao-de-cied-espectro-clinico-biofilme-eco-transesofagico-e-necessidade-de-explante-completo, documento principal, e infeccao-de-dispositivo-cardiaco-extracao-de-eletrodo-e-envelope-antibiotico, para o item de envelope antibiótico e critérios adicionais de extração), com a seção de origem registrada em cada item. Um item (magnitude do benefício do reimplante contralateral) foi marcado VERIFICAÇÃO HUMANA NECESSÁRIA em vez de completado por conhecimento geral, seguindo a mesma marcação já presente no documento de origem. Elaborado pela sessão de conteúdo em 20/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
   }
 ]
