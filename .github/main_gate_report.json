@@ -1,0 +1,55 @@
+{
+  "main_sha": "15fac97ecb13977848bdd1f8f1a525390d33f646",
+  "runs": [
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T19:39:50Z",
+      "databaseId": 32409886495,
+      "event": "workflow_dispatch",
+      "headSha": "15fac97ecb13977848bdd1f8f1a525390d33f646",
+      "name": "Corpus database reconciliation",
+      "status": "completed",
+      "url": "https://github.com/rafaelpaesmeirelles/MeuCardio/actions/runs/32409886495"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T19:39:48Z",
+      "databaseId": 32409883850,
+      "event": "workflow_dispatch",
+      "headSha": "15fac97ecb13977848bdd1f8f1a525390d33f646",
+      "name": "Visual QA — Clinical OS",
+      "status": "completed",
+      "url": "https://github.com/rafaelpaesmeirelles/MeuCardio/actions/runs/32409883850"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T19:39:47Z",
+      "databaseId": 32409881860,
+      "event": "workflow_dispatch",
+      "headSha": "15fac97ecb13977848bdd1f8f1a525390d33f646",
+      "name": "RC2 Acceptance — Canonical CorVIA",
+      "status": "completed",
+      "url": "https://github.com/rafaelpaesmeirelles/MeuCardio/actions/runs/32409881860"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T19:39:41Z",
+      "databaseId": 32409872799,
+      "event": "push",
+      "headSha": "15fac97ecb13977848bdd1f8f1a525390d33f646",
+      "name": "Release final gate dispatcher",
+      "status": "completed",
+      "url": "https://github.com/rafaelpaesmeirelles/MeuCardio/actions/runs/32409872799"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T19:39:40Z",
+      "databaseId": 32409872696,
+      "event": "push",
+      "headSha": "15fac97ecb13977848bdd1f8f1a525390d33f646",
+      "name": "CI",
+      "status": "in_progress",
+      "url": "https://github.com/rafaelpaesmeirelles/MeuCardio/actions/runs/32409872696"
+    }
+  ]
+}
