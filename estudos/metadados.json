@@ -23562,5 +23562,30 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "baxdrostat-na-doenca-renal-cronica-com-albuminuria-ensaio-dedicado",
+    "title": "Baxdrostat na Doença Renal Crônica com Albuminúria: Ensaio Fase 2 Dedicado",
+    "study_type": "ensaio_clinico",
+    "authors": null,
+    "journal": "Journal of the American Society of Nephrology",
+    "year": 2026,
+    "doi": "10.1681/ASN.0000000849",
+    "pmid": "40913594",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40913594/",
+    "summary": "Ensaio fase 2, randomizado, duplo-cego, controlado por placebo, dedicado a doença renal crônica com albuminúria confirmada (UACR ≥100 mg/g) e hipertensão não controlada em uso de IECA/BRA. 195 participantes randomizados 1:1:1 para baxdrostat dose baixa, dose alta ou placebo por 26 semanas.",
+    "key_findings": "PAS ajustada por placebo, grupo combinado: -8,1 mmHg (IC95% -13,4 a -2,8; p=0,003). Dose baixa: -9,0 mmHg (p=0,004); dose alta: -7,2 mmHg (p=0,02) — efeito não dose-dependente. Hipercalemia em 41% (53/128) do grupo baxdrostat vs. 5% (3/64) do placebo, taxa expressivamente maior que a observada em BaxHTN (população sem DRC avançada).",
+    "clinical_implications": "Primeira evidência dedicada de inibidor da aldosterona sintase especificamente em DRC com albuminúria — população de maior risco de hipercalemia, exigindo monitorização de potássio mais próxima que a extrapolação dos ensaios gerais de hipertensão resistente sugeriria.",
+    "limitations": "Fase 2, não fase 3 — força de recomendação clínica menor que ensaio confirmatório. N modesto (195), sem desfecho renal duro medido (progressão de DRC/doença renal terminal). Taxa de hipercalemia relevante exige vigilância.",
+    "theme": "Hipertensão",
+    "tags": [
+      "baxdrostat",
+      "doença renal crônica",
+      "albuminúria",
+      "inibidor da aldosterona sintase",
+      "hipercalemia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
