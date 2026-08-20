@@ -23562,5 +23562,55 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+  },
+  {
+    "slug": "ropac-iii-anticoagulacao-em-protese-valvar-mecanica-na-gestacao-dados-atualizados-de-risco",
+    "title": "ROPAC III: Anticoagulação em Prótese Valvar Mecânica na Gestação — Dados Atualizados de Risco por Estratégia",
+    "study_type": "registro_prospectivo",
+    "authors": null,
+    "journal": "European Heart Journal",
+    "year": 2026,
+    "doi": null,
+    "pmid": "40237423",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40237423/",
+    "summary": "Registro prospectivo multicêntrico mundial ESC EORP, 411 gestações em mulheres com valva mecânica, recrutadas janeiro/2018 a abril/2023 (ROPAC III).",
+    "key_findings": "Gestação sem complicações com nascido vivo em 54% das mulheres com valva mecânica vs. 79% com valva biológica. Complicações tromboembólicas e hemorrágicas mais frequentes com regimes baseados em HBPM. Evento tromboembólico em 12/117 (10%) com monitorização de anti-Xa vs. 9/43 (21%) sem monitorização.",
+    "clinical_implications": "Quando HBPM é a estratégia escolhida, monitorização rigorosa de anti-Xa é determinante de segurança — diferença de risco tromboembólico entre monitorizar e não monitorizar é da mesma ordem de grandeza que a diferença entre estratégias de anticoagulante.",
+    "limitations": "Registro observacional, sem randomização entre estratégias — viés de indicação possível. Magnitude exata da diferença entre estratégias por subgrupo de risco de trombose valvar não detalhada nesta fonte.",
+    "theme": "Gravidez",
+    "tags": [
+      "ROPAC III",
+      "prótese valvar mecânica",
+      "anticoagulação",
+      "gestação",
+      "anti-Xa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "duracao-da-pre-eclampsia-como-preditor-de-risco-cardiovascular-de-longo-prazo",
+    "title": "Duração da Pré-Eclâmpsia como Preditor de Risco Cardiovascular de Longo Prazo",
+    "study_type": "estudo_de_coorte",
+    "authors": "Keitaanpää N, et al.",
+    "journal": "Hypertension",
+    "year": 2025,
+    "doi": "10.1161/HYPERTENSIONAHA.125.25054",
+    "pmid": "40238906",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40238906/",
+    "summary": "Dados de registro nacional finlandês, duas coortes: FINNPEC (n=1.139) e FinnGen (n=3.603). Exposição: dias entre diagnóstico de pré-eclâmpsia e parto. Desfecho: composto de doença cardiovascular diagnosticado antes dos 55 anos. Seguimento mediano 12,2 e 17,1 anos, respectivamente.",
+    "key_findings": "Cada dia adicional entre diagnóstico e parto associou-se a aumento de 1-2% no risco de doença cardiovascular de longo prazo.",
+    "clinical_implications": "Refina a estratificação de risco pós-parto além da classificação categórica precoce/tardia — duração até o parto é variável contínua e quantificável, prontamente disponível no prontuário obstétrico, útil para intensidade de rastreamento pós-parto.",
+    "limitations": "Coorte finlandesa — generalização a outras populações não testada. Possível confusão residual por gravidade do quadro, difícil de separar completamente da duração.",
+    "theme": "Gravidez",
+    "tags": [
+      "pré-eclâmpsia",
+      "risco cardiovascular de longo prazo",
+      "duração",
+      "FINNPEC",
+      "FinnGen"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
