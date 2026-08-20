@@ -14077,5 +14077,131 @@
     "sbp_reduction_mmhg": -14.9,
     "dbp_reduction_mmhg": -7.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), ensaios comparativos de 6 semanas, redução pressórica corrigida por placebo: **Edarbi 80 mg** -14,9/-7,5 mmHg (PA de consultório) e -14,3/-9,4 mmHg (MAPA de 24h); **Edarbi 40 mg** -14,6/-6,2 mmHg (consultório) e -13,2/-8,6 mmHg (MAPA); comparadores ativos no mesmo ensaio — **olmesartana 40 mg** -11,4/-5,3 mmHg (consultório) e **valsartana 320 mg** -9,5/-4,4 mmHg (consultório), ambos numericamente inferiores à azilsartana 80 mg nesse ensaio. Valores numéricos registrados nos campos deste item são os da dose-alvo de 80 mg, medida em PA de consultório (-14,9/-7,5 mmHg). Consultado nesta sessão."
+  },
+  {
+    "slug": "azitromicina",
+    "review_status": "revisado",
+    "generic_name": "Azitromicina (di-hidratada)",
+    "brand_names": [
+      "Zitromax — Pfizer (referência)",
+      "Azitromicina Di-Hidratada (Genérico) — Eurofarma",
+      "Azitromicina (Genérico) — EMS"
+    ],
+    "drug_class": "Antibiótico macrolídeo (subclasse azalídeo)",
+    "mechanism": "Liga-se de forma reversível à subunidade ribossômica bacteriana 50S, inibindo a translocação do peptídeo nascente e a formação de ligações peptídicas — bloqueia a síntese proteica bacteriana. Classicamente bacteriostático, podendo ser bactericida em concentrações elevadas contra patógenos sensíveis. Não é fármaco cardiológico — entra no catálogo pelo risco cardiovascular próprio da classe (prolongamento de QT/Torsades de Pointes) e por interações relevantes com fármacos cardiológicos.",
+    "presentations": [
+      "Comprimido revestido 500 mg; suspensão oral 600/900/1500 mg; injetável, conforme apresentação/fabricante"
+    ],
+    "indications": [
+      "Infecções do trato respiratório inferior e superior (sinusite, faringite/amigdalite)",
+      "Otite média aguda",
+      "Infecções de pele e tecidos moles",
+      "DSTs não complicadas por Chlamydia trachomatis e Neisseria gonorrhoeae"
+    ],
+    "contraindications": [
+      "Hipersensibilidade conhecida à azitromicina, à eritromicina e/ou a qualquer antibiótico macrolídeo (hipersensibilidade cruzada bem descrita)"
+    ],
+    "interactions": [
+      "Prolongamento de QT / Torsades de Pointes — RISCO PRÓPRIO DA CLASSE, RELEVANTE AO CARDIOLOGISTA: alerta da FDA (março/2013) por risco de arritmia fatal; estudo citado nesta pesquisa mostrou HR 2,49 para morte cardiovascular vs. amoxicilina, concentrado nos dias 1-5 de uso (coincidindo com pico plasmático). Contraindicado/desaconselhado em paciente com prolongamento de QT conhecido, hipocalemia, hipomagnesemia, bradicardia, ou em uso de antiarrítmico.",
+      "Amiodarona — interação classificada como grave nas fontes consultadas: risco aumentado de prolongamento de QT e arritmia.",
+      "Digoxina — azitromicina (como outros macrolídeos) eleva níveis séricos de substratos da glicoproteína-P, incluindo digoxina; monitorização clínica dos níveis séricos de digoxina recomendada durante e após o tratamento.",
+      "Varfarina — estudo farmacocinético formal não mostrou alteração do efeito anticoagulante de dose única de varfarina, mas há relatos pós-comercialização de potencialização da anticoagulação com cumarínicos; atenção à frequência de monitorização do TP/INR recomendada.",
+      "Estatinas — diferente de claritromicina/eritromicina, a azitromicina não inibe a CYP3A4 de forma relevante, então teoricamente não eleva níveis de estatina; há, porém, relatos raros de rabdomiólise associados a azitromicina + atorvastatina/sinvastatina em fontes secundárias consultadas. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à magnitude real desse risco específico — as fontes consultadas não são unânimes."
+    ],
+    "notes": {
+      "fonte_da_pesquisa": "Dados vêm de bulários públicos secundários (bulas.med.br para Zitromax/Azitromicina Di-Hidratada Eurofarma), do FDA Drug Safety Communication de março/2013 e de um artigo do NEJM sobre risco cardiovascular de azitromicina — não da leitura direta do PDF completo de nenhuma bula brasileira, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
+    },
+    "references": [
+      "Bulas.med.br. Interações medicamentosas — Azitromicina e Zitromax. https://www.bulas.med.br/p/detalhamento-das-bulas/1245459/interacoes-medicamentosas-azitromicina.htm ; https://www.bulas.med.br/p/detalhamento-das-bulas/1224759/interacoes-medicamentosas-zitromax.htm",
+      "FDA Drug Safety Communication, março/2013 — Azithromycin (Zithromax) and risk of potentially fatal heart rhythms. https://www.fda.gov/media/85787/download",
+      "Ray WA et al. Azithromycin and the risk of cardiovascular death. N Engl J Med. https://www.nejm.org/doi/full/10.1056/NEJMp1302726"
+    ]
+  },
+  {
+    "slug": "diclofenaco",
+    "review_status": "revisado",
+    "generic_name": "Diclofenaco (sódico ou potássico, conforme sal)",
+    "brand_names": [
+      "Voltaren (diclofenaco sódico) — Novartis",
+      "Cataflam (diclofenaco potássico/resinato) — Novartis",
+      "Biofenac (diclofenaco sódico) — Aché",
+      "Diclofenaco Sódico (Genérico) — Medley (Sanofi Medley Farmacêutica)"
+    ],
+    "drug_class": "Anti-inflamatório não esteroidal (AINE), derivado do ácido fenilacético",
+    "mechanism": "Inibe as ciclo-oxigenases COX-1 e COX-2, bloqueando a via do ácido araquidônico e a síntese de prostaglandinas. Efeito anti-inflamatório/analgésico/antipirético ligado principalmente à inibição de COX-2; a inibição de COX-1 contribui para toxicidade gastrointestinal e inibição da agregação plaquetária. Não é fármaco cardiológico — entra no catálogo por ser AINE com alerta regulatório específico de risco cardiovascular (EMA/PRAC 2013), frequentemente prescrito/usado sem que o médico assistente saiba da cardiopatia de base.",
+    "presentations": [
+      "Comprimido 50 mg; drágea/comprimido de liberação modificada (SR); gotas/suspensão (sal potássico); injetável 75 mg/3 mL; gel tópico"
+    ],
+    "indications": [
+      "Processos inflamatórios e dolorosos, reumáticos e não reumáticos (osteoartrite, artrite reumatoide, dor pós-operatória/pós-traumática, dismenorreia)"
+    ],
+    "contraindications": [
+      "Insuficiência cardíaca grave — contraindicação explícita de bula (Cataflam/Voltaren, Novartis)",
+      "Doença cardiovascular estabelecida (hipertensão não controlada, ICC, doença isquêmica cardíaca estabelecida, doença arterial periférica) — bula recomenda que o tratamento geralmente não seja indicado nesses casos",
+      "Úlcera péptica/sangramento ou perfuração GI ativos ou história",
+      "Insuficiência hepática ou renal grave",
+      "Último trimestre de gestação"
+    ],
+    "interactions": [
+      "IECA / BRA / diuréticos ('triple whammy') — diclofenaco reduz o efeito anti-hipertensivo desses fármacos e aumenta o risco de hipercalemia quando associado a IECA/BRA; a combinação com qualquer AINE deve ser evitada pelo risco aumentado de lesão renal aguda.",
+      "Diuréticos poupadores de potássio — risco aumentado de hipercalemia.",
+      "Varfarina — potencializa o efeito anticoagulante, com risco aumentado de sangramento; monitorização estreita recomendada (estudos clínicos formais não mostram alteração consistente da ação anticoagulante, mas há relatos isolados de sangramento aumentado em uso concomitante).",
+      "Digoxina — diclofenaco pode elevar as concentrações plasmáticas de digoxina; monitorização dos níveis séricos recomendada.",
+      "Lítio — eleva a litemia; monitorização dos níveis séricos necessária."
+    ],
+    "notes": {
+      "alerta_regulatorio": "Revisão de segurança de AINEs pelo PRAC/EMA (2013) detectou aumento discreto de eventos cardiovasculares com diclofenaco, comparável ao observado com inibidores seletivos de COX-2. Estimativa citada na revisão: 3 casos adicionais de infarto do miocárdio por 1.000 pacientes com risco cardiovascular moderado tratados por 1 ano com diclofenaco (vs. nenhum tratamento). O PRAC recomendou que o diclofenaco NÃO seja usado em pacientes com doença cardiovascular grave (IC classe NYHA II-IV, doença isquêmica cardíaca, doença arterial periférica ou cerebrovascular); recomendação geral de menor dose efetiva pelo menor tempo possível.",
+      "fonte_da_pesquisa": "Dados vêm de bulas profissionais (resumo via busca) de Voltaren/Cataflam (Novartis) e Biofenac CLR (Aché), da nota informativa do PRAC/EMA/AEMPS de 2013, e de bulas.med.br para interações — não da leitura direta do PDF completo, bloqueada nesta sessão (proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA antes de tratar como fonte primária plena."
+    },
+    "references": [
+      "Novartis Brasil. Bula profissional Voltaren (comprimido SR) e Cataflam (drágea). https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-VOLTAREN-Comprimido-de-Liberacao-Modificada-SR-Medico.pdf ; https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Dragea-Medico.pdf",
+      "Aché. Bula Biofenac CLR. https://www.ache.com.br/wp-content/uploads/application/pdf/Bula-Biofenac-CLR.pdf",
+      "EMA/PRAC, referral — Diclofenac, article 31 referral, new safety advice. https://www.ema.europa.eu/pt/documents/referral/diclofenac-article-31-referral-new-safety-advice-diclofenac_pt.pdf",
+      "AEMPS. Nota informativa 2013, diclofenaco e risco cardiovascular. https://www.aemps.gob.es/informa/notasinformativas/medicamentosusohumano-3/seguridad-1/2013/ni-muh_fv_16-2013-diclofenaco/",
+      "Bulas.med.br. Interações medicamentosas — diclofenaco potássico. https://www.bulas.med.br/p/detalhamento-das-bulas/1116454/interacoes-medicamentosas-diclofenaco-potassico-comprimidos-generico.htm"
+    ]
+  },
+  {
+    "slug": "salbutamol",
+    "review_status": "revisado",
+    "generic_name": "Salbutamol (sulfato de salbutamol — \"albuterol\" na bula FDA)",
+    "brand_names": [
+      "Aerolin — GlaxoSmithKline (GSK) Brasil",
+      "Salbutamol (Genérico, aerossol 100mcg/dose) — Glenmark",
+      "Sulfato de Salbutamol (Genérico, injetável) — Hipolabor"
+    ],
+    "drug_class": "Broncodilatador, agonista beta-2 adrenérgico seletivo de curta duração (SABA)",
+    "mechanism": "Agonista seletivo dos receptores beta-2 adrenérgicos da musculatura lisa brônquica — ativa a adenilato ciclase, reduz cálcio intracelular e promove relaxamento/broncodilatação rápida. Em doses terapêuticas tem pouca ou nenhuma ação sobre receptores beta-1 cardíacos, mas a seletividade não é absoluta, especialmente em doses altas. Início de ação em minutos; duração de 4-6 horas. Não é fármaco cardiológico — entra no catálogo pela relevância direta ao cardiologista no paciente com DPOC/asma e doença cardiovascular concomitante, e pela interação farmacológica direta com betabloqueador não seletivo.",
+    "presentations": [
+      "Comprimido 2mg/4mg; xarope; gotas; spray/aerossol 100mcg/dose; flaconete para nebulização; injetável, conforme apresentação/fabricante"
+    ],
+    "indications": [
+      "Controle e prevenção da asma brônquica",
+      "Tratamento de obstrução reversível das vias aéreas (bronquite crônica, enfisema/DPOC)",
+      "Alívio (resgate) sintomático de broncoespasmo agudo"
+    ],
+    "contraindications": [
+      "Hipertensão pulmonar",
+      "Cardiomiopatia hipertrófica obstrutiva ou qualquer obstrução da via de saída do ventrículo esquerdo (ex.: estenose aórtica)"
+    ],
+    "interactions": [
+      "Betabloqueadores não seletivos (ex.: propranolol) — a bula do Aerolin (GSK) afirma explicitamente que salbutamol não deve ser usado com betabloqueador não seletivo: antagonismo farmacológico direto, com risco de broncoespasmo grave pelo lado do betabloqueador e perda de efeito broncodilatador do salbutamol. Um betabloqueador cardiosseletivo é citado nas fontes consultadas como antídoto preferido em caso de superdosagem de salbutamol — uso pontual sob monitorização, não uso crônico concomitante.",
+      "Diuréticos (tiazídicos/de alça) e corticosteroides — podem potencializar a hipocalemia induzida pelo salbutamol; atenção especial em paciente já hipocalêmico, pelo risco aumentado de taquicardia/arritmia. Monitorização de potássio sérico recomendada.",
+      "Antiarrítmicos/xantinas (ex.: aminofilina/teofilina) — hipocalemia pode ser potencializada em uso concomitante, aumentando risco de arritmia.",
+      "Digoxina — VERIFICAÇÃO HUMANA NECESSÁRIA: não foi confirmado nesta pesquisa um mecanismo/orientação específica de bula sobre interação direta salbutamol-digoxina; o risco teórico relevante é indireto, via hipocalemia predispondo a toxicidade digitálica, mas isso não foi confirmado como afirmação literal de bula."
+    ],
+    "adverse_effects": [
+      "Taquicardia (comum)",
+      "Arritmias, incluindo fibrilação atrial, taquicardia supraventricular e extrassístoles (menos comum)",
+      "Em casos graves: isquemia cardíaca, insuficiência cardíaca e cardiomiopatia (descrito nas fontes consultadas, sem frequência quantificada nesta pesquisa)"
+    ],
+    "notes": {
+      "cautela_nao_contraindicacao_absoluta": "Uso com cautela (não contraindicação absoluta nas fontes consultadas) em: cardiopatia grave (especialmente infarto do miocárdio recente), doença arterial coronariana, taquiarritmia, hipertensão arterial grave não tratada, aneurisma, diabetes de difícil controle, feocromocitoma, hipertireoidismo descontrolado, hipocalemia não tratada.",
+      "fonte_da_pesquisa": "Dados vêm da bula Aerolin (GSK Brasil, spray/comprimido/xarope, resumo via busca) e de uma ficha técnica espanhola (CIMA/AEMPS, Salbutamol Aldo-Unión) usada apenas como referência farmacológica de classe, não como bula brasileira — sinalizado explicitamente. Nenhuma bula foi lida na íntegra nesta sessão (bloqueio de proxy de rede). Recomenda-se reconfirmação contra o bulário eletrônico da ANVISA/bula impressa antes de tratar como fonte primária plena."
+    },
+    "references": [
+      "GSK Brasil. Bula Aerolin spray/comprimido/xarope. https://br.gsk.com/media/5wtj4ekh/aerolin-spray.pdf ; https://br.gsk.com/media/1qld0wqj/aerolin-comprimido.pdf ; https://br.gsk.com/media/lnenqw1w/aerolin-xarope.pdf",
+      "CIMA/AEMPS (Espanha). Ficha técnica Salbutamol Aldo-Unión — referência farmacológica de classe, não bula brasileira. https://cima.aemps.es/cima/pdfs/es/ft/65850/FT_65850.ht.pdf"
+    ]
   }
 ]
