@@ -292,6 +292,9 @@
     ],
     "commercial_presentations": [
       "Adenocard® (Libbs Farmacêutica Ltda., indústria brasileira; bula aprovada pela ANVISA em 01/06/2023), ampola de 2 mL (6 mg), embalagens com 2 ou 50 ampolas (hospitalar). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Adenocard"
     ]
   },
   {
@@ -356,6 +359,9 @@
     ],
     "commercial_presentations": [
       "Actilyse® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), pó liofilizado para reconstituição nas três apresentações; uso hospitalar exclusivo (IAM, TEP maciço, AVC isquêmico agudo). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Actilyse"
     ]
   },
   {
@@ -421,10 +427,14 @@
     "bp_evidence_source": "Não se aplica como efeito terapêutico pretendido/quantificado — a amiodarona não é antihipertensivo. **Hipotensão é evento adverso conhecido, sobretudo na administração intravenosa** (por vasodilatação relacionada ao veículo/polissorbato 80 da formulação IV e, em menor grau, por efeito inotrópico negativo leve), mais frequente com infusão rápida ou dose de ataque — o rótulo relaciona doses médias diárias acima de 2,1 g/dia a maior risco de hipotensão, e orienta tratar hipotensão com repercussão hemodinâmica com agentes inotrópicos positivos e/ou vasopressores. Isso é descrito qualitativamente como reação adversa, não como um efeito antihipertensivo dose-resposta quantificado em mmHg — nenhum número de redução de PA sistólica/diastólica atribuível à amiodarona em uso terapêutico foi localizado nesta sessão.",
     "presentations": [
       "Comprimido 200 mg — apresentação padronizada pelo Ministério da Saúde (CBAF)",
-      "Solução injetável 50 mg/mL, ampola de 3 mL (150 mg/ampola)"
+      "Solução injetável 50 mg/mL, ampola de 3 mL (150 mg/ampola)",
+      "**ANCORON** — Libbs, comprimido revestido 200 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 33,91; PMC (ICMS 20%) R$ 34,75. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
       "Genérico/similar (comprimido 200 mg e injetável 50 mg/mL) — múltiplos fabricantes com registro ANVISA identificados: Biosintética Farmacêutica Ltda., Hipolabor Farmacêutica Ltda., Fresenius Kabi Brasil Ltda., Geolab Indústria Farmacêutica S/A. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Números de registro ANVISA específicos por fabricante não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para o registro exato antes de exibir como definitivo."
+    ],
+    "brand_names": [
+      "Ancoron"
     ]
   },
   {
@@ -481,6 +491,9 @@
     ],
     "commercial_presentations": [
       "Norvasc® (Viatris Farmacêutica do Brasil Ltda. / Novartis Biociências S.A.), embalagens de 10, 30 ou 60 comprimidos (5 mg) e 30 ou 60 comprimidos (10 mg); numerosos genéricos registrados (ex. Biosintética). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Bula de Norvasc citada com data de aprovação ANVISA 11/05/2026 num dos espelhos consultados — data suspeita (futura em relação a versões anteriores conhecidas do produto); NÃO usar essa data sem confirmação direta no bulário da ANVISA. VERIFICAÇÃO HUMANA NECESSÁRIA para número de registro e data de bula corretos."
+    ],
+    "brand_names": [
+      "Norvasc"
     ]
   },
   {
@@ -490,7 +503,8 @@
     "drug_class": "Anticoagulante oral direto (DOAC) — inibidor direto, potente, reversível e altamente seletivo do fator Xa",
     "mechanism": "Inibidor do fator Xa livre e ligado ao coágulo e da atividade da protrombinase, sem necessidade de antitrombina III; não possui efeito direto na agregação plaquetária, mas inibe indiretamente a agregação induzida por trombina; biodisponibilidade absoluta ~50% até 10mg; pico plasmático em 3-4h; meia-vida ~12h; clearance total ~3,3 L/h",
     "presentations": [
-      "Comprimidos revestidos de 2,5 mg e 5 mg"
+      "Comprimidos revestidos de 2,5 mg e 5 mg",
+      "**APIXABANA ACCORD (GENÉRICO)** — Accord, comprimido revestido 5 mg, embalagem com 100 comprimidos: PMC (ICMS 18%) R$ 473,75; PMC (ICMS 20%) R$ 485,60. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "interactions": [
       "Não recomendado com rifampicina, fenitoína, carbamazepina, fenobarbital ou erva de São João (indutores enzimáticos) no tratamento de TVP/EP; cautela com AINEs/AAS (aumento de risco hemorrágico); não recomendado associar a outros anticoagulantes/antiplaquetários potentes",
@@ -547,7 +561,10 @@
     "duration_of_action_source": "**Confirmado nesta sessão (WebFetch, 12/08/2026) por leitura direta da rotulagem FDA/DailyMed do ELIQUIS® (apixaban), seção CLINICAL PHARMACOLOGY**: texto verbatim — \"The pharmacodynamic effect of ELIQUIS can be expected to persist for at least 24 hours after the last dose, i.e., for about two drug half-lives.\" Confirma exatamente o valor já registrado em `duration_of_action_note` (24h, ≈2 meias-vidas aparentes de 12h).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — a apixabana é um anticoagulante oral direto (inibidor do fator Xa), sem indicação nem mecanismo farmacológico de ação sobre o tônus vascular ou a pressão arterial sistêmica. Nenhum desfecho de PA é reportado nos ensaios pivotais (ARISTOTLE, AVERROES, AMPLIFY) nem no rótulo. Campo deixado vazio por ausência real de dado aplicável, não por omissão de busca."
+    "bp_evidence_source": "Não se aplica — a apixabana é um anticoagulante oral direto (inibidor do fator Xa), sem indicação nem mecanismo farmacológico de ação sobre o tônus vascular ou a pressão arterial sistêmica. Nenhum desfecho de PA é reportado nos ensaios pivotais (ARISTOTLE, AVERROES, AMPLIFY) nem no rótulo. Campo deixado vazio por ausência real de dado aplicável, não por omissão de busca.",
+    "brand_names": [
+      "Eliquis"
+    ]
   },
   {
     "slug": "atenolol",
@@ -893,6 +910,10 @@
     ],
     "commercial_presentations": [
       "Tracleer® e genéricos/similares (ex. Safebo) registrados no Brasil, comprimidos de 62,5 mg e 125 mg; indicado para hipertensão arterial pulmonar classe funcional III-IV (OMS). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Fabricante/detentor de registro específico e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Tracleer",
+      "Safebo"
     ]
   },
   {
@@ -1264,6 +1285,9 @@
     ],
     "commercial_presentations": [
       "Genérico de múltiplos fabricantes (ex. Geolab), sem marca de referência de patente ativa (captopril é fármaco antigo, primariamente genérico no mercado brasileiro). **Confirmado por busca direcionada em 12/08/2026**: Geolab Indústria Farmacêutica S/A comercializa captopril como CAPOX® e como genérico, comprimidos de **25 mg e 50 mg**, embalagens com 30, 450 e (apresentação profissional) 750 comprimidos — sob o **Registro MS 1.5423.0282** (CNPJ 03.485.572/0001-04), confirmado como válido em base de dados agregadora de registros ANVISA (smerp.com.br) — resolvendo a verificação pendente anterior para este fabricante específico."
+    ],
+    "brand_names": [
+      "Capox"
     ]
   },
   {
@@ -1558,6 +1582,9 @@
     ],
     "commercial_presentations": [
       "Higroton® (Novartis Biociências S.A.) e genéricos de múltiplos fabricantes (ex. EMS) nas três concentrações; disponível também combinada a atenolol ou amilorida. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Higroton"
     ]
   },
   {
@@ -1610,6 +1637,9 @@
     ],
     "commercial_presentations": [
       "Colchis® (Apsen Farmacêutica S.A.; bula aprovada pela ANVISA em 27/04/2023) e genéricos de múltiplos fabricantes (ex. Geolab), comprimidos de 0,5 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Disponibilidade da apresentação de 1 mg por marca específica não confirmada — VERIFICAÇÃO HUMANA NECESSÁRIA. Número de registro ANVISA não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Colchis"
     ]
   },
   {
@@ -1718,10 +1748,14 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "**Verificado nesta sessão (WebFetch, 12/08/2026) por leitura direta da rotulagem FDA/DailyMed de FARXIGA® (dapagliflozin), seção CLINICAL STUDIES.** A rotulagem NÃO traz estudo dedicado de MAPA de 24h para dapagliflozina isolada (diferente do que a bula de empagliflozina/JARDIANCE traz, já citado no registro-irmão `empagliflozina` desta base) — o que existe são reduções de pressão arterial sistólica medida em consultório (não MAPA), como achado adicional dentro de ensaios cujo desfecho primário era controle glicêmico: reduções de **-4,5 mmHg e -5,3 mmHg** em diferentes braços de um ensaio de adição a metformina, sem detalhamento de PA diastólica nem de IC95% no texto já extraído nesta sessão. Valor declaradamente mais fraco (achado secundário, não desfecho dedicado com MAPA) que o já registrado para empagliflozina — diferença real entre as duas bulas, não erro de transcrição.",
     "presentations": [
-      "Comprimido revestido 10 mg (12,30 mg de dapagliflozina propanodiol, equivalente a 10 mg de dapagliflozina), embalagens com 14 ou 30 comprimidos"
+      "Comprimido revestido 10 mg (12,30 mg de dapagliflozina propanodiol, equivalente a 10 mg de dapagliflozina), embalagens com 14 ou 30 comprimidos",
+      "**DAPAGLIFLOZINA ACHÉ (GENÉRICO)** — Aché, comprimido revestido 10 mg, embalagem com 30 comprimidos: PMC (ICMS 18%, SP/MG) R$ 157,14; PMC (ICMS 20%, região com alíquota 20%) R$ 161,07. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
       "Forxiga® (AstraZeneca do Brasil Ltda.; fabricado por AstraZeneca Pharmaceuticals LP, Mount Vernon, Indiana, EUA, ou IPR Pharmaceuticals Inc, Canovanas, Porto Rico), bula aprovada pela ANVISA em 13/05/2024; genéricos já disponíveis no varejo (ex. EMS). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Número de registro ANVISA específico não confirmado — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Forxiga"
     ]
   },
   {
@@ -1787,6 +1821,9 @@
     ],
     "commercial_presentations": [
       "Digoxina Pharlab (comprimido 0,25 mg); Digoxina Elixir Aspen Pharma; genéricos de diversos fabricantes (ex. Prati-Donaduzzi). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Digoxina Pharlab"
     ]
   },
   {
@@ -1852,6 +1889,9 @@
     ],
     "commercial_presentations": [
       "Cardizem® e Cardizem® SR (referência histórica) e genéricos de múltiplos fabricantes (ex. EMS) — bula padrão aprovada pela ANVISA em 23/03/2021, sujeito a retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e detentor de registro atuais não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Cardizem"
     ]
   },
   {
@@ -2375,10 +2415,14 @@
     "bp_evidence_source": "Ensaio randomizado, duplo-cego, controlado por placebo, com MAPA de 24 horas, em 823 pacientes com diabetes tipo 2 e hipertensão, em uso de anti-hipertensivo estável: na 12ª semana, diferença ajustada vs. placebo na variação da PAS média de 24h foi de -3,44 mmHg (IC95% -4,78 a -2,09) com empagliflozina 10 mg e **-4,16 mmHg (IC95% -5,50 a -2,83) com 25 mg**; PAD média de 24h -1,36 mmHg (IC95% -2,15 a -0,56) com 10 mg e **-1,72 mmHg (IC95% -2,51 a -0,93) com 25 mg**, sem alteração relevante na frequência cardíaca. Valores registrados nos campos numéricos são os da dose de 25 mg (dose máxima aprovada) — mesmo padrão de escolha de dose já usado no verbete `canagliflozina` desta base, mesma classe. **Fonte**: Chilton R, Woerle HJ, Broedl UC, et al. Empagliflozin reduces blood pressure in patients with type 2 diabetes and hypertension. Diabetes Care. 2015;38(3):420-428. DOI: 10.2337/dc14-1096. PMID: 25271206 — pesquisado nesta sessão em 10/08/2026. **VERIFICAÇÃO HUMANA NECESSÁRIA**: número não conferido linha a linha contra a bula brasileira do JARDIANCE nem contra o RCM da EMA (já citado em `dosing`) — vem do artigo original do ensaio, não da bula/rótulo regulatório.",
     "presentations": [
       "Comprimido revestido 10 mg (embalagens com 10 ou 30 comprimidos)",
-      "Comprimido revestido 25 mg (embalagens com 10 ou 30 comprimidos)"
+      "Comprimido revestido 25 mg (embalagens com 10 ou 30 comprimidos)",
+      "**EMPAFLO** — Brace Pharma, comprimido revestido 10 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 119,34; PMC (ICMS 20%) R$ 122,33. Comprimido revestido 25 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 166,56; PMC (ICMS 20%) R$ 170,71. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
       "Jardiance® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), comprimidos revestidos de 10 mg e 25 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de aprovação de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Jardiance"
     ]
   },
   {
@@ -2487,6 +2531,11 @@
     ],
     "commercial_presentations": [
       "Clexane® (Sanofi Medley Farmacêutica Ltda.; bula aprovada pela ANVISA em 10/06/2019), seringas preenchidas com sistema de segurança; genéricos/similares de outros fabricantes também registrados no Brasil (ex. NOXX®, Blau Farmacêutica S.A.; HEPARINOX®, Cristália Prod. Quím. Farm. Ltda.). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Clexane",
+      "Noxx",
+      "Heparinox"
     ]
   },
   {
@@ -2540,6 +2589,9 @@
     ],
     "commercial_presentations": [
       "Adren® (Hipolabor Farmacêutica Ltda.; registro ANVISA nº 1.1343.0001.001-6), ampola de 1 mL (1 mg/mL), embalagens hospitalares com 100 ampolas; genéricos/similares de outros fabricantes (ex. Hypofarma) também registrados. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+    ],
+    "brand_names": [
+      "Adren"
     ]
   },
   {
@@ -2601,6 +2653,9 @@
     ],
     "commercial_presentations": [
       "Inspra® (registrado e importado por Upjohn Brasil Importadora e Distribuidora de Medicamentos Ltda., fabricado por Viatris Pharmaceuticals LLC, Vega Baja, Porto Rico; registro ANVISA MS 1.1535.0010), comprimidos revestidos de 25 mg e 50 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Dígitos completos do registro ANVISA não reconferidos em fonte primária nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Inspra"
     ]
   },
   {
@@ -2778,6 +2833,9 @@
     ],
     "commercial_presentations": [
       "Repatha® (evolocumabe; Amgen Biotecnologia do Brasil Ltda.), aprovado pela ANVISA em 2016, seringa/caneta preenchida 140 mg/mL, dose de 140 mg a cada 2 semanas ou 420 mg uma vez ao mês. Praluent® (alirocumabe; Sanofi Medley Farmacêutica Ltda.) teve o CANCELAMENTO de registro deferido pela ANVISA em 24/03/2025, após descontinuações de fabricação/importação já comunicadas em 2021, 2023 e 2024 — não está mais disponível para comercialização no Brasil nesta data. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Números de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Repatha"
     ]
   },
   {
@@ -2899,6 +2957,9 @@
     ],
     "commercial_presentations": [
       "Splendil® (AstraZeneca do Brasil Ltda.); registros ANVISA 1.1618.0074.008-8 (2,5 mg), 1.1618.0074.009-6 (5 mg) e 1.1618.0074.012-6 (10 mg). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Dígitos dos registros extraídos de agregador secundário (site de bula), não reconferidos diretamente no bulário eletrônico da ANVISA — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Splendil"
     ]
   },
   {
@@ -3032,6 +3093,10 @@
     ],
     "commercial_presentations": [
       "Kerendia®/Firialta® (Bayer S.A.; fabricado por Bayer AG, Leverkusen, Alemanha), comprimidos revestidos de 10 mg e 20 mg, aprovado pela ANVISA para doença renal crônica associada a diabetes tipo 2 (estágios 3 e 4 com albuminúria). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Nome comercial definitivo no mercado brasileiro (Kerendia vs. Firialta) e número de registro ANVISA não confirmados com certeza nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+    ],
+    "brand_names": [
+      "Kerendia",
+      "Firialta"
     ]
   },
   {
@@ -4014,6 +4079,9 @@
     ],
     "commercial_presentations": [
       "SIMDAX® (levosimendana), fabricado por Orion Corporation (Espoo, Finlândia) e importado/distribuído no Brasil atualmente por Biolab-Sanus Farmacêutica Ltda (bula profissional com atualização de 18/03/2025, EAN 7896112400615) — frasco-ampola de 5 mL a 2,5 mg/mL. Fontes anteriores (bula datada de 2013) registram Abbott Laboratórios do Brasil Ltda como importador, indicando troca de distribuidor ao longo do tempo. Confirmado por pelo menos duas fontes de varejo/bulário concordantes nesta sessão (sara.com.br, consultaremedios.com.br, farmaindex.com, WebSearch 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Medicamento de uso hospitalar exclusivo, não vendido em farmácia de varejo comum ao consumidor final."
+    ],
+    "brand_names": [
+      "Simdax"
     ]
   },
   {
@@ -5702,6 +5770,9 @@
     ],
     "commercial_presentations": [
       "PROTAMINA 1000® (cloridrato de protamina), Cellera Farmacêutica S.A. (Indaiatuba/SP — mesmo endereço anteriormente registrado por Valeant Farmacêutica do Brasil Ltda, sucedida pela Cellera), fabricado por União Química Farmacêutica Nacional S.A. Registro ANVISA nº 1.0440.0184. Solução injetável 10 mg/mL, caixa com 25 ampolas de vidro de 5 mL. Confirmado por múltiplas fontes concordantes nesta sessão (cellerafarma.com.br, consultaremedios.com.br, sara.com.br, magazinemedica.com.br, WebSearch 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Medicamento de uso hospitalar."
+    ],
+    "brand_names": [
+      "Protamina 1000"
     ]
   },
   {
@@ -6923,7 +6994,8 @@
       "Bula do profissional de saúde de VASTAREL MR (dicloridrato de trimetazidina 35 mg), Laboratórios Servier do Brasil Ltda. — composição, posologia, reações adversas."
     ],
     "presentations": [
-      "Comprimidos revestidos de liberação modificada de 20mg e 35mg"
+      "Comprimidos revestidos de liberação modificada de 20mg e 35mg",
+      "**VASTAREL CAPS LP** — Servier, cápsula dura de liberação prolongada 80 mg, embalagem com 30 cápsulas: PMC (ICMS 18%) R$ 222,83; PMC (ICMS 20%) R$ 228,40. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "pregnancy": "Estudos em animais não mostraram efeito teratogênico, mas **na ausência de dados clínicos o risco de malformação fetal não pode ser excluído**. Por segurança, **é preferível evitar a prescrição durante a gravidez**. Fonte: bula do Vastarel MR (Servier).",
     "lactation": "A bula **não recomenda o uso durante a amamentação**. Fonte: bula do Vastarel MR (Servier).",
@@ -6934,7 +7006,10 @@
     "duration_of_action_source": "Bula do Vastarel MR (dicloridrato de trimetazidina 35mg, Laboratórios Servier do Brasil), seção de posologia; dados de farmacocinética de fontes secundárias (revisão em American Journal of Therapeutics 2016).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "A própria bula e o campo `mechanism` deste registro já afirmam explicitamente que a trimetazidina **não altera FC nem PA** — é antianginoso puramente metabólico (desloca o metabolismo energético do miocárdio de ácidos graxos para glicose), sem ação vasodilatadora, bloqueio adrenérgico ou de canal iônico que produza efeito hemodinâmico sistêmico. Campos mantidos nulos por ausência de mecanismo pressórico, conforme já declarado na própria fonte deste registro."
+    "bp_evidence_source": "A própria bula e o campo `mechanism` deste registro já afirmam explicitamente que a trimetazidina **não altera FC nem PA** — é antianginoso puramente metabólico (desloca o metabolismo energético do miocárdio de ácidos graxos para glicose), sem ação vasodilatadora, bloqueio adrenérgico ou de canal iônico que produza efeito hemodinâmico sistêmico. Campos mantidos nulos por ausência de mecanismo pressórico, conforme já declarado na própria fonte deste registro.",
+    "brand_names": [
+      "Vastarel"
+    ]
   },
   {
     "slug": "valsartana",
@@ -7134,6 +7209,9 @@
     ],
     "commercial_presentations": [
       "Encrise® (Biolab Farmacêutica; registro ANVISA nº 1.0974.0190), vasopressina sintética (8-arginina vasopressina) 20 U/mL, ampola de 1 mL, embalagem com 10 ampolas. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+    ],
+    "brand_names": [
+      "Encrise"
     ]
   },
   {
