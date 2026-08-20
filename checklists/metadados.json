@@ -5543,5 +5543,248 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "inicio-de-isglt2-em-cardiopata-diabetico-avaliacao-basal-e-monitorizacao",
+    "condicao": "Início de inibidor de SGLT2 em paciente diabético tipo 2 com risco ou doença cardiovascular",
+    "resumo": "O que checar ao iniciar um inibidor de SGLT2 (empagliflozina, dapagliflozina, canagliflozina ou ertugliflozina) visando proteção cardiovascular no diabetes tipo 2 — escolha da molécula certa para a indicação, avaliação de fatores precipitantes de cetoacidose diabética euglicêmica antes de prescrever, e monitorização, derivado do EMPA-REG OUTCOME, do DECLARE-TIMI 58, do VERTIS CV e da literatura de cetoacidose euglicêmica por iSGLT2.",
+    "documento_origem": "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Zinman B, Wanner C, Lachin JM, et al; EMPA-REG OUTCOME Investigators. Empagliflozin, cardiovascular outcomes, and mortality in type 2 diabetes (EMPA-REG OUTCOME). N Engl J Med. 2015;373(22):2117-2128. DOI: 10.1056/NEJMoa1504720. PMID: 26378978",
+      "Wiviott SD, Raz I, Bonaca MP, et al; DECLARE-TIMI 58 Investigators. Dapagliflozin and cardiovascular outcomes in type 2 diabetes (DECLARE-TIMI 58). N Engl J Med. 2019;380(4):347-357. DOI: 10.1056/NEJMoa1812389. PMID: 30415602",
+      "Cannon CP, Pratley R, Dagogo-Jack S, Mancuso J, Huyck S, et al; VERTIS CV Investigators. Cardiovascular Outcomes with Ertugliflozin in Type 2 Diabetes. N Engl J Med. 2020;383(15):1425-1435. DOI: 10.1056/NEJMoa2004967. PMID: 32966714 — NCT01986881, 8.246 randomizados, seguimento médio de 3,5 anos. Financiamento: Merck Sharp & Dohme e Pfizer",
+      "Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479. DOI 10.2337/dc15-0843",
+      "Rosenstock J, Ferrannini E. Euglycemic Diabetic Ketoacidosis: A Predictable, Detectable, and Preventable Safety Concern With SGLT2 Inhibitors. Diabetes Care. 2015;38(9):1638-1642. PMID 26294774. DOI 10.2337/dc15-1380",
+      "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA revises labels of SGLT2 inhibitors for diabetes to include warnings about too much acid in the blood and serious urinary tract infections. Atualização de 17 de março de 2020 (recomendação de suspensão perioperatória)",
+      "Morace C, Lorello G, Bellone F, et al. Ketoacidosis and SGLT2 Inhibitors: A Narrative Review. Metabolites. 2024;14(5):264. PMID 38786741. DOI 10.3390/metabo14050264",
+      "Snel LIP, Li X, Jamaludin F, Siegelaar SE, Holleman F, Vriesendorp TM, DeVries JH, Hoekstra JBL, Preckel B, van Raalte DH, Hermanides J, Hulst AH. A Systematic Review and Expert Evaluation of Perioperative SGLT2 Inhibitor-Associated Ketoacidosis Case Reports. Acta Anaesthesiol Scand. 2026;70(6):e70254. PMID 42130079. DOI 10.1111/aas.70254",
+      "Marino EC, Negretto LAF, Ribeiro RS, Momesso D, Feitosa ACR, Toyoshima MTK, Silva Junior JC, Vencio S, Lauria MW, Sá JR, Malerbi DA, Valente F, Leite SAO, Amaral DEO, Guimarães GMN, Leal PC, Lopes MB, Salles LCB, Azi LMTA, Fonseca AG, Carvalho LIM, Coelho FF, Halpern B, Valerio CM, Trujilho FR, Brandão ACA, Lyra R, Bertoluci M. Rastreamento e Controle da Hiperglicemia no Perioperatório - Posicionamento Conjunto da Sociedade Brasileira de Diabetes (SBD), Sociedade Brasileira de Anestesiologia (SBA) e Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica (ABESO). Diretriz Oficial da Sociedade Brasileira de Diabetes. 2025. DOI 10.29327/5660187.2025-10. ISBN 978-65-5941-367-6"
+    ],
+    "itens": [
+      {
+        "id": "sglt2cardio-indicacao-populacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar o perfil do paciente antes de definir a expectativa de benefício: diabetes tipo 2 com doença cardiovascular aterosclerótica JÁ ESTABELECIDA (perfil do EMPA-REG OUTCOME) tem evidência de redução de eventos cardiovasculares maiores e mortalidade; diabetes tipo 2 SEM doença estabelecida, mas em risco (perfil do DECLARE-TIMI 58), tem evidência mais consistente para prevenção de hospitalização por insuficiência cardíaca, não para prevenção de infarto/AVC",
+        "origem_secao": "Sintese pratica — inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58.md"
+      },
+      {
+        "id": "sglt2cardio-escolha-molecula",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Quando a indicação for proteção cardiovascular ou renal, prescrever a molécula sustentada por ensaio positivo (empagliflozina no EMPA-REG OUTCOME, dapagliflozina no DECLARE-TIMI 58) — a ertugliflozina não reproduziu superioridade para eventos cardiovasculares maiores nem para morte cardiovascular/internação por IC no VERTIS CV (HR 0,88; IC95,8% 0,75-1,03; p=0,11), atingindo apenas não inferioridade",
+        "origem_secao": "O quadro que os tres completam / A conduta que decorre — nem-todo-isglt2-e-igual-vertis-cv-e-a-linagliptina-em-carolina-e-carmelina.md"
+      },
+      {
+        "id": "sglt2cardio-fatores-precipitantes-cad",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar, verificar se há situação que reduza a disponibilidade de carboidrato/insulina ou aumente a demanda metabólica (cirurgia programada, jejum prolongado, infecção/sepse, baixa ingesta calórica ou hídrica, redução importante da dose de insulina, dieta cetogênica) — são os fatores precipitantes conhecidos da cetoacidose diabética euglicêmica associada a iSGLT2",
+        "origem_secao": "Fatores precipitantes — cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md"
+      },
+      {
+        "id": "sglt2cardio-cautela-dm1",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se o paciente tiver diabetes tipo 1 (uso off-label na maioria dos cenários no Brasil), reconhecer que a série original de cetoacidose euglicêmica concentrou desproporcionalmente esses casos (7 de 9 pacientes tinham diabetes tipo 1) e que o fármaco só deve ser usado, nessa população, 'com grande cautela, orientação extensa e monitorização estreita'",
+        "origem_secao": "Fatores precipitantes — cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md"
+      },
+      {
+        "id": "sglt2cardio-orientacao-sintomas-cad",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado que, em uso de iSGLT2, sintomas como náusea, vômitos, dor abdominal, taquipneia ou mal-estar desproporcional podem ser cetoacidose diabética MESMO com glicemia normal — a glicemia capilar normal não afasta o diagnóstico, e a maioria dos casos descritos cursa com glicemia abaixo de 300 mg/dL",
+        "origem_secao": "Por que este documento existe / A armadilha clínica — cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md"
+      },
+      {
+        "id": "sglt2cardio-conduta-sintomas-cad",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de sintomas compatíveis com acidose em paciente usando iSGLT2, solicitar cetonas (sangue ou urina) e gasometria/bicarbonato independentemente do valor da glicemia capilar",
+        "origem_secao": "Conduta prática à beira do leito — cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md"
+      },
+      {
+        "id": "sglt2cardio-suspensao-perioperatoria",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antes de cirurgia eletiva/procedimento invasivo planejado, suspender o iSGLT2 com antecedência: 3 dias para canagliflozina, dapagliflozina ou empagliflozina; 4 dias para ertugliflozina — reiniciar somente quando a ingesta oral tiver retornado ao basal e os demais fatores de risco (infecção, desidratação, jejum) estiverem resolvidos",
+        "origem_secao": "Recomendação de suspensão perioperatória — cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md"
+      },
+      {
+        "id": "sglt2cardio-vigilancia-infeccao-genital",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter vigilância clínica para infecção genital durante o seguimento — foi o efeito adverso que aumentou de forma consistente nos dois ensaios de proteção cardiovascular (EMPA-REG OUTCOME: aumento de infecção genital, sem aumento de outros eventos adversos; DECLARE-TIMI 58: infecção genital grave em 0,9% vs. 0,1% com placebo, p<0,001)",
+        "origem_secao": "Empa-reg outcome 2015 / Declare-timi 58 2019 — inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58.md"
+      },
+      {
+        "id": "sglt2cardio-nao-generalizar-desfecho",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao explicar o benefício esperado ao paciente, não afirmar de forma genérica que 'inibidor de SGLT2 reduz eventos cardiovasculares' sem diferenciar prevenção primária de secundária — os dois ensaios fundadores não convergem no mesmo desfecho, e o achado mais consistente entre eles é a redução de hospitalização por insuficiência cardíaca, não de infarto/AVC",
+        "origem_secao": "Armadilhas clinicas — inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58.md"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "rastreamento-e-estratificacao-de-risco-cardiovascular-no-diabetico-tipo-2-assintomatico",
+    "condicao": "Rastreamento e estratificação de risco cardiovascular no diabético tipo 2 assintomático",
+    "resumo": "O que avaliar no diabético tipo 2 assintomático para estratificar risco cardiovascular corretamente, evitando o rastreio funcional de rotina que o ensaio DIAD não sustentou, e usando as ferramentas de estratificação (SCORE2-Diabetes da ESC 2023 e o modelo por idade/estratificadores da SBD 2025) e as recomendações de rastreamento sistemático (FA, doença renal crônica, insuficiência cardíaca) que substituem o teste de isquemia como estratégia isolada.",
+    "documento_origem": "rastreio-de-doenca-coronariana-assintomatica-no-diabetes-o-ensaio-diad",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Young LH, Wackers FJ, Chyun DA, Davey JA, Barrett EJ, Taillefer R, Heller GV, et al; DIAD Investigators. Cardiac outcomes after screening for asymptomatic coronary artery disease in patients with type 2 diabetes: the DIAD study: a randomized controlled trial. JAMA. 2009;301(15):1547-1555. DOI: 10.1001/jama.2009.476. PMID: 19366774 — NCT00769275, 1.123 participantes, seguimento de agosto/2000 a setembro/2007",
+      "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · European Heart Journal · 2023 · 44(39):4043-4140 · https://academic.oup.com/eurheartj/article/44/39/4043/7238227",
+      "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 1 · American College of Cardiology · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/08/18/40/2023-esc-guidelines-cvd-diabetes-part-1-esc-2023",
+      "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 2 · American College of Cardiology · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/11/03/37/2023-esc-guidelines-cvd-diabetes-part-2-esc-2023",
+      "Sociedade Brasileira de Diabetes. Diretriz da Sociedade Brasileira de Diabetes — Edição 2025, capítulo Manejo do Risco Cardiovascular: Dislipidemia. DOI: 10.29327/5660187. Disponível em diretriz.diabetes.org.br"
+    ],
+    "itens": [
+      {
+        "id": "rastreiocv-nao-pedir-teste-funcional-rotina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmar que não há indicação de rastreamento de rotina com cintilografia de perfusão miocárdica (ou outro teste de isquemia funcional) só pelo fato de o paciente ser diabético assintomático — o ensaio DIAD (1.123 pacientes) não encontrou diferença de morte cardíaca ou infarto não fatal entre rastrear e não rastrear (HR 0,88; IC95% 0,44-1,88; p=0,73)",
+        "origem_secao": "Resultados / Como isso se traduz na conduta — rastreio-de-doenca-coronariana-assintomatica-no-diabetes-o-ensaio-diad.md"
+      },
+      {
+        "id": "rastreiocv-sintomas-mudam-conduta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar ausência de sintomas (dor torácica, dispneia de esforço ou equivalente anginoso) antes de aplicar a recomendação de não rastrear por rotina — o DIAD randomizou apenas pacientes assintomáticos, e paciente sintomático segue outra investigação, fora do escopo desta recomendação",
+        "origem_secao": "Como isso se traduz na conduta — rastreio-de-doenca-coronariana-assintomatica-no-diabetes-o-ensaio-diad.md"
+      },
+      {
+        "id": "rastreiocv-avaliar-dcv-estabelecida-orgao-alvo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar todo paciente com diabetes quanto à presença de doença cardiovascular estabelecida e dano de órgão-alvo grave, definido por TFG estimada, relação albumina/creatinina urinária (UACR) ou doença microvascular em pelo menos três sítios diferentes (ex.: microalbuminúria + retinopatia + neuropatia)",
+        "origem_secao": "Mudanca conceitual chave — doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md"
+      },
+      {
+        "id": "rastreiocv-score2-diabetes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na ausência de doença cardiovascular estabelecida ou dano de órgão-alvo grave, estratificar risco pelo SCORE2-Diabetes (idade, tabagismo, PA sistólica, colesterol total e HDL-C, mais idade ao diagnóstico, HbA1c e TFGe), classificando em baixo (<5%), moderado (5% a <10%), alto (10% a <20%) ou muito alto (≥20%)",
+        "origem_secao": "Estratificacao de risco SCORE2-Diabetes / Novo escore score2 diabetes — doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md"
+      },
+      {
+        "id": "rastreiocv-alternativa-sbd",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Como alternativa nacional, considerar que a SBD 2025 recomenda NÃO usar calculadora de risco tradicional (Framingham, SCORE2, PCE) em diabetes tipo 2 por imprecisão nessa população — estratificando em vez disso por idade (homem ≥50 anos ou mulher ≥56 anos já define alto risco mesmo sem nenhum outro fator) e pela presença de estratificadores de alto risco (EAR) ou de muito alto risco (EMAR)",
+        "origem_secao": "Por que nao usar calculadora de risco tradicional / As quatro categorias de risco — estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025.md"
+      },
+      {
+        "id": "rastreiocv-rastrear-fa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Rastrear fibrilação atrial por palpação de pulso ou ECG em todo paciente diabético com 65 anos ou mais (recomendação Classe I) — considerar também abaixo de 65 anos se houver fatores de risco associados, já que diabéticos apresentam FA em idade mais jovem",
+        "origem_secao": "Rastreamento fa — doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md"
+      },
+      {
+        "id": "rastreiocv-rastrear-drc",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliar TFGe e relação albumina/creatinina urinária (UACR) de forma regular em todo paciente com diabetes, para risco/presença de doença renal crônica",
+        "origem_secao": "Doenca renal cronica diabetes — doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md"
+      },
+      {
+        "id": "rastreiocv-investigar-sinais-ic",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar sinais e sintomas de insuficiência cardíaca em toda consulta clínica do paciente diabético — rastreamento sistemático recomendado independentemente de sintoma cardiovascular já relatado",
+        "origem_secao": "Insuficiencia cardiaca diabetes — doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md"
+      },
+      {
+        "id": "rastreiocv-investir-prevencao-que-funciona",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Investir na prevenção que demonstrou funcionar independentemente do exame de rastreio — controle pressórico, estatina conforme a categoria de risco, controle glicêmico e, quando indicados, os fármacos com benefício cardiovascular demonstrado (iSGLT2, agonistas de GLP-1); no DIAD, a prevenção medicamentosa aumentou igualmente nos grupos rastreado e não rastreado, e é essa a explicação mais provável do resultado neutro do rastreio",
+        "origem_secao": "Por que o rastreio nao melhorou o desfecho / Como isso se traduz na conduta — rastreio-de-doenca-coronariana-assintomatica-no-diabetes-o-ensaio-diad.md"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-do-risco-arritmico-da-hipoglicemia-no-diabetico-com-doenca-cardiovascular",
+    "condicao": "Prevenção e manejo do risco arrítmico e cardiovascular associado à hipoglicemia no diabético com doença cardiovascular",
+    "resumo": "O que avaliar e orientar para reduzir o risco arrítmico da hipoglicemia grave em pacientes diabéticos com risco ou doença cardiovascular estabelecida, incluindo a individualização da meta glicêmica em diabetes de longa data (à luz do ACCORD/ADVANCE/VADT e do efeito legado do UKPDS) e a investigação de neuropatia autonômica cardíaca como marcador de risco adicional.",
+    "documento_origem": "hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Risk of Cardiac Arrhythmias During Hypoglycemia in Patients With Type 2 Diabetes and Cardiovascular Risk · Diabetes (American Diabetes Association) · https://diabetesjournals.org/diabetes/article/63/5/1738/34194/Risk-of-Cardiac-Arrhythmias-During-Hypoglycemia-in",
+      "Diabetic Dead-in-Bed Syndrome: A Possible Link to a Cardiac Ion Channelopathy · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3970469/",
+      "Cardiac Autonomic Neuropathy in Diabetes · Diabetes Care (American Diabetes Association) · https://diabetesjournals.org/care/article/33/2/434/27119/Cardiac-Autonomic-Neuropathy-in-DiabetesA-clinical",
+      "Cardiac Autonomic Neuropathy in Diabetes Mellitus: Pathogenesis, Epidemiology, Diagnosis and Clinical Implications: A Narrative Review · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11818907/",
+      "Action to Control Cardiovascular Risk in Diabetes Study Group; Gerstein HC, Miller ME, Byington RP, Goff DC Jr, Bigger JT, Buse JB, Cushman WC, Genuth S, Ismail-Beigi F, Grimm RH Jr, Probstfield JL, Simons-Morton DG, Friedewald WT. Effects of intensive glucose lowering in type 2 diabetes. N Engl J Med. 2008;358(24):2545-2559. DOI: 10.1056/NEJMoa0802743. PMID: 18539917 — NCT00000620, 10.251 pacientes, interrompido aos 3,5 anos por excesso de mortalidade no braço intensivo",
+      "ADVANCE Collaborative Group; Patel A, MacMahon S, Chalmers J, Neal B, et al. Intensive blood glucose control and vascular outcomes in patients with type 2 diabetes. N Engl J Med. 2008;358(24):2560-2572. DOI: 10.1056/NEJMoa0802987. PMID: 18539916 — NCT00145925, 11.140 pacientes, seguimento mediano de 5 anos",
+      "Duckworth W, Abraira C, Moritz T, Reda D, Emanuele N, et al; VADT Investigators. Glucose control and vascular complications in veterans with type 2 diabetes. N Engl J Med. 2009;360(2):129-139. DOI: 10.1056/NEJMoa0808431. PMID: 19092145 — NCT00032487, 1.791 veteranos, seguimento mediano de 5,6 anos; tem errata publicada (N Engl J Med. 2009;361(10):1024-5 e 1028) não lida nesta redação, declarada como limitação",
+      "Holman RR, Paul SK, Bethel MA, Matthews DR, Neil HA. 10-year follow-up of intensive glucose control in type 2 diabetes. N Engl J Med. 2008;359(15):1577-1589. DOI: 10.1056/NEJMoa0806470. PMID: 18784090 — UKPDS 80, abstract lido verbatim via efetch, ISRCTN75451837"
+    ],
+    "itens": [
+      {
+        "id": "hipogli-reconhecer-risco-arritmico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer que hipoglicemia grave está associada a risco aumentado de morte e doença cardiovascular e pode desencadear evento arrítmico fatal por mais de um mecanismo durante hipoglicemia espontânea em pacientes de alto risco cardiovascular",
+        "origem_secao": "Hipoglicemia e risco cardiovascular — hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes.md"
+      },
+      {
+        "id": "hipogli-nao-perseguir-meta-rigida",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não perseguir metas glicêmicas muito rígidas (HbA1c <6,0-6,5%) em diabético de longa data com fatores de risco cardiovascular estabelecidos — o trio ACCORD/ADVANCE/VADT não mostrou benefício cardiovascular nesse cenário, e no ACCORD (meta <6,0%) houve excesso de mortalidade geral (HR 1,22; IC95% 1,01-1,46; p=0,04) associado a maior hipoglicemia grave, levando à interrupção do estudo aos 3,5 anos",
+        "origem_secao": "O que fazer com isso na prática / ACCORD (braço glicêmico) — controle-glicemico-intensivo-e-desfecho-cardiovascular-no-diabetes-tipo-2-accord-advance-e-vadt.md"
+      },
+      {
+        "id": "hipogli-individualizar-meta",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Individualizar a meta glicêmica pelo tempo de doença e pela expectativa de vida — em diabetes recém-diagnosticado o benefício de controle intensivo pode levar cerca de 10 anos para aparecer em desfecho macrovascular e mortalidade (efeito legado do UKPDS 80), diferente do diabetes já estabelecido e de longa data com fatores de risco cardiovascular",
+        "origem_secao": "O que fazer com isso na prática — controle-glicemico-intensivo-e-desfecho-cardiovascular-no-diabetes-tipo-2-accord-advance-e-vadt.md"
+      },
+      {
+        "id": "hipogli-vigiar-como-custo-real",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigiar hipoglicemia grave como custo real de qualquer intensificação do tratamento — presente de forma consistente nos três ensaios do trio ACCORD/ADVANCE/VADT ao comparar controle intensivo com controle padrão",
+        "origem_secao": "O que fazer com isso na prática — controle-glicemico-intensivo-e-desfecho-cardiovascular-no-diabetes-tipo-2-accord-advance-e-vadt.md"
+      },
+      {
+        "id": "hipogli-investigar-nac",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Investigar neuropatia autonômica cardíaca (NAC) por testes padronizados de variação da frequência cardíaca em paciente diabético acima de 60 anos com outros fatores de risco cardiovascular, especialmente se houver microalbuminúria aumentada — NAC é preditor forte de isquemia silenciosa e eventos cardiovasculares subsequentes, e parece ser preditor melhor de eventos cardíacos maiores que a isquemia silenciosa isoladamente",
+        "origem_secao": "Neuropatia autonomica cardiaca (NAC) — definicao e relevancia / Rastreamento — hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes.md"
+      },
+      {
+        "id": "hipogli-mecanismo-qt",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerar que o prolongamento do QTc durante hipoglicemia (por efeito direto da glicose baixa no canal iônico hERG, hipopotassemia e liberação de catecolaminas) é achado consistente tanto em diabetes tipo 1 quanto tipo 2, e é forte preditor de mortalidade cardiovascular em diabetes tipo 2 — relevante ao avaliar o ECG de paciente com episódio de hipoglicemia recente",
+        "origem_secao": "Mecanismo do prolongamento de QT na hipoglicemia — hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes.md"
+      },
+      {
+        "id": "hipogli-dead-in-bed-dm1",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em paciente com diabetes tipo 1, orientar sobre o risco de hipoglicemia noturna grave despercebida — a síndrome de 'dead-in-bed' (morte inexplicada em leito não perturbado) tem como causa provável hipoglicemia noturna grave desencadeando distúrbio do ritmo cardíaco ou relacionada a neuropatia autonômica cardíaca; não há relatos significativos dessa síndrome em diabetes tipo 2",
+        "origem_secao": "Sindrome dead-in-bed — hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes.md"
+      },
+      {
+        "id": "hipogli-nao-generalizar-legado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não generalizar o excesso de mortalidade do ACCORD para qualquer controle glicêmico intensivo em qualquer paciente — o UKPDS 80, em diabetes recém-diagnosticado, mostrou benefício tardio (não dano) com controle intensivo sustentado desde o início da doença, mesmo depois de a diferença de HbA1c entre os grupos já ter desaparecido",
+        "origem_secao": "Armadilhas clínicas — controle-glicemico-intensivo-e-desfecho-cardiovascular-no-diabetes-tipo-2-accord-advance-e-vadt.md"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
