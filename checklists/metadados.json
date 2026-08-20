@@ -8424,5 +8424,267 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "conduta-inicial-na-cianose-central-com-suspeita-de-cardiopatia-congenita-critica-no-recem-nascido",
+    "condicao": "Conduta inicial na cianose central do recém-nascido com suspeita de cardiopatia congênita crítica",
+    "theme": "Cardiologia pediátrica",
+    "documento_origem": "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial",
+    "resumo": "Diferenciação de cianose central de acrocianose benigna, diagnóstico diferencial cardíaco/pulmonar/outras causas, uso do teste de hiperóxia e conduta inicial no recém-nascido com suspeita de cardiopatia ducto-dependente, incluindo indicação, dose e monitorização de prostaglandina E1.",
+    "itens": [
+      {
+        "id": "cianose-rn-diferenciar-periferica-central",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "O que é",
+        "texto": "Confirmada por oximetria de pulso a diferenciação entre cianose central (pele e mucosas, incluindo língua e lábios) e acrocianose periférica benigna das primeiras 24-48 horas de vida — a impressão visual isolada não é confiável, porque o recém-nascido policitêmico pode parecer cianótico com hipoxemia discreta e o anêmico pode não parecer cianótico mesmo com hipoxemia importante"
+      },
+      {
+        "id": "cianose-rn-diferencial-categorias",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "origem_secao": "Diagnóstico diferencial: cardíaco vs. pulmonar vs. outras causas",
+        "texto": "Investigação estruturada conduzida (exame físico direcionado, radiografia de tórax, gasometria, teste de hiperóxia, ecocardiograma) porque a história clínica isolada não diferencia cardiopatia congênita, doença pulmonar, erro inato do metabolismo e sepse — as quatro categorias podem se apresentar de forma semelhante no período neonatal"
+      },
+      {
+        "id": "cianose-rn-teste-hiperoxia",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "origem_secao": "Teste de hiperóxia",
+        "texto": "Quando o quadro não é evidente pelo exame e pela radiografia isoladamente: gasometria arterial em ar ambiente e após 10 minutos de O2 a 100% — PaO2 ≥100 mmHg sugere causa pulmonar/não cardíaca; PaO2 que permanece <100 mmHg sugere causa cardíaca (shunt anatômico fixo). Resultado não substitui o ecocardiograma; a variante de hiperóxia-hiperventilação não é usada por ser considerada técnica obsoleta pela fonte"
+      },
+      {
+        "id": "cianose-rn-estabilizacao-geral",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "origem_secao": "Conduta inicial diante de recém-nascido cianótico com suspeita cardíaca — item 1",
+        "texto": "Estabilização geral realizada: via aérea, acesso venoso, monitorização de SpO2 pré e pós-ductal, glicemia (hipoglicemia pode mimetizar ou agravar o quadro)"
+      },
+      {
+        "id": "cianose-rn-nao-postergar-o2",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "origem_secao": "Conduta inicial diante de recém-nascido cianótico com suspeita cardíaca — item 2",
+        "texto": "Oxigênio suplementar não postergado por medo teórico de fechar o canal em lesão ducto-dependente — corrigir hipoxemia grave vem primeiro na urgência; ajuste fino de FiO2 baixa é feito depois da estabilização inicial, idealmente com suporte de cardiologia pediátrica"
+      },
+      {
+        "id": "cianose-rn-pge1-indicacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Conduta inicial diante de recém-nascido cianótico com suspeita cardíaca — item 3",
+        "texto": "Se suspeita de cardiopatia ducto-dependente (cianose importante refratária a oxigênio, colapso circulatório com pulsos diminuídos, ou achado ecocardiográfico/pré-natal compatível): prostaglandina E1 (alprostadil) iniciada para manter/reabrir o canal arterial, sem esperar confirmação ecocardiográfica completa se a suspeita for forte e o paciente estiver instável — é ponte terapêutica, não tratamento da lesão de base"
+      },
+      {
+        "id": "cianose-rn-pge1-dose",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Prostaglandina E1 (alprostadil): uso, dose e efeitos adversos",
+        "texto": "Dose inicial usual de PGE1 conferida contra a literatura: 50-100 ng/kg/min (0,05-0,1 mcg/kg/min) IV contínua. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao regime de dose reduzida (~20,0±7,4 ng/kg/min inicial, manutenção ~10,5±5,3 ng/kg/min) descrito em estudo retrospectivo unicêntrico de 33 pacientes — não deve substituir a dose-padrão sem validação institucional"
+      },
+      {
+        "id": "cianose-rn-pge1-monitorizacao-respiratoria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Prostaglandina E1 (alprostadil) — Efeitos adversos",
+        "texto": "Monitorização respiratória contínua e via aérea/ventilação disponíveis à beira-leito durante toda a infusão de PGE1, com atenção redobrada em recém-nascido de baixo peso (<2,0 kg) — apneia relatada em 12% do total e em 42% dos lactentes <2,0 kg; transporte inter-hospitalar sem suporte ventilatório disponível não realizado nesse cenário"
+      },
+      {
+        "id": "cianose-rn-eco-diagnostico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Conduta inicial diante de recém-nascido cianótico com suspeita cardíaca — item 4",
+        "texto": "Ecocardiograma realizado assim que disponível, para confirmar o diagnóstico anatômico e orientar via de intervenção (cirurgia vs. cateterismo) e tempo até a intervenção"
+      }
+    ],
+    "source_refs": [
+      "Ossa Galvis MM, Bhakta RT, Tarmahomed A, Mendez MD. Cyanotic Heart Disease. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026 Jan-. NBK500001 (atualizado 26/06/2023) — usada para o protocolo do teste de hiperóxia e a lista de diagnóstico diferencial; declarada no documento de origem como fonte mais fraca que diretriz de sociedade.",
+      "Lewis AB, Freed MD, Heymann MA, Roehl SL, Kensey RC. Side effects of therapy with prostaglandin E1 in infants with critical congenital heart disease. Circulation. 1981;64(5):893-898. DOI: 10.1161/01.cir.64.5.893. PMID: 7285304 — série de 492 lactentes, usada para os efeitos adversos do PGE1.",
+      "Huang FK, Lin CC, Huang TC, et al. Reappraisal of the prostaglandin E1 dose for early newborns with patent ductus arteriosus-dependent pulmonary circulation. Pediatr Neonatol. 2013;54(2):102-106. DOI: 10.1016/j.pedneo.2012.10.007. PMID: 23590954 — estudo retrospectivo unicêntrico de dose reduzida de PGE1 (33 pacientes), citado no documento de origem como evidência de força menor que diretriz.",
+      "Lakshminrusimha S, Keszler M. Persistent Pulmonary Hypertension of the Newborn. NeoReviews. 2015;16(12):e680-e692. DOI: 10.1542/neo.16-12-e680. PMID: 26783388. PMCID: PMC4714607 — usada para declarar o teste de hiperóxia-hiperventilação como técnica obsoleta."
+    ],
+    "review_status": "revisado",
+    "revisao": "Itens derivados por extração do documento já verificado e publicado desta base (cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial.md), com a seção de origem registrada em cada item e nenhum dado numérico, dose ou corte introduzido além dos já citados e verificados nesse documento; onde a fonte do próprio documento já sinalizava evidência de menor força (dose reduzida de PGE1), a marcação VERIFICAÇÃO HUMANA NECESSÁRIA foi preservada em vez de resolvida por conta própria. Elaborado em tarefa de pesquisa/extração, sob a autorização contínua de publicação registrada em CLAUDE.md. Este checklist cita o responsável clínico do projeto, Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), mas NÃO carrega aval clínico individual dele sobre este checklist específico — a atestação não é presumida."
+  },
+  {
+    "slug": "triagem-neonatal-por-oximetria-de-pulso-algoritmo-passa-nao-passa",
+    "condicao": "Triagem neonatal universal de cardiopatia congênita crítica por oximetria de pulso",
+    "theme": "Cardiologia pediátrica",
+    "documento_origem": "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+    "resumo": "Protocolo de aplicação do algoritmo AAP/AHA/ACCF (atualização de 2020) de triagem universal por oximetria de pulso pré e pós-ductal em todo recém-nascido antes da alta da maternidade, com os critérios de passa/não passa, o que a triagem não substitui e suas limitações conhecidas.",
+    "itens": [
+      {
+        "id": "cch-oxim-momento",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "origem_secao": "Protocolo — algoritmo atualizado (AAP/AHA/ACCF, atualização de 2020)",
+        "texto": "Medida realizada após 24 horas de vida (ou o mais próximo possível da alta, se a alta for antes disso), com o recém-nascido calmo e membro aquecido — a taxa de falso-positivo é de 0,05% após 24h contra 0,50% antes de 24h (p=0,0017)"
+      },
+      {
+        "id": "cch-oxim-tecnica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Protocolo — item 1",
+        "texto": "SpO2 medida em mão direita (pré-ductal) e em um dos pés (pós-ductal)"
+      },
+      {
+        "id": "cch-oxim-passa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Protocolo — item 2 (Passa)",
+        "texto": "Resultado classificado como PASSA quando SpO2 ≥95% em AMBOS os membros (mão e pé) E diferença entre os dois valores ≤3 pontos percentuais — critério de 'ambos os membros' é o da atualização de 2020, mais rígido que o de 2011 ('qualquer um dos dois')"
+      },
+      {
+        "id": "cch-oxim-falha-direta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Protocolo — item 3 (Não passa)",
+        "texto": "Resultado classificado como falha direta, sem repetição, se SpO2 <90% em qualquer membro, em qualquer medida"
+      },
+      {
+        "id": "cch-oxim-repeticao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "origem_secao": "Protocolo — item 3",
+        "texto": "Caso intermediário (nem passa nem falha direta) reavaliado uma única vez (intervalo de cerca de 1 hora) antes de ser considerado falha — a atualização de 2020 reduziu o número de repetições de 2 para 1; pular essa etapa gera encaminhamento desnecessário ou, se a lógica for aplicada ao contrário, alta indevida"
+      },
+      {
+        "id": "cch-nao-passa-conduta",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "origem_secao": "Protocolo — item 4",
+        "texto": "Recém-nascido que não passa encaminhado para avaliação clínica completa e ecocardiograma, sem receber alta até a causa ser esclarecida"
+      },
+      {
+        "id": "cch-nao-substitui-exame-fisico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "O que a triagem NÃO substitui",
+        "texto": "Exame físico neonatal completo (palpação de pulsos em quatro membros, ausculta cardíaca cuidadosa) mantido independentemente do resultado da triagem — a oximetria não detecta lesões que não causam hipoxemia relevante (ex.: muitas CIV isoladas, estenose aórtica leve a moderada, coarctação sem componente ducto-dependente grave); suspeita clínica (desconforto respiratório, sopro relevante, pulsos assimétricos, história familiar) investigada independentemente do resultado"
+      },
+      {
+        "id": "cch-limitacao-sensibilidade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "Desempenho do teste",
+        "texto": "Resultado 'passa' não tratado como equivalente a 'sem cardiopatia congênita' — sensibilidade global de 76,5% (IC95% 67,7-83,5%) na metanálise de 13 estudos/229.421 recém-nascidos; especificidade global 99,9% (IC95% 99,7-99,9%)"
+      },
+      {
+        "id": "cch-populacao-altitude",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "Populações especiais e limitações conhecidas",
+        "texto": "Em altitude elevada, a saturação de referência em recém-nascidos saudáveis é mais baixa e o corte de 95% pode gerar excesso de falsos positivos; VERIFICAÇÃO HUMANA NECESSÁRIA quanto a um corte alternativo validado para essa população, que a atualização de 2020 ainda não estabelece de forma ampla"
+      }
+    ],
+    "source_refs": [
+      "Kemper AR, Mahle WT, Martin GR, et al. Strategies for implementing screening for critical congenital heart disease. Pediatrics. 2011;128(5):e1259-e1267. DOI: 10.1542/peds.2011-1317. PMID: 21987707 — algoritmo original endossado por AAP/AHA/ACCF.",
+      "Martin GR, Ewer AK, Gaviglio A, et al. Updated Strategies for Pulse Oximetry Screening for Critical Congenital Heart Disease. Pediatrics. 2020;146(1):e20191650. DOI: 10.1542/peds.2019-1650. PMID: 32499387 — atualização de 2020 do algoritmo (critério 'ambos os membros' e redução de 2 para 1 repetição).",
+      "Thangaratinam S, Brown K, Zamora J, Khan KS, Ewer AK. Pulse oximetry screening for critical congenital heart defects in asymptomatic newborn babies: a systematic review and meta-analysis. Lancet. 2012;379(9835):2459-2464. DOI: 10.1016/S0140-6736(12)60107-X. PMID: 22554860 — metanálise de 13 estudos/229.421 recém-nascidos, sensibilidade e especificidade globais.",
+      "de-Wahl Granelli A, Mellander M, Sunnegårdh J, Sandberg K, Ostman-Smith I. Screening for duct-dependant congenital heart disease with pulse oximetry: a critical evaluation of strategies to maximize sensitivity. Acta Paediatr. 2005;94(11):1590-1596. DOI: 10.1111/j.1651-2227.2005.tb01834.x. PMID: 16381094 — origem do critério mão-pé.",
+      "de-Wahl Granelli A, Meberg A, Ojala T, Steensberg J, Oskarsson G, Mellander M. Nordic pulse oximetry screening--implementation status and proposal for uniform guidelines. Acta Paediatr. 2014;103(11):1136-1142. DOI: 10.1111/apa.12758. PMID: 25060211. PMCID: PMC4480652 — dados de implementação heterogênea nas maternidades nórdicas."
+    ],
+    "review_status": "revisado",
+    "revisao": "Itens derivados por extração do documento já verificado e publicado desta base (triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso.md), com a seção de origem registrada em cada item e nenhum corte numérico, sensibilidade ou especificidade introduzido além dos já citados e verificados nesse documento. Elaborado em tarefa de pesquisa/extração, sob a autorização contínua de publicação registrada em CLAUDE.md. Este checklist cita o responsável clínico do projeto, Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), mas NÃO carrega aval clínico individual dele sobre este checklist específico — a atestação não é presumida."
+  },
+  {
+    "slug": "elegibilidade-esportiva-na-crianca-e-no-adolescente-com-cardiopatia-congenita-por-lesao",
+    "condicao": "Elegibilidade esportiva na criança e no adolescente com cardiopatia congênita já diagnosticada, por lesão e por parâmetro hemodinâmico/elétrico/funcional",
+    "theme": "Cardiologia pediátrica",
+    "documento_origem": "avaliacao-cardiologica-e-prescricao-de-exercicio-na-crianca-com-cardiopatia-congenita-elegibilidade-esportiva-por-lesao",
+    "resumo": "Avaliação de risco multiparamétrica (hemodinâmica, eletrofisiológica e funcional) e prescrição de exercício por lesão/complexidade na criança e no adolescente com cardiopatia congênita já diagnosticada — shunts simples, obstrução de VSVE/VSVD, coarctação, fisiologia de Glenn/Fontan, cianose com shunt direito-esquerdo, e paciente com CDI/marca-passo, a partir da síntese italiana de 2026 que integra ESC/AEPC 2020 e AHA/ACC Task Force 4 de 2015.",
+    "itens": [
+      {
+        "id": "elegib-cc-nao-e-triagem-populacao-geral",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "O que é, e por que é uma pergunta diferente da triagem pré-participação da população geral",
+        "texto": "Confirmado que este roteiro se aplica à criança/adolescente com cardiopatia congênita JÁ DIAGNOSTICADA (operada, paliada ou ainda não corrigida) — pergunta diferente da triagem pré-participação esportiva em população geral assintomática, tratada em documento à parte desta plataforma; aqui a doença já é conhecida e a pergunta é quanto e que tipo de exercício é seguro"
+      },
+      {
+        "id": "elegib-cc-tres-eixos-avaliacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Os três eixos da avaliação de risco",
+        "texto": "Avaliação de risco multiparamétrica completa realizada antes da prescrição de exercício em cardiopatia congênita complexa, cobrindo os três eixos: hemodinâmico (saturação de O2, função ventricular, pressão pulmonar, anormalidades valvares/da aorta, razão Qp/Qs), eletrofisiológico (carga e tipo de arritmia, competência cronotrópica, alterações de ST-T) e funcional (teste cardiopulmonar de exercício — TCPE)"
+      },
+      {
+        "id": "elegib-cc-arritmia-antes-ablacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Os três eixos da avaliação de risco",
+        "texto": "Em paciente com arritmia não controlada: ablação por cateter realizada ANTES de prescrever exercício"
+      },
+      {
+        "id": "elegib-cc-shunt-simples",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Recomendações práticas por lesão/complexidade — Shunts simples (CIA, CIV, persistência do canal arterial)",
+        "texto": "Shunt simples sem repercussão hemodinâmica/complicações: qualquer atividade física, incluindo esporte competitivo, à escolha do paciente, com reavaliações periódicas; com repercussão hemodinâmica significativa aguardando correção: 2-3 sessões/semana, até 20 minutos, intensidade baixa"
+      },
+      {
+        "id": "elegib-cc-vsve-obstrucao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Obstrução da via de saída do ventrículo esquerdo (VSVE)",
+        "texto": "Obstrução de VSVE graduada pelo gradiente médio — leve: atividade dinâmica sem restrição; moderada (20-40 mmHg), sem alteração de ST-T/arritmia ventricular/resposta pressórica anormal: atividade aeróbica baixa a moderada; grave (>40 mmHg): apenas atividade de baixa intensidade"
+      },
+      {
+        "id": "elegib-cc-vsvd-obstrucao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Obstrução da via de saída do ventrículo direito (VSVD)",
+        "texto": "Obstrução de VSVD graduada pelo gradiente Doppler de pico — leve (<30 mmHg), função normal e sem arritmia: sem restrição; moderada (30-50 mmHg) com função preservada: atividade aeróbica leve a moderada; grave (>50 mmHg) com hipertrofia de VD ou arritmia ventricular não sustentada: treinamento dinâmico de baixa intensidade, como parte de reabilitação"
+      },
+      {
+        "id": "elegib-cc-coartacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Coarctação de aorta (nativa ou operada)",
+        "texto": "Sem repercussão (gradiente braço-perna <20 mmHg, sem refluxo diastólico ao Doppler, PA normal em repouso e no exercício, sem aneurisma/colateral maior): exercício dinâmico de intensidade baixa a moderada; com repercussão (gradiente >20 mmHg, resposta hipertensiva, hipertrofia de VE ou dilatação aórtica): apenas exercício dinâmico de baixa intensidade"
+      },
+      {
+        "id": "elegib-cc-glenn-fontan",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Fisiologia univentricular — Glenn e Fontan (Tabela 9 da fonte)",
+        "texto": "Paliação de Glenn assintomática, com saturação >80% em repouso e >70% ao esforço, boa função contrátil, sem IC/arritmia: atividade dinâmica baixa a moderada, 2-3 sessões/semana, até 20 minutos; após Fontan completo, com saturação >90% em repouso e no esforço, boa função ventricular e sem arritmia/IC: exercício misto (aeróbico e resistido leve) baixo a moderado, 2-3 sessões/semana, até 15 minutos"
+      },
+      {
+        "id": "elegib-cc-cianose-shunt-dir-esq",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Cianose e shunt direito-esquerdo",
+        "texto": "Enquanto a saturação durante o exercício permanecer >90%, intensidade do treino ajustada conforme sintomas; abaixo desse limiar, duração e intensidade restritas a atividade de baixo nível, guiada por sintomas"
+      },
+      {
+        "id": "elegib-cc-cdi-marcapasso",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Dispositivos — cardiodesfibrilador implantável (CDI) e marca-passo",
+        "texto": "Em paciente com CDI, frequência cardíaca durante o exercício mantida pelo menos 10-15 bpm abaixo do limiar de detecção programado do dispositivo, para evitar choques inapropriados; em paciente com isquemia documentada, intensidade do treino mantida pelo menos 10 bpm abaixo do limiar isquêmico identificado por TCPE ou imagem de estresse"
+      },
+      {
+        "id": "elegib-cc-contraindicacoes-transversais",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Contraindicações que atravessam qualquer lesão específica",
+        "texto": "Independentemente da lesão de base, checado se o paciente tem arritmia não controlada, disfunção ventricular significativa, obstrução grave de via de saída, dilatação aórtica acentuada ou retinopatia — qualquer um desses achados contraindica exercício de alta intensidade ou isométrico"
+      },
+      {
+        "id": "elegib-cc-meta-geral-atividade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "Meta geral de atividade física, e evidência de segurança",
+        "texto": "Fora das restrições específicas por lesão, paciente orientado a realizar pelo menos 150 minutos de atividade aeróbica de intensidade moderada por semana, ou 75 minutos de exercício vigoroso, ou combinação das duas — mesma meta da população geral, adaptada à condição de base. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à generalização direta dos cortes numéricos por lesão listados neste checklist: os próprios autores da síntese que os origina reconhecem que dados de ensaios de grande escala ainda são limitados, e a decisão final permanece clínica e individualizada, apoiada em TCPE sempre que disponível"
+      }
+    ],
+    "source_refs": [
+      "Sarubbi B, Marzullo R, Cammarano M, Abbate M, Orlando A, Turchetta A, Zeppilli P; Italian Federation of Sports Medicine, Italian Society of Sports Cardiology. Empowering congenital heart disease treatment: Physical activity prescription. The Italian proposal. Int J Cardiol Congenit Heart Dis. 2026;24:100668. DOI: 10.1016/j.ijcchd.2026.100668. PMID: 41939942. PMCID: PMC13050086 — fonte primária dos três eixos de avaliação e de todos os cortes numéricos por lesão (gradientes de VSVE/VSVD, saturação em Glenn/Fontan, gradiente de coartação, limiar de frequência cardíaca abaixo do gatilho do CDI).",
+      "Budts W, Pieles GE, Roos-Hesselink JW, et al. Recommendations for participation in competitive sport in adolescent and adult athletes with Congenital Heart Disease (CHD): position statement of the Sports Cardiology & Exercise Section of the EAPC, the ESC Working Group on Adult Congenital Heart Disease and the AEPC. Eur Heart J. 2020;41(43):4191-4199. DOI: 10.1093/eurheartj/ehaa501. PMID: 32845299 — citada no documento de origem para a mudança de paradigma de avaliação por lesão anatômica para avaliação por parâmetros hemodinâmicos/eletrofisiológicos/funcionais (abstract indexado); os cortes numéricos por lesão deste checklist vêm de Sarubbi et al. 2026, que declara integrar esta diretriz.",
+      "Van Hare GF, Ackerman MJ, Evangelista JA, et al. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 4: Congenital Heart Disease. Circulation. 2015;132(22):e281-e291. DOI: 10.1161/CIR.0000000000000240. PMID: 26621645 — citada no documento de origem apenas como uma das duas diretrizes que a fonte aberta (Sarubbi et al. 2026) declara integrar; nenhum número extraído diretamente desta fonte.",
+      "Gosbell SE, Ayer JG, Lubans DR, Coombes JS, Maiorana A, Morris NR, Tran DL, Cordina RL. Strategies to Overcome Barriers to Physical Activity Participation in Children and Adults Living With Congenital Heart Disease: A Narrative Review. CJC Pediatr Congenit Heart Dis. 2024;3(4):165-177. DOI: 10.1016/j.cjcpc.2024.05.002. PMID: 39493665. PMCID: PMC11524957 — usada para a evidência de segurança do exercício em nível submáximo."
+    ],
+    "review_status": "revisado",
+    "revisao": "Itens derivados por extração do documento já verificado e publicado desta base (avaliacao-cardiologica-e-prescricao-de-exercicio-na-crianca-com-cardiopatia-congenita-elegibilidade-esportiva-por-lesao.md), com a seção de origem registrada em cada item; nenhum corte numérico de gradiente, saturação ou frequência cardíaca foi introduzido além dos já citados e verificados nesse documento. A ressalva do próprio documento de origem sobre a limitação da base de evidência (ausência de ensaios de grande escala dedicados a esses cortes) foi preservada como VERIFICAÇÃO HUMANA NECESSÁRIA no item de meta geral, em vez de apresentada como corte definitivo. Itens marcados obrigatorio:false dependem da lesão/dispositivo específico do paciente, não se aplicam a toda criança com cardiopatia congênita. Elaborado em tarefa de pesquisa/extração, sob a autorização contínua de publicação registrada em CLAUDE.md. Este checklist cita o responsável clínico do projeto, Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), mas NÃO carrega aval clínico individual dele sobre este checklist específico — a atestação não é presumida."
   }
 ]
