@@ -5543,5 +5543,234 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "avaliacao-e-manejo-agudo-de-taquicardia-supraventricular-paroxistica-na-emergencia",
+    "condicao": "Avaliação e manejo agudo de taquicardia supraventricular paroxística (TSVP) na emergência",
+    "resumo": "Checklist do atendimento agudo à taquicardia regular de QRS estreito na emergência, seguindo o algoritmo da ESC 2019: a estabilidade hemodinâmica decide entre cardioversão imediata e manobra vagal, o ECG basal decide sobre a segurança da adenosina, e a fibrilação atrial pré-excitada exige conduta própria pelo risco de fibrilação ventricular com bloqueadores do nó AV.",
+    "documento_origem": "fluxograma-taquicardia-supraventricular-qrs-estreito-esc-2019",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "2019 ESC Guidelines for the management of patients with supraventricular tachycardia · European Heart Journal · 2020 · 41(5):655-720 · https://academic.oup.com/eurheartj/article/41/5/655/5556821",
+      "ESC Guidelines for Management of Supraventricular Tachycardia: Key Points · American College of Cardiology · 2019 · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2019/09/10/12/36/2019-ESC-Guidelines-for-Supraventricular-Tachycardia"
+    ],
+    "itens": [
+      {
+        "id": "tsvp-instabilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estabilidade hemodinâmica avaliada primeiro — hipotensão, alteração aguda do estado mental, dor torácica, sinais de IC aguda ou choque — antes de qualquer manobra ou droga",
+        "origem_secao": "Árvore de decisão: Taquicardia regular de QRS estreito"
+      },
+      {
+        "id": "tsvp-cardioversao-instavel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se instável: cardioversão elétrica sincronizada imediata (Classe I, nível B), sem aguardar manobra vagal ou droga",
+        "origem_secao": "Árvore de decisão: Taquicardia regular de QRS estreito"
+      },
+      {
+        "id": "tsvp-manobra-vagal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se estável: manobra vagal tentada primeiro, preferencialmente em decúbito dorsal com elevação das pernas (Classe I, nível B)",
+        "origem_secao": "Árvore de decisão: Taquicardia regular de QRS estreito"
+      },
+      {
+        "id": "tsvp-ecg-pre-excitacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG basal revisado à procura de pré-excitação (padrão de Wolff-Parkinson-White) — se a taquicardia atual for irregular com via acessória manifesta, qualquer bloqueador do nó AV (adenosina, verapamil, diltiazem, betabloqueador, digoxina) deve ser evitado, pelo risco de acelerar a condução pela via acessória e precipitar fibrilação ventricular",
+        "origem_secao": "Por que a fibrilação atrial pré-excitada tem árvore própria"
+      },
+      {
+        "id": "tsvp-asma-grave",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Investigada presença de asma brônquica grave — se presente, verapamil ou diltiazem IV é mais apropriado que adenosina (Classe IIa, nível B)",
+        "origem_secao": "Por que a asma grave entra antes da adenosina"
+      },
+      {
+        "id": "tsvp-contraindicacoes-farmacos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Verapamil/diltiazem evitados em hipotensão, IC com FE reduzida (<40%) ou suspeita de taquicardia ventricular; betabloqueador IV evitado na IC descompensada — ressalvas que valem em qualquer ponto da árvore em que esses fármacos apareçam",
+        "origem_secao": "Por que a asma grave entra antes da adenosina"
+      },
+      {
+        "id": "tsvp-dose-adenosina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Adenosina administrada em bolus IV rápido, dose escalonada: 6 mg inicial; se não reverter, 12 mg; considerar 18 mg se ainda ineficaz — repetição segura já a partir de 1 minuto, pela meia-vida plasmática curtíssima",
+        "origem_secao": "Por que a adenosina tem faixa de dose, não dose fixa"
+      },
+      {
+        "id": "tsvp-amiodarona-contraindicada-fa-pre-excitada",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Amiodarona endovenosa não utilizada em fibrilação atrial pré-excitada — a condução pela via acessória pode ser maior do que se pensava, com relatos de precipitação de fibrilação ventricular",
+        "origem_secao": "Árvore de decisão: Fibrilação atrial pré-excitada (suspeita de via acessória / WPW)"
+      },
+      {
+        "id": "tsvp-mecanismo-pos-reversao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Após reversão ou controle: mecanismo da taquicardia investigado e tratamento definitivo (geralmente ablação por cateter) planejado — o diagnóstico diferencial entre AVNRT, TRAV ortodrômica e taquicardia atrial não muda a conduta aguda, só a decisão de tratamento definitivo",
+        "origem_secao": "O que a árvore não mostra"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "investigacao-de-extrassistole-ventricular-frequente-ao-holter",
+    "condicao": "Investigação de extrassístole ventricular (PVC) frequente ao Holter e risco de cardiomiopatia induzida",
+    "resumo": "Checklist para decidir, diante de PVC frequente achada ao Holter de 24h, quando investigar disfunção de VE e considerar ablação em vez de apenas tranquilizar o paciente — a partir do corte de carga de 24% (Baman 2010) e do fator de risco adicional da PVC interpolada (Olgun 2011).",
+    "documento_origem": "extrassistole-ventricular-frequente-e-cardiomiopatia-induzida-carga-que-preve-disfuncao",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baman TS, Lange DC, Ilg KJ, Gupta SK, Liu TY, Alguire C, Armstrong W, Good E, Chugh A, Jongnarangsin K, Pelosi F Jr, Crawford T, Ebinger M, Oral H, Morady F, Bogun F. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. DOI: 10.1016/j.hrthm.2010.03.036. PMID: 20348027 — 174 pacientes consecutivos encaminhados para ablação de PVC idiopática frequente",
+      "Olgun H, Yokokawa M, Baman T, Kim HM, Armstrong W, Good E, Chugh A, Pelosi F Jr, Crawford T, Oral H, Morady F, Bogun F. The role of interpolation in PVC-induced cardiomyopathy. Heart Rhythm. 2011;8(7):1046-1049. DOI: 10.1016/j.hrthm.2011.02.034. PMID: 21376837 — mesmo grupo, fator de risco adicional independente da carga"
+    ],
+    "itens": [
+      {
+        "id": "pvc-holter-carga-medida",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Holter de 24 horas realizado com carga percentual de PVC calculada, e função de VE avaliada por ecocardiograma transtorácico",
+        "origem_secao": "O estudo que estabelece o corte"
+      },
+      {
+        "id": "pvc-corte-24-porcento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Carga de PVC no Holter comparada ao corte de >24% — valor que melhor separou função de VE preservada de comprometida na coorte de 174 pacientes (sensibilidade 79%, especificidade 78%, área sob a curva 0,89)",
+        "origem_secao": "O estudo que estabelece o corte"
+      },
+      {
+        "id": "pvc-investigacao-ativa-acima-do-corte",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigação ativa de disfunção de VE e consideração de ablação acionadas mesmo sem sintoma quando a carga de PVC no Holter de 24h ultrapassa 24%",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "pvc-nao-assumir-seguro-abaixo-do-corte",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Lembrado que cardiomiopatia reversível já foi documentada com carga a partir de 10% — carga abaixo de 24% não é assumida como sempre segura; o corte é o de melhor discriminação estatística, não o piso de risco zero",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "pvc-padrao-interpolacao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Padrão de acoplamento da extrassístole registrado — PVC interpolada (inserida entre dois batimentos sinusais, sem pausa compensatória) é fator de risco adicional para cardiomiopatia induzida, independente da carga isolada",
+        "origem_secao": "O segundo fator, do mesmo grupo — não é só a carga"
+      },
+      {
+        "id": "pvc-orientacao-reversibilidade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que cardiomiopatia induzida por PVC tende a melhorar com supressão da extrassístole, ao contrário de cardiomiopatia de outra etiologia — argumento a favor de encaminhar para ablação",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "pvc-nao-tranquilizar-sem-medir-carga",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe orientada a não tranquilizar o paciente com PVC frequente sem antes medir a carga no Holter — o corte de 24% é o dado que falta na maioria das consultas",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "pvc-diferenciar-de-wpw",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diferenciado deste cenário (extrassístole isolada, sem WPW nem cardiopatia estrutural prévia) o caso de WPW associado a extrassístole e cardiomiopatia induzida, coberto em documento separado — ali o mecanismo envolve também a via acessória, não só a carga de PVC",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "manejo-agudo-de-bradiarritmia-sintomatica-antes-do-marcapasso-definitivo",
+    "condicao": "Manejo agudo de bradiarritmia sintomática, antes da indicação de marca-passo definitivo",
+    "resumo": "Checklist da estabilização imediata da bradicardia sintomática: o padrão eletrocardiográfico decide se vale tentar atropina, e a resposta ao tratamento decide entre marca-passo transcutâneo, droga cronotrópica em infusão e marca-passo transvenoso temporário — cobre só a fase aguda, sem incluir a indicação de marca-passo definitivo, que é decisão à parte em outro documento (Dispositivos).",
+    "documento_origem": "fluxograma-bradicardia-sintomatica-manejo-agudo",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Second-Degree Atrioventricular Block · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK482359/",
+      "Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/",
+      "Adult Bradycardia With a Pulse Algorithm · American Heart Association, atualização 2020 · https://cpr.heart.org/-/media/cpr-files/cpr-guidelines-files/algorithms/algorithmacls_bradycardia_200612.pdf — PDF original não extraível em texto; conteúdo (sinais de instabilidade, dose de atropina, marca-passo transcutâneo, dopamina 5-20mcg/kg/min, adrenalina 2-10mcg/min) conferido via resumo em ACLS-Algorithms.com em 03/08/2026",
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy · European Heart Journal · 2021 · 42(35):3427-3520 · DOI: 10.1093/eurheartj/ehab364 · PMID: 34455430"
+    ],
+    "itens": [
+      {
+        "id": "brady-instabilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais de instabilidade checados — hipotensão, alteração aguda de consciência, sinais de choque, isquemia miocárdica ou congestão aguda — antes de decidir tratamento imediato da frequência",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "brady-sem-tratamento-se-estavel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se sem instabilidade: sem tratamento imediato da frequência — monitorização contínua, investigação e tratamento da causa, reavaliação",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "brady-ecg-infra-nodal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG revisado à procura de bloqueio infra-nodal (Mobitz II, BAV 2:1 infra-hissiano ou BAVT com QRS largo) antes de tentar atropina — nesses padrões a atropina é provavelmente ineficaz",
+        "origem_secao": "Por que o ECG decide antes da atropina"
+      },
+      {
+        "id": "brady-marcapasso-transcutaneo-infra-nodal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se bloqueio infra-nodal identificado: marca-passo transcutâneo imediato, sem aguardar resposta a droga",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "brady-dose-atropina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se bloqueio provavelmente nodal/supra-hissiano: atropina 0,5-1mg IV, repetida a cada 3-5min até 3mg",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "brady-refratario-atropina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Refratário à atropina: marca-passo transcutâneo e/ou dopamina 5-20mcg/kg/min ou adrenalina 2-10mcg/min em infusão, como ponte até marca-passo transvenoso temporário",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "brady-causa-reversivel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Causa reversível buscada e tratada em paralelo à estabilização — fármaco (betabloqueador, bloqueador de canal de cálcio, digoxina), distúrbio eletrolítico, isquemia miocárdica ativa e hipóxia são as causas mais comuns",
+        "origem_secao": "O que se repete em todo ramo, fora da árvore"
+      },
+      {
+        "id": "brady-cautela-atropina-isquemia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Cautela com atropina em isquemia coronariana ativa — dose total limitada a 2-3mg, pelo aumento do consumo miocárdico de oxigênio induzido pela elevação da frequência cardíaca",
+        "origem_secao": "O que se repete em todo ramo, fora da árvore"
+      },
+      {
+        "id": "brady-marcapasso-definitivo-a-parte",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Indicação de marca-passo definitivo avaliada à parte, em documento dedicado (tema Dispositivos), independente da fase aguda já estabilizada — este checklist cobre só a estabilização imediata",
+        "origem_secao": "O que este fluxograma não cobre"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem citado em source_refs."
   }
 ]
