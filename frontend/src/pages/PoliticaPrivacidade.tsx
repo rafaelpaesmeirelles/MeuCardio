@@ -5,7 +5,7 @@ export default function PoliticaPrivacidade() {
   return (
     <main className="legal-page" id="conteudo-principal">
       <header>
-        <Link to="/" aria-label="Voltar ao Corvia"><img src="/corvia-logo-compacta.png" alt="Corvia" /></Link>
+        <Link to="/" aria-label="Voltar ao Corvia"><img src="/corvia-logo-canonical.svg" alt="Corvia" /></Link>
         <p className="eyebrow">Transparência e controle</p>
         <h1>Política de Privacidade — localização e mapas</h1>
         <p>Última atualização: 5 de agosto de 2026.</p>

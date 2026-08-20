@@ -756,8 +756,9 @@ type AssinaturaEmail = {
 };
 
 /** Rodapé visual anexado a todo e-mail enviado pelo CorvIA Mail. Com A1,
- * Google/Microsoft/Yahoo/iCloud também usam S/MIME; a caixa nativa fica
- * bloqueada para nunca degradar silenciosamente para envio sem assinatura. */
+ * Google/Microsoft/Yahoo/iCloud também podem usar S/MIME. A caixa nativa
+ * continua apta a transportar PDFs clínicos já assinados por PAdES; S/MIME
+ * é uma camada adicional do envelope quando o transporte é compatível. */
 function PreferenciaAssinaturaEmail({ revisaoCertificado }: { revisaoCertificado: number }) {
   const [dados, setDados] = useState<AssinaturaEmail | null>(null);
   const [salvando, setSalvando] = useState(false);
@@ -807,7 +808,7 @@ function PreferenciaAssinaturaEmail({ revisaoCertificado }: { revisaoCertificado
       </label>
       <p style={{ margin: "0.35rem 0 0", fontSize: "0.8rem", color: dados.assinatura_digital_ativa ? "var(--sucesso)" : "var(--texto-secundario)" }}>
         {dados.assinatura_digital_ativa
-          ? "S/MIME ativo para este usuário. Google, Microsoft, Yahoo e iCloud enviam assinados; a caixa nativa é bloqueada para não enviar sem assinatura."
+          ? "S/MIME ativo quando o transporte é compatível. PDFs clínicos mantêm sua assinatura PAdES independentemente do provedor de e-mail."
           : dados.assinatura_digital_disponivel
             ? "Certificado S/MIME disponível. Ative a opção acima se desejar assinar os e-mails."
             : dados.assinatura_digital_motivo || "Conecte um certificado A1 para disponibilizar S/MIME."}
@@ -1156,7 +1157,7 @@ export default function MinhaConta() {
         </div>
       )}
 
-      <div style={{ display: "grid", gap: "1rem", maxWidth: 560 }}>
+      <div className="conta__grid">
         <RevisarTour />
         <Foto
           perfil={perfil}

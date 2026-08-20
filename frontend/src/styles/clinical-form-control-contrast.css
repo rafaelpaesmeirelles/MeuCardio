@@ -137,3 +137,25 @@
 #root .login input[type="radio"] {
   -webkit-text-fill-color: initial !important;
 }
+
+
+/* Product stabilization 2026-08-20: prescription and form controls must remain legible. */
+.clinical-os input:not([type="checkbox"]):not([type="radio"]),
+.clinical-os select,
+.clinical-os textarea { width:100%; min-width:0; box-sizing:border-box; }
+.clinical-os .grade > *, .clinical-os [class*="grid"] > * { min-width:0; }
+.clinical-os .prescricao-selecao {
+  background:linear-gradient(145deg,#0d2534,#0a1b28)!important;
+  border:1px solid rgba(94,205,218,.28)!important;
+  color:#eaf8fb!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.14);
+}
+.clinical-os .prescricao-selecao strong,
+.clinical-os .prescricao-selecao b,
+.clinical-os .prescricao-selecao h2,
+.clinical-os .prescricao-selecao h3 { color:#f4fdff!important; }
+.clinical-os .prescricao-selecao small,
+.clinical-os .prescricao-selecao p,
+.clinical-os .prescricao-selecao span { color:#a9c7d0!important; }
+.clinical-os .prescricao-selecao .botao,
+.clinical-os .prescricao-selecao button { color:#dffbfe!important; }

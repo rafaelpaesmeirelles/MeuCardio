@@ -38,8 +38,7 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
-  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
-  { to: "/caixa-de-email", label: "Caixa de e-mail", icon: "mail" },
+    { to: "/caixa-de-email", label: "CorVIA Mail", icon: "mail" },
   { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/telediagnostico", label: "Telediagnóstico", icon: "evidencia" },
 ];
@@ -56,7 +55,6 @@ const FERRAMENTAS: LinkItem[] = [
 const REDE: LinkItem[] = [
   { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
-  { to: "/corvia-mail", label: "Comunicação", icon: "mail" },
   { to: "/telediagnostico", label: "Consultoria", icon: "evidencia" },
 ];
 

@@ -40,8 +40,7 @@ const TRABALHO_ASSISTENCIA: NavItem[] = [
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
   { to: "/agenda", label: "Agenda", icon: "agenda" },
-  { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
-  { to: "/caixa-de-email", label: "Caixa de e-mail", icon: "mail" },
+    { to: "/caixa-de-email", label: "CorVIA Mail", icon: "mail" },
   { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/telediagnostico", label: "Telediagnóstico & Consultoria", icon: "evidencia" },
 ];
@@ -58,7 +57,6 @@ const FERRAMENTAS_PRODUTIVIDADE: NavItem[] = [
 const REDE_CONECTIVIDADE: NavItem[] = [
   { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
-  { to: "/corvia-mail", label: "Comunicação profissional", icon: "mail" },
   { to: "/telediagnostico", label: "Colaboração / Consultoria", icon: "evidencia" },
 ];
 
