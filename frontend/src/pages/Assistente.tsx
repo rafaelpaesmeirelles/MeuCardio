@@ -140,12 +140,18 @@ export default function Assistente() {
   // pesquisa web do Claude é uma etapa aprofundada e opcional ali, mas é o
   // recurso central do modo Pessoal — por isso nasce ligada nesse modo.
   const [usarInternet, setUsarInternet] = useState(false);
-  const fim = useRef<HTMLDivElement>(null);
+  const conversaRef = useRef<HTMLDivElement>(null);
+  const requisicaoRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     api.get<Status>("/ai/status").then(setStatus).catch(() => setStatus(null));
   }, []);
-  useEffect(() => { fim.current?.scrollIntoView({ behavior: "smooth" }); }, [mensagens, pensando]);
+  useEffect(() => {
+    const caixa = conversaRef.current;
+    if (!caixa) return;
+    caixa.scrollTo({ top: caixa.scrollHeight, behavior: pensando ? "auto" : "smooth" });
+  }, [mensagens, pensando]);
+  useEffect(() => () => requisicaoRef.current?.abort(), []);
 
   const recarregarHistorico = (m: Modo) =>
     api.get<ConversaResumo[]>(`/ai/conversas?modo=${m}`).then(setHistorico).catch(() => {});
@@ -205,6 +211,8 @@ export default function Assistente() {
     setMensagens((m) => [...m, { papel: "user", conteudo: texto }, { papel: "assistant", conteudo: "" }]);
     setPensando(true);
     setEtapa(modo === "clinica" ? "Preparando a consulta clínica…" : "Preparando a resposta…");
+    const controlador = new AbortController();
+    requisicaoRef.current = controlador;
     // Sinaliza para main.tsx que um streaming está em andamento: se o
     // service worker trocar de versão nesse meio-tempo, a recarga da página
     // fica pendente em vez de cortar a resposta no meio (ver main.tsx).
@@ -247,16 +255,25 @@ export default function Assistente() {
           setErro(evento.detalhe ?? "Não foi possível consultar o assistente.");
           setMensagens((m) => m.slice(0, -1));
         }
-      });
+      }, controlador.signal);
     } catch (e) {
       setMensagens((m) => m.slice(0, -1));
-      setErro(e instanceof Error ? e.message : "Não foi possível consultar o assistente.");
+      setErro(
+        e instanceof DOMException && e.name === "AbortError"
+          ? "Espera interrompida. Se o comando criava ou alterava algo, confira a Agenda antes de repetir."
+          : e instanceof Error ? e.message : "Não foi possível consultar o assistente."
+      );
     } finally {
+      if (requisicaoRef.current === controlador) requisicaoRef.current = null;
       setPensando(false);
       setEtapa("");
       (window as unknown as { __streamAtivo?: boolean }).__streamAtivo = false;
       (window as unknown as { __streamEncerrado?: () => void }).__streamEncerrado?.();
     }
+  }
+
+  function cancelarEspera() {
+    requisicaoRef.current?.abort();
   }
 
   if (!status) return <Carregando />;
@@ -389,7 +406,7 @@ export default function Assistente() {
         </div>
       )}
 
-      <div className="ia__conversa">
+      <div className="ia__conversa" ref={conversaRef}>
         {mensagens.length === 0 && (
           <div className="ia__abertura">
             {modo === "clinica" ? (
@@ -476,7 +493,6 @@ export default function Assistente() {
             )}
           </div>
         ))}
-        <div ref={fim} />
       </div>
 
       {erro && <p className="ia__erro" role="alert">{erro}</p>}
@@ -494,8 +510,12 @@ export default function Assistente() {
             : "Pergunte sobre sua agenda, e-mail ou qualquer tema do dia a dia…"}
           aria-label="Pergunta"
         />
-        <button className="botao" onClick={enviar} disabled={!pergunta.trim() || pensando}>
-          Enviar
+        <button
+          className={`botao${pensando ? " ia__cancelar" : ""}`}
+          onClick={pensando ? cancelarEspera : enviar}
+          disabled={!pensando && !pergunta.trim()}
+        >
+          {pensando ? "Cancelar" : "Enviar"}
         </button>
       </div>
       <p className="ia__rodape">

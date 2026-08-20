@@ -195,12 +195,18 @@ export const api = {
     return res.blob();
   },
 
-  async stream(p: string, body: unknown, aoReceberEvento: (evento: any) => void): Promise<void> {
+  async stream(
+    p: string,
+    body: unknown,
+    aoReceberEvento: (evento: any) => void,
+    signal?: AbortSignal,
+  ): Promise<void> {
     const res = await fetch(`${BASE}${p}`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
+      signal,
     });
     if (res.status === 401) {
       redirecionarSessaoExpirada();

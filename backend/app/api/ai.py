@@ -1,6 +1,8 @@
 import json
 import logging
 from datetime import datetime, timezone
+from queue import Empty, Queue
+from threading import Thread
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
@@ -35,6 +37,19 @@ FERRAMENTAS_CONSENT_VERSION = "assistente-ferramentas-v1-2026-08-06"
 # (ver `_preparar_pergunta`) — o cliente não pode trocar o modo de um fio
 # no meio da conversa.
 MODOS_VALIDOS = {"clinica", "pessoal"}
+_SSE_HEARTBEAT_SECONDS = 12.0
+
+
+def _eventos_sse_da_fila(fila: Queue, fim: object, heartbeat_seconds: float = _SSE_HEARTBEAT_SECONDS):
+    while True:
+        try:
+            evento = fila.get(timeout=heartbeat_seconds)
+        except Empty:
+            yield ": keep-alive\n\n"
+            continue
+        if evento is fim:
+            break
+        yield f"data: {json.dumps(evento, ensure_ascii=False)}\n\n"
 
 
 class Pergunta(BaseModel):
@@ -272,72 +287,82 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
     user_id = user.id
 
     def eventos():
-        # Sessão própria, independente da injetada por Depends(get_db).
-        # Achado ao vivo em produção (DetachedInstanceError em conv.id): o
-        # FastAPI encerra a sessão do Depends assim que esta rota RETORNA o
-        # StreamingResponse — não quando este generator termina de rodar.
-        # Como eventos() só começa a executar de fato durante o envio da
-        # resposta (streaming), por essa altura a sessão `db` já foi
-        # fechada e qualquer objeto ORM dela (conv, user) já está detached.
-        # Abrir e fechar a própria sessão aqui dentro evita depender de um
-        # ciclo de vida que não é o nosso — e é por isso que só valores
-        # simples (conv_id, user_id) atravessam a fronteira, nunca os
-        # objetos ORM.
-        from app.core.db import SessionLocal
-        from app.models.user import User
+        fila = Queue()
+        fim = object()
 
-        db2 = SessionLocal()
-        texto_acumulado = []
-        try:
-            # Mesmo motivo do comentário acima (DetachedInstanceError): o
-            # `user` ORM injetado pelo Depends não atravessa para dentro
-            # deste generator — busca-se de novo, na sessão própria, só o
-            # necessário para as tools (id e consentimento).
-            user2 = db2.get(User, user_id)
-            for evento in rag.perguntar_stream(
-                db2, dados.pergunta, historico, dados.temas,
-                modelo=modelo_efetivo, usar_internet=dados.usar_internet, user=user2,
-                modo=conv_modo,
-            ):
-                if "status" in evento:
-                    yield f"data: {json.dumps({'tipo': 'status', 'etapa': evento['status']}, ensure_ascii=False)}\n\n"
-                elif "delta" in evento:
-                    texto_acumulado.append(evento["delta"])
-                    yield f"data: {json.dumps({'tipo': 'delta', 'texto': evento['delta']}, ensure_ascii=False)}\n\n"
-                else:
-                    r = evento["final"]
-                    db2.add(AIMessage(conversation_id=conv_id, papel="user", conteudo=dados.pergunta))
-                    db2.add(AIMessage(
-                        conversation_id=conv_id, papel="assistant", conteudo=r["texto"],
-                        fontes=r["fontes_json"],
-                        fontes_pubmed=json.dumps(r["fontes_pubmed"], ensure_ascii=False) if r["fontes_pubmed"] else None,
-                        modelo=r["modelo"],
-                        tokens_entrada=r["tokens_entrada"], tokens_saida=r["tokens_saida"],
-                    ))
-                    db2.add(AuditLog(
-                        user_id=user_id, action="perguntar", entity="ia", entity_id=str(conv_id),
-                        detail={"modelo": r["modelo"], "fontes": [f["slug"] for f in r["fontes"]],
-                                "fontes_pubmed": [f["pmid"] for f in r["fontes_pubmed"]],
-                                "tokens": r["tokens_entrada"] + r["tokens_saida"], "via": "stream"},
-                    ))
-                    db2.commit()
-                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv_id, 'modo': conv_modo, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo'], 'truncado': r['truncado']}, ensure_ascii=False)}\n\n"
-        except Exception as e:
-            # Sem isto, o erro real só aparecia indo direto ao log do
-            # Postgres — o usuário via só o nome da exceção e ninguém
-            # descobria O QUÊ sem SQL manual. log.exception grava o
-            # traceback inteiro no log do container, de onde `docker compose
-            # logs backend` alcança sem depender do banco.
-            log.exception("Falha em /ai/perguntar/stream (conversation_id=%s)", conv_id)
-            db2.rollback()
-            yield f"data: {json.dumps({'tipo': 'erro', 'detalhe': f'O provedor de IA não respondeu ({type(e).__name__}). Tente novamente.'}, ensure_ascii=False)}\n\n"
-        finally:
-            db2.close()
+        def produzir_eventos():
+            # Sessão própria, independente da injetada por Depends(get_db).
+            # Achado ao vivo em produção (DetachedInstanceError em conv.id): o
+            # FastAPI encerra a sessão do Depends assim que esta rota RETORNA o
+            # StreamingResponse — não quando o generator termina de rodar.
+            # Como a geração agora roda numa thread para permitir heartbeats,
+            # a sessão também precisa nascer e morrer dentro dessa thread.
+            from app.core.db import SessionLocal
+            from app.models.user import User
+
+            db2 = SessionLocal()
+            try:
+                user2 = db2.get(User, user_id)
+                for evento in rag.perguntar_stream(
+                    db2, dados.pergunta, historico, dados.temas,
+                    modelo=modelo_efetivo, usar_internet=dados.usar_internet, user=user2,
+                    modo=conv_modo,
+                ):
+                    if "status" in evento:
+                        fila.put({"tipo": "status", "etapa": evento["status"]})
+                    elif "delta" in evento:
+                        fila.put({"tipo": "delta", "texto": evento["delta"]})
+                    elif "final" in evento:
+                        r = evento["final"]
+                        db2.add(AIMessage(conversation_id=conv_id, papel="user", conteudo=dados.pergunta))
+                        db2.add(AIMessage(
+                            conversation_id=conv_id, papel="assistant", conteudo=r["texto"],
+                            fontes=r["fontes_json"],
+                            fontes_pubmed=json.dumps(r["fontes_pubmed"], ensure_ascii=False) if r["fontes_pubmed"] else None,
+                            modelo=r["modelo"],
+                            tokens_entrada=r["tokens_entrada"], tokens_saida=r["tokens_saida"],
+                        ))
+                        db2.add(AuditLog(
+                            user_id=user_id, action="perguntar", entity="ia", entity_id=str(conv_id),
+                            detail={"modelo": r["modelo"], "fontes": [f["slug"] for f in r["fontes"]],
+                                    "fontes_pubmed": [f["pmid"] for f in r["fontes_pubmed"]],
+                                    "tokens": r["tokens_entrada"] + r["tokens_saida"], "via": "stream"},
+                        ))
+                        db2.commit()
+                        fila.put({
+                            "tipo": "final", "conversation_id": conv_id, "modo": conv_modo,
+                            "fontes": r["fontes"], "fontes_pubmed": r["fontes_pubmed"],
+                            "modelo": r["modelo"], "truncado": r["truncado"],
+                        })
+                    else:
+                        raise ValueError("Evento inválido recebido do RAG.")
+            except Exception as e:
+                log.exception("Falha em /ai/perguntar/stream (conversation_id=%s)", conv_id)
+                db2.rollback()
+                fila.put({
+                    "tipo": "erro",
+                    "detalhe": f"O provedor de IA não respondeu ({type(e).__name__}). Tente novamente.",
+                })
+            finally:
+                db2.close()
+                fila.put(fim)
+
+        Thread(
+            target=produzir_eventos,
+            name=f"corvia-ai-stream-{conv_id}",
+            daemon=True,
+        ).start()
+
+        # Algumas etapas do provedor e das tools não produzem texto por vários
+        # segundos. Sem bytes intermediários, navegador/proxy podiam tratar a
+        # conexão como parada. Comentários SSE mantêm a conexão viva e são
+        # ignorados pelo parser do cliente; não alteram o contrato dos eventos.
+        yield from _eventos_sse_da_fila(fila, fim)
 
     return StreamingResponse(
         eventos(),
         media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+        headers={"Cache-Control": "no-cache, no-transform", "X-Accel-Buffering": "no"},
     )
 
 
