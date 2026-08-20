@@ -8424,5 +8424,212 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-nao-invasivo-e-inicio-de-tafamidis-na-amiloidose-cardiaca-attr",
+    "condicao": "Amiloidose cardíaca por transtirretina (ATTR-CA)",
+    "resumo": "O que checar para fechar o diagnóstico de ATTR-CA pela via não invasiva (cintilografia óssea + triagem de proteína monoclonal) antes de indicar biópsia, e o que confirmar antes de iniciar tafamidis.",
+    "documento_origem": "diagnostico-e-tratamento-da-amiloidose-cardiaca",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diagnosis and treatment of cardiac amyloidosis. A position statement of the ESC Working Group on Myocardial and Pericardial Diseases · ESC Working Group · https://onlinelibrary.wiley.com/doi/10.1002/ejhf.2140",
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI 10.1161/CIRCULATIONAHA.116.021612. PMID 27143678.",
+      "Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT). N Engl J Med. 2018;379(11):1007-1016. PMID 30145929."
+    ],
+    "itens": [
+      {
+        "id": "amilcard-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Levantar suspeita clínica de amiloidose cardíaca diante de cenários comuns: estenose aórtica grave, aumento de espessura de parede de VE ou insuficiência cardíaca com fração de ejeção preservada",
+        "origem_secao": "Definicao"
+      },
+      {
+        "id": "amilcard-cintilografia-triagem-monoclonal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar cintilografia óssea com traçador combinada à avaliação de proteína monoclonal no sangue e na urina antes de considerar biópsia — algoritmo que evita procedimento invasivo na maioria dos casos",
+        "origem_secao": "Abordagem diagnostica nao invasiva"
+      },
+      {
+        "id": "amilcard-especificidade-vpp-algoritmo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecer que captação miocárdica grau 2 ou 3 na cintilografia óssea associada à ausência de proteína monoclonal no soro ou na urina tem especificidade e valor preditivo positivo de 100% (IC do VPP: 98,0-100) para amiloidose ATTR cardíaca (Gillmore et al., Circulation 2016, coorte de 1217 pacientes)",
+        "origem_secao": "Abordagem diagnostica nao invasiva"
+      },
+      {
+        "id": "amilcard-excluir-al-concomitante",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não fechar o diagnóstico de ATTR-CA isolado sem excluir amiloidose AL concomitante — os falsos positivos da cintilografia vêm quase exclusivamente de captação em pacientes com amiloidose AL cardíaca",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "amilcard-biopsia-so-se-indefinido",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Reservar a biópsia endomiocárdica (ou de outro tecido) para os casos em que o algoritmo não invasivo não permitiu fechar o diagnóstico — não prosseguir para biópsia sem antes esgotar a via não invasiva",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "amilcard-inicio-tafamidis",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em ATTR-CM confirmado (forma hereditária ou tipo selvagem), considerar início de tafamidis 80/20 mg 1x/dia — estabilizador da transtirretina que previne sua dissociação em monômeros amiloidogênicos",
+        "origem_secao": "Tafamidis"
+      },
+      {
+        "id": "amilcard-orientacao-beneficio-tafamidis",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar o paciente sobre o benefício demonstrado no ATTR-ACT (n=441, 30 meses): mortalidade por todas as causas 29,5% com tafamidis vs. 42,9% com placebo (HR 0,70; IC95% 0,51-0,96), e hospitalização cardiovascular 0,48 vs. 0,70 eventos/ano (RR 0,68; IC95% 0,56-0,81)",
+        "origem_secao": "Tafamidis"
+      },
+      {
+        "id": "amilcard-seguimento-estruturado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Agendar seguimento estruturado após o diagnóstico, com reavaliação periódica de progressão da doença e de resposta terapêutica",
+        "origem_secao": "Monitorizacao seguimento"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no posicionamento do ESC Working Group on Myocardial and Pericardial Diseases, em Gillmore JD et al. (Circulation 2016, PMID 27143678) e no ensaio ATTR-ACT (Maurer MS et al., N Engl J Med 2018, PMID 30145929), em 20/08/2026."
+  },
+  {
+    "slug": "indicacao-e-timing-de-cirurgia-na-endocardite-infecciosa-esc-2023",
+    "condicao": "Endocardite infecciosa com indicação cirúrgica",
+    "resumo": "Como identificar as três indicações principais de cirurgia na endocardite infecciosa, aplicar o critério de tamanho de vegetação da diretriz ESC 2023 e classificar o timing cirúrgico correto.",
+    "documento_origem": "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/39/3948/7243107",
+      "Surgical Implications of the 2023 ESC Endocarditis Guidelines Endorsed by EACTS · CTSNet · https://www.ctsnet.org/jans/surgical-implications-2023-esc-endocarditis-guidelines-endorsed-eacts-bridging-guidelines-and",
+      "Association of Vegetation Size With Embolic Risk in Patients With Infective Endocarditis: A Systematic Review and Meta-analysis · PubMed · https://pubmed.ncbi.nlm.nih.gov/29459947/"
+    ],
+    "itens": [
+      {
+        "id": "eicirurgia-tres-indicacoes-principais",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar se o caso preenche uma das três indicações cirúrgicas principais: insuficiência cardíaca, infecção não controlada, ou prevenção de embolização séptica",
+        "origem_secao": "Tres indicacoes principais de cirurgia"
+      },
+      {
+        "id": "eicirurgia-medir-vegetacao-ecocardiograma",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Medir o tamanho da vegetação ao ecocardiograma — comprimento é fator de risco para embolização, com risco elevado de complicação neurológica acima de 10 mm, especialmente acima de 30 mm",
+        "origem_secao": "Tamanho da vegetacao e risco de complicacao neurologica"
+      },
+      {
+        "id": "eicirurgia-vegetacao-10mm-outra-indicacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Vegetação ≥10 mm associada a outra indicação cirúrgica: considerar cirurgia urgente (Classe I) — nível de evidência B se houve episódio embólico prévio, C nas demais indicações",
+        "origem_secao": "Vegetacao e risco embolico — atualizacao 2023"
+      },
+      {
+        "id": "eicirurgia-vegetacao-10mm-isolada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Endocardite aórtica ou mitral com vegetação ≥10 mm, sem disfunção valvar grave e sem evidência clínica de embolia, em paciente de baixo risco cirúrgico: cirurgia urgente pode ser considerada (Classe IIb) — novidade da diretriz 2023",
+        "origem_secao": "Vegetacao e risco embolico — atualizacao 2023"
+      },
+      {
+        "id": "eicirurgia-classificar-timing",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Classificar e registrar o timing cirúrgico definido: emergencial (dentro de 24 horas), urgente (3-5 dias) ou não urgente (durante a mesma internação hospitalar)",
+        "origem_secao": "Classificacao do timing cirurgico"
+      },
+      {
+        "id": "eicirurgia-decisao-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Levar a decisão cirúrgica à equipe multidisciplinar de endocardite antes de confirmar a conduta, considerando a relação risco-benefício individual do paciente",
+        "origem_secao": "Decisao multidisciplinar"
+      },
+      {
+        "id": "eicirurgia-comparar-outras-diretrizes",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao discutir o caso com cirurgia cardíaca, ter em mente que ACC/AHA considera cirurgia precoce para vegetação móvel do lado esquerdo >10 mm (Classe IIb, independente de gravidade da lesão ou risco operatório), e que a AATS considera razoável cirurgia emergencial ou em até 48 horas para vegetação móvel grande com risco iminente de embolização",
+        "origem_secao": "Comparacao com outras diretrizes"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base na diretriz 2023 ESC Guidelines for the management of endocarditis (European Heart Journal, 2023) e na revisão sistemática de tamanho de vegetação e risco embólico (PubMed 29459947), em 20/08/2026."
+  },
+  {
+    "slug": "avaliacao-de-profilaxia-antibiotica-em-procedimento-nao-odontologico-de-alto-risco-de-endocardite",
+    "condicao": "Prevenção de endocardite infecciosa em procedimento não odontológico",
+    "resumo": "Como decidir sobre profilaxia antibiótica antes de endoscopia, cistoscopia, biópsia de próstata ou procedimento dermatológico em paciente de alto risco de endocardite — resposta estruturalmente diferente da profilaxia odontológica.",
+    "documento_origem": "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-nao-odontologicos",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 · PMID: 37622656 — Seção 3.3.2 (Non-dental procedures) e Tabela 5 (General Prevention Measures)."
+    ],
+    "itens": [
+      {
+        "id": "einaod-confirmar-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se o paciente pertence ao grupo de alto risco de desfecho adverso de endocardite: prótese valvar, endocardite prévia, cardiopatia congênita cianótica não tratada ou dispositivo de assistência ventricular",
+        "origem_secao": "A medida que a diretriz de fato recomenda"
+      },
+      {
+        "id": "einaod-confirmar-procedimento-nao-odontologico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o procedimento planejado é não odontológico — endoscopia digestiva, colonoscopia, cistoscopia, biópsia de próstata ou procedimento dermatológico/de manejo de ferida",
+        "origem_secao": "A pergunta que este documento responde"
+      },
+      {
+        "id": "einaod-nao-ha-relacao-causal-comprovada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ter em mente que a diretriz é explícita: nenhuma evidência convincente relaciona bacteremia de procedimento não odontológico ao risco subsequente de endocardite — a base é diferente da que sustenta a profilaxia odontológica",
+        "origem_secao": "O que a diretriz afirma sobre a relacao causal"
+      },
+      {
+        "id": "einaod-nao-aplicar-classe-i-por-analogia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não estender por analogia a recomendação Classe I de profilaxia odontológica a este cenário — aqui a recomendação é Classe IIb (elevada de Classe III na diretriz anterior), profilaxia não é rotina e a decisão é individualizada",
+        "origem_secao": "A recomendacao: Classe IIb, nao Classe I"
+      },
+      {
+        "id": "einaod-garantir-ambiente-asseptico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Garantir ambiente operacional asséptico rigoroso durante o procedimento — é a medida preventiva central recomendada para este grupo, não o antibiótico profilático",
+        "origem_secao": "A medida que a diretriz de fato recomenda"
+      },
+      {
+        "id": "einaod-tratar-infeccao-ativa-antes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisar e tratar com antibiótico curativo qualquer foco de infecção ativa (pele, urinária, dentária) antes do procedimento eletivo — distinto de profilaxia, que pressupõe ausência de infecção estabelecida",
+        "origem_secao": "A medida que a diretriz de fato recomenda"
+      },
+      {
+        "id": "einaod-eliminar-foco-dentario-antes-de-protese",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se houver implante planejado de prótese valvar ou outro material intracardíaco/intravascular estranho, eliminar potenciais focos de sepse dentária pelo menos 2 semanas antes do procedimento",
+        "origem_secao": "A medida que a diretriz de fato recomenda"
+      },
+      {
+        "id": "einaod-decisao-individualizada-com-infectologia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Quando a profilaxia Classe IIb for considerada de forma individualizada, decidir o esquema em conjunto com infectologia — não há, nesta diretriz, tabela de esquema padronizado equivalente à da profilaxia odontológica",
+        "origem_secao": "VERIFICAÇÃO HUMANA NECESSÁRIA"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base na diretriz 2023 ESC Guidelines for the management of endocarditis (Delgado V et al., Eur Heart J. 2023;44(39):3948-4042, PMID 37622656), Seção 3.3.2 e Tabela 5, em 20/08/2026."
   }
 ]
