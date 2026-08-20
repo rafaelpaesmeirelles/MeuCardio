@@ -31,7 +31,7 @@ def test_tenant_cannot_read_or_configure_another_professionals_agenda(client, cr
     intruder, intruder_token = criar_usuario(email="agenda.intruder@teste.local")
     _subscribe(db, owner.id)
     _subscribe(db, intruder.id)
-    _location(client, owner_token)
+    location = _location(client, owner_token)
 
     listing = client.get(
         f"/api/agenda/locations?professional_id={owner.id}", headers=_headers(intruder_token)
@@ -44,6 +44,76 @@ def test_tenant_cannot_read_or_configure_another_professionals_agenda(client, cr
         json={"name": "Local indevido"},
     )
     assert creation.status_code == 403
+
+    edition = client.patch(
+        f"/api/agenda/locations/{location['id']}?professional_id={owner.id}",
+        headers=_headers(intruder_token), json={"name": "Local alterado"},
+    )
+    assert edition.status_code == 403
+
+    deletion = client.delete(
+        f"/api/agenda/locations/{location['id']}?professional_id={owner.id}",
+        headers=_headers(intruder_token),
+    )
+    assert deletion.status_code == 403
+
+
+def test_location_can_be_edited_and_safely_removed(client, criar_usuario, db):
+    user, token = criar_usuario(email="agenda.location.crud@teste.local")
+    _subscribe(db, user.id)
+    location = _location(client, token, name="Consultório antigo")
+
+    updated = client.patch(
+        f"/api/agenda/locations/{location['id']}",
+        headers=_headers(token),
+        json={
+            "name": "Consultório novo",
+            "address": {
+                "zip": "14020-000", "street": "Rua Nova", "number": "123",
+                "neighborhood": "Centro", "city": "Ribeirão Preto", "state": "SP",
+            },
+            "phone": "(16) 3333-4444",
+            "latitude": -21.1767,
+            "longitude": -47.8208,
+        },
+    )
+    assert updated.status_code == 200, updated.text
+    assert updated.json()["name"] == "Consultório novo"
+    assert updated.json()["address"]["zip"] == "14020-000"
+
+    removed = client.delete(
+        f"/api/agenda/locations/{location['id']}", headers=_headers(token)
+    )
+    assert removed.status_code == 204, removed.text
+    assert client.get("/api/agenda/locations", headers=_headers(token)).json() == []
+
+    inactive = client.get(
+        "/api/agenda/locations?active=false", headers=_headers(token)
+    )
+    assert inactive.status_code == 200, inactive.text
+    assert inactive.json()[0]["id"] == location["id"]
+    assert inactive.json()[0]["active"] is False
+
+
+def test_location_in_use_must_not_be_removed(client, criar_usuario, db):
+    user, token = criar_usuario(email="agenda.location.in-use@teste.local")
+    _subscribe(db, user.id)
+    location = _location(client, token, name="Hospital em uso")
+    target_weekday = (datetime.now(timezone.utc) + timedelta(days=1)).weekday()
+    routine = client.post("/api/agenda/work-routines", headers=_headers(token), json={
+        "location_id": location["id"], "weekdays": [target_weekday],
+        "start_time": "08:00:00", "end_time": "12:00:00",
+        "label": "Rotina vinculada",
+    })
+    assert routine.status_code == 201, routine.text
+
+    blocked = client.delete(
+        f"/api/agenda/locations/{location['id']}", headers=_headers(token)
+    )
+    assert blocked.status_code == 409, blocked.text
+    assert "rotinas profissionais" in blocked.json()["detail"]
+    listing = client.get("/api/agenda/locations", headers=_headers(token))
+    assert listing.json()[0]["active"] is True
 
 
 def test_conflict_is_rejected_and_extra_slot_requires_service_permission(client, criar_usuario, db):
