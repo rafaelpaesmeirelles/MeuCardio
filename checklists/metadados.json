@@ -5543,5 +5543,246 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "estratificacao-de-risco-e-decisao-terapeutica-no-tep-agudo",
+    "condicao": "Estratificação de risco e decisão terapêutica no TEP agudo confirmado (sPESI, disfunção de VD/biomarcadores, indicação de trombólise)",
+    "resumo": "Derivado da diretriz ESC/ERS 2019 de TEP agudo: aplicação do sPESI, classificação em quatro categorias de risco (alto/intermediário-alto/intermediário-baixo/baixo) e decisão entre anticoagulação isolada, monitorização em UTI e trombólise. Distinto dos dois checklists de Tromboembolismo já publicados — `alta-pos-tromboembolismo-venoso-agudo` trata da anticoagulação de manutenção após a alta já decidida, e `criterios-para-tratamento-ambulatorial-do-tep-de-baixo-risco` trata só da elegibilidade para tratamento domiciliar no TEP de baixo risco; este checklist cobre o momento anterior — a estratificação de risco em qualquer TEP agudo confirmado, incluindo alto risco e risco intermediário-alto, onde a decisão é sobre reperfusão, não sobre alta.",
+    "documento_origem": "tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429",
+      "Pruszczyk P, Konstantinides S. Where to treat patients with acute pulmonary embolism? Kardiol Pol. 2020;78(1):15-19. DOI: 10.33963/KP.15143. PMID: 31939451",
+      "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966",
+      "Meyer G, Vicaut E, Danays T, et al; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681",
+      "Chatterjee S, Chakraborty A, Weinberg I, et al. Thrombolysis for pulmonary embolism and risk of all-cause mortality, major bleeding, and intracranial hemorrhage: a meta-analysis. JAMA. 2014;311(23):2414-2421. DOI: 10.1001/jama.2014.5990. PMID: 24938564",
+      "Creager MA, Barnes GD, Giri J, et al. 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. Circulation. 2026;153(12):e977-e1051. DOI: 10.1161/CIR.0000000000001415. PMID: 41712677"
+    ],
+    "itens": [
+      {
+        "id": "tep-risco-instabilidade-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Instabilidade hemodinâmica confirmada ou descartada (parada cardíaca com necessidade de RCP, choque obstrutivo, ou hipotensão persistente não causada por outra patologia) — isoladamente define o TEP de alto risco e a indicação de reperfusão imediata",
+        "origem_secao": "Definicao instabilidade hemodinamica / Criterios estratificacao — alto risco"
+      },
+      {
+        "id": "tep-risco-spesi-calculado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "sPESI calculado em todo paciente sem instabilidade hemodinâmica, com os 6 critérios de 1 ponto cada (idade >80 anos; câncer, história; doença cardíaca crônica OU doença pulmonar crônica — critério combinado, 1 ponto no total, nunca somado em dobro; FC ≥110 bpm; PAS <100 mmHg; SatO2 <90%)",
+        "origem_secao": "Escore pesi"
+      },
+      {
+        "id": "tep-risco-vd-biomarcador-apesar-spesi-baixo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação de disfunção de ventrículo direito por imagem e de biomarcadores cardíacos (troponina, BNP/NT-proBNP) realizada mesmo com sPESI 0 — PESI/sPESI baixo não dispensa essa checagem",
+        "origem_secao": "Escore pesi"
+      },
+      {
+        "id": "tep-risco-classificacao-4-categorias",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente classificado numa das quatro categorias de risco (alto / intermediário-alto / intermediário-baixo / baixo) combinando PESI/sPESI, disfunção de VD por imagem e biomarcadores — não pelo escore isoladamente",
+        "origem_secao": "Criterios estratificacao"
+      },
+      {
+        "id": "tep-risco-trombolise-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se alto risco (instabilidade hemodinâmica): trombólise sistêmica iniciada sem atraso como terapia de reperfusão de primeira escolha — retardar a trombólise de resgate em TEP de alto risco com deterioração hemodinâmica está listado como armadilha clínica explícita na fonte",
+        "origem_secao": "Trombolise — indicacao absoluta / Armadilhas clinicas"
+      },
+      {
+        "id": "tep-risco-intermediario-alto-uti",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se risco intermediário-alto (disfunção de VD por imagem E troponina elevada, sem instabilidade hemodinâmica): monitorização nas primeiras horas definida, preferencialmente em UTI — reperfusão primária NÃO é recomendada de rotina nesse grupo, pois o risco de sangramento (sobretudo intracraniano) supera o benefício",
+        "origem_secao": "Criterios uti — risco intermediário-alto"
+      },
+      {
+        "id": "tep-risco-trombolise-resgate-descompensacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância ativa mantida para deterioração hemodinâmica precoce em risco intermediário-alto sob anticoagulação isolada, com trombólise de resgate (ou embolectomia cirúrgica/tratamento percutâneo por cateter) disponível se houver descompensação — no PEITHO, 5,6% dos pacientes inicialmente só anticoagulados (placebo) tiveram morte ou descompensação hemodinâmica em 7 dias, contra 2,6% no grupo tenecteplase",
+        "origem_secao": "Criterios uti — risco intermediário-alto"
+      },
+      {
+        "id": "tep-risco-sangramento-idade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se trombólise sistêmica considerada em TEP de risco intermediário: idade acima de 65 anos registrada explicitamente como fator que concentra o excesso de risco hemorrágico da trombólise — na metanálise de Chatterjee et al., o sangramento maior não aumentou significativamente em ≤65 anos (OR 1,25; IC95% 0,50-3,14), contra OR global de 2,73 na população completa",
+        "origem_secao": "Trombolise — seguranca geral, com os números reais"
+      },
+      {
+        "id": "tep-risco-categoria-aha-acc-2026",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Onde aplicável, a categoria clínica AHA/ACC 2026 (A a E, documento `aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas` desta base) também foi considerada como referência complementar de gravidade — categorias D (falência cardiopulmonar incipiente, subcategorias D1-D2) e E1 (falência cardiopulmonar estabelecida) são onde terapia avançada (trombólise, trombectomia por cateter, embolectomia cirúrgica) é discutida em decisão multidisciplinar; VERIFICAÇÃO HUMANA NECESSÁRIA para qualquer corte numérico dessa classificação — usar só a descrição qualitativa das categorias, nunca inventar limiar",
+        "origem_secao": "Nova diretriz americana de 2026 — ponteiro, verificação parcial (ESC 2019) / Categorias clínicas A–E (AHA/ACC 2026)"
+      },
+      {
+        "id": "tep-risco-pert",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Acionamento de equipe de resposta rápida multidisciplinar (Pulmonary Embolism Response Team/PERT) considerado quando há múltiplas opções terapêuticas potencialmente válidas (anticoagulação, trombólise sistêmica, cateter, cirurgia) e o atraso na decisão pode modificar o prognóstico",
+        "origem_secao": "PERT: reduzir o tempo entre reconhecimento e decisão (AHA/ACC 2026, documento aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas)"
+      }
+    ],
+    "revisao": "Todos os itens derivados literalmente do documento `tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019` (diretriz ESC/ERS 2019), publicado nesta base, com a seção de origem registrada por item — exceto os itens `tep-risco-categoria-aha-acc-2026` e `tep-risco-pert`, que citam explicitamente o documento complementar `aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas` (também publicado), usado apenas para a descrição qualitativa das categorias A-E e do conceito de PERT. Todos os PMIDs e números centrais (sPESI 6 critérios; PEITHO 1.005 pacientes, 2,6% vs. 5,6%, sangramento extracraniano 6,3% vs. 1,2%; metanálise de Chatterjee OR 2,73 geral e 1,25 em ≤65 anos) reconferidos por grep direto contra o corpo do documento nesta integração. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+  },
+  {
+    "slug": "profilaxia-de-tev-no-paciente-clinico-internado-escore-de-padua",
+    "condicao": "Indicação e duração da profilaxia de tromboembolismo venoso (TEV) no paciente clínico hospitalizado — escore de Padua",
+    "resumo": "Derivado do documento sobre profilaxia de TEV no paciente clínico hospitalizado (escore de Padua e evidência de profilaxia estendida do ensaio MARINER). Cobre a pergunta mais frequente da prática hospitalar geral — se este paciente clínico internado precisa de profilaxia farmacológica, e por quanto tempo — distinta dos dois checklists de Tromboembolismo já publicados, que tratam de TEP agudo já diagnosticado (alta e elegibilidade ambulatorial), não de prevenção primária na admissão.",
+    "documento_origem": "profilaxia-de-tev-no-paciente-clinico-hospitalizado-escore-de-padua-e-profilaxia-estendida",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Barbar S, Noventa F, Rossetto V, et al. A risk assessment model for the identification of hospitalized medical patients at risk for venous thromboembolism: the Padua Prediction Score. J Thromb Haemost. 2010;8(11):2450-2457. DOI: 10.1111/j.1538-7836.2010.04044.x. PMID: 20738765",
+      "Spyropoulos AC, Ageno W, Albers GW, et al; MARINER Investigators. Rivaroxaban for Thromboprophylaxis after Hospitalization for Medical Illness. N Engl J Med. 2018;379(12):1118-1127. DOI: 10.1056/NEJMoa1805090. PMID: 30145946"
+    ],
+    "itens": [
+      {
+        "id": "tev-profilaxia-padua-calculado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore de Padua calculado em todo paciente clínico internado, somando os 11 critérios com peso próprio: 3 pontos cada para câncer ativo, TEV prévio (excluindo trombose venosa superficial), mobilidade reduzida (repouso no leito com privilégio de banheiro por ≥3 dias) e trombofilia já conhecida; 2 pontos para trauma e/ou cirurgia recente (último mês); 1 ponto cada para idade ≥70 anos, insuficiência cardíaca e/ou respiratória, IAM ou AVC isquêmico agudo, infecção aguda e/ou doença reumatológica, obesidade (IMC ≥30) e tratamento hormonal em curso",
+        "origem_secao": "Escore de padua"
+      },
+      {
+        "id": "tev-profilaxia-alto-risco-corte",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore ≥4 identificado e registrado como alto risco (indicação de profilaxia farmacológica ou mecânica) — na coorte de derivação de 1.180 pacientes, 39,7% se enquadraram nesse corte",
+        "origem_secao": "Escore de padua / Validacao — os numeros do estudo de derivacao"
+      },
+      {
+        "id": "tev-profilaxia-baixo-risco-sem-farmaco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Profilaxia farmacológica NÃO indicada de rotina em escore <4 — no subgrupo de baixo risco da coorte de derivação, TEV ocorreu em apenas 0,3%, e indicar profilaxia rotineira nesse grupo expõe a sangramento sem benefício proporcional (armadilha clínica explícita na fonte)",
+        "origem_secao": "Validacao — os numeros do estudo de derivacao / Armadilhas clinicas"
+      },
+      {
+        "id": "tev-profilaxia-alto-risco-farmaco-iniciado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se escore ≥4: profilaxia farmacológica ou mecânica efetivamente iniciada e registrada — TEV sintomático ocorreu em 2,2% dos pacientes de alto risco que receberam profilaxia adequada vs. 11,0% dos que não receberam (HR 0,13; IC95% 0,04-0,40)",
+        "origem_secao": "Validacao — os numeros do estudo de derivacao"
+      },
+      {
+        "id": "tev-profilaxia-sangramento-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Risco de sangramento também avaliado antes de iniciar profilaxia farmacológica em paciente de alto risco — sangramento ocorreu em 1,6% dos pacientes de alto risco sob profilaxia, na coorte de derivação",
+        "origem_secao": "Validacao — os numeros do estudo de derivacao"
+      },
+      {
+        "id": "tev-profilaxia-nao-confundir-padua-improve",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que o escore aplicado é o de Padua (faixa de 0 a 20 pontos, corte ≥4) e não o escore IMPROVE modificado (faixa de 0 a 10 pontos, corte ≥4, usado para seleção de pacientes no ensaio MARINER) — os dois têm o mesmo corte numérico (≥4), mas escalas e pesos por critério diferentes; aplicar a tabela de pontos de um ao nome do outro erra a classificação de risco",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "tev-profilaxia-estendida-nao-rotina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Profilaxia farmacológica NÃO estendida rotineiramente além da alta hospitalar em paciente clínico de alto risco — no ensaio MARINER (rivaroxabana 10 mg 1x/dia por 45 dias pós-alta, ajustada para insuficiência renal, 12.019 pacientes clínicos de alto risco), o desfecho primário composto (TEV sintomático ou morte por TEV) não atingiu significância estatística: 0,83% vs. 1,10% com placebo (HR 0,76; IC95% 0,52-1,09; p=0,14)",
+        "origem_secao": "Profilaxia estendida — o que o mariner mostrou"
+      },
+      {
+        "id": "tev-profilaxia-extensao-caso-a-caso",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a extensão da profilaxia farmacológica pós-alta for considerada em caso individual, a decisão foi registrada como tal e não como rotina — no MARINER, o benefício isolado apareceu só no desfecho secundário pré-especificado de TEV sintomático não fatal (0,18% vs. 0,42%; HR 0,44; IC95% 0,22-0,89), enquanto o sangramento maior foi numericamente mais frequente com rivaroxabana, sem significância (0,28% vs. 0,15%; HR 1,88; IC95% 0,84-4,23)",
+        "origem_secao": "Profilaxia estendida — o que o mariner mostrou / Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Todos os itens derivados literalmente do documento `profilaxia-de-tev-no-paciente-clinico-hospitalizado-escore-de-padua-e-profilaxia-estendida`, publicado nesta base, com a seção de origem registrada por item. Os pesos dos 11 critérios do escore de Padua e os números da coorte de derivação (PMID 20738765) e do ensaio MARINER (PMID 30145946) reconferidos por grep direto contra o corpo do documento nesta integração — tabela de pesos, corte ≥4, 39,7%/2,2%/11,0%/0,3%/1,6% e 0,83%/1,10% todos batendo exatamente. Este checklist é de PREVENÇÃO PRIMÁRIA na admissão hospitalar — distinto dos dois já publicados no tema, que tratam de TEP agudo já diagnosticado. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
+  },
+  {
+    "slug": "tromboembolismo-venoso-associado-ao-cancer-escolha-do-anticoagulante",
+    "condicao": "Tromboembolismo venoso associado ao câncer — escolha e duração do anticoagulante",
+    "resumo": "Derivado do documento sobre trombose associada ao câncer (escore de Khorana, diretriz ITAC 2022, ensaios CARAVAGGIO e Hokusai-VTE Cancer), com um item complementar sobre a fase estendida após 6 meses derivado do ensaio API-CAT (documento próprio nesta mesma pasta). Cobre a decisão prática mais frequente em oncologia — HBPM ou DOAC, e por quanto tempo — distinta dos dois checklists de Tromboembolismo já publicados, que não são específicos de câncer.",
+    "documento_origem": "trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Farge D, Frere C, Connors JM, et al; International Initiative on Thrombosis and Cancer (ITAC) advisory panel. 2022 international clinical practice guidelines for the treatment and prophylaxis of venous thromboembolism in patients with cancer, including patients with COVID-19. Lancet Oncol. 2022;23(7):e334-e347. DOI: 10.1016/S1470-2045(22)00160-7. PMID: 35772465",
+      "Khorana AA, Kuderer NM, Culakova E, Lyman GH, Francis CW. Development and validation of a predictive model for chemotherapy-associated thrombosis. Blood. 2008;111(10):4902-4907. DOI: 10.1182/blood-2007-10-116327. PMID: 18216292",
+      "Agnelli G, Becattini C, Meyer G, et al; Caravaggio Investigators. Apixaban for the treatment of venous thromboembolism associated with cancer (CARAVAGGIO). N Engl J Med. 2020;382(17):1599-1607. DOI: 10.1056/NEJMoa1915103. PMID: 32223112",
+      "Raskob GE, van Es N, Verhamme P, et al; Hokusai VTE Cancer Investigators. Edoxaban for the treatment of cancer-associated venous thromboembolism. N Engl J Med. 2018;378(7):615-624. DOI: 10.1056/NEJMoa1711948. PMID: 29231094",
+      "Mahé I, Carrier M, Mayeur D, Chidiac J, Vicaut E, Falvo N, et al; API-CAT Investigators. Extended Reduced-Dose Apixaban for Cancer-Associated Venous Thromboembolism. N Engl J Med. 2025;392(14):1363-1373. DOI: 10.1056/NEJMoa2416112. PMID: 40162636"
+    ],
+    "itens": [
+      {
+        "id": "tev-cancer-khorana-aplicavel",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que o escore de Khorana está sendo aplicado a paciente AMBULATORIAL que vai iniciar quimioterapia — não a quem já tem TEV diagnosticado, cenário para o qual o escore não foi validado (armadilha clínica explícita na fonte)",
+        "origem_secao": "Escore de khorana / Armadilhas clinicas"
+      },
+      {
+        "id": "tev-cancer-tratamento-inicial-hbpm-ou-doac",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Tratamento inicial (primeiros 10 dias) e de manutenção definido com HBPM, ou DOAC como alternativa oral em quem não tem alto risco de sangramento gastrointestinal/geniturinário, sem interação medicamentosa relevante com o esquema quimioterápico e com absorção gastrointestinal preservada — recomendação ITAC 2022, grau 1A/1B",
+        "origem_secao": "Recomendacoes itac 2022"
+      },
+      {
+        "id": "tev-cancer-caravaggio-apixabana",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se apixabana escolhida como DOAC: esquema conferido contra o ensaio CARAVAGGIO (10 mg 2x/dia por 7 dias, depois 5 mg 2x/dia, por 6 meses) — TEV recorrente 5,6% com apixabana vs. 7,9% com dalteparina (HR 0,63; IC95% 0,37-1,07; p<0,001 para não inferioridade), sangramento maior sem diferença relevante (3,8% vs. 4,0%; HR 0,82; IC95% 0,40-1,69)",
+        "origem_secao": "Evidencia pivotal caravaggio"
+      },
+      {
+        "id": "tev-cancer-doac-contraindicacao-gi-gu",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "DOAC evitado ou usado com cautela adicional em câncer gástrico, duodenal, esofágico ou de outro sítio com mucosa friável — no Hokusai-VTE Cancer (edoxabana vs. dalteparina, 12 meses), o sangramento maior foi mais frequente com edoxabana (6,9% vs. 4,0%), concentrado em tumores gastrointestinais no estudo original, apesar de o TEV recorrente ter sido menor (7,9% vs. 11,3%)",
+        "origem_secao": "Evidencia pivotal hokusai vte cancer / Escolha pratica entre hbpm e doac"
+      },
+      {
+        "id": "tev-cancer-duracao-minima-6-meses",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Duração mínima de tratamento registrada como pelo menos 6 meses, não os 3 meses padrão da TVP não oncológica — recomendação ITAC 2022, frequentemente estendida enquanto o câncer permanecer ativo",
+        "origem_secao": "Recomendacoes itac 2022 / Armadilhas clinicas"
+      },
+      {
+        "id": "tev-cancer-profilaxia-pancreas-avancado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Profilaxia farmacológica primária (HBPM ou DOAC — rivaroxabana ou apixabana) considerada em paciente ambulatorial com câncer de pâncreas localmente avançado ou metastático, em tratamento antineoplásico ativo, com baixo risco de sangramento — cenário com a indicação mais consistente na diretriz ITAC 2022, e o mesmo sítio de maior pontuação (2 pontos) no escore de Khorana",
+        "origem_secao": "Recomendacoes itac 2022"
+      },
+      {
+        "id": "tev-cancer-profilaxia-pos-operatoria",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Profilaxia estendida com HBPM por 4 semanas considerada após cirurgia abdominopélvica de grande porte em paciente oncológico sem alto risco de sangramento — recomendação ITAC 2022",
+        "origem_secao": "Recomendacoes itac 2022"
+      },
+      {
+        "id": "tev-cancer-apos-6-meses-dose-reduzida",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se o paciente já completou 6 meses de anticoagulação em dose plena com câncer ativo: redução da dose de apixabana para 2,5 mg 2x/dia considerada para a fase estendida — no ensaio API-CAT (documento `anticoagulacao-estendida-em-dose-reduzida-no-tev-do-cancer-o-ensaio-api-cat`, 1.766 pacientes), a dose reduzida foi não inferior na recorrência (2,1% vs. 2,8%; sub-hazard 0,76; p=0,001 para não inferioridade) e superior em segurança (sangramento clinicamente relevante 12,1% vs. 15,6%; sub-hazard 0,75; IC95% 0,58-0,97; p=0,03) — NUNCA reduzir a dose antes de completar os 6 meses iniciais, período não testado pelo ensaio",
+        "origem_secao": "Resultados / Limites que precisam acompanhar (documento API-CAT, nesta mesma pasta)"
+      },
+      {
+        "id": "tev-cancer-mortalidade-nao-diferenciada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrado, na discussão com o paciente, que a escolha entre HBPM e DOAC pesa recorrência de TEV contra sangramento, não sobrevida — nem o CARAVAGGIO (apixabana vs. dalteparina) nem o Hokusai-VTE Cancer (edoxabana vs. dalteparina) mostraram diferença de mortalidade global entre os braços",
+        "origem_secao": "Escolha pratica entre hbpm e doac"
+      }
+    ],
+    "revisao": "Os itens derivados literalmente do documento `trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante`, publicado nesta base, com a seção de origem registrada por item — exceto o item `tev-cancer-apos-6-meses-dose-reduzida`, que cita explicitamente o documento complementar `anticoagulacao-estendida-em-dose-reduzida-no-tev-do-cancer-o-ensaio-api-cat` (também publicado nesta mesma pasta). Todos os PMIDs e números centrais (CARAVAGGIO 5,6% vs. 7,9%; Hokusai-VTE Cancer 7,9% vs. 11,3% recorrência, 6,9% vs. 4,0% sangramento; API-CAT 2,1% vs. 2,8%, 12,1% vs. 15,6%) reconferidos por grep direto contra o corpo dos documentos nesta integração. Este checklist é ESPECÍFICO de câncer — distinto dos dois já publicados no tema. Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798)."
   }
 ]
