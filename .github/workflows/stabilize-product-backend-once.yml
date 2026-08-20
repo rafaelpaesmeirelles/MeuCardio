@@ -1,15 +1,16 @@
 name: Stabilize product backend once
 
 on:
-  push:
-    branches: [fix/product-stabilization-20260820]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: write
 
 jobs:
   migrate:
-    if: github.actor != 'github-actions[bot]'
+    if: github.event.pull_request.head.ref == 'fix/product-stabilization-20260820' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
