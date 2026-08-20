@@ -16,7 +16,7 @@ import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
  * Fonte: ChatGPT nas extensões DASI/AUB-HAS2/VSG-CRI.
  */
 
-const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
 
 type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
 

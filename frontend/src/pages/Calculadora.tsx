@@ -21,7 +21,7 @@ import GrafoRelacionados from "../components/GrafoRelacionados";
  * genéricas de `document-templates/gerados/*` sem nenhum código novo ali.
  */
 
-const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
 
 type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
 

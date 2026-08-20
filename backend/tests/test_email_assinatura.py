@@ -131,6 +131,8 @@ def test_get_assinatura_comeca_desligada(client, criar_usuario):
     corpo = resposta.json()
     assert corpo["ativa"] is False
     assert corpo["certificado_a1_conectado"] is False
+    assert corpo["assinar_digitalmente"] is False
+    assert corpo["assinatura_digital_disponivel"] is False
     assert corpo["assinatura_digital_ativa"] is False
     assert corpo["pre_visualizacao"] is None
 
@@ -162,6 +164,46 @@ def test_put_assinatura_exige_autenticacao():
 
     resposta = TestClient(app).put("/api/email/assinatura", json={"ativa": True})
     assert resposta.status_code in (401, 403)
+
+
+def test_put_assinatura_digital_sem_certificado_e_bloqueado(client, criar_usuario):
+    _, token = criar_usuario()
+    resposta = client.put(
+        "/api/email/assinatura",
+        json={
+            "ativa": False,
+            "incluir_telefone": False,
+            "incluir_endereco": False,
+            "assinar_digitalmente": True,
+        },
+        headers=_headers(token),
+    )
+    assert resposta.status_code == 409
+    assert "certificado A1" in resposta.json()["detail"]
+
+
+def test_put_assinatura_digital_disponivel_e_opt_in_por_usuario(
+    client, criar_usuario, monkeypatch,
+):
+    from app.api import email as email_api
+
+    _, token = criar_usuario()
+    monkeypatch.setattr(
+        email_api, "_disponibilidade_assinatura_digital", lambda db, user: (True, None),
+    )
+    resposta = client.put(
+        "/api/email/assinatura",
+        json={
+            "ativa": False,
+            "incluir_telefone": False,
+            "incluir_endereco": False,
+            "assinar_digitalmente": True,
+        },
+        headers=_headers(token),
+    )
+    assert resposta.status_code == 200, resposta.text
+    assert resposta.json()["assinar_digitalmente"] is True
+    assert resposta.json()["assinatura_digital_ativa"] is True
 
 
 # ---------------------------------------------------------------------------
@@ -209,10 +251,9 @@ def test_caixa_nativa_bloqueia_envio_quando_smime_esta_ativo(
     from app.api import email as email_api
 
     user, _ = criar_usuario(full_name="Rafael Médico")
-    user.email_assinatura_ativa = True
+    user.email_assinatura_digital_ativa = True
     db.commit()
     token = _token_email(client, db, user, monkeypatch_mail360)
-    monkeypatch.setattr(email_api.certificado_a1, "obter", lambda db, user: object())
 
     resposta = client.post(
         "/api/email/mensagens",
@@ -223,3 +264,22 @@ def test_caixa_nativa_bloqueia_envio_quando_smime_esta_ativo(
     assert resposta.status_code == 409
     assert "não aceita" in resposta.json()["detail"]
     assert monkeypatch_mail360["mensagens_enviadas"] == []
+
+
+def test_assinatura_visual_sozinha_nao_bloqueia_caixa_nativa(
+    client, db, criar_usuario, monkeypatch_mail360,
+):
+    user, _ = criar_usuario(full_name="Rafael Médico")
+    user.email_assinatura_ativa = True
+    user.email_assinatura_digital_ativa = False
+    db.commit()
+    token = _token_email(client, db, user, monkeypatch_mail360)
+
+    resposta = client.post(
+        "/api/email/mensagens",
+        json={"para": "destino@example.com", "assunto": "Oi", "corpo_html": "Texto", "anexos": []},
+        headers=_headers(token),
+    )
+
+    assert resposta.status_code == 201, resposta.text
+    assert monkeypatch_mail360["mensagens_enviadas"]

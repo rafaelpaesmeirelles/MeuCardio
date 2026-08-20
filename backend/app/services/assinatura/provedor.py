@@ -113,7 +113,7 @@ class AssinaturaExternaManual(ProvedorAssinatura):
 
     Por isso esta classe serve para VÁRIOS códigos do catálogo — GOVBR
     (avançada) e as cloud QUALIFICADA hoje sem credencial comercial
-    (VIDAAS, BIRDID, SAFEID, NEOID, REMOTEID) — parametrizada por
+    (VIDAAS, BIRDID, SAFEID, NEOID, REMOTEID e A3_TOKEN) — parametrizada por
     `codigo`/`nivel`, em vez de uma classe por provedor: o comportamento é
     idêntico, o que muda é só o rótulo e o nível jurídico que o catálogo
     já declara para cada um. `assinar()` **não assina nada** — devolve o
@@ -123,11 +123,9 @@ class AssinaturaExternaManual(ProvedorAssinatura):
     externa` (`emissao.concluir_assinatura_externa`), que CONFERE uma
     assinatura real e íntegra embutida antes de aceitar — nunca marca
     como assinado só porque um arquivo qualquer voltou. O NÍVEL gravado
-    no documento final é o que o médico escolheu ao iniciar a emissão
-    (ex.: VIDAAS = qualificada) — a Corvia confia nessa escolha do mesmo
-    jeito que já confia em "tenho certificado A1" ao escolher aquele
-    método; o que ela SEMPRE confere sozinha é que existe mesmo uma
-    assinatura embutida e íntegra, nunca o "nível" declarado por si só.
+    no documento final é conferido contra a política de certificado
+    efetivamente embutida no PDF: um método declarado como qualificado só
+    conclui se a assinatura trouxer OID de política A1/A2/A3/A4 ICP-Brasil.
 
     ⚠️ Limite honesto, não testado nesta sessão: a compatibilidade do
     verificador (`verificacao_pdf.py`, pyhanko) com o formato exato que o
@@ -222,8 +220,11 @@ class ProvedorIndisponivel(ProvedorAssinatura):
 # Assinador ITI (Trabalho 14, 06/08/2026) — o médico assina com o próprio
 # certificado em nuvem no site do ITI ou da certificadora, e reenvia o PDF
 # assinado. Por isso caem em `AssinaturaExternaManual`, não em
-# `ProvedorIndisponivel` — GOVBR (avançada) segue o mesmo caminho.
-_MANUAL_EXTERNO = {"GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+# `ProvedorIndisponivel` — GOVBR (avançada) segue o mesmo caminho. A3_TOKEN
+# usa o mesmo fluxo porque a chave privada não pode sair do token/cartão.
+_MANUAL_EXTERNO = {
+    "GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN",
+}
 
 
 def _motivo_padrao(nome: str) -> str:

@@ -105,8 +105,9 @@ def concluir_assinatura_externa(
     "nao_assinado"), assinou em assinador.iti.br — fora da Corvia, sem API —
     e reenvia o arquivo assinado aqui.
 
-    Nunca aceita o upload só porque "parece" um PDF: confere que existe
-    uma assinatura digital REAL e íntegra embutida
+    Nunca aceita o upload só porque "parece" um PDF: confere que ele é a
+    revisão incremental exata do PDF original e que existe uma assinatura
+    digital REAL e íntegra embutida
     (`verificacao_pdf.verificar()`), a mesma checagem já usada para
     divulgar a assinatura por e-mail (Trabalho 11). Sem isso, levanta
     `AssinaturaNaoDetectada` — nunca marca como assinado por engano."""
@@ -124,6 +125,14 @@ def concluir_assinatura_externa(
     if registro.assinado_em is not None:
         raise FluxoAssinaturaExternaInvalido("Este documento já está assinado.")
 
+    pdf_original = ler_bytes(registro)
+    if not pdf_assinado.startswith(pdf_original):
+        raise AssinaturaNaoDetectada(
+            "O PDF assinado não corresponde exatamente ao documento original "
+            "emitido pela CorVIA. Baixe novamente o original e assine esse arquivo "
+            "sem editar ou reexportar."
+        )
+
     resultado = verificacao_pdf.verificar(pdf_assinado)
     if resultado is None:
         raise AssinaturaNaoDetectada(
@@ -135,6 +144,15 @@ def concluir_assinatura_externa(
         raise AssinaturaNaoDetectada(
             "A assinatura encontrada no arquivo não confere com o conteúdo — envie "
             "o PDF exatamente como saiu do Assinador gov.br, sem editar ou reexportar."
+        )
+    if not resultado.estrutura_valida or not resultado.cobre_documento_inteiro:
+        raise AssinaturaNaoDetectada(
+            "A assinatura não cobre integralmente o documento ou tem estrutura inválida."
+        )
+    if registro.nivel == catalogo.NIVEL_QUALIFICADA and not resultado.qualificada_icp_brasil:
+        raise AssinaturaNaoDetectada(
+            "O certificado usado não apresenta política A1, A2, A3 ou A4 ICP-Brasil. "
+            "Receitas controladas exigem assinatura eletrônica qualificada."
         )
 
     sha256 = hashlib.sha256(pdf_assinado).hexdigest()

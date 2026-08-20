@@ -81,14 +81,14 @@ def enviar(
 ) -> ResultadoEnvio:
     integracao = _integracao_padrao_externa(db, user)
     certificado = certificado_a1.obter(db, user)
-    if assinar_smime and certificado is None:
+    assinatura_obrigatoria = bool(
+        assinar_smime or user.email_assinatura_digital_ativa
+    )
+    if assinatura_obrigatoria and certificado is None:
         return ResultadoEnvio(
             False,
             "Não há certificado A1 conectado para assinar digitalmente este e-mail.",
         )
-    assinatura_obrigatoria = bool(
-        certificado and (assinar_smime or user.email_assinatura_ativa)
-    )
 
     if integracao is None:
         # Conta padrão é a nativa (ou nenhuma preferência gravada — mesmo

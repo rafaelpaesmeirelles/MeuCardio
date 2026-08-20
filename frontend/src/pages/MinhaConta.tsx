@@ -745,7 +745,10 @@ type AssinaturaEmail = {
   ativa: boolean;
   incluir_telefone: boolean;
   incluir_endereco: boolean;
+  assinar_digitalmente: boolean;
   certificado_a1_conectado: boolean;
+  assinatura_digital_disponivel: boolean;
+  assinatura_digital_motivo: string | null;
   assinatura_digital_ativa: boolean;
   pre_visualizacao: AssinaturaPreview | null;
 };
@@ -762,7 +765,7 @@ function PreferenciaAssinaturaEmail() {
     api.get<AssinaturaEmail>("/email/assinatura").then(setDados).catch(() => {});
   }, []);
 
-  async function salvar(proximo: Pick<AssinaturaEmail, "ativa" | "incluir_telefone" | "incluir_endereco">) {
+  async function salvar(proximo: Pick<AssinaturaEmail, "ativa" | "incluir_telefone" | "incluir_endereco" | "assinar_digitalmente">) {
     setSalvando(true);
     setErro("");
     try {
@@ -780,39 +783,47 @@ function PreferenciaAssinaturaEmail() {
     <div className="cartao">
       <h2 style={{ margin: "0 0 0.2rem" }}>Assinatura de e-mail</h2>
       <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
-        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM. Quando um
-        certificado A1 estiver conectado, os envios compatíveis também serão assinados digitalmente por S/MIME.
+        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM.
+        Os dados visuais e a assinatura digital S/MIME são opções independentes por usuário.
       </p>
 
       <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.7rem" }}>
         <input
           type="checkbox" style={{ width: "auto" }} checked={dados.ativa} disabled={salvando}
-          onChange={(e) => salvar({ ativa: e.target.checked, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco })}
+          onChange={(e) => salvar({ ativa: e.target.checked, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco, assinar_digitalmente: dados.assinar_digitalmente })}
         />
         Incluir assinatura nos e-mails que eu enviar
       </label>
 
-      {dados.ativa && (
-        <p style={{ margin: "0.55rem 0 0", fontSize: "0.8rem", color: dados.assinatura_digital_ativa ? "var(--sucesso)" : "var(--texto-secundario)" }}>
-          {dados.assinatura_digital_ativa
-            ? "Assinatura digital S/MIME ativa com seu A1. Google, Microsoft, Yahoo e iCloud enviam assinados; a caixa nativa é bloqueada para não enviar sem assinatura."
-            : "Assinatura visual ativa. Conecte seu certificado A1 acima para ativar também a assinatura digital S/MIME."}
-        </p>
-      )}
+      <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.7rem" }}>
+        <input
+          type="checkbox" style={{ width: "auto" }} checked={dados.assinar_digitalmente}
+          disabled={salvando || !dados.assinatura_digital_disponivel}
+          onChange={(e) => salvar({ ativa: dados.ativa, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco, assinar_digitalmente: e.target.checked })}
+        />
+        Assinar digitalmente por S/MIME os e-mails compatíveis
+      </label>
+      <p style={{ margin: "0.35rem 0 0", fontSize: "0.8rem", color: dados.assinatura_digital_ativa ? "var(--sucesso)" : "var(--texto-secundario)" }}>
+        {dados.assinatura_digital_ativa
+          ? "S/MIME ativo para este usuário. Google, Microsoft, Yahoo e iCloud enviam assinados; a caixa nativa é bloqueada para não enviar sem assinatura."
+          : dados.assinatura_digital_disponivel
+            ? "Certificado S/MIME disponível. Ative a opção acima se desejar assinar os e-mails."
+            : dados.assinatura_digital_motivo || "Conecte um certificado A1 para disponibilizar S/MIME."}
+      </p>
 
       {dados.ativa && (
         <div style={{ marginTop: "0.5rem", paddingLeft: "1.6rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
           <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             <input
               type="checkbox" style={{ width: "auto" }} checked={dados.incluir_telefone} disabled={salvando}
-              onChange={(e) => salvar({ ativa: true, incluir_telefone: e.target.checked, incluir_endereco: dados.incluir_endereco })}
+              onChange={(e) => salvar({ ativa: true, incluir_telefone: e.target.checked, incluir_endereco: dados.incluir_endereco, assinar_digitalmente: dados.assinar_digitalmente })}
             />
             Incluir telefone profissional
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             <input
               type="checkbox" style={{ width: "auto" }} checked={dados.incluir_endereco} disabled={salvando}
-              onChange={(e) => salvar({ ativa: true, incluir_telefone: dados.incluir_telefone, incluir_endereco: e.target.checked })}
+              onChange={(e) => salvar({ ativa: true, incluir_telefone: dados.incluir_telefone, incluir_endereco: e.target.checked, assinar_digitalmente: dados.assinar_digitalmente })}
             />
             Incluir endereço profissional
           </label>

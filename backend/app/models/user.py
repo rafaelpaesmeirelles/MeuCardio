@@ -130,6 +130,11 @@ class User(Base):
     # profissional são sub-opções independentes: o médico pode querer nome/
     # CRM/logo na assinatura sem publicar telefone ou endereço do consultório.
     email_assinatura_ativa: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Opt-in separado para a assinatura criptográfica S/MIME. Não pode ser
+    # inferido da assinatura visual: se o certificado expirar ou for
+    # removido, o envio solicitado deve falhar fechado em vez de sair sem
+    # assinatura digital.
+    email_assinatura_digital_ativa: Mapped[bool] = mapped_column(Boolean, default=False)
     email_assinatura_incluir_telefone: Mapped[bool] = mapped_column(Boolean, default=False)
     email_assinatura_incluir_endereco: Mapped[bool] = mapped_column(Boolean, default=False)
 
