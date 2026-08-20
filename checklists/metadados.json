@@ -5543,5 +5543,204 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs."
+  },
+  {
+    "slug": "preparo-pre-ablacao-por-cateter-de-fibrilacao-atrial",
+    "condicao": "Preparo pré-procedimento para ablação por cateter de fibrilação atrial",
+    "resumo": "Checklist de indicação, exclusão de trombo em átrio esquerdo (contraindicação absoluta) e anticoagulação periprocedimento — 3 semanas antes, sem interromper o DOAC no dia, e manutenção por 2 meses após, independentemente do escore CHA₂DS₂-VA.",
+    "documento_origem": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176 — tabela de recomendações de ablação, lida na íntegra em 30/07/2026",
+      "Marrouche NF, Brachmann J, Andresen D, et al; CASTLE-AF Investigators. Catheter ablation for atrial fibrillation with heart failure (CASTLE-AF). N Engl J Med. 2018;378(5):417-427. DOI: 10.1056/NEJMoa1707855. PMID: 29385358"
+    ],
+    "itens": [
+      {
+        "id": "abl-pre-indicacao-tipo-fa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação confirmada conforme o tipo de FA: paroxística — ablação como primeira ou segunda linha, Classe I, nível A; persistente — primeira linha só em pacientes selecionados, dentro de decisão compartilhada, Classe IIb, nível C (força bem mais fraca)",
+        "origem_secao": "Divergencia resolvida sobre a linha de indicacao"
+      },
+      {
+        "id": "abl-pre-trombo-ae",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Trombo em átrio esquerdo excluído por imagem antes do procedimento — é a única contraindicação absoluta à ablação por cateter de FA",
+        "origem_secao": "Contraindicacao absoluta"
+      },
+      {
+        "id": "abl-pre-anticoag-3-semanas",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação terapêutica confirmada por pelo menos 3 semanas antes do procedimento, independentemente do escore CHA₂DS₂-VA",
+        "origem_secao": "Anticoagulacao no periprocedimento"
+      },
+      {
+        "id": "abl-pre-nao-interromper-doac",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulante oral direto mantido, não interrompido, no dia do procedimento",
+        "origem_secao": "Anticoagulacao no periprocedimento"
+      },
+      {
+        "id": "abl-pre-plano-pos-2-meses",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Plano de manutenção da anticoagulação por pelo menos 2 meses após o procedimento já definido e explicado ao paciente antes da alta",
+        "origem_secao": "Anticoagulacao no periprocedimento"
+      },
+      {
+        "id": "abl-pre-nao-suspender-por-sucesso",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado de que, passados os 2 meses, a decisão de manter ou suspender a anticoagulação seguirá o CHA₂DS₂-VA crônico — ablação bem-sucedida não é, por si só, motivo para suspender em quem tem indicação por escore",
+        "origem_secao": "Anticoagulacao no periprocedimento"
+      },
+      {
+        "id": "abl-pre-cenario-especial-ic",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se FA associada a insuficiência cardíaca com FEVE reduzida: identificado se o objetivo é reverter cardiomiopatia induzida por taquicardia ou tratar arritmia em IC já estabelecida (CASTLE-AF: mortalidade por qualquer causa 13,4% vs. 25,0%, HR 0,53, em FEVE ≤35% com desfibrilador implantado)",
+        "origem_secao": "Ablacao e insuficiencia cardiaca: detalhamento"
+      },
+      {
+        "id": "abl-pre-persistente-avaliar-cardioversao-antes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em FA persistente, considerada cardioversão elétrica prévia para avaliar resposta antes de indicar ablação — a evidência de ablação como primeira linha nesta população é menos conclusiva",
+        "origem_secao": "Cardioversao eletrica persistente"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "avaliacao-inicial-de-fa-de-inicio-recente-no-pronto-socorro",
+    "condicao": "Avaliação inicial de fibrilação atrial de início recente no pronto-socorro — conduta expectante versus cardioversão precoce",
+    "resumo": "Decisão entre conduta expectante (controle de frequência, reavaliação em 48h) e cardioversão imediata na FA sintomática, hemodinamicamente estável, de início inferior a 36 horas — não inferioridade demonstrada pelo RACE 7 ACWAS, com reversão espontânea em cerca de 69% do grupo expectante.",
+    "documento_origem": "wait-and-see-versus-cardioversao-precoce-na-fa-de-inicio-recente-race-7-acwas",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pluymaekers NAHA, Dudink EAMP, Luermans JGLM, Meeder JG, Lenderink T, Widdershoven J, Bucx JJJ, Rienstra M, Kamp O, Van Opstal JM, Alings M, Oomen A, Kirchhof CJ, Van Dijk VF, Ramanna H, Liem A, Dekker LR, Essers BAB, Tijssen JGP, Van Gelder IC, Crijns HJGM; RACE 7 ACWAS Investigators. Early or Delayed Cardioversion in Recent-Onset Atrial Fibrillation. N Engl J Med. 2019;380(16):1499-1508. DOI: 10.1056/NEJMoa1900353. PMID: 30883054 — 427 pacientes randomizados, NCT02248753",
+      "Van der Velden RMJ, Pluymaekers NAHA, Dudink EAMP, et al. Cardioversion strategy impacts rate control during recurrences in patients with paroxysmal atrial fibrillation: A subanalysis of the RACE 7 ACWAS trial. Clin Cardiol. 2024;47(1):e24161. DOI: 10.1002/clc.24161. PMID: 37872853",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723 — corte de 24h para cardioversão sem TEE, citado como referência cruzada"
+    ],
+    "itens": [
+      {
+        "id": "fa-ps-estabilidade-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmada estabilidade hemodinâmica — FA com instabilidade indica cardioversão elétrica imediata, fora do escopo desta triagem entre conduta expectante e cardioversão precoce",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "fa-ps-duracao-36h",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado início da FA há menos de 36 horas, sintomática — janela de inclusão do RACE 7 ACWAS; fora dela, seguir a avaliação de anticoagulação pré-cardioversão do checklist de cardioversão eletiva (TEE ou 3 semanas de anticoagulação)",
+        "origem_secao": "Desenho"
+      },
+      {
+        "id": "fa-ps-corte-24h-tee",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aplicado o corte de 24 horas da diretriz ESC 2024/AF-CARE: cardioversão pode ser feita sem TEE prévio se o episódio tiver menos de 24 horas; acima de 24 horas, excluir trombo em átrio esquerdo por TEE ou anticoagular por 3 semanas antes",
+        "origem_secao": "Referência cruzada: diretriz ESC 2024/AF-CARE, seção 'Cardioversao na fa aguda'"
+      },
+      {
+        "id": "fa-ps-controle-frequencia-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Controle de frequência iniciado desde a admissão, independentemente da estratégia escolhida — betabloqueador como 1ª escolha, bloqueador de canal de cálcio não di-hidropiridínico (verapamil) como 2ª, digoxina como 3ª, com meta de frequência cardíaca <110 bpm",
+        "origem_secao": "O que 'conduta expectante' significava no protocolo"
+      },
+      {
+        "id": "fa-ps-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutidas com o paciente as duas estratégias válidas — conduta expectante por até 48h (reversão espontânea em cerca de 69% dos casos) ou cardioversão imediata — com ritmo sinusal em 4 semanas estatisticamente não inferior entre elas (91% vs. 94%; diferença -2,9 pontos percentuais, IC95% -8,2 a 2,2)",
+        "origem_secao": "Resultado principal"
+      },
+      {
+        "id": "fa-ps-reavaliar-48h",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se optada a conduta expectante: reavaliação agendada em até 48 horas, com cardioversão farmacológica ou elétrica indicada caso não haja reversão espontânea até esse prazo",
+        "origem_secao": "O que 'conduta expectante' significava no protocolo"
+      },
+      {
+        "id": "fa-ps-cha2ds2va",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "CHA₂DS₂-VA calculado e decisão de anticoagulação definida de forma independente da estratégia de cardioversão escolhida — a indicação de anticoagular não muda conforme a via adotada no pronto-socorro",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item; o corte de 24h é referência cruzada explícita à diretriz ESC 2024/AF-CARE, também já publicada e verificada nesta pasta."
+  },
+  {
+    "slug": "elegibilidade-para-pill-in-the-pocket-cardioversao-quimica-ambulatorial",
+    "condicao": "Elegibilidade e orientação para estratégia \"pill in the pocket\" (cardioversão química autoadministrada) na FA paroxística recorrente",
+    "resumo": "Critérios de seleção para autorizar flecainida ou propafenona em dose única, autoadministrada pelo paciente em casa, após teste de dose de ataque sob observação hospitalar — cerca de 1 em cada 5 candidatos é excluído nessa etapa.",
+    "documento_origem": "pill-in-the-pocket-cardioversao-quimica-ambulatorial-na-fa-de-inicio-recente",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Alboni P, Botto GL, Baldi N, Luzi M, Russo V, Gianfranchi L, Marchi P, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — 268 pacientes avaliados, 210 seguidos na fase ambulatorial"
+    ],
+    "itens": [
+      {
+        "id": "pip-doenca-cardiaca-leve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmada doença cardíaca leve ou ausente — flecainida e propafenona (antiarrítmicos classe IC) são contraindicados em cardiopatia estrutural significativa e em doença coronariana, pelo risco pró-arrítmico",
+        "origem_secao": "Quem NAO entra nesta estrategia"
+      },
+      {
+        "id": "pip-fa-bem-tolerada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que os episódios de FA são hemodinamicamente bem tolerados — instabilidade indica cardioversão elétrica no momento da crise, não estratégia de comprimido em casa",
+        "origem_secao": "Quem NAO entra nesta estrategia"
+      },
+      {
+        "id": "pip-teste-hospitalar-previo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste da dose de ataque realizado sob observação hospitalar antes de qualquer autorização para uso ambulatorial — cerca de 1 em cada 5 candidatos (22%) é excluído nesta etapa, por falha do tratamento ou efeito adverso",
+        "origem_secao": "O desenho, e a etapa que quase sempre se omite ao citar"
+      },
+      {
+        "id": "pip-bloqueador-no-associado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerada associação de bloqueador do nó atrioventricular (betabloqueador ou bloqueador de canal de cálcio não di-hidropiridínico) antes do antiarrítmico IC, para reduzir o risco de flutter atrial com condução rápida — o ensaio original não randomizou essa associação, e a decisão fica a critério do médico",
+        "origem_secao": "O risco especifico a explicar ao paciente"
+      },
+      {
+        "id": "pip-orientar-risco-flutter",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre o risco específico de flutter atrial com condução ventricular rápida (evento adverso cardíaco observado em 1 dos 268 pacientes do ensaio original) e sobre quando procurar atendimento de emergência em vez de repetir a dose",
+        "origem_secao": "O risco especifico a explicar ao paciente"
+      },
+      {
+        "id": "pip-avaliacao-tromboembolica-independente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação de risco tromboembólico e decisão de anticoagulação feitas de forma independente da estratégia — a autoadministração do antiarrítmico não substitui nem dispensa essa avaliação",
+        "origem_secao": "Quem NAO entra nesta estrategia"
+      },
+      {
+        "id": "pip-seguimento-ambulatorial",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Seguimento ambulatorial planejado, com orientação sobre o tempo esperado de resposta ao episódio (tratamento iniciado em média 36±93 minutos após os sintomas, com resolução em cerca de 113±84 minutos) e sobre reavaliar a estratégia caso o antiarrítmico falhe em um episódio futuro",
+        "origem_secao": "Resultados da fase ambulatorial"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
