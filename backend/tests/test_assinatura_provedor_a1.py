@@ -37,6 +37,40 @@ def _gerar_pfx(*, senha: str = "senha123", cn: str = "DR TESTE DA SILVA:12345678
     )
 
 
+def _gerar_pfx_com_intermediaria(*, senha: str = "senha123") -> tuple[bytes, bytes]:
+    agora = datetime.datetime.now(datetime.timezone.utc)
+    chave_ca = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    nome_ca = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "AC TESTE INTERMEDIARIA")])
+    certificado_ca = (
+        x509.CertificateBuilder()
+        .subject_name(nome_ca)
+        .issuer_name(nome_ca)
+        .public_key(chave_ca.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(agora - datetime.timedelta(days=1))
+        .not_valid_after(agora + datetime.timedelta(days=365))
+        .add_extension(x509.BasicConstraints(ca=True, path_length=None), critical=True)
+        .sign(chave_ca, hashes.SHA256())
+    )
+    chave = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    nome = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "DR COM CADEIA:12345678900")])
+    certificado = (
+        x509.CertificateBuilder()
+        .subject_name(nome)
+        .issuer_name(nome_ca)
+        .public_key(chave.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(agora - datetime.timedelta(days=1))
+        .not_valid_after(agora + datetime.timedelta(days=180))
+        .sign(chave_ca, hashes.SHA256())
+    )
+    pfx = pkcs12.serialize_key_and_certificates(
+        name=b"teste-cadeia", key=chave, cert=certificado, cas=[certificado_ca],
+        encryption_algorithm=serialization.BestAvailableEncryption(senha.encode()),
+    )
+    return pfx, certificado_ca.public_bytes(serialization.Encoding.DER)
+
+
 def _pdf_minimo() -> bytes:
     buf = io.BytesIO()
     c = canvas.Canvas(buf)
@@ -97,6 +131,28 @@ def test_assinar_sem_certificado_devolve_indisponivel_nao_levanta_excecao(db, cr
     assert resultado.estado == "indisponivel"
     assert resultado.motivo is not None
     assert resultado.pdf is None
+
+
+def test_assinar_encaminha_cadeia_do_pfx_para_o_pdf(db, criar_usuario, monkeypatch):
+    user, _ = criar_usuario()
+    pfx, intermediaria_der = _gerar_pfx_com_intermediaria()
+    certificado_a1.salvar(db, user, pfx, "senha123", "Valid")
+    db.commit()
+    recebido = {}
+
+    def _assinar(pdf, **kwargs):
+        recebido.update(kwargs)
+        return pdf + b"\n% assinatura-teste"
+
+    from app.services.assinatura import pdf_signer
+    monkeypatch.setattr(pdf_signer, "assinar_pdf", _assinar)
+
+    resultado = CertificadoA1(db, user).assinar(
+        _pdf_minimo(), {"municipio": "Ribeirão Preto"}, {"tipo": "prescription_document"},
+    )
+
+    assert resultado.estado == "assinado"
+    assert recebido["cadeia_der"] == [intermediaria_der]
 
 
 def test_obter_provedor_nao_compartilha_estado_entre_usuarios(db, criar_usuario):

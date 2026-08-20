@@ -23,8 +23,11 @@ from __future__ import annotations
 
 import io
 
+from asn1crypto import x509 as asn1_x509
 from pyhanko.pdf_utils.incremental_writer import IncrementalPdfFileWriter
+from pyhanko.pdf_utils.text import TextBoxStyle
 from pyhanko.sign import fields, signers
+from pyhanko.stamp import TextStampStyle
 
 
 class FalhaAoAssinar(RuntimeError):
@@ -33,13 +36,48 @@ class FalhaAoAssinar(RuntimeError):
     de entrada está corrompido. Nunca capturado para fingir sucesso."""
 
 
-def assinar_pdf(pdf_bytes: bytes, *, pfx_bytes: bytes, senha: str, motivo: str, local: str) -> bytes:
+# Aparencia VISIVEL da mesma assinatura PAdES. Nao e um selo desenhado depois:
+# este widget e criado antes do calculo do hash e integra a revisao assinada.
+# Qualquer alteracao no texto ou no restante do documento invalida a assinatura.
+_CAMPO_VISIVEL_PADRAO = (170, 20, 425, 88)
+# A RCE já possui um quadro regulamentar de identificação/assinatura. O selo
+# deve ocupar a metade direita desse quadro, sem cobrir comprador ou rodapé.
+_CAMPO_VISIVEL_RCE = (285, 220, 545, 270)
+_SELO_VISIVEL = TextStampStyle(
+    border_width=1,
+    border_color=(0.043, 0.180, 0.271),
+    background=None,
+    background_opacity=1,
+    text_box_style=TextBoxStyle(
+        font_size=8,
+        text_color=(0.043, 0.180, 0.271),
+    ),
+    stamp_text=(
+        "ASSINATURA DIGITAL ICP-BRASIL\n"
+        "%(signer)s\n"
+        "%(ts)s\n"
+        "Assinatura criptografica embutida neste PDF"
+    ),
+    timestamp_format="%d/%m/%Y %H:%M:%S %Z",
+)
+
+
+def assinar_pdf(
+    pdf_bytes: bytes, *, pfx_bytes: bytes, senha: str, motivo: str, local: str,
+    cadeia_der: list[bytes] | None = None, layout: str | None = None,
+) -> bytes:
     """Assinatura PAdES-B (certificado embutido, sem carimbo de tempo).
     Devolve os bytes do PDF já assinado. `pfx_bytes`/`senha` são os mesmos
     que `certificado_a1.carregar_para_assinar()` decifra do cofre."""
     try:
+        certificados_intermediarios = [
+            asn1_x509.Certificate.load(certificado)
+            for certificado in (cadeia_der or [])
+        ]
         signer = signers.SimpleSigner.load_pkcs12_data(
-            pfx_bytes, other_certs=[], passphrase=senha.encode("utf-8"),
+            pfx_bytes,
+            other_certs=certificados_intermediarios,
+            passphrase=senha.encode("utf-8"),
         )
         if signer is None:
             raise FalhaAoAssinar("Não foi possível carregar o certificado para assinar.")
@@ -48,11 +86,21 @@ def assinar_pdf(pdf_bytes: bytes, *, pfx_bytes: bytes, senha: str, motivo: str, 
             field_name="AssinaturaCorvia",
             reason=motivo[:200],
             location=local[:200],
+            subfilter=fields.SigSeedSubFilter.PADES,
         )
-        saida = signers.sign_pdf(
-            escritor, metadados, signer=signer,
-            new_field_spec=fields.SigFieldSpec(sig_field_name="AssinaturaCorvia"),
+        campo_visivel = fields.SigFieldSpec(
+            sig_field_name="AssinaturaCorvia",
+            on_page=0,
+            box=_CAMPO_VISIVEL_RCE if layout == "RCE" else _CAMPO_VISIVEL_PADRAO,
+            readable_field_name="Assinatura digital CorVIA",
         )
+        pdf_signer = signers.PdfSigner(
+            metadados,
+            signer=signer,
+            stamp_style=_SELO_VISIVEL,
+            new_field_spec=campo_visivel,
+        )
+        saida = pdf_signer.sign_pdf(escritor)
     except FalhaAoAssinar:
         raise
     except Exception as exc:  # noqa: BLE001 — pyhanko levanta vários tipos próprios; traduzimos todos pra um erro nosso

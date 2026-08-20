@@ -442,7 +442,7 @@ class TestFluxoHttpDePontaAPonta:
 
         payload = {
             "destinatario": {
-                "nome": "Paciente de Teste", "endereco": "Rua do Paciente, 50, São Paulo/SP",
+                "nome": "Paciente de Teste", "endereco": "Rua do Paciente, 50 - Centro - São Paulo/SP - CEP 01001-000",
                 "documento": "22233344456",
             },
             "cid": "E29.1",

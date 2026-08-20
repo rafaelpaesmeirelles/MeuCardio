@@ -2,9 +2,10 @@
 """Receita de Controle Especial física — modelo Anvisa versão 2.
 
 O modelo vigente foi publicado em 16/03/2026 e tornou-se obrigatório para
-impressões realizadas desde 18/05/2026. A saída contém as duas vias, cada uma
-com frente e verso. Quando a prescrição excede uma frente, são geradas páginas
-de continuação explicitamente numeradas, cada qual com seu verso correspondente.
+impressões realizadas desde 18/05/2026. A saída contém as duas vias e omite o
+verso de impressão opcional destinado ao preenchimento da farmácia. Quando a
+prescrição excede uma frente, são geradas páginas de continuação explicitamente
+numeradas em cada via.
 Os demais modelos controlados permanecem fail-closed até existir numeração
 oficial/integração SNCR aplicável.
 """
@@ -95,6 +96,22 @@ def _endereco_estruturado_completo(endereco: dict | None) -> bool:
     return bool(
         endereco
         and all(_texto(endereco.get(campo)) for campo in ("logradouro", "numero", "cidade", "uf"))
+    )
+
+
+def _endereco_paciente_completo(endereco: str | None) -> bool:
+    """Confere os componentes que precisam acompanhar uma RCE.
+
+    O destinatário continua cifrado em um único campo para preservar o schema e
+    documentos existentes. Novas receitas serializam o endereço no formato
+    canônico ``logradouro, número - bairro - cidade/UF - CEP 00000-000``.
+    """
+    texto = _texto(endereco)
+    return bool(
+        re.search(r"\b\d{5}-?\d{3}\b", texto)
+        and re.search(r"/\s*[A-Z]{2}\b", texto.upper())
+        and re.search(r",\s*\S+", texto)
+        and texto.count(" - ") >= 3
     )
 
 
@@ -306,7 +323,7 @@ def _prescricao(c: canvas.Canvas, y: float, itens: list[tuple[int, dict]],
 def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
             destinatario: dict, itens: list[tuple[int, dict]], observacoes_linhas: list[str],
             medico: Any, endereco_profissional: dict | None, data_emissao: datetime,
-            cid: str | None, c5: bool) -> None:
+            cid: str | None, c5: bool, assinatura_digital: bool) -> None:
     y = ALTURA - MARGEM_Y
     _logo_corvia(c, MARGEM_X, y + 1 * mm)
     c.setFont("Helvetica-Bold", 16)
@@ -370,8 +387,20 @@ def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
     c.setFont("Helvetica-Bold", 8.8)
     data_local = data_emissao.astimezone(FUSO).strftime("%d/%m/%Y")
     c.drawString(MARGEM_X + 2 * mm, assinatura_y + 14 * mm, f"DATA: {data_local}")
-    c.drawString(MARGEM_X + 2 * mm, assinatura_y + 7 * mm,
-                 f"IDENTIFICAÇÃO E ASSINATURA DO PRESCRITOR: {professional_name(medico)}")
+    identificacao = f"PRESCRITOR: {professional_name(medico)}"
+    largura_identificacao = 78 * mm if assinatura_digital else LARGURA - 2 * MARGEM_X - 4 * mm
+    for indice, linha in enumerate(_linhas(
+        identificacao, "Helvetica", 8.8, largura_identificacao,
+    )[:2]):
+        c.drawString(MARGEM_X + 2 * mm, assinatura_y + (7 - indice * 3.7) * mm, linha)
+    if assinatura_digital:
+        c.setFont("Helvetica", 6.6)
+        aviso_assinatura = (
+            "O selo ao lado integra a assinatura qualificada deste PDF."
+            if via == 1
+            else "Esta via integra o mesmo PDF assinado; valide a assinatura no arquivo digital."
+        )
+        c.drawString(MARGEM_X + 2 * mm, assinatura_y + 1.8 * mm, aviso_assinatura)
 
     y = assinatura_y - 9 * mm
     y = _secao(c, y, "IDENTIFICAÇÃO DO COMPRADOR")
@@ -445,8 +474,10 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
         erros.append("Complete conselho profissional, número de registro e UF.")
     if not _texto(destinatario.get("nome")):
         erros.append("Informe o nome completo do paciente.")
-    if not _texto(destinatario.get("endereco")):
-        erros.append("Informe o endereço completo do paciente.")
+    if not _endereco_paciente_completo(destinatario.get("endereco")):
+        erros.append(
+            "Informe logradouro, número, bairro, cidade, UF e CEP do paciente."
+        )
     if not _texto(destinatario.get("documento")):
         erros.append("Informe o CPF do paciente.")
     if not itens:
@@ -491,8 +522,9 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
 
 def receita_controle_especial(*, destinatario: dict, itens: list[dict], observacoes: str,
                               medico: Any, endereco_profissional: dict | None,
-                              data_emissao: datetime, cid: str | None = None) -> bytes:
-    """Gera as duas vias completas, com frente/verso para cada página numerada."""
+                              data_emissao: datetime, cid: str | None = None,
+                              metodo_assinatura: str = "MANUAL") -> bytes:
+    """Gera as duas vias, sem o verso opcional de uso do dispensador."""
     c5 = any(_texto(item.get("lista")).upper() == "C5" for item in itens)
     bloqueios = validar_requisitos_rce(
         medico=medico, destinatario=destinatario, itens=itens,
@@ -516,9 +548,8 @@ def receita_controle_especial(*, destinatario: dict, itens: list[dict], observac
                 observacoes_linhas=conteudo["observacoes"], medico=medico,
                 endereco_profissional=endereco_profissional, data_emissao=data_emissao,
                 cid=cid, c5=bool(conteudo["c5"]),
+                assinatura_digital=metodo_assinatura == "A1_ARQUIVO",
             )
-            pdf.showPage()
-            _verso(pdf, via=via, pagina=numero_pagina, total_paginas=total_paginas)
             pdf.showPage()
     pdf.save()
     return buffer.getvalue()

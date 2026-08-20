@@ -35,6 +35,7 @@ import logging
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
+from cryptography.hazmat.primitives.serialization import Encoding
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -186,7 +187,16 @@ class CertificadoA1(ProvedorAssinatura):
         local = medico.get("municipio") or "Brasil"
         try:
             pdf_assinado = pdf_signer.assinar_pdf(
-                pdf, pfx_bytes=carregado.pfx_bytes, senha=carregado.senha, motivo=motivo_doc, local=local,
+                pdf,
+                pfx_bytes=carregado.pfx_bytes,
+                senha=carregado.senha,
+                motivo=motivo_doc,
+                local=local,
+                cadeia_der=[
+                    certificado.public_bytes(Encoding.DER)
+                    for certificado in carregado.dados.cadeia
+                ],
+                layout=contexto.get("layout"),
             )
         except pdf_signer.FalhaAoAssinar as exc:
             log.error("Falha ao assinar PDF com certificado A1 (owner_id=%s): %s", self._user.id, exc)

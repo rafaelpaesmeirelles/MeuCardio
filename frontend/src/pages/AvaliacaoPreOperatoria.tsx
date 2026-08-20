@@ -241,6 +241,12 @@ export default function AvaliacaoPreOperatoria() {
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
   }, []);
 
+  useEffect(() => {
+    if (usuario?.assinatura_metodo_preferido) {
+      setMetodo(usuario.assinatura_metodo_preferido);
+    }
+  }, [usuario?.assinatura_metodo_preferido]);
+
   function aubPayload(): AubEntrada {
     return {
       ...aub,

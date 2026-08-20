@@ -97,6 +97,12 @@ export default function Calculadora() {
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
   }, []);
 
+  useEffect(() => {
+    if (usuario?.assinatura_metodo_preferido) {
+      setMetodo(usuario.assinatura_metodo_preferido);
+    }
+  }, [usuario?.assinatura_metodo_preferido]);
+
   async function calcular() {
     setErro("");
     try {

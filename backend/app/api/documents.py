@@ -456,17 +456,29 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
 
 
 @router.get("/gerados/{gid}/pdf")
-def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(get_db),
+def baixar_pdf_gerado(gid: int, metodo: str | None = None, db: Session = Depends(get_db),
                       user=Depends(current_user)):
     from app.services.pdf_documento import documento_generico, resolver_endereco
 
     g = _obter_gerado(gid, db, user)
     existente = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
     if existente is not None:
+        if metodo is not None and existente.metodo != metodo:
+            raise HTTPException(
+                status_code=409,
+                detail=(
+                    f"Este documento ja foi emitido com o metodo {existente.metodo} e e imutavel. "
+                    "Crie um novo documento para usar outro metodo de assinatura."
+                ),
+            )
         pdf = assinatura_emissao.ler_bytes(existente)
+        sufixo = "-assinado" if existente.assinado_em is not None else ""
         return Response(content=pdf, media_type="application/pdf", headers={
-            "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})
+            "Content-Disposition": f'inline; filename="documento-{g.id}{sufixo}.pdf"',
+            "X-Corvia-Assinatura": "assinada" if existente.assinado_em is not None else "nao-assinada",
+        })
 
+    metodo = metodo or user.assinatura_metodo_preferido or "MANUAL"
     try:
         provedor, info_metodo = assinatura_emissao.preparar(metodo, db=db, user=user)
     except assinatura_emissao.MetodoInvalido as e:
@@ -486,18 +498,30 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
         endereco=resolver_endereco(emissor, g.endereco_exibido),
         data_emissao=g.created_at, metodo_assinatura=metodo, provedor_nome=info_metodo.nome,
     )
-    emitido = assinatura_emissao.assinar_e_persistir(
-        db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id, metodo=metodo,
-        provedor=provedor, info=info_metodo, pdf_visual=pdf_visual, medico=medico,
-        criado_por=g.created_by, data_emissao=g.created_at,
-    )
+    try:
+        emitido = assinatura_emissao.assinar_e_persistir(
+            db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id, metodo=metodo,
+            provedor=provedor, info=info_metodo, pdf_visual=pdf_visual, medico=medico,
+            criado_por=g.created_by, data_emissao=g.created_at,
+        )
+    except assinatura_emissao.AssinaturaNaoDetectada as exc:
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "A emissao foi interrompida porque a assinatura digital nao pode ser validada: "
+                f"{exc}"
+            ),
+        ) from exc
     db.add(AuditLog(user_id=user.id, action="emitir_documento_gerado",
                     entity="generated_document", entity_id=str(g.id),
                     detail={"doc_type": g.doc_type, "bytes": len(emitido.pdf),
                             "metodo": metodo, "sha256": emitido.registro.sha256}))
     db.commit()
+    sufixo = "-assinado" if emitido.registro.assinado_em is not None else ""
     return Response(content=emitido.pdf, media_type="application/pdf", headers={
-        "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})
+        "Content-Disposition": f'inline; filename="documento-{g.id}{sufixo}.pdf"',
+        "X-Corvia-Assinatura": "assinada" if emitido.registro.assinado_em is not None else "nao-assinada",
+    })
 
 
 TAMANHO_MAXIMO_PDF_ASSINADO = 15 * 1024 * 1024  # 15 MB — PDF assinado, folga sobre o original

@@ -71,19 +71,40 @@ def assinar_e_persistir(
     db: Session, *, tipo: str, referencia_id: int, metodo: str,
     provedor: ProvedorAssinatura, info: catalogo.ProvedorInfo,
     pdf_visual: bytes, medico: dict, criado_por: int, data_emissao: datetime,
+    layout: str | None = None,
 ) -> Emitido:
     """Chama `provedor.assinar()` sobre o PDF já renderizado (com a legenda e
     o aviso já corretos para `metodo` — ver `pdf_documento._assinatura_
     rodape`) e persiste o resultado. Só chame depois de confirmar
     `provedor.disponivel()` — esta função não repete a checagem, porque cada
     chamador já monta sua própria lista de `bloqueios` a partir dela."""
-    resultado = provedor.assinar(pdf_visual, medico, {"tipo": tipo, "referencia_id": referencia_id})
+    resultado = provedor.assinar(
+        pdf_visual,
+        medico,
+        {"tipo": tipo, "referencia_id": referencia_id, "layout": layout},
+    )
     if resultado.estado == "indisponivel":
         # Defensivo: não deveria acontecer se o chamador checou disponivel()
         # antes, mas nada aqui pode arriscar persistir um PDF de mentira.
         raise RuntimeError(resultado.motivo or f"{metodo} recusou assinar sem motivo.")
 
     pdf_final = resultado.pdf if resultado.pdf is not None else pdf_visual
+    if resultado.estado == "assinado":
+        from app.services.assinatura import verificacao_pdf
+
+        assinatura = verificacao_pdf.verificar(pdf_final)
+        if assinatura is None:
+            raise AssinaturaNaoDetectada(
+                "O provedor informou sucesso, mas o PDF não contém assinatura digital embutida."
+            )
+        if not (
+            assinatura.intacta
+            and assinatura.estrutura_valida
+            and assinatura.cobre_documento_inteiro
+        ):
+            raise AssinaturaNaoDetectada(
+                "A assinatura gerada não cobre o documento inteiro ou falhou na validação de integridade."
+            )
     sha256 = hashlib.sha256(pdf_final).hexdigest()
     nome_arquivo = cofre.guardar(pdf_final, criado_por, raiz=_raiz())
 

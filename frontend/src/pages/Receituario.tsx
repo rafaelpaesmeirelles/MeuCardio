@@ -7,7 +7,10 @@ import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import PrescricaoLivreEspecial from "../components/PrescricaoLivreEspecial";
 
-type PrecoCmedSugestao = { valor: number | null; rotulo: string };
+type PrecoCmedSugestao = { valor: number | null; rotulo: string; fonte_icms?: string };
+type EnderecoCep = {
+  cep: string; logradouro: string; complemento: string; bairro: string; cidade: string; uf: string;
+};
 type Farmaco = {
   // `slug` nulo = candidato só do catálogo prescritivo amplo (CMED), sem
   // página clínica aprofundada — `tem_conteudo_clinico` é o sinal explícito.
@@ -34,7 +37,7 @@ type Item = {
   price_reference?: string; price_source_page?: number;
 };
 
-type PrecoCmed = { valor: number | null; rotulo: string };
+type PrecoCmed = { valor: number | null; rotulo: string; fonte_icms?: string };
 type ApresentacaoCmed = {
   produto: string; laboratorio: string; apresentacao: string; ggrem: string;
   apresentacao_cmed?: string;
@@ -127,6 +130,31 @@ function formatarFaixaPreco(minimo: number | null | undefined, maximo: number | 
   return `${formatarPreco(minimo)} a ${formatarPreco(maximo)}`;
 }
 
+function precoCmedExibivel(preco: PrecoCmedSugestao | null | undefined) {
+  if (!preco || preco.fonte_icms === "media_nacional_nao_verificada" || /verifica[cç][aã]o humana/i.test(preco.rotulo)) {
+    return { valor: null, rotulo: "Preço não disponível para esta UF" };
+  }
+  return { valor: preco.valor, rotulo: formatarPreco(preco.valor) };
+}
+
+function formatarCep(valor: string) {
+  const digitos = valor.replace(/\D/g, "").slice(0, 8);
+  return digitos.length > 5 ? `${digitos.slice(0, 5)}-${digitos.slice(5)}` : digitos;
+}
+
+function montarEnderecoCompleto(campos: {
+  cep: string; logradouro: string; numero: string; complemento: string;
+  bairro: string; cidade: string; uf: string;
+}) {
+  const primeira = [campos.logradouro.trim(), campos.numero.trim()].filter(Boolean).join(", ");
+  return [
+    [primeira, campos.complemento.trim()].filter(Boolean).join(" - "),
+    campos.bairro.trim(),
+    campos.cidade.trim() && campos.uf.trim() ? `${campos.cidade.trim()}/${campos.uf.trim().toUpperCase()}` : campos.cidade.trim() || campos.uf.trim().toUpperCase(),
+    campos.cep.trim() ? `CEP ${formatarCep(campos.cep)}` : "",
+  ].filter(Boolean).join(" - ");
+}
+
 function rotuloPrecoItem(item: Item) {
   return item.price_label ?? formatarPreco(item.pmc_snapshot);
 }
@@ -157,6 +185,14 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
   const temC5 = doc.itens.some((item) => String(item.lista ?? "").toUpperCase() === "C5");
+
+  // `usuario` pode chegar depois do primeiro render. Sem esta sincronizacao,
+  // o estado ficava preso em MANUAL mesmo quando Minha Conta definia A1.
+  useEffect(() => {
+    if (usuario?.assinatura_metodo_preferido) {
+      setMetodo(usuario.assinatura_metodo_preferido);
+    }
+  }, [usuario?.assinatura_metodo_preferido]);
 
   useEffect(() => {
     if (doc.tipo !== "RCE" || !provedores?.length) return;
@@ -196,7 +232,9 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         method: "POST",
         body: JSON.stringify({ endereco: endereco || null, metodo }),
       });
-      baixarBlob(blob, `receituario-${doc.id}.pdf`);
+      const prefixo = doc.tipo === "RCE" ? "receita-controle-especial" : "receituario";
+      const sufixo = metodo === "A1_ARQUIVO" ? "-assinado" : "";
+      baixarBlob(blob, `${prefixo}-${doc.id}${sufixo}.pdf`);
       const externo = METODOS_MANUAL_EXTERNO.has(metodo);
       const provedor = provedores?.find((item) => item.codigo === metodo);
       onAtualizado({
@@ -263,7 +301,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
       {doc.tipo === "RCE" && (
         <>
           <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-            Modelo Anvisa V2: duas vias, frente e verso em cada página.
+            Modelo Anvisa V2: duas vias. O verso opcional de preenchimento da farmácia não é impresso.
           </p>
         </>
       )}
@@ -542,7 +580,16 @@ export default function Receituario() {
   const [erroCarregar, setErroCarregar] = useState("");
 
   const [nome, setNome] = useState("");
-  const [endereco, setEndereco] = useState("");
+  const [cep, setCep] = useState("");
+  const [logradouro, setLogradouro] = useState("");
+  const [numero, setNumero] = useState("");
+  const [complemento, setComplemento] = useState("");
+  const [bairro, setBairro] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [uf, setUf] = useState("");
+  const [consultandoCep, setConsultandoCep] = useState(false);
+  const [erroCep, setErroCep] = useState("");
+  const sequenciaCep = useRef(0);
   const [documento, setDocumento] = useState("");
   const [cid, setCid] = useState("");
   const [observacoes, setObservacoes] = useState("");
@@ -637,6 +684,7 @@ export default function Receituario() {
   function escolherFarmaco(i: number, f: Farmaco) {
     setPrevia(null);
     if (f.slug) {
+      const precoCmed = precoCmedExibivel(f.preco);
       // Catálogo clínico: fluxo em 2 passos, como já era — escolhe o
       // genérico aqui, e a apresentação comercial específica logo abaixo
       // (`escolherApresentacao`, via `/drugs/{slug}/apresentacoes`).
@@ -647,9 +695,10 @@ export default function Receituario() {
             posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo,
             brand_name: f.marca ?? undefined, manufacturer: f.fabricante ?? undefined,
             cmed_version: f.price_source === "kairos" ? undefined : f.cmed_publicado_em ?? undefined,
-            price_source: f.price_source ?? (f.preco ? "cmed" : undefined), price_label: f.preco?.rotulo,
-            price_min: f.price_min ?? f.preco?.valor ?? undefined,
-            price_max: f.price_max ?? f.preco?.valor ?? undefined,
+            price_source: f.price_source ?? (f.preco ? "cmed" : undefined),
+            price_label: f.price_source === "kairos" ? f.preco?.rotulo : precoCmed.rotulo,
+            price_min: f.price_min ?? precoCmed.valor ?? undefined,
+            price_max: f.price_max ?? precoCmed.valor ?? undefined,
             price_reference: f.price_reference ?? f.cmed_publicado_em ?? undefined,
             price_source_page: f.source_page ?? undefined }
         : it));
@@ -668,6 +717,7 @@ export default function Receituario() {
     // pra desdobrar (não há `/apresentacoes` sem `slug`), então tudo é
     // preenchido de uma vez, incluindo marca/laboratório/preço já
     // conhecidos da própria sugestão.
+    const precoCmed = precoCmedExibivel(f.preco);
     setItens((lista) => lista.map((it, idx) => idx === i
       ? {
           drug_slug: undefined, cmed_apresentacao_id: f.cmed_apresentacao_id ?? undefined,
@@ -675,11 +725,11 @@ export default function Receituario() {
           quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
           posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo,
           brand_name: f.marca ?? undefined, manufacturer: f.fabricante ?? undefined,
-          ggrem: f.ggrem ?? undefined, pmc_snapshot: f.preco?.valor ?? undefined,
+          ggrem: f.ggrem ?? undefined, pmc_snapshot: precoCmed.valor ?? undefined,
           uf: usuario?.council_state ?? undefined,
           cmed_version: f.cmed_publicado_em ?? undefined,
-          price_source: "cmed", price_label: f.preco?.rotulo,
-          price_min: f.preco?.valor ?? undefined, price_max: f.preco?.valor ?? undefined,
+          price_source: "cmed", price_label: precoCmed.rotulo,
+          price_min: precoCmed.valor ?? undefined, price_max: precoCmed.valor ?? undefined,
           price_reference: f.cmed_publicado_em ?? undefined,
         }
       : it));
@@ -690,16 +740,17 @@ export default function Receituario() {
   }
 
   function escolherApresentacao(i: number, ap: ApresentacaoCmed, resp: RespostaApresentacoes) {
+    const precoCmed = precoCmedExibivel(ap.preco);
     setPrevia(null);
     setItens((lista) => lista.map((it, idx) => idx === i ? {
       ...it,
       descricao: ap.produto,
       apresentacao: ap.apresentacao,
       brand_name: ap.produto, manufacturer: ap.laboratorio, ggrem: ap.ggrem,
-      pmc_snapshot: ap.preco.valor ?? undefined,
+      pmc_snapshot: precoCmed.valor ?? undefined,
       uf: resp.uf ?? undefined, cmed_version: resp.cmed_publicado_em ?? undefined,
-      price_source: "cmed", price_label: ap.preco.rotulo,
-      price_min: ap.preco.valor ?? undefined, price_max: ap.preco.valor ?? undefined,
+      price_source: "cmed", price_label: precoCmed.rotulo,
+      price_min: precoCmed.valor ?? undefined, price_max: precoCmed.valor ?? undefined,
       price_reference: resp.cmed_publicado_em ?? undefined,
     } : it));
   }
@@ -786,13 +837,55 @@ export default function Receituario() {
     setPrevia(null);
   }
 
+  async function atualizarCep(valor: string) {
+    const formatado = formatarCep(valor);
+    setCep(formatado);
+    setErroCep("");
+    const digitos = formatado.replace(/\D/g, "");
+    const sequencia = ++sequenciaCep.current;
+    if (digitos.length !== 8) {
+      setConsultandoCep(false);
+      return;
+    }
+    setConsultandoCep(true);
+    try {
+      const resposta = await api.get<EnderecoCep>(`/receituario/enderecos/cep/${digitos}`);
+      if (sequencia !== sequenciaCep.current) return;
+      setCep(formatarCep(resposta.cep));
+      setLogradouro(resposta.logradouro);
+      setComplemento(resposta.complemento);
+      setBairro(resposta.bairro);
+      setCidade(resposta.cidade);
+      setUf(resposta.uf);
+    } catch (e) {
+      if (sequencia !== sequenciaCep.current) return;
+      setErroCep(e instanceof ApiError ? e.message : "Não foi possível consultar o CEP. Preencha manualmente.");
+    } finally {
+      if (sequencia === sequenciaCep.current) setConsultandoCep(false);
+    }
+  }
+
   const itensValidos = itens.filter((it) => it.descricao.trim() || it.drug_slug || it.cmed_apresentacao_id);
   const itensComPreco = itensValidos.filter((it) => it.price_min != null || it.pmc_snapshot != null);
   const somaPrecosMinimos = itensComPreco.reduce((total, it) => total + (it.price_min ?? it.pmc_snapshot ?? 0), 0);
   const somaPrecosMaximos = itensComPreco.reduce((total, it) => total + (it.price_max ?? it.pmc_snapshot ?? 0), 0);
   const somaPrecosParcial = itensComPreco.length > 0 && itensComPreco.length < itensValidos.length;
+  const enderecoCompleto = montarEnderecoCompleto({
+    cep, logradouro, numero, complemento, bairro, cidade, uf,
+  });
   const pedido = {
-    destinatario: { nome, endereco: endereco || undefined, documento: documento || undefined },
+    destinatario: {
+      nome,
+      endereco: enderecoCompleto || undefined,
+      documento: documento || undefined,
+      cep: cep || undefined,
+      logradouro: logradouro || undefined,
+      numero: numero || undefined,
+      complemento: complemento || undefined,
+      bairro: bairro || undefined,
+      cidade: cidade || undefined,
+      uf: uf || undefined,
+    },
     itens: itensValidos.map((it) => ({
       drug_slug: it.drug_slug, cmed_apresentacao_id: it.cmed_apresentacao_id,
       descricao: it.descricao, apresentacao: it.apresentacao,
@@ -849,7 +942,13 @@ export default function Receituario() {
     setErro("");
     setPrevia(null);
     setNome(d.destinatario.nome ?? "");
-    setEndereco(d.destinatario.endereco ?? "");
+    setCep("");
+    setLogradouro(d.destinatario.endereco ?? "");
+    setNumero("");
+    setComplemento("");
+    setBairro("");
+    setCidade("");
+    setUf("");
     setDocumento(d.destinatario.documento ?? "");
     setCid(d.documentos.find((doc) => doc.cid)?.cid ?? "");
     setObservacoes(d.observacoes ?? "");
@@ -924,10 +1023,6 @@ export default function Receituario() {
                 <label>Nome completo</label>
                 <input value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" />
               </div>
-              <div className="prescricao-campo prescricao-campo--largo">
-                <label>Endereço completo <small>Obrigatório para controle especial</small></label>
-                <input value={endereco} onChange={(e) => setEndereco(e.target.value)} autoComplete="street-address" />
-              </div>
               <div className="prescricao-campo">
                 <label>CPF do Paciente</label>
                 <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
@@ -936,6 +1031,38 @@ export default function Receituario() {
                 <label>CID <small>Obrigatório para anabolizantes/Lista C5</small></label>
                 <input value={cid} onChange={(e) => setCid(e.target.value.toUpperCase())}
                        placeholder="Ex.: E29.1" maxLength={10} />
+              </div>
+              <div className="prescricao-campo">
+                <label>CEP <small>Preenche o endereço automaticamente</small></label>
+                <input value={cep} onChange={(e) => void atualizarCep(e.target.value)}
+                       inputMode="numeric" autoComplete="postal-code" placeholder="00000-000" />
+                {consultandoCep && <small className="prescricao-campo__estado">Consultando CEP…</small>}
+                {erroCep && <small className="prescricao-campo__erro">{erroCep}</small>}
+              </div>
+              <div className="prescricao-campo prescricao-campo--largo">
+                <label>Logradouro <small>Obrigatório para controle especial</small></label>
+                <input value={logradouro} onChange={(e) => setLogradouro(e.target.value)} autoComplete="address-line1" />
+              </div>
+              <div className="prescricao-campo">
+                <label>Número <small>Obrigatório para controle especial</small></label>
+                <input value={numero} onChange={(e) => setNumero(e.target.value)} autoComplete="address-line2" />
+              </div>
+              <div className="prescricao-campo">
+                <label>Complemento <small>Opcional</small></label>
+                <input value={complemento} onChange={(e) => setComplemento(e.target.value)} autoComplete="address-line3" />
+              </div>
+              <div className="prescricao-campo">
+                <label>Bairro <small>Obrigatório para controle especial</small></label>
+                <input value={bairro} onChange={(e) => setBairro(e.target.value)} />
+              </div>
+              <div className="prescricao-campo">
+                <label>Cidade <small>Obrigatório para controle especial</small></label>
+                <input value={cidade} onChange={(e) => setCidade(e.target.value)} autoComplete="address-level2" />
+              </div>
+              <div className="prescricao-campo">
+                <label>Estado (UF) <small>Obrigatório para controle especial</small></label>
+                <input value={uf} onChange={(e) => setUf(e.target.value.replace(/[^a-z]/gi, "").slice(0, 2).toUpperCase())}
+                       autoComplete="address-level1" maxLength={2} placeholder="SP" />
               </div>
             </div>
           <p className="prescricao__nota-legal">
@@ -1011,14 +1138,17 @@ export default function Receituario() {
                             <small>
                               {[
                                 f.fabricante,
-                                f.tem_conteudo_clinico === false ? "sem conteúdo clínico aprofundado no site ainda" : null,
                                 f.fonte,
                               ].filter(Boolean).join(" · ")}
                             </small>
                           </span>
                           <span className="prescricao-sugestao__preco">
                             <small className="prescricao-sugestao__rotulo">Preço de referência</small>
-                            <strong>{f.preco?.rotulo ?? "Consultar apresentação"}</strong>
+                            <strong>{f.preco
+                              ? f.price_source === "kairos"
+                                ? f.preco.rotulo
+                                : precoCmedExibivel(f.preco).rotulo
+                              : "Consultar apresentação"}</strong>
                             {f.preco && (
                               <small>
                                 {f.fonte ?? "CMED"}
@@ -1121,7 +1251,9 @@ export default function Receituario() {
                                 <strong>{ap.produto}</strong>
                                 <small>{ap.laboratorio} · {ap.apresentacao}</small>
                               </span>
-                              <strong className="prescricao-apresentacoes__preco">{ap.preco.rotulo}</strong>
+                              <strong className="prescricao-apresentacoes__preco">
+                                {precoCmedExibivel(ap.preco).rotulo}
+                              </strong>
                             </button>
                           ))}
                         </div>
@@ -1129,8 +1261,8 @@ export default function Receituario() {
                     )}
                     {resp.uf && (
                       <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
-                        Preço de referência para {resp.uf} — teto CMED (PMC), lista {resp.cmed_publicado_em}.
-                        Nunca é o preço final de farmácia, que costuma ser menor.
+                        Teto CMED (PMC), lista {resp.cmed_publicado_em}. Quando não houver alíquota
+                        auditável para {resp.uf}, o preço permanece indisponível; nunca é estimado.
                       </p>
                     )}
                   </div>
@@ -1147,11 +1279,6 @@ export default function Receituario() {
                   <small className="prescricao-selecao__fonte">
                     Fonte CMED{it.uf ? ` · ${it.uf}` : ""}{it.price_reference ? ` · ${it.price_reference}` : it.cmed_version ? ` · referência ${it.cmed_version}` : ""}
                   </small>
-                  <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
-                    Da lista de preços da CMED — sem página clínica aprofundada no site ainda.
-                    A classificação de controlado (Portaria 344/98) já funciona normalmente para
-                    este item.
-                  </p>
                   <button type="button" className="botao botao--secundario" style={{ marginTop: "0.3rem", fontSize: "0.82rem" }}
                           onClick={() => trocarMedicamento(i)}>
                     Trocar medicamento
@@ -1329,7 +1456,11 @@ export default function Receituario() {
             <CartaoDocumento key={d.id} doc={d} provedores={provedores} tipos={tipos} onAtualizado={atualizarDocumento} />
           ))}
           <button className="botao botao--secundario" style={{ marginTop: "1rem" }}
-                  onClick={() => { setCriado(null); setItens([{ ...ITEM_VAZIO }]); setBuscaFarmaco([""]); setNome(""); setEndereco(""); setDocumento(""); setCid(""); setPrevia(null); }}>
+                  onClick={() => {
+                    setCriado(null); setItens([{ ...ITEM_VAZIO }]); setBuscaFarmaco([""]); setNome("");
+                    setCep(""); setLogradouro(""); setNumero(""); setComplemento("");
+                    setBairro(""); setCidade(""); setUf(""); setDocumento(""); setCid(""); setPrevia(null);
+                  }}>
             Criar outra receita
           </button>
         </div>

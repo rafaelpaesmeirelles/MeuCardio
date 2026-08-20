@@ -145,6 +145,8 @@ def test_fluxo_completo_emite_e_assina_documento_real_com_a1(client, db, criar_u
     resposta = _baixar_pdf_assinado(client, token, gid)
     assert resposta.status_code == 200, resposta.text
     assert resposta.headers["content-type"] == "application/pdf"
+    assert resposta.headers["x-corvia-assinatura"] == "assinada"
+    assert "-assinado.pdf" in resposta.headers["content-disposition"]
     pdf_bytes = resposta.content
     assert pdf_bytes[:4] == b"%PDF"
 
@@ -162,6 +164,26 @@ def test_fluxo_completo_emite_e_assina_documento_real_com_a1(client, db, criar_u
     # gera um PDF novo/diferente a cada leitura).
     segunda_leitura = _baixar_pdf_assinado(client, token, gid)
     assert segunda_leitura.content == pdf_bytes
+
+
+def test_preferencia_a1_e_respeitada_quando_cliente_omite_metodo(client, db, criar_usuario):
+    user, token = criar_usuario()
+    _subscribe(db, user.id)
+    _conectar_certificado(client, token, _gerar_pfx(), "senha123")
+    user.assinatura_metodo_preferido = "A1_ARQUIVO"
+    db.commit()
+    gid = _emitir_documento_livre(client, token)
+
+    resposta = client.get(
+        f"/api/document-templates/gerados/{gid}/pdf",
+        headers=_headers(token),
+    )
+
+    assert resposta.status_code == 200, resposta.text
+    assert resposta.headers["x-corvia-assinatura"] == "assinada"
+    assinatura = verificacao_pdf.verificar(resposta.content)
+    assert assinatura is not None
+    assert assinatura.intacta is True
 
 
 def test_fluxo_completo_emite_rce_e_assina_com_a1(client, db, criar_usuario):
@@ -190,7 +212,7 @@ def test_fluxo_completo_emite_rce_e_assina_com_a1(client, db, criar_usuario):
         json={
             "destinatario": {
                 "nome": "Paciente Teste",
-                "endereco": "Rua do Paciente, 10, Ribeirão Preto/SP",
+                "endereco": "Rua do Paciente, 10 - Centro - Ribeirão Preto/SP - CEP 14000-000",
                 "documento": "123.456.789-00",
             },
             "itens": [{

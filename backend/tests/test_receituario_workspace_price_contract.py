@@ -16,6 +16,13 @@ def test_receituario_workspace_uses_audited_kairos_price_without_changing_shell(
     assert "formatarFaixaPreco" in page
     assert "somaPrecosMinimos" in page
     assert "somaPrecosMaximos" in page
+    assert "precoCmedExibivel" in page
+    assert "Preço não disponível para esta UF" in page
+    assert "verificação humana" not in page.lower()
+    assert "/receituario/enderecos/cep/" in page
+    assert "setBairro" in page
+    assert "setCidade" in page
+    assert "setUf" in page
     assert ".prescricao-workspace" in styles
     assert ".prescricao-sugestao__preco" in styles
     assert ".prescricao-resumo" in styles

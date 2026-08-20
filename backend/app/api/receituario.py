@@ -3,8 +3,10 @@
 import asyncio
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+import re
 from typing import Literal
 
+import httpx
 from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
@@ -73,6 +75,13 @@ class DestinatarioIn(BaseModel):
     nome: str = Field(min_length=3, max_length=200)
     endereco: str | None = None
     documento: str | None = None
+    cep: str | None = Field(default=None, max_length=9)
+    logradouro: str | None = Field(default=None, max_length=180)
+    numero: str | None = Field(default=None, max_length=30)
+    complemento: str | None = Field(default=None, max_length=100)
+    bairro: str | None = Field(default=None, max_length=100)
+    cidade: str | None = Field(default=None, max_length=100)
+    uf: str | None = Field(default=None, max_length=2)
 
 
 class ReceituarioIn(BaseModel):
@@ -87,6 +96,37 @@ class RevisaoIn(BaseModel):
     confirmar: bool = True
     corrigir_para: str | None = None
     motivo: str | None = None
+
+
+def _texto_campo(valor: str | None) -> str:
+    return " ".join((valor or "").strip().split())
+
+
+def _endereco_destinatario(destinatario: DestinatarioIn) -> str | None:
+    """Serializa o endereço estruturado sem alterar o schema cifrado atual."""
+    campos = (
+        destinatario.cep, destinatario.logradouro, destinatario.numero,
+        destinatario.complemento, destinatario.bairro, destinatario.cidade,
+        destinatario.uf,
+    )
+    if not any(_texto_campo(campo) for campo in campos):
+        return _texto_campo(destinatario.endereco) or None
+
+    logradouro = _texto_campo(destinatario.logradouro)
+    numero = _texto_campo(destinatario.numero)
+    complemento = _texto_campo(destinatario.complemento)
+    bairro = _texto_campo(destinatario.bairro)
+    cidade = _texto_campo(destinatario.cidade)
+    uf = _texto_campo(destinatario.uf).upper()
+    cep_digitos = re.sub(r"\D", "", destinatario.cep or "")
+    cep = f"{cep_digitos[:5]}-{cep_digitos[5:]}" if len(cep_digitos) == 8 else ""
+
+    primeira = f"{logradouro}, {numero}" if numero else logradouro
+    if complemento:
+        primeira = f"{primeira} - {complemento}" if primeira else complemento
+    local = f"{cidade}/{uf}" if cidade and uf else cidade or uf
+    partes = [primeira, bairro, local, f"CEP {cep}" if cep else ""]
+    return " - ".join(parte for parte in partes if parte) or None
 
 
 def _carregar_regras(db: Session) -> tuple[dict[str, Substancia], list[Regra], str | None]:
@@ -275,6 +315,43 @@ def listar_tipos(db: Session = Depends(get_db), _=Depends(current_user)):
     } for t in db.query(PrescriptionType).order_by(PrescriptionType.id).all()]
 
 
+@router.get("/enderecos/cep/{cep}")
+def consultar_cep(cep: str, _=Depends(current_user)):
+    """Consulta CEP no servidor e devolve somente os campos de endereço.
+
+    O destino é fixo e o CEP é validado antes da chamada, evitando URL
+    arbitrária/SSRF. Nenhum dado do paciente é enviado: apenas os oito dígitos.
+    """
+    digitos = re.sub(r"\D", "", cep)
+    if len(digitos) != 8:
+        raise HTTPException(status_code=422, detail="Informe um CEP com 8 dígitos.")
+    try:
+        resposta = httpx.get(
+            f"https://viacep.com.br/ws/{digitos}/json/",
+            timeout=6.0,
+            follow_redirects=False,
+        )
+        resposta.raise_for_status()
+        dados = resposta.json()
+    except (httpx.HTTPError, ValueError) as exc:
+        raise HTTPException(
+            status_code=503,
+            detail="A consulta de CEP está temporariamente indisponível. Preencha o endereço manualmente.",
+        ) from exc
+    if not isinstance(dados, dict):
+        raise HTTPException(status_code=503, detail="O serviço de CEP devolveu uma resposta inválida.")
+    if dados.get("erro") is True:
+        raise HTTPException(status_code=404, detail="CEP não encontrado.")
+    return {
+        "cep": _texto_campo(dados.get("cep")),
+        "logradouro": _texto_campo(dados.get("logradouro")),
+        "complemento": _texto_campo(dados.get("complemento")),
+        "bairro": _texto_campo(dados.get("bairro")),
+        "cidade": _texto_campo(dados.get("localidade")),
+        "uf": _texto_campo(dados.get("uf")).upper(),
+    }
+
+
 @router.post("/classificar")
 def classificar_previa(dados: ReceituarioIn, db: Session = Depends(get_db),
                        user=Depends(current_user)):
@@ -314,6 +391,7 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
             "itens": bloqueios_escopo,
         })
 
+    endereco_destinatario = _endereco_destinatario(dados.destinatario)
     rce_itens = [
         item for plano in resultado.documentos if plano.tipo == "RCE" for item in plano.itens
     ]
@@ -327,7 +405,7 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
             medico=medico_rce,
             destinatario={
                 "nome": dados.destinatario.nome,
-                "endereco": dados.destinatario.endereco,
+                "endereco": endereco_destinatario,
                 "documento": dados.destinatario.documento,
             },
             itens=[_item_snapshot(item) for item in rce_itens],
@@ -351,7 +429,10 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
     db.add(PrescriptionRecipient(
         prescription_id=presc.id,
         nome_cifrado=cofre.cifrar_campo(d.nome, presc.id),
-        endereco_cifrado=cofre.cifrar_campo(d.endereco, presc.id) if d.endereco else None,
+        endereco_cifrado=(
+            cofre.cifrar_campo(endereco_destinatario, presc.id)
+            if endereco_destinatario else None
+        ),
         documento_cifrado=cofre.cifrar_campo(d.documento, presc.id) if d.documento else None,
     ))
 
@@ -516,7 +597,7 @@ def revisar(documento_id: int, dados: RevisaoIn, db: Session = Depends(get_db),
 
 class EmitirIn(BaseModel):
     endereco: str | None = None
-    metodo: str = "MANUAL"
+    metodo: str | None = None
 
 
 @router.post("/documentos/{documento_id}/emitir")
@@ -535,8 +616,9 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
             detail="endereco precisa ser 'residencial', 'profissional' ou omitido.",
         )
 
+    metodo = dados.metodo or user.assinatura_metodo_preferido or "MANUAL"
     try:
-        provedor, info_metodo = assinatura_emissao.preparar(dados.metodo, db=db, user=user)
+        provedor, info_metodo = assinatura_emissao.preparar(metodo, db=db, user=user)
     except assinatura_emissao.MetodoInvalido as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
 
@@ -563,7 +645,7 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
         )
     if (
         doc.tipo_codigo == "RCE"
-        and dados.metodo != "MANUAL"
+        and metodo != "MANUAL"
         and info_metodo.nivel != catalogo.NIVEL_QUALIFICADA
     ):
         bloqueios.append(
@@ -623,6 +705,7 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
                 observacoes=presc.notes or "", medico=medico_rce,
                 endereco_profissional=endereco_medico,
                 data_emissao=data_emissao, cid=doc.cid,
+                metodo_assinatura=metodo,
             )
         except ValueError as e:
             raise HTTPException(status_code=409, detail={
@@ -634,15 +717,23 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
             destinatario=destinatario, itens=doc.itens,
             observacoes=presc.notes or "", medico=medico,
             endereco=endereco_medico, data_emissao=data_emissao,
-            metodo_assinatura=dados.metodo, provedor_nome=info_metodo.nome,
+            metodo_assinatura=metodo, provedor_nome=info_metodo.nome,
         )
 
-    emitido = assinatura_emissao.assinar_e_persistir(
-        db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id,
-        metodo=dados.metodo, provedor=provedor, info=info_metodo,
-        pdf_visual=pdf_visual, medico=medico_rce,
-        criado_por=user.id, data_emissao=data_emissao,
-    )
+    try:
+        emitido = assinatura_emissao.assinar_e_persistir(
+            db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id,
+            metodo=metodo, provedor=provedor, info=info_metodo,
+            pdf_visual=pdf_visual, medico=medico_rce,
+            criado_por=user.id, data_emissao=data_emissao,
+            layout=doc.tipo_codigo,
+        )
+    except assinatura_emissao.AssinaturaNaoDetectada as exc:
+        raise HTTPException(status_code=409, detail={
+            "erro": "A emissão foi interrompida porque a assinatura digital não pôde ser validada.",
+            "bloqueios": [str(exc)],
+            "nada_foi_simulado": True,
+        }) from exc
 
     doc.status = "emitido"
     doc.emitido_em = data_emissao
@@ -654,18 +745,20 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
         entity="prescription_document", entity_id=str(doc.id),
         detail={
             "tipo": doc.tipo_codigo, "bytes": len(emitido.pdf),
-            "metodo": dados.metodo, "sha256": emitido.registro.sha256,
+            "metodo": metodo, "sha256": emitido.registro.sha256,
             "modelo": MODELO_VERSAO,
             "lista_c5": any(str(i.get("lista") or "").upper() == "C5" for i in doc.itens),
         },
     ))
     db.commit()
+    sufixo_assinado = "-assinado" if emitido.registro.assinado_em else ""
     nome_arquivo = (
-        f"receita-controle-especial-{doc.id}.pdf"
-        if doc.tipo_codigo == "RCE" else f"receituario-{doc.id}.pdf"
+        f"receita-controle-especial-{doc.id}{sufixo_assinado}.pdf"
+        if doc.tipo_codigo == "RCE" else f"receituario-{doc.id}{sufixo_assinado}.pdf"
     )
     return Response(content=emitido.pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="{nome_arquivo}"',
+        "X-Corvia-Assinatura": "assinada" if emitido.registro.assinado_em else "nao-assinada",
     })
 
 

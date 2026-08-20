@@ -32,9 +32,9 @@ def _endereco():
     }
 
 
-def test_rce_gera_duas_vias_com_frente_e_verso():
+def test_rce_gera_duas_vias_sem_verso_opcional_do_dispensador():
     pdf = receita_controle_especial(
-        destinatario={"nome": "Paciente Teste", "documento": "12345678900", "endereco": "Rua A, 1"},
+        destinatario={"nome": "Paciente Teste", "documento": "12345678900", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"},
         itens=[{"descricao": "Medicamento controlado", "apresentacao": "20 mg", "quantidade": "60 comprimidos (sessenta comprimidos)", "posologia": "Tomar 1 comprimido à noite", "lista": "C1"}],
         observacoes="Uso conforme orientação.",
         medico=_medico(), endereco_profissional=_endereco(),
@@ -42,7 +42,7 @@ def test_rce_gera_duas_vias_com_frente_e_verso():
     )
     assert pdf.startswith(b"%PDF")
     assert pdf.rstrip().endswith(b"%%EOF")
-    assert len(re.findall(rb"/Type\s*/Page\b", pdf)) == 4
+    assert len(re.findall(rb"/Type\s*/Page\b", pdf)) == 2
 
 
 def test_c5_exige_medico_ou_dentista_e_campos_da_lei_9965():
@@ -56,7 +56,7 @@ def test_c5_exige_medico_ou_dentista_e_campos_da_lei_9965():
     mensagem = " | ".join(erros)
     assert "CRM/CRO" in mensagem
     assert "CPF do prescritor" in mensagem
-    assert "endereço completo do paciente" in mensagem
+    assert "logradouro, número, bairro, cidade, UF e CEP" in mensagem
     assert "CID" in mensagem
     assert "endereço profissional" in mensagem
     assert "telefone profissional" in mensagem
@@ -64,7 +64,7 @@ def test_c5_exige_medico_ou_dentista_e_campos_da_lei_9965():
 
 def test_c5_completo_gera_pdf_sem_bloqueios():
     medico = _medico()
-    destinatario = {"nome": "Paciente Teste", "documento": "12345678900", "endereco": "Rua A, 1"}
+    destinatario = {"nome": "Paciente Teste", "documento": "12345678900", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"}
     itens = [{"descricao": "Testosterona", "apresentacao": "100 mg", "quantidade": "10 ampolas (dez ampolas)", "posologia": "Uso conforme prescrição", "lista": "C5"}]
     assert validar_requisitos_rce(
         medico=medico, destinatario=destinatario, itens=itens,
@@ -77,23 +77,42 @@ def test_c5_completo_gera_pdf_sem_bloqueios():
     )
     assert pdf.startswith(b"%PDF")
     assert pdf.rstrip().endswith(b"%%EOF")
-    assert len(re.findall(rb"/Type\s*/Page\b", pdf)) == 4
+    assert len(re.findall(rb"/Type\s*/Page\b", pdf)) == 2
 
 
 def test_rce_recusa_quantidade_sem_algarismos_e_extenso():
     erros = validar_requisitos_rce(
         medico=_medico(),
-        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"},
         itens=[{"descricao": "Controlado", "quantidade": "60 comprimidos", "lista": "C1"}],
         endereco_profissional=_endereco(), cid=None,
     )
     assert any("algarismos e por extenso" in erro for erro in erros)
 
 
+def test_rce_recusa_endereco_do_paciente_sem_bairro():
+    erros = validar_requisitos_rce(
+        medico=_medico(),
+        destinatario={
+            "nome": "Paciente",
+            "documento": "123",
+            "endereco": "Rua A, 1 - Ribeirão Preto/SP - CEP 14000-000",
+        },
+        itens=[{
+            "descricao": "Controlado",
+            "quantidade": "10 comprimidos (dez comprimidos)",
+            "lista": "C1",
+        }],
+        endereco_profissional=_endereco(),
+        cid=None,
+    )
+    assert any("bairro" in erro for erro in erros)
+
+
 def test_uso_continuo_nao_remove_quantidade_obrigatoria_da_rce():
     erros = validar_requisitos_rce(
         medico=_medico(),
-        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"},
         itens=[{"descricao": "Controlado", "uso_continuo": True, "lista": "C1"}],
         endereco_profissional=_endereco(), cid=None,
     )
@@ -108,7 +127,7 @@ def test_rce_recusa_mais_de_tres_substancias_c1():
     ]
     erros = validar_requisitos_rce(
         medico=_medico(),
-        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"},
         itens=itens, endereco_profissional=_endereco(), cid=None,
     )
     assert any("no máximo três substâncias" in erro for erro in erros)
@@ -118,7 +137,7 @@ def test_rce_recusa_endereco_profissional_parcial():
     endereco_parcial = {"logradouro": "Rua das Flores", "numero": "", "cidade": "", "uf": ""}
     erros = validar_requisitos_rce(
         medico=_medico(),
-        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1 - Centro - Ribeirão Preto/SP - CEP 14000-000"},
         itens=[{
             "descricao": "Controlado", "quantidade": "10 comprimidos (dez comprimidos)",
             "lista": "C1",

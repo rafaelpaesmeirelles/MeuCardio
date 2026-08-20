@@ -504,6 +504,12 @@ function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, provedores, onFec
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
   const [emitido, setEmitido] = useState(false);
 
+  useEffect(() => {
+    if (usuario?.assinatura_metodo_preferido) {
+      setMetodo(usuario.assinatura_metodo_preferido);
+    }
+  }, [usuario?.assinatura_metodo_preferido]);
+
   async function baixar() {
     try {
       const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
