@@ -22832,5 +22832,91 @@
         "por_que": "Segundo caso de prática: testa a interpretação de um peptídeo natriurético abaixo do corte em paciente dispneico, fechando a trilha no ponto em que ela começou."
       }
     ]
+  },
+  {
+    "slug": "trilha-saude-mental-depressao-e-solidao-ao-longo-da-trajetoria-da-insuficiencia-cardiaca",
+    "titulo": "Saúde mental e cardiologia: depressão e solidão ao longo da trajetória da insuficiência cardíaca — do risco de adoecer à reinternação",
+    "tema": "Saúde mental e cardiologia",
+    "objetivo": "Sair sabendo que a depressão e o isolamento social atravessam toda a trajetória da insuficiência cardíaca por um ângulo ainda não coberto neste tema: como fator de risco para o desenvolvimento da própria doença, como marcador combinado com a fragilidade no idoso, no comparativo direto entre ativação comportamental e antidepressivo já na IC avançada, na solidão percebida que prediz reinternação independente da gravidade cardíaca, e na intervenção diádica cuidador-paciente que responde estruturalmente a essa cadeia.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "depressao-como-fator-de-risco-para-insuficiencia-cardiaca-incidente-metanalise-de-2-6-milhoes",
+        "por_que": "Abre a trilha no ponto mais precoce da trajetória: depressão, isoladamente, aumenta o risco de uma pessoa SEM insuficiência cardíaca desenvolver a doença no futuro (HR 1,25, metanálise de 2,6 milhões de participantes) — pergunta de rastreio em atenção primária, distinta da depressão pós-infarto ou do tratamento na IC já instalada, que as outras trilhas deste tema já cobrem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sobreposicao-de-fragilidade-e-depressao-como-marcador-de-risco-cardiovascular",
+        "por_que": "Uma vez estabelecido que depressão eleva o risco de IC, este passo mostra como esse risco se amplifica no idoso quando depressão e fragilidade coexistem — a sobreposição das duas eleva a razão de prevalência de doença cardiovascular a 4,86, bem acima de cada condição isolada, justificando rastrear as duas juntas na população mais vulnerável à IC."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ativacao-comportamental-versus-antidepressivo-na-depressao-do-paciente-com-insuficiencia-cardiaca-avancada",
+        "por_que": "Passa do risco para o manejo: no paciente que já tem IC avançada, este é o primeiro ensaio da base a comparar ativação comportamental (psicoterapia estruturada) contra antidepressivo cabeça a cabeça, com análise de adesão — a decisão terapêutica concreta que sucede o reconhecimento de risco dos dois passos anteriores."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "solidao-percebida-e-reinternacao-na-insuficiencia-cardiaca-cronica",
+        "por_que": "Desloca o foco do tratamento farmacológico/psicoterápico para um fator psicossocial de curso — a solidão percebida — que prediz reinternação por IC crônica mesmo sem diferença objetiva de gravidade cardíaca, mostrando que a via de risco não se esgota no diagnóstico psiquiátrico formal tratado no passo anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "intervencoes-diadicas-cuidador-paciente-e-apoio-ao-cuidador-na-insuficiencia-cardiaca",
+        "por_que": "Fecha a trilha com a resposta estrutural às duas lacunas expostas pelos passos anteriores — a exaustão do cuidador que sustenta o autocuidado diário e a solidão do paciente que prediz reinternação: intervenção diádica que trata paciente e cuidador como unidade de cuidado, com meta-regressão mostrando quais desenhos de programa de fato funcionam."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-farmacologia-qt-longo-induzido-por-farmaco-mecanismo-e-gatilhos",
+    "titulo": "Farmacologia do QT longo induzido por fármaco: do mecanismo eletrofisiológico ao gatilho no consultório e na interconsulta",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo explicar por que um fármaco prolonga o QT em nível de canal iônico, reconhecer que o risco varia entre um antiarrítmico usado de propósito para isso e um fármaco de outra especialidade que o faz como efeito colateral, e responder com segurança às duas interconsultas mais comuns sobre QT que chegam ao cardiologista — de fora da cardiologia (opioide, oncologia) e de dentro dela (escolha entre dois antiarrítmicos IV de risco distinto).",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipocalcemia-grave-e-prolongamento-do-qt-mecanismo-de-fase-2-e-reversao-rapida-com-calcio",
+        "por_que": "Abre a trilha pelo mecanismo eletrofisiológico, não pelo fármaco: mostra que o QT pode prolongar por vias distintas (aqui, atraso da fase 2/platô por queda da corrente de cálcio tipo L, diferente do bloqueio de I_Kr na fase 3 que domina o restante da trilha) — vocabulário de fase do potencial de ação que as próximas etapas pressupõem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "indapamida",
+        "por_que": "Primeiro caso de bloqueio de I_Kr propriamente dito, e o mais despercebido: um diurético tiazídico-símile de uso ambulatorial corriqueiro que prolonga QT por mecanismo direto E por hipocalemia — mostra que o risco não está reservado a fármacos 'exóticos', ele já está na prescrição de rotina do próprio cardiologista."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ibutilida",
+        "por_que": "Vira a lógica ao contrário: aqui o bloqueio de canal que prolonga o QT não é efeito colateral a evitar, é o próprio mecanismo terapêutico — um antiarrítmico IV hospitalar usado deliberadamente para reverter FA/flutter recente, com monitorização de QT como parte esperada, não como alarme."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "vernakalanto",
+        "por_que": "Contraste direto com a etapa anterior, mesma indicação (cardioversão química da FA de início recente): um antiarrítmico IV atrial-seletivo, com menor efeito sobre o miocárdio ventricular e por isso menor risco proarrítmico — a etapa que ensina a escolher entre os dois pelo perfil de risco, não só pela eficácia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "metadona-e-prolongamento-do-intervalo-qt",
+        "por_que": "Primeira interconsulta de fora da cardiologia: um opioide de uso crônico (dependência ou dor) cujo risco de QT é dose-dependente mas sem limiar totalmente seguro — o cenário clássico em que outra especialidade pede ao cardiologista para 'liberar o QT', exigindo tudo que as etapas 1 a 4 já ensinaram sobre mecanismo e gradiente de risco."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-menina-revumenibe-ziftomenibe-e-prolongamento-do-qtc",
+        "por_que": "Fecha a trilha com a interconsulta mais nova e mais complexa — a cardio-oncologia: dois inibidores da mesma classe (revumenibe e ziftomenibe) com risco de QTc marcadamente diferente entre si, obrigando a mesma leitura comparativa de risco já treinada no par ibutilida/vernakalanto, agora aplicada a uma classe de fármaco lançada nos últimos anos."
+      }
+    ]
   }
 ]
