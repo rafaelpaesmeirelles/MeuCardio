@@ -19,6 +19,7 @@ jobs:
           fetch-depth: 0
       - name: Apply backend stabilization patches
         run: |
+          python .github/scripts/fix_backend_stabilizer.py
           python .github/scripts/stabilize_product_backend.py
           python -m compileall -q backend/app
           git diff --check
