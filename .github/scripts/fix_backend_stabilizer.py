@@ -3,6 +3,7 @@ from pathlib import Path
 path = Path(__file__).with_name("stabilize_product_backend.py")
 text = path.read_text(encoding="utf-8")
 
+# Current ResultadoEnvio has only (enviado, erro, assinado_smime), not provider/display fields.
 text = text.replace(
     "    '                False, conta.provider, conta.display_name, False,\\n'\n"
     "    '                \"A caixa nativa CorVIA/Mail360 não aceita S/MIME neste transporte. \"\\n'\n"
@@ -19,5 +20,27 @@ text = text.replace(
     "    '                \"não aceita S/MIME neste transporte. Escolha uma conta externa compatível.\",\\n'\n",
 )
 
+# Current home-location audit does not carry a detail dict. Patch the generated matcher accordingly.
+text = text.replace(
+    "    '    _audit(db, user, action, \"calendar_location\", item.id, {\"source\": \"profile_home_address\"})\\n'\n"
+    "    '    db.commit()\\n'\n"
+    "    '    db.refresh(item)\\n'\n"
+    "    '    return _dump_location(item)\\n',\n"
+    "    '    erro_geo = _try_geocode_calendar_location(item)\\n'\n"
+    "    '    _audit(db, user, action, \"calendar_location\", item.id, {\"source\": \"profile_home_address\"})\\n'\n"
+    "    '    db.commit()\\n'\n"
+    "    '    db.refresh(item)\\n'\n"
+    "    '    return _geocode_response(item, erro_geo)\\n',\n",
+    "    '    _audit(db, user, action, \"calendar_location\", item.id)\\n'\n"
+    "    '    db.commit()\\n'\n"
+    "    '    db.refresh(item)\\n'\n"
+    "    '    return _dump_location(item)\\n',\n"
+    "    '    erro_geo = _try_geocode_calendar_location(item)\\n'\n"
+    "    '    _audit(db, user, action, \"calendar_location\", item.id)\\n'\n"
+    "    '    db.commit()\\n'\n"
+    "    '    db.refresh(item)\\n'\n"
+    "    '    return _geocode_response(item, erro_geo)\\n',\n",
+)
+
 path.write_text(text, encoding="utf-8")
-print("backend stabilizer matcher corrected")
+print("backend stabilizer matchers corrected")
