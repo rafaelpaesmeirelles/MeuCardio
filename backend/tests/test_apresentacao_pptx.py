@@ -3,12 +3,16 @@ a opção de PDF ou .pptx editável no Modo Apresentação). Testado pela rota H
 real — mesmo conteúdo do PDF, formato de arquivo diferente.
 """
 import zipfile
+import hashlib
 from io import BytesIO
+from pathlib import Path
 
 from pptx import Presentation
 
 from app.models.content import Document
 from app.models.subscription import Subscription
+
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -76,6 +80,11 @@ def test_apresentacao_formato_pptx_gera_arquivo_powerpoint_valido(client, db, cr
     assert resposta.content[:2] == b"PK"
     with zipfile.ZipFile(BytesIO(resposta.content)) as z:
         assert "ppt/presentation.xml" in z.namelist()
+        imagens = [nome for nome in z.namelist() if nome.startswith("ppt/media/")]
+        hash_canonico = hashlib.sha256(
+            (ROOT / "backend/app/assets/corvia-logo-canonical.png").read_bytes()
+        ).digest()
+        assert any(hashlib.sha256(z.read(nome)).digest() == hash_canonico for nome in imagens)
 
     # Abre de verdade com python-pptx e confere que o conteúdo do documento
     # (não texto genérico) chegou aos slides.

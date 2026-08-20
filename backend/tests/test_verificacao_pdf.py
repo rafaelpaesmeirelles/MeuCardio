@@ -10,23 +10,33 @@ from cryptography import x509
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives.serialization import pkcs12
-from cryptography.x509.oid import NameOID
+from cryptography.x509.oid import NameOID, ObjectIdentifier
 from reportlab.pdfgen import canvas
 
 from app.services.assinatura import pdf_signer, verificacao_pdf
 
 
-def _gerar_pfx(*, senha: str = "senha123", cn: str = "DR TESTE DA SILVA:12345678900") -> bytes:
+def _gerar_pfx(
+    *, senha: str = "senha123", cn: str = "DR TESTE DA SILVA:12345678900",
+    politica: str | None = None,
+) -> bytes:
     chave = rsa.generate_private_key(public_exponent=65537, key_size=2048)
     nome = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, cn)])
-    certificado = (
+    construtor = (
         x509.CertificateBuilder()
         .subject_name(nome).issuer_name(nome).public_key(chave.public_key())
         .serial_number(x509.random_serial_number())
         .not_valid_before(datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=1))
         .not_valid_after(datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=365))
-        .sign(chave, hashes.SHA256())
     )
+    if politica:
+        construtor = construtor.add_extension(
+            x509.CertificatePolicies([
+                x509.PolicyInformation(ObjectIdentifier(politica), None),
+            ]),
+            critical=False,
+        )
+    certificado = construtor.sign(chave, hashes.SHA256())
     return pkcs12.serialize_key_and_certificates(
         name=b"teste", key=chave, cert=certificado, cas=None,
         encryption_algorithm=serialization.BestAvailableEncryption(senha.encode()),
@@ -58,6 +68,32 @@ def test_pdf_assinado_extrai_titular_emissor_e_validade():
     assert resultado.valido_de < resultado.valido_ate
     assert resultado.numero_serie
     assert resultado.assinado_em is not None
+    assert resultado.politicas_certificado == ()
+    assert resultado.qualificada_icp_brasil is False
+
+
+def test_pdf_identifica_politica_qualificada_icp_brasil_a3():
+    pfx = _gerar_pfx(politica="2.16.76.1.2.3.999")
+    assinado = pdf_signer.assinar_pdf(
+        _pdf_minimo(), pfx_bytes=pfx, senha="senha123", motivo="Receita", local="SP",
+    )
+
+    resultado = verificacao_pdf.verificar(assinado)
+    assert resultado is not None
+    assert resultado.politicas_certificado == ("2.16.76.1.2.3.999",)
+    assert resultado.qualificada_icp_brasil is True
+
+
+def test_pdf_nao_confunde_politica_privada_com_icp_brasil():
+    pfx = _gerar_pfx(politica="1.2.3.4.5")
+    assinado = pdf_signer.assinar_pdf(
+        _pdf_minimo(), pfx_bytes=pfx, senha="senha123", motivo="Receita", local="SP",
+    )
+
+    resultado = verificacao_pdf.verificar(assinado)
+    assert resultado is not None
+    assert resultado.politicas_certificado == ("1.2.3.4.5",)
+    assert resultado.qualificada_icp_brasil is False
 
 
 def test_pdf_adulterado_depois_de_assinado_perde_integridade():

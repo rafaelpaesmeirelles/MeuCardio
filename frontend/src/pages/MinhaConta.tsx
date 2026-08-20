@@ -625,7 +625,7 @@ type StatusCertificadoA1 = {
  * que não depende de nenhuma conta comercial: o médico já tem (ou compra
  * de qualquer Autoridade Certificadora credenciada) um arquivo .pfx/.p12
  * com a própria chave privada. */
-function CertificadoA1() {
+function CertificadoA1({ aoAlterar }: { aoAlterar: () => void }) {
   const [status, setStatus] = useState<StatusCertificadoA1 | null>(null);
   const [certificadoras, setCertificadoras] = useState<Certificadora[]>([]);
   const [arquivo, setArquivo] = useState<File | null>(null);
@@ -653,6 +653,7 @@ function CertificadoA1() {
       setArquivo(null);
       setSenha("");
       await carregarStatus();
+      aoAlterar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o certificado.");
     } finally {
@@ -666,6 +667,7 @@ function CertificadoA1() {
     try {
       await api.delete("/assinatura/certificado-a1");
       await carregarStatus();
+      aoAlterar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível remover o certificado.");
     } finally {
@@ -745,23 +747,27 @@ type AssinaturaEmail = {
   ativa: boolean;
   incluir_telefone: boolean;
   incluir_endereco: boolean;
+  assinar_digitalmente: boolean;
+  certificado_a1_conectado: boolean;
+  assinatura_digital_disponivel: boolean;
+  assinatura_digital_motivo: string | null;
+  assinatura_digital_ativa: boolean;
   pre_visualizacao: AssinaturaPreview | null;
 };
 
-/** Assinatura anexada ao final de todo e-mail enviado pelo CorvIA Mail (caixa
- * nativa e contas Google/Microsoft conectadas) — logo Corvia, logo
- * profissional se houver, nome e CRM. Desligada por padrão; telefone e
- * endereço do consultório são opções à parte, mesmo com a assinatura ligada. */
-function PreferenciaAssinaturaEmail() {
+/** Rodapé visual anexado a todo e-mail enviado pelo CorvIA Mail. Com A1,
+ * Google/Microsoft/Yahoo/iCloud também usam S/MIME; a caixa nativa fica
+ * bloqueada para nunca degradar silenciosamente para envio sem assinatura. */
+function PreferenciaAssinaturaEmail({ revisaoCertificado }: { revisaoCertificado: number }) {
   const [dados, setDados] = useState<AssinaturaEmail | null>(null);
   const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
 
   useEffect(() => {
     api.get<AssinaturaEmail>("/email/assinatura").then(setDados).catch(() => {});
-  }, []);
+  }, [revisaoCertificado]);
 
-  async function salvar(proximo: Pick<AssinaturaEmail, "ativa" | "incluir_telefone" | "incluir_endereco">) {
+  async function salvar(proximo: Pick<AssinaturaEmail, "ativa" | "incluir_telefone" | "incluir_endereco" | "assinar_digitalmente">) {
     setSalvando(true);
     setErro("");
     try {
@@ -779,31 +785,47 @@ function PreferenciaAssinaturaEmail() {
     <div className="cartao">
       <h2 style={{ margin: "0 0 0.2rem" }}>Assinatura de e-mail</h2>
       <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
-        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM ao final de
-        todo e-mail enviado pelo CorvIA Mail — caixa nativa e contas Google/Microsoft conectadas.
+        Anexa automaticamente a logo da Corvia, sua logo (se houver) e seu nome/CRM.
+        Os dados visuais e a assinatura digital S/MIME são opções independentes por usuário.
       </p>
 
       <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.7rem" }}>
         <input
           type="checkbox" style={{ width: "auto" }} checked={dados.ativa} disabled={salvando}
-          onChange={(e) => salvar({ ativa: e.target.checked, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco })}
+          onChange={(e) => salvar({ ativa: e.target.checked, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco, assinar_digitalmente: dados.assinar_digitalmente })}
         />
         Incluir assinatura nos e-mails que eu enviar
       </label>
+
+      <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.7rem" }}>
+        <input
+          type="checkbox" style={{ width: "auto" }} checked={dados.assinar_digitalmente}
+          disabled={salvando || !dados.assinatura_digital_disponivel}
+          onChange={(e) => salvar({ ativa: dados.ativa, incluir_telefone: dados.incluir_telefone, incluir_endereco: dados.incluir_endereco, assinar_digitalmente: e.target.checked })}
+        />
+        Assinar digitalmente por S/MIME os e-mails compatíveis
+      </label>
+      <p style={{ margin: "0.35rem 0 0", fontSize: "0.8rem", color: dados.assinatura_digital_ativa ? "var(--sucesso)" : "var(--texto-secundario)" }}>
+        {dados.assinatura_digital_ativa
+          ? "S/MIME ativo para este usuário. Google, Microsoft, Yahoo e iCloud enviam assinados; a caixa nativa é bloqueada para não enviar sem assinatura."
+          : dados.assinatura_digital_disponivel
+            ? "Certificado S/MIME disponível. Ative a opção acima se desejar assinar os e-mails."
+            : dados.assinatura_digital_motivo || "Conecte um certificado A1 para disponibilizar S/MIME."}
+      </p>
 
       {dados.ativa && (
         <div style={{ marginTop: "0.5rem", paddingLeft: "1.6rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
           <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             <input
               type="checkbox" style={{ width: "auto" }} checked={dados.incluir_telefone} disabled={salvando}
-              onChange={(e) => salvar({ ativa: true, incluir_telefone: e.target.checked, incluir_endereco: dados.incluir_endereco })}
+              onChange={(e) => salvar({ ativa: true, incluir_telefone: e.target.checked, incluir_endereco: dados.incluir_endereco, assinar_digitalmente: dados.assinar_digitalmente })}
             />
             Incluir telefone profissional
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             <input
               type="checkbox" style={{ width: "auto" }} checked={dados.incluir_endereco} disabled={salvando}
-              onChange={(e) => salvar({ ativa: true, incluir_telefone: dados.incluir_telefone, incluir_endereco: e.target.checked })}
+              onChange={(e) => salvar({ ativa: true, incluir_telefone: dados.incluir_telefone, incluir_endereco: e.target.checked, assinar_digitalmente: dados.assinar_digitalmente })}
             />
             Incluir endereço profissional
           </label>
@@ -827,7 +849,7 @@ function PreferenciaAssinaturaEmail() {
                   style={{ maxHeight: 48, maxWidth: 160, display: "block", marginBottom: 6 }}
                 />
               )}
-              <img src={dados.pre_visualizacao.logo_corvia_url} alt="Corvia" style={{ height: 22, display: "block" }} />
+              <img src="/corvia-logo-canonical.svg" alt="Corvia" style={{ height: 22, display: "block" }} />
             </div>
             <div style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "12.5px", color: "#3a4750" }}>
               <strong style={{ color: "#0b2e45" }}>{dados.pre_visualizacao.nome}</strong>
@@ -1097,6 +1119,7 @@ function Assinatura() {
 }
 
 export default function MinhaConta() {
+  const [revisaoCertificado, setRevisaoCertificado] = useState(0);
   const { usuario, recarregar, sair } = useAuth();
   const navigate = useNavigate();
   const [perfil, setPerfil] = useState<Usuario | null>(usuario);
@@ -1157,8 +1180,8 @@ export default function MinhaConta() {
           }}
         />
         <ResumoSincronizacao />
-        <CertificadoA1 />
-        <PreferenciaAssinaturaEmail />
+        <CertificadoA1 aoAlterar={() => setRevisaoCertificado((valor) => valor + 1)} />
+        <PreferenciaAssinaturaEmail revisaoCertificado={revisaoCertificado} />
         <DadosPessoais
           perfil={perfil}
           aoSalvar={(u) => {

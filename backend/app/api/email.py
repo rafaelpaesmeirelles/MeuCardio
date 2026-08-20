@@ -55,7 +55,7 @@ from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import emails, mail360
 from app.services import apple_mail, external_mail, yahoo_mail
-from app.services.assinatura import divulgacao_email, verificacao_pdf
+from app.services.assinatura import certificado_a1, divulgacao_email, smime, verificacao_pdf
 from app.services.agenda_integrada.contacts import list_contacts
 from app.services.agenda_integrada.domain import integration_credentials, store_integration_credentials
 from app.services.email_signature import dados_assinatura, montar_assinatura_html, montar_corpo_com_assinatura
@@ -205,14 +205,43 @@ class AssinaturaEmailIn(BaseModel):
     ativa: bool
     incluir_telefone: bool = False
     incluir_endereco: bool = False
+    assinar_digitalmente: bool | None = None
+
+
+def _assinatura_digital_solicitada(user: User) -> bool:
+    """Opt-in criptográfico independente da assinatura visual.
+
+    A preferência, e não a disponibilidade momentânea do certificado, decide
+    se o envio deve ser assinado. Assim, certificado removido/expirado causa
+    erro explícito no assinador em vez de degradação silenciosa para e-mail
+    sem S/MIME.
+    """
+    return bool(user.email_assinatura_digital_ativa)
+
+
+def _disponibilidade_assinatura_digital(db: Session, user: User) -> tuple[bool, str | None]:
+    try:
+        smime.preparar_assinante(db, user)
+    except smime.SmimeIndisponivel as exc:
+        return False, str(exc)
+    return True, None
 
 
 @router.get("/assinatura")
-def obter_assinatura(user: User = Depends(current_user)):
+def obter_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    certificado_conectado = certificado_a1.obter(db, user) is not None
+    digital_disponivel, motivo_digital = _disponibilidade_assinatura_digital(db, user)
     return {
         "ativa": user.email_assinatura_ativa,
         "incluir_telefone": user.email_assinatura_incluir_telefone,
         "incluir_endereco": user.email_assinatura_incluir_endereco,
+        "assinar_digitalmente": _assinatura_digital_solicitada(user),
+        "certificado_a1_conectado": certificado_conectado,
+        "assinatura_digital_disponivel": digital_disponivel,
+        "assinatura_digital_motivo": motivo_digital,
+        "assinatura_digital_ativa": bool(
+            _assinatura_digital_solicitada(user) and digital_disponivel
+        ),
         "pre_visualizacao": dados_assinatura(user),
     }
 
@@ -229,11 +258,26 @@ def definir_assinatura(
     user.email_assinatura_ativa = dados.ativa
     user.email_assinatura_incluir_telefone = dados.incluir_telefone
     user.email_assinatura_incluir_endereco = dados.incluir_endereco
+    digital_disponivel, motivo_digital = _disponibilidade_assinatura_digital(db, user)
+    if dados.assinar_digitalmente is True and not digital_disponivel:
+        raise HTTPException(
+            status_code=409,
+            detail=motivo_digital or "Nenhum certificado compatível com S/MIME está disponível.",
+        )
+    if dados.assinar_digitalmente is not None:
+        user.email_assinatura_digital_ativa = dados.assinar_digitalmente
     db.commit()
     return {
         "ativa": user.email_assinatura_ativa,
         "incluir_telefone": user.email_assinatura_incluir_telefone,
         "incluir_endereco": user.email_assinatura_incluir_endereco,
+        "assinar_digitalmente": _assinatura_digital_solicitada(user),
+        "certificado_a1_conectado": certificado_a1.obter(db, user) is not None,
+        "assinatura_digital_disponivel": digital_disponivel,
+        "assinatura_digital_motivo": motivo_digital,
+        "assinatura_digital_ativa": bool(
+            _assinatura_digital_solicitada(user) and digital_disponivel
+        ),
         "pre_visualizacao": dados_assinatura(user),
     }
 
@@ -928,6 +972,14 @@ def enviar(
 ):
     _exigir_configurado()
     titular = db.get(User, conta.user_id)
+    if _assinatura_digital_solicitada(titular):
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "A assinatura digital S/MIME está ativa. A caixa nativa CorVIA/Mail360 não aceita "
+                "MIME assinado; selecione uma conta Google, Microsoft, Yahoo ou iCloud para enviar."
+            ),
+        )
     corpo, formato = montar_corpo_com_assinatura(dados.corpo_html, montar_assinatura_html(titular))
     try:
         return mail360.enviar_mensagem(
@@ -947,6 +999,14 @@ def responder(
 ):
     _exigir_configurado()
     titular = db.get(User, conta.user_id)
+    if _assinatura_digital_solicitada(titular):
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "A assinatura digital S/MIME está ativa. A caixa nativa CorVIA/Mail360 não aceita "
+                "resposta MIME assinada; responda por uma conta externa compatível."
+            ),
+        )
     conteudo, formato = montar_corpo_com_assinatura(dados.conteudo, montar_assinatura_html(titular))
     try:
         return mail360.responder_mensagem(
@@ -1075,11 +1135,25 @@ def _mensagem_da_integracao(db: Session, integracao: CalendarIntegration, messag
     return external_mail.get_message(db, integracao, message_id)
 
 
-def _enviar_pela_integracao(db: Session, integracao: CalendarIntegration, *, to, subject, html, cc, bcc):
+def _enviar_pela_integracao(
+    db: Session, integracao: CalendarIntegration, *, user: User, to, subject, html, cc, bcc,
+    assinar_smime: bool,
+):
     modulo = _PROVEDORES_IMAP.get(integracao.provider)
     if modulo:
-        return modulo.send_message(integration_credentials(integracao), to=to, subject=subject, html=html, cc=cc, bcc=bcc)
-    return external_mail.send_message(db, integracao, to=to, subject=subject, html=html, cc=cc, bcc=bcc)
+        if not assinar_smime:
+            return modulo.send_message(
+                integration_credentials(integracao), to=to, subject=subject, html=html,
+                cc=cc, bcc=bcc,
+            )
+        return modulo.send_message(
+            integration_credentials(integracao), to=to, subject=subject, html=html,
+            cc=cc, bcc=bcc, db=db, user=user, assinar_smime=assinar_smime,
+        )
+    return external_mail.send_message(
+        db, integracao, to=to, subject=subject, html=html, cc=cc, bcc=bcc,
+        user=user, assinar_smime=assinar_smime,
+    )
 
 
 @router.get("/externas/{integration_id}/pastas")
@@ -1176,7 +1250,9 @@ def enviar_mensagem_externa(
     corpo = dados.corpo_html if assinatura is None else montar_corpo_com_assinatura(dados.corpo_html, assinatura)[0]
     try:
         return _enviar_pela_integracao(
-            db, integracao, to=dados.para, subject=dados.assunto, html=corpo, cc=dados.cc, bcc=dados.cco,
+            db, integracao, user=titular, to=dados.para, subject=dados.assunto,
+            html=corpo, cc=dados.cc, bcc=dados.cco,
+            assinar_smime=_assinatura_digital_solicitada(titular),
         )
     except (external_mail.ExternalMailError, yahoo_mail.YahooMailError, apple_mail.AppleMailError) as exc:
         raise _traduzir_erro_externo(exc) from exc

@@ -7,7 +7,7 @@ import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 
 // Trabalho 14 (06/08/2026) — mesmo conjunto de `provedor._MANUAL_EXTERNO`
 // no backend: métodos que não têm API própria e passam pelo Assinador ITI.
-const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
 
 type Template = { id: number; title: string; doc_type: string; body: string };
 type Gerado = { id: number; title: string; doc_type: string; created_at: string; patient_name: string | null };

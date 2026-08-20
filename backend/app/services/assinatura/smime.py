@@ -3,13 +3,10 @@
 MESMO certificado A1 já usado pra assinar PDF (Trabalho 7) — nenhuma
 chave/senha nova, `certificado_a1.carregar_para_assinar()`.
 
-**Só funciona para os caminhos onde a Corvia monta o e-mail bruto por SMTP
-— Yahoo e iCloud (`yahoo_mail.py`/`apple_mail.py`).** A caixa nativa do
-CorvIA Mail (Mail360) manda por uma API que só aceita campos estruturados
-(`fromAddress`/`toAddress`/`content`...) — não existe jeito de injetar um
-corpo MIME pré-assinado por ali (verificado em 06/08/2026, lendo o
-`enviar_mensagem()` de `app/services/mail360.py`; nenhuma tentativa de
-contornar isso foi feita — é limite documentado da API, não bug nosso).
+Funciona nos caminhos em que a CorVIA controla o MIME bruto: Yahoo/iCloud
+por SMTP e Google/Microsoft pelas respectivas APIs de MIME. A caixa nativa
+do CorVIA Mail (Mail360) só aceita campos estruturados
+(`fromAddress`/`toAddress`/`content`...), sem entrada para MIME assinado.
 
 ⚠️ **Limite honesto, para não prometer selo verde que não se controla:**
 a assinatura produzida aqui é criptograficamente válida — qualquer
@@ -37,6 +34,7 @@ dentro da parte assinada — é assim que RFC 1847 define `multipart/signed`.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from email.header import Header
 from email.message import EmailMessage
 from email.utils import formatdate, make_msgid
 
@@ -49,8 +47,11 @@ from app.services.assinatura.certificado_a1 import CertificadoInvalido, carregar
 
 
 class SmimeIndisponivel(Exception):
-    """Sem certificado A1 conectado, ou ele não decifra — quem chama decide
-    se isso bloqueia o envio ou cai para o envio sem assinatura S/MIME."""
+    """Sem A1 conectado, certificado inválido, ou mensagem insegura.
+
+    Fluxos que solicitaram S/MIME devem tratar esta exceção como bloqueante,
+    nunca como autorização para enviar sem assinatura.
+    """
 
 
 @dataclass
@@ -105,20 +106,25 @@ def montar_corpo_assinado(db: Session, user: User, *, html: str) -> bytes:
 
 def montar_mensagem_assinada(
     db: Session, user: User, *, remetente: str, para: list[str], cc: list[str] | None,
-    assunto: str, html: str,
+    assunto: str, html: str, bcc: list[str] | None = None,
 ) -> bytes:
     """Mensagem crua (bytes), pronta para `smtplib.SMTP.sendmail()` —
     envelope concatenado por fora do corpo assinado, como manda a RFC 1847
     (a parte assinada nunca inclui From/To/Subject)."""
     corpo_assinado = montar_corpo_assinado(db, user, html=html)
-    linhas_envelope = [
-        f"From: {remetente}",
-        f"To: {', '.join(para)}",
-    ]
+    campos = [remetente, *para, *(cc or []), *(bcc or []), assunto]
+    if any("\r" in valor or "\n" in valor for valor in campos):
+        raise SmimeIndisponivel("Cabeçalho de e-mail inválido.")
+    linhas_envelope = [f"From: {remetente}", f"To: {', '.join(para)}"]
     if cc:
         linhas_envelope.append(f"Cc: {', '.join(cc)}")
+    # APIs MIME (Gmail/Graph) usam os próprios cabeçalhos para determinar os
+    # destinatários. No SMTP, Bcc continua omitido e vai apenas no envelope.
+    if bcc:
+        linhas_envelope.append(f"Bcc: {', '.join(bcc)}")
+    assunto_cabecalho = assunto if assunto.isascii() else Header(assunto, "utf-8").encode()
     linhas_envelope += [
-        f"Subject: {assunto}",
+        f"Subject: {assunto_cabecalho}",
         f"Date: {formatdate(localtime=True)}",
         f"Message-ID: {make_msgid()}",
     ]

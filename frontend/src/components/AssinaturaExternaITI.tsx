@@ -27,6 +27,7 @@ const ORIENTACAO_CERTIFICADO: Record<string, string> = {
   SAFEID: "seu certificado em nuvem SafeID",
   NEOID: "seu certificado em nuvem NeoID",
   REMOTEID: "seu certificado em nuvem Remote ID",
+  A3_TOKEN: "seu certificado A3 em token ou cartão",
 };
 
 export default function AssinaturaExternaITI({

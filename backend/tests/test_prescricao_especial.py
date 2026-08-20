@@ -3,6 +3,7 @@ from pydantic import ValidationError
 
 from app.api import prescricao_especial
 from app.models.email_account import EmailAccount
+from app.models.subscription import Subscription
 
 
 def test_natalia_lenira_podem_propria_e_rafael_wladmir_somente_rafael(db, criar_usuario):
@@ -25,6 +26,37 @@ def test_natalia_lenira_podem_propria_e_rafael_wladmir_somente_rafael(db, criar_
     assert prescricao_especial._perfil_especial(db, natalia)["permite_propria"] is True
     assert prescricao_especial._perfil_especial(db, lenira)["permite_propria"] is True
     assert prescricao_especial._perfil_especial(db, wladmir)["permite_propria"] is False
+
+
+@pytest.mark.parametrize(
+    ("email", "nome", "perfil", "permite_propria"),
+    (
+        ("natalia@corvia.med.br", "Natália", "natalia", True),
+        ("lenira@corvia.med.br", "Lenira", "lenira", True),
+        ("wladmir@corvia.med.br", "Wladmir", "wladmir", False),
+    ),
+)
+def test_capacidades_de_digitacao_livre_por_login_estavel(
+    client, db, criar_usuario, email, nome, perfil, permite_propria,
+):
+    user, token = criar_usuario(email=email, full_name=nome)
+    db.add(Subscription(
+        user_id=user.id, kind="meucardio", plano="basico", status="ativo",
+    ))
+    db.commit()
+
+    resposta = client.get(
+        "/api/prescricao-especial/capacidades",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+
+    assert resposta.status_code == 200
+    assert resposta.json() == {
+        "enabled": True,
+        "allows_self": permite_propria,
+        "rafael_signer": False,
+        "profile": perfil,
+    }
 
 
 def test_rafael_resolve_somente_por_identidade_de_login_estavel(db, criar_usuario):

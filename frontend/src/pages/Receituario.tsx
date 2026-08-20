@@ -5,6 +5,7 @@ import { Carregando, Erro, Vazio } from "../components/Estado";
 import Icone from "../components/Icone";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
+import PrescricaoLivreEspecial from "../components/PrescricaoLivreEspecial";
 
 type PrecoCmedSugestao = { valor: number | null; rotulo: string };
 type Farmaco = {
@@ -61,7 +62,7 @@ type Documento = {
 // Trabalho 14 (06/08/2026) — os métodos sem API própria: assinatura
 // acontece de verdade fora da Corvia, no Assinador ITI (assinador.iti.br).
 // Mesmo conjunto de `provedor._MANUAL_EXTERNO` no backend.
-const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"]);
+const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
 type ReceituarioCriado = { prescricao_id: number; exige_revisao: boolean; documentos: Documento[] };
 
 type HistoricoDocResumo = { tipo: string; tipo_nome: string | null; status: string };
@@ -125,6 +126,19 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
   const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
   const temC5 = doc.itens.some((item) => String(item.lista ?? "").toUpperCase() === "C5");
+
+  useEffect(() => {
+    if (doc.tipo !== "RCE" || !provedores?.length) return;
+    setMetodo((atual) => {
+      const selecionado = provedores.find((p) => p.codigo === atual);
+      if (selecionado && (selecionado.codigo === "MANUAL" || selecionado.nivel === "qualificada")) {
+        return atual;
+      }
+      return provedores.find((p) => p.disponivel && p.nivel === "qualificada")?.codigo
+        ?? provedores.find((p) => p.codigo === "MANUAL")?.codigo
+        ?? "MANUAL";
+    });
+  }, [doc.tipo, provedores]);
 
   async function revisar() {
     setRevisando(true);
@@ -216,15 +230,15 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         </p>
       )}
       {doc.tipo === "RCE" && (
-        <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Modelo físico Anvisa V2: duas vias completas, com frente e verso para cada página
-          numerada da prescrição.
-        </p>
+        <>
+          <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
+            Modelo Anvisa V2: duas vias, frente e verso em cada página.
+          </p>
+        </>
       )}
       {temC5 && (
         <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
-          Lista C5: emissão somente por CRM/CRO e com CPF do prescritor, endereço e telefone
-          profissionais, endereço do paciente e CID preenchidos.
+          Lista C5: exige CRM/CRO, CPF, endereço e telefone profissionais, endereço do paciente e CID.
         </p>
       )}
 
@@ -240,8 +254,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         <div style={{ marginTop: "0.6rem" }}>
           {doc.tipo === "RCE" ? (
             <p className="eyebrow" style={{ margin: "0.3rem 0" }}>
-              A RCE usa automaticamente o endereço profissional cadastrado. Para Lista C5,
-              endereço e telefone profissionais são obrigatórios.
+              Usa o endereço profissional cadastrado; na Lista C5, endereço e telefone são obrigatórios.
             </p>
           ) : (
             <>
@@ -259,17 +272,28 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
           <label style={{ marginTop: "0.5rem" }}>Método de assinatura</label>
           <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
-            {(provedores ?? []).map((p) => (
-              <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
-                {p.nome}{!p.disponivel ? " — indisponível" : ""}
+            {(provedores ?? []).map((p) => {
+              const invalidoParaRce = doc.tipo === "RCE" && p.codigo !== "MANUAL" && p.nivel !== "qualificada";
+              return (
+              <option key={p.codigo} value={p.codigo} disabled={!p.disponivel || invalidoParaRce}>
+                {p.nome}{!p.disponivel ? " — indisponível" : invalidoParaRce ? " — não válido para RCE" : ""}
               </option>
-            ))}
+              );
+            })}
           </select>
           {(() => {
             const escolhido = provedores?.find((p) => p.codigo === metodo);
             if (!escolhido) return null;
             if (!escolhido.disponivel) {
               return <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>{escolhido.motivo}</p>;
+            }
+            if (doc.tipo === "RCE" && escolhido.nivel !== "qualificada" && escolhido.codigo !== "MANUAL") {
+              return (
+                <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>
+                  Receita de controle especial exige assinatura qualificada ICP-Brasil. A assinatura gov.br comum
+                  é avançada e não pode ser usada neste documento.
+                </p>
+              );
             }
             if (escolhido.nivel !== "qualificada" && escolhido.codigo !== "MANUAL") {
               return (
@@ -799,6 +823,8 @@ export default function Receituario() {
           Histórico
         </button>
       </div>
+
+      {aba === "nova" && !criado && <PrescricaoLivreEspecial />}
 
       {aba === "historico" ? (
         <HistoricoReceituario onAbrir={abrirDoHistorico} onRecriar={recriarDoHistorico} />

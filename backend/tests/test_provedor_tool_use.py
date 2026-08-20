@@ -6,6 +6,7 @@ não deixa o modelo encadear ferramentas para sempre.
 """
 import json
 from dataclasses import dataclass, field
+from datetime import date, datetime, time, timezone
 from types import SimpleNamespace
 
 import pytest
@@ -81,6 +82,44 @@ def test_tool_use_e_executado_e_resultado_volta_como_tool_result():
     assert json.loads(bloco_tool_result["content"]) == {"total": 2, "compromissos": []}
     # a tool anunciada precisa ter chegado no kwarg `tools` da 1ª chamada
     assert chamadas[0]["tools"][0]["name"] == "agenda_listar_compromissos"
+
+
+def test_tool_result_serializa_tipos_temporais_de_rotina_da_agenda():
+    """Regressão: create_work_routine devolve date/time nativos. A gravação
+    concluía, mas o JSON do tool_result quebrava antes da confirmação final."""
+    respostas = [
+        _Resp(
+            content=[_Bloco(type="tool_use", name="agenda_criar_rotinas_em_lote", input={}, id="toolu_rotina")],
+            stop_reason="tool_use",
+        ),
+        _Resp(content=[_Bloco(type="text", text="Rotina cadastrada.")], stop_reason="end_turn"),
+    ]
+    provedor, chamadas = _provedor_com_cliente_falso(respostas)
+
+    resultado = provedor.responder(
+        "sistema", [{"role": "user", "content": "cadastre minha rotina"}],
+        usar_internet=False,
+        ferramentas=[{"name": "agenda_criar_rotinas_em_lote", "description": "...", "input_schema": {}}],
+        executor_ferramenta=lambda _nome, _args: {
+            "criado": True,
+            "rotina": [{
+                "valid_from": date(2026, 8, 19),
+                "start_time": time(8, 30),
+                "created_at": datetime(2026, 8, 19, 11, 30, tzinfo=timezone.utc),
+            }],
+        },
+    )
+
+    assert resultado.texto == "Rotina cadastrada."
+    conteudo = json.loads(chamadas[1]["messages"][-1]["content"][0]["content"])
+    assert conteudo == {
+        "criado": True,
+        "rotina": [{
+            "valid_from": "2026-08-19",
+            "start_time": "08:30:00",
+            "created_at": "2026-08-19T11:30:00+00:00",
+        }],
+    }
 
 
 def test_sem_ferramentas_nao_usa_tool_use_mesmo_que_stop_reason_venha_assim():

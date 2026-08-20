@@ -19,6 +19,7 @@ from sqlalchemy.orm import Session
 from app.models.agenda import CalendarIntegration
 from app.services.agenda_integrada.connectors import ConnectorError
 from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
+from app.services.assinatura import smime
 
 
 class ExternalMailError(RuntimeError):
@@ -186,9 +187,40 @@ def act_on_messages(db: Session, integration: CalendarIntegration, message_ids: 
         elif action == "mover" and destination: _request(db, integration, "POST", f"{_GRAPH}/messages/{encoded}/move", json={"destinationId": destination})
 
 
-def send_message(db: Session, integration: CalendarIntegration, *, to: str, subject: str, html: str, cc: str | None = None, bcc: str | None = None) -> dict[str, Any]:
+def _sender_address(integration: CalendarIntegration) -> str:
+    for candidate in (integration.display_name, integration.external_account_id):
+        for _, address in getaddresses([str(candidate or "")]):
+            if "@" in address:
+                return address
+    raise ExternalMailError("Não foi possível confirmar o endereço remetente desta conta.", status_code=409)
+
+
+def send_message(
+    db: Session, integration: CalendarIntegration, *, to: str, subject: str, html: str,
+    cc: str | None = None, bcc: str | None = None, user=None, assinar_smime: bool = False,
+) -> dict[str, Any]:
     recipients = [address for _, address in getaddresses([to]) if address]; cc_list = [address for _, address in getaddresses([cc or ""]) if address]; bcc_list = [address for _, address in getaddresses([bcc or ""]) if address]
     if not recipients: raise ExternalMailError("Informe ao menos um destinatário válido.", status_code=422)
+    if assinar_smime:
+        if user is None:
+            raise ExternalMailError("Assinatura S/MIME exige usuário autenticado.", status_code=422)
+        try:
+            raw_message = smime.montar_mensagem_assinada(
+                db, user, remetente=_sender_address(integration), para=recipients,
+                cc=cc_list or None, bcc=bcc_list or None, assunto=subject, html=html,
+            )
+        except smime.SmimeIndisponivel as exc:
+            raise ExternalMailError(f"Não foi possível assinar o e-mail: {exc}", status_code=409) from exc
+        if integration.provider == "google_calendar":
+            raw = base64.urlsafe_b64encode(raw_message).rstrip(b"=").decode()
+            result = _request(db, integration, "POST", f"{_GMAIL}/messages/send", json={"raw": raw}).json()
+            return {**result, "assinado_smime": True}
+        encoded = base64.b64encode(raw_message)
+        _request(
+            db, integration, "POST", f"{_GRAPH}/sendMail",
+            headers={"Content-Type": "text/plain"}, content=encoded,
+        )
+        return {"sent": True, "assinado_smime": True}
     if integration.provider == "google_calendar":
         message = EmailMessage(); message["To"] = ", ".join(recipients)
         if cc_list: message["Cc"] = ", ".join(cc_list)

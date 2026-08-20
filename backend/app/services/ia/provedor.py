@@ -15,7 +15,20 @@ import json
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
+from fastapi.encoders import jsonable_encoder
+
 from app.core.config import settings
+
+
+def _serializar_resultado_tool(resultado) -> str:
+    """Converte o retorno interno da tool para JSON aceito pelo provedor.
+
+    As rotas canônicas da agenda devolvem ``date``, ``time`` e ``datetime``;
+    o FastAPI normalmente os converte na borda HTTP, mas o tool-calling chama
+    essas funções diretamente. Sem esta conversão, a rotina era persistida e
+    o ``json.dumps`` falhava antes de o assistente conseguir confirmá-la.
+    """
+    return json.dumps(jsonable_encoder(resultado), ensure_ascii=False)
 
 
 @dataclass
@@ -268,7 +281,9 @@ class ProvedorAnthropic(ProvedorIA):
                     {
                         "type": "tool_result",
                         "tool_use_id": bloco.id,
-                        "content": json.dumps(executor_ferramenta(bloco.name, bloco.input), ensure_ascii=False),
+                        "content": _serializar_resultado_tool(
+                            executor_ferramenta(bloco.name, bloco.input)
+                        ),
                     }
                     for bloco in blocos
                 ]
@@ -329,7 +344,9 @@ class ProvedorAnthropic(ProvedorIA):
                     {
                         "type": "tool_result",
                         "tool_use_id": bloco.id,
-                        "content": json.dumps(executor_ferramenta(bloco.name, bloco.input), ensure_ascii=False),
+                        "content": _serializar_resultado_tool(
+                            executor_ferramenta(bloco.name, bloco.input)
+                        ),
                     }
                     for bloco in blocos
                 ]

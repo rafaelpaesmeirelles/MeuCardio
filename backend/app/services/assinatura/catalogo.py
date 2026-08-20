@@ -12,10 +12,10 @@ fonte de verdade — só não é a única fonte no banco.
 
 O campo `nivel` não é decorativo. Nem toda assinatura eletrônica vale para
 receita: só a qualificada ICP-Brasil tem presunção legal de autenticidade e é
-o que farmácia e o futuro SNCR vão exigir. `avancada` (gov.br comum,
-Clicksign, D4Sign, ZapSign, Autentique, DocuSign) é válida como assinatura em
-geral, mas o Rafael ainda não decidiu se ela deve ficar liberada para receita
-— por ora o sistema apenas avisa (ver `app/api/assinatura.py`), não bloqueia.
+o que a Receita de Controle Especial e o SNCR exigem. `avancada` (gov.br
+comum, Clicksign, D4Sign, ZapSign, Autentique, DocuSign) é válida como
+assinatura em geral e pode continuar disponível para documentos não
+controlados, mas é bloqueada para RCE em `app/api/receituario.py`.
 """
 
 from __future__ import annotations

@@ -111,6 +111,34 @@ class TestCorviaMail:
         assert resposta.status_code == 200, resposta.text
         assert resposta.json()["disponivel"] is False
 
+    def test_caixa_nativa_falha_fechada_quando_smime_esta_ativo(
+        self, client, db, criar_usuario, monkeypatch_mail360,
+    ):
+        user, token = criar_usuario(email="smime-export@teste.local")
+        _assinatura_principal(db, user)
+        _ativar_corvia_mail(db, user, "smime-export@corvia.med.br")
+        doc = _documento(db, "smime-bloqueado")
+        user.email_assinatura_digital_ativa = True
+        db.commit()
+
+        status = client.get("/api/exportar/corvia-mail", headers=_headers(token))
+        assert status.status_code == 200, status.text
+        assert status.json()["disponivel"] is False
+        assert "S/MIME" in status.json()["motivo"]
+
+        resposta = client.post(
+            "/api/exportar/conteudo/enviar-email",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "para": "destinatario@teste.local",
+            },
+        )
+        assert resposta.status_code == 409, resposta.text
+        assert "S/MIME" in resposta.text
+        assert monkeypatch_mail360["anexos"] == []
+        assert monkeypatch_mail360["mensagens_enviadas"] == []
+
     def test_gera_anexa_e_envia_pela_caixa_do_assinante(
         self, client, db, criar_usuario, monkeypatch_mail360,
     ):

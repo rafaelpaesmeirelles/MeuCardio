@@ -49,6 +49,39 @@ class AssinaturaEncontrada:
     valido_ate: datetime
     numero_serie: str
     assinado_em: datetime | None
+    politicas_certificado: tuple[str, ...]
+    qualificada_icp_brasil: bool
+
+
+_PREFIXOS_POLITICA_ICP_BRASIL = (
+    "2.16.76.1.2.1.",  # A1
+    "2.16.76.1.2.2.",  # A2
+    "2.16.76.1.2.3.",  # A3
+    "2.16.76.1.2.4.",  # A4
+)
+
+
+def _politicas_certificado(certificado_asn1) -> tuple[str, ...]:
+    """Extrai as Certificate Policies sem inferir pelo nome do emissor.
+
+    Os prefixos são os OIDs oficiais das políticas A1/A2/A3/A4 da
+    ICP-Brasil (DOC-ICP-04.01). A cadeia/revogação continua sendo uma
+    validação distinta, conforme a ressalva do módulo.
+    """
+    from cryptography import x509
+    from cryptography.x509.oid import ExtensionOID
+
+    try:
+        certificado = x509.load_der_x509_certificate(certificado_asn1.dump())
+        extensao = certificado.extensions.get_extension_for_oid(
+            ExtensionOID.CERTIFICATE_POLICIES
+        )
+    except (ValueError, x509.ExtensionNotFound):
+        return ()
+    return tuple(
+        politica.policy_identifier.dotted_string
+        for politica in extensao.value
+    )
 
 
 def verificar(pdf_bytes: bytes) -> AssinaturaEncontrada | None:
@@ -74,6 +107,7 @@ def verificar(pdf_bytes: bytes) -> AssinaturaEncontrada | None:
         return None
 
     cert = status.signing_cert
+    politicas = _politicas_certificado(cert)
     return AssinaturaEncontrada(
         intacta=status.intact,
         estrutura_valida=status.valid,
@@ -84,4 +118,9 @@ def verificar(pdf_bytes: bytes) -> AssinaturaEncontrada | None:
         valido_ate=cert.not_valid_after,
         numero_serie=str(cert.serial_number),
         assinado_em=status.signer_reported_dt,
+        politicas_certificado=politicas,
+        qualificada_icp_brasil=any(
+            oid.startswith(_PREFIXOS_POLITICA_ICP_BRASIL)
+            for oid in politicas
+        ),
     )

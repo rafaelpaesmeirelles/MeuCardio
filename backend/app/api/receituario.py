@@ -30,7 +30,7 @@ from app.models.receituario import (
     PrescriptionRule, PrescriptionType,
 )
 from app.services import anexo_email_proprio, cmed_precos, cofre
-from app.services.assinatura import emissao as assinatura_emissao
+from app.services.assinatura import catalogo, emissao as assinatura_emissao
 from app.services.assinatura.provedor import _MANUAL_EXTERNO
 from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
@@ -561,10 +561,15 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
             "A geração deste modelo numerado só será liberada após integração "
             "oficial e validação do número atribuído ao prescritor."
         )
-    if doc.tipo_codigo == "RCE" and dados.metodo != "MANUAL":
+    if (
+        doc.tipo_codigo == "RCE"
+        and dados.metodo != "MANUAL"
+        and info_metodo.nivel != catalogo.NIVEL_QUALIFICADA
+    ):
         bloqueios.append(
-            "A RCE disponível nesta etapa é o modelo físico para impressão e "
-            "assinatura manual. A emissão eletrônica aguarda o SNCR."
+            "A RCE eletrônica exige assinatura qualificada ICP-Brasil (A1, A3/token "
+            "ou certificado qualificado em nuvem). A assinatura gov.br comum é "
+            "avançada e não é válida para medicamentos controlados."
         )
 
     disponivel, motivo_indisponivel = provedor.disponivel()

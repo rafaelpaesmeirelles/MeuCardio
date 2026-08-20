@@ -146,7 +146,7 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
     nome = professional_name(medico)
     documento = DocumentoProfissional(
         titulo=material.titulo,
-        autor=nome or "Corvia",
+        autor=nome or "CorVIA",
         assunto="Material educativo para o paciente",
         rodape="Material educativo · não substitui a consulta médica",
         medico=medico,
@@ -208,7 +208,7 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
     documento.pdf.texto(
         documento.margem,
         documento.y - 8,
-        f"Material gerado na Corvia em {hoje}. Em caso de dúvida sobre o seu caso, "
+        f"Material gerado no CorVIA em {hoje}. Em caso de dúvida sobre o seu caso, "
         "procure o profissional que entregou este documento.",
         8,
         NEUTRO,

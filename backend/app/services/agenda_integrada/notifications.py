@@ -13,6 +13,7 @@ from app.core.db import SessionLocal
 from app.models.agenda import AppointmentCommunication, CalendarLocation, SchedulingService
 from app.models.clinical_docs import Appointment
 from app.services.cofre import decifrar_campo
+from app.services.pdf.marca import LOGO, logo_disponivel
 
 
 def _send(message: EmailMessage) -> None:
@@ -55,23 +56,26 @@ def send_appointment_communication(communication_id: int) -> bool:
         location_name = location.name if location else "Local a confirmar"
         when = local_start.strftime("%d/%m/%Y às %H:%M")
 
-        subject = "Confirmação de agendamento — Corvia"
+        subject = "Confirmação de agendamento — CorVIA"
         text = (
             "Seu agendamento foi confirmado.\n\n"
             f"Data e horário: {when}\n"
             f"Atendimento: {service_name}\n"
             f"Local: {location_name}\n\n"
             "Em caso de dúvida ou necessidade de reagendamento, entre em contato com o consultório.\n\n"
-            "Corvia — O caminho do coração"
+            "CorVIA — Clinical OS"
         )
         body = (
-            "<div style='font-family:Arial,sans-serif;color:#12303d;line-height:1.55'>"
-            "<h1 style='font-size:22px'>Agendamento confirmado</h1>"
+            "<div style='font-family:Arial,sans-serif;color:#26333b;line-height:1.55;max-width:620px'>"
+            "<div style='padding:18px 20px;background:#0b2e45'>"
+            "<img src='cid:corvia-logo' alt='CorVIA Clinical OS' style='display:block;width:220px;max-width:100%;height:auto'>"
+            "</div><div style='padding:22px 20px;border:1px solid #e4e8ea;border-top:0'>"
+            "<h1 style='font-size:22px;color:#0b2e45;margin-top:0'>Agendamento confirmado</h1>"
             f"<p><strong>Data e horário:</strong> {html.escape(when)}<br>"
             f"<strong>Atendimento:</strong> {html.escape(service_name)}<br>"
             f"<strong>Local:</strong> {html.escape(location_name)}</p>"
             "<p>Em caso de dúvida ou necessidade de reagendamento, entre em contato com o consultório.</p>"
-            "<p style='color:#617984'>Corvia — O caminho do coração</p></div>"
+            "<p style='color:#55666f'>CorVIA — Clinical OS · corvia.med.br</p></div></div>"
         )
         message = EmailMessage()
         message["Subject"] = subject
@@ -79,6 +83,11 @@ def send_appointment_communication(communication_id: int) -> bool:
         message["To"] = recipient
         message.set_content(text)
         message.add_alternative(body, subtype="html")
+        if logo_disponivel():
+            parte_html = message.get_payload()[-1]
+            parte_html.add_related(
+                LOGO.read_bytes(), maintype="image", subtype="png", cid="<corvia-logo>",
+            )
         try:
             _send(message)
         except Exception as exc:  # SMTP precisa falhar sem desfazer o agendamento.

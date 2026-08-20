@@ -260,9 +260,9 @@ def send_message(
     """`assinar_smime=True` (pedido do Rafael em 06/08/2026 — "assinar
     digitalmente um email pra enviar") exige `db`/`user`, porque a
     assinatura usa o certificado A1 do próprio médico (mesma infra do
-    Trabalho 7, ver `services/assinatura/smime.py`). Só é possível aqui —
-    Yahoo/iCloud, onde a Corvia monta o MIME bruto — nunca na caixa nativa
-    Mail360, cuja API não aceita corpo pré-montado."""
+    Trabalho 7, ver `services/assinatura/smime.py`). Neste módulo o MIME
+    bruto segue por SMTP; a caixa nativa Mail360 não aceita corpo
+    pré-montado."""
     usuario, senha = _credenciais(credentials)
     destinatarios = [endereco for _, endereco in getaddresses([to]) if endereco]
     cc_lista = [endereco for _, endereco in getaddresses([cc or ""]) if endereco]

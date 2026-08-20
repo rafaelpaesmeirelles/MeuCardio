@@ -187,6 +187,15 @@ def disponibilidade_corvia_mail(
         return {"disponivel": False, "motivo": "Recurso indisponível no modo investidor.", "email_address": None}
     if not assinatura_email_ativa(db, user):
         return {"disponivel": False, "motivo": "O envio direto exige assinatura ativa do CorVIA Mail.", "email_address": None}
+    if user.email_assinatura_digital_ativa:
+        return {
+            "disponivel": False,
+            "motivo": (
+                "A caixa nativa não suporta assinatura digital S/MIME. "
+                "Envie por uma conta Google, Microsoft, Yahoo ou iCloud conectada."
+            ),
+            "email_address": None,
+        }
     try:
         conta = anexo_email_proprio.obter_conta_nativa_ativa(db, user)
     except anexo_email_proprio.AnexoIndisponivel as exc:
@@ -236,6 +245,14 @@ def enviar_conteudo_por_email(
         raise HTTPException(status_code=403, detail="Recurso indisponível no modo investidor.")
     if not assinatura_email_ativa(db, user):
         raise HTTPException(status_code=409, detail="O envio direto exige assinatura ativa do CorVIA Mail.")
+    if user.email_assinatura_digital_ativa:
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "A caixa nativa não suporta assinatura digital S/MIME. "
+                "Envie por uma conta Google, Microsoft, Yahoo ou iCloud conectada."
+            ),
+        )
 
     try:
         conta = anexo_email_proprio.obter_conta_nativa_ativa(db, user)

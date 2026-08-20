@@ -6,6 +6,7 @@ histórico da sessão) — aqui a conferência é estrutural: parseável,
 """
 import datetime
 from email import message_from_bytes
+from email.policy import default
 
 import pytest
 from cryptography import x509
@@ -15,7 +16,6 @@ from cryptography.hazmat.primitives.serialization import pkcs12
 from cryptography.x509.oid import NameOID
 
 from app.core.config import settings
-from app.core.security import hash_password
 from app.models.user import User
 from app.services.assinatura import certificado_a1, smime
 
@@ -88,3 +88,21 @@ def test_mensagem_assinada_tem_envelope_correto_e_corpo_assinado_depois(db, cria
     assert msg["Cc"] == "copia@example.com"
     assert msg["Subject"] == "Documento assinado"
     assert msg.get_content_type() == "multipart/signed"
+
+
+def test_mensagem_assinada_preserva_bcc_unicode_e_rejeita_injecao(db, criar_usuario):
+    user = _usuario_com_certificado(db, criar_usuario)
+    bruto = smime.montar_mensagem_assinada(
+        db, user, remetente="medico@corvia.med.br", para=["paciente@example.com"],
+        cc=None, bcc=["auditoria@example.com"], assunto="Avaliação cardiológica", html="<p>Olá</p>",
+    )
+    msg = message_from_bytes(bruto, policy=default)
+    assert str(msg["Bcc"]) == "auditoria@example.com"
+    assert str(msg["Subject"]) == "Avaliação cardiológica"
+
+    with pytest.raises(smime.SmimeIndisponivel, match="Cabeçalho"):
+        smime.montar_mensagem_assinada(
+            db, user, remetente="medico@corvia.med.br",
+            para=["paciente@example.com\r\nBcc: invasor@x.com"],
+            cc=None, assunto="Seguro", html="<p>Olá</p>",
+        )

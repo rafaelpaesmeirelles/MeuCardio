@@ -40,6 +40,8 @@ from cryptography.hazmat.primitives.serialization import pkcs12
 from cryptography.x509.oid import NameOID
 
 from app.core.config import settings
+from app.models.assinatura import DocumentoEmitido
+from app.models.receituario import PrescriptionType
 from app.models.subscription import Subscription
 from app.services.assinatura import verificacao_pdf
 
@@ -160,6 +162,84 @@ def test_fluxo_completo_emite_e_assina_documento_real_com_a1(client, db, criar_u
     # gera um PDF novo/diferente a cada leitura).
     segunda_leitura = _baixar_pdf_assinado(client, token, gid)
     assert segunda_leitura.content == pdf_bytes
+
+
+def test_fluxo_completo_emite_rce_e_assina_com_a1(client, db, criar_usuario):
+    """Regressão: a RCE revisada era bloqueada antes de chegar ao provedor A1."""
+    user, token = criar_usuario(full_name="Dr. Rafael Teste", role="admin")
+    _subscribe(db, user.id)
+    user.council_name = "CRM"
+    user.council_number = "138266"
+    user.council_state = "SP"
+    user.practice_street = "Rua Tibiriçá"
+    user.practice_number = "1172"
+    user.practice_city = "Ribeirão Preto"
+    user.practice_state = "SP"
+    tipo_rce = db.query(PrescriptionType).filter(PrescriptionType.codigo == "RCE").one()
+    tipo_rce.ativo = True
+    tipo_rce.exige_numeracao_sncr = False
+    db.commit()
+
+    certificado = _gerar_pfx(cn="DR RAFAEL TESTE:11122233344")
+    conectado = _conectar_certificado(client, token, certificado, "senha123", certificadora="Valid")
+    assert conectado.status_code == 201, conectado.text
+
+    criada = client.post(
+        "/api/receituario",
+        headers=_headers(token),
+        json={
+            "destinatario": {
+                "nome": "Paciente Teste",
+                "endereco": "Rua do Paciente, 10, Ribeirão Preto/SP",
+                "documento": "123.456.789-00",
+            },
+            "itens": [{
+                "descricao": "Medicamento de teste",
+                "apresentacao": "comprimidos",
+                "quantidade": "30 comprimidos",
+                "quantidade_extenso": "trinta comprimidos",
+                "posologia": "Tomar 1 comprimido ao dia.",
+                "orientacao": "",
+                "uso_continuo": False,
+            }],
+        },
+    )
+    assert criada.status_code == 201, criada.text
+    documento_id = criada.json()["documentos"][0]["id"]
+
+    revisada = client.post(
+        f"/api/receituario/documentos/{documento_id}/revisar",
+        headers=_headers(token),
+        json={
+            "confirmar": True,
+            "corrigir_para": "RCE",
+            "motivo": "Teste direcionado do fluxo de controle especial.",
+        },
+    )
+    assert revisada.status_code == 200, revisada.text
+
+    emitida = client.post(
+        f"/api/receituario/documentos/{documento_id}/emitir",
+        headers=_headers(token),
+        json={"metodo": "A1_ARQUIVO"},
+    )
+    assert emitida.status_code == 200, emitida.text
+    assert emitida.content.startswith(b"%PDF")
+
+    assinatura = verificacao_pdf.verificar(emitida.content)
+    assert assinatura is not None
+    assert assinatura.intacta is True
+    assert assinatura.estrutura_valida is True
+    assert assinatura.cobre_documento_inteiro is True
+    assert assinatura.titular_cn == "DR RAFAEL TESTE:11122233344"
+
+    registro = db.query(DocumentoEmitido).filter(
+        DocumentoEmitido.tipo == "prescription_document",
+        DocumentoEmitido.referencia_id == documento_id,
+    ).one()
+    assert registro.metodo == "A1_ARQUIVO"
+    assert registro.nivel == "qualificada"
+    assert registro.assinado_em is not None
 
 
 def test_pdf_assinado_com_a1_bate_com_o_conteudo_gravado_no_banco(client, db, criar_usuario):

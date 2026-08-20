@@ -1,3 +1,4 @@
+import hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -37,11 +38,43 @@ def test_transactional_email_template_uses_canonical_identity():
     assert "_normalizar_branding" in transport
 
 
+def test_appointment_confirmation_uses_canonical_identity():
+    notification = _read("backend/app/services/agenda_integrada/notifications.py")
+    assert "from app.services.pdf.marca import LOGO, logo_disponivel" in notification
+    assert "cid:corvia-logo" in notification
+    assert "CorVIA — Clinical OS" in notification
+    assert "O caminho do coração" not in notification
+
+
 def test_server_generated_documents_do_not_depend_on_legacy_logo_asset():
     marca = _read("backend/app/services/pdf/marca.py")
-    assert '/tmp/corvia-logo-canonical.png' in marca
-    assert 'backend/app/assets/corvia-logo.png' not in marca
-    assert "_gerar_logo_canonica" in marca
+    web = ROOT / "frontend/public/corvia-logo-canonical.png"
+    server = ROOT / "backend/app/assets/corvia-logo-canonical.png"
+    assert web.is_file()
+    assert server.is_file()
+    assert hashlib.sha256(web.read_bytes()).digest() == hashlib.sha256(server.read_bytes()).digest()
+    assert 'assets" / "corvia-logo-canonical.png' in marca
+    assert "/tmp/" not in marca
+    assert "_gerar_logo_canonica" not in marca
+
+
+def test_external_file_generators_share_the_canonical_brand_source():
+    generators = {
+        "backend/app/services/pdf_documento.py": "app.services.pdf.marca",
+        "backend/app/services/receita_controle_especial.py": "app.services.pdf.marca",
+        "backend/app/services/apresentacao_pptx.py": "from .pdf.marca import LOGO",
+        "backend/app/services/pdf/layout.py": "from .marca import",
+    }
+    for path, shared_brand_reference in generators.items():
+        assert shared_brand_reference in _read(path), path
+
+    for path in (
+        "backend/app/services/material_paciente.py",
+        "backend/app/services/apresentacao.py",
+        "backend/app/services/exportacao_conteudo.py",
+    ):
+        source = _read(path)
+        assert "app.services.pdf" in source or "from .pdf" in source, path
 
 
 def test_browser_and_pwa_use_canonical_mark_only():
