@@ -15426,5 +15426,127 @@
       "Documento 'torasemida-versus-furosemida-apos-alta-o-ensaio-transform-hf' desta biblioteca."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "rosuvastatina-perioperatoria-em-cirurgia-cardiaca-previne-fibrilacao-atrial-pos-operatoria-stics",
+    "titulo": "Estatina em dose alta antes da cirurgia cardíaca previne fibrilação atrial pós-operatória?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, dislipidêmico mas sem uso prévio de estatina, em ritmo sinusal, está programado para revascularização miocárdica cirúrgica eletiva em 5 dias. Durante a discussão pré-operatória, um dos residentes sugere iniciar rosuvastatina 20 mg/dia já nesta consulta, especificamente para reduzir o risco de fibrilação atrial pós-operatória (FA-PO) e de lesão miocárdica perioperatória, citando metanálises de estudos pequenos que sugeriram esse benefício pelo efeito anti-inflamatório e estabilizador de placa da classe. O paciente não tem outra indicação prévia de estatina (LDL e risco cardiovascular calculado não sustentam início por prevenção primária neste momento).",
+    "pergunta": "Com base no ensaio STICS (Statin Therapy In Cardiac Surgery), qual é a conduta correta?",
+    "opcoes": [
+      "Iniciar rosuvastatina 20 mg/dia agora, pois o STICS confirmou que a terapia perioperatória com estatina reduz significativamente FA-PO e lesão miocárdica, validando as metanálises anteriores",
+      "Não iniciar rosuvastatina com esse objetivo específico: o STICS (n=1.922, pacientes em ritmo sinusal, cirurgia cardíaca eletiva) não mostrou diferença significativa em FA-PO (21,1% vs. 20,5%; OR 1,04; IC95% 0,84-1,30; p=0,72) nem em lesão miocárdica por troponina (AUC 102 vs. 100 ng×hora/mL; p=0,80) entre rosuvastatina e placebo, e ainda houve excesso absoluto de 5,4 pontos percentuais de lesão renal aguda pós-operatória com a droga (p=0,005) — sem indicação prévia de estatina, não há razão baseada no STICS para iniciá-la agora com essa finalidade",
+      "Iniciar rosuvastatina apenas se o paciente tiver LDL ou proteína C-reativa elevados no pré-operatório, já que o STICS mostrou benefício maior nesses subgrupos",
+      "Suspender qualquer estatina que o paciente eventualmente já estivesse usando cronicamente, dado o sinal de lesão renal aguda demonstrado no STICS"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O STICS foi um ensaio randomizado, duplo-cego, controlado por placebo, com 1.922 pacientes em ritmo sinusal programados para cirurgia cardíaca eletiva, randomizados para rosuvastatina 20 mg/dia ou placebo, com dois desfechos primários coprimários: FA-PO em até 5 dias (por Holter contínuo) e lesão miocárdica em até 120 horas (por troponina I seriada). O resultado foi negativo para os dois desfechos primários — FA-PO 21,1% (rosuvastatina) vs. 20,5% (placebo), OR 1,04, IC95% 0,84-1,30, p=0,72; lesão miocárdica (AUC de troponina I) 102 vs. 100 ng×hora/mL, diferença de 1% (IC95% -9 a 13), p=0,80 — e nenhuma análise de subgrupo indicou benefício em qualquer categoria de paciente, o que já invalida a opção C. Houve, além disso, um sinal real de dano: excesso absoluto de 5,4 ± 1,9 pontos percentuais na taxa de lesão renal aguda pós-operatória com rosuvastatina (p=0,005), o único achado estatisticamente significativo do ensaio, e desfavorável ao fármaco. A opção A inverte o resultado do ensaio, tratando-o como confirmação da hipótese das metanálises anteriores quando na verdade o STICS a contraria de forma rigorosa e em escala grande. A opção D também está errada: o ensaio testou início/intensificação perioperatória de estatina com finalidade específica de prevenção de FA-PO/lesão miocárdica — não testou suspensão de estatina crônica já indicada por outro motivo, e o documento-fonte é explícito em dizer que esse resultado não respalda suspender estatina já indicada por outra razão.",
+    "source_refs": [
+      "Zheng Z, Jayaram R, Jiang L, Emberson J, Zhao Y, Li Q, Du J, Guarguagli S, Hill M, Chen Z, Collins R, Casadei B; STICS Investigators. Perioperative Rosuvastatin in Cardiac Surgery. N Engl J Med. 2016;374(18):1744-1753. DOI: 10.1056/NEJMoa1507750. PMID: 27144849 — registro (título, autoria, revista, volume, páginas, números) conferido no PubMed em 07/08/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "portador-de-marcapasso-nao-condicional-pode-fazer-ressonancia-magnetica-magnasafe",
+    "titulo": "Portador de marca-passo não condicional precisa de ressonância magnética: pode fazer o exame?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 74 anos, portadora de marca-passo bicameral convencional (não condicional para ressonância magnética) implantado há 8 anos por doença do nó sinusal, é encaminhada para ressonância magnética de coluna lombar em campo de 1,5 tesla, por lombalgia intensa com radiculopatia refratária ao tratamento conservador. O radiologista recusa o exame de saída, alegando contraindicação absoluta pela presença do dispositivo. A cardiologia é chamada para opinar sobre a segurança do procedimento.",
+    "pergunta": "Com base no registro MagnaSafe, qual afirmação está correta sobre a realização deste exame?",
+    "opcoes": [
+      "A ressonância magnética permanece absolutamente contraindicada em qualquer portador de dispositivo cardíaco eletrônico não condicional para RM, independentemente da região examinada ou de protocolo de reprogramação — o exame deve ser recusado",
+      "A ressonância não torácica em campo de 1,5 tesla pode ser realizada com segurança sob protocolo padronizado de interrogação e reprogramação do dispositivo antes e depois do exame: no MagnaSafe (1.000 exames em portador de marca-passo e 500 em portador de CDI, todos não condicionais), não houve nenhuma morte, falha de eletrodo, perda de captura ou arritmia ventricular durante o exame, e o único evento de falha de gerador foi atribuído a reprogramação não realizada corretamente antes do exame, não ao exame em si",
+      "O MagnaSafe incluiu exames torácicos e não torácicos com taxas de evento equivalentes entre as duas regiões, então a localização do exame não é relevante para a decisão de segurança",
+      "O registro mostrou uma taxa relevante de eventos graves — arritmia ventricular e falha de eletrodo — em cerca de 5% dos exames, o que ainda restringe a indicação a centros terciários com suporte de emergência imediato"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MagnaSafe foi um registro prospectivo, multicêntrico, em pacientes com marca-passo ou CDI não condicional para RM, encaminhados para RM não torácica clinicamente indicada em campo de 1,5 tesla, com o dispositivo interrogado e reprogramado adequadamente antes e depois do exame conforme protocolo padronizado. Em 1.000 exames de RM em portador de marca-passo e 500 em portador de CDI, os desfechos primários (morte, falha de gerador ou eletrodo, arritmia induzida, perda de captura, reset elétrico) não ocorreram em nenhum caso, exceto por um único gerador de CDI que não pôde ser interrogado após o exame e exigiu troca imediata — e esse caso foi atribuído a falha de processo (o dispositivo não havia sido programado corretamente conforme o protocolo antes do exame), não ao exame de RM em si. Eventos secundários, todos autolimitados, ocorreram em pequeno número: 6 casos de fibrilação/flutter atrial autolimitados e 6 casos de reset elétrico parcial entre os 1.500 exames — isso já invalida a opção D, que exagera a taxa de eventos graves quando na verdade não houve nenhum evento grave da natureza descrita. A opção A trata a evidência como se ela não existisse, ignorando que o próprio corpo de evidência do MagnaSafe é a base empírica do consenso multissocietário de 2017 (HRS, com outras 10 sociedades incluindo ACC, AHA e EHRA) que mudou a prática de contraindicação absoluta para decisão de risco-benefício protocolada. A opção C inverte um dado central do desenho do estudo: exames torácicos foram excluídos do protocolo do MagnaSafe por risco percebido maior, não incluídos com resultado equivalente — o registro não oferece dado de segurança para RM torácica em dispositivo não condicional.",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684 — autoria e números conferidos contra o registro indexado (Europe PMC) em 30/07/2026.",
+      "2017 HRS Expert Consensus Statement on Magnetic Resonance Imaging and Radiation Exposure in Patients with Cardiovascular Implantable Electronic Devices. Heart Rhythm. 2017 — citado pela literatura secundária como o consenso multissocietário (11 sociedades, incluindo ACC, AHA, EHRA) que orienta a prática atual; texto integral não obtido nesta sessão."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "magnesio-perioperatorio-profilatico-previne-fibrilacao-atrial-pos-cirurgia-cardiaca-pompae",
+    "titulo": "Infusão profilática de magnésio previne fibrilação atrial após cirurgia cardíaca?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Paciente adulto sem arritmia atrial prévia nem disfunção renal grave está programado para revascularização miocárdica cirúrgica. A equipe de UTI cardiológica propõe iniciar, logo após a indução anestésica, infusão intravenosa de sulfato de magnésio titulada para manter o magnésio sérico entre 1,5 e 2,0 mmol/L, mantida até a alta da UTI, com o objetivo específico de prevenir fibrilação atrial pós-operatória (FA-PO) — prática ainda adotada em alguns serviços por plausibilidade fisiológica.",
+    "pergunta": "Com base no ensaio POMPAE, qual afirmação melhor resume a evidência sobre essa estratégia?",
+    "opcoes": [
+      "A infusão profilática de magnésio deve ser adotada rotineiramente, pois o POMPAE demonstrou redução significativa da incidência de FA pós-operatória em comparação a placebo",
+      "O POMPAE (n=265, interrompido precocemente por futilidade) não mostrou redução de FA-PO com magnésio guiado a alvo sérico de 1,5-2,0 mmol/L em comparação a Ringer lactato (FA em 7 dias: 37,9% vs. 28,6%; RR 1,29; IC95% 0,92-1,83; p=0,15), apesar de separação farmacológica clara entre os grupos — a suplementação profilática rotineira de magnésio para esse fim não é apoiada por este ensaio, o que não significa que magnésio deva ser negado a um paciente com hipomagnesemia verdadeira documentada",
+      "O RR de 1,29 para FA no grupo magnésio, mesmo sem significância estatística, já é evidência suficiente de que o magnésio causa fibrilação atrial e deve ser ativamente evitado no perioperatório de cirurgia cardíaca",
+      "O estudo foi interrompido precocemente porque a dose de magnésio utilizada foi insuficiente para atingir a meta sérica pré-especificada, sugerindo que doses mais altas poderiam ser eficazes em um ensaio futuro"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O POMPAE foi um ensaio randomizado, duplo-cego, placebo-controlado, unicêntrico, em adultos submetidos a CRM e/ou cirurgia valvar sem arritmia atrial prévia ou disfunção renal grave, com sulfato de magnésio IV versus Ringer lactato. O desfecho primário era nova FA-PO com duração ≥5 minutos documentada por ECG em até 7 dias ou antes da alta/óbito. O estudo foi interrompido na análise interina por futilidade após 265 pacientes randomizados. A FA-PO em 7 dias ocorreu em 37,9% do grupo magnésio vs. 28,6% do placebo (RR 1,29; IC95% 0,92-1,83; p=0,15), resultado negativo, com a estimativa pontual favorecendo numericamente o placebo. Isso não foi um caso de dose insuficiente: a intervenção produziu separação farmacológica clara entre os grupos, o alvo terapêutico foi atingido, e mesmo assim não houve benefício — o que invalida diretamente a opção D. A opção A inverte o resultado do ensaio, tratando um achado negativo como positivo. A opção C comete o erro de interpretação que o próprio documento-fonte alerta explicitamente para não cometer: um RR >1 sem significância estatística, cujo intervalo de confiança inclui a ausência de efeito (cruzando 1), não é evidência de que a exposição causa o desfecho. A opção correta também preserva a ressalva clínica presente no documento-fonte: o resultado nulo do POMPAE é específico para a estratégia de suplementação profilática rotineira visando FA-PO, e não equivale a dizer que magnésio nunca deve ser administrado no pós-operatório — corrigir hipomagnesemia verdadeira documentada é uma indicação clínica distinta, não testada por este desenho de estudo.",
+    "source_refs": [
+      "Meerman M, Buijser M, Serpa Neto A, et al. Magnesium Sulfate to Prevent Perioperative Atrial Fibrillation in Cardiac Surgery: A Randomized Clinical Trial. Crit Care Med. 2026;54(7):1635-1646. DOI: 10.1097/CCM.0000000000007162. PMID: 42206948. PMCID: PMC13322146. NCT05669417. Abstract e texto completo conferidos em 08/08/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-programacao-reduz-terapia-inapropriada-madit-rit",
+    "titulo": "Reprogramar o CDI recém-implantado: qual retardo de detecção reduz choque inapropriado e mortalidade?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, cardiomiopatia isquêmica com FEVE de 28%, classe funcional NYHA II sob terapia médica otimizada, recebe um cardiodesfibrilador implantável (CDI) em prevenção primária. No momento da programação do dispositivo, o eletrofisiologista precisa definir os parâmetros de detecção de arritmia — especificamente, a partir de qual frequência cardíaca e após quanto tempo de retardo o CDI deve disparar terapia (estimulação antitaquicardia ou choque). A equipe discute se a programação convencional, com disparo mais precoce, é a opção mais segura, ou se existe evidência randomizada favorecendo retardar a detecção.",
+    "pergunta": "Segundo o MADIT-RIT, comparada à programação convencional (retardo de 2,5 segundos entre 170-199bpm e 1,0 segundo a partir de 200bpm), qual configuração de programação reduziu tanto a terapia inapropriada quanto a mortalidade por qualquer causa?",
+    "opcoes": [
+      "Reduzir o limiar de detecção para 150bpm mantendo o retardo padrão, já que detectar a arritmia mais cedo previne o dano miocárdico cumulativo dos choques repetidos",
+      "A programação de \"terapia de alta frequência\" (retardo de 2,5 segundos, disparando terapia só a partir de FC ≥200bpm) reduziu o risco de terapia inapropriada em HR 0,21 (IC95% 0,13-0,34; p<0,001) e a mortalidade por qualquer causa em HR 0,45 (IC95% 0,24-0,85; p=0,01)",
+      "Apenas a programação de \"terapia retardada\" (retardo de 60 segundos entre 170-199bpm) reduziu significativamente a mortalidade por qualquer causa, já que a terapia de alta frequência não teve nenhum efeito sobre esse desfecho",
+      "Nenhuma das duas estratégias de reprogramação testadas alterou a mortalidade — o MADIT-RIT demonstrou benefício apenas sobre terapia inapropriada, sem qualquer efeito sobre desfechos duros"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MADIT-RIT (Moss AJ et al., N Engl J Med. 2012;367(24):2275-2283, PMID 23131066) randomizou 1.500 pacientes com CDI em prevenção primária para três programações: convencional, terapia de alta frequência (retardo de 2,5s, disparo só a partir de ≥200bpm) e terapia retardada (60s entre 170-199bpm, 12s entre 200-249bpm, 2,5s a partir de 250bpm). A opção correta (B) reproduz literalmente os dois desfechos coprimários do ensaio: terapia de alta frequência reduziu terapia inapropriada em HR 0,21 (IC95% 0,13-0,34; p<0,001) E mortalidade por qualquer causa em HR 0,45 (IC95% 0,24-0,85; p=0,01) — é a única das três configurações testadas que atingiu significância estatística nos dois desfechos ao mesmo tempo. A opção A inverte o achado central do ensaio: 'detectar e tratar mais rápido' não foi a estratégia vencedora — foi justamente tolerar frequências mais altas por mais tempo (dando chance de arritmias autolimitadas resolverem sozinhas) que reduziu tanto choque inapropriado quanto mortalidade; reduzir o limiar para 150bpm não foi sequer um dos braços testados. A opção C troca os papéis dos dois braços experimentais: é a terapia retardada que teve efeito não significativo sobre mortalidade (HR 0,56; IC95% 0,30-1,02; p=0,06 — só tendência), enquanto a terapia de alta frequência foi a que atingiu p=0,01. A opção D nega por completo o efeito sobre mortalidade, mas o próprio desenho do MADIT-RIT trata mortalidade por qualquer causa como desfecho pré-especificado, e a redução com a terapia de alta frequência (55% menos risco) foi grande o bastante para ser clinicamente relevante isoladamente.",
+    "source_refs": [
+      "Moss AJ, Schuger C, Beck CA, et al; MADIT-RIT Trial Investigators. Reduction in inappropriate therapy and mortality through ICD programming. N Engl J Med. 2012;367(24):2275-2283. DOI: 10.1056/NEJMoa1211107. PMID: 23131066"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "apneia-central-do-sono-estimulacao-do-nervo-frenico-remede",
+    "titulo": "Apneia central do sono refratária à CPAP: qual o resultado do ensaio pivotal do sistema remedē?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 66 anos, com insuficiência cardíaca e história de ronco intenso e pausas respiratórias noturnas relatadas pela esposa, é submetido a polissonografia: índice de apneia-hipopneia (IAH) de 47 eventos/hora, com predomínio de eventos centrais e padrão de Cheyne-Stokes. Uma tentativa de CPAP foi malsucedida por intolerância à máscara. A equipe considera o implante de um neuroestimulador transvenoso do nervo frênico (sistema remedē) como alternativa terapêutica.",
+    "pergunta": "No ensaio pivotal do sistema remedē (Costanzo et al., Lancet 2016), qual foi o desfecho primário definido e o resultado obtido aos 6 meses?",
+    "opcoes": [
+      "Redução do índice de apneia-hipopneia (IAH) ≥50% em relação à basal, atingida em 51% dos pacientes com estimulação ativa (35/68) versus 11% dos pacientes com o dispositivo implantado, porém não ativado (8/73) — diferença de 41 pontos percentuais (IC95% 25-54; p<0,0001)",
+      "Redução da mortalidade cardiovascular em 2 anos, com HR de 0,55 favorável ao grupo com estimulação ativa",
+      "O ensaio comparou estimulação transvenosa do nervo frênico contra servoventilação adaptativa (ASV) e não encontrou diferença significativa entre as duas terapias no IAH",
+      "Redução do IAH ≥50% mais frequente no grupo com estimulação ativa, mas sem significância estatística (p=0,08), motivo pelo qual o dispositivo segue apenas em investigação"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Costanzo MR et al., Lancet 2016;388(10048):974-982 (PMID 27598679) randomizaram 151 pacientes com apneia central do sono — todos implantados com o sistema remedē e então randomizados para estimulação ativa ou dispositivo implantado, mas não ativado. O desfecho primário, redução do IAH ≥50% aos 6 meses, ocorreu em 51% (35/68) do grupo ativo versus 11% (8/73) do grupo controle, diferença de 41 pontos percentuais (IC95% 25-54; p<0,0001) — exatamente o texto da opção A. A opção B fabrica um desfecho de mortalidade cardiovascular que o ensaio nunca teve: a própria síntese do documento-fonte é explícita em que o estudo não teve poder nem desenho para desfecho duro de mortalidade ou hospitalização cardiovascular, apenas para o desfecho respiratório (IAH) e segurança do implante. A opção C inventa um comparador que não existe no desenho: o grupo controle não recebeu ASV, recebeu o próprio dispositivo remedē implantado e não ativado — isso preserva o cegamento em relação à intervenção; ASV é a terapia avaliada nos ensaios SERVE-HF e ADVENT-HF, documentos distintos sobre um dispositivo de mecanismo diferente (pressão positiva não invasiva por máscara, não neuroestimulação implantável). A opção D nega a significância estatística do resultado, mas o próprio ensaio relata p<0,0001, muito abaixo do limiar convencional.",
+    "source_refs": [
+      "Costanzo MR, Ponikowski P, Javaheri S, et al. Transvenous neurostimulation for central sleep apnoea: a randomised controlled trial. Lancet. 2016;388(10048):974-982. DOI: 10.1016/S0140-6736(16)30961-8. PMID: 27598679"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anticoagulacao-perioperatoria-em-implante-de-marcapasso-bruise-control",
+    "titulo": "Marca-passo em paciente sob varfarina: suspender e fazer ponte, ou operar anticoagulado?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 74 anos, com fibrilação atrial e escore CHA₂DS₂-VASc de 4 (risco tromboembólico anual estimado acima de 5% ao ano), em uso crônico de varfarina, é encaminhada para implante de marca-passo definitivo por bloqueio atrioventricular sintomático de segundo grau Mobitz II. A equipe cirúrgica discute a estratégia de anticoagulação perioperatória: suspender a varfarina alguns dias antes e fazer ponte com heparina não fracionada até o procedimento, ou operar mantendo a varfarina sem interrupção.",
+    "pergunta": "Com base no ensaio BRUISE CONTROL, qual estratégia mostrou menor risco de hematoma de bolsa clinicamente significativo, sem aumento de eventos tromboembólicos maiores?",
+    "opcoes": [
+      "Suspender a varfarina e fazer ponte com heparina não fracionada no perioperatório, estratégia que reduz o risco de sangramento em relação a operar anticoagulado",
+      "Manter a varfarina sem interrupção durante a cirurgia — hematoma clinicamente significativo ocorreu em 3,5% (12/343) com varfarina continuada versus 16,0% (54/338) com ponte de heparina (risco relativo 0,19; IC95% 0,10-0,36; p<0,001), sem diferença relevante em complicações tromboembólicas maiores entre os grupos",
+      "Trocar a varfarina por um anticoagulante oral direto (DOAC) antes do implante, já que o BRUISE CONTROL demonstrou que os DOAC têm risco de hematoma significativamente menor que a varfarina continuada, em qualquer estratégia perioperatória",
+      "Suspender a varfarina sem nenhuma ponte, aceitando o risco tromboembólico transitório, já que o BRUISE CONTROL não testou nenhuma estratégia de ponte com heparina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O BRUISE CONTROL (Birnie DH et al., N Engl J Med. 2013;368(22):2084-2093, PMID 23659733) randomizou 681 pacientes de alto risco tromboembólico para varfarina continuada (n=343) versus suspensão com ponte de heparina (n=338), e foi interrompido precocemente porque o efeito já era grande o bastante: hematoma clinicamente significativo em 3,5% (12/343) com varfarina continuada versus 16,0% (54/338) com ponte de heparina, risco relativo 0,19 (IC95% 0,10-0,36; p<0,001), com complicações tromboembólicas maiores raras e sem diferença relevante entre os grupos. É exatamente o texto da opção B. A opção A descreve a prática que o próprio ensaio invalidou: é a ponte com heparina, não a varfarina continuada, que causou o excesso de hematoma. A opção C confunde dois estudos distintos da mesma série: a comparação DOAC continuado × varfarina continuada só apareceu na análise combinada de nível individual (Essebag V et al., Circ Arrhythm Electrophysiol. 2019;12(10):e007545, PMID 31610718), que encontrou odds ratio 0,858 (IC95% 0,375-1,963; p=0,717) — SEM diferença significativa entre DOAC e varfarina; o BRUISE CONTROL original nem testou DOAC, só varfarina versus ponte de heparina. A opção D descreve mal o desenho do próprio ensaio: a ponte com heparina é um dos dois braços do estudo, não uma estratégia não testada.",
+    "source_refs": [
+      "Birnie DH, Healey JS, Wells GA, Verma A, Tang AS, Krahn AD, Simpson CS, Ayala-Paredes F, Coutu B, Leiria TL, Essebag V; BRUISE CONTROL Investigators. Pacemaker or defibrillator surgery without interruption of anticoagulation. N Engl J Med. 2013;368(22):2084-2093. DOI: 10.1056/NEJMoa1302946. PMID: 23659733",
+      "Essebag V, Healey JS, Joza J, Nery PB, Kalfon E, Leiria TLL, Verma A, Ayala-Paredes F, Coutu B, Sumner GL, Becker G, Philippon F, Eikelboom J, Sandhu RK, Sapp J, Leather R, Yung D, Thibault B, Simpson CS, Ahmad K, Toal S, Sturmer M, Kavanagh K, Crystal E, Wells GA, Krahn AD, Birnie DH. Effect of Direct Oral Anticoagulants, Warfarin, and Antiplatelet Agents on Risk of Device Pocket Hematoma: Combined Analysis of BRUISE CONTROL 1 and 2. Circ Arrhythm Electrophysiol. 2019;12(10):e007545. DOI: 10.1161/CIRCEP.119.007545. PMID: 31610718"
+    ],
+    "review_status": "revisado"
   }
 ]
