@@ -106,7 +106,9 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
       arrival_buffer_minutes: 0, location: local,
     };
   }, [contextoDeslocamento, proximoAlvo, retornoAtivo]);
-  const destino = deslocamento?.destination?.target_key === proximoLocal?.target_key ? deslocamento.destination : proximoLocal;
+  const destino = deslocamento && deslocamento.destination?.target_key === proximoLocal?.target_key
+    ? deslocamento.destination
+    : proximoLocal;
   const proximo = useMemo<Agendamento | undefined>(() => destino ? ({
     id: destino.appointment_id || 0,
     patient_name: destino.title || destino.location?.name || destino.service_name || null,

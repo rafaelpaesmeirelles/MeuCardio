@@ -262,7 +262,9 @@ export default function PainelClinicalOS() {
       arrival_buffer_minutes: 0, location: local,
     };
   }, [contextoDeslocamento, proximoAlvo, retornoAtivo]);
-  const destino = deslocamento?.destination?.target_key === destinoPlanejado?.target_key ? deslocamento.destination : destinoPlanejado;
+  const destino = deslocamento && deslocamento.destination?.target_key === destinoPlanejado?.target_key
+    ? deslocamento.destination
+    : destinoPlanejado;
   const targetKey = destinoPlanejado?.target_key || null;
   const proximo = useMemo<Agendamento | undefined>(() => destinoPlanejado ? ({
     id: destinoPlanejado.appointment_id || 0,
@@ -435,7 +437,7 @@ export default function PainelClinicalOS() {
         <section className="ccc-mobile-summary ccc-reference-summary" aria-label="Resumo do dia e próximo deslocamento">
           <Link className="ccc-mobile-summary__card ccc-reference-day" to="/agenda"><span><small>Seu dia</small><strong>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"} hoje</strong><p>{proximo ? `Próximo: ${horario(proximo.scheduled_at)} · ${proximo.patient_name || "Compromisso"}` : "Agenda livre para novos compromissos"}</p></span><Icone nome="agenda" /></Link>
 
-          <article className="ccc-mobile-commute ccc-reference-commute" aria-label={retornoAtivo ? "Retorno do último compromisso" : "Próximo Deslocamento"}>
+          <article className="ccc-mobile-commute ccc-reference-commute" aria-label="Próximo Deslocamento">
             <header>
               <span><small>{retornoAtivo ? "Retorno do último compromisso" : "Próximo Deslocamento"}</small><strong>{destino?.location?.name || proximo?.patient_name || "Próximo compromisso"}</strong>{proximo && <p>{proximo.appointment_type} · {horario(proximo.scheduled_at)}</p>}</span>
               <span className="ccc-mobile-commute__icon"><Icone nome="rota" /></span>

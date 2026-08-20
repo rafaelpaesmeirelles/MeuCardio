@@ -94,7 +94,8 @@ def test_home_full_mobility_functions_are_not_removed_during_visual_rebuild():
         '"/agenda/mobility/prepare-next-target"',
         '"/agenda/mobility/next-target"',
         '"/agenda/mobility/commute-target"',
-        'const targetKey = destino?.target_key || null',
+        'const targetKey = destinoPlanejado?.target_key || null',
+        'target_type: "day_return"',
     ):
         assert token in panel
 
