@@ -4539,7 +4539,9 @@
     "pregnancy": "**Categoria de risco B — não é contraindicação formal.** Achado que corrige o registro anterior deste campo (que afirmava contraindicação formal com base numa versão mais antiga ou mal lida da bula): a bula profissional atual do GLIFAGE, item \"Gravidez e lactação\", não lista gravidez nem lactação no item 4. CONTRAINDICAÇÕES formal — trata do tema em seção própria. Texto: diabetes descontrolado na gravidez (gestacional ou permanente) aumenta risco de anomalia congênita e mortalidade perinatal; dados limitados de uso de metformina em gestantes **não indicam** aumento de risco de anomalia congênita, e estudos em animais não mostram dano à gestação, ao desenvolvimento embrionário/fetal, ao parto ou ao desenvolvimento pós-natal. **Apesar disso, a bula recomenda que o pré-diabetes e o diabetes não sejam tratados com metformina ao planejar gravidez e durante a gestação** — a insulina é a preferida, para manter glicemia o mais próxima do normal e reduzir risco de malformação fetal associada a glicemia anormal. É recomendação de conduta preferencial, não proibição formal. Fonte: bula profissional brasileira do GLIFAGE (cloridrato de metformina, Merck), item \"Gravidez e lactação — Gravidez\".",
     "lactation": "**Não é contraindicação formal — recomendação de evitar, por cautela com dado limitado.** Corrige o registro anterior deste campo, que afirmava contraindicação formal. A bula registra: metformina é excretada no leite humano em quantidades muito pequenas, nenhum efeito adverso foi observado em recém-nascidos amamentados nos dados disponíveis — mas, como os dados são limitados, **a amamentação não é recomendada** durante o tratamento. Decisão compartilhada entre interromper a lactação ou descontinuar a metformina, ponderando benefício do aleitamento, importância do fármaco para a mãe e risco potencial ao lactente. Fonte: bula profissional brasileira do GLIFAGE (cloridrato de metformina, Merck), item \"Gravidez e lactação — Lactação\".",
     "brand_names": [
-      "Glifage e Glifage XR — já citados em `presentations` deste registro (Merck S.A.)"
+      "Glifage e Glifage XR — já citados em `presentations` deste registro (Merck S.A.)",
+      "Dimefor",
+      "Glucoformin"
     ],
     "half_life_hours": 6.2,
     "half_life_note": "Meia-vida de eliminação plasmática de aproximadamente 6,2 horas para a metformina de liberação imediata (faixa relatada de 4,0 a 8,7h entre fontes). Achado adicional relevante: a meia-vida de eliminação NO SANGUE TOTAL (não no plasma) é bem mais longa, cerca de 17,6 horas — sugerindo que a massa eritrocitária funciona como um compartimento de distribuição adicional do fármaco, retendo metformina além do que o clearance plasmático sozinho sugere. Fonte: rótulo do FDA (DailyMed) para metformina, obtido via resultado sintetizado de busca.",
@@ -4548,7 +4550,12 @@
     "duration_of_action_source": "Rótulo do FDA (DailyMed) para metformina de liberação prolongada, obtido via resultado sintetizado de busca — VERIFICAÇÃO HUMANA NECESSÁRIA quanto à confirmação linha a linha no documento primário.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não aplicável — metformina é biguanida sensibilizadora de insulina, indicada para diabetes tipo 2, sem indicação nem mecanismo farmacológico de redução direta da pressão arterial. Nenhuma fonte já verificada nesta biblioteca atribui à metformina um efeito quantificado de redução de PA."
+    "bp_evidence_source": "Não aplicável — metformina é biguanida sensibilizadora de insulina, indicada para diabetes tipo 2, sem indicação nem mecanismo farmacológico de redução direta da pressão arterial. Nenhuma fonte já verificada nesta biblioteca atribui à metformina um efeito quantificado de redução de PA.",
+    "commercial_presentations": [
+      "Dimefor® (Farmoquímica) — comprimidos revestidos de 500 mg e 850 mg, embalagem com 30 comprimidos. Fonte: saudedireta.com.br (bula Dimefor, Farmoquímica) e drogariaminasbrasil.com.br, WebSearch 20/08/2026.",
+      "Glucoformin® (Novo Nordisk) — comprimidos revestidos de 500 mg e 850 mg, embalagem com 30 comprimidos. Fonte: drogariasaopaulo.com.br e drogariaspacheco.com.br (fichas de produto Glucoformin, Novo Nordisk), WebSearch 20/08/2026.",
+      "VERIFICAÇÃO HUMANA NECESSÁRIA: a busca também apontou os nomes 'Diaformin', 'Formet', 'Glicefor' e 'Glicomet' como marcas históricas/citadas em fontes agregadoras (ex. seuguiadesaude.com.br) para cloridrato de metformina no Brasil, mas sem uma bula/ficha de produto individual confirmando registro ANVISA vigente encontrada nesta sessão — não incluídos em brand_names por falta de confirmação direta. Apenas Dimefor e Glucoformin foram confirmados por página de bula/ficha de produto específica nesta busca (WebSearch 20/08/2026)."
+    ]
   },
   {
     "slug": "metildopa-alfa-metildopa",
@@ -4862,7 +4869,8 @@
       "Bula profissional do NEBILET (cloridrato de nebivolol), Biolab Sanus Farmacêutica Ltda., versão 07/2023 — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha"
     ],
     "brand_names": [
-      "Nebilet (Biolab Sanus) e Lobeat (Abbott) — já citados nas referências deste registro"
+      "Nebilet (Biolab Sanus) e Lobeat (Abbott) — já citados nas referências deste registro",
+      "Neblock"
     ],
     "presentations": [
       "Comprimidos de 5 mg (dose padrão em hipertensão, já registrada em `dosing.hipertensao adulto` deste verbete). Fonte: bula profissional brasileira do NEBILET (Biolab Sanus), já citada nas referências deste registro."
@@ -4876,7 +4884,10 @@
     "dbp_reduction_mmhg": -5.5,
     "bp_evidence_source": "**Confirmado linha a linha, lendo diretamente a Tabela 2 (seção 14.1 CLINICAL STUDIES) do rótulo FDA/DailyMed** do BYSTOLIC (nebivolol hydrochloride, Allergan, SPL setid 8b8ad213-1dc8-454e-a524-075685c0e1a8) — três ensaios de monoterapia, 2.016 pacientes (1.811 nebivolol, 205 placebo) com hipertensão leve a moderada, PA diastólica basal 95-109 mmHg, tratados por 12 semanas. Redução de PA (sitting trough, sistólica/diastólica, placebo-subtraída, todas com p<0,05 vs. placebo): **Estudo 1** — 5 mg: -8,1/-5,5 mmHg; 10 mg: -9,2/-6,3 mmHg. **Estudo 2** — 5 mg: -6,3/-4,5 mmHg (10 mg não testado neste estudo). **Estudo 3** (300 pacientes negros, avaliando diferença por raça) — 5 mg: -6,0/-6,1 mmHg; 10 mg: -7,2/-6,1 mmHg. Estudos 1 e 2 somaram 1.716 pacientes (idade média 54 anos, ~55% homens). Valor registrado nos campos numéricos (-8,1/-5,5) é o do Estudo 1 na dose de 5 mg — dose inicial usual em cardiologia, e o estudo com maior n entre os dois que testaram essa dose. **Correção em relação à versão anterior deste campo**: a faixa \"-2,6 a -8,1 mmHg\" citada antes para a dose de 5 mg não corresponde aos três valores reais da Tabela 2 (-8,1/-6,3/-6,0) — o extremo inferior de -2,6 não aparece na tabela consultada diretamente nesta sessão e não foi reproduzido. Consultado via API pública do DailyMed em 12/08/2026.",
     "renal_adjustment": "Dose inicial 2,5 mg/dia, podendo aumentar até 5mg/dia em hipertensão com insuficiência renal (mesmo conteúdo já registrado em `dosing.hipertensao insuficiencia renal`, aqui estruturado como campo próprio); em insuficiência renal grave (creatinina >250) o uso não é recomendado, por falta de experiência clínica. Fonte: bula profissional brasileira de nebivolol, já citada nas referências deste registro.",
-    "hepatic_adjustment": "Contraindicado em insuficiência hepática — dados limitados (mesmo conteúdo já registrado em `dosing.insuficiencia hepatica` e em `contraindications` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira de nebivolol, já citada nas referências deste registro."
+    "hepatic_adjustment": "Contraindicado em insuficiência hepática — dados limitados (mesmo conteúdo já registrado em `dosing.insuficiencia hepatica` e em `contraindications` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira de nebivolol, já citada nas referências deste registro.",
+    "commercial_presentations": [
+      "Neblock® (Torrent do Brasil Ltda., princípio ativo fabricado por Torrent Pharmaceuticals, Índia) — comprimidos de 5 mg, embalagens com 7, 30 ou 60 comprimidos. Fonte: bula profissional Neblock (consultaremedios.com.br/uploads/drug_leaflet, torrent.com.br — bula paciente) e sara.com.br, WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "nicardipina",
@@ -5822,7 +5833,8 @@
       "Solução injetável 10 mg/mL (1000 UI/mL), ampola de 5 mL (equivalente a 50 mg/ampola), uso intravenoso hospitalar"
     ],
     "commercial_presentations": [
-      "PROTAMINA 1000® (cloridrato de protamina), Cellera Farmacêutica S.A. (Indaiatuba/SP — mesmo endereço anteriormente registrado por Valeant Farmacêutica do Brasil Ltda, sucedida pela Cellera), fabricado por União Química Farmacêutica Nacional S.A. Registro ANVISA nº 1.0440.0184. Solução injetável 10 mg/mL, caixa com 25 ampolas de vidro de 5 mL. Confirmado por múltiplas fontes concordantes nesta sessão (cellerafarma.com.br, consultaremedios.com.br, sara.com.br, magazinemedica.com.br, WebSearch 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Medicamento de uso hospitalar."
+      "PROTAMINA 1000® (cloridrato de protamina), Cellera Farmacêutica S.A. (Indaiatuba/SP — mesmo endereço anteriormente registrado por Valeant Farmacêutica do Brasil Ltda, sucedida pela Cellera), fabricado por União Química Farmacêutica Nacional S.A. Registro ANVISA nº 1.0440.0184. Solução injetável 10 mg/mL, caixa com 25 ampolas de vidro de 5 mL. Confirmado por múltiplas fontes concordantes nesta sessão (cellerafarma.com.br, consultaremedios.com.br, sara.com.br, magazinemedica.com.br, WebSearch 11/08/2026) — issue #52, seção 9 (apresentações comerciais). Medicamento de uso hospitalar.",
+      "Nenhuma marca comercial adicional encontrada com confiança nesta sessão além de 'Protamina 1000®' (Valeant Farmacêutica do Brasil Ltda., registro ANVISA M.S. 1.0575.0040, solução injetável 10 mg/mL), que já constava no registro. Busca dedicada (WebSearch 20/08/2026, termos 'protamina sulfato marca comercial Brasil laboratório ANVISA') não localizou segunda marca fantasia registrada no Brasil — resultados convergem para a mesma apresentação já cadastrada. Nenhuma adição feita."
     ],
     "brand_names": [
       "Protamina 1000"
@@ -7279,7 +7291,8 @@
       "Solução injetável 20 U/mL, ampola de 1 mL (20 U/ampola)"
     ],
     "commercial_presentations": [
-      "Encrise® (Biolab Farmacêutica; registro ANVISA nº 1.0974.0190), vasopressina sintética (8-arginina vasopressina) 20 U/mL, ampola de 1 mL, embalagem com 10 ampolas. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+      "Encrise® (Biolab Farmacêutica; registro ANVISA nº 1.0974.0190), vasopressina sintética (8-arginina vasopressina) 20 U/mL, ampola de 1 mL, embalagem com 10 ampolas. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada.",
+      "Nenhuma marca comercial adicional encontrada com confiança nesta sessão além de 'Encrise®' (Biolab, registro ANVISA 1.0974.0190, solução injetável 20 U/mL, ampola de 1 mL), que já constava no registro. Busca dedicada (WebSearch 20/08/2026, termos 'vasopressina injetável marca comercial Brasil ANVISA além Encrise') retornou resultados que confirmam Encrise como a única marca comercial com registro ativo localizada — nenhuma adição feita."
     ],
     "brand_names": [
       "Encrise"
@@ -8097,9 +8110,12 @@
     "presentations": [
       "Ampola de 2 mL contendo 10 mg de dipiridamol (5 mg/mL), uso exclusivamente intravenoso para a indicação de estresse farmacológico — já descrita em dosing."
     ],
-    "brand_names": [],
+    "brand_names": [
+      "Persantin"
+    ],
     "commercial_presentations": [
-      "Persantin® — marca histórica de dipiridamol. A lista oficial de medicamentos de referência excluídos da Anvisa publicada em 2026 registra cancelamento das apresentações orais (75 mg/100 mg) e também da solução injetável 5 mg/mL (10 mg/2 mL; registro da Mawdsleys cancelado em 02/06/2023). Não exibir como apresentação ativa."
+      "Persantin® — marca histórica de dipiridamol. A lista oficial de medicamentos de referência excluídos da Anvisa publicada em 2026 registra cancelamento das apresentações orais (75 mg/100 mg) e também da solução injetável 5 mg/mL (10 mg/2 mL; registro da Mawdsleys cancelado em 02/06/2023). Não exibir como apresentação ativa.",
+      "Persantin® Injetável (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.) — solução injetável, ampola de 2 mL contendo 10 mg de dipiridamol (5 mg/mL), cartucho com 5 ampolas de vidro transparente, uso intravenoso — mesma apresentação (dose e volume) já registrada em `presentations` deste verbete, agora com o nome comercial confirmado. Registro ANVISA nº 1583200010018, válido até 01/10/2029; bula aprovada pela ANVISA em 08/03/2013. Fonte: saudedireta.com.br (bula profissional Persantin injetável), smerp.com.br (consulta de registro ANVISA) e bulas.med.br, WebSearch 20/08/2026."
     ]
   },
   {
@@ -8345,7 +8361,10 @@
     "duration_of_action_source": "Farmacocinética consolidada da tadalafila (meia-vida ~35h, SmPC britânico do Cialis) e comparação com o desenho posológico de outros inibidores de PDE5 aprovados na HAP.",
     "sbp_reduction_mmhg": -0.2,
     "dbp_reduction_mmhg": -4.6,
-    "bp_evidence_source": "Redução médio-máxima da pressão arterial vs. placebo em voluntários sadios recebendo tadalafila 20 mg (metade da dose diária usada na HAP): -0,2 mmHg sistólica em pé e -4,6 mmHg diastólica em pé. Em pacientes com doença arterial coronariana estável, tadalafila 10 mg reduziu a PAS de pé de 134 para 127 mmHg (-7 mmHg) e a PAD de pé de 78 para 74 mmHg (-4 mmHg) no pico de concentração plasmática. Fonte: SmPC britânico do Cialis (tadalafila), seção de interações farmacodinâmicas com anti-hipertensivos/nitratos — mesmo princípio ativo do ADCIRCA (HAP), doses de referência distintas da dose diária de 40 mg usada na HAP (ver dosing); reforça, com dado quantificado, a contraindicação absoluta a nitratos já registrada em contraindications e notes."
+    "bp_evidence_source": "Redução médio-máxima da pressão arterial vs. placebo em voluntários sadios recebendo tadalafila 20 mg (metade da dose diária usada na HAP): -0,2 mmHg sistólica em pé e -4,6 mmHg diastólica em pé. Em pacientes com doença arterial coronariana estável, tadalafila 10 mg reduziu a PAS de pé de 134 para 127 mmHg (-7 mmHg) e a PAD de pé de 78 para 74 mmHg (-4 mmHg) no pico de concentração plasmática. Fonte: SmPC britânico do Cialis (tadalafila), seção de interações farmacodinâmicas com anti-hipertensivos/nitratos — mesmo princípio ativo do ADCIRCA (HAP), doses de referência distintas da dose diária de 40 mg usada na HAP (ver dosing); reforça, com dado quantificado, a contraindicação absoluta a nitratos já registrada em contraindications e notes.",
+    "commercial_presentations": [
+      "Nenhuma marca comercial adicional encontrada com confiança nesta sessão além de 'Adcirca®' (comprimidos revestidos de 20 mg, bula aprovada pela ANVISA em 06/07/2010), que já constava no registro. Busca dedicada (WebSearch 20/08/2026, termos 'tadalafila hipertensão pulmonar marca comercial Brasil além Adcirca' e 'Adcirca genérico tadalafila hipertensão pulmonar registro ANVISA Brasil') encontrou apenas marcas de tadalafila para disfunção erétil (Cialis, Zyad, Tada, Nesta diário, H-for, Dali) e genéricos de 5mg/20mg de laboratórios como EMS — nenhum com indicação/registro específico para hipertensão arterial pulmonar (HAP) confirmado como equivalente a Adcirca no Brasil. Não incluí nenhuma marca de disfunção erétil neste verbete, por serem apresentação/indicação/posologia diferentes das usadas em HAP. Nenhuma adição feita."
+    ]
   },
   {
     "slug": "epoprostenol-sodico",
@@ -12973,7 +12992,8 @@
     ],
     "commercial_presentations": [
       "Lacipil® (GlaxoSmithKline Brasil Ltda., importado de Glaxo Wellcome S.A., Espanha), Registro ANVISA 1.0107.0179, bula aprovada pela ANVISA em 13/01/2025, apresentação de 4mg. Confirmado por leitura direta da bula oficial (Bula de Lacipil® (lacidipino) 4mg, GlaxoSmithKline Brasil Ltda., Registro ANVISA 1.0107.0179, aprovada pela ANVISA em 13/01/2025 (br.gsk.com/media/abuhhvfl/lacipil.pdf)).",
-      "Motens® (GlaxoSmithKline UK Limited) é a marca do Reino Unido e NÃO é comercializada no Brasil."
+      "Motens® (GlaxoSmithKline UK Limited) é a marca do Reino Unido e NÃO é comercializada no Brasil.",
+      "Nenhuma marca comercial adicional encontrada com confiança nesta sessão além de 'Lacipil®' (GSK, comprimido revestido 4 mg, cartucho com 14 comprimidos), que já constava no registro. Busca dedicada (WebSearch 20/08/2026, termos 'lacidipino marca comercial Brasil além Lacipil genérico') não localizou segunda marca fantasia nem versão genérica com nome de fábrica distinto — resultados mostram apenas farmácias revendendo o próprio Lacipil. Nenhuma adição feita."
     ],
     "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): encontrada e lida na íntegra a bula brasileira oficial (Bula de Lacipil® (lacidipino) 4mg, GlaxoSmithKline Brasil Ltda., Registro ANVISA 1.0107.0179, aprovada pela ANVISA em 13/01/2025 (br.gsk.com/media/abuhhvfl/lacipil.pdf)), que substitui a SPC britânica como fonte primária onde as duas divergem. Correções de segurança aplicadas: (1) categoria de gravidez corrigida de 'sem categoria numérica' para Categoria C; (2) contraindicações reduzidas de 7 itens absolutos para as 2 reais da bula (hipersensibilidade, estenose aórtica grave), movendo os demais para precaução; (3) acrescentado alerta de segurança de prolongamento de QT/torsades de pointes (ausente do registro anterior, advertência mais grave da bula); (4) ajuste hepático corrigido (sem dados para recomendar conduta em insuficiência grave, não 'reduzir dose'); (5) apresentação comercial brasileira corrigida para só 4mg (fracionável), não 2mg separado; (6) redução pressórica trocada para o estudo de uso crônico (Cherubini/ELLE, 24 semanas) que a própria bula cita, mantendo Lyons 1994 (dose única) como referência complementar. 'Terceira geração', interação com corticoides/tetracosactídeo e 'cãibras musculares' permanecem VERIFICAÇÃO HUMANA NECESSÁRIA (não encontrados em nenhuma fonte primária consultada)."
   },
@@ -13924,7 +13944,8 @@
       "Caneta pré-cheia de uso único, dose de 10 mcg, contendo 600 mcg/2,4 mL (250 mcg/mL), 60 doses por caneta"
     ],
     "commercial_presentations": [
-      "BYETTA® (AstraZeneca Pharmaceuticals) é a marca de referência nos EUA, nas duas apresentações de caneta (5 mcg e 10 mcg) listadas em `presentations`. **Disponibilidade comercial atual, registro ANVISA e preço no Brasil NÃO confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA** (ver `notes.comercializacao_no_brasil_nao_confirmada_nesta_sessao`)."
+      "BYETTA® (AstraZeneca Pharmaceuticals) é a marca de referência nos EUA, nas duas apresentações de caneta (5 mcg e 10 mcg) listadas em `presentations`. **Disponibilidade comercial atual, registro ANVISA e preço no Brasil NÃO confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA** (ver `notes.comercializacao_no_brasil_nao_confirmada_nesta_sessao`).",
+      "VERIFICAÇÃO HUMANA NECESSÁRIA / nenhuma adição feita: a busca (WebSearch 20/08/2026, termos 'exenatida Bydureon Brasil registro ANVISA') localizou 'Bydureon®' (AstraZeneca do Brasil, princípio ativo exenatida de liberação prolongada, registro ANVISA nº 1161802560011) como segunda apresentação/marca do mesmo fármaco além de 'Byetta®' já cadastrado — mas a fonte (smerp.com.br, consulta de registro ANVISA) indica registro 'VENCIDO/cancelado', e outro resultado (residência médica UFRJ) cita que a ANVISA cancelou registros de Byetta e de Bydureon. Como o registro parece não estar mais vigente/comercializado no Brasil, não incluí Bydureon em brand_names por falta de confirmação de disponibilidade comercial atual — fica sinalizado para conferência humana antes de qualquer inclusão."
     ],
     "brand_names": [
       "Byetta"
