@@ -20168,5 +20168,168 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "rastreio-diagnostico-e-conduta-na-fibrose-endomiocardica-por-sindrome-hipereosinofilica",
+    "condicao": "Fibrose endomiocárdica associada à síndrome hipereosinofílica (endocardite de Löffler) — cardiomiopatia restritiva não amiloide",
+    "resumo": "Checklist para suspeitar, investigar por ressonância magnética cardíaca (sinal do 'duplo V' e mapeamento T2) e conduzir a fibrose endomiocárdica por síndrome hipereosinofílica — etiologia de fenótipo restritivo distinta da amiloidose, em que a decisão de imunossupressão depende de a doença estar ou não em fase inflamatória ativa.",
+    "documento_origem": "fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Antoun I, Marrow B, Pathmanathan R, Bhandari SS. Endomyocardial Fibrosis Associated With Hypereosinophilic Syndrome: Diagnostic and Management Insights From a Case Report · Catheterization and Cardiovascular Interventions · 2026 · 107:520-523 · DOI: 10.1002/ccd.70377 · PMID: 41298288",
+      "Rapezzi C, Aimo A, Barison A, Emdin M, Porcari A, Linhart A, Keren A, Merlo M, Sinagra G. Restrictive cardiomyopathy: definition and diagnosis · European Heart Journal · 2022 · 43(45):4679-4693 · DOI: 10.1093/eurheartj/ehac543 · PMID: 36269634 — usada aqui apenas para o enquadramento geral de fenótipo restritivo; recomendação de classe/nível não extraída desta fonte específica nesta sessão."
+    ],
+    "itens": [
+      {
+        "id": "fem-suspeita-eosinofilia-restritiva",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de fibrose endomiocárdica diante de eosinofilia inexplicada associada a achados clínicos/ecocardiográficos de fisiologia restritiva — enchimento ventricular restritivo, átrios dilatados, função sistólica preservada ou pouco reduzida, e obliteração apical ao ecocardiograma.",
+        "origem_secao": "Quando suspeitar"
+      },
+      {
+        "id": "fem-hemograma-diferencial-antes-pirofosfato",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Antes de investigar amiloidose com cintilografia com pirofosfato diante de um padrão restritivo ao ecocardiograma, checar hemograma completo com diferencial — eosinofilia é achado laboratorial simples que redireciona toda a investigação para esta etiologia.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "fem-rmc-sinal-duplo-v",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ressonância magnética cardíaca com sequência de realce tardio para identificar o achado patognomônico — o sinal do 'duplo V' ('double V sign'), padrão trilaminar no ápice ventricular com miocárdio normal, endocárdio fibrótico e trombo sobrejacente dispostos em camadas sucessivas.",
+        "origem_secao": "O achado de imagem que fecha o diagnóstico: o sinal do 'duplo V'"
+      },
+      {
+        "id": "fem-t2-mapping-estadiamento",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Incluir mapeamento T2 quantitativo na ressonância magnética cardíaca para estadiar a atividade da doença — é esse achado, e não o quadro clínico isolado, que distingue fase inflamatória ativa de fase fibrótica já estabelecida.",
+        "origem_secao": "Conduta — o papel decisivo do mapeamento T2 na escolha terapêutica"
+      },
+      {
+        "id": "fem-fase-inflamatoria-vs-fibrotica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar o estágio da doença a partir do mapeamento T2: fase inflamatória precoce (miocardite eosinofílica aguda) versus fase fibrótica já estabelecida — a distinção define se a imunossupressão ainda tem papel de prevenir progressão para fibrose.",
+        "origem_secao": "Conduta — o papel decisivo do mapeamento T2 na escolha terapêutica"
+      },
+      {
+        "id": "fem-imunossupressao-fase-ativa",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Na fase inflamatória precoce (miocardite eosinofílica aguda) identificada pelo T2 mapping, considerar imunossupressão com corticosteroide, que pode prevenir a progressão para fibrose estabelecida; na fase fibrótica já estabelecida, reconhecer que o benefício do corticosteroide é limitado, pois o dano estrutural não é mais reversível por imunomodulação.",
+        "origem_secao": "Conduta — o papel decisivo do mapeamento T2 na escolha terapêutica"
+      },
+      {
+        "id": "fem-anticoagulacao-trombo-apical",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Indicar anticoagulação para tratar e prevenir a progressão do trombo apical característico da doença — anticoagulante oral direto foi utilizado com resolução do trombo no caso-fonte deste documento.",
+        "origem_secao": "Conduta — o papel decisivo do mapeamento T2 na escolha terapêutica"
+      },
+      {
+        "id": "fem-t2-seriado-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Repetir mapeamento T2 seriado por ressonância magnética cardíaca ao longo do seguimento, para reavaliar objetivamente se ainda há inflamação ativa e orientar a manutenção ou suspensão da imunossupressão, em vez de decidir de forma empírica.",
+        "origem_secao": "Conduta — o papel decisivo do mapeamento T2 na escolha terapêutica"
+      },
+      {
+        "id": "fem-investigacao-hematologica-fip1l1-pdgfra",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para investigação hematológica da causa da hipereosinofilia (incluindo pesquisa de rearranjo FIP1L1-PDGFRA, sugestivo de neoplasia mieloproliferativa associada) como parte obrigatória da propedêutica, independentemente do manejo cardíaco já em curso — pode implicar tratamento hematológico específico com inibidor de tirosina quinase, fora do escopo cardiológico.",
+        "origem_secao": "O que este documento não substitui"
+      },
+      {
+        "id": "fem-nao-diagnosticar-amiloidose-sem-hemograma",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar todo padrão restritivo ao ecocardiograma como amiloidose e pedir cintilografia com pirofosfato sem antes checar hemograma com diferencial.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "fem-nao-corticoide-empirico-fase-fibrotica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não prescrever corticosteroide em dose alta para todo paciente com fibrose endomiocárdica independentemente da fase da doença — na doença já fibrótica estabelecida, o benefício é limitado e o risco de efeito adverso do corticoide permanece.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiomiopatias citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diferenciacao-clinica-entre-pseudossincope-psicogenica-e-sincope-vasovagal",
+    "condicao": "Pseudossíncope psicogênica versus síncope vasovagal verdadeira",
+    "resumo": "Checklist para diferenciar, pela história, pelo tilt test e por critérios semiológicos quantificados, a pseudossíncope psicogênica (aparência de perda de consciência sem perda de consciência verdadeira, geralmente transtorno conversivo) da síncope vasovagal verdadeira.",
+    "documento_origem": "sincope-no-atleta-e-pseudossincope-psicogenica-diagnostico-diferencial",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "The semiology of tilt-induced psychogenic pseudosyncope · Neurology · https://www.neurology.org/doi/10.1212/WNL.0b013e3182a1aa88",
+      "Differential Diagnosis Between Psychogenic Pseudosyncope and Vasovagal Syncope in Children: A Quantitative Scoring Model Based on Clinical Manifestations · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8829042/"
+    ],
+    "itens": [
+      {
+        "id": "pseudo-suspeitar-transtorno-conversivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de pseudossíncope psicogênica diante de episódios recorrentes de aparente perda de consciência sem perda de consciência verdadeira documentada — psiquiatricamente classificada na maioria dos casos como transtorno conversivo, hipotetizado como manifestação física de estressores internos.",
+        "origem_secao": "Pseudossíncope psicogênica — definição"
+      },
+      {
+        "id": "pseudo-perfil-demografico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerar o perfil demográfico típico — mais comum em mulheres jovens, com maior número de episódios nos últimos 6 meses — como dado de contexto que reforça a suspeita, sem confirmá-la isoladamente.",
+        "origem_secao": "Diferenciação clínica com síncope vasovagal — perfil demográfico"
+      },
+      {
+        "id": "pseudo-tilt-test-monitorizacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar tilt test com monitorização hemodinâmica contínua — o achado-chave é a pressão arterial NÃO cair antes de a mesa de tilt ser retornada à posição supina durante a aparente perda de consciência, o que contrasta com a síncope verdadeira, em que as alterações hemodinâmicas precedem a perda de consciência.",
+        "origem_secao": "Pseudossíncope psicogênica — achado no tilt test"
+      },
+      {
+        "id": "pseudo-duracao-episodio",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Registrar, pela história do paciente ou de testemunha, a duração do episódio: mediana de 44 segundos sugere pseudossíncope, contra mediana de 20 segundos na síncope vasovagal verdadeira.",
+        "origem_secao": "Diferenciação clínica com síncope vasovagal — duração do episódio"
+      },
+      {
+        "id": "pseudo-olhos-durante-evento",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Perguntar especificamente sobre os olhos do paciente durante o evento: fechados em 97% dos casos de pseudossíncope, contra apenas 7% na síncope vasovagal verdadeira — um dos discriminadores mais fortes disponíveis na história.",
+        "origem_secao": "Diferenciação clínica com síncope vasovagal — olhos durante o evento"
+      },
+      {
+        "id": "pseudo-ausencia-de-prodromo",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Investigar ausência de pródromo: 24% dos pacientes com pseudossíncope negam ou não recordam sintomas prodrômicos, contra 6,6% na síncope verdadeira — discriminador mais fraco isoladamente, a usar em conjunto com duração do episódio e estado dos olhos.",
+        "origem_secao": "Diferenciação clínica com síncope vasovagal — ausência de pródromo"
+      },
+      {
+        "id": "pseudo-encaminhamento-psiquiatria",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para avaliação psiquiátrica quando os critérios diferenciais (achado hemodinâmico do tilt test, duração do episódio, olhos fechados, ausência de pródromo) apontarem consistentemente para pseudossíncope — a classificação predominante é de transtorno conversivo.",
+        "origem_secao": "Pseudossíncope psicogênica — definição"
+      },
+      {
+        "id": "pseudo-nao-descartar-causa-cardiaca-antes",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não fechar o diagnóstico de pseudossíncope apenas pelo perfil demográfico ou pela frequência de episódios — são os critérios objetivos do tilt test e da semiologia (duração, olhos, pródromo) que sustentam a diferenciação, não a impressão clínica isolada.",
+        "origem_secao": "Diferenciação clínica com síncope vasovagal"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Síncope citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
