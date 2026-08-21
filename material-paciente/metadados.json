@@ -14447,5 +14447,187 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "cardiomiopatia-arritmogenica",
+    "titulo": "Cardiomiopatia arritmogênica",
+    "subtitulo": "Quando o músculo do coração é trocado, aos poucos, por gordura e cicatriz",
+    "tema": "Cardiomiopatias",
+    "documento_slug": "cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023",
+    "resumo": "Uma doença genética em que partes do músculo do coração vão sendo substituídas por tecido fibroso e gorduroso, deixando o coração mais propenso a arritmias — entenda o que isso muda no seu dia a dia e por que a atividade física precisa ser conversada com cuidado com o cardiologista.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Na cardiomiopatia arritmogênica, partes do músculo do coração vão sendo trocadas, aos poucos, por tecido fibroso e gorduroso. Isso pode acontecer principalmente no lado direito do coração, no lado esquerdo, ou nos dois — por isso hoje os médicos falam desse grupo de doenças como um espectro, e não mais como uma condição única.",
+          "É uma doença genética, ou seja, ligada a uma alteração que pode ter sido herdada de um dos pais e pode ser passada aos filhos. Por causa disso, quando alguém recebe esse diagnóstico, os parentes de primeiro grau (pais, irmãos, filhos) costumam ser convidados a fazer exames de rastreamento, mesmo sem sintoma nenhum."
+        ]
+      },
+      {
+        "titulo": "Por que ela importa",
+        "paragrafos": [
+          "O tecido fibroso e gorduroso que substitui o músculo normal não se contrai como o músculo saudável, e pode servir de ponto de partida para arritmias — batimentos descompassados que, num extremo, podem ser graves. É por isso que essa doença é reconhecida como uma causa importante de morte súbita em pessoas jovens e em atletas.",
+          "Com o tempo, a mesma troca de tecido também pode enfraquecer a capacidade do coração de bombear sangue, levando a sintomas de insuficiência cardíaca em parte dos pacientes — nem todos, e o ritmo de evolução varia de pessoa para pessoa."
+        ]
+      },
+      {
+        "titulo": "Como o diagnóstico é feito",
+        "paragrafos": [
+          "Não existe um único exame que feche o diagnóstico sozinho. O cardiologista reúne informações de várias fontes — eletrocardiograma, ecocardiograma e/ou ressonância magnética do coração, histórico de arritmias, e história familiar — e usa um conjunto de critérios estabelecido internacionalmente para chegar à conclusão.",
+          "Em alguns casos, o médico também calcula, com base em características clínicas e de exames, uma estimativa individual do risco de uma arritmia grave no futuro. Essa conta ajuda a decidir se — e quando — vale a pena considerar um dispositivo implantável para proteger contra arritmias graves."
+        ]
+      },
+      {
+        "titulo": "O que o tratamento costuma envolver",
+        "paragrafos": [
+          "O acompanhamento costuma reunir várias frentes: controle de arritmias com remédios ou, quando indicado, um procedimento por cateter; cuidado da função do coração quando ela já está mais comprometida; e, para quem tem risco mais alto, um dispositivo implantável (cardiodesfibrilador) que reconhece e interrompe arritmias perigosas automaticamente.",
+          "Uma parte central e particular do tratamento desta doença — diferente de várias outras cardiomiopatias — é a orientação sobre exercício físico. Esportes competitivos e treinos muito intensos podem acelerar a progressão da doença e provocar arritmias, então essa é uma conversa que precisa acontecer sempre com o seu cardiologista, nunca decidida por conta própria.",
+          "O acompanhamento costuma ser feito por uma equipe com mais de um especialista — cardiologista, especialista em arritmias (eletrofisiologista) e, quando cabível, geneticista clínico — porque a doença tem essas várias frentes ao mesmo tempo."
+        ]
+      },
+      {
+        "titulo": "Convivendo com o diagnóstico",
+        "paragrafos": [
+          "Receber esse diagnóstico costuma trazer duas preocupações práticas: quanto de atividade física é seguro, e quem mais da família precisa ser investigado. As duas coisas têm resposta individualizada — não existe uma regra igual para todo mundo — e devem ser conversadas diretamente com o seu cardiologista.",
+          "Se você tem esse diagnóstico, é importante avisar seus parentes de primeiro grau sobre a possibilidade de fazerem exames de rastreamento, mesmo que se sintam completamente bem — a doença pode estar presente antes de dar qualquer sintoma."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio, principalmente durante ou logo após esforço físico — procure avaliação médica",
+      "Palpitação (coração acelerado ou descompassado) que não passa, ou que vem com tontura importante",
+      "Falta de ar que piora rapidamente ou aparece mesmo em repouso",
+      "Dor no peito forte ou que não melhora"
+    ],
+    "perguntas": [
+      "No meu caso, a doença afeta mais o lado direito, o esquerdo, ou os dois?",
+      "Qual é o meu risco estimado de arritmia grave, e como ele foi calculado?",
+      "Que tipo e intensidade de exercício físico são seguros para mim?",
+      "Eu preciso de um cardiodesfibrilador implantável agora, ou isso pode ser reavaliado mais adiante?",
+      "Quais parentes meus precisam fazer exame de rastreamento, e que exame é esse?"
+    ],
+    "fontes": [
+      "2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023. DOI 10.1093/eurheartj/ehad194. PMID 37622657.",
+      "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2019;40(23):1850-1858. DOI 10.1093/eurheartj/ehz103. PMID 30915475."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "doenca-de-fabry-e-o-coracao",
+    "titulo": "Doença de Fabry e o coração",
+    "subtitulo": "Uma causa rara de coração espessado que tem tratamento específico",
+    "tema": "Cardiomiopatias",
+    "documento_slug": "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+    "resumo": "A doença de Fabry é uma condição genética rara que pode espessar o músculo do coração de um jeito parecido com a cardiomiopatia hipertrófica — mas, diferente da maioria das outras causas, ela tem tratamento voltado diretamente para a origem do problema.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "A doença de Fabry é uma condição genética herdada ligada ao cromossomo X, causada pela falta ou deficiência de uma enzima do corpo. Sem essa enzima funcionando direito, uma substância se acumula dentro das células ao longo dos anos, inclusive nas células do músculo do coração, o que pode deixar a parede do coração mais espessa.",
+          "Por afetar o gene no cromossomo X, a doença costuma se manifestar de forma diferente em homens e mulheres, e a investigação laboratorial também é feita de forma diferente entre os dois — algo que o seu médico vai explicar de acordo com o seu caso."
+        ]
+      },
+      {
+        "titulo": "Por que ela importa",
+        "paragrafos": [
+          "Em quem faz investigação de coração espessado (um achado que também aparece na cardiomiopatia hipertrófica), a doença de Fabry é encontrada numa pequena parcela dos casos — por isso ela entra na lista de causas a descartar quando o ecocardiograma mostra espessamento do músculo cardíaco sem outra explicação óbvia, como pressão alta muito elevada.",
+          "A doença de Fabry costuma afetar mais de um órgão ao mesmo tempo, não só o coração — pode envolver rins, olhos, pele, sistema nervoso e audição. É justamente essa combinação de sinais em vários órgãos, junto com os achados no coração, que costuma levantar a suspeita."
+        ]
+      },
+      {
+        "titulo": "Como o diagnóstico é feito",
+        "paragrafos": [
+          "O ecocardiograma e a ressonância magnética do coração podem mostrar padrões que chamam atenção para Fabry, distintos de outras causas de espessamento cardíaco — inclusive um achado específico na ressonância que ajuda a diferenciar Fabry de outra causa parecida, a amiloidose cardíaca.",
+          "A confirmação do diagnóstico é feita por exame de sangue, medindo a atividade da enzima que falta, e, dependendo do caso — principalmente em mulheres —, por teste genético. Isso porque, em mulheres, a atividade da enzima pode aparecer normal no exame de sangue mesmo quando a doença está presente, e por isso o teste genético costuma ser necessário para confirmar."
+        ]
+      },
+      {
+        "titulo": "O que faz esta causa ser diferente das outras",
+        "paragrafos": [
+          "A grande maioria das causas de coração espessado não tem um tratamento voltado diretamente para a origem do problema — o cuidado é focado em controlar sintomas e prevenir complicações. A doença de Fabry é uma exceção importante: existe tratamento específico, que repõe a enzima que falta ou ajuda a enzima do próprio corpo a funcionar melhor.",
+          "Por isso identificar Fabry cedo tem um peso a mais do que só nomear a causa do espessamento: abre uma porta de tratamento que a maioria das outras causas não tem. A própria diretriz usada como referência neste material registra que esse tratamento específico funciona melhor quando começado antes que o dano aos órgãos já esteja avançado — o que reforça a importância de investigar cedo diante de sinais sugestivos."
+        ]
+      },
+      {
+        "titulo": "Convivendo com o diagnóstico",
+        "paragrafos": [
+          "Por afetar vários órgãos, o acompanhamento da doença de Fabry costuma envolver mais de um especialista além do cardiologista — dependendo dos órgãos afetados no seu caso, podem entrar nefrologista, neurologista, oftalmologista, entre outros.",
+          "Como é uma doença genética ligada ao cromossomo X, vale conversar com seu médico sobre quais parentes podem se beneficiar de investigação, já que o padrão de herança é diferente do de outras doenças cardíacas genéticas e o próprio médico pode orientar melhor quem deve ser testado."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar que piora rapidamente ou aparece em repouso",
+      "Dor no peito forte ou que não melhora",
+      "Desmaio ou tontura importante, principalmente durante esforço",
+      "Palpitação (coração acelerado ou descompassado) que não passa"
+    ],
+    "perguntas": [
+      "Por que meu médico está investigando doença de Fabry no meu caso?",
+      "Meu exame de sangue precisa ser complementado por teste genético?",
+      "Se o diagnóstico for confirmado, o tratamento específico está indicado para mim agora?",
+      "Além do coração, que outros órgãos precisam ser avaliados?",
+      "Quais parentes meus deveriam ser investigados?"
+    ],
+    "fontes": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-que-volta-relapso-ou-reinfeccao",
+    "titulo": "Endocardite que volta: relapso ou reinfecção?",
+    "subtitulo": "Por que um novo episódio depois do tratamento não é sempre a mesma coisa",
+    "tema": "Endocardite",
+    "documento_slug": "recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao",
+    "resumo": "Se a endocardite voltar depois de um tratamento que parecia ter dado certo, a primeira pergunta do médico não é qual remédio usar de novo — é se este é o mesmo processo infeccioso que não foi totalmente resolvido, ou uma infecção completamente nova.",
+    "secoes": [
+      {
+        "titulo": "Por que essa distinção importa",
+        "paragrafos": [
+          "Um novo episódio de endocardite depois de um tratamento que parecia ter funcionado costuma gerar a mesma pergunta imediata: 'voltou a mesma infecção, ou é uma nova?'. A resposta muda completamente o caminho de investigação e de tratamento — não é uma diferença apenas de nomenclatura.",
+          "Os médicos usam dois termos diferentes para essas duas situações, e o critério para separar uma da outra é técnico: qual micro-organismo causou a infecção, e quanto tempo se passou desde o episódio anterior."
+        ]
+      },
+      {
+        "titulo": "As duas situações",
+        "paragrafos": [
+          "Quando o novo episódio é causado pelo mesmo micro-organismo do episódio anterior, os médicos chamam isso de relapso. Um relapso é um sinal de alerta importante: ele indica que algo do foco infeccioso original pode não ter sido completamente eliminado — por exemplo, um material infectado que ficou no corpo, um pequeno abscesso que não foi drenado, ou um tratamento antibiótico anterior que não foi suficiente.",
+          "Quando o novo episódio é causado por um micro-organismo diferente, e costuma acontecer depois de um período mais longo (tipicamente mais de seis meses) do episódio anterior, os médicos chamam isso de reinfecção. Na prática, uma reinfecção se comporta como um evento novo e independente — não é sinal de que o tratamento anterior falhou, mas sim de que a pessoa continua com algum fator que a deixa mais suscetível a um novo episódio de endocardite."
+        ]
+      },
+      {
+        "titulo": "O que muda na investigação e na conduta",
+        "paragrafos": [
+          "Diante de um relapso, a equipe médica costuma buscar ativamente um foco de infecção que ficou escondido ou não foi resolvido da primeira vez — o que pode incluir reavaliar se há indicação de um novo procedimento cirúrgico, mesmo que você já tenha sido operado no episódio anterior.",
+          "Diante de uma reinfecção, o foco da investigação se volta para entender por que você está mais suscetível a um novo episódio — por exemplo, se você tem uma valva protética, um dispositivo cardíaco implantado, ou alguma porta de entrada recorrente para bactérias, como problema dentário ou de pele — para que esse fator de risco seja tratado ou controlado."
+        ]
+      },
+      {
+        "titulo": "Convivendo com o diagnóstico",
+        "paragrafos": [
+          "Se você já teve endocardite, é importante saber reconhecer sinais de que ela pode estar voltando, e procurar atendimento rapidamente diante deles — quanto antes um possível novo episódio for investigado, mais cedo a equipe consegue identificar se é relapso ou reinfecção e agir de acordo.",
+          "Manter as consultas de acompanhamento combinadas com seu cardiologista, e conversar sobre medidas de prevenção específicas para o seu caso (por exemplo, cuidado odontológico regular, cuidado com a pele em pontos de acesso venoso, se for o seu caso), faz parte de reduzir o risco de um novo episódio."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Febre que persiste ou volta, principalmente se você já teve endocardite antes",
+      "Calafrios, suor noturno intenso ou mal-estar que não melhora",
+      "Falta de ar nova ou que piora",
+      "Manchas ou pontos vermelhos/roxos incomuns na pele, principalmente nas mãos ou nos pés",
+      "Fraqueza súbita, alteração da fala ou da visão — procure atendimento de urgência"
+    ],
+    "perguntas": [
+      "Se eu tiver um novo episódio, como vocês vão saber se é relapso ou reinfecção?",
+      "No meu caso, existe algum foco de risco (dentário, de pele, de dispositivo) que eu deveria cuidar com mais atenção?",
+      "Com que frequência eu preciso voltar para acompanhamento depois do tratamento?",
+      "Que sinais eu devo procurar em casa que indicariam que a infecção pode estar voltando?",
+      "Eu preciso de algum cuidado preventivo especial antes de procedimentos dentários ou outros exames?"
+    ],
+    "fontes": [
+      "2023 ESC Guidelines for the management of endocarditis. European Heart Journal. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."
+    ],
+    "review_status": "revisado"
   }
 ]
