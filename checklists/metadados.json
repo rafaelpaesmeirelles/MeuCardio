@@ -8424,5 +8424,255 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "rastreamento-de-lipoproteina-a-pelo-menos-uma-vez-na-vida",
+    "condicao": "Rastreamento de lipoproteína(a) no adulto",
+    "resumo": "Checklist para decidir quando dosar Lp(a), como interpretar o resultado e como ajustar a conduta em quem já tem risco cardiovascular elevado por essa via, segundo o consenso EAS 2022.",
+    "documento_origem": "lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785. PMCID: PMC9639807"
+    ],
+    "itens": [
+      {
+        "id": "lpa-screening-confirmar-dosagem-previa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se o paciente adulto já teve Lp(a) dosada alguma vez na vida — a recomendação do consenso é medir ao menos uma vez, não de forma seriada.",
+        "origem_secao": "A recomendação central: dosagem única, não seriada"
+      },
+      {
+        "id": "lpa-screening-solicitar-dosagem",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar dosagem de Lp(a) em mg/dL e em nmol/L (as duas unidades, que não são intercambiáveis por um fator fixo simples) para todo adulto ainda não testado.",
+        "origem_secao": "Os cortes que definem a faixa de risco"
+      },
+      {
+        "id": "lpa-screening-indicacao-pediatrica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em criança ou adolescente, restringir a indicação de dosagem a história de AVC isquêmico ou a pai/mãe com doença aterosclerótica prematura — não rastrear a pediatria de forma universal.",
+        "origem_secao": "A recomendação central: dosagem única, não seriada"
+      },
+      {
+        "id": "lpa-screening-classificar-resultado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar o resultado pelos cortes pragmáticos do consenso: < 30 mg/dL (< 75 nmol/L) exclusão de risco relevante; 30-50 mg/dL (75-125 nmol/L) zona cinzenta de risco intermediário; > 50 mg/dL (> 125 nmol/L) corte de inclusão, risco cardiovascular aumentado.",
+        "origem_secao": "Os cortes que definem a faixa de risco"
+      },
+      {
+        "id": "lpa-screening-intensificar-fatores-modificaveis",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se Lp(a) > 50 mg/dL (> 125 nmol/L), intensificar o manejo dos demais fatores de risco modificáveis (LDL, pressão arterial, tabagismo) — não existe hoje terapia específica aprovada com desfecho cardiovascular comprovado para reduzir a própria Lp(a).",
+        "origem_secao": "O que o documento diz sobre tratamento — e o limite que ele reconhece"
+      },
+      {
+        "id": "lpa-screening-cascata-familiar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Considerar testagem em cascata de familiares nos três cenários do consenso: hipercolesterolemia familiar, história familiar de Lp(a) muito elevada, ou história pessoal/familiar de doença aterosclerótica prematura.",
+        "origem_secao": "Quem tem indicação de rastreamento em cascata (dirigido por família)"
+      },
+      {
+        "id": "lpa-screening-encaminhar-aferese",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Em Lp(a) muito elevada com doença cardiovascular progressiva apesar do manejo otimizado dos demais fatores de risco, considerar encaminhamento para aférese de lipoproteínas — intervenção de exceção, não de rotina.",
+        "origem_secao": "O que o documento diz sobre tratamento — e o limite que ele reconhece"
+      },
+      {
+        "id": "lpa-screening-nao-repetir-dosagem",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não repetir a dosagem de Lp(a) rotineiramente: o consenso afirma que repetir a dosagem não melhora a predição de risco, com exceção de doença renal, doença hepática ou infecção aguda no momento da coleta.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "lpa-screening-considerar-ancestralidade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao interpretar o corte de risco, considerar a ancestralidade do paciente: a mediana populacional de Lp(a) varia de forma relevante entre grupos (75 nmol/L em ascendência negra vs. 19,7 nmol/L em ascendência branca, dados do UK Biobank citados no consenso) — aplicar o mesmo corte absoluto de forma cega pode super ou subestimar risco.",
+        "origem_secao": "Variabilidade por ancestralidade — por que não existe um corte \"universal\" sem ressalva"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785, em 21/08/2026."
+  },
+  {
+    "slug": "manejo-da-hipertrigliceridemia-grave-para-prevencao-de-pancreatite-aguda",
+    "condicao": "Hipertrigliceridemia grave e risco de pancreatite aguda",
+    "resumo": "Checklist para estratificar o risco de pancreatite aguda por faixa de triglicerídeo e conduzir a hipertrigliceridemia grave/muito grave conforme a diretriz vigente do ACC 2021 ECDP, depois da retirada formal da diretriz da Endocrine Society 2012.",
+    "documento_origem": "hipertrigliceridemia-e-risco-de-pancreatite-aguda-a-coorte-de-copenhague-e-o-limiar-de-tratamento",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pedersen SB, Langsted A, Nordestgaard BG. Nonfasting Mild-to-Moderate Hypertriglyceridemia and Risk of Acute Pancreatitis. JAMA Intern Med. 2016;176(12):1834-1842. DOI: 10.1001/jamainternmed.2016.6875. PMID: 27820614",
+      "Virani SS, Morris PB, Agarwala A, Ballantyne CM, Birtcher KK, Kris-Etherton PM, Ladden-Stirling AB, Miller M, Orringer CE, Stone NJ. 2021 ACC Expert Consensus Decision Pathway on the Management of ASCVD Risk Reduction in Patients With Persistent Hypertriglyceridemia. J Am Coll Cardiol. 2021;78(9):960-993. DOI: 10.1016/j.jacc.2021.06.011. PMID: 34332805",
+      "Berglund L, Brunzell JD, Goldberg AC, Goldberg IJ, Sacks F, Murad MH, Stalenhoef AF; Endocrine Society. Evaluation and Treatment of Hypertriglyceridemia: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2012;97(9):2969-2989. PMID: 22962670 — RETIRADA (retired) pela Endocrine Society em 16/10/2025, conforme J Clin Endocrinol Metab. 2026;111(2):e647. PMID: 41313251"
+    ],
+    "itens": [
+      {
+        "id": "tg-pancreatite-dosar-e-classificar-faixa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosar triglicerídeo (pode ser sem jejum) e classificar a faixa: normal < 150 mg/dL, leve 150-199 mg/dL, moderada 200-999 mg/dL, grave 1.000-1.999 mg/dL, muito grave ≥ 2.000 mg/dL — classificação histórica da Endocrine Society 2012, hoje formalmente retirada, ainda útil como referência de faixa.",
+        "origem_secao": "Classificação e limiar de tratamento — Sociedade Endócrina 2012, sua retirada em 2025, e a conduta vigente do ACC 2021"
+      },
+      {
+        "id": "tg-pancreatite-reconhecer-gradiente-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer que o risco de pancreatite aguda já é mensurável a partir de 177 mg/dL (2,00 mmol/L), não apenas acima de 1.000 mg/dL — na coorte de Copenhague (n=116.550), HR 2,3 (IC95% 1,3-4,0) nessa faixa em relação a < 89 mg/dL, com tendência de dose-resposta (p = 6 × 10⁻⁸).",
+        "origem_secao": "A coorte de Copenhague — o gradiente de risco, medido em 116.550 pessoas"
+      },
+      {
+        "id": "tg-pancreatite-identificar-hipertrigliceridemia-grave",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Identificar hipertrigliceridemia grave (TG ≥ 500 mg/dL, especialmente ≥ 1.000 mg/dL) como o limiar em que a síndrome de quilomicronemia plenamente manifesta (xantoma eruptivo, lipemia retinalis, pancreatite) pode ocorrer, sobretudo acima de 1.500 mg/dL.",
+        "origem_secao": "RESOLVIDO nesta sessão (02/08/2026) — existe fonte sucessora, dedicada e vigente"
+      },
+      {
+        "id": "tg-pancreatite-conduta-acc-2021",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Para TG ≥ 500 mg/dL em adulto de 40-75 anos com risco cardiovascular em 10 anos ≥ 5%, doença aterosclerótica estabelecida ou diabetes: iniciar/intensificar estatina, reforçar dieta com baixo ou muito baixo teor de gordura, e considerar fenofibrato ou ômega-3 prescrito (icosapente etílico ou ésteres etílicos de ácido ômega-3) — conduta do ACC 2021 ECDP, via de decisão por consenso ('consider'), não recomendação forte com grau formal de evidência.",
+        "origem_secao": "RESOLVIDO nesta sessão (02/08/2026) — existe fonte sucessora, dedicada e vigente"
+      },
+      {
+        "id": "tg-pancreatite-preferir-fenofibrato",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Preferir fenofibrato a genfibrozila quando associado a estatina, conforme a ressalva explícita do ACC 2021 ECDP.",
+        "origem_secao": "RESOLVIDO nesta sessão (02/08/2026) — existe fonte sucessora, dedicada e vigente"
+      },
+      {
+        "id": "tg-pancreatite-nao-citar-endocrine-society-sem-ressalva",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não citar a diretriz da Endocrine Society 2012 (fibrato como primeira linha, força forte/qualidade moderada) como conduta vigente sem a ressalva de que foi formalmente retirada em 16/10/2025 — a conduta terapêutica vigente para prevenção de pancreatite é a do ACC 2021 ECDP.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "tg-pancreatite-nao-tratar-faixa-moderada-com-fibrato",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tratar hipertrigliceridemia moderada (200-999 mg/dL) com fibrato apenas para 'prevenir pancreatite': a indicação farmacológica dirigida à prevenção de pancreatite é específica da faixa grave/muito grave (> 1.000 mg/dL); na faixa moderada, a conduta de redução de risco cardiovascular segue a diretriz de dislipidemia já registrada nesta pasta, com estatina como base.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "tg-pancreatite-nao-confundir-com-ensaios-cardiovasculares",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não confundir esta evidência (risco de pancreatite) com a evidência de desfecho cardiovascular dos ensaios de fibrato (PROMINENT/ACCORD-Lipid) e de icosapente etílico (REDUCE-IT) — são perguntas clínicas diferentes; nenhum daqueles ensaios testou prevenção de pancreatite como desfecho.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "tg-pancreatite-contextualizar-risco-absoluto",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Contextualizar que, mesmo no estrato de maior risco relativo da coorte (≥ 443 mg/dL, HR 8,7), a incidência absoluta foi de 12 eventos por 10.000 pessoas-ano — número pequeno em termos absolutos, o que explica por que a indicação formal de tratamento farmacológico dirigido segue reservada às faixas muito mais altas (> 1.000 mg/dL).",
+        "origem_secao": "O que as fontes, lidas juntas, estabelecem"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Pedersen SB, Langsted A, Nordestgaard BG. Nonfasting Mild-to-Moderate Hypertriglyceridemia and Risk of Acute Pancreatitis. JAMA Intern Med. 2016;176(12):1834-1842. PMID: 27820614, e Virani SS et al. 2021 ACC Expert Consensus Decision Pathway on the Management of ASCVD Risk Reduction in Patients With Persistent Hypertriglyceridemia. J Am Coll Cardiol. 2021;78(9):960-993. PMID: 34332805, em 21/08/2026."
+  },
+  {
+    "slug": "suspensao-perioperatoria-de-isglt2-para-prevencao-de-cetoacidose-euglicemica",
+    "condicao": "Prevenção de cetoacidose diabética euglicêmica associada a inibidores de SGLT2 no perioperatório",
+    "resumo": "Checklist para suspender inibidores de SGLT2 antes de procedimento cirúrgico e para reconhecer cetoacidose euglicêmica no paciente que os utiliza, já que a glicemia normal não afasta o diagnóstico.",
+    "documento_origem": "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479",
+      "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA revises labels of SGLT2 inhibitors for diabetes to include warnings about too much acid in the blood and serious urinary tract infections. Atualização de 17 de março de 2020",
+      "Marino EC, Negretto LAF, Ribeiro RS, Momesso D, Feitosa ACR, Toyoshima MTK, et al. Rastreamento e Controle da Hiperglicemia no Perioperatório - Posicionamento Conjunto da Sociedade Brasileira de Diabetes (SBD), Sociedade Brasileira de Anestesiologia (SBA) e Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica (ABESO). Diretriz Oficial da Sociedade Brasileira de Diabetes. 2025. DOI 10.29327/5660187.2025-10",
+      "Snel LIP, Li X, Jamaludin F, Siegelaar SE, Holleman F, Vriesendorp TM, DeVries JH, Hoekstra JBL, Preckel B, van Raalte DH, Hermanides J, Hulst AH. A Systematic Review and Expert Evaluation of Perioperative SGLT2 Inhibitor-Associated Ketoacidosis Case Reports. Acta Anaesthesiol Scand. 2026;70(6):e70254. PMID 42130079"
+    ],
+    "itens": [
+      {
+        "id": "sglt2-caduglicemica-identificar-usuarios",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar todo paciente em uso de inibidor de SGLT2 (canagliflozina, dapagliflozina, empagliflozina, ertugliflozina) antes de cirurgia eletiva ou procedimento invasivo planejado.",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "sglt2-caduglicemica-suspender-conforme-farmaco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Suspender o iSGLT2 antes de cirurgia eletiva conforme o fármaco: pelo menos 3 dias para canagliflozina, dapagliflozina e empagliflozina; pelo menos 4 dias para ertugliflozina (FDA, atualização de 17/03/2020).",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "sglt2-caduglicemica-suspensao-sbd-sba-abeso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Para cirurgias de grande porte e procedimentos invasivos planejados com redução da ingestão calórica, suspender o iSGLT2 com antecedência de 3 a 4 dias, conforme a R6 do posicionamento conjunto SBD/SBA/ABESO 2025 (Classe I, Nível B).",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "sglt2-caduglicemica-nao-suspender-por-rotina-procedimento-menor",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em procedimentos de menor porte, sem redução relevante da ingesta, avaliar a manutenção do iSGLT2 individualmente pelo risco-benefício, em vez de suspender por rotina.",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "sglt2-caduglicemica-cirurgia-de-emergencia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em cirurgia de emergência, quando a suspensão prévia de 3-4 dias não é possível, suspender o iSGLT2 imediatamente e monitorizar a cetonemia capilar diariamente por 3 a 5 dias após o procedimento, ou enquanto o paciente permanecer em jejum oral.",
+        "origem_secao": "Posicionamento nacional equivalente"
+      },
+      {
+        "id": "sglt2-caduglicemica-reiniciar-so-com-ingesta-normal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reiniciar o iSGLT2 somente quando a ingesta oral do paciente tiver retornado ao basal e os demais fatores de risco para cetoacidose (infecção, desidratação, jejum) estiverem resolvidos.",
+        "origem_secao": "Conduta prática à beira do leito"
+      },
+      {
+        "id": "sglt2-caduglicemica-dosar-cetonas-independente-da-glicemia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de sintomas compatíveis com acidose (náusea, vômitos, dor abdominal, taquipneia, mal-estar/fadiga desproporcional) em paciente usando iSGLT2, solicitar cetonas (sangue ou urina) e gasometria/bicarbonato independentemente do valor da glicemia capilar — a glicemia normal não afasta o diagnóstico de cetoacidose euglicêmica.",
+        "origem_secao": "Conduta prática à beira do leito"
+      },
+      {
+        "id": "sglt2-caduglicemica-nao-descartar-por-glicemia-normal",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não descartar cetoacidose diabética só porque a glicemia está normal ou apenas discretamente elevada (tipicamente abaixo de 300 mg/dL na CAD euglicêmica por iSGLT2) — é justamente essa dissociação que caracteriza a entidade e atrasa o reconhecimento.",
+        "origem_secao": "A armadilha clínica: a tríade diagnóstica clássica pressupõe hiperglicemia franca"
+      },
+      {
+        "id": "sglt2-caduglicemica-reconhecer-fatores-precipitantes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecer os fatores precipitantes descritos: jejum prolongado, cirurgia mesmo eletiva, infecção/sepse, baixa ingesta calórica ou hídrica (incluindo dieta cetogênica ou de baixo carboidrato), redução importante da dose de insulina, desidratação, evento cardiovascular agudo, cirurgia bariátrica, uso excessivo de álcool e trauma.",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "sglt2-caduglicemica-cautela-em-diabetes-tipo-1",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em diabetes tipo 1 (uso off-label na maioria dos cenários no Brasil), reforçar que o iSGLT2 concentra desproporcionalmente os casos graves de CAD euglicêmica (7 de 9 pacientes na série original) e só deve ser usado com grande cautela, orientação extensa e monitorização estreita.",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "sglt2-caduglicemica-tratamento-com-insulina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Quando a CAD euglicêmica se instalar, tratar com os princípios gerais de insulina e reposição volêmica/eletrolítica da CAD clássica — na série de 2026, o tratamento com insulina foi eficaz e a cetoacidose se resolveu em todos os pacientes que sobreviveram.",
+        "origem_secao": "Conduta prática à beira do leito"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479, e U.S. FDA Drug Safety Communication de 17/03/2020, em 21/08/2026."
   }
 ]
