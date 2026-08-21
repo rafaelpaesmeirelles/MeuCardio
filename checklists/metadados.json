@@ -8424,5 +8424,260 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "aplicacao-dos-criterios-de-jones-2015-para-diagnostico-de-febre-reumatica-aguda",
+    "condicao": "Aplicação dos critérios de Jones revisados (AHA 2015) para diagnóstico de febre reumática aguda",
+    "resumo": "Passo a passo para não errar a contagem dos critérios de Jones após a revisão de 2015: determinar antes de tudo a categoria de risco populacional (que muda os próprios limiares e a lista de manifestações), distinguir primeiro episódio de recorrência, e aplicar os quatro critérios obrigatórios de Doppler para caracterizar valvulite subclínica como critério maior.",
+    "documento_origem": "fluxograma-febre-reumatica-aguda-criterios-de-jones-2015",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association · Circulation · 2015 · 131(20):1806-1818 · DOI: 10.1161/CIR.0000000000000205 — Tabela 3 (achados ao Doppler na valvulite reumática) e Tabela 7 (critérios de Jones revisados)"
+    ],
+    "itens": [
+      {
+        "id": "crj-categoria-de-risco-definida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Categoria de risco populacional determinada ANTES de contar manifestações maiores/menores — baixo risco exige dado epidemiológico confiável (incidência de FR aguda até 2/100.000 crianças em idade escolar/ano OU prevalência de cardiopatia reumática até 1/1.000 habitantes/ano, todas as idades; Classe IIa, nível C). Na ausência desse dado, a criança é classificada como risco moderado a alto (Classe I, nível C) — a falta de dado não classifica ninguém como baixo risco.",
+        "origem_secao": "A categoria de risco, que vem antes de tudo"
+      },
+      {
+        "id": "crj-evidencia-infeccao-estreptococica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Evidência laboratorial de infecção estreptocócica do grupo A precedente confirmada — exceto nas duas exceções previstas: coreia isolada, ou cardite reumática crônica indolente de início insidioso e progressão lenta, em que o diagnóstico pode ser feito sem essa evidência.",
+        "origem_secao": "Árvore de decisão: diagnóstico"
+      },
+      {
+        "id": "crj-primeiro-episodio-ou-recorrencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Definido se é primeiro episódio ou recorrência (paciente com história confiável de febre reumática ou cardiopatia reumática já estabelecida) — a contagem de manifestações exigida é diferente nos dois casos.",
+        "origem_secao": "Árvore de decisão: diagnóstico"
+      },
+      {
+        "id": "crj-manifestacao-articular-categoria-unica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmado que a manifestação articular foi contada em uma categoria só — se a artrite já foi usada como critério maior, a artralgia do mesmo paciente não pode ser contada de novo como menor.",
+        "origem_secao": "Três regras de contagem que evitam erro"
+      },
+      {
+        "id": "crj-poliartralgia-so-em-risco-moderado-alto",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Se poliartralgia foi usada como critério maior, confirmado que o paciente é de população de risco moderado a alto (não vale como maior em baixo risco) e que outras causas de poliartralgia foram afastadas antes.",
+        "origem_secao": "Três regras de contagem que evitam erro"
+      },
+      {
+        "id": "crj-pcr-vhs-valores-corretos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "PCR conferido acima do limite superior do laboratório, e VHS registrado pelo valor de PICO (não um valor isolado, já que a VHS evolui ao longo do quadro) — VHS de 60 mm/h ou mais em baixo risco, 30 mm/h ou mais em risco moderado a alto; PCR de 3,0 mg/dL ou mais nas duas categorias.",
+        "origem_secao": "Manifestações maiores e menores, por categoria"
+      },
+      {
+        "id": "crj-contagem-primeiro-episodio",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Para primeiro episódio, contagem aplicada pela coluna certa de risco: 2 manifestações maiores, OU 1 maior mais 2 menores, fecham o diagnóstico de febre reumática aguda inicial.",
+        "origem_secao": "Árvore de decisão: diagnóstico"
+      },
+      {
+        "id": "crj-doppler-quatro-criterios-obrigatorios",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se há regurgitação valvar ao Doppler sem sopro clínico (valvulite subclínica), confirmado que os QUATRO critérios estão presentes antes de contá-la como critério maior — mitral: vista em ≥2 planos, jato ≥2 cm em ≥1 plano, velocidade de pico >3 m/s, jato holossistólico em ≥1 envelope; aórtica: os mesmos quatro, trocando jato ≥1 cm e holodiastólico. Regurgitação que não preenche os quatro NÃO caracteriza valvulite reumática ao Doppler.",
+        "origem_secao": "Árvore de decisão: cardite ao Doppler"
+      },
+      {
+        "id": "crj-contagem-recorrencia",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Para recorrência (história confiável de FR/cardiopatia reumática prévia): 2 maiores, ou 1 maior e 2 menores, dão diagnóstico presuntivo (Classe IIb, nível C); 3 menores apenas também dão diagnóstico presuntivo (Classe IIb, nível C), mas antes é recomendado excluir outras causas mais prováveis do quadro (Classe I, nível C).",
+        "origem_secao": "Árvore de decisão: diagnóstico"
+      },
+      {
+        "id": "crj-conduta-quando-nao-preenche-criterios",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Quando a contagem não preenche os critérios e há incerteza genuína, considerada a oferta de 12 meses de profilaxia secundária com reavaliação por história, exame físico e ecocardiograma repetido (Classe I) — em vez de simplesmente descartar o diagnóstico.",
+        "origem_secao": "Árvore de decisão: diagnóstico"
+      }
+    ],
+    "revisao": "Proposta de checklist gerada em sessão de pesquisa/extração a partir do fluxograma já publicado e revisado nesta base (fluxograma-febre-reumatica-aguda-criterios-de-jones-2015). Todos os itens são reformulação de conteúdo já verificado e citado no documento de origem, sem nenhum dado novo. Segue a régua de publicação do projeto e cita Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) como responsável clínico do produto — aguarda a aprovação individual dele antes de ser considerado formalmente revisado/publicado."
+  },
+  {
+    "slug": "coreia-de-sydenham-diagnostico-e-conducao-terapeutica",
+    "condicao": "Diagnóstico e condução terapêutica da coreia de Sydenham",
+    "resumo": "O que checar diante de coreia de Sydenham: reconhecer que ela é, sozinha, diagnóstica de febre reumática; investigar a infecção estreptocócica com a latência mais longa entre as manifestações maiores (4-8 semanas); escolher classe terapêutica pela evidência sistemática mais recente; e não deixar de manter a profilaxia secundária só porque a apresentação foi neurológica.",
+    "documento_origem": "coreia-de-sydenham-diagnostico-e-tratamento",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Tariq S, Niaz F, Waseem S, Shaikh TG, Ahmed SH, Irfan M, Nashwan AJ, Ullah I. Managing and treating Sydenham chorea: A systematic review. Brain Behav. 2023;13(6):e3035. DOI: 10.1002/brb3.3035. PMID: 37150977; PMCID: PMC10275551",
+      "Comparison of the efficacy of carbamazepine, haloperidol and valproic acid in the treatment of children with Sydenham's chorea: clinical follow-up of 18 patients. Arq Neuropsiquiatr. PMID: 12131934",
+      "Dados de latência após infecção estreptocócica, duração do quadro e taxa de recorrência: conferidos contra múltiplas fontes secundárias concordantes em 30/07/2026 (documento de origem registra que não foi possível confirmar um único artigo primário específico para essa parte)."
+    ],
+    "itens": [
+      {
+        "id": "csy-coreia-isolada-ja-diagnostica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecido que coreia isolada, sem nenhum outro critério maior ou menor, JÁ é diagnóstica de febre reumática — não exige critério adicional nem evidência de infecção estreptocócica recente, desde que outras causas de coreia tenham sido excluídas (diagnóstico de exclusão dentro do contexto clínico compatível).",
+        "origem_secao": "O que é, e por que é diferente das outras manifestações maiores"
+      },
+      {
+        "id": "csy-latencia-estreptococica-investigada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigada infecção estreptocócica em janela de 4 a 8 semanas antes do início do quadro — latência mais longa que a de artrite ou cardite (2-3 semanas), o que facilita o esquecimento do episódio de faringite pelo paciente/família e exige busca ativa na anamnese.",
+        "origem_secao": "O que é, e por que é diferente das outras manifestações maiores"
+      },
+      {
+        "id": "csy-exclusao-outras-causas-coreia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Outras causas de coreia excluídas antes de firmar o diagnóstico de coreia de Sydenham — é diagnóstico de exclusão dentro do contexto clínico compatível.",
+        "origem_secao": "O que é, e por que é diferente das outras manifestações maiores"
+      },
+      {
+        "id": "csy-antagonista-dopaminergico-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Antagonista dopaminérgico (haloperidol é o mais usado) considerado como opção terapêutica primária mais frequente, segundo a revisão sistemática de 2023 (11 estudos, 579 pacientes) — age bloqueando receptores dopaminérgicos, reduzindo o sinal coreico.",
+        "origem_secao": "Tratamento — o que a evidência sistemática mostra"
+      },
+      {
+        "id": "csy-antiepileptico-dose-se-escolhido",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se optado por antiepiléptico: ácido valproico (preferido dentro da classe) 20-25 mg/kg/dia, ou carbamazepina como alternativa, 15 mg/kg/dia. Em estudo comparativo direto, os dois mostraram eficácia e segurança semelhantes entre si, superiores a haloperidol nesse estudo específico (melhora sem efeito colateral em 6/6 e 5/6 pacientes, respectivamente, contra 3 pacientes com haloperidol).",
+        "origem_secao": "Tratamento — o que a evidência sistemática mostra"
+      },
+      {
+        "id": "csy-corticosteroide-considerado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Corticosteroide (prednisolona) considerado como opção — resultado promissor na revisão sistemática, com ganho de peso como único efeito colateral relatado nos estudos incluídos, coerente com o componente autoimune pós-estreptocócico da doença.",
+        "origem_secao": "Tratamento — o que a evidência sistemática mostra"
+      },
+      {
+        "id": "csy-desmame-gradual-nao-abrupto",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a suspensão da medicação sintomática (antiepiléptico ou antagonista dopaminérgico), assim que o sintoma estiver controlado, será feita por desmame gradual — nunca suspensão abrupta.",
+        "origem_secao": "Tratamento — o que a evidência sistemática mostra"
+      },
+      {
+        "id": "csy-profilaxia-secundaria-mantida-mesmo-sem-cardite",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Profilaxia antibiótica secundária iniciada/mantida mesmo quando a apresentação foi 'apenas' neurológica, sem cardite evidente — pelas mesmas regras de duração por categoria de risco do documento dedicado desta pasta. Uso irregular da profilaxia é, ele próprio, fator de risco para recorrência da coreia.",
+        "origem_secao": "O que não muda — profilaxia secundária"
+      },
+      {
+        "id": "csy-fatores-risco-recorrencia-identificados",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fatores de risco para recorrência verificados: uso irregular da profilaxia antibiótica secundária, não atingir remissão em 6 meses, e persistência de sintomas por mais de 1 ano. Taxa de recorrência varia de 16% a 70% conforme a série e o tempo de seguimento.",
+        "origem_secao": "Curso clínico"
+      },
+      {
+        "id": "csy-alerta-recorrencia-tardia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Atenção para recorrência tardia na vida adulta, particularmente em mulher jovem no primeiro trimestre de gestação ou em uso de contraceptivo oral com estrogênio — descritas como formas tardias do mesmo espectro ('coreia gravídica' e 'coreia por pílula').",
+        "origem_secao": "Curso clínico"
+      }
+    ],
+    "revisao": "Proposta de checklist gerada em sessão de pesquisa/extração a partir do documento já publicado e revisado nesta base (coreia-de-sydenham-diagnostico-e-tratamento). Todos os itens são reformulação de conteúdo já verificado e citado no documento de origem, sem nenhum dado novo. Segue a régua de publicação do projeto e cita Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) como responsável clínico do produto — aguarda a aprovação individual dele antes de ser considerado formalmente revisado/publicado."
+  },
+  {
+    "slug": "diferenciacao-entre-febre-reumatica-aguda-e-doenca-de-kawasaki-na-crianca-febril",
+    "condicao": "Diferenciação entre febre reumática aguda e doença de Kawasaki na criança com febre prolongada, rash e poliartrite",
+    "resumo": "Checklist de avaliação inicial da criança de 2 a 5 anos com febre prolongada, rash e alteração articular/mucocutânea — o diferencial mais perigoso na suspeita de febre reumática, porque as duas doenças têm janela terapêutica estreita e alvo de dano cardíaco completamente diferente (coronárias em Kawasaki, valvas na febre reumática).",
+    "documento_origem": "febre-reumatica-aguda-versus-doenca-de-kawasaki-diagnostico-diferencial",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association · Circulation · 2017 · 135(17):e927-e999 · DOI: 10.1161/CIR.0000000000000484 · PMID: 28356445",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association · Circulation · 2015 · 131(20):1806-1818 · DOI: 10.1161/CIR.0000000000000205 · PMID: 25908771"
+    ],
+    "itens": [
+      {
+        "id": "frk-idade-considerada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Idade do paciente considerada no diagnóstico diferencial: Kawasaki abaixo de 5 anos é a regra (pico entre 6 meses e 5 anos); febre reumática aguda abaixo de 3 anos é rara o suficiente para pesar contra o diagnóstico (pico entre 5 e 15 anos).",
+        "origem_secao": "O que não pode faltar na anamnese e no exame, para não trocar uma pela outra"
+      },
+      {
+        "id": "frk-duracao-e-resposta-da-febre",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Duração e resposta da febre caracterizadas: Kawasaki exige febre ≥5 dias sem remissão espontânea antes do tratamento (considerar o diagnóstico com 4 dias se ≥4 dos critérios principais já presentes; clínicos experientes podem considerar com 3 dias em quadro característico); febre da FRA raramente ultrapassa 5 dias sem responder a anti-inflamatório.",
+        "origem_secao": "Doença de Kawasaki: critérios diagnósticos (AHA 2017) / Onde a sobreposição realmente confunde"
+      },
+      {
+        "id": "frk-padrao-da-artrite",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Padrão da artrite/artralgia, se presente, caracterizado: migratória e de grandes articulações favorece FRA (critério maior); artrite/artralgia não migratória, num quadro dominado pelo resto dos sinais mucocutâneos, favorece Kawasaki (não é critério principal, é achado associado).",
+        "origem_secao": "O que não pode faltar na anamnese e no exame, para não trocar uma pela outra"
+      },
+      {
+        "id": "frk-cinco-criterios-kawasaki-contados",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Contados os 5 critérios clínicos principais de Kawasaki: injeção conjuntival bilateral não exsudativa; alterações orais/orofaríngeas (lábios eritematosos/fissurados, língua em morango, hiperemia difusa); rash polimorfo não vesicular/não bolhoso; alterações de extremidades (eritema/edema de mãos e pés na fase aguda, descamação periungueal só na convalescença); linfadenopatia cervical geralmente unilateral ≥1,5 cm. Diagnóstico completo exige ≥4 desses critérios associados à duração de febre exigida.",
+        "origem_secao": "Doença de Kawasaki: critérios diagnósticos (AHA 2017)"
+      },
+      {
+        "id": "frk-antecedente-infeccioso-pesquisado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antecedente de faringite ou infecção de pele nas 2-3 semanas anteriores pesquisado na anamnese — ausência não exclui FRA (a infecção pode ser subclínica), mas presença reforça a hipótese. Para Kawasaki, nenhum antecedente infeccioso definido é exigido.",
+        "origem_secao": "O que não pode faltar na anamnese e no exame, para não trocar uma pela outra"
+      },
+      {
+        "id": "frk-ecocardiograma-dirigido-as-duas-hipoteses",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma pedido dirigido às DUAS hipóteses simultaneamente: procurar valvulite (jato regurgitante mitral/aórtico com as características do documento de critérios ecocardiográficos WHF 2023 desta pasta) E medir/classificar por escore Z as artérias coronárias — os dois achados não se excluem mutuamente na leitura do exame, mesmo que clinicamente só uma hipótese esteja sendo tratada.",
+        "origem_secao": "O que não pode faltar na anamnese e no exame, para não trocar uma pela outra"
+      },
+      {
+        "id": "frk-nao-aguardar-confirmacao-estreptococica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que o tratamento de Kawasaki suspeito NÃO foi postergado à espera da confirmação laboratorial de estreptococo — a IVIG perde eficácia com o atraso, e a suspeita clínica de Kawasaki (sobretudo com ≥5 dias de febre e critérios principais presentes) justifica tratamento empírico enquanto a investigação de FRA segue em paralelo.",
+        "origem_secao": "O que não pode faltar na anamnese e no exame, para não trocar uma pela outra"
+      },
+      {
+        "id": "frk-janela-terapeutica-ivig",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se Kawasaki confirmado/fortemente suspeito: imunoglobulina intravenosa (IVIG) associada a AAS em dose anti-inflamatória iniciadas dentro da janela ideal, até o 10º dia de doença — é o que evita a lesão coronariana definitiva (aneurisma em ≈25% dos casos não tratados).",
+        "origem_secao": "Por que este diferencial importa mais do que parece / Doença de Kawasaki: critérios diagnósticos (AHA 2017)"
+      },
+      {
+        "id": "frk-kawasaki-incompleto-considerado",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Kawasaki incompleto (atípico) considerado em lactente com febre prolongada e menos de 4 critérios principais — tem risco de aneurisma coronariano igual ou maior que o Kawasaki completo. VERIFICAÇÃO HUMANA NECESSÁRIA: o algoritmo laboratorial/ecocardiográfico completo de Kawasaki incompleto não foi reproduzido nesta base (acesso ao texto completo da diretriz bloqueado nesta sessão) — confirmar a íntegra do algoritmo na diretriz AHA 2017 antes de aplicá-lo à beira do leito.",
+        "origem_secao": "Doença de Kawasaki: critérios diagnósticos (AHA 2017)"
+      },
+      {
+        "id": "frk-ivig-nao-indicada-em-fra",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a IVIG NÃO tem papel indicado no tratamento agudo da febre reumática — o tratamento agudo da FRA é antibiótico (erradicação do estreptococo) mais anti-inflamatório (AAS/naproxeno) para a artrite.",
+        "origem_secao": "Por que este diferencial importa mais do que parece"
+      }
+    ],
+    "revisao": "Proposta de checklist gerada em sessão de pesquisa/extração a partir do documento já publicado e revisado nesta base (febre-reumatica-aguda-versus-doenca-de-kawasaki-diagnostico-diferencial). Todos os itens são reformulação de conteúdo já verificado e citado no documento de origem, sem nenhum dado novo. Segue a régua de publicação do projeto e cita Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) como responsável clínico do produto — aguarda a aprovação individual dele antes de ser considerado formalmente revisado/publicado."
   }
 ]
