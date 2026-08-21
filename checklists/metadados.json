@@ -20168,5 +20168,167 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estratificacao-de-risco-arritmico-na-disjuncao-anular-mitral-e-prolapso-mitral",
+    "condicao": "Disjunção anular mitral e prolapso valvar mitral arrítmico",
+    "resumo": "Checklist para reconhecer a disjunção anular mitral (MAD) e o fenótipo de prolapso mitral arrítmico independentemente do grau de regurgitação, estratificar o risco de arritmia ventricular complexa e morte súbita por imagem, e conduzir o tratamento conforme o achado (betabloqueador, ablação ou CDI).",
+    "documento_origem": "disjuncao-anular-mitral-e-prolapso-valvar-mitral-arritmico",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Niarchou P, et al. Mitral Valve Prolapse and Mitral Annular Disjunction Arrhythmic Syndromes: Diagnosis, Risk Stratification and Management · Reviews in Cardiovascular Medicine · 2022 · 23(9):295 · DOI: 10.31083/j.rcm2309295"
+    ],
+    "itens": [
+      {
+        "id": "mad-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de síndrome arrítmica do prolapso mitral/disjunção anular mitral (MAD) em paciente com prolapso valvar mitral e arritmia ventricular complexa ou síncope inexplicada, independentemente do grau de regurgitação — o risco arrítmico do MAD é independente da gravidade hemodinâmica da valva.",
+        "origem_secao": "O que é disjunção anular mitral (MAD) e por que ela mudou a forma de olhar para o prolapso mitral"
+      },
+      {
+        "id": "mad-02",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliar a disjunção anular mitral por ecocardiograma transtorácico no corte paraesternal longitudinal, em telessístole, medindo a separação entre a parede atrial esquerda/anel mitral e o miocárdio ventricular subjacente — tipicamente ≥5 mm (alguns protocolos usam limiar de ≥2 mm), com o folheto posterior sendo o mais frequentemente acometido.",
+        "origem_secao": "Como identificar — achados de imagem"
+      },
+      {
+        "id": "mad-03",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ressonância magnética cardíaca com avaliação de realce tardio por gadolínio (RTG) em todo paciente com prolapso mitral e arritmia ventricular complexa ou síncope inexplicada — o achado de fibrose no músculo papilar posteromedial e na parede inferobasal é a assinatura estrutural da síndrome arrítmica e estratifica risco além do que o ecocardiograma isolado mostra.",
+        "origem_secao": "Como identificar — achados de imagem"
+      },
+      {
+        "id": "mad-04",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Procurar ativamente a combinação de sinais de alerta de maior risco arrítmico: prolapso mixomatoso bifolear, sexo feminino, onda T negativa ou bifásica nas derivações inferiores do ECG, fibrose por RTG na ressonância cardíaca, e arritmia ventricular complexa com morfologia de bloqueio de ramo direito.",
+        "origem_secao": "Sinais de alerta (\"red flags\") para risco arrítmico elevado"
+      },
+      {
+        "id": "mad-05",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Avaliar a extensão circunferencial da disjunção anular, de preferência por ressonância magnética cardíaca, em vez de medir a disjunção apenas em um único corte ecocardiográfico — a extensão circunferencial é relevante para o grau de risco, não só a medida linear num único plano.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "mad-06",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar betabloqueador como primeira linha do manejo medicamentoso, para reduzir a hipercontratilidade associada ao prolapso mitral/disjunção anular.",
+        "origem_secao": "Conduta"
+      },
+      {
+        "id": "mad-07",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar ablação por cateter para extrassístoles ventriculares sintomáticas e frequentes, originadas do substrato papilar/fibrótico identificado na estratificação de risco.",
+        "origem_secao": "Conduta"
+      },
+      {
+        "id": "mad-08",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar cardiodesfibrilador implantável (CDI) como prevenção secundária de morte súbita apenas nos casos com fibrilação ventricular documentada — não no achado anatômico de MAD identificado incidentalmente, sem evento arrítmico associado.",
+        "origem_secao": "Conduta"
+      },
+      {
+        "id": "mad-09",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação de reparo cirúrgico mitral apenas quando houver regurgitação mitral grave associada, seguindo as indicações já estabelecidas para regurgitação mitral grave — o reparo cirúrgico não é o tratamento primário da síndrome arrítmica isoladamente.",
+        "origem_secao": "Conduta"
+      },
+      {
+        "id": "mad-10",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tranquilizar o paciente com prolapso mitral e regurgitação leve/insignificante só porque a valva não tem indicação cirúrgica — o descompasso entre valva hemodinamicamente benigna e substrato eletricamente perigoso é o que caracteriza a síndrome de MAD.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Valvopatias citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-pericardite-uremica-e-associada-a-dialise",
+    "condicao": "Pericardite urêmica e associada à diálise",
+    "resumo": "Checklist para diferenciar pericardite urêmica (dentro das primeiras 8 semanas de diálise) da associada à diálise (após 8 semanas, ligada a diálise inadequada), reconhecer o ECG atípico do paciente dialítico e conduzir o tratamento — diálise intensiva como intervenção de maior eficácia, limiar mais baixo para pericardiocentese dado o risco de tamponamento aumentado.",
+    "documento_origem": "pericardite-uremica-e-associada-a-dialise-diagnostico-e-manejo",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Peride I, et al. Understanding Hemodialysis-Associated Pericarditis: Causes, Symptoms, and Management Strategies. J Clin Med. 2025;14(17):5944. DOI: 10.3390/jcm14175944. PMID: 40943703. PMCID: PMC12428787 — texto completo lido via PMC em 12/08/2026.",
+      "Chugh S, Bhaskaran A, Kumar A, et al. Uremic- and Dialysis-Associated Pericarditis. Cardiol Rev. 2021;29(6):310-313. PMID: 33337656 — abstract conferido no PubMed em 12/08/2026, usado só para confirmar a nomenclatura das duas entidades distintas."
+    ],
+    "itens": [
+      {
+        "id": "pu-01",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diferenciar pericardite urêmica (surge dentro das primeiras 8 semanas do início da diálise, atribuída ao acúmulo de metabólitos urêmicos) de pericardite associada à diálise (surge após 8 semanas ou mais de diálise de manutenção, associada predominantemente a diálise inadequada) — o líquido pericárdico da forma associada à diálise costuma ser serossanguinolento, achado que ajuda a diferenciar as duas quando a história de tempo de diálise não está clara.",
+        "origem_secao": "Duas entidades distintas, não uma só"
+      },
+      {
+        "id": "pu-02",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente síndrome coronariana aguda no diagnóstico diferencial de dor torácica em paciente dialítico — os achados iniciais de pericardite e de SCA podem se sobrepor neste contexto, e o ECG atípico do paciente em diálise torna essa distinção ainda mais difícil.",
+        "origem_secao": "O que isto muda na prática"
+      },
+      {
+        "id": "pu-03",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não descartar pericardite só porque o ECG não mostra o padrão clássico (supradesnivelamento de ST difuso, infradesnivelamento de PR) — no paciente em diálise predominam alterações inespecíficas atribuíveis a hipertrofia ventricular esquerda ou distúrbios eletrolíticos, e a ausência do padrão clássico não afasta o diagnóstico neste grupo, ao contrário do que se assume na pericardite aguda de outras etiologias.",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "pu-04",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiografia como ferramenta-chave para detectar e avaliar o derrame pericárdico — tamanho, localização e sinais de tamponamento como colapso diastólico de ventrículo direito; radiografia de tórax (cardiomegalia) e laboratório (leucocitose, VHS elevada) são achados típicos, porém inespecíficos.",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "pu-05",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Intensificar a diálise (diária por 10 a 14 dias) como a intervenção com maior evidência de eficácia — taxas de sucesso em torno de 85%, com recorrência em até 15% dos casos, considerada aceitável frente à mortalidade da pericardite não tratada nesse contexto.",
+        "origem_secao": "Diálise intensiva — a intervenção com maior evidência de eficácia"
+      },
+      {
+        "id": "pu-06",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Individualizar a terapia farmacológica inicial entre AINEs e AAS conforme contraindicações e comorbidades do paciente renal crônico, associando colchicina em dose baixa ajustada ao peso para potencializar a eficácia e reduzir o risco de recorrência; reservar corticosteroide como terapia de segunda linha.",
+        "origem_secao": "Farmacológico"
+      },
+      {
+        "id": "pu-07",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Adotar limiar mais baixo para pericardiocentese neste grupo do que na população geral — o risco de progressão para tamponamento cardíaco é de aproximadamente 10-20% no paciente em diálise, contra 3,1% na população não dialítica.",
+        "origem_secao": "Intervenção — pericardiocentese e cirurgia"
+      },
+      {
+        "id": "pu-08",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação de janela pericárdica ou pericardiectomia os casos refratários com derrame recorrente que não respondem à intensificação da diálise e à terapia farmacológica.",
+        "origem_secao": "Intervenção — pericardiocentese e cirurgia"
+      },
+      {
+        "id": "pu-09",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Na forma associada à diálise, revisar a causa de base (adequação da sessão de diálise, função do acesso vascular) para evitar recorrência — intensificar a diálise resolve a maioria dos casos das duas formas, mas não corrige por si só uma diálise cronicamente inadequada.",
+        "origem_secao": "O que isto muda na prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
