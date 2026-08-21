@@ -8424,5 +8424,206 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "comunicacao-de-prognostico-incerto-na-insuficiencia-cardiaca-avancada",
+    "condicao": "Comunicação de prognóstico e incerteza na insuficiência cardíaca avançada",
+    "resumo": "Checklist de conduta verbal para conversar sobre prognóstico na IC avançada sem cair no modelo mental herdado da oncologia (ponto único de virada para a fase final) nem na evasão — a trajetória de falência de órgão é não linear, com risco de morte súbita e de falência progressiva competindo no mesmo paciente, e nem o julgamento clínico nem os escores validados dão um prazo confiável nesta população.",
+    "documento_origem": "comunicacao-de-incerteza-prognostica-na-insuficiencia-cardiaca-avancada",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Allen LA, Stevenson LW, Grady KL, Goldstein NE, Matlock DD, Arnold RM, Cook NR, Felker GM, Francis GS, Hauptman PJ, Havranek EP, Krumholz HM, Mancini D, Riegel B, Spertus JA; American Heart Association Council on Quality of Care and Outcomes Research. Decision making in advanced heart failure: a scientific statement from the American Heart Association. Circulation. 2012;125(15):1928-1952. DOI: 10.1161/CIR.0b013e31824f2173. PMID: 22392529. PMCID: PMC3893703",
+      "Murray SA, Kendall M, Boyd K, Sheikh A. Illness trajectories and palliative care. BMJ. 2005;330(7498):1007-1011. DOI: 10.1136/bmj.330.7498.1007. PMID: 15860828. PMCID: PMC557152"
+    ],
+    "itens": [
+      {
+        "id": "cpi-ic-nao-usar-modelo-oncologico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conversa conduzida sem presumir um ponto identificável de 'virada para a fase final' — a trajetória de falência de órgão da IC avançada é 'limitações de longo prazo com episódios graves intermitentes', diferente da trajetória oncológica de declínio relativamente previsível que costuma orientar o modelo mental herdado da oncologia",
+        "origem_secao": "O problema não é falta de dado — é a forma da trajetória"
+      },
+      {
+        "id": "cpi-ic-nomear-dois-mecanismos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Os dois mecanismos possíveis de morte nomeados ao paciente/família — morte súbita cardíaca por arritmia e morte mais gradual por falência progressiva de bomba — em vez de descrever a doença como um único caminho previsível",
+        "origem_secao": "O que a trajetória de falência de órgão faz com a certeza do prazo"
+      },
+      {
+        "id": "cpi-ic-faixa-nao-ponto",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Prognóstico comunicado como faixa/intervalo, nunca como número único de sobrevida ('você tem X meses') — o erro de previsão maior que o dobro ou menor que a metade da sobrevida real ocorre em cerca de 50% dos casos, mesmo com o melhor modelo estatístico",
+        "origem_secao": "O quanto os modelos e os médicos erram — em número, não em impressão"
+      },
+      {
+        "id": "cpi-ic-nomear-incerteza-como-fato",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Incerteza verbalizada explicitamente como dado clínico compartilhado (ex.: 'nunca podemos saber com certeza exatamente o que vai acontecer... precisamos fazer nosso melhor palpite e decidir o que fazer com base nessa informação'), não escondida atrás de vagueza nem tratada como desculpa",
+        "origem_secao": "Estratégias de linguagem que a AHA recomenda nomeadamente"
+      },
+      {
+        "id": "cpi-ic-planejar-pior-esperar-melhor",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Planejamento antecipado conduzido sob a formulação 'planejar para o pior enquanto se tem esperança no melhor', evitando tanto a falsa precisão pessimista quanto a evasão que deixa nenhuma decisão concreta preparada",
+        "origem_secao": "Estratégias de linguagem que a AHA recomenda nomeadamente"
+      },
+      {
+        "id": "cpi-ic-probabilidade-nao-e-certeza-individual",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Explicitado ao paciente que uma probabilidade populacional (ex.: 'uma chance de 70% de sobrevida em 2 anos') não se traduz diretamente em um indivíduo que estará 100% vivo ou morto — usado para responder à pergunta 'então eu tenho X% de chance?' sem soar evasivo",
+        "origem_secao": "Estratégias de linguagem que a AHA recomenda nomeadamente"
+      },
+      {
+        "id": "cpi-ic-ask-tell-ask",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Técnica Ask-Tell-Ask aplicada: perguntado o que o paciente já sabe e quanto detalhe quer saber, informação entregue em linguagem simples com pausas frequentes, e então pedido que o paciente repita com as próprias palavras o que entendeu",
+        "origem_secao": "Estratégias de linguagem que a AHA recomenda nomeadamente"
+      },
+      {
+        "id": "cpi-ic-dia-bom-nao-e-melhora",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Recuperação parcial/'dias bons' após descompensação NÃO interpretada como sinal de que a trajetória mudou de forma — é o padrão esperado da doença de falência de órgão, e adiar a conversa de planejamento a cada estabilidade aparente é o erro que a própria declaração da AHA nomeia",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "cpi-ic-revisitar-a-cada-exacerbacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Conversa de prognóstico revisitada a cada nova exacerbação/descompensação, não tratada como evento único fixado numa única consulta índice — a natureza não linear da trajetória exige isso",
+        "origem_secao": "Síntese prática: o que muda na condução da conversa"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "decisao-compartilhada-com-ferramenta-de-apoio-antes-de-angioplastia-eletiva",
+    "condicao": "Uso de ferramenta de decisão compartilhada antes de angioplastia coronária (PCI) eletiva em doença arterial coronariana estável",
+    "resumo": "Checklist para o momento de indicar PCI eletiva em doença coronariana estável, a partir do ensaio PCI Choice: uma ferramenta de decisão compartilhada bem desenhada melhora o conhecimento objetivo do paciente, mas não muda, por si só, o comportamento do médico na consulta — os autores concluíram que é necessário trabalho adicional para as lacunas de habilidade do médico em decisão compartilhada, mesmo com a ferramenta.",
+    "documento_origem": "ferramenta-de-decisao-compartilhada-na-angioplastia-eletiva-o-pci-choice",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Coylewright M, Dick S, Zmolek B, Askelin J, Hawkins E, Branda M, Inselman JW, Zeballos-Palacios C, Shah ND, Hess EP, LeBlanc A, Montori VM, Ting HH. PCI Choice Decision Aid for Stable Coronary Artery Disease: A Randomized Trial. Circ Cardiovasc Qual Outcomes. 2016;9(6):767-776. DOI: 10.1161/CIRCOUTCOMES.116.002641. PMID: 27803090 — NCT01771536, 124 pacientes elegíveis para análise final",
+      "Coylewright M, Branda ME, Inselman J, Shah ND, Hess EP, LeBlanc A, Montori VM, Ting HH. PCI Choice: Cardiovascular clinicians' perceptions of shared decision making in stable coronary artery disease. Patient Educ Couns. 2017;100(6):1136-1143. DOI: 10.1016/j.pec.2017.01.008. PMID: 28110953 — perspectiva qualitativa do médico"
+    ],
+    "itens": [
+      {
+        "id": "pcichoice-verificar-crenca-beneficio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de indicar PCI eletiva em doença arterial coronariana estável, verificado explicitamente o que o paciente acredita que o procedimento vai fazer — a expectativa de redução de morte/infarto é o mal-entendido mais comum e mais consequente identificado no ensaio de referência",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "pcichoice-corrigir-mal-entendido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Explicado de forma explícita que angioplastia eletiva na doença coronariana estável não reduz morte nem infarto do miocárdio em comparação com terapia clínica otimizada",
+        "origem_secao": "O mal-entendido mais comum da cardiologia eletiva"
+      },
+      {
+        "id": "pcichoice-ferramenta-como-facilitadora",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Ferramenta de decisão compartilhada usada como facilitadora do diálogo na consulta, não apenas entregue como material educativo — no estudo qualitativo do próprio grupo, os médicos tenderam a usá-la só como material educativo, e o engajamento em decisão compartilhada não mudou",
+        "origem_secao": "Por que este é um resultado \"parcialmente positivo\", e por que isso importa"
+      },
+      {
+        "id": "pcichoice-nao-presumir-decisao-feita",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Entrega do material ao paciente não tratada como equivalente a 'ter conduzido decisão compartilhada' — são coisas diferentes, e o ensaio mostrou isso ao encontrar ganho de conhecimento sem mudança nas demais medidas de qualidade decisória nem no comportamento do médico",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "pcichoice-escopo-nao-e-sca",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Resultado não generalizado para o cenário agudo de síndrome coronariana aguda — ali o cálculo de risco-benefício da PCI é outro, coberto em documento próprio desta pasta",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pcichoice-alcance-real-do-ganho",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Resultado interpretado com o alcance real medido: conhecimento objetivo sobre o benefício da PCI foi de 60% (com a ferramenta) vs. 40% (cuidado usual), p=0,034, e o paciente se sentiu mais informado (p=0,043) — mas as demais medidas de qualidade decisória não melhoraram, em amostra de 124 pacientes elegíveis para a análise final",
+        "origem_secao": "O ensaio"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "documentacao-do-consentimento-informado-e-da-decisao-compartilhada-no-prontuario",
+    "condicao": "Documentação da decisão compartilhada e do consentimento informado no prontuário, antes de procedimento cardiovascular invasivo",
+    "resumo": "Checklist do que registrar no prontuário sobre a conversa de risco antes de procedimento invasivo, a partir de três análises de processos reais de litígio em cardiologia (EUA, Coreia do Sul, Espanha) e um experimento controlado — a falha mais recorrentemente citada nos processos não é ter feito o procedimento errado, é não ter explicado (e não ter registrado que explicou) o risco de complicação antes dele.",
+    "documento_origem": "documentacao-de-decisao-compartilhada-e-consentimento-informado-no-prontuario-e-litigio-em-cardiologia",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kirshteyn G, Golan R, Gilchrist IC, Cohen MG. Medical Malpractice Lawsuits Involving Percutaneous Coronary and Peripheral Intervention. J Soc Cardiovasc Angiogr Interv. 2023 Apr 21;2(5):100975. DOI: 10.1016/j.jscai.2023.100975. PMID: 39132393. PMCID: PMC11307492",
+      "Hyeon CW, Lee W, Kim SY, Park JY, Shin SH. Prevention of medical malpractice and disputes through analysis of lawsuits related to coronary angiography and intervention. Korean J Intern Med. 2020;35(3):605-618. DOI: 10.3904/kjim.2018.365. PMID: 31189300. PMCID: PMC7214373",
+      "Santiago-Sáez A, Perea-Pérez B, Albarrán-Juan ME, Labajo-González E, Anadón-Baselga MJ, Almendral-Garrote J. Analysis of judgments in the practice of cardiology resolved on appeal in Spain between 1992 and 2007. Rev Esp Cardiol (Engl Ed). 2012;65(9):801-806. DOI: 10.1016/j.recesp.2012.02.021. PMID: 22682786",
+      "Schoenfeld EM, Mader S, Houghton C, Wenger R, Probst MA, Schoenfeld DA, Lindenauer PK, Mazor KM. The Effect of Shared Decisionmaking on Patients' Likelihood of Filing a Complaint or Lawsuit: A Simulation Study. Ann Emerg Med. 2019;74(1):126-136. DOI: 10.1016/j.annemergmed.2018.11.017. PMID: 30611638. PMCID: PMC6599569"
+    ],
+    "itens": [
+      {
+        "id": "doc-consentimento-nomear-complicacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registro no prontuário nomeia a(s) complicação(ões) específica(s) discutida(s) com o paciente — não a fórmula genérica 'riscos e benefícios foram explicados', que as fontes analisadas não tratam como evidência de explicação adequada",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "doc-consentimento-natureza-e-motivo-procedimento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registro nomeia a natureza específica do procedimento indicado e por que ele foi indicado, não apenas o nome do procedimento",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "doc-consentimento-risco-de-complicacao-especifico",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Explicação de risco dada de forma específica, detalhada e compreensível, incluindo o risco de complicações além da necessidade do procedimento — nos dois casos de violação do 'dever de explicação' identificados na análise sul-coreana, o ponto especificamente contestado foi a ausência de explicação sobre o risco de complicações, não a ausência de explicação em geral",
+        "origem_secao": "2. Coreia do Sul — 13 casos (20 julgamentos) da Suprema Corte (1998-2017)"
+      },
+      {
+        "id": "doc-consentimento-compreensao-registrada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Compreensão demonstrada pelo paciente sobre o risco discutido registrada no prontuário, idealmente com o modo como foi verificada",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "doc-consentimento-assinatura-nao-basta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Assinatura do termo de consentimento não tratada como sinônimo de explicação documentada adequadamente — nenhum dos estudos analisados mede a assinatura do termo como o fator associado ao desfecho jurídico; o que pesou foi o conteúdo e a especificidade da explicação sobre risco",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "doc-consentimento-conduzir-mesmo-breve",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Decisão compartilhada conduzida mesmo quando breve — no experimento controlado, exposição a qualquer nível de decisão compartilhada (breve ou completa) associou-se a participantes 80% menos propensos a relatar intenção de contatar um advogado após um desfecho adverso simulado, comparado a nenhuma decisão compartilhada (razão de chances 0,2; IC95% 0,12-0,31)",
+        "origem_secao": "4. Experimento controlado — decisão compartilhada muda a disposição a processar"
+      },
+      {
+        "id": "doc-consentimento-nao-subestimar-risco-especialidade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Defeito de informação/consentimento não tratado como causa marginal de litígio em cardiologia por a especialidade ser considerada de baixo risco — na análise espanhola, defeitos de informação ou consentimento informado afetaram exclusivamente cardiologistas entre as especialidades avaliadas (p<0,004)",
+        "origem_secao": "3. Espanha — 32 sentenças de cardiologia em segunda instância (1992-2007)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
