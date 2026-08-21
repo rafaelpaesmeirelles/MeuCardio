@@ -18146,5 +18146,243 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "sindrome-de-marfan-na-gestacao-vigilancia-aortica-e-via-de-parto-por-diametro",
+    "condicao": "Síndrome de Marfan na gestação — vigilância aórtica e definição da via de parto pelo diâmetro",
+    "resumo": "O que checar na gestante com síndrome de Marfan, do aconselhamento pré-concepcional ao pós-parto: os limiares de diâmetro da raiz aórtica que decidem cirurgia antes da gestação, a frequência de ecocardiograma de vigilância e a via de parto — distinto do checklist de mWHO 2.0 na primeira consulta, que classifica o risco geral sem estes cortes específicos de Marfan.",
+    "documento_origem": "sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Donnelly RT, Pinto NM, Kocolas I, Yetman AT. The immediate and long-term impact of pregnancy on aortic growth rate and mortality in women with Marfan syndrome. J Am Coll Cardiol. 2012 Jul 17;60(3):224-9. DOI: 10.1016/j.jacc.2012.03.051. PMID: 22789886",
+      "Kuperstein R, Cahan T, Yoeli-Ullman R, Ben Zekry S, Shinfeld A, Simchen MJ. Risk of Aortic Dissection in Pregnant Patients With the Marfan Syndrome. Am J Cardiol. 2017 Jan 1;119(1):132-137. DOI: 10.1016/j.amjcard.2016.09.024. PMID: 27788933",
+      "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022 Dec 13;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 — seções 8.1, 8.2 e 8.3",
+      "Whelan AR, Ringel ME, Shalhub S, et al. Obstetric considerations for aortopathy in pregnancy. Ann Cardiothorac Surg. 2023;12(6):526-535. DOI: 10.21037/acs-2023-adw-0164. PMID: 38090346. PMCID: PMC10711402",
+      "Narula N, Devereux RB, Malonga GP, Hriljac I, Roman MJ. Pregnancy-Related Aortic Complications in Women With Marfan Syndrome. J Am Coll Cardiol. 2021 Aug 31;78(9):870-879. DOI: 10.1016/j.jacc.2021.06.034. PMID: 34446158"
+    ],
+    "itens": [
+      {
+        "id": "marfan-gest-diametro-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar o diâmetro da raiz aórtica pré-concepcional ou na primeira consulta de pré-natal cardiológico, e classificar o estrato de risco: <40 mm, 40-45 mm (mWHO classe III) ou >45 mm (mWHO classe IV).",
+        "origem_secao": "Contexto"
+      },
+      {
+        "id": "marfan-gest-cirurgia-pre-concepcional",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se raiz aórtica >4,5 cm, indicar cirurgia aórtica antes da gestação (ACC/AHA 2022, COR 1/LOE C-LD). Se 4,0-4,5 cm, considerar cirurgia pré-concepcional (COR 2b), sobretudo com crescimento ≥0,3 cm/ano ou história familiar de dissecção.",
+        "origem_secao": "Diretriz ACC/AHA 2022 de doença aórtica — recomendações graduadas para via de parto e cirurgia pré-concepcional"
+      },
+      {
+        "id": "marfan-gest-betabloqueador",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Manter ou iniciar betabloqueador durante toda a gestação — associado a menor risco de dissecção nos dois estudos observacionais que avaliaram o fármaco; a única dissecção tipo A da coorte de Kuperstein 2017 ocorreu em paciente que recusou o tratamento.",
+        "origem_secao": "O estudo de Kuperstein et al. 2017 — risco por estratificação do diâmetro e via de parto"
+      },
+      {
+        "id": "marfan-gest-eco-seriado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Programar ecocardiograma de vigilância a cada trimestre e novamente algumas semanas pós-parto (ACC/AHA 2022, COR 1/LOE C-LD), com imagem mais frequente conforme diâmetro, taxa de crescimento e condição de base.",
+        "origem_secao": "Diretriz ACC/AHA 2022 de doença aórtica — recomendações graduadas para via de parto e cirurgia pré-concepcional"
+      },
+      {
+        "id": "marfan-gest-crescimento-sinal-alarme",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Monitorar o crescimento do diâmetro aórtico entre os ecocardiogramas seriados, não só o valor absoluto — aumento >1 mm durante a gestação associou-se significativamente a dissecção aórtica posterior (2 de 6 gestações com esse crescimento vs. 0 de 21 sem ele, p = 0,04).",
+        "origem_secao": "O estudo de Kuperstein et al. 2017 — risco por estratificação do diâmetro e via de parto"
+      },
+      {
+        "id": "marfan-gest-via-de-parto",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir a via de parto pelo diâmetro da raiz aórtica (ACC/AHA 2022, seção 8.2): <4,0 cm — parto vaginal recomendado (COR 1); 4,0-4,5 cm — parto vaginal com anestesia regional e segunda fase abreviada/assistida pode ser razoável (COR 2b); ≥4,5 cm — cesárea é razoável (COR 2a); história de dissecção aórtica crônica — cesárea recomendada (COR 1).",
+        "origem_secao": "Diretriz ACC/AHA 2022 de doença aórtica — recomendações graduadas para via de parto e cirurgia pré-concepcional"
+      },
+      {
+        "id": "marfan-gest-classe-iv-discussao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Com diâmetro >45 mm (mWHO classe IV), discutir com a paciente, em decisão compartilhada, a possibilidade de interrupção da gestação — risco extremamente alto já registrado na classificação mWHO 2.0 desta biblioteca.",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "marfan-gest-vigilancia-pos-parto",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter vigilância aórtica após o parto e não encerrar o seguimento na alta obstétrica: mulheres que engravidaram tiveram, no seguimento de longo prazo, maior prevalência de dissecção aórtica e de cirurgia aórtica eletiva do que as que nunca engravidaram (Donnelly et al. 2012).",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "marfan-gest-ressalva-esc-bloqueada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar a ressalva de fonte: o texto literal da tabela de via de parto por diâmetro aórtico da ESC 2018/2025 permanece inacessível (403, sem depósito em PMC), e o resumo de Narula et al. 2021 registra explicitamente que diretrizes americanas e europeias divergem nas recomendações de gestação em síndrome de Marfan — não presumir que os números do ACC/AHA 2022 usados neste checklist sejam idênticos aos da ESC.",
+        "origem_secao": "Limitações e o que não foi possível verificar nesta sessão"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642, e nos estudos de Donnelly et al. (J Am Coll Cardiol 2012, PMID 22789886) e Kuperstein et al. (Am J Cardiol 2017, PMID 27788933), em 21/08/2026."
+  },
+  {
+    "slug": "diferenciacao-de-pvod-e-hemangiomatose-capilar-na-suspeita-de-hap-idiopatica",
+    "condicao": "Diferenciação de doença veno-oclusiva pulmonar (PVOD)/hemangiomatose capilar pulmonar (PCH) na suspeita de HAP idiopática",
+    "resumo": "O que checar antes de escalar terapia vasodilatadora específica em um paciente rotulado 'HAP idiopática' — os achados clínicos e a tríade tomográfica que apontam para PVOD/PCH, e a estratégia cautelosa que evita o risco de edema pulmonar grave associado ao vasodilatador nessa condição.",
+    "documento_origem": "doenca-veno-oclusiva-pulmonar-pvod-diagnostico-diferencial-e-risco-de-edema-com-vasodilatador",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Montani D, Price LC, Dorfmuller P, et al. Pulmonary veno-occlusive disease. Eur Respir J. 2009;33(1):189-200. DOI: 10.1183/09031936.00090608. PMID: 19118230",
+      "Eyries M, Montani D, Girerd B, et al. EIF2AK4 mutations cause pulmonary veno-occlusive disease, a recessive form of pulmonary hypertension. Nat Genet. 2014;46(1):65-69. DOI: 10.1038/ng.2844. PMID: 24292273",
+      "Montani D, Jaïs X, Price LC, et al. Cautious epoprostenol therapy is a safe bridge to lung transplantation in pulmonary veno-occlusive disease. Eur Respir J. 2009;34(6):1348-1356. DOI: 10.1183/09031936.00017809. PMID: 19541723",
+      "Montani D, Lau EM, Dorfmüller P, et al. Pulmonary veno-occlusive disease. Eur Respir J. 2016;47(5):1518-1534. DOI: 10.1183/13993003.00026-2016. PMID: 27009171"
+    ],
+    "itens": [
+      {
+        "id": "pvod-hp-suspeita-em-idiopatica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de PVOD/PCH em todo paciente rotulado como 'HAP idiopática' — a PVOD responde por 5-10% dos casos inicialmente classificados assim (Montani et al. 2009, PMID 19118230).",
+        "origem_secao": "Epidemiologia — não é tão rara quanto parece"
+      },
+      {
+        "id": "pvod-hp-cinco-achados-clinicos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar os cinco achados que diferenciam PVOD da HAP idiopática: relação homem/mulher mais alta, maior exposição tabágica, menor pressão arterial de oxigênio em repouso, menor DLCO e menor nadir de saturação de oxigênio no teste de caminhada de 6 minutos.",
+        "origem_secao": "Apresentação clínica — o que diferencia da HAP idiopática"
+      },
+      {
+        "id": "pvod-hp-triade-tomografica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar tomografia de tórax de alta resolução buscando a tríade sugestiva de PVOD: opacidades em vidro fosco centrolobulares, linhas septais (espessamento de septos interlobulares) e linfonodomegalia mediastinal.",
+        "origem_secao": "Diagnóstico não invasivo — a tríade da tomografia de alta resolução"
+      },
+      {
+        "id": "pvod-hp-avaliacao-nao-invasiva-completa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Complementar com gasometria arterial, prova de função pulmonar com DLCO e lavado broncoalveolar (hemorragia alveolar oculta associada à PVOD) — a combinação com a tomografia pode ser suficiente para levantar o diagnóstico.",
+        "origem_secao": "Diagnóstico não invasivo — a tríade da tomografia de alta resolução"
+      },
+      {
+        "id": "pvod-hp-evitar-biopsia-cirurgica",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Evitar exigir biópsia pulmonar cirúrgica de rotina para confirmar o diagnóstico — é procedimento de alto risco nesta população com hipertensão pulmonar grave, e a avaliação não invasiva combinada costuma ser suficiente.",
+        "origem_secao": "Diagnóstico não invasivo — a tríade da tomografia de alta resolução"
+      },
+      {
+        "id": "pvod-hp-heranca-recessiva-eif2ak4",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerar rastreio genético de EIF2AK4 e aconselhamento familiar com herança recessiva — mutações bialélicas foram encontradas em 25% (5 de 20) dos casos esporádicos confirmados histologicamente; irmãos de um caso índice têm risco relevante mesmo com pais assintomáticos (heterozigotos obrigatórios).",
+        "origem_secao": "Genética — EIF2AK4, herança recessiva"
+      },
+      {
+        "id": "pvod-hp-titulacao-cautelosa-vasodilatador",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se optar por iniciar terapia vasodilatadora específica, fazê-lo com doses baixas, aumento lento e diurético em dose alta concomitante, sob monitorização estrita em centro de referência — estratégia associada a apenas 1 de 12 pacientes com edema pulmonar (leve e reversível) na série de Montani et al. 2009 (PMID 19541723).",
+        "origem_secao": "Terapia vasodilatadora cautelosa como ponte para transplante — a série de Montani 2009"
+      },
+      {
+        "id": "pvod-hp-encaminhar-transplante",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar precocemente para avaliação de transplante pulmonar — segue sendo a terapia definitiva preferida para os pacientes elegíveis, e a resposta parcial à terapia vasodilatadora não deve atrasar a listagem.",
+        "origem_secao": "O risco central: edema pulmonar com terapia vasodilatadora específica"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Montani D, Price LC, Dorfmuller P, et al. Pulmonary veno-occlusive disease. Eur Respir J. 2009;33(1):189-200. DOI: 10.1183/09031936.00090608. PMID: 19118230, e Montani D, Jaïs X, Price LC, et al. Cautious epoprostenol therapy is a safe bridge to lung transplantation in pulmonary veno-occlusive disease. Eur Respir J. 2009;34(6):1348-1356. PMID: 19541723, em 21/08/2026."
+  },
+  {
+    "slug": "cardiomiopatia-periparto-descompensada-reconhecimento-e-conduta-inicial",
+    "condicao": "Cardiomiopatia periparto descompensada e choque no puerpério — reconhecimento e conduta inicial",
+    "resumo": "O que checar diante da suspeita aguda de cardiomiopatia periparto (PPCM) no fim da gestação ou no puerpério — gatilhos de emergência, diagnóstico diferencial obrigatório e escalada para suporte avançado —, distinto do checklist de alta do puerpério (registro ROPAC), que trata da preparação para a alta, não do reconhecimento agudo à beira do leito.",
+    "documento_origem": "cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "De Backer J, Haugaa KH, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf193 — seção de insuficiência cardíaca e cardiomiopatia periparto, material oficial ESC 2025."
+    ],
+    "itens": [
+      {
+        "id": "ppcm-puerp-suspeita-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de cardiomiopatia periparto (PPCM) em mulher previamente sem causa identificável de insuficiência cardíaca que desenvolve IC no final da gestação ou nos meses após o parto, tipicamente com FEVE <45%.",
+        "origem_secao": "Cardiomiopatia periparto descompensada e choque no puerpério"
+      },
+      {
+        "id": "ppcm-puerp-gatilhos-emergencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar urgentemente PPCM/IC aguda diante de: dispneia progressiva, ortopneia ou edema pulmonar; hipoxemia, taquicardia desproporcional ou sinais de baixo débito; hipotensão/choque; nova disfunção ventricular ao ecocardiograma; arritmia ventricular, síncope ou parada; elevação de peptídeo natriurético/troponina em contexto compatível.",
+        "origem_secao": "Gatilhos de emergência"
+      },
+      {
+        "id": "ppcm-puerp-monitorizacao-inicial",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Iniciar monitorização contínua, ECG e oximetria assim que houver suspeita.",
+        "origem_secao": "Primeira abordagem"
+      },
+      {
+        "id": "ppcm-puerp-eco-urgente",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiograma urgente avaliando FEVE, ventrículo direito, valvas, congestão e trombo intracavitário.",
+        "origem_secao": "Primeira abordagem"
+      },
+      {
+        "id": "ppcm-puerp-diferenciais-obrigatorios",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Avaliar simultaneamente os diagnósticos que mudam a conduta no puerpério, antes de fechar PPCM: TEP, síndrome coronariana aguda/dissecção coronariana espontânea, pré-eclâmpsia/eclâmpsia, sepse, hemorragia e doença valvar aguda.",
+        "origem_secao": "Primeira abordagem"
+      },
+      {
+        "id": "ppcm-puerp-tratar-edema-pulmonar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Tratar edema pulmonar/IC aguda conforme o perfil hemodinâmico e a segurança materno-fetal/lactação, idealmente com Pregnancy Heart Team quando disponível.",
+        "origem_secao": "Primeira abordagem"
+      },
+      {
+        "id": "ppcm-puerp-escalada-instabilidade",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Diante de choque, hipoperfusão persistente, hipoxemia refratária ou arritmia ventricular, encaminhar precocemente a UTI e a centro com suporte avançado; considerar suporte circulatório mecânico temporário como ponte para recuperação/decisão se o choque cardiogênico for refratário ao tratamento inicial.",
+        "origem_secao": "Instabilidade ou choque"
+      },
+      {
+        "id": "ppcm-puerp-bromocriptina-classe-iib",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Bromocriptina pode ser considerada como adjuvante ao tratamento otimizado de IC para favorecer recuperação ventricular (Classe IIb, nível B) — não é terapia de resgate hemodinâmico e não deve atrasar a estabilização da paciente.",
+        "origem_secao": "Bromocriptina"
+      },
+      {
+        "id": "ppcm-puerp-anticoagulacao-com-bromocriptina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a bromocriptina for utilizada, considerar pelo menos anticoagulação profilática com heparina de baixo peso molecular (Classe IIa, nível C), pelo risco trombótico associado ao contexto da PPCM e à própria supressão da prolactina.",
+        "origem_secao": "Bromocriptina"
+      },
+      {
+        "id": "ppcm-puerp-nao-normalizar-dispneia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não normalizar dispneia ou ortopneia importante como sintoma fisiológico do puerpério — é uma das armadilhas clínicas mais frequentes no atraso do diagnóstico de PPCM.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em De Backer J, Haugaa KH, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf193, em 21/08/2026."
   }
 ]
