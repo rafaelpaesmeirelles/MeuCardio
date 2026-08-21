@@ -1,0 +1,315 @@
+/* CorVIA Clinical OS — ajuste desktop aprovado em 21/08/2026.
+   Escopo: Home autenticada, sem alterar identidade visual ou comportamento mobile. */
+
+@media (min-width: 901px) {
+  .ccc-reference-board {
+    row-gap: .38rem !important;
+    grid-template-rows: auto auto minmax(320px, auto) auto auto auto;
+  }
+
+  .ccc-reference-board .ccc-home__welcome,
+  .ccc-reference-board .ccc-actions-section,
+  .ccc-reference-board .ccc-reference-summary {
+    margin: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-actions-section {
+    padding: 8px 10px 10px !important;
+  }
+
+  .ccc-reference-board .ccc-actions-section .ccc-section__head {
+    margin-bottom: 6px;
+  }
+
+  .ccc-reference-board .ccc-actions-section .ccc-section__head button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    color: #64cdd6;
+    background: transparent;
+    border: 0;
+    font: inherit;
+    font-size: .54rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .ccc-reference-board .ccc-actions {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, minmax(68px, auto));
+    gap: 7px !important;
+  }
+
+  .ccc-reference-board .ccc-action {
+    min-height: 68px !important;
+  }
+
+  /* A terceira faixa termina na mesma linha visual dos dois rails laterais. */
+  .ccc-reference-board .ccc-reference-summary,
+  .ccc-reference-board .ccc-reference-summary > .ccc-reference-commute {
+    min-height: 320px;
+    height: 100%;
+  }
+
+  .ccc-reference-board .ccc-reference-commute {
+    grid-template-rows: auto minmax(0, 1fr) !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__map {
+    min-height: 100% !important;
+    max-height: none !important;
+    height: 100% !important;
+  }
+
+  .ccc-reference-board .ccc-reference-commute__map > * {
+    min-height: 100% !important;
+    height: 100% !important;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence,
+  .ccc-reference-board .ccc-home__assistant {
+    align-self: stretch !important;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence > .ccc-intelligence-card {
+    flex: 0 0 auto;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence > .ccc-pending-actions-card {
+    display: flex !important;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin-top: 7px !important;
+    min-height: 0;
+  }
+
+  .ccc-reference-board .ccc-pending-actions-card__list {
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+
+  .ccc-reference-board .ccc-pending-actions-card__item {
+    min-height: 0;
+  }
+
+  .ccc-reference-board .ccc-home__assistant {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ccc-reference-board .ccc-home__assistant > .ccc-assistant-card {
+    display: flex !important;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-home__assistant .ccc-assistant-input {
+    margin-top: auto !important;
+  }
+}
+
+/* Personalizador das ações rápidas */
+.ccc-quick-actions-picker {
+  position: fixed;
+  z-index: 1200;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(1, 8, 14, .72);
+  backdrop-filter: blur(8px);
+}
+
+.ccc-quick-actions-picker__dialog {
+  width: min(760px, calc(100vw - 32px));
+  max-height: min(760px, calc(100vh - 48px));
+  overflow: auto;
+  padding: 18px;
+  color: var(--crf-text, #eef7fa);
+  background: linear-gradient(155deg, #0b2030, #061620);
+  border: 1px solid rgba(112, 173, 198, .20);
+  border-radius: 14px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .48);
+}
+
+.ccc-quick-actions-picker__header,
+.ccc-quick-actions-picker__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ccc-quick-actions-picker__header h2 {
+  margin: 0;
+  color: #eef8fa;
+  font-size: 1rem;
+}
+
+.ccc-quick-actions-picker__header button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: #9bb2bc;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(112,173,198,.12);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ccc-quick-actions-picker__intro {
+  margin: 8px 0 14px;
+  color: #8ca3ad;
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+.ccc-quick-actions-picker__catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ccc-quick-actions-picker__item {
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 58px;
+  padding: 8px 9px;
+  color: #dcecef;
+  background: rgba(9, 31, 45, .82);
+  border: 1px solid rgba(112,173,198,.10);
+  border-radius: 10px;
+}
+
+.ccc-quick-actions-picker__item[data-selected="true"] {
+  border-color: rgba(82,217,223,.34);
+  background: rgba(11, 42, 56, .94);
+}
+
+.ccc-quick-actions-picker__toggle {
+  display: contents;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ccc-quick-actions-picker__icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: #61d4dc;
+  background: rgba(82,217,223,.07);
+  border-radius: 8px;
+}
+
+.ccc-quick-actions-picker__copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ccc-quick-actions-picker__copy strong {
+  font-size: .72rem;
+}
+
+.ccc-quick-actions-picker__copy small {
+  overflow: hidden;
+  color: #78919d;
+  font-size: .59rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ccc-quick-actions-picker__order {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ccc-quick-actions-picker__position {
+  min-width: 22px;
+  color: #65d6de;
+  font-size: .58rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ccc-quick-actions-picker__order button {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  color: #a7bdc6;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(112,173,198,.10);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ccc-quick-actions-picker__order button:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+.ccc-quick-actions-picker__footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(112,173,198,.10);
+}
+
+.ccc-quick-actions-picker__footer > span {
+  color: #8fa7b1;
+  font-size: .66rem;
+}
+
+.ccc-quick-actions-picker__footer-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.ccc-quick-actions-picker__footer button {
+  min-height: 34px;
+  padding: 6px 11px;
+  color: #dcecef;
+  background: #0b2940;
+  border: 1px solid rgba(75,157,255,.18);
+  border-radius: 7px;
+  font: inherit;
+  font-size: .64rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ccc-quick-actions-picker__footer button[data-primary="true"] {
+  color: #031218;
+  background: #63dbe1;
+  border-color: #63dbe1;
+}
+
+.ccc-quick-actions-picker__footer button:disabled {
+  opacity: .42;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  /* Mantém a Home mobile canônica em 8 atalhos, mesmo com 10 escolhidos no desktop. */
+  .ccc-reference-board .ccc-actions .ccc-action:nth-child(n+9) { display: none !important; }
+  .ccc-reference-board .ccc-actions-section .ccc-section__head button { display: none !important; }
+  .ccc-quick-actions-picker { display: none !important; }
+}
