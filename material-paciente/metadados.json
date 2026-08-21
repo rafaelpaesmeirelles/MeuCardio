@@ -14447,5 +14447,233 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "dor-no-peito-na-emergencia-o-que-acontece-e-como-e-avaliado",
+    "titulo": "Dor no peito na emergência: o que acontece e como você é avaliado",
+    "subtitulo": "Por que a equipe pede um eletrocardiograma logo na chegada, como o risco é avaliado e por que o exame pode precisar ser repetido",
+    "tema": "Doença coronariana",
+    "documento_slug": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+    "resumo": "Explicação em linguagem simples sobre o que acontece quando você procura uma emergência com dor no peito: por que o eletrocardiograma é feito tão rápido, como a equipe estima o seu risco e por que, em alguns casos, o exame precisa ser repetido antes de qualquer conclusão.",
+    "secoes": [
+      {
+        "titulo": "Por que procurar ajuda rápido faz diferença",
+        "paragrafos": [
+          "Dor no peito pode ter muitas causas, e a maioria não é grave. Mas como algumas delas — como o infarto — são emergências em que cada minuto conta, o caminho mais seguro é sempre procurar avaliação médica assim que o sintoma aparece, em vez de esperar para ver se passa sozinho.",
+          "Isso vale especialmente quando a dor vem acompanhada de outros sinais, como falta de ar, suor frio ou sensação de mal-estar geral — mas mesmo dor isolada, sem esses sinais, merece avaliação."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que a equipe faz assim que você chega",
+        "paragrafos": [
+          "Um dos primeiros passos, para quem chega com dor no peito sugestiva de problema no coração, é o eletrocardiograma — o exame rápido e indolor que registra a atividade elétrica do coração por meio de eletrodos colados na pele. Os serviços de emergência são orientados a medir e melhorar continuamente o tempo entre a sua chegada e a realização desse exame, exatamente porque ele ajuda a identificar rapidamente quem precisa de tratamento imediato.",
+          "Junto com o eletrocardiograma, a equipe também colhe informações sobre como é a sua dor, sua idade, os fatores de risco que você já tem (como hipertensão, diabetes, tabagismo ou histórico familiar) e um exame de sangue que mede uma substância chamada troponina, ligada a lesão do músculo do coração."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o seu risco é avaliado",
+        "paragrafos": [
+          "A partir dessas informações, a equipe pode usar uma ferramenta chamada escore HEART — um jeito estruturado de reunir a história clínica, o eletrocardiograma, a idade, os fatores de risco e o resultado da troponina numa avaliação única de risco. É a ferramenta recomendada com o maior grau de evidência pela diretriz brasileira mais recente sobre esse tipo de atendimento.",
+          "O objetivo do escore não é substituir o julgamento médico, e sim organizar a decisão: ajuda a equipe a identificar, de forma mais consistente, quem tem risco baixo (e pode ser investigado com mais tranquilidade, muitas vezes sem precisar ficar internado) e quem tem risco que exige investigação mais aprofundada logo no início."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o eletrocardiograma às vezes precisa ser repetido",
+        "paragrafos": [
+          "Nem sempre o primeiro eletrocardiograma é suficiente para fechar uma conclusão. Quando o traçado fica numa zona limítrofe, de difícil interpretação, ou quando você continua com sintomas que preocupam a equipe, o exame costuma ser repetido em intervalos curtos — geralmente a cada 10 a 20 minutos — até que o quadro fique mais claro.",
+          "Isso não é sinal de que algo deu errado no primeiro exame: é parte do próprio protocolo de segurança, porque algumas alterações só aparecem — ou só se tornam nítidas — em traçados feitos um pouco depois do primeiro."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Depois da avaliação inicial",
+        "paragrafos": [
+          "Dependendo do resultado da avaliação, os caminhos possíveis vão desde a alta com orientação de acompanhamento ambulatorial até a internação para investigação mais completa ou tratamento imediato, quando um problema no coração é identificado ou muito suspeitado.",
+          "Se o eletrocardiograma mostrar um padrão já bem definido de obstrução grave de uma artéria do coração, a equipe segue diretamente para o tratamento específico dessa situação, sem esperar todo o restante da avaliação — é uma das poucas situações em que o tempo pesa mais do que qualquer outra etapa do protocolo."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito que não melhora ou piora com o passar dos minutos",
+      "Dor no peito acompanhada de falta de ar, suor frio, náusea ou mal-estar geral",
+      "Dor que se espalha para o braço, o pescoço, a mandíbula ou as costas",
+      "Sensação de desmaio, tontura importante ou palpitação forte junto com a dor",
+      "Qualquer dor no peito nova, mesmo sem esses outros sinais — não espere para ver se passa sozinha"
+    ],
+    "perguntas": [
+      "No meu caso, qual foi o resultado da avaliação de risco feita na emergência?",
+      "Por que meu eletrocardiograma precisou ser repetido, e o que mudou entre um traçado e outro?",
+      "Vou precisar ficar internado para investigação, ou posso continuar em acompanhamento ambulatorial?",
+      "Quais sinais devem me fazer voltar à emergência depois da alta?",
+      "Que exames ou consultas de acompanhamento eu preciso agendar depois deste atendimento?"
+    ],
+    "fontes": [
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tomografia-do-coracao-angiotomografia-coronariana-e-escore-de-calcio",
+    "titulo": "Tomografia do coração: angiotomografia coronariana e escore de cálcio",
+    "subtitulo": "Dois exames de imagem que olham diretamente para as artérias do coração, e como o médico decide qual pedir em cada situação",
+    "tema": "Doença coronariana",
+    "documento_slug": "angiotomografia-coronariana-e-escore-de-calcio-no-algoritmo-diagnostico-esc-2024",
+    "resumo": "Explicação em linguagem simples sobre a angiotomografia coronariana e o escore de cálcio — dois exames de imagem do coração que respondem perguntas diferentes —, e sobre como o médico decide qual deles pedir a partir da diretriz europeia mais recente sobre doença coronariana crônica.",
+    "secoes": [
+      {
+        "titulo": "O que são esses dois exames",
+        "paragrafos": [
+          "Além dos exames que avaliam como o coração se comporta durante o esforço, existem exames de imagem que olham diretamente para as artérias coronárias, em repouso, usando um aparelho de tomografia computadorizada.",
+          "A angiotomografia coronariana usa um contraste injetado na veia para desenhar o interior das artérias do coração e mostrar se existe algum estreitamento (obstrução). Já o escore de cálcio é feito sem contraste e mede a quantidade de cálcio depositada na parede das artérias — um sinal indireto de que existe placa de aterosclerose ali, mesmo sem dizer se ela está causando obstrução."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o médico decide qual exame pedir",
+        "paragrafos": [
+          "Antes de escolher o exame, o médico costuma estimar a probabilidade de você ter uma obstrução relevante nas artérias do coração, levando em conta seus sintomas, idade, sexo e fatores de risco.",
+          "Quando essa probabilidade é muito baixa, muitas vezes nem é preciso fazer mais exames de imagem por enquanto. Quando ela é baixa, o escore de cálcio pode ser usado para ajudar a refinar essa estimativa. E na faixa de probabilidade baixa a moderada, a angiotomografia coronariana costuma ser o exame de primeira escolha, porque consegue mostrar diretamente se existe ou não uma obstrução."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como é feito o exame de angiotomografia",
+        "paragrafos": [
+          "O exame é feito num aparelho de tomografia, com você deitado, e costuma incluir a aplicação de um medicamento pela veia para deixar o coração mais lento durante a aquisição das imagens, além do contraste iodado injetado logo antes das imagens principais.",
+          "É preciso ficar em apneia (prender a respiração) por alguns segundos durante a captura das imagens, e o batimento cardíaco precisa estar relativamente regular para que a imagem saia nítida — por isso a equipe pergunta sobre função dos rins, alergia a contraste e ritmo cardíaco antes de agendar o exame."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O escore de cálcio: o que o resultado significa",
+        "paragrafos": [
+          "O escore de cálcio é expresso em um número: quanto maior, mais depósito de cálcio existe nas artérias. Um resultado zero costuma ser um sinal tranquilizador, especialmente em pessoas de meia-idade ou mais velhas — mas essa mesma tranquilidade vale bem menos em pessoas mais jovens, porque uma parcela relevante delas pode ter obstrução relevante nas artérias mesmo com o escore de cálcio zerado.",
+          "Por isso, o resultado do escore de cálcio sempre precisa ser interpretado junto com sua idade, seus sintomas e os demais fatores de risco — nunca isoladamente."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Quando esses exames podem não ser indicados",
+        "paragrafos": [
+          "A angiotomografia coronariana depende de uma boa qualidade técnica de imagem, e existem situações em que essa qualidade fica comprometida — função dos rins muito reduzida, insuficiência cardíaca descompensada, quantidade muito grande de cálcio nas artérias, batimento cardíaco acelerado ou irregular, obesidade importante, ou dificuldade em prender a respiração pelo tempo necessário.",
+          "Nesses casos, o problema não é a doença em si, e sim a capacidade técnica de obter uma imagem confiável — por isso o médico pode preferir outro tipo de exame, como um dos testes de esforço."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Depois do exame",
+        "paragrafos": [
+          "Beber bastante água nas horas seguintes ao exame com contraste costuma ser recomendado, para ajudar na eliminação do contraste pelos rins — siga a orientação específica que a equipe der no seu caso.",
+          "O resultado é sempre interpretado em conjunto com seus sintomas e seu risco cardiovascular geral, e vale conversar com seu médico sobre o que ele muda (ou não) na sua conduta."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Reação alérgica ao contraste — coceira, inchaço, falta de ar ou mal-estar durante ou logo após o exame",
+      "Dor no peito nova ou que piora após o exame",
+      "Palpitação forte, tontura importante ou desmaio após o exame",
+      "Diminuição importante do volume de urina nos dias seguintes ao exame com contraste, especialmente se você já tem problema nos rins"
+    ],
+    "perguntas": [
+      "No meu caso, qual exame é mais indicado: angiotomografia, escore de cálcio ou um teste de esforço?",
+      "Existe algum motivo, na minha condição de saúde, para eu não poder fazer a angiotomografia com contraste?",
+      "Preciso de algum preparo especial antes do exame, como jejum ou suspensão de alguma medicação?",
+      "O que o resultado do meu exame significa, considerando minha idade e meus fatores de risco?",
+      "Se o resultado for normal, isso significa que estou livre de qualquer risco cardiovascular?"
+    ],
+    "fontes": [
+      "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-arritmogenica-musculo-do-coracao-trocado-por-gordura-e-cicatriz",
+    "titulo": "Cardiomiopatia arritmogênica",
+    "subtitulo": "Uma doença hereditária em que o músculo do coração vai sendo trocado, aos poucos, por gordura e tecido cicatricial, com tendência a arritmias",
+    "tema": "Cardiomiopatias",
+    "documento_slug": "cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023",
+    "resumo": "Explicação em linguagem simples sobre a cardiomiopatia arritmogênica: o que acontece com o músculo do coração, por que a doença é hereditária, como o diagnóstico é feito, e por que a restrição de exercício físico intenso é uma parte central do cuidado.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "A cardiomiopatia arritmogênica é uma doença hereditária em que o músculo do coração vai sendo substituído, de forma progressiva, por tecido fibroso e gorduroso. Esse processo enfraquece a parede do coração e, principalmente, cria um terreno propício para arritmias — batimentos elétricos anormais que podem ser perigosos.",
+          "A forma mais conhecida historicamente afeta principalmente o ventrículo direito, mas hoje se sabe que a doença também pode afetar predominantemente o ventrículo esquerdo, ou os dois lados ao mesmo tempo — por isso a forma como ela é nomeada e classificada mudou nos últimos anos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que ela importa",
+        "paragrafos": [
+          "A cardiomiopatia arritmogênica é reconhecida como uma causa importante de morte súbita cardíaca em pessoas jovens e em atletas — muitas vezes em pessoas que, até então, se sentiam saudáveis e praticavam esporte regularmente.",
+          "É exatamente por isso que o diagnóstico precoce, a avaliação cuidadosa do risco de arritmia e o rastreamento de familiares são partes tão importantes do cuidado dessa doença — mais do que em muitas outras condições cardíacas."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o diagnóstico é feito",
+        "paragrafos": [
+          "Não existe um único exame que, sozinho, feche o diagnóstico. A equipe médica reúne várias informações — alterações no eletrocardiograma, achados em exames de imagem do coração (como ecocardiograma e ressonância magnética), presença de arritmias, histórico familiar da doença e, em alguns casos, resultado de biópsia do músculo cardíaco — dentro de um conjunto estruturado de critérios diagnósticos, que foi atualizado nos últimos anos para ficar ainda mais preciso.",
+          "Como a doença é hereditária, o diagnóstico em uma pessoa da família costuma levar à investigação dos parentes de primeiro grau — mesmo daqueles que não têm nenhum sintoma."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o risco de arritmia é avaliado",
+        "paragrafos": [
+          "Uma parte central do acompanhamento é estimar o risco de você ter uma arritmia ventricular grave no futuro, porque essa estimativa ajuda a decidir se um cardiodesfibrilador implantável (um dispositivo que reconhece e interrompe automaticamente uma arritmia perigosa) é indicado no seu caso.",
+          "Existe uma calculadora de risco, desenvolvida a partir do acompanhamento de centenas de pacientes com diagnóstico confirmado da doença, que combina informações como idade, sexo, histórico de desmaio de origem cardíaca, presença de batimentos extras e alterações específicas no eletrocardiograma e nos exames de imagem para chegar a uma estimativa individualizada de risco — em vez de uma decisão do tipo 'sim ou não' aplicada da mesma forma a todo mundo."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O papel do exercício físico",
+        "paragrafos": [
+          "Um dos pontos mais importantes e específicos do cuidado dessa doença é a restrição do exercício físico competitivo e de alta intensidade em quem já tem o diagnóstico confirmado ou carrega a alteração genética responsável pela doença, mesmo sem sintomas.",
+          "O exercício vigoroso pode acelerar a progressão da doença no músculo do coração e desencadear as próprias arritmias que a doença predispõe — por isso essa orientação costuma ser bem mais rígida do que a recomendação de atividade física dada a outras condições cardíacas."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o tratamento costuma envolver",
+        "paragrafos": [
+          "O cuidado costuma reunir várias frentes ao mesmo tempo: medicações para proteger o coração e ajudar a controlar arritmias (incluindo, quando indicado, uma medicação antiarrítmica específica chamada flecainida), tratamento da insuficiência cardíaca quando ela está presente, e, quando necessário, ablação por cateter — um procedimento que trata pontos específicos do coração responsáveis por uma arritmia.",
+          "Para quem tem risco elevado de arritmia grave, o cardiodesfibrilador implantável costuma ser considerado, com base na estimativa de risco individualizada."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Convivendo com o diagnóstico",
+        "paragrafos": [
+          "O acompanhamento costuma ser feito por uma equipe multidisciplinar, reunindo cardiologia, eletrofisiologia (especialistas em ritmo cardíaco) e genética clínica, com apoio de medicina do esporte quando relevante.",
+          "Conversar abertamente com seu médico sobre limites de atividade física, sobre a necessidade de investigação em familiares e sobre o que fazer diante de sintomas novos ajuda a reduzir a incerteza que costuma acompanhar esse diagnóstico."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio ou quase-desmaio, principalmente durante ou logo após esforço físico",
+      "Palpitação (sensação de coração acelerado, descompassado ou 'batendo forte') que não passa rapidamente",
+      "Dor no peito nova, associada ou não a esforço",
+      "Falta de ar que aparece ou piora de forma progressiva",
+      "Qualquer sintoma novo durante a prática de exercício físico, mesmo leve"
+    ],
+    "perguntas": [
+      "Qual exatamente é a forma da doença que eu tenho — predominando no ventrículo direito, no esquerdo, ou nos dois?",
+      "Qual é a minha estimativa de risco de arritmia grave, e como isso influencia a decisão sobre um cardiodesfibrilador?",
+      "Que tipo de atividade física eu posso praticar com segurança, e quais devo evitar?",
+      "Meus parentes de primeiro grau precisam ser investigados? Como esse processo funciona?",
+      "Quais sintomas devem me levar a procurar atendimento de urgência?"
+    ],
+    "fontes": [
+      "2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657.",
+      "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2019;40(23):1850-1858. DOI: 10.1093/eurheartj/ehz103. PMID: 30915475."
+    ],
+    "review_status": "revisado"
   }
 ]
