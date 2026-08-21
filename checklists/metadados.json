@@ -18146,5 +18146,258 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-timing-cirurgico-apos-avc-na-endocardite-infecciosa",
+    "condicao": "Timing cirúrgico após AVC na endocardite infecciosa",
+    "resumo": "O que checar para classificar corretamente o timing de cirurgia cardíaca após um evento neurológico na endocardite infecciosa, distinguindo os quatro cenários da Seção 10.4 da diretriz ESC 2023 — a condição-chave não é o tipo de AVC, é ausência de coma e exclusão de hemorragia por imagem.",
+    "documento_origem": "timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — texto integral em PDF de acesso aberto (repositório institucional boa.unimib.it) lido linha a linha nesta sessão (06/08/2026), Seção 10.4 ('Timing of surgery after ischaemic and haemorrhagic stroke') e Recommendation Table 17."
+    ],
+    "itens": [
+      {
+        "id": "avc-endo-neuroimagem-atualizada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TC ou RM de crânio recente realizada e revisada, para excluir hemorragia cerebral antes de classificar o paciente para indicação cirúrgica",
+        "origem_secao": "O ponto que a leitura apressada erra"
+      },
+      {
+        "id": "avc-endo-avaliar-coma",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Nível de consciência avaliado e documentado: ausência de coma confirmada antes de aplicar a recomendação de cirurgia sem atraso",
+        "origem_secao": "As tres recomendacoes da secao 10.4"
+      },
+      {
+        "id": "avc-endo-ait-sem-atraso",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o evento foi um ataque isquêmico transitório (AIT): cirurgia cardíaca indicada mantida sem atraso",
+        "origem_secao": "As tres recomendacoes da secao 10.4"
+      },
+      {
+        "id": "avc-endo-avc-criterios",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se houve AVC com coma ausente e hemorragia já excluída por imagem, e há insuficiência cardíaca, infecção não controlada, abscesso ou risco embólico persistentemente alto: cirurgia mantida sem qualquer atraso",
+        "origem_secao": "As tres recomendacoes da secao 10.4"
+      },
+      {
+        "id": "avc-endo-hic-adiar",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se houve hemorragia intracraniana e o paciente está clinicamente estável: adiar a cirurgia cardíaca por mais de 1 mês considerado, com reavaliação clínica e de imagem frequente",
+        "origem_secao": "As tres recomendacoes da secao 10.4"
+      },
+      {
+        "id": "avc-endo-hic-instavel",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se houve hemorragia intracraniana e o paciente está clinicamente instável por insuficiência cardíaca, infecção não controlada ou risco embólico persistentemente alto: cirurgia urgente ou de emergência considerada, ponderando a probabilidade de desfecho neurológico significativo",
+        "origem_secao": "As tres recomendacoes da secao 10.4"
+      },
+      {
+        "id": "avc-endo-trombolise-contraindicada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Verificado que trombólise NÃO está indicada em caso de AVC embólico atribuído à endocardite infecciosa — contraindicação formal, distinta do AVC isquêmico de outra etiologia",
+        "origem_secao": "Achados relacionados na mesma secao da diretriz"
+      },
+      {
+        "id": "avc-endo-aneurisma-micotico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se há suspeita de aneurisma cerebral infeccioso (micótico): TC ou angio-RM de crânio solicitada para investigação",
+        "origem_secao": "Achados relacionados na mesma secao da diretriz"
+      },
+      {
+        "id": "avc-endo-aneurisma-encaminhamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se identificado aneurisma cerebral infeccioso grande, em crescimento contínuo apesar de antibioticoterapia ótima, ou roto: encaminhamento para neurocirurgia ou terapia endovascular providenciado",
+        "origem_secao": "Achados relacionados na mesma secao da diretriz"
+      },
+      {
+        "id": "avc-endo-equipe-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão de timing cirúrgico discutida com equipe multidisciplinar (cardiologia, cirurgia cardíaca, neurologia/neurocirurgia), dada a complexidade da ponderação entre risco de transformação hemorrágica pós-operatória e risco de deterioração cardíaca",
+        "origem_secao": "Leitura clinica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de origem já verificado contra o texto integral da diretriz ESC 2023, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "manejo-multidisciplinar-de-endocardite-em-usuario-de-drogas-injetaveis",
+    "condicao": "Endocardite infecciosa em usuário de drogas injetáveis (PWID)",
+    "resumo": "O que checar no manejo integrado da endocardite infecciosa associada ao uso de droga injetável — decisão cirúrgica cautelosa, antibioticoterapia individualizada e o tratamento do transtorno por uso de substância como parte inseparável do tratamento da infecção, com equipe multidisciplinar.",
+    "documento_origem": "endocardite-em-usuario-de-drogas-injetaveis-manejo-integrado-e-equipe-multidisciplinar",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "de Waha S, Noack T, Kister T, Desch S, Marín-Cuartas M, Kiefer P, Borger MA. Tricuspid valve endocarditis in people who inject drugs: strategies to reduce mortality and recurrent infection. Ann Cardiothorac Surg. 2026;15(3):35. DOI: 10.21037/acs-2026-1-0008-tvd. PMID: 42292592. Acesso aberto (AME Publishing), texto integral lido nesta sessão. FONTE: revisão narrativa (Keynote Lecture Series), NÃO é diretriz graduada — sem Classe/Nível/GRADE; reproduz critérios cirúrgicos padrão já cadastrados desta base, sem modificá-los para esta população.",
+      "Paras ML, Wolfe SB, Bearnot B, Sundt TM, Marinacci L, Dudzinski DM, Vyas DA, Wakeman SE, Jassar AS; Drug Use Endocarditis Treatment Team Working Group. Multidisciplinary team approach to confront the challenge of drug use-associated infective endocarditis. J Thorac Cardiovasc Surg. 2023;166(2):457-464.e1. PMID: 34872761. FONTE: estudo de coorte retrospectivo antes/depois (Massachusetts General Hospital) — abstract lido integralmente; texto completo não acessado nesta sessão (sem PMC, provavelmente pago)."
+    ],
+    "itens": [
+      {
+        "id": "pwid-endo-avaliar-camaras-esquerdas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigado acometimento de câmaras ESQUERDAS além da tricúspide — cerca de metade dos usuários de drogas injetáveis com endocardite tem acometimento também à esquerda, e parte relevante tem doença isolada à esquerda",
+        "origem_secao": "Epidemiologia e prognostico"
+      },
+      {
+        "id": "pwid-endo-terapia-medica-primeira",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Terapia médica (antibioticoterapia) considerada como primeira linha, sem indicação cirúrgica automática — a maior parte dos casos de endocardite tricúspide de câmaras direitas nesta população responde só a tratamento clínico",
+        "origem_secao": "Manejo clinico do quadro agudo — cirurgia e excecao, nao regra"
+      },
+      {
+        "id": "pwid-endo-criterios-cirurgicos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se cirurgia está sendo considerada: presença verificada de pelo menos um dos critérios — disfunção de ventrículo direito refratária a diuréticos, vegetação persistente com insuficiência respiratória após embolia pulmonar séptica recorrente, vegetação residual volumosa após embolia pulmonar séptica recorrente, bacteremia/sepse persistente apesar de antibiótico apropriado por tempo suficiente, ou acometimento simultâneo de câmaras esquerdas",
+        "origem_secao": "Manejo clinico do quadro agudo — cirurgia e excecao, nao regra"
+      },
+      {
+        "id": "pwid-endo-tecnica-preferida",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se cirurgia indicada: reparo valvar priorizado sobre substituição; valvectomia tricúspide ou debulking percutâneo considerados como estratégia adjuvante ou temporizadora quando aplicável",
+        "origem_secao": "Manejo clinico do quadro agudo — cirurgia e excecao, nao regra"
+      },
+      {
+        "id": "pwid-endo-opat-individualizado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Elegibilidade para esquema antibiótico parcialmente oral ou terapia ambulatorial parenteral (OPAT) avaliada de forma individualizada, ponderando segurança, adesão e preferência do paciente — sem uso rotineiro automático nesta população",
+        "origem_secao": "Antibioticoterapia ambulatorial — controversa, nao proibida"
+      },
+      {
+        "id": "pwid-endo-moud-iniciado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Medicação para transtorno por uso de opioide (MOUD) — buprenorfina ou metadona — iniciada ainda durante a internação, sem exigir aconselhamento psicossocial como pré-requisito de acesso",
+        "origem_secao": "Tratar o transtorno por uso de substancia e parte do tratamento da endocardite"
+      },
+      {
+        "id": "pwid-endo-avaliacao-dependencia",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Avaliação por especialista em medicina da dependência solicitada o mais precoce possível após a admissão",
+        "origem_secao": "Tratar o transtorno por uso de substancia e parte do tratamento da endocardite"
+      },
+      {
+        "id": "pwid-endo-equipe-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Equipe multidisciplinar acionada, reunindo cardiologia, cirurgia cardíaca, infectologia, medicina da dependência, saúde comportamental e serviço social",
+        "origem_secao": "Equipe multidisciplinar — o impacto medido, nao so a intencao"
+      },
+      {
+        "id": "pwid-endo-moud-alta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Continuidade do MOUD garantida e documentada no plano de alta, incluindo referência para acompanhamento ambulatorial em medicina da dependência",
+        "origem_secao": "Equipe multidisciplinar — o impacto medido, nao so a intencao"
+      },
+      {
+        "id": "pwid-endo-risco-recaida",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente e equipe orientados sobre o risco elevado de recaída do uso de substância e de reinfecção após a alta, para reforçar o plano de seguimento combinado (clínico e de dependência)",
+        "origem_secao": "Epidemiologia e prognostico"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de origem já verificado — nenhuma das duas fontes é diretriz graduada (revisão narrativa e coorte retrospectiva, declarado explicitamente no documento original), sem Classe/Nível/GRADE."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-pericardite-efusivo-constritiva",
+    "condicao": "Diagnóstico e manejo da pericardite efusivo-constritiva",
+    "resumo": "O que checar diante de suspeita de pericardite efusivo-constritiva — a síndrome híbrida em que a drenagem do derrame não resolve o quadro hemodinâmico porque a constrição está no próprio pericárdio inflamado, com confirmação exigindo critério hemodinâmico obtido durante a pericardiocentese com cateterismo simultâneo.",
+    "documento_origem": "pericardite-efusivo-constritiva-criterios-hemodinamicos-e-manejo",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "El Harake L, Samhan A, Cremer PC, Al Kazaz M. Contemporary Assessment and Management of Effusive-Constrictive Pericarditis · Current Cardiology Reports · 2026 · 28(1):13 · DOI: 10.1007/s11886-025-02326-4 · PMID: 41563547"
+    ],
+    "itens": [
+      {
+        "id": "pec-peric-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de pericardite efusivo-constritiva levantada em paciente com derrame pericárdico que não melhora clinicamente após a drenagem, especialmente em contexto de etiologia tuberculosa em região endêmica",
+        "origem_secao": "Prevalência — por que suspeitar mais em determinados contextos"
+      },
+      {
+        "id": "pec-peric-eco-pre-drenagem",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Ecocardiograma pré-drenagem avaliado quanto a desvio septal respirofásico, variação do influxo mitral com a respiração, reversão diastólica do fluxo da veia hepática e velocidade e′ medial",
+        "origem_secao": "Pistas ecocardiográficas (antes de confirmar por cateterismo)"
+      },
+      {
+        "id": "pec-peric-pericardiocentese-cateterismo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Pericardiocentese realizada com cateterismo cardíaco simultâneo, para permitir a medida invasiva da pressão atrial direita antes e depois da drenagem",
+        "origem_secao": "O critério hemodinâmico que fecha o diagnóstico"
+      },
+      {
+        "id": "pec-peric-criterio-hemodinamico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Critério hemodinâmico verificado após a normalização da pressão intrapericárdica: pressão atrial direita reavaliada quanto à queda de pelo menos 50% ou à manutenção acima do limiar de referência, na ausência de regurgitação tricúspide importante ou disfunção primária de ventrículo direito que confundam a interpretação",
+        "origem_secao": "O critério hemodinâmico que fecha o diagnóstico"
+      },
+      {
+        "id": "pec-peric-eco-pos-drenagem",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Reavaliação ecocardiográfica realizada após a drenagem, para investigar fisiologia constritiva residual que pode estar mascarada pela pressão elevada do próprio derrame antes do procedimento",
+        "origem_secao": "Pistas ecocardiográficas (antes de confirmar por cateterismo)"
+      },
+      {
+        "id": "pec-peric-investigacao-etiologica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Investigação etiológica direcionada considerando as causas mais prevalentes descritas — idiopática/viral, tuberculose, pós-radioterapia, pós-pericardiotomia",
+        "origem_secao": "Prevalência — por que suspeitar mais em determinados contextos"
+      },
+      {
+        "id": "pec-peric-terapia-medica-primeira",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia médica anti-inflamatória (AINE, colchicina, corticosteroide ou inibidor de IL-1) iniciada como primeira linha nos casos de etiologia inflamatória, antes de considerar cirurgia",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "pec-peric-tempo-refratariedade",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Resposta à terapia médica otimizada acompanhada por 3 a 6 meses antes de considerar refratariedade confirmada",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "pec-peric-encaminhamento-cirurgia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se sintomas refratários confirmados após terapia médica otimizada por 3 a 6 meses: encaminhamento para avaliação de pericardiectomia providenciado, sem adiamento indefinido diante de refratariedade confirmada",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "pec-peric-nao-considerar-tratado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Paciente NÃO considerado tratado apenas pelo alívio do tamponamento com a pericardiocentese, sem a reavaliação da pressão atrial direita pós-drenagem que revela ou descarta a fisiologia constritiva residual",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de origem já verificado contra o texto integral do artigo (PMID 41563547), com a seção de origem registrada em cada item."
   }
 ]
