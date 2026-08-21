@@ -18146,5 +18146,154 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "checklist-protocolo-eras-cardiaco-em-cirurgia-cardiaca",
+    "condicao": "Protocolo ERAS Cardíaco — pacote de recuperação acelerada em cirurgia cardíaca",
+    "resumo": "Checklist derivado do consenso ERAS Cardiac Society (2019) e de sua implementação por fase perioperatória, com o ganho de tempo de recuperação quantificado por metanálise de 2025 (18 estudos, 2.625 pacientes) — cobre as 15 medidas coordenadas nas fases pré, intra e pós-operatória de cirurgia cardíaca, preservando os limites de evidência já registrados no documento de origem (grau de recomendação individual não confirmado no texto integral; metanálise sem desfecho de mortalidade/complicação).",
+    "documento_origem": "protocolo-eras-cardiaco-recuperacao-acelerada-em-cirurgia-cardiaca",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Engelman DT, Ben Ali W, Williams JB, et al. Guidelines for Perioperative Care in Cardiac Surgery: Enhanced Recovery After Surgery Society Recommendations. JAMA Surg. 2019;154(8):755-766. DOI: 10.1001/jamasurg.2019.1153. PMID: 31054241 — abstract estruturado e metodologia conferidos via PubMed nesta sessão (06/08/2026); texto integral bloqueado por paywall — lista completa de recomendações e grau individual de cada uma não confirmada nesta sessão.",
+      "Dave MG, Chudyk AM, Oravec N, et al. Putting patient value first: Using a modified nominal group technique for the implementation of enhanced recovery after cardiac surgery recommendations. JTCVS Open. 2022. DOI: 10.1016/j.xjon.2022.07.004 — lista as 15 recomendações do ERAS Cardiac agrupadas por momento perioperatório, texto integral de acesso aberto conferido nesta sessão.",
+      "Hoogma DF, Meeusen I, Coppens S, et al. Efficacy of enhanced recovery programmes for cardiac surgery: a systematic review and meta-analysis. Br J Anaesth. 2025;135(1):31-39 — 18 estudos, 2.625 pacientes; abstract estruturado conferido via PubMed E-utilities nesta sessão."
+    ],
+    "itens": [
+      {
+        "id": "eras-cardiaco-nutricao-preop",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear e corrigir deficiência nutricional identificada no pré-operatório, como parte do pacote pré-operatório do ERAS Cardíaco",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-jejum-liquidos-claros",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Permitir ingestão de líquidos claros até pouco antes da indução da anestesia geral, abandonando o jejum prolongado tradicional",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-carboidrato-preop",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Oferecer carregamento de carboidrato no pré-operatório imediato, conforme o pacote ERAS Cardíaco",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-engajamento-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Usar ferramenta estruturada de engajamento e educação do paciente sobre o próprio processo de recuperação, antes da cirurgia",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-prehabilitacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar pré-habilitação (otimização funcional/condicionamento antes do procedimento) quando o tempo até a cirurgia permitir",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-cessacao-tabaco-alcool",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar e apoiar cessação de tabagismo e de consumo de álcool de risco antes da cirurgia cardíaca eletiva",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-reducao-infeccao-sitio",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicar as medidas intraoperatórias do pacote voltadas à redução de infecção de sítio cirúrgico",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-fixacao-esternal-rigida",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Utilizar técnica de fixação esternal rígida quando indicada pelo protocolo institucional, conforme o componente intraoperatório do pacote",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-controle-glicemico",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter controle glicêmico perioperatório estruturado no pós-operatório, como parte do pacote ERAS Cardíaco",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-dor-multimodal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicar manejo multimodal da dor no pós-operatório, dentro do pacote de recuperação acelerada",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-rastreio-delirium",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear sistematicamente delirium pós-operatório — recomendação que se articula com os documentos de fragilidade e risco cirúrgico cardíaco no idoso já publicados neste tema",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "eras-cardiaco-permeabilidade-dreno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Verificar e manter a permeabilidade do dreno torácico no pós-operatório",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-monitorizacao-renal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Monitorizar estresse renal/lesão renal aguda no pós-operatório, conforme o componente do pacote",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-terapia-hidrica-guiada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Conduzir terapia hídrica guiada por meta no pós-operatório",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-dieta-transito-nausea",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Aplicar manejo estruturado de dieta, regime intestinal e náusea/vômito no pós-operatório",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-pacote-completo-nao-so-fast-track",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aplicar o pacote coordenado nas três fases (pré, intra e pós-operatória) — o componente intraoperatório isolado (fast-track anestésico) entrega só parte do benefício; a metanálise de 2025 mostrou 2,11 dias a mais de redução de internação para o programa completo frente à estratégia restrita ao período intraoperatório (p=0,003)",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "eras-cardiaco-grau-recomendacao-nao-confirmado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: o grau de recomendação (Classe/Nível) individual de cada uma das 15 recomendações do consenso original (Engelman et al., JAMA Surg 2019) não foi confirmado nesta base — o texto integral está bloqueado por paywall; a lista usada aqui vem de um artigo de implementação secundário (Dave et al., JTCVS Open 2022), não da tabela graduada original",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "eras-cardiaco-desfecho-mortalidade-nao-confirmado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: a metanálise de 2025 (Hoogma et al.) reportou apenas desfechos de tempo (internação hospitalar, UTI, ventilação mecânica) — não relatou mortalidade nem taxa de complicação no resumo consultado; não usar este pacote como evidência de redução de mortalidade/complicação sem fonte adicional",
+        "origem_secao": "O numero que sustenta o pacote"
+      },
+      {
+        "id": "eras-cardiaco-nao-confundir-fast-track",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não tratar 'fast-track anestésico' e 'ERAS Cardíaco' como sinônimos — a metanálise de 2025 mostra ganho adicional do programa completo sobre o fast-track isolado, e tratá-los como equivalentes subestima o que o pacote completo entrega",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Perioperatório citado em source_refs, com a seção de origem registrada em cada item. Preservadas as duas marcações VERIFICAÇÃO HUMANA NECESSÁRIA já registradas no documento de origem: o grau de recomendação individual de cada item do consenso original (texto integral bloqueado por paywall) e a ausência de desfecho de mortalidade/complicação na metanálise de 2025."
   }
 ]
