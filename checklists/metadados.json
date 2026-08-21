@@ -8424,5 +8424,238 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "algoritmo-diagnostico-da-hipertensao-pulmonar-esc-ers-2022",
+    "condicao": "Avaliação diagnóstica da hipertensão pulmonar — dos três passos da suspeita clínica à confirmação hemodinâmica (ESC/ERS 2022)",
+    "resumo": "O que precisa estar registrado em cada um dos três passos do algoritmo diagnóstico da HP — suspeita pelo médico de primeiro contato, detecção por probabilidade ecocardiográfica e confirmação por cateterismo cardíaco direito em centro de referência — e onde o critério diagnóstico (PAPm >20 mmHg) se distingue do critério de acesso a tratamento pelo SUS (PAPm ≥25 mmHg).",
+    "documento_origem": "fluxograma-hipertensao-pulmonar-diagnostico-esc-ers-2022",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension · European Heart Journal · 2022 · 43(38):3618-3731 · https://academic.oup.com/eurheartj/article/43/38/3618/6673929",
+      "2022 ESC/ERS Guidelines for Pulmonary Hypertension: Key Points · American College of Cardiology · 2022 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2022/08/30/19/11/2022-esc-guidelines-for-pulmonary-hypertension-esc-2022",
+      "'Ten Commandments' of the 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension · European Heart Journal · 2023 · 44(10):792-793 · https://academic.oup.com/eurheartj/article/44/10/792/7022121",
+      "Brasil. Ministério da Saúde. Secretaria de Atenção Especializada à Saúde; Secretaria de Ciência, Tecnologia, Inovação e Complexo da Saúde. Portaria Conjunta nº 10, de 18 de julho de 2023. Aprova o Protocolo Clínico e Diretrizes Terapêuticas da Hipertensão Pulmonar — texto integral do anexo conferido em 01/08/2026"
+    ],
+    "itens": [
+      {
+        "id": "hp-diag-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita registrada com sintomas, fatores de risco e comorbidades documentados — dispneia não explicada por doença cardíaca ou pulmonar evidente",
+        "origem_secao": "Passo 1 — Suspeita / Abordagem diagnóstica"
+      },
+      {
+        "id": "hp-diag-avaliacao-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação inicial completa antes de avançar no algoritmo: radiografia de tórax, prova de função pulmonar e ECG",
+        "origem_secao": "Abordagem diagnóstica"
+      },
+      {
+        "id": "hp-diag-eco-probabilidade",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico realizado com atribuição explícita de probabilidade ecocardiográfica de HP (baixa, intermediária ou alta), considerando velocidade de regurgitação tricúspide, relação TAPSE/PSAP e diâmetro da artéria pulmonar comparado ao da raiz da aorta",
+        "origem_secao": "Passo 2 — Detecção / O que entrou na probabilidade ecocardiográfica"
+      },
+      {
+        "id": "hp-diag-baixa-prob",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se probabilidade ecocardiográfica baixa: diagnóstico alternativo considerado, com reavaliação programada só se a suspeita persistir",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "hp-diag-causas-comuns",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se probabilidade intermediária ou alta: causas comuns investigadas antes de avançar para a confirmação — doença cardíaca esquerda e doença pulmonar",
+        "origem_secao": "Árvore de decisão / Passo 2 — Detecção"
+      },
+      {
+        "id": "hp-diag-ccd-centro",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Confirmação por cateterismo cardíaco direito encaminhada para centro de hipertensão pulmonar, não realizada fora dele",
+        "origem_secao": "Passo 3 — Confirmação / Por que a confirmação é centralizada"
+      },
+      {
+        "id": "hp-diag-papm",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "PAPm de repouso registrada e comparada ao corte diagnóstico atual (acima de 20 mmHg) — não ao limiar antigo de 25 mmHg",
+        "origem_secao": "Nova definição hemodinâmica / Armadilhas clínicas"
+      },
+      {
+        "id": "hp-diag-classif-hemodinamica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se PAPm confirmada acima de 20 mmHg: classificação hemodinâmica definida com POCP e RVP — pré-capilar, pós-capilar isolada, combinada pré e pós-capilar, ou não classificável",
+        "origem_secao": "Classificação hemodinâmica por subtipo"
+      },
+      {
+        "id": "hp-diag-classif-clinica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Grupo clínico (1 a 5) atribuído antes de iniciar qualquer terapia específica",
+        "origem_secao": "Classificação clínica em cinco grupos"
+      },
+      {
+        "id": "hp-diag-pcdt-sus",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se a elegibilidade a tratamento medicamentoso específico pelo SUS estiver em discussão: não confundir o corte diagnóstico (PAPm >20 mmHg) com o critério de acesso do PCDT brasileiro, que mantém PAPm ≥25 mmHg para custear a terapia do grupo 1 — são dois limiares com propósitos diferentes",
+        "origem_secao": "PCDT brasileiro: critério de acesso ao tratamento medicamentoso específico no SUS"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do fluxograma de árvore de decisão já verificado e publicado nesta base e do documento combinado 'Hipertensão Pulmonar: Diagnóstico e Tratamento (ESC/ERS 2022)', com a seção de origem registrada em cada item e as referências primárias reaproveitadas dos documentos de origem."
+  },
+  {
+    "slug": "teste-de-vasorreatividade-aguda-avaliacao-e-conduta-pos-resultado",
+    "condicao": "Teste de vasorreatividade aguda na HAP idiopática, hereditária ou induzida por droga/toxina — indicação, critério de resposta e conduta conforme o resultado",
+    "resumo": "O que checar antes, durante e depois do teste de vasorreatividade aguda no cateterismo cardíaco direito: quem é elegível, o critério de Sitbon para resposta positiva, a dose alta de bloqueador de canal de cálcio no respondedor e a reavaliação em 3-4 meses que separa resposta aguda de resposta sustentada.",
+    "documento_origem": "teste-de-vasorreatividade-aguda-na-hap-idiopatica-e-hereditaria-o-criterio-de-sitbon",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sitbon O, Humbert M, Jaïs X, Ioos V, Hamid AM, Provencher S, Garcia G, Parent F, Hervé P, Simonneau G. Long-term response to calcium channel blockers in idiopathic pulmonary arterial hypertension. Circulation. 2005;111(23):3105-3111. DOI: 10.1161/CIRCULATIONAHA.104.488486. PMID: 15939821",
+      "Rich S, Kaufmann E, Levy PS. The effect of high doses of calcium-channel blockers on survival in primary pulmonary hypertension. N Engl J Med. 1992;327(2):76-81. PMID: 1603139",
+      "Acute pulmonary vasoreactivity: a simple test revisited in the contemporary era — a narrative review. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC12719676/",
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. European Heart Journal. 2022 (via European Respiratory Society, publications.ersnet.org/content/erj/61/1/2200879) — reavaliação com cateterismo direito em 3-4 meses após início do bloqueador de canal de cálcio em dose alta",
+      "Bhatt A, Sharma J. Management of Pulmonary Arterial Hypertension. Curr Cardiovasc Risk Rep. 2020;14:23. DOI: 10.1007/s12170-020-00663-3. PMID: 33224405. PMCID: PMC7671829"
+    ],
+    "itens": [
+      {
+        "id": "hp-vaso-elegibilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Elegibilidade confirmada: paciente com HAP idiopática, hereditária (mutação BMPR2) ou induzida por droga/toxina, virgem de tratamento específico — o teste não deve ser realizado por rotina em HAP associada a doença do tecido conjuntivo, nem nos grupos 2 e 3",
+        "origem_secao": "Quem é testado, e por quê / Quando o teste NÃO se aplica"
+      },
+      {
+        "id": "hp-vaso-contraindicacao-veno-oclusiva",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Doença veno-oclusiva pulmonar/hemangiomatose capilar pulmonar afastada antes do teste — nesse cenário o vasodilatador agudo carrega risco de edema pulmonar grave",
+        "origem_secao": "Quando o teste NÃO se aplica"
+      },
+      {
+        "id": "hp-vaso-agente",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Agente vasodilatador agudo registrado (óxido nítrico inalado, epoprostenol ou adenosina intravenosos, ou iloprost inalado), administrado durante o cateterismo cardíaco direito",
+        "origem_secao": "Quem é testado, e por quê"
+      },
+      {
+        "id": "hp-vaso-criterio-sitbon",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Resposta positiva definida pelos três componentes obrigatórios juntos: queda de PAPm de pelo menos 10 mmHg, PAPm absoluta final igual ou inferior a 40 mmHg, e débito cardíaco aumentado ou inalterado (não reduzido)",
+        "origem_secao": "O critério de Sitbon"
+      },
+      {
+        "id": "hp-vaso-comunicar-taxa-sustentada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente informado da taxa real de resposta sustentada (cerca de 6-9% do total de testados, não os 13-15% de resposta aguda) — comunicar só a taxa de resposta aguda superestima a chance de ficar em monoterapia oral simples",
+        "origem_secao": "Os números do estudo original / Armadilhas clínicas"
+      },
+      {
+        "id": "hp-vaso-bcc-dose-alta",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se resposta positiva: bloqueador de canal de cálcio oral de longa duração iniciado em dose alta sob monitorização — nifedipino 120-240 mg/dia, diltiazem 240-720 mg/dia ou amlodipino até 20 mg/dia (dose-alvo de manutenção); verapamil evitado pelo efeito inotrópico negativo mais pronunciado",
+        "origem_secao": "Implicação terapêutica: bloqueador de canal de cálcio em dose alta"
+      },
+      {
+        "id": "hp-vaso-reavaliacao-3-4-meses",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação clínica (classe funcional) e cateterismo cardíaco direito repetido agendados em 3-4 meses após início do BCC — é esse passo que separa resposta aguda de resposta sustentada, antes de assumir BCC como monoterapia definitiva",
+        "origem_secao": "Implicação terapêutica: bloqueador de canal de cálcio em dose alta"
+      },
+      {
+        "id": "hp-vaso-migrar-terapia-especifica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se a reavaliação não confirmar classe funcional I ou II com melhora hemodinâmica mantida: migração para terapia específica de HAP (antagonista de endotelina, inibidor de PDE5/riociguate e, conforme risco, prostanoide), sem manter BCC em dose alta sem o efeito protetor que justificaria o risco",
+        "origem_secao": "Implicação terapêutica / Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado nesta base sobre o critério de Sitbon, com a seção de origem registrada em cada item e as referências primárias (Sitbon 2005, Rich 1992, ESC/ERS 2022, Bhatt & Sharma 2020) reaproveitadas do documento de origem."
+  },
+  {
+    "slug": "hipertensao-arterial-pulmonar-na-gestacao-manejo-multidisciplinar",
+    "condicao": "Manejo da gestante com hipertensão arterial pulmonar (grupo 1) — do risco discutido ao planejamento do período periparto",
+    "resumo": "O que precisa estar definido no acompanhamento da gestante com HAP, condição mWHO III/IV: os números reais de mortalidade materna, os fármacos que precisam ser suspensos por teratogenicidade, o fator hemodinâmico que separa gestação bem-sucedida de óbito/transplante, e o planejamento do parto — período de maior risco materno.",
+    "documento_origem": "hipertensao-arterial-pulmonar-na-gestacao-risco-manejo-e-desfechos",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Jaïs X, Olsson KM, Barbera JA, et al. Pregnancy outcomes in pulmonary arterial hypertension in the modern management era. Eur Respir J. 2012;40(4):881-885. DOI: 10.1183/09031936.00141211. PMID: 22282544",
+      "Sliwa K, van Hagen IM, Budts W, et al; ROPAC investigators. Pulmonary hypertension and pregnancy outcomes: data from the Registry Of Pregnancy And Cardiac disease (ROPAC) of the European Society of Cardiology. Eur J Heart Fail. 2016;18(9):1119-1128. DOI: 10.1002/ejhf.594. PMID: 27384461",
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548"
+    ],
+    "itens": [
+      {
+        "id": "hp-gest-mortalidade-discutida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Risco de mortalidade materna discutido com números reais — histórico de até 56%, e ainda 12% em manejo contemporâneo (3 óbitos maternos em 26 gestações de registro multinacional); não tratar como condição de risco 'elevado' genérico",
+        "origem_secao": "Mortalidade histórica vs contemporânea / Armadilhas clínicas"
+      },
+      {
+        "id": "hp-gest-equipe-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Acompanhamento conduzido por equipe multidisciplinar de 'coração e gravidez' em centro de referência, condição classificada mWHO III/IV",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "hp-gest-suspender-teratogenicos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Suspensos, por teratogenicidade conhecida ou desconhecida: antagonista do receptor de endotelina (bosentana, ambrisentana, macitentana), riociguate e selexipague",
+        "origem_secao": "Manejo farmacológico na gestação"
+      },
+      {
+        "id": "hp-gest-farmacos-seguros",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Mantidos, com evidência limitada mas considerados seguros: bloqueador de canal de cálcio em respondedora confirmada, inibidor de PDE5 e análogo de prostaciclina (inalado, endovenoso ou subcutâneo)",
+        "origem_secao": "Manejo farmacológico na gestação"
+      },
+      {
+        "id": "hp-gest-rvp-controle",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "RVP registrada e usada para estimar risco relativo do desfecho — série de manejo contemporâneo mostrou RVP média de 500±352 dyn·s·cm⁻⁵ em gestações bem-sucedidas contra 1.667±209 dyn·s·cm⁻⁵ em óbito/transplante",
+        "origem_secao": "Fatores que predizem o desfecho"
+      },
+      {
+        "id": "hp-gest-planejamento-parto",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Via de parto, anestesia e disponibilidade de suporte hemodinâmico avançado (incluindo ECMO em centros que a oferecem) planejados com antecedência para o período periparto — maior risco materno concentrado no parto e no pós-parto imediato",
+        "origem_secao": "Manejo obstétrico e do parto"
+      },
+      {
+        "id": "hp-gest-bcc-nao-elimina-risco",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não comunicar resposta a bloqueador de canal de cálcio como eliminação do risco — reduz o risco relativo dentro de uma série pequena, não zera a mortalidade materna",
+        "origem_secao": "Fatores que predizem o desfecho / Armadilhas clínicas"
+      },
+      {
+        "id": "hp-gest-seguimento-pos-parto",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento mantido além da alta obstétrica — no registro ROPAC houve mortalidade adicional de 2,6% nos 6 meses seguintes ao parto entre as pacientes que compareceram ao seguimento, além dos 3,3% até 1 semana pós-parto",
+        "origem_secao": "Mortalidade histórica vs contemporânea"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado nesta base sobre HAP na gestação, com a seção de origem registrada em cada item e as referências primárias (Jaïs 2012, ROPAC/Sliwa 2016, ESC/ERS 2022) reaproveitadas do documento de origem."
   }
 ]
