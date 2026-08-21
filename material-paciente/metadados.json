@@ -14447,5 +14447,178 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "trombose-durante-a-internacao-por-que-alguns-pacientes-precisam-de-prevencao",
+    "titulo": "Por que preciso de remédio ou meia elástica só por estar internado?",
+    "subtitulo": "Entenda a prevenção de trombose venosa durante a internação hospitalar",
+    "tema": "Tromboembolismo",
+    "documento_slug": "profilaxia-de-tev-no-paciente-clinico-hospitalizado-escore-de-padua-e-profilaxia-estendida",
+    "resumo": "Ficar internado e com pouca movimentação aumenta o risco de formar coágulos nas veias das pernas (trombose venosa), que podem se soltar e ir para o pulmão. Por isso, o hospital avalia esse risco em toda internação e pode recomendar remédio ou meia elástica de compressão enquanto você estiver internado.",
+    "secoes": [
+      {
+        "titulo": "Por que ficar internado aumenta o risco de trombose",
+        "paragrafos": [
+          "Quando você fica muitas horas ou dias na cama, o sangue circula mais devagar nas veias das pernas, o que facilita a formação de coágulos. Isso é chamado de trombose venosa profunda.",
+          "O risco fica ainda maior quando existem outros fatores ao mesmo tempo, como uma infecção em atividade, algum tipo de câncer, cirurgia ou trauma recente, coágulo prévio, idade mais avançada, obesidade, doença do coração ou do pulmão, ou uso de tratamento hormonal.",
+          "Um coágulo que se forma na perna pode, em alguns casos, se soltar e viajar até o pulmão, causando uma embolia pulmonar — por isso a prevenção durante a internação é levada a sério."
+        ]
+      },
+      {
+        "titulo": "Como o médico decide quem precisa de prevenção",
+        "paragrafos": [
+          "Existe uma ferramenta validada, usada em hospitais, que soma diferentes fatores de risco do paciente internado — como os citados acima — para calcular se a chance de formar um coágulo é baixa ou alta.",
+          "Pacientes classificados como alto risco costumam se beneficiar claramente de alguma forma de prevenção durante a internação. Em pacientes de baixo risco, o benefício da prevenção com remédio é pequeno, e por isso ela pode nem ser indicada — não é sinal de descuido, é decisão baseada em evidência.",
+          "Essa avaliação é feita pela equipe médica logo na admissão e pode ser repetida durante a internação, já que o risco muda conforme a sua condição evolui."
+        ]
+      },
+      {
+        "titulo": "O que essa prevenção pode incluir",
+        "paragrafos": [
+          "Existem duas formas principais de prevenção, que podem ser usadas isoladas ou combinadas: métodos mecânicos, como meia elástica de compressão ou um dispositivo que comprime as pernas de forma intermitente; e, quando indicado, um medicamento anticoagulante em dose de prevenção — diferente da dose usada para tratar um coágulo que já existe.",
+          "A escolha entre elas depende do seu risco de sangramento, da sua condição clínica e de eventuais contraindicações. Sua equipe de saúde vai explicar qual delas está sendo usada no seu caso e por quê."
+        ]
+      },
+      {
+        "titulo": "Prevenção depois da alta: nem sempre é necessária",
+        "paragrafos": [
+          "É comum pensar que, se a prevenção era importante durante a internação, ela também deveria continuar depois de você ir para casa. Mas os estudos mais robustos sobre esse tema, feitos justamente para responder essa pergunta, não mostraram um benefício claro em estender o uso do anticoagulante por várias semanas após a alta na maioria dos pacientes clínicos — e houve um sinal de mais sangramento nesse período estendido.",
+          "Por isso, a decisão de manter ou não algum tipo de prevenção depois da alta é individualizada, e cabe ao seu médico avaliar seu caso específico. Não interrompa nem inicie nenhum medicamento por conta própria depois de sair do hospital — siga sempre a orientação recebida na alta."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Inchaço, dor ou vermelhidão em uma das pernas, principalmente se surgir de um lado só",
+      "Falta de ar que aparece de repente",
+      "Dor no peito, principalmente se piorar ao respirar fundo",
+      "Sangramento incomum, se você estiver usando algum medicamento para prevenção"
+    ],
+    "perguntas": [
+      "Toda pessoa internada recebe remédio para prevenir trombose? Não. A equipe avalia o risco individual de cada paciente; quem tem risco baixo pode não precisar de remédio, só de orientação para se movimentar quando possível.",
+      "A meia elástica sozinha já é suficiente? Em alguns casos sim, principalmente quando há maior risco de sangramento; em outros, o médico pode combinar meia elástica com o medicamento. Depende da avaliação do seu caso.",
+      "Vou precisar continuar tomando remédio de prevenção depois de sair do hospital? Nem sempre. Os estudos mostram que estender o uso por várias semanas após a alta não traz benefício claro para a maioria das pessoas. Siga a orientação da sua equipe médica na alta.",
+      "Movimentar-me na cama ou levantar quando permitido ajuda? Sim, a mobilização precoce, sempre que sua condição clínica permitir, é parte importante da prevenção contra trombose durante a internação."
+    ],
+    "fontes": [
+      "Barbar S, Noventa F, Rossetto V, et al. A risk assessment model for the identification of hospitalized medical patients at risk for venous thromboembolism: the Padua Prediction Score. J Thromb Haemost. 2010;8(11):2450-2457. DOI: 10.1111/j.1538-7836.2010.04044.x. PMID: 20738765",
+      "Spyropoulos AC, Ageno W, Albers GW, et al; MARINER Investigators. Rivaroxaban for Thromboprophylaxis after Hospitalization for Medical Illness. N Engl J Med. 2018;379(12):1118-1127. DOI: 10.1056/NEJMoa1805090. PMID: 30145946"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "filtro-de-veia-cava-o-que-e-e-por-que-precisa-ser-retirado",
+    "titulo": "Filtro de veia cava: o que é e por que precisa ser retirado",
+    "subtitulo": "Entenda quando esse pequeno dispositivo é indicado e por que ele não deve ficar para sempre",
+    "tema": "Tromboembolismo",
+    "documento_slug": "filtro-de-veia-cava-inferior-recuperavel-indicacoes-restritas-e-risco-do-filtro-nao-retirado",
+    "resumo": "O filtro de veia cava é um pequeno dispositivo colocado dentro de uma veia grande do abdômen para impedir que um coágulo formado na perna chegue até o pulmão. Ele não trata o coágulo nem substitui o anticoagulante — e, quando é do tipo removível, precisa mesmo ser retirado assim que possível.",
+    "secoes": [
+      {
+        "titulo": "O que é o filtro de veia cava e para que serve",
+        "paragrafos": [
+          "A veia cava inferior é a grande veia que leva o sangue das pernas e do abdômen de volta ao coração. O filtro é um pequeno dispositivo em formato de teia, colocado dentro dela por um procedimento pouco invasivo, que funciona como uma peneira: deixa o sangue passar normalmente, mas retém coágulos maiores que poderiam viajar até o pulmão.",
+          "É importante entender que o filtro não trata a causa do problema: ele não dissolve o coágulo que já existe na perna, nem impede que novos coágulos se formem. Por isso, sempre que for possível, o tratamento principal continua sendo o anticoagulante — o filtro é reservado para situações específicas em que esse medicamento não pode ser usado."
+        ]
+      },
+      {
+        "titulo": "Quando ele é realmente indicado",
+        "paragrafos": [
+          "O filtro de veia cava tem papel bem definido em duas situações: quando existe uma razão que impede, no momento, o uso do anticoagulante (por exemplo, um sangramento importante em atividade ou uma cirurgia recente com alto risco de sangrar), ou quando um coágulo volta a aparecer mesmo com o paciente já em uso correto do anticoagulante na dose adequada.",
+          "Fora dessas duas situações, um estudo clínico de boa qualidade comparou pacientes com embolia pulmonar grave que usaram anticoagulante associado ao filtro com pacientes que usaram só o anticoagulante — e não encontrou benefício em acrescentar o filtro quando o anticoagulante já podia ser usado normalmente. Ou seja: a gravidade do quadro, isoladamente, não é motivo para colocar o filtro se você pode tomar o anticoagulante."
+        ]
+      },
+      {
+        "titulo": "Por que a retirada é tão importante",
+        "paragrafos": [
+          "Existem filtros definitivos e filtros chamados 'recuperáveis', que foram projetados para serem retirados depois de um tempo, assim que a razão que impedia o anticoagulante deixar de existir.",
+          "Na prática, porém, estudos mostram que a maioria dos filtros recuperáveis acaba não sendo retirada no prazo planejado e permanece no corpo por muito mais tempo do que deveria — em uma revisão de vários estudos, apenas cerca de 1 em cada 3 filtros recuperáveis foi de fato removido.",
+          "Quando o filtro fica no corpo por tempo prolongado além do necessário, existe risco documentado de complicações mecânicas, como quebra de uma das hastes do dispositivo e deslocamento de um fragmento — em casos raros, esse fragmento pode chegar até o coração e causar um problema sério. Por isso, retirar o filtro assim que ele deixar de ser necessário não é um detalhe burocrático: é parte do tratamento."
+        ]
+      },
+      {
+        "titulo": "O que você pode fazer",
+        "paragrafos": [
+          "Se você recebeu um filtro de veia cava recuperável, pergunte à sua equipe médica: este filtro é definitivo ou deve ser retirado? Quando está previsto o retorno para reavaliar a retirada? Quem vou procurar para agendar isso?",
+          "Se, com o tempo, a razão que impedia você de tomar anticoagulante deixar de existir (por exemplo, o sangramento resolveu ou a cirurgia já cicatrizou), é importante voltar a conversar com o médico sobre a retirada do filtro o quanto antes, mesmo que ninguém tenha entrado em contato para lembrar você."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que aparece de forma súbita",
+      "Palpitações ou sensação de coração acelerado sem explicação",
+      "Falta de ar que surge de repente",
+      "Inchaço ou dor nova em uma das pernas"
+    ],
+    "perguntas": [
+      "O filtro substitui o anticoagulante? Não. Ele não trata o coágulo que já existe nem impede que novos coágulos se formem — apenas impede mecanicamente que um coágulo grande chegue ao pulmão. Sempre que possível, o anticoagulante continua sendo o tratamento principal.",
+      "Todo filtro precisa ser retirado? Não. Existem filtros definitivos, pensados para ficar permanentemente, e filtros recuperáveis, que devem ser retirados assim que possível. Pergunte à sua equipe qual tipo você recebeu.",
+      "O que acontece se o filtro recuperável não for retirado? Quanto mais tempo ele permanece além do planejado, maior o risco de complicações mecânicas, incluindo quebra de parte do dispositivo. Por isso vale a pena acompanhar ativamente o plano de retirada."
+    ],
+    "fontes": [
+      "Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077",
+      "Mismetti P, Laporte S, Pellerin O, et al; PREPIC2 Study Group. Effect of a retrievable inferior vena cava filter plus anticoagulation vs anticoagulation alone on risk of recurrent pulmonary embolism: a randomized clinical trial. JAMA. 2015;313(16):1627-1635. DOI: 10.1001/jama.2015.3780. PMID: 25919526",
+      "Angel LF, Tapson V, Galgon RE, Restrepo MI, Kaufman J. Systematic review of the use of retrievable inferior vena cava filters. J Vasc Interv Radiol. 2011;22(11):1522-1530.e3. PMID: 22024114",
+      "Nicholson W, Nicholson WJ, Tolerico P, et al. Prevalence of fracture and fragment embolization of Bard retrievable vena cava filters and clinical implications including cardiac perforation and tamponade. Arch Intern Med. 2010;170(20):1827-1831. PMID: 20696949"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardite-reumatica-quando-a-febre-reumatica-atinge-o-coracao",
+    "titulo": "Cardite reumática: quando a febre reumática atinge o coração",
+    "subtitulo": "Como o médico avalia a gravidade dessa inflamação e o que costuma ser feito no tratamento",
+    "tema": "Febre reumática",
+    "documento_slug": "cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022",
+    "resumo": "A febre reumática pode inflamar o coração — é o que se chama cardite reumática. Entenda como os médicos avaliam a gravidade dessa inflamação, principalmente nas válvulas do coração, e o que costuma orientar o tratamento em cada situação.",
+    "secoes": [
+      {
+        "titulo": "O que é a cardite reumática",
+        "paragrafos": [
+          "A febre reumática é uma reação do próprio corpo que pode acontecer algumas semanas depois de uma infecção de garganta por uma bactéria (o estreptococo) que não foi tratada a tempo. Em alguns casos, essa reação chega a atingir o coração — é o que se chama cardite reumática.",
+          "A parte do coração mais afetada costuma ser as válvulas cardíacas, que passam a ter um pequeno escape de sangue (chamado de regurgitação) por causa da inflamação. É por isso que, na maioria dos casos, o médico detecta um sopro novo no exame e solicita um ecocardiograma — exame considerado indispensável para confirmar e avaliar o comprometimento do coração, mesmo quando o exame físico já sugere alguma alteração.",
+          "É importante saber que exames de sangue que costumam indicar lesão direta do músculo do coração (como a troponina) muitas vezes vêm normais na cardite reumática, mesmo quando o coração está inflamado — porque o problema principal aqui é nas válvulas, não no músculo cardíaco em si."
+        ]
+      },
+      {
+        "titulo": "Como o médico avalia a gravidade",
+        "paragrafos": [
+          "A cardite reumática pode variar bastante de intensidade, e essa graduação é o que orienta a conduta em cada caso. De forma simplificada, ela vai desde um quadro mais leve — sem sintomas evidentes, com alterações discretas no eletrocardiograma e um escape pequeno de sangue na válvula visto no ecocardiograma — até um quadro grave, com sintomas claros de insuficiência cardíaca, escape importante de sangue na válvula e, em alguns casos, o coração bombeando com menos força do que deveria.",
+          "Entre esses dois extremos existem faixas intermediárias, em que o médico observa sinais como o coração batendo mais rápido do que a febre por si só justificaria, alterações maiores no eletrocardiograma, ou sinais leves de sobrecarga no coração.",
+          "Essa avaliação é sempre feita por médico, com apoio de exame físico, eletrocardiograma, exames de sangue e ecocardiograma — não é algo que o paciente ou a família consiga classificar sozinho, mas entender que existe essa graduação ajuda a compreender por que o tratamento pode ser diferente de um paciente para outro."
+        ]
+      },
+      {
+        "titulo": "O que costuma orientar o tratamento",
+        "paragrafos": [
+          "Em todos os casos de cardite reumática, é necessário tratar a infecção de garganta que desencadeou o problema, mesmo quando ela já não está mais ativa no momento do diagnóstico — isso é feito com um antibiótico apropriado, que seu médico vai indicar.",
+          "Para controlar a inflamação, o médico pode prescrever um anti-inflamatório ou um corticoide, escolhido e ajustado conforme a gravidade do quadro — os casos mais leves costumam precisar de esquemas mais curtos, e os casos moderados a graves, de esquemas mais prolongados e com recomendação mais forte de uso. A escolha e o tempo de tratamento são decisão médica individualizada, não devem ser copiados de outro paciente.",
+          "Em quadros moderados a graves, pode ser recomendado repouso e internação para acompanhamento mais de perto, além de tratamento específico caso apareçam sinais de insuficiência cardíaca.",
+          "Nos casos graves que não melhoram com o tratamento clínico, pode ser necessária cirurgia para reparar ou trocar a válvula afetada — decisão tomada em conjunto entre cardiologista e cirurgião cardíaco, reservada a essa situação específica."
+        ]
+      },
+      {
+        "titulo": "O que pode acontecer depois",
+        "paragrafos": [
+          "A cardite reumática aguda pode passar sem deixar sequela, mas em uma parcela significativa dos casos — a literatura médica estima que possa chegar a metade dos pacientes — ela evolui para um problema crônico nas válvulas do coração, que exige acompanhamento a longo prazo.",
+          "Por isso, mesmo depois que a fase aguda melhora, o acompanhamento cardiológico regular continua sendo importante, assim como a continuidade da prevenção de novos episódios de febre reumática com antibiótico regular — tema tratado em outro material desta biblioteca, sobre a profilaxia com penicilina."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar nova ou que piora, inclusive ao deitar",
+      "Cansaço muito maior que o habitual para esforços pequenos",
+      "Inchaço nas pernas ou na barriga",
+      "Palpitações ou sensação de coração acelerado",
+      "Febre que não melhora ou dor nas articulações que retorna",
+      "Dor no peito"
+    ],
+    "perguntas": [
+      "A cardite reumática sempre deixa sequela no coração? Não sempre, mas uma parcela importante dos casos pode evoluir para um problema crônico nas válvulas do coração. Por isso o acompanhamento médico a longo prazo é essencial, mesmo depois de você se sentir bem.",
+      "Por que o ecocardiograma é tão importante nessa avaliação? Porque a parte do coração mais atingida na cardite reumática costuma ser as válvulas, e o ecocardiograma é o exame que mostra com precisão se e o quanto elas foram afetadas — muitas vezes de forma mais sensível do que o exame físico sozinho.",
+      "Preciso continuar tomando o antibiótico de prevenção depois que a cardite melhorar? Sim. Tratar a infecção que causou o episódio agudo é uma etapa; prevenir novos episódios com antibiótico regular por um longo período é outra, igualmente importante, e costuma continuar mesmo depois que você se sentir totalmente recuperado."
+    ],
+    "fontes": [
+      "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arquivos Brasileiros de Cardiologia. Seção 7 (Cardite Reumática), Tabelas 39 e 40 — texto integral em acesso aberto no PubMed Central"
+    ],
+    "review_status": "revisado"
   }
 ]
