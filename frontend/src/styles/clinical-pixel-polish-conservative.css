@@ -1,86 +1,23 @@
-/* CorVIA — conservative pixel polish.
-   CONTRACT: this stylesheet must never change layout/composition.
-   No display/grid/flex/position/width/height/gap/margin/padding/transform/overflow.
-   Only optical refinement of the already-approved interface. */
+/* CorVIA — conservative pixel polish. Layout/composition are immutable. */
 
-/* Consistent, accessible focus treatment without geometry changes. */
-#root .clinical-os :is(button, a, input, select, textarea):focus-visible,
-#root .legal-page :is(a, button):focus-visible,
-#root .cos-tour :is(button, a):focus-visible {
-  outline: 2px solid rgba(79, 212, 221, .92);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(79, 212, 221, .10);
+#root .clinical-os :is(button,a,input,select,textarea):focus-visible,
+#root .legal-page :is(a,button):focus-visible,
+#root .cos-tour :is(button,a):focus-visible {
+  outline:2px solid rgba(79,212,221,.92);
+  outline-offset:2px;
 }
 
-/* Approved Clinical OS cards: preserve surfaces, only make edges more coherent. */
-body.corvia-route--conta .clinical-os .conta__grid > .cartao,
+body.corvia-route--conta .clinical-os .conta__grid>.cartao,
 body.corvia-route--integracoes .clinical-os .cartao,
-body.corvia-route--prescricao .clinical-os .cartao,
-body.corvia-route--prescricao .clinical-os .prescricao-item,
+body.corvia-route--prescricao .clinical-os :is(.cartao,.prescricao-item),
 body.corvia-route--agenda .clinical-os .cartao,
-body.corvia-route--mail .clinical-os .cartao {
-  border-color: rgba(126, 190, 208, .12);
-  box-shadow: inset 0 1px rgba(255, 255, 255, .018);
-  transition: border-color .16s ease, box-shadow .16s ease;
+body.corvia-route--mail .clinical-os .cartao,
+#root .legal-page :is(>header,section),
+#root .cos-tour :is(.cos-tour-feature__visual,.cos-tour-mock) {
+  border-color:rgba(126,190,208,.12);
 }
 
-body.corvia-route--conta .clinical-os .conta__grid > .cartao:hover,
-body.corvia-route--integracoes .clinical-os .cartao:hover,
-body.corvia-route--prescricao .clinical-os .cartao:hover,
-body.corvia-route--prescricao .clinical-os .prescricao-item:hover,
-body.corvia-route--agenda .clinical-os .cartao:hover,
-body.corvia-route--mail .clinical-os .cartao:hover {
-  border-color: rgba(126, 190, 208, .18);
-  box-shadow: inset 0 1px rgba(255, 255, 255, .025);
-}
-
-/* Inputs keep the established dark surfaces; only state clarity is refined. */
-#root .clinical-os :is(input, select, textarea):not(:disabled) {
-  transition: border-color .16s ease, box-shadow .16s ease;
-}
-
-#root .clinical-os :is(input, select, textarea):not(:disabled):hover {
-  border-color: rgba(126, 190, 208, .22);
-}
-
-#root .clinical-os :is(input, select, textarea):not(:disabled):focus {
-  border-color: rgba(79, 212, 221, .58);
-  box-shadow: 0 0 0 3px rgba(79, 212, 221, .08);
-}
-
-/* Buttons: no sizing or repositioning; clearer affordance only. */
-#root .clinical-os .botao:not(:disabled),
-#root .cos-tour button:not(:disabled),
-#root .legal-page footer a {
-  transition: border-color .16s ease, box-shadow .16s ease, opacity .16s ease;
-}
-
-#root .clinical-os .botao:not(:disabled):hover,
-#root .cos-tour button:not(:disabled):hover,
-#root .legal-page footer a:hover {
-  box-shadow: 0 0 0 1px rgba(126, 190, 208, .08), 0 5px 18px rgba(0, 0, 0, .08);
-}
-
-/* Legal pages keep the canonical composition; improve edge separation only. */
-#root .legal-page > header,
-#root .legal-page section {
-  border-color: rgba(126, 183, 201, .12);
-}
-
-#root .legal-page section:hover {
-  border-color: rgba(126, 183, 201, .17);
-}
-
-/* Tour keeps the approved architecture/mockups; only focus/edge fidelity changes. */
-#root .cos-tour .cos-tour-feature__visual,
-#root .cos-tour .cos-tour-mock {
-  border-color: rgba(126, 190, 208, .12);
-}
-
-/* Text rendering consistency, without changing font metrics. */
-#root .clinical-os,
-#root .legal-page,
-#root .cos-tour {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root .clinical-os :is(input,select,textarea):not(:disabled):focus {
+  border-color:rgba(79,212,221,.58);
+  box-shadow:0 0 0 3px rgba(79,212,221,.08);
 }
