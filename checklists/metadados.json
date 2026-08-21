@@ -18146,5 +18146,191 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-tratamento-inicial-da-trombose-venosa-profunda",
+    "condicao": "Trombose venosa profunda (TVP) de membro inferior — suspeita e fase inicial de tratamento",
+    "resumo": "O que checar da estratificação de probabilidade clínica ao diagnóstico por imagem e à escolha do anticoagulante na TVP de membro inferior, incluindo quando o filtro de veia cava não acrescenta benefício e quando reconhecer e classificar a síndrome pós-trombótica.",
+    "documento_origem": "trombose-venosa-profunda-diagnostico-e-tratamento",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diagnostic et prise en charge de la thrombose veineuse — synthèse SFMV/ESC · Société Française de Médecine Vasculaire · https://ex.sfmv.fr/sites/default/files/docs/fiches_rbp_mtev_aigu_esc_2017_vd3.pdf",
+      "Diretrizes sobre trombose venosa profunda da Sociedade Brasileira de Angiologia e Cirurgia Vascular · 2024 · https://www.scielo.br/j/jvb/a/QrkKryFq4fDkCHZPLBbgpdJ/?format=pdf&lang=pt",
+      "Mismetti P, Laporte S, Pellerin O, et al. Effect of a retrievable inferior vena cava filter plus anticoagulation vs anticoagulation alone on risk of recurrent pulmonary embolism (PREPIC2). JAMA. 2015;313(16):1627-1635. DOI: 10.1001/jama.2015.3780. PMID: 25919526"
+    ],
+    "itens": [
+      {
+        "id": "tvp-diag-wells-modificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Probabilidade clínica pré-teste estimada pelo escore de Wells modificado (dois níveis) antes de solicitar D-dímero ou imagem — não pular direto para o exame sem estratificar",
+        "origem_secao": "Estratificacao diagnostica inicial"
+      },
+      {
+        "id": "tvp-diag-d-dimero-restrito",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "D-dímero (ELISA) solicitado apenas quando a probabilidade clínica for baixa/improvável — não usado como triagem em paciente de alta probabilidade, onde o valor preditivo negativo é insuficiente",
+        "origem_secao": "Algoritmo diagnostico"
+      },
+      {
+        "id": "tvp-diag-ecodoppler-primeira-linha",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecodoppler (ultrassom) venoso solicitado como primeiro exame de imagem, incluindo na gestante — TC venosa reservada só para casos selecionados",
+        "origem_secao": "Imagem diagnostica"
+      },
+      {
+        "id": "tvp-diag-classificacao-proximal-distal",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "TVP classificada como proximal ou distal isolada, e, se distal, estratificada em alto ou baixo risco de recidiva — a duração do tratamento depende diretamente dessa classificação",
+        "origem_secao": "Duracao anticoagulacao"
+      },
+      {
+        "id": "tvp-cond-anticoagulacao-sem-cancer",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Sem câncer ativo e sem contraindicação: anticoagulante oral direto definido como primeira linha para TVP proximal",
+        "origem_secao": "Escolha do anticoagulante"
+      },
+      {
+        "id": "tvp-cond-anticoagulacao-cancer",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Com câncer ativo: heparina de baixo peso molecular escolhida para tratamento inicial e de longo prazo, evitando o erro frequente de prescrever DOAC nesse cenário",
+        "origem_secao": "Escolha do anticoagulante"
+      },
+      {
+        "id": "tvp-cond-excecoes-doac",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Verificada a presença de síndrome antifosfolípide, gestação ou insuficiência renal grave — situações em que o DOAC não é a escolha padrão, mesmo sem câncer",
+        "origem_secao": "Escolha do anticoagulante"
+      },
+      {
+        "id": "tvp-cond-duracao-distal-baixo-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "TVP distal isolada de baixo risco de recidiva: anticoagulação por 4-6 semanas OU vigilância por ecodoppler seriado definida como estratégia alternativa — não estendida por padrão como se fosse proximal",
+        "origem_secao": "Tratamento fase inicial e longo prazo"
+      },
+      {
+        "id": "tvp-cond-filtro-veia-cava",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Filtro de veia cava inferior considerado apenas por exclusão — anticoagulação plena contraindicada ou TEV recorrente comprovado apesar de anticoagulação adequada — não indicado de rotina em quem pode ser anticoagulado (PREPIC2: TEP recorrente 3,0% com filtro vs. 1,5% sem, sem diferença estatística)",
+        "origem_secao": "Filtro veia cava"
+      },
+      {
+        "id": "tvp-cond-terapia-adjuvante",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Terapia de compressão associada a mobilização precoce e caminhada orientada como medida adjuvante para alívio dos sintomas venosos agudos",
+        "origem_secao": "Medidas adjuvantes"
+      },
+      {
+        "id": "tvp-seg-sindrome-pos-trombotica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Rastreio de síndrome pós-trombótica programado no seguimento com o escore de Villalta (≥5 pontos ou úlcera venosa define a síndrome; ≥15 pontos ou úlcera define gravidade)",
+        "origem_secao": "Sindrome pos trombotica"
+      },
+      {
+        "id": "tvp-seg-gestacao-pos-parto",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Na TVP da gestação: anticoagulação mantida por pelo menos 6 semanas após o parto, totalizando no mínimo 3 meses de tratamento — não suspensa no parto",
+        "origem_secao": "Tvp gestacao"
+      },
+      {
+        "id": "tvp-cond-nao-usar-trombolise-mecanica-primaria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Stent primário ou remoção mecânica isolada de trombo não usados como tratamento de primeira linha da TVP aguda — trombólise dirigida por cateter reservada a casos selecionados de TVP ilíaco-femoral com sintomas recentes, em centro experiente",
+        "origem_secao": "Terapia intervencionista"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Tromboembolismo citados em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "estratificacao-de-gravidade-do-tep-com-pesi-e-spesi",
+    "condicao": "Tromboembolismo pulmonar (TEP) agudo — estratificação de gravidade para decidir internação ou tratamento ambulatorial",
+    "resumo": "Passo a passo para aplicar o PESI original ou a versão simplificada (sPESI) na estimativa de mortalidade em 30 dias do TEP agudo e traduzir a classe de risco em decisão de internação, alta precoce ou investigação complementar de ventrículo direito.",
+    "documento_origem": "pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Aujesky D, Obrosky DS, Stone RA, et al. Derivation and validation of a prognostic model for pulmonary embolism (PESI). Am J Respir Crit Care Med. 2005;172(8):1041-1046. DOI: 10.1164/rccm.200506-862OC. PMID: 16020800",
+      "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism (sPESI). Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966",
+      "Bonsu KO, et al. Optimizing sPESI with heart rate threshold adjustments for risk stratification in acute pulmonary embolism: a retrospective cohort study. Vasc Med. 2026. PMCID: PMC13254130 (texto completo em acesso aberto) — reproduz e cita a construção original do sPESI (Jiménez D et al. 2010): 1 ponto por variável, seis variáveis, corte de 110 bpm herdado do PESI"
+    ],
+    "itens": [
+      {
+        "id": "pesi-calc-escolha-versao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Definido explicitamente qual versão está sendo aplicada — PESI original (11 variáveis, pontuação ponderada, soma inclui a idade em anos, 5 classes) ou sPESI (6 variáveis, 1 ponto cada, só 2 categorias) — para não confundir os pontos de corte de uma versão com os da outra",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "pesi-calc-variaveis-completas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Ao usar o PESI original, as 11 variáveis clínicas coletadas na apresentação: idade, sexo masculino, câncer, insuficiência cardíaca, doença pulmonar crônica, pulso ≥110/min, PAS <100 mmHg, frequência respiratória ≥30/min, temperatura <36°C, estado mental alterado e saturação de O₂ <90%",
+        "origem_secao": "Variaveis e pontuacao do pesi"
+      },
+      {
+        "id": "pesi-calc-variaveis-simplificado",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Ao usar o sPESI, as 6 variáveis com 1 ponto cada: idade >80 anos, câncer, doença cardiopulmonar crônica, frequência cardíaca ≥110/min, PAS <100 mmHg e saturação de O₂ <90% — corte de frequência cardíaca igual ao do PESI original (≥110 bpm), não outro valor",
+        "origem_secao": "Spesi versao simplificada"
+      },
+      {
+        "id": "pesi-calc-classe-risco-registrada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classe de risco final registrada no prontuário — classes I-II do PESI (≤85 pontos) ou sPESI = 0 (baixo risco) versus classes III-V do PESI ou sPESI ≥1 (alto risco) — não apenas o número bruto do escore",
+        "origem_secao": "Classes de risco e mortalidade em 30 dias"
+      },
+      {
+        "id": "pesi-cond-baixo-risco-ambulatorial",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em classe I-II do PESI ou sPESI de baixo risco: tratamento ambulatorial ou alta precoce considerado, desde que ausentes outros fatores de risco — não decidido pelo escore isoladamente",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "pesi-cond-baixo-risco-mantem-imagem-vd",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Mesmo com PESI/sPESI de baixo risco, avaliação de disfunção de ventrículo direito e dosagem de biomarcadores mantidas — não dispensadas só porque o escore de mortalidade geral é favorável",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "pesi-cond-alto-risco-internacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em classes III-V do PESI ou sPESI de alto risco: internação definida, com estratificação adicional por disfunção de ventrículo direito e biomarcadores para diferenciar risco intermediário-baixo, intermediário-alto e alto risco hemodinâmico",
+        "origem_secao": "Aplicacao pratica"
+      },
+      {
+        "id": "pesi-cond-nao-usar-para-trombolise",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "PESI/sPESI não usado isoladamente para decidir trombólise — a indicação de reperfusão no TEP de alto risco hemodinâmico é clínica (instabilidade), e os dois escores estratificam mortalidade geral, não a decisão de reperfusão",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "pesi-orient-registro-mortalidade-esperada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Faixa de mortalidade em 30 dias correspondente à classe registrada disponível para a conversa de risco com o paciente e a família — classe I 0-1,6% até classe V 10,0-24,5% no PESI; sPESI=0 próximo de zero óbitos, sPESI≥1 cerca de 9-11% nas coortes de validação",
+        "origem_secao": "Classes de risco e mortalidade em 30 dias"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Calculadoras citados em source_refs, com a seção de origem registrada em cada item."
   }
 ]
