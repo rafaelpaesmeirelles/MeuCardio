@@ -103,6 +103,31 @@ def test_assinar_pdf_produz_assinatura_integra_e_valida():
     assert status.valid is True
 
 
+def test_assinar_pdf_com_url_publica_usa_qr_e_permanece_integro():
+    from pyhanko.stamp import QRStampStyle
+    from pyhanko.pdf_utils.reader import PdfFileReader
+    from pyhanko.sign.validation import validate_pdf_signature
+
+    pfx = _gerar_pfx()
+    url = "https://corvia.med.br/validar/R123-0123456789ABCDEF"
+    codigo = "R123-0123456789ABCDEF"
+
+    estilo = pdf_signer._selo_visivel(codigo, url)
+    assert isinstance(estilo, QRStampStyle)
+    assert estilo.qr_inner_size == 36
+
+    assinado = pdf_signer.assinar_pdf(
+        _pdf_minimo(), pfx_bytes=pfx, senha="senha123",
+        motivo="Receita médica", local="Ribeirão Preto",
+        codigo_validacao=codigo, url_validacao=url,
+    )
+    assinatura = PdfFileReader(io.BytesIO(assinado)).embedded_signatures[0]
+    assert assinatura.sig_field.get("/AP") is not None
+    status = validate_pdf_signature(assinatura)
+    assert status.intact is True
+    assert status.valid is True
+
+
 def test_assinar_pdf_embute_cadeia_e_usa_subfiltro_pades():
     pfx, intermediaria_der = _gerar_pfx_com_intermediaria()
     assinado = pdf_signer.assinar_pdf(

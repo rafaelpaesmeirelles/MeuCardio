@@ -33,6 +33,10 @@ reportlab==4.4.10
 # Python pra assinatura de PDF ICP-Brasil-compatível, usa `cryptography`
 # (já dependência) como backend criptográfico.
 pyhanko==0.36.2
+# QR da URL pública de validação desenhado pelo QRStampStyle do pyHanko.
+# O pyHanko trata qrcode como dependência opcional, portanto pinamos
+# explicitamente para que produção nunca dependa de instalação transitiva.
+qrcode==8.2
 # Templates dos e-mails transacionais (02/08/2026) — HTML + texto puro
 # renderizados a partir de backend/app/templates/emails/.
 jinja2==3.1.6
