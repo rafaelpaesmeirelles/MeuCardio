@@ -8424,5 +8424,228 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "vigilancia-cardiaca-durante-antraciclina-e-terapia-anti-her2-ctrcd",
+    "condicao": "Vigilância cardíaca durante quimioterapia com antraciclina ou terapia anti-HER2, ao surgir alteração na monitorização",
+    "resumo": "O que checar quando a vigilância detecta nova alteração cardíaca durante o tratamento — graduar a CTRCD (leve/moderada/grave/muito grave) e aplicar a conduta certa, que é DIFERENTE entre antraciclina e terapia anti-HER2 na mesma faixa de fração de ejeção.",
+    "documento_origem": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS) · European Heart Journal · 2022 · 43(41):4229-4361 · DOI: 10.1093/eurheartj/ehac244 — Tabela 3 (definição e graduação de CTRCD) e Tabela de Recomendação 24 (manejo durante quimioterapia com antraciclina)"
+    ],
+    "itens": [
+      {
+        "id": "ctrcd-grau-classificado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "CTRCD graduada conforme a Tabela 3 da ESC 2022 — sintomática (leve/moderada/grave/muito grave, pela necessidade de intensificar diurético/terapia de IC, internação ou suporte inotrópico/mecânico) OU assintomática (leve/moderada/grave, pela faixa de FEVE combinada a queda relativa do GLS >15% e/ou nova elevação de biomarcador)",
+        "origem_secao": "Como a CTRCD é graduada (Tabela 3 da diretriz)"
+      },
+      {
+        "id": "ctrcd-conduta-antraciclina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se o paciente está em antraciclina: conduta aplicada pelo grau — suspender na CTRCD sintomática grave/muito grave (Classe I, nível C); interromper temporariamente na moderada sintomática ou na grave/moderada assintomática (Classe I, nível C); continuar sem interrupção, com monitorização a cada 1-2 ciclos, na CTRCD leve assintomática (Classe I, nível C)",
+        "origem_secao": "Árvore de decisão: CTRCD durante quimioterapia com antraciclina"
+      },
+      {
+        "id": "ctrcd-conduta-antiher2",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se o paciente está em terapia anti-HER2 (não antraciclina): NÃO aplicar a mesma régua — na mesma faixa de FEVE 40-49% (moderada), a conduta é CONTINUAR a terapia anti-HER2 associando cardioproteção e monitorização frequente, ao contrário da antraciclina, que interrompe nessa faixa; interromper temporariamente só na FEVE <40% ou na forma sintomática moderada/grave",
+        "origem_secao": "Árvore de decisão: CTRCD durante terapia dirigida ao HER2"
+      },
+      {
+        "id": "ctrcd-cardioprotecao-associada",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Na CTRCD leve (assintomática), IECA/BRA e/ou betabloqueador considerados conforme o achado que a definiu — Classe IIa nível B se queda do strain ou elevação de troponina, Classe IIb nível C se só elevação de peptídeo natriurético",
+        "origem_secao": "Árvore de decisão: CTRCD durante quimioterapia com antraciclina"
+      },
+      {
+        "id": "ctrcd-monitorizacao-ciclos",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorização cardíaca a cada 1 ou 2 ciclos programada nos dois cenários em que a diretriz recomenda: reinício de antraciclina após episódio de CTRCD, e manutenção de antraciclina com CTRCD leve em curso",
+        "origem_secao": "Reiniciar antraciclina depois de uma CTRCD"
+      },
+      {
+        "id": "ctrcd-decisao-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão sobre interromper (CTRCD leve sintomática) ou sobre quando reiniciar antraciclina (após CTRCD moderada sintomática, ou moderada/grave assintomática) registrada como tomada em equipe multidisciplinar cardio-oncologia — recomendação Classe I em todos esses pontos, não decisão isolada do cardiologista",
+        "origem_secao": "O que as árvores não mostram"
+      },
+      {
+        "id": "ctrcd-reinicio-estrategia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se ainda houver necessidade de mais antraciclina após CTRCD moderada ou grave, estratégia de redução de risco considerada — antraciclina lipossomal ou dexrazoxano antes de cada ciclo seguinte (Classe IIb, nível C); dexrazoxano só dentro da aprovação formal (câncer de mama avançado/metastático, dose cumulativa mínima já atingida)",
+        "origem_secao": "Reiniciar antraciclina depois de uma CTRCD"
+      },
+      {
+        "id": "ctrcd-exercicio-recomendado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Exercício aeróbico recomendado ao paciente com câncer que desenvolve CTRCD — benefício demonstrado antes e durante a quimioterapia com antraciclina",
+        "origem_secao": "O que as árvores não mostram"
+      }
+    ],
+    "revisao": "Derivado do fluxograma já verificado e publicado nesta base (fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022), com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Proposto para revisão do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — checklist gerado em tarefa de pesquisa/extração, aguardando a mesma aprovação clínica individual já exigida para os demais checklists desta base antes de publicação."
+  },
+  {
+    "slug": "manejo-agudo-de-miocardite-por-inibidor-de-checkpoint-imunologico",
+    "condicao": "Suspeita ou confirmação de miocardite por inibidor de checkpoint imunológico (ICI) — emergência cardio-oncológica",
+    "resumo": "Reconhecimento e conduta imediata na miocardite por ICI: suspender o fármaco, estratificar gravidade, iniciar corticoide sem atrasar por exame de confirmação, e escalar se não houver resposta em 24-48 horas — segundo a ESC 2025.",
+    "documento_origem": "miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Schulz-Menger J, Collini V, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf192 — recomendações específicas para miocardite induzida por ICI, consultadas no material oficial ESC 2025.",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43:4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568.",
+      "Touat M, Maisonobe T, Knauss S, et al. Immune checkpoint inhibitor-related myositis and myocarditis in patients with cancer. Neurology. 2018;91(10):e985-e994. DOI: 10.1212/WNL.0000000000006124. PMID: 30089619 — usado só para o item de rastreio de sobreposição miosite/miastenia"
+    ],
+    "itens": [
+      {
+        "id": "ici-suspender-imediato",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "ICI suspenso diante de suspeita relevante (troponina nova/progressiva, alteração nova de ECG, dispneia/IC sem outra explicação, síncope, palpitação, choque, ou associação com miosite/sintomas neuromusculares), enquanto se esclarece o diagnóstico — não esperar confirmação para suspender",
+        "origem_secao": "Suspeita clínica / Conduta imediata"
+      },
+      {
+        "id": "ici-exames-iniciais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações, telemetria contínua e troponina seriada solicitados; ecocardiograma precoce; ressonância cardíaca (CMR) quando clinicamente viável e SEM atrasar tratamento na forma grave",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "ici-diferenciais-descartados",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnósticos concorrentes que mudam conduta investigados — síndrome coronariana aguda, TEP, sepse e progressão tumoral",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "ici-gravidade-estratificada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Gravidade estratificada — presença de bloqueio AV avançado, TV/FV, edema pulmonar, baixo débito ou choque define forma grave, com necessidade de UTI/unidade cardiológica monitorizada e manejo paralelo da complicação hemodinâmica/arrítmica",
+        "origem_secao": "Conduta imediata"
+      },
+      {
+        "id": "ici-corticoide-iniciado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Metilprednisolona intravenosa iniciada precocemente — forma não grave: 500-1000 mg/dia por 3 dias, seguida de redução com prednisona oral; forma grave: 7-14 mg/kg/dia por 3 dias, seguida de prednisona ~1 mg/kg/dia",
+        "origem_secao": "Corticoide"
+      },
+      {
+        "id": "ici-nao-atrasar-por-exame",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que a decisão de imunossupressão NÃO foi adiada esperando CMR ou biópsia, quando a apresentação é grave e a probabilidade clínica é alta",
+        "origem_secao": "Corticoide"
+      },
+      {
+        "id": "ici-resposta-24-48h",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Resposta clínica e biomarcadora reavaliada em aproximadamente 24-48 horas do início do corticoide",
+        "origem_secao": "Falha de resposta"
+      },
+      {
+        "id": "ici-escalada-refrataria",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se não houver resposta em 24-48 horas: escalada de imunossupressão considerada em centro experiente — micofenolato, globulina antitimócito ou abatacepte, individualizado por gravidade e contraindicações",
+        "origem_secao": "Falha de resposta"
+      },
+      {
+        "id": "ici-overlap-miosite-miastenia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Rastreio de sobreposição com miosite/miastenia realizado quando houver qualquer elevação de troponina neste contexto — CK dosada, exame neurológico dirigido (força proximal, oculomotricidade, deglutição) e monitorização respiratória (capacidade vital forçada, força inspiratória negativa), porque a gravidade real nesse subgrupo é sinalizada pela CK e pelo exame neuromuscular, não pela troponina isolada (Touat M et al., Neurology 2018, PMID 30089619)",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Derivado do documento já verificado e publicado nesta base (miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025), com a seção de origem registrada em cada item; o item de sobreposição miosite/miastenia reaproveita achado do documento complementar já publicado nesta mesma pasta, com PMID próprio conferido. Proposto para revisão do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — checklist gerado em tarefa de pesquisa/extração, aguardando a mesma aprovação clínica individual já exigida para os demais checklists desta base antes de publicação."
+  },
+  {
+    "slug": "cardioprotecao-guiada-por-biomarcador-ou-strain-durante-quimioterapia-cardiotoxica",
+    "condicao": "Decisão de iniciar cardioproteção farmacológica (IECA) durante quimioterapia com antraciclina, guiada por troponina ou por strain longitudinal global",
+    "resumo": "O que checar antes de decidir se inicia IECA guiado por elevação de troponina ou por queda do strain — evita tratar todo paciente preventivamente e evita também confundir os diferentes cortes numéricos que circulam na prática (11%, 12% e 15% de queda do GLS não são a mesma coisa).",
+    "documento_origem": "cardioprotecao-guiada-por-troponina-o-ensaio-de-cardinale-e-o-icos-one",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cardinale D, Colombo A, Sandri MT, et al. Prevention of high-dose chemotherapy-induced cardiotoxicity in high-risk patients by angiotensin-converting enzyme inhibition. Circulation. 2006;114(23):2474-2481. DOI: 10.1161/CIRCULATIONAHA.106.635144. PMID: 17101852",
+      "Cardinale D, Ciceri F, Latini R, et al. Anthracycline-induced cardiotoxicity: A multicenter randomised trial comparing two strategies for guiding prevention with enalapril: The International CardioOncology Society-one trial. Eur J Cancer. 2018;94:126-137. DOI: 10.1016/j.ejca.2018.02.005. PMID: 29567630",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568 — usada aqui só para os cortes de definição de lesão miocárdica subclínica por biomarcador (Tabela 3)",
+      "Negishi K, Negishi T, Hare JL, Haluska BA, Plana JC, Marwick TH. Independent and incremental value of deformation indices for prediction of trastuzumab-induced cardiotoxicity. J Am Soc Echocardiogr. 2013;26(5):493-498. DOI: 10.1016/j.echo.2013.02.008. PMID: 23562088",
+      "Plana JC, Galderisi M, Barac A, Ewer MS, Ky B, Scherrer-Crosbie M, et al. Expert consensus for multimodality imaging evaluation of adult patients during and after cancer therapy: a report from the American Society of Echocardiography and the European Association of Cardiovascular Imaging. Eur Heart J Cardiovasc Imaging. 2014;15(10):1063-1093. DOI: 10.1093/ehjci/jeu192. PMID: 25239940. PMCID: PMC4402366"
+    ],
+    "itens": [
+      {
+        "id": "cardioprot-troponina-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina basal registrada antes do início do regime com antraciclina, para servir de referência à dosagem seriada — o corte operacional é acima do percentil 99 do limite superior de referência do método local (ESC 2022, Tabela 3)",
+        "origem_secao": "Onde os cortes de troponina se encaixam na diretriz atual"
+      },
+      {
+        "id": "cardioprot-troponina-seriada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Troponina dosada de forma seriada durante e logo após a quimioterapia em alta dose, como estratégia guiada por biomarcador — no ensaio de Cardinale 2006, elevação de troponina identificou o subgrupo (24% da coorte avaliada) que se beneficiou de enalapril (queda de FEVE >10 pontos em 43% no controle vs. 0% no grupo tratado, p<0,001)",
+        "origem_secao": "O ensaio original de Cardinale 2006"
+      },
+      {
+        "id": "cardioprot-gatilho-definido",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Estratégia de indicação registrada por escrito: guiada por troponina (IECA só quando a troponina se eleva) é preferível a tratar preventivamente todo paciente, pois o ICOS-ONE não mostrou diferença de incidência de elevação de troponina entre as duas estratégias (23% prevenção vs. 26% guiada, p=0,50) — evita expor ao IECA quem nunca vai precisar dele",
+        "origem_secao": "O ICOS-ONE: guiar todo mundo ou só quem eleva a troponina?"
+      },
+      {
+        "id": "cardioprot-iniciar-ieca",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "IECA (enalapril, fármaco testado nos dois ensaios) iniciado diante de elevação de troponina após a quimioterapia, mantido pelo período testado (1 ano no ensaio original) — extrapolar para outro IECA ou para BRA sem evidência equivalente não é achado direto do estudo",
+        "origem_secao": "O ensaio original de Cardinale 2006 / Armadilhas clínicas"
+      },
+      {
+        "id": "cardioprot-gls-basal",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Strain longitudinal global (GLS) basal registrado por ecocardiografia com speckle-tracking, quando disponível, como marcador complementar à troponina — a queda relativa do GLS precede a queda detectável da FEVE",
+        "origem_secao": "O problema: a FEVE muda tarde demais (documento de strain longitudinal global desta pasta)"
+      },
+      {
+        "id": "cardioprot-gls-seriado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Conduta pela faixa de queda relativa do GLS aplicada sem confundir os três cortes: queda relativa >15% do basal com FEVE ≥50% preenche a definição de CTRCD leve da ESC 2022 e apoia iniciar cardioproteção; queda entre 8% e 15% é zona sem corte de ação definido — a conduta defensável é intensificar a vigilância, não tratar como diagnóstico firme; queda <8% está dentro da variabilidade esperada de medida",
+        "origem_secao": "Implicação prática: intensificar vigilância vs. iniciar cardioprotetor (documento de strain longitudinal global desta pasta)"
+      },
+      {
+        "id": "cardioprot-nao-tratar-empirico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que o ICOS-ONE não tem braço placebo/sem tratamento — ele compara duas estratégias de indicação do mesmo IECA, não prova se o enalapril funciona; essa evidência vem do ensaio de 2006, numa coorte pré-selecionada por elevação de troponina (não extrapolar a diferença absoluta de 43 pontos percentuais para quem nunca elevou troponina)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "cardioprot-limite-tecnico-gls",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a comparação seriada do GLS, idealmente, usa o mesmo equipamento e software de speckle-tracking ao longo do seguimento — GLS não é intercambiável entre fabricantes e versões de software",
+        "origem_secao": "Limites (documento de strain longitudinal global desta pasta)"
+      }
+    ],
+    "revisao": "Derivado dos dois documentos já verificados e publicados nesta base (cardioprotecao-guiada-por-troponina-o-ensaio-de-cardinale-e-o-icos-one e strain-longitudinal-global-marcador-precoce-de-cardiotoxicidade-e-os-cortes-de-queda-relativa), com a seção de origem registrada em cada item. Proposto para revisão do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — checklist gerado em tarefa de pesquisa/extração, aguardando a mesma aprovação clínica individual já exigida para os demais checklists desta base antes de publicação."
   }
 ]
