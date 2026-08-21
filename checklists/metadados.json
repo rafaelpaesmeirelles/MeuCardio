@@ -18146,5 +18146,218 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "passagem-de-plantao-estruturada-com-protocolo-i-pass",
+    "condicao": "Passagem de plantão de rotina entre médicos em enfermaria/UTI de cardiologia",
+    "resumo": "Cobertura estruturada dos cinco elementos do protocolo I-PASS na troca de plantão de rotina, para reduzir a perda silenciosa de informação que o SBAR não cobre — sem urgência no momento da conversa, itens críticos como o plano de contingência costumam ficar de fora se não forem cobrados explicitamente.",
+    "documento_origem": "passagem-de-plantao-estruturada-i-pass-e-reducao-de-erro-medico",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Starmer AJ, Spector ND, Srivastava R, West DC, Rosenbluth G, Allen AD, Noble EL, Tse LL, Dalal AK, Keohane CA, Lipsitz SR, Rothschild JM, Wien MF, Yoon CS, Zigmont KR, Wilson KM, O'Toole JK, Solan LG, Aylor M, Bismilla Z, Coffey M, Mahant S, Blankenburg RL, Destino LA, Everhart JL, Patel SJ, Bale JF, Spackman JB, Stevenson AT, Calaman S, Cole FS, Balmer DF, Hepps JH, Lopreiato JO, Yu CE, Sectish TC, Landrigan CP; I-PASS Study Group. Changes in medical errors after implementation of a handoff program. N Engl J Med. 2014;371(19):1803-1812. DOI: 10.1056/NEJMsa1405556. PMID: 25372088 — estudo de intervenção prospectivo multicêntrico, 9 hospitais, 10.740 internações"
+    ],
+    "itens": [
+      {
+        "id": "ipass-severidade-doenca",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Comunicar a gravidade do paciente em uma palavra ou categoria breve, logo no início da passagem — elemento 'Illness severity' do I-PASS",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-resumo-paciente",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Apresentar resumo objetivo do caso (evento admissional, evolução relevante, diagnóstico ativo) — elemento 'Patient summary'",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-lista-de-acoes",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Listar explicitamente as ações pendentes para o próximo plantão (elemento 'Action list'), não apenas mencioná-las de passagem no meio da conversa",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-plano-contingencia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Descrever plano de contingência explícito ('se a pressão cair abaixo de X, faça Y') — o elemento 'situation awareness/contingency planning' é o mais frequentemente omitido em passagem de plantão não estruturada",
+        "origem_secao": "Aplicação prática em cardiologia"
+      },
+      {
+        "id": "ipass-sintese-do-receptor",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exigir que quem recebe o plantão repita de volta, com as próprias palavras, o que entendeu antes de encerrar a passagem — elemento 'Synthesis by receiver', fecha o ciclo de comunicação em alça fechada",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-nao-aumenta-tempo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Lembrar à equipe que a estruturação não aumenta o tempo da passagem de plantão (2,4 vs. 2,5 min/paciente na coorte original, p=0,55) — resistência por 'falta de tempo' não é justificada pelos dados",
+        "origem_secao": "O que mudou, medido"
+      },
+      {
+        "id": "ipass-treinamento-nao-so-formulario",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Não tratar o I-PASS como um formulário a preencher: a intervenção testada incluiu treinamento de comunicação, observação e feedback por corpo docente e campanha de sustentabilidade — distribuir só um formulário não reproduz o resultado medido",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-limite-extrapolacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao aplicar em enfermaria/UTI de cardiologia de adultos, lembrar que o estudo original foi conduzido majoritariamente em serviços de pediatria, com desenho pré-pós sem grupo controle contemporâneo randomizado — a extrapolação direta não foi testada neste estudo específico",
+        "origem_secao": "Limitações, declaradas com honestidade"
+      }
+    ],
+    "revisao": "Checklist elaborado a partir de documento já revisado da biblioteca científica Corvia. Curadoria clínica sob responsabilidade do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798."
+  },
+  {
+    "slug": "recusa-de-transfusao-sanguinea-antes-de-cirurgia-cardiaca-comunicacao-e-consentimento",
+    "condicao": "Recusa de transfusão sanguínea por convicção religiosa antes de cirurgia cardíaca (Testemunhas de Jeová)",
+    "resumo": "Conduta de comunicação, consentimento e conservação de sangue diante da recusa de hemoderivados antes de cirurgia cardíaca — o que a evidência mostra sobre desfecho sem transfusão, o que mudou no Brasil com a decisão do STF de 25/09/2024 (Temas 952 e 1069) e o limite que não se negocia quando o paciente é menor de idade.",
+    "documento_origem": "recusa-de-transfusao-sanguinea-em-cirurgia-cardiaca-testemunhas-de-jeova-e-conservacao-de-sangue",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pattakos G, Koch CG, Brizzio ME, Batizy LH, Sabik JF 3rd, Blackstone EH, Lauer MS. Outcome of patients who refuse transfusion after cardiac surgery: a natural experiment with severe blood conservation. Arch Intern Med. 2012;172(15):1154-1160. DOI: 10.1001/archinternmed.2012.2449. PMID: 22751620",
+      "McCartney S, Guinn N, Roberson R, Broomer B, White W, Hill S. Jehovah's Witnesses and cardiac surgery: a single institution's experience. Transfusion. 2014;54(10 Pt 2):2745-2752. DOI: 10.1111/trf.12696. PMID: 24809815",
+      "Supremo Tribunal Federal. RE 979.742 (Tema 952 da Repercussão Geral) e RE 1.212.272 (Tema 1069 da Repercussão Geral), Relator Min. Luís Roberto Barroso (Tema 952), julgamento conjunto em Plenário, 25/09/2024, por unanimidade (10x0). Tese fixada: 'Testemunhas de Jeová, quando maiores e capazes, têm o direito de recusar procedimento médico que envolva transfusão de sangue, com base na autonomia individual e na liberdade religiosa. Como consequência, em respeito ao direito à vida e à saúde, fazem jus aos procedimentos alternativos disponíveis no Sistema Único de Saúde – SUS, podendo, se necessário, recorrer a tratamento fora de seu domicílio.' O caso concreto do RE 1.212.272 (Tema 1069) tratava de recusa de transfusão em cirurgia de troca de valva aórtica.",
+      "Conselho Federal de Medicina. Resolução CFM nº 2.232, de 17 de julho de 2019. Estabelece normas éticas para a recusa terapêutica por pacientes e objeção de consciência na relação médico-paciente.",
+      "Woolley S. Children of Jehovah's Witnesses and adolescent Jehovah's Witnesses: what are their rights? Arch Dis Child. 2005;90(7):715-719. DOI: 10.1136/adc.2004.067843. PMID: 15970615. PMCID: PMC1720472"
+    ],
+    "itens": [
+      {
+        "id": "rtx-verificar-especifico-com-paciente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar diretamente com o paciente, sem intermediário, exatamente quais frações/hemoderivados ele aceita ou recusa (ex.: hemodiluição autóloga em circuito fechado, recuperador celular, frações de plasma) — 'recusar hemoderivados' não é uma categoria binária única",
+        "origem_secao": "Como conduzir a conversa"
+      },
+      {
+        "id": "rtx-documentar-consentimento-informado-positivo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Documentar a recusa como consentimento informado positivo — registro de que o paciente compreende o risco concreto de sangramento não corrigido por transfusão — e não apenas como um termo de recusa assinado",
+        "origem_secao": "Como conduzir a conversa"
+      },
+      {
+        "id": "rtx-apresentar-alternativas-antes",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Apresentar o que a equipe PODE oferecer (eritropoetina pré-operatória, hemodiluição normovolêmica, recuperador celular, antifibrinolíticos, técnica de menor sangramento esperado, hipotermia controlada) antes de discutir o que não pode",
+        "origem_secao": "Como conduzir a conversa"
+      },
+      {
+        "id": "rtx-protocolo-conservacao-sangue",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicar pacote sistemático de conservação de sangue, não decisões improvisadas no centro cirúrgico: eritropoetina pré-operatória, hemodiluição normovolêmica intraoperatória, antifibrinolíticos e desmopressina como adjuvantes de coagulação conforme prescrição médica, hipotermia controlada e otimização do tempo de circulação extracorpórea",
+        "origem_secao": "Conservação de sangue não é operar torcendo: é protocolo"
+      },
+      {
+        "id": "rtx-encaminhar-se-sem-programa",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar a um centro com programa estruturado de conservação de sangue se a instituição não tiver esse protocolo — negar o procedimento sem oferecer alternativa é a conduta que o STF (Temas 952 e 1069, julgamento de 25/09/2024) classificou como incompatível com o direito à saúde",
+        "origem_secao": "O que mudou no Brasil em 25/09/2024"
+      },
+      {
+        "id": "rtx-objecao-consciencia-comunicar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se o médico exercer objeção de consciência, comunicar ao diretor técnico do estabelecimento para garantir que outro profissional assuma o caso (Resolução CFM 2.232/2019) — a objeção não pode ser exercida em situação de urgência/emergência com dano previsível se não houver outro médico disponível",
+        "origem_secao": "O que diz a Resolução CFM 2.232/2019"
+      },
+      {
+        "id": "rtx-menor-de-idade-nao-aceitar-recusa",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se o paciente for menor de idade, NÃO aceitar a recusa dos pais como decisão válida e definitiva diante de risco à vida ou à saúde — acionar o mecanismo institucional de bioética/serviço social, ou a via judicial, sem aguardar a urgência se a cirurgia for eletiva com data programável",
+        "origem_secao": "Quando o paciente é menor de idade"
+      },
+      {
+        "id": "rtx-nao-presumir-maior-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não presumir que operar sem possibilidade de transfusão é, por definição, mais arriscado — o maior estudo pareado por status transfusional (não por status religioso) mostrou desfecho agudo comparável ou favorável ao grupo sem transfusão, condicionado a protocolo de conservação de sangue estruturado",
+        "origem_secao": "O que a evidência mostra: cirurgia cardíaca sem transfusão não é, por si só, mais perigosa"
+      }
+    ],
+    "revisao": "Checklist elaborado a partir de documento já revisado da biblioteca científica Corvia. Curadoria clínica sob responsabilidade do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798."
+  },
+  {
+    "slug": "avaliacao-e-conduta-na-suspeita-de-cardiomiopatia-alcoolica",
+    "condicao": "Suspeita de cardiomiopatia alcoólica diante de cardiomiopatia dilatada de etiologia não esclarecida",
+    "resumo": "Investigação ativa do consumo de álcool, orientação de abstinência completa e acompanhamento da reversibilidade da disfunção ventricular — reconhecer a etiologia alcoólica identifica um alvo terapêutico modificável que a cardiomiopatia dilatada idiopática não tem, mas o prognóstico melhor depende de manter a abstinência, não do rótulo etiológico isolado.",
+    "documento_origem": "cardiomiopatia-alcoolica-reversibilidade-com-abstinencia-e-diferenca-prognostica-para-a-forma-idiopatica",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Domínguez F, Adler E, García-Pavía P. Alcoholic cardiomyopathy: an update. Eur Heart J. 2024;45(28):2294-2305. PMID: 38848133",
+      "Nicolás JM, Fernández-Solà J, Estruch R, et al. The effect of controlled drinking in alcoholic cardiomyopathy. Ann Intern Med. 2002;136(3):192-200. PMID: 11827495",
+      "Fauchier L, Babuty D, Poret P, et al. Comparison of long-term outcome of alcoholic and idiopathic dilated cardiomyopathy. Eur Heart J. 2000;21(4):306-314. PMID: 10653678",
+      "Prazak P, Pfisterer M, Osswald S, Buser P, Burkart F. Differences of disease progression in congestive heart failure due to alcoholic as compared to idiopathic dilated cardiomyopathy. Eur Heart J. 1996;17(2):251-257. PMID: 8732379",
+      "La Vecchia LL, Bedogni F, Bozzola L, Bevilacqua P, Ometto R, Vincenzi M. Prediction of recovery after abstinence in alcoholic cardiomyopathy: role of hemodynamic and morphometric parameters. Clin Cardiol. 1996;19(1):45-50. PMID: 8903537",
+      "Masani F, Kato H, Sasagawa Y, et al. [An echocardiographic study of alcoholic cardiomyopathy after total abstinence]. J Cardiol. 1990;20(3):627-634. PMID: 2131353",
+      "Guillo P, Mansourati J, Maheu B, Etienne Y, Provost K, Simon O, Blanc JJ. Long-term prognosis in patients with alcoholic cardiomyopathy and severe heart failure after total abstinence. Am J Cardiol. 1997;79(9):1276-1278. PMID: 9164905"
+    ],
+    "itens": [
+      {
+        "id": "ca-investigar-consumo-ativamente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar consumo de álcool ativamente diante de qualquer cardiomiopatia dilatada de etiologia não esclarecida — exposição relevante é consumo superior a 80 g de etanol/dia mantido por pelo menos 5 anos (limiar mais usado na literatura), com risco de subnotificação da quantidade real pelo paciente",
+        "origem_secao": "Definição e limiar de exposição"
+      },
+      {
+        "id": "ca-orientar-abstinencia-completa",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar abstinência COMPLETA, não redução — o achado de 'consumo controlado comparável à abstinência' vem de um único estudo pequeno e não deve orientar a recomendação padrão",
+        "origem_secao": "Implicação prática"
+      },
+      {
+        "id": "ca-manter-tratamento-ic-padrao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Manter o tratamento farmacológico padrão da insuficiência cardíaca com fração de ejeção reduzida em paralelo à abstinência, conforme prescrição médica guiada por diretriz — a reversibilidade esperada não dispensa a terapia otimizada",
+        "origem_secao": "Implicação prática"
+      },
+      {
+        "id": "ca-reavaliar-funcao-precocemente",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar a função ventricular já nos primeiros meses de abstinência — estudos ecocardiográficos menores mostram normalização entre a 3ª e a 12ª semana em pacientes respondedores, com melhora descrita como 'muito significativa' aos 6 meses em outra coorte",
+        "origem_secao": "Recuperação em prazo mais curto (semanas a poucos meses)"
+      },
+      {
+        "id": "ca-nao-prometer-reversao-precoce",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não prometer reversão garantida na reavaliação precoce: dados de maior porte mostram melhora ainda em curso entre 1 e 4 anos, e cerca de metade dos pacientes abstinentes recupera função significativa no critério mais usado — a outra metade estabiliza ou piora",
+        "origem_secao": "Implicação prática"
+      },
+      {
+        "id": "ca-nao-afirmar-prognostico-automaticamente-melhor",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não afirmar ao paciente que a etiologia alcoólica tem prognóstico automaticamente melhor que a idiopática — a evidência é dividida entre estudos, e o fator que separa bom de mau prognóstico é a manutenção da abstinência, não o rótulo etiológico isolado",
+        "origem_secao": "Prognóstico comparado à cardiomiopatia dilatada idiopática"
+      },
+      {
+        "id": "ca-reforcar-vantagem-condicional-a-abstinencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reforçar ao paciente, de forma honesta, que a eventual vantagem prognóstica da forma alcoólica depende inteiramente de manter a abstinência: apenas 70% dos pacientes alcoólicos alcançaram abstinência apesar de orientação médica em uma das coortes, e consumo mantido foi preditor independente de morte cardíaca",
+        "origem_secao": "Implicação prática"
+      }
+    ],
+    "revisao": "Checklist elaborado a partir de documento já revisado da biblioteca científica Corvia. Curadoria clínica sob responsabilidade do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798."
   }
 ]
