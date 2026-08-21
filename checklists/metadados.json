@@ -18146,5 +18146,268 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "pocus-tamponamento-cardiaco-versus-pneumotorax-hipertensivo",
+    "condicao": "Diagnóstico diferencial à beira do leito por POCUS: tamponamento cardíaco versus pneumotórax hipertensivo",
+    "resumo": "Checklist de diagnóstico diferencial por ultrassom point-of-care (POCUS) no choque obstrutivo agudo entre tamponamento cardíaco e pneumotórax hipertensivo — duas condições com apresentação clínica sobreposta que exigem intervenção mecânica oposta e em sítio anatômico diferente.",
+    "documento_origem": "tamponamento-cardiaco-versus-pneumotorax-hipertensivo-diagnostico-diferencial-a-beira-do-leito-com-pocus",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Yoshida T, Yoshida T, Noma H, Nomura T, Suzuki A, Mihara T. Diagnostic accuracy of point-of-care ultrasound for shock: a systematic review and meta-analysis. Crit Care. 2023;27(1):200. DOI: 10.1186/s13054-023-04495-6. PMID: 37231510. PMCID: PMC10214599 — metanálise de 12 estudos e 1.132 pacientes em choque; sensibilidade e especificidade agrupadas do POCUS para a categoria choque obstrutivo (tamponamento + pneumotórax hipertensivo + TEP agrupados, sem discriminação individual no estudo)",
+      "Hanson MG, Chan B. The role of point-of-care ultrasound in the diagnosis of pericardial effusion. Ultrasound J. 2021;13:2. DOI: 10.1186/s13089-021-00205-x. PMID: 33538920. PMCID: PMC7862446 — coorte retrospectiva de 342 pacientes submetidos a pericardiocentese por derrame pericárdico clinicamente significativo (2002-2018, hospital universitário canadense); prevalência de colapso de câmaras ao ecocardiograma nessa população confirmada",
+      "Chan KK, Joo DA, McRae AD, Takwoingi Y, Premji ZA, Lang E, Wakai A. Chest ultrasonography versus supine chest radiography for diagnosis of pneumothorax in trauma patients in the emergency department. Cochrane Database Syst Rev. 2020;7(7):CD013031. DOI: 10.1002/14651858.CD013031.pub2. PMID: 32702777 — revisão sistemática Cochrane, 9 estudos com 410 pneumotórax traumáticos confirmados de 1.271 pacientes; acurácia comparada de ultrassom torácico versus radiografia de tórax em decúbito dorsal",
+      "Lichtenstein D, Mezière G, Biderman P, Gepner A. The \"lung point\": an ultrasound sign specific to pneumothorax. Intensive Care Med. 2000;26(10):1434-1440. DOI: 10.1007/s001340000627. PMID: 11126253 — estudo prospectivo original que descreveu o sinal, em 66 casos de pneumotórax comprovado (incluindo 8 radio-ocultos, diagnosticados por TC) e 233 hemitóraces-controle sem pneumotórax (17 deles com suspeita clínica); sensibilidade e especificidade do ponto pulmonar como sinal isolado"
+    ],
+    "itens": [
+      {
+        "id": "pocus-tp-reconhecer-choque-obstrutivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Choque obstrutivo agudo reconhecido pela tríade hipotensão + turgência jugular + taquicardia, na ausência de foco hemorrágico ou séptico evidente, como gatilho para POCUS imediato antes de qualquer outro exame",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-janela-cardiaca-primeiro",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Janela cardíaca subxifóidea (ou paraesternal) realizada em primeiro lugar, pesquisando derrame pericárdico, colapso diastólico precoce do VD e colapso sistólico do AD",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-integracao-tamponamento",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de tamponamento firmado pela integração de derrame + colapso de câmara + veia cava inferior pletórica sem colapso inspiratório + repercussão hemodinâmica — nunca por um achado isolado",
+        "origem_secao": "Como ler esses números"
+      },
+      {
+        "id": "pocus-tp-janela-pulmonar-se-negativa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se a janela cardíaca for negativa ou duvidosa, janela pulmonar avaliada nos espaços intercostais anteriores em modo B seguido de modo M, pesquisando deslizamento pleural, sinal do código de barras e linhas B",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-multiplos-espacos-intercostais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Deslizamento pleural pesquisado em múltiplos espaços intercostais, nunca concluído a partir de um único ponto examinado — pneumotórax loculado ou parcial pode poupar a janela isolada",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pocus-tp-especificidade-limitada-isolada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Ausência isolada de deslizamento pleural, sem instabilidade hemodinâmica associada, não tratada como pneumotórax hipertensivo confirmado — a decisão de descomprimir é clínica somada à ultrassonográfica, nunca só ultrassonográfica",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pocus-tp-agir-sem-esperar-radiografia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Descompressão torácica ou drenagem pericárdica indicada com base no achado positivo de POCUS no paciente hemodinamicamente instável, sem aguardar radiografia de tórax em decúbito dorsal ou exame confirmatório fora do leito",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-ausencia-ponto-pulmonar-nao-afasta",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Ausência do sinal do 'ponto pulmonar' não usada isoladamente para afastar pneumotórax hipertensivo — no colabamento completo esse sinal pode estar fisiologicamente ausente, mesmo sendo o achado mais específico quando presente",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "pocus-tp-reavaliacao-pos-intervencao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação com a mesma sonda realizada logo após a intervenção, confirmando resolução do colapso de câmara (tamponamento) ou reaparecimento do deslizamento pleural (pneumotórax) — ausência de melhora reconhecida como sinal de diagnóstico alternativo ou intervenção tecnicamente inadequada, nunca motivo apenas para esperar mais",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados do documento de origem já verificado nesta base, com a seção de origem registrada em cada item; o documento-fonte não contém marcação de VERIFICAÇÃO HUMANA NECESSÁRIA."
+  },
+  {
+    "slug": "manejo-da-falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo",
+    "condicao": "Manejo da falência aguda do ventrículo direito (cor pulmonale agudo)",
+    "resumo": "Checklist de manejo do ventrículo direito falido por aumento agudo de pós-carga (embolia pulmonar, SDRA ou hipertensão pulmonar agudizada), com ênfase nas condutas que funcionam na insuficiência do ventrículo esquerdo mas pioram o VD — reposição volêmica cautelosa, vasopressor de escolha e estratégia ventilatória protetora.",
+    "documento_origem": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diagnosis and treatment of right ventricular failure secondary to acutely increased right ventricular afterload (acute cor pulmonale): a clinical consensus statement of the Association for Acute CardioVascular Care (ACVC) of the European Society of Cardiology. Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312. DOI: 10.1093/ehjacc/zuad157. PMID: 38135288. Texto integral lido em 31/07/2026 via PMC10927027 — o registro do PubMed traz apenas o título, sem resumo"
+    ],
+    "itens": [
+      {
+        "id": "vdagudo-causa-identificada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Causa do aumento agudo de pós-carga do VD identificada e registrada: obstrução proximal (embolia pulmonar), obstrução distal (SDRA), agudização de hipertensão pulmonar preexistente, isquemia miocárdica, sepse, insuficiência tricúspide/regurgitação pulmonar, pós-operatório cardíaco ou implante de dispositivo de assistência ventricular esquerda",
+        "origem_secao": "Causas de aumento agudo da pos-carga de vd"
+      },
+      {
+        "id": "vdagudo-eco-parametros",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma realizado com registro dos parâmetros de disfunção de VD indicados pelo consenso: relação diâmetro diastólico final VD/VE, ventrículo esquerdo em 'D', TAPSE, onda S', variação de área fracional, strain longitudinal global e tempo de aceleração pulmonar, conforme disponibilidade local",
+        "origem_secao": "Diagnostico — o que procurar"
+      },
+      {
+        "id": "vdagudo-marcadores-laboratoriais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina, peptídeo natriurético (BNP ou NT-proBNP) e lactato sérico dosados para apoiar o diagnóstico e definir o estágio do choque",
+        "origem_secao": "Diagnostico — o que procurar"
+      },
+      {
+        "id": "vdagudo-volume-cauteloso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Expansão volêmica não realizada por reflexo diante de hipotensão — reposição feita de forma cautelosa e guiada por ecocardiograma ou monitorização de pressão, restrita a hipotensão sem sinais de pressões de enchimento já elevadas; diurético considerado quando há congestão venosa associada",
+        "origem_secao": "Volume: a armadilha principal"
+      },
+      {
+        "id": "vdagudo-noradrenalina-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Noradrenalina utilizada como vasopressor de primeira escolha na hipotensão associada à falência de VD, pelo efeito mínimo sobre a resistência vascular pulmonar frente a outras opções",
+        "origem_secao": "Vasopressor e inotropico"
+      },
+      {
+        "id": "vdagudo-inotropico-tempo-limitado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Quando inotrópico foi necessário por baixo débito (dobutamina, inibidor da fosfodiesterase III ou levosimendana), seu uso restrito ao período de baixo débito e interrompido assim que possível — não mantido de forma prolongada",
+        "origem_secao": "Vasopressor e inotropico / O que o consenso diz para EVITAR"
+      },
+      {
+        "id": "vdagudo-ventilacao-protetora-sdra",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em SDRA associada, ventilação protetora aplicada com volume corrente baixo, PEEP inicial reduzida, pressão de platô e driving pressure limitadas, e hipercapnia significativa evitada — reconhecendo que a estratégia habitual de otimizar oxigenação pode piorar o VD",
+        "origem_secao": "Ventilacao mecanica: o que piora o vd"
+      },
+      {
+        "id": "vdagudo-posicao-prona",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Posição prona considerada como manobra para descarregar o VD em SDRA grave, além do papel já estabelecido na oxigenação",
+        "origem_secao": "Ventilacao mecanica: o que piora o vd"
+      },
+      {
+        "id": "vdagudo-tep-alto-fluxo-evitar-intubacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em embolia pulmonar de alto risco, oxigenoterapia por cânula nasal de alto fluxo usada inicialmente e intubação evitada quando possível — reconhecido que a ventilação mecânica se associa a maior risco de mortalidade nesse cenário, e que muitos sedativos podem agravar a instabilidade hemodinâmica se a intubação for necessária",
+        "origem_secao": "Ventilacao mecanica: o que piora o vd"
+      },
+      {
+        "id": "vdagudo-vasodilatador-pulmonar-restrito",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Vasodilatador pulmonar específico não prescrito de rotina fora da hipertensão arterial pulmonar do grupo 1 da OMS, pela ausência de evidência que sustente uso rotineiro em outros contextos de falência aguda de VD",
+        "origem_secao": "O que o consenso diz para EVITAR"
+      },
+      {
+        "id": "vdagudo-balao-intraaortico-nao-indicado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Balão intra-aórtico não utilizado como suporte para falência isolada de VD, por não ser geralmente recomendado nesse cenário segundo o consenso",
+        "origem_secao": "O que o consenso diz para EVITAR"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados do documento de origem já verificado nesta base, com a seção de origem registrada em cada item; o documento-fonte não contém marcação de VERIFICAÇÃO HUMANA NECESSÁRIA. Itens de categoria 'medicacao' descrevem escolha e princípio de uso do fármaco, nunca dose numérica."
+  },
+  {
+    "slug": "escore-romeo-indicacao-de-ecocardiograma-na-sincope-do-idoso",
+    "condicao": "Indicação de ecocardiograma no idoso com síncope na emergência (escore ROMEO)",
+    "resumo": "Checklist para decidir, pelo escore ROMEO, se o paciente com síncope na emergência precisa de ecocardiograma transtorácico — ferramenta de exclusão de baixo risco, distinta dos escores de risco global de evento adverso grave (CSRS/EGSyS/SFSR) já cobertos nesta base.",
+    "documento_origem": "escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Probst MA, Gibson TA, Weiss RE, et al. Predictors of Clinically Significant Echocardiography Findings in Older Adults with Syncope: A Secondary Analysis. J Hosp Med. 2018;13(12):823-828. DOI: 10.12788/jhm.3082. PMID: 30255862 — números conferidos contra o abstract indexado no PubMed em 08/08/2026. ClinicalTrials.gov NCT01802398.",
+      "DeAngelis J, Vargas G, Weiss RE, et al. Predicting Echocardiography Findings in Adults Presenting to the Emergency Department With Syncope: An External Validation of the ROMEO Score. Acad Emerg Med. 2026;33(6):e70366. DOI: 10.1111/acem.70366. PMID: 42340085 — números conferidos contra o abstract indexado no PubMed em 08/08/2026. ClinicalTrials.gov NCT04533425."
+    ],
+    "itens": [
+      {
+        "id": "romeo-criterio-icc",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História de insuficiência cardíaca congestiva verificada e registrada como critério do escore ROMEO",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-dac",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História de doença arterial coronariana verificada e registrada como critério do escore ROMEO",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-ecg",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG obtido e classificado como normal ou anormal para pontuação do escore ROMEO",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-troponina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina T de alta sensibilidade dosada e comparada ao corte que pontua no escore (> 14 pg/mL)",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-ntprobnp",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "NT-proBNP dosado e comparado ao corte que pontua no escore (> 125 pg/mL)",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-calculo-pontuacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore ROMEO calculado somando os 5 critérios (0 a 5 pontos) antes de decidir sobre o pedido de ecocardiograma",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "romeo-zero-nao-pede-rotina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Com ROMEO = 0, ecocardiograma transtorácico não solicitado de rotina apenas pela síncope, na ausência de outra indicação clínica independente para o exame",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "romeo-positivo-nao-e-urgencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ROMEO ≥ 1 interpretado apenas como 'fora do grupo de exclusão segura', não como indicação automática de urgência — a maioria dos pacientes com ROMEO positivo não terá achado ecocardiográfico significativo",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "romeo-nao-confundir-com-csrs",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cortes de troponina e NT-proBNP do ROMEO não confundidos com os biomarcadores e cortes usados no CSRS — são exames e perguntas clínicas diferentes (achado ecocardiográfico versus risco de evento adverso grave em 30 dias)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "romeo-nao-substitui-risco-global",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão de internação ou observação mantida guiada pelo escore de risco global (CSRS, EGSyS ou SFSR), nunca pelo resultado do ROMEO — mesmo com ROMEO = 0, a definição de destino segue o escore de risco geral já usado nesta base",
+        "origem_secao": "Não é regra para decidir se o paciente deve ser internado"
+      },
+      {
+        "id": "romeo-limite-fonte-verificacao-humana",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que os dois artigos de origem do escore foram lidos apenas pelo abstract indexado no PubMed — curva de calibração completa, análise de subgrupo por faixa etária e tabela de coeficientes da regressão original não foram conferidas no texto integral e não devem ser presumidas a partir deste checklist; VERIFICAÇÃO HUMANA NECESSÁRIA antes de usar o escore como base isolada de decisão em caso limítrofe",
+        "origem_secao": "Verificação humana necessária"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados do documento de origem já verificado nesta base, com a seção de origem registrada em cada item. O documento-fonte traz uma seção explícita 'Verificação humana necessária' (os dois artigos foram lidos só pelo abstract indexado, não pelo texto integral) — essa marcação foi preservada como item obrigatório do próprio checklist (id romeo-limite-fonte-verificacao-humana), em vez de omitida."
   }
 ]
