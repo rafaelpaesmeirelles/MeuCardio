@@ -18146,5 +18146,162 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "criterios-de-internacao-e-encaminhamento-ao-heart-team-na-doenca-valvar",
+    "condicao": "Critérios de internação e encaminhamento ao Heart Team na doença valvar cardíaca",
+    "resumo": "Quando internar um paciente com valvopatia grave, quando encaminhar ao Heart Team/Centro de Valva Cardíaca em vez de decidir isoladamente, e o cuidado com NOAC em valvopatia associada a fibrilação atrial — derivado do documento combinado ESC/EACTS 2021→2025. Não substitui os checklists já publicados de decisão por lesão específica (TAVI/SAVR, TEER, estenose mitral, trombose de prótese): este cobre a porta de entrada — internar ou não, e para quem encaminhar — antes de qualquer decisão de modalidade de intervenção.",
+    "documento_origem": "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "2025 ESC/EACTS Guidelines for the management of valvular heart disease · ESC/EACTS · 2025 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/",
+      "2021 ESC/EACTS Valvular Heart Disease Guidelines: Key Points · ACC · 2021 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/08/28/20/58/2021-esc-eacts-guidelines-vhd-esc-2021"
+    ],
+    "itens": [
+      {
+        "id": "cihd-internacao-descompensacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se há critério de internação: descompensação hemodinâmica ou choque cardiogênico secundário a valvopatia grave, edema agudo de pulmão, síncope de esforço em estenose aórtica grave sintomática, endocardite infecciosa sobre prótese ou valva nativa com repercussão hemodinâmica, disfunção protética aguda (trombose ou deiscência) ou necessidade de intervenção percutânea/cirúrgica não eletiva",
+        "origem_secao": "Criterios internacao"
+      },
+      {
+        "id": "cihd-nao-internar-assintomatico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar que estenose aórtica grave assintomática, isoladamente, NÃO é critério de internação — é indicação de seguimento ambulatorial estruturado com Heart Team, salvo critério formal de intervenção precoce já presente",
+        "origem_secao": "Criterios internacao"
+      },
+      {
+        "id": "cihd-encaminhamento-heart-team",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar ao Heart Team (idealmente dentro de um Centro de Valva Cardíaca/Heart Valve Network) para decisão de modo de intervenção — nunca decidir isoladamente a escolha entre tratamento cirúrgico e transcateter",
+        "origem_secao": "Heart team centros especializados / Papel equipe multidisciplinar"
+      },
+      {
+        "id": "cihd-heart-team-fatores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar, para a discussão do Heart Team, os três eixos que orientam a decisão: características clínicas do paciente (idade, expectativa de vida, comorbidades, fragilidade, preferência informada), características anatômicas e riscos relativos entre as modalidades disponíveis",
+        "origem_secao": "Idosos tomada decisao / Estenose aortica selecao intervencao"
+      },
+      {
+        "id": "cihd-procedimento-alto-volume",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Considerar referenciar procedimentos complexos (TAVI, TEER, cirurgia valvar de alto risco) a centro de alto volume, dentro da rede regional de Heart Valve Networks disponível",
+        "origem_secao": "Papel equipe multidisciplinar"
+      },
+      {
+        "id": "cihd-noac-estenose-mitral",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que NOAC NÃO está sendo usado em estenose mitral clinicamente significativa nem em prótese valvar mecânica — contraindicação formal nesses dois cenários, independentemente da presença de fibrilação atrial",
+        "origem_secao": "Antitrombotico fa associada / Armadilhas clinicas"
+      },
+      {
+        "id": "cihd-noac-preferencia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Nos demais cenários com fibrilação atrial associada (estenose aórtica, regurgitação aórtica ou mitral, ou bioprótese aórtica após os primeiros 3 meses de implante) considerar NOAC preferencialmente a antagonista de vitamina K",
+        "origem_secao": "Antitrombotico fa associada"
+      },
+      {
+        "id": "cihd-avaliacao-anual-protese",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente com prótese valvar (mecânica ou biológica) está em avaliação clínica anual programada, com reavaliação imediata se surgirem novos sintomas cardíacos",
+        "origem_secao": "Escolha protese / Armadilhas clinicas"
+      },
+      {
+        "id": "cihd-populacoes-especiais",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Verificar se o paciente se enquadra em população especial com abordagem própria segundo a atualização 2025: câncer com valvopatia associada a radioterapia, choque cardiogênico/IC aguda com valvopatia, valvopatia múltipla ou mista, ou considerações específicas por sexo — e sinalizar isso ao Heart Team",
+        "origem_secao": "Populacoes especiais"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Cada item foi conferido linha a linha contra o documento combinado ESC/EACTS 2021→2025 já publicado neste tema, sem nenhum dado escrito de memória. Documento_origem ainda não usado por nenhum checklist deste tema nas rodadas anteriores (rounds 3 e 4). Não duplica os checklists já publicados de decisão por lesão específica (acompanhamento pós-TAVI/SAVR, pós-TEER, estenose mitral em duas entradas, trombose de prótese mecânica, início de varfarina em prótese mecânica): este cobre critérios de internação, encaminhamento ao Heart Team e a regra de NOAC em valvopatia com FA associada — porta de entrada anterior a qualquer decisão de modalidade."
+  },
+  {
+    "slug": "avaliacao-para-terapia-anti-inflamatoria-residual-em-prevencao-cardiovascular",
+    "condicao": "Avaliação de risco inflamatório residual e decisão sobre terapia anti-inflamatória direcionada em prevenção cardiovascular",
+    "resumo": "O que fazer e o que evitar diante da hipótese inflamatória da aterosclerose: canaquinumabe não entrou na prática por excesso de infecção fatal e ganho apenas em uma dose; metotrexato em dose baixa foi testado e é negativo; ziltivekimabe (via IL-6) só tem evidência de biomarcador — derivado do documento comparativo CANTOS/CIRT/RESCUE já publicado neste tema. Não substitui o checklist de escalonamento hipolipemiante nem o de rastreio de risco cardiovascular global: este cobre especificamente a decisão sobre terapia anti-inflamatória direcionada, distinta do controle lipídico.",
+    "documento_origem": "inflamacao-residual-como-alvo-cantos-cirt-e-o-que-o-rescue-ainda-nao-prova",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ridker PM, Everett BM, Thuren T, MacFadyen JG, Chang WH, et al; CANTOS Trial Group. Antiinflammatory Therapy with Canakinumab for Atherosclerotic Disease. N Engl J Med. 2017;377(12):1119-1131. DOI: 10.1056/NEJMoa1707914. PMID: 28845751 — NCT01327846, 10.061 pacientes. Financiamento: Novartis",
+      "Ridker PM, Everett BM, Pradhan A, MacFadyen JG, Solomon DH, et al; CIRT Investigators. Low-Dose Methotrexate for the Prevention of Atherosclerotic Events. N Engl J Med. 2019;380(8):752-762. DOI: 10.1056/NEJMoa1809798. PMID: 30415610 — NCT01594333, 4.786 pacientes. Financiamento: National Heart, Lung, and Blood Institute",
+      "Ridker PM, Devalaraja M, Baeres FMM, Engelmann MDM, Hovingh GK, et al. IL-6 inhibition with ziltivekimab in patients at high atherosclerotic risk (RESCUE): a double-blind, randomised, placebo-controlled, phase 2 trial. Lancet. 2021;397(10289):2060-2069. DOI: 10.1016/S0140-6736(21)00520-1. PMID: 34015342 — NCT03926117, 264 participantes, FASE 2, com desfecho de BIOMARCADOR. Financiamento: Novo Nordisk"
+    ],
+    "itens": [
+      {
+        "id": "airc-dosar-pcr-us",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosar proteína C-reativa de alta sensibilidade (PCR-us) antes de considerar qualquer terapia anti-inflamatória direcionada, confirmando inflamação residual (PCR-us ≥ 2 mg/L foi o critério de inclusão do único ensaio positivo em desfecho cardiovascular)",
+        "origem_secao": "CANTOS (2017) — a prova de conceito"
+      },
+      {
+        "id": "airc-confirmar-doenca-estabelecida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente tem doença aterosclerótica estabelecida (por exemplo infarto prévio) — população em que a hipótese inflamatória foi testada e demonstrada; não extrapolar para prevenção primária sem evento prévio",
+        "origem_secao": "CANTOS (2017) — a prova de conceito"
+      },
+      {
+        "id": "airc-nao-canaquinumabe",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não iniciar canaquinumabe fora de protocolo de pesquisa — mesmo com benefício cardiovascular demonstrado em uma das três doses testadas, o fármaco associou-se a maior incidência de infecção fatal e não reduziu mortalidade total, e por isso não entrou na prática clínica",
+        "origem_secao": "CANTOS (2017) — a prova de conceito / conclusão"
+      },
+      {
+        "id": "airc-nao-metotrexato",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não prescrever metotrexato em dose baixa com finalidade de proteção cardiovascular — o ensaio CIRT foi negativo para redução de eventos, o fármaco não reduziu os marcadores inflamatórios que se propunha a reduzir, e associou-se a elevação de enzimas hepáticas, redução de leucócitos/hematócrito e maior incidência de câncer de pele não basocelular",
+        "origem_secao": "CIRT (2019) — a mesma hipotese, outra via, resultado negativo"
+      },
+      {
+        "id": "airc-nao-ziltivekimabe",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reconhecer que o ziltivekimabe (via IL-6, RESCUE) tem apenas evidência de redução de biomarcadores em ensaio de fase 2 (264 participantes) — não há demonstração de redução de evento cardiovascular, e o fármaco não deve ser prescrito como terapia estabelecida fora de ensaio clínico",
+        "origem_secao": "RESCUE (2021) — a via da IL-6, e o que ele NAO prova"
+      },
+      {
+        "id": "airc-considerar-colchicina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se anti-inflamatório com evidência de desfecho cardiovascular for indicado e não houver contraindicação, considerar colchicina em baixa dose — a única opção com evidência de desfecho disponível na prática hoje, conforme o checklist e o documento dedicados já publicados neste tema, respeitando a ressalva do resultado neutro do CLEAR SYNERGY",
+        "origem_secao": "O que o trio estabelece — Na prática hoje"
+      },
+      {
+        "id": "airc-nao-pcr-alvo-isolado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar que reduzir a PCR-us isoladamente, fora de um ensaio clínico dirigido, não é em si um alvo terapêutico validado — o que se demonstrou foi que reduzi-la por uma via farmacológica específica e comprovada reduziu eventos, não que qualquer redução de PCR sirva",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "airc-encaminhar-ensaio",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Para paciente elegível e interessado em terapias anti-inflamatórias direcionadas ainda sem evidência de desfecho estabelecida (por exemplo via IL-6), encaminhar para participação em ensaio clínico em andamento em vez de prescrever a terapia fora de bula",
+        "origem_secao": "RESCUE (2021) — a via da IL-6, e o que ele NAO prova"
+      },
+      {
+        "id": "airc-registrar-populacoes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ao interpretar os três ensaios, registrar que as populações não são equivalentes entre si (CANTOS exigiu PCR-us elevada na inclusão, CIRT exigiu diabetes ou síndrome metabólica sem exigir PCR elevada, RESCUE incluiu apenas doença renal crônica moderada a grave) — não comparar os resultados como se fossem do mesmo grupo de pacientes",
+        "origem_secao": "Limites"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Cada item foi conferido contra o texto integral do documento comparativo CANTOS/CIRT/RESCUE já publicado neste tema, sem nenhum dado escrito de memória e sem citar dose numérica em nenhum item de categoria 'medicacao'. Documento_origem ainda não usado por nenhum checklist deste tema nas rodadas anteriores. Não duplica o checklist de escalonamento hipolipemiante em prevenção secundária (que cobre estatina/ezetimiba/PCSK9/ácido bempedoico) nem o de avaliação de risco cardiovascular global em prevenção primária (que cobre SCORE2, Lp(a), ApoB e escore de cálcio): este cobre exclusivamente a decisão sobre terapia anti-inflamatória direcionada, eixo terapêutico distinto do controle lipídico."
   }
 ]
