@@ -20168,5 +20168,179 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-de-cied-durante-radioterapia-oncologica",
+    "condicao": "Manejo de marca-passo, CDI ou TRC (CIED) durante curso de radioterapia oncológica",
+    "resumo": "Estratificação de risco pela AAPM TG-203 antes de iniciar radioterapia em portador de dispositivo cardíaco eletrônico implantável, escolha de energia de feixe e frequência de verificação do dispositivo durante o tratamento — mecanismo de dano por radiação ionizante cumulativa e produção de nêutrons secundários, fisicamente distinto do risco de ressonância magnética ou de bisturi elétrico intraoperatório.",
+    "documento_origem": "manejo-de-marcapasso-e-cdi-durante-radioterapia-oncologica",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Chan MF, Young C, Gelblum D, et al. A Review and Analysis of Managing Commonly Seen Implanted Devices for Patients Undergoing Radiation Therapy. Adv Radiat Oncol. 2021;6(4):100732. DOI: 10.1016/j.adro.2021.100732. PMCID: PMC8361059. PMID: 34409216",
+      "Miften M, Mihailidis D, Kry SF, et al. Management of radiotherapy patients with implanted cardiac pacemakers and defibrillators: A Report of the AAPM TG-203. Med Phys. 2019;46(12):e757-e788. DOI: 10.1002/mp.13838. PMID: 31571229",
+      "Indik JH, Gimbel JR, Abe H, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708",
+      "Grant JD, Jensen GL, Tang C, et al. Radiotherapy-Induced Malfunction in Contemporary Cardiovascular Implantable Electronic Devices: Clinical Incidence and Predictors. JAMA Oncol. 2015;1(5):624-632. DOI: 10.1001/jamaoncol.2015.1787. PMID: 26181143",
+      "Gomez DR, Poenisch F, Pinnix CC, et al. Malfunctions of implantable cardiac devices in patients receiving proton beam therapy: incidence and predictors. Int J Radiat Oncol Biol Phys. 2013;87(3):570-575. DOI: 10.1016/j.ijrobp.2013.07.010. PMCID: PMC3931127. PMID: 24074931",
+      "Gelblum DY, Amols H. Implanted cardiac defibrillator care in radiation oncology patient population. Int J Radiat Oncol Biol Phys. 2009;73(5):1525-1531. DOI: 10.1016/j.ijrobp.2008.06.1903. PMID: 18977096"
+    ],
+    "itens": [
+      {
+        "id": "manejocietrt-contato-cardiologista-pre-inicio",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Contato com o cardiologista/eletrofisiologista responsável antes de iniciar a radioterapia, para confirmar interrogação recente do dispositivo e o grau de dependência do paciente à estimulação (pacing-dependente ou não).",
+        "origem_secao": "Manejo prático, resumido"
+      },
+      {
+        "id": "manejocietrt-estratificacao-tg203",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente estratificado em baixo, médio ou alto risco conforme a AAPM TG-203, combinando três eixos: dose cumulativa estimada ao CIED (<2 Gy, 2-5 Gy, ou >5 Gy), dependência de estimulação, e presença ou não de feixe produtor de nêutrons secundários (≥10 MV).",
+        "origem_secao": "Estratificação de risco — AAPM TG-203"
+      },
+      {
+        "id": "manejocietrt-preferir-feixe-sem-neutrons",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Preferir, sempre que a técnica permitir, feixes que não produzem nêutrons (elétrons, Gamma Knife ou fóton de 6 MV); reservar feixe de alta energia (≥10 MV) para quando for clinicamente indispensável — na série retrospectiva de referência (Grant et al., JAMA Oncol 2015), todos os single-event upsets ocorreram em cursos com feixe produtor de nêutrons (15 ou 18 MV), e zero eventos entre os 178 cursos sem produção de nêutrons.",
+        "origem_secao": "Evidência real de incidência — o estudo de Grant et al., JAMA Oncol 2015"
+      },
+      {
+        "id": "manejocietrt-planejamento-campo-evita-gerador",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Planejamento de campo de radioterapia buscando evitar incidência direta sobre o gerador sempre que possível; realocação cirúrgica do gerador considerada dispensável quando a dose cumulativa estimada for menor que 5 Gy.",
+        "origem_secao": "Estratificação de risco — AAPM TG-203"
+      },
+      {
+        "id": "manejocietrt-verificacao-periodica-por-risco",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Frequência de verificação do dispositivo durante o curso de radioterapia definida pela categoria de risco — semanal em paciente de baixo ou médio risco; em até 24 horas após cada fração em paciente de alto risco.",
+        "origem_secao": "Estratificação de risco — AAPM TG-203"
+      },
+      {
+        "id": "manejocietrt-alerta-regiao-abdome-pelve",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Atenção redobrada quando o campo de tratamento envolve abdome ou pelve — fator de risco independente para single-event upset na série de Grant et al. (HR 5,2; IC95% 1,2-22,6; p=0,03).",
+        "origem_secao": "Evidência real de incidência — o estudo de Grant et al., JAMA Oncol 2015"
+      },
+      {
+        "id": "manejocietrt-nao-usar-dose-isolada",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Dose incidente no CIED não usada isoladamente como preditor de mau funcionamento — na série de referência, a dose não se correlacionou com mau funcionamento em observações até 5,4 Gy; é a energia do feixe (produção de nêutrons), não a dose absorvida, o determinante principal do risco de reset agudo.",
+        "origem_secao": "Evidência real de incidência — o estudo de Grant et al., JAMA Oncol 2015"
+      },
+      {
+        "id": "manejocietrt-cautela-protons",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em radioterapia de prótons, tratar como cenário de cautela adicional, não como equivalente ao fóton convencional — o sistema de varredura por pencil beam gera campo magnético que pode causar mau funcionamento do CIED independentemente da dose; evitar prótons em paciente pacing-dependente quando houver alternativa, com vigilância redobrada em tratamento torácico (incidência de reset em torno de 20% entre pacientes torácicos na série de Gomez et al., zero fora desse subgrupo).",
+        "origem_secao": "Radioterapia com prótons — cautela adicional"
+      },
+      {
+        "id": "manejocietrt-equipamento-emergencia-disponivel",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Disponibilidade de equipamento de emergência e magneto durante as sessões de radioterapia em paciente de maior risco, com coordenação multidisciplinar entre radioterapeuta, físico médico e cardiologista.",
+        "origem_secao": "Manejo prático, resumido"
+      },
+      {
+        "id": "manejocietrt-sintomas-clinicos-pos-reset",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Investigar prontamente hipotensão, bradicardia, sensação torácica anormal ou piora de insuficiência cardíaca em paciente que apresente reset de parâmetro do dispositivo durante o tratamento — na série de Grant et al., seis pacientes com reset de parâmetro desenvolveram sintoma clínico, incluindo um caso de descompensação de insuficiência cardíaca congestiva.",
+        "origem_secao": "Evidência real de incidência — o estudo de Grant et al., JAMA Oncol 2015"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
+  },
+  {
+    "slug": "transicao-de-cuidado-cardiopatia-reumatica-na-gestacao-ao-puerperio",
+    "condicao": "Cuidado da gestante com cardiopatia reumática — da transição de cuidado e planejamento pré-concepcional ao puerpério",
+    "resumo": "Planejamento pré-concepcional, estratificação do risco cardíaco na gestação pela classificação mWHO adaptada, manejo de anticoagulação em prótese valvar mecânica e cuidado periparto/puerperal na cardiopatia reumática, conforme o Capítulo 12 do guideline RHDAustralia 2020.",
+    "documento_origem": "cardiopatia-reumatica-na-gestacao-transicao-de-cuidado-ao-puerperio-rhdaustralia-2020",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Capítulo 12 (Women and girls with RHD). Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309",
+      "Elkins E, Gosden J, Ascione G, et al. Global disparities in the detection and management of rheumatic heart disease in pregnancy across endemic settings. Front Surg. 2026;13:1838220. DOI: 10.3389/fsurg.2026.1838220. PMID: 42529508"
+    ],
+    "itens": [
+      {
+        "id": "rfgestacao-transicao-adolescencia",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Início da transição do cuidado cardíaco pediátrico para o adulto já na adolescência, envolvendo simultaneamente cardiologia pediátrica e adulta, planejamento familiar e saúde primária junto com a adolescente e a família — processo contínuo, não evento único.",
+        "origem_secao": "Transição de cuidado e planejamento reprodutivo"
+      },
+      {
+        "id": "rfgestacao-contracepcao-sem-estrogenio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Promoção ativa de contracepção eficaz para toda adolescente ou mulher com cardiopatia reumática, evitando contraceptivo com estrogênio pelo risco trombótico elevado — DIU e implante de progestágeno isolado permanecem opções encorajadas.",
+        "origem_secao": "Transição de cuidado e planejamento reprodutivo"
+      },
+      {
+        "id": "rfgestacao-avaliacao-pre-concepcional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação pré-concepcional completa com ecocardiograma, revisão de comorbidades, status vacinal, imunidade a rubéola/varicela e rastreamento cervical, realizada antes de tentar engravidar.",
+        "origem_secao": "Cuidado pré-concepcional: a janela que evita a descompensação na gestação"
+      },
+      {
+        "id": "rfgestacao-trocar-varfarina-ieca-antes-concepcao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Revisão das medicações em uso antes da concepção, com troca de varfarina e de inibidor da ECA/BRA já ANTES de engravidar — nunca aguardar a confirmação da gravidez para suspendê-los.",
+        "origem_secao": "Cuidado pré-concepcional: a janela que evita a descompensação na gestação"
+      },
+      {
+        "id": "rfgestacao-intervencao-valvar-pre-gestacional",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Discussão de intervenção valvar pré-gestacional (troca por prótese mecânica ou biológica, reparo, ou valvuloplastia mitral por balão) no contexto do desejo reprodutivo futuro — formalmente indicada em estenose mitral grave mesmo assintomática, estenose mitral grave sintomática, estenose aórtica grave sintomática, ou qualquer doença valvar grave sintomática; considerar valvuloplastia mitral por balão também na estenose mitral moderada-grave (área <1,5 cm²) mesmo com sintoma leve ou ausente.",
+        "origem_secao": "Cuidado pré-concepcional: a janela que evita a descompensação na gestação"
+      },
+      {
+        "id": "rfgestacao-estratificacao-mwho",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estratificação do risco cardíaco da gestação pela classificação modificada da OMS (mWHO) adaptada, em quatro níveis, do risco de evento cardíaco materno de 2,5-5% (Nível I) a 40-100% (Nível IV) — reconhecendo no Nível IV, com gestação contraindicada, a estenose mitral grave sintomática, a estenose aórtica grave sintomática, a disfunção grave de ventrículo esquerdo (FE<30%) e a hipertensão pulmonar associada a valvopatia mitral ou aórtica.",
+        "origem_secao": "Durante a gestação: estratificação de risco e cuidado multidisciplinar"
+      },
+      {
+        "id": "rfgestacao-manter-profilaxia-secundaria",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Manutenção da profilaxia antibiótica secundária durante toda a gestação e a amamentação, onde já prescrita — segura para mãe e bebê, recomendação de maior força do capítulo.",
+        "origem_secao": "Durante a gestação: estratificação de risco e cuidado multidisciplinar"
+      },
+      {
+        "id": "rfgestacao-anticoagulacao-protese-mecanica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em prótese valvar mecânica, discussão do regime de anticoagulação já no início do primeiro trimestre, idealmente antes da concepção; qualquer um dos três esquemas aceitáveis — heparina de baixo peso molecular durante toda a gestação, heparina de baixo peso molecular no 1º trimestre com troca para varfarina no 2º e 3º trimestres e retorno à heparina peri-parto, ou varfarina durante toda a gestação — é decisão compartilhada e individualizada, sem que nenhum deles seja padrão-ouro sobre os outros; o maior risco de complicação tromboembólica está ligado à má adesão ou à transição entre esquemas, não ao esquema escolhido em si.",
+        "origem_secao": "Anticoagulação em prótese mecânica — o ponto de maior risco"
+      },
+      {
+        "id": "rfgestacao-parto-vaginal-preferido",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Preferência por parto vaginal, salvo contraindicação obstétrica e/ou cardiovascular, individualizando a monitorização intraparto pela gravidade da valvopatia; não indicar profilaxia antibiótica de rotina para endocardite além do protocolo obstétrico padrão local, e antecipar analgesia peridural precoce quando taquicardia ou hipertensão do trabalho de parto puderem ser mal toleradas pela doença valvar materna.",
+        "origem_secao": "Trabalho de parto, parto e puerpério"
+      },
+      {
+        "id": "rfgestacao-seguimento-puerperio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "No pós-parto, manutenção do protocolo de anticoagulação e investigação pronta de dispneia ou tosse de início recente; no pós-alta, priorização de revisão cardíaca de acompanhamento com comunicação clínica formal à atenção primária e alto grau de suspeição mantido para dispneia nova.",
+        "origem_secao": "Trabalho de parto, parto e puerpério"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
   }
 ]
