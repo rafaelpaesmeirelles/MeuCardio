@@ -8424,5 +8424,227 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "controle-de-ritmo-vs-frequencia-decisao-de-estrategia-na-fibrilacao-atrial",
+    "condicao": "Decisão de estratégia — controle de ritmo precoce versus controle de frequência na fibrilação atrial",
+    "resumo": "Quando controle de ritmo precoce reduz eventos cardiovasculares (EAST-AFNET 4), quando controle de frequência segue sendo estratégia razoável e não inferior em sobrevida (AFFIRM), e quando ablação por cateter reduz mortalidade especificamente na FA com IC-FEr (CASTLE-AF) — a diferença central entre os ensaios é a janela temporal em que o controle de ritmo é iniciado, não uma reversão genérica de achado.",
+    "documento_origem": "controle-de-ritmo-vs-frequencia-na-fibrilacao-atrial-affirm-east-afnet-4-e-castle-af",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Wyse DG, Waldo AL, DiMarco JP, et al; AFFIRM Investigators. A comparison of rate control and rhythm control in patients with atrial fibrillation (AFFIRM). N Engl J Med. 2002;347(23):1825-1833. DOI: 10.1056/NEJMoa021328. PMID: 12466506",
+      "Kirchhof P, Camm AJ, Goette A, et al; EAST-AFNET 4 Trial Investigators. Early rhythm-control therapy in patients with atrial fibrillation (EAST-AFNET 4). N Engl J Med. 2020;383(14):1305-1316. DOI: 10.1056/NEJMoa2019422. PMID: 32865375",
+      "Marrouche NF, Brachmann J, Andresen D, et al; CASTLE-AF Investigators. Catheter ablation for atrial fibrillation with heart failure (CASTLE-AF). N Engl J Med. 2018;378(5):417-427. DOI: 10.1056/NEJMoa1707855. PMID: 29385358"
+    ],
+    "itens": [
+      {
+        "id": "rvf-tempo-desde-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Tempo desde o diagnóstico de fibrilação atrial registrado — o controle de ritmo precoce (EAST-AFNET 4) testou pacientes com FA recente, diagnóstico mediano de 36 dias antes da randomização e critério de inclusão de até 1 ano",
+        "origem_secao": "East afnet 4 2020 o que mudou"
+      },
+      {
+        "id": "rvf-condicao-cardiovascular-associada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença de condição cardiovascular associada conferida — critério de inclusão do EAST-AFNET 4 junto com FA recente, para considerar controle de ritmo precoce",
+        "origem_secao": "East afnet 4 2020 o que mudou"
+      },
+      {
+        "id": "rvf-nao-esperar-sintoma-refratario",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em FA recente com condição cardiovascular associada: controle de ritmo precoce (antiarrítmico ou ablação) considerado sem aguardar sintoma refratário ao controle de frequência",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "rvf-triagem-icfer-cdi",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Rastreados FEVE ≤35%, classe funcional NYHA II-IV e presença de cardiodesfibrilador implantado — população em que a ablação por cateter reduziu mortalidade por qualquer causa (HR 0,53) e hospitalização por piora de IC (HR 0,56) de forma expressiva (CASTLE-AF)",
+        "origem_secao": "Castle af 2018 ablacao especificamente na ic-fer"
+      },
+      {
+        "id": "rvf-ablacao-refratariedade-antiarritmico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se FA com IC-FEr candidata a ablação: confirmada ausência de resposta a antiarrítmico, efeito colateral inaceitável, ou recusa a usá-lo — critério de seleção da população do CASTLE-AF",
+        "origem_secao": "Castle af 2018 ablacao especificamente na ic-fer"
+      },
+      {
+        "id": "rvf-fa-longa-data-sem-icfer",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em FA de longa data sem IC-FEr: controle de frequência mantido como estratégia razoável e não inferior em sobrevida (AFFIRM), sobretudo se controle de ritmo exigir múltiplos fármacos ou procedimentos com risco próprio",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "rvf-anticoagulacao-mantida-independente",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação mantida independentemente da estratégia de ritmo ou frequência escolhida, sem suspensão ou relaxamento após controle de ritmo bem-sucedido — nenhum dos três ensaios sustenta essa conduta",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "rvf-seguimento-eventos-adversos-terapia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Seguimento programado para eventos adversos graves relacionados à terapia de controle de ritmo — mais frequentes com ritmo precoce no EAST-AFNET 4 (4,9% vs. 1,4%), embora sem diferença no desfecho de segurança composto (morte, AVC ou evento adverso grave)",
+        "origem_secao": "East afnet 4 2020 o que mudou"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "oclusao-do-apendice-atrial-esquerdo-elegibilidade-percutanea-e-cirurgica",
+    "condicao": "Elegibilidade para oclusão do apêndice atrial esquerdo — percutânea e cirúrgica concomitante",
+    "resumo": "Os dois critérios exigidos juntos para a indicação percutânea (Classe IIa, Nível B) e a Classe I, Nível B para exclusão cirúrgica concomitante em quem já vai a cirurgia cardíaca por outro motivo — conforme o Quadro 12 da Diretriz Brasileira de Fibrilação Atrial 2025, apoiada em PROTECT AF e PREVAIL.",
+    "documento_origem": "oclusao-do-apendice-atrial-esquerdo-protect-af-e-prevail",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Holmes DR, Reddy VY, Turi ZG, et al; PROTECT AF Investigators. Percutaneous closure of the left atrial appendage versus warfarin therapy for prevention of stroke in patients with atrial fibrillation (PROTECT AF). Lancet. 2009;374(9689):534-542. DOI: 10.1016/S0140-6736(09)61343-X. PMID: 19683639",
+      "Holmes DR Jr, Kar S, Price MJ, et al. Prospective randomized evaluation of the Watchman left atrial appendage closure device in patients with atrial fibrillation versus long-term warfarin therapy (PREVAIL). J Am Coll Cardiol. 2014;64(1):1-12. DOI: 10.1016/j.jacc.2014.04.029. PMID: 24998121",
+      "Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618 — seção 6.6, Quadro 12"
+    ],
+    "itens": [
+      {
+        "id": "laa-cirurgica-classe-i",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente com FA agendado para cirurgia cardíaca por outra indicação: exclusão cirúrgica do apêndice atrial esquerdo discutida antes do procedimento — deve ser considerada, Classe I, Nível B (Diretriz Brasileira de FA 2025, Quadro 12), sustentada pelo LAAOS III",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laa-percutanea-criterio-risco-tromboembolico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Para fechamento/exclusão percutânea do apêndice (Classe IIa, Nível B): confirmado o critério de FA de alto risco tromboembólico",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laa-percutanea-criterio-contraindicacao-anticoagulante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Para fechamento/exclusão percutânea do apêndice: confirmado o segundo critério — contraindicação absoluta OU falha da terapia anticoagulante — os dois critérios exigidos juntos, não um isoladamente",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laa-nao-indicar-por-criterio-isolado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Conferido que a indicação de oclusão percutânea não está sendo baseada em apenas um dos dois critérios isoladamente — um critério isolado não basta",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "laa-cirurgica-adjunta-nao-substitui",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se exclusão cirúrgica concomitante: confirmado que ela é adjunta à anticoagulação, não substituta dela — a diretriz registra que a oclusão cirúrgica associada a anticoagulação teve menos AVC/embolia sistêmica que anticoagulação isolada",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laa-regime-pos-percutanea-endotelizacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Regime antitrombótico pós-procedimento percutâneo definido para o período de endotelização (30-90 dias) — na prática, a maioria usa AVK ou ACOD isolados nesse período, e só cerca de 12% segue o regime aprovado pela FDA",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laa-fatores-risco-trombose-dispositivo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fatores associados a maior risco de trombose de dispositivo avaliados: estado de hipercoagulabilidade, efusão pericárdica, disfunção renal, profundidade de implante >10mm e FA não paroxística",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laa-seguimento-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação programada da estratégia antitrombótica pós-procedimento, ciente de que a adesão ao regime aprovado é baixa na prática real (~12%) e de que trombose de dispositivo ocorre em cerca de 3,8% dos casos em metanálise de mais de 10.000 pacientes",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fibrilacao-atrial",
+    "condicao": "Interrupção e retomada do anticoagulante para procedimento eletivo em paciente com fibrilação atrial",
+    "resumo": "Sem ponte com heparina na varfarina — dispensá-la foi não inferior para tromboembolismo e reduziu o sangramento maior (BRIDGE) — e protocolo de 1 a 2 dias de omissão do DOAC conforme o risco de sangramento do procedimento, sem dosar coagulação (PAUSE). Não se aplica a valva mecânica, AVC recente ou cirurgia de urgência.",
+    "documento_origem": "interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fa-bridge-e-pause",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Douketis JD, Spyropoulos AC, Kaatz S, Becker RC, Caprini JA, et al; BRIDGE Investigators. Perioperative Bridging Anticoagulation in Patients with Atrial Fibrillation. N Engl J Med. 2015;373(9):823-833. DOI: 10.1056/NEJMoa1501035. PMID: 26095867 — NCT00786474, randomizado, duplo-cego, controlado por placebo, 1.884 pacientes. Financiamento: National Heart, Lung, and Blood Institute (NIH)",
+      "Douketis JD, Spyropoulos AC, Duncan J, Carrier M, Le Gal G, et al. Perioperative Management of Patients With Atrial Fibrillation Receiving a Direct Oral Anticoagulant. JAMA Intern Med. 2019;179(11):1469-1478. DOI: 10.1001/jamainternmed.2019.2431. PMID: 31380891 — estudo de coorte PAUSE, 23 centros no Canadá, EUA e Europa, 3.007 pacientes"
+    ],
+    "itens": [
+      {
+        "id": "periop-elegibilidade-eletivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que se trata de procedimento ELETIVO — nada deste protocolo se aplica à cirurgia de urgência, cenário em que a discussão é de reversão do anticoagulante, não de interrupção programada",
+        "origem_secao": "Limites que precisam acompanhar"
+      },
+      {
+        "id": "periop-excluir-valva-mecanica-avc-recente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluídos desta estratégia sem ponte: prótese valvar mecânica, estenose mitral reumática e AVC/AIT prévio recente — populações de risco tromboembólico muito alto, não testadas pelo BRIDGE por desenho e por prática",
+        "origem_secao": "Limites que precisam acompanhar"
+      },
+      {
+        "id": "periop-varfarina-sem-ponte",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em uso de varfarina: ponte com heparina de baixo peso molecular NÃO prescrita — dispensar a ponte foi não inferior para tromboembolismo arterial (0,4% vs. 0,3% com ponte) e reduziu o sangramento maior (1,3% vs. 3,2% com ponte; RR 0,41) no BRIDGE",
+        "origem_secao": "BRIDGE (2015) — a ponte com heparina na varfarina"
+      },
+      {
+        "id": "periop-varfarina-suspensao-retomada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Varfarina suspensa 5 dias antes do procedimento e reiniciada em até 24h após, conforme o protocolo do BRIDGE",
+        "origem_secao": "BRIDGE (2015) — a ponte com heparina na varfarina"
+      },
+      {
+        "id": "periop-doac-classificacao-risco-sangramento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Procedimento classificado como de BAIXO ou de ALTO risco de sangramento — é essa variável, mais do que o CHA₂DS₂-VASc, que define o intervalo de interrupção do DOAC na estratégia do PAUSE",
+        "origem_secao": "PAUSE (2019) — o protocolo de interrupcao dos DOAC"
+      },
+      {
+        "id": "periop-doac-intervalo-suspensao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "DOAC (apixabana, dabigatrana ou rivaroxabana) omitido por 1 dia antes do procedimento de baixo risco de sangramento, ou por 2 dias antes do de alto risco — sem ponte com heparina e sem teste de função de coagulação",
+        "origem_secao": "PAUSE (2019) — o protocolo de interrupcao dos DOAC"
+      },
+      {
+        "id": "periop-doac-funcao-renal-dabigatrana",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Depuração de creatinina considerada no cálculo do intervalo de interrupção, especialmente relevante para a dabigatrana, de eliminação predominantemente renal",
+        "origem_secao": "A sintese pratica"
+      },
+      {
+        "id": "periop-doac-retomada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "DOAC reiniciado 1 dia depois do procedimento de baixo risco, ou 2 a 3 dias depois do de alto risco — interromper sem plano de retomada é o outro lado do mesmo erro",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "periop-nao-solicitar-tp-inr-doac",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "TP/INR ou anti-Xa NÃO solicitados como pré-requisito para liberar o procedimento de quem usa DOAC — a estratégia validada no PAUSE dispensa esse teste",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
