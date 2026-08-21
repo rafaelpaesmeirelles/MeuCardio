@@ -18146,5 +18146,227 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "cuidado-cardiovascular-pos-parto-primeiro-ano-acc-2026",
+    "condicao": "Cuidado cardiovascular pós-parto, do hospital ao primeiro ano (ACC 2026)",
+    "resumo": "O que precisa estar definido antes da alta obstétrica e ao longo do primeiro ano pós-parto para não perder o vazio assistencial entre a alta e o reconhecimento tardio de doença cardiovascular — mais da metade das mortes relacionadas à gestação ocorre depois do nascimento, e as primeiras 2 semanas concentram o maior risco.",
+    "documento_origem": "acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lindley KJ, Bello NA, Berlacher KL, Hameed AB, Lane AD, Mahmoud Z, Malhamé I, Miller EC, Parikh P, Youmans A. Optimization of Postpartum Care for Patients With and at Risk for Premature and Long-Term Cardiovascular Disease: 2026 ACC Expert Consensus Decision Pathway. J Am Coll Cardiol. Published online May 22, 2026. DOI: 10.1016/j.jacc.2025.11.001. PMID: 42171544."
+    ],
+    "itens": [
+      {
+        "id": "acc26pp-plano-alta-hospitalar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes da alta da hospitalização do parto, respondidas as perguntas operacionais: cardiopatia/fator de risco que exige monitorização mais próxima, sintomas que tornam a alta insegura, plano de pressão arterial e sintomas após a saída, e revisão de medicamentos diante da lactação e das mudanças hemodinâmicas do puerpério",
+        "origem_secao": "A hospitalização do parto já faz parte do plano pós-parto"
+      },
+      {
+        "id": "acc26pp-red-flags-triados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sintoma potencialmente cardiovascular no puerpério (insuficiência cardíaca/descompensação, hipertensão grave, tromboembolismo, síndrome coronariana/dissecção coronária espontânea, arritmia relevante, evento cerebrovascular) investigado, não atribuído automaticamente a alteração fisiológica normal, ansiedade, fadiga ou recuperação obstétrica",
+        "origem_secao": "Red flags cardiovasculares no puerpério"
+      },
+      {
+        "id": "acc26pp-pa-seguimento-precoce",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento precoce de pressão arterial e de sintomas cardiovasculares organizado logo após a alta, ajustado ao risco da paciente (monitorização domiciliar, contato remoto ou consulta presencial conforme necessidade)",
+        "origem_secao": "Pressão arterial e sintomas precisam de seguimento precoce"
+      },
+      {
+        "id": "acc26pp-consulta-ampliada-12sem",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Consulta pós-parto abrangente agendada em até 12 semanas após o parto, cobrindo as dimensões cardiovascular, física, social e psicológica, com revisão do diagnóstico cardiovascular subjacente e do risco em futuras gestações",
+        "origem_secao": "A consulta pós-parto abrangente não deve esperar o fim do primeiro ano"
+      },
+      {
+        "id": "acc26pp-lactacao-farmaco-revisado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Cada medicamento cardiovascular revisado quanto à compatibilidade com a lactação, com decisão individualizada registrada quando a evidência de segurança for limitada — nunca presumindo segurança ou contraindicação por analogia",
+        "origem_secao": "Lactação faz parte da decisão cardiovascular"
+      },
+      {
+        "id": "acc26pp-saude-mental-avaliada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Saúde mental avaliada como parte do cuidado cardiovascular pós-parto, por seu impacto sobre adesão e capacidade de autocuidado",
+        "origem_secao": "Saúde mental e contracepção são componentes cardiovasculares indiretos, mas essenciais"
+      },
+      {
+        "id": "acc26pp-contracepcao-discutida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Escolha contraceptiva discutida e, em cardiopatia de maior risco, integrada ao prognóstico e ao risco trombótico/hemodinâmico da paciente — não deixada desconectada da avaliação cardiológica",
+        "origem_secao": "Saúde mental e contracepção são componentes cardiovasculares indiretos, mas essenciais"
+      },
+      {
+        "id": "acc26pp-risk-enhancer-registrado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Desfecho adverso da gestação (diabetes gestacional, distúrbio hipertensivo, parto prematuro) registrado como risk enhancer para prevenção cardiovascular longitudinal, orientando vigilância de pressão arterial, rastreamento metabólico e prevenção aterosclerótica ao longo do primeiro ano",
+        "origem_secao": "Desfecho adverso da gestação é um marcador de risco futuro"
+      },
+      {
+        "id": "acc26pp-coordenacao-definida",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Em paciente de maior risco, definido quem coordena o cuidado e como as informações transitam entre obstetrícia, cardiologia e atenção primária, para não perder a transição de risco entre equipes",
+        "origem_secao": "Coordenação de cuidado é uma intervenção de segurança"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do ACC 2026 Expert Consensus Decision Pathway já verificado e publicado em Gravidez, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem."
+  },
+  {
+    "slug": "diagnostico-diferencial-de-pvod-antes-de-vasodilatador-especifico",
+    "condicao": "Diagnóstico diferencial de doença veno-oclusiva pulmonar (PVOD) antes de escalar terapia vasodilatadora específica em paciente rotulado como HAP idiopática",
+    "resumo": "O que precisa estar checado antes de tratar um paciente com hipertensão arterial pulmonar idiopática como tal — 5-10% desses casos são, na verdade, PVOD, e escalar vasodilatador específico sem cautela pode desencadear edema pulmonar grave e fatal.",
+    "documento_origem": "doenca-veno-oclusiva-pulmonar-pvod-diagnostico-diferencial-e-risco-de-edema-com-vasodilatador",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Montani D, Price LC, Dorfmuller P, et al. Pulmonary veno-occlusive disease. Eur Respir J. 2009;33(1):189-200. DOI: 10.1183/09031936.00090608. PMID: 19118230",
+      "Eyries M, Montani D, Girerd B, et al. EIF2AK4 mutations cause pulmonary veno-occlusive disease, a recessive form of pulmonary hypertension. Nat Genet. 2014;46(1):65-69. DOI: 10.1038/ng.2844. PMID: 24292273",
+      "Montani D, Jaïs X, Price LC, et al. Cautious epoprostenol therapy is a safe bridge to lung transplantation in pulmonary veno-occlusive disease. Eur Respir J. 2009;34(6):1348-1356. DOI: 10.1183/09031936.00017809. PMID: 19541723",
+      "Montani D, Lau EM, Dorfmüller P, et al. Pulmonary veno-occlusive disease. Eur Respir J. 2016;47(5):1518-1534. DOI: 10.1183/13993003.00026-2016. PMID: 27009171"
+    ],
+    "itens": [
+      {
+        "id": "pvod-suspeita-clinica-diferenciada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de PVOD levantada em paciente rotulado como HAP idiopática que apresente relação homem/mulher atípica para o quadro, maior exposição tabágica, menor pressão arterial de oxigênio em repouso, menor DLCO ou menor nadir de saturação no teste de caminhada de 6 minutos",
+        "origem_secao": "Apresentação clínica — o que diferencia da HAP idiopática"
+      },
+      {
+        "id": "pvod-tcar-triade-avaliada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Tomografia de alta resolução do tórax avaliada quanto à tríade sugestiva de PVOD: opacidades em vidro fosco centrolobulares, linhas septais e linfonodomegalia mediastinal",
+        "origem_secao": "Diagnóstico não invasivo — a tríade da tomografia de alta resolução"
+      },
+      {
+        "id": "pvod-funcao-pulmonar-dlco-solicitada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Gasometria arterial, prova de função pulmonar com DLCO e, quando indicado, lavado broncoalveolar solicitados para compor a abordagem não invasiva do diagnóstico diferencial",
+        "origem_secao": "Diagnóstico não invasivo — a tríade da tomografia de alta resolução"
+      },
+      {
+        "id": "pvod-biopsia-cirurgica-evitada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Biópsia pulmonar cirúrgica reservada a caso não esclarecido pela combinação de tomografia, gasometria, DLCO e lavado broncoalveolar, por ser procedimento de alto risco nesta população",
+        "origem_secao": "Diagnóstico não invasivo — a tríade da tomografia de alta resolução"
+      },
+      {
+        "id": "pvod-genetica-eif2ak4-discutida",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Herança recessiva de EIF2AK4 explicada ao aconselhar a família — pais assintomáticos (heterozigotos obrigatórios) não excluem risco relevante para irmãos do caso índice",
+        "origem_secao": "Genética — EIF2AK4, herança recessiva"
+      },
+      {
+        "id": "pvod-vasodilatador-dose-cautelosa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se PVOD confirmada ou fortemente suspeita e terapia vasodilatadora específica for indicada como ponte, iniciada com dose baixa e titulação lenta, sob monitorização estrita em centro de referência, conforme prescrição médica",
+        "origem_secao": "Terapia vasodilatadora cautelosa como ponte para transplante — a série de Montani 2009"
+      },
+      {
+        "id": "pvod-diuretico-concomitante",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diurético em dose ajustada mantido concomitante à titulação do vasodilatador específico, para reduzir o risco de edema pulmonar, conforme prescrição médica",
+        "origem_secao": "Terapia vasodilatadora cautelosa como ponte para transplante — a série de Montani 2009"
+      },
+      {
+        "id": "pvod-transplante-encaminhado",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Avaliação para transplante pulmonar encaminhada precocemente em paciente com PVOD confirmada, sem aguardar resposta completa à terapia vasodilatadora — o transplante segue sendo a terapia definitiva",
+        "origem_secao": "O risco central: edema pulmonar com terapia vasodilatadora específica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado de Hipertensão pulmonar citado em source_refs, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem."
+  },
+  {
+    "slug": "avaliacao-perioperatoria-de-hipertensao-pulmonar-em-cirurgia-nao-cardiaca",
+    "condicao": "Avaliação perioperatória do paciente com hipertensão pulmonar submetido a cirurgia não cardíaca",
+    "resumo": "O que precisa estar definido antes, durante e depois de uma cirurgia não cardíaca em paciente com hipertensão pulmonar (sobretudo HAP e CTEPH) — o risco não é capturado por escores de risco cardíaco geral, e a urgência do procedimento é o fator isolado mais consistente de mortalidade (2% na cirurgia eletiva contra 15% na de urgência).",
+    "documento_origem": "hipertensao-pulmonar-e-cirurgia-nao-cardiaca-risco-perioperatorio-e-estratificacao",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rajagopal S, Ruetzler K, Ghadimi K, et al; American Heart Association Council on Cardiopulmonary, Critical Care, Perioperative and Resuscitation, and the Council on Cardiovascular and Stroke Nursing. Evaluation and Management of Pulmonary Hypertension in Noncardiac Surgery: A Scientific Statement From the American Heart Association. Circulation. 2023;147(17):1317-1343. DOI: 10.1161/CIR.0000000000001136. PMID: 36924225",
+      "Ramakrishna G, Sprung J, Ravi BS, Chandrasekaran K, McGoon MD. Impact of pulmonary hypertension on the outcomes of noncardiac surgery: predictors of perioperative morbidity and mortality. J Am Coll Cardiol. 2005;45(10):1691-1699. DOI: 10.1016/j.jacc.2005.02.055. PMID: 15893189",
+      "Meyer S, McLaughlin VV, Seyfarth HJ, et al. Outcomes of noncardiac, nonobstetric surgery in patients with PAH: an international prospective survey. Eur Respir J. 2013;41(6):1302-1307. DOI: 10.1183/09031936.00089212. PMID: 23143546"
+    ],
+    "itens": [
+      {
+        "id": "hpcx-grupo-hp-classificado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Grupo de hipertensão pulmonar classificado (pré-capilar vs. pós-capilar, resistência vascular pulmonar fixa vs. reversível) antes de estimar o risco cirúrgico — a fisiopatologia pesa mais que o valor isolado da pressão pulmonar",
+        "origem_secao": "A abordagem em cinco etapas da AHA 2023"
+      },
+      {
+        "id": "hpcx-funcao-vd-avaliada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Função de ventrículo direito avaliada por ecocardiograma (e ressonância cardíaca quando disponível) antes de qualquer procedimento eletivo — é a reserva de VD, não a pressão pulmonar isolada, que determina a tolerância ao estresse cirúrgico",
+        "origem_secao": "A abordagem em cinco etapas da AHA 2023"
+      },
+      {
+        "id": "hpcx-urgencia-vs-eletiva-definida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Caráter eletivo ou de urgência do procedimento definido explicitamente, pesando na decisão de via de acesso e no nível de monitorização/suporte disponível — é o determinante mais consistente de mortalidade entre os dois estudos de coorte",
+        "origem_secao": "A magnitude do risco, com números de coorte"
+      },
+      {
+        "id": "hpcx-otimizacao-preoperatoria",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Otimização da hipertensão pulmonar realizada antes da cirurgia eletiva, incluindo, em caso selecionado, uso transitório de prostaciclina parenteral, conforme prescrição médica",
+        "origem_secao": "A abordagem em cinco etapas da AHA 2023"
+      },
+      {
+        "id": "hpcx-equipe-multidisciplinar-envolvida",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão de operar ou adiar tomada de forma multidisciplinar, com cardiologista/especialista em hipertensão pulmonar, cirurgião e anestesista envolvidos — não prerrogativa isolada do cirurgião ou do anestesista",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "hpcx-manejo-intraoperatorio-planejado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Manejo intraoperatório planejado para evitar disfunção aguda de ventrículo direito e manter débito cardíaco, não apenas controlar a pressão pulmonar isoladamente",
+        "origem_secao": "A abordagem em cinco etapas da AHA 2023"
+      },
+      {
+        "id": "hpcx-vigilancia-pos-operatoria-24h",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância ativa mantida por ao menos 24 horas de pós-operatório, com atenção a fluidoterapia, dor, hipóxia e hipercapnia residuais que podem elevar agudamente a resistência vascular pulmonar",
+        "origem_secao": "A abordagem em cinco etapas da AHA 2023"
+      },
+      {
+        "id": "hpcx-escore-generico-nao-usado-isoladamente",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrado que nenhum escore de risco cirúrgico geral (RCRI, índice de Lee) foi validado para hipertensão pulmonar — ferramenta emprestada de outro contexto não substitui a avaliação estruturada em cinco etapas",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado de Hipertensão pulmonar citado em source_refs, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem."
   }
 ]
