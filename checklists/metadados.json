@@ -18146,5 +18146,240 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "investigacao-de-extensao-perianular-na-endocardite-aortica",
+    "condicao": "Investigação de extensão perianular (abscesso, pseudoaneurisma) na endocardite de valva aórtica",
+    "resumo": "O que checar diante de suspeita de complicação perianular na endocardite de valva aórtica — quando reduzir o limiar de investigação, por que vegetação pequena não afasta o achado, e como combinar ecocardiografia e tomografia computadorizada cardíaca para não perder o diagnóstico — derivado do documento dedicado a complicações perianulares já publicado neste tema.",
+    "documento_origem": "complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Graupner C, Vilacosta I, SanRomán J, Ronderos R, Sarriá C, Fernández C, Mújica R, Sanz O, Sanmartín JV, Pinto AG. Periannular extension of infective endocarditis. J Am Coll Cardiol. 2002;39(7):1204-11. DOI: 10.1016/s0735-1097(02)01747-3 · PMID: 11923047.",
+      "Hryniewiecki T, Zatorska K, Abramczuk E, Zakrzewski D, Szymański P, Kuśmierczyk M, Michałowska I. The usefulness of cardiac CT in the diagnosis of perivalvular complications in patients with infective endocarditis. Eur Radiol. 2019;29(8):4368-4376. DOI: 10.1007/s00330-018-5965-2 · PMID: 30643945."
+    ],
+    "itens": [
+      {
+        "id": "epa-limiar-suspeita-protese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se a valva acometida é nativa ou protética — o limiar de suspeita para extensão perianular deve ser reduzido em prótese valvar, onde a frequência do achado (55%) é quase o dobro da observada em valva nativa (29%)",
+        "origem_secao": "Quão frequente é a extensão perianular"
+      },
+      {
+        "id": "epa-vegetacao-pequena-nao-afasta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que vegetação de aspecto pequeno ao ecocardiograma não afasta extensão perianular relevante — na coorte de referência, vegetações pequenas foram, se algo, mais frequentes nos pacientes com complicação perivalvular, e o achado precisa ser procurado de forma independente do tamanho da vegetação",
+        "origem_secao": "Fatores de risco independentes identificados na mesma coorte"
+      },
+      {
+        "id": "epa-bav-novo-investigar",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de bloqueio atrioventricular novo em paciente com endocardite de valva aórtica (nativa ou protética), interpretado como sinal de provável extensão perianular do processo infeccioso — não apenas problema elétrico isolado a monitorizar — e investigação de imagem dirigida disparada ou reforçada",
+        "origem_secao": "Bloqueio atrioventricular novo — sinal de alarme, não achado incidental"
+      },
+      {
+        "id": "epa-eco-tte-tee",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizada ecocardiografia transtorácica e transesofágica combinadas (sensibilidade combinada de 63% e especificidade de 90% para abscesso/pseudoaneurisma confirmado cirurgicamente na coorte de referência)",
+        "origem_secao": "Diagnóstico por imagem — onde a ecocardiografia isolada não basta"
+      },
+      {
+        "id": "epa-tcc-complementar",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se ecocardiografia TTE+TEE inconclusiva ou negativa em paciente com alta suspeita clínica (prótese valvar, bloqueio AV novo, febre persistente apesar de antibiótico adequado): solicitada tomografia computadorizada cardíaca complementar (sensibilidade isolada de 81% para abscesso/pseudoaneurisma, superior à ecocardiografia isolada)",
+        "origem_secao": "Diagnóstico por imagem — onde a ecocardiografia isolada não basta"
+      },
+      {
+        "id": "epa-combinacao-eco-tcc",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Registrado que a combinação de ecocardiografia (TTE+TEE) com tomografia computadorizada cardíaca alcançou sensibilidade de 100% para abscesso/pseudoaneurisma na coorte de referência, sustentando o uso de imagem multimodal quando a suspeita clínica for relevante",
+        "origem_secao": "Diagnóstico por imagem — onde a ecocardiografia isolada não basta"
+      },
+      {
+        "id": "epa-comunicar-equipe-endocardite",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Achado de extensão perianular (abscesso, pseudoaneurisma) ou bloqueio atrioventricular novo comunicado à equipe de endocardite (Endocarditis Team) como parte da discussão sobre indicação e timing cirúrgico",
+        "origem_secao": "Bloqueio atrioventricular novo — sinal de alarme, não achado incidental"
+      },
+      {
+        "id": "epa-conectar-timing-cirurgico",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a extensão perianular é frequentemente a manifestação anatômica concreta por trás da indicação cirúrgica de \"infecção não controlada\" — achado integrado à avaliação de indicação e timing cirúrgico já detalhada no documento dedicado desta pasta",
+        "origem_secao": "Como este documento se conecta ao de timing cirúrgico já publicado"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), responsável pela curadoria clínica. Itens derivados do documento já verificado de Endocardite citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diagnostico-tratamento-e-profilaxia-da-pericardite-tuberculosa-e-da-sindrome-pos-pericardiotomia",
+    "condicao": "Diagnóstico e tratamento da pericardite tuberculosa, e diagnóstico e profilaxia da síndrome pós-pericardiotomia",
+    "resumo": "O que checar em duas situações distintas cobertas pelo mesmo documento: os critérios diagnósticos e o esquema de tratamento da pericardite tuberculosa, e os critérios diagnósticos e a profilaxia farmacológica da síndrome pós-pericardiotomia após cirurgia cardíaca — derivado do documento dedicado a essas duas condições já publicado neste tema.",
+    "documento_origem": "pericardite-tuberculosa-e-sindrome-pos-pericardiotomia",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Tuberculous pericardial disease: a focused update on diagnosis, therapy and prevention of complications · Cardiovascular Diagnosis and Therapy · https://cdt.amegroups.org/article/view/30287/html",
+      "Diagnostic values of Xpert MTB/RIF, T-SPOT.TB and adenosine deaminase for HIV-negative tuberculous pericarditis in a high burden setting · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7530650/",
+      "Colchicine for Prevention of Postpericardiotomy Syndrome and Postoperative Atrial Fibrillation: The COPPS-2 Randomized Clinical Trial · JAMA · https://jamanetwork.com/journals/jama/fullarticle/1900482",
+      "Treatment and Prophylaxis of Post-pericardiotomy Syndrome in Cardiac Surgery Patients: a Systematic Review · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10397136/"
+    ],
+    "itens": [
+      {
+        "id": "tbpp-criterio-definitivo",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Se disponível: pesquisada demonstração do bacilo da tuberculose no líquido pericárdico ou em secção histológica do pericárdio, que caracteriza diagnóstico definitivo de pericardite tuberculosa",
+        "origem_secao": "Pericardite tuberculosa — criterios diagnosticos"
+      },
+      {
+        "id": "tbpp-criterio-provavel",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Na ausência de confirmação bacteriológica direta, avaliado diagnóstico provável: prova de tuberculose em outro sítio associada a pericardite inexplicada, exsudato pericárdico linfocítico com adenosina desaminase elevada, e/ou resposta apropriada a teste terapêutico com antituberculostáticos",
+        "origem_secao": "Pericardite tuberculosa — criterios diagnosticos"
+      },
+      {
+        "id": "tbpp-ada-limiar",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosada adenosina desaminase (ADA) no líquido pericárdico — nível ≥40 U/L presente em 75% dos pacientes com pericardite tuberculosa na fonte citada",
+        "origem_secao": "Pericardite tuberculosa — criterios diagnosticos"
+      },
+      {
+        "id": "tbpp-xpert-combinado",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerada abordagem combinada Xpert MTB/RIF seguido de ADA ou interferon-gama (IFN-γ), que pode proporcionar sensibilidade e especificidade significativamente maiores do que qualquer um dos testes isoladamente",
+        "origem_secao": "Pericardite tuberculosa — criterios diagnosticos"
+      },
+      {
+        "id": "tbpp-esquema-antituberculose",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciado esquema antituberculose de 4 fármacos, com duração total de 6 meses, conforme prescrição médica",
+        "origem_secao": "Pericardite tuberculosa — tratamento antituberculose"
+      },
+      {
+        "id": "tbpp-corticosteroide-incerteza",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que não está bem estabelecido se corticosteroide adjuvante reduz mortalidade ou progressão para constrição na pericardite tuberculosa — decisão de associar corticosteroide individualizada, sempre em conjunto com o esquema antituberculose",
+        "origem_secao": "Pericardite tuberculosa — corticosteroide adjuvante"
+      },
+      {
+        "id": "tbpp-corticosteroide-conforme-prescricao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Quando indicado, corticosteroide adjuvante conforme prescrição médica, com desmame progressivo ao longo de semanas até suspensão, sempre associado ao esquema antituberculose e nunca isolado",
+        "origem_secao": "Pericardite tuberculosa — corticosteroide adjuvante"
+      },
+      {
+        "id": "tbpp-criterios-pos-pericardiotomia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmados pelo menos dois dos seguintes critérios após lesão cardíaca para diagnóstico de síndrome pós-pericardiotomia: febre sem causa alternativa, dor torácica pericárdica ou pleurítica, atrito pericárdico ou pleural, evidência de derrame pericárdico e/ou pleural, com PCR elevada",
+        "origem_secao": "Sindrome pos-pericardiotomia — diagnostico"
+      },
+      {
+        "id": "tbpp-eco-pos-operatorio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitado ecocardiograma pós-operatório para investigar derrame pericárdico na suspeita de síndrome pós-pericardiotomia",
+        "origem_secao": "Sindrome pos-pericardiotomia — diagnostico"
+      },
+      {
+        "id": "tbpp-rx-torax-derrame-pleural",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitada radiografia de tórax para investigar derrame pleural associado na suspeita de síndrome pós-pericardiotomia",
+        "origem_secao": "Sindrome pos-pericardiotomia — diagnostico"
+      },
+      {
+        "id": "tbpp-colchicina-profilaxia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerada colchicina perioperatória como profilaxia da síndrome pós-pericardiotomia em cirurgia cardíaca, conforme prescrição médica — intervenção farmacológica com redução de risco em até a metade (razão de chances 0,38) em metanálise, com evidência consistente em múltiplos ensaios randomizados, incluindo o COPPS-2",
+        "origem_secao": "Prevencao com colchicina"
+      },
+      {
+        "id": "tbpp-metilprednisolona-aspirina-sem-beneficio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que metilprednisolona e aspirina não mostraram benefício na prevenção da síndrome pós-pericardiotomia, ao contrário da colchicina",
+        "origem_secao": "Prevencao com colchicina"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), responsável pela curadoria clínica. Itens derivados do documento já verificado de Pericárdio citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "rastreamento-de-aneurisma-micotico-intracraniano-na-endocardite",
+    "condicao": "Rastreamento e manejo do aneurisma micótico intracraniano na endocardite infecciosa antes de cirurgia valvar",
+    "resumo": "O que checar antes de decidir se um paciente com endocardite infecciosa em avaliação para cirurgia valvar precisa de rastreamento invasivo de aneurisma micótico intracraniano — o dado que estratifica a indicação (presença ou ausência de hemorragia intracraniana no exame inicial) e a limitação dos métodos não invasivos — derivado do documento dedicado a essa complicação neurológica já publicado neste tema.",
+    "documento_origem": "aneurisma-micotico-intracraniano-na-endocardite-infecciosa-rastreamento-e-manejo",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Williams TJ, Starr M, El-Dalati S. Intracranial Hemorrhage as a Marker for Mycotic Aneurysm in Patients With Infective Endocarditis. Neurology: Clinical Practice. 2023;13(2):e200144. DOI: 10.1212/CPJ.0000000000200144 · PMID: 37064584."
+    ],
+    "itens": [
+      {
+        "id": "amic-avaliar-hic-imagem-inicial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado, no exame de imagem inicial do paciente com endocardite infecciosa do lado esquerdo (ou do lado direito com forame oval patente) em avaliação para cirurgia valvar, se há ou não hemorragia intracraniana — esse dado é o que estratifica a necessidade de rastreamento invasivo de aneurisma micótico",
+        "origem_secao": "Não é preciso rastrear todo paciente com endocardite — o dado que muda a indicação"
+      },
+      {
+        "id": "amic-sem-hic-dsa-nao-rotineira",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se ausência de hemorragia intracraniana no exame de imagem inicial: reconhecido que o rastreamento rotineiro com angiografia por subtração digital (DSA) pode não ser necessário — valor preditivo negativo da ausência de HIC de 97,4% na coorte de referência",
+        "origem_secao": "Não é preciso rastrear todo paciente com endocardite — o dado que muda a indicação"
+      },
+      {
+        "id": "amic-com-hic-dsa-obrigatoria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se hemorragia intracraniana presente no exame de imagem inicial: solicitada angiografia por subtração digital (DSA) — subgrupo com prevalência de aneurisma micótico de 66,7% na coorte de referência, e a DSA é o exame de referência nesse cenário de alto risco",
+        "origem_secao": "Limitação importante do exame não invasivo"
+      },
+      {
+        "id": "amic-nao-invasivo-nao-descarta",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecido que angiotomografia ou angiorressonância negativas não são suficientes para descartar aneurisma micótico em paciente com hemorragia intracraniana documentada — no estudo de referência, nenhum dos aneurismas confirmados por DSA foi detectado pelos métodos não invasivos",
+        "origem_secao": "Limitação importante do exame não invasivo"
+      },
+      {
+        "id": "amic-anticoagulacao-plena-risco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reconhecido o risco de sangramento associado à anticoagulação intraoperatória e à instabilidade hemodinâmica da circulação extracorpórea em paciente com aneurisma micótico intracraniano não identificado, antes de prosseguir para cirurgia cardíaca valvar",
+        "origem_secao": "O que é e por que importa na decisão cirúrgica"
+      },
+      {
+        "id": "amic-integrar-timing-cirurgico",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Achado de aneurisma micótico intracraniano (presença e tamanho) integrado à avaliação de risco de sangramento que orienta o timing seguro da cirurgia cardíaca após evento neurológico, junto com o tipo de evento (isquêmico versus hemorrágico) e o tempo decorrido",
+        "origem_secao": "Como isso se encaixa com a decisão de timing cirúrgico"
+      },
+      {
+        "id": "amic-nao-generalizar-prevalencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a decisão de rastrear não deve se basear na prevalência geral do achado (13,9% na coorte de referência) isoladamente, e sim na estratificação pela presença ou ausência de hemorragia intracraniana no exame inicial",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), responsável pela curadoria clínica. Itens derivados do documento já verificado de Endocardite citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
