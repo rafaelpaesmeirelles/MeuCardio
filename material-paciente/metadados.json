@@ -14447,5 +14447,164 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "pressao-alta-e-memoria-o-que-a-ciencia-mostra",
+    "titulo": "Pressão alta e memória: o que a ciência mostra",
+    "subtitulo": "Controlar bem a pressão ajuda a proteger o cérebro — entenda até onde vai essa proteção",
+    "tema": "Hipertensão",
+    "documento_slug": "hipertensao-e-declinio-cognitivo-o-que-o-sprint-mind-realmente-mostrou",
+    "resumo": "Você já deve ter ouvido dizer que controlar bem a pressão protege a memória e evita demência no futuro. Um grande estudo chamado SPRINT MIND investigou essa ideia de forma cuidadosa, e o resultado é mais interessante — e mais honesto — do que a frase que costuma circular por aí.",
+    "secoes": [
+      {
+        "titulo": "Por que ligar pressão alta e memória",
+        "paragrafos": [
+          "A pressão alta que não é bem controlada, com o passar dos anos, pode prejudicar pequenos vasos sanguíneos do cérebro. Por isso, faz sentido perguntar: será que manter a pressão bem baixa protege a memória e reduz o risco de demência lá na frente?",
+          "Para responder a essa pergunta com seriedade, pesquisadores acompanharam mais de 9 mil pessoas com pressão alta, com 50 anos ou mais, por cerca de 5 anos. Metade foi tratada com uma meta de pressão mais rigorosa, e a outra metade com uma meta mais tradicional. Depois, todos passaram por avaliações da memória e do raciocínio."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o estudo realmente encontrou",
+        "paragrafos": [
+          "O resultado tem duas partes, e as duas importam. Para o problema mais leve e mais comum — o chamado comprometimento cognitivo leve, quando a pessoa nota alguma dificuldade de memória ou concentração, mas ainda consegue levar a vida normalmente — o grupo com controle mais rigoroso da pressão teve, de fato, menos casos. Esse foi um resultado sólido e confirmado estatisticamente.",
+          "Já para a demência propriamente dita — o problema mais grave, que compromete a independência da pessoa —, o grupo com controle mais rigoroso também teve menos casos, mas essa diferença não foi grande o suficiente para se ter certeza estatística de que não foi coincidência. Os próprios pesquisadores explicam que isso provavelmente aconteceu porque o estudo precisou ser encerrado mais cedo do que o planejado (por outro motivo, muito bom: o benefício para o coração e para os vasos já tinha ficado claro), o que deu menos tempo para observar quantos casos de demência aconteceriam."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que isso significa para você",
+        "paragrafos": [
+          "A mensagem honesta é: controlar bem a pressão parece ajudar a proteger a memória, e há uma evidência mais forte disso para o problema mais leve. Para a demência mais avançada, o sinal existe e vai na mesma direção favorável, mas ainda não é uma certeza tão firme quanto seria desejável.",
+          "Isso não diminui a importância de controlar a pressão. Pelo contrário: os benefícios da pressão bem controlada para o coração, os rins e os vasos sanguíneos já são muito bem estabelecidos, e a possível proteção para a memória é mais um motivo, entre vários outros já conhecidos, para seguir o tratamento com constância.",
+          "Vale lembrar também que esse estudo foi feito em pessoas sem diabetes e sem AVC prévio. Se você tem alguma dessas condições, converse com seu médico sobre qual meta de pressão é a mais adequada para o seu caso específico."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Esquecimentos frequentes que atrapalham suas tarefas do dia a dia, e não só esquecimentos ocasionais",
+      "Dificuldade nova para reconhecer lugares familiares, se perder em trajetos conhecidos ou repetir perguntas várias vezes",
+      "Mudança perceptível de comportamento ou de humor notada por você ou por familiares",
+      "Dificuldade nova para cuidar das próprias contas, medicamentos ou compromissos, que antes não existia"
+    ],
+    "perguntas": [
+      "Se eu controlar bem minha pressão, tenho garantia de nunca ter problemas de memória? Não. O estudo mostra uma tendência de proteção, principalmente para o problema mais leve, mas não é uma garantia absoluta contra demência. Muitos outros fatores também influenciam a saúde do cérebro, como sono, atividade física, alimentação e vida social.",
+      "Devo pedir ao médico para deixar minha pressão a mais baixa possível, pensando só na memória? Não decida isso sozinho. A meta de pressão ideal depende de outros fatores da sua saúde, e uma pressão baixa demais também traz riscos próprios, como tontura e quedas. Essa decisão deve ser conversada com seu médico.",
+      "Notar uma pequena dificuldade de memória de vez em quando já é motivo de preocupação? Esquecimentos ocasionais, como onde deixou as chaves, são comuns em qualquer idade e não significam, por si só, um problema sério. O que merece avaliação é uma dificuldade que se repete com frequência e atrapalha a rotina."
+    ],
+    "fontes": [
+      "SPRINT MIND Investigators for the SPRINT Research Group; Williamson JD, Pajewski NM, Auchus AP, et al. Effect of Intensive vs Standard Blood Pressure Control on Probable Dementia: A Randomized Clinical Trial. JAMA. 2019;321(6):553-561. DOI: 10.1001/jama.2018.21442. PMID: 30688979. PMCID: PMC6439590"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tontura-ao-levantar-e-o-remedio-da-pressao",
+    "titulo": "Tontura ao levantar: preciso reduzir o remédio da pressão?",
+    "subtitulo": "O que uma grande revisão de estudos mostra sobre tratamento da pressão alta e tontura postural",
+    "tema": "Hipertensão",
+    "documento_slug": "hipotensao-ortostatica-nao-e-motivo-para-desescalonar-o-anti-hipertensivo",
+    "resumo": "Muita gente pensa que sentir tontura ao levantar da cama ou da cadeira é sinal de que o remédio da pressão está \"forte demais\" e precisa ser reduzido. Uma grande análise reunindo dados de mais de 18 mil pessoas mostrou algo diferente do que a intuição sugere.",
+    "secoes": [
+      {
+        "titulo": "O que é essa tontura ao levantar",
+        "paragrafos": [
+          "Quando você muda de posição — de deitado ou sentado para em pé — o corpo precisa ajustar rapidamente a circulação para manter o sangue chegando bem ao cérebro. Em algumas pessoas, esse ajuste demora um pouco mais, e a pressão cai momentaneamente ao levantar. Isso pode causar tontura, sensação de cabeça leve ou, em casos mais intensos, quase desmaio. Os médicos chamam isso de hipotensão ortostática.",
+          "É natural pensar que, se a pessoa está tratando a pressão alta e sente essa tontura, o tratamento deve estar exagerado e precisa ser reduzido. Faz sentido à primeira vista — mas os estudos mostram outra coisa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que os estudos mostram",
+        "paragrafos": [
+          "Pesquisadores reuniram informações de mais de 18 mil pessoas que participaram de estudos comparando um tratamento mais intensivo da pressão alta com um tratamento mais tradicional, acompanhadas por seis meses ou mais. O resultado foi que as pessoas com tratamento mais intensivo não tiveram mais tontura ao levantar do que as com tratamento mais tradicional — na verdade, tiveram um pouco menos.",
+          "Isso valeu inclusive para quem já sentia essa tontura antes de começar o tratamento mais intensivo: o problema não piorou com o tratamento mais rigoroso da pressão.",
+          "Os próprios pesquisadores concluem que sentir tontura ao levantar, seja antes de começar um tratamento mais intensivo, seja durante ele, não deveria ser usado, sozinho, como motivo para evitar ou reduzir o tratamento da pressão alta."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que isso não quer dizer",
+        "paragrafos": [
+          "Isso não significa que sentir tontura nunca é importante — significa apenas que, quando examinada nesse tipo de grande estudo, ela não aumentou com o tratamento mais eficaz da pressão. Se você sente tontura, quase desmaio ou já teve uma queda ao se levantar, isso continua merecendo avaliação individual do seu médico, porque pode haver outras causas envolvidas, e o julgamento sobre o seu caso específico é sempre mais importante do que a média de um estudo.",
+          "O estudo também tem limitações que vale conhecer: as medidas foram feitas com a pessoa sentada antes de levantar, não deitada, e não capturaram o primeiro minuto logo após levantar, que costuma ser o momento em que a tontura é mais sentida. Além disso, o estudo não avaliou diretamente quedas ou desmaios reais, apenas a queda de pressão medida."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Tontura forte, visão escurecendo ou quase desmaio ao levantar, principalmente se acontece com frequência",
+      "Queda real associada à mudança de posição",
+      "Desmaio (perda de consciência) ao se levantar, mesmo que breve",
+      "Tontura acompanhada de dor no peito, falta de ar ou palpitação"
+    ],
+    "perguntas": [
+      "Se sinto tontura ao levantar, devo parar o remédio da pressão por conta própria? Não. Nunca ajuste ou suspenda um remédio por conta própria. Fale com seu médico, que vai avaliar se a causa é o tratamento da pressão ou outro fator, e decidir a melhor conduta para o seu caso.",
+      "Por que eu sinto tontura se o estudo diz que o tratamento não aumenta esse problema? O estudo fala de uma tendência que aparece quando se olha para milhares de pessoas juntas — isso não significa que ninguém sinta tontura. Você pode ter outras causas específicas, como desidratação, outros medicamentos que também baixam a pressão, ou levantar-se rápido demais. Vale investigar o seu caso individualmente.",
+      "O que posso fazer no dia a dia para reduzir a tontura ao levantar? Levantar-se devagar, em etapas (primeiro sentar na beira da cama, depois ficar de pé), evitar desidratação e conversar com seu médico sobre todos os remédios que você usa são medidas práticas. Seu médico pode avaliar se algum ajuste é necessário."
+    ],
+    "fontes": [
+      "Juraschek SP, Hu JR, Cluett JL, Ishak A, Mita C, et al. Effects of Intensive Blood Pressure Treatment on Orthostatic Hypotension: A Systematic Review and Individual Participant-based Meta-analysis. Ann Intern Med. 2021;174(1):58-68. DOI: 10.7326/M20-4298. PMID: 32909814 — PROSPERO CRD42020153753. Ensaios de alvo pressórico: 18.466 participantes e 127.882 visitas de seguimento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reabilitacao-apos-internacao-por-insuficiencia-cardiaca",
+    "titulo": "Reabilitação física depois de uma internação por insuficiência cardíaca",
+    "subtitulo": "Como um programa estruturado de movimento pode ajudar a recuperar força e independência",
+    "tema": "Insuficiência cardíaca",
+    "documento_slug": "reabilitacao-fisica-pos-internacao-por-ic-descompensada-o-ensaio-rehab-hf",
+    "resumo": "Sair de uma internação por insuficiência cardíaca costuma deixar a pessoa mais fraca e com menos disposição do que estava antes. Um estudo testou se um programa estruturado de exercícios, iniciado ainda no hospital e continuado depois da alta, ajuda a recuperar essa força — e o resultado é encorajador, com alguns pontos importantes para entender.",
+    "secoes": [
+      {
+        "titulo": "Por que a força e o condicionamento caem tanto após uma internação",
+        "paragrafos": [
+          "Ficar internado por uma piora da insuficiência cardíaca, especialmente em pessoas mais velhas, costuma vir acompanhado de perda de força muscular, equilíbrio e resistência para as atividades do dia a dia. Isso acontece com qualquer tipo de insuficiência cardíaca, independentemente de como está o funcionamento do coração medido pelos exames.",
+          "Essa fraqueza física — chamada de fragilidade quando é intensa — não é só um incômodo passageiro: ela pode dificultar a recuperação, atrapalhar a independência e aumentar o risco de nova internação. Por muito tempo, não havia um programa bem testado e estruturado voltado especificamente para esse momento, logo depois de uma internação aguda."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o estudo testou",
+        "paragrafos": [
+          "Pesquisadores acompanharam 349 pessoas internadas por insuficiência cardíaca descompensada. Metade recebeu o cuidado habitual, e a outra metade participou de um programa de reabilitação física estruturado, que trabalhava quatro aspectos ao mesmo tempo: força, equilíbrio, capacidade de se movimentar e resistência física.",
+          "O programa começava ainda durante a internação, ou logo depois dela, e continuava com sessões acompanhadas por um profissional de fisioterapia depois da alta, ao longo de algumas semanas. Não era uma simples orientação de \"caminhar mais\" — era um programa supervisionado e progressivo, ajustado à condição de cada pessoa.",
+          "Ao entrar no estudo, quase todos os participantes já estavam fisicamente frágeis, com várias outras condições de saúde associadas — ou seja, é uma situação bem parecida com a de muitas pessoas que saem de uma internação por insuficiência cardíaca na vida real."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o estudo encontrou",
+        "paragrafos": [
+          "As pessoas que fizeram o programa de reabilitação tiveram uma melhora clara e mensurável na função física — força, equilíbrio e mobilidade — três meses depois, em comparação com quem recebeu apenas o cuidado habitual. Esse foi o resultado principal do estudo, e ele foi bastante consistente.",
+          "Já em relação a voltar a ser internado, não houve diferença clara entre os dois grupos: o programa de reabilitação não reduziu, de forma comprovada, a chance de uma nova internação nos seis meses seguintes. Isso é importante para não criar uma expectativa maior do que o estudo realmente sustenta.",
+          "Sobre óbitos, houve um número um pouco maior no grupo que fez reabilitação em comparação com o grupo controle, mas essa diferença foi pequena e, estatisticamente, pode ter sido apenas obra do acaso — não há certeza de que o programa tenha causado esse resultado. Ainda assim, é uma informação que merece ser mencionada com honestidade, e não escondida."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que isso significa para você",
+        "paragrafos": [
+          "Se você teve uma internação recente por insuficiência cardíaca, é razoável perguntar ao seu médico se um programa estruturado de reabilitação física, supervisionado por um profissional, é indicado para o seu caso. A evidência mostra que esse tipo de programa pode ajudar a recuperar força, equilíbrio e independência no dia a dia — o que tem valor mesmo sem uma garantia de reduzir internações futuras.",
+          "É importante que qualquer programa de exercício, nesse momento após a alta, seja orientado e acompanhado por um profissional de saúde, e não algo iniciado por conta própria sem essa orientação, justamente por causa da fragilidade que costuma existir logo depois de uma internação."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar que piora, mesmo em repouso ou em pequenos esforços",
+      "Inchaço nas pernas, tornozelos ou abdômen que aumenta rapidamente",
+      "Ganho de peso rápido em poucos dias (retenção de líquido)",
+      "Cansaço extremo, tontura ou dor no peito durante os exercícios — interrompa a atividade e avise seu médico"
+    ],
+    "perguntas": [
+      "Fazer reabilitação física garante que eu não seja internado de novo? Não. O estudo mostrou melhora clara na força e na função física, mas não mostrou, com certeza estatística, redução no número de novas internações. O benefício comprovado é a recuperação da capacidade física.",
+      "Posso começar a me exercitar por conta própria assim que sair do hospital? Não é recomendado começar sozinho, sem orientação. Logo após uma internação por insuficiência cardíaca, o corpo está mais frágil, e um programa bem estruturado e supervisionado por um profissional é mais seguro e mais eficaz do que uma iniciativa isolada.",
+      "O programa de reabilitação é seguro? A maioria das pessoas concluiu o programa sem problemas relatados relacionados a ele. Houve um pequeno número maior de óbitos no grupo que fez reabilitação em comparação ao grupo controle, mas essa diferença foi pequena e não teve confirmação estatística de que tenha sido causada pelo programa. Por isso, qualquer programa de exercício nessa fase deve sempre ser acompanhado por um profissional de saúde, que vai avaliar sua condição individual antes e durante as sessões."
+    ],
+    "fontes": [
+      "Kitzman DW, Whellan DJ, Duncan P, Pastva AM, Mentz RJ, Reeves GR, Nelson MB, Chen H, Upadhya B, Reed SD, Espeland MA, Hewston L, O'Connor CM. Physical Rehabilitation for Older Patients Hospitalized for Heart Failure. N Engl J Med. 2021;385(3):203-216. DOI: 10.1056/NEJMoa2026141. PMID: 33999544 — NCT02196038, 349 pacientes, PMCID PMC8353658"
+    ],
+    "review_status": "revisado"
   }
 ]
