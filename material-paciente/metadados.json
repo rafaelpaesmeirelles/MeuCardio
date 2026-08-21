@@ -14447,5 +14447,193 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "teste-ergometrico-o-que-e-o-escore-de-duke",
+    "titulo": "O que é o Escore de Duke do teste ergométrico",
+    "subtitulo": "Como três informações do seu teste em esteira ajudam o cardiologista a decidir os próximos passos",
+    "tema": "Calculadoras",
+    "documento_slug": "escore-de-duke-do-teste-ergometrico-treadmill-score",
+    "resumo": "Explicação em linguagem simples sobre o Escore de Duke, calculado a partir do teste ergométrico (teste em esteira), usado para estimar o risco de o coração ter um problema futuro e ajudar a decidir se você precisa de mais exames ou pode seguir em acompanhamento clínico.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Quando você faz um teste ergométrico (o exame em que você caminha ou corre numa esteira enquanto o coração é monitorado), o cardiologista pode calcular um número a partir de três informações colhidas durante o próprio exame: por quanto tempo você conseguiu se exercitar, se o traçado do coração (eletrocardiograma) mostrou algum sinal sugestivo de que uma parte do músculo recebeu menos sangue durante o esforço, e se você sentiu dor no peito durante o teste — e, se sentiu, se essa dor te obrigou a parar antes do previsto.",
+          "Essas três informações juntas formam um número que classifica seu resultado como de risco baixo, intermediário ou alto."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o médico calcula isso",
+        "paragrafos": [
+          "Esse número ajuda a estimar a chance de você ter um problema cardíaco importante nos próximos anos, e serve para orientar o próximo passo: seguir com acompanhamento clínico de rotina, ou avançar para um exame mais detalhado, como o cateterismo.",
+          "Um ponto importante: a maior parte das pessoas que faz esse teste cai na faixa de risco baixo — e é justamente para essas pessoas que o escore mais ajuda, porque mostra que, na maioria das vezes, não é necessário avançar para um exame invasivo."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o número NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Não é, por si só, um diagnóstico de infarto ou de doença do coração — é uma estimativa de risco, calculada a partir do seu desempenho no exame",
+          "O escore foi validado numa época em que os tratamentos de cardiologia eram diferentes dos de hoje — os tratamentos atuais tendem a deixar o risco real um pouco menor do que o número sugere",
+          "Só é confiável se você conseguiu se exercitar até um nível adequado de esforço durante o teste — quem para muito cedo por outro motivo (por exemplo, cansaço nas pernas, não relacionado ao coração) pode ter um resultado que não reflete bem o risco cardíaco",
+          "Ele não substitui a avaliação geral que o cardiologista já fez de você antes de pedir o exame"
+        ]
+      },
+      {
+        "titulo": "O que costuma acontecer com esse resultado na prática",
+        "paragrafos": [
+          "Um resultado de risco baixo costuma significar que você pode seguir em acompanhamento clínico habitual, sem necessidade de exame adicional só por causa desse resultado. Um resultado de risco alto costuma levar o cardiologista a considerar um exame de imagem ou o cateterismo, para entender melhor o que está acontecendo.",
+          "Vale perguntar sempre em que faixa você ficou, porque é essa faixa — mais do que o número exato — que orienta a conversa sobre os próximos passos."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito que não passa com o repouso, durante ou depois do teste",
+      "Dor no peito que se espalha para o braço, a mandíbula ou as costas",
+      "Desmaio ou quase desmaio durante ou logo após o exame",
+      "Falta de ar que não melhora depois de parar o esforço",
+      "Palpitação (coração acelerado ou batendo de forma irregular) associada a tontura, nas horas seguintes ao teste"
+    ],
+    "perguntas": [
+      "Qual foi o meu resultado nesse escore, e ele ficou na faixa de risco baixo, intermediário ou alto?",
+      "Esse resultado muda a necessidade de eu fazer um cateterismo ou outro exame de imagem?",
+      "Eu consegui atingir o nível de esforço necessário durante o teste para esse resultado ser confiável?",
+      "Esse resultado leva em conta que os tratamentos de hoje são diferentes dos de décadas atrás?",
+      "Com que frequência preciso repetir esse teste?"
+    ],
+    "fontes": [
+      "Mark DB, Shaw L, Harrell FE Jr, Hlatky MA, Lee KL, Bengtson JR, McCants CB, et al. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med. 1991;325(12):849-853. DOI: 10.1056/NEJM199109193251204. PMID: 1875969."
+    ]
+  },
+  {
+    "slug": "risco-da-cirurgia-do-coracao-o-que-e-o-euroscore-ii",
+    "titulo": "O que é o EuroSCORE II, usado antes da cirurgia do coração",
+    "subtitulo": "Como a equipe estima o risco da cirurgia cardíaca e por que isso ajuda a escolher o melhor caminho de tratamento",
+    "tema": "Calculadoras",
+    "documento_slug": "euroscore-ii-risco-de-mortalidade-em-cirurgia-cardiaca",
+    "resumo": "Explicação em linguagem simples sobre o EuroSCORE II, um cálculo usado antes de cirurgias do coração (como troca de valva ou ponte de safena) para estimar o risco da operação e apoiar a decisão entre cirurgia, procedimento por cateter ou tratamento clínico.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Quando uma cirurgia do coração está sendo considerada — como troca ou reparo de uma valva, ponte de safena (revascularização), ou uma combinação das duas —, a equipe pode calcular um número que estima a chance de complicação grave durante a internação para essa cirurgia.",
+          "Esse cálculo é feito a partir de informações que já são de rotina na sua avaliação: sua idade, se você tem outras doenças (como alteração dos rins ou do pulmão), como está a força do seu coração, o tipo e a extensão da cirurgia planejada, e se ela é uma cirurgia programada ou de urgência."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que a equipe calcula isso",
+        "paragrafos": [
+          "Esse número é um dos insumos que a equipe (cardiologista, cirurgião cardíaco e, quando aplicável, o especialista em procedimentos por cateter) usa para decidir junto com você qual é o melhor caminho: a cirurgia aberta, um procedimento menos invasivo feito por cateter, ou o tratamento clínico.",
+          "Ele também ajuda a planejar a intensidade do cuidado que você vai precisar depois da cirurgia — por exemplo, quanto tempo de monitorização mais próxima costuma ser necessário."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o número NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Não é uma previsão exata do que vai acontecer com você — é uma estimativa baseada em grandes grupos de pacientes com características parecidas",
+          "Um resultado mais alto, sozinho, não significa que a cirurgia está descartada — muitos outros fatores entram nessa decisão, incluindo sua fragilidade e sua capacidade de fazer esforço no dia a dia, que o cálculo não capta por completo",
+          "Existem outros cálculos parecidos (usados, por exemplo, nos Estados Unidos) que usam variáveis diferentes — os números de instrumentos diferentes não devem ser comparados diretamente entre si",
+          "Não substitui a conversa e o julgamento clínico da equipe que te acompanha"
+        ]
+      },
+      {
+        "titulo": "O que costuma mudar na prática com esse resultado",
+        "paragrafos": [
+          "Um resultado mais alto pode levar a equipe a considerar, quando existir essa opção para o seu caso, um procedimento menos invasivo por cateter em vez da cirurgia aberta, ou a buscar otimizar antes da cirurgia alguma condição que esteja pesando no cálculo — como anemia ou função renal.",
+          "Essa é sempre uma decisão conversada com você, levando em conta o quadro completo, não só o número."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova ou que piorou, enquanto você aguarda a data da cirurgia",
+      "Falta de ar nova, ou que piorou, mesmo em esforços leves",
+      "Inchaço súbito nas pernas ou ganho de peso rápido antes da cirurgia",
+      "Palpitação nova associada a tontura ou desmaio",
+      "Febre ou mal-estar importante nos dias antes da cirurgia — avise a equipe"
+    ],
+    "perguntas": [
+      "Qual foi o meu resultado nesse cálculo, e o que ele significa para o meu caso específico?",
+      "Esse resultado influencia a escolha entre a cirurgia aberta e um procedimento por cateter?",
+      "Existe algo que eu possa otimizar antes da cirurgia para reduzir esse risco?",
+      "Esse número já considera minha fragilidade e minha capacidade de fazer esforço no dia a dia, ou isso é avaliado à parte?",
+      "Esse resultado muda como vou ser acompanhado nos primeiros dias depois da cirurgia?"
+    ],
+    "fontes": [
+      "Nashef SA, Roques F, Sharples LD, Nilsson J, Smith C, Goldstone AR, Lockowandt U. EuroSCORE II. Eur J Cardiothorac Surg. 2012;41(4):734-744. DOI: 10.1093/ejcts/ezs043. PMID: 22378855."
+    ]
+  },
+  {
+    "slug": "protecao-do-coracao-na-radioterapia-de-mama-esquerda",
+    "titulo": "Como proteger o coração durante a radioterapia de mama esquerda",
+    "subtitulo": "A técnica de respiração que afasta o coração da área tratada, sem envolver nenhum remédio",
+    "tema": "Cardio-oncologia",
+    "documento_slug": "protecao-cardiaca-na-radioterapia-de-mama-esquerda-inspiracao-profunda-sustentada",
+    "resumo": "Explicação em linguagem simples sobre por que o coração pode receber radiação incidental durante o tratamento de câncer de mama esquerda, e sobre a técnica de inspiração profunda sustentada (DIBH), usada durante a própria aplicação da radioterapia para reduzir essa exposição.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "Por que o coração entra na conversa na radioterapia de mama esquerda",
+        "paragrafos": [
+          "Quando a radioterapia é aplicada na mama esquerda, o coração fica próximo da região tratada — em especial uma das artérias do coração, que passa logo atrás da parede do tórax nesse lado. Por isso, parte da radiação destinada ao tratamento do câncer pode, de forma incidental, também atingir o coração.",
+          "Pesquisas mostram que quanto mais radiação o coração recebe nesse tratamento, maior a chance de, no futuro, surgir um problema relacionado às artérias do coração — esse aumento de risco pode começar já nos primeiros anos depois do tratamento e continuar aparecendo por décadas. Por isso, reduzir a dose que chega ao coração é considerado importante em qualquer grau, não só quando ela ultrapassa algum valor específico."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que é a técnica de inspiração profunda sustentada (DIBH)",
+        "paragrafos": [
+          "É uma forma de aplicar a radioterapia em que você é orientada a inspirar profundamente e segurar a respiração durante cada aplicação, às vezes com o apoio de um equipamento que monitora sua respiração.",
+          "Ao encher bem os pulmões de ar, o coração se desloca fisicamente para mais longe da parede do tórax e da área que está sendo tratada — é um efeito puramente de posicionamento do corpo durante o exame, sem nenhum remédio envolvido."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que essa técnica muda",
+        "paragrafos": [],
+        "itens": [
+          "Reduz a quantidade de radiação que chega ao coração como um todo, em comparação com respirar normalmente durante a aplicação",
+          "Reduz, em especial, a radiação que chega à artéria do coração mais próxima da área tratada",
+          "Não envolve remédio nem tem efeito colateral no restante do corpo — é uma técnica de posicionamento durante a própria aplicação",
+          "Exige a sua colaboração para inspirar e segurar a respiração de forma consistente a cada aplicação, o que costuma ser treinado com a equipe de radioterapia antes de começar o tratamento"
+        ]
+      },
+      {
+        "titulo": "O que isso NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Não existe, até o momento, um estudo que tenha acompanhado pacientes e comparado diretamente quem fez essa técnica com quem não fez, medindo quantas pessoas de cada grupo tiveram um problema cardíaco de fato — a recomendação vem da combinação de duas informações: a de que menos radiação ao coração está ligada a menos risco futuro, e a de que essa técnica reduz de forma consistente a radiação que chega ao coração",
+          "A técnica não substitui o controle dos seus próprios fatores de risco cardiovascular, como pressão alta, colesterol e tabagismo, antes, durante e depois do tratamento do câncer",
+          "Nem todo serviço de radioterapia necessariamente usa essa técnica hoje — por isso vale perguntar diretamente à equipe que vai te tratar"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito, mesmo anos depois de terminar a radioterapia",
+      "Falta de ar nova, ou que piorou, mesmo em esforços leves",
+      "Palpitação (coração acelerado ou irregular) associada a tontura",
+      "Inchaço novo nas pernas ou cansaço muito maior do que o esperado",
+      "Qualquer sintoma cardíaco novo — mesmo muito tempo depois de terminado o tratamento do câncer, já que o risco relacionado à radioterapia pode aparecer anos depois"
+    ],
+    "perguntas": [
+      "A técnica de inspiração profunda sustentada (DIBH) está disponível e sendo usada no meu tratamento?",
+      "É possível saber, no meu planejamento, a estimativa de radiação que meu coração vai receber?",
+      "Eu tenho algum fator de risco cardiovascular que deveria ser avaliado antes de começar a radioterapia?",
+      "Depois do tratamento, com que frequência devo fazer acompanhamento cardiológico, e por quanto tempo?",
+      "Existe algo que eu possa fazer, além dessa técnica, para reduzir ainda mais esse risco no futuro?"
+    ],
+    "fontes": [
+      "Darby SC, Ewertz M, McGale P, et al. Risk of Ischemic Heart Disease in Women after Radiotherapy for Breast Cancer. N Engl J Med. 2013;368(11):987-998. DOI: 10.1056/NEJMoa1209825. PMID: 23484825.",
+      "Lu Y, Yang D, Zhang X, et al. Comparison of Deep Inspiration Breath Hold Versus Free Breathing in Radiotherapy for Left Sided Breast Cancer. Front Oncol. 2022;12:845037. DOI: 10.3389/fonc.2022.845037. PMID: 35530354. PMCID: PMC9069140."
+    ]
   }
 ]
