@@ -1,17 +1,14 @@
 # -*- coding: utf-8 -*-
-"""Download público de PDF clínico por link — Tarefa 29 (30/07/2026).
+"""Acesso público controlado a documentos clínicos emitidos pela CorVIA.
 
-Rota SEM autenticação, de propósito: quem acessa é o paciente, que não tem
-(nem deveria precisar de) conta na Corvia. A única defesa é o token — 32
-bytes aleatórios (`DocumentShareLink.token`, gerado por `secrets.
-token_urlsafe`), o mesmo padrão já usado em `password_reset_tokens`.
+Há dois mecanismos independentes:
+- `DocumentShareLink.token`: link aleatório e expirável criado para envio ao paciente;
+- QR/código de validação: capability HMAC impressa dentro da revisão assinada.
 
-Por isso este router fica fora de `ROUTERS_ASSINANTES`, mas TAMBÉM fora do
-espírito de `ROUTERS_LIVRES` como estava documentado em `main.py` até aqui
-(entrar, recuperar senha, assinar, admin) — é a primeira rota do sistema
-pensada para alguém que nunca terá login. Continua registrada em
-`ROUTERS_LIVRES` porque a lista já é "sem `assinante_ativo`", que é o que
-importa; o comentário de lá foi atualizado para refletir isso.
+A consulta de autenticidade nunca expõe dados clínicos do paciente. Códigos QR
+novos de 128 bits também podem baixar o PDF original ASSINADO da receita; QR
+legado de 64 bits permanece somente para validação, preservando compatibilidade
+sem transformar um token antigo em credencial de acesso ao conteúdo clínico.
 """
 from datetime import datetime, timezone
 
@@ -37,16 +34,9 @@ def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
 
     doc = db.get(PrescriptionDocument, referencia_id)
     if not doc or doc.status != "emitido":
-        # Link pode ter sido criado e o documento nunca chegou a ser emitido
-        # (não deveria acontecer, dado que `enviar_email` exige emitido, mas
-        # o link sobrevive ao documento em teoria — mais seguro checar de novo
-        # aqui do que confiar só na checagem de quando o link foi criado).
         raise HTTPException(status_code=404, detail="Documento não disponível.")
 
     def _regerar() -> bytes:
-        # Só roda para documento emitido ANTES da Tarefa 4 (sem
-        # `DocumentoEmitido`) — reproduz o PDF exatamente como saía antes:
-        # sempre "MANUAL", com a data de quando foi de fato emitido.
         presc = db.get(Prescription, doc.prescription_id)
         if not presc:
             raise HTTPException(status_code=404, detail="Documento não disponível.")
@@ -94,11 +84,6 @@ def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
 
 
 def _pdf_material_paciente(db: Session, referencia_id: int, criado_por: int) -> tuple[bytes, str]:
-    """Reaproveita `svc_material.gerar` — o mesmo gerador de PDF já usado em
-    `GET /api/material-paciente/{slug}/pdf` (Tarefa 12). O papel timbrado
-    sai com os dados de `criado_por` (quem gerou o link, sempre o médico que
-    disparou o envio), não de um médico genérico — é a ele que o paciente
-    volta com dúvida, mesma lógica já documentada em `exportacao.py`."""
     from app.models.patient_material import PatientMaterial
     from app.services import material_paciente as svc_material
 
@@ -118,10 +103,6 @@ def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
         raise HTTPException(status_code=404, detail="Documento não disponível.")
 
     def _regerar() -> bytes:
-        # Só roda para documento gerado ANTES da Tarefa 4 (sem
-        # `DocumentoEmitido` — o primeiro download via `GET .../pdf` de
-        # `documents.py` passou a emitir e persistir). "MANUAL" e
-        # `g.created_at` reproduzem o que já saía antes, determinístico.
         emissor = db.get(User, g.created_by)
         titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
         return documento_generico(
@@ -136,6 +117,32 @@ def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
     return pdf, f"documento-{g.id}.pdf"
 
 
+def _contexto_publico_receita(db: Session, referencia_id: int) -> dict:
+    """Somente fatos de emissão/prescritor; nunca nome, documento ou itens do paciente."""
+    doc = db.get(PrescriptionDocument, referencia_id)
+    if not doc or doc.status != "emitido":
+        return {"confirmada_corvia": False, "emitido_em": None, "prescritor": None}
+    presc = db.get(Prescription, doc.prescription_id)
+    medico = db.get(User, presc.created_by) if presc else None
+    prescritor = None
+    if medico:
+        conselho_nome = medico.council_name_other if medico.council_name == "OUTRO" else medico.council_name
+        conselho_uf = medico.council_state_other if medico.council_name == "OUTRO" else medico.council_state
+        prescritor = {
+            "nome": medico.full_name,
+            "conselho": conselho_nome or "CRM",
+            "numero": medico.council_number or medico.crm,
+            "uf": conselho_uf,
+            "rqe": medico.rqe,
+        }
+    return {
+        "confirmada_corvia": True,
+        "emitido_em": doc.emitido_em,
+        "prescritor": prescritor,
+        "tipo_receita": doc.tipo_codigo,
+    }
+
+
 @router.get("/validar/{codigo}")
 def validar_documento_publico(codigo: str, db: Session = Depends(get_db)):
     registro = validacao_publica.localizar(db, codigo)
@@ -143,14 +150,32 @@ def validar_documento_publico(codigo: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Código de validação inválido ou documento não encontrado.")
 
     resultado = validacao_publica.validar(registro)
+    contexto_receita = (
+        _contexto_publico_receita(db, registro.referencia_id)
+        if registro.tipo == assinatura_emissao.TIPO_RECEITA
+        else {"confirmada_corvia": True, "emitido_em": registro.criado_em, "prescritor": None}
+    )
+    codigo_normalizado = validacao_publica.normalizar_codigo(codigo)
+    pdf_original_disponivel = bool(
+        registro.tipo == assinatura_emissao.TIPO_RECEITA
+        and resultado.valido
+        and validacao_publica.codigo_permite_download(codigo_normalizado)
+    )
     return {
-        "codigo": validacao_publica.codigo_documento(
-            tipo=registro.tipo, referencia_id=registro.referencia_id, criado_por=registro.criado_por,
-        ),
+        "codigo": codigo_normalizado,
         "valido": resultado.valido,
         "tipo": registro.tipo,
-        "metodo": registro.metodo,
+        "tipo_receita": contexto_receita.get("tipo_receita"),
+        "emissao_confirmada_corvia": contexto_receita["confirmada_corvia"],
+        "emitido_em": contexto_receita["emitido_em"],
+        "registrado_corvia_em": resultado.registrado_corvia_em,
+        "prescritor": contexto_receita["prescritor"],
+        "metodo": resultado.metodo_codigo,
+        "metodo_nome": resultado.metodo_nome,
+        "metodo_familia": resultado.metodo_familia,
         "nivel": registro.nivel,
+        "fluxo_assinatura": resultado.fluxo_assinatura,
+        "fluxo_assinatura_descricao": resultado.fluxo_assinatura_descricao,
         "integridade_hash": resultado.integridade_hash,
         "assinatura_encontrada": resultado.assinatura_encontrada,
         "assinatura_intacta": resultado.assinatura_intacta,
@@ -158,15 +183,56 @@ def validar_documento_publico(codigo: str, db: Session = Depends(get_db)):
         "cobre_documento_inteiro": resultado.cobre_documento_inteiro,
         "titular": resultado.titular,
         "emissor_certificado": resultado.emissor_certificado,
+        "numero_serie_certificado": resultado.numero_serie,
+        "certificado_valido_de": resultado.certificado_valido_de,
+        "certificado_valido_ate": resultado.certificado_valido_ate,
+        "certificado_valido_no_momento_assinatura": resultado.certificado_valido_no_momento_assinatura,
+        "politicas_certificado": resultado.politicas_certificado,
         "assinado_em": resultado.assinado_em,
         "qualificada_icp_brasil": resultado.qualificada_icp_brasil,
+        "cadeia_confianca_validada": False,
         "sha256": resultado.sha256,
+        "pdf_original_disponivel": pdf_original_disponivel,
+        "pdf_original_url": (
+            f"/api/documentos-publicos/validar/{codigo_normalizado}/pdf"
+            if pdf_original_disponivel else None
+        ),
+        "validacao_independente_url": "https://validar.iti.gov.br/",
         "aviso": (
-            "A CorVIA confirmou os bytes persistidos e a integridade criptográfica da assinatura "
-            "embutida no PDF. A validação oficial de cadeia de confiança, revogação e requisitos "
-            "adicionais pode ser complementada pelo validador oficial do ITI/ICP-Brasil."
+            "A CorVIA confirmou o artefato persistido, seu SHA-256 e a integridade criptográfica "
+            "da assinatura PAdES. A cadeia de confiança e revogação do certificado deve ser "
+            "confirmada de forma independente no VALIDAR/ITI ou outro validador confiável."
         ),
     }
+
+
+@router.get("/validar/{codigo}/pdf")
+def baixar_pdf_original_validado(codigo: str, db: Session = Depends(get_db)):
+    """Baixa os bytes EXATOS assinados. Nunca regera, converte ou modifica o PDF."""
+    if not validacao_publica.codigo_permite_download(codigo):
+        # QR legado continua autenticando metadados, mas não vira credencial de conteúdo.
+        raise HTTPException(status_code=404, detail="PDF original indisponível para este código de validação.")
+    registro = validacao_publica.localizar(db, codigo)
+    if registro is None or registro.tipo != assinatura_emissao.TIPO_RECEITA:
+        raise HTTPException(status_code=404, detail="Receita não encontrada.")
+    resultado = validacao_publica.validar(registro)
+    if not resultado.valido:
+        raise HTTPException(
+            status_code=409,
+            detail="O PDF não será liberado porque a verificação de integridade/assinatura não foi concluída com sucesso.",
+        )
+    pdf, nome_arquivo = _pdf_receita(db, registro.referencia_id)
+    return Response(
+        content=pdf,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f'attachment; filename="{nome_arquivo}"',
+            "Cache-Control": "private, no-store, max-age=0",
+            "Pragma": "no-cache",
+            "X-Content-Type-Options": "nosniff",
+            "Referrer-Policy": "no-referrer",
+        },
+    )
 
 
 @router.get("/{token}")
