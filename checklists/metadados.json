@@ -18146,5 +18146,235 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "monitorizacao-cardiovascular-do-paciente-bipolar-em-uso-de-litio",
+    "condicao": "Monitorização cardiovascular do paciente com transtorno bipolar em uso de lítio",
+    "resumo": "Checklist de dosagem de litemia, gatilhos para eletrocardiograma e critérios para diferenciar achado eletrocardiográfico benigno de sinal que exige avaliação cardiológica antes de manter, ajustar ou suspender o lítio.",
+    "documento_origem": "litio-toxicidade-eletrocardiografica-e-risco-cardiovascular-no-transtorno-bipolar",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mehta N, Vannozzi R. Lithium-induced electrocardiographic changes: A complete review. Clin Cardiol. 2017;40(12):1363-1367. DOI: 10.1002/clc.22822. PMID: 29247520",
+      "Xu N, Yu H, Deng Y, Yang R, Zheng L, Wang K, Wang H, Wu J, Xie S, Chen Y, Li T, Chang Z, Lv X, Hu Y, Wu Y, Yu X. Association of lithium treatment with incident cardiovascular disease in patients with bipolar disorder: A claims-based longitudinal cohort study. J Affect Disord. 2026;414:122282. DOI: 10.1016/j.jad.2026.122282. PMID: 42471187",
+      "Bula do Carbolitium® (carbonato de lítio), Eurofarma Laboratórios, MS 1.0043.0518, consultada em 01/08/2026"
+    ],
+    "itens": [
+      {
+        "id": "litio-cv-dosar-litemia-fase-aguda",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Na fase aguda (mania), dosar litemia 2 vezes por semana até estabilização clínica, mantendo a faixa-alvo de 0,8 a 1,4 mEq/L, colhida 8-12h após a última tomada.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "litio-cv-dosar-litemia-manutencao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Na fase de manutenção, dosar litemia no mínimo a cada 2 meses, mantendo a faixa-alvo de 0,6 a 1,0 mEq/L, sempre 8-12h após a última tomada.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "litio-cv-ecg-sintoma-novo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ECG diante de qualquer sintoma cardiovascular novo, alteração de litemia fora da faixa terapêutica, ou início/reajuste de dose em paciente com cardiopatia estrutural ou de risco — não existe protocolo padronizado de ECG seriado por tempo de tratamento, nem na literatura internacional nem na bula brasileira.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "litio-cv-nao-suspender-alteracao-benigna",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não suspender o lítio automaticamente diante de achado eletrocardiográfico discreto e assintomático (por exemplo, inversão isolada de onda T com litemia dentro da faixa terapêutica) — é o achado mais comum e, na maioria dos relatos, benigno e reversível.",
+        "origem_secao": "Síntese prática: como conciliar os dois achados sem escolher um vencedor"
+      },
+      {
+        "id": "litio-cv-encaminhar-disfuncao-no-sinusal",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para avaliação cardiológica antes de manter, ajustar ou suspender o lítio diante de disfunção do nó sinusal, bloqueio de condução de alto grau ou padrão eletrocardiográfico de Brugada emergente.",
+        "origem_secao": "Síntese prática: como conciliar os dois achados sem escolher um vencedor"
+      },
+      {
+        "id": "litio-cv-nao-generalizar-efeito-protetor",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não interpretar o efeito cardiovascular favorável observado em coorte (HR 0,38 para doença cardiovascular geral; HR 0,20 para doença isquêmica do coração) como prova causal e generalizável — é estudo observacional de base administrativa única (Pequim), com IC95% que chega perto de 1 mesmo no desfecho de maior efeito (0,06-0,67).",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "litio-cv-nao-extrapolar-avc",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não extrapolar o efeito protetor cardiovascular para acidente vascular cerebral — a coorte não encontrou associação estatisticamente significativa para esse desfecho especificamente (HR 0,69; IC95% 0,27-1,75).",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "litio-cv-exames-basais-funcao-renal-tireoidiana",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar exames de função renal e função tireoidiana antes do início do lítio e periodicamente na manutenção, conforme a bula brasileira do Carbolitium®.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Mehta N, Vannozzi R. Clin Cardiol. 2017;40(12):1363-1367 (PMID 29247520); Xu N et al. J Affect Disord. 2026;414:122282 (PMID 42471187); e na bula do Carbolitium®, Eurofarma Laboratórios, MS 1.0043.0518, em 21/08/2026."
+  },
+  {
+    "slug": "triagem-cardiovascular-de-red-s-no-atleta",
+    "condicao": "Triagem de RED-S (Relative Energy Deficiency in Sport) com repercussão cardiovascular no atleta",
+    "resumo": "Checklist de sinais de alarme cardiovasculares e sistêmicos que devem levantar a suspeita de baixa disponibilidade energética no atleta, e do que investigar e evitar antes de liberar ou restringir a participação esportiva.",
+    "documento_origem": "reds-baixa-disponibilidade-energetica-risco-cardiovascular-atleta",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mountjoy M, Ackerman KE, Bailey DM, et al. 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs). Br J Sports Med. 2023;57:1073-1097. DOI: 10.1136/bjsports-2023-106994",
+      "Holtzman B, Kelly RK, Saville GH, et al. Low energy availability surrogates are associated with Relative Energy Deficiency in Sport outcomes in male athletes. Br J Sports Med. 2025;59:48-55. PMID: 39461735. DOI: 10.1136/bjsports-2024-109165",
+      "Heikura IA, McCluskey WTP, Tsai MC, et al. Application of the IOC Relative Energy Deficiency in Sport (REDs) Clinical Assessment Tool version 2 (CAT2) across 200+ elite athletes. Br J Sports Med. 2025;59:24-35. PMID: 39164063. DOI: 10.1136/bjsports-2024-108121"
+    ],
+    "itens": [
+      {
+        "id": "reds-cv-rastrear-sinais-cardio-inespecificos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar RED-S em atleta com queda inesperada de performance, fadiga, tontura/pré-síncope, bradicardia desproporcional ao contexto, hipotensão ou baixa tolerância ortostática, ou palpitações — nenhum achado isolado diagnostica RED-S, o valor está no padrão clínico.",
+        "origem_secao": "Por que interessa ao cardiologista"
+      },
+      {
+        "id": "reds-cv-checar-dominios-nao-cardiacos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Checar concomitância de anemia/deficiência de ferro, perda ponderal não planejada, irregularidade menstrual ou amenorreia, redução de libido/sinais de hipogonadismo e fraturas por estresse recorrentes — a suspeita cresce quando vários domínios convergem, não com achado isolado.",
+        "origem_secao": "Sinais que devem aumentar a suspeita"
+      },
+      {
+        "id": "reds-cv-nao-presumir-transtorno-alimentar",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não presumir psicopatologia nem tratar RED-S apenas como questão comportamental — a baixa disponibilidade energética pode decorrer de restrição intencional, transtorno alimentar, manipulação de composição corporal ou simples incompatibilidade entre ingestão e gasto energético do treinamento.",
+        "origem_secao": "Baixa disponibilidade energética não é sinônimo de transtorno alimentar"
+      },
+      {
+        "id": "reds-cv-investigacao-dirigida-por-sintoma",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dirigir a investigação pelos sintomas e pelo contexto: ECG de repouso, hemograma e investigação de ferro, eletrólitos, função tireoidiana quando indicada, teste ergométrico ou cardiopulmonar, ecocardiograma, monitorização de ritmo em palpitações ou síncope, e investigação de hipotensão ortostática quando pertinente.",
+        "origem_secao": "O que investigar quando há sintomas cardiovasculares"
+      },
+      {
+        "id": "reds-cv-nao-excluir-outras-causas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Em atleta com perda de performance, manter a hipótese de RED-S coexistindo com investigação de causas cardíacas, hematológicas, endócrinas, infecciosas e de overtraining — não é diagnóstico de exclusão automática.",
+        "origem_secao": "O que investigar quando há sintomas cardiovasculares"
+      },
+      {
+        "id": "reds-cv-encaminhar-equipe-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para equipe multidisciplinar (medicina esportiva, nutrição e, quando necessário, saúde mental, endocrinologia e cardiologia) — não existe fármaco cardiovascular que trate a causa do RED-S; o núcleo do tratamento é restaurar a disponibilidade energética adequada.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "reds-cv-nao-liberar-so-por-exame-normal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não liberar o atleta com sinais de maior risco apenas porque ECG ou ecocardiograma estão normais — RED-S é síndrome sistêmica, e parte importante do risco pode estar fora da estrutura cardíaca.",
+        "origem_secao": "Retorno e participação esportiva"
+      },
+      {
+        "id": "reds-cv-nao-restringir-so-a-mulheres",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não restringir a suspeita de RED-S a atletas do sexo feminino — o consenso IOC 2023 reconhece a síndrome em homens e mulheres, e o conceito é mais amplo que a antiga tríade da atleta feminina.",
+        "origem_secao": "Armadilhas práticas"
+      },
+      {
+        "id": "reds-cv-considerar-reducao-carga-treino",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar redução temporária da carga de treinamento quando a gravidade clínica não permitir manutenção segura do volume habitual, como parte da decisão sobre manter, reduzir ou suspender a participação esportiva.",
+        "origem_secao": "Retorno e participação esportiva"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Mountjoy M et al. Br J Sports Med. 2023;57:1073-1097 (DOI: 10.1136/bjsports-2023-106994), Holtzman B et al. Br J Sports Med. 2025;59:48-55 (PMID 39461735) e Heikura IA et al. Br J Sports Med. 2025;59:24-35 (PMID 39164063), em 21/08/2026."
+  },
+  {
+    "slug": "avaliacao-do-atleta-com-cdi-ou-s-icd-para-participacao-esportiva",
+    "condicao": "Avaliação do atleta portador de cardiodesfibrilador implantável (CDI) ou S-ICD para participação esportiva",
+    "resumo": "Checklist dos pontos que determinam a liberação esportiva do atleta com CDI/S-ICD — doença de base, histórico arrítmico, programação do dispositivo e tipo de esporte — e da conduta diante de choque e retorno após evento.",
+    "documento_origem": "cdi-sicd-participacao-esportiva-atleta",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lampert R, Olshansky B, Heidbuchel H, et al. Safety of sports for athletes with implantable cardioverter-defibrillators: results of a prospective, multinational registry. Circulation. 2013;127:2021-2030. PMID: 23690453. DOI: 10.1161/CIRCULATIONAHA.112.000447",
+      "Gasperetti A, et al. Long-term performance of subcutaneous implantable defibrillators in athletes: a multicenter, real-world analysis of sport activities from the iSUSI registry. Heart Rhythm. 2025. PMID: 39307379. DOI: 10.1016/j.hrthm.2024.09.039",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151:e716-e761. DOI: 10.1161/CIR.0000000000001297"
+    ],
+    "itens": [
+      {
+        "id": "cdi-esporte-avaliar-doenca-de-base",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar a doença de base do atleta (cardiomiopatia hipertrófica, cardiomiopatia arritmogênica, síndrome do QT longo, síndrome de Brugada, cardiopatia congênita ou outra condição) — os riscos são diferentes conforme a etiologia, e o CDI não transforma uma cardiopatia de alto risco em uma cardiopatia de baixo risco.",
+        "origem_secao": "O que realmente determina liberação esportiva"
+      },
+      {
+        "id": "cdi-esporte-revisar-historia-arritmica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisar a história arrítmica — TV/FV prévia, tempestade elétrica, síncope, choques recentes e recorrência sob esforço — e a indicação do CDI (prevenção primária ou secundária, que não representam o mesmo fenótipo clínico).",
+        "origem_secao": "O que realmente determina liberação esportiva"
+      },
+      {
+        "id": "cdi-esporte-teste-de-esforco",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar teste de esforço para avaliar resposta ao exercício, procurando arritmias, isquemia, sintomas e a frequência cardíaca máxima real do atleta.",
+        "origem_secao": "O que realmente determina liberação esportiva"
+      },
+      {
+        "id": "cdi-esporte-revisar-programacao-dispositivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisar a programação do dispositivo (limites de detecção e duração), considerando a frequência sinusal alcançada no esporte pelo atleta, para reduzir terapia inadequada sem comprometer a segurança.",
+        "origem_secao": "O que realmente determina liberação esportiva"
+      },
+      {
+        "id": "cdi-esporte-avaliar-tipo-esporte-e-integridade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar o tipo de esporte (colisão, trauma torácico, risco de queda, altura, água, ou situações em que perda transitória de consciência colocaria terceiros em risco) e revisar a integridade do sistema (posição do gerador, eletrodos, limiar, sensoriamento e histórico de falha).",
+        "origem_secao": "O que realmente determina liberação esportiva"
+      },
+      {
+        "id": "cdi-esporte-reavaliar-com-cautela",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reavaliar com cautela a participação competitiva diante de choques apropriados recorrentes (especialmente induzidos por esforço), tempestade elétrica, síncope arrítmica, doença de base em progressão, arritmias ventriculares não controladas ou mau funcionamento do dispositivo.",
+        "origem_secao": "Quando o esporte continua preocupante"
+      },
+      {
+        "id": "cdi-esporte-apos-choque-determinar-mecanismo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Após um choque durante exercício, determinar se foi apropriado ou inapropriado, o mecanismo da arritmia, a relação temporal com a intensidade do esforço, a presença de gatilho reversível e a progressão estrutural da cardiopatia, antes de decidir sobre retorno.",
+        "origem_secao": "Retorno após choque"
+      },
+      {
+        "id": "cdi-esporte-retorno-apos-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Só permitir o retorno ao esporte após reavaliação do risco individual e discussão explícita dos riscos residuais — o choque não deve ser tratado apenas como evento técnico do dispositivo.",
+        "origem_secao": "Retorno após choque"
+      },
+      {
+        "id": "cdi-esporte-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Conduzir a decisão de liberação como decisão compartilhada, combinando probabilidade de arritmia durante a atividade, consequências potenciais de um choque ou síncope naquele esporte específico, doença de base, desempenho/programação do dispositivo e valores e objetivos do atleta — decisão compartilhada não significa ausência de contraindicações.",
+        "origem_secao": "Decisão compartilhada"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Lampert R et al. Circulation. 2013;127:2021-2030 (PMID 23690453), Gasperetti A et al. Heart Rhythm. 2025 (PMID 39307379) e Kim JH et al. Circulation. 2025;151:e716-e761 (DOI: 10.1161/CIR.0000000000001297), em 21/08/2026."
   }
 ]
