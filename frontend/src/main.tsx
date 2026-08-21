@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import { AuthProvider } from "./lib/auth";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
@@ -69,6 +70,7 @@ import "./styles/mobile-header-composed.css";
 import "./styles/corvia-via-blue-global.css";
 import "./styles/product-stabilization-final.css";
 import "./styles/clinical-pixel-polish-conservative.css";
+import "./styles/home-desktop-symmetric-personalizable.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
@@ -118,6 +120,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
+        <HomeQuickActionsPersonalizer />
         <App />
       </AuthProvider>
     </BrowserRouter>
