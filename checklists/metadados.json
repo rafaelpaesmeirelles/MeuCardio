@@ -8424,5 +8424,230 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estratificacao-de-risco-de-morte-subita-e-decisao-de-cdi-na-cardiomiopatia-hipertrofica",
+    "condicao": "Estratificação de risco de morte súbita e decisão sobre CDI na cardiomiopatia hipertrófica",
+    "documento_origem": "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+    "theme": "Cardiomiopatias",
+    "resumo": "O que checar ao estratificar risco de morte súbita em 5 anos na cardiomiopatia hipertrófica pelo HCM Risk-SCD — elegibilidade, cálculo, faixas de risco (baixo/intermediário/alto), modificadores em baixo risco (LGE extenso e FEVE reduzida), prevenção secundária independente do escore, e reavaliação periódica.",
+    "review_status": "revisado",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID 37622657",
+      "Validation of Guideline Recommendation on Sudden Cardiac Death Prevention in Hypertrophic Cardiomyopathy · JACC: Heart Failure · 2025 · https://www.jacc.org/doi/10.1016/j.jchf.2024.12.006"
+    ],
+    "itens": [
+      {
+        "id": "hcmrisk-elegibilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Estratificação de morte súbita — fluxograma-cardiomiopatia-hipertrofica-esc-2023.md",
+        "texto": "Confirmado que o paciente NÃO teve parada cardíaca prévia nem taquicardia ventricular sustentada com comprometimento hemodinâmico — nesse cenário a indicação de CDI é por prevenção secundária (Classe I, nível B) e não depende do cálculo do HCM Risk-SCD."
+      },
+      {
+        "id": "hcmrisk-calculo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Estratificacao risco morte subita — cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md",
+        "texto": "HCM Risk-SCD calculado em paciente ≥16 anos (ferramenta recomendada, Classe I, nível B) — risco estimado em 5 anos registrado no prontuário, incorporando os fatores do modelo (idade, espessura máxima de parede, diâmetro de átrio esquerdo, gradiente de via de saída, TVNS, história familiar de morte súbita <40 anos, síncope inexplicada não neurocardiogênica)."
+      },
+      {
+        "id": "hcmrisk-pediatrico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "Estratificacao risco morte subita (ferramenta pediatrica) — versao-completa.md",
+        "texto": "Se paciente <16 anos: modelo validado específico pediátrico (ex.: HCM Risk-Kids) usado em vez do HCM Risk-SCD de adulto (Classe I, nível B) — o modelo de adulto não se aplica a essa faixa etária."
+      },
+      {
+        "id": "hcmrisk-faixa-registrada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Estratificação de morte súbita — fluxograma-cardiomiopatia-hipertrofica-esc-2023.md",
+        "texto": "Faixa de risco em 5 anos classificada corretamente pelos três cortes da ESC 2023: baixo (menor que 4%), intermediário (4% a menos de 6%) ou alto (maior ou igual a 6%)."
+      },
+      {
+        "id": "hcmrisk-cdi-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Estratificacao risco morte subita (corte icd alto risco) — versao-completa.md",
+        "texto": "Se risco ≥6% (alto risco): CDI discutido e considerado em decisão compartilhada com o paciente (Classe IIa, nível B) — 'deve ser considerado', não indicação automática incondicional."
+      },
+      {
+        "id": "hcmrisk-cdi-risco-intermediario",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Estratificacao risco morte subita (corte icd risco intermediario) — versao-completa.md",
+        "texto": "Se risco entre 4% e menos de 6% (intermediário): decisão individualizada registrada, com julgamento clínico adicional e reavaliação periódica do escore (Classe IIb, nível B) — implante PODE ser considerado, não é automático."
+      },
+      {
+        "id": "hcmrisk-modificadores-baixo-risco",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "origem_secao": "Estratificação de morte súbita — fluxograma-cardiomiopatia-hipertrofica-esc-2023.md",
+        "texto": "Se risco <4% (baixo risco): checados realce tardio extenso na RM cardíaca (≥15%) e FEVE (<50%) como modificadores — presença de qualquer um dos dois pode ser considerada na decisão compartilhada sobre CDI profilático mesmo em baixo risco (Classe IIb, nível B); ausência dos dois mantém CDI em geral não indicado, com vigilância e reavaliação periódica."
+      },
+      {
+        "id": "hcmrisk-prevencao-secundaria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "Estratificacao risco morte subita (prevencao secundaria) — versao-completa.md",
+        "texto": "Em sobrevivente de parada cardíaca por TV/FV, ou TV sustentada com comprometimento hemodinâmico: CDI indicado como prevenção secundária (Classe I, nível B), independentemente do valor do HCM Risk-SCD."
+      },
+      {
+        "id": "hcmrisk-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "Estratificacao risco morte subita (periodicidade reavaliacao) — versao-completa.md",
+        "texto": "Reavaliação do risco de morte súbita em 5 anos agendada em intervalos de 1-2 anos, ou antes se houver mudança no estado clínico (Classe I, nível B) — o HCM Risk-SCD deve ser recalculado periodicamente, não é cálculo único na primeira consulta."
+      }
+    ],
+    "revisao": "Cada item corresponde a uma recomendação nomeada (classe/nível) ou dado estruturado (fatores do escore, cortes de risco em 5 anos, modificadores) dos dois documentos de origem, ambos derivados da mesma diretriz ESC 2023 de cardiomiopatias — o fluxograma para a árvore de decisão e a versão completa para o detalhamento classe/nível de cada recomendação. Nenhum corte numérico foi alterado ou extrapolado. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) além da revisão de conteúdo registrada aqui."
+  },
+  {
+    "slug": "algoritmo-diagnostico-nao-invasivo-de-amiloidose-cardiaca-attr",
+    "condicao": "Triagem e diagnóstico não invasivo de amiloidose cardíaca por transtirretina (ATTR)",
+    "documento_origem": "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+    "theme": "Cardiomiopatias",
+    "resumo": "O que checar ao investigar suspeita de amiloidose cardíaca — gatilho estrutural e sinais de alerta, pedido conjunto de cintilografia óssea (com SPECT) e as três provas de proteína monoclonal, a regra de leitura hierárquica que evita tratar AL como ATTR, a graduação de Perugini, e a tipagem genética/rastreamento familiar após confirmação.",
+    "review_status": "revisado",
+    "source_refs": [
+      "Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases · European Heart Journal · 2021 · 42(16):1554-1568 · DOI: 10.1093/eurheartj/ehab072 · PMID: 33825853 (co-publicado no European Journal of Heart Failure, DOI: 10.1002/ejhf.2140, versões idênticas salvo diferenças de estilo)"
+    ],
+    "itens": [
+      {
+        "id": "amilo-gatilho-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Quando levantar a suspeita — fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo.md",
+        "texto": "Suspeita levantada diante do gatilho estrutural — espessura de parede do VE de 12 mm ou mais, sem explicação, em ventrículo não dilatado —, sobretudo em idoso com insuficiência cardíaca de fração de ejeção preservada, diagnóstico de cardiomiopatia hipertrófica, ou estenose aórtica grave/candidato a TAVI: a ATTR foi encontrada em até 7 a 19% dos pacientes nesses cenários."
+      },
+      {
+        "id": "amilo-sinais-alerta",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "Quando levantar a suspeita (tabela de sinais de alerta) — mesmo documento",
+        "texto": "Sinais de alerta cardíacos (baixa voltagem do QRS desproporcional à espessura de parede, padrão de pseudoinfarto ao ECG, distúrbio de condução atrioventricular, NT-proBNP desproporcionalmente elevado, troponina persistentemente elevada, aspecto granular brilhante ao ecocardiograma, derrame pericárdico) e extracardíacos (síndrome do túnel do carpo bilateral, ruptura do tendão do bíceps, estenose de canal lombar, polineuropatia, disautonomia, macroglossia, história familiar) pesquisados e registrados."
+      },
+      {
+        "id": "amilo-exames-pareados",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Árvore de decisão: diagnóstico — mesmo documento",
+        "texto": "Cintilografia com traçador ósseo (99mTc-DPD, 99mTc-PYP ou 99mTc-HMDP) COM SPECT e as três provas de proteína monoclonal (eletroforese com imunofixação sérica, eletroforese com imunofixação urinária, relação de cadeias leves livres séricas) solicitadas em conjunto, nunca a cintilografia isoladamente."
+      },
+      {
+        "id": "amilo-spect-obrigatorio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "A graduação de Perugini, que decide o nó D2 — mesmo documento",
+        "texto": "Confirmado que o SPECT foi realizado (não apenas a cintilografia planar) — sem ele não se distingue captação miocárdica de captação do compartimento sanguíneo, e o grau de Perugini atribuído pode ser o de outra estrutura."
+      },
+      {
+        "id": "amilo-clonalidade-antes-de-interpretar",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "origem_secao": "A regra é esta / árvore de decisão diagnóstico — mesmo documento",
+        "texto": "As três provas de proteína monoclonal revisadas ANTES de interpretar o grau de captação da cintilografia — proteína monoclonal alterada em qualquer uma delas invalida o diagnóstico não invasivo de ATTR por cintilografia, mesmo com captação grau 2 ou 3, porque essa captação também aparece em mais de 10% dos pacientes com amiloidose de cadeia leve (AL)."
+      },
+      {
+        "id": "amilo-cadeias-leves-faixa-correta",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "origem_secao": "Os valores de referência da relação de cadeias leves livres — mesmo documento",
+        "texto": "Relação kappa/lambda interpretada pela faixa de referência correta para o ensaio e a função renal: Freelite 0,26-1,65; N Latex 0,53-1,51; doença renal crônica com TFGe ≤45 mL/min/1,73 m² e eletroforeses normais, até 2,0; paciente em diálise, até 3,1 — nunca pela faixa de função renal normal em paciente renal crônico."
+      },
+      {
+        "id": "amilo-diagnostico-nao-invasivo-fechado",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "origem_secao": "Árvore de decisão: diagnóstico, nó D2 — mesmo documento",
+        "texto": "Se as três provas de clonalidade normais e captação miocárdica grau 2 ou 3 com achados típicos ao ecocardiograma ou à ressonância: amiloidose cardíaca por transtirretina estabelecida sem necessidade de biópsia — seguir para tipagem genética."
+      },
+      {
+        "id": "amilo-encaminhamento-hematologia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "origem_secao": "Árvore de decisão: diagnóstico, nós D1/D3 — mesmo documento",
+        "texto": "Se alguma prova de clonalidade estiver alterada (independentemente do grau de captação), ou se captação grau 0-1 com suspeita clínica persistente: encaminhado ao hematologista e histologia com tipagem obtida (biópsia cardíaca ou extracardíaca) antes de assumir ATTR — nunca tratar como ATTR isolada sem excluir AL concomitante."
+      },
+      {
+        "id": "amilo-tipagem-genetica-e-rastreamento",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Árvore de decisão: tipagem genética e rastreamento familiar — mesmo documento",
+        "texto": "Com ATTR cardíaca confirmada: aconselhamento genético e sequenciamento do gene TTR oferecidos — inclusive no paciente idoso, já que parcela relevante carrega variante patogênica — para diferenciar ATTRwt (sem indicação de rastreamento familiar) de ATTRv (oferecer teste genético em cascata aos familiares, com seguimento anual estruturado no familiar portador assintomático, iniciado cerca de 10 anos antes da idade de início da doença nos familiares afetados)."
+      }
+    ],
+    "revisao": "Todos os itens derivam literalmente da árvore de decisão e das tabelas (graduação de Perugini, faixas de referência da relação de cadeias leves) do documento de origem, que por sua vez cita o position statement 2021 do ESC Working Group como fonte primária. A ordem de leitura hierárquica (clonalidade antes de interpretar a cintilografia) foi preservada exatamente como no documento — é o ponto que a fonte destaca como o erro clínico mais grave possível se invertido. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) além da revisão de conteúdo registrada aqui."
+  },
+  {
+    "slug": "diagnostico-e-escalonamento-terapeutico-da-obstrucao-de-via-de-saida-na-cardiomiopatia-hipertrofica",
+    "condicao": "Diagnóstico e escalonamento terapêutico da obstrução da via de saída do VE (LVOTO) na cardiomiopatia hipertrófica",
+    "documento_origem": "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+    "theme": "Cardiomiopatias",
+    "resumo": "O que checar ao investigar e tratar obstrução da via de saída na cardiomiopatia hipertrófica sintomática — protocolo ecocardiográfico completo (repouso, Valsalva, ortostase, exercício), definição do gradiente, escalonamento farmacológico na ordem certa, fármacos a evitar, e os critérios que autorizam encaminhar para terapia de redução septal.",
+    "review_status": "revisado",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID 37622657"
+    ],
+    "itens": [
+      {
+        "id": "lvoto-eco-protocolo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Avaliacao por imagem — cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md",
+        "texto": "Ecocardiograma transtorácico 2D e Doppler realizado em repouso e durante manobra de Valsalva, nas posições sentada e semi-supina, e depois em pé se nenhum gradiente foi provocado (Classe I, nível B) — protocolo completo, não só a medida em repouso, para não subestimar obstrução dinâmica."
+      },
+      {
+        "id": "lvoto-eco-exercicio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "origem_secao": "Avaliacao por imagem — versao-completa.md",
+        "texto": "Se sintomático com gradiente de repouso/provocado <50 mmHg: ecocardiograma de exercício considerado (Classe I, nível B) para detectar LVOTO provocável e regurgitação mitral induzida por exercício."
+      },
+      {
+        "id": "lvoto-limiar-definicao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "origem_secao": "Obstrucao via saida vsvo lvoto — versao-completa.md",
+        "texto": "Gradiente classificado corretamente: gradiente instantâneo de pico ≥30 mmHg por Doppler define obstrução por convenção; o limiar geralmente considerado para tratamento invasivo é ≥50 mmHg (em repouso ou máximo provocado); entre 30-50 mmHg sem outra causa óbvia de sintomas, redução invasiva do gradiente pode ser considerada."
+      },
+      {
+        "id": "lvoto-escalonamento-farmacologico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Tratamento farmacologico com lvot — versao-completa.md",
+        "texto": "Escalonamento farmacológico seguido na ordem correta: betabloqueador não vasodilatador em dose máxima tolerada como primeira linha (Classe I, nível B); se intolerância, verapamil ou diltiazem em dose máxima tolerada (Classe I, nível B); se persistir sintomático, disopiramida adicionada à terapia de base, também titulada até dose máxima tolerada (Classe I, nível B)."
+      },
+      {
+        "id": "lvoto-mavacamten-indicacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Tratamento farmacologico com lvot — versao-completa.md",
+        "texto": "Inibidor de miosina cardíaca (mavacamten) considerado em adição à terapia de base (Classe IIa, nível A) ou como monoterapia em paciente intolerante a betabloqueador, verapamil/diltiazem OU disopiramida (Classe IIa, nível B) — com vigilância ecocardiográfica de FEVE; NÃO usar concomitantemente com disopiramida."
+      },
+      {
+        "id": "lvoto-farmacos-a-evitar",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Tratamento farmacologico com lvot — versao-completa.md",
+        "texto": "Confirmado que digoxina e dilatadores arteriais/venosos (incluindo nitratos e inibidores de fosfodiesterase) foram evitados (Classe IIa, nível C) — podem piorar a obstrução dinâmica da via de saída."
+      },
+      {
+        "id": "lvoto-criterio-reducao-septal",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "origem_secao": "Tratamento invasivo septal srt — versao-completa.md",
+        "texto": "Encaminhamento para terapia de redução septal (miectomia ou ablação alcoólica) avaliado quando gradiente de repouso ou máximo provocado ≥50 mmHg PERSISTE com classe funcional NYHA/Ross III-IV apesar da terapia médica máxima tolerada (Classe I, nível B), ou em síncope recorrente ao esforço atribuída ao gradiente ≥50 mmHg apesar de terapia otimizada (Classe IIa)."
+      },
+      {
+        "id": "lvoto-escolha-miectomia-vs-ablacao",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "origem_secao": "Tratamento invasivo septal srt — versao-completa.md",
+        "texto": "Miectomia septal preferida em vez de ablação septal alcoólica (Classe I, nível C) em paciente pediátrico com indicação de redução septal, e em adulto com outra lesão exigindo intervenção cirúrgica no mesmo procedimento (ex.: anormalidade mitral) — procedimento realizado por operador experiente em equipe multidisciplinar especializada em CMH."
+      }
+    ],
+    "revisao": "Todos os itens correspondem a recomendações nomeadas (classe/nível) do documento de origem, na mesma ordem de escalonamento descrita no texto e na árvore de decisão do fluxograma correspondente da mesma diretriz. Nenhuma dose, corte de gradiente ou classe de recomendação foi alterada. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) além da revisão de conteúdo registrada aqui."
   }
 ]
