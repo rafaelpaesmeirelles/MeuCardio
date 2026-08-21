@@ -8393,5 +8393,190 @@
       "van der Zande JA, Ramlakhan KP, Sliwa K, et al. Pregnancy with a prosthetic heart valve, thrombosis, and bleeding: the ESC EORP Registry of Pregnancy and Cardiac disease III. European Heart Journal. 2026. PMID 40237423.",
       "Maternal and Fetal Outcomes of Anticoagulation in Pregnant Women With Mechanical Heart Valves. JACC. https://www.jacc.org/doi/10.1016/j.jacc.2017.03.605"
     ]
+  },
+  {
+    "slug": "escore-heart-dor-no-peito-no-pronto-socorro",
+    "titulo": "O escore HEART: dor no peito no pronto-socorro",
+    "subtitulo": "Como o médico decide, com um número, se é seguro ir para casa ou se é preciso investigar mais",
+    "tema": "Calculadoras",
+    "documento_slug": "escore-heart-dor-toracica-no-pronto-socorro",
+    "resumo": "Explicação em linguagem simples sobre o escore HEART, usado no pronto-socorro para estimar o risco de um evento cardíaco grave em quem chega com dor no peito, e por que ele orienta a decisão entre alta, observação ou investigação mais agressiva.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Quando você chega ao pronto-socorro com dor no peito, a primeira pergunta da equipe não é só 'é infarto?' — é 'qual é a chance de isso ser um evento cardíaco grave nas próximas semanas?'. O escore HEART é uma das ferramentas usadas para responder isso de forma mais objetiva, somando pontos de cinco informações: sua história clínica, o eletrocardiograma, sua idade, seus fatores de risco cardiovascular e o resultado da troponina (exame de sangue que mede lesão do músculo do coração).",
+          "Cada uma dessas cinco informações recebe 0, 1 ou 2 pontos, conforme o quanto ela é sugestiva de problema cardíaco. A soma vai de 0 a 10."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o médico calcula isso",
+        "paragrafos": [
+          "O resultado divide os pacientes em três faixas de risco, e cada faixa aponta para uma conduta diferente: escore baixo tende a permitir alta com segurança, escore intermediário costuma levar à internação para observação, e escore alto aponta para investigação mais agressiva.",
+          "Um estudo que testou o uso desse escore em nove hospitais, comparando com o atendimento sem ele, mostrou que usar o HEART para guiar a decisão foi seguro — não aumentou o número de eventos cardíacos graves nas seis semanas seguintes."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o número NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Escore baixo não é a mesma coisa que risco zero — mesmo na faixa mais baixa da validação do escore, ainda houve uma pequena porcentagem de eventos nas seis semanas seguintes",
+          "O HEART é usado para dor torácica ainda sem diagnóstico definido — se você já foi diagnosticado com síndrome coronariana aguda, o médico usa outras ferramentas para estimar seu risco daí em diante",
+          "O resultado de hoje não vale para uma dor nova e diferente amanhã — cada episódio de dor é avaliado de novo"
+        ]
+      },
+      {
+        "titulo": "Por que às vezes a orientação é ir para casa mesmo com dor",
+        "paragrafos": [
+          "Pode parecer contraintuitivo ser liberado do pronto-socorro ainda sentindo desconforto, mas quando o escore aponta risco baixo, o próprio estudo que testou essa conduta na prática mostrou que ela foi segura para o grupo de pacientes avaliado. Isso não substitui atenção a sintomas novos: se a dor mudar de padrão, voltar ou piorar, procure atendimento de novo."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que retorna, piora ou muda de padrão depois da alta — procure atendimento de novo, mesmo com escore calculado como baixo antes",
+      "Dor associada a suor frio, falta de ar intensa ou sensação de morte iminente — emergência imediata",
+      "Dor irradiando para o braço esquerdo, mandíbula ou costas, de início súbito",
+      "Desmaio ou quase-desmaio junto com a dor no peito"
+    ],
+    "perguntas": [
+      "Qual foi o meu resultado no escore HEART, e o que ele significa na prática?",
+      "Por que fui liberado (ou internado) com base nesse resultado?",
+      "Que sintomas devem me fazer voltar imediatamente ao pronto-socorro?",
+      "Esse resultado muda algo no meu acompanhamento cardiológico depois da alta?",
+      "Se a dor voltar de forma diferente, o escore precisa ser recalculado?"
+    ],
+    "fontes": [
+      "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J. 2008;16(6):191-196. DOI: 10.1007/BF03086144. PMID: 18665203.",
+      "Backus BE, Six AJ, Kelder JC, et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol. 2013;168(3):2153-2158. DOI: 10.1016/j.ijcard.2013.01.255. PMID: 23465250.",
+      "Poldervaart JM, Reitsma JB, Backus BE, et al. Effect of Using the HEART Score in Patients With Chest Pain in the Emergency Department: A Stepped-Wedge, Cluster Randomized Trial. Ann Intern Med. 2017;166(10):689-697. DOI: 10.7326/M16-1600. PMID: 28437795."
+    ]
+  },
+  {
+    "slug": "escore-de-risco-cardiaco-antes-de-cirurgia-nao-cardiaca",
+    "titulo": "O escore de risco cardíaco antes de uma cirurgia",
+    "subtitulo": "Como o cardiologista estima, com um cálculo simples, o risco do seu coração numa cirurgia que não é do coração",
+    "tema": "Calculadoras",
+    "documento_slug": "escores-de-risco-cardiaco-para-cirurgia-nao-cardiaca-rcri-e-nsqip-mica",
+    "resumo": "Explicação em linguagem simples sobre o Índice de Risco Cardíaco Revisado (RCRI), usado para estimar a chance de complicação cardíaca numa cirurgia que não é do coração, e o que o resultado muda na preparação para a operação.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Antes de uma cirurgia que não é do coração — por exemplo, do quadril, da vesícula ou do abdômen —, o cardiologista pode calcular um índice simples para estimar a chance de você ter uma complicação cardíaca importante durante ou logo depois da operação.",
+          "O cálculo mais usado no mundo para essa pergunta soma pontos a partir de seis informações: se a cirurgia em si já é considerada de alto risco, se você tem histórico de doença isquêmica do coração, de insuficiência cardíaca, de AVC prévio, se usa insulina antes da cirurgia, e se sua função renal (medida pela creatinina) está alterada."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o médico calcula isso",
+        "paragrafos": [
+          "Quanto mais desses fatores você tem, maior a chance estimada de complicação cardíaca maior durante a cirurgia. Esse número ajuda a equipe a decidir se vale a pena pedir exames adicionais antes de operar, otimizar alguma condição já conhecida, ou simplesmente seguir para a cirurgia sem investigação extra.",
+          "Um dado importante, destacado pelos próprios pesquisadores que criaram esse índice: ele também serve para identificar quem tem risco tão baixo que pedir mais exames dificilmente vai ajudar — ou seja, o escore não serve só para escalar investigação, serve também para evitar exame desnecessário."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o número NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Não é uma garantia de que nada vai acontecer, nem uma previsão exata — é uma estimativa baseada em grupos grandes de pacientes parecidos com você",
+          "Esse índice funciona melhor em cirurgias em geral; em cirurgia vascular especificamente, ele perde parte da sua capacidade de prever risco, e outros fatores (como sua capacidade de esforço no dia a dia) pesam mais",
+          "Esse índice não foi desenvolvido para estimar risco de morte, e sim risco de complicação cardíaca — são perguntas diferentes",
+          "Ele foi pensado para cirurgia planejada, com paciente estável — não se aplica da mesma forma a uma cirurgia de urgência"
+        ]
+      },
+      {
+        "titulo": "O que costuma acontecer com esse resultado na prática",
+        "paragrafos": [
+          "Existe outra calculadora, mais recente e derivada de uma base de dados muito maior, que discrimina melhor o risco — mas ela exige um cálculo mais elaborado, feito por computador, em vez de somar pontos de cabeça. Os dois instrumentos não são intercambiáveis: eles usam variáveis diferentes e definem 'complicação' de formas diferentes, então não estranhe se o cardiologista mencionar mais de um nome.",
+          "Nenhum desses dois cálculos, sozinho, decide se a cirurgia deve ser adiada — essa decisão é conjunta entre você, o cardiologista, o cirurgião e o anestesista, considerando também sua capacidade de esforço do dia a dia e outros exames."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova ou falta de ar que piora entre a consulta de avaliação e a data da cirurgia",
+      "Inchaço súbito nas pernas ou ganho de peso rápido antes da cirurgia",
+      "Palpitação nova associada a tontura ou desmaio",
+      "Febre ou mal-estar importante nos dias antes da cirurgia — avise a equipe"
+    ],
+    "perguntas": [
+      "Qual foi o meu resultado nesse índice, e quantos dos seis fatores eu tenho?",
+      "Esse resultado muda algum exame ou preparo antes da minha cirurgia?",
+      "Minha cirurgia é do tipo em que esse índice funciona melhor, ou é uma cirurgia vascular, em que ele é menos preciso?",
+      "Existe algo que eu possa otimizar antes da data marcada para reduzir esse risco?",
+      "Esse cálculo já considera minha capacidade de fazer esforço no dia a dia, ou isso é avaliado à parte?"
+    ],
+    "fontes": [
+      "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049. PMID: 10477528.",
+      "Ford MK, Beattie WS, Wijeysundera DN. Systematic review: prediction of perioperative cardiac complications and mortality by the revised cardiac risk index. Ann Intern Med. 2010;152(1):26-35. PMID: 20048269.",
+      "Gupta PK, Gupta H, Sundaram A, et al. Development and validation of a risk calculator for prediction of cardiac risk after surgery. Circulation. 2011;124(4):381-387. PMID: 21730309."
+    ]
+  },
+  {
+    "slug": "escore-has-bled-risco-de-sangramento-com-anticoagulante",
+    "titulo": "O escore de risco de sangramento com anticoagulante",
+    "subtitulo": "Por que ter risco de sangramento não significa que você deve parar o remédio",
+    "tema": "Calculadoras",
+    "documento_slug": "has-bled",
+    "resumo": "Explicação em linguagem simples sobre o escore HAS-BLED, usado em quem toma anticoagulante por fibrilação atrial para identificar e corrigir fatores que aumentam o risco de sangramento — e por que um resultado alto não é, sozinho, motivo para suspender o remédio.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Se você tem fibrilação atrial e usa um anticoagulante (remédio que reduz a formação de coágulo, para prevenir AVC), o médico também estima, separadamente, o seu risco de sangramento enquanto estiver tomando esse remédio.",
+          "Esse cálculo soma pontos a partir de fatores que já sabemos que aumentam o risco de sangramento: pressão alta não controlada, alteração da função renal ou do fígado, AVC anterior, sangramento prévio, uso de outros remédios que também afetam a coagulação (como anti-inflamatório ou antiagregante), consumo de álcool acima de determinada quantidade, idade acima de 65 anos, entre outros. O resultado vai de 0 a 9 pontos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o médico calcula isso",
+        "paragrafos": [
+          "Esse número não decide se você deve ou não usar anticoagulante — quem orienta essa decisão é outro cálculo, específico para o risco de AVC. O escore de sangramento serve para outra coisa: identificar quais dos seus fatores de risco de sangramento podem ser corrigidos, e ajudar a calibrar com que frequência você precisa ser acompanhado.",
+          "Por exemplo: se sua pressão está mal controlada, ou se você usa um anti-inflamatório com frequência, esses são pontos que somam no escore e que, ao mesmo tempo, dá para tratar ou ajustar — controlando a pressão, revendo o uso do anti-inflamatório."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o número NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Um resultado alto não é, por si só, motivo para suspender ou evitar o anticoagulante em quem já tem indicação clara de usá-lo — as diretrizes atuais são explícitas nesse ponto",
+          "O escore existe para apontar o que dá para corrigir, não para excluir você do tratamento",
+          "Ele é diferente do escore que estima seu risco de AVC — os dois são calculados separadamente, e servem a perguntas diferentes na mesma consulta"
+        ]
+      },
+      {
+        "titulo": "O que costuma mudar na prática com esse resultado",
+        "paragrafos": [
+          "Um resultado mais alto costuma levar a um acompanhamento mais frequente, e a uma atenção maior aos fatores que dá para corrigir: controle mais rigoroso da pressão, revisão de remédios que também afetam a coagulação, orientação sobre álcool, e, para quem usa varfarina, atenção ao controle do exame de sangue que mede o efeito do remédio (INR)."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Sangramento que não para, ou sangramento importante (muito volumoso, ou que você nunca teve antes)",
+      "Sangue nas fezes ou fezes muito escuras",
+      "Sangue na urina",
+      "Dor de cabeça muito forte e súbita, diferente de qualquer dor de cabeça anterior — pode ser sinal de sangramento no cérebro, procure emergência imediatamente",
+      "Hematomas grandes ou que aparecem sem motivo aparente, cada vez mais frequentes"
+    ],
+    "perguntas": [
+      "Qual foi o meu resultado nesse escore, e quais dos meus fatores de risco de sangramento dá para corrigir?",
+      "Esse resultado muda a frequência com que preciso ser acompanhado?",
+      "Esse resultado, sozinho, deveria mudar minha decisão de tomar anticoagulante?",
+      "Algum dos remédios que eu já uso (incluindo os que não são para o coração) contribui para esse risco?",
+      "Com que frequência esse cálculo deve ser refeito?"
+    ],
+    "fontes": [
+      "Pisters R, Lane DA, Nieuwlaat R, et al. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010;138(5):1093-1100. DOI: 10.1378/chest.10-0134. PMID: 20299623.",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723."
+    ]
   }
 ]
