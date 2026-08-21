@@ -8635,7 +8635,9 @@
     "review_status": "revisado",
     "generic_name": "Hidroclorotiazida + Cloridrato De Amilorida",
     "brand_names": [
-      "CLORIDRATO DE AMILORIDA + HIDROCLOROTIAZIDA"
+      "CLORIDRATO DE AMILORIDA + HIDROCLOROTIAZIDA",
+      "AMILORIDA + HIDROCLOROTIAZIDA (EMS S.A. — genérico do Moduretic)",
+      "CLORIDRATO DE AMILORIDA + HIDROCLOROTIAZIDA (GERMED PHARMA — fabricado e embalado por EMS S/A, Hortolândia/SP)"
     ],
     "drug_class": "Combinação: diurético tiazídico + diurético poupador de potássio",
     "mechanism": "A hidroclorotiazida é um diurético tiazídico que atua nos túbulos renais distais aumentando a excreção de sódio e cloreto, mas também aumenta a perda urinária de potássio. O cloridrato de amilorida é um diurético poupador de potássio, com leve atividade natriurética e anti-hipertensiva própria, que age no túbulo distal reduzindo a excreção de potássio. A combinação potencializa a atividade natriurética/diurética da hidroclorotiazida enquanto minimiza a perda de potássio e o desequilíbrio ácido-base que ocorreriam com a tiazida isolada.",
@@ -8704,7 +8706,12 @@
     "half_life_note": "Dados da PRÓPRIA bula da associação de dose fixa (rótulo FDA/DailyMed, Amiloride Hydrochloride and Hydrochlorothiazide Tablets, setid 8b2c581a-f955-4a8e-bf85-e768e903fd10, consultado nesta sessão em 12/08/2026): amilorida isolada — 'plasma half-life varies from 6 to 9 hours' (pico plasmático em 3-4h); hidroclorotiazida isolada — 'plasma half-life has been observed to vary between 5.6 and 14.8 hours', ambas citadas na seção CLINICAL PHARMACOLOGY do mesmo rótulo que descreve o produto combinado.",
     "duration_of_action_hours": null,
     "duration_of_action_note": "Dados da PRÓPRIA bula da associação de dose fixa (mesma fonte do campo `half_life_note` deste verbete): 'The onset of the diuretic action of this product is within 1 to 2 hours and this action appears to be sustained for approximately 24 hours' — texto literal do rótulo FDA/DailyMed sobre o produto combinado (não extrapolação a partir dos componentes isolados). Por comparação, cada componente isolado tem onset em até 2h e duração de 6-12h (HCTZ) ou até 24h (amilorida, com pico de efeito eletrolítico entre 6-10h) — a combinação sustenta o efeito diurético pelas 24h completas.",
-    "duration_of_action_source": null
+    "duration_of_action_source": null,
+    "commercial_presentations": [
+      "Cloridrato de Amilorida + Hidroclorotiazida 5 mg + 50 mg — comprimidos, genérico EMS S.A., embalagem com 30 comprimidos (fonte: WebSearch, 20/08/2026).",
+      "Cloridrato de Amilorida + Hidroclorotiazida 2,5 mg + 25 mg — comprimidos, genérico EMS S.A., embalagem com 30 comprimidos (fonte: WebSearch, 20/08/2026).",
+      "Cloridrato de Amilorida + Hidroclorotiazida — comprimidos, genérico Germed Pharma (fonte: WebSearch, 20/08/2026). VERIFICAÇÃO HUMANA NECESSÁRIA quanto às dosagens exatas comercializadas sob o registro Germed — não confirmadas nesta sessão se são as mesmas 2,5/25 e 5/50 mg do EMS."
+    ]
   },
   {
     "slug": "hidroclorotiazida-olmesartana-medoxomila",
@@ -8858,7 +8865,10 @@
     "half_life_note": "Ramipril isolado: declínio trifásico da concentração plasmática do ramiprilato (metabólito ativo) — distribuição rápida (2-4h), eliminação aparente (9-18h) e eliminação terminal superior a 50 horas (ligação de alta afinidade, dissociação lenta da ECA tecidual) — valor já registrado e com fonte citada no verbete de monoterapia `ramipril` deste catálogo. Hidroclorotiazida isolada: meia-vida plasmática bifásica de 5,6 a 14,8 horas — valor já registrado no verbete `hidroclorotiazida` (rótulo FDA/DailyMed). Método: componentes desta associação já têm meia-vida individual verificada e com fonte citada nos respectivos verbetes de monoterapia deste mesmo catálogo (FDA/DailyMed) — reaproveitado aqui em vez de repetir a busca, já que é o mesmo princípio ativo, mesma via oral. Pesquisa desta sessão (12/08/2026) confirmou que o bloqueio de ferramenta de pesquisa registrado em sessão anterior não existe mais.",
     "duration_of_action_hours": null,
     "duration_of_action_note": "Efeito anti-hipertensivo sustentado por 24 horas com dose única diária, determinado pelo ramipril: em dose diária de 5mg ou mais, o ramipril isolado já controla a PA ao longo de 24h completas (valor já registrado no verbete `ramipril` deste catálogo), decorrente da lenta dissociação do ramiprilato do complexo enzima-inibidor. A hidroclorotiazida isolada tem duração mais curta (6-12h, ver verbete `hidroclorotiazida`), mas não limita a cobertura de 24h da associação.",
-    "duration_of_action_source": null
+    "duration_of_action_source": null,
+    "commercial_presentations": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA — não foi localizada, com confiança, uma segunda marca comercializada no Brasil para ramipril + hidroclorotiazida além do NAPRIX D (Libbs). 'Triatec Composto'/'Triatec Composto Forte' (Sanofi) aparece registrado e à venda em Portugal, mas farmácias brasileiras só retornaram o Triatec ISOLADO (ramipril puro), não a versão composta — não adicionada por falta de confirmação de venda ativa no Brasil nesta sessão."
+    ]
   },
   {
     "slug": "hidroclorotiazida-telmisartana",
@@ -9324,7 +9334,10 @@
     "half_life_note": "Anlodipino isolado: meia-vida de eliminação terminal de aproximadamente 30 a 50 horas (ponto médio 40h) — uma das mais longas entre os bloqueadores de canal de cálcio di-hidropiridínicos — valor já registrado e com fonte citada no verbete de monoterapia `anlodipino-besilato` deste catálogo. Benazepril isolado: meia-vida efetiva do benazeprilat (metabólito ativo) de 10 a 11 horas (ponto médio 10,5h) após administração repetida em dose única diária — valor já registrado e com fonte citada no verbete de monoterapia `benazepril-cloridrato` deste catálogo (LOTENSIN). Método: componentes desta associação já têm meia-vida individual verificada e com fonte citada nos respectivos verbetes de monoterapia deste mesmo catálogo (FDA/DailyMed) — reaproveitado aqui em vez de repetir a busca, já que é o mesmo princípio ativo, mesma via oral. Pesquisa desta sessão (12/08/2026) confirmou que o bloqueio de ferramenta de pesquisa registrado em sessão anterior não existe mais.",
     "duration_of_action_hours": null,
     "duration_of_action_note": "Efeito anti-hipertensivo sustentado por 24 horas com dose única diária (mesma posologia da cápsula combinada Lotrel®, referência internacional para esta associação — DailyMed setid 94ae6054-b7ae-4212-a567-4f803af8f2c7, consultado nesta sessão em 12/08/2026, sem seção de Farmacologia Clínica recuperável por truncamento do documento). Determinado sobretudo pelo anlodipino, cuja meia-vida longa (30-50h) mantém concentração plasmática pouco variável dentro do intervalo de 24h (valor já registrado no verbete `anlodipino-besilato` deste catálogo); o benazepril isolado também sustenta razão vale-pico geralmente superior a 50% em 24h (valor já registrado no verbete `benazepril-cloridrato` deste catálogo).",
-    "duration_of_action_source": null
+    "duration_of_action_source": null,
+    "commercial_presentations": [
+      "PRESS PLUS® Besilato de Anlodipino 2,5 mg + Cloridrato de Benazepril 10 mg — cápsula, Biolab Farmacêutica, embalagem com 30 cápsulas (fonte: WebSearch/Drogaria São Paulo, 20/08/2026). Nenhuma segunda marca concorrente localizada; apenas uma dosagem adicional da própria PRESS PLUS que o registro atual não tinha."
+    ]
   },
   {
     "slug": "anlodipino-besilato-losartana-potassica",
@@ -9880,7 +9893,8 @@
     "review_status": "revisado",
     "generic_name": "Anlodipino (besilato) + Hidroclorotiazida + Valsartana",
     "brand_names": [
-      "EXFORGE HCT"
+      "EXFORGE HCT",
+      "VALSARTANA + HIDROCLOROTIAZIDA + BESILATO DE ANLODIPINO (SANDOZ DO BRASIL INDÚSTRIA FARMACÊUTICA LTDA., genérico do EXFORGE HCT)"
     ],
     "drug_class": "Combinação tripla: BCC + BRA + diurético tiazídico",
     "mechanism": "A valsartana bloqueia seletivamente o receptor AT1 de angiotensina II, sem inibir a ECA (o que reduz a incidência de tosse comparado a IECA). A hidroclorotiazida inibe o transporte de sódio e cloro no túbulo contorcido distal renal, aumentando a excreção de sódio e água e reduzindo o volume plasmático — o que ativa reflexamente a renina plasmática e a aldosterona, efeito contrabalançado pela valsartana. O besilato de anlodipino bloqueia o influxo transmembrana de cálcio na musculatura lisa vascular, reduzindo a resistência periférica. Segundo a bula, a terapia tripla foi estatisticamente superior a cada uma das três combinações duplas na redução da pressão sistólica e diastólica em estudo clínico controlado.",
@@ -9940,7 +9954,12 @@
     "duration_of_action_hours": 24,
     "duration_of_action_note": "Dose única diária; efeito hipotensor pleno da dose máxima atingido em 2 semanas de uso, conforme a bula do produto.",
     "duration_of_action_source": "Bula Profissional EXFORGE HCT (Novartis) já citada em `references`.",
-    "outcomes": "Sem ensaio de desfecho duro dedicado a esta combinação tripla. Evidência de desfecho para os componentes isolados: valsartana (estudo VALUE), anlodipino (ALLHAT/ASCOT-BPLA) e hidroclorotiazida (ALLHAT) — já referenciados em outros documentos deste acervo sobre hipertensão; não são dados do produto combinado EXFORGE HCT."
+    "outcomes": "Sem ensaio de desfecho duro dedicado a esta combinação tripla. Evidência de desfecho para os componentes isolados: valsartana (estudo VALUE), anlodipino (ALLHAT/ASCOT-BPLA) e hidroclorotiazida (ALLHAT) — já referenciados em outros documentos deste acervo sobre hipertensão; não são dados do produto combinado EXFORGE HCT.",
+    "commercial_presentations": [
+      "Valsartana + Hidroclorotiazida + Besilato de Anlodipino 160 mg + 12,5 mg + 5 mg — comprimido revestido, genérico Sandoz do Brasil, registro MS 1.0047.0575, embalagem com 28 comprimidos (fonte: WebSearch/ConsultaRemédios, 20/08/2026).",
+      "Valsartana + Hidroclorotiazida + Besilato de Anlodipino 160 mg + 25 mg + 5 mg — comprimido revestido, genérico Sandoz do Brasil, registro MS 1.0047.0575, embalagem com 28 comprimidos (fonte: WebSearch/ConsultaRemédios, 20/08/2026).",
+      "Valsartana + Hidroclorotiazida + Besilato de Anlodipino 320 mg + 25 mg + 10 mg — comprimido revestido, genérico Sandoz do Brasil, registro MS 1.0047.0575, embalagem com 28 comprimidos (fonte: WebSearch/ConsultaRemédios, 20/08/2026)."
+    ]
   },
   {
     "slug": "anlodipino-besilato-indapamida-perindopril-argininaerbumina",
@@ -10610,7 +10629,8 @@
     "bp_evidence_source": "Não localizado produto combinado ativo (Inderide®) no DailyMed nesta sessão (12/08/2026) — provavelmente descontinuado nos EUA, sem bula combinada disponível para extrair dado específico da associação. Dado do propranolol isolado, já registrado com fonte no verbete de monoterapia `propranolol` deste catálogo: redução de PAD placebo-subtraída de -3,0 mmHg (dose 80mg) e -4,0 mmHg (dose 120mg), do rótulo FDA para INDERAL LA/XL — dado de PAS isolada não encontrado nem no verbete de monoterapia. Dado da hidroclorotiazida isolada não registrado numericamente no verbete `hidroclorotiazida` deste catálogo (fonte primária citada lá, Araoye 1978, é sobre furosemida vs. hidroclorotiazida, sem valor de queda absoluta extraído). **VERIFICAÇÃO HUMANA NECESSÁRIA** mantida para o valor específico da associação de dose fixa — o histórico de bloqueio de ferramenta (WebSearch/WebFetch) registrado nesta sessão em 10/08/2026 não é mais o obstáculo (confirmado ao resolver os outros dois campos deste mesmo verbete nesta sessão, 12/08/2026); a limitação agora é a ausência de bula combinada recuperável, não de ferramenta.",
     "commercial_presentations": [
       "Tenadren® 40 mg de cloridrato de propranolol + 25 mg de hidroclorotiazida — comprimidos, embalagens com 30, 100 ou 120 unidades (EMS Sigma Pharma Ltda., registro MS 1.3569.0019).",
-      "Tenadren® 80 mg de cloridrato de propranolol + 25 mg de hidroclorotiazida — comprimidos, embalagens com 30, 100 ou 120 unidades (EMS Sigma Pharma Ltda., registro MS 1.3569.0019)."
+      "Tenadren® 80 mg de cloridrato de propranolol + 25 mg de hidroclorotiazida — comprimidos, embalagens com 30, 100 ou 120 unidades (EMS Sigma Pharma Ltda., registro MS 1.3569.0019).",
+      "TENADREN® Cloridrato de Propranolol 40 mg + Hidroclorotiazida 12,5 mg — comprimido, EMS Sigma Pharma Ltda., embalagens com 30, 100 ou 120 unidades (fonte: WebSearch/Drogaria São Paulo, 20/08/2026). Nenhuma segunda marca concorrente localizada; apenas uma dosagem adicional da própria TENADREN (EMS) que faltava no registro."
     ]
   },
   {
@@ -11150,7 +11170,8 @@
     "review_status": "revisado",
     "generic_name": "Metformina (cloridrato) + Glibenclamida",
     "brand_names": [
-      "GLUCOVANCE"
+      "GLUCOVANCE",
+      "CLORIDRATO DE METFORMINA + GLIBENCLAMIDA (TORRENT — genérico do GLUCOVANCE)"
     ],
     "drug_class": "Combinação de biguanida + sulfonilureia — antidiabético oral",
     "mechanism": "A glibenclamida, uma sulfonilureia, estimula a liberação de insulina pelas células beta pancreáticas. A metformina, uma biguanida, reduz a produção hepática de glicose, aumenta a captação periférica de glicose e retarda sua absorção intestinal, sem estimular a secreção de insulina. Conforme a bula, os dois agentes atuam de forma complementar para reduzir a glicemia em pacientes com diabetes tipo 2 (não insulino-dependente).",
@@ -11228,7 +11249,9 @@
     "commercial_presentations": [
       "GLUCOVANCE® 250 mg/1,25 mg (cloridrato de metformina + glibenclamida) — comprimido revestido, embalagens com 10 ou 30 comprimidos (Merck S.A., registro MS 1.0089.0270).",
       "GLUCOVANCE® 500 mg/2,5 mg — comprimido revestido, embalagens com 10 ou 30 comprimidos (Merck S.A., registro MS 1.0089.0270).",
-      "GLUCOVANCE® 500 mg/5 mg — comprimido revestido, embalagens com 10 ou 30 comprimidos (Merck S.A., registro MS 1.0089.0270)."
+      "GLUCOVANCE® 500 mg/5 mg — comprimido revestido, embalagens com 10 ou 30 comprimidos (Merck S.A., registro MS 1.0089.0270).",
+      "Cloridrato de Metformina 500 mg + Glibenclamida 2,5 mg — comprimido, genérico Torrent, embalagem com 30 comprimidos (fonte: WebSearch/Drogaria São Paulo, 20/08/2026).",
+      "Cloridrato de Metformina 500 mg + Glibenclamida 5 mg — comprimido, genérico Torrent, embalagem com 30 comprimidos (fonte: WebSearch/Drogaria São Paulo, 20/08/2026)."
     ]
   },
   {
