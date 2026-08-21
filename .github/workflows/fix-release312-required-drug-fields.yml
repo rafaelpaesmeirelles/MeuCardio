@@ -1,0 +1,89 @@
+name: Fix PR312 required drug fields
+
+on:
+  push:
+    branches:
+      - release/claude-content-map-20260821
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release/claude-content-map-20260821
+          fetch-depth: 0
+
+      - name: Repair lacidipino class and validate required drug fields
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('medicamentos/metadados.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if not isinstance(data, list):
+              raise RuntimeError('medicamentos/metadados.json não é lista JSON')
+
+          found = False
+          for drug in data:
+              if drug.get('slug') == 'lacidipino':
+                  found = True
+                  # Fonte primária: bula profissional GSK Lacipil e SmPC MOTENS,
+                  # ambos classificam lacidipino entre antagonistas/bloqueadores
+                  # de canal de cálcio di-hidropiridínicos.
+                  drug['drug_class'] = 'Bloqueador de canal de cálcio di-hidropiridínico'
+                  refs = drug.setdefault('references', [])
+                  gsk = 'Bula profissional Lacipil® (lacidipino) 4 mg, GSK Brasil — seção Advertências e Precauções; antagonista de canal de cálcio di-hidropiridínico.'
+                  emc = 'MOTENS (lacidipine) SmPC, Electronic Medicines Compendium — ATC C08CA09, calcium channel blocker, dihydropyridine derivative.'
+                  for ref in (gsk, emc):
+                      if ref not in refs:
+                          refs.append(ref)
+                  break
+          if not found:
+              raise RuntimeError('Registro lacidipino não encontrado')
+
+          required_text = ('slug', 'generic_name', 'drug_class')
+          non_nullable_if_present = (
+              'brand_names', 'presentations', 'commercial_presentations', 'dosing',
+              'contraindications', 'interactions', 'monitoring', 'indications',
+              'adverse_effects', 'notes', 'outcomes', 'references', 'review_status',
+          )
+          failures = []
+          slugs = []
+          for i, drug in enumerate(data):
+              slug = drug.get('slug')
+              slugs.append(slug)
+              for field in required_text:
+                  value = drug.get(field)
+                  if not isinstance(value, str) or not value.strip():
+                      failures.append(f'#{i} {slug!r}: {field} ausente/vazio')
+              for field in non_nullable_if_present:
+                  if field in drug and drug[field] is None:
+                      failures.append(f'#{i} {slug!r}: {field}=null')
+          if len(slugs) != len(set(slugs)):
+              failures.append('slugs duplicados em medicamentos/metadados.json')
+          raw = json.dumps(data, ensure_ascii=False)
+          if 'VERIFICAÇÃO HUMANA NECESSÁRIA' in raw:
+              failures.append('marcador de verificação humana residual em medicamentos/metadados.json')
+          if failures:
+              raise RuntimeError('\n'.join(failures[:100]))
+
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'OK: {len(data)} medicamentos; campos obrigatórios íntegros; lacidipino corrigido.')
+          PY
+
+      - name: Remove one-shot workflow
+        run: rm -f .github/workflows/fix-release312-required-drug-fields.yml
+
+      - name: Commit targeted fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add medicamentos/metadados.json .github/workflows/fix-release312-required-drug-fields.yml
+          git commit -m "content: restaurar classe farmacológica do lacidipino"
+          git push origin HEAD:release/claude-content-map-20260821
