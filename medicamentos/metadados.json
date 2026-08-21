@@ -6173,7 +6173,8 @@
     "review_status": "revisado",
     "generic_name": "Sacubitril/Valsartana",
     "brand_names": [
-      "Entresto"
+      "Entresto",
+      "Neparvis"
     ],
     "drug_class": "Inibidor da neprilisina e do receptor de angiotensina (INRA/ARNI)",
     "mechanism": "Inibe simultaneamente a neprilisina (via sacubitril), enzima que degrada peptídeos natriuréticos e bradicinina, e bloqueia o receptor AT1 de angiotensina II (via valsartana), resultando em maior natriurese, vasodilatação e redução de remodelamento cardíaco comparado a IECA/BRA isolados",
@@ -6223,7 +6224,12 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "O ensaio de dose-resposta em hipertensão que embasou a escolha da dose do LCZ696/sacubitril-valsartana antes do PARADIGM-HF (Ruilope LM et al., Lancet. 2010;375(9722):1255-1266) comparou LCZ696 a valsartana isolada em paciente hipertenso, com redução de PA MAIOR no grupo LCZ696. O campo `outcomes` deste registro já cita o PARADIGM-HF, que é um ensaio de DESFECHO em ICFEr, não um ensaio dedicado de redução pressórica — não confundir os dois. **Reconfirmado pelo rótulo FDA (Entresto) em 12/08/2026**: a seção de Farmacologia Clínica não traz dado sistemático de redução de PAS/PAD em população hipertensa geral na dose-alvo — o único dado quantitativo de PA no rótulo é de um estudo específico de interação medicamentosa com sildenafila em paciente hipertenso: adição de sildenafila ao Entresto produziu redução ADICIONAL de aproximadamente 5/4 mmHg (sistólica/diastólica), além do efeito basal do próprio Entresto (não quantificado isoladamente nessa mesma passagem). **Não é lacuna de busca — é ausência confirmada, na fonte primária consultada, de um valor isolado de redução pressórica do Entresto na dose-alvo padrão.** Os campos numéricos permanecem `null` de propósito. Para o valor exato do ensaio Ruilope 2010 (que testaria diretamente essa pergunta), recomenda-se consultar o artigo primário (DOI: 10.1016/S0140-6736(10)60566-3), não reconfirmado nesta sessão. Rótulo FDA (ENTRESTO, sacubitril/valsartana), DailyMed setid 000dc81d-ab91-450c-8eae-8eb74e72296f, seção 12.3 Clinical Pharmacology — consultado via WebFetch em 12/08/2026 (a tentativa anterior desta biblioteca havia sido bloqueada por proxy de rede e esgotamento de orçamento; o bloqueio não se repetiu nesta sessão).",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Neparvis® (sacubitril valsartana sódica hidratada) 50 mg — comprimido revestido, embalagem com 28 unidades (Novartis Biociências S.A.). Fonte: bula profissional Novartis (bulas-ecommerce.s3.sa-east-1.amazonaws.com/NEPARVIS_...), WebSearch 21/08/2026.",
+      "Neparvis® 100 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis Biociências S.A.). Fonte: mesma bula acima, WebSearch 21/08/2026.",
+      "Neparvis® 200 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis Biociências S.A., registro MS confirmado em ficha de produto — ex. 1006811890036 para a apresentação de 200 mg). Fonte: bula profissional Novartis + ficha de produto (biolabeco.com.br/produto/neparvis-200mg-60-comprimidos/), WebSearch 21/08/2026.",
+      "Nota: Neparvis® é a mesma molécula do Entresto® (sacubitril/valsartana sódica hidratada), registrada também pela Novartis Biociências S.A. sob nome comercial distinto — usada, entre outros canais, na dispensação pelo Componente Especializado da Assistência Farmacêutica (CEAF/SUS) para insuficiência cardíaca com fração de ejeção reduzida. Apresentação/marca genuinamente adicional (bula própria, registro ANVISA próprio), não duplicata do mesmo registro do Entresto."
+    ]
   },
   {
     "slug": "selexipague",
@@ -8635,7 +8641,8 @@
     "review_status": "revisado",
     "generic_name": "Hidroclorotiazida + Cloridrato De Amilorida",
     "brand_names": [
-      "CLORIDRATO DE AMILORIDA + HIDROCLOROTIAZIDA"
+      "CLORIDRATO DE AMILORIDA + HIDROCLOROTIAZIDA",
+      "Moduretic"
     ],
     "drug_class": "Combinação: diurético tiazídico + diurético poupador de potássio",
     "mechanism": "A hidroclorotiazida é um diurético tiazídico que atua nos túbulos renais distais aumentando a excreção de sódio e cloreto, mas também aumenta a perda urinária de potássio. O cloridrato de amilorida é um diurético poupador de potássio, com leve atividade natriurética e anti-hipertensiva própria, que age no túbulo distal reduzindo a excreção de potássio. A combinação potencializa a atividade natriurética/diurética da hidroclorotiazida enquanto minimiza a perda de potássio e o desequilíbrio ácido-base que ocorreriam com a tiazida isolada.",
@@ -8704,7 +8711,11 @@
     "half_life_note": "Dados da PRÓPRIA bula da associação de dose fixa (rótulo FDA/DailyMed, Amiloride Hydrochloride and Hydrochlorothiazide Tablets, setid 8b2c581a-f955-4a8e-bf85-e768e903fd10, consultado nesta sessão em 12/08/2026): amilorida isolada — 'plasma half-life varies from 6 to 9 hours' (pico plasmático em 3-4h); hidroclorotiazida isolada — 'plasma half-life has been observed to vary between 5.6 and 14.8 hours', ambas citadas na seção CLINICAL PHARMACOLOGY do mesmo rótulo que descreve o produto combinado.",
     "duration_of_action_hours": null,
     "duration_of_action_note": "Dados da PRÓPRIA bula da associação de dose fixa (mesma fonte do campo `half_life_note` deste verbete): 'The onset of the diuretic action of this product is within 1 to 2 hours and this action appears to be sustained for approximately 24 hours' — texto literal do rótulo FDA/DailyMed sobre o produto combinado (não extrapolação a partir dos componentes isolados). Por comparação, cada componente isolado tem onset em até 2h e duração de 6-12h (HCTZ) ou até 24h (amilorida, com pico de efeito eletrolítico entre 6-10h) — a combinação sustenta o efeito diurético pelas 24h completas.",
-    "duration_of_action_source": null
+    "duration_of_action_source": null,
+    "commercial_presentations": [
+      "Moduretic® 50 mg de hidroclorotiazida + 5 mg de cloridrato de amilorida — comprimidos, caixa com 30 unidades (Merck Sharp & Dohme Farmacêutica Ltda., registro MS 1.0029.0137). Fonte: bula profissional/paciente (saudedireta.com.br/catinc/drugs/bulas/moduretic.pdf), WebSearch 21/08/2026.",
+      "Moduretic® 25 mg de hidroclorotiazida + 2,5 mg de cloridrato de amilorida — comprimidos, caixa com 30 unidades (Merck Sharp & Dohme Farmacêutica Ltda., mesmo registro MS 1.0029.0137). Fonte: mesma bula acima, WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "hidroclorotiazida-olmesartana-medoxomila",
