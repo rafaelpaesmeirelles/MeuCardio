@@ -18146,5 +18146,308 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "doenca-coronariana-cronica-manejo-integral-aha-acc-2023",
+    "condicao": "Doença coronariana crônica — manejo integral (AHA/ACC 2023)",
+    "resumo": "O que revisar na consulta de manejo de doença coronariana crônica estável, segundo a diretriz AHA/ACC/ACCP/ASPC/NLA/PCNA 2023: controle de risco, sintomas e qualidade de vida, sem recair em teste seriado ou revascularização automática.",
+    "documento_origem": "aha-acc-2023-diretriz-doenca-coronariana-cronica",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Virani SS, Newby LK, Arnold SV, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. J Am Coll Cardiol. 2023;82(9):833-955. DOI: 10.1016/j.jacc.2023.04.003. PMID: 37480922."
+    ],
+    "itens": [
+      {
+        "id": "dccron-habitos-vida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Hábitos alimentares saudáveis e atividade física regular reforçados como recomendação universal, revisados na consulta",
+        "origem_secao": "Estilo de vida e reabilitação"
+      },
+      {
+        "id": "dccron-reabilitacao",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Reabilitação cardíaca considerada e oferecida em todo paciente elegível, não reservada só para o pós-evento agudo",
+        "origem_secao": "Estilo de vida e reabilitação"
+      },
+      {
+        "id": "dccron-suplementos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Uso rotineiro de suplementos sem benefício cardiovascular comprovado desencorajado, incluindo vitaminas e óleo de peixe/ômega-3 prescritos com o objetivo de prevenir eventos",
+        "origem_secao": "Estilo de vida e reabilitação"
+      },
+      {
+        "id": "dccron-estatina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estatina mantida como terapia hipolipemiante de primeira linha para redução de LDL-C e de risco cardiovascular",
+        "origem_secao": "Terapia hipolipemiante"
+      },
+      {
+        "id": "dccron-nao-estatinico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Terapia hipolipemiante não estatínica agregada quando a meta de redução de risco não é atingida só com estatina, em paciente selecionado",
+        "origem_secao": "Terapia hipolipemiante"
+      },
+      {
+        "id": "dccron-antianginoso-individualizado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Tratamento antianginoso individualizado conforme sintomas, frequência cardíaca, pressão arterial, função ventricular, comorbidades e tolerabilidade — não escolhido por protocolo fixo",
+        "origem_secao": "Angina"
+      },
+      {
+        "id": "dccron-revascularizacao-indicacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Revascularização considerada apenas diante de sintomas persistentes sob terapia adequada, anatomia de alto risco em cenário específico, ou indicação prognóstica sustentada por evidência — nunca por presença isolada de isquemia",
+        "origem_secao": "Angina"
+      },
+      {
+        "id": "dccron-ischemia-nao-automatica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que a decisão de revascularizar não foi tomada automaticamente só pela presença de isquemia em paciente estável sem outra indicação clínica, conforme reforçado pelos achados do ISCHEMIA",
+        "origem_secao": "Angina"
+      },
+      {
+        "id": "dccron-testes-rotina",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em paciente clinicamente estável, sem mudança do estado funcional ou dos sintomas: teste anatômico ou funcional periódico NÃO solicitado apenas para estratificação de risco ou para guiar tratamento",
+        "origem_secao": "Testes de rotina"
+      },
+      {
+        "id": "dccron-antitrombotico-balanco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estratégia antitrombótica revisada equilibrando risco isquêmico e risco de sangramento do paciente, considerando intensificação apenas em quem tem alto risco aterotrombótico e baixo risco hemorrágico",
+        "origem_secao": "Terapia antitrombótica"
+      },
+      {
+        "id": "dccron-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão compartilhada com o paciente registrada, considerando equipe multidisciplinar, custo, acesso ao tratamento e determinantes sociais da saúde",
+        "origem_secao": "Cuidado centrado no paciente"
+      },
+      {
+        "id": "dccron-foco-tratar-nao-testar",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Plano de seguimento centrado em tratar risco, sintomas e qualidade de vida — não em repetir teste de isquemia sem mudança clínica que o justifique",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
+  },
+  {
+    "slug": "teste-ergometrico-triagem-de-seguranca-pre-teste-e-criterios-de-interrupcao",
+    "condicao": "Teste ergométrico — triagem de segurança pré-teste e critérios de interrupção",
+    "resumo": "Checklist de segurança para antes e durante o teste ergométrico: contraindicações absolutas e relativas a checar na indicação, e os critérios objetivos de interrupção do esforço, segundo a Diretriz Brasileira de Ergometria (SBC 2024).",
+    "documento_origem": "teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral acessado em acesso aberto (PMC11656589) e conferido em 31/07/2026; as tabelas de contraindicações absolutas, contraindicações relativas e critérios de interrupção do esforço foram transcritas item a item"
+    ],
+    "itens": [
+      {
+        "id": "teseg-contraind-absolutas-cardiacas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações absolutas cardíacas descartadas antes de indicar o teste: IAM antes de 5 dias ou com complicações, angina instável, arritmia não controlada, BAV de risco (2º grau tipo II, 2:1, avançado/alto grau ou total — exceto BAV total congênito), estenose aórtica grave sintomática, IC descompensada, miocardite ou pericardite aguda, dissecção aguda de aorta",
+        "origem_secao": "Contraindicacoes ABSOLUTAS"
+      },
+      {
+        "id": "teseg-contraind-absolutas-nao-cardiacas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações absolutas não cardíacas descartadas: embolia pulmonar aguda ou infarto pulmonar, enfermidade aguda/febril grave, incapacidade física ou mental de se exercitar, intoxicação medicamentosa, distúrbio hidroeletrolítico ou metabólico não corrigido, crise/urgência hipertensiva (PAS ≥ 180 mmHg ou PAD > 110 mmHg em repouso), hipertireoidismo descontrolado, descolamento de retina recente, aneurisma com indicação de intervenção, doença pulmonar descompensada, diabetes descompensado",
+        "origem_secao": "Contraindicacoes ABSOLUTAS"
+      },
+      {
+        "id": "teseg-aneurisma-diferenciado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aneurisma de aorta ou de outra artéria classificado corretamente antes do teste: COM critério de intervenção é contraindicação absoluta; SEM critério de intervenção é relativa, com cuidados especiais — as duas situações não são equivalentes",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "teseg-estenose-aortica-diferenciada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estenose aórtica grave classificada por sintoma antes do teste: sintomática é contraindicação absoluta; assintomática é relativa, em ambiente hospitalar — o teste ergométrico é justamente o exame usado para desmascarar sintoma nesse cenário",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "teseg-relativas-hospitalar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações relativas que exigem ambiente hospitalar e cuidados especiais revisadas: dor torácica aguda, valvopatia grave assintomática, IAM não complicado a partir do 5º dia, angina instável após 72h de estabilização, suspeita de arritmia complexa (taqui/bradiarritmia, QT longo, Brugada), síncope de provável etiologia arritmogênica, CDI implantado, hipertensão pulmonar importante, CMH obstrutiva com gradiente de repouso grave, anemia grave",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "teseg-relativas-cuidados-especiais",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Contraindicações relativas que exigem apenas cuidados especiais revisadas: CMH não obstrutiva, marca-passo unicameral em modo VVI, IC compensada classe III NYHA, AVC/AIT recente (menos de 2 meses), aneurisma sem critério de intervenção, FA/flutter assintomático desconhecido pelo paciente ou com frequência elevada em repouso, gravidez",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "teseg-cdi-frequencia-acionamento",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Se o paciente é portador de CDI: frequência de acionamento do desfibrilador conferida antes do teste, para interromper o esforço 10 batimentos abaixo desse limiar — nunca conduzir até a exaustão",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "teseg-interrupcao-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Critérios de interrupção por sintoma monitorados durante o esforço: exaustão física (Borg ≥ 18), dor/fadiga limitante de membros inferiores, claudicação, vertigem persistente, náusea, pré-síncope ou síncope, dor torácica crescente e limitante, dispneia precoce e desproporcional",
+        "origem_secao": "Criterios de interrupcao do esforco"
+      },
+      {
+        "id": "teseg-interrupcao-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Critérios hemodinâmicos de interrupção monitorados: queda de PAS ≥ 20 mmHg após elevação inicial (confirmada em pelo menos mais uma medida se assintomática), PAS > 250 mmHg, PAD ≥ 120 mmHg no normotenso ou ≥ 140 mmHg no hipertenso, dessaturação com SpO₂ ≤ 92%, queda persistente da frequência cardíaca com incremento de carga",
+        "origem_secao": "Criterios de interrupcao do esforco"
+      },
+      {
+        "id": "teseg-interrupcao-eletrocardiografica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Critérios eletrocardiográficos de interrupção monitorados: infradesnível de ST ≥ 0,3 mV adicional ao repouso, supradesnível ≥ 0,2 mV em derivação sem infarto prévio, taquiarritmia sustentada, TVNS ≥ 3 batimentos (ou episódio único de TVNS polimórfica), TV sustentada ou FV, BAV de 2º/3º grau induzido pelo esforço, bloqueio de ramo novo com repercussão ou sem distinção segura de TV",
+        "origem_secao": "Criterios de interrupcao do esforco"
+      },
+      {
+        "id": "teseg-queda-fc-nao-ignorada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Queda persistente da frequência cardíaca com o aumento de carga reconhecida como critério de interrupção por si só — não descartada por quem observa apenas o segmento ST",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "teseg-vontade-paciente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Teste interrompido a pedido do paciente independentemente de haver anormalidade objetiva, ou por falência do sistema de monitorização, inadaptação ou falta de coordenação ao ergômetro",
+        "origem_secao": "Criterios de interrupcao do esforco"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-investigacao-genetica-e-aconselhamento-familiar",
+    "condicao": "Cardiomiopatia dilatada — investigação genética e aconselhamento familiar",
+    "resumo": "O que checar ao investigar cardiomiopatia dilatada (ou de VE não dilatado) do ponto de vista genético — aconselhamento antes e depois do teste, rastreamento em cascata dos familiares e uso do genótipo na estratificação de risco de morte súbita — segundo a diretriz ESC 2023 de cardiomiopatias.",
+    "documento_origem": "cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID 37622657.",
+      "Genetic counselling implementation in dilated cardiomyopathy. Eur Heart J. 2026;47(24):3040. https://academic.oup.com/eurheartj/article/47/24/3040/8529603",
+      "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. DOI 10.1161/CIRCULATIONAHA.118.039410. PMID 31155932 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "cmdgen-fenotipo-atualizado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Fenótipo caracterizado conforme a descrição revisada da ESC 2023, distinguindo cardiomiopatia dilatada clássica de cardiomiopatia de ventrículo esquerdo não dilatada (NDLVC)",
+        "origem_secao": "Definicao"
+      },
+      {
+        "id": "cmdgen-objetivo-teste-genetico",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Objetivo do teste genético definido antes de solicitar — não só identificar etiologia, mas também considerar estratificação de risco prognóstico e orientação terapêutica personalizada pelo gene/variante causal",
+        "origem_secao": "Papel genetica"
+      },
+      {
+        "id": "cmdgen-aconselhamento-previo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aconselhamento genético estruturado — com educação genética e suporte psicossocial — oferecido à família ANTES do teste genético, independentemente de o teste estar sendo considerado ou não",
+        "origem_secao": "Aconselhamento genetico familiar"
+      },
+      {
+        "id": "cmdgen-nao-pular-aconselhamento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o teste genético não foi solicitado sem aconselhamento genético estruturado prévio — armadilha citada explicitamente pela fonte",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "cmdgen-rastreamento-cascata",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Rastreamento clínico e genético em cascata dos familiares de primeiro grau organizado, aplicável a todos os fenótipos de cardiomiopatia hereditária, incluindo os assintomáticos",
+        "origem_secao": "Rastreamento cascata familiar"
+      },
+      {
+        "id": "cmdgen-abordagem-multiparametrica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico etiológico definitivo buscado por abordagem multiparamétrica — combinando dado clínico, de imagem e genético — após identificação do fenótipo de apresentação (insuficiência cardíaca ou arritmia)",
+        "origem_secao": "Abordagem multiparametrica"
+      },
+      {
+        "id": "cmdgen-variantes-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença de variante de alto risco (LMNA, FLNC, filamina C) pesquisada e considerada na estratificação de risco de morte súbita — não avaliada só por fração de ejeção",
+        "origem_secao": "Estratificacao risco morte subita"
+      },
+      {
+        "id": "cmdgen-nao-ignorar-genotipo-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que variante de alto risco (LMNA, FLNC) não foi deixada de considerar na estratificação de risco de morte súbita — armadilha citada explicitamente pela fonte",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "cmdgen-calculadora-lmna",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em portador confirmado de mutação em LMNA: calculadora de risco validada (Wahbi et al. 2019) aplicada para individualizar a indicação de CDI, considerando sexo, tipo de mutação, BAV, TV não sustentada e FEVE",
+        "origem_secao": "Estratificacao risco morte subita"
+      },
+      {
+        "id": "cmdgen-fase-vida",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fase clínica da cardiomiopatia registrada (oculta, manifesta ou estágio terminal), considerando a faixa etária do paciente ao longo do ciclo de vida, da infância à transição para o cuidado adulto",
+        "origem_secao": "Abordagem ciclo vida"
+      },
+      {
+        "id": "cmdgen-aspectos-vida-diaria",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aspectos práticos da vida diária revisados com o paciente: exercício físico, dieta, consumo de álcool, controle de peso, questões reprodutivas, atividade sexual, vacinação, direção veicular, emprego e seguros",
+        "origem_secao": "Aspectos praticos vida diaria"
+      },
+      {
+        "id": "cmdgen-comorbidades",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fatores de risco e comorbidades identificados e manejados como parte integral do tratamento, não tratados à parte da cardiomiopatia",
+        "origem_secao": "Identificacao fatores risco comorbidades"
+      },
+      {
+        "id": "cmdgen-terapias-avancadas",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Em estágio terminal refratário à terapia otimizada: avaliação para transplante cardíaco ou dispositivo de assistência ventricular esquerda considerada e encaminhada",
+        "origem_secao": "Terapias avancadas"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
   }
 ]
