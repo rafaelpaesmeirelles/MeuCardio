@@ -18146,5 +18146,338 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-agudo-de-tempestade-eletrica-arritmica",
+    "condicao": "Manejo agudo de tempestade elétrica arrítmica",
+    "resumo": "Reconhecimento e conduta imediata diante de tempestade elétrica (três ou mais episódios de TV sustentada, FV ou choques apropriados do CDI em 24 horas), incluindo a escolha de antiarrítmico conforme o cenário associado (QT longo, Brugada) e a preferência por ablação precoce sobre terapias de suporte isoladas na recorrência.",
+    "documento_origem": "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Second-Degree Atrioventricular Block · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK482359/",
+      "Mobitz type II second-degree atrioventricular block: a commonly overdiagnosed and misinterpreted arrhythmia · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11390567/",
+      "Multidisciplinary Critical Care Management of Electrical Storm: JACC State-of-the-Art Review · JACC · 2023 · https://www.jacc.org/doi/10.1016/j.jacc.2023.03.424",
+      "Spotlight on the 2022 ESC guideline management of ventricular arrhythmias and prevention of sudden cardiac death: 10 novel key aspects · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC10228619/",
+      "Soeiro AM, Pisani CF, Petriz JLF, et al. Posicionamento sobre Diagnóstico e Tratamento da Tempestade Elétrica – 2026. GECETI/SBC e SOBRAC. Arq Bras Cardiol. 2026;123(4):e20260215. DOI: 10.36660/abc.20260215"
+    ],
+    "itens": [
+      {
+        "id": "te-definicao-diagnostica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar a definição formal antes de rotular o quadro como tempestade elétrica: três ou mais episódios de TV sustentada, FV, ou choques apropriados do CDI em 24 horas, separados por ao menos 5 minutos entre si",
+        "origem_secao": "Tempestade eletrica — definicao formal e epidemiologia"
+      },
+      {
+        "id": "te-gravidade-mortalidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer a gravidade do quadro frente a episódios isolados de TV/FV: mortalidade de até 14% nas primeiras 48 horas, com risco de morte 2,4 vezes maior durante a internação e até 5,4 vezes maior nos 3 meses seguintes",
+        "origem_secao": "Tempestade eletrica — definicao formal e epidemiologia"
+      },
+      {
+        "id": "te-contexto-chagasico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Pesquisar cardiopatia chagásica crônica como etiologia de base quando aplicável: incidência de tempestade elétrica de 9,1% ao ano nessa população, com expectativa de vida média de apenas 2,1 meses nos casos de choques repetitivos (mais de 4 por mês)",
+        "origem_secao": "Tempestade eletrica — definicao formal e epidemiologia"
+      },
+      {
+        "id": "te-checar-qt-longo-brugada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de escolher o antiarrítmico, checar se a tempestade está associada a QT longo (congênito ou adquirido)/torsades de pointes, ou a síndrome de Brugada/síndrome do QT curto — a droga de primeira linha muda conforme o cenário",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-amiodarona-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Amiodarona intravenosa como antiarrítmico de primeira linha, EXCETO se a tempestade estiver associada a QT longo ou torsades de pointes — contraindicada especificamente nesse cenário",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-betabloqueador-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador como primeira linha (metoprolol) ou otimização da dose de carvedilol/bisoprolol já em uso crônico; considerar que um ensaio clínico randomizado citado no posicionamento mostrou propranolol mais eficaz que metoprolol nesse contexto",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-brugada-qt-curto-isoproterenol",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em tempestade elétrica associada a síndrome de Brugada ou síndrome do QT curto: isoproterenol como primeira linha — amiodarona pode piorar o quadro nesses dois cenários específicos",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-qt-longo-adquirido-conduta",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em QT longo adquirido: evitar amiodarona, corrigir o distúrbio eletrolítico associado e considerar marca-passo transvenoso temporário para overdrive pacing",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-magnesio-tv-polimorfica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Administrar sulfato de magnésio intravenoso diante de TV polimórfica — o posicionamento o descreve como obrigatório especificamente nesse cenário, com reposição visando normalizar o magnésio sérico, e não como opcional",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-segunda-linha-lidocaina-esmolol",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se refratário à primeira linha: lidocaína intravenosa (taxa de sucesso de 8-30% em situações não isquêmicas) ou esmolol intravenoso como opções de segunda linha",
+        "origem_secao": "Tempestade eletrica — tratamento farmacologico de primeira e segunda linha"
+      },
+      {
+        "id": "te-interrogar-reprogramar-cdi",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Se o paciente tem CDI: interrogar e reprogramar o dispositivo como parte da abordagem multidimensional do episódio, junto com terapia antiarrítmica, sedação e modulação autonômica",
+        "origem_secao": "Tempestade eletrica recorrente — terapias adicionais e ablacao"
+      },
+      {
+        "id": "te-ablacao-preferencial",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Diante de recorrência, encaminhar para ablação por cateter (da TV ou das extrassístoles ventriculares deflagradoras) em centro experiente — preferida sobre sedação profunda, modulação autonômica isolada e suporte circulatório mecânico isolado; ablação precoce, frente à terapia medicamentosa isolada, melhora a sobrevida livre de TV",
+        "origem_secao": "Tempestade eletrica recorrente — terapias adicionais e ablacao"
+      },
+      {
+        "id": "te-terapias-adicionais-refrataria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se refratário à terapia farmacológica e à ablação: considerar bloqueio do gânglio estrelado, anestesia peridural torácica, denervação simpática cardíaca (cirúrgica ou renal) e suporte circulatório mecânico (ECMO, balão intra-aórtico, TandemHeart, Impella)",
+        "origem_secao": "Tempestade eletrica recorrente — terapias adicionais e ablacao"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Arritmias citado em source_refs, com a seção de origem registrada em cada item; nenhum item de categoria medicacao cita dose numérica de fármaco, por regra do produto."
+  },
+  {
+    "slug": "estratificacao-de-risco-e-decisao-de-cdi-na-sindrome-de-brugada-assintomatica",
+    "condicao": "Estratificação de risco e decisão de CDI na síndrome de Brugada assintomática",
+    "resumo": "Como avaliar o paciente com síndrome de Brugada que nunca teve síncope nem parada cardíaca — sem recomendação de classe formal das diretrizes para esse recorte — combinando padrão eletrocardiográfico, resultado do estudo eletrofisiológico, história familiar e custo do próprio CDI antes de indicar o dispositivo.",
+    "documento_origem": "estratificacao-de-risco-na-sindrome-de-brugada-assintomatica-quando-indicar-eef-e-cdi",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sieira J, Brugada P. Brugada Syndrome: Defining the Risk in Asymptomatic Patients. Arrhythm Electrophysiol Rev. 2016;5(3):164-169. PMID: 28116080",
+      "Probst V, Veltmann C, Eckardt L, et al. Long-term prognosis of patients diagnosed with Brugada syndrome: Results from the FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972",
+      "Priori SG, Gasparini M, Napolitano C, et al. Risk stratification in Brugada syndrome: results of the PRELUDE (PRogrammed ELectrical stimUlation preDictive valuE) registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666",
+      "Sieira J, Conte G, Ciconte G, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome: 20 years experience. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495",
+      "Bazoukis G, et al. The Role of Electrophysiological Study in the Risk Stratification of Brugada Syndrome. Cardiol Rev. 2023. PMID: 37126436",
+      "Gaita F, et al. The Brugada syndrome: risk stratification. Eur Heart J Suppl. 2023;25(Suppl C):C27-C31. PMID: 37125275",
+      "Sieira J, Conte G, Ciconte G, et al. A score model to predict risk of events in patients with Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. PMID: 28379344",
+      "Rattanawong P, Kulthamrongsri N, Chung EH. Exercise and Exercise Stress Testing in Brugada Syndrome: Diagnostic, Prognostic, and Safety Implications. JACC Asia. 2026;6(6):848-859. DOI: 10.1016/j.jacasi.2026.03.021. PMID: 42233564 — revisão narrativa, conferida contra o abstract indexado no PubMed em 08/08/2026."
+    ],
+    "itens": [
+      {
+        "id": "brugada-confirmar-assintomatico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente nunca teve síncope nem parada cardíaca antes de aplicar este checklist — pacientes sintomáticos já têm classe de recomendação definida (Classe I para parada cardíaca abortada, IIa para síncope com padrão espontâneo) e não entram neste fluxo de decisão",
+        "origem_secao": "O problema clínico"
+      },
+      {
+        "id": "brugada-diferenciar-padrao-espontaneo-induzido",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Registrar explicitamente no prontuário se o padrão ECG tipo 1 é espontâneo ou só aparece induzido por fármaco bloqueador de canal de sódio (ajmalina, flecainida ou procainamida) ou por febre — o padrão espontâneo carrega HR 4,0 em relação ao induzido na coorte de referência",
+        "origem_secao": "Padrão espontâneo versus induzido por fármaco: a variável mais consistente"
+      },
+      {
+        "id": "brugada-nao-indicar-cdi-por-padrao-isolado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar CDI com base isolada no padrão tipo 1 espontâneo — é a variável mais consistentemente associada a risco na literatura, mas isoladamente não é suficiente para justificar o implante",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-eef-nao-dicotomico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o estudo eletrofisiológico (EEF) como informação adicional, não como teste dicotômico definitivo: o registro PRELUDE (n=308) não confirmou valor preditivo da inducibilidade, enquanto a coorte de Sieira de 20 anos (n=403) mostrou HR 8,3 — resultados divergentes entre os principais estudos",
+        "origem_secao": "Estudo eletrofisiológico: o preditor mais controverso da síndrome"
+      },
+      {
+        "id": "brugada-eef-nao-indutivel-tranquilizador",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerar que um EEF não indutível tem valor preditivo negativo alto (98,3% na coorte de Sieira) e é razoavelmente tranquilizador, mesmo sem excluir risco por completo",
+        "origem_secao": "Estudo eletrofisiológico: o preditor mais controverso da síndrome"
+      },
+      {
+        "id": "brugada-checar-disfuncao-no-sinusal",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Investigar disfunção do nó sinusal como uma das três variáveis que merecem consideração especial no paciente assintomático, junto com padrão espontâneo e EEF indutível",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-historia-familiar-especifica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ao levantar história familiar, checar especificamente se há múltiplos parentes de primeiro grau falecidos por morte súbita antes dos 35 anos — história familiar genérica tem peso preditivo fraco e inconsistente entre estudos, mas esse recorte específico tem magnitude relatada como comparável ao padrão espontâneo",
+        "origem_secao": "História familiar de morte súbita: reavaliada ao longo do tempo"
+      },
+      {
+        "id": "brugada-nao-usar-escore-sieira-isolado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Não usar o escore de Sieira como critério único e suficiente para decidir a favor ou contra o CDI — seu C-index caiu de 0,82 na derivação para 0,58 (próximo do acaso) em validação externa independente",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "brugada-informar-risco-complicacao-cdi",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutir explicitamente com o paciente as taxas de complicação do próprio CDI (cerca de 20% de choque inapropriado e 15% de complicação relacionada ao dispositivo) antes de decidir pelo implante, pesando esse custo contra o risco anual de evento no assintomático médio (0,5% ao ano)",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-decisao-combinada-nao-gatilho-unico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Basear a decisão de CDI na combinação de múltiplas variáveis de risco (padrão espontâneo, disfunção do nó sinusal, EEF indutível, e possivelmente história familiar precoce em múltiplos parentes), nunca em um único achado isolado",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-teste-ergometrico-complementar",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerar o teste ergométrico como ferramenta diagnóstica/prognóstica complementar de baixo custo, avaliando tanto o pico do esforço quanto a fase de recuperação precoce (extrassístoles ventriculares induzidas e alterações do segmento ST) — reconhecendo que a fonte é revisão narrativa, sem metanálise de risco relativo, e não deve ser tratada como equivalente em força de evidência ao EEF ou ao escore de Sieira",
+        "origem_secao": "Teste ergométrico — ferramenta adicional, acrescentada em 08/08/2026"
+      },
+      {
+        "id": "brugada-encaminhar-discussao-individualizada",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Diante de qualquer achado de risco isolado (padrão espontâneo ou EEF indutível) em paciente verdadeiramente assintomático, encaminhar para discussão individualizada com eletrofisiologista antes de decidir — não existe recomendação de classe formal (I/IIa/IIb/III) das diretrizes específica para esse recorte de pacientes",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-verificacao-fonte-classes-diretriz",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: as classes de recomendação citadas para o paciente sintomático (Classe I para parada cardíaca abortada, IIa para síncope com padrão espontâneo) vêm de revisão secundária que as atribui à diretriz ESC 2015 e ao consenso HRS/EHRA/APHRS 2013; o texto integral do consenso de 2013 (PMID 24011539) está atrás de paywall e não foi conferido diretamente na fonte primária — confirmar contra o documento original antes de usar essas classes como base de decisão formal",
+        "origem_secao": "Nota final do documento (VERIFICAÇÃO HUMANA NECESSÁRIA)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Arritmias citado em source_refs, com a seção de origem registrada em cada item. A marcação `VERIFICAÇÃO HUMANA NECESSÁRIA` do documento de origem, sobre a atribuição das classes de recomendação ao consenso HRS/EHRA/APHRS 2013, foi preservada como item explícito do checklist, não removida nem resolvida por suposição."
+  },
+  {
+    "slug": "aplicacao-do-escore-h2fpef-na-dispneia-inexplicada",
+    "condicao": "Aplicação do escore H2FPEF na dispneia inexplicada com fração de ejeção preservada",
+    "resumo": "Passo a passo para calcular e interpretar o escore H2FPEF (0 a 9 pontos, seis variáveis clínicas e ecocardiográficas) no paciente com dispneia de esforço inexplicada sem congestão franca, incluindo os critérios de exclusão do estudo e o limite do que a fonte primária sustenta sobre probabilidade por ponto individual.",
+    "documento_origem": "escore-h2fpef-probabilidade-diagnostica-de-icfep-em-dispneia-inexplicada",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Reddy YNV, Carter RE, Obokata M, Redfield MM, Borlaug BA. A Simple, Evidence-Based Approach to Help Guide Diagnosis of Heart Failure With Preserved Ejection Fraction. Circulation. 2018;138(9):861-870. DOI: 10.1161/CIRCULATIONAHA.118.034646. PMID: 29792299 — texto completo lido na íntegra (PDF de acesso aberto), derivação em 414 pacientes e validação externa em 100 pacientes, com cateterismo direito e teste de esforço invasivo como padrão de referência"
+    ],
+    "itens": [
+      {
+        "id": "h2fpef-confirmar-cenario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o escore se aplica ao cenário certo: dispneia de esforço inexplicada, com fração de ejeção preservada e SEM congestão franca evidente ao exame físico ou à radiografia — não é destinado ao paciente já claramente descompensado",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "h2fpef-excluir-criterios-exclusao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir fração de ejeção menor que 50% (atual ou prévia), valvopatia relevante, hipertensão arterial pulmonar, pericardite constritiva, cardiomiopatia primária e transplante cardíaco — critérios de exclusão do estudo de derivação e validação do escore",
+        "origem_secao": "Como o estudo foi feito"
+      },
+      {
+        "id": "h2fpef-eco-disponivel",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Confirmar ecocardiograma transtorácico recente disponível antes de somar a pontuação — duas das seis variáveis (E/e' e pressão sistólica de artéria pulmonar) dependem dele, e sem elas o escore fica incompleto e a interpretação das faixas não é válida",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "h2fpef-imc",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 2 pontos (Heavy) se índice de massa corporal maior que 30 kg/m² — variável de segundo maior peso do escore",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-hipertensao-tratada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Hipertensão tratada) se em uso de 2 ou mais anti-hipertensivos",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-fa",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 3 pontos (Fibrilação atrial) se paroxística ou permanente, por história clínica ou ECG — variável de maior peso isolado do escore",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-pasp",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Pressão pulmonar elevada) se pressão sistólica de artéria pulmonar estimada ao ecocardiograma maior que 35 mmHg",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-idade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Elder) se idade maior que 60 anos",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-ee-prime",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Filling pressure) se relação E/e' maior que 9 ao Doppler tecidual, e somar a pontuação total (0 a 9 pontos)",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-interpretar-faixa-baixa",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Pontuação 0 ou 1: probabilidade baixa — permite afastar ICFEp com confiança razoável na maioria dos casos",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-interpretar-faixa-intermediaria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Pontuação 2 a 5: probabilidade intermediária — não tratar como diagnóstico confirmado nem descartado; encaminhar para teste adicional (teste de estresse diastólico ao eco ou cateterismo com esforço) para decidir",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-interpretar-faixa-alta",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Pontuação 6 a 9: probabilidade alta — permite estabelecer o diagnóstico de ICFEp com confiança razoável, sem necessariamente exigir teste invasivo de esforço como próximo passo",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-nao-extrapolar-probabilidade-por-ponto",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: não citar a probabilidade percentual exata de ICFEp associada a cada ponto individual do escore (0 a 9) — esse dado está depositado como gráfico de barras (imagem, Figura 1) no artigo original e não foi transcrito em texto nesta base; usar apenas as três faixas categóricas (0-1, 2-5, 6-9) citadas literalmente no artigo, e conferir contra o gráfico original ou a calculadora oficial dos autores antes de citar um percentual por ponto",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-nao-confundir-com-escore-prognostico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não confundir com escores prognósticos de insuficiência cardíaca já cobertos nesta biblioteca (MAGGIC, Seattle Heart Failure Model, EFFECT, GWTG-HF) — aqueles estimam mortalidade em quem já tem o diagnóstico confirmado; o H2FPEF resolve a pergunta diagnóstica anterior, se o diagnóstico de ICFEp existe ou não",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Calculadoras citado em source_refs, com a seção de origem registrada em cada item. Os pontos de corte do escore em si (categoria diagnostico) não são dose de fármaco e, por isso, foram mantidos como número exato; nenhum item de categoria medicacao foi criado neste checklist, por não haver farmacoterapia envolvida no documento de origem."
   }
 ]
