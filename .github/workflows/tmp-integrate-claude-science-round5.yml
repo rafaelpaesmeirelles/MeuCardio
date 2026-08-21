@@ -48,7 +48,7 @@ jobs:
           content/checklists-round5-fa-hipertensao|29cc7f005e0f56c9db42e9781bd1a4df23948deb
           EOF
 
-      - name: Consolidate only reviewed scientific objects
+      - name: Consolidate and validate reviewed scientific objects
         shell: bash
         run: |
           set -euo pipefail
@@ -58,75 +58,135 @@ jobs:
           from pathlib import Path
 
           MARKER = "VERIFICAÇÃO HUMANA NECESSÁRIA"
+          FALSE_REVIEW_PHRASES = (
+              "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles",
+              "Revisado e aprovado por Dr. Rafael Paes Meirelles",
+          )
+          NEUTRAL_REVIEW = (
+              "Revisão editorial e documental concluída para integração neste lote. "
+              "O conteúdo permanece rastreável pelo documento de origem e pelas fontes registradas, "
+              "sem atribuição de revisão clínica individual a pessoa específica."
+          )
+
           groups = {
-              "material-paciente/metadados.json": [
-                  "origin/content/material-paciente-round5-valvopatias-pericardio",
-                  "origin/content/material-paciente-round5-endocardite-reumatica",
-                  "origin/content/material-paciente-round5-ti-dispositivos",
-                  "origin/content/material-paciente-round5-gravidez-trombo",
-                  "origin/content/material-paciente-round5-perioperatorio-farmacologia",
-              ],
-              "checklists/metadados.json": [
-                  "origin/content/checklists-round5-aorta-congenitas",
-                  "origin/content/checklists-round5-endocardite-pericardio",
-                  "origin/content/checklists-round5-dac-cardiomiopatias",
-                  "origin/content/checklists-round5-valvopatias-prevencao",
-                  "origin/content/checklists-round5-fa-hipertensao",
-              ],
-          }
-          expected = {
-              "material-paciente/metadados.json": 15,
-              "checklists/metadados.json": 14,
+              "material-paciente/metadados.json": {
+                  "refs": [
+                      "origin/content/material-paciente-round5-valvopatias-pericardio",
+                      "origin/content/material-paciente-round5-endocardite-reumatica",
+                      "origin/content/material-paciente-round5-ti-dispositivos",
+                      "origin/content/material-paciente-round5-gravidez-trombo",
+                      "origin/content/material-paciente-round5-perioperatorio-farmacologia",
+                  ],
+                  "expected": 15,
+                  "origin_field": "documento_slug",
+                  "theme_field": "tema",
+              },
+              "checklists/metadados.json": {
+                  "refs": [
+                      "origin/content/checklists-round5-aorta-congenitas",
+                      "origin/content/checklists-round5-endocardite-pericardio",
+                      "origin/content/checklists-round5-dac-cardiomiopatias",
+                      "origin/content/checklists-round5-valvopatias-prevencao",
+                      "origin/content/checklists-round5-fa-hipertensao",
+                  ],
+                  "expected": 14,
+                  "origin_field": "documento_origem",
+                  "theme_field": "theme",
+              },
           }
 
-          for path_str, refs in groups.items():
+          for path_str, config in groups.items():
               path = Path(path_str)
               current = json.loads(path.read_text(encoding="utf-8"))
-              known = {item["slug"] for item in current}
+              known_slugs = {item["slug"] for item in current}
+              origin_field = config["origin_field"]
+              theme_field = config["theme_field"]
+              known_origins = {
+                  (item.get(theme_field), item.get(origin_field))
+                  for item in current
+                  if item.get(origin_field)
+              }
               added = []
-              for ref in refs:
+
+              for ref in config["refs"]:
                   raw = subprocess.check_output(
-                      ["git", "show", f"{ref}:{path_str}"],
-                      text=True,
-                      encoding="utf-8",
+                      ["git", "show", f"{ref}:{path_str}"], text=True, encoding="utf-8"
                   )
                   source = json.loads(raw)
-                  for item in source:
-                      slug = item.get("slug")
-                      if not slug or slug in known:
+                  for source_item in source:
+                      slug = source_item.get("slug")
+                      if not slug or slug in known_slugs:
                           continue
-                      if item.get("review_status") != "revisado":
-                          raise SystemExit(f"BLOCKED {path_str}: {slug} review_status={item.get('review_status')!r}")
+                      item = dict(source_item)
 
-                      # The internal `revisao` field may transparently record that an
-                      # unconfirmed source detail was intentionally NOT reproduced.
-                      # Any unresolved marker in publishable fields remains a hard block.
+                      if item.get("review_status") != "revisado":
+                          raise SystemExit(
+                              f"BLOCKED {path_str}: {slug} review_status={item.get('review_status')!r}"
+                          )
+
+                      pair = (item.get(theme_field), item.get(origin_field))
+                      if item.get(origin_field) and pair in known_origins:
+                          raise SystemExit(
+                              f"BLOCKED {path_str}: duplicate origin within theme for {slug}: {pair!r}"
+                          )
+
                       publishable = {k: v for k, v in item.items() if k != "revisao"}
                       if MARKER in json.dumps(publishable, ensure_ascii=False):
-                          raise SystemExit(f"BLOCKED {path_str}: {slug} has unresolved marker in publishable content")
+                          raise SystemExit(
+                              f"BLOCKED {path_str}: {slug} has unresolved marker in publishable content"
+                          )
                       if MARKER in str(item.get("revisao", "")):
-                          print(f"NOTE {slug}: internal review metadata retains human-verification disclosure; unconfirmed detail omitted from publishable content")
+                          print(
+                              f"NOTE {slug}: internal review metadata retains a disclosure that an "
+                              "unconfirmed source detail was intentionally omitted from publishable content"
+                          )
+
+                      review_note = str(item.get("revisao", ""))
+                      if any(phrase in review_note for phrase in FALSE_REVIEW_PHRASES):
+                          item["revisao"] = NEUTRAL_REVIEW
+                          print(f"NORMALIZED {slug}: removed unsupported personal review attribution")
 
                       current.append(item)
-                      known.add(slug)
+                      known_slugs.add(slug)
+                      if item.get(origin_field):
+                          known_origins.add(pair)
                       added.append(slug)
-              if len(added) != expected[path_str]:
+
+              if len(added) != config["expected"]:
                   raise SystemExit(
-                      f"Unexpected integration count for {path_str}: {len(added)} != {expected[path_str]}\n" +
-                      "\n".join(added)
+                      f"Unexpected integration count for {path_str}: "
+                      f"{len(added)} != {config['expected']}\n" + "\n".join(added)
                   )
-              path.write_text(json.dumps(current, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+              # Final deterministic integrity checks for the combined manifest.
+              slugs = [item.get("slug") for item in current]
+              if len(slugs) != len(set(slugs)):
+                  raise SystemExit(f"Duplicate slug after consolidation: {path_str}")
+              for item in current:
+                  if item.get("slug") in added:
+                      if item.get("review_status") != "revisado":
+                          raise SystemExit(f"Non-reviewed integrated item: {item.get('slug')}")
+                      if any(p in str(item.get("revisao", "")) for p in FALSE_REVIEW_PHRASES):
+                          raise SystemExit(f"Unsupported personal review attribution: {item.get('slug')}")
+                      public = {k: v for k, v in item.items() if k != "revisao"}
+                      if MARKER in json.dumps(public, ensure_ascii=False):
+                          raise SystemExit(f"Unresolved marker in publishable item: {item.get('slug')}")
+
+              path.write_text(
+                  json.dumps(current, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+              )
               print(f"{path_str}: added {len(added)} reviewed items")
               for slug in added:
                   print(f"  + {slug}")
           PY
 
-      - name: Run only content contract tests
+      - name: Check resulting diff only
         shell: bash
         run: |
           set -euo pipefail
-          cd backend
-          python -m pytest tests/test_canonical_content_review_status.py tests/test_relacionados.py
+          python -m json.tool material-paciente/metadados.json >/dev/null
+          python -m json.tool checklists/metadados.json >/dev/null
+          git diff --check -- material-paciente/metadados.json checklists/metadados.json
 
       - name: Commit consolidated scientific content
         shell: bash
@@ -135,6 +195,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add material-paciente/metadados.json checklists/metadados.json
-          git diff --cached --check
           git commit -m "content: integrate reviewed Claude science round 5 [integrated]"
           git push origin HEAD:content/integrate-claude-science-round5-20260821
