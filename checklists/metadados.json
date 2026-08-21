@@ -18146,5 +18146,347 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "febre-reumatica-aguda-na-crianca-criterios-diagnosticos-por-risco-e-tratamento",
+    "condicao": "Suspeita de febre reumática aguda (FRA) na criança e no adolescente",
+    "resumo": "O que checar diante de suspeita de febre reumática aguda — estratificação por grupo de risco antes de aplicar os critérios de Jones, sequência diagnóstica, e cuidados na fase aguda antes de começar a profilaxia secundária.",
+    "documento_origem": "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Australian guideline for the prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (Edition 3.3). RHDAustralia, Menzies School of Health Research. August 2025.",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771."
+    ],
+    "itens": [
+      {
+        "id": "fra-classificar-grupo-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o paciente como população de alto risco ou de baixo risco de FRA/doença reumática cardíaca antes de aplicar os critérios diagnósticos — os cortes de manifestação maior e menor mudam conforme o estrato",
+        "origem_secao": "Grupos de risco"
+      },
+      {
+        "id": "fra-verificacao-humana-risco-brasil",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: não há diretriz brasileira que categorize formalmente populações de alto/baixo risco de FRA nos moldes do guideline australiano — usar julgamento clínico de contexto socioeconômico e densidade domiciliar para aproximar o estrato",
+        "origem_secao": "Grupos de risco"
+      },
+      {
+        "id": "fra-contar-manifestacoes-maiores-e-menores-por-estrato",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Contar manifestações maiores e menores usando a tabela do estrato de risco correto do paciente, não a tabela genérica — em alto risco, monoartrite asséptica e poliartralgia isolada já contam como maior",
+        "origem_secao": "Manifestacoes maiores e menores por grupo de risco"
+      },
+      {
+        "id": "fra-buscar-evidencia-de-infeccao-estreptococica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Buscar evidência de infecção estreptocócica prévia: título de ASO ou anti-DNase B elevado ou em ascensão (comparado ao limite de normalidade por faixa etária), cultura de orofaringe ou teste rápido de antígeno/ácido nucleico",
+        "origem_secao": "Criterios diagnosticos por estrato de risco"
+      },
+      {
+        "id": "fra-ecocardiograma-em-todo-caso-suspeito",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma em todo caso suspeito de FRA, independentemente da ausculta cardíaca estar normal — cardite subclínica só é detectada pelo exame de imagem",
+        "origem_secao": "Detalhamento das manifestacoes maiores"
+      },
+      {
+        "id": "fra-ecocardiograma-obrigatorio-na-coreia-isolada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma mesmo quando a única manifestação for coreia de Sydenham isolada, sem outro sinal clínico de cardite",
+        "origem_secao": "Detalhamento das manifestacoes maiores"
+      },
+      {
+        "id": "fra-eletrocardiograma-em-todo-caso",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar eletrocardiograma em todo caso suspeito ou confirmado, comparando o intervalo PR ao limite superior de normalidade específico da faixa etária",
+        "origem_secao": "Achados laboratoriais e eletrocardiograficos"
+      },
+      {
+        "id": "fra-repetir-ecg-se-pr-prolongado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houver intervalo PR prolongado isolado, repetir o ECG em 1 e 2 semanas (e, se ainda alterado, em 1 e 2 meses) para documentar normalização e reforçar a probabilidade diagnóstica",
+        "origem_secao": "Achados laboratoriais e eletrocardiograficos"
+      },
+      {
+        "id": "fra-solicitar-vhs-e-pcr-juntos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar VHS e PCR em conjunto, nunca apenas PCR isolado — parcela relevante dos casos confirmados tem PCR normal com VHS já alterado",
+        "origem_secao": "Achados laboratoriais e eletrocardiograficos"
+      },
+      {
+        "id": "fra-hemocultura-antes-do-antibiotico-se-febre",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se houver febre documentada, colher hemoculturas antes de iniciar antibioticoterapia, para não perder diagnóstico alternativo relevante (artrite séptica, endocardite)",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-nao-iniciar-anti-inflamatorio-antes-de-confirmar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Adiar o início de salicilato ou anti-inflamatório não esteroidal enquanto o diagnóstico ainda está incerto — o anti-inflamatório pode mascarar a evolução da poliartrite migratória e da febre",
+        "origem_secao": "Principio geral nao iniciar anti-inflamatorio antes de confirmar o diagnostico"
+      },
+      {
+        "id": "fra-paracetamol-durante-incerteza-diagnostica",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Usar paracetamol para controle da dor articular enquanto o diagnóstico permanece incerto, reservando o anti-inflamatório não esteroidal para depois da confirmação",
+        "origem_secao": "Principio geral nao iniciar anti-inflamatorio antes de confirmar o diagnostico"
+      },
+      {
+        "id": "fra-erradicar-estreptococo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Prescrever esquema de erradicação do estreptococo do grupo A (penicilina como primeira escolha, com alternativa definida conforme grau e tipo de hipersensibilidade à penicilina), mesmo com cultura de orofaringe já negativa na apresentação",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-atencao-sindrome-de-reye-com-aspirina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se a criança estiver em uso de aspirina para artrite/artralgia e cursar com virose aguda concomitante, considerar suspensão temporária pelo risco de síndrome de Reye e reforçar a vacinação para influenza",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-avaliacao-cardiologica-se-cardite-sintomatica",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Buscar orientação de cardiologista especialista sempre que houver cardite sintomática com insuficiência cardíaca, antes de escalonar o tratamento medicamentoso dessa complicação",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-primeira-dose-de-profilaxia-antes-da-internacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Administrar a primeira dose do esquema de erradicação, se possível, já antes da internação hospitalar em paciente com suspeita de FRA",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-definir-duracao-da-profilaxia-secundaria-por-tabela",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir a duração mínima da profilaxia secundária consultando a tabela específica por gravidade da cardite e presença de doença reumática cardíaca — nunca aplicar duração fixa genérica a todo paciente",
+        "origem_secao": "Duracao depende da gravidade da cardite e da presenca de doenca reumatica cardiaca estabelecida"
+      },
+      {
+        "id": "fra-agendar-reavaliacoes-programadas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Agendar as reavaliações programadas conforme a categoria diagnóstica definida (aos 12 meses; ou em 1, 3 e 5 anos; ou mais frequentes em doença reumática cardíaca moderada a grave)",
+        "origem_secao": "Duracao depende da gravidade da cardite e da presenca de doenca reumatica cardiaca estabelecida"
+      },
+      {
+        "id": "fra-orientacao-sobre-decisao-especializada-para-suspender",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar a família de que a interrupção da profilaxia secundária é decisão que exige avaliação especializada, e que doença reumática cardíaca grave pode justificar duração estendida além do mínimo tabelado",
+        "origem_secao": "Duracao depende da gravidade da cardite e da presenca de doenca reumatica cardiaca estabelecida"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026, a partir do documento publicado sobre critérios de Jones revisados e tratamento da fase aguda da febre reumática (Cardiologia pediátrica)."
+  },
+  {
+    "slug": "dislipidemia-familiar-heterozigotica-pediatrica-rastreio-e-inicio-de-estatina",
+    "condicao": "Suspeita ou diagnóstico de hipercolesterolemia familiar (FH) heterozigótica na criança",
+    "resumo": "O que checar no rastreio, no diagnóstico fenotípico por corte de LDL-colesterol e na decisão de iniciar estatina na criança com FH heterozigótica, sem confundir com a conduta, muito mais agressiva e mais precoce, da forma homozigótica.",
+    "documento_origem": "dislipidemia-familiar-heterozigotica-pediatrica-rastreio-alvo-de-ldl-e-inicio-de-estatina",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Wiegman A, Gidding SS, Watts GF, et al; European Atherosclerosis Society Consensus Panel. Familial hypercholesterolaemia in children and adolescents: gaining decades of life by optimizing detection and treatment. Eur Heart J. 2015;36(36):2425-2437. DOI: 10.1093/eurheartj/ehv157. PMID: 26009596. PMCID: PMC4576143.",
+      "Harada-Shiba M, Ohtake A, Sugiyama D, et al. Guidelines for the Diagnosis and Treatment of Pediatric Familial Hypercholesterolemia 2022. J Atheroscler Thromb. 2023;30(6):531-557. DOI: 10.5551/jat.CR006. PMID: 36682777."
+    ],
+    "itens": [
+      {
+        "id": "fh-rastrear-a-partir-dos-5-anos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear a criança com suspeita de FH heterozigótica a partir dos 5 anos de idade — a suspeita de forma homozigótica deve ser investigada assim que surgir, sem corte etário mínimo",
+        "origem_secao": "Quando suspeitar e como diagnosticar"
+      },
+      {
+        "id": "fh-rastreio-em-cascata-familiares-de-primeiro-grau",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Testar os familiares de primeiro grau de todo caso índice de FH confirmado (rastreio em cascata), em vez de depender só de rastreio não direcionado",
+        "origem_secao": "Quando suspeitar e como diagnosticar"
+      },
+      {
+        "id": "fh-aplicar-corte-de-ldl-conforme-historia-familiar",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o LDL-colesterol pelo corte diagnóstico correto conforme o contexto familiar: isoladamente elevado sugere FH por si só; corte mais baixo já sugere FH quando há história familiar de doença coronariana precoce ou colesterol elevado nos pais; corte ainda mais baixo é suficiente quando um dos pais já tem diagnóstico genético confirmado",
+        "origem_secao": "Quando suspeitar e como diagnosticar"
+      },
+      {
+        "id": "fh-nao-diagnosticar-so-pelo-valor-isolado-de-ldl",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Não diagnosticar FH apenas pelo valor isolado de LDL-colesterol, sem registrar o contexto familiar — o mesmo valor muda de interpretação conforme haja ou não história familiar relevante",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "fh-dosar-lipoproteina-a",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosar lipoproteína(a) em toda criança com diagnóstico de FH, para estratificação de risco adicional independente do LDL-colesterol",
+        "origem_secao": "Lipoproteina a quando medir"
+      },
+      {
+        "id": "fh-iniciar-dieta-desde-o-diagnostico",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar dieta com modificação do teor de gordura (redução de gordura total, gordura saturada e colesterol dietético) desde o momento do diagnóstico, em qualquer idade, como base do manejo",
+        "origem_secao": "Tratamento dieta primeiro estatina a partir dos 8-10 anos"
+      },
+      {
+        "id": "fh-iniciar-estatina-entre-8-e-10-anos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar terapia com estatina entre 8 e 10 anos de idade na criança com FH heterozigótica, mantendo a orientação dietética já em curso, e não adiar o início até a vida adulta por receio genérico de segurança",
+        "origem_secao": "Tratamento dieta primeiro estatina a partir dos 8-10 anos"
+      },
+      {
+        "id": "fh-escolher-estatina-com-aprovacao-para-a-idade",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Escolher uma estatina com aprovação descrita para a faixa etária da criança e começar na dose mínima recomendada, titulando de acordo com a resposta de redução do LDL-colesterol",
+        "origem_secao": "Tratamento dieta primeiro estatina a partir dos 8-10 anos"
+      },
+      {
+        "id": "fh-usar-alvo-percentual-entre-8-e-10-anos",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Entre 8 e 10 anos, acompanhar a resposta pelo alvo de redução percentual do LDL-colesterol em relação ao nível pré-tratamento, e não por um valor numérico absoluto",
+        "origem_secao": "Alvo terapeutico de LDL-colesterol por faixa etaria"
+      },
+      {
+        "id": "fh-usar-alvo-absoluto-a-partir-dos-10-anos",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "A partir dos 10 anos, acompanhar a resposta pelo alvo absoluto de LDL-colesterol definido pelo consenso, e não continuar usando apenas a meta percentual da faixa etária mais jovem",
+        "origem_secao": "Alvo terapeutico de LDL-colesterol por faixa etaria"
+      },
+      {
+        "id": "fh-distinguir-conduta-de-forma-homozigotica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de aplicar a janela de início de estatina entre 8 e 10 anos, confirmar que se trata de FH heterozigótica — a forma homozigótica exige tratamento farmacológico já ao diagnóstico, sem aguardar essa janela",
+        "origem_secao": "Nota sobre a forma homozigotica outra doenca na pratica mesmo nome na origem genetica"
+      },
+      {
+        "id": "fh-encaminhar-para-aferese-se-homozigotica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se houver suspeita ou confirmação de FH homozigótica, encaminhar para avaliação de aférese de lipoproteínas assim que tecnicamente possível, que pode começar já a partir dos 2 anos de idade",
+        "origem_secao": "Nota sobre a forma homozigotica outra doenca na pratica mesmo nome na origem genetica"
+      },
+      {
+        "id": "fh-registrar-divergencia-entre-sociedades",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao comparar com outra diretriz de referência sobre FH pediátrica, registrar explicitamente que o corte de início de tratamento e a meta terapêutica podem divergir entre sociedades, em vez de tratar um único valor como universal",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026, a partir do documento publicado sobre rastreio, alvo de LDL e início de estatina na hipercolesterolemia familiar heterozigótica pediátrica (Cardiologia pediátrica)."
+  },
+  {
+    "slug": "delirium-pos-operatorio-em-cirurgia-cardiaca-no-idoso-predicao-e-prevencao",
+    "condicao": "Prevenção, diagnóstico e seguimento de delirium pós-operatório em cirurgia cardíaca no idoso",
+    "resumo": "O que checar antes, durante e depois de uma cirurgia cardíaca no paciente idoso para estratificar o risco de delirium, escolher estratégia de prevenção com evidência real e diagnosticar o quadro de forma sistemática à beira do leito.",
+    "documento_origem": "delirium-pos-operatorio-em-cirurgia-cardiaca-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rudolph JL, Jones RN, Levkoff SE, et al. Derivation and validation of a preoperative prediction rule for delirium after cardiac surgery. Circulation. 2009;119(2):229-236. PMID: 19118253. PMCID: PMC2735244.",
+      "Inouye SK, van Dyck CH, Alessi CA, Balkin S, Siegal AP, Horwitz RI. Clarifying confusion: the confusion assessment method. A new method for detection of delirium. Ann Intern Med. 1990;113(12):941-948. PMID: 2240918.",
+      "Saczynski JS, Marcantonio ER, Quach L, et al. Cognitive trajectories after postoperative delirium. N Engl J Med. 2012;367(1):30-39. PMID: 22762316. PMCID: PMC3433229.",
+      "Turan A, Duncan A, Leung S, et al; DECADE Study Group. Dexmedetomidine for reduction of atrial fibrillation and delirium after cardiac surgery (DECADE): a randomised placebo-controlled trial. Lancet. 2020;396(10245):177-185. PMID: 32682483.",
+      "Inouye SK, Bogardus ST Jr, Charpentier PA, et al. A multicomponent intervention to prevent delirium in hospitalized older patients. N Engl J Med. 1999;340(9):669-676. PMID: 10053175."
+    ],
+    "itens": [
+      {
+        "id": "del-aplicar-escore-de-rudolph-no-pre-operatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aplicar o escore pré-operatório de Rudolph em todo paciente de 60 anos ou mais candidato a cirurgia cardíaca eletiva, combinando MMSE, escala de depressão geriátrica, história de AVC/AIT e albumina sérica",
+        "origem_secao": "O escore de predicao pre-operatoria de Rudolph"
+      },
+      {
+        "id": "del-direcionar-vigilancia-por-faixa-de-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Usar a pontuação do escore de Rudolph para direcionar recursos de vigilância e prevenção ao paciente de risco intermediário ou alto, em vez de aplicar a mesma rotina de monitorização a todos",
+        "origem_secao": "O escore de predicao pre-operatoria de Rudolph"
+      },
+      {
+        "id": "del-aplicar-cam-diariamente-no-pos-operatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aplicar o Confusion Assessment Method (CAM), ou o CAM-ICU em paciente sob ventilação mecânica, diariamente no pós-operatório — não apenas quando houver agitação clinicamente óbvia",
+        "origem_secao": "Como diagnosticar o Confusion Assessment Method CAM"
+      },
+      {
+        "id": "del-rastrear-forma-hipoativa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear ativamente a forma hipoativa do delirium (letargia, lentificação), não apenas a forma hiperativa (agitação), que é a mais facilmente reconhecida",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "del-nao-usar-dexmedetomidina-como-prevencao-rotineira",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não usar dexmedetomidina rotineiramente na cirurgia cardíaca com a expectativa de prevenir delirium ou fibrilação atrial — o benefício observado em cirurgia não cardíaca não se confirmou nessa população",
+        "origem_secao": "Prevencao farmacologica o que o DECADE ensina sobre nao extrapolar entre populacoes"
+      },
+      {
+        "id": "del-priorizar-prevencao-multicomponente-nao-farmacologica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Priorizar como primeira linha a prevenção multicomponente não farmacológica: mobilização precoce, orientação cognitiva repetida, higiene do sono sem sedativo, correção de déficit visual/auditivo com o próprio óculos/aparelho auditivo do paciente e hidratação adequada",
+        "origem_secao": "Prevencao nao farmacologica o modelo multicomponente do HELP"
+      },
+      {
+        "id": "del-investigar-causas-reversiveis-antes-de-atribuir-a-idade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar causas reversíveis (dor mal controlada, retenção urinária, distúrbio metabólico, infecção, privação de sono por rotina hospitalar) antes de atribuir o quadro exclusivamente à idade avançada",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "del-comunicar-familia-sobre-trajetoria-cognitiva",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Comunicar à família que o delirium pós-operatório não é necessariamente um evento autolimitado — em parcela relevante dos pacientes o comprometimento cognitivo mensurável persiste por até um ano após a cirurgia",
+        "origem_secao": "A consequencia que passa despercebida declinio cognitivo ate um ano depois"
+      },
+      {
+        "id": "del-agendar-seguimento-cognitivo-apos-a-alta",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Agendar reavaliação cognitiva no seguimento ambulatorial do paciente que apresentou delirium no pós-operatório, em vez de presumir retorno espontâneo ao nível cognitivo basal só pela alta hospitalar",
+        "origem_secao": "A consequencia que passa despercebida declinio cognitivo ate um ano depois"
+      },
+      {
+        "id": "del-agir-sobre-o-resultado-do-escore-de-rudolph",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Agir sobre o resultado do escore de Rudolph (intensificando vigilância e prevenção no paciente de alto risco) em vez de apenas documentar a pontuação como registro de prognóstico",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026, a partir do documento publicado sobre predição, prevenção e consequência cognitiva do delirium pós-operatório em cirurgia cardíaca no idoso (Cardiologia geriátrica)."
   }
 ]
