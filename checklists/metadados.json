@@ -18146,5 +18146,180 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "escalonamento-terapeutico-na-hipertensao-resistente-e-refrataria-sbc-2025",
+    "condicao": "Hipertensão resistente e refratária — algoritmo terapêutico passo a passo (SBC/SBN/SBH 2025)",
+    "resumo": "O que checar, na ordem certa, ao confirmar hipertensão resistente e escalonar o tratamento farmacológico até a hipertensão refratária, seguindo o algoritmo do Capítulo 12 da Diretriz Brasileira de Hipertensão Arterial 2025.",
+    "documento_origem": "diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Texto completo em inglês consultado via PDF de acesso aberto publicado pelo próprio periódico (abccardiol.org), Capítulo 12 (Resistant and Refractory Hypertension, páginas 101-106), metodologia GRADE — força de recomendação (Strong/Weak) e certeza da evidência (High/Moderate/Low), não classe/nível ESC"
+    ],
+    "itens": [
+      {
+        "id": "escalon-htn-resist-confirmar-hr",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar hipertensão resistente (HR) verdadeira: PA de consultório acima da meta apesar de ≥3 classes sinérgicas em doses máximas recomendadas ou toleradas, preferencialmente incluindo diurético tiazídico/similar, IECA ou BRA e bloqueador de canal de cálcio de ação prolongada, mantidas por pelo menos 30 a 60 dias",
+        "origem_secao": "12.1. Definição e classificação"
+      },
+      {
+        "id": "escalon-htn-resist-pseudo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir pseudorresistência antes de escalonar o tratamento — erro técnico de aferição, efeito do avental branco, inércia terapêutica e não adesão respondem por cerca de metade dos rótulos iniciais de HR",
+        "origem_secao": "12.4. Avaliação diagnóstica"
+      },
+      {
+        "id": "escalon-htn-resist-mapa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "MAPA (preferencial, por fornecer aferições noturnas) ou MRPA obrigatórios para confirmar o diagnóstico de HR e para o seguimento — PA de consultório isolada não basta",
+        "origem_secao": "12.4. Avaliação diagnóstica"
+      },
+      {
+        "id": "escalon-htn-resist-hta-secundaria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Investigar hipertensão secundária em toda HR confirmada — hiperaldosteronismo, doença renovascular e, em particular, apneia obstrutiva do sono, recomendada em todo paciente com HR pela prevalência que chega a até 80% nessa população",
+        "origem_secao": "12.4. Avaliação diagnóstica"
+      },
+      {
+        "id": "escalon-htn-resist-tripla",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia tripla inicial com mecanismos complementares — bloqueador do SRAA (IECA ou BRA) associado a bloqueador de canal de cálcio di-hidropiridínico de ação prolongada e diurético tiazídico ou tiazídico-símile, preferencialmente em combinação de dose fixa",
+        "origem_secao": "12.6.2. Tratamento farmacológico — passo 1"
+      },
+      {
+        "id": "escalon-htn-resist-quarto-farmaco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Após confirmação por MAPA/MRPA em 30-60 dias, adicionar como quarto fármaco preferencial um antagonista do receptor mineralocorticoide (espironolactona, ou eplerenona quando houver efeito hormonal limitante) — amilorida é alternativa quando o antagonista mineralocorticoide não é tolerado ou contraindicado",
+        "origem_secao": "12.6.2. Tratamento farmacológico — passos 2 a 4"
+      },
+      {
+        "id": "escalon-htn-resist-monitorar-k-tfg",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorizar potássio sérico e TFGe a cada 3-6 meses, no mínimo, durante o uso do antagonista mineralocorticoide, com atenção redobrada se TFGe <30 mL/min/1,73m² ou potássio >5,5 mEq/L",
+        "origem_secao": "12.6.2. Tratamento farmacológico — passo 3"
+      },
+      {
+        "id": "escalon-htn-resist-simpatolitico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a PA permanecer acima da meta com 4 classes otimizadas (incluindo tiazídico e antagonista mineralocorticoide), escalonar para um agente que reduza a hiperatividade simpática — agonista alfa central, alfabloqueador ou betabloqueador vasodilatador — em vez de repetir uma classe já em uso",
+        "origem_secao": "12.6.2. Tratamento farmacológico — passo 5"
+      },
+      {
+        "id": "escalon-htn-resist-ieca-bra",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Nunca combinar IECA e BRA simultaneamente como estratégia de escalonamento, mesmo diante de PA refratária (recomendação forte, certeza alta)",
+        "origem_secao": "Recomendações formais da diretriz"
+      },
+      {
+        "id": "escalon-htn-resist-centro-especializado",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar a centro especializado em hipertensão, com equipe multidisciplinar e acesso a ferramentas diagnósticas, quando a HR ou a hipertensão refratária não responder ao algoritmo padrão",
+        "origem_secao": "12.5. Abordagem clínica"
+      },
+      {
+        "id": "escalon-htn-resist-meta-fraca",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao discutir a meta pressórica com o paciente em HR ou HRf, explicitar que a meta de PA <130/80 mmHg nesse contexto tem força de recomendação FRACA e certeza BAIXA — diferente da robustez da meta geral da diretriz para a população hipertensa comum",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Hipertensão citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "indicacao-cirurgica-na-regurgitacao-aortica-cronica-grave",
+    "condicao": "Regurgitação aórtica crônica grave — indicação de cirurgia e seguimento do assintomático (ESC/EACTS 2021)",
+    "resumo": "Critérios ecocardiográficos de gravidade, cortes de indicação cirúrgica no sintomático e no assintomático, manejo do aneurisma de raiz/aorta ascendente associado, e o intervalo de reavaliação do paciente sob seguimento clínico.",
+    "documento_origem": "regurgitacao-aortica-cronica-e-aguda-indicacao-cirurgica-esceacts-2021",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, Milojevic M, Baldus S, Bauersachs J, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165. academic.oup.com bloqueado (403) e PMC (PMC9725093) sem XML/HTML acessível (reCAPTCHA) — texto lido em mirror PDF aberto e íntegro (Sociedad Colombiana de Cardiología, 218 páginas), conferido linha a linha contra a tabela de recomendações original nesta sessão. A base já tinha 18 registros isolados de evidência sobre este tema, mas nenhum documento em content/ reunia o assunto — lacuna confirmada por busca antes de escrever."
+    ],
+    "itens": [
+      {
+        "id": "ra-cirurgia-criterios-gravidade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar gravidade da regurgitação aórtica combinando achados qualitativos (morfologia valvar anormal, jato de cor amplo, fluxo reverso holodiastólico na aorta descendente com velocidade >20 cm/s), semiquantitativos (vena contracta >6 mm, tempo de meia-pressão <200 ms) e quantitativos (EROA ≥30 mm², volume regurgitante ≥60 mL/batimento, dilatação de VE) antes de decidir cirurgia",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "ra-cirurgia-sintomatico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "RA crônica grave SINTOMÁTICA: indicar cirurgia independentemente da função de VE, enquanto o risco operatório não for proibitivo",
+        "origem_secao": "RA crônica grave — quando operar"
+      },
+      {
+        "id": "ra-cirurgia-corte-classe1",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "RA crônica grave ASSINTOMÁTICA: indicar cirurgia quando DSFVE >50 mm (ou >25 mm/m² SC em compleição pequena) OU FEVE de repouso ≤50%",
+        "origem_secao": "RA crônica grave — quando operar"
+      },
+      {
+        "id": "ra-cirurgia-corte-iib",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em assintomático com DSFVE >20 mm/m² SC (compleição pequena) OU FEVE de repouso ≤55%, cirurgia pode ser considerada se o risco cirúrgico for baixo — corte novo de 2021, evidência mais fraca, e que NÃO substitui o corte de FEVE ≤50%",
+        "origem_secao": "RA crônica grave — quando operar"
+      },
+      {
+        "id": "ra-cirurgia-outro-motivo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "RA grave (sintomática ou assintomática) em paciente que já vai ser operado por outro motivo — revascularização miocárdica, cirurgia de aorta ascendente ou de outra valva: operar a valva aórtica no mesmo tempo cirúrgico",
+        "origem_secao": "RA crônica grave — quando operar"
+      },
+      {
+        "id": "ra-cirurgia-aneurisma-raiz",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aneurisma de raiz ou aorta ascendente associado: checar os cortes específicos por perfil — jovem com dilatação de raiz em centro experiente (reimplante valve-sparing), Marfan com diâmetro máximo ≥50 mm, e os cortes de ≥45-55 mm conforme fator de risco/etiologia (Loeys-Dietz, valva bicúspide, coarctação)",
+        "origem_secao": "Aneurisma de raiz ou aorta ascendente associado"
+      },
+      {
+        "id": "ra-cirurgia-ra-aguda",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Em RA AGUDA, não aplicar os cortes numéricos de gravidade da RA crônica — a diretriz não fornece corte próprio para RA aguda e remete às diretrizes de endocardite ou de síndrome aórtica aguda/dissecção conforme a causa suspeita",
+        "origem_secao": "RA aguda — a diretriz não dá corte próprio"
+      },
+      {
+        "id": "ra-cirurgia-seguimento-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Assintomático com RA grave e VE normal: reavaliação ecocardiográfica anual, reduzindo o intervalo para 3-6 meses ao se aproximar dos cortes cirúrgicos",
+        "origem_secao": "Seguimento do assintomático com RA grave e VE normal"
+      },
+      {
+        "id": "ra-cirurgia-dilatacao-progressiva",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Discutir cirurgia mesmo sem atingir os cortes formais diante de dilatação progressiva de VE (DDVE >65 mm) ou queda progressiva de FEVE ao longo do seguimento — orientação em prosa, sem Classe/Nível próprio na diretriz",
+        "origem_secao": "Seguimento do assintomático com RA grave e VE normal"
+      },
+      {
+        "id": "ra-cirurgia-reparo-vs-troca",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Reservar o reparo valvar (em vez da troca) a paciente selecionado, em centro experiente, quando resultado durável é esperado — a troca continua sendo o procedimento padrão na maioria dos casos",
+        "origem_secao": "RA crônica grave — quando operar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Valvopatias citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
