@@ -20168,5 +20168,113 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-neuropatia-autonomica-cardiaca-diabetica-bateria-de-ewing",
+    "condicao": "Neuropatia autonômica cardíaca diabética — avaliação pela bateria de testes de Ewing",
+    "resumo": "Rastreio, execução dos cinco testes de Ewing à beira do leito e interpretação prognóstica da neuropatia autonômica cardíaca no paciente diabético, incluindo os confundidores que invalidam o resultado.",
+    "documento_origem": "neuropatia-autonomica-cardiaca-diabetica-manifestacoes-testes-de-ewing-e-valor-prognostico",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gogan A, Potre O, Avram V-F, Andor M, Caruntu F, Timar B. Cardiac Autonomic Neuropathy in Diabetes Mellitus: Pathogenesis, Epidemiology, Diagnosis and Clinical Implications: A Narrative Review. J Clin Med. 2025;14(3):671. PMID 39941342. PMC11818907",
+      "Maser RE, Mitchell BD, Vinik AI, Freeman R. The association between cardiovascular autonomic neuropathy and mortality in individuals with diabetes: a meta-analysis. Diabetes Care. 2003;26(6):1895-1901. PMID 12766130",
+      "Pop-Busui R, Boulton AJM, Feldman EL, et al. Diabetic Neuropathy: A Position Statement by the American Diabetes Association. Diabetes Care. 2017;40(1):136-154. PMID 27999003. PMC6977405",
+      "ElSayed NA, Aleppo G, Bannuru RR, et al., pelo American Diabetes Association Professional Practice Committee. 12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes-2024. Diabetes Care. 2024;47(Suppl 1):S231-S243. PMID 38078577. PMC10725803"
+    ],
+    "itens": [
+      {
+        "id": "nac-ewing-indicacao-rastreio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar indicação de rastreio de neuropatia autonômica cardíaca (NAC): diabetes tipo 2 desde o diagnóstico, diabetes tipo 1 a partir de 5 anos do diagnóstico, ou presença de outra complicação microvascular já estabelecida (nefropatia, neuropatia periférica)",
+        "origem_secao": "Implicacao pratica — quem rastrear"
+      },
+      {
+        "id": "nac-ewing-excluir-confundidores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir ou registrar confundidores que podem invalidar os três primeiros testes de Ewing antes de atribuir o achado a NAC: arritmia (especialmente fibrilação atrial), fármaco cronotrópico (betabloqueador, ivabradina) ou outra causa de disautonomia",
+        "origem_secao": "Implicacao pratica — cuidado pratico nos testes"
+      },
+      {
+        "id": "nac-ewing-teste-1-respiracao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste 1 (parassimpático): variação da FC com respiração profunda a 6 incursões/minuto, ECG contínuo; anormal se razão E/I < 1,2 ou variação de FC < 10 bpm",
+        "origem_secao": "Testes de Ewing — teste 1"
+      },
+      {
+        "id": "nac-ewing-teste-2-valsalva",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste 2 (parassimpático): razão de Valsalva — expiração forçada contra manômetro a 40 mmHg por 15 segundos, com ECG contínuo; anormal se razão < 1,2",
+        "origem_secao": "Testes de Ewing — teste 2"
+      },
+      {
+        "id": "nac-ewing-teste-3-postural",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste 3 (parassimpático): razão 30:15 na mudança postural do decúbito para a ortostase, com ECG contínuo; anormal se razão < 1,03",
+        "origem_secao": "Testes de Ewing — teste 3"
+      },
+      {
+        "id": "nac-ewing-teste-4-pa-ortostatismo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste 4 (simpático): PAS em decúbito e 2 minutos após ortostatismo; anormal se queda > 30 mmHg, limítrofe entre 10 e 29 mmHg",
+        "origem_secao": "Testes de Ewing — teste 4"
+      },
+      {
+        "id": "nac-ewing-teste-5-handgrip",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste 5 (simpático): resposta da PA diastólica ao handgrip sustentado a 30% da contração máxima por 5 minutos; anormal se elevação da PAD < 10 mmHg (normal é elevação > 16 mmHg)",
+        "origem_secao": "Testes de Ewing — teste 5"
+      },
+      {
+        "id": "nac-ewing-contar-anormais",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Registrar quantos dos 5 testes de Ewing resultaram anormais; ≥2 testes anormais é o critério usado para definir NAC estabelecida, associado a RR de mortalidade 3,45 (IC95% 2,66–4,47) na meta-análise de Maser et al.",
+        "origem_secao": "Testes de Ewing — criterio de NAC estabelecida; Valor prognostico independente"
+      },
+      {
+        "id": "nac-ewing-um-teste-isolado",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Se apenas 1 dos 5 testes veio anormal, documentar como achado de menor peso prognóstico (RR 1,20, IC95% 1,02–1,41) — não equivalente a NAC estabelecida (RR 3,45) e não deve ser lido como o mesmo grau de risco",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "nac-ewing-taquicardia-repouso",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrar FC de repouso > 100 bpm e/ou FC fixa como achado tardio de NAC avançada; a ausência desse achado NÃO exclui NAC subclínica, já que a queda da variabilidade da FC pelos testes de Ewing precede a taquicardia fixa na história natural",
+        "origem_secao": "Manifestacoes clinicas — taquicardia de repouso fixa; Armadilhas de leitura"
+      },
+      {
+        "id": "nac-ewing-conduta-estratificacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se NAC estabelecida (≥2 testes anormais), reforçar a estratificação de risco cardiovascular do paciente mesmo assintomático do ponto de vista cardíaco — NAC é preditor independente de mortalidade, arritmia, morte súbita e isquemia miocárdica silenciosa",
+        "origem_secao": "Implicacao pratica — por que rastrear importa na pratica"
+      },
+      {
+        "id": "nac-ewing-seguimento-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Agendar reavaliação de sintomas/sinais de neuropatia autonômica anualmente a partir do rastreio inicial, e também diante do surgimento de nova complicação microvascular (sobretudo doença renal e neuropatia periférica)",
+        "origem_secao": "Implicacao pratica — quem rastrear"
+      },
+      {
+        "id": "nac-ewing-hipotensao-exclusao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Investigar hipotensão ortostática (queda de PAS > 20 mmHg ou PAD > 10 mmHg entre decúbito e ortostase) como diagnóstico de exclusão de outras causas mais comuns — depleção volêmica, efeito de anti-hipertensivo, insuficiência adrenal — antes de atribuí-la à NAC",
+        "origem_secao": "Manifestacoes clinicas — hipotensao ortostatica; Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Diabetes e cardiologia citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
