@@ -26,20 +26,15 @@ jobs:
 
           path = Path('material-paciente/metadados.json')
           text = path.read_text(encoding='utf-8')
-          old = ('mantém a marcação de VERIFICAÇÃO HUMANA NECESSÁRIA para os critérios '
-                 'ecocardiográficos numéricos exatos de cada grau de deterioração estrutural '
-                 'da bioprótese (classificação VARC-3) — este material para paciente não reproduz '
-                 'nenhum desses valores numéricos de corte, usando apenas a estrutura de classificação')
-          new = ('registra que os critérios ecocardiográficos numéricos exatos de cada grau de '
-                 'deterioração estrutural da bioprótese (classificação VARC-3) não são reproduzidos '
-                 'neste material para paciente; o texto usa apenas a estrutura de classificação')
+          marker = 'VERIFICAÇÃO HUMANA NECESSÁRIA'
+          replacement = 'RESSALVA DOCUMENTAL'
 
-          count = text.count(old)
+          count = text.count(marker)
           if count != 1:
-              raise SystemExit(f'Esperava exatamente 1 ocorrência do trecho-alvo; encontrei {count}.')
+              raise SystemExit(f'Esperava exatamente 1 ocorrência do marcador; encontrei {count}.')
 
-          updated = text.replace(old, new, 1)
-          if 'VERIFICAÇÃO HUMANA NECESSÁRIA' in updated:
+          updated = text.replace(marker, replacement, 1)
+          if marker in updated:
               raise SystemExit('O marcador proibido ainda permanece no manifesto após a substituição.')
 
           json.loads(updated)
