@@ -18146,5 +18146,265 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-de-ic-e-elegibilidade-a-farmaco-no-sus-pcdt-2024",
+    "condicao": "Diagnóstico de insuficiência cardíaca e elegibilidade a fármaco de alto custo no SUS",
+    "resumo": "Passos de confirmação diagnóstica (escores de Boston e Framingham, corte de peptídeo natriurético) e os critérios regulatórios de acesso a sacubitril-valsartana e dapagliflozina pelo PCDT do Ministério da Saúde 2024, distintos do corte diagnóstico geral.",
+    "documento_origem": "pcdt-icfer-2024-criterios-diagnosticos-e-de-acesso-a-farmaco-no-sus",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ministério da Saúde. Protocolo Clínico e Diretrizes Terapêuticas — Insuficiência Cardíaca com Fração de Ejeção Reduzida. Portaria Conjunta SAES/SECTICS/MS nº 10, de 13 de setembro de 2024 (publicada em 26/09/2024, retificada em 20/01/2025). PDF oficial de 39 páginas, verificado na íntegra."
+    ],
+    "itens": [
+      {
+        "id": "pcdt-boston",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Escore de Boston calculado (história, exame físico e radiografia de tórax, teto de 4 pontos por categoria) quando a probabilidade clínica de IC não estiver definida por outra via",
+        "origem_secao": "Criterios de boston — probabilidade de ic"
+      },
+      {
+        "id": "pcdt-framingham",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Critérios de Framingham conferidos como alternativa (2 critérios maiores, ou 1 maior + 2 menores)",
+        "origem_secao": "Criterios de framingham — diagnostico de ic"
+      },
+      {
+        "id": "pcdt-bnp-diagnostico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Peptídeo natriurético solicitado como apoio diagnóstico em probabilidade clínica baixa a moderada — BNP >35 pg/mL ou NT-proBNP >125 pg/mL",
+        "origem_secao": "Peptideos natriureticos — corte diagnostico"
+      },
+      {
+        "id": "pcdt-bnp-confirmacao-eco",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Resultado positivo de peptídeo natriurético confirmado por ecocardiograma antes de firmar o diagnóstico, lembrando que outras condições (SCA, TEP, miocardite, DRC, sepse, AVC) também o elevam",
+        "origem_secao": "Peptideos natriureticos — corte diagnostico"
+      },
+      {
+        "id": "pcdt-arni-elegibilidade",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Elegibilidade a sacubitril-valsartana pelo SUS conferida pelos cinco critérios simultâneos: idade <75 anos, classe funcional NYHA II, FEVE ≤35%, BNP >150 pg/mL ou NT-proBNP >600 pg/mL (corte de acesso, distinto do corte diagnóstico) e tratamento já otimizado",
+        "origem_secao": "Criterios de elegibilidade a farmaco no sus — o ponto mais distintivo"
+      },
+      {
+        "id": "pcdt-dapa-elegibilidade",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Elegibilidade a dapagliflozina pelo SUS conferida pelos critérios próprios (idade ≥18 anos, NYHA II-IV, FEVE <40%, sintomático), sem exigir corte de peptídeo natriurético",
+        "origem_secao": "Criterios de elegibilidade a farmaco no sus — o ponto mais distintivo"
+      },
+      {
+        "id": "pcdt-ivabradina-sus",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que ivabradina não é solicitada pelo SUS — não está incorporada, por decisão explícita da CONITEC (2016)",
+        "origem_secao": "Criterios de elegibilidade a farmaco no sus — o ponto mais distintivo"
+      },
+      {
+        "id": "pcdt-dieta-sodio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientação dietética de sódio ajustada para dieta normossódica (cerca de 7g de sal/dia), evitando restrição intensa (<5g/dia) por hábito",
+        "origem_secao": "Dieta e restricao hidrica"
+      },
+      {
+        "id": "pcdt-restricao-hidrica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Restrição hídrica de 1,5-2 litros/dia reservada a congestão persistente, classe funcional III-IV ou hiponatremia — não indicada de rotina",
+        "origem_secao": "Dieta e restricao hidrica"
+      },
+      {
+        "id": "pcdt-imc-paradoxo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação de emagrecimento evitada em IMC entre 30 e 35 kg/m² sem outra indicação clínica (diabetes, osteoartrose), reconhecendo o paradoxo da obesidade descrito no protocolo",
+        "origem_secao": "Paradoxo da obesidade — quantificado"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Os itens derivam do protocolo citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "avaliacao-da-sindrome-cardiorrenal-na-insuficiencia-cardiaca",
+    "condicao": "Piora da função renal em paciente com insuficiência cardíaca (síndrome cardiorrenal)",
+    "resumo": "Passos para classificar o tipo de síndrome cardiorrenal pelo consenso ADQI e evitar as armadilhas mais comuns de manejo — suspensão reflexa de bloqueio do SRAA, escalonamento indefinido de diurético e interpretação isolada de peptídeo natriurético em disfunção renal.",
+    "documento_origem": "sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ronco C, McCullough P, Anker SD, Anand I, Aspromonte N, Bagshaw SM, et al., for the Acute Dialysis Quality Initiative (ADQI) consensus group. Cardio-renal syndromes: report from the consensus conference of the Acute Dialysis Quality Initiative. Eur Heart J. 2010;31(6):703-711. DOI: 10.1093/eurheartj/ehp507. PMID: 20037146",
+      "Rangaswami J, Bhalla V, Blair JEA, et al. Cardiorenal Syndrome: Classification, Pathophysiology, Diagnosis, and Treatment Strategies: A Scientific Statement From the American Heart Association. Circulation. 2019;139(16):e840-e878. DOI: 10.1161/CIR.0000000000000664. PMID: 30852913"
+    ],
+    "itens": [
+      {
+        "id": "crs-classificar-tipo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Tipo de síndrome cardiorrenal classificado pelo órgão iniciador (coração ou rim) e pela instalação (aguda ou crônica), entre os cinco tipos do consenso ADQI",
+        "origem_secao": "Os cinco tipos"
+      },
+      {
+        "id": "crs-excluir-causa-secundaria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de suspender IECA/BRA/espironolactona por queda da função renal, excluídas causas secundárias — diurese excessiva, hipotensão persistente, nefrotóxico associado, doença renovascular de base",
+        "origem_secao": "Tipo 2 (crônico) — onde os quatro pilares da ICFEr entram"
+      },
+      {
+        "id": "crs-reavaliar-diuretico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Escalonamento do diurético de alça reavaliado, pois doses crescentes se associam a pior desfecho e o excesso do próprio arsenal terapêutico pode induzir lesão renal aguda",
+        "origem_secao": "Manejo — Tipo 1 (agudo) — o cenário do dia a dia da enfermaria"
+      },
+      {
+        "id": "crs-inotropico-tipo1",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "No tipo 1 (cardiorrenal agudo), considerado agente inotrópico se a congestão coincidir com pressão arterial baixa",
+        "origem_secao": "Manejo — Tipo 1 (agudo) — o cenário do dia a dia da enfermaria"
+      },
+      {
+        "id": "crs-manter-pilares-tipo2",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "No tipo 2 (cardiorrenal crônico), mantidos os quatro pilares da ICFEr salvo contraindicação, reconhecendo que este subgrupo costuma estar excluído dos ensaios pivotais dessas classes",
+        "origem_secao": "Manejo — Tipo 2 (crônico) — onde os quatro pilares da ICFEr entram"
+      },
+      {
+        "id": "crs-hipercalemia-manejo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Hipercalemia esperada com o bloqueio do SRAA manejada sem suspensão reflexa da medicação",
+        "origem_secao": "Manejo — Tipo 2 (crônico) — onde os quatro pilares da ICFEr entram"
+      },
+      {
+        "id": "crs-prevencao-tipo3",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "No tipo 3 (renocardíaco agudo), priorizada a prevenção com fluido isotônico antes de procedimento com contraste ou cirurgia cardiovascular, já que pouco se sabe sobre tratar o quadro já instalado",
+        "origem_secao": "Tipo 3 (renocardiaco agudo) — prevencao rende mais que tratamento"
+      },
+      {
+        "id": "crs-bnp-interpretacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Peptídeo natriurético interpretado com cautela em disfunção renal associada — parte da elevação decorre da redução do clearance renal, não necessariamente de congestão clínica",
+        "origem_secao": "Biomarcadores — o que o consenso aponta como mais promissor"
+      },
+      {
+        "id": "crs-anemia-tipo2-4",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Anemia investigada e corrigida quando presente, especialmente nos tipos 2 e 4, reconhecendo que a correção pode melhorar sintomas sem necessariamente aumentar sobrevida",
+        "origem_secao": "Manejo — Tipo 2 (crônico) e Tipo 4 (renocardíaco crônico)"
+      },
+      {
+        "id": "crs-tratar-base-tipo5",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "No tipo 5 (cardiorrenal secundário), tratamento dirigido à condição sistêmica de base (diabetes, sepse, amiloidose, rabdomiólise, choque hemorrágico), sem protocolo independente do diagnóstico primário",
+        "origem_secao": "Manejo — Tipo 5 — tratar a doença sistêmica de base"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Os itens derivam das fontes citadas em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "seguranca-pre-teste-ergometrico-contraindicacoes-e-interrupcao",
+    "condicao": "Avaliação de segurança antes e durante o teste ergométrico",
+    "resumo": "Rastreio de contraindicações absolutas e relativas antes de indicar o teste ergométrico, e os critérios objetivos de interrupção do esforço, conforme a Diretriz Brasileira de Ergometria (SBC 2024).",
+    "documento_origem": "teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabelas de contraindicações absolutas, contraindicações relativas e critérios de interrupção do esforço transcritas item a item"
+    ],
+    "itens": [
+      {
+        "id": "te-seg-contraindicacoes-absolutas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações absolutas rastreadas antes de iniciar o teste — embolia pulmonar aguda, IAM antes de 5 dias ou com complicações, angina instável, arritmia cardíaca não controlada, IC descompensada, miocardite ou pericardite aguda, dissecção aguda da aorta, BAV de risco, entre outras",
+        "origem_secao": "Contraindicacoes ABSOLUTAS"
+      },
+      {
+        "id": "te-seg-pa-repouso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão arterial de repouso conferida — PAS ≥ 180 mmHg ou PAD > 110 mmHg persistentes, ou crise/urgência hipertensiva, são contraindicação absoluta",
+        "origem_secao": "Contraindicacoes ABSOLUTAS"
+      },
+      {
+        "id": "te-seg-aneurisma-aorta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Distinção feita entre aneurisma de aorta com indicação de intervenção (contraindicação absoluta) e sem indicação de intervenção (contraindicação relativa, cuidados especiais)",
+        "origem_secao": "Contraindicacoes ABSOLUTAS / Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-estenose-aortica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estenose aórtica classificada por gravidade e sintoma antes do teste — grave e sintomática é contraindicação absoluta; grave e assintomática é relativa, em ambiente hospitalar",
+        "origem_secao": "Contraindicacoes ABSOLUTAS / Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-relativas-hospitalar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações relativas que exigem ambiente hospitalar identificadas — dor torácica aguda, IAM não complicado a partir do 5º dia, angina instável após 72h de estabilização, doença de tronco em assintomático, entre outras",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-cdi-identificar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Portador de cardiodesfibrilador implantado identificado, com a frequência de acionamento do dispositivo registrada antes do teste",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-sintomas-interrupcao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Critérios de interrupção por sintomas monitorados durante o esforço — Borg ≥ 18, dor torácica crescente e limitante, dispneia precoce e desproporcional, vertigem persistente, pré-síncope ou síncope",
+        "origem_secao": "Criterios de interrupcao do esforco — Sintomas"
+      },
+      {
+        "id": "te-seg-ecg-interrupcao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Critérios eletrocardiográficos de interrupção monitorados — infradesnivelamento de ST ≥ 0,3 mV, supradesnivelamento ≥ 0,2 mV sem infarto prévio, TVNS, BAV de 2º/3º grau induzido, bloqueio de ramo induzido",
+        "origem_secao": "Criterios de interrupcao do esforco — Eletrocardiograficos"
+      },
+      {
+        "id": "te-seg-pas-queda-confirmar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Queda de PAS ≥ 20 mmHg após elevação inicial, se assintomática, confirmada em pelo menos mais uma medida antes de encerrar o teste",
+        "origem_secao": "Criterios de interrupcao do esforco — Exame fisico e variaveis cardiovasculares"
+      },
+      {
+        "id": "te-seg-cdi-interrupcao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em portador de CDI, teste interrompido 10 batimentos abaixo da frequência de acionamento do desfibrilador, sem levar o paciente à exaustão",
+        "origem_secao": "Criterios de interrupcao do esforco — Eletrocardiograficos"
+      },
+      {
+        "id": "te-seg-ambiente-hospitalar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Teste realizado em ambiente hospitalar, idealmente unidade de dor torácica, quando indicado por contraindicação relativa de maior risco",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Os itens derivam da diretriz citada em source_refs, com a seção de origem registrada em cada item."
   }
 ]
