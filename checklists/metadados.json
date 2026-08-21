@@ -18146,5 +18146,91 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "investigacao-de-miopatia-necrotizante-autoimune-anti-hmgcr-pos-estatina",
+    "condicao": "Investigação de miopatia necrotizante autoimune associada a estatina (anti-HMGCR) diante de fraqueza muscular persistente após suspensão do fármaco",
+    "resumo": "Diferenciação do espectro comum de dor muscular por estatina (mialgia simples, miopatia tóxica) do quadro raro e grave que não regride com a suspensão — investigação por biópsia e anticorpo anti-HMGCR, e encaminhamento para imunossupressão. Não duplica o checklist de intolerância a estatina/reexposição: aquele cobre a estratificação por CK e o protocolo de suspensão-reexposição em geral, com um único item de alerta para este quadro; este aprofunda especificamente o diagnóstico diferencial e a conduta da miopatia necrotizante autoimune confirmada.",
+    "documento_origem": "miopatia-necrotizante-autoimune-associada-a-estatina-anti-hmgcr",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Christopher-Stine L, Casciola-Rosen LA, Hong G, Chung T, Corse AM, Mammen AL. A novel autoantibody recognizing 200-kd and 100-kd proteins is associated with an immune-mediated necrotizing myopathy. Arthritis Rheum. 2010;62(9):2757-2766. PMID: 20496415",
+      "Mammen AL, Chung T, Christopher-Stine L, Rosen P, Rosen A, Doering KR, Casciola-Rosen LA. Autoantibodies against 3-hydroxy-3-methylglutaryl-coenzyme A reductase in patients with statin-associated autoimmune myopathy. Arthritis Rheum. 2011;63(3):713-721. PMID: 21360500",
+      "Mammen AL. Statin-Associated Autoimmune Myopathy. N Engl J Med. 2016;374(7):664-669. PMID: 26886523"
+    ],
+    "itens": [
+      {
+        "id": "hmgcr-triagem-espectro",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o quadro não é mialgia simples (dor/fraqueza sem elevação relevante de CK) nem miopatia tóxica leve (CK discreta a moderadamente elevada, que normaliza em semanas após suspender a estatina) antes de acionar a investigação deste checklist",
+        "origem_secao": "O espectro da miopatia por estatina — itens 1 e 2"
+      },
+      {
+        "id": "hmgcr-sinal-ck-elevada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrada CK acentuadamente elevada — ordem de grandeza de milhares de UI/L, não apenas 2-3 vezes o limite superior da normalidade — como sinal de alerta para o quadro autoimune",
+        "origem_secao": "Quando suspeitar"
+      },
+      {
+        "id": "hmgcr-nao-melhora-apos-suspensao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o sintoma e a CK não melhoraram — ou pioraram — várias semanas após a suspensão da estatina: este é o dado clínico mais específico para acionar a investigação, distinto da miopatia tóxica simples, que resolve com a suspensão",
+        "origem_secao": "Quando suspeitar / Por que a suspensão sozinha não resolve"
+      },
+      {
+        "id": "hmgcr-perfil-exposicao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrada idade do paciente e exposição prévia a estatina: a associação é mais forte em paciente com 50 anos ou mais (92,3% dos anti-HMGCR positivos dessa faixa etária haviam usado estatina), sem excluir a hipótese em paciente mais jovem sem exposição prévia",
+        "origem_secao": "Como foi caracterizada — Mammen et al. 2011"
+      },
+      {
+        "id": "hmgcr-biopsia-muscular",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Biópsia muscular solicitada, buscando padrão necrotizante com infiltrado inflamatório mínimo — distinto do padrão de miosite clássica e das alterações inespecíficas da miopatia tóxica simples",
+        "origem_secao": "Achados que diferenciam este quadro dos demais — Biópsia muscular"
+      },
+      {
+        "id": "hmgcr-sorologia-anti-hmgcr",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Anticorpo anti-HMGCR dosado para confirmação diagnóstica do quadro",
+        "origem_secao": "Quando suspeitar / Achados que diferenciam este quadro dos demais — Sorologia"
+      },
+      {
+        "id": "hmgcr-suspensao-nao-basta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente e equipe informados de que a suspensão da estatina permanece indicada mas NÃO é suficiente isoladamente — diferente da miopatia tóxica simples, este quadro precisa ser tratado como doença autoimune ativa",
+        "origem_secao": "Conduta quando confirmada"
+      },
+      {
+        "id": "hmgcr-nao-confundir-nocebo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não confundido com o efeito nocebo de mialgia simples descrito no ensaio StatinWISE (mesmo escore de sintoma muscular em estatina e placebo cegos) — esse cenário não exige a investigação deste checklist",
+        "origem_secao": "O espectro da miopatia por estatina — item 1) Mialgia simples"
+      },
+      {
+        "id": "hmgcr-encaminhamento-especialista",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhado a especialista em doenças neuromusculares/reumatologia para definição do esquema de imunossupressão — protocolo específico de fármacos, dose e duração não é definido nesta biblioteca (VERIFICAÇÃO HUMANA NECESSÁRIA na fonte de origem), a decisão terapêutica detalhada não deve ser extrapolada sem essa avaliação",
+        "origem_secao": "Conduta quando confirmada"
+      },
+      {
+        "id": "hmgcr-seguimento-recidiva",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "CK e força muscular acompanhadas ao longo da retirada gradual da imunossupressão, com atenção à recidiva — na série original, vários pacientes apresentaram recidiva de fraqueza quando a imunossupressão era reduzida",
+        "origem_secao": "Como foi caracterizada — Christopher-Stine et al. 2010 / Conduta quando confirmada"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Cada item foi conferido contra o texto integral do documento já publicado citado em documento_origem, sem nenhum dado escrito de memória. O protocolo específico de imunossupressão (fármacos, dose, duração) permanece marcado como VERIFICAÇÃO HUMANA NECESSÁRIA na fonte de origem e não foi inventado neste checklist — o item de encaminhamento reflete essa lacuna explicitamente. Não duplica o checklist manejo-da-intolerancia-a-estatina-avaliacao-e-reexposicao: aquele cobre a estratificação por CK e o protocolo geral de suspensão-reexposição, com um único item de alerta para este quadro; este aprofunda especificamente o diagnóstico diferencial e a conduta da miopatia necrotizante autoimune já confirmada ou fortemente suspeita."
   }
 ]
