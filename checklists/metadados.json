@@ -18146,5 +18146,222 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-doenca-arterial-periferica-no-pe-diabetico",
+    "condicao": "Avaliação de doença arterial periférica (DAP) no paciente diabético com ou sem úlcera de pé",
+    "resumo": "O que checar para não deixar passar DAP no diabético — cenário em que a neuropatia apaga os sintomas clássicos e a calcificação da média arterial distorce o índice tornozelo-braquial (ITB) isolado —, seguindo a diretriz intersocietária IWGDF/ESVS/SVS 2023.",
+    "documento_origem": "doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Fitridge R, Chuter V, Mills J, Hinchliffe R, Azuma N, Behrendt CA, Boyko EJ, Conte MS, Humphries M, Kirksey L, McGinigle KC, Nikol S, Nordanstig J, Rowe V, Russell D, van den Berg JC, Venermo M, Schaper N. The intersocietal IWGDF, ESVS, SVS guidelines on peripheral artery disease in people with diabetes mellitus and a foot ulcer. J Vasc Surg. 2023 Nov;78(5):1101-1131. DOI: 10.1016/j.jvs.2023.07.020. PMID: 37724985."
+    ],
+    "itens": [
+      {
+        "id": "dap-pe-diabetico-nao-descartar-por-ausencia-de-sintoma",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não descartar DAP só porque o paciente não relata claudicação intermitente ou dor em repouso — a neuropatia periférica associada ao diabetes apaga os sintomas clássicos na maioria dos casos de úlcera isquêmica",
+        "origem_secao": "Por que a apresentação clínica engana neste paciente"
+      },
+      {
+        "id": "dap-pe-diabetico-historia-exame-pulsos-anual",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em pessoa com diabetes sem úlcera: investigar história de DAP, examinar sinais de isquemia e palpar pulsos do pé pelo menos anualmente, ou a cada mudança do status clínico dos pés",
+        "origem_secao": "Diagnóstico: as cinco recomendações — item 1"
+      },
+      {
+        "id": "dap-pe-diabetico-historia-exame-pulsos-com-ulcera",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em pessoa com diabetes e úlcera ou gangrena: investigar história de DAP, examinar sinais de isquemia e palpar pulsos do pé",
+        "origem_secao": "Diagnóstico: as cinco recomendações — item 3"
+      },
+      {
+        "id": "dap-pe-diabetico-nao-confiar-so-no-itb",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não confiar em ITB isolado normal ou elevado para excluir DAP no diabético — a calcificação da média arterial eleva artificialmente a pressão de tornozelo; sempre associar índice tornozelo-braquial digital (TBI) e avaliação da onda Doppler pedioso",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "dap-pe-diabetico-doppler-itb-tbi",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar Doppler pedioso combinado a ITB e TBI (índice tornozelo-braquial digital) sempre que houver suspeita de DAP, com ou sem úlcera — DAP é menos provável com ITB entre 0,9 e 1,3, TBI ≥0,70 e onda Doppler trifásica ou bifásica",
+        "origem_secao": "Diagnóstico: as cinco recomendações — itens 2 e 4"
+      },
+      {
+        "id": "dap-pe-diabetico-triagem-preprocedimento-eletivo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Antes de qualquer procedimento invasivo eletivo no pé de paciente diabético sem úlcera: excluir DAP com Doppler + ITB + TBI",
+        "origem_secao": "Diagnóstico: as cinco recomendações — item 5"
+      },
+      {
+        "id": "dap-pe-diabetico-registrar-grau-isquemia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar o grau de isquemia (classificação IWGDF, componente 'I' do WIfI) a partir de ITB, pressão sistólica de tornozelo e pressão do hálux/TcPO2 — orienta prognóstico de cicatrização e risco de amputação",
+        "origem_secao": "A tabela de gradação de isquemia"
+      },
+      {
+        "id": "dap-pe-diabetico-nao-atribuir-a-microangiopatia-sem-excluir-dap",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Nunca atribuir úlcera que não cicatriza à microangiopatia diabética sem antes excluir DAP macrovascular e outras causas de má cicatrização",
+        "origem_secao": "Prognóstico: cinco recomendações — item 9"
+      },
+      {
+        "id": "dap-pe-diabetico-criterio-encaminhamento-vascular",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para avaliação vascular quando houver pulsos ausentes, onda Doppler pediosa monofásica ou ausente, pressão de tornozelo <100mmHg ou pressão do hálux <60mmHg — a não ser que amputação maior seja considerada urgente",
+        "origem_secao": "Tratamento: quando e como revascularizar"
+      },
+      {
+        "id": "dap-pe-diabetico-criterio-urgencia-vascular",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Considerar isquemia grave com necessidade de avaliação vascular URGENTE quando ITB <0,4, pressão de tornozelo <50mmHg, pressão do hálux <30mmHg, TcPO2 <30mmHg, ou onda Doppler monofásica/ausente",
+        "origem_secao": "Tratamento: quando e como revascularizar"
+      },
+      {
+        "id": "dap-pe-diabetico-infeccao-consulta-urgente",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Em úlcera ou gangrena com infecção envolvendo qualquer parte do pé: solicitar consulta vascular urgente para definir a ordem entre drenagem e revascularização",
+        "origem_secao": "Tratamento: quando e como revascularizar"
+      },
+      {
+        "id": "dap-pe-diabetico-reavaliar-falha-cicatrizacao-4-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar a ferida em 4 semanas: se não houver redução de pelo menos 50% da área, apesar de controle de infecção, glicemia, curativo e descarga adequados, acionar reavaliação vascular — não esperar 'meses sem melhora'",
+        "origem_secao": "Tratamento: quando e como revascularizar — recomendação 15"
+      },
+      {
+        "id": "dap-pe-diabetico-metas-hba1c-pa-ldl",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Checar e ajustar metas clínicas associadas: HbA1c <8%, pressão arterial <140/90mmHg e LDL <1,8mmol/L (<70mg/dL) com redução de pelo menos 50% do basal, individualizando conforme risco de hipoglicemia grave e hipotensão ortostática",
+        "origem_secao": "Metas de tratamento clínico associado"
+      },
+      {
+        "id": "dap-pe-diabetico-antiagregacao-simples",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Preferir antiagregação simples (não dupla) como padrão nesse paciente; considerar clopidogrel preferível à aspirina como primeira escolha, conforme a diretriz",
+        "origem_secao": "Antiagregação e SGLT2/GLP-1 no paciente com DAP e diabetes"
+      },
+      {
+        "id": "dap-pe-diabetico-alerta-isglt2-com-ulcera-ativa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não iniciar inibidor de SGLT2 em paciente diabético naïve à classe que tem úlcera ou gangrena ativa; considerar suspensão temporária em quem já usa a classe, até a ferida cicatrizar",
+        "origem_secao": "Antiagregação e SGLT2/GLP-1 no paciente com DAP e diabetes — alerta específico"
+      },
+      {
+        "id": "dap-pe-diabetico-encaminhar-centro-especializado",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Garantir que o tratamento ocorra em centro com expertise ou acesso rápido a revascularização endovascular e cirúrgica, por equipe multidisciplinar",
+        "origem_secao": "Tratamento: quando e como revascularizar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), em 21/08/2026. Itens derivados do documento de Diabetes e cardiologia citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "manejo-multifatorial-de-risco-cardiovascular-no-diabetes-tipo-2-ada-standards",
+    "condicao": "Manejo multifatorial do risco cardiovascular em pessoa com diabetes tipo 2 (ADA Standards of Care 2026, capítulo 10)",
+    "resumo": "Checagem da consulta de rotina do cardiopata diabético: metas de pressão arterial, indicação de terapia com benefício cardiovascular comprovado e cuidado com insuficiência cardíaca e doença renal, conforme o capítulo cardiovascular do Standards of Care 2026 da ADA.",
+    "documento_origem": "ada-standards-of-care-2026-capitulo-10-doenca-cardiovascular-e-manejo-de-risco",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "American Diabetes Association Professional Practice Committee for Diabetes. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S216-S245. DOI: 10.2337/dc26-S010. PMID: 41358899."
+    ],
+    "itens": [
+      {
+        "id": "ada-cv-2026-meta-pa-130-80",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Checar a meta de pressão arterial em tratamento: <130/80 mmHg quando puder ser atingida com segurança",
+        "origem_secao": "Principais atualizações verificadas — item 1"
+      },
+      {
+        "id": "ada-cv-2026-considerar-meta-pas-120-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em indivíduo com alto risco cardiovascular ou renal, considerar meta de PAS mais estrita (<120 mmHg), ponderando eventos adversos (hipotensão, síncope, lesão renal aguda) e preferências do paciente antes de intensificar",
+        "origem_secao": "Principais atualizações verificadas — item 1; Armadilhas clínicas"
+      },
+      {
+        "id": "ada-cv-2026-nao-aplicar-meta-120-indiscriminada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não aplicar a meta de PAS <120 mmHg indiscriminadamente a todo paciente diabético — ela é encorajada especificamente em alto risco cardiovascular ou renal, não como meta geral",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ada-cv-2026-triagem-doenca-cardiovascular-aterosclerotica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar se o paciente tem doença cardiovascular aterosclerótica estabelecida, múltiplos fatores de risco cardiovascular ou doença renal crônica — define a indicação de terapia com benefício cardiovascular comprovado além do controle glicêmico",
+        "origem_secao": "Principais atualizações verificadas — item 3"
+      },
+      {
+        "id": "ada-cv-2026-indicacao-isglt2-glp1-beneficio-comprovado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Nesse paciente, considerar inibidor de SGLT2 e/ou agonista do receptor de GLP-1 com benefício cardiovascular demonstrado; a combinação pode ser considerada para benefícios complementares conforme o perfil clínico",
+        "origem_secao": "Principais atualizações verificadas — item 3"
+      },
+      {
+        "id": "ada-cv-2026-nao-generalizar-beneficio-de-classe",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não generalizar o benefício cardiovascular demonstrado para qualquer molécula da classe — a diretriz especifica agentes com benefício comprovado, e resultado de um agente não deve ser automaticamente extrapolado para todos os fármacos da mesma classe",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ada-cv-2026-triagem-icfep-obesidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente com diabetes tipo 2, obesidade e insuficiência cardíaca com fração de ejeção preservada (ICFEp) sintomática, checar se o plano terapêutico já inclui agonista dual GIP/GLP-1 ou agonista de GLP-1 com benefício demonstrado para eventos e/ou sintomas de IC",
+        "origem_secao": "Principais atualizações verificadas — item 2"
+      },
+      {
+        "id": "ada-cv-2026-drc-antagonista-mineralocorticoide",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em diabetes tipo 2 com doença renal crônica, considerar antagonista não esteroidal do receptor mineralocorticoide, sempre respeitando função renal, potássio sérico e contraindicações",
+        "origem_secao": "Principais atualizações verificadas — item 4"
+      },
+      {
+        "id": "ada-cv-2026-nao-tratar-recomendacao-como-aprovacao-regulatoria",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tratar a recomendação da diretriz como equivalente à aprovação regulatória do medicamento — checar bula vigente e indicação da autoridade sanitária aplicável antes de prescrever",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ada-cv-2026-nao-equiparar-sbd-sbc",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar esta diretriz americana como automaticamente equivalente à SBD/SBC brasileira — convergem em princípios gerais, mas usam estruturas de recomendação próprias; não atribuir classe ou meta de uma sociedade à outra por analogia",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ada-cv-2026-individualizar-por-comorbidade",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Individualizar metas e escolha terapêutica segundo risco cardiovascular e renal, tolerabilidade, função renal, comorbidades e preferência do paciente — não aplicar as metas de forma padronizada",
+        "origem_secao": "Onde isso se encaixa na prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), em 21/08/2026. Itens derivados do documento de Diabetes e cardiologia citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
