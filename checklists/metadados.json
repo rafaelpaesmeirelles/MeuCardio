@@ -8424,5 +8424,217 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-e-conduta-inicial-na-isquemia-aguda-de-membro-classificacao-de-rutherford",
+    "condicao": "Isquemia aguda de membro",
+    "resumo": "Checklist de avaliação inicial e conduta na suspeita de isquemia aguda de membro, organizado pela classificação de Rutherford, que define a janela de tempo até a revascularização e a via terapêutica.",
+    "documento_origem": "isquemia-aguda-de-membro-classificacao-de-rutherford-e-conduta",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Olinic DM, Stanek A, Tătaru DA, Homorodean C, Olinic M. Acute Limb Ischemia: An Update on Diagnosis and Management. Journal of Clinical Medicine. 2019;8(8):1215. DOI: 10.3390/jcm8081215. PMID: 31416204"
+    ],
+    "itens": [
+      {
+        "id": "iaml-rutherford-01-avaliar-perda-sensitiva-e-forca-muscular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar perda sensitiva (ausente, restrita aos artelhos, ou além dos artelhos) e força muscular do membro (preservada, fraqueza leve a moderada, ou paralisia com rigidez) — são os dois achados clínicos que separam as categorias de Rutherford entre si.",
+        "origem_secao": "Classificação de Rutherford para isquemia aguda de membro"
+      },
+      {
+        "id": "iaml-rutherford-02-doppler-arterial-e-venoso",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Pesquisar sinal Doppler arterial e, separadamente, sinal Doppler venoso do segmento acometido — a ausência de sinal venoso (não apenas arterial) é o achado que define a categoria III (irreversível), distinta das categorias IIa/IIb, ainda salváveis.",
+        "origem_secao": "O que a classificação decide na prática"
+      },
+      {
+        "id": "iaml-rutherford-03-classificar-categoria-i-a-iii",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar o membro em Rutherford I (viável, sem perda sensitiva/motora, Doppler arterial e venoso audíveis), IIa (marginalmente ameaçado, perda sensitiva mínima nos artelhos, Doppler arterial frequentemente inaudível, venoso audível), IIb (imediatamente ameaçado, perda sensitiva além dos artelhos e fraqueza muscular leve a moderada, Doppler arterial inaudível, venoso audível) ou III (irreversível, anestesia profunda e paralisia com rigidez muscular, Doppler arterial e venoso inaudíveis).",
+        "origem_secao": "Classificação de Rutherford para isquemia aguda de membro"
+      },
+      {
+        "id": "iaml-rutherford-04-conduta-categoria-i-iia",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Nas categorias I e IIa, há tempo para investigação de imagem não invasiva e avaliação de comorbidades antes de decidir a via de revascularização — categoria IIa exige revascularização pronta (urgente, não necessariamente na primeira hora).",
+        "origem_secao": "Classificação de Rutherford para isquemia aguda de membro"
+      },
+      {
+        "id": "iaml-rutherford-05-conduta-categoria-iib-imediata",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na categoria IIb, indicar revascularização imediata, sem aguardar investigação de imagem extensa — não solicitar exame demorado (ex.: angiotomografia) 'para confirmar antes' quando a categoria já define urgência máxima.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "iaml-rutherford-06-nao-revascularizar-categoria-iii",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na categoria III (irreversível), não tentar revascularizar o membro — o risco de síndrome de reperfusão (hipercalemia, mioglobinúria, acidose, lesão renal aguda) supera o benefício de salvamento diante de dano tecidual já irreversível; a conduta é amputação.",
+        "origem_secao": "O que a classificação decide na prática"
+      },
+      {
+        "id": "iaml-rutherford-07-reavaliacao-seriada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar a classificação de Rutherford de forma seriada, não apenas na admissão — um membro IIa pode evoluir para IIb enquanto aguarda intervenção, e a reclassificação clínica repetida faz parte do seguimento.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Olinic DM et al., J Clin Med 2019;8(8):1215, PMID 31416204, em 20/08/2026."
+  },
+  {
+    "slug": "diagnostico-e-indicacao-de-revascularizacao-na-estenose-de-carotida-esc-2024",
+    "condicao": "Estenose de carótida",
+    "resumo": "Checklist de avaliação diagnóstica e decisão sobre revascularização (CEA ou CAS) na estenose de artéria carótida interna, conforme a diretriz combinada ESC 2024 de doença arterial periférica e aórtica.",
+    "documento_origem": "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID: 39210722 — seção 8.2 (Carotid artery stenosis) e Recommendation Tables 23, 25 e 26"
+    ],
+    "itens": [
+      {
+        "id": "carotida-esc24-01-duplex-scan-primeira-linha",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar duplex-scan (DUS) como exame de imagem de primeira linha para diagnosticar estenose de artéria carótida interna (Classe I, Nível C).",
+        "origem_secao": "Avaliação do grau de estenose"
+      },
+      {
+        "id": "carotida-esc24-02-registrar-metodo-nascet",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Registrar e usar o método NASCET (ou equivalente não invasivo) para quantificar o grau de estenose (Classe I, Nível B) — o método ECST não é recomendado para essa avaliação (Classe III, Nível C); a mesma lesão anatômica pode aparecer como percentuais diferentes conforme o método usado (ex.: 50% NASCET equivale a cerca de 75% ECST), então confirmar sempre qual método gerou o laudo de outro serviço antes de decidir conduta.",
+        "origem_secao": "Avaliação do grau de estenose"
+      },
+      {
+        "id": "carotida-esc24-03-velocidade-sistolica-de-pico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Interpretar a velocidade sistólica de pico ao Doppler pelo critério SRUCC: 125-230 cm/s sugere estenose moderada (50-69%); acima de 230 cm/s sugere estenose grave (≥70%).",
+        "origem_secao": "Avaliação do grau de estenose"
+      },
+      {
+        "id": "carotida-esc24-04-caracterizar-sintomas-e-tempo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Caracterizar se a estenose é sintomática (evento neurológico ipsilateral recente) ou assintomática, porque a indicação e a urgência de revascularização são inteiramente diferentes entre os dois cenários.",
+        "origem_secao": "Estenose sintomática — quando revascularizar"
+      },
+      {
+        "id": "carotida-esc24-05-omt-em-sintomatico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Prescrever terapia médica otimizada (OMT) a todo paciente com estenose sintomática (Classe I, Nível A); em quem não vai a CEA ou stent, associar AAS em dose baixa com clopidogrel 75 mg por 21 dias ou mais, seguido de antiagregação isolada (Classe I, Nível A).",
+        "origem_secao": "Tratamento antitrombótico"
+      },
+      {
+        "id": "carotida-esc24-06-nao-revascularizar-menor-50",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar revascularização em lesão de artéria carótida interna <50% (Classe III, Nível A).",
+        "origem_secao": "Estenose sintomática — quando revascularizar"
+      },
+      {
+        "id": "carotida-esc24-07-cea-sintomatico-grave-14-dias",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Em estenose sintomática de 70-99%, indicar CEA (Classe I, Nível A), desde que a taxa documentada de morte/AVC processual em 30 dias seja <6%; realizar em até 14 dias do evento (Classe I, Nível B).",
+        "origem_secao": "Estenose sintomática — quando revascularizar"
+      },
+      {
+        "id": "carotida-esc24-08-assintomatico-avaliar-expectativa-vida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em estenose assintomática, avaliar expectativa de vida e taxa de AVC/óbito perioperatório documentada pelo serviço antes de indicar revascularização — não é 'estenose grave = operar': revascularização de rotina NÃO é recomendada quando não há características de alto risco e a expectativa de vida é <5 anos (Classe III, Nível A); quando considerada, exige taxa de AVC/óbito perioperatório <3% e expectativa de vida >5 anos, com discussão de risco-benefício por equipe vascular (Classe IIa, Nível B).",
+        "origem_secao": "Estenose assintomática — quando revascularizar"
+      },
+      {
+        "id": "carotida-esc24-09-antiagregacao-pos-stent-e-vigilancia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Após implante de stent, manter dupla antiagregação (AAS e clopidogrel) por pelo menos 1 mês (Classe I, Nível A), com vigilância por duplex-scan no primeiro mês (Classe I, Nível C); após qualquer revascularização de carótida interna, manter antiagregação isolada a longo prazo (Classe I, Nível B) e acompanhamento anual de fatores de risco cardiovascular e adesão ao tratamento (Classe I, Nível A).",
+        "origem_secao": "Seguimento"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases, Eur Heart J 2024;45(36):3538-3700, PMID 39210722, em 20/08/2026."
+  },
+  {
+    "slug": "manejo-agudo-de-hipertensao-grave-e-prevencao-de-eclampsia-na-gestacao",
+    "condicao": "Hipertensão grave na gestação e prevenção de eclâmpsia",
+    "resumo": "Checklist para a crise hipertensiva na gestação — indicação de sulfato de magnésio para prevenção de eclâmpsia, escolha do anti-hipertensivo oral e definição do alvo pressórico, com base nos ensaios Magpie, CHIPS e Easterling.",
+    "documento_origem": "hipertensao-grave-e-eclampsia-magpie-chips-e-a-escolha-do-anti-hipertensivo-oral",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Altman D, Carroli G, Duley L, Farrell B, Moodley J, et al; Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial. Lancet. 2002;359(9321):1877-1890. PMID: 12057549",
+      "Magee LA, von Dadelszen P, Rey E, Ross S, Asztalos E, et al; CHIPS Study Group. Less-tight versus tight control of hypertension in pregnancy. N Engl J Med. 2015;372(5):407-417. DOI: 10.1056/NEJMoa1404595. PMID: 25629739",
+      "Easterling T, Mundle S, Bracken H, Parvekar S, Mool S, et al. Oral antihypertensive regimens (nifedipine retard, labetalol, and methyldopa) for management of severe hypertension in pregnancy: an open-label, randomised controlled trial. Lancet. 2019;394(10203):1011-1021. PMID: 31378394"
+    ],
+    "itens": [
+      {
+        "id": "htgrave-gest-01-confirmar-pressao-e-proteinuria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar pressão arterial ≥140/90 mmHg e pesquisar proteinúria (≥1+, equivalente a 30 mg/dL) — foi o critério de entrada do Magpie para considerar indicação de sulfato de magnésio, junto com incerteza clínica sobre indicá-lo.",
+        "origem_secao": "Magpie (2002) — o maior ensaio de sulfato de magnésio"
+      },
+      {
+        "id": "htgrave-gest-02-indicar-sulfato-magnesio-prevencao-eclampsia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Indicar sulfato de magnésio para prevenção de eclâmpsia quando houver incerteza clínica sobre a indicação — o Magpie mostrou redução de risco de eclâmpsia de 58% (IC95% 40-71%, 40/5.071 vs. 96/5.070), equivalente a 11 mulheres a menos com eclâmpsia a cada 1.000 tratadas.",
+        "origem_secao": "Magpie (2002) — o maior ensaio de sulfato de magnésio"
+      },
+      {
+        "id": "htgrave-gest-03-alertar-efeito-colateral-sulfato",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Informar a paciente e monitorizar efeito colateral do sulfato de magnésio — ocorreu em 24% das tratadas no Magpie (1.201/4.999) contra 5% no placebo (228/4.993); não é achado incomum, é esperado em cerca de 1 a cada 4 mulheres.",
+        "origem_secao": "Magpie (2002) — o maior ensaio de sulfato de magnésio"
+      },
+      {
+        "id": "htgrave-gest-04-definir-alvo-pressorico",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Ao tratar hipertensão preexistente ou gestacional não proteinúrica, considerar alvo diastólico mais rígido (próximo de 85 mmHg): o CHIPS não mostrou diferença no desfecho composto de perda gestacional/cuidado neonatal de alto nível entre controle rígido e menos rígido, mas o controle menos rígido associou-se a mais hipertensão grave (≥160/110 mmHg) — 40,6% vs. 27,5% (p<0,001) — e é a hipertensão grave que dispara internação, magnésio e antecipação do parto.",
+        "origem_secao": "CHIPS (2015) — quão apertado deve ser o controle"
+      },
+      {
+        "id": "htgrave-gest-05-nao-aplicar-chips-a-preeclampsia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não extrapolar a conduta do CHIPS para pré-eclâmpsia estabelecida — o ensaio excluiu hipertensão proteinúrica; responde sobre alvo pressórico em hipertensão preexistente ou gestacional não proteinúrica, não sobre pré-eclâmpsia.",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "htgrave-gest-06-escolher-anti-hipertensivo-oral-na-crise",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na hipertensão grave aguda (sistólica ≥160 ou diastólica ≥110 mmHg) sem acesso venoso imediato disponível, tratar com anti-hipertensivo oral — nifedipino 10 mg, labetalol 200 mg (ambos com escalonamento de dose horário) ou metildopa 1.000 mg em dose única — todos reduziram a pressão à faixa de referência (sistólica 120-150 e diastólica 70-100 mmHg) na maioria das gestantes no ensaio de Easterling, e são opções viáveis quando a via endovenosa não está disponível de imediato.",
+        "origem_secao": "Easterling (2019) — a via oral, e o ensaio mais aplicável ao Brasil"
+      },
+      {
+        "id": "htgrave-gest-07-nao-adiar-por-falta-de-acesso-venoso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não adiar o tratamento da hipertensão grave por falta de acesso venoso — os três anti-hipertensivos orais do ensaio de Easterling funcionaram, e essa disponibilidade é o achado central para ambientes de poucos recursos.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "htgrave-gest-08-reavaliar-pressao-em-6-horas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar a pressão arterial em até 6 horas após o anti-hipertensivo oral, alvo sistólica 120-150 e diastólica 70-100 mmHg — foi o desfecho primário e a janela de controle pressórico avaliada no ensaio de Easterling.",
+        "origem_secao": "Easterling (2019) — a via oral, e o ensaio mais aplicável ao Brasil"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Altman D et al. (Magpie), Lancet 2002;359(9321):1877-1890, PMID 12057549; Magee LA et al. (CHIPS), N Engl J Med 2015;372(5):407-417, PMID 25629739; e Easterling T et al., Lancet 2019;394(10203):1011-1021, PMID 31378394, em 20/08/2026."
   }
 ]
