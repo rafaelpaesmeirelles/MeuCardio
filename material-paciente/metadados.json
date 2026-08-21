@@ -14447,5 +14447,182 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "solidao-isolamento-social-e-risco-cardiovascular",
+    "titulo": "Solidão e isolamento social também afetam o coração",
+    "subtitulo": "Por que a qualidade das suas relações importa tanto quanto outros cuidados com a saúde",
+    "tema": "Saúde mental e cardiologia",
+    "documento_slug": "solidao-e-isolamento-social-como-fator-de-risco-cardiovascular",
+    "resumo": "Sentir-se sozinho ou ter poucas pessoas por perto não é só uma questão emocional — pesquisas mostram que isso também está ligado a um risco maior de problemas no coração e de derrame.",
+    "secoes": [
+      {
+        "titulo": "O que a ciência descobriu",
+        "paragrafos": [
+          "Pesquisadores reuniram e analisaram em conjunto vários estudos que acompanharam milhares de pessoas ao longo de anos — em alguns casos, por mais de duas décadas — para entender se a qualidade das relações sociais tinha relação com a saúde do coração.",
+          "O resultado: pessoas com relações sociais mais pobres — poucos contatos, sensação de solidão ou isolamento — tiveram um risco cerca de um terço maior de desenvolver doença nas artérias do coração e de sofrer um derrame, em comparação com quem tinha uma rede social mais forte.",
+          "Esse aumento de risco apareceu de forma parecida em homens e mulheres, ou seja, não é um problema restrito a um dos sexos."
+        ]
+      },
+      {
+        "titulo": "Solidão e isolamento não são a mesma coisa",
+        "paragrafos": [
+          "Isolamento social é uma coisa mais objetiva: quantas pessoas você vê, com que frequência conversa, quantos vínculos tem no dia a dia.",
+          "Solidão é como você se sente: é possível estar cercado de gente e ainda se sentir sozinho, e também é possível conviver pouco e não sentir tanto essa falta.",
+          "Os dois, separadamente, apareceram associados a mais risco cardiovascular nos estudos — não é preciso 'se sentir triste' para que o isolamento conte como um fator de risco."
+        ]
+      },
+      {
+        "titulo": "Por que isso importa na consulta de cardiologia",
+        "paragrafos": [
+          "A força dessa associação com o risco cardiovascular é parecida com a de outros fatores de risco que já são rotina na consulta — o que reforça a importância de perguntar sobre a rede social e o convívio do paciente, não só sobre alimentação, atividade física e outros hábitos.",
+          "Perguntas simples como 'como está sua vida social?' ou 'com quem você costuma conversar ou passar tempo?' são uma forma direta de trazer esse assunto para dentro da consulta cardiológica."
+        ]
+      },
+      {
+        "titulo": "O que ainda não se sabe com certeza",
+        "paragrafos": [
+          "Os próprios pesquisadores responsáveis pelo estudo deixaram claro: ainda não está provado que 'resolver' a solidão — por exemplo, se aproximar mais de amigos e família, participar de grupos ou buscar mais companhia — de fato reduz o risco de problemas cardiovasculares no futuro. A associação com o risco é real e consistente, mas a pergunta sobre se tratar isso previne doença ainda está sendo estudada.",
+          "Isso não diminui a importância do achado: mesmo sem uma resposta definitiva sobre prevenção, cuidar das suas relações sociais faz parte de um cuidado mais completo com a saúde do coração, ao lado de outros hábitos já conhecidos."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Você percebe que está evitando cada vez mais o contato com outras pessoas, mesmo quando tem oportunidade de conviver",
+      "Você sente tristeza, ansiedade ou desânimo além da solidão, especialmente se isso vier acompanhado de falta de ânimo para atividades do dia a dia",
+      "Você sente sintomas físicos como dor no peito, falta de ar ou palpitações — nesse caso, procure atendimento médico imediatamente, independentemente de qualquer causa emocional",
+      "Uma mudança recente na sua vida (perda de um familiar, mudança de cidade, aposentadoria) deixou você com muito menos contato social do que antes"
+    ],
+    "perguntas": [
+      "Sentir-se sozinho pode realmente afetar meu coração, mesmo sem outros fatores de risco? Sim — os estudos mostram um aumento de risco relacionado à qualidade das relações sociais, mesmo levando em conta outros fatores. Não é o único nem o principal fator de risco, mas é um dado real que vale a pena levar em conta na sua saúde cardiovascular.",
+      "Preciso ter muitos amigos para meu coração ficar bem? Não necessariamente. O que importa é a qualidade e a consistência das relações que você tem, não um número mínimo de pessoas ao seu redor.",
+      "Se eu me sinto bem sozinho(a), isso ainda é um risco para mim? A solidão é sobre como a pessoa se sente, então quem convive pouco mas não se sente incomodado(a) com isso pode ter um perfil de risco diferente de quem sofre com a falta de companhia. Vale conversar com seu médico sobre a sua situação específica.",
+      "O que eu posso fazer, na prática, já que ainda não existe uma solução comprovada? Fortalecer os vínculos que já existem, buscar atividades em grupo (caminhada, curso, atividade religiosa ou comunitária) e conversar sobre isso com seu médico são passos razoáveis, mesmo sem uma prova definitiva de que isso reduz o risco cardiovascular."
+    ],
+    "fontes": [
+      "Valtorta NK, Kanaan M, Gilbody S, Ronzi S, Hanratty B. Loneliness and social isolation as risk factors for coronary heart disease and stroke: systematic review and meta-analysis of longitudinal observational studies. Heart. 2016;102(13):1009-1016. DOI: 10.1136/heartjnl-2015-308790. PMID: 27091846."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "impacto-no-peito-durante-esporte-commotio-cordis",
+    "titulo": "Impacto no peito durante o esporte: o que é o commotio cordis",
+    "subtitulo": "Por que uma pancada no peito, mesmo sem quebrar nenhum osso, pode ser perigosa para o coração",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "documento_slug": "commotio-cordis-mecanismo-epidemiologia-e-prevencao",
+    "resumo": "Um golpe no peito exatamente no momento certo do batimento cardíaco pode causar uma arritmia grave, mesmo sem nenhuma lesão visível — reconhecer isso rápido e agir salva vidas.",
+    "secoes": [
+      {
+        "titulo": "O que é o commotio cordis",
+        "paragrafos": [
+          "É um evento raro, mas grave, que pode acontecer quando alguém recebe um impacto no peito bem no momento em que o coração está numa fase elétrica sensível do seu ciclo de batimento.",
+          "Diferente do que muita gente imagina, o problema não é uma lesão física ao coração — é elétrico: o impacto, mesmo sem quebrar costela ou machucar a pele, pode desorganizar o ritmo elétrico do coração e causar uma arritmia grave.",
+          "Pode acontecer em qualquer esporte com bolas, socos ou colisões — beisebol, futebol, hóquei, artes marciais e outros."
+        ]
+      },
+      {
+        "titulo": "O que uma grande revisão recente descobriu",
+        "paragrafos": [
+          "Um estudo reuniu e analisou o maior conjunto de casos já registrado sobre o assunto, incluindo centenas de casos ao redor do mundo.",
+          "A maior parte dos casos aconteceu durante a prática esportiva; o restante ocorreu em outras situações, como acidentes ou brigas.",
+          "Um achado marcante: a grande maioria dos casos, tanto dentro quanto fora do esporte, aconteceu com homens."
+        ]
+      },
+      {
+        "titulo": "A parte mais importante: o que salva vidas",
+        "paragrafos": [
+          "O achado com maior impacto prático é este: quando a pessoa recebe rapidamente reanimação cardiopulmonar (RCP) e é usado um desfibrilador externo automático (DEA), a chance de sobreviver passou a ultrapassar metade dos casos nos anos mais recentes — uma melhora muito grande comparada a décadas anteriores.",
+          "Isso reforça uma mensagem simples: ter um DEA disponível perto de onde o esporte acontece, e pessoas treinadas para reconhecer o problema e agir rápido, faz diferença real na sobrevivência."
+        ]
+      },
+      {
+        "titulo": "Como prevenir",
+        "paragrafos": [
+          "Equipamento de proteção torácica adequado em esportes de maior risco (como beisebol, hóquei e artes marciais) ajuda a reduzir o risco.",
+          "Existem bolas desenvolvidas especificamente para diminuir a força do impacto transmitida ao peito.",
+          "Equipamentos esportivos certificados por normas de segurança também fazem parte da prevenção — vale perguntar sobre isso ao equipar times e escolas."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Alguém recebeu uma pancada no peito durante o esporte e desmaiou ou perdeu a consciência logo em seguida — trate como emergência mesmo sem sinal de ferimento",
+      "A pessoa não responde e não está respirando normalmente após o impacto — inicie a reanimação cardiopulmonar, peça para alguém buscar um desfibrilador (DEA) e chamar ajuda imediatamente",
+      "Ausência de fratura de costela ou de marca visível no peito NÃO descarta o problema — o mecanismo é elétrico, não estrutural",
+      "Sintomas como falta de ar, dor no peito ou palpitação após um impacto torácico, mesmo que a pessoa pareça bem em seguida, merecem avaliação médica"
+    ],
+    "perguntas": [
+      "Preciso ter recebido uma pancada muito forte para isso acontecer? Não necessariamente — o que importa mais é o momento exato do impacto dentro do ciclo elétrico do coração, não só a intensidade da força.",
+      "Se não quebrou nenhum osso, posso descartar o problema? Não. A revisão mais recente sobre o tema mostra que a ausência de lesão estrutural, como fratura de costela, não deve ser usada para descartar o diagnóstico.",
+      "O que eu faço se ver isso acontecer com alguém? Chame ajuda, inicie a reanimação cardiopulmonar (compressões no peito) imediatamente e use um desfibrilador (DEA) assim que possível — esses dois passos são os que mais aumentam a chance de sobrevivência.",
+      "Existe alguma forma de reduzir esse risco em times e escolas? Sim — equipamento de proteção torácica adequado, bolas desenhadas para reduzir o impacto e ter um DEA disponível no local, com alguém treinado para usá-lo."
+    ],
+    "fontes": [
+      "Dickey GJ, Dorian P, Fedder SP, et al. Revisiting Commotio Cordis: Novel Insight Into Clinical Variability, Diagnosis, Epidemiology, and Prevention. J Am Heart Assoc. 2026;15(5):e045115. DOI: 10.1161/JAHA.125.045115. PMID: 41717928."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "parada-cardiaca-em-maratonas-o-que-o-corredor-precisa-saber",
+    "titulo": "Correr maratona é seguro para o coração?",
+    "subtitulo": "O que saber sobre parada cardíaca durante corridas de longa distância",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "documento_slug": "parada-cardiaca-em-maratonas-e-corridas-de-longa-distancia",
+    "resumo": "Parada cardíaca durante uma maratona é um evento raro, mas provas de rua grandes precisam estar preparadas para ele — e saber disso ajuda tanto o corredor quanto quem organiza o evento.",
+    "secoes": [
+      {
+        "titulo": "Qual é o risco real",
+        "paragrafos": [
+          "Um grande registro que acompanhou maratonas e meias-maratonas nos Estados Unidos, com milhões de pessoas concluindo a prova ao longo de mais de dez anos, mostrou que a parada cardíaca durante essas corridas é um evento raro.",
+          "Esse risco não mudou muito na última década, comparado à década anterior — ou seja, correr maratona não ficou mais perigoso com o tempo."
+        ]
+      },
+      {
+        "titulo": "A boa notícia: sobreviver ficou muito mais provável",
+        "paragrafos": [
+          "O que mudou de verdade foi a chance de sobreviver a uma parada cardíaca durante a corrida. Em anos mais recentes, cerca de um em cada três corredores que sofreu uma parada cardíaca durante a prova sobreviveu — décadas atrás, essa proporção era bem menor, e a maioria dos casos não sobrevivia.",
+          "Essa melhora não veio por acaso: reflete reconhecimento mais rápido do problema, reanimação cardiopulmonar (RCP) feita mais cedo, mais desfibriladores (DEA) disponíveis ao longo do percurso e equipes médicas mais bem organizadas."
+        ]
+      },
+      {
+        "titulo": "Quem corre mais risco",
+        "paragrafos": [
+          "A maioria dos casos acontece em homens, e o risco aumenta com a idade — é maior em corredores mais velhos do que nos mais jovens.",
+          "Isso não quer dizer que pessoas mais velhas não devam correr; quer dizer que, para quem está entrando ou voltando a correr provas longas depois de uma certa idade, vale conversar com um médico sobre avaliação cardiovascular antes de aumentar a intensidade do treino.",
+          "Curiosamente, estudos mostram que o ritmo de corrida antes do evento não diferencia claramente quem vai ter um problema cardíaco de quem não vai — ou seja, 'estar forçando demais' no ritmo da prova não é, sozinho, um sinal confiável de risco."
+        ]
+      },
+      {
+        "titulo": "O que uma prova bem organizada deve ter",
+        "paragrafos": [
+          "Como o percurso de uma corrida de rua é longo, um único desfibrilador na largada ou na chegada não é suficiente. Provas bem preparadas distribuem equipes e desfibriladores ao longo de todo o percurso, com atenção especial reforçada no trecho final e na linha de chegada — momento em que parte importante dos casos acontece, inclusive logo depois de cruzar a linha.",
+          "Se você organiza ou participa de eventos esportivos de longa distância, vale verificar se há esse tipo de estrutura antes da prova."
+        ]
+      },
+      {
+        "titulo": "Avaliação antes de correr provas longas",
+        "paragrafos": [
+          "Para corredores de meia-idade ou mais velhos, ou para quem tem fatores de risco cardiovascular conhecidos, sintomas ao esforço ou histórico familiar de problema no coração, vale conversar com um cardiologista antes de treinar para uma prova longa.",
+          "Não é necessário fazer exames em todo mundo, mas identificar quem precisa de uma avaliação mais dirigida faz diferença real na segurança do treino."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito, falta de ar desproporcional ao esforço, tontura importante ou desmaio durante a corrida ou o treino — pare imediatamente e procure atendimento",
+      "Palpitações (sensação de coração acelerado ou batendo de forma irregular) que aparecem durante o exercício e não têm explicação óbvia",
+      "Você está retomando corridas longas depois de um período parado(a), está numa faixa etária mais avançada, ou tem fatores de risco cardiovascular conhecidos — converse com seu cardiologista antes de aumentar a intensidade do treino",
+      "Você presenciar alguém desmaiando ou parando de responder durante ou logo após uma corrida — chame ajuda, inicie a reanimação cardiopulmonar e busque um desfibrilador (DEA) imediatamente"
+    ],
+    "perguntas": [
+      "Correr maratona faz mal para o coração? Não — para a grande maioria das pessoas, correr é benéfico para a saúde cardiovascular. A parada cardíaca durante a prova é um evento raro, não uma consequência esperada da corrida.",
+      "Sou mais velho(a): devo evitar correr provas longas? Não necessariamente, mas o risco aumenta um pouco com a idade, então vale passar por uma avaliação cardiovascular antes de treinar para provas longas, principalmente se você está retomando a atividade depois de um tempo parado(a).",
+      "Se eu correr num ritmo mais lento, fico mais protegido(a)? Os estudos mostram que o ritmo da prova, por si só, não separa quem vai ter um problema cardíaco de quem não vai — então correr mais devagar não é garantia de segurança, e correr no seu ritmo normal também não é motivo de alarme.",
+      "O que eu deveria verificar antes de me inscrever numa prova grande? Vale saber se a organização tem desfibriladores (DEA) distribuídos pelo percurso e equipe médica preparada, especialmente perto da chegada — isso faz diferença real na sobrevivência em caso de emergência."
+    ],
+    "fontes": [
+      "Kim JH et al. Cardiac Arrest During Long-Distance Running Races. JAMA. 2025. PMID 40159341. DOI 10.1001/jama.2025.3026.",
+      "Chocron R et al. Characteristics of sudden cardiac arrest during endurance racing: a decade of the Paris registry. Europace. 2026. PMID 41662626. DOI 10.1093/europace/euaf313.",
+      "Kato J et al. Marathon running pace immediately before sudden cardiac arrest. Am J Prev Cardiol. 2026. PMID 41567598. DOI 10.1016/j.ajpc.2025.101390."
+    ],
+    "review_status": "revisado"
   }
 ]
