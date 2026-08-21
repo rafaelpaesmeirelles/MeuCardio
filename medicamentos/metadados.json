@@ -2397,7 +2397,9 @@
       "Comprimido revestido 25 mg (embalagens com 10 ou 30 comprimidos)",
       "**EMPAFLO** — Brace Pharma, comprimido revestido 10 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 119,34; PMC (ICMS 20%) R$ 122,33. Comprimido revestido 25 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 166,56; PMC (ICMS 20%) R$ 170,71. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia adicional. Já cadastrado: Jardiance (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda), comprimidos revestidos 10mg e 25mg, embalagens com 10 ou 30 comprimidos, registro ANVISA 1.0367.0172 (confirmado via bula.gratis/farmaindex/WebSearch). Foram encontrados 'Glyxambi' (empagliflozina + linagliptina) e 'Jardiance Duo' (empagliflozina + cloridrato de metformina), mas os dois são PRODUTOS DE COMBINAÇÃO com outro princípio ativo — não contam como marca de fantasia da empagliflozina isolada, mesmo critério já usado para dapagliflozina/Xigduo neste catálogo. Nenhuma outra marca de empagliflozina em monoterapia foi localizada em farmácias/bulários brasileiros (ConsultaRemedios, CliqueFarma, Drogaria São Paulo, Drogarias Pacheco, Preço Remédio) — todas as listagens mostram só genérico/similar rotulado com o nome do princípio ativo + laboratório (não marca de fantasia). Fontes: WebSearch cruzando gov.br/anvisa, farmaindex.com, bula.gratis, drogariaspacheco.com.br, precoremedio.com.br, cliquefarma.com.br. Busca em 21/08/2026. Nota técnica: WebFetch direto ficou bloqueado pelo proxy de rede desta sessão para todos os domínios de bulário/farmácia testados (inclusive gov.br e wikipedia); a pesquisa foi feita só via WebSearch, que cita e resume as páginas-fonte reais."
+    ],
     "brand_names": [
       "Jardiance"
     ]
@@ -2630,7 +2632,9 @@
       "Comprimido revestido 25 mg",
       "Comprimido revestido 50 mg"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia adicional, em quatro buscas independentes. Já cadastrado: Inspra (registro solicitado por Upjohn Brasil Importadora e Distribuidora de Medicamentos Ltda / grupo Viatris-Pfizer), comprimidos revestidos de 25mg e 50mg, embalagens com 10, 20, 30 ou 50 comprimidos, registro ANVISA 1.8830.0110. Dose máxima 50mg/dia em insuficiência cardíaca e 100mg/dia em hipertensão. Nenhuma segunda marca de fantasia foi localizada — listagens de Drogaria São Paulo e Drogarias Pacheco (\"Medicamentos Com Eplerenona\") mostram apenas o produto de referência Inspra e genérico/similar rotulado com o nome do princípio ativo (não marca de fantasia). Fontes: WebSearch cruzando viatris.com.br, buladeremedio.net, gov.br/anvisa, drogariasaopaulo.com.br, drogariaspacheco.com.br, consultaremedios.com.br. Busca em 21/08/2026."
+    ],
     "brand_names": [
       "Inspra"
     ]
@@ -2929,7 +2933,9 @@
       "Comprimido de liberação prolongada 5 mg (embalagem com 20 comprimidos)",
       "Comprimido de liberação prolongada 10 mg (embalagem com 20 comprimidos)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia adicional. Já cadastrado: Splendil (AstraZeneca do Brasil Ltda), comprimidos de liberação prolongada de 2,5mg, 5mg e 10mg, embalagens com 20 comprimidos; para a apresentação de 5mg com 20 comprimidos o registro ANVISA é 1.1618.0074.009-6 (bula profissional aprovada pela ANVISA em 21/01/2015) — confirmado ainda ativo à venda (listagem da Drogaria São Paulo), o que corrige um resultado de busca isolado e não confirmado que sugeria registro cancelado/caduco (essa alegação não foi corroborada por segunda fonte e foi descartada). Nomes usados para felodipino em outros países (Renedil, Feloday, Plendil, Cabren, Cardioplen XL, Felendil XL, Felogen XL, Felotens XL, Keloc SR, Neofel XL, Vascalpha) foram checados especificamente e NENHUM tem registro ou bula confirmados no mercado brasileiro nas fontes consultadas — não incluídos por não serem brasileiros. Fontes: WebSearch cruzando azmed.com.br (bula profissional oficial AstraZeneca), remediobarato.com, saudedireta.com.br, erclinic.com.br, drogariasaopaulo.com.br, pharmacompass.com (para descartar as marcas internacionais). Busca em 21/08/2026."
+    ],
     "brand_names": [
       "Splendil"
     ]
@@ -3543,9 +3549,17 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA (DailyMed) para hidroclorotiazida, seção Clinical Pharmacology.",
     "brand_names": [
       "Clorana (Sanofi Medley — já citada como fonte de bula neste registro)",
-      "Diurix (outro nome comercial registrado na ANVISA, localizado nesta sessão — bula não consultada diretamente para os demais campos deste registro)"
+      "Diurix (outro nome comercial registrado na ANVISA, localizado nesta sessão — bula não consultada diretamente para os demais campos deste registro)",
+      "Diurezin",
+      "Clorizin — Cifarma Científica Farmacêutica Ltda",
+      "Drenol — Laboratórios Pfizer Ltda"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "Diurezin® (hidroclorotiazida), comprimido 25mg, redondo, amarelo, sulcado ao meio — laboratório fabricante NÃO confirmado com segurança nas fontes consultadas (não incluído no campo brand_names como atribuição de laboratório, para não inventar procedência); é produto distinto de 'Diurezin E' (associação hidroclorotiazida + outro princípio ativo, achado à parte, não confundir). Fonte: ConsultaRemedios (bula), WebSearch. Busca em 21/08/2026.",
+      "Clorizin® (hidroclorotiazida), Cifarma Científica Farmacêutica Ltda, comprimidos de 50mg, embalagens com 20 e 30 comprimidos; indicado para hipertensão arterial e edema (insuficiência cardíaca, cirrose hepática). Fontes convergentes: br.ivademecum.com (Laboratório CIFARMA), bula.medicinanet.com.br, remediobarato.com (bula profissional e do paciente, Cifarma Científica Farmacêutica Ltda), consultaremedios.com.br. Busca em 21/08/2026.",
+      "Drenol® (hidroclorotiazida), Laboratórios Pfizer Ltda, indicado para controle de hipertensão e tratamento de edema associado a insuficiência cardíaca e renal. Dosagem/tamanho de embalagem específicos não confirmados com segurança nas fontes consultadas — omitidos. Fonte: ConsultaRemedios (bula), WebSearch. Busca em 21/08/2026.",
+      "NOTA: já cadastrados no registro original (mantidos, não repetidos aqui): Clorana (Sanofi Medley) e Diurix (bula não consultada nesta rodada). Um outro nome, 'Diussin', foi buscado especificamente e NÃO teve nenhuma ocorrência localizada em fonte brasileira — não incluído."
+    ],
     "interactions": [
       "**AINE**: podem reduzir o efeito diurético/antihipertensivo da hidroclorotiazida e aumentar o risco de lesão renal — mesma classe de interação já registrada para outros diuréticos/antihipertensivos desta base (ex.: `indapamida.interactions`, já cadastrado).",
       "**Digitálicos (digoxina)**: a hipocalemia/hipomagnesemia induzida pela hidroclorotiazida (já listada em `adverse_effects` deste registro) aumenta o risco de toxicidade digitálica — atenção redobrada ao eletrólito sérico já recomendada em `monitoring`.",
@@ -4180,13 +4194,16 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA (DailyMed) para lisinopril, seção Clinical Pharmacology.",
     "bp_evidence_source": "**Dado encontrado em PERCENTUAL, não em mmHg — não convertido para não fabricar um valor absoluto que dependeria de uma pressão basal não informada pela fonte.** O rótulo aprovado pelo FDA (DailyMed) para lisinopril, em monoterapia com dose única diária, descreve redução de **11% a 15% na pressão sistólica e de 13% a 17% na pressão diastólica**. Em estudo comparativo citado pela mesma fonte, lisinopril 20 mg duas vezes ao dia foi mais eficaz que 40 mg uma vez ao dia, com diferença média de 10,2 mmHg na PA sistólica entre os grupos — este último é um dado de COMPARAÇÃO entre dois esquemas posológicos do próprio lisinopril, não a queda absoluta de PA vs. placebo, e por isso não foi lançado como `sbp_reduction_mmhg`. **Confirmado nesta sessão (WebFetch, 12/08/2026) por leitura direta da seção 14 (CLINICAL STUDIES) completa do rótulo FDA/DailyMed de lisinopril (mesmo setid 0e6364a4-6d66-4151-8197-d45e2a762895 já citado nas `references`): a seção genuinamente NÃO traz tabela de redução absoluta de PA em mmHg a partir de placebo — os únicos dados quantitativos ali são percentuais (já citados acima) e mortalidade/incidência de eventos adversos em estudos de insuficiência cardíaca, não desfecho de PA. A ausência de valor absoluto em mmHg é real e confirmada na fonte, não lacuna de busca desta sessão.",
     "brand_names": [
-      "Zestril (AstraZeneca do Brasil — já citada extensamente como fonte de bula neste registro)"
+      "Zestril (AstraZeneca do Brasil — já citada extensamente como fonte de bula neste registro)",
+      "Lisinovil — Sandoz do Brasil Indústria Farmacêutica Ltda"
     ],
     "presentations": [
       "Comprimidos orais — bula profissional brasileira do ZESTRIL não detalha nesta sessão as dosagens exatas em miligrama disponíveis no mercado nacional; ver `commercial_presentations`"
     ],
     "commercial_presentations": [
-      "Lisinopril genérico de múltiplos fabricantes, comercializado sob o nome da substância + laboratório (sem marca fantasia distinta): Medley (5 mg e 20 mg, caixas de 30 comprimidos), Teuto (20 mg, caixa de 30 comprimidos) e Cristália (Laboratório Cristália). Fontes: ultrafarma.com.br/lisinopril-5-mg-com-30-comprimidos-medley-generico, ultrafarma.com.br/lisinopril-20-mg-com-30-comprimidos-teuto-generico, consultaremedios.com.br/lisinopril-laboratorio-cristalia/bula — pesquisado via WebSearch em 20/08/2026."
+      "Lisinopril genérico de múltiplos fabricantes, comercializado sob o nome da substância + laboratório (sem marca fantasia distinta): Medley (5 mg e 20 mg, caixas de 30 comprimidos), Teuto (20 mg, caixa de 30 comprimidos) e Cristália (Laboratório Cristália). Fontes: ultrafarma.com.br/lisinopril-5-mg-com-30-comprimidos-medley-generico, ultrafarma.com.br/lisinopril-20-mg-com-30-comprimidos-teuto-generico, consultaremedios.com.br/lisinopril-laboratorio-cristalia/bula — pesquisado via WebSearch em 20/08/2026.",
+      "Lisinovil® (lisinopril), Sandoz do Brasil Indústria Farmacêutica Ltda, comprimidos circulares vermelhos, sulcados de um lado, nas dosagens de 5mg, 10mg e 20mg, embalagens com 30 comprimidos cada; validade de 24 meses a partir da fabricação. Fontes convergentes: BulasMed (bulas.med.br/.../lisinovil.htm), remediobarato.com (bula completa, atribuída a Sandoz do Brasil Indústria Farmacêutica Ltda, versões profissional e paciente). Busca em 21/08/2026.",
+      "NOTA sobre achado NÃO confirmado, deliberadamente fora de brand_names: uma busca isolada mencionou 'Lisopril' como marca de lisinopril do laboratório Neo Química, mas outra busca subsequente só confirmou um registro de nome semelhante ('Lisinobal', laboratório Baldacci, registro 101460083, JÁ INATIVO/expirado desde 2008) — as duas informações são conflitantes e nenhuma foi corroborada por segunda fonte independente e confiável. 'Lisopril' NÃO foi adicionado a brand_names por falta de confirmação cruzada."
     ],
     "indications": [
       "Hipertensão arterial, isolada ou em associação a outros antihipertensivos",
@@ -4798,7 +4815,10 @@
     ],
     "brand_names": [
       "Nebilet (Biolab Sanus) e Lobeat (Abbott) — já citados nas referências deste registro",
-      "Neblock"
+      "Neblock",
+      "Bivolet — Biolab Sanus Farmacêutica Ltda",
+      "Nebitah — Aché Laboratórios Farmacêuticos S.A.",
+      "Teubiliv — Laboratório Teuto Brasileiro S/A"
     ],
     "presentations": [
       "Comprimidos de 5 mg (dose padrão em hipertensão, já registrada em `dosing.hipertensao adulto` deste verbete). Fonte: bula profissional brasileira do NEBILET (Biolab Sanus), já citada nas referências deste registro."
@@ -4814,7 +4834,11 @@
     "renal_adjustment": "Dose inicial 2,5 mg/dia, podendo aumentar até 5mg/dia em hipertensão com insuficiência renal (mesmo conteúdo já registrado em `dosing.hipertensao insuficiencia renal`, aqui estruturado como campo próprio); em insuficiência renal grave (creatinina >250) o uso não é recomendado, por falta de experiência clínica. Fonte: bula profissional brasileira de nebivolol, já citada nas referências deste registro.",
     "hepatic_adjustment": "Contraindicado em insuficiência hepática — dados limitados (mesmo conteúdo já registrado em `dosing.insuficiencia hepatica` e em `contraindications` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira de nebivolol, já citada nas referências deste registro.",
     "commercial_presentations": [
-      "Neblock® (Torrent do Brasil Ltda., princípio ativo fabricado por Torrent Pharmaceuticals, Índia) — comprimidos de 5 mg, embalagens com 7, 30 ou 60 comprimidos. Fonte: bula profissional Neblock (consultaremedios.com.br/uploads/drug_leaflet, torrent.com.br — bula paciente) e sara.com.br, WebSearch 20/08/2026."
+      "Neblock® (Torrent do Brasil Ltda., princípio ativo fabricado por Torrent Pharmaceuticals, Índia) — comprimidos de 5 mg, embalagens com 7, 30 ou 60 comprimidos. Fonte: bula profissional Neblock (consultaremedios.com.br/uploads/drug_leaflet, torrent.com.br — bula paciente) e sara.com.br, WebSearch 20/08/2026.",
+      "Bivolet® (cloridrato de nebivolol), Biolab Sanus Farmacêutica Ltda (produto fabricado por Specifar S.A., Grécia, e importado/embalado pela Biolab), comprimidos redondos, brancos, sulcados em cruz, 5mg (equivalente a cloridrato de nebivolol 5,45mg), embalagens com 7, 30 ou 90 comprimidos; indicado para hipertensão arterial e insuficiência cardíaca em idosos (>70 anos) com fração de ejeção ≤35%. Fontes convergentes: Panvel (bula), Araujo (bula), img.drogasil.com.br (bula PDF), uploads.consultaremedios.com.br (bula profissional PDF), medicamentolab.com.br, farmaindex.com. Busca em 21/08/2026.",
+      "Nebitah® (nebivolol), Aché Laboratórios Farmacêuticos S.A., comprimidos brancos, redondos, bissectados em cruz, 5mg (cloridrato de nebivolol 5,45mg, equivalente a 2,5mg de d-nebivolol + 2,5mg de l-nebivolol), embalagens com 10 ou 30 comprimidos; mesmas indicações (hipertensão e IC em idosos >70 anos, FE≤35%). Fontes convergentes: ache.com.br (página oficial do produto e bula do paciente em PDF), uploads.consultaremedios.com.br (bula profissional PDF), Preço Popular, Araujo, farmaindex.com. Busca em 21/08/2026.",
+      "Teubiliv® (nebivolol), registrado por Laboratório Teuto Brasileiro S/A (Anápolis-GO), fabricado por Specifar S.A. (Grécia), comprimidos de 5mg, embalagens com 30 ou 60 comprimidos; mesmas indicações (hipertensão arterial e IC em idosos >70 anos, FE≤35%). Fontes convergentes: farmafy.com.br, consultaremedios.com.br, BulasMed (bulas.med.br), farmaindex.com. Busca em 21/08/2026.",
+      "NOTA: já cadastrados no registro original (mantidos, não repetidos aqui): Nebilet (Biolab Sanus) e Lobeat (Abbott), e Neblock."
     ]
   },
   {
@@ -5439,7 +5463,8 @@
       "Comprimidos de 10 mg, 20 mg e 40 mg, uso oral, adulto e pediátrico a partir de 8 anos (bula genérica Sanofi Medley, MS 1.8326.0106, aprovada pela Anvisa em 17/10/2019; embalagens com 30 comprimidos)."
     ],
     "commercial_presentations": [
-      "Pravastatina sódica [genérico] 10 mg, 20 mg e 40 mg — comprimidos, embalagens com 30 unidades (Sanofi Medley Farmacêutica Ltda., Reg. MS 1.8326.0106; bula do paciente aprovada pela Anvisa em 17/10/2019)."
+      "Pravastatina sódica [genérico] 10 mg, 20 mg e 40 mg — comprimidos, embalagens com 30 unidades (Sanofi Medley Farmacêutica Ltda., Reg. MS 1.8326.0106; bula do paciente aprovada pela Anvisa em 17/10/2019).",
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia adicional, em múltiplas buscas independentes (incluindo checagem específica de nomes usados para pravastatina em outros países — Selektine, Mevalotin, Elisor — nenhum confirmado no mercado brasileiro). Já cadastrado: Pravacol (Bristol-Myers Squibb), comprimidos de 10mg, 20mg e 40mg. Todos os demais resultados de busca (Medley, Sanofi Medley, Cristália e outros) são genérico/similar rotulado só com o nome do princípio ativo (\"Pravastatina Sódica <laboratório>\") — não é marca de fantasia, conforme a distinção pedida na tarefa. Fontes: WebSearch cruzando bulas.med.br, consultaremedios.com.br, drogariasaopaulo.com.br, drogariaspacheco.com.br, drogarianovaesperanca.com.br, minhavida.com.br, sara.com.br. Busca em 21/08/2026."
     ],
     "renal_adjustment": "Insuficiência renal moderada ou grave: dose inicial de 10 mg/dia é recomendada, com ajuste posterior de acordo com a resposta dos parâmetros lipídicos e sob supervisão médica. A bula do profissional de saúde (Pravacol, 2009) já indicava 'para pacientes com disfunção hepática ou renal, uma dose inicial mais baixa deve ser considerada' — a bula genérica mais recente (Sanofi Medley, 2019) especifica objetivamente os 10 mg/dia como dose inicial. Fontes: bula Pravastatina Sódica (genérico), Sanofi Medley, item 6 (Posologia); bula PRAVACOL, Bristol-Myers Squibb, seção Posologia.",
     "hepatic_adjustment": "Insuficiência hepática significativa: dose inicial de 10 mg/dia é recomendada (mesma orientação da insuficiência renal), com ajuste posterior conforme resposta dos parâmetros lipídicos e sob supervisão médica (bula Sanofi Medley, 2019). Doença hepática ATIVA é CONTRAINDICAÇÃO formal ao uso da pravastatina (não é apenas motivo de ajuste de dose) — ver campo `contraindications`. Recomenda-se realizar testes de função hepática antes do início da terapia, após elevação de dose ou quando clinicamente indicado; a terapia deve ser interrompida se ALT e AST atingirem ou excederem 3x o limite superior da normalidade de forma persistente. Precaução maior é recomendada em pacientes com histórico de doença hepática ou de grande ingestão alcoólica. Fontes: bula Pravastatina Sódica (genérico), Sanofi Medley, item 6; bula PRAVACOL, Bristol-Myers Squibb, seções Posologia e Advertências.",
