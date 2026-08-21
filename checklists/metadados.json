@@ -8424,5 +8424,229 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diferenciacao-coracao-de-atleta-e-cardiomiopatia-hipertrofica-na-triagem-esportiva",
+    "condicao": "Diferenciação entre coração de atleta e cardiomiopatia hipertrófica (zona cinzenta)",
+    "resumo": "Checklist de abordagem diagnóstica multimodal e hierárquica para o remodelamento cardíaco do atleta que se sobrepõe, na imagem e no ECG, à cardiomiopatia hipertrófica — distinto do checklist de triagem pré-participação que decide sobre incluir ECG na avaliação em massa; aqui o atleta já tem achado a esclarecer.",
+    "documento_origem": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pagourelias ED, Ouzouni S, Salmatzidis P, Sargiannidis T, Tsiouli E, Ntelios D, Kouidi E, Vassilikos VP. A concise guide of contemporary cardiovascular imaging practices to differentiate athlete's heart in the gray zone. Heart Fail Rev. 2025;30(6):1215-1224. PMID: 40576890. PMCID: PMC12618444. DOI: 10.1007/s10741-025-10541-y",
+      "Wiradinata W, Aditya MR, Subali AD, Lestari H, Hardani RB, Mukti NH. Distinguishing athlete's heart from hypertrophic cardiomyopathy by ECG features in the pediatric population: a systematic review and meta-analysis. Eur J Pediatr. 2025;184(12):802. PMID: 41313487. DOI: 10.1007/s00431-025-06657-w",
+      "Deligiannis A, Bompotis G, Deligiannis P, Anifanti M, Kouidi E. Artificial intelligence in the differential diagnosis of hypertrophic cardiomyopathy and physiological hypertrophy: a scoping review. Hellenic J Cardiol. 2026 May 15. PMID: 42142808. DOI: 10.1016/j.hjc.2026.05.001"
+    ],
+    "itens": [
+      {
+        "id": "cazc-ecg-triagem-inicial",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ECG de repouso usado como primeira triagem, com atenção dirigida a prolongamento de QTc, alterações de onda T/segmento ST e ondas Q patológicas — achados significativamente mais prevalentes na cardiomiopatia hipertrófica pediátrica que no coração de atleta jovem, na metanálise de 25 estudos",
+        "origem_secao": "O que o ECG pediátrico acrescenta à diferenciação"
+      },
+      {
+        "id": "cazc-ecg-nao-isolado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Alteração isolada de ECG (QTc, T/ST, Q patológica) não usada como critério diagnóstico definitivo isolado — a própria metanálise recomenda que qualquer alteração detectada motive investigação adicional, não feche diagnóstico sozinha",
+        "origem_secao": "O que o ECG pediátrico acrescenta à diferenciação"
+      },
+      {
+        "id": "cazc-imagem-escalonada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Escalonamento estruturado de imagem cardíaca: ecocardiografia com avaliação de deformação miocárdica (strain) em primeiro plano, escalando para ressonância magnética cardíaca quando a dúvida diagnóstica persistir",
+        "origem_secao": "Mensagem prática para a triagem"
+      },
+      {
+        "id": "cazc-abordagem-multimodal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que nenhuma das três fontes desta ficha propõe um critério único e definitivo — a diferenciação exige abordagem multimodal e hierárquica (ECG, depois imagem estruturada), nunca um único achado isolado",
+        "origem_secao": "Mensagem prática para a triagem"
+      },
+      {
+        "id": "cazc-limiares-verificacao-humana",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: os limiares numéricos específicos de espessura parietal, diâmetro de câmara e função diastólica do algoritmo hierárquico de imagem não constam do resumo indexado do artigo de Pagourelias et al. — consultar o texto completo (livre em PMC12618444) antes de aplicar clinicamente os cortes do algoritmo",
+        "origem_secao": "O desafio central: distinguir remodelamento fisiológico de doença genética"
+      },
+      {
+        "id": "cazc-ia-nao-substitui",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ferramenta de inteligência artificial para diferenciação por imagem (quando disponível) tratada como apoio emergente, não substituta da avaliação multimodal padrão — só 1 de 8 estudos da revisão de escopo comparou IA diretamente contra coração de atleta (AUC 0,93), com validação externa e bases de dados específicas de atletas ainda limitadas",
+        "origem_secao": "Inteligência artificial: uma ferramenta emergente, ainda com lacuna específica no atleta"
+      },
+      {
+        "id": "cazc-duvida-investigacao-adicional",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Achado clínico duvidoso na zona cinzenta resolvido por investigação adicional estruturada — nunca por presunção em qualquer direção (nem liberação precipitada, nem desqualificação permanente sem esgotar a investigação)",
+        "origem_secao": "Mensagem prática para a triagem"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta (Pagourelias et al. 2025, PMID 40576890; Wiradinata et al. 2025, PMID 41313487; Deligiannis et al. 2026, PMID 42142808), com a seção de origem registrada em cada item, em 21/08/2026."
+  },
+  {
+    "slug": "suspeita-de-feocromocitoma-ou-paraganglioma-diante-de-disfuncao-ventricular-aguda-tipo-takotsubo",
+    "condicao": "Suspeita de miocardiopatia catecolaminérgica por feocromocitoma/paraganglioma diante de disfunção ventricular aguda tipo takotsubo",
+    "resumo": "Sinais que devem levar a investigar feocromocitoma/paraganglioma (PPGL) antes de fechar o diagnóstico de takotsubo por estresse emocional, e a armadilha do betabloqueio isolado no manejo agudo — entre 1 em 9 e 1 em 35 pacientes com PPGL se apresenta primeiro como emergência cardíaca aguda.",
+    "documento_origem": "miocardiopatia-catecolaminergica-por-feocromocitoma-e-paraganglioma-suspeitar-antes-de-atribuir-a-estresse",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Giavarini A, Chedid A, Bobrie G, Plouin PF, Hagège A, Amar L. Acute catecholamine cardiomyopathy in patients with phaeochromocytoma or functional paraganglioma. Heart. 2013;99(19):1438-1444. DOI: 10.1136/heartjnl-2013-304073. PMID: 23837998",
+      "Gagnon N, Mansour S, Bitton Y, Bourdeau I. Takotsubo-like Cardiomyopathy in a Large Cohort of Patients With Pheochromocytoma and Paraganglioma. Endocr Pract. 2017;23(10):1178-1192. DOI: 10.4158/EP171930.OR. PMID: 28704094",
+      "Y-Hassan S, Falhammar H. Clinical features, complications, and outcomes of exogenous and endogenous catecholamine-triggered Takotsubo syndrome: A systematic review and meta-analysis of 156 published cases. Clin Cardiol. 2020;43(5):459-467. DOI: 10.1002/clc.23352. PMID: 32125009",
+      "Y-Hassan S, Falhammar H. Cardiovascular Manifestations and Complications of Pheochromocytomas and Paragangliomas. J Clin Med. 2020;9(8):2435. DOI: 10.3390/jcm9082435. PMID: 32751501",
+      "Lenders JW, Duh QY, Eisenhofer G, Gimenez-Roqueplo AP, Grebe SK, Murad MH, Naruse M, Pacak K, Young WF Jr; Endocrine Society. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. DOI: 10.1210/jc.2014-1498. PMID: 24893135",
+      "Plouin PF, Degoulet P, Tugayé A, Ducrocq MB, Ménard J. Le dépistage du phéochromocytome: chez quels hypertendus? Nouv Presse Med. 1981;10(11):869-872. PMID: 7208288 — validada como ferramenta de rastreio em hipertensos, não como preditor específico em disfunção cardíaca aguda"
+    ],
+    "itens": [
+      {
+        "id": "pplg-balonamento-global",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Suspeitar de PPGL diante de quadro rotulado 'takotsubo' com padrão de balonamento GLOBAL (não apical/médio-apical clássico) — PPGL foi associado a mais padrão global que o grupo de catecolamina exógena (21,2% vs. 6,1%, p=0,02) na metanálise de 156 casos",
+        "origem_secao": "Padrão de apresentação — o que distingue do takotsubo 'por estresse emocional' comum"
+      },
+      {
+        "id": "pplg-disfuncao-grave",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Suspeitar de PPGL diante de disfunção ventricular mais grave que o esperado — fração de ejeção mais baixa no grupo PPGL comparado ao de catecolamina exógena (25,54% ± 11,3 vs. 31,82% ± 9,93, p=0,0072)",
+        "origem_secao": "Padrão de apresentação — o que distingue do takotsubo 'por estresse emocional' comum"
+      },
+      {
+        "id": "pplg-recorrencia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Considerar recorrência de um quadro 'takotsubo' já rotulado como sinal de alerta forte para causa catecolaminérgica endógena não tratada — na metanálise de 156 casos, a recorrência ocorreu exclusivamente no subgrupo de PPGL (16,8%), nenhuma no grupo de catecolamina exógena",
+        "origem_secao": "Padrão de apresentação — o que distingue do takotsubo 'por estresse emocional' comum"
+      },
+      {
+        "id": "pplg-labilidade-pressorica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Anamnese dirigida a labilidade pressórica extrema — picos hipertensivos paroxísticos intercalados com hipotensão, desproporcionais ao esperado de um evento de estresse emocional isolado",
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente, antes e durante o evento agudo"
+      },
+      {
+        "id": "pplg-triade-classica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Anamnese dirigida à tríade cefaleia-sudorese-palpitações precedendo o evento cardíaco. VERIFICAÇÃO HUMANA NECESSÁRIA: a sensibilidade/especificidade dessa tríade (Plouin et al. 1981) foi validada como ferramenta de rastreio em hipertensos gerais, não especificamente em pacientes já com disfunção ventricular aguda/padrão takotsubo — não extrapolar o número original para este cenário mais restrito",
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente, antes e durante o evento agudo"
+      },
+      {
+        "id": "pplg-fator-precipitante-mecanico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Buscar fator precipitante mecânico registrado em casos publicados de PPGL não diagnosticado: cirurgia (inclusive não relacionada ao tumor), manipulação abdominal, parto ou infecção respiratória concomitante",
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente, antes e durante o evento agudo"
+      },
+      {
+        "id": "pplg-mayo-exclusao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Feocromocitoma/paraganglioma explicitamente excluído antes de fechar o diagnóstico de takotsubo — é critério formal de exclusão do próprio escore diagnóstico de Mayo Clinic para takotsubo, não uma suposição",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pplg-metanefrinas",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Investigação bioquímica com metanefrinas plasmáticas ou urinárias fracionadas considerada antes de fechar o quadro como takotsubo idiopático, quando qualquer combinação dos sinais de alerta acima estiver presente",
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente, antes e durante o evento agudo"
+      },
+      {
+        "id": "pplg-nao-betabloqueio-isolado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador NUNCA iniciado isolado, nem antes de bloqueio alfa-adrenérgico estabelecido, diante de suspeita de PPGL no manejo agudo do choque cardiogênico ou edema agudo de pulmão — risco de crise hipertensiva paradoxal por vasoconstrição alfa sem oposição",
+        "origem_secao": "O que muda no manejo agudo — a armadilha do betabloqueio isolado"
+      },
+      {
+        "id": "pplg-reversibilidade-antes-cirurgia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a maior parte da recuperação da fração de ejeção pode ocorrer com tratamento clínico apropriado, antes mesmo da ressecção cirúrgica do tumor — no estudo de Giavarini et al., a FE mediana subiu de 30% durante a crise para 71% já antes da cirurgia",
+        "origem_secao": "Prognóstico e reversibilidade — o dado que sustenta o esforço de investigar"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento miocardiopatia-catecolaminergica-por-feocromocitoma-e-paraganglioma-suspeitar-antes-de-atribuir-a-estresse (Giavarini et al. 2013, PMID 23837998; Gagnon et al. 2017, PMID 28704094; Y-Hassan & Falhammar 2020, PMID 32125009 e PMID 32751501; Lenders et al./Endocrine Society 2014, PMID 24893135), com a seção de origem registrada em cada item, em 21/08/2026."
+  },
+  {
+    "slug": "reconhecimento-e-prevencao-de-commotio-cordis-no-evento-esportivo",
+    "condicao": "Reconhecimento diagnóstico e prevenção de commotio cordis no evento esportivo",
+    "resumo": "Foco no diagnóstico diferencial de colapso súbito após impacto torácico e nas três frentes de prevenção primária com base de evidência (proteção torácica, bola de segurança, norma de equipamento) — distinto do checklist de plano de emergência com DEA, que trata da estrutura de resposta já em curso, não do reconhecimento nem da prevenção do evento em si.",
+    "documento_origem": "commotio-cordis-mecanismo-epidemiologia-e-prevencao",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Dickey GJ, Dorian P, Fedder SP, et al. Revisiting Commotio Cordis: Novel Insight Into Clinical Variability, Diagnosis, Epidemiology, and Prevention. J Am Heart Assoc. 2026;15(5):e045115. DOI: 10.1161/JAHA.125.045115. PMID: 41717928. PMCID: PMC13055793."
+    ],
+    "itens": [
+      {
+        "id": "coco-diferencial-sem-fratura",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Commotio cordis incluído no diagnóstico diferencial de todo colapso súbito após impacto torácico no esporte, mesmo SEM fratura de costela ou esterno visível — a ausência de dano estrutural não deve, por si só, excluir o diagnóstico",
+        "origem_secao": "Um critério diagnóstico controverso / Mensagem prática"
+      },
+      {
+        "id": "coco-mecanismo-eletrico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que o mecanismo é elétrico — acoplamento mecanoelétrico no momento vulnerável do ciclo cardíaco (repolarização) —, não decorrente da força do impacto isoladamente; equipe treinada não deve descartar o diagnóstico por 'o impacto não foi tão forte'",
+        "origem_secao": "Por que este tema importa / Mensagem prática"
+      },
+      {
+        "id": "coco-rcp-dea-imediato",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "RCP e desfibrilação com DEA aplicadas de imediato diante de colapso súbito pós-impacto torácico, sem aguardar confirmação diagnóstica — é a intervenção com maior impacto documentado na sobrevida, elevando a taxa para mais de 50% nos anos mais recentes",
+        "origem_secao": "Tratamento: RCP e DEA aumentaram a sobrevida"
+      },
+      {
+        "id": "coco-protecao-toracica",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Uso de equipamento de proteção torácica considerado em esportes de risco reconhecido (ex.: beisebol, hóquei, artes marciais), com base em estudos de simulação em modelos humanos",
+        "origem_secao": "Prevenção: o que tem evidência"
+      },
+      {
+        "id": "coco-bolas-seguranca",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Uso de bolas de segurança (safety baseballs), desenhadas para reduzir a transmissão de energia de impacto ao tórax, considerado onde aplicável ao esporte praticado",
+        "origem_secao": "Prevenção: o que tem evidência"
+      },
+      {
+        "id": "coco-norma-equipamento",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Conformidade do equipamento esportivo com norma de segurança aplicável verificada — destaque para o padrão NOCSAE ND-200, usado para mitigar risco de commotio cordis em equipamentos esportivos em todas as faixas etárias",
+        "origem_secao": "Prevenção: o que tem evidência"
+      },
+      {
+        "id": "coco-predominio-masculino",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado, para orientar programas de conscientização e prevenção, o predomínio amplamente masculino nos dois contextos: 94% dos casos em esporte e 93% dos casos fora do esporte",
+        "origem_secao": "O que a revisão de 2026 mudou"
+      },
+      {
+        "id": "coco-encaminhamento-pos-evento",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: após evento suspeito de commotio cordis com recuperação, encaminhamento para avaliação cardiológica estruturada antes de qualquer decisão de retorno ao esporte — o documento de origem não detalha critérios específicos de retorno pós-commotio cordis; confirmar por protocolo institucional e fonte primária dedicada antes de considerar este ponto resolvido",
+        "origem_secao": "O documento de origem trata de mecanismo, epidemiologia e prevenção, sem detalhar critérios de retorno ao esporte pós-evento — lacuna não coberta pela fonte desta ficha"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento commotio-cordis-mecanismo-epidemiologia-e-prevencao (Dickey et al. 2026, JAHA, PMID 41717928), com a seção de origem registrada em cada item, em 21/08/2026."
   }
 ]
