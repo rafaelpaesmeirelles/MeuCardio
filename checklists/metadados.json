@@ -8424,5 +8424,250 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "seguimento-de-valva-aortica-bicuspide-e-aortopatia-associada",
+    "condicao": "Seguimento da valva aórtica bicúspide e da aortopatia associada",
+    "resumo": "O que checar ao diagnosticar valva aórtica bicúspide (VAB) e ao longo da vigilância seriada da aorta associada, incluindo os limiares cirúrgicos que mudam conforme o fenótipo de dilatação, não só o diâmetro absoluto — pela diretriz ESC 2024 de doenças aórticas.",
+    "documento_origem": "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179 — seção 10.2 (Aortic disease associated with bicuspid aortic valves), Figura 43 e Recommendation Table 68 (Recommendations for bicuspid aortic valve-associated aortopathy management)."
+    ],
+    "itens": [
+      {
+        "id": "vab-tte-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TTE inicial realizado ao primeiro diagnóstico de VAB, avaliando o diâmetro da aorta em vários níveis (Classe I, Nível B)",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "vab-angiotc-rm-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Angiotomografia ou ressonância cardiovascular realizada ao primeiro diagnóstico, e repetida sempre que houver discrepância importante entre medidas seriadas do TTE ou o diâmetro ultrapassar 45 mm (Classe I, Nível C)",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "vab-fenotipo-caracterizado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Fenótipo da dilatação aórtica caracterizado (ascendente, de raiz ou estendido) — é ele, e não só o diâmetro absoluto, que decide o limiar cirúrgico",
+        "origem_secao": "Nomenclatura e fenótipos, unificados pela diretriz"
+      },
+      {
+        "id": "vab-vigilancia-seriada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância seriada por TTE agendada para diâmetro máximo acima de 40 mm sem indicação cirúrgica ou após cirurgia valvar isolada: reavaliação em 1 ano, depois a cada 2-3 anos se houver estabilidade (Classe I, Nível C)",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "vab-rastreio-familiar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Rastreio de parente de primeiro grau oferecido: recomendado se o paciente tem fenótipo de raiz e/ou regurgitação aórtica isolada (Classe I, Nível C); considerado para parente de primeiro grau de qualquer paciente com VAB (Classe IIa, Nível B) — a idade ideal para começar ainda não foi determinada",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "vab-limiar-cirurgico-raiz",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "No fenótipo de raiz, avaliação cirúrgica indicada já a partir de 50 mm (Classe I, Nível B) — corte mais baixo que os 55 mm gerais, porque esse fenótipo cresce mais rápido, tem pior sobrevida se não operado a tempo e maior risco de síndrome aórtica aguda",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "vab-limiar-cirurgico-ascendente-fatores",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No fenótipo ascendente de baixo risco cirúrgico (<3%) com diâmetro entre 50 e 55 mm, fatores agravantes checados para considerar cirurgia já a partir de 50 mm (Classe IIa, Nível C): idade <50 anos, estatura baixa (1,50-1,69 m), comprimento da aorta ascendente ≥11 cm, crescimento ≥3 mm/ano, história familiar de síndrome aórtica aguda, coarctação de aorta, hipertensão resistente, cirurgia cardíaca concomitante não valvar aórtica ou desejo de gestação",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "vab-cirurgia-concomitante-45mm",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Paciente já encaminhado para cirurgia da valva aórtica por outro motivo: operar também a aorta se o diâmetro de raiz ou ascendente for ≥45 mm (Classe IIa, Nível C)",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "vab-teste-genetico-nao-rotina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Teste genético não solicitado de rotina para VAB isolada — reservado a achado sindrômico, história familiar de doença aórtica, ou aneurisma/dissecção de artéria de médio calibre fora da aorta torácica; pode ser considerado no fenótipo de raiz",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento já verificado e publicado desta base (valva-aortica-bicuspide-e-aortopatia-associada-esc-2024), com a seção de origem registrada em cada item — nenhum número, corte de diâmetro ou classe/nível foi acrescentado além do que a Recommendation Table 68 da diretriz ESC 2024 (2024 ESC Guidelines for the management of peripheral arterial and aortic diseases, DOI 10.1093/eurheartj/ehae179) já registra no documento de origem, em 20/08/2026."
+  },
+  {
+    "slug": "manejo-agudo-da-descompensacao-em-sindrome-de-eisenmenger",
+    "condicao": "Descompensação aguda da síndrome de Eisenmenger e cardiopatia cianótica",
+    "resumo": "Avaliação de emergência e conduta inicial do paciente cianótico/Eisenmenger com piora de hipoxemia, arritmia, trombose, sangramento ou falência de VD, preservando a fisiologia frágil que caracteriza esse grupo — pela diretriz ESC 2020 de cardiopatia congênita do adulto.",
+    "documento_origem": "descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al.; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028."
+    ],
+    "itens": [
+      {
+        "id": "eisen-avaliacao-inicial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação inicial completa realizada: monitorização contínua, ECG, hemograma completo/hematócrito/plaquetas, função renal/hepática e eletrólitos, e ecocardiograma para função de VD, shunt, derrame e causas mecânicas",
+        "origem_secao": "1. Primeiros passos"
+      },
+      {
+        "id": "eisen-investigar-precipitante",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Investigação ativa de precipitante da descompensação: infecção, desidratação, anemia/deficiência de ferro, arritmia, TEP/trombose pulmonar e hemorragia",
+        "origem_secao": "1. Primeiros passos"
+      },
+      {
+        "id": "eisen-centro-especializado",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Qualquer procedimento invasivo conduzido, sempre que possível, com envolvimento de centro/equipe experiente em cardiopatia congênita do adulto",
+        "origem_secao": "1. Primeiros passos"
+      },
+      {
+        "id": "eisen-oxigenio-criterio",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Oxigênio suplementar contínuo não indicado apenas por saturação baixa crônica — reservado a aumento documentado, consistente e significativo da SpO₂, acompanhado de melhora dos sintomas",
+        "origem_secao": "2. Saturação baixa crônica não significa \"corrigir até 100%\""
+      },
+      {
+        "id": "eisen-flebotomia-criterio",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Flebotomia terapêutica restrita a sintomas moderados/graves de hiperviscosidade com hematócrito >65%, ausência de desidratação e ausência de deficiência de ferro — hematócrito elevado isolado não é indicação, e flebotomia rotineira é prejudicial",
+        "origem_secao": "3. Eritrocitose é adaptação — não indicação automática de flebotomia"
+      },
+      {
+        "id": "eisen-anticoagulacao-criterio",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação oral não iniciada rotineiramente apenas pela presença de hipertensão pulmonar/cianose — considerada em arritmia atrial ou trombose/embolia de artéria pulmonar, quando o risco de sangramento for aceitável",
+        "origem_secao": "6. Anticoagulação: não é rotina"
+      },
+      {
+        "id": "eisen-hemoptise-antes-anticoagular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hemoptise ativa investigada e avaliada com urgência antes de qualquer decisão de anticoagular, por mudar radicalmente essa decisão",
+        "origem_secao": "6. Anticoagulação: não é rotina"
+      },
+      {
+        "id": "eisen-filtro-de-ar",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Filtro de ar instalado em linhas intravenosas e bolhas de ar eliminadas de extensores, seringas e infusões, para reduzir o risco de embolia paradoxal",
+        "origem_secao": "7. Evitar embolia paradoxal por acesso vascular"
+      },
+      {
+        "id": "eisen-ritmo-sinusal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Arritmia tratada em ambiente hospitalar visando manter ritmo sinusal sempre que possível, com correção de eletrólitos/precipitantes e cardioversão se instabilidade conforme algoritmo geral; antiarrítmico individualizado",
+        "origem_secao": "5. Arritmias são mal toleradas"
+      },
+      {
+        "id": "eisen-falencia-vd-choque",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Na hipotensão ou falência direita: precipitante tratado, hipóxia/acidose/hipercapnia evitadas, perfusão sistêmica mantida, pré-carga ajustada com cautela, e terapia específica de hipertensão pulmonar/suporte avançado discutida com centro especializado",
+        "origem_secao": "8. Falência direita/choque"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento já verificado e publicado desta base (descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica), com a seção de origem registrada em cada item, em 20/08/2026. Três pontos que o próprio documento de origem marca como VERIFICAÇÃO HUMANA NECESSÁRIA (volume de reposição, escolha/dose de antiarrítmico e vasopressor/inotrópico específico) foram deixados FORA deste checklist, em vez de resumidos como se houvesse protocolo fechado — a fonte não define bolus, fármaco nem dose universal para Eisenmenger."
+  },
+  {
+    "slug": "diagnostico-laboratorial-de-faringite-estreptococica-antes-de-tratar",
+    "condicao": "Diagnóstico laboratorial da faringite estreptocócica, antes de iniciar antibiótico",
+    "resumo": "O que confirmar antes de tratar dor de garganta como faringite estreptocócica, para não perder a janela de 9 dias que previne a febre reumática aguda nem tratar quadro viral desnecessariamente — pela diretriz IDSA 2012, vigente para este exame.",
+    "documento_origem": "diagnostico-laboratorial-da-faringite-estreptococica-teste-rapido-de-antigeno-e-cultura-idsa-2012",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Shulman ST, Bisno AL, Clegg HW, Gerber MA, Kaplan EL, Lee G, Martin JM, Van Beneden C; Infectious Diseases Society of America. Clinical practice guideline for the diagnosis and management of group A streptococcal pharyngitis: 2012 update by the Infectious Diseases Society of America. Clin Infect Dis. 2012;55(10):e86-e102. DOI: 10.1093/cid/cis629. PMID: 22965026."
+    ],
+    "itens": [
+      {
+        "id": "farin-sinais-virais-excluidos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais claramente virais (coriza, tosse, rouquidão, úlceras orais) avaliados antes de testar — se presentes, o teste para estreptococo do grupo A não é recomendado (força forte, evidência de qualidade alta)",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      },
+      {
+        "id": "farin-radt-ou-cultura",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Teste rápido de antígeno (RADT) e/ou cultura de orofaringe por swab realizado antes de iniciar antibiótico, exceto no quadro claramente viral (força forte, evidência de qualidade alta)",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      },
+      {
+        "id": "farin-radt-negativo-crianca-confirma-cultura",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Em criança e adolescente, RADT negativo confirmado por cultura de orofaringe — a sensibilidade do RADT isolado não é suficiente nessa faixa etária, onde o risco de febre reumática após faringite estreptocócica não tratada é maior (força forte, evidência de qualidade alta)",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      },
+      {
+        "id": "farin-radt-positivo-sem-cultura",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "RADT positivo dispensa cultura de confirmação — especificidade alta o suficiente (força forte, evidência de qualidade alta); em adulto, cultura de confirmação do RADT negativo não é rotineiramente necessária, pela incidência mais baixa da doença e pelo risco excepcionalmente baixo de febre reumática nessa faixa etária (força forte, evidência de qualidade moderada)",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      },
+      {
+        "id": "farin-aslo-nao-usado-agudo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Título de anticorpo antiestreptocócico (ASLO e correlatos) não usado no diagnóstico da faringite aguda — reflete infecção passada, não o episódio atual (força forte, evidência de qualidade alta); distinto do uso do ASLO como evidência de infecção recente dentro dos critérios de Jones, quando já há quadro sugestivo de febre reumática instalada",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      },
+      {
+        "id": "farin-janela-9-dias",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Tratamento antibiótico iniciado até 9 dias do início dos sintomas — janela em que a diretriz confirma eficácia na prevenção da febre reumática aguda",
+        "origem_secao": "Por que este exame importa para a febre reumática"
+      },
+      {
+        "id": "farin-esquema-antibiotico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Penicilina ou amoxicilina por cerca de 10 dias como tratamento de escolha no paciente não alérgico; no alérgico à penicilina (sem hipersensibilidade anafilática): cefalosporina de primeira geração por 10 dias, clindamicina ou claritromicina por 10 dias, ou azitromicina por 5 dias",
+        "origem_secao": "Tratamento — o elo direto com a prevenção primária"
+      },
+      {
+        "id": "farin-aas-evitado-crianca",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "AAS evitado em criança para controle sintomático, pelo risco de síndrome de Reye — corticoide adjuvante não recomendado; AINE ou paracetamol podem ser usados para sintomas moderados a graves",
+        "origem_secao": "Tratamento — o elo direto com a prevenção primária"
+      },
+      {
+        "id": "farin-teste-cura-nao-rotina",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Cultura ou RADT de controle pós-tratamento (teste de cura) não solicitado de rotina em paciente assintomático — considerado apenas em circunstâncias especiais, como sintomas recorrentes ou surto de febre reumática na comunidade (força forte, evidência de qualidade alta)",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      },
+      {
+        "id": "farin-contactantes-nao-testados",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Contactantes domiciliares assintomáticos não testados nem tratados empiricamente de rotina (força forte, evidência de qualidade moderada)",
+        "origem_secao": "As recomendações de diagnóstico, na íntegra"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento já verificado e publicado desta base (diagnostico-laboratorial-da-faringite-estreptococica-teste-rapido-de-antigeno-e-cultura-idsa-2012), com a seção de origem registrada em cada item, em 20/08/2026. Nomenclatura de graduação (força da recomendação/qualidade da evidência) mantida como a fonte IDSA usa, sem conversão para o sistema Classe/Nível de ESC/AHA/SBC — converter seria inventar equivalência que a fonte não faz, mesma regra já aplicada ao documento de origem."
   }
 ]
