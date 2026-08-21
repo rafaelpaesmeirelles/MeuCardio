@@ -6120,7 +6120,9 @@
     "review_status": "revisado",
     "generic_name": "Rosuvastatina (cálcica)",
     "brand_names": [
-      "Crestor"
+      "Crestor",
+      "Ruva",
+      "Trezor"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "Inibição competitiva e seletiva da enzima HMG-CoA redutase, etapa limitante na biossíntese hepática de colesterol, resultando em upregulation compensatória de receptores de LDL hepáticos e aumento da depuração plasmática de LDL-C; estatina de maior potência relativa entre as disponíveis, com propriedades hidrofílicas distintas das lipofílicas",
@@ -6166,7 +6168,11 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para CRESTOR (rosuvastatina cálcica), consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — estatina (hipolipemiante), sem efeito hemodinâmico/pressórico relevante descrito em bula."
+    "bp_evidence_source": "Não se aplica — estatina (hipolipemiante), sem efeito hemodinâmico/pressórico relevante descrito em bula.",
+    "commercial_presentations": [
+      "Ruva® rosuvastatina cálcica 5mg/10mg/20mg — comprimido revestido, embalagem com 30 comprimidos (Eurofarma Laboratórios S.A., Itapevi-SP). Fonte: bula do profissional de saúde hospedada em consultaremedios.com.br (uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Ruva-Profissional-Consulta-Remedios.pdf) e bula do paciente em eurofarma.com.br/produtos/bulas/patient/pt/bula-ruva.pdf, confirmadas por listagem de venda em panvel.com (Panvel Farmácias). WebSearch, 21/08/2026.",
+      "Trezor® rosuvastatina cálcica 5mg/10mg/20mg/40mg — comprimido revestido, embalagem com 60 comprimidos (Aché Laboratórios Farmacêuticos S.A., São Paulo-SP; produto similar equivalente). Fonte: bula.gratis/trezor (bula original obtida da ANVISA), farmaindex.com/bulas/trezor/2409, ache.com.br/produto/sob-prescricao/trezor/ (página oficial do fabricante) e listagem de venda em drogariasaopaulo.com.br (Trezor Rosuvastatina Cálcica 10mg 60 Comprimidos - Ache). WebSearch, 21/08/2026."
+    ]
   },
   {
     "slug": "sacubitrilvalsartana",
