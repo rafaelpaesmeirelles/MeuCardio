@@ -8424,5 +8424,257 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estratificacao-de-risco-arritmico-e-decisao-de-cdi-na-tetralogia-de-fallot-operada",
+    "condicao": "Estratificação de risco arrítmico e decisão de CDI em prevenção primária na Tetralogia de Fallot operada (rTOF), sem indicação de CDI por prevenção secundária",
+    "resumo": "O que checar na avaliação do risco de taquicardia ventricular sustentada e morte súbita cardíaca no adulto com Tetralogia de Fallot já reparada, sem evento arrítmico prévio — caracterização do substrato, uso combinado de marcadores/escores (nenhum isolado é suficiente) e decisão sobre CDI em prevenção primária, a partir do documento dedicado desta pasta.",
+    "documento_origem": "estratificacao-de-risco-arritmico-e-morte-subita-na-tetralogia-de-fallot-operada",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gatzoulis MA, Till JA, Somerville J, Redington AN. Mechanoelectrical interaction in tetralogy of Fallot. QRS prolongation relates to right ventricular size and predicts malignant ventricular arrhythmias and sudden death. Circulation. 1995;92(2):231-237. DOI: 10.1161/01.cir.92.2.231. PMID: 7600655.",
+      "Khairy P, Van Hare GF, Balaji S, et al. PACES/HRS Expert Consensus Statement on the Recognition and Management of Arrhythmias in Adult Congenital Heart Disease. Heart Rhythm. 2014;11(10):e102-e165. DOI: 10.1016/j.hrthm.2014.05.009. PMID: 24814377.",
+      "Khairy P, Harris L, Landzberg MJ, et al. PREVENTION-ACHD risk score model (derivação original). Heart Rhythm. 2008;5(3):S1-S2 — modelo prospectivamente validado em: Vehmeijer JT et al. Identification of patients at risk of sudden cardiac death in congenital heart disease: PREVENTION-ACHD. Heart Rhythm. 2021;18(5):785-792. DOI: 10.1016/j.hrthm.2021.01.009. PMID: 33465514.",
+      "Muñoz Guijosa C, et al. Risk stratification of ventricular arrhythmias in repaired tetralogy of Fallot [Estratificación del riesgo de arritmias ventriculares en la tetralogía de Fallot reparada]. Rev Esp Cardiol (Engl Ed). 2021;74(11):954-961. DOI: 10.1016/j.rec.2020.09.021. PMID: 33461928.",
+      "Wald RM, Tomlinson G, Caldarone CA, et al. Outcome Prediction After Tetralogy of Fallot Repair: A Prospective Clinical and Cardiovascular Magnetic Resonance Study (registro CORRELATE). J Am Heart Assoc. 2025;14(8):e039006. DOI: 10.1161/JAHA.124.039006. PMID: 40207483.",
+      "Kakarla J, Ishikita A, Suszko A, Wald R, Nair K. Risk scores inconsistently predict sudden death and ventricular arrhythmias in repaired tetralogy of Fallot. Heart Rhythm. 2026;23(2):296-305. DOI: 10.1016/j.hrthm.2025.02.041. PMID: 40043861.",
+      "Prana Jagannatha GN, Mendel B, Labi NPT, et al. Long-term outcomes of ventricular tachycardia ablation in repaired tetralogy of Fallot: Systematic review and meta-analysis. J Arrhythm. 2024;40(4):935-947. DOI: 10.1002/joa3.13095. PMID: 39139861. PMCID: PMC11317698."
+    ],
+    "itens": [
+      {
+        "id": "tof-qrs-avaliado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de repouso de 12 derivações avaliado quanto à duração do QRS e presença de QRS fragmentado — QRS ≥ 180 ms é o preditor histórico mais citado (sensibilidade alta na coorte original de Gatzoulis et al. 1995), mas não deve ser tratado como decisão isolada e suficiente de CDI",
+        "origem_secao": "Diagnóstico e caracterização do substrato; O achado histórico que ainda organiza a discussão: QRS ≥ 180 ms"
+      },
+      {
+        "id": "tof-holter-tvns",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Holter de 24-48h ou monitor de eventos prolongado realizado, pesquisando extrassístoles ventriculares frequentes e taquicardia ventricular não sustentada (TVNS)",
+        "origem_secao": "Diagnóstico e caracterização do substrato"
+      },
+      {
+        "id": "tof-rmc-realce-tardio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ressonância magnética cardíaca realizada com avaliação de volumes biventriculares, função sistólica de VD e VE, fração de regurgitação pulmonar e, quando disponível, realce tardio pelo gadolínio como marcador de substrato",
+        "origem_secao": "Diagnóstico e caracterização do substrato"
+      },
+      {
+        "id": "tof-multiplos-marcadores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Decisão sobre CDI em prevenção primária baseada em múltiplos marcadores em conjunto (disfunção ventricular, sobrecarga hemodinâmica residual, QRS prolongado, TVNS, indutibilidade em EEF, idade no reparo original), nunca em um único escore ou marcador isolado — evidência de 2026 mostra discordância de classificação entre escores em 41% dos pacientes",
+        "origem_secao": "O consenso PACES/HRS 2014; 2025-2026: um novo escore baseado em imagem, e a evidência de que os escores não concordam entre si"
+      },
+      {
+        "id": "tof-eef-considerado",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Estudo eletrofisiológico invasivo com mapeamento eletroanatômico do VD considerado em paciente com marcadores intermediários de risco (QRS prolongado, TVNS frequente, disfunção ventricular moderada) antes de decisão definitiva sobre CDI — não indicado de rotina em paciente de baixo risco sem nenhum marcador alterado",
+        "origem_secao": "Diagnóstico e caracterização do substrato; Tratamento"
+      },
+      {
+        "id": "tof-ablacao-istmo-considerada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Ablação por cateter do istmo anatômico de condução lenta (SCAI) considerada tanto em paciente com TV documentada quanto, de forma seletiva, como estratégia preventiva concomitante a outro procedimento (por exemplo, reoperação para troca valvar pulmonar)",
+        "origem_secao": "Ablação de substrato como ferramenta de estratificação e de tratamento; Tratamento"
+      },
+      {
+        "id": "tof-cdi-decisao-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão sobre CDI em prevenção primária discutida em equipe multidisciplinar (eletrofisiologista com experiência em ACHD, cardiologista de ACHD, imagem avançada), não automatizada a partir de um único critério",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "tof-cdi-tipo-sistema",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Escolha do sistema de CDI (transvenoso convencional, subcutâneo ou extravascular) considerando acesso venoso alterado por cirurgia prévia, shunts residuais e risco de complicação de eletrodo em paciente jovem com expectativa de múltiplas trocas de gerador",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "tof-reestratificacao-pos-intervencao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reestratificação de risco arrítmico repetida após qualquer intervenção (troca valvar pulmonar, ablação) — o risco não é estático, e o escore/avaliação deve ser reaplicado ao longo do seguimento, não calculado uma única vez",
+        "origem_secao": "Monitorização"
+      },
+      {
+        "id": "tof-seguimento-anual-achd",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento clínico e ecocardiográfico ao menos anual mantido em centro especializado em ACHD, com reavaliação de QRS, sintomas e função ventricular a cada consulta",
+        "origem_secao": "Monitorização"
+      },
+      {
+        "id": "tof-gestacao-revisitar-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em mulher com rTOF e marcadores de risco arrítmico, estratificação de risco arrítmico revisitada antes de concepção planejada, em articulação com a avaliação de gravidez em ACHD",
+        "origem_secao": "Situações especiais"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item; nenhum corte numérico ou afirmação foi acrescentado além do que consta no documento técnico."
+  },
+  {
+    "slug": "tromboprofilaxia-primaria-na-circulacao-de-fontan",
+    "condicao": "Tromboprofilaxia primária na circulação de Fontan, em paciente sem arritmia atrial documentada e sem trombose já estabelecida",
+    "resumo": "O que checar na decisão de tromboprofilaxia primária no paciente com circulação de Fontan — indicação da profilaxia, escolha entre AAS/varfarina/anticoagulante oral direto e fatores individuais que pesam nessa escolha, a partir da metanálise em rede de 2023 citada no documento de origem. Complementar ao checklist de vigilância de complicações tardias na circulação de Fontan já publicado, que cobre doença hepática, enteropatia perdedora de proteína e falência de Fontan, não tromboprofilaxia.",
+    "documento_origem": "tromboprofilaxia-na-circulacao-de-fontan",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Van den Eynde J, Possner M, Alahdab F, et al. Thromboprophylaxis in Patients With Fontan Circulation: A Systematic Review and Network Meta-Analysis. J Am Coll Cardiol. 2023;81(4):374-389. DOI: 10.1016/j.jacc.2022.10.037. PMID: 36697138 — números conferidos contra o resumo do artigo."
+    ],
+    "itens": [
+      {
+        "id": "fontan-profilaxia-primaria-indicada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Necessidade de tromboprofilaxia primária avaliada em todo paciente com circulação de Fontan sem arritmia atrial documentada e sem trombose já estabelecida — o baixo fluxo e a estase da circulação de Fontan predispõem a trombose no próprio circuito ou em território sistêmico (AVC)",
+        "origem_secao": "Definição e por que este documento faltava"
+      },
+      {
+        "id": "fontan-escolha-agente-antitrombotico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Escolha entre AAS, varfarina ou anticoagulante oral direto (NOAC/DOAC) documentada e justificada — as três estratégias reduzem evento tromboembólico de forma expressiva versus nenhuma profilaxia (IRR NOAC 0,11; varfarina 0,23; AAS 0,24), sem diferença estatisticamente significativa de sangramento maior entre elas nem contra ausência de profilaxia",
+        "origem_secao": "O que a evidência diz — meta-análise em rede de 2023"
+      },
+      {
+        "id": "fontan-nao-ha-vencedor-inequivoco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que nenhuma das três estratégias venceu de forma inequívoca em eficácia e segurança ao mesmo tempo — o NOAC teve o melhor número isolado de eficácia (P-score 0,921), mas ao considerar eficácia e segurança em conjunto o AAS teve o perfil geral mais favorável no ranqueamento combinado",
+        "origem_secao": "O que a evidência diz — meta-análise em rede de 2023; Leitura clínica"
+      },
+      {
+        "id": "fontan-fatores-individualizacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escolha do agente individualizada considerando idade do paciente (dado pediátrico limitado para muitos NOACs), tempo desde a cirurgia de Fontan, presença de arritmia atrial concomitante, função hepática (a doença hepática associada a Fontan altera a farmacocinética da varfarina) e preferência quanto à necessidade de monitorização",
+        "origem_secao": "Leitura clínica"
+      },
+      {
+        "id": "fontan-monitorizacao-rni-varfarina",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se varfarina escolhida, controle seriado de RNI programado — ao contrário de AAS e da maioria dos NOACs, que não exigem monitorização laboratorial de rotina",
+        "origem_secao": "Leitura clínica"
+      },
+      {
+        "id": "fontan-arritmia-atrial-anticoagulacao-plena",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Paciente com fibrilação atrial ou taquicardia intra-atrial reentrante (IART) documentada NÃO tratado por este checklist de profilaxia primária — segue a indicação de anticoagulação já estabelecida para arritmia atrial",
+        "origem_secao": "O que este documento não cobre"
+      },
+      {
+        "id": "fontan-nao-cobre-tratamento-trombo-estabelecido",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Trombose intracardíaca já estabelecida (achado incidental ou evento agudo) NÃO tratada por este checklist — tem manejo de tratamento, distinto de profilaxia primária",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item; nenhum corte numérico ou afirmação foi acrescentado além do que consta no documento técnico."
+  },
+  {
+    "slug": "aconselhamento-pre-concepcional-e-manejo-da-gravidez-na-cardiopatia-congenita-do-adulto",
+    "condicao": "Aconselhamento pré-concepcional e manejo da gravidez em mulher com cardiopatia congênita do adulto, incluindo contracepção (AHA/ACC 2018)",
+    "resumo": "O que checar na avaliação de mulher em idade fértil com cardiopatia congênita — classificação Anatômico-Fisiológica (AP) que organiza o risco, aconselhamento pré-concepcional, identificação de contraindicação absoluta à gestação e orientação sobre contracepção segura, a partir da diretriz AHA/ACC 2018 já publicada nesta pasta.",
+    "documento_origem": "gravidez-e-contracepcao-na-cardiopatia-congenita-do-adulto-ahaacc-2018",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2019;139(14):e698-e800. DOI: 10.1161/CIR.0000000000000603. PMID: 30586767.",
+      "Abarbanell G, Tepper NK, Farr SL. Safety of contraceptive use among women with congenital heart disease: A systematic review. Congenit Heart Dis. 2019;14(3):331-340. DOI: 10.1111/chd.12752. PMID: 30681774. PMCID: PMC6719294."
+    ],
+    "itens": [
+      {
+        "id": "achd-gestacao-classificacao-ap",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificação Anatômico-Fisiológica (AP) da ACHD determinada, combinando estágio anatômico (I a III) e subclasse fisiológica atual (A a D) — a paciente é classificada pela característica de maior gravidade entre os dois eixos, e a classificação muda com achados novos, não é fixa ao diagnóstico de base",
+        "origem_secao": "O sistema de classificacao AP — dois eixos, vale o mais grave"
+      },
+      {
+        "id": "achd-gestacao-aconselhamento-preconcepcional",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aconselhamento pré-concepcional com cardiologista de ACHD oferecido para determinar riscos maternos, obstétricos e fetais, com plano de cuidado individualizado desenvolvido e compartilhado com a paciente e cuidadores",
+        "origem_secao": "Aconselhamento pre-concepcional"
+      },
+      {
+        "id": "achd-gestacao-anticoagulacao-cronica-aconselhada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em paciente sob anticoagulação crônica, aconselhamento sobre riscos e benefícios de anticoagulantes específicos oferecido, idealmente antes da concepção",
+        "origem_secao": "Aconselhamento pre-concepcional"
+      },
+      {
+        "id": "achd-gestacao-equipe-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Para classificação AP IB-D, IIA-D ou IIIA-D, manejo colaborativo confirmado entre cardiologista de ACHD, obstetra e anestesiologista com experiência em ACHD",
+        "origem_secao": "Manejo por classificacao AP durante a gestacao"
+      },
+      {
+        "id": "achd-gestacao-contraindicacao-classes-d",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicação/alto risco de gestação identificada e discutida com a paciente em caso de hipertensão arterial pulmonar, síndrome de Eisenmenger, disfunção ventricular sistêmica grave, lesões obstrutivas esquerdas graves e/ou classificação AP ID, IID ou IIID — paciente aconselhada contra engravidar ou informada da opção de interrupção, sempre em colaboração com cardiologista de ACHD",
+        "origem_secao": "Manejo por classificacao AP durante a gestacao"
+      },
+      {
+        "id": "achd-gestacao-recorrencia-prole",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aconselhamento sobre risco de recorrência de cardiopatia congênita na prole oferecido a homens e mulheres em idade reprodutiva",
+        "origem_secao": "Manejo por classificacao AP durante a gestacao"
+      },
+      {
+        "id": "achd-gestacao-teste-esforco",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Teste de esforço considerado para avaliação de risco em classificação AP IC-D, IIA-D ou IIIA-D que considerem engravidar",
+        "origem_secao": "Manejo por classificacao AP durante a gestacao"
+      },
+      {
+        "id": "achd-gestacao-eco-fetal",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Ecocardiografia fetal considerada quando qualquer um dos pais tem cardiopatia congênita",
+        "origem_secao": "Manejo por classificacao AP durante a gestacao"
+      },
+      {
+        "id": "achd-contracepcao-orientacao-universal",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aconselhamento sobre risco da gestação e opções contraceptivas apropriadas oferecido a toda mulher em idade fértil com cardiopatia congênita",
+        "origem_secao": "Contracepcao"
+      },
+      {
+        "id": "achd-contracepcao-estrogenio-contraindicado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Contraceptivo com estrogênio identificado como potencialmente prejudicial e evitado em paciente de alto risco tromboembólico — cianose, fisiologia de Fontan, prótese valvar mecânica, evento trombótico prévio ou hipertensão arterial pulmonar",
+        "origem_secao": "Contracepcao"
+      },
+      {
+        "id": "achd-contracepcao-progestagenio-diu",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Progestágeno isolado e DIU considerados como alternativas quando estrogênio é contraindicado — dados são escassos (revisão sistemática de Abarbanell et al. 2019 identificou apenas 5 estudos elegíveis), sem sinal de risco tromboembólico acrescido para progestágeno isolado nos dados disponíveis",
+        "origem_secao": "Contracepcao"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item; nenhum corte numérico ou afirmação foi acrescentado além do que consta no documento técnico."
   }
 ]
