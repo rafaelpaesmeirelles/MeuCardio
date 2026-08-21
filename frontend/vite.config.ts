@@ -5,6 +5,10 @@ import { VitePWA } from "vite-plugin-pwa";
 const limitePrecacheJs = 100 * 1024;
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade|PrescricaoLivreEspecial)-[^/]*\.js$/;
 const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|login-[^/]*|SolicitarAcesso-[^/]*|EsqueciSenha-[^/]*|RedefinirSenha-[^/]*)\.(?:js|css)$/;
+// A validação pública depende obrigatoriamente do backend para conferir SHA/PAdES
+// e liberar o PDF original. Não há valor nem comportamento correto em precache
+// offline dessa rota; os chunks continuam disponíveis por NetworkFirst em runtime.
+const validacaoPublicaSomenteOnline = /(?:^|\/)ValidarDocumento-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -38,6 +42,7 @@ export default defineConfig({
           async (entries) => ({
             manifest: entries.filter((entry) => {
               if (loginSomenteOnline.test(entry.url)) return false;
+              if (validacaoPublicaSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
@@ -78,7 +83,7 @@ export default defineConfig({
             }
           },
           {
-            urlPattern: /\/api\//,
+            urlPattern: /\/api\/\//,
             handler: "NetworkOnly"
           }
         ]
