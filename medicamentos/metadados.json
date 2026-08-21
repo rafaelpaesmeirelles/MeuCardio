@@ -3678,7 +3678,10 @@
     "presentations": [
       "Solução injetável de 50 mg/mL, embalagem com 2 frascos-ampola de 50 mL cada (2,5 g por frasco — 5 g na embalagem completa), já detalhado em `dosing.apresentacao` deste registro."
     ],
-    "renal_adjustment": "**Sem ajuste de dose por função renal — a dose de 5 g é fixa em qualquer grau de disfunção renal** (já registrado em `dosing.dose`: \"a dose é fixa: não se ajusta por peso, por função renal nem pela intensidade da anticoagulação\"). A insuficiência renal reduz o clearance do idarucizumabe e aumenta sua exposição plasmática (AUC), mas isso não compromete a eficácia de reversão do efeito da dabigatrana, que permanece completa. Fonte: bula do PRAXBIND (idarucizumabe, Boehringer Ingelheim do Brasil), já citada nas `references` deste registro, e revisão de farmacocinética de Fase 1 (idem `half_life_note`)."
+    "renal_adjustment": "**Sem ajuste de dose por função renal — a dose de 5 g é fixa em qualquer grau de disfunção renal** (já registrado em `dosing.dose`: \"a dose é fixa: não se ajusta por peso, por função renal nem pela intensidade da anticoagulação\"). A insuficiência renal reduz o clearance do idarucizumabe e aumenta sua exposição plasmática (AUC), mas isso não compromete a eficácia de reversão do efeito da dabigatrana, que permanece completa. Fonte: bula do PRAXBIND (idarucizumabe, Boehringer Ingelheim do Brasil), já citada nas `references` deste registro, e revisão de farmacocinética de Fase 1 (idem `half_life_note`).",
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca dedicada por marca comercial brasileira adicional além da já cadastrada (Praxbind®, Boehringer Ingelheim do Brasil Química e Farmacêutica LTDA., registro ANVISA nº 1036701750010, solução injetável 50 mg/mL, embalagem com 2 frascos-ampola de 50 mL). Resultado NEGATIVO: idarucizumabe é o único antídoto específico de dabigatrana comercializado no Brasil, e todas as fontes consultadas (ConsultaRemedios, Guia Farmacêutico Hospital Sírio-Libanês, relatório CONITEC de incorporação, notícia de aprovação ANVISA 2017) convergem em Praxbind® como marca única, sem menção a segunda marca de fantasia nem a versão genérica/similar. Fonte: WebSearch, 21/08/2026 (texto integral da bula não lido diretamente — bloqueio de rede)."
+    ]
   },
   {
     "slug": "inclisirana",
@@ -4404,7 +4407,10 @@
     "duration_of_action_source": "EXPLORER-HCM (mesmo ensaio já referenciado neste registro) — achado já registrado em `adverse_effects` deste próprio verbete, aqui reorganizado como duração de ação.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não aplicável — mavacamteno é inibidor seletivo da miosina cardíaca indicado para cardiomiopatia hipertrófica obstrutiva, atuando sobre o gradiente da via de saída do VE (LVOT), não sobre a pressão arterial sistêmica. Nenhum dos ensaios pivotais já citados neste registro (EXPLORER-HCM) reporta desfecho de pressão arterial sistólica/diastólica."
+    "bp_evidence_source": "Não aplicável — mavacamteno é inibidor seletivo da miosina cardíaca indicado para cardiomiopatia hipertrófica obstrutiva, atuando sobre o gradiente da via de saída do VE (LVOT), não sobre a pressão arterial sistêmica. Nenhum dos ensaios pivotais já citados neste registro (EXPLORER-HCM) reporta desfecho de pressão arterial sistólica/diastólica.",
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca dedicada por marca comercial brasileira adicional além da já cadastrada (Camzyos®, Bristol-Myers Squibb Farmacêutica LTDA., bula profissional aprovada pela ANVISA em 02/01/2023, registro ANVISA nº MS-1.0180.0413, cápsulas de 2,5 mg). Resultado NEGATIVO: fármaco de registro recente (inibidor seletivo da miosina cardíaca, cardiomiopatia hipertrófica obstrutiva), sem concorrente genérico/similar nem segunda marca de fantasia identificada em nenhuma das fontes consultadas (página oficial ANVISA de novos medicamentos, bula profissional BMS, importadora de medicamentos não registrados no Brasil que confirma Camzyos como a única apresentação nacional). Fonte: WebSearch, 21/08/2026 (texto integral da bula não lido diretamente — bloqueio de rede)."
+    ]
   },
   {
     "slug": "metformina-cloridrato",
@@ -5019,7 +5025,8 @@
     "pregnancy": "**Categoria de risco C.** Corrige o registro anterior, que dizia não haver bula do detentor do registro no Brasil disponível — localizada agora (TRIDIL, Cristália). Estudos de teratogenicidade não foram conduzidos com a injeção; estudos com **pomada** de nitroglicerina em ratos e coelhos, até 80 e 240 mg/kg/dia, não mostraram efeito tóxico materno ou fetal. Não há estudo adequado e controlado em gestante. Administrar apenas se o benefício potencial superar o risco e for claramente necessário; comunicar o médico imediatamente em caso de gravidez durante o uso. Fonte: bula profissional brasileira do TRIDIL, itens 4. CONTRAINDICAÇÕES e 5. ADVERTÊNCIAS E PRECAUÇÕES.",
     "lactation": "**Dado ausente; cautela, sem proibição.** Não se sabe se a nitroglicerina é excretada no leite humano; como muitos fármacos o são, recomenda-se cautela. Uso no período de lactação depende de avaliação e acompanhamento médico. Fonte: bula profissional brasileira do TRIDIL — confirma o conteúdo já registrado a partir do rótulo do FDA.",
     "brand_names": [
-      "Tridil — já citado nas referências deste registro (Cristália)"
+      "Tridil — já citado nas referências deste registro (Cristália)",
+      "Nitroderm TTS — Novartis Biociências S.A."
     ],
     "presentations": [
       "Comprimidos sublinguais de 0,4 mg (dose padrão de crise anginosa, já registrada em `dosing.sublingual crise anginosa` deste verbete) e solução injetável 5 mg/mL (TRIDIL, Cristália, já citada nas referências deste registro, para uso endovenoso titulado)."
@@ -5034,7 +5041,10 @@
     "bp_evidence_source": "Não se aplica no formato padrão deste campo. A nitroglicerina é predominantemente venodilatadora (reduz pré-carga, já descrito em `mechanism` deste verbete), usada para angina/edema agudo de pulmão/crise hipertensiva com isquemia associada (ver `indications`) — não é fármaco indicado para tratamento crônico de hipertensão arterial sistêmica, e seu efeito pressórico é dose-dependente e titulado clinicamente à beira do leito (infusão IV ajustada ao efeito desejado), não relatado como percentual/mmHg fixo de redução placebo-subtraída em bula — o mesmo critério já usado nos registros de `digoxina` e `macitentana` (fármacos sem um valor de redução de PA no formato padrão dos anti-hipertensivos orais crônicos, por não pertencerem a essa categoria de uso).",
     "renal_adjustment": "**Confirmado por leitura de bula brasileira do TRIDIL (Cristália) em 12/08/2026**: a bula do fabricante não prevê ajuste de dose específico por insuficiência renal — ausência real, não lacuna de pesquisa. Como a carga total de volume administrado pode ser aspecto dominante em paciente com função renal comprometida (a nitroglicerina é titulada por resposta hemodinâmica, não por dose fixa), recomenda-se monitorar o paciente pelo risco teórico de acúmulo de metabólitos, sem esquema quantitativo formal na bula.",
     "hepatic_adjustment": "**Confirmado por leitura de bula brasileira do TRIDIL (Cristália) em 12/08/2026**: a bula do fabricante não prevê ajuste de dose específico por insuficiência hepática — ausência real, não lacuna de pesquisa. Dada a metabolização hepática extensa da nitroglicerina (ver `half_life_note`), recomenda-se uso com cautela em insuficiência hepática grave, com monitorização cuidadosa da pressão arterial durante a titulação, sem esquema quantitativo formal na bula.",
-    "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): confirmado por mirror de bula brasileira do TRIDIL que a ausência de esquema numérico de ajuste renal/hepático é real — a nitroglicerina IV é titulada por resposta hemodinâmica, não por dose fixa ajustada por função de órgão, o que explica a ausência de tabela na bula."
+    "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): confirmado por mirror de bula brasileira do TRIDIL que a ausência de esquema numérico de ajuste renal/hepático é real — a nitroglicerina IV é titulada por resposta hemodinâmica, não por dose fixa ajustada por função de órgão, o que explica a ausência de tabela na bula.",
+    "commercial_presentations": [
+      "Nitroderm TTS® (nitroglicerina), Novartis Biociências S.A., sistema terapêutico adesivo transdérmico — duas apresentações: TTS 5 (25 mg de nitroglicerina no adesivo, liberação média de 5 mg/dia) e TTS 10 (50 mg no adesivo, liberação média de 10 mg/dia), ambas em embalagens com 10 adesivos. Indicado para prevenção/redução da frequência de crises anginosas (uso profilático contínuo, diferente do uso agudo sublingual/EV já registrado neste verbete). Início de ação de 30-60 minutos. Complementa as duas apresentações já cadastradas (comprimido sublingual 0,4 mg e solução injetável Tridil® 5 mg/mL) com uma terceira via de administração (transdérmica), de uso clínico distinto (profilaxia continuada, não crise aguda). Referência de registro ANVISA mencionada em fonte secundária como nº 2500100897284 — número não conferido diretamente na bula oficial (bloqueio de rede) e citado aqui apenas como localizado, não como confirmado. Fonte: ConsultaRemedios (bula Nitroderm TTS, Novartis Biociências S.A.), CliqueFarma, BulasMed — convergentes entre si. WebSearch 21/08/2026; bula oficial completa não lida diretamente nesta sessão."
+    ]
   },
   {
     "slug": "nitroprussiato-de-sodio",
@@ -8168,7 +8178,10 @@
     "half_life_note": "Meia-vida de eliminação plasmática em estado de equilíbrio de aproximadamente 15 horas (faixa de 13,6-16,5 horas em voluntários sadios e 12,9-17,9 horas em pacientes com HAP) — sustenta a posologia de dose única diária já registrada em dosing. Fonte: EMA, VOLIBRIS SmPC, seção de farmacocinética (texto reproduzido via medicines.org.uk/emc, produto 20848).",
     "duration_of_action_hours": 24.0,
     "duration_of_action_note": "Efeito antagonista do receptor ETA mantido ao longo das 24 horas entre doses, com posologia de dose única diária — compatível com a meia-vida longa do fármaco (~15h).",
-    "duration_of_action_source": "EMA, VOLIBRIS SmPC (medicines.org.uk/emc, produto 20848) — farmacocinética e desenho posológico de dose única diária."
+    "duration_of_action_source": "EMA, VOLIBRIS SmPC (medicines.org.uk/emc, produto 20848) — farmacocinética e desenho posológico de dose única diária.",
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca dedicada por marca comercial brasileira adicional além da já cadastrada (Volibris®, GlaxoSmithKline Brasil Ltda., registro ANVISA nº 101070281, aprovado em 07/12/2010, comprimidos revestidos de 5 mg e 10 mg). Resultado NEGATIVO, com confirmação explícita: nota técnica NATJUS/TJDFT (parecer técnico judicial) afirma textualmente que 'não há medicamento genérico ou similar disponível no Brasil' para ambrisentana — Volibris® segue sendo a única marca comercial no mercado nacional. Fonte: WebSearch, 21/08/2026 (NATJUS-DF nota técnica, Drogaria São Paulo, GHFarma — convergentes; texto integral da bula não lido diretamente, bloqueio de rede)."
+    ]
   },
   {
     "slug": "tadalafila-hap",
@@ -13795,7 +13808,8 @@
     "brand_names": [
       "Omeprazol (Genérico) — EMS, Neo Química, Prati-Donaduzzi (marca comercial \"Pratiprazol\"), Brainfarma, Geolab",
       "Losec — AstraZeneca (referência histórica)",
-      "Omeprazol sódico — Eurofarma"
+      "Omeprazol sódico — Eurofarma",
+      "Peprazol — EMS S.A."
     ],
     "drug_class": "Inibidor da bomba de prótons (IBP), da família dos benzimidazóis substituídos",
     "mechanism": "Inibe irreversivelmente a enzima H⁺/K⁺-ATPase (bomba de prótons) das células parietais gástricas, bloqueando a etapa final da secreção de ácido clorídrico, independentemente do estímulo que a desencadeia (histamina, gastrina ou acetilcolina). Não é fármaco cardiológico — entra no catálogo pela relevância direta ao cardiologista: gastroproteção do paciente em dupla antiagregação plaquetária (DAPT) pós-síndrome coronariana aguda/stent, e pela interação farmacocinética relevante com clopidogrel (ver `interactions`).",
@@ -13832,7 +13846,10 @@
       "DailyMed/FDA. Omeprazole delayed-release capsules, prescribing information (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/"
     ],
     "renal_adjustment": "O rótulo não estabelece redução posológica rotineira específica por função renal; vigiar nefrite tubulointersticial aguda como evento adverso potencial.",
-    "hepatic_adjustment": "Na manutenção de cicatrização de esofagite erosiva, o rótulo recomenda 10 mg uma vez ao dia em insuficiência hepática Child-Pugh A, B ou C."
+    "hepatic_adjustment": "Na manutenção de cicatrização de esofagite erosiva, o rótulo recomenda 10 mg uma vez ao dia em insuficiência hepática Child-Pugh A, B ou C.",
+    "commercial_presentations": [
+      "Peprazol® (omeprazol), EMS S.A., medicamento genérico em cápsulas de 20 mg, embalagens com 7, 14 ou 28 cápsulas (códigos de produto EMS 1140/1142/1141, respectivamente). É marca de fantasia distinta das já cadastradas neste registro ('Omeprazol (Genérico)' rotulado por laboratório, 'Losec' e 'Omeprazol sódico — Eurofarma') — não aparecia na lista anterior. RESSALVA: fontes de varejo (Ultrafarma) atribuem uma versão de mesmo nome 'Peprazol' também à Cimed como genérico; a página oficial do fabricante (ems.com.br) e o BulasMed listam Peprazol como produto EMS — mantido aqui como marca EMS por ser a fonte mais próxima do fabricante, mas a convergência não foi total entre as fontes consultadas. Fonte: ems.com.br (páginas de produto Peprazol 7/14/28 cápsulas), BulasMed (bula Peprazol), WebSearch 21/08/2026; bula oficial completa não lida diretamente nesta sessão (bloqueio de rede)."
+    ]
   },
   {
     "slug": "insulina-humana-nph",
@@ -13889,7 +13906,8 @@
     "generic_name": "Paracetamol (acetaminofeno)",
     "brand_names": [
       "Tylenol — Johnson & Johnson (referência)",
-      "Paracetamol (Genérico) — Neo Química, EMS, Prati-Donaduzzi, Geolab"
+      "Paracetamol (Genérico) — Neo Química, EMS, Prati-Donaduzzi, Geolab",
+      "Dôrico — Sanofi-Aventis Farmacêutica Ltda."
     ],
     "drug_class": "Analgésico e antipirético (mecanismo distinto dos anti-inflamatórios não esteroidais clássicos)",
     "mechanism": "Inibe a síntese de prostaglandinas, predominantemente no sistema nervoso central, elevando o limiar de dor (analgesia) e atuando no centro hipotalâmico termorregulador (antipirese). Ao contrário dos AINEs, tem efeito anti-inflamatório periférico mínimo e não inibe de forma significativa a COX periférica/plaquetária — por isso é considerado, na literatura secundária consultada, a alternativa analgésica preferida ao AINE no paciente cardiopata (evitando retenção hidrossalina, piora de função renal e interferência antiplaquetária que os AINEs podem causar). Não é fármaco cardiológico — entra no catálogo pela relevância direta ao cardiologista como opção analgésica de primeira linha no cardiopata e pela interação com varfarina.",
@@ -13921,6 +13939,9 @@
       "Tylenol/Johnson & Johnson Brasil. Entendendo paracetamol e os danos no fígado. https://www.tylenol.com.br/alivio-seguro/sobre-paracetamol/entendendo-paracetamol-e-os-danos-no-figado",
       "ConsultaRemédios. Bula de Varfarina Sódica (para a interação). https://consultaremedios.com.br/varfarina-sodica/bula",
       "DailyMed/FDA. Acetaminophen 500 mg OTC labeling (consultado em 20/08/2026): alerta de hepatotoxicidade e precaução com varfarina. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=175495fd-c561-f813-e063-6294a90aac80"
+    ],
+    "commercial_presentations": [
+      "Dôrico® (paracetamol), Sanofi-Aventis Farmacêutica Ltda., registro ANVISA referenciado em fonte secundária como MS 1.1300.0998 (número não conferido diretamente na bula oficial — bloqueio de rede). Apresentações: comprimidos de 750 mg (cartuchos com 10 ou 20 comprimidos — apresentação de varejo; existe também embalagem hospitalar de 200 comprimidos), comprimidos de 500 mg (cartucho com 100 comprimidos, apresentação hospitalar), solução oral em gotas 200 mg/mL (frasco de 15 mL, 1 mL = 20 gotas) e 'Dôrico Chá' — envelopes de pó para solução oral 500 mg (caixa com 50 envelopes). É marca de fantasia distinta das já cadastradas neste registro ('Tylenol — Johnson & Johnson' e 'Paracetamol (Genérico)' rotulado por laboratório) — não aparecia na lista anterior. Fonte: ConsultaRemedios (bula Dôrico, Sanofi-Aventis), saudedireta.com.br, iVadeMecum Brasil, CliqueFarma — convergentes entre si quanto ao fabricante e às apresentações. WebSearch 21/08/2026; bula oficial completa não lida diretamente nesta sessão (bloqueio de rede)."
     ]
   },
   {
@@ -14022,7 +14043,8 @@
     "brand_names": [
       "Aerolin — GlaxoSmithKline (GSK) Brasil",
       "Salbutamol (Genérico, aerossol 100mcg/dose) — Glenmark",
-      "Sulfato de Salbutamol (Genérico, injetável) — Hipolabor"
+      "Sulfato de Salbutamol (Genérico, injetável) — Hipolabor",
+      "Aerojet — Farmalab Indústrias Químicas e Farmacêuticas Ltda. (grupo Chiesi)"
     ],
     "drug_class": "Broncodilatador, agonista beta-2 adrenérgico seletivo de curta duração (SABA)",
     "mechanism": "Agonista seletivo dos receptores beta-2 adrenérgicos da musculatura lisa brônquica — ativa a adenilato ciclase, reduz cálcio intracelular e promove relaxamento/broncodilatação rápida. Em doses terapêuticas tem pouca ou nenhuma ação sobre receptores beta-1 cardíacos, mas a seletividade não é absoluta, especialmente em doses altas. Início de ação em minutos; duração de 4-6 horas. Não é fármaco cardiológico — entra no catálogo pela relevância direta ao cardiologista no paciente com DPOC/asma e doença cardiovascular concomitante, e pela interação farmacológica direta com betabloqueador não seletivo.",
@@ -14059,6 +14081,9 @@
     "monitoring": [
       "Em pacientes com doença cardiovascular, usar com cautela e monitorar frequência cardíaca, sintomas e pressão conforme o contexto.",
       "Considerar potássio sérico quando houver uso em altas doses, associação com diurético não poupador de potássio ou outro fator de risco para hipocalemia; reavaliar digoxinemia quando clinicamente indicado."
+    ],
+    "commercial_presentations": [
+      "Aerojet® (sulfato de salbutamol micronizado), Farmalab Indústrias Químicas e Farmacêuticas Ltda. (grupo Chiesi Farmaceutici S.p.A., indústria brasileira, Santana de Parnaíba/SP), CNPJ 61.363.032/0001-46. Duas formas identificadas: aerossol dosimetrado (spray) 100 mcg/dose de salbutamol micronizado, com dispositivo espaçador JET®, início de ação rápido e duração de efeito de aproximadamente 4 horas; e xarope de sulfato de salbutamol. É marca de fantasia distinta das já cadastradas neste registro (Aerolin® — GSK, e os dois genéricos rotulados de aerossol/injetável por Glenmark e Hipolabor) — não aparecia na lista anterior. Descartada nesta busca a marca 'Butovent® Pulvinal®' (salbutamol 200 mcg) por registro brasileiro não confirmado com segurança — as fontes que a citam mesclam referências de Portugal (Infarmed) com um único link de bula em site brasileiro, sem confirmação cruzada do laboratório nem do registro ANVISA; fica de fora até confirmação melhor. Fonte: ConsultaRemedios (bula Aerojet), 4medic.com.br, saudedireta.com.br — convergentes quanto ao fabricante Farmalab/Chiesi. WebSearch 21/08/2026; bula oficial completa não lida diretamente nesta sessão (bloqueio de rede)."
     ]
   }
 ]
