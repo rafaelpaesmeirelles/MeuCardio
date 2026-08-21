@@ -8424,5 +8424,263 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "fragilidade-avaliacao-pre-procedimento-cardiovascular-invasivo-no-idoso",
+    "condicao": "Avaliação de fragilidade antes de decisão terapêutica cardiovascular invasiva no idoso (TAVI, cirurgia valvar, revascularização)",
+    "theme": "Cardiologia geriátrica",
+    "documento_origem": "fragilidade-como-modificador-de-decisao-cardiovascular",
+    "resumo": "O que checar antes de indicar TAVI, cirurgia valvar ou revascularização em paciente idoso — como avaliar fragilidade por instrumento formal (não por idade ou impressão clínica), o papel do Essential Frailty Toolset no Heart Team pré-TAVI/SAVR, a associação entre fragilidade e maior complexidade anatômica coronariana, e quando o conceito de futilidade deve levar a discutir objetivos de cuidado antes de decidir.",
+    "review_status": "revisado",
+    "source_refs": [
+      "Fried LP, Tangen CM, Walston J, et al. Frailty in older adults: evidence for a phenotype. J Gerontol A Biol Sci Med Sci. 2001;56(3):M146-156. PMID: 11253156 — abstract conferido via PubMed E-utilities em 01/08/2026.",
+      "Rockwood K, Song X, MacKnight C, et al. A global clinical measure of fitness and frailty in elderly people. CMAJ. 2005;173(5):489-495. PMID: 16129869. PMCID: PMC1188185 — texto integral conferido via PMC em 02/08/2026 (a extração anterior havia sido bloqueada por desafio de prova de trabalho do PMC; nova tentativa teve sucesso). Confirma que a escala original de 2005 tem 7 categorias (1 'Very Fit' a 7 'Severely Frail'), não 9 — ver nota no texto.",
+      "Church S, Rogers E, Rockwood K, Theou O. A scoping review of the Clinical Frailty Scale. BMC Geriatr. 2020;20:393. PMID: 33028215. PMCID: PMC7540438 — texto integral conferido via PMC em 02/08/2026 (revisão de escopo coautorada pelo próprio Rockwood, usada para resolver a origem da versão de 9 categorias da CFS): 'The CFS was originally developed as a 7-point scale but there is currently an updated 9-point version'; entre os estudos incluídos (2005-2017), 58% usaram a escala de 7 pontos e 38% a de 9 pontos, com a de 9 pontos predominando nos estudos mais recentes.",
+      "Afilalo J, Lauck S, Kim DH, et al. Frailty in Older Adults Undergoing Aortic Valve Replacement: The FRAILTY-AVR Study. J Am Coll Cardiol. 2017;70(6):689-700. PMID: 28693934 — abstract integral conferido via PubMed E-utilities em 01/08/2026 e reconferido em 02/08/2026 (números de OR/IC batem exatamente com o texto do documento).",
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMID: 34453165 — existência e referência confirmadas via PubMed; sem registro de texto integral em acesso aberto no PMC (conferido via elink em 02/08/2026: só há `pubmed_pmc_refs`, isto é, artigos que citam esta diretriz, não a diretriz em si) e o Oxford Academic bloqueia por paywall (403). Texto integral obtido em 02/08/2026 por reprodução aberta do PDF original hospedada por sociedade nacional de cardiologia (Sociedade Colombiana de Cardiologia, `scc.org.co`), conferida como cópia autêntica pelo cabeçalho de download do Oxford Academic presente em cada página do PDF; seção 3.3.2 'Other factors' e Tabela 6 lidas via `pdftotext -layout` — confirma que a menção a fragilidade é texto narrativo, não recomendação numerada com Classe/Nível, e que a Tabela 6 define 'severe frailty' operacionalmente como '>2 factors according to Katz index' (ref. 59: Katz S. J Am Geriatr Soc. 1983;31:721-727), com peso 1 (favorece TAVI) / 2 (favorece SAVR) na matriz de decisão do Heart Team.",
+      "Damluji AA, Forman DE, Wang TY, et al. Management of Acute Coronary Syndrome in the Older Adult Population: A Scientific Statement From the American Heart Association. Circulation. 2023;147(3):e32-e62. PMID: 36503287. PMCID: PMC10312228 — texto integral obtido e conferido via PMC E-utilities em 01/08/2026, incluindo as seções 'Geriatric Syndromes', 'Correlation between Frailty and Coronary Anatomical Complexity', 'Surgical Risk Evaluation and Patient Selection' e 'Futility'; reconferido linha a linha em 02/08/2026 contra o XML completo do artigo (OR 5,40 IC95% 1,75-16,8; OR ajustada 2,81 IC95% 1,06-7,48; OR ajustada 2,49 IC95% 2,3-2,7 em >2.000.000 de pacientes com 4,0% de prevalência; HR ajustada 1,2 IC95% 1,12-1,28 em 40.083 pacientes com 22% de prevalência; marcha lenta <0,8 m/s em percurso de 4-6 m; STS-PROM >20% como definição operacional de risco cirúrgico proibitivo — todos conferem exatamente com o texto do documento)."
+    ],
+    "itens": [
+      {
+        "id": "fragil-idoso-nao-usar-so-idade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fragilidade avaliada por instrumento formal e padronizado, não estimada pela idade cronológica isolada nem por impressão clínica subjetiva ('eyeball test') — um paciente de 84 anos robusto e um de 78 anos gravemente frágil podem ter risco numericamente semelhante nos escores tradicionais e prognóstico radicalmente diferente",
+        "origem_secao": "Por que isso importa na prática / O que é fragilidade (e o que não é)"
+      },
+      {
+        "id": "fragil-idoso-nao-substituir-rcri-euroscore",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que os escores de risco cirúrgico e percutâneo tradicionais (STS-PROM, EuroSCORE II, GRACE) foram derivados majoritariamente de variáveis fisiológicas e não incluem avaliação formal de fragilidade — 'risco cirúrgico alto' e 'fragilidade' não tratados como sinônimos",
+        "origem_secao": "Por que isso importa na prática; Armadilhas clínicas"
+      },
+      {
+        "id": "fragil-idoso-escala-padronizada-no-servico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escala de fragilidade (Fenótipo de Fried, Clinical Frailty Scale de Rockwood ou Essential Frailty Toolset, conforme o contexto) aplicada de forma padronizada dentro do serviço — não há consenso sobre o método ótimo, mas há consenso de que a avaliação precisa ser ao menos padronizada entre avaliadores na mesma instituição",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "fragil-idoso-eft-pre-tavi-savr",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Antes de TAVI ou troca cirúrgica de valva aórtica, considerado o Essential Frailty Toolset (EFT — fraqueza de membro inferior, comprometimento cognitivo, anemia e hipoalbuminemia), identificado no estudo FRAILTY-AVR como o melhor preditor entre 7 escalas testadas (OR ajustada 3,72; IC95% 2,54-5,45 para morte em 1 ano) e recomendado pelos próprios autores como escala de escolha nesse contexto",
+        "origem_secao": "Fragilidade na decisão de TAVI versus cirurgia valvar: o estudo FRAILTY-AVR"
+      },
+      {
+        "id": "fragil-idoso-heart-team-katz-esc-eacts",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Na discussão do Heart Team pré-TAVI/SAVR, fragilidade grave conforme o índice de Katz (mais de 2 déficits de atividades de vida diária) registrada explicitamente quando presente — a diretriz ESC/EACTS 2021 atribui a esse achado 1 ponto a favor de TAVI e 2 pontos a favor de SAVR na matriz de decisão do Heart Team (Tabela 6)",
+        "origem_secao": "O papel formal no Heart Team (ESC/EACTS 2021)"
+      },
+      {
+        "id": "fragil-idoso-antecipar-anatomia-complexa",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente frágil com síndrome coronariana aguda ou doença coronariana, antecipada no planejamento do procedimento maior probabilidade de anatomia complexa — pacientes frágeis com NSTEMI têm mais de 5 vezes as chances de calcificação grave da lesão-culpada (OR 5,40; IC95% 1,75-16,8) e 2,81 vezes as chances ajustadas de fibroateroma de capa fina (IC95% 1,06-7,48)",
+        "origem_secao": "Fragilidade e complexidade angiográfica: não é só risco cirúrgico"
+      },
+      {
+        "id": "fragil-idoso-nao-contraindicacao-automatica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Fragilidade tratada como modificador de risco somado (não substituto) ao risco cirúrgico calculado, nunca como contraindicação automática — a evidência do FRAILTY-AVR mostra gradiente de risco, não um limiar binário de exclusão; fragilidade leve a moderada isolada não deve negar intervenção potencialmente benéfica, em particular TAVI",
+        "origem_secao": "Síntese para a prática; Armadilhas clínicas"
+      },
+      {
+        "id": "fragil-idoso-objetivos-cuidado-antes-decisao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Objetivos de cuidado (goals of care) discutidos com o paciente e a família antes da decisão de intervenção — não depois —, especialmente quando fragilidade se soma a outros domínios geriátricos desfavoráveis (delirium, comprometimento cognitivo, multimorbidade, polifarmácia) e a risco cirúrgico proibitivo (STS-PROM >20%)",
+        "origem_secao": "O conceito de futilidade"
+      },
+      {
+        "id": "fragil-idoso-futilidade-encaminha-paliativo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Ao reconhecer futilidade de um procedimento, encaminhamento para cuidado paliativo considerado explicitamente — reconhecer futilidade não significa retirar cuidado, e pacientes não candidatos a procedimento por futilidade percebida costumam se beneficiar substancialmente dele",
+        "origem_secao": "O conceito de futilidade"
+      }
+    ],
+    "revisao": "Itens derivados do documento já verificado e publicado desta base (fragilidade-como-modificador-de-decisao-cardiovascular.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
+  },
+  {
+    "slug": "polifarmacia-cardiovascular-revisao-estruturada-no-idoso",
+    "condicao": "Revisão estruturada de polifarmácia cardiovascular no idoso (STOPP/START v3, critérios de Beers 2023 e reconhecimento da cascata de prescrição)",
+    "theme": "Cardiologia geriátrica",
+    "documento_origem": "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+    "resumo": "Sequência de revisão da lista de medicamentos do paciente cardiopata idoso polimedicado — reconhecer cascata de prescrição antes de acrescentar fármaco novo, cruzar contra STOPP/START (versão 3, vigente) e contra os itens cardiovasculares e de ajuste renal dos critérios de Beers 2023, com atenção especial a digoxina, bloqueadores de canal de cálcio não diidropiridínicos em ICFEr e combinações de inibidores do SRAA.",
+    "review_status": "revisado",
+    "source_refs": [
+      "O'Mahony D, O'Sullivan D, Byrne S, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 2. Age Ageing. 2015;44(2):213-218. PMID: 25324330. PMCID: PMC4339726 — texto integral (introdução, métodos, resultados e Tabelas 1-2) obtido e conferido via PMC E-utilities em 01/08/2026. A lista completa dos 114 critérios (80 STOPP + 34 START) está em material suplementar não incorporado ao XML do PMC — não transcrita neste documento por não ter sido possível conferir seu texto literal nesta sessão; apenas a estrutura, as estatísticas e os itens explicitamente removidos/rejeitados (Tabelas 1 e 2) foram usados, todos conferidos diretamente na fonte.",
+      "O'Mahony D, Cherubini A, Guiteras AR, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. Eur Geriatr Med. 2023;14(4):625-632. PMID: 37256475. PMCID: PMC10447584. DOI: 10.1007/s41999-023-00777-y — abstract e Tabela 1 (distribuição de critérios por sistema fisiológico, incluindo cardiovascular) conferidos via PMC/E-utilities em 02/08/2026. É a versão que SUCEDE e SUBSTITUI a versão 2 de 2015 como lista vigente — achado desta revisão, não constava do documento original. O apêndice com o texto literal dos 190 critérios (arquivo `41999_2023_777_MOESM1_ESM.pdf`, hospedado no PMC) devolveu página de verificação reCAPTCHA nesta sessão e não foi extraído; por isso a mesma limitação de transcrição literal que já valia para a v2 persiste para a v3.",
+      "2023 American Geriatrics Society Beers Criteria(R) Update Expert Panel. American Geriatrics Society 2023 updated AGS Beers Criteria(R) for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052-2081. PMID: 37139824. PMCID: PMC12478568 — texto integral das Tabelas 2 a 6, 8 e 10 obtido e conferido via PMC E-utilities em 01/08/2026, incluindo os itens cardiovasculares e de antitrombóticos transcritos neste documento.",
+      "Rochon PA, Gurwitz JH. Optimising drug treatment for elderly people: the prescribing cascade. BMJ. 1997;315(7115):1096-1099. PMID: 9366745. PMCID: PMC2127690 — existência, título e resumo estrutural confirmados via PubMed E-utilities em 01/08/2026; o texto integral no PMC está disponível apenas como PDF sem extração de texto (artigo pré-digital), não foi possível conferir passagens literais nesta sessão — citado apenas pelo conceito consagrado que o título nomeia, sem transcrição de exemplo específico do artigo original.",
+      "Damluji AA, Forman DE, Wang TY, et al. Management of Acute Coronary Syndrome in the Older Adult Population: A Scientific Statement From the American Heart Association. Circulation. 2023;147(3):e32-e62. PMID: 36503287. PMCID: PMC10312228 — seção 'Multimorbidity and polypharmacy' obtida e conferida via PMC E-utilities em 01/08/2026."
+    ],
+    "itens": [
+      {
+        "id": "polifarm-idoso-lista-completa-incluindo-livre",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lista completa de medicamentos revisada, incluindo os de venda livre e suplementos — a cascata de prescrição frequentemente começa num item que o médico assistente nem sabia que o paciente tomava",
+        "origem_secao": "Da lista de critérios à ação: como desprescrever com segurança em Cardiologia"
+      },
+      {
+        "id": "polifarm-idoso-cascata-reconhecida-antes-de-novo-farmaco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de sintoma novo em paciente já polimedicado, verificado primeiro se pode ser efeito adverso de fármaco já em uso ('isto pode ser efeito adverso de algo que ele já toma?') antes de cogitar acrescentar um medicamento novo — cascata de prescrição não reconhecida se resolve, tipicamente, acrescentando um terceiro e um quarto fármaco",
+        "origem_secao": "A cascata de prescrição"
+      },
+      {
+        "id": "polifarm-idoso-classificacao-carga",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Carga medicamentosa classificada — polifarmácia (5 ou mais medicamentos crônicos) ou hiperpolifarmácia (10 ou mais) — reconhecendo que uso de 10 ou mais medicamentos tem mais de 90% de probabilidade de pelo menos uma interação medicamentosa clinicamente relevante",
+        "origem_secao": "Definições, com os números que sustentam a preocupação"
+      },
+      {
+        "id": "polifarm-idoso-stopp-start-v3-nao-v2",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lista cruzada contra STOPP (o que evitar) e START (o que está faltando) usando a versão 3 (2023, vigente, 190 critérios) — não a versão 2 (2015, 114 critérios), que foi sucedida e substituída; polifarmácia não é só excesso, é também omissão de tratamento indicado",
+        "origem_secao": "STOPP/START: a ferramenta europeia — versão 2 (2015), sucedida pela versão 3 (2023); Armadilhas clínicas"
+      },
+      {
+        "id": "polifarm-idoso-has-bled-nao-e-stopp",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "HAS-BLED ≥3 utilizado apenas como ferramenta de estratificação de risco de sangramento, não citado como critério STOPP formal de 'sempre evitar' antitrombótico — esse critério foi proposto e explicitamente rejeitado pelo painel de validação Delphi da versão 2",
+        "origem_secao": "O que foi proposto e rejeitado pelo painel na validação Delphi"
+      },
+      {
+        "id": "polifarm-idoso-digoxina-dose-fa-ic",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Digoxina não usada como agente de primeira linha para controle de frequência em fibrilação atrial nem para insuficiência cardíaca (evidência de benefício conflitante e de qualidade mais baixa, com terapia de primeira linha mais forte disponível para ambas as indicações); se usada, dose limitada a no máximo 0,125 mg/dia",
+        "origem_secao": "Digoxina: o caso mais bem documentado da atualização de 2023"
+      },
+      {
+        "id": "polifarm-idoso-digoxina-suspensao-cautelosa",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Suspensão de digoxina em usuário crônico com insuficiência cardíaca de fração de ejeção reduzida feita com cautela, não de forma abrupta — há evidência limitada de pior desfecho clínico após a suspensão nessa população (item novo da atualização de Beers 2023, ausente da versão de 2019)",
+        "origem_secao": "Digoxina: o caso mais bem documentado da atualização de 2023; Armadilhas clínicas"
+      },
+      {
+        "id": "polifarm-idoso-bcc-nao-diidro-icfer",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Bloqueador de canal de cálcio não diidropiridínico (diltiazem, verapamil) evitado especificamente em insuficiência cardíaca com fração de ejeção reduzida, conforme os critérios de Beers 2023",
+        "origem_secao": "Medicamentos a evitar por interação com doença ou síndrome geriátrica"
+      },
+      {
+        "id": "polifarm-idoso-duplo-bloqueio-sraa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Uso concomitante de dois ou mais inibidores do sistema renina-angiotensina (IECA, BRA, inibidor de neprilisina-receptor de angiotensina, alisquireno), ou de um inibidor do SRAA com diurético poupador de potássio, evitado de rotina em doença renal crônica estágio 3a ou mais avançado — risco aumentado de hipercalemia",
+        "origem_secao": "Duas interações medicamentosas cardiovasculares a evitar (Tabela 5 da fonte)"
+      },
+      {
+        "id": "polifarm-idoso-ajuste-renal-antitromboticos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Dose de antitrombótico ajustada ou o fármaco evitado conforme o clearance de creatinina, quando aplicável — dabigatrana evitada abaixo de 30 mL/min, edoxabana com redução entre 15-50 mL/min e evitada fora de 15-95 mL/min, rivaroxabana com redução entre 15-50 mL/min e evitada abaixo de 15 mL/min, enoxaparina com redução abaixo de 30 mL/min, fondaparinux evitado abaixo de 30 mL/min",
+        "origem_secao": "Ajuste por função renal — itens cardiovasculares e antitrombóticos"
+      },
+      {
+        "id": "polifarm-idoso-desprescricao-um-por-vez",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Desprescrição feita um fármaco por vez quando possível, com reavaliação programada — permite atribuir com confiança qualquer mudança clínica ao fármaco suspenso; nenhuma desprescrição considerada segura sem essa reavaliação",
+        "origem_secao": "Da lista de critérios à ação: como desprescrever com segurança em Cardiologia; Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Itens derivados do documento já verificado e publicado desta base (polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
+  },
+  {
+    "slug": "hipotensao-pos-prandial-avaliacao-e-manejo-no-idoso-cardiopata",
+    "condicao": "Avaliação e manejo de hipotensão pós-prandial no idoso cardiopata",
+    "theme": "Cardiologia geriátrica",
+    "documento_origem": "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
+    "resumo": "Como investigar e conduzir hipotensão pós-prandial diante de síncope, queda ou tontura do idoso — quando suspeitar pelo horário do sintoma, como medir a pressão para não perder o diagnóstico, e a sequência de manejo com sustentação de dados (água antes da refeição, cautela com cafeína e acarbose) segundo Jansen e Lipsitz e a metanálise de Jenkins et al.",
+    "review_status": "revisado",
+    "source_refs": [
+      "Jansen RW, Lipsitz LA. Postprandial hypotension: epidemiology, pathophysiology, and clinical management. Ann Intern Med. 1995;122(4):286-295. PMID: 7825766. DOI: 10.7326/0003-4819-122-4-199502150-00009 — abstract integral conferido via PubMed E-utilities (efetch) em 02/08/2026: a definição operacional (queda de pressão arterial sistólica ≥20 mmHg após refeição), os mecanismos fisiopatológicos descritos (resposta simpática inadequada ao acúmulo esplâncnico de sangue, disfunção do barorreflexo, elevação insuficiente do débito cardíaco pós-prandial, vasoconstrição periférica enfraquecida, vasodilatação mediada por insulina e liberação de peptídeos gastrointestinais vasodilatadores) e as observações sobre manejo (cafeína sem sustentação de dados, octreotida eficaz mas limitada por custo e via parenteral) conferem com o texto do abstract original.",
+      "Vaitkevicius PV, Esserwein DM, Maynard AK, O'Connor FC, Fleg JL. Frequency and importance of postprandial blood pressure reduction in elderly nursing-home patients. Ann Intern Med. 1991;115(11):865-870. PMID: 1952473. DOI: 10.7326/0003-4819-115-11-865 — abstract integral conferido via PubMed E-utilities (efetch) em 02/08/2026: os números do documento (113 pacientes de asilo, idade média 78 anos, 96% com alguma queda sistólica pós-prandial, queda média de 17,9 mmHg, 36% com queda maior que 20 mmHg, 11% com queda para menos de 100 mmHg sistólica, 2 pacientes agudamente sintomáticos entre os que caíram abaixo de 100 mmHg, história de síncope como fator de risco por análise de regressão, ausência de correlação com mortalidade em 6 meses nesta coorte específica) conferem exatamente com o abstract original.",
+      "Jenkins DJA, Sahye-Pudaruth S, Khodabandehlou K, et al. Systematic review and meta-analysis examining the relationship between postprandial hypotension, cardiovascular events, and all-cause mortality. Am J Clin Nutr. 2022;116(3):663-671. PMID: 35675216. DOI: 10.1093/ajcn/nqac158 — abstract integral conferido via PubMed E-utilities (efetch) em 02/08/2026: os números do documento (7 estudos, 2.389 participantes, associação entre hipotensão pós-prandial e mortalidade por qualquer causa, doença cardiovascular total, mortalidade cardiovascular e AVC individualmente, RR combinado de 1,52 para o desfecho agregado de eventos cardiovasculares e mortalidade, IC95% 1,05-2,18, p=0,03, I²=77%, qualidade da evidência classificada como muito baixa pela heterogeneidade e número limitado de estudos) conferem com o abstract original.",
+      "Shibao C, Gamboa A, Diedrich A, et al. Acarbose, an alpha-glucosidase inhibitor, attenuates postprandial hypotension in autonomic failure. Hypertension. 2007;50(1):54-61. PMID: 17515447. DOI: 10.1161/HYPERTENSIONAHA.107.091355 — abstract integral conferido via PubMed E-utilities (efetch) em 02/08/2026: os números do documento (13 pacientes com hipotensão pós-prandial em falência autonômica, idade 65±2,64 anos, acarbose 100 mg, atenuação da queda sistólica pós-prandial em 17 mmHg, IC95% 7-28, p=0,003, atenuação da queda diastólica em 9 mmHg, IC95% 5-14, p=0,001, redução de insulina plasmática em 11 µU/mL, IC95% 5-18, p=0,001, efeito sobre a hipotensão que permaneceu significativo após ajuste para a variação de insulina) conferem exatamente com o abstract original. Estudo em população com falência autonômica documentada, não uma coorte geriátrica cardiológica geral — declarado como limitação de extrapolação no corpo do documento.",
+      "Grobéty B, Grasser EK, Yepuri G, Dulloo AG, Montani JP. Postprandial hypotension in older adults: Can it be prevented by drinking water before the meal? Clin Nutr. 2015;34(5):885-891. PMID: 25277381. DOI: 10.1016/j.clnu.2014.09.009 — abstract integral conferido via PubMed E-utilities (efetch) em 02/08/2026: os números do documento (12 adultos mais velhos, 67±1 anos, mais 11 adultos jovens como controle, protocolo cruzado com 100 mL ou 500 mL de água da torneira ingeridos em 4 minutos antes de refeição de 1.708 kJ, queda sistólica pós-prandial entre 30 e 90 minutos de -6,4 mmHg com 100 mL versus -3,3 mmHg com 500 mL, p<0,05, conclusão de que o maior volume de água atenua a hipotensão pós-prandial no idoso) conferem exatamente com o abstract original."
+    ],
+    "itens": [
+      {
+        "id": "hpp-idoso-suspeitar-pelo-horario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hipotensão pós-prandial (HPP) suspeitada em todo idoso com síncope, queda, tontura ou fraqueza que ocorra tipicamente entre 30 e 90 minutos após as refeições — intervalo em que a queda pressórica costuma ser máxima",
+        "origem_secao": "Síntese para a prática"
+      },
+      {
+        "id": "hpp-idoso-medir-pressao-pos-prandial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Pressão arterial medida por aferições seriadas antes e depois de uma refeição, não apenas em ortostatismo — diferente da hipotensão ortostática, a HPP só aparece se alguém medir a pressão depois da refeição, e a maioria dos serviços não mede",
+        "origem_secao": "Por que isso importa na prática; Síntese para a prática"
+      },
+      {
+        "id": "hpp-idoso-criterio-diagnostico-20mmhg",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de HPP considerado a partir do critério de queda da pressão arterial sistólica de 20 mmHg ou mais após a refeição, medida por aferições seriadas — não uma única medida antes e depois",
+        "origem_secao": "Definição e magnitude do problema; Síntese para a prática"
+      },
+      {
+        "id": "hpp-idoso-diferencial-ortostatica-coexistencia",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Hipotensão ortostática investigada em paralelo, já que HPP e hipotensão ortostática frequentemente coexistem no mesmo paciente — quando a história isolada não é conclusiva, monitorização ambulatorial de pressão arterial com aferições programadas antes e depois das refeições considerada para separar as duas",
+        "origem_secao": "Diagnóstico diferencial que importa na prática geriátrica"
+      },
+      {
+        "id": "hpp-idoso-agua-antes-da-refeicao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ingestão de água (volume maior, da ordem de 500 mL, mostrou benefício mensurável sobre 100 mL em ensaio cruzado controlado) orientada antes da refeição como primeira linha, junto de refeições menores e mais frequentes, menor proporção de carboidrato de absorção rápida e evitar álcool próximo às refeições",
+        "origem_secao": "Manejo: o que tem sustentação, o que não tem / Medidas não farmacológicas"
+      },
+      {
+        "id": "hpp-idoso-evitar-ortostatismo-abrupto-pos-refeicao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a evitar decúbito ou posição ereta abrupta logo após comer, caminhando somente depois que o período de maior risco hemodinâmico (30-90 minutos pós-prandiais) já tiver passado",
+        "origem_secao": "Manejo: o que tem sustentação, o que não tem / Medidas não farmacológicas; Armadilhas clínicas"
+      },
+      {
+        "id": "hpp-idoso-cafeina-nao-prescrita",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Cafeína não prescrita como intervenção para HPP — a revisão de referência do tema é explícita de que os dados disponíveis não sustentam esse uso, apesar de ser recomendação informal comum na prática",
+        "origem_secao": "Cafeína — sem sustentação nos dados"
+      },
+      {
+        "id": "hpp-idoso-acarbose-com-ressalva",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Acarbose considerada como opção (não como recomendação de primeira linha generalizada) diante de falha das medidas não farmacológicas, com a ressalva explícita de que o dado positivo (atenuação da queda sistólica em 17 mmHg) foi medido numa amostra pequena de 13 pacientes com falência autonômica documentada, não numa coorte geriátrica cardiológica geral",
+        "origem_secao": "Acarbose — mecanismo plausível, dados em população específica; Armadilhas clínicas"
+      },
+      {
+        "id": "hpp-idoso-nao-ignorar-por-baixa-qualidade-evidencia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "HPP não descartada como achado benigno mesmo quando um estudo pequeno isolado não mostra associação com mortalidade de curto prazo — a evidência agregada mais recente (7 estudos, 2.389 participantes) associa HPP a maior mortalidade por qualquer causa e mais eventos cardiovasculares (RR 1,52; IC95% 1,05-2,18), ainda que com qualidade de evidência classificada como baixa pelos próprios autores",
+        "origem_secao": "O que a evidência agregada mais recente mostra sobre prognóstico; Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Itens derivados do documento já verificado e publicado desta base (hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
   }
 ]
