@@ -4045,7 +4045,9 @@
     "generic_name": "Liraglutida",
     "brand_names": [
       "Victoza",
-      "Saxenda"
+      "Saxenda",
+      "Lirux",
+      "Olire"
     ],
     "drug_class": "Agonista do receptor de GLP-1 (peptídeo-1 semelhante ao glucagon)",
     "mechanism": "Análogo do GLP-1 humano com 97% de homologia à molécula endógena, resistente à degradação pela DPP-4 e com ligação à albumina que prolonga sua ação (meia-vida plasmática de eliminação de aproximadamente 13 horas, permitindo aplicação 1x/dia). Estimula a secreção de insulina de forma glicose-dependente, suprime a secreção de glucagon, retarda o esvaziamento gástrico e reduz o apetite por ação central. Fonte: bula ao paciente Victoza (Brasil) e rótulo profissional FDA/DailyMed (VICTOZA, Novo Nordisk).",
@@ -4062,6 +4064,27 @@
           2
         ],
         "generic_available": "Confirmado nesta sessão (11/08/2026): existe medicamento nacional de liraglutida aprovado pela ANVISA — Lirux® (EMS, para diabetes tipo 2, mesma dose 6,0 mg/mL, comercializado no Brasil desde agosto de 2025) e Olire® (EMS, mesma molécula, indicação de obesidade). **Não são classificados como genérico/similar/biossimilar pela ANVISA** — segundo comunicado da própria EMS, são registrados como 'medicamento novo', produzidos por rota de síntese química com matéria-prima sintética própria, distinta do processo biotecnológico original da Novo Nordisk (Victoza®/Saxenda®). Fonte: comunicados oficiais da EMS e cobertura de imprensa especializada (Sindusfarma, CFF), consultados via WebSearch em 11/08/2026 — não foi lida a bula do Lirux/Olire diretamente nesta sessão."
+      },
+      {
+        "brand_name": "Lirux",
+        "manufacturer": "EMS",
+        "form": "solução injetável em caneta pré-preenchida",
+        "dosage": "6,0 mg/mL (caneta de 3 mL, 18 mg de liraglutida)",
+        "pack_sizes": [
+          1,
+          2
+        ],
+        "generic_available": "Confirmado nesta sessão (21/08/2026), com bula do fabricante e ficha de produto lidas diretamente (consultaremedios.com.br/lirux/bula) — não é classificado como genérico/similar/biossimilar pela ANVISA, é registrado como 'medicamento novo' (rota de síntese química própria, distinta do processo biotecnológico da Novo Nordisk). Indicado para diabetes mellitus tipo 2, lançado em agosto de 2025."
+      },
+      {
+        "brand_name": "Olire",
+        "manufacturer": "EMS",
+        "form": "solução injetável em caneta pré-preenchida",
+        "dosage": "6,0 mg/mL (caneta de 3 mL, 18 mg de liraglutida)",
+        "pack_sizes": [
+          1
+        ],
+        "generic_available": "Confirmado nesta sessão (21/08/2026), com ficha de produto do fabricante lida diretamente (araujo.com.br/olire) — não é genérico/similar/biossimilar, registrado como 'medicamento novo'. Indicado para obesidade (IMC ≥30 kg/m²) ou sobrepeso (IMC 27-30 kg/m²) com comorbidade associada, adultos e adolescentes a partir de 12 anos; registro ANVISA aprovado em dezembro de 2023, concorrente nacional do Saxenda®."
       }
     ],
     "dosing": {
