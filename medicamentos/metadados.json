@@ -625,7 +625,8 @@
     "generic_name": "Atorvastatina (cálcica)",
     "brand_names": [
       "Lipitor",
-      "Citalor"
+      "Citalor",
+      "Torvilip — Nova Química Farmacêutica S.A. (fabricado por Multilab)"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "Inibição competitiva da HMG-CoA redutase, etapa limitante na biossíntese hepática de colesterol, aumentando expressão de receptores de LDL hepáticos e depuração plasmática de LDL-C; estatina lipofílica com meia-vida mais longa que sinvastatina, permitindo maior flexibilidade de horário de administração",
@@ -676,7 +677,10 @@
     "duration_of_action_source": "Inferido da meia-vida de atividade inibitória de 20-30h (rótulo FDA LIPITOR®) e do padrão farmacológico já bem descrito na literatura de estatinas quanto à flexibilidade de horário de dose. Consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": -1.6,
     "dbp_reduction_mmhg": -0.96,
-    "bp_evidence_source": "**Efeito modesto, não constante em bula, e NÃO é indicação da atorvastatina** — a estatina não é prescrita para tratar hipertensão. Metanálise sistemática de ensaios clínicos randomizados, placebo-controlados, sobre efeito hipotensor de estatinas como classe: redução média de PA sistólica de **-1,6 mmHg** (IC95% -2,50 a -0,60) e diastólica de **-0,96 mmHg**, com o próprio estudo concluindo que \"the BP-lowering effect of the statins was independent of the dose or type of statin (p > 0.05)\" — ou seja, o efeito é de CLASSE, não específico da atorvastatina nem dose-dependente, conforme confirmado nesta sessão pela leitura direta do abstract. Fonte: Alghamdi J, Alqadi A, Alharf A, Almuzzaini B, Mahmud A, Barhoumi T, Badreldin HA, Alaamery M, Padmanabhan S. Blood pressure-lowering activity of statins: a systematic literature review and meta-analysis of placebo-randomized controlled trials. Eur J Clin Pharmacol. 2020;76(12):1745-1754. DOI: 10.1007/s00228-020-02965-2. PMID 32696233 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão (12/08/2026). **Correção em relação ao registro anterior**: os valores dose-estratificados específicos de atorvastatina citados antes (-1,17/-5,82/-3,58/-2,98 mmHg por dose, atribuídos a um resumo de congresso JACC \"GW26-e4665\") não puderam ser confirmados no PubMed nesta sessão (busca por título exato retornou zero resultados) — substituídos pelos valores de classe acima, de fonte verificada e lida diretamente. Mecanismo proposto para o efeito de classe: melhora da função endotelial e redução de estresse oxidativo vascular, não um efeito anti-hipertensivo farmacológico direto. Efeito de magnitude pequena e não deve ser usado como justificativa clínica para prescrever atorvastatina como anti-hipertensivo."
+    "bp_evidence_source": "**Efeito modesto, não constante em bula, e NÃO é indicação da atorvastatina** — a estatina não é prescrita para tratar hipertensão. Metanálise sistemática de ensaios clínicos randomizados, placebo-controlados, sobre efeito hipotensor de estatinas como classe: redução média de PA sistólica de **-1,6 mmHg** (IC95% -2,50 a -0,60) e diastólica de **-0,96 mmHg**, com o próprio estudo concluindo que \"the BP-lowering effect of the statins was independent of the dose or type of statin (p > 0.05)\" — ou seja, o efeito é de CLASSE, não específico da atorvastatina nem dose-dependente, conforme confirmado nesta sessão pela leitura direta do abstract. Fonte: Alghamdi J, Alqadi A, Alharf A, Almuzzaini B, Mahmud A, Barhoumi T, Badreldin HA, Alaamery M, Padmanabhan S. Blood pressure-lowering activity of statins: a systematic literature review and meta-analysis of placebo-randomized controlled trials. Eur J Clin Pharmacol. 2020;76(12):1745-1754. DOI: 10.1007/s00228-020-02965-2. PMID 32696233 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão (12/08/2026). **Correção em relação ao registro anterior**: os valores dose-estratificados específicos de atorvastatina citados antes (-1,17/-5,82/-3,58/-2,98 mmHg por dose, atribuídos a um resumo de congresso JACC \"GW26-e4665\") não puderam ser confirmados no PubMed nesta sessão (busca por título exato retornou zero resultados) — substituídos pelos valores de classe acima, de fonte verificada e lida diretamente. Mecanismo proposto para o efeito de classe: melhora da função endotelial e redução de estresse oxidativo vascular, não um efeito anti-hipertensivo farmacológico direto. Efeito de magnitude pequena e não deve ser usado como justificativa clínica para prescrever atorvastatina como anti-hipertensivo.",
+    "commercial_presentations": [
+      "Torvilip® (atorvastatina cálcica), Nova Química Farmacêutica S.A., fabricado por Multilab (CNPJ 92.265.552/0009-05), comprimidos revestidos de 10 mg e 20 mg, embalagens com 30 comprimidos, registro no Ministério da Saúde nº 1181904740021. Fonte: sara.com.br/produto/torvilip-10-mg-comprimido-revestido-com-30-... e sara.com.br/produto/torvilip-20mg-com-30-comprimidos-revestidos-..., cruzadas com bulas.med.br/p/bulas-de-medicamentos/bula/1371148/torvilip.htm e consultaremedios.com.br/torvilip/bula. Busca em 21/08/2026."
+    ]
   },
   {
     "slug": "benazepril-cloridrato",
@@ -751,7 +755,8 @@
     "generic_name": "Bisoprolol (hemifumarato)",
     "brand_names": [
       "Bizo",
-      "Concor"
+      "Concor",
+      "Iccor — Torrent do Brasil Ltda"
     ],
     "drug_class": "Betabloqueador altamente cardiosseletivo (beta-1 seletivo)",
     "mechanism": "Agente bloqueador seletivo dos receptores beta-1, sem ação estimulante intrínseca ou efeito de estabilização de membrana relevante; afinidade muito baixa a receptores beta-2, com seletividade beta-1 que se estende além da faixa terapêutica; não possui efeito inotrópico negativo pronunciado",
@@ -805,7 +810,10 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do ZEBETA® (bisoprolol fumarate), seção CLINICAL PHARMACOLOGY/CLINICAL STUDIES, consultado via WebSearch em 10/08/2026. **Reconfirmado por fonte independente em 12/08/2026**: mirror de bula brasileira do CONCOR® (Merck) confirma dose única diária com cobertura de 24h, sustentada pela meia-vida de 10-12h — resolvendo a verificação pendente anterior.",
     "sbp_reduction_mmhg": -10.5,
     "dbp_reduction_mmhg": -7.5,
-    "bp_evidence_source": "**Resolvido nesta sessão (12/08/2026), lendo diretamente a seção CLINICAL STUDIES do rótulo FDA/DailyMed** de bisoprolol fumarato comprimidos (Micro Labs Limited, SPL setid c3ee566c-74c4-45f4-a947-526a7313e326) — a tabela existe, e o problema da versão anterior era mesmo a fonte secundária inconsistente usada antes, não ausência do dado no rótulo. O rótulo relata DOIS estudos de hipertensão, ambos com efeito do fármaco já calculado como bisoprolol MENOS placebo (dose-resposta, texto do rótulo: \"Drug effect is calculated by subtracting the placebo effect from the overall change in blood pressure and heart rate\"): **Estudo A** — 5 mg: 5,0/4,8 mmHg; 10 mg: 5,8/7,7 mmHg; 20 mg: 7,4/8,7 mmHg (sistólica/diastólica). **Estudo B** — 2,5 mg: 4,6/4,4 mmHg; 10 mg: 10,5/7,5 mmHg. Os dois estudos DIVERGEM entre si na dose de 10 mg (5,8/7,7 no Estudo A vs. 10,5/7,5 no Estudo B) — divergência real entre dois ensaios do próprio rótulo, não erro de transcrição como se suspeitava da fonte secundária anterior. Valor registrado nos campos numéricos (-10,5/-7,5) é o do Estudo B na dose de 10 mg, por ser a dose mais usada na prática cardiológica (início 2,5-5 mg, alvo comum 10 mg) com efeito sistólico mais robusto entre os dois estudos nessa dose; o Estudo A, na mesma dose, mostra efeito sistólico menor (5,8 mmHg) — divergência declarada, não escondida. Consultado via API pública do DailyMed em 12/08/2026."
+    "bp_evidence_source": "**Resolvido nesta sessão (12/08/2026), lendo diretamente a seção CLINICAL STUDIES do rótulo FDA/DailyMed** de bisoprolol fumarato comprimidos (Micro Labs Limited, SPL setid c3ee566c-74c4-45f4-a947-526a7313e326) — a tabela existe, e o problema da versão anterior era mesmo a fonte secundária inconsistente usada antes, não ausência do dado no rótulo. O rótulo relata DOIS estudos de hipertensão, ambos com efeito do fármaco já calculado como bisoprolol MENOS placebo (dose-resposta, texto do rótulo: \"Drug effect is calculated by subtracting the placebo effect from the overall change in blood pressure and heart rate\"): **Estudo A** — 5 mg: 5,0/4,8 mmHg; 10 mg: 5,8/7,7 mmHg; 20 mg: 7,4/8,7 mmHg (sistólica/diastólica). **Estudo B** — 2,5 mg: 4,6/4,4 mmHg; 10 mg: 10,5/7,5 mmHg. Os dois estudos DIVERGEM entre si na dose de 10 mg (5,8/7,7 no Estudo A vs. 10,5/7,5 no Estudo B) — divergência real entre dois ensaios do próprio rótulo, não erro de transcrição como se suspeitava da fonte secundária anterior. Valor registrado nos campos numéricos (-10,5/-7,5) é o do Estudo B na dose de 10 mg, por ser a dose mais usada na prática cardiológica (início 2,5-5 mg, alvo comum 10 mg) com efeito sistólico mais robusto entre os dois estudos nessa dose; o Estudo A, na mesma dose, mostra efeito sistólico menor (5,8 mmHg) — divergência declarada, não escondida. Consultado via API pública do DailyMed em 12/08/2026.",
+    "commercial_presentations": [
+      "Iccor® (hemifumarato de bisoprolol), Torrent do Brasil Ltda (importador/registrante), comprimidos revestidos de 1,25 mg, 2,5 mg, 5 mg e 10 mg, bula padrão aprovada pela ANVISA em 25/05/2020. Fonte: bula.gratis/torrent_do_brasil_ltda/0/iccor/paciente e bula.gratis/torrent_do_brasil_ltda/1/iccor/profissional, cruzadas com drogasil.com.br/bulas/iccor, consultaremedios.com.br/iccor/bula, qualidoc.com.br (apresentação 1,25mg/30 comprimidos) e farmaindex.com (apresentação 2,5mg/30 comprimidos). Busca em 21/08/2026."
+    ]
   },
   {
     "slug": "bivalirudina",
@@ -1321,10 +1329,12 @@
     "bp_evidence_source": "Metanálise Cochrane de bloqueadores duais alfa/beta na hipertensão primária (Wong GWK, Laugerotte A, Wright JM. Blood pressure lowering efficacy of dual alpha and beta blockers for primary hypertension. Cochrane Database Syst Rev. 2015 Aug 26;2015(8):CD007449, PMID 26306578): para carvedilol especificamente, redução de -4 mmHg (IC95% -6 a -2) na sistólica e -3 mmHg (IC95% -4 a -2) na diastólica, comparado a placebo (evidência classificada pelos autores como de baixa qualidade). Para o conjunto dos bloqueadores duais (carvedilol + labetalol), a redução combinada foi de -6/-4 mmHg, com queda de 5 bpm na frequência cardíaca — efeito hipotensor menor que o de betabloqueadores não seletivos, beta-1 seletivos, agonistas parciais, tiazídicos ou inibidores do SRAA, conforme os próprios autores destacam. Valores registrados nos campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-4,0/-3,0) são os do carvedilol isolado, não a média combinada com labetalol. Abstract lido diretamente via PubMed E-utilities (efetch) em 11/08/2026 — texto confirmado linha a linha contra o documento primário, não mais resultado sintetizado de busca / DOI não acessado diretamente (Wiley bloqueou o acesso nesta sessão).",
     "brand_names": [
       "Coreg / Coreg CR (nome comercial internacional, GSK) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)",
-      "Divelol"
+      "Divelol",
+      "Cardilol — Libbs Farmacêutica Ltda"
     ],
     "commercial_presentations": [
-      "Divelol® (carvedilol) — Laboratórios Baldacci Ltda.: comprimidos de 3,125 mg (embalagem com 60 comprimidos), 6,25 mg (embalagem com 60 comprimidos), 12,5 mg (embalagem com 60 comprimidos) e 25 mg (embalagens com 14, 30 ou 60 comprimidos). **fonte**: bulas do paciente/profissional hospedadas em lbaldacci.com.br (site oficial do laboratório) e réplicas convergentes em Panvel, Drogaria São Paulo, Drogarias Pacheco, Drogal, ConsultaRemedios e Farmaindex — consultado via WebSearch em 20/08/2026."
+      "Divelol® (carvedilol) — Laboratórios Baldacci Ltda.: comprimidos de 3,125 mg (embalagem com 60 comprimidos), 6,25 mg (embalagem com 60 comprimidos), 12,5 mg (embalagem com 60 comprimidos) e 25 mg (embalagens com 14, 30 ou 60 comprimidos). **fonte**: bulas do paciente/profissional hospedadas em lbaldacci.com.br (site oficial do laboratório) e réplicas convergentes em Panvel, Drogaria São Paulo, Drogarias Pacheco, Drogal, ConsultaRemedios e Farmaindex — consultado via WebSearch em 20/08/2026.",
+      "Cardilol® (carvedilol), Libbs Farmacêutica Ltda (São Paulo e Embu das Artes, SP), comprimidos de 3,125 mg, 6,25 mg, 12,5 mg e 25 mg, venda sob prescrição médica, retirada não deve ser abrupta em cardiopatia isquêmica (desmame gradual em 2 semanas, conforme bula). Fonte: bula do paciente oficial Libbs, libbs.com.br/wp-content/uploads/2018/10/Cardilol-Comprimidos-Bula-Paciente.pdf, cruzada com consultaremedios.com.br/cardilol/bula. Busca em 21/08/2026."
     ]
   },
   {
@@ -1884,10 +1894,13 @@
       "Comprimido 30 mg (embalagens com 20, 30, 50 ou 200 comprimidos)",
       "Comprimido 60 mg (embalagens com 20, 25, 30, 50, 60 ou 200 comprimidos)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "Cordil® (cloridrato de diltiazem), Laboratório Teuto Brasileiro S/A, comprimido de 60 mg (equivalente a 55,15 mg de diltiazem), embalagem com 50 comprimidos, uso oral adulto, indicado para hipertensão arterial, angina pectoris e doença coronariana com ou sem hipertensão/taquicardia associadas; início de efeito referido em cerca de 3 horas. Fonte: bula.gratis/cordil (bula original obtida da ANVISA), cruzada com consultaremedios.com.br/cordil/bula, drogaraia.com.br/bulas/cordil, remediobarato.com/cordil-bula-completa--laboratorio-teuto-brasileiro-s-a--para-o-profissional.html e bula.medicinanet.com.br/bula/1659/cordil.htm. Busca em 21/08/2026."
+    ],
     "brand_names": [
       "Cardizem",
-      "Balcor"
+      "Balcor",
+      "Cordil — Laboratório Teuto Brasileiro S/A"
     ]
   },
   {
@@ -5658,7 +5671,8 @@
     "lactation": "**Amamentação não recomendada.** A bula generaliza para a classe: a maioria dos betabloqueadores, **principalmente os compostos lipofílicos** — o que inclui o propranolol —, passa para o leite materno, em quantidades variáveis; por isso a amamentação não é recomendada após a administração desses compostos. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca).",
     "brand_names": [
       "Inderal",
-      "Rebaten LA"
+      "Rebaten LA",
+      "Sanpronol — Hipolabor Farmacêutica Ltda"
     ],
     "presentations": [
       "Comprimido 40 mg (embalagem com 30 comprimidos)",
@@ -5685,7 +5699,8 @@
       "fonte: extrapolado do perfil de segurança já documentado nos campos `contraindications`/`adverse_effects` deste registro — prática de monitorização padrão de classe farmacológica, não citação de bula específica adicional."
     ],
     "commercial_presentations": [
-      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente)."
+      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente).",
+      "Sanpronol® (cloridrato de propranolol), Hipolabor Farmacêutica Ltda, comprimido circular branco de 40 mg, embalagem com 500 comprimidos (apresentação de grande porte/uso institucional), registros ANVISA nº 1134302100020 (válido até 01/06/2029) e nº 1071401080034, indicado para hipertensão, angina pectoris, arritmias cardíacas, profilaxia de enxaqueca, tremor essencial, ansiedade/taquicardia e adjuvante no tratamento da tireotoxicose. Fonte: registro oficial ANVISA consultado via smerp.com.br/anvisa (anvisaId 1134302100020 e 1071401080034), cruzado com consultaremedios.com.br/sanpronol/bula e farmaindex.com/bulas/sanpronol/6302. Busca em 21/08/2026."
     ]
   },
   {
@@ -7261,7 +7276,8 @@
     "lactation": "**Interromper a amamentação.** A bula é afirmativa, não condicional: o verapamil **é excretado no leite humano** e a amamentação deve ser interrompida durante a terapia. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott).",
     "brand_names": [
       "Dilacoron",
-      "Coronaril"
+      "Coronaril",
+      "Vasoton — Blau Farmacêutica S.A."
     ],
     "half_life_hours": 5.0,
     "half_life_note": "Meia-vida de eliminação de 2,8 a 7,4 horas após dose única; com doses repetidas (menos de 10 doses a cada 6 horas), a meia-vida aumenta para 4,5 a 12,0 horas, por saturação parcial do metabolismo hepático de primeira passagem — valor registrado em `half_life_hours` (5h) é aproximado ao ponto médio da faixa de dose única, mais representativa do início do tratamento. O metabólito ativo norverapamil (cerca de 20% da atividade cardiovascular do verapamil) tem meia-vida um pouco maior, de 5,7 a 7,3 horas, prolongando discretamente o efeito residual. Fonte: literatura de farmacocinética clínica do verapamil (StatPearls, rótulo FDA/DailyMed), consultada via WebSearch em 2026 — a bula brasileira do DILACORON já citada nas referências deste registro não detalha o valor numérico da meia-vida.",
@@ -7273,7 +7289,9 @@
     "presentations": [
       "Comprimido revestido 80 mg (embalagem com 30 comprimidos)"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Vasoton® (cloridrato de verapamil), Blau Farmacêutica S.A. (CNPJ 58.430.828/0013-01, São Paulo, SP), solução injetável de 2,5 mg/mL, caixa com 5 ampolas de 2 mL (5 mg de verapamil por ampola), uso intravenoso, indicado para taquiarritmias supraventriculares (taquicardia supraventricular, flutter ou fibrilação atrial de resposta rápida) e crise hipertensiva; validade de 24 meses a partir da fabricação, conservação entre 15°C e 30°C. Fonte: bula oficial em PDF hospedada pelo próprio fabricante (blau.com/media/leaflet/fece8497-6a1f-4a00-8d19-53c1bbde81f4-e751a13b-bdb0-47fb-9346-d700540ba7a1/Vasoton_-_PS-.pdf), cruzada com cphi-online.com/product/vasoton-verapamil-hydrochloride/, consultaremedios.com.br/vasoton/p (caixa com 5 ampolas de 2mL) e farmaindex.com/vasoton/5302 (5mg/2mL). NOTA: uma busca inicial trouxe atribuição de fabricante divergente ('Ariston'), descartada por não se confirmar em nenhuma das fontes acima — mantido só o fabricante confirmado por múltiplas fontes convergentes (Blau). Busca em 21/08/2026."
+    ]
   },
   {
     "slug": "vericiguate",
