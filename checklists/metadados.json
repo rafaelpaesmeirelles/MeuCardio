@@ -18146,5 +18146,91 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-atleta-com-aortopatia-ou-sindrome-de-marfan-antes-da-liberacao-esportiva",
+    "condicao": "Aortopatia hereditária ou síndrome de Marfan — avaliação para participação esportiva",
+    "resumo": "O que checar antes de liberar para esporte um atleta com suspeita ou diagnóstico de aortopatia hereditária/síndrome de Marfan, ou com válvula aórtica bicúspide — sinais de alerta que afastam o achado de 'aorta do atleta', exames de imagem indicados e os fatores que devem entrar na decisão compartilhada.",
+    "documento_origem": "aortopatias-marfan-e-participacao-esportiva",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025. PMID 39973614. DOI 10.1161/CIR.0000000000001297.",
+      "Aortic dimension in elite athletes: updated systematic review and meta-analysis. 2025. PMID 39590649.",
+      "Sports Participation and Physical Activity in Individuals with Heritable Thoracic Aortic Disease and Aortopathy Conditions. 2022. PMID 35710275. DOI 10.1016/j.csm.2022.02.009."
+    ],
+    "itens": [
+      {
+        "id": "aortopatia-esporte-suspeitar-fenotipo-conjuntivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ampliar a investigação de doença hereditária da aorta (não atribuir dilatação ao treinamento sem investigar) quando houver fenótipo sugestivo de síndrome de Marfan ou outra doença do tecido conjuntivo no atleta",
+        "origem_secao": "Quando suspeitar de doença hereditária da aorta"
+      },
+      {
+        "id": "aortopatia-esporte-historia-familiar-dissecao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente história familiar de aneurisma, dissecção ou morte súbita relacionada à aorta antes de liberar atleta para esporte competitivo",
+        "origem_secao": "Quando suspeitar de doença hereditária da aorta"
+      },
+      {
+        "id": "aortopatia-esporte-indexar-diametro-superficie-corporal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indexar o diâmetro aórtico à superfície corporal (não avaliar apenas o valor absoluto) ao interpretar exame de imagem em atleta, considerando sexo, tamanho corporal, idade e modalidade esportiva — dimensão absoluta isolada pode superestimar anormalidade em pessoas grandes e altamente treinadas",
+        "origem_secao": "Aorta do atleta versus aortopatia"
+      },
+      {
+        "id": "aortopatia-esporte-eco-inicial-tc-rmc-complementar",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma como exame inicial para medir raiz e aorta proximal em atleta com suspeita de aortopatia; complementar com TC ou RMC quando a anatomia não for adequadamente visualizada, houver discrepância entre exames ou for necessário avaliar segmentos mais distais, mantendo técnica consistente entre exames seriados para não confundir variabilidade de medida com progressão verdadeira",
+        "origem_secao": "Imagem e seguimento"
+      },
+      {
+        "id": "aortopatia-esporte-avaliacao-conjunta-marfan",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na síndrome de Marfan, avaliar em conjunto o diâmetro da raiz aórtica indexado, a velocidade de progressão, a história familiar de dissecção, cirurgia aórtica prévia, outras manifestações cardiovasculares e o tipo de exercício pretendido antes de decidir sobre a participação esportiva",
+        "origem_secao": "Síndrome de Marfan"
+      },
+      {
+        "id": "aortopatia-esporte-bicuspide-dois-eixos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na válvula aórtica bicúspide, avaliar separadamente os dois eixos — repercussão valvar (estenose e/ou insuficiência) e dimensão/comportamento da aorta —, sem presumir que a ausência de disfunção valvar torna irrelevante uma dilatação aórtica associada",
+        "origem_secao": "Válvula aórtica bicúspide"
+      },
+      {
+        "id": "aortopatia-esporte-diferenciar-tipo-de-esforco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Ao orientar modalidade esportiva em pessoa com aortopatia hereditária ou dilatação aórtica relevante, diferenciar atividade resistida controlada de esforços máximos, manobras de Valsalva repetidas e esportes competitivos com grande componente estático, em vez de proibir automaticamente todo treinamento resistido",
+        "origem_secao": "Esportes de força e picos pressóricos"
+      },
+      {
+        "id": "aortopatia-esporte-nao-decidir-por-regra-binaria",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não decidir a liberação esportiva de pessoa com síndrome de Marfan ou outra aortopatia hereditária por regra binária de 'pode/não pode' baseada apenas no diagnóstico nominal — integrar fenótipo, genótipo quando disponível, dimensão e evolução da aorta, história familiar e demanda hemodinâmica do esporte pretendido",
+        "origem_secao": "Por que a aorta exige abordagem própria no atleta"
+      },
+      {
+        "id": "aortopatia-esporte-documentar-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Documentar a decisão compartilhada sobre participação esportiva em aortopatia hereditária, incluindo a ausência de ensaios controlados humanos de longo prazo que sustentem segurança de exercício de alta intensidade nessa população",
+        "origem_secao": "O que mudou na abordagem contemporânea"
+      },
+      {
+        "id": "aortopatia-esporte-reavaliacao-periodica-imagem",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar reavaliação de imagem seriada da aorta em atleta com aortopatia hereditária ou dilatação limítrofe, revisando a liberação esportiva à medida que o fenótipo ou a aorta evoluam",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Os itens derivam do documento já verificado citado em documento_origem, com a seção de origem registrada em cada item e as referências primárias (statement AHA/ACC 2025, PMID 39973614; meta-análise de diâmetro aórtico em atletas, PMID 39590649; revisão de aortopatia hereditária e esporte, PMID 35710275) reaproveitadas literalmente."
   }
 ]
