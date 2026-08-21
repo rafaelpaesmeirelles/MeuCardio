@@ -18146,5 +18146,233 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-antes-de-iniciar-finerenona-na-drc-diabetica",
+    "condicao": "Avaliação antes de iniciar finerenona na doença renal crônica diabética",
+    "resumo": "O que confirmar antes de prescrever finerenona a um paciente diabético tipo 2 com doença renal crônica, com base no perfil de população e nos desfechos distintos de FIDELIO-DKD (foco renal) e FIGARO-DKD (foco cardiovascular, impulsionado por hospitalização por IC).",
+    "documento_origem": "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bakris GL, Agarwal R, Anker SD, et al; FIDELIO-DKD Investigators. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383(23):2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825",
+      "Pitt B, Filippatos G, Agarwal R, et al; FIGARO-DKD Investigators. Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes. N Engl J Med. 2021;385(24):2252-2263. DOI: 10.1056/NEJMoa2110956. PMID: 34449181"
+    ],
+    "itens": [
+      {
+        "id": "fine-fidelity-inclusao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente é diabético tipo 2 com doença renal crônica e albuminúria, já em bloqueio otimizado do sistema renina-angiotensina — perfil de inclusão comum aos dois ensaios pivotais",
+        "origem_secao": "Fidelio-dkd — doenca renal cronica mais avancada"
+      },
+      {
+        "id": "fine-fidelity-perfil-renal-vs-cv",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Verificado o perfil de gravidade renal do paciente: TFGe mais reduzida (perfil FIDELIO-DKD, 25 a <75 mL/min/1,73m², com falência renal como desfecho central) ou espectro mais amplo, incluindo doença mais leve (perfil FIGARO-DKD, 25 a 90 mL/min/1,73m², com desfecho cardiovascular central)",
+        "origem_secao": "Figaro-dkd — espectro mais amplo de doenca renal, foco cardiovascular"
+      },
+      {
+        "id": "fine-fidelity-tfge-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TFGe basal registrada antes de decidir sobre o início, para situar o paciente na faixa de gravidade renal estudada nos ensaios",
+        "origem_secao": "Fidelio-dkd — doenca renal cronica mais avancada"
+      },
+      {
+        "id": "fine-fidelity-potassio-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio sérico basal registrado antes do início — a descontinuação por hiperpotassemia foi mais que o dobro no grupo finerenona em relação ao placebo no FIDELIO-DKD",
+        "origem_secao": "Fidelio-dkd — doenca renal cronica mais avancada"
+      },
+      {
+        "id": "fine-fidelity-complementar-isglt2",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Finerenona considerada como proteção cardiorrenal complementar ao iSGLT2, não substituta — os dois mecanismos foram sustentados juntos, não um em vez do outro",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "fine-fidelity-beneficio-esperado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre o tipo de benefício esperado conforme seu perfil: redução de progressão para falência renal (achado central do FIDELIO-DKD) e/ou redução de eventos cardiovasculares, principalmente por menor hospitalização por insuficiência cardíaca (achado central do FIGARO-DKD)",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "fine-fidelity-risco-hiperpotassemia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre o risco de hiperpotassemia como possível motivo de suspensão do tratamento, consistente com o mecanismo antagonista mineralocorticoide da finerenona",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "fine-fidelity-seguimento-lab",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação laboratorial (potássio e função renal) agendada após o início, dado o risco de hiperpotassemia observado nos ensaios e a necessidade de monitorização contínua do antagonista mineralocorticoide",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de evidência já verificado citado em source_refs (FIDELIO-DKD, FIGARO-DKD e a análise agrupada FIDELITY), com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "decisao-sobre-profilaxia-com-carvedilol-antes-de-antraciclina",
+    "condicao": "Decisão sobre profilaxia com carvedilol antes de quimioterapia com antraciclina",
+    "resumo": "O que avaliar antes de decidir por profilaxia com carvedilol em paciente exposto a antraciclina, com base no seguimento final de 96 semanas do CECCY — que não sustenta uso universal em população de baixo risco, mas também não descarta benefício individualizado em perfil de maior risco.",
+    "documento_origem": "carvedilol-na-prevencao-de-cardiotoxicidade-por-antraciclina-seguimento-final-ceccy-96-semanas",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ayub-Ferreira SM, Avila MS, de Barros Wanderley MR Jr, et al. Carvedilol for Prevention of Chemotherapy-Induced Cardiotoxicity: Final Results of the CECCY Trial. JACC CardioOncol. 2026;8(2):189-191. DOI: 10.1016/j.jaccao.2025.12.009. PMID: 41774036. PMCID: PMC13133662 — texto integral aberto e resultados de 96 semanas conferidos em 08/08/2026.",
+      "Avila MS, Ayub-Ferreira SM, de Barros Wanderley MR Jr, et al. Carvedilol for Prevention of Chemotherapy-Related Cardiotoxicity: The CECCY Trial. J Am Coll Cardiol. 2018;71(20):2281-2290. DOI: 10.1016/j.jacc.2018.02.049. PMID: 29540327 — publicação original de 6 meses."
+    ],
+    "itens": [
+      {
+        "id": "carv-ceccy-eco-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "FEVE basal registrada por ecocardiograma antes do início da antraciclina, para servir de referência de comparação no seguimento",
+        "origem_secao": "Desenho e seguimento"
+      },
+      {
+        "id": "carv-ceccy-perfil-baixo-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se o perfil do paciente corresponde ao da população estudada — baixo risco cardiovascular basal e exposição a dose cumulativa relativamente baixa de antraciclina — cenário em que o CECCY não demonstrou benefício sistólico do carvedilol",
+        "origem_secao": "Por que o ensaio pode ter sido neutro"
+      },
+      {
+        "id": "carv-ceccy-fatores-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificados fatores que mudam o perfil de risco-benefício e não foram cobertos pelo CECCY isoladamente: maior risco cardiovascular basal, maior exposição a antraciclina, doença cardiovascular prévia, biomarcadores anormais ou combinação com outra terapia cardiotóxica",
+        "origem_secao": "Relação com prevenção baseada em risco"
+      },
+      {
+        "id": "carv-ceccy-nao-universal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Profilaxia universal com carvedilol em paciente de baixo risco NÃO adotada com base isolada no CECCY — o desfecho primário de queda de FEVE ≥10% em 96 semanas foi neutro (10,4% vs. 11,4%, sem diferença estatística)",
+        "origem_secao": "O resultado central"
+      },
+      {
+        "id": "carv-ceccy-estrategia-guiada-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Adotada estratégia de cardioproteção guiada por risco individual, em vez de uso profilático indiscriminado de betabloqueador em toda exposição a antraciclina",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "carv-ceccy-titulacao-tolerabilidade",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se optar por carvedilol em paciente de maior risco individualizado: titulação conforme tolerabilidade e limites de segurança hemodinâmica (frequência cardíaca e pressão arterial), sempre conforme prescrição médica",
+        "origem_secao": "Desenho e seguimento"
+      },
+      {
+        "id": "carv-ceccy-eco-seriado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se optar por vigilância ecocardiográfica seriada durante e após a antraciclina, considerar o padrão de intervalos usado no estudo (semanas 6, 12, 24, 48 e 96) como referência de acompanhamento longitudinal",
+        "origem_secao": "Desenho e seguimento"
+      },
+      {
+        "id": "carv-ceccy-biomarcador-hipotese",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe e paciente orientados de que sinais favoráveis em troponina e função diastólica observados precocemente são geradores de hipótese, e não devem ser interpretados isoladamente como prova de prevenção de cardiotoxicidade clínica",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de evidência já verificado citado em source_refs (seguimento final do CECCY em 96 semanas), com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-cardiovascular-da-sindrome-de-lise-tumoral",
+    "condicao": "Reconhecimento e manejo cardiovascular da síndrome de lise tumoral",
+    "resumo": "Checklist de emergência oncometabólica: hipercalemia e hipocalcemia agudas da lise tumoral são gatilho direto de arritmia maligna, com prevenção dependente de reconhecer o risco antes do início da citorredução, não de vigilância pós-evento.",
+    "documento_origem": "sindrome-de-lise-tumoral-disturbio-eletrolitico-e-risco-arritmico",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. Br J Haematol. 2004;127(1):3-11. DOI: 10.1111/j.1365-2141.2004.05094.x. PMID: 15384972",
+      "Cairo MS, Coiffier B, Reiter A, Younes A; TLS Expert Panel. Recommendations for the evaluation of risk and prophylaxis of tumour lysis syndrome (TLS) in adults and children with malignant diseases: an expert TLS panel consensus. Br J Haematol. 2010;149(4):578-586. DOI: 10.1111/j.1365-2141.2010.08143.x. PMID: 20331465",
+      "Adeyinka A, Kaur A, Bashir K. Tumor Lysis Syndrome. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 5/10/2024. PMID: 30085527. Bookshelf ID: NBK518985 — fonte secundária para os cortes numéricos exatos dos critérios de Cairo-Bishop; VERIFICAÇÃO HUMANA NECESSÁRIA para conferir esses cortes diretamente no texto completo do artigo original de Cairo & Bishop 2004"
+    ],
+    "itens": [
+      {
+        "id": "slt-risco-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificado, ANTES do início da citorredução, se o paciente é de alto risco de síndrome de lise tumoral (por exemplo linfoma de Burkitt avançado ou leucemia linfoblástica aguda com leucometria/LDH elevados) — a prevenção depende de reconhecer o risco antes do evento, não de vigilância pós-sintoma",
+        "origem_secao": "Estratificacao de risco (consenso de 2010)"
+      },
+      {
+        "id": "slt-lab-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Eletrólitos basais colhidos antes do início da citorredução em paciente de risco intermediário ou alto: ácido úrico, potássio, fósforo, cálcio e função renal",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-ecg-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Eletrocardiograma disponível como ferramenta de avaliação em paciente com lise tumoral confirmada ou suspeita, para identificar alterações de repolarização e condução relacionadas a hipercalemia e hipocalcemia",
+        "origem_secao": "Por que hipercalemia e hipocalcemia sao a via de risco arritmico"
+      },
+      {
+        "id": "slt-lab-criterio-24h",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Lise tumoral laboratorial reconhecida diante de 2 ou mais alterações eletrolíticas no mesmo período de 24 horas (ácido úrico, potássio, fósforo, cálcio) — cortes numéricos exatos com verificação humana necessária, por virem de fonte secundária que cita a classificação original",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-clinica-criterio",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Lise tumoral clínica reconhecida quando a lise laboratorial se associa a creatinina elevada, convulsão OU arritmia cardíaca/morte súbita — a arritmia é um dos critérios que define o quadro como grave, não uma complicação incidental",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-monitorizacao-24-72h",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Eletrólitos e ECG monitorizados de perto nas primeiras 24-72 horas após o início da citorredução em paciente de alto risco, sem aguardar sintoma cardíaco para checar potássio e cálcio",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "slt-profilaxia-hiperuricemia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Profilaxia da hiperuricemia com alopurinol no risco baixo a intermediário, ou com rasburicase no risco alto, conforme prescrição médica",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-g6pd-rastreio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Deficiência de glicose-6-fosfato desidrogenase (G6PD) rastreada ou ativamente questionada antes de prescrever rasburicase — contraindicação ou uso com extrema cautela, pelo risco de metemoglobinemia grave ou anemia hemolítica",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-hidratacao-vigilancia",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Hidratação intravenosa vigorosa mantida como base da prevenção em paciente de alto risco, com vigilância adicional de sobrecarga volêmica em paciente com disfunção ventricular de base",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-orientacao-equipe",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe assistencial orientada de que arritmia cardíaca e morte súbita fazem parte da própria definição de lise tumoral clínica, e não devem ser tratadas como complicação rara ou tardia",
+        "origem_secao": "Sintese pratica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de protocolo já verificado citado em source_refs, com a seção de origem registrada em cada item e a ressalva de verificação humana preservada onde o próprio documento a registra."
   }
 ]
