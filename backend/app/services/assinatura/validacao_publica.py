@@ -1,21 +1,23 @@
 """Validação pública e download seguro do PDF clínico efetivamente emitido.
 
-O QR/código público é uma capability não enumerável derivada de HMAC. Códigos
-novos usam 128 bits (32 hex) e podem liberar o download do PDF original
-assinado; os códigos legados de 64 bits (16 hex) continuam válidos para
-consulta de autenticidade, mas NÃO liberam o arquivo clínico.
+Há dois formatos compatíveis:
+- legado: ``R<ref>-<16hex>`` / ``D<ref>-<16hex>``, HMAC determinístico usado
+  nas emissões anteriores; continua autenticando metadados, mas não libera PDF;
+- atual: ``R<ref>-<32hex>`` / ``D<ref>-<32hex>``, capability aleatória de
+  128 bits gerada POR EMISSÃO. O banco guarda somente SHA-256 da capability.
 
-Formato: R<id>-<MAC> para receituário e D<id>-<MAC> para documento clínico.
-O MAC inclui tipo, referência e emissor e usa segredo de servidor, portanto não
-pode ser fabricado conhecendo apenas um id sequencial.
+O formato atual amarra o QR a um ``DocumentoEmitido`` imutável específico.
+Assim, duas assinaturas/emissões da mesma referência recebem códigos diferentes
+e um QR antigo nunca passa silenciosamente a apontar para uma emissão posterior.
 """
 from __future__ import annotations
 
 import hashlib
 import hmac
 import re
+import secrets
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy.orm import Session
 
@@ -29,42 +31,62 @@ _PREFIXOS = {
 }
 _TIPOS = {valor: chave for chave, valor in _PREFIXOS.items()}
 _MAC_HEX_LEGADO = 16
-_MAC_HEX_ATUAL = 32
+_TOKEN_HEX_ATUAL = 32
 _CODIGO_RE = re.compile(r"^([RD])(\d+)-([0-9A-F]{16}|[0-9A-F]{32})$")
-
-
-def _mac_completo(tipo: str, referencia_id: int, criado_por: int) -> str:
-    segredo_base = settings.storage_encryption_key or settings.jwt_secret
-    segredo = segredo_base.encode("utf-8")
-    payload = f"corvia-documento-v1:{tipo}:{referencia_id}:{criado_por}".encode("utf-8")
-    return hmac.new(segredo, payload, hashlib.sha256).hexdigest().upper()
-
-
-def _mac(tipo: str, referencia_id: int, criado_por: int, *, tamanho: int = _MAC_HEX_ATUAL) -> str:
-    return _mac_completo(tipo, referencia_id, criado_por)[:tamanho]
 
 
 def normalizar_codigo(codigo: str) -> str:
     return (codigo or "").strip().upper().replace(" ", "")
 
 
+def _mac_legado(tipo: str, referencia_id: int, criado_por: int) -> str:
+    segredo_base = settings.storage_encryption_key or settings.jwt_secret
+    segredo = segredo_base.encode("utf-8")
+    payload = f"corvia-documento-v1:{tipo}:{referencia_id}:{criado_por}".encode("utf-8")
+    return hmac.new(segredo, payload, hashlib.sha256).hexdigest().upper()[:_MAC_HEX_LEGADO]
+
+
+def _hash_capability(codigo: str) -> str:
+    return hashlib.sha256(normalizar_codigo(codigo).encode("ascii")).hexdigest()
+
+
 def codigo_documento(*, tipo: str, referencia_id: int, criado_por: int) -> str:
-    """Gera o código forte atual. Códigos legados continuam aceitos em localizar()."""
+    """Reconstitui o código LEGADO de 64 bits para compatibilidade histórica."""
     prefixo = _PREFIXOS.get(tipo)
     if prefixo is None:
         raise ValueError(f"Tipo de documento não suportado para validação pública: {tipo}")
-    return f"{prefixo}{referencia_id}-{_mac(tipo, referencia_id, criado_por)}"
+    return f"{prefixo}{referencia_id}-{_mac_legado(tipo, referencia_id, criado_por)}"
 
 
 def url_documento(*, tipo: str, referencia_id: int, criado_por: int) -> str:
+    """URL histórica; novas emissões usam ``novo_codigo_documento``."""
     codigo = codigo_documento(tipo=tipo, referencia_id=referencia_id, criado_por=criado_por)
-    return f"{settings.public_url.rstrip('/')}/validar/{codigo}"
+    return url_para_codigo(codigo)
+
+
+@dataclass(frozen=True)
+class CodigoNovo:
+    codigo: str
+    hash_persistido: str
+
+
+def novo_codigo_documento(*, tipo: str, referencia_id: int) -> CodigoNovo:
+    prefixo = _PREFIXOS.get(tipo)
+    if prefixo is None:
+        raise ValueError(f"Tipo de documento não suportado para validação pública: {tipo}")
+    token = secrets.token_hex(16).upper()  # 128 bits não enumeráveis
+    codigo = f"{prefixo}{referencia_id}-{token}"
+    return CodigoNovo(codigo=codigo, hash_persistido=_hash_capability(codigo))
+
+
+def url_para_codigo(codigo: str) -> str:
+    return f"{settings.public_url.rstrip('/')}/validar/{normalizar_codigo(codigo)}"
 
 
 def codigo_permite_download(codigo: str) -> bool:
-    """Só capability de 128 bits libera o PDF; QR legado permanece validação-only."""
+    """Somente a capability aleatória atual pode liberar conteúdo clínico."""
     match = _CODIGO_RE.fullmatch(normalizar_codigo(codigo))
-    return bool(match and len(match.group(3)) == _MAC_HEX_ATUAL)
+    return bool(match and len(match.group(3)) == _TOKEN_HEX_ATUAL)
 
 
 def localizar(db: Session, codigo: str) -> DocumentoEmitido | None:
@@ -72,9 +94,25 @@ def localizar(db: Session, codigo: str) -> DocumentoEmitido | None:
     match = _CODIGO_RE.fullmatch(normalizado)
     if not match:
         return None
-    prefixo, referencia, mac_recebido = match.groups()
+    prefixo, referencia, segredo_recebido = match.groups()
     tipo = _TIPOS[prefixo]
     referencia_id = int(referencia)
+
+    if len(segredo_recebido) == _TOKEN_HEX_ATUAL:
+        # Nova capability: localiza exatamente a emissão que criou aquele QR.
+        return (
+            db.query(DocumentoEmitido)
+            .filter(
+                DocumentoEmitido.tipo == tipo,
+                DocumentoEmitido.referencia_id == referencia_id,
+                DocumentoEmitido.validation_token_hash == _hash_capability(normalizado),
+            )
+            .first()
+        )
+
+    # Compatibilidade com QR legado. Como o formato antigo não tinha identidade
+    # por emissão, só pode continuar como validação de autenticidade, nunca como
+    # credencial de download do PDF.
     registro = (
         db.query(DocumentoEmitido)
         .filter(
@@ -86,10 +124,8 @@ def localizar(db: Session, codigo: str) -> DocumentoEmitido | None:
     )
     if registro is None:
         return None
-    # Compatibilidade: valida o prefixo do HMAC com o mesmo tamanho do código
-    # recebido. Novo = 32 hex; legado = 16 hex.
-    esperado = _mac(tipo, referencia_id, registro.criado_por, tamanho=len(mac_recebido))
-    if not hmac.compare_digest(esperado, mac_recebido):
+    esperado = _mac_legado(tipo, referencia_id, registro.criado_por)
+    if not hmac.compare_digest(esperado, segredo_recebido):
         return None
     return registro
 
@@ -106,6 +142,12 @@ def _fluxo_assinatura(registro: DocumentoEmitido) -> tuple[str, str]:
             "PDF assinado fora do CorVIA e reimportado; o CorVIA conferiu a assinatura embutida e a integridade do arquivo.",
         )
     return "sem_assinatura", "Documento sem assinatura digital concluída."
+
+
+def _utc(valor: datetime) -> datetime:
+    if valor.tzinfo is None:
+        return valor.replace(tzinfo=timezone.utc)
+    return valor.astimezone(timezone.utc)
 
 
 @dataclass(frozen=True)
@@ -148,8 +190,9 @@ def validar(registro: DocumentoEmitido) -> ResultadoValidacao:
     assinado_em = assinatura.assinado_em if assinatura else registro.assinado_em
     certificado_valido_no_momento: bool | None = None
     if assinatura and assinado_em is not None:
+        momento = _utc(assinado_em)
         certificado_valido_no_momento = bool(
-            assinatura.valido_de <= assinado_em <= assinatura.valido_ate
+            _utc(assinatura.valido_de) <= momento <= _utc(assinatura.valido_ate)
         )
     info = catalogo.info(registro.metodo)
     fluxo, fluxo_descricao = _fluxo_assinatura(registro)

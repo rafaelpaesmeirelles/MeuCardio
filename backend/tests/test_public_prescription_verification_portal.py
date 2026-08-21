@@ -2,6 +2,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
+from app.models.assinatura import DocumentoEmitido
 from app.services.assinatura import validacao_publica
 
 
@@ -9,17 +10,48 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_codigo_novo_tem_128_bits_e_legado_fica_validacao_only():
-    codigo = validacao_publica.codigo_documento(
+    novo = validacao_publica.novo_codigo_documento(
+        tipo="prescription_document", referencia_id=123,
+    )
+    prefixo, token = novo.codigo.split("-", 1)
+    assert prefixo == "R123"
+    assert len(token) == 32
+    assert len(novo.hash_persistido) == 64
+    assert validacao_publica.codigo_permite_download(novo.codigo) is True
+
+    legado = validacao_publica.codigo_documento(
         tipo="prescription_document", referencia_id=123, criado_por=7,
     )
-    prefixo, mac = codigo.split("-", 1)
-    assert prefixo == "R123"
-    assert len(mac) == 32
-    assert validacao_publica.codigo_permite_download(codigo) is True
-
-    legado = f"R123-{mac[:16]}"
+    assert len(legado.split("-", 1)[1]) == 16
     assert validacao_publica.codigo_permite_download(legado) is False
     assert validacao_publica.normalizar_codigo(f"  {legado.lower()}  ") == legado
+
+
+def test_capability_nova_e_unica_por_emissao_e_localiza_artefato_exato(db, criar_usuario):
+    user, _token = criar_usuario(email="capability-emissao@teste.local")
+    primeiro = validacao_publica.novo_codigo_documento(
+        tipo="prescription_document", referencia_id=500,
+    )
+    segundo = validacao_publica.novo_codigo_documento(
+        tipo="prescription_document", referencia_id=500,
+    )
+    assert primeiro.codigo != segundo.codigo
+
+    r1 = DocumentoEmitido(
+        tipo="prescription_document", referencia_id=500, metodo="MANUAL", nivel="nenhuma",
+        arquivo_nome="primeiro.enc", sha256="a" * 64, bytes_tam=1,
+        validation_token_hash=primeiro.hash_persistido, criado_por=user.id,
+    )
+    r2 = DocumentoEmitido(
+        tipo="prescription_document", referencia_id=500, metodo="MANUAL", nivel="nenhuma",
+        arquivo_nome="segundo.enc", sha256="b" * 64, bytes_tam=1,
+        validation_token_hash=segundo.hash_persistido, criado_por=user.id,
+    )
+    db.add_all([r1, r2])
+    db.commit()
+
+    assert validacao_publica.localizar(db, primeiro.codigo).id == r1.id
+    assert validacao_publica.localizar(db, segundo.codigo).id == r2.id
 
 
 def test_validacao_expoe_certificado_real_e_distingue_assinatura_no_corvia(monkeypatch):
@@ -41,8 +73,8 @@ def test_validacao_expoe_certificado_real_e_distingue_assinatura_no_corvia(monke
         titular_cn="MEDICO TESTE",
         emissor_cn="AC TESTE ICP-BRASIL",
         numero_serie="123456789",
-        valido_de=agora - timedelta(days=30),
-        valido_ate=agora + timedelta(days=30),
+        valido_de=(agora - timedelta(days=30)).replace(tzinfo=None),
+        valido_ate=(agora + timedelta(days=30)).replace(tzinfo=None),
         assinado_em=agora,
         politicas_certificado=("2.16.76.1.2.1.1",),
         qualificada_icp_brasil=True,
@@ -72,7 +104,6 @@ def test_portal_publico_nao_expoe_conteudo_clinico_e_oferece_duas_acoes():
     assert '"numero_serie_certificado"' in api
     assert '"certificado_valido_no_momento_assinatura"' in api
 
-    # O payload público de validação não inclui itens, CID nem destinatário.
     bloco = api[api.index('@router.get("/validar/{codigo}")'):api.index('@router.get("/validar/{codigo}/pdf")')]
     assert '"itens"' not in bloco
     assert '"cid"' not in bloco

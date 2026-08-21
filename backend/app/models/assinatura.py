@@ -53,6 +53,13 @@ class DocumentoEmitido(Base):
     sha256: Mapped[str] = mapped_column(String(64))
     bytes_tam: Mapped[int] = mapped_column(Integer)
 
+    # Capability de validação/download por EMISSÃO. O QR contém 128 bits
+    # aleatórios; o banco guarda somente SHA-256 do código completo. Nullable
+    # para todos os documentos históricos, que continuam com o HMAC legado.
+    validation_token_hash: Mapped[str | None] = mapped_column(
+        String(64), unique=True, index=True, nullable=True
+    )
+
     # Nula quando metodo == "MANUAL" (não houve assinatura, só emissão).
     assinado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
