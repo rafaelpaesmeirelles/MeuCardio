@@ -20168,5 +20168,98 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-agudo-de-pres-por-terapia-antiangiogenica",
+    "condicao": "Reconhecimento e manejo agudo da Síndrome de Encefalopatia Posterior Reversível (PRES) por terapia antiangiogênica",
+    "resumo": "O que checar diante de suspeita de PRES em paciente sob bevacizumabe ou inibidor de tirosina-quinase anti-VEGF: o perfil clínico de quem desenvolve o quadro, por que pressão arterial normal não descarta o diagnóstico, e a conduta pressórica aguda que difere da crise hipertensiva comum — derivado do documento dedicado já publicado neste tema.",
+    "documento_origem": "sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Tlemsani C, Mir O, Boudou-Rouquette P, Huillard O, Maley K, Ropert S, Coriat R, Goldwasser F. Posterior reversible encephalopathy syndrome induced by anti-VEGF agents. Target Oncol. 2011;6(4):253-258. DOI: 10.1007/s11523-011-0201-0. PMID: 22090260 — revisão de 26 casos publicados de PRES sob agentes anti-VEGF (bevacizumabe e inibidores de tirosina-quinase)",
+      "Fischer M, Schmutzhard E. Posterior reversible encephalopathy syndrome. J Neurol. 2017;264(8):1608-1616. DOI: 10.1007/s00415-016-8377-8. PMID: 28054130. PMCID: PMC5533845 — revisão geral de mecanismo, apresentação e manejo pressórico agudo do PRES",
+      "AVASTIN (bevacizumab) — Prescribing Information, Genentech, Inc. DailyMed, setid 939b5d1f-9fb2-4499-80ef-0607aa6b114e, seção 5.7 Posterior Reversible Encephalopathy Syndrome. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=939b5d1f-9fb2-4499-80ef-0607aa6b114e — bula americana vigente, incidência e janela de início do PRES sob bevacizumabe"
+    ],
+    "itens": [
+      {
+        "id": "pres-antiang-quadro-clinico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido o quadro clínico sugestivo de PRES em paciente sob bevacizumabe ou inibidor de tirosina-quinase anti-VEGF (sunitinibe, sorafenibe): cefaleia, distúrbio visual e crise convulsiva são os sintomas mais comuns descritos na revisão de casos publicados",
+        "origem_secao": "Quem desenvolve PRES sob anti-VEGF: o que a revisão de 26 casos mostra"
+      },
+      {
+        "id": "pres-antiang-pa-normal-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não excluído PRES só pela pressão arterial normal ou apenas discretamente elevada — cerca de 30% dos casos gerais de PRES ocorrem sem a pressão ultrapassar o limite superior da autorregulação cerebral esperado",
+        "origem_secao": "Mecanismo: duas hipóteses, e por que o antiangiogênico se encaixa na segunda"
+      },
+      {
+        "id": "pres-antiang-perfil-de-risco",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerado o perfil descrito na revisão de casos: 73,1% dos pacientes eram mulheres, quase um terço tinha história prévia de hipertensão, e a grande maioria apresentava hipertensão no momento do diagnóstico de PRES",
+        "origem_secao": "Quem desenvolve PRES sob anti-VEGF: o que a revisão de 26 casos mostra"
+      },
+      {
+        "id": "pres-antiang-proteinuria",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Investigada proteinúria como marcador de maior atenção clínica — na revisão de casos, proteinúria esteve presente sempre que foi pesquisada, e a fonte associa risco aumentado de PRES à combinação de pressão mal controlada com proteinúria detectável",
+        "origem_secao": "Quem desenvolve PRES sob anti-VEGF: o que a revisão de 26 casos mostra"
+      },
+      {
+        "id": "pres-antiang-janela-de-inicio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não descartado PRES pelo paciente estar em uso de bevacizumabe há muitos meses — a bula vigente registra início dos sintomas entre 16 horas e 1 ano após a primeira dose, janela ampla que não permite descarte por tempo de tratamento",
+        "origem_secao": "O que a bula do bevacizumabe registra — número real, não estimativa"
+      },
+      {
+        "id": "pres-antiang-controle-pressorico-agudo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na crise hipertensiva associada a PRES: reduzida a pressão arterial média em cerca de 25% do valor basal por infusão contínua sob monitorização hemodinâmica, evitando flutuações pressóricas e bolus intermitente — o protocolo genérico de emergência hipertensiva não é aplicado sem essa ressalva específica do contexto neurológico",
+        "origem_secao": "Manejo agudo da pressão arterial — o ponto que diferencia o PRES da crise hipertensiva comum"
+      },
+      {
+        "id": "pres-antiang-controle-e-seguranca-nao-terapia",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Não assumido que o controle pressórico rígido acelera a resolução clínica ou radiológica do PRES — não há evidência de estudos prospectivos controlados disso; o controle da pressão é medida de segurança geral, não terapia comprovadamente modificadora do quadro em si",
+        "origem_secao": "Manejo agudo da pressão arterial — o ponto que diferencia o PRES da crise hipertensiva comum"
+      },
+      {
+        "id": "pres-antiang-suspensao-do-agente",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Descontinuado o agente antiangiogênico (bevacizumabe ou inibidor de tirosina-quinase anti-VEGF) diante do diagnóstico de PRES, conforme a bula vigente — os sintomas geralmente resolvem ou melhoram em dias após a suspensão",
+        "origem_secao": "O que a bula do bevacizumabe registra — número real, não estimativa"
+      },
+      {
+        "id": "pres-antiang-nao-reiniciar-automatico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não reiniciado o antiangiogênico automaticamente após resolução do quadro — a segurança de reintrodução após um episódio de PRES não é conhecida, e a bula não recomenda nem proíbe, apenas registra a lacuna",
+        "origem_secao": "O que a bula do bevacizumabe registra — número real, não estimativa"
+      },
+      {
+        "id": "pres-antiang-monitorar-convulsao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Monitorada a ocorrência de crise convulsiva na fase aguda — presente em cerca de dois terços dos pacientes na revisão geral, com status epilepticus em 3-13% — e o desfecho neurológico na alta, dado que uma série citada registrou Rankin modificado 2-6 em 36% dos pacientes",
+        "origem_secao": "Desfechos: reversível na maioria, sem ser trivial"
+      },
+      {
+        "id": "pres-antiang-neurologia-conjunta",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Envolvida a neurologia na avaliação de imagem e no manejo de crise convulsiva na fase aguda do PRES, dado o risco descrito de status epilepticus (3-13%)",
+        "origem_secao": "Desfechos: reversível na maioria, sem ser trivial"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
