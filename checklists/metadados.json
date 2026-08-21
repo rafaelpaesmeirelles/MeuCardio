@@ -20168,5 +20168,208 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "seguranca-anestesica-e-vigilancia-cardiologica-na-sindrome-de-williams",
+    "condicao": "Síndrome de Williams — estenose aórtica supravalvar, obstrução biventricular, hipertensão por estenose de artéria renal, hipercalcemia e risco de morte súbita relacionada a anestesia",
+    "resumo": "Vigilância cardiológica por idade, manejo da estenose aórtica supravalvar, investigação da hipertensão e precauções antes de qualquer sedação ou anestesia na síndrome de Williams — arteriopatia sistêmica por deficiência de elastina com incidência de morte súbita 25 a 100 vezes maior que a população pareada por idade.",
+    "documento_origem": "sindrome-de-williams-estenose-aortica-supravalvar-obstrucao-biventricular-e-risco-de-morte-subita-relacionada-a-anestesia",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Morris CA. Williams Syndrome. 1999 Apr 9 [updated 2023 Apr 13]. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews(®) [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301427. Texto integral de acesso aberto no NCBI Bookshelf (https://www.ncbi.nlm.nih.gov/books/NBK1249/), lido via WebFetch pelo documento de origem — fonte da prevalência de estenose aórtica supravalvar (75%), de estenose de artéria pulmonar periférica (40-60%) e de artéria renal (50%), do protocolo de vigilância cardiológica por idade e do manejo da hipercalcemia.",
+      "Wessel A, Gravenhorst V, Buchhorn R, Gosch A, Partsch CJ, Pankau R. Risk of sudden death in the Williams-Beuren syndrome. Am J Med Genet A. 2004;127A(3):234-237. DOI: 10.1002/ajmg.a.30012. PMID: 15150772 — coorte de 293 pacientes acompanhados por 43 anos, 5.190 pacientes-ano, fonte primária da incidência de morte súbita de 1/1.000 pacientes-ano.",
+      "Schmidt AR, Collins RT 2nd, Adusumelli Y, Ramamoorthy C, Weng Y, MacMillen KL, Navaratnam M. Impact of Modified Anesthesia Management for Pediatric Patients With Williams Syndrome. J Cardiothorac Vasc Anesth. 2021;35(12):3667-3674. DOI: 10.1053/j.jvca.2021.04.019. PMID: 34049787 — coorte retrospectiva unicêntrica de 48 pacientes/118 anestesias gerais, fonte do protocolo perioperatório modificado.",
+      "Collins RT 2nd. Cardiovascular disease in Williams syndrome. Curr Opin Pediatr. 2018;30(5):609-615. DOI: 10.1097/MOP.0000000000000664. PMID: 30045083 — fonte da ineficácia da intervenção por cateter na SVAS e dos bons resultados da reconstrução cirúrgica multinível na estenose pulmonar periférica.",
+      "Lv L, Lang X, Zhang S, Wang C, Wang Q. Assessment of three types of surgical procedures for supravalvar aortic stenosis: A systematic review and meta-analysis. Front Cardiovasc Med. 2022;9:987522. DOI: 10.3389/fcvm.2022.987522. PMID: 36148069. PMCID: PMC9485597 — metanálise em rede de 27 estudos/1.162 pacientes comparando as três técnicas de reparo cirúrgico da SVAS."
+    ],
+    "itens": [
+      {
+        "id": "williams-svas-diagnostico-cardiopatia-nao-isolada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Síndrome de Williams reconhecida como arteriopatia sistêmica progressiva por deficiência de elastina, não como cardiopatia congênita estrutural isolada — qualquer artéria de médio/grande calibre pode ser acometida, inclusive coronárias e renais, não só a aorta supravalvar",
+        "origem_secao": "O que é; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-obstrucao-biventricular-maior-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença combinada de estenose aórtica supravalvar e estenose de artéria pulmonar periférica (obstrução biventricular) identificada como o cenário de maior risco de hipertrofia biventricular e de morte súbita, justificando vigilância cardiológica mais intensiva",
+        "origem_secao": "Obstrução biventricular: a combinação que mais preocupa"
+      },
+      {
+        "id": "williams-hipertensao-investigar-estenose-renal",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Hipertensão arterial em paciente com síndrome de Williams investigada para causa secundária (estenose de artéria renal, presente em até 50% dos pacientes) antes de ser tratada como essencial — a mesma arteriopatia elastínica que acomete aorta e pulmonares pode estreitar as renais",
+        "origem_secao": "Hipertensão arterial sistêmica e estenose de artéria renal; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-svas-corrigir-cirurgia-nao-cateter",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Estenose aórtica supravalvar moderada a grave encaminhada para correção cirúrgica, não para valvoplastia/angioplastia por balão — intervenção por cateter é largamente ineficaz nessa lesão específica",
+        "origem_secao": "Correção cirúrgica: técnica importa; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-svas-tecnica-duas-placas",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Técnica cirúrgica de duas placas considerada preferencial para SVAS complexa/grave, por associar-se a menor taxa de reintervenção que o reparo com placa única e que o reparo com três placas, com tempo de pinçamento aórtico relativamente razoável",
+        "origem_secao": "Correção cirúrgica: técnica importa"
+      },
+      {
+        "id": "williams-estenose-pulmonar-nao-intervir-de-rotina",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Estenose de artéria pulmonar periférica não indicada para intervenção de rotina apenas por ser frequente (40-60% dos pacientes) — na maioria dos casos melhora espontaneamente, ao contrário da estenose aórtica supravalvar; reconstrução multinível reservada aos casos extensos e sintomáticos",
+        "origem_secao": "Estenose de artéria pulmonar periférica: a lesão que geralmente melhora sozinha; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-anestesia-avaliacao-previa-obrigatoria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Consulta com anestesiologista e eletrocardiograma realizados antes de qualquer procedimento sob sedação ou anestesia, mesmo procedimento não cardíaco ou considerado 'menor' — a morte súbita relacionada a anestesia relatada na literatura não se restringe a cirurgia cardíaca",
+        "origem_secao": "Anestesia e sedação: por que todo procedimento é de risco aumentado; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-anestesia-centro-com-recursos-de-rcp",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Procedimento sob sedação ou anestesia realizado em centro com recursos de ressuscitação cardiopulmonar disponíveis, dado o risco de parada cardíaca associado à síndrome",
+        "origem_secao": "Anestesia e sedação: por que todo procedimento é de risco aumentado"
+      },
+      {
+        "id": "williams-anestesia-protocolo-modificado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Protocolo de manejo perioperatório modificado considerado — estratificação de risco em três estágios, hidratação intravenosa pré-operatória, indução anestésica intravenosa em vez de inalatória e uso precoce de vasoativos contínuos —, associado a maior estabilidade hemodinâmica na queda percentual da pressão arterial sistólica após a indução; a redução de eventos cardíacos adversos de 6% para 2% observada no mesmo estudo não atingiu significância estatística e não deve ser lida como benefício comprovado",
+        "origem_secao": "Evidência de que um protocolo estruturado reduz risco; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-hipercalcemia-evitar-multivitaminico-com-vitamina-d",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Multivitamínico infantil padrão não prescrito sem checar a composição — todas as formulações pediátricas contêm vitamina D, e a criança com síndrome de Williams tem risco basal de hipercalcemia (20-40% dos casos, tipicamente antes dos 2 anos)",
+        "origem_secao": "Hipercalcemia: manejo específico da síndrome; Armadilhas clínicas"
+      },
+      {
+        "id": "williams-hipercalcemia-dieta-e-hidratacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ingestão de cálcio na dieta ajustada para não superar 100% da recomendação diária (RDI) e aumento da ingestão hídrica orientados como primeiras medidas diante de hipercalcemia",
+        "origem_secao": "Hipercalcemia: manejo específico da síndrome"
+      },
+      {
+        "id": "williams-vigilancia-cardiologica-periodicidade",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Avaliação cardiológica com ecocardiograma e eletrocardiograma agendada pelo menos anualmente até os 5 anos de idade, e a cada 2 a 3 anos depois disso; pressão arterial aferida nos dois braços, relação cálcio/creatinina urinária e urinálise anualmente; ultrassonografia renal e de bexiga a cada 10 anos",
+        "origem_secao": "Protocolo de vigilância cardiológica por idade"
+      },
+      {
+        "id": "williams-hipercalcemia-refrataria-corticosteroide-pamidronato",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Hipercalcemia refratária às medidas dietéticas considerada para corticosteroide oral; pamidronato intravenoso reservado a lactente com hipercalcemia sintomática grave — classe e via apenas, sem posologia definida na fonte",
+        "origem_secao": "Hipercalcemia: manejo específico da síndrome"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiologia pediátrica citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-da-obstrucao-coronaria-aguda-apos-tavi",
+    "condicao": "Obstrução coronária aguda após TAVI",
+    "resumo": "Reconhecimento imediato e manejo de resgate da obstrução ostial coronária pós-TAVI — causa rara e potencialmente fatal de choque, alteração de ST e parada cardiorrespiratória que exige angiografia e reperfusão em minutos.",
+    "documento_origem": "obstrucao-coronaria-aguda-apos-tavi",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ribeiro HB, Webb JG, Makkar RR, et al. Predictive factors, management, and clinical outcomes of coronary obstruction following transcatheter aortic valve implantation: insights from a large multicenter registry. J Am Coll Cardiol. 2013;62(17):1552-1562. DOI: 10.1016/j.jacc.2013.07.040. PMID: 23954337.",
+      "Long B, et al. Transcatheter aortic valve replacement complications: A narrative review for emergency clinicians. Am J Emerg Med. 2022. DOI: 10.1016/j.ajem.2022.03.042. PMID: 35367683.",
+      "Teles RC, Brito J. Coronary Obstruction During TAVR: A Rare Catastrophic Risk Requiring Anticipation, Vigilance, and Readiness. JACC Cardiovasc Interv. 2026;19(11):1420-1421. DOI: 10.1016/j.jcin.2026.05.001. PMID: 42264633.",
+      "Bruno HA, et al. TAVI and coronary interventions: indications, technical considerations, and clinical scenarios. EuroIntervention. 2026. PMID: 42219978."
+    ],
+    "itens": [
+      {
+        "id": "tavi-obstrucao-choque-e-diagnostico-ate-excluir",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Choque ou novo desnivelamento de ST após TAVI tratado como obstrução coronária até ser rapidamente excluído — hipotensão pós-TAVI não atribuída automaticamente a efeito de anestesia ou depleção de volume",
+        "origem_secao": "Regra prática; 1. Não atribuir choque pós-TAVI automaticamente a anestesia/volume"
+      },
+      {
+        "id": "tavi-obstrucao-sinais-de-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Obstrução coronária considerada diante de hipotensão/choque súbitos, nova elevação ou depressão de ST, taquicardia/fibrilação ventricular, parada cardiorrespiratória, nova disfunção regional de ventrículo esquerdo, dor torácica importante após aparente sucesso do procedimento, ou edema pulmonar abrupto, durante ou após o implante",
+        "origem_secao": "Quando suspeitar"
+      },
+      {
+        "id": "tavi-obstrucao-diferenciais-do-choque",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diagnóstico diferencial do choque pós-TAVI percorrido de forma sistemática — tamponamento, ruptura anular/aórtica, insuficiência aórtica grave/paravalvar, bloqueio atrioventricular completo, embolização/malposição da prótese, sangramento vascular, tromboembolismo pulmonar/embolia sistêmica —, além da obstrução coronária",
+        "origem_secao": "1. Não atribuir choque pós-TAVI automaticamente a anestesia/volume"
+      },
+      {
+        "id": "tavi-obstrucao-angiografia-imediata-sem-esperar-exame",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Angiografia/aortografia realizada imediatamente diante de suspeita de obstrução coronária, sem aguardar troponina seriada, tomografia ou evolução do eletrocardiograma em paciente instável",
+        "origem_secao": "2. Angiografia coronária imediata"
+      },
+      {
+        "id": "tavi-obstrucao-mobilizar-pci-e-suporte-simultaneo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Material de intervenção coronária percutânea e suporte hemodinâmico mobilizados simultaneamente à investigação, identificando se folheto, cálcio ou prótese cobre o óstio coronário",
+        "origem_secao": "2. Angiografia coronária imediata"
+      },
+      {
+        "id": "tavi-obstrucao-pci-resgate-primeira-linha",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Angioplastia coronária percutânea com stent ostial (técnica chimney/snorkel) empregada como estratégia de resgate mais frequente quando o óstio pode ser acessado",
+        "origem_secao": "3. PCI é a estratégia de resgate mais frequente"
+      },
+      {
+        "id": "tavi-obstrucao-escalonar-cirurgia-e-mcs",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Cirurgia cardíaca emergencial e/ou suporte circulatório mecânico (VA-ECMO) acionados sem demora quando o óstio não pode ser acessado ou a angioplastia de resgate falha, especialmente em choque ou parada refratários",
+        "origem_secao": "4. Se o óstio não pode ser acessado ou PCI falha"
+      },
+      {
+        "id": "tavi-obstrucao-acionar-heart-team-e-cirurgia-desde-o-reconhecimento",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Equipe estrutural e cirurgia cardíaca envolvidas desde o reconhecimento da suspeita em casos graves, não apenas depois da falha da angioplastia de resgate",
+        "origem_secao": "4. Se o óstio não pode ser acessado ou PCI falha"
+      },
+      {
+        "id": "tavi-obstrucao-valve-in-valve-risco-tardio",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Obstrução coronária mantida no diagnóstico diferencial de dor torácica ou choque nas horas seguintes a TAVI valve-in-valve, mesmo com angiografia inicial aparentemente aceitável — o risco de obstrução tardia é maior nessa modalidade, por deslocamento dos folhetos da bioprótese cirúrgica em direção aos óstios",
+        "origem_secao": "5. Valve-in-valve tem risco especial"
+      },
+      {
+        "id": "tavi-obstrucao-ct-pre-procedimento-anatomia-de-risco",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Tomografia computadorizada pré-procedimento avaliando altura dos óstios coronários, dimensões dos seios de Valsalva e distância virtual da válvula ao óstio (VTC) — particularmente em valve-in-valve — para identificar anatomia de alto risco e planejar proteção coronária antes do implante",
+        "origem_secao": "6. Prevenção em anatomia de alto risco"
+      },
+      {
+        "id": "tavi-obstrucao-reavaliacao-pos-reperfusao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Após reperfusão, reavaliados função ventricular, fluxo e posição do stent em relação à prótese TAVI, e necessidade de terapia antiplaquetária dupla conforme o protocolo de intervenção coronária percutânea e o risco hemorrágico do paciente — sem regime antitrombótico específico universal para esta complicação",
+        "origem_secao": "7. Após reperfusão"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiologia geriátrica citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
