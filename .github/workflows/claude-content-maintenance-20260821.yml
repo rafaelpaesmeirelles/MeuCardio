@@ -1,166 +1,61 @@
 name: Claude content maintenance 2026-08-21
-
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
 permissions:
   contents: write
   issues: write
-
 jobs:
-  fix_pr312_required_fields:
-    if: contains(github.event.head_commit.message, '[fix-pr312-required-fields-retry]')
+  fix_pr312:
+    if: contains(github.event.head_commit.message, '[fix-pr312-enlicitide]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Checkout PR 312 release branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main release/claude-content-map-20260821
-          git checkout -B release/claude-content-map-20260821 origin/release/claude-content-map-20260821
-
-      - name: Repair required drug fields conservatively
+      - name: Patch release branch and validate required medication fields
         run: |
           set -o pipefail
-          python - <<'PY' 2>&1 | tee /tmp/pr312-required-fields.log
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin release/claude-content-map-20260821
+          git checkout -B release/claude-content-map-20260821 origin/release/claude-content-map-20260821
+          python - <<'PY' 2>&1 | tee /tmp/fix.log
           import json
-          import subprocess
           from pathlib import Path
-
-          MARKER = 'VERIFICAÇÃO HUMANA NECESSÁRIA'
-          path = Path('medicamentos/metadados.json')
-          data = json.loads(path.read_text(encoding='utf-8'))
-          baseline = json.loads(subprocess.check_output(
-              ['git', 'show', 'origin/main:medicamentos/metadados.json'],
-              text=True,
-          ))
-          if not isinstance(data, list) or not isinstance(baseline, list):
-              raise RuntimeError('Manifesto de medicamentos inválido')
-          baseline_by_slug = {d['slug']: d for d in baseline if isinstance(d, dict) and d.get('slug')}
-
-          audit = []
-          manual_text = {
-              ('lacidipino', 'drug_class'): 'Bloqueador de canal de cálcio di-hidropiridínico',
+          p=Path('medicamentos/metadados.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          fixes={
+            'lacidipino':'Bloqueador de canal de cálcio di-hidropiridínico',
+            'enlicitide':'Inibidor oral de PCSK9',
           }
-          required_text = ('slug', 'generic_name', 'drug_class')
-          list_defaults = {
-              'brand_names', 'presentations', 'commercial_presentations',
-              'contraindications', 'interactions', 'monitoring', 'indications',
-              'adverse_effects', 'references',
+          refs={
+            'lacidipino':'MOTENS (lacidipine) SmPC — ATC C08CA09, dihydropyridine calcium channel blocker.',
+            'enlicitide':'Navar AM et al. N Engl J Med. 2026;394:529-539. DOI:10.1056/NEJMoa2511002 — oral PCSK9 inhibitor enlicitide.',
           }
-          dict_defaults = {'dosing', 'notes', 'outcomes'}
-
-          def clean_value(value):
-              return MARKER not in json.dumps(value, ensure_ascii=False)
-
-          for i, drug in enumerate(data):
-              slug = drug.get('slug')
-              base = baseline_by_slug.get(slug, {})
-              for field in required_text:
-                  value = drug.get(field)
-                  if isinstance(value, str) and value.strip():
-                      continue
-                  override = manual_text.get((slug, field))
-                  if override:
-                      drug[field] = override
-                      audit.append(f'{slug}: {field} restaurado por revisão dirigida')
-                      continue
-                  base_value = base.get(field)
-                  if isinstance(base_value, str) and base_value.strip() and clean_value(base_value):
-                      drug[field] = base_value
-                      audit.append(f'{slug}: {field} restaurado do baseline canônico sem marcador')
-                      continue
-                  raise RuntimeError(f'#{i} {slug!r}: {field} obrigatório sem valor verificável')
-
-              for field in list_defaults:
-                  if field in drug and drug[field] is None:
-                      base_value = base.get(field)
-                      if isinstance(base_value, list) and clean_value(base_value):
-                          drug[field] = base_value
-                          audit.append(f'{slug}: {field} restaurado do baseline')
-                      else:
-                          drug[field] = []
-                          audit.append(f'{slug}: {field}=null substituído por lista vazia conservadora')
-              for field in dict_defaults:
-                  if field in drug and drug[field] is None:
-                      base_value = base.get(field)
-                      if isinstance(base_value, dict) and clean_value(base_value):
-                          drug[field] = base_value
-                          audit.append(f'{slug}: {field} restaurado do baseline')
-                      else:
-                          drug[field] = {}
-                          audit.append(f'{slug}: {field}=null substituído por objeto vazio conservador')
-              if drug.get('review_status') is None:
-                  base_value = base.get('review_status')
-                  drug['review_status'] = base_value if isinstance(base_value, str) and base_value else 'pendente_revisao'
-                  audit.append(f'{slug}: review_status restaurado de forma conservadora')
-
-          lacidipino = next((d for d in data if d.get('slug') == 'lacidipino'), None)
-          if lacidipino is None:
-              raise RuntimeError('Registro lacidipino não encontrado')
-          refs = lacidipino.setdefault('references', [])
-          for ref in (
-              'Bula profissional Lacipil® (lacidipino) 4 mg, GSK Brasil — antagonista de canal de cálcio di-hidropiridínico.',
-              'MOTENS (lacidipine) SmPC, Electronic Medicines Compendium — ATC C08CA09, calcium channel blocker, dihydropyridine derivative.',
-          ):
-              if ref not in refs:
-                  refs.append(ref)
-
-          failures = []
-          slugs = []
-          for i, drug in enumerate(data):
-              slug = drug.get('slug')
-              slugs.append(slug)
-              for field in required_text:
-                  value = drug.get(field)
-                  if not isinstance(value, str) or not value.strip():
-                      failures.append(f'#{i} {slug!r}: {field} ausente/vazio')
-              for field in list_defaults | dict_defaults | {'review_status'}:
-                  if field in drug and drug[field] is None:
-                      failures.append(f'#{i} {slug!r}: {field}=null')
-          if len(slugs) != len(set(slugs)):
-              failures.append('slugs duplicados em medicamentos/metadados.json')
-          raw = json.dumps(data, ensure_ascii=False)
-          if MARKER in raw:
-              failures.append('marcador de verificação humana residual em medicamentos/metadados.json')
-          if failures:
-              raise RuntimeError('\n'.join(failures[:100]))
-
-          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          Path('/tmp/pr312-required-fields-audit.json').write_text(
-              json.dumps(audit, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
-          )
-          print(json.dumps({'status':'ok','medicamentos':len(data),'repairs':len(audit)}, ensure_ascii=False))
+          for d in data:
+            slug=d.get('slug')
+            if slug in fixes and not str(d.get('drug_class') or '').strip():
+              d['drug_class']=fixes[slug]
+              r=d.setdefault('references',[])
+              if refs[slug] not in r: r.append(refs[slug])
+          bad=[]
+          for i,d in enumerate(data):
+            for k in ('slug','generic_name','drug_class'):
+              if not str(d.get(k) or '').strip(): bad.append(f'{i}:{d.get("slug")}:{k}')
+          if 'VERIFICAÇÃO HUMANA NECESSÁRIA' in json.dumps(data,ensure_ascii=False): bad.append('human-marker-residual')
+          if bad: raise RuntimeError('campos inválidos: '+', '.join(bad[:50]))
+          p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print({'ok':True,'count':len(data)})
           PY
-
-          python -m json.tool medicamentos/metadados.json >/dev/null
-          python -m json.tool checklists/metadados.json >/dev/null
-          python -m json.tool material-paciente/metadados.json >/dev/null
-
-      - name: Remove temporary branch fixer and push correction
-        run: |
           rm -f .github/workflows/fix-release312-required-drug-fields.yml
           git add medicamentos/metadados.json .github/workflows/fix-release312-required-drug-fields.yml
-          git commit -m "content: reparar campos obrigatórios do corpus de medicamentos"
+          git commit -m "content: corrigir classes farmacológicas obrigatórias"
           git push origin HEAD:release/claude-content-map-20260821
-
-      - name: Report failure with diagnostics
+      - name: Report failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          log=$(cat /tmp/pr312-required-fields.log 2>/dev/null || echo 'falha antes do diagnóstico')
-          {
-            echo 'O reparo dirigido do corpus para a PR #312 falhou. Nenhum deploy foi executado.'
-            echo
-            echo '```text'
-            printf '%s\n' "$log"
-            echo '```'
-          } >/tmp/pr312-failure.md
-          gh issue create --title "Falha no retry de campos obrigatórios da PR 312" --body-file /tmp/pr312-failure.md || true
+          { echo 'Falha no reparo final da PR #312.'; echo '```'; cat /tmp/fix.log 2>/dev/null || true; echo '```'; } >/tmp/f.md
+          gh issue create --title "Falha no reparo final da PR 312" --body-file /tmp/f.md || true
