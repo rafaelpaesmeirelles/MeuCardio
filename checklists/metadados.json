@@ -18146,5 +18146,276 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "seguranca-de-ressonancia-magnetica-em-portador-de-marcapasso-ou-cdi-nao-condicional",
+    "condicao": "Ressonância magnética em paciente com marca-passo ou CDI não condicional (dispositivo legado)",
+    "resumo": "O que checar antes, durante e depois de uma RM clinicamente indicada em paciente com marca-passo ou CDI não certificado para o ambiente de RM, com base no Registro MagnaSafe e no estudo de Nazarian.",
+    "documento_origem": "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684",
+      "Nazarian S, Hansford R, Rahsepar AA, Weltin V, McVeigh D, Ipek EG, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579",
+      "Indik JH, Gimbel JR, Abe H, Alkmim-Teixeira R, Birgersdotter-Green U, Clarke GD, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708"
+    ],
+    "itens": [
+      {
+        "id": "rmcied-checar-condicionalidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar, antes de indicar a RM, se o dispositivo (gerador e eletrodo) é ou não condicional para RM — não presumir que dispositivo antigo é automaticamente proibido: a evidência do MagnaSafe e do estudo de Nazarian sustenta a realização sob protocolo mesmo em dispositivo não condicional",
+        "origem_secao": "O problema clínico"
+      },
+      {
+        "id": "rmcied-excluir-eletrodo-abandonado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar integridade do sistema: eletrodo abandonado, fraturado ou de integridade duvidosa não foi representado nos dois estudos e pede avaliação individualizada, pesando contra a realização fora de protocolo dedicado",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rmcied-interrogacao-pre-exame",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Interrogar o dispositivo antes do exame, registrando parâmetros basais (limiares de captura, impedância de eletrodo, dependência ou não de estimulação)",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rmcied-reprogramacao-protocolo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reprogramar o dispositivo conforme protocolo padronizado antes do exame: desligar resposta de frequência, ajustar para modo assíncrono se o paciente for dependente de marca-passo, e desativar as terapias de choque do CDI",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rmcied-preferir-1-5-tesla",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Priorizar RM a 1,5 T quando possível: é a intensidade de campo com evidência de segurança de maior volume nos dois estudos; RM a 3 T em dispositivo não condicional tem evidência mais limitada e exige decisão individualizada",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rmcied-monitorizacao-durante-exame",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Garantir monitorização de sinais vitais e oximetria durante o exame, com pessoal capacitado a interrogar/reprogramar o dispositivo e a atender emergência disponível na sala",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rmcied-reinterrogacao-pos-exame",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reinterrogar o dispositivo imediatamente após o exame, comparando parâmetros com os basais registrados antes da RM",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rmcied-reverter-modo-seguranca",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reprogramar o dispositivo de volta ao modo/parâmetros habituais após o exame — o dispositivo tipicamente sai da RM em modo de segurança/assíncrono, e o paciente dependente de marca-passo que permanece nesse modo por engano fica exposto a risco de competição com ritmo próprio",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rmcied-orientar-reset-transitorio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Explicar ao paciente, quando aplicável, que reset elétrico transitório do dispositivo é o achado mais comum descrito nos estudos (ocorreu em cerca de 0,4% dos exames no estudo de Nazarian) e que, na maioria dos casos, é revertido por reprogramação, sem necessidade de troca de gerador",
+        "origem_secao": "O estudo de Nazarian: ampliando para RM torácica"
+      },
+      {
+        "id": "rmcied-nao-tratar-como-proibicao-absoluta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não recusar a RM apenas por o dispositivo ser 'não condicional' — essa recusa automática está desatualizada quando há protocolo de triagem, reprogramação e monitorização disponível no serviço",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Checklist elaborado a partir de documento já verificado do acervo científico da Corvia, sob curadoria clínica do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-cardiomiopatia-periparto",
+    "condicao": "Cardiomiopatia periparto (PPCM) — diagnóstico, tratamento agudo e planejamento de seguimento",
+    "resumo": "O que checar diante de suspeita de cardiomiopatia periparto, do diagnóstico de exclusão ao ajuste de segurança gestacional/lactação da terapia de insuficiência cardíaca e à decisão sobre gestação subsequente.",
+    "documento_origem": "cardiomiopatia-periparto-criterios-diagnosticos-recuperacao-e-manejo",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bauersachs J, König T, van der Meer P, et al. Pathophysiology, diagnosis and management of peripartum cardiomyopathy: a position statement from the Heart Failure Association of the European Society of Cardiology Study Group on PPCM. Eur J Heart Fail. 2019;21(7):827-843. DOI: 10.1002/ejhf.1493. PMID: 31243866",
+      "Satti DI, Choi E, Patel HP, et al. Cardiomyopathies in Pregnancy: Trends and Clinical Outcomes in Delivery Hospitalizations in the United States (2005-2020). Curr Probl Cardiol. 2024;49(12):102855. DOI: 10.1016/j.cpcardiol.2024.102855. PMID: 39299364",
+      "Sliwa K, van der Meer P, Petrie MC, et al. Risk stratification and management of women with cardiomyopathy/heart failure planning pregnancy or presenting during/after pregnancy: a position statement from the Heart Failure Association of the ESC Study Group on PPCM. Eur J Heart Fail. 2021;23(4):527-540. DOI: 10.1002/ejhf.2133. PMID: 33609068"
+    ],
+    "itens": [
+      {
+        "id": "ppcm-janela-temporal-sinais-ic",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente sinais/sintomas de insuficiência cardíaca (dispneia, edema, ortopneia, fadiga) surgindo no último mês de gestação ou nos meses seguintes ao parto — não atribuir automaticamente a 'cansaço do parto'",
+        "origem_secao": "O diferencial que mais importa: PPCM não é a única cardiomiopatia que aparece na gestação"
+      },
+      {
+        "id": "ppcm-ecocardiograma-disfuncao-sistolica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Confirmar disfunção sistólica de ventrículo esquerdo ao ecocardiograma; a plataforma adota, como limiar operacional de prática (não corte fixado pela diretriz verificada nesta sessão), FEVE reduzida abaixo de 45% — VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao corte numérico exato citado pela diretriz original",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppcm-excluir-outras-causas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Excluir outra causa identificável de disfunção ventricular antes de fechar o diagnóstico de PPCM: cardiopatia prévia não diagnosticada, miocardite de outra etiologia, doença valvar significativa e cardiomiopatia induzida por taquicardia",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppcm-biomarcadores-apoio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar BNP/NT-proBNP e troponina como apoio ao diagnóstico e à estratificação, sem substituir o ecocardiograma",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppcm-suspender-ieca-bra-neprilisina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não prescrever IECA, BRA ou inibidor da neprilisina durante a gestação (teratogenicidade renal fetal já estabelecida); substituir por hidralazina e nitrato quando redução de pós-carga for necessária antes do parto, conforme prescrição médica",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-betabloqueador-compativel",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Manter betabloqueador (preferencialmente seletivo, como metoprolol) como parte central do tratamento — compatível com gestação e amamentação, conforme prescrição médica",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-avaliar-anticoagulacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar anticoagulação profilática, individualizada por grau de disfunção sistólica e fatores de risco, dado o risco tromboembólico aumentado da PPCM com disfunção importante, sobretudo no puerpério imediato",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-transicao-pos-parto-icfer",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Planejar, após o parto, a transição para o arsenal completo de ICFEr (IECA/BRA/inibidor de neprilisina-valsartana, iSGLT2, antagonista de mineralocorticoide), respeitando compatibilidade com lactação quando aplicável",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-adiar-decisao-de-dispositivo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Não indicar CDI/TRC precocemente: os limiares para dispositivo são mais altos na PPCM do que em outras cardiomiopatias, dada a alta probabilidade de recuperação — aguardar período de terapia otimizada e reavaliação antes de indicar dispositivo definitivo (VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao prazo exato de reavaliação recomendado pela diretriz)",
+        "origem_secao": "Recuperação e implicações prognósticas"
+      },
+      {
+        "id": "ppcm-encaminhar-risco-pre-concepcional",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para estratificação de risco especializada antes de nova gestação em mulher com história de PPCM, sobretudo se a função ventricular não normalizou completamente",
+        "origem_secao": "Recuperação e implicações prognósticas"
+      }
+    ],
+    "revisao": "Checklist elaborado a partir de documento já verificado do acervo científico da Corvia, sob curadoria clínica do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798."
+  },
+  {
+    "slug": "inicio-e-monitorizacao-do-tratamento-etiologico-da-doenca-de-chagas-cronica",
+    "condicao": "Decisão e monitorização do tratamento etiológico (benznidazol ou nifurtimox) na doença de Chagas crônica",
+    "resumo": "O que checar antes de decidir tratar, e como monitorizar durante o tratamento etiológico da doença de Chagas crônica, incluindo os cortes de neutrófilos e transaminases que mandam suspender e o cronograma de avaliação dermatológica, hematológica e neurológica.",
+    "documento_origem": "tratamento-etiologico-da-doenca-de-chagas-cronica-benznidazol-e-nifurtimox",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Hasslocher-Moreno AM. Trypanocidal Treatment for Chronic Chagas Disease: Past, Present, and Future. Rev Soc Bras Med Trop. 2025;58:e0242-2025. DOI: 10.1590/0037-8682-0242-2025. PMID: 41172392",
+      "Ministério da Saúde/CONITEC. Protocolo Clínico e Diretrizes Terapêuticas Doença de Chagas. Outubro/2018, nº 397."
+    ],
+    "itens": [
+      {
+        "id": "chagastx-confirmar-idade-e-lesao-organica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar idade do paciente e presença/gravidade de lesão orgânica antes de decidir tratar: pelo protocolo brasileiro (CONITEC 2018), tratamento é indicado sobretudo abaixo de 50 anos e sem comorbidade grave; acima de 50 anos não é recomendado de rotina, e há recomendação condicional CONTRA na cardiomiopatia estabelecida/avançada",
+        "origem_secao": "Quem tratar: onde as duas diretrizes divergem"
+      },
+      {
+        "id": "chagastx-teste-gravidez-mulher-idade-fertil",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar teste de gravidez obrigatório em mulher em idade fértil antes de iniciar o tratamento, e garantir contracepção efetiva durante todo o período — benznidazol e nifurtimox são contraindicados na gestação",
+        "origem_secao": "Protocolo de monitorizacao do benznidazol"
+      },
+      {
+        "id": "chagastx-avaliacao-basal-pre-tratamento",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar, antes de iniciar: hemograma, transaminases, ureia e creatinina, além de avaliação dermatológica e neurológica basais",
+        "origem_secao": "Protocolo de monitorizacao do benznidazol"
+      },
+      {
+        "id": "chagastx-priorizar-benznidazol",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Priorizar benznidazol como fármaco de primeira linha, conforme protocolo brasileiro, reservando nifurtimox como alternativa — sempre conforme prescrição médica e na dose e duração definidas pelo protocolo",
+        "origem_secao": "Doses e duracao"
+      },
+      {
+        "id": "chagastx-cronograma-hemograma-bioquimica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar hemograma e bioquímica nos dias 0, 7, 15, 30 e 45 do tratamento",
+        "origem_secao": "Protocolo de monitorizacao do benznidazol"
+      },
+      {
+        "id": "chagastx-cronograma-dermatologico",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar avaliação dermatológica nos dias 7, 15 e 30, período de pico das reações cutâneas",
+        "origem_secao": "Protocolo de monitorizacao do benznidazol"
+      },
+      {
+        "id": "chagastx-cronograma-neurologico",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar avaliação neurológica nos dias 30, 45 e 60 — a neuropatia é achado tardio, e a vigilância neurológica começa quando a vigilância dermatológica termina",
+        "origem_secao": "Protocolo de monitorizacao do benznidazol"
+      },
+      {
+        "id": "chagastx-corte-neutropenia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicar a conduta pela contagem absoluta de neutrófilos: entre 1.000 e 1.499, observação com monitorização semanal; entre 500 e 999, suspensão temporária; abaixo de 500, descontinuar o tratamento",
+        "origem_secao": "Os cortes que mandam suspender"
+      },
+      {
+        "id": "chagastx-corte-transaminases",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Interromper o tratamento e monitorar até normalização quando as transaminases ultrapassarem 3 vezes o limite superior da normalidade",
+        "origem_secao": "Os cortes que mandam suspender"
+      },
+      {
+        "id": "chagastx-neuropatia-descontinuacao-definitiva",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Descontinuar definitivamente o tratamento diante de neuropatia, associando neuromodulador conforme prescrição médica",
+        "origem_secao": "Os cortes que mandam suspender"
+      },
+      {
+        "id": "chagastx-orientar-sintomas-neuropsiquiatricos-nifurtimox",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar o paciente em uso de nifurtimox sobre possíveis sintomas neuropsiquiátricos (irritabilidade, insônia, confusão, parestesia), incluindo a possibilidade descrita na literatura de ideação suicida passiva ou ativa, e sobre a importância de comunicar esses sintomas imediatamente",
+        "origem_secao": "Efeitos adversos: a cronologia importa mais que a lista"
+      },
+      {
+        "id": "chagastx-planejar-seguimento-longo-prazo",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Planejar seguimento por PCR de no mínimo 12 meses (estendido a 24-36 meses em estudos mais robustos) e explicar ao paciente que a soroconversão é lenta (décadas) e que o efeito clínico exige seguimento de longo prazo — não esperar cura sorológica no primeiro ano",
+        "origem_secao": "Criterios de cura: por que a resposta demora"
+      }
+    ],
+    "revisao": "Checklist elaborado a partir de documento já verificado do acervo científico da Corvia, sob curadoria clínica do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798."
   }
 ]
