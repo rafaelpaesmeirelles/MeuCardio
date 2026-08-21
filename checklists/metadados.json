@@ -18146,5 +18146,221 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "reconciliacao-medicamentosa-na-alta-hospitalar-cardiologica",
+    "condicao": "Reconciliação medicamentosa na alta hospitalar de paciente cardiológico",
+    "resumo": "Checklist para o momento de maior risco de erro de reconciliação — a alta, não a admissão —, com foco nos fármacos cardiovasculares de margem terapêutica estreita e suspensão silenciosa.",
+    "documento_origem": "reconciliacao-medicamentosa-e-transicao-de-cuidado-onde-o-erro-acontece",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Climente-Martí M, García-Mañón ER, Artero-Mora A, Jiménez-Torres NV. Potential risk of medication discrepancies and reconciliation errors at admission and discharge from an inpatient medical service. Ann Pharmacother. 2010;44(11):1747-1754. DOI: 10.1345/aph.1P184. PMID: 20923946",
+      "Mekonnen AB, McLachlan AJ, Brien JA. Effectiveness of pharmacist-led medication reconciliation programmes on clinical outcomes at hospital transitions: a systematic review and meta-analysis. BMJ Open. 2016;6(2):e010003. DOI: 10.1136/bmjopen-2015-010003. PMID: 26908524. PMCID: PMC4769405",
+      "Jacobs DM, Slazak E, Daly CJ, Clark C, Will S, et al. Clinical and economic effectiveness of a pharmacy and primary care collaborative transition of care program. J Am Pharm Assoc. 2023;63(6):1722-1730.e3. DOI: 10.1016/j.japh.2023.08.014. PMID: 37611896. PMCID: PMC10900124"
+    ],
+    "itens": [
+      {
+        "id": "reconc-alta-lista-pre-internacao-levantada-dia-1",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que a lista de medicamentos pré-internação foi levantada com rigor já no primeiro dia — o número de discrepâncias identificadas na admissão prediz o risco de erro na alta (OR 1,21; IC95% 1,01-1,44).",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "reconc-alta-comparar-lista-previa-com-prescricao-de-alta",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Comparar item a item a lista de medicamentos pré-internação com a prescrição de alta antes de liberar o paciente — é na alta, não na admissão, que a discrepância vira erro de reconciliação (24,5% contra 3,4% na admissão).",
+        "origem_secao": "Onde o erro acontece — e não é onde se imagina"
+      },
+      {
+        "id": "reconc-alta-declarar-toda-mudanca-como-intencional",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Registrar por escrito, para cada medicamento alterado ou suspenso, o motivo da mudança — a diferença entre discrepância aceitável e erro de reconciliação é, literalmente, a explicação estar documentada.",
+        "origem_secao": "O que fazer com isso na prática"
+      },
+      {
+        "id": "reconc-alta-conferir-farmacos-margem-terapeutica-estreita",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Conferir explicitamente anticoagulante, antiarrítmico, digoxina e diurético — fármacos de margem terapêutica estreita cuja suspensão silenciosa na alta não gera sintoma imediato, mas tem risco desproporcional.",
+        "origem_secao": "Por que isto é comunicação clínica, e não burocracia"
+      },
+      {
+        "id": "reconc-alta-conferir-titulacao-quatro-pilares-ic",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "No paciente com insuficiência cardíaca, conferir se a titulação dos quatro pilares (iSGLT2, IECA/BRA/INRA, betabloqueador, antagonista mineralocorticoide) foi mantida ou retomada na alta, e não apenas interrompida pela internação.",
+        "origem_secao": "Na cardiologia especificamente"
+      },
+      {
+        "id": "reconc-alta-atencao-redobrada-no-idoso",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Redobrar a atenção no paciente idoso: o risco de erro de reconciliação aumenta com a idade (OR 1,05 por ano, IC95% 0,99-1,10).",
+        "origem_secao": "Onde o erro acontece — e não é onde se imagina"
+      },
+      {
+        "id": "reconc-alta-explicar-cada-mudanca-ao-paciente-ou-cuidador",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Explicar ao paciente ou cuidador, para cada medicamento novo, suspenso ou com dose alterada, qual foi a mudança e por quê — não basta entregar a receita; os programas eficazes incluíam aconselhamento ativo, não só a lista impressa.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "reconc-alta-nao-prometer-reducao-de-mortalidade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao comunicar o valor da reconciliação ao paciente ou à equipe, não prometer redução de mortalidade — a metanálise de 21.342 pacientes não encontrou diferença nesse desfecho (RR 1,05; IC95% 0,95-1,16); o benefício demonstrado é sobre retorno por evento adverso de medicamento (RR 0,33) e reinternação (RR 0,81).",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "reconc-alta-agendar-seguimento-proximos-30-dias",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Agendar contato de seguimento (telefônico, visita ou consulta) nos primeiros 30 dias após a alta — os programas com maior efeito incluíam seguimento ativo nesse período, não apenas a reconciliação pontual no momento da saída.",
+        "origem_secao": "O que a reconciliação conduzida por farmacêutico entrega"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Climente-Martí M et al., Ann Pharmacother. 2010;44(11):1747-1754 (PMID 20923946) e Mekonnen AB et al., BMJ Open. 2016;6(2):e010003 (PMID 26908524), em 21/08/2026."
+  },
+  {
+    "slug": "passagem-de-plantao-estruturada-i-pass-em-cardiologia",
+    "condicao": "Passagem de plantão de rotina entre médicos em enfermaria de cardiologia ou UTI cardiológica",
+    "resumo": "Checklist dos cinco elementos do programa I-PASS para a passagem de plantão de rotina — distinta do SBAR de deterioração aguda —, com ênfase no plano de contingência, o item mais frequentemente omitido.",
+    "documento_origem": "passagem-de-plantao-estruturada-i-pass-e-reducao-de-erro-medico",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Starmer AJ, Spector ND, Srivastava R, West DC, Rosenbluth G, Allen AD, et al.; I-PASS Study Group. Changes in medical errors after implementation of a handoff program. N Engl J Med. 2014;371(19):1803-1812. DOI: 10.1056/NEJMsa1405556. PMID: 25372088"
+    ],
+    "itens": [
+      {
+        "id": "ipass-cardio-gravidade-numa-palavra",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Comunicar a gravidade do paciente (Illness severity) numa palavra ou classificação curta e padronizada, como primeiro item da passagem de plantão.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-resumo-do-caso",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Apresentar o resumo do caso (Patient summary): diagnóstico, evolução recente e o que motivou a internação ou a situação atual.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-lista-de-acoes-pendentes",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Explicitar a lista de ações pendentes (Action list) — exames a checar, resultados a revisar, procedimentos ainda a fazer no turno seguinte.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-plano-de-contingencia-se-piorar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Declarar explicitamente o plano de contingência (Situation awareness/contingency planning) — o que fazer se a situação mudar, por exemplo 'se a pressão cair abaixo de X, faça Y'. É o elemento mais frequentemente omitido na passagem de plantão não estruturada.",
+        "origem_secao": "Aplicação prática em cardiologia"
+      },
+      {
+        "id": "ipass-cardio-sintese-por-quem-recebe",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Exigir que quem recebe o plantão repita de volta, em suas palavras, o que entendeu (Synthesis by receiver), fechando o ciclo de comunicação em alça fechada antes de encerrar a passagem.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-nao-abreviar-por-falta-de-urgencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar a passagem de plantão de rotina como menos crítica que a comunicação de deterioração aguda (SBAR) só por não haver urgência no momento — é justamente a ausência de urgência que faz a informação se perder de forma mais silenciosa.",
+        "origem_secao": "Um problema silencioso, diferente do SBAR"
+      },
+      {
+        "id": "ipass-cardio-extrapolacao-pediatrica-nao-testada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ter em mente que o estudo de origem (10.740 internações, 9 hospitais) foi conduzido majoritariamente em serviços de pediatria, com desenho pré-pós sem grupo controle contemporâneo randomizado — a extrapolação direta para cardiologia de adultos não foi testada especificamente, embora o mecanismo não seja de especificidade pediátrica.",
+        "origem_secao": "Limitações, declaradas com honestidade"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Starmer AJ et al.; I-PASS Study Group, N Engl J Med. 2014;371(19):1803-1812 (PMID 25372088), em 21/08/2026."
+  },
+  {
+    "slug": "disfuncao-eretil-como-gatilho-de-avaliacao-cardiovascular",
+    "condicao": "Disfunção erétil nova como gatilho de avaliação de risco cardiovascular em homem sem diagnóstico cardiovascular conhecido",
+    "resumo": "Checklist para não tratar a disfunção erétil nova apenas como queixa urológica de encaminhamento, avaliando o perfil de risco cardiovascular antes ou junto do encaminhamento — especialmente no homem de 40 a 59 anos.",
+    "documento_origem": "disfuncao-eretil-como-marcador-precoce-de-risco-cardiovascular",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Montorsi F, Briganti A, Salonia A, Rigatti P, Margonato A, Macchi A, Galli S, Ravagnani PM, Montorsi P. Erectile dysfunction prevalence, time of onset and association with risk factors in 300 consecutive patients with acute chest pain and angiographically documented coronary artery disease. Eur Urol. 2003;44(3):360-364. DOI: 10.1016/s0302-2838(03)00305-1. PMID: 12932937",
+      "Thompson IM, Tangen CM, Goodman PJ, Probstfield JL, Moinpour CM, Coltman CA. Erectile dysfunction and subsequent cardiovascular disease. JAMA. 2005;294(23):2996-3002. DOI: 10.1001/jama.294.23.2996. PMID: 16414947",
+      "Inman BA, Sauver JL, Jacobson DJ, McGree ME, Nehra A, Lieber MM, Roger VL, Jacobsen SJ. A population-based, longitudinal study of erectile dysfunction and future coronary artery disease. Mayo Clin Proc. 2009;84(2):108-113. DOI: 10.4065/84.2.108. PMID: 19181643",
+      "Dong JY, Zhang YH, Qin LQ. Erectile dysfunction and risk of cardiovascular disease: meta-analysis of prospective cohort studies. J Am Coll Cardiol. 2011;58(13):1378-1385. DOI: 10.1016/j.jacc.2011.06.024. PMID: 21920268",
+      "Nehra A, Jackson G, Miner M, Billups KL, Burnett AL, Buvat J, Carson CC 3rd, Cunningham GR, Ganz P, Goldstein I, Guay AT, Hackett G, Kloner RA, Kostis J, Montorsi P, Ramsey M, Rosen R, Sadovsky R, Seftel AD, Shabsigh R, Vlachopoulos C, Wu FC. The Princeton III Consensus recommendations for the management of erectile dysfunction and cardiovascular disease. Mayo Clin Proc. 2012;87(8):766-778. DOI: 10.1016/j.mayocp.2012.06.015. PMID: 22862865"
+    ],
+    "itens": [
+      {
+        "id": "de-cv-perguntar-ativamente-sobre-inicio-da-de",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perguntar ativamente sobre disfunção erétil nova, especialmente em homem de 40 a 59 anos sem diagnóstico cardiovascular conhecido — é o grupo em que o valor prognóstico é maior e a suspeita clínica costuma ser menor.",
+        "origem_secao": "Implicação prática: a disfunção erétil como gatilho de avaliação, não só de encaminhamento"
+      },
+      {
+        "id": "de-cv-nao-tratar-so-como-queixa-urologica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não encaminhar a disfunção erétil nova diretamente ao urologista como queixa isolada, sem antes considerar avaliação de risco cardiovascular — recomendação do Consenso de Princeton III (Nehra A et al., Mayo Clin Proc. 2012).",
+        "origem_secao": "Implicação prática: a disfunção erétil como gatilho de avaliação, não só de encaminhamento"
+      },
+      {
+        "id": "de-cv-revisar-pressao-arterial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisar a pressão arterial do paciente com disfunção erétil nova, como parte da checagem do perfil de risco cardiovascular.",
+        "origem_secao": "Implicação prática: a disfunção erétil como gatilho de avaliação, não só de encaminhamento"
+      },
+      {
+        "id": "de-cv-revisar-perfil-lipidico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ou revisar o perfil lipídico do paciente com disfunção erétil nova, como parte da checagem do perfil de risco cardiovascular.",
+        "origem_secao": "Implicação prática: a disfunção erétil como gatilho de avaliação, não só de encaminhamento"
+      },
+      {
+        "id": "de-cv-revisar-glicemia-e-tabagismo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisar glicemia e status de tabagismo do paciente com disfunção erétil nova, como parte da checagem do perfil de risco cardiovascular.",
+        "origem_secao": "Implicação prática: a disfunção erétil como gatilho de avaliação, não só de encaminhamento"
+      },
+      {
+        "id": "de-cv-nao-atribuir-de-imediato-a-causa-psicogenica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não atribuir a disfunção erétil nova de imediato a causa psicogênica ou hormonal sem antes considerar investigação vascular, sobretudo no homem mais jovem sem outros sinais de doença cardiovascular.",
+        "origem_secao": "Implicação prática: a disfunção erétil como gatilho de avaliação, não só de encaminhamento"
+      },
+      {
+        "id": "de-cv-usar-janela-de-anos-para-intervir-em-fatores-modificaveis",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Aproveitar a janela típica entre disfunção erétil e o primeiro evento coronariano — em torno de 3 a 5 anos segundo a literatura consultada, com intervalo médio de 38,8 meses num dos estudos — para intervir sobre fatores de risco modificáveis antes do evento.",
+        "origem_secao": "O intervalo real entre disfunção erétil e diagnóstico de doença coronariana"
+      },
+      {
+        "id": "de-cv-nao-tratar-numeros-de-calibre-arterial-como-constante-fechada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao explicar o mecanismo da hipótese do calibre arterial, não tratar os valores de diâmetro da artéria pudenda interna (2,7 mm) como constante fisiológica fechada — vêm de um estudo piloto pequeno (n=10) e de uma reconstrução feita a partir de quatro estudos anatômicos independentes, com populações e métodos diferentes entre si, não de uma fonte única comparativa.",
+        "origem_secao": "O mecanismo: a artéria peniana como sentinela vascular"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Nehra A et al., Mayo Clin Proc. 2012;87(8):766-778 (PMID 22862865) e Dong JY et al., J Am Coll Cardiol. 2011;58(13):1378-1385 (PMID 21920268), em 21/08/2026."
   }
 ]
