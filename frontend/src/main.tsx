@@ -68,6 +68,7 @@ import "./styles/postdeploy-home-density.css";
 import "./styles/mobile-header-composed.css";
 import "./styles/corvia-via-blue-global.css";
 import "./styles/product-stabilization-final.css";
+import "./styles/clinical-product-polish-round2.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
