@@ -853,7 +853,9 @@
     "presentations": [
       "Pó liofilizado para solução injetável/infusão 250 mg por frasco-ampola (apresentação de referência internacional, Angiox®/Angiomax® — ver nota de disponibilidade)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca extensa (múltiplas queries, mais de 10 buscas com termos diferentes: nome da substância + 'Brasil', + 'ANVISA', + 'Angiox', + 'bula', + 'farmácia', + 'protocolo hospitalar', + sites específicos como bulas.med.br/pharmadb.com.br/farmaindex.com) não encontrou NENHUMA bula brasileira, listagem de farmácia brasileira, registro ANVISA ou apresentação comercial de bivalirudina no Brasil. Todos os resultados relevantes (Angiox/Angiomax) referem-se a mercados europeu e norte-americano (fabricante histórico The Medicines Company/Aspen); literatura médica brasileira (SBC, PMC) cita o fármaco só em contexto de estudo/diretriz internacional, nunca com marca comercial nacional. Não foi encontrada evidência de que a bivalirudina tenha registro ativo, vencido ou histórico na ANVISA — o achado é consistente com ausência de comercialização no Brasil, não com falha de busca (mesmo padrão observado nos outros dois anticoagulantes de nicho hospitalar já mapeados no histórico do projeto: cangrelor e bivalirudina aparecem juntos em registros anteriores do CLAUDE.md como 'genuinamente ausentes da CMED'). Fontes consultadas (todas sem resultado positivo): buscas Google/Bing indexadas via WebSearch cobrindo ANVISA (consultas.anvisa.gov.br, antigo.anvisa.gov.br), ConsultaRemedios, CliqueFarma, Bulas.med.br, PharmaDB, Farmaindex, bula.com.br, Drogasil/Raia/Pacheco/São Paulo, indice.eu (índice de medicamentos de Portugal, não Brasil). Busca realizada em 21/08/2026. Recomendação: se o Rafael tiver acesso a fonte hospitalar direta (ex.: distribuidora de medicamento hospitalar/importação especial), reconferir — mas pela pesquisa pública disponível, a conclusão é 'sem marca comercial registrada no Brasil'."
+    ],
     "brand_names": []
   },
   {
@@ -1633,7 +1635,9 @@
       "Comprimido 0,5 mg",
       "Comprimido 1 mg"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca dedicada a encontrar marca ADICIONAL a Colchis (já cadastrada) não encontrou nenhuma outra marca de fantasia no Brasil. Colchis (fabricante encontrado como Sanofi/Nova Química conforme a fonte — resultados de busca divergiram sobre o detentor exato entre 'Sanofi' e 'Nova Química', então o laboratório não está sendo reafirmado aqui por não ter 2 fontes convergentes no mesmo nome) segue sendo a única marca de fantasia identificada — confirmada por duas fontes independentes de e-commerce farmacêutico (drogasil.com.br/colchis-1-mg-30-comprimidos.html e ultrafarma.com.br, este último rotulando o produto como 'Colchicina 0,5mg 30 Comprimidos — Nova Química Genérico (Colchis)', o que sugere que Colchis pode ser hoje comercializado sob o guarda-chuva Nova Química, não mais Sanofi — merece checagem humana antes de alterar o campo já cadastrado). Foram encontradas apenas apresentações GENÉRICAS rotuladas pelo nome da substância + laboratório — não são marca de fantasia, por isso não entram em brand_names: 'Colchicina 0,5mg — Geolab' (geolab.com.br, com bula profissional e de paciente em PDF próprio) e 'Colchicina — Multilab' (drogasil.com.br/bulas/colchicina-multilab). Um falso positivo foi investigado e DESCARTADO: 'Coltrax' (Coltrax®, Sanofi) apareceu em busca por proximidade de nome, mas é tioclchicosídeo (substância diferente, derivada da colchicina mas farmacologicamente distinta — relaxante muscular), não colchicina — confirmado por bula própria (consultaremedios, drogasil, saudedireta.com.br, medicinanet) que descreve composição de 4mg de tiocolchicosídeo, não colchicina. Não incluído em brand_names. Data da busca: 21/08/2026."
+    ],
     "brand_names": [
       "Colchis"
     ]
@@ -1696,7 +1700,9 @@
     "duration_of_action_note": "Dosado 2x/dia em todas as indicações já documentadas em `dosing` (150 mg 2x/dia na FA não valvar padrão; mesmo padrão nas demais faixas), intervalo consistente com a meia-vida de 13,4h em função renal normal — não há formulação de dose única diária cadastrada para este fármaco. Valor registrado (12h) corresponde ao intervalo posológico padrão, não a uma medição isolada e direta de efeito anticoagulante do rótulo.",
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing` deste registro (BID em todas as indicações) e da meia-vida já citada em `renal_adjustment` — sem pesquisa nova nesta sessão.",
     "bp_evidence_source": "Não se aplica. Dabigatrana é anticoagulante oral direto (inibidor direto da trombina), sem mecanismo de ação hemodinâmico — redução de pressão arterial sistêmica não é desfecho estudado no ensaio pivotal RE-LY (já citado nas referências deste registro) nem clinicamente relevante para esta classe.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca dedicada a encontrar marca ADICIONAL a Pradaxa (já cadastrada) não encontrou nenhuma outra marca de fantasia no Brasil. Pradaxa segue sendo, pelas fontes consultadas, a única marca comercial de etexilato de dabigatrana no mercado brasileiro — fabricado por Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda, cápsulas duras ovais azul-claro/creme com símbolo 'BI' gravado, disponível em 75 mg, 110 mg e 150 mg, em embalagens de 10, 30 ou 60 cápsulas conforme a dosagem/distribuidor (confirmado em bula oficial hospedada em bucket da própria ANVISA — bula-anvisa.s3.sa-east-1.amazonaws.com/1036701600061_paciente.pdf — e replicada em bulas de farmácia como farmaindex.com/bulas/pradaxa/1033, drogariaspacheco.vteximg.com.br e raiadrogasil.io). Foi encontrada também uma apresentação GENÉRICA rotulada pelo nome da substância (não é marca de fantasia, por isso não entra em brand_names, conforme a regra do projeto): 'Etexilato de Dabigatrana 150mg — Brainfarma' (Brainfarma Indústria Química e Farmacêutica S.A., grupo Hypera Pharma), listada em farmaindex.com/etexilato-de-dabigatrana/59119 — vale registrar como achado NÃO confirmado por segunda fonte independente e, mesmo que confirmado, não se qualificaria como marca de fantasia. Buscas específicas por nomes de fantasia alternativos internacionais (Pradax, Prazaxa) não retornaram evidência de uso desses nomes no mercado brasileiro — parecem ser grafias/variantes de outros países, não marcas registradas no Brasil. Data da busca: 21/08/2026."
+    ]
   },
   {
     "slug": "dapagliflozina",
@@ -2184,7 +2190,9 @@
     "presentations": [
       "Comprimido revestido 400 mg (embalagens de 20, 50 ou 60 comprimidos) — ver nota de disponibilidade"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): a única marca já registrada no Brasil para dronedarona é Multaq (Sanofi-Aventis), comprimido revestido 400mg — MAS o registro ANVISA (nº 113001079) está CANCELADO/CADUCO, achado convergente em 3 buscas independentes (InfoSUS/SC — 'registro sanitário ... cancelado/caduco, não é mais produzido e comercializado em território nacional'; documento oficial da ANVISA 'lista-a-excluidos-05022025.pdf', que lista medicamentos de referência excluídos, citando Multaq/dronedarona 400mg comprimido, Sanofi-Aventis, registro 113001079; e ausência total de listagem em farmácias/bulários brasileiros ativos — nenhuma página de venda, preço ou bula vigente encontrada em ConsultaRemedios, Drogasil, CliqueFarma etc.). A data exata do cancelamento NÃO pôde ser confirmada com segurança — duas buscas trouxeram datas divergentes (15/05/2018 numa passagem e 18/05/2026 noutra, provavelmente erro de sumarização automática da ferramenta de busca sobre o mesmo PDF fonte) — por isso a data não está sendo afirmada, só o fato do cancelamento, que é consistente nas três fontes. Não há, portanto, marca comercial ativa de dronedarona no Brasil hoje (21/08/2026) para adicionar a brand_names — Multaq já não é uma apresentação comercial vigente. Sugestão de nota para o catálogo (fica a critério do time do projeto, fora do escopo desta tarefa): sinalizar no verbete que Multaq foi descontinuado/registro cancelado no Brasil, para não induzir o médico a buscar apresentação inexistente. Fontes: InfoSUS Santa Catarina (infosus.saude.sc.gov.br), gov.br/anvisa (lista de medicamentos de referência excluídos), Anvisa (antigo.anvisa.gov.br, alertas de farmacovigilância Multaq/dronedarona). Busca realizada em 21/08/2026."
+    ],
     "brand_names": []
   },
   {
@@ -4282,7 +4290,9 @@
     "slug": "macitentana",
     "review_status": "revisado",
     "generic_name": "Macitentana",
-    "brand_names": [],
+    "brand_names": [
+      "Opsumit — Janssen-Cilag Farmacêutica Ltda"
+    ],
     "drug_class": "Antagonista duplo do receptor de endotelina (ETA e ETB) de segunda geração",
     "mechanism": "Bloqueia os receptores de endotelina ETA e ETB, antagonizando a vasoconstrição pulmonar e o efeito proliferativo mediados pela endotelina-1 — mesma classe farmacológica dos antagonistas de primeira geração (bosentana), mas com maior afinidade tecidual e perfil de segurança hepática distinto (sem sinal de hepatotoxicidade de destaque no SERAPHIN, diferente do perfil clássico da bosentana, que exige monitorização hepática mensal obrigatória)",
     "presentations": [
@@ -4340,7 +4350,9 @@
       "Hipertensão arterial pulmonar (HAP), classe funcional OMS/NYHA II-III, para retardar a progressão da doença e reduzir a morbimortalidade — indicação sustentada pelo ensaio pivotal SERAPHIN, já citado e verificado neste registro (Pulido T et al., N Engl J Med. 2013;369(9):809-818, PMID 23984728).",
       "**Texto exato da indicação aprovada, rótulo FDA (Opsumit)**: \"OPSUMIT is an endothelin receptor antagonist (ERA) indicated for the treatment of pulmonary arterial hypertension (PAH, WHO Group I) in adults to reduce the risks of disease progression and hospitalization for PAH.\" Bula FDA (rótulo aprovado), OPSUMIT (macitentan), Actelion Pharmaceuticals US, Inc., DailyMed setid 1e484a50-55db-4b85-8c57-6cd1b0353abd — consultada via WebFetch em 12/08/2026. Bulário brasileiro (ANVISA) permanece bloqueado nesta sessão; nome comercial e apresentação brasileira ainda não confirmados contra registro ANVISA."
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Opsumit® (macitentana), Janssen-Cilag Farmacêutica Ltda (importador/detentor do registro no Brasil; substância fabricada pela Excella GmbH & Co. KG, Feucht, Alemanha, com embalagem primária/secundária pela Patheon France, Bourgoin-Jallieu, França), comprimido revestido de 10 mg, comprimidos brancos/esbranquiçados biconvexos gravados '10' de um lado, embalagem em caixa com 30 comprimidos revestidos (blíster). Registro ANVISA nº 1123634320018, situação válida no momento da consulta. Indicação de bula: hipertensão pulmonar (classe de antagonistas de receptor de endotelina). Fontes convergentes: bula do produto hospedada por importador/distribuidor licenciado (primedicin.com.br, PDF de bula Opsumit/macitentana), registro de consulta pública de produto ANVISA (smerp.com.br, título 'Registro ANVISA nº 1123634320018 - Opsumit - VÁLIDO'), e listagens de farmácia especializada em medicamentos de alto custo (dinamicadrogaria.com.br, consultaremedios.com.br) confirmando a mesma dosagem/embalagem/laboratório. Data da busca: 21/08/2026."
+    ]
   },
   {
     "slug": "mavacamten",
@@ -5944,12 +5956,16 @@
     "notes": {
       "procedencia": "Registro estruturado extraído em 01/08/2026 a partir de content/Farmacologia/riociguate.md (documento já verificado desta biblioteca) e dos documentos de content/Hipertensão_pulmonar que citam riociguato — não a partir de bula consultada diretamente nesta sessão. Slug grafado 'riociguato' (DCB/nome em português) para seguir o padrão dos demais slugs do arquivo, ainda que o documento de Farmacologia de origem use a grafia 'riociguate'."
     },
-    "brand_names": [],
+    "brand_names": [
+      "Adempas — Bayer S.A."
+    ],
     "half_life_hours": 12.0,
     "half_life_note": "Meia-vida de aproximadamente 12 horas em PACIENTES (a farmacocinética de riociguate é afetada por fatores como tabagismo e função hepática) e de aproximadamente 7 horas em INDIVÍDUOS SAUDÁVEIS — a diferença é relevante clinicamente porque a titulação guiada por PAS (já registrada no campo `dosing` deste item) precisa considerar que o paciente real (não o voluntário saudável do estudo de fase 1) tende a ter exposição mais prolongada. Biodisponibilidade absoluta de aproximadamente 94%; pico plasmático em ~1,5h; ligação a proteínas plasmáticas de ~95% (albumina e alfa-1-glicoproteína ácida); metabolizado principalmente por CYP1A1, CYP3A, CYP2C8 e CYP2J2. Fonte: Frey R et al., Clinical Pharmacokinetic and Pharmacodynamic Profile of Riociguat. Clin Pharmacokinet. 2018;57(6):647-661, PMID 29086344 — consultado via WebSearch em 10/08/2026; rótulo aprovado pelo FDA para ADEMPAS (riociguat) confere com a mesma faixa.",
     "duration_of_action_hours": 6.0,
     "duration_of_action_note": "Consistente com a posologia já registrada no campo `dosing` deste item (20mg 3x/dia, a cada 6 a 8 horas) — a meia-vida de ~12h em paciente permitiria, em tese, espaçamento maior, mas o esquema de 3 doses diárias reflete a titulação individualizada guiada por PA sistólica e tolerabilidade dos ensaios pivotais PATENT-1/CHEST-1 (já citados no campo `outcomes`), não um limite farmacocinético estrito.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Adempas® (riociguato), Bayer S.A., comprimidos revestidos redondos biconvexos marcados com a cruz Bayer de um lado e 'R' + a dosagem do outro, disponível em 5 dosagens — 0,5 mg (branco), 1,0 mg (amarelo pálido), 1,5 mg (amarelo alaranjado), 2,0 mg (laranja pálido) e 2,5 mg (laranja avermelhado) — em embalagem com 42 comprimidos revestidos (esquema de titulação). Indicação de bula: hipertensão pulmonar tromboembólica crônica (HPTEC) inoperável/persistente/recorrente e hipertensão arterial pulmonar (HAP). Bula profissional aprovada pela ANVISA em 17/03/2021; carta aos profissionais de saúde da ANVISA de 12/09/2016 (nova contraindicação) também identifica o produto como Bayer S.A. Fontes convergentes: bula oficial do fabricante hospedada no site institucional Bayer para hipertensão pulmonar (hipertensaopulmonar.bayer.com.br/.../adempas-bula-profissionais.pdf) e uma segunda cópia da mesma bula hospedada por distribuidor licenciado (4bio.com.br/.../ADEMPAS.pdf), mais listagens de farmácia especializada confirmando a mesma embalagem de 42 comprimidos e o mesmo laboratório (agilfarma.com.br, sara.com.br), e comunicação oficial da própria ANVISA (gov.br/anvisa, carta aos profissionais de saúde) citando 'Adempas (riociguate) ... Bayer'. Data da busca: 21/08/2026."
+    ]
   },
   {
     "slug": "rivaroxabana",
@@ -6160,7 +6176,9 @@
     "slug": "selexipague",
     "review_status": "revisado",
     "generic_name": "Selexipague",
-    "brand_names": [],
+    "brand_names": [
+      "Uptravi — Janssen-Cilag Farmacêutica Ltda"
+    ],
     "drug_class": "Agonista seletivo do receptor IP de prostaciclina, por via oral",
     "mechanism": "Ativa seletivamente o receptor IP de prostaciclina, promovendo vasodilatação pulmonar e efeito antiproliferativo — mesma via terapêutica dos prostanoides clássicos (epoprostenol, treprostinila), mas por via oral em vez de infusão parenteral ou inalação, e por ligação seletiva ao receptor em vez de análogo direto da prostaciclina. Completa as três vias farmacológicas clássicas de tratamento da hipertensão arterial pulmonar (HAP), ao lado do riociguate (via do óxido nítrico/GMPc) e da macitentana (via da endotelina). Fonte: content/Farmacologia/selexipague.md",
     "indications": [
@@ -6214,7 +6232,9 @@
     "duration_of_action_note": "Consistente com a dosagem 2x/dia (esquema de titulação GRIPHON, já registrado no campo `dosing` deste item), coerente com a meia-vida do metabólito ativo ACT-333679 reportada acima.",
     "duration_of_action_source": "Rótulo FDA (Uptravi/selexipag) — mesma fonte confirmada no campo `half_life_note`, seção Clinical Pharmacology. Bula FDA (rótulo aprovado), UPTRAVI (selexipag), Actelion Pharmaceuticals US, Inc., DailyMed setid a7a23b87-f892-4e2c-8e2e-ebf841220f90 — consultada via WebFetch em 12/08/2026. Bulário brasileiro (ANVISA) permanece bloqueado nesta sessão; nome comercial brasileiro ainda não confirmado contra registro ANVISA.",
     "bp_evidence_source": "Não se aplica como efeito terapêutico central — o selexipague é vasodilatador PULMONAR seletivo (via receptor IP), não um anti-hipertensivo sistêmico; hipotensão sistêmica é listada como evento adverso possível de classe (efeito de prostaciclina), não um alvo pressórico quantificado nas fontes já citadas neste registro.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Uptravi® (selexipague), Janssen-Cilag Farmacêutica Ltda, comprimidos revestidos em esquema de titulação ascendente com 8 dosagens — 0,2 mg, 0,4 mg, 0,6 mg, 0,8 mg, 1,0 mg, 1,2 mg, 1,4 mg e 1,6 mg —, apresentações comerciais em caixa com 60 comprimidos revestidos (dosagens de manutenção) e caixa com 140 comprimidos revestidos para o kit inicial de titulação na dosagem de 0,2 mg. Registro ANVISA citado como nº 1123634290011 (achado em uma das buscas, não confirmado por segunda fonte independente com esse número exato — tratar como não totalmente confirmado, embora o laboratório/marca/dosagens estejam confirmados por múltiplas fontes). Indicação de bula: tratamento de longo prazo da hipertensão arterial pulmonar (HAP, grupo I da OMS), classe funcional II-III, como agonista do receptor de prostaciclina. Bula mais recente aprovada pela ANVISA em 18/09/2025 (segundo uma das fontes). Fontes convergentes: bula do paciente hospedada por farmácia com licença de medicamento de alto custo (uploads.consultaremedios.com.br/drug_leaflet/Bula-Uptravi-Paciente-Consulta-Remedios.pdf), bula espelhada por distribuidor farmacêutico associado à Janssen (assets.jnjlabels.com/innovativemedicine/latam/brasil/uptravi-vps.pdf), e múltiplas listagens de farmácia/e-commerce de medicamentos especiais convergindo nas mesmas 8 dosagens e no mesmo laboratório Janssen-Cilag (farmaindex.com, precomedicamentos.com.br, prescritamedicamentos.com.br, drogariasaopaulo.com.br — filtro 'medicamentos Janssen com selexipague'), além de duas notas técnicas oficiais do TJDFT (NatJus) citando Uptravi/Janssen-Cilag em pareceres judiciais sobre fornecimento do medicamento. Data da busca: 21/08/2026."
+    ]
   },
   {
     "slug": "semaglutida",
