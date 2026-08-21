@@ -18146,5 +18146,261 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-e-manejo-da-sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+    "condicao": "Síncope situacional — miccional, defecatória, tussígena e de deglutição",
+    "resumo": "Checklist para reconhecer que \"situacional\" reúne gatilhos com mecanismos fisiopatológicos distintos entre si, orientar a conduta de base (educação e tranquilização) e evitar as duas armadilhas opostas: investigação excessiva no caso típico e benignidade automática sem reavaliar red flags.",
+    "documento_origem": "sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Zou R, Wang S, Lin P, Hu C, Wang Y, Li F, Xu Y, Wang C. The clinical characteristics of situational syncope in children and adults undergoing head-up tilt testing. American Journal of Emergency Medicine. 2020;38(7):1419-1423. DOI: 10.1016/j.ajem.2019.11.042. PMID: 31843331"
+    ],
+    "itens": [
+      {
+        "id": "svs-mecanismo-nao-unico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecido que \"situacional\" reúne gatilhos com mecanismos fisiopatológicos distintos entre si (miccional, defecatório, tussígeno, de deglutição, entre outros) — o mecanismo específico em jogo em cada gatilho é o que orienta a orientação prática dada ao paciente",
+        "origem_secao": "Por que \"situacional\" não é um mecanismo único"
+      },
+      {
+        "id": "svs-gatilho-identificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificado o gatilho específico do episódio, sabendo que o miccional é de longe o mais comum (50,85% dos casos de síncope situacional em coorte de 3.140 pacientes avaliados por tilt test), seguido do defecatório (15,82%)",
+        "origem_secao": "Frequência relativa dos gatilhos"
+      },
+      {
+        "id": "svs-mecanismo-miccional-defecatoria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Nos gatilhos miccional e defecatório, reconhecida a manobra de Valsalva (esforço abdominal contra glote fechada) como mecanismo comum — aumenta a pressão intratorácica, reduzindo o retorno venoso, o débito sistólico, a pressão arterial e o fluxo cerebral",
+        "origem_secao": "Mecanismo específico por gatilho"
+      },
+      {
+        "id": "svs-mecanismo-tussigena",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Na síncope tussígena, considerado o reflexo vasodepressor-bradicárdico mediado neuralmente e desencadeado pela tosse, e não apenas o efeito mecânico de aumento de pressão intratorácica isoladamente",
+        "origem_secao": "Mecanismo específico por gatilho"
+      },
+      {
+        "id": "svs-mecanismo-degluticao",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Na síncope de deglutição, considerado o reflexo vagovagal gastrointestinal-cardíaco desencadeado pela deglutição e pela distensão gástrica rápida subsequente",
+        "origem_secao": "Mecanismo específico por gatilho"
+      },
+      {
+        "id": "svs-conduta-base-educacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicada educação, orientação de estilo de vida e tranquilização quanto à natureza benigna da condição como conduta de base, na ausência de outros achados que indiquem investigação adicional",
+        "origem_secao": "Conduta"
+      },
+      {
+        "id": "svs-tussigena-tratar-causa",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na síncope tussígena, investigada e tratada por completo a causa da tosse subjacente — eliminar o gatilho é o tratamento mais eficaz nesse subtipo específico, não apenas a orientação sobre a síncope em si",
+        "origem_secao": "Conduta"
+      },
+      {
+        "id": "svs-nao-investigar-excesso-jovem-tipico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Evitada investigação exaustiva com exames cardíacos invasivos em paciente jovem com episódio único e claro de síncope miccional noturna, sem outros sinais de alarme — o padrão típico (gatilho claro, recuperação rápida, ausência de pródromo cardíaco) geralmente dispensa investigação extensa",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "svs-gatilhos-menos-classicos",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerados gatilhos menos clássicos como possíveis desencadeantes situacionais (banho, canto, escovação dos dentes, penteado do cabelo, pós-prandial), não só os mais comuns (miccional, defecatório, tussígeno)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "svs-red-flags-reavaliados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reavaliados red flags (síncope aos esforços, história familiar de morte súbita, ECG anormal) mesmo diante de episódio situacional recorrente, antes de assumir benignidade automática",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "svs-prognostico-bom",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Comunicado ao paciente que o prognóstico geral da síncope situacional é bom, com eventos adversos raros, na ausência de outra doença sistêmica associada",
+        "origem_secao": "Conduta"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado citado em documento_origem/source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico",
+    "condicao": "Indicação e aplicação de ventilação não invasiva (CPAP ou BiPAP) no edema agudo de pulmão cardiogênico",
+    "resumo": "Checklist para a decisão de modo (CPAP vs. NIPPV/BiPAP), os parâmetros práticos e a comunicação honesta sobre o efeito da ventilação não invasiva sobre mortalidade — ponto em que a metanálise Cochrane e o maior ensaio individual (3CPO) divergem.",
+    "documento_origem": "ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gray A, Goodacre S, Newby DE, Masson M, Sampson F, Nicholl J; 3CPO Trialists. Noninvasive ventilation in acute cardiogenic pulmonary edema. N Engl J Med. 2008;359(2):142-151. DOI: 10.1056/NEJMoa0707992. PMID: 18614781",
+      "Berbenetz N, Wang Y, Brown J, et al. Non-invasive positive pressure ventilation (CPAP or bilevel NPPV) for cardiogenic pulmonary oedema. Cochrane Database Syst Rev. 2019;4(4):CD005351. DOI: 10.1002/14651858.CD005351.pub4. PMID: 30950507. PMCID: PMC6449889"
+    ],
+    "itens": [
+      {
+        "id": "vni-adjuvante-nao-substituto",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que a ventilação não invasiva é medida adjuvante, aplicada em conjunto com o tratamento médico padrão (diurético, vasodilatador) do edema agudo de pulmão cardiogênico — nenhuma das duas fontes principais testou VNI como monoterapia",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "vni-contraindicacoes-descartadas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Descartadas contraindicações clássicas antes de aplicar a VNI: rebaixamento do nível de consciência sem proteção de via aérea, vômito incoercível, pneumotórax não drenado, instabilidade hemodinâmica que exija intubação imediata",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "vni-escolha-modo-sem-diferenca",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o 3CPO não encontrou diferença entre CPAP e NIPPV/BiPAP no desfecho combinado morte ou intubação em 7 dias (11,7% vs. 11,1%, p=0,81) — a escolha do modo não deve se basear em suposta superioridade de eficácia",
+        "origem_secao": "O ensaio 3CPO / Síntese prática"
+      },
+      {
+        "id": "vni-hipercapnia-considerar-bipap",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerado o NIPPV/BiPAP em caso de hipercapnia associada, pelo racional teórico do suporte inspiratório adicional, mesmo sem superioridade estatística comprovada no 3CPO",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "vni-parametros-faixa-ensaio",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Ajustados os parâmetros dentro das faixas usadas no maior ensaio do tema: CPAP de 5 a 15 cmH₂O; NIPPV com pressão inspiratória de 8 a 20 cmH₂O e pressão expiratória de 4 a 10 cmH₂O",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "vni-reavaliacao-primeira-hora",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reavaliados dispneia, frequência cardíaca, pH e capnia na primeira hora de VNI — desfechos em que a terapia mostrou melhora consistente e rápida sobre a oxigenoterapia padrão no 3CPO",
+        "origem_secao": "O ensaio 3CPO"
+      },
+      {
+        "id": "vni-nao-afirmar-reducao-mortalidade",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não comunicada à equipe ou ao paciente a afirmação de que \"a VNI reduz mortalidade comprovadamente\" no edema agudo de pulmão cardiogênico — o maior ensaio individual (3CPO) não reproduziu esse benefício, e a própria Cochrane classifica essa evidência de mortalidade como de qualidade baixa",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "vni-cautela-extrapolar-populacao-jovem",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerado, ao interpretar os achados de mortalidade do 3CPO, que a idade média da coorte foi de quase 78 anos — cautela redobrada ao extrapolar sem ressalva para populações muito mais jovens ou com comorbidades distintas",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "vni-monitorizacao-falha-via-aerea",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Mantida monitorização contínua para identificar sinais de falha da VNI que indiquem necessidade de via aérea definitiva, já que nenhuma das duas fontes elimina a necessidade de julgamento clínico sobre essa decisão",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado citado em documento_origem/source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "hipersensibilidade-do-seio-carotideo-diagnostico-e-restricoes-de-direcao",
+    "condicao": "Hipersensibilidade do seio carotídeo no idoso — diagnóstico e restrições de direção veicular",
+    "resumo": "Checklist para investigar a hipersensibilidade do seio carotídeo como causa de síncope/queda inexplicada no idoso, classificar o subtipo hemodinâmico e decidir sobre restrição de direção para motorista particular e comercial.",
+    "documento_origem": "hipersensibilidade-do-seio-carotideo-no-idoso-e-restricoes-de-direcao-veicular",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Carotid Sinus Hypersensitivity in Asymptomatic Older Persons: Implications for Diagnosis of Syncope and Falls · JAMA Internal Medicine · https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/409980",
+      "Carotid Sinus Hypersensitivity · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK559059/",
+      "Driving restrictions for patients with reflex syncope · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC5728707/",
+      "2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope · Circulation · https://www.ahajournals.org/doi/10.1161/cir.0000000000000499"
+    ],
+    "itens": [
+      {
+        "id": "hsc-considerar-sincope-inexplicada-idoso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Considerada hipersensibilidade do seio carotídeo no diagnóstico diferencial de síncope inexplicada em idoso — responde por quase 30% desses casos",
+        "origem_secao": "Hipersensibilidade do seio carotídeo — relevância no idoso"
+      },
+      {
+        "id": "hsc-considerar-instituicao-longa-permanencia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerada hipersensibilidade do seio carotídeo em residente de instituição de longa permanência com queda ou síncope — prevalência de 14% nessa população",
+        "origem_secao": "Hipersensibilidade do seio carotídeo — relevância no idoso"
+      },
+      {
+        "id": "hsc-massagem-seio-carotideo-tecnica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmada a suspeita clínica por massagem do seio carotídeo sob monitorização apropriada — 5 a 10 segundos, em posição supina e ortostática, com monitorização batimento a batimento",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "hsc-exames-basicos-e-ecg",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitados hemograma completo, painel metabólico básico e glicemia capilar, além de eletrocardiograma, considerado essencial em todos os casos",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "hsc-tilt-test-diferencial",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerado tilt test quando necessário diferenciar síncope vasovagal de hipotensão ortostática",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "hsc-subtipo-classificado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificado o subtipo hemodinâmico (cardioinibitório em aproximadamente 70% dos casos, vasodepressor em aproximadamente 10%, misto em aproximadamente 20%), orientando a avaliação diagnóstica com monitorização hemodinâmica contínua durante a massagem",
+        "origem_secao": "Subtipos de hipersensibilidade do seio carotídeo"
+      },
+      {
+        "id": "hsc-motorista-particular-sem-restricao-salvo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Para motorista particular, não indicada restrição de direção, salvo se o paciente apresentar síncope sem pródromo confiável enquanto dirige ou sentado",
+        "origem_secao": "Restrições para motorista particular"
+      },
+      {
+        "id": "hsc-motorista-particular-reavaliar-liberacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reavaliada a liberação para direção particular conforme o risco de recorrência diminuir com o tratamento ou a história natural da doença",
+        "origem_secao": "Restrições para motorista particular"
+      },
+      {
+        "id": "hsc-motorista-comercial-restricao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Para motorista comercial, indicada restrição de direção a menos que a eficácia do tratamento possa ser confirmada — restrições mais rigorosas que para motorista particular, podendo envolver proibição permanente de operar veículo comercial",
+        "origem_secao": "Restrições para motorista comercial"
+      },
+      {
+        "id": "hsc-modelo-de-risco-limiares",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Baseada a decisão de liberar a direção no modelo de risco de incapacitação súbita: menor que 22% ao ano para motorista particular de veículo de passeio, não superior a 1% para motorista comercial de caminhão",
+        "origem_secao": "Restrições de direção — princípio geral"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado e publicado citado em documento_origem/source_refs, com a seção de origem registrada em cada item."
   }
 ]
