@@ -18146,5 +18146,237 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "isquemia-aguda-de-membro-triagem-por-rutherford",
+    "condicao": "Isquemia aguda de membro — triagem e conduta pela classificação de Rutherford",
+    "resumo": "O que checar na avaliação inicial de isquemia aguda de membro para classificar a categoria de Rutherford (I a III) e decidir entre investigação com tempo, revascularização imediata ou amputação primária.",
+    "documento_origem": "isquemia-aguda-de-membro-classificacao-de-rutherford-e-conduta",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Olinic DM, Stanek A, Tătaru DA, Homorodean C, Olinic M. Acute Limb Ischemia: An Update on Diagnosis and Management · Journal of Clinical Medicine · 2019 · 8(8):1215 · DOI: 10.3390/jcm8081215 · PMID: 31416204"
+    ],
+    "itens": [
+      {
+        "id": "ali-classificar-categoria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Categoria de Rutherford (I — viável, IIa — marginalmente ameaçado, IIb — imediatamente ameaçado, III — irreversível) determinada com base em perda sensitiva, fraqueza muscular e sinal Doppler arterial e venoso, não só em um desses achados isolado",
+        "origem_secao": "Classificação de Rutherford para isquemia aguda de membro"
+      },
+      {
+        "id": "ali-doppler-arterial-e-venoso",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Doppler arterial E venoso registrados separadamente — a ausência de sinal arterial isolada (compatível com IIa/IIb, ainda salvável) é diferente da ausência de sinal arterial E venoso (compatível com III, irreversível), e essa diferença muda a conduta por completo",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ali-conduta-i-iia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Categoria I ou IIa: investigação de imagem não invasiva, com tempo para avaliar comorbidades antes de decidir a via de revascularização — não é indicação de revascularização na primeira hora",
+        "origem_secao": "Classificação de Rutherford para isquemia aguda de membro"
+      },
+      {
+        "id": "ali-conduta-iib",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Categoria IIb: revascularização imediata, sem esperar por investigação extensa — não solicitar angiotomografia ou outro exame demorado \"para confirmar antes de operar\", pois a categoria já define urgência máxima e o atraso equivale a perda de tecido",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ali-conduta-iii-amputacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Categoria III: amputação primária, não revascularização — tentar reperfundir um membro já irreversivelmente lesado expõe a síndrome de reperfusão (hipercalemia, mioglobinúria, acidose, lesão renal aguda) sem benefício de salvamento",
+        "origem_secao": "O que a classificação decide na prática"
+      },
+      {
+        "id": "ali-reclassificacao-seriada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reclassificação clínica repetida agendada enquanto o membro aguarda intervenção — um membro IIa pode evoluir para IIb nesse intervalo, e a reavaliação seriada é parte do seguimento, não um evento único feito só na admissão",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ali-diferenciar-de-doenca-cronica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Quadro reconhecido como queda SÚBITA de perfusão (embolia, trombose in situ sobre placa preexistente, dissecção ou trauma) e não confundido com agudização de doença arterial periférica crônica, que segue via diagnóstica própria (índice tornozelo-braço, isquemia crítica)",
+        "origem_secao": "Por que a isquemia aguda é uma emergência à parte"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Olinic DM et al., Acute Limb Ischemia: An Update on Diagnosis and Management, J Clin Med 2019;8(8):1215, DOI: 10.3390/jcm8081215, PMID: 31416204, em 21/08/2026."
+  },
+  {
+    "slug": "rastreio-e-limiar-cirurgico-na-aortopatia-da-valva-aortica-bicuspide",
+    "condicao": "Rastreio e limiar cirúrgico na aortopatia associada à valva aórtica bicúspide (ESC 2024)",
+    "resumo": "O que checar ao diagnosticar valva aórtica bicúspide (VAB) para caracterizar o fenótipo da dilatação aórtica, definir a periodicidade de vigilância e aplicar o limiar cirúrgico correto — que muda conforme o fenótipo, não só o diâmetro absoluto.",
+    "documento_origem": "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179 — seção 10.2 (Aortic disease associated with bicuspid aortic valves), Figura 43 e Recommendation Table 68 (Recommendations for bicuspid aortic valve-associated aortopathy management)."
+    ],
+    "itens": [
+      {
+        "id": "bav-tte-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TTE inicial avaliando o diâmetro da aorta em vários níveis, feito ao primeiro diagnóstico de VAB — Classe I, Nível B",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "bav-angio-tc-ou-rm",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Angiotomografia ou ressonância cardiovascular solicitada ao primeiro diagnóstico e sempre que houver discrepância importante entre medidas seriadas do TTE, ou quando o diâmetro ultrapassar 45 mm — Classe I, Nível C",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "bav-caracterizar-fenotipo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Fenótipo da dilatação aórtica caracterizado (ascendente — 70-75%, de raiz — 15-20%, ou estendido — 5-10%), de forma independente da morfologia da valva — é esse fenótipo, não só o diâmetro absoluto, que decide o limiar cirúrgico",
+        "origem_secao": "Nomenclatura e fenótipos, unificados pela diretriz"
+      },
+      {
+        "id": "bav-vigilancia-seriada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância seriada por TTE agendada em paciente com diâmetro máximo acima de 40 mm sem indicação cirúrgica ou após cirurgia valvar isolada: reavaliação em 1 ano, depois a cada 2-3 anos se houver estabilidade — Classe I, Nível C",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "bav-limiar-55mm-qualquer-fenotipo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Cirurgia recomendada com diâmetro máximo ≥ 55 mm, em qualquer fenótipo — Classe I, Nível B",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "bav-limiar-50mm-fenotipo-raiz",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Fenótipo de raiz: cirurgia recomendada já a partir de 50 mm — Classe I, Nível B (esse fenótipo cresce mais rápido, tem pior sobrevida se não operado e maior risco de síndrome aórtica aguda)",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "bav-limiar-fenotipo-ascendente-baixo-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Fenótipo ascendente, paciente de baixo risco cirúrgico (< 3%): cirurgia deve ser considerada a partir de 52 mm — Classe IIa, Nível B; ou a partir de 50 mm se presente idade < 50 anos, estatura menor (altura 1,50-1,69 m), comprimento da aorta ascendente ≥ 11 cm, crescimento ≥ 3 mm/ano, história familiar de síndrome aórtica aguda, coarctação de aorta, hipertensão resistente, cirurgia cardíaca concomitante não valvar aórtica, ou desejo de gestação — Classe IIa, Nível C",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "bav-cirurgia-concomitante-valvar",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Paciente que já vai para cirurgia da valva aórtica por outro motivo: operar a aorta também se o diâmetro de raiz ou ascendente for ≥ 45 mm — Classe IIa, Nível C",
+        "origem_secao": "Limiares cirúrgicos: por que o fenótipo muda o corte"
+      },
+      {
+        "id": "bav-rastreio-familiar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Rastreio de parente de primeiro grau recomendado se o paciente tem fenótipo de raiz e/ou regurgitação aórtica isolada — Classe I, Nível C; deve ser considerado em parente de primeiro grau de qualquer paciente com VAB — Classe IIa, Nível B",
+        "origem_secao": "Rastreio ao diagnóstico e vigilância"
+      },
+      {
+        "id": "bav-fora-do-escopo-valva-e-coarctacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer que este documento não cobre a indicação de troca/reparo da própria valva bicúspide (segue os critérios gerais de valvopatia aórtica) nem a coarctação de aorta associada (até 50-85% dos casos, com seguimento e limiares de intervenção próprios) — não aplicar os limiares de diâmetro deste checklist a essas duas decisões",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases, Eur Heart J. 2024;45(36):3538-3700, DOI: 10.1093/eurheartj/ehae179 (seção 10.2, Figura 43 e Recommendation Table 68), em 21/08/2026."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-anomalia-de-ebstein",
+    "condicao": "Anomalia de Ebstein no adulto — investigação diagnóstica e indicação de cirurgia (ESC 2020)",
+    "resumo": "O que checar na avaliação diagnóstica e no manejo da anomalia de Ebstein no adulto, incluindo a caracterização ecocardiográfica, a pesquisa de substrato arrítmico antes de cirurgia planejada e as indicações de reparo cirúrgico.",
+    "documento_origem": "anomalia-de-ebstein-diagnostico-e-manejo-esc-2020",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028 — seção 4.9 (Ebstein anomaly).",
+      "Celermajer DS et al. J Am Coll Cardiol 1992;19(5):1041-1046, PMID: 1552092 (índice de Celermajer)."
+    ],
+    "itens": [
+      {
+        "id": "ebs-eco-deslocamento-e-camaras",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma avaliando deslocamento apical distal do folheto septal ou posterior (no adulto, considerado significativo se ≥ 0,8 cm/m² de superfície corporal), tamanho do folheto anterior, aderência (tethering) ao septo ou parede ventricular, tamanho e função de AD, VD atrializado, VD funcional remanescente e VE, e obstrução de via de saída de VD",
+        "origem_secao": "Investigação diagnóstica"
+      },
+      {
+        "id": "ebs-ecg-vias-acessorias",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ECG avaliado para hipertrofia de átrio direito, PR prolongado, bloqueio de ramo direito, pré-excitação e vias múltiplas — substrato de taquicardia por reentrada atrioventricular, a arritmia mais comum na anomalia",
+        "origem_secao": "Investigação diagnóstica"
+      },
+      {
+        "id": "ebs-indice-de-celermajer",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Índice de Celermajer calculado por ecocardiografia (razão entre a área de AD + VD atrializado e a área de VD funcional + câmaras esquerdas, grau 1 a 4) como estimativa de gravidade, quando disponível",
+        "origem_secao": "Investigação diagnóstica"
+      },
+      {
+        "id": "ebs-anticoagulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação oral recomendada em paciente com história de embolia paradoxal ou fibrilação atrial; considerada na presença de risco tromboembólico aumentado ou shunt direita-esquerda",
+        "origem_secao": "Tratamento clínico"
+      },
+      {
+        "id": "ebs-eef-pre-operatorio",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Substrato arrítmico investigado (estudo eletrofisiológico, com ablação se factível) antes de cirurgia cardíaca planejada — o acesso transcateter a vias acessórias direitas e à via lenta do nó AV pode ficar mais difícil após cirurgia valvar prévia",
+        "origem_secao": "Detalhe técnico importante"
+      },
+      {
+        "id": "ebs-reparo-cirurgico-indicacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reparo cirúrgico indicado em paciente com insuficiência tricúspide grave e sintomas, ou deterioração objetiva da capacidade de exercício (Classe I, Nível C) — realizado por cirurgião congênito com experiência específica em cirurgia de Ebstein (Classe I, Nível C)",
+        "origem_secao": "Indicações de cirurgia e de intervenção por cateter"
+      },
+      {
+        "id": "ebs-reparo-independente-de-sintomas",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Reparo cirúrgico deve ser considerado independentemente de sintomas em paciente com dilatação progressiva de coração direito ou redução da função sistólica de VD — Classe IIa, Nível C",
+        "origem_secao": "Indicações de cirurgia e de intervenção por cateter"
+      },
+      {
+        "id": "ebs-fechamento-cia-cauteloso",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não fechar comunicação interatrial/forame oval patente isoladamente sem avaliação cuidadosa do impacto na pressão de átrio direito e no débito cardíaco sistêmico — pode piorar, e não melhorar, o quadro clínico",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ebs-seguimento-anual-achd",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento regular (pelo menos anual) agendado em centro especializado em cardiopatia congênita do adulto, avaliando insuficiência tricúspide persistente ou nova, falência de VD ou VE, shunt atrial residual, arritmias e bloqueio atrioventricular de grau mais alto",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "ebs-orientacao-esporte-e-gestacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente com insuficiência tricúspide mais que leve, disfunção ventricular, shunt ou arritmia orientado a evitar exercício isométrico pesado; gestante orientada que o risco é mais alto na presença de cianose significativa, arritmia grave e falência de coração direito",
+        "origem_secao": "Considerações adicionais"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Baumgartner H et al., 2020 ESC Guidelines for the management of adult congenital heart disease, Eur Heart J. 2021;42(6):563-645, DOI: 10.1093/eurheartj/ehaa554, PMID: 32860028 (seção 4.9), em 21/08/2026."
   }
 ]
