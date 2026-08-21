@@ -8424,5 +8424,454 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "decisao-de-estrategia-de-reperfusao-no-stemi",
+    "condicao": "STEMI — estratégia de reperfusão",
+    "resumo": "Checklist de decisão no primeiro contato médico para escolher entre ICP primária e fibrinólise no STEMI, com os alvos de tempo da ESC 2023 e o reconhecimento de complicação mecânica pós-infarto.",
+    "documento_origem": "stemi-estrategia-de-reperfusao-esc-2023",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of acute coronary syndromes. European Heart Journal. 2023;44(38):3720-3826. DOI 10.1093/eurheartj/ehad191",
+      "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. DOI 10.1161/CIR.0000000000000985. PMID 34126755"
+    ],
+    "itens": [
+      {
+        "id": "stemi-reperf-diagnostico-ecg-marca-tempo-zero",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar STEMI pelo ECG e registrar o horário exato do diagnóstico — é a partir dele, não da dor torácica, que todos os alvos de tempo de reperfusão são contados.",
+        "origem_secao": "Principio fundamental"
+      },
+      {
+        "id": "stemi-reperf-centro-com-pci-alvo-60min",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em centro com hemodinâmica disponível de imediato: encaminhar direto à sala e buscar passagem do fio-guia em menos de 60 minutos do diagnóstico de STEMI.",
+        "origem_secao": "Cenario 1 centro com pci"
+      },
+      {
+        "id": "stemi-reperf-avaliar-atraso-estimado-para-icp",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em centro sem hemodinâmica (ou via ambulância): estimar se a ICP primária pode ser realizada em menos de 120 minutos do diagnóstico — é essa estimativa que decide entre transferir para ICP ou trombolisar.",
+        "origem_secao": "Cenario 2 centro sem pci ou ambulancia"
+      },
+      {
+        "id": "stemi-reperf-transferencia-icp-alvo-90min",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se a ICP for viável em menos de 120 minutos: transferir de imediato para centro com hemodinâmica, com meta de fio-guia em menos de 90 minutos do diagnóstico.",
+        "origem_secao": "Cenario 2 centro sem pci ou ambulancia"
+      },
+      {
+        "id": "stemi-reperf-fibrinolise-alvo-10min-sem-contraindicacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se a ICP não for viável em menos de 120 minutos e não houver contraindicação: iniciar fibrinólise, com meta de bolus do trombolítico em menos de 10 minutos do diagnóstico.",
+        "origem_secao": "Cenario 2 centro sem pci ou ambulancia"
+      },
+      {
+        "id": "stemi-reperf-angiografia-rotina-pos-fibrinolise",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Após fibrinólise bem-sucedida: programar angiografia coronariana de rotina em 2 a 24 horas — não protelar além dessa janela.",
+        "origem_secao": "Cenario 2 centro sem pci ou ambulancia"
+      },
+      {
+        "id": "stemi-reperf-icp-resgate-se-fibrinolise-falhar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se a fibrinólise falhar (sinais de reperfusão ausentes): encaminhar para ICP de resgate imediata, sem aguardar a janela de rotina de 2-24h.",
+        "origem_secao": "Cenario 2 centro sem pci ou ambulancia"
+      },
+      {
+        "id": "stemi-reperf-criterios-internacao-uti",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Definir necessidade de UTI: instabilidade hemodinâmica ou choque cardiogênico, Killip ≥ II, arritmia com risco de vida (TV/FV, BAV avançado), dor torácica recorrente/refratária sugerindo isquemia em curso, ou suspeita de complicação mecânica.",
+        "origem_secao": "Criterios internacao uti"
+      },
+      {
+        "id": "stemi-reperf-reavaliar-piora-hemodinamica-subita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de piora hemodinâmica súbita, sopro novo ou dissociação eletromecânica entre o 1º e o 14º dia pós-infarto, reavaliar por ecocardiograma à beira do leito antes de assumir apenas reinfarto ou arritmia como causa — pensar em ruptura de parede livre, CIV pós-infarto ou insuficiência mitral aguda por ruptura de músculo papilar.",
+        "origem_secao": "Manejo complicacoes mecanicas"
+      },
+      {
+        "id": "stemi-reperf-estabilizar-como-ponte-a-correcao-definitiva",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Ao suspeitar de complicação mecânica: estabilizar hemodinamicamente (incluindo suporte circulatório mecânico quando disponível) como ponte para correção cirúrgica ou percutânea definitiva, sem atrasar essa correção.",
+        "origem_secao": "Manejo complicacoes mecanicas"
+      },
+      {
+        "id": "stemi-reperf-nao-retardar-diagnostico-ecg",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Evitar a armadilha mais citada da diretriz: retardar o ECG diagnóstico, o que atrasa o início da contagem de todos os alvos de tempo subsequentes.",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base na diretriz ESC 2023 de síndromes coronarianas agudas (Eur Heart J. 2023;44(38):3720-3826) e no posicionamento da AHA sobre complicações mecânicas do infarto (Circulation. 2021;144(2):e16-e35, PMID 34126755), em 21/08/2026."
+  },
+  {
+    "slug": "rastreio-e-tratamento-de-deficiencia-de-ferro-na-insuficiencia-cardiaca",
+    "condicao": "Insuficiência cardíaca — deficiência de ferro",
+    "resumo": "Checklist de rastreio da deficiência de ferro na IC pela definição operacional dos ensaios (ferritina e saturação de transferrina, não hemoglobina isolada) e de decisão de reposição endovenosa conforme o desfecho a ser buscado — sintoma versus hospitalização.",
+    "documento_origem": "ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ponikowski P, van Veldhuisen DJ, Comin-Colet J, et al. Beneficial effects of long-term intravenous iron therapy with ferric carboxymaltose in patients with symptomatic heart failure and iron deficiency (CONFIRM-HF). Eur Heart J. 2015;36(11):657-668. DOI 10.1093/eurheartj/ehu385. PMID 25176939",
+      "Ponikowski P, Kirwan BA, Anker SD, et al. Ferric carboxymaltose for iron deficiency at discharge after acute heart failure (AFFIRM-AHF). Lancet. 2020;396(10266):1895-1904. DOI 10.1016/S0140-6736(20)32339-4. PMID 33197395",
+      "Kalra PR, Cleland JGF, Petrie MC, et al; IRONMAN Study Group. Intravenous ferric derisomaltose in patients with heart failure and iron deficiency in the UK (IRONMAN). Lancet. 2022;400(10369):2199-2209. DOI 10.1016/S0140-6736(22)02083-9. PMID 36347265"
+    ],
+    "itens": [
+      {
+        "id": "ic-ferro-solicitar-ferritina-e-satfe",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ferritina sérica e saturação de transferrina em todo paciente com IC sintomática — não rastrear deficiência de ferro só pela hemoglobina.",
+        "origem_secao": "Definicao de deficiencia de ferro nos tres ensaios"
+      },
+      {
+        "id": "ic-ferro-aplicar-definicao-operacional",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Definir deficiência de ferro por ferritina <100 μg/L, ou ferritina entre 100-300 μg/L com saturação de transferrina <20% — mesma definição usada no CONFIRM-HF, AFFIRM-AHF e IRONMAN, independente de o paciente ter anemia.",
+        "origem_secao": "Definicao de deficiencia de ferro nos tres ensaios"
+      },
+      {
+        "id": "ic-ferro-confirmar-fevi-reduzida-antes-de-extrapolar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que a FEVE está reduzida (≤45% ou <50%, conforme o ensaio) antes de aplicar a evidência — os três ensaios recrutaram FEVE reduzida, não devem ser extrapolados para ICFEp.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "ic-ferro-repor-ev-para-sintoma-e-capacidade-funcional",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Para alívio de sintoma, classe funcional NYHA e qualidade de vida, repor ferro carboximaltose endovenoso — é o desfecho em que a evidência é mais sólida (CONFIRM-HF, diferença de 33±11 metros no TC6M na semana 24, p=0,002).",
+        "origem_secao": "Confirm-hf 2015 sintoma e capacidade funcional"
+      },
+      {
+        "id": "ic-ferro-considerar-ev-para-reducao-de-hospitalizacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerar reposição de ferro EV também com o objetivo de reduzir hospitalização por IC, especialmente ao estabilizar o paciente antes da alta hospitalar por IC aguda descompensada — sustentado pelo padrão consistente dos três ensaios, mesmo sem significância formal no desfecho composto principal de dois deles.",
+        "origem_secao": "Sintese honesta dos tres resultados"
+      },
+      {
+        "id": "ic-ferro-nao-prometer-reducao-de-mortalidade",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao orientar o paciente, não apresentar a reposição de ferro EV como redutora de mortalidade cardiovascular — nenhum dos três ensaios demonstrou esse efeito; o benefício consistente é em sintoma e em hospitalização.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "ic-ferro-nao-tratar-como-tres-replicas-concordantes",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao discutir a evidência com a equipe, não apresentar CONFIRM-HF, AFFIRM-AHF e IRONMAN como três confirmações independentes do mesmo desfecho — cada um mediu um desfecho primário diferente, e dois dos três não atingiram significância formal nele.",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em CONFIRM-HF (Eur Heart J. 2015;36(11):657-668, PMID 25176939), AFFIRM-AHF (Lancet. 2020;396(10266):1895-1904, PMID 33197395) e IRONMAN (Lancet. 2022;400(10369):2199-2209, PMID 36347265), em 21/08/2026."
+  },
+  {
+    "slug": "investigacao-genetica-diante-de-amiloidose-cardiaca-por-transtirretina",
+    "condicao": "Amiloidose cardíaca por transtirretina (ATTR-CA)",
+    "resumo": "Checklist para diferenciar a forma hereditária (ATTRv) da forma selvagem (ATTRwt) diante de um diagnóstico confirmado de amiloidose cardíaca por transtirretina, decidindo quando o teste genético e o aconselhamento em cascata para familiares são indicados.",
+    "documento_origem": "amiloidose-cardiaca-attr-hereditaria-versus-selvagem-diferenciacao-clinica-e-teste-genetico",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ruberg FL, Berk JL. Transthyretin (TTR) cardiac amyloidosis. Circulation. 2012;126(10):1286-1300. DOI 10.1161/CIRCULATIONAHA.111.078915. PMID 22949539",
+      "Jacobson DR, Pastore RD, Yaghoubian R, et al. Variant-sequence transthyretin (isoleucine 122) in late-onset cardiac amyloidosis in black Americans. N Engl J Med. 1997;336(7):466-473. DOI 10.1056/NEJM199702133360703. PMID 9017939",
+      "Kittleson MM, Ruberg FL, Ambardekar AV, et al. 2023 ACC Expert Consensus Decision Pathway on Comprehensive Multidisciplinary Care for the Patient With Cardiac Amyloidosis. J Am Coll Cardiol. 2023;81(11):1076-1126. DOI 10.1016/j.jacc.2022.11.022. PMID 36697326"
+    ],
+    "itens": [
+      {
+        "id": "attr-genetica-confirmar-ttr-nao-cadeia-leve",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar que o depósito amiloide é de transtirretina (TTR), não de cadeia leve (AL) — em centro de referência, 4% dos encaminhamentos para suspeita de AL eram, na verdade, ATTR, erro que muda por completo a conduta terapêutica.",
+        "origem_secao": "O teste genetico como se confirma qual forma e"
+      },
+      {
+        "id": "attr-genetica-levantar-idade-de-inicio-e-sexo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Levantar idade de início dos sintomas e sexo do paciente: início antes dos 60 anos e/ou penetrância igual entre os sexos sugerem forma hereditária; início tardio (>60-65 anos) com forte predomínio masculino (~25-50:1) é o padrão clássico da forma selvagem — sem usar isso como critério isolado, pela sobreposição com V122I.",
+        "origem_secao": "Idade de diagnostico e predominancia por sexo"
+      },
+      {
+        "id": "attr-genetica-considerar-ancestralidade-afrodescendente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de paciente afrodescendente com amiloidose cardíaca isolada, sobretudo acima dos 60 anos, considerar sistematicamente a variante V122I/Val142Ile — presente em cerca de 3-4% da população afro-americana nos EUA, com prevalência praticamente indetectável em caucasianos.",
+        "origem_secao": "Mutacoes mais comuns e distribuicao populacional o caso do Val142Ile V122I"
+      },
+      {
+        "id": "attr-genetica-pesquisar-neuropatia-periferica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisar neuropatia periférica e disautonomia: presença é sinal forte de forma hereditária (padrão de PAF em V30M/T60A), mas ausência NÃO exclui forma hereditária — o V122I é predominantemente cardíaco e ainda assim hereditário, com neuropatia detectável em 2,1% a 9,0% dos portadores conforme a coorte.",
+        "origem_secao": "Neuropatia periferica como sinal diferenciador com uma ressalva importante"
+      },
+      {
+        "id": "attr-genetica-solicitar-ief-e-sequenciamento-ttr",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar focagem isoelétrica (IEF) do soro e, na sequência, amplificação por PCR e sequenciamento dos éxons 1 a 4 do gene TTR — é a única forma de diferenciar variante de selvagem; a imuno-histoquímica positiva para TTR não distingue as duas.",
+        "origem_secao": "O teste genetico como se confirma qual forma e"
+      },
+      {
+        "id": "attr-genetica-encaminhar-aconselhamento-genetico-se-variante",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se o sequenciamento identificar variante patogênica ou provavelmente patogênica: encaminhar para aconselhamento genético e considerar testagem em cascata dos parentes de primeiro grau — indicação descrita em linguagem narrativa pelo consenso ACC 2023, sem graduação formal de Classe/Nível.",
+        "origem_secao": "Por que isso muda o aconselhamento familiar"
+      },
+      {
+        "id": "attr-genetica-nao-oferecer-cascata-para-vus",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não oferecer testagem em cascata a familiares quando o resultado for uma variante de significado incerto (VUS) — o consenso ACC 2023 ressalva explicitamente que VUS não é apropriada para esse encaminhamento.",
+        "origem_secao": "Por que isso muda o aconselhamento familiar"
+      },
+      {
+        "id": "attr-genetica-nao-tratar-selvagem-como-hereditaria",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao orientar a família, deixar claro que a forma selvagem (ATTRwt) não é hereditária e não exige rastreio de filhos ou irmãos — só a forma variante (ATTRv) tem esse risco, de transmissão autossômica dominante e penetrância variável por mutação.",
+        "origem_secao": "Por que isso muda o aconselhamento familiar"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Ruberg & Berk (Circulation. 2012;126(10):1286-1300, PMID 22949539), Jacobson et al. (N Engl J Med. 1997;336(7):466-473, PMID 9017939) e Kittleson et al. (J Am Coll Cardiol. 2023;81(11):1076-1126, PMID 36697326), em 21/08/2026."
+  },
+  {
+    "slug": "escalonamento-para-espironolactona-como-quarta-droga-na-hipertensao-resistente",
+    "condicao": "Hipertensão resistente — escolha da quarta droga",
+    "resumo": "Checklist para a decisão da quarta droga em hipertensão resistente confirmada, com base no ensaio PATHWAY-2 (espironolactona vs. bisoprolol, doxazosina e placebo).",
+    "documento_origem": "hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Williams B, MacDonald TM, Morant S, Webb DJ, Sever P, McInnes G, et al; British Hypertension Society's PATHWAY Studies Group. Spironolactone versus placebo, bisoprolol, and doxazosin to determine the optimal treatment for drug-resistant hypertension (PATHWAY-2): a randomised, double-blind, crossover trial. Lancet. 2015;386(10008):2059-2068. DOI: 10.1016/S0140-6736(15)00257-3. PMID: 26414968"
+    ],
+    "itens": [
+      {
+        "id": "esp4-confirmar-resistencia-verdadeira",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar hipertensão resistente verdadeira, excluindo pseudorresistência (adesão, técnica de medida, efeito do avental branco) antes de considerar a quarta droga.",
+        "origem_secao": "Onde isso deixa a hipertensao resistente"
+      },
+      {
+        "id": "esp4-confirmar-tres-farmacos-dose-maxima",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente está em dose máxima tolerada de três fármacos anti-hipertensivos há pelo menos 3 meses, com PA de consultório ≥140 mmHg (ou ≥135 em diabéticos) e domiciliar ≥130 mmHg.",
+        "origem_secao": "Desenho — e por que ele e forte"
+      },
+      {
+        "id": "esp4-rastrear-causa-secundaria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Rastrear causa secundária de hipertensão (aldosteronismo primário, feocromocitoma) antes de escalonar o tratamento farmacológico.",
+        "origem_secao": "Onde isso deixa a hipertensao resistente"
+      },
+      {
+        "id": "esp4-checar-potassio-creatinina-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosar potássio sérico e creatinina antes de iniciar a espironolactona.",
+        "origem_secao": "Seguranca"
+      },
+      {
+        "id": "esp4-iniciar-espironolactona-25-50mg",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar espironolactona 25-50 mg/dia como quarta droga, somada à medicação de base — foi superior a bisoprolol, doxazosina e placebo na redução da sistólica domiciliar (vs. placebo −8,70 mmHg, p<0,0001).",
+        "origem_secao": "Resultados — a hierarquia inteira foi vencida"
+      },
+      {
+        "id": "esp4-nao-usar-renina-para-excluir",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não usar a renina plasmática basal para excluir o paciente do tratamento — a espironolactona foi superior em toda a distribuição de renina; a renina apenas gradua a expectativa de resposta.",
+        "origem_secao": "O achado da renina — e o cuidado ao usa-lo"
+      },
+      {
+        "id": "esp4-reavaliar-potassio-apos-inicio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar potássio sérico e função renal após o início da espironolactona (no ensaio, 6 de 285 pacientes tiveram potássio acima de 6,0 mmol/L em alguma ocasião).",
+        "origem_secao": "Seguranca"
+      },
+      {
+        "id": "esp4-alertar-efeitos-antiandrogenicos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar o paciente sobre possíveis efeitos antiandrogênicos da espironolactona no seguimento de longo prazo, período não coberto pelas 12 semanas do ensaio.",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "esp4-considerar-alternativas-apos-tentativa-farmacologica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Considerar denervação renal ou inibidor da aldosterona-sintase (baxdrostate) apenas depois de tentar a espironolactona como quarta droga — nenhuma dessas alternativas foi comparada à espironolactona neste ensaio.",
+        "origem_secao": "Onde isso deixa a hipertensao resistente"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Williams B et al., Lancet. 2015;386(10008):2059-2068 (PATHWAY-2), em 21/08/2026."
+  },
+  {
+    "slug": "interrupcao-periprocedimento-de-anticoagulante-oral-na-fa-para-procedimento-eletivo",
+    "condicao": "Fibrilação atrial — interrupção do anticoagulante para procedimento eletivo",
+    "resumo": "Checklist para o manejo periprocedimento do anticoagulante oral (varfarina ou DOAC) em paciente com FA que vai a procedimento eletivo, com base nos ensaios BRIDGE e PAUSE.",
+    "documento_origem": "interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fa-bridge-e-pause",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Douketis JD, Spyropoulos AC, Kaatz S, Becker RC, Caprini JA, et al; BRIDGE Investigators. Perioperative Bridging Anticoagulation in Patients with Atrial Fibrillation. N Engl J Med. 2015;373(9):823-833. DOI: 10.1056/NEJMoa1501035. PMID: 26095867",
+      "Douketis JD, Spyropoulos AC, Duncan J, Carrier M, Le Gal G, et al. Perioperative Management of Patients With Atrial Fibrillation Receiving a Direct Oral Anticoagulant. JAMA Intern Med. 2019;179(11):1469-1478. DOI: 10.1001/jamainternmed.2019.2431. PMID: 31380891"
+    ],
+    "itens": [
+      {
+        "id": "bp-confirmar-procedimento-eletivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que se trata de procedimento eletivo — nada nos estudos BRIDGE e PAUSE se aplica a cirurgia de urgência.",
+        "origem_secao": "Limites que precisam acompanhar"
+      },
+      {
+        "id": "bp-classificar-risco-sangramento-procedimento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o procedimento em baixo ou alto risco de sangramento — é essa variável, mais do que o CHA₂DS₂-VASc, que define o intervalo de interrupção do DOAC.",
+        "origem_secao": "A sintese pratica"
+      },
+      {
+        "id": "bp-excluir-valva-mecanica-avc-recente",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Excluir valva mecânica, estenose mitral reumática e AVC prévio recente — não fazem parte da população testada no BRIDGE, e a orientação nesses casos é outra.",
+        "origem_secao": "Limites que precisam acompanhar"
+      },
+      {
+        "id": "bp-nao-fazer-ponte-com-heparina-varfarina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não prescrever ponte com heparina de baixo peso molecular no paciente em uso de varfarina para procedimento eletivo — o BRIDGE mostrou não inferioridade para tromboembolismo arterial sem ponte (0,4% vs. 0,3%, p=0,01) e redução de sangramento maior sem ponte (1,3% vs. 3,2%, RR 0,41, p=0,005).",
+        "origem_secao": "BRIDGE (2015) — a ponte com heparina na varfarina"
+      },
+      {
+        "id": "bp-interromper-doac-por-protocolo-risco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Interromper o DOAC (apixabana, dabigatrana ou rivaroxabana) por protocolo baseado no risco de sangramento do procedimento: 1 dia antes se baixo risco, 2 dias antes se alto risco — sem ponte com heparina.",
+        "origem_secao": "PAUSE (2019) — o protocolo de interrupção dos DOAC"
+      },
+      {
+        "id": "bp-checar-clearance-creatinina-dabigatrana",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Checar a depuração de creatinina antes de definir o intervalo de interrupção, especialmente relevante para a dabigatrana, de eliminação predominantemente renal.",
+        "origem_secao": "A sintese pratica"
+      },
+      {
+        "id": "bp-nao-solicitar-coagulograma-rotina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não solicitar TP/INR ou anti-Xa de rotina para liberar o procedimento de quem usa DOAC — a estratégia validada no PAUSE dispensa esse teste.",
+        "origem_secao": "A sintese pratica"
+      },
+      {
+        "id": "bp-planejar-reinicio-doac",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Planejar o reinício do DOAC: 1 dia após o procedimento se baixo risco de sangramento, 2 a 3 dias após se alto risco — interromper sem plano de retomada é o outro lado do mesmo erro.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "bp-nao-aplicar-a-edoxabana",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que o protocolo do PAUSE não incluiu a edoxabana entre as três coortes testadas (apixabana, dabigatrana, rivaroxabana).",
+        "origem_secao": "Limites que precisam acompanhar"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Douketis JD et al., N Engl J Med. 2015;373(9):823-833 (BRIDGE) e Douketis JD et al., JAMA Intern Med. 2019;179(11):1469-1478 (PAUSE), em 21/08/2026."
+  },
+  {
+    "slug": "selecao-de-candidato-para-oclusao-percutanea-do-apendice-atrial-esquerdo",
+    "condicao": "Fibrilação atrial — seleção de candidato para oclusão percutânea do apêndice atrial esquerdo",
+    "resumo": "Checklist para avaliar a indicação de oclusão percutânea do apêndice atrial esquerdo em paciente com FA, com base nos ensaios PROTECT AF e PREVAIL e na Diretriz Brasileira de Fibrilação Atrial 2025.",
+    "documento_origem": "oclusao-do-apendice-atrial-esquerdo-protect-af-e-prevail",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Holmes DR, Reddy VY, Turi ZG, et al; PROTECT AF Investigators. Percutaneous closure of the left atrial appendage versus warfarin therapy for prevention of stroke in patients with atrial fibrillation (PROTECT AF). Lancet. 2009;374(9689):534-542. DOI: 10.1016/S0140-6736(09)61343-X. PMID: 19683639",
+      "Holmes DR Jr, Kar S, Price MJ, et al. Prospective randomized evaluation of the Watchman left atrial appendage closure device in patients with atrial fibrillation versus long-term warfarin therapy (PREVAIL). J Am Coll Cardiol. 2014;64(1):1-12. DOI: 10.1016/j.jacc.2014.04.029. PMID: 24998121",
+      "Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618 — seção 6.6, Quadro 12"
+    ],
+    "itens": [
+      {
+        "id": "laao-confirmar-fa-alto-risco-tromboembolico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente tem FA de alto risco tromboembólico.",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laao-confirmar-contraindicacao-ou-falha-anticoagulante",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar contraindicação absoluta ou falha da terapia anticoagulante — os dois critérios (alto risco tromboembólico e contraindicação/falha) precisam estar presentes juntos, não isoladamente, para a indicação Classe IIa, Nível B da diretriz brasileira.",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laao-considerar-exclusao-cirurgica-se-ja-vai-a-cirurgia-cardiaca",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Considerar exclusão cirúrgica do apêndice atrial esquerdo se o paciente com FA já vai ser submetido a cirurgia cardíaca por outro motivo — Classe I, Nível B, sustentada pelo LAAOS III.",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laao-discutir-sinal-de-seguranca-periprocedimento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutir com o paciente o sinal de segurança periprocedimento observado no PROTECT AF (eventos de segurança primários 7,4 vs. 4,4 por 100 pacientes-ano com varfarina) — o PREVAIL melhorou a segurança (derrame pericárdico exigindo reparo cirúrgico caiu de 1,6% para 0,4%), mas não a eliminou.",
+        "origem_secao": "Leitura conjunta dos dois ensaios"
+      },
+      {
+        "id": "laao-definir-regime-antitrombotico-pos-implante",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir o regime antitrombótico pós-implante durante o período de endotelização do dispositivo (30-90 dias) — só cerca de 12% dos pacientes recebem, na prática, o regime aprovado pela FDA; a maioria usa AVK ou ACOD isolados.",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laao-monitorar-trombose-de-dispositivo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorar sinais de trombose de dispositivo no seguimento — trombose de prótese ocorre em cerca de 3,8% dos casos em metanálise; fatores associados: hipercoagulabilidade, efusão pericárdica, disfunção renal, profundidade de implante maior que 10 mm e FA não paroxística.",
+        "origem_secao": "Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira"
+      },
+      {
+        "id": "laao-nao-tratar-os-dois-ensaios-como-identicos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar PROTECT AF e PREVAIL como resultados idênticos ao explicar risco e benefício ao paciente — o PREVAIL não confirmou não inferioridade no desfecho composto amplo, só no desfecho mais restrito de AVC/embolismo após 7 dias do procedimento.",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Holmes DR et al., Lancet. 2009;374(9689):534-542 (PROTECT AF), Holmes DR Jr et al., J Am Coll Cardiol. 2014;64(1):1-12 (PREVAIL) e Diretriz Brasileira de Fibrilação Atrial 2025 (Arq Bras Cardiol. 2025;122(9):e20250618), em 21/08/2026."
   }
 ]
