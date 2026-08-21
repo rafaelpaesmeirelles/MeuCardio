@@ -925,7 +925,8 @@
       "**Brasil — descontinuado.** BURINAX® (bumetanida) comprimido de 1 mg, Abbott Laboratórios do Brasil Ltda., registro MS 1.0553.0350, foi **descontinuado definitivamente a partir de julho de 2019**, conforme carta oficial da própria Abbott aos clientes, datada de 08/08/2019: motivo declarado foi 'revisão de portfólio', com o texto explícito de que 'nossa decisão não tem qualquer relação com a qualidade, segurança ou eficácia do produto'. A mesma carta orienta os pacientes em uso a procurar o médico para avaliar alternativa terapêutica. Nenhum outro fabricante brasileiro de bumetanida para uso humano foi localizado nesta sessão de pesquisa (01/08/2026) — buscas por 'bumetanida registro ANVISA vigente' devolveram consistentemente apenas referências ao produto já descontinuado da Abbott, em sites agregadores de bula que reproduzem o registro histórico sem sinalizar a descontinuação.",
       "**Não foi possível acessar diretamente o Bulário Eletrônico da ANVISA** (consultas.anvisa.gov.br) nesta sessão para confirmar de forma primária o status atual do registro MS 1.0553.0350 — mesmo obstáculo de acesso já registrado neste arquivo para outras buscas na base da ANVISA. A conclusão de indisponibilidade comercial se apoia na carta de descontinuação da própria fabricante (fonte primária da fabricante, não de terceiro) e na ausência de qualquer outro produto brasileiro de bumetanida nas buscas realizadas.",
       "**Estados Unidos — disponível apenas como genérico.** A marca de referência histórica era **BUMEX®** (Validus Pharmaceuticals, NDA 018226), listada como descontinuada no FDA Orange Book — determinação da FDA (Federal Register) de que a descontinuação **não foi por motivo de segurança ou eficácia**. Hoje o princípio ativo é comercializado nos EUA sob **denominação genérica 'bumetanide'**, com múltiplos fabricantes (NorthStar Rx/Rubicon Research, Sandoz, Cardinal Health, Anthea Pharma, A-S Medication Solutions, entre outros — 80 entradas de SPL distintas no DailyMed, a mais recente publicada em 20/07/2026), em comprimidos de 0,5 mg, 1 mg e 2 mg, e também em forma injetável (bumetanide injection, IM/IV).",
-      "Dose, apresentações e demais campos clínicos deste registro refletem majoritariamente o rótulo do FDA (genérico bumetanide), complementado pela bula histórica brasileira da Abbott onde ela está disponível — sinalizado campo a campo. **Se o Rafael tiver acesso a informação mais recente sobre eventual reativação do registro brasileiro (o painel de descontinuação/reativação de medicamentos da própria ANVISA existe para isso), os campos de dose e apresentação devem ser reconferidos contra uma bula brasileira vigente antes de prescrever.**"
+      "Dose, apresentações e demais campos clínicos deste registro refletem majoritariamente o rótulo do FDA (genérico bumetanide), complementado pela bula histórica brasileira da Abbott onde ela está disponível — sinalizado campo a campo. **Se o Rafael tiver acesso a informação mais recente sobre eventual reativação do registro brasileiro (o painel de descontinuação/reativação de medicamentos da própria ANVISA existe para isso), os campos de dose e apresentação devem ser reconferidos contra uma bula brasileira vigente antes de prescrever.**",
+      "NOTA (não é apresentação comercial): busca em 21/08/2026 reproduziu o mesmo achado já documentado neste registro — BURINAX® (Abbott Laboratórios do Brasil) segue descontinuado desde julho de 2019 por revisão de portfólio da fabricante (não por segurança/eficácia), e nenhum outro fabricante brasileiro de bumetanida foi localizado (fonte adicional consultada nesta busca: tuasaude.com/bumetanida, que também descreve o medicamento como descontinuado/indisponível comercialmente no Brasil). Nenhuma marca nova incluída — mantém-se o estado já documentado no registro."
     ],
     "dosing": {
       "edema geral, dose oral (rotulo FDA)": "Dose diária total usual de **0,5 mg a 2 mg**, na maioria dos pacientes em dose única. Se a resposta diurética à dose inicial não for adequada, uma segunda ou terceira dose pode ser dada a intervalos de 4 a 5 horas, até uma **dose máxima diária de 10 mg**. Esquema de dose intermitente — dias alternados, ou 3 a 4 dias com períodos de repouso de 1 a 2 dias — é recomendado como o método mais seguro e eficaz para controle contínuo do edema.",
@@ -2515,11 +2516,16 @@
       "Solução injetável 40 mg/0,4 mL, seringa preenchida",
       "Solução injetável 60 mg/0,6 mL, seringa preenchida"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "Versa® (enoxaparina sódica), Eurofarma Laboratórios S.A., registro ANVISA nº 1.0043.1016 — solução injetável em seringas preenchidas com dispositivo de segurança: 20 mg/0,2 mL (2 e 6 seringas), 40 mg/0,4 mL (2 e 6 seringas), 60 mg/0,6 mL (2 seringas) e 80 mg/0,8 mL (2 seringas). Fonte: bula Eurofarma (eurofarma.com.br/produtos/bulas/patient/pt/bula-versa.pdf) e ficha comercial (drogariasp.vteximg.com.br/arquivos/428639---versa-40mg-6-seringas.pdf), WebSearch 21/08/2026.",
+      "Volare® (enoxaparina sódica), Aché Laboratórios Farmacêuticos S.A., registro ANVISA nº 1.0573.0764 — biossimilar de Clexane® registrado sob a RDC nº 55/2010 (produtos biológicos); solução injetável em seringas preenchidas de 40 mg/0,4 mL e 60 mg/0,6 mL; indicado para TVP com ou sem TEP, angina instável/IAM sem supra de ST e profilaxia de tromboembolismo venoso. Fonte: comunicado 'Volare (enoxaparina sódica): novo medicamento' (gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes) e ache.com.br/produto/sob-prescricao/volare/, WebSearch 21/08/2026."
+    ],
     "brand_names": [
       "Clexane",
       "Noxx",
-      "Heparinox"
+      "Heparinox",
+      "Versa — Eurofarma",
+      "Volare — Aché"
     ]
   },
   {
@@ -6841,7 +6847,8 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Ticagrelor é antiagregante plaquetário, sem mecanismo de ação sobre tônus vascular ou sistema renina-angiotensina — não há efeito hipotensor farmacológico esperado nem relatado como desfecho de eficácia. A dispneia mediada por adenosina (ver `adverse_effects`) é o efeito não hemostático mais descrito, sem correlato pressórico direto. Campos mantidos nulos por ausência de mecanismo pressórico.",
     "commercial_presentations": [
-      "ARTAG® 90 mg — comprimido revestido, embalagem com 60 unidades (Libbs) — genérico/similar de ticagrelor, distinto das marcas de referência Brilinta®/Brilique®."
+      "ARTAG® 90 mg — comprimido revestido, embalagem com 60 unidades (Libbs) — genérico/similar de ticagrelor, distinto das marcas de referência Brilinta®/Brilique®.",
+      "NOTA (não é apresentação comercial): busca em 21/08/2026 não encontrou marca comercial (nome fantasia) adicional além das já cadastradas (Brilinta, Brilique, Artag). Foram encontrados apenas produtos genéricos vendidos sob a própria denominação genérica 'ticagrelor' (fabricantes EMS e Torrent do Brasil Ltda., ambos com bula aprovada pela Anvisa em 10/09/2025) — que, pela regra deste projeto, não contam como marca comercial por não terem nome fantasia próprio. Nenhuma marca nova incluída."
     ]
   },
   {
@@ -13396,7 +13403,9 @@
       "Frasco-ampola de 20 mL contendo 200 mg de treprostinila (10 mg/mL)",
       "Frasco-ampola de 20 mL contendo 400 mg de treprostinila (20 mg/mL)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca em 21/08/2026 não encontrou marca comercial adicional além das já cadastradas (Remodulin, Tyvaso, Tyvaso DPI, Orenitram). Notícia de agosto/2026 (CNN Brasil e outros veículos) confirma que a Anvisa aprovou o registro de Tyvaso (treprostinila) para hipertensão pulmonar associada a doença pulmonar intersticial (HP-DPI), mas é a mesma marca já cadastrada, e o próprio texto informa que o produto ainda não pode ser comercializado no Brasil — depende de definição de preço máximo pela CMED e de decisão comercial da detentora do registro sobre o lançamento. Nenhuma marca nova incluída."
+    ],
     "brand_names": [
       "Remodulin",
       "Tyvaso",
@@ -13881,7 +13890,10 @@
       "DailyMed/FDA. HUMULIN N (human insulin isophane/NPH), prescribing information (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921"
     ],
     "renal_adjustment": "Não há dose fixa de ajuste no rótulo; insuficiência renal aumenta o risco de hipoglicemia e pode exigir ajustes mais frequentes de dose e monitorização mais frequente de glicose.",
-    "hepatic_adjustment": "Não há dose fixa de ajuste no rótulo; insuficiência hepática aumenta o risco de hipoglicemia e pode exigir ajustes mais frequentes de dose e monitorização mais frequente de glicose."
+    "hepatic_adjustment": "Não há dose fixa de ajuste no rótulo; insuficiência hepática aumenta o risco de hipoglicemia e pode exigir ajustes mais frequentes de dose e monitorização mais frequente de glicose.",
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca em 21/08/2026 encontrou apenas produtos identificados pelo nome do fabricante associado diretamente à denominação genérica — 'Bahiafarma Insulina Humana NPH' (Bahiafarma) e 'IVB – Insulina Isofana NPH' (Instituto Vital Brazil S.A.) — que, pela regra deste projeto, não contam como marca comercial de nome fantasia genuíno (é a substância vendida sob a própria denominação genérica, apenas identificada pelo fabricante). Nenhuma marca nova com nome fantasia real foi encontrada além das já cadastradas (Novolin N, Humulin N, Insulina Humana Recombinante NPH Fiocruz/Biomm, Insuman Basal)."
+    ]
   },
   {
     "slug": "paracetamol",
@@ -13930,7 +13942,9 @@
     "brand_names": [
       "Zitromax — Pfizer (referência)",
       "Azitromicina Di-Hidratada (Genérico) — Eurofarma",
-      "Azitromicina (Genérico) — EMS"
+      "Azitromicina (Genérico) — EMS",
+      "Mazitrom — União Química",
+      "Azitrophar — Pharlab"
     ],
     "drug_class": "Antibiótico macrolídeo (subclasse azalídeo)",
     "mechanism": "Liga-se de forma reversível à subunidade ribossômica bacteriana 50S, inibindo a translocação do peptídeo nascente e a formação de ligações peptídicas — bloqueia a síntese proteica bacteriana. Classicamente bacteriostático, podendo ser bactericida em concentrações elevadas contra patógenos sensíveis. Não é fármaco cardiológico — entra no catálogo pelo risco cardiovascular próprio da classe (prolongamento de QT/Torsades de Pointes) e por interações relevantes com fármacos cardiológicos.",
@@ -13968,6 +13982,10 @@
     "monitoring": [
       "Avaliar fatores de risco para prolongamento de QT e corrigir hipocalemia/hipomagnesemia quando pertinente.",
       "Monitorar TP/INR se associada a varfarina/cumarínicos e interromper diante de sinais de hepatite clinicamente relevante."
+    ],
+    "commercial_presentations": [
+      "Mazitrom® (azitromicina di-hidratada), União Química Farmacêutica Nacional S.A. — cápsula dura 500 mg (524,04 mg de azitromicina di-hidratada, equivalente a 500 mg de azitromicina base); bula padrão atualizada conforme aprovação Anvisa em 20/10/2025. Fonte: bula profissional (uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Mazitrom-Profissional-Consulta-Remedios.pdf) e saudedireta.com.br/catinc/drugs/bulas/mazitrom.pdf, WebSearch 21/08/2026.",
+      "Azitrophar® (azitromicina di-hidratada), Pharlab Indústria Farmacêutica S.A. — comprimido revestido 500 mg (524,14 mg de azitromicina di-hidratada; embalagens com 3 ou 5 comprimidos) e suspensão oral (pó para reconstituição), cada 5 mL contendo 230,60 mg de azitromicina di-hidratada equivalente a 200 mg de azitromicina base, acompanhada de seringa dosadora. Registrado como medicamento similar ao medicamento de referência. Fonte: bula (img.drogasil.com.br/raiadrogasil_bula/Azitrophar.pdf) e farmaindex.com/bulas/azitrophar/1272, WebSearch 21/08/2026."
     ]
   },
   {
@@ -13978,7 +13996,8 @@
       "Voltaren (diclofenaco sódico) — Novartis",
       "Cataflam (diclofenaco potássico/resinato) — Novartis",
       "Biofenac (diclofenaco sódico) — Aché",
-      "Diclofenaco Sódico (Genérico) — Medley (Sanofi Medley Farmacêutica)"
+      "Diclofenaco Sódico (Genérico) — Medley (Sanofi Medley Farmacêutica)",
+      "Artren — Merck"
     ],
     "drug_class": "Anti-inflamatório não esteroidal (AINE), derivado do ácido fenilacético",
     "mechanism": "Inibe as ciclo-oxigenases COX-1 e COX-2, bloqueando a via do ácido araquidônico e a síntese de prostaglandinas. Efeito anti-inflamatório/analgésico/antipirético ligado principalmente à inibição de COX-2; a inibição de COX-1 contribui para toxicidade gastrointestinal e inibição da agregação plaquetária. Não é fármaco cardiológico — entra no catálogo por ser AINE com alerta regulatório específico de risco cardiovascular (EMA/PRAC 2013), frequentemente prescrito/usado sem que o médico assistente saiba da cardiopatia de base.",
@@ -14013,6 +14032,9 @@
       "AEMPS. Nota informativa 2013, diclofenaco e risco cardiovascular. https://www.aemps.gob.es/informa/notasinformativas/medicamentosusohumano-3/seguridad-1/2013/ni-muh_fv_16-2013-diclofenaco/",
       "Bulas.med.br. Interações medicamentosas — diclofenaco potássico. https://www.bulas.med.br/p/detalhamento-das-bulas/1116454/interacoes-medicamentosas-diclofenaco-potassico-comprimidos-generico.htm",
       "DailyMed/FDA. Diclofenac sodium prescribing information, revisão 2026 (consultado em 20/08/2026). https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a237198-ca24-4159-b570-b5a23c8e91b0"
+    ],
+    "commercial_presentations": [
+      "Artren® (diclofenaco sódico), Merck S/A — cápsula de liberação prolongada 100 mg (embalagem com 10 cápsulas, uso oral); solução injetável 75 mg/3 mL (embalagens com 5 ou 50 ampolas, uso intramuscular); supositório 50 mg (embalagem com 5 unidades, uso retal em adultos — não indicado para crianças/adolescentes). Fonte: bula profissional/paciente (uploads.consultaremedios.com.br/drug_leaflet/Bula-Artren-Paciente-Consulta-Remedios.pdf, saudedireta.com.br/catinc/drugs/bulas/artren.pdf, araujo.vteximg.com.br/arquivos/ids/1942368/Bula-0000000003307.pdf), WebSearch 21/08/2026."
     ]
   },
   {
