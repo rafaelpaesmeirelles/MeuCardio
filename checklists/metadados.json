@@ -18146,5 +18146,82 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "decisao-de-cirurgia-valvar-na-cardite-reumatica-fulminante-em-fase-ativa",
+    "condicao": "Decisão de cirurgia valvar de emergência na cardite reumática fulminante, ainda com inflamação ativa",
+    "resumo": "Critérios para decidir, no cenário raro e extremo de insuficiência cardíaca refratária ao tratamento clínico na cardite reumática ativa, se a cirurgia valvar deve ser antecipada para a fase ativa em vez de esperar a inflamação ceder — a exceção à regra geral de adiar a cirurgia até a fase inativa.",
+    "documento_origem": "cardite-reumatica-fulminante-insuficiencia-cardiaca-refrataria-e-cirurgia-valvar-na-fase-ativa",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Achados sobre mecanismo (prolapso de valva mitral em 94%, dilatação anular em 96%, alongamento cordal em 70% na cardite ativa) e sobre desfechos de cirurgia valvar de emergência em cardite ativa: conferidos por busca em literatura secundária concordante (revisões e séries de caso indexadas em PubMed/PMC) em 06/08/2026 — nesta sessão não foi possível fixar um único artigo primário verificável com PMID para cada número isolado citado abaixo; onde a fonte primária específica não pôde ser confirmada com PMID nesta sessão, o número é sinalizado como 'VERIFICAÇÃO HUMANA NECESSÁRIA' antes de uso em protocolo institucional."
+    ],
+    "itens": [
+      {
+        "id": "crf-cirurgia-nyha-iv-refrataria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o cenário é insuficiência cardíaca classe funcional NYHA IV refratária ao tratamento clínico otimizado — não a gravidade da cardite isoladamente (graduação SBC 2022) — antes de considerar cirurgia ainda na fase ativa",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-tratamento-clinico-tentado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Tratamento clínico otimizado (diuréticos, vasodilatadores, suporte inotrópico quando indicado) documentado como já tentado e refratário, sem indicar cirurgia na fase ativa antes de esgotar essa etapa",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-mecanismo-ruptura",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se há regurgitação mitral ou aórtica torrencial por ruptura cordal ou folheto flácido (flail) com instabilidade hemodinâmica — mecanismo mecânico agudo que não responde a anti-inflamatório e é descrito como exigindo reparo cirúrgico de urgência",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-regra-geral-nao-aplicada-indiscriminadamente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que a regra geral de adiar a cirurgia até a fase inativa NÃO está sendo aplicada indiscriminadamente a um paciente com choque cardiogênico refratário por ruptura cordal aguda — essa regra vale fora do cenário de risco de vida iminente descrito aqui",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crf-cirurgia-miocardite-concomitante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Miocardite ativa concomitante considerada como contribuinte à instabilidade hemodinâmica, com suporte hemodinâmico perioperatório planejado para a disfunção miocárdica associada, não apenas para a lesão valvar mecânica",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crf-cirurgia-limitacao-tecnica-consentimento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutida com a família, como parte do consentimento informado, a limitação técnica de operar tecido valvar inflamado e friável na fase ativa — que tende a dificultar um reparo durável, argumento citado na literatura para aguardar a fase inativa quando clinicamente possível",
+        "origem_secao": "Decisão de reparo versus substituição valvar na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-sem-promessa-resultado-garantido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a família NÃO recebeu promessa de resultado cirúrgico 'garantido' com base nas séries de caso históricas citadas na literatura — comunicado explicitamente que são amostras pequenas, sem grupo controle, e que não substituem a avaliação individualizada de risco cirúrgico",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crf-cirurgia-numeros-verificacao-humana-necessaria",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: os percentuais de mecanismo (prolapso mitral, dilatação anular, alongamento cordal) e qualquer estatística numérica de mortalidade/desfecho das séries de caso históricas citadas no documento de origem NÃO foram confirmados contra fonte primária com PMID nesta sessão — não usar esses números como estatística fechada em material formal ao paciente/família ou em protocolo institucional antes de confirmação",
+        "origem_secao": "Por que a regurgitação é tão grave nesses casos — o mecanismo / O que a literatura descreve sobre desfecho da cirurgia de emergência em cardite ativa"
+      },
+      {
+        "id": "crf-cirurgia-encaminhamento-sem-aguardar-fase-inativa",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para cirurgia valvar de emergência acionado sem aguardar a fase inativa, diante do cenário de insuficiência cardíaca refratária e/ou ruptura mecânica aguda descrito acima — a exceção justificada por risco de vida iminente, não a regra geral do tema",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), em 21/08/2026. Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item. A marcação VERIFICAÇÃO HUMANA NECESSÁRIA do documento de origem, referente aos percentuais de mecanismo e às estatísticas de mortalidade/desfecho das séries de caso históricas, foi preservada e transformada em item próprio do checklist, em vez de omitida."
   }
 ]
