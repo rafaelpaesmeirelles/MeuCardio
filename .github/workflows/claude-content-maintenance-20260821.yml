@@ -7,113 +7,95 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
   issues: write
 
 jobs:
-  consolidate:
-    if: contains(github.event.head_commit.message, '[maintenance-claude-20260821]')
+  fix_pr312_required_fields:
+    if: contains(github.event.head_commit.message, '[fix-pr312-required-fields]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Configure Git and GitHub CLI
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Checkout PR 312 release branch
         run: |
-          echo configure >/tmp/maintenance-stage
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          gh auth status
+          git fetch origin release/claude-content-map-20260821
+          git checkout -B release/claude-content-map-20260821 origin/release/claude-content-map-20260821
 
-      - name: Create isolated release branch
+      - name: Repair required drug fields and validate corpus contract
         run: |
-          echo create-release-branch >/tmp/maintenance-stage
-          git checkout -b release/claude-content-map-20260821
-
-      - name: Resolve legacy human-verification markers conservatively
-        run: |
-          echo sanitize-legacy-markers >/tmp/maintenance-stage
-          set -o pipefail
-          python tools/maintenance/sanitize_legacy_human_verification_20260821.py 2>&1 | tee /tmp/legacy.log
-
-      - name: Consolidate Claude content and fix live map time
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          echo consolidate-claude-content >/tmp/maintenance-stage
-          set -o pipefail
-          python tools/maintenance/consolidate_claude_20260821.py 2>&1 | tee /tmp/maintenance.log
-
-      - name: Remove one-shot maintenance machinery
-        run: |
-          echo cleanup-one-shot >/tmp/maintenance-stage
-          rm -f .github/workflows/claude-content-maintenance-20260821.yml
-          rm -f .github/workflows/claude-content-maintenance-debug-20260821.yml
-          rm -f tools/maintenance/consolidate_claude_20260821.py
-          rm -f tools/maintenance/sanitize_legacy_human_verification_20260821.py
-          rm -f tools/maintenance/README.debug-20260821.md
-
-      - name: Validate JSON and targeted source contract
-        run: |
-          echo validate-release >/tmp/maintenance-stage
-          python -m json.tool checklists/metadados.json >/dev/null
-          python -m json.tool material-paciente/metadados.json >/dev/null
-          python -m json.tool medicamentos/metadados.json >/dev/null
-          python - <<'PY'
-          from pathlib import Path
-          home = Path('frontend/src/pages/PainelClinicalOS.tsx').read_text(encoding='utf-8')
-          assert 'const saidaPlanejada' in home
-          assert 'const rotaAtualizadaAgora' in home
-          assert 'Math.max(agora.getTime(), rotaAtualizadaEm.getTime())' in home
-          assert 'saidaRecomendada.getTime() + rota.duration_seconds * 1000' in home
-          for path in ('checklists/metadados.json','material-paciente/metadados.json','medicamentos/metadados.json'):
-              text = Path(path).read_text(encoding='utf-8')
-              assert 'VERIFICAÇÃO HUMANA NECESSÁRIA' not in text
-          PY
-
-      - name: Commit and push release branch
-        run: |
-          echo commit-push-release >/tmp/maintenance-stage
-          git add -A
-          git commit -m "content: consolidar lote Claude e corrigir horário vivo do mapa"
-          git push --force-with-lease origin HEAD:release/claude-content-map-20260821
-
-      - name: Open audited release PR
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          echo open-release-pr >/tmp/maintenance-stage
           python - <<'PY'
           import json
           from pathlib import Path
-          a = json.loads(Path('/tmp/claude-content-audit.json').read_text(encoding='utf-8'))
-          legacy = json.loads(Path('/tmp/legacy-human-verification-audit.json').read_text(encoding='utf-8'))
-          before = a['counts_before']; after = a['counts_after']; delta = a['delta']
-          body = f'''## Objetivo\n\nConsolida semanticamente a nova leva de conteúdo produzida pelo Claude **após a PR #204**, resolve de forma conservadora as ressalvas `VERIFICAÇÃO HUMANA NECESSÁRIA` dos três manifestos e corrige o horário stale do card **Próximo deslocamento** identificado em produção.\n\n## Conteúdo consolidado\n\n- PRs de conteúdo candidatas processadas: **{a['candidate_pr_count']}**\n- Checklists: **{before['checklists/metadados.json']} → {after['checklists/metadados.json']}** (delta {delta['checklists/metadados.json']:+d})\n- Material ao paciente: **{before['material-paciente/metadados.json']} → {after['material-paciente/metadados.json']}** (delta {delta['material-paciente/metadados.json']:+d})\n- Medicamentos: **{before['medicamentos/metadados.json']} → {after['medicamentos/metadados.json']}** (delta {delta['medicamentos/metadados.json']:+d})\n\nA integração usa three-way por `slug`: preserva o `main` atual e incorpora apenas deltas aditivos/compatíveis das PRs de conteúdo isoladas.\n\n## Ressalvas humanas\n\nItens que continham `VERIFICAÇÃO HUMANA NECESSÁRIA` foram removidos de forma conservadora quando não havia lastro documental suficiente; nenhuma lacuna foi convertida em certeza. Foram registradas **{len(legacy)}** ações em ressalvas já presentes no baseline e **{len(a['sanitizations'])}** ações de sanitização/compatibilização na nova leva. A validação falha se qualquer marcador permanecer.\n\n### Decisões regulatórias dirigidas\n'''
-          for item in a['regulatory_decisions']:
-              body += f'- {item}\n'
-          body += '''\n## Correção do mapa\n\n- enquanto a saída planejada é futura, ela é preservada;\n- após a janela expirar, a referência passa a ser o relógio/última atualização válida da rota;\n- a chegada passa a ser `saída viva + duração real da rota`;\n- o horário “Atualizado às” continua vindo do provider.\n\n## Gates e publicação\n\nMesclar somente com CI/corpus/RC2 aplicáveis verdes. Produção continua sendo publicada pelo `deploy.sh`, que reconcilia e publica somente `review_status=revisado`. Nenhum `published: true` é versionado como autorização.\n'''
-          Path('/tmp/pr-body.md').write_text(body, encoding='utf-8')
-          PY
-          gh pr create --base main --head release/claude-content-map-20260821 --title "content: publicar nova leva Claude + corrigir horário vivo do mapa" --body-file /tmp/pr-body.md
 
-      - name: Create failure issue with diagnostics
+          path = Path('medicamentos/metadados.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if not isinstance(data, list):
+              raise RuntimeError('medicamentos/metadados.json não é lista JSON')
+
+          lacidipino = next((d for d in data if d.get('slug') == 'lacidipino'), None)
+          if lacidipino is None:
+              raise RuntimeError('Registro lacidipino não encontrado')
+
+          # Fontes primárias já presentes no próprio verbete e reconfirmadas:
+          # bula profissional GSK Lacipil e SmPC MOTENS (ATC C08CA09).
+          lacidipino['drug_class'] = 'Bloqueador de canal de cálcio di-hidropiridínico'
+          refs = lacidipino.setdefault('references', [])
+          extra_refs = (
+              'Bula profissional Lacipil® (lacidipino) 4 mg, GSK Brasil — antagonista de canal de cálcio di-hidropiridínico.',
+              'MOTENS (lacidipine) SmPC, Electronic Medicines Compendium — ATC C08CA09, calcium channel blocker, dihydropyridine derivative.',
+          )
+          for ref in extra_refs:
+              if ref not in refs:
+                  refs.append(ref)
+
+          required_text = ('slug', 'generic_name', 'drug_class')
+          non_nullable_if_present = (
+              'brand_names', 'presentations', 'commercial_presentations', 'dosing',
+              'contraindications', 'interactions', 'monitoring', 'indications',
+              'adverse_effects', 'notes', 'outcomes', 'references', 'review_status',
+          )
+          failures = []
+          slugs = []
+          for i, drug in enumerate(data):
+              slug = drug.get('slug')
+              slugs.append(slug)
+              for field in required_text:
+                  value = drug.get(field)
+                  if not isinstance(value, str) or not value.strip():
+                      failures.append(f'#{i} {slug!r}: {field} ausente/vazio')
+              for field in non_nullable_if_present:
+                  if field in drug and drug[field] is None:
+                      failures.append(f'#{i} {slug!r}: {field}=null')
+          if len(slugs) != len(set(slugs)):
+              failures.append('slugs duplicados em medicamentos/metadados.json')
+          raw = json.dumps(data, ensure_ascii=False)
+          if 'VERIFICAÇÃO HUMANA NECESSÁRIA' in raw:
+              failures.append('marcador de verificação humana residual em medicamentos/metadados.json')
+          if failures:
+              raise RuntimeError('\n'.join(failures[:100]))
+
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'OK: {len(data)} medicamentos; campos obrigatórios íntegros; lacidipino corrigido.')
+          PY
+
+          python -m json.tool medicamentos/metadados.json >/dev/null
+          python -m json.tool checklists/metadados.json >/dev/null
+          python -m json.tool material-paciente/metadados.json >/dev/null
+
+      - name: Remove temporary PR-branch fixer and push targeted correction
+        run: |
+          rm -f .github/workflows/fix-release312-required-drug-fields.yml
+          git add medicamentos/metadados.json .github/workflows/fix-release312-required-drug-fields.yml
+          git commit -m "content: restaurar classe farmacológica obrigatória do lacidipino"
+          git push origin HEAD:release/claude-content-map-20260821
+
+      - name: Report failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          stage=$(cat /tmp/maintenance-stage 2>/dev/null || echo unknown)
-          legacy=$(cat /tmp/legacy.log 2>/dev/null || true)
-          maintenance=$(cat /tmp/maintenance.log 2>/dev/null || true)
-          {
-            echo "O retry da consolidação falhou no estágio: **$stage**. Nenhuma publicação em produção foi executada."
-            echo
-            echo '```text'
-            printf '%s\n' "$legacy"
-            printf '%s\n' "$maintenance"
-            echo '```'
-          } >/tmp/failure.md
-          gh issue create --title "Falha no retry 2 da consolidação Claude 2026-08-21" --body-file /tmp/failure.md || true
+          gh issue create --title "Falha ao corrigir campo obrigatório da PR 312" --body "O reparo dirigido do corpus para a PR #312 falhou. Nenhum deploy foi executado. Revisar o run deste commit." || true
