@@ -18146,5 +18146,224 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "decisao-do-heart-team-entre-tavi-e-cirurgia-guiada-pelo-escore-sts-prom",
+    "condicao": "Decisão do Heart Team entre TAVI e cirurgia (SAVR) guiada pelo escore STS-PROM",
+    "resumo": "Checklist para o uso do STS-PROM como um dos eixos da decisão de modo de intervenção na estenose aórtica grave, cruzando os cortes da diretriz ESC/EACTS 2021 com o que os ensaios PARTNER e Evolut Low Risk efetivamente testaram em cada faixa de risco.",
+    "documento_origem": "escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "O'Brien SM, Feng L, He X, et al. The Society of Thoracic Surgeons 2018 Adult Cardiac Surgery Risk Models: Part 2-Statistical Methods and Results. Ann Thorac Surg. 2018;105(5):1419-1428. PMID: 29577924",
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMC9725093",
+      "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients (PARTNER 3). N Engl J Med. 2019;380(18):1695-1705. PMID: 30883058",
+      "Leon MB, Smith CR, Mack MJ, et al. Transcatheter or Surgical Aortic-Valve Replacement in Intermediate-Risk Patients (PARTNER 2). N Engl J Med. 2016;374(17):1609-1620. PMID: 27040324",
+      "Smith CR, Leon MB, Mack MJ, et al. Transcatheter versus Surgical Aortic-Valve Replacement in High-Risk Patients (PARTNER 1, Cohort A). N Engl J Med. 2011;364(23):2187-2198. PMID: 21639811",
+      "Popma JJ, Deeb GM, Yakubov SJ, et al. Transcatheter Aortic-Valve Replacement with a Self-Expanding Valve in Low-Risk Patients (Evolut Low Risk). N Engl J Med. 2019;380(18):1706-1715. PMID: 30883053"
+    ],
+    "itens": [
+      {
+        "id": "sts-heart-team-calcular-sts-prom",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o STS-PROM (Predicted Risk of Mortality) do paciente antes de discutir o modo de intervenção na estenose aórtica grave.",
+        "origem_secao": "O que este documento cobre, e o que não cobre"
+      },
+      {
+        "id": "sts-heart-team-classificar-faixa-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar a faixa de risco pelos cortes da diretriz 2021 ESC/EACTS: SAVR recomendada se <75 anos e STS-PROM/EuroSCORE II <4% (baixo risco); TAVI recomendada se ≥75 anos ou STS-PROM/EuroSCORE II >8% (alto risco).",
+        "origem_secao": "Os cortes numéricos, na fonte de diretriz"
+      },
+      {
+        "id": "sts-heart-team-considerar-eixo-etario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Considerar a idade (<75 ou ≥75 anos) como eixo concorrente ao escore na mesma tabela de recomendação da diretriz ESC/EACTS 2021 — os dois critérios não são sinônimos e podem apontar para direções diferentes.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sts-heart-team-avaliar-fatores-nao-capturados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar fatores que o STS-PROM não incorpora: fragilidade, anatomia vascular de acesso, calcificação de aorta em porcelana e expectativa de vida por comorbidade não cardíaca.",
+        "origem_secao": "Limitações do uso do corte numérico isolado"
+      },
+      {
+        "id": "sts-heart-team-encaminhar-discussao-formal",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar todo paciente com estenose aórtica grave para discussão formal em Heart Team antes da decisão final, inclusive nos extremos de risco em que o corte numérico parece claro.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sts-heart-team-nao-tratar-faixa-intermediaria-como-protocolo-rigido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tratar a faixa de risco intermediário (~4-8%) como protocolo automático de triagem: a diretriz ESC/EACTS 2021 não formaliza um corte numérico único para essa faixa — o rótulo vem do desenho do PARTNER 2/SURTAVI, e um valor como 4,2% não enquadra o paciente automaticamente em nenhuma via.",
+        "origem_secao": "Limitações do uso do corte numérico isolado"
+      },
+      {
+        "id": "sts-heart-team-nao-extrapolar-entre-plataformas-de-valvula",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não extrapolar o resultado de não inferioridade de um ensaio com determinada plataforma de válvula (por exemplo, balão-expansível do PARTNER 3) para outra plataforma (autoexpansível) sem o ensaio correspondente — o Evolut Low Risk precisou ser testado à parte para confirmar o mesmo resultado com válvula CoreValve/Evolut.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sts-heart-team-verificacao-corte-partner1",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que o valor exato de STS-PROM usado como corte de inclusão da coorte de alto risco do PARTNER 1 (Coorte A) não foi confirmado em fonte primária nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar um número exato de corte para essa coorte.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em 2021 ESC/EACTS Guidelines for the management of valvular heart disease (Eur Heart J. 2022;43(7):561-632, PMC9725093) e nos ensaios PARTNER 1 (PMID 21639811), PARTNER 2 (PMID 27040324), PARTNER 3 (PMID 30883058) e Evolut Low Risk (PMID 30883053), em 21/08/2026."
+  },
+  {
+    "slug": "prevencao-e-reconhecimento-cardiovascular-da-sindrome-de-lise-tumoral",
+    "condicao": "Prevenção e reconhecimento cardiovascular da síndrome de lise tumoral em paciente oncológico de alto risco",
+    "resumo": "Checklist para antecipar e reconhecer o risco arrítmico da síndrome de lise tumoral (hipercalemia e hipocalcemia agudas) antes e durante as primeiras 24-72 horas após o início da citorredução em neoplasia de alta carga proliferativa.",
+    "documento_origem": "sindrome-de-lise-tumoral-disturbio-eletrolitico-e-risco-arritmico",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. Br J Haematol. 2004;127(1):3-11. DOI: 10.1111/j.1365-2141.2004.05094.x. PMID: 15384972",
+      "Cairo MS, Coiffier B, Reiter A, Younes A; TLS Expert Panel. Recommendations for the evaluation of risk and prophylaxis of tumour lysis syndrome (TLS) in adults and children with malignant diseases: an expert TLS panel consensus. Br J Haematol. 2010;149(4):578-586. DOI: 10.1111/j.1365-2141.2010.08143.x. PMID: 20331465",
+      "Adeyinka A, Kaur A, Bashir K. Tumor Lysis Syndrome. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 5/10/2024. PMID: 30085527. Bookshelf ID: NBK518985"
+    ],
+    "itens": [
+      {
+        "id": "slt-cv-estratificar-risco-antes-de-citorreducao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estratificar o risco de síndrome de lise tumoral (baixo, intermediário ou alto) conforme o consenso do TLS Expert Panel 2010, antes de iniciar a citorredução — considerando evidência laboratorial basal de lise, taxa de proliferação, volume/estádio da neoplasia e função renal.",
+        "origem_secao": "Estratificacao de risco (consenso de 2010)"
+      },
+      {
+        "id": "slt-cv-monitorar-eletrólitos-criterios-cairo-bishop",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Monitorar ácido úrico, potássio, fósforo e cálcio no período de 3 dias antes a 7 dias depois do início da quimioterapia, buscando 2 ou mais critérios de lise tumoral laboratorial (Cairo-Bishop) no mesmo período de 24 horas.",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-cv-obter-ecg-monitorizacao-continua",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Obter eletrocardiograma e considerar monitorização eletrocardiográfica contínua no paciente de alto risco durante as 24-72 horas após o início da citorredução, período de maior risco de lise.",
+        "origem_secao": "Por que hipercalemia e hipocalcemia sao a via de risco arritmico"
+      },
+      {
+        "id": "slt-cv-hidratacao-vigorosa-com-vigilancia-de-sobrecarga",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Iniciar hidratação intravenosa vigorosa em paciente de alto risco (base da profilaxia), com vigilância ativa de sobrecarga volêmica quando houver disfunção ventricular de base — sobrecarga é risco concorrente em cardiologia.",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-cv-profilaxia-hiperuricemia-por-risco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Usar alopurinol profilático no risco baixo a intermediário e rasburicase (urato-oxidase recombinante) no risco alto para controle da hiperuricemia.",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-cv-rastrear-g6pd-antes-de-rasburicase",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear ou questionar ativamente deficiência de glicose-6-fosfato desidrogenase (G6PD) antes de prescrever rasburicase — o peróxido de hidrogênio gerado na reação pode causar metemoglobinemia grave ou anemia hemolítica.",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-cv-nao-aguardar-sintoma-cardiaco",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não aguardar sintoma cardíaco (palpitação, síncope) antes de checar potássio e cálcio em paciente de alto risco iniciando citorredução — a arritmia pode ser a primeira manifestação, e o critério clínico de Cairo-Bishop já a inclui como desfecho, não como sinal de alerta precoce.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "slt-cv-verificacao-cortes-fonte-secundaria",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que os cortes numéricos exatos dos critérios de Cairo-Bishop, as categorias de estratificação de risco (leucometria/LDH) e a posologia de hidratação/profilaxia foram reproduzidos a partir de fonte secundária (StatPearls/NBK518985) — VERIFICAÇÃO HUMANA NECESSÁRIA para conferir os valores no texto integral do artigo original de Cairo & Bishop 2004 e do consenso de 2010 antes de aplicar de forma rígida.",
+        "origem_secao": "Classificacao de cairo-bishop"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. Br J Haematol. 2004;127(1):3-11, PMID 15384972, e Cairo MS, Coiffier B, Reiter A, Younes A; TLS Expert Panel. Br J Haematol. 2010;149(4):578-586, PMID 20331465, em 21/08/2026."
+  },
+  {
+    "slug": "prevencao-e-manejo-de-trombose-associada-a-cateter-venoso-central-oncologico",
+    "condicao": "Prevenção e manejo de trombose associada a cateter venoso central (CRT) no paciente oncológico",
+    "resumo": "Checklist para a escolha do dispositivo de acesso venoso central antes do início da terapia antineoplásica sistêmica e para a conduta diante de trombose relacionada ao cateter já instalada.",
+    "documento_origem": "trombose-associada-a-cateter-venoso-central-em-pacientes-oncologicos",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Saber W, Moua T, Williams EC, et al. Risk factors for catheter-related thrombosis (CRT) in cancer patients: a patient-level data (IPD) meta-analysis of clinical trials and prospective studies. J Thromb Haemost. 2011;9(2):312-319. DOI: 10.1111/j.1538-7836.2010.04126.x. PMID: 21040443",
+      "Debourdeau P, Farge D, Beckers M, et al. International clinical practice guidelines for the treatment and prophylaxis of thrombosis associated with central venous catheters in patients with cancer. J Thromb Haemost. 2013;11(1):71-80. DOI: 10.1111/jth.12071. PMID: 23217208",
+      "Moss JG, Wu O, Bodenham AR, et al; CAVA trial group. Central venous access devices for the delivery of systemic anticancer therapy (CAVA): a randomised controlled trial. Lancet. 2021;398(10298):403-415. DOI: 10.1016/S0140-6736(21)00766-2. PMID: 34297997"
+    ],
+    "itens": [
+      {
+        "id": "crt-onco-preferir-port-na-escolha-do-dispositivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de inserir o acesso venoso central para terapia antineoplásica sistêmica prolongada (≥12 semanas), considerar port totalmente implantado como opção preferencial quando disponível — no CAVA trial, port teve complicação em 29-32% contra 43-47% com Hickman ou PICC.",
+        "origem_secao": "A escolha do dispositivo, testada em ensaio randomizado: o CAVA trial"
+      },
+      {
+        "id": "crt-onco-registrar-fatores-de-risco-individuais",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar na avaliação cardiovascular pré-cateter os fatores individuais associados a maior risco de CRT: trombose venosa profunda prévia (OR 2,03), inserção por punção subclávia (OR 2,16) e posicionamento da ponta fora da junção cavoatrial (OR 1,92).",
+        "origem_secao": "Magnitude e fatores de risco: a metanálise de dados individuais de Saber et al."
+      },
+      {
+        "id": "crt-onco-nao-anticoagular-profilaticamente-de-rotina",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não prescrever anticoagulação profilática de rotina apenas por o paciente ter um cateter venoso central — recomendação de grau 1A, a mais forte da diretriz, contra o uso rotineiro.",
+        "origem_secao": "Manejo: a diretriz internacional de Debourdeau et al."
+      },
+      {
+        "id": "crt-onco-avaliar-funcionamento-antes-de-remover",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Ao diagnosticar CRT sintomática, avaliar se o cateter está funcionante, bem posicionado e sem sinal de infecção antes de decidir sobre a remoção — a decisão de manter ou retirar não deve ser guiada pela trombose isoladamente.",
+        "origem_secao": "Manejo: a diretriz internacional de Debourdeau et al."
+      },
+      {
+        "id": "crt-onco-manter-cateter-se-funcionante",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Manter o cateter, em vez de remover por rotina, quando ele estiver funcionante, bem posicionado e sem sinal de infecção no episódio de CRT.",
+        "origem_secao": "Manejo: a diretriz internacional de Debourdeau et al."
+      },
+      {
+        "id": "crt-onco-anticoagular-no-minimo-3-meses",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagular por no mínimo 3 meses no episódio sintomático de CRT, preferencialmente com heparina de baixo peso molecular (HBPM); antagonista de vitamina K também pode ser usado, na ausência de comparação direta entre as duas classes.",
+        "origem_secao": "Manejo: a diretriz internacional de Debourdeau et al."
+      },
+      {
+        "id": "crt-onco-nao-superinterpretar-cava-trial",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não interpretar o CAVA trial como prova de que o port elimina a trombose: o desfecho primário é um composto de infecção, trombose, embolia pulmonar, falha mecânica e outras complicações, e o ensaio não isola a taxa de trombose por braço no resumo consultado — a inferência sobre trombose especificamente vem, com mais força, da metanálise de Saber et al.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crt-onco-divergencia-de-duracao-entre-diretrizes",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar a divergência não conciliada entre fontes sobre a duração da anticoagulação no cateter oncológico: o CHEST 2021 recomenda manter enquanto o cateter permanecer no lugar (sem prazo fixo), e a diretriz específica de câncer (Debourdeau et al. 2013) recomenda no mínimo 3 meses, sem consenso sobre prazo além disso.",
+        "origem_secao": "Nota de divergência com o documento de Tromboembolismo, declarada em vez de escondida"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Saber W et al. J Thromb Haemost. 2011;9(2):312-319, PMID 21040443, Debourdeau P et al. J Thromb Haemost. 2013;11(1):71-80, PMID 23217208, e Moss JG et al; CAVA trial group. Lancet. 2021;398(10298):403-415, PMID 34297997, em 21/08/2026."
   }
 ]
