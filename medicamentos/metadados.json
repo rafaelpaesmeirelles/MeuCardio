@@ -853,7 +853,9 @@
     "presentations": [
       "Pó liofilizado para solução injetável/infusão 250 mg por frasco-ampola (apresentação de referência internacional, Angiox®/Angiomax® — ver nota de disponibilidade)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): bivalirudina NÃO está disponível para uso no Brasil. Confirmado pela Diretriz Brasileira de Antiagregantes Plaquetários e Anticoagulantes em Cardiologia (SciELO, Arquivos Brasileiros de Cardiologia), que registra explicitamente a indisponibilidade do fármaco no país como limitação para a prática clínica brasileira, apesar do perfil de segurança favorável descrito na literatura internacional (ex. menor sangramento maior vs. HNF + inibidor de GPIIb/IIIa). Internacionalmente é comercializada como Angiox® (Europa, Ferrer Internacional/The Medicines Company) e Angiomax® (EUA), em pó liofilizado para solução injetável/infusão de 250mg por frasco-ampola — mas sem registro ANVISA nem apresentação comercial brasileira localizada. Fontes: scielo.br/j/rbti/a/TXwmJkCTDk4ksvpm3bMDNCz (Antitrombóticos nas síndromes coronarianas agudas: diretrizes atuais e novas evidências), scielo.br/j/abc (Diretrizes brasileiras de antiagregantes plaquetários e anticoagulantes em cardiologia), mymedfarma.com (apresentação europeia do Angiox, sem menção ao Brasil). Busca em 10/08/2026."
+    ],
     "brand_names": []
   },
   {
@@ -2184,7 +2186,9 @@
     "presentations": [
       "Comprimido revestido 400 mg (embalagens de 20, 50 ou 60 comprimidos) — ver nota de disponibilidade"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): a marca internacional é Multaq® (dronedarona, cloridrato), Sanofi-Aventis. Confirmado por WebSearch (10/08/2026, agregando resultados de consultaremedios.com.br, InfoSUS/SC e páginas antigas da ANVISA) que o registro sanitário do Multaq® na ANVISA foi CANCELADO em 18/05/2026 e o medicamento não é mais produzido nem comercializado em território brasileiro. Não localizada nenhuma outra marca de fantasia nacional para dronedarona (a busca por 'Dorona' devolveu um medicamento homônimo não relacionado — dipirona + cafeína, Brainfarma — confirmado por múltiplas fontes como produto distinto). Fontes: consultaremedios.com.br/multaq/bula, infosus.saude.sc.gov.br (Dronedarona), páginas antigas da ANVISA (alertas de farmacovigilância citando risco cardiovascular grave, anteriores ao cancelamento). Busca em 10/08/2026."
+    ],
     "brand_names": []
   },
   {
@@ -3101,7 +3105,9 @@
     "presentations": [
       "Comprimido 100 mg (apresentação de referência internacional — ver nota de disponibilidade)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): não foi localizado registro sanitário ativo na ANVISA nem marca de fantasia comercializada em farmácia brasileira para acetato de flecainida. A marca internacional Tambocor® (flecainida) é comercializada no México (laboratórios Sanfer/More Pharma) e nos EUA/Europa, sem confirmação de venda no Brasil. O único acesso confirmado no Brasil é por IMPORTAÇÃO ESPECIALIZADA — Uno Healthcare (unohealthcare.com.br) vende 'Acetato de Flecainida 100mg' como produto importado sob RDC nº 81/2008 e IN RFB nº 1.737/2017, e a ANVISA lista o acetato de flecainida apenas na DCB (Denominação Comum Brasileira) e entre insumos farmacêuticos aprovados para fabricação (ex. MSN Life Sciences), não como medicamento acabado registrado com marca no país. Fontes: unohealthcare.com.br (Flecainide Acetate 100mg, 100 tabletes, importado), lista DCB da ANVISA, farmadoor.com.br/pharmadoor (Tambocor, listado como produto mexicano/latino-americano, sem confirmação de disponibilidade no Brasil). Busca em 10/08/2026 (WebFetch bloqueado pelo proxy da sessão; usado apenas WebSearch)."
+    ],
     "brand_names": []
   },
   {
@@ -6857,7 +6863,8 @@
     "commercial_presentations": [
       "A única apresentação com torasemida comercializada no Brasil identificada nesta sessão é TORZEMIN® (torasemida 2 mg, comprimidos bissulcados, laboratório Avert/Vetnil), diurético de uso exclusivamente VETERINÁRIO (cães) — não deve ser usada como referência de dose, apresentação, bula ou preço para uso humano, e não foi usada como fonte de nenhum outro campo deste registro.",
       "Internacionalmente, a marca de referência é DEMADEX® (torsemide, Estados Unidos — hoje também disponível como genérico). Na Europa, a marca historicamente associada é TOREM® (Roche). Nenhuma das duas tem registro de comercialização no Brasil confirmado nesta sessão.",
-      "Dose, apresentações e demais campos clínicos deste registro refletem o rótulo do FDA (DEMADEX/torsemide) por ausência de bula brasileira localizada — sinalizado em cada campo correspondente. Antes de prescrever no Brasil, confirmar disponibilidade e registro vigente diretamente no Bulário Eletrônico da ANVISA."
+      "Dose, apresentações e demais campos clínicos deste registro refletem o rótulo do FDA (DEMADEX/torsemide) por ausência de bula brasileira localizada — sinalizado em cada campo correspondente. Antes de prescrever no Brasil, confirmar disponibilidade e registro vigente diretamente no Bulário Eletrônico da ANVISA.",
+      "NOTA (não é apresentação comercial): não foi localizada nenhuma apresentação de torasemida para USO HUMANO comercializada no Brasil, com ou sem marca de fantasia. Todas as ocorrências brasileiras encontradas são de USO VETERINÁRIO — Torzemin® e Torsemin® (ambas da Avert Saúde Animal), diurético oral para cães, vendidas em drogarias humanas (Drogaria São Paulo, Drogarias Pacheco) por classificação cruzada de catálogo, não por uso humano. As marcas internacionais Demadex® (EUA) e Unat® (Europa) não têm confirmação de registro ANVISA nem de venda no Brasil. Um resultado citando 'Diuremida' foi verificado e descartado: contém FUROSEMIDA (Geolab Indústria Farmacêutica), não torasemida — fármaco distinto, confirmado pela bula oficial (geolab.com.br/Diuremida-PF.pdf). Este achado é consistente com o registrado em CLAUDE.md deste projeto (torasemida já identificada como ausente da planilha de preços da CMED, sem nenhuma linha nem por substring). Fontes: vetsmart.com.br/cg/produto/3108/torasemida, avertsaudeanimal.com.br/torzemin-20-mg, drogariasaopaulo.com.br (produtos veterinários Torzemin/Torsemin), geolab.com.br (bula Diuremida, confirmando ser furosemida). Busca em 10/08/2026."
     ],
     "indications": [
       "Edema associado a insuficiência cardíaca congestiva, doença renal (incluindo insuficiência renal crônica) ou doença hepática (cirrose)",
