@@ -1,0 +1,83 @@
+name: Apply live mobility time fix
+
+on:
+  push:
+    branches:
+      - fix/live-mobility-time-20260821
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch stale planned commute time
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('frontend/src/pages/PainelClinicalOS.tsx')
+          text = path.read_text(encoding='utf-8')
+          old = '''  const saidaRecomendada = destino && rota && proximo ? retornoAtivo
+    ? new Date(proximo.scheduled_at)
+    : new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + destino.arrival_buffer_minutes * 60) * 1000) : null;
+  // Chegada PLANEJADA: horário do compromisso menos o buffer de chegada do local.
+  // Referencial único do card (o mesmo de "Saída às") — nunca "agora + duração".
+  const chegadaPrevista = rota && proximo && destino ? retornoAtivo
+    ? new Date(new Date(proximo.scheduled_at).getTime() + rota.duration_seconds * 1000)
+    : new Date(new Date(proximo.scheduled_at).getTime() - destino.arrival_buffer_minutes * 60000) : null;'''
+          new = '''  const saidaPlanejada = destino && rota && proximo ? retornoAtivo
+    ? new Date(proximo.scheduled_at)
+    : new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + destino.arrival_buffer_minutes * 60) * 1000) : null;
+  // Enquanto a saída ainda é futura, preserva a janela planejada do compromisso.
+  // Depois que essa janela passou, o card precisa refletir a rota viva — não um horário histórico.
+  const agora = new Date();
+  const rotaAtualizadaEm = deslocamento?.updated_at ? new Date(deslocamento.updated_at) : agora;
+  const referenciaRota = Number.isNaN(rotaAtualizadaEm.getTime())
+    ? agora
+    : new Date(Math.max(agora.getTime(), rotaAtualizadaEm.getTime()));
+  const rotaAtualizadaAgora = !retornoAtivo && saidaPlanejada && referenciaRota.getTime() > saidaPlanejada.getTime();
+  const saidaRecomendada = rotaAtualizadaAgora ? referenciaRota : saidaPlanejada;
+  const chegadaPrevista = rota && proximo && destino ? retornoAtivo
+    ? new Date(new Date(proximo.scheduled_at).getTime() + rota.duration_seconds * 1000)
+    : rotaAtualizadaAgora && saidaRecomendada
+      ? new Date(saidaRecomendada.getTime() + rota.duration_seconds * 1000)
+      : new Date(new Date(proximo.scheduled_at).getTime() - destino.arrival_buffer_minutes * 60000) : null;'''
+          if old not in text:
+              raise SystemExit('Bloco de horário esperado não encontrado; abortando sem edição cega.')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          test_path = Path('backend/tests/test_home_mobile_mobility_contract.py')
+          tests = test_path.read_text(encoding='utf-8')
+          anchor = '    assert "rota.duration_seconds + destino.arrival_buffer_minutes * 60" in home\n'
+          addition = '''    assert "const saidaPlanejada" in home
+    assert "const rotaAtualizadaEm = deslocamento?.updated_at" in home
+    assert "Math.max(agora.getTime(), rotaAtualizadaEm.getTime())" in home
+    assert "const rotaAtualizadaAgora" in home
+    assert "saidaRecomendada.getTime() + rota.duration_seconds * 1000" in home
+'''
+          if anchor not in tests:
+              raise SystemExit('Âncora do teste de mobilidade não encontrada.')
+          if 'const saidaPlanejada' not in tests:
+              tests = tests.replace(anchor, anchor + addition, 1)
+              test_path.write_text(tests, encoding='utf-8')
+          PY
+
+      - name: Run directed mobility contract
+        working-directory: backend
+        run: python -m pytest tests/test_home_mobile_mobility_contract.py -q
+
+      - name: Remove one-shot workflow and commit fix
+        run: |
+          rm -f .github/workflows/apply-live-mobility-time-fix.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/src/pages/PainelClinicalOS.tsx backend/tests/test_home_mobile_mobility_contract.py .github/workflows/apply-live-mobility-time-fix.yml
+          git commit -m "fix: usar horário vivo no próximo deslocamento"
+          git push origin HEAD:fix/live-mobility-time-20260821
