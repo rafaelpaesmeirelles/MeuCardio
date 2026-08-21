@@ -18146,5 +18146,159 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-da-intoxicacao-digitalica",
+    "condicao": "Reconhecimento e manejo da intoxicação digitálica",
+    "resumo": "A janela terapêutica estreita da digoxina, os fatores que precipitam toxicidade mesmo com nível sérico dentro da faixa terapêutica (hipopotassemia, disfunção renal, interações via glicoproteína-P), os dois padrões arrítmicos de maior valor diagnóstico e a indicação do fragmento Fab antidigoxina diante de manifestação de risco de vida.",
+    "documento_origem": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Hack JB, et al. Expert Consensus on the Diagnosis and Management of Digoxin Toxicity. Am J Med. 2025 Jan;138(1):25-33.e14. DOI: 10.1016/j.amjmed.2024.08.018. PMID: 39265879",
+      "Andrews P, Anseeuw K, Kotecha D, Lapostolle F, Thanacoody R. Diagnosis and practical management of digoxin toxicity: a narrative review and consensus. Eur J Emerg Med. 2023;30(6). PMC10599802",
+      "Cardiac Glycoside (Digoxin) Toxicity. StatPearls, NCBI Bookshelf, NBK459165, consultado em 02/08/2026",
+      "Digoxin. StatPearls, NCBI Bookshelf, NBK470568, consultado em 02/08/2026",
+      "Kuridze N, Etsadashvili K, Tchanturia S, Betsuashvili S, Kavtaradze T. Paroxysmal Atrial Tachycardia With Atrioventricular Block: A Report of Two Cases. Case Reports in Medicine. 2026;2026:2977958. DOI: 10.1155/carm/2977958. PMID: 42375215"
+    ],
+    "itens": [
+      {
+        "id": "intox-digitalica-suspeitar-nivel-normal",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Intoxicação digitálica não descartada só porque o nível sérico de digoxina está dentro da faixa terapêutica — a concentração sérica não se correlaciona de forma confiável com a presença de toxicidade, e o diagnóstico é predominantemente clínico, não laboratorial",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Por que a janela terapêutica é estreita"
+      },
+      {
+        "id": "intox-digitalica-manifestacoes-precoces",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Manifestações gastrointestinais (náusea, vômito, perda de apetite), neurológicas (cefaleia, confusão, letargia) e visuais (visão turva, halos ao redor de luzes, xantopsia) reconhecidas como sinais precoces de toxicidade, mesmo sem arritmia associada ainda presente",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Manifestações clínicas — Gastrointestinais, neurológicas e visuais"
+      },
+      {
+        "id": "intox-digitalica-arritmias-caracteristicas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Taquicardia ventricular bidirecional (patognomônica, embora relativamente rara) e taquicardia atrial com bloqueio atrioventricular reconhecidas como os dois padrões eletrocardiográficos de maior valor diagnóstico; diante da combinação de taquicardia atrial ectópica com bloqueio AV, investigados tanto intoxicação digitálica quanto distúrbio de potássio, não apenas uma das duas causas",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Manifestações clínicas — Arritmias características"
+      },
+      {
+        "id": "intox-digitalica-fatores-precipitantes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fatores que precipitam toxicidade mesmo com dose de digoxina inalterada avaliados ativamente: hipopotassemia (e outros distúrbios eletrolíticos, como hipomagnesemia e hipercalcemia) e piora da função renal — a meia-vida de eliminação pode chegar a uma semana na insuficiência renal, contra 1,5 a 2 dias com função renal normal",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Fatores que precipitam toxicidade mesmo com nível sérico \"normal\" — Hipopotassemia; Disfunção renal"
+      },
+      {
+        "id": "intox-digitalica-interacao-pgp",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao iniciar amiodarona, verapamil, quinidina, um macrolídeo, itraconazol ou ciclosporina em paciente já em uso crônico de digoxina, reavaliada a necessidade de reduzir a dose de digoxina ou intensificar a monitorização — mecanismo comum de inibição da glicoproteína-P, que reduz a depuração renal da digoxina mesmo sem alteração da dose prescrita",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Interações medicamentosas que elevam o nível sérico — mecanismo pela glicoproteína-P"
+      },
+      {
+        "id": "intox-digitalica-corrigir-potassio-funcao-renal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio sérico e função renal dosados diante de qualquer suspeita de intoxicação digitálica, sem assumir que corrigir uma hipopotassemia aguda encerra por si só o quadro — a relação entre potássio e toxicidade é menos consistente na intoxicação crônica do que no cenário agudo",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Fatores que precipitam toxicidade mesmo com nível sérico \"normal\" — Hipopotassemia (ressalva de rigor)"
+      },
+      {
+        "id": "intox-digitalica-fab-risco-vida",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de manifestação de risco de vida — arritmia ventricular grave, bloqueio atrioventricular de alto grau sem resposta a atropina ou hiperpotassemia acentuada — fragmento Fab antidigoxina considerado como tratamento específico, com dose, apresentação e contraindicações consultadas na monografia própria do antídoto, não repetidas aqui",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Antídoto: fragmento Fab anti-digoxina"
+      },
+      {
+        "id": "intox-digitalica-reavaliar-dose-declinio-renal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Dose de digoxina reavaliada diante de piora da função renal ao longo do seguimento, sem manter dose fixa em paciente com clearance em queda — origem reconhecida de boa parte da toxicidade crônica",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Síntese prática; Armadilhas clínicas"
+      },
+      {
+        "id": "intox-digitalica-orientar-monitorizacao-potassio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao associar diurético de alça ou tiazídico a paciente já digitalizado, reforçada a monitorização de potássio junto ao paciente e à equipe, pelo cenário farmacológico mais frequente de hipopotassemia potencializando o efeito da digoxina",
+        "origem_secao": "intoxicacao-digitalica-fatores-precipitantes-e-manifestacoes-clinicas.md — Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "fa-por-hipertireoidismo-subclinico-decisao-de-quando-cardioverter",
+    "condicao": "Fibrilação atrial por hipertireoidismo subclínico — decisão de quando tratar a tireoide e quando cardioverter",
+    "resumo": "A sequência sustentada por evidência para o paciente com FA e hipertireoidismo (clínico ou subclínico) recém-diagnosticado, sem indicação de cardioversão de urgência: pesquisar TSH em FA sem causa aparente, tratar a tireoide e confirmar eutireoidismo antes de indicar cardioversão eletiva, e reconhecer o intervalo em que a reversão espontânea costuma ocorrer antes de considerar a cardioversão ativa.",
+    "documento_origem": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sawin CT, Geller A, Wolf PA, et al. Low serum thyrotropin concentrations as a risk factor for atrial fibrillation in older persons. N Engl J Med. 1994;331(19):1249-1252. DOI: 10.1056/NEJM199411103311901. PMID: 7935681",
+      "Cappola AR, Fried LP, Arnold AM, et al. Thyroid status, cardiovascular risk, and mortality in older adults. JAMA. 2006;295(9):1033-1041. DOI: 10.1001/jama.295.9.1033. PMID: 16507804",
+      "Nakazawa HK, Sakurai K, Hamada N, Momotani N, Ito K. Management of atrial fibrillation in the post-thyrotoxic state. Am J Med. 1982;72(6):903-906. DOI: 10.1016/0002-9343(82)90850-6. PMID: 7091161",
+      "Nakazawa HK, Handa S, Nakamura Y, et al. High maintenance rate of sinus rhythm after cardioversion in post-thyrotoxic chronic atrial fibrillation. Int J Cardiol. 1987;16(1):47-55. DOI: 10.1016/0167-5273(87)90269-5. PMID: 3610396"
+    ],
+    "itens": [
+      {
+        "id": "fa-hipertireoidismo-pesquisar-tsh",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TSH pesquisado em fibrilação atrial \"sem causa aparente\", sobretudo no idoso — hipertireoidismo subclínico (TSH suprimido com T4 livre e T3 normais) é achado laboratorial que passa despercebido por não ter os sintomas floridos do hipertireoidismo clínico",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Definição; Armadilhas clínicas"
+      },
+      {
+        "id": "fa-hipertireoidismo-distinguir-subclinico-hipo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Hipertireoidismo subclínico distinguido do hipotireoidismo subclínico antes de atribuir o risco de FA à alteração tireoidiana — nas duas coortes de base populacional citadas, é especificamente o TSH suprimido (espectro hipertireoidiano) que se associa a maior incidência de FA; o hipotireoidismo subclínico não mostrou essa associação",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — O tamanho do risco — duas coortes que definem o problema; Armadilhas clínicas"
+      },
+      {
+        "id": "fa-hipertireoidismo-tratar-causa-confirmar-eutireoidismo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Causa tireoidiana tratada primeiro (antitireoidiano, controle de radioiodo ou cirurgia conforme o caso) e estado eutireóideo confirmado bioquimicamente, não pela impressão clínica, antes de indicar cardioversão eletiva — cardioverter com a causa ainda ativa expõe a recidiva imediata",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Síntese prática; Armadilhas clínicas"
+      },
+      {
+        "id": "fa-hipertireoidismo-aguardar-antes-cardioverter",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Cardioversão eletiva não indicada antes de cerca de 3-4 meses de eutireoidismo confirmado, salvo indicação de urgência — a maior parte das reversões espontâneas ocorre nesse intervalo, a maioria já nas primeiras 3 semanas de eutireoidismo",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Quando a FA reverte sozinha depois de tratar a tireoide; Síntese prática"
+      },
+      {
+        "id": "fa-hipertireoidismo-cardioverter-se-persistir",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se a FA persistir após o intervalo de espera (por volta da 16ª semana de eutireoidismo confirmado), cardioversão farmacológica ou elétrica considerada — não tratada como caso perdido só por a FA ser prolongada, dado o histórico de boa taxa de conversão e de manutenção de ritmo sinusal mesmo em FA de longa duração já eutireóidea",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Quando a FA reverte sozinha depois de tratar a tireoide; Síntese prática"
+      },
+      {
+        "id": "fa-hipertireoidismo-manter-anticoagulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação mantida pelos critérios habituais de risco (CHA₂DS₂-VASc) enquanto a fibrilação atrial persistir, independente da fase de tratamento da tireoide, com a decisão de cardioverter seguindo o mesmo protocolo de anticoagulação periprocedimento já em uso para cardioversão eletiva",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Síntese prática"
+      },
+      {
+        "id": "fa-hipertireoidismo-investigar-recidiva-se-falha",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Diante de falha da primeira tentativa de cardioversão em paciente supostamente eutireóideo, recidiva de tireotoxicose não identificada investigada antes de repetir a tentativa",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Quando a FA reverte sozinha depois de tratar a tireoide"
+      },
+      {
+        "id": "fa-hipertireoidismo-comunicar-incerteza-evidencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado, na comunicação com o paciente e com a equipe, que o intervalo de espera antes da cardioversão se apoia em estudos observacionais pequenos e antigos, sem ensaio clínico randomizado contemporâneo testando diretamente o intervalo ótimo",
+        "origem_secao": "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao.md — Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
