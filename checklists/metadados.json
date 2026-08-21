@@ -18146,5 +18146,276 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-do-atleta-com-padrao-de-brugada-antes-da-liberacao-esportiva",
+    "condicao": "Avaliação do atleta com padrão eletrocardiográfico de Brugada antes da liberação para participação esportiva",
+    "resumo": "Checklist para diferenciar padrão eletrocardiográfico incidental de síndrome de Brugada clínica no atleta, identificar os marcadores que exigem avaliação especializada e organizar a decisão compartilhada de elegibilidade esportiva segundo SICSport 2025, HRS 2024 e AHA/ACC 2025.",
+    "documento_origem": "brugada-participacao-esportiva-estratificacao-risco",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Scarà A, et al. Brugada Syndrome in Sports Cardiology: An Expert Opinion Statement of the Italian Society of Sports Cardiology (SICSport). Am J Cardiol. 2025;244:9-17. PMID: 40020769. DOI: 10.1016/j.amjcard.2025.02.031.",
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297."
+    ],
+    "itens": [
+      {
+        "id": "brugada-esporte-nao-desqualificar-padrao-isolado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não desqualificar automaticamente o atleta com padrão eletrocardiográfico tipo 2 ou 3 isolado, sem outros fatores de risco — esse achado não confirma síndrome de Brugada clínica.",
+        "origem_secao": "Padrão de Brugada não é sinônimo de síndrome"
+      },
+      {
+        "id": "brugada-esporte-historia-sincope-parada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Colher história detalhada de síncope suspeita de mecanismo arrítmico e de parada cardíaca ou fibrilação ventricular prévia — coloca o atleta em categoria de risco substancialmente diferente do achado incidental assintomático.",
+        "origem_secao": "O que aumenta a preocupação"
+      },
+      {
+        "id": "brugada-esporte-historia-familiar-morte-subita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar história familiar relevante de morte súbita como parte da estratificação de risco do atleta.",
+        "origem_secao": "O que aumenta a preocupação"
+      },
+      {
+        "id": "brugada-esporte-verificar-padrao-tipo-1-espontaneo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Verificar se o padrão eletrocardiográfico é tipo 1 espontâneo (maior preocupação) ou tipo 2/3 induzido apenas por febre ou teste farmacológico.",
+        "origem_secao": "O que aumenta a preocupação"
+      },
+      {
+        "id": "brugada-esporte-documentar-arritmia-ventricular",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Verificar se há documentação prévia de arritmia ventricular associada ao padrão eletrocardiográfico.",
+        "origem_secao": "O que aumenta a preocupação"
+      },
+      {
+        "id": "brugada-esporte-investigar-fenocopias",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Investigar causas fenocópicas do padrão de Brugada antes de assumir diagnóstico definitivo.",
+        "origem_secao": "Avaliação prática antes da liberação"
+      },
+      {
+        "id": "brugada-esporte-eletrofisiologico-so-com-indicacao",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Reservar estudo eletrofisiológico ou teste farmacológico provocativo para quando houver indicação clínica específica — não são exames de rastreamento de rotina.",
+        "origem_secao": "Avaliação prática antes da liberação"
+      },
+      {
+        "id": "brugada-esporte-orientar-controle-febre",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar prevenção de hipertermia e manejo agressivo de episódios febris, especialmente em atleta com fenótipo confirmado — atividade intensa pode elevar a temperatura corporal e acentuar o padrão elétrico.",
+        "origem_secao": "Exercício, temperatura e Brugada"
+      },
+      {
+        "id": "brugada-esporte-cdi-nao-elimina-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ao avaliar atleta portador de cardiodesfibrilador implantável, considerar que o dispositivo não elimina a doença nem converte automaticamente um paciente de alto risco em candidato adequado a qualquer modalidade — avaliar risco de trauma sobre o dispositivo, consequência de síncope na modalidade e possibilidade de choque apropriado ou inapropriado.",
+        "origem_secao": "CDI não transforma alto risco em baixo risco"
+      },
+      {
+        "id": "brugada-esporte-plano-emergencia-dea",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Confirmar acesso a plano de emergência estruturado e a desfibrilador externo automático no local de prática esportiva antes da liberação.",
+        "origem_secao": "CDI não transforma alto risco em baixo risco"
+      },
+      {
+        "id": "brugada-esporte-decisao-compartilhada-documentada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Discutir explicitamente o risco associado à modalidade esportiva pretendida e registrar decisão compartilhada e documentada com o atleta, evitando tanto a restrição automática baseada só no rótulo diagnóstico quanto a liberação sem avaliação individualizada.",
+        "origem_secao": "Participação competitiva: o paradigma atual"
+      },
+      {
+        "id": "brugada-esporte-seguimento-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Programar reavaliação periódica do atleta liberado, dado que a distinção entre padrão incidental, síndrome clínica confirmada e fenótipo de alto risco pode evoluir ao longo do acompanhamento.",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Scarà A, et al. Am J Cardiol. 2025;244:9-17 (PMID 40020769); Lampert R, et al. Heart Rhythm. 2024;21:e151-e252 (PMID 38763377); e Kim JH, et al. Circulation. 2025;151:e716-e761 (PMID 39973614), em 21/08/2026."
+  },
+  {
+    "slug": "avaliacao-do-atleta-com-extrassistoles-ventriculares-frequentes",
+    "condicao": "Avaliação do atleta com extrassístoles ventriculares (EVs) frequentes ou complexas",
+    "resumo": "Checklist para diferenciar ectopia ventricular idiopática de baixo risco de arritmia ventricular associada a substrato estrutural no atleta, orientando teste de esforço reprodutor do gatilho, indicação de ressonância cardíaca e critérios de retorno ao esporte, segundo o consenso HRS 2024 e o estudo VENTOUX.",
+    "documento_origem": "extrassistoles-e-arritmias-ventriculares-no-atleta",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018.",
+      "Javed W, et al. Ventricular Arrhythmia and Cardiac Fibrosis in Endurance Experienced Athletes (VENTOUX). Circ Cardiovasc Imaging. 2025. PMID: 40675176.",
+      "The timing and relationship of ventricular arrhythmia with exercise patterns in veteran male endurance athletes. 2026. PMID: 41520681."
+    ],
+    "itens": [
+      {
+        "id": "ev-atleta-nao-classificar-so-pela-quantidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não classificar a extrassistolia do atleta apenas pela contagem de EVs no Holter — número absoluto não substitui morfologia, contexto clínico e resposta ao exercício.",
+        "origem_secao": "Quantidade de EVs não é sinônimo de risco"
+      },
+      {
+        "id": "ev-atleta-avaliar-morfologia-e-complexidade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Avaliar morfologia da EV (compatível com foco idiopático conhecido ou não) e complexidade (isolada, pareada, em salvas, ou taquicardia ventricular não sustentada).",
+        "origem_secao": "Achados que favorecem ectopia de baixo risco"
+      },
+      {
+        "id": "ev-atleta-rastrear-sintomas-de-alarme",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar sintomas de alarme, principalmente síncope durante esforço.",
+        "origem_secao": "Sinais de alerta"
+      },
+      {
+        "id": "ev-atleta-historia-familiar-cardiomiopatia-morte-subita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Colher história familiar de cardiomiopatia, taquicardia/fibrilação ventricular ou morte súbita.",
+        "origem_secao": "Sinais de alerta"
+      },
+      {
+        "id": "ev-atleta-teste-esforco-reproduzir-gatilho",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar teste de esforço até esforço máximo, buscando reproduzir a modalidade e a intensidade em que a arritmia costuma ocorrer — protocolo interrompido precocemente pode não reproduzir a carga fisiológica responsável pela ectopia.",
+        "origem_secao": "Teste de esforço: procure reproduzir o gatilho real"
+      },
+      {
+        "id": "ev-atleta-registrar-comportamento-durante-esforco",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Registrar se a ectopia piora, se suprime completamente ou surge taquicardia ventricular durante o esforço — piora ou surgimento de TV aumenta a necessidade de investigação de substrato; supressão completa é tranquilizadora em determinados contextos, mas não exclui doença estrutural por si só.",
+        "origem_secao": "Teste de esforço: procure reproduzir o gatilho real"
+      },
+      {
+        "id": "ev-atleta-solicitar-rmc-se-padrao-nao-idiopatico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar ressonância magnética cardíaca quando houver EVs complexas, padrão não idiopático, sintomas de alarme ou alteração em ECG/ecocardiograma — busca disfunção ventricular, anormalidade regional ou realce tardio/fibrose.",
+        "origem_secao": "Ressonância cardíaca e fibrose"
+      },
+      {
+        "id": "ev-atleta-holter-relatorio-alem-da-contagem",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Exigir que o relatório de Holter ou monitorização prolongada informe número de morfologias, presença de pares/salvas, presença de TV não sustentada, relação temporal com o treino, comportamento durante sono/recuperação e sintomas correlacionados — não apenas a contagem total de EVs.",
+        "origem_secao": "Monitorização ambulatorial"
+      },
+      {
+        "id": "ev-atleta-eletrofisiologico-so-com-indicacao",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Reservar estudo eletrofisiológico e ablação para arritmia sintomática, foco tratável, TV recorrente, limitação ao esporte por sintomas ou necessidade de definir estratégia terapêutica em contexto especializado — não são exames de rastreamento.",
+        "origem_secao": "Quando considerar avaliação eletrofisiológica"
+      },
+      {
+        "id": "ev-atleta-considerar-carga-endurance-como-fator-modificavel",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em cardiomiopatia arritmogênica com fenótipo positivo, considerar o endurance vigoroso como possível fator de risco modificável, parte do mecanismo de progressão da doença.",
+        "origem_secao": "Retorno ao esporte"
+      },
+      {
+        "id": "ev-atleta-retorno-conforme-diagnostico-subjacente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Basear a decisão de retorno ao esporte no diagnóstico subjacente identificado na investigação, não na simples presença de EVs — ectopia idiopática de baixo risco com investigação estrutural negativa geralmente permite retorno; arritmia associada a cardiomiopatia, miocardite, fibrose relevante ou canalopatia exige manejo específico e nova estratificação antes da liberação.",
+        "origem_secao": "Retorno ao esporte"
+      },
+      {
+        "id": "ev-atleta-nao-extrapolar-dado-de-veteranos-endurance",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não extrapolar a associação entre fibrose miocárdica e arritmia ventricular observada em atletas veteranos masculinos de endurance para atletas jovens, mulheres, praticantes recreacionais ou modalidades não endurance — é evidência observacional de grupo altamente selecionado.",
+        "origem_secao": "O que dados de 2026 acrescentaram"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Lampert R, et al. Heart Rhythm. 2024;21:e151-e252 (PMID 38763377); Javed W, et al. Circ Cardiovasc Imaging. 2025 (PMID 40675176); e coorte de atletas veteranos de endurance, 2026 (PMID 41520681), em 21/08/2026."
+  },
+  {
+    "slug": "avaliacao-cardiovascular-antes-e-durante-uso-de-estimulante-para-tdah",
+    "condicao": "Avaliação cardiovascular antes e durante o uso de estimulante (metilfenidato, anfetamina) ou atomoxetina para transtorno de déficit de atenção/hiperatividade (TDAH)",
+    "resumo": "Checklist para orientar a avaliação cardiovascular na indicação e no seguimento de estimulante para TDAH em adulto, distinguindo o perfil de segurança de uso atual/recente (sem sinal de risco agudo, Habel 2011) do sinal de risco identificado com uso contínuo em dose mais alta por vários anos (AVC e insuficiência cardíaca, Holt 2024).",
+    "documento_origem": "estimulantes-no-tdah-e-risco-cardiovascular-curto-versus-longo-prazo",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Habel LA, Cooper WO, Sox CM, et al. ADHD medications and risk of serious cardiovascular events in young and middle-aged adults. JAMA. 2011;306(24):2673-2683. DOI: 10.1001/jama.2011.1830. PMID: 22161946",
+      "Holt A, Strange JE, Rasmussen PV, et al. Long-Term Cardiovascular Risk Associated With Treatment of Attention-Deficit/Hyperactivity Disorder in Adults. J Am Coll Cardiol. 2024;83(19):1870-1882. DOI: 10.1016/j.jacc.2024.03.375. PMID: 38719367"
+    ],
+    "itens": [
+      {
+        "id": "tdah-cv-historia-cardiovascular-antes-de-iniciar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Colher história cardiovascular direcionada antes de iniciar estimulante ou atomoxetina para TDAH, incluindo sintomas prévios de palpitação, síncope, dor torácica e antecedente familiar de doença cardiovascular hereditária ou morte súbita.",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "tdah-cv-nao-afirmar-seguranca-absoluta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não afirmar ao paciente que estimulante é cardiovascularmente seguro em qualquer horizonte de uso — a evidência de segurança de Habel 2011 tem seguimento mediano de apenas 1,3 ano, período curto perto do desenho de longo prazo de Holt 2024.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "tdah-cv-nao-afirmar-causalidade-definitiva",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não afirmar ao paciente que estimulante causa AVC ou insuficiência cardíaca de forma definitiva — Holt 2024 é estudo observacional e os próprios autores usam linguagem de associação a ser investigada, não de causalidade estabelecida.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "tdah-cv-monitorar-longo-prazo-dose-mais-alta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Intensificar o acompanhamento cardiovascular clínico no paciente em uso contínuo de dose ≥1 DDD/dia por vários anos — é o cenário em que o sinal de risco de AVC (RR 1,2) e, mais robustamente, de insuficiência cardíaca (RR 1,7) foi identificado.",
+        "origem_secao": "Holt 2024 — uso de longo prazo, sinal de risco para avc e ic"
+      },
+      {
+        "id": "tdah-cv-nao-generalizar-risco-para-sca",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não generalizar o sinal de risco de longo prazo para síndrome coronariana aguda — nenhum dos dois estudos mostrou associação entre uso do estimulante e esse desfecho especificamente.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "tdah-cv-investigar-sintoma-cardiovascular-novo",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para avaliação cardiológica diante de sintoma cardiovascular novo (palpitação sustentada, síncope, dor torácica) surgido durante o tratamento com estimulante ou atomoxetina.",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "tdah-cv-nao-comparar-diretamente-os-dois-estudos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar Habel 2011 e Holt 2024 como comparação direta do mesmo desfecho e do mesmo grupo de exposição — Habel comparou uso atual/recente a não uso ou uso remoto; Holt comparou dose contínua ≥1 DDD/dia a usuários que já haviam descontinuado, populações e definições de exposição diferentes.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "tdah-cv-reavaliar-risco-cardiovascular-periodicamente",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliar periodicamente o risco cardiovascular do paciente em uso continuado, dado que a pergunta de segurança de longo prazo em dose mais alta segue explicitamente em aberto pelos próprios autores do estudo mais recente.",
+        "origem_secao": "Sintese pratica"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Habel LA, et al. JAMA. 2011;306(24):2673-2683 (PMID 22161946); e Holt A, et al. J Am Coll Cardiol. 2024;83(19):1870-1882 (PMID 38719367), em 21/08/2026."
   }
 ]
