@@ -18146,5 +18146,216 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-elegibilidade-ao-transplante-hepatico-na-hipertensao-portopulmonar",
+    "condicao": "Hipertensão portopulmonar em candidato a transplante hepático",
+    "resumo": "Checklist de diagnóstico hemodinâmico, gravidade e critério de elegibilidade ao transplante hepático em paciente com hipertensão portal e suspeita de hipertensão portopulmonar.",
+    "documento_origem": "hipertensao-portopulmonar-criterios-diagnosticos-e-elegibilidade-para-transplante-hepatico",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bozbas SS, Bozbas H. Portopulmonary hypertension in liver transplant candidates. World J Gastroenterol. 2016;22(6):2024-2029. DOI: 10.3748/wjg.v22.i6.2024. PMID: 26877607"
+    ],
+    "itens": [
+      {
+        "id": "hipport-rastreio-precoce",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastreio de hipertensão portopulmonar iniciado precocemente na hepatopatia avançada, não adiado até a entrada na fila de transplante",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "hipport-criterio-hemodinamico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico confirmado por cateterismo cardíaco direito com os três critérios simultâneos — PAPm >25mmHg, pressão de oclusão capilar pulmonar <15mmHg e resistência vascular pulmonar >240 dinas·s/cm⁻⁵ — na presença de hipertensão portal documentada",
+        "origem_secao": "Critérios diagnósticos"
+      },
+      {
+        "id": "hipport-nao-so-papm",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmado que o diagnóstico não se baseou apenas na elevação do PAPm — POCP <15mmHg e RVP >240 dinas·s/cm⁻⁵ também foram verificados antes de rotular o achado como hipertensão portopulmonar hemodinamicamente significativa",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "hipport-classificacao-gravidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Gravidade hemodinâmica classificada por faixa de PAPm (leve, moderada 35-45mmHg, grave >45mmHg) e registrada antes de qualquer decisão sobre elegibilidade ao transplante",
+        "origem_secao": "Classificação de gravidade por PAPm"
+      },
+      {
+        "id": "hipport-teste-vasodilatador",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Em PAPm moderada (35-45mmHg), resposta ao vasodilatador testada e documentada — é o critério que permite o transplante nessa faixa",
+        "origem_secao": "Classificação de gravidade por PAPm"
+      },
+      {
+        "id": "hipport-vd-em-grave",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Em PAPm grave (>45mmHg), função de ventrículo direito avaliada por ecocardiograma antes de considerar a contraindicação ao transplante como definitiva — a contraindicação deixou de ser absoluta com resposta vasodilatadora e VD preservado",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "hipport-reavaliacao-meld",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Para exceção de pontuação MELD, reavaliação hemodinâmica documentada a cada 3 meses, exigindo PAPm <35mmHg e RVP <400 dinas·s/cm⁻⁵ com função de VD satisfatória à ecocardiografia",
+        "origem_secao": "Critério de exceção no MELD (programas americanos)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Hipertensão pulmonar citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "manejo-de-tamponamento-cardiaco-neoplasico-na-emergencia",
+    "condicao": "Tamponamento cardíaco e derrame pericárdico neoplásico na emergência",
+    "resumo": "Checklist de emergência: reconhecer instabilidade que exige pericardiocentese imediata, investigar a etiologia do derrame em paciente oncológico e evitar recorrência precoce após a drenagem.",
+    "documento_origem": "tamponamento-cardiaco-e-derrame-pericardico-neoplasico-na-emergencia",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, et al.; ESC Scientific Document Group. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.",
+      "Gevaert SA, Halvorsen S, Sinnaeve PR, et al. Evaluation and management of cancer patients presenting with acute cardiovascular disease: a Consensus Document of the Acute CardioVascular Care association and the ESC council of Cardio-Oncology-Part 1: acute coronary syndromes and acute pericardial diseases. Eur Heart J Acute Cardiovasc Care. 2021;10(8):947-959. DOI: 10.1093/ehjacc/zuab056. PMID: 34453829."
+    ],
+    "itens": [
+      {
+        "id": "tampneo-sinais-instabilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais de tamponamento hemodinamicamente significativo (hipotensão, taquicardia, turgência jugular, pulso paradoxal) pesquisados ativamente em paciente com câncer e derrame pericárdico novo",
+        "origem_secao": "Quando pensar"
+      },
+      {
+        "id": "tampneo-acionar-cardiologia",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Cardiologia/intervenção acionada imediatamente diante de instabilidade, sem aguardar confirmação etiológica",
+        "origem_secao": "Passo 1 — Instabilidade primeiro"
+      },
+      {
+        "id": "tampneo-pericardiocentese-urgente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Pericardiocentese urgente realizada para alívio do tamponamento hemodinamicamente significativo (Classe I, nível C)",
+        "origem_secao": "Passo 1 — Instabilidade primeiro"
+      },
+      {
+        "id": "tampneo-citologia",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Líquido pericárdico enviado para citologia diante de suspeita de envolvimento neoplásico (Classe I, nível C)",
+        "origem_secao": "Passo 2 — O líquido drenado precisa responder à etiologia"
+      },
+      {
+        "id": "tampneo-drenagem-prolongada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Nos casos suspeitos ou confirmados de derrame neoplásico, drenagem pericárdica mantida por 3 a 6 dias para reduzir recorrência (Classe I, nível B)",
+        "origem_secao": "Passo 3 — Evitar recorrência precoce"
+      },
+      {
+        "id": "tampneo-pericardiocentese-diagnostica-estavel",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Em paciente estável, pericardiocentese diagnóstica considerada quando a etiologia maligna não pôde ser estabelecida por imagem multimodal (Classe IIa, nível C)",
+        "origem_secao": "Paciente estável com derrame moderado/grande"
+      },
+      {
+        "id": "tampneo-tratamento-sistemico",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Tratamento antineoplásico sistêmico coordenado com oncologia/hematologia diante de envolvimento pericárdico neoplásico confirmado (Classe I, nível C)",
+        "origem_secao": "Após confirmação de etiologia neoplásica"
+      },
+      {
+        "id": "tampneo-nao-atribuir-automatico",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que o derrame não foi atribuído automaticamente à neoplasia sem afastar infecção ou toxicidade do tratamento como causa alternativa",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Cardio-oncologia citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "monitorizacao-de-qtc-em-quimioterapico-de-risco-de-prolongamento",
+    "condicao": "Início e acompanhamento de quimioterápico de risco de prolongamento do QTc",
+    "resumo": "Checklist de segurança para iniciar e monitorizar fármaco antineoplásico com risco conhecido de prolongar o QTc, com os limiares de ação da revisão sistemática de Porta-Sánchez et al.",
+    "documento_origem": "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Porta-Sánchez A, Gilbert C, Spears D, Amir E, Chan J, Nanthakumar K, Thavendiranathan P. Incidence, Diagnosis, and Management of QT Prolongation Induced by Cancer Therapies: A Systematic Review. J Am Heart Assoc. 2017;6(12):e007724. DOI: 10.1161/JAHA.117.007724. PMID: 29217664. PMCID: PMC5779062"
+    ],
+    "itens": [
+      {
+        "id": "qtcanti-classe-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classe de risco do fármaco antineoplásico verificada na tabela de incidência (alto >10%, moderado 5%-10%, baixo 1%-5%, muito baixo <1%) antes do início do tratamento",
+        "origem_secao": "Classificação de risco por faixa de incidência (Tabela 2 da revisão)"
+      },
+      {
+        "id": "qtcanti-ecg-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG basal obtido antes de iniciar fármaco de risco alto ou moderado, com o QTc medido nas derivações II e V5",
+        "origem_secao": "Medição correta do QTc, ponto técnico relevante"
+      },
+      {
+        "id": "qtcanti-evitar-basal-alto",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fármaco QT-prolongador evitado quando o QTc pré-tratamento já está acima de 450ms",
+        "origem_secao": "Limiares práticos de conduta (Tabela 4 da revisão)"
+      },
+      {
+        "id": "qtcanti-eletrolitos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Potássio, magnésio e cálcio séricos conferidos e corrigidos para a normalidade antes e durante o tratamento",
+        "origem_secao": "Limiares práticos de conduta (Tabela 4 da revisão)"
+      },
+      {
+        "id": "qtcanti-interacao-medicamentosa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Uso concomitante de outro fármaco QT-prolongador (antiarrítmico, macrolídeo, fluoroquinolona, antiemético, antipsicótico) revisado e evitado quando possível, consultando lista atualizada de referência",
+        "origem_secao": "Limiares práticos de conduta (Tabela 4 da revisão)"
+      },
+      {
+        "id": "qtcanti-formula-correcao",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Fórmula de correção do QTc escolhida considerando a frequência cardíaca — Hodges preferida em FC acima de 90bpm, já que Bazett tende a superestimar nessa faixa",
+        "origem_secao": "Medição correta do QTc, ponto técnico relevante"
+      },
+      {
+        "id": "qtcanti-suspender",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Fármaco suspenso se o QTc ultrapassar 500ms (ou 550ms com QRS alargado acima de 120ms) ou aumentar 60ms ou mais em relação ao valor basal, mesmo sem ultrapassar o corte absoluto",
+        "origem_secao": "Limiares práticos de conduta (Tabela 4 da revisão)"
+      },
+      {
+        "id": "qtcanti-seguimento-ecg",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG repetido a cada 24 horas até a resolução do prolongamento, com reavaliação em unidade monitorizada se houver síncope, pré-síncope, palpitação rápida ou bradicardia associada",
+        "origem_secao": "Quando o QTc prolonga (>500 ms ou aumento >60 ms do basal)"
+      },
+      {
+        "id": "qtcanti-arsenio-via",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No trióxido de arsênio, via de administração conferida — o prolongamento relevante descrito na revisão ocorre pela via intravenosa, não pela via oral",
+        "origem_secao": "Incidência ponderada por fármaco (dados numéricos da Tabela 1)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Cardio-oncologia citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
