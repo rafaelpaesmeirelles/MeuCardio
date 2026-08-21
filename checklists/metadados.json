@@ -18146,5 +18146,268 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "protocolo-abcdef-diario-de-sedacao-e-delirium-na-uti-cardiologica",
+    "condicao": "Aplicação diária do pacote ABCDEF (sedação, delirium e mobilização) na UTI cardiológica",
+    "resumo": "O que checar a cada dia/turno para aplicar de fato os seis componentes do pacote ABCDEF — não só escolher um sedativo —, com RASS guiando a meta de sedação e CAM-ICU rastreando delirium de forma sistemática, inclusive o subtipo hipoativo.",
+    "documento_origem": "protocolo-abcdef-sedacao-e-delirium-na-uti-cardiologica-rass-e-cam-icu",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pun BT, Balas MC, Barnes-Daly MA, Thompson JL, Aldrich JM, Barr J, et al; Ely EW. Caring for Critically Ill Patients with the ABCDEF Bundle: Results of the ICU Liberation Collaborative in Over 15,000 Adults. Crit Care Med. 2019;47(1):3-14. DOI: 10.1097/CCM.0000000000003482. PMID: 30339549. PMCID: PMC6298815 — coorte prospectiva multicêntrica, 68 UTIs (acadêmicas, comunitárias e federais), 15.226 adultos, 20 meses",
+      "Sessler CN, Gosnell MS, Grap MJ, Brophy GM, O'Neal PV, Keane KA, Tesoro EP, Elswick RK. The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients. Am J Respir Crit Care Med. 2002;166(10):1338-1344. DOI: 10.1164/rccm.2107138. PMID: 12421743 — inclui subgrupo de UTI de cirurgia cardíaca e de UTI coronariana entre os cinco subgrupos testados",
+      "Ely EW, Margolin R, Francis J, May L, Truman B, Dittus R, Speroff T, Gautam S, Bernard GR, Inouye SK. Evaluation of delirium in critically ill patients: validation of the Confusion Assessment Method for the Intensive Care Unit (CAM-ICU). Crit Care Med. 2001;29(7):1370-1379. DOI: 10.1097/00003246-200107000-00012. PMID: 11445689 — UTI médica e coronariana de um centro universitário, 38 pacientes, 293 avaliações pareadas"
+    ],
+    "itens": [
+      {
+        "id": "abcdef-dor-avaliada-sistematicamente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dor avaliada e tratada de forma sistemática com instrumento estruturado, antes de presumir que agitação ou desconforto exigem apenas mais sedação (componente A do pacote)",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-despertar-e-teste-respiratorio-coordenados",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Despertar espontâneo e teste de respiração espontânea coordenados diariamente na ausência de contraindicação (componente B)",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-meta-de-rass-definida-por-turno",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Meta de sedação definida em RASS (tipicamente 0 a −2, salvo indicação contrária) e reavaliada a cada turno, como alvo objetivo compartilhado pela equipe — não guiada por impressão subjetiva (componente C, RASS)",
+        "origem_secao": "RASS — Richmond Agitation-Sedation Scale (componentes B e C)"
+      },
+      {
+        "id": "abcdef-cam-icu-aplicada-a-cada-turno",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "CAM-ICU aplicada a cada turno para rastreio sistemático de delirium, inclusive o subtipo hipoativo (paciente quieto, sonolento, sem agitação), que é o mais comum e o mais facilmente confundido com sedação adequada sem instrumento estruturado (componente D)",
+        "origem_secao": "CAM-ICU — Confusion Assessment Method for the ICU (componente D)"
+      },
+      {
+        "id": "abcdef-mobilizacao-precoce-avaliada-diariamente",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Mobilização e exercício precoces avaliados diariamente, ponderando dispositivos temporários (drenos, marca-passo epicárdico, balão intra-aórtico) contra o benefício de mobilizar (componente E)",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-familia-engajada-no-plano",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Família engajada e informada sobre o plano diário de sedação, rastreio de delirium e mobilização (componente F)",
+        "origem_secao": "O que é o pacote ABCDEF, e por que não é sobre um fármaco"
+      },
+      {
+        "id": "abcdef-pacote-nao-e-so-escolha-de-sedativo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe orientada de que o pacote ABCDEF não é sinônimo de sedação: reduzir os seis componentes (dor, despertar, sedação, delirium, mobilidade, família) à escolha de um sedativo específico perde cinco deles",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "abcdef-associacao-observacional-nao-causal",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer que a associação do desempenho completo do pacote com menor mortalidade, coma e delirium vem de coorte observacional (Pun et al., 68 UTIs, 15.226 adultos) ajustada para confundidores, não de ensaio randomizado — não presumir efeito causal garantido ao aplicar o pacote",
+        "origem_secao": "Limites — o que este documento NÃO afirma"
+      },
+      {
+        "id": "abcdef-cam-icu-validada-fora-de-uti-cirurgica-cardiaca",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que a validação da CAM-ICU citada foi feita em UTI médica e coronariana, não em UTI de cirurgia cardíaca — uso nessa população é extrapolação amplamente praticada, mas não diretamente testada nesta fonte",
+        "origem_secao": "Limites — o que este documento NÃO afirma"
+      },
+      {
+        "id": "abcdef-aumento-de-dor-relatada-nao-e-falha-do-pacote",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Não interpretar aumento na frequência de dor relatada como sinal de que o pacote está piorando o paciente — no estudo de Pun et al., dor foi relatada com mais frequência à medida que o desempenho proporcional do pacote aumentava (p=0,0001), provavelmente porque avaliação sistemática a torna mais visível, não porque o pacote a cause",
+        "origem_secao": "O pacote testado em quase 15 mil adultos: Pun et al., 2019"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Pun BT, Balas MC, Barnes-Daly MA, Thompson JL, Aldrich JM, Barr J, et al; Ely EW. Caring for Critically Ill Patients with the ABCDEF Bundle: Results of the ICU Liberation Collaborative in Over 15,000 Adults. Crit Care Med. 2019;47(1):3-14. PMID: 30339549, em 21/08/2026."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-inicial-da-sindrome-de-baixo-debito-cardiaco-pos-cec",
+    "condicao": "Síndrome de baixo débito cardíaco (SBDC) transitória no pós-operatório imediato de cirurgia cardíaca com circulação extracorpórea",
+    "resumo": "O que checar para reconhecer a SBDC pós-CEC como stunning miocárdico transitório e reversível, sem subestimar um paciente que de fato descompensa nem escalar prematuramente para investigação de causa estrutural quando o quadro segue o curso esperado.",
+    "documento_origem": "sindrome-de-baixo-debito-cardiaco-pos-cirurgia-cardiaca-com-cec",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Braunwald E, Kloner RA. The stunned myocardium: prolonged, postischemic ventricular dysfunction. Circulation. 1982;66(6):1146-1149. PMID: 6754130 — artigo original que define o conceito de miocárdio atordoado como disfunção contrátil prolongada e reversível após reperfusão",
+      "Warren OJ, Smith AJ, Alexiou C, et al. The inflammatory response to cardiopulmonary bypass: part 1--mechanisms of pathogenesis. J Cardiothorac Vasc Anesth. 2009;23(2):223-231. PMID: 18930659 — mecanismos da resposta inflamatória sistêmica desencadeada pelo contato sangue-superfície não endotelial do circuito de CEC (ativação de complemento, citocinas)",
+      "Schoonen A, van Klei WA, van Wolfswinkel L, van Loon K. Definitions of low cardiac output syndrome after cardiac surgery and their effect on the incidence of intraoperative LCOS: a literature review and cohort study. Front Cardiovasc Med. 2022;9:926957. PMID: 36247457, PMCID: PMC9558721 — revisão de 262 definições distintas de SBDC na literatura; incidência em adultos variando de 1,5% a 91% conforme a definição aplicada; pico de incidência esperado 6-12h após a cirurgia",
+      "Algarni KD, Maganti M, Yau TM. Predictors of low cardiac output syndrome after isolated coronary artery bypass surgery: trends over 20 years. Ann Thorac Surg. 2011;92(5):1678-1684. PMID: 21939957 — coorte de 25.176 pacientes de CRM isolada (1990-2009); incidência de SBDC caiu de 9,1% (1990-1994) para 2,4% (2005-2009); preditores independentes com odds ratio: CRM reoperação 4,1, FEVE <20% 3,5 (7,8 no período mais recente), cirurgia de emergência 2,7, choque cardiogênico pré-operatório 2,3",
+      "Pérez Vela JL, Morales Vidal JR, González Torija A, et al. Clinical management of postcardiotomy shock in adults. Med Intensiva (Engl Ed). 2022;46(6):312-325. PMID: 35570187 — revisão sobre diagnóstico e manejo do choque pós-cardiotomia no adulto: monitorização hemodinâmica multimodal, otimização com volume/diuréticos, inotrópicos e vasopressores/vasodilatadores, e suporte circulatório mecânico precoce na ausência de resposta",
+      "Cholley B, Caruba T, Grosjean S, et al. Effect of Levosimendan on Low Cardiac Output Syndrome in Patients With Low Ejection Fraction Undergoing Coronary Artery Bypass Grafting With Cardiopulmonary Bypass: The LICORN Randomized Clinical Trial. JAMA. 2017;318(6):548-556. PMID: 28787507 — ensaio randomizado, duplo-cego, placebo-controlado (FEVE ≤40%, revascularização miocárdica com CEC); desfecho composto (catecolamina em 48h, falha de desmame de assistência ventricular em 96h, ou terapia renal substitutiva) ocorreu em 61% do grupo placebo (101/166), evidenciando a ampla variabilidade da duração de suporte necessária mesmo em coorte de risco definido",
+      "Gillies M, Bellomo R, Doolan L, Buxton B. Bench-to-bedside review: Inotropic drug therapy after adult cardiac surgery -- a systematic literature review. Crit Care. 2005;9(3):266-279. PMID: 15987381 — revisão sistemática dedicada à terapia inotrópica pós-cirurgia cardíaca no adulto; conclui que o efeito de catecolaminas e inibidores da fosfodiesterase sobre desfechos clínicos maiores, incluindo o tempo de suporte necessário, permanece desconhecido por falta de ensaios desenhados para medir esse desfecho — confirma, a partir da própria literatura especializada, que não há duração-padrão estabelecida",
+      "Keranovic S, Salihovic E, Zrnanovic D, Prelic M, Piric A, Kikanovic T. Inotropic and Mechanical Support of Critically Ill Patient after Cardiac Surgery. Med Arch. 2020;74(3):236-239. PMID: 32801443 — relato de caso e revisão da literatura sobre suporte inotrópico e mecânico pós-cirurgia cardíaca; os autores registram explicitamente a falta de dados sobre duração de uso de inotrópicos/vasopressores no pós-operatório precoce de CRM; o próprio caso descrito, de evolução complicada (parada cardíaca intraoperatória, CEC de quase 4h), precisou de 6 dias de desmame inotrópico progressivo e balão intra-aórtico retirado no 6º dia — ilustra que mesmo um caso documentado não é generalizável como referência de duração para o quadro não complicado"
+    ],
+    "itens": [
+      {
+        "id": "sbdc-reconhecer-janela-esperada-de-pico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o pico esperado de incidência da SBDC pós-CEC é 6 a 12 horas após a cirurgia, não no bloco cirúrgico nem nas primeiras horas de UTI",
+        "origem_secao": "Janela de tempo: por que reconhecer como transitório antes de escalar a investigação"
+      },
+      {
+        "id": "sbdc-excluir-causa-mecanica-ou-isquemica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Antes de rotular o quadro como stunning/SBDC transitória, excluídas causas mecânicas ou isquêmicas agudas — tamponamento, disfunção protética aguda, oclusão de enxerto — por ecocardiograma à beira do leito, repetido conforme necessário",
+        "origem_secao": "Janela de tempo: por que reconhecer como transitório antes de escalar a investigação"
+      },
+      {
+        "id": "sbdc-fatores-de-risco-registrados",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fatores de maior risco de SBDC registrados quando presentes: revascularização em reoperação (OR 4,1), FEVE <20% (OR 3,5, chegando a 7,8 em coortes recentes), cirurgia de emergência (OR 2,7), choque cardiogênico pré-operatório (OR 2,3)",
+        "origem_secao": "Incidência e quem está em maior risco"
+      },
+      {
+        "id": "sbdc-eco-comparado-ao-pre-operatorio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma pós-operatório comparado ao exame pré-operatório, quando disponível, para distinguir piora aguda sobre função previamente boa de disfunção ventricular já presente antes da cirurgia",
+        "origem_secao": "O que diferencia de disfunção ventricular permanente pré-existente"
+      },
+      {
+        "id": "sbdc-monitorizacao-hemodinamica-multimodal",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Monitorização hemodinâmica multimodal instituída (ecocardiografia repetida e, quando indicado, cateter de artéria pulmonar) para diferenciar SBDC transitória de complicação mecânica e guiar a terapia",
+        "origem_secao": "Manejo: suporte temporário enquanto o miocárdio recupera"
+      },
+      {
+        "id": "sbdc-otimizar-volemia-eletrolitos-e-ritmo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Volemia, distúrbios metabólicos/eletrolíticos e ritmo otimizados — incluindo marca-passo epicárdico temporário para bradiarritmia ou perda de sincronismo atrioventricular associada — antes ou junto da escalada de suporte farmacológico",
+        "origem_secao": "Manejo: suporte temporário enquanto o miocárdio recupera"
+      },
+      {
+        "id": "sbdc-suporte-farmacologico-conforme-componente",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Inotrópico associado a vasopressor ou vasodilatador conforme o componente predominante (baixo débito puro versus vasoplegia da resposta inflamatória da CEC), com entendimento de que não existe duração-padrão de suporte estabelecida na literatura para o caso não complicado",
+        "origem_secao": "Manejo: suporte temporário enquanto o miocárdio recupera"
+      },
+      {
+        "id": "sbdc-suporte-mecanico-reservado-a-falha-farmacologica",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Suporte circulatório mecânico temporário (balão intra-aórtico ou dispositivo de curta duração) reservado aos casos que não respondem ao suporte farmacológico otimizado, como ponte até a recuperação da função miocárdica",
+        "origem_secao": "Manejo: suporte temporário enquanto o miocárdio recupera"
+      },
+      {
+        "id": "sbdc-nao-fixar-prazo-arbitrario-de-resolucao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe orientada de que a literatura não sustenta um número único de horas/dias até a resolução da SBDC não complicada — no ensaio LICORN, 61% do grupo placebo (FEVE ≤40%, revascularização com CEC) ainda dependia de suporte além de 48h; qualquer corte de tempo usado como critério clínico precisa vir de protocolo institucional, não de um valor de validade geral",
+        "origem_secao": "Janela de tempo: por que reconhecer como transitório antes de escalar a investigação"
+      },
+      {
+        "id": "sbdc-reavaliar-quando-foge-do-padrao-esperado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação ativa acionada quando o quadro fugir do padrão esperado (início muito precoce e grave, ausência de resposta ao suporte otimizado, sinais de tamponamento ou isquemia), com indicação de novo ecocardiograma à beira do leito e, se necessário, reoperação ou cateterismo",
+        "origem_secao": "O que diferencia de disfunção ventricular permanente pré-existente"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Schoonen A, van Klei WA, van Wolfswinkel L, van Loon K. Definitions of low cardiac output syndrome after cardiac surgery and their effect on the incidence of intraoperative LCOS: a literature review and cohort study. Front Cardiovasc Med. 2022;9:926957. PMID: 36247457, em 21/08/2026."
+  },
+  {
+    "slug": "seguranca-pre-e-pos-ressonancia-magnetica-em-portador-de-marcapasso-ou-cdi-nao-condicional",
+    "condicao": "Realização de ressonância magnética em portador de marca-passo ou CDI não condicional (dispositivo legado)",
+    "resumo": "O que checar antes, durante e depois de uma RM clinicamente indicada em paciente com dispositivo cardíaco eletrônico implantável não certificado para o ambiente de RM, seguindo o protocolo que sustentou a segurança demonstrada no Registro MagnaSafe e no estudo de Nazarian.",
+    "documento_origem": "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684 — Registro MagnaSafe, 1.000 casos de marca-passo e 500 casos de CDI, RM não torácica a 1,5 T",
+      "Nazarian S, Hansford R, Rahsepar AA, Weltin V, McVeigh D, Ipek EG, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579 — 1.509 pacientes, 2.103 exames de RM torácicos e não torácicos a 1,5 T, seguimento de longo prazo em 958 pacientes",
+      "Indik JH, Gimbel JR, Abe H, Alkmim-Teixeira R, Birgersdotter-Green U, Clarke GD, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708"
+    ],
+    "itens": [
+      {
+        "id": "rm-cied-triagem-de-integridade-do-sistema",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dispositivo triado antes do exame: sistema íntegro, sem eletrodo abandonado ou de integridade duvidosa, e checado se já é condicional para RM (o que dispensaria o protocolo abaixo)",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-interrogacao-e-parametros-basais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dispositivo interrogado antes do exame, com os parâmetros basais registrados para comparação posterior",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-reprogramacao-pre-exame",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reprogramação pré-exame realizada conforme protocolo: resposta a frequência desligada e, se o paciente for dependente de marca-passo, ajuste para modo assíncrono; terapias de choque do CDI desativadas durante o exame",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-pessoal-capacitado-disponivel",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Pessoal capacitado a interrogar/reprogramar o dispositivo e a atender emergência disponível durante todo o exame",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-monitorizacao-durante-o-exame",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Monitorização de sinais vitais e oximetria mantida durante todo o exame",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-reinterrogacao-imediata-apos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dispositivo reinterrogado imediatamente após o exame, com os parâmetros comparados aos valores basais pré-exame",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-reverter-reprogramacao-apos-o-exame",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reprogramação revertida ao modo habitual após o exame — o dispositivo tipicamente sai do exame em modo de segurança/assíncrono, e o paciente dependente de marca-passo que permanece nesse modo por engano fica exposto a risco de competição com o ritmo próprio",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-cied-nao-e-contraindicacao-absoluta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe orientada de que 'não condicional para RM' não é sinônimo de 'RM proibida': a segurança demonstrada nos dois estudos é a de um protocolo específico de triagem, reprogramação e monitorização — não uma propriedade do dispositivo em si",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-cied-cautela-em-3-tesla-ou-eletrodo-abandonado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Decisão individualizada quando o exame for a 3 tesla ou o paciente tiver eletrodo abandonado/fraturado — a evidência de maior volume dos dois estudos é para sistema íntegro a 1,5 T; nenhum deles testa 3 T de forma representativa",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rm-cied-seguimento-de-alteracao-de-parametro",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houve alteração de parâmetro na reinterrogação pós-exame (por exemplo, queda de amplitude de onda P ou aumento de limiar de captura), reavaliação programada no seguimento — no estudo de Nazarian essas alterações persistiram em minoria discreta da coorte (3-4%) sem exigir reprogramação não planejada ou reintervenção, mas devem ser acompanhadas",
+        "origem_secao": "O estudo de Nazarian: ampliando para RM torácica"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. PMID: 28225684, em 21/08/2026."
   }
 ]
