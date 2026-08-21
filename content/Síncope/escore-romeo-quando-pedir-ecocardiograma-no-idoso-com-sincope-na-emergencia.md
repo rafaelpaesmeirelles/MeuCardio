@@ -4,7 +4,7 @@ slug: escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergenci
 theme: "Síncope"
 kind: protocolo
 review_status: revisado
-source_refs: ["Probst MA, Gibson TA, Weiss RE, et al. Predictors of Clinically Significant Echocardiography Findings in Older Adults with Syncope: A Secondary Analysis. J Hosp Med. 2018;13(12):823-828. DOI: 10.12788/jhm.3082. PMID: 30255862 — números conferidos contra o abstract indexado no PubMed em 08/08/2026. ClinicalTrials.gov NCT01802398.", "DeAngelis J, Vargas G, Weiss RE, et al. Predicting Echocardiography Findings in Adults Presenting to the Emergency Department With Syncope: An External Validation of the ROMEO Score. Acad Emerg Med. 2026;33(6):e70366. DOI: 10.1111/acem.70366. PMID: 42340085 — números conferidos contra o abstract indexado no PubMed em 08/08/2026. ClinicalTrials.gov NCT04533425."]
+source_refs: ["Probst MA, Gibson TA, Weiss RE, et al. Predictors of Clinically Significant Echocardiography Findings in Older Adults with Syncope: A Secondary Analysis. J Hosp Med. 2018;13(12):823-828. DOI: 10.12788/jhm.3082. PMID: 30255862. Texto integral conferido em PMC em 21/08/2026: derivação em adultos ≥60 anos; ROMEO=0 com sensibilidade 99,5% (IC95% 97,4-99,9) e especificidade 15,4%.", "DeAngelis J, Vargas G, Weiss RE, et al. Predicting Echocardiography Findings in Adults Presenting to the Emergency Department With Syncope: An External Validation of the ROMEO Score. Acad Emerg Med. 2026;33(6):e70366. DOI: 10.1111/acem.70366. PMID: 42340085. Texto integral conferido na Wiley em 21/08/2026: adultos ≥40 anos sem diagnóstico grave na emergência; ROMEO=0 com sensibilidade 98,9%, VPN 98,6%, especificidade 20,2% e AUC 0,83 (IC95% 0,79-0,87)."]
 legacy_source: "Documento novo, 08/08/2026. A base já tem documento sobre biomarcadores (NT-proBNP/troponina) na estratificação de RISCO GERAL da síncope (evento adverso grave em 30 dias) e documento comparando CSRS/EGSyS/SFSR — nenhum responde especificamente à pergunta 'este paciente precisa de ecocardiograma?', que é uma decisão de exame de imagem, não de risco global. O ROMEO é a única ferramenta desta base dedicada a essa pergunta."
 ---
 
@@ -89,9 +89,6 @@ síncope, mas cujo rendimento diagnóstico real na maioria dos pacientes é baix
   de achado ecocardiográfico), a decisão de internação/observação continua sendo guiada pelo escore
   de risco global (CSRS, EGSyS ou SFSR), não pelo ROMEO.
 
-## Verificação humana necessária
+## Verificação documental concluída
 
-Os dois artigos foram lidos apenas pelo abstract indexado no PubMed nesta sessão — não pelo texto
-completo. Detalhes que só constam no texto integral (curva de calibração completa, análise de
-subgrupo por faixa etária dentro da validação, tabela de coeficientes da regressão original) não
-foram conferidos e não devem ser presumidos a partir deste resumo.
+Os textos integrais da derivação de 2018 (Probst et al.) e da validação externa de 2026 (DeAngelis et al.) foram conferidos em 21/08/2026. A derivação confirma os cinco critérios e o desempenho de ROMEO = 0 (sensibilidade 99,5%; especificidade 15,4%). A validação externa em adultos ≥40 anos sem diagnóstico grave na emergência confirmou sensibilidade de 98,9%, VPN de 98,6%, especificidade de 20,2% e AUC de 0,83 (IC95% 0,79-0,87). Permanecem as limitações metodológicas descritas pelos autores, especialmente seleção dos pacientes submetidos a ecocardiograma e maior representação de centros urbanos/acadêmicos. O ROMEO deve ser usado como apoio para estimar baixo rendimento do ecocardiograma, e não como escore de internação/alta.

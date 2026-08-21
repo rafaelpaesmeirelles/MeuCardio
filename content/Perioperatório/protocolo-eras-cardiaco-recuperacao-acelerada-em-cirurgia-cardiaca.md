@@ -5,7 +5,7 @@ theme: "Perioperatório"
 kind: protocolo
 summary: "Primeiro documento do tema sobre ERAS Cardíaco. O consenso de 2019 reúne recomendações pré, intra e pós-operatórias em um pacote único — e uma metanálise de 2025 quantifica o ganho: 1,4 dia a menos de internação hospitalar frente a cuidado padrão."
 review_status: revisado
-source_refs: ["Engelman DT, Ben Ali W, Williams JB, et al. Guidelines for Perioperative Care in Cardiac Surgery: Enhanced Recovery After Surgery Society Recommendations. JAMA Surg. 2019;154(8):755-766. DOI: 10.1001/jamasurg.2019.1153. PMID: 31054241 — abstract estruturado e metodologia conferidos via PubMed nesta sessão (06/08/2026); texto integral bloqueado por paywall — lista completa de recomendações e grau individual de cada uma não confirmada nesta sessão.", "Dave MG, Chudyk AM, Oravec N, et al. Putting patient value first: Using a modified nominal group technique for the implementation of enhanced recovery after cardiac surgery recommendations. JTCVS Open. 2022. DOI: 10.1016/j.xjon.2022.07.004 — lista as 15 recomendações do ERAS Cardiac agrupadas por momento perioperatório, texto integral de acesso aberto conferido nesta sessão.", "Hoogma DF, Meeusen I, Coppens S, et al. Efficacy of enhanced recovery programmes for cardiac surgery: a systematic review and meta-analysis. Br J Anaesth. 2025;135(1):31-39 — 18 estudos, 2.625 pacientes; abstract estruturado conferido via PubMed E-utilities nesta sessão."]
+source_refs: ["Engelman DT, Ben Ali W, Williams JB, et al. Guidelines for Perioperative Care in Cardiac Surgery: Enhanced Recovery After Surgery Society Recommendations. JAMA Surg. 2019;154(8):755-766. DOI: 10.1001/jamasurg.2019.1153. PMID: 31054241. Texto integral e tabela de Classification of Recommendation/Level of Evidence conferidos em 21/08/2026.", "Dave MG, Chudyk AM, Oravec N, et al. Putting patient value first: Using a modified nominal group technique for the implementation of enhanced recovery after cardiac surgery recommendations. JTCVS Open. 2022. DOI: 10.1016/j.xjon.2022.07.004. Texto integral de acesso aberto; agrupamento operacional de 15 medidas por fase.", "Hoogma DF, Meeusen I, Coppens S, et al. Efficacy of enhanced recovery programmes for cardiac surgery: a systematic review and meta-analysis. Br J Anaesth. 2025;135(1):31-39. DOI: 10.1016/j.bja.2025.03.019. PMID: 40287362. PMCID: PMC12597454. Texto integral conferido em 21/08/2026: 18 estudos/2.625 pacientes; redução de LOS/UTI/ventilação e análise explícita de segurança."]
 ---
 
 # Protocolo ERAS Cardíaco: Recuperação Acelerada em Cirurgia Cardíaca
@@ -27,7 +27,7 @@ Um artigo de implementação priorizou as 15 recomendações centrais do ERAS
 Cardiac por fase perioperatória:
 
 **Pré-operatório** (6 itens): correção de deficiência nutricional; ingestão de
-líquidos claros até pouco antes da anestesia geral (abandono do jejum
+líquidos claros até 2 a 4 horas antes da anestesia geral, quando clinicamente apropriado (abandono do jejum
 prolongado tradicional); carregamento de carboidrato pré-operatório;
 ferramentas de engajamento do paciente; pré-habilitação; cessação de tabagismo
 e de consumo de álcool de risco.
@@ -42,12 +42,7 @@ hídrica guiada por meta; manejo de dieta, regime intestinal e náusea/vômito
 pós-operatórios.
 - **fonte**: Dave et al., JTCVS Open 2022 (implementação do ERAS Cardiac)
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: o texto integral do consenso original
-(Engelman et al., JAMA Surg 2019) não foi acessado nesta sessão — o grau de
-recomendação e o nível de evidência de cada uma das 15+ recomendações
-individuais listadas acima não foram confirmados; a lista acima reflete o
-agrupamento por fase de um artigo de implementação subsequente, não a tabela
-graduada original.
+O texto integral do consenso original (Engelman et al., JAMA Surg 2019) e sua **Tabela 1 de classificação de recomendação e nível de evidência** foram conferidos em 21/08/2026. O grading é individual por intervenção: por exemplo, controle glicêmico perioperatório e terapia hídrica guiada por meta são Classe I/B-R; pré-habilitação é IIa/B-NR; líquidos claros até 2–4 horas e carregamento de carboidrato são IIb/C-LD. A lista de 15 itens abaixo permanece o agrupamento operacional do artigo de implementação de Dave et al.; quando for necessário citar o COR/LOE de um componente específico, usar a tabela primária de 2019.
 
 ## O numero que sustenta o pacote
 
@@ -72,10 +67,7 @@ achado central da metanálise: o ganho vem do pacote coordenado nas três fases,
 não de uma medida intraoperatória isolada.
 - **fonte**: Hoogma et al., Br J Anaesth 2025
 
-**Esta metanálise não relatou mortalidade nem taxa de complicação no resumo
-consultado** — os desfechos confirmados são de tempo (internação, UTI,
-ventilação), não de segurança/mortalidade. `VERIFICAÇÃO HUMANA NECESSÁRIA`
-para desfechos de complicação/mortalidade, se necessários para uso clínico.
+**O texto integral da metanálise de 2025 também avaliou segurança.** Não foram detectadas diferenças estatisticamente significativas em fibrilação atrial de início novo (OR 0,63; IC95% 0,38–1,05), lesão renal aguda (OR 0,96; IC95% 0,62–1,47), reinternação em UTI (OR 1,05; IC95% 0,62–1,77), reinternação hospitalar (OR 0,48; IC95% 0,10–2,20) ou mortalidade em 30 dias (OR 1,11; IC95% aproximadamente 0,65–1,90). A certeza desses desfechos de segurança foi classificada como baixa por imprecisão. Portanto, o benefício demonstrado é de recuperação/tempo de permanência; **não há base para afirmar redução de mortalidade**.
 
 ## Leitura clinica
 
@@ -95,11 +87,7 @@ para desfechos de complicação/mortalidade, se necessários para uso clínico.
 
 ## Armadilhas de leitura
 
-- Este documento não reproduz o grau de recomendação (LOE/COR) de cada item
-  individual do consenso original — a fonte primária não foi acessada no
-  texto integral nesta sessão, e a lista de 15 itens vem de um artigo de
-  implementação secundário. Não apresentar essa lista como se cada item
-  tivesse Classe/Nível confirmado.
+- O COR/LOE individual está confirmado na fonte primária de 2019, mas a lista operacional de 15 itens usada aqui vem do artigo de implementação de Dave et al. Não atribuir um único grau ao pacote todo: quando necessário, consultar o grading específico de cada intervenção na tabela original.
 - **Fast-track anestésico e ERAS Cardíaco não são a mesma coisa** — a
   metanálise de 2025 mostra ganho adicional do programa completo sobre o
   fast-track isolado; tratá-los como sinônimos subestima o que o pacote
