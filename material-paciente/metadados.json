@@ -14447,5 +14447,177 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "sincope-situacional-miccao-tosse-e-outros-gatilhos-do-dia-a-dia",
+    "titulo": "Desmaio ligado a fazer xixi, tossir ou engolir: o que é o desmaio situacional",
+    "subtitulo": "Por que certos momentos do dia a dia podem provocar uma queda de pressão súbita",
+    "tema": "Síncope",
+    "documento_slug": "sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+    "resumo": "Alguns desmaios acontecem sempre no mesmo tipo de situação — ao urinar à noite, ao evacuar, ao tossir com força ou ao engolir. Esse padrão tem nome (desmaio situacional) e, na maioria das vezes, é benigno.",
+    "secoes": [
+      {
+        "titulo": "O que é o desmaio situacional",
+        "paragrafos": [
+          "Desmaio situacional é o nome dado ao desmaio que acontece sempre ligado a uma atividade específica do corpo, como urinar, evacuar, tossir com força ou engolir. Não é uma doença isolada — é um tipo de desmaio reflexo, o mesmo grupo do desmaio vasovagal comum, mas com um gatilho bem definido.",
+          "Em um estudo com mais de 3 mil pessoas avaliadas por causa de desmaio, cerca de 1 em cada 9 recebeu esse diagnóstico. A idade média foi próxima dos 28 anos, e ele afeta homens e mulheres de forma parecida."
+        ]
+      },
+      {
+        "titulo": "Quais são os gatilhos mais comuns",
+        "paragrafos": [
+          "Levantando o que os estudos mostram sobre a frequência de cada gatilho, o mais comum de todos é urinar — corresponde a mais da metade dos casos. Em seguida vêm evacuar e tomar banho quente.",
+          "Engolir alimento e tossir com força também aparecem, embora com menos frequência. Gatilhos mais raros, mas descritos na literatura médica, incluem comer uma refeição pesada, cantar, escovar os dentes e até pentear o cabelo."
+        ]
+      },
+      {
+        "titulo": "Por que isso acontece no corpo",
+        "paragrafos": [
+          "O mecanismo comum a todos esses gatilhos é um reflexo do corpo que baixa a frequência cardíaca e dilata os vasos sanguíneos de forma exagerada naquele momento, reduzindo por instantes o sangue que chega ao cérebro.",
+          "No caso de urinar e evacuar, o esforço feito (uma espécie de 'força' contra a respiração presa) diminui o retorno de sangue para o coração por alguns segundos, o que reduz a pressão arterial. No caso de engolir, o mecanismo envolve um reflexo entre o estômago e o coração. Já na tosse, o próprio ato de tossir com força dispara um reflexo que reduz os batimentos e a pressão."
+        ]
+      },
+      {
+        "titulo": "Como é tratado",
+        "paragrafos": [
+          "Na grande maioria dos casos, o tratamento é orientação: entender o gatilho, saber reconhecer os sinais que antecedem o desmaio e adotar medidas simples, como sentar ou levantar mais devagar em situações de risco (por exemplo, ao urinar de madrugada, levantando-se aos poucos antes).",
+          "Quando o gatilho é a tosse, o caminho é diferente: como o desmaio é consequência direta do episódio de tosse, a prioridade passa a ser investigar e tratar a causa da tosse persistente — controlando a tosse, o desmaio tende a não se repetir.",
+          "De forma geral, quando o padrão é claro (sempre no mesmo gatilho, recuperação rápida, sem sinais de alerta), o prognóstico é bom e problemas graves relacionados a esse tipo de desmaio são raros."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio que aconteceu durante esforço físico ou exercício, não ligado aos gatilhos típicos (urinar, evacuar, tossir, engolir)",
+      "Palpitações (coração disparado ou batendo forte) antes do desmaio",
+      "Dor no peito antes ou depois do episódio",
+      "Histórico familiar de morte súbita em idade jovem",
+      "Desmaio com machucado importante na queda, ou que durou muito tempo para a pessoa se recuperar",
+      "Mudança no padrão: um gatilho novo e diferente do habitual, ou desmaios cada vez mais frequentes"
+    ],
+    "perguntas": [
+      "Preciso fazer exames do coração toda vez que eu desmaiar ao urinar? Se o padrão é sempre o mesmo, o episódio é rápido e a recuperação é completa, sem outros sinais de alerta, geralmente não é necessário investigar com exames extensos — mas vale sempre conversar com seu médico sobre o seu caso específico.",
+      "Se eu tenho tosse crônica e já desmaiei por causa dela, isso é grave? O desmaio em si costuma ser benigno, mas ele é um sinal de que a tosse persistente precisa ser investigada e tratada — resolvendo a causa da tosse, o desmaio tende a parar.",
+      "Esse tipo de desmaio pode acontecer com qualquer atividade do dia a dia? A lista de gatilhos descritos é mais ampla do que se imagina — além de urinar, evacuar, tossir e engolir, já foram descritos casos ligados a cantar, escovar os dentes e pentear o cabelo, por exemplo."
+    ],
+    "fontes": [
+      "Zou R, Wang S, Lin P, Hu C, Wang Y, Li F, Xu Y, Wang C. The clinical characteristics of situational syncope in children and adults undergoing head-up tilt testing · American Journal of Emergency Medicine · 2020 · 38(7):1419-1423 · DOI: 10.1016/j.ajem.2019.11.042 · PMID: 31843331"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miopericardite-apos-vacina-de-mrna-contra-covid-19-o-que-os-dados-mostram",
+    "titulo": "Inflamação do coração após a vacina de mRNA contra COVID-19: entenda o risco real",
+    "subtitulo": "Uma complicação rara, geralmente leve, e menos frequente do que a inflamação causada pela própria infecção",
+    "tema": "Pericárdio",
+    "documento_slug": "miopericardite-associada-a-vacina-de-mrna-contra-covid-19",
+    "resumo": "Uma pequena parcela de pessoas vacinadas com vacina de mRNA contra COVID-19 apresenta inflamação do coração dias depois. É rara, costuma ser leve e passageira, e os estudos mostram que é bem menos frequente do que a mesma inflamação causada pela própria infecção pelo coronavírus.",
+    "secoes": [
+      {
+        "titulo": "O que é essa complicação",
+        "paragrafos": [
+          "Trata-se de uma inflamação do músculo do coração e/ou do saco que o envolve (o pericárdio), que pode aparecer alguns dias depois da vacinação contra a COVID-19 com vacinas baseadas em mRNA (as marcas Pfizer e Moderna). É uma complicação rara.",
+          "O padrão mais comum é: homem jovem, geralmente adolescente ou adulto jovem, com sintomas começando cerca de 3 a 4 dias após a segunda dose da vacina. É bem mais raro depois da primeira dose e bem mais raro em mulheres."
+        ]
+      },
+      {
+        "titulo": "Qual é o risco real, em números",
+        "paragrafos": [
+          "Um grande estudo americano, que analisou dados de mais de 40 sistemas de saúde entre janeiro de 2021 e janeiro de 2022, mediu essa incidência. Em homens de 12 a 17 anos — o grupo de maior risco — a inflamação apareceu em cerca de 22 a 36 casos a cada 100 mil vacinados, na janela de dias após a segunda dose.",
+          "Em outras faixas etárias e em mulheres, o risco é ainda menor. Em mulheres de 12 anos ou mais, por exemplo, o número fica entre 0,5 e 6,2 casos a cada 100 mil vacinadas, sem grande variação por idade."
+        ]
+      },
+      {
+        "titulo": "O dado que mais importa: comparar com o risco da própria infecção",
+        "paragrafos": [
+          "O mesmo estudo também mediu quantos casos dessa inflamação do coração aconteceram depois da infecção pelo próprio coronavírus (COVID-19), nas mesmas faixas etárias. Nos homens de 12 a 17 anos, a inflamação apareceu em 50 a 65 casos a cada 100 mil infectados — bem mais do que os 22 a 36 casos vistos após a vacina.",
+          "Ou seja, segundo os próprios autores do estudo, o risco dessa complicação cardíaca foi de quase 2 a mais de 5 vezes maior depois de pegar COVID-19 do que depois de tomar a segunda dose da vacina, no grupo de maior risco. Em todos os outros grupos, por idade e sexo, essa diferença foi ainda maior a favor da vacina. Na prática, isso quer dizer que mesmo no grupo mais suscetível, a vacina traz um risco bem menor dessa complicação do que a própria doença que ela ajuda a prevenir."
+        ]
+      },
+      {
+        "titulo": "Como costuma evoluir",
+        "paragrafos": [
+          "Na maioria das pessoas com menos de 21 anos, o quadro é leve e melhora rapidamente. Os sintomas mais comuns são dor no peito e alterações detectadas em exames de sangue e no eletrocardiograma; em alguns casos, exames de imagem do coração mostram uma leve diminuição temporária da força de bombeamento do coração.",
+          "O acompanhamento médico nessa fase costuma incluir orientação de repouso do exercício físico por um período (geralmente pelo menos um mês), com reavaliação antes de retomar atividade física intensa — sempre conforme orientação do seu médico."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que aparece nos dias seguintes a uma dose de vacina de mRNA contra COVID-19",
+      "Palpitações (sensação de coração acelerado ou batendo fora do ritmo) nesse mesmo período",
+      "Falta de ar que surge ou piora após a vacinação",
+      "Desmaio ou sensação de quase desmaiar nos dias seguintes à vacina",
+      "Febre associada a dor no peito após a vacinação"
+    ],
+    "perguntas": [
+      "Devo evitar tomar a vacina por causa desse risco? A decisão sobre vacinação deve ser conversada com seu médico, mas os dados mostram que, mesmo no grupo de maior risco, essa complicação é mais rara e geralmente mais leve do que a mesma inflamação causada pela própria infecção pelo coronavírus.",
+      "Quem já teve essa reação pode tomar outra dose no futuro? Essa decisão precisa ser individualizada com seu médico, considerando a gravidade do episódio anterior e o cenário de exposição ao vírus.",
+      "Essa inflamação deixa sequela no coração? Na maioria dos casos descritos em pessoas jovens, o quadro é leve e resolve rapidamente; o acompanhamento clínico e os exames de controle são o que confirmam a recuperação completa em cada caso."
+    ],
+    "fontes": [
+      "Block JP, Boehmer TK, Forrest CB, et al. Cardiac Complications After SARS-CoV-2 Infection and mRNA COVID-19 Vaccination — PCORnet, United States, January 2021-January 2022. MMWR Morb Mortal Wkly Rep. 2022;71(14):517-523. DOI: 10.15585/mmwr.mm7114e1"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "derrame-no-saco-pericardico-cronico-e-de-grande-volume-sem-causa-conhecida",
+    "titulo": "Líquido acumulado ao redor do coração há muito tempo, sem causa encontrada: o que isso significa",
+    "subtitulo": "Por que um derrame estável e sem sintomas ainda precisa de acompanhamento médico",
+    "tema": "Pericárdio",
+    "documento_slug": "derrame-pericardico-cronico-idiopatico-de-grande-volume-historia-natural-e-manejo",
+    "resumo": "Algumas pessoas descobrem, num exame de imagem, um acúmulo grande de líquido ao redor do coração que já existe há meses ou anos, sem que os médicos encontrem uma causa. Mesmo bem tolerado por muito tempo, esse tipo de derrame precisa de acompanhamento porque o risco de complicação súbita não desaparece.",
+    "secoes": [
+      {
+        "titulo": "O que é esse tipo de derrame",
+        "paragrafos": [
+          "O coração é envolvido por uma membrana chamada pericárdio, que normalmente contém apenas uma fina camada de líquido lubrificante. Quando esse líquido se acumula em quantidade grande e permanece assim por mais de três meses, sem que os exames encontrem uma causa (como infecção, câncer ou doença inflamatória), chama-se derrame pericárdico crônico idiopático de grande volume.",
+          "Esse cenário é diferente do derrame que aparece de forma súbita numa inflamação aguda do pericárdio, e também diferente do derrame causado por câncer — nos dois casos, geralmente há uma causa identificada e uma conduta mais direta. Aqui, a causa permanece desconhecida mesmo depois de investigação."
+        ]
+      },
+      {
+        "titulo": "O que os estudos mostram sobre essa condição",
+        "paragrafos": [
+          "Um estudo clássico acompanhou, por até 15 anos, um grupo de pessoas com esse tipo de derrame. Na maioria delas, o líquido já estava presente havia meses a anos antes do diagnóstico — em média, cerca de 3 anos.",
+          "Um dado importante: quase metade das pessoas nesse estudo não tinha nenhum sintoma quando o derrame foi descoberto, apesar do grande volume de líquido. Isso mostra que a ausência de sintoma não significa ausência de risco."
+        ]
+      },
+      {
+        "titulo": "O principal risco: o tamponamento cardíaco",
+        "paragrafos": [
+          "O achado mais importante desse estudo é que, mesmo num derrame que já vinha sendo bem tolerado havia muito tempo, cerca de 3 em cada 10 pacientes acabou desenvolvendo tamponamento cardíaco — uma complicação grave em que o líquido comprime o coração e impede seu funcionamento normal, exigindo atendimento de urgência.",
+          "Isso pode acontecer de forma inesperada, sem aviso prévio, mesmo depois de anos de estabilidade. É por isso que esse tipo de derrame, mesmo sem sintomas, exige acompanhamento médico regular, e não pode ser considerado 'sem risco' só porque está estável há muito tempo."
+        ]
+      },
+      {
+        "titulo": "Como é tratado",
+        "paragrafos": [
+          "Quando é preciso drenar o líquido, o procedimento inicial costuma ser a retirada do líquido por punção (pericardiocentese). No estudo de referência, esse procedimento resolveu o problema de forma definitiva em apenas cerca de um terço das pessoas tratadas — em boa parte dos casos, o líquido voltou a se acumular depois.",
+          "Quando o derrame volta a se formar depois da punção, os médicos costumam considerar uma cirurgia chamada pericardiectomia, que remove parte da membrana ao redor do coração para impedir que o líquido volte a se acumular em grande quantidade. No estudo, os resultados dessa cirurgia, a longo prazo, foram considerados muito bons.",
+          "A decisão entre apenas observar, fazer a punção ou indicar a cirurgia depende muito da evolução de cada pessoa ao longo do tempo, e não apenas do tamanho do derrame no momento do diagnóstico — por isso, sempre é uma decisão conversada com seu médico, caso a caso."
+        ]
+      },
+      {
+        "titulo": "E depois de tratado?",
+        "paragrafos": [
+          "No mesmo estudo, as pessoas foram acompanhadas por até 20 anos depois do diagnóstico. Ao final desse longo período, algumas vieram a falecer, mas nenhuma morte foi atribuída à doença do pericárdio em si — o que reforça que, uma vez que o risco de complicação súbita é bem manejado, esse tipo de derrame não costuma ser, isoladamente, causa de morte a longo prazo."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar que piora de forma progressiva ou surge de repente",
+      "Sensação de peso ou pressão no peito que aumenta",
+      "Inchaço nas pernas ou no abdômen que aparece ou piora",
+      "Tontura, sensação de quase desmaiar ou desmaio",
+      "Batimentos cardíacos muito acelerados associados a mal-estar",
+      "Qualquer piora súbita do estado geral em quem já sabe ter esse tipo de derrame — procure atendimento de urgência"
+    ],
+    "perguntas": [
+      "Se estou sem sintomas, ainda preciso acompanhar esse derrame com meu médico? Sim — o próprio estudo mostra que quase metade das pessoas estava sem sintoma quando foi diagnosticada, e mesmo assim uma parte delas desenvolveu complicação grave depois. Ausência de sintoma não é o mesmo que ausência de risco.",
+      "Se meu derrame já está assim há anos e nunca piorou, posso parar de me consultar? Não é recomendado — o risco de uma complicação súbita, como o tamponamento, continua existindo mesmo depois de um longo período de estabilidade, então o acompanhamento regular é importante.",
+      "A punção (retirada do líquido) resolve o problema de vez? Nem sempre. Em boa parte dos casos, o líquido volta a se acumular depois da punção, e é justamente quando isso acontece que a cirurgia costuma ser considerada pelo médico."
+    ],
+    "fontes": [
+      "Sagristà-Sauleda J, Angel J, Permanyer-Miralda G, Soler-Soler J. Long-term follow-up of idiopathic chronic pericardial effusion. N Engl J Med. 1999;341(27):2054-2059. DOI: 10.1056/NEJM199912303412704. PMID: 10615077"
+    ],
+    "review_status": "revisado"
   }
 ]
