@@ -8424,5 +8424,275 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "rastreio-de-red-flags-para-doenca-de-fabry-com-acometimento-cardiaco",
+    "condicao": "Suspeita de doença de Anderson-Fabry com acometimento cardíaco",
+    "resumo": "Checklist para reconhecer, diante de hipertrofia ventricular esquerda inexplicada, os red flags cardíacos e extracardíacos da doença de Fabry (Tabelas 22 e 23 da ESC 2023) e conduzir o diagnóstico por sexo — uma fenocópia de cardiomiopatia hipertrófica com tratamento etiológico específico disponível.",
+    "documento_origem": "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — texto integral em PDF de acesso aberto (repositório sochicar.cl), Seção 7.6.1 ('Anderson–Fabry disease'), Tabela 22 ('Clinical features and management of syndromic and metabolic cardiomyopathies') e Tabela 23 ('Anderson–Fabry disease red flags')."
+    ],
+    "itens": [
+      {
+        "id": "fabry-ecg-pq-curto-jovem-bav-adulto",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "No ECG, procurar PQ curto em pacientes jovens ou bloqueio atrioventricular em adultos — a diretriz separa esses dois achados por faixa etária dentro da mesma doença, além de bradicardia, incompetência cronotrópica e HVE.",
+        "origem_secao": "Tabela 23 — red flags por método"
+      },
+      {
+        "id": "fabry-eco-hve-funcao-preservada-strain-reduzido",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "No ecocardiograma, valorizar HVE com função sistólica normal, hipertrofia dos músculos papilares, espessamento de valva mitral e aórtica com regurgitação leve a moderada, e strain longitudinal global reduzido.",
+        "origem_secao": "Tabela 23 — red flags por método"
+      },
+      {
+        "id": "fabry-rm-t1-nativo-baixo-realce-basal-infero-lateral",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Na RM cardíaca, buscar T1 nativo BAIXO (achado que mais diferencia Fabry de amiloidose, cujo padrão é oposto — T1 elevado), realce tardio basal-ínfero-lateral e T2 focal/global elevado; atenção à pseudonormalização do T1 em área já fibrótica.",
+        "origem_secao": "Tabela 23 e Leitura clínica"
+      },
+      {
+        "id": "fabry-lab-troponina-nt-probnp",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar troponina de alta sensibilidade e NT-proBNP — elevados como red flags laboratoriais na Tabela 23.",
+        "origem_secao": "Tabela 23 — red flags por método"
+      },
+      {
+        "id": "fabry-achados-extracardiacos-tabela-22",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente achados extracardíacos que fecham a suspeita: angioceratoma, córnea verticilada, doença renal crônica, proteinúria, hipoacusia neurossensorial, AVC/AIT, dor neuropática, padrão de herança ligado ao X e sintomas gastrointestinais.",
+        "origem_secao": "Achados extracardíacos que fecham a suspeita (Tabela 22)"
+      },
+      {
+        "id": "fabry-diagnostico-homem-alfa-gala-lyso-gb3",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Em homens, confirmar por dosagem de atividade de alfa-galactosidase A (α-GalA) e de lyso-Gb3.",
+        "origem_secao": "Diagnóstico — via diferente por sexo"
+      },
+      {
+        "id": "fabry-diagnostico-mulher-teste-genetico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Em mulheres, não descartar Fabry só por atividade enzimática normal (padrão de inativação do X é variável) — o diagnóstico geralmente exige teste genético para confirmar variante no gene GLA.",
+        "origem_secao": "Diagnóstico — via diferente por sexo"
+      },
+      {
+        "id": "fabry-equipe-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para equipe multidisciplinar: nefrologista, neurologista, oftalmologista, audiologista, gastroenterologista e dermatologista, refletindo o caráter multissistêmico da doença.",
+        "origem_secao": "Equipe multidisciplinar (Tabela 22)"
+      },
+      {
+        "id": "fabry-tratamento-especifico-precoce",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico confirmado: considerar tratamento etiológico específico — terapia de reposição enzimática (agalsidase alfa/beta) ou migalastat (chaperona farmacológica oral) — o quanto antes, já que a eficácia é limitada em casos avançados com dano orgânico já irreversível.",
+        "origem_secao": "Tratamento específico"
+      },
+      {
+        "id": "fabry-verificacao-humana-indicacao-formal-tre",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: a frase completa da diretriz sobre em quem exatamente a terapia de reposição enzimática está formalmente indicada foi truncada por elemento gráfico no PDF-fonte consultado — a classe/nível de recomendação formal para essa indicação não foi confirmado; conferir na fonte primária antes de decidir isoladamente por este documento.",
+        "origem_secao": "Tratamento específico"
+      },
+      {
+        "id": "fabry-nao-citar-prevalencia-fora-de-contexto",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não citar '0,94% dos homens / 0,90% das mulheres' como prevalência populacional geral — é a taxa encontrada especificamente em coortes de rastreamento cardíaco de HVE/CMH, e esse contexto precisa acompanhar o número sempre que citado.",
+        "origem_secao": "Prevalência — atenção ao contexto da população estudada"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194, Seção 7.6.1 e Tabelas 22 e 23, em 21/08/2026."
+  },
+  {
+    "slug": "diagnostico-e-estratificacao-de-risco-arritmico-na-cardiomiopatia-arritmogenica",
+    "condicao": "Cardiomiopatia arritmogênica (ACM/ARVC/ALVC/NDLVC)",
+    "resumo": "Checklist para conduzir o diagnóstico pelos Critérios de Padua 2020 e estratificar o risco de arritmia ventricular sustentada na cardiomiopatia arritmogênica com a calculadora derivada de coorte internacional (Cadrin-Tourigny et al., Eur Heart J 2019), orientando a decisão de CDI em prevenção primária.",
+    "documento_origem": "cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of cardiomyopathies · ESC · 2023 · 10.1093/eurheartj/ehad194 · 37622657",
+      "Arrhythmogenic cardiomyopathy diagnosis and management · Eur Heart J Qual Care Clin Outcomes · 2025 · https://academic.oup.com/ehjqcco/article/11/7/1033/8136547",
+      "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2019;40(23):1850-1858. DOI 10.1093/eurheartj/ehz103. PMID 30915475."
+    ],
+    "itens": [
+      {
+        "id": "acm-reconhecer-espectro-nomenclatura-2023",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer o espectro redefinido pela ESC 2023: além da forma clássica de ventrículo direito (CAVD/ARVC), reconhecer também a forma de ventrículo esquerdo (ALVC) e a 'left-dominant ARVC', todas sob o guarda-chuva de cardiomiopatia de ventrículo esquerdo não dilatada (NDLVC) quando o VE é predominantemente afetado.",
+        "origem_secao": "Reclassificação nomenclatura 2023"
+      },
+      {
+        "id": "acm-diagnostico-criterios-de-padua-2020",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Conduzir o diagnóstico pelos Critérios de Padua (2020), incorporando evidência de disfunção de ventrículo direito, resultado de biópsia endomiocárdica, defeitos de repolarização e condução, arritmias e história familiar — nunca diagnosticar com base em critério único isolado.",
+        "origem_secao": "Critérios diagnósticos"
+      },
+      {
+        "id": "acm-considerar-criterios-modificados-2024",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerar os critérios diagnósticos modificados propostos pelo consenso do European Task Force 2024, que refinam os Critérios de Padua.",
+        "origem_secao": "Critérios diagnósticos"
+      },
+      {
+        "id": "acm-estratificar-risco-calculadora-arvcrisk",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente com diagnóstico definido de ARVC e sem arritmia ventricular sustentada prévia, estratificar o risco pela calculadora derivada de coorte de 528 pacientes (www.arvcrisk.com), com índice C corrigido por otimismo de 0,77 (IC95% 0,73-0,81), para orientar a decisão de CDI em prevenção primária de forma individualizada em vez de critério binário de consenso.",
+        "origem_secao": "Estratificação de risco arrítmico"
+      },
+      {
+        "id": "acm-coletar-preditores-do-modelo-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Coletar os preditores retidos no modelo final de risco: idade, sexo, síncope cardíaca nos 6 meses anteriores, TV não sustentada, número de extrassístoles ventriculares em 24h, número de derivações com inversão de onda T e FEVD — a FEVE não permaneceu no modelo final entre os 8 preditores pré-especificados.",
+        "origem_secao": "Estratificação de risco arrítmico"
+      },
+      {
+        "id": "acm-flecainida-arritmias-atriais-ventriculares",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerar flecainida para controle de FA em NDLVC e para arritmias atriais e ventriculares em ARVC — recomendação específica destacada como novidade importante da diretriz ESC 2023.",
+        "origem_secao": "Manejo de arritmias específico"
+      },
+      {
+        "id": "acm-terapia-de-base-ieca-bra-betabloqueador",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar terapia farmacológica de base com inibidor da ECA, bloqueador do receptor de angiotensina II ou betabloqueador, conforme recomendação unânime dos documentos revisados.",
+        "origem_secao": "Tratamento farmacológico — consenso"
+      },
+      {
+        "id": "acm-restringir-exercicio-competitivo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar restrição de exercício físico competitivo/intenso em portadores de mutação — princípio central e distintivo do manejo desta cardiomiopatia, dado o papel do exercício vigoroso na aceleração da doença e no desencadeamento de arritmias malignas.",
+        "origem_secao": "Restrição de exercício"
+      },
+      {
+        "id": "acm-rastreamento-familiar-em-cascata",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Oferecer rastreamento sistemático de parentes de primeiro grau em cascata após diagnóstico índice, mesmo em familiares assintomáticos, dada a natureza hereditária da condição.",
+        "origem_secao": "População-alvo de rastreamento"
+      },
+      {
+        "id": "acm-equipe-multidisciplinar-eletrofisiologia-genetica",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para abordagem multidisciplinar envolvendo eletrofisiologia, genética clínica e, quando aplicável, medicina do esporte.",
+        "origem_secao": "Abordagem multidisciplinar"
+      },
+      {
+        "id": "acm-criterios-de-internacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Reconhecer critérios de internação: arritmia ventricular sustentada, tempestade elétrica ou descompensação de insuficiência cardíaca.",
+        "origem_secao": "Critérios de internação"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em 2023 ESC Guidelines for the management of cardiomyopathies (Eur Heart J. 2023;44(37):3503-3626, DOI 10.1093/eurheartj/ehad194, PMID 37622657) e Cadrin-Tourigny J et al., Eur Heart J. 2019;40(23):1850-1858, DOI 10.1093/eurheartj/ehz103, PMID 30915475, em 21/08/2026."
+  },
+  {
+    "slug": "indicacao-e-timing-cirurgico-na-endocardite-infecciosa",
+    "condicao": "Endocardite infecciosa com indicação de cirurgia cardíaca",
+    "resumo": "Checklist para reconhecer as três indicações principais de cirurgia na endocardite infecciosa, classificar a urgência do timing cirúrgico e aplicar as novidades da ESC 2023 sobre vegetação e risco embólico na decisão multidisciplinar.",
+    "documento_origem": "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/39/3948/7243107",
+      "Surgical Implications of the 2023 ESC Endocarditis Guidelines Endorsed by EACTS · CTSNet · https://www.ctsnet.org/jans/surgical-implications-2023-esc-endocarditis-guidelines-endorsed-eacts-bridging-guidelines-and",
+      "Association of Vegetation Size With Embolic Risk in Patients With Infective Endocarditis: A Systematic Review and Meta-analysis · PubMed · https://pubmed.ncbi.nlm.nih.gov/29459947/"
+    ],
+    "itens": [
+      {
+        "id": "ie-cirurgia-avaliar-insuficiencia-cardiaca",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar insuficiência cardíaca como principal indicação cirúrgica — classificação, classe de recomendação e nível de evidência mantidos inalterados na diretriz ESC 2023.",
+        "origem_secao": "Três indicações principais de cirurgia"
+      },
+      {
+        "id": "ie-cirurgia-avaliar-infeccao-nao-controlada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar infecção não controlada como segunda indicação principal de cirurgia, também com recomendação inalterada em relação à diretriz anterior.",
+        "origem_secao": "Três indicações principais de cirurgia"
+      },
+      {
+        "id": "ie-cirurgia-avaliar-risco-de-embolizacao-septica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar prevenção de embolização séptica como terceira indicação principal — a que recebeu as mudanças mais relevantes na diretriz ESC 2023.",
+        "origem_secao": "Três indicações principais de cirurgia"
+      },
+      {
+        "id": "ie-cirurgia-classificar-timing",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Classificar o timing cirúrgico: emergencial (dentro de 24 horas), urgente (3-5 dias) ou não urgente (durante a mesma internação hospitalar).",
+        "origem_secao": "Classificação do timing cirúrgico"
+      },
+      {
+        "id": "ie-cirurgia-vegetacao-10mm-outra-indicacao-classe-i",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Considerar cirurgia urgente (novidade Classe I da ESC 2023) diante de vegetação ≥10 mm associada a outra indicação cirúrgica; a evidência é mais forte (nível B) quando há episódio embólico prévio — as demais indicações cirúrgicas têm nível de evidência C.",
+        "origem_secao": "Vegetação e risco embólico — atualização 2023"
+      },
+      {
+        "id": "ie-cirurgia-vegetacao-isolada-10mm-baixo-risco-classe-iib",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar cirurgia urgente (novidade Classe IIb da ESC 2023) em endocardite aórtica ou mitral com vegetação ≥10 mm isolada, sem disfunção valvar grave e sem evidência clínica de embolia, desde que o paciente tenha baixo risco cirúrgico.",
+        "origem_secao": "Vegetação e risco embólico — atualização 2023"
+      },
+      {
+        "id": "ie-cirurgia-avaliar-tamanho-vegetacao-risco-neurologico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Medir o comprimento da vegetação por ecocardiograma — fator de risco para embolização, com risco elevado de complicação neurológica acima de 10 mm, especialmente acima de 30 mm.",
+        "origem_secao": "Tamanho da vegetação e risco de complicação neurológica"
+      },
+      {
+        "id": "ie-cirurgia-comparar-criterios-acc-aha-aats",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ter em mente que outras diretrizes têm limiares próprios: o ACC/AHA considera cirurgia precoce para vegetações móveis do lado esquerdo >10 mm independentemente da gravidade da lesão ou risco operatório (Classe IIb), e a AATS recomenda operar em poucos dias após indicação estabelecida, com cirurgia ainda mais precoce (emergencial ou até 48h) para vegetações móveis grandes com risco iminente de embolização.",
+        "origem_secao": "Comparação com outras diretrizes"
+      },
+      {
+        "id": "ie-cirurgia-decisao-multidisciplinar-equipe-endocardite",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Levar o caso à decisão compartilhada e multidisciplinar da equipe de endocardite, considerando a relação risco-benefício individual do paciente — recomendação forte da ESC 2023.",
+        "origem_secao": "Decisão multidisciplinar"
+      },
+      {
+        "id": "ie-cirurgia-registrar-timing-efetivado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Registrar o timing cirúrgico efetivamente realizado (emergencial, urgente ou não urgente) e a indicação que o motivou, para auditoria da adesão ao critério adotado.",
+        "origem_secao": "Classificação do timing cirúrgico"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em 2023 ESC Guidelines for the management of endocarditis, Eur Heart J. 2023;44(39):3948-, https://academic.oup.com/eurheartj/article/44/39/3948/7243107, e Delgado V et al. (implicações cirúrgicas, CTSNet), em 21/08/2026."
   }
 ]
