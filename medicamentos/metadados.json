@@ -7,7 +7,8 @@
       "Aspirina",
       "AAS",
       "Aspirina Prevent",
-      "Cardio AAS"
+      "Cardio AAS",
+      "Somalgin Cardio — EMS"
     ],
     "drug_class": "Antiplaquetário — inibidor irreversível da ciclo-oxigenase (mais antigo AINE em uso clínico)",
     "mechanism": "Inibição irreversível da ciclo-oxigenase-1 (COX-1) plaquetária por acetilação, bloqueando a síntese de tromboxano A2, um potente agonista de agregação plaquetária e vasoconstritor; efeito dura toda a vida útil da plaqueta (~7-10 dias), já que plaquetas não possuem núcleo para resintetizar a enzima",
@@ -61,7 +62,10 @@
     "duration_of_action_note": "O AAS acetila de forma **irreversível** a serina-530 da ciclo-oxigenase-1 (COX-1) plaquetária. Como a plaqueta madura não tem núcleo e não consegue sintetizar COX-1 nova, o efeito antiplaquetário de uma dose única dura **a vida inteira da plaqueta afetada, cerca de 7 a 10 dias** (registrado o valor de 240h = 10 dias, o limite superior mais citado, como representativo). Como cerca de 10% do pool plaquetário é renovado por dia, a função plaquetária começa a se recuperar progressivamente já no dia seguinte a uma dose única, mas a recuperação funcional considerada suficiente para hemostasia normal costuma levar a maior parte desses 7-10 dias — é essa lógica que sustenta a orientação usual de suspender o AAS 5 a 7 dias antes de cirurgia eletiva com alto risco hemorrágico, quando a suspensão é indicada. Em uso crônico diário (a forma como o AAS é prescrito em cardiologia), o efeito antiplaquetário é cumulativo e sustentado, sem relação direta com a meia-vida plasmática de 15-20 minutos do fármaco.",
     "duration_of_action_source": "Fries S et al. Mechanism of Variability in the Response to Low Dose Aspirin. Clin Pharmacol Ther. 2022 (ASCPT/Wiley); Mitchell JA, Kirkby NS. Beyond COX-1: the effects of aspirin on platelet biology. Br J Pharmacol/PMC5557878. **Reconfirmado em 12/08/2026**: os valores de meia-vida citados neste registro (15-20 min para AAS intacto, 3,1-9h dose-dependente para salicilato) convergem com Needs CJ, Brooks PM. Clinical Pharmacokinetics of the Salicylates. Clin Pharmacokinet. 1985;10(2):164-177 (DOI 10.2165/00003088-198510020-00004), fonte independente consultada nesta sessão — resolvendo a verificação pendente anterior sobre leitura de texto integral (o mecanismo farmacodinâmico de por que a duração antiplaquetária de ~7-10 dias excede em muito a meia-vida plasmática — inibição irreversível da COX-1 plaquetária — permanece o dado central já registrado em `duration_of_action_hours` deste verbete).",
     "sbp_reduction_mmhg": -6.0,
-    "dbp_reduction_mmhg": -3.0
+    "dbp_reduction_mmhg": -3.0,
+    "commercial_presentations": [
+      "Somalgin Cardio® (ácido acetilsalicílico), EMS Sigma Pharma Ltda — comprimidos revestidos de liberação entérica/gastrorresistente, apresentações de 81 mg, 100 mg, 200 mg e 325 mg, embalagens com 30/32/60 comprimidos conforme a dose. Marca de fantasia distinta de 'Aspirina' (Bayer), já cadastrada como referência histórica internacional/nacional. Fonte: páginas de varejo farmacêutico que reproduzem a bula (Drogaria São Paulo, Drogaria Minas Brasil, ConsultaRemédios — produto 'Somalgin Cardio'), WebSearch 21/08/2026. NOTA (não é apresentação comercial de referência primária — recomenda-se confirmar concentração/embalagem exata contra a bula do fabricante EMS antes de publicar valor numérico definitivo)."
+    ]
   },
   {
     "slug": "acido-bempedoico",
@@ -1696,7 +1700,9 @@
     "duration_of_action_note": "Dosado 2x/dia em todas as indicações já documentadas em `dosing` (150 mg 2x/dia na FA não valvar padrão; mesmo padrão nas demais faixas), intervalo consistente com a meia-vida de 13,4h em função renal normal — não há formulação de dose única diária cadastrada para este fármaco. Valor registrado (12h) corresponde ao intervalo posológico padrão, não a uma medição isolada e direta de efeito anticoagulante do rótulo.",
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing` deste registro (BID em todas as indicações) e da meia-vida já citada em `renal_adjustment` — sem pesquisa nova nesta sessão.",
     "bp_evidence_source": "Não se aplica. Dabigatrana é anticoagulante oral direto (inibidor direto da trombina), sem mecanismo de ação hemodinâmico — redução de pressão arterial sistêmica não é desfecho estudado no ensaio pivotal RE-LY (já citado nas referências deste registro) nem clinicamente relevante para esta classe.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial nova — busca com resultado negativo): pesquisado por WebSearch em 21/08/2026 se existe marca de fantasia brasileira de etexilato de dabigatrana além de Pradaxa® (Boehringer Ingelheim, já cadastrada). Um resultado de busca citou repetidamente uma suposta marca 'Dabgam®', mas a verificação cruzada (busca direta por 'Dabgam bula', por site:consultas.anvisa.gov.br e por associação a fabricante) NÃO encontrou nenhuma fonte real que sustente essa marca — o termo aparece associado a um produto de bem-estar sem relação com dabigatrana, e nenhum resultado de bulário/ANVISA o confirma. Tratado como alucinação de busca e descartado, não incluído em `brand_names`. As demais opções encontradas no mercado brasileiro (ex. 'Etexilato de Dabigatrana — Neo Química') são genérico rotulado com nome do fabricante, não marca de fantasia, e por isso não contam como `brand_names` (regra do projeto). Nenhuma marca nova confirmada nesta busca."
+    ]
   },
   {
     "slug": "dapagliflozina",
@@ -5075,7 +5081,8 @@
     "lactation": "**Decidir entre suspender a amamentação ou o fármaco**, pelo potencial de reação adversa grave no lactente. Não se sabe se o nitroprussiato e seus metabólitos são excretados no leite humano. Fonte: rótulo aprovado pelo FDA (DailyMed) para o nitroprussiato de sódio injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
     "brand_names": [
       "Nitroprus — já citado em `dosing.diluicao e equivalencia` e nas referências deste registro (Cristália)",
-      "Nipride"
+      "Nipride",
+      "Nitrop — Hypofarma"
     ],
     "presentations": [],
     "half_life_hours": 0.03,
@@ -5084,7 +5091,9 @@
     "duration_of_action_note": "O efeito hipotensor geralmente desaparece cerca de 3 minutos (0,05h) após suspender a infusão — dado que reforça e formaliza o que já está registrado em `dosing.como suspender` deste verbete ('ao interromper, a pressão volta imediatamente aos valores prévios'). Isso é DISTINTO da recomendação de RETIRAR a infusão ao longo de 10 a 30 minutos (também já em `dosing.como suspender`): essa janela de 10-30min é uma prática de segurança para evitar efeito rebote de hipertensão excessiva por retirada abrupta do vasodilatador em paciente ainda hipertenso de base, não um dado farmacocinético de meia-vida ou de offset do próprio fármaco.",
     "duration_of_action_source": "Literatura farmacológica (StatPearls/rótulo FDA para nitroprussiato de sódio), obtida via resultado sintetizado de busca.",
     "bp_evidence_source": "Já há dado percentual (não absoluto) registrado em `dosing.efeito esperado na dose media` deste verbete: na dose média de 3 mcg/kg/min, a pressão costuma cair para 60-70% do valor pré-tratamento — ou seja, uma redução de 30 a 40%, dose-dependente. Um estudo isolado (não identificado com segurança nesta sessão) relatou redução de pressão arterial MÉDIA de 17% com dose de ~1mg em infusão de 20 minutos, associada a 13% de queda no fluxo sanguíneo cerebral — citado aqui só como ordem de grandeza adicional, contexto de neurocirurgia/hipotensão controlada, não diretamente comparável à emergência hipertensiva. Não é possível preencher um valor fixo em mmHg: a redução absoluta depende inteiramente da pressão basal do paciente em emergência hipertensiva, que varia amplamente — por isso os campos numéricos foram deixados nulos, com a redução percentual (já existente no registro) mantida como o dado válido disponível.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Nitrop® (nitroprusseto de sódio di-hidratado), Hypofarma Instituto de Hypodermia e Farmácia Ltda, registro ANVISA MS nº 1.0387.0012 — solução injetável 25 mg/mL, ampola âmbar de 2 mL, caixa com 5 ampolas, uso intravenoso hospitalar. Marca de fantasia distinta das já cadastradas 'Nitroprus' (Cristália) e 'Nipride'. Fonte: bula do fabricante em hypofarma.com.br (PDF '1-0387-0012.pdf', consultado indiretamente via cache de busca) e páginas de distribuidor farmacêutico hospitalar (Sara.com.br, Agille Med, Distribuidora Cristal, Farmaindex) que reproduzem os dados de registro. WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "noradrenalina-norepinefrina",
@@ -5424,7 +5433,10 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para EFFIENT (prasugrel), Clinical Pharmacology (WebSearch, 10/08/2026).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — antiplaquetário (inibidor de P2Y12), sem efeito hemodinâmico/pressórico direto conhecido ou relatado em bula."
+    "bp_evidence_source": "Não se aplica — antiplaquetário (inibidor de P2Y12), sem efeito hemodinâmico/pressórico direto conhecido ou relatado em bula.",
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial nova — busca com resultado negativo): pesquisado por WebSearch em 21/08/2026 (fontes: NATJUS-DF, CONITEC, Guia Farmacêutico HSL, bula EFFIENT/Daiichi Sankyo) se existe marca de fantasia brasileira de cloridrato de prasugrel além de Effient® (Daiichi Sankyo do Brasil, já cadastrada). Não foi localizado nenhum genérico ou similar registrado na ANVISA para prasugrel até a data desta busca — Effient continua sendo a única apresentação comercial no Brasil. Nenhuma marca nova a acrescentar."
+    ]
   },
   {
     "slug": "pravastatina",
@@ -6270,7 +6282,9 @@
     "brand_names": [
       "Ozempic",
       "Wegovy",
-      "Rybelsus"
+      "Rybelsus",
+      "Semavy — Hypera Pharma / Mantecorp",
+      "Semaclique — Germed"
     ],
     "half_life_hours": 168.0,
     "half_life_note": "Meia-vida de aproximadamente 1 semana (~165-168 horas) — a característica farmacocinética que define o fármaco na classe dos agonistas de GLP-1: é o que permite a administração subcutânea SEMANAL (Ozempic/Wegovy, já registrada no campo `dosing` deste item) e é a base do racional já registrado no campo `pregnancy` deste registro, que orienta descontinuar 'pelo menos 2 meses antes' de gravidez planejada (aproximadamente 8 meias-vidas, tempo de depuração quase completa). **Fonte confirmada nesta sessão (WebFetch, 12/08/2026)**, leitura direta do rótulo FDA/DailyMed do OZEMPIC (semaglutida), Novo Nordisk Pharmaceutical Industries LP, setid adec4fd2-6858-4c99-91d4-531f5f2a2d79, seção CLINICAL PHARMACOLOGY (Pharmacokinetics): \"With an elimination half-life of approximately 1 week, semaglutide will be present in the circulation for about 5 weeks after the last dose.\" O valor de ~165-168h já registrado é a conversão de \"aproximadamente 1 semana\" para horas, não um número em horas citado literalmente pelo rótulo — mas a ordem de grandeza está confirmada pela fonte primária, reduzindo o gap que restava a uma questão de precisão de conversão, não de existência do dado.",
@@ -6279,7 +6293,11 @@
     "duration_of_action_source": "Inferido da posologia já registrada neste item e do mecanismo de absorção conhecido do Rybelsus (SNAC); mesma ressalva de verificação do campo `half_life_note`.",
     "sbp_reduction_mmhg": -3.3,
     "dbp_reduction_mmhg": -0.5,
-    "bp_evidence_source": "**CORRIGIDO em auditoria adversarial de 12/08/2026 — a verificação anterior, registrada nesta mesma sessão, estava ERRADA.** A entrada anterior afirmava que o rótulo FDA do Wegovy \"não traz nenhum valor numérico de redução de PAS/PAD\" e que as únicas três menções a blood pressure eram de evento adverso. **Isso é falso**: o rótulo tem MÚLTIPLAS tabelas de desfecho cardiometabólico com PAS/PAD (Tabelas 7, 13, 14, 15, 16, 17 e 19, seção 14 Clinical Studies), conferido por download e busca no texto integral do XML do SPL via API pública do DailyMed (não apenas WebFetch) em 12/08/2026. **Valor registrado neste campo — Tabela 7, semana 104, Estudo 1 (NCT03574597, o próprio SELECT já citado no campo `outcomes` deste registro)**: PAS basal 131 mmHg, variação -3,8 mmHg com Wegovy vs. -0,5 mmHg com placebo, diferença de -3,3 mmHg (LSMean); PAD basal 79 mmHg, variação -1,0 mmHg com Wegovy vs. -0,5 mmHg com placebo, diferença de -0,5 mmHg (LSMean). As demais tabelas (Estudos 2 a 9, doses de 1,7 a 25 mg, e o Estudo 10 pediátrico) trazem reduções de PAS que variam de aproximadamente -1,6 a -12,1 mmHg conforme o estudo/dose/duração — não citadas aqui em detalhe por não serem o desfecho primário desses ensaios (a magnitude varia com dose e composição da amostra, e réplica de tabela por tabela é trabalho para revisão futura se granularidade por estudo for necessária). O efeito hipotensor sistólico é real e mensurável no próprio rótulo, mecanismo ainda debatido na literatura (natriurese, redução de peso, efeito direto sobre tônus vascular). Rótulo FDA (WEGOVY, semaglutida), DailyMed setid ee06186f-2aa3-4990-a760-757579d8f77b, seção 14 (Clinical Studies), Tabela 7 — reconferido via download direto do XML do SPL (`dailymed.nlm.nih.gov/dailymed/services/v2/spls/{setid}.xml`) em 12/08/2026."
+    "bp_evidence_source": "**CORRIGIDO em auditoria adversarial de 12/08/2026 — a verificação anterior, registrada nesta mesma sessão, estava ERRADA.** A entrada anterior afirmava que o rótulo FDA do Wegovy \"não traz nenhum valor numérico de redução de PAS/PAD\" e que as únicas três menções a blood pressure eram de evento adverso. **Isso é falso**: o rótulo tem MÚLTIPLAS tabelas de desfecho cardiometabólico com PAS/PAD (Tabelas 7, 13, 14, 15, 16, 17 e 19, seção 14 Clinical Studies), conferido por download e busca no texto integral do XML do SPL via API pública do DailyMed (não apenas WebFetch) em 12/08/2026. **Valor registrado neste campo — Tabela 7, semana 104, Estudo 1 (NCT03574597, o próprio SELECT já citado no campo `outcomes` deste registro)**: PAS basal 131 mmHg, variação -3,8 mmHg com Wegovy vs. -0,5 mmHg com placebo, diferença de -3,3 mmHg (LSMean); PAD basal 79 mmHg, variação -1,0 mmHg com Wegovy vs. -0,5 mmHg com placebo, diferença de -0,5 mmHg (LSMean). As demais tabelas (Estudos 2 a 9, doses de 1,7 a 25 mg, e o Estudo 10 pediátrico) trazem reduções de PAS que variam de aproximadamente -1,6 a -12,1 mmHg conforme o estudo/dose/duração — não citadas aqui em detalhe por não serem o desfecho primário desses ensaios (a magnitude varia com dose e composição da amostra, e réplica de tabela por tabela é trabalho para revisão futura se granularidade por estudo for necessária). O efeito hipotensor sistólico é real e mensurável no próprio rótulo, mecanismo ainda debatido na literatura (natriurese, redução de peso, efeito direto sobre tônus vascular). Rótulo FDA (WEGOVY, semaglutida), DailyMed setid ee06186f-2aa3-4990-a760-757579d8f77b, seção 14 (Clinical Studies), Tabela 7 — reconferido via download direto do XML do SPL (`dailymed.nlm.nih.gov/dailymed/services/v2/spls/{setid}.xml`) em 12/08/2026.",
+    "commercial_presentations": [
+      "Semavy® (semaglutida), Hypera Pharma S.A. (comercializada sob a marca Mantecorp) — caneta injetável de semaglutida sintética, indicada para diabetes mellitus tipo 2 em adultos. Registro sanitário concedido pela ANVISA em 29/07/2026. AINDA NÃO DISPONÍVEL EM FARMÁCIAS na data desta busca — previsão de comercialização a partir do final de setembro/2026, após conclusão das etapas de fabricação e abastecimento. Fonte: Meio & Mensagem, Sincofarma-SP, mantecorpsaude.com.br ('Anvisa aprova Semavy'), Panvel Farmácias. WebSearch 21/08/2026.",
+      "Semaclique® (semaglutida), Germed Farmacêutica Ltda (grupo EMS) — medicamento SIMILAR (não genérico), caneta aplicadora + agulhas, concentração de 1,34 mg/mL, em quatro apresentações/versões. Registro publicado no Diário Oficial da União em 17/08/2026, indicado para diabetes tipo 2 insuficientemente controlado em adultos, como complemento a dieta e exercício. AINDA NÃO DISPONÍVEL EM FARMÁCIAS na data desta busca — aprovação do registro não implica disponibilidade imediata; depende ainda de etapas de definição de preço (CMED). Fonte: Rede98, Metrópoles ('Anvisa aprova versões genéricas e similares da semaglutida no Brasil'), ndmais.com.br. WebSearch 21/08/2026. NOTA: na mesma leva regulatória, a ANVISA aprovou também o primeiro GENÉRICO de semaglutida (registrado à EMS, comercializado sem nome de marca, apenas como 'semaglutida') — não é marca de fantasia e por isso não entra em `brand_names`."
+    ]
   },
   {
     "slug": "sildenafila-citrato",
@@ -6597,7 +6615,9 @@
     "presentations": [
       "Comprimido 160 mg (embalagem com 30 comprimidos)"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial nova — busca com resultado negativo): pesquisado por WebSearch em 21/08/2026 se existe marca de fantasia brasileira de cloridrato de sotalol além de Sotacor® (Bristol-Myers Squibb, já cadastrada). As demais opções encontradas no mercado brasileiro são genérico rotulado com nome do fabricante — 'Cloridrato de Sotalol — Aché', '— Biosintética', '— Brainfarma', '— Sandoz', '— Merck' — nenhuma delas é marca de fantasia, e por isso não contam como `brand_names` (regra do projeto). Marcas internacionais citadas em fontes de outros países (Beta-Cardone, Sotalex) foram checadas e confirmadas como não comercializadas no Brasil. Nenhuma marca nova a acrescentar."
+    ]
   },
   {
     "slug": "tafamidis",
@@ -12419,7 +12439,9 @@
     "half_life_note": "Meia-vida de eliminação de **três a quatro horas em pacientes com função renal normal** (valor registrado, 3,5h, é o ponto médio da faixa). A depuração de creatinina reduzida prolonga esse tempo — a rotulagem cita reduções de clearance de aproximadamente 25% (idade acima de 50 anos) a 50% (idade de 75 anos), sem converter isso num valor numérico direto de meia-vida por faixa etária/renal (ver `dosing`, \"ajuste renal\"). O metabólito ativo N-acetilprocainamida (NAPA) tem depuração renal \"um tanto mais lenta\" que a procainamida, mas **a rotulagem consultada não especifica um valor numérico de meia-vida para o NAPA** — lacuna da própria fonte primária, não desta sessão. O volume de distribuição citado é de aproximadamente 2 L/kg, com meia-vida de distribuição inicial de aproximadamente 5 minutos (fase rápida, distinta da meia-vida de eliminação aqui registrada). Fonte: rótulo aprovado pelo FDA para cloridrato de procainamida (DailyMed, setid 17e47845-daad-434c-a784-6d3875b0d704), lido via WebFetch em 12/08/2026.",
     "duration_of_action_source": "Rótulo aprovado pelo FDA para cloridrato de procainamida (DailyMed, setid 17e47845-daad-434c-a784-6d3875b0d704) — mesma fonte de `dosing` e `half_life_note`; a própria estrutura da posologia (infusão titulada, não dose fixa redosada em intervalo constante) é o que impede um valor numérico único, não uma lacuna de busca desta sessão.",
     "bp_evidence_source": "Não se aplica como desfecho terapêutico — procainamida é antiarrítmico classe Ia usado para taquiarritmia ventricular/QRS largo (ver `indications` e `outcomes`), e a bula lista **hipotensão como efeito adverso a monitorar** (ver `adverse_effects` e `monitoring`), não como alvo pressórico buscado.",
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial nova — busca com resultado negativo, mas com achado relevante para o registro): pesquisado por WebSearch em 21/08/2026 se existe marca de fantasia brasileira ativa de cloridrato de procainamida. Foi localizado o registro histórico 'Procamide®' (Zambon Laboratórios Farmacêuticos Ltda, registro ANVISA nº 1.0084.0054-0021) — porém a fonte consultada (smerp.com.br, base de registros ANVISA) classifica esse registro como VENCIDO na data desta busca, ou seja, não há evidência de que o produto esteja ativamente comercializado no Brasil hoje sob essa marca. 'Pronestyl®' (e as variantes Pronestyl-SR/Procan SR/Procanbid) são marcas comerciais internacionais (mercado americano, Bristol-Myers Squibb/histórico), sem confirmação de comercialização no Brasil. Como o fármaco não circula hoje com marca de fantasia ativa e verificável no mercado brasileiro (uso hospitalar restrito, frequentemente por importação), nenhuma marca nova foi adicionada — `brand_names` permanece vazio, como já estava."
+    ],
     "brand_names": []
   },
   {
