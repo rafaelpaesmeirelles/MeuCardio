@@ -8424,5 +8424,259 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "dor-toracica-associada-a-cocaina-avaliacao-e-conduta-imediata",
+    "condicao": "Dor torácica associada ao uso recente de cocaína — avaliação e conduta imediata",
+    "theme": "Geral",
+    "documento_origem": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+    "resumo": "Conduta na emergência diante de dor torácica com uso recente de cocaína: por que a pergunta ativa na anamnese muda o tratamento, por que o betabloqueador reflexo de síndrome coronariana piora o vasoespasmo em vez de tratá-lo, qual a sequência farmacológica validada, e o protocolo de observação de 9-12h que identifica com segurança quem pode ter alta.",
+    "itens": [
+      {
+        "id": "cocaina-toracica-pergunta-ativa-anamnese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Uma exposição que muda a conduta, e que o paciente costuma omitir",
+        "texto": "Uso recente de cocaína (intranasal, inalada ou intravenosa) perguntado ativamente em todo paciente jovem com dor torácica atípica e poucos fatores de risco coronariano clássicos — o paciente nem sempre relata o uso espontaneamente, e a exposição muda a conduta farmacológica de imediato"
+      },
+      {
+        "id": "cocaina-toracica-ecg-monitorizacao-troponina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Árvore de decisão (fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina)",
+        "texto": "ECG de 12 derivações e monitorização contínua, acesso venoso e troponina obtidos de imediato, com ECG e troponina repetidos de forma seriada ao longo de toda a observação, em qualquer ramo da conduta"
+      },
+      {
+        "id": "cocaina-toracica-benzodiazepinico-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Árvore de decisão / Manejo farmacológico agudo — resolvido em 01/08/2026",
+        "texto": "Benzodiazepínico IV administrado como primeira linha para ansiedade, taquicardia e hipertensão associadas à cocaína — reconhecendo que, isoladamente, benzodiazepínico nem sempre controla taquicardia, hipertensão e vasoespasmo de forma suficiente (5 estudos nível I/II, 234 sujeitos, 8 falhas de tratamento)"
+      },
+      {
+        "id": "cocaina-toracica-nitrato-bcc-nao-dihidropiridinico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Árvore de decisão / Fonte terciária (StatPearls)",
+        "texto": "Se dor torácica, alteração isquêmica, hipertensão ou taquicardia persistirem apesar do benzodiazepínico: associados nitrato e bloqueador de canal de cálcio NÃO di-hidropiridínico (diltiazem, verapamil) — evitando o di-hidropiridínico (nifedipino), por risco de taquicardia reflexa"
+      },
+      {
+        "id": "cocaina-toracica-nunca-betabloqueador-isolado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Por que nunca betabloqueador isolado",
+        "texto": "Betabloqueador ISOLADO (puro) NUNCA prescrito no agudo por cocaína — o ensaio randomizado, duplo-cego, controlado por placebo de Lange et al. (Ann Intern Med. 1990;112(12):897-903, PMID 1971166) mostrou que o propranolol intracoronariano, após a cocaína, reduziu ainda mais o fluxo sanguíneo no seio coronariano (de 120±20 para 100±14mL/min) e elevou ainda mais a resistência vascular coronariana (de 1,05±0,10 para 1,20±0,12mmHg/mL·min), por deixar o estímulo alfa-adrenérgico sem oposição do beta"
+      },
+      {
+        "id": "cocaina-toracica-labetalol-excecao-validada",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Manejo farmacológico agudo — resolvido em 01/08/2026",
+        "texto": "Se persistir necessidade de controlar frequência cardíaca ou pressão arterial residual: beta/alfa-bloqueador combinado (labetalol, carvedilol) considerado como exceção segura dentro da classe — revisão sistemática de Richards et al. (Clin Toxicol (Phila). 2016;54(5):345-364, PMID 26919414) não registrou evento adverso com essa combinação, e a atualização focada ACCF/AHA 2012 (Anderson JL et al., J Am Coll Cardiol. 2013;61(23):e179-e347, PMID 23639841) aprova especificamente o labetalol para SCA associada a cocaína ou metanfetamina"
+      },
+      {
+        "id": "cocaina-toracica-persistencia-investigar-sca",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "origem_secao": "Árvore de decisão",
+        "texto": "Se dor torácica ou alteração isquêmica persistirem apesar de benzodiazepínico + nitrato + bloqueador de canal de cálcio: suspeitada trombose sobreposta ao vasoespasmo, mantida a investigação de SCA (ECG e troponina seriados) e encaminhado para angiografia coronariana"
+      },
+      {
+        "id": "cocaina-toracica-observacao-9-12h-baixo-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "origem_secao": "A conduta prática validada — janela de observação de 9 a 12 horas",
+        "texto": "Em paciente de risco baixo a intermediário, sem alteração isquêmica franca ao ECG, sem troponina alterada e sem instabilidade hemodinâmica: observação protocolada de 9 a 12 horas, com liberação segura se troponina normal, sem novas alterações isquêmicas ao ECG e sem complicação cardiovascular (disritmia, infarto ou sintomas recorrentes) — protocolo validado por Weber et al. (N Engl J Med. 2003;348(6):510-517, PMID 12571258, n=302) com 0% de morte cardiovascular em 30 dias (IC95% 0-0,99%) e 1,6% de infarto não fatal (IC95% 0,1-3,1%)"
+      },
+      {
+        "id": "cocaina-toracica-nao-extrapolar-observacao-para-alto-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Limites / O que se repete em todo ramo, e por isso não está no diagrama",
+        "texto": "Confirmado que o paciente NÃO tem alteração isquêmica franca ao ECG, troponina já alterada ou instabilidade hemodinâmica antes de aplicar o protocolo de observação de 9-12h — esses achados são critério de EXCLUSÃO da coorte de validação (foram os 12% internados diretamente no estudo de Weber et al.), não de inclusão, e os números de segurança não se aplicam a esse subgrupo"
+      },
+      {
+        "id": "cocaina-toracica-orientacao-cessacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "origem_secao": "Síntese prática / O que se repete em todo ramo",
+        "texto": "Orientação de cessação do uso de cocaína dada antes da alta, em todo paciente liberado — na coorte de validação de Weber et al., os únicos infartos não fatais em 30 dias ocorreram em pacientes que mantiveram o uso de cocaína após a alta, tornando a orientação de cessação parte do desfecho de segurança demonstrado, não um adendo genérico"
+      }
+    ],
+    "source_refs": [
+      "Lange RA, Cigarroa RG, Yancy CW Jr, et al. Cocaine-Induced Coronary-Artery Vasoconstriction. N Engl J Med. 1989;321(23):1557-1562. DOI: 10.1056/NEJM198912073212301. PMID: 2573838.",
+      "Lange RA, Cigarroa RG, Flores ED, et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. DOI: 10.7326/0003-4819-112-12-897. PMID: 1971166.",
+      "Weber JE, Shofer FS, Larkin GL, Kalaria AS, Hollander JE. Validation of a Brief Observation Period for Patients with Cocaine-Associated Chest Pain. N Engl J Med. 2003;348(6):510-517. DOI: 10.1056/NEJMoa022206. PMID: 12571258.",
+      "Richards JR, Garber D, Laurin EG, Albertson TE, Derlet RW, Amsterdam EA, Olson KR, Ramoska EA, Lange RA. Treatment of cocaine cardiovascular toxicity: a systematic review. Clin Toxicol (Phila). 2016;54(5):345-364. DOI: 10.3109/15563650.2016.1142090. PMID: 26919414.",
+      "Anderson JL, Adams CD, Antman EM, et al. 2012 ACCF/AHA focused update incorporated into the ACCF/AHA 2007 guidelines for the management of patients with unstable angina/non-ST-elevation myocardial infarction. J Am Coll Cardiol. 2013;61(23):e179-e347. PMID: 23639841.",
+      "Richards JR, Le JK. Cocaine Toxicity. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 08/06/2023. PMID: 28613695. NCBI Bookshelf NBK430976."
+    ],
+    "review_status": "revisado",
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados, item a item, do documento já verificado e publicado cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto.md e do fluxograma irmão fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina.md (ambos tema Geral, mesma base de fontes), com a seção de origem registrada em cada item. Nenhum número, dose ou corte foi inventado — todos os valores (fluxo sanguíneo coronariano, resistência vascular, IC95%, contagem de estudos por classe de fármaco) foram copiados literalmente dos dois documentos de origem."
+  },
+  {
+    "slug": "suspeita-de-miocardiopatia-catecolaminergica-por-feocromocitoma-antes-de-atribuir-a-estresse",
+    "condicao": "Suspeita de miocardiopatia catecolaminérgica por feocromocitoma/paraganglioma antes de fechar o diagnóstico como takotsubo por estresse emocional",
+    "theme": "Geral",
+    "documento_origem": "miocardiopatia-catecolaminergica-por-feocromocitoma-e-paraganglioma-suspeitar-antes-de-atribuir-a-estresse",
+    "resumo": "Pontos de decisão antes de fechar um quadro de disfunção ventricular aguda sem lesão coronariana obstrutiva como takotsubo por estresse emocional: com que frequência o verdadeiro gatilho é um feocromocitoma/paraganglioma (PPGL) ainda não diagnosticado, quais achados no padrão de imagem e na história devem levantar a suspeita, e a armadilha do betabloqueio isolado no manejo agudo.",
+    "itens": [
+      {
+        "id": "ppgl-catecolaminergica-excluir-antes-de-fechar-takotsubo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente / Por que este documento existe",
+        "texto": "Feocromocitoma/paraganglioma (PPGL) ativamente excluído antes de fechar o diagnóstico de takotsubo por estresse emocional — é um dos critérios formais de exclusão do próprio escore diagnóstico de Mayo Clinic para takotsubo, não um detalhe opcional, e a diferença muda a conduta por completo: de 'tranquilizar e observar' para 'investigar tumor, bloquear farmacologicamente e operar'"
+      },
+      {
+        "id": "ppgl-catecolaminergica-frequencia-real",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "Com que frequência isso acontece — números reais, não estimativa",
+        "texto": "Frequência real considerada na suspeita clínica: entre pacientes com PPGL, cardiomiopatia catecolaminérgica aguda ocorreu em 11% (15/140, Giavarini et al., Heart 2013, PMID 23837998), e padrão especificamente takotsubo-like em 2,6-3% dos PPGL secretores (4/152, Gagnon et al., Endocrine Practice 2017, PMID 28704094) — em 14 dos 15 casos de Giavarini a disfunção cardíaca precedeu o diagnóstico do tumor"
+      },
+      {
+        "id": "ppgl-catecolaminergica-padrao-balonamento-global",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "Padrão de apresentação — o que distingue do takotsubo 'por estresse emocional' comum",
+        "texto": "Padrão de balonamento ao ecocardiograma conferido: balonamento predominantemente GLOBAL (não apical/médio-apical clássico) associado a mais PPGL na metanálise de 156 casos (21,2% vs. 6,1% no grupo de catecolamina exógena, p=0,02) e a mais complicação (92% vs. 58,5% no padrão apical, p=0,0022) — Y-Hassan & Falhammar, Clinical Cardiology 2020, PMID 32125009"
+      },
+      {
+        "id": "ppgl-catecolaminergica-fracao-de-ejecao-desproporcional",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "origem_secao": "Padrão de apresentação",
+        "texto": "Fração de ejeção conferida como desproporcionalmente reduzida para o quadro esperado — fração de ejeção mais baixa no grupo PPGL que no grupo de catecolamina exógena na mesma metanálise (25,54% ± 11,3 vs. 31,82% ± 9,93, p=0,0072)"
+      },
+      {
+        "id": "ppgl-catecolaminergica-historia-labilidade-e-triade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente",
+        "texto": "Buscados ativamente na anamnese: labilidade pressórica extrema (picos hipertensivos paroxísticos intercalados com hipotensão), sintomas paroxísticos precedendo o evento (cefaleia, sudorese profusa e palpitações — tríade classicamente associada à crise catecolaminérgica), ausência de fator de estresse emocional identificável ou fator desproporcionalmente leve, e fator precipitante mecânico (cirurgia, manipulação abdominal, parto ou infecção respiratória concomitante)"
+      },
+      {
+        "id": "ppgl-catecolaminergica-recorrencia-como-sinal-de-alerta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "Padrão de apresentação / Armadilhas clínicas",
+        "texto": "Recorrência de um quadro já rotulado como takotsubo tratada como sinal de alerta forte para causa catecolaminérgica endógena não tratada — na metanálise de 156 casos, a recorrência (16,8%, 18/107 com dado de seguimento) ocorreu SOMENTE nos casos desencadeados por PPGL, nenhuma recorrência foi registrada nos casos de catecolamina exógena"
+      },
+      {
+        "id": "ppgl-catecolaminergica-investigacao-bioquimica",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "origem_secao": "Sinais de alerta que devem ser buscados ativamente",
+        "texto": "Diante de qualquer combinação dos achados acima (balonamento global, disfunção desproporcional, labilidade pressórica, tríade paroxística, ausência de gatilho emocional claro, recorrência): investigação bioquímica com metanefrinas plasmáticas ou urinárias fracionadas considerada antes de fechar o quadro como takotsubo idiopático"
+      },
+      {
+        "id": "ppgl-catecolaminergica-nao-betabloqueador-isolado-choque",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "O que muda no manejo agudo — a armadilha do betabloqueio isolado",
+        "texto": "Betabloqueador NÃO iniciado antes de estabelecer bloqueio alfa-adrenérgico, nem usado isolado, se houver suspeita de PPGL durante o manejo de choque cardiogênico ou edema agudo de pulmão — com os receptores beta bloqueados e os alfa livres, a vasoconstrição periférica mediada pela noradrenalina circulante fica sem oposição, podendo precipitar ou agravar crise hipertensiva paradoxal (mesmo princípio do preparo pré-operatório eletivo do PPGL, Endocrine Society, Lenders et al., J Clin Endocrinol Metab 2014, PMID 24893135)"
+      },
+      {
+        "id": "ppgl-catecolaminergica-reversibilidade-com-tratamento",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "Prognóstico e reversibilidade — o dado que sustenta o esforço de investigar",
+        "texto": "Reversibilidade potencial da disfunção ventricular reconhecida como justificativa para investigar ativamente em vez de apenas tranquilizar: no estudo de Giavarini et al., a fração de ejeção mediana subiu de 30% durante o episódio agudo para 71% antes mesmo da cirurgia, já com tratamento clínico (incluindo bloqueio adrenérgico)"
+      }
+    ],
+    "source_refs": [
+      "Giavarini A, Chedid A, Bobrie G, Plouin PF, Hagège A, Amar L. Acute catecholamine cardiomyopathy in patients with phaeochromocytoma or functional paraganglioma. Heart. 2013;99(19):1438-1444. DOI: 10.1136/heartjnl-2013-304073. PMID: 23837998.",
+      "Gagnon N, Mansour S, Bitton Y, Bourdeau I. Takotsubo-like Cardiomyopathy in a Large Cohort of Patients With Pheochromocytoma and Paraganglioma. Endocr Pract. 2017;23(10):1178-1192. DOI: 10.4158/EP171930.OR. PMID: 28704094.",
+      "Y-Hassan S, Falhammar H. Clinical features, complications, and outcomes of exogenous and endogenous catecholamine-triggered Takotsubo syndrome: A systematic review and meta-analysis of 156 published cases. Clin Cardiol. 2020;43(5):459-467. DOI: 10.1002/clc.23352. PMID: 32125009.",
+      "Y-Hassan S, Falhammar H. Cardiovascular Manifestations and Complications of Pheochromocytomas and Paragangliomas. J Clin Med. 2020;9(8):2435. DOI: 10.3390/jcm9082435. PMID: 32751501.",
+      "Lenders JW, Duh QY, Eisenhofer G, Gimenez-Roqueplo AP, Grebe SK, Murad MH, Naruse M, Pacak K, Young WF Jr; Endocrine Society. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. DOI: 10.1210/jc.2014-1498. PMID: 24893135."
+    ],
+    "review_status": "revisado",
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados, item a item, do documento já verificado e publicado miocardiopatia-catecolaminergica-por-feocromocitoma-e-paraganglioma-suspeitar-antes-de-atribuir-a-estresse.md (tema Geral), com a seção de origem registrada em cada item. A tríade cefaleia-sudorese-palpitações (Plouin et al., PMID 7208288) foi deliberadamente deixada de fora deste checklist como número de sensibilidade/especificidade, porque o próprio documento de origem marca VERIFICAÇÃO HUMANA NECESSÁRIA para a extrapolação dessa tríade ao contexto específico de disfunção cardíaca aguda — só entrou aqui como achado de anamnese a buscar, não como estatística validada nesse cenário. Nenhum número foi inventado ou extrapolado além do que o documento de origem sustenta."
+  },
+  {
+    "slug": "interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares-na-anamnese",
+    "condicao": "Investigação ativa de suplementos e fitoterápicos de venda livre antes de iniciar ou ajustar fármaco cardiovascular",
+    "theme": "Geral",
+    "documento_origem": "interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares",
+    "resumo": "Pontos de decisão na anamnese e na conciliação medicamentosa diante de suplemento fitoterápico de venda livre em paciente cardiopata: por que a pergunta genérica sobre medicação não captura esse uso, quais fármacos cardiovasculares perdem eficácia com erva-de-são-joão, o que a evidência controlada de fato mostra (e não mostra) sobre alho e ginkgo biloba com anticoagulante, e a conduta antes de procedimento invasivo.",
+    "itens": [
+      {
+        "id": "interacao-fitoterapico-pergunta-especifica-anamnese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Por que isto importa na consulta / Armadilhas clínicas",
+        "texto": "Uso de chá, cápsula ou suplemento fitoterápico perguntado de forma especificamente direcionada na anamnese — não pela pergunta genérica 'toma algum remédio?', que tipicamente não captura erva-de-são-joão, alho ou ginkgo comprados em farmácia de manipulação ou loja de produtos naturais, porque o paciente os percebe como 'naturais' e por isso os omite"
+      },
+      {
+        "id": "interacao-fitoterapico-erva-sao-joao-digoxina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Erva-de-são-joão: indutora de CYP3A4 e da glicoproteína-P",
+        "texto": "Se paciente em digoxina relatar uso continuado (≥10 dias) de erva-de-são-joão: considerado que o nível sérico de digoxina cai — AUC(0-24h) caiu 25% e concentração de vale caiu 33% após 10 dias de coadministração (Johne A et al., Clin Pharmacol Ther 1999, PMID 10546917), por indução da glicoproteína-P intestinal"
+      },
+      {
+        "id": "interacao-fitoterapico-erva-sao-joao-estatina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Erva-de-são-joão: indutora de CYP3A4 e da glicoproteína-P",
+        "texto": "Se paciente em estatina lipofílica (sinvastatina, atorvastatina, lovastatina) relatar uso de erva-de-são-joão: considerada perda de eficácia por indução de CYP3A4 (AUC do metabólito ativo da sinvastatina caiu para 48% do valor com placebo, Sugimoto K et al., Clin Pharmacol Ther 2001, PMID 11753267) — pravastatina/rosuvastatina (não dependem de CYP3A4) consideradas rota alternativa quando o paciente não abandona o fitoterápico"
+      },
+      {
+        "id": "interacao-fitoterapico-erva-sao-joao-verapamil",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Erva-de-são-joão: indutora de CYP3A4 e da glicoproteína-P",
+        "texto": "Se paciente em verapamil relatar uso de erva-de-são-joão: considerada perda de efeito antianginal/antiarrítmico — a maior magnitude de interação documentada neste grupo de fármacos, AUC caiu 78% para o R-verapamil e 80% para o S-verapamil após 14 dias de coadministração (Tannergren C et al., Clin Pharmacol Ther 2004, PMID 15060508), inteiramente por indução do metabolismo de primeira passagem"
+      },
+      {
+        "id": "interacao-fitoterapico-erva-sao-joao-varfarina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Erva-de-são-joão: indutora de CYP3A4 e da glicoproteína-P",
+        "texto": "Se paciente em varfarina relatar uso de erva-de-são-joão: considerada necessidade de dose maior ou queda do INR para manter o mesmo efeito anticoagulante — depuração aparente do S-varfarina aumentou em razão de 1,39 ± 0,06 com erva-de-são-joão (Jiang X et al., J Clin Pharmacol 2006, PMID 17050802)"
+      },
+      {
+        "id": "interacao-fitoterapico-efeito-retardado-nao-descartar-por-suspensao-breve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Armadilhas clínicas",
+        "texto": "Reconhecido que o efeito da erva-de-são-joão é retardado e cresce com o tempo de uso, não com a dose única — testar suspensão por poucos dias antes de concluir 'não é interação' subestima o efeito, e reintroduzir o suplemento depois de ajustar a dose do fármaco cardiovascular pode gerar novo desequilíbrio nas duas semanas seguintes"
+      },
+      {
+        "id": "interacao-fitoterapico-ausencia-sintoma-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "origem_secao": "Armadilhas clínicas",
+        "texto": "Suplemento fitoterápico considerado como possível causa quando houver arritmia recorrente com verapamil, LDL subindo com sinvastatina ou trombose com varfarina subterapêutica sem outra explicação — a queda de nível sérico por indução enzimática não causa sintoma agudo, e o paciente só descompensa quando o fármaco perde efeito"
+      },
+      {
+        "id": "interacao-fitoterapico-alho-ginkgo-varfarina-evidencia-controlada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "origem_secao": "Alho e ginkgo biloba: o efeito antiplaquetário aditivo que a evidência controlada não confirma",
+        "texto": "Reconhecido que os ensaios controlados desenhados especificamente para testar interação de alho ou ginkgo com varfarina não confirmaram efeito significativo na farmacocinética/farmacodinâmica em voluntários saudáveis (ginkgo: razão de AUC do INR 0,93, IC90% 0,81-1,05, Jiang X et al., Br J Clin Pharmacol 2005, PMID 15801937; alho: sem alteração significativa, Mohammed Abdul MI et al., Br J Pharmacol 2008, PMID 18516070) — mas essa ausência de efeito em ensaio de curto prazo com voluntários jovens saudáveis não valida uso crônico em paciente idoso, polimedicado ou em período perioperatório"
+      },
+      {
+        "id": "interacao-fitoterapico-suspensao-pre-procedimento",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "Leitura que concilia os dois níveis de evidência",
+        "texto": "Suspensão de ginkgo e alho em dose suplementar 7-14 dias antes de cirurgia ou procedimento invasivo orientada por segurança do procedimento — prática prudente respaldada por relato de caso de sangramento associado a ginkgo (hematoma subdural espontâneo, Rowin J & Lewis SL, Neurology 1996, PMID 8649594; sangramento pós-colecistectomia laparoscópica, Fessenden JM et al., Am Surg 2001, PMID 11206893), mesmo sem confirmação em ensaio controlado de curto prazo com varfarina"
+      }
+    ],
+    "source_refs": [
+      "Johne A, Brockmöller J, Bauer S, Maurer A, Langheinrich M, Roots I. Pharmacokinetic interaction of digoxin with an herbal extract from St John's wort (Hypericum perforatum). Clin Pharmacol Ther. 1999;66(4):338-345. DOI: 10.1053/cp.1999.v66.a101944. PMID: 10546917.",
+      "Sugimoto K, Ohmori M, Tsuruoka S, et al. Different effects of St John's wort on the pharmacokinetics of simvastatin and pravastatin. Clin Pharmacol Ther. 2001;70(6):518-524. DOI: 10.1067/mcp.2001.120025. PMID: 11753267.",
+      "Tannergren C, Engman H, Knutson L, Hedeland M, Bondesson U, Lennernäs H. St John's wort decreases the bioavailability of R- and S-verapamil through induction of the first-pass metabolism. Clin Pharmacol Ther. 2004;75(4):298-309. DOI: 10.1016/j.clpt.2003.12.012. PMID: 15060508.",
+      "Jiang X, Blair EY, McLachlan AJ. Investigation of the effects of herbal medicines on warfarin response in healthy subjects: a population pharmacokinetic-pharmacodynamic modeling approach. J Clin Pharmacol. 2006;46(11):1370-1378. DOI: 10.1177/0091270006292124. PMID: 17050802.",
+      "Jiang X, Williams KM, Liauw WS, et al. Effect of ginkgo and ginger on the pharmacokinetics and pharmacodynamics of warfarin in healthy subjects. Br J Clin Pharmacol. 2005;59(4):425-432. DOI: 10.1111/j.1365-2125.2005.02322.x. PMID: 15801937.",
+      "Mohammed Abdul MI, Jiang X, Williams KM, et al. Pharmacodynamic interaction of warfarin with cranberry but not with garlic in healthy subjects. Br J Pharmacol. 2008;154(8):1691-1700. DOI: 10.1038/bjp.2008.210. PMID: 18516070.",
+      "Rowin J, Lewis SL. Spontaneous bilateral subdural hematomas associated with chronic Ginkgo biloba ingestion. Neurology. 1996;46(6):1775-1776. DOI: 10.1212/wnl.46.6.1775. PMID: 8649594.",
+      "Fessenden JM, Wittenborn W, Clarke L. Gingko biloba: a case report of herbal medicine and bleeding postoperatively from a laparoscopic cholecystectomy. Am Surg. 2001;67(1):33-35. PMID: 11206893."
+    ],
+    "review_status": "revisado",
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados, item a item, do documento já verificado e publicado interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares.md (tema Geral), com a seção de origem registrada em cada item. Nenhum número (AUC, concentração de vale, razão de depuração, IC90%) foi inventado — todos foram copiados literalmente do documento de origem. Os itens de alho/ginkgo mantêm deliberadamente a tensão que o próprio documento expõe (ensaio controlado neutro vs. relato de caso de sangramento), sem forçar uma conclusão que a fonte não sustenta."
   }
 ]
