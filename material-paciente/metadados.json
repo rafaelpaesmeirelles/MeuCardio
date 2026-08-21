@@ -14447,5 +14447,174 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "entendendo-o-escore-de-duke-do-teste-ergometrico",
+    "titulo": "O escore de Duke: o que seu teste ergométrico revela sobre seu coração",
+    "subtitulo": "Como o médico transforma o resultado da esteira em uma estimativa do seu risco cardiovascular",
+    "tema": "Calculadoras",
+    "documento_slug": "escore-de-duke-do-teste-ergometrico-treadmill-score",
+    "resumo": "Se você fez um teste ergométrico (teste de esteira) por suspeita de doença nas artérias do coração, seu médico pode ter usado o escore de Duke para interpretar o resultado. Entenda o que esse número quer dizer e por que ele ajuda a decidir os próximos passos.",
+    "secoes": [
+      {
+        "titulo": "O que é o teste ergométrico, e o que o escore de Duke faz com ele",
+        "paragrafos": [
+          "O teste ergométrico, também chamado de teste de esforço ou teste de esteira, avalia como o seu coração se comporta quando você caminha ou corre em ritmo crescente, sob monitorização contínua do eletrocardiograma e da pressão arterial. O objetivo é observar se aparecem sinais de que o músculo do coração não está recebendo sangue suficiente durante o esforço.",
+          "O escore de Duke é uma forma de juntar três informações desse mesmo exame — por quanto tempo você conseguiu se exercitar, se apareceu alteração no eletrocardiograma durante o esforço e se você sentiu dor no peito (angina) e o quanto ela limitou o exercício — em um único número. Esse número foi estudado em milhares de pacientes e mostrou relação direta com o risco de eventos cardíacos nos anos seguintes."
+        ]
+      },
+      {
+        "titulo": "Por que três informações juntas dizem mais que cada uma sozinha",
+        "paragrafos": [
+          "Isoladamente, o tempo de exercício, a alteração do eletrocardiograma e a presença de dor no peito já dizem algo sobre o seu coração. Juntando os três em uma única conta, o escore de Duke consegue separar melhor quem tem risco baixo de quem tem risco mais alto — foi assim que ele foi estudado, acompanhando pacientes por vários anos depois do exame.",
+          "Na pesquisa que validou esse escore, a maior parte das pessoas caiu na faixa de risco baixo, e essas pessoas seguiram bem nos anos seguintes, sem precisar de exames invasivos. É justamente esse grupo que mais se beneficia do escore: ele ajuda o médico a evitar procedimentos desnecessários em quem não precisa deles."
+        ]
+      },
+      {
+        "titulo": "O que o resultado do meu exame significa na prática",
+        "paragrafos": [
+          "Se o seu escore caiu na faixa de risco baixo, isso costuma significar que o acompanhamento clínico habitual é suficiente, sem necessidade de investigação adicional imediata. Se caiu na faixa de risco intermediário ou alto, seu médico provavelmente vai considerar exames complementares, como o cateterismo cardíaco, para entender melhor a situação das artérias do coração.",
+          "É importante lembrar que esse escore foi estudado há mais de três décadas, num tempo em que o tratamento da doença coronariana era diferente do atual. Isso significa que, hoje, mesmo quem cai numa faixa de risco mais alto tende a ter uma evolução melhor do que a tabela original sugere, porque os tratamentos disponíveis avançaram bastante desde então."
+        ]
+      },
+      {
+        "titulo": "O que pode interferir no resultado",
+        "paragrafos": [
+          "Para o escore funcionar bem, é importante que você tenha conseguido se exercitar até um nível adequado de esforço. Se o exame foi interrompido cedo por um motivo sem relação com o coração — como dor nas pernas, falta de ar por outra causa ou cansaço muscular —, o resultado pode não refletir fielmente o seu risco cardiovascular, e o médico vai levar isso em conta na interpretação.",
+          "O escore de Duke também não substitui a avaliação clínica completa: sua história, seus exames anteriores e outros fatores de risco continuam fazendo parte da decisão junto com esse número."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que aparece em repouso, sem relação com esforço, e que não passa em poucos minutos",
+      "Falta de ar súbita e intensa, mesmo em repouso",
+      "Desmaio ou sensação de quase desmaiar",
+      "Palpitações fortes e persistentes acompanhadas de mal-estar",
+      "Dor no peito irradiando para o braço, o pescoço ou a mandíbula, associada a suor frio"
+    ],
+    "perguntas": [
+      "Qual foi o meu escore de Duke, e em que faixa de risco ele me colocou? Pergunte ao seu médico o número exato e o que essa faixa significa para o seu caso.",
+      "Eu preciso de outro exame por causa desse resultado? Depende da faixa de risco: risco baixo costuma dispensar exames adicionais imediatos, enquanto risco intermediário ou alto pode levar a uma investigação complementar.",
+      "O exame foi até o fim, ou foi interrompido antes do esperado? Se foi interrompido por um motivo não cardíaco, o resultado pode não refletir totalmente o seu risco, e vale conversar sobre isso com o médico.",
+      "Esse resultado muda algo na minha rotina agora? Na maioria dos casos de risco baixo, a orientação é manter o acompanhamento habitual e um estilo de vida saudável para o coração.",
+      "Precisarei repetir esse teste no futuro? Isso depende da evolução dos seus sintomas e da orientação do seu cardiologista, não existe uma regra única para todos."
+    ],
+    "fontes": [
+      "Mark DB, Shaw L, Harrell FE Jr, Hlatky MA, Lee KL, Bengtson JR, McCants CB, et al. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med. 1991;325(12):849-853. DOI: 10.1056/NEJM199109193251204. PMID: 1875969."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "coracao-de-quem-teve-cancer-na-infancia-por-que-o-acompanhamento-continua-na-vida-adulta",
+    "titulo": "O coração de quem teve câncer na infância: por que o acompanhamento continua depois de curado",
+    "subtitulo": "O que a ciência já sabe sobre o risco cardiovascular de longo prazo em quem tratou câncer quando criança",
+    "tema": "Cardio-oncologia",
+    "documento_slug": "cardiotoxicidade-tardia-em-sobreviventes-de-cancer-infantil-scientific-statement-aha-2025",
+    "resumo": "Se você (ou seu filho) tratou um câncer na infância e está curado, o acompanhamento do coração não termina ali. Entenda por que médicos recomendam observar a saúde cardiovascular ao longo de toda a vida adulta, mesmo décadas depois do tratamento.",
+    "secoes": [
+      {
+        "titulo": "Por que o coração continua sendo assunto muito tempo depois da cura",
+        "paragrafos": [
+          "Quando uma criança é tratada e curada de câncer, a preocupação natural da família costuma se voltar para o resto da vida — crescimento, desenvolvimento, retorno à rotina escolar. Mas alguns tratamentos usados contra o câncer, incluindo certos tipos de quimioterapia e a radioterapia aplicada ao tórax, podem deixar um efeito silencioso sobre o coração que só se manifesta décadas depois.",
+          "Por isso, entidades médicas de referência recomendam que o cardiologista que acompanha esse paciente já adulto conheça a história do tratamento recebido na infância — não porque haja algo errado hoje, mas porque esse histórico ajuda a decidir o quanto e com que frequência vale a pena observar o coração ao longo da vida."
+        ]
+      },
+      {
+        "titulo": "O que pode deixar esse efeito de longo prazo",
+        "paragrafos": [
+          "As duas exposições mais estudadas e associadas a esse risco de longo prazo são certos tipos de quimioterapia (como a classe das antraciclinas) e a radioterapia aplicada na região do tórax. Mas o conhecimento sobre o assunto não parou nesses dois: tratamentos oncológicos mais modernos, chamados de terapias-alvo, também entraram no radar como fontes adicionais de atenção cardiovascular, e continuam sendo estudados.",
+          "Isso não significa que todo sobrevivente de câncer infantil vai desenvolver um problema cardíaco. Significa que o histórico de exposição a esses tratamentos é uma informação importante, que deve acompanhar a pessoa e ser levada em conta pelo médico que cuida dela quando adulta."
+        ]
+      },
+      {
+        "titulo": "Como funciona esse acompanhamento",
+        "paragrafos": [
+          "O acompanhamento inclui, entre outras medidas, exames de imagem do coração feitos em intervalos regulares (como o ecocardiograma), atenção a marcadores que podem ser avaliados no sangue, e conversas sobre fatores de risco cardiovascular que qualquer pessoa deveria controlar — pressão arterial, colesterol, peso, atividade física e tabagismo. Esses fatores pesam ainda mais em quem já teve alguma exposição cardíaca prévia pelo tratamento do câncer.",
+          "A frequência ideal de exames varia de pessoa para pessoa, conforme o tipo e a intensidade do tratamento que cada uma recebeu quando criança — não existe um intervalo único que sirva para todos, e essa decisão deve ser individualizada pelo médico responsável, com base no histórico completo do tratamento."
+        ]
+      },
+      {
+        "titulo": "A transição do cuidado pediátrico para o cuidado do adulto",
+        "paragrafos": [
+          "Um ponto que médicos destacam é a importância de não perder essa história de vista quando a pessoa deixa de ser acompanhada pelo oncologista pediátrico e passa a cuidar da própria saúde como adulto. Levar consigo um resumo do tratamento recebido na infância — os tipos de tratamento usados e se houve radioterapia no tórax — é uma informação valiosa para qualquer médico que passe a acompanhar essa pessoa depois.",
+          "Praticar atividade física de forma orientada e participar de programas de reabilitação cardíaca, quando indicados, também fazem parte do cuidado de quem tem esse histórico — o mesmo tipo de recomendação que vale para a saúde do coração de qualquer pessoa, com atenção redobrada nesse grupo."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Cansaço muito maior do que o esperado para atividades do dia a dia",
+      "Falta de ar que piora ao se deitar ou que acorda a pessoa durante a noite",
+      "Inchaço novo nas pernas, nos tornozelos ou no abdômen",
+      "Palpitações (sensação de coração acelerado ou batendo fora do ritmo) que não passam",
+      "Dor no peito, especialmente durante esforço"
+    ],
+    "perguntas": [
+      "Meu histórico de tratamento na infância ficou registrado em algum resumo que posso levar para o cardiologista? Vale pedir ao serviço de oncologia pediátrica um resumo do tratamento recebido, incluindo o tipo de quimioterapia e se houve radioterapia no tórax.",
+      "Com que frequência preciso fazer exames do coração agora que sou adulto? Isso depende do tratamento que você recebeu quando criança, e deve ser definido pelo seu médico a partir desse histórico individual.",
+      "Ter feito radioterapia no tórax quando criança muda algo no meu acompanhamento hoje? Sim, esse é um dos fatores levados em conta para decidir a frequência e o tipo de exame cardiológico de acompanhamento.",
+      "Posso fazer atividade física normalmente? Na maioria dos casos sim, e a atividade física orientada costuma ser recomendada como parte do cuidado — converse com seu médico sobre o que é adequado para o seu caso.",
+      "Isso significa que vou ter um problema no coração? Não necessariamente. Significa que esse histórico é uma informação relevante que ajuda o médico a decidir o acompanhamento mais adequado para você."
+    ],
+    "fontes": [
+      "Ryan TD, Bates JE, Kinahan KE, Leger KJ, Mulrooney DA, Narayan HK, Ness K, Okwuosa TM, Rainusso NC, Steinberger J, Armenian SH, et al. Cardiovascular Toxicity in Patients Treated for Childhood Cancer: A Scientific Statement From the American Heart Association. Circulation. 2025;151(15):e926-e943. DOI: 10.1161/CIR.0000000000001308. PMID: 40104841."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "por-que-prender-a-respiracao-durante-a-radioterapia-da-mama-esquerda-protege-o-coracao",
+    "titulo": "Por que pedem para você prender a respiração durante a radioterapia da mama esquerda",
+    "subtitulo": "Uma técnica simples, sem remédio nenhum envolvido, que afasta o coração da área tratada",
+    "tema": "Cardio-oncologia",
+    "documento_slug": "protecao-cardiaca-na-radioterapia-de-mama-esquerda-inspiracao-profunda-sustentada",
+    "resumo": "Se você vai fazer ou já fez radioterapia para câncer de mama do lado esquerdo, pode ter ouvido falar em uma técnica de 'prender a respiração' durante as sessões. Entenda por que essa técnica existe e como ela ajuda a proteger o coração.",
+    "secoes": [
+      {
+        "titulo": "Por que a mama esquerda exige um cuidado especial com o coração",
+        "paragrafos": [
+          "O coração fica localizado no lado esquerdo do tórax, próximo à parede onde a radioterapia da mama esquerda é aplicada. Isso significa que, durante o tratamento, uma pequena quantidade de radiação destinada à mama pode também atingir o coração — algo que não acontece do mesmo jeito quando o tratamento é do lado direito.",
+          "Pesquisas de longo prazo mostraram que, quanto maior a quantidade de radiação recebida pelo coração durante esse tratamento, maior a chance de problemas nas artérias do coração muitos anos depois — e esse efeito não tem um limite abaixo do qual não há risco nenhum: toda redução na quantidade de radiação que chega ao coração conta a favor da sua saúde cardiovascular futura."
+        ]
+      },
+      {
+        "titulo": "O que é a técnica de inspiração profunda sustentada",
+        "paragrafos": [
+          "Na técnica chamada de inspiração profunda sustentada (às vezes chamada pela sigla em inglês DIBH), você é orientado a respirar fundo e segurar o ar durante cada aplicação da radioterapia, muitas vezes com o auxílio de um equipamento que monitora sua respiração. Ao encher bem os pulmões de ar, o próprio peito se expande e empurra o coração fisicamente para mais longe da parede torácica e da área que está sendo tratada.",
+          "É importante entender que essa técnica não envolve nenhum remédio — é puramente uma forma de posicionar o corpo durante a aplicação, para que menos radiação chegue até o coração e até a artéria que passa bem próxima à parede do peito nesse lado."
+        ]
+      },
+      {
+        "titulo": "O que os estudos mostram sobre essa técnica",
+        "paragrafos": [
+          "Uma revisão que reuniu dezenas de estudos, somando milhares de pacientes tratadas do lado esquerdo, mostrou que a técnica de prender a respiração reduz de forma consistente a quantidade de radiação que chega ao coração e à artéria mais próxima do campo de tratamento, quando comparada à respiração livre e normal durante a aplicação.",
+          "É importante ser honesto sobre um ponto: até hoje, não existe um estudo que tenha acompanhado pacientes por anos para provar diretamente que quem usa essa técnica tem menos infarto no futuro do que quem não usa. O que existe é a combinação de dois tipos de evidência — uma que mostra que menos radiação no coração significa menos risco futuro, e outra que mostra que essa técnica reduz a quantidade de radiação que chega ao coração. Juntas, elas sustentam por que a técnica é recomendada."
+        ]
+      },
+      {
+        "titulo": "O que isso significa para você",
+        "paragrafos": [
+          "Se você vai iniciar radioterapia de mama esquerda, é razoável perguntar à equipe de radioterapia se essa técnica está disponível e será usada no seu caso — ela não traz efeito colateral adicional relevante e não interfere na eficácia do tratamento do câncer em si.",
+          "Se você já passou por esse tratamento, vale levar essa informação — se a técnica foi ou não usada, e se possível qual foi a exposição do coração durante o planejamento — para o seu cardiologista, porque isso ajuda a entender o seu risco cardiovascular de longo prazo e a decidir o acompanhamento mais adequado para você daqui para frente."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova, principalmente durante esforço, mesmo anos depois da radioterapia",
+      "Falta de ar que piora progressivamente com atividades do dia a dia",
+      "Cansaço desproporcional para o esforço realizado",
+      "Palpitações persistentes ou sensação de coração batendo de forma irregular",
+      "Inchaço novo nas pernas ou nos tornozelos"
+    ],
+    "perguntas": [
+      "A técnica de prender a respiração foi usada no meu tratamento? Você pode perguntar diretamente à equipe de radioterapia que cuidou (ou vai cuidar) do seu caso.",
+      "Essa técnica atrapalha a eficácia do tratamento contra o câncer? Não — ela muda apenas a posição do corpo durante a aplicação, para afastar o coração da área tratada, sem interferir no efeito da radioterapia sobre o tumor.",
+      "Eu preciso fazer algo especial para conseguir usar essa técnica? A equipe de radioterapia orienta e treina você antes do início do tratamento; costuma envolver praticar a respiração e, às vezes, usar um equipamento de monitorização durante as sessões.",
+      "Isso significa que não preciso mais me preocupar com o coração depois da radioterapia? Não — mesmo com a técnica usada, o acompanhamento cardiológico de longo prazo continua sendo recomendado para quem fez radioterapia no tórax.",
+      "Quem já terminou a radioterapia sem essa técnica precisa fazer algo diferente agora? Vale conversar com seu cardiologista sobre o seu histórico de tratamento, para que ele leve isso em conta no seu acompanhamento."
+    ],
+    "fontes": [
+      "Darby SC, Ewertz M, McGale P, et al. Risk of Ischemic Heart Disease in Women after Radiotherapy for Breast Cancer. N Engl J Med. 2013;368(11):987-998. DOI: 10.1056/NEJMoa1209825. PMID: 23484825.",
+      "Lu Y, Yang D, Zhang X, et al. Comparison of Deep Inspiration Breath Hold Versus Free Breathing in Radiotherapy for Left Sided Breast Cancer. Front Oncol. 2022;12:845037. DOI: 10.3389/fonc.2022.845037. PMID: 35530354."
+    ],
+    "review_status": "revisado"
   }
 ]
