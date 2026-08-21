@@ -8424,5 +8424,312 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "investigacao-diagnostica-de-canalopatia-em-jovem-com-sincope-ou-parada-cardiaca-inexplicada",
+    "condicao": "Suspeita de canalopatia (síndrome do QT longo, síndrome de Brugada ou TVPC) em jovem com síncope ou parada cardíaca inexplicada",
+    "resumo": "Roteiro de investigação diagnóstica estruturada — escore de Schwartz para síndrome do QT longo, escore de Shanghai para síndrome de Brugada e achado ergométrico característico da taquicardia ventricular polimórfica catecolaminérgica — para não diagnosticar nem descartar canalopatia com base em achado isolado de ECG.",
+    "documento_origem": "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Schwartz PJ, Moss AJ, Vincent GM, Crampton RS. Diagnostic criteria for the long QT syndrome. An update. Circulation. 1993;88(2):782-784. PMID: 8339437",
+      "Schwartz PJ. The congenital long QT syndromes from genotype to phenotype: clinical implications. J Intern Med. 2006;259(1):39-47. PMID: 16336512",
+      "Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. DOI: 10.1161/CIRCULATIONAHA.111.062182. PMID: 22083145",
+      "Galić E, Bešlić P, Kilić P, Planinić Z, Pašalić A, Galić I, Ćubela VV, Pekić P. Congenital long QT syndrome: a systematic review. Acta Clin Croat. 2021;60(4):739-748. DOI: 10.20471/acc.2021.60.04.22. PMID: 35734489",
+      "Antzelevitch C, Yan GX, Ackerman MJ, et al. J-Wave syndromes expert consensus conference report. Heart Rhythm. 2016;13(10):e295-324. DOI: 10.1016/j.hrthm.2016.05.024. PMID: 27423412",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572",
+      "Könemann H, Dagres N, Merino JL, Sticherling C, Zeppenfeld K, et al. Spotlight on the 2022 ESC guideline management of ventricular arrhythmias and prevention of sudden cardiac death: 10 novel key aspects. Europace. 2023;25(5):euad091. DOI: 10.1093/europace/euad091. PMID: 37102266",
+      "Wang G, Chu H, Zhao N. The Clinical Diagnosis and Management of Long QT Syndrome: Insights from the 2022 ESC Guidelines. Rev Cardiovasc Med. 2023;24(6):170. DOI: 10.31083/j.rcm2406170. PMID: 39077522",
+      "Napolitano C, Mazzanti A, Bloise R, Priori SG. Catecholaminergic Polymorphic Ventricular Tachycardia. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle. NBK1289",
+      "Peltenburg PJ, Kallas D, Bos JM, et al. An International Multicenter Cohort Study on β-Blockers for the Treatment of Symptomatic Children With Catecholaminergic Polymorphic Ventricular Tachycardia. Circulation. 2022;145(5):333-344. DOI: 10.1161/CIRCULATIONAHA.121.056018. PMID: 34874747",
+      "Kallas D, Roston TM, Franciosi S, et al. Evaluation of age at symptom onset, proband status, and sex as predictors of disease severity in pediatric catecholaminergic polymorphic ventricular tachycardia. Heart Rhythm. 2021;18(11):1825-1832. DOI: 10.1016/j.hrthm.2021.07.061. PMID: 34333088",
+      "Roston TM, Jones K, Hawkins NM, Bos JM, Schwartz PJ, et al. Implantable cardioverter-defibrillator use in catecholaminergic polymorphic ventricular tachycardia: A systematic review. Heart Rhythm. 2018;15(12):1791-1799. DOI: 10.1016/j.hrthm.2018.06.046. PMID: 30063211"
+    ],
+    "itens": [
+      {
+        "id": "canalopatia-aval-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de síncope inexplicada, parada cardíaca ou morte súbita cardíaca inexplicada antes dos 30 anos em familiar próximo, investigar ativamente síndrome do QT longo, síndrome de Brugada e TVPC — não diagnosticar nem descartar por achado isolado de ECG, sem considerar história clínica e familiar.",
+        "origem_secao": "Definição / Armadilhas clínicas"
+      },
+      {
+        "id": "canalopatia-diag-02",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Aplicar o escore de Schwartz (ECG + história clínica + história familiar) sem somar síncope com estresse e torsades de pointes na mesma pontuação — as duas são mutuamente exclusivas, conta-se apenas a maior pontuação de cada categoria.",
+        "origem_secao": "Escore de Schwartz — probabilidade de síndrome do QT longo"
+      },
+      {
+        "id": "canalopatia-diag-03",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o escore de Schwartz pelos cortes atuais: ≤1 ponto baixa probabilidade, 1,5-3 pontos probabilidade intermediária, ≥3,5 pontos alta probabilidade.",
+        "origem_secao": "Escore de Schwartz — probabilidade de síndrome do QT longo"
+      },
+      {
+        "id": "canalopatia-diag-04",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Lembrar que variante patogênica comprovada em gene causador de síndrome do QT longo é, isoladamente, suficiente para o diagnóstico, independentemente da pontuação do escore de Schwartz.",
+        "origem_secao": "Nota sobre o corte de interpretação"
+      },
+      {
+        "id": "canalopatia-diag-05",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Aplicar o escore de Shanghai para Brugada exigindo ao menos um achado de ECG para diagnóstico, e usando apenas a maior pontuação dentro de cada categoria (ECG, história clínica, história familiar, teste genético) — nunca somar todos os achados presentes.",
+        "origem_secao": "Escore de Shanghai — probabilidade de síndrome de Brugada"
+      },
+      {
+        "id": "canalopatia-diag-06",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o escore de Shanghai: >3,5 pontos Brugada provável/definido, 2-3 pontos Brugada possível, <2 pontos não diagnóstico. Teste genético isolado soma só 0,5 ponto — não é suficiente sozinho para 'possível'.",
+        "origem_secao": "Escore de Shanghai / Armadilhas clínicas"
+      },
+      {
+        "id": "canalopatia-exame-07",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em suspeita de TVPC, realizar teste ergométrico buscando extrassístoles ventriculares surgindo tipicamente com frequência cardíaca sinusal de 110-120bpm, progredindo para pares e taquicardia ventricular bidirecional ou polimórfica — achado repetível entre testes seriados no mesmo paciente.",
+        "origem_secao": "TVPC — diagnóstico"
+      },
+      {
+        "id": "canalopatia-conduta-08",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar CDI de rotina em Brugada assintomático sem evento documentado — a indicação padrão é prevenção secundária, após parada cardíaca ou arritmia documentada.",
+        "origem_secao": "Manejo da síndrome de Brugada / Armadilhas clínicas"
+      },
+      {
+        "id": "canalopatia-medicacao-09",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na síndrome do QT longo sintomática, iniciar betabloqueador não seletivo (preferencialmente nadolol ou propranolol) como primeira linha — Classe I, nível B — evitando betabloqueador beta-1 seletivo (ex.: metoprolol).",
+        "origem_secao": "Manejo da síndrome do QT longo"
+      },
+      {
+        "id": "canalopatia-conduta-10",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Na TVPC, escalonar para terapia dupla (betabloqueador + flecainida e/ou denervação simpática cardíaca esquerda) diante de sintomas ou arritmia persistentes apesar do betabloqueador isolado — a terapia dupla reduziu o evento de 48% (32/67) para 10% (5/48), p<0,001, frente à monoterapia.",
+        "origem_secao": "Manejo da TVPC"
+      },
+      {
+        "id": "canalopatia-orientacao-11",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao indicar CDI na TVPC, alertar que a taxa de complicação relacionada ao dispositivo é alta (32,4%) e que há relato de tempestade elétrica desencadeada pelo próprio choque, por retroalimentação catecolaminérgica — CDI não é conduta isenta de risco nesta doença.",
+        "origem_secao": "Manejo da TVPC / Armadilhas clínicas"
+      },
+      {
+        "id": "canalopatia-orientacao-12",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar no prontuário que a classe exata da recomendação de quinidina como alternativa ao CDI na síndrome de Brugada NÃO foi confirmada nesta sessão contra o texto oficial da diretriz ESC 2022 — fontes secundárias divergem entre Classe IIb e Classe IIa/nível C. VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar a classe formalmente.",
+        "origem_secao": "Manejo da síndrome de Brugada"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572; Schwartz PJ, Crotti L. Circulation. 2011;124(20):2181-2184. PMID: 22083145; e Peltenburg PJ et al. Circulation. 2022;145(5):333-344. PMID: 34874747, em 21/08/2026."
+  },
+  {
+    "slug": "diagnostico-e-decisao-terapeutica-na-suspeita-de-trombose-de-protese-valvar-mecanica",
+    "condicao": "Suspeita de trombose de prótese valvar mecânica (obstrutiva ou não obstrutiva)",
+    "resumo": "Roteiro de confirmação diagnóstica e decisão entre otimização de anticoagulação, fibrinólise e cirurgia diante de suspeita de trombose de prótese valvar mecânica, seguindo a árvore de decisão da diretriz ESC/EACTS 2021 (Figura 10).",
+    "documento_origem": "trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — seção 11.4.4 e Figura 10.",
+      "Roudaut R, Lafitte S, Roudaut MF, Reant P, Pillois X, Durrieu-Jaïs C, Coste P, Deville C, Roques X. Management of prosthetic heart valve obstruction: fibrinolysis versus surgery. Arch Cardiovasc Dis. 2009;102(4):269-77. DOI: 10.1016/j.acvd.2009.01.007. PMID: 19427604",
+      "Raj Mantoo M, Makkar N, Sharma G. Prosthetic valve thrombosis: contemporary concepts in diagnosis and management. Expert Rev Cardiovasc Ther. 2026;24(7):609-624. DOI: 10.1080/14779072.2026.2700450. PMID: 42412081"
+    ],
+    "itens": [
+      {
+        "id": "trombose-protese-aval-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar prontamente de trombose valvar obstrutiva em qualquer portador de prótese valvar (sobretudo mecânica) que apresente dispneia recente ou evento embólico.",
+        "origem_secao": "Quando suspeitar"
+      },
+      {
+        "id": "trombose-protese-exame-02",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Confirmar o diagnóstico com ecocardiograma transtorácico e transesofágico; complementar com cinefluoroscopia e/ou tomografia computadorizada cardíaca quando disponíveis prontamente, sobretudo para avaliar a mobilidade dos folhetos/disco da prótese.",
+        "origem_secao": "Confirmação diagnóstica"
+      },
+      {
+        "id": "trombose-protese-exame-03",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Usar a tomografia computadorizada cardíaca para diferenciar trombo de pannus — pannus responde mal à fibrinólise e tende a exigir reoperação.",
+        "origem_secao": "Confirmação diagnóstica"
+      },
+      {
+        "id": "trombose-protese-aval-04",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar a trombose como obstrutiva ou não obstrutiva antes de decidir a conduta — as duas situações seguem árvores de decisão distintas na diretriz ESC/EACTS 2021.",
+        "origem_secao": "A árvore de decisão da diretriz ESC/EACTS 2021 (Figura 10)"
+      },
+      {
+        "id": "trombose-protese-conduta-05",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na trombose obstrutiva com paciente criticamente enfermo (instabilidade hemodinâmica), indicar troca valvar urgente/de emergência, se disponível prontamente — Classe I, nível B.",
+        "origem_secao": "Recomendações formais da diretriz"
+      },
+      {
+        "id": "trombose-protese-aval-06",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Antes de escolher entre fibrinólise ou cirurgia na trombose obstrutiva sem instabilidade, investigar se a causa provável foi anticoagulação recente inadequada — nesse caso, considerar heparina não fracionada intravenosa ± AAS com reavaliação de sucesso/falha, antes de escalonar.",
+        "origem_secao": "A árvore de decisão / Trombose obstrutiva"
+      },
+      {
+        "id": "trombose-protese-conduta-07",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Preferir cirurgia à fibrinólise na trombose obstrutiva do lado esquerdo quando a cirurgia estiver prontamente disponível e sem contraindicação — sucesso hemodinâmico maior (89% vs. 70,9%) e menos episódios embólicos (0,7% vs. 15%) que a fibrinólise (Roudaut et al.), com mortalidade precoce igual entre os dois grupos (10%).",
+        "origem_secao": "Os números que sustentam a preferência por cirurgia"
+      },
+      {
+        "id": "trombose-protese-medicacao-08",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerar fibrinólise (ativador de plasminogênio tecidual recombinante 10 mg em bolus + 90 mg em 90 minutos com heparina não fracionada; ou estreptoquinase 1.500.000 U em 60 minutos sem heparina) quando a cirurgia não está disponível ou é de risco muito alto — Classe IIa, nível B.",
+        "origem_secao": "Recomendações formais da diretriz"
+      },
+      {
+        "id": "trombose-protese-conduta-09",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Preferir fibrinólise como estratégia de primeira linha na trombose de prótese em posição direita (tricúspide/pulmonar), mesmo com cirurgia disponível — o risco de embolização pulmonar associado é menor do que o risco sistêmico/cerebral na posição esquerda.",
+        "origem_secao": "Nota sobre próteses do lado direito"
+      },
+      {
+        "id": "trombose-protese-conduta-10",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Na trombose não obstrutiva, otimizar a anticoagulação e reavaliar em seguimento quando o trombo for pequeno e sem repercussão hemodinâmica; se houver evento tromboembólico associado, considerar intervenção quando o trombo for ≥10 mm (favorece otimizar quando <10 mm).",
+        "origem_secao": "Trombose não obstrutiva"
+      },
+      {
+        "id": "trombose-protese-orientacao-11",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não aplicar este algoritmo à trombose de bioprótese — o tratamento de primeira linha nela é farmacológico (anticoagulação com antagonista de vitamina K e/ou heparina não fracionada, Classe I, nível C), não cirúrgico.",
+        "origem_secao": "Trombose de bioprótese — conduta diferente, não confundir"
+      },
+      {
+        "id": "trombose-protese-orientacao-12",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que a diretriz ESC/EACTS 2021 é a referência vigente conferida nesta sessão, e que uma atualização de valvopatias mais recente pode ter refinado esta árvore de decisão — VERIFICAÇÃO HUMANA NECESSÁRIA quanto a mudança de classe/nível para este tópico em atualização posterior a 2021.",
+        "origem_secao": "Nota final do documento"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395, seção 11.4.4 e Figura 10; e Roudaut R et al. Arch Cardiovasc Dis. 2009;102(4):269-77. PMID: 19427604, em 21/08/2026."
+  },
+  {
+    "slug": "avaliacao-diagnostica-e-decisao-de-intervencao-na-estenose-mitral",
+    "condicao": "Estenose mitral reumática ou degenerativa — avaliação diagnóstica e decisão entre comissurotomia mitral percutânea e cirurgia",
+    "resumo": "Roteiro de avaliação ecocardiográfica, escore de Wilkins e critérios de decisão entre comissurotomia mitral percutânea (CMP) e cirurgia na estenose mitral, conforme a diretriz ESC/EACTS 2025 (Recommendation Table 8).",
+    "documento_origem": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura 14 e Recommendation Table 8."
+    ],
+    "itens": [
+      {
+        "id": "em-exame-01",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Usar a ecocardiografia como método de escolha para avaliar gravidade, extensão das lesões anatômicas e repercussão hemodinâmica da estenose mitral, com a área valvar mitral por planimetria 2D como medida mais usada.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-diagnostico-02",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Considerar estenose mitral clinicamente grave quando a área valvar mitral (AVM) for ≤1,5 cm², associada a fatores clínicos (sintomas, alto risco de tromboembolismo ou descompensação hemodinâmica).",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-aval-03",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente assintomático, ou com sintomas equívocos/discordantes da gravidade, realizar teste de esforço (preferir ecocardiografia de esforço a ecocardiografia com dobutamina, sobretudo se houver contraindicação a esta) para avaliar capacidade funcional e variação do gradiente mitral e da pressão pulmonar.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-exame-04",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiografia transesofágica sistematicamente em candidato a comissurotomia mitral percutânea (CMP), para excluir trombo em átrio esquerdo ou após episódio embólico.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-diagnostico-05",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Aplicar o escore de Wilkins (mobilidade, espessamento e calcificação do folheto e do aparato subvalvular, somando de 4 a 16 pontos) para avaliar adequação à CMP — escore ≤8 prediz sucesso; escore >8 é uma das características anatômicas desfavoráveis à CMP, junto com Cormier grupo 3 (calcificação de qualquer extensão à fluoroscopia) e insuficiência tricúspide grave.",
+        "origem_secao": "Escore de morfologia valvar (Wilkins)"
+      },
+      {
+        "id": "em-conduta-06",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar CMP no paciente sintomático sem características desfavoráveis para o procedimento — Classe I, nível B; e no paciente sintomático com contraindicação ou alto risco cirúrgico — Classe I, nível C.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-conduta-07",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar cirurgia da valva mitral no paciente sintomático não elegível para CMP — Classe I, nível C.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-aval-08",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de indicar CMP, checar as contraindicações da Tabela 8 da diretriz: AVM >1,5 cm², trombo em átrio esquerdo (exceto trombo confinado ao apêndice atrial esquerdo em cenário específico), insuficiência mitral mais que leve, e calcificação grave ou bicomissural.",
+        "origem_secao": "Contraindicações à CMP"
+      },
+      {
+        "id": "em-medicacao-09",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Evitar DOAC em paciente com estenose mitral e AVM ≤2,0 cm² — corte diferente do usado para definir gravidade clínica da estenose (≤1,5 cm²); usar antagonista de vitamina K com INR-alvo entre 2 e 3 na fibrilação atrial associada.",
+        "origem_secao": "Terapia médica"
+      },
+      {
+        "id": "em-diagnostico-10",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diante de paciente idoso com estenose mitral degenerativa por calcificação do anel mitral (MAC), lembrar que não há indicação de CMP — não há fusão comissural a tratar; avaliar por TC cardíaca sincronizada ao ECG quando intervenção estiver planejada, já que a planimetria por ecocardiografia é menos confiável que na estenose reumática.",
+        "origem_secao": "Estenose mitral degenerativa com calcificação do anel mitral (MAC)"
+      },
+      {
+        "id": "em-seguimento-11",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar seguimento ecocardiográfico anual no paciente assintomático com estenose clinicamente grave sem intervenção (intervalo de 2-3 anos se moderada), e manter seguimento após CMP bem-sucedida, porque reestenose assintomática pode ocorrer.",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "em-orientacao-12",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Envolver o Heart Team em doença valvar múltipla envolvendo a mitral — a decisão exige avaliação abrangente e individualizada, incluindo a escolha entre cirurgia combinada e CMP como ponte quando a valva aórtica associada tem doença apenas moderada.",
+        "origem_secao": "Casos clínicos particulares"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295, Seção 10 e Recommendation Table 8, em 21/08/2026."
   }
 ]
