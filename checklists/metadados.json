@@ -18146,5 +18146,271 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-anomalia-de-ebstein",
+    "condicao": "Anomalia de Ebstein no adulto",
+    "resumo": "O que checar do diagnóstico à indicação cirúrgica e ao seguimento vitalício da anomalia de Ebstein, incluindo a estratificação de gravidade pelo índice de Celermajer e a investigação de substrato arrítmico antes de cirurgia planejada — pela diretriz ESC 2020 de cardiopatia congênita do adulto.",
+    "documento_origem": "anomalia-de-ebstein-diagnostico-e-manejo-esc-2020",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028 — seção 4.9 (Ebstein anomaly)."
+    ],
+    "itens": [
+      {
+        "id": "ebstein-eco-deslocamento-avaliado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiografia avaliando o deslocamento apical distal do folheto septal ou posterior — considerado significativo no adulto se ≥0,8 cm/m² de superfície corporal —, tamanho do folheto anterior, aderência (tethering) e função das câmaras (AD, VD atrializado, VD funcional remanescente e VE)",
+        "origem_secao": "Investigação diagnóstica"
+      },
+      {
+        "id": "ebstein-indice-celermajer-calculado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Índice de Celermajer calculado (razão entre área de AD + VD atrializado e área de VD funcional + câmaras esquerdas, grau 1 a 4) como estratificador de gravidade e preditor de óbito",
+        "origem_secao": "Investigação diagnóstica"
+      },
+      {
+        "id": "ebstein-substrato-arritmico-investigado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ECG e investigação de vias acessórias/pré-excitação realizados, dado que taquicardia por reentrada atrioventricular é a arritmia mais comum na anomalia de Ebstein",
+        "origem_secao": "Apresentação clínica e história natural"
+      },
+      {
+        "id": "ebstein-anticoagulacao-avaliada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação oral avaliada: recomendada em história de embolia paradoxal ou fibrilação atrial; considerada se risco tromboembólico aumentado ou shunt direita-esquerda — conforme prescrição médica",
+        "origem_secao": "Tratamento clínico"
+      },
+      {
+        "id": "ebstein-indicacao-cirurgica-avaliada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicação de reparo cirúrgico avaliada: recomendado em IT grave com sintomas ou deterioração objetiva da capacidade de exercício (Classe I); considerado independente de sintomas se houver dilatação progressiva de coração direito ou redução da função sistólica de VD (Classe IIa)",
+        "origem_secao": "Indicações de cirurgia e de intervenção por cateter"
+      },
+      {
+        "id": "ebstein-cirurgiao-experiente",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para cirurgião congênito com experiência específica em cirurgia de Ebstein antes de indicar reparo — a complexidade técnica exige experiência dedicada",
+        "origem_secao": "Indicações de cirurgia e de intervenção por cateter"
+      },
+      {
+        "id": "ebstein-eef-pre-operatorio",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em arritmia sintomática ou pré-excitação ao ECG, estudo eletrofisiológico seguido de ablação (se factível) considerado antes de cirurgia cardíaca planejada, aproveitando o acesso transcateter mais fácil antes da valva ser operada",
+        "origem_secao": "Indicações de cirurgia e de intervenção por cateter"
+      },
+      {
+        "id": "ebstein-fechamento-cia-concomitante",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Fechamento de CIA/FOP no momento do reparo valvar, se esperado ser hemodinamicamente tolerado — nunca isolado sem avaliação cuidadosa do impacto na pressão de AD e no débito cardíaco sistêmico",
+        "origem_secao": "Indicações de cirurgia e de intervenção por cateter"
+      },
+      {
+        "id": "ebstein-orientacao-esporte",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação sobre atividade física: paciente sem anomalia residual pode levar vida ativa normal, exceto esporte estático extenso; IT mais que leve, disfunção ventricular, shunt ou arritmia exige evitar exercício isométrico pesado, proporcional à gravidade",
+        "origem_secao": "Considerações adicionais"
+      },
+      {
+        "id": "ebstein-orientacao-gestacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação sobre risco gestacional: paciente assintomática com boa função ventricular tolera bem a gestação; risco mais alto na presença de cianose significativa, arritmia grave ou falência de coração direito",
+        "origem_secao": "Considerações adicionais"
+      },
+      {
+        "id": "ebstein-profilaxia-endocardite",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Profilaxia antibiótica de endocardite infecciosa recomendada só para paciente de alto risco, não de rotina",
+        "origem_secao": "Considerações adicionais"
+      },
+      {
+        "id": "ebstein-seguimento-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento regular, pelo menos anual, em centro especializado em ACHD, rastreando anomalias residuais pós-operatórias: IT persistente ou nova, complicações pós-troca valvar, falência de VD ou VE, shunt atrial residual, arritmias e bloqueio AV de grau mais alto",
+        "origem_secao": "Seguimento"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiopatias congênitas citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "investigacao-e-conduta-na-doenca-renovascular",
+    "condicao": "Estenose de artéria renal e doença renovascular",
+    "resumo": "O que checar da suspeita clínica ao diagnóstico por imagem e à decisão de revascularizar (ou não) a estenose de artéria renal aterosclerótica, incluindo a recomendação Classe III/A contra revascularização de rotina na estenose unilateral — pela diretriz ESC 2024 de doenças arterial periférica e aórtica.",
+    "documento_origem": "doenca-renovascular-diagnostico-e-tratamento-esc-2024",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — seção 8.3.2 (Renal artery disease), Tabela 13 e Recommendation Tables."
+    ],
+    "itens": [
+      {
+        "id": "renovasc-sinais-suspeita-reconhecidos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais clínicos sugestivos de estenose de artéria renal reconhecidos: hipertensão de início antes dos 30 anos, hipertensão grave após os 55 anos com doença renal crônica ou insuficiência cardíaca, sopro abdominal, piora rápida de hipertensão previamente controlada, hipertensão resistente, crise hipertensiva, azotemia nova após início de bloqueador do sistema renina-angiotensina-aldosterona, rim atrófico ou discrepância de tamanho renal, edema agudo de pulmão relâmpago",
+        "origem_secao": "Quando suspeitar — sinais clínicos sugestivos"
+      },
+      {
+        "id": "renovasc-doppler-primeira-linha",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Doppler solicitado como modalidade de imagem de primeira linha na suspeita de estenose de artéria renal (Classe I, Nível B) — critério de velocidade sistólica de pico >200 cm/s",
+        "origem_secao": "Diagnóstico — critérios por método de imagem"
+      },
+      {
+        "id": "renovasc-metodo-diagnostico-nao-invasivo-antes-invasivo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Sequência de investigação respeitada: Doppler e outras modalidades não invasivas (angio-TC ou angio-RM) realizadas antes da angiografia por cateter e da medida hemodinâmica invasiva",
+        "origem_secao": "Diagnóstico — critérios por método de imagem"
+      },
+      {
+        "id": "renovasc-nao-usar-cintilografia-renina",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Cintilografia renal, medida de renina plasmática antes/depois de provocação com IECA e renina venosa não usadas — não são mais considerados métodos de avaliação atuais",
+        "origem_secao": "Diagnóstico — critérios por método de imagem"
+      },
+      {
+        "id": "renovasc-terapia-medica-otimizada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia médica otimizada instituída em todo paciente com estenose de artéria renal, com antiagregante plaquetário considerado razoável — conforme prescrição médica",
+        "origem_secao": "Tratamento medicamentoso"
+      },
+      {
+        "id": "renovasc-nao-revascularizar-unilateral-rotina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Revascularização de rotina NÃO indicada em estenose aterosclerótica unilateral só pela estenose (Classe III, Nível A) — a recomendação mais forte da tabela, refletindo os ensaios randomizados negativos",
+        "origem_secao": "Revascularização — quando indicar, e quando não indicar"
+      },
+      {
+        "id": "renovasc-criterios-revascularizacao-verificados",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Antes de indicar revascularização (unilateral >70% com alto risco, bilateral >70% ou rim único), verificados em conjunto: características de alto risco associadas E sinais de viabilidade renal — nunca a estenose isolada",
+        "origem_secao": "Revascularização — quando indicar, e quando não indicar"
+      },
+      {
+        "id": "renovasc-dfm-tecnica-especifica",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em estenose por displasia fibromuscular com indicação de revascularização, técnica de angioplastia por balão primária com stent de resgate considerada",
+        "origem_secao": "Revascularização — quando indicar, e quando não indicar"
+      },
+      {
+        "id": "renovasc-dapt-pos-stent",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Após implante de stent em artéria renal, terapia antiplaquetária dupla por pelo menos 1 mês sugerida, na ausência de estudo prospectivo específico — conforme prescrição médica",
+        "origem_secao": "Tratamento medicamentoso"
+      },
+      {
+        "id": "renovasc-cirurgia-aberta-alternativa",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Revascularização cirúrgica aberta considerada em anatomia complexa ou após falha de revascularização endovascular, com desfecho comparável ao endovascular para pressão arterial e função renal",
+        "origem_secao": "Revascularização — quando indicar, e quando não indicar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Aorta e doença arterial periférica citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "avaliacao-e-conduta-na-estenose-pulmonar-do-adulto",
+    "condicao": "Obstrução da via de saída do ventrículo direito (estenose pulmonar) no adulto",
+    "resumo": "O que checar na classificação anatômica, graduação de gravidade e indicação de intervenção da estenose pulmonar do adulto, incluindo a armadilha de medida do gradiente em estenoses em série e o ajuste de expectativa na valva displásica da síndrome de Noonan — pela diretriz ESC 2020 de cardiopatia congênita do adulto.",
+    "documento_origem": "obstrucao-da-via-de-saida-do-ventriculo-direito-estenose-pulmonar-esc-2020",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028 — seção 4.8 (Right ventricular outflow tract obstruction), Recommendation Table e Figura 7."
+    ],
+    "itens": [
+      {
+        "id": "ep-nivel-anatomico-classificado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Nível anatômico da obstrução classificado: sub-infundibular (dupla câmara de VD), infundibular, valvular ou supravalvular (estenose de artéria pulmonar) — a conduta e a técnica de intervenção dependem diretamente desse nível",
+        "origem_secao": "Classificação por nível anatômico"
+      },
+      {
+        "id": "ep-gradiente-graduado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Gravidade graduada pelo gradiente de pico ao Doppler: leve <36 mmHg, moderada 36-64 mmHg, grave >64 mmHg — válida quando há função sistólica de VD normal e fluxo transvalvar normal",
+        "origem_secao": "Graduação de gravidade (gradiente de pico ao Doppler)"
+      },
+      {
+        "id": "ep-armadilha-gradiente-serie",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em estreitamento alongado ou mais de uma estenose em série (por exemplo subvalvular e valvular associadas), gradiente direto substituído pela velocidade de regurgitação tricúspide como estimativa mais confiável — a equação de Bernoulli superestima o gradiente nesse cenário",
+        "origem_secao": "Graduação de gravidade (gradiente de pico ao Doppler)"
+      },
+      {
+        "id": "ep-valvuloplastia-primeira-escolha",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Valvuloplastia por balão indicada como intervenção de escolha na estenose pulmonar valvar, se anatomicamente adequada (Classe I, Nível C)",
+        "origem_secao": "Indicação de intervenção"
+      },
+      {
+        "id": "ep-indicacao-grave-independente-sintoma",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Intervenção indicada independente de sintomas quando o gradiente de pico ao Doppler é >64 mmHg (estenose grave), desde que troca valvar não seja necessária (Classe I, Nível C) — não adiar esperando sintoma aparecer",
+        "origem_secao": "Indicação de intervenção"
+      },
+      {
+        "id": "ep-criterios-troca-valvar-assintomatico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a troca valvar cirúrgica for a única opção em paciente com estenose grave assintomático, verificados os critérios que indicam a troca (Classe I): queda objetiva da capacidade de exercício, queda de função de VD e/ou progressão de IT para pelo menos moderada, PSVD >80 mmHg, ou shunt direita-esquerda via CIA/CIV",
+        "origem_secao": "Indicação de intervenção"
+      },
+      {
+        "id": "ep-tecnica-por-nivel-anatomico",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Técnica escolhida pelo nível anatômico: valvotomia por balão via cateter para estenose valvar não displásica e para estenose periférica (com implante de stent, com frequência); cirurgia para estenose sub-infundibular ou infundibular e para anel pulmonar hipoplásico",
+        "origem_secao": "Escolha da técnica"
+      },
+      {
+        "id": "ep-noonan-expectativa-ajustada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em valva displásica (frequentemente parte da síndrome de Noonan), expectativa de sucesso da valvuloplastia por balão ajustada para menor, com cirurgia entrando mais cedo nesse subtipo",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ep-orientacao-esporte",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação sobre atividade física conforme gravidade: sem restrição em estenose leve residual; evitar esporte estático e de alta intensidade na moderada; restringir a esporte de baixa intensidade na grave",
+        "origem_secao": "Considerações adicionais"
+      },
+      {
+        "id": "ep-orientacao-gestacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação sobre gestação: em geral bem tolerada, a menos que a obstrução seja extremamente grave ou haja falência de VD relevante — valvuloplastia por balão transcateter pode ser realizada durante a gestação se necessário",
+        "origem_secao": "Considerações adicionais"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiopatias congênitas citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
