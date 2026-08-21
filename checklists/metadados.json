@@ -8424,5 +8424,212 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "reversao-de-doac-em-sangramento-maior-idarucizumabe-vs-andexanet-alfa",
+    "condicao": "Sangramento maior em paciente anticoagulado com dabigatrana ou inibidor do fator Xa",
+    "resumo": "Escolha e uso do agente reversor específico correto conforme a classe do anticoagulante oral direto em uso, e cuidados na interpretação da resposta e no risco trombótico pós-reversão.",
+    "documento_origem": "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pollack CV Jr, Reilly PA, van Ryn J, et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441. DOI: 10.1056/NEJMoa1707278. PMID: 28693366",
+      "Connolly SJ, Crowther M, Eikelboom JW, et al; ANNEXA-4 Investigators. Full Study Report of Andexanet Alfa for Bleeding Associated with Factor Xa Inhibitors. N Engl J Med. 2019;380(14):1326-1335. DOI: 10.1056/NEJMoa1814051. PMID: 30730782"
+    ],
+    "itens": [
+      {
+        "id": "revdoac-classe-anticoagulante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar qual classe de anticoagulante oral direto está em uso — dabigatrana (inibidor direto da trombina) ou inibidor do fator Xa (rivaroxabana, apixabana, edoxabana) — antes de escolher o agente reversor, já que não há eficácia cruzada entre eles.",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "revdoac-confirmar-sangramento-maior",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que se trata de sangramento maior/não controlado (ex.: hemorragia intracraniana, sangramento gastrointestinal não controlado) ou necessidade de procedimento urgente antes de indicar reversão farmacológica específica.",
+        "origem_secao": "Re-verse ad — idarucizumabe"
+      },
+      {
+        "id": "revdoac-idarucizumabe-dabigatrana",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em sangramento por dabigatrana, administrar idarucizumabe — no RE-VERSE AD (n=503), a reversão do efeito anticoagulante teve mediana de 100% (IC95% 100-100), com cessação do sangramento em tempo mediano de 2,5 horas no grupo com sangramento não controlado.",
+        "origem_secao": "Re-verse ad — idarucizumabe"
+      },
+      {
+        "id": "revdoac-andexanet-fator-xa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em sangramento por inibidor do fator Xa (rivaroxabana, apixabana), administrar andexanet alfa em bolus seguido de infusão de 2 horas — no ANNEXA-4 (n=352), a atividade anti-fator Xa caiu em cerca de 92% (apixabana e rivaroxabana), com hemostasia excelente ou boa em 12 horas em 82% dos pacientes avaliáveis.",
+        "origem_secao": "Annexa-4 — andexanet alfa"
+      },
+      {
+        "id": "revdoac-nao-cruzar-agentes",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Nunca usar andexanet alfa em sangramento por dabigatrana, nem idarucizumabe em sangramento por inibidor do fator Xa — cada agente é específico para sua classe (trombina direta vs. fator Xa), sem eficácia cruzada.",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "revdoac-nao-confiar-so-em-anti-xa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Não considerar o paciente 'revertido e seguro' apenas pela queda laboratorial da atividade anti-fator Xa após andexanet alfa — o ANNEXA-4 mostrou que essa redução não foi preditiva de eficácia hemostática clínica global (só modestamente preditiva no subgrupo com hemorragia intracraniana); avaliar a hemostasia clínica diretamente.",
+        "origem_secao": "Annexa-4 — andexanet alfa"
+      },
+      {
+        "id": "revdoac-risco-tromboembolico-pos-reversao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorar risco trombótico após a reversão — evento trombótico ocorreu em 6,3-7,4% (idarucizumabe, 90 dias) e 10% (andexanet alfa, 30 dias) — e retomar a anticoagulação assim que a hemostasia permitir, sem adiar indefinidamente por precaução excessiva.",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "revdoac-mortalidade-reflete-gravidade-basal",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não atribuir a mortalidade elevada observada nos dois ensaios (18,8-18,9% em 90 dias com idarucizumabe; 14% em 30 dias com andexanet alfa) à falha do agente reversor — a população estudada tem sangramento maior grave e comorbidade extensa, e a mortalidade reflete a gravidade basal do quadro.",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Pollack CV Jr et al., N Engl J Med. 2017;377(5):431-441 (PMID 28693366) e Connolly SJ et al., N Engl J Med. 2019;380(14):1326-1335 (PMID 30730782), em 20/08/2026."
+  },
+  {
+    "slug": "indicacao-e-plano-de-retirada-de-filtro-de-veia-cava-inferior-recuperavel",
+    "condicao": "Indicação de filtro de veia cava inferior recuperável no tromboembolismo venoso",
+    "resumo": "Restringe a indicação do filtro de VCI recuperável às duas situações em que a evidência sustenta o uso e garante, desde o implante, um plano explícito de retirada — a taxa de retirada na prática corrente é baixa e a retenção prolongada carrega risco mecânico documentado.",
+    "documento_origem": "filtro-de-veia-cava-inferior-recuperavel-indicacoes-restritas-e-risco-do-filtro-nao-retirado",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077",
+      "Mismetti P, Laporte S, Pellerin O, et al; PREPIC2 Study Group. Effect of a retrievable inferior vena cava filter plus anticoagulation vs anticoagulation alone on risk of recurrent pulmonary embolism: a randomized clinical trial. JAMA. 2015;313(16):1627-1635. DOI: 10.1001/jama.2015.3780. PMID: 25919526",
+      "Angel LF, Tapson V, Galgon RE, Restrepo MI, Kaufman J. Systematic review of the use of retrievable inferior vena cava filters. J Vasc Interv Radiol. 2011;22(11):1522-1530.e3. PMID: 22024114",
+      "Nicholson W, Nicholson WJ, Tolerico P, et al. Prevalence of fracture and fragment embolization of Bard retrievable vena cava filters and clinical implications including cardiac perforation and tamponade. Arch Intern Med. 2010;170(20):1827-1831. PMID: 20696949 (errata publicada, PMID 22732763, não lida na redação do documento de origem)"
+    ],
+    "itens": [
+      {
+        "id": "filtrovci-confirmar-contraindicacao-anticoagulacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que a anticoagulação plena está genuinamente contraindicada ou inviável (sangramento ativo maior, cirurgia de grande porte recente com risco hemorrágico proibitivo, ou outra condição semelhante) antes de indicar filtro de VCI — as Recomendações 10 e 11 da ASH 2020 sugerem anticoagulação isolada, mesmo em TVP proximal com doença cardiopulmonar significativa ou TEP com comprometimento hemodinâmico, quando a anticoagulação é possível.",
+        "origem_secao": "Não é dispositivo de primeira linha, nem tratamento de rotina"
+      },
+      {
+        "id": "filtrovci-nao-associar-por-gravidade",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar filtro de VCI associado à anticoagulação plena apenas pela gravidade do quadro (TEP maciço, disfunção de ventrículo direito, trombo extenso) — é exatamente o cenário testado e refutado pelo PREPIC2: TEP recorrente sintomático em 3 meses ocorreu em 3,0% do grupo filtro vs. 1,5% do grupo controle (RR 2,00; IC95% 0,51-7,89; p=0,50), sem diferença estatística.",
+        "origem_secao": "O que o PREPIC2 mostrou, e por que reforça o uso restrito"
+      },
+      {
+        "id": "filtrovci-excluir-causas-recorrencia-falsa",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Em TEV recorrente sob anticoagulação em dose terapêutica, excluir dose subterapêutica, má adesão e trombo residual mal classificado como recorrência antes de considerar o filtro — o uso rotineiro de filtro de VCI deve ser evitado nesse cenário, reservado a casos individualizados.",
+        "origem_secao": "Indicações reais e restritas"
+      },
+      {
+        "id": "filtrovci-plano-de-retirada-por-escrito",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Ao implantar o filtro, registrar por escrito o plano de reavaliação: quem é o responsável por verificar periodicamente se a contraindicação à anticoagulação já se resolveu, e por agendar a retirada assim que isso ocorrer.",
+        "origem_secao": "Por que agendar e garantir a retirada é parte da indicação, não um detalhe posterior"
+      },
+      {
+        "id": "filtrovci-taxa-de-retirada-baixa",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar a equipe de que a taxa real de retirada na prática corrente é baixa — 34% numa revisão sistemática de 37 estudos e 6.834 pacientes — e que, sem responsável explícito, o filtro 'temporário' tende a virar permanente por omissão, não por decisão clínica.",
+        "origem_secao": "O custo real de um filtro que fica retido além do necessário"
+      },
+      {
+        "id": "filtrovci-risco-mecanico-retencao-prolongada",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reconhecer que a retenção prolongada (acima de 30 dias) carrega risco mecânico documentado: em série de casos com modelos específicos (Bard Recovery/G2), 13 de 80 pacientes (16%) tiveram fratura de haste, com embolização de fragmento para o coração em 5 dos 7 casos de fratura do modelo Recovery e 3 pacientes desenvolvendo taquicardia ventricular e/ou tamponamento cardíaco com risco de vida, incluindo 1 morte súbita.",
+        "origem_secao": "O custo real de um filtro que fica retido além do necessário"
+      },
+      {
+        "id": "filtrovci-nao-extrapolar-modelo-especifico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não extrapolar a taxa de complicação de um modelo específico de fabricante (Bard Recovery/G2) para 'filtro de VCI' em geral — onde a taxa de complicação de um modelo específico não tiver sido verificada, sinalizar VERIFICAÇÃO HUMANA NECESSÁRIA antes de citá-la como representativa de todos os dispositivos recuperáveis.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Ortel TL et al., Blood Adv. 2020;4(19):4693-4738 (PMID 33007077) e Mismetti P et al., JAMA. 2015;313(16):1627-1635 (PMID 25919526), em 20/08/2026."
+  },
+  {
+    "slug": "avaliacao-e-decisao-terapeutica-na-estenose-mitral-reumatica",
+    "condicao": "Estenose mitral reumática grave — avaliação e decisão entre comissurotomia percutânea e cirurgia",
+    "resumo": "Sequência de avaliação ecocardiográfica e critérios de decisão entre comissurotomia mitral percutânea (CMP) e cirurgia na estenose mitral reumática grave, segundo a diretriz ESC/EACTS 2025.",
+    "documento_origem": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura 14 e Recommendation Table 8"
+    ],
+    "itens": [
+      {
+        "id": "emitral-confirmar-etiologia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar a etiologia da estenose mitral (reumática ou degenerativa por calcificação do anel mitral/MAC) — as duas exigem estratégia de avaliação e tratamento distintas, e a EM degenerativa não é passível de comissurotomia percutânea.",
+        "origem_secao": "Etiologia e relevância epidemiológica"
+      },
+      {
+        "id": "emitral-avm-por-planimetria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Medir a área valvar mitral (AVM) por planimetria 2D ao ecocardiograma, método de escolha para avaliar gravidade — AVM ≤1,5 cm², associada a fatores clínicos (sintomas, alto risco de tromboembolismo ou descompensação hemodinâmica), define EM clinicamente grave.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "emitral-escore-wilkins",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Em candidato a comissurotomia mitral percutânea (CMP), calcular o escore de morfologia valvar de Wilkins (4 componentes — mobilidade, espessamento e calcificação do folheto, e espessamento/calcificação do aparato subvalvular — 1 a 4 pontos cada) — escore >8 é uma das características anatômicas desfavoráveis à CMP, junto com Cormier grupo 3 e insuficiência tricúspide grave.",
+        "origem_secao": "Escore de morfologia valvar (Wilkins) — resolve lacuna comum na literatura secundária"
+      },
+      {
+        "id": "emitral-eco-transesofagico-candidato-cmp",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiograma transesofágico sistematicamente em todo candidato a CMP, para excluir trombo em átrio esquerdo ou após episódio embólico.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "emitral-indicacao-cmp-ou-cirurgia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Indicar CMP (Classe I, Nível B) em paciente sintomático sem características desfavoráveis para o procedimento; considerar cirurgia da valva mitral (Classe I, Nível C) em paciente sintomático não elegível para CMP.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "emitral-doac-avm-corte",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antes de prescrever anticoagulante oral direto (DOAC) em paciente com EM e fibrilação atrial, checar a área valvar mitral — DOAC deve ser evitado quando AVM ≤2,0 cm² (corte distinto do usado para definir gravidade clínica, ≤1,5 cm²); usar antagonista de vitamina K com INR-alvo entre 2 e 3 nesse cenário.",
+        "origem_secao": "Terapia médica"
+      },
+      {
+        "id": "emitral-nao-cmp-em-mac",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tentar CMP em EM degenerativa com calcificação do anel mitral (MAC) — não há fusão comissural para tratar; nesse cenário a intervenção é cirúrgica (reparo/troca com descalcificação extensa) ou, em casos selecionados de alto risco, implante transcateter de valva mitral (TMVI).",
+        "origem_secao": "Estenose mitral degenerativa com calcificação do anel mitral (MAC)"
+      },
+      {
+        "id": "emitral-seguimento-ecocardiografico",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar seguimento ecocardiográfico anual no paciente assintomático com EM clinicamente grave sem intervenção (intervalo de 2-3 anos em EM moderada), e reavaliar após CMP bem-sucedida — reestenose assintomática pode ocorrer.",
+        "origem_secao": "Seguimento"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Praz F et al., 2025 ESC/EACTS Guidelines for the management of valvular heart disease, Eur Heart J. 2025;46(44):4635-4747 (PMID 40878295), em 20/08/2026."
   }
 ]
