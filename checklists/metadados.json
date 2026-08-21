@@ -8424,5 +8424,243 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "interacao-de-estatina-cyp3a4-dependente-com-macrolideo-azol-anlodipino-ou-fibrato",
+    "condicao": "Interação de estatina metabolizada por CYP3A4 com macrolídeo, azólico, anlodipino ou fibrato",
+    "resumo": "Qual estatina, com qual fármaco associado e o que fazer na prática — suspender, trocar ou seguir com atenção redobrada — diante de claritromicina/eritromicina, itraconazol/cetoconazol/voriconazol/fluconazol, anlodipino ou fibrato concomitantes, separando a decisão pela via de eliminação de cada estatina, não pela classe farmacológica.",
+    "documento_origem": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Patel AM, Shariff S, Bailey DG, Juurlink DN, Gandhi S, Mamdani M, Gomes T, Fleet J, Hwang YJ, Garg AX. Statin toxicity from macrolide antibiotic coprescription: a population-based cohort study. Ann Intern Med. 2013;158(12):869-876. DOI: 10.7326/0003-4819-158-12-201306180-00004. PMID: 23778904 — coorte populacional, Ontário, Canadá, 2003-2010, n=72.591 (claritromicina) + 3.267 (eritromicina) vs. 68.478 (azitromicina)",
+      "Neuvonen PJ, Niemi M, Backman JT. Drug interactions with lipid-lowering drugs: mechanisms and clinical relevance. Clin Pharmacol Ther. 2006;80(6):565-581. DOI: 10.1016/j.clpt.2006.09.003. PMID: 17178259 — revisão mecanística, classifica as estatinas por via de metabolização",
+      "Zhou YT, Yu LS, Zeng S, Huang YW, Xu HM, Zhou Q. Pharmacokinetic drug-drug interactions between 1,4-dihydropyridine calcium channel blockers and statins: factors determining interaction strength and relevant clinical risk management. Ther Clin Risk Manag. 2014;10:17-26. DOI: 10.2147/TCRM.S55512. PMCID: PMC3873236. PMID: 24379677 — revisão sistemática da literatura de 1987 a 2013, cita a comunicação de segurança da FDA de 2011 que limitou a dose de sinvastatina com anlodipino",
+      "Neuvonen PJ, Kantola T, Kivistö KT. Simvastatin but not pravastatin is very susceptible to interaction with the CYP3A4 inhibitor itraconazole. Clin Pharmacol Ther. 1998;63(3):332-341. PMID: 9542477 — estudo cruzado, 10 voluntários, itraconazol aumentou a AUC da sinvastatina ácida em cerca de 19 vezes; a pravastatina não foi afetada de forma relevante",
+      "Venkatakrishnan K, von Moltke LL, Greenblatt DJ. Effects of the antifungal agents on oxidative drug metabolism: clinical relevance. Clin Pharmacokinet. 2000;38(2):111-180. PMID: 10709776 — revisão, classifica cetoconazol e itraconazol como inibidores potentes de CYP3A4 e descreve a potência do fluconazol como 'muito menor', com interação clinicamente relevante geralmente só a partir de 200 mg/dia",
+      "Medsafe (Medicines and Medical Devices Safety Authority, Nova Zelândia). Statins and CYP interactions. Prescriber Update. Março de 2014. Disponível em: medsafe.govt.nz/profs/PUArticles/March2014StatinsAndCYPInteractions.htm — fonte regulatória (não é ensaio nem revisão indexada no PubMed), usada apenas para confirmar que o voriconazol é classificado, na mesma categoria do itraconazol/cetoconazol/posaconazol, como inibidor potente de CYP3A4, com a combinação com sinvastatina listada como contraindicada",
+      "Kyrklund C, Backman JT, Neuvonen M, Neuvonen PJ. Gemfibrozil increases plasma pravastatin concentrations and reduces pravastatin renal clearance. Clin Pharmacol Ther. 2003;73(6):538-544. PMID: 12811363 — estudo cruzado, 10 voluntários, gemfibrozila aumentou a AUC da pravastatina em 202% (variação 40%-412%)",
+      "Gustavson LE, Schweitzer SM, Koehne-Voss S, Achari R, Chira TO, Esslinger HU, Yannicelli HD. The effects of multiple doses of fenofibrate on the pharmacokinetics of pravastatin and its 3alpha-hydroxy isomeric metabolite. J Clin Pharmacol. 2005;45(8):947-953. PMID: 16027406 — 24 voluntários, fenofibrato aumentou a AUC da pravastatina em apenas 19%-28%, sem diferença estatisticamente significativa entre a 1ª e a 10ª dose",
+      "Kyrklund C, Backman JT, Kivistö KT, Neuvonen M, Laitila J, Neuvonen PJ. Plasma concentrations of active lovastatin acid are markedly increased by gemfibrozil but not by bezafibrate. Clin Pharmacol Ther. 2001;69(5):340-345. PMID: 11372002 — gemfibrozila aumentou a AUC da lovastatina ácida em 280%; bezafibrato (fibrato distinto do fenofibrato) sem efeito estatisticamente significativo — citado como confirmação qualitativa adicional, não como fonte da magnitude numérica gemfibrozila×fenofibrato",
+      "Whitfield LR, Porcari AR, Alvey C, Abel R, Bullen W, Hartman D. Effect of gemfibrozil and fenofibrate on the pharmacokinetics of atorvastatin. J Clin Pharmacol. 2011;51(3):378-388. PMID: 20413454 — aumento significativo da AUC de atorvastatina com gemfibrozila; nenhuma mudança clinicamente relevante com fenofibrato",
+      "Shaukat A, Benekli M, Vladutiu GD, Slack JL, Wetzler M, Baer MR. Simvastatin-fluconazole causing rhabdomyolysis. Ann Pharmacother. 2003;37(7-8):1032-1035. PMID: 12841814 — relato de caso, não coorte; citado apenas para mostrar que o fluconazol, apesar de inibidor de CYP3A4 mais fraco, também tem caso documentado de rabdomiólise com sinvastatina",
+      "Hazin R, Abu-Rajab Tamimi TI, Abuzetun JY, Zein NN. Rhabdomyolysis induced by simvastatin-fluconazole combination. J Natl Med Assoc. 2008;100(4):444-446. PMID: 18481486 — relato de caso, mesma ressalva de nível de evidência do PMID 12841814"
+    ],
+    "itens": [
+      {
+        "id": "estatina-cyp3a4-identificar-via",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estatina do paciente classificada pela via de eliminação antes de avaliar qualquer interação: sinvastatina/lovastatina (CYP3A4, sinvastatina ácida também por CYP2C8) e atorvastatina (CYP3A4) sob risco relevante; fluvastatina (CYP2C9) risco bem menor; pravastatina, rosuvastatina e pitavastatina (excreção majoritariamente inalterada) sem aumento significativo de concentração com inibidores de CYP3A4",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — O que decide o risco: a via de metabolização, não a classe"
+      },
+      {
+        "id": "estatina-cyp3a4-macrolideo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diante de prescrição concomitante de claritromicina ou eritromicina (inibidores de CYP3A4) em paciente com sinvastatina, lovastatina ou atorvastatina: preferir azitromicina — que não interage por essa via — ou suspender temporariamente a estatina durante o curso do antimicrobiano",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Interação com macrolídeos: o número real, de uma coorte de 144 mil pacientes"
+      },
+      {
+        "id": "estatina-cyp3a4-desfecho-macrolideo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Diante de coprescrição confirmada de claritromicina/eritromicina com estatina CYP3A4-dependente em paciente idoso: atenção não só ao risco absoluto de rabdomiólise (pequeno, aumento de 0,02%), mas também à lesão renal aguda (aumento absoluto de 1,26%) e à mortalidade por todas as causas (aumento absoluto de 0,25%), que têm maior peso na mesma coorte",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Interação com macrolídeos: o número real, de uma coorte de 144 mil pacientes"
+      },
+      {
+        "id": "estatina-cyp3a4-azol-potente",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diante de itraconazol, cetoconazol ou voriconazol (inibidores potentes de CYP3A4) em paciente com sinvastatina ou lovastatina: suspender a estatina ou trocar para rosuvastatina/pravastatina — a combinação de sinvastatina com esses antifúngicos é listada como contraindicada em bula",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Azóis: interação estrutural, mais forte que a dos macrolídeos"
+      },
+      {
+        "id": "estatina-cyp3a4-fluconazol",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fluconazol reconhecido como inibidor de CYP3A4 de potência bem menor que itraconazol/cetoconazol/voriconazol — interação clinicamente relevante por essa via, em geral, só a partir de dose ≥200 mg/dia; ainda assim, há relato de caso de rabdomiólise com a combinação fluconazol-sinvastatina, então atenção redobrada em dose alta",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Azóis: interação estrutural, mais forte que a dos macrolídeos"
+      },
+      {
+        "id": "estatina-cyp3a4-anlodipino",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Uso crônico de anlodipino associado à sinvastatina identificado — interação de fácil esquecimento porque nenhum evento agudo dispara atenção: respeitar o limite de dose de sinvastatina estabelecido pela comunicação de segurança da FDA de 2011, ou preferir atorvastatina, que não tem limitação de dose equivalente com anlodipino",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Anlodipino: interação real, mas menor que a da sinvastatina com inibidores potentes"
+      },
+      {
+        "id": "estatina-cyp3a4-fibrato",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Quando associação com fibrato for necessária em paciente com estatina CYP3A4-dependente: preferir fenofibrato a genfibrozila — em estudos cruzados, a genfibrozila aumentou a AUC da pravastatina em 202% (variação 40%-412%) e da lovastatina ácida em 280%, contra aumento de apenas 19%-28% da AUC da pravastatina com fenofibrato",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Uma terceira via, fora do CYP3A4, que vale conhecer: fibratos e OATP1B1"
+      },
+      {
+        "id": "estatina-cyp3a4-nao-trocar-por-mesma-via",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao trocar de estatina diante de inibidor potente de CYP3A4, confirmado que a substituta não depende da mesma via: trocar sinvastatina por atorvastatina não resolve por completo, pois a interação com atorvastatina existe, apenas é menor — rosuvastatina ou pravastatina são as trocas que evitam a via CYP3A4",
+        "origem_secao": "interacoes-medicamentosas-de-estatinas-metabolizadas-por-cyp3a4-macrolideos-azois-e-anlodipino.md — Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Farmacologia já verificado citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "ajuste-de-dose-de-doac-apixabana-e-rivaroxabana-por-funcao-renal",
+    "condicao": "Ajuste de dose de apixabana e rivaroxabana por função renal",
+    "resumo": "Critérios de redução de dose de apixabana e rivaroxabana pela bula brasileira 2025, específicos por fármaco e por indicação (fibrilação atrial não valvular vs. tromboembolismo venoso), para não aplicar a regra de um anticoagulante ao outro conforme a função renal do paciente.",
+    "documento_origem": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Eliquis® (apixabana). Bula profissional Pfizer Brasil. LLD_Bra_CCDS_27Jun2019_SMPC_17May2021_v13_ELICOR_33_VPS. 22/Out/2025.",
+      "Xarelto® (rivaroxabana). Bula profissional Bayer S.A., Bulário Bayer; versão aprovada pela Anvisa em 22/12/2025."
+    ],
+    "itens": [
+      {
+        "id": "doac-renal-clcr-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ClCr calculado antes de definir a dose de apixabana ou rivaroxabana — a redução de dose de cada fármaco segue critério próprio, não intercambiável entre os dois anticoagulantes",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — Armadilhas que a calculadora evita"
+      },
+      {
+        "id": "doac-renal-contraindicacao-clcr15",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ClCr <15 mL/min ou diálise identificado: apixabana e rivaroxabana não recomendadas pelas bulas brasileiras consultadas nesse cenário",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — Árvore de decisão — apixabana; Árvore de decisão — rivaroxabana"
+      },
+      {
+        "id": "doac-renal-apixabana-fa-2de3",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na fibrilação atrial não valvular com apixabana: dose reduzida para 2,5 mg 2x/dia somente quando presentes pelo menos 2 dos 3 critérios — idade ≥80 anos, peso ≤60 kg, creatinina sérica ≥1,5 mg/dL; ter apenas um critério isolado não produz redução automática",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — Regra dos “2 de 3” na FA"
+      },
+      {
+        "id": "doac-renal-apixabana-tev",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "No TVP/EP agudo com apixabana: 10 mg 2x/dia nos dias 1-7, 5 mg 2x/dia a partir do dia 8, e 2,5 mg 2x/dia na prevenção de recorrência após pelo menos 6 meses; com ClCr 15-29 mL/min, a bula mantém esses esquemas com uso cauteloso",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — TEV com apixabana"
+      },
+      {
+        "id": "doac-renal-rivaroxabana-fa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na fibrilação atrial não valvular com rivaroxabana: 20 mg 1x/dia com alimento se ClCr ≥50 mL/min; 15 mg 1x/dia com alimento se ClCr 15-49 mL/min, com cautela adicional na faixa 15-29 mL/min por dados clínicos limitados",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — FA não valvular com rivaroxabana"
+      },
+      {
+        "id": "doac-renal-rivaroxabana-tev",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "No TVP/EP com rivaroxabana: 15 mg 2x/dia com alimento nos dias 1-21 (cautela adicional com ClCr 15-29 mL/min); a partir do dia 22, dose usual 20 mg 1x/dia, com 15 mg 1x/dia como consideração condicional na insuficiência renal moderada/grave (ClCr 15-49 mL/min) quando o risco de sangramento superar o risco de recorrência — recomendação de 15 mg baseada em modelo farmacocinético, não estudada nesse regime clínico",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — TVP/EP com rivaroxabana"
+      },
+      {
+        "id": "doac-renal-alimento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a tomar rivaroxabana 15 mg e 20 mg sempre com alimento; a apresentação de 10 mg pode ser tomada com ou sem alimento",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — Armadilhas que a calculadora evita"
+      },
+      {
+        "id": "doac-renal-nao-cruzar-criterios",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Critério de redução de dose de um DOAC não aplicado ao outro: a regra dos “2 de 3” é exclusiva da apixabana e não deve ser usada para decidir a dose de rivaroxabana; a redução automática de rivaroxabana para 15 mg/dia em todo TEV com ClCr <50 após o dia 21 também é incorreta — é apenas uma consideração condicional",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — Armadilhas que a calculadora evita"
+      },
+      {
+        "id": "doac-renal-escopo-limitado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que este material descreve apenas posologia de bula por função renal e não decide se o anticoagulante é indicado — prótese mecânica, estenose mitral reumática significativa, síndrome antifosfolípide, gravidez, sangramento ativo, doença hepática e interações relevantes exigem avaliação clínica específica à parte",
+        "origem_secao": "apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao.md — nota final, após Fontes consultadas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Farmacologia já verificado citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-inicial-da-sindrome-brash",
+    "condicao": "Reconhecimento e manejo inicial da síndrome BRASH (bradicardia, insuficiência renal, bloqueio nodal, choque e hipercalemia)",
+    "resumo": "A sinergia entre lesão renal, hipercalemia e bloqueio farmacológico do nó AV que fecha um ciclo de deterioração, e a sequência de tratar simultaneamente o potássio, a perfusão, a bradicardia e o precipitante — sem aplicar automaticamente terapias de overdose de betabloqueador/bloqueador de canal de cálcio nem implantar marcapasso permanente antes de tentar reverter o quadro.",
+    "documento_origem": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Farkas JD, Long B, Koyfman A, Menson K. BRASH Syndrome: Bradycardia, Renal Failure, AV Blockade, Shock, and Hyperkalemia. J Emerg Med. 2020;59(2):216-223. DOI: 10.1016/j.jemermed.2020.05.001. PMID: 32565167.",
+      "Majeed H, Khan U, Khan AM, Khalid SN, Farook S, Gangu K, Sagheer S, Sheikh AB. BRASH Syndrome: A Systematic Review of Reported Cases. Curr Probl Cardiol. 2023;48(6):101663. DOI: 10.1016/j.cpcardiol.2023.101663. PMID: 36842470.",
+      "Shah P, Gozun M, Keitoku K, et al. Clinical characteristics of BRASH syndrome: Systematic scoping review. Eur J Intern Med. 2022;103:57-61. DOI: 10.1016/j.ejim.2022.06.002. PMID: 35676108."
+    ],
+    "itens": [
+      {
+        "id": "brash-suspeitar-combinacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Síndrome BRASH suspeitada diante da combinação de bradicardia importante/bloqueio AV, lesão renal aguda ou piora de doença renal, hipercalemia, hipotensão/choque ou sinais de hipoperfusão, e uso de bloqueador do nó AV (especialmente betabloqueador ou bloqueador de canal de cálcio não di-hidropiridínico) — o quadro pode ser desproporcional à intensidade isolada da hipercalemia ou à dose do bloqueador nodal",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — Quando suspeitar"
+      },
+      {
+        "id": "brash-nao-excluir-por-potassio-baixo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "BRASH não descartado só porque o potássio não está extremamente elevado — na revisão sistemática de Majeed et al., mais da metade dos casos publicados teve potássio abaixo de 6,5 mmol/L",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — O que os dados publicados mostram; Armadilhas clínicas"
+      },
+      {
+        "id": "brash-suspender-precipitante",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Bloqueadores nodais interrompidos temporariamente e demais fármacos que possam piorar função renal ou potássio revisados enquanto o paciente está instável; reintrodução posterior condicionada à recuperação renal, à indicação clínica e ao risco de recorrência",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — 1. Suspender temporariamente os precipitantes"
+      },
+      {
+        "id": "brash-tratar-hipercalemia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Hipercalemia tratada imediatamente pelo protocolo institucional de hipercalemia grave (estabilização de membrana e deslocamento/remoção de potássio quando indicado), sem esperar que o potássio pareça alto o suficiente para justificar isoladamente o quadro",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — 2. Tratar a hipercalemia imediatamente"
+      },
+      {
+        "id": "brash-corrigir-perfusao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Perfusão e causa da lesão renal avaliadas (hipovolemia, sepse, perda gastrointestinal, desidratação, nefrotóxicos e outras causas de injúria renal), com reposição de volume individualizada por não haver bolus universal definido para BRASH nas revisões publicadas",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — 3. Corrigir perfusão e causa da lesão renal"
+      },
+      {
+        "id": "brash-bradicardia-choque",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Resposta limitada à atropina reconhecida, por a fisiopatologia não ser predominantemente vagal; diante de hipoperfusão persistente, suporte cronotrópico/inotrópico/vasopressor considerado e, em casos selecionados, pacing temporário — sem agente ou dose universal definidos pelas revisões disponíveis",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — 4. Bradicardia e choque"
+      },
+      {
+        "id": "brash-diferenciar-intoxicacao",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diferenciado de intoxicação pura por bloqueador nodal quando há história de superdose, dose inadvertidamente elevada ou formulação de liberação prolongada — glucagon, insulina em alta dose ou emulsão lipídica reservados ao contexto toxicológico apropriado, não automatizados para todo BRASH",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — 5. Diferenciar de intoxicação pura por bloqueador nodal"
+      },
+      {
+        "id": "brash-pacing-nao-primeiro",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Marcapasso permanente não implantado antes de demonstrar persistência do distúrbio após correção metabólica/farmacológica — na revisão de Majeed et al., nenhum paciente recebeu marcapasso permanente, apesar de 33% terem necessitado pacing temporário/transcutâneo",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — Pacing: cuidado com o reflexo de “marcapasso primeiro”"
+      },
+      {
+        "id": "brash-considerar-trs",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Terapia renal substitutiva considerada, em conjunto com nefrologia/terapia intensiva, quando houver indicação nefrológica (hipercalemia refratária, acidose grave, sobrecarga ou falência renal) — usada em 20% dos casos publicados na revisão sistemática, sem constituir limiar terapêutico universal",
+        "origem_secao": "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md — 6. Terapia renal substitutiva"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de Farmacologia já verificado citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
