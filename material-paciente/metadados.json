@@ -14447,5 +14447,173 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "vacina-de-mrna-contra-covid-19-e-inflamacao-do-coracao-o-que-realmente-se-sabe",
+    "titulo": "Vacina de mRNA contra a Covid-19 e Inflamação do Coração: O Que Realmente se Sabe",
+    "subtitulo": "Entenda o risco real de miopericardite após a vacina, e por que ele é muito menor do que o risco da própria infecção",
+    "tema": "Pericárdio",
+    "documento_slug": "miopericardite-associada-a-vacina-de-mrna-contra-covid-19",
+    "resumo": "Você ouviu falar que a vacina de mRNA contra a Covid-19 pode inflamar o coração e ficou com dúvida se vale a pena tomar? Este material explica o que os estudos mostram sobre esse risco — e por que ele é bem menor do que o risco de ter o mesmo problema causado pela própria infecção pelo vírus.",
+    "secoes": [
+      {
+        "titulo": "O que é essa complicação",
+        "paragrafos": [
+          "Em casos raros, a vacina de mRNA contra a Covid-19 (as vacinas conhecidas como Pfizer e Moderna) pode estar associada a uma inflamação do coração, chamada de miopericardite — que envolve o músculo cardíaco (miocardite), o saco que envolve o coração (pericardite), ou os dois ao mesmo tempo.",
+          "É uma complicação rara e, na grande maioria dos casos, de evolução leve e com melhora completa. O padrão mais observado é em homens jovens, adolescentes ou adultos, com sintomas começando cerca de 3 a 4 dias depois da segunda dose da vacina — é bem mais raro depois da primeira dose, e mais raro ainda em mulheres."
+        ]
+      },
+      {
+        "titulo": "O número que mais importa: comparado a quê?",
+        "paragrafos": [
+          "Um grande estudo americano, que acompanhou dados de saúde de milhões de pessoas em 40 sistemas de saúde diferentes, comparou duas coisas: quantas pessoas desenvolveram essa inflamação do coração depois de tomar a vacina, e quantas desenvolveram o mesmo problema depois de pegar a própria Covid-19.",
+          "O resultado foi consistente: em todas as faixas de idade e nos dois sexos, o risco de inflamação do coração foi maior depois de pegar a doença do que depois de tomar a vacina — no grupo em que esse risco pela vacina é mais alto (homens adolescentes, depois da segunda dose), o risco de ter o mesmo problema por causa da própria infecção pelo vírus foi de quase 2 a mais de 5 vezes maior.",
+          "Em outras palavras: mesmo no grupo em que a vacina tem o maior risco relativo dessa complicação, esse risco ainda é bem menor do que o risco de ter o mesmo problema por não se vacinar e pegar a doença."
+        ]
+      },
+      {
+        "titulo": "Como costuma evoluir",
+        "paragrafos": [
+          "Nos casos descritos, sobretudo em pessoas mais jovens, o quadro costuma ser leve: dor no peito, alterações em exames de sangue e no eletrocardiograma, e às vezes uma redução leve a moderada, e temporária, da força de bombeamento do coração, vista em exames de imagem.",
+          "A recuperação costuma ser rápida. Quem tem o diagnóstico confirmado costuma receber orientação de evitar esforço físico intenso por um período, para dar tempo ao coração de se recuperar por completo — seu médico vai definir esse período e acompanhar a evolução com exames."
+        ]
+      },
+      {
+        "titulo": "O que essa informação não substitui",
+        "paragrafos": [
+          "Este material não substitui a avaliação individual do seu médico. Condições de saúde específicas, histórico pessoal e o contexto epidemiológico do momento podem mudar a recomendação sobre vacinação no seu caso — converse com seu cardiologista ou médico assistente antes de decidir."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que aparece nos dias seguintes a uma dose de vacina contra a Covid-19, principalmente a segunda",
+      "Palpitações (sensação de coração acelerado, batendo forte ou fora do ritmo) nesse mesmo período",
+      "Falta de ar que aparece ou piora depois da vacina",
+      "Desmaio ou sensação de quase desmaiar depois da vacina",
+      "Febre associada a dor no peito nos dias seguintes à vacinação"
+    ],
+    "perguntas": [
+      "Essa inflamação do coração depois da vacina é comum? Não. É uma complicação rara, mais descrita em homens jovens depois da segunda dose, e a maioria dos casos é leve e se resolve por completo.",
+      "É mais arriscado tomar a vacina ou pegar a Covid-19? Segundo o maior estudo disponível sobre o tema, o risco de inflamação do coração é maior depois de pegar a doença do que depois de tomar a vacina, em praticamente todos os grupos analisados.",
+      "Se eu já tive essa reação numa dose, posso tomar a próxima? Essa decisão precisa ser conversada com seu médico, que vai avaliar seu caso individualmente antes de definir a conduta.",
+      "Preciso fazer algum exame depois da vacina, mesmo sem sintomas? Não, o acompanhamento com exames é indicado apenas para quem apresenta sintomas sugestivos, listados nos sinais de alerta acima."
+    ],
+    "fontes": [
+      "Block JP, Boehmer TK, Forrest CB, et al. Cardiac Complications After SARS-CoV-2 Infection and mRNA COVID-19 Vaccination — PCORnet, United States, January 2021-January 2022. MMWR Morb Mortal Wkly Rep. 2022;71(14):517-523. DOI: 10.15585/mmwr.mm7114e1.",
+      "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-por-infeccao-bacteriana-uma-forma-grave-e-diferente-de-tratar",
+    "titulo": "Pericardite por Infecção Bacteriana: Uma Forma Rara e Mais Grave",
+    "subtitulo": "Entenda por que essa forma de inflamação no saco do coração é tratada de um jeito diferente da pericardite mais comum",
+    "tema": "Pericárdio",
+    "documento_slug": "pericardite-purulenta-bacteriana-diagnostico-e-tratamento",
+    "resumo": "A maioria dos casos de pericardite é causada por vírus e tem boa evolução com anti-inflamatório. Mas existe uma forma bem mais rara, causada por bactéria, que precisa de um tratamento diferente e mais urgente. Este material explica essa diferença.",
+    "secoes": [
+      {
+        "titulo": "O que é a pericardite e por que essa forma é diferente",
+        "paragrafos": [
+          "O pericárdio é uma membrana fina que envolve o coração, como um saco protetor. Quando ela inflama, chamamos de pericardite — a causa mais comum é viral ou sem causa identificada, e a maioria dos casos melhora bem com medicação anti-inflamatória.",
+          "Existe, porém, uma forma bem mais rara e mais grave: a pericardite causada diretamente por uma infecção bacteriana dentro do próprio saco pericárdico. Hoje ela representa uma pequena fração dos casos de pericardite, mas tem um curso muito mais acelerado e, se não tratada de forma correta e rápida, pode ser fatal — por isso o tratamento é diferente do usado na forma viral."
+        ]
+      },
+      {
+        "titulo": "Como costuma surgir",
+        "paragrafos": [
+          "Na maior parte dos casos descritos, essa forma de pericardite surge como complicação de uma pneumonia que já estava em curso, muitas vezes acompanhada de acúmulo de líquido infectado ao redor do pulmão. Outras origens possíveis incluem uma infecção em outra parte do corpo que se espalha pelo sangue, ou uma infecção próxima ao coração que se estende até o pericárdio, além de casos ligados a trauma ou cirurgia recente no tórax.",
+          "Por isso, se você está sendo tratado de uma pneumonia e desenvolve dor no peito, febre persistente ou piora do estado geral, é importante que seu médico considere essa possibilidade e investigue."
+        ]
+      },
+      {
+        "titulo": "Como é feito o diagnóstico e o tratamento",
+        "paragrafos": [
+          "O diagnóstico exige a retirada de uma amostra do líquido que se acumula ao redor do coração, por meio de um procedimento chamado pericardiocentese — esse líquido é analisado em laboratório para identificar a bactéria causadora. Um ecocardiograma (exame de imagem do coração) ajuda a confirmar o acúmulo de líquido e a orientar todo o acompanhamento.",
+          "Diferente da pericardite viral, aqui o tratamento com anti-inflamatório sozinho não é suficiente. São necessários, ao mesmo tempo, antibiótico para combater a bactéria e a drenagem do líquido acumulado ao redor do coração — essa combinação costuma começar de forma imediata, antes mesmo do resultado final dos exames de laboratório, exatamente por ser uma condição que evolui rápido.",
+          "Em alguns casos, quando o líquido está muito espesso ou compartimentado, pode ser necessário um procedimento cirúrgico para garantir a drenagem completa."
+        ]
+      },
+      {
+        "titulo": "Por que a rapidez importa tanto aqui",
+        "paragrafos": [
+          "Essa é uma das poucas formas de pericardite em que adiar o diagnóstico ou o início do tratamento pode custar caro. É justamente por isso que, diante de qualquer suspeita — principalmente em quem já está com uma infecção pulmonar em curso —, a investigação e o início do tratamento acontecem o mais rápido possível, sem esperar a confirmação final de todos os exames."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito associada a febre alta, principalmente se você tem ou teve pneumonia recente",
+      "Falta de ar que piora rapidamente",
+      "Sensação de fraqueza intensa, tontura ou confusão mental associada a febre",
+      "Inchaço nas pernas ou no abdômen surgindo junto com falta de ar e febre",
+      "Qualquer piora súbita do estado geral durante o tratamento de uma infecção pulmonar"
+    ],
+    "perguntas": [
+      "Essa forma de pericardite é comum? Não, é uma forma rara — a maioria dos casos de pericardite é viral ou sem causa identificada, com boa evolução.",
+      "Por que não dá para tratar só com anti-inflamatório, como na pericardite comum? Porque aqui existe uma infecção bacteriana ativa dentro do saco que envolve o coração, e ela precisa ser combatida com antibiótico e drenada — o anti-inflamatório sozinho não resolve a causa.",
+      "Por que às vezes o antibiótico começa antes do resultado do exame de laboratório? Porque essa infecção pode evoluir muito rápido, e esperar o resultado completo do exame para começar o tratamento pode piorar o desfecho — por isso o médico costuma iniciar o antibiótico assim que suspeita do diagnóstico, ajustando depois conforme o resultado do exame.",
+      "Quem já teve pneumonia deve se preocupar com essa complicação? A grande maioria de quem tem pneumonia não desenvolve essa complicação. Mas se surgir dor no peito, febre persistente ou piora do estado geral durante o tratamento da pneumonia, vale procurar avaliação médica o quanto antes."
+    ],
+    "fontes": [
+      "Mortalidade e associação com pneumonia/empiema conferidas por busca cruzada em múltiplas fontes secundárias concordantes (Revista Portuguesa de Cardiologia, American Journal of Medicine, JACC Case Reports 2024, séries de caso indexadas em PMC) — números de séries históricas amplamente citadas na literatura secundária, sem PMID único fixado para cada valor isolado (documento de origem sinaliza VERIFICAÇÃO HUMANA NECESSÁRIA para uso como estatística fechada em protocolo formal)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cai-ou-desmaiei-por-que-e-dificil-saber-no-idoso-e-por-que-isso-importa",
+    "titulo": "\"Eu Caí\" ou \"Eu Desmaiei\"? Por que é Difícil Saber no Idoso — e Por que Isso Importa",
+    "subtitulo": "Entenda por que uma queda sem explicação clara, no idoso, pode merecer a mesma investigação de um desmaio",
+    "tema": "Síncope",
+    "documento_slug": "sincope-no-idoso-armadilhas-diagnosticas-e-diferencial-com-queda-inexplicada",
+    "resumo": "Se você é idoso, ou cuida de alguém idoso, e teve uma queda sem uma causa clara — sem ter tropeçado em nada visível —, este material explica por que essa situação pode, na verdade, ser um desmaio que passou despercebido, e por que vale a pena investigar.",
+    "secoes": [
+      {
+        "titulo": "Por que a queda no idoso é diferente",
+        "paragrafos": [
+          "Na maioria das pessoas mais jovens, um desmaio costuma ser lembrado com clareza: a pessoa sente que vai perder a consciência, ou é informada por alguém que estava por perto de que ela apagou por alguns segundos.",
+          "No idoso, essa clareza costuma faltar, por dois motivos frequentes. Primeiro, é comum a pessoa não se lembrar do próprio episódio de perda de consciência — o cérebro, nessa faixa etária, tem mais dificuldade de registrar a memória de um evento tão breve e abrupto. Segundo, muitas vezes não havia ninguém por perto no momento da queda, para contar o que realmente aconteceu.",
+          "O resultado prático é que um idoso pode dizer \"eu caí\", achando que tropeçou ou perdeu o equilíbrio, quando na verdade teve um desmaio verdadeiro — só que não lembra disso, e não há ninguém para confirmar."
+        ]
+      },
+      {
+        "titulo": "Por que os médicos recomendam investigar do mesmo jeito",
+        "paragrafos": [
+          "Justamente por essa dificuldade, as diretrizes médicas recomendam que uma queda no idoso sem uma explicação mecânica clara — como um tropeço visível, um obstáculo no chão, ou um degrau — seja investigada com o mesmo cuidado que se investigaria um desmaio de causa desconhecida.",
+          "Ou seja: a pergunta importante não é apenas \"foi queda ou foi desmaio?\". É: existe uma explicação mecânica clara e suficiente para essa queda ter acontecido? Se não existir, vale a pena investigar como se fosse um desmaio sem causa definida — em vez de simplesmente atribuir a queda a \"coisa da idade\" ou a um problema isolado de equilíbrio."
+        ]
+      },
+      {
+        "titulo": "O que essa investigação costuma incluir",
+        "paragrafos": [
+          "Além da avaliação do coração (que pode incluir eletrocardiograma, medição da pressão em pé e deitado, e às vezes um monitor que registra o ritmo cardíaco por mais tempo), essa investigação costuma olhar também para outros fatores que aumentam o risco de queda: o jeito de andar e o equilíbrio, a força muscular, a visão, a função da bexiga e os riscos existentes dentro de casa, como tapetes soltos ou iluminação ruim.",
+          "Essas duas frentes — a avaliação do coração e a avaliação geral do risco de queda — se complementam. Uma não substitui a outra."
+        ]
+      },
+      {
+        "titulo": "O papel dos remédios em uso",
+        "paragrafos": [
+          "Vale sempre revisar, com seu médico, a lista completa de remédios em uso — incluindo os que não precisam de receita e os fitoterápicos. Alguns remédios usados para pressão alta, para retenção de líquido, ou para humor e sono, podem facilitar quedas de pressão ao levantar ou deixar o coração mais lento em determinadas situações, aumentando o risco de desmaio ou queda. Isso não significa que o remédio deva ser parado por conta própria — significa que vale conversar com o médico sobre esse ponto."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Queda sem uma causa mecânica clara (sem tropeço visível, sem obstáculo, sem degrau)",
+      "Mais de uma queda sem explicação em um curto período de tempo",
+      "Tontura ou sensação de \"cabeça vazia\" ao levantar da cama ou da cadeira",
+      "Palpitações (coração acelerado ou fora do ritmo) antes ou depois de uma queda",
+      "Machucado importante, corte na cabeça ou fratura decorrente de uma queda sem causa clara"
+    ],
+    "perguntas": [
+      "Se eu não lembro de ter desmaiado, isso significa que não desmaiei? Não necessariamente. No idoso, é comum não haver lembrança do episódio, mesmo quando o desmaio de fato aconteceu — por isso a investigação não depende só da lembrança da pessoa.",
+      "Toda queda no idoso precisa ser investigada como desmaio? Não. Quando existe uma explicação mecânica clara e suficiente — como um tropeço visível ou um obstáculo no caminho —, a queda pode ser tratada como o que é: um acidente mecânico. A investigação mais ampla é recomendada quando não há essa explicação clara.",
+      "Por que meu médico quer revisar todos os meus remédios depois de uma queda? Porque alguns remédios em uso podem reduzir a pressão ao levantar ou deixar o coração mais lento em certas situações, aumentando o risco de nova queda ou desmaio — essa revisão é uma parte importante da investigação.",
+      "Um exame de sangue ou eletrocardiograma normal já descarta o problema? Não sempre. Em alguns casos, principalmente quando o evento é raro e sem testemunha, pode ser necessário um monitor que acompanha o ritmo do coração por mais tempo, justamente para conseguir capturar o que aconteceu."
+    ],
+    "fontes": [
+      "Rafanelli M, Mossello E, Testa GD, Ungar A. Unexplained falls in the elderly. Minerva Med. 2022;113(2):263-272. DOI: 10.23736/S0026-4806.21.07749-1. PMID: 34515457.",
+      "Ungar A, Morrione A, Rafanelli M, et al. The management of syncope in older adults. Minerva Med. 2009;100(4):247-258. PMID: 19749680.",
+      "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037."
+    ],
+    "review_status": "revisado"
   }
 ]
