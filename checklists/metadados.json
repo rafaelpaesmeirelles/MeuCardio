@@ -18146,5 +18146,253 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "terapia-antitrombotica-apos-sca-ou-icp-na-fibrilacao-atrial-augustus",
+    "condicao": "Terapia antitrombótica no paciente com fibrilação atrial e síndrome coronariana aguda recente ou ICP",
+    "resumo": "O que definir na escolha do anticoagulante e na duração do AAS no paciente com fibrilação atrial que precisa, ao mesmo tempo, de anticoagulação e de antiagregação após síndrome coronariana aguda ou intervenção coronária percutânea, com base no ensaio fatorial AUGUSTUS.",
+    "documento_origem": "augustus-terapia-antitrombotica-apos-sca-ou-icp-na-fibrilacao-atrial",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lopes RD, Heizer G, Aronson R, Vora AN, Massaro T, Mehran R, Goodman SG, Windecker S, Darius H, Li J, Averkov O, Bahit MC, Berwanger O, Budaj A, Hijazi Z, Parkhomenko A, Sinnaeve P, Storey RF, Thiele H, Vinereanu D, Granger CB, Alexander JH; AUGUSTUS Investigators. Antithrombotic Therapy after Acute Coronary Syndrome or PCI in Atrial Fibrillation. N Engl J Med. 2019;380(16):1509-1524. DOI: 10.1056/NEJMoa1817083. PMID: 30883055 — NCT02415400, desenho fatorial 2×2, aberto para o eixo apixabana/AVK e duplo-cego/placebo-controlado para o eixo AAS/placebo, 4.614 pacientes, 33 países. Financiamento: Bristol-Myers Squibb e Pfizer"
+    ],
+    "itens": [
+      {
+        "id": "augustus-confirmar-fa-com-sca-recente-ou-icp",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente tem fibrilação atrial associada a síndrome coronariana aguda recente e/ou intervenção coronária percutânea, com plano de uso de inibidor de P2Y12 — é exatamente a população estudada no AUGUSTUS (4.614 pacientes, 33 países)",
+        "origem_secao": "A pergunta que faltava nesta biblioteca / Desenho"
+      },
+      {
+        "id": "augustus-preferir-doac-sobre-avk",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Preferir anticoagulante oral direto (conforme prescrição médica) ao antagonista da vitamina K neste cenário — no eixo anticoagulante do ensaio, o anticoagulante oral direto reduziu sangramento maior ou clinicamente relevante não maior (10,5% vs. 14,7%; HR 0,69) e reduziu morte ou hospitalização (23,5% vs. 27,4%; HR 0,83), com incidência semelhante de eventos isquêmicos",
+        "origem_secao": "Resultado do eixo anticoagulante"
+      },
+      {
+        "id": "augustus-nao-associar-aas-de-rotina-alem-do-periodo-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não manter AAS de rotina além do período inicial de tripla terapia definido para o caso — no eixo antiplaquetário, manter AAS ao lado do anticoagulante e do inibidor de P2Y12 quase dobrou o sangramento maior ou clinicamente relevante não maior (16,1% vs. 9,0%; HR 1,89), sem redução de eventos isquêmicos",
+        "origem_secao": "Resultado do eixo antiplaquetário"
+      },
+      {
+        "id": "augustus-definir-periodo-de-tripla-terapia-antes-de-descalonar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir e registrar o período inicial de tripla terapia (dias a poucas semanas, conforme risco isquêmico do procedimento) antes de descalonar para terapia dupla — o ensaio testou manter o AAS por 6 meses, não a duração ótima da tripla terapia inicial, que continua sendo julgamento clínico apoiado em diretriz",
+        "origem_secao": "Limites que precisam acompanhar"
+      },
+      {
+        "id": "augustus-nao-extrapolar-para-outros-doac-sem-ensaio-proprio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não generalizar automaticamente o resultado do eixo anticoagulante (testado só com apixabana) para dabigatrana, rivaroxabana ou edoxabana neste cenário de síndrome coronariana aguda/ICP — cada anticoagulante direto tem corpo de evidência próprio de combinação com antiplaquetário",
+        "origem_secao": "Limites que precisam acompanhar / Armadilhas clínicas"
+      },
+      {
+        "id": "augustus-ponderar-risco-isquemico-individual-antes-de-suspender-aas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ponderar o risco trombótico individual do stent/lesão coronariana antes de suspender o AAS — o ensaio orienta ponderação de risco, não suspensão automática em todo paciente, especialmente quando o risco isquêmico do procedimento é elevado",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "augustus-registrar-motivo-da-escolha-antitrombotica",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Registrar em prontuário a combinação antitrombótica escolhida, o motivo da escolha e a data planejada de reavaliação/descalonamento, dado o número de fármacos combinados ser a variável que mais pesa no risco de sangramento neste cenário",
+        "origem_secao": "A pergunta que faltava nesta biblioteca"
+      }
+    ],
+    "revisao": "Curadoria clínica sob responsabilidade do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado nesta base (AUGUSTUS, NEJM 2019, PMID 30883055), com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "decisao-de-anticoagulacao-na-fibrilacao-atrial-subclinica-detectada-por-dispositivo",
+    "condicao": "Decisão de anticoagulação na fibrilação atrial subclínica (episódio de alta frequência atrial) detectada por dispositivo cardíaco implantável",
+    "resumo": "O que avaliar antes de decidir por anticoagulação oral em paciente sem fibrilação atrial clínica documentada, mas com episódio de alta frequência atrial (AHRE) achado na memória de marca-passo, CDI, ressincronizador ou monitor implantável, com base no NOAH-AFNET 6, no ARTESiA e na metanálise que os reconcilia.",
+    "documento_origem": "fibrilacao-atrial-subclinica-detectada-por-dispositivo-noah-afnet-6-artesia-e-metanalise",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kirchhof P, Toennis T, Goette A, et al; NOAH-AFNET 6 Investigators. Anticoagulation with Edoxaban in Patients with Atrial High-Rate Episodes. N Engl J Med. 2023;389(13):1167-1179. DOI: 10.1056/NEJMoa2303062. PMID: 37622677",
+      "Healey JS, Lopes RD, Granger CB, et al; ARTESiA Investigators. Apixaban for Stroke Prevention in Subclinical Atrial Fibrillation. N Engl J Med. 2024;390(2):107-117. DOI: 10.1056/NEJMoa2310234. PMID: 37952132",
+      "McIntyre WF, Benz AP, Becher N, et al. Direct Oral Anticoagulants for Stroke Prevention in Patients With Device-Detected Atrial Fibrillation: A Study-Level Meta-Analysis of the NOAH-AFNET 6 and ARTESiA Trials. Circulation. 2024;149(13):981-988. DOI: 10.1161/CIRCULATIONAHA.123.067512. PMID: 37952187",
+      "2024 ESC Guidelines for the management of atrial fibrillation (AF-CARE), seção 6.2.3 e Recommendation Table 6 — recomendação Classe IIb, nível B para anticoagulante oral direto em FA subclínica detectada por dispositivo"
+    ],
+    "itens": [
+      {
+        "id": "fasc-confirmar-episodio-detectado-por-dispositivo-sem-fa-clinica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar que o achado é episódio de alta frequência atrial (AHRE) detectado exclusivamente pela memória do dispositivo, em paciente sem fibrilação atrial documentada em ECG convencional e sem sintomas atribuíveis — não é o mesmo cenário da fibrilação atrial clínica",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "fasc-medir-duracao-do-episodio-de-alta-frequencia-atrial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar a duração do episódio detectado pelo dispositivo — nos dois ensaios de referência a duração era curta (mediana de 2,8 horas no NOAH-AFNET 6; teto de elegibilidade de 24 horas no ARTESiA), e episódio mais longo ou carga crescente aproxima o quadro da fibrilação atrial clínica, ainda que o corte exato não esteja estabelecido",
+        "origem_secao": "Como isso se traduz na decisão de beira de leito"
+      },
+      {
+        "id": "fasc-calcular-risco-tromboembolico-do-paciente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o risco tromboembólico do paciente — nos ensaios o benefício absoluto sobre AVC foi pequeno porque o risco basal de AVC era baixo (cerca de 1% por paciente-ano em ambos os grupos do NOAH-AFNET 6)",
+        "origem_secao": "NOAH-AFNET 6 / Como isso se traduz na decisão de beira de leito"
+      },
+      {
+        "id": "fasc-avaliar-risco-hemorragico-antes-de-indicar-doac",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar o risco de sangramento do paciente e excluir alto risco hemorrágico antes de considerar anticoagulante oral direto — é o eixo que mais frequentemente decide contra, e a recomendação da diretriz exclui explicitamente quem tem alto risco de sangramento",
+        "origem_secao": "O que a diretriz ESC 2024 recomenda"
+      },
+      {
+        "id": "fasc-nao-extrapolar-classe-i-da-fa-clinica",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não extrapolar a recomendação Classe I, nível A, de anticoagulação da fibrilação atrial clínica para o achado de dispositivo — a evidência sustenta apenas Classe IIb, nível B, e a diferença de força reflete dado de ensaio, não cautela genérica",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "fasc-considerar-doac-classe-iib-quando-risco-elevado-e-sangramento-baixo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerar anticoagulante oral direto (conforme prescrição médica) quando o episódio for assintomático, o risco tromboembólico for elevado e o risco de sangramento não for alto — a metanálise dos dois ensaios mostra redução de AVC isquêmico (RR 0,68) à custa de aumento de sangramento maior (RR 1,62), sem redução de mortalidade cardiovascular (RR 0,95) nem por qualquer causa (RR 1,08)",
+        "origem_secao": "A metanálise que reconcilia os dois ensaios"
+      },
+      {
+        "id": "fasc-explicar-ausencia-de-reducao-de-mortalidade",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Explicar ao paciente que a evidência não mostra redução de mortalidade com a anticoagulação neste cenário — o ganho demonstrado é sobre AVC isquêmico, e ele é pago com aumento de sangramento maior",
+        "origem_secao": "A metanálise que reconcilia os dois ensaios / Armadilhas clínicas"
+      },
+      {
+        "id": "fasc-registrar-carga-de-arritmia-na-decisao",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Registrar em prontuário a carga/duração do episódio, o escore de risco tromboembólico, o risco hemorrágico e a decisão tomada (anticoagular ou não), já que a decisão é individual e não segue um corte único estabelecido pela evidência atual",
+        "origem_secao": "Como isso se traduz na decisão de beira de leito"
+      },
+      {
+        "id": "fasc-manter-vigilancia-de-progressao-para-fa-clinica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter seguimento estruturado após a decisão, independentemente de anticoagular ou não — 18,2% dos pacientes do NOAH-AFNET 6 desenvolveram fibrilação atrial documentada em ECG durante o acompanhamento, e essa conversão muda a indicação",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Curadoria clínica sob responsabilidade do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado nesta base (NOAH-AFNET 6, PMID 37622677; ARTESiA, PMID 37952132; metanálise, PMID 37952187), com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "triagem-e-diagnostico-de-hipertensao-arterial-em-criancas-e-adolescentes",
+    "condicao": "Triagem, diagnóstico e manejo inicial da hipertensão arterial em crianças e adolescentes",
+    "resumo": "O que confirmar na triagem, na classificação por percentil/valor absoluto e no início do manejo da hipertensão pediátrica, com base na diretriz da American Academy of Pediatrics (AAP) de 2017 — a régua diagnóstica do adulto (120/80, 130/80, 140/90 mmHg fixos) não se aplica a crianças menores de 13 anos.",
+    "documento_origem": "hipertensao-em-criancas-e-adolescentes-diagnostico-e-manejo-aap-2017",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Flynn JT, Kaelber DC, Baker-Smith CM, Blowey D, Carroll AE, Daniels SR, et al; SUBCOMMITTEE ON SCREENING AND MANAGEMENT OF HIGH BLOOD PRESSURE IN CHILDREN. Clinical Practice Guideline for Screening and Management of High Blood Pressure in Children and Adolescents. Pediatrics. 2017;140(3):e20171904. DOI: 10.1542/peds.2017-1904. PMID: 28827377"
+    ],
+    "itens": [
+      {
+        "id": "htaped-confirmar-idade-e-metodo-de-classificacao-adequado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar a idade do paciente antes de classificar a pressão arterial — em 1 a <13 anos usar a régua por percentil de idade, sexo e estatura; em ≥13 anos usar os cortes absolutos alinhados ao adulto (<120/<80 normal; 120/<80 a 129/<80 pressão elevada; 130/80 a 139/89 estágio 1; ≥140/90 estágio 2)",
+        "origem_secao": "A classificação — Table 3 da diretriz"
+      },
+      {
+        "id": "htaped-medir-pa-anualmente-a-partir-dos-3-anos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Medir a pressão arterial anualmente em toda criança e adolescente com 3 anos ou mais (Key Action Statement 1)",
+        "origem_secao": "Quando medir, e com que frequência"
+      },
+      {
+        "id": "htaped-medir-pa-em-toda-consulta-se-fator-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Medir a pressão arterial em toda consulta (não só anualmente) em quem tem 3 anos ou mais e obesidade, uso de medicação que eleva a pressão, doença renal, história de obstrução/coarctação de aorta, ou diabetes (Key Action Statement 2)",
+        "origem_secao": "Quando medir, e com que frequência"
+      },
+      {
+        "id": "htaped-classificar-por-percentil-ou-valor-absoluto-conforme-idade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar a pressão arterial pela tabela de percentil por idade, sexo e estatura (1 a <13 anos) ou pelos valores absolutos (≥13 anos) — nunca aplicar os cortes fixos do adulto a criança menor de 13 anos",
+        "origem_secao": "A classificação — Table 3 da diretriz"
+      },
+      {
+        "id": "htaped-exigir-confirmacao-em-tres-consultas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não firmar o diagnóstico de hipertensão a partir de uma única consulta — exigir pressão confirmada por ausculta acima do percentil 95 em três consultas diferentes (Key Action Statement 3), com reavaliação escalonada por categoria (6 meses se pressão elevada, 3 meses se estágio 1, 1 semana se estágio 2)",
+        "origem_secao": "Diagnóstico exige confirmação em três consultas"
+      },
+      {
+        "id": "htaped-indicar-mapa-para-confirmar-diagnostico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Indicar MAPA para confirmar o diagnóstico em quem persiste na categoria de pressão elevada por 1 ano ou em estágio 1 por 3 consultas (Key Action Statement 6), e considerar fortemente seu uso rotineiro em condições de alto risco como doença renal crônica, diabetes, coarctação de aorta reparada ou transplante (Key Action Statement 7)",
+        "origem_secao": "MAPA confirma o diagnóstico"
+      },
+      {
+        "id": "htaped-usar-monitor-de-mapa-validado-em-pediatria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Usar monitor de MAPA validado especificamente em população pediátrica e interpretar o resultado com dados normativos pediátricos — monitor validado só em adulto não serve (Key Action Statement 8)",
+        "origem_secao": "MAPA confirma o diagnóstico"
+      },
+      {
+        "id": "htaped-solicitar-ecocardiograma-no-diagnostico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma no momento do diagnóstico de hipertensão para avaliar dano de órgão-alvo cardíaco (massa, geometria e função do ventrículo esquerdo) (Key Action Statement 15)",
+        "origem_secao": "Ecocardiograma, não eletrocardiograma"
+      },
+      {
+        "id": "htaped-nao-solicitar-ecg-para-rastrear-hve",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Não solicitar eletrocardiograma para avaliar hipertrofia ventricular esquerda nesta população — o ECG tem baixa sensibilidade para esse achado em crianças e adolescentes (Key Action Statement 14, grau B, recomendação forte)",
+        "origem_secao": "Ecocardiograma, não eletrocardiograma"
+      },
+      {
+        "id": "htaped-definir-meta-terapeutica-por-percentil-ou-valor-absoluto",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir a meta de tratamento (não farmacológico e farmacológico) como pressão sistólica e diastólica abaixo do percentil 90, ou abaixo de 130/80 mmHg em adolescentes com 13 anos ou mais (Key Action Statement 19)",
+        "origem_secao": "Meta terapêutica e escolha do fármaco"
+      },
+      {
+        "id": "htaped-escolher-classe-farmacologica-apos-falha-de-estilo-de-vida",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Iniciar tratamento farmacológico (conforme prescrição médica) com inibidor da ECA, BRA, bloqueador de canal de cálcio de ação prolongada, ou diurético tiazídico após falha das mudanças de estilo de vida, sobretudo em quem tem hipertrofia ventricular esquerda ao ecocardiograma, sintomas de hipertensão, ou estágio 2 sem fator claramente modificável — a diretriz não define hierarquia entre as quatro classes (Key Action Statement 21)",
+        "origem_secao": "Meta terapêutica e escolha do fármaco"
+      },
+      {
+        "id": "htaped-preferir-ieca-ou-bra-na-drc-com-proteinuria",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Preferir inibidor da ECA ou BRA (conforme prescrição médica), especificamente, em quem tem doença renal crônica com proteinúria — não é escolha livre entre as quatro classes neste subgrupo (Key Action Statement 25)",
+        "origem_secao": "Meta terapêutica e escolha do fármaco"
+      },
+      {
+        "id": "htaped-reduzir-pa-com-cautela-na-emergencia-hipertensiva-pediatrica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na emergência hipertensiva pediátrica com sintomas de risco de vida, iniciar anti-hipertensivo de ação curta e reduzir a pressão em no máximo 25% da redução planejada nas primeiras 8 horas, sem normalizar a pressão de uma vez (Key Action Statement 27)",
+        "origem_secao": "Emergência hipertensiva pediátrica"
+      }
+    ],
+    "revisao": "Curadoria clínica sob responsabilidade do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado nesta base (Clinical Practice Guideline, AAP, Pediatrics 2017, PMID 28827377), com a seção de origem registrada em cada item."
   }
 ]
