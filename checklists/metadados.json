@@ -18146,5 +18146,268 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "vigilancia-e-manejo-da-lesao-miocardica-mins-no-pos-operatorio",
+    "condicao": "Lesão miocárdica após cirurgia não cardíaca (MINS)",
+    "resumo": "Checklist de vigilância com troponina e conduta escalonada diante de troponina elevada no pós-operatório de cirurgia não cardíaca, do diferencial de instabilidade aguda até a decisão individualizada de terapia antitrombótica no MINS estável.",
+    "documento_origem": "mins-lesao-miocardica-pos-operatoria-vigilancia-e-arvore-de-decisao",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. PMID: 39316661. DOI: 10.1161/CIR.0000000000001285.",
+      "Writing Committee for the VISION Study Investigators; Devereaux PJ, Biccard BM, Sigamani A, et al. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. PMID: 28444280. DOI: 10.1001/jama.2017.4360.",
+      "Devereaux PJ, Duceppe E, Guyatt G, et al; MANAGE Investigators. Dabigatran in patients with myocardial injury after non-cardiac surgery (MANAGE): an international, randomised, placebo-controlled trial. Lancet. 2018;391(10137):2325-2334. PMID: 29900874. DOI: 10.1016/S0140-6736(18)30832-8."
+    ],
+    "itens": [
+      {
+        "id": "mins-po-01-indicacao-vigilancia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se há indicação de vigilância com troponina pelo risco clínico do paciente/protocolo perioperatório adotado, antes de dosar de forma indiscriminada.",
+        "origem_secao": "Árvore de decisão — troponina pós-operatória elevada"
+      },
+      {
+        "id": "mins-po-02-dosagem-protocolo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Nos pacientes com indicação de vigilância, dosar troponina conforme o protocolo perioperatório adotado (no VISION: 6-12 horas após a cirurgia e diariamente nos primeiros três dias).",
+        "origem_secao": "O que o VISION mostrou"
+      },
+      {
+        "id": "mins-po-03-reavaliacao-imediata",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de troponina acima do limite de referência ou elevação dinâmica relevante, reavaliar imediatamente sintomas, ECG, pressão arterial, frequência cardíaca, SpO2, hemoglobina e contexto clínico.",
+        "origem_secao": "Árvore de decisão — troponina pós-operatória elevada"
+      },
+      {
+        "id": "mins-po-04-instabilidade-aguda",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se houver supra de ST, isquemia persistente, choque ou arritmia instável, tratar como síndrome coronariana aguda/instabilidade aguda e acionar a cardiologia, com estratégia de reperfusão quando indicada.",
+        "origem_secao": "Árvore de decisão — troponina pós-operatória elevada"
+      },
+      {
+        "id": "mins-po-05-investigar-mecanismo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Na ausência de instabilidade aguda, investigar o mecanismo da lesão miocárdica: síndrome coronariana aguda, desequilíbrio oferta-demanda (hipotensão, anemia, hipoxemia, taquicardia), embolia pulmonar, sepse/choque distributivo, insuficiência cardíaca aguda, taquiarritmia sustentada ou miocardite.",
+        "origem_secao": "Diferencial de troponina elevada no pós-operatório"
+      },
+      {
+        "id": "mins-po-06-causa-nao-isquemica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Quando houver causa não isquêmica predominante (sepse, TEP, miocardite, taquiarritmia grave, outra), tratar a causa específica e não rotular automaticamente o quadro como MINS isquêmico.",
+        "origem_secao": "Árvore de decisão — troponina pós-operatória elevada"
+      },
+      {
+        "id": "mins-po-07-corrigir-precipitantes",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "No MINS estável (provável mecanismo isquêmico), corrigir precipitantes: anemia, hipoxemia, hipotensão, taquicardia, dor e outras demandas.",
+        "origem_secao": "Árvore de decisão — troponina pós-operatória elevada"
+      },
+      {
+        "id": "mins-po-08-prevencao-e-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Revisar a prevenção cardiovascular secundária e os fatores de risco do paciente, e planejar seguimento cardiovascular ambulatorial após a alta — a AHA/ACC 2024 considera esse seguimento razoável após MINS.",
+        "origem_secao": "O que fazer após MINS estável"
+      },
+      {
+        "id": "mins-po-09-antitrombotico-individualizado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Nos pacientes selecionados em que o risco hemorrágico e o contexto cirúrgico permitirem, discutir individualmente a terapia antitrombótica (o MANAGE testou dabigatrana 110 mg VO 2x/dia) — nunca como reflexo automático de um valor isolado de troponina.",
+        "origem_secao": "MANAGE — por que o estudo importa"
+      },
+      {
+        "id": "mins-po-10-corte-hs-ctnt-nao-transplantavel",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Os pontos de corte de hs-cTnT do VISION (20 a <65 ng/L com aumento absoluto ≥5 ng/L, ou ≥65 ng/L) são específicos da metodologia de troponina empregada naquele estudo e não devem ser transplantados automaticamente para todos os ensaios de troponina disponíveis.",
+        "origem_secao": "O que o VISION mostrou"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. PMID: 39316661; e Devereaux PJ, Biccard BM, Sigamani A, et al. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. PMID: 28444280, em 21/08/2026."
+  },
+  {
+    "slug": "manejo-perioperatorio-de-marca-passo-e-cdi-checklist",
+    "condicao": "Portador de marca-passo ou cardiodesfibrilador implantável (CDI) em cirurgia não cardíaca",
+    "resumo": "Checklist de preparo pré-operatório, monitorização intraoperatória e reavaliação pós-operatória do portador de dispositivo cardíaco eletrônico implantável, com a distinção central entre a resposta ao ímã de marca-passo e de CDI.",
+    "documento_origem": "manejo-perioperatorio-de-marca-passo-e-cdi-em-cirurgia-nao-cardiaca",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Practice Advisory for the Perioperative Management of Patients with Cardiac Implantable Electronic Devices: Pacemakers and Implantable Cardioverter-Defibrillators 2020 — An Updated Report by the American Society of Anesthesiologists Task Force. Anesthesiology. 2020;132(2):225-252. DOI: 10.1097/ALN.0000000000002821. PMID: 32032098."
+    ],
+    "itens": [
+      {
+        "id": "dcei-po-01-dependencia-estimulacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o paciente quanto à dependência de estimulação: completamente dependente (sem ritmo intrínseco) ou relativa/funcionalmente dependente (ritmo intrínseco inadequado) — essa classificação muda a conduta.",
+        "origem_secao": "Recomendações de preparo pré-operatório"
+      },
+      {
+        "id": "dcei-po-02-interrogacao-recente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o dispositivo foi interrogado nos 3 a 6 meses anteriores ao procedimento, ou que o relatório da interrogação mais recente está disponível.",
+        "origem_secao": "Recomendações de preparo pré-operatório"
+      },
+      {
+        "id": "dcei-po-03-local-do-procedimento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Determinar o local do procedimento em relação ao umbigo: o risco de interferência eletromagnética (IEM) por eletrocautério monopolar é maior acima do umbigo (evidência categoria B1-H) do que abaixo dele.",
+        "origem_secao": "Risco de interferência eletromagnética por local do procedimento"
+      },
+      {
+        "id": "dcei-po-04-reprogramar-marcapasso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em paciente dependente de estimulação com IEM provável (eletrocautério monopolar ou ablação por radiofrequência planejados acima do umbigo), reprogramar o marca-passo para modo assíncrono.",
+        "origem_secao": "Recomendações de preparo pré-operatório"
+      },
+      {
+        "id": "dcei-po-05-suspender-antitaquicardia-cdi",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em portador de CDI com IEM provável, suspender a função antitaquicardia (choque) por reprogramação, sempre garantindo ambiente monitorizado antes da suspensão — a aplicação do ímã nunca altera o modo de estimulação de um CDI, e nem sempre é possível confirmar que ela de fato suspendeu a terapia (paciente obeso ou gerador implantado profundo).",
+        "origem_secao": "Diferença central entre marca-passo e CDI ao ímã"
+      },
+      {
+        "id": "dcei-po-06-nao-usar-ima-rotineiro",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não usar ímã sobre CDI de forma automática/rotineira sem indicação específica.",
+        "origem_secao": "Recomendações de preparo pré-operatório"
+      },
+      {
+        "id": "dcei-po-07-suspender-sensor-frequencia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Suspender o sensor de frequência adaptativa (rate-responsive) do marca-passo antes do procedimento, para evitar taquicardia indesejada por artefato de movimento/vibração interpretado como atividade física.",
+        "origem_secao": "Recomendações de preparo pré-operatório"
+      },
+      {
+        "id": "dcei-po-08-equipamento-e-tecnica-cirurgica",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Orientar a equipe cirúrgica a usar eletrocautério bipolar ou bisturi ultrassônico (harmônico) quando viável, e garantir que marca-passo e desfibrilador temporários estejam imediatamente disponíveis antes, durante e depois do procedimento.",
+        "origem_secao": "Recomendações de preparo pré-operatório"
+      },
+      {
+        "id": "dcei-po-09-monitorizacao-continua",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter ECG contínuo, oximetria de pulso e pulso periférico (palpação, pletismografia ou linha arterial) monitorizados de forma contínua, do início da anestesia até a transferência do paciente para fora da sala, sem interrupção.",
+        "origem_secao": "Monitorização intraoperatória"
+      },
+      {
+        "id": "dcei-po-10-interacao-inesperada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se ocorrer interação inesperada e inexplicada entre o procedimento e o dispositivo, interromper o procedimento até que a fonte de interferência seja eliminada ou controlada.",
+        "origem_secao": "Monitorização intraoperatória"
+      },
+      {
+        "id": "dcei-po-11-restaurar-programacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Restaurar qualquer programação temporária feita no pré-operatório (modo assíncrono, suspensão de terapia antitaquicardia, sensor de frequência) antes de liberar o paciente da unidade de recuperação.",
+        "origem_secao": "Reavaliação pós-operatória"
+      },
+      {
+        "id": "dcei-po-12-reinterrogacao-pos-operatoria",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Reinterrogar o dispositivo no pós-operatório quando houver indicação clínica: cirurgia de urgência sem interrogação pré-operatória disponível, suspeita de alteração causada pelo ímã ou de mau funcionamento do dispositivo, ou IEM ocorrida em proximidade próxima ao gerador durante o procedimento.",
+        "origem_secao": "Reavaliação pós-operatória"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Practice Advisory for the Perioperative Management of Patients with Cardiac Implantable Electronic Devices: Pacemakers and Implantable Cardioverter-Defibrillators 2020 — An Updated Report by the American Society of Anesthesiologists Task Force. Anesthesiology. 2020;132(2):225-252. DOI: 10.1097/ALN.0000000000002821. PMID: 32032098, em 21/08/2026."
+  },
+  {
+    "slug": "administracao-de-fibrinolitico-no-stemi-tenecteplase-ou-alteplase",
+    "condicao": "Fibrinólise no infarto agudo do miocárdio com supradesnivelamento de ST (STEMI)",
+    "resumo": "Checklist de dose e administração de tenecteplase ou alteplase no STEMI, incluindo o protocolo de meia-dose do idoso e os erros de dose mais frequentes a evitar.",
+    "documento_origem": "fibrinoliticos-stemi-tenecteplase-alteplase-arvore-de-dose",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Metalyse® (tenecteplase). Bula profissional Boehringer Ingelheim, código 07-5773227/07-5775310/P23-02.",
+      "Atualização das Diretrizes em Cardiogeriatria da Sociedade Brasileira de Cardiologia - 2019. Arq Bras Cardiol. 2019.",
+      "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.11.009."
+    ],
+    "itens": [
+      {
+        "id": "fibrino-stemi-01-confirmar-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que a fibrinólise é estratégia de reperfusão apropriada — contraindicações hemorrágicas afastadas e ICP primária não disponível em tempo adequado — antes de administrar qualquer fibrinolítico.",
+        "origem_secao": "Introdução"
+      },
+      {
+        "id": "fibrino-stemi-02-dose-tenecteplase-por-peso",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao optar por tenecteplase, calcular a dose pelo peso do paciente conforme a bula: <60 kg = 30 mg (6 mL); 60 a <70 kg = 35 mg (7 mL); 70 a <80 kg = 40 mg (8 mL); 80 a <90 kg = 45 mg (9 mL); ≥90 kg = 50 mg (10 mL).",
+        "origem_secao": "Tenecteplase — Metalyse"
+      },
+      {
+        "id": "fibrino-stemi-03-via-administracao-tenecteplase",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Administrar a tenecteplase em bolus IV único, em aproximadamente 5-10 segundos.",
+        "origem_secao": "Tenecteplase — Metalyse"
+      },
+      {
+        "id": "fibrino-stemi-04-meia-dose-idoso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente ≥75 anos recebendo tenecteplase, exibir a dose nominal e apresentar explicitamente a opção de meia-dose do protocolo de idoso (STREAM/SBC) — sem modificar a tabela de bula silenciosamente.",
+        "origem_secao": "Idoso"
+      },
+      {
+        "id": "fibrino-stemi-05-alteplase-peso-maior-igual-67",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao optar por alteplase em paciente com peso ≥67 kg, administrar 15 mg em bolus IV + 50 mg IV em 30 minutos + 35 mg IV nos 60 minutos seguintes (total de 100 mg em 90 minutos).",
+        "origem_secao": "Alteplase — esquema acelerado de 90 minutos"
+      },
+      {
+        "id": "fibrino-stemi-06-alteplase-peso-menor-67",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao optar por alteplase em paciente com peso <67 kg, administrar 15 mg em bolus IV + 0,75 mg/kg IV em 30 minutos (máximo 50 mg) + 0,5 mg/kg IV nos 60 minutos seguintes (máximo 35 mg).",
+        "origem_secao": "Alteplase — esquema acelerado de 90 minutos"
+      },
+      {
+        "id": "fibrino-stemi-07-nao-confundir-dose-avc",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não usar a dose de tenecteplase indicada para AVC no STEMI, nem o inverso — são esquemas posológicos distintos.",
+        "origem_secao": "Erros que a calculadora tenta evitar"
+      },
+      {
+        "id": "fibrino-stemi-08-explicitar-meia-dose-nao-nominal",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao aplicar a meia-dose do idoso, deixar explícito que ela não é a linha nominal da tabela posológica brasileira, e sim um protocolo alternativo (STREAM/SBC) — para o médico ver com clareza qual regra está escolhendo.",
+        "origem_secao": "Erros que a calculadora tenta evitar"
+      },
+      {
+        "id": "fibrino-stemi-09-corte-67kg-ramo-explicito",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar que o corte de 67 kg no esquema de alteplase foi tratado como ramo explícito (dose fixa acima do corte, dose peso-ajustada com tetos de 50/35 mg abaixo dele), não como simples aplicação de tetos à fórmula peso-ajustada.",
+        "origem_secao": "Erros que a calculadora tenta evitar"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Metalyse® (tenecteplase), bula profissional Boehringer Ingelheim, código 07-5773227/07-5775310/P23-02; e Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.11.009, em 21/08/2026."
   }
 ]
