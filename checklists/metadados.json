@@ -8424,5 +8424,270 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "aplicacao-dos-criterios-de-duke-iscvid-2023-a-beira-do-leito",
+    "condicao": "Aplicação dos critérios diagnósticos de Duke-ISCVID 2023 à beira do leito na suspeita de endocardite infecciosa",
+    "resumo": "O que checar ao aplicar os critérios diagnósticos de Duke-ISCVID 2023 num caso de suspeita de endocardite infecciosa: o que mudou em microbiologia, imagem e achado intraoperatório em relação aos critérios de Duke modificados, a contagem formal de critérios maiores/menores, os dois pontos em que a versão ESC 2023 e a versão ISCVID 2023 divergem (espondilodiscite e dispositivo cardíaco eletrônico implantado), e a classificação final em definida/possível/rejeitada — derivado do documento dedicado à atualização Duke-ISCVID 2023 e do documento da diretriz ESC 2023 já publicados neste tema.",
+    "documento_origem": "duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Fowler VG Jr, Durack DT, Selton-Suty C, et al. The 2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. PMID: 37138445. DOI: 10.1093/cid/ciad271.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."
+    ],
+    "itens": [
+      {
+        "id": "duke-lista-tipicos-e-hemocultura",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Lista de micro-organismos considerados \"típicos\" para EI revisada em sua versão ampliada pela atualização Duke-ISCVID 2023 — incluindo agentes considerados típicos apenas na presença de prótese intracardíaca; e confirmado que a exigência antiga de intervalo temporal fixo entre hemoculturas e de punções venosas separadas para contar como critério foi removida",
+        "origem_secao": "Microbiologia"
+      },
+      {
+        "id": "duke-metodos-alem-hemocultura",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se hemocultura convencional negativa ou inconclusiva: considerados métodos diagnósticos incorporados pela atualização além da hemocultura convencional — sorologia específica para Bartonella, PCR, sequenciamento por amplicon/metagenômico e hibridização in situ, em contexto apropriado",
+        "origem_secao": "Microbiologia"
+      },
+      {
+        "id": "duke-imagem-petct-tc-maior",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se ecocardiografia inconclusiva, ou paciente com prótese/dispositivo (cenário em que a sensibilidade do método convencional é reduzida): considerados PET/CT com 18F-FDG e/ou tomografia cardíaca, que passaram a poder contribuir para critério maior em cenários definidos, especialmente em material protético",
+        "origem_secao": "Imagem"
+      },
+      {
+        "id": "duke-achado-intraoperatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o paciente for a cirurgia antes do fechamento diagnóstico: inspeção direta intraoperatória registrada como novo critério clínico maior quando há evidência macroscópica compatível com EI e os demais requisitos diagnósticos são atendidos",
+        "origem_secao": "Achado intraoperatório"
+      },
+      {
+        "id": "duke-contagem-criterios",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Contagem formal de critérios maiores e menores revisada: diagnóstico definido exige 2 critérios maiores, OU 1 maior + 3 menores, OU 5 menores — a mudança de 2023 está no que conta como critério, não na contagem",
+        "origem_secao": "Criterios diagnosticos (endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023.md)"
+      },
+      {
+        "id": "duke-espondilodiscite-cied",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Verificado se há espondilodiscite concomitante (conta como critério menor vascular na versão ESC 2023 — atenção: essa inclusão é específica da ESC 2023, a versão ISCVID 2023 paralela não a inclui) e se há dispositivo cardíaco eletrônico implantado (conta como critério menor de predisposição especificamente na versão ISCVID)",
+        "origem_secao": "Criterios diagnosticos (endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023.md)"
+      },
+      {
+        "id": "duke-classificacao-final",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificação diagnóstica final registrada em uma das três categorias da estrutura clássica de Duke: definida, possível ou rejeitada",
+        "origem_secao": "Criterios diagnosticos (endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023.md)"
+      },
+      {
+        "id": "duke-decisao-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Reconhecido que os critérios são estrutura de classificação diagnóstica e não substituem julgamento clínico — caso discutido com equipe de endocardite, integrando contexto anatômico, microbiológico e cirúrgico",
+        "origem_secao": "Interpretação clínica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem já verificados e publicados neste tema, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "indicacao-e-timing-de-cirurgia-na-endocardite-complicada",
+    "condicao": "Indicação e timing de cirurgia na endocardite infecciosa complicada",
+    "resumo": "O que checar ao decidir se e quando operar um paciente com endocardite infecciosa: as três indicações cirúrgicas principais (insuficiência cardíaca, infecção não controlada, prevenção de embolização séptica), a extensão perianular como causa anatômica concreta por trás de \"infecção não controlada\" na endocardite aórtica, o tamanho da vegetação e sua relação com o timing, a classificação de urgência (emergencial/urgente/não urgente) e o timing cirúrgico após AVC/AIT/hemorragia intracraniana — derivado dos três documentos já publicados neste tema sobre indicação/timing cirúrgico geral, complicações perianulares e timing após AVC.",
+    "documento_origem": "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/39/3948/7243107",
+      "Surgical Implications of the 2023 ESC Endocarditis Guidelines Endorsed by EACTS · CTSNet · https://www.ctsnet.org/jans/surgical-implications-2023-esc-endocarditis-guidelines-endorsed-eacts-bridging-guidelines-and",
+      "Association of Vegetation Size With Embolic Risk in Patients With Infective Endocarditis: A Systematic Review and Meta-analysis · PubMed · https://pubmed.ncbi.nlm.nih.gov/29459947/",
+      "Graupner C, Vilacosta I, SanRomán J, Ronderos R, Sarriá C, Fernández C, Mújica R, Sanz O, Sanmartín JV, Pinto AG. Periannular extension of infective endocarditis. J Am Coll Cardiol. 2002;39(7):1204-11. DOI: 10.1016/s0735-1097(02)01747-3 · PMID: 11923047.",
+      "Hryniewiecki T, Zatorska K, Abramczuk E, Zakrzewski D, Szymański P, Kuśmierczyk M, Michałowska I. The usefulness of cardiac CT in the diagnosis of perivalvular complications in patients with infective endocarditis. Eur Radiol. 2019;29(8):4368-4376. DOI: 10.1007/s00330-018-5965-2 · PMID: 30643945.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — Seção 10.4 (\"Timing of surgery after ischaemic and haemorrhagic stroke\") e Recommendation Table 17."
+    ],
+    "itens": [
+      {
+        "id": "eic-tres-indicacoes-principais",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmada qual das três indicações cirúrgicas principais está presente: insuficiência cardíaca, infecção não controlada ou prevenção de embolização séptica",
+        "origem_secao": "Tres indicacoes principais de cirurgia"
+      },
+      {
+        "id": "eic-extensao-perianular-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a indicação suspeitada for \"infecção não controlada\" em endocardite de valva aórtica: investigada extensão perianular (abscesso, pseudoaneurisma) como manifestação anatômica concreta mais frequente por trás dessa indicação, sobretudo se abscesso perianular não tratado cirurgicamente não responde a antibiótico isoladamente",
+        "origem_secao": "Como este documento se conecta ao de timing cirúrgico já publicado (complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo.md)"
+      },
+      {
+        "id": "eic-vegetacao-pequena-nao-afasta",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Vegetação de aspecto discreto ao ecocardiograma NÃO usada isoladamente para afastar extensão perianular — em coorte de 211 pacientes com endocardite do lado esquerdo, vegetações pequenas foram, se algo, mais frequentes nos pacientes com extensão perianular (RR 1,45; IC95% 0,95–2,22)",
+        "origem_secao": "Fatores de risco independentes identificados na mesma coorte (complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo.md)"
+      },
+      {
+        "id": "eic-tcc-complementar-abscesso",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se suspeita de abscesso/pseudoaneurisma persistir após ecocardiograma (TTE+TEE) negativo ou inconclusivo, sobretudo em prótese valvar (frequência de extensão perianular quase dobra: 55% em prótese versus 29% em valva nativa): tomografia computadorizada cardíaca solicitada como complemento — a combinação TTE+TEE+TCC alcançou sensibilidade de 100% numa coorte cirúrgica de 53 pacientes, contra 63% da ecocardiografia isolada",
+        "origem_secao": "Diagnóstico por imagem — onde a ecocardiografia isolada não basta (complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo.md)"
+      },
+      {
+        "id": "eic-bav-novo-sinal-alarme",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se paciente com endocardite de valva aórtica desenvolveu bloqueio atrioventricular novo durante a internação: interpretado como sinal de provável extensão perianular do processo infeccioso (RR 2,55; IC95% 1,91–3,41) — não apenas monitorizado como problema elétrico isolado — e comunicado à equipe de endocardite",
+        "origem_secao": "Bloqueio atrioventricular novo — sinal de alarme, não achado incidental (complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo.md)"
+      },
+      {
+        "id": "eic-tamanho-vegetacao-timing",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Tamanho da vegetação medido: cirurgia urgente considerada (Classe I) para vegetação ≥10 mm associada a outra indicação cirúrgica, com evidência mais forte (nível de evidência B) se houver episódio embólico prévio; e considerada (Classe IIb) em endocardite aórtica ou mitral com vegetação ≥10 mm sem disfunção valvar grave e sem evidência clínica de embolia, apenas se o paciente tiver baixo risco cirúrgico",
+        "origem_secao": "Vegetacao e risco embolico — atualizacao 2023"
+      },
+      {
+        "id": "eic-classificacao-timing",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Timing cirúrgico classificado conforme a urgência: emergencial (dentro de 24 horas), urgente (3-5 dias) ou não urgente (durante a mesma internação hospitalar)",
+        "origem_secao": "Classificacao do timing cirurgico"
+      },
+      {
+        "id": "eic-ait-sem-atraso",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Após ataque isquêmico transitório (AIT): cirurgia cardíaca, se indicada, realizada sem atraso (Classe I, Nível B)",
+        "origem_secao": "As tres recomendacoes da secao 10.4 — texto integral (timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023.md)"
+      },
+      {
+        "id": "eic-avc-neuroimagem-antes-cirurgia",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Após qualquer AVC (não apenas isquêmico), com insuficiência cardíaca, infecção não controlada, abscesso ou risco embólico persistentemente alto associados: TC ou RM de crânio revisada para confirmar ausência de coma e exclusão de hemorragia cerebral — só então indicada cirurgia sem atraso (Classe I, Nível B); a condição central é \"coma ausente E hemorragia já excluída por imagem\", não o tipo de evento (isquêmico vs. hemorrágico)",
+        "origem_secao": "As tres recomendacoes da secao 10.4 — texto integral (timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023.md)"
+      },
+      {
+        "id": "eic-hic-adiar-cirurgia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se hemorragia intracraniana confirmada: cirurgia cardíaca adiada por mais de 1 mês quando possível (Classe IIa, Nível C), com reavaliação clínica e de imagem frequente — exceto se paciente clinicamente instável por insuficiência cardíaca, infecção não controlada ou risco embólico persistentemente alto, quando cirurgia urgente ou de emergência deve ser considerada ponderando a probabilidade de desfecho neurológico significativo (Classe IIa, Nível C)",
+        "origem_secao": "As tres recomendacoes da secao 10.4 — texto integral (timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023.md)"
+      },
+      {
+        "id": "eic-trombolise-contraindicada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Trombólise NÃO administrada em AVC embólico atribuído a endocardite infecciosa — contraindicação formal e explícita (Classe III, Nível C), distinta da conduta padrão em AVC isquêmico de outra etiologia",
+        "origem_secao": "Achados relacionados na mesma secao da diretriz (timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023.md)"
+      },
+      {
+        "id": "eic-decisao-equipe-endocardite",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão final discutida com equipe multidisciplinar de endocardite (Endocarditis Team), ponderando a relação risco-benefício individual do paciente",
+        "origem_secao": "Decisao multidisciplinar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos três documentos de origem já verificados e publicados neste tema, com a seção de origem (e o documento específico, quando diferente do documento principal) registrada em cada item."
+  },
+  {
+    "slug": "investigacao-de-endocardite-com-hemocultura-negativa",
+    "condicao": "Investigação de endocardite infecciosa com hemocultura negativa",
+    "resumo": "O que checar diante de suspeita de endocardite infecciosa com hemoculturas negativas: as duas causas dominantes (antibiótico prévio à coleta e agente fastidioso/não cultivável), a anamnese epidemiológica dirigida que define qual teste específico pedir para cada agente fastidioso, a expansão dos critérios Duke-ISCVID 2023 específica para esse cenário, a duração diferenciada de tratamento para micobactéria/fungo e o diagnóstico diferencial não infeccioso — derivado do documento de hemocultura negativa (AHA 2025) já publicado neste tema.",
+    "documento_origem": "endocardite-com-hemocultura-negativa-diagnostico-e-manejo-aha-2025",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "DeSimone DC, Garrigos ZE, Marx GE, Tattevin P, et al. Blood Culture-Negative Endocarditis: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2025;14(8):e040218. DOI: 10.1161/JAHA.124.040218. PMID: 40094211."
+    ],
+    "itens": [
+      {
+        "id": "bcne-antibiotico-antes-cultura",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se antibiótico foi iniciado antes da coleta das hemoculturas — junto com infecção por agente fastidioso/não cultivável, é uma das duas causas dominantes de endocardite com hemocultura negativa (até 30% dos casos de EI cursam com hemoculturas negativas)",
+        "origem_secao": "Definicao"
+      },
+      {
+        "id": "bcne-anamnese-epidemiologica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Anamnese epidemiológica dirigida realizada, já que é ela que define qual teste específico solicitar: contato com leite não pasteurizado/animais de fazenda infectados ou trabalho em abatedouro (Coxiella burnetii); exposição a piolho corporal/situação de rua/moradia rural sem água encanada (Bartonella quintana) ou a gatos, sobretudo filhotes, e a pulgas (Bartonella henselae); moradia rural com exposição ocupacional a solo ou animais (Tropheryma whipplei); cirurgia prévia com circulação extracorpórea e troca valvar (Mycobacterium chimaera); uso de material bioprotético na cirurgia índice (micobactéria atípica de crescimento rápido); uso de droga injetável, dispositivo intracardiovascular, imunossupressão ou prótese valvar (fungo)",
+        "origem_secao": "Agentes fastidiosos mais comuns — pistas epidemiologicas e diagnostico"
+      },
+      {
+        "id": "bcne-coxiella-sorologia",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se suspeita de Coxiella burnetii pela epidemiologia: solicitada sorologia (IgG fase 1 > 1:800), com atenção a que casos raros ficam abaixo desse limiar e não devem ser descartados só por isso — considerar também cultura de tecido, imuno-histoquímica de tecido, PCR de espécime tecidual e PCR (inclusive de DNA livre) de sangue ou soro",
+        "origem_secao": "Agentes fastidiosos mais comuns — pistas epidemiologicas e diagnostico"
+      },
+      {
+        "id": "bcne-bartonella-testes",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se suspeita de Bartonella spp.: solicitados sorologia, PCR dirigido de sangue total, PCR de amplo espectro e metagenômica, cultura de tecido e imuno-histoquímica — hemocultura convencional exige condições especiais e incubação prolongada de pelo menos 2 semanas, não deve ser a única aposta diagnóstica",
+        "origem_secao": "Agentes fastidiosos mais comuns — pistas epidemiologicas e diagnostico"
+      },
+      {
+        "id": "bcne-whipplei-testes",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se suspeita de Tropheryma whipplei (sintomas constitucionais associados — febre, fadiga, perda de peso, sudorese noturna, artralgia, derrame pleural, comprometimento cognitivo, diarreia): solicitados imuno-histoquímica de tecido, PCR dirigido, PCR de amplo espectro e sequenciamento metagenômico",
+        "origem_secao": "Agentes fastidiosos mais comuns — pistas epidemiologicas e diagnostico"
+      },
+      {
+        "id": "bcne-duke-iscvid-expansao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Critérios Duke-ISCVID 2023 aplicados considerando a expansão específica para BCNE: detecção de ácido nucleico de Coxiella burnetii, Tropheryma whipplei ou Bartonella spp. e evidência sorológica de Bartonella henselae/quintana contam como critério maior baseado em teste diagnóstico; teste positivo baseado em ácido nucleico foi incorporado também aos critérios menores",
+        "origem_secao": "O que mudou nos criterios Duke-ISCVID 2023"
+      },
+      {
+        "id": "bcne-duracao-micobacteria-fungo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se micobactéria (crescimento lento ou rápido) identificada: tratamento conforme suscetibilidade por pelo menos 24 meses, com cirurgia — se Tropheryma whipplei: 4 semanas de penicilina G intravenosa ou ceftriaxona seguidas de manutenção por pelo menos 11 meses — não a duração habitual da endocardite bacteriana comum",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "bcne-seguimento-micobacteria",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se micobactéria identificada: monitoramento oftalmológico, vigilância de hepatite e atenção a interações medicamentosas incluídos no seguimento, dados os esquemas prolongados",
+        "origem_secao": "Ponto pratico sobre micobacterias e fungos"
+      },
+      {
+        "id": "bcne-infectologia-fungica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Em endocardite fúngica: especialista em infectologia consultado",
+        "origem_secao": "Ponto pratico sobre micobacterias e fungos"
+      },
+      {
+        "id": "bcne-nbte-diferencial",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Endocardite trombótica não bacteriana (NBTE) considerada no diagnóstico diferencial como causa não infecciosa de hemocultura negativa; ecocardiograma transesofágico priorizado sobre o transtorácico para identificar as alterações valvares desse cenário",
+        "origem_secao": "Causas nao infecciosas"
+      },
+      {
+        "id": "bcne-prejuizo-diagnostico-pos-antibiotico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se antibiótico já foi iniciado antes da investigação completa: reconhecido que o prejuízo diagnóstico se estende além da hemocultura, comprometendo também a cultura de tecido valvar e, em particular, a sensibilidade do PET/CT com 18F-FDG",
+        "origem_secao": "Exposicao previa a antibiotico compromete mais do que a hemocultura"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado neste tema, com a seção de origem registrada em cada item."
   }
 ]
