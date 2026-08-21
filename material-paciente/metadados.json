@@ -14447,5 +14447,149 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "controle-de-temperatura-apos-a-parada-cardiaca",
+    "titulo": "Controle de temperatura após uma parada cardíaca: por que a equipe está controlando a temperatura do seu familiar",
+    "subtitulo": "O que a ciência mostrou sobre esfriar o corpo depois da reanimação — e por que o alvo real é evitar febre",
+    "tema": "Terapia intensiva",
+    "documento_slug": "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+    "resumo": "Depois que o coração volta a bater após uma parada cardiorrespiratória, é comum que a equipe da UTI controle rigorosamente a temperatura do corpo do seu familiar por um ou dois dias. Este material explica por que isso é feito e o que os estudos mais importantes sobre o assunto mostraram.",
+    "secoes": [
+      {
+        "titulo": "Por que a temperatura importa depois da parada cardíaca",
+        "paragrafos": [
+          "Quando o coração para de bater e depois volta a funcionar, o cérebro pode ter passado um período sem receber sangue e oxigênio de forma adequada. Nos dias seguintes, o corpo fica mais vulnerável, e a febre nessa fase pode piorar o sofrimento do cérebro que já foi afetado pela parada.",
+          "Por isso, é rotina que a equipe monitore continuamente a temperatura corporal do paciente na UTI e use aparelhos ou técnicas específicas para mantê-la dentro de uma faixa controlada, evitando picos de febre, nos primeiros dias após a reanimação."
+        ]
+      },
+      {
+        "titulo": "O que os grandes estudos mostraram",
+        "paragrafos": [
+          "Por muitos anos, a prática mais difundida era 'esfriar' bastante o corpo do paciente, prática conhecida como hipotermia terapêutica. Dois grandes estudos internacionais, chamados TTM e TTM2, testaram essa ideia comparando esfriar bastante o corpo contra manter uma temperatura mais próxima do normal, mas sempre evitando febre.",
+          "O resultado dos dois estudos foi parecido: esfriar bastante o corpo não trouxe mais chance de sobrevivência nem melhor recuperação neurológica do que apenas manter a temperatura controlada e tratar a febre assim que ela aparecesse. Ou seja, baixar muito a temperatura não se mostrou superior a simplesmente não deixar o paciente ter febre.",
+          "Um dos estudos (o TTM2, o mais recente e o maior deles) também mostrou que esfriar bastante o corpo esteve associado a mais episódios de batimentos cardíacos irregulares com repercussão na pressão arterial, quando comparado a apenas controlar a febre.",
+          "Por isso, hoje a atenção da equipe está voltada principalmente para impedir que o paciente tenha febre nos primeiros dias, e não necessariamente para induzir um resfriamento intenso do corpo — o esforço de manter a temperatura controlada continua sendo importante, mas o alvo mudou."
+        ]
+      },
+      {
+        "titulo": "O que a família pode observar durante esse período",
+        "paragrafos": [
+          "É normal ver o paciente conectado a um aparelho com mantas especiais, adesivos no corpo ou sensores que monitoram a temperatura continuamente. Isso não significa necessariamente que ele está sendo resfriado de forma intensa — muitas vezes o objetivo é apenas manter a temperatura estável e detectar febre rapidamente.",
+          "Nesse período o paciente costuma estar sedado e sem consciência plena, o que também é parte do cuidado intensivo dessa fase, e não um sinal isolado de piora."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Não há sinal de alerta que a família deva monitorar diretamente durante esse período — o controle de temperatura é conduzido e ajustado pela equipe da UTI, com monitorização contínua.",
+      "Dúvidas sobre por que a temperatura está sendo mantida numa faixa específica, ou sobre mudanças no aparelho de controle térmico, devem ser sempre esclarecidas diretamente com a equipe médica e de enfermagem responsável."
+    ],
+    "perguntas": [
+      "Meu familiar vai ficar com frio? A sensação de frio é controlada pela equipe, que usa medidas para o paciente ficar confortável durante o período de controle de temperatura; como ele está sedado nessa fase, geralmente não sente desconforto consciente.",
+      "Por quanto tempo a temperatura fica sendo controlada assim? Isso varia de paciente para paciente e é decidido pela equipe médica de acordo com a evolução clínica; não existe um prazo único que sirva para todos os casos.",
+      "Esfriar bastante o corpo não ajudaria mais o cérebro a se recuperar? Os grandes estudos sobre o tema não encontraram vantagem de esfriar bastante o corpo em comparação a apenas evitar febre — por isso essa não é mais a prática padrão isolada.",
+      "Isso quer dizer que o controle de temperatura não serve para nada? Não. Evitar febre continua sendo considerado importante nessa fase; o que mudou foi entender que baixar demais a temperatura não trouxe benefício extra sobre apenas controlar a febre."
+    ],
+    "fontes": [
+      "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest (TTM). N Engl J Med. 2013;369(23):2197-2206. DOI: 10.1056/NEJMoa1310519. PMID: 24237006",
+      "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "por-que-meu-medico-recomendou-um-desfibrilador-implantavel-cdi",
+    "titulo": "Por que meu médico recomendou um cardiodesfibrilador implantável (CDI)",
+    "subtitulo": "O que a evidência científica mostra sobre implantar esse aparelho depois de uma arritmia grave ou de uma parada cardíaca",
+    "tema": "Dispositivos",
+    "documento_slug": "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+    "resumo": "Se você já teve uma parada cardíaca ou uma arritmia grave com risco de vida, seu médico pode indicar o implante de um cardiodesfibrilador (CDI) para reduzir o risco de um novo evento fatal. Este material explica, em linguagem simples, por que essa recomendação existe e no que ela se baseia.",
+    "secoes": [
+      {
+        "titulo": "O que é o CDI e para que ele serve",
+        "paragrafos": [
+          "O cardiodesfibrilador implantável (CDI) é um pequeno aparelho colocado sob a pele, geralmente perto do ombro, ligado ao coração por eletrodos finos. Ele monitora o ritmo cardíaco continuamente e, se identificar uma arritmia perigosa que ameace a vida, pode aplicar um choque interno para interromper essa arritmia e restaurar o batimento normal.",
+          "Quando o CDI é indicado depois que a pessoa já teve um evento arrítmico grave (uma parada cardíaca reanimada, por exemplo, ou uma arritmia que causou desmaio ou quase levou à morte), isso é chamado de prevenção secundária — ou seja, o objetivo é prevenir uma repetição do evento que já aconteceu."
+        ]
+      },
+      {
+        "titulo": "Por que essa recomendação existe: o que os estudos mostraram",
+        "paragrafos": [
+          "Três grandes estudos clínicos, feitos há décadas em diferentes países, compararam o CDI com o tratamento à base de medicamentos antiarrítmicos em pessoas que já haviam sobrevivido a uma parada cardíaca ou a uma arritmia grave. Isoladamente, nenhum dos três estudos, por si só, teve resultado estatisticamente conclusivo em favor do CDI de forma isolada.",
+          "Mas quando os pesquisadores juntaram os dados dos três estudos numa análise combinada, o resultado ficou claro: as pessoas que usaram o CDI tiveram um risco de morte por qualquer causa cerca de 28% menor, e o risco específico de morte por arritmia caiu pela metade, em comparação com quem tomou apenas medicamento antiarrítmico.",
+          "É justamente essa análise combinada — reunindo os três estudos, que sozinhos eram menores e menos conclusivos, mas apontavam todos na mesma direção — que sustenta hoje a recomendação forte de implantar o CDI em quem já sobreviveu a uma arritmia grave com risco de vida."
+        ]
+      },
+      {
+        "titulo": "O que isso significa na prática",
+        "paragrafos": [
+          "Se seu médico recomendou o CDI depois de um evento grave que você já teve, essa recomendação não é uma medida isolada ou experimental — ela se apoia em décadas de estudo comparando diretamente o aparelho com o tratamento medicamentoso, em pessoas na mesma situação que a sua.",
+          "O aparelho não impede que a arritmia grave volte a acontecer, mas está pronto para reconhecê-la e tratá-la internamente caso ela ocorra novamente — é essa capacidade de resposta imediata que reduz o risco de morte nesse grupo de pacientes."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Sensação de choque vindo do aparelho, especialmente se vier acompanhada de desmaio, tontura intensa ou vários choques seguidos — procure atendimento de emergência imediatamente.",
+      "Vermelhidão, calor, secreção ou abertura da pele no local do implante — pode ser sinal de infecção e deve ser avaliado pela equipe médica.",
+      "Palpitações muito diferentes das que você já sentia antes, falta de ar súbita ou desmaio sem choque percebido do aparelho — procure atendimento médico."
+    ],
+    "perguntas": [
+      "O CDI vai me dar choques o tempo todo? Não. O aparelho só aplica um choque quando identifica uma arritmia perigosa específica; a maioria dos portadores de CDI passa longos períodos, às vezes anos, sem nunca receber um choque.",
+      "Por que meu médico não me deu só remédio, já que eu já tomo outros? Os estudos que sustentam essa recomendação compararam justamente o CDI com o tratamento medicamentoso antiarrítmico em pessoas que já haviam sobrevivido a um evento grave, e mostraram vantagem consistente do aparelho nesse grupo.",
+      "Esse é o mesmo motivo que leva outras pessoas a colocar CDI mesmo sem nunca terem tido uma arritmia grave? Não necessariamente. Quando o CDI é implantado como prevenção, antes de qualquer evento grave ter acontecido, isso se baseia em outro conjunto de evidências, com critérios próprios que seu médico avalia caso a caso.",
+      "Esse aparelho substitui os meus outros cuidados de coração? Não. O CDI trata a arritmia grave se ela ocorrer, mas não substitui o acompanhamento da doença de base que levou à arritmia, nem o restante do tratamento clínico recomendado por seu médico."
+    ],
+    "fontes": [
+      "The Antiarrhythmics versus Implantable Defibrillators (AVID) Investigators. A comparison of antiarrhythmic-drug therapy with implantable defibrillators in patients resuscitated from near-fatal ventricular arrhythmias (AVID). N Engl J Med. 1997;337(22):1576-1583. DOI: 10.1056/NEJM199711273372202. PMID: 9411221",
+      "Connolly SJ, Gent M, Roberts RS, et al. Canadian implantable defibrillator study (CIDS): a randomized trial of the implantable cardioverter defibrillator against amiodarone. Circulation. 2000;101(11):1297-1302. DOI: 10.1161/01.cir.101.11.1297. PMID: 10725290",
+      "Kuck KH, Cappato R, Siebels J, Rüppel R. Randomized comparison of antiarrhythmic drug therapy with implantable defibrillators in patients resuscitated from cardiac arrest: the Cardiac Arrest Study Hamburg (CASH). Circulation. 2000;102(7):748-754. DOI: 10.1161/01.cir.102.7.748. PMID: 10942742",
+      "Connolly SJ, Hallstrom AP, Cappato R, et al. Meta-analysis of the implantable cardioverter defibrillator secondary prevention trials. AVID, CASH and CIDS studies. Eur Heart J. 2000;21(24):2071-2078. DOI: 10.1053/euhj.2000.2476. PMID: 11102258"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "monitoramento-remoto-do-meu-marca-passo-ou-cdi",
+    "titulo": "Monitoramento remoto do seu marca-passo ou CDI",
+    "subtitulo": "Como o aparelho envia informações à distância para sua equipe médica — e por que isso pode fazer diferença",
+    "tema": "Dispositivos",
+    "documento_slug": "telemonitoramento-remoto-de-cdi-e-crt-d-e-desfecho-clinico-o-ensaio-in-time",
+    "resumo": "Muitos marca-passos e cardiodesfibriladores (CDI) modernos podem enviar informações automaticamente para a equipe médica, sem que o paciente precise ir ao consultório. Este material explica como funciona esse monitoramento remoto e o que um grande estudo mostrou sobre seu efeito na saúde de pacientes com insuficiência cardíaca.",
+    "secoes": [
+      {
+        "titulo": "O que é o monitoramento remoto",
+        "paragrafos": [
+          "Alguns aparelhos implantados — marca-passo, CDI ou o dispositivo de ressincronização cardíaca (CRT) — podem se comunicar automaticamente, todos os dias, com um sistema que a equipe médica acompanha à distância. Isso costuma acontecer por meio de um pequeno transmissor que fica perto da cama do paciente, sem exigir nenhuma ação do paciente no dia a dia.",
+          "Esse sistema informa dados sobre o funcionamento do aparelho e sinais do próprio coração, permitindo que a equipe perceba mudanças precocemente, antes mesmo da próxima consulta agendada."
+        ]
+      },
+      {
+        "titulo": "O que um estudo importante mostrou",
+        "paragrafos": [
+          "Um grande estudo internacional, com mais de 600 pacientes com insuficiência cardíaca e CDI ou dispositivo de ressincronização recém-implantado, comparou o monitoramento remoto automático e diário somado ao cuidado habitual contra o cuidado habitual isolado, sem esse monitoramento.",
+          "Depois de um ano, o grupo que usou o monitoramento remoto teve uma proporção bem menor de piora clínica importante — que incluía morte, internação por insuficiência cardíaca e piora relevante do estado de saúde — em comparação com o grupo que seguiu apenas o acompanhamento habitual.",
+          "O número de óbitos também foi menor no grupo com monitoramento remoto do que no grupo sem ele, ao longo do ano de acompanhamento — um resultado que reforça a ideia de que detectar um problema cedo pode permitir agir antes que a situação se agrave."
+        ]
+      },
+      {
+        "titulo": "O que isso significa na prática",
+        "paragrafos": [
+          "O monitoramento remoto não substitui suas consultas presenciais — ele funciona como uma camada extra de vigilância entre uma consulta e outra, permitindo que sua equipe entre em contato com você mais cedo se algo relevante for detectado.",
+          "Nem todo paciente com marca-passo ou CDI tem exatamente o mesmo tipo de acompanhamento remoto disponível — isso depende do modelo do aparelho e do que sua equipe médica oferece, e vale conversar diretamente com ela sobre o que está disponível no seu caso."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Não deixe de procurar atendimento médico caso sinta sintomas novos ou piora clara — falta de ar, inchaço nas pernas que piora, palpitações importantes, desmaio ou choque do aparelho — mesmo que o monitoramento remoto esteja ativo: ele é um complemento à vigilância, não um substituto para procurar ajuda quando você não está bem.",
+      "Se o transmissor do monitoramento remoto parar de funcionar, ficar desconectado da energia ou você mudar de endereço, avise sua equipe — sem o transmissor funcionando, o monitoramento remoto não acontece."
+    ],
+    "perguntas": [
+      "Eu preciso fazer alguma coisa para o monitoramento remoto funcionar? Na maioria dos casos, o transmissor funciona sozinho, sem exigir que você aperte botões ou tome alguma ação diária — mas é importante mantê-lo ligado e dentro do alcance recomendado por sua equipe.",
+      "Isso substitui minhas consultas de retorno? Não. O estudo que sustenta essa prática testou o monitoramento remoto somado ao cuidado habitual, não como substituto das consultas presenciais — as duas coisas continuam sendo necessárias.",
+      "Esse benefício vale para qualquer pessoa com marca-passo ou CDI? O estudo foi feito especificamente em pessoas com insuficiência cardíaca e fração de ejeção reduzida, com CDI ou ressincronizador recém-implantado — seu médico pode explicar se o seu perfil se encaixa nesse grupo estudado.",
+      "Minhas informações ficam seguras nesse sistema? A transmissão é feita por sistemas próprios do fabricante do aparelho, com controles de segurança da informação; qualquer dúvida específica sobre isso pode ser esclarecida com sua equipe médica ou o fabricante do dispositivo."
+    ],
+    "fontes": [
+      "Hindricks G, Taborsky M, Glikson M, et al, for the IN-TIME study group. Implant-based multiparameter telemonitoring of patients with heart failure (IN-TIME): a randomised controlled trial. Lancet. 2014;384(9943):583-590. DOI: 10.1016/S0140-6736(14)61176-4. PMID: 25131977"
+    ],
+    "review_status": "revisado"
   }
 ]
