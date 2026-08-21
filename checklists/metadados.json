@@ -20168,5 +20168,146 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "cesarea-perimortem-na-parada-cardiaca-materna",
+    "condicao": "Cesárea perimortem na parada cardíaca materna",
+    "resumo": "Conduta diante de parada cardiopulmonar materna refratária às medidas iniciais de reanimação — quando e como proceder à cesárea perimortem, com a evidência da revisão de Katz sobre desfecho materno e neonatal, distinto dos checklists desta pasta voltados a estratificação de risco antenatal.",
+    "documento_origem": "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Katz V, Balderston K, DeFreest M. Perimortem cesarean delivery: were our assumptions correct? Am J Obstet Gynecol. 2005;192(6):1916-1920. DOI: 10.1016/j.ajog.2005.02.038. PMID: 15970850"
+    ],
+    "itens": [
+      {
+        "id": "cesarea-perimortem-rcp-iniciada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Parada cardiopulmonar materna confirmada e reanimação cardiopulmonar já iniciada antes de indicar a cesárea perimortem",
+        "origem_secao": "Definicao"
+      },
+      {
+        "id": "cesarea-perimortem-compressao-aortocava",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Compressão aortocava pelo útero gravídico reconhecida como causa de ineficácia da RCP no terceiro trimestre, com o parto entendido como manobra terapêutica materna — não apenas resgate fetal",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "cesarea-perimortem-decisao-sem-atraso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Decisão de proceder à cesárea perimortem tomada sem hesitação diante de parada refratária às medidas iniciais de reanimação em gestação avançada — nenhum caso da revisão de Katz registrou deterioração do estado materno associada ao parto",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "cesarea-perimortem-meta-operacional-4-min",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Meta operacional de realizar o parto dentro de 4 minutos da parada cardíaca materna adotada como orientação prática, sem tratá-la como limiar biológico absoluto que descarte a cesárea após esse prazo",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "cesarea-perimortem-nao-so-resgate-fetal",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe orientada de que a cesárea perimortem não é apenas medida de resgate fetal — em 12 de 18 casos documentados por Katz et al. com status hemodinâmico registrado, o parto precedeu o retorno do pulso e da pressão arterial maternos",
+        "origem_secao": "A revisao de katz (katz, am j obstet gynecol 2005)"
+      },
+      {
+        "id": "cesarea-perimortem-continuidade-apos-parto",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reanimação materna mantida sem interrupção durante e após o parto, com investigação da causa reversível da parada — a revisão de Katz identificou causa potencialmente reversível em 20 dos 38 casos analisados",
+        "origem_secao": "A revisao de katz (katz, am j obstet gynecol 2005)"
+      },
+      {
+        "id": "cesarea-perimortem-vies-selecao-reconhecido",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe ciente do viés de seleção reconhecido pelos próprios autores do estudo — a ausência de deterioração materna na literatura publicada reflete casos publicados, que tendem a superrepresentar desfechos favoráveis, não garantia estatística de segurança",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "cesarea-perimortem-desfecho-neonatal-registrado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Desfecho neonatal e materno documentados após o evento, incluindo o tempo decorrido entre a parada e o parto — dado central para auditoria de qualidade do protocolo de emergência",
+        "origem_secao": "A revisao de katz (katz, am j obstet gynecol 2005)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Gravidez citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "ressonancia-magnetica-em-portador-de-marca-passo-ou-cdi-nao-condicional",
+    "condicao": "Ressonância magnética em portador de marca-passo ou CDI não condicional",
+    "resumo": "Protocolo de segurança do registro MagnaSafe para realizar RM em paciente com dispositivo cardíaco eletrônico implantável não aprovado para o exame — interrogação e reprogramação antes e depois, distinto do checklist de manejo perioperatório de marca-passo/CDI em cirurgia não cardíaca já publicado nesta pasta.",
+    "documento_origem": "ressonancia-magnetica-em-portador-de-marca-passo-e-cdi-o-registro-magnasafe",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684 — autoria e números conferidos contra o registro indexado (Europe PMC) em 30/07/2026.",
+      "2017 HRS Expert Consensus Statement on Magnetic Resonance Imaging and Radiation Exposure in Patients with Cardiovascular Implantable Electronic Devices. Heart Rhythm. 2017 — citado pela literatura secundária como o consenso multissocietário (11 sociedades, incluindo ACC, AHA, EHRA) que orienta a prática atual; texto integral não obtido nesta sessão."
+    ],
+    "itens": [
+      {
+        "id": "rm-marcapasso-magnasafe-dispositivo-nao-condicional-confirmado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o marca-passo ou CDI implantado é não condicional para RM (não aprovado pela agência regulatória para o exame) antes de aplicar este protocolo",
+        "origem_secao": "O registro MagnaSafe"
+      },
+      {
+        "id": "rm-marcapasso-campo-15-tesla",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Campo magnético do equipamento conferido como 1,5 tesla — a condição testada no registro MagnaSafe; exame torácico foi excluído do protocolo original por risco percebido maior",
+        "origem_secao": "O registro MagnaSafe"
+      },
+      {
+        "id": "rm-marcapasso-interrogacao-pre-exame",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dispositivo interrogado antes da RM, com registro de impedância de eletrodo, limiar de estimulação, voltagem de bateria e amplitude de onda P/onda R",
+        "origem_secao": "O registro MagnaSafe"
+      },
+      {
+        "id": "rm-marcapasso-reprogramacao-protocolo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Dispositivo reprogramado conforme protocolo padronizado antes do exame — o único evento sério do registro MagnaSafe (falha de gerador de CDI, exigindo troca imediata) ocorreu por reprogramação não realizada corretamente conforme o protocolo, e não pelo exame em si",
+        "origem_secao": "Resultados"
+      },
+      {
+        "id": "rm-marcapasso-monitorizacao-durante-exame",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Paciente monitorizado durante o exame para detecção de arritmia induzida, perda de captura ou reset elétrico do dispositivo — eventos secundários autolimitados (fibrilação/flutter atrial, reset parcial) ocorreram em pequeno número de casos no registro",
+        "origem_secao": "Resultados"
+      },
+      {
+        "id": "rm-marcapasso-interrogacao-pos-exame",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dispositivo interrogado novamente após a RM, comparando impedância, limiar de estimulação, voltagem de bateria e amplitude de onda com a interrogação pré-exame",
+        "origem_secao": "O registro MagnaSafe"
+      },
+      {
+        "id": "rm-marcapasso-nao-tratar-como-contraindicacao-absoluta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe orientada de que dispositivo não condicional deixou de ser contraindicação absoluta à RM e passou a ser decisão de risco-benefício, protocolada, sob o consenso multissocietário citado",
+        "origem_secao": "Leitura clínica"
+      },
+      {
+        "id": "rm-marcapasso-consenso-hrs-nao-substituido",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Protocolo detalhado de reprogramação por fabricante, classificação de risco do paciente e papel do eletrofisiologista durante o exame — descritos no 2017 HRS Expert Consensus Statement — consultado à parte; este checklist reproduz a evidência do registro MagnaSafe, não o consenso completo",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Perioperatório citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
