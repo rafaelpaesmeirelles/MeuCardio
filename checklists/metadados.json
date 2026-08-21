@@ -18146,5 +18146,82 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-doenca-de-buerger-tromboangiite-obliterante",
+    "condicao": "Doença de Buerger (tromboangiite obliterante)",
+    "resumo": "Checklist de reconhecimento clínico e angiográfico da doença de Buerger em adulto jovem tabagista, com a cessação absoluta do tabagismo como intervenção central e as armadilhas mais comuns de confundi-la com aterosclerose precoce.",
+    "documento_origem": "doenca-de-buerger-tromboangiite-obliterante-diagnostico-e-manejo",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Qaja E, Muco E, Hashmi MF. Buerger Disease · StatPearls · NCBI Bookshelf · atualizado fevereiro 2023 · NBK430858 · PMID: 28613608"
+    ],
+    "itens": [
+      {
+        "id": "buerger-01-perfil-demografico-e-tabagismo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar perfil demográfico e tabagismo: adulto jovem (20 a 50 anos), tabagista, relação homem:mulher de aproximadamente 3:1 (proporção que vem caindo com o aumento do tabagismo feminino) — a doença de Buerger é condição essencialmente ligada ao tabaco, não apenas associada a ele.",
+        "origem_secao": "O que a diferencia de aterosclerose no jovem"
+      },
+      {
+        "id": "buerger-02-achados-clinicos-caracteristicos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisar claudicação de pé, perna, braço ou mão progredindo para dor isquêmica em repouso, fenômeno de Raynaud, ulceração digital e flebite superficial migratória — presente em até 16% dos casos e achado relativamente característico quando presente.",
+        "origem_secao": "Achados clínicos"
+      },
+      {
+        "id": "buerger-03-angiografia-padrao-saca-rolha",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar angiografia (ou angiotomografia/angiorressonância) buscando o padrão de oclusões segmentares não ateroscleróticas de artérias de pequeno e médio calibre, com colaterais em 'saca-rolha' (corkscrew) contornando as oclusões — achado de imagem que ajuda a diferenciar de doença aterosclerótica difusa.",
+        "origem_secao": "Achado angiográfico clássico"
+      },
+      {
+        "id": "buerger-04-diferenciar-de-aterosclerose-precoce",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não tratar como aterosclerose precoce um paciente jovem tabagista com claudicação distal e pulsos proximais preservados — a distribuição distal da doença, a idade e o padrão angiográfico em saca-rolha apontam para doença de Buerger, não para aterosclerose comum.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "buerger-05-cessacao-absoluta-do-tabagismo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar cessação ABSOLUTA do tabagismo como pedra angular do tratamento, deixando explícito que não existe 'redução controlada' segura — mesmo 1 a 2 cigarros por dia são suficientes para perpetuar a progressão da doença.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "buerger-06-nao-oferecer-reposicao-de-nicotina-como-suficiente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao indicar reposição de nicotina (adesivo, goma) como apoio à cessação, alertar que a própria nicotina mantém a atividade da doença — a meta clínica é abstinência de nicotina, não apenas de cigarro, e a reposição isolada não deve ser apresentada como estratégia definitiva.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "buerger-07-terapia-medicamentosa-complementar",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Considerar terapia medicamentosa complementar conforme o quadro: vasodilatadores e bloqueadores de canal de cálcio, análogo de prostaglandina intravenoso (iloprosta) para dor e complicações isquêmicas, e anti-inflamatório não esteroide/analgésico para controle sintomático da dor — sempre como complemento à cessação do tabagismo, nunca como substituto dela.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "buerger-08-nao-encaminhar-precocemente-para-bypass",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não encaminhar precocemente para bypass cirúrgico como se fosse doença aterosclerótica proximal — a distribuição distal da doença e a flebite associada limitam a disponibilidade de vasos-alvo adequados, e a cirurgia é raramente indicada nesse contexto.",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "buerger-09-reforcar-cessacao-no-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reforçar a orientação de cessação de forma repetida ao longo do seguimento — entre pacientes que continuam fumando, cerca de 43% necessitam de amputação em seguimento médio de 7,6 anos, contra remissão da doença e risco reduzido de amputação em quem atinge abstinência completa.",
+        "origem_secao": "Prognóstico — o dado que resume tudo"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Aorta e doença arterial periférica citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
