@@ -291,10 +291,14 @@
       "Solução injetável 3 mg/mL, ampola de 2 mL (6 mg/ampola), uso exclusivo intravenoso"
     ],
     "commercial_presentations": [
-      "Adenocard® (Libbs Farmacêutica Ltda., indústria brasileira; bula aprovada pela ANVISA em 01/06/2023), ampola de 2 mL (6 mg), embalagens com 2 ou 50 ampolas (hospitalar). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Adenocard® (Libbs Farmacêutica Ltda., indústria brasileira; bula aprovada pela ANVISA em 01/06/2023), ampola de 2 mL (6 mg), embalagens com 2 ou 50 ampolas (hospitalar). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Adenosina Fresenius Kabi® — Fresenius Kabi Brasil Ltda., medicamento genérico (Lei 9.787/1999), registro ANVISA nº 1004102330040, solução injetável 3 mg/mL, caixa com 50 ampolas de vidro âmbar de 2 mL (6 mg/ampola). Fonte: sara.com.br e fresenius-kabi.com/br, WebSearch 20/08/2026.",
+      "Adenosina Hipolabor® — Hipolabor Farmacêutica Ltda. (Sabará/MG), medicamento genérico, registro ANVISA nº 1.1343.0182.002-1, bula aprovada pela ANVISA em 01/06/2023, solução injetável 3 mg/mL, caixa com 50 ampolas de 2 mL. Fonte: consultaremedios.com.br e asamed.com.br, WebSearch 20/08/2026."
     ],
     "brand_names": [
-      "Adenocard"
+      "Adenocard",
+      "Adenosina Fresenius Kabi",
+      "Adenosina Hipolabor"
     ]
   },
   {
@@ -2609,10 +2613,12 @@
       "Solução injetável 1 mg/mL, ampola de 1 mL, uso IM/IV/SC"
     ],
     "commercial_presentations": [
-      "Adren® (Hipolabor Farmacêutica Ltda.; registro ANVISA nº 1.1343.0001.001-6), ampola de 1 mL (1 mg/mL), embalagens hospitalares com 100 ampolas; genéricos/similares de outros fabricantes (ex. Hypofarma) também registrados. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada."
+      "Adren® (Hipolabor Farmacêutica Ltda.; registro ANVISA nº 1.1343.0001.001-6), ampola de 1 mL (1 mg/mL), embalagens hospitalares com 100 ampolas; genéricos/similares de outros fabricantes (ex. Hypofarma) também registrados. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada.",
+      "Hyfren® (epinefrina/adrenalina) — Hypofarma (Farmoquímica do Brasil), registro ANVISA nº 1.0387.0082, solução injetável 1 mg/mL, ampola de 1 mL, caixa hospitalar com 100 ampolas, indicado em parada cardiorrespiratória, choque anafilático e crise asmática grave. Distinta da marca já cadastrada 'Adren' (Hipolabor). Fonte: magazinemedica.com.br, royaltechhospitalar.com.br e asamed.com.br, WebSearch 20/08/2026."
     ],
     "brand_names": [
-      "Adren"
+      "Adren",
+      "Hyfren"
     ]
   },
   {
@@ -4422,6 +4428,9 @@
     "indications": [
       "Hipertensão arterial pulmonar (HAP), classe funcional OMS/NYHA II-III, para retardar a progressão da doença e reduzir a morbimortalidade — indicação sustentada pelo ensaio pivotal SERAPHIN, já citado e verificado neste registro (Pulido T et al., N Engl J Med. 2013;369(9):809-818, PMID 23984728).",
       "**Texto exato da indicação aprovada, rótulo FDA (Opsumit)**: \"OPSUMIT is an endothelin receptor antagonist (ERA) indicated for the treatment of pulmonary arterial hypertension (PAH, WHO Group I) in adults to reduce the risks of disease progression and hospitalization for PAH.\" Bula FDA (rótulo aprovado), OPSUMIT (macitentan), Actelion Pharmaceuticals US, Inc., DailyMed setid 1e484a50-55db-4b85-8c57-6cd1b0353abd — consultada via WebFetch em 12/08/2026. Bulário brasileiro (ANVISA) permanece bloqueado nesta sessão; nome comercial e apresentação brasileira ainda não confirmados contra registro ANVISA."
+    ],
+    "commercial_presentations": [
+      "Confirmação de comercialização no Brasil sob o MESMO nome já cadastrado (Opsumit®) — não é marca nova, é resolução da pendência de VERIFICAÇÃO HUMANA NECESSÁRIA já registrada no verbete: Opsumit® (macitentana), Janssen-Cilag Farmacêutica Ltda., registro ANVISA nº 1123634320018, comprimido revestido de 10 mg, caixa com 30 comprimidos (blíster). Fabricação pela Excella GmbH & Co. KG (Alemanha), embalagem primária/secundária pela Patheon France. Armazenamento entre 15°C e 30°C. Fonte: smerp.com.br (base de registros ANVISA) e consultaremedios.com.br, WebSearch 20/08/2026."
     ]
   },
   {
@@ -6030,7 +6039,10 @@
     "duration_of_action_source": "Inferido do esquema posológico já registrado neste item (PATENT-1/CHEST-1); VERIFICAÇÃO HUMANA NECESSÁRIA para valor de duração farmacodinâmica isolado.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "**Achado específico de cronoterapia do AAS não se aplica aqui — ver o verbete próprio de AAS.** Para o riociguato: **rótulo FDA/DailyMed (ADEMPAS), seção de Farmacologia Clínica, Tabelas 2 (CHEST-1) e 3 (PATENT-1) — 'Change in Hemodynamic Parameters from Baseline to Last Visit'**, consultado via WebFetch em 12/08/2026, traz **Pressão Arterial Média (PAM) sistêmica**, não a pressão sistólica/diastólica separadamente: CHEST-1 — PAM: -9,27 mmHg (riociguato) vs. -0,29 mmHg (placebo); PATENT-1 — PAM: -8,54 mmHg (riociguato) vs. -1,4 mmHg (placebo). A mesma tabela traz também a queda da pressão sistólica **pulmonar** (medida por cateterismo de câmaras direitas, não é pressão sistêmica): CHEST-1 -6,84 mmHg vs. +0,95 mmHg; PATENT-1 -5,39 mmHg vs. +0,78 mmHg (placebo) — este último dado é hemodinâmica pulmonar, o desfecho terapêutico esperado do fármaco, não deve ser confundido com pressão sistêmica. **A granularidade sistólica/diastólica sistêmica isolada, que os campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` deste registro pedem, não está disponível no rótulo consultado — só a PAM sistêmica está.** Os campos numéricos permanecem `null` de propósito, para não converter PAM em uma estimativa de sistólica/diastólica que a fonte não fornece. VERIFICAÇÃO HUMANA NECESSÁRIA caso se queira o valor sistólico/diastólico sistêmico isolado, a partir do artigo primário PATENT-1/CHEST-1 (já citados no campo `outcomes`)."
+    "bp_evidence_source": "**Achado específico de cronoterapia do AAS não se aplica aqui — ver o verbete próprio de AAS.** Para o riociguato: **rótulo FDA/DailyMed (ADEMPAS), seção de Farmacologia Clínica, Tabelas 2 (CHEST-1) e 3 (PATENT-1) — 'Change in Hemodynamic Parameters from Baseline to Last Visit'**, consultado via WebFetch em 12/08/2026, traz **Pressão Arterial Média (PAM) sistêmica**, não a pressão sistólica/diastólica separadamente: CHEST-1 — PAM: -9,27 mmHg (riociguato) vs. -0,29 mmHg (placebo); PATENT-1 — PAM: -8,54 mmHg (riociguato) vs. -1,4 mmHg (placebo). A mesma tabela traz também a queda da pressão sistólica **pulmonar** (medida por cateterismo de câmaras direitas, não é pressão sistêmica): CHEST-1 -6,84 mmHg vs. +0,95 mmHg; PATENT-1 -5,39 mmHg vs. +0,78 mmHg (placebo) — este último dado é hemodinâmica pulmonar, o desfecho terapêutico esperado do fármaco, não deve ser confundido com pressão sistêmica. **A granularidade sistólica/diastólica sistêmica isolada, que os campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` deste registro pedem, não está disponível no rótulo consultado — só a PAM sistêmica está.** Os campos numéricos permanecem `null` de propósito, para não converter PAM em uma estimativa de sistólica/diastólica que a fonte não fornece. VERIFICAÇÃO HUMANA NECESSÁRIA caso se queira o valor sistólico/diastólico sistêmico isolado, a partir do artigo primário PATENT-1/CHEST-1 (já citados no campo `outcomes`).",
+    "commercial_presentations": [
+      "Confirmação de comercialização no Brasil sob o MESMO nome já cadastrado (Adempas®) — não é marca nova, é resolução da pendência de VERIFICAÇÃO HUMANA NECESSÁRIA já registrada no verbete: Adempas® (riociguate), Bayer S.A., bula profissional aprovada pela ANVISA em 17/03/2021, comprimido revestido de 2,5 mg (redondo, biconvexo, laranja-avermelhado, marcado com a cruz Bayer de um lado e 'R'/'2,5' do outro), embalagem com 42 comprimidos. Indicado para hipertensão pulmonar tromboembólica crônica (HPTEC) inoperável/persistente/recorrente e hipertensão arterial pulmonar (HAP). Nota: a Conitec (Relatório de Recomendação nº 383, decisão do Ministério da Saúde em 14/12/2018) NÃO incorporou o riociguato ao SUS para HPTEC inoperável/persistente/recorrente — cobertura só via saúde suplementar/particular. Fonte: consultaremedios.com.br, sara.com.br, hipertensaopulmonar.bayer.com.br (bula profissional em PDF) e gov.br/anvisa, WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "rivaroxabana",
@@ -6286,7 +6298,10 @@
     "duration_of_action_source": "Rótulo FDA (Uptravi/selexipag) — mesma fonte confirmada no campo `half_life_note`, seção Clinical Pharmacology. Bula FDA (rótulo aprovado), UPTRAVI (selexipag), Actelion Pharmaceuticals US, Inc., DailyMed setid a7a23b87-f892-4e2c-8e2e-ebf841220f90 — consultada via WebFetch em 12/08/2026. Bulário brasileiro (ANVISA) permanece bloqueado nesta sessão; nome comercial brasileiro ainda não confirmado contra registro ANVISA.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como efeito terapêutico central — o selexipague é vasodilatador PULMONAR seletivo (via receptor IP), não um anti-hipertensivo sistêmico; hipotensão sistêmica é listada como evento adverso possível de classe (efeito de prostaciclina), não um alvo pressórico quantificado nas fontes já citadas neste registro."
+    "bp_evidence_source": "Não se aplica como efeito terapêutico central — o selexipague é vasodilatador PULMONAR seletivo (via receptor IP), não um anti-hipertensivo sistêmico; hipotensão sistêmica é listada como evento adverso possível de classe (efeito de prostaciclina), não um alvo pressórico quantificado nas fontes já citadas neste registro.",
+    "commercial_presentations": [
+      "Confirmação de comercialização no Brasil sob o MESMO nome já cadastrado (Uptravi®) — não é marca nova, é resolução da pendência de VERIFICAÇÃO HUMANA NECESSÁRIA já registrada no verbete: Uptravi® (selexipague), Janssen-Cilag Farmacêutica Ltda., registro ANVISA nº 1123634290011 (válido até 01/02/2028), bula mais recente aprovada pela ANVISA em 18/09/2025, comprimidos revestidos nas dosagens de titulação 0,2 mg, 0,4 mg, 0,6 mg, 0,8 mg e 1 mg. Indicado para hipertensão arterial pulmonar (HAP, grupo I da OMS), classe funcional II-III. Fonte: pharmadb.com.br, uploads.consultaremedios.com.br (bula profissional em PDF), farmaindex.com, WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "semaglutida",
@@ -6524,7 +6539,8 @@
     "review_status": "revisado",
     "generic_name": "Sitagliptina (fosfato de sitagliptina)",
     "brand_names": [
-      "Januvia"
+      "Januvia",
+      "Sitglu"
     ],
     "drug_class": "Inibidor da dipeptidil peptidase-4 (DPP-4) — gliptina",
     "mechanism": "Inibe a enzima dipeptidil peptidase-4 (DPP-4), retardando a inativação dos hormônios incretínicos GLP-1 e GIP liberados pelo intestino após a alimentação. O aumento da atividade incretínica eleva a síntese e a liberação de insulina pelas células beta pancreáticas de forma dependente da glicose, e reduz a secreção de glucagon pelas células alfa, com consequente redução da produção hepática de glicose. Por ser um mecanismo glicose-dependente, a sitagliptina tem baixo risco intrínseco de hipoglicemia em monoterapia — a incidência de hipoglicemia nos estudos controlados por placebo foi semelhante à do placebo (1,2% com 100 mg/dia vs. 0,9% com placebo). Fonte: bula brasileira do JANUVIA (fosfato de sitagliptina, MSD) e rótulo do JANUVIA aprovado pelo FDA (DailyMed, setid f85a48d0-0407-4c50-b0fa-7673a160bf01).",
@@ -6591,7 +6607,10 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Sitagliptina não tem indicação nem mecanismo de efeito hipotensor — é hipoglicemiante (inibidor de DPP-4), não anti-hipertensivo, e a bula brasileira do JANUVIA não registra redução de pressão arterial como desfecho de eficácia nem como efeito farmacológico esperado. Campos mantidos nulos por ausência de mecanismo/indicação pressórica, não por lacuna de busca.",
-    "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): localizada e confirmada a bula brasileira do JANUVIA atualmente vigente (MSD, outubro/2025, msd.com.br) — resolve a nota de procedência anterior sobre exemplar desatualizado. Ajuste renal atualizado para TFGe (convergente com o rótulo FDA); reações adversas pós-comercialização (pancreatite, hipersensibilidade grave, penfigoide bolhoso) confirmadas como parte da bula vigente."
+    "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): localizada e confirmada a bula brasileira do JANUVIA atualmente vigente (MSD, outubro/2025, msd.com.br) — resolve a nota de procedência anterior sobre exemplar desatualizado. Ajuste renal atualizado para TFGe (convergente com o rótulo FDA); reações adversas pós-comercialização (pancreatite, hipersensibilidade grave, penfigoide bolhoso) confirmadas como parte da bula vigente.",
+    "commercial_presentations": [
+      "Sitglu® (fosfato de sitagliptina monoidratado) — Germed Farmacêutica Ltda. (grupo Brace Pharma), medicamento similar, comprimidos revestidos de 25 mg, 50 mg e 100 mg, caixa com 30 comprimidos. Existe também a apresentação combinada 'Sitglu Met' (com metformina). Fonte: bracepharma.com.br (bula do paciente), consultaremedios.com.br e farmaindex.com, WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para o número de registro ANVISA exato, não localizado com segurança nesta busca."
+    ]
   },
   {
     "slug": "sotalol",
@@ -12830,7 +12849,8 @@
       "Comprimido revestido de liberação prolongada 34 mg"
     ],
     "commercial_presentations": [
-      "Sular® (Covis Pharma US, Inc., EUA) e versões genéricas (ex.: Heritage Pharmaceuticals/Avet, Prasco Laboratories), comprimidos de liberação prolongada 8,5/17/34 mg — apresentações confirmadas no rótulo do FDA (DailyMed), consultado nesta sessão via WebFetch (11/08/2026). Disponibilidade comercial no Brasil, marca e laboratório locais NÃO foram confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. É possível que este fármaco não esteja registrado/comercializado no Brasil atualmente; isso precisa ser conferido antes de publicar o verbete."
+      "Sular® (Covis Pharma US, Inc., EUA) e versões genéricas (ex.: Heritage Pharmaceuticals/Avet, Prasco Laboratories), comprimidos de liberação prolongada 8,5/17/34 mg — apresentações confirmadas no rótulo do FDA (DailyMed), consultado nesta sessão via WebFetch (11/08/2026). Disponibilidade comercial no Brasil, marca e laboratório locais NÃO foram confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. É possível que este fármaco não esteja registrado/comercializado no Brasil atualmente; isso precisa ser conferido antes de publicar o verbete.",
+      "NÃO localizada nenhuma marca comercial de nisoldipina disponível para compra em farmácia brasileira nesta busca (consultaremedios.com.br, drogariasaopaulo.com.br e panvel.com não retornaram nenhum produto com esse princípio ativo). Reforça, sem contradizer, a marcação VERIFICAÇÃO HUMANA NECESSÁRIA já existente no verbete — indício adicional de que a nisoldipina provavelmente não está registrada/comercializada no Brasil atualmente. WebSearch 20/08/2026."
     ],
     "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): todos os valores numéricos já presentes (doses, %, PK, interações, PMID 12565082) reconferidos contra o rótulo FDA/DailyMed vigente e o PubMed — zero erro encontrado. Lacunas de completude preenchidas: interação com quinidina, precauções (IC não estabelecida, monitorização de PA na titulação), ajuste renal (sem necessidade em IR leve-moderada), achado de gravidez em macacas (com ressalva de limitação estatística), faringite e taxa de descontinuação nos efeitos adversos. Nomes comerciais internacionais (Baymycard, Syscor) e situação de descontinuação nos EUA permanecem VERIFICAÇÃO HUMANA NECESSÁRIA (fonte secundária ou não confirmável nesta sessão). Disponibilidade no Brasil segue não confirmável."
   },
@@ -12896,7 +12916,8 @@
       "Cápsula 5 mg"
     ],
     "commercial_presentations": [
-      "DynaCirc® (marca original, descontinuada no mercado dos EUA — restam versões genéricas, ex.: Teva Pharmaceuticals, AvKARE), cápsulas de 2,5 mg e 5 mg — apresentações confirmadas no rótulo do FDA (DailyMed), consultado nesta sessão via WebFetch (11/08/2026). Disponibilidade comercial no Brasil NÃO foi confirmada nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. Há indício de que este fármaco pode não estar disponível no mercado brasileiro atualmente; precisa ser conferido antes de publicar o verbete."
+      "DynaCirc® (marca original, descontinuada no mercado dos EUA — restam versões genéricas, ex.: Teva Pharmaceuticals, AvKARE), cápsulas de 2,5 mg e 5 mg — apresentações confirmadas no rótulo do FDA (DailyMed), consultado nesta sessão via WebFetch (11/08/2026). Disponibilidade comercial no Brasil NÃO foi confirmada nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. Há indício de que este fármaco pode não estar disponível no mercado brasileiro atualmente; precisa ser conferido antes de publicar o verbete.",
+      "NÃO localizada nenhuma marca comercial de isradipina disponível para compra em farmácia brasileira nesta busca (consultaremedios.com.br, drogariasaopaulo.com.br e panvel.com não retornaram nenhum produto com esse princípio ativo, só menções ao fármaco em bulas de interação medicamentosa de terceiros). Reforça, sem contradizer, a marcação VERIFICAÇÃO HUMANA NECESSÁRIA já existente no verbete — indício adicional de que a isradipina provavelmente não está registrada/comercializada no Brasil atualmente. WebSearch 20/08/2026."
     ],
     "review_note": "Revisado em 12/08/2026 (certificação da RC, agente de validação): zero dado incorreto encontrado (rótulo FDA/DailyMed reconferido campo a campo). Enriquecimento aplicado: ajuste quantificado para idosos/hepatopatas/IR leve (antes qualitativo); efeitos adversos com comparativo vs. placebo por dose (revela que cefaleia na dose de 2,5mg não é mais frequente que placebo); interação com cimetidina com magnitude de Cmáx além da AUC já registrada. sbp/dbp_reduction_mmhg permanecem null corretamente — os dois estudos citados (Holmes 1993, Amir/LOMIR-MCT-IL 1994) só reportam taxa de resposta, não delta em mmHg (limitação real da fonte, não lacuna de pesquisa)."
   },
