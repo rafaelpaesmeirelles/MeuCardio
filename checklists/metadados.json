@@ -18146,5 +18146,215 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estenose-tricuspide-reumatica-avaliacao-diagnostica-e-decisao-de-manejo-combinado",
+    "condicao": "Estenose tricúspide reumática — avaliação diagnóstica e decisão de manejo combinado com a valvopatia do lado esquerdo",
+    "resumo": "O que checar diante de estenose tricúspide, quase sempre de etiologia reumática e quase sempre acompanhada de doença mitral ou aórtica: rastreio ativo da valvopatia do lado esquerdo associada, sequência diagnóstica por ecocardiograma, e a decisão de operar a valva tricúspide no mesmo tempo cirúrgico da valva mitral já indicada, para evitar reoperação evitável.",
+    "documento_origem": "estenose-tricuspide-reumatica-diagnostico-e-manejo",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Tricuspid Stenosis · StatPearls · NCBI Bookshelf · NBK499990 — usado para o enquadramento geral de etiologia, diagnóstico e conduta; achados ecocardiográficos conferidos por busca cruzada em literatura secundária concordante (Merck Manual Professional Edition, revisões indexadas em PMC) em 06/08/2026."
+    ],
+    "itens": [
+      {
+        "id": "et-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de sinais de congestão sistêmica desproporcionais ao grau conhecido de doença valvar do lado esquerdo (turgência jugular, hepatomegalia, edema), suspeitar de estenose tricúspide associada, em vez de atribuí-los inteiramente à valvopatia mitral já conhecida",
+        "origem_secao": "Por que é quase sempre uma valvopatia acompanhante, não isolada"
+      },
+      {
+        "id": "et-rastrear-valvopatia-esquerda",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de qualquer achado de estenose tricúspide, investigar ativamente doença valvar associada do lado esquerdo — mais comumente estenose mitral concomitante —, já que a etiologia é quase sempre reumática e multivalvar",
+        "origem_secao": "Por que é quase sempre uma valvopatia acompanhante, não isolada"
+      },
+      {
+        "id": "et-eco-transtoracico-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiograma transtorácico como método de escolha para avaliação inicial da valva tricúspide, buscando folhetos espessados com mobilidade reduzida, aumento do átrio direito e, ao Doppler, gradiente de pressão elevado através da valva",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "et-eco-transesofagico-3d",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Quando o ecocardiograma transtorácico for inconclusivo, complementar com ecocardiograma transesofágico com técnica 3D",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "et-doppler-gradiente",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Quantificar o grau de estenose pelo gradiente de pressão através da valva tricúspide, usando Doppler contínuo",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "et-conduta-assintomatica-leve",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reconhecer que a estenose tricúspide costuma ter curso benigno e, isoladamente, muitas vezes não exige tratamento específico enquanto o paciente permanecer assintomático",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "et-indicacao-cirurgica-combinada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de estenose mitral reumática já com indicação cirúrgica, reavaliar sistematicamente a valva tricúspide antes da cirurgia e corrigi-la no mesmo tempo cirúrgico se indicada — corrigir a valva mitral e deixar a estenose tricúspide concomitante para depois significa reoperação evitável",
+        "origem_secao": "O ponto prático que resume o documento"
+      },
+      {
+        "id": "et-nao-isolar-reavaliacao-pre-mitral",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para avaliação cirúrgica combinada, não isolada, todo paciente sintomático com estenose tricúspide refratária ao tratamento clínico ou concomitante à valvopatia mitral já com indicação cirúrgica — não adiar a avaliação cirúrgica combinada tratando clinicamente de forma indefinida",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado em Valvopatias, com a seção de origem registrada em cada item; responsabilidade pela curadoria clínica do checklist é do Dr. Rafael Paes Meirelles."
+  },
+  {
+    "slug": "antitrombotico-nos-primeiros-3-meses-apos-bioprotese-valvar",
+    "condicao": "Antitrombótico nos primeiros 3 meses após implante cirúrgico de bioprótese valvar (ESC/EACTS 2021)",
+    "resumo": "O que checar ao decidir o antitrombótico da janela de maior risco trombótico pós-implante de bioprótese, antes da endotelização completa dos folhetos: a posição do implante (aórtica versus mitral/tricúspide) determina se aspirina é opção de mesmo peso do anticoagulante ou não, e há divergência real entre a diretriz europeia e a norte-americana nesse ponto.",
+    "documento_origem": "antitrombotico-nos-primeiros-3-meses-apos-biopotese-valvar-esc-eacts-2021",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — recomendação de antitrombótico nos primeiros 3 meses pós-bioprótese conferida contra dois resumos secundários concordantes nesta sessão (06/08/2026), por bloqueio de acesso à tabela de recomendação original no texto integral; nível de evidência (letra) confirmado como B nos resumos consultados, mas não verificado diretamente na tabela — VERIFICAÇÃO HUMANA NECESSÁRIA para confirmação direta contra a tabela de recomendação original."
+    ],
+    "itens": [
+      {
+        "id": "bpv-determinar-posicao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Determinar a posição do implante de bioprótese valvar cirúrgica (aórtica versus mitral ou tricúspide) antes de decidir o antitrombótico dos primeiros 3 meses — a recomendação difere entre as posições",
+        "origem_secao": "A lacuna que este documento fecha"
+      },
+      {
+        "id": "bpv-sem-indicacao-previa-anticoagulacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se o paciente já tem indicação prévia e independente de anticoagulação oral (por exemplo, fibrilação atrial) — se tiver, a decisão específica dos primeiros 3 meses de bioprótese não se aplica do mesmo modo",
+        "origem_secao": "Bioprótese aórtica — aspirina OU anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-aortica-aspirina-ou-avk",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em bioprótese aórtica implantada cirurgicamente, sem indicação prévia de anticoagulação, considerar aspirina em dose baixa OU anticoagulação oral com antagonista de vitamina K (AVK) nos primeiros 3 meses, conforme prescrição médica — Classe IIa, Nível B (ESC/EACTS 2021); a diretriz apresenta as duas opções como alternativas de mesmo peso, sem hierarquizar uma sobre a outra",
+        "origem_secao": "Bioprótese aórtica — aspirina OU anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-mitral-tricuspide-avk",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em bioprótese implantada em posição mitral ou tricúspide, considerar anticoagulação oral com antagonista de vitamina K (AVK), conforme prescrição médica, nos primeiros 3 meses — Classe IIa, Nível B (ESC/EACTS 2021); nessa posição a diretriz não oferece aspirina como alternativa de mesmo peso",
+        "origem_secao": "Bioprótese mitral ou tricúspide — anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-nao-generalizar-posicao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não generalizar a opção de aspirina — válida para a posição aórtica — para a posição mitral ou tricúspide, que tem recomendação específica por anticoagulante, refletindo maior risco trombogênico reconhecido dessas posições",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "bpv-divergencia-acc-aha",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ter em mente que a diretriz ACC/AHA diverge da ESC/EACTS nesse ponto específico da bioprótese aórtica — a americana hierarquiza aspirina como preferencial (Classe I) e reserva AVK para quando houver fator de risco adicional (Classe IIa); não apresentar uma diretriz como se fosse a posição da outra",
+        "origem_secao": "Bioprótese aórtica — aspirina OU anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-apos-3-meses",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Após a janela inicial de 3 meses, na ausência de outra indicação de anticoagulação (como fibrilação atrial), não manter a anticoagulação de rotina da bioprótese",
+        "origem_secao": "Depois dos 3 meses"
+      },
+      {
+        "id": "bpv-verificacao-2025",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Estar ciente de que a nota de divulgação da atualização ESC/EACTS 2025 sinaliza abordagem mais individualizada nesse período e reforça aspirina em dose baixa como preferencial após TAVI — o texto e a tabela de recomendação 2025 com classe/nível atualizados não foram verificados diretamente nesta fonte; checar diretamente antes de adotar este documento como referência da versão mais recente da diretriz",
+        "origem_secao": "O que mudou (ou pode ter mudado) na atualização 2025"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado em Valvopatias, com a seção de origem registrada em cada item, preservando as duas marcações de VERIFICAÇÃO HUMANA NECESSÁRIA já explícitas no documento original (letra do nível de evidência 2021, e texto/tabela da atualização 2025); responsabilidade pela curadoria clínica do checklist é do Dr. Rafael Paes Meirelles."
+  },
+  {
+    "slug": "cessacao-tabagica-farmacologica-em-prevencao-cardiovascular",
+    "condicao": "Escolha e acompanhamento do tratamento farmacológico de cessação tabágica em prevenção cardiovascular",
+    "resumo": "O que checar ao indicar terapia farmacológica de cessação tabágica — a intervenção isolada de maior impacto em prevenção cardiovascular: hierarquia de eficácia comprovada por comparação direta entre vareniclina, bupropiona e adesivo de nicotina, e por que o antigo receio de segurança neuropsiquiátrica não deve mais restringir a prescrição, inclusive em fumante com transtorno psiquiátrico.",
+    "documento_origem": "tratamento-farmacologico-da-cessacao-tabagica-o-ensaio-eagles",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Anthenelli RM, Benowitz NL, West R, St Aubin L, McRae T, Lawrence D, Ascher J, et al. Neuropsychiatric safety and efficacy of varenicline, bupropion, and nicotine patch in smokers with and without psychiatric disorders (EAGLES): a double-blind, randomised, placebo-controlled clinical trial. Lancet. 2016;387(10037):2507-2520. DOI: 10.1016/S0140-6736(16)30272-0. PMID: 27116918 — NCT01456936, 8.144 participantes, 140 centros em 16 países. FINANCIAMENTO declarado pelos autores: Pfizer e GlaxoSmithKline, fabricantes de dois dos fármacos testados"
+    ],
+    "itens": [
+      {
+        "id": "cess-avaliar-dependencia-e-transtorno-psiquiatrico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar o fumante quanto a transtorno psiquiátrico associado antes de decidir a terapia farmacológica de cessação, sem que isso restrinja de antemão as opções disponíveis",
+        "origem_secao": "O problema que o ensaio resolveu"
+      },
+      {
+        "id": "cess-oferecer-vareniclina-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Considerar a vareniclina, conforme prescrição médica, como a monoterapia de maior eficácia entre as testadas no EAGLES, com superioridade direta sobre adesivo de nicotina e sobre bupropiona (comparação direta, não inferência indireta)",
+        "origem_secao": "Eficácia — comparação direta, com vencedor claro"
+      },
+      {
+        "id": "cess-nao-negar-por-transtorno-psiquiatrico",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não deixar de oferecer vareniclina ou bupropiona a fumante com transtorno psiquiátrico por receio do alerta neuropsiquiátrico antigo — no EAGLES, a diferença de risco em relação ao placebo não foi estatisticamente significativa nessa população",
+        "origem_secao": "Segurança — o alerta não se confirmou"
+      },
+      {
+        "id": "cess-risco-absoluto-nao-e-efeito-farmaco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ao avaliar evento neuropsiquiátrico em fumante com transtorno psiquiátrico de base, lembrar que o risco absoluto é maior também no grupo placebo dessa coorte — o que eleva o risco é o transtorno de base, não necessariamente o fármaco",
+        "origem_secao": "Segurança — o alerta não se confirmou"
+      },
+      {
+        "id": "cess-alternativa-bupropiona-ou-adesivo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Diante de contraindicação ou intolerância à vareniclina, considerar bupropiona ou adesivo de nicotina, conforme prescrição médica — os dois superaram placebo no ensaio, mesmo sendo inferiores à vareniclina em eficácia direta",
+        "origem_secao": "Eficácia — comparação direta, com vencedor claro"
+      },
+      {
+        "id": "cess-aconselhamento-breve-associado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Associar aconselhamento breve de cessação em cada consulta ao tratamento farmacológico escolhido — no ensaio, todos os braços (inclusive placebo) receberam aconselhamento, e o efeito medido é da combinação, não do fármaco isolado",
+        "origem_secao": "Como isso muda a conduta"
+      },
+      {
+        "id": "cess-nao-omitir-financiamento",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao citar o resultado de eficácia do EAGLES para o paciente ou em material educativo, não omitir que o ensaio foi financiado pela Pfizer e pela GlaxoSmithKline, fabricantes da vareniclina e da bupropiona respectivamente",
+        "origem_secao": "Declaração de conflito, que precisa acompanhar a citação"
+      },
+      {
+        "id": "cess-seguimento-abstinencia-9-12-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Programar seguimento após o curso de tratamento, reconhecendo que o desfecho principal do ensaio (abstinência contínua confirmada bioquimicamente) foi medido nas semanas 9-12 — de curto prazo — e não equivale, por si só, a manutenção da cessação a longo prazo",
+        "origem_secao": "Como isso muda a conduta"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado e publicado em Prevenção e lipídios, com a seção de origem registrada em cada item, e a declaração de conflito de financiamento do ensaio preservada como item próprio; responsabilidade pela curadoria clínica do checklist é do Dr. Rafael Paes Meirelles."
   }
 ]
