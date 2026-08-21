@@ -2397,7 +2397,9 @@
       "Comprimido revestido 25 mg (embalagens com 10 ou 30 comprimidos)",
       "**EMPAFLO** — Brace Pharma, comprimido revestido 10 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 119,34; PMC (ICMS 20%) R$ 122,33. Comprimido revestido 25 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 166,56; PMC (ICMS 20%) R$ 170,71. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial) — busca dirigida por marca de fantasia adicional além de Jardiance® (Boehringer Ingelheim do Brasil). Resultado: nenhuma outra marca de fantasia brasileira foi encontrada; o mercado nacional de empagliflozina isolada (sem associação com linagliptina/metformina) está registrado sob Jardiance® (referência) e apresentações genéricas/similares vendidas pela própria denominação genérica, que não contam como marca nova pela regra deste levantamento. WebSearch 21/08/2026."
+    ],
     "brand_names": [
       "Jardiance"
     ]
@@ -2630,7 +2632,9 @@
       "Comprimido revestido 25 mg",
       "Comprimido revestido 50 mg"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial) — busca dirigida por marca de fantasia adicional além de Inspra® (Viatris/Upjohn Brasil), incluindo termos como 'eplerenona marca comercial Brasil ANVISA além de Inspra'. Resultado: nenhuma outra marca de fantasia brasileira foi encontrada; o mercado nacional de eplerenona aparece registrado apenas sob Inspra® (referência) e genéricos/similares vendidos pela própria denominação genérica (ex. 'Eplerenona — [laboratório]'), que não conta como marca nova pela regra deste levantamento. WebSearch 21/08/2026."
+    ],
     "brand_names": [
       "Inspra"
     ]
@@ -2929,7 +2933,9 @@
       "Comprimido de liberação prolongada 5 mg (embalagem com 20 comprimidos)",
       "Comprimido de liberação prolongada 10 mg (embalagem com 20 comprimidos)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial) — busca dirigida por marca de fantasia adicional além de Splendil® (AstraZeneca do Brasil Ltda.). Resultado: Splendil® (felodipino 2,5 mg e 5,0 mg, liberação prolongada) teve o registro ANVISA CANCELADO em 12/01/2021, listado na página oficial de 'Produtos em fase de descontinuação definitiva' da AstraZeneca do Brasil (astrazeneca.com.br/medicines/produtos-descontinuados.html) — felodipino não é mais produzido nem comercializado no território brasileiro sob nenhuma marca de referência identificada. Nenhuma outra marca de fantasia foi localizada para substituí-lo. WebSearch 21/08/2026."
+    ],
     "brand_names": [
       "Splendil"
     ]
@@ -3899,7 +3905,9 @@
     "presentations": [
       "**Confirmado nesta sessão (11/08/2026)**: sem apresentação comercial brasileira de labetalol — o candidato 'Betalor' (Aché), levantado em busca anterior, foi verificado como sendo a combinação besilato de anlodipino + atenolol (não labetalol), descartando essa pista. Apresentações internacionais, rótulo FDA/DailyMed (EUA), TRANDATE: comprimidos de 100 mg, 200 mg e 300 mg; solução injetável 5 mg/mL (ampola/frasco para uso IV)."
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial) — busca dirigida por marca de fantasia adicional além de Trandate® (nome já citado nas referências deste registro). Resultado: nenhuma outra marca de fantasia com confirmação de registro/bula brasileira foi encontrada. 'Normodyne' e 'Normozide' aparecem em fontes internacionais (EUA/Europa) como nomes históricos de labetalol e da associação labetalol+hidroclorotiazida, respectivamente, sem nenhuma fonte que confirme registro ativo no Brasil sob esses nomes — não incluídos por falta de fonte primária brasileira. WebSearch 21/08/2026."
+    ],
     "indications": [
       "Emergência hipertensiva, via intravenosa",
       "Hipertensão grave aguda na gestação e no puerpério, incluindo pré-eclâmpsia com hipertensão grave e eclâmpsia — um dos três agentes de primeira linha reconhecidos internacionalmente (IV labetalol, IV hidralazina e nifedipino oral de liberação imediata), segundo o ACOG Committee Opinion nº 767 (2019)",
@@ -7261,7 +7269,8 @@
     "lactation": "**Interromper a amamentação.** A bula é afirmativa, não condicional: o verapamil **é excretado no leite humano** e a amamentação deve ser interrompida durante a terapia. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott).",
     "brand_names": [
       "Dilacoron",
-      "Coronaril"
+      "Coronaril",
+      "Vasoton — Blau Farmacêutica S.A."
     ],
     "half_life_hours": 5.0,
     "half_life_note": "Meia-vida de eliminação de 2,8 a 7,4 horas após dose única; com doses repetidas (menos de 10 doses a cada 6 horas), a meia-vida aumenta para 4,5 a 12,0 horas, por saturação parcial do metabolismo hepático de primeira passagem — valor registrado em `half_life_hours` (5h) é aproximado ao ponto médio da faixa de dose única, mais representativa do início do tratamento. O metabólito ativo norverapamil (cerca de 20% da atividade cardiovascular do verapamil) tem meia-vida um pouco maior, de 5,7 a 7,3 horas, prolongando discretamente o efeito residual. Fonte: literatura de farmacocinética clínica do verapamil (StatPearls, rótulo FDA/DailyMed), consultada via WebSearch em 2026 — a bula brasileira do DILACORON já citada nas referências deste registro não detalha o valor numérico da meia-vida.",
@@ -7273,7 +7282,9 @@
     "presentations": [
       "Comprimido revestido 80 mg (embalagem com 30 comprimidos)"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Vasoton® (cloridrato de verapamil), Blau Farmacêutica S.A., Registro MS nº 1.1637.0113 — solução injetável 2,5 mg/mL, uso intravenoso, embalagem com 5 ampolas de 2 mL. Apresentação distinta das já cadastradas (Dilacoron/Coronaril, comprimidos orais) — é a única apresentação injetável de verapamil identificada no mercado brasileiro nesta busca. Fonte: bula do fabricante (blau.com, PDF de bula profissional) e páginas de venda (ConsultaRemédios, Farmaindex) que citam o registro MS. Fonte adicional consultada e NÃO usada por falta de confirmação independente: nomes 'Dilacor', 'Veracoron', 'Vascord', 'Multicor' e 'Veraval' apareceram em síntese de busca sem nenhuma página/bula específica que os confirmasse — não incluídos por não atenderem à régua de verificação (nenhuma fonte primária localizada). WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "vericiguate",
@@ -8042,7 +8053,9 @@
     "sbp_reduction_mmhg": -10.0,
     "dbp_reduction_mmhg": -6.5,
     "bp_evidence_source": "Análise integrada de 7 ensaios clínicos controlados por placebo, 8-12 semanas, pacientes com PAD basal de 95-110 mmHg (n=1.915 irbesartana vs. n=611 placebo): reduções pressóricas de vale, subtraídas do placebo, de 8-10/5-6 mmHg com irbesartana 150 mg/dia e de 8-12/5-8 mmHg com 300 mg/dia — os valores numéricos aqui refletem o ponto médio da faixa de 300 mg/dia (dose preferida na nefropatia diabética, ver dosing). Fonte: rótulo FDA do AVAPRO (irbesartan), seção Clinical Pharmacology/Clinical Studies; análise dose-resposta também descrita em Kassler-Taub K et al., 'Comparative efficacy of two angiotensin II receptor antagonists, irbesartan and losartan, in mild-to-moderate hypertension', Am J Hypertens. 1998;11(4 Pt 1):445-453, PMID 9622147.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial) — busca dirigida por marca de fantasia adicional além de Aprovel® (Sanofi-Aventis). Resultado: a Sanofi comunicou oficialmente, em 09/10/2023, a descontinuação definitiva da fabricação/importação de APROVEL® (irbesartana) 150 mg e 300 mg comprimidos revestidos (fonte: sanofi.com.br/pt/noticias/informacoes-de-produtos/2023-10-09-descontinuacao-aprovel); o registro ANVISA de Aprovel (Sanofi Medley) foi cancelado em 04/10/2024. 'Avapro' é o nome comercial internacional do mesmo produto (Bristol-Myers Squibb em outros mercados), sem confirmação independente de registro próprio e ativo no Brasil sob esse nome — não incluído por falta de fonte primária brasileira. Nenhuma outra marca de fantasia isolada (irbesartana sem associação) foi localizada ativa no mercado nacional. WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "estreptoquinase",
@@ -12961,7 +12974,9 @@
       "Solução injetável 25.000 UI/mL (anti-Xa), embalagem com 10 seringas preenchidas de 0,2 mL (5.000 UI).",
       "Uso adulto, uso injetável exclusivamente por via subcutânea (NÃO administrar por via intramuscular). Potência descrita em unidades internacionais anti-Xa (UI), segundo o 1º Padrão Internacional da Heparina de Baixo Peso Molecular. Fonte: bula FRAGMIN, Pfizer, MS 1.0216.0234."
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial) — busca dirigida por marca de fantasia adicional além de Fragmin® (produzida por Wyeth Indústria Farmacêutica Ltda., hoje sob Pfizer). Resultado: nenhuma outra marca de fantasia brasileira foi encontrada nas fontes consultadas (ConsultaRemédios, Índice de medicamentos, Primedicin) — o mercado nacional de dalteparina sódica aparece registrado apenas sob Fragmin®. WebSearch 21/08/2026."
+    ],
     "hepatic_adjustment": "A bula recomenda cautela em pacientes com insuficiência hepática grave, pelo risco potencialmente elevado de hemorragia — não define um esquema numérico de ajuste de dose por gravidade da hepatopatia. Fonte: bula FRAGMIN, Pfizer, seção Advertências e Precauções — Risco de hemorragia.",
     "indications": [
       "Tromboprofilaxia em cirurgias — é a ÚNICA indicação aprovada de forma explícita na bula brasileira consultada nesta sessão (versão frg04b, 13/10/2009): cirurgia geral com risco de complicações tromboembólicas, cirurgia geral com fatores de risco adicionais (ex.: malignidade) e cirurgia ortopédica (ex.: artroplastia de quadril) — ver `dosing` para os esquemas específicos de cada cenário."
