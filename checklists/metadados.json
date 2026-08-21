@@ -18146,5 +18146,270 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "rm-em-marcapasso-ou-cdi-nao-condicional-triagem-e-protocolo-magnasafe",
+    "condicao": "Ressonância magnética em portador de marca-passo ou CDI não condicional",
+    "resumo": "Triagem, reprogramação, monitorização e reversão pós-exame para realizar RM com segurança em paciente com dispositivo cardíaco eletrônico implantável (CIED) legado, não certificado para o ambiente de RM — protocolo sustentado pelo Registro MagnaSafe e pelo estudo de Nazarian.",
+    "documento_origem": "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684 — Registro MagnaSafe, 1.000 casos de marca-passo e 500 casos de CDI, RM não torácica a 1,5 T",
+      "Nazarian S, Hansford R, Rahsepar AA, Weltin V, McVeigh D, Ipek EG, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579 — 1.509 pacientes, 2.103 exames de RM torácicos e não torácicos a 1,5 T, seguimento de longo prazo em 958 pacientes",
+      "Indik JH, Gimbel JR, Abe H, Alkmim-Teixeira R, Birgersdotter-Green U, Clarke GD, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708"
+    ],
+    "itens": [
+      {
+        "id": "rm-cied-triagem-condicional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar, pelo fabricante e modelo do gerador e dos eletrodos, que o sistema é de fato não condicional para RM antes de aplicar este protocolo — dispositivo condicional segue o protocolo específico do próprio fabricante, não este",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-eletrodo-integro",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar ausência de eletrodo abandonado ou com integridade duvidosa/fraturado — cenário de maior incerteza, pouco representado nos dois estudos de referência, que costuma pesar contra a realização do exame fora de protocolo dedicado",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rm-cied-dependencia-marcapasso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar se o paciente é dependente de marca-passo (sem ritmo próprio de escape) — essa informação determina a necessidade de reprogramação para modo assíncrono antes do exame",
+        "origem_secao": "Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-interrogacao-pre",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Interrogar o dispositivo imediatamente antes do exame, registrando os parâmetros de estimulação e sensibilidade em uso",
+        "origem_secao": "Registro MagnaSafe; estudo de Nazarian"
+      },
+      {
+        "id": "rm-cied-reprogramacao-pre",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reprogramar o dispositivo conforme protocolo padronizado antes do exame — resposta a frequência desligada, modo assíncrono no paciente dependente de marca-passo, e terapias de choque do CDI desativadas",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-equipe-capacitada",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Confirmar a presença, durante todo o exame, de pessoal capacitado a interrogar e reprogramar o dispositivo e a atender emergência",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-monitorizacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorizar sinais vitais e oximetria de pulso continuamente durante todo o exame",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-torax",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a RM for torácica, considerar que o eletrodo intracardíaco fica mais próximo do campo de radiofrequência — cenário testado pelo estudo de Nazarian (que incluiu RM torácica), diferente do Registro MagnaSafe (só RM não torácica)",
+        "origem_secao": "O estudo de Nazarian: ampliando para RM torácica"
+      },
+      {
+        "id": "rm-cied-tesla-eletrodo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o exame for planejado a 3 tesla (em vez de 1,5 T): individualizar a decisão — a evidência de maior volume dos dois estudos de referência é para 1,5 T, e a segurança a 3 T tem evidência mais limitada",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rm-cied-reinterrogacao-pos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Reinterrogar o dispositivo imediatamente após o exame e reprogramá-lo de volta ao modo habitual, revertendo os ajustes feitos para a RM",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-cied-orientacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar o paciente de que o dispositivo pode registrar reset elétrico transitório para o modo de segurança durante o exame — achado mais comum nos dois estudos de referência, revertido pela reprogramação pós-exame na quase totalidade dos casos",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Dispositivos citado em source_refs (Registro MagnaSafe, estudo de Nazarian e consenso HRS 2017), com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "decisao-de-troca-eletiva-de-gerador-de-marcapasso-ou-cdi-escore-dare",
+    "condicao": "Decisão de troca eletiva de gerador de marca-passo ou CDI",
+    "resumo": "O que checar antes de indicar a troca de gerador ao atingir o indicador de substituição eletiva (ERI) ou fim de vida (EOL) — o risco de complicação maior muda de forma marcante conforme o escopo do procedimento, e o risco de morte nos meses seguintes reflete a comorbidade do paciente, não a técnica cirúrgica, segundo o Registro REPLACE e o escore REPLACE DARE.",
+    "documento_origem": "troca-eletiva-de-gerador-marca-passo-cdi-risco-por-escopo-e-escore-dare-registro-replace",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Poole JE, Gleva MJ, Mela T, Chung MK, Uslan DZ, Borge R, et al; REPLACE Registry Investigators. Complication rates associated with pacemaker or implantable cardioverter-defibrillator generator replacements and upgrade procedures: results from the REPLACE registry. Circulation. 2010;122(16):1553-1561. DOI: 10.1161/CIRCULATIONAHA.110.976076. PMID: 20921437",
+      "Chung MK, Holcomb RG, Mittal S, Steinberg JS, Gleva MJ, Mela T, Uslan DZ, Mitchell K, Poole JE; REPLACE Investigators. REPLACE DARE (Death After Replacement Evaluation) score: determinants of all-cause mortality after implantable device replacement or upgrade from the REPLACE registry. Circ Arrhythm Electrophysiol. 2014;7(6):1048-1056. DOI: 10.1161/CIRCEP.114.001671. PMID: 25221331",
+      "Crossley GH, Gayle DD, Simmons TW, Haisty WK, Bailey JR, Davis-O'Brien K, Hammon JW, Fitzgerald DM. Reprogramming pacemakers enhances longevity and is cost-effective. Circulation. 1996;94(9 Suppl):II245-247. PMID: 8901754"
+    ],
+    "itens": [
+      {
+        "id": "troca-gerador-motivo-eri-eol",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar por interrogação do dispositivo que o gerador de fato atingiu o indicador de substituição eletiva (ERI) ou o fim de vida (EOL) antes de indicar a troca",
+        "origem_secao": "Por que esta é uma decisão, não um procedimento de rotina"
+      },
+      {
+        "id": "troca-gerador-escopo-planejado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Definir explicitamente, antes do procedimento, se o escopo será apenas a troca do gerador (sem adição de eletrodo) ou se envolverá adição de eletrodo novo, revisão de sistema ou upgrade (por exemplo, marca-passo para CDI, ou para ressincronização cardíaca)",
+        "origem_secao": "O registro REPLACE — desenho"
+      },
+      {
+        "id": "troca-gerador-consentimento-risco-diferenciado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao obter o consentimento, informar que o risco de complicação maior documentado difere de forma marcante conforme o escopo — menor quando não há adição de eletrodo, e várias vezes maior quando há adição de eletrodo, revisão de sistema ou upgrade, sobretudo para ressincronização cardíaca",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      },
+      {
+        "id": "troca-gerador-tipo-dispositivo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrar que, em ambas as coortes do registro, a complicação maior foi mais frequente na troca de CDI do que na de marca-passo",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      },
+      {
+        "id": "troca-gerador-risco-infeccioso",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não presumir que o excesso de risco do upgrade/adição de eletrodo seja predominantemente infeccioso — as taxas de infecção em 6 meses foram semelhantes entre o grupo sem e o grupo com adição de eletrodo; o excesso de risco é sobretudo mecânico (perfuração, deslocamento, pneumotórax, hematoma que exige reintervenção)",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      },
+      {
+        "id": "troca-gerador-comorbidade-dare",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Levantar as comorbidades que compõem o escore REPLACE DARE (internação recente por insuficiência cardíaca, classe funcional NYHA III/IV, uso de antiarrítmico, doença cerebrovascular e estágio de doença renal crônica) antes de decidir o momento da troca",
+        "origem_secao": "O escore REPLACE DARE — para quem a troca é mais arriscada de morrer, não de complicar"
+      },
+      {
+        "id": "troca-gerador-otimizacao-comorbidade",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente com carga elevada de comorbidade pelo DARE, considerar otimizar a insuficiência cardíaca e a função renal antes do procedimento — nesse perfil, o risco relevante a discutir é de mortalidade por doença de base, não de complicação técnica do procedimento",
+        "origem_secao": "O que isso significa para a decisão de reprogramar, adiar ou trocar"
+      },
+      {
+        "id": "troca-gerador-separar-decisoes",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Sempre que clinicamente possível, separar a decisão \"preciso trocar o gerador\" da decisão \"preciso, além disso, mudar o sistema de eletrodos\", em vez de somar as duas de forma automática",
+        "origem_secao": "O que isso significa para a decisão de reprogramar, adiar ou trocar"
+      },
+      {
+        "id": "troca-gerador-reprogramacao-adiamento",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: não há, na fonte consultada, estudo dedicado a reprogramar o dispositivo para reduzir consumo de bateria e adiar a troca especificamente em paciente de alto risco já próximo do ERI/EOL — qualquer decisão de adiar por essa via deve ser individualizada, sem número de referência específico para esse cenário",
+        "origem_secao": "Limite explícito do que este documento cobre"
+      },
+      {
+        "id": "troca-gerador-seguimento-pos-alta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Agendar seguimento estruturado após a troca, com atenção redobrada ao risco de complicação e de óbito tardio relacionado ao procedimento quando o escopo envolveu adição de eletrodo ou upgrade",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Dispositivos citado em source_refs (Registro REPLACE e escore REPLACE DARE), com a seção de origem registrada em cada item. A marcação VERIFICAÇÃO HUMANA NECESSÁRIA do documento de origem, sobre reprogramação para adiar a troca em paciente de alto risco, foi preservada sem inventar número de referência."
+  },
+  {
+    "slug": "inicio-de-amiodarona-em-paciente-anticoagulado-com-varfarina-ajuste-de-inr",
+    "condicao": "Início de amiodarona em paciente já anticoagulado com varfarina — ajuste e monitorização do INR",
+    "resumo": "O que checar ao introduzir amiodarona em paciente em uso estável de varfarina (ou vice-versa): a interação farmacocinética por inibição enzimática se instala de forma lenta e progressiva, atinge o pico por volta da 7ª semana e persiste por meses após a suspensão da amiodarona — exigindo vigilância de INR estendida, não um ajuste único.",
+    "documento_origem": "interacao-amiodarona-varfarina-inibicao-enzimatica-e-ajuste-de-dose",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sanoski CA, Bauman JL. Clinical observations with the amiodarone/warfarin interaction: dosing relationships with long-term therapy. Chest. 2002;121(1):19-23. PMID: 11796427 — estudo observacional prospectivo, 43 pacientes em varfarina estável iniciando amiodarona, seguidos por pelo menos 1 ano",
+      "Naganuma M, Shiga T, Nishikata K, Tsuchiya T, Kasanuki H, Fujii E. Role of desethylamiodarone in the anticoagulant effect of concurrent amiodarone and warfarin therapy. J Cardiovasc Pharmacol Ther. 2001;6(4):363-367. PMID: 11907638 — 25 pacientes em varfarina estável recebendo amiodarona, dosagem plasmática de amiodarona e do metabólito desetilamiodarona no dia 7, correlacionada ao delta de INR/dose",
+      "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil Ltda., solução injetável) e Bula do ATLANSIL (cloridrato de amiodarona, Sanofi-Aventis Farmacêutica Ltda., comprimidos), itens de Interações Medicamentosas — mesma fonte já usada em 'amiodarona-associacoes-a-evitar-e-a-janela-apos-a-suspensao.md', citada aqui para a afirmação sobre persistência da interação após a suspensão"
+    ],
+    "itens": [
+      {
+        "id": "amio-varf-verificar-uso-concomitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se o paciente já está em uso estável de varfarina antes de iniciar amiodarona (ou o inverso) — a interação farmacocinética se instala de forma progressiva ao longo de semanas, não de imediato",
+        "origem_secao": "Por que a interação existe: dois mecanismos, dois enantiômeros"
+      },
+      {
+        "id": "amio-varf-inr-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Registrar o INR basal e a dose de varfarina em uso antes de iniciar a amiodarona, como referência para o ajuste que virá",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-frequencia-inr-inicial",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorizar o INR com maior frequência ao iniciar a amiodarona (por exemplo, semanalmente nas primeiras semanas), em vez do intervalo habitual de um paciente já estável",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-nao-relaxar-inicio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não presumir que um INR estável nos primeiros 7 a 10 dias após iniciar amiodarona indique ausência de risco — o efeito de potencialização do anticoagulante atinge o pico apenas em torno da 7ª semana de uso concomitante",
+        "origem_secao": "Tempo de instalação: por que o efeito não aparece de imediato"
+      },
+      {
+        "id": "amio-varf-vigilancia-prolongada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Estender a vigilância intensificada do INR por pelo menos 2 meses após o início da amiodarona, dado o tempo de instalação lento do efeito de potencialização",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-ajuste-guiado-inr",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Ajustar a dose de varfarina de forma gradual e guiada pelo INR, nunca por um percentual fixo de redução — a fonte de referência descreve relação estatística por faixa de dose de amiodarona, não regra determinística, e a resposta individual varia",
+        "origem_secao": "Magnitude do efeito: quanto reduzir, e conforme qual variável"
+      },
+      {
+        "id": "amio-varf-suspensao-nao-encerra-vigilancia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao suspender a amiodarona, não encerrar a vigilância do INR — o efeito inibitório persiste por meses após a suspensão, e a dose de varfarina eventualmente precisará ser reaumentada de forma igualmente lenta e imprevisível",
+        "origem_secao": "A parte que mais se esquece: a interação persiste depois de suspender"
+      },
+      {
+        "id": "amio-varf-prazo-seguranca-indefinido",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: nenhuma das fontes consultadas define um número exato de semanas ou meses em que a vigilância de INR pode ser considerada encerrada com segurança após a suspensão da amiodarona — a bula descreve apenas \"vários meses\", exigindo julgamento clínico caso a caso",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-sangramento-menor",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Estar atento a sinais de sangramento menor durante o período de ajuste — achado relatado numa proporção relevante dos pacientes do estudo de referência desta interação",
+        "origem_secao": "Magnitude do efeito: quanto reduzir, e conforme qual variável"
+      },
+      {
+        "id": "amio-varf-nao-duplicar-doc",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Para o panorama completo das demais interações da amiodarona (glicoproteína P, CYP2D6, prolongamento de QT) e para a monitorização basal e periódica além do INR, consultar o checklist e o documento dedicados ao início de amiodarona",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Itens derivados do documento de Farmacologia citado em source_refs, com a seção de origem registrada em cada item. A marcação VERIFICAÇÃO HUMANA NECESSÁRIA do documento de origem, sobre o prazo de vigilância do INR após a suspensão da amiodarona, foi preservada. Nenhum item de categoria 'medicacao' foi usado neste checklist; nenhuma dose numérica de fármaco foi citada, conforme a regra do lote."
   }
 ]
