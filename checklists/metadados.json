@@ -20168,5 +20168,188 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-perioperatorio-de-cardiomiopatia-hipertrofica-obstrutiva-em-cirurgia-nao-cardiaca",
+    "condicao": "Cardiomiopatia hipertrófica obstrutiva (CMH com LVOTO) em cirurgia não cardíaca",
+    "resumo": "Metas hemodinâmicas específicas para o paciente com obstrução dinâmica da via de saída do ventrículo esquerdo submetido a cirurgia não cardíaca — a resposta reflexa usada para outras causas de hipotensão perioperatória pode piorar o gradiente em vez de corrigi-lo.",
+    "documento_origem": "cmh-lvoto-cirurgia-nao-cardiaca-arvore-aha-acc-2024",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. J Am Coll Cardiol. 2024;84(19):1869-1969. PMID: 39320289. DOI: 10.1016/j.jacc.2024.06.013.",
+      "Ommen SR, Ho CY, Asif IM, et al. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy. Circulation. 2024. DOI: 10.1161/CIR.0000000000001250."
+    ],
+    "itens": [
+      {
+        "id": "cmhperi-caracterizacao-pre-operatoria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Caracterização pré-operatória registrada antes de definir o plano anestésico: sintomas, LVOTO em repouso e provocado, FEVE, SAM/insuficiência mitral associada, arritmias e terapia farmacológica atual",
+        "origem_secao": "Definir sintomas, LVOTO em repouso/provocado, FEVE, IM/SAM, arritmias e terapia atual"
+      },
+      {
+        "id": "cmhperi-instabilidade-antes-de-eletiva",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sintomas descompensados, síncope de origem arrítmica ou instabilidade hemodinâmica identificados: avaliar/tratar a condição cardíaca antes da cirurgia eletiva, considerando encaminhamento a centro com experiência em CMH",
+        "origem_secao": "Há sintomas descompensados, síncope arrítmica ou instabilidade?"
+      },
+      {
+        "id": "cmhperi-manter-terapia-cronica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador e/ou bloqueador de canal de cálcio não diidropiridínico (verapamil/diltiazem) já indicado e tolerado mantido no perioperatório, sem suspensão desnecessária",
+        "origem_secao": "Terapia crônica"
+      },
+      {
+        "id": "cmhperi-meta-precarga-euvolemia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Meta de pré-carga definida como euvolemia, não como restrição de volume: hipovolemia e diurese excessiva reduzem o volume ventricular e podem aumentar o gradiente de via de saída",
+        "origem_secao": "Preservar pré-carga"
+      },
+      {
+        "id": "cmhperi-evitar-vasodilatacao-abrupta",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Vasodilatação abrupta e redução de pós-carga evitadas; diante de hipotensão associada à obstrução, priorizar vasoconstritor sem efeito beta-adrenérgico predominante (por exemplo, fenilefrina ou vasopressina) em vez de agente com ação beta",
+        "origem_secao": "Preservar pós-carga"
+      },
+      {
+        "id": "cmhperi-nao-aumentar-contratilidade-reflexo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Inotrópico beta-adrenérgico não usado como primeira resposta reflexa à hipotensão sem antes considerar se a causa é obstrução dinâmica da via de saída, que pode piorar com o aumento de contratilidade",
+        "origem_secao": "Evitar aumento de contratilidade"
+      },
+      {
+        "id": "cmhperi-tratar-taquicardia-preservar-ritmo",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Causas de taquicardia tratadas ativamente (dor, hipovolemia, anemia, hipóxia, arritmia) e ritmo sinusal preservado sempre que possível, pelo risco de má tolerância à perda da contração atrial em ventrículo hipertrófico",
+        "origem_secao": "Evitar taquicardia e preservar ritmo sinusal"
+      },
+      {
+        "id": "cmhperi-eco-intraoperatorio-se-hipotensao-inexplicada",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Ecocardiograma intraoperatório considerado diante de hipotensão inexplicada ou refratária, para diferenciar obstrução dinâmica da via de saída, hipovolemia, disfunção ventricular e SAM com insuficiência mitral — tratamentos hemodinâmicos podem ser opostos entre essas causas",
+        "origem_secao": "Eco intraoperatório"
+      },
+      {
+        "id": "cmhperi-monitorizacao-proporcional-ao-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Necessidade de monitorização invasiva (pressão arterial invasiva, acesso hemodinâmico, disponibilidade de eco intraoperatório, terapia intensiva pós-operatória) avaliada conforme o risco individual — não há indicação universal de monitorização invasiva para todo paciente com CMH",
+        "origem_secao": "Monitorização"
+      },
+      {
+        "id": "cmhperi-orientar-equipe-fisiologia-oposta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Equipe cirúrgica e anestésica orientada de que a resposta hemodinâmica na CMH obstrutiva pode ser oposta à usada para outras causas de choque — a pergunta diante da hipotensão é primeiro \"o gradiente aumentou?\", não aumentar inotropismo ou reduzir mais a pós-carga por reflexo",
+        "origem_secao": "Regra prática"
+      },
+      {
+        "id": "cmhperi-vigilancia-pos-operatoria",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância pós-operatória ativa contra os gatilhos conhecidos de piora do gradiente: dor não controlada, taquicardia, desidratação e alterações bruscas de volume",
+        "origem_secao": "T Pós-operatório: evitar dor, taquicardia, desidratação e alterações bruscas de volume"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Perioperatório citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "gestacao-apos-transplante-cardiaco-imunossupressao-e-cuidado-pre-concepcional",
+    "condicao": "Gestação após transplante cardíaco",
+    "resumo": "O que checar no aconselhamento pré-concepcional e no acompanhamento da gestante receptora de transplante cardíaco: critérios de elegibilidade, troca obrigatória do micofenolato antes da concepção e vigilância intensiva de rejeição, pré-eclâmpsia e nível sérico do imunossupressor.",
+    "documento_origem": "gestacao-apos-transplante-cardiaco-desfechos-maternos-fetais-e-manejo-da-imunossupressao",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Craig AM, Campbell A, Snow SC, Spates TN, Goldstein SA, Denoble AE, Meng ML, Schroder JN, Flores KP, Agarwal R, Ward CC, Federspiel JJ. Maternal and Pregnancy Outcomes Following Heart Transplantation in the United States. JACC Heart Fail. 2023 Dec;11(12):1666-1674. doi: 10.1016/j.jchf.2023.08.018. PMID: 37804312.",
+      "DeFilippis EM, Blumer V, Mentz RJ, Agarwal R, Haythe JH, Kittleson M. In-Hospital Outcomes in Pregnancy After Heart Transplantation. Am J Cardiol. 2022 Jun 1;172:68-72. doi: 10.1016/j.amjcard.2022.02.026. PMID: 35331474.",
+      "Bhagra CJ, Bhagra SK, Donado A, Butt T, Forrest L, MacGowan GA, Parry G. Pregnancy in cardiac transplant recipients. Clin Transplant. 2016 Sep;30(9):1059-65. doi: 10.1111/ctr.12788. PMID: 27313061.",
+      "Coscia LA, Constantinescu S, Davison JM, Moritz MJ, Armenti VT. Immunosuppressive drugs and fetal outcome. Best Pract Res Clin Obstet Gynaecol. 2014 Nov;28(8):1174-87. doi: 10.1016/j.bpobgyn.2014.07.020. PMID: 25175414.",
+      "Sifontis NM, Coscia LA, Constantinescu S, Lavelanet AF, Moritz MJ, Armenti VT. Pregnancy outcomes in solid organ transplant recipients with exposure to mycophenolate mofetil or sirolimus. Transplantation. 2006 Dec 27;82(12):1698-702. doi: 10.1097/01.tp.0000252683.74584.29. PMID: 17198262.",
+      "Perez-Aytes A, Marin-Reina P, Boso V, Ledo A, Carey JC, Vento M. Mycophenolate mofetil embryopathy: A newly recognized teratogenic syndrome. Eur J Med Genet. 2017 Jan;60(1):16-21. doi: 10.1016/j.ejmg.2016.09.014. PMID: 27639443.",
+      "Kim M, Rostas S, Gabardi S. Mycophenolate fetal toxicity and risk evaluation and mitigation strategies. Am J Transplant. 2013 Jun;13(6):1383-9. doi: 10.1111/ajt.12238. PMID: 23617812.",
+      "Kittleson MM, DeFilippis EM, Bhagra CJ, Casale JP, Cauldwell M, Coscia LA, D'Souza R, Gaffney N, Gerovasili V, Ging P, Horsley K, Macera F, Mastrobattista JM, Paraskeva MA, Punnoose LR, Rasmusson KD, Reynaud Q, Ross HJ, Thakrar MV, Walsh MN. Reproductive health after thoracic transplantation: An ISHLT expert consensus statement. J Heart Lung Transplant. 2023 Mar;42(3):e1-e42. doi: 10.1016/j.healun.2022.10.009. PMID: 36528467."
+    ],
+    "itens": [
+      {
+        "id": "gestacaotx-criterios-elegibilidade-pre-concepcional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Critérios de elegibilidade do consenso ISHLT 2023 conferidos antes de liberar tentativa de concepção: pelo menos 1 ano pós-transplante, FEVE acima de 45% sem vasculopatia de enxerto significativa nem anticorpo doador-específico, sem rejeição nos 12 meses anteriores, imunossupressão de manutenção em dose estável e segura na gestação, e sem infecção aguda",
+        "origem_secao": "Protocolo de intervalo pós-transplante e de substituição do micofenolato antes da concepção (ISHLT 2023)"
+      },
+      {
+        "id": "gestacaotx-contraindicacoes-relativas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações listadas pelo consenso ISHLT 2023 pesquisadas ativamente: não adesão ao tratamento, hipertensão ou diabetes mal controlados, e disfunção renal com TFGe abaixo de 30 mL/min/1,73 m²",
+        "origem_secao": "Protocolo de intervalo pós-transplante e de substituição do micofenolato antes da concepção (ISHLT 2023)"
+      },
+      {
+        "id": "gestacaotx-suspender-micofenolato-antes-concepcao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Micofenolato de mofetila ou micofenolato sódico identificado no esquema de toda paciente em idade fértil e substituído por alternativa sem o mesmo sinal de teratogenicidade (o consenso ISHLT cita azatioprina, a critério do risco individual de rejeição), com antecedência mínima antes da concepção planejada — nunca mantido durante gestação já estabelecida",
+        "origem_secao": "Segurança do imunossupressor na gestação: por que o micofenolato precisa sair do esquema antes da concepção"
+      },
+      {
+        "id": "gestacaotx-gestacao-nao-planejada-suspensao-imediata",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de gestação não planejada em uso de micofenolato, suspensão do fármaco realizada de forma imediata ao diagnóstico, não postergada até a próxima consulta de rotina",
+        "origem_secao": "Substituição do micofenolato — quando suspender e para qual fármaco"
+      },
+      {
+        "id": "gestacaotx-manter-titular-inibidor-calcineurina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de calcineurina (tacrolimo ou ciclosporina) mantido durante toda a gestação, sem redução empírica por receio de teratogenicidade não sustentado pelas fontes — o esquema costuma exigir aumento de dose para preservar o nível sérico-alvo",
+        "origem_secao": "O que isso significa na prática clínica"
+      },
+      {
+        "id": "gestacaotx-monitorizar-nivel-serico-frequente",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Nível sérico do inibidor de calcineurina monitorizado com a mesma frequência ou mais do que fora da gestação (consenso ISHLT: a cada 2-4 semanas), acompanhando o aumento esperado de volume de distribuição e depuração renal da gravidez",
+        "origem_secao": "Inibidor de calcineurina e inibidor de mTOR, para contraste"
+      },
+      {
+        "id": "gestacaotx-vigilancia-pre-eclampsia-precoce",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância pressórica intensiva e rastreio de pré-eclâmpsia iniciados precocemente na gestação, não reservados ao terceiro trimestre — é o achado mais consistente entre as coortes desta população (excesso de distúrbio hipertensivo/pré-eclâmpsia com razão de chances ajustada de até 6,97)",
+        "origem_secao": "O que isso significa na prática clínica"
+      },
+      {
+        "id": "gestacaotx-parto-centro-terciario",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Parto planejado em centro terciário com equipe de transplante cardíaco e obstetrícia de alto risco disponíveis, não em maternidade sem essa retaguarda",
+        "origem_secao": "O que isso significa na prática clínica"
+      },
+      {
+        "id": "gestacaotx-nao-tratar-como-contraindicacao-absoluta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientada de que a gestação pós-transplante cardíaco não é contraindicação absoluta (taxa de nascido vivo de 91% na maior coorte com dados de imunossupressão), mas que as fontes convergem em classificá-la como gestação de alto risco obstétrico e cardiológico simultâneo, com excesso de morbidade materna grave de até 16 a 38 vezes nas coortes de base populacional",
+        "origem_secao": "O que isso significa na prática clínica"
+      },
+      {
+        "id": "gestacaotx-nao-superestimar-risco-rejeicao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Rejeição de enxerto associada à gestação comunicada como evento raro nas séries publicadas (1 em 22 gestações na maior coorte com esse dado), sem tamanho amostral para estimativa precisa — não tratar como risco desprezível, mas também não superestimar frente à paciente",
+        "origem_secao": "O que isso significa na prática clínica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Gravidez citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
