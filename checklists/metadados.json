@@ -8424,5 +8424,244 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "seguimento-de-aneurisma-de-aorta-abdominal-por-tamanho-indicacao-de-reparo",
+    "condicao": "Seguimento do aneurisma de aorta abdominal por tamanho e indicação de reparo cirúrgico ou EVAR",
+    "resumo": "Checklist do ponto de decisão eletivo do AAA — intervalo de rastreamento por diâmetro, limiar de diâmetro que indica reparo em homens e mulheres, crescimento rápido como indicação cirúrgica independente do diâmetro, e a escolha entre EVAR e cirurgia aberta.",
+    "documento_origem": "aneurisma-de-aorta-abdominal-rastreamento-seguimento-e-indicacao-de-reparo",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thresholds for abdominal aortic aneurysm repair · NCBI Bookshelf · https://www.ncbi.nlm.nih.gov/books/NBK556917/",
+      "Abdominal Aortic Aneurysm · American Family Physician · 2022 · https://www.aafp.org/afp/2022/0800/abdominal-aortic-aneurysm",
+      "Systematic review and meta-analysis of the growth and rupture rates of small abdominal aortic aneurysms · NCBI Bookshelf · https://www.ncbi.nlm.nih.gov/books/NBK261036/",
+      "Endovascular Aneurysm Repair Versus Open Surgical Repair in Treating Abdominal Aortic Aneurysm · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11540110/"
+    ],
+    "itens": [
+      {
+        "id": "aaa-reparo-rastreamento-intervalo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Intervalo de rastreamento definido pelo diâmetro atual: 3,0-3,9 cm a cada 3 anos; 4,0-4,4 cm a cada 2 anos; 4,5-5,4 cm anual",
+        "origem_secao": "Rastreamento por tamanho"
+      },
+      {
+        "id": "aaa-reparo-limiar-diametro-homem",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para reparo eletivo quando o diâmetro atinge ≥5,5 cm em homens — padrão atual de cuidado adia a cirurgia até esse limiar",
+        "origem_secao": "Indicacao de reparo eletivo"
+      },
+      {
+        "id": "aaa-reparo-limiar-diametro-mulher",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Em mulheres, limiar de encaminhamento para reparo eletivo é ≥5,0 cm, diferente do limiar masculino",
+        "origem_secao": "Indicacao de reparo eletivo"
+      },
+      {
+        "id": "aaa-reparo-crescimento-rapido",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "AAA >4,0 cm com crescimento rápido (aumento ≥1,0 cm em 1 ano) é indicação cirúrgica mesmo abaixo do limiar de diâmetro",
+        "origem_secao": "Indicacao de reparo eletivo"
+      },
+      {
+        "id": "aaa-reparo-racional-vigilancia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Abaixo de 5,5 cm o risco da cirurgia é considerado maior que o risco de ruptura — vigilância é a conduta usual, e isso é explicado ao paciente antes de indicar reparo precoce",
+        "origem_secao": "Indicacao de reparo eletivo"
+      },
+      {
+        "id": "aaa-reparo-risco-por-tamanho",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Risco anual de ruptura considerado na decisão conforme a faixa de diâmetro: próximo a 0% em 3,0-3,9 cm; 1% em 4,0-4,9 cm; 11% em 5,0-5,9 cm",
+        "origem_secao": "Risco de ruptura por tamanho"
+      },
+      {
+        "id": "aaa-reparo-modalidade-evar-vs-aberta",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Escolha entre reparo endovascular (EVAR) e cirurgia aberta discutida com o paciente — EVAR é hoje a abordagem mais comum para reparo eletivo de AAA (80% dos reparos intactos, 52% dos reparos de AAA rotos)",
+        "origem_secao": "Reparo endovascular (EVAR) versus cirurgia aberta"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "investigacao-de-claudicacao-intermitente-com-indice-tornozelo-braco",
+    "condicao": "Investigação de claudicação intermitente com índice tornozelo-braço (ITB)",
+    "resumo": "Checklist do ponto de decisão diagnóstico e terapêutico inicial da doença arterial periférica sintomática — quando suspeitar apesar de sintomas atípicos, como calcular e interpretar o ITB, e a sequência de tratamento da claudicação antes de considerar revascularização.",
+    "documento_origem": "doenca-arterial-periferica-de-membros-diagnostico-por-itb-e-isquemia-critica",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "2024 ACC/AHA/Multisociety Guideline for the Management of Lower Extremity Peripheral Artery Disease · Circulation · 2024 · https://www.ahajournals.org/doi/10.1161/CIR.0000000000001251",
+      "Lower Extremity Peripheral Artery Disease: Diagnosis and Treatment · American Family Physician · 2019 · https://www.aafp.org/pubs/afp/issues/2019/0315/p362.html",
+      "Global vascular guidelines on the management of chronic limb-threatening ischemia · Journal of Vascular Surgery · https://www.jvascsurg.org/article/S0741-5214(19)30321-0/fulltext"
+    ],
+    "itens": [
+      {
+        "id": "clau-itb-quadro-clinico-atipico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de DAP não descartada pela ausência de claudicação clássica — ela está presente em apenas cerca de 10% dos pacientes com DAP; 50% têm sintomas atípicos e 40% são assintomáticos nas pernas",
+        "origem_secao": "Apresentacao clinica"
+      },
+      {
+        "id": "clau-itb-indicacao-teste",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ITB solicitado em todo paciente com história ou achados de exame sugestivos de DAP",
+        "origem_secao": "Diagnostico por indice tornozelo-braco (ITB)"
+      },
+      {
+        "id": "clau-itb-metodo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ITB calculado como razão entre a maior pressão sistólica no tornozelo (artérias dorsal do pé e tibial posterior, por Doppler) e a maior pressão sistólica braquial",
+        "origem_secao": "Diagnostico por indice tornozelo-braco (ITB)"
+      },
+      {
+        "id": "clau-itb-criterio-diagnostico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ITB ≤0,90 em repouso confirma o diagnóstico de DAP de membros inferiores",
+        "origem_secao": "Diagnostico por indice tornozelo-braco (ITB)"
+      },
+      {
+        "id": "clau-itb-modificacao-fatores-risco",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Modificação de fatores de risco e estilo de vida orientada, incluindo exercício",
+        "origem_secao": "Tratamento da claudicacao"
+      },
+      {
+        "id": "clau-itb-exercicio-supervisionado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Terapia de exercício supervisionada ou programa comunitário estruturado com técnicas de mudança comportamental oferecidos para melhorar desempenho de marcha, capacidade funcional e qualidade de vida",
+        "origem_secao": "Tratamento da claudicacao"
+      },
+      {
+        "id": "clau-itb-cilostazol",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Cilostazol considerado, associado ao encaminhamento para treinamento de exercício supervisionado",
+        "origem_secao": "Tratamento da claudicacao"
+      },
+      {
+        "id": "clau-itb-antiplaquetario",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antiagregante plaquetário prescrito para todo paciente com DAP sintomática de membros inferiores",
+        "origem_secao": "Tratamento da claudicacao"
+      },
+      {
+        "id": "clau-itb-revascularizacao-refrataria",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhamento para revascularização endovascular ou cirúrgica considerado quando a claudicação é refratária ao tratamento conservador",
+        "origem_secao": "Tratamento da claudicacao"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "manejo-de-isquemia-critica-de-membro-clti-classificacao-wifi-e-revascularizacao",
+    "condicao": "Manejo da isquemia crônica ameaçadora do membro (CLTI): classificação WIfI e escolha de revascularização",
+    "resumo": "Checklist do ponto de decisão mais grave da doença arterial periférica — estadiamento por WIfI para orientar a necessidade de revascularização, e a escolha entre bypass cirúrgico e terapia endovascular conforme disponibilidade de safena magna (BEST-CLI) e necessidade de revascularização infrapoplítea (BASIL-2).",
+    "documento_origem": "doenca-arterial-periferica-de-membros-diagnostico-por-itb-e-isquemia-critica",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Global vascular guidelines on the management of chronic limb-threatening ischemia · Journal of Vascular Surgery · https://www.jvascsurg.org/article/S0741-5214(19)30321-0/fulltext",
+      "2024 ACC/AHA/Multisociety Guideline for the Management of Lower Extremity Peripheral Artery Disease · Circulation · 2024 · https://www.ahajournals.org/doi/10.1161/CIR.0000000000001251",
+      "Farber A, Menard MT, Conte MS, et al. Surgery or Endovascular Therapy for Chronic Limb-Threatening Ischemia. N Engl J Med. 2022;387(25):2305-2316. DOI: 10.1056/NEJMoa2207899. PMID: 36342173. NCT02060630.",
+      "Bradbury AW, Moakes CA, Popplewell M, et al. A vein bypass first versus a best endovascular treatment first revascularisation strategy for patients with chronic limb threatening ischaemia who required an infra-popliteal, with or without an additional more proximal infra-inguinal, revascularisation procedure to restore limb perfusion (BASIL-2): an open-label, randomised, multicentre, phase 3 trial. Lancet. 2023;401(10390):1798-1809. DOI: 10.1016/S0140-6736(23)00462-2. PMID: 37116524. ISRCTN27728689."
+    ],
+    "itens": [
+      {
+        "id": "clti-4-subgrupos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente classificado dentro dos 4 subgrupos clínicos de DAP (assintomática, sintomática crônica incluindo claudicação, isquemia crônica com ameaça de perda de membro/CLTI, isquemia aguda de membro) antes de definir a conduta",
+        "origem_secao": "Apresentacao clinica"
+      },
+      {
+        "id": "clti-wifi-componentes",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Classificação WIfI aplicada, graduando de 0 a 3 os três componentes: ferida (Wound), isquemia (Ischemia) e infecção do pé (foot Infection)",
+        "origem_secao": "Classificacao WIfI para isquemia critica (CLTI)"
+      },
+      {
+        "id": "clti-wifi-finalidade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "WIfI usado para estadiar o risco de amputação e definir a necessidade de revascularização, não só para registro do exame",
+        "origem_secao": "Classificacao WIfI para isquemia critica (CLTI)"
+      },
+      {
+        "id": "clti-alto-risco-revascularizar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em alto risco (estágio 4, isquemia grau 2-3), revascularização endovascular oferecida quando tecnicamente viável",
+        "origem_secao": "Indicacao de revascularizacao por estagio WIfI"
+      },
+      {
+        "id": "clti-risco-intermediario-revascularizar",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em risco intermediário (estágios 2-3, isquemia grau 1), revascularização considerada se a ferida progredir ou não reduzir ≥50% em 4 semanas apesar de controle de infecção, cuidado da ferida e descarga de peso adequados",
+        "origem_secao": "Indicacao de revascularizacao por estagio WIfI"
+      },
+      {
+        "id": "clti-isquemia-ausente-nao-revascularizar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em isquemia grau 0 (ausente), revascularização NÃO realizada, exceto se déficit de perfusão localizado associado a perda tecidual importante e a ferida não responder ao tratamento em 4 semanas",
+        "origem_secao": "Indicacao de revascularizacao por estagio WIfI"
+      },
+      {
+        "id": "clti-conduito-safena",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Disponibilidade de segmento único adequado de veia safena magna avaliada antes de decidir entre bypass cirúrgico e terapia endovascular (BEST-CLI)",
+        "origem_secao": "Desenho / Interpretação clínica (BEST-CLI)"
+      },
+      {
+        "id": "clti-safena-adequada-bypass",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Com boa safena magna autóloga e paciente candidato apropriado à cirurgia, estratégia cirúrgica inicial reduziu evento adverso maior de membro (MALE) ou morte frente ao tratamento endovascular (HR 0,68; IC95% 0,59-0,79; P<0,001) — BEST-CLI, coorte 1",
+        "origem_secao": "Resultados / Coorte 1 — safena magna adequada (BEST-CLI)"
+      },
+      {
+        "id": "clti-sem-safena-sem-vantagem",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Sem conduíte venoso ideal, a vantagem da cirurgia sobre o tratamento endovascular não foi demonstrada (HR 0,79; IC95% 0,58-1,06; P=0,12) — BEST-CLI, coorte 2",
+        "origem_secao": "Resultados / Coorte 2 — sem safena adequada (BEST-CLI)"
+      },
+      {
+        "id": "clti-infrapopliteo-endovascular-first",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Na CLTI que exige especificamente revascularização infrapoplítea, o BASIL-2 favoreceu estratégia endovascular-first para sobrevida livre de amputação (amputação maior ou morte: HR ajustado 1,35 para bypass versus endovascular; IC95% 1,02-1,80; P=0,037)",
+        "origem_secao": "Resultados / Interpretação clínica (BASIL-2)"
+      },
+      {
+        "id": "clti-decisao-individualizada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão de revascularização registrada como individualizada e anatômica, não dogmática — considerando preferência do paciente, risco operatório, anatomia, experiência local e possibilidade de reintervenção",
+        "origem_secao": "O que NAO pode ser concluido / Mensagem prática (BEST-CLI e BASIL-2)"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem já verificados, com a seção de origem registrada em cada item."
   }
 ]
