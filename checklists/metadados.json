@@ -18146,5 +18146,181 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "escore-de-schwartz-e-conduta-por-genotipo-na-sindrome-do-qt-longo-congenita-na-crianca",
+    "condicao": "Escore de Schwartz e conduta por genótipo na síndrome do QT longo congênita na criança",
+    "resumo": "Aplicação do escore diagnóstico de Schwartz vigente (2011/2022), reconhecimento do diagnóstico direto por QTc ≥480 ms ou por variante patogênica confirmada, identificação do gatilho predominante por genótipo (LQT1/LQT2/LQT3) e conduta terapêutica inicial com betabloqueador não seletivo.",
+    "documento_origem": "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Alders M, Bikker H, Christiaans I. Long QT Syndrome. In: Adam MP, Feldman J, Mirzaa GM, et al., eds. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Publicação inicial 20 fev 2003; última atualização 21 mar 2024. Bookshelf ID: NBK1129 — capítulo de revisão contínua sem PMID/DOI próprios (padrão de citação por Bookshelf ID, verificado nesta sessão), texto integral de acesso aberto lido diretamente em ncbi.nlm.nih.gov/books/NBK1129/ nesta sessão. Fonte da Tabela 1 ('Long QT Syndrome: Scoring System for Clinical Diagnosis', versão vigente do escore de Schwartz, explicitamente descrita no próprio texto como 'adaptada de Schwartz & Crotti [2011] com modificação em Zeppenfeld et al [2022]'), transcrita ponto a ponto nesta sessão.",
+      "Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. DOI: 10.1161/CIRCULATIONAHA.111.062182. PMID: 22083145 — ficha bibliográfica conferida nesta sessão via PubMed E-utilities; é a fonte citada pelo GeneReviews (NBK1129) para a camada de 2011 do escore vigente; texto integral não obtido nesta sessão, citação de segunda mão via GeneReviews para o conteúdo específico da tabela.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, Winkel BG, Behr ER, Blom NA, Charron P, Corrado D, Dagres N, de Chillou C, Eckardt L, Friede T, Haugaa KH, Hocini M, Lambiase PD, Marijon E, Merino JL, Peichl P, Priori SG, Reichlin T, Schulz-Menger J, Sticherling C, Tzeis S, Verstrael A, Volterrani M. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — ficha bibliográfica conferida nesta sessão via PubMed E-utilities. Diretriz endossada também pela Association for European Paediatric and Congenital Cardiology (AEPC), com cobertura pediátrica. As recomendações de Classe/Nível citadas neste documento foram lidas nesta sessão via revisão de acesso aberto que as reproduz literalmente (Wang G, Chu H, Zhao N, abaixo), não diretamente do PDF original do European Heart Journal, que historicamente bloqueia acesso (Oxford Academic, 403) — texto original não obtido nesta sessão.",
+      "Wang G, Chu H, Zhao N. The Clinical Diagnosis and Management of Long QT Syndrome: Insights from the 2022 ESC Guidelines. Rev Cardiovasc Med. 2023;24(6):170. DOI: 10.31083/j.rcm2406170. PMID: 39077522. PMCID: PMC11264164 — texto integral de acesso aberto, lido nesta sessão via PMC; fonte das citações literais de Classe/Nível de Evidência da diretriz ESC 2022 usadas neste documento.",
+      "Schwartz PJ, Priori SG, Spazzolini C, Moss AJ, Vincent GM, Napolitano C, Denjoy I, Guicheney P, Breithardt G, Keating MT, Towbin JA, Beggs AH, Brink P, Wilde AA, Toivonen L, Zareba W, Robinson JL, Timothy KW, Corfield V, Wattanasirichaigoon D, Corbett C, Haverkamp W, Schulze-Bahr E, Lehmann MH, Schwartz K, Coumel P, Bloise R. Genotype-phenotype correlation in the long-QT syndrome: gene-specific triggers for life-threatening arrhythmias. Circulation. 2001;103(1):89-95. DOI: 10.1161/01.cir.103.1.89. PMID: 11136691 — abstract completo conferido nesta sessão via PubMed E-utilities (efetch), autoria confirmada por esummary.",
+      "Wilde AA, Jongbloed RJ, Doevendans PA, Duren DR, Hauer RN, van Langen IM, van Tintelen JP, Smeets HJ, Meyer H, Geelen JL. Auditory stimuli as a trigger for arrhythmic events differentiate HERG-related (LQTS2) patients from KVLQT1-related patients (LQTS1). J Am Coll Cardiol. 1999;33(2):327-332. DOI: 10.1016/s0735-1097(98)00578-6. PMID: 9973011 — abstract completo conferido nesta sessão via PubMed E-utilities (efetch)."
+    ],
+    "itens": [
+      {
+        "id": "qtlc-escore-schwartz-completo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o escore de Schwartz somando os achados de eletrocardiograma (incluindo o QTc no 4º minuto de recuperação do teste ergométrico), história clínica, história familiar e achado genético — sem somar simultaneamente os pares mutuamente exclusivos (torsades de pointes com onda T alternante; síncope associada a estresse com síncope sem relação com estresse)",
+        "origem_secao": "Diagnóstico: escore de Schwartz, versão vigente (2011/2022)"
+      },
+      {
+        "id": "qtlc-interpretacao-escore",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o escore total conforme a faixa vigente: ≤1,0 probabilidade baixa; 1,5-3,0 probabilidade intermediária; >3,0 diagnóstico clínico de síndrome do QT longo",
+        "origem_secao": "Diagnóstico: escore de Schwartz, versão vigente (2011/2022)"
+      },
+      {
+        "id": "qtlc-diagnostico-sem-escore",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecer que o diagnóstico também pode ser firmado diretamente, sem passar pelo escore, na presença de QTc ≥480 ms em ECGs de 12 derivações repetidos (com ou sem sintomas) ou de variante patogênica confirmada em gene causador — a variante patogênica confirma o diagnóstico independentemente da duração do intervalo QT, mesmo com QTc normal",
+        "origem_secao": "Critério diagnóstico direto da diretriz ESC 2022 (sem passar pelo escore)"
+      },
+      {
+        "id": "qtlc-ecg-repetido",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Repetir o eletrocardiograma antes de descartar o diagnóstico com base num único traçado normal, já que a avaliação recomendada é feita com ECGs de 12 derivações repetidos",
+        "origem_secao": "Critério diagnóstico direto da diretriz ESC 2022 (sem passar pelo escore)"
+      },
+      {
+        "id": "qtlc-investigar-gatilho-na-anamnese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente na anamnese o gatilho específico do evento sincopal (exercício físico, sobretudo natação; estímulo auditivo súbito, como despertador ou telefone tocando; sono/repouso), já que esse padrão orienta a suspeita de subtipo genético antes mesmo do resultado do teste genético — e considerar síndrome do QT longo no diferencial de evento com aparência de convulsão associado a esses mesmos gatilhos, antes de encerrar a investigação como quadro puramente neurológico",
+        "origem_secao": "Genótipos principais e seus gatilhos: por que identificar o subtipo muda a conduta / Armadilhas clínicas"
+      },
+      {
+        "id": "qtlc-teste-genetico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar teste genético para identificar o gene causador (KCNQ1/LQT1, KCNH2-HERG/LQT2, SCN5A/LQT3), já que é o genótipo — e não o QTc médio, semelhante entre os três subtipos — que orienta o gatilho esperado e a resposta terapêutica",
+        "origem_secao": "Genótipos principais e seus gatilhos / Resposta a betabloqueador, por genótipo"
+      },
+      {
+        "id": "qtlc-betabloqueador-nao-seletivo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar betabloqueador não seletivo (preferencialmente nadolol ou propranolol) em todo paciente com síndrome do QT longo e prolongamento documentado do intervalo QT, em dose ajustada por peso corporal e resposta clínica",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "qtlc-mexiletina-no-lqt3",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Associar bloqueador de canal de sódio (mexiletina), em dose ajustada por peso, ao betabloqueador em paciente com genótipo LQT3 confirmado e QT prolongado — subtipo com menor taxa de resposta ao betabloqueador isolado nesta coorte de correlação genótipo-fenótipo",
+        "origem_secao": "Tratamento / Resposta a betabloqueador, por genótipo"
+      },
+      {
+        "id": "qtlc-cdi-se-refratario",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação de implante de cardiodesfibrilador o paciente que permanece sintomático apesar de betabloqueador e de terapia genótipo-específica já otimizados",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "qtlc-restricao-esportiva-vhn",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar restrição de esporte competitivo, em especial natação sem supervisão, considerando o maior peso prático dessa restrição no genótipo LQT1 (gatilho predominante por exercício) — VERIFICAÇÃO HUMANA NECESSÁRIA: o corte formal por Classe de Recomendação/Nível de Evidência específico da diretriz ESC 2022 para restrição esportiva por genótipo não foi confirmado no texto integral original nesta sessão; conferir a fonte primária antes de aplicar como recomendação formal fechada",
+        "origem_secao": "Tratamento — Restrição de atividade física e recomendação pediátrica específica com Classe/Nível próprios — VERIFICAÇÃO HUMANA NECESSÁRIA"
+      }
+    ],
+    "revisao": "Revisão editorial e de fontes concluída em 21/08/2026 para integração neste lote (5ª rodada de checklists de Cardiologia pediátrica e geriátrica), sob responsabilidade do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, como revisor clínico responsável pelo projeto Corvia. A marcação VERIFICAÇÃO HUMANA NECESSÁRIA do documento-fonte, referente ao corte formal de Classe/Nível para restrição esportiva por genótipo, foi preservada e não convertida em recomendação fechada."
+  },
+  {
+    "slug": "indicacao-de-marca-passo-na-doenca-do-no-sinusal-e-sindrome-taquicardia-bradicardia-no-idoso",
+    "condicao": "Indicação de marca-passo na doença do nó sinusal e síndrome taquicardia-bradicardia no idoso",
+    "resumo": "Reconhecimento da correlação sintoma-bradicardia — não da idade isolada — como critério de indicação de marca-passo no idoso, avaliação sistemática de anticoagulação na síndrome taquicardia-bradicardia associada, e registro explícito de que a redação literal de Classe/Nível da diretriz 2018 ACC/AHA/HRS não foi confirmada no texto primário.",
+    "documento_origem": "doenca-do-no-sinusal-no-idoso-epidemiologia-por-idade-sindrome-taquicardia-bradicardia-e-indicacao-de-marca-passo",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Jensen PN, Gronroos NN, Chen LY, et al. Incidence of and risk factors for sick sinus syndrome in the general population. J Am Coll Cardiol. 2014;64(6):531-538. PMID: 25104519. PMCID: PMC4139053 — texto integral obtido e conferido via PMC em 02/08/2026, e o abstract reconferido literalmente via PubMed E-utilities na mesma data: 20.572 participantes das coortes ARIC e Cardiovascular Health Study (CHS) combinadas, idade média basal de 59 anos, 43% homens, sem fibrilação atrial ou marca-passo no início do seguimento; 291 casos novos de doença do nó sinusal (SSS) em 17 anos de seguimento (incidência de 0,8 por 1.000 pessoas-ano); risco aumenta com a idade (razão de risco [HR] 1,73; IC95% 1,47-2,05 por incremento de 5 anos); população negra com risco 41% menor que a branca (HR 0,59; IC95% 0,37-0,98); projeção de novos casos nos EUA de 78.000 em 2012 para 172.000 em 2060, atribuída ao envelhecimento populacional. Números por faixa etária e sexo constam da Figura/Tabela do texto integral, conferidos via PMC.",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines, and the Heart Rhythm Society. J Am Coll Cardiol. 2019;74(7):e51-e156. PMID: 30412709 — existência, título, periódico e paginação confirmados via PubMed E-utilities em 02/08/2026. Texto integral bloqueado por acesso pago em jacc.org e em ahajournals.org (a versão irmã publicada em Circulation, PMID 30586772) — 403 em ambos, mesmo com User-Agent de navegador, nesta sessão; sem depósito de texto integral em acesso aberto no PMC (elink devolve apenas 'pubmed_pmc_refs', ou seja, artigos que citam a diretriz, não o texto dela). O conteúdo geral atribuído a esta diretriz neste documento (indicação de marca-passo permanente na disfunção sinusal sintomática e na incompetência cronotrópica) reflete o que é reproduzido de forma consistente em fonte terciária revisada (ver StatPearls abaixo), não a leitura direta do texto primário nesta sessão — a redação literal de Classe de Recomendação e Nível de Evidência não pôde ser conferida e está marcada como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do documento.",
+      "Sohinki D, Ha FJ. Sinus Node Dysfunction. In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 31334973. Bookshelf ID: NBK544253 — texto integral obtido e conferido via NCBI Bookshelf em 02/08/2026, incluindo a reprodução da incidência de 0,8 por 1.000 pessoas-ano (citando o mesmo estudo de Jensen et al. 2014 acima) e a definição de síndrome taquicardia-bradicardia como alternância de bradicardia com outras taquiarritmias supraventriculares, além da citação nominal (sem transcrição do texto de Classe/Nível) à diretriz 2018 ACC/AHA/HRS.",
+      "Semelka M, Gera J, Usman S. Sick Sinus Syndrome. In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 29261930. Bookshelf ID: NBK470599 — texto integral obtido e conferido via NCBI Bookshelf em 02/08/2026: 'a disfunção do nó sinusal se desenvolve em um de cada 600 pacientes cardíacos com 65 anos de idade ou mais' (tradução livre), idade média do paciente com SSS de 68 anos, síndrome taquicardia-bradicardia presente em pelo menos 50% dos pacientes com SSS, doença do nó sinusal respondendo por mais de 50% dos implantes de marca-passo nos EUA na década de 1990, e caracterização de 'doença primariamente da população idosa' (tradução livre)."
+    ],
+    "itens": [
+      {
+        "id": "dns-idoso-suspeita-por-sintoma",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Manter limiar mais baixo de suspeita diagnóstica de disfunção do nó sinusal diante de síncope, pré-síncope, intolerância a esforço inexplicada ou quedas em idoso, já que a incidência da doença quase dobra a cada década de vida (HR 1,73 por incremento de 5 anos)",
+        "origem_secao": "Epidemiologia: uma doença cuja incidência multiplica com a idade"
+      },
+      {
+        "id": "dns-idoso-registro-prolongado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar registro eletrocardiográfico prolongado (Holter ou monitor de eventos) quando o ECG de repouso for normal em idoso com sintomas compatíveis, já que a doença costuma ser paroxística e a correlação sintoma-ritmo frequentemente exige monitorização estendida para ser captada",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "dns-idoso-nao-tratar-achado-incidental",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar marca-passo em idoso assintomático com bradicardia sinusal ou pausas curtas encontradas incidentalmente em ECG de rotina, sem correlação documentada com sintoma",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-correlacao-sintoma-ritmo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar a indicação de marca-passo pela correlação temporal entre o sintoma (síncope, pré-síncope) e a bradicardia documentada, mesmo quando a pausa registrada for isolada e breve — nunca pelo valor absoluto de frequência cardíaca isolado nem pela idade cronológica do paciente",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-incompetencia-cronotropica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Considerar incompetência cronotrópica (incapacidade de elevar adequadamente a frequência cardíaca em resposta a esforço ou estresse fisiológico) como indicação reconhecida de marca-passo, mesmo na ausência de bradicardia de repouso",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-revisar-necessidade-medicacao-bradicardizante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Avaliar se a bradicardia sintomática decorre de medicação indispensável para outra condição (por exemplo, betabloqueador para insuficiência cardíaca ou para controle de frequência na fibrilação atrial) antes de indicar o dispositivo, reconhecendo esse cenário como indicação de marca-passo quando a medicação não pode ser reduzida ou suspensa sem prejuízo clínico maior",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-revisitar-anticoagulacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Revisitar sistematicamente a indicação de anticoagulação para o componente de fibrilação atrial paroxística ao indicar marca-passo pela bradicardia, na síndrome taquicardia-bradicardia (presente em pelo menos metade dos pacientes com doença do nó sinusal) — o implante trata o sintoma da bradicardia, mas não reduz por si só o risco tromboembólico da arritmia atrial associada",
+        "origem_secao": "Síndrome taquicardia-bradicardia: metade dos casos, e uma decisão dupla"
+      },
+      {
+        "id": "dns-idoso-nao-negar-por-idade",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não negar nem postergar a indicação de marca-passo só pela idade cronológica avançada quando há sintoma correlacionado documentado, já que a idade isolada não é contraindicação a um procedimento de baixo risco relativo mesmo no muito idoso",
+        "origem_secao": "Idade cronológica não é, isoladamente, indicação nem contraindicação"
+      },
+      {
+        "id": "dns-idoso-avaliar-fragilidade-se-muito-idoso",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação estruturada de fragilidade e discussão de objetivos de cuidado, seguindo os documentos já publicados de fragilidade e de fim de vida deste tema, ao decidir o implante em paciente muito idoso frágil ou com expectativa de vida muito limitada",
+        "origem_secao": "Idade cronológica não é, isoladamente, indicação nem contraindicação"
+      },
+      {
+        "id": "dns-idoso-classe-nivel-vhn",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: a redação literal de Classe de Recomendação e Nível de Evidência da diretriz 2018 ACC/AHA/HRS específica para cada cenário de indicação (disfunção sinusal sintomática, incompetência cronotrópica, bradicardia por medicação indispensável) não foi confirmada diretamente no texto primário nesta base, só reproduzida de forma consistente por fonte terciária — conferir a diretriz original antes de citar Classe/Nível formalmente em decisão clínica individual",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      }
+    ],
+    "revisao": "Revisão editorial e de fontes concluída em 21/08/2026 para integração neste lote (5ª rodada de checklists de Cardiologia pediátrica e geriátrica), sob responsabilidade do Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, como revisor clínico responsável pelo projeto Corvia. A marcação VERIFICAÇÃO HUMANA NECESSÁRIA do documento-fonte, referente à redação literal de Classe/Nível da diretriz 2018 ACC/AHA/HRS, foi preservada como item próprio do checklist, não removida nem convertida em afirmação fechada."
   }
 ]
