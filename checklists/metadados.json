@@ -18146,5 +18146,282 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "reinicio-de-anticoagulacao-na-fa-apos-hemorragia-intracraniana",
+    "condicao": "Reinício de anticoagulação oral na fibrilação atrial após hemorragia intracraniana espontânea",
+    "resumo": "O que checar antes de decidir reiniciar (ou não) o anticoagulante em quem tem FA e sobreviveu a uma hemorragia intracraniana espontânea, à luz do SoSTART, da metanálise COCROACH e do PRESTIGE-AF — evidência que reduz AVC isquêmico e, no maior ensaio, aumenta a recorrência hemorrágica sem que nenhum dos três tenha demonstrado benefício líquido em desfecho global.",
+    "documento_origem": "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Veltkamp R, Korompoki E, Harvey KH, Harvey ER, Fießler C, et al. Direct oral anticoagulants versus no anticoagulation for the prevention of stroke in survivors of intracerebral haemorrhage with atrial fibrillation (PRESTIGE-AF): a multicentre, open-label, randomised phase 3 trial. Lancet. 2025;405(10482):927-936. DOI: 10.1016/S0140-6736(25)00333-2. PMID: 40023176 — NCT03996772, 319 participantes, 75 hospitais em seis países europeus. Financiamento: Comissão Europeia",
+      "SoSTART Collaboration. Effects of oral anticoagulation for atrial fibrillation after spontaneous intracranial haemorrhage in the UK: a randomised, open-label, assessor-masked, pilot-phase, non-inferiority trial. Lancet Neurol. 2021;20(10):842-853. DOI: 10.1016/S1474-4422(21)00264-7. PMID: 34487722 — NCT03153150, 203 randomizados em 67 hospitais do Reino Unido",
+      "Al-Shahi Salman R, Stephen J, Tierney JF, Lewis SC, Newby DE, et al. Effects of oral anticoagulation in people with atrial fibrillation after spontaneous intracranial haemorrhage (COCROACH): prospective, individual participant data meta-analysis. Lancet Neurol. 2023;22(12):1140-1149. DOI: 10.1016/S1474-4422(23)00315-0. PMID: 37839434 — PROSPERO CRD42021246133, 412 participantes de quatro ensaios (SoSTART, APACHE-AF, NASPAF-ICH e subgrupo do ELDERCARE-AF)"
+    ],
+    "itens": [
+      {
+        "id": "reinicio-ich-fa-indicacao-formal-confirmada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmada a indicação formal de anticoagulação por FA (critério de risco tromboembólico já estabelecido) antes de discutir o reinício — a pergunta só existe para quem já tinha indicação prévia ao sangramento",
+        "origem_secao": "A pergunta e o dilema"
+      },
+      {
+        "id": "reinicio-ich-fa-localizacao-hemorragia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Localização da hemorragia intracraniana index documentada e classificada como lobar (associada a angiopatia amiloide) ou profunda (tipicamente hipertensiva) — distinção usada na estratificação do PRESTIGE-AF e parte obrigatória da avaliação de risco de recorrência",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "reinicio-ich-fa-tempo-decorrido-evento",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Tempo decorrido desde o evento hemorrágico registrado — no SoSTART a mediana de reinício foi de 115 dias; é o dado disponível sobre momento, não uma recomendação de prazo mínimo a ser seguida cegamente",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "reinicio-ich-fa-discussao-riscos-opostos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutida com o paciente e a família a natureza dos dois riscos opostos e reais — redução de AVC isquêmico (achado mais sólido e reprodutível dos três estudos) versus aumento de recorrência hemorrágica (achado mais expressivo no maior e mais recente ensaio, PRESTIGE-AF) — antes de qualquer decisão",
+        "origem_secao": "O que os tres dizem juntos"
+      },
+      {
+        "id": "reinicio-ich-fa-nao-generalizar-hr-isquemico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Verificado que a decisão de reiniciar não está sendo tomada só a partir da redução de AVC isquêmico, ignorando que o mesmo maior ensaio (PRESTIGE-AF) falhou formalmente na não inferioridade para recorrência de hemorragia intracerebral",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "reinicio-ich-fa-nao-generalizar-hr-hemorragico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Verificado que a decisão de NÃO reiniciar não está sendo tomada só a partir do risco hemorrágico, ignorando que o braço sem anticoagulação teve taxa alta de AVC isquêmico incapacitante (8,60 por 100 pacientes-ano no PRESTIGE-AF)",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "reinicio-ich-fa-avaliar-alternativa-mecanica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Considerada e discutida a alternativa de oclusão percutânea do apêndice atrial esquerdo como opção não farmacológica — com a ressalva explícita de que nenhum dos ensaios de oclusão do apêndice randomizou sobreviventes de hemorragia intracraniana, sendo extrapolação e não evidência direta",
+        "origem_secao": "Como isso se traduz na conduta"
+      },
+      {
+        "id": "reinicio-ich-fa-nao-tratar-como-equivalente-comprovado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Verificado que a oclusão do apêndice atrial esquerdo não está sendo oferecida como alternativa de eficácia comprovada equivalente à anticoagulação nesta população específica de pós-hemorragia intracraniana",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "reinicio-ich-fa-classe-anticoagulante-se-reiniciado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a decisão for reiniciar: classe de anticoagulante escolhida registrada (DOAC foi o testado em quase toda a evidência mais recente — PRESTIGE-AF e 99% do COCROACH), sem citar dose específica neste ponto do checklist",
+        "origem_secao": "O que os tres dizem juntos"
+      },
+      {
+        "id": "reinicio-ich-fa-seguimento-programado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento clínico e de imagem programado após a decisão, qualquer que seja ela, dado que nenhum dos três estudos demonstrou benefício líquido claro em desfecho global (morte, morte ou dependência, ou composto de AVC/morte cardiovascular)",
+        "origem_secao": "O que os tres dizem juntos"
+      },
+      {
+        "id": "reinicio-ich-fa-registro-decisao-compartilhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão final registrada em prontuário como compartilhada com o paciente/família, citando explicitamente que se trata de uma decisão individualizada apoiada em evidência ainda limitada em tamanho amostral (203 a 412 participantes) e sem cegamento do tratamento",
+        "origem_secao": "Limites que precisam acompanhar qualquer citacao"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Os itens derivam do documento-fonte citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "escolha-do-anticoagulante-na-fa-associada-a-valvopatia-reumatica",
+    "condicao": "Escolha do anticoagulante na fibrilação atrial associada a doença valvar reumática nativa",
+    "resumo": "O que checar antes de prescrever anticoagulante para o paciente com FA e valvopatia reumática nativa (tipicamente estenose mitral) — o ensaio INVICTUS mostrou que a rivaroxabana foi inferior ao antagonista da vitamina K nessa população específica, com maior mortalidade e sem redução de sangramento maior.",
+    "documento_origem": "fibrilacao-atrial-valvar-reumatica-e-escolha-do-anticoagulante-invictus",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Connolly SJ, Karthikeyan G, Ntsekhe M, Haileamlak A, El Sayed A, El Ghamrawy A, et al; INVICTUS Investigators. Rivaroxaban in Rheumatic Heart Disease-Associated Atrial Fibrillation. N Engl J Med. 2022;387(11):978-988. DOI: 10.1056/NEJMoa2209051. PMID: 36036525 — NCT02832544, randomizado, aberto (open-label), 4.531 pacientes analisados, 24 países. Financiamento: Bayer, fabricante da rivaroxabana",
+      "Karthikeyan G, Connolly SJ, Ntsekhe M, Benz A, Rangarajan S, Lewis G, et al; INVICTUS Investigators. The INVICTUS rheumatic heart disease research program: Rationale, design and baseline characteristics of a randomized trial of rivaroxaban compared to vitamin K antagonists in rheumatic valvular disease and atrial fibrillation. Am Heart J. 2020;225:69-77. DOI: 10.1016/j.ahj.2020.03.018. PMID: 32474206 — artigo de desenho do ensaio, critérios de inclusão detalhados",
+      "Hammer A, Niessner A, Sulzgruber P. Rivaroxaban in Valvular Atrial Fibrillation - a Critical Appraisal of the INVICTUS Trial. Cardiovasc Drugs Ther. 2024;38(5):1065-1067. DOI: 10.1007/s10557-023-07470-z. PMID: 37227566, PMCID: PMC11438705 — comentário crítico com acesso aberto ao texto completo"
+    ],
+    "itens": [
+      {
+        "id": "invictus-confirmar-etiologia-reumatica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmada por ecocardiograma a etiologia reumática da valvopatia (tipicamente estenose mitral), distinguindo essa população de FA valvar por doença degenerativa não reumática, que não foi a estudada no ensaio",
+        "origem_secao": "Por que esta pergunta não se responde por analogia"
+      },
+      {
+        "id": "invictus-nao-extrapolar-fa-nao-valvar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Verificado que a conduta não está sendo extrapolada dos quatro grandes ensaios de FA não valvar (RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE AF-TIMI 48) — todos excluíram estenose mitral moderada a grave dos critérios de entrada",
+        "origem_secao": "Por que esta pergunta não se responde por analogia"
+      },
+      {
+        "id": "invictus-criterio-gravidade-populacao-estudada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Presença de pelo menos um critério de gravidade usado no ensaio registrada como referência de quem foi de fato estudado: CHA₂DS₂-VASc ≥ 2, área valvar mitral ≤ 2 cm², contraste espontâneo em átrio esquerdo ou trombo em átrio esquerdo",
+        "origem_secao": "O ensaio: desenho"
+      },
+      {
+        "id": "invictus-nao-prescrever-doac",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que não está sendo prescrito anticoagulante oral direto (DOAC) para esta população — o antagonista da vitamina K segue sendo a escolha com evidência favorável de ensaio randomizado dedicado, sem especificar dose neste item",
+        "origem_secao": "Consequência prática, que é a razão deste documento existir"
+      },
+      {
+        "id": "invictus-nao-restringir-a-rivaroxabana",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que apenas a rivaroxabana foi testada diretamente neste ensaio, e que a extensão prática da conduta (evitar DOAC como classe) a apixabana, dabigatrana e edoxabana segue lógica de classe já usada para prótese valvar mecânica, não evidência direta de cada fármaco",
+        "origem_secao": "Limites que precisam acompanhar"
+      },
+      {
+        "id": "invictus-monitorizacao-inr",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Acompanhamento programado de INR com antagonista da vitamina K, seguindo os mesmos princípios já usados para valvopatia reumática e prótese mecânica — este ensaio não estabelece faixa própria de INR",
+        "origem_secao": "Consequência prática, que é a razão deste documento existir"
+      },
+      {
+        "id": "invictus-nao-confundir-com-protese-mecanica",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Verificado que o caso não é de prótese valvar mecânica (situação coberta por outro ensaio, o RE-ALIGN) — são duas populações e dois ensaios distintos, ainda que a conduta prática de evitar DOAC coincida",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "invictus-nao-ler-sangramento-como-equivalencia",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Verificado que a ausência de diferença em sangramento maior entre os grupos não está sendo lida como equivalência geral — a rivaroxabana teve pior desfecho composto e maior mortalidade no mesmo ensaio",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "invictus-mecanismo-nao-estabelecido",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado, na discussão com a equipe, que o mecanismo por trás do resultado (impulsionado por morte súbita e falência de bomba, não predominantemente AVC/embolia) ainda não está plenamente explicado, segundo o comentário crítico ao ensaio",
+        "origem_secao": "O achado que exige leitura cuidadosa, não só o resultado"
+      },
+      {
+        "id": "invictus-encaminhamento-avaliacao-estrutural",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Considerado encaminhamento para avaliação de intervenção sobre a valvopatia reumática de base (ex.: valvoplastia ou cirurgia) quando indicado clinicamente, já que a gravidade estrutural é o pano de fundo da população estudada",
+        "origem_secao": "O achado que exige leitura cuidadosa, não só o resultado"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Os itens derivam do documento-fonte citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "manejo-da-elevacao-de-creatinina-ao-iniciar-ieca-ou-bra",
+    "condicao": "Manejo da elevação de creatinina ao iniciar ou aumentar a dose de IECA ou BRA",
+    "resumo": "O que checar antes de suspender IECA/BRA por alta de creatinina nas primeiras semanas de tratamento — na maioria dos casos é o efeito hemodinâmico esperado, associado a preservação renal a longo prazo, segundo a revisão de Bakris & Weir de 12 ensaios clínicos randomizados.",
+    "documento_origem": "elevacao-de-creatinina-ao-iniciar-ieca-ou-bra-quando-manter-e-quando-suspender",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bakris GL, Weir MR. Angiotensin-converting enzyme inhibitor-associated elevations in serum creatinine: is this a cause for concern? Arch Intern Med. 2000;160(5):685-693. DOI: 10.1001/archinte.160.5.685. PMID: 10724055 — revisão de 12 ensaios clínicos randomizados, 1.102 pacientes randomizados a IECA, seguimento médio de 3 anos"
+    ],
+    "itens": [
+      {
+        "id": "creat-ieca-basal-registrado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Creatinina sérica e potássio basais medidos e registrados antes de iniciar ou aumentar a dose de IECA/BRA — sem o valor basal não é possível calcular o percentual de variação nem tomar a decisão",
+        "origem_secao": "Como aplicar sem errar"
+      },
+      {
+        "id": "creat-ieca-reavaliacao-1-2-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação de creatinina e potássio agendada para 1 a 2 semanas após o início ou aumento de dose, com nova reavaliação até completar a janela de 2 meses",
+        "origem_secao": "Como aplicar sem errar"
+      },
+      {
+        "id": "creat-ieca-calculo-percentual-variacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Percentual de variação da creatinina em relação ao basal calculado explicitamente (não estimado de memória) a cada reavaliação dentro dos primeiros 2 meses de terapia",
+        "origem_secao": "A regra pratica, em texto literal"
+      },
+      {
+        "id": "creat-ieca-verificar-estabilizacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se a elevação de creatinina, quando presente, está estabilizando dentro dos primeiros 2 meses — o critério de manutenção do fármaco exige tanto a magnitude (até 30%) quanto a estabilização, não apenas o percentual isolado",
+        "origem_secao": "Como aplicar sem errar"
+      },
+      {
+        "id": "creat-ieca-nao-suspender-ate-30-por-cento-estavel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que o fármaco não está sendo suspenso diante de elevação de creatinina de até 30% do valor basal que se estabiliza nos primeiros 2 meses — esse padrão associa-se a preservação da função renal a longo prazo, não a dano",
+        "origem_secao": "A regra pratica, em texto literal"
+      },
+      {
+        "id": "creat-ieca-suspender-acima-30-por-cento",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Suspensão do IECA/BRA considerada quando o aumento de creatinina exceder 30% do valor basal dentro dos primeiros 2 meses de terapia",
+        "origem_secao": "A regra pratica, em texto literal"
+      },
+      {
+        "id": "creat-ieca-corte-potassio-hipercalemia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Suspensão também considerada em caso de hipercalemia definida como potássio de 5,6 mmol/L ou mais — corte específico da fonte, não qualquer valor acima da faixa de referência do laboratório",
+        "origem_secao": "A regra pratica, em texto literal"
+      },
+      {
+        "id": "creat-ieca-alternativa-antes-de-suspender-hipercalemia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Antes de suspender por hipercalemia, avaliada alternativa terapêutica que permita manter o bloqueio do SRAA, dado o benefício de mortalidade já comprovado do bloqueio — ver documento correspondente no tema Insuficiência cardíaca",
+        "origem_secao": "Como aplicar sem errar"
+      },
+      {
+        "id": "creat-ieca-investigar-causas-concomitantes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigadas causas concomitantes de queda de função renal antes de atribuir a alta de creatinina só ao fármaco: depleção de volume por diurético, uso recente de anti-inflamatório não esteroidal, contraste iodado recente, hipotensão e estenose de artéria renal bilateral",
+        "origem_secao": "Como aplicar sem errar"
+      },
+      {
+        "id": "creat-ieca-nao-aplicar-limiar-sem-estabilizacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Verificado que o limiar de 30% não está sendo aplicado a uma creatinina que continua subindo após os 2 meses — esse padrão exige investigação própria, não a mesma tolerância do período inicial",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "creat-ieca-reintroducao-apos-causa-transitoria",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reintrodução do fármaco reavaliada e planejada após correção de causa transitória identificada (por exemplo, desidratação por gastroenterite), para que a suspensão temporária não vire definitiva sem decisão explícita",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "creat-ieca-orientacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre a possibilidade de alta transitória de creatinina nas primeiras semanas e sobre a importância de comparecer aos retornos programados para reavaliação laboratorial, sem interromper a medicação por conta própria",
+        "origem_secao": "Como aplicar sem errar"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 21/08/2026. Os itens derivam do documento-fonte citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
