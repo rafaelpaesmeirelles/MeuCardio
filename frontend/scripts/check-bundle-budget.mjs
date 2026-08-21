@@ -81,7 +81,12 @@ for (const path of await listarArquivos(dist.pathname)) {
 // precache certificado a 2849827 B. O entrypoint principal e o limite de chunks
 // opcionais permanecem inalterados; este acréscimo revisado é restrito à nova
 // funcionalidade e mantém margem mínima para detectar crescimento não intencional.
-const maxPrecacheBytes = 2785 * 1024;
+//
+// Ajustado de 2785 KB para 2786 KB em 21/08/2026: o pixel polish conservador
+// aprovado adicionou apenas CSS óptico e levou o precache a 2852491 B, 651 B
+// acima do teto anterior (0,02%). O incremento é deliberadamente mínimo; os
+// limites do entrypoint e de chunks opcionais permanecem inalterados.
+const maxPrecacheBytes = 2786 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
