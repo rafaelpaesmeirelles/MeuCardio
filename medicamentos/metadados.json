@@ -625,7 +625,8 @@
     "generic_name": "Atorvastatina (cálcica)",
     "brand_names": [
       "Lipitor",
-      "Citalor"
+      "Citalor",
+      "Vast — Eurofarma"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "Inibição competitiva da HMG-CoA redutase, etapa limitante na biossíntese hepática de colesterol, aumentando expressão de receptores de LDL hepáticos e depuração plasmática de LDL-C; estatina lipofílica com meia-vida mais longa que sinvastatina, permitindo maior flexibilidade de horário de administração",
@@ -676,7 +677,12 @@
     "duration_of_action_source": "Inferido da meia-vida de atividade inibitória de 20-30h (rótulo FDA LIPITOR®) e do padrão farmacológico já bem descrito na literatura de estatinas quanto à flexibilidade de horário de dose. Consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": -1.6,
     "dbp_reduction_mmhg": -0.96,
-    "bp_evidence_source": "**Efeito modesto, não constante em bula, e NÃO é indicação da atorvastatina** — a estatina não é prescrita para tratar hipertensão. Metanálise sistemática de ensaios clínicos randomizados, placebo-controlados, sobre efeito hipotensor de estatinas como classe: redução média de PA sistólica de **-1,6 mmHg** (IC95% -2,50 a -0,60) e diastólica de **-0,96 mmHg**, com o próprio estudo concluindo que \"the BP-lowering effect of the statins was independent of the dose or type of statin (p > 0.05)\" — ou seja, o efeito é de CLASSE, não específico da atorvastatina nem dose-dependente, conforme confirmado nesta sessão pela leitura direta do abstract. Fonte: Alghamdi J, Alqadi A, Alharf A, Almuzzaini B, Mahmud A, Barhoumi T, Badreldin HA, Alaamery M, Padmanabhan S. Blood pressure-lowering activity of statins: a systematic literature review and meta-analysis of placebo-randomized controlled trials. Eur J Clin Pharmacol. 2020;76(12):1745-1754. DOI: 10.1007/s00228-020-02965-2. PMID 32696233 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão (12/08/2026). **Correção em relação ao registro anterior**: os valores dose-estratificados específicos de atorvastatina citados antes (-1,17/-5,82/-3,58/-2,98 mmHg por dose, atribuídos a um resumo de congresso JACC \"GW26-e4665\") não puderam ser confirmados no PubMed nesta sessão (busca por título exato retornou zero resultados) — substituídos pelos valores de classe acima, de fonte verificada e lida diretamente. Mecanismo proposto para o efeito de classe: melhora da função endotelial e redução de estresse oxidativo vascular, não um efeito anti-hipertensivo farmacológico direto. Efeito de magnitude pequena e não deve ser usado como justificativa clínica para prescrever atorvastatina como anti-hipertensivo."
+    "bp_evidence_source": "**Efeito modesto, não constante em bula, e NÃO é indicação da atorvastatina** — a estatina não é prescrita para tratar hipertensão. Metanálise sistemática de ensaios clínicos randomizados, placebo-controlados, sobre efeito hipotensor de estatinas como classe: redução média de PA sistólica de **-1,6 mmHg** (IC95% -2,50 a -0,60) e diastólica de **-0,96 mmHg**, com o próprio estudo concluindo que \"the BP-lowering effect of the statins was independent of the dose or type of statin (p > 0.05)\" — ou seja, o efeito é de CLASSE, não específico da atorvastatina nem dose-dependente, conforme confirmado nesta sessão pela leitura direta do abstract. Fonte: Alghamdi J, Alqadi A, Alharf A, Almuzzaini B, Mahmud A, Barhoumi T, Badreldin HA, Alaamery M, Padmanabhan S. Blood pressure-lowering activity of statins: a systematic literature review and meta-analysis of placebo-randomized controlled trials. Eur J Clin Pharmacol. 2020;76(12):1745-1754. DOI: 10.1007/s00228-020-02965-2. PMID 32696233 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão (12/08/2026). **Correção em relação ao registro anterior**: os valores dose-estratificados específicos de atorvastatina citados antes (-1,17/-5,82/-3,58/-2,98 mmHg por dose, atribuídos a um resumo de congresso JACC \"GW26-e4665\") não puderam ser confirmados no PubMed nesta sessão (busca por título exato retornou zero resultados) — substituídos pelos valores de classe acima, de fonte verificada e lida diretamente. Mecanismo proposto para o efeito de classe: melhora da função endotelial e redução de estresse oxidativo vascular, não um efeito anti-hipertensivo farmacológico direto. Efeito de magnitude pequena e não deve ser usado como justificativa clínica para prescrever atorvastatina como anti-hipertensivo.",
+    "commercial_presentations": [
+      "Vast® 10 mg (atorvastatina cálcica) — comprimido revestido, embalagem com 10 ou 30 unidades. Eurofarma Laboratórios S.A. (Itapevi/SP), MS nº 1.0043.1074 (registro completo 1004310740019).",
+      "Vast® 20 mg — comprimido revestido, embalagem com 10 ou 30 unidades. Eurofarma Laboratórios S.A., MS nº 1.0043.1074.",
+      "Vast® 40 mg — comprimido revestido, embalagem com 10 ou 30 unidades, uso adulto. Eurofarma Laboratórios S.A., MS nº 1.0043.1074. Indicada em prevenção secundária de síndrome coronariana aguda e em prevenção cardiovascular primária em pacientes com múltiplos fatores de risco. Fonte: eurofarma.com.br/produtos/vast, eurofarma.com.br/produtos/bulas/patient/pt/bula-vast.pdf e /healthcare/pt/bula-vast.pdf, farmaindex.com/bulas/vast/4164, WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "benazepril-cloridrato",
@@ -1884,10 +1890,13 @@
       "Comprimido 30 mg (embalagens com 20, 30, 50 ou 200 comprimidos)",
       "Comprimido 60 mg (embalagens com 20, 25, 30, 50, 60 ou 200 comprimidos)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "Incoril® AP 120 mg (cloridrato de diltiazem) — comprimido revestido de liberação prolongada (ação prolongada), embalagem com 30 unidades. Fabricado por Laboratórios Bagó S.A. (La Plata, Argentina) e importado/registrado no Brasil por Laboratórios Bagó Ltda. (Rio de Janeiro/RJ), MS nº 1.5626.0005 (registro ANVISA nº 25260005 conforme fonte secundária). Indicado em hipertensão arterial leve/moderada, angina pectoris vasoespástica e angina crônica estável/de esforço. Fonte: bula.medicinanet.com.br/bula/2810/incoril_ap.htm, consultaremedios.com.br/incoril/bula, noticias.4medic.com.br/bula/incoril-ap/, WebSearch 21/08/2026 — não é apresentação já cadastrada sob os nomes Cardizem/Balcor já existentes no registro."
+    ],
     "brand_names": [
       "Cardizem",
-      "Balcor"
+      "Balcor",
+      "Incoril — Laboratórios Bagó"
     ]
   },
   {
@@ -2821,7 +2830,8 @@
     "review_status": "revisado",
     "generic_name": "Ezetimiba",
     "brand_names": [
-      "Ezetrol"
+      "Ezetrol",
+      "Zetia — Schering-Plough (hoje MSD/Merck)"
     ],
     "drug_class": "Inibidor seletivo da absorção de colesterol",
     "mechanism": "Atua diretamente no enterócito, bloqueando o transportador NPC1L1 (Niemann-Pick C1-Like 1), proteína associada à absorção intestinal de colesterol. O bloqueio reduz a captação intestinal de colesterol dietético e biliar, diminuindo o colesterol disponível na circulação; por mecanismo de retroalimentação (feedback), ocorre aumento compensatório da expressão de receptores hepáticos de LDL, elevando a depuração de LDL circulante",
@@ -2872,7 +2882,9 @@
     "duration_of_action_note": "Posologia de dose única diária, a qualquer horário (ver `dosing.padrao`), coerente com a meia-vida de 22h (ver `half_life_note`) — intervalo de dosagem de 24h mantém concentração terapêutica estável entre doses. A rotulagem FDA descreve perfil de concentração plasmática com múltiplos picos, sugestivo de recirculação êntero-hepática, o que contribui para a meia-vida longa mas não altera o intervalo posológico prático.",
     "duration_of_action_source": "Inferido da meia-vida de 22h (ver `half_life_note`) e do esquema posológico de 1x/dia. **Confirmado nesta sessão (WebFetch, 12/08/2026) por leitura direta da rotulagem FDA/DailyMed de ezetimibe tablets, seção CLINICAL PHARMACOLOGY / Pharmacokinetics** — a rotulagem não define um valor numérico isolado de \"duração de ação\" além da meia-vida de 22h e do perfil de múltiplos picos por recirculação êntero-hepática já citado em `duration_of_action_note`.",
     "bp_evidence_source": "Não se aplica: ezetimiba atua bloqueando o transportador intestinal NPC1L1, reduzindo absorção de colesterol (ver `mechanism`), sem alvo farmacológico em tônus vascular ou volemia — nenhuma fonte já citada neste verbete (bula do ZETIA, IMPROVE-IT) reporta desfecho de PA, coerente com o mecanismo estritamente lipídico do fármaco.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Zetia® 10 mg (ezetimiba) — comprimido revestido, embalagens com 30 ou 60 unidades. Registrada e importada por Schering-Plough Indústria Farmacêutica Ltda. (empresa incorporada pela Merck/MSD globalmente em 2009 — registro ANVISA histórico mantido sob a razão social Schering-Plough), fabricada por MSD International GmbH (filial de Porto Rico), embalada por Schering-Plough S.A. de C.V. (Xochimilco, México), MS nº 1.0171.0190. Mecanismo distinto de estatina/fenofibrato: reduz a absorção intestinal de colesterol. Diferente do já cadastrado Ezetrol® (mesma molécula, outro nome comercial) e do Zetsim® (combinação ezetimiba + sinvastatina, fora do escopo por ser combinação de dose fixa). Fonte: img.drogasil.com.br/raiadrogasil_bula/ZETIA.pdf, drogariasaopaulo.com.br (Zetia Ezetimiba 10mg 30/60 Comprimidos), erclinic.com.br (bula detalhamento Zetia), WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "felodipino",
@@ -3485,10 +3497,12 @@
     "duration_of_action_note": "Via intravenosa (uso em emergência hipertensiva, protocolo já detalhado em `dosing.emergencia hipertensiva gestacional`): duração de efeito de aproximadamente 2 a 4 horas por dose — consistente com o intervalo de repetição de dose de 4 a 6 horas usado na prática. Como já registrado no campo de meia-vida acima, o efeito hipotensor pode se prolongar além do esperado pela cinética plasmática, o que reforça cautela quanto a redosagem precoce. **Dado de duração da via oral crônica não confirmado com a mesma solidez nesta sessão** — fica como lacuna aberta, e não deve ser presumido igual ao da via intravenosa.",
     "duration_of_action_source": "Rótulo aprovado pelo FDA para hidralazina — seção de uso clínico/farmacologia, referente à administração intravenosa em emergência hipertensiva.",
     "brand_names": [
-      "Apresolina"
+      "Apresolina",
+      "Nepresol — Cristália"
     ],
     "commercial_presentations": [
-      "Apresolina® (União Química), comprimidos de 25 mg e 50 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
+      "Apresolina® (União Química), comprimidos de 25 mg e 50 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026.",
+      "Nepresol® (cloridrato de hidralazina) 20 mg/mL — solução injetável, ampola de 1 mL, embalagem com 50 ampolas, uso intramuscular, intravenoso ou em infusão IV, restrito a ambiente hospitalar. Cristália Produtos Químicos Farmacêuticos Ltda., registro ANVISA nº 1029800200288 (MS 1.0298.0020). Indicada em hipertensão (adjuvante a outros anti-hipertensivos) e amplamente usada em crise hipertensiva, inclusive em pré-eclâmpsia/eclâmpsia na gestação — distinta da apresentação oral em drágeas já cadastrada sob a marca Apresolina (Novartis). Fonte: cristalia.com.br/arquivos_medicamentos/135/NEPRESOL_Bula_Profissional.pdf, consultaremedios.com.br/nepresol/bula, magazinemedica.com.br (Hidralazina Nepresol 20mg/mL, 50 ampolas de 1mL), WebSearch 21/08/2026."
     ]
   },
   {
@@ -5658,7 +5672,8 @@
     "lactation": "**Amamentação não recomendada.** A bula generaliza para a classe: a maioria dos betabloqueadores, **principalmente os compostos lipofílicos** — o que inclui o propranolol —, passa para o leite materno, em quantidades variáveis; por isso a amamentação não é recomendada após a administração desses compostos. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca).",
     "brand_names": [
       "Inderal",
-      "Rebaten LA"
+      "Rebaten LA",
+      "Amprax — Vitamedic"
     ],
     "presentations": [
       "Comprimido 40 mg (embalagem com 30 comprimidos)",
@@ -5685,7 +5700,8 @@
       "fonte: extrapolado do perfil de segurança já documentado nos campos `contraindications`/`adverse_effects` deste registro — prática de monitorização padrão de classe farmacológica, não citação de bula específica adicional."
     ],
     "commercial_presentations": [
-      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente)."
+      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente).",
+      "Amprax® 80 mg (cloridrato de propranolol) — comprimido circular branco, venda sob prescrição médica, categoria regulatória Similar. Vitamedic Indústria Farmacêutica Ltda. (Anápolis/GO), MS nº 1.0392.0147 (registro ANVISA nº 1039201470072, válido até 01/06/2047). Indicações: hipertensão, angina pectoris, arritmia, tireotoxicose/crise tireotóxica, enxaqueca, cardiomiopatia hipertrófica obstrutiva, feocromocitoma, tremor essencial. Fonte: smerp.com.br/anvisa (Registro ANVISA nº 1039201470072 — AMPRAX — válido), consultaremedios.com.br/amprax/bula, farmaindex.com/amprax/5127, WebSearch 21/08/2026. NOTA: a busca também retornou uma lista de outros nomes (Polol/Geolab, Pressoflux/Medquímica, Propalol, Propramed, Sanpronol, entre outros) associados a propranolol no Brasil, mas só Amprax (Vitamedic) e Polol (Geolab, registro ANVISA nº 1542300170079) foram confirmados individualmente por fonte com registro ANVISA específico nesta sessão — Polol não foi incluído para não exceder o escopo de 'uma marca nova por fármaco' pedido, mas fica registrado para consulta futura."
     ]
   },
   {
@@ -6459,7 +6475,8 @@
     "generic_name": "Sitagliptina (fosfato de sitagliptina)",
     "brand_names": [
       "Januvia",
-      "Sitglu"
+      "Sitglu",
+      "Nimegon — Merck Sharp & Dohme"
     ],
     "drug_class": "Inibidor da dipeptidil peptidase-4 (DPP-4) — gliptina",
     "mechanism": "Inibe a enzima dipeptidil peptidase-4 (DPP-4), retardando a inativação dos hormônios incretínicos GLP-1 e GIP liberados pelo intestino após a alimentação. O aumento da atividade incretínica eleva a síntese e a liberação de insulina pelas células beta pancreáticas de forma dependente da glicose, e reduz a secreção de glucagon pelas células alfa, com consequente redução da produção hepática de glicose. Por ser um mecanismo glicose-dependente, a sitagliptina tem baixo risco intrínseco de hipoglicemia em monoterapia — a incidência de hipoglicemia nos estudos controlados por placebo foi semelhante à do placebo (1,2% com 100 mg/dia vs. 0,9% com placebo). Fonte: bula brasileira do JANUVIA (fosfato de sitagliptina, MSD) e rótulo do JANUVIA aprovado pelo FDA (DailyMed, setid f85a48d0-0407-4c50-b0fa-7673a160bf01).",
@@ -6525,7 +6542,10 @@
     "duration_of_action_source": "Herman GA, Bergman A, Stevens C, et al. Effect of single oral doses of sitagliptin, a dipeptidyl peptidase-4 inhibitor, on incretin and plasma glucose levels after an oral glucose tolerance test in patients with type 2 diabetes. J Clin Endocrinol Metab. 2006;91(11):4612-4619. PMID 16912128; dados de inibição enzimática dose-dependente também descritos em estudos de farmacocinética/farmacodinâmica de dose única do composto (busca via WebSearch, 2026).",
     "bp_evidence_source": "Sitagliptina não tem indicação nem mecanismo de efeito hipotensor — é hipoglicemiante (inibidor de DPP-4), não anti-hipertensivo, e a bula brasileira do JANUVIA não registra redução de pressão arterial como desfecho de eficácia nem como efeito farmacológico esperado. Campos mantidos nulos por ausência de mecanismo/indicação pressórica, não por lacuna de busca.",
     "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): localizada e confirmada a bula brasileira do JANUVIA atualmente vigente (MSD, outubro/2025, msd.com.br) — resolve a nota de procedência anterior sobre exemplar desatualizado. Ajuste renal atualizado para TFGe (convergente com o rótulo FDA); reações adversas pós-comercialização (pancreatite, hipersensibilidade grave, penfigoide bolhoso) confirmadas como parte da bula vigente.",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Nimegon® 50 mg (fosfato de sitagliptina monoidratado 64,25 mg, equivalente a 50 mg de sitagliptina base) — comprimido revestido, embalagem com 28 unidades. Merck Sharp & Dohme Farmacêutica Ltda., MS nº 1.0171.0205.",
+      "Nimegon® 100 mg (fosfato de sitagliptina monoidratado 128,5 mg, equivalente a 100 mg de sitagliptina base) — comprimido revestido, embalagem com 14 ou 28 unidades. Merck Sharp & Dohme Farmacêutica Ltda., MS nº 1.0171.0205. Registrado como medicamento similar equivalente ao próprio Januvia® (mesma empresa). Fonte: bula.gratis/merck_sharp_dohme_farmaceutica_ltda/0/nimegon e /1/nimegon/profissional, WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "sotalol",
@@ -6701,7 +6721,8 @@
     "brand_names": [
       "Micardis",
       "Misacor",
-      "Misacardio"
+      "Misacardio",
+      "Bramicar — EMS Sigma Pharma"
     ],
     "half_life_hours": 24.0,
     "half_life_note": "Meia-vida terminal de aproximadamente 24 horas — a mais longa entre os bloqueadores do receptor de angiotensina II comercializados, o que sustenta cobertura pressórica ao longo de todo o intervalo de 24 horas entre doses, inclusive nas últimas 6 horas antes da dose seguinte (razão vale/pico elevada, sem grande diferença entre pico e vale nas doses mais altas). Fonte: rótulo do MICARDIS (telmisartana), FDA/DailyMed, seção Clinical Pharmacology.",
@@ -6711,7 +6732,10 @@
     "sbp_reduction_mmhg": -12.5,
     "dbp_reduction_mmhg": -7.5,
     "bp_evidence_source": "Redução de pressão arterial a partir do basal, com subtração do efeito placebo, dose-dependente: aproximadamente -9 a -13/-6 a -8 mmHg (sistólica/diastólica) com 40 mg/dia, e -12 a -13/-7 a -8 mmHg com 80 mg/dia — sem redução adicional relevante em doses maiores (até 160 mg, acima da dose máxima aprovada de 80mg/dia). Valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-12,5/-7,5) são o ponto médio da faixa relatada para 80 mg/dia, a dose máxima aprovada. Base: 6 ensaios placebo-controlados (n=1.773 randomizados, 1.031 tratados com telmisartana), faixa de dose estudada 20-160 mg, hipertensão leve a moderada (PAD basal 95-114 mmHg). Fonte: rótulo do MICARDIS (telmisartana), FDA/DailyMed, seção Clinical Studies (14).",
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Bramicar® 40 mg (telmisartana isolada, sem hidroclorotiazida) — comprimido revestido, embalagem com 30 unidades (também disponíveis 10, 14, 20, 28 ou embalagem hospitalar de 60/100 unidades). EMS Sigma Pharma Ltda. (registrante), fabricado/embalado/distribuído por EMS S/A, MS nº 1356907060056.",
+      "Bramicar® 80 mg — comprimido revestido, mesma linha de embalagens do Bramicar 40 mg. EMS Sigma Pharma Ltda. Indicado em hipertensão arterial e em prevenção cardiovascular em pacientes ≥55 anos. Distinto do já cadastrado Bramicar HCT (telmisartana + hidroclorotiazida, combinação, fora de escopo aqui). Fonte: img.drogasil.com.br/raiadrogasil_bula/Bramicar.pdf, farmaindex.com/bulas/bramicar/1230, drogariasaopaulo.com.br (Bramicar Telmisartana 40mg), WebSearch 21/08/2026."
+    ]
   },
   {
     "slug": "tenecteplase",
