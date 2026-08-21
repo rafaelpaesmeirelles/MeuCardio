@@ -77,15 +77,19 @@ def assinar_e_persistir(
     o aviso já corretos para `metodo` — ver `pdf_documento._assinatura_
     rodape`) e persiste o resultado. Só chame depois de confirmar
     `provedor.disponivel()` — esta função não repete a checagem, porque cada
-    chamador já monta sua própria lista de `bloqueios` a partir dela."""
+    chamador já monta sua própria lista de `bloqueios` a partir dela.
+
+    O código novo é aleatório por EMISSÃO e seu hash é persistido junto com
+    os bytes finais. Isso impede que uma reemissão da mesma referência faça
+    um QR antigo apontar para outro artefato.
+    """
     from app.services.assinatura import validacao_publica
 
-    codigo_validacao = validacao_publica.codigo_documento(
-        tipo=tipo, referencia_id=referencia_id, criado_por=criado_por,
+    capability = validacao_publica.novo_codigo_documento(
+        tipo=tipo, referencia_id=referencia_id,
     )
-    url_validacao = validacao_publica.url_documento(
-        tipo=tipo, referencia_id=referencia_id, criado_por=criado_por,
-    )
+    codigo_validacao = capability.codigo
+    url_validacao = validacao_publica.url_para_codigo(codigo_validacao)
     resultado = provedor.assinar(
         pdf_visual,
         medico,
@@ -95,8 +99,6 @@ def assinar_e_persistir(
         },
     )
     if resultado.estado == "indisponivel":
-        # Defensivo: não deveria acontecer se o chamador checou disponivel()
-        # antes, mas nada aqui pode arriscar persistir um PDF de mentira.
         raise RuntimeError(resultado.motivo or f"{metodo} recusou assinar sem motivo.")
 
     pdf_final = resultado.pdf if resultado.pdf is not None else pdf_visual
@@ -122,6 +124,7 @@ def assinar_e_persistir(
     registro = DocumentoEmitido(
         tipo=tipo, referencia_id=referencia_id, metodo=metodo, nivel=info.nivel,
         arquivo_nome=nome_arquivo, sha256=sha256, bytes_tam=len(pdf_final),
+        validation_token_hash=capability.hash_persistido,
         assinado_em=data_emissao if resultado.estado == "assinado" else None,
         criado_por=criado_por,
     )

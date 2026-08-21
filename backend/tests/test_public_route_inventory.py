@@ -33,6 +33,10 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("GET", "/api/documentos-publicos/validar/{codigo}"): (
         "Validação pública de integridade; o código tem MAC não enumerável e a rota não entrega conteúdo clínico."
     ),
+    ("GET", "/api/documentos-publicos/validar/{codigo}/pdf"): (
+        "Download do PDF original autorizado somente pela capability aleatória forte por emissão; "
+        "a rota localiza o DocumentoEmitido exato e falha fechado se SHA-256/PAdES não estiver íntegro."
+    ),
     ("GET", "/api/agenda/oauth/google/callback"): (
         "Retorno servidor-a-servidor do Google; autorizado por estado de alta entropia, "
         "uso único, armazenado somente como SHA-256 e com expiração de dez minutos."

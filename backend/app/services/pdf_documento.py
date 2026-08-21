@@ -63,7 +63,7 @@ LINHA = (0.80, 0.80, 0.80)
 
 MARGEM = 20 * mm
 LARGURA, ALTURA = A4
-LARGURA_LOGO = 34 * mm
+LARGURA_LOGO = 40 * mm
 
 # Dados da empresa que opera a Corvia — fixos, aparecem em todo documento
 # emitido pela plataforma, independente de qual médico emite (é o emissor
@@ -243,30 +243,38 @@ def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: di
 
     def desenhar(texto: str, fonte: str, tamanho: float, entrelinha: float) -> None:
         nonlocal y
+        c.setFont(fonte, tamanho)
         for linha in _quebrar(c, texto, fonte, tamanho, largura_texto):
             c.drawRightString(x_texto, y, linha)
             y -= entrelinha
 
-    c.setFillColorRGB(0, 0, 0)
-    c.setFont("Helvetica-Bold", 10.5)
-    desenhar(professional_name(medico), "Helvetica-Bold", 10.5, 4.6 * mm)
-
-    c.setFont("Helvetica", 8.5)
-    c.setFillColorRGB(*CINZA)
-    if medico.get("profession"):
-        desenhar(medico["profession"], "Helvetica", 8.5, 3.8 * mm)
-    if medico.get("specialty"):
-        desenhar(medico["specialty"], "Helvetica", 8.5, 3.8 * mm)
-    for linha in workplace_lines(medico):
-        desenhar(linha, "Helvetica", 8.5, 3.6 * mm)
+    # Hierarquia visual aprovada: identidade e registro primeiro, depois
+    # atuação/local/endereço. Mantém a paleta CorVIA e apenas melhora ritmo,
+    # alinhamento e leitura do bloco oposto à marca institucional.
+    c.setFillColorRGB(*NAVY)
+    desenhar(professional_name(medico), "Helvetica-Bold", 11.2, 4.8 * mm)
 
     registro = _registro(medico)
     if registro:
-        desenhar(registro, "Helvetica", 8.5, 3.8 * mm)
+        desenhar(registro, "Helvetica-Bold", 8.6, 3.8 * mm)
+
+    c.setStrokeColorRGB(*LINHA)
+    c.setLineWidth(0.6)
+    largura_separador = min(42 * mm, largura_texto)
+    c.line(x_texto - largura_separador, y + 1.2 * mm, x_texto, y + 1.2 * mm)
+    y -= 2.2 * mm
+
+    c.setFillColorRGB(*CINZA)
+    if medico.get("profession"):
+        desenhar(medico["profession"], "Helvetica", 8.3, 3.7 * mm)
+    if medico.get("specialty"):
+        desenhar(medico["specialty"], "Helvetica", 8.5, 3.7 * mm)
+    for linha in workplace_lines(medico):
+        desenhar(linha, "Helvetica", 8.2, 3.5 * mm)
 
     if endereco:
         for linha in _endereco_linhas(endereco):
-            desenhar(linha, "Helvetica", 8.5, 3.6 * mm)
+            desenhar(linha, "Helvetica", 8.1, 3.5 * mm)
 
     return min(y, y_base_logo)
 
