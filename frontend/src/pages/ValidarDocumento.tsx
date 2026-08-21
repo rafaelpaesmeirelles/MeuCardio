@@ -141,7 +141,7 @@ export default function ValidarDocumento() {
         {resultado && (
           <section className={`corvia-validator__result ${resultado.valido ? "is-valid" : "is-invalid"}`}>
             <div className="corvia-validator__status">
-              <strong>{receitaValida ? "Receita autêntica — emissão CorVIA confirmada" : resultado.valido ? "Documento emitido pelo CorVIA com integridade criptográfica confirmada" : "A validação encontrou uma inconsistência"}</strong>
+              <strong>{receitaValida ? "Emissão CorVIA confirmada — receita autêntica" : resultado.valido ? "Documento emitido pelo CorVIA com integridade criptográfica confirmada" : "A validação encontrou uma inconsistência"}</strong>
               <span>Código {resultado.codigo}</span>
             </div>
 
@@ -153,7 +153,7 @@ export default function ValidarDocumento() {
 
             <dl>
               <div><dt>Tipo</dt><dd>{resultado.tipo === "prescription_document" ? `Receituário${resultado.tipo_receita ? ` — ${resultado.tipo_receita}` : ""}` : "Documento clínico"}</dd></div>
-              <div><dt>Emitido pelo CorVIA em</dt><dd>{dataHora(resultado.emitido_em || resultado.registrado_corvia_em)}</dd></div>
+              <div><dt>Emitido pelo CorVIA em</dt><dd>{dataHora(resultado.registrado_corvia_em || resultado.emitido_em)}</dd></div>
               <div><dt>Prescritor</dt><dd>{registroPrescritor(resultado.prescritor)}</dd></div>
               <div><dt>Assinado em</dt><dd>{dataHora(resultado.assinado_em)}</dd></div>
               <div><dt>Método informado na emissão</dt><dd>{resultado.metodo_nome}</dd></div>

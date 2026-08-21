@@ -10,6 +10,7 @@ novos de 128 bits também podem baixar o PDF original ASSINADO da receita; QR
 legado de 64 bits permanece somente para validação, preservando compatibilidade
 sem transformar um token antigo em credencial de acesso ao conteúdo clínico.
 """
+import hashlib
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -167,7 +168,7 @@ def validar_documento_publico(codigo: str, db: Session = Depends(get_db)):
         "tipo": registro.tipo,
         "tipo_receita": contexto_receita.get("tipo_receita"),
         "emissao_confirmada_corvia": contexto_receita["confirmada_corvia"],
-        "emitido_em": contexto_receita["emitido_em"],
+        "emitido_em": resultado.registrado_corvia_em,
         "registrado_corvia_em": resultado.registrado_corvia_em,
         "prescritor": contexto_receita["prescritor"],
         "metodo": resultado.metodo_codigo,
@@ -208,7 +209,7 @@ def validar_documento_publico(codigo: str, db: Session = Depends(get_db)):
 
 @router.get("/validar/{codigo}/pdf")
 def baixar_pdf_original_validado(codigo: str, db: Session = Depends(get_db)):
-    """Baixa os bytes EXATOS assinados. Nunca regera, converte ou modifica o PDF."""
+    """Baixa os bytes EXATOS assinados da emissão identificada pela capability."""
     if not validacao_publica.codigo_permite_download(codigo):
         # QR legado continua autenticando metadados, mas não vira credencial de conteúdo.
         raise HTTPException(status_code=404, detail="PDF original indisponível para este código de validação.")
@@ -221,7 +222,22 @@ def baixar_pdf_original_validado(codigo: str, db: Session = Depends(get_db)):
             status_code=409,
             detail="O PDF não será liberado porque a verificação de integridade/assinatura não foi concluída com sucesso.",
         )
-    pdf, nome_arquivo = _pdf_receita(db, registro.referencia_id)
+
+    # Não usar `_pdf_receita()` aqui: essa função existe para links históricos e
+    # pode procurar por referência/regenerar. A capability nova identifica um
+    # DocumentoEmitido específico, então o download deve ler exatamente esse cofre.
+    pdf = assinatura_emissao.ler_bytes(registro)
+    if hashlib.sha256(pdf).hexdigest() != registro.sha256:
+        raise HTTPException(
+            status_code=409,
+            detail="O PDF persistido diverge do SHA-256 registrado e não será liberado.",
+        )
+    doc = db.get(PrescriptionDocument, registro.referencia_id)
+    nome_arquivo = (
+        f"receita-controle-especial-{registro.referencia_id}.pdf"
+        if doc and doc.tipo_codigo == "RCE"
+        else f"receituario-{registro.referencia_id}.pdf"
+    )
     return Response(
         content=pdf,
         media_type="application/pdf",
