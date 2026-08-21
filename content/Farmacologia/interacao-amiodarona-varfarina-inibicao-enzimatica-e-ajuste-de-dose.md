@@ -4,7 +4,7 @@ slug: interacao-amiodarona-varfarina-inibicao-enzimatica-e-ajuste-de-dose
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Sanoski CA, Bauman JL. Clinical observations with the amiodarone/warfarin interaction: dosing relationships with long-term therapy. Chest. 2002;121(1):19-23. PMID: 11796427 — estudo observacional prospectivo, 43 pacientes em varfarina estável iniciando amiodarona, seguidos por pelo menos 1 ano", "Naganuma M, Shiga T, Nishikata K, Tsuchiya T, Kasanuki H, Fujii E. Role of desethylamiodarone in the anticoagulant effect of concurrent amiodarone and warfarin therapy. J Cardiovasc Pharmacol Ther. 2001;6(4):363-367. PMID: 11907638 — 25 pacientes em varfarina estável recebendo amiodarona, dosagem plasmática de amiodarona e do metabólito desetilamiodarona no dia 7, correlacionada ao delta de INR/dose", "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil Ltda., solução injetável) e Bula do ATLANSIL (cloridrato de amiodarona, Sanofi-Aventis Farmacêutica Ltda., comprimidos), itens de Interações Medicamentosas — mesma fonte já usada em 'amiodarona-associacoes-a-evitar-e-a-janela-apos-a-suspensao.md', citada aqui para a afirmação sobre persistência da interação após a suspensão"]
+source_refs: ["Sanoski CA, Bauman JL. Clinical observations with the amiodarone/warfarin interaction: dosing relationships with long-term therapy. Chest. 2002;121(1):19-23. PMID: 11796427 — estudo observacional prospectivo, 43 pacientes em varfarina estável iniciando amiodarona, seguidos por pelo menos 1 ano", "Naganuma M, Shiga T, Nishikata K, Tsuchiya T, Kasanuki H, Fujii E. Role of desethylamiodarone in the anticoagulant effect of concurrent amiodarone and warfarin therapy. J Cardiovasc Pharmacol Ther. 2001;6(4):363-367. PMID: 11907638 — 25 pacientes em varfarina estável recebendo amiodarona, dosagem plasmática de amiodarona e do metabólito desetilamiodarona no dia 7, correlacionada ao delta de INR/dose", "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil Ltda., solução injetável) e Bula do ATLANSIL (cloridrato de amiodarona, Sanofi-Aventis Farmacêutica Ltda., comprimidos), itens de Interações Medicamentosas — mesma fonte já usada em 'amiodarona-associacoes-a-evitar-e-a-janela-apos-a-suspensao.md', citada aqui para a afirmação sobre persistência da interação após a suspensão", "DailyMed. Amiodarone Hydrochloride Tablets, seção 12.3 Pharmacokinetics e interações. Conferido em 21/08/2026: após tratamento oral crônico, meia-vida terminal da amiodarona 26-107 dias (média ~53; maioria 40-55 dias) e do metabólito ativo desetilamiodarona ~61 dias; a resposta individual é variável e a interação com varfarina exige monitorização estreita do INR."]
 ---
 
 # Interação Amiodarona–Varfarina: Inibição Enzimática, Magnitude do Efeito e Ajuste de Dose
@@ -123,12 +123,7 @@ inibitório se dissipa — de forma igualmente lenta e imprevisível, não em um
 - **Ao suspender a amiodarona**, manter a vigilância de INR por semanas a
   meses, com expectativa de necessidade de **reaumento gradual** da dose de
   varfarina conforme o efeito inibitório se dissipa.
-- **Não relaxar a vigilância pelo tempo decorrido desde a suspensão** — a bula
-  não define um prazo fixo de "segurança", apenas "vários meses", o que exige
-  julgamento clínico caso a caso. `VERIFICAÇÃO HUMANA NECESSÁRIA`: nenhuma das
-  fontes consultadas nesta sessão define um número exato de semanas ou meses
-  em que a vigilância pode ser considerada encerrada com segurança após a
-  suspensão da amiodarona.
+- **Após suspender a amiodarona, não usar um prazo fixo universal para encerrar a vigilância.** A rotulagem oficial informa, após terapia oral crônica, meia-vida terminal da amiodarona de 26 a 107 dias (média aproximada de 53 dias; maioria 40–55 dias) e meia-vida do metabólito ativo desetilamiodarona de aproximadamente 61 dias. Assim, a interação pode persistir por semanas a meses. Manter monitorização mais frequente do INR e ajustes graduais da varfarina até estabilidade seriada, individualizando conforme tendência do INR e risco hemorrágico/trombótico.
 
 ## O que este documento não cobre
 Substituição por outro antiarrítmico, manejo de sangramento agudo por

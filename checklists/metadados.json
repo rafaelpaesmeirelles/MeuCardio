@@ -19409,5 +19409,764 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "pocus-tamponamento-cardiaco-versus-pneumotorax-hipertensivo",
+    "condicao": "Diagnóstico diferencial à beira do leito por POCUS: tamponamento cardíaco versus pneumotórax hipertensivo",
+    "resumo": "Checklist de diagnóstico diferencial por ultrassom point-of-care (POCUS) no choque obstrutivo agudo entre tamponamento cardíaco e pneumotórax hipertensivo — duas condições com apresentação clínica sobreposta que exigem intervenção mecânica oposta e em sítio anatômico diferente.",
+    "documento_origem": "tamponamento-cardiaco-versus-pneumotorax-hipertensivo-diagnostico-diferencial-a-beira-do-leito-com-pocus",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Yoshida T, Yoshida T, Noma H, Nomura T, Suzuki A, Mihara T. Diagnostic accuracy of point-of-care ultrasound for shock: a systematic review and meta-analysis. Crit Care. 2023;27(1):200. DOI: 10.1186/s13054-023-04495-6. PMID: 37231510. PMCID: PMC10214599 — metanálise de 12 estudos e 1.132 pacientes em choque; sensibilidade e especificidade agrupadas do POCUS para a categoria choque obstrutivo (tamponamento + pneumotórax hipertensivo + TEP agrupados, sem discriminação individual no estudo)",
+      "Hanson MG, Chan B. The role of point-of-care ultrasound in the diagnosis of pericardial effusion. Ultrasound J. 2021;13:2. DOI: 10.1186/s13089-021-00205-x. PMID: 33538920. PMCID: PMC7862446 — coorte retrospectiva de 342 pacientes submetidos a pericardiocentese por derrame pericárdico clinicamente significativo (2002-2018, hospital universitário canadense); prevalência de colapso de câmaras ao ecocardiograma nessa população confirmada",
+      "Chan KK, Joo DA, McRae AD, Takwoingi Y, Premji ZA, Lang E, Wakai A. Chest ultrasonography versus supine chest radiography for diagnosis of pneumothorax in trauma patients in the emergency department. Cochrane Database Syst Rev. 2020;7(7):CD013031. DOI: 10.1002/14651858.CD013031.pub2. PMID: 32702777 — revisão sistemática Cochrane, 9 estudos com 410 pneumotórax traumáticos confirmados de 1.271 pacientes; acurácia comparada de ultrassom torácico versus radiografia de tórax em decúbito dorsal",
+      "Lichtenstein D, Mezière G, Biderman P, Gepner A. The \"lung point\": an ultrasound sign specific to pneumothorax. Intensive Care Med. 2000;26(10):1434-1440. DOI: 10.1007/s001340000627. PMID: 11126253 — estudo prospectivo original que descreveu o sinal, em 66 casos de pneumotórax comprovado (incluindo 8 radio-ocultos, diagnosticados por TC) e 233 hemitóraces-controle sem pneumotórax (17 deles com suspeita clínica); sensibilidade e especificidade do ponto pulmonar como sinal isolado"
+    ],
+    "itens": [
+      {
+        "id": "pocus-tp-reconhecer-choque-obstrutivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Choque obstrutivo agudo reconhecido pela tríade hipotensão + turgência jugular + taquicardia, na ausência de foco hemorrágico ou séptico evidente, como gatilho para POCUS imediato antes de qualquer outro exame",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-janela-cardiaca-primeiro",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Janela cardíaca subxifóidea (ou paraesternal) realizada em primeiro lugar, pesquisando derrame pericárdico, colapso diastólico precoce do VD e colapso sistólico do AD",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-integracao-tamponamento",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de tamponamento firmado pela integração de derrame + colapso de câmara + veia cava inferior pletórica sem colapso inspiratório + repercussão hemodinâmica — nunca por um achado isolado",
+        "origem_secao": "Como ler esses números"
+      },
+      {
+        "id": "pocus-tp-janela-pulmonar-se-negativa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se a janela cardíaca for negativa ou duvidosa, janela pulmonar avaliada nos espaços intercostais anteriores em modo B seguido de modo M, pesquisando deslizamento pleural, sinal do código de barras e linhas B",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-multiplos-espacos-intercostais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Deslizamento pleural pesquisado em múltiplos espaços intercostais, nunca concluído a partir de um único ponto examinado — pneumotórax loculado ou parcial pode poupar a janela isolada",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pocus-tp-especificidade-limitada-isolada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Ausência isolada de deslizamento pleural, sem instabilidade hemodinâmica associada, não tratada como pneumotórax hipertensivo confirmado — a decisão de descomprimir é clínica somada à ultrassonográfica, nunca só ultrassonográfica",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pocus-tp-agir-sem-esperar-radiografia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Descompressão torácica ou drenagem pericárdica indicada com base no achado positivo de POCUS no paciente hemodinamicamente instável, sem aguardar radiografia de tórax em decúbito dorsal ou exame confirmatório fora do leito",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      },
+      {
+        "id": "pocus-tp-ausencia-ponto-pulmonar-nao-afasta",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Ausência do sinal do 'ponto pulmonar' não usada isoladamente para afastar pneumotórax hipertensivo — no colabamento completo esse sinal pode estar fisiologicamente ausente, mesmo sendo o achado mais específico quando presente",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "pocus-tp-reavaliacao-pos-intervencao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação com a mesma sonda realizada logo após a intervenção, confirmando resolução do colapso de câmara (tamponamento) ou reaparecimento do deslizamento pleural (pneumotórax) — ausência de melhora reconhecida como sinal de diagnóstico alternativo ou intervenção tecnicamente inadequada, nunca motivo apenas para esperar mais",
+        "origem_secao": "Sequência de intervenção quando os dois são possíveis"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-da-falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo",
+    "condicao": "Manejo da falência aguda do ventrículo direito (cor pulmonale agudo)",
+    "resumo": "Checklist de manejo do ventrículo direito falido por aumento agudo de pós-carga (embolia pulmonar, SDRA ou hipertensão pulmonar agudizada), com ênfase nas condutas que funcionam na insuficiência do ventrículo esquerdo mas pioram o VD — reposição volêmica cautelosa, vasopressor de escolha e estratégia ventilatória protetora.",
+    "documento_origem": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diagnosis and treatment of right ventricular failure secondary to acutely increased right ventricular afterload (acute cor pulmonale): a clinical consensus statement of the Association for Acute CardioVascular Care (ACVC) of the European Society of Cardiology. Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312. DOI: 10.1093/ehjacc/zuad157. PMID: 38135288. Texto integral lido em 31/07/2026 via PMC10927027 — o registro do PubMed traz apenas o título, sem resumo"
+    ],
+    "itens": [
+      {
+        "id": "vdagudo-causa-identificada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Causa do aumento agudo de pós-carga do VD identificada e registrada: obstrução proximal (embolia pulmonar), obstrução distal (SDRA), agudização de hipertensão pulmonar preexistente, isquemia miocárdica, sepse, insuficiência tricúspide/regurgitação pulmonar, pós-operatório cardíaco ou implante de dispositivo de assistência ventricular esquerda",
+        "origem_secao": "Causas de aumento agudo da pos-carga de vd"
+      },
+      {
+        "id": "vdagudo-eco-parametros",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma realizado com registro dos parâmetros de disfunção de VD indicados pelo consenso: relação diâmetro diastólico final VD/VE, ventrículo esquerdo em 'D', TAPSE, onda S', variação de área fracional, strain longitudinal global e tempo de aceleração pulmonar, conforme disponibilidade local",
+        "origem_secao": "Diagnostico — o que procurar"
+      },
+      {
+        "id": "vdagudo-marcadores-laboratoriais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina, peptídeo natriurético (BNP ou NT-proBNP) e lactato sérico dosados para apoiar o diagnóstico e definir o estágio do choque",
+        "origem_secao": "Diagnostico — o que procurar"
+      },
+      {
+        "id": "vdagudo-volume-cauteloso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Expansão volêmica não realizada por reflexo diante de hipotensão — reposição feita de forma cautelosa e guiada por ecocardiograma ou monitorização de pressão, restrita a hipotensão sem sinais de pressões de enchimento já elevadas; diurético considerado quando há congestão venosa associada",
+        "origem_secao": "Volume: a armadilha principal"
+      },
+      {
+        "id": "vdagudo-noradrenalina-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Noradrenalina utilizada como vasopressor de primeira escolha na hipotensão associada à falência de VD, pelo efeito mínimo sobre a resistência vascular pulmonar frente a outras opções",
+        "origem_secao": "Vasopressor e inotropico"
+      },
+      {
+        "id": "vdagudo-inotropico-tempo-limitado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Quando inotrópico foi necessário por baixo débito (dobutamina, inibidor da fosfodiesterase III ou levosimendana), seu uso restrito ao período de baixo débito e interrompido assim que possível — não mantido de forma prolongada",
+        "origem_secao": "Vasopressor e inotropico / O que o consenso diz para EVITAR"
+      },
+      {
+        "id": "vdagudo-ventilacao-protetora-sdra",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em SDRA associada, ventilação protetora aplicada com volume corrente baixo, PEEP inicial reduzida, pressão de platô e driving pressure limitadas, e hipercapnia significativa evitada — reconhecendo que a estratégia habitual de otimizar oxigenação pode piorar o VD",
+        "origem_secao": "Ventilacao mecanica: o que piora o vd"
+      },
+      {
+        "id": "vdagudo-posicao-prona",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Posição prona considerada como manobra para descarregar o VD em SDRA grave, além do papel já estabelecido na oxigenação",
+        "origem_secao": "Ventilacao mecanica: o que piora o vd"
+      },
+      {
+        "id": "vdagudo-tep-alto-fluxo-evitar-intubacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em embolia pulmonar de alto risco, oxigenoterapia por cânula nasal de alto fluxo usada inicialmente e intubação evitada quando possível — reconhecido que a ventilação mecânica se associa a maior risco de mortalidade nesse cenário, e que muitos sedativos podem agravar a instabilidade hemodinâmica se a intubação for necessária",
+        "origem_secao": "Ventilacao mecanica: o que piora o vd"
+      },
+      {
+        "id": "vdagudo-vasodilatador-pulmonar-restrito",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Vasodilatador pulmonar específico não prescrito de rotina fora da hipertensão arterial pulmonar do grupo 1 da OMS, pela ausência de evidência que sustente uso rotineiro em outros contextos de falência aguda de VD",
+        "origem_secao": "O que o consenso diz para EVITAR"
+      },
+      {
+        "id": "vdagudo-balao-intraaortico-nao-indicado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Balão intra-aórtico não utilizado como suporte para falência isolada de VD, por não ser geralmente recomendado nesse cenário segundo o consenso",
+        "origem_secao": "O que o consenso diz para EVITAR"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "escore-romeo-indicacao-de-ecocardiograma-na-sincope-do-idoso",
+    "condicao": "Indicação de ecocardiograma no idoso com síncope na emergência (escore ROMEO)",
+    "resumo": "Checklist para decidir, pelo escore ROMEO, se o paciente com síncope na emergência precisa de ecocardiograma transtorácico — ferramenta de exclusão de baixo risco, distinta dos escores de risco global de evento adverso grave (CSRS/EGSyS/SFSR) já cobertos nesta base.",
+    "documento_origem": "escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Probst MA, Gibson TA, Weiss RE, et al. Predictors of Clinically Significant Echocardiography Findings in Older Adults with Syncope: A Secondary Analysis. J Hosp Med. 2018;13(12):823-828. DOI: 10.12788/jhm.3082. PMID: 30255862. Texto integral conferido em PMC em 21/08/2026: derivação em adultos ≥60 anos; ROMEO=0 com sensibilidade 99,5% (IC95% 97,4-99,9) e especificidade 15,4%.",
+      "DeAngelis J, Vargas G, Weiss RE, et al. Predicting Echocardiography Findings in Adults Presenting to the Emergency Department With Syncope: An External Validation of the ROMEO Score. Acad Emerg Med. 2026;33(6):e70366. DOI: 10.1111/acem.70366. PMID: 42340085. Texto integral conferido na Wiley em 21/08/2026: adultos ≥40 anos sem diagnóstico grave na emergência; ROMEO=0 com sensibilidade 98,9%, VPN 98,6%, especificidade 20,2% e AUC 0,83 (IC95% 0,79-0,87)."
+    ],
+    "itens": [
+      {
+        "id": "romeo-criterio-icc",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História de insuficiência cardíaca congestiva verificada e registrada como critério do escore ROMEO",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-dac",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História de doença arterial coronariana verificada e registrada como critério do escore ROMEO",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-ecg",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG obtido e classificado como normal ou anormal para pontuação do escore ROMEO",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-troponina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina T de alta sensibilidade dosada e comparada ao corte que pontua no escore (> 14 pg/mL)",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-criterio-ntprobnp",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "NT-proBNP dosado e comparado ao corte que pontua no escore (> 125 pg/mL)",
+        "origem_secao": "os 5 critérios do ROMEO"
+      },
+      {
+        "id": "romeo-calculo-pontuacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore ROMEO calculado somando os 5 critérios (0 a 5 pontos) antes de decidir sobre o pedido de ecocardiograma",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "romeo-zero-nao-pede-rotina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Com ROMEO = 0, ecocardiograma transtorácico não solicitado de rotina apenas pela síncope, na ausência de outra indicação clínica independente para o exame",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "romeo-positivo-nao-e-urgencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ROMEO ≥ 1 interpretado apenas como 'fora do grupo de exclusão segura', não como indicação automática de urgência — a maioria dos pacientes com ROMEO positivo não terá achado ecocardiográfico significativo",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "romeo-nao-confundir-com-csrs",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cortes de troponina e NT-proBNP do ROMEO não confundidos com os biomarcadores e cortes usados no CSRS — são exames e perguntas clínicas diferentes (achado ecocardiográfico versus risco de evento adverso grave em 30 dias)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "romeo-nao-substitui-risco-global",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Decisão de internação ou observação mantida guiada pelo escore de risco global (CSRS, EGSyS ou SFSR), nunca pelo resultado do ROMEO — mesmo com ROMEO = 0, a definição de destino segue o escore de risco geral já usado nesta base",
+        "origem_secao": "Não é regra para decidir se o paciente deve ser internado"
+      },
+      {
+        "id": "romeo-validacao-externa-e-limites",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "ROMEO = 0 interpretado como marcador de muito baixo risco de achado ecocardiográfico significativo: na derivação em pacientes ≥60 anos teve sensibilidade 99,5%; na validação externa de 2026 em adultos ≥40 anos sem diagnóstico grave na emergência teve sensibilidade 98,9%, VPN 98,6% e AUC 0,83. Usar como apoio à decisão sobre ecocardiograma, não como regra de internação/alta nem substituto do julgamento clínico; a validação externa teve potencial viés de seleção e predominância de centros urbanos/acadêmicos.",
+        "origem_secao": "Validação externa e limites"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "rm-em-marcapasso-ou-cdi-nao-condicional-triagem-e-protocolo-magnasafe",
+    "condicao": "Ressonância magnética em portador de marca-passo ou CDI não condicional",
+    "resumo": "Triagem, reprogramação, monitorização e reversão pós-exame para realizar RM com segurança em paciente com dispositivo cardíaco eletrônico implantável (CIED) legado, não certificado para o ambiente de RM — protocolo sustentado pelo Registro MagnaSafe e pelo estudo de Nazarian.",
+    "documento_origem": "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684 — Registro MagnaSafe, 1.000 casos de marca-passo e 500 casos de CDI, RM não torácica a 1,5 T",
+      "Nazarian S, Hansford R, Rahsepar AA, Weltin V, McVeigh D, Ipek EG, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579 — 1.509 pacientes, 2.103 exames de RM torácicos e não torácicos a 1,5 T, seguimento de longo prazo em 958 pacientes",
+      "Indik JH, Gimbel JR, Abe H, Alkmim-Teixeira R, Birgersdotter-Green U, Clarke GD, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708"
+    ],
+    "itens": [
+      {
+        "id": "rm-cied-triagem-condicional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar, pelo fabricante e modelo do gerador e dos eletrodos, que o sistema é de fato não condicional para RM antes de aplicar este protocolo — dispositivo condicional segue o protocolo específico do próprio fabricante, não este",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-eletrodo-integro",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar ausência de eletrodo abandonado ou com integridade duvidosa/fraturado — cenário de maior incerteza, pouco representado nos dois estudos de referência, que costuma pesar contra a realização do exame fora de protocolo dedicado",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rm-cied-dependencia-marcapasso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar se o paciente é dependente de marca-passo (sem ritmo próprio de escape) — essa informação determina a necessidade de reprogramação para modo assíncrono antes do exame",
+        "origem_secao": "Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-interrogacao-pre",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Interrogar o dispositivo imediatamente antes do exame, registrando os parâmetros de estimulação e sensibilidade em uso",
+        "origem_secao": "Registro MagnaSafe; estudo de Nazarian"
+      },
+      {
+        "id": "rm-cied-reprogramacao-pre",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reprogramar o dispositivo conforme protocolo padronizado antes do exame — resposta a frequência desligada, modo assíncrono no paciente dependente de marca-passo, e terapias de choque do CDI desativadas",
+        "origem_secao": "O Registro MagnaSafe"
+      },
+      {
+        "id": "rm-cied-equipe-capacitada",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Confirmar a presença, durante todo o exame, de pessoal capacitado a interrogar e reprogramar o dispositivo e a atender emergência",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-monitorizacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorizar sinais vitais e oximetria de pulso continuamente durante todo o exame",
+        "origem_secao": "O consenso de sociedade que organiza a prática"
+      },
+      {
+        "id": "rm-cied-torax",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a RM for torácica, considerar que o eletrodo intracardíaco fica mais próximo do campo de radiofrequência — cenário testado pelo estudo de Nazarian (que incluiu RM torácica), diferente do Registro MagnaSafe (só RM não torácica)",
+        "origem_secao": "O estudo de Nazarian: ampliando para RM torácica"
+      },
+      {
+        "id": "rm-cied-tesla-eletrodo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o exame for planejado a 3 tesla (em vez de 1,5 T): individualizar a decisão — a evidência de maior volume dos dois estudos de referência é para 1,5 T, e a segurança a 3 T tem evidência mais limitada",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      },
+      {
+        "id": "rm-cied-reinterrogacao-pos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Reinterrogar o dispositivo imediatamente após o exame e reprogramá-lo de volta ao modo habitual, revertendo os ajustes feitos para a RM",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-cied-orientacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar o paciente de que o dispositivo pode registrar reset elétrico transitório para o modo de segurança durante o exame — achado mais comum nos dois estudos de referência, revertido pela reprogramação pós-exame na quase totalidade dos casos",
+        "origem_secao": "Os dois estudos juntos: o que sustentam, e o que não sustentam"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "decisao-de-troca-eletiva-de-gerador-de-marcapasso-ou-cdi-escore-dare",
+    "condicao": "Decisão de troca eletiva de gerador de marca-passo ou CDI",
+    "resumo": "O que checar antes de indicar a troca de gerador ao atingir o indicador de substituição eletiva (ERI) ou fim de vida (EOL) — o risco de complicação maior muda de forma marcante conforme o escopo do procedimento, e o risco de morte nos meses seguintes reflete a comorbidade do paciente, não a técnica cirúrgica, segundo o Registro REPLACE e o escore REPLACE DARE.",
+    "documento_origem": "troca-eletiva-de-gerador-marca-passo-cdi-risco-por-escopo-e-escore-dare-registro-replace",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Poole JE, Gleva MJ, Mela T, Chung MK, Uslan DZ, Borge R, et al; REPLACE Registry Investigators. Complication rates associated with pacemaker or implantable cardioverter-defibrillator generator replacements and upgrade procedures: results from the REPLACE registry. Circulation. 2010;122(16):1553-1561. DOI: 10.1161/CIRCULATIONAHA.110.976076. PMID: 20921437",
+      "Chung MK, Holcomb RG, Mittal S, Steinberg JS, Gleva MJ, Mela T, Uslan DZ, Mitchell K, Poole JE; REPLACE Investigators. REPLACE DARE (Death After Replacement Evaluation) score: determinants of all-cause mortality after implantable device replacement or upgrade from the REPLACE registry. Circ Arrhythm Electrophysiol. 2014;7(6):1048-1056. DOI: 10.1161/CIRCEP.114.001671. PMID: 25221331",
+      "Crossley GH, Gayle DD, Simmons TW, Haisty WK, Bailey JR, Davis-O'Brien K, Hammon JW, Fitzgerald DM. Reprogramming pacemakers enhances longevity and is cost-effective. Circulation. 1996;94(9 Suppl):II245-247. PMID: 8901754",
+      "Ferrick AM, Raj SR, Deneke T, et al. 2023 HRS/EHRA/APHRS/LAHRS expert consensus statement on practical management of the remote device clinic. Heart Rhythm. 2023;20(9):e92-e144. DOI: 10.1016/j.hrthm.2023.03.1525. PMID: 37211145. Texto integral conferido em 21/08/2026: transmissões a cada 1-3 meses ao se aproximar da troca eletiva; próximo ou além do ERI, monitorização provavelmente mensal, com longevidade operacional esperada de cerca de 90 dias a partir desse ponto, reconhecendo variação por dispositivo/fabricante."
+    ],
+    "itens": [
+      {
+        "id": "troca-gerador-motivo-eri-eol",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar por interrogação do dispositivo que o gerador de fato atingiu o indicador de substituição eletiva (ERI) ou o fim de vida (EOL) antes de indicar a troca",
+        "origem_secao": "Por que esta é uma decisão, não um procedimento de rotina"
+      },
+      {
+        "id": "troca-gerador-escopo-planejado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Definir explicitamente, antes do procedimento, se o escopo será apenas a troca do gerador (sem adição de eletrodo) ou se envolverá adição de eletrodo novo, revisão de sistema ou upgrade (por exemplo, marca-passo para CDI, ou para ressincronização cardíaca)",
+        "origem_secao": "O registro REPLACE — desenho"
+      },
+      {
+        "id": "troca-gerador-consentimento-risco-diferenciado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao obter o consentimento, informar que o risco de complicação maior documentado difere de forma marcante conforme o escopo — menor quando não há adição de eletrodo, e várias vezes maior quando há adição de eletrodo, revisão de sistema ou upgrade, sobretudo para ressincronização cardíaca",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      },
+      {
+        "id": "troca-gerador-tipo-dispositivo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrar que, em ambas as coortes do registro, a complicação maior foi mais frequente na troca de CDI do que na de marca-passo",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      },
+      {
+        "id": "troca-gerador-risco-infeccioso",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não presumir que o excesso de risco do upgrade/adição de eletrodo seja predominantemente infeccioso — as taxas de infecção em 6 meses foram semelhantes entre o grupo sem e o grupo com adição de eletrodo; o excesso de risco é sobretudo mecânico (perfuração, deslocamento, pneumotórax, hematoma que exige reintervenção)",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      },
+      {
+        "id": "troca-gerador-comorbidade-dare",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Levantar as comorbidades que compõem o escore REPLACE DARE (internação recente por insuficiência cardíaca, classe funcional NYHA III/IV, uso de antiarrítmico, doença cerebrovascular e estágio de doença renal crônica) antes de decidir o momento da troca",
+        "origem_secao": "O escore REPLACE DARE — para quem a troca é mais arriscada de morrer, não de complicar"
+      },
+      {
+        "id": "troca-gerador-otimizacao-comorbidade",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente com carga elevada de comorbidade pelo DARE, considerar otimizar a insuficiência cardíaca e a função renal antes do procedimento — nesse perfil, o risco relevante a discutir é de mortalidade por doença de base, não de complicação técnica do procedimento",
+        "origem_secao": "O que isso significa para a decisão de reprogramar, adiar ou trocar"
+      },
+      {
+        "id": "troca-gerador-separar-decisoes",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Sempre que clinicamente possível, separar a decisão \"preciso trocar o gerador\" da decisão \"preciso, além disso, mudar o sistema de eletrodos\", em vez de somar as duas de forma automática",
+        "origem_secao": "O que isso significa para a decisão de reprogramar, adiar ou trocar"
+      },
+      {
+        "id": "troca-gerador-reprogramacao-adiamento",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Programação que reduza consumo pode prolongar a longevidade do gerador ao longo do seguimento, mas não deve ser usada como substituto rotineiro da troca planejada depois que o dispositivo atinge ERI. Ao se aproximar da troca eletiva, intensificar o acompanhamento; o consenso HRS/EHRA/APHRS/LAHRS 2023 orienta transmissões a cada 1-3 meses e, próximo ou além do ERI, monitorização provavelmente mensal, citando cerca de 90 dias de longevidade operacional esperada a partir desse ponto. Esse intervalo não é garantia individual e deve respeitar modelo, fabricante, dependência de estimulação e decisão compartilhada no paciente de alto risco.",
+        "origem_secao": "Programação, ERI e decisão de troca"
+      },
+      {
+        "id": "troca-gerador-seguimento-pos-alta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Agendar seguimento estruturado após a troca, com atenção redobrada ao risco de complicação e de óbito tardio relacionado ao procedimento quando o escopo envolveu adição de eletrodo ou upgrade",
+        "origem_secao": "Resultado — o risco escala com o que se acrescenta ao procedimento, não com \"trocar a bateria\" em si"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "inicio-de-amiodarona-em-paciente-anticoagulado-com-varfarina-ajuste-de-inr",
+    "condicao": "Início de amiodarona em paciente já anticoagulado com varfarina — ajuste e monitorização do INR",
+    "resumo": "O que checar ao introduzir amiodarona em paciente em uso estável de varfarina (ou vice-versa): a interação farmacocinética por inibição enzimática se instala de forma lenta e progressiva, atinge o pico por volta da 7ª semana e persiste por meses após a suspensão da amiodarona — exigindo vigilância de INR estendida, não um ajuste único.",
+    "documento_origem": "interacao-amiodarona-varfarina-inibicao-enzimatica-e-ajuste-de-dose",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sanoski CA, Bauman JL. Clinical observations with the amiodarone/warfarin interaction: dosing relationships with long-term therapy. Chest. 2002;121(1):19-23. PMID: 11796427 — estudo observacional prospectivo, 43 pacientes em varfarina estável iniciando amiodarona, seguidos por pelo menos 1 ano",
+      "Naganuma M, Shiga T, Nishikata K, Tsuchiya T, Kasanuki H, Fujii E. Role of desethylamiodarone in the anticoagulant effect of concurrent amiodarone and warfarin therapy. J Cardiovasc Pharmacol Ther. 2001;6(4):363-367. PMID: 11907638 — 25 pacientes em varfarina estável recebendo amiodarona, dosagem plasmática de amiodarona e do metabólito desetilamiodarona no dia 7, correlacionada ao delta de INR/dose",
+      "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil Ltda., solução injetável) e Bula do ATLANSIL (cloridrato de amiodarona, Sanofi-Aventis Farmacêutica Ltda., comprimidos), itens de Interações Medicamentosas — mesma fonte já usada em 'amiodarona-associacoes-a-evitar-e-a-janela-apos-a-suspensao.md', citada aqui para a afirmação sobre persistência da interação após a suspensão",
+      "DailyMed. Amiodarone Hydrochloride Tablets, seção 12.3 Pharmacokinetics e interações. Conferido em 21/08/2026: após tratamento oral crônico, meia-vida terminal da amiodarona 26-107 dias (média ~53; maioria 40-55 dias) e do metabólito ativo desetilamiodarona ~61 dias; a resposta individual é variável e a interação com varfarina exige monitorização estreita do INR."
+    ],
+    "itens": [
+      {
+        "id": "amio-varf-verificar-uso-concomitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se o paciente já está em uso estável de varfarina antes de iniciar amiodarona (ou o inverso) — a interação farmacocinética se instala de forma progressiva ao longo de semanas, não de imediato",
+        "origem_secao": "Por que a interação existe: dois mecanismos, dois enantiômeros"
+      },
+      {
+        "id": "amio-varf-inr-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Registrar o INR basal e a dose de varfarina em uso antes de iniciar a amiodarona, como referência para o ajuste que virá",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-frequencia-inr-inicial",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorizar o INR com maior frequência ao iniciar a amiodarona (por exemplo, semanalmente nas primeiras semanas), em vez do intervalo habitual de um paciente já estável",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-nao-relaxar-inicio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não presumir que um INR estável nos primeiros 7 a 10 dias após iniciar amiodarona indique ausência de risco — o efeito de potencialização do anticoagulante atinge o pico apenas em torno da 7ª semana de uso concomitante",
+        "origem_secao": "Tempo de instalação: por que o efeito não aparece de imediato"
+      },
+      {
+        "id": "amio-varf-vigilancia-prolongada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Estender a vigilância intensificada do INR por pelo menos 2 meses após o início da amiodarona, dado o tempo de instalação lento do efeito de potencialização",
+        "origem_secao": "Manejo prático de monitorização e ajuste"
+      },
+      {
+        "id": "amio-varf-ajuste-guiado-inr",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Ajustar a dose de varfarina de forma gradual e guiada pelo INR, nunca por um percentual fixo de redução — a fonte de referência descreve relação estatística por faixa de dose de amiodarona, não regra determinística, e a resposta individual varia",
+        "origem_secao": "Magnitude do efeito: quanto reduzir, e conforme qual variável"
+      },
+      {
+        "id": "amio-varf-suspensao-nao-encerra-vigilancia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao suspender a amiodarona, não encerrar a vigilância do INR — o efeito inibitório persiste por meses após a suspensão, e a dose de varfarina eventualmente precisará ser reaumentada de forma igualmente lenta e imprevisível",
+        "origem_secao": "A parte que mais se esquece: a interação persiste depois de suspender"
+      },
+      {
+        "id": "amio-varf-prazo-seguranca-indefinido",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Após suspender amiodarona, não usar um prazo fixo universal para encerrar a vigilância do INR. Após terapia crônica, a meia-vida terminal da amiodarona varia de 26 a 107 dias (média ~53 dias) e a do metabólito ativo é ~61 dias; por isso, o efeito farmacocinético pode persistir por semanas a meses. Manter INR mais frequente e ajustar a varfarina até estabilidade seriada, individualizando pela tendência do INR e pelos riscos hemorrágico e trombótico.",
+        "origem_secao": "Persistência farmacocinética após suspensão"
+      },
+      {
+        "id": "amio-varf-sangramento-menor",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Estar atento a sinais de sangramento menor durante o período de ajuste — achado relatado numa proporção relevante dos pacientes do estudo de referência desta interação",
+        "origem_secao": "Magnitude do efeito: quanto reduzir, e conforme qual variável"
+      },
+      {
+        "id": "amio-varf-nao-duplicar-doc",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Para o panorama completo das demais interações da amiodarona (glicoproteína P, CYP2D6, prolongamento de QT) e para a monitorização basal e periódica além do INR, consultar o checklist e o documento dedicados ao início de amiodarona",
+        "origem_secao": "O que este documento não cobre"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "decisao-de-cirurgia-valvar-na-cardite-reumatica-fulminante-em-fase-ativa",
+    "condicao": "Decisão de cirurgia valvar de emergência na cardite reumática fulminante, ainda com inflamação ativa",
+    "resumo": "Critérios para decidir, no cenário raro e extremo de insuficiência cardíaca refratária ao tratamento clínico na cardite reumática ativa, se a cirurgia valvar deve ser antecipada para a fase ativa em vez de esperar a inflamação ceder — a exceção à regra geral de adiar a cirurgia até a fase inativa.",
+    "documento_origem": "cardite-reumatica-fulminante-insuficiencia-cardiaca-refrataria-e-cirurgia-valvar-na-fase-ativa",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Marcus RH, Sareli P, Pocock WA, et al. Functional anatomy of severe mitral regurgitation in active rheumatic carditis. Am J Cardiol. 1989;63(9):577-584. DOI: 10.1016/0002-9149(89)90902-8. PMID: 2919562. Série anatômico-cirúrgica de 73 pacientes: prolapso do folheto anterior 94%, dilatação anular 96% e alongamento cordal 90%.",
+      "Barlow JB, Marcus RH, Pocock WA, et al. Mechanisms and management of heart failure in active rheumatic carditis. S Afr Med J. 1990;78(4):181-186. PMID: 2200147. Revisão clínica que relaciona a insuficiência cardíaca à lesão valvar esquerda hemodinamicamente importante e sustenta cirurgia como medida salvadora quando há falência refratária.",
+      "Al Kasab S, Al Fagih MR, Shahid M, Habbab M, Al Zaibag M. Valve surgery in acute rheumatic heart disease. One- to four-year follow-up. Chest. 1988;94(4):830-833. DOI: 10.1378/chest.94.4.830. PMID: 3168577. Seis pacientes NYHA IV com insuficiência ventricular esquerda intratável; sem mortalidade no seguimento médio de 2 anos, todos em NYHA I-II.",
+      "Lewis BS, et al. Emergency valve replacement in acute rheumatic carditis. Ann Thorac Surg. 1979;27:529-535. DOI: 10.1016/S0003-4975(10)63364-4. PMID: 454031. Pequena série histórica de quatro pacientes criticamente enfermos tratados com cirurgia de emergência, usada apenas como evidência observacional de suporte, não como estimativa prognóstica generalizável."
+    ],
+    "itens": [
+      {
+        "id": "crf-cirurgia-nyha-iv-refrataria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o cenário é insuficiência cardíaca classe funcional NYHA IV refratária ao tratamento clínico otimizado — não a gravidade da cardite isoladamente (graduação SBC 2022) — antes de considerar cirurgia ainda na fase ativa",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-tratamento-clinico-tentado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Tratamento clínico otimizado (diuréticos, vasodilatadores, suporte inotrópico quando indicado) documentado como já tentado e refratário, sem indicar cirurgia na fase ativa antes de esgotar essa etapa",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-mecanismo-ruptura",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se há regurgitação mitral ou aórtica torrencial por ruptura cordal ou folheto flácido (flail) com instabilidade hemodinâmica — mecanismo mecânico agudo que não responde a anti-inflamatório e é descrito como exigindo reparo cirúrgico de urgência",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-regra-geral-nao-aplicada-indiscriminadamente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmado que a regra geral de adiar a cirurgia até a fase inativa NÃO está sendo aplicada indiscriminadamente a um paciente com choque cardiogênico refratário por ruptura cordal aguda — essa regra vale fora do cenário de risco de vida iminente descrito aqui",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crf-cirurgia-miocardite-concomitante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Miocardite ativa concomitante considerada como contribuinte à instabilidade hemodinâmica, com suporte hemodinâmico perioperatório planejado para a disfunção miocárdica associada, não apenas para a lesão valvar mecânica",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crf-cirurgia-limitacao-tecnica-consentimento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutida com a família, como parte do consentimento informado, a limitação técnica de operar tecido valvar inflamado e friável na fase ativa — que tende a dificultar um reparo durável, argumento citado na literatura para aguardar a fase inativa quando clinicamente possível",
+        "origem_secao": "Decisão de reparo versus substituição valvar na fase ativa"
+      },
+      {
+        "id": "crf-cirurgia-sem-promessa-resultado-garantido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a família NÃO recebeu promessa de resultado cirúrgico 'garantido' com base nas séries de caso históricas citadas na literatura — comunicado explicitamente que são amostras pequenas, sem grupo controle, e que não substituem a avaliação individualizada de risco cirúrgico",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "crf-cirurgia-evidencia-primaria-e-limites",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Dados primários conferidos: em série anatômico-cirúrgica de 73 pacientes com regurgitação mitral grave e cardite reumática ativa, prolapso do folheto anterior ocorreu em 94%, dilatação anular em 96% e alongamento cordal em 90%. Em uma pequena série de seis pacientes NYHA IV com insuficiência ventricular esquerda intratável submetidos a cirurgia, não houve mortalidade no seguimento médio de 2 anos e todos estavam em NYHA I-II; outra série histórica de quatro pacientes críticos também relatou bom resultado clínico. São dados observacionais, antigos e de amostras pequenas: sustentam a possibilidade de cirurgia salvadora na falência refratária, mas não permitem promessa de prognóstico nem comparação causal.",
+        "origem_secao": "Evidência primária e limitações das séries históricas"
+      },
+      {
+        "id": "crf-cirurgia-encaminhamento-sem-aguardar-fase-inativa",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para cirurgia valvar de emergência acionado sem aguardar a fase inativa, diante do cenário de insuficiência cardíaca refratária e/ou ruptura mecânica aguda descrito acima — a exceção justificada por risco de vida iminente, não a regra geral do tema",
+        "origem_secao": "Quando considerar cirurgia ainda na fase ativa"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "checklist-protocolo-eras-cardiaco-em-cirurgia-cardiaca",
+    "condicao": "Protocolo ERAS Cardíaco — pacote de recuperação acelerada em cirurgia cardíaca",
+    "resumo": "Checklist operacional derivado do consenso ERAS Cardiac Society de 2019 e de uma implementação que agrupou 15 medidas por fase perioperatória. O texto primário com COR/LOE foi conferido, e a metanálise de 2025 confirma redução de permanência hospitalar/UTI e ventilação sem demonstrar benefício de mortalidade.",
+    "documento_origem": "protocolo-eras-cardiaco-recuperacao-acelerada-em-cirurgia-cardiaca",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Engelman DT, Ben Ali W, Williams JB, et al. Guidelines for Perioperative Care in Cardiac Surgery: Enhanced Recovery After Surgery Society Recommendations. JAMA Surg. 2019;154(8):755-766. DOI: 10.1001/jamasurg.2019.1153. PMID: 31054241. Texto integral e tabela de Classification of Recommendation/Level of Evidence conferidos em 21/08/2026.",
+      "Dave MG, Chudyk AM, Oravec N, et al. Putting patient value first: Using a modified nominal group technique for the implementation of enhanced recovery after cardiac surgery recommendations. JTCVS Open. 2022. DOI: 10.1016/j.xjon.2022.07.004. Texto integral de acesso aberto; agrupamento operacional de 15 medidas por fase.",
+      "Hoogma DF, Meeusen I, Coppens S, et al. Efficacy of enhanced recovery programmes for cardiac surgery: a systematic review and meta-analysis. Br J Anaesth. 2025;135(1):31-39. DOI: 10.1016/j.bja.2025.03.019. PMID: 40287362. PMCID: PMC12597454. Texto integral conferido em 21/08/2026: 18 estudos/2.625 pacientes; redução de LOS/UTI/ventilação e análise explícita de segurança."
+    ],
+    "itens": [
+      {
+        "id": "eras-cardiaco-nutricao-preop",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear e corrigir deficiência nutricional identificada no pré-operatório, como parte do pacote pré-operatório do ERAS Cardíaco",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-jejum-liquidos-claros",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Permitir líquidos claros até 2 a 4 horas antes da anestesia geral, quando clinicamente apropriado, evitando jejum prolongado desnecessário conforme a recomendação ERAS Cardiac 2019 (Classe IIb, Nível C-LD).",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-carboidrato-preop",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Oferecer carregamento de carboidrato no pré-operatório imediato, conforme o pacote ERAS Cardíaco",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-engajamento-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Usar ferramenta estruturada de engajamento e educação do paciente sobre o próprio processo de recuperação, antes da cirurgia",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-prehabilitacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar pré-habilitação (otimização funcional/condicionamento antes do procedimento) quando o tempo até a cirurgia permitir",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-cessacao-tabaco-alcool",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar e apoiar cessação de tabagismo e de consumo de álcool de risco antes da cirurgia cardíaca eletiva",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-reducao-infeccao-sitio",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicar as medidas intraoperatórias do pacote voltadas à redução de infecção de sítio cirúrgico",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-fixacao-esternal-rigida",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Utilizar técnica de fixação esternal rígida quando indicada pelo protocolo institucional, conforme o componente intraoperatório do pacote",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-controle-glicemico",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter controle glicêmico perioperatório estruturado no pós-operatório, como parte do pacote ERAS Cardíaco",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-dor-multimodal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Aplicar manejo multimodal da dor no pós-operatório, dentro do pacote de recuperação acelerada",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-rastreio-delirium",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear sistematicamente delirium pós-operatório — recomendação que se articula com os documentos de fragilidade e risco cirúrgico cardíaco no idoso já publicados neste tema",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "eras-cardiaco-permeabilidade-dreno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Verificar e manter a permeabilidade do dreno torácico no pós-operatório",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-monitorizacao-renal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Monitorizar estresse renal/lesão renal aguda no pós-operatório, conforme o componente do pacote",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-terapia-hidrica-guiada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Conduzir terapia hídrica guiada por meta no pós-operatório",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-dieta-transito-nausea",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Aplicar manejo estruturado de dieta, regime intestinal e náusea/vômito no pós-operatório",
+        "origem_secao": "As recomendacoes por fase — o que o pacote cobre"
+      },
+      {
+        "id": "eras-cardiaco-pacote-completo-nao-so-fast-track",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Aplicar o pacote coordenado nas três fases (pré, intra e pós-operatória) — o componente intraoperatório isolado (fast-track anestésico) entrega só parte do benefício; a metanálise de 2025 mostrou 2,11 dias a mais de redução de internação para o programa completo frente à estratégia restrita ao período intraoperatório (p=0,003)",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "eras-cardiaco-grading-fonte-primaria-conferido",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Classificação de recomendação e nível de evidência do consenso ERAS Cardiac 2019 conferidos no texto integral e na tabela primária. O grading é individual por intervenção — por exemplo, controle glicêmico perioperatório e terapia hídrica guiada por meta são Classe I/B-R, pré-habilitação é IIa/B-NR e líquidos claros/carregamento de carboidrato são IIb/C-LD. Não atribuir um único COR/LOE ao pacote inteiro; consultar a tabela original quando o grau específico for necessário.",
+        "origem_secao": "Tabela primária de COR/LOE — Engelman 2019"
+      },
+      {
+        "id": "eras-cardiaco-seguranca-metanálise-2025",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "A metanálise de 2025 também avaliou segurança e não detectou diferença estatisticamente significativa em fibrilação atrial, lesão renal aguda, reinternação em UTI/hospital ou mortalidade em 30 dias. Para mortalidade, OR 1,11 (IC95% aproximadamente 0,65-1,90), com baixa certeza por imprecisão. Portanto, a evidência sustenta recuperação mais rápida e menor permanência, mas não deve ser apresentada como redução de mortalidade.",
+        "origem_secao": "Desfechos de segurança — Hoogma 2025"
+      },
+      {
+        "id": "eras-cardiaco-nao-confundir-fast-track",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não tratar 'fast-track anestésico' e 'ERAS Cardíaco' como sinônimos — a metanálise de 2025 mostra ganho adicional do programa completo sobre o fast-track isolado, e tratá-los como equivalentes subestima o que o pacote completo entrega",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
   }
 ]
