@@ -1,0 +1,74 @@
+name: PDF Signature Visual QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "backend/app/services/assinatura/**"
+      - "backend/tests/test_pdf_signer.py"
+      - ".github/workflows/pdf-signature-visual-qa.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  signed-pdf-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            backend/requirements.txt
+            backend/requirements-dev.txt
+
+      - name: Install backend test dependencies
+        working-directory: backend
+        run: pip install -r requirements-dev.txt
+
+      - name: Validate PAdES signer tests
+        working-directory: backend
+        run: python -m pytest -q tests/test_pdf_signer.py
+
+      - name: Generate QR-signed visual samples
+        working-directory: backend
+        run: |
+          mkdir -p ../pdf-signature-qa
+          python - <<'PY'
+          from pathlib import Path
+          from tests.test_pdf_signer import _gerar_pfx, _pdf_minimo
+          from app.services.assinatura import pdf_signer
+
+          out = Path('../pdf-signature-qa')
+          pfx = _gerar_pfx()
+          url = 'https://corvia.med.br/validar/R123-0123456789ABCDEF'
+          codigo = 'R123-0123456789ABCDEF'
+
+          comum = pdf_signer.assinar_pdf(
+              _pdf_minimo('Receita comum — amostra visual QR'),
+              pfx_bytes=pfx, senha='senha123', motivo='Receita médica',
+              local='Ribeirão Preto', codigo_validacao=codigo,
+              url_validacao=url,
+          )
+          (out / 'assinatura-qr-padrao.pdf').write_bytes(comum)
+
+          rce = pdf_signer.assinar_pdf(
+              _pdf_minimo('RCE — amostra visual QR'),
+              pfx_bytes=pfx, senha='senha123', motivo='Receita de Controle Especial',
+              local='Ribeirão Preto', layout='RCE', codigo_validacao=codigo,
+              url_validacao=url,
+          )
+          (out / 'assinatura-qr-rce.pdf').write_bytes(rce)
+          PY
+
+      - name: Upload signed PDF samples
+        uses: actions/upload-artifact@v7
+        with:
+          name: pdf-signature-qr-visual-qa
+          path: pdf-signature-qa/*.pdf
+          if-no-files-found: error
+          retention-days: 7
