@@ -86,7 +86,13 @@ for (const path of await listarArquivos(dist.pathname)) {
 // aprovado adicionou apenas CSS óptico e levou o precache a 2852491 B, 651 B
 // acima do teto anterior (0,02%). O incremento é deliberadamente mínimo; os
 // limites do entrypoint e de chunks opcionais permanecem inalterados.
-const maxPrecacheBytes = 2786 * 1024;
+//
+// Ajustado de 2786 KB para 2800 KB em 21/08/2026: a personalização aprovada
+// das Ações Rápidas e o balanceamento da Home desktop levaram o precache a
+// 2853517 B, somente 653 B acima do teto anterior. A nova margem continua
+// estreita (~14 KiB) e não altera os limites do entrypoint, gzip ou chunks
+// opcionais, preservando a detecção de crescimento relevante.
+const maxPrecacheBytes = 2800 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
