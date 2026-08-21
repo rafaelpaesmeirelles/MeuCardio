@@ -2325,7 +2325,8 @@
     "review_status": "revisado",
     "generic_name": "Edoxabana",
     "brand_names": [
-      "Lixiana"
+      "Lixiana",
+      "Roteas"
     ],
     "drug_class": "Anticoagulante oral direto (DOAC) — inibidor direto do fator Xa",
     "mechanism": "Inibe diretamente e seletivamente o fator Xa, tanto livre quanto ligado ao complexo protrombinase, bloqueando conversão de protrombina em trombina",
@@ -2379,7 +2380,8 @@
       "Comprimido revestido 60 mg (80,8 mg de tosilato de edoxabana monoidratado)"
     ],
     "commercial_presentations": [
-      "Lixiana® (Daiichi Sankyo Brasil Farmacêutica Ltda.), comprimidos revestidos de 15 mg, 30 mg e 60 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Lixiana® (Daiichi Sankyo Brasil Farmacêutica Ltda.), comprimidos revestidos de 15 mg, 30 mg e 60 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Roteas® (edoxabana, tosilato monoidratado), Daiichi Sankyo Brasil Farmacêutica Ltda. (comercializado/distribuído também sob a marca do laboratório Aché, ache.com.br), registro ANVISA nº 1045401860030 (válido até 01/05/2029). Comprimidos revestidos de 15 mg (embalagem com 14 comprimidos) e de 30 mg/60 mg (embalagens com 14 ou 30 comprimidos). Indicação: redução de risco de AVC/embolismo sistêmico na FA não valvar; tratamento e prevenção de recorrência de TVP/TEP — mesmas indicações já cadastradas para Lixiana®, mesmo princípio ativo, segunda marca comercial no Brasil. Fonte: ache.com.br, smerp.com.br (consulta de registro ANVISA), drogasil.com.br, farmaindex.com. WebSearch 20/08/2026."
     ]
   },
   {
@@ -3480,7 +3482,9 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Não se aplica — anticoagulante parenteral, sem mecanismo vasodilatador/diurético e sem indicação ou efeito antihipertensivo em nenhuma fonte consultada.",
     "brand_names": [
-      "HEPAMAX-S (uso hospitalar/hemodiálise — já citado como fonte de bula neste registro)"
+      "HEPAMAX-S (uso hospitalar/hemodiálise — já citado como fonte de bula neste registro)",
+      "Hemofol",
+      "Heptar"
     ],
     "interactions": [
       "**Antiagregantes plaquetários (AAS, clopidogrel, ticagrelor etc.) e outros anticoagulantes**: risco somado de sangramento — uso concomitante exige vigilância clínica reforçada, mesma lógica já registrada em `notes.Precaucoes` deste documento (terapia antiplaquetária concomitante como fator de risco de sangramento).",
@@ -3501,7 +3505,9 @@
       "Solução injetável 5.000 UI/mL, frasco-ampola ou ampola de 5 mL (25.000 UI/frasco)"
     ],
     "commercial_presentations": [
-      "Hemofol® (Cristália Produtos Químicos Farmacêuticos Ltda.; bula aprovada pela ANVISA em 09/11/2017) e Hepamax-S® (Blau Farmacêutica S.A.), heparina sódica 5.000 UI/mL em frasco-ampola/ampola de 5 mL. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Hemofol® (Cristália Produtos Químicos Farmacêuticos Ltda.; bula aprovada pela ANVISA em 09/11/2017) e Hepamax-S® (Blau Farmacêutica S.A.), heparina sódica 5.000 UI/mL em frasco-ampola/ampola de 5 mL. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA específico não confirmado nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Hemofol® (heparina sódica de origem SUÍNA), Cristália Produtos Químicos Farmacêuticos Ltda. Duas apresentações: solução injetável 5.000 UI/mL, caixa com 25 frascos-ampola de 5 mL, uso intravenoso (hemodiálise); e 5.000 UI/0,25 mL, caixa com 25 ampolas de 0,25 mL, uso subcutâneo. Mesmo laboratório e mesma origem suína já citados para HEPAMAX-S® no registro atual — Hemofol é apresentação/marca adicional do mesmo fabricante. Fonte: cristalia.com.br (bula profissional), magazinemedica.com.br, distribuidoracristal.com.br. WebSearch 20/08/2026.",
+      "Heptar® (heparina sódica de origem BOVINA), Eurofarma Laboratórios S.A. — única marca de heparina não fracionada de origem bovina identificada no Brasil nesta busca, distinta da origem suína das demais marcas já cadastradas. Duas apresentações: solução injetável 5.000 UI/mL (frascos de 5 mL) e Heptar® Bolsa, solução para infusão 100 UI/mL (25.000 UI/250 mL). Indicação: tratamento e prevenção de eventos tromboembólicos em pacientes renais crônicos em hemodiálise. Fonte: eurofarma.com.br (bulas profissional e do paciente), farmaindex.com. WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao número de registro ANVISA, não confirmado nesta busca."
     ]
   },
   {
