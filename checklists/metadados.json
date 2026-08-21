@@ -8424,5 +8424,244 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-tratamento-da-pericardite-purulenta-bacteriana",
+    "condicao": "Pericardite purulenta bacteriana (suspeita ou confirmada)",
+    "resumo": "Checklist para a forma bacteriana supurativa de pericardite — rara, mas com mortalidade muito mais alta que a pericardite viral/idiopática, exigindo antibiótico empírico imediato e drenagem mecânica obrigatória em vez do esquema padrão de AINE + colchicina.",
+    "documento_origem": "pericardite-purulenta-bacteriana-diagnostico-e-tratamento",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mortalidade de 30-50% (mais alta com tamponamento) e associação com pneumonia/empiema (93,1% com pneumonia precedente, 66,6% com empiema) conferidas por busca cruzada em múltiplas fontes secundárias concordantes (Revista Portuguesa de Cardiologia, American Journal of Medicine, JACC Case Reports 2024, séries de caso indexadas em PMC) em 06/08/2026 — os números de mortalidade e associação com pneumonia vêm de séries históricas amplamente citadas na literatura secundária revisada; não foi possível fixar nesta sessão um único artigo primário verificável por PMID para cada número isolado, o que é sinalizado como VERIFICAÇÃO HUMANA NECESSÁRIA antes de uso como estatística fechada em material formal."
+    ],
+    "itens": [
+      {
+        "id": "pericpurulenta-pista-epidemiologica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar pneumonia precedente (descrita em cerca de 93% dos casos em séries históricas) e empiema pleural concomitante (cerca de dois terços dos casos) como via de origem mais comum — outras vias incluem disseminação hematogênica, extensão por contiguidade, trauma e cirurgia intratorácica prévia",
+        "origem_secao": "Como o paciente chega — a pista epidemiológica mais importante"
+      },
+      {
+        "id": "pericpurulenta-pericardiocentese-diagnostica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pericardiocentese é obrigatória para estabelecer o diagnóstico — não é apenas terapêutica, é o próprio método diagnóstico definitivo, com cultura e Gram do líquido para identificar o agente causal",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "pericpurulenta-ecocardiograma",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma como exame de imagem de primeira linha, tanto para o diagnóstico inicial quanto para monitorizar a resposta ao tratamento — identifica derrame, sinais de tamponamento e loculação",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "pericpurulenta-antibiotico-empirico-imediato",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar antibioticoterapia empírica IMEDIATAMENTE, sem aguardar resultado de cultura — ajustar assim que o agente causal for identificado por cultura do líquido pericárdico",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "pericpurulenta-drenagem-obrigatoria",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Drenagem pericárdica mecânica é parte obrigatória do tratamento, não opcional — sem drenagem, a evolução tende inexoravelmente a piorar; casos loculados ou de difícil drenagem por pericardiocentese isolada podem exigir drenagem cirúrgica (janela pericárdica) ou, em relatos de caso, fibrinólise intrapericárdica complementar",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "pericpurulenta-duracao-antibiotico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Duração habitual do antibiótico: 4 a 6 semanas",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "pericpurulenta-nao-tratar-como-viral",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tratar pericardite purulenta com o esquema padrão de AINE + colchicina da pericardite viral/idiopática, sem antibiótico nem drenagem — a forma bacteriana exige as duas medidas obrigatoriamente",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pericpurulenta-verificacao-numeros-mortalidade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Os percentuais de mortalidade (30-50%, ~40% mesmo com tratamento pronto) e de associação com pneumonia/empiema citados vêm de múltiplas séries históricas convergentes em literatura secundária, sem um único artigo primário com PMID confirmado nesta sessão — tratar como estimativa de faixa, não como número exato de um único estudo, e confirmar contra fonte primária antes de uso em protocolo institucional formal (VERIFICAÇÃO HUMANA NECESSÁRIA)",
+        "origem_secao": "Prognóstico — por que a suspeita precoce importa tanto / Nota de verificação"
+      },
+      {
+        "id": "pericpurulenta-causas-de-morte",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Monitorizar ativamente para as causas de morte mais frequentes descritas: tamponamento cardíaco, choque séptico e evolução para pericardite constritiva",
+        "origem_secao": "Prognóstico — por que a suspeita precoce importa tanto"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base no documento \"Pericardite Purulenta Bacteriana: Diagnóstico e Tratamento\" desta biblioteca (fonte primária de números não fixada por PMID único nesta sessão, sinalizada como VERIFICAÇÃO HUMANA NECESSÁRIA no próprio documento de origem), em 21/08/2026."
+  },
+  {
+    "slug": "diagnostico-diferencial-de-sincope-e-crise-epileptica",
+    "condicao": "Diagnóstico diferencial entre síncope e crise epiléptica (perda transitória da consciência)",
+    "resumo": "Checklist dos achados semiológicos com maior valor discriminativo entre síncope e crise epiléptica (Tabela 10 da ESC 2018) e alerta para os dois mecanismos raros de sobreposição — assistolia ictal e crise epiléptica sincopal — em paciente com perda transitória da consciência.",
+    "documento_origem": "sincope-versus-crise-epileptica-diagnostico-diferencial-e-assistolia-ictal-esc-2018",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037 — Tabela 10 ('Differentiating syncope from epileptic seizures') e seção 8.1.2 ('Epilepsy and ictal asystole')."
+    ],
+    "itens": [
+      {
+        "id": "sincepi-mioclonia-caracteristicas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Caracterizar a mioclonia: <10 contrações, irregulares, assíncronas, assimétricas, iniciando APÓS a perda de consciência sugere síncope; 20-100 contrações síncronas, simétricas, hemilaterais, com início coincidindo com a perda de consciência e automatismos longos (mastigação, estalar os lábios) sugere crise epiléptica",
+        "origem_secao": "Tabela 10 — achados úteis (maior valor discriminativo)"
+      },
+      {
+        "id": "sincepi-mordedura-lingua",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Mordedura de língua: na ponta da língua (rara) sugere síncope; lateral da língua (raramente bilateral) sugere crise epiléptica",
+        "origem_secao": "Tabela 10 — achados úteis (maior valor discriminativo)"
+      },
+      {
+        "id": "sincepi-duracao-recuperacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Duração até recuperação da consciência: 10-30 segundos favorece síncope; \"pode ser muitos minutos\" favorece crise epiléptica",
+        "origem_secao": "Tabela 10 — achados úteis (maior valor discriminativo)"
+      },
+      {
+        "id": "sincepi-confusao-pos-evento",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confusão após o evento: na maioria das síncopes, sem entendimento da situação por menos de 10 segundos, com alerta e consciência plenos depois; na crise epiléptica, déficit de memória com repetição de perguntas sem fixação por muitos minutos",
+        "origem_secao": "Tabela 10 — achados úteis (maior valor discriminativo)"
+      },
+      {
+        "id": "sincepi-gatilho-e-prodromo",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Verificar presença e natureza de gatilho (muito frequente na síncope — dor, ortostatismo, emoção; raro na crise epiléptica) e de pródromo (pré-síncope na síncope; aura epiléptica repetitiva e específica do paciente na crise, incluindo déjà vu, sensação ascendente no abdome e cheiro desagradável incomum)",
+        "origem_secao": "Tabela 10 — achados úteis (maior valor discriminativo)"
+      },
+      {
+        "id": "sincepi-nao-usar-achados-limitados-isolados",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não usar isoladamente como critério de decisão os achados de utilidade LIMITADA (incontinência, presença de mioclonia em si, olhos abertos, fadiga/sono após o evento, cianose facial) — eles se sobrepõem entre as duas condições com frequência suficiente para não fecharem diagnóstico sozinhos; é a combinação de vários achados úteis que orienta a decisão",
+        "origem_secao": "Tabela 10 — achados de utilidade limitada / Leitura clínica"
+      },
+      {
+        "id": "sincepi-assistolia-ictal",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerar assistolia ictal quando uma crise parcial complexa (não generalizada) progride e o paciente subitamente cai de forma flácida: bradicardia/assistolia ictal ocorrem em 0,3-0,5% das crises (vs. ~90% que cursam com taquicardia), surgindo 5-100 segundos após o início da crise — se a assistolia durar mais de aproximadamente 8 segundos, sobrevém síncope",
+        "origem_secao": "Epilepsia e síncope podem provocar uma a outra — Assistolia ictal"
+      },
+      {
+        "id": "sincepi-conduta-assistolia-ictal",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Assistolia documentada em contexto de crise epiléptica NÃO implica, automaticamente, indicação de marca-passo — a diretriz condiciona essa decisão ao tratamento antiepiléptico adequado primeiro, com marca-passo como possibilidade adicional, não substituto do controle da crise",
+        "origem_secao": "Leitura clínica"
+      },
+      {
+        "id": "sincepi-crise-sincopal",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecer o mecanismo inverso (crise epiléptica sincopal): hipóxia pode desencadear crise epiléptica, descrita em lactentes com síncope reflexa ou espasmos do choro cianóticos — um episódio sincopal típico se transforma subitamente em movimentos clônicos prolongados que duram minutos",
+        "origem_secao": "Epilepsia e síncope podem provocar uma a outra — Crise epiléptica sincopal"
+      },
+      {
+        "id": "sincepi-morte-subita-nao-e-assistolia-ictal",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "A assistolia ictal provavelmente NÃO está envolvida na morte súbita em epilepsia — essa tipicamente ocorre em crises tônico-clônicas generalizadas não testemunhadas; a maioria dos casos de parada cardíaca súbita em pacientes com epilepsia é por doença cardiovascular, não por assistolia ictal",
+        "origem_secao": "Epilepsia e síncope podem provocar uma a outra — Assistolia ictal, citação literal"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037, Tabela 10 e seção 8.1.2, em 21/08/2026."
+  },
+  {
+    "slug": "uso-de-biomarcadores-cardiacos-na-estratificacao-de-risco-da-sincope",
+    "condicao": "Decisão sobre pedir NT-proBNP e/ou troponina na estratificação de risco da síncope no pronto-socorro",
+    "resumo": "Checklist para interpretar o desempenho isolado dos biomarcadores cardíacos (NT-proBNP e troponina) na síncope e para decidir se pedi-los agrega valor quando já se usa um escore clínico validado como o CSRS, com base numa revisão sistemática de 2015 e numa coorte prospectiva de 2020.",
+    "documento_origem": "biomarcadores-cardiacos-nt-probnp-e-troponina-na-estratificacao-de-risco-da-sincope",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thiruganasambandamoorthy V et al. Does N-Terminal Pro-B-Type Natriuretic Peptide Improve the Risk Stratification of Emergency Department Patients With Syncope? Ann Intern Med. 2020;172(10):648-655. PMID 32340039. DOI 10.7326/M19-3515.",
+      "Thiruganasambandamoorthy V et al. Prognostic value of cardiac biomarkers in the risk stratification of syncope: a systematic review. Intern Emerg Med. 2015;10(8):1003-1014. PMID 26498335. DOI 10.1007/s11739-015-1318-1."
+    ],
+    "itens": [
+      {
+        "id": "biomsinc-troponina-convencional-desempenho",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Troponina convencional (2693 pacientes na revisão sistemática): sensibilidade agrupada 0,29 (IC95% 0,24-0,34) e especificidade 0,88 (IC95% 0,86-0,89) para MACE — baixa sensibilidade, alta especificidade",
+        "origem_secao": "Desempenho isolado dos biomarcadores (revisão sistemática, 2015)"
+      },
+      {
+        "id": "biomsinc-peptideos-natriureticos-desempenho",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Peptídeos natriuréticos (1353 pacientes): sensibilidade agrupada 0,77 (IC95% 0,69-0,85) e especificidade 0,73 (IC95% 0,70-0,76) para MACE",
+        "origem_secao": "Desempenho isolado dos biomarcadores (revisão sistemática, 2015)"
+      },
+      {
+        "id": "biomsinc-troponina-alta-sensibilidade-desempenho",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Troponina de alta sensibilidade (819 pacientes): sensibilidade agrupada 0,74 (IC95% 0,65-0,83) e especificidade 0,65 (IC95% 0,62-0,69) para MACE — peptídeos natriuréticos e troponina de alta sensibilidade têm características diagnósticas melhores que a troponina convencional",
+        "origem_secao": "Desempenho isolado dos biomarcadores (revisão sistemática, 2015)"
+      },
+      {
+        "id": "biomsinc-nt-probnp-associacao-com-sae",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Na coorte prospectiva de 1452 pacientes (6 serviços de emergência), NT-proBNP foi significativamente mais alto em quem teve evento adverso grave (SAE) em 30 dias que em quem não teve (mediana 626,5 ng/L vs. 81 ng/L; p<0,001) — 152/1452 pacientes (10,5%; IC95% 9,0-12,1%) tiveram SAE, 57 (3,9%) identificados só depois da alta do pronto-socorro-índice",
+        "origem_secao": "NT-proBNP somado ao CSRS não melhora a previsão (coorte prospectiva, 2020)"
+      },
+      {
+        "id": "biomsinc-nao-melhora-o-csrs",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Acrescentar NT-proBNP ao CSRS já validado NÃO melhorou significativamente a prognosticação: índice c de 0,89 (só CSRS) versus 0,90 (CSRS + NT-proBNP), p=0,12 — a reclassificação líquida corrigiria apenas 3% dos pacientes com SAE, à custa de reclassificar incorretamente 2% dos pacientes sem SAE; uso rotineiro de NT-proBNP para prognóstico de síncope no pronto-socorro NÃO é recomendado quando já se aplica o CSRS",
+        "origem_secao": "NT-proBNP somado ao CSRS não melhora a previsão (coorte prospectiva, 2020)"
+      },
+      {
+        "id": "biomsinc-nao-confundir-contextos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não confundir os dois contextos: a revisão de 2015 avalia o biomarcador ISOLADO, sem comparar com escore clínico já estabelecido (desempenho diagnóstico razoável nesse cenário); o estudo de 2020 avalia o VALOR INCREMENTAL de acrescentar NT-proBNP a um escore que já incorpora troponina convencional entre seus preditores (nesse contexto mais exigente, o biomarcador isolado não agrega poder discriminativo relevante)",
+        "origem_secao": "Leitura conjunta das duas fontes — armadilha de interpretação"
+      },
+      {
+        "id": "biomsinc-implicacao-pratica-servico-sem-escore",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em serviço SEM escore de risco validado em uso, um biomarcador elevado ainda é sinal de alerta relevante e deve pesar na decisão clínica",
+        "origem_secao": "Leitura conjunta das duas fontes — armadilha de interpretação"
+      },
+      {
+        "id": "biomsinc-implicacao-pratica-servico-com-escore",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em serviço que já aplica o CSRS (ou escore equivalente), pedir NT-proBNP rotineiramente para todo paciente com síncope não muda a conduta na maioria dos casos",
+        "origem_secao": "Leitura conjunta das duas fontes — armadilha de interpretação"
+      },
+      {
+        "id": "biomsinc-limitacoes-declaradas",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Considerar as limitações declaradas: o estudo de 2020 tinha poder estatístico para detectar diferença de 3% na área sob a curva (diferenças menores podem não ter sido captadas); a heterogeneidade de definição de MACE entre os estudos da revisão de 2015 limita comparação direta dos números; nenhuma das duas fontes avalia biomarcador em população pediátrica",
+        "origem_secao": "Limitações declaradas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Thiruganasambandamoorthy V et al. Ann Intern Med. 2020;172(10):648-655. PMID 32340039 e Thiruganasambandamoorthy V et al. Intern Emerg Med. 2015;10(8):1003-1014. PMID 26498335, em 21/08/2026."
   }
 ]
