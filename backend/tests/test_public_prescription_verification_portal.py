@@ -113,7 +113,7 @@ def test_portal_publico_nao_expoe_conteudo_clinico_e_oferece_duas_acoes():
     download = api[api.index('@router.get("/validar/{codigo}/pdf")'):api.index('@router.get("/{token}")')]
     assert "assinatura_emissao.ler_bytes(registro)" in download
     assert "hashlib.sha256(pdf).hexdigest()" in download
-    assert "_pdf_receita(" not in download
+    assert "pdf, nome_arquivo = _pdf_receita(" not in download
     assert "servir_ou_regerar(" not in download
 
     assert "Baixar PDF original assinado" in pagina
