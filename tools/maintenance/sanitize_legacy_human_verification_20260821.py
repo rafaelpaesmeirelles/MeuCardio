@@ -22,7 +22,7 @@ def contains_marker(value):
     if isinstance(value, str):
         return MARKER in value
     if isinstance(value, dict):
-        return any(contains_marker(v) for v in value.values())
+        return any(MARKER in str(key) or contains_marker(item) for key, item in value.items())
     if isinstance(value, list):
         return any(contains_marker(v) for v in value)
     return False
@@ -48,6 +48,9 @@ def prune(value, audit: list[str], location: str):
     if isinstance(value, dict):
         out = {}
         for key, item in value.items():
+            if MARKER in str(key):
+                audit.append(f"removida chave não verificada em {location}.{key}")
+                continue
             cleaned = prune(item, audit, f"{location}.{key}")
             if cleaned is not None:
                 out[key] = cleaned
