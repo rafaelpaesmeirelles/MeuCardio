@@ -8424,5 +8424,221 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-preoperatoria-de-paciente-em-uso-de-agonista-de-glp-1",
+    "condicao": "Uso crônico de agonista do receptor de GLP-1 (ou agonista duplo GIP/GLP-1) antes de procedimento com sedação ou anestesia geral",
+    "resumo": "Checklist para decidir manter ou suspender o agonista de GLP-1 antes de sedação/anestesia, avaliando risco individual de esvaziamento gástrico retardado em vez de aplicar suspensão automática por calendário, e reconhecendo os limites reais da evidência que sustenta a suspensão.",
+    "documento_origem": "risco-de-aspiracao-pulmonar-perioperatoria-com-agonistas-de-glp-1",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kindel TL, Wang AY, Wadhwa A, Schulman AR, Sharaiha RZ, Kroh M, Ghanem OM, Levy S, Joshi GP, LaMasters T, et al. Multi-society clinical practice guidance for the safe use of glucagon-like peptide-1 receptor agonists in the perioperative period. Surg Endosc. 2025;39(1):180-183. PMID 39370500. DOI 10.1007/s00464-024-11263-2",
+      "Bloomgarden Z. Should glucagon-like peptide-1 receptor agonist treatment be withheld in preoperative management? J Diabetes. 2023;15(9):712-713. PMID 37727016. DOI 10.1111/1753-0407.13469",
+      "Sen S, Potnuru PP, Hernandez N, Goehl C, Praestholm C, Sridhar S, Nwokolo OO. Glucagon-Like Peptide-1 Receptor Agonist Use and Residual Gastric Content Before Anesthesia. JAMA Surg. 2024;159(6):660-667. PMID 38446466"
+    ],
+    "itens": [
+      {
+        "id": "glp1preop-identificar-formulacao-e-dose",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar a formulação em uso (diária ou semanal), a dose atual e se o paciente está em fase de escalonamento de dose ou já em dose de manutenção — a atualização multissocietária de 2024/2025 usa esses fatores para individualizar o risco, em vez de aplicar suspensão universal.",
+        "origem_secao": "A atualização de 2024/2025: de suspensão universal para estratificação de risco"
+      },
+      {
+        "id": "glp1preop-triagem-sintomas-gastrointestinais",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Triar ativamente sintomas gastrointestinais atuais (náusea, saciedade precoce, distensão abdominal) e comorbidade que já afete a motilidade por conta própria (gastroparesia diabética) — presença de qualquer um deles favorece suspensão ou adiamento eletivo do procedimento.",
+        "origem_secao": "A atualização de 2024/2025: de suspensão universal para estratificação de risco"
+      },
+      {
+        "id": "glp1preop-suspender-dose-diaria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em formulação de dose diária, suspender no dia do procedimento, conforme a orientação original da ASA (2023) — aplicável quando a avaliação de risco individual não afastar a suspensão.",
+        "origem_secao": "O alerta da ASA (2023): suspender por prazo diferente conforme a dose"
+      },
+      {
+        "id": "glp1preop-suspender-dose-semanal",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em formulação de dose semanal (semaglutida subcutânea semanal, dulaglutida, tirzepatida), suspender uma semana antes do procedimento, conforme a orientação original da ASA (2023) — aplicável quando a avaliação de risco individual não afastar a suspensão.",
+        "origem_secao": "O alerta da ASA (2023): suspender por prazo diferente conforme a dose"
+      },
+      {
+        "id": "glp1preop-nao-tratar-suspensao-como-garantia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não comunicar a suspensão pré-operatória como medida com evidência robusta de redução de aspiração comprovada — o próprio comunicado da ASA descreveu a base de evidência original como escassa (relatos de caso), e Sen et al. (JAMA Surg 2024, PMID 38446466) não encontraram associação entre duração da suspensão e conteúdo gástrico residual.",
+        "origem_secao": "Controvérsia: a recomendação é baseada em plausibilidade, não em desfecho duro comprovado"
+      },
+      {
+        "id": "glp1preop-considerar-custo-de-suspender",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ponderar o custo próprio de suspender um fármaco com efeito cardioprotetor e metabólico documentado: risco de hiperglicemia perioperatória associada a infecção de ferida operatória e mortalidade, e piora do controle metabólico sem benefício comprovado de aspiração evitada.",
+        "origem_secao": "Controvérsia: a recomendação é baseada em plausibilidade, não em desfecho duro comprovado"
+      },
+      {
+        "id": "glp1preop-medidas-quando-suspensao-nao-feita",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Quando a suspensão não for possível ou não tiver sido feita, considerar jejum líquido prolongado, dieta líquida no dia anterior ou ultrassonografia gástrica point-of-care antes da indução — ferramentas mencionadas na literatura recente, cuja eficácia em reduzir aspiração ainda carece de estudo controlado dedicado.",
+        "origem_secao": "Implicação prática, sem escolher lado além do que a evidência sustenta"
+      },
+      {
+        "id": "glp1preop-reiniciar-apos-retorno-da-ingesta",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reiniciar o agonista de GLP-1 após o procedimento apenas quando a ingesta oral e o quadro clínico permitirem, conforme o plano combinado com a equipe assistente.",
+        "origem_secao": "Implicação prática, sem escolher lado além do que a evidência sustenta"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Kindel et al. (Surg Endosc 2025, PMID 39370500), Bloomgarden (J Diabetes 2023, PMID 37727016) e Sen et al. (JAMA Surg 2024, PMID 38446466), em 20/08/2026."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-perioperatorio-de-cetoacidose-euglicemica-por-isglt2",
+    "condicao": "Cetoacidose diabética euglicêmica associada a inibidor de SGLT2 (canagliflozina, dapagliflozina, empagliflozina, ertugliflozina), no contexto perioperatório e na suspeita clínica aguda",
+    "resumo": "Checklist para não descartar cetoacidose diabética por glicemia normal em paciente usando iSGLT2, para suspender o fármaco no prazo correto antes de cirurgia eletiva e para vigiar o risco residual quando a suspensão prévia não foi possível.",
+    "documento_origem": "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479. DOI 10.2337/dc15-0843",
+      "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA revises labels of SGLT2 inhibitors for diabetes to include warnings about too much acid in the blood and serious urinary tract infections. Atualização de 17 de março de 2020",
+      "Snel LIP, Li X, Jamaludin F, Siegelaar SE, Holleman F, Vriesendorp TM, DeVries JH, Hoekstra JBL, Preckel B, van Raalte DH, Hermanides J, Hulst AH. A Systematic Review and Expert Evaluation of Perioperative SGLT2 Inhibitor-Associated Ketoacidosis Case Reports. Acta Anaesthesiol Scand. 2026;70(6):e70254. PMID 42130079. DOI 10.1111/aas.70254",
+      "Marino EC, Negretto LAF, Ribeiro RS, et al. Rastreamento e Controle da Hiperglicemia no Perioperatório - Posicionamento Conjunto da Sociedade Brasileira de Diabetes (SBD), Sociedade Brasileira de Anestesiologia (SBA) e Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica (ABESO). Diretriz Oficial da Sociedade Brasileira de Diabetes. 2025. DOI 10.29327/5660187.2025-10"
+    ],
+    "itens": [
+      {
+        "id": "cadeug-nao-excluir-por-glicemia-normal",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de sintomas compatíveis com acidose (náusea, vômitos, dor abdominal, taquipneia, mal-estar/fadiga desproporcional) em paciente usando iSGLT2, não afastar cetoacidose diabética pela glicemia capilar normal — a glicemia costuma ficar abaixo de 300 mg/dL nesta apresentação.",
+        "origem_secao": "Conduta prática à beira do leito"
+      },
+      {
+        "id": "cadeug-solicitar-cetonas-e-gasometria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar cetonas (sangue ou urina) e gasometria/bicarbonato independentemente do valor da glicemia capilar, sempre que houver suspeita clínica.",
+        "origem_secao": "Conduta prática à beira do leito"
+      },
+      {
+        "id": "cadeug-suspender-antes-cirurgia-eletiva",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Antes de cirurgia eletiva, suspender o iSGLT2 com antecedência mínima de 3 dias (canagliflozina, dapagliflozina, empagliflozina) ou 4 dias (ertugliflozina), monitorizando a glicemia no intervalo.",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "cadeug-cirurgia-emergencia-sem-suspensao-previa",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em cirurgia de emergência, quando a suspensão prévia de 3-4 dias não é possível, suspender o iSGLT2 imediatamente e monitorizar a cetonemia capilar diariamente por 3 a 5 dias após o procedimento, ou enquanto o paciente permanecer em jejum oral (posicionamento conjunto SBD/SBA/ABESO 2025).",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "cadeug-identificar-fatores-precipitantes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar fatores precipitantes ativos no paciente em uso de iSGLT2: jejum prolongado, infecção/sepse, baixa ingesta calórica ou hídrica, redução importante da dose de insulina (sobretudo em diabetes tipo 1) e desidratação.",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "cadeug-cautela-extra-em-diabetes-tipo-1",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reforçar orientação e monitorização estreita em paciente com diabetes tipo 1 em uso de iSGLT2 — essa população concentrou desproporcionalmente os casos graves da série original (7 de 9 pacientes).",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "cadeug-reiniciar-apenas-com-ingesta-normalizada",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reiniciar o iSGLT2 somente quando a ingesta oral do paciente tiver retornado ao basal e os demais fatores de risco (infecção, desidratação, jejum) estiverem resolvidos.",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "cadeug-tratamento-com-insulina-e-reposicao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Quando a cetoacidose euglicêmica se instalar, tratar com insulina e reposição volêmica/eletrolítica seguindo os princípios gerais da cetoacidose diabética clássica.",
+        "origem_secao": "Conduta prática à beira do leito"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Peters et al. (Diabetes Care 2015, PMID 26078479), FDA Drug Safety Communication (17/03/2020), Snel et al. (Acta Anaesthesiol Scand 2026, PMID 42130079) e posicionamento conjunto SBD/SBA/ABESO 2025, em 20/08/2026."
+  },
+  {
+    "slug": "manejo-agudo-de-torsades-de-pointes-e-qt-longo-adquirido",
+    "condicao": "Torsades de pointes (TdP) em curso ou risco elevado de TdP por QT longo adquirido (fármaco, distúrbio eletrolítico ou combinação dos dois) em paciente internado",
+    "resumo": "Checklist de manejo agudo da torsades de pointes por QT longo adquirido — sequência de suspender o gatilho, tratar conforme estabilidade hemodinâmica, sulfato de magnésio como primeira linha farmacológica e opções para o caso refratário — e de identificação do paciente internado em alto risco pelo escore de Tisdale antes do evento.",
+    "documento_origem": "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Tisdale JE, Jaynes HA, Kingery JR, et al. Development and validation of a risk score to predict QT interval prolongation in hospitalized patients. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032",
+      "Torsade de Pointes. StatPearls, NCBI Bookshelf, NBK459388"
+    ],
+    "itens": [
+      {
+        "id": "tdpaq-calcular-escore-tisdale-no-internado-em-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente internado com fator de risco (idade ≥68 anos, sexo feminino, diurético de alça, potássio ≤3,5mEq/L, QTc na admissão ≥450ms, IAM agudo, sepse, insuficiência cardíaca ou uso de fármaco(s) prolongador(es) de QTc), calcular o escore de Tisdale para identificar risco de prolongamento do QTc antes que a torsades ocorra.",
+        "origem_secao": "Escore de tisdale — risco de prolongamento do qtc em paciente internado"
+      },
+      {
+        "id": "tdpaq-suspender-farmaco-e-corrigir-eletrolito",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Suspender o fármaco prolongador de QT e corrigir o distúrbio eletrolítico associado — é a primeira medida, antes de qualquer intervenção farmacológica ou elétrica.",
+        "origem_secao": "Manejo agudo — primeiro passo"
+      },
+      {
+        "id": "tdpaq-cardioversao-ou-desfibrilacao-conforme-pulso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se hemodinamicamente instável com pulso, cardioverter de forma sincronizada (100J monofásico ou 50J bifásico); se sem pulso, desfibrilar.",
+        "origem_secao": "Instabilidade hemodinamica"
+      },
+      {
+        "id": "tdpaq-sulfato-de-magnesio-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Administrar sulfato de magnésio IV (2g em push lento, seguido de infusão de manutenção de 1-4g/hora) como primeira linha farmacológica, independentemente do nível sérico de magnésio — não aguardar a dosagem de magnésio para iniciar.",
+        "origem_secao": "Sulfato de magnesio — primeira linha farmacologica"
+      },
+      {
+        "id": "tdpaq-monitorizar-nivel-magnesio-para-suspender-infusao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Suspender a infusão de magnésio quando o nível sérico ultrapassar 3mmol/L, pelo risco de toxicidade acima de 3,5mmol/L.",
+        "origem_secao": "Sulfato de magnesio — primeira linha farmacologica"
+      },
+      {
+        "id": "tdpaq-repor-potassio-para-meta-alta",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Repor potássio para manter nível sérico entre 4,5 e 5,0mEq/L durante o tratamento — meta mais alta que a faixa de normalidade habitual, especificamente para reduzir a dispersão de repolarização.",
+        "origem_secao": "Reposicao de potassio"
+      },
+      {
+        "id": "tdpaq-isoproterenol-se-refrataria-e-qt-adquirido",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em torsades refratária ao magnésio, considerar isoproterenol (10-20mcg IV em push, ou infusão titulada para FC de 100bpm) — usar somente quando a causa for QT longo adquirido; é contraindicado na síndrome do QT longo congênito, onde pode paradoxalmente prolongar ainda mais o QT.",
+        "origem_secao": "Isoproterenol — casos refratarios ao magnesio"
+      },
+      {
+        "id": "tdpaq-overdrive-pacing-se-refrataria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Como alternativa em torsades refratária, considerar estimulação com marcapasso em sobrefrequência (overdrive pacing), com frequência ventricular de 90-110bpm, podendo ser necessárias frequências de até 140bpm.",
+        "origem_secao": "Estimulacao com marcapasso em sobrefrequencia (overdrive pacing)"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Tisdale et al. (Circ Cardiovasc Qual Outcomes 2013, PMID 23716032) e StatPearls (Torsade de Pointes, NBK459388), em 20/08/2026."
   }
 ]
