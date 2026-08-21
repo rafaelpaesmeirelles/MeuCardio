@@ -2928,7 +2928,8 @@
     "duration_of_action_source": "Inferido da meia-vida de 22h (ver `half_life_note`) e do esquema posológico de 1x/dia. **Confirmado nesta sessão (WebFetch, 12/08/2026) por leitura direta da rotulagem FDA/DailyMed de ezetimibe tablets, seção CLINICAL PHARMACOLOGY / Pharmacokinetics** — a rotulagem não define um valor numérico isolado de \"duração de ação\" além da meia-vida de 22h e do perfil de múltiplos picos por recirculação êntero-hepática já citado em `duration_of_action_note`.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica: ezetimiba atua bloqueando o transportador intestinal NPC1L1, reduzindo absorção de colesterol (ver `mechanism`), sem alvo farmacológico em tônus vascular ou volemia — nenhuma fonte já citada neste verbete (bula do ZETIA, IMPROVE-IT) reporta desfecho de PA, coerente com o mecanismo estritamente lipídico do fármaco."
+    "bp_evidence_source": "Não se aplica: ezetimiba atua bloqueando o transportador intestinal NPC1L1, reduzindo absorção de colesterol (ver `mechanism`), sem alvo farmacológico em tônus vascular ou volemia — nenhuma fonte já citada neste verbete (bula do ZETIA, IMPROVE-IT) reporta desfecho de PA, coerente com o mecanismo estritamente lipídico do fármaco.",
+    "commercial_presentations": []
   },
   {
     "slug": "felodipino",
@@ -5018,7 +5019,10 @@
     "pregnancy": "**Contraindicada antes da 20ª semana** — o corte é explícito e consta das Contraindicações, não de uma advertência genérica. Depois da 20ª semana a bula não libera o uso: exige **avaliação individual muito cuidadosa do risco-benefício**, e só o considera se nenhuma outra opção estiver indicada ou se as demais foram ineficazes. Estudos em animais mostraram efeitos embriotóxicos, fetotóxicos e teratogênicos. Há relatos de aumento de asfixia perinatal, cesárea, prematuridade e retardo de crescimento intrauterino, sem que a bula consiga separar o efeito do fármaco do da hipertensão de base. **Alerta específico:** ao administrar nifedipino junto com **sulfato de magnésio intravenoso**, monitorar a pressão arterial pela possibilidade de queda excessiva, prejudicial à mãe e ao feto. Fonte: bula do ADALAT (nifedipino, Bayer), seções \"Contra-Indicações\", \"Advertências\" e \"Gravidez e Lactação\".",
     "lactation": "**Contraindicado durante a amamentação — item formal do rótulo (item 4. CONTRAINDICAÇÕES), não apenas recomendação de suspender.** Corrige o registro anterior deste campo, que enquadrava como \"suspender a amamentação se o tratamento for necessário\" — a bula vai além: lista amamentação entre as contraindicações formais, ao lado de gravidez antes da 20ª semana. O nifedipino é eliminado no leite materno e não há experiência sobre efeito no lactente. Fonte: bula profissional brasileira do ADALAT (nifedipino, Bayer), itens 4. CONTRAINDICAÇÕES e 5. ADVERTÊNCIAS E PRECAUÇÕES.",
     "brand_names": [
-      "Adalat — já citado nas referências deste registro (Bayer S.A.)"
+      "Adalat — já citado nas referências deste registro (Bayer S.A.)",
+      "Nifedipress",
+      "Loncord",
+      "Neo Fedipina"
     ],
     "presentations": [
       "Cápsulas de liberação imediata (uso agudo, hoje contraindicadas em crise hipertensiva/angina instável — ver `contraindications` deste verbete) e comprimidos de liberação prolongada (Adalat Oros/Retard e equivalentes) — apresentações e dosagens exatas em miligramas por comprimido NÃO confirmadas em bula nesta sessão.\n\n**Confirmado pelo rótulo FDA (nifedipina de liberação prolongada) em 12/08/2026**: comprimidos de liberação prolongada de 30 mg e 60 mg, para tomada única diária. VERIFICAÇÃO HUMANA NECESSÁRIA remanescente apenas para confirmar as dosagens exatas e o registro comercial da apresentação brasileira (Adalat Oros/Retard). Rótulo FDA de nifedipina liberação prolongada (genérico, repackaged por State of Florida DOH Central Pharmacy, equivalente a Procardia XL/Adalat CC), DailyMed setid 6e740c6e-483b-4e7d-833f-2e8bdd36d625, seções Dosage Forms and Clinical Studies — consultado via WebFetch em 12/08/2026. É rótulo americano de produto genérico, não bula brasileira do Adalat Oros — apresentação/registro comercial brasileiro ainda não confirmado."
@@ -5030,7 +5034,12 @@
     "duration_of_action_source": "Literatura farmacológica (StatPearls, rótulo FDA para nifedipina de liberação imediata e prolongada), obtida via resultado sintetizado de busca.",
     "sbp_reduction_mmhg": -8.0,
     "dbp_reduction_mmhg": -4.1,
-    "bp_evidence_source": "**Confirmado pelo rótulo FDA (nifedipina de liberação prolongada) em 12/08/2026 — resolve a verificação pendente anterior.** Seção Clinical Studies, medidas de vale (24h pós-dose, resposta de placebo já subtraída): em monoterapia (Estudo 1), 30 mg reduziu 5,3/2,0 mmHg (sistólica/diastólica) e 60 mg reduziu 8,0/4,1 mmHg; associado a betabloqueador (Estudo 2), 30 mg reduziu 7,6/3,8 mmHg e 60 mg reduziu 10,1/5,3 mmHg. Valor registrado nos campos numéricos deste item corresponde à dose de 60 mg em monoterapia (a mais próxima de uma dose de manutenção usual isolada): -8,0/-4,1 mmHg. Rótulo FDA de nifedipina liberação prolongada (genérico, repackaged por State of Florida DOH Central Pharmacy, equivalente a Procardia XL/Adalat CC), DailyMed setid 6e740c6e-483b-4e7d-833f-2e8bdd36d625, seções Dosage Forms and Clinical Studies — consultado via WebFetch em 12/08/2026. É rótulo americano de produto genérico, não bula brasileira do Adalat Oros — apresentação/registro comercial brasileiro ainda não confirmado."
+    "bp_evidence_source": "**Confirmado pelo rótulo FDA (nifedipina de liberação prolongada) em 12/08/2026 — resolve a verificação pendente anterior.** Seção Clinical Studies, medidas de vale (24h pós-dose, resposta de placebo já subtraída): em monoterapia (Estudo 1), 30 mg reduziu 5,3/2,0 mmHg (sistólica/diastólica) e 60 mg reduziu 8,0/4,1 mmHg; associado a betabloqueador (Estudo 2), 30 mg reduziu 7,6/3,8 mmHg e 60 mg reduziu 10,1/5,3 mmHg. Valor registrado nos campos numéricos deste item corresponde à dose de 60 mg em monoterapia (a mais próxima de uma dose de manutenção usual isolada): -8,0/-4,1 mmHg. Rótulo FDA de nifedipina liberação prolongada (genérico, repackaged por State of Florida DOH Central Pharmacy, equivalente a Procardia XL/Adalat CC), DailyMed setid 6e740c6e-483b-4e7d-833f-2e8bdd36d625, seções Dosage Forms and Clinical Studies — consultado via WebFetch em 12/08/2026. É rótulo americano de produto genérico, não bula brasileira do Adalat Oros — apresentação/registro comercial brasileiro ainda não confirmado.",
+    "commercial_presentations": [
+      "Nifedipress® retard 20 mg — comprimido revestido, redondo, biconvexo, de liberação prolongada (retard), embalagem com 30 comprimidos (Medquímica Indústria Farmacêutica Ltda.); existe também embalagem hospitalar com 500 comprimidos. Fonte: bula do paciente/profissional reproduzida por agregadores farmacêuticos (sara.com.br, precopopular.com.br, bula.gratis), consultada via WebSearch em 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para conferir o texto contra a bula oficial antes de uso clínico.",
+      "Loncord® 20 mg e 40 mg — cápsulas de microgrânulos de ação prolongada, embalagem com 20 cápsulas (Diffucap-Chemobrás Química e Farmacêutica Ltda., Rio de Janeiro-RJ). Fonte: bula oficial do laboratório (diffucap.com.br/wp-content/uploads, bula profissional e bula paciente), consultada via WebSearch em 20/08/2026.",
+      "Neo Fedipina® 10 mg e 20 mg — comprimidos circulares, semiabaulados, sulcados, embalagem com 30 comprimidos (Brainfarma Indústria Química e Farmacêutica S.A., grupo Neo Química). Fonte: bula do paciente hospedada em bula-anvisa.s3.amazonaws.com (arquivo da própria Brainfarma), consultada via WebSearch em 20/08/2026."
+    ]
   },
   {
     "slug": "nitroglicerina-trinitrato-de-glicerila",
@@ -6773,7 +6782,9 @@
     "pregnancy": "**Não iniciar na gravidez; não recomendada no primeiro trimestre e contraindicada no segundo e terceiro** — categoria de risco **C no primeiro trimestre e D no segundo e terceiro**. Diagnosticada a gravidez, interromper imediatamente e iniciar terapia alternativa. Estudos pré-clínicos com telmisartana **não indicaram efeito teratogênico**, mas em doses tóxicas demonstraram fetotoxicidade e risco ao desenvolvimento pós-natal da prole. Em humanos, a exposição a BRA no segundo e terceiro trimestres induz **fetotoxicidade** (redução da função renal, oligodrâmnio, retardo da ossificação) e **toxicidade neonatal** (falência renal, hipotensão, hipercalemia). Pacientes que planejem engravidar devem ter o tratamento substituído por anti-hipertensivo com perfil de segurança estabelecido na gestação. Ressalva de fonte, deliberada: o texto profissional obtido é o da **associação fixa telmisartana + hidroclorotiazida**, que separa os parágrafos por componente — o trecho acima é o do componente telmisartana; as letras C e D são atribuídas à associação. A bula da telmisartana isolada, em formato resumido, apenas registra a gravidez como contraindicada. Fontes: bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim), itens 4 e 5, e bula do MICARDIS (telmisartana).",
     "lactation": "**Contraindicada.** Não se sabe se a telmisartana é excretada no leite materno humano; **estudos em animais mostraram excreção no leite**. Mesma ressalva de fonte da seção de gravidez: o texto profissional é o da associação com hidroclorotiazida, e nela pesa também o fato de **as tiazidas serem excretadas no leite humano e poderem inibir a lactação** — esse segundo motivo é do componente diurético, não da telmisartana. Fontes: bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim) e bula do MICARDIS (telmisartana).",
     "brand_names": [
-      "Micardis"
+      "Micardis",
+      "Misacor",
+      "Misacardio"
     ],
     "half_life_hours": 24.0,
     "half_life_note": "Meia-vida terminal de aproximadamente 24 horas — a mais longa entre os bloqueadores do receptor de angiotensina II comercializados, o que sustenta cobertura pressórica ao longo de todo o intervalo de 24 horas entre doses, inclusive nas últimas 6 horas antes da dose seguinte (razão vale/pico elevada, sem grande diferença entre pico e vale nas doses mais altas). Fonte: rótulo do MICARDIS (telmisartana), FDA/DailyMed, seção Clinical Pharmacology.",
@@ -6782,7 +6793,12 @@
     "duration_of_action_source": "Rótulo do MICARDIS (telmisartana), FDA/DailyMed, seção Clinical Pharmacology/Clinical Studies.",
     "sbp_reduction_mmhg": -12.5,
     "dbp_reduction_mmhg": -7.5,
-    "bp_evidence_source": "Redução de pressão arterial a partir do basal, com subtração do efeito placebo, dose-dependente: aproximadamente -9 a -13/-6 a -8 mmHg (sistólica/diastólica) com 40 mg/dia, e -12 a -13/-7 a -8 mmHg com 80 mg/dia — sem redução adicional relevante em doses maiores (até 160 mg, acima da dose máxima aprovada de 80mg/dia). Valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-12,5/-7,5) são o ponto médio da faixa relatada para 80 mg/dia, a dose máxima aprovada. Base: 6 ensaios placebo-controlados (n=1.773 randomizados, 1.031 tratados com telmisartana), faixa de dose estudada 20-160 mg, hipertensão leve a moderada (PAD basal 95-114 mmHg). Fonte: rótulo do MICARDIS (telmisartana), FDA/DailyMed, seção Clinical Studies (14)."
+    "bp_evidence_source": "Redução de pressão arterial a partir do basal, com subtração do efeito placebo, dose-dependente: aproximadamente -9 a -13/-6 a -8 mmHg (sistólica/diastólica) com 40 mg/dia, e -12 a -13/-7 a -8 mmHg com 80 mg/dia — sem redução adicional relevante em doses maiores (até 160 mg, acima da dose máxima aprovada de 80mg/dia). Valores registrados em `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-12,5/-7,5) são o ponto médio da faixa relatada para 80 mg/dia, a dose máxima aprovada. Base: 6 ensaios placebo-controlados (n=1.773 randomizados, 1.031 tratados com telmisartana), faixa de dose estudada 20-160 mg, hipertensão leve a moderada (PAD basal 95-114 mmHg). Fonte: rótulo do MICARDIS (telmisartana), FDA/DailyMed, seção Clinical Studies (14).",
+    "commercial_presentations": [
+      "Misacor® 40 mg e 80 mg — comprimidos, embalagens com 10, 14, 20, 28 ou 30 comprimidos (Nova Química Farmacêutica S/A). Fonte: bula do paciente reproduzida por agregador farmacêutico (remediobarato.com/consultaremedios.com.br), consultada via WebSearch em 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para conferir o texto contra a bula oficial ANVISA/laboratório antes de uso clínico.",
+      "Misacardio® 40 mg e 80 mg — comprimidos, forma revestida (Germed Farmacêutica Ltda.). Fonte: bula do paciente reproduzida por agregador farmacêutico (remediobarato.com/consultaremedios.com.br), consultada via WebSearch em 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para conferir o texto contra a bula oficial ANVISA/laboratório antes de uso clínico, e para confirmar o número de embalagens/comprimidos por caixa.",
+      "Telmisartana [genérico] Althaia S.A. Indústria Farmacêutica — comprimidos de 40 mg (embalagens com 30 ou 60 unidades) e 80 mg (embalagem com 30 unidades). Fonte: agregadores de bula (CliqueFarma, Panvel, Araújo), consultados via WebSearch em 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar número de registro ANVISA na bula oficial."
+    ]
   },
   {
     "slug": "tenecteplase",
@@ -7079,7 +7095,13 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "A própria bula e o campo `mechanism` deste registro já afirmam explicitamente que a trimetazidina **não altera FC nem PA** — é antianginoso puramente metabólico (desloca o metabolismo energético do miocárdio de ácidos graxos para glicose), sem ação vasodilatadora, bloqueio adrenérgico ou de canal iônico que produza efeito hemodinâmico sistêmico. Campos mantidos nulos por ausência de mecanismo pressórico, conforme já declarado na própria fonte deste registro.",
     "brand_names": [
-      "Vastarel"
+      "Vastarel",
+      "Vascor MR",
+      "Vazidin MR"
+    ],
+    "commercial_presentations": [
+      "Vascor MR® 35 mg — comprimido revestido de liberação prolongada, circular, biconvexo, cor rosa, embalagens com 30 ou 60 comprimidos (Eurofarma Laboratórios S.A., linha Momenta). Fonte: bula do paciente no site oficial do laboratório (eurofarma.com.br/produtos/bulas) e agregador farmacêutico (precopopular.com.br), consultados via WebSearch em 20/08/2026.",
+      "Vazidin MR® 20 mg e 35 mg — comprimido revestido de liberação prolongada, lenticular, cor rosa (cada comprimido de 35 mg contém dicloridrato de trimetazidina equivalente a 27,48 mg de trimetazidina base), embalagens com 8, 10, 15, 20, 30, 50 ou 60 comprimidos (Pharlab Indústria Farmacêutica S.A.). Fonte: bula do paciente reproduzida por agregador farmacêutico (consultaremedios.com.br) e página do próprio laboratório (pharlab.com.br), consultadas via WebSearch em 20/08/2026."
     ]
   },
   {
@@ -8161,7 +8183,8 @@
     "duration_of_action_source": "Bula do APROVEL / rótulo FDA AVAPRO (irbesartan) — farmacocinética e desenho posológico de dose única diária.",
     "sbp_reduction_mmhg": -10.0,
     "dbp_reduction_mmhg": -6.5,
-    "bp_evidence_source": "Análise integrada de 7 ensaios clínicos controlados por placebo, 8-12 semanas, pacientes com PAD basal de 95-110 mmHg (n=1.915 irbesartana vs. n=611 placebo): reduções pressóricas de vale, subtraídas do placebo, de 8-10/5-6 mmHg com irbesartana 150 mg/dia e de 8-12/5-8 mmHg com 300 mg/dia — os valores numéricos aqui refletem o ponto médio da faixa de 300 mg/dia (dose preferida na nefropatia diabética, ver dosing). Fonte: rótulo FDA do AVAPRO (irbesartan), seção Clinical Pharmacology/Clinical Studies; análise dose-resposta também descrita em Kassler-Taub K et al., 'Comparative efficacy of two angiotensin II receptor antagonists, irbesartan and losartan, in mild-to-moderate hypertension', Am J Hypertens. 1998;11(4 Pt 1):445-453, PMID 9622147."
+    "bp_evidence_source": "Análise integrada de 7 ensaios clínicos controlados por placebo, 8-12 semanas, pacientes com PAD basal de 95-110 mmHg (n=1.915 irbesartana vs. n=611 placebo): reduções pressóricas de vale, subtraídas do placebo, de 8-10/5-6 mmHg com irbesartana 150 mg/dia e de 8-12/5-8 mmHg com 300 mg/dia — os valores numéricos aqui refletem o ponto médio da faixa de 300 mg/dia (dose preferida na nefropatia diabética, ver dosing). Fonte: rótulo FDA do AVAPRO (irbesartan), seção Clinical Pharmacology/Clinical Studies; análise dose-resposta também descrita em Kassler-Taub K et al., 'Comparative efficacy of two angiotensin II receptor antagonists, irbesartan and losartan, in mild-to-moderate hypertension', Am J Hypertens. 1998;11(4 Pt 1):445-453, PMID 9622147.",
+    "commercial_presentations": []
   },
   {
     "slug": "estreptoquinase",
