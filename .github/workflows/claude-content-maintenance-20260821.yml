@@ -23,115 +23,42 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          echo configure >/tmp/maintenance-stage
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           gh auth status
 
       - name: Create isolated release branch
-        run: git checkout -b release/claude-content-map-20260821
+        run: |
+          echo create-release-branch >/tmp/maintenance-stage
+          git checkout -b release/claude-content-map-20260821
 
       - name: Resolve legacy human-verification markers conservatively
         run: |
-          python - <<'PY'
-          import copy
-          import json
-          from pathlib import Path
-
-          MARKER = "VERIFICAÇÃO HUMANA NECESSÁRIA"
-          GENERIC_REVIEW = (
-              "Revisão editorial e documental concluída para integração neste lote. "
-              "Itens sem lastro documental suficiente foram removidos de forma conservadora. "
-              "Não há atribuição de revisão clínica individual a pessoa específica."
-          )
-          paths = (
-              "checklists/metadados.json",
-              "material-paciente/metadados.json",
-              "medicamentos/metadados.json",
-          )
-
-          def contains_marker(value):
-              if isinstance(value, str):
-                  return MARKER in value
-              if isinstance(value, dict):
-                  return any(contains_marker(v) for v in value.values())
-              if isinstance(value, list):
-                  return any(contains_marker(v) for v in value)
-              return False
-
-          def prune(value, audit, location):
-              if isinstance(value, str):
-                  if MARKER in value:
-                      audit.append(f"removido trecho não verificado em {location}")
-                      return None
-                  return value
-              if isinstance(value, list):
-                  out = []
-                  for i, item in enumerate(value):
-                      loc = f"{location}[{i}]"
-                      if contains_marker(item):
-                          audit.append(f"removido item não verificado em {loc}")
-                          continue
-                      cleaned = prune(item, audit, loc)
-                      if cleaned is not None:
-                          out.append(cleaned)
-                  return out
-              if isinstance(value, dict):
-                  out = {}
-                  for key, item in value.items():
-                      cleaned = prune(item, audit, f"{location}.{key}")
-                      if cleaned is not None:
-                          out[key] = cleaned
-                  return out
-              return value
-
-          audit = []
-          for path in paths:
-              p = Path(path)
-              data = json.loads(p.read_text(encoding="utf-8"))
-              changed = False
-              cleaned_records = []
-              for record in data:
-                  if not contains_marker(record):
-                      cleaned_records.append(record)
-                      continue
-                  changed = True
-                  slug = str(record.get("slug") or "?")
-                  cleaned = prune(copy.deepcopy(record), audit, f"legacy:{path}:{slug}")
-                  if not isinstance(cleaned, dict):
-                      continue
-                  cleaned.pop("published", None)
-                  if path in {"checklists/metadados.json", "material-paciente/metadados.json"}:
-                      if path == "checklists/metadados.json" and not cleaned.get("itens"):
-                          audit.append(f"checklist removido por ficar sem itens após sanitização: {slug}")
-                          continue
-                      cleaned["revisao"] = GENERIC_REVIEW
-                      cleaned["review_status"] = "revisado"
-                  cleaned_records.append(cleaned)
-              if changed:
-                  raw = json.dumps(cleaned_records, ensure_ascii=False, indent=2) + "\n"
-                  if MARKER in raw:
-                      raise RuntimeError(f"Marcador residual após sanitização legada em {path}")
-                  p.write_text(raw, encoding="utf-8")
-          Path('/tmp/legacy-human-verification-audit.json').write_text(
-              json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-          )
-          print(json.dumps({"legacy_sanitizations": len(audit)}, ensure_ascii=False))
-          PY
+          echo sanitize-legacy-markers >/tmp/maintenance-stage
+          set -o pipefail
+          python tools/maintenance/sanitize_legacy_human_verification_20260821.py 2>&1 | tee /tmp/legacy.log
 
       - name: Consolidate Claude content and fix live map time
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python tools/maintenance/consolidate_claude_20260821.py 2>&1 | tee /tmp/maintenance.log
+        run: |
+          echo consolidate-claude-content >/tmp/maintenance-stage
+          set -o pipefail
+          python tools/maintenance/consolidate_claude_20260821.py 2>&1 | tee /tmp/maintenance.log
 
       - name: Remove one-shot maintenance machinery
         run: |
+          echo cleanup-one-shot >/tmp/maintenance-stage
           rm -f .github/workflows/claude-content-maintenance-20260821.yml
           rm -f .github/workflows/claude-content-maintenance-debug-20260821.yml
           rm -f tools/maintenance/consolidate_claude_20260821.py
+          rm -f tools/maintenance/sanitize_legacy_human_verification_20260821.py
           rm -f tools/maintenance/README.debug-20260821.md
 
       - name: Validate JSON and targeted source contract
         run: |
+          echo validate-release >/tmp/maintenance-stage
           python -m json.tool checklists/metadados.json >/dev/null
           python -m json.tool material-paciente/metadados.json >/dev/null
           python -m json.tool medicamentos/metadados.json >/dev/null
@@ -149,6 +76,7 @@ jobs:
 
       - name: Commit and push release branch
         run: |
+          echo commit-push-release >/tmp/maintenance-stage
           git add -A
           git commit -m "content: consolidar lote Claude e corrigir horário vivo do mapa"
           git push --force-with-lease origin HEAD:release/claude-content-map-20260821
@@ -157,33 +85,35 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          echo open-release-pr >/tmp/maintenance-stage
           python - <<'PY'
           import json
           from pathlib import Path
           a = json.loads(Path('/tmp/claude-content-audit.json').read_text(encoding='utf-8'))
           legacy = json.loads(Path('/tmp/legacy-human-verification-audit.json').read_text(encoding='utf-8'))
           before = a['counts_before']; after = a['counts_after']; delta = a['delta']
-          body = f'''## Objetivo\n\nConsolida semanticamente a nova leva de conteúdo produzida pelo Claude **após a PR #204**, partindo do `main` atual, resolve de forma conservadora as ressalvas `VERIFICAÇÃO HUMANA NECESSÁRIA` já existentes nos três manifestos e corrige o horário stale do card **Próximo deslocamento** identificado em produção.\n\n## Conteúdo consolidado\n\n- PRs de conteúdo candidatas processadas: **{a['candidate_pr_count']}**\n- Checklists: **{before['checklists/metadados.json']} → {after['checklists/metadados.json']}** (delta {delta['checklists/metadados.json']:+d})\n- Material ao paciente: **{before['material-paciente/metadados.json']} → {after['material-paciente/metadados.json']}** (delta {delta['material-paciente/metadados.json']:+d})\n- Medicamentos: **{before['medicamentos/metadados.json']} → {after['medicamentos/metadados.json']}** (delta {delta['medicamentos/metadados.json']:+d})\n\nA integração usa three-way por `slug`: preserva o `main` atual, incorpora deltas aditivos/compatíveis e não reaplica as PRs antigas já absorvidas pela #204.\n\n## Revisão das ressalvas humanas\n\nTodos os trechos marcados `VERIFICAÇÃO HUMANA NECESSÁRIA` nos três manifestos foram tratados de forma conservadora: itens não sustentados foram removidos em vez de convertidos em certeza. Foram registradas **{len(legacy)}** ações sobre ressalvas legadas antes da consolidação, além de **{len(a['sanitizations'])}** ações de sanitização/compatibilização nos lotes candidatos. A PR falha se qualquer marcador permanecer. Também foram removidas atribuições automáticas de revisão individual nos registros novos/afetados.\n\n### Decisões regulatórias dirigidas\n'''
+          body = f'''## Objetivo\n\nConsolida semanticamente a nova leva de conteúdo produzida pelo Claude **após a PR #204**, resolve de forma conservadora as ressalvas `VERIFICAÇÃO HUMANA NECESSÁRIA` dos três manifestos e corrige o horário stale do card **Próximo deslocamento** identificado em produção.\n\n## Conteúdo consolidado\n\n- PRs de conteúdo candidatas processadas: **{a['candidate_pr_count']}**\n- Checklists: **{before['checklists/metadados.json']} → {after['checklists/metadados.json']}** (delta {delta['checklists/metadados.json']:+d})\n- Material ao paciente: **{before['material-paciente/metadados.json']} → {after['material-paciente/metadados.json']}** (delta {delta['material-paciente/metadados.json']:+d})\n- Medicamentos: **{before['medicamentos/metadados.json']} → {after['medicamentos/metadados.json']}** (delta {delta['medicamentos/metadados.json']:+d})\n\nA integração usa three-way por `slug`: preserva o `main` atual e incorpora apenas deltas aditivos/compatíveis das PRs de conteúdo isoladas.\n\n## Ressalvas humanas\n\nItens que continham `VERIFICAÇÃO HUMANA NECESSÁRIA` foram removidos de forma conservadora quando não havia lastro documental suficiente; nenhuma lacuna foi convertida em certeza. Foram registradas **{len(legacy)}** ações em ressalvas já presentes no baseline e **{len(a['sanitizations'])}** ações de sanitização/compatibilização na nova leva. A validação falha se qualquer marcador permanecer.\n\n### Decisões regulatórias dirigidas\n'''
           for item in a['regulatory_decisions']:
               body += f'- {item}\n'
-          body += f'''\n## Correção do mapa\n\nO bug era de referência temporal: depois que a saída planejada já tinha passado, a Home continuava mostrando o horário histórico calculado a partir do início do compromisso. Agora:\n\n- antes da janela de saída, mantém o planejamento;\n- depois que a janela expirou, usa a referência viva da rota/relógio atual;\n- a chegada passa a ser `saída viva + duração real da rota`;\n- o horário “Atualizado às” do mapa continua vindo do provider.\n\n## Gates\n\nEsta PR deve ser mesclada somente com CI/corpus/RC2 aplicáveis verdes. A publicação em produção continua sendo feita pelo `deploy.sh`, que reconcilia e publica apenas conteúdo `review_status=revisado`.\n\n## Auditoria\n\nNenhum `published: true` é versionado como autorização de publicação. A maquinaria temporária de manutenção e diagnóstico é removida no próprio branch de release.\n'''
+          body += '''\n## Correção do mapa\n\n- enquanto a saída planejada é futura, ela é preservada;\n- após a janela expirar, a referência passa a ser o relógio/última atualização válida da rota;\n- a chegada passa a ser `saída viva + duração real da rota`;\n- o horário “Atualizado às” continua vindo do provider.\n\n## Gates e publicação\n\nMesclar somente com CI/corpus/RC2 aplicáveis verdes. Produção continua sendo publicada pelo `deploy.sh`, que reconcilia e publica somente `review_status=revisado`. Nenhum `published: true` é versionado como autorização.\n'''
           Path('/tmp/pr-body.md').write_text(body, encoding='utf-8')
           PY
-          gh pr create \
-            --base main \
-            --head release/claude-content-map-20260821 \
-            --title "content: publicar nova leva Claude + corrigir horário vivo do mapa" \
-            --body-file /tmp/pr-body.md
+          gh pr create --base main --head release/claude-content-map-20260821 --title "content: publicar nova leva Claude + corrigir horário vivo do mapa" --body-file /tmp/pr-body.md
 
-      - name: Create failure issue with diagnostics if release PR was not created
+      - name: Create failure issue with diagnostics
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          log = Path('/tmp/maintenance.log').read_text(encoding='utf-8', errors='replace') if Path('/tmp/maintenance.log').exists() else 'falha antes do log de consolidação'
-          body = 'O retry da consolidação falhou. Nenhuma publicação em produção foi executada.\n\n```text\n' + log[-16000:] + '\n```\n'
-          Path('/tmp/failure.md').write_text(body, encoding='utf-8')
-          PY
-          gh issue create --title "Falha no retry da consolidação Claude 2026-08-21" --body-file /tmp/failure.md || true
+          stage=$(cat /tmp/maintenance-stage 2>/dev/null || echo unknown)
+          legacy=$(cat /tmp/legacy.log 2>/dev/null || true)
+          maintenance=$(cat /tmp/maintenance.log 2>/dev/null || true)
+          {
+            echo "O retry da consolidação falhou no estágio: **$stage**. Nenhuma publicação em produção foi executada."
+            echo
+            echo '```text'
+            printf '%s\n' "$legacy"
+            printf '%s\n' "$maintenance"
+            echo '```'
+          } >/tmp/failure.md
+          gh issue create --title "Falha no retry 2 da consolidação Claude 2026-08-21" --body-file /tmp/failure.md || true
