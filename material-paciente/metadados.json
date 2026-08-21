@@ -14447,5 +14447,216 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "flutter-atrial-o-que-e-e-por-que-a-ablacao-costuma-curar",
+    "titulo": "Flutter Atrial: o que é e por que a ablação costuma curar",
+    "subtitulo": "Uma arritmia parecida com a fibrilação atrial, mas com um tratamento que resolve de vez na maioria das vezes",
+    "tema": "Arritmias",
+    "documento_slug": "flutter-atrial-tipico-diagnostico-ablacao-e-fibrilacao-atrial-de-novo",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o flutter atrial típico — o que é, como o médico diferencia da fibrilação atrial, e por que a ablação por cateter costuma ser o tratamento definitivo, e não só um controle de sintomas.",
+    "secoes": [
+      {
+        "titulo": "O que é o flutter atrial",
+        "paragrafos": [
+          "O flutter atrial é uma arritmia em que a parte de cima do coração (os átrios) passa a bater de forma muito rápida e organizada, seguindo um circuito elétrico que gira em looping dentro de uma das câmaras. É diferente da fibrilação atrial, em que a atividade elétrica é caótica e desorganizada — no flutter, o ritmo é rápido, mas regular, como um trem passando sempre no mesmo trilho.",
+          "Na forma mais comum, chamada de flutter atrial típico, esse circuito passa por uma região bem definida do coração, entre a valva tricúspide e uma veia grande que chega ao átrio direito. Essa região tem um nome técnico — istmo cavotricuspídeo —, mas o que importa para você é que ela é um ponto fixo e conhecido, o que torna esse tipo de flutter especialmente tratável.",
+          "Quem tem flutter atrial pode sentir palpitação acelerada, cansaço, falta de ar ou tontura — mas também é possível não sentir nada e o flutter ser descoberto num exame de rotina."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o médico diferencia flutter de fibrilação atrial",
+        "paragrafos": [
+          "A diferença aparece no eletrocardiograma: no flutter atrial, a atividade elétrica dos átrios desenha um padrão repetitivo, em forma de dente de serra, bem regular. Na fibrilação atrial, essa mesma região do traçado é irregular e sem padrão nenhum.",
+          "Essa distinção não é só um detalhe técnico — ela muda o tratamento. Enquanto a fibrilação atrial costuma exigir controle contínuo (com remédio ou, em alguns casos, ablação mais extensa), o flutter atrial típico tem uma solução pontual e de alta taxa de sucesso, que é a ablação do circuito."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "A ablação: um procedimento que costuma curar, não só controlar",
+        "paragrafos": [
+          "A ablação por cateter é hoje o tratamento de escolha para o flutter atrial típico documentado no eletrocardiograma — é preferida ao tratamento apenas com remédio, porque tende a resolver a arritmia de forma definitiva, e não só controlar os sintomas enquanto o remédio for tomado.",
+          "No procedimento, um cateter é levado até o coração por um vaso sanguíneo (geralmente na virilha) e aplica energia num ponto específico do circuito elétrico, interrompendo o caminho por onde a arritmia circula. O objetivo do médico é confirmar, ainda durante o procedimento, que esse bloqueio foi completo nos dois sentidos — é esse bloqueio que garante que o circuito não volta a funcionar.",
+          "É um dos poucos procedimentos em arritmia com uma taxa de sucesso muito alta, acima de 90%, sendo considerado hoje o tratamento curativo de primeira escolha para essa forma de flutter."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o anticoagulante pode continuar sendo necessário",
+        "paragrafos": [
+          "O flutter atrial, assim como a fibrilação atrial, pode favorecer a formação de coágulos dentro do coração, aumentando o risco de AVC. Por isso, quem toma anticoagulante para prevenir esse risco geralmente continua tomando normalmente ao redor da data da ablação — o procedimento não é motivo, por si só, para interromper o anticoagulante.",
+          "Depois da ablação bem-sucedida, a decisão de manter ou não o anticoagulante a longo prazo é individual, e depende principalmente do seu risco geral de AVC (o mesmo cálculo de risco usado na fibrilação atrial), não só do fato de o flutter ter sido tratado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Fibrilação atrial pode aparecer depois — o que isso significa",
+        "paragrafos": [
+          "Um ponto importante para conversar com o seu médico: mesmo depois de uma ablação de flutter bem-sucedida, uma parte relevante das pessoas acaba desenvolvendo fibrilação atrial mais adiante, em geral nos anos seguintes. Isso não é sinal de que a ablação falhou — são duas arritmias diferentes, e o flutter tratado pode 'abrir caminho' para o surgimento da fibrilação em quem já tinha uma tendência para isso no coração.",
+          "Existe uma alteração elétrica que pode ser identificada já no eletrocardiograma de antes da ablação (um sinal chamado bloqueio interatrial avançado) que ajuda o médico a estimar quem tem mais chance de desenvolver fibrilação atrial no futuro. Se você tiver esse achado, seu médico pode recomendar acompanhamento mais atento e, dependendo do seu risco geral, manter o anticoagulante mesmo após a ablação ter funcionado bem para o flutter.",
+          "Por isso, mesmo depois de tratado com sucesso, vale continuar com as consultas de acompanhamento e relatar qualquer palpitação nova — ela pode ser sinal de uma arritmia diferente da que foi tratada, e não de que o flutter voltou."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Palpitação acelerada nova, mesmo depois de uma ablação bem-sucedida — pode ser sinal de outra arritmia, como a fibrilação atrial",
+      "Falta de ar que piora ou aparece de forma súbita",
+      "Tontura importante, quase-desmaio ou desmaio junto com a palpitação",
+      "Dor no peito associada à sensação de coração acelerado",
+      "Fraqueza súbita, dificuldade para falar ou alteração de força em um lado do corpo — sinais de possível AVC, sempre uma emergência"
+    ],
+    "perguntas": [
+      "O meu flutter é do tipo típico, o que costuma responder bem à ablação?",
+      "Qual é a taxa de sucesso esperada da ablação no meu caso específico?",
+      "Depois da ablação, vou precisar continuar com o anticoagulante?",
+      "Meu eletrocardiograma mostrou algum sinal que aumente o risco de eu desenvolver fibrilação atrial no futuro?",
+      "Que sintomas eu devo observar depois do procedimento, e quando devo procurar atendimento?"
+    ],
+    "fontes": [
+      "An Approach to Catheter Ablation of Cavotricuspid Isthmus Dependent Atrial Flutter. PMC (PMC1501100).",
+      "Cavotricuspid isthmus ablation for atrial flutter guided by contact force related parameters: A systematic review and meta-analysis. PMC (PMC9853203).",
+      "New-onset atrial fibrillation after cavotricuspid isthmus ablation: identification of advanced interatrial block is key. EP Europace."
+    ]
+  },
+  {
+    "slug": "quando-a-valvula-biologica-se-desgasta-o-que-e-o-valve-in-valve",
+    "titulo": "Quando a Válvula Biológica Se Desgasta: o que é o Valve-in-Valve",
+    "subtitulo": "Entenda por que uma bioprótese pode falhar com o tempo, e como ela pode ser tratada sem precisar de nova cirurgia aberta",
+    "tema": "Valvopatias",
+    "documento_slug": "disfuncao-de-biopotese-valvar-classificacao-varc-3-e-valve-in-valve-registro-vivid",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples para quem tem (ou vai receber) uma válvula biológica: por que ela pode se desgastar depois de alguns anos, os diferentes motivos pelos quais isso acontece, e o que é o procedimento chamado valve-in-valve, que trata a válvula degenerada sem abrir o peito de novo.",
+    "secoes": [
+      {
+        "titulo": "Por que uma válvula biológica pode se desgastar",
+        "paragrafos": [
+          "Diferente da válvula mecânica, que costuma durar a vida toda mas exige anticoagulante contínuo, a válvula biológica (feita a partir de tecido, geralmente de origem animal) tem a vantagem de não exigir anticoagulação permanente na maioria dos casos — mas em compensação ela pode se desgastar com o tempo, especialmente em pessoas mais jovens no momento do implante.",
+          "Sentir que a 'válvula está falhando' pode gerar bastante preocupação, mas é importante saber que existem motivos diferentes para isso acontecer, e eles pedem condutas bem diferentes — por isso o primeiro passo do seu médico, ao investigar uma bioprótese que não está funcionando bem, é identificar qual desses motivos é o seu."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Três motivos diferentes de falha, e por que essa distinção importa",
+        "paragrafos": [
+          "Um sistema internacional de referência (chamado VARC-3) organiza a falha da bioprótese em três grupos, e essa organização não é só acadêmica — ela muda diretamente a conduta:"
+        ],
+        "itens": [
+          "Desgaste do próprio tecido da válvula (a causa mais comum): o folheto da válvula se calcifica ou se deteriora aos poucos, de forma irreversível — quando isso acontece, nenhum remédio reverte, e o tratamento é substituir ou reforçar a válvula.",
+          "Problema que não é do tecido da válvula em si: por exemplo, um pequeno vazamento ao redor da válvula, ou uma válvula que ficou pequena para o seu corpo — situações que às vezes podem ser tratadas de forma mais pontual.",
+          "Coágulo formado na válvula, ou infecção da válvula: ao contrário do desgaste do tecido, essas duas situações às vezes podem melhorar só com tratamento clínico (anticoagulante no caso do coágulo; antibiótico, às vezes associado a cirurgia, no caso de infecção), sem precisar trocar a válvula de imediato."
+        ]
+      },
+      {
+        "titulo": "O que é o valve-in-valve",
+        "paragrafos": [
+          "Quando a bioprótese realmente se desgastou e precisa ser substituída, existe uma alternativa à cirurgia aberta tradicional: implantar uma nova válvula, por cateter, exatamente dentro da válvula biológica antiga que já está no seu coração — sem precisar remover a antiga nem abrir o peito de novo. Esse procedimento é chamado de valve-in-valve, literalmente 'válvula dentro de válvula'.",
+          "Um grande registro internacional que reuniu centenas de pacientes tratados dessa forma mostrou resultados animadores no primeiro mês após o procedimento: a grande maioria das pessoas passou a sentir bem menos falta de ar do que antes, com baixo risco de AVC no período. No acompanhamento de um ano, a maior parte dos pacientes seguia viva e bem, embora o resultado varie conforme o tamanho da válvula biológica original e o motivo específico da falha dela.",
+          "Um achado importante desse registro: quando a válvula biológica original já era pequena para o corpo da pessoa, o resultado do valve-in-valve tende a ser um pouco menos favorável — porque a nova válvula, implantada dentro de um espaço já limitado, acaba herdando parte dessa limitação. Isso não significa que o procedimento não deva ser feito nesse caso, mas é um fator que o seu médico leva em conta ao conversar com você sobre o que esperar."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que isso significa para o seu acompanhamento",
+        "paragrafos": [
+          "Se você tem uma válvula biológica, o acompanhamento regular com ecocardiograma é o que permite identificar cedo um eventual desgaste, muitas vezes antes mesmo de você sentir sintomas importantes — é bem mais fácil planejar um tratamento com calma do que reagir a uma descompensação súbita.",
+          "Vale lembrar que os números de resultado do valve-in-valve vêm de um registro de alguns anos atrás, e a técnica e os dispositivos usados hoje evoluíram desde então — é razoável esperar que os resultados atuais sejam pelo menos tão bons quanto os descritos ali, mas o seu médico é quem pode dar a expectativa mais atualizada para o seu caso específico."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar nova, ou que piora progressivamente, em quem tem válvula biológica implantada",
+      "Cansaço importante para esforços que antes eram tolerados sem dificuldade",
+      "Inchaço novo nas pernas ou no abdômen",
+      "Febre persistente, calafrios ou mal-estar geral sem outra causa aparente — pode sinalizar infecção da válvula, e é sempre uma situação a comunicar ao médico rapidamente",
+      "Palpitação nova associada a tontura ou desmaio"
+    ],
+    "perguntas": [
+      "Qual foi o motivo específico da falha da minha bioprótese — desgaste do tecido, vazamento ao redor, ou outra causa?",
+      "No meu caso, o valve-in-valve por cateter é uma opção, ou é mais indicada a cirurgia aberta?",
+      "O tamanho da minha válvula biológica original influencia o resultado esperado do tratamento?",
+      "Com que frequência devo repetir o ecocardiograma para acompanhar a válvula?",
+      "Quais sintomas devem me fazer procurar atendimento antes da próxima consulta agendada?"
+    ],
+    "fontes": [
+      "Généreux P, Piazza N, Alu MC, et al. Valve Academic Research Consortium 3: Updated Endpoint Definitions for Aortic Valve Clinical Research. J Am Coll Cardiol. 2021;77(21):2717-2746. PMID: 33888385.",
+      "Dvir D, Webb JG, Bleiziffer S, et al.; Valve-in-Valve International Data Registry Investigators. Transcatheter aortic valve implantation in failed bioprosthetic surgical valves. JAMA. 2014;312(2):162-170. DOI: 10.1001/jama.2014.7246. PMID: 25005653."
+    ]
+  },
+  {
+    "slug": "estenose-mitral-o-que-e-e-como-e-tratada",
+    "titulo": "Estenose Mitral: o que é e como é tratada",
+    "subtitulo": "Entenda por que essa válvula pode estreitar, e quais são as opções para tratá-la sem cirurgia aberta na maioria dos casos",
+    "tema": "Valvopatias",
+    "documento_slug": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre a estenose mitral — a válvula do coração que mais frequentemente é afetada pela febre reumática no mundo —, como ela é diagnosticada, e as opções de tratamento, incluindo o procedimento por cateter que evita cirurgia aberta na maioria dos casos.",
+    "secoes": [
+      {
+        "titulo": "O que é a estenose mitral",
+        "paragrafos": [
+          "A válvula mitral fica entre as duas câmaras do lado esquerdo do coração e funciona como uma porta de mão única, deixando o sangue passar de uma câmara para a outra sem voltar. Na estenose mitral, essa 'porta' fica mais estreita do que deveria, dificultando a passagem do sangue e fazendo o coração trabalhar mais para vencer essa resistência.",
+          "No mundo todo, a causa mais comum de estenose mitral é sequela de febre reumática — uma inflamação que, anos depois de acontecer (às vezes décadas), deixa a válvula com os folhetos espessados e parcialmente colados entre si. Existe também uma forma mais rara, chamada degenerativa, ligada ao envelhecimento e ao acúmulo de cálcio ao redor da válvula, que costuma aparecer em pessoas mais idosas e tem um tratamento bem diferente da forma reumática.",
+          "As duas formas afetam mais mulheres do que homens, e a forma reumática costuma acometer pessoas mais jovens — por isso é comum que a estenose mitral seja diagnosticada em mulheres em idade de ter filhos, o que traz perguntas específicas sobre gestação que vale a pena conversar com o seu médico com antecedência."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o diagnóstico é feito",
+        "paragrafos": [
+          "O exame principal para diagnosticar e avaliar a gravidade da estenose mitral é o ecocardiograma, que mede diretamente a área da válvula e mostra o quanto o sangue está tendo dificuldade para passar por ela. Em alguns casos, o médico pode pedir um ecocardiograma feito por dentro do esôfago (transesofágico), que dá uma imagem ainda mais detalhada da válvula, especialmente quando um procedimento por cateter está sendo planejado.",
+          "Quando os sintomas não combinam claramente com a gravidade vista em repouso — por exemplo, você sente falta de ar desproporcional ao que o exame de repouso sugere —, o médico pode pedir um teste de esforço junto com o ecocardiograma, para ver como a válvula se comporta quando o coração está trabalhando mais."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "As opções de tratamento",
+        "paragrafos": [
+          "Na forma reumática, quando o tratamento intervencionista é necessário, a primeira opção costuma ser um procedimento por cateter chamado comissurotomia mitral percutânea — em vez de abrir o peito, o médico introduz um cateter por um vaso sanguíneo (geralmente na virilha) até o coração e alarga a válvula estreitada por dentro, sem precisar de cirurgia aberta. Esse procedimento costuma ser preferido sempre que a anatomia da válvula é favorável para ele.",
+          "Quando a anatomia da válvula não é favorável ao procedimento por cateter, ou quando a estenose vem acompanhada de outros problemas na mesma válvula (como um vazamento importante além do estreitamento), a cirurgia para tratar ou trocar a válvula continua sendo a opção indicada.",
+          "Já na forma degenerativa (ligada ao acúmulo de cálcio, mais comum em idosos), o procedimento por cateter descrito acima não funciona, porque o mecanismo do estreitamento é diferente — nesses casos, o tratamento é decidido conforme os sintomas e o risco cirúrgico de cada pessoa, podendo incluir cirurgia mais complexa ou, em alguns centros especializados, um implante de válvula por cateter dedicado a essa situação específica.",
+          "Enquanto o tratamento definitivo não é indicado, remédios podem ajudar a controlar sintomas como falta de ar e a controlar a frequência do coração — mas é importante entender que nenhum remédio desfaz o estreitamento da válvula em si; eles só ajudam o coração a conviver melhor com ele até o momento certo de intervir."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Fibrilação atrial e anticoagulação na estenose mitral",
+        "paragrafos": [
+          "A estenose mitral aumenta bastante o risco de desenvolver fibrilação atrial (um ritmo cardíaco irregular), porque a câmara de cima do coração precisa trabalhar mais forte contra a válvula estreitada e acaba se dilatando. Quando isso acontece, o anticoagulante costuma ser indicado para reduzir o risco de formação de coágulo e de AVC.",
+          "Um detalhe que vale conversar com o seu médico: nem todo anticoagulante é indicado da mesma forma na estenose mitral com fibrilação atrial — os anticoagulantes mais novos (diferentes da varfarina tradicional) não são recomendados quando a válvula está mais estreitada, então a escolha do tipo de anticoagulante nesse contexto costuma ser diferente da que seria feita em outras causas de fibrilação atrial."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o acompanhamento regular é tão importante",
+        "paragrafos": [
+          "Mesmo sem sintomas, quem tem estenose mitral considerada grave precisa de ecocardiogramas de acompanhamento regulares, porque a doença pode evoluir silenciosamente. Em estenose mais leve, o intervalo entre os exames costuma ser maior.",
+          "Depois de um procedimento bem-sucedido (seja por cateter, seja cirúrgico), o acompanhamento continua sendo importante, porque a válvula tratada pode voltar a estreitar com o tempo, às vezes sem sintomas percebidos logo de início — é o exame regular que costuma identificar isso antes que você sinta.",
+          "Se a causa da sua estenose foi febre reumática, vale lembrar que outras válvulas do coração também podem ter sido afetadas pelo mesmo processo, mesmo que ainda não estejam dando sintomas — por isso a avaliação costuma olhar o coração como um todo, não só a válvula que já está estreitada."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar nova, ou que piora, principalmente ao deitar ou durante esforços que antes eram bem tolerados",
+      "Palpitação nova ou que mudou de padrão — pode ser sinal de fibrilação atrial",
+      "Inchaço novo nas pernas",
+      "Tosse com sangue (mesmo em pequena quantidade)",
+      "Fraqueza súbita, dificuldade para falar ou perda de força em um lado do corpo — sinais de possível AVC, sempre uma emergência",
+      "Febre persistente sem outra causa clara, especialmente após procedimento dentário ou outro procedimento invasivo recente"
+    ],
+    "perguntas": [
+      "Qual é a causa provável da minha estenose mitral — reumática ou degenerativa?",
+      "A anatomia da minha válvula é favorável para o tratamento por cateter, ou a cirurgia é mais indicada no meu caso?",
+      "Com que frequência preciso repetir o ecocardiograma de acompanhamento?",
+      "Se eu tiver fibrilação atrial associada, qual tipo de anticoagulante é indicado para o meu caso?",
+      "Outras válvulas do meu coração também foram avaliadas, já que a causa foi febre reumática?"
+    ],
+    "fontes": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295."
+    ]
   }
 ]
