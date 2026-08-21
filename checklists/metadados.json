@@ -20168,5 +20168,61 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "escolha-e-uso-de-interprete-na-consulta-cardiologica-com-barreira-de-idioma",
+    "condicao": "Barreira de idioma na consulta cardiológica — escolha entre intérprete profissional e informal",
+    "resumo": "Checklist para o atendimento a paciente com proficiência limitada no idioma do médico (estrangeiro, indígena ou usuário de Libras), orientando o uso de intérprete profissional treinado em vez de familiar/acompanhante como solução de conveniência, com base na diferença medida de taxa de erro de tradução com consequência clínica.",
+    "documento_origem": "interprete-profissional-versus-informal-erro-de-traducao-com-consequencia-clinica",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Flores G, Abreu M, Barone CP, Bachur R, Lin H. Errors of medical interpretation and their potential clinical consequences: a comparison of professional versus ad hoc versus no interpreters. Ann Emerg Med. 2012;60(5):545-553. DOI: 10.1016/j.annemergmed.2012.01.025. PMID: 22424655"
+    ],
+    "itens": [
+      {
+        "id": "interprete-cardio-01-identificar-proficiencia-limitada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificação, no início da consulta, de proficiência limitada do paciente/cuidador no idioma do médico — cenário aplicável ao paciente estrangeiro, indígena ou que se comunica por Libras —, antes de decidir como a comunicação clínica vai ser conduzida",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "interprete-cardio-02-nao-usar-familiar-como-intérprete-por-conveniencia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Recusa de usar familiar ou acompanhante bilíngue como intérprete por conveniência do momento — a proporção de erros de interpretação com potencial consequência clínica foi de 22% com intérprete informal (\"ad hoc\"), próxima da observada sem nenhum intérprete presente (20%), e bem maior que com intérprete profissional (12%) (Flores G et al.)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "interprete-cardio-03-acionar-interprete-profissional",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Acionamento de intérprete profissional (presencial, por telefone ou por videochamada, conforme a estrutura disponível) diante de proficiência linguística limitada identificada, em vez de prosseguir a consulta sem intérprete ou com tradução informal",
+        "origem_secao": "O estudo"
+      },
+      {
+        "id": "interprete-cardio-04-preferir-interprete-com-treinamento-formal",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Preferência, quando houver mais de uma opção de intérprete profissional disponível, pelo que tem treinamento formal específico documentado (não apenas anos de experiência acumulada) — entre intérpretes profissionais, ≥100 horas de treinamento associou-se a mediana de 12 erros de interpretação contra 33 com <100 horas, e a proporção de erros com consequência clínica caiu de 12% para 2% (Flores G et al.)",
+        "origem_secao": "O estudo"
+      },
+      {
+        "id": "interprete-cardio-05-nao-presumir-barreira-resolvida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Reconhecimento de que a barreira de idioma não está automaticamente resolvida só por haver \"alguém que fala os dois idiomas\" na sala — 18% de todos os erros de interpretação observados no estudo (com qualquer tipo de intérprete) tinham potencial consequência clínica, o que sustenta reforçar pontos-chave da orientação (diagnóstico, plano terapêutico, sinais de alarme) por outro canal, como material escrito ou desenho, sempre que possível",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "interprete-cardio-06-nao-descartar-por-ser-contexto-pediatrico",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Aplicação do mesmo cuidado com escolha de intérprete na consulta cardiológica de adulto, mesmo sabendo que o estudo de origem foi conduzido em pronto-socorro pediátrico — o mecanismo do erro de tradução e sua consequência clínica potencial não são descritos como específicos de faixa etária ou especialidade",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
   }
 ]
