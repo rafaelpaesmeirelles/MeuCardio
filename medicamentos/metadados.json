@@ -412,11 +412,13 @@
       "**ANCORON** — Libbs, comprimido revestido 200 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 33,91; PMC (ICMS 20%) R$ 34,75. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
-      "Amioron® (Geolab Indústria Farmacêutica S/A) — cloridrato de amiodarona, medicamento similar: comprimidos de 100 mg (embalagem com 30 comprimidos) e comprimidos de 200 mg (embalagens com 10 ou 30 comprimidos). Fonte: bula do profissional de saúde (Geolab Indústria Farmacêutica S/A, PDF 'Amioron-PF.pdf', geolab.com.br/wp-content/uploads/2021/05/Amioron-PF.pdf, v.07 05/2019) e bula extraída da ANVISA (bula.gratis/geolab_industria_farmaceutica_s_a/0/amioron); conferido via WebSearch em 20/08/2026."
+      "Amioron® (Geolab Indústria Farmacêutica S/A) — cloridrato de amiodarona, medicamento similar: comprimidos de 100 mg (embalagem com 30 comprimidos) e comprimidos de 200 mg (embalagens com 10 ou 30 comprimidos). Fonte: bula do profissional de saúde (Geolab Indústria Farmacêutica S/A, PDF 'Amioron-PF.pdf', geolab.com.br/wp-content/uploads/2021/05/Amioron-PF.pdf, v.07 05/2019) e bula extraída da ANVISA (bula.gratis/geolab_industria_farmaceutica_s_a/0/amioron); conferido via WebSearch em 20/08/2026.",
+      "Atlansil® (cloridrato de amiodarona), Sanofi (bula mais recente em nome de Sanofi Medley Farmacêutica Ltda.), comprimidos de 100 mg e 200 mg, embalagem com 20 comprimidos. Marca historicamente relevante no Brasil (referência clássica antes da entrada de genéricos), com comunicado do próprio fabricante sobre desabastecimento temporário em 2025 — não indica descontinuação da marca. Fontes: comunicado oficial sanofi.com.br (22/05/2025), bula oficial hospedada em img.drogasil.com.br/raiadrogasil_bula/Atlansil.pdf, bula.gratis (\"obtida diretamente da ANVISA\"), farmaciaipam.com.br e ultrafarma.com.br. Outras marcas de amiodarona também localizadas nesta busca, mas não adicionadas por já não caberem no limite de verificação desta rodada (2 fontes convergentes cada, sem tempo de checar todas): Miodaron (Aché Laboratórios Farmacêuticos S.A., confirmado por bula.gratis e bulas.med.br) e Cardicoron (Laboratório Teuto Brasileiro S/A, confirmado por consultaremedios.com.br). Busca realizada em 21/08/2026."
     ],
     "brand_names": [
       "Ancoron",
-      "Amioron"
+      "Amioron",
+      "Atlansil — Sanofi-Aventis Farmacêutica Ltda. (hoje Sanofi Medley Farmacêutica Ltda.)"
     ]
   },
   {
@@ -1996,7 +1998,8 @@
     "review_status": "revisado",
     "generic_name": "Dobutamina",
     "brand_names": [
-      "Dobutrex"
+      "Dobutrex",
+      "Dobtan — União Química Farmacêutica Nacional S.A."
     ],
     "drug_class": "Agente inotrópico — catecolamina sintética, agonista beta-1 adrenérgico",
     "mechanism": "Catecolamina sintética com atividade primária beta-1 adrenérgica, com propriedades inotrópicas positivas e mínima vasodilatação periférica (efeito sobre receptor alfa é reduzido). Efeito é dose-dependente; pode ocasionar leve vasodilatação em doses menores que 5 mcg/kg/min por estimulação beta-2 relativa",
@@ -2048,7 +2051,8 @@
     "duration_of_action_source": "Já documentado no campo `notes.Administracao` deste mesmo registro (bula do DOBUTREX) — reaproveitado só para explicar o campo, sem pesquisa adicional nesta sessão.",
     "bp_evidence_source": "Não se aplica como REDUÇÃO de pressão arterial — a dobutamina tipicamente AUMENTA a pressão arterial, não a reduz, como já documentado no próprio registro em `adverse_effects`: 'aumento de PAS de 10-20 mmHg e FC de 5-15 bpm na maioria dos pacientes' (fonte já citada: bula do DOBUTREX, item 9). Por ser efeito inotrópico positivo com discreta vasodilatação em doses baixas (efeito beta-2 relativo, já descrito em `mechanism`), o padrão de resposta pressórica não se encaixa no par de campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (pensados para redução, com valor negativo) sem distorcer o sentido do campo — por isso ficam vazios aqui, e o dado real (aumento, não redução) já está documentado no campo `adverse_effects` existente, para onde este registro remete.",
     "commercial_presentations": [
-      "NENHUMA MARCA COMERCIAL (nome fantasia) ADICIONAL encontrada com confiança além de Dobutrex® (já cadastrado). Encontrados apenas medicamentos GENÉRICOS (sem nome fantasia próprio, vendidos pelo nome da substância + fabricante, conforme a regulação brasileira de genéricos): 'Cloridrato de Dobutamina' 12,5 mg/mL solução injetável, caixa com 10 ampolas de vidro de 20 mL (Hipolabor Farmacêutica Ltda); 'Cloridrato de Dobutamina' 12,5 mg/mL, caixa com 10 ampolas âmbar de 20 mL (Hypofarma); 'Cloridrato de Dobutamina' 250mg/20mL, caixa com 50 ampolas de 20 mL (Novafarma); e um genérico da ABL Brasil, caixa com 20 ampolas de 20 mL. Nenhum desses carrega nome fantasia distinto — por isso NÃO foram adicionados a `brand_names`, só registrados aqui para referência. Fonte: sara.com.br, hypofarma.com.br, bula.com.br, consultaremedios.com.br, WebSearch 20/08/2026."
+      "NENHUMA MARCA COMERCIAL (nome fantasia) ADICIONAL encontrada com confiança além de Dobutrex® (já cadastrado). Encontrados apenas medicamentos GENÉRICOS (sem nome fantasia próprio, vendidos pelo nome da substância + fabricante, conforme a regulação brasileira de genéricos): 'Cloridrato de Dobutamina' 12,5 mg/mL solução injetável, caixa com 10 ampolas de vidro de 20 mL (Hipolabor Farmacêutica Ltda); 'Cloridrato de Dobutamina' 12,5 mg/mL, caixa com 10 ampolas âmbar de 20 mL (Hypofarma); 'Cloridrato de Dobutamina' 250mg/20mL, caixa com 50 ampolas de 20 mL (Novafarma); e um genérico da ABL Brasil, caixa com 20 ampolas de 20 mL. Nenhum desses carrega nome fantasia distinto — por isso NÃO foram adicionados a `brand_names`, só registrados aqui para referência. Fonte: sara.com.br, hypofarma.com.br, bula.com.br, consultaremedios.com.br, WebSearch 20/08/2026.",
+      "Dobtan® (cloridrato de dobutamina), União Química Farmacêutica Nacional S.A., solução injetável 12,5 mg/mL, frasco-ampola de 20 mL (equivalente a 250 mg de dobutamina por frasco). Uso exclusivamente intravenoso, restrito a ambiente hospitalar. Fonte: bula do paciente hospedada em uploads.consultaremedios.com.br (upload direto do laboratório), confirmada por bula.gratis (\"obtida diretamente da ANVISA\") e por drconsulta.com/conteudo/dobtan-bula. Busca realizada em 21/08/2026. NOTA: número de registro ANVISA não localizado com confiança em nenhuma das fontes consultadas — não incluído."
     ]
   },
   {
@@ -2056,7 +2060,8 @@
     "review_status": "revisado",
     "generic_name": "Dopamina (cloridrato de dopamina)",
     "brand_names": [
-      "Revivan"
+      "Revivan",
+      "Dopacris — Cristália Produtos Químicos Farmacêuticos Ltda."
     ],
     "drug_class": "Agente inotrópico/vasopressor — catecolamina endógena, precursora imediata da noradrenalina",
     "mechanism": "Catecolamina endógena (precursora imediata da noradrenalina) com efeito dose-dependente sobre três classes de receptores: em dose baixa (0,5-2 mcg/kg/min), estimula receptores dopaminérgicos (DA1), produzindo vasodilatação renal, mesentérica e cerebral; em dose intermediária (2-10 mcg/kg/min), estimula receptores beta-1 adrenérgicos, aumentando contratilidade e frequência cardíaca; em dose alta (10-20 mcg/kg/min), predomina a estimulação de receptores alfa-1 adrenérgicos, produzindo vasoconstrição periférica, com efeito alfa cada vez mais dominante acima de 20 mcg/kg/min. Cortes confirmados no rótulo FDA/DailyMed (dopamine hydrochloride injection); a bula brasileira do REVIVAN (Zambon) não replica essa estratificação em três faixas explícitas — orienta dose inicial de 2 a 5 mcg/kg/min em adultos, titulada em incrementos de 5 mcg/kg/min conforme resposta, sem nomear os patamares de receptor por número. A transição entre receptores é farmacologicamente gradual, não um corte abrupto numa dose única, e a literatura contemporânea de terapia intensiva já abandonou a separação rígida em \"dose renal/dose beta/dose alfa\" como guia de prescrição (ver nota em `notes.conceito_de_dose_renal_abandonado`, agora com fonte primária). **fonte**: bula do REVIVAN (cloridrato de dopamina, Zambon) e rótulo da dopamine hydrochloride injection (DailyMed/FDA, consultado via WebFetch em 12/08/2026).",
@@ -2137,7 +2142,8 @@
     "bp_evidence_source": "Não se aplica: dopamina é vasopressor/inotrópico usado para ELEVAR a pressão arterial no choque (ver `indications`/`dosing`), não há desfecho de \"redução de PA\" a medir — o efeito pressórico é dose-dependente e ascendente, do dopaminérgico ao alfa-adrenérgico (ver `dosing`), o oposto do que estes dois campos numéricos pretendem capturar.",
     "commercial_presentations": [
       "Cloridrato de Dopamina (genérico) — Laboratório Teuto Brasileiro S/A, solução injetável 5 mg/mL, ampola de vidro âmbar com 10 mL, uso hospitalar restrito, intravenoso. Fonte: consultaremedios.com.br/cloridrato-de-dopamina-teuto. WebSearch 20/08/2026.",
-      "Cloridrato de Dopamina (genérico) — Hipolabor Farmacêutica Ltda., solução injetável 5 mg/mL, ampola de vidro âmbar com 10 mL (também com apresentação em ampola de 5 mL, caixa com 100 unidades), uso hospitalar restrito, intramuscular ou intravenoso. Fonte: consultaremedios.com.br/cloridrato-de-dopamina-hipolabor, sara.com.br. WebSearch 20/08/2026. Nota: nenhuma das duas é marca fantasia — são medicamentos genéricos rotulados pelo nome do laboratório fabricante, adicionados aqui como apresentação comercial complementar à Revivan® já cadastrada, não como novo `brand_name`."
+      "Cloridrato de Dopamina (genérico) — Hipolabor Farmacêutica Ltda., solução injetável 5 mg/mL, ampola de vidro âmbar com 10 mL (também com apresentação em ampola de 5 mL, caixa com 100 unidades), uso hospitalar restrito, intramuscular ou intravenoso. Fonte: consultaremedios.com.br/cloridrato-de-dopamina-hipolabor, sara.com.br. WebSearch 20/08/2026. Nota: nenhuma das duas é marca fantasia — são medicamentos genéricos rotulados pelo nome do laboratório fabricante, adicionados aqui como apresentação comercial complementar à Revivan® já cadastrada, não como novo `brand_name`.",
+      "Dopacris® (cloridrato de dopamina), Cristália, solução injetável 5 mg/mL, apresentações em caixa com 10 ou 50 ampolas de 10 mL para uso intravenoso (diluição obrigatória antes do uso); há também menção a apresentação em ampolas de 2 mL. Registro ANVISA citado de forma convergente em duas buscas como 1.0298.0106.002-1 (grafias variantes '1029801060021'/'1029801060013' apareceram em fontes secundárias isoladas — não usado o valor divergente). Fontes: listagem do próprio site do fabricante (cristalia.com.br, acesso bloqueado por proxy nesta sessão mas indexado no resultado de busca), consultaremedios.com.br, asamed.com.br, distribuidoracristal.com.br e buladeremedio.net (\"bula original, obtida diretamente da ANVISA\"). Busca realizada em 21/08/2026."
     ]
   },
   {
@@ -2630,7 +2636,9 @@
       "Comprimido revestido 25 mg",
       "Comprimido revestido 50 mg"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca ampla (bula.com.br, buladeremedio.net, bula.gratis, viatris.com.br — bula profissional oficial do fabricante, consultaremedios.com.br, redes de farmácia Drogaria São Paulo e Drogarias Pacheco filtradas por 'eplerenona') não encontrou nenhuma segunda marca de fantasia registrada no Brasil além de Inspra® (hoje sob Viatris Farmacêutica do Brasil Ltda., antes Upjohn Brasil/Pfizer). As redes de farmácia listam apenas o produto de referência (Inspra) nos resultados de eplerenona; não foi possível confirmar nome de fantasia de genérico/similar — se existir, é vendido sob o próprio nome genérico + laboratório, o que não conta como marca de fantasia por este critério. Busca realizada em 21/08/2026."
+    ],
     "brand_names": [
       "Inspra"
     ]
@@ -2929,7 +2937,9 @@
       "Comprimido de liberação prolongada 5 mg (embalagem com 20 comprimidos)",
       "Comprimido de liberação prolongada 10 mg (embalagem com 20 comprimidos)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca ampla (consultaremedios.com.br, InfoSUS-SC, saudeja.news, azmed.com.br — bula profissional oficial da AstraZeneca, remediobarato.com) confirma que a única marca de fantasia registrada no Brasil para felodipino isolado é Splendil® (AstraZeneca do Brasil Ltda.), em comprimidos de liberação prolongada 2,5 mg/5 mg/10 mg. Os nomes 'Felodil' e 'Feloday' aparecem em fontes internacionais (ex. Wikipedia/ChemSpider) como marcas usadas em outros países, não há confirmação de registro desses nomes no Brasil. Existe a combinação felodipino + succinato de metoprolol sob a marca Selozok Fix (AstraZeneca), mas é outro produto (dose fixa combinada), já cadastrado no catálogo sob slug próprio, não uma segunda marca do felodipino isolado. Busca realizada em 21/08/2026."
+    ],
     "brand_names": [
       "Splendil"
     ]
@@ -5215,7 +5225,8 @@
     "generic_name": "Pentoxifilina",
     "brand_names": [
       "Trental",
-      "Trental Vert"
+      "Trental Vert",
+      "Vascer — União Química Farmacêutica Nacional S.A."
     ],
     "drug_class": "Agente hemorreológico — derivado de metilxantina, sem atividade broncodilatadora relevante",
     "mechanism": "Pentoxifilina é um derivado tri-substituído de metilxantina (1-(5-oxohexil)-3,7-dimetilxantina) classificado como agente hemorreológico — atua sobre a viscosidade sanguínea, e não como broncodilatador, ao contrário da teofilina, da mesma classe química (rótulo do FDA). Aumenta a deformabilidade eritrocitária, reduz a agregação eritrocitária e plaquetária, reduz os níveis de fibrinogênio, reduz a adesividade e a ativação dos leucócitos ao endotélio e reduz a viscosidade sanguínea — conjunto de efeitos que aumenta o fluxo sanguíneo para a microcirculação afetada e melhora a oxigenação tecidual (bula brasileira do Trental/Trental Vert, Sanofi-Aventis). O rótulo do FDA (DailyMed) converge no mecanismo hemorreológico e acrescenta que a pentoxifilina aumenta a deformabilidade leucocitária e inibe a adesão/ativação de neutrófilos. O próprio rótulo do FDA declara que o mecanismo preciso e a sequência de eventos que levam à melhora clínica ainda não estão totalmente definidos — texto literal: \"The precise mode of action of pentoxifylline and the sequence of events leading to clinical improvement are still to be defined.\" A bula brasileira cita ainda discreto efeito inotrópico positivo em altas doses/infusão rápida.",
@@ -5224,7 +5235,8 @@
     ],
     "commercial_presentations": [
       "TRENTAL® 400 mg — comprimido revestido, embalagem com 20 unidades (Sanofi-Aventis Farmacêutica Ltda, MS 1.1300.0005.024-9)",
-      "TRENTAL VERT® 600 mg — comprimido revestido, embalagem com 20 unidades (Sanofi-Aventis Farmacêutica Ltda)"
+      "TRENTAL VERT® 600 mg — comprimido revestido, embalagem com 20 unidades (Sanofi-Aventis Farmacêutica Ltda)",
+      "Vascer® (pentoxifilina), União Química Farmacêutica Nacional S.A. Duas formas: (1) comprimido revestido de liberação prolongada 400 mg, embalagens de 20, 30, 60, 90, 450 ou 500 comprimidos; (2) solução injetável 20 mg/mL (100 mg/5 mL), caixa com 50 ampolas de 5 mL, uso intravenoso. Fontes: bula profissional oficial do fabricante (uniaoquimica.com.br/wp-content/uploads/.../BULA-VASCER-COM-REV.pdf), consultaremedios.com.br (versões comprimido e injetável), bula.medicinanet.com.br, farmaindex.com e redes de farmácia (Drogasil, Drogaria Minas-Brasil). Busca realizada em 21/08/2026."
     ],
     "indications": [
       "Bula brasileira (indicação ampla): doenças oclusivas arteriais periféricas e distúrbios artério-venosos de natureza aterosclerótica ou diabética (ex. claudicação intermitente, dor em repouso) e distúrbios tróficos (úlceras nas pernas e gangrena); alterações circulatórias cerebrais (sequelas de arteriosclerose cerebral — dificuldade de concentração, vertigem, comprometimento da memória), estados isquêmicos e pós-apopléticos; distúrbios circulatórios do olho ou ouvido interno associados a processos vasculares degenerativos e a comprometimento da visão ou audição.",
@@ -5439,7 +5451,8 @@
       "Comprimidos de 10 mg, 20 mg e 40 mg, uso oral, adulto e pediátrico a partir de 8 anos (bula genérica Sanofi Medley, MS 1.8326.0106, aprovada pela Anvisa em 17/10/2019; embalagens com 30 comprimidos)."
     ],
     "commercial_presentations": [
-      "Pravastatina sódica [genérico] 10 mg, 20 mg e 40 mg — comprimidos, embalagens com 30 unidades (Sanofi Medley Farmacêutica Ltda., Reg. MS 1.8326.0106; bula do paciente aprovada pela Anvisa em 17/10/2019)."
+      "Pravastatina sódica [genérico] 10 mg, 20 mg e 40 mg — comprimidos, embalagens com 30 unidades (Sanofi Medley Farmacêutica Ltda., Reg. MS 1.8326.0106; bula do paciente aprovada pela Anvisa em 17/10/2019).",
+      "NOTA (não é apresentação comercial): busca ampla (consultaremedios.com.br, cliquefarma.com.br, ultrafarma.com.br, drogariasaopaulo.com.br, qualidoc.com.br, saudedireta.com.br — bula profissional oficial da Bristol-Myers Squibb) não encontrou nenhuma segunda marca de fantasia para pravastatina sódica no Brasil além de Pravacol® (Bristol-Myers Squibb Farmacêutica Ltda.). Os demais produtos encontrados (Medley, Nova Química) são vendidos como 'Pravastatina Sódica' + nome do laboratório — genérico/similar rotulado pelo próprio nome, não marca de fantasia, e por isso não contam pelo critério desta pesquisa. Busca realizada em 21/08/2026."
     ],
     "renal_adjustment": "Insuficiência renal moderada ou grave: dose inicial de 10 mg/dia é recomendada, com ajuste posterior de acordo com a resposta dos parâmetros lipídicos e sob supervisão médica. A bula do profissional de saúde (Pravacol, 2009) já indicava 'para pacientes com disfunção hepática ou renal, uma dose inicial mais baixa deve ser considerada' — a bula genérica mais recente (Sanofi Medley, 2019) especifica objetivamente os 10 mg/dia como dose inicial. Fontes: bula Pravastatina Sódica (genérico), Sanofi Medley, item 6 (Posologia); bula PRAVACOL, Bristol-Myers Squibb, seção Posologia.",
     "hepatic_adjustment": "Insuficiência hepática significativa: dose inicial de 10 mg/dia é recomendada (mesma orientação da insuficiência renal), com ajuste posterior conforme resposta dos parâmetros lipídicos e sob supervisão médica (bula Sanofi Medley, 2019). Doença hepática ATIVA é CONTRAINDICAÇÃO formal ao uso da pravastatina (não é apenas motivo de ajuste de dose) — ver campo `contraindications`. Recomenda-se realizar testes de função hepática antes do início da terapia, após elevação de dose ou quando clinicamente indicado; a terapia deve ser interrompida se ALT e AST atingirem ou excederem 3x o limite superior da normalidade de forma persistente. Precaução maior é recomendada em pacientes com histórico de doença hepática ou de grande ingestão alcoólica. Fontes: bula Pravastatina Sódica (genérico), Sanofi Medley, item 6; bula PRAVACOL, Bristol-Myers Squibb, seções Posologia e Advertências.",
