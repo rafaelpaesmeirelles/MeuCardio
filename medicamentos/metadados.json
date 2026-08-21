@@ -620,10 +620,14 @@
     "dbp_reduction_mmhg": -15.0,
     "bp_evidence_source": "Estudo de dose-resposta duplo-cego, cruzado, em atenção primária, 98 pacientes com hipertensão leve a moderada, comparando atenolol 50/100/200 mg/dia contra placebo: com a dose de **100 mg/dia** (a que produziu o maior efeito hipotensor, com platô — doses maiores até 300 mg não trouxeram redução proporcionalmente maior), diferença de **22/15 mmHg** ao final da fase duplo-cega e de 25/16 mmHg na observação final, **confirmadas nesta sessão (12/08/2026) como valores corrigidos contra o efeito placebo** (desenho cruzado comparando cada dose contra placebo; os valores citados representam o efeito líquido do tratamento ativo, não uma diferença bruta pré/pós). Fonte: Gostick NK, Mayhew SR, Million R, Sagar D, Suxena SR, Ingram DF, Barmer NP. A dose-response study of atenolol in mild to moderate hypertension in general practice. Curr Med Res Opin. 1977. PMID 340136 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão.",
     "brand_names": [
-      "Ablok"
+      "Ablok",
+      "Angipress",
+      "Atenol"
     ],
     "commercial_presentations": [
-      "Ablok® (Biolab Sanus), comprimidos de 25 mg, 50 mg e 100 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
+      "Ablok® (Biolab Sanus), comprimidos de 25 mg, 50 mg e 100 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026.",
+      "Angipress® atenolol 25 mg e 50 mg — comprimidos, embalagem com 28 ou 30 comprimidos (Biosintética Farmacêutica Ltda., empacotado/registrado pelo grupo Aché). ATENÇÃO: a apresentação de 100 mg foi DESCONTINUADA DEFINITIVAMENTE pela Aché em março/2017 (confirmado na própria página de descontinuação do fabricante) — não oferecer essa dosagem sob esta marca. Existe também Angipress CD® (atenolol + clortalidona, 25 mg+12,5 mg e 50 mg+12,5 mg), que é combinação de dose fixa e não pertence a este registro de fármaco isolado. Fontes: ache.com.br (página de descontinuação), sara.com.br (bulas por apresentação), saudedireta.com.br (bula Angipress). WebSearch 20/08/2026.",
+      "Atenol® atenolol 25 mg, 50 mg e 100 mg — comprimidos, embalagem com 28 comprimidos (AstraZeneca do Brasil Ltda.), medicamento de referência para atenolol no Brasil. Fontes: bulasmed.com.br (\"ATENOL\" e \"COMPOSIÇÃO ATENOL\"), consultaremedios.com.br/atenol/bula. WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA: número de registro ANVISA e status de comercialização atual (2026) não reconfirmados diretamente no bulário eletrônico da ANVISA nesta sessão — apenas em mirrors de bulário."
     ]
   },
   {
@@ -1714,7 +1718,10 @@
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing` deste registro (BID em todas as indicações) e da meia-vida já citada em `renal_adjustment` — sem pesquisa nova nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica. Dabigatrana é anticoagulante oral direto (inibidor direto da trombina), sem mecanismo de ação hemodinâmico — redução de pressão arterial sistêmica não é desfecho estudado no ensaio pivotal RE-LY (já citado nas referências deste registro) nem clinicamente relevante para esta classe."
+    "bp_evidence_source": "Não se aplica. Dabigatrana é anticoagulante oral direto (inibidor direto da trombina), sem mecanismo de ação hemodinâmico — redução de pressão arterial sistêmica não é desfecho estudado no ensaio pivotal RE-LY (já citado nas referências deste registro) nem clinicamente relevante para esta classe.",
+    "commercial_presentations": [
+      "Etexilato de Dabigatrana (genérico) — Neo Química Componentes Farmacêuticos, cápsulas; página oficial da ANVISA sobre \"etexilato de dabigatrana: registro de genérico\" confirma existência de registro genérico no Brasil, aprovado a partir de 2008 para prevenção de trombose/AVC. Dosagens exatas (75 mg / 110 mg / 150 mg) e tamanho de embalagem NÃO confirmados com segurança nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar apresentação específica. Não é marca fantasia (é medicamento genérico rotulado pelo nome do laboratório, sem nome comercial próprio) — por isso não entra em `brand_names`, só como apresentação comercial adicional à Pradaxa® já cadastrada. Fontes: gov.br/anvisa (página \"etexilato-de-dabigatrana-registro-de-generico\"), consultaremedios.com.br. WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "dapagliflozina",
@@ -2159,7 +2166,11 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Não se aplica: dopamina é vasopressor/inotrópico usado para ELEVAR a pressão arterial no choque (ver `indications`/`dosing`), não há desfecho de \"redução de PA\" a medir — o efeito pressórico é dose-dependente e ascendente, do dopaminérgico ao alfa-adrenérgico (ver `dosing`), o oposto do que estes dois campos numéricos pretendem capturar.",
-    "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): resolvidas 8 marcações VERIFICAÇÃO HUMANA NECESSÁRIA que dependiam da bula brasileira do REVIVAN (Zambon) — sulfitos como contraindicação, gangrena como reação adversa, técnica/dose de fentolamina no extravasamento, categoria de risco gestacional e efeito de contração uterina, apresentações comerciais (concentração e volume exatos), e os cortes de dose por receptor. Todos confirmados por busca direcionada a mirrors de bula brasileira (consultaremedios/CR, agregadores de bulário) em 12/08/2026 — convergindo integralmente com o rótulo DailyMed/FDA já citado. O conceito de \"dose renal\" abandonado ganhou fonte primária real (PMID 11191541, ANZICS/Bellomo 2000, Lancet), substituindo a nota anterior que citava apenas 'conhecimento consolidado da terapia intensiva' sem citação."
+    "review_note": "Atualizado em 12/08/2026 (agente Medicamentos, 2º lote): resolvidas 8 marcações VERIFICAÇÃO HUMANA NECESSÁRIA que dependiam da bula brasileira do REVIVAN (Zambon) — sulfitos como contraindicação, gangrena como reação adversa, técnica/dose de fentolamina no extravasamento, categoria de risco gestacional e efeito de contração uterina, apresentações comerciais (concentração e volume exatos), e os cortes de dose por receptor. Todos confirmados por busca direcionada a mirrors de bula brasileira (consultaremedios/CR, agregadores de bulário) em 12/08/2026 — convergindo integralmente com o rótulo DailyMed/FDA já citado. O conceito de \"dose renal\" abandonado ganhou fonte primária real (PMID 11191541, ANZICS/Bellomo 2000, Lancet), substituindo a nota anterior que citava apenas 'conhecimento consolidado da terapia intensiva' sem citação.",
+    "commercial_presentations": [
+      "Cloridrato de Dopamina (genérico) — Laboratório Teuto Brasileiro S/A, solução injetável 5 mg/mL, ampola de vidro âmbar com 10 mL, uso hospitalar restrito, intravenoso. Fonte: consultaremedios.com.br/cloridrato-de-dopamina-teuto. WebSearch 20/08/2026.",
+      "Cloridrato de Dopamina (genérico) — Hipolabor Farmacêutica Ltda., solução injetável 5 mg/mL, ampola de vidro âmbar com 10 mL (também com apresentação em ampola de 5 mL, caixa com 100 unidades), uso hospitalar restrito, intramuscular ou intravenoso. Fonte: consultaremedios.com.br/cloridrato-de-dopamina-hipolabor, sara.com.br. WebSearch 20/08/2026. Nota: nenhuma das duas é marca fantasia — são medicamentos genéricos rotulados pelo nome do laboratório fabricante, adicionados aqui como apresentação comercial complementar à Revivan® já cadastrada, não como novo `brand_name`."
+    ]
   },
   {
     "slug": "dronedarona",
@@ -4750,7 +4761,9 @@
       "Solução injetável 1 mg/mL, ampola/frasco de 10 mL (uso restrito a estabelecimento de saúde)"
     ],
     "commercial_presentations": [
-      "Lactato de milrinona — genérico de Fresenius Kabi Brasil Ltda. **Confirmado por busca direcionada ao site oficial do fabricante em 12/08/2026**: solução injetável IV de 1 mg/mL (cada mL contém 1 mg de milrinona na forma de lactato, equivalente a 0,699 mg de milrinona base), registrada na ANVISA, comercializada em caixas com 5, 10, 25 ou 50 ampolas de 10 mL — indicada para tratamento IV de curto prazo da insuficiência cardíaca congestiva grave, inclusive síndrome de baixo débito pós-cirurgia cardíaca. Referência histórica Primacor® IV, mesmo padrão de apresentação. Número de registro ANVISA específico não extraído do PDF oficial nesta sessão (arquivo em formato binário comprimido não legível pela ferramenta de leitura) — VERIFICAÇÃO HUMANA NECESSÁRIA restrita a esse número exato; a existência comercial real, concentração e apresentações estão confirmadas pela fonte oficial do fabricante."
+      "Lactato de milrinona — genérico de Fresenius Kabi Brasil Ltda. **Confirmado por busca direcionada ao site oficial do fabricante em 12/08/2026**: solução injetável IV de 1 mg/mL (cada mL contém 1 mg de milrinona na forma de lactato, equivalente a 0,699 mg de milrinona base), registrada na ANVISA, comercializada em caixas com 5, 10, 25 ou 50 ampolas de 10 mL — indicada para tratamento IV de curto prazo da insuficiência cardíaca congestiva grave, inclusive síndrome de baixo débito pós-cirurgia cardíaca. Referência histórica Primacor® IV, mesmo padrão de apresentação. Número de registro ANVISA específico não extraído do PDF oficial nesta sessão (arquivo em formato binário comprimido não legível pela ferramenta de leitura) — VERIFICAÇÃO HUMANA NECESSÁRIA restrita a esse número exato; a existência comercial real, concentração e apresentações estão confirmadas pela fonte oficial do fabricante.",
+      "Lactato de Milrinona (genérico) — Fresenius Kabi Brasil Ltda., solução injetável 1 mg/mL. Apresentação/tamanho de ampola exatos não confirmados com segurança nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA. Fonte: bula profissional oficial em fresenius-kabi.com/br. WebSearch 20/08/2026.",
+      "Lactato de Milrinona (genérico) — Farma Vision, solução injetável 1 mg/mL, frasco-ampola/frasco de 10 mL, uso intravenoso. Fonte: sara.com.br (bula do paciente), distribuidoracristal.com.br. WebSearch 20/08/2026. Nota: nenhuma das duas é marca fantasia — adicionadas como apresentação comercial complementar à Primacor®/Primacor IV® já cadastrada, não como novo `brand_name`."
     ]
   },
   {
@@ -4806,8 +4819,14 @@
       "Inibidores da fosfodiesterase-5 (sildenafila, tadalafila, vardenafila) — risco de hipotensão grave por potencialização do efeito vasodilatador via óxido nítrico/GMPc; a bula brasileira do MONOCORDIL trata este risco em Interações Medicamentosas (não no item formal de contraindicações), mas já registrado em `notes.Precaucoes` deste verbete com o mesmo peso clínico de uma contraindicação absoluta."
     ],
     "hepatic_adjustment": "Não há orientação de ajuste hepático específico na bula profissional brasileira do MONOCORDIL, já citada nas referências deste registro — diferente do dinitrato de isossorbida (que depende de metabolismo hepático de primeira passagem para ativação), o mononitrato já é a forma ativa, o que reduz a relevância teórica da função hepática sobre sua farmacocinética.",
-    "brand_names": [],
-    "commercial_presentations": []
+    "brand_names": [
+      "Monocordil"
+    ],
+    "commercial_presentations": [
+      "Monocordil® mononitrato de isossorbida 20 mg — comprimidos, embalagem com 20 ou 30 comprimidos (Laboratórios Baldacci Ltda.). Fonte: bula profissional oficial em lbaldacci.com.br e drogasil.com.br/bulas/monocordil-baldacci. WebSearch 20/08/2026.",
+      "Monocordil® mononitrato de isossorbida 40 mg — comprimidos, embalagem com 30 comprimidos (Laboratórios Baldacci Ltda.). Mesma fonte acima. WebSearch 20/08/2026.",
+      "Monocordil® Retard mononitrato de isossorbida 50 mg — cápsulas de liberação prolongada, embalagem com 15 ou 30 cápsulas (Laboratórios Baldacci Ltda.). Mesma fonte acima. WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "nebivolol-cloridrato",
@@ -5138,7 +5157,8 @@
     "pregnancy": "**O achado mais grave desta frente, e é dose-dependente e quantificado.** Não há estudo adequado e bem controlado nem em animais de laboratório nem em gestantes. Mas em **três estudos em ovelhas prenhes** o nitroprussiato **atravessou a barreira placentária**, e os **níveis fetais de cianeto mostraram-se proporcionais aos níveis maternos** de nitroprussiato: a transformação metabólica levou a **níveis fatais de cianeto nos fetos**. Os números são explícitos — a infusão de **25 mcg/kg/min por uma hora matou todos os fetos**, enquanto **1 mcg/kg/min por uma hora** resultou em cordeiros normais. Ler junto com o teto de adulto da bula brasileira, de **8 mcg/kg/min**: o intervalo entre a dose inócua e a letal, no modelo animal, é estreito e cai dentro da faixa de uso humano. Fonte: rótulo aprovado pelo FDA (DailyMed) para o nitroprussiato de sódio injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
     "lactation": "**Decidir entre suspender a amamentação ou o fármaco**, pelo potencial de reação adversa grave no lactente. Não se sabe se o nitroprussiato e seus metabólitos são excretados no leite humano. Fonte: rótulo aprovado pelo FDA (DailyMed) para o nitroprussiato de sódio injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
     "brand_names": [
-      "Nitroprus — já citado em `dosing.diluicao e equivalencia` e nas referências deste registro (Cristália)"
+      "Nitroprus — já citado em `dosing.diluicao e equivalencia` e nas referências deste registro (Cristália)",
+      "Nipride"
     ],
     "presentations": [
       "VERIFICAÇÃO HUMANA NECESSÁRIA — apresentação comercial exata (miligramas por ampola) do Nitroprus (Cristália) não confirmada em bula nesta sessão; o esquema de diluição já registrado em `dosing.diluicao e equivalencia` deste verbete parte de '50 mg diluídos em glicose 5%', consistente com ampola de 50mg, mas o texto exato da apresentação comercial não foi verificado."
@@ -5150,7 +5170,10 @@
     "duration_of_action_source": "Literatura farmacológica (StatPearls/rótulo FDA para nitroprussiato de sódio), obtida via resultado sintetizado de busca.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Já há dado percentual (não absoluto) registrado em `dosing.efeito esperado na dose media` deste verbete: na dose média de 3 mcg/kg/min, a pressão costuma cair para 60-70% do valor pré-tratamento — ou seja, uma redução de 30 a 40%, dose-dependente. Um estudo isolado (não identificado com segurança nesta sessão) relatou redução de pressão arterial MÉDIA de 17% com dose de ~1mg em infusão de 20 minutos, associada a 13% de queda no fluxo sanguíneo cerebral — citado aqui só como ordem de grandeza adicional, contexto de neurocirurgia/hipotensão controlada, não diretamente comparável à emergência hipertensiva. Não é possível preencher um valor fixo em mmHg: a redução absoluta depende inteiramente da pressão basal do paciente em emergência hipertensiva, que varia amplamente — por isso os campos numéricos foram deixados nulos, com a redução percentual (já existente no registro) mantida como o dado válido disponível."
+    "bp_evidence_source": "Já há dado percentual (não absoluto) registrado em `dosing.efeito esperado na dose media` deste verbete: na dose média de 3 mcg/kg/min, a pressão costuma cair para 60-70% do valor pré-tratamento — ou seja, uma redução de 30 a 40%, dose-dependente. Um estudo isolado (não identificado com segurança nesta sessão) relatou redução de pressão arterial MÉDIA de 17% com dose de ~1mg em infusão de 20 minutos, associada a 13% de queda no fluxo sanguíneo cerebral — citado aqui só como ordem de grandeza adicional, contexto de neurocirurgia/hipotensão controlada, não diretamente comparável à emergência hipertensiva. Não é possível preencher um valor fixo em mmHg: a redução absoluta depende inteiramente da pressão basal do paciente em emergência hipertensiva, que varia amplamente — por isso os campos numéricos foram deixados nulos, com a redução percentual (já existente no registro) mantida como o dado válido disponível.",
+    "commercial_presentations": [
+      "Nipride® nitroprussiato de sódio di-hidratado 50 mg — pó liófilo para solução injetável, frasco-ampola + ampola diluente de 2 mL (glicose 100 mg + água para injeção), caixa com 5 frascos-ampola + 5 ampolas de diluente (Biolab Sanus Farmacêutica Ltda.). Distinta da Nitroprus® (Cristália) já cadastrada — marcas e laboratórios diferentes para o mesmo princípio ativo. Fontes: bulas.med.br (\"NIPRIDE\"), bibliomed.com.br/bulario. WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA: número de registro ANVISA da Nipride® não confirmado diretamente no bulário eletrônico nesta sessão."
+    ]
   },
   {
     "slug": "noradrenalina-norepinefrina",
@@ -9109,7 +9132,9 @@
     "review_status": "revisado",
     "generic_name": "Indapamida + Perindopril (arginina/erbumina)",
     "brand_names": [
-      "ACERTALIX"
+      "ACERTALIX",
+      "Coversyl Plus (Servier)",
+      "Perindopril Erbumina + Indapamida (EMS, genérico)"
     ],
     "drug_class": "Combinação: IECA + diurético tiazida-símile (derivado indólico clorosulfamoilado)",
     "mechanism": "O perindopril arginina é convertido no organismo a perindoprilato, seu metabólito ativo, que inibe a enzima conversora de angiotensina, reduzindo a formação de angiotensina II e promovendo relaxamento dos vasos sanguíneos (mecanismo idêntico ao do sal de terc-butilamina/erbumina, apenas com sal de arginina, que confere maior estabilidade galênica — informação farmacológica geral, não detalhada explicitamente nesta bula específica). A indapamida é um diurético do tipo tiazida-símile que aumenta a produção e eliminação de urina, causando apenas discreto aumento da diurese. Os dois componentes reduzem a pressão arterial por mecanismos complementares e, combinados, potencializam o controle pressórico.",
@@ -9187,7 +9212,9 @@
     "duration_of_action_source": null,
     "commercial_presentations": [
       "ACERTALIX® (5 mg + 1,25 mg) — comprimido revestido, embalagens com 10 ou 30 unidades (Servier).",
-      "ACERTALIX® (10 mg + 2,5 mg) — comprimido revestido, embalagens com 10 ou 30 unidades (Servier)."
+      "ACERTALIX® (10 mg + 2,5 mg) — comprimido revestido, embalagens com 10 ou 30 unidades (Servier).",
+      "Coversyl Plus® perindopril erbumina 4 mg + indapamida 1,25 mg — comprimido revestido, caixa com 15 ou 30 comprimidos (Laboratórios Servier do Brasil). Fonte: bula oficial Servier (servier.com.br/wp-content/uploads/sites/42/2025/09/ps.bula_COVERSYL-PLUS.pdf) e ConsultaRemédios (consultaremedios.com.br/coversyl-plus/4mg-1-25mg-caixa-com-30-comprimidos/p); WebSearch 20/08/2026.",
+      "Perindopril Erbumina + Indapamida 4 mg + 1,25 mg (genérico) — comprimido, embalagens com 15, 30 ou 60 comprimidos (EMS S.A.). Fonte: bula.gratis/ems_s_a/1/perindopril_erbumina_indapamida/profissional; WebSearch 20/08/2026."
     ]
   },
   {
