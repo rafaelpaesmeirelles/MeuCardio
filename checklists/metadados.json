@@ -18146,5 +18146,310 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "aplicacao-da-regra-herdoo2-para-suspender-anticoagulacao-apos-tev-nao-provocado",
+    "condicao": "Decisão de suspender ou estender a anticoagulação após um primeiro TEV não provocado em mulheres, pela regra HERDOO2",
+    "resumo": "Passo a passo para aplicar a regra HERDOO2 (hiperpigmentação/edema/rubor, D-dímero, obesidade, idade) ao final do tratamento anticoagulante de curto prazo em mulheres com primeiro episódio de tromboembolismo venoso não provocado, e traduzir a pontuação em conduta.",
+    "documento_origem": "regra-herdoo2-duracao-da-anticoagulacao-apos-tev-nao-provocado-em-mulheres",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rodger MA, Le Gal G, Anderson DR, et al; REVERSE II Study Investigators. Validating the HERDOO2 rule to guide treatment duration for women with unprovoked venous thrombosis: multinational prospective cohort management study. BMJ. 2017;356:j1065. DOI: 10.1136/bmj.j1065. PMID: 28314711",
+      "Rodger MA, Scarvelis D, Kahn SR, et al. Long-term risk of venous thrombosis after stopping anticoagulants for a first unprovoked event: A multi-national cohort. Thromb Res. 2016;143:152-158. DOI: 10.1016/j.thromres.2016.03.028. PMID: 27086275"
+    ],
+    "itens": [
+      {
+        "id": "herdoo2-elegibilidade-sexo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que a paciente é do sexo feminino — a regra HERDOO2 foi desenvolvida e validada especificamente para mulheres, não para homens",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "herdoo2-elegibilidade-nao-provocado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o evento índice foi um TEV NÃO PROVOCADO (sem cirurgia, imobilização prolongada, uso de estrogênio ou outro fator transitório identificável) — a regra não foi validada para TEV provocado",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "herdoo2-elegibilidade-tratamento-completo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que a paciente completou o tratamento anticoagulante de curto prazo (5 a 12 meses) antes de aplicar os critérios — a regra não é ferramenta de decisão precoce na fase aguda do evento",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "herdoo2-criterio-hiperpigmentacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Examinar as duas pernas em busca de hiperpigmentação, edema ou rubor (vermelhidão) — presença em qualquer uma delas soma 1 ponto na regra",
+        "origem_secao": "A regra herdoo2"
+      },
+      {
+        "id": "herdoo2-criterio-d-dimero",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosar o D-dímero com a paciente ainda em uso do anticoagulante — valor igual ou acima do limiar definido pela regra soma 1 ponto; dosagem feita fora desse momento não corresponde ao critério validado",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "herdoo2-criterio-obesidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o índice de massa corporal — obesidade (IMC igual ou acima do limiar de corte da regra) soma 1 ponto",
+        "origem_secao": "A regra herdoo2"
+      },
+      {
+        "id": "herdoo2-criterio-idade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrar a idade da paciente — idade igual ou acima do limiar de corte da regra soma 1 ponto",
+        "origem_secao": "A regra herdoo2"
+      },
+      {
+        "id": "herdoo2-somar-pontuacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Somar os quatro critérios e classificar a paciente: 0 ou 1 ponto = baixo risco de recorrência; 2 pontos ou mais = risco mais alto",
+        "origem_secao": "A regra herdoo2"
+      },
+      {
+        "id": "herdoo2-conduta-baixo-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se baixo risco (0 ou 1 ponto): discutir com a paciente a possibilidade de suspender a anticoagulação, ponderando o risco hemorrágico da continuação indefinida",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "herdoo2-conduta-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se 2 pontos ou mais, ou se a paciente for homem: manter a discussão sobre anticoagulação estendida — o risco de recorrência de longo prazo é sistematicamente mais alto nesses grupos do que no de mulheres de baixo risco HERDOO2",
+        "origem_secao": "O risco de longo prazo por subgrupo (rodger, thromb res 2016)"
+      },
+      {
+        "id": "herdoo2-orientacao-risco-residual",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar a paciente de que 'baixo risco' não é 'risco zero' — mesmo no grupo favorável, houve risco cumulativo de recorrência em 8 anos na coorte de validação, apenas menor que o dos demais grupos",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "herdoo2-seguimento-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Agendar reavaliação clínica para reconsiderar a decisão caso surja novo fator de risco trombótico ou episódio de sangramento significativo durante o seguimento",
+        "origem_secao": "Sintese pratica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), em 21/08/2026. Itens derivados do documento já verificado de Tromboembolismo citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "duracao-da-profilaxia-secundaria-antibiotica-na-febre-reumatica-por-categoria-de-risco",
+    "condicao": "Definição da duração da profilaxia secundária antibiótica na febre reumática, por categoria de risco (gravidade da cardite e presença de doença valvar residual)",
+    "resumo": "Checklist para classificar a categoria de risco do paciente com diagnóstico confirmado de febre reumática/cardiopatia reumática, iniciar o esquema correto de profilaxia secundária e definir a duração adequada — que muda conforme a gravidade da cardite e a presença de doença valvar residual.",
+    "documento_origem": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ralph AP, Noonan S, Wade V, Currie BJ. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40(2):70-74.",
+      "Implementing the World Health Organization Guidelines for Rheumatic Heart Disease in Highly Endemic Settings: Balancing Evidence with Reality. Global Heart. 2026."
+    ],
+    "itens": [
+      {
+        "id": "profilaxia-fr-confirmar-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar diagnóstico de febre reumática aguda ou cardiopatia reumática antes de iniciar a profilaxia secundária — indicada a todo paciente com o diagnóstico confirmado",
+        "origem_secao": "Racional"
+      },
+      {
+        "id": "profilaxia-fr-classificar-categoria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar a categoria de risco do paciente pela gravidade da cardite: sem cardite/doença leve; cardite moderada sem doença valvar residual; ou doença grave com doença valvar residual persistente",
+        "origem_secao": "Duracao — sem cardite ou doenca leve / cardite moderada / doenca grave"
+      },
+      {
+        "id": "profilaxia-fr-esquema-primeira-escolha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar benzilpenicilina benzatina (penicilina G benzatina) por via intramuscular como esquema de primeira escolha, em intervalo periódico regular definido pelo protocolo, sem atraso na aplicação",
+        "origem_secao": "Esquema — primeira escolha"
+      },
+      {
+        "id": "profilaxia-fr-alergia-penicilina",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se houver alergia confirmada à penicilina, substituir pelo esquema alternativo com eritromicina por via oral",
+        "origem_secao": "Esquema alternativo — alergia a penicilina"
+      },
+      {
+        "id": "profilaxia-fr-duracao-sem-cardite",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Sem cardite ou doença leve: manter a profilaxia por, no mínimo, 10 anos após o último episódio, ou até os 21 anos de idade — o que ocorrer por último",
+        "origem_secao": "Duracao — sem cardite ou doenca leve"
+      },
+      {
+        "id": "profilaxia-fr-duracao-cardite-moderada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Cardite moderada, sem doença valvar residual: manter a profilaxia até os 35 anos de idade",
+        "origem_secao": "Duracao — cardite moderada, sem doenca valvar residual"
+      },
+      {
+        "id": "profilaxia-fr-duracao-doenca-grave",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Doença grave com doença valvar residual persistente: manter a profilaxia até os 40 anos de idade ou por período mais prolongado, a critério clínico individualizado",
+        "origem_secao": "Duracao — doenca grave, com doenca valvar residual persistente"
+      },
+      {
+        "id": "profilaxia-fr-orientacao-adesao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar o paciente e a família sobre a importância da adesão contínua à profilaxia — a interrupção é a principal via de recorrência e de progressão do dano valvar",
+        "origem_secao": "Racional"
+      },
+      {
+        "id": "profilaxia-fr-orientacao-logistica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Antecipar e discutir com o paciente as barreiras logísticas conhecidas de manutenção em longo prazo, como interrupções de fornecimento e dificuldade de aplicação intramuscular recorrente",
+        "origem_secao": "Desafios de implementacao"
+      },
+      {
+        "id": "profilaxia-fr-vigilancia-reacao-adversa",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Observar o paciente após a aplicação para reação adversa — reações raras porém potencialmente fatais são mais descritas em pacientes com doença valvar grave",
+        "origem_secao": "Desafios de implementacao"
+      },
+      {
+        "id": "profilaxia-fr-registro-categoria",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Registrar em prontuário a categoria de risco definida e a data prevista de reavaliação/encerramento da profilaxia, para não depender de memória em consultas futuras",
+        "origem_secao": "Duracao — sem cardite ou doenca leve / cardite moderada / doenca grave"
+      },
+      {
+        "id": "profilaxia-fr-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliar periodicamente se a categoria de risco (gravidade da lesão valvar) mudou ao longo do seguimento, o que pode alterar a duração planejada da profilaxia",
+        "origem_secao": "Duracao — doenca grave, com doenca valvar residual persistente"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), em 21/08/2026. Itens derivados do documento já verificado de Febre reumática citado em source_refs, com a seção de origem registrada em cada item. Nenhum item de categoria 'medicacao' cita dose numérica, em linha com o próprio documento-fonte, que já registra a posologia apenas em prosa."
+  },
+  {
+    "slug": "aplicacao-dos-criterios-ecocardiograficos-whf-2023-para-cardiopatia-reumatica",
+    "condicao": "Aplicação dos critérios ecocardiográficos da WHF 2023 para rastreamento, confirmação e estadiamento A-D da cardiopatia reumática",
+    "resumo": "Passo a passo para escolher o conjunto certo de critérios (rastreamento até 20 anos vs. confirmatórios), medir os cortes numéricos exatos de jato, velocidade, gradiente e espessura valvar, e classificar o achado no estadiamento A-D que substituiu 'borderline'/'definite'/'latente'.",
+    "documento_origem": "criterios-ecocardiograficos-whf-2023-rastreamento-confirmacao-e-estadiamento",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com; o artigo NÃO está indexado no PubMed Central. Boxes 3 a 7 e Tabelas 1 a 3 transcritas item a item em 31/07/2026, na versão já corrigida pela errata abaixo",
+      "Author Correction: 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 May;21(5):347. DOI: 10.1038/s41569-024-01018-w. PMID: 38532021 — errata de referência cruzada (Box 4 para Box 5), sem alteração de valor numérico; verificado que a versão consultada já a incorpora",
+      "Koç S, Arslan D. Echocardiographic evidence of silent carditis in asymptomatic children with elevated antistreptolysin O titers: a cross-sectional study. Cardiol Young. 2026 Jun 24:1-5. DOI: 10.1017/S1047951126113730. PMID: 42339605 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."
+    ],
+    "itens": [
+      {
+        "id": "whf-definir-faixa-etaria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Definir a faixa etária do paciente antes de escolher o conjunto de critérios: RASTREAMENTO só se aplica a até 20 anos; acima disso, usar sempre os critérios CONFIRMATÓRIOS",
+        "origem_secao": "Criterios de RASTREAMENTO (para indivíduos de até 20 anos)"
+      },
+      {
+        "id": "whf-rastreio-jato-mitral",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "No rastreamento (até 20 anos): medir o comprimento do jato de regurgitação mitral da vena contracta até o último pixel de cor, com o corte por peso (menor ou maior que 30 kg), em pelo menos uma incidência e em pelo menos dois quadros consecutivos",
+        "origem_secao": "Criterios de RASTREAMENTO (para indivíduos de até 20 anos)"
+      },
+      {
+        "id": "whf-rastreio-substituto-idade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o peso não estiver disponível, usar a idade como substituto no rastreamento — atenção à incoerência do corte de 10 anos entre as duas caixas do documento original; na dúvida, priorizar o peso como critério primário",
+        "origem_secao": "Duas incoerencias internas do documento, presentes na versao corrigida"
+      },
+      {
+        "id": "whf-confirmatorio-mitral",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Nos critérios confirmatórios de regurgitação mitral patológica: exigir jato observado em pelo menos duas incidências, velocidade mínima definida em um envelope completo, e jato pansistólico em pelo menos um envelope",
+        "origem_secao": "Criterios CONFIRMATORIOS de disfuncao valvar patologica"
+      },
+      {
+        "id": "whf-confirmatorio-aortica",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Nos critérios confirmatórios de regurgitação aórtica patológica: exigir jato observado em pelo menos duas incidências, velocidade mínima na diástole inicial e jato pandiastólico em pelo menos um envelope",
+        "origem_secao": "Criterios CONFIRMATORIOS de disfuncao valvar patologica"
+      },
+      {
+        "id": "whf-confirmatorio-estenose-mitral",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Para estenose mitral: confirmar movimento restrito dos folhetos com redução da abertura valvar e o gradiente médio de pico do critério; quando o Doppler espectral não estiver disponível, aceitar a avaliação bidimensional da área do orifício",
+        "origem_secao": "Criterios CONFIRMATORIOS de disfuncao valvar patologica"
+      },
+      {
+        "id": "whf-excluir-diferenciais",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir prolapso de valva mitral e valva aórtica bicúspide como causa da regurgitação antes de atribuir o achado à cardiopatia reumática",
+        "origem_secao": "Criterios CONFIRMATORIOS de disfuncao valvar patologica"
+      },
+      {
+        "id": "whf-espessura-folheto-por-idade",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Medir a espessura do folheto anterior mitral na diástole, na excursão máxima, usando o corte correto por faixa etária (o limiar sobe em três degraus: até 20 anos, de 21 a 40 anos, e acima de 40 anos)",
+        "origem_secao": "Caracteristicas MORFOLOGICAS confirmatorias"
+      },
+      {
+        "id": "whf-nao-laudar-terminologia-antiga",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não laudar como 'borderline', 'definite' ou 'latente' — a nomenclatura foi aposentada em favor do estadiamento A-D, que já carrega a conduta associada",
+        "origem_secao": "O que mudou no vocabulario"
+      },
+      {
+        "id": "whf-estadiamento",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar o achado no estadiamento A-D: A (critérios mínimos, só até 20 anos), B (leve com característica morfológica associada), C (avançada, com risco de complicação) ou D (avançada, com complicação já instalada)",
+        "origem_secao": "Estadiamento A-D"
+      },
+      {
+        "id": "whf-conduta-estagio-a",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se estágio A: agendar reavaliação em 1 a 2 anos, com possibilidade de suspender a profilaxia secundária caso o exame normalize",
+        "origem_secao": "O que mudou no vocabulario"
+      },
+      {
+        "id": "whf-nao-confundir-linha-fechamento",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não interpretar a linha de fechamento ecogênica das cúspides aórticas na incidência paraesternal de eixo curto como espessamento patológico — a própria diretriz considera esse achado normal",
+        "origem_secao": "Caracteristicas MORFOLOGICAS confirmatorias"
+      },
+      {
+        "id": "whf-criterios-fase-aguda",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Na febre reumática AGUDA (fase de miocardite ativa), não exigir as características morfológicas para diagnosticar cardite — basta a regurgitação mitral e/ou aórtica patológica pelos critérios confirmatórios",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798), em 21/08/2026. Itens derivados do documento já verificado de Febre reumática citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
