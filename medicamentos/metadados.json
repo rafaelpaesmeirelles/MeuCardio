@@ -431,10 +431,12 @@
       "**ANCORON** — Libbs, comprimido revestido 200 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 33,91; PMC (ICMS 20%) R$ 34,75. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
-      "Genérico/similar (comprimido 200 mg e injetável 50 mg/mL) — múltiplos fabricantes com registro ANVISA identificados: Biosintética Farmacêutica Ltda., Hipolabor Farmacêutica Ltda., Fresenius Kabi Brasil Ltda., Geolab Indústria Farmacêutica S/A. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Números de registro ANVISA específicos por fabricante não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para o registro exato antes de exibir como definitivo."
+      "Genérico/similar (comprimido 200 mg e injetável 50 mg/mL) — múltiplos fabricantes com registro ANVISA identificados: Biosintética Farmacêutica Ltda., Hipolabor Farmacêutica Ltda., Fresenius Kabi Brasil Ltda., Geolab Indústria Farmacêutica S/A. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Números de registro ANVISA específicos por fabricante não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para o registro exato antes de exibir como definitivo.",
+      "Amioron® (Geolab Indústria Farmacêutica S/A) — cloridrato de amiodarona, medicamento similar: comprimidos de 100 mg (embalagem com 30 comprimidos) e comprimidos de 200 mg (embalagens com 10 ou 30 comprimidos). Fonte: bula do profissional de saúde (Geolab Indústria Farmacêutica S/A, PDF 'Amioron-PF.pdf', geolab.com.br/wp-content/uploads/2021/05/Amioron-PF.pdf, v.07 05/2019) e bula extraída da ANVISA (bula.gratis/geolab_industria_farmaceutica_s_a/0/amioron); conferido via WebSearch em 20/08/2026."
     ],
     "brand_names": [
-      "Ancoron"
+      "Ancoron",
+      "Amioron"
     ]
   },
   {
@@ -1901,10 +1903,12 @@
       "Comprimido 60 mg (embalagens com 20, 25, 30, 50, 60 ou 200 comprimidos)"
     ],
     "commercial_presentations": [
-      "Cardizem® e Cardizem® SR (referência histórica) e genéricos de múltiplos fabricantes (ex. EMS) — bula padrão aprovada pela ANVISA em 23/03/2021, sujeito a retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e detentor de registro atuais não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Cardizem® e Cardizem® SR (referência histórica) e genéricos de múltiplos fabricantes (ex. EMS) — bula padrão aprovada pela ANVISA em 23/03/2021, sujeito a retenção de receita. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e detentor de registro atuais não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Balcor® e Balcor® SR/Retard (Laboratórios Baldacci Ltda.) — cloridrato de diltiazem, medicamento similar: comprimidos de 30 mg e 60 mg (embalagens com 30 ou 60 comprimidos, posologia usual 3-4x/dia) e cápsulas de liberação prolongada 'Balcor SR/Retard' de 90 mg, 120 mg e 180 mg (uso a cada 12h). VERIFICAÇÃO HUMANA NECESSÁRIA: número de registro ANVISA/M.S. específico não foi confirmado nesta sessão — as fontes consultadas (páginas de farmácia e um PDF de bula agregador, remediobarato.com/pdf/e12da76788e9248eddbe38af14032642.pdf) não expunham o número de registro com clareza suficiente. Fonte: bula do paciente/profissional (remediobarato.com) e páginas de produto (Drogaria São Paulo, Drogarias Pacheco, guiadebulas.com); conferido via WebSearch em 20/08/2026."
     ],
     "brand_names": [
-      "Cardizem"
+      "Cardizem",
+      "Balcor"
     ]
   },
   {
@@ -1912,7 +1916,8 @@
     "review_status": "revisado",
     "generic_name": "Dinitrato de Isossorbida",
     "brand_names": [
-      "Isordil"
+      "Isordil",
+      "Angil"
     ],
     "drug_class": "Vasodilatador coronariano — nitrato orgânico",
     "mechanism": "Conversão em óxido nítrico no músculo liso vascular, ativando guanilato ciclase e aumentando GMPc, resultando em relaxamento da musculatura lisa vascular (venodilatação predominante em doses baixas, dilatação arterial adicional em doses mais altas), reduzindo pré-carga e demanda miocárdica de oxigênio",
@@ -1964,7 +1969,10 @@
     "duration_of_action_source": "Já documentado nos campos `notes.Farmacocinetica`, `notes.Tolerancia` e `dosing.\"angina oral regular\"` deste mesmo registro — reaproveitado só para popular o campo estruturado novo, sem pesquisa adicional nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como desfecho de eficácia estudado. O dinitrato de isossorbida reduz pressão arterial como parte do próprio mecanismo (venodilatação/redução de pré-carga, já descrito em `mechanism` deste registro), mas a indicação e os ensaios cadastrados são de profilaxia de angina/adjuvante em ICC (ver `indications`), não de tratamento da hipertensão arterial sistêmica — não há, no registro atual nem no que foi possível pesquisar nesta sessão, uma tabela de redução pressórica placebo-controlada equivalente à usada nos anti-hipertensivos desta base. A própria bula já citada no registro lista hipotensão como contraindicação/precaução (efeito indesejado a evitar), não como desfecho terapêutico medido."
+    "bp_evidence_source": "Não se aplica como desfecho de eficácia estudado. O dinitrato de isossorbida reduz pressão arterial como parte do próprio mecanismo (venodilatação/redução de pré-carga, já descrito em `mechanism` deste registro), mas a indicação e os ensaios cadastrados são de profilaxia de angina/adjuvante em ICC (ver `indications`), não de tratamento da hipertensão arterial sistêmica — não há, no registro atual nem no que foi possível pesquisar nesta sessão, uma tabela de redução pressórica placebo-controlada equivalente à usada nos anti-hipertensivos desta base. A própria bula já citada no registro lista hipotensão como contraindicação/precaução (efeito indesejado a evitar), não como desfecho terapêutico medido.",
+    "commercial_presentations": [
+      "Angil® (Sanval Comércio e Indústria Ltda.) — dinitrato de isossorbida, medicamento similar: comprimido sublingual de 5 mg, embalagens com 20 ou 500 comprimidos (registro M.S. nº 1.0714.0106). Fonte: bula do profissional (remediobarato.com/pdf/f6c3617ef0be309858b93f954e1da0a0.pdf) e página de produto (consultaremedios.com.br/angil/bula, consultaremedios.com.br/angil/5mg-caixa-com-500-comprimidos-sublinguais/p); conferido via WebSearch em 20/08/2026."
+    ]
   },
   {
     "slug": "disopiramida",
@@ -3874,13 +3882,17 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "**Confirmado nesta sessão (WebFetch, 12/08/2026) por leitura direta da rotulagem FDA/DailyMed de indapamida (mesmo setid 59cd3331-7afe-432a-8b50-39533fd5f392 já citado nas `references` deste verbete), seção CLINICAL PHARMACOLOGY / Clinical Studies: a rotulagem genuinamente NÃO traz valor numérico em mmHg** — confirma só, qualitativamente, \"daily doses of indapamide between 1.25 mg and 10 mg produced dose-related antihypertensive effects\" em ensaio paralelo, duplo-cego, controlado por placebo, sem tabela de PAS/PAD por dose no texto já extraído. A mesma seção traz, isso sim, dado quantitativo de outro desfecho (queda de potássio sérico dose-dependente: -0,28 mEq/L com 1,25 mg, -0,61 mEq/L com 5 mg, -0,76 mEq/L com 10 mg) — não é o dado de PA procurado, mas confirma que a ausência de mmHg no rótulo é real, não lacuna de busca desta sessão. Valor em mmHg segue como VERIFICAÇÃO HUMANA NECESSÁRIA genuína, possivelmente disponível só no texto completo do estudo original citado pela FDA, não reproduzido no rótulo em si.",
     "brand_names": [
-      "Natrilix (Servier do Brasil — já citada extensamente como fonte de bula neste registro)"
+      "Natrilix (Servier do Brasil — já citada extensamente como fonte de bula neste registro)",
+      "Indapen SR",
+      "Flux SR"
     ],
     "presentations": [
       "Comprimidos revestidos de 2,5 mg (Natrilix); forma de liberação prolongada Natrilix SR, já citada como fonte de bula em `dosing`/`pregnancy`/`lactation` deste registro"
     ],
     "commercial_presentations": [
-      "VERIFICAÇÃO HUMANA NECESSÁRIA — confirmado nesta sessão que Natrilix (indapamida 2,5 mg, Laboratórios Servier do Brasil Ltda.) é a marca de referência registrada na ANVISA, mas número de registro MS e detalhes de embalagem (15 ou 30 comprimidos, conforme achado desta sessão) não foram conferidos com o mesmo rigor bibliográfico de `commercial_presentations` de `genfibrozila`, cadastrado nesta mesma sessão."
+      "VERIFICAÇÃO HUMANA NECESSÁRIA — confirmado nesta sessão que Natrilix (indapamida 2,5 mg, Laboratórios Servier do Brasil Ltda.) é a marca de referência registrada na ANVISA, mas número de registro MS e detalhes de embalagem (15 ou 30 comprimidos, conforme achado desta sessão) não foram conferidos com o mesmo rigor bibliográfico de `commercial_presentations` de `genfibrozila`, cadastrado nesta mesma sessão.",
+      "Indapen SR® (Torrent do Brasil Ltda., fabricado por Torrent Pharmaceuticals Ltd., Baddi, Índia) — indapamida, medicamento similar: comprimido revestido de liberação prolongada de 1,5 mg, embalagens com 30 ou 90 comprimidos (registro M.S. nº 1.0525.0017). Fonte: bula extraída da ANVISA (bula.gratis/torrent_do_brasil_ltda/0/indapen_sr) e bula do paciente (img.drogasil.com.br/raiadrogasil_bula/IndapenSR.pdf); conferido via WebSearch em 20/08/2026.",
+      "Flux SR® (Biolab Sanus Farmacêutica Ltda., fabricado por Eurofarma Laboratórios S.A.) — indapamida, medicamento similar: comprimido revestido de liberação prolongada de 1,5 mg, embalagens com 30 ou 90 comprimidos (registro M.S. nº 1.0974.0288). Fonte: bula extraída da ANVISA (bula.gratis/biolab_sanus_farmaceutica_ltda/0/flux_sr) e bula do fabricante (static-webv8.jet.com.br/drogaosuper/Bulas/7896112422105.pdf); conferido via WebSearch em 20/08/2026."
     ],
     "renal_adjustment": "**Contraindicada em falência renal grave** (já registrada como contraindicação formal em `contraindications` deste documento). Abaixo desse patamar, um achado farmacológico relevante já registrado em `dosing.Ajuste renal` deste documento é que a indapamida **mantém efeito mesmo com TFG <30 mL/min/1,73m²** — diferente dos tiazídicos clássicos, que perdem eficácia nessa faixa —, mas a depleção de volume que ela produz pode agravar azotemia em quem já tem insuficiência renal, o que pede cautela clínica mesmo sem contraindicação formal. Fonte: bula do NATRILIX SR (indapamida, Servier do Brasil) e rótulo FDA/DailyMed, já citados nas `references` deste registro.",
     "hepatic_adjustment": "**Contraindicada em encefalopatia hepática ou insuficiência hepática grave** (já registrada como contraindicação formal em `contraindications` deste documento). Em hepatopatia menos grave, a bula orienta usar com cautela e iniciar com dose baixa, pelo risco de distúrbio hidroeletrolítico precipitar coma hepático (já registrado em `dosing.Ajuste hepatico` deste documento) — não há esquema numérico de redução de dose por grau de disfunção. Fonte: bula do NATRILIX SR (indapamida, Servier do Brasil)."
@@ -4606,7 +4618,10 @@
     "dbp_reduction_mmhg": -8.0,
     "bp_evidence_source": "Cochrane, Mah GT et al., \"Methyldopa for primary hypertension\", Cochrane Database Syst Rev. 2009 (revisão sistemática de 12 ensaios, 595 pacientes, doses de 500-2250mg/dia, a maioria estudando 750mg/dia): redução média de pressão sistólica de 13 mmHg (IC95% 6-20) e diastólica de 8 mmHg (IC95% 4-13) versus placebo, após 4-6 semanas de tratamento. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao PMID/DOI exato desta revisão Cochrane — não confirmado por E-utilities nesta sessão (dado obtido via resultado sintetizado de busca web, não lido no documento primário).",
     "renal_adjustment": "**Confirmado pelo rótulo FDA em 12/08/2026 — resolve a verificação pendente anterior.** Citação literal: \"Methyldopa is largely excreted by the kidney and patients with impaired renal function may respond to smaller doses\" — a metildopa é excretada majoritariamente por via renal, e paciente com função renal reduzida pode responder a doses menores; a bula **não traz um esquema numérico de ajuste por faixa de clearance de creatinina**, apenas a orientação qualitativa de menor dose sob monitorização clínica mais atenta. **Removida por hemodiálise**: \"Hypertension has recurred occasionally after dialysis in patients given methyldopa because the drug is removed by this procedure\" — hipertensão de rebote ocasional pós-diálise já foi descrita, porque o fármaco é removido pelo procedimento (\"Methyldopa is dialyzable\", seção de superdosagem) — informação prática relevante para paciente em diálise, que pode precisar de dose extra pós-sessão ou reagendamento da tomada. Rótulo FDA (metildopa/ALDOMET genérico), DailyMed setid e1114a58-9ab5-486e-85ed-360365b06396 — consultado via WebFetch em 12/08/2026.",
-    "hepatic_adjustment": "Contraindicado em hepatopatia ativa (hepatite aguda, cirrose ativa) — já registrado em `contraindications` deste verbete; a bula não fornece esquema de redução de dose para hepatopatia leve/estável fora dessa contraindicação formal. Fonte: bula profissional brasileira do ALDOMET (MSD), já citada nas referências deste registro."
+    "hepatic_adjustment": "Contraindicado em hepatopatia ativa (hepatite aguda, cirrose ativa) — já registrado em `contraindications` deste verbete; a bula não fornece esquema de redução de dose para hepatopatia leve/estável fora dessa contraindicação formal. Fonte: bula profissional brasileira do ALDOMET (MSD), já citada nas referências deste registro.",
+    "commercial_presentations": [
+      "Genérico de metildopa (denominação genérica, sem marca comercial própria distinta de Aldomet) — comprimidos revestidos de 250 mg e 500 mg, com registro por múltiplos fabricantes confirmados nesta sessão: EMS S/A (fabricado por EMS ou por Novamed Fabricação de Produtos Farmacêuticos Ltda., Manaus/AM), Hipolabor Farmacêutica Ltda. (CNPJ 19.570.720/0001-10), Laboratório Farmacêutico da Marinha — LFM (registro M.S. nº 1.2625.0005), Biosintética (Aché) e Prati-Donaduzzi. Fonte: bulas extraídas da ANVISA e páginas de farmácia (bula.gratis/ems_s_a, consultaremedios.com.br/metildopa-lfm, consultaremedios.com.br/metildopa-hipolabor, farmaindex.com/bulas/metildopa); conferido via WebSearch em 20/08/2026."
+    ]
   },
   {
     "slug": "metoprolol",
@@ -5654,7 +5669,9 @@
     "pregnancy": "Não há estudos adequados e bem controlados em gestantes. **Usar na gravidez somente se o benefício potencial justificar o risco ao feto.** A bula registra que a propafenona **atravessa a barreira placentária em humanos**. Fonte: bula do profissional do RITMONORM (Abbott).",
     "lactation": "A excreção no leite materno **não foi estudada**, e dados limitados sugerem que a propafenona **pode ser excretada**. Usar com cuidado em lactantes. Fonte: bula do profissional do RITMONORM (Abbott).",
     "brand_names": [
-      "Ritmonorm"
+      "Ritmonorm",
+      "Vatis",
+      "Tuntá"
     ],
     "half_life_hours": 5.5,
     "half_life_note": "Farmacocinética BIMODAL, dependente do polimorfismo do CYP2D6 — não há um único valor representativo: em mais de 90% dos pacientes (metabolizadores extensivos), a meia-vida de eliminação varia de 2 a 10 horas (valor aqui é o ponto médio, 5,5h); em menos de 10% (metabolizadores pobres, que não formam ou formam minimamente o metabólito 5-hidroxi via CYP2D6), a meia-vida estimada sobe para 10 a 32 horas — cerca de 2 a 5 vezes maior, com concentrações plasmáticas aproximadamente o dobro na mesma dose diária. Isso é clinicamente relevante: metabolizadores pobres acumulam mais o fármaco e têm maior risco de efeito pró-arrítmico, coerente com a recomendação já registrada de escalonamento lento (3-4 dias) e hospitalização inicial em idosos. Fonte: rótulo aprovado pelo FDA para propafenona hydrochloride (DailyMed) — consultado via WebSearch em 10/08/2026.",
@@ -5675,6 +5692,10 @@
       "Bradicardia (2%) e distúrbios de condução, pela fraca atividade betabloqueadora adicional já descrita no `mechanism`; palpitações (2%), tremor (2%), dispneia (2%), fraqueza (3%).",
       "Broncoespasmo em paciente com obstrução de via aérea (asma), coerente com a advertência de cautela já registrada no campo `notes` deste item.",
       "fonte: rótulo aprovado pelo FDA para propafenona hidrocloreto, tablet film coated (DailyMed, setid c65253ab-937f-4982-b841-69c2b9f9ccdb) e bula profissional brasileira do RITMONORM já citada nas referências. Tabela de frequência (>5% e 1-5%) confirmada por leitura direta do rótulo via DailyMed em 11/08/2026, resolvendo a lacuna desta sessão sobre a granularidade comum/incomum."
+    ],
+    "commercial_presentations": [
+      "Vatis® (Libbs Farmacêutica Ltda.) — cloridrato de propafenona, medicamento similar: comprimidos revestidos de 150 mg (registro M.S. nº 1.0033.0184, embalagens com 60 ou 90 comprimidos) e comprimidos revestidos de 300 mg (registros M.S. nº 1003302070044 — embalagem com 90 comprimidos — e nº 1003302070052 — embalagem com 10 comprimidos). Fonte: bulas profissionais Libbs Farmacêutica Ltda. (libbs.com.br/wp-content/uploads/2016/07/doc-2.-Bula-Profissional_Vatis-150.pdf e doc-2_Bula_Profissional_Vatis300.pdf) e img.drogasil.com.br/raiadrogasil_bula/vatis.pdf; conferido via WebSearch em 20/08/2026.",
+      "Tuntá® (Eurofarma Laboratórios Ltda.) — cloridrato de propafenona, medicamento similar: comprimidos revestidos de 300 mg, embalagem com 30 comprimidos (registro M.S. nº 1004311380040). Fonte: bula profissional Eurofarma (eurofarma.com.br/produtos/bulas/healthcare/pt/bula-tunta.pdf); conferido via WebSearch em 20/08/2026."
     ]
   },
   {
