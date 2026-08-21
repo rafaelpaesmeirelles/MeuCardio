@@ -1714,7 +1714,10 @@
     "duration_of_action_source": "Inferido do próprio esquema posológico já documentado em `dosing` deste registro (BID em todas as indicações) e da meia-vida já citada em `renal_adjustment` — sem pesquisa nova nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica. Dabigatrana é anticoagulante oral direto (inibidor direto da trombina), sem mecanismo de ação hemodinâmico — redução de pressão arterial sistêmica não é desfecho estudado no ensaio pivotal RE-LY (já citado nas referências deste registro) nem clinicamente relevante para esta classe."
+    "bp_evidence_source": "Não se aplica. Dabigatrana é anticoagulante oral direto (inibidor direto da trombina), sem mecanismo de ação hemodinâmico — redução de pressão arterial sistêmica não é desfecho estudado no ensaio pivotal RE-LY (já citado nas referências deste registro) nem clinicamente relevante para esta classe.",
+    "commercial_presentations": [
+      "Mesilato de Etexilato de Dabigatrana 150mg — genérico, Brainfarma Indústria Química e Farmacêutica S.A. (Grupo Hypera), cápsulas, embalagem com 60 unidades. É genérico (nome = substância + laboratório, não marca própria). Fonte: WebSearch (Farmaindex), confirmado — sessão de 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA: nenhuma outra marca própria além de Pradaxa foi encontrada nesta busca."
+    ]
   },
   {
     "slug": "dapagliflozina",
@@ -1765,10 +1768,14 @@
       "**DAPAGLIFLOZINA ACHÉ (GENÉRICO)** — Aché, comprimido revestido 10 mg, embalagem com 30 comprimidos: PMC (ICMS 18%, SP/MG) R$ 157,14; PMC (ICMS 20%, região com alíquota 20%) R$ 161,07. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
-      "Forxiga® (AstraZeneca do Brasil Ltda.; fabricado por AstraZeneca Pharmaceuticals LP, Mount Vernon, Indiana, EUA, ou IPR Pharmaceuticals Inc, Canovanas, Porto Rico), bula aprovada pela ANVISA em 13/05/2024; genéricos já disponíveis no varejo (ex. EMS). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Número de registro ANVISA específico não confirmado — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Forxiga® (AstraZeneca do Brasil Ltda.; fabricado por AstraZeneca Pharmaceuticals LP, Mount Vernon, Indiana, EUA, ou IPR Pharmaceuticals Inc, Canovanas, Porto Rico), bula aprovada pela ANVISA em 13/05/2024; genéricos já disponíveis no varejo (ex. EMS). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); ~54 fármacos do catálogo estavam sem nenhuma apresentação real cadastrada. Número de registro ANVISA específico não confirmado — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Edistride® (dapagliflozina) — AstraZeneca do Brasil Ltda. (também comercializado/distribuído em parceria com Aché); comprimido revestido 10mg (12,30mg de dapagliflozina propanodiol); registro ANVISA 1161802570031, bula aprovada 07/08/2025, válida até 01/03/2027. Mesmas indicações cardiorrenais e diabetes tipo 2. Fonte: WebSearch (não bulário oficial consultado diretamente), confirmado em bula oficial AstraZeneca, página de produto da Aché e nota técnica NatJus — sessão de 20/08/2026.",
+      "Dapagliflozina [genérico] 10mg — EMS S/A; registro ANVISA 1.0235.1455, bula aprovada 24/07/2025, comprimido revestido. Fonte: WebSearch, confirmado em Panvel e notícia oficial ANVISA/PFARMA sobre aprovação do genérico — sessão de 20/08/2026.",
+      "Dapagliflozina [genérico] — Legrand Pharma Indústria Farmacêutica Ltda., comprimido revestido. Fonte: WebSearch, confirmado em medicosbrasil.com (bula) — sessão de 20/08/2026."
     ],
     "brand_names": [
-      "Forxiga"
+      "Forxiga",
+      "Edistride"
     ]
   },
   {
@@ -2434,7 +2441,8 @@
       "**EMPAFLO** — Brace Pharma, comprimido revestido 10 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 119,34; PMC (ICMS 20%) R$ 122,33. Comprimido revestido 25 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 166,56; PMC (ICMS 20%) R$ 170,71. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
-      "Jardiance® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), comprimidos revestidos de 10 mg e 25 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de aprovação de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Jardiance® (Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), comprimidos revestidos de 10 mg e 25 mg. Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Número de registro ANVISA e data de aprovação de bula não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Empagliflozina [genérico] 10mg e 25mg — MedQuímica Indústria Farmacêutica Ltda., comprimidos revestidos, embalagem com 30 unidades. Fonte: WebSearch (não bulário oficial consultado diretamente), confirmado em Drogaria São Paulo, Droga Raia, Drogarias Pacheco e Extrafarma — sessão de 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA: nenhuma marca própria além de Jardiance foi encontrada; Farmanguinhos/Fiocruz tem parceria anunciada com a Boehringer Ingelheim para um genérico, mas ainda em processo de registro na ANVISA, não comercializado."
     ],
     "brand_names": [
       "Jardiance"
@@ -6087,7 +6095,10 @@
     "pregnancy": "**Contraindicado na gravidez**: \"devido ao risco intrínseco de sangramentos e a evidência de que a rivaroxabana atravessa a placenta, Xarelto (rivaroxabana) é contraindicado na gravidez\". A bula acrescenta que \"a segurança e a eficácia de Xarelto (rivaroxabana) não foram estabelecidas em mulheres grávidas\" e que estudos pré-clínicos em animais mostraram **toxicidade materna com alterações placentárias**, levando a toxicidade reprodutiva, **sem identificar potencial teratogênico primário**. Consistente com a contraindicação já registrada no campo `contraindications`. Fonte: bula do XARELTO (rivaroxabana, Bayer S.A.), seção \"Gravidez\", consultada no bulário BulasMed, que republica o texto registrado — o PDF do fabricante é cifrado e não pôde ser lido diretamente (ver limites em .claude/ferramentas/ler_pdf.py).",
     "lactation": "**Só pode ser administrado após descontinuada a amamentação.** A bula afirma: \"a segurança e a eficácia de Xarelto (rivaroxabana) não foram estabelecidas em lactantes. Em ratas, a rivaroxabana é secretada no leite materno. Portanto, Xarelto (rivaroxabana) só pode ser administrado depois de descontinuada a amamentação\". Fonte: bula do XARELTO (rivaroxabana, Bayer S.A.), seção \"Lactação\", consultada no bulário BulasMed, que republica o texto registrado — mesmo contorno usado para a seção de gravidez, pelo mesmo motivo (PDF do fabricante cifrado).",
     "brand_names": [
-      "Xarelto"
+      "Xarelto",
+      "Rivar",
+      "Rivacrist",
+      "Rivaxa"
     ],
     "half_life_hours": 7.0,
     "half_life_note": "Meia-vida de eliminação TERMINAL de 5 a 9 horas em indivíduos saudáveis de 20 a 45 anos (valor aqui é o ponto médio, 7h). Em IDOSOS (60 a 76 anos), a meia-vida sobe para 11 a 13 horas — aproximadamente 2x maior, refletindo redução de clearance renal relacionada à idade, coerente com os ajustes já registrados no campo `dosing` deste item para insuficiência renal. Fonte: rótulo aprovado pelo FDA para XARELTO (rivaroxabana), accessdata.fda.gov, seção Clinical Pharmacology — consultado via WebSearch em 10/08/2026.",
@@ -6112,7 +6123,10 @@
       "XARELTO® 2,5 mg — comprimido revestido, embalagens com 28, 30, 56 ou 60 unidades (Bayer).",
       "XARELTO® 10 mg — comprimido, embalagens com 10 ou 30 unidades (Bayer).",
       "XARELTO® 15 mg — comprimido, embalagens com 14 ou 28 unidades (Bayer).",
-      "XARELTO® 20 mg — comprimido, embalagens com 14 ou 28 unidades (Bayer)."
+      "XARELTO® 20 mg — comprimido, embalagens com 14 ou 28 unidades (Bayer).",
+      "Rivar® (rivaroxabana) — Eurofarma Laboratórios S.A.; comprimidos revestidos. Fonte: WebSearch (não bulário oficial consultado diretamente), bula PDF confirmada — sessão de 20/08/2026.",
+      "Rivacrist® (rivaroxabana) — Abbott Laboratórios do Brasil Ltda.; comprimidos revestidos de 15mg e 20mg. Fonte: WebSearch, confirmado na página oficial da Abbott Brasil (abbottbrasil.com.br) — sessão de 20/08/2026.",
+      "Rivaxa® (rivaroxabana) — Eurofarma Laboratórios S.A. (linha Momenta); comprimidos revestidos de 10mg (emb. 5/10/30), 15mg (emb. 5/15/30) e 20mg (emb. 5/30). Fonte: WebSearch, confirmado em bula oficial no site da Eurofarma (eurofarma.com.br) — sessão de 20/08/2026."
     ]
   },
   {
@@ -6120,7 +6134,9 @@
     "review_status": "revisado",
     "generic_name": "Rosuvastatina (cálcica)",
     "brand_names": [
-      "Crestor"
+      "Crestor",
+      "Rosucor",
+      "Vivacor"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "Inibição competitiva e seletiva da enzima HMG-CoA redutase, etapa limitante na biossíntese hepática de colesterol, resultando em upregulation compensatória de receptores de LDL hepáticos e aumento da depuração plasmática de LDL-C; estatina de maior potência relativa entre as disponíveis, com propriedades hidrofílicas distintas das lipofílicas",
@@ -6166,7 +6182,11 @@
     "duration_of_action_source": "Rótulo aprovado pelo FDA para CRESTOR (rosuvastatina cálcica), consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica — estatina (hipolipemiante), sem efeito hemodinâmico/pressórico relevante descrito em bula."
+    "bp_evidence_source": "Não se aplica — estatina (hipolipemiante), sem efeito hemodinâmico/pressórico relevante descrito em bula.",
+    "commercial_presentations": [
+      "Rosucor® (rosuvastatina cálcica) — comprimidos revestidos de 5mg, 10mg e 20mg (Torrent do Brasil Ltda.; registro ANVISA MS 1.0525.0043). Fonte: WebSearch (não bulário oficial consultado diretamente), confirmado por bula publicada em múltiplas farmácias (Drogasil, Panvel, Araujo, Farmaindex, BulasMed) — sessão de 20/08/2026.",
+      "Vivacor® (rosuvastatina cálcica) — comprimido revestido, apresentação confirmada por bula publicada (jet.com.br/Drogão Super). Laboratório fabricante NÃO identificado com segurança nesta busca — VERIFICAÇÃO HUMANA NECESSÁRIA. Fonte: WebSearch, sessão de 20/08/2026."
+    ]
   },
   {
     "slug": "sacubitrilvalsartana",
@@ -6413,7 +6433,11 @@
     "review_status": "revisado",
     "generic_name": "Sinvastatina",
     "brand_names": [
-      "Zocor"
+      "Zocor",
+      "Sinvalip",
+      "Lipotex",
+      "Revastin",
+      "Vastatil"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "Agente redutor do colesterol derivado sinteticamente de produto de fermentação de Aspergillus terreus. É administrada como lactona INATIVA (pró-fármaco), hidrolisada principalmente no fígado ao β-hidroxiácido correspondente — o principal metabólito ativo, junto de quatro metabólitos ativos adicionais —, que é inibidor específico e competitivo da HMG-CoA redutase, enzima que catalisa a conversão de HMG-CoA a mevalonato, etapa precoce e limitante da taxa de biossíntese do colesterol. A inibição aumenta a expressão de receptores hepáticos de LDL e a depuração plasmática de LDL-C. Sofre ampla extração hepática de primeira passagem: biodisponibilidade sistêmica do metabólito ativo é menor que 5% da dose oral. Respostas terapêuticas máximas ocorrem em 4-6 semanas; ao interromper o tratamento, colesterol e lipídeos retornam aos níveis pré-tratamento.",
@@ -6424,7 +6448,11 @@
       "Sinvastatina [genérico] 10 mg — comprimido revestido, embalagem com 30 unidades (Merck S/A, M.S. 1.0089.0385).",
       "Sinvastatina [genérico] 20 mg — comprimido revestido, embalagem com 30 unidades (Merck S/A, M.S. 1.0089.0385).",
       "Sinvastatina [genérico] 40 mg — comprimido revestido, embalagem com 30 unidades (Merck S/A, M.S. 1.0089.0385).",
-      "**Confirmado nesta sessão (11/08/2026), por leitura direta da bula do ZOCOR® (sinvastatina), MSD Merck Sharp & Dohme Farmacêutica Ltda.**: comprimidos revestidos de 10 mg em caixas contendo **10 ou 30** comprimidos (a bula original lista as duas embalagens de 10mg, correção em relação a revisão anterior deste registro, que só listava a de 30); 20 mg em caixas com 30 comprimidos; 40 mg em caixas com 10 comprimidos; e 80 mg em caixas com 10 comprimidos. Aspecto físico também confirmado na bula: 10mg oval cor pêssego com gravação 'MSD 735'; 20mg arredondado marrom; 40mg vermelho escuro convexo; 80mg vermelho escuro em forma de cápsula. O número de registro M.S. exato não foi localizado nas páginas lidas nesta sessão (bula tem 14 páginas; leitura cobriu a seção de identificação/apresentações e a de eficácia, não a seção final de 'Dizeres legais') — mantida a informação de registro já citada (M.S. 1.0029.0012) sem reconfirmação direta desse número específico nesta sessão."
+      "**Confirmado nesta sessão (11/08/2026), por leitura direta da bula do ZOCOR® (sinvastatina), MSD Merck Sharp & Dohme Farmacêutica Ltda.**: comprimidos revestidos de 10 mg em caixas contendo **10 ou 30** comprimidos (a bula original lista as duas embalagens de 10mg, correção em relação a revisão anterior deste registro, que só listava a de 30); 20 mg em caixas com 30 comprimidos; 40 mg em caixas com 10 comprimidos; e 80 mg em caixas com 10 comprimidos. Aspecto físico também confirmado na bula: 10mg oval cor pêssego com gravação 'MSD 735'; 20mg arredondado marrom; 40mg vermelho escuro convexo; 80mg vermelho escuro em forma de cápsula. O número de registro M.S. exato não foi localizado nas páginas lidas nesta sessão (bula tem 14 páginas; leitura cobriu a seção de identificação/apresentações e a de eficácia, não a seção final de 'Dizeres legais') — mantida a informação de registro já citada (M.S. 1.0029.0012) sem reconfirmação direta desse número específico nesta sessão.",
+      "Sinvalip® (sinvastatina) — EMS S/A; registro ANVISA 1.0235.1255, bula aprovada 23/01/2025; comprimidos revestidos. Fonte: WebSearch (não bulário oficial consultado diretamente), confirmado em Panvel, ConsultaRemédios, bula.com.br, Drogaria Minas Brasil — sessão de 20/08/2026.",
+      "Lipotex® (sinvastatina) — Medley Farmacêutica Ltda.; comprimidos revestidos. Fonte: WebSearch, confirmado em Panvel (bula) e Farmácia Real — sessão de 20/08/2026.",
+      "Revastin® (sinvastatina) — Neo Química (Grupo Hypera Pharma); comprimidos revestidos. Fonte: WebSearch, confirmado em CliqueFarma e outras referências — sessão de 20/08/2026.",
+      "Vastatil® (sinvastatina) — Mabra Farmacêutica Ltda. (Goiânia/GO); comprimidos revestidos de 10mg, 20mg, 40mg e 80mg. Fonte: WebSearch, confirmado em ConsultaRemédios, Médicos Brasil e dr.consulta — sessão de 20/08/2026. NOTA: 'Sinvascor' (Baldacci) foi deliberadamente NÃO incluído — verificado que é combinação de dose fixa sinvastatina 20mg + ezetimiba 10mg, não sinvastatina isolada."
     ],
     "renal_adjustment": "Insuficiência renal moderada: não são necessárias modificações posológicas — a excreção renal de sinvastatina não é significativa. Insuficiência renal grave (depuração de creatinina <30 mL/min): avaliar cuidadosamente o uso de doses maiores que 10 mg/dia; se extremamente necessárias, administrar com cautela. Fonte: bula Sinvastatina (genérico), Merck S/A, item 8.",
     "hepatic_adjustment": "Não há esquema de 'ajuste' de dose — doença hepática ativa ou elevação persistente e inexplicada de transaminases séricas é CONTRAINDICAÇÃO formal ao uso da sinvastatina (item 4). Recomenda-se solicitar testes de função hepática antes de iniciar o tratamento e, posteriormente, quando clinicamente indicado; descontinuar se as transaminases mostrarem evidência de progressão, particularmente se aumentarem acima de três vezes o limite superior da normalidade (LSN) e persistirem nesse patamar. Deve-se usar com cuidado em pacientes que consomem quantidades substanciais de álcool e/ou têm histórico de doença hepática. Fonte: bula Sinvastatina (genérico), Merck S/A, itens 4 e 5.",
