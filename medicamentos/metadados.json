@@ -5266,10 +5266,13 @@
     "renal_adjustment": "Não é necessário ajuste na insuficiência renal leve a moderada (ClCr 30-90 mL/min) — mesmo conteúdo já registrado em `dosing.Ajuste renal` deste verbete, aqui estruturado como campo próprio. Em insuficiência renal grave (ClCr<40) ou possível depleção de volume, iniciar sob supervisão cuidadosa com dose inicial menor (já registrado em `notes.Insuficiencia hepatica grave` deste verbete, que trata os dois casos juntos). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
     "hepatic_adjustment": "Não é necessário ajuste, mesmo em disfunção hepática grave — cautela recomendada, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave (mesmo conteúdo já registrado em `dosing.Ajuste hepático` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
     "brand_names": [
-      "Benicar ODT"
+      "Benicar ODT",
+      "Olmetec"
     ],
     "commercial_presentations": [
-      "Benicar ODT® (Daiichi Sankyo), comprimido orodispersível de 40 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026."
+      "Benicar ODT® (Daiichi Sankyo), comprimido orodispersível de 40 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026.",
+      "Olmetec® 20mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026.",
+      "Olmetec® 40mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026."
     ]
   },
   {
@@ -5889,10 +5892,17 @@
     "dbp_reduction_mmhg": -4.0,
     "bp_evidence_source": "Rótulo profissional aprovado pelo FDA para ramipril (DailyMed, genérico, setid d6d57158-e8f9-4c91-8317-0374e0c87d33, seção 14.1 Hypertension, consultado nesta sessão em 12/08/2026 — a busca anterior, em 10/08/2026, havia sido interrompida por esgotamento de orçamento de WebSearch e bloqueio de proxy de rede, registrado abaixo como histórico): 'lowering supine or standing systolic and diastolic blood pressures 24 hours after dosing by about 6/4 mmHg more than placebo' — estudos controlados de 4 a 12 semanas, dose única diária de 2,5 a 10 mg, sem detalhamento por degrau de dose além dessa faixa. O ensaio HOPE (já citado em `outcomes` deste registro) é ensaio de DESFECHO CARDIOVASCULAR, não um ensaio dedicado de redução pressórica — o benefício cardiovascular observado no HOPE excedeu o que essa queda pressórica modesta isoladamente explicaria, achado citado na literatura como sustentação de um efeito 'além da redução pressórica' do ramipril, mas este campo registra o valor de queda pressórica em si, do rótulo FDA, não uma interpretação sobre o HOPE. Histórico da sessão anterior (10/08/2026): WebSearch atingiu o teto de 200 chamadas do harness durante aquele lote e WebFetch/curl direto ficaram bloqueados por proxy de rede (EGRESS_BLOCKED) para todos os domínios tentados — sem acesso a internet via Bash também. Resolvido nesta sessão (12/08/2026), com as ferramentas de pesquisa disponíveis novamente.",
     "brand_names": [
-      "Naprix"
+      "Naprix",
+      "Triatec",
+      "Ecator"
     ],
     "commercial_presentations": [
-      "Naprix® (Libbs), comprimidos de 2,5 mg, 5 mg e 10 mg, embalagens com 30 unidades — consta na base CMED/Anvisa consultada em 2026. Triatec® não é listado aqui como ativo: a lista oficial de referências excluídas registra cancelamento das apresentações de 2,5 mg e 5 mg e suspensão/cancelamento de apresentações históricas."
+      "Naprix® (Libbs), comprimidos de 2,5 mg, 5 mg e 10 mg, embalagens com 30 unidades — consta na base CMED/Anvisa consultada em 2026. Triatec® não é listado aqui como ativo: a lista oficial de referências excluídas registra cancelamento das apresentações de 2,5 mg e 5 mg e suspensão/cancelamento de apresentações históricas.",
+      "Triatec® 2,5mg — comprimido, embalagem com 30 comprimidos (Sanofi-Aventis Farmacêutica Ltda.). Fonte: saudedireta.com.br (bula Triatec) e consultaremedios.com.br, WebSearch 20/08/2026.",
+      "Triatec® 5mg — comprimido, embalagem com 30 comprimidos (Sanofi-Aventis Farmacêutica Ltda.). Fonte: saudedireta.com.br (bula Triatec) e consultaremedios.com.br, WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar se há apresentação de 10mg no Brasil sob esta marca — não confirmado com segurança nesta busca.",
+      "Ecator® 2,5mg — cápsula, embalagem com 30 cápsulas (Torrent do Brasil Ltda.). Fonte: bula Ecator (jet.com.br/drogaosuper, PDF de bula) e remediobarato.com, WebSearch 20/08/2026.",
+      "Ecator® 5mg — cápsula, embalagem com 30 cápsulas (Torrent do Brasil Ltda.). Fonte: bula Ecator (jet.com.br/drogaosuper, PDF de bula), WebSearch 20/08/2026.",
+      "Ecator® 10mg — cápsula, embalagem com 30 cápsulas (Torrent do Brasil Ltda.). Fonte: bula Ecator (jet.com.br/drogaosuper, PDF de bula), WebSearch 20/08/2026."
     ]
   },
   {
@@ -13989,9 +13999,13 @@
     "sbp_reduction_mmhg": -8.5,
     "dbp_reduction_mmhg": -6.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para fosinopril sodium tablets (DailyMed, genérico, setid ff1323cc-7ad8-488d-94a7-a11555db78a7), seção 14: 'once daily doses of 20 mg to 80 mg lowered supine or seated systolic and diastolic blood pressures 24 hours after dosing by an average of 8-9/6-7 mmHg more than placebo'. **Atenção**: esse dado placebo-corrigido cobre a faixa de dose de 20 a 80 mg — não a dose inicial de 10 mg citada em `dosing`. Os valores numéricos registrados nos campos (-8,5/-6,5 mmHg) são o ponto médio da faixa 8-9/6-7 mmHg informada pelo rótulo. Consultado nesta sessão.",
-    "brand_names": [],
+    "brand_names": [
+      "Monopril"
+    ],
     "commercial_presentations": [
-      "Monopril® (Bristol-Myers Squibb), comprimidos de 10 mg e 20 mg, embalagens com 30 comprimidos. VERIFICAÇÃO HUMANA NECESSÁRIA: fonte é mirror de bulário e agregador de preço, não bula oficial do laboratório nem bulário eletrônico ANVISA consultado diretamente nesta sessão; status de comercialização atual no Brasil não confirmado com segurança (a marca foi descontinuada nos EUA, restando só genérico lá — não está claro se o mesmo já ocorreu no Brasil). Não confundir com Monoplus® (fosinopril + hidroclorotiazida), que é combinação de dose fixa, não o princípio isolado. Número de registro ANVISA não confirmado."
+      "Monopril® (Bristol-Myers Squibb), comprimidos de 10 mg e 20 mg, embalagens com 30 comprimidos. VERIFICAÇÃO HUMANA NECESSÁRIA: fonte é mirror de bulário e agregador de preço, não bula oficial do laboratório nem bulário eletrônico ANVISA consultado diretamente nesta sessão; status de comercialização atual no Brasil não confirmado com segurança (a marca foi descontinuada nos EUA, restando só genérico lá — não está claro se o mesmo já ocorreu no Brasil). Não confundir com Monoplus® (fosinopril + hidroclorotiazida), que é combinação de dose fixa, não o princípio isolado. Número de registro ANVISA não confirmado.",
+      "Monopril® 10mg — comprimido, embalagem com 16, 28 ou 30 comprimidos (Bristol-Myers Squibb Farmacêutica S.A.). Fonte: saudedireta.com.br (bula Monopril, PDF) e pesquisemedicamentos.com.br (\"MONOPRIL 10MG CX 30 COMP B-MS\"), WebSearch 20/08/2026.",
+      "Monopril® 20mg — comprimido, embalagem com 30 comprimidos (Bristol-Myers Squibb Farmacêutica S.A.). Fonte: saudedireta.com.br (bula Monopril, PDF), WebSearch 20/08/2026."
     ]
   },
   {
@@ -14060,9 +14074,12 @@
     "sbp_reduction_mmhg": -8.5,
     "dbp_reduction_mmhg": -4.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para trandolapril tablets (DailyMed, genérico, Lupin Pharmaceuticals, setid 8143a6cf-dadc-4ef7-a8db-d16d7150ad34), seção 14, estudo de monoterapia de 6 semanas: 'once-daily doses of 2 to 4 mg lowered supine or standing systolic/diastolic blood pressure 24 hours after dosing by an average 7 to 10/4 to 5 mmHg below placebo responses in non-black patients' e '2 to 4 mg lowered blood pressure 4 to 6/3 to 4 mmHg in black patients' — **efeito pressórico consistentemente menor em pacientes negros na mesma faixa de dose**, achado que a própria bula registra e que espelha a distinção de dose inicial (ver `dosing`). Os valores numéricos registrados nos campos (-8,5/-4,5 mmHg) são o ponto médio da faixa informada para pacientes não negros (7-10/4-5 mmHg); a faixa menor observada em pacientes negros (4-6/3-4 mmHg) fica registrada aqui por extenso, não nos campos numéricos, que comportam um único par de valores. Consultado nesta sessão.",
-    "brand_names": [],
+    "brand_names": [
+      "Gopten"
+    ],
     "commercial_presentations": [
-      "Gopten® (Abbott Laboratórios do Brasil Ltda., marca originalmente da Knoll, incorporada pela Abbott em 2002), cápsula de 2 mg, embalagem com 20 cápsulas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só em mirrors de bulário, não em bula oficial do laboratório nem no bulário eletrônico ANVISA consultado diretamente nesta sessão; dosagens de 0,5 mg e 4 mg (existentes em outros países) não confirmadas para o mercado brasileiro. Marca 'Odrik', encontrada em fontes europeias (França/Espanha/Portugal), não incluída aqui por falta de confirmação de comercialização no Brasil. Número de registro ANVISA não confirmado."
+      "Gopten® (Abbott Laboratórios do Brasil Ltda., marca originalmente da Knoll, incorporada pela Abbott em 2002), cápsula de 2 mg, embalagem com 20 cápsulas. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmado só em mirrors de bulário, não em bula oficial do laboratório nem no bulário eletrônico ANVISA consultado diretamente nesta sessão; dosagens de 0,5 mg e 4 mg (existentes em outros países) não confirmadas para o mercado brasileiro. Marca 'Odrik', encontrada em fontes europeias (França/Espanha/Portugal), não incluída aqui por falta de confirmação de comercialização no Brasil. Número de registro ANVISA não confirmado.",
+      "Gopten® 2mg — cápsula, embalagem com 20 cápsulas (Abbott Laboratories). Fonte: bulas.med.br (bula Gopten) e remediopedia.com.br, WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA — as fontes consultadas nesta sessão descrevem a bula em português e listam a Gopten como medicamento de referência para trandolapril, mas nenhuma delas confirmou explicitamente o registro ANVISA ativo (número de registro) nem se o produto segue comercializado no Brasil hoje; confirmar contra o Bulário Eletrônico da ANVISA (consultas.anvisa.gov.br) antes de publicar."
     ]
   },
   {
@@ -14133,9 +14150,13 @@
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "**Ausência confirmada de dado placebo-corrigido, não lacuna de busca.** O rótulo aprovado pelo FDA para quinapril hydrochloride tablets (DailyMed, genérico, Aurobindo Pharma Limited, setid 93e6e668-5306-4f26-81d8-cbc3a7a5e787) não traz seção 14 (Clinical Studies) — a única informação de eficácia pressórica está na Farmacologia Clínica: 'in multiple-dose studies, 10 to 80 mg per day in single or divided doses lowered systolic and diastolic blood pressure throughout the dosing interval, with a trough effect of about 5 to 11/3 to 7 mm Hg' e 'while the dose-response relationship is relatively flat, doses of 40 to 80 mg were somewhat more effective at trough than 10 to 20 mg'. **Esse texto descreve o efeito absoluto de vale, sem menção a comparação com placebo** (diferente do texto de fosinopril, trandolapril e azilsartana neste mesmo lote, que dizem explicitamente 'more than placebo'/'below placebo'). Consultado e reconferido especificamente nesta sessão para confirmar a ausência dessa comparação antes de deixar os campos numéricos como `null`.",
-    "brand_names": [],
+    "brand_names": [
+      "Accupril"
+    ],
     "commercial_presentations": [
-      "Accupril® (Pfizer), 10 mg e 20 mg — marca histórica no Brasil. A Lista de Medicamentos de Referência excluídos da Anvisa publicada em 2026 registra cancelamento do registro em 19/06/2015. Não tratar como apresentação comercial ativa."
+      "Accupril® (Pfizer), 10 mg e 20 mg — marca histórica no Brasil. A Lista de Medicamentos de Referência excluídos da Anvisa publicada em 2026 registra cancelamento do registro em 19/06/2015. Não tratar como apresentação comercial ativa.",
+      "Accupril® 10mg — comprimido revestido, embalagem com 28 comprimidos (Pfizer). Fonte: saudedireta.com.br (bula Accupril, PDF) e cliquefarma.com.br, WebSearch 20/08/2026.",
+      "Accupril® 20mg — comprimido revestido, embalagem com 28 comprimidos (Pfizer). Fonte: saudedireta.com.br (bula Accupril, PDF) e cliquefarma.com.br, WebSearch 20/08/2026."
     ]
   },
   {
@@ -14191,9 +14212,13 @@
     "sbp_reduction_mmhg": -14.9,
     "dbp_reduction_mmhg": -7.5,
     "bp_evidence_source": "Rótulo aprovado pelo FDA para EDARBI (azilsartan medoxomil/kamedoxomil), DailyMed, setid 52b27c75-9f5a-4816-bafd-dace9d7d2063, seção 14 (Clinical Studies), ensaios comparativos de 6 semanas, redução pressórica corrigida por placebo: **Edarbi 80 mg** -14,9/-7,5 mmHg (PA de consultório) e -14,3/-9,4 mmHg (MAPA de 24h); **Edarbi 40 mg** -14,6/-6,2 mmHg (consultório) e -13,2/-8,6 mmHg (MAPA); comparadores ativos no mesmo ensaio — **olmesartana 40 mg** -11,4/-5,3 mmHg (consultório) e **valsartana 320 mg** -9,5/-4,4 mmHg (consultório), ambos numericamente inferiores à azilsartana 80 mg nesse ensaio. Valores numéricos registrados nos campos deste item são os da dose-alvo de 80 mg, medida em PA de consultório (-14,9/-7,5 mmHg). Consultado nesta sessão.",
-    "brand_names": [],
+    "brand_names": [
+      "Edarbi"
+    ],
     "commercial_presentations": [
-      "Edarbi® — nome comercial confirmado por múltiplas fontes brasileiras de consumo. VERIFICAÇÃO HUMANA NECESSÁRIA: o laboratório responsável pelo registro no Brasil NÃO foi confirmado com segurança nesta sessão — buscas trouxeram atribuições contraditórias (uma síntese de busca citou 'Eurofarma', outra citou 'Takeda Pharma A/S/Takeda Ireland', mas esta última parece derivar de documento regulatório europeu, não necessariamente do registro brasileiro). Dosagens de 20 mg, 40 mg e 80 mg aparecem majoritariamente em fontes internacionais, sem confirmação de quais estão registradas/comercializadas no Brasil. Um catálogo comercial brasileiro (GTIN 7896641809057) lista 'azilsartana medoxomila potássica 40 mg, caixa com 30 comprimidos' sob nomenclatura de substância, sugerindo possível existência de versão genérica — não confirmado. Número de registro ANVISA não confirmado. Não usar este registro para decisão de prescrição sem confirmação direta no bulário ANVISA."
+      "Edarbi® — nome comercial confirmado por múltiplas fontes brasileiras de consumo. VERIFICAÇÃO HUMANA NECESSÁRIA: o laboratório responsável pelo registro no Brasil NÃO foi confirmado com segurança nesta sessão — buscas trouxeram atribuições contraditórias (uma síntese de busca citou 'Eurofarma', outra citou 'Takeda Pharma A/S/Takeda Ireland', mas esta última parece derivar de documento regulatório europeu, não necessariamente do registro brasileiro). Dosagens de 20 mg, 40 mg e 80 mg aparecem majoritariamente em fontes internacionais, sem confirmação de quais estão registradas/comercializadas no Brasil. Um catálogo comercial brasileiro (GTIN 7896641809057) lista 'azilsartana medoxomila potássica 40 mg, caixa com 30 comprimidos' sob nomenclatura de substância, sugerindo possível existência de versão genérica — não confirmado. Número de registro ANVISA não confirmado. Não usar este registro para decisão de prescrição sem confirmação direta no bulário ANVISA.",
+      "Edarbi® 40mg — comprimido, apresentação comercializada no Brasil (Takeda). Fonte: consultaremedios.com.br (bula Edarbi) e blog.drconsulta.com, WebSearch 20/08/2026.",
+      "Edarbi® 80mg — comprimido, caixa com 30 comprimidos (Takeda). Fonte: pro.consultaremedios.com.br (\"Edarbi 80mg, caixa com 30 comprimidos\"), WebSearch 20/08/2026. VERIFICAÇÃO HUMANA NECESSÁRIA para o número exato de comprimidos por caixa na apresentação de 40mg — as fontes desta busca não confirmaram esse número com a mesma segurança da de 80mg."
     ]
   },
   {
