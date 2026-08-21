@@ -1,0 +1,1 @@
+Arquivo temporário para disparar uma reprodução diagnóstica da consolidação Claude. Deve ser removido junto com o workflow de diagnóstico após a correção.
