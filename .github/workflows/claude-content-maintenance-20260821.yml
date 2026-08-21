@@ -1,0 +1,92 @@
+name: Claude content maintenance 2026-08-21
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  consolidate:
+    if: contains(github.event.head_commit.message, '[maintenance-claude-20260821]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git and GitHub CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          gh auth status
+
+      - name: Create isolated release branch
+        run: git checkout -b release/claude-content-map-20260821
+
+      - name: Consolidate Claude content and fix live map time
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/maintenance/consolidate_claude_20260821.py | tee /tmp/maintenance.log
+
+      - name: Remove one-shot maintenance machinery
+        run: |
+          rm -f .github/workflows/claude-content-maintenance-20260821.yml
+          rm -f tools/maintenance/consolidate_claude_20260821.py
+
+      - name: Validate JSON and targeted source contract
+        run: |
+          python -m json.tool checklists/metadados.json >/dev/null
+          python -m json.tool material-paciente/metadados.json >/dev/null
+          python -m json.tool medicamentos/metadados.json >/dev/null
+          python - <<'PY'
+          from pathlib import Path
+          home = Path('frontend/src/pages/PainelClinicalOS.tsx').read_text(encoding='utf-8')
+          assert 'const saidaPlanejada' in home
+          assert 'const rotaAtualizadaAgora' in home
+          assert 'Math.max(agora.getTime(), rotaAtualizadaEm.getTime())' in home
+          assert 'saidaRecomendada.getTime() + rota.duration_seconds * 1000' in home
+          for path in ('checklists/metadados.json','material-paciente/metadados.json','medicamentos/metadados.json'):
+              text = Path(path).read_text(encoding='utf-8')
+              assert 'VERIFICAÇÃO HUMANA NECESSÁRIA' not in text
+          PY
+
+      - name: Commit and push release branch
+        run: |
+          git add -A
+          git commit -m "content: consolidar lote Claude e corrigir horário vivo do mapa"
+          git push --force-with-lease origin HEAD:release/claude-content-map-20260821
+
+      - name: Open audited release PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a = json.loads(Path('/tmp/claude-content-audit.json').read_text(encoding='utf-8'))
+          before = a['counts_before']; after = a['counts_after']; delta = a['delta']
+          body = f'''## Objetivo\n\nConsolida semanticamente a nova leva de conteúdo produzida pelo Claude **após a PR #204**, partindo do `main` atual, e corrige o horário stale do card **Próximo deslocamento** identificado em produção.\n\n## Conteúdo consolidado\n\n- PRs de conteúdo candidatas processadas: **{a['candidate_pr_count']}**\n- Checklists: **{before['checklists/metadados.json']} → {after['checklists/metadados.json']}** (delta {delta['checklists/metadados.json']:+d})\n- Material ao paciente: **{before['material-paciente/metadados.json']} → {after['material-paciente/metadados.json']}** (delta {delta['material-paciente/metadados.json']:+d})\n- Medicamentos: **{before['medicamentos/metadados.json']} → {after['medicamentos/metadados.json']}** (delta {delta['medicamentos/metadados.json']:+d})\n\nA integração usa three-way por `slug`: preserva o `main` atual, incorpora deltas aditivos/compatíveis e não reaplica as PRs antigas já absorvidas pela #204.\n\n## Revisão das ressalvas humanas\n\nTodos os trechos marcados `VERIFICAÇÃO HUMANA NECESSÁRIA` nos novos registros foram tratados de forma conservadora: itens não sustentados foram removidos em vez de convertidos em certeza. A PR falha se qualquer marcador permanecer nos três manifestos. Também foram removidas atribuições automáticas de revisão individual ao médico/CRM/RQE.\n\n### Decisões regulatórias dirigidas\n'''
+          for item in a['regulatory_decisions']:
+              body += f'- {item}\n'
+          body += f'''\n## Correção do mapa\n\nO bug era de referência temporal: depois que a saída planejada já tinha passado, a Home continuava mostrando o horário histórico calculado a partir do início do compromisso. Agora:\n\n- antes da janela de saída, mantém o planejamento;\n- depois que a janela expirou, usa a referência viva da rota/relógio atual;\n- a chegada passa a ser `saída viva + duração real da rota`;\n- o horário “Atualizado às” do mapa continua vindo do provider.\n\n## Gates\n\nEsta PR deve ser mesclada somente com CI/corpus/RC2 aplicáveis verdes. A publicação em produção continua sendo feita pelo `deploy.sh`, que reconcilia e publica apenas conteúdo `review_status=revisado`.\n\n## Auditoria\n\nForam registradas **{len(a['sanitizations'])}** ações automáticas de sanitização/compatibilização durante a consolidação. Nenhum `published: true` é versionado como autorização de publicação.\n'''
+          Path('/tmp/pr-body.md').write_text(body, encoding='utf-8')
+          PY
+          gh pr create \
+            --base main \
+            --head release/claude-content-map-20260821 \
+            --title "content: publicar nova leva Claude + corrigir horário vivo do mapa" \
+            --body-file /tmp/pr-body.md
+
+      - name: Create failure issue if release PR was not created
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Falha na consolidação Claude 2026-08-21" --body "O workflow one-shot de consolidação falhou. Revisar o run associado ao merge que contém [maintenance-claude-20260821]. Nenhuma publicação em produção foi executada automaticamente." || true
