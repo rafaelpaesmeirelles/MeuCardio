@@ -20168,5 +20168,163 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "insuficiencia-cardiaca-de-alto-debito-diagnostico-e-manejo-dirigido-a-causa",
+    "condicao": "Insuficiência cardíaca de alto débito",
+    "resumo": "O que suspeitar, investigar e evitar prescrever diante de dispneia e congestão com débito cardíaco normal ou elevado e FEVE preservada — fenótipo de insuficiência cardíaca que inverte o raciocínio clínico habitual e é frequentemente confundido com ICFEp genérica.",
+    "documento_origem": "insuficiencia-cardiaca-de-alto-debito-causas-mecanismo-e-por-que-e-subdiagnosticada",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Reddy YNV, Melenovsky V, Redfield MM, Nishimura RA, Borlaug BA. High-Output Heart Failure: A 15-Year Experience. J Am Coll Cardiol. 2016;68(5):473-482. DOI: 10.1016/j.jacc.2016.05.043. PMID: 27470455.",
+      "Mehta PA, Dubrey SW. High output heart failure. QJM. 2009;102(4):235-241. DOI: 10.1093/qjmed/hcn147. PMID: 18990720.",
+      "Ikram H, Maslowski AH, Smith BL, Nicholls MG. The haemodynamic, histopathological and hormonal features of alcoholic cardiac beriberi. Q J Med. 1981;50(200):359-375. PMID: 7342167.",
+      "Singh S, Sharma S. High-Output Cardiac Failure. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 2023. PMID: 30020709."
+    ],
+    "itens": [
+      {
+        "id": "icad-suspeitar-fenotipo-invertido",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de insuficiência cardíaca de alto débito diante de dispneia, congestão e elevação de peptídeo natriurético com FEVE preservada — o achado hemodinâmico é débito cardíaco normal ou elevado, o inverso do raciocínio clínico habitual para insuficiência cardíaca",
+        "origem_secao": "Por que é frequentemente subdiagnosticada"
+      },
+      {
+        "id": "icad-confirmar-corte-hemodinamico",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Quando houver hemodinâmica invasiva disponível, confirmar o corte convencional (débito cardíaco em repouso > 8 L/min ou índice cardíaco > 4,0 L/min/m²) associado a sinais clínicos de congestão pelos critérios de Framingham — o corte hemodinâmico isolado não define a síndrome sem os sinais clínicos",
+        "origem_secao": "Corte hemodinâmico usado para definição"
+      },
+      {
+        "id": "icad-investigar-etiologias-contemporaneas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar as etiologias mais frequentes na série contemporânea, na ordem: obesidade, doença hepática, shunt arteriovenoso (incluindo fístula de hemodiálise de alto fluxo), doença pulmonar e doença mieloproliferativa",
+        "origem_secao": "Causas mais comuns em séries contemporâneas — e por que isso contraria o ensino clássico"
+      },
+      {
+        "id": "icad-nao-esquecer-causas-classicas-reversiveis",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Não deixar de investigar as causas classicamente citadas, menos frequentes nas séries atuais mas com maior chance de serem corrigíveis: anemia crônica grave, hipertireoidismo, beribéri por deficiência de tiamina e doença de Paget óssea extensa",
+        "origem_secao": "Causas mais comuns em séries contemporâneas — e por que isso contraria o ensino clássico"
+      },
+      {
+        "id": "icad-evitar-terapia-convencional-vasodilatadora-e-inotropica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Evitar, como primeira conduta, IECA, BRA, betabloqueador com propriedade vasodilatadora, vasodilatador puro ou inotrópico positivo betaadrenérgico — reduzem ainda mais a resistência vascular sistêmica já baixa na maioria das etiologias e podem piorar o quadro em vez de melhorá-lo",
+        "origem_secao": "Tratamento — dirigido à causa de base, não à otimização padrão da IC"
+      },
+      {
+        "id": "icad-conduta-sintomatica-base",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Na ausência de causa corrigível já identificada, manter conduta sintomática conservadora: restrição de sódio e água combinada a uso criterioso de diurético, sem extrapolar o esquema padrão da ICFEr para esse fenótipo",
+        "origem_secao": "Tratamento — dirigido à causa de base, não à otimização padrão da IC"
+      },
+      {
+        "id": "icad-tratar-causa-de-base",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Direcionar o tratamento à causa de base identificada: perda ponderal na obesidade, manejo hepatológico na doença hepática avançada, avaliação para ligadura/banding do shunt em fístula de hemodiálise de alto fluxo, otimização pneumológica, tratamento hematológico na doença mieloproliferativa, normalização da função tireoidiana ou reposição de tiamina, conforme a etiologia identificada",
+        "origem_secao": "Tratamento — dirigido à causa de base, não à otimização padrão da IC"
+      },
+      {
+        "id": "icad-seguimento-risco-mortalidade",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Priorizar seguimento mais próximo nos pacientes com resistência vascular sistêmica mais baixa — foi o subgrupo com pior desfecho na série da Mayo Clinic (mortalidade com razão de risco 3,4; IC95% 1,6-7,6 vs. controles)",
+        "origem_secao": "Por que é frequentemente subdiagnosticada"
+      },
+      {
+        "id": "icad-nao-confundir-causa-comum-com-lista-classica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não confundir a causa isolada mais comum na série contemporânea (obesidade) com a lista classicamente citada em provas e livros-texto (anemia, fístula arteriovenosa, hipertireoidismo, beribéri, Paget) — as duas coexistem, e a lista clássica continua sendo o roteiro de causas reversíveis a excluir",
+        "origem_secao": "Armadilha de leitura"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Insuficiência cardíaca citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "ponte-miocardica-investigacao-e-manejo-da-anomalia-coronariana-congenita",
+    "condicao": "Ponte miocárdica (anomalia coronariana congênita intramural)",
+    "resumo": "Como reconhecer, confirmar e conduzir a ponte miocárdica — segmento coronariano epicárdico, tipicamente da descendente anterior, que mergulha no miocárdio e pode passar despercebido numa angiografia rápida, incluindo a contraindicação específica ao nitrato.",
+    "documento_origem": "ponte-miocardica-anomalia-coronariana-congenita-diagnostico-e-tratamento",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Evbayekha EO, Nwogwugwu E, Olawoye A, et al. A Comprehensive Review of Myocardial Bridging: Exploring Diagnostic and Treatment Modalities. Cureus. 2023;15(8):e43132. DOI: 10.7759/cureus.43132. PMID: 37692750. PMCID: PMC10484041.",
+      "Murtaza G, Mukherjee D, Gharacholou SM, et al. An Updated Review on Myocardial Bridging. Cardiovasc Revasc Med. 2020;21(9):1169-1179. DOI: 10.1016/j.carrev.2020.02.014. PMID: 32173330."
+    ],
+    "itens": [
+      {
+        "id": "pontemio-suspeitar-perfil-atipico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitar de ponte miocárdica em dor torácica atípica de paciente jovem, com maior carga de tabagismo e menos fatores de risco cardiovascular tradicionais do que o infartado típico — perfil descrito nas apresentações tipo síndrome coronariana aguda associadas à ponte",
+        "origem_secao": "Fisiopatologia — por que a maioria é benigna e uma minoria não é"
+      },
+      {
+        "id": "pontemio-nao-descartar-por-angiografia-rapida",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não concluir \"coronárias normais\" numa angiografia rápida sem procurar ativamente o efeito de ordenha sistólico (estreitamento sistólico com dilatação diastólica retardada) — o achado só aparece se procurado, e injeção intracoronariana de vasodilatador antes do exame aumenta a sensibilidade para flagrá-lo",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "pontemio-confirmar-criterio-angiografico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Confirmar o achado positivo pelos critérios angiográficos clássicos: redução do diâmetro luminal ≥70% na sístole, com redução persistente ≥35% na diástole",
+        "origem_secao": "Como se diagnostica"
+      },
+      {
+        "id": "pontemio-avaliar-componente-dinamico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Avaliar o componente dinâmico da obstrução com FFR (corte de positividade ≤0,80) e, preferencialmente, iFR (corte ≤0,89) ou a diferença entre FFR média e FFR diastólica — a FFR tradicional isolada tem limitação reconhecida na obstrução dinâmica da ponte, validada para obstrução fixa por placa",
+        "origem_secao": "Como se diagnostica"
+      },
+      {
+        "id": "pontemio-classificar-sternheim",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar o paciente pelo esquema simplificado de Sternheim — tipo A (sintoma presente, sem sinal objetivo de isquemia) versus tipo B/C (sintoma presente, com sinal objetivo de isquemia) — para orientar a escolha entre modificação de estilo de vida, tratamento farmacológico e teste invasivo com revascularização",
+        "origem_secao": "Classificação que orienta a conduta"
+      },
+      {
+        "id": "pontemio-primeira-linha-farmacologica",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Iniciar betabloqueador como primeira escolha farmacológica no paciente sintomático com isquemia objetiva; considerar antagonista de cálcio não di-hidropiridínico em risco de broncoespasmo ou quando houver componente vasoespástico associado",
+        "origem_secao": "Tratamento — Farmacológico — primeira linha"
+      },
+      {
+        "id": "pontemio-nunca-prescrever-nitrato",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "NUNCA prescrever nitrato para a dor torácica associada à ponte miocárdica — ao contrário do uso reflexo na angina por obstrução fixa, o vasodilatador dilata o segmento proximal à ponte e aumenta o fluxo retrógrado, piorando a isquemia em vez de aliviá-la",
+        "origem_secao": "Tratamento — Farmacológico — primeira linha"
+      },
+      {
+        "id": "pontemio-nao-indicar-stent-de-rotina",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar stent de rotina para ponte miocárdica sintomática refratária ao tratamento clínico — taxa alta de revascularização da lesão-alvo (24% a 36% em 1 ano nos estudos citados) e relatos de perfuração coronariana e fratura de stent, atribuídos à fragilidade histológica do segmento tunelizado",
+        "origem_secao": "Intervenção percutânea — papel limitado, não recomendado como rotina"
+      },
+      {
+        "id": "pontemio-encaminhar-cirurgia-so-apos-falha-clinica",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação cirúrgica somente após refratariedade ao tratamento clínico otimizado: miotomia supra-arterial quando houver estenose angiográfica >75% com isquemia documentada, ou cirurgia de revascularização (CABG) quando a ponte for extensa (>25 mm), profunda (>5 mm) ou não descomprimir totalmente na diástole",
+        "origem_secao": "Cirurgia — para refratários ao tratamento clínico"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Doença coronariana citado em source_refs, com a seção de origem registrada em cada item. Fonte primária é revisão narrativa sistematizada, não diretriz graduada por classe/nível — declarado também no documento de origem."
   }
 ]
