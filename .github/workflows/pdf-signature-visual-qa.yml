@@ -30,9 +30,36 @@ jobs:
         working-directory: backend
         run: pip install -r requirements-dev.txt
 
-      - name: Validate PAdES signer tests
+      - name: Validate PAdES QR signer without database fixtures
         working-directory: backend
-        run: python -m pytest -q tests/test_pdf_signer.py
+        run: |
+          python - <<'PY'
+          import io
+          from pyhanko.pdf_utils.reader import PdfFileReader
+          from pyhanko.sign.validation import validate_pdf_signature
+          from tests.test_pdf_signer import _gerar_pfx, _pdf_minimo
+          from app.services.assinatura import pdf_signer
+
+          pfx = _gerar_pfx()
+          url = 'https://corvia.med.br/validar/R123-0123456789ABCDEF'
+          codigo = 'R123-0123456789ABCDEF'
+          assinado = pdf_signer.assinar_pdf(
+              _pdf_minimo('Receita comum — validação criptográfica QR'),
+              pfx_bytes=pfx,
+              senha='senha123',
+              motivo='Receita médica',
+              local='Ribeirão Preto',
+              codigo_validacao=codigo,
+              url_validacao=url,
+          )
+          leitor = PdfFileReader(io.BytesIO(assinado))
+          assert len(leitor.embedded_signatures) == 1
+          assinatura = leitor.embedded_signatures[0]
+          status = validate_pdf_signature(assinatura)
+          assert status.intact is True
+          assert status.valid is True
+          assert assinatura.sig_field.get('/AP') is not None
+          PY
 
       - name: Generate QR-signed visual samples
         working-directory: backend
