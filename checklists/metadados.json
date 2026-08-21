@@ -20168,5 +20168,228 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-de-risco-de-sangramento-na-fa-pos-tavr-escore-harhp",
+    "condicao": "Avaliação de risco de sangramento maior em paciente com fibrilação atrial submetido a TAVR",
+    "resumo": "Estratificação de risco de sangramento com os cinco fatores do escore HARHP (derivado do ENVISAGE-TAVI AF) e os limites de uso dessa ferramenta ao decidir entre DOAC e antagonista da vitamina K após TAVR bem-sucedido.",
+    "documento_origem": "escore-harhp-risco-de-sangramento-maior-na-fa-pos-tavr-envisage-tavi-af",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Dangas GD, Unverdorben M, Hengstenberg C, et al. Major Bleeding Risk Assessment With Atrial Fibrillation Post-TAVR: The HARHP Score Results From ENVISAGE-TAVI AF. JACC Cardiovasc Interv. 2026 Feb 9;19(3):359-368. DOI: 10.1016/j.jcin.2025.11.028. PMID: 41672694",
+      "Landi A, Gorog DA. Bleeding Risk Prediction in Patients With Atrial Fibrillation Undergoing TAVR: Has the HAR(H)P Finally Hit the Right Note? [editorial comment]. JACC Cardiovasc Interv. 2026 Feb 9;19(3):369-372. DOI: 10.1016/j.jcin.2025.11.030. PMID: 41672695",
+      "Van Mieghem NM, Unverdorben M, Hengstenberg C, et al; ENVISAGE-TAVI AF Investigators. Edoxaban versus Vitamin K Antagonist for Atrial Fibrillation after TAVR. N Engl J Med. 2021;385(23):2150-2160. PMID: 34449183"
+    ],
+    "itens": [
+      {
+        "id": "harhp-contexto-fa-tavr",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem fibrilação atrial associada e foi submetido a TAVR bem-sucedido — cenário em que a anticoagulação crônica pela FA e a manipulação vascular recente do TAVR somam risco de sangramento",
+        "origem_secao": "Definição"
+      },
+      {
+        "id": "harhp-fator-hemoglobina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hemoglobina basal registrada e avaliada como fator de risco: hemoglobina baixa é um dos cinco componentes do escore HARHP",
+        "origem_secao": "Desenvolvimento do escore"
+      },
+      {
+        "id": "harhp-fator-alcool",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso excessivo de álcool investigado e documentado na anamnese, como fator independente do escore HARHP",
+        "origem_secao": "Desenvolvimento do escore"
+      },
+      {
+        "id": "harhp-fator-renal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Função renal avaliada quanto à presença de insuficiência renal grave, componente do escore HARHP",
+        "origem_secao": "Desenvolvimento do escore"
+      },
+      {
+        "id": "harhp-fator-hipercolesterolemia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Histórico de hipercolesterolemia levantado, como quarto componente do escore HARHP",
+        "origem_secao": "Desenvolvimento do escore"
+      },
+      {
+        "id": "harhp-fator-icp-recente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado se houve intervenção coronária percutânea nos 30 dias anteriores ao TAVR — quinto fator do escore HARHP",
+        "origem_secao": "Desenvolvimento do escore"
+      },
+      {
+        "id": "harhp-nao-usar-como-discriminacao-alta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o escore HARHP tem capacidade discriminativa apenas modesta (estatística C de 0,62-0,63) — não deve ser interpretado como ferramenta de discriminação forte, nem tratado como validada externamente fora da coorte de derivação",
+        "origem_secao": "Como ler a estatística C de 0,62-0,63"
+      },
+      {
+        "id": "harhp-nao-isolar-decisao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o HARHP não está sendo usado como critério isolado e definitivo para escolher entre DOAC e antagonista da vitamina K — a decisão também depende do risco tromboembólico individual e da preferência/adesão do paciente",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "harhp-anticoagulante-ancorado-no-envisage",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Escolha entre inibidor direto do fator Xa e antagonista da vitamina K na FA pós-TAVR ancorada no resultado do próprio ENVISAGE-TAVI AF (não inferioridade clínica líquida, com mais sangramento maior no braço do inibidor do fator Xa), usando o HARHP apenas como estratificação complementar de risco",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "harhp-nao-confundir-com-outro-alcool",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o item de uso excessivo de álcool remeter a outro documento sobre álcool e incidência de FA na população geral: confirmado que são achados de estudos distintos (sangramento pós-TAVR sob anticoagulação vs. incidência de FA), não o mesmo dado reaproveitado",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "harhp-seguimento-risco-sangramento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Vigilância clínica e laboratorial de sangramento intensificada no paciente classificado como alto risco pelos fatores do HARHP, dentro do plano de seguimento pós-TAVR",
+        "origem_secao": "Desempenho do escore"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Fibrilação atrial citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-inicial-da-sindrome-de-kounis",
+    "condicao": "Suspeita de síndrome de Kounis (síndrome coronariana aguda de causa alérgica)",
+    "resumo": "Reconhecimento dos três subtipos da síndrome de Kounis, os gatilhos alérgicos típicos e as particularidades do manejo simultâneo do componente cardíaco e alérgico, incluindo a cautela com adrenalina e a contraindicação de betabloqueador.",
+    "documento_origem": "sindrome-de-kounis-sindrome-coronariana-aguda-alergica",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kounis NG, Zavras GM. Histamine-induced coronary artery spasm: the concept of allergic angina. Br J Clin Pract. 1991;45(2):121-128. PMID: 1793697",
+      "Kounis NG. Kounis syndrome: an update on epidemiology, pathogenesis, diagnosis and therapeutic management. Clin Chem Lab Med. 2016;54(10):1545-1559. PMID: 26966931",
+      "Kounis NG, Koniari I, Roumeliotis A, Tsigkas G, Soufras G, Grapsas N, Davlouros P, Hahalis G. Thrombotic responses to coronary stents, bioresorbable scaffolds and the Kounis hypersensitivity-associated acute thrombotic syndrome. J Thorac Dis. 2017;9(4):1155-1164. PMID: 28523173. PMCID: PMC5418277",
+      "Wang C, Zhou Y, Fang W, Li Z, Zhao S. Clinical features, diagnosis and management of amoxicillin-induced Kounis syndrome. Front Pharmacol. 2022;13:998239. PMID: 36386157",
+      "Ganeshanandha R, Teoh ZH, Hii R, Chew DP, Leung M. Allergy-Associated Acute Coronary Syndromes: Therapeutic Framework for Kounis Syndrome. JACC Case Rep. 2026;31(21):107946. doi: 10.1016/j.jaccas.2026.107946. PMID: 41989366. PMCID: PMC13221886 — fonte mais fraca que diretriz de sociedade, declarado explicitamente"
+    ],
+    "itens": [
+      {
+        "id": "kounis-contexto-alergico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeitado em qualquer síndrome coronariana aguda que ocorra no contexto temporal de uma reação de hipersensibilidade/alérgica ou anafilática (picada de inseto, contraste iodado, antibiótico, AINE, ou reação ao próprio stent)",
+        "origem_secao": "O que é"
+      },
+      {
+        "id": "kounis-classificar-subtipo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Subtipo classificado: Tipo I (coronárias angiograficamente normais, vasoespasmo sem placa subjacente), Tipo II (placa aterosclerótica preexistente com espasmo ou ruptura/erosão) ou Tipo III (trombose de stent coronariano, com infiltrado de eosinófilos/mastócitos no trombo ou na parede adjacente)",
+        "origem_secao": "Classificação em subtipos (Tipo I, II e III)"
+      },
+      {
+        "id": "kounis-tipo-iii-episodio-recorrente",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Em paciente com trombose repetida de stent na mesma área stentada, em períodos diferentes: suspeitada hipersensibilidade persistente ao material implantado (subtipo dentro do Tipo III), mesmo sem novo gatilho alérgico evidente no momento agudo",
+        "origem_secao": "Classificação em subtipos (Tipo I, II e III)"
+      },
+      {
+        "id": "kounis-identificar-gatilho",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Gatilho alérgico investigado e, quando identificado, descontinuado — picada/ferroada de inseto, contraste iodado ou ecocardiográfico, antibiótico (betalactâmico ou cefalosporina), AINE, ou fármaco/componente relacionado ao próprio cateterismo ou stent",
+        "origem_secao": "Gatilhos comuns"
+      },
+      {
+        "id": "kounis-tratar-simultaneamente",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Componente cardíaco e componente alérgico/anafilático tratados simultaneamente — tratar apenas um dos dois lados pode agravar o outro",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-adrenalina-via-im-primeiro",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Adrenalina administrada por via intramuscular como primeira escolha, repetida conforme resposta, reservando a via intravenosa apenas para paciente sem resposta à via intramuscular ou com instabilidade hemodinâmica/respiratória persistente",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-cautela-adrenalina-iv",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que a adrenalina, sobretudo por via intravenosa, pode agravar isquemia miocárdica, prolongar o QTc e precipitar arritmias ou vasospasmo neste cenário específico — cautela adicional em relação ao uso padrão na anafilaxia da população geral",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-nao-usar-betabloqueador",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador evitado no manejo da SCA secundária à síndrome de Kounis, ao contrário do manejo clássico de SCA — pode precipitar efeito alfa-adrenérgico não contraposto e agravar isquemia/vasospasmo; em paciente já em uso, glucagon considerado para neutralizar o efeito se a isquemia piorar",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-opioide-preferencial",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Entre os opioides, preferido fentanil ou derivados em vez de codeína, morfina ou meperidina — estes últimos podem aumentar a degranulação de mastócitos",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-componente-alergico-tratado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Componente alérgico tratado com anti-histamínico H1 e H2 na fase imediata, com corticosteroide considerado para reduzir o risco de resposta anafilática bifásica",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-vasoespasmo-nitrato-bcc",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "No vasoespasmo coronariano dos Tipos I e II em fase aguda: nitrato como pilar do tratamento, com bloqueador de canal de cálcio (verapamil ou diltiazem) como adjuvante; angiografia coronariana indicada para confirmar o espasmo e excluir ruptura de placa",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-icp-dapt",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Quando há indicação de intervenção coronária percutânea (Tipos II e III): dupla antiagregação plaquetária, com ácido acetilsalicílico associado a um segundo inibidor de P2Y12",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-volume-equilibrado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Reposição volêmica administrada de forma equilibrada no choque anafilático associado, evitando precipitar edema pulmonar no contexto da síndrome coronariana aguda concomitante",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-oxigenio-condicional",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Oxigênio suplementar oferecido apenas se houver hipóxia documentada, não de forma rotineira",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-forca-da-fonte-declarada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que o algoritmo de dose/via/sequência de manejo vem de uma série de apenas 3 casos, não de diretriz de sociedade nem de revisão sistemática — a decisão de dose/via de adrenalina em paciente instável continua exigindo individualização à beira do leito",
+        "origem_secao": "Particularidades do manejo"
+      },
+      {
+        "id": "kounis-investigar-antes-de-stent",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Antes de implante de stent farmacológico eletivo: história cuidadosa de hipersensibilidade a materiais implantáveis e a fármacos concomitantes investigada, para reduzir o risco do subtipo Tipo III",
+        "origem_secao": "Outros pontos práticos observados nas fontes"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Farmacologia citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
