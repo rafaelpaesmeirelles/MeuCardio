@@ -126,7 +126,8 @@
     "review_status": "revisado",
     "generic_name": "Ácido nicotínico (niacina)",
     "brand_names": [
-      "Metri"
+      "Metri",
+      "Acinic"
     ],
     "drug_class": "Agente anti-hiperlipidêmico — vitamina B3 (niacina)",
     "mechanism": "Vitamina do complexo B (B3) que, em dose farmacológica muito acima da dose nutricional, atua como agente anti-hiperlipidêmico após conversão no organismo a nicotinamida adenina dinucleotídeo (NAD) no sistema de coenzima NAD. O mecanismo pelo qual altera o perfil lipídico não está totalmente estabelecido na própria bula, mas envolve provavelmente: inibição da liberação de ácidos graxos livres do tecido adiposo; aumento da atividade da lipase lipoproteica, elevando a remoção de quilomícrons e triglicérides do plasma; e diminuição da síntese hepática de VLDL e LDL — sem afetar de forma relevante a excreção fecal de gorduras, ácidos biliares ou esteróis. O aumento de HDL-C associa-se ao aumento de apolipoproteína A-I e à mudança da distribuição das subfrações de HDL (aumento da relação HDL2:HDL3). Reduz também apolipoproteína B-100 (componente proteico principal de VLDL e LDL) e Lp(a), variante de LDL associada de forma independente ao risco coronário. Fonte: bula do METRI® (ácido nicotínico, Libbs Farmacêutica Ltda.), seção Farmacodinâmica.",
@@ -138,7 +139,8 @@
       "METRI® 500 mg — comprimido revestido de liberação programada, embalagem com 30 unidades (Libbs Farmacêutica Ltda., MS nº 1.0033.0119).",
       "METRI® 750 mg — comprimido revestido de liberação programada, embalagem com 30 unidades (Libbs Farmacêutica Ltda., MS nº 1.0033.0119).",
       "METRI® 1.000 mg — comprimido revestido de liberação programada, embalagem com 30 unidades (Libbs Farmacêutica Ltda., MS nº 1.0033.0119).",
-      "Existe relato de segunda marca comercial (Acinic®) em resultado de busca agregada, não confirmado por leitura direta de bula nesta sessão — **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de citar essa marca especificamente."
+      "Existe relato de segunda marca comercial (Acinic®) em resultado de busca agregada, não confirmado por leitura direta de bula nesta sessão — **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de citar essa marca especificamente.",
+      "Acinic® ácido nicotínico 750mg — comprimidos (hipromelose e estearato de magnésio como excipientes), embalagem com 30 comprimidos (Biolab Sanus Farmacêutica Ltda, indústria brasileira). Fonte: consultaremedios.com.br / drconsulta.com (bula Acinic, Biolab Sanus), WebSearch 20/08/2026."
     ],
     "dosing": {
       "padrao": "Início sempre com dose baixa. Aumento respeitando o limite de 500 mg a cada quatro semanas, conforme resposta clínica e tolerância, até o máximo de 2.000 mg/dia. Dose de manutenção recomendada: 500 mg/dia a 2.000 mg/dia. Doses superiores a 2.000 mg/dia não são recomendadas.",
@@ -2071,7 +2073,10 @@
     "duration_of_action_source": "Já documentado no campo `notes.Administracao` deste mesmo registro (bula do DOBUTREX) — reaproveitado só para explicar o campo, sem pesquisa adicional nesta sessão.",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Não se aplica como REDUÇÃO de pressão arterial — a dobutamina tipicamente AUMENTA a pressão arterial, não a reduz, como já documentado no próprio registro em `adverse_effects`: 'aumento de PAS de 10-20 mmHg e FC de 5-15 bpm na maioria dos pacientes' (fonte já citada: bula do DOBUTREX, item 9). Por ser efeito inotrópico positivo com discreta vasodilatação em doses baixas (efeito beta-2 relativo, já descrito em `mechanism`), o padrão de resposta pressórica não se encaixa no par de campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (pensados para redução, com valor negativo) sem distorcer o sentido do campo — por isso ficam vazios aqui, e o dado real (aumento, não redução) já está documentado no campo `adverse_effects` existente, para onde este registro remete."
+    "bp_evidence_source": "Não se aplica como REDUÇÃO de pressão arterial — a dobutamina tipicamente AUMENTA a pressão arterial, não a reduz, como já documentado no próprio registro em `adverse_effects`: 'aumento de PAS de 10-20 mmHg e FC de 5-15 bpm na maioria dos pacientes' (fonte já citada: bula do DOBUTREX, item 9). Por ser efeito inotrópico positivo com discreta vasodilatação em doses baixas (efeito beta-2 relativo, já descrito em `mechanism`), o padrão de resposta pressórica não se encaixa no par de campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (pensados para redução, com valor negativo) sem distorcer o sentido do campo — por isso ficam vazios aqui, e o dado real (aumento, não redução) já está documentado no campo `adverse_effects` existente, para onde este registro remete.",
+    "commercial_presentations": [
+      "NENHUMA MARCA COMERCIAL (nome fantasia) ADICIONAL encontrada com confiança além de Dobutrex® (já cadastrado). Encontrados apenas medicamentos GENÉRICOS (sem nome fantasia próprio, vendidos pelo nome da substância + fabricante, conforme a regulação brasileira de genéricos): 'Cloridrato de Dobutamina' 12,5 mg/mL solução injetável, caixa com 10 ampolas de vidro de 20 mL (Hipolabor Farmacêutica Ltda); 'Cloridrato de Dobutamina' 12,5 mg/mL, caixa com 10 ampolas âmbar de 20 mL (Hypofarma); 'Cloridrato de Dobutamina' 250mg/20mL, caixa com 50 ampolas de 20 mL (Novafarma); e um genérico da ABL Brasil, caixa com 20 ampolas de 20 mL. Nenhum desses carrega nome fantasia distinto — por isso NÃO foram adicionados a `brand_names`, só registrados aqui para referência. Fonte: sara.com.br, hypofarma.com.br, bula.com.br, consultaremedios.com.br, WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "dopamina",
@@ -7967,7 +7972,9 @@
       "Nao e pro-trombotico direto, mas estabiliza coagulo existente": "O mecanismo antifibrinolítico não ativa a cascata de coagulação — ele impede a dissolução do coágulo já formado. Isso é o que sustenta seu uso amplo mesmo em populações de risco vascular, mas também explica por que vasculopatia oclusiva aguda é contraindicação formal."
     },
     "brand_names": [
-      "Transamin"
+      "Transamin",
+      "Hemoblock",
+      "Trexacont"
     ],
     "half_life_hours": 2.0,
     "half_life_note": "Meia-vida de eliminação de aproximadamente 2 horas (faixa de 1,9 a 2,7 horas em voluntários sadios após administração IV, segundo o estudo farmacocinético clássico do fármaco), com decaimento plasmático em três fases monoexponenciais e eliminação majoritariamente por filtração glomerular (~95% da dose excretada inalterada na urina; clearance plasmático de 110-116 mL/min; volume de distribuição de 9-12 L). A maior parte da eliminação ocorre nas primeiras 8 horas após a dose. Fonte: Andersson L et al., 'Pharmacokinetics of tranexamic acid after intravenous administration to normal volunteers', European Journal of Clinical Pharmacology; dado consistente com StatPearls/NCBI Bookshelf (Tranexamic Acid, NBK532909).",
@@ -7982,7 +7989,9 @@
       "Solução injetável 50 mg/mL, ampola de 5 mL (250 mg/ampola)"
     ],
     "commercial_presentations": [
-      "Transamin® (comprimido 250 mg e injetável 50 mg/mL); Hemoblock® e Trexacont® (comprimido 250 mg); genérico injetável de múltiplos fabricantes (ex. Blau Farmacêutica S.A., 50 mg/mL, ampola de 5 mL). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Fabricante/detentor de registro do Transamin® e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA."
+      "Transamin® (comprimido 250 mg e injetável 50 mg/mL); Hemoblock® e Trexacont® (comprimido 250 mg); genérico injetável de múltiplos fabricantes (ex. Blau Farmacêutica S.A., 50 mg/mL, ampola de 5 mL). Pesquisado nesta sessão (WebSearch, 11/08/2026) — issue #52, seção 9 (apresentações comerciais); fármacos do catálogo estavam sem nenhuma apresentação comercial cadastrada. Fabricante/detentor de registro do Transamin® e número de registro ANVISA não confirmados nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "Hemoblock® ácido tranexâmico 250mg — comprimidos, embalagens com 12 e 24 comprimidos de 250mg e 500mg; e solução injetável 50 mg/mL, ampolas de 5mL, caixas com 5 e 50 ampolas (EMS Sigma Pharma). Fonte: consultaremedios.com.br (bula profissional Hemoblock, EMS Sigma Pharma), WebSearch 20/08/2026.",
+      "Trexacont® ácido tranexâmico 250mg — comprimidos, embalagens com 12 e 24 comprimidos (Legrand Pharma Indústria Farmacêutica Ltda). Fonte: consultaremedios.com.br / drogariaspacheco.vteximg.com.br (bula profissional Trexacont, Legrand Pharma), WebSearch 20/08/2026."
     ]
   },
   {
@@ -8168,7 +8177,8 @@
     "review_status": "revisado",
     "generic_name": "Estreptoquinase",
     "brand_names": [
-      "Streptase"
+      "Streptase",
+      "Solustrep"
     ],
     "drug_class": "Trombolítico/fibrinolítico — ativador indireto do plasminogênio, de primeira geração",
     "mechanism": "Proteína bacteriana altamente purificada, extraída de filtrado de cultura de estreptococos beta-hemolíticos do Grupo C de Lancefield. Forma um complexo estreptoquinase-plasminogênio que converte o plasminogênio em plasmina, enzima proteolítica que degrada a fibrina do trombo. Ao contrário dos ativadores diretos (alteplase, tenecteplase), não é fibrino-específica: ativa o sistema fibrinolítico de forma sistêmica, gerando estado lítico generalizado e maior risco de sangramento fora do sítio do trombo. Meia-vida curta (~18 minutos para a fração livre; ~80 minutos considerando a formação do complexo ativador) — altas doses saturam anticorpos antiestreptoquinase e reduzem, paradoxalmente, o risco de sangramento em relação a doses subterapêuticas.",
@@ -8230,7 +8240,10 @@
     "duration_of_action_source": "Revisão de farmacologia da estreptoquinase e estudos de depleção de fibrinogênio pós-estreptoquinase (Fears R, biochemical pharmacology of thrombolytic agents; PubMed 6486019 e 8960942 — estado lítico sistêmico e reperfusão).",
     "sbp_reduction_mmhg": null,
     "dbp_reduction_mmhg": null,
-    "bp_evidence_source": "Hipotensão é evento conhecido durante a infusão de estreptoquinase, atribuído a reação relacionada à proteína bacteriana (ativação de complemento/pseudoanafilaxia), não a um efeito farmacodinâmico direto sobre o tônus vascular — sem dado sistemático de magnitude de queda pressórica em mmHg na fonte consultada."
+    "bp_evidence_source": "Hipotensão é evento conhecido durante a infusão de estreptoquinase, atribuído a reação relacionada à proteína bacteriana (ativação de complemento/pseudoanafilaxia), não a um efeito farmacodinâmico direto sobre o tônus vascular — sem dado sistemático de magnitude de queda pressórica em mmHg na fonte consultada.",
+    "commercial_presentations": [
+      "Solustrep® estreptoquinase — pó liofilizado para solução injetável, apresentações de 750.000 UI e 1.500.000 UI, frasco-ampola (Laboratório Bergamo). Fonte: MedicinaNET (bula Estreptoquinase Streptonase/apresentações), consultaremedios.com.br, WebSearch 20/08/2026."
+    ]
   },
   {
     "slug": "ambrisentana",
@@ -12533,9 +12546,12 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Não se aplica — quinidina é antiarrítmico classe Ia sem indicação nem estudo de redução pressórica sistêmica; hipotensão é listada como sinal de alerta para redução/suspensão de dose (ver campo `monitoring`), não como desfecho terapêutico buscado.",
     "commercial_presentations": [
-      "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marcas historicamente registradas (Quinicardine, Cardinor, Quinax, Duriles, Secuquidin, INAL) aparecem com registro ANVISA vencido/cancelado em múltiplos mirrors independentes consultados — padrão consistente entre fontes, sugerindo fármaco hoje só acessível por importação (RDC de medicamento não registrado). VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente) — antes de afirmar indisponibilidade total, confirmar diretamente com a ANVISA."
+      "Nenhuma apresentação comercial ativa localizada no Brasil nesta sessão (20/08/2026). Marcas historicamente registradas (Quinicardine, Cardinor, Quinax, Duriles, Secuquidin, INAL) aparecem com registro ANVISA vencido/cancelado em múltiplos mirrors independentes consultados — padrão consistente entre fontes, sugerindo fármaco hoje só acessível por importação (RDC de medicamento não registrado). VERIFICAÇÃO HUMANA NECESSÁRIA: não foi consultado o bulário oficial da ANVISA diretamente nesta sessão (WebFetch bloqueado pelo proxy do ambiente) — antes de afirmar indisponibilidade total, confirmar diretamente com a ANVISA.",
+      "Quinicardine® sulfato de quinidina 200mg (0,20g por comprimido de 0,30g) — comprimidos, embalagem com 20 comprimidos (Laboratório Barrenne). Medicamento sujeito a controle especial (Portaria 344/98). Fonte: bulas.med.br (bula Quinicardine, fórmula e apresentação), farmaciamix.com.br, WebSearch 20/08/2026."
     ],
-    "brand_names": []
+    "brand_names": [
+      "Quinicardine"
+    ]
   },
   {
     "slug": "mexiletina-cloridrato",
@@ -12982,7 +12998,10 @@
     "review_status": "revisado",
     "generic_name": "Pitavastatina cálcica",
     "brand_names": [
-      "Pivast"
+      "Pivast",
+      "Ebatz",
+      "Lester",
+      "Livalo"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "A pitavastatina cálcica pertence à classe de medicamentos denominados inibidores da hidroximetilglutaril-coenzima A (HMG-CoA) redutase — a enzima que catalisa a etapa limitante da velocidade de biossíntese hepática do colesterol (conversão de HMG-CoA em mevalonato). A inibição da produção de colesterol no fígado (a maior fonte de colesterol do organismo) reduz o colesterol intracelular hepático, o que aumenta a expressão de receptores de LDL na superfície dos hepatócitos e, com isso, aumenta a remoção do colesterol LDL ('colesterol ruim') do sangue. O resultado final é a redução do colesterol total, do LDL-C, da apolipoproteína B e dos triglicérides, com aumento do HDL-C ('colesterol bom'). É uma das estatinas mais recentes a chegar ao mercado brasileiro, com duas diferenças farmacocinéticas relevantes em relação às estatinas mais antigas do catálogo (atorvastatina, sinvastatina, lovastatina): (1) o pico de concentração plasmática é atingido rapidamente, cerca de 1 hora após a administração oral; (2) o metabolismo hepático da pitavastatina é predominantemente por glicuronidação (via enzimas UGT), com envolvimento apenas marginal do citocromo P450 (CYP2C9 e, em menor grau, CYP2C8) e praticamente nenhum envolvimento do CYP3A4 — a via que domina o metabolismo da sinvastatina/atorvastatina/lovastatina e que é a origem da maioria das interações medicamentosas graves dessa classe. Essa via metabólica distinta não elimina o risco de interação: a pitavastatina tem uma interação farmacocinética própria e especialmente importante com a ciclosporina (aumento acentuado da exposição, com risco de miopatia e rabdomiólise) e com a eritromicina — ver campo `interactions`. Fontes: bula para o paciente PIVAST (pitavastatina cálcica), Eurofarma Laboratórios S.A., M.S. 1.0043.1355, texto de bula aprovado pela Anvisa em 25/10/2021 (medicamento similar, RDC 60/12); rótulo FDA/DailyMed do LIVALO (pitavastatin calcium), Kowa Pharmaceuticals America — seção Clinical Pharmacology, consultado nesta sessão (11/08/2026) para os parâmetros farmacocinéticos exatos (meia-vida, biodisponibilidade, excreção) que a bula brasileira para o paciente não detalha.",
@@ -12990,7 +13009,10 @@
       "Comprimidos revestidos de 2 mg, uso oral adulto, embalagens com 10 ou 30 comprimidos (bula PIVAST, Eurofarma, M.S. 1.0043.1355)."
     ],
     "commercial_presentations": [
-      "Pivast® 2 mg, comprimido revestido circular biconvexo branco — Eurofarma Laboratórios S.A., M.S. 1.0043.1355, embalagens com 10 ou 30 comprimidos. **VERIFICAÇÃO HUMANA NECESSÁRIA** para confirmar se a apresentação de 4 mg (dose máxima recomendada — ver `dosing`) já está registrada e comercializada sob a mesma marca no Brasil em 2026: a bula para o paciente consultada nesta sessão (versão VP/VPS, aprovação de texto em 25/10/2021) descreve apenas o comprimido de 2 mg; não foi localizada, nesta sessão, confirmação de bula/registro brasileiro específico para o comprimido de 4 mg."
+      "Pivast® 2 mg, comprimido revestido circular biconvexo branco — Eurofarma Laboratórios S.A., M.S. 1.0043.1355, embalagens com 10 ou 30 comprimidos. **VERIFICAÇÃO HUMANA NECESSÁRIA** para confirmar se a apresentação de 4 mg (dose máxima recomendada — ver `dosing`) já está registrada e comercializada sob a mesma marca no Brasil em 2026: a bula para o paciente consultada nesta sessão (versão VP/VPS, aprovação de texto em 25/10/2021) descreve apenas o comprimido de 2 mg; não foi localizada, nesta sessão, confirmação de bula/registro brasileiro específico para o comprimido de 4 mg.",
+      "Ebatz® pitavastatina cálcica 2mg — comprimidos revestidos, embalagem com 90 comprimidos; e 4mg — comprimidos revestidos, embalagens com 10, 30 ou 60 comprimidos (Libbs Farmacêutica). Fonte: drogariasaopaulo.com.br, drogariaspacheco.com.br, farmacianacional.com.br (Ebatz, Libbs), WebSearch 20/08/2026.",
+      "Lester® pitavastatina cálcica 2mg — comprimidos revestidos, embalagens com 10 ou 30 comprimidos (Supera Farma Laboratórios S.A.; também comercializado pela Eurofarma). Fonte: panvel.com (bula Lester), bula.gratis (Supera Farma), eurofarma.com.br, WebSearch 20/08/2026.",
+      "Livalo® pitavastatina cálcica — comprimidos, bula profissional depositada por Biolab Sanus Farmacêutica Ltda. VERIFICAÇÃO HUMANA NECESSÁRIA para a dosagem/tamanho de embalagem exatos, não confirmados com segurança nesta sessão — só a existência do registro brasileiro (bula hospedada em bula-anvisa.s3) foi confirmada. Fonte: bula-anvisa.s3.sa-east-1.amazonaws.com (bula paciente Livalo, Biolab Sanus), WebSearch 20/08/2026."
     ],
     "renal_adjustment": "Insuficiência renal moderada e grave (sem hemodiálise) e doença renal em estágio terminal em hemodiálise: a dose deve ser individualizada, e a dose MÁXIMA é de 2 mg, uma vez ao dia — metade da dose máxima usada na função renal normal (4 mg/dia). Fonte: bula PIVAST (Eurofarma), item 'O que devo saber antes de usar este medicamento' e 'Como devo usar este medicamento'. O rótulo FDA/DailyMed do LIVALO especifica de forma mais granular a insuficiência renal grave (TFGe 15-29 mL/min/1,73m²): dose inicial de 1 mg/dia, dose máxima de 2 mg/dia — consistente com o teto de 2 mg/dia da bula brasileira, com o detalhe adicional da dose inicial recomendada, que a bula brasileira para o paciente não especifica isoladamente.",
     "hepatic_adjustment": "A bula PIVAST contraindica o uso em doença hepática ativa (ver `contraindications`) — não descreve um esquema de ajuste de dose para hepatopatia leve, porque o uso está vedado a partir de doença hepática ativa. O rótulo FDA/DailyMed do LIVALO é mais explícito: contraindicado em insuficiência hepática aguda ou cirrose hepática descompensada. **VERIFICAÇÃO HUMANA NECESSÁRIA** para uma faixa de ajuste em hepatopatia leve/compensada assintomática — nenhuma das duas fontes consultadas nesta sessão traz esse detalhe.",
