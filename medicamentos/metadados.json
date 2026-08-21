@@ -853,7 +853,9 @@
     "presentations": [
       "Pó liofilizado para solução injetável/infusão 250 mg por frasco-ampola (apresentação de referência internacional, Angiox®/Angiomax® — ver nota de disponibilidade)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca (WebSearch, 21/08/2026) não confirmou marca de fantasia brasileira registrada na ANVISA para bivalirudina isolada. O nome internacional é Angiox® (Europa, EMA) / Angiomax® (EUA, FDA) — nenhum dos dois foi confirmado como registro ANVISA vigente no Brasil nesta busca (uma referência de página de rótulo da Consultas ANVISA para 'pó liofilizado para solução para infusão' apareceu num resultado, mas não foi possível abrir a página — bloqueada pelo proxy de rede desta sessão — nem confirmar o nome comercial/laboratório associado a ela). Não encontrada bula brasileira acessível nem confirmação de comercialização ativa no país. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar se há registro ANVISA vigente e sob qual marca."
+    ],
     "brand_names": []
   },
   {
@@ -1155,13 +1157,16 @@
     "dbp_reduction_mmhg": -10.2,
     "bp_evidence_source": "Rótulo FDA/DailyMed do ATACAND (candesartan cilexetil) — 14 estudos placebo-controlados de 4 a 12 semanas, doses de 2 a 32 mg/dia, PA diastólica basal de 95-114 mmHg, 2.350 pacientes randomizados para candesartana vs. 1.027 para placebo. Variação média de pressão: -10,7/-7,8 mmHg com 16 mg e -12,6/-10,2 mmHg com 32 mg, contra -0,3/-2,6 mmHg no grupo placebo; efeito geralmente dose-relacionado, de 8-12/4-8 mmHg nas doses de 8 a 32 mg. Valor registrado nos campos numéricos é o da dose de 32 mg (a mais alta aprovada). Fonte: FDA label PDF (accessdata.fda.gov, Reference ID 4630925), localizado e citado via WebSearch em 10/08/2026 — a leitura direta do PDF não foi possível nesta sessão (WebFetch bloqueado); os números vêm da síntese do mecanismo de busca sobre o conteúdo desse documento. **Confirmado por leitura direta do rótulo FDA/DailyMed do ATACAND nesta sessão (11/08/2026)**: 'the antihypertensive effects of candesartan cilexetil tablets were examined in 14 placebo-controlled trials of 4- to 12-weeks duration, primarily at daily doses of 2 to 32 mg per day', com '2350 patients randomized to one of several doses... and 1027 to placebo' — confirma exatamente o n já registrado (2.350 vs. 1.027). A leitura direta desta sessão sintetiza os efeitos de dose como 'doses of 8 to 32 mg giving effects of about 8-12/4-8 mm Hg' — faixa compatível, ainda que não idêntica ponto a ponto, com os valores de 16mg/32mg já registrados nos campos numéricos deste item (-10,7/-7,8 e -12,6/-10,2 mmHg), que ficam mantidos por serem mais específicos por dose individual.",
     "brand_names": [
-      "Atacand (nome comercial internacional, AstraZeneca) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)"
+      "Atacand (nome comercial internacional, AstraZeneca) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)",
+      "Blopress — Abbott Laboratórios do Brasil Ltda."
     ],
     "presentations": [
       "Comprimido 8 mg",
       "Comprimido 16 mg"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Blopress® (candesartana cilexetila), Abbott Laboratórios do Brasil Ltda., registro ANVISA nº M.S. 1.0553.0219 — comprimidos de 8 mg e 16 mg, embalagem com 30 comprimidos cada. Bula aprovada pela ANVISA em 21/10/2016. Fonte: bula do profissional/paciente (dam.abbott.com/pt-br/documents/pdfs/nossas-bulas/B/BU_11_BLOPRESS_bula_profissional_FINAL.pdf; saudedireta.com.br/catinc/drugs/bulas/blopress.pdf), confirmado via WebSearch em 21/08/2026 (conteúdo do PDF em si não pôde ser aberto diretamente por bloqueio do proxy de rede desta sessão — dado extraído dos resultados de busca, que citam a bula nominalmente; recomenda-se conferência humana do PDF original antes de uso clínico)."
+    ]
   },
   {
     "slug": "cangrelor",
@@ -1633,7 +1638,9 @@
       "Comprimido 0,5 mg",
       "Comprimido 1 mg"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca (WebSearch, 21/08/2026) não encontrou marca de fantasia brasileira adicional além de 'Colchis', já cadastrada. Os demais produtos localizados (ex.: Geolab) são vendidos sob a própria denominação genérica 'Colchicina' + nome do fabricante, o que não conta como marca de fantasia nova pela regra deste levantamento. Nenhuma marca como 'Colcris'/'Colgout'/'Colchimax' foi confirmada como registrada no Brasil."
+    ],
     "brand_names": [
       "Colchis"
     ]
@@ -2184,7 +2191,9 @@
     "presentations": [
       "Comprimido revestido 400 mg (embalagens de 20, 50 ou 60 comprimidos) — ver nota de disponibilidade"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca (WebSearch, 21/08/2026) confirma que a única marca comercial de dronedarona no Brasil era Multaq® (Sanofi-Aventis), registro ANVISA nº 113001079 (400 mg) — e esse registro foi CANCELADO em 15/05/2018, ou seja, o produto não é mais fabricado nem comercializado no país. Nenhuma outra marca de fantasia (genérico/similar) foi encontrada com registro vigente. VERIFICAÇÃO HUMANA NECESSÁRIA se for preciso confirmar disponibilidade atual — pelas fontes consultadas, dronedarona parece hoje sem apresentação comercial ativa registrada no Brasil."
+    ],
     "brand_names": []
   },
   {
@@ -3183,7 +3192,9 @@
       "Solução injetável 2,5 mg/0,5 mL, seringa preenchida (uso SC ou IV)",
       "Solução injetável 7,5 mg/0,6 mL, seringa preenchida (uso SC)"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca (WebSearch, 21/08/2026) confirma que a única marca comercial de fondaparinux sódico no Brasil era Arixtra® (Aspen Pharma, antes Sanofi-Synthelabo), registro ANVISA M.S. 1.2033.0016.001-4 — e a Aspen Pharma comunicou à ANVISA em 12/02/2021 a descontinuação da comercialização das apresentações de 2,5 mg e 7,5 mg (carta de descontinuação de 19/01/2022 confirma o encerramento). Nenhum outro laboratório com registro vigente de fondaparinux sódico foi encontrado nesta busca. Fármaco parece hoje sem apresentação comercial ativa registrada no Brasil."
+    ]
   },
   {
     "slug": "furosemida",
@@ -3865,7 +3876,8 @@
     "dbp_reduction_mmhg": null,
     "bp_evidence_source": "Não se aplica — o próprio mecanismo de ação, já descrito neste registro (`mechanism`), afirma explicitamente que a ivabradina reduz a frequência cardíaca \"sem afetar... a pressão arterial\". É droga bradicardizante pura (inibidor do canal If do nó sinusal), distinta de betabloqueador/bloqueador de canal de cálcio nesse aspecto — nenhuma fonte consultada (bula do PROCORALAN, SHIFT já citado em `outcomes`) associa o fármaco a redução de PA.",
     "brand_names": [
-      "Procoralan (Servier do Brasil — já citada extensamente como fonte de bula neste registro)"
+      "Procoralan (Servier do Brasil — já citada extensamente como fonte de bula neste registro)",
+      "Ivahart — Torrent do Brasil Ltda."
     ],
     "indications": [
       "Angina pectoris crônica estável, em paciente com ritmo sinusal e frequência cardíaca ≥70 bpm, quando betabloqueador é contraindicado/não tolerado ou como complemento a ele (já registrado em `dosing.criterio indicacao ic`, que trata do mesmo critério para as duas indicações)",
@@ -3885,7 +3897,10 @@
       "**fonte**: bula profissional do PROCORALAN, já citada nas `references` deste registro."
     ],
     "renal_adjustment": "**Sem ajuste de dose necessário com clearance de creatinina acima de 15 mL/min** — a contribuição renal para a eliminação total do fármaco é de aproximadamente 20% (já registrado em `dosing.ajuste renal` deste documento). Fonte: bula profissional brasileira do PROCORALAN, já citada nas `references` deste registro.",
-    "hepatic_adjustment": "Child-Pugh A (leve): sem ajuste necessário. Child-Pugh B (moderado): usar com precaução — diferente do leve, não é \"sem ajuste\". Child-Pugh C (grave): **contraindicado** — já registrado como contraindicação formal neste documento (ver `contraindications`: \"insuficiência hepática grave\"), população não estudada, com grande aumento antecipado da exposição sistêmica (já registrado em `dosing.ajuste hepatico` deste documento). Fonte: RCM da EMA do PROCORALAN, já citada em `dosing.ajuste hepatico` deste registro."
+    "hepatic_adjustment": "Child-Pugh A (leve): sem ajuste necessário. Child-Pugh B (moderado): usar com precaução — diferente do leve, não é \"sem ajuste\". Child-Pugh C (grave): **contraindicado** — já registrado como contraindicação formal neste documento (ver `contraindications`: \"insuficiência hepática grave\"), população não estudada, com grande aumento antecipado da exposição sistêmica (já registrado em `dosing.ajuste hepatico` deste documento). Fonte: RCM da EMA do PROCORALAN, já citada em `dosing.ajuste hepatico` deste registro.",
+    "commercial_presentations": [
+      "Ivahart® (cloridrato de ivabradina), Torrent do Brasil Ltda. (fabricado por Torrent Pharmaceuticals Ltd., Dahej, Índia), registro ANVISA nº M.S. 1.0525.0090 — comprimidos revestidos de 5 mg (embalagens com 10 e 60 comprimidos) e de 7,5 mg (embalagem com 60 comprimidos); cada comprimido de 5 mg contém cloridrato de ivabradina 5,390 mg (equivalente a 5,0 mg de ivabradina), e o de 7,5 mg contém 8,085 mg (equivalente a 7,5 mg). Bula aprovada pela ANVISA em 06/11/2025. Fonte: bula do paciente (torrent.com.br/uploads/Ivahart_Paciente_BU-01.pdf) e páginas de bula de farmácias (panvel.com, araujo.com.br, drogaraia.com.br), confirmado via WebSearch em 21/08/2026."
+    ]
   },
   {
     "slug": "labetalol",
@@ -4340,7 +4355,9 @@
       "Hipertensão arterial pulmonar (HAP), classe funcional OMS/NYHA II-III, para retardar a progressão da doença e reduzir a morbimortalidade — indicação sustentada pelo ensaio pivotal SERAPHIN, já citado e verificado neste registro (Pulido T et al., N Engl J Med. 2013;369(9):809-818, PMID 23984728).",
       "**Texto exato da indicação aprovada, rótulo FDA (Opsumit)**: \"OPSUMIT is an endothelin receptor antagonist (ERA) indicated for the treatment of pulmonary arterial hypertension (PAH, WHO Group I) in adults to reduce the risks of disease progression and hospitalization for PAH.\" Bula FDA (rótulo aprovado), OPSUMIT (macitentan), Actelion Pharmaceuticals US, Inc., DailyMed setid 1e484a50-55db-4b85-8c57-6cd1b0353abd — consultada via WebFetch em 12/08/2026. Bulário brasileiro (ANVISA) permanece bloqueado nesta sessão; nome comercial e apresentação brasileira ainda não confirmados contra registro ANVISA."
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca (WebSearch, 21/08/2026) confirma que a única marca comercial de macitentana no Brasil é Opsumit® (Janssen-Cilag Farmacêutica Ltda.), registro ANVISA nº 1123634320018, fabricado por Excella GmbH & Co.KG (Alemanha), embalado por Patheon France e importado pela Janssen-Cilag no Brasil. Nenhuma outra marca de fantasia (genérico/similar) foi encontrada com registro vigente na ANVISA para macitentana nesta busca."
+    ]
   },
   {
     "slug": "mavacamten",
