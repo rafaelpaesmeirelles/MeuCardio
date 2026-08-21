@@ -18146,5 +18146,69 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "vacinacao-contra-influenza-antes-da-alta-pos-infarto",
+    "condicao": "Vacinação contra influenza como prevenção cardiovascular secundária, antes da alta após infarto ou síndrome coronariana aguda",
+    "resumo": "Checklist para garantir que o benefício cardiovascular da vacina de influenza, maior no coronariopata recente, não seja perdido por a vacinação ser tratada como medida de rotina geral e não cardiológica.",
+    "documento_origem": "vacinacao-contra-influenza-como-prevencao-cardiovascular-iami-e-metanalise-de-udell",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Udell JA, Zawi R, Bhatt DL, et al. Association between influenza vaccination and cardiovascular outcomes in high-risk patients: a meta-analysis. JAMA. 2013;310(16):1711-1720. DOI: 10.1001/jama.2013.279206. PMID: 24150467",
+      "Fröbert O, Götberg M, Erlinge D, et al; IAMI Investigators. Influenza Vaccination After Myocardial Infarction: A Randomized, Double-Blind, Placebo-Controlled, Multicenter Trial. Circulation. 2021;144(18):1476-1484. DOI: 10.1161/CIRCULATIONAHA.121.057042. PMID: 34459211"
+    ],
+    "itens": [
+      {
+        "id": "flu-status-vacinal-verificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Status vacinal contra influenza da temporada corrente verificado durante a internação por infarto agudo do miocárdio ou síndrome coronariana aguda de alto risco",
+        "origem_secao": "O ensaio IAMI — confirmação dedicada pós-IAM"
+      },
+      {
+        "id": "flu-nao-tratar-como-rotina-geral",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Vacinação contra influenza comunicada ao paciente coronariopata recente como medida com benefício cardiovascular específico e maior que o da população geral de risco, não como recomendação genérica de saúde pública",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "flu-vacinacao-antes-alta-ou-agendada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Vacinação aplicada ainda durante a internação ou explicitamente agendada para logo após a alta, no paciente sem contraindicação e sem vacinação da temporada já registrada",
+        "origem_secao": "O ensaio IAMI — confirmação dedicada pós-IAM"
+      },
+      {
+        "id": "flu-expectativa-mortalidade-nao-so-reinfarto",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao explicar o benefício ao paciente, enfatizar a redução de mortalidade por qualquer causa e cardiovascular — no IAMI o efeito mais consistente foi sobre mortalidade (HR 0,59 para as duas), e não sobre reinfarto isolado, que não atingiu significância isolada (HR 0,86; IC95% 0,50-1,46)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "flu-nao-extrapolar-fora-de-sca-recente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Benefício robusto do subgrupo com síndrome coronariana aguda recente não extrapolado para todo paciente de risco cardiovascular sem esse contexto — a metanálise de Udell mostrou interação significativa (p=0,02), com RR próximo de 1 (sem efeito) em quem não teve SCA recente",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "flu-registro-em-prontuario",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Aplicação ou recusa da vacina contra influenza registrada no prontuário como item da conduta de prevenção secundária pós-infarto, junto aos demais itens de alta cardiológica",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "flu-orientacao-temporadas-futuras",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre a necessidade de revacinação anual contra influenza nas temporadas seguintes, mantendo a medida como parte contínua da prevenção secundária, não como ato único vinculado apenas à internação atual",
+        "origem_secao": "Definição"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Geral citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
