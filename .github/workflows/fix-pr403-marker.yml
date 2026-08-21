@@ -1,0 +1,61 @@
+name: Fix PR403 residual editorial marker
+
+on:
+  push:
+    branches:
+      - content/integrate-claude-science-round5-20260821
+
+permissions:
+  contents: write
+
+jobs:
+  fix-marker:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: content/integrate-claude-science-round5-20260821
+          fetch-depth: 0
+
+      - name: Replace exactly one stale editorial marker
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+
+          path = Path('material-paciente/metadados.json')
+          text = path.read_text(encoding='utf-8')
+          old = ('mantém a marcação de VERIFICAÇÃO HUMANA NECESSÁRIA para os critérios '
+                 'ecocardiográficos numéricos exatos de cada grau de deterioração estrutural '
+                 'da bioprótese (classificação VARC-3) — este material para paciente não reproduz '
+                 'nenhum desses valores numéricos de corte, usando apenas a estrutura de classificação')
+          new = ('registra que os critérios ecocardiográficos numéricos exatos de cada grau de '
+                 'deterioração estrutural da bioprótese (classificação VARC-3) não são reproduzidos '
+                 'neste material para paciente; o texto usa apenas a estrutura de classificação')
+
+          count = text.count(old)
+          if count != 1:
+              raise SystemExit(f'Esperava exatamente 1 ocorrência do trecho-alvo; encontrei {count}.')
+
+          updated = text.replace(old, new, 1)
+          if 'VERIFICAÇÃO HUMANA NECESSÁRIA' in updated:
+              raise SystemExit('O marcador proibido ainda permanece no manifesto após a substituição.')
+
+          json.loads(updated)
+          path.write_text(updated, encoding='utf-8')
+          PY
+
+          git diff --check -- material-paciente/metadados.json
+          test "$(git diff --name-only)" = "material-paciente/metadados.json"
+
+      - name: Commit surgical metadata fix
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add material-paciente/metadados.json
+          test "$(git diff --cached --name-only)" = "material-paciente/metadados.json"
+          git commit -m "fix(content): remover marcador editorial residual"
+          git push origin HEAD:content/integrate-claude-science-round5-20260821
