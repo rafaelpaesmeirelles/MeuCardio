@@ -8424,5 +8424,304 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "triagem-cardiovascular-pre-participacao-esportiva-ecg-do-atleta",
+    "condicao": "Triagem cardiovascular pré-participação esportiva, incluindo o papel do ECG de 12 derivações no atleta",
+    "resumo": "Estrutura da avaliação pré-participação segundo a declaração científica AHA/ACC 2025 — história e exame físico continuam obrigatórios, o ECG é considerado razoável quando há interpretação por critérios específicos do atleta e via organizada de investigação, e eco/teste de esforço/Holter não são rastreamento universal de primeira linha.",
+    "documento_origem": "triagem-cardiovascular-pre-participacao-ecg-atleta-aha-acc-2025",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. J Am Coll Cardiol. 2025;85(10):1059-1108. PMID: 39976316. DOI: 10.1016/j.jacc.2024.12.025.",
+      "Versão simultânea em Circulation: PMID 39973614. DOI: 10.1161/CIR.0000000000001297."
+    ],
+    "itens": [
+      {
+        "id": "tcpp-historia-cardiovascular-direcionada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História cardiovascular direcionada colhida, incluindo antecedentes familiares sugestivos de doença cardiovascular hereditária",
+        "origem_secao": "História e exame físico continuam obrigatórios"
+      },
+      {
+        "id": "tcpp-exame-fisico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exame físico realizado — reconhecendo que história e exame físico isoladamente têm sensibilidade limitada para doenças silenciosas",
+        "origem_secao": "História e exame físico continuam obrigatórios"
+      },
+      {
+        "id": "tcpp-ecg-12-derivacoes-considerado",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "ECG de 12 derivações considerado no rastreamento — a AHA/ACC 2025 avalia como razoável incluí-lo, por aumentar a detecção de doença cardíaca potencialmente relevante em atletas assintomáticos frente a história e exame físico isolados",
+        "origem_secao": "Qual é o papel do ECG de 12 derivações?"
+      },
+      {
+        "id": "tcpp-interprete-treinado-criterios-atleta",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Programa dispõe de profissional treinado em critérios contemporâneos específicos para ECG de atleta — condição essencial da recomendação, sem a qual não se deve adotar ECG de rotina",
+        "origem_secao": "Qual é o papel do ECG de 12 derivações?"
+      },
+      {
+        "id": "tcpp-via-organizada-investigacao",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Existe via organizada de investigação para achados eletrocardiográficos anormais — sem esse ecossistema, o programa de ECG pode gerar falsos positivos, exames desnecessários, ansiedade, custo e afastamento esportivo indevido",
+        "origem_secao": "Qual é o papel do ECG de 12 derivações?"
+      },
+      {
+        "id": "tcpp-ecg-interpretado-com-criterios-especificos",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ECG interpretado com critérios específicos para atletas, não com os critérios da população geral — o treinamento físico produz adaptações elétricas fisiológicas que podem refletir remodelamento adaptativo",
+        "origem_secao": "ECG de atleta não deve ser interpretado como ECG de população geral"
+      },
+      {
+        "id": "tcpp-achados-que-justificam-investigacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pesquisados achados que justificam investigação dirigida para cardiopatia estrutural ou elétrica: padrões específicos de inversão de onda T, depressão difusa do segmento ST, ondas Q patológicas ou bloqueio completo de ramo esquerdo",
+        "origem_secao": "ECG de atleta não deve ser interpretado como ECG de população geral"
+      },
+      {
+        "id": "tcpp-investigacao-orientada-pelo-padrao-e-contexto",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Quando o ECG é anormal, investigação orientada pelo padrão encontrado e pelo contexto clínico — sintomas, história familiar e exame físico",
+        "origem_secao": "ECG de atleta não deve ser interpretado como ECG de população geral"
+      },
+      {
+        "id": "tcpp-nao-rastreamento-universal-eco-teste-holter",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma, teste de esforço e monitorização ambulatorial de ritmo NÃO usados como rastreamento primário de rotina em atleta assintomático — a declaração de 2025 não encontrou dados suficientes para isso; permanecem como testes de segunda linha, selecionados conforme o achado clínico ou eletrocardiográfico",
+        "origem_secao": "O que não deve virar rastreamento universal de primeira linha"
+      },
+      {
+        "id": "tcpp-limitacoes-do-ecg-reconhecidas",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que mesmo um ECG corretamente interpretado não detecta todas as causas de parada cardíaca súbita — algumas condições podem ser eletricamente silenciosas, como certas anomalias coronarianas, aortopatias, doença valvar relevante e algumas arritmias induzidas por catecolaminas; nenhum programa de triagem elimina o risco de morte súbita",
+        "origem_secao": "Limitações do ECG"
+      },
+      {
+        "id": "tcpp-plano-de-emergencia-independente-do-modelo",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Plano de ação para emergência mantido independentemente do modelo de triagem adotado — reconhecimento rápido de parada cardíaca, RCP de alta qualidade, acesso rápido a DEA e sistema coordenado de acionamento e transporte médico",
+        "origem_secao": "Plano de emergência é parte da prevenção"
+      },
+      {
+        "id": "tcpp-decisao-compartilhada-quando-doenca-identificada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão compartilhada com o atleta quando doença cardiovascular é identificada, dentro da mudança de paradigma de 2025: detecção qualificada, investigação proporcional ao risco, interpretação específica do atleta e prevenção de dano por falso positivo ou restrição desnecessária",
+        "origem_secao": "Mudança de paradigma em 2025"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiologia do Esporte e do Exercício citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "diferenciacao-coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+    "condicao": "Diferenciação entre coração de atleta e cardiomiopatia hipertrófica na zona cinzenta de remodelamento",
+    "resumo": "Abordagem multimodal e hierárquica para diferenciar remodelamento fisiológico do atleta de cardiomiopatia hipertrófica quando o fenótipo é ambíguo — ECG com critérios específicos para o achado inicial, imagem cardiovascular (eco/RMC) como processo central, e inteligência artificial como ferramenta emergente ainda sem validação específica em atletas.",
+    "documento_origem": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pagourelias ED, Ouzouni S, Salmatzidis P, Sargiannidis T, Tsiouli E, Ntelios D, Kouidi E, Vassilikos VP. A concise guide of contemporary cardiovascular imaging practices to differentiate athlete's heart in the gray zone. Heart Fail Rev. 2025;30(6):1215-1224. PMID: 40576890. PMCID: PMC12618444. DOI: 10.1007/s10741-025-10541-y.",
+      "Wiradinata W, Aditya MR, Subali AD, Lestari H, Hardani RB, Mukti NH. Distinguishing athlete's heart from hypertrophic cardiomyopathy by ECG features in the pediatric population: a systematic review and meta-analysis. Eur J Pediatr. 2025;184(12):802. PMID: 41313487. DOI: 10.1007/s00431-025-06657-w.",
+      "Deligiannis A, Bompotis G, Deligiannis P, Anifanti M, Kouidi E. Artificial intelligence in the differential diagnosis of hypertrophic cardiomyopathy and physiological hypertrophy: a scoping review. Hellenic J Cardiol. 2026 May 15. PMID: 42142808. DOI: 10.1016/j.hjc.2026.05.001."
+    ],
+    "itens": [
+      {
+        "id": "cavh-remodelamento-discreto-vs-zona-cinzenta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificado se o remodelamento cardíaco do atleta apresenta características discretas, facilmente distinguíveis de achado patológico, ou se assume forma mais pronunciada, entrando na 'zona cinzenta' que exige diferenciação ativa",
+        "origem_secao": "O desafio central: distinguir remodelamento fisiológico de doença genética"
+      },
+      {
+        "id": "cavh-diferencial-inclui-outras-cardiomiopatias-hereditarias",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerado que o diferencial na zona cinzenta inclui não só cardiomiopatia hipertrófica, mas também outras cardiomiopatias hereditárias (dilatada, arritmogênica) que podem se manifestar em pessoas fisicamente ativas",
+        "origem_secao": "O desafio central: distinguir remodelamento fisiológico de doença genética"
+      },
+      {
+        "id": "cavh-imagem-multimodal-como-processo-central",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiografia e ressonância magnética cardíaca (RMC) empregadas como processo central para diferenciar fenótipo normal de anormal, tanto na triagem pré-participação quanto na detecção precoce de cardiomiopatia subjacente",
+        "origem_secao": "O desafio central: distinguir remodelamento fisiológico de doença genética"
+      },
+      {
+        "id": "cavh-limiares-verificacao-humana",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA para os limiares numéricos específicos de espessura parietal, diâmetro de câmara e função diastólica usados no algoritmo hierárquico de imagem — não detalhados no resumo indexado; consultar o texto completo (livre em PMCID PMC12618444) antes de aplicar clinicamente",
+        "origem_secao": "O desafio central: distinguir remodelamento fisiológico de doença genética"
+      },
+      {
+        "id": "cavh-ecg-qtc-prolongado",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Em população pediátrica, prolongamento do intervalo QTc pesquisado como achado mais prevalente no grupo com cardiomiopatia hipertrófica que na adaptação fisiológica",
+        "origem_secao": "O que o ECG pediátrico acrescenta à diferenciação"
+      },
+      {
+        "id": "cavh-ecg-onda-t-st-onda-q",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Alterações de onda T e do segmento ST, e ondas Q patológicas, pesquisadas como achados mais prevalentes no grupo com cardiomiopatia hipertrófica pediátrica",
+        "origem_secao": "O que o ECG pediátrico acrescenta à diferenciação"
+      },
+      {
+        "id": "cavh-numeros-agregados-verificacao-humana",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA para os valores exatos de odds ratio, sensibilidade e especificidade de cada parâmetro eletrocardiográfico — não constam do resumo indexado da metanálise",
+        "origem_secao": "O que o ECG pediátrico acrescenta à diferenciação"
+      },
+      {
+        "id": "cavh-achado-ecg-motiva-investigacao-nao-diagnostico-isolado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Alteração de ECG detectada tratada como motivo para investigação adicional, nunca usada isoladamente como critério diagnóstico definitivo — recomendação explícita da própria metanálise",
+        "origem_secao": "O que o ECG pediátrico acrescenta à diferenciação"
+      },
+      {
+        "id": "cavh-ia-ainda-nao-validada-especificamente-no-atleta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a inteligência artificial mostra potencial (só 1 de 8 estudos da revisão de escopo comparou diretamente HCM versus coração de atleta, com AUC de 0,93 por deformação miocárdica), mas a escassez de bases de dados específicas de atletas e a validação externa limitada ainda restringem a aplicabilidade clínica dessa ferramenta na cardiologia do esporte",
+        "origem_secao": "Inteligência artificial: uma ferramenta emergente, ainda com lacuna específica no atleta"
+      },
+      {
+        "id": "cavh-abordagem-hierarquica-ecg-depois-imagem",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Abordagem organizada como multimodal e hierárquica: ECG de repouso como primeira triagem (atenção a QTc, onda T/ST e onda Q, sobretudo em jovens), seguido de imagem cardíaca estruturada (ecocardiografia com avaliação de deformação miocárdica, escalando para RMC quando a dúvida persistir)",
+        "origem_secao": "Mensagem prática para a triagem"
+      },
+      {
+        "id": "cavh-duvida-resolvida-por-investigacao-nao-presuncao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Achado clínico duvidoso na zona cinzenta resolvido por investigação adicional — nunca por presunção em qualquer direção (nem de doença, nem de normalidade)",
+        "origem_secao": "Mensagem prática para a triagem"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiologia do Esporte e do Exercício citado em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "retorno-ao-esporte-e-prescricao-de-exercicio-no-cardiopata",
+    "condicao": "Prescrição de exercício e retorno ao esporte em cardiopatas — doença coronariana, insuficiência cardíaca e valvopatias",
+    "resumo": "Estratificação individual de risco, teste funcional direcionado à modalidade e decisão compartilhada substituem a lógica binária de 'cardiopatia = proibição'. O retorno após evento cardiovascular exige recuperação clínica e funcional demonstrável dentro de um programa estruturado, não apenas o cumprimento de um prazo cronológico.",
+    "documento_origem": "prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "review_status": "revisado",
+    "source_refs": [
+      "AHA/ACC. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. 2025. PMID 39973614.",
+      "Borjesson M et al. Recommendations for participation in leisure time or competitive sports in athletes-patients with coronary artery disease. Eur Heart J. 2019. PMID 30052887. DOI 10.1093/eurheartj/ehy408.",
+      "van Buuren F et al. Athletes with valvular heart disease and competitive sports: position statement of the EAPC Sports Cardiology Section. Eur J Prev Cardiol. 2021. PMID 33846742. DOI 10.1093/eurjpc/zwab058."
+    ],
+    "itens": [
+      {
+        "id": "rece-paciente-clinicamente-estavel",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmada estabilidade clínica — sintomas recentes, descompensação de insuficiência cardíaca, síncope, arritmia sustentada ou síndrome coronariana recente mudam o risco e exigem investigação antes da liberação",
+        "origem_secao": "Avaliação antes da prescrição"
+      },
+      {
+        "id": "rece-substrato-de-risco-em-esforco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisado substrato que aumente risco durante esforço: isquemia induzível, disfunção ventricular importante, hipertensão pulmonar relevante, gradientes valvares significativos, arritmias complexas ou cicatriz miocárdica",
+        "origem_secao": "Avaliação antes da prescrição"
+      },
+      {
+        "id": "rece-carga-fisiologica-do-esporte-desejado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Caracterizada a carga fisiológica do esporte desejado — componente dinâmico, estático, de contato e risco intrínseco caso ocorra síncope não são equivalentes entre modalidades",
+        "origem_secao": "Avaliação antes da prescrição"
+      },
+      {
+        "id": "rece-teste-reproduz-demanda-real",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Quando a decisão depende do comportamento durante esforço, teste realizado o mais próximo possível da intensidade e do padrão da modalidade praticada",
+        "origem_secao": "Avaliação antes da prescrição"
+      },
+      {
+        "id": "rece-relevancia-funcional-de-lesao-coronariana-estabelecida",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Diante de lesão coronariana borderline ou obstrutiva, relevância funcional estabelecida (idealmente com exercício máximo e, quando necessário, métodos funcionais adicionais) antes de decisões esportivas mais liberais",
+        "origem_secao": "Doença coronariana"
+      },
+      {
+        "id": "rece-nao-liberar-so-por-assintomatico-em-repouso",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não liberado esporte intenso apenas porque o paciente está assintomático em repouso; angiografia isolada não usada como único determinante de capacidade esportiva quando a pergunta é risco durante esforço máximo",
+        "origem_secao": "O que não deve ser feito"
+      },
+      {
+        "id": "rece-revascularizacao-nao-so-para-liberar-atleta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Tratamento clínico otimizado não substituído por revascularização feita apenas com o objetivo de 'liberar o atleta', sem indicação clínica própria",
+        "origem_secao": "O que não deve ser feito"
+      },
+      {
+        "id": "rece-ic-parametros-para-prescricao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Prescrição em insuficiência cardíaca integra sintomas, classe funcional, fração de ejeção, resposta cronotrópica e pressórica, arritmias, capacidade funcional objetiva (avaliação cardiopulmonar quando a intensidade planejada é alta ou há discordância entre sintomas e desempenho) e estabilidade do tratamento — IC não equivale a contraindicação universal ao exercício",
+        "origem_secao": "Insuficiência cardíaca"
+      },
+      {
+        "id": "rece-ic-descompensada-estabilizar-primeiro",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em IC descompensada, congestão, hipotensão sintomática, isquemia ativa ou arritmias não controladas, priorizada a estabilização clínica — retorno ao treinamento posterior e progressivo",
+        "origem_secao": "Insuficiência cardíaca"
+      },
+      {
+        "id": "rece-valvopatia-fatores-considerados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Decisão esportiva em valvopatia considera gravidade e mecanismo da lesão, sintomas, dimensões e função ventricular, pressão pulmonar, resposta ao esforço, presença de arritmias e eventual aortopatia associada",
+        "origem_secao": "Valvopatias"
+      },
+      {
+        "id": "rece-retorno-nao-e-so-tempo-cronologico",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Retorno após evento cardiovascular (síndrome coronariana, revascularização, descompensação de IC ou intervenção valvar) não baseado apenas em tempo decorrido — critério central é recuperação clínica e funcional demonstrável",
+        "origem_secao": "Retorno após evento cardiovascular"
+      },
+      {
+        "id": "rece-progressao-dentro-de-programa-estruturado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Progressão conduzida dentro de programa de reabilitação ou prescrição estruturada, com reavaliação antes de intensidades competitivas",
+        "origem_secao": "Retorno após evento cardiovascular"
+      },
+      {
+        "id": "rece-decisao-compartilhada-explicitada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão compartilhada explicitando ao paciente o risco conhecido e a incerteza residual, o benefício esperado do exercício, alternativas de menor risco, sinais de alerta, necessidade de seguimento periódico e condições que exigiriam reavaliação ou suspensão temporária",
+        "origem_secao": "Decisão compartilhada"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento já verificado de Cardiologia do Esporte e do Exercício citado em source_refs, com a seção de origem registrada em cada item."
   }
 ]
