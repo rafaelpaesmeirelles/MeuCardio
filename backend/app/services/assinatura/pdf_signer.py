@@ -27,7 +27,7 @@ from asn1crypto import x509 as asn1_x509
 from pyhanko.pdf_utils.incremental_writer import IncrementalPdfFileWriter
 from pyhanko.pdf_utils.text import TextBoxStyle
 from pyhanko.sign import fields, signers
-from pyhanko.stamp import TextStampStyle
+from pyhanko.stamp import QRStampStyle, TextStampStyle
 
 
 class FalhaAoAssinar(RuntimeError):
@@ -38,16 +38,19 @@ class FalhaAoAssinar(RuntimeError):
 
 # Aparencia VISIVEL da mesma assinatura PAdES. Nao e um selo desenhado depois:
 # este widget e criado antes do calculo do hash e integra a revisao assinada.
-# Qualquer alteracao no texto ou no restante do documento invalida a assinatura.
+# Qualquer alteracao no texto, QR ou no restante do documento invalida a assinatura.
 _CAMPO_VISIVEL_PADRAO = (170, 20, 425, 88)
 # A RCE já possui um quadro regulamentar de identificação/assinatura. O selo
 # deve ocupar a metade direita desse quadro, sem cobrir comprador ou rodapé.
 _CAMPO_VISIVEL_RCE = (285, 220, 545, 270)
-def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None) -> TextStampStyle:
-    """Aparência assinada com um caminho verificável fora do consultório.
 
-    O endereço/código fazem parte da revisão criptografada. Não são desenhados
-    depois da assinatura e, portanto, qualquer alteração também invalida o PDF.
+
+def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None):
+    """Aparência assinada com caminho verificável fora do consultório.
+
+    Quando existe URL pública, usa ``QRStampStyle`` do próprio pyHanko. O QR,
+    endereço e código são parte da appearance stream da assinatura e entram
+    no byte range assinado; não são desenhados depois da assinatura.
     """
     linhas = [
         "ASSINATURA DIGITAL ICP-BRASIL",
@@ -61,18 +64,26 @@ def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None) -> Te
         linhas.append(f"Codigo: {codigo_validacao}")
     if not codigo_validacao and not url_validacao:
         linhas.append("Assinatura criptografica embutida neste PDF")
-    return TextStampStyle(
+
+    comum = dict(
         border_width=1,
         border_color=(0.043, 0.180, 0.271),
         background=None,
         background_opacity=1,
         text_box_style=TextBoxStyle(
-            font_size=6,
+            font_size=5.3 if url_validacao else 6,
             text_color=(0.043, 0.180, 0.271),
         ),
         stamp_text="\n".join(linhas),
         timestamp_format="%d/%m/%Y %H:%M:%S %Z",
     )
+    if url_validacao:
+        return QRStampStyle(
+            **comum,
+            qr_inner_size=36,
+            innsep=4,
+        )
+    return TextStampStyle(**comum)
 
 
 def assinar_pdf(
@@ -114,7 +125,11 @@ def assinar_pdf(
             stamp_style=_selo_visivel(codigo_validacao, url_validacao),
             new_field_spec=campo_visivel,
         )
-        saida = pdf_signer.sign_pdf(escritor)
+        appearance_text_params = {"url": url_validacao} if url_validacao else None
+        saida = pdf_signer.sign_pdf(
+            escritor,
+            appearance_text_params=appearance_text_params,
+        )
     except FalhaAoAssinar:
         raise
     except Exception as exc:  # noqa: BLE001 — pyhanko levanta vários tipos próprios; traduzimos todos pra um erro nosso
