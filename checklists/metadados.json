@@ -8424,5 +8424,249 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-agudo-de-hipertensao-grave-e-eclampsia-na-gestacao",
+    "condicao": "Manejo agudo de hipertensão grave (PA ≥ 160/110 mmHg) ou eclâmpsia na gestante ou puérpera",
+    "resumo": "Conduta imediata diante de PA ≥ 160/110 mmHg confirmada ou convulsão na gestante ou puérpera — sulfato de magnésio como conduta central nos dois ramos (tratamento na eclâmpsia, profilaxia na pré-eclâmpsia grave) e a escolha do anti-hipertensivo agudo conforme acesso venoso disponível.",
+    "documento_origem": "fluxograma-eclampsia-e-hipertensao-grave-na-gestacao",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Altman D, Carroli G, Duley L, Farrell B, Moodley J, et al; Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial. Lancet. 2002;359(9321):1877-1890. PMID: 12057549 — 10.141 mulheres randomizadas em 33 países",
+      "Easterling T, Mundle S, Bracken H, Parvekar S, Mool S, et al. Oral antihypertensive regimens (nifedipine retard, labetalol, and methyldopa) for management of severe hypertension in pregnancy: an open-label, randomised controlled trial. Lancet. 2019;394(10203):1011-1021. PMID: 31378394 — NCT01912677 e CTRI/2013/08/003866, 894 randomizadas em dois hospitais públicos de Nagpur, Índia. Financiamento: PREEMPT, com aporte da Bill & Melinda Gates Foundation",
+      "Preeclampsia and Eclampsia · Merck Manual Professional Edition · https://www.merckmanuals.com/professional/gynecology-and-obstetrics/antenatal-complications/preeclampsia-and-eclampsia — dose de sulfato de magnésio (ataque 4,5 g IV/20min + manutenção 1,5 g/hora) e critérios ACOG de pré-eclâmpsia grave, conforme já reaproveitado em pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao.md nesta mesma pasta",
+      "Emergency Treatment for Severe Hypertension in Pregnancy (resumo do ACOG Committee Opinion sobre terapia emergencial na hipertensão grave aguda na gestação) · The ObG Project · https://www.obgproject.com/2017/04/16/acog-guidance-emergency-treatment-severe-hypertension/ — consultado em 03/08/2026, doses de hidralazina e labetalol intravenosos e nifedipino oral de liberação imediata"
+    ],
+    "itens": [
+      {
+        "id": "hga-pa-ou-convulsao-confirmada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "PA ≥ 160/110 mmHg confirmada em nova aferição, e/ou convulsão presente, documentada antes de iniciar a conduta de emergência",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "hga-convulsao-triagem",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Presença ou ausência de convulsão registrada explicitamente — é essa a primeira bifurcação que separa a conduta de eclâmpsia (convulsão presente) da de pré-eclâmpsia grave sem convulsão",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "hga-mgso4-eclampsia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se convulsão presente (eclâmpsia): sulfato de magnésio IV iniciado como tratamento — ataque de 4,5 g em 20 minutos + manutenção em infusão contínua de 1,5 g/hora",
+        "origem_secao": "Sulfato de magnésio: dose e duração"
+      },
+      {
+        "id": "hga-mgso4-profilatico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se hipertensão grave sem convulsão (pré-eclâmpsia grave): sulfato de magnésio IV profilático iniciado no mesmo esquema de ataque e manutenção — Magpie: eclâmpsia em 0,8% vs. 1,9% com placebo, 11 casos a menos por 1.000 tratadas",
+        "origem_secao": "Sulfato de magnésio: dose e duração"
+      },
+      {
+        "id": "hga-mgso4-manutencao-puerperio",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Na profilaxia: manutenção do sulfato de magnésio mantida por 12 a 24 horas após o parto, com a dose ajustada se houver insuficiência renal",
+        "origem_secao": "Sulfato de magnésio: dose e duração"
+      },
+      {
+        "id": "hga-mgso4-efeito-colateral",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Paciente monitorizada para efeito colateral do sulfato de magnésio — ocorreu em 24% das tratadas vs. 5% com placebo no Magpie",
+        "origem_secao": "Sulfato de magnésio: dose e duração"
+      },
+      {
+        "id": "hga-acesso-venoso-verificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Disponibilidade de acesso venoso verificada antes de escolher a via do anti-hipertensivo agudo — é essa verificação que decide entre o esquema IV e o esquema oral",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "hga-anti-hipertensivo-iv",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se há acesso venoso: hidralazina IV (5 a 10 mg, repetir a cada 20 a 40 min se necessário) ou labetalol IV (10 a 20 mg iniciais, escalonando 20 a 80 mg a cada 10 a 30 min, até dose total máxima de 300 mg) iniciado",
+        "origem_secao": "Anti-hipertensivo agudo: doses por via"
+      },
+      {
+        "id": "hga-anti-hipertensivo-oral",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se não há acesso venoso: anti-hipertensivo oral iniciado sem adiar o tratamento — nifedipino de liberação imediata 10 mg com escalonamento horário (84% de controle pressórico em 6h no ensaio de Easterling), labetalol 200 mg com escalonamento horário (77%) ou metildopa 1.000 mg em dose única sem escalonamento (76%)",
+        "origem_secao": "Anti-hipertensivo agudo: doses por via"
+      },
+      {
+        "id": "hga-reavaliacao-pa",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Pressão arterial reavaliada a cada dose de anti-hipertensivo administrada",
+        "origem_secao": "O que não está nesta árvore"
+      },
+      {
+        "id": "hga-reavaliacao-neurologica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Quadro neurológico (reflexos, cefaleia, distúrbio visual) reavaliado enquanto o sulfato de magnésio estiver em infusão",
+        "origem_secao": "O que não está nesta árvore"
+      },
+      {
+        "id": "hga-decisao-obstetrica-parto",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Decisão obstétrica sobre antecipação do parto versus conduta expectante discutida com a equipe, considerando idade gestacional, condição fetal e resposta ao tratamento — VERIFICAÇÃO HUMANA NECESSÁRIA quanto a critério numérico específico, porque o documento-fonte não detalha os cortes dessa decisão",
+        "origem_secao": "O que não está nesta árvore"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base (fluxograma-eclampsia-e-hipertensao-grave-na-gestacao), com a seção de origem registrada em cada item e as referências primárias (Magpie, Easterling, mais as duas fontes de dose já citadas no próprio fluxograma) reaproveitadas do documento de origem — nenhuma dose ou corte numérico foi acrescentado além do que a fonte já registra. O item sobre antecipação do parto foi mantido não obrigatório e com VERIFICAÇÃO HUMANA NECESSÁRIA quanto a corte numérico, porque o próprio documento de origem declara que não detalha os critérios dessa decisão. Elaborado por sessão de pesquisa/extração em 20/08/2026. ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
+  },
+  {
+    "slug": "escolha-e-monitorizacao-da-anticoagulacao-em-protese-valvar-mecanica-na-gestacao",
+    "condicao": "Escolha e monitorização da estratégia de anticoagulação na gestante com prótese valvar mecânica",
+    "resumo": "O que definir e monitorizar ao longo da gestação da mulher com prótese valvar mecânica — a escolha entre antagonista de vitamina K, HBPM ou terapia sequencial, a dose e a meta de anti-Xa da HBPM, e os dados observacionais do ROPAC III para o aconselhamento pré-concepcional. Distinto do protocolo de emergência de suspeita de trombose valvar aguda, publicado à parte nesta mesma pasta.",
+    "documento_origem": "anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Anticoagulation for mechanical heart valves during pregnancy: A case report and a literature review · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC9803450/",
+      "Maternal and Fetal Outcomes of Anticoagulation in Pregnant Women With Mechanical Heart Valves · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2017.03.605",
+      "van der Zande JA, Ramlakhan KP, Sliwa K, et al. Pregnancy with a prosthetic heart valve, thrombosis, and bleeding: the ESC EORP Registry of Pregnancy and Cardiac disease III. European Heart Journal. 2026. DOI: 10.1093/eurheartj/ehaf265. PMID: 40237423."
+    ],
+    "itens": [
+      {
+        "id": "avm-estrategia-definida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estratégia de anticoagulação ao longo da gestação discutida e definida — antagonista de vitamina K (varfarina) durante toda a gestação, HBPM durante toda a gestação, ou terapia sequencial (HBPM no primeiro trimestre e antagonista de vitamina K no segundo/terceiro)",
+        "origem_secao": "Estrategias de anticoagulacao em valva mecanica na gestacao"
+      },
+      {
+        "id": "avm-risco-perfil-esclarecido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente informada do perfil de risco de cada estratégia: antagonista de vitamina K durante toda a gestação associado ao menor risco de desfecho materno adverso; HBPM durante toda a gestação associada ao menor risco de desfecho fetal adverso",
+        "origem_secao": "Estrategias de anticoagulacao em valva mecanica na gestacao"
+      },
+      {
+        "id": "avm-hbpm-dose-e-meta-anti-xa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se HBPM escolhida: dose ajustada (não fixa) administrada três vezes ao dia, com meta de anti-Xa de vale de 0,6 a 0,7 UI/mL e pico de 1,0 a 1,2 UI/mL (até <1,5 UI/mL) — não o esquema antigo de 12/12h com meta só de pico, associado a níveis de vale subterapêuticos",
+        "origem_secao": "Dosagem e monitorizacao de HBPM"
+      },
+      {
+        "id": "avm-combinacao-hbpm-varfarina-1t",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se optar por combinação no primeiro trimestre: discutido que, num dos esquemas avaliados, o desfecho materno primário adverso foi de 44% com HBPM isolada, 12,5% com HBPM + varfarina 2,5 mg e 3,5% com HBPM + varfarina 4 mg",
+        "origem_secao": "Combinacao HBPM e varfarina em baixa dose"
+      },
+      {
+        "id": "avm-aconselhamento-preconcepcional-ropac3",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aconselhamento pré-concepcional registrado com o dado do ROPAC III: gestação sem complicações com nascido vivo em 54% das mulheres com valva mecânica vs. 79% com valva biológica",
+        "origem_secao": "Resultado"
+      },
+      {
+        "id": "avm-ropac3-anti-xa-informado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se em uso de HBPM: discutido que o ROPAC III observou evento tromboembólico em 12/117 (10%) com monitorização de anti-Xa vs. 9/43 (21%) sem monitorização — numericamente favorável à monitorização, mas sem alcançar significância estatística (p=0,060)",
+        "origem_secao": "Resultado"
+      },
+      {
+        "id": "avm-ropac3-nao-causal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrado que a comparação de monitorização de anti-Xa do ROPAC III foi observacional, não randomizada, e não permite atribuir causalidade — 10% vs. 21% não deve ser lido como prova de benefício da monitorização",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "avm-emergencia-protocolo-diferenciado",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Registrado que este plano de anticoagulação de rotina não substitui o protocolo de manejo de emergência em caso de suspeita clínica de trombose de prótese valvar (dispneia nova, síncope, evento embólico, mudança no clique protético ou novo sopro)",
+        "origem_secao": "Onde isso se encaixa na prática"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao, restrito às seções de estratégia/dose de anticoagulação — as seções de cardiomiopatia periparto do mesmo arquivo não foram usadas, por fugirem à condicao deste checklist; e ropac-iii-anticoagulacao-em-protese-valvar-mecanica-na-gestacao-dados-atualizados-de-risco), com a seção de origem registrada em cada item. O caráter observacional e não significativo (p=0,060) do achado de monitorização de anti-Xa do ROPAC III foi preservado explicitamente em vez de apresentado como recomendação causal, seguindo a própria ressalva do documento de origem. Elaborado por sessão de pesquisa/extração em 20/08/2026. ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
+  },
+  {
+    "slug": "investigacao-diagnostica-de-suspeita-de-tep-na-gestante",
+    "condicao": "Investigação diagnóstica de suspeita de tromboembolismo pulmonar na gestante ou puérpera",
+    "resumo": "Como afastar TEP na gestante sem imagem torácica desnecessária — o algoritmo YEARS adaptado à gravidez (Artemis) e a estratégia por probabilidade clínica pré-teste (CT-PE-Pregnancy), os dois testados de forma prospectiva para reduzir a exposição materno-fetal à radiação com segurança medida, não presumida.",
+    "documento_origem": "diagnostico-de-tep-na-gestante-years-adaptado-e-a-estrategia-do-ct-pe-pregnancy",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "van der Pol LM, Tromeur C, Bistervels IM, Ni Ainle F, van Bemmel T, Bertoletti L, et al; Artemis Study Investigators. Pregnancy-Adapted YEARS Algorithm for Diagnosis of Suspected Pulmonary Embolism. N Engl J Med. 2019;380(12):1139-1149. DOI: 10.1056/NEJMoa1813865. PMID: 30893534 — estudo prospectivo de manejo, 510 gestantes rastreadas",
+      "Righini M, Robert-Ebadi H, Elias A, Sanchez O, Le Moigne E, Schmidt J, et al; CT-PE-Pregnancy Group. Diagnosis of Pulmonary Embolism During Pregnancy: A Multicenter Prospective Management Outcome Study. Ann Intern Med. 2018;169(11):766-773. DOI: 10.7326/M18-1670. PMID: 30357273 — NCT00740454, 395 gestantes, 11 centros na França e Suíça"
+    ],
+    "itens": [
+      {
+        "id": "tep-gest-criterios-years-avaliados",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Os três critérios YEARS avaliados e registrados: sinais clínicos de trombose venosa profunda, hemoptise, e TEP como diagnóstico mais provável",
+        "origem_secao": "Artemis — o years adaptado a gravidez"
+      },
+      {
+        "id": "tep-gest-us-mmii-antes-da-angiotc",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se houver sinais clínicos de TVP: ultrassom com compressão de membros inferiores realizado antes da angiotomografia — se houver trombo, a angiotomografia não é necessária, porque o achado já indica anticoagulação",
+        "origem_secao": "Artemis — o years adaptado a gravidez"
+      },
+      {
+        "id": "tep-gest-ddimero-corte-adaptado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "D-dímero interpretado pelo corte adaptado à gravidez (YEARS), não pelo corte da não gestante: TEP afastado se nenhum critério YEARS presente e D-dímero <1.000 ng/mL, ou se um ou mais critérios presentes e D-dímero <500 ng/mL",
+        "origem_secao": "Artemis — o years adaptado a gravidez"
+      },
+      {
+        "id": "tep-gest-angiotc-se-nao-afastado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TEP não afastado pelos critérios clínicos combinados a D-dímero: angiotomografia realizada",
+        "origem_secao": "Artemis — o years adaptado a gravidez"
+      },
+      {
+        "id": "tep-gest-probabilidade-pre-teste-alternativa",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Alternativamente, pela estratégia do CT-PE-Pregnancy: probabilidade clínica pré-teste combinada a D-dímero de alta sensibilidade usada para excluir TEP quando a probabilidade é baixa ou intermediária e o D-dímero é negativo, antes de qualquer exame de imagem",
+        "origem_secao": "Ct-pe-pregnancy — a estrategia com probabilidade pre-teste"
+      },
+      {
+        "id": "tep-gest-eficiencia-por-trimestre",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a eficiência da estratégia em evitar angiotomografia varia por trimestre — maior no primeiro, menor no terceiro, coerente com a elevação progressiva do D-dímero ao longo da gestação",
+        "origem_secao": "Artemis — o years adaptado a gravidez"
+      },
+      {
+        "id": "tep-gest-seguranca-seguimento-3-meses",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se TEP afastado: seguimento clínico mantido, com base na segurança medida nos estudos de origem — 0,21% (IC95% 0,04-1,2) de TVP no seguimento de 3 meses no Artemis e 0,0% (IC95% 0,0-1,0) de eventos tromboembólicos sintomáticos nas não tratadas no CT-PE-Pregnancy",
+        "origem_secao": "O que os dois estabelecem juntos"
+      },
+      {
+        "id": "tep-gest-nao-retardar-suspeita-mantida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita clínica mantida apesar dos critérios de exclusão não é ignorada — a estratégia serve para evitar imagem desnecessária, nunca para retardar diagnóstico em quem tem suspeita persistente, já que o TEP é causa importante de morte materna",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base (diagnostico-de-tep-na-gestante-years-adaptado-e-a-estrategia-do-ct-pe-pregnancy), com a seção de origem registrada em cada item e as duas referências primárias (Artemis, PMID 30893534; CT-PE-Pregnancy, PMID 30357273) reaproveitadas do documento de origem — nenhum corte de D-dímero, sensibilidade ou desfecho de segurança foi acrescentado além do que a fonte já registra. Elaborado por sessão de pesquisa/extração em 20/08/2026. ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) — a atestação dele não é presumida."
   }
 ]
