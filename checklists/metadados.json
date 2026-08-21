@@ -18146,5 +18146,272 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "inicio-de-digoxina-avaliacao-basal-e-monitorizacao-de-toxicidade",
+    "condicao": "Início de digoxina — avaliação basal e monitorização de toxicidade",
+    "resumo": "O que colher antes da primeira dose de digoxina e com que frequência reavaliar durante o uso contínuo — indicação, contraindicações formais da bula brasileira, função renal, nível sérico-alvo e os sinais precoces de intoxicação digitálica, com base nas análises post hoc do ensaio DIG e no rótulo aprovado pelo FDA.",
+    "documento_origem": "digoxina",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ahmed A, Rich MW, Love TE, et al. Digoxin and reduction in mortality and hospitalization in heart failure: a comprehensive post hoc analysis of the DIG trial. Eur Heart J. 2006;27(2):178-186. DOI: 10.1093/eurheartj/ehi687. PMID: 16339157",
+      "Digitalis Investigation Group; Ahmed A, Waagstein F, Pitt B, et al. Effectiveness of digoxin in reducing one-year mortality in chronic heart failure in the Digitalis Investigation Group trial. Am J Cardiol. 2009;103(1):82-87. DOI: 10.1016/j.amjcard.2008.06.068. PMID: 19101235",
+      "Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4",
+      "Bula de Digoxina (Prati-Donaduzzi, genérico) — item 3 (Contraindicações), conferida em duas apresentações independentes (paciente e profissional), resultados concordantes"
+    ],
+    "itens": [
+      {
+        "id": "digo-avaliacao-basal-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação confirmada antes de iniciar: ICFEr sintomática apesar de terapia otimizada com IECA/BRA/INRA, betabloqueador, antagonista mineralocorticoide e iSGLT2, ou ICFEr com fibrilação atrial concomitante (duplo benefício de força contrátil e controle de frequência)",
+        "origem_secao": "Indicacoes precisas"
+      },
+      {
+        "id": "digo-contraindicacoes-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações formais da bula brasileira excluídas antes de prescrever: bloqueio atrioventricular completo ou de segundo grau, taquicardia/fibrilação ventricular, arritmia supraventricular associada a via atrioventricular acessória (ex.: Wolff-Parkinson-White) sem avaliação eletrofisiológica prévia da via, e cardiomiopatia obstrutiva hipertrófica exceto quando há também fibrilação atrial e insuficiência cardíaca associadas",
+        "origem_secao": "Contraindicacoes"
+      },
+      {
+        "id": "digo-renal-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Função renal avaliada antes de iniciar — insuficiência renal não é contraindicação, mas exige redução de dose pela meia-vida prolongada e maior risco de toxicidade",
+        "origem_secao": "Contraindicacoes; Dose"
+      },
+      {
+        "id": "digo-ecg-eletrolitos-basais",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "ECG basal e eletrólitos (potássio, magnésio, cálcio) conferidos antes de iniciar, já que distúrbio eletrolítico predispõe à toxicidade digitálica",
+        "origem_secao": "Cautelas do rotulo"
+      },
+      {
+        "id": "digo-nivel-serico-basal",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Nível sérico de digoxina programado para reavaliação após atingir o estado de equilíbrio, com meta na faixa associada a menor mortalidade e menor hospitalização por insuficiência cardíaca (0,5 a 0,9 ng/mL)",
+        "origem_secao": "Monitorizacao niveis sericos"
+      },
+      {
+        "id": "digo-interacoes-amiodarona-verapamil",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Lista de medicações revisada quanto a interações que elevam o nível sérico de digoxina, com atenção especial a amiodarona e verapamil, exigindo redução de dose e monitorização mais próxima quando associados",
+        "origem_secao": "Interacoes criticas"
+      },
+      {
+        "id": "digo-nivel-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Nível sérico reavaliado no seguimento diante de suspeita clínica de toxicidade, mudança de função renal ou início/ajuste de fármaco com interação conhecida — acima de 1,0 ng/mL o benefício de mortalidade documentado no ensaio DIG desaparece",
+        "origem_secao": "Monitorizacao niveis sericos"
+      },
+      {
+        "id": "digo-renal-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Função renal reavaliada periodicamente durante o uso contínuo, com ajuste de dose diante de piora, pelo risco de acúmulo e toxicidade",
+        "origem_secao": "Dose; Cautelas do rotulo"
+      },
+      {
+        "id": "digo-sinais-toxicidade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de sintomas gastrointestinais inespecíficos (náusea, vômito, perda de apetite), alterações visuais (visão turva, halos coloridos, xantopsia) ou qualquer arritmia nova em uso de digoxina, considerar intoxicação digitálica mesmo com nível sérico dentro da faixa terapêutica",
+        "origem_secao": "Toxicidade digitalica"
+      },
+      {
+        "id": "digo-orientacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a comunicar precocemente sintomas gastrointestinais, visuais ou palpitações novas, e a não ajustar a dose por conta própria",
+        "origem_secao": "Toxicidade digitalica"
+      },
+      {
+        "id": "digo-encaminhamento-toxicidade",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação e monitorização em ambiente hospitalar diante de bradicardia sintomática, bloqueio atrioventricular novo ou arritmia ventricular potencialmente fatal em uso de digoxina",
+        "origem_secao": "Toxicidade digitalica"
+      }
+    ],
+    "revisao": "Itens derivados do documento já verificado e publicado em Farmacologia, citado em source_refs, com a seção de origem registrada em cada item. Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) é o responsável pela curadoria clínica do conteúdo desta plataforma."
+  },
+  {
+    "slug": "inicio-de-dabigatrana-avaliacao-renal-basal-e-monitorizacao",
+    "condicao": "Início de dabigatrana — avaliação renal basal e monitorização",
+    "resumo": "Avaliação de função renal e de contraindicações antes de iniciar dabigatrana, e o que monitorizar durante o uso — clearance de creatinina, interação com inibidores da glicoproteína-P e disponibilidade do antídoto específico, a partir da bula brasileira e do RCM europeu já verificados nesta base.",
+    "documento_origem": "dabigatrana-etexilato",
+    "theme": "Farmacologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "PRADAXA (dabigatrana etexilato, Boehringer Ingelheim) — Resumo das Características do Medicamento, EMA, em português, secções 4.2 e 4.3, com as tabelas de dose para prevenção de AVC na FA e para TVP/EP · https://www.ema.europa.eu/pt/documents/product-information/pradaxa-epar-product-information_pt.pdf · consultado em 29/07/2026",
+      "Bula do Pradaxa (etexilato de dabigatrana), Boehringer Ingelheim, documento CCDS 0266-02 — seções Contra-indicações, Advertências e Precauções, e Populações especiais. Cobre a indicação de profilaxia de tromboembolismo venoso após artroplastia de quadril ou joelho. Consultada em 29/07/2026",
+      "Dabigatran etexilate capsules — rótulo aprovado pelo FDA, DailyMed SPL setid f7ea7e2c-ca54-4ecc-9fc7-bd3571b0ebc2 (usado para marcar onde o rótulo americano diverge do brasileiro)",
+      "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844",
+      "ANDEXXA (andexanete alfa) — rótulo aprovado pelo FDA, DailyMed SPL setid 2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c"
+    ],
+    "itens": [
+      {
+        "id": "dabi-avaliacao-clcr-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Clearance de creatinina calculado antes de iniciar — a eliminação é predominantemente renal (cerca de 80%) e a exposição ao fármaco aumenta de forma expressiva com a queda da função renal",
+        "origem_secao": "Ajuste renal"
+      },
+      {
+        "id": "dabi-contraindicacoes-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações excluídas antes de prescrever: sangramento ativo clinicamente significativo, válvula cardíaca mecânica, insuficiência renal grave (ClCr <30 mL/min) e gravidez/lactação",
+        "origem_secao": "Contraindicacoes"
+      },
+      {
+        "id": "dabi-populacao-especial-idoso",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Idade avançada, insuficiência renal moderada e outros fatores de risco hemorrágico (gastrite, esofagite, refluxo) considerados na decisão de ajuste posológico, conforme o RCM europeu do mesmo produto vendido no Brasil",
+        "origem_secao": "Ajuste renal"
+      },
+      {
+        "id": "dabi-interacao-p-gp",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Uso concomitante de inibidores potentes da glicoproteína-P (como dronedarona ou cetoconazol sistêmico) revisado antes de prescrever, pela necessidade de ajuste posológico ou de evitar a associação conforme a função renal",
+        "origem_secao": "Dose"
+      },
+      {
+        "id": "dabi-renal-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Função renal reavaliada periodicamente durante o uso contínuo, com descontinuação orientada caso o paciente desenvolva insuficiência renal aguda",
+        "origem_secao": "Ajuste renal"
+      },
+      {
+        "id": "dabi-antidoto-disponibilidade",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Disponibilidade de idarucizumabe (antídoto específico da dabigatrana) confirmada na instituição, como parte do plano de reversão em sangramento grave ou cirurgia de urgência",
+        "origem_secao": "Particularidade farmacologica"
+      },
+      {
+        "id": "dabi-sinais-sangramento",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Paciente avaliado quanto a sinais de sangramento a cada retorno (gastrointestinal, hematúria, equimoses extensas), com sangramento maior tratado como emergência que exige investigação e conduta imediatas",
+        "origem_secao": "Contraindicacoes"
+      },
+      {
+        "id": "dabi-orientacao-aderencia",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre a importância da regularidade posológica duas vezes ao dia e sobre a conduta em caso de dose esquecida, conforme orientação da bula",
+        "origem_secao": "Dose"
+      },
+      {
+        "id": "dabi-encaminhamento-renal-avancada",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para reavaliação da estratégia de anticoagulação quando a função renal evoluir para insuficiência renal grave (ClCr <30 mL/min) durante o uso, pela contraindicação formal nessa faixa",
+        "origem_secao": "Contraindicacoes; Ajuste renal"
+      }
+    ],
+    "revisao": "Itens derivados do documento já verificado e publicado em Farmacologia, citado em source_refs, com a seção de origem registrada em cada item. Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) é o responsável pela curadoria clínica do conteúdo desta plataforma."
+  },
+  {
+    "slug": "suspensao-perioperatoria-de-inibidor-de-sglt2-prevencao-de-cetoacidose-euglicemica",
+    "condicao": "Suspensão perioperatória de inibidor de SGLT2 — prevenção de cetoacidose euglicêmica",
+    "resumo": "Prazo de suspensão pré-operatória por molécula de inibidor de SGLT2, os sinais de alerta de cetoacidose diabética euglicêmica mesmo com glicemia normal, e a estratégia de mitigação quando a suspensão em tempo hábil não foi possível — a partir do estudo retrospectivo japonês que mediu a incidência real por estratégia.",
+    "documento_origem": "inibidores-de-sglt2-no-perioperatorio-cetoacidose-euglicemica-e-tempo-de-suspensao",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Preoperative Cessation of SGLT2i · American College of Cardiology · 2022 · https://www.acc.org/Latest-in-Cardiology/Articles/2022/10/07/17/21/Preoperative-Cessation-of-SGLT2i — cita alerta de rótulo da FDA como fonte do prazo de suspensão por molécula.",
+      "Takemura M, Ikemura K, Okuda M. Factors and preventive strategies for perioperative euglycemic diabetic ketoacidosis in patients with type 2 diabetes receiving sodium-glucose cotransporter 2 inhibitors: a retrospective study. J Pharm Health Care Sci. 2025;11:56. DOI: 10.1186/s40780-025-00487-6. PMID: 40855351 — estudo retrospectivo unicêntrico (Japão), texto conferido via resumo estruturado nesta sessão (06/08/2026)."
+    ],
+    "itens": [
+      {
+        "id": "sglt2peri-identificar-uso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso de inibidor de SGLT2 (dapagliflozina, empagliflozina, canagliflozina ou ertugliflozina) identificado na revisão de medicações de qualquer paciente candidato a cirurgia eletiva",
+        "origem_secao": "Por que este documento existe"
+      },
+      {
+        "id": "sglt2peri-suspensao-prazo-molecula",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Fármaco suspenso com antecedência mínima antes da cirurgia eletiva conforme a molécula, seguindo o alerta de rótulo da FDA citado pelo ACC — canagliflozina, dapagliflozina e empagliflozina exigem prazo menor que a ertugliflozina, que exige pelo menos um dia a mais de antecedência",
+        "origem_secao": "Prazo de suspensao por molecula"
+      },
+      {
+        "id": "sglt2peri-confirmar-suspensao-pre-op",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na admissão para o procedimento, confirmar que o prazo de suspensão foi de fato cumprido — no estudo japonês que sustenta este protocolo, quem suspendeu adequadamente teve incidência de cetoacidose euglicêmica muito menor que quem não suspendeu (0,2% versus 3,7%, p<0,001)",
+        "origem_secao": "O numero que sustenta o prazo de 3 dias"
+      },
+      {
+        "id": "sglt2peri-glicemia-nao-exclui",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Lembrar que a cetoacidose associada a iSGLT2 cursa com glicemia normal ou apenas discretamente elevada — glicemia capilar de rotina normal NÃO afasta o diagnóstico",
+        "origem_secao": "O problema — cetoacidose com glicemia normal"
+      },
+      {
+        "id": "sglt2peri-sinais-alerta-pos-op",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de náusea, dor abdominal, taquipneia ou mal-estar inexplicado no pós-operatório em usuário de iSGLT2, considerar cetoacidose euglicêmica independentemente do valor da glicemia",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "sglt2peri-cetonas-gasometria-se-sintomas",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Diante de sinais de alerta, dosar cetonas (sangue ou urina) e colher gasometria, mesmo com glicemia dentro da normalidade",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "sglt2peri-insulina-glicose-mitigacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se a suspensão adequada não foi possível, considerar infusão perioperatória de insulina e glicose como estratégia de mitigação — reduziu a incidência de cetoacidose entre quem não suspendeu a tempo, mas não substitui a suspensão em prazo hábil como primeira linha de prevenção",
+        "origem_secao": "Achado que reforça a suspensão precoce como a medida isolada mais eficaz"
+      },
+      {
+        "id": "sglt2peri-alta-sem-farmaco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Paciente recebe alta hospitalar sem o inibidor de SGLT2 em uso, com reintrodução avaliada apenas em momento posterior, ambulatorial",
+        "origem_secao": "Reinicio pos-operatorio"
+      },
+      {
+        "id": "sglt2peri-reinicio-verificacao-humana",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: prazo específico de reintrodução pós-operatória não está validado na fonte consultada nesta base — orientar-se por reintrodução da dieta oral plena e estabilidade hemodinâmica/volêmica até que um número de dias validado esteja disponível",
+        "origem_secao": "Reinicio pos-operatorio"
+      },
+      {
+        "id": "sglt2peri-orientacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre a importância de cumprir o prazo de suspensão antes da cirurgia e sobre comunicar sintomas gastrointestinais ou respiratórios inexplicados no pós-operatório",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "sglt2peri-nao-confundir-racional",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não confundir a suspensão do iSGLT2 por risco metabólico agudo com a lógica de manutenção de outros cardioprotetores (como o betabloqueador crônico) no perioperatório — são racionais distintos, cada classe avaliada por seu próprio protocolo",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Itens derivados do documento já verificado e publicado em Perioperatório, citado em source_refs, com a seção de origem registrada em cada item, incluindo a lacuna de reintrodução pós-operatória sinalizada como VERIFICAÇÃO HUMANA NECESSÁRIA no próprio documento de origem. Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) é o responsável pela curadoria clínica do conteúdo desta plataforma."
   }
 ]
