@@ -1,0 +1,73 @@
+name: Pixel polish layout lock
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "frontend/src/styles/clinical-pixel-polish-conservative.css"
+      - "frontend/src/main.tsx"
+      - ".github/workflows/pixel-polish-layout-lock.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  layout-lock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Enforce immutable approved layout
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+
+          css_path = pathlib.Path('frontend/src/styles/clinical-pixel-polish-conservative.css')
+          main_path = pathlib.Path('frontend/src/main.tsx')
+          css = css_path.read_text(encoding='utf-8')
+          main = main_path.read_text(encoding='utf-8')
+
+          # Properties that can alter geometry, composition, ordering or viewport behavior.
+          forbidden = {
+              'display', 'position', 'top', 'right', 'bottom', 'left', 'inset',
+              'width', 'min-width', 'max-width', 'height', 'min-height', 'max-height',
+              'grid', 'grid-template', 'grid-template-columns', 'grid-template-rows',
+              'grid-column', 'grid-row', 'grid-area', 'grid-auto-flow', 'grid-auto-rows',
+              'flex', 'flex-basis', 'flex-grow', 'flex-shrink', 'flex-direction', 'flex-wrap',
+              'order', 'gap', 'row-gap', 'column-gap', 'align-items', 'align-content',
+              'align-self', 'justify-content', 'justify-items', 'justify-self',
+              'place-items', 'place-content', 'place-self',
+              'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left',
+              'margin-inline', 'margin-block', 'padding', 'padding-top', 'padding-right',
+              'padding-bottom', 'padding-left', 'padding-inline', 'padding-block',
+              'overflow', 'overflow-x', 'overflow-y', 'float', 'clear',
+              'transform', 'translate', 'scale', 'rotate', 'zoom',
+              'object-fit', 'object-position', 'aspect-ratio', 'columns', 'column-count',
+          }
+
+          declarations = re.findall(r'(?m)^\s*([\w-]+)\s*:', css)
+          bad = sorted({name for name in declarations if name in forbidden})
+          if bad:
+              print('Layout-affecting CSS is forbidden in conservative pixel polish:', ', '.join(bad))
+              sys.exit(1)
+
+          forbidden_tokens = [
+              '@media', '@container', ':has(', 'calc(', '100vw', '100vh',
+          ]
+          found_tokens = [token for token in forbidden_tokens if token in css]
+          if found_tokens:
+              print('Potential structural/responsive override is forbidden:', ', '.join(found_tokens))
+              sys.exit(1)
+
+          polish_import = 'import "./styles/clinical-pixel-polish-conservative.css";'
+          contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
+          if polish_import not in main:
+              print('Conservative pixel polish stylesheet is not imported.')
+              sys.exit(1)
+          if main.index(polish_import) > main.index(contrast_import):
+              print('Form-control contrast must remain the last visual lock after conservative polish.')
+              sys.exit(1)
+
+          print('PASS: approved layout remains immutable; conservative polish contains optical declarations only.')
+          PY

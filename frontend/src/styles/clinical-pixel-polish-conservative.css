@@ -1,0 +1,23 @@
+/* CorVIA — conservative pixel polish. Layout/composition are immutable. */
+
+#root .clinical-os :is(button,a,input,select,textarea):focus-visible,
+#root .legal-page :is(a,button):focus-visible,
+#root .cos-tour :is(button,a):focus-visible {
+  outline:2px solid rgba(79,212,221,.92);
+  outline-offset:2px;
+}
+
+body.corvia-route--conta .clinical-os .conta__grid>.cartao,
+body.corvia-route--integracoes .clinical-os .cartao,
+body.corvia-route--prescricao .clinical-os :is(.cartao,.prescricao-item),
+body.corvia-route--agenda .clinical-os .cartao,
+body.corvia-route--mail .clinical-os .cartao,
+#root .legal-page :is(>header,section),
+#root .cos-tour :is(.cos-tour-feature__visual,.cos-tour-mock) {
+  border-color:rgba(126,190,208,.12);
+}
+
+#root .clinical-os :is(input,select,textarea):not(:disabled):focus {
+  border-color:rgba(79,212,221,.58);
+  box-shadow:0 0 0 3px rgba(79,212,221,.08);
+}
