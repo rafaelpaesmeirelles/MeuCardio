@@ -14447,5 +14447,210 @@
     ],
     "review_status": "revisado",
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "tomografia-do-coracao-e-escore-de-calcio-para-que-servem",
+    "titulo": "Tomografia das artérias do coração e escore de cálcio",
+    "subtitulo": "Dois exames diferentes, que respondem perguntas diferentes sobre a dor no peito",
+    "tema": "Doença coronariana",
+    "documento_slug": "angiotomografia-coronariana-e-escore-de-calcio-no-algoritmo-diagnostico-esc-2024",
+    "resumo": "Explicação em linguagem simples sobre a angiotomografia coronariana e o escore de cálcio — dois exames de imagem usados na investigação da doença coronariana, o que cada um mostra, quando cada um costuma ser pedido e por que às vezes um não pode ser feito.",
+    "secoes": [
+      {
+        "titulo": "Dois exames, dois objetivos",
+        "paragrafos": [
+          "Quando existe suspeita de doença nas artérias do coração — geralmente por causa de dor no peito, falta de ar ao esforço ou fatores de risco importantes — o médico tem à disposição exames de imagem que olham diretamente para as artérias, feitos por tomografia computadorizada. São dois, e é comum a pessoa confundir um com o outro, porque os dois usam o mesmo aparelho.",
+          "A angiotomografia coronariana (às vezes chamada de angio-TC ou CCTA) injeta um contraste na veia e fotografa o interior das artérias do coração, mostrando se existe entupimento e o quanto ele estreita a passagem do sangue. O escore de cálcio, por outro lado, não usa contraste: ele mede a quantidade de cálcio depositado na parede das artérias, que é um sinal indireto de que existe placa de gordura ali, mesmo sem dizer o quanto ela está estreitando o vaso.",
+          "Ou seja: a angiotomografia responde 'existe entupimento, e o quanto?'; o escore de cálcio responde 'existe placa acumulada nessa artéria, mesmo que ainda não esteja estreitando muito?'. São perguntas diferentes, e por isso um exame não substitui o outro — às vezes o médico pede os dois, em momentos diferentes da investigação."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o médico decide qual pedir",
+        "paragrafos": [
+          "A escolha não é aleatória. O médico primeiro estima, a partir da sua idade, sexo, sintomas e fatores de risco, qual é a probabilidade de você ter doença coronariana antes mesmo de qualquer exame — é o chamado cálculo de probabilidade pré-teste.",
+          "Se essa probabilidade for muito baixa, pode-se até considerar não fazer nenhum exame de imagem por enquanto. Se for baixa, o escore de cálcio pode ajudar a reclassificar esse risco, tentando confirmar que ele é mesmo baixo. Se a probabilidade for baixa a moderada, a angiotomografia coronariana costuma ser o exame de primeira escolha, porque enxerga diretamente o interior das artérias.",
+          "Há também situações em que a angiotomografia é pedida depois de outro exame — como um teste ergométrico ou uma cintilografia — que não deu resposta clara. Nesses casos, ela funciona como uma segunda etapa da investigação, não como o primeiro exame."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que nem sempre a angiotomografia pode ser feita",
+        "paragrafos": [
+          "A angiotomografia coronariana exige uma imagem de boa qualidade para ser confiável, e algumas situações tornam isso difícil de garantir — não é sobre a gravidade da sua doença, é sobre a capacidade técnica de captar uma imagem nítida.",
+          "Entre os fatores que podem impedir ou dificultar o exame estão função dos rins muito reduzida (o contraste é filtrado pelo rim), insuficiência cardíaca descompensada, batimentos cardíacos muito acelerados e irregulares, obesidade acentuada, dificuldade de prender a respiração pelo tempo necessário, e presença de muito cálcio já espalhado pelas artérias — o que, de forma um pouco contraintuitiva, é mais comum justamente em pessoas mais velhas, que às vezes acabam fazendo um exame funcional (como o de esforço) em vez da angiotomografia por esse motivo.",
+          "Se o seu médico decidir por outro exame em vez da angiotomografia, isso costuma ser por uma dessas razões técnicas, e vale perguntar qual foi o motivo no seu caso."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O escore de cálcio zero não significa a mesma coisa em qualquer idade",
+        "paragrafos": [
+          "Um escore de cálcio igual a zero é, em geral, uma notícia tranquilizadora — em pessoas mais velhas, ele reduz bastante a chance de haver doença coronariana obstrutiva escondida.",
+          "Mas essa segurança vale menos em pessoas jovens. Em pessoas com menos de 40 anos, é possível ter doença coronariana já instalada mesmo com o escore de cálcio em zero — porque a placa nessa faixa etária ainda pode não ter acumulado cálcio suficiente para aparecer no exame. Por isso, um escore zero em paciente jovem com sintomas relevantes não encerra sozinho a investigação, e o médico pode seguir considerando outros exames."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que levar em conta antes e depois do exame",
+        "paragrafos": [],
+        "itens": [
+          "A angiotomografia usa contraste iodado injetado na veia — avise seu médico sobre alergia a contraste, problemas nos rins ou uso de metformina antes do exame",
+          "É comum receber orientação de evitar cafeína nas horas anteriores e, às vezes, um remédio para deixar a frequência cardíaca mais baixa e regular, o que melhora a qualidade da imagem",
+          "O escore de cálcio não usa contraste e costuma ser mais rápido e simples que a angiotomografia",
+          "Nenhum dos dois exames trata a doença — eles só a mostram; o tratamento é decidido depois, com base no resultado e no seu quadro clínico como um todo"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito que dura mais que alguns minutos e não melhora com repouso — não espere pelo exame agendado, procure emergência",
+      "Falta de ar súbita e intensa",
+      "Reação alérgica após o contraste — coceira intensa, inchaço no rosto ou na garganta, falta de ar durante ou logo após o exame",
+      "Palpitações fortes com mal-estar depois do uso do remédio para baixar a frequência cardíaca antes do exame"
+    ],
+    "perguntas": [
+      "No meu caso, qual desses dois exames faz mais sentido, ou os dois?",
+      "Existe algum motivo técnico que me impede de fazer a angiotomografia?",
+      "Preciso suspender algum remédio antes do exame, e por quanto tempo?",
+      "Se o meu escore de cálcio for zero, isso encerra a investigação no meu caso?",
+      "Depois do resultado, qual é o próximo passo?"
+    ],
+    "fontes": [
+      "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-no-peito-na-emergencia-o-que-esperar-do-atendimento",
+    "titulo": "Chegando com dor no peito na emergência",
+    "subtitulo": "Por que a equipe faz um eletrocardiograma logo na chegada, e o que vem depois dele",
+    "tema": "Doença coronariana",
+    "documento_slug": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+    "resumo": "Explicação em linguagem simples sobre como funciona o atendimento de um paciente que chega à emergência com dor no peito — por que o eletrocardiograma é prioridade, como a equipe estima o risco e por que ele pode ser repetido mais de uma vez.",
+    "secoes": [
+      {
+        "titulo": "Por que o eletrocardiograma é a primeira coisa feita",
+        "paragrafos": [
+          "Quando alguém chega à emergência com dor no peito, uma das primeiras coisas que a equipe faz — muitas vezes antes mesmo de qualquer outro exame — é o eletrocardiograma. Isso não é acaso: os serviços de emergência acompanham de perto quanto tempo demora entre a chegada da pessoa e a realização desse exame, exatamente porque um eletrocardiograma feito rápido pode identificar um infarto em andamento e acionar o tratamento em minutos, o que muda o desfecho.",
+          "Se você chegar com dor no peito e perceber que o eletrocardiograma é feito antes de outras coisas parecerem estar acontecendo — antes de conversas mais longas, antes de outros exames — isso é o protocolo funcionando como deveria, não um sinal de descaso com o resto do atendimento."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O eletrocardiograma pode não dar uma resposta imediata",
+        "paragrafos": [
+          "Às vezes o eletrocardiograma mostra uma alteração clara, e a equipe já sabe o que fazer a seguir. Mas com frequência o traçado não é tão direto: ele pode estar dentro do normal, pode ter alterações pouco específicas, ou pode ser difícil de interpretar com segurança.",
+          "Nesses casos, a investigação continua por outros caminhos — exame de sangue (troponina), reavaliação clínica, e frequentemente a repetição do próprio eletrocardiograma dentro de pouco tempo, geralmente entre 10 e 20 minutos, principalmente se o traçado inicial for limítrofe ou se você continuar com sintomas ou sinais de instabilidade. Um único traçado normal na chegada não encerra a investigação por si só — é comum e esperado repeti-lo."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como a equipe estima o risco: o escore HEART",
+        "paragrafos": [
+          "Para decidir o quanto investigar e com que urgência, a equipe médica costuma usar uma ferramenta chamada escore HEART, que reúne cinco informações: a história que você conta sobre a dor, o resultado do eletrocardiograma, sua idade, seus fatores de risco cardiovascular (como hipertensão, diabetes, colesterol alto, tabagismo ou histórico familiar) e o resultado de um exame de sangue chamado troponina, que mede uma proteína liberada quando há lesão do músculo do coração.",
+          "Cada uma dessas cinco informações recebe uma pontuação, e a soma orienta a equipe sobre a probabilidade de você estar tendo um evento coronariano e sobre o grau de investigação necessário. É uma ferramenta de apoio à decisão clínica — ela organiza a avaliação, mas não substitui o julgamento do médico diante do seu caso específico.",
+          "Vale saber que a troponina usada nesse cálculo costuma ser dosada mais de uma vez, com um intervalo entre as coletas, porque o nível dela no sangue pode demorar algumas horas para se alterar depois do início dos sintomas — uma dosagem única normal, logo na chegada, nem sempre é suficiente para descartar o problema."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que a espera pode parecer longa mesmo sendo o protocolo certo",
+        "paragrafos": [
+          "É comum que o paciente com dor no peito passe algumas horas em observação na emergência, com eletrocardiogramas e exames de sangue repetidos, antes de receber um diagnóstico definitivo ou alta. Isso não significa que nada está sendo feito — é justamente o processo de investigação seguro funcionando, porque um único momento de avaliação nem sempre é suficiente para afastar um problema sério com segurança.",
+          "Se a dor persistir, piorar, ou surgirem novos sintomas enquanto você aguarda, avise a equipe imediatamente — não espere a próxima reavaliação programada."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito que dura mais que alguns minutos e não melhora com repouso",
+      "Dor no peito que piora, muda de característica ou volta depois de ter melhorado, enquanto você está em observação",
+      "Suor frio, náusea, palidez ou falta de ar junto com a dor no peito",
+      "Desmaio ou sensação de que vai desmaiar",
+      "Falta de ar súbita e intensa, mesmo sem dor no peito"
+    ],
+    "perguntas": [
+      "Qual foi o resultado do meu eletrocardiograma, e ele precisa ser repetido?",
+      "Meus exames de sangue (troponina) já saíram, e o que eles mostraram?",
+      "Qual foi o meu escore de risco, e o que ele significa para a minha investigação?",
+      "Quanto tempo devo ficar em observação antes da próxima decisão?",
+      "Se eu tiver alta, quais sinais devem me fazer voltar imediatamente?"
+    ],
+    "fontes": [
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 (Sociedade Brasileira de Cardiologia)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-de-barriga-depois-de-comer-isquemia-mesenterica-cronica",
+    "titulo": "Dor na barriga depois de comer: isquemia mesentérica crônica",
+    "subtitulo": "Quando a mesma aterosclerose das artérias do coração afeta as artérias do intestino",
+    "tema": "Aorta e doença arterial periférica",
+    "documento_slug": "isquemia-mesenterica-cronica-diagnostico-e-tratamento-svs-2021",
+    "resumo": "Explicação em linguagem simples sobre a isquemia mesentérica crônica — a obstrução das artérias que levam sangue ao intestino, que causa dor abdominal depois das refeições, medo de comer e perda de peso, e sobre por que o diagnóstico costuma demorar.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Assim como as artérias do coração podem estreitar por acúmulo de placas de gordura (aterosclerose), o mesmo processo pode acontecer nas artérias que levam sangue ao intestino. Existem três artérias principais responsável por isso, e quando elas estreitam de forma significativa, o intestino pode não receber sangue suficiente logo depois de uma refeição — é justamente na digestão que ele mais precisa de fluxo sanguíneo.",
+          "Essa condição chama-se isquemia mesentérica crônica. Ela costuma se manifestar como dor ou desconforto na barriga que aparece um tempo depois de comer, o que leva muitas pessoas a comerem cada vez menos por medo da dor — e, com isso, a perderem peso sem intenção.",
+          "É importante entender que ter uma dessas artérias estreitada não significa necessariamente ter essa doença: o intestino tem uma rede rica de vasos que se comunicam entre si (uma espécie de rota alternativa), e por isso os sintomas geralmente só aparecem quando pelo menos duas das três artérias principais estão bastante comprometidas — embora, em alguns casos, o estreitamento de uma só já baste."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o diagnóstico costuma demorar",
+        "paragrafos": [
+          "Dor abdominal com perda de peso é um conjunto de sintomas que pode ter muitas causas diferentes, e a primeira preocupação da investigação médica costuma ser afastar um câncer do aparelho digestivo, que é bem mais comum que a isquemia mesentérica. Por isso, é normal e esperado que você passe primeiro por exames como endoscopia, colonoscopia e exames de imagem do abdome antes de chegar a esse diagnóstico.",
+          "Depois de afastadas as causas mais frequentes, exames que olham diretamente para as artérias do intestino entram em cena — um ultrassom especializado (chamado Doppler ou duplex mesentérico) costuma ser o primeiro, seguido, quando necessário, por uma angiotomografia, que mostra com mais detalhe onde e o quanto as artérias estão estreitadas."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como se trata",
+        "paragrafos": [
+          "Uma vez confirmado o diagnóstico, o tratamento recomendado é desobstruir a artéria comprometida — chamado de revascularização —, porque isso costuma reverter a dor, o medo de comer e a perda de peso, e melhora a qualidade de vida de forma consistente. É a recomendação mais bem estabelecida entre todas as desta condição.",
+          "Na maioria dos casos, essa desobstrução é feita hoje por técnica endovascular — por dentro do vaso sanguíneo, com um cateter, sem precisar abrir a barriga, de forma parecida com o que se faz em uma angioplastia do coração, muitas vezes com colocação de um pequeno stent. A cirurgia aberta, mais invasiva, fica reservada para quando a técnica endovascular não é tecnicamente possível, já foi tentada sem sucesso, ou em pacientes mais jovens e com boa saúde geral, em quem o benefício a longo prazo pode compensar um procedimento maior.",
+          "Um ponto importante: alimentação por veia (nutrição parenteral) não é considerada uma alternativa segura para adiar o tratamento definitivo — ela carrega risco de complicações, incluindo infarto do próprio intestino, e não substitui a revascularização."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Depois do tratamento",
+        "paragrafos": [
+          "Os sintomas podem voltar com o tempo, mesmo depois de um tratamento bem-sucedido, porque a artéria tratada pode estreitar de novo (reestenose). Por isso o acompanhamento continua depois do procedimento, com consultas e exames de imagem (geralmente o mesmo ultrassom Doppler) em intervalos regulares — costuma ser mais frequente logo após o procedimento e mais espaçado depois, se tudo estiver estável.",
+          "Se os sintomas voltarem, normalmente o tratamento indicado é semelhante ao da primeira vez, priorizando de novo a técnica endovascular quando possível."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Pontos importantes para lembrar",
+        "paragrafos": [],
+        "itens": [
+          "A dor costuma aparecer depois de comer, não durante — é diferente de uma indigestão comum por surgir de forma repetida e associada a perda de peso",
+          "Não deixe de investigar achando que 'é só o estômago' — a demora na investigação é justamente o que a diretriz médica sobre o tema aponta como problema mais comum",
+          "Ter aterosclerose no intestino costuma vir acompanhada de aterosclerose em outras artérias do corpo, incluindo as do coração — vale conversar com seu médico sobre avaliação cardiovascular geral",
+          "Parar de fumar, se for o seu caso, e controlar pressão, colesterol e açúcar no sangue ajudam a reduzir a progressão da doença nas artérias em geral, não só nas do intestino"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor abdominal súbita, muito intensa e diferente da dor habitual — pode ser sinal de que uma artéria fechou de forma aguda, uma emergência distinta desta condição crônica",
+      "Perda de peso progressiva e não intencional",
+      "Recusa cada vez maior de se alimentar por medo da dor",
+      "Sangue nas fezes ou fezes muito escuras",
+      "Febre associada à dor abdominal"
+    ],
+    "perguntas": [
+      "Quantas das minhas artérias do intestino estão comprometidas, e em que grau?",
+      "No meu caso, o tratamento recomendado é por dentro do vaso (endovascular) ou cirurgia aberta?",
+      "Com que frequência vou precisar repetir o exame de imagem depois do tratamento?",
+      "Devo investigar também as artérias do coração e das pernas?",
+      "Que sinais indicam que a artéria pode ter estreitado de novo?"
+    ],
+    "fontes": [
+      "Huber TS, Björck M, Chandra A, Clouse WD, Dalsing MC, Oderich GS, Smeds MR, Murad MH; Society for Vascular Surgery. Chronic mesenteric ischemia: Clinical practice guidelines from the Society for Vascular Surgery. J Vasc Surg. 2021;73(1 Suppl):87S-115S."
+    ],
+    "review_status": "revisado"
   }
 ]
