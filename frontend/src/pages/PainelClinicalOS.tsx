@@ -273,14 +273,23 @@ export default function PainelClinicalOS() {
   }) : proximoAgenda, [destinoPlanejado, proximoAgenda]);
   const pendencias = useMemo(() => agenda.filter((item) => ["pendente", "pending_external", "proposed"].includes(item.status)).length, [agenda]);
   const rota = deslocamento?.destination?.target_key === targetKey ? deslocamento?.routes?.[0] : undefined;
-  const saidaRecomendada = destino && rota && proximo ? retornoAtivo
+  const saidaPlanejada = destino && rota && proximo ? retornoAtivo
     ? new Date(proximo.scheduled_at)
     : new Date(new Date(proximo.scheduled_at).getTime() - (rota.duration_seconds + destino.arrival_buffer_minutes * 60) * 1000) : null;
-  // Chegada PLANEJADA: horário do compromisso menos o buffer de chegada do local.
-  // Referencial único do card (o mesmo de "Saída às") — nunca "agora + duração".
+  // Enquanto a saída ainda é futura, preserva a janela planejada do compromisso.
+  // Depois que essa janela passou, o card precisa refletir a rota viva — não um horário histórico.
+  const agora = new Date();
+  const rotaAtualizadaEm = deslocamento?.updated_at ? new Date(deslocamento.updated_at) : agora;
+  const referenciaRota = Number.isNaN(rotaAtualizadaEm.getTime())
+    ? agora
+    : new Date(Math.max(agora.getTime(), rotaAtualizadaEm.getTime()));
+  const rotaAtualizadaAgora = !retornoAtivo && saidaPlanejada && referenciaRota.getTime() > saidaPlanejada.getTime();
+  const saidaRecomendada = rotaAtualizadaAgora ? referenciaRota : saidaPlanejada;
   const chegadaPrevista = rota && proximo && destino ? retornoAtivo
     ? new Date(new Date(proximo.scheduled_at).getTime() + rota.duration_seconds * 1000)
-    : new Date(new Date(proximo.scheduled_at).getTime() - destino.arrival_buffer_minutes * 60000) : null;
+    : rotaAtualizadaAgora && saidaRecomendada
+      ? new Date(saidaRecomendada.getTime() + rota.duration_seconds * 1000)
+      : new Date(new Date(proximo.scheduled_at).getTime() - destino.arrival_buffer_minutes * 60000) : null;
   const destinoMapeavel = Boolean(destino?.location && destino.location.latitude != null && destino.location.longitude != null);
   const provedorMapa = deslocamento?.provider || configMapa?.provider;
   const usaOrigemSalva = retornoAtivo || Boolean(

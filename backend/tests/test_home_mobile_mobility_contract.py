@@ -147,6 +147,11 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert "rota.distance_meters" in home
     assert "rota.traffic_delay_seconds" in home
     assert "rota.duration_seconds + destino.arrival_buffer_minutes * 60" in home
+    assert "const saidaPlanejada" in home
+    assert "const rotaAtualizadaEm = deslocamento?.updated_at" in home
+    assert "Math.max(agora.getTime(), rotaAtualizadaEm.getTime())" in home
+    assert "const rotaAtualizadaAgora" in home
+    assert "saidaRecomendada.getTime() + rota.duration_seconds * 1000" in home
     assert "const destino = deslocamento &&" in home
     assert "const targetKey = destinoPlanejado?.target_key || null" in home
     assert 'target_type: "day_return"' in home
