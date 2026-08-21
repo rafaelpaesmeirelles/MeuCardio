@@ -8424,5 +8424,254 @@
       }
     ],
     "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis por documento_origem, source_refs e origem_secao. Não há atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estratificacao-de-risco-cardiaco-pre-operatorio-com-rcri-e-nsqip-mica",
+    "condicao": "Estratificação de risco cardíaco antes de cirurgia não cardíaca (RCRI / NSQIP MICA)",
+    "resumo": "Checklist para aplicar corretamente o Índice de Risco Cardíaco Revisado (RCRI) e o escore NSQIP MICA na avaliação pré-operatória de cirurgia não cardíaca, incluindo os limites de cada escore e as armadilhas de uso fora da população em que foram validados.",
+    "documento_origem": "escores-de-risco-cardiaco-para-cirurgia-nao-cardiaca-rcri-e-nsqip-mica",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Lee TH, Marcantonio ER, Mangione CM, Thomas EJ, Polanczyk CA, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049. PMID: 10477528",
+      "Ford MK, Beattie WS, Wijeysundera DN. Systematic review: prediction of perioperative cardiac complications and mortality by the revised cardiac risk index. Ann Intern Med. 2010;152(1):26-35. PMID: 20048269",
+      "Gupta PK, Gupta H, Sundaram A, Kaushik M, Fang X, et al. Development and validation of a risk calculator for prediction of cardiac risk after surgery. Circulation. 2011;124(4):381-387. PMID: 21730309"
+    ],
+    "itens": [
+      {
+        "id": "rcri-nsqip-01-confirmar-elegibilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente é candidato ao RCRI: cirurgia maior não cardíaca ELETIVA (não urgente) e paciente clinicamente ESTÁVEL — o índice foi derivado nessa população e não deve ser aplicado a cirurgia de urgência ou paciente instável.",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "rcri-nsqip-02-seis-preditores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Levantar os seis preditores independentes do RCRI: cirurgia de alto risco; história de doença isquêmica do coração; história de insuficiência cardíaca congestiva; história de doença cerebrovascular; tratamento pré-operatório com insulina; creatinina sérica pré-operatória > 2,0 mg/dL.",
+        "origem_secao": "O RCRI — o escore mais usado, e por quê"
+      },
+      {
+        "id": "rcri-nsqip-03-classificar-por-numero-de-fatores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Somar o número de fatores presentes e classificar o risco de complicação cardíaca maior pela taxa da coorte de validação: 0 fatores = 0,4%; 1 fator = 0,9%; 2 fatores = 7%; ≥3 fatores = 11%.",
+        "origem_secao": "O RCRI — o escore mais usado, e por quê"
+      },
+      {
+        "id": "rcri-nsqip-04-nao-investigar-adicional-em-zero-fatores",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente com zero fatores de RCRI, considerar que avaliação adicional dificilmente ajuda — é o próprio uso que os autores originais recomendam para o escore: identificar quem NÃO precisa de mais investigação, não só quem precisa.",
+        "origem_secao": "O RCRI — o escore mais usado, e por quê"
+      },
+      {
+        "id": "rcri-nsqip-05-checar-tipo-de-cirurgia-vascular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar se a cirurgia é VASCULAR: nesse cenário o RCRI tem desempenho pior (área sob a curva 0,64, contra 0,75 na cirurgia mista) e o julgamento clínico e a avaliação funcional devem pesar mais na decisão.",
+        "origem_secao": "O que a validação sistemática mostrou — e onde o RCRI falha"
+      },
+      {
+        "id": "rcri-nsqip-06-nao-usar-como-preditor-de-morte",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não utilizar o RCRI como estimativa de risco de morte perioperatória — a revisão sistemática de 792.740 pacientes mostrou desempenho ruim para esse desfecho (área sob a curva mediana 0,62, com heterogeneidade altíssima, I² = 95%), fora do que o escore foi validado a prever.",
+        "origem_secao": "O que a validação sistemática mostrou — e onde o RCRI falha"
+      },
+      {
+        "id": "rcri-nsqip-07-considerar-nsqip-mica-quando-disponivel",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Quando houver acesso à calculadora interativa (não é possível calcular de cabeça), considerar o NSQIP MICA como alternativa de maior discriminação (estatística c de 0,874-0,884 contra 0,747 do RCRI na mesma coorte), levantando os cinco preditores: tipo de cirurgia, estado funcional dependente, creatinina anormal, classe ASA e idade.",
+        "origem_secao": "NSQIP MICA (2011) — o escore que discrimina melhor, com outro custo"
+      },
+      {
+        "id": "rcri-nsqip-08-nao-tratar-escores-como-intercambiaveis",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não tratar RCRI e NSQIP MICA como intercambiáveis nem comparar diretamente os resultados — os desfechos previstos (complicação cardíaca maior vs. infarto/parada cardíaca), as variáveis e as populações de derivação são diferentes.",
+        "origem_secao": "Como escolher entre os dois"
+      },
+      {
+        "id": "rcri-nsqip-09-registrar-limitacoes-da-populacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar no laudo/prontuário que nenhum dos dois escores é brasileiro e que ambos preveem risco basal, sem medir o efeito de intervenções realizadas após a estratificação.",
+        "origem_secao": "Limites"
+      },
+      {
+        "id": "rcri-nsqip-10-conferir-unidade-da-creatinina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferir a unidade da creatinina antes de aplicar o corte do RCRI — o critério original é creatinina sérica pré-operatória > 2,0 mg/dL, sem conversão para outra unidade.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Lee TH et al., Circulation. 1999;100(10):1043-1049 (PMID 10477528); Ford MK et al., Ann Intern Med. 2010;152(1):26-35 (PMID 20048269); Gupta PK et al., Circulation. 2011;124(4):381-387 (PMID 21730309), em 20/08/2026."
+  },
+  {
+    "slug": "teach-back-na-alta-hospitalar-da-insuficiencia-cardiaca",
+    "condicao": "Verificação de compreensão do paciente com teach-back na alta por insuficiência cardíaca",
+    "resumo": "Checklist para aplicar a técnica de teach-back na alta hospitalar de pacientes com insuficiência cardíaca, verificando compreensão real (não presumida) sobre peso diário, restrição de sódio, sinais de alarme e medicações, com as ressalvas de evidência sobre o efeito na reinternação.",
+    "documento_origem": "teach-back-na-alta-da-insuficiencia-cardiaca-retencao-de-conhecimento-e-reinternacao",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Oh S, Choi H, Oh EG, Lee JY. Effectiveness of discharge education using teach-back method on readmission among heart failure patients: A systematic review and meta-analysis. Patient Educ Couns. 2023;107:107559. DOI: 10.1016/j.pec.2022.11.001. PMID: 36411152",
+      "White M, Garbez R, Carroll M, Brinker E, Howie-Esquivel J. Is \"teach-back\" associated with knowledge retention and hospital readmission in hospitalized heart failure patients? J Cardiovasc Nurs. 2013;28(2):137-146. DOI: 10.1097/JCN.0b013e31824987bd. PMID: 22580624"
+    ],
+    "itens": [
+      {
+        "id": "teachback-ic-01-nao-usar-pergunta-fechada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não perguntar \"ficou claro?\" como forma de verificar entendimento — é pergunta fechada que quase sempre recebe \"sim\", verdadeiro ou não, e não substitui o teach-back.",
+        "origem_secao": "O que é o teach-back, e por que não é a mesma coisa que \"explicar bem\""
+      },
+      {
+        "id": "teachback-ic-02-pedir-reformulacao-com-proprias-palavras",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Pedir explicitamente que o paciente repita, com as próprias palavras, o que entendeu de cada orientação — por exemplo: \"para eu ter certeza de que expliquei direito, como o senhor vai tomar esse remédio em casa?\"",
+        "origem_secao": "O que é o teach-back, e por que não é a mesma coisa que \"explicar bem\""
+      },
+      {
+        "id": "teachback-ic-03-reexplicar-se-resposta-incompleta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Se a resposta do paciente estiver incompleta ou errada, reexplicar o item e testar novamente, em ciclo fechado, até a resposta estar correta — não avançar para o próximo item sem essa confirmação.",
+        "origem_secao": "O que é o teach-back, e por que não é a mesma coisa que \"explicar bem\""
+      },
+      {
+        "id": "teachback-ic-04-aplicar-item-a-item",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aplicar o teach-back item a item, cobrindo separadamente: peso diário, restrição de sódio, sinal de alarme para procurar atendimento e para que serve cada medicação prescrita.",
+        "origem_secao": "O que é o teach-back, e por que não é a mesma coisa que \"explicar bem\""
+      },
+      {
+        "id": "teachback-ic-05-dedicar-tempo-suficiente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Dedicar tempo suficiente ao ensino — o estudo de White et al. associou tempo maior de ensino a respostas corretas (p < 0,001); teach-back feito depressa, só marcando a caixa \"orientado\", não é teach-back.",
+        "origem_secao": "O que um estudo individual mostrou, e por que ele não contradiz a metanálise"
+      },
+      {
+        "id": "teachback-ic-06-nao-superestimar-efeito-em-reinternacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não apresentar o teach-back como garantia de redução de reinternação — a metanálise mostrou efeito favorável mas com margem estatística estreita (OR 0,40, IC95% 0,17-0,94, limite superior próximo da não significância) e qualidade metodológica heterogênea entre os estudos incluídos.",
+        "origem_secao": "O que a metanálise mostra (Oh et al., 2023)"
+      },
+      {
+        "id": "teachback-ic-07-nao-usar-white-como-prova-de-ineficacia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não citar o estudo de White et al. como prova de que o teach-back não funciona — ele não teve grupo controle sem teach-back; mediu apenas se responder bem às perguntas prediz menos reinternação dentro de quem já recebeu a técnica.",
+        "origem_secao": "O que um estudo individual mostrou, e por que ele não contradiz a metanálise"
+      },
+      {
+        "id": "teachback-ic-08-combinar-com-pacote-de-alta",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Integrar o teach-back ao restante do pacote de alta em insuficiência cardíaca — otimização medicamentosa antes da alta, consulta precoce de acompanhamento e contato telefônico estruturado — sem tratá-lo como intervenção isolada suficiente.",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "teachback-ic-09-repetir-no-telefonema-de-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Considerar reaplicar o teach-back no contato telefônico de acompanhamento após a alta, já que a retenção de informação tende a cair entre a internação e o seguimento (77,1% de acertos no seguimento telefônico vs. 84,4% durante a internação, no estudo de White et al.).",
+        "origem_secao": "O que um estudo individual mostrou, e por que ele não contradiz a metanálise"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Oh S et al., Patient Educ Couns. 2023;107:107559 (PMID 36411152) e White M et al., J Cardiovasc Nurs. 2013;28(2):137-146 (PMID 22580624), em 20/08/2026."
+  },
+  {
+    "slug": "protocolo-spikes-para-dar-mas-noticias-em-cardiologia",
+    "condicao": "Comunicação de más notícias em Cardiologia com o protocolo SPIKES",
+    "resumo": "Checklist com os seis passos do protocolo SPIKES (Setting, Perception, Invitation, Knowledge, Emotions, Strategy and Summary) para estruturar a comunicação de más notícias em cenários cardiológicos, incluindo indicação de CDI e prognóstico pós-infarto extenso.",
+    "documento_origem": "protocolo-spikes-de-mas-noticias-aplicado-a-ic-avancada-cdi-e-prognostico-pos-iam",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baile WF, Buckman R, Lenzi R, Glober G, Beale EA, Kudelka AP. SPIKES-A six-step protocol for delivering bad news: application to the patient with cancer. The Oncologist. 2000;5(4):302-311. DOI: 10.1634/theoncologist.5-4-302. PMID: 10964998",
+      "Servotte JC, Bragard I, Szyld D, Van Ngoc P, Scholtes B, Van Cauwenberge I, Donneau AF, Dardenne N, Goosse M, Pilote B, Guillaume M, Ghuysen A. Efficacy of a Short Role-Play Training on Breaking Bad News in the Emergency Department. West J Emerg Med. 2019;20(6):893-902. DOI: 10.5811/westjem.2019.8.43441. PMID: 31738716"
+    ],
+    "itens": [
+      {
+        "id": "spikes-cardio-01-setting-preparar-cenario",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "S — Setting: preparar o cenário antes de começar — sentar (não falar em pé sobre a maca), garantir privacidade, silenciar o celular, confirmar quem o paciente quer presente e reservar tempo suficiente para não ser interrompido.",
+        "origem_secao": "S — Setting: preparar o cenário antes de começar"
+      },
+      {
+        "id": "spikes-cardio-02-perception-checar-entendimento-previo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "P — Perception: perguntar o que o paciente já entende antes de informar — \"o que os médicos já explicaram sobre o motivo da sua internação?\" — para não contradizer, sem querer, o que um colega já disse.",
+        "origem_secao": "P — Perception: o que o paciente já entende"
+      },
+      {
+        "id": "spikes-cardio-03-invitation-perguntar-nivel-de-detalhe",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "I — Invitation: perguntar explicitamente o nível de detalhe que o paciente quer receber antes de entregá-lo — vale com peso particular na indicação de CDI, em que a conversa implica falar de risco de morte de forma explícita.",
+        "origem_secao": "I — Invitation: quanto o paciente quer saber"
+      },
+      {
+        "id": "spikes-cardio-04-knowledge-avisar-antes-e-fatiar-informacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "K — Knowledge: dar um aviso curto antes da notícia (\"infelizmente o resultado do ecocardiograma não foi o que esperávamos\"), depois entregar a informação em uma ou duas frases, sem jargão, e parar — sem despejar valores de fração de ejeção, troponina e classe Killip numa única fala.",
+        "origem_secao": "K — Knowledge: entregar a informação em fatias curtas"
+      },
+      {
+        "id": "spikes-cardio-05-emotions-nomear-e-validar-reacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "E — Emotions: nomear e validar a reação do paciente (silêncio, choro, raiva, pergunta prática fora de ordem) antes de introduzir qualquer novo dado — continuar informando com a emoção alta é o erro mais comum nesse passo.",
+        "origem_secao": "E — Emotions: responder à reação antes de prosseguir"
+      },
+      {
+        "id": "spikes-cardio-06-strategy-fechar-com-plano-verificavel",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "S — Strategy and Summary: terminar com passos concretos e verificáveis — o que muda no tratamento, quando é o retorno, o que é sinal de alarme e quem procurar — deixando claro que o tratamento muda, não o acompanhamento.",
+        "origem_secao": "S — Strategy and Summary: plano e resumo verificável"
+      },
+      {
+        "id": "spikes-cardio-07-cdi-checar-percepcao-antes-de-informar-risco",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Na indicação de CDI de prevenção primária, checar a Perception antes de falar de risco de morte súbita — perguntar o que o paciente já entende sobre o motivo do encaminhamento ao eletrofisiologista, para não repetir nem contradizer o que o cardiologista assistente já disse.",
+        "origem_secao": "Os seis passos aplicados a três cenários cardiológicos concretos"
+      },
+      {
+        "id": "spikes-cardio-08-iam-nao-pular-o-strategy",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "No prognóstico pós-infarto extenso com disfunção ventricular significativa, garantir explicitamente o passo Strategy (S final) — é o passo mais frequentemente pulado nesse cenário, quando a equipe se concentra em estabilizar e esquece de fechar a conversa com um próximo passo verificável.",
+        "origem_secao": "Os seis passos aplicados a três cenários cardiológicos concretos"
+      },
+      {
+        "id": "spikes-cardio-09-nao-tratar-cdi-como-sentenca-de-morte",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Deixar explícito, na indicação de CDI, que o dispositivo é prevenção e não diagnóstico de morte iminente — confundir os dois é uma armadilha registrada do protocolo aplicado a este cenário.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "spikes-cardio-10-nao-usar-roteiro-decorado",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não aplicar o SPIKES como roteiro decorado e lido quase literalmente — a evidência de eficácia (Servotte et al.) vem de treinamento estruturado com simulação e ator, não de memorização de frases prontas.",
+        "origem_secao": "Evidência de eficácia e adoção do protocolo"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Baile WF et al., The Oncologist. 2000;5(4):302-311 (PMID 10964998) e Servotte JC et al., West J Emerg Med. 2019;20(6):893-902 (PMID 31738716), em 20/08/2026."
   }
 ]
