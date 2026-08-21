@@ -20168,5 +20168,164 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "hemostasia-patente-pos-cateterismo-transradial-prevencao-de-rao",
+    "condicao": "Hemostasia pós-cateterismo transradial com prevenção de oclusão de artéria radial (RAO)",
+    "resumo": "O que checar na retirada da bainha/curativo compressivo após acesso transradial para reduzir o risco de oclusão silenciosa da artéria radial, preservando-a para reintervenção, enxerto cirúrgico ou fístula arteriovenosa futuros.",
+    "documento_origem": "oclusao-de-arteria-radial-pos-cateterismo-hemostasia-patente-e-tecnica-de-barbeau",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Pancholy S, Coppola J, Patel T, Roke-Thomas M. Prevention of radial artery occlusion-patent hemostasis evaluation trial (PROPHET study). Catheter Cardiovasc Interv. 2008;72(3):335-340. PMID: 18726956 — ensaio de 436 pacientes, Grupo I (hemostasia convencional, n=219) vs. Grupo II (hemostasia com patência documentada pelo teste de Barbeau, n=217)",
+      "Pancholy SB, Bernat I, Bertrand OF, Patel TM. Prevention of Radial Artery Occlusion After Transradial Catheterization: The PROPHET-II Randomized Trial. JACC Cardiovasc Interv. 2016;9(19):1992-1999. PMID: 27712733 — 3.000 pacientes, hemostasia patente isolada vs. hemostasia patente + compressão ulnar profilática",
+      "Rashid M, Kwok CS, Pancholy S, Chugh S, Kedev SA, Bernat I, Ratib K, Large A, Fraser D, Nolan J, Mamas MA. Radial Artery Occlusion After Transradial Interventions: A Systematic Review and Meta-Analysis. J Am Heart Assoc. 2016;5(1):e002686. PMID: 26811162 — revisão sistemática e metanálise, incidência agrupada e fatores de risco",
+      "Barbeau GR, Arsenault F, Dugas L, Simard S, Larivière MM. Evaluation of the ulnopalmar arterial arches with pulse oximetry and plethysmography: comparison with the Allen's test in 1010 patients. Am Heart J. 2004;147(3):489-493. PMID: 14999199 — descrição do método de oximetria de pulso e pletismografia no polegar, comparado ao teste de Allen",
+      "Lavi S, Cheema A, Yadegari A, Israeli Z, Levi Y, Wall S, Alemayehu M, Parviz Y, Murariu BD, McPherson T, Syed J, Bagur R. Randomized Trial of Compression Duration After Transradial Cardiac Catheterization and Intervention. J Am Heart Assoc. 2017;6(2):e005029. PMID: 28159821 — 568 pacientes, clampeamento com hemostasia patente por 20 minutos (ultracurto) vs. 60 minutos (curto), redução gradual em 20 minutos adicionais nos dois grupos",
+      "Dangoisse V, Guedes A, Chenu P, Hanet C, Albert C, Robin V, Tavier L, Dury C, Piraux O, Domange J, Jourdan K, Bihin B, Schroeder E. Usefulness of a Gentle and Short Hemostasis Using the Transradial Band Device after Transradial Access for Percutaneous Coronary Angiography and Interventions to Reduce the Radial Artery Occlusion Rate (from the Prospective and Randomized CRASOC I, II, and III Studies). Am J Cardiol. 2017;120(3):374-379. PMID: 28577752 — 3.616 acessos transradiais (2009-2016), série de 3 ensaios progressivos testando volume de ar (cc) e duração de compressão no dispositivo TR Band"
+    ],
+    "itens": [
+      {
+        "id": "rao-hemostasia-patente-padrao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Hemostasia patente — banda/curativo ajustado para conter o sangramento no ponto de punção sem ocluir totalmente o fluxo anterógrado pela radial — usada como técnica padrão de retirada da bainha, não reservada a casos especiais",
+        "origem_secao": "Relevância prática"
+      },
+      {
+        "id": "rao-monitorizacao-patencia-durante-compressao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Patência da artéria radial monitorizada durante toda a compressão por oximetria de pulso/pletismografia no polegar (princípio do teste de Barbeau), ajustando a pressão da banda até confirmar fluxo anterógrado residual",
+        "origem_secao": "Mecanismo da hemostasia patente (patent hemostasis)"
+      },
+      {
+        "id": "rao-compressao-ulnar-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente de maior risco basal (baixo peso corporal, sexo feminino, bainha de maior calibre, compressão prevista mais longa): compressão ulnar ipsilateral profilática associada à hemostasia patente",
+        "origem_secao": "Adicionando compressão ulnar profilática — o ensaio PROPHET-II"
+      },
+      {
+        "id": "rao-duracao-compressao-registrada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Duração e técnica de compressão registradas no prontuário — ex.: hemostasia patente titulada por 60 minutos com redução gradual em 20 minutos adicionais, ou protocolo específico do dispositivo usado, com o menor tempo/intensidade que ainda mantenha a hemostasia",
+        "origem_secao": "Duração da compressão e intensidade da banda: o que a evidência primária define"
+      },
+      {
+        "id": "rao-pulso-radial-antes-alta",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Pulso radial palpado e registrado antes da alta — a RAO costuma ser assintomática e só é percebida se alguém verificar o pulso de propósito",
+        "origem_secao": "Por que é subdiagnosticada"
+      },
+      {
+        "id": "rao-fatores-risco-identificados",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fatores de risco para RAO identificados e registrados quando presentes: sexo feminino, idade avançada, baixo peso corporal, calibre maior da bainha, tempo de compressão mais longo, menor diâmetro basal da artéria radial",
+        "origem_secao": "Incidência real, por técnica de compressão"
+      },
+      {
+        "id": "rao-heparina-dose-reconhecida-como-protetora",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Dose de heparina usada durante o procedimento reconhecida como fator modificável do risco de RAO — dose mais alta associada a menor incidência, dentro do que for compatível com o restante do plano de anticoagulação do caso",
+        "origem_secao": "Incidência real, por técnica de compressão"
+      },
+      {
+        "id": "rao-orientacao-implicacao-futura",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado de que a artéria radial daquele braço, se ocluída, deixa de estar disponível para futura reintervenção pela mesma via, para uso como enxerto em cirurgia de revascularização miocárdica, ou para confecção de fístula arteriovenosa em caso de doença renal terminal",
+        "origem_secao": "Relevância prática"
+      },
+      {
+        "id": "rao-verificacao-antes-reutilizacao-acesso",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Antes de reutilizar o mesmo acesso radial numa cateterização futura, pulso radial e patência confirmados — RAO silenciosa costuma só ser percebida nesse momento",
+        "origem_secao": "Por que é subdiagnosticada"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
+  },
+  {
+    "slug": "retirada-de-betabloqueador-apos-um-ano-do-iam-smart-decision",
+    "condicao": "Reavaliação e decisão de retirada do betabloqueador após pelo menos 1 ano do IAM (SMART-DECISION)",
+    "resumo": "O que confirmar antes de suspender o betabloqueador em paciente estável, sem insuficiência cardíaca, com FEVE ≥40%, já em uso da medicação há pelo menos um ano após infarto — e quais situações não autorizam extrapolar o resultado do SMART-DECISION.",
+    "documento_origem": "smart-decision-retirada-betabloqueador-apos-um-ano-do-iam",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Choi KH, Kang D, Kim W, et al.; SMART-DECISION Investigators. Discontinuation of Beta-Blocker Therapy after Myocardial Infarction. N Engl J Med. 2026;394(13):1302-1312. DOI: 10.1056/NEJMoa2601005. PMID: 41910427. ClinicalTrials.gov: NCT04769362."
+    ],
+    "itens": [
+      {
+        "id": "sdbb-estabilidade-clinica-confirmada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente clinicamente estável confirmado, sem sinais ou sintomas de insuficiência cardíaca",
+        "origem_secao": "População e desenho"
+      },
+      {
+        "id": "sdbb-feve-40-confirmada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "FEVE ≥40% confirmada por exame de imagem recente antes de considerar a retirada",
+        "origem_secao": "População e desenho"
+      },
+      {
+        "id": "sdbb-tempo-uso-um-ano",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso de betabloqueador há pelo menos 1 ano após o IAM confirmado — o estudo não testou retirada mais precoce nem responde à indicação da fase inicial pós-IAM",
+        "origem_secao": "População e desenho / Limitações importantes"
+      },
+      {
+        "id": "sdbb-ausencia-outra-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de outra indicação independente para betabloqueio verificada: angina que depende da medicação para controle, arritmia em que a classe é necessária para controle de frequência ou prevenção de recorrência, hipertensão que exige a medicação dentro da estratégia individual",
+        "origem_secao": "Situações em que o estudo não justifica retirada automática"
+      },
+      {
+        "id": "sdbb-exclusao-fe-menor-40-ou-ic",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "FEVE <40% e insuficiência cardíaca excluídas como critério para retirada automática — a evidência do SMART-DECISION não deve ser extrapolada para esses pacientes",
+        "origem_secao": "Situações em que o estudo não justifica retirada automática"
+      },
+      {
+        "id": "sdbb-cautela-estrato-fe-40-49",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se FEVE estiver entre 40-49%: cautela adicional antes de retirar — outros dados randomizados contemporâneos sugerem possível benefício do betabloqueador nesse estrato, e o resultado do SMART-DECISION não deve ser usado isoladamente para declarar que todo paciente nessa faixa pode interromper sem perda de benefício",
+        "origem_secao": "Como encaixar este resultado na evidência por FEVE"
+      },
+      {
+        "id": "sdbb-retirada-gradual-nao-abrupta",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Quando a decisão for retirar, redução gradual planejada — nunca suspensão abrupta —, considerando o fármaco em uso, frequência cardíaca, pressão arterial e risco de rebote adrenérgico",
+        "origem_secao": "Situações em que o estudo não justifica retirada automática"
+      },
+      {
+        "id": "sdbb-decisao-individualizada-registrada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Decisão de manter ou retirar registrada como individualizada, integrando o estrato de FEVE, a trajetória ventricular e as demais indicações clínicas — não como automatismo pela duração de uso",
+        "origem_secao": "Mensagem prática"
+      },
+      {
+        "id": "sdbb-cautela-generalizacao-desenho",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Cautela de generalização considerada: o SMART-DECISION foi um ensaio aberto (não cego), conduzido inteiramente na Coreia do Sul, em população que permaneceu estável e tolerou o betabloqueador por pelo menos um ano",
+        "origem_secao": "Limitações importantes"
+      }
+    ],
+    "revisao": "Checklist revisado e aprovado para publicação por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026. Itens derivados integralmente do documento de origem citado em source_refs, sem acréscimo de dado não presente na fonte."
   }
 ]
