@@ -20,24 +20,30 @@ jobs:
           fetch-depth: 0
           ref: content/integrate-claude-science-round5-20260821
 
-      - name: Fetch immutable reviewed PR heads
+      - name: Fetch and pin reviewed PR heads
         shell: bash
         run: |
           set -euo pipefail
-          for sha in \
-            60205a94f677448f6e39eed5c756c4cdbff23b79 \
-            af75ce6bae4ab0615a90c11005e0061128e80342 \
-            1b2750e6d6b3a12459253dc0ebf88a853bc600f8 \
-            707fef16dc45b948209175d71585d8e5109691b6 \
-            cd9800312b5bfdbf10d43b73d470e69d3de8c822 \
-            02ac2115e26d41a163606347022b354e68dac822 \
-            ebed169e2d06ebf14b1c8976ba26573a73004734 \
-            d036b0bacf3bfd13c50619c2faf3a49cb9c81b32 \
-            787baa60c53ce23a9bdfb3c9cf2cde4b14dffb15 \
-            29cc7f005e0f56c9db42e9781bd1a4df23948deb
-          do
-            git fetch --no-tags origin "$sha"
-          done
+          while IFS='|' read -r branch expected; do
+            [ -n "$branch" ] || continue
+            git fetch --no-tags origin "refs/heads/${branch}:refs/remotes/origin/${branch}"
+            actual="$(git rev-parse "refs/remotes/origin/${branch}")"
+            if [ "$actual" != "$expected" ]; then
+              echo "Head moved: ${branch}: expected ${expected}, got ${actual}" >&2
+              exit 1
+            fi
+          done <<'EOF'
+          content/material-paciente-round5-valvopatias-pericardio|60205a94f677448f6e39eed5c756c4cdbff23b79
+          content/material-paciente-round5-endocardite-reumatica|af75ce6bae4ab0615a90c11005e0061128e80342
+          content/material-paciente-round5-ti-dispositivos|1b2750e6d6b3a12459253dc0ebf88a853bc600f8
+          content/material-paciente-round5-gravidez-trombo|707fef16dc45b948209175d71585d8e5109691b6
+          content/material-paciente-round5-perioperatorio-farmacologia|cd9800312b5bfdbf10d43b73d470e69d3de8c822
+          content/checklists-round5-aorta-congenitas|02ac2115e26d41a163606347022b354e68dac822
+          content/checklists-round5-endocardite-pericardio|ebed169e2d06ebf14b1c8976ba26573a73004734
+          content/checklists-round5-dac-cardiomiopatias|d036b0bacf3bfd13c50619c2faf3a49cb9c81b32
+          content/checklists-round5-valvopatias-prevencao|787baa60c53ce23a9bdfb3c9cf2cde4b14dffb15
+          content/checklists-round5-fa-hipertensao|29cc7f005e0f56c9db42e9781bd1a4df23948deb
+          EOF
 
       - name: Consolidate only reviewed scientific objects
         shell: bash
@@ -50,18 +56,18 @@ jobs:
 
           groups = {
               "material-paciente/metadados.json": [
-                  "60205a94f677448f6e39eed5c756c4cdbff23b79",
-                  "af75ce6bae4ab0615a90c11005e0061128e80342",
-                  "1b2750e6d6b3a12459253dc0ebf88a853bc600f8",
-                  "707fef16dc45b948209175d71585d8e5109691b6",
-                  "cd9800312b5bfdbf10d43b73d470e69d3de8c822",
+                  "origin/content/material-paciente-round5-valvopatias-pericardio",
+                  "origin/content/material-paciente-round5-endocardite-reumatica",
+                  "origin/content/material-paciente-round5-ti-dispositivos",
+                  "origin/content/material-paciente-round5-gravidez-trombo",
+                  "origin/content/material-paciente-round5-perioperatorio-farmacologia",
               ],
               "checklists/metadados.json": [
-                  "02ac2115e26d41a163606347022b354e68dac822",
-                  "ebed169e2d06ebf14b1c8976ba26573a73004734",
-                  "d036b0bacf3bfd13c50619c2faf3a49cb9c81b32",
-                  "787baa60c53ce23a9bdfb3c9cf2cde4b14dffb15",
-                  "29cc7f005e0f56c9db42e9781bd1a4df23948deb",
+                  "origin/content/checklists-round5-aorta-congenitas",
+                  "origin/content/checklists-round5-endocardite-pericardio",
+                  "origin/content/checklists-round5-dac-cardiomiopatias",
+                  "origin/content/checklists-round5-valvopatias-prevencao",
+                  "origin/content/checklists-round5-fa-hipertensao",
               ],
           }
           expected = {
@@ -69,14 +75,14 @@ jobs:
               "checklists/metadados.json": 14,
           }
 
-          for path_str, shas in groups.items():
+          for path_str, refs in groups.items():
               path = Path(path_str)
               current = json.loads(path.read_text(encoding="utf-8"))
               known = {item["slug"] for item in current}
               added = []
-              for sha in shas:
+              for ref in refs:
                   raw = subprocess.check_output(
-                      ["git", "show", f"{sha}:{path_str}"],
+                      ["git", "show", f"{ref}:{path_str}"],
                       text=True,
                       encoding="utf-8",
                   )
