@@ -71,7 +71,10 @@ def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None):
         background=None,
         background_opacity=1,
         text_box_style=TextBoxStyle(
-            font_size=5.3 if url_validacao else 6,
+            # QRStampStyle calcula proporções internamente com Fraction e
+            # requer dimensões racionais. Um font_size fracionário (5.3)
+            # vira float no box natural e quebra o layout no pyHanko 0.36.2.
+            font_size=5 if url_validacao else 6,
             text_color=(0.043, 0.180, 0.271),
         ),
         stamp_text="\n".join(linhas),
