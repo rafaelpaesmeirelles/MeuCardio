@@ -63,7 +63,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router", "exportacao_universal.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
-    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
+    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router", "agenda_clinica.router",
     "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
     "related_content.router", "knowledge_graph.router", "patient_profiles.router",
     "account_sync.router",

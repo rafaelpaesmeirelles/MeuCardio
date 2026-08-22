@@ -8,7 +8,7 @@ from app.api import (
     favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
     service_orders, sessions, social_login, specialty_guides, studies, timeline, billing, guidelines, indicadores,
-    checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada,
+    checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada, agenda_clinica,
     related_content, knowledge_graph, patient_profiles,
 )
 from app.core.canonical_registration import CanonicalRegistrationMiddleware
@@ -100,7 +100,7 @@ ROUTERS_ASSINANTES = (
     # compatibilidade porque expõe também o alias legado /sync-all. Assim os
     # botões antigos da Agenda passam pelo mesmo supervisor capability-aware
     # do /sync-live sem duplicar a regra de sincronização.
-    account_sync.router, agenda_integrada.router, kyc.router, avaliacao_preoperatoria.router,
+    account_sync.router, agenda_integrada.router, agenda_clinica.router, kyc.router, avaliacao_preoperatoria.router,
     related_content.router, knowledge_graph.router, patient_profiles.router,
 )
 
