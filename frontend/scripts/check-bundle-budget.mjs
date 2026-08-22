@@ -92,7 +92,12 @@ for (const path of await listarArquivos(dist.pathname)) {
 // 2853517 B, somente 653 B acima do teto anterior. A nova margem continua
 // estreita (~14 KiB) e não altera os limites do entrypoint, gzip ou chunks
 // opcionais, preservando a detecção de crescimento relevante.
-const maxPrecacheBytes = 2800 * 1024;
+//
+// Ajustado de 2800 KB para 2810 KB em 22/08/2026: a integração autorizada da
+// Agenda clínica/Sala de Espera ao Prontuário levou o precache a 2867358 B,
+// apenas 158 B acima do teto anterior. O acréscimo mantém ~10 KiB de margem e
+// preserva sem alteração os limites do entrypoint, gzip e chunks opcionais.
+const maxPrecacheBytes = 2810 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
