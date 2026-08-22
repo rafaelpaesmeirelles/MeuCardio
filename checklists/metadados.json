@@ -20246,5 +20246,105 @@
       }
     ],
     "revisao": "Verificado item a item em 2026-08-22 contra o documento de origem `prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe`, já publicado nesta base — cada um dos 9 itens corresponde a uma recomendação/cronograma nomeado no documento, com a fonte primária (Thill & Schmidt 2018, PMID 30202447; Murad et al. 2024, PMID 39254653) já conferida por sessão anterior. Nenhuma fonte nova consultada nesta rodada. Fecha a lacuna de 'emergência sem checklist derivado' para o protocolo `prolongamento-qt-por-ribociclibe-e-risco-de-torsades` já publicado em emergencia/metadados.json. ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida aqui."
+  },
+  {
+    "slug": "monitorizacao-em-uso-de-revumenibe-qtc-e-sindrome-de-diferenciacao",
+    "condicao": "Monitorização em uso de revumenibe (inibidor de menina): QTc e síndrome de diferenciação",
+    "resumo": "Derivado do documento já publicado sobre revumenibe: os dois alertas em quadro da bula do FDA (QTc/torsades e síndrome de diferenciação), com cronograma de ECG, limiares de potássio/magnésio, conduta por faixa de QTcF e manejo da síndrome de diferenciação. Não se aplica automaticamente ao ziftomenibe, outro inibidor de menina com sinal de QTc bem menor no mesmo documento.",
+    "documento_origem": "inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "REVUFORJ (revumenib) — bula/rótulo do FDA, DailyMed (National Library of Medicine), setid 6eb3cdbc-0e74-477d-82d6-3bb172d3f63f, atualizada em 04/02/2026",
+      "Issa GC, Aldoss I, DiPersio J, et al. Menin Inhibition With Revumenib for KMT2A-Rearranged Relapsed or Refractory Acute Leukemia (AUGMENT-101). J Clin Oncol. 2025;43(1):75-84. PMID 39121437",
+      "Keller CL, et al. Revumenib-Induced QTc Prolongation Leading to Multiple Episodes of Torsades de Pointes and Ventricular Arrhythmias. Ochsner J. 2026;26(2):167-172. PMID 42311583"
+    ],
+    "itens": [
+      {
+        "id": "revu-qtcf-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG basal obtido antes de iniciar — tratamento NÃO iniciado se QTcF basal exceder 450 ms",
+        "origem_secao": "QTc — alerta em quadro / Monitorização eletrocardiográfica obrigatória"
+      },
+      {
+        "id": "revu-eletrolitos-basal",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Hipocalemia e hipomagnesemia corrigidas antes de iniciar (potássio ≤3,5 mEq/L: suplementar e reavaliar em até 24h; entre 3,6-3,9 mEq/L: suplementar e manter a terapia; protocolo análogo para magnésio)",
+        "origem_secao": "QTc — alerta em quadro / Correção eletrolítica"
+      },
+      {
+        "id": "revu-ecg-semanal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG semanal nas primeiras 4 semanas de terapia",
+        "origem_secao": "Monitorização eletrocardiográfica obrigatória"
+      },
+      {
+        "id": "revu-ecg-mensal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG mensal a partir da 5ª semana",
+        "origem_secao": "Monitorização eletrocardiográfica obrigatória"
+      },
+      {
+        "id": "revu-qtcf-480-500",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se QTcF entre 480-500 ms: dose interrompida; reiniciada na mesma dose só após correção eletrolítica confirmada",
+        "origem_secao": "Conduta por valor de QTcF durante o tratamento"
+      },
+      {
+        "id": "revu-qtcf-500",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se QTcF > 500 ms: dose interrompida; reinício, quando ocorrer, em nível de dose reduzido",
+        "origem_secao": "Conduta por valor de QTcF durante o tratamento"
+      },
+      {
+        "id": "revu-arritmia-risco-vida",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se arritmia com risco de vida: revumenibe descontinuado permanentemente",
+        "origem_secao": "Conduta por valor de QTcF durante o tratamento"
+      },
+      {
+        "id": "revu-cyp3a4",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Lista de medicamentos concomitantes revisada quanto a inibidor/indutor de CYP3A4 (dose reduzida se inibidor forte; indutor forte ou moderado evitado) — revisar a cada mudança de esquema, não só na admissão",
+        "origem_secao": "Contraindicações e interações — o eixo CYP3A4"
+      },
+      {
+        "id": "revu-outros-qt",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Checada a lista combinada de outros fármacos QT-prolongadores do esquema oncológico — o risco de QTc do revumenibe se soma ao deles, não se avalia isoladamente",
+        "origem_secao": "Situações especiais"
+      },
+      {
+        "id": "revu-sindrome-diferenciacao-vigilancia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância ativa de sinais de síndrome de diferenciação (febre, dispneia, infiltrado pulmonar, derrame pleural/pericárdico, hipotensão, edema, ganho de peso rápido) — incidência de 25% nos ensaios clínicos, com 2 óbitos registrados",
+        "origem_secao": "Síndrome de diferenciação — alerta em quadro"
+      },
+      {
+        "id": "revu-sindrome-diferenciacao-manejo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se síndrome de diferenciação suspeitada: dexametasona 10 mg IV a cada 12 horas (adulto) por no mínimo 3 dias, associada a monitorização hemodinâmica ativa",
+        "origem_secao": "Síndrome de diferenciação — alerta em quadro"
+      },
+      {
+        "id": "revu-nao-extrapolar-ziftomenibe",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que este cronograma de ECG/QTc é específico do revumenibe, não extrapolado automaticamente ao ziftomenibe — outro inibidor de menina com sinal de QTc bem menor no ensaio KOMET-007 (1 evento grau 1 em n=67, contra 13,8% de QTc grau ≥3 do revumenibe)",
+        "origem_secao": "Nem todo inibidor de menina tem o mesmo risco de QTc"
+      }
+    ],
+    "revisao": "Verificado item a item em 2026-08-22 contra o documento de origem `inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao`, já publicado nesta base — cada um dos 12 itens corresponde a um alerta em quadro, cronograma de ECG ou conduta explícita da bula REVUFORJ/FDA (DailyMed) ou dos ensaios AUGMENT-101 já citados no documento (PMID 39121437, PMID 42311583). Nenhuma fonte nova consultada nesta rodada. Fecha a lacuna de 'emergência sem checklist derivado' para os dois protocolos já publicados em emergencia/metadados.json que compartilham este documento de origem (prolongamento-de-qtc-por-inibidor-de-menina-revumenibe e sindrome-de-diferenciacao-por-inibidor-de-menina-revumenibe). ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida aqui."
   }
 ]
