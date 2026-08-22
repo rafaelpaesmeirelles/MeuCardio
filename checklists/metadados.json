@@ -20168,5 +20168,205 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia",
+    "condicao": "Abstinência alcoólica aguda com tempestade autonômica e risco arrítmico",
+    "resumo": "O que checar na avaliação e no manejo agudo da síndrome de abstinência alcoólica, com foco no risco cardiovascular da própria hiperatividade autonômica — prolongamento reversível do QTc, distúrbio eletrolítico e risco de arritmia — distinto do risco cardíaco do consumo agudo de álcool.",
+    "documento_origem": "abstinencia-alcoolica-aguda-fisiopatologia-autonomica-e-risco-cardiovascular",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sullivan JT, Sykora K, Schneiderman J, Naranjo CA, Sellers EM. Assessment of alcohol withdrawal: the revised clinical institute withdrawal assessment for alcohol scale (CIWA-Ar). Br J Addict. 1989;84(11):1353-1357. PMID: 2597811.",
+      "The ASAM Clinical Practice Guideline on Alcohol Withdrawal Management. J Addict Med. 2020;14(3S Suppl 1):1-72. DOI: 10.1097/ADM.0000000000000668. PMID: 32511109.",
+      "Otero-Antón E, González-Quintela A, Saborido J, Torre JA, Virgós A, Barrio E. Prolongation of the QTc interval during alcohol withdrawal syndrome. Acta Cardiol. 1997;52(3):285-294. PMID: 9217919."
+    ],
+    "itens": [
+      {
+        "id": "absalc-ciwa-ar-seriado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore CIWA-Ar aplicado de forma estruturada e seriada — não pontual — para guiar a intensidade do tratamento e antecipar agravamento, não apenas para confirmar o diagnóstico clínico de abstinência",
+        "origem_secao": "CIWA-Ar como instrumento de quantificação seriada"
+      },
+      {
+        "id": "absalc-hiperatividade-autonomica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Hiperatividade autonômica (taquicardia, hipertensão, hipertermia, diaforese, tremor) reconhecida como manifestação central da tempestade autonômica da abstinência, distinta do quadro de intoxicação aguda pelo álcool",
+        "origem_secao": "Fisiopatologia da hiperatividade simpática na abstinência"
+      },
+      {
+        "id": "absalc-ecg-qtc-admissao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações com medida do QTc na admissão, repetido durante o tratamento — o prolongamento do QTc na abstinência tende a ser reversível e a normalizar com a remissão dos sintomas, o que não dispensa a vigilância enquanto ele persistir",
+        "origem_secao": "Prolongamento reversível do QTc na abstinência alcoólica"
+      },
+      {
+        "id": "absalc-eletrolitos-magnesio-potassio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio e magnésio séricos dosados na admissão, com reposição ativa quando alterados — a hipomagnesemia contribui para o prolongamento do QTc e para o risco arrítmico nesse contexto",
+        "origem_secao": "Distúrbio eletrolítico e risco arrítmico"
+      },
+      {
+        "id": "absalc-benzodiazepinico-guiado-por-sintoma",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Benzodiazepínico como primeira linha, em esquema guiado por escore de sintoma (não em horário fixo pré-definido), para controlar a hiperatividade autonômica e prevenir a progressão para delirium tremens — sem citar dose neste checklist, que fica a critério da prescrição individualizada",
+        "origem_secao": "Terapia guiada por sintoma como padrão de tratamento"
+      },
+      {
+        "id": "absalc-evitar-antipsicotico-qt",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Antipsicótico com risco relevante de prolongamento de QT evitado como agente isolado de primeira linha para agitação nesse contexto — reservado para agitação refratária ao benzodiazepínico, sempre com monitorização eletrocardiográfica, pelo risco somado ao QTc já alargado pela própria abstinência",
+        "origem_secao": "Risco somado de QT em agente antipsicótico associado"
+      },
+      {
+        "id": "absalc-telemetria-mantida",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Monitorização cardíaca contínua mantida enquanto houver hiperatividade autonômica significativa ou QTc prolongado — não suspensa apenas pela melhora subjetiva do paciente antes da normalização objetiva desses parâmetros",
+        "origem_secao": "Indicação e duração da monitorização cardíaca contínua"
+      },
+      {
+        "id": "absalc-estratificacao-risco-dt",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Risco de progressão para delirium tremens estratificado (história prévia de abstinência grave, convulsão ou delirium tremens, comorbidade clínica significativa, padrão de uso pesado e prolongado) para definir o nível de cuidado adequado",
+        "origem_secao": "Fatores de risco para delirium tremens"
+      },
+      {
+        "id": "absalc-encaminhamento-uti",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para unidade de terapia intensiva ou de monitorização contínua quando houver tempestade autonômica refratária ao benzodiazepínico, QTc muito prolongado, arritmia documentada ou delirium tremens estabelecido",
+        "origem_secao": "Critérios de encaminhamento a cuidado intensivo"
+      },
+      {
+        "id": "absalc-orientacao-risco-cardiovascular",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente (e familiar, quando aplicável) orientado de que o risco cardiovascular agudo vem também da própria abstinência, não só do consumo de álcool, e sobre a importância de não interromper o acompanhamento antes da estabilização autonômica completa",
+        "origem_secao": "Comunicação sobre risco cardiovascular da abstinência"
+      },
+      {
+        "id": "absalc-seguimento-transtorno-uso-alcool",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento estruturado para avaliação de transtorno por uso de álcool e programa de manutenção da abstinência definido antes da alta, para reduzir o risco de recorrência do quadro",
+        "origem_secao": "Continuidade de cuidado após a fase aguda"
+      },
+      {
+        "id": "absalc-protocolo-escrito-ciwa",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Unidade dispõe de protocolo escrito de aplicação do CIWA-Ar acessível à equipe de enfermagem, com treinamento para a aplicação seriada do escore",
+        "origem_secao": "Estrutura assistencial para terapia guiada por escore"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
+  },
+  {
+    "slug": "controle-da-hipertensao-sistolica-isolada-no-muito-idoso-com-vigilancia-de-hipotensao-ortostatica-iatrogenica",
+    "condicao": "Hipertensão sistólica isolada no muito idoso, com risco de hipotensão ortostática iatrogênica",
+    "resumo": "O que checar ao definir meta pressórica e escalonar tratamento farmacológico da hipertensão sistólica isolada em pacientes muito idosos, equilibrando a evidência de benefício do controle pressórico com o risco de hipotensão ortostática induzida pelo próprio tratamento — mecanismo e conduta distintos da hipotensão pós-prandial.",
+    "documento_origem": "hipertensao-sistolica-isolada-no-muito-idoso-meta-pressorica-e-desprescricao",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA guideline for the prevention, detection, evaluation, and management of high blood pressure in adults: a report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Hypertension. 2018;71(6):e13-e115. PMID: 29133356.",
+      "SPRINT Research Group. A randomized trial of intensive versus standard blood-pressure control. N Engl J Med. 2015;373(22):2103-2116. PMID: 26551272.",
+      "Beckett NS, Peters R, Fletcher AE, et al.; HYVET Study Group. Treatment of hypertension in patients 80 years of age or older. N Engl J Med. 2008;358(18):1887-1898. PMID: 18378519."
+    ],
+    "itens": [
+      {
+        "id": "hsi-idoso-confirmar-padrao-isolado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Hipertensão sistólica isolada confirmada pelo padrão de PAS elevada com PAD normal ou baixa, característico da rigidez arterial predominante no muito idoso — diferenciada da hipertensão sistodiastólica antes de definir meta e classe medicamentosa",
+        "origem_secao": "Padrão hemodinâmico da hipertensão sistólica isolada"
+      },
+      {
+        "id": "hsi-idoso-pa-em-pe",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão arterial medida em pé, após 1 a 3 minutos, em toda consulta de início ou ajuste de anti-hipertensivo — não só sentado — para identificar queda ortostática já presente antes de qualquer intensificação do tratamento",
+        "origem_secao": "Medida postural da pressão arterial no muito idoso"
+      },
+      {
+        "id": "hsi-idoso-risco-sobretratamento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fatores de risco para sobretratamento documentados (fragilidade, quedas recentes, comprometimento cognitivo, múltiplas comorbidades, expectativa de vida limitada, intolerância medicamentosa prévia) antes de intensificar a terapia rumo à meta mais baixa",
+        "origem_secao": "Perfis excluídos ou sub-representados nos ensaios de meta intensiva"
+      },
+      {
+        "id": "hsi-idoso-meta-individualizada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Meta pressórica individualizada e registrada no prontuário — meta mais intensiva razoável no idoso ambulatorial robusto e independente, meta mais conservadora apropriada no muito idoso frágil ou com múltiplas comorbidades, decisão nunca aplicada de forma populacional uniforme",
+        "origem_secao": "Individualização da meta pressórica pelo perfil de fragilidade"
+      },
+      {
+        "id": "hsi-idoso-escalonamento-gradual",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Escalonamento de classe ou associação de anti-hipertensivo feito em etapas graduais, com reavaliação da pressão em pé a cada ajuste — nunca em salto direto para esquema de múltiplas classes na mesma consulta",
+        "origem_secao": "Titulação progressiva no muito idoso"
+      },
+      {
+        "id": "hsi-idoso-funcao-renal-eletrolitos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Função renal e eletrólitos (creatinina, potássio) reavaliados após início ou intensificação de diurético ou de bloqueador do sistema renina-angiotensina, pelo risco somado de hipotensão e de disfunção renal aguda nessa faixa etária",
+        "origem_secao": "Monitorização laboratorial ao intensificar tratamento"
+      },
+      {
+        "id": "hsi-idoso-orientacao-sinais-ortostase",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente e cuidador orientados sobre sinais de hipotensão ortostática (tontura ao levantar, quase-síncope, síncope) como motivo para contato antes do retorno agendado, em vez de simplesmente tolerar o sintoma até a próxima consulta",
+        "origem_secao": "Orientação sobre sintomas de alarme da hipotensão ortostática"
+      },
+      {
+        "id": "hsi-idoso-retorno-curto-pos-ajuste",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno em intervalo curto — semanas, não meses — após qualquer intensificação do esquema anti-hipertensivo no muito idoso, para reavaliar a pressão em pé e os sintomas antes do próximo ajuste",
+        "origem_secao": "Intervalo de reavaliação após titulação"
+      },
+      {
+        "id": "hsi-idoso-desprescricao-considerada",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Desprescrição ou simplificação do esquema considerada de forma ativa quando a meta mais baixa não for alcançável sem hipotensão ortostática sintomática — reconhecida como conduta apropriada, não como falha terapêutica",
+        "origem_secao": "Desprescrição diante de hipotensão ortostática sintomática"
+      },
+      {
+        "id": "hsi-idoso-encaminhamento-disautonomia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhamento para avaliação especializada (geriatria ou distúrbio disautonômico) quando a hipotensão ortostática for desproporcional à dose ou classe em uso, sugerindo disautonomia primária associada e não apenas efeito medicamentoso isolado",
+        "origem_secao": "Diferencial de disautonomia primária associada"
+      },
+      {
+        "id": "hsi-idoso-registro-meta-prontuario",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Prontuário com campo específico para registrar a meta pressórica individualizada definida para aquele paciente, distinta da meta populacional padrão, visível a qualquer profissional que reavalie o caso posteriormente",
+        "origem_secao": "Registro estruturado da meta individualizada"
+      },
+      {
+        "id": "hsi-idoso-diferenciar-pos-prandial",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Hipotensão ortostática iatrogênica diferenciada da hipotensão pós-prandial (mecanismo, momento de ocorrência em relação às refeições e conduta distintos) antes de atribuir uma queda de pressão a qualquer uma das duas causas isoladamente",
+        "origem_secao": "Diferencial entre hipotensão ortostática e pós-prandial"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
   }
 ]
