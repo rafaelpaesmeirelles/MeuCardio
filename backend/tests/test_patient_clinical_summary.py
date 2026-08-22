@@ -144,6 +144,10 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(client, db, cri
     assert any(evento["titulo"] == "Correção de resultado" for evento in timeline.json())
     eventos_exame = [evento for evento in timeline.json() if evento["tipo"] == "resultado_exame"]
     assert any(evento["source"] == "Laboratório externo" and evento["lab_test_id"] == catalogo.id for evento in eventos_exame)
+    original_timeline = next(evento for evento in eventos_exame if evento["exam_result_id"] == rid)
+    assert original_timeline["status"] == "substituido"
+    assert original_timeline["is_superseded"] is True
+    assert original_timeline["corrected_by_id"] == correcao.json()["id"]
     datas = [datetime.fromisoformat(evento["data"]) for evento in timeline.json()]
     assert datas == sorted(datas, reverse=True)
     assert client.get(f"/api/pacientes/{pid}/linha-do-tempo", headers=_h(token_intruso)).status_code == 404

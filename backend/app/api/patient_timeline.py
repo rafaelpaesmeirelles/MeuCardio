@@ -120,6 +120,11 @@ def linha_do_tempo_paciente(
         .filter(PatientExamResult.owner_id == user.id, PatientExamResult.patient_profile_id == pid)
         .all()
     )
+    corrected_by = {
+        row.correction_of_id: row.id
+        for row in resultados
+        if row.correction_of_id is not None
+    }
     for row in resultados:
         payload = _payload_resultado(row)
         nome = (payload.get("exam_name") or "").strip()
@@ -135,11 +140,13 @@ def linha_do_tempo_paciente(
             "data": row.performed_at,
             "titulo": "Correção de resultado" if row.correction_of_id else "Resultado de exame",
             "resumo": resumo or "Resultado registrado.",
-            "status": None,
+            "status": "substituido" if row.id in corrected_by else "correcao" if row.correction_of_id else "registrado",
             "encounter_id": row.source_encounter_id,
             "exam_result_id": row.id,
             "lab_test_id": row.lab_test_id,
             "correction_of_id": row.correction_of_id,
+            "corrected_by_id": corrected_by.get(row.id),
+            "is_superseded": row.id in corrected_by,
             "source": origem or None,
         })
 
