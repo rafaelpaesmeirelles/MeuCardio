@@ -20168,5 +20168,191 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter",
+    "condicao": "Trombose venosa profunda de membro superior relacionada a esforço (síndrome de Paget-Schroetter)",
+    "resumo": "Reconhecimento do perfil clínico típico (paciente jovem e ativo, esforço repetitivo acima da cabeça), diferenciação da TVP de membro superior secundária a cateter/dispositivo, e a sequência trombólise-anticoagulação-descompressão cirúrgica do desfiladeiro torácico que distingue esta condição do manejo padrão de TVP.",
+    "documento_origem": "trombose-venosa-profunda-de-membro-superior-sindrome-de-paget-schroetter-diagnostico-e-tratamento",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Alla VM, Natarajan N, Kaushik M, Warrier R, Nair CK. Paget-Schroetter syndrome: review of pathogenesis and treatment of effort thrombosis. West J Emerg Med. 2010;11(4):358-362. PMID 21079709.",
+      "Shebel ND, Marin A. Effort thrombosis (Paget-Schroetter syndrome) in active young adults: current concepts in diagnosis and treatment. J Vasc Nurs. 2006;24(4):116-126. PMID 17141130.",
+      "Não existe diretriz de consenso formal (ESC/AHA/ACC/SBC) dedicada à síndrome de Paget-Schroetter — a condução descrita reflete a prática consolidada nas revisões acima; onde a fonte não estabelece corte numérico exato, isso está sinalizado no item correspondente."
+    ],
+    "itens": [
+      {
+        "id": "paget-schroetter-perfil-clinico-sugestivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perfil clínico sugestivo reconhecido: paciente jovem e previamente hígido, com atividade física ou ocupacional repetitiva do membro superior dominante acima da cabeça (levantamento de peso, natação, beisebol, pintura, carga manual), apresentando edema, dor e cianose de início súbito no braço",
+        "origem_secao": "Apresentação clínica e fatores de risco"
+      },
+      {
+        "id": "paget-schroetter-diferenciar-tvp-secundaria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Trombose diferenciada de TVP de membro superior SECUNDÁRIA (associada a cateter venoso central, eletrodo de marca-passo/CDI ou neoplasia) — a origem muda a conduta: só a trombose primária por esforço (síndrome de Paget-Schroetter) tem indicação de investigar e tratar compressão do desfiladeiro torácico",
+        "origem_secao": "Classificação: trombose primária (por esforço) versus secundária"
+      },
+      {
+        "id": "paget-schroetter-doppler-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ultrassonografia Doppler venosa do membro afetado solicitada como exame inicial de triagem",
+        "origem_secao": "Métodos diagnósticos — triagem"
+      },
+      {
+        "id": "paget-schroetter-venografia-confirmatoria",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se o Doppler for inconclusivo, ou se a descompressão cirúrgica estiver sendo planejada: venografia por cateter (padrão de referência para mapear a extensão do trombo e a compressão do desfiladeiro torácico) ou venografia por TC/RM como alternativa",
+        "origem_secao": "Venografia como padrão de referência"
+      },
+      {
+        "id": "paget-schroetter-anticoagulacao-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação iniciada assim que o diagnóstico for confirmado, na ausência de contraindicação, como base do tratamento independentemente de trombólise ou cirurgia estarem sendo consideradas",
+        "origem_secao": "Tratamento inicial"
+      },
+      {
+        "id": "paget-schroetter-trombolise-precoce",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Trombólise dirigida por cateter (isolada ou associada a trombectomia farmacomecânica) avaliada precocemente em paciente jovem e sintomático com trombo agudo/subagudo — o objetivo é restaurar a patência venosa antes da descompressão cirúrgica; não é a conduta padrão para toda TVP de membro superior, e a janela ideal em relação ao início dos sintomas não está padronizada por diretriz — VERIFICAÇÃO HUMANA NECESSÁRIA para definir o prazo institucional",
+        "origem_secao": "Trombólise dirigida por cateter e trombectomia farmacomecânica"
+      },
+      {
+        "id": "paget-schroetter-investigar-desfiladeiro-toracico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Compressão anatômica do desfiladeiro torácico (costela cervical, banda fibrosa, hipertrofia do músculo subclávio ou anomalia da primeira costela) investigada como causa subjacente após a resolução do trombo agudo",
+        "origem_secao": "Fisiopatologia — síndrome do desfiladeiro torácico venoso"
+      },
+      {
+        "id": "paget-schroetter-encaminhar-cirurgia-vascular",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento à cirurgia vascular/torácica para avaliação de descompressão cirúrgica do desfiladeiro torácico (tipicamente ressecção da primeira costela, associada ou não a escalenectomia), geralmente planejada semanas após o tratamento do trombo agudo, não no momento da apresentação",
+        "origem_secao": "Momento e indicação da descompressão cirúrgica"
+      },
+      {
+        "id": "paget-schroetter-manter-anticoagulacao-ate-cirurgia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação mantida no intervalo entre o tratamento do trombo agudo e a cirurgia de descompressão, com a decisão sobre continuidade após o procedimento revista em conjunto com a equipe cirúrgica",
+        "origem_secao": "Conduta na janela pré-cirúrgica"
+      },
+      {
+        "id": "paget-schroetter-orientar-retorno-atividade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado a não retomar a atividade repetitiva acima da cabeça que precipitou o quadro antes da liberação formal pela equipe que acompanha o caso",
+        "origem_secao": "Retorno à atividade"
+      },
+      {
+        "id": "paget-schroetter-seguimento-sindrome-pos-tromboptica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento clínico programado para rastrear sinais de síndrome pós-trombótica de membro superior (edema residual, desconforto ou sensação de peso com esforço), mesmo após tratamento considerado bem-sucedido",
+        "origem_secao": "Morbidade em longo prazo e risco de recorrência"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
+  },
+  {
+    "slug": "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca",
+    "condicao": "Triagem pré-operatória de apneia obstrutiva do sono com o escore STOP-Bang antes de cirurgia cardíaca eletiva",
+    "resumo": "Aplicação estruturada do escore STOP-Bang na avaliação pré-anestésica do paciente cardiopata cirúrgico, com o corte que define alta probabilidade de apneia obstrutiva do sono e as consequências práticas dessa triagem no perioperatório — encaminhamento diagnóstico, monitorização estendida e continuidade do CPAP já prescrito.",
+    "documento_origem": "escore-stop-bang-triagem-de-apneia-obstrutiva-do-sono-no-pre-operatorio-cardiaco",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Chung F, Yegneswaran B, Liao P, et al. STOP Questionnaire: A Tool to Screen Patients for Obstructive Sleep Apnea. Anesthesiology. 2008;108(5):812-821. PMID 18431116.",
+      "Chung F, Subramanyam R, Liao P, Sasaki E, Shapiro C, Sun Y. High STOP-Bang score indicates a high probability of obstructive sleep apnoea. Br J Anaesth. 2012;108(5):768-775. PMID 22401881.",
+      "Qaddoura A, Kabali C, Drew D, et al. Obstructive Sleep Apnea as a Predictor of Atrial Fibrillation After Coronary Artery Bypass Grafting: A Systematic Review and Meta-Analysis. Can J Cardiol. 2014;30(12):1516-1522."
+    ],
+    "itens": [
+      {
+        "id": "stopbang-aplicar-em-todo-pre-operatorio-cardiaco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore STOP-Bang aplicado na avaliação pré-anestésica de todo paciente agendado para cirurgia cardíaca eletiva, independentemente de já ter diagnóstico prévio de apneia do sono",
+        "origem_secao": "Indicação da triagem — STOP Questionnaire, Chung 2008"
+      },
+      {
+        "id": "stopbang-componentes-completos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Os oito componentes binários do escore conferidos e registrados: ronco (Snoring), cansaço diurno (Tiredness), apneia observada por terceiros (Observed apnea), pressão arterial elevada (Pressure), IMC acima de 35 kg/m², idade acima de 50 anos, circunferência cervical aumentada e sexo masculino (BANG)",
+        "origem_secao": "Composição do escore STOP-Bang"
+      },
+      {
+        "id": "stopbang-corte-alto-risco",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Escore igual ou maior que 3 (de 8) classificado como alta probabilidade de apneia obstrutiva do sono — corte validado com sensibilidade de 93% para apneia moderada a grave e de 100% para apneia grave",
+        "origem_secao": "Desempenho diagnóstico do corte ≥3 — Chung 2012"
+      },
+      {
+        "id": "stopbang-nao-substitui-polissonografia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Escore alto reconhecido como ferramenta de TRIAGEM cirúrgica, não como diagnóstico definitivo de apneia do sono — não dispensa a confirmação por polissonografia ou poligrafia domiciliar quando essa investigação for indicada",
+        "origem_secao": "Limitação do instrumento como ferramenta de rastreio"
+      },
+      {
+        "id": "stopbang-encaminhar-investigacao-quando-nao-urgente",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Paciente com escore ≥3 e sem diagnóstico prévio encaminhado para polissonografia ou poligrafia domiciliar antes da cirurgia, quando o cronograma cirúrgico permitir essa investigação sem atraso relevante; em cirurgia que não pode aguardar, o paciente é conduzido no perioperatório como se tivesse apneia obstrutiva do sono confirmada",
+        "origem_secao": "Fluxo diagnóstico pré-operatório em cirurgia eletiva versus urgente"
+      },
+      {
+        "id": "stopbang-confirmar-dispositivo-cpap-proprio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Paciente com apneia obstrutiva do sono já diagnosticada e em uso domiciliar de CPAP/BiPAP orientado a trazer o próprio dispositivo para uso durante a internação e a recuperação pós-operatória",
+        "origem_secao": "Continuidade da terapia com pressão positiva no perioperatório"
+      },
+      {
+        "id": "stopbang-monitorizacao-estendida-pos-operatoria",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Paciente com escore ≥3 ou apneia obstrutiva do sono já diagnosticada sinalizado para monitorização cardiorrespiratória contínua (oximetria de pulso e telemetria) por período estendido no pós-operatório, além da rotina de vigilância padrão",
+        "origem_secao": "Manejo perioperatório do paciente de alto risco"
+      },
+      {
+        "id": "stopbang-estrategia-poupadora-de-opioide",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Estratégia analgésica poupadora de opioide priorizada no paciente de alto risco para apneia obstrutiva do sono, evitando sedação profunda não monitorizada na recuperação pós-operatória imediata",
+        "origem_secao": "Analgesia e sedação no paciente de alto risco para SAOS"
+      },
+      {
+        "id": "stopbang-orientar-risco-fibrilacao-atrial",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que apneia obstrutiva do sono não tratada está associada a maior risco de fibrilação atrial após cirurgia de revascularização miocárdica, reforçando a importância da adesão ao CPAP quando já prescrito",
+        "origem_secao": "Associação entre SAOS e fibrilação atrial pós-operatória"
+      },
+      {
+        "id": "stopbang-estrutura-leito-monitorizado-disponivel",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Disponibilidade de leito com capacidade de monitorização cardiorrespiratória contínua confirmada antes de agendar a cirurgia eletiva do paciente classificado como alto risco pelo escore",
+        "origem_secao": "Planejamento de recursos para o paciente de alto risco"
+      },
+      {
+        "id": "stopbang-fechar-loop-diagnostico-apos-alta",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Paciente com escore ≥3 sem confirmação diagnóstica antes da cirurgia encaminhado para polissonografia após a alta, fechando o ciclo diagnóstico que a triagem perioperatória apenas iniciou",
+        "origem_secao": "Continuidade do cuidado após a alta hospitalar"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
   }
 ]
