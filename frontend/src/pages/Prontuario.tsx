@@ -253,15 +253,13 @@ export default function Prontuario() {
 
   async function finalizar() {
     if (!pacienteId) return;
-    const salvo = encounterEditando
-      ? encounters.find((item) => item.id === encounterEditando) ?? await salvarRascunho()
-      : await salvarRascunho();
+    const salvo = await salvarRascunho();
     if (!salvo) return;
     setSalvando(true);
     setErro("");
     try {
       const finalizado = await api.post<Encounter>(
-        `/pacientes/${pacienteId}/atendimentos/${salvo.id}/finalizar`, {},
+        `/pacientes/${pacienteId}/atendimentos/${salvo.id}/finalizar`,
       );
       setEncounters((lista) => [finalizado, ...lista.filter((item) => item.id !== finalizado.id)]);
       setEditorAberto(false);
