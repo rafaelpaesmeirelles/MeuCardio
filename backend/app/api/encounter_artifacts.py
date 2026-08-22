@@ -22,6 +22,7 @@ from app.services.patient_profile_service import snapshot_de
 from app.services.professional_profile import normalize_search_text
 
 router = APIRouter(prefix="/api/pacientes", tags=["prontuario"])
+_DOC_ESPECIAL = "prescricao_livre_especial"
 
 
 class ArtefatoIn(BaseModel):
@@ -43,12 +44,7 @@ def _encounter(pid: int, eid: int, db: Session, user, *, mutacao: bool = False):
 
 
 def _validar_destinatario_prescricao(prescricao_id: int, pid: int, db: Session, user) -> None:
-    """Prova que o destinatário cifrado corresponde ao PatientProfile do Encounter.
-
-    É comparação determinística de identidade, nunca busca/fuzzy matching: nome
-    normalizado precisa coincidir e, se o cadastro tiver CPF, o documento da
-    receita também precisa coincidir dígito a dígito.
-    """
+    """Prova que o destinatário cifrado corresponde ao PatientProfile do Encounter."""
     perfil = patient_profile_for_user(pid, db, user)
     snap = snapshot_de(perfil)
     destinatario = (
@@ -58,11 +54,9 @@ def _validar_destinatario_prescricao(prescricao_id: int, pid: int, db: Session, 
     )
     if not destinatario:
         raise HTTPException(status_code=409, detail="Receita sem destinatário identificável não pode ser vinculada ao prontuário.")
-
     nome = cofre.decifrar_campo(destinatario.nome_cifrado, prescricao_id)
     if normalize_search_text(nome) != normalize_search_text(snap.get("full_name")):
         raise HTTPException(status_code=409, detail="Destinatário da receita não corresponde ao paciente deste atendimento.")
-
     cpf = re.sub(r"\D", "", snap.get("cpf") or "")
     if cpf:
         documento = (
@@ -80,9 +74,8 @@ def _validar_artefato(dados: ArtefatoIn, pid: int, db: Session, user):
             raise HTTPException(status_code=404, detail="Prescrição não encontrada.")
         _validar_destinatario_prescricao(row.id, pid, db, user)
         return row
-
     row = db.get(GeneratedDocument, dados.artifact_id)
-    if not row or row.created_by != user.id:
+    if not row or row.created_by != user.id or row.doc_type == _DOC_ESPECIAL:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
     if row.patient_profile_id != pid:
         raise HTTPException(status_code=409, detail="Documento não corresponde ao paciente deste atendimento.")
@@ -99,22 +92,13 @@ def _dump(link: EncounterArtifact, db: Session) -> dict:
             .all()
         )
         return {
-            "id": link.id,
-            "tipo": "prescricao",
-            "artifact_id": link.artifact_id,
-            "created_at": presc.created_at if presc else link.created_at,
-            "titulo": "Prescrição",
-            "detalhes": [
-                {"id": d.id, "tipo": d.tipo_codigo, "status": d.status}
-                for d in docs
-            ],
+            "id": link.id, "tipo": "prescricao", "artifact_id": link.artifact_id,
+            "created_at": presc.created_at if presc else link.created_at, "titulo": "Prescrição",
+            "detalhes": [{"id": d.id, "tipo": d.tipo_codigo, "status": d.status} for d in docs],
         }
-
     doc = db.get(GeneratedDocument, link.artifact_id)
     return {
-        "id": link.id,
-        "tipo": "documento",
-        "artifact_id": link.artifact_id,
+        "id": link.id, "tipo": "documento", "artifact_id": link.artifact_id,
         "created_at": doc.created_at if doc else link.created_at,
         "titulo": doc.title if doc else "Documento indisponível",
         "doc_type": doc.doc_type if doc else None,
@@ -122,18 +106,12 @@ def _dump(link: EncounterArtifact, db: Session) -> dict:
 
 
 @router.get("/{pid}/atendimentos/{eid}/artefatos")
-def listar_artefatos(
-    pid: int, eid: int, db: Session = Depends(get_db), user=Depends(current_user),
-):
+def listar_artefatos(pid: int, eid: int, db: Session = Depends(get_db), user=Depends(current_user)):
     _encounter(pid, eid, db, user)
     rows = (
         db.query(EncounterArtifact)
-        .filter(
-            EncounterArtifact.owner_id == user.id,
-            EncounterArtifact.encounter_id == eid,
-        )
-        .order_by(EncounterArtifact.created_at.asc(), EncounterArtifact.id.asc())
-        .all()
+        .filter(EncounterArtifact.owner_id == user.id, EncounterArtifact.encounter_id == eid)
+        .order_by(EncounterArtifact.created_at.asc(), EncounterArtifact.id.asc()).all()
     )
     return [_dump(row, db) for row in rows]
 
@@ -145,36 +123,26 @@ def vincular_artefato(
 ):
     _encounter(pid, eid, db, user, mutacao=True)
     _validar_artefato(dados, pid, db, user)
-
     existente = (
         db.query(EncounterArtifact)
         .filter(
             EncounterArtifact.owner_id == user.id,
             EncounterArtifact.artifact_type == dados.tipo,
             EncounterArtifact.artifact_id == dados.artifact_id,
-        )
-        .first()
+        ).first()
     )
     if existente:
         if existente.encounter_id != eid:
             raise HTTPException(status_code=409, detail="Artefato já pertence a outro atendimento.")
         return _dump(existente, db)
-
     link = EncounterArtifact(
-        owner_id=user.id,
-        encounter_id=eid,
-        artifact_type=dados.tipo,
-        artifact_id=dados.artifact_id,
+        owner_id=user.id, encounter_id=eid,
+        artifact_type=dados.tipo, artifact_id=dados.artifact_id,
     )
-    db.add(link)
-    db.flush()
+    db.add(link); db.flush()
     db.add(AuditLog(
-        user_id=user.id,
-        action="link_encounter_artifact",
-        entity="clinical_encounter",
-        entity_id=str(eid),
-        detail={"artifact_type": dados.tipo, "artifact_id": dados.artifact_id},
+        user_id=user.id, action="link_encounter_artifact", entity="clinical_encounter",
+        entity_id=str(eid), detail={"artifact_type": dados.tipo, "artifact_id": dados.artifact_id},
     ))
-    db.commit()
-    db.refresh(link)
+    db.commit(); db.refresh(link)
     return _dump(link, db)
