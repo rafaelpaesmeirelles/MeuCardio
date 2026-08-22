@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
+import PatientExamResults from "./PatientExamResults";
 import PatientProfileTimeline from "./PatientProfileTimeline";
 
 type Kind = "problema" | "alergia" | "medicacao";
@@ -13,18 +14,21 @@ const VAZIO:Record<Kind,string>={problema:"Nenhum problema ativo registrado.",al
 
 export default function PatientClinicalSummary({patientId,currentEncounterId}:{patientId:number;currentEncounterId:number|null}){
   const [itens,setItens]=useState<Item[]>([]),[kind,setKind]=useState<Kind>("problema"),[name,setName]=useState(""),[details,setDetails]=useState(""),[erro,setErro]=useState("");
+  const [timelineRevision,setTimelineRevision]=useState(0);
   const carregar=()=>api.get<Item[]>(`/pacientes/${patientId}/resumo-clinico`).then(setItens).catch(e=>setErro(e.message));
-  useEffect(()=>{carregar();},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{
+    setItens([]);setKind("problema");setName("");setDetails("");setErro("");setTimelineRevision(0);carregar();
+  },[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function adicionar(){
     const n=name.trim();if(!n)return;setErro("");
     try{
       await api.post(`/pacientes/${patientId}/resumo-clinico`,{kind,name:n,details:details.trim()||null,source_encounter_id:currentEncounterId||null});
-      setName("");setDetails("");await carregar();
+      setName("");setDetails("");await carregar();setTimelineRevision(x=>x+1);
     }catch(e){setErro(e instanceof Error?e.message:"Falha ao registrar item clínico.");}
   }
   async function inativar(id:number){
-    try{await api.post(`/pacientes/${patientId}/resumo-clinico/${id}/inativar`);await carregar();}
+    try{await api.post(`/pacientes/${patientId}/resumo-clinico/${id}/inativar`);await carregar();setTimelineRevision(x=>x+1);}
     catch(e){setErro(e instanceof Error?e.message:"Falha ao inativar item clínico.");}
   }
 
@@ -48,6 +52,7 @@ export default function PatientClinicalSummary({patientId,currentEncounterId}:{p
       </div>
       <button className="botao" style={{marginTop:"0.5rem"}} onClick={adicionar} disabled={!name.trim()}>+ Registrar</button>
     </section>
-    <PatientProfileTimeline key={`${patientId}-${currentEncounterId||0}-${itens.map(i=>i.id).join("-")}`} patientId={patientId}/>
+    <PatientExamResults patientId={patientId} currentEncounterId={currentEncounterId} onChanged={()=>setTimelineRevision(x=>x+1)}/>
+    <PatientProfileTimeline key={`${patientId}-${currentEncounterId||0}-${itens.map(i=>i.id).join("-")}-${timelineRevision}`} patientId={patientId}/>
   </>;
 }
