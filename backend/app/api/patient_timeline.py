@@ -123,10 +123,12 @@ def linha_do_tempo_paciente(
     for row in resultados:
         payload = _payload_resultado(row)
         nome = (payload.get("exam_name") or "").strip()
-        valor = (payload.get("result") or "").strip()
+        valor = (payload.get("structured_result") or payload.get("result") or "").strip()
+        laudo = (payload.get("report_text") or "").strip()
         unidade = (payload.get("unit") or "").strip()
         resultado = " ".join(x for x in (valor, unidade) if x).strip()
-        resumo = " · ".join(x for x in (nome, resultado) if x)[:240]
+        origem = (payload.get("source") or "").strip()
+        resumo = " · ".join(x for x in (nome, resultado or laudo, origem) if x)[:240]
         eventos.append({
             "id": f"resultado_exame:{row.id}",
             "tipo": "resultado_exame",
@@ -138,6 +140,7 @@ def linha_do_tempo_paciente(
             "exam_result_id": row.id,
             "lab_test_id": row.lab_test_id,
             "correction_of_id": row.correction_of_id,
+            "source": origem or None,
         })
 
     flows = (

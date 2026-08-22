@@ -17,7 +17,7 @@ referência, observações e motivo da correção ficam cifrados em repouso.
 """
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, LargeBinary, String, UniqueConstraint
+from sqlalchemy import Boolean, CheckConstraint, DateTime, ForeignKey, LargeBinary, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
@@ -139,3 +139,18 @@ class PatientExamResult(Base):
     payload_cifrado: Mapped[bytes] = mapped_column(LargeBinary)
     correction_reason_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+
+    __table_args__ = (
+        UniqueConstraint(
+            "correction_of_id",
+            name="uq_patient_exam_results_correction_of",
+        ),
+        CheckConstraint(
+            "exam_kind IN ('laboratorial', 'metodo_grafico', 'imagem', 'outro')",
+            name="ck_patient_exam_results_kind",
+        ),
+        CheckConstraint(
+            "correction_of_id IS NULL OR correction_of_id <> id",
+            name="ck_patient_exam_results_not_self_correction",
+        ),
+    )

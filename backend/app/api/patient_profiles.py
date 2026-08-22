@@ -25,6 +25,7 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -79,14 +80,20 @@ class ExamResultIn(BaseModel):
     exam_kind: Literal["laboratorial", "metodo_grafico", "imagem", "outro"] = "laboratorial"
     exam_name: str
     performed_at: datetime | None = None
-    result: str
+    structured_result: str | None = None
+    report_text: str | None = None
+    # Compatibilidade transitória com o contrato inicial desta branch.
+    result: str | None = None
     unit: str | None = None
     reference_range: str | None = None
     notes: str | None = None
+    source: str | None = None
     lab_test_id: int | None = None
     source_encounter_id: int | None = None
-    correction_of_id: int | None = None
-    correction_reason: str | None = None
+
+
+class ExamCorrectionIn(ExamResultIn):
+    correction_reason: str
 
 
 class EncounterIn(BaseModel):
@@ -267,9 +274,19 @@ def _exam_result_for_user(pid: int, result_id: int, db: Session, user) -> Patien
     return row
 
 
-def _dump_exam_result(row: PatientExamResult, db: Session) -> dict:
+def _dump_exam_result(
+    row: PatientExamResult,
+    db: Session,
+    corrected_by_id: int | None = None,
+) -> dict:
     payload = json.loads(cofre.decifrar_campo(row.payload_cifrado, row.id))
     catalog = db.get(LabTest, row.lab_test_id) if row.lab_test_id else None
+    structured_result = payload.get("structured_result")
+    report_text = payload.get("report_text")
+    # Registros produzidos pelos primeiros commits do lote continuam legíveis.
+    legacy_result = payload.get("result")
+    if structured_result is None and report_text is None and legacy_result is not None:
+        structured_result = legacy_result
     return {
         "id": row.id,
         "patient_profile_id": row.patient_profile_id,
@@ -279,6 +296,8 @@ def _dump_exam_result(row: PatientExamResult, db: Session) -> dict:
         "lab_test_slug": catalog.slug if catalog else None,
         "lab_test_name": catalog.name if catalog else None,
         "correction_of_id": row.correction_of_id,
+        "corrected_by_id": corrected_by_id,
+        "is_superseded": corrected_by_id is not None,
         "correction_reason": (
             cofre.decifrar_campo(row.correction_reason_cifrado, row.id)
             if row.correction_reason_cifrado else None
@@ -286,10 +305,13 @@ def _dump_exam_result(row: PatientExamResult, db: Session) -> dict:
         "exam_kind": row.exam_kind,
         "performed_at": row.performed_at,
         "exam_name": payload.get("exam_name") or "",
-        "result": payload.get("result") or "",
+        "structured_result": structured_result,
+        "report_text": report_text,
+        "result": structured_result or report_text or "",
         "unit": payload.get("unit"),
         "reference_range": payload.get("reference_range"),
         "notes": payload.get("notes"),
+        "source": payload.get("source"),
         "created_at": row.created_at,
     }
 
@@ -306,9 +328,126 @@ def _auditar_resultado(db: Session, user_id: int, action: str, row: PatientExamR
             "lab_test_id": row.lab_test_id,
             "correction_of_id": row.correction_of_id,
             "exam_kind": row.exam_kind,
-            "performed_at": row.performed_at.isoformat(),
         },
     ))
+
+
+def _normalizar_resultado(dados: ExamResultIn) -> dict:
+    exam_name = dados.exam_name.strip()
+    structured_result = (dados.structured_result or dados.result or "").strip() or None
+    report_text = (dados.report_text or "").strip() or None
+    unit = (dados.unit or "").strip() or None
+    reference_range = (dados.reference_range or "").strip() or None
+    notes = (dados.notes or "").strip() or None
+    source = (dados.source or "").strip() or None
+
+    if not exam_name:
+        raise HTTPException(status_code=422, detail="Informe o exame.")
+    if not structured_result and not report_text:
+        raise HTTPException(status_code=422, detail="Informe um valor estruturado ou um laudo textual.")
+    limites = (
+        (exam_name, 240, "Nome do exame"),
+        (structured_result, 500, "Resultado estruturado"),
+        (report_text, 12000, "Laudo textual"),
+        (unit, 80, "Unidade"),
+        (reference_range, 500, "Referência"),
+        (notes, 4000, "Observações"),
+        (source, 240, "Origem"),
+    )
+    for valor, limite, rotulo in limites:
+        if valor and len(valor) > limite:
+            raise HTTPException(status_code=422, detail=f"{rotulo} excede {limite} caracteres.")
+    return {
+        "exam_name": exam_name,
+        "structured_result": structured_result,
+        "report_text": report_text,
+        "unit": unit,
+        "reference_range": reference_range,
+        "notes": notes,
+        "source": source,
+    }
+
+
+def _criar_resultado(
+    pid: int,
+    dados: ExamResultIn,
+    db: Session,
+    user,
+    *,
+    correction_of: PatientExamResult | None = None,
+    correction_reason: str | None = None,
+) -> PatientExamResult:
+    patient_profile_for_user(pid, db, user)
+    payload = _normalizar_resultado(dados)
+
+    if dados.source_encounter_id is not None:
+        source_encounter = encounter_for_user(dados.source_encounter_id, db, user)
+        if source_encounter.patient_profile_id != pid:
+            raise HTTPException(status_code=404, detail="Atendimento de origem não encontrado.")
+
+    if dados.lab_test_id is not None:
+        catalog = db.get(LabTest, dados.lab_test_id)
+        if not catalog or not catalog.published:
+            raise HTTPException(status_code=404, detail="Exame do catálogo CorVIA não encontrado.")
+
+    if correction_of is not None:
+        if not correction_reason:
+            raise HTTPException(status_code=422, detail="Informe o motivo da correção do resultado.")
+        if len(correction_reason) > 2000:
+            raise HTTPException(status_code=422, detail="Motivo da correção excede 2000 caracteres.")
+        already_corrected = db.query(PatientExamResult.id).filter(
+            PatientExamResult.owner_id == user.id,
+            PatientExamResult.patient_profile_id == pid,
+            PatientExamResult.correction_of_id == correction_of.id,
+        ).first()
+        if already_corrected:
+            raise HTTPException(
+                status_code=409,
+                detail="Este registro já foi substituído. Corrija o registro mais recente da cadeia.",
+            )
+
+    performed_at = dados.performed_at or datetime.now(timezone.utc)
+    if performed_at.tzinfo is None:
+        raise HTTPException(status_code=422, detail="A data clínica deve informar o fuso horário.")
+    row = PatientExamResult(
+        owner_id=user.id,
+        patient_profile_id=pid,
+        author_id=user.id,
+        source_encounter_id=dados.source_encounter_id,
+        lab_test_id=dados.lab_test_id,
+        correction_of_id=correction_of.id if correction_of else None,
+        exam_kind=dados.exam_kind,
+        performed_at=performed_at,
+        payload_cifrado=b"",
+        correction_reason_cifrado=None,
+    )
+    try:
+        db.add(row)
+        db.flush()
+        row.payload_cifrado = cofre.cifrar_campo(json.dumps(payload, ensure_ascii=False), row.id)
+        if correction_reason:
+            row.correction_reason_cifrado = cofre.cifrar_campo(correction_reason, row.id)
+        _auditar_resultado(
+            db,
+            user.id,
+            "correct_patient_exam_result" if correction_of else "create_patient_exam_result",
+            row,
+        )
+        db.commit()
+    except IntegrityError:
+        db.rollback()
+        if correction_of is not None and db.query(PatientExamResult.id).filter(
+            PatientExamResult.owner_id == user.id,
+            PatientExamResult.patient_profile_id == pid,
+            PatientExamResult.correction_of_id == correction_of.id,
+        ).first():
+            raise HTTPException(
+                status_code=409,
+                detail="Este registro já foi substituído. Corrija o registro mais recente da cadeia.",
+            )
+        raise
+    db.refresh(row)
+    return row
 
 
 @router.get("")
@@ -484,6 +623,15 @@ def listar_resultados(
         .limit(limite)
         .all()
     )
+    corrected_by = dict(
+        db.query(PatientExamResult.correction_of_id, PatientExamResult.id)
+        .filter(
+            PatientExamResult.owner_id == user.id,
+            PatientExamResult.patient_profile_id == pid,
+            PatientExamResult.correction_of_id.is_not(None),
+        )
+        .all()
+    )
     db.add(AuditLog(
         user_id=user.id,
         action="list_patient_exam_results",
@@ -492,7 +640,7 @@ def listar_resultados(
         detail={"count": len(rows)},
     ))
     db.commit()
-    return [_dump_exam_result(row, db) for row in rows]
+    return [_dump_exam_result(row, db, corrected_by.get(row.id)) for row in rows]
 
 
 @router.post("/{pid}/resultados", status_code=201)
@@ -502,73 +650,71 @@ def criar_resultado(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    patient_profile_for_user(pid, db, user)
-    exam_name = dados.exam_name.strip()
-    result = dados.result.strip()
-    unit = (dados.unit or "").strip() or None
-    reference_range = (dados.reference_range or "").strip() or None
-    notes = (dados.notes or "").strip() or None
-    correction_reason = (dados.correction_reason or "").strip() or None
+    row = _criar_resultado(pid, dados, db, user)
+    return _dump_exam_result(row, db)
 
-    if not exam_name:
-        raise HTTPException(status_code=422, detail="Informe o exame.")
-    if not result:
-        raise HTTPException(status_code=422, detail="Informe o resultado ou achado principal.")
-    if len(exam_name) > 240 or len(result) > 8000:
-        raise HTTPException(status_code=422, detail="Resultado de exame excede o tamanho permitido.")
-    if unit and len(unit) > 80:
-        raise HTTPException(status_code=422, detail="Unidade excede 80 caracteres.")
-    if reference_range and len(reference_range) > 500:
-        raise HTTPException(status_code=422, detail="Referência excede 500 caracteres.")
-    if notes and len(notes) > 4000:
-        raise HTTPException(status_code=422, detail="Observações excedem 4000 caracteres.")
 
-    if dados.source_encounter_id is not None:
-        source = encounter_for_user(dados.source_encounter_id, db, user)
-        if source.patient_profile_id != pid:
-            raise HTTPException(status_code=404, detail="Atendimento de origem não encontrado.")
+@router.get("/{pid}/resultados/{result_id}")
+def obter_resultado(
+    pid: int,
+    result_id: int,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    row = _exam_result_for_user(pid, result_id, db, user)
+    all_rows = db.query(PatientExamResult).filter(
+        PatientExamResult.owner_id == user.id,
+        PatientExamResult.patient_profile_id == pid,
+    ).all()
+    by_id = {item.id: item for item in all_rows}
+    corrected_by = {
+        item.correction_of_id: item.id
+        for item in all_rows
+        if item.correction_of_id is not None
+    }
 
-    if dados.lab_test_id is not None:
-        catalog = db.get(LabTest, dados.lab_test_id)
-        if not catalog or not catalog.published:
-            raise HTTPException(status_code=404, detail="Exame do catálogo CorVIA não encontrado.")
+    root = row
+    visited: set[int] = set()
+    while root.correction_of_id is not None and root.id not in visited:
+        visited.add(root.id)
+        parent = by_id.get(root.correction_of_id)
+        if parent is None:
+            break
+        root = parent
+    chain: list[PatientExamResult] = []
+    current: PatientExamResult | None = root
+    visited.clear()
+    while current is not None and current.id not in visited:
+        visited.add(current.id)
+        chain.append(current)
+        current = by_id.get(corrected_by.get(current.id, -1))
 
-    if dados.correction_of_id is not None:
-        _exam_result_for_user(pid, dados.correction_of_id, db, user)
-        if not correction_reason:
-            raise HTTPException(status_code=422, detail="Informe o motivo da correção do resultado.")
-    elif correction_reason:
-        raise HTTPException(status_code=422, detail="Motivo de correção exige um resultado anterior.")
-
-    row = PatientExamResult(
-        owner_id=user.id,
-        patient_profile_id=pid,
-        author_id=user.id,
-        source_encounter_id=dados.source_encounter_id,
-        lab_test_id=dados.lab_test_id,
-        correction_of_id=dados.correction_of_id,
-        exam_kind=dados.exam_kind,
-        performed_at=dados.performed_at or datetime.now(timezone.utc),
-        payload_cifrado=b"",
-        correction_reason_cifrado=None,
-    )
-    db.add(row)
-    db.flush()
-    row.payload_cifrado = cofre.cifrar_campo(
-        json.dumps({
-            "exam_name": exam_name,
-            "result": result,
-            "unit": unit,
-            "reference_range": reference_range,
-            "notes": notes,
-        }, ensure_ascii=False),
-        row.id,
-    )
-    if correction_reason:
-        row.correction_reason_cifrado = cofre.cifrar_campo(correction_reason, row.id)
-    _auditar_resultado(db, user.id, "create_patient_exam_result", row)
+    _auditar_resultado(db, user.id, "read_patient_exam_result", row)
     db.commit()
-    db.refresh(row)
+    return {
+        "result": _dump_exam_result(row, db, corrected_by.get(row.id)),
+        "history": [_dump_exam_result(item, db, corrected_by.get(item.id)) for item in chain],
+    }
+
+
+@router.post("/{pid}/resultados/{result_id}/correcoes", status_code=201)
+def corrigir_resultado(
+    pid: int,
+    result_id: int,
+    dados: ExamCorrectionIn,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    original = _exam_result_for_user(pid, result_id, db, user)
+    reason = dados.correction_reason.strip()
+    row = _criar_resultado(
+        pid,
+        dados,
+        db,
+        user,
+        correction_of=original,
+        correction_reason=reason,
+    )
     return _dump_exam_result(row, db)
 
 

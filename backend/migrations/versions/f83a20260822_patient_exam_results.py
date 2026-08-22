@@ -39,6 +39,15 @@ def upgrade() -> None:
         sa.ForeignKeyConstraint(["source_encounter_id"], ["clinical_encounters.id"], ondelete="SET NULL"),
         sa.ForeignKeyConstraint(["lab_test_id"], ["lab_tests.id"], ondelete="SET NULL"),
         sa.ForeignKeyConstraint(["correction_of_id"], [_TABLE + ".id"], ondelete="RESTRICT"),
+        sa.CheckConstraint(
+            "exam_kind IN ('laboratorial', 'metodo_grafico', 'imagem', 'outro')",
+            name="ck_patient_exam_results_kind",
+        ),
+        sa.CheckConstraint(
+            "correction_of_id IS NULL OR correction_of_id <> id",
+            name="ck_patient_exam_results_not_self_correction",
+        ),
+        sa.UniqueConstraint("correction_of_id", name="uq_patient_exam_results_correction_of"),
         sa.PrimaryKeyConstraint("id"),
     )
     op.create_index("ix_patient_exam_results_owner_id", _TABLE, ["owner_id"], unique=False)

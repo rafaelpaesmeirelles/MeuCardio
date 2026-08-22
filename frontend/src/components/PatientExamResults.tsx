@@ -1,63 +1,55 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 
-type Kind = "laboratorial" | "metodo_grafico" | "imagem" | "outro";
-type ExamResult = {
-  id:number; exam_kind:Kind; exam_name:string; performed_at:string; result:string;
-  unit:string|null; reference_range:string|null; notes:string|null;
-  lab_test_slug:string|null; source_encounter_id:number|null; correction_of_id:number|null;
-};
+type Kind="laboratorial"|"metodo_grafico"|"imagem"|"outro";
+type Result={id:number;exam_kind:Kind;exam_name:string;performed_at:string;structured_result:string|null;report_text:string|null;unit:string|null;reference_range:string|null;notes:string|null;source:string|null;lab_test_id:number|null;lab_test_slug:string|null;source_encounter_id:number|null;correction_of_id:number|null;corrected_by_id:number|null;correction_reason:string|null;is_superseded:boolean;created_at:string};
+type Form={kind:Kind;name:string;value:string;report:string;unit:string;reference:string;notes:string;source:string;performedAt:string;reason:string};
 
-function agoraLocal(){const d=new Date(Date.now()-new Date().getTimezoneOffset()*60000);return d.toISOString().slice(0,16);}
-function quando(v:string){return new Intl.DateTimeFormat("pt-BR",{dateStyle:"short",timeStyle:"short"}).format(new Date(v));}
+const now=()=>new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,16);
+const empty=():Form=>({kind:"laboratorial",name:"",value:"",report:"",unit:"",reference:"",notes:"",source:"",performedAt:now(),reason:""});
+const when=(v:string)=>new Date(v).toLocaleString("pt-BR");
 
 export default function PatientExamResults({patientId,currentEncounterId,onChanged}:{patientId:number;currentEncounterId:number|null;onChanged?:()=>void}){
-  const [itens,setItens]=useState<ExamResult[]>([]),[kind,setKind]=useState<Kind>("laboratorial"),[name,setName]=useState("");
-  const [result,setResult]=useState(""),[unit,setUnit]=useState(""),[referenceRange,setReferenceRange]=useState(""),[notes,setNotes]=useState("");
-  const [performedAt,setPerformedAt]=useState(agoraLocal()),[erro,setErro]=useState(""),[salvando,setSalvando]=useState(false);
+  const base=`/pacientes/${patientId}/resultados`;
+  const [items,setItems]=useState<Result[]>([]),[form,setForm]=useState<Form>(empty()),[correction,setCorrection]=useState<Result|null>(null);
+  const [error,setError]=useState(""),[saving,setSaving]=useState(false);
+  const change=<K extends keyof Form>(key:K,value:Form[K])=>setForm(x=>({...x,[key]:value}));
+  const load=()=>api.get<Result[]>(base).then(setItems).catch(e=>setError(e.message));
+  const clear=()=>{setForm(empty());setCorrection(null);};
+  const field=(label:string,key:keyof Form)=><label>{label}<input value={form[key]} onChange={e=>change(key,e.target.value)}/></label>;
+  useEffect(()=>{setItems([]);setError("");setSaving(false);clear();load();},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const carregar=()=>api.get<ExamResult[]>(`/pacientes/${patientId}/resultados`).then(setItens).catch(e=>setErro(e.message));
-  useEffect(()=>{
-    setItens([]);setKind("laboratorial");setName("");setResult("");setUnit("");setReferenceRange("");setNotes("");
-    setPerformedAt(agoraLocal());setErro("");setSalvando(false);carregar();
-  },[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  async function adicionar(){
-    if(!name.trim()||!result.trim())return;setSalvando(true);setErro("");
-    try{
-      await api.post(`/pacientes/${patientId}/resultados`,{
-        exam_kind:kind,exam_name:name.trim(),performed_at:performedAt?new Date(performedAt).toISOString():null,
-        result:result.trim(),unit:unit.trim()||null,reference_range:referenceRange.trim()||null,
-        notes:notes.trim()||null,source_encounter_id:currentEncounterId||null,
-      });
-      setName("");setResult("");setUnit("");setReferenceRange("");setNotes("");setPerformedAt(agoraLocal());
-      await carregar();onChanged?.();
-    }catch(e){setErro(e instanceof Error?e.message:"Falha ao registrar resultado.");}
-    finally{setSalvando(false);}
+  function correct(x:Result){setCorrection(x);setForm({kind:x.exam_kind,name:x.exam_name,value:x.structured_result||"",report:x.report_text||"",unit:x.unit||"",reference:x.reference_range||"",notes:x.notes||"",source:x.source||"",performedAt:new Date(x.performed_at).toISOString().slice(0,16),reason:""});}
+  async function save(){
+    if(!form.name.trim()||(!form.value.trim()&&!form.report.trim())||(correction&&!form.reason.trim()))return;
+    setSaving(true);setError("");
+    const body={exam_kind:form.kind,exam_name:form.name.trim(),performed_at:new Date(form.performedAt).toISOString(),structured_result:form.value.trim()||null,report_text:form.report.trim()||null,unit:form.unit.trim()||null,reference_range:form.reference.trim()||null,notes:form.notes.trim()||null,source:form.source.trim()||null,lab_test_id:correction?.lab_test_id||null,source_encounter_id:currentEncounterId||correction?.source_encounter_id||null,...(correction?{correction_reason:form.reason.trim()}:{})};
+    try{await api.post(correction?`${base}/${correction.id}/correcoes`:base,body);clear();await load();onChanged?.();}
+    catch(e){setError(e instanceof Error?e.message:"Falha.");}finally{setSaving(false);}
   }
 
-  return <section className="pep-card pep-history" style={{marginTop:"0.8rem"}}>
-    <div className="pep-title"><div><p className="eyebrow">Exames e resultados</p><h2>Histórico de resultados</h2></div><a href="/exames">Catálogo CorVIA</a></div>
-    {erro&&<p role="alert" className="pep-error">{erro}</p>}
-    {!itens.length&&<p className="pep-muted">Ainda não há resultados registrados.</p>}
-    {itens.slice(0,12).map(item=><article key={item.id}>
-      <div><strong>{item.correction_of_id?"Correção · ":""}{item.exam_name}</strong><time>{quando(item.performed_at)}</time></div>
-      <p>{item.result}{item.unit?` ${item.unit}`:""}</p>
-      <small>{[item.exam_kind,item.reference_range?`Referência: ${item.reference_range}`:null,item.source_encounter_id?`Atendimento #${item.source_encounter_id}`:null].filter(Boolean).join(" · ")}</small>
-      {item.notes&&<p className="pep-muted">{item.notes}</p>}
-      {item.lab_test_slug&&<a href={`/exames/${item.lab_test_slug}`}>Conteúdo científico</a>}
+  return <section className="pep-card pep-history">
+    <h2>Exames e resultados</h2>
+    {error&&<p role="alert" className="pep-error">{error}</p>}
+    {items.slice(0,12).map(x=><article key={x.id}>
+      <div><strong>{x.correction_of_id?"Correção · ":""}{x.exam_name}</strong><time>{when(x.performed_at)}</time></div>
+      <p>{x.structured_result}{x.structured_result&&x.unit?` ${x.unit}`:""}{!x.structured_result&&x.report_text}</p>
+      <small>{[x.exam_kind,x.source,x.is_superseded?"Substituído":null].filter(Boolean).join(" · ")}</small>
+      <details><summary>Detalhes</summary><small>{[x.reference_range?`Referência: ${x.reference_range}`:null,x.notes,x.correction_of_id?`Corrige #${x.correction_of_id}`:null,x.corrected_by_id?`Substituído por #${x.corrected_by_id}`:null,x.correction_reason].filter(Boolean).join(" · ")}</small></details>
+      {x.lab_test_slug&&<a href={`/exames/${x.lab_test_slug}`}>Catálogo</a>}{!x.is_superseded&&<button onClick={()=>correct(x)}>Corrigir</button>}
     </article>)}
-    <div className="grade grade--3" style={{marginTop:"0.8rem"}}>
-      <label>Tipo<select value={kind} onChange={e=>setKind(e.target.value as Kind)}><option value="laboratorial">Laboratorial</option><option value="metodo_grafico">Método gráfico</option><option value="imagem">Imagem</option><option value="outro">Outro</option></select></label>
-      <label>Exame<input value={name} onChange={e=>setName(e.target.value)} placeholder="Troponina, ECG, eco…"/></label>
-      <label>Data<input type="datetime-local" value={performedAt} onChange={e=>setPerformedAt(e.target.value)}/></label>
+    <div className="pep-title"><h2>{correction?`Corrigir #${correction.id}`:"Registrar resultado"}</h2>{correction&&<button onClick={clear}>Cancelar</button>}</div>
+    <div className="grade grade--3">
+      <label>Tipo<select value={form.kind} onChange={e=>change("kind",e.target.value as Kind)}><option value="laboratorial">Laboratorial</option><option value="metodo_grafico">Método gráfico</option><option value="imagem">Imagem</option><option value="outro">Outro</option></select></label>
+      {field("Exame","name")}
+      <label>Data clínica<input type="datetime-local" value={form.performedAt} onChange={e=>change("performedAt",e.target.value)}/></label>
     </div>
-    <div className="grade grade--3" style={{marginTop:"0.5rem"}}>
-      <label>Resultado / achado<input value={result} onChange={e=>setResult(e.target.value)} placeholder="Valor ou achado"/></label>
-      <label>Unidade<input value={unit} onChange={e=>setUnit(e.target.value)} placeholder="Opcional"/></label>
-      <label>Referência<input value={referenceRange} onChange={e=>setReferenceRange(e.target.value)} placeholder="Opcional"/></label>
+    <div className="grade grade--3">
+      {field("Valor estruturado","value")}{field("Unidade","unit")}{field("Referência","reference")}
     </div>
-    <label style={{display:"block",marginTop:"0.5rem"}}>Observações<textarea rows={2} value={notes} onChange={e=>setNotes(e.target.value)} placeholder="Opcional"/></label>
-    <button className="botao" style={{marginTop:"0.5rem"}} onClick={adicionar} disabled={salvando||!name.trim()||!result.trim()}>{salvando?"Registrando…":"+ Registrar resultado"}</button>
+    <label>Laudo / resultado textual<textarea rows={3} value={form.report} onChange={e=>change("report",e.target.value)}/></label>
+    <div className="grade grade--2">{field("Origem","source")}{field("Observações","notes")}</div>
+    {correction&&<label>Motivo da correção<textarea rows={2} value={form.reason} onChange={e=>change("reason",e.target.value)} required/></label>}
+    <button className="botao" onClick={save} disabled={saving||!form.name.trim()||(!form.value.trim()&&!form.report.trim())||!!correction&&!form.reason.trim()}>{saving?"Registrando…":correction?"Registrar correção":"+ Registrar resultado"}</button>
   </section>;
 }
