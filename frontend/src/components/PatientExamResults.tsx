@@ -28,7 +28,10 @@ export default function PatientExamResults({patientId,currentEncounterId,onChang
   const [erro,setErro]=useState(""),[salvando,setSalvando]=useState(false);
 
   const carregar=()=>api.get<ExamResult[]>(`/pacientes/${patientId}/resultados`).then(setItens).catch(e=>setErro(e.message));
-  useEffect(()=>{carregar();},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{
+    setItens([]);setKind("laboratorial");setName("");setResult("");setUnit("");setReferenceRange("");setNotes("");
+    setPerformedAt(agoraLocal());setCatalog([]);setCatalogId("");setErro("");setSalvando(false);carregar();
+  },[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(()=>{
     const q=name.trim();
     if(q.length<2){setCatalog([]);setCatalogId("");return;}
