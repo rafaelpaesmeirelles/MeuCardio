@@ -1,16 +1,19 @@
 """Núcleo longitudinal do Prontuário Eletrônico CorVIA.
 
 `PatientProfile` continua sendo a identidade clínica ambulatorial. O conteúdo
-clínico de um atendimento fica cifrado em repouso porque, diferente do Patient
-do Round, este registro está ligado diretamente a um paciente identificável.
+clínico ligado a um paciente identificável fica cifrado em repouso.
 
 Um atendimento finalizado é histórico: a API não permite sobrescrevê-lo.
 Correções posteriores devem ser registradas como novo `ClinicalEncounter`
 com `amendment_of_id` apontando para o registro original.
+
+Problemas, alergias e medicações em uso seguem a mesma lógica conservadora:
+o conteúdo é cifrado e um item deixa de ser vigente por inativação, nunca por
+apagamento físico ou sobrescrita silenciosa.
 """
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, ForeignKey, LargeBinary, String, UniqueConstraint
+from sqlalchemy import Boolean, DateTime, ForeignKey, LargeBinary, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
@@ -68,3 +71,31 @@ class ClinicalEncounter(Base):
         # PostgreSQL permite múltiplos NULL; adendos não reutilizam appointment_id.
         UniqueConstraint("owner_id", "appointment_id", name="uq_encounter_owner_appointment"),
     )
+
+
+class PatientClinicalItem(Base):
+    """Item longitudinal do resumo clínico do paciente.
+
+    `kind` expõe somente a categoria operacional (problema/alergia/medicação).
+    Nome e detalhes ficam dentro de `payload_cifrado`. O item é imutável quanto
+    ao conteúdo; quando deixa de ser vigente, recebe `is_active=False` e
+    `ended_at`, preservando o histórico médico.
+    """
+
+    __tablename__ = "patient_clinical_items"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    owner_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    patient_profile_id: Mapped[int] = mapped_column(
+        ForeignKey("patient_profiles.id", ondelete="RESTRICT"), index=True
+    )
+    source_encounter_id: Mapped[int | None] = mapped_column(
+        ForeignKey("clinical_encounters.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    kind: Mapped[str] = mapped_column(String(20), index=True)
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    payload_cifrado: Mapped[bytes] = mapped_column(LargeBinary)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+    ended_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

@@ -5,14 +5,19 @@ atendimentos (`ClinicalEncounter`) usam o mesmo paciente identificável, mas
 cifram em repouso o conteúdo clínico. Atendimento finalizado é imutável;
 correção posterior nasce como adendo separado.
 
+Problemas, alergias e medicações em uso compõem o resumo clínico longitudinal.
+O conteúdo de cada item também é cifrado; quando deixa de ser vigente, o item
+é inativado e preservado no histórico em vez de ser apagado.
+
 Todo endpoint é escopado por `owner_id == user.id`: médico A nunca confirma a
-existência do paciente/atendimento do médico B. Leituras e mutações de
-Encounter geram AuditLog sem copiar conteúdo clínico para o log.
+existência do paciente/atendimento do médico B. Leituras e mutações geram
+AuditLog sem copiar conteúdo clínico para o log.
 """
 from __future__ import annotations
 
 import json
 from datetime import date, datetime, timezone
+from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
@@ -23,7 +28,7 @@ from app.core.security import current_user
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment
 from app.models.patient_profile import PatientProfile
-from app.models.prontuario import ClinicalEncounter
+from app.models.prontuario import ClinicalEncounter, PatientClinicalItem
 from app.services import cofre
 from app.services.clinical_ownership import encounter_for_user, patient_profile_for_user
 from app.services.patient_profile_service import snapshot_de
@@ -56,6 +61,13 @@ class PatientProfileIn(BaseModel):
     phone: str | None = None
     email: str | None = None
     endereco: EnderecoIn | None = None
+
+
+class ClinicalItemIn(BaseModel):
+    kind: Literal["problema", "alergia", "medicacao"]
+    name: str
+    details: str | None = None
+    source_encounter_id: int | None = None
 
 
 class EncounterIn(BaseModel):
@@ -190,6 +202,44 @@ def _auditar(db: Session, user_id: int, action: str, encounter: ClinicalEncounte
     ))
 
 
+def _item_for_user(pid: int, item_id: int, db: Session, user) -> PatientClinicalItem:
+    patient_profile_for_user(pid, db, user)
+    item = db.get(PatientClinicalItem, item_id)
+    if not item or item.owner_id != user.id or item.patient_profile_id != pid:
+        raise HTTPException(status_code=404, detail="Item clínico não encontrado.")
+    return item
+
+
+def _dump_item(item: PatientClinicalItem) -> dict:
+    payload = json.loads(cofre.decifrar_campo(item.payload_cifrado, item.id))
+    return {
+        "id": item.id,
+        "patient_profile_id": item.patient_profile_id,
+        "kind": item.kind,
+        "is_active": item.is_active,
+        "name": payload.get("name") or "",
+        "details": payload.get("details"),
+        "source_encounter_id": item.source_encounter_id,
+        "created_at": item.created_at,
+        "ended_at": item.ended_at,
+    }
+
+
+def _auditar_item(db: Session, user_id: int, action: str, item: PatientClinicalItem) -> None:
+    db.add(AuditLog(
+        user_id=user_id,
+        action=action,
+        entity="patient_clinical_item",
+        entity_id=str(item.id),
+        detail={
+            "patient_profile_id": item.patient_profile_id,
+            "kind": item.kind,
+            "is_active": item.is_active,
+            "source_encounter_id": item.source_encounter_id,
+        },
+    ))
+
+
 @router.get("")
 def listar_pacientes(
     busca: str | None = Query(None, max_length=120),
@@ -248,6 +298,9 @@ def apagar_paciente(pid: int, db: Session = Depends(get_db), user=Depends(curren
         db.query(ClinicalEncounter.id)
         .filter(ClinicalEncounter.owner_id == user.id, ClinicalEncounter.patient_profile_id == perfil.id)
         .first()
+        or db.query(PatientClinicalItem.id)
+        .filter(PatientClinicalItem.owner_id == user.id, PatientClinicalItem.patient_profile_id == perfil.id)
+        .first()
     )
     if existe_prontuario:
         raise HTTPException(
@@ -256,6 +309,90 @@ def apagar_paciente(pid: int, db: Session = Depends(get_db), user=Depends(curren
         )
     db.delete(perfil)
     db.commit()
+
+
+@router.get("/{pid}/resumo-clinico")
+def listar_resumo_clinico(
+    pid: int,
+    incluir_inativos: bool = False,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    query = db.query(PatientClinicalItem).filter(
+        PatientClinicalItem.owner_id == user.id,
+        PatientClinicalItem.patient_profile_id == pid,
+    )
+    if not incluir_inativos:
+        query = query.filter(PatientClinicalItem.is_active.is_(True))
+    rows = query.order_by(PatientClinicalItem.created_at.desc(), PatientClinicalItem.id.desc()).all()
+    db.add(AuditLog(
+        user_id=user.id,
+        action="list_patient_clinical_summary",
+        entity="patient_profile",
+        entity_id=str(pid),
+        detail={"count": len(rows), "include_inactive": incluir_inativos},
+    ))
+    db.commit()
+    return [_dump_item(row) for row in rows]
+
+
+@router.post("/{pid}/resumo-clinico", status_code=201)
+def criar_item_resumo(
+    pid: int,
+    dados: ClinicalItemIn,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    name = dados.name.strip()
+    details = (dados.details or "").strip() or None
+    if not name:
+        raise HTTPException(status_code=422, detail="Informe o item clínico.")
+    if len(name) > 240:
+        raise HTTPException(status_code=422, detail="Item clínico excede 240 caracteres.")
+    if details and len(details) > 3000:
+        raise HTTPException(status_code=422, detail="Detalhes excedem 3000 caracteres.")
+
+    if dados.source_encounter_id is not None:
+        source = encounter_for_user(dados.source_encounter_id, db, user)
+        if source.patient_profile_id != pid:
+            raise HTTPException(status_code=404, detail="Atendimento de origem não encontrado.")
+
+    item = PatientClinicalItem(
+        owner_id=user.id,
+        patient_profile_id=pid,
+        source_encounter_id=dados.source_encounter_id,
+        kind=dados.kind,
+        is_active=True,
+        payload_cifrado=b"",
+    )
+    db.add(item)
+    db.flush()
+    item.payload_cifrado = cofre.cifrar_campo(
+        json.dumps({"name": name, "details": details}, ensure_ascii=False), item.id,
+    )
+    _auditar_item(db, user.id, "create_patient_clinical_item", item)
+    db.commit()
+    db.refresh(item)
+    return _dump_item(item)
+
+
+@router.post("/{pid}/resumo-clinico/{item_id}/inativar")
+def inativar_item_resumo(
+    pid: int,
+    item_id: int,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    item = _item_for_user(pid, item_id, db, user)
+    if item.is_active:
+        item.is_active = False
+        item.ended_at = datetime.now(timezone.utc)
+        _auditar_item(db, user.id, "inactivate_patient_clinical_item", item)
+        db.commit()
+        db.refresh(item)
+    return _dump_item(item)
 
 
 @router.get("/{pid}/atendimentos")
