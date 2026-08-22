@@ -27678,5 +27678,1245 @@
       }
     ],
     "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
+  },
+  {
+    "slug": "decisao-do-heart-team-entre-tavi-e-cirurgia-guiada-pelo-escore-sts-prom",
+    "condicao": "Decisão do Heart Team entre TAVI e cirurgia (SAVR) guiada pelo escore STS-PROM",
+    "resumo": "Checklist para o uso do STS-PROM como um dos eixos da decisão de modo de intervenção na estenose aórtica grave, cruzando os cortes da diretriz ESC/EACTS 2021 com o que os ensaios PARTNER e Evolut Low Risk efetivamente testaram em cada faixa de risco.",
+    "documento_origem": "escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "O'Brien SM, Feng L, He X, et al. The Society of Thoracic Surgeons 2018 Adult Cardiac Surgery Risk Models: Part 2-Statistical Methods and Results. Ann Thorac Surg. 2018;105(5):1419-1428. PMID: 29577924",
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMC9725093",
+      "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients (PARTNER 3). N Engl J Med. 2019;380(18):1695-1705. PMID: 30883058",
+      "Leon MB, Smith CR, Mack MJ, et al. Transcatheter or Surgical Aortic-Valve Replacement in Intermediate-Risk Patients (PARTNER 2). N Engl J Med. 2016;374(17):1609-1620. PMID: 27040324",
+      "Smith CR, Leon MB, Mack MJ, et al. Transcatheter versus Surgical Aortic-Valve Replacement in High-Risk Patients (PARTNER 1, Cohort A). N Engl J Med. 2011;364(23):2187-2198. PMID: 21639811",
+      "Popma JJ, Deeb GM, Yakubov SJ, et al. Transcatheter Aortic-Valve Replacement with a Self-Expanding Valve in Low-Risk Patients (Evolut Low Risk). N Engl J Med. 2019;380(18):1706-1715. PMID: 30883053",
+      "Smith CR, Leon MB, Mack MJ, et al. Transcatheter versus Surgical Aortic-Valve Replacement in High-Risk Patients. N Engl J Med. 2011;364:2187-2198. DOI: 10.1056/NEJMoa1103510. PMID: 21639811 — métodos confirmam STS-PROM ≥10% OU condições coexistentes com risco estimado de morte cirúrgica em 30 dias ≥15%."
+    ],
+    "itens": [
+      {
+        "id": "sts-heart-team-calcular-sts-prom",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o STS-PROM (Predicted Risk of Mortality) do paciente antes de discutir o modo de intervenção na estenose aórtica grave.",
+        "origem_secao": "O que este documento cobre, e o que não cobre"
+      },
+      {
+        "id": "sts-heart-team-classificar-faixa-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar a faixa de risco pelos cortes da diretriz 2021 ESC/EACTS: SAVR recomendada se <75 anos e STS-PROM/EuroSCORE II <4% (baixo risco); TAVI recomendada se ≥75 anos ou STS-PROM/EuroSCORE II >8% (alto risco).",
+        "origem_secao": "Os cortes numéricos, na fonte de diretriz"
+      },
+      {
+        "id": "sts-heart-team-considerar-eixo-etario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Considerar a idade (<75 ou ≥75 anos) como eixo concorrente ao escore na mesma tabela de recomendação da diretriz ESC/EACTS 2021 — os dois critérios não são sinônimos e podem apontar para direções diferentes.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sts-heart-team-avaliar-fatores-nao-capturados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar fatores que o STS-PROM não incorpora: fragilidade, anatomia vascular de acesso, calcificação de aorta em porcelana e expectativa de vida por comorbidade não cardíaca.",
+        "origem_secao": "Limitações do uso do corte numérico isolado"
+      },
+      {
+        "id": "sts-heart-team-encaminhar-discussao-formal",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar todo paciente com estenose aórtica grave para discussão formal em Heart Team antes da decisão final, inclusive nos extremos de risco em que o corte numérico parece claro.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sts-heart-team-nao-tratar-faixa-intermediaria-como-protocolo-rigido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não tratar a faixa de risco intermediário (~4-8%) como protocolo automático de triagem: a diretriz ESC/EACTS 2021 não formaliza um corte numérico único para essa faixa — o rótulo vem do desenho do PARTNER 2/SURTAVI, e um valor como 4,2% não enquadra o paciente automaticamente em nenhuma via.",
+        "origem_secao": "Limitações do uso do corte numérico isolado"
+      },
+      {
+        "id": "sts-heart-team-nao-extrapolar-entre-plataformas-de-valvula",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não extrapolar o resultado de não inferioridade de um ensaio com determinada plataforma de válvula (por exemplo, balão-expansível do PARTNER 3) para outra plataforma (autoexpansível) sem o ensaio correspondente — o Evolut Low Risk precisou ser testado à parte para confirmar o mesmo resultado com válvula CoreValve/Evolut.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "sts-heart-team-verificacao-corte-partner1",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "No PARTNER 1 Coorte A, alto risco cirúrgico não foi definido por um único corte de STS-PROM: STS-PROM ≥10% era uma das vias de inclusão, ou podiam existir comorbidades que levassem o Heart Team a estimar risco de morte cirúrgica em 30 dias ≥15%. Não apresentar “PARTNER 1 = STS ≥10%” como regra exclusiva.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "antitrombotico-nos-primeiros-3-meses-apos-bioprotese-valvar",
+    "condicao": "Antitrombótico nos primeiros 3 meses após implante cirúrgico de bioprótese valvar (ESC/EACTS 2021)",
+    "resumo": "O que checar ao decidir o antitrombótico da janela de maior risco trombótico pós-implante de bioprótese, antes da endotelização completa dos folhetos: a posição do implante (aórtica versus mitral/tricúspide) determina se aspirina é opção de mesmo peso do anticoagulante ou não, e há divergência real entre a diretriz europeia e a norte-americana nesse ponto.",
+    "documento_origem": "antitrombotico-nos-primeiros-3-meses-apos-biopotese-valvar-esc-eacts-2021",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295.",
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395.",
+      "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. J Am Coll Cardiol. 2021;77(4):e25-e197. DOI: 10.1016/j.jacc.2020.11.018."
+    ],
+    "itens": [
+      {
+        "id": "bpv-determinar-posicao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Determinar a posição do implante de bioprótese valvar cirúrgica (aórtica versus mitral ou tricúspide) antes de decidir o antitrombótico dos primeiros 3 meses — a recomendação difere entre as posições",
+        "origem_secao": "A lacuna que este documento fecha"
+      },
+      {
+        "id": "bpv-sem-indicacao-previa-anticoagulacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar se o paciente já tem indicação prévia e independente de anticoagulação oral (por exemplo, fibrilação atrial) — se tiver, a decisão específica dos primeiros 3 meses de bioprótese não se aplica do mesmo modo",
+        "origem_secao": "Bioprótese aórtica — aspirina OU anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-aortica-aspirina-ou-avk",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em bioprótese aórtica implantada cirurgicamente, sem indicação prévia de anticoagulação, considerar aspirina em dose baixa OU anticoagulação oral com antagonista de vitamina K (AVK) nos primeiros 3 meses, conforme prescrição médica — Classe IIa, Nível B (ESC/EACTS 2021); a diretriz apresenta as duas opções como alternativas de mesmo peso, sem hierarquizar uma sobre a outra",
+        "origem_secao": "Bioprótese aórtica — aspirina OU anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-mitral-tricuspide-avk",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em bioprótese implantada em posição mitral ou tricúspide, considerar anticoagulação oral com antagonista de vitamina K (AVK), conforme prescrição médica, nos primeiros 3 meses — Classe IIa, Nível B (ESC/EACTS 2021); nessa posição a diretriz não oferece aspirina como alternativa de mesmo peso",
+        "origem_secao": "Bioprótese mitral ou tricúspide — anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-nao-generalizar-posicao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Não generalizar a opção de aspirina — válida para a posição aórtica — para a posição mitral ou tricúspide, que tem recomendação específica por anticoagulante, refletindo maior risco trombogênico reconhecido dessas posições",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "bpv-divergencia-acc-aha",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao comparar sociedades, registrar a diferença sem atribuir classes incorretas: a ACC/AHA 2020 considera aspirina 75-100 mg/dia razoável após SAVR bioprotética ou troca mitral (Classe IIa, B-NR) e também considera VKA com INR 2,5 razoável por pelo menos 3 e até 6 meses em baixo risco de sangramento (Classe IIa, B-NR).",
+        "origem_secao": "Bioprótese aórtica — aspirina OU anticoagulante, classe IIa"
+      },
+      {
+        "id": "bpv-apos-3-meses",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Após a janela inicial de 3 meses, na ausência de outra indicação de anticoagulação (como fibrilação atrial), não manter a anticoagulação de rotina da bioprótese",
+        "origem_secao": "Depois dos 3 meses"
+      },
+      {
+        "id": "bpv-verificacao-2025",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Usar como referência europeia atual a ESC/EACTS 2025: em bioprótese cirúrgica aórtica sem outra indicação de anticoagulação, aspirina em baixa dose OU VKA devem ser considerados nos primeiros 3 meses (Classe IIa, Nível B); em bioprótese mitral ou tricúspide, VKA deve ser considerado nos primeiros 3 meses (Classe IIa, Nível B).",
+        "origem_secao": "O que mudou (ou pode ter mudado) na atualização 2025"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-manejo-da-cardiomiopatia-periparto",
+    "condicao": "Cardiomiopatia periparto (PPCM) — diagnóstico, tratamento agudo e planejamento de seguimento",
+    "resumo": "O que checar diante de suspeita de cardiomiopatia periparto, do diagnóstico de exclusão ao ajuste de segurança gestacional/lactação da terapia de insuficiência cardíaca e à decisão sobre gestação subsequente.",
+    "documento_origem": "cardiomiopatia-periparto-criterios-diagnosticos-recuperacao-e-manejo",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Bauersachs J, König T, van der Meer P, et al. Pathophysiology, diagnosis and management of peripartum cardiomyopathy: a position statement from the Heart Failure Association of the European Society of Cardiology Study Group on PPCM. Eur J Heart Fail. 2019;21(7):827-843. DOI: 10.1002/ejhf.1493. PMID: 31243866",
+      "Satti DI, Choi E, Patel HP, et al. Cardiomyopathies in Pregnancy: Trends and Clinical Outcomes in Delivery Hospitalizations in the United States (2005-2020). Curr Probl Cardiol. 2024;49(12):102855. DOI: 10.1016/j.cpcardiol.2024.102855. PMID: 39299364",
+      "Sliwa K, van der Meer P, Petrie MC, et al. Risk stratification and management of women with cardiomyopathy/heart failure planning pregnancy or presenting during/after pregnancy: a position statement from the Heart Failure Association of the ESC Study Group on PPCM. Eur J Heart Fail. 2021;23(4):527-540. DOI: 10.1002/ejhf.2133. PMID: 33609068"
+    ],
+    "itens": [
+      {
+        "id": "ppcm-janela-temporal-sinais-ic",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente sinais/sintomas de insuficiência cardíaca (dispneia, edema, ortopneia, fadiga) surgindo no último mês de gestação ou nos meses seguintes ao parto — não atribuir automaticamente a 'cansaço do parto'",
+        "origem_secao": "O diferencial que mais importa: PPCM não é a única cardiomiopatia que aparece na gestação"
+      },
+      {
+        "id": "ppcm-ecocardiograma-disfuncao-sistolica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Confirmar disfunção sistólica do ventrículo esquerdo ao ecocardiograma; a definição contemporânea de cardiomiopatia periparto utiliza FEVE <45%, surgindo próximo ao final da gestação ou nos meses após o parto, sem outra causa identificável de insuficiência cardíaca.",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppcm-excluir-outras-causas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Excluir outra causa identificável de disfunção ventricular antes de fechar o diagnóstico de PPCM: cardiopatia prévia não diagnosticada, miocardite de outra etiologia, doença valvar significativa e cardiomiopatia induzida por taquicardia",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppcm-biomarcadores-apoio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar BNP/NT-proBNP e troponina como apoio ao diagnóstico e à estratificação, sem substituir o ecocardiograma",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ppcm-suspender-ieca-bra-neprilisina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não prescrever IECA, BRA ou inibidor da neprilisina durante a gestação (teratogenicidade renal fetal já estabelecida); substituir por hidralazina e nitrato quando redução de pós-carga for necessária antes do parto, conforme prescrição médica",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-betabloqueador-compativel",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Manter betabloqueador (preferencialmente seletivo, como metoprolol) como parte central do tratamento — compatível com gestação e amamentação, conforme prescrição médica",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-avaliar-anticoagulacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Considerar anticoagulação profilática, individualizada por grau de disfunção sistólica e fatores de risco, dado o risco tromboembólico aumentado da PPCM com disfunção importante, sobretudo no puerpério imediato",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-transicao-pos-parto-icfer",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Planejar, após o parto, a transição para o arsenal completo de ICFEr (IECA/BRA/inibidor de neprilisina-valsartana, iSGLT2, antagonista de mineralocorticoide), respeitando compatibilidade com lactação quando aplicável",
+        "origem_secao": "Manejo agudo — o que já está estabelecido no restante da plataforma"
+      },
+      {
+        "id": "ppcm-adiar-decisao-de-dispositivo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Evitar CDI definitivo muito precocemente porque a recuperação ventricular é frequente. Em disfunção ventricular grave e alto risco arrítmico, considerar colete desfibrilador como ponte nos primeiros 3-6 meses; se disfunção grave persistir além de 6 meses apesar de terapia otimizada, reavaliar indicação de CDI/TRC segundo critérios usuais.",
+        "origem_secao": "Recuperação e implicações prognósticas"
+      },
+      {
+        "id": "ppcm-encaminhar-risco-pre-concepcional",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para estratificação de risco especializada antes de nova gestação em mulher com história de PPCM, sobretudo se a função ventricular não normalizou completamente",
+        "origem_secao": "Recuperação e implicações prognósticas"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "suspensao-perioperatoria-de-inibidor-de-sglt2-prevencao-de-cetoacidose-euglicemica",
+    "condicao": "Suspensão perioperatória de inibidor de SGLT2 — prevenção de cetoacidose euglicêmica",
+    "resumo": "Prazo de suspensão pré-operatória por molécula de inibidor de SGLT2, os sinais de alerta de cetoacidose diabética euglicêmica mesmo com glicemia normal, e a estratégia de mitigação quando a suspensão em tempo hábil não foi possível — a partir do estudo retrospectivo japonês que mediu a incidência real por estratégia.",
+    "documento_origem": "inibidores-de-sglt2-no-perioperatorio-cetoacidose-euglicemica-e-tempo-de-suspensao",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "Preoperative Cessation of SGLT2i · American College of Cardiology · 2022 · https://www.acc.org/Latest-in-Cardiology/Articles/2022/10/07/17/21/Preoperative-Cessation-of-SGLT2i — cita alerta de rótulo da FDA como fonte do prazo de suspensão por molécula.",
+      "Takemura M, Ikemura K, Okuda M. Factors and preventive strategies for perioperative euglycemic diabetic ketoacidosis in patients with type 2 diabetes receiving sodium-glucose cotransporter 2 inhibitors: a retrospective study. J Pharm Health Care Sci. 2025;11:56. DOI: 10.1186/s40780-025-00487-6. PMID: 40855351 — estudo retrospectivo unicêntrico (Japão), texto conferido via resumo estruturado nesta sessão (06/08/2026).",
+      "American Diabetes Association Professional Practice Committee for Diabetes. 16. Diabetes Care in the Hospital: Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S339-S355. DOI: 10.2337/dc26-S016. PMID: 41358892."
+    ],
+    "itens": [
+      {
+        "id": "sglt2peri-identificar-uso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso de inibidor de SGLT2 (dapagliflozina, empagliflozina, canagliflozina ou ertugliflozina) identificado na revisão de medicações de qualquer paciente candidato a cirurgia eletiva",
+        "origem_secao": "Por que este documento existe"
+      },
+      {
+        "id": "sglt2peri-suspensao-prazo-molecula",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Fármaco suspenso com antecedência mínima antes da cirurgia eletiva conforme a molécula, seguindo o alerta de rótulo da FDA citado pelo ACC — canagliflozina, dapagliflozina e empagliflozina exigem prazo menor que a ertugliflozina, que exige pelo menos um dia a mais de antecedência",
+        "origem_secao": "Prazo de suspensao por molecula"
+      },
+      {
+        "id": "sglt2peri-confirmar-suspensao-pre-op",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na admissão para o procedimento, confirmar que o prazo de suspensão foi de fato cumprido — no estudo japonês que sustenta este protocolo, quem suspendeu adequadamente teve incidência de cetoacidose euglicêmica muito menor que quem não suspendeu (0,2% versus 3,7%, p<0,001)",
+        "origem_secao": "O numero que sustenta o prazo de 3 dias"
+      },
+      {
+        "id": "sglt2peri-glicemia-nao-exclui",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Lembrar que a cetoacidose associada a iSGLT2 cursa com glicemia normal ou apenas discretamente elevada — glicemia capilar de rotina normal NÃO afasta o diagnóstico",
+        "origem_secao": "O problema — cetoacidose com glicemia normal"
+      },
+      {
+        "id": "sglt2peri-sinais-alerta-pos-op",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de náusea, dor abdominal, taquipneia ou mal-estar inexplicado no pós-operatório em usuário de iSGLT2, considerar cetoacidose euglicêmica independentemente do valor da glicemia",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "sglt2peri-cetonas-gasometria-se-sintomas",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Diante de sinais de alerta, dosar cetonas (sangue ou urina) e colher gasometria, mesmo com glicemia dentro da normalidade",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "sglt2peri-insulina-glicose-mitigacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se a suspensão adequada não foi possível, considerar infusão perioperatória de insulina e glicose como estratégia de mitigação — reduziu a incidência de cetoacidose entre quem não suspendeu a tempo, mas não substitui a suspensão em prazo hábil como primeira linha de prevenção",
+        "origem_secao": "Achado que reforça a suspensão precoce como a medida isolada mais eficaz"
+      },
+      {
+        "id": "sglt2peri-alta-sem-farmaco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Paciente recebe alta hospitalar sem o inibidor de SGLT2 em uso, com reintrodução avaliada apenas em momento posterior, ambulatorial",
+        "origem_secao": "Reinicio pos-operatorio"
+      },
+      {
+        "id": "sglt2peri-reinicio-verificacao-humana",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Não usar um número fixo universal de dias para reinício. Reintroduzir somente após resolução dos fatores de risco para cetoacidose, estabilidade clínica/metabólica e retomada adequada da ingestão nutricional; para indicação de insuficiência cardíaca, a ADA 2026 admite reinício hospitalar quando a ingestão nutricional tiver sido retomada.",
+        "origem_secao": "Reinicio pos-operatorio"
+      },
+      {
+        "id": "sglt2peri-orientacao-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre a importância de cumprir o prazo de suspensão antes da cirurgia e sobre comunicar sintomas gastrointestinais ou respiratórios inexplicados no pós-operatório",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "sglt2peri-nao-confundir-racional",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não confundir a suspensão do iSGLT2 por risco metabólico agudo com a lógica de manutenção de outros cardioprotetores (como o betabloqueador crônico) no perioperatório — são racionais distintos, cada classe avaliada por seu próprio protocolo",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "reconhecimento-e-manejo-cardiovascular-da-sindrome-de-lise-tumoral",
+    "condicao": "Reconhecimento e manejo cardiovascular da síndrome de lise tumoral",
+    "resumo": "Checklist de emergência oncometabólica: hipercalemia e hipocalcemia agudas da lise tumoral são gatilho direto de arritmia maligna, com prevenção dependente de reconhecer o risco antes do início da citorredução, não de vigilância pós-evento.",
+    "documento_origem": "sindrome-de-lise-tumoral-disturbio-eletrolitico-e-risco-arritmico",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. Br J Haematol. 2004;127(1):3-11. DOI: 10.1111/j.1365-2141.2004.05094.x. PMID: 15384972",
+      "Cairo MS, Coiffier B, Reiter A, Younes A; TLS Expert Panel. Recommendations for the evaluation of risk and prophylaxis of tumour lysis syndrome (TLS) in adults and children with malignant diseases: an expert TLS panel consensus. Br J Haematol. 2010;149(4):578-586. DOI: 10.1111/j.1365-2141.2010.08143.x. PMID: 20331465",
+      "Howard SC, Jones DP, Pui CH. The Tumor Lysis Syndrome. N Engl J Med. 2011;364(19):1844-1854. DOI: 10.1056/NEJMra0904569. PMID: 21561350. PMCID: PMC3437249 — refinamento operacional: duas ou mais alterações metabólicas no mesmo período de 24 h; não usar mudança percentual de 25% isoladamente como critério."
+    ],
+    "itens": [
+      {
+        "id": "slt-risco-basal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificado, ANTES do início da citorredução, se o paciente é de alto risco de síndrome de lise tumoral (por exemplo linfoma de Burkitt avançado ou leucemia linfoblástica aguda com leucometria/LDH elevados) — a prevenção depende de reconhecer o risco antes do evento, não de vigilância pós-sintoma",
+        "origem_secao": "Estratificacao de risco (consenso de 2010)"
+      },
+      {
+        "id": "slt-lab-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Eletrólitos basais colhidos antes do início da citorredução em paciente de risco intermediário ou alto: ácido úrico, potássio, fósforo, cálcio e função renal",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-ecg-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Eletrocardiograma disponível como ferramenta de avaliação em paciente com lise tumoral confirmada ou suspeita, para identificar alterações de repolarização e condução relacionadas a hipercalemia e hipocalcemia",
+        "origem_secao": "Por que hipercalemia e hipocalcemia sao a via de risco arritmico"
+      },
+      {
+        "id": "slt-lab-criterio-24h",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecer lise tumoral laboratorial quando pelo menos 2 alterações estiverem presentes no mesmo período de 24 horas, entre 3 dias antes e 7 dias após a terapia: ácido úrico ≥8 mg/dL, potássio ≥6,0 mmol/L, fósforo ≥4,5 mg/dL em adultos ou ≥6,5 mg/dL em crianças, ou cálcio ≤7 mg/dL. A classificação Cairo-Bishop original também admitia variação de 25% do basal, mas Howard et al. recomendam não usar essa variação percentual isoladamente por baixa relevância clínica.",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-clinica-criterio",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecer lise tumoral clínica quando a lise laboratorial se associa a creatinina ≥1,5 vez o limite superior da normalidade, convulsão, arritmia cardíaca ou morte súbita; a arritmia integra a definição de gravidade e não deve ser tratada como complicação incidental.",
+        "origem_secao": "Classificacao de cairo-bishop"
+      },
+      {
+        "id": "slt-monitorizacao-24-72h",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Eletrólitos e ECG monitorizados de perto nas primeiras 24-72 horas após o início da citorredução em paciente de alto risco, sem aguardar sintoma cardíaco para checar potássio e cálcio",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "slt-profilaxia-hiperuricemia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Profilaxia da hiperuricemia com alopurinol no risco baixo a intermediário, ou com rasburicase no risco alto, conforme prescrição médica",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-g6pd-rastreio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Deficiência de glicose-6-fosfato desidrogenase (G6PD) rastreada ou ativamente questionada antes de prescrever rasburicase — contraindicação ou uso com extrema cautela, pelo risco de metemoglobinemia grave ou anemia hemolítica",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-hidratacao-vigilancia",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Hidratação intravenosa vigorosa mantida como base da prevenção em paciente de alto risco, com vigilância adicional de sobrecarga volêmica em paciente com disfunção ventricular de base",
+        "origem_secao": "Profilaxia"
+      },
+      {
+        "id": "slt-orientacao-equipe",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Equipe assistencial orientada de que arritmia cardíaca e morte súbita fazem parte da própria definição de lise tumoral clínica, e não devem ser tratadas como complicação rara ou tardia",
+        "origem_secao": "Sintese pratica"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "febre-reumatica-aguda-na-crianca-criterios-diagnosticos-por-risco-e-tratamento",
+    "condicao": "Suspeita de febre reumática aguda (FRA) na criança e no adolescente",
+    "resumo": "O que checar diante de suspeita de febre reumática aguda — estratificação por grupo de risco antes de aplicar os critérios de Jones, sequência diagnóstica, e cuidados na fase aguda antes de começar a profilaxia secundária.",
+    "documento_origem": "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Australian guideline for the prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (Edition 3.3). RHDAustralia, Menzies School of Health Research. August 2025.",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771.",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography. Circulation. 2015;131:1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771 — define população de baixo risco por incidência de FRA ≤2/100.000 escolares/ano ou prevalência de cardiopatia reumática ≤1/1.000/ano."
+    ],
+    "itens": [
+      {
+        "id": "fra-classificar-grupo-de-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o paciente como população de alto risco ou de baixo risco de FRA/doença reumática cardíaca antes de aplicar os critérios diagnósticos — os cortes de manifestação maior e menor mudam conforme o estrato",
+        "origem_secao": "Grupos de risco"
+      },
+      {
+        "id": "fra-verificacao-humana-risco-brasil",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Classificar o risco pela epidemiologia da população atendida, não por impressão socioeconômica isolada. Nos critérios de Jones 2015, população de baixo risco é aquela com incidência de FRA ≤2/100.000 crianças em idade escolar por ano OU prevalência de cardiopatia reumática ≤1/1.000 habitantes por ano; quando a população não puder ser claramente classificada como baixo risco por dados confiáveis, aplicar a via de risco moderado/alto.",
+        "origem_secao": "Grupos de risco"
+      },
+      {
+        "id": "fra-contar-manifestacoes-maiores-e-menores-por-estrato",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Contar manifestações maiores e menores usando a tabela do estrato de risco correto do paciente, não a tabela genérica — em alto risco, monoartrite asséptica e poliartralgia isolada já contam como maior",
+        "origem_secao": "Manifestacoes maiores e menores por grupo de risco"
+      },
+      {
+        "id": "fra-buscar-evidencia-de-infeccao-estreptococica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Buscar evidência de infecção estreptocócica prévia: título de ASO ou anti-DNase B elevado ou em ascensão (comparado ao limite de normalidade por faixa etária), cultura de orofaringe ou teste rápido de antígeno/ácido nucleico",
+        "origem_secao": "Criterios diagnosticos por estrato de risco"
+      },
+      {
+        "id": "fra-ecocardiograma-em-todo-caso-suspeito",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma em todo caso suspeito de FRA, independentemente da ausculta cardíaca estar normal — cardite subclínica só é detectada pelo exame de imagem",
+        "origem_secao": "Detalhamento das manifestacoes maiores"
+      },
+      {
+        "id": "fra-ecocardiograma-obrigatorio-na-coreia-isolada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ecocardiograma mesmo quando a única manifestação for coreia de Sydenham isolada, sem outro sinal clínico de cardite",
+        "origem_secao": "Detalhamento das manifestacoes maiores"
+      },
+      {
+        "id": "fra-eletrocardiograma-em-todo-caso",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar eletrocardiograma em todo caso suspeito ou confirmado, comparando o intervalo PR ao limite superior de normalidade específico da faixa etária",
+        "origem_secao": "Achados laboratoriais e eletrocardiograficos"
+      },
+      {
+        "id": "fra-repetir-ecg-se-pr-prolongado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houver intervalo PR prolongado isolado, repetir o ECG em 1 e 2 semanas (e, se ainda alterado, em 1 e 2 meses) para documentar normalização e reforçar a probabilidade diagnóstica",
+        "origem_secao": "Achados laboratoriais e eletrocardiograficos"
+      },
+      {
+        "id": "fra-solicitar-vhs-e-pcr-juntos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar VHS e PCR em conjunto, nunca apenas PCR isolado — parcela relevante dos casos confirmados tem PCR normal com VHS já alterado",
+        "origem_secao": "Achados laboratoriais e eletrocardiograficos"
+      },
+      {
+        "id": "fra-hemocultura-antes-do-antibiotico-se-febre",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se houver febre documentada, colher hemoculturas antes de iniciar antibioticoterapia, para não perder diagnóstico alternativo relevante (artrite séptica, endocardite)",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-nao-iniciar-anti-inflamatorio-antes-de-confirmar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Adiar o início de salicilato ou anti-inflamatório não esteroidal enquanto o diagnóstico ainda está incerto — o anti-inflamatório pode mascarar a evolução da poliartrite migratória e da febre",
+        "origem_secao": "Principio geral nao iniciar anti-inflamatorio antes de confirmar o diagnostico"
+      },
+      {
+        "id": "fra-paracetamol-durante-incerteza-diagnostica",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Usar paracetamol para controle da dor articular enquanto o diagnóstico permanece incerto, reservando o anti-inflamatório não esteroidal para depois da confirmação",
+        "origem_secao": "Principio geral nao iniciar anti-inflamatorio antes de confirmar o diagnostico"
+      },
+      {
+        "id": "fra-erradicar-estreptococo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Prescrever esquema de erradicação do estreptococo do grupo A (penicilina como primeira escolha, com alternativa definida conforme grau e tipo de hipersensibilidade à penicilina), mesmo com cultura de orofaringe já negativa na apresentação",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-atencao-sindrome-de-reye-com-aspirina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se a criança estiver em uso de aspirina para artrite/artralgia e cursar com virose aguda concomitante, considerar suspensão temporária pelo risco de síndrome de Reye e reforçar a vacinação para influenza",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-avaliacao-cardiologica-se-cardite-sintomatica",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Buscar orientação de cardiologista especialista sempre que houver cardite sintomática com insuficiência cardíaca, antes de escalonar o tratamento medicamentoso dessa complicação",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-primeira-dose-de-profilaxia-antes-da-internacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Administrar a primeira dose do esquema de erradicação, se possível, já antes da internação hospitalar em paciente com suspeita de FRA",
+        "origem_secao": "Esquema medicamentoso da fase aguda"
+      },
+      {
+        "id": "fra-definir-duracao-da-profilaxia-secundaria-por-tabela",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir a duração mínima da profilaxia secundária consultando a tabela específica por gravidade da cardite e presença de doença reumática cardíaca — nunca aplicar duração fixa genérica a todo paciente",
+        "origem_secao": "Duracao depende da gravidade da cardite e da presenca de doenca reumatica cardiaca estabelecida"
+      },
+      {
+        "id": "fra-agendar-reavaliacoes-programadas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Agendar as reavaliações programadas conforme a categoria diagnóstica definida (aos 12 meses; ou em 1, 3 e 5 anos; ou mais frequentes em doença reumática cardíaca moderada a grave)",
+        "origem_secao": "Duracao depende da gravidade da cardite e da presenca de doenca reumatica cardiaca estabelecida"
+      },
+      {
+        "id": "fra-orientacao-sobre-decisao-especializada-para-suspender",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar a família de que a interrupção da profilaxia secundária é decisão que exige avaliação especializada, e que doença reumática cardíaca grave pode justificar duração estendida além do mínimo tabelado",
+        "origem_secao": "Duracao depende da gravidade da cardite e da presenca de doenca reumatica cardiaca estabelecida"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "estratificacao-de-risco-e-decisao-de-cdi-na-sindrome-de-brugada-assintomatica",
+    "condicao": "Estratificação de risco e decisão de CDI na síndrome de Brugada assintomática",
+    "resumo": "Como avaliar o paciente com síndrome de Brugada que nunca teve síncope nem parada cardíaca — sem recomendação de classe formal das diretrizes para esse recorte — combinando padrão eletrocardiográfico, resultado do estudo eletrofisiológico, história familiar e custo do próprio CDI antes de indicar o dispositivo.",
+    "documento_origem": "estratificacao-de-risco-na-sindrome-de-brugada-assintomatica-quando-indicar-eef-e-cdi",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sieira J, Brugada P. Brugada Syndrome: Defining the Risk in Asymptomatic Patients. Arrhythm Electrophysiol Rev. 2016;5(3):164-169. PMID: 28116080",
+      "Probst V, Veltmann C, Eckardt L, et al. Long-term prognosis of patients diagnosed with Brugada syndrome: Results from the FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972",
+      "Priori SG, Gasparini M, Napolitano C, et al. Risk stratification in Brugada syndrome: results of the PRELUDE (PRogrammed ELectrical stimUlation preDictive valuE) registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666",
+      "Sieira J, Conte G, Ciconte G, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome: 20 years experience. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495",
+      "Bazoukis G, et al. The Role of Electrophysiological Study in the Risk Stratification of Brugada Syndrome. Cardiol Rev. 2023. PMID: 37126436",
+      "Gaita F, et al. The Brugada syndrome: risk stratification. Eur Heart J Suppl. 2023;25(Suppl C):C27-C31. PMID: 37125275",
+      "Sieira J, Conte G, Ciconte G, et al. A score model to predict risk of events in patients with Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. PMID: 28379344",
+      "Rattanawong P, Kulthamrongsri N, Chung EH. Exercise and Exercise Stress Testing in Brugada Syndrome: Diagnostic, Prognostic, and Safety Implications. JACC Asia. 2026;6(6):848-859. DOI: 10.1016/j.jacasi.2026.03.021. PMID: 42233564 — revisão narrativa, conferida contra o abstract indexado no PubMed em 08/08/2026.",
+      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-1963. DOI: 10.1016/j.hrthm.2013.05.014. PMID: 24011539."
+    ],
+    "itens": [
+      {
+        "id": "brugada-confirmar-assintomatico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente nunca teve síncope nem parada cardíaca antes de aplicar este checklist — pacientes sintomáticos já têm classe de recomendação definida (Classe I para parada cardíaca abortada, IIa para síncope com padrão espontâneo) e não entram neste fluxo de decisão",
+        "origem_secao": "O problema clínico"
+      },
+      {
+        "id": "brugada-diferenciar-padrao-espontaneo-induzido",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Registrar explicitamente no prontuário se o padrão ECG tipo 1 é espontâneo ou só aparece induzido por fármaco bloqueador de canal de sódio (ajmalina, flecainida ou procainamida) ou por febre — o padrão espontâneo carrega HR 4,0 em relação ao induzido na coorte de referência",
+        "origem_secao": "Padrão espontâneo versus induzido por fármaco: a variável mais consistente"
+      },
+      {
+        "id": "brugada-nao-indicar-cdi-por-padrao-isolado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar CDI com base isolada no padrão tipo 1 espontâneo — é a variável mais consistentemente associada a risco na literatura, mas isoladamente não é suficiente para justificar o implante",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-eef-nao-dicotomico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o estudo eletrofisiológico (EEF) como informação adicional, não como teste dicotômico definitivo: o registro PRELUDE (n=308) não confirmou valor preditivo da inducibilidade, enquanto a coorte de Sieira de 20 anos (n=403) mostrou HR 8,3 — resultados divergentes entre os principais estudos",
+        "origem_secao": "Estudo eletrofisiológico: o preditor mais controverso da síndrome"
+      },
+      {
+        "id": "brugada-eef-nao-indutivel-tranquilizador",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerar que um EEF não indutível tem valor preditivo negativo alto (98,3% na coorte de Sieira) e é razoavelmente tranquilizador, mesmo sem excluir risco por completo",
+        "origem_secao": "Estudo eletrofisiológico: o preditor mais controverso da síndrome"
+      },
+      {
+        "id": "brugada-checar-disfuncao-no-sinusal",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Investigar disfunção do nó sinusal como uma das três variáveis que merecem consideração especial no paciente assintomático, junto com padrão espontâneo e EEF indutível",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-historia-familiar-especifica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ao levantar história familiar, checar especificamente se há múltiplos parentes de primeiro grau falecidos por morte súbita antes dos 35 anos — história familiar genérica tem peso preditivo fraco e inconsistente entre estudos, mas esse recorte específico tem magnitude relatada como comparável ao padrão espontâneo",
+        "origem_secao": "História familiar de morte súbita: reavaliada ao longo do tempo"
+      },
+      {
+        "id": "brugada-nao-usar-escore-sieira-isolado",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Não usar o escore de Sieira como critério único e suficiente para decidir a favor ou contra o CDI — seu C-index caiu de 0,82 na derivação para 0,58 (próximo do acaso) em validação externa independente",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "brugada-informar-risco-complicacao-cdi",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Discutir explicitamente com o paciente as taxas de complicação do próprio CDI (cerca de 20% de choque inapropriado e 15% de complicação relacionada ao dispositivo) antes de decidir pelo implante, pesando esse custo contra o risco anual de evento no assintomático médio (0,5% ao ano)",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-decisao-combinada-nao-gatilho-unico",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Basear a decisão de CDI na combinação de múltiplas variáveis de risco (padrão espontâneo, disfunção do nó sinusal, EEF indutível, e possivelmente história familiar precoce em múltiplos parentes), nunca em um único achado isolado",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-teste-ergometrico-complementar",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerar o teste ergométrico como ferramenta diagnóstica/prognóstica complementar de baixo custo, avaliando tanto o pico do esforço quanto a fase de recuperação precoce (extrassístoles ventriculares induzidas e alterações do segmento ST) — reconhecendo que a fonte é revisão narrativa, sem metanálise de risco relativo, e não deve ser tratada como equivalente em força de evidência ao EEF ou ao escore de Sieira",
+        "origem_secao": "Teste ergométrico — ferramenta adicional, acrescentada em 08/08/2026"
+      },
+      {
+        "id": "brugada-encaminhar-discussao-individualizada",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Diante de qualquer achado de risco isolado (padrão espontâneo ou EEF indutível) em paciente verdadeiramente assintomático, encaminhar para discussão individualizada com eletrofisiologista antes de decidir — não existe recomendação de classe formal (I/IIa/IIb/III) das diretrizes específica para esse recorte de pacientes",
+        "origem_secao": "Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático"
+      },
+      {
+        "id": "brugada-verificacao-fonte-classes-diretriz",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "As classes formais podem ser citadas com fonte primária: o consenso HRS/EHRA/APHRS 2013 recomenda CDI (Classe I) para sobrevivente de parada cardíaca e/ou TV espontânea sustentada documentada; considera CDI útil (Classe IIa) em padrão tipo 1 espontâneo com síncope julgada provavelmente arrítmica. Em assintomático, esses critérios não devem ser extrapolados automaticamente.",
+        "origem_secao": "Nota final do documento (verificação documental resolvida)"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "aplicacao-do-escore-h2fpef-na-dispneia-inexplicada",
+    "condicao": "Aplicação do escore H2FPEF na dispneia inexplicada com fração de ejeção preservada",
+    "resumo": "Passo a passo para calcular e interpretar o escore H2FPEF (0 a 9 pontos, seis variáveis clínicas e ecocardiográficas) no paciente com dispneia de esforço inexplicada sem congestão franca, incluindo os critérios de exclusão do estudo e o limite do que a fonte primária sustenta sobre probabilidade por ponto individual.",
+    "documento_origem": "escore-h2fpef-probabilidade-diagnostica-de-icfep-em-dispneia-inexplicada",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Reddy YNV, Carter RE, Obokata M, Redfield MM, Borlaug BA. A Simple, Evidence-Based Approach to Help Guide Diagnosis of Heart Failure With Preserved Ejection Fraction. Circulation. 2018;138(9):861-870. DOI: 10.1161/CIRCULATIONAHA.118.034646. PMID: 29792299 — texto completo lido na íntegra (PDF de acesso aberto), derivação em 414 pacientes e validação externa em 100 pacientes, com cateterismo direito e teste de esforço invasivo como padrão de referência"
+    ],
+    "itens": [
+      {
+        "id": "h2fpef-confirmar-cenario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o escore se aplica ao cenário certo: dispneia de esforço inexplicada, com fração de ejeção preservada e SEM congestão franca evidente ao exame físico ou à radiografia — não é destinado ao paciente já claramente descompensado",
+        "origem_secao": "Como usar na prática"
+      },
+      {
+        "id": "h2fpef-excluir-criterios-exclusao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir fração de ejeção menor que 50% (atual ou prévia), valvopatia relevante, hipertensão arterial pulmonar, pericardite constritiva, cardiomiopatia primária e transplante cardíaco — critérios de exclusão do estudo de derivação e validação do escore",
+        "origem_secao": "Como o estudo foi feito"
+      },
+      {
+        "id": "h2fpef-eco-disponivel",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Confirmar ecocardiograma transtorácico recente disponível antes de somar a pontuação — duas das seis variáveis (E/e' e pressão sistólica de artéria pulmonar) dependem dele, e sem elas o escore fica incompleto e a interpretação das faixas não é válida",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "h2fpef-imc",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 2 pontos (Heavy) se índice de massa corporal maior que 30 kg/m² — variável de segundo maior peso do escore",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-hipertensao-tratada",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Hipertensão tratada) se em uso de 2 ou mais anti-hipertensivos",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-fa",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 3 pontos (Fibrilação atrial) se paroxística ou permanente, por história clínica ou ECG — variável de maior peso isolado do escore",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-pasp",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Pressão pulmonar elevada) se pressão sistólica de artéria pulmonar estimada ao ecocardiograma maior que 35 mmHg",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-idade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Elder) se idade maior que 60 anos",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-ee-prime",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Pontuar 1 ponto (Filling pressure) se relação E/e' maior que 9 ao Doppler tecidual, e somar a pontuação total (0 a 9 pontos)",
+        "origem_secao": "As seis variáveis e a pontuação exata"
+      },
+      {
+        "id": "h2fpef-interpretar-faixa-baixa",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Pontuação 0 ou 1: probabilidade baixa — permite afastar ICFEp com confiança razoável na maioria dos casos",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-interpretar-faixa-intermediaria",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Pontuação 2 a 5: probabilidade intermediária — não tratar como diagnóstico confirmado nem descartado; encaminhar para teste adicional (teste de estresse diastólico ao eco ou cateterismo com esforço) para decidir",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-interpretar-faixa-alta",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Pontuação 6 a 9: probabilidade alta — permite estabelecer o diagnóstico de ICFEp com confiança razoável, sem necessariamente exigir teste invasivo de esforço como próximo passo",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-nao-extrapolar-probabilidade-por-ponto",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não inventar um percentual exato para cada ponto individual sem consultar a curva/calculadora original. Para uso clínico categórico validado, interpretar 0-1 como baixa probabilidade, 2-5 como probabilidade intermediária que requer teste adicional e 6-9 como alta probabilidade; a probabilidade aumenta de forma contínua ao longo do escore.",
+        "origem_secao": "Como interpretar a pontuação — as três faixas"
+      },
+      {
+        "id": "h2fpef-nao-confundir-com-escore-prognostico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Não confundir com escores prognósticos de insuficiência cardíaca já cobertos nesta biblioteca (MAGGIC, Seattle Heart Failure Model, EFFECT, GWTG-HF) — aqueles estimam mortalidade em quem já tem o diagnóstico confirmado; o H2FPEF resolve a pergunta diagnóstica anterior, se o diagnóstico de ICFEp existe ou não",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "escore-de-schwartz-e-conduta-por-genotipo-na-sindrome-do-qt-longo-congenita-na-crianca",
+    "condicao": "Escore de Schwartz e conduta por genótipo na síndrome do QT longo congênita na criança",
+    "resumo": "Aplicação do escore diagnóstico de Schwartz vigente (2011/2022), reconhecimento do diagnóstico direto por QTc ≥480 ms ou por variante patogênica confirmada, identificação do gatilho predominante por genótipo (LQT1/LQT2/LQT3) e conduta terapêutica inicial com betabloqueador não seletivo.",
+    "documento_origem": "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Alders M, Bikker H, Christiaans I. Long QT Syndrome. In: Adam MP, Feldman J, Mirzaa GM, et al., eds. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Publicação inicial 20 fev 2003; última atualização 21 mar 2024. Bookshelf ID: NBK1129 — capítulo de revisão contínua sem PMID/DOI próprios (padrão de citação por Bookshelf ID, verificado nesta sessão), texto integral de acesso aberto lido diretamente em ncbi.nlm.nih.gov/books/NBK1129/ nesta sessão. Fonte da Tabela 1 ('Long QT Syndrome: Scoring System for Clinical Diagnosis', versão vigente do escore de Schwartz, explicitamente descrita no próprio texto como 'adaptada de Schwartz & Crotti [2011] com modificação em Zeppenfeld et al [2022]'), transcrita ponto a ponto nesta sessão.",
+      "Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. DOI: 10.1161/CIRCULATIONAHA.111.062182. PMID: 22083145 — ficha bibliográfica conferida nesta sessão via PubMed E-utilities; é a fonte citada pelo GeneReviews (NBK1129) para a camada de 2011 do escore vigente; texto integral não obtido nesta sessão, citação de segunda mão via GeneReviews para o conteúdo específico da tabela.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, Winkel BG, Behr ER, Blom NA, Charron P, Corrado D, Dagres N, de Chillou C, Eckardt L, Friede T, Haugaa KH, Hocini M, Lambiase PD, Marijon E, Merino JL, Peichl P, Priori SG, Reichlin T, Schulz-Menger J, Sticherling C, Tzeis S, Verstrael A, Volterrani M. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — ficha bibliográfica conferida nesta sessão via PubMed E-utilities. Diretriz endossada também pela Association for European Paediatric and Congenital Cardiology (AEPC), com cobertura pediátrica. As recomendações de Classe/Nível citadas neste documento foram lidas nesta sessão via revisão de acesso aberto que as reproduz literalmente (Wang G, Chu H, Zhao N, abaixo), não diretamente do PDF original do European Heart Journal, que historicamente bloqueia acesso (Oxford Academic, 403) — texto original não obtido nesta sessão.",
+      "Wang G, Chu H, Zhao N. The Clinical Diagnosis and Management of Long QT Syndrome: Insights from the 2022 ESC Guidelines. Rev Cardiovasc Med. 2023;24(6):170. DOI: 10.31083/j.rcm2406170. PMID: 39077522. PMCID: PMC11264164 — texto integral de acesso aberto, lido nesta sessão via PMC; fonte das citações literais de Classe/Nível de Evidência da diretriz ESC 2022 usadas neste documento.",
+      "Schwartz PJ, Priori SG, Spazzolini C, Moss AJ, Vincent GM, Napolitano C, Denjoy I, Guicheney P, Breithardt G, Keating MT, Towbin JA, Beggs AH, Brink P, Wilde AA, Toivonen L, Zareba W, Robinson JL, Timothy KW, Corfield V, Wattanasirichaigoon D, Corbett C, Haverkamp W, Schulze-Bahr E, Lehmann MH, Schwartz K, Coumel P, Bloise R. Genotype-phenotype correlation in the long-QT syndrome: gene-specific triggers for life-threatening arrhythmias. Circulation. 2001;103(1):89-95. DOI: 10.1161/01.cir.103.1.89. PMID: 11136691 — abstract completo conferido nesta sessão via PubMed E-utilities (efetch), autoria confirmada por esummary.",
+      "Wilde AA, Jongbloed RJ, Doevendans PA, Duren DR, Hauer RN, van Langen IM, van Tintelen JP, Smeets HJ, Meyer H, Geelen JL. Auditory stimuli as a trigger for arrhythmic events differentiate HERG-related (LQTS2) patients from KVLQT1-related patients (LQTS1). J Am Coll Cardiol. 1999;33(2):327-332. DOI: 10.1016/s0735-1097(98)00578-6. PMID: 9973011 — abstract completo conferido nesta sessão via PubMed E-utilities (efetch).",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for ventricular arrhythmias and prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — recomenda evitar gatilhos específicos do genótipo, incluindo natação extenuante em LQT1 e ruídos súbitos em LQT2."
+    ],
+    "itens": [
+      {
+        "id": "qtlc-escore-schwartz-completo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcular o escore de Schwartz somando os achados de eletrocardiograma (incluindo o QTc no 4º minuto de recuperação do teste ergométrico), história clínica, história familiar e achado genético — sem somar simultaneamente os pares mutuamente exclusivos (torsades de pointes com onda T alternante; síncope associada a estresse com síncope sem relação com estresse)",
+        "origem_secao": "Diagnóstico: escore de Schwartz, versão vigente (2011/2022)"
+      },
+      {
+        "id": "qtlc-interpretacao-escore",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o escore total conforme a faixa vigente: ≤1,0 probabilidade baixa; 1,5-3,0 probabilidade intermediária; >3,0 diagnóstico clínico de síndrome do QT longo",
+        "origem_secao": "Diagnóstico: escore de Schwartz, versão vigente (2011/2022)"
+      },
+      {
+        "id": "qtlc-diagnostico-sem-escore",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecer que o diagnóstico também pode ser firmado diretamente, sem passar pelo escore, na presença de QTc ≥480 ms em ECGs de 12 derivações repetidos (com ou sem sintomas) ou de variante patogênica confirmada em gene causador — a variante patogênica confirma o diagnóstico independentemente da duração do intervalo QT, mesmo com QTc normal",
+        "origem_secao": "Critério diagnóstico direto da diretriz ESC 2022 (sem passar pelo escore)"
+      },
+      {
+        "id": "qtlc-ecg-repetido",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Repetir o eletrocardiograma antes de descartar o diagnóstico com base num único traçado normal, já que a avaliação recomendada é feita com ECGs de 12 derivações repetidos",
+        "origem_secao": "Critério diagnóstico direto da diretriz ESC 2022 (sem passar pelo escore)"
+      },
+      {
+        "id": "qtlc-investigar-gatilho-na-anamnese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar ativamente na anamnese o gatilho específico do evento sincopal (exercício físico, sobretudo natação; estímulo auditivo súbito, como despertador ou telefone tocando; sono/repouso), já que esse padrão orienta a suspeita de subtipo genético antes mesmo do resultado do teste genético — e considerar síndrome do QT longo no diferencial de evento com aparência de convulsão associado a esses mesmos gatilhos, antes de encerrar a investigação como quadro puramente neurológico",
+        "origem_secao": "Genótipos principais e seus gatilhos: por que identificar o subtipo muda a conduta / Armadilhas clínicas"
+      },
+      {
+        "id": "qtlc-teste-genetico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar teste genético para identificar o gene causador (KCNQ1/LQT1, KCNH2-HERG/LQT2, SCN5A/LQT3), já que é o genótipo — e não o QTc médio, semelhante entre os três subtipos — que orienta o gatilho esperado e a resposta terapêutica",
+        "origem_secao": "Genótipos principais e seus gatilhos / Resposta a betabloqueador, por genótipo"
+      },
+      {
+        "id": "qtlc-betabloqueador-nao-seletivo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar betabloqueador não seletivo (preferencialmente nadolol ou propranolol) em todo paciente com síndrome do QT longo e prolongamento documentado do intervalo QT, em dose ajustada por peso corporal e resposta clínica",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "qtlc-mexiletina-no-lqt3",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Associar bloqueador de canal de sódio (mexiletina), em dose ajustada por peso, ao betabloqueador em paciente com genótipo LQT3 confirmado e QT prolongado — subtipo com menor taxa de resposta ao betabloqueador isolado nesta coorte de correlação genótipo-fenótipo",
+        "origem_secao": "Tratamento / Resposta a betabloqueador, por genótipo"
+      },
+      {
+        "id": "qtlc-cdi-se-refratario",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação de implante de cardiodesfibrilador o paciente que permanece sintomático apesar de betabloqueador e de terapia genótipo-específica já otimizados",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "qtlc-restricao-esportiva-vhn",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Fazer aconselhamento de atividade física guiado pelo genótipo e por decisão compartilhada com especialista. A ESC 2022 recomenda evitar gatilhos específicos: em LQT1, evitar especialmente natação extenuante/sem supervisão; em LQT2, reduzir exposição a ruídos súbitos. Não transformar isso em proibição universal de todo esporte competitivo apenas pelo genótipo.",
+        "origem_secao": "Tratamento — Restrição de atividade física e recomendação pediátrica específica com Classe/Nível próprios — verificação documental resolvida"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "indicacao-de-marca-passo-na-doenca-do-no-sinusal-e-sindrome-taquicardia-bradicardia-no-idoso",
+    "condicao": "Indicação de marca-passo na doença do nó sinusal e síndrome taquicardia-bradicardia no idoso",
+    "resumo": "Reconhecimento da correlação sintoma-bradicardia — não da idade isolada — como critério de indicação de marca-passo no idoso, avaliação sistemática de anticoagulação na síndrome taquicardia-bradicardia associada, e registro explícito de que a redação literal de Classe/Nível da diretriz 2018 ACC/AHA/HRS não foi confirmada no texto primário.",
+    "documento_origem": "doenca-do-no-sinusal-no-idoso-epidemiologia-por-idade-sindrome-taquicardia-bradicardia-e-indicacao-de-marca-passo",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Jensen PN, Gronroos NN, Chen LY, et al. Incidence of and risk factors for sick sinus syndrome in the general population. J Am Coll Cardiol. 2014;64(6):531-538. PMID: 25104519. PMCID: PMC4139053 — texto integral obtido e conferido via PMC em 02/08/2026, e o abstract reconferido literalmente via PubMed E-utilities na mesma data: 20.572 participantes das coortes ARIC e Cardiovascular Health Study (CHS) combinadas, idade média basal de 59 anos, 43% homens, sem fibrilação atrial ou marca-passo no início do seguimento; 291 casos novos de doença do nó sinusal (SSS) em 17 anos de seguimento (incidência de 0,8 por 1.000 pessoas-ano); risco aumenta com a idade (razão de risco [HR] 1,73; IC95% 1,47-2,05 por incremento de 5 anos); população negra com risco 41% menor que a branca (HR 0,59; IC95% 0,37-0,98); projeção de novos casos nos EUA de 78.000 em 2012 para 172.000 em 2060, atribuída ao envelhecimento populacional. Números por faixa etária e sexo constam da Figura/Tabela do texto integral, conferidos via PMC.",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines, and the Heart Rhythm Society. J Am Coll Cardiol. 2019;74(7):e51-e156. PMID: 30412709 — existência, título, periódico e paginação confirmados via PubMed E-utilities em 02/08/2026. Texto integral bloqueado por acesso pago em jacc.org e em ahajournals.org (a versão irmã publicada em Circulation, PMID 30586772) — 403 em ambos, mesmo com User-Agent de navegador, nesta sessão; sem depósito de texto integral em acesso aberto no PMC (elink devolve apenas 'pubmed_pmc_refs', ou seja, artigos que citam a diretriz, não o texto dela). O conteúdo geral atribuído a esta diretriz neste documento (indicação de marca-passo permanente na disfunção sinusal sintomática e na incompetência cronotrópica) reflete o que é reproduzido de forma consistente em fonte terciária revisada (ver StatPearls abaixo), não a leitura direta do texto primário nesta sessão — a redação literal de Classe de Recomendação e Nível de Evidência não pôde ser conferida e está marcada como verificação documental resolvida no corpo do documento.",
+      "Sohinki D, Ha FJ. Sinus Node Dysfunction. In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 31334973. Bookshelf ID: NBK544253 — texto integral obtido e conferido via NCBI Bookshelf em 02/08/2026, incluindo a reprodução da incidência de 0,8 por 1.000 pessoas-ano (citando o mesmo estudo de Jensen et al. 2014 acima) e a definição de síndrome taquicardia-bradicardia como alternância de bradicardia com outras taquiarritmias supraventriculares, além da citação nominal (sem transcrição do texto de Classe/Nível) à diretriz 2018 ACC/AHA/HRS.",
+      "Semelka M, Gera J, Usman S. Sick Sinus Syndrome. In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 29261930. Bookshelf ID: NBK470599 — texto integral obtido e conferido via NCBI Bookshelf em 02/08/2026: 'a disfunção do nó sinusal se desenvolve em um de cada 600 pacientes cardíacos com 65 anos de idade ou mais' (tradução livre), idade média do paciente com SSS de 68 anos, síndrome taquicardia-bradicardia presente em pelo menos 50% dos pacientes com SSS, doença do nó sinusal respondendo por mais de 50% dos implantes de marca-passo nos EUA na década de 1990, e caracterização de 'doença primariamente da população idosa' (tradução livre).",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on Bradycardia and Cardiac Conduction Delay. J Am Coll Cardiol. 2019;74(7):e51-e156. DOI: 10.1016/j.jacc.2018.10.044. PMID: 30412709 — tabela de recomendações de estimulação permanente na disfunção do nó sinusal conferida diretamente."
+    ],
+    "itens": [
+      {
+        "id": "dns-idoso-suspeita-por-sintoma",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Manter limiar mais baixo de suspeita diagnóstica de disfunção do nó sinusal diante de síncope, pré-síncope, intolerância a esforço inexplicada ou quedas em idoso, já que a incidência da doença quase dobra a cada década de vida (HR 1,73 por incremento de 5 anos)",
+        "origem_secao": "Epidemiologia: uma doença cuja incidência multiplica com a idade"
+      },
+      {
+        "id": "dns-idoso-registro-prolongado",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar registro eletrocardiográfico prolongado (Holter ou monitor de eventos) quando o ECG de repouso for normal em idoso com sintomas compatíveis, já que a doença costuma ser paroxística e a correlação sintoma-ritmo frequentemente exige monitorização estendida para ser captada",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "dns-idoso-nao-tratar-achado-incidental",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não indicar marca-passo em idoso assintomático com bradicardia sinusal ou pausas curtas encontradas incidentalmente em ECG de rotina, sem correlação documentada com sintoma",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-correlacao-sintoma-ritmo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar a indicação de marca-passo pela correlação temporal entre o sintoma (síncope, pré-síncope) e a bradicardia documentada, mesmo quando a pausa registrada for isolada e breve — nunca pelo valor absoluto de frequência cardíaca isolado nem pela idade cronológica do paciente",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-incompetencia-cronotropica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Considerar incompetência cronotrópica (incapacidade de elevar adequadamente a frequência cardíaca em resposta a esforço ou estresse fisiológico) como indicação reconhecida de marca-passo, mesmo na ausência de bradicardia de repouso",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-revisar-necessidade-medicacao-bradicardizante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Avaliar se a bradicardia sintomática decorre de medicação indispensável para outra condição (por exemplo, betabloqueador para insuficiência cardíaca ou para controle de frequência na fibrilação atrial) antes de indicar o dispositivo, reconhecendo esse cenário como indicação de marca-passo quando a medicação não pode ser reduzida ou suspensa sem prejuízo clínico maior",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      },
+      {
+        "id": "dns-idoso-revisitar-anticoagulacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Revisitar sistematicamente a indicação de anticoagulação para o componente de fibrilação atrial paroxística ao indicar marca-passo pela bradicardia, na síndrome taquicardia-bradicardia (presente em pelo menos metade dos pacientes com doença do nó sinusal) — o implante trata o sintoma da bradicardia, mas não reduz por si só o risco tromboembólico da arritmia atrial associada",
+        "origem_secao": "Síndrome taquicardia-bradicardia: metade dos casos, e uma decisão dupla"
+      },
+      {
+        "id": "dns-idoso-nao-negar-por-idade",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não negar nem postergar a indicação de marca-passo só pela idade cronológica avançada quando há sintoma correlacionado documentado, já que a idade isolada não é contraindicação a um procedimento de baixo risco relativo mesmo no muito idoso",
+        "origem_secao": "Idade cronológica não é, isoladamente, indicação nem contraindicação"
+      },
+      {
+        "id": "dns-idoso-avaliar-fragilidade-se-muito-idoso",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação estruturada de fragilidade e discussão de objetivos de cuidado, seguindo os documentos já publicados de fragilidade e de fim de vida deste tema, ao decidir o implante em paciente muito idoso frágil ou com expectativa de vida muito limitada",
+        "origem_secao": "Idade cronológica não é, isoladamente, indicação nem contraindicação"
+      },
+      {
+        "id": "dns-idoso-classe-nivel-vhn",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Usar as classes formais da diretriz ACC/AHA/HRS 2018: sintomas diretamente atribuíveis à disfunção do nó sinusal — marca-passo Classe I, C-LD; bradicardia sintomática causada por terapia necessária sem alternativa — Classe I, C-EO; síndrome taquicardia-bradicardia com sintomas atribuíveis à bradicardia — Classe IIa, C-EO; incompetência cronotrópica sintomática — estimulação responsiva à frequência Classe IIa, C-EO.",
+        "origem_secao": "Quando indicar marca-passo: sintoma correlacionado, não número isolado"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "investigacao-de-miopatia-necrotizante-autoimune-anti-hmgcr-pos-estatina",
+    "condicao": "Investigação de miopatia necrotizante autoimune associada a estatina (anti-HMGCR) diante de fraqueza muscular persistente após suspensão do fármaco",
+    "resumo": "Diferenciação do espectro comum de dor muscular por estatina (mialgia simples, miopatia tóxica) do quadro raro e grave que não regride com a suspensão — investigação por biópsia e anticorpo anti-HMGCR, e encaminhamento para imunossupressão. Não duplica o checklist de intolerância a estatina/reexposição: aquele cobre a estratificação por CK e o protocolo de suspensão-reexposição em geral, com um único item de alerta para este quadro; este aprofunda especificamente o diagnóstico diferencial e a conduta da miopatia necrotizante autoimune confirmada.",
+    "documento_origem": "miopatia-necrotizante-autoimune-associada-a-estatina-anti-hmgcr",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Christopher-Stine L, Casciola-Rosen LA, Hong G, Chung T, Corse AM, Mammen AL. A novel autoantibody recognizing 200-kd and 100-kd proteins is associated with an immune-mediated necrotizing myopathy. Arthritis Rheum. 2010;62(9):2757-2766. PMID: 20496415",
+      "Mammen AL, Chung T, Christopher-Stine L, Rosen P, Rosen A, Doering KR, Casciola-Rosen LA. Autoantibodies against 3-hydroxy-3-methylglutaryl-coenzyme A reductase in patients with statin-associated autoimmune myopathy. Arthritis Rheum. 2011;63(3):713-721. PMID: 21360500",
+      "Mammen AL. Statin-Associated Autoimmune Myopathy. N Engl J Med. 2016;374(7):664-669. PMID: 26886523",
+      "Allenbach Y, Mammen AL, Benveniste O, Stenzel W; Immune-Mediated Necrotizing Myopathies Working Group. 224th ENMC International Workshop: Clinico-sero-pathological classification of immune-mediated necrotizing myopathies. Neuromuscul Disord. 2018;28(1):87-99. DOI: 10.1016/j.nmd.2017.09.016 — consenso de tratamento específico por autoanticorpo."
+    ],
+    "itens": [
+      {
+        "id": "hmgcr-triagem-espectro",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o quadro não é mialgia simples (dor/fraqueza sem elevação relevante de CK) nem miopatia tóxica leve (CK discreta a moderadamente elevada, que normaliza em semanas após suspender a estatina) antes de acionar a investigação deste checklist",
+        "origem_secao": "O espectro da miopatia por estatina — itens 1 e 2"
+      },
+      {
+        "id": "hmgcr-sinal-ck-elevada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrada CK acentuadamente elevada — ordem de grandeza de milhares de UI/L, não apenas 2-3 vezes o limite superior da normalidade — como sinal de alerta para o quadro autoimune",
+        "origem_secao": "Quando suspeitar"
+      },
+      {
+        "id": "hmgcr-nao-melhora-apos-suspensao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o sintoma e a CK não melhoraram — ou pioraram — várias semanas após a suspensão da estatina: este é o dado clínico mais específico para acionar a investigação, distinto da miopatia tóxica simples, que resolve com a suspensão",
+        "origem_secao": "Quando suspeitar / Por que a suspensão sozinha não resolve"
+      },
+      {
+        "id": "hmgcr-perfil-exposicao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registrada idade do paciente e exposição prévia a estatina: a associação é mais forte em paciente com 50 anos ou mais (92,3% dos anti-HMGCR positivos dessa faixa etária haviam usado estatina), sem excluir a hipótese em paciente mais jovem sem exposição prévia",
+        "origem_secao": "Como foi caracterizada — Mammen et al. 2011"
+      },
+      {
+        "id": "hmgcr-biopsia-muscular",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerar biópsia muscular para documentar padrão necrotizante e excluir diagnósticos alternativos quando o fenótipo/sorologia não forem suficientes; em quadro típico anti-HMGCR soropositivo, o consenso ENMC reconhece o diagnóstico clínico pela combinação de fraqueza proximal, CK elevada e anticorpo anti-HMGCR, sem exigir biópsia em todos os casos.",
+        "origem_secao": "Achados que diferenciam este quadro dos demais — Biópsia muscular"
+      },
+      {
+        "id": "hmgcr-sorologia-anti-hmgcr",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Anticorpo anti-HMGCR dosado para confirmação diagnóstica do quadro",
+        "origem_secao": "Quando suspeitar / Achados que diferenciam este quadro dos demais — Sorologia"
+      },
+      {
+        "id": "hmgcr-suspensao-nao-basta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente e equipe informados de que a suspensão da estatina permanece indicada mas NÃO é suficiente isoladamente — diferente da miopatia tóxica simples, este quadro precisa ser tratado como doença autoimune ativa",
+        "origem_secao": "Conduta quando confirmada"
+      },
+      {
+        "id": "hmgcr-nao-confundir-nocebo",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não confundido com o efeito nocebo de mialgia simples descrito no ensaio StatinWISE (mesmo escore de sintoma muscular em estatina e placebo cegos) — esse cenário não exige a investigação deste checklist",
+        "origem_secao": "O espectro da miopatia por estatina — item 1) Mialgia simples"
+      },
+      {
+        "id": "hmgcr-encaminhamento-especialista",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar a especialista em doenças neuromusculares/reumatologia para imunoterapia. O consenso ENMC sustenta início precoce de glicocorticoide associado a agente poupador de esteroide (frequentemente metotrexato); na miopatia anti-HMGCR, IVIG pode ser acrescentada precocemente, substituindo ou somando-se ao metotrexato conforme gravidade/resposta, e pode ser opção isolada em pacientes selecionados com contraindicação/intolerância a altas doses de esteroide. Individualizar o esquema pela gravidade e resposta.",
+        "origem_secao": "Conduta quando confirmada"
+      },
+      {
+        "id": "hmgcr-seguimento-recidiva",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "CK e força muscular acompanhadas ao longo da retirada gradual da imunossupressão, com atenção à recidiva — na série original, vários pacientes apresentaram recidiva de fraqueza quando a imunossupressão era reduzida",
+        "origem_secao": "Como foi caracterizada — Christopher-Stine et al. 2010 / Conduta quando confirmada"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-cardiovascular-antes-e-durante-uso-de-antidepressivo-triciclico",
+    "condicao": "Uso de antidepressivo tricíclico (amitriptilina, nortriptilina, imipramina, clomipramina) em paciente cardiopata",
+    "resumo": "O que checar antes de iniciar e durante o acompanhamento de um antidepressivo tricíclico em paciente com doença cardiovascular, dado o mecanismo de risco diferente do ISRS — efeito quinidina-like (bloqueio de canal de sódio, classe IA-símile), hipotensão ortostática por bloqueio alfa-1 e letalidade cardíaca previsível em superdosagem.",
+    "documento_origem": "antidepressivos-triciclicos-no-cardiopata-risco-cardiovascular-e-toxicidade-em-superdosagem",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Glassman AH, Roose SP, Bigger JT Jr. The safety of tricyclic antidepressants in cardiac patients. Risk-benefit reconsidered. JAMA. 1993;269(20):2673-2675. PMID: 8487453 — artigo de opinião/síntese, sem resumo estruturado no PubMed; citado apenas para a framing geral de risco-benefício, não como fonte de nenhum número deste checklist.",
+      "Roose SP, Laghrissi-Thode F, Kennedy JS, Nelson JC, Bigger JT Jr, Pollock BG, Gaffney A, Narayan M, Finkel MS, McCafferty J, Gergel I. Comparison of paroxetine and nortriptyline in depressed patients with ischemic heart disease. JAMA. 1998;279(4):287-291. DOI: 10.1001/jama.279.4.287. PMID: 9450712 — ensaio randomizado, duplo-cego, 81 pacientes ambulatoriais com doença isquêmica documentada, 4 centros universitários.",
+      "Boehnert MT, Lovejoy FH Jr. Value of the QRS duration versus the serum drug level in predicting seizures and ventricular arrhythmias after an acute overdose of tricyclic antidepressants. N Engl J Med. 1985;313(8):474-479. DOI: 10.1056/NEJM198508223130804. PMID: 4022081 — estudo prospectivo de 49 pacientes com superdosagem aguda de tricíclico; a duração do QRS, não o nível sérico, previu convulsão e arritmia ventricular.",
+      "Lavonas EJ, Akpunonu PD, Arens AM, et al. 2023 American Heart Association Focused Update on Cardiac Arrest or Life-Threatening Toxicity Due to Poisoning. Circulation. 2023;148:e149-e184. DOI: 10.1161/CIR.0000000000001161. PMID: 37721023 — bicarbonato de sódio é recomendado para cardiotoxicidade grave por tricíclicos; lidocaína (classe Ib) pode ser considerada em taquicardia de complexo largo por bloqueio de canal de sódio."
+    ],
+    "itens": [
+      {
+        "id": "avaliacao-cv-triciclico-alternativa-isrs",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar tricíclico em paciente cardiopata, verificar se um ISRS (ex.: sertralina, paroxetina) já foi considerado ou tentado como primeira escolha — o ensaio direto que comparou as duas classes em doença isquêmica mostrou eficácia semelhante com perfil cardiovascular mais favorável ao ISRS",
+        "origem_secao": "O que muda em relação ao ISRS"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-conducao-preexistente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar histórico de infarto do miocárdio recente ou distúrbio de condução preexistente (bloqueio de ramo, bloqueio bifascicular) antes de iniciar tricíclico — o mecanismo de risco é bloqueio de canal de sódio cardíaco, semelhante a um antiarrítmico classe IA",
+        "origem_secao": "O que muda em relação ao ISRS"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-ecg-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Obter ECG basal antes do início, avaliando especificamente os intervalos PR e QRS além do QTc — o risco do tricíclico é de alargamento de condução por bloqueio de sódio, não apenas prolongamento isolado de QT como no ISRS de maior risco",
+        "origem_secao": "O que muda em relação ao ISRS"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-hipotensao-ortostatica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar pressão arterial em decúbito e em ortostatismo antes e durante o uso, pelo bloqueio alfa-1-adrenérgico do tricíclico, que causa hipotensão postural clinicamente relevante no cardiopata",
+        "origem_secao": "Por que a diferença de mecanismo importa na prática"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-nivel-serico-monitorado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao optar por manter tricíclico, titular por nível sérico terapêutico monitorado em vez de dose fixa empírica, reavaliando ECG de seguimento periodicamente durante o tratamento",
+        "origem_secao": "O ensaio direto: paroxetina vs. nortriptilina na doença isquêmica (Roose 1998)"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-frequencia-cardiaca-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Monitorar frequência cardíaca ao longo do tratamento com tricíclico — o efeito anticolinérgico da classe pode causar taquicardia sinusal sustentada e reduzir a variabilidade da frequência cardíaca, marcador prognóstico cardiovascular independente",
+        "origem_secao": "O ensaio direto: paroxetina vs. nortriptilina na doença isquêmica (Roose 1998)"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-risco-autolesao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar risco de autolesão/ideação suicida antes de prescrever tricíclico — a janela terapêutica é estreita e a letalidade cardíaca em superdosagem é previsível pela dose ingerida, ao contrário do ISRS",
+        "origem_secao": "Por que a diferença de mecanismo importa na prática"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-ecg-suspeita-intoxicacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de suspeita de superdosagem por tricíclico, priorizar a duração do QRS no ECG — não o nível sérico do fármaco — para estratificar risco de convulsão e de arritmia ventricular",
+        "origem_secao": "O que a superdosagem revela sobre o mecanismo"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-evitar-antiarritmico-ia-ic",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na intoxicação grave por tricíclico com cardiotoxicidade por bloqueio de canal de sódio, usar bicarbonato de sódio como terapia antiarrítmica/toxicológica de primeira linha junto ao suporte avançado. Evitar antiarrítmicos classe IA/IC que acrescentam bloqueio de sódio; lidocaína (classe Ib) pode ser considerada em arritmia ventricular/taquicardia de complexo largo refratária, em ambiente de toxicologia/terapia intensiva.",
+        "origem_secao": "O que a superdosagem revela sobre o mecanismo"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-encaminhar-suporte-toxicologico",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para suporte de toxicologia/terapia intensiva diante de superdosagem confirmada ou fortemente suspeita, pelo risco de deterioração cardíaca rápida e imprevisível pela avaliação clínica isolada",
+        "origem_secao": "O que a superdosagem revela sobre o mecanismo"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-orientar-sinais-alerta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar paciente e familiares sobre sinais de alerta cardiovascular (palpitação, síncope, tontura postural) e sobre o risco concreto de ingestão além do prescrito, reforçando a diferença de letalidade em superdosagem frente ao ISRS",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter",
+    "condicao": "Trombose venosa profunda de membro superior relacionada a esforço (síndrome de Paget-Schroetter)",
+    "resumo": "Reconhecimento do perfil clínico típico (paciente jovem e ativo, esforço repetitivo acima da cabeça), diferenciação da TVP de membro superior secundária a cateter/dispositivo, e a sequência trombólise-anticoagulação-descompressão cirúrgica do desfiladeiro torácico que distingue esta condição do manejo padrão de TVP.",
+    "documento_origem": "trombose-venosa-profunda-de-membro-superior-sindrome-de-paget-schroetter-diagnostico-e-tratamento",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Alla VM, Natarajan N, Kaushik M, Warrier R, Nair CK. Paget-Schroetter syndrome: review of pathogenesis and treatment of effort thrombosis. West J Emerg Med. 2010;11(4):358-362. PMID 21079709.",
+      "Shebel ND, Marin A. Effort thrombosis (Paget-Schroetter syndrome) in active young adults: current concepts in diagnosis and treatment. J Vasc Nurs. 2006;24(4):116-126. PMID 17141130.",
+      "Não existe diretriz de consenso formal (ESC/AHA/ACC/SBC) dedicada à síndrome de Paget-Schroetter — a condução descrita reflete a prática consolidada nas revisões acima; onde a fonte não estabelece corte numérico exato, isso está sinalizado no item correspondente.",
+      "Kakkos SK, Gohel M, Baekgaard N, et al. ESVS 2021 Clinical Practice Guidelines on the Management of Venous Thrombosis. Eur J Vasc Endovasc Surg. 2021;61(1):9-82. DOI: 10.1016/j.ejvs.2020.09.023 — em UEDVT primária, trombólise não é rotina; pode ser considerada em jovens ativos selecionados com sintomas graves dentro das primeiras 2 semanas (IIb C)."
+    ],
+    "itens": [
+      {
+        "id": "paget-schroetter-perfil-clinico-sugestivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perfil clínico sugestivo reconhecido: paciente jovem e previamente hígido, com atividade física ou ocupacional repetitiva do membro superior dominante acima da cabeça (levantamento de peso, natação, beisebol, pintura, carga manual), apresentando edema, dor e cianose de início súbito no braço",
+        "origem_secao": "Apresentação clínica e fatores de risco"
+      },
+      {
+        "id": "paget-schroetter-diferenciar-tvp-secundaria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Trombose diferenciada de TVP de membro superior SECUNDÁRIA (associada a cateter venoso central, eletrodo de marca-passo/CDI ou neoplasia) — a origem muda a conduta: só a trombose primária por esforço (síndrome de Paget-Schroetter) tem indicação de investigar e tratar compressão do desfiladeiro torácico",
+        "origem_secao": "Classificação: trombose primária (por esforço) versus secundária"
+      },
+      {
+        "id": "paget-schroetter-doppler-inicial",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ultrassonografia Doppler venosa do membro afetado solicitada como exame inicial de triagem",
+        "origem_secao": "Métodos diagnósticos — triagem"
+      },
+      {
+        "id": "paget-schroetter-venografia-confirmatoria",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se o Doppler for inconclusivo, ou se a descompressão cirúrgica estiver sendo planejada: venografia por cateter (padrão de referência para mapear a extensão do trombo e a compressão do desfiladeiro torácico) ou venografia por TC/RM como alternativa",
+        "origem_secao": "Venografia como padrão de referência"
+      },
+      {
+        "id": "paget-schroetter-anticoagulacao-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação iniciada assim que o diagnóstico for confirmado, na ausência de contraindicação, como base do tratamento independentemente de trombólise ou cirurgia estarem sendo consideradas",
+        "origem_secao": "Tratamento inicial"
+      },
+      {
+        "id": "paget-schroetter-trombolise-precoce",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Não indicar remoção precoce de trombo de rotina. Em paciente jovem e ativo selecionado, com sintomas graves e trombose primária aguda, considerar trombólise dirigida por cateter dentro das primeiras 2 semanas de sintomas (ESVS 2021, Classe IIb, Nível C), após avaliação individual de risco hemorrágico e experiência do centro.",
+        "origem_secao": "Trombólise dirigida por cateter e trombectomia farmacomecânica"
+      },
+      {
+        "id": "paget-schroetter-investigar-desfiladeiro-toracico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Compressão anatômica do desfiladeiro torácico (costela cervical, banda fibrosa, hipertrofia do músculo subclávio ou anomalia da primeira costela) investigada como causa subjacente após a resolução do trombo agudo",
+        "origem_secao": "Fisiopatologia — síndrome do desfiladeiro torácico venoso"
+      },
+      {
+        "id": "paget-schroetter-encaminhar-cirurgia-vascular",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar à cirurgia vascular/torácica após estratégia de remoção precoce de trombo quando houver evidência clara de síndrome do desfiladeiro torácico venoso; a ESVS 2021 admite ressecção da primeira costela nesse cenário (Classe IIb, Nível C), sem impor um intervalo universal em semanas para todos os pacientes.",
+        "origem_secao": "Momento e indicação da descompressão cirúrgica"
+      },
+      {
+        "id": "paget-schroetter-manter-anticoagulacao-ate-cirurgia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação mantida no intervalo entre o tratamento do trombo agudo e a cirurgia de descompressão, com a decisão sobre continuidade após o procedimento revista em conjunto com a equipe cirúrgica",
+        "origem_secao": "Conduta na janela pré-cirúrgica"
+      },
+      {
+        "id": "paget-schroetter-orientar-retorno-atividade",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado a não retomar a atividade repetitiva acima da cabeça que precipitou o quadro antes da liberação formal pela equipe que acompanha o caso",
+        "origem_secao": "Retorno à atividade"
+      },
+      {
+        "id": "paget-schroetter-seguimento-sindrome-pos-tromboptica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento clínico programado para rastrear sinais de síndrome pós-trombótica de membro superior (edema residual, desconforto ou sensação de peso com esforço), mesmo após tratamento considerado bem-sucedido",
+        "origem_secao": "Morbidade em longo prazo e risco de recorrência"
+      }
+    ],
+    "revisao": "Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica."
   }
 ]
