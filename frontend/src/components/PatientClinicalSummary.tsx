@@ -16,7 +16,9 @@ export default function PatientClinicalSummary({patientId,currentEncounterId}:{p
   const [itens,setItens]=useState<Item[]>([]),[kind,setKind]=useState<Kind>("problema"),[name,setName]=useState(""),[details,setDetails]=useState(""),[erro,setErro]=useState("");
   const [timelineRevision,setTimelineRevision]=useState(0);
   const carregar=()=>api.get<Item[]>(`/pacientes/${patientId}/resumo-clinico`).then(setItens).catch(e=>setErro(e.message));
-  useEffect(()=>{carregar();},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{
+    setItens([]);setKind("problema");setName("");setDetails("");setErro("");setTimelineRevision(0);carregar();
+  },[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function adicionar(){
     const n=name.trim();if(!n)return;setErro("");
