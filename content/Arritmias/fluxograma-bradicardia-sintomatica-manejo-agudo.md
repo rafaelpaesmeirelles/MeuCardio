@@ -3,93 +3,93 @@ title: "Fluxograma: Bradicardia sintomática — manejo agudo da instabilidade"
 slug: fluxograma-bradicardia-sintomatica-manejo-agudo
 theme: "Arritmias"
 kind: fluxograma
-summary: "Árvore de decisão da conduta imediata na bradicardia sintomática: a instabilidade hemodinâmica decide se há tempo para só observar, o padrão eletrocardiográfico decide se vale a pena tentar atropina, e a resposta ao tratamento decide entre marca-passo transcutâneo, droga cronotrópica em infusão e marca-passo transvenoso temporário."
+summary: "Árvore de decisão para bradicardia adulta com pulso baseada na repercussão clínica: reconhecer comprometimento cardiopulmonar, tratar causas reversíveis, usar atropina quando apropriado e escalar para estimulação transcutânea, agonista adrenérgico e/ou marca-passo transvenoso temporário quando a instabilidade persiste."
 review_status: revisado
-source_refs: ["Second-Degree Atrioventricular Block · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK482359/", "Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/", "Adult Bradycardia With a Pulse Algorithm · American Heart Association, atualização 2020 · https://cpr.heart.org/-/media/cpr-files/cpr-guidelines-files/algorithms/algorithmacls_bradycardia_200612.pdf — PDF original não extraível em texto; conteúdo (sinais de instabilidade, dose de atropina, marca-passo transcutâneo, dopamina 5-20mcg/kg/min, adrenalina 2-10mcg/min) conferido via resumo em ACLS-Algorithms.com em 03/08/2026", "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy · European Heart Journal · 2021 · 42(35):3427-3520 · DOI: 10.1093/eurheartj/ehab364 · PMID: 34455430"]
+source_refs: ["Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376 · https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support", "American Heart Association. Adult Bradycardia With a Pulse Algorithm. 2025 · https://www.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Bradycardia-250514.pdf", "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. European Heart Journal. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430"]
 ---
 
 # Fluxograma: Bradicardia sintomática — manejo agudo da instabilidade
 
-Este fluxograma cobre a **conduta imediata** diante de bradicardia com sintoma ou
-sinal atribuível a ela — do reconhecimento da instabilidade até a estabilização
-com marca-passo transcutâneo, droga cronotrópica ou marca-passo transvenoso
-temporário. Não é o fluxograma de indicação de marca-passo **definitivo** (esse
-já existe, em Dispositivos) nem cobre a tempestade elétrica de TV/FV do
-documento-fonte, que é um mecanismo diferente (taquiarritmia ventricular
-recorrente, não bradicardia).
+Este fluxograma cobre a **avaliação e estabilização imediata do adulto com bradicardia e pulso**. O algoritmo AHA 2025 orienta interpretar a frequência no contexto clínico — bradicardia pode ser fisiológica em pessoas saudáveis, atletas ou durante o sono — e priorizar a presença de **comprometimento cardiopulmonar atribuível à bradicardia**, não um número isolado de frequência cardíaca.
+
+A indicação de marca-passo **definitivo** exige investigação própria da doença do nó sinusal ou do sistema de condução e não deve ser inferida deste fluxo agudo.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Bradicardia (FC baixa) com sintoma<br/>ou sinal atribuível a ela"]
-  D1{"Sinais de instabilidade?<br/>(hipotensão, alteração aguda de consciência,<br/>sinais de choque, isquemia miocárdica,<br/>congestão aguda)"}
-  C1(["Sem tratamento imediato da frequência:<br/>monitorização contínua,<br/>investigar e tratar a causa, reavaliar"])
-  D2{"ECG sugere bloqueio infra-nodal?<br/>(Mobitz II, BAV 2:1 infra-hissiano<br/>ou BAVT com QRS largo)"}
-  P1["Marca-passo transcutâneo imediato,<br/>sem aguardar resposta a droga"]
-  D3{"Captura elétrica e mecânica eficaz,<br/>estabilidade restaurada?"}
-  C2(["Manter marca-passo transcutâneo com<br/>analgesia/sedação; providenciar marca-passo<br/>transvenoso temporário sem demora"])
-  C3(["Associar dopamina 5-20mcg/kg/min ou<br/>adrenalina 2-10mcg/min em infusão;<br/>marca-passo transvenoso temporário de urgência"])
-  P2["Atropina 0,5-1mg IV,<br/>repetir a cada 3-5min até 3mg"]
-  D4{"Resposta adequada de FC<br/>e reversão da instabilidade?"}
-  C4(["Manter vigilância, tratar a causa de base<br/>e reavaliar se a bradicardia recorrer"])
-  P3["Marca-passo transcutâneo e/ou<br/>dopamina/adrenalina em infusão, como ponte"]
-  C5(["Marca-passo transvenoso temporário indicado —<br/>refratário a droga cronotrópica IV (Classe I, ESC 2021)"])
+  R0["Bradicardia com pulso<br/>clinicamente relevante<br/>(AHA: tipicamente FC <50/min quando bradiarritmia)"]
+  D1{"Há comprometimento cardiopulmonar<br/>atribuível à bradicardia?<br/>Hipotensão, alteração mental aguda,<br/>choque, desconforto torácico isquêmico<br/>ou insuficiência cardíaca aguda"}
+  S0(["Sem comprometimento:<br/>suporte ABC conforme necessidade,<br/>considerar oxigênio se indicado,<br/>ECG de 12 derivações, observar,<br/>identificar e tratar causa reversível"])
+  S1["Com comprometimento:<br/>via aérea e ventilação conforme necessidade,<br/>monitorização cardiorrespiratória e pulso,<br/>tratar causas reversíveis em paralelo"]
+  A1["Atropina 1 mg IV<br/>repetir a cada 3-5 min<br/>até dose total máxima de 3 mg"]
+  D2{"Bradicardia e comprometimento<br/>persistem após atropina?"}
+  S2(["Resposta clínica adequada:<br/>monitorizar, obter ECG de 12 derivações,<br/>corrigir causa e reavaliar recorrência"])
+  E1["Marca-passo transcutâneo e/ou<br/>dopamina 5-20 mcg/kg/min IV<br/>ou adrenalina 2-10 mcg/min IV"]
+  D3{"Instabilidade persiste<br/>apesar da terapia inicial?"}
+  S3(["Consulta especializada urgente;<br/>considerar marca-passo transvenoso temporário<br/>enquanto a causa é corrigida ou se define<br/>tratamento definitivo"])
+  S4(["Manter monitorização e tratamento<br/>da etiologia; confirmar captura elétrica<br/>e mecânica se houver estimulação"])
+  H1(["Exceção AHA 2025:<br/>em BAV de alto grau com instabilidade<br/>e sem acesso IV/IO disponível,<br/>estimulação imediata pode ser considerada"])
 
   R0 --> D1
-  D1 -->|"Não"| C1
-  D1 -->|"Sim"| D2
-  D2 -->|"Sim — atropina<br/>provavelmente ineficaz"| P1
-  P1 --> D3
-  D3 -->|"Sim"| C2
-  D3 -->|"Não"| C3
-  D2 -->|"Não — bloqueio provavelmente<br/>nodal/supra-hissiano"| P2
-  P2 --> D4
-  D4 -->|"Sim"| C4
-  D4 -->|"Não — refratário à atropina"| P3
-  P3 --> C5
+  D1 -->|"Não"| S0
+  D1 -->|"Sim"| S1
+  S1 --> A1
+  A1 --> D2
+  D2 -->|"Não"| S2
+  D2 -->|"Sim"| E1
+  E1 --> D3
+  D3 -->|"Sim"| S3
+  D3 -->|"Não"| S4
+  S1 -. "BAV de alto grau + sem acesso IV/IO" .-> H1
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5 conduta;
+  class S0,S2,S3,S4,H1 conduta;
 ```
 
-## Por que o ECG decide antes da atropina
+## O que muda na versão AHA 2025
 
-A atropina bloqueia o tônus vagal sobre o nó sinusal e o nó atrioventricular —
-mecanismo que não alcança um bloqueio **infra-nodal**. No BAV de segundo grau
-Mobitz II e no BAV total com QRS largo, o bloqueio costuma estar abaixo do nó
-AV, fora do alcance desse mecanismo; insistir em atropina nesses casos só atrasa
-o marca-passo transcutâneo, que não deve esperar a resposta à droga.
+### 1. A atropina passa a ser apresentada como 1 mg IV por dose
 
-## O que se repete em todo ramo, fora da árvore
+O algoritmo adulto de 2025 especifica **1 mg IV**, repetível a cada **3–5 minutos**, até **3 mg** de dose total. A formulação antiga “0,5–1 mg” não deve permanecer no fluxo atual.
 
-**Buscar e tratar a causa reversível em paralelo à estabilização** — fármaco
-(betabloqueador, bloqueador de canal de cálcio, digoxina), distúrbio
-eletrolítico, isquemia miocárdica ativa e hipóxia são as causas mais comuns, e
-corrigi-las muda a conduta mesmo depois de escolhido um ramo da árvore.
+### 2. A primeira decisão é clínica, não eletrocardiográfica
 
-**Monitorização contínua** (ECG, oximetria, pressão arterial não invasiva ou
-invasiva conforme gravidade) e **ECG de 12 derivações** assim que possível, sem
-atrasar o tratamento da instabilidade.
+A sequência AHA 2025 pergunta primeiro se existe comprometimento cardiopulmonar: hipotensão, alteração aguda do estado mental, sinais de choque, desconforto torácico isquêmico ou insuficiência cardíaca aguda. O ECG é essencial para definir mecanismo e causa, mas o algoritmo de suporte avançado **não exige um ramo prévio obrigatório de localização nodal versus infra-His antes de tentar atropina**.
 
-**Cautela com atropina em isquemia coronariana ativa**: o aumento de frequência
-cardíaca eleva o consumo miocárdico de oxigênio e pode piorar a isquemia — nesse
-contexto, limitar a dose total a 2-3 mg.
+Bloqueio AV de alto grau, QRS largo e outras evidências de doença de condução continuam importantes porque aumentam a preocupação com progressão e com necessidade de estimulação. Em paciente instável com bloqueio AV de alto grau e sem acesso IV/IO disponível, a AHA 2025 considera que estimulação imediata pode ser realizada enquanto o acesso é obtido (**Classe 2b, nível C-EO**).
 
-**Reavaliação frequente da resposta**, em qualquer ramo — a árvore representa um
-único ciclo de decisão, mas a bradicardia pode recorrer ou o bloqueio pode
-progredir depois de estabilizado.
+### 3. Persistência da instabilidade define a escalada
+
+Na bradicardia aguda com comprometimento hemodinâmico, atropina é considerada razoável (**Classe 2a, nível B-NR**). Se a resposta for inadequada, estimulação transcutânea e/ou agonista adrenérgico com efeito cronotrópico podem ser usados como ponte (**Classe 2b, nível C-LD**). Quando a bradicardia permanece hemodinamicamente instável apesar do tratamento medicamentoso, marca-passo transvenoso temporário é considerado razoável (**Classe 2a, nível C-LD**).
+
+A própria AHA ressalta que a evidência comparando fármacos e estimulação transcutânea é limitada e que os dados sobre marca-passo transvenoso temporário são predominantemente observacionais. Portanto, o fluxograma não apresenta uma modalidade de ponte como universalmente superior à outra.
+
+## Procurar e tratar a causa em paralelo
+
+A estabilização da frequência não substitui a investigação etiológica. Entre causas reversíveis ou tratáveis destacadas pela AHA estão:
+
+- isquemia ou infarto do miocárdio;
+- hipóxia/hipoxemia;
+- distúrbios eletrolíticos, especialmente hipercalemia;
+- alterações metabólicas, hipotermia e hipotireoidismo conforme contexto;
+- medicamentos e toxicidade, incluindo betabloqueadores, bloqueadores de canais de cálcio e digoxina;
+- doença estrutural, infecção e aumento do tônus vagal em cenários apropriados.
+
+Se houver suspeita de intoxicação, hipercalemia, síndrome BRASH ou outra etiologia específica, o tratamento causal deve ocorrer simultaneamente ao suporte da bradicardia.
+
+## Pontos operacionais da estimulação
+
+**Marca-passo transcutâneo** é rápido e não invasivo, mas pode ser doloroso no paciente consciente; analgesia/sedação pode ser necessária quando clinicamente possível. Não basta observar espículas no monitor: deve-se confirmar **captura elétrica e repercussão mecânica/hemodinâmica**.
+
+**Marca-passo transvenoso temporário** é uma ponte, não um procedimento isento de risco. A literatura citada pela AHA inclui principalmente estudos observacionais e reconhece complicações relacionadas ao acesso e ao dispositivo. Sua necessidade deve ser reavaliada quando a causa reversível é corrigida e quando se define a indicação ou não de estimulação permanente.
 
 ## O que este fluxograma não cobre
 
-**Indicação de marca-passo definitivo** — quando o bloqueio documentado justifica
-implante permanente (independente da fase aguda), ver o fluxograma dedicado em
-Dispositivos: *Bradiarritmia — indicação de marcapasso definitivo (ESC 2021)*.
+**Indicação de marca-passo definitivo** — utilizar o fluxo específico de bradiarritmias/doença de condução e as recomendações de estimulação permanente.
 
-**Tempestade elétrica** — no documento-fonte, tempestade elétrica é definida
-como três ou mais episódios de TV sustentada, FV ou choques apropriados de CDI
-em 24 horas: um mecanismo de taquiarritmia ventricular recorrente, não de
-bradicardia, e por isso não tem ramo neste fluxograma.
+**Bradicardia pediátrica** — possui algoritmo próprio AHA/AAP 2025 e não deve ser tratada pela sequência adulta.
 
-**Bradicardia por intoxicação digitálica** tem manejo próprio (anticorpo
-antidigoxina Fab), já coberto em documento dedicado no tema Arritmias.
+**Parada cardíaca** — ausência de pulso muda completamente o algoritmo; este documento pressupõe pulso presente.
+
+**Intoxicações específicas** — digoxina, betabloqueadores, bloqueadores de canal de cálcio e síndrome BRASH têm terapias causais próprias e devem ser conectadas ao fluxo de toxicologia/emergência correspondente.
