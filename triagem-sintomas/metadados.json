@@ -2,248 +2,35 @@
   {
     "slug": "dor-toracica",
     "name": "Dor torácica",
-    "aliases": [
-      "dor no peito",
-      "precordialgia",
-      "angina"
-    ],
-    "areas": [
-      "geral",
-      "cardiogeriatria",
-      "cardiooncologia",
-      "gravidez"
-    ],
+    "aliases": ["dor no peito", "precordialgia", "angina"],
+    "areas": ["geral", "cardiogeriatria", "cardiooncologia", "gravidez"],
     "summary": "Triagem inicial de dor torácica para identificar instabilidade, síndromes coronarianas, doença aórtica, embolia pulmonar, pericardite e causas não cardíacas.",
     "questions": [
-      {
-        "id": "age",
-        "label": "Idade",
-        "type": "number",
-        "required": true,
-        "min": 0,
-        "max": 120,
-        "unit": "anos",
-        "section": "Contexto"
-      },
-      {
-        "id": "ongoing_pain",
-        "label": "A dor está presente neste momento?",
-        "type": "boolean",
-        "required": true,
-        "section": "Apresentação"
-      },
-      {
-        "id": "exertional_or_pressure",
-        "label": "É pressão/aperto ou ocorre com esforço?",
-        "type": "boolean",
-        "required": true,
-        "section": "Apresentação"
-      },
-      {
-        "id": "sudden_maximal",
-        "label": "Início súbito, máximo desde o primeiro instante, com irradiação dorsal?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "dyspnea_or_hypoxemia",
-        "label": "Há dispneia importante, hipóxia ou hemoptise?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "syncope_or_instability",
-        "label": "Há síncope, hipotensão, sudorese intensa ou alteração do estado mental?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "known_cvd",
-        "label": "Há doença coronariana, aórtica, tromboembolismo ou cardiopatia conhecida?",
-        "type": "boolean",
-        "section": "Risco"
-      },
-      {
-        "id": "fever_or_positional",
-        "label": "Há febre ou dor que varia com posição/respiração?",
-        "type": "boolean",
-        "section": "Diagnósticos alternativos"
-      }
+      {"id": "age", "label": "Idade", "type": "number", "required": true, "min": 0, "max": 120, "unit": "anos", "section": "Contexto"},
+      {"id": "ongoing_pain", "label": "A dor está presente neste momento?", "type": "boolean", "required": true, "section": "Apresentação"},
+      {"id": "exertional_or_pressure", "label": "É pressão/aperto ou ocorre com esforço?", "type": "boolean", "required": true, "section": "Apresentação"},
+      {"id": "sudden_maximal", "label": "Início súbito, máximo desde o primeiro instante, com irradiação dorsal?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "dyspnea_or_hypoxemia", "label": "Há dispneia importante, hipóxia ou hemoptise?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "syncope_or_instability", "label": "Há síncope, hipotensão, sudorese intensa ou alteração do estado mental?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "known_cvd", "label": "Há doença coronariana, aórtica, tromboembolismo ou cardiopatia conhecida?", "type": "boolean", "section": "Risco"},
+      {"id": "fever_or_positional", "label": "Há febre ou dor que varia com posição/respiração?", "type": "boolean", "section": "Diagnósticos alternativos"}
     ],
     "rules": [
-      {
-        "id": "instabilidade",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "syncope_or_instability",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Dor torácica com instabilidade hemodinâmica ou síncope"
-          ],
-          "emergency_flow": [
-            "Acionar atendimento imediato, monitorização, ECG e avaliação de causas ameaçadoras"
-          ]
-        }
-      },
-      {
-        "id": "aorta",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "sudden_maximal",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Padrão compatível com síndrome aórtica aguda"
-          ],
-          "suggested_tests": [
-            "ECG, avaliação de pulsos/pressões e imagem da aorta conforme estabilidade e protocolo"
-          ]
-        }
-      },
-      {
-        "id": "embolia",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "dyspnea_or_hypoxemia",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Dispneia, hipóxia ou hemoptise associada exige excluir embolia pulmonar e outras emergências"
-          ],
-          "suggested_tests": [
-            "Oximetria, ECG, radiografia e investigação de tromboembolismo conforme probabilidade clínica"
-          ]
-        }
-      },
-      {
-        "id": "isquemica",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "exertional_or_pressure",
-              "op": "truthy"
-            },
-            {
-              "field": "ongoing_pain",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "supporting": [
-            "Dor em pressão/esforço presente no momento exige avaliação de isquemia"
-          ],
-          "suggested_tests": [
-            "ECG imediato e troponina seriada conforme protocolo"
-          ]
-        }
-      },
-      {
-        "id": "alto-risco",
-        "priority": 60,
-        "when": {
-          "all": [
-            {
-              "field": "known_cvd",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "messages": [
-            "Doença cardiovascular prévia reduz o limiar para investigação rápida"
-          ]
-        }
-      },
-      {
-        "id": "pericardite",
-        "priority": 40,
-        "when": {
-          "all": [
-            {
-              "field": "fever_or_positional",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "suggested_tests": [
-            "ECG, marcadores inflamatórios e ecocardiograma conforme suspeita de pericardite/miocardite"
-          ]
-        }
-      }
+      {"id": "instabilidade", "priority": 100, "when": {"all": [{"field": "syncope_or_instability", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Dor torácica com instabilidade hemodinâmica ou síncope"], "emergency_flow": ["Acionar atendimento imediato, monitorização, ECG e avaliação de causas ameaçadoras"]}},
+      {"id": "aorta", "priority": 100, "when": {"all": [{"field": "sudden_maximal", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Padrão compatível com síndrome aórtica aguda"], "suggested_tests": ["ECG, avaliação de pulsos/pressões e imagem da aorta conforme estabilidade e protocolo"]}},
+      {"id": "embolia", "priority": 95, "when": {"all": [{"field": "dyspnea_or_hypoxemia", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Dispneia, hipóxia ou hemoptise associada exige excluir embolia pulmonar e outras emergências"], "suggested_tests": ["Oximetria, ECG, radiografia e investigação de tromboembolismo conforme probabilidade clínica"]}},
+      {"id": "isquemica", "priority": 80, "when": {"all": [{"field": "exertional_or_pressure", "op": "truthy"}, {"field": "ongoing_pain", "op": "truthy"}]}, "add": {"risk": "urgente", "supporting": ["Dor em pressão/esforço presente no momento exige avaliação de isquemia"], "suggested_tests": ["ECG imediato e troponina seriada conforme protocolo"]}},
+      {"id": "alto-risco", "priority": 60, "when": {"all": [{"field": "known_cvd", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["Doença cardiovascular prévia reduz o limiar para investigação rápida"]}},
+      {"id": "pericardite", "priority": 40, "when": {"all": [{"field": "fever_or_positional", "op": "truthy"}]}, "add": {"suggested_tests": ["ECG, marcadores inflamatórios e ecocardiograma conforme suspeita de pericardite/miocardite"]}}
     ],
-    "default_tests": [
-      "Sinais vitais e oximetria",
-      "ECG quando houver suspeita cardiovascular"
-    ],
-    "differentials": [
-      "Síndrome coronariana aguda",
-      "Síndrome aórtica aguda",
-      "Embolia pulmonar",
-      "Pericardite/miocardite",
-      "Pneumotórax",
-      "Dor musculoesquelética",
-      "Doença gastrointestinal"
-    ],
-    "red_flags": [
-      "Instabilidade",
-      "Dor súbita máxima",
-      "Déficit de pulso ou neurológico",
-      "Hipóxia",
-      "Síncope",
-      "ECG isquêmico"
-    ],
-    "ambulatory_flow": [
-      "Definir características e risco",
-      "Realizar ECG quando indicado",
-      "Encaminhar imediatamente quando houver red flags",
-      "Planejar investigação não invasiva conforme probabilidade e capacidade funcional"
-    ],
-    "emergency_flow": [
-      "Avaliar ABC e monitorizar",
-      "ECG precoce",
-      "Troponina e exames dirigidos",
-      "Ativar protocolos locais de síndrome coronariana, aorta ou tromboembolismo conforme hipótese"
-    ],
-    "tags": [
-      "dor no peito",
-      "angina",
-      "aorta",
-      "embolia",
-      "pericardite"
-    ],
-    "source_refs": [
-      "2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/science-news/2021-aha-acc-ase-chest-saem-scmr-guideline-for-the-evaluation-and-diagnosis-of-chest-pain"
-    ],
+    "default_tests": ["Sinais vitais e oximetria", "ECG quando houver suspeita cardiovascular"],
+    "differentials": ["Síndrome coronariana aguda", "Síndrome aórtica aguda", "Embolia pulmonar", "Pericardite/miocardite", "Pneumotórax", "Dor musculoesquelética", "Doença gastrointestinal"],
+    "red_flags": ["Instabilidade", "Dor súbita máxima", "Déficit de pulso ou neurológico", "Hipóxia", "Síncope", "ECG isquêmico"],
+    "ambulatory_flow": ["Definir características e risco", "Realizar ECG quando indicado", "Encaminhar imediatamente quando houver red flags", "Planejar investigação não invasiva conforme probabilidade e capacidade funcional"],
+    "emergency_flow": ["Avaliar ABC e monitorizar", "ECG precoce", "Troponina e exames dirigidos", "Ativar protocolos locais de síndrome coronariana, aorta ou tromboembolismo conforme hipótese"],
+    "tags": ["dor no peito", "angina", "aorta", "embolia", "pericardite"],
+    "source_refs": ["2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain"],
+    "source_urls": ["https://professional.heart.org/en/science-news/2021-aha-acc-ase-chest-saem-scmr-guideline-for-the-evaluation-and-diagnosis-of-chest-pain"],
     "review_status": "revisado",
     "review_note": "Não reproduz escores proprietários; recomenda protocolo local para decisão definitiva.",
     "version": 1
@@ -251,232 +38,34 @@
   {
     "slug": "dispneia",
     "name": "Dispneia",
-    "aliases": [
-      "falta de ar",
-      "cansaço para respirar",
-      "ortopneia"
-    ],
-    "areas": [
-      "geral",
-      "cardiogeriatria",
-      "cardiooncologia",
-      "gravidez",
-      "cardiopediatria"
-    ],
+    "aliases": ["falta de ar", "cansaço para respirar", "ortopneia"],
+    "areas": ["geral", "cardiogeriatria", "cardiooncologia", "gravidez", "cardiopediatria"],
     "summary": "Triagem de falta de ar para diferenciar insuficiência cardíaca, embolia pulmonar, síndrome coronariana, arritmia, doença pulmonar, anemia e causas metabólicas.",
     "questions": [
-      {
-        "id": "rest_dyspnea",
-        "label": "Há falta de ar em repouso?",
-        "type": "boolean",
-        "required": true,
-        "section": "Gravidade"
-      },
-      {
-        "id": "hypoxemia",
-        "label": "Há saturação baixa, cianose ou uso de musculatura acessória?",
-        "type": "boolean",
-        "required": true,
-        "section": "Gravidade"
-      },
-      {
-        "id": "chest_pain_or_syncope",
-        "label": "Há dor torácica ou síncope?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "orthopnea_edema",
-        "label": "Há ortopneia, dispneia paroxística noturna ou edema?",
-        "type": "boolean",
-        "section": "Congestão"
-      },
-      {
-        "id": "sudden_onset",
-        "label": "O início foi súbito?",
-        "type": "boolean",
-        "section": "Cronologia"
-      },
-      {
-        "id": "fever_cough",
-        "label": "Há febre ou tosse produtiva?",
-        "type": "boolean",
-        "section": "Pulmonar"
-      },
-      {
-        "id": "known_hf_or_cancer",
-        "label": "Há insuficiência cardíaca, câncer ativo ou tromboembolismo prévio?",
-        "type": "boolean",
-        "section": "Risco"
-      }
+      {"id": "rest_dyspnea", "label": "Há falta de ar em repouso?", "type": "boolean", "required": true, "section": "Gravidade"},
+      {"id": "hypoxemia", "label": "Há saturação baixa, cianose ou uso de musculatura acessória?", "type": "boolean", "required": true, "section": "Gravidade"},
+      {"id": "chest_pain_or_syncope", "label": "Há dor torácica ou síncope?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "orthopnea_edema", "label": "Há ortopneia, dispneia paroxística noturna ou edema?", "type": "boolean", "section": "Congestão"},
+      {"id": "sudden_onset", "label": "O início foi súbito?", "type": "boolean", "section": "Cronologia"},
+      {"id": "fever_cough", "label": "Há febre ou tosse produtiva?", "type": "boolean", "section": "Pulmonar"},
+      {"id": "known_hf_or_cancer", "label": "Há insuficiência cardíaca, câncer ativo ou tromboembolismo prévio?", "type": "boolean", "section": "Risco"}
     ],
     "rules": [
-      {
-        "id": "falencia-respiratoria",
-        "priority": 100,
-        "when": {
-          "any": [
-            {
-              "field": "hypoxemia",
-              "op": "truthy"
-            },
-            {
-              "field": "rest_dyspnea",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Dispneia em repouso ou hipoxemia pode representar insuficiência respiratória/cardiovascular aguda"
-          ],
-          "emergency_flow": [
-            "Avaliar ABC, fornecer suporte conforme necessidade e monitorizar"
-          ]
-        }
-      },
-      {
-        "id": "dor-sincope",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "chest_pain_or_syncope",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Dor torácica ou síncope associada aumenta risco de isquemia, embolia ou arritmia"
-          ]
-        }
-      },
-      {
-        "id": "congestao",
-        "priority": 70,
-        "when": {
-          "all": [
-            {
-              "field": "orthopnea_edema",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "supporting": [
-            "Ortopneia e edema sugerem congestão"
-          ],
-          "suggested_tests": [
-            "ECG, radiografia, peptídeo natriurético e ecocardiograma conforme contexto"
-          ]
-        }
-      },
-      {
-        "id": "subita",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "sudden_onset",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Embolia pulmonar",
-            "Pneumotórax",
-            "Edema agudo de pulmão",
-            "Arritmia"
-          ]
-        }
-      },
-      {
-        "id": "infeccao",
-        "priority": 40,
-        "when": {
-          "all": [
-            {
-              "field": "fever_cough",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "suggested_tests": [
-            "Radiografia de tórax e investigação infecciosa conforme gravidade"
-          ]
-        }
-      },
-      {
-        "id": "alto-risco",
-        "priority": 50,
-        "when": {
-          "all": [
-            {
-              "field": "known_hf_or_cancer",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "messages": [
-            "Comorbidade de alto risco exige limiar baixo para avaliação presencial"
-          ]
-        }
-      }
+      {"id": "falencia-respiratoria", "priority": 100, "when": {"any": [{"field": "hypoxemia", "op": "truthy"}, {"field": "rest_dyspnea", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Dispneia em repouso ou hipoxemia pode representar insuficiência respiratória/cardiovascular aguda"], "emergency_flow": ["Avaliar ABC, fornecer suporte conforme necessidade e monitorizar"]}},
+      {"id": "dor-sincope", "priority": 95, "when": {"all": [{"field": "chest_pain_or_syncope", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Dor torácica ou síncope associada aumenta risco de isquemia, embolia ou arritmia"]}},
+      {"id": "congestao", "priority": 70, "when": {"all": [{"field": "orthopnea_edema", "op": "truthy"}]}, "add": {"risk": "urgente", "supporting": ["Ortopneia e edema sugerem congestão"], "suggested_tests": ["ECG, radiografia, peptídeo natriurético e ecocardiograma conforme contexto"]}},
+      {"id": "subita", "priority": 80, "when": {"all": [{"field": "sudden_onset", "op": "truthy"}]}, "add": {"risk": "urgente", "differentials": ["Embolia pulmonar", "Pneumotórax", "Edema agudo de pulmão", "Arritmia"]}},
+      {"id": "infeccao", "priority": 40, "when": {"all": [{"field": "fever_cough", "op": "truthy"}]}, "add": {"suggested_tests": ["Radiografia de tórax e investigação infecciosa conforme gravidade"]}},
+      {"id": "alto-risco", "priority": 50, "when": {"all": [{"field": "known_hf_or_cancer", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["Comorbidade de alto risco exige limiar baixo para avaliação presencial"]}}
     ],
-    "default_tests": [
-      "Sinais vitais, oximetria e exame cardiopulmonar",
-      "ECG quando houver suspeita cardiovascular"
-    ],
-    "differentials": [
-      "Insuficiência cardíaca",
-      "Embolia pulmonar",
-      "Pneumonia",
-      "Asma/DPOC",
-      "Arritmia",
-      "Anemia",
-      "Síndrome coronariana",
-      "Ansiedade após exclusão de causas orgânicas"
-    ],
-    "red_flags": [
-      "Hipóxia",
-      "Hipotensão",
-      "Alteração mental",
-      "Dor torácica",
-      "Síncope",
-      "Exaustão respiratória"
-    ],
-    "ambulatory_flow": [
-      "Definir cronologia, capacidade funcional e sinais de congestão",
-      "Obter exames dirigidos",
-      "Encaminhar ao pronto atendimento diante de red flags"
-    ],
-    "emergency_flow": [
-      "Suporte inicial",
-      "ECG e radiografia/ultrassom conforme disponibilidade",
-      "Investigar insuficiência cardíaca, tromboembolismo e infecção"
-    ],
-    "tags": [
-      "falta de ar",
-      "edema",
-      "insuficiência cardíaca",
-      "embolia"
-    ],
-    "source_refs": [
-      "AHA/ACC guidelines and scientific statements on heart failure and chest pain"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements"
-    ],
+    "default_tests": ["Sinais vitais, oximetria e exame cardiopulmonar", "ECG quando houver suspeita cardiovascular"],
+    "differentials": ["Insuficiência cardíaca", "Embolia pulmonar", "Pneumonia", "Asma/DPOC", "Arritmia", "Anemia", "Síndrome coronariana", "Ansiedade após exclusão de causas orgânicas"],
+    "red_flags": ["Hipóxia", "Hipotensão", "Alteração mental", "Dor torácica", "Síncope", "Exaustão respiratória"],
+    "ambulatory_flow": ["Definir cronologia, capacidade funcional e sinais de congestão", "Obter exames dirigidos", "Encaminhar ao pronto atendimento diante de red flags"],
+    "emergency_flow": ["Suporte inicial", "ECG e radiografia/ultrassom conforme disponibilidade", "Investigar insuficiência cardíaca, tromboembolismo e infecção"],
+    "tags": ["falta de ar", "edema", "insuficiência cardíaca", "embolia"],
+    "source_refs": ["AHA/ACC guidelines and scientific statements on heart failure and chest pain"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements"],
     "review_status": "revisado",
     "review_note": "Fluxo sindrômico original; exames dependem da apresentação e recursos locais.",
     "version": 1
@@ -484,215 +73,33 @@
   {
     "slug": "palpitacoes",
     "name": "Palpitações",
-    "aliases": [
-      "coração acelerado",
-      "batimento irregular",
-      "taquicardia"
-    ],
-    "areas": [
-      "geral",
-      "cardiopediatria",
-      "cardiogeriatria",
-      "cardiooncologia",
-      "gravidez"
-    ],
+    "aliases": ["coração acelerado", "batimento irregular", "taquicardia"],
+    "areas": ["geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez"],
     "summary": "Triagem de percepção anormal dos batimentos, distinguindo arritmias potencialmente graves de extrassístoles, taquicardia sinusal e sintomas não arrítmicos.",
     "questions": [
-      {
-        "id": "ongoing",
-        "label": "A palpitação está ocorrendo agora?",
-        "type": "boolean",
-        "required": true,
-        "section": "Cronologia"
-      },
-      {
-        "id": "syncope",
-        "label": "Houve síncope ou quase síncope?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "chest_pain_dyspnea",
-        "label": "Há dor torácica ou dispneia importante?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "known_structural_disease",
-        "label": "Há cardiopatia estrutural, canalopatia ou história familiar de morte súbita?",
-        "type": "boolean",
-        "section": "Risco"
-      },
-      {
-        "id": "sudden_regular",
-        "label": "Início e término são súbitos, com ritmo rápido e regular?",
-        "type": "boolean",
-        "section": "Caracterização"
-      },
-      {
-        "id": "triggers",
-        "label": "Há febre, anemia, tireoide, estimulantes, desidratação ou nova medicação?",
-        "type": "boolean",
-        "section": "Precipitantes"
-      }
+      {"id": "ongoing", "label": "A palpitação está ocorrendo agora?", "type": "boolean", "required": true, "section": "Cronologia"},
+      {"id": "syncope", "label": "Houve síncope ou quase síncope?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "chest_pain_dyspnea", "label": "Há dor torácica ou dispneia importante?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "known_structural_disease", "label": "Há cardiopatia estrutural, canalopatia ou história familiar de morte súbita?", "type": "boolean", "section": "Risco"},
+      {"id": "sudden_regular", "label": "Início e término são súbitos, com ritmo rápido e regular?", "type": "boolean", "section": "Caracterização"},
+      {"id": "triggers", "label": "Há febre, anemia, tireoide, estimulantes, desidratação ou nova medicação?", "type": "boolean", "section": "Precipitantes"}
     ],
     "rules": [
-      {
-        "id": "sincope",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "syncope",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Palpitação com síncope pode representar arritmia de alto risco"
-          ],
-          "emergency_flow": [
-            "ECG e monitorização imediata"
-          ]
-        }
-      },
-      {
-        "id": "dor-dispneia",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "chest_pain_dyspnea",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Sintomas cardiopulmonares associados exigem avaliação rápida"
-          ]
-        }
-      },
-      {
-        "id": "em-curso",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "ongoing",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "suggested_tests": [
-            "ECG durante o sintoma e sinais vitais"
-          ]
-        }
-      },
-      {
-        "id": "estrutural",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "known_structural_disease",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Cardiopatia/canalopatia conhecida aumenta risco arrítmico"
-          ]
-        }
-      },
-      {
-        "id": "tsv",
-        "priority": 50,
-        "when": {
-          "all": [
-            {
-              "field": "sudden_regular",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "supporting": [
-            "Início e término súbitos com ritmo regular sugerem taquicardia supraventricular"
-          ],
-          "suggested_tests": [
-            "ECG, Holter ou monitor de eventos conforme frequência"
-          ]
-        }
-      },
-      {
-        "id": "precipitantes",
-        "priority": 30,
-        "when": {
-          "all": [
-            {
-              "field": "triggers",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "suggested_tests": [
-            "Hemograma, eletrólitos e tireoide conforme contexto"
-          ]
-        }
-      }
+      {"id": "sincope", "priority": 100, "when": {"all": [{"field": "syncope", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Palpitação com síncope pode representar arritmia de alto risco"], "emergency_flow": ["ECG e monitorização imediata"]}},
+      {"id": "dor-dispneia", "priority": 95, "when": {"all": [{"field": "chest_pain_dyspnea", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Sintomas cardiopulmonares associados exigem avaliação rápida"]}},
+      {"id": "em-curso", "priority": 80, "when": {"all": [{"field": "ongoing", "op": "truthy"}]}, "add": {"risk": "prioritario", "suggested_tests": ["ECG durante o sintoma e sinais vitais"]}},
+      {"id": "estrutural", "priority": 80, "when": {"all": [{"field": "known_structural_disease", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Cardiopatia/canalopatia conhecida aumenta risco arrítmico"]}},
+      {"id": "tsv", "priority": 50, "when": {"all": [{"field": "sudden_regular", "op": "truthy"}]}, "add": {"supporting": ["Início e término súbitos com ritmo regular sugerem taquicardia supraventricular"], "suggested_tests": ["ECG, Holter ou monitor de eventos conforme frequência"]}},
+      {"id": "precipitantes", "priority": 30, "when": {"all": [{"field": "triggers", "op": "truthy"}]}, "add": {"suggested_tests": ["Hemograma, eletrólitos e tireoide conforme contexto"]}}
     ],
-    "default_tests": [
-      "ECG de 12 derivações",
-      "Sinais vitais"
-    ],
-    "differentials": [
-      "Extrassístoles",
-      "Taquicardia supraventricular",
-      "Fibrilação/flutter atrial",
-      "Taquicardia ventricular",
-      "Taquicardia sinusal",
-      "Ansiedade"
-    ],
-    "red_flags": [
-      "Síncope",
-      "Cardiopatia estrutural",
-      "Dor torácica",
-      "Instabilidade",
-      "História familiar de morte súbita"
-    ],
-    "ambulatory_flow": [
-      "Correlacionar sintoma e ritmo",
-      "Escolher Holter/evento conforme frequência",
-      "Investigar precipitantes"
-    ],
-    "emergency_flow": [
-      "Obter ECG durante o evento",
-      "Tratar instabilidade conforme algoritmo de taquiarritmia",
-      "Corrigir causas reversíveis"
-    ],
-    "tags": [
-      "taquicardia",
-      "arritmia",
-      "Holter",
-      "síncope"
-    ],
-    "source_refs": [
-      "AHA/ACC/HRS arrhythmia and syncope guidelines"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements"
-    ],
+    "default_tests": ["ECG de 12 derivações", "Sinais vitais"],
+    "differentials": ["Extrassístoles", "Taquicardia supraventricular", "Fibrilação/flutter atrial", "Taquicardia ventricular", "Taquicardia sinusal", "Ansiedade"],
+    "red_flags": ["Síncope", "Cardiopatia estrutural", "Dor torácica", "Instabilidade", "História familiar de morte súbita"],
+    "ambulatory_flow": ["Correlacionar sintoma e ritmo", "Escolher Holter/evento conforme frequência", "Investigar precipitantes"],
+    "emergency_flow": ["Obter ECG durante o evento", "Tratar instabilidade conforme algoritmo de taquiarritmia", "Corrigir causas reversíveis"],
+    "tags": ["taquicardia", "arritmia", "Holter", "síncope"],
+    "source_refs": ["AHA/ACC/HRS arrhythmia and syncope guidelines"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements"],
     "review_status": "revisado",
     "review_note": "Não identifica o ritmo sem ECG.",
     "version": 1
@@ -700,233 +107,34 @@
   {
     "slug": "sincope-e-pre-sincope",
     "name": "Síncope e pré-síncope",
-    "aliases": [
-      "desmaio",
-      "quase desmaio",
-      "lipotímia"
-    ],
-    "areas": [
-      "geral",
-      "cardiopediatria",
-      "cardiogeriatria",
-      "gravidez"
-    ],
+    "aliases": ["desmaio", "quase desmaio", "lipotímia"],
+    "areas": ["geral", "cardiopediatria", "cardiogeriatria", "gravidez"],
     "summary": "Triagem de perda transitória de consciência ou sensação iminente, com foco em causas cardíacas, hemorrágicas, neurológicas e reflexas.",
     "questions": [
-      {
-        "id": "true_loss_of_consciousness",
-        "label": "Houve perda completa de consciência e recuperação espontânea?",
-        "type": "boolean",
-        "required": true,
-        "section": "Caracterização"
-      },
-      {
-        "id": "during_exertion_or_supine",
-        "label": "Ocorreu durante esforço ou em decúbito?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "chest_pain_palpitations",
-        "label": "Houve dor torácica ou palpitações imediatamente antes?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "abnormal_ecg_or_cvd",
-        "label": "Há ECG anormal ou cardiopatia conhecida?",
-        "type": "boolean",
-        "section": "Risco"
-      },
-      {
-        "id": "bleeding_or_volume_loss",
-        "label": "Há sangramento, vômitos, diarreia ou baixa ingestão?",
-        "type": "boolean",
-        "section": "Causas"
-      },
-      {
-        "id": "focal_deficit_or_prolonged_confusion",
-        "label": "Há déficit focal ou confusão prolongada após o evento?",
-        "type": "boolean",
-        "section": "Neurológico"
-      },
-      {
-        "id": "typical_prodrome",
-        "label": "Houve náusea, calor, sudorese ou escurecimento visual?",
-        "type": "boolean",
-        "section": "Mecanismo reflexo"
-      }
+      {"id": "true_loss_of_consciousness", "label": "Houve perda completa de consciência e recuperação espontânea?", "type": "boolean", "required": true, "section": "Caracterização"},
+      {"id": "during_exertion_or_supine", "label": "Ocorreu durante esforço ou em decúbito?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "chest_pain_palpitations", "label": "Houve dor torácica ou palpitações imediatamente antes?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "abnormal_ecg_or_cvd", "label": "Há ECG anormal ou cardiopatia conhecida?", "type": "boolean", "section": "Risco"},
+      {"id": "bleeding_or_volume_loss", "label": "Há sangramento, vômitos, diarreia ou baixa ingestão?", "type": "boolean", "section": "Causas"},
+      {"id": "focal_deficit_or_prolonged_confusion", "label": "Há déficit focal ou confusão prolongada após o evento?", "type": "boolean", "section": "Neurológico"},
+      {"id": "typical_prodrome", "label": "Houve náusea, calor, sudorese ou escurecimento visual?", "type": "boolean", "section": "Mecanismo reflexo"}
     ],
     "rules": [
-      {
-        "id": "neurologico",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "focal_deficit_or_prolonged_confusion",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Déficit focal ou confusão prolongada não é típico de síncope simples"
-          ]
-        }
-      },
-      {
-        "id": "esforco",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "during_exertion_or_supine",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Síncope no esforço ou em decúbito sugere maior risco cardíaco"
-          ],
-          "suggested_tests": [
-            "ECG, monitorização e avaliação estrutural"
-          ]
-        }
-      },
-      {
-        "id": "sintoma-cardiaco",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "chest_pain_palpitations",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Dor ou palpitação prévia exige excluir isquemia e arritmia"
-          ]
-        }
-      },
-      {
-        "id": "ecg-cardiopatia",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "abnormal_ecg_or_cvd",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "ECG anormal ou cardiopatia eleva risco de causa cardíaca"
-          ]
-        }
-      },
-      {
-        "id": "hipovolemia",
-        "priority": 60,
-        "when": {
-          "all": [
-            {
-              "field": "bleeding_or_volume_loss",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "suggested_tests": [
-            "Hemograma, função renal e avaliação de volume conforme gravidade"
-          ]
-        }
-      },
-      {
-        "id": "reflexa",
-        "priority": 20,
-        "when": {
-          "all": [
-            {
-              "field": "typical_prodrome",
-              "op": "truthy"
-            },
-            {
-              "field": "during_exertion_or_supine",
-              "op": "falsy"
-            },
-            {
-              "field": "chest_pain_palpitations",
-              "op": "falsy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "rotina",
-          "supporting": [
-            "Pródromo típico sem sinais de alarme favorece síncope reflexa"
-          ]
-        }
-      }
+      {"id": "neurologico", "priority": 100, "when": {"all": [{"field": "focal_deficit_or_prolonged_confusion", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Déficit focal ou confusão prolongada não é típico de síncope simples"]}},
+      {"id": "esforco", "priority": 95, "when": {"all": [{"field": "during_exertion_or_supine", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Síncope no esforço ou em decúbito sugere maior risco cardíaco"], "suggested_tests": ["ECG, monitorização e avaliação estrutural"]}},
+      {"id": "sintoma-cardiaco", "priority": 95, "when": {"all": [{"field": "chest_pain_palpitations", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Dor ou palpitação prévia exige excluir isquemia e arritmia"]}},
+      {"id": "ecg-cardiopatia", "priority": 90, "when": {"all": [{"field": "abnormal_ecg_or_cvd", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["ECG anormal ou cardiopatia eleva risco de causa cardíaca"]}},
+      {"id": "hipovolemia", "priority": 60, "when": {"all": [{"field": "bleeding_or_volume_loss", "op": "truthy"}]}, "add": {"risk": "prioritario", "suggested_tests": ["Hemograma, função renal e avaliação de volume conforme gravidade"]}},
+      {"id": "reflexa", "priority": 20, "when": {"all": [{"field": "typical_prodrome", "op": "truthy"}, {"field": "during_exertion_or_supine", "op": "falsy"}, {"field": "chest_pain_palpitations", "op": "falsy"}]}, "add": {"risk": "rotina", "supporting": ["Pródromo típico sem sinais de alarme favorece síncope reflexa"]}}
     ],
-    "default_tests": [
-      "Sinais vitais e pressão ortostática",
-      "ECG"
-    ],
-    "differentials": [
-      "Síncope reflexa",
-      "Hipotensão ortostática",
-      "Arritmia",
-      "Doença estrutural",
-      "Hemorragia/hipovolemia",
-      "Crise epiléptica",
-      "Hipoglicemia"
-    ],
-    "red_flags": [
-      "Esforço",
-      "Decúbito",
-      "ECG anormal",
-      "Cardiopatia",
-      "Dor/palpitação",
-      "Déficit neurológico",
-      "Sangramento"
-    ],
-    "ambulatory_flow": [
-      "Confirmar se foi síncope",
-      "Identificar mecanismo provável",
-      "Solicitar exames dirigidos",
-      "Encaminhar com prioridade se houver red flags"
-    ],
-    "emergency_flow": [
-      "Avaliar trauma e estabilidade",
-      "ECG e glicemia conforme contexto",
-      "Monitorização quando houver risco cardíaco"
-    ],
-    "tags": [
-      "desmaio",
-      "ortostatismo",
-      "arritmia",
-      "queda"
-    ],
-    "source_refs": [
-      "2017 ACC/AHA/HRS Guideline for Syncope",
-      "2018 ESC Guidelines for Syncope"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/science-news/2017-acc-aha-hrs-guideline-for-the-evaluation-and-management-of-patients-with-syncope/top-things-to-know",
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/syncope/"
-    ],
+    "default_tests": ["Sinais vitais e pressão ortostática", "ECG"],
+    "differentials": ["Síncope reflexa", "Hipotensão ortostática", "Arritmia", "Doença estrutural", "Hemorragia/hipovolemia", "Crise epiléptica", "Hipoglicemia"],
+    "red_flags": ["Esforço", "Decúbito", "ECG anormal", "Cardiopatia", "Dor/palpitação", "Déficit neurológico", "Sangramento"],
+    "ambulatory_flow": ["Confirmar se foi síncope", "Identificar mecanismo provável", "Solicitar exames dirigidos", "Encaminhar com prioridade se houver red flags"],
+    "emergency_flow": ["Avaliar trauma e estabilidade", "ECG e glicemia conforme contexto", "Monitorização quando houver risco cardíaco"],
+    "tags": ["desmaio", "ortostatismo", "arritmia", "queda"],
+    "source_refs": ["2017 ACC/AHA/HRS Guideline for Syncope", "2018 ESC Guidelines for Syncope"],
+    "source_urls": ["https://professional.heart.org/en/science-news/2017-acc-aha-hrs-guideline-for-the-evaluation-and-management-of-patients-with-syncope/top-things-to-know", "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/syncope/"],
     "review_status": "revisado",
     "review_note": "Fluxo original sem reprodução de escore proprietário.",
     "version": 1
@@ -934,214 +142,32 @@
   {
     "slug": "cianose",
     "name": "Cianose",
-    "aliases": [
-      "lábios roxos",
-      "pele azulada",
-      "dessaturação"
-    ],
-    "areas": [
-      "geral",
-      "cardiopediatria",
-      "gravidez"
-    ],
+    "aliases": ["lábios roxos", "pele azulada", "dessaturação"],
+    "areas": ["geral", "cardiopediatria", "gravidez"],
     "summary": "Triagem de coloração azulada ou saturação baixa para distinguir hipoxemia, cardiopatia congênita, doença pulmonar, choque e pseudocianose.",
     "questions": [
-      {
-        "id": "measured_low_spo2",
-        "label": "Há saturação medida baixa em sinal confiável?",
-        "type": "boolean",
-        "required": true,
-        "section": "Confirmação"
-      },
-      {
-        "id": "respiratory_distress",
-        "label": "Há desconforto respiratório, apneia ou alteração mental?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "newborn_or_infant",
-        "label": "É recém-nascido ou lactente jovem?",
-        "type": "boolean",
-        "section": "Contexto"
-      },
-      {
-        "id": "known_chd",
-        "label": "Há cardiopatia congênita conhecida?",
-        "type": "boolean",
-        "section": "Contexto"
-      },
-      {
-        "id": "sudden_onset",
-        "label": "O início foi súbito?",
-        "type": "boolean",
-        "section": "Cronologia"
-      },
-      {
-        "id": "cold_extremities_only",
-        "label": "A coloração está limitada às extremidades frias, com língua/mucosa normais?",
-        "type": "boolean",
-        "section": "Pseudocianose"
-      }
+      {"id": "measured_low_spo2", "label": "Há saturação medida baixa em sinal confiável?", "type": "boolean", "required": true, "section": "Confirmação"},
+      {"id": "respiratory_distress", "label": "Há desconforto respiratório, apneia ou alteração mental?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "newborn_or_infant", "label": "É recém-nascido ou lactente jovem?", "type": "boolean", "section": "Contexto"},
+      {"id": "known_chd", "label": "Há cardiopatia congênita conhecida?", "type": "boolean", "section": "Contexto"},
+      {"id": "sudden_onset", "label": "O início foi súbito?", "type": "boolean", "section": "Cronologia"},
+      {"id": "cold_extremities_only", "label": "A coloração está limitada às extremidades frias, com língua/mucosa normais?", "type": "boolean", "section": "Pseudocianose"}
     ],
     "rules": [
-      {
-        "id": "hipoxemia",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "measured_low_spo2",
-              "op": "truthy"
-            },
-            {
-              "field": "respiratory_distress",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Hipoxemia com desconforto respiratório ou alteração mental"
-          ]
-        }
-      },
-      {
-        "id": "neonato",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "newborn_or_infant",
-              "op": "truthy"
-            },
-            {
-              "field": "measured_low_spo2",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Cianose central em neonato/lactente exige excluir cardiopatia crítica e doença pulmonar"
-          ],
-          "suggested_tests": [
-            "Oximetria pré/pós-ductal, gasometria e ecocardiograma conforme avaliação neonatal"
-          ]
-        }
-      },
-      {
-        "id": "congenita",
-        "priority": 85,
-        "when": {
-          "all": [
-            {
-              "field": "known_chd",
-              "op": "truthy"
-            },
-            {
-              "field": "measured_low_spo2",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Queda de saturação em cardiopatia congênita pode representar deterioração hemodinâmica"
-          ]
-        }
-      },
-      {
-        "id": "subita",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "sudden_onset",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Embolia pulmonar",
-            "Pneumotórax",
-            "Aspiração",
-            "Arritmia/choque"
-          ]
-        }
-      },
-      {
-        "id": "acrocianose",
-        "priority": 20,
-        "when": {
-          "all": [
-            {
-              "field": "cold_extremities_only",
-              "op": "truthy"
-            },
-            {
-              "field": "measured_low_spo2",
-              "op": "falsy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "rotina",
-          "messages": [
-            "Coloração periférica com mucosa normal pode não representar hipoxemia central; confirmar clinicamente"
-          ]
-        }
-      }
+      {"id": "hipoxemia", "priority": 100, "when": {"all": [{"field": "measured_low_spo2", "op": "truthy"}, {"field": "respiratory_distress", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Hipoxemia com desconforto respiratório ou alteração mental"]}},
+      {"id": "neonato", "priority": 95, "when": {"all": [{"field": "newborn_or_infant", "op": "truthy"}, {"field": "measured_low_spo2", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Cianose central em neonato/lactente exige excluir cardiopatia crítica e doença pulmonar"], "suggested_tests": ["Oximetria pré/pós-ductal, gasometria e ecocardiograma conforme avaliação neonatal"]}},
+      {"id": "congenita", "priority": 85, "when": {"all": [{"field": "known_chd", "op": "truthy"}, {"field": "measured_low_spo2", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Queda de saturação em cardiopatia congênita pode representar deterioração hemodinâmica"]}},
+      {"id": "subita", "priority": 80, "when": {"all": [{"field": "sudden_onset", "op": "truthy"}]}, "add": {"risk": "urgente", "differentials": ["Embolia pulmonar", "Pneumotórax", "Aspiração", "Arritmia/choque"]}},
+      {"id": "acrocianose", "priority": 20, "when": {"all": [{"field": "cold_extremities_only", "op": "truthy"}, {"field": "measured_low_spo2", "op": "falsy"}]}, "add": {"risk": "rotina", "messages": ["Coloração periférica com mucosa normal pode não representar hipoxemia central; confirmar clinicamente"]}}
     ],
-    "default_tests": [
-      "Confirmar oximetria com boa curva",
-      "Exame cardiopulmonar"
-    ],
-    "differentials": [
-      "Cardiopatia congênita cianótica",
-      "Doença pulmonar",
-      "Hipoventilação",
-      "Embolia pulmonar",
-      "Choque",
-      "Meta-hemoglobinemia",
-      "Acrocianose"
-    ],
-    "red_flags": [
-      "Cianose central",
-      "Hipoxemia",
-      "Neonato",
-      "Alteração mental",
-      "Apneia",
-      "Choque"
-    ],
-    "ambulatory_flow": [
-      "Confirmar se é cianose central",
-      "Medir saturação adequadamente",
-      "Encaminhar imediatamente quando persistente ou associada a sintomas"
-    ],
-    "emergency_flow": [
-      "Suporte respiratório conforme necessidade",
-      "Avaliar causa cardíaca, pulmonar e tóxica",
-      "Acionar equipe pediátrica em neonatos"
-    ],
-    "tags": [
-      "dessaturação",
-      "cardiopatia congênita",
-      "neonato",
-      "hipoxemia"
-    ],
-    "source_refs": [
-      "AHA resources on congenital heart disease and pediatric cardiovascular assessment"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements"
-    ],
+    "default_tests": ["Confirmar oximetria com boa curva", "Exame cardiopulmonar"],
+    "differentials": ["Cardiopatia congênita cianótica", "Doença pulmonar", "Hipoventilação", "Embolia pulmonar", "Choque", "Meta-hemoglobinemia", "Acrocianose"],
+    "red_flags": ["Cianose central", "Hipoxemia", "Neonato", "Alteração mental", "Apneia", "Choque"],
+    "ambulatory_flow": ["Confirmar se é cianose central", "Medir saturação adequadamente", "Encaminhar imediatamente quando persistente ou associada a sintomas"],
+    "emergency_flow": ["Suporte respiratório conforme necessidade", "Avaliar causa cardíaca, pulmonar e tóxica", "Acionar equipe pediátrica em neonatos"],
+    "tags": ["dessaturação", "cardiopatia congênita", "neonato", "hipoxemia"],
+    "source_refs": ["AHA resources on congenital heart disease and pediatric cardiovascular assessment"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements"],
     "review_status": "revisado",
     "review_note": "Saturação e apresentação devem ser interpretadas no contexto anatômico e fisiológico.",
     "version": 1
@@ -1149,220 +175,33 @@
   {
     "slug": "edema",
     "name": "Edema",
-    "aliases": [
-      "inchaço",
-      "pernas inchadas",
-      "anasarca"
-    ],
-    "areas": [
-      "geral",
-      "cardiogeriatria",
-      "gravidez"
-    ],
+    "aliases": ["inchaço", "pernas inchadas", "anasarca"],
+    "areas": ["geral", "cardiogeriatria", "gravidez"],
     "summary": "Triagem de edema para diferenciar congestão cardíaca, trombose, doença renal/hepática, medicamentos e causas venosas ou linfáticas.",
     "questions": [
-      {
-        "id": "acute_dyspnea",
-        "label": "Há dispneia aguda, ortopneia ou hipóxia?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "unilateral_painful",
-        "label": "O edema é unilateral, doloroso ou associado a eritema?",
-        "type": "boolean",
-        "required": true,
-        "section": "Trombose"
-      },
-      {
-        "id": "rapid_weight_gain",
-        "label": "Houve ganho rápido de peso ou redução da diurese?",
-        "type": "boolean",
-        "section": "Congestão"
-      },
-      {
-        "id": "known_hf_renal_liver",
-        "label": "Há insuficiência cardíaca, renal ou hepática?",
-        "type": "boolean",
-        "section": "Comorbidades"
-      },
-      {
-        "id": "new_drug",
-        "label": "Houve início/aumento de medicamento associado a edema?",
-        "type": "boolean",
-        "section": "Medicamentos"
-      },
-      {
-        "id": "pregnant",
-        "label": "A paciente está grávida ou no puerpério?",
-        "type": "boolean",
-        "section": "População especial"
-      }
+      {"id": "acute_dyspnea", "label": "Há dispneia aguda, ortopneia ou hipóxia?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "unilateral_painful", "label": "O edema é unilateral, doloroso ou associado a eritema?", "type": "boolean", "required": true, "section": "Trombose"},
+      {"id": "rapid_weight_gain", "label": "Houve ganho rápido de peso ou redução da diurese?", "type": "boolean", "section": "Congestão"},
+      {"id": "known_hf_renal_liver", "label": "Há insuficiência cardíaca, renal ou hepática?", "type": "boolean", "section": "Comorbidades"},
+      {"id": "new_drug", "label": "Houve início/aumento de medicamento associado a edema?", "type": "boolean", "section": "Medicamentos"},
+      {"id": "pregnant", "label": "A paciente está grávida ou no puerpério?", "type": "boolean", "section": "População especial"}
     ],
     "rules": [
-      {
-        "id": "pulmao",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "acute_dyspnea",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Edema com dispneia aguda/hipóxia pode representar edema pulmonar ou embolia"
-          ]
-        }
-      },
-      {
-        "id": "trombose",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "unilateral_painful",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Edema unilateral doloroso exige avaliar trombose venosa"
-          ],
-          "suggested_tests": [
-            "Ultrassom venoso conforme probabilidade clínica"
-          ]
-        }
-      },
-      {
-        "id": "congestao",
-        "priority": 70,
-        "when": {
-          "all": [
-            {
-              "field": "rapid_weight_gain",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "supporting": [
-            "Ganho rápido de peso/oligúria sugere retenção de volume"
-          ],
-          "suggested_tests": [
-            "Função renal, eletrólitos e avaliação de insuficiência cardíaca"
-          ]
-        }
-      },
-      {
-        "id": "comorbidade",
-        "priority": 50,
-        "when": {
-          "all": [
-            {
-              "field": "known_hf_renal_liver",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "messages": [
-            "Descompensação de doença sistêmica precisa ser considerada"
-          ]
-        }
-      },
-      {
-        "id": "farmaco",
-        "priority": 30,
-        "when": {
-          "all": [
-            {
-              "field": "new_drug",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "supporting": [
-            "Medicamento novo pode contribuir para edema"
-          ],
-          "ambulatory_flow": [
-            "Revisar temporalidade e alternativas sem suspensão autônoma"
-          ]
-        }
-      },
-      {
-        "id": "gestacao",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "pregnant",
-              "op": "truthy"
-            },
-            {
-              "field": "acute_dyspnea",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Edema e dispneia na gestação/puerpério exigem excluir pré-eclâmpsia, cardiomiopatia e tromboembolismo"
-          ]
-        }
-      }
+      {"id": "pulmao", "priority": 100, "when": {"all": [{"field": "acute_dyspnea", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Edema com dispneia aguda/hipóxia pode representar edema pulmonar ou embolia"]}},
+      {"id": "trombose", "priority": 90, "when": {"all": [{"field": "unilateral_painful", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Edema unilateral doloroso exige avaliar trombose venosa"], "suggested_tests": ["Ultrassom venoso conforme probabilidade clínica"]}},
+      {"id": "congestao", "priority": 70, "when": {"all": [{"field": "rapid_weight_gain", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Ganho rápido de peso/oligúria sugere retenção de volume"], "suggested_tests": ["Função renal, eletrólitos e avaliação de insuficiência cardíaca"]}},
+      {"id": "comorbidade", "priority": 50, "when": {"all": [{"field": "known_hf_renal_liver", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["Descompensação de doença sistêmica precisa ser considerada"]}},
+      {"id": "farmaco", "priority": 30, "when": {"all": [{"field": "new_drug", "op": "truthy"}]}, "add": {"supporting": ["Medicamento novo pode contribuir para edema"], "ambulatory_flow": ["Revisar temporalidade e alternativas sem suspensão autônoma"]}},
+      {"id": "gestacao", "priority": 80, "when": {"all": [{"field": "pregnant", "op": "truthy"}, {"field": "acute_dyspnea", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Edema e dispneia na gestação/puerpério exigem excluir pré-eclâmpsia, cardiomiopatia e tromboembolismo"]}}
     ],
-    "default_tests": [
-      "Sinais vitais, peso e exame de congestão",
-      "Função renal e eletrólitos conforme contexto"
-    ],
-    "differentials": [
-      "Insuficiência cardíaca",
-      "Trombose venosa",
-      "Doença renal",
-      "Hepatopatia",
-      "Insuficiência venosa",
-      "Linfedema",
-      "Efeito medicamentoso"
-    ],
-    "red_flags": [
-      "Dispneia/hipóxia",
-      "Edema unilateral doloroso",
-      "Oligúria",
-      "Hipotensão",
-      "Gestação com sintomas sistêmicos"
-    ],
-    "ambulatory_flow": [
-      "Definir distribuição e cronologia",
-      "Revisar medicamentos e comorbidades",
-      "Investigar causa dirigida"
-    ],
-    "emergency_flow": [
-      "Avaliar edema pulmonar, tromboembolismo e falência orgânica",
-      "Monitorizar e tratar causa"
-    ],
-    "tags": [
-      "inchaço",
-      "congestão",
-      "trombose",
-      "rim"
-    ],
-    "source_refs": [
-      "AHA/ACC heart failure guidelines and venous thromboembolism guidance"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements"
-    ],
+    "default_tests": ["Sinais vitais, peso e exame de congestão", "Função renal e eletrólitos conforme contexto"],
+    "differentials": ["Insuficiência cardíaca", "Trombose venosa", "Doença renal", "Hepatopatia", "Insuficiência venosa", "Linfedema", "Efeito medicamentoso"],
+    "red_flags": ["Dispneia/hipóxia", "Edema unilateral doloroso", "Oligúria", "Hipotensão", "Gestação com sintomas sistêmicos"],
+    "ambulatory_flow": ["Definir distribuição e cronologia", "Revisar medicamentos e comorbidades", "Investigar causa dirigida"],
+    "emergency_flow": ["Avaliar edema pulmonar, tromboembolismo e falência orgânica", "Monitorizar e tratar causa"],
+    "tags": ["inchaço", "congestão", "trombose", "rim"],
+    "source_refs": ["AHA/ACC heart failure guidelines and venous thromboembolism guidance"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements"],
     "review_status": "revisado",
     "review_note": "Edema isolado não define insuficiência cardíaca.",
     "version": 1
@@ -1370,215 +209,33 @@
   {
     "slug": "pressao-arterial-alterada",
     "name": "Pressão arterial muito alta ou muito baixa",
-    "aliases": [
-      "crise de pressão",
-      "hipertensão",
-      "hipotensão"
-    ],
-    "areas": [
-      "geral",
-      "cardiopediatria",
-      "cardiogeriatria",
-      "cardiooncologia",
-      "gravidez"
-    ],
+    "aliases": ["crise de pressão", "hipertensão", "hipotensão"],
+    "areas": ["geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez"],
     "summary": "Triagem de valor pressórico alterado com foco em técnica de medida, sintomas, lesão aguda de órgãos, causas precipitantes e populações especiais.",
     "questions": [
-      {
-        "id": "repeated_measurement",
-        "label": "A medida foi repetida com técnica e manguito adequados?",
-        "type": "boolean",
-        "required": true,
-        "section": "Confirmação"
-      },
-      {
-        "id": "neurologic_cardiac_symptoms",
-        "label": "Há déficit neurológico, confusão, dor torácica, dispneia ou edema pulmonar?",
-        "type": "boolean",
-        "required": true,
-        "section": "Lesão de órgão-alvo"
-      },
-      {
-        "id": "shock_signs",
-        "label": "Há hipotensão com pele fria, oligúria, alteração mental ou lactato elevado?",
-        "type": "boolean",
-        "required": true,
-        "section": "Choque"
-      },
-      {
-        "id": "pregnant",
-        "label": "Está grávida ou no puerpério?",
-        "type": "boolean",
-        "section": "População especial"
-      },
-      {
-        "id": "child",
-        "label": "É criança/adolescente?",
-        "type": "boolean",
-        "section": "População especial"
-      },
-      {
-        "id": "new_drug_or_missed_dose",
-        "label": "Houve medicamento novo, dose perdida ou substância estimulante?",
-        "type": "boolean",
-        "section": "Precipitantes"
-      }
+      {"id": "repeated_measurement", "label": "A medida foi repetida com técnica e manguito adequados?", "type": "boolean", "required": true, "section": "Confirmação"},
+      {"id": "neurologic_cardiac_symptoms", "label": "Há déficit neurológico, confusão, dor torácica, dispneia ou edema pulmonar?", "type": "boolean", "required": true, "section": "Lesão de órgão-alvo"},
+      {"id": "shock_signs", "label": "Há hipotensão com pele fria, oligúria, alteração mental ou lactato elevado?", "type": "boolean", "required": true, "section": "Choque"},
+      {"id": "pregnant", "label": "Está grávida ou no puerpério?", "type": "boolean", "section": "População especial"},
+      {"id": "child", "label": "É criança/adolescente?", "type": "boolean", "section": "População especial"},
+      {"id": "new_drug_or_missed_dose", "label": "Houve medicamento novo, dose perdida ou substância estimulante?", "type": "boolean", "section": "Precipitantes"}
     ],
     "rules": [
-      {
-        "id": "orgaos",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "neurologic_cardiac_symptoms",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Pressão alterada com sintomas de órgão-alvo exige atendimento imediato"
-          ]
-        }
-      },
-      {
-        "id": "choque",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "shock_signs",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Possível choque ou hipoperfusão"
-          ]
-        }
-      },
-      {
-        "id": "nao-confirmada",
-        "priority": 20,
-        "when": {
-          "all": [
-            {
-              "field": "repeated_measurement",
-              "op": "falsy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "rotina",
-          "messages": [
-            "Confirmar a medida antes de classificar o valor isolado"
-          ]
-        }
-      },
-      {
-        "id": "gestante",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "pregnant",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "red_flags": [
-            "Pressão alterada na gestação/puerpério requer avaliação obstétrica dirigida"
-          ]
-        }
-      },
-      {
-        "id": "pediatrica",
-        "priority": 60,
-        "when": {
-          "all": [
-            {
-              "field": "child",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "messages": [
-            "Na pediatria, interpretar por idade/sexo/estatura e investigar causas secundárias conforme contexto"
-          ]
-        }
-      },
-      {
-        "id": "precipitante",
-        "priority": 40,
-        "when": {
-          "all": [
-            {
-              "field": "new_drug_or_missed_dose",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "suggested_tests": [
-            "Reconciliação medicamentosa e investigação de substâncias"
-          ]
-        }
-      }
+      {"id": "orgaos", "priority": 100, "when": {"all": [{"field": "neurologic_cardiac_symptoms", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Pressão alterada com sintomas de órgão-alvo exige atendimento imediato"]}},
+      {"id": "choque", "priority": 100, "when": {"all": [{"field": "shock_signs", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Possível choque ou hipoperfusão"]}},
+      {"id": "nao-confirmada", "priority": 20, "when": {"all": [{"field": "repeated_measurement", "op": "falsy"}]}, "add": {"risk": "rotina", "messages": ["Confirmar a medida antes de classificar o valor isolado"]}},
+      {"id": "gestante", "priority": 80, "when": {"all": [{"field": "pregnant", "op": "truthy"}]}, "add": {"risk": "prioritario", "red_flags": ["Pressão alterada na gestação/puerpério requer avaliação obstétrica dirigida"]}},
+      {"id": "pediatrica", "priority": 60, "when": {"all": [{"field": "child", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["Na pediatria, interpretar por idade/sexo/estatura e investigar causas secundárias conforme contexto"]}},
+      {"id": "precipitante", "priority": 40, "when": {"all": [{"field": "new_drug_or_missed_dose", "op": "truthy"}]}, "add": {"suggested_tests": ["Reconciliação medicamentosa e investigação de substâncias"]}}
     ],
-    "default_tests": [
-      "Repetir pressão corretamente",
-      "Sinais vitais e exame neurológico/cardiopulmonar"
-    ],
-    "differentials": [
-      "Erro de medida",
-      "Hipertensão crônica descontrolada",
-      "Emergência hipertensiva",
-      "Choque",
-      "Hipovolemia",
-      "Efeito medicamentoso",
-      "Síndrome hipertensiva da gestação"
-    ],
-    "red_flags": [
-      "Lesão neurológica",
-      "Dor torácica",
-      "Edema pulmonar",
-      "Hipoperfusão",
-      "Gestação com sintomas"
-    ],
-    "ambulatory_flow": [
-      "Confirmar medidas",
-      "Revisar adesão e medicamentos",
-      "Avaliar lesão crônica e causas"
-    ],
-    "emergency_flow": [
-      "Identificar órgão-alvo ou choque",
-      "Monitorizar",
-      "Tratar causa sem correção pressórica abrupta não planejada"
-    ],
-    "tags": [
-      "pressão alta",
-      "pressão baixa",
-      "choque",
-      "gestação"
-    ],
-    "source_refs": [
-      "AHA/ACC hypertension guidance",
-      "AHA pediatric hypertension statement",
-      "ESC pregnancy guideline"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements",
-      "https://professional.heart.org/en/science-news/pediatric-primary-hypertension",
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"
-    ],
+    "default_tests": ["Repetir pressão corretamente", "Sinais vitais e exame neurológico/cardiopulmonar"],
+    "differentials": ["Erro de medida", "Hipertensão crônica descontrolada", "Emergência hipertensiva", "Choque", "Hipovolemia", "Efeito medicamentoso", "Síndrome hipertensiva da gestação"],
+    "red_flags": ["Lesão neurológica", "Dor torácica", "Edema pulmonar", "Hipoperfusão", "Gestação com sintomas"],
+    "ambulatory_flow": ["Confirmar medidas", "Revisar adesão e medicamentos", "Avaliar lesão crônica e causas"],
+    "emergency_flow": ["Identificar órgão-alvo ou choque", "Monitorizar", "Tratar causa sem correção pressórica abrupta não planejada"],
+    "tags": ["pressão alta", "pressão baixa", "choque", "gestação"],
+    "source_refs": ["AHA/ACC hypertension guidance", "AHA pediatric hypertension statement", "ESC pregnancy guideline"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements", "https://professional.heart.org/en/science-news/pediatric-primary-hypertension", "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"],
     "review_status": "revisado",
     "review_note": "O valor numérico isolado não define emergência sem contexto e órgão-alvo.",
     "version": 1
@@ -1586,211 +243,33 @@
   {
     "slug": "febre-com-suspeita-cardiovascular",
     "name": "Febre com suspeita cardiovascular",
-    "aliases": [
-      "febre e sopro",
-      "suspeita de endocardite",
-      "febre e dor torácica"
-    ],
-    "areas": [
-      "geral",
-      "cardiopediatria",
-      "cardiooncologia"
-    ],
+    "aliases": ["febre e sopro", "suspeita de endocardite", "febre e dor torácica"],
+    "areas": ["geral", "cardiopediatria", "cardiooncologia"],
     "summary": "Triagem de febre associada a sopro, prótese/dispositivo, bacteremia, dor torácica, choque ou sinais embólicos.",
     "questions": [
-      {
-        "id": "prosthesis_device_chd",
-        "label": "Há prótese valvar, dispositivo intracardíaco ou cardiopatia congênita?",
-        "type": "boolean",
-        "required": true,
-        "section": "Risco"
-      },
-      {
-        "id": "new_murmur_or_hf",
-        "label": "Há novo sopro, insuficiência cardíaca ou regurgitação nova?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "embolic_signs",
-        "label": "Há déficit neurológico, isquemia periférica ou fenômenos embólicos?",
-        "type": "boolean",
-        "section": "Red flags"
-      },
-      {
-        "id": "chest_pain_troponin",
-        "label": "Há dor torácica, troponina elevada ou arritmia?",
-        "type": "boolean",
-        "section": "Miocárdio/pericárdio"
-      },
-      {
-        "id": "shock",
-        "label": "Há hipotensão, hipoperfusão ou alteração mental?",
-        "type": "boolean",
-        "required": true,
-        "section": "Choque"
-      },
-      {
-        "id": "recent_bacteremia_procedure",
-        "label": "Houve bacteremia, procedimento invasivo ou uso de droga injetável?",
-        "type": "boolean",
-        "section": "Risco infeccioso"
-      }
+      {"id": "prosthesis_device_chd", "label": "Há prótese valvar, dispositivo intracardíaco ou cardiopatia congênita?", "type": "boolean", "required": true, "section": "Risco"},
+      {"id": "new_murmur_or_hf", "label": "Há novo sopro, insuficiência cardíaca ou regurgitação nova?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "embolic_signs", "label": "Há déficit neurológico, isquemia periférica ou fenômenos embólicos?", "type": "boolean", "section": "Red flags"},
+      {"id": "chest_pain_troponin", "label": "Há dor torácica, troponina elevada ou arritmia?", "type": "boolean", "section": "Miocárdio/pericárdio"},
+      {"id": "shock", "label": "Há hipotensão, hipoperfusão ou alteração mental?", "type": "boolean", "required": true, "section": "Choque"},
+      {"id": "recent_bacteremia_procedure", "label": "Houve bacteremia, procedimento invasivo ou uso de droga injetável?", "type": "boolean", "section": "Risco infeccioso"}
     ],
     "rules": [
-      {
-        "id": "choque",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "shock",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Febre com choque exige protocolo de sepse e avaliação cardiovascular"
-          ]
-        }
-      },
-      {
-        "id": "embolia",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "embolic_signs",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Fenômeno embólico associado a febre pode indicar endocardite complicada"
-          ]
-        }
-      },
-      {
-        "id": "sopro-ic",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "new_murmur_or_hf",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Novo sopro ou insuficiência cardíaca com febre exige investigação de endocardite"
-          ]
-        }
-      },
-      {
-        "id": "alto-risco",
-        "priority": 70,
-        "when": {
-          "all": [
-            {
-              "field": "prosthesis_device_chd",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "suggested_tests": [
-            "Hemoculturas antes de antibiótico quando viável e ecocardiograma conforme probabilidade"
-          ]
-        }
-      },
-      {
-        "id": "miocardio",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "chest_pain_troponin",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Miocardite",
-            "Pericardite",
-            "Síndrome coronariana"
-          ]
-        }
-      },
-      {
-        "id": "bacteremia",
-        "priority": 60,
-        "when": {
-          "all": [
-            {
-              "field": "recent_bacteremia_procedure",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "supporting": [
-            "Bacteremia/procedimento aumenta probabilidade de infecção endovascular"
-          ]
-        }
-      }
+      {"id": "choque", "priority": 100, "when": {"all": [{"field": "shock", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Febre com choque exige protocolo de sepse e avaliação cardiovascular"]}},
+      {"id": "embolia", "priority": 100, "when": {"all": [{"field": "embolic_signs", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Fenômeno embólico associado a febre pode indicar endocardite complicada"]}},
+      {"id": "sopro-ic", "priority": 90, "when": {"all": [{"field": "new_murmur_or_hf", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Novo sopro ou insuficiência cardíaca com febre exige investigação de endocardite"]}},
+      {"id": "alto-risco", "priority": 70, "when": {"all": [{"field": "prosthesis_device_chd", "op": "truthy"}]}, "add": {"risk": "prioritario", "suggested_tests": ["Hemoculturas antes de antibiótico quando viável e ecocardiograma conforme probabilidade"]}},
+      {"id": "miocardio", "priority": 80, "when": {"all": [{"field": "chest_pain_troponin", "op": "truthy"}]}, "add": {"risk": "urgente", "differentials": ["Miocardite", "Pericardite", "Síndrome coronariana"]}},
+      {"id": "bacteremia", "priority": 60, "when": {"all": [{"field": "recent_bacteremia_procedure", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Bacteremia/procedimento aumenta probabilidade de infecção endovascular"]}}
     ],
-    "default_tests": [
-      "Sinais vitais e avaliação de sepse",
-      "Hemograma e marcadores inflamatórios conforme contexto"
-    ],
-    "differentials": [
-      "Endocardite infecciosa",
-      "Miocardite",
-      "Pericardite",
-      "Infecção não cardíaca",
-      "Trombose infectada de dispositivo"
-    ],
-    "red_flags": [
-      "Choque",
-      "Embolia",
-      "Novo sopro",
-      "Insuficiência cardíaca",
-      "Prótese/dispositivo"
-    ],
-    "ambulatory_flow": [
-      "Definir risco e foco",
-      "Encaminhar rapidamente quando houver fatores de alto risco",
-      "Não iniciar antibiótico empírico ambulatorial sem avaliação quando houver suspeita de endocardite"
-    ],
-    "emergency_flow": [
-      "Protocolo de sepse quando indicado",
-      "Hemoculturas e imagem cardíaca conforme probabilidade",
-      "Discussão com infectologia/cardiologia/cirurgia"
-    ],
-    "tags": [
-      "febre",
-      "endocardite",
-      "miocardite",
-      "prótese"
-    ],
-    "source_refs": [
-      "Guidelines for infective endocarditis and myocarditis"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements",
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/endocarditis-guidelines/"
-    ],
+    "default_tests": ["Sinais vitais e avaliação de sepse", "Hemograma e marcadores inflamatórios conforme contexto"],
+    "differentials": ["Endocardite infecciosa", "Miocardite", "Pericardite", "Infecção não cardíaca", "Trombose infectada de dispositivo"],
+    "red_flags": ["Choque", "Embolia", "Novo sopro", "Insuficiência cardíaca", "Prótese/dispositivo"],
+    "ambulatory_flow": ["Definir risco e foco", "Encaminhar rapidamente quando houver fatores de alto risco", "Não iniciar antibiótico empírico ambulatorial sem avaliação quando houver suspeita de endocardite"],
+    "emergency_flow": ["Protocolo de sepse quando indicado", "Hemoculturas e imagem cardíaca conforme probabilidade", "Discussão com infectologia/cardiologia/cirurgia"],
+    "tags": ["febre", "endocardite", "miocardite", "prótese"],
+    "source_refs": ["Guidelines for infective endocarditis and myocarditis"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements", "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/endocarditis-guidelines/"],
     "review_status": "revisado",
     "review_note": "A antibioticoterapia depende de coleta microbiológica, gravidade e protocolo local.",
     "version": 1
@@ -1798,260 +277,34 @@
   {
     "slug": "sintomas-cardiovasculares-na-crianca",
     "name": "Sintomas cardiovasculares na criança",
-    "aliases": [
-      "dor torácica infantil",
-      "sopro e desmaio",
-      "cansaço na criança"
-    ],
-    "areas": [
-      "cardiopediatria"
-    ],
+    "aliases": ["dor torácica infantil", "sopro e desmaio", "cansaço na criança"],
+    "areas": ["cardiopediatria"],
     "summary": "Triagem pediátrica integrada de dor torácica, síncope, palpitação, sopro, cianose e intolerância ao esforço.",
     "questions": [
-      {
-        "id": "symptoms",
-        "label": "Sintomas presentes",
-        "type": "multiselect",
-        "required": true,
-        "section": "Apresentação",
-        "options": [
-          {
-            "value": "chest_pain",
-            "label": "Dor torácica"
-          },
-          {
-            "value": "syncope",
-            "label": "Síncope"
-          },
-          {
-            "value": "palpitations",
-            "label": "Palpitações"
-          },
-          {
-            "value": "dyspnea",
-            "label": "Dispneia/intolerância"
-          },
-          {
-            "value": "cyanosis",
-            "label": "Cianose"
-          },
-          {
-            "value": "murmur",
-            "label": "Sopro"
-          }
-        ]
-      },
-      {
-        "id": "during_exercise",
-        "label": "O sintoma ocorre durante exercício?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "family_sudden_death",
-        "label": "Há morte súbita familiar precoce ou cardiomiopatia/canalopatia?",
-        "type": "boolean",
-        "section": "História familiar"
-      },
-      {
-        "id": "abnormal_exam",
-        "label": "Há cianose, sopro patológico, pulsos anormais ou sinais de insuficiência cardíaca?",
-        "type": "boolean",
-        "section": "Exame"
-      },
-      {
-        "id": "recent_infection_troponin",
-        "label": "Houve infecção recente com dor, dispneia ou troponina elevada?",
-        "type": "boolean",
-        "section": "Miocardite"
-      },
-      {
-        "id": "unstable",
-        "label": "Há alteração mental, hipotensão, hipóxia ou desconforto importante?",
-        "type": "boolean",
-        "required": true,
-        "section": "Emergência"
-      }
+      {"id": "symptoms", "label": "Sintomas presentes", "type": "multiselect", "required": true, "section": "Apresentação", "options": [{"value": "chest_pain", "label": "Dor torácica"}, {"value": "syncope", "label": "Síncope"}, {"value": "palpitations", "label": "Palpitações"}, {"value": "dyspnea", "label": "Dispneia/intolerância"}, {"value": "cyanosis", "label": "Cianose"}, {"value": "murmur", "label": "Sopro"}]},
+      {"id": "during_exercise", "label": "O sintoma ocorre durante exercício?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "family_sudden_death", "label": "Há morte súbita familiar precoce ou cardiomiopatia/canalopatia?", "type": "boolean", "section": "História familiar"},
+      {"id": "abnormal_exam", "label": "Há cianose, sopro patológico, pulsos anormais ou sinais de insuficiência cardíaca?", "type": "boolean", "section": "Exame"},
+      {"id": "recent_infection_troponin", "label": "Houve infecção recente com dor, dispneia ou troponina elevada?", "type": "boolean", "section": "Miocardite"},
+      {"id": "unstable", "label": "Há alteração mental, hipotensão, hipóxia ou desconforto importante?", "type": "boolean", "required": true, "section": "Emergência"}
     ],
     "rules": [
-      {
-        "id": "instavel",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "unstable",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Criança instável com possível causa cardiovascular"
-          ]
-        }
-      },
-      {
-        "id": "esforco",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "during_exercise",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Sintoma durante exercício requer avaliação cardiológica prioritária"
-          ],
-          "suggested_tests": [
-            "ECG e ecocardiograma conforme sintoma"
-          ]
-        }
-      },
-      {
-        "id": "familia",
-        "priority": 85,
-        "when": {
-          "all": [
-            {
-              "field": "family_sudden_death",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "História familiar aumenta suspeita de cardiomiopatia/canalopatia"
-          ]
-        }
-      },
-      {
-        "id": "exame",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "abnormal_exam",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Exame cardiovascular anormal exige avaliação especializada"
-          ]
-        }
-      },
-      {
-        "id": "miocardite",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "recent_infection_troponin",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Miocardite/pericardite"
-          ],
-          "suggested_tests": [
-            "ECG, troponina e ecocardiograma"
-          ]
-        }
-      },
-      {
-        "id": "sincope",
-        "priority": 70,
-        "when": {
-          "all": [
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "syncope"
-            }
-          ]
-        },
-        "add": {
-          "suggested_tests": [
-            "ECG e caracterização detalhada da síncope"
-          ]
-        }
-      },
-      {
-        "id": "cianose",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "cyanosis"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Cianose central exige confirmação de saturação e avaliação imediata"
-          ]
-        }
-      }
+      {"id": "instavel", "priority": 100, "when": {"all": [{"field": "unstable", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Criança instável com possível causa cardiovascular"]}},
+      {"id": "esforco", "priority": 90, "when": {"all": [{"field": "during_exercise", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Sintoma durante exercício requer avaliação cardiológica prioritária"], "suggested_tests": ["ECG e ecocardiograma conforme sintoma"]}},
+      {"id": "familia", "priority": 85, "when": {"all": [{"field": "family_sudden_death", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["História familiar aumenta suspeita de cardiomiopatia/canalopatia"]}},
+      {"id": "exame", "priority": 90, "when": {"all": [{"field": "abnormal_exam", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Exame cardiovascular anormal exige avaliação especializada"]}},
+      {"id": "miocardite", "priority": 80, "when": {"all": [{"field": "recent_infection_troponin", "op": "truthy"}]}, "add": {"risk": "urgente", "differentials": ["Miocardite/pericardite"], "suggested_tests": ["ECG, troponina e ecocardiograma"]}},
+      {"id": "sincope", "priority": 70, "when": {"all": [{"field": "symptoms", "op": "contains", "value": "syncope"}]}, "add": {"suggested_tests": ["ECG e caracterização detalhada da síncope"]}},
+      {"id": "cianose", "priority": 95, "when": {"all": [{"field": "symptoms", "op": "contains", "value": "cyanosis"}]}, "add": {"risk": "urgente", "red_flags": ["Cianose central exige confirmação de saturação e avaliação imediata"]}}
     ],
-    "default_tests": [
-      "Sinais vitais, oximetria e exame cardiovascular",
-      "ECG conforme sintoma"
-    ],
-    "differentials": [
-      "Causa musculoesquelética",
-      "Síncope reflexa",
-      "Arritmia",
-      "Cardiopatia congênita",
-      "Miocardite",
-      "Cardiomiopatia",
-      "Doença respiratória"
-    ],
-    "red_flags": [
-      "Esforço",
-      "Cianose",
-      "Exame anormal",
-      "Morte súbita familiar",
-      "Instabilidade"
-    ],
-    "ambulatory_flow": [
-      "Definir sintoma predominante",
-      "Realizar ECG quando indicado",
-      "Encaminhar à cardiopediatria conforme red flags"
-    ],
-    "emergency_flow": [
-      "Suporte inicial",
-      "Monitorização e exames dirigidos",
-      "Transferir para centro pediátrico quando necessário"
-    ],
-    "tags": [
-      "pediatria",
-      "sopro",
-      "desmaio",
-      "dor torácica",
-      "cianose"
-    ],
-    "source_refs": [
-      "AHA pediatric cardiovascular scientific statements"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/guidelines-and-statements"
-    ],
+    "default_tests": ["Sinais vitais, oximetria e exame cardiovascular", "ECG conforme sintoma"],
+    "differentials": ["Causa musculoesquelética", "Síncope reflexa", "Arritmia", "Cardiopatia congênita", "Miocardite", "Cardiomiopatia", "Doença respiratória"],
+    "red_flags": ["Esforço", "Cianose", "Exame anormal", "Morte súbita familiar", "Instabilidade"],
+    "ambulatory_flow": ["Definir sintoma predominante", "Realizar ECG quando indicado", "Encaminhar à cardiopediatria conforme red flags"],
+    "emergency_flow": ["Suporte inicial", "Monitorização e exames dirigidos", "Transferir para centro pediátrico quando necessário"],
+    "tags": ["pediatria", "sopro", "desmaio", "dor torácica", "cianose"],
+    "source_refs": ["AHA pediatric cardiovascular scientific statements"],
+    "source_urls": ["https://professional.heart.org/en/guidelines-and-statements"],
     "review_status": "revisado",
     "review_note": "Triagem geral; abrir o assistente específico quando a hipótese estiver definida.",
     "version": 1
@@ -2059,273 +312,34 @@
   {
     "slug": "sintomas-cardiovasculares-na-gravidez",
     "name": "Sintomas cardiovasculares na gravidez e puerpério",
-    "aliases": [
-      "falta de ar na gestante",
-      "dor no peito na gravidez",
-      "palpitação no puerpério"
-    ],
-    "areas": [
-      "gravidez"
-    ],
+    "aliases": ["falta de ar na gestante", "dor no peito na gravidez", "palpitação no puerpério"],
+    "areas": ["gravidez"],
     "summary": "Triagem de sintomas cardiovasculares durante gestação e pós-parto, com foco em pré-eclâmpsia, cardiomiopatia, tromboembolismo, aortopatia e arritmias.",
     "questions": [
-      {
-        "id": "pregnancy_stage",
-        "label": "Período",
-        "type": "select",
-        "required": true,
-        "section": "Contexto",
-        "options": [
-          {
-            "value": "pregnant",
-            "label": "Gestação"
-          },
-          {
-            "value": "postpartum",
-            "label": "Puerpério"
-          }
-        ]
-      },
-      {
-        "id": "symptoms",
-        "label": "Sintomas",
-        "type": "multiselect",
-        "required": true,
-        "section": "Apresentação",
-        "options": [
-          {
-            "value": "dyspnea",
-            "label": "Dispneia/ortopneia"
-          },
-          {
-            "value": "chest_pain",
-            "label": "Dor torácica"
-          },
-          {
-            "value": "palpitations",
-            "label": "Palpitações"
-          },
-          {
-            "value": "syncope",
-            "label": "Síncope"
-          },
-          {
-            "value": "headache_visual",
-            "label": "Cefaleia/alteração visual"
-          },
-          {
-            "value": "edema",
-            "label": "Edema"
-          }
-        ]
-      },
-      {
-        "id": "hypoxemia_or_instability",
-        "label": "Há hipóxia, hipotensão, alteração mental ou desconforto importante?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "hypertension",
-        "label": "Há pressão elevada ou suspeita de pré-eclâmpsia?",
-        "type": "boolean",
-        "section": "Hipertensão"
-      },
-      {
-        "id": "unilateral_leg_or_hemoptysis",
-        "label": "Há edema unilateral de perna ou hemoptise?",
-        "type": "boolean",
-        "section": "Tromboembolismo"
-      },
-      {
-        "id": "known_heart_disease",
-        "label": "Há cardiopatia, prótese mecânica, hipertensão pulmonar ou aortopatia?",
-        "type": "boolean",
-        "section": "Alto risco"
-      }
+      {"id": "pregnancy_stage", "label": "Período", "type": "select", "required": true, "section": "Contexto", "options": [{"value": "pregnant", "label": "Gestação"}, {"value": "postpartum", "label": "Puerpério"}]},
+      {"id": "symptoms", "label": "Sintomas", "type": "multiselect", "required": true, "section": "Apresentação", "options": [{"value": "dyspnea", "label": "Dispneia/ortopneia"}, {"value": "chest_pain", "label": "Dor torácica"}, {"value": "palpitations", "label": "Palpitações"}, {"value": "syncope", "label": "Síncope"}, {"value": "headache_visual", "label": "Cefaleia/alteração visual"}, {"value": "edema", "label": "Edema"}]},
+      {"id": "hypoxemia_or_instability", "label": "Há hipóxia, hipotensão, alteração mental ou desconforto importante?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "hypertension", "label": "Há pressão elevada ou suspeita de pré-eclâmpsia?", "type": "boolean", "section": "Hipertensão"},
+      {"id": "unilateral_leg_or_hemoptysis", "label": "Há edema unilateral de perna ou hemoptise?", "type": "boolean", "section": "Tromboembolismo"},
+      {"id": "known_heart_disease", "label": "Há cardiopatia, prótese mecânica, hipertensão pulmonar ou aortopatia?", "type": "boolean", "section": "Alto risco"}
     ],
     "rules": [
-      {
-        "id": "instabilidade",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "hypoxemia_or_instability",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Gestante/puérpera instável requer atendimento imediato e equipe multidisciplinar"
-          ]
-        }
-      },
-      {
-        "id": "embolia",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "unilateral_leg_or_hemoptysis",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Sinais compatíveis com tromboembolismo"
-          ]
-        }
-      },
-      {
-        "id": "hipertensao",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "hypertension",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Hipertensão com sintomas pode indicar pré-eclâmpsia grave"
-          ],
-          "suggested_tests": [
-            "Pressão confirmada, urina, hemograma/plaquetas, função renal e hepática conforme protocolo obstétrico"
-          ]
-        }
-      },
-      {
-        "id": "dispneia",
-        "priority": 85,
-        "when": {
-          "all": [
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "dyspnea"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Cardiomiopatia periparto",
-            "Edema pulmonar",
-            "Embolia pulmonar"
-          ]
-        }
-      },
-      {
-        "id": "dor",
-        "priority": 85,
-        "when": {
-          "all": [
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "chest_pain"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Síndrome coronariana",
-            "Dissecção espontânea de coronária",
-            "Síndrome aórtica",
-            "Embolia pulmonar"
-          ]
-        }
-      },
-      {
-        "id": "alto-risco",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "known_heart_disease",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "messages": [
-            "Cardiopatia de alto risco requer Pregnancy Heart Team"
-          ]
-        }
-      },
-      {
-        "id": "puerperio",
-        "priority": 50,
-        "when": {
-          "all": [
-            {
-              "field": "pregnancy_stage",
-              "op": "eq",
-              "value": "postpartum"
-            }
-          ]
-        },
-        "add": {
-          "messages": [
-            "O risco tromboembólico e de cardiomiopatia permanece relevante no puerpério"
-          ]
-        }
-      }
+      {"id": "instabilidade", "priority": 100, "when": {"all": [{"field": "hypoxemia_or_instability", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Gestante/puérpera instável requer atendimento imediato e equipe multidisciplinar"]}},
+      {"id": "embolia", "priority": 95, "when": {"all": [{"field": "unilateral_leg_or_hemoptysis", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Sinais compatíveis com tromboembolismo"]}},
+      {"id": "hipertensao", "priority": 90, "when": {"all": [{"field": "hypertension", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Hipertensão com sintomas pode indicar pré-eclâmpsia grave"], "suggested_tests": ["Pressão confirmada, urina, hemograma/plaquetas, função renal e hepática conforme protocolo obstétrico"]}},
+      {"id": "dispneia", "priority": 85, "when": {"all": [{"field": "symptoms", "op": "contains", "value": "dyspnea"}]}, "add": {"risk": "urgente", "differentials": ["Cardiomiopatia periparto", "Edema pulmonar", "Embolia pulmonar"]}},
+      {"id": "dor", "priority": 85, "when": {"all": [{"field": "symptoms", "op": "contains", "value": "chest_pain"}]}, "add": {"risk": "urgente", "differentials": ["Síndrome coronariana", "Dissecção espontânea de coronária", "Síndrome aórtica", "Embolia pulmonar"]}},
+      {"id": "alto-risco", "priority": 80, "when": {"all": [{"field": "known_heart_disease", "op": "truthy"}]}, "add": {"risk": "urgente", "messages": ["Cardiopatia de alto risco requer Pregnancy Heart Team"]}},
+      {"id": "puerperio", "priority": 50, "when": {"all": [{"field": "pregnancy_stage", "op": "eq", "value": "postpartum"}]}, "add": {"messages": ["O risco tromboembólico e de cardiomiopatia permanece relevante no puerpério"]}}
     ],
-    "default_tests": [
-      "Sinais vitais, pressão e oximetria",
-      "ECG quando houver sintoma cardiovascular"
-    ],
-    "differentials": [
-      "Pré-eclâmpsia",
-      "Cardiomiopatia periparto",
-      "Embolia pulmonar",
-      "Arritmia",
-      "Síndrome coronariana",
-      "Aortopatia"
-    ],
-    "red_flags": [
-      "Hipóxia",
-      "Hipotensão",
-      "Dor torácica",
-      "Síncope",
-      "Hipertensão sintomática",
-      "Cardiopatia de alto risco"
-    ],
-    "ambulatory_flow": [
-      "Distinguir sintomas fisiológicos de sinais de doença",
-      "Encaminhar rapidamente quando houver red flags",
-      "Coordenar cardiologia e obstetrícia"
-    ],
-    "emergency_flow": [
-      "Estabilização materna",
-      "Avaliação obstétrica e cardiovascular simultânea",
-      "Exames de imagem não devem ser negados quando clinicamente necessários"
-    ],
-    "tags": [
-      "gestante",
-      "puerpério",
-      "pré-eclâmpsia",
-      "cardiomiopatia",
-      "embolia"
-    ],
-    "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
-    ],
-    "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"
-    ],
+    "default_tests": ["Sinais vitais, pressão e oximetria", "ECG quando houver sintoma cardiovascular"],
+    "differentials": ["Pré-eclâmpsia", "Cardiomiopatia periparto", "Embolia pulmonar", "Arritmia", "Síndrome coronariana", "Aortopatia"],
+    "red_flags": ["Hipóxia", "Hipotensão", "Dor torácica", "Síncope", "Hipertensão sintomática", "Cardiopatia de alto risco"],
+    "ambulatory_flow": ["Distinguir sintomas fisiológicos de sinais de doença", "Encaminhar rapidamente quando houver red flags", "Coordenar cardiologia e obstetrícia"],
+    "emergency_flow": ["Estabilização materna", "Avaliação obstétrica e cardiovascular simultânea", "Exames de imagem não devem ser negados quando clinicamente necessários"] ,
+    "tags": ["gestante", "puerpério", "pré-eclâmpsia", "cardiomiopatia", "embolia"],
+    "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"],
+    "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"],
     "review_status": "revisado",
     "review_note": "Não reproduz mWHO 2.0; avaliação especializada permanece obrigatória.",
     "version": 1
@@ -2333,303 +347,34 @@
   {
     "slug": "sintomas-cardiovasculares-no-paciente-oncologico",
     "name": "Sintomas cardiovasculares no paciente oncológico",
-    "aliases": [
-      "cardiotoxicidade sintomática",
-      "dor e falta de ar durante quimioterapia"
-    ],
-    "areas": [
-      "cardiooncologia"
-    ],
+    "aliases": ["cardiotoxicidade sintomática", "dor e falta de ar durante quimioterapia"],
+    "areas": ["cardiooncologia"],
     "summary": "Triagem de sintomas cardiovasculares durante ou após terapia oncológica, incluindo insuficiência cardíaca, miocardite, isquemia, hipertensão, arritmias e tromboembolismo.",
     "questions": [
-      {
-        "id": "therapy_class",
-        "label": "Tratamento atual/recente",
-        "type": "select",
-        "required": true,
-        "section": "Exposição",
-        "options": [
-          {
-            "value": "anthracycline",
-            "label": "Antraciclina"
-          },
-          {
-            "value": "checkpoint",
-            "label": "Inibidor de checkpoint"
-          },
-          {
-            "value": "vegf",
-            "label": "Inibidor de VEGF"
-          },
-          {
-            "value": "fluoropyrimidine",
-            "label": "Fluoropirimidina"
-          },
-          {
-            "value": "radiation",
-            "label": "Radioterapia torácica"
-          },
-          {
-            "value": "other",
-            "label": "Outro"
-          }
-        ]
-      },
-      {
-        "id": "symptoms",
-        "label": "Sintomas",
-        "type": "multiselect",
-        "required": true,
-        "section": "Apresentação",
-        "options": [
-          {
-            "value": "dyspnea_edema",
-            "label": "Dispneia/edema"
-          },
-          {
-            "value": "chest_pain",
-            "label": "Dor torácica"
-          },
-          {
-            "value": "palpitations_syncope",
-            "label": "Palpitação/síncope"
-          },
-          {
-            "value": "weakness",
-            "label": "Fraqueza muscular"
-          },
-          {
-            "value": "hypertension",
-            "label": "Pressão elevada"
-          }
-        ]
-      },
-      {
-        "id": "troponin_or_ecg_change",
-        "label": "Há troponina elevada ou alteração nova no ECG?",
-        "type": "boolean",
-        "section": "Exames"
-      },
-      {
-        "id": "hypoxemia_or_instability",
-        "label": "Há hipóxia, hipotensão ou alteração mental?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "fever_or_neutropenia",
-        "label": "Há febre ou neutropenia?",
-        "type": "boolean",
-        "section": "Infecção"
-      },
-      {
-        "id": "thrombosis_signs",
-        "label": "Há edema unilateral, hemoptise ou déficit embólico?",
-        "type": "boolean",
-        "section": "Trombose"
-      }
+      {"id": "therapy_class", "label": "Tratamento atual/recente", "type": "select", "required": true, "section": "Exposição", "options": [{"value": "anthracycline", "label": "Antraciclina"}, {"value": "checkpoint", "label": "Inibidor de checkpoint"}, {"value": "vegf", "label": "Inibidor de VEGF"}, {"value": "fluoropyrimidine", "label": "Fluoropirimidina"}, {"value": "radiation", "label": "Radioterapia torácica"}, {"value": "other", "label": "Outro"}]},
+      {"id": "symptoms", "label": "Sintomas", "type": "multiselect", "required": true, "section": "Apresentação", "options": [{"value": "dyspnea_edema", "label": "Dispneia/edema"}, {"value": "chest_pain", "label": "Dor torácica"}, {"value": "palpitations_syncope", "label": "Palpitação/síncope"}, {"value": "weakness", "label": "Fraqueza muscular"}, {"value": "hypertension", "label": "Pressão elevada"}]},
+      {"id": "troponin_or_ecg_change", "label": "Há troponina elevada ou alteração nova no ECG?", "type": "boolean", "section": "Exames"},
+      {"id": "hypoxemia_or_instability", "label": "Há hipóxia, hipotensão ou alteração mental?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "fever_or_neutropenia", "label": "Há febre ou neutropenia?", "type": "boolean", "section": "Infecção"},
+      {"id": "thrombosis_signs", "label": "Há edema unilateral, hemoptise ou déficit embólico?", "type": "boolean", "section": "Trombose"}
     ],
     "rules": [
-      {
-        "id": "instabilidade",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "hypoxemia_or_instability",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Paciente oncológico instável requer atendimento imediato"
-          ]
-        }
-      },
-      {
-        "id": "trombose",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "thrombosis_signs",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Suspeita de tromboembolismo arterial ou venoso"
-          ]
-        }
-      },
-      {
-        "id": "checkpoint",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "therapy_class",
-              "op": "eq",
-              "value": "checkpoint"
-            },
-            {
-              "field": "troponin_or_ecg_change",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Possível miocardite por imunoterapia"
-          ],
-          "suggested_tests": [
-            "ECG/monitorização, troponina seriada, ecocardiograma e avaliação de miosite"
-          ]
-        }
-      },
-      {
-        "id": "dor-fluoropirimidina",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "therapy_class",
-              "op": "eq",
-              "value": "fluoropyrimidine"
-            },
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "chest_pain"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Dor durante fluoropirimidina exige excluir isquemia/vasoespasmo"
-          ]
-        }
-      },
-      {
-        "id": "ic-antraciclina",
-        "priority": 85,
-        "when": {
-          "all": [
-            {
-              "field": "therapy_class",
-              "op": "eq",
-              "value": "anthracycline"
-            },
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "dyspnea_edema"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Disfunção ventricular relacionada ao tratamento"
-          ],
-          "suggested_tests": [
-            "Ecocardiograma com comparação de FEVE/GLS e biomarcadores"
-          ]
-        }
-      },
-      {
-        "id": "vegf",
-        "priority": 80,
-        "when": {
-          "all": [
-            {
-              "field": "therapy_class",
-              "op": "eq",
-              "value": "vegf"
-            },
-            {
-              "field": "symptoms",
-              "op": "contains",
-              "value": "hypertension"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Hipertensão sintomática durante anti-VEGF exige avaliar órgão-alvo"
-          ]
-        }
-      },
-      {
-        "id": "febre",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "fever_or_neutropenia",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Febre/neutropenia exige protocolo oncológico de infecção, além da avaliação cardiovascular"
-          ]
-        }
-      }
+      {"id": "instabilidade", "priority": 100, "when": {"all": [{"field": "hypoxemia_or_instability", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Paciente oncológico instável requer atendimento imediato"]}},
+      {"id": "trombose", "priority": 95, "when": {"all": [{"field": "thrombosis_signs", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Suspeita de tromboembolismo arterial ou venoso"]}},
+      {"id": "checkpoint", "priority": 95, "when": {"all": [{"field": "therapy_class", "op": "eq", "value": "checkpoint"}, {"field": "troponin_or_ecg_change", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Possível miocardite por imunoterapia"], "suggested_tests": ["ECG/monitorização, troponina seriada, ecocardiograma e avaliação de miosite"]}},
+      {"id": "dor-fluoropirimidina", "priority": 90, "when": {"all": [{"field": "therapy_class", "op": "eq", "value": "fluoropyrimidine"}, {"field": "symptoms", "op": "contains", "value": "chest_pain"}]}, "add": {"risk": "urgente", "red_flags": ["Dor durante fluoropirimidina exige excluir isquemia/vasoespasmo"]}},
+      {"id": "ic-antraciclina", "priority": 85, "when": {"all": [{"field": "therapy_class", "op": "eq", "value": "anthracycline"}, {"field": "symptoms", "op": "contains", "value": "dyspnea_edema"}]}, "add": {"risk": "urgente", "differentials": ["Disfunção ventricular relacionada ao tratamento"], "suggested_tests": ["Ecocardiograma com comparação de FEVE/GLS e biomarcadores"]}},
+      {"id": "vegf", "priority": 80, "when": {"all": [{"field": "therapy_class", "op": "eq", "value": "vegf"}, {"field": "symptoms", "op": "contains", "value": "hypertension"}]}, "add": {"risk": "urgente", "red_flags": ["Hipertensão sintomática durante anti-VEGF exige avaliar órgão-alvo"]}},
+      {"id": "febre", "priority": 90, "when": {"all": [{"field": "fever_or_neutropenia", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Febre/neutropenia exige protocolo oncológico de infecção, além da avaliação cardiovascular"]}}
     ],
-    "default_tests": [
-      "Sinais vitais, pressão, oximetria e ECG",
-      "Revisar terapia e data do último ciclo"
-    ],
-    "differentials": [
-      "Insuficiência cardíaca",
-      "Miocardite por imunoterapia",
-      "Síndrome coronariana/vasoespasmo",
-      "Tromboembolismo",
-      "Infecção",
-      "Progressão oncológica"
-    ],
-    "red_flags": [
-      "Instabilidade",
-      "Troponina/ECG novo",
-      "Síncope",
-      "Hipóxia",
-      "Trombose",
-      "Febre/neutropenia"
-    ],
-    "ambulatory_flow": [
-      "Relacionar sintomas à linha do tempo terapêutica",
-      "Comparar exames com baseline",
-      "Coordenar cardio-oncologia e oncologia"
-    ],
-    "emergency_flow": [
-      "Estabilizar",
-      "Comunicar oncologia",
-      "Investigar toxicidade e diagnósticos comuns sem viés de atribuição"
-    ],
-    "tags": [
-      "câncer",
-      "cardiotoxicidade",
-      "imunoterapia",
-      "antraciclina",
-      "trombose"
-    ],
-    "source_refs": [
-      "2022 ESC Guidelines on Cardio-Oncology"
-    ],
-    "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"
-    ],
+    "default_tests": ["Sinais vitais, pressão, oximetria e ECG", "Revisar terapia e data do último ciclo"],
+    "differentials": ["Insuficiência cardíaca", "Miocardite por imunoterapia", "Síndrome coronariana/vasoespasmo", "Tromboembolismo", "Infecção", "Progressão oncológica"],
+    "red_flags": ["Instabilidade", "Troponina/ECG novo", "Síncope", "Hipóxia", "Trombose", "Febre/neutropenia"],
+    "ambulatory_flow": ["Relacionar sintomas à linha do tempo terapêutica", "Comparar exames com baseline", "Coordenar cardio-oncologia e oncologia"],
+    "emergency_flow": ["Estabilizar", "Comunicar oncologia", "Investigar toxicidade e diagnósticos comuns sem viés de atribuição"] ,
+    "tags": ["câncer", "cardiotoxicidade", "imunoterapia", "antraciclina", "trombose"],
+    "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"],
+    "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
     "review_status": "revisado",
     "review_note": "Não reproduz algoritmos HFA-ICOS; decisões dependem de equipe multidisciplinar.",
     "version": 1
@@ -2637,240 +382,35 @@
   {
     "slug": "queda-ou-delirium-no-idoso-cardiopata",
     "name": "Queda ou delirium no idoso cardiopata",
-    "aliases": [
-      "confusão no idoso",
-      "queda no cardiopata",
-      "deterioração funcional"
-    ],
-    "areas": [
-      "cardiogeriatria"
-    ],
+    "aliases": ["confusão no idoso", "queda no cardiopata", "deterioração funcional"],
+    "areas": ["cardiogeriatria"],
     "summary": "Triagem de queda, confusão aguda ou perda funcional como possível manifestação de hipotensão, arritmia, infecção, insuficiência cardíaca ou efeito medicamentoso.",
     "questions": [
-      {
-        "id": "acute_confusion",
-        "label": "A confusão é aguda ou flutuante?",
-        "type": "boolean",
-        "required": true,
-        "section": "Delirium"
-      },
-      {
-        "id": "trauma_or_anticoagulant",
-        "label": "Houve trauma craniano ou uso de anticoagulante?",
-        "type": "boolean",
-        "required": true,
-        "section": "Red flags"
-      },
-      {
-        "id": "syncope_or_no_memory",
-        "label": "Pode ter ocorrido síncope ou há amnésia do evento?",
-        "type": "boolean",
-        "section": "Causa cardíaca"
-      },
-      {
-        "id": "hypotension_bradycardia",
-        "label": "Há hipotensão, bradicardia ou ortostatismo?",
-        "type": "boolean",
-        "section": "Hemodinâmica"
-      },
-      {
-        "id": "dyspnea_edema",
-        "label": "Há dispneia, edema ou ganho de peso?",
-        "type": "boolean",
-        "section": "Insuficiência cardíaca"
-      },
-      {
-        "id": "new_drug",
-        "label": "Houve medicamento novo ou ajuste recente?",
-        "type": "boolean",
-        "section": "Medicamentos"
-      },
-      {
-        "id": "fever_or_low_intake",
-        "label": "Há febre, baixa ingestão ou sintomas urinários/respiratórios?",
-        "type": "boolean",
-        "section": "Precipitantes"
-      }
+      {"id": "acute_confusion", "label": "A confusão é aguda ou flutuante?", "type": "boolean", "required": true, "section": "Delirium"},
+      {"id": "trauma_or_anticoagulant", "label": "Houve trauma craniano ou uso de anticoagulante?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "syncope_or_no_memory", "label": "Pode ter ocorrido síncope ou há amnésia do evento?", "type": "boolean", "section": "Causa cardíaca"},
+      {"id": "hypotension_bradycardia", "label": "Há hipotensão, bradicardia ou ortostatismo?", "type": "boolean", "section": "Hemodinâmica"},
+      {"id": "dyspnea_edema", "label": "Há dispneia, edema ou ganho de peso?", "type": "boolean", "section": "Insuficiência cardíaca"},
+      {"id": "new_drug", "label": "Houve medicamento novo ou ajuste recente?", "type": "boolean", "section": "Medicamentos"},
+      {"id": "fever_or_low_intake", "label": "Há febre, baixa ingestão ou sintomas urinários/respiratórios?", "type": "boolean", "section": "Precipitantes"}
     ],
     "rules": [
-      {
-        "id": "trauma",
-        "priority": 100,
-        "when": {
-          "all": [
-            {
-              "field": "trauma_or_anticoagulant",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Trauma craniano ou anticoagulação exige avaliação imediata de sangramento"
-          ]
-        }
-      },
-      {
-        "id": "delirium",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "acute_confusion",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Delirium é manifestação aguda de doença até prova em contrário"
-          ],
-          "suggested_tests": [
-            "Glicemia, oximetria, infecção, função renal/eletrólitos e revisão medicamentosa"
-          ]
-        }
-      },
-      {
-        "id": "sincope",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "syncope_or_no_memory",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "differentials": [
-            "Síncope arrítmica",
-            "Hipotensão ortostática"
-          ],
-          "suggested_tests": [
-            "ECG e monitorização conforme risco"
-          ]
-        }
-      },
-      {
-        "id": "hemodinamica",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "hypotension_bradycardia",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Hipotensão/bradicardia pode explicar queda e hipoperfusão"
-          ]
-        }
-      },
-      {
-        "id": "ic",
-        "priority": 70,
-        "when": {
-          "all": [
-            {
-              "field": "dyspnea_edema",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "differentials": [
-            "Insuficiência cardíaca descompensada"
-          ]
-        }
-      },
-      {
-        "id": "farmaco",
-        "priority": 60,
-        "when": {
-          "all": [
-            {
-              "field": "new_drug",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "messages": [
-            "Revisar sedativos, anti-hipertensivos, diuréticos, hipoglicemiantes e antitrombóticos"
-          ]
-        }
-      },
-      {
-        "id": "infeccao",
-        "priority": 70,
-        "when": {
-          "all": [
-            {
-              "field": "fever_or_low_intake",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "prioritario",
-          "differentials": [
-            "Infecção e desidratação"
-          ]
-        }
-      }
+      {"id": "trauma", "priority": 100, "when": {"all": [{"field": "trauma_or_anticoagulant", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Trauma craniano ou anticoagulação exige avaliação imediata de sangramento"]}},
+      {"id": "delirium", "priority": 95, "when": {"all": [{"field": "acute_confusion", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Delirium é manifestação aguda de doença até prova em contrário"], "suggested_tests": ["Glicemia, oximetria, infecção, função renal/eletrólitos e revisão medicamentosa"]}},
+      {"id": "sincope", "priority": 90, "when": {"all": [{"field": "syncope_or_no_memory", "op": "truthy"}]}, "add": {"risk": "urgente", "differentials": ["Síncope arrítmica", "Hipotensão ortostática"], "suggested_tests": ["ECG e monitorização conforme risco"]}},
+      {"id": "hemodinamica", "priority": 90, "when": {"all": [{"field": "hypotension_bradycardia", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Hipotensão/bradicardia pode explicar queda e hipoperfusão"]}},
+      {"id": "ic", "priority": 70, "when": {"all": [{"field": "dyspnea_edema", "op": "truthy"}]}, "add": {"risk": "prioritario", "differentials": ["Insuficiência cardíaca descompensada"]}},
+      {"id": "farmaco", "priority": 60, "when": {"all": [{"field": "new_drug", "op": "truthy"}]}, "add": {"messages": ["Revisar sedativos, anti-hipertensivos, diuréticos, hipoglicemiantes e antitrombóticos"]}},
+      {"id": "infeccao", "priority": 70, "when": {"all": [{"field": "fever_or_low_intake", "op": "truthy"}]}, "add": {"risk": "prioritario", "differentials": ["Infecção e desidratação"]}}
     ],
-    "default_tests": [
-      "Sinais vitais incluindo ortostatismo quando seguro",
-      "Glicemia e ECG"
-    ],
-    "differentials": [
-      "Delirium por infecção/metabólico",
-      "Síncope",
-      "Hipotensão ortostática",
-      "Bradicardia",
-      "Efeito medicamentoso",
-      "Insuficiência cardíaca",
-      "Sangramento"
-    ],
-    "red_flags": [
-      "Trauma/anticoagulação",
-      "Delirium",
-      "Hipotensão",
-      "Déficit focal",
-      "Hipóxia"
-    ],
-    "ambulatory_flow": [
-      "Queda recorrente exige avaliação multifatorial",
-      "Revisar medicamentos, cognição, mobilidade e ambiente",
-      "Encaminhar ao pronto atendimento diante de alteração aguda"
-    ],
-    "emergency_flow": [
-      "Avaliar trauma e causas reversíveis",
-      "Prevenir iatrogenia e delirium",
-      "Planejar alta segura com cuidador"
-    ],
-    "tags": [
-      "idoso",
-      "queda",
-      "delirium",
-      "anticoagulante",
-      "bradicardia"
-    ],
-    "source_refs": [
-      "AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit",
-      "AHA Scientific Statement on Deprescribing in CVD, 2026"
-    ],
-    "source_urls": [
-      "https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit",
-      "https://professional.heart.org/en/science-news/deprescribing-in-patients-with-cardiovascular-disease-experiencing-polypharmacy"
-    ],
+    "default_tests": ["Sinais vitais incluindo ortostatismo quando seguro", "Glicemia e ECG"],
+    "differentials": ["Delirium por infecção/metabólico", "Síncope", "Hipotensão ortostática", "Bradicardia", "Efeito medicamentoso", "Insuficiência cardíaca", "Sangramento"],
+    "red_flags": ["Trauma/anticoagulação", "Delirium", "Hipotensão", "Déficit focal", "Hipóxia"],
+    "ambulatory_flow": ["Queda recorrente exige avaliação multifatorial", "Revisar medicamentos, cognição, mobilidade e ambiente", "Encaminhar ao pronto atendimento diante de alteração aguda"] ,
+    "emergency_flow": ["Avaliar trauma e causas reversíveis", "Prevenir iatrogenia e delirium", "Planejar alta segura com cuidador"] ,
+    "tags": ["idoso", "queda", "delirium", "anticoagulante", "bradicardia"],
+    "source_refs": ["AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit", "AHA Scientific Statement on Deprescribing in CVD, 2026"],
+    "source_urls": ["https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit", "https://professional.heart.org/en/science-news/deprescribing-in-patients-with-cardiovascular-disease-experiencing-polypharmacy"],
     "review_status": "revisado",
     "review_note": "Queda no idoso deve ser tratada como síndrome multifatorial.",
     "version": 1
