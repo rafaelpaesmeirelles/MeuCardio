@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 import PatientExamResults from "./PatientExamResults";
 import PatientProfileTimeline from "./PatientProfileTimeline";
@@ -15,27 +15,21 @@ const VAZIO:Record<Kind,string>={problema:"Nenhum problema ativo registrado.",al
 export default function PatientClinicalSummary({patientId,currentEncounterId}:{patientId:number;currentEncounterId:number|null}){
   const [itens,setItens]=useState<Item[]>([]),[kind,setKind]=useState<Kind>("problema"),[name,setName]=useState(""),[details,setDetails]=useState(""),[erro,setErro]=useState("");
   const [timelineRevision,setTimelineRevision]=useState(0);
-  const activePatientId=useRef(patientId);activePatientId.current=patientId;
-  const carregar=(expectedPatientId=patientId)=>api.get<Item[]>(`/pacientes/${expectedPatientId}/resumo-clinico`)
-    .then(data=>{if(activePatientId.current===expectedPatientId)setItens(data);})
-    .catch(e=>{if(activePatientId.current===expectedPatientId)setErro(e.message);});
+  const carregar=()=>api.get<Item[]>(`/pacientes/${patientId}/resumo-clinico`).then(setItens).catch(e=>setErro(e.message));
   useEffect(()=>{
     setItens([]);setKind("problema");setName("");setDetails("");setErro("");setTimelineRevision(0);carregar();
   },[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function adicionar(){
-    const expectedPatientId=patientId,n=name.trim();if(!n)return;setErro("");
+    const n=name.trim();if(!n)return;setErro("");
     try{
-      await api.post(`/pacientes/${expectedPatientId}/resumo-clinico`,{kind,name:n,details:details.trim()||null,source_encounter_id:currentEncounterId||null});
-      if(activePatientId.current!==expectedPatientId)return;
-      setName("");setDetails("");await carregar(expectedPatientId);
-      if(activePatientId.current===expectedPatientId)setTimelineRevision(x=>x+1);
-    }catch(e){if(activePatientId.current===expectedPatientId)setErro(e instanceof Error?e.message:"Falha ao registrar item clínico.");}
+      await api.post(`/pacientes/${patientId}/resumo-clinico`,{kind,name:n,details:details.trim()||null,source_encounter_id:currentEncounterId||null});
+      setName("");setDetails("");await carregar();setTimelineRevision(x=>x+1);
+    }catch(e){setErro(e instanceof Error?e.message:"Falha ao registrar item clínico.");}
   }
   async function inativar(id:number){
-    const expectedPatientId=patientId;
-    try{await api.post(`/pacientes/${expectedPatientId}/resumo-clinico/${id}/inativar`);if(activePatientId.current!==expectedPatientId)return;await carregar(expectedPatientId);if(activePatientId.current===expectedPatientId)setTimelineRevision(x=>x+1);}
-    catch(e){if(activePatientId.current===expectedPatientId)setErro(e instanceof Error?e.message:"Falha ao inativar item clínico.");}
+    try{await api.post(`/pacientes/${patientId}/resumo-clinico/${id}/inativar`);await carregar();setTimelineRevision(x=>x+1);}
+    catch(e){setErro(e instanceof Error?e.message:"Falha ao inativar item clínico.");}
   }
 
   return <>
