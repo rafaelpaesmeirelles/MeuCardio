@@ -65,7 +65,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "emergencia.router", "receituario.router", "clinical_cases.router",
     "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router", "agenda_clinica.router",
     "encounter_artifacts.router", "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
-    "related_content.router", "knowledge_graph.router", "patient_profiles.router",
+    "related_content.router", "knowledge_graph.router", "patient_profiles.router", "patient_timeline.router",
     "account_sync.router",
 }
 
