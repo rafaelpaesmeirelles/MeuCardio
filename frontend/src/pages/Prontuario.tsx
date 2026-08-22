@@ -11,8 +11,7 @@ type Encounter = {
 };
 type Fila = {
   appointment_id:number; scheduled_at:string; appointment_type:string; patient_name:string;
-  patient_profile_id:number|null; state:string; arrived_at:string|null; called_at:string|null;
-  service_started_at:string|null; encounter_id:number|null; encounter_status:string|null;
+  patient_profile_id:number|null; state:string; arrived_at:string|null; encounter_id:number|null;
 };
 type Form = {
   encounter_type:string; chief_complaint:string; anamnesis:string; physical_exam:string;
@@ -26,8 +25,8 @@ const TEXTOS:Array<[keyof Form,string,number]>=[["chief_complaint","Motivo / que
 const ESTADOS:Record<string,string>={scheduled:"Agendado",arrived:"Aguardando",called:"Chamado",in_service:"Em atendimento",completed:"Concluído"};
 
 function quando(v:string){return new Intl.DateTimeFormat("pt-BR",{dateStyle:"short",timeStyle:"short"}).format(new Date(v));}
-function hora(v:string){return new Intl.DateTimeFormat("pt-BR",{hour:"2-digit",minute:"2-digit"}).format(new Date(v));}
-function espera(v:string|null){if(!v)return "—";const m=Math.max(0,Math.floor((Date.now()-new Date(v).getTime())/60000));return `${m} min`;}
+function hora(v:string){return new Date(v).toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});}
+function espera(v:string|null){return v?`${Math.max(0,Math.floor((Date.now()-new Date(v).getTime())/60000))} min`:"—";}
 function doEncounter(e:Encounter):Form{
   const s=e.vital_signs||{}; const v=(k:string)=>s[k]===undefined?"":String(s[k]);
   return {...VAZIO,encounter_type:e.encounter_type||"consulta",chief_complaint:e.chief_complaint||"",anamnesis:e.anamnesis||"",physical_exam:e.physical_exam||"",assessment:e.assessment||"",plan:e.plan||"",pa_sistolica:v("pa_sistolica"),pa_diastolica:v("pa_diastolica"),fc:v("fc"),fr:v("fr"),spo2:v("spo2"),temperatura:v("temperatura")};
@@ -47,7 +46,7 @@ export default function Prontuario(){
   const paciente=pacientes.find(p=>p.id===pid)||null;
 
   const carregarFila=()=>api.get<Fila[]>("/agenda-clinica/hoje").then(setFila).catch(e=>setErro(e.message));
-  useEffect(()=>{api.get<Paciente[]>("/pacientes").then(lista=>{setPacientes(lista);if(!pid&&lista[0])setQs({paciente:String(lista[0].id)},{replace:true});}).catch(e=>setErro(e.message));carregarFila();},[]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{api.get<Paciente[]>("/pacientes").then(lista=>{setPacientes(lista);if(!pid&&lista[0])setQs({paciente:String(lista[0].id)},{replace:true});}).catch(e=>setErro(e.message));},[]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(()=>{if(!pid){setEncounters([]);return;}api.get<Encounter[]>(`/pacientes/${pid}/atendimentos`).then(setEncounters).catch(e=>setErro(e.message));},[pid]);
 
   const filtrados=useMemo(()=>{const q=busca.trim().toLocaleLowerCase("pt-BR");return q?pacientes.filter(p=>p.full_name.toLocaleLowerCase("pt-BR").includes(q)):pacientes;},[busca,pacientes]);
@@ -67,28 +66,23 @@ export default function Prontuario(){
     const salvo=await salvar();if(!pid||!salvo)return;setSalvando(true);
     try{
       const e=await api.post<Encounter>(`/pacientes/${pid}/atendimentos/${salvo.id}/finalizar`);setEncounters(x=>[e,...x.filter(i=>i.id!==e.id)]);setEditor(false);setEditando(null);setForm(VAZIO);
-      if(e.appointment_id){try{await api.post(`/agenda-clinica/${e.appointment_id}/transicao`,{action:"complete"});await carregarFila();}catch(filaErro){setErro(`Atendimento finalizado. A fila não foi atualizada: ${filaErro instanceof Error?filaErro.message:"erro operacional"}`);}}
+      if(e.appointment_id)try{await api.post(`/agenda-clinica/${e.appointment_id}/transicao`,{action:"complete"});await carregarFila();}catch(f){setErro(`Atendimento finalizado; fila pendente: ${f instanceof Error?f.message:"erro operacional"}`);}
     }catch(e){setErro(e instanceof Error?e.message:"Falha ao finalizar atendimento.");}finally{setSalvando(false);}
   }
-  async function vincular(item:Fila,patient_profile_id:number){
-    try{await api.post(`/agenda-clinica/${item.appointment_id}/vincular`,{patient_profile_id});await carregarFila();}catch(e){setErro(e instanceof Error?e.message:"Falha ao vincular paciente.");}
-  }
+  async function vincular(item:Fila,id:number){try{await api.post(`/agenda-clinica/${item.appointment_id}/vincular`,{patient_profile_id:id});await carregarFila();}catch(e){setErro(e instanceof Error?e.message:"Falha ao vincular paciente.");}}
   async function acaoFila(item:Fila,action:string){
     setErro("");
     try{
       const r=await api.post<Fila>(`/agenda-clinica/${item.appointment_id}/transicao`,{action});await carregarFila();
-      if(action==="start"&&r.patient_profile_id&&r.encounter_id){
-        const e=await api.get<Encounter>(`/pacientes/${r.patient_profile_id}/atendimentos/${r.encounter_id}`);
-        setQs({paciente:String(r.patient_profile_id)});setVisao("pacientes");setEditando(e.id);setForm(doEncounter(e));setEditor(true);setEncounters(x=>[e,...x.filter(i=>i.id!==e.id)]);
-      }
+      if(action==="start"&&r.patient_profile_id&&r.encounter_id){const e=await api.get<Encounter>(`/pacientes/${r.patient_profile_id}/atendimentos/${r.encounter_id}`);setQs({paciente:String(r.patient_profile_id)});setVisao("pacientes");setEditando(e.id);setForm(doEncounter(e));setEditor(true);setEncounters(x=>[e,...x.filter(i=>i.id!==e.id)]);}
     }catch(e){setErro(e instanceof Error?e.message:"Falha ao atualizar sala de espera.");}
   }
 
   return <div className="pep">
     <header className="pep-head"><div><p className="eyebrow">Prontuário Eletrônico CorVIA</p><h1>Pacientes e atendimentos</h1></div><div className="pep-add"><input aria-label="Nome do novo paciente" placeholder="Nome do novo paciente" value={novoNome} onChange={e=>setNovoNome(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")criarPaciente();}}/><button className="botao" onClick={criarPaciente}>+ Paciente</button></div></header>
-    <nav className="pep-tabs" aria-label="Áreas do prontuário"><button className={visao==="pacientes"?"is-active":""} onClick={()=>setVisao("pacientes")}>Pacientes</button><button className={visao==="espera"?"is-active":""} onClick={()=>{setVisao("espera");carregarFila();}}>Sala de espera <span>{fila.length}</span></button></nav>
+    <nav className="pep-actions" aria-label="Áreas do prontuário"><button className={visao==="pacientes"?"botao":"botao botao--secundario"} onClick={()=>setVisao("pacientes")}>Pacientes</button><button className={visao==="espera"?"botao":"botao botao--secundario"} onClick={()=>{setVisao("espera");carregarFila();}}>Sala de espera ({fila.length})</button></nav>
     {erro&&<p className="pep-error" role="alert">{erro}</p>}
-    {visao==="espera"?<section className="pep-card pep-waiting"><div className="pep-title"><div><p className="eyebrow">Fluxo assistencial de hoje</p><h2>Sala de espera</h2></div><button onClick={carregarFila}>Atualizar</button></div>{!fila.length?<div className="pep-empty"><strong>Nenhum paciente aguardando</strong><p>Agendamentos ativos de hoje aparecerão aqui.</p></div>:<div className="pep-wait-list">{fila.map(item=><article key={item.appointment_id}><time>{hora(item.scheduled_at)}</time><div className="pep-wait-person"><strong>{item.patient_name}</strong><small>{item.appointment_type} · {ESTADOS[item.state]||item.state}</small></div><div><small>Chegada</small><strong>{item.arrived_at?hora(item.arrived_at):"—"}</strong></div><div><small>Espera</small><strong>{espera(item.arrived_at)}</strong></div><div className="pep-wait-actions">{!item.patient_profile_id?<select aria-label={`Vincular ${item.patient_name}`} defaultValue="" onChange={e=>{const id=Number(e.target.value);if(id)vincular(item,id);}}><option value="" disabled>Vincular prontuário…</option>{pacientes.map(p=><option key={p.id} value={p.id}>{p.full_name}</option>)}</select>:<><button onClick={()=>selecionar(item.patient_profile_id!)}>Prontuário</button>{item.state==="scheduled"&&<button onClick={()=>acaoFila(item,"arrive")}>Chegou</button>}{item.state==="arrived"&&<button onClick={()=>acaoFila(item,"call")}>Chamar</button>}{item.state!=="completed"&&<button className="botao" onClick={()=>acaoFila(item,"start")}>{item.state==="in_service"?"Abrir atendimento":"Atender"}</button>}</>}</div></article>)}</div>}</section>:<div className="pep-grid">
+    {visao==="espera"?<section className="pep-card pep-history"><div className="pep-title"><h2>Sala de espera</h2><button onClick={carregarFila}>Atualizar</button></div>{!fila.length?<p className="pep-muted">Nenhum agendamento ativo hoje.</p>:fila.map(item=><article key={item.appointment_id}><div><strong>{hora(item.scheduled_at)} · {item.patient_name}</strong><time>{ESTADOS[item.state]||item.state}</time></div><p>{item.appointment_type} · chegada {item.arrived_at?hora(item.arrived_at):"—"} · espera {espera(item.arrived_at)}</p><div className="pep-actions">{!item.patient_profile_id?<select aria-label={`Vincular ${item.patient_name}`} defaultValue="" onChange={e=>{const id=Number(e.target.value);if(id)vincular(item,id);}}><option value="" disabled>Vincular prontuário…</option>{pacientes.map(p=><option key={p.id} value={p.id}>{p.full_name}</option>)}</select>:<><button onClick={()=>selecionar(item.patient_profile_id!)}>Prontuário</button>{item.state==="scheduled"&&<button onClick={()=>acaoFila(item,"arrive")}>Chegou</button>}{item.state==="arrived"&&<button onClick={()=>acaoFila(item,"call")}>Chamar</button>}{item.state!=="completed"&&<button onClick={()=>acaoFila(item,"start")}>{item.state==="in_service"?"Abrir atendimento":"Atender"}</button>}</>}</div></article>)}</section>:<div className="pep-grid">
       <aside className="pep-list"><input aria-label="Buscar paciente" placeholder="Buscar paciente" value={busca} onChange={e=>setBusca(e.target.value)}/><div>{filtrados.map(p=><button key={p.id} className={p.id===pid?"is-active":""} onClick={()=>selecionar(p.id)}><span>{p.full_name[0]?.toUpperCase()}</span><strong>{p.full_name}</strong></button>)}{!filtrados.length&&<small>Nenhum paciente.</small>}</div></aside>
       <main className="pep-main">
         {!paciente?<section className="pep-card pep-empty">Selecione ou cadastre um paciente.</section>:<>
