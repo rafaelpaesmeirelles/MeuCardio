@@ -10,6 +10,7 @@ type Encounter = {
   assessment:string|null; plan:string|null; vital_signs:Record<string,number|string>;
 };
 type Fila = {appointment_id:number;scheduled_at:string;patient_name:string;patient_profile_id:number|null;state:string;arrived_at:string|null;encounter_id:number|null};
+type Artefato = {id?:number;tipo:"prescricao"|"documento";artifact_id:number;created_at:string;titulo:string;doc_type?:string|null;detalhes?:Array<{tipo:string;status:string}>};
 type Form = {
   encounter_type:string; chief_complaint:string; anamnesis:string; physical_exam:string;
   assessment:string; plan:string; pa_sistolica:string; pa_diastolica:string;
@@ -37,14 +38,17 @@ function payload(f:Form){
 export default function Prontuario(){
   const [qs,setQs]=useSearchParams();
   const [pacientes,setPacientes]=useState<Paciente[]>([]),[encounters,setEncounters]=useState<Encounter[]>([]),[fila,setFila]=useState<Fila[]>([]);
+  const [artefatos,setArtefatos]=useState<Artefato[]>([]),[candidatos,setCandidatos]=useState<Artefato[]>([]);
   const [busca,setBusca]=useState(""),[novoNome,setNovoNome]=useState(""),[erro,setErro]=useState("");
   const [editor,setEditor]=useState(false),[editando,setEditando]=useState<number|null>(null),[form,setForm]=useState<Form>(VAZIO),[salvando,setSalvando]=useState(false);
   const pid=Number(qs.get("paciente")||0)||null;
   const paciente=pacientes.find(p=>p.id===pid)||null;
 
   const carregarFila=()=>api.get<Fila[]>("/agenda-clinica/hoje").then(setFila).catch(e=>setErro(e.message));
+  const carregarArtefatos=()=>{if(!pid||!editando)return;const b=`/pacientes/${pid}/atendimentos/${editando}/artefatos`;Promise.all([api.get<Artefato[]>(b),api.get<Artefato[]>(`${b}/candidatos`)]).then(([a,c])=>{setArtefatos(a);setCandidatos(c);}).catch(e=>setErro(e.message));};
   useEffect(()=>{api.get<Paciente[]>("/pacientes").then(lista=>{setPacientes(lista);if(!pid&&lista[0])setQs({paciente:String(lista[0].id)},{replace:true});}).catch(e=>setErro(e.message));carregarFila();},[]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(()=>{if(!pid){setEncounters([]);return;}api.get<Encounter[]>(`/pacientes/${pid}/atendimentos`).then(setEncounters).catch(e=>setErro(e.message));},[pid]);
+  useEffect(()=>{if(!editando){setArtefatos([]);setCandidatos([]);return;}carregarArtefatos();const f=()=>carregarArtefatos();window.addEventListener("focus",f);return()=>window.removeEventListener("focus",f);},[pid,editando]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filtrados=useMemo(()=>{const q=busca.trim().toLocaleLowerCase("pt-BR");return q?pacientes.filter(p=>p.full_name.toLocaleLowerCase("pt-BR").includes(q)):pacientes;},[busca,pacientes]);
   const selecionar=(id:number)=>{setQs({paciente:String(id)});setEditor(false);setEditando(null);setForm(VAZIO);};
@@ -66,6 +70,7 @@ export default function Prontuario(){
       if(e.appointment_id)try{await api.post(`/agenda-clinica/${e.appointment_id}/transicao`,{action:"complete"});await carregarFila();}catch{setErro("Atendimento finalizado; fila pendente de atualização.");}
     }catch(e){setErro(e instanceof Error?e.message:"Falha ao finalizar atendimento.");}finally{setSalvando(false);}
   }
+  async function anexar(a:Artefato){if(!pid||!editando)return;try{await api.post(`/pacientes/${pid}/atendimentos/${editando}/artefatos`,{tipo:a.tipo,artifact_id:a.artifact_id});await carregarArtefatos();}catch(e){setErro(e instanceof Error?e.message:"Falha ao vincular artefato.");}}
   async function vincular(item:Fila,id:number){try{await api.post(`/agenda-clinica/${item.appointment_id}/vincular`,{patient_profile_id:id});await carregarFila();}catch(e){setErro(e instanceof Error?e.message:"Falha ao vincular paciente.");}}
   async function acaoFila(item:Fila,action:string){
     try{
@@ -91,6 +96,7 @@ export default function Prontuario(){
                 <label>Tipo<select value={form.encounter_type} onChange={e=>setForm({...form,encounter_type:e.target.value})}><option value="consulta">Consulta</option><option value="retorno">Retorno</option><option value="pre_operatorio">Pré-operatório</option><option value="teleconsulta">Teleconsulta</option><option value="outro">Outro</option></select></label>
                 <div className="pep-vitals">{VITAIS.map(([k,l])=><label key={k}>{l}<input value={String(form[k])} inputMode="decimal" onChange={e=>setForm({...form,[k]:e.target.value})}/></label>)}</div>
                 {TEXTOS.map(([k,l,r])=><label key={k}>{l}{r===2?<input value={String(form[k])} onChange={e=>setForm({...form,[k]:e.target.value})}/>:<textarea rows={r} value={String(form[k])} onChange={e=>setForm({...form,[k]:e.target.value})}/>}</label>)}
+                {editando&&<div><p className="eyebrow">Prescrições e documentos</p><div className="pep-actions"><a className="botao botao--secundario" href={`/receituario?paciente=${pid}&atendimento=${editando}`} target="_blank" rel="noreferrer">Abrir Receituário</a><a className="botao botao--secundario" href={`/documentos?paciente=${pid}&atendimento=${editando}`} target="_blank" rel="noreferrer">Abrir Documentos</a></div>{artefatos.map(a=><p className="pep-muted" key={`${a.tipo}-${a.artifact_id}`}>✓ {a.titulo} · {quando(a.created_at)}</p>)}{!!candidatos.length&&<div><small>Recentes do mesmo paciente:</small>{candidatos.slice(0,6).map(a=><button key={`${a.tipo}-${a.artifact_id}`} onClick={()=>anexar(a)}>+ Vincular {a.titulo} · {quando(a.created_at)}</button>)}</div>}</div>}
                 <div className="pep-actions"><button className="botao botao--secundario" disabled={salvando} onClick={salvar}>Salvar rascunho</button><button className="botao" disabled={salvando} onClick={finalizar}>Finalizar</button></div>
               </>}
             </section>

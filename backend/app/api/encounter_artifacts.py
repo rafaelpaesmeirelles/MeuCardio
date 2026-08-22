@@ -44,7 +44,7 @@ def _encounter(pid: int, eid: int, db: Session, user, *, mutacao: bool = False):
 
 
 def _validar_destinatario_prescricao(prescricao_id: int, pid: int, db: Session, user) -> None:
-    """Prova que o destinatário cifrado corresponde ao PatientProfile do Encounter."""
+    """Compara de forma determinística o destinatário cifrado ao PatientProfile."""
     perfil = patient_profile_for_user(pid, db, user)
     snap = snapshot_de(perfil)
     destinatario = (
@@ -88,8 +88,7 @@ def _dump(link: EncounterArtifact, db: Session) -> dict:
         docs = (
             db.query(PrescriptionDocument)
             .filter(PrescriptionDocument.prescription_id == link.artifact_id)
-            .order_by(PrescriptionDocument.id.asc())
-            .all()
+            .order_by(PrescriptionDocument.id.asc()).all()
         )
         return {
             "id": link.id, "tipo": "prescricao", "artifact_id": link.artifact_id,
@@ -114,6 +113,41 @@ def listar_artefatos(pid: int, eid: int, db: Session = Depends(get_db), user=Dep
         .order_by(EncounterArtifact.created_at.asc(), EncounterArtifact.id.asc()).all()
     )
     return [_dump(row, db) for row in rows]
+
+
+@router.get("/{pid}/atendimentos/{eid}/artefatos/candidatos")
+def listar_candidatos(pid: int, eid: int, db: Session = Depends(get_db), user=Depends(current_user)):
+    _encounter(pid, eid, db, user, mutacao=True)
+    vinculados = {
+        (x.artifact_type, x.artifact_id)
+        for x in db.query(EncounterArtifact).filter(EncounterArtifact.owner_id == user.id).all()
+    }
+    itens: list[dict] = []
+    documentos = (
+        db.query(GeneratedDocument)
+        .filter(
+            GeneratedDocument.created_by == user.id,
+            GeneratedDocument.patient_profile_id == pid,
+            GeneratedDocument.doc_type != _DOC_ESPECIAL,
+        )
+        .order_by(GeneratedDocument.created_at.desc()).limit(20).all()
+    )
+    for doc in documentos:
+        if ("documento", doc.id) not in vinculados:
+            itens.append({"tipo": "documento", "artifact_id": doc.id, "created_at": doc.created_at, "titulo": doc.title})
+    prescricoes = (
+        db.query(Prescription).filter(Prescription.created_by == user.id)
+        .order_by(Prescription.created_at.desc()).limit(40).all()
+    )
+    for presc in prescricoes:
+        if ("prescricao", presc.id) in vinculados:
+            continue
+        try:
+            _validar_destinatario_prescricao(presc.id, pid, db, user)
+        except HTTPException:
+            continue
+        itens.append({"tipo": "prescricao", "artifact_id": presc.id, "created_at": presc.created_at, "titulo": "Prescrição"})
+    return sorted(itens, key=lambda item: item["created_at"], reverse=True)[:20]
 
 
 @router.post("/{pid}/atendimentos/{eid}/artefatos", status_code=201)
