@@ -9,10 +9,7 @@ type Encounter = {
   chief_complaint:string|null; anamnesis:string|null; physical_exam:string|null;
   assessment:string|null; plan:string|null; vital_signs:Record<string,number|string>;
 };
-type Fila = {
-  appointment_id:number; scheduled_at:string; appointment_type:string; patient_name:string;
-  patient_profile_id:number|null; state:string; arrived_at:string|null; encounter_id:number|null;
-};
+type Fila = {appointment_id:number;scheduled_at:string;patient_name:string;patient_profile_id:number|null;state:string;arrived_at:string|null;encounter_id:number|null};
 type Form = {
   encounter_type:string; chief_complaint:string; anamnesis:string; physical_exam:string;
   assessment:string; plan:string; pa_sistolica:string; pa_diastolica:string;
@@ -66,23 +63,22 @@ export default function Prontuario(){
     const salvo=await salvar();if(!pid||!salvo)return;setSalvando(true);
     try{
       const e=await api.post<Encounter>(`/pacientes/${pid}/atendimentos/${salvo.id}/finalizar`);setEncounters(x=>[e,...x.filter(i=>i.id!==e.id)]);setEditor(false);setEditando(null);setForm(VAZIO);
-      if(e.appointment_id)try{await api.post(`/agenda-clinica/${e.appointment_id}/transicao`,{action:"complete"});await carregarFila();}catch(f){setErro(`Atendimento finalizado; fila pendente: ${f instanceof Error?f.message:"erro operacional"}`);}
+      if(e.appointment_id)try{await api.post(`/agenda-clinica/${e.appointment_id}/transicao`,{action:"complete"});}catch{setErro("Atendimento finalizado; fila pendente de atualização.");}
     }catch(e){setErro(e instanceof Error?e.message:"Falha ao finalizar atendimento.");}finally{setSalvando(false);}
   }
   async function vincular(item:Fila,id:number){try{await api.post(`/agenda-clinica/${item.appointment_id}/vincular`,{patient_profile_id:id});await carregarFila();}catch(e){setErro(e instanceof Error?e.message:"Falha ao vincular paciente.");}}
   async function acaoFila(item:Fila,action:string){
-    setErro("");
     try{
-      const r=await api.post<Fila>(`/agenda-clinica/${item.appointment_id}/transicao`,{action});await carregarFila();
-      if(action==="start"&&r.patient_profile_id&&r.encounter_id){const e=await api.get<Encounter>(`/pacientes/${r.patient_profile_id}/atendimentos/${r.encounter_id}`);setQs({paciente:String(r.patient_profile_id)});setVisao("pacientes");setEditando(e.id);setForm(doEncounter(e));setEditor(true);setEncounters(x=>[e,...x.filter(i=>i.id!==e.id)]);}
+      const r=await api.post<Fila>(`/agenda-clinica/${item.appointment_id}/transicao`,{action});
+      if(action==="start"&&r.patient_profile_id&&r.encounter_id){const e=await api.get<Encounter>(`/pacientes/${r.patient_profile_id}/atendimentos/${r.encounter_id}`);setQs({paciente:String(r.patient_profile_id)});setVisao("pacientes");setEditando(e.id);setForm(doEncounter(e));setEditor(true);setEncounters(x=>[e,...x.filter(i=>i.id!==e.id)]);}else await carregarFila();
     }catch(e){setErro(e instanceof Error?e.message:"Falha ao atualizar sala de espera.");}
   }
 
   return <div className="pep">
     <header className="pep-head"><div><p className="eyebrow">Prontuário Eletrônico CorVIA</p><h1>Pacientes e atendimentos</h1></div><div className="pep-add"><input aria-label="Nome do novo paciente" placeholder="Nome do novo paciente" value={novoNome} onChange={e=>setNovoNome(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")criarPaciente();}}/><button className="botao" onClick={criarPaciente}>+ Paciente</button></div></header>
-    <nav className="pep-actions" aria-label="Áreas do prontuário"><button className={visao==="pacientes"?"botao":"botao botao--secundario"} onClick={()=>setVisao("pacientes")}>Pacientes</button><button className={visao==="espera"?"botao":"botao botao--secundario"} onClick={()=>{setVisao("espera");carregarFila();}}>Sala de espera ({fila.length})</button></nav>
+    <nav className="pep-actions" aria-label="Áreas do prontuário"><button className="botao botao--secundario" onClick={()=>setVisao("pacientes")}>Pacientes</button><button className="botao botao--secundario" onClick={()=>{setVisao("espera");carregarFila();}}>Sala de espera</button></nav>
     {erro&&<p className="pep-error" role="alert">{erro}</p>}
-    {visao==="espera"?<section className="pep-card pep-history"><div className="pep-title"><h2>Sala de espera</h2><button onClick={carregarFila}>Atualizar</button></div>{!fila.length?<p className="pep-muted">Nenhum agendamento ativo hoje.</p>:fila.map(item=><article key={item.appointment_id}><div><strong>{hora(item.scheduled_at)} · {item.patient_name}</strong><time>{ESTADOS[item.state]||item.state}</time></div><p>{item.appointment_type} · chegada {item.arrived_at?hora(item.arrived_at):"—"} · espera {espera(item.arrived_at)}</p><div className="pep-actions">{!item.patient_profile_id?<select aria-label={`Vincular ${item.patient_name}`} defaultValue="" onChange={e=>{const id=Number(e.target.value);if(id)vincular(item,id);}}><option value="" disabled>Vincular prontuário…</option>{pacientes.map(p=><option key={p.id} value={p.id}>{p.full_name}</option>)}</select>:<><button onClick={()=>selecionar(item.patient_profile_id!)}>Prontuário</button>{item.state==="scheduled"&&<button onClick={()=>acaoFila(item,"arrive")}>Chegou</button>}{item.state==="arrived"&&<button onClick={()=>acaoFila(item,"call")}>Chamar</button>}{item.state!=="completed"&&<button onClick={()=>acaoFila(item,"start")}>{item.state==="in_service"?"Abrir atendimento":"Atender"}</button>}</>}</div></article>)}</section>:<div className="pep-grid">
+    {visao==="espera"?<section className="pep-card pep-history"><h2>Sala de espera</h2>{!fila.length?<p className="pep-muted">Nenhum agendamento ativo hoje.</p>:fila.map(item=><article key={item.appointment_id}><div><strong>{hora(item.scheduled_at)} · {item.patient_name}</strong><time>{ESTADOS[item.state]||item.state}</time></div><p>Chegada {item.arrived_at?hora(item.arrived_at):"—"} · espera {espera(item.arrived_at)}</p><div className="pep-actions">{!item.patient_profile_id?<select aria-label={`Vincular ${item.patient_name}`} defaultValue="" onChange={e=>{const id=Number(e.target.value);if(id)vincular(item,id);}}><option value="" disabled>Vincular prontuário…</option>{pacientes.map(p=><option key={p.id} value={p.id}>{p.full_name}</option>)}</select>:item.state==="scheduled"?<button onClick={()=>acaoFila(item,"arrive")}>Chegou</button>:item.state==="arrived"?<button onClick={()=>acaoFila(item,"call")}>Chamar</button>:item.state!=="completed"?<button onClick={()=>acaoFila(item,"start")}>{item.state==="in_service"?"Abrir atendimento":"Atender"}</button>:null}</div></article>)}</section>:<div className="pep-grid">
       <aside className="pep-list"><input aria-label="Buscar paciente" placeholder="Buscar paciente" value={busca} onChange={e=>setBusca(e.target.value)}/><div>{filtrados.map(p=><button key={p.id} className={p.id===pid?"is-active":""} onClick={()=>selecionar(p.id)}><span>{p.full_name[0]?.toUpperCase()}</span><strong>{p.full_name}</strong></button>)}{!filtrados.length&&<small>Nenhum paciente.</small>}</div></aside>
       <main className="pep-main">
         {!paciente?<section className="pep-card pep-empty">Selecione ou cadastre um paciente.</section>:<>
