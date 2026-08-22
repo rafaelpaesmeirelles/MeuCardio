@@ -20168,5 +20168,189 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "envolvimento-cardiaco-na-sindrome-inflamatoria-multissistemica-pediatrica-mis-c-avaliacao-e-seguimento",
+    "condicao": "Envolvimento cardíaco na síndrome inflamatória multissistêmica pediátrica (MIS-C) associada à COVID-19",
+    "resumo": "O que avaliar e seguir no coração da criança com MIS-C — da estratificação hemodinâmica aguda à reavaliação ecocardiográfica programada após a alta —, um quadro clinicamente distinto da doença de Kawasaki clássica já coberta em outro checklist.",
+    "documento_origem": "sindrome-inflamatoria-multissistemica-pediatrica-mis-c-envolvimento-cardiaco-diagnostico-tratamento-e-seguimento",
+    "theme": "Cardiologia pediátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Alsaied T, Tremoulet AH, Burns JC, Saidi A, Dionne A, Lang SM, Newburger JW, de Ferranti S, Friedman KG. Review of Cardiac Involvement in Multisystem Inflammatory Syndrome in Children. Circulation. 2021;143(1):78-88. DOI: 10.1161/CIRCULATIONAHA.120.049836. PMID: 33166178.",
+      "Henderson LA, Canna SW, Friedman KG, et al. American College of Rheumatology Clinical Guidance for Multisystem Inflammatory Syndrome in Children Associated With SARS-CoV-2 and Hyperinflammation in Pediatric COVID-19: Version 3. Arthritis Rheumatol. 2022;74(4):e1-e20. DOI: 10.1002/art.42062. PMID: 35118829."
+    ],
+    "itens": [
+      {
+        "id": "misc-card-definicao-de-caso",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Definição de caso confirmada antes de rotular como MIS-C: febre, elevação de marcadores inflamatórios, envolvimento clinicamente grave de dois ou mais sistemas orgânicos, evidência de infecção recente ou exposição a SARS-CoV-2, e exclusão formal de outros diagnósticos plausíveis",
+        "origem_secao": "Definição de caso e diagnóstico diferencial"
+      },
+      {
+        "id": "misc-card-diferencial-kawasaki-choque",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diferencial ativamente considerado contra doença de Kawasaki clássica, choque séptico e miocardite viral isolada — a faixa etária mais velha, o acometimento gastrointestinal proeminente e a maior frequência de disfunção ventricular na MIS-C não substituem a exclusão formal dessas hipóteses",
+        "origem_secao": "Diferenciação clínica de outras síndromes inflamatórias pediátricas"
+      },
+      {
+        "id": "misc-card-avaliacao-pre-imunoglobulina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação cardíaca completa registrada antes do início da imunoglobulina — eletrocardiograma, troponina, peptídeo natriurético (BNP ou NT-proBNP) e avaliação do estado hemodinâmico/volêmico — porque a terapia de primeira linha é iniciada de forma programada, não postergada até o resultado",
+        "origem_secao": "Avaliação cardíaca antes da terapia imunomoduladora"
+      },
+      {
+        "id": "misc-card-eco-coronarias-vd",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma inicial descreve explicitamente as artérias coronárias com medida ajustada por z-score (não apenas 'normais' em prosa) e a função sistólica de ventrículo esquerdo, além de derrame pericárdico e insuficiência mitral funcional",
+        "origem_secao": "Avaliação ecocardiográfica inicial"
+      },
+      {
+        "id": "misc-card-estratificacao-gravidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Gravidade hemodinâmica estratificada de forma explícita — presença de choque, necessidade de suporte vasopressor ou inotrópico, e grau de disfunção ventricular — para orientar o nível de monitorização e a intensidade da terapia inicial",
+        "origem_secao": "Estratificação de gravidade e escolha do nível de cuidado"
+      },
+      {
+        "id": "misc-card-monitorizacao-ritmo",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Monitorização eletrocardiográfica contínua mantida enquanto persistir risco de arritmia ou bloqueio atrioventricular na fase aguda, com via de escalonamento para terapia intensiva pediátrica disponível no local",
+        "origem_secao": "Monitorização de arritmia na fase aguda"
+      },
+      {
+        "id": "misc-card-primeira-linha-imunomoduladora",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia imunomoduladora de primeira linha combinando imunoglobulina intravenosa e glicocorticoide considerada para a maioria dos pacientes hospitalizados, com a intensidade ajustada à gravidade clínica e à função cardíaca — nunca escolhida por rotina fixa igual para todo caso",
+        "origem_secao": "Terapia imunomoduladora de primeira linha"
+      },
+      {
+        "id": "misc-card-intensificacao-refrataria",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Terapia de intensificação com agente biológico direcionado reservada para doença refratária à primeira linha, decidida em conjunto com reumatologia pediátrica, em vez de repetir o esquema inicial indefinidamente diante de resposta ausente",
+        "origem_secao": "Intensificação terapêutica na doença refratária"
+      },
+      {
+        "id": "misc-card-antitrombotico-por-risco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estratégia antitrombótica definida conforme o perfil de risco individual — plaquetopenia, disfunção ventricular, dilatação ou aneurisma de coronária e grau de elevação do D-dímero —, nunca aplicada de forma genérica e igual a todo paciente com MIS-C",
+        "origem_secao": "Estratégia antitrombótica por estratificação de risco"
+      },
+      {
+        "id": "misc-card-reavaliacao-eco-programada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação ecocardiográfica programada em pelo menos dois momentos após a alta — curto prazo (na primeira ou segunda semana) e intermediário (por volta de quatro a seis semanas) —, com ressonância cardíaca considerada quando houver disfunção ventricular significativa ou persistente na fase aguda",
+        "origem_secao": "Seguimento ecocardiográfico programado"
+      },
+      {
+        "id": "misc-card-encaminhamento-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento conjunto a cardiologia pediátrica e a reumatologia/infectologia pediátrica formalizado antes da alta, com data de retorno já definida, não deixado a critério de reagendamento espontâneo da família",
+        "origem_secao": "Seguimento multidisciplinar"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
+  },
+  {
+    "slug": "decisao-entre-valvuloplastia-por-balao-percutanea-e-cirurgia-na-estenose-mitral-reumatica-cronica-grave",
+    "condicao": "Estenose mitral reumática crônica grave — escolha entre valvuloplastia por balão percutânea e cirurgia",
+    "resumo": "Como decidir, na sequela crônica e ambulatorial da cardiopatia reumática, entre valvuloplastia mitral por balão percutânea e cirurgia valvar — distinto do checklist já publicado de cirurgia na cardite reumática aguda fulminante, que trata da fase ativa da doença.",
+    "documento_origem": "estenose-mitral-reumatica-cronica-grave-valvuloplastia-por-balao-percutanea-versus-cirurgia-esceacts-2025",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "PRAZ F. et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. European Heart Journal, 2025. PMID: 40878295 — algoritmo de manejo da estenose mitral reumática clinicamente grave, tabela de indicação de comissurotomia percutânea versus cirurgia, e recomendação sobre anticoagulante direto na FA com estenose mitral reumática.",
+      "Wilkins GT, Weyman AE, Abascal VM, et al. Percutaneous balloon dilatation of the mitral valve: an analysis of echocardiographic variables related to outcome and the mechanism of dilatation. Br Heart J. 1988;60(4):299-308. PMID: 3190958 — escore ecocardiográfico de morfologia valvar (mobilidade, espessamento, calcificação, aparelho subvalvar) usado para selecionar candidato à via percutânea."
+    ],
+    "itens": [
+      {
+        "id": "mitral-reum-confirmar-etiologia-e-gravidade",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Etiologia reumática confirmada (não degenerativa/calcificada) e a estenose classificada como clinicamente grave, com a área valvar mitral medida e comparada ao corte de gravidade anatômica, antes de discutir qualquer intervenção",
+        "origem_secao": "Algoritmo de manejo da estenose mitral reumática clinicamente grave"
+      },
+      {
+        "id": "mitral-reum-sintomas-ou-hipertensao-pulmonar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de intervenção justificada por sintoma atribuível à estenose, ou, no paciente assintomático, por achado objetivo que mude a história natural (hipertensão pulmonar significativa, evento embólico, ou necessidade de outra cirurgia cardíaca concomitante) — nunca pela medida isolada da área valvar",
+        "origem_secao": "Indicação de intervenção na estenose mitral reumática grave"
+      },
+      {
+        "id": "mitral-reum-escore-morfologico-favoravel",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Morfologia valvar avaliada por escore ecocardiográfico estruturado (mobilidade, espessamento, calcificação e comprometimento subvalvar) antes de indicar a via percutânea — morfologia desfavorável, acima do corte validado, reduz a chance de sucesso e pesa a favor de cirurgia",
+        "origem_secao": "Escore ecocardiográfico de morfologia valvar (Wilkins)"
+      },
+      {
+        "id": "mitral-reum-excluir-trombo-atrio-esquerdo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Trombo em átrio esquerdo formalmente excluído por ecocardiograma transesofágico antes de qualquer tentativa de valvuloplastia por balão — trombo móvel ou em posição de risco contraindica o procedimento percutâneo",
+        "origem_secao": "Contraindicações à valvuloplastia por balão percutânea"
+      },
+      {
+        "id": "mitral-reum-grau-de-insuficiencia-associada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Grau de insuficiência mitral associada quantificado antes de escolher a via — insuficiência mais que discreta contraindica a valvuloplastia por balão e direciona para cirurgia (reparo quando anatomicamente possível, troca protética quando não)",
+        "origem_secao": "Insuficiência mitral associada como contraindicação à via percutânea"
+      },
+      {
+        "id": "mitral-reum-conduta-percutanea-anatomia-favoravel",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Com anatomia valvar favorável, ausência de trombo atrial e insuficiência mitral não mais que discreta, a valvuloplastia por balão percutânea é considerada via preferencial sobre a cirurgia",
+        "origem_secao": "Preferência pela via percutânea em anatomia favorável"
+      },
+      {
+        "id": "mitral-reum-conduta-cirurgica-anatomia-desfavoravel",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Com anatomia desfavorável, calcificação importante, trombo atrial ou insuficiência mitral relevante, a decisão recai sobre cirurgia — reparo valvar quando factível, troca protética quando não",
+        "origem_secao": "Indicação cirúrgica em anatomia desfavorável"
+      },
+      {
+        "id": "mitral-reum-anticoagulacao-fa-associada",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Na fibrilação atrial associada à estenose mitral reumática, a escolha do anticoagulante segue a recomendação específica desse cenário — anticoagulante oral direto não é a opção recomendada nessa combinação, diferente da rotina de FA sem valvopatia reumática relevante",
+        "origem_secao": "Anticoagulação na fibrilação atrial associada à estenose mitral reumática"
+      },
+      {
+        "id": "mitral-reum-heart-team",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Decisão entre via percutânea e cirurgia documentada como discutida em equipe cardiológica multidisciplinar (heart team), incluindo cardiologista intervencionista e cirurgião cardíaco, não isolada de um único especialista",
+        "origem_secao": "Papel da equipe multidisciplinar (heart team) na decisão"
+      },
+      {
+        "id": "mitral-reum-profilaxia-secundaria-mantida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Profilaxia secundária antibiótica da febre reumática mantida antes e depois da intervenção, na duração já definida para o paciente — a correção mecânica da estenose não substitui nem interrompe a profilaxia contra nova cardite",
+        "origem_secao": "Continuidade da profilaxia secundária após intervenção mecânica"
+      },
+      {
+        "id": "mitral-reum-seguimento-pos-intervencao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno estruturado agendado após a intervenção, com ecocardiograma de reavaliação para documentar o resultado da via escolhida (área valvar obtida, grau de insuficiência residual, e função protética quando aplicável)",
+        "origem_secao": "Seguimento após intervenção"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
   }
 ]
