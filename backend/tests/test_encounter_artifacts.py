@@ -1,6 +1,8 @@
 """Um cenário integrado cobre o contrato mínimo de artefatos do Encounter."""
 from app.models.clinical_docs import GeneratedDocument, Prescription
+from app.models.receituario import PrescriptionRecipient
 from app.models.subscription import Subscription
+from app.services import cofre
 
 
 def _h(token: str) -> dict[str, str]:
@@ -10,6 +12,17 @@ def _h(token: str) -> dict[str, str]:
 def _assinar(db, *users) -> None:
     db.add_all([Subscription(user_id=u.id, kind="meucardio", plano="basico", status="ativo") for u in users])
     db.commit()
+
+
+def _prescricao(db, medico_id: int, nome: str) -> Prescription:
+    row = Prescription(created_by=medico_id, items=[], notes=None)
+    db.add(row); db.flush()
+    db.add(PrescriptionRecipient(
+        prescription_id=row.id,
+        nome_cifrado=cofre.cifrar_campo(nome, row.id),
+    ))
+    db.commit(); db.refresh(row)
+    return row
 
 
 def test_encounter_vincula_prescricao_documento_idempotente_e_isola_tenant(client, db, criar_usuario):
@@ -27,14 +40,12 @@ def test_encounter_vincula_prescricao_documento_idempotente_e_isola_tenant(clien
     assert atendimento.status_code == 201
     eid = atendimento.json()["id"]
 
-    prescricao = Prescription(created_by=medico.id, items=[], notes=None)
+    prescricao = _prescricao(db, medico.id, "Paciente Artefatos")
     documento = GeneratedDocument(
         created_by=medico.id, doc_type="atestado", title="Atestado",
         rendered_body="Conteúdo", patient_profile_id=pid,
     )
-    db.add_all([prescricao, documento])
-    db.commit()
-    db.refresh(prescricao); db.refresh(documento)
+    db.add(documento); db.commit(); db.refresh(documento)
 
     base = f"/api/pacientes/{pid}/atendimentos/{eid}/artefatos"
     p = client.post(base, headers=_h(token), json={"tipo": "prescricao", "artifact_id": prescricao.id})
@@ -42,6 +53,11 @@ def test_encounter_vincula_prescricao_documento_idempotente_e_isola_tenant(clien
     assert p.status_code == 201 and d.status_code == 201
     repetido = client.post(base, headers=_h(token), json={"tipo": "prescricao", "artifact_id": prescricao.id})
     assert repetido.status_code == 201 and repetido.json()["id"] == p.json()["id"]
+
+    errada = _prescricao(db, medico.id, "Outro Paciente")
+    assert client.post(
+        base, headers=_h(token), json={"tipo": "prescricao", "artifact_id": errada.id},
+    ).status_code == 409
 
     itens = client.get(base, headers=_h(token))
     assert itens.status_code == 200
