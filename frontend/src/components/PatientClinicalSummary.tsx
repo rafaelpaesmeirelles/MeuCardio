@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
+import PatientProfileTimeline from "./PatientProfileTimeline";
 
 type Kind = "problema" | "alergia" | "medicacao";
 type Item = {
@@ -27,23 +28,26 @@ export default function PatientClinicalSummary({patientId,currentEncounterId}:{p
     catch(e){setErro(e instanceof Error?e.message:"Falha ao inativar item clínico.");}
   }
 
-  return <section className="pep-card" style={{marginTop:"0.8rem"}}>
-    <div className="pep-title"><div><p className="eyebrow">Resumo clínico</p><h2>Problemas, alergias e medicações</h2></div><small>{itens.length} ativo(s)</small></div>
-    {erro&&<p role="alert" className="pep-error">{erro}</p>}
-    <div className="grade grade--3">
-      {(["problema","alergia","medicacao"] as Kind[]).map(k=><div key={k} className="cartao">
-        <strong>{LABEL[k]}</strong>
-        {!itens.some(i=>i.kind===k)&&<p className="pep-muted">{VAZIO[k]}</p>}
-        {itens.filter(i=>i.kind===k).map(i=><div key={i.id} style={{marginTop:"0.5rem"}}>
-          <div style={{display:"flex",justifyContent:"space-between",gap:8,alignItems:"start"}}><span><strong>{i.name}</strong>{i.details&&<small style={{display:"block"}}>{i.details}</small>}</span><button className="botao botao--secundario" style={{padding:"0.2rem 0.45rem"}} onClick={()=>inativar(i.id)}>Inativar</button></div>
+  return <>
+    <section className="pep-card" style={{marginTop:"0.8rem"}}>
+      <div className="pep-title"><div><p className="eyebrow">Resumo clínico</p><h2>Problemas, alergias e medicações</h2></div><small>{itens.length} ativo(s)</small></div>
+      {erro&&<p role="alert" className="pep-error">{erro}</p>}
+      <div className="grade grade--3">
+        {(["problema","alergia","medicacao"] as Kind[]).map(k=><div key={k} className="cartao">
+          <strong>{LABEL[k]}</strong>
+          {!itens.some(i=>i.kind===k)&&<p className="pep-muted">{VAZIO[k]}</p>}
+          {itens.filter(i=>i.kind===k).map(i=><div key={i.id} style={{marginTop:"0.5rem"}}>
+            <div style={{display:"flex",justifyContent:"space-between",gap:8,alignItems:"start"}}><span><strong>{i.name}</strong>{i.details&&<small style={{display:"block"}}>{i.details}</small>}</span><button className="botao botao--secundario" style={{padding:"0.2rem 0.45rem"}} onClick={()=>inativar(i.id)}>Inativar</button></div>
+          </div>)}
         </div>)}
-      </div>)}
-    </div>
-    <div className="grade grade--3" style={{marginTop:"0.7rem"}}>
-      <label>Adicionar<select value={kind} onChange={e=>setKind(e.target.value as Kind)}><option value="problema">Problema</option><option value="alergia">Alergia</option><option value="medicacao">Medicação</option></select></label>
-      <label>Nome<input value={name} onChange={e=>setName(e.target.value)} placeholder={kind==="problema"?"Ex.: Hipertensão arterial":kind==="alergia"?"Ex.: Penicilina":"Ex.: Losartana"}/></label>
-      <label>Detalhes<input value={details} onChange={e=>setDetails(e.target.value)} placeholder="Opcional" onKeyDown={e=>{if(e.key==="Enter")adicionar();}}/></label>
-    </div>
-    <button className="botao" style={{marginTop:"0.5rem"}} onClick={adicionar} disabled={!name.trim()}>+ Registrar</button>
-  </section>;
+      </div>
+      <div className="grade grade--3" style={{marginTop:"0.7rem"}}>
+        <label>Adicionar<select value={kind} onChange={e=>setKind(e.target.value as Kind)}><option value="problema">Problema</option><option value="alergia">Alergia</option><option value="medicacao">Medicação</option></select></label>
+        <label>Nome<input value={name} onChange={e=>setName(e.target.value)} placeholder={kind==="problema"?"Ex.: Hipertensão arterial":kind==="alergia"?"Ex.: Penicilina":"Ex.: Losartana"}/></label>
+        <label>Detalhes<input value={details} onChange={e=>setDetails(e.target.value)} placeholder="Opcional" onKeyDown={e=>{if(e.key==="Enter")adicionar();}}/></label>
+      </div>
+      <button className="botao" style={{marginTop:"0.5rem"}} onClick={adicionar} disabled={!name.trim()}>+ Registrar</button>
+    </section>
+    <PatientProfileTimeline key={`${patientId}-${currentEncounterId||0}-${itens.map(i=>i.id).join("-")}`} patientId={patientId}/>
+  </>;
 }
