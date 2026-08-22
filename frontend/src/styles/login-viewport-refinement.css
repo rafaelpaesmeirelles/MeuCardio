@@ -18,6 +18,25 @@
   .prehome--fullscreen .prehome-brand__content{min-height:0!important}
   .prehome--fullscreen .prehome-brand__hologram{max-height:clamp(230px,37dvh,360px)!important}
 }
+
+/* Desktop largo: ocupa melhor o canvas, aproxima os dois blocos e elimina o excesso de vazio lateral. */
+@media(min-width:1180px){
+  .login.prehome.prehome--login{grid-template-columns:minmax(0,52%) minmax(0,48%)!important}
+  .prehome--fullscreen>.prehome-brand{padding-inline:clamp(32px,3.2vw,56px)!important}
+  .prehome--fullscreen .prehome-brand__content{width:min(100%,760px)!important;margin-inline:auto!important;gap:clamp(12px,1.2vw,18px)!important}
+  .prehome--fullscreen .prehome-brand__copy h1{max-width:18ch!important;font-size:clamp(1.85rem,2.55vw,2.65rem)!important}
+  .prehome--fullscreen .prehome-brand__copy>p{max-width:54ch!important}
+  .prehome--fullscreen .prehome-brand__hologram{width:min(100%,390px)!important;max-height:clamp(250px,39dvh,390px)!important}
+  .prehome--fullscreen>.prehome-access{padding-inline:clamp(14px,1.3vw,26px)!important}
+  .prehome--fullscreen .prehome-card--login{width:min(100%,680px)!important;padding-inline:clamp(28px,2.8vw,42px)!important}
+  .prehome--fullscreen .prehome-card__header>p:last-child{max-width:60ch!important}
+}
+
+@media(min-width:1600px){
+  .login.prehome.prehome--login{grid-template-columns:minmax(0,53%) minmax(0,47%)!important}
+  .prehome--fullscreen .prehome-card--login{width:min(100%,720px)!important}
+}
+
 @media(min-width:821px) and (max-height:820px){
   .prehome--fullscreen .prehome-brand__journey{margin-top:clamp(6px,1dvh,10px)!important}
   .prehome--fullscreen .prehome-brand__benefits{gap:7px!important}
