@@ -34,8 +34,8 @@ def test_mobile_preserva_assistente_pessoal_sem_alterar_bottom_bar_aprovada():
     mobile = MOBILE_NAV.read_text(encoding="utf-8")
     shell = SHELL.read_text(encoding="utf-8")
 
-    # A bottom bar aprovada continua exatamente Início/Buscar/Pacientes/Agenda/Mais.
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    # A bottom bar aprovada acompanha a área canônica de Prontuário.
+    labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]
     positions = [mobile.index(f"<span>{label}</span>") for label in labels]
     assert positions == sorted(positions)
 
