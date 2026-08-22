@@ -1,34 +1,47 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 
-type Evento = {
-  id:string; tipo:string; data:string; titulo:string; resumo:string; status:string|null;
-  encounter_id?:number|null; appointment_id?:number; artifact_id?:number;
+type Evento = { tipo: string; data: string; titulo: string; resumo: string };
+
+const ICONE: Record<string, string> = {
+  evolucao: "📝", auxilio_ia: "🤖", prescricao: "💊", documento: "📄", consulta: "📅",
 };
 
-function quando(v:string){
-  return new Intl.DateTimeFormat("pt-BR",{dateStyle:"short",timeStyle:"short"}).format(new Date(v));
-}
+export default function PatientTimeline({ patientId }: { patientId: number }) {
+  const [eventos, setEventos] = useState<Evento[] | null>(null);
 
-export default function PatientTimeline({patientId}:{patientId:number}){
-  const [eventos,setEventos]=useState<Evento[]>([]),[erro,setErro]=useState("");
-  const carregar=()=>api.get<Evento[]>(`/pacientes/${patientId}/linha-do-tempo?limite=50`).then(setEventos).catch(e=>setErro(e.message));
+  useEffect(() => {
+    api.get<Evento[]>(`/timeline/patient/${patientId}`).then(setEventos);
+  }, [patientId]);
 
-  useEffect(()=>{
-    carregar();
-    const focus=()=>carregar();
-    window.addEventListener("focus",focus);
-    return()=>window.removeEventListener("focus",focus);
-  },[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  return <section className="pep-card pep-history">
-    <div className="pep-title"><div><p className="eyebrow">História longitudinal</p><h2>Linha do tempo</h2></div><button onClick={carregar}>Atualizar</button></div>
-    {erro&&<p className="pep-error">{erro}</p>}
-    {!eventos.length&&!erro&&<p className="pep-muted">Ainda não há eventos clínicos vinculados.</p>}
-    {eventos.map(e=><article key={e.id}>
-      <div><strong>{e.titulo}</strong><time>{quando(e.data)}</time></div>
-      <p>{e.resumo||"—"}</p>
-      <small>{[e.tipo,e.status].filter(Boolean).join(" · ")}</small>
-    </article>)}
-  </section>;
+  return (
+    <div className="cartao" style={{ background: "var(--fundo)" }}>
+      <p className="eyebrow" style={{ margin: 0 }}>Timeline</p>
+      {eventos === null ? (
+        <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>Carregando…</p>
+      ) : eventos.length === 0 ? (
+        <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>Nenhum evento registrado ainda.</p>
+      ) : (
+        <div style={{ marginTop: "0.5rem" }}>
+          {eventos.map((e, i) => (
+            <div key={i} style={{
+              display: "flex", gap: 10, padding: "0.5rem 0",
+              borderBottom: i < eventos.length - 1 ? "1px solid var(--borda)" : "none",
+            }}>
+              <span style={{ fontSize: "1.1rem" }}>{ICONE[e.tipo] ?? "•"}</span>
+              <div>
+                <p style={{ margin: 0, fontSize: "0.88rem", fontWeight: 600 }}>{e.titulo}</p>
+                <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
+                  {new Date(e.data).toLocaleString("pt-BR")}
+                </p>
+                {e.resumo && e.resumo !== "—" && (
+                  <p style={{ margin: "0.2rem 0 0", fontSize: "0.84rem" }}>{e.resumo}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
