@@ -1,8 +1,8 @@
 """Linha do tempo longitudinal do PatientProfile sem duplicar dados clínicos.
 
 Os eventos são derivados em leitura das fontes canônicas do prontuário:
-Encounter, resumo clínico, Agenda/Sala de Espera e artefatos explicitamente
-vinculados. Nada é copiado para uma tabela de timeline.
+Encounter, resumo clínico, resultados de exames, Agenda/Sala de Espera e
+artefatos explicitamente vinculados. Nada é copiado para uma tabela de timeline.
 """
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from app.models.appointment_clinical_flow import AppointmentClinicalFlow
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment, GeneratedDocument, Prescription
 from app.models.encounter_artifact import EncounterArtifact
-from app.models.prontuario import ClinicalEncounter, PatientClinicalItem
+from app.models.prontuario import ClinicalEncounter, PatientClinicalItem, PatientExamResult
 from app.services import cofre
 from app.services.clinical_ownership import patient_profile_for_user
 
@@ -50,6 +50,10 @@ def _resumo_encounter(row: ClinicalEncounter) -> str:
 
 
 def _payload_item(row: PatientClinicalItem) -> dict:
+    return json.loads(cofre.decifrar_campo(row.payload_cifrado, row.id))
+
+
+def _payload_resultado(row: PatientExamResult) -> dict:
     return json.loads(cofre.decifrar_campo(row.payload_cifrado, row.id))
 
 
@@ -110,6 +114,31 @@ def linha_do_tempo_paciente(
                 "status": "inativo",
                 "encounter_id": row.source_encounter_id,
             })
+
+    resultados = (
+        db.query(PatientExamResult)
+        .filter(PatientExamResult.owner_id == user.id, PatientExamResult.patient_profile_id == pid)
+        .all()
+    )
+    for row in resultados:
+        payload = _payload_resultado(row)
+        nome = (payload.get("exam_name") or "").strip()
+        valor = (payload.get("result") or "").strip()
+        unidade = (payload.get("unit") or "").strip()
+        resultado = " ".join(x for x in (valor, unidade) if x).strip()
+        resumo = " · ".join(x for x in (nome, resultado) if x)[:240]
+        eventos.append({
+            "id": f"resultado_exame:{row.id}",
+            "tipo": "resultado_exame",
+            "data": row.performed_at,
+            "titulo": "Correção de resultado" if row.correction_of_id else "Resultado de exame",
+            "resumo": resumo or "Resultado registrado.",
+            "status": None,
+            "encounter_id": row.source_encounter_id,
+            "exam_result_id": row.id,
+            "lab_test_id": row.lab_test_id,
+            "correction_of_id": row.correction_of_id,
+        })
 
     flows = (
         db.query(AppointmentClinicalFlow)
