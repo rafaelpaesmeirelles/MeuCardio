@@ -20168,5 +20168,194 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "avaliacao-cardiovascular-antes-e-durante-uso-de-antidepressivo-triciclico",
+    "condicao": "Uso de antidepressivo tricíclico (amitriptilina, nortriptilina, imipramina, clomipramina) em paciente cardiopata",
+    "resumo": "O que checar antes de iniciar e durante o acompanhamento de um antidepressivo tricíclico em paciente com doença cardiovascular, dado o mecanismo de risco diferente do ISRS — efeito quinidina-like (bloqueio de canal de sódio, classe IA-símile), hipotensão ortostática por bloqueio alfa-1 e letalidade cardíaca previsível em superdosagem.",
+    "documento_origem": "antidepressivos-triciclicos-no-cardiopata-risco-cardiovascular-e-toxicidade-em-superdosagem",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Glassman AH, Roose SP, Bigger JT Jr. The safety of tricyclic antidepressants in cardiac patients. Risk-benefit reconsidered. JAMA. 1993;269(20):2673-2675. PMID: 8487453 — artigo de opinião/síntese, sem resumo estruturado no PubMed; citado apenas para a framing geral de risco-benefício, não como fonte de nenhum número deste checklist.",
+      "Roose SP, Laghrissi-Thode F, Kennedy JS, Nelson JC, Bigger JT Jr, Pollock BG, Gaffney A, Narayan M, Finkel MS, McCafferty J, Gergel I. Comparison of paroxetine and nortriptyline in depressed patients with ischemic heart disease. JAMA. 1998;279(4):287-291. DOI: 10.1001/jama.279.4.287. PMID: 9450712 — ensaio randomizado, duplo-cego, 81 pacientes ambulatoriais com doença isquêmica documentada, 4 centros universitários.",
+      "Boehnert MT, Lovejoy FH Jr. Value of the QRS duration versus the serum drug level in predicting seizures and ventricular arrhythmias after an acute overdose of tricyclic antidepressants. N Engl J Med. 1985;313(8):474-479. DOI: 10.1056/NEJM198508223130804. PMID: 4022081 — estudo prospectivo de 49 pacientes com superdosagem aguda de tricíclico; a duração do QRS, não o nível sérico, previu convulsão e arritmia ventricular.",
+      "Dziukas LJ, Vohra J. Tricyclic antidepressant poisoning. Med J Aust. 1991;154(5):344-350. DOI: 10.5694/j.1326-5377.1991.tb112889.x. PMID: 2017063 — revisão narrativa (fonte secundária, declarada como tal) sobre manejo da intoxicação aguda por tricíclico; documento de origem sinaliza VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar se a conduta segue válida frente a diretriz toxicológica mais recente."
+    ],
+    "itens": [
+      {
+        "id": "avaliacao-cv-triciclico-alternativa-isrs",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar tricíclico em paciente cardiopata, verificar se um ISRS (ex.: sertralina, paroxetina) já foi considerado ou tentado como primeira escolha — o ensaio direto que comparou as duas classes em doença isquêmica mostrou eficácia semelhante com perfil cardiovascular mais favorável ao ISRS",
+        "origem_secao": "O que muda em relação ao ISRS"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-conducao-preexistente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar histórico de infarto do miocárdio recente ou distúrbio de condução preexistente (bloqueio de ramo, bloqueio bifascicular) antes de iniciar tricíclico — o mecanismo de risco é bloqueio de canal de sódio cardíaco, semelhante a um antiarrítmico classe IA",
+        "origem_secao": "O que muda em relação ao ISRS"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-ecg-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Obter ECG basal antes do início, avaliando especificamente os intervalos PR e QRS além do QTc — o risco do tricíclico é de alargamento de condução por bloqueio de sódio, não apenas prolongamento isolado de QT como no ISRS de maior risco",
+        "origem_secao": "O que muda em relação ao ISRS"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-hipotensao-ortostatica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar pressão arterial em decúbito e em ortostatismo antes e durante o uso, pelo bloqueio alfa-1-adrenérgico do tricíclico, que causa hipotensão postural clinicamente relevante no cardiopata",
+        "origem_secao": "Por que a diferença de mecanismo importa na prática"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-nivel-serico-monitorado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao optar por manter tricíclico, titular por nível sérico terapêutico monitorado em vez de dose fixa empírica, reavaliando ECG de seguimento periodicamente durante o tratamento",
+        "origem_secao": "O ensaio direto: paroxetina vs. nortriptilina na doença isquêmica (Roose 1998)"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-frequencia-cardiaca-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Monitorar frequência cardíaca ao longo do tratamento com tricíclico — o efeito anticolinérgico da classe pode causar taquicardia sinusal sustentada e reduzir a variabilidade da frequência cardíaca, marcador prognóstico cardiovascular independente",
+        "origem_secao": "O ensaio direto: paroxetina vs. nortriptilina na doença isquêmica (Roose 1998)"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-risco-autolesao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar risco de autolesão/ideação suicida antes de prescrever tricíclico — a janela terapêutica é estreita e a letalidade cardíaca em superdosagem é previsível pela dose ingerida, ao contrário do ISRS",
+        "origem_secao": "Por que a diferença de mecanismo importa na prática"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-ecg-suspeita-intoxicacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de suspeita de superdosagem por tricíclico, priorizar a duração do QRS no ECG — não o nível sérico do fármaco — para estratificar risco de convulsão e de arritmia ventricular",
+        "origem_secao": "O que a superdosagem revela sobre o mecanismo"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-evitar-antiarritmico-ia-ic",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Evitar antiarrítmicos das classes IA e IC no tratamento de arritmia ventricular por intoxicação por tricíclico, pelo mesmo mecanismo de bloqueio de canal de sódio (efeito aditivo); considerar lidocaína quando antiarrítmico for necessário",
+        "origem_secao": "O que a superdosagem revela sobre o mecanismo"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-encaminhar-suporte-toxicologico",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhar para suporte de toxicologia/terapia intensiva diante de superdosagem confirmada ou fortemente suspeita, pelo risco de deterioração cardíaca rápida e imprevisível pela avaliação clínica isolada",
+        "origem_secao": "O que a superdosagem revela sobre o mecanismo"
+      },
+      {
+        "id": "avaliacao-cv-triciclico-orientar-sinais-alerta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar paciente e familiares sobre sinais de alerta cardiovascular (palpitação, síncope, tontura postural) e sobre o risco concreto de ingestão além do prescrito, reforçando a diferença de letalidade em superdosagem frente ao ISRS",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026."
+  },
+  {
+    "slug": "anticoagulacao-no-idoso-com-risco-de-queda-decisao-e-ajuste-de-dose",
+    "condicao": "Decisão de anticoagulação oral em idoso com fibrilação atrial e risco de queda",
+    "resumo": "O que checar diante do idoso caidor com indicação formal de anticoagulação por fibrilação atrial: confirmar que o risco de queda isolado raramente deveria pesar contra anticoagular, investigar e mitigar a causa da queda, preferir DOAC à varfarina, e ajustar a dose por critério objetivo em vez de por impressão de fragilidade.",
+    "documento_origem": "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Man-Son-Hing M, Nichol G, Lau A, Laupacis A. Choosing antithrombotic therapy for elderly patients with atrial fibrillation who are at risk for falls. Arch Intern Med. 1999;159(7):677-685. PMID: 10218746 — modelo de decisão analítica (cadeia de Markov) que testou diretamente se o risco de queda deveria influenciar a escolha do antitrombótico no idoso com FA; conclusão: a propensão a cair não foi fator importante na terapia ideal, independentemente da idade ou do risco basal de AVC.",
+      "Granger CB, Alexander JH, McMurray JJ, et al. Apixaban versus warfarin in patients with atrial fibrillation (ARISTOTLE). N Engl J Med. 2011;365(11):981-992. PMID: 21870978 — AVC hemorrágico 0,24%/ano com apixabana vs. 0,47%/ano com varfarina (HR 0,51; IC95% 0,35-0,75; p<0,001); protocolo do estudo define redução de dose por pelo menos 2 de 3 critérios (idade, peso, creatinina sérica).",
+      "ELIQUIS (apixaban) — Highlights of Prescribing Information, seção 2.1, consultada via DailyMed (dailymed.nlm.nih.gov), rótulo atualizado em 01/05/2023 — confirma verbatim os três critérios formais de redução de dose e o corte de 'pelo menos 2 de 3'.",
+      "Okumura K, Akao M, Yoshida T, et al. Low-Dose Edoxaban in Very Elderly Patients with Atrial Fibrillation (ELDERCARE-AF). N Engl J Med. 2020;383(18):1735-1745. PMID: 32865374 — 984 pacientes ≥80 anos não candidatos à dose padrão; AVC/embolia sistêmica 2,3%/ano com edoxabana em dose reduzida vs. 6,7%/ano com placebo (HR 0,34; IC95% 0,19-0,61; p<0,001).",
+      "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. J Am Coll Cardiol. 2023;83(1):109-279. PMID: 38043043, PMCID: PMC11104284 (texto integral aberto) — risco de queda não aparece associado a nenhuma recomendação formalmente graduada (Classe/Nível); tratado como fator a mitigar em texto corrido, não como contraindicação."
+    ],
+    "itens": [
+      {
+        "id": "anticoag-idoso-queda-confirmar-indicacao-chavasc",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar a indicação formal de anticoagulação pelo CHA₂DS₂-VASc antes de deixar o risco de queda pesar na decisão — a indicação clínica é o ponto de partida, não o histórico de quedas",
+        "origem_secao": "Síntese para a prática"
+      },
+      {
+        "id": "anticoag-idoso-queda-nao-suspender-isolado",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não suspender nem negar anticoagulação apenas pelo risco de queda isolado — o modelo de decisão analítica que testou essa pergunta diretamente mostra que o benefício de prevenir AVC supera, na enorme maioria dos cenários, o risco incremental de sangramento por queda",
+        "origem_secao": "A \"falsa contraindicação\": o que a evidência realmente diz"
+      },
+      {
+        "id": "anticoag-idoso-queda-investigar-causa",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Investigar e tratar a causa da queda (revisão de polifarmácia, hipotensão postural, força muscular, acuidade visual, ambiente domiciliar) em vez de suspender o anticoagulante como resposta à preocupação",
+        "origem_secao": "O que isso NÃO significa"
+      },
+      {
+        "id": "anticoag-idoso-queda-cenarios-que-mudam-ponderacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar os cenários específicos em que a ponderação de fato muda: traumatismo cranioencefálico recorrente já documentado por queda, etilismo ativo grave, demência avançada sem cuidador estruturado, ou hemorragia intracraniana prévia",
+        "origem_secao": "O que isso NÃO significa"
+      },
+      {
+        "id": "anticoag-idoso-queda-preferir-doac",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Preferir anticoagulante oral direto (DOAC) à varfarina no paciente caidor, pela menor taxa de AVC hemorrágico/hemorragia intracraniana observada em ensaio direto contra varfarina — é o desfecho mais temido pela queda",
+        "origem_secao": "Escolha do anticoagulante no idoso com risco de queda"
+      },
+      {
+        "id": "anticoag-idoso-queda-criterio-objetivo-reducao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ajustar a dose do DOAC por critério objetivo e formal (combinação de idade, peso corporal e função renal, conforme protocolo do fármaco), nunca por impressão isolada de fragilidade",
+        "origem_secao": "O critério de redução de dose da apixabana (ARISTOTLE)"
+      },
+      {
+        "id": "anticoag-idoso-queda-nao-reduzir-por-criterio-isolado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não reduzir a dose do DOAC ao preencher apenas um dos critérios formais isoladamente (ex.: só por idade avançada, com peso e função renal preservados) — isso resulta em subdose silenciosa, que reduz eficácia sem o respaldo do estudo que validou a dose reduzida",
+        "origem_secao": "O critério de redução de dose da apixabana (ARISTOTLE)"
+      },
+      {
+        "id": "anticoag-idoso-queda-nao-omitir-por-fragilidade",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "No muito idoso considerado não candidato à dose padrão (sangramento prévio, função renal marginal, baixo peso, fragilidade), considerar dose reduzida de anticoagulante em vez de omitir a anticoagulação por completo",
+        "origem_secao": "Edoxabana em dose reduzida no paciente ≥ 80 anos sem indicação para dose padrão: o ELDERCARE-AF"
+      },
+      {
+        "id": "anticoag-idoso-queda-reavaliar-funcao-renal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar a função renal periodicamente, não só na prescrição inicial, especialmente após intercorrências agudas (desidratação, uso de contraste, infecção) — a trajetória de queda da filtração glomerular no muito idoso pode ser rápida o suficiente para mudar a categoria de dose",
+        "origem_secao": "Cautelas farmacocinéticas por classe no muito idoso"
+      },
+      {
+        "id": "anticoag-idoso-queda-orientar-paciente-cuidador",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientar paciente e cuidadores de que quedas ocasionais não são motivo, isoladamente, para suspender o anticoagulante por conta própria, e que sinais de alerta após queda com trauma craniano (cefaleia súbita, confusão, sonolência) exigem avaliação imediata",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "anticoag-idoso-queda-encaminhar-avaliacao-multidisciplinar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação multidisciplinar de risco de queda (fisioterapia, revisão farmacêutica, avaliação geriátrica) quando as quedas forem recorrentes, em vez de resolver a preocupação apenas pela suspensão do anticoagulante",
+        "origem_secao": "Por que isso importa na prática"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 21/08/2026."
   }
 ]
