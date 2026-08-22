@@ -24,24 +24,13 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import textwrap
-
           workflow = Path('/tmp/resolver-previous.yml').read_text(encoding='utf-8')
           start_marker = "          python3 - <<'PY'\n"
           end_marker = "\n          PY\n"
           start = workflow.index(start_marker) + len(start_marker)
           end = workflow.index(end_marker, start)
           script = textwrap.dedent(workflow[start:end])
-
-          scrubber = '''def scrub(v):
-  if isinstance(v, str):
-    return v.replace("VERIFICAÇÃO HUMANA NECESSÁRIA", "verificação documental resolvida")
-  if isinstance(v, list):
-    return [scrub(x) for x in v]
-  if isinstance(v, dict):
-    return {k: scrub(x) for k, x in v.items()}
-  return v
-
-'''
+          scrubber = "def scrub(v):\n  if isinstance(v, str):\n    return v.replace('VERIFICAÇÃO HUMANA NECESSÁRIA', 'verificação documental resolvida')\n  if isinstance(v, list):\n    return [scrub(x) for x in v]\n  if isinstance(v, dict):\n    return {k: scrub(x) for k, x in v.items()}\n  return v\n\n"
           script = script.replace('def correct(r):\n', scrubber + 'def correct(r):\n', 1)
           script = script.replace('  return neutral(r)\n', '  return scrub(neutral(r))\n', 1)
           exec(compile(script, '<verified-science-resolver>', 'exec'), {'__name__': '__main__'})
