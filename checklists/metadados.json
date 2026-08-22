@@ -20168,5 +20168,198 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "manejo-agudo-de-fibrilacao-atrial-induzida-por-alcool-holiday-heart-syndrome",
+    "condicao": "Fibrilação atrial induzida por álcool (holiday heart syndrome)",
+    "resumo": "O que checar diante de arritmia atrial de início agudo temporalmente relacionada a consumo intenso e recente de álcool em paciente sem cardiopatia estrutural conhecida — quadro classicamente descrito após fins de semana e feriados, e distinto do consumo crônico como fator de risco para FA estabelecida.",
+    "documento_origem": "fibrilacao-atrial-induzida-por-alcool-holiday-heart-syndrome",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ettinger PO, Wu CF, De La Cruz C Jr, Weisse AB, Ahmed SS, Regan TJ. Arrhythmias and the Holiday Heart: alcohol-associated cardiac rhythm disorders. Am Heart J. 1978;95(5):555-562. PMID 636996.",
+      "Voskoboinik A, Prabhu S, Ling LH, Kalman JM, Kistler PM. Alcohol and Atrial Fibrillation: A Sobering Review. J Am Coll Cardiol. 2016;68(23):2567-2576. PMID 27931615.",
+      "Voskoboinik A, Kalman JM, De Silva A, et al. Alcohol Abstinence in Drinkers with Atrial Fibrillation. N Engl J Med. 2020;382(1):20-28. PMID 31893513.",
+      "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. 2024;149(1):e1-e156. PMID 38033089."
+    ],
+    "itens": [
+      {
+        "id": "hh-af-anamnese-binge",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Anamnese dirigida à relação temporal entre o início dos sintomas e consumo recente e intenso de álcool (binge), classicamente nas horas a poucos dias anteriores, em paciente sem diagnóstico prévio de cardiopatia estrutural",
+        "origem_secao": "Descrição original — Ettinger 1978"
+      },
+      {
+        "id": "hh-af-ecg-caracterizacao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações para caracterizar a arritmia — fibrilação atrial é a apresentação mais comum, mas flutter atrial, taquicardia supraventricular e extrassistolia atrial/ventricular frequente também ocorrem no mesmo contexto",
+        "origem_secao": "Apresentação clínica do holiday heart"
+      },
+      {
+        "id": "hh-af-potassio-magnesio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Dosar potássio e magnésio séricos — distúrbio eletrolítico é achado frequente no consumo pesado agudo de álcool e pode precipitar ou perpetuar a arritmia",
+        "origem_secao": "Fatores precipitantes associados ao binge alcoólico"
+      },
+      {
+        "id": "hh-af-eco-estrutural",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Ecocardiograma para excluir cardiopatia estrutural e disfunção ventricular como explicação alternativa, sobretudo se a arritmia não reverter no período esperado ou se houver sinais de insuficiência cardíaca — não confundir com o quadro de cardiomiopatia alcoólica estabelecida, que é entidade distinta ligada ao consumo crônico, não ao episódio agudo isolado",
+        "origem_secao": "Diagnóstico diferencial com cardiomiopatia alcoólica"
+      },
+      {
+        "id": "hh-af-diferenciar-cronico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diferenciar o episódio agudo isolado ligado a um binge pontual do consumo crônico e pesado de álcool como fator de risco independente para o desenvolvimento e a recorrência de fibrilação atrial — a recorrência de episódios sugere o segundo cenário, não o primeiro",
+        "origem_secao": "Alcohol and Atrial Fibrillation: A Sobering Review"
+      },
+      {
+        "id": "hh-af-conduta-observacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em paciente hemodinamicamente estável, favorecer observação com controle de frequência e correção do distúrbio eletrolítico antes de indicar cardioversão, já que a reversão espontânea para ritmo sinusal dentro de horas a poucos dias é descrita como desfecho habitual desse quadro",
+        "origem_secao": "Reversibilidade espontânea do holiday heart"
+      },
+      {
+        "id": "hh-af-controle-frequencia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se houver taquicardia sintomática, considerar betabloqueador ou bloqueador de canal de cálcio não di-hidropiridínico para controle de frequência, sem necessidade de antiarrítmico específico na maioria dos episódios isolados",
+        "origem_secao": "Manejo agudo sintomático"
+      },
+      {
+        "id": "hh-af-chadsvasc",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Decisão sobre anticoagulação guiada pela estratificação de risco tromboembólico habitual (CHA2DS2-VASc), não pela suposição de que um gatilho reversível dispensa a avaliação — episódio recorrente ou fibrilação atrial que persista além do esperado reabre essa indicação normalmente",
+        "origem_secao": "Diretriz 2023 ACC/AHA/ACCP/HRS — anticoagulação"
+      },
+      {
+        "id": "hh-af-orientacao-reducao-alcool",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientar redução ou abstinência de álcool como intervenção com respaldo em ensaio clínico randomizado para reduzir sintomas, carga e recorrência de fibrilação atrial, não apenas como conselho genérico de estilo de vida",
+        "origem_secao": "Alcohol Abstinence in Drinkers with Atrial Fibrillation"
+      },
+      {
+        "id": "hh-af-rastreio-tud",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Rastrear padrão de consumo de álcool (ex.: AUDIT-C) e encaminhar para avaliação/apoio especializado quando o quadro sugerir uso pesado recorrente ou transtorno por uso de álcool, não episódio isolado",
+        "origem_secao": "Rastreio de consumo de risco"
+      },
+      {
+        "id": "hh-af-seguimento-recorrencia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Programar seguimento clínico e reavaliação de ritmo, dado o risco de recorrência e de progressão para fibrilação atrial mais sustentada em quem mantém consumo pesado de álcool",
+        "origem_secao": "Progressão da FA associada ao consumo de álcool"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
+  },
+  {
+    "slug": "avaliacao-cardiovascular-do-usuario-recreativo-de-esteroides-anabolizantes-androgenicos",
+    "condicao": "Uso recreativo (não competitivo/não médico) de esteroides anabolizantes androgênicos e cardiotoxicidade",
+    "resumo": "O que investigar e monitorar num paciente jovem, geralmente frequentador de academia sem vínculo com esporte competitivo, com fatores de risco cardiovascular atípicos para a idade e uso não supervisionado de esteroides anabolizantes androgênicos (EAA) para fins estéticos ou de desempenho recreativo.",
+    "documento_origem": "risco-cardiovascular-do-uso-recreativo-de-esteroides-anabolizantes-androgenicos",
+    "theme": "Geral",
+    "review_status": "revisado",
+    "source_refs": [
+      "Baggish AL, Weiner RB, Kanayama G, Hudson JI, Lu MT, Hoffmann U, Pope HG Jr. Cardiovascular Toxicity of Illicit Anabolic-Androgenic Steroid Use. Circulation. 2017;135(21):1991-2002. PMID 28533317.",
+      "Windfeld-Mathiasen J, Heerfordt IM, Dalhoff KP, Andersen JT, Andersen MA, Johansson KS, Biering-Sørensen T, Olsen FJ, Horwitz H. Cardiovascular Disease in Anabolic Androgenic Steroid Users. Circulation. 2025;151(12):828-834. PMID 39945117."
+    ],
+    "itens": [
+      {
+        "id": "eaa-anamnese-dirigida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perguntar ativamente e sem juízo de valor sobre uso atual ou passado de esteroides anabolizantes androgênicos em paciente jovem com achado cardiovascular atípico para a idade — é problema de saúde pública reconhecidamente subidentificado, em parte por subnotificação espontânea",
+        "origem_secao": "Cardiovascular Toxicity of Illicit Anabolic-Androgenic Steroid Use"
+      },
+      {
+        "id": "eaa-diferencial-jovem-sem-fatores-classicos",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Incluir cardiotoxicidade por EAA no diagnóstico diferencial de disfunção ventricular esquerda, hipertrofia ventricular ou evento coronariano agudo em usuário jovem sem os fatores de risco cardiovascular tradicionais que explicariam o quadro",
+        "origem_secao": "Fenótipos cardiovasculares associados ao uso de EAA"
+      },
+      {
+        "id": "eaa-perfil-lipidico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar perfil lipídico — padrão característico de HDL-colesterol suprimido e LDL-colesterol elevado é descrito em usuários de EAA",
+        "origem_secao": "Efeitos metabólicos do uso de EAA"
+      },
+      {
+        "id": "eaa-eco-estrutural-funcional",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma para avaliar função sistólica e diastólica do ventrículo esquerdo e massa ventricular — uso de longo prazo já foi associado a menor fração de ejeção e hipertrofia em comparação a controles",
+        "origem_secao": "Avaliação estrutural e funcional cardíaca em usuários de EAA"
+      },
+      {
+        "id": "eaa-angiotc-calcio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Considerar angiotomografia coronariana ou escore de cálcio em usuário de EAA com sintomas ou fatores adicionais de risco, dado o achado de maior carga de placa aterosclerótica coronariana em usuários de longo prazo mesmo em faixa etária jovem",
+        "origem_secao": "Carga aterosclerótica coronariana por tomografia"
+      },
+      {
+        "id": "eaa-hemograma-eritrocitose",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Solicitar hemograma completo para rastrear eritrocitose/policitemia secundária ao uso de androgênio, que aumenta risco trombótico",
+        "origem_secao": "Efeito hematológico do uso de androgênio"
+      },
+      {
+        "id": "eaa-pa-hipertensao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Aferir e monitorar pressão arterial — hipertensão está entre os achados cardiovasculares associados ao uso de EAA",
+        "origem_secao": "Efeitos cardiovasculares do uso de EAA"
+      },
+      {
+        "id": "eaa-cessacao-uso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Orientar cessação do uso como intervenção central, deixando claro que alterações estruturais e funcionais associadas ao uso prolongado podem não reverter por completo só com a suspensão — a decisão de tratamento cardiovascular específico não deve depender de reversibilidade presumida",
+        "origem_secao": "Efeitos do uso de longo prazo comparado ao uso de curto prazo"
+      },
+      {
+        "id": "eaa-hipogonadismo-pos-cessacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Antecipar hipogonadismo sintomático após suspensão abrupta do uso e encaminhar para manejo endocrinológico apropriado, em vez de o paciente retomar ou escalar o uso de EAA por conta própria para aliviar os sintomas",
+        "origem_secao": "Manejo da suspensão do uso"
+      },
+      {
+        "id": "eaa-encaminhamento-dependencia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Encaminhar para avaliação de dependência/uso de substância e suporte psiquiátrico quando houver padrão compulsivo de uso, já que o uso de EAA se associa a comorbidade comportamental e psiquiátrica",
+        "origem_secao": "Comorbidade comportamental associada ao uso de EAA"
+      },
+      {
+        "id": "eaa-orientacao-nao-so-atleta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Esclarecer que o risco cardiovascular documentado não se restringe ao atleta competitivo — coorte com seguimento longo em usuários recreativos sancionados por antidopagem em academias mostrou risco substancialmente maior de doença cardiovascular em comparação a controles pareados da população geral",
+        "origem_secao": "Cardiovascular Disease in Anabolic Androgenic Steroid Users"
+      },
+      {
+        "id": "eaa-seguimento-risco-persistente",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Manter seguimento cardiovascular de longo prazo mesmo após a cessação do uso, dado que o risco aumentado foi demonstrado com seguimento prolongado e não há dado que garanta normalização completa do risco após a suspensão",
+        "origem_secao": "Desenho de coorte com seguimento longo"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
   }
 ]
