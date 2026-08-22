@@ -1,0 +1,86 @@
+name: Temporary fix patient material schema
+
+on:
+  pull_request:
+    types: [synchronize]
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.event.pull_request.head.ref == 'content/consolidate-claude-science-backlog-20260821'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - name: Normalize question-answer objects to strings
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('material-paciente/metadados.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          expected = {
+              'alimentacao-do-bebe-com-cardiopatia-congenita': 3,
+              'como-se-preparar-para-a-consulta-cardiologica': 3,
+              'depressao-pos-diagnostico-cardiaco-quando-a-tristeza-precisa-de-tratamento': 4,
+              'lendo-as-anotacoes-do-seu-medico-opennotes-no-cuidado-cardiaco': 4,
+          }
+          found = {}
+          changed = 0
+          for rec in data:
+              slug = rec.get('slug')
+              vals = rec.get('perguntas') or []
+              for i, value in enumerate(vals):
+                  if not isinstance(value, dict):
+                      continue
+                  if slug not in expected:
+                      raise SystemExit(f'unexpected dict question in {slug}[{i}]')
+                  if set(value) != {'pergunta', 'resposta'}:
+                      raise SystemExit(f'unexpected dict shape in {slug}[{i}]: {sorted(value)}')
+                  pergunta = value['pergunta']
+                  resposta = value['resposta']
+                  if not isinstance(pergunta, str) or not isinstance(resposta, str) or not pergunta.strip() or not resposta.strip():
+                      raise SystemExit(f'invalid question/answer text in {slug}[{i}]')
+                  vals[i] = f"{pergunta.strip()} {resposta.strip()}"
+                  found[slug] = found.get(slug, 0) + 1
+                  changed += 1
+          if changed == 0:
+              print('No schema normalization needed.')
+              raise SystemExit(0)
+          if found != expected or changed != 14:
+              raise SystemExit(f'guard mismatch: found={found}, changed={changed}')
+          # Loader-compatible structural validation over entire manifest.
+          for rec in data:
+              slug = rec.get('slug')
+              parts = [rec.get('titulo',''), rec.get('subtitulo',''), rec.get('resumo','')]
+              for si, sec in enumerate(rec.get('secoes') or []):
+                  parts.append(sec.get('titulo',''))
+                  parts.extend(sec.get('paragrafos') or [])
+                  parts.extend(sec.get('itens') or [])
+              parts.extend(rec.get('sinais_de_alerta') or [])
+              parts.extend(rec.get('perguntas') or [])
+              bad = [(i, type(v).__name__) for i, v in enumerate(parts) if v and not isinstance(v, str)]
+              if bad:
+                  raise SystemExit(f'loader-incompatible values remain in {slug}: {bad}')
+              '\n\n'.join(p for p in parts if p)
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({'normalized': changed, 'records': found}, ensure_ascii=False))
+          PY
+          git diff --check
+      - name: Commit schema normalization
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add material-paciente/metadados.json
+          git commit -m "fix(content): normalize patient material questions for loader"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
