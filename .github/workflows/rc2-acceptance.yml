@@ -378,7 +378,7 @@ jobs:
 
       - name: Upload RC2 acceptance artifacts
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: corvia-rc2-acceptance
           path: rc2-acceptance/
