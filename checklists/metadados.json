@@ -20168,5 +20168,83 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "monitorizacao-eletrocardiografica-em-uso-de-ribociclibe",
+    "condicao": "Monitorização eletrocardiográfica e de eletrólitos durante uso de ribociclibe (inibidor de CDK4/6)",
+    "resumo": "Derivado do documento já publicado sobre prolongamento de QT por inibidores de CDK4/6: cronograma de ECG seriado, correção eletrolítica e critérios de ajuste/suspensão de dose por QTcF específicos do ribociclibe — não se aplica a palbociclibe nem abemaciclibe, cujo sinal de QT não foi confirmado com a mesma magnitude.",
+    "documento_origem": "prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Thill M, Schmidt M. Management of adverse events during cyclin-dependent kinase 4/6 (CDK4/6) inhibitor-based treatment in breast cancer. Ther Adv Med Oncol. 2018;10:1758835918793326. DOI: 10.1177/1758835918793326. PMID: 30202447",
+      "Murad B, Reis PCA, Deberaldini Marinho A, et al. QTc prolongation across CDK4/6 inhibitors: a systematic review and meta-analysis. JNCI Cancer Spectr. 2024;8(5):pkae078. DOI: 10.1093/jncics/pkae078. PMID: 39254653"
+    ],
+    "itens": [
+      {
+        "id": "ribo-ecg-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG basal obtido antes de iniciar o ribociclibe",
+        "origem_secao": "Monitorização eletrocardiográfica recomendada com ribociclibe"
+      },
+      {
+        "id": "ribo-ecg-dia14",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG repetido por volta do dia 14 do primeiro ciclo — não pular mesmo com ECG basal normal, porque o efeito pode não estar presente no primeiro exame",
+        "origem_secao": "Monitorização eletrocardiográfica recomendada com ribociclibe / Armadilhas clínicas"
+      },
+      {
+        "id": "ribo-ecg-ciclo2",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG repetido no início do segundo ciclo",
+        "origem_secao": "Monitorização eletrocardiográfica recomendada com ribociclibe"
+      },
+      {
+        "id": "ribo-eletrolitos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Potássio e magnésio corrigidos antes de iniciar e monitorizados durante o tratamento — atenção redobrada se houver diarreia (evento adverso frequente da própria classe) ou uso concomitante de diurético",
+        "origem_secao": "Monitorização eletrocardiográfica recomendada com ribociclibe / Armadilhas clínicas"
+      },
+      {
+        "id": "ribo-outros-qt",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Checada a lista combinada de outros fármacos QT-prolongadores do esquema oncológico do paciente (ex.: ondansetrona, antifúngico azólico) — o risco não se avalia fármaco a fármaco isoladamente",
+        "origem_secao": "Interação com o resto da farmacologia oncológica do paciente"
+      },
+      {
+        "id": "ribo-qtcf-480",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se QTcF > 480 ms: ribociclibe interrompido; retomada no mesmo nível de dose só confirmada com QTcF resolvido para menos de 481 ms (valor absoluto no ECG, não impressão clínica de melhora)",
+        "origem_secao": "Ajuste de dose por QTcF, degrau a degrau / Armadilhas clínicas"
+      },
+      {
+        "id": "ribo-qtcf-500",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se QTcF > 500 ms em pelo menos dois ECGs separados na mesma visita: ribociclibe interrompido",
+        "origem_secao": "Ajuste de dose por QTcF, degrau a degrau"
+      },
+      {
+        "id": "ribo-qtcf-descontinuacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se QTcF > 500 ms, ou aumento > 60 ms em relação ao basal, associado a sintoma de arritmia: descontinuação permanente do ribociclibe",
+        "origem_secao": "Ajuste de dose por QTcF, degrau a degrau"
+      },
+      {
+        "id": "ribo-nao-classe",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que este cronograma de ECG seriado não foi estendido automaticamente a palbociclibe (sem efeito clinicamente relevante sobre QTc nos dados citados) nem a abemaciclibe (dado insuficiente para concluir associação ou ausência dela) — o sinal relevante está concentrado no ribociclibe",
+        "origem_secao": "O sinal de QT não é uniforme entre os três fármacos / Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Verificado item a item em 2026-08-22 contra o documento de origem `prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe`, já publicado nesta base — cada um dos 9 itens corresponde a uma recomendação/cronograma nomeado no documento, com a fonte primária (Thill & Schmidt 2018, PMID 30202447; Murad et al. 2024, PMID 39254653) já conferida por sessão anterior. Nenhuma fonte nova consultada nesta rodada. Fecha a lacuna de 'emergência sem checklist derivado' para o protocolo `prolongamento-qt-por-ribociclibe-e-risco-de-torsades` já publicado em emergencia/metadados.json. ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida aqui."
   }
 ]
