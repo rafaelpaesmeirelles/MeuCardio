@@ -89,7 +89,7 @@ export default function Prontuario(){
       <main className="pep-main">
         {!paciente?<section className="pep-card pep-empty">Selecione ou cadastre um paciente.</section>:<>
           <section className="pep-card pep-patient"><div><p className="eyebrow">Paciente</p><h2>{paciente.full_name}</h2><small>{[paciente.birth_date,paciente.sex,paciente.phone].filter(Boolean).join(" · ")||"Dados complementares não informados"}</small></div><button className="botao" onClick={abrirNovo}>+ Iniciar atendimento</button></section>
-          <PatientClinicalSummary patientId={paciente.id} currentEncounterId={editando}/>
+          <PatientClinicalSummary key={paciente.id} patientId={paciente.id} currentEncounterId={editando}/>
           <div className="pep-clinical">
             <section className="pep-card pep-history"><div className="pep-title"><h2>Histórico</h2><small>{encounters.length} atendimento(s)</small></div>{!encounters.length&&<p className="pep-muted">Ainda não há atendimentos.</p>}{encounters.map(e=><article key={e.id}><div><strong>{e.encounter_type==="adendo"?"Adendo":"Atendimento"}</strong><time>{quando(e.started_at)}</time></div><p>{e.chief_complaint||e.assessment||"Sem resumo registrado."}</p>{e.status==="finalized"?<small>Finalizado · histórico preservado</small>:<button onClick={()=>abrir(e)}>Continuar</button>}</article>)}</section>
             <section className="pep-card pep-editor">
