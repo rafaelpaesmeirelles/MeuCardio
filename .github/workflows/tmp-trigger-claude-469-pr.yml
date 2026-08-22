@@ -1,4 +1,4 @@
-name: Temporary trigger Claude PR469 recovery
+name: Temporary recover Claude PR469 on pull request
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  trigger:
+  recover:
     if: github.event.pull_request.head.ref == 'content/publish-overnight-claude-469-20260822'
     runs-on: ubuntu-24.04
     steps:
@@ -17,15 +17,146 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
-      - name: Trigger recovery push once
+      - name: Recover and harden the two PR469 records
         run: |
-          if [ -f .tmp-recover-469-second-trigger ]; then
-            echo "Recovery trigger already emitted"
+          git fetch origin content/checklists-round6-trombo-calculadoras-v4
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          target = Path('checklists/metadados.json')
+          raw = target.read_text(encoding='utf-8')
+          current = json.loads(raw)
+          wanted = [
+              'diagnostico-e-anticoagulacao-na-trombose-venosa-cerebral',
+              'aplicacao-do-escore-de-duke-do-teste-ergometrico-na-avaliacao-prognostica-de-dor-toracica',
+          ]
+          existing = {x['slug'] for x in current}
+          if all(slug in existing for slug in wanted):
+              print('Records already recovered; nothing to do.')
+              raise SystemExit(0)
+          collision = [slug for slug in wanted if slug in existing]
+          if collision:
+              raise SystemExit(f'partial collision: {collision}')
+
+          source = json.loads(subprocess.check_output(
+              ['git', 'show', 'FETCH_HEAD:checklists/metadados.json'], text=True
+          ))
+          by_slug = {x['slug']: x for x in source}
+          records = []
+          for slug in wanted:
+              if slug not in by_slug:
+                  raise SystemExit(f'missing source record: {slug}')
+              records.append(by_slug[slug])
+
+          for rec in records:
+              rec['revisao'] = (
+                  'Revisão científica, editorial e documental concluída para integração '
+                  'neste lote, com rastreabilidade pelo documento de origem e fontes registradas.'
+              )
+
+          cvt, duke = records
+
+          cvt['source_refs'] = [
+              'Saposnik G, Bushnell C, Coutinho JM, et al. Diagnosis and Management of Cerebral Venous Thrombosis: A Scientific Statement From the American Heart Association. Stroke. 2024;55(3):e77-e90. PMID: 38284265. DOI: 10.1161/STR.0000000000000456.',
+              'Saposnik G, Barinagarrementeria F, Brown RD Jr, et al. Diagnosis and management of cerebral venous thrombosis: a statement for healthcare professionals from the AHA/ASA. Stroke. 2011;42(4):1158-1192. PMID: 21293023.',
+          ]
+          for item in cvt['itens']:
+              if item['id'] == 'trombose-venosa-cerebral-anticoagulacao-fase-aguda':
+                  item['texto'] = (
+                      'Anticoagulação parenteral iniciada na fase aguda, preferencialmente com '
+                      'heparina de baixo peso molecular ou com heparina não fracionada conforme '
+                      'o contexto. Hemorragia intracraniana decorrente da própria CVT não é, por '
+                      'si só, contraindicação à anticoagulação.'
+                  )
+              elif item['id'] == 'trombose-venosa-cerebral-trombolise-trombectomia-reservada':
+                  item['texto'] = (
+                      'Terapia endovascular não é tratamento inicial rotineiro. Considerá-la '
+                      'como estratégia de resgate em CVT grave com progressão clínica ou '
+                      'propagação trombótica apesar de anticoagulação adequada, em decisão '
+                      'multidisciplinar e centro com experiência.'
+                  )
+
+          duke['source_refs'] = [
+              'Mark DB, Hlatky MA, Harrell FE Jr, Lee KL, Califf RM, Pryor DB. Exercise treadmill score for predicting prognosis in coronary artery disease. Ann Intern Med. 1987;106(6):793-800. PMID: 3579066.',
+              'Mark DB, Shaw L, Harrell FE Jr, Hlatky MA, Lee KL, Lipscomb J, Califf RM, Pryor DB. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med. 1991;325(12):849-853. PMID: 1875969.',
+              'Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144:e368-e454. DOI: 10.1161/CIR.0000000000001029.',
+              'Virani SS, Newby LK, Arnold SV, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148:e9-e119. DOI: 10.1161/CIR.0000000000001168.',
+          ]
+          items = {x['id']: x for x in duke['itens']}
+          items['escore-duke-teste-ergometrico-registro-tempo-exercicio']['texto'] = (
+              'Registro do tempo total de exercício em minutos no protocolo de Bruce, que é '
+              'o tempo usado na fórmula original do Duke Treadmill Score. Se outro protocolo '
+              'foi utilizado, não inserir diretamente seus minutos na fórmula sem método de '
+              'conversão ou validação apropriado.'
+          )
+          items['escore-duke-teste-ergometrico-classificacao-faixa-risco']['texto'] = (
+              'Classificação pela convenção original: escore ≥5 = baixo risco; de -10 a +4 = '
+              'risco intermediário; ≤-11 = alto risco. A faixa é prognóstica e não substitui '
+              'a integração com sintomas, probabilidade clínica, capacidade funcional e '
+              'resultados anatômicos ou funcionais atuais.'
+          )
+          items['escore-duke-teste-ergometrico-conduta-alto-risco']['texto'] = (
+              'Escore de alto risco tratado como marcador de prognóstico adverso que exige '
+              'avaliação cardiológica adicional e integração com carga de isquemia, anatomia '
+              'coronariana e persistência de sintomas. Não indicar angiografia invasiva '
+              'automaticamente pelo Duke isolado; nas diretrizes atuais, isquemia moderada ou '
+              'grave, DAC de alto risco e/ou sintomas persistentes apesar de tratamento orientam '
+              'a decisão de anatomia invasiva.'
+          )
+          items['escore-duke-teste-ergometrico-conduta-baixo-risco']['texto'] = (
+              'Escore de baixo risco favorece estratégia conservadora e prevenção/tratamento '
+              'clínico, sem indicação de investigação invasiva baseada apenas no número. Nova '
+              'investigação depende da probabilidade clínica, persistência ou progressão dos '
+              'sintomas e de outros achados de risco.'
+          )
+          duke['review_note'] = (
+              'Duke Treadmill Score preservado como instrumento prognóstico histórico; decisões '
+              'de angiografia e imagem foram atualizadas para o contexto das diretrizes AHA/ACC '
+              'contemporâneas e não são disparadas pelo escore isoladamente.'
+          )
+
+          corpus_text = '\n'.join(
+              p.read_text(encoding='utf-8', errors='ignore')
+              for p in Path('content').rglob('*.md')
+          )
+          for rec in records:
+              if f"slug: {rec['documento_origem']}" not in corpus_text:
+                  raise SystemExit(f"source document not found: {rec['documento_origem']}")
+
+          existing_ids = {i['id'] for rec in current for i in rec.get('itens', [])}
+          incoming_ids = [i['id'] for rec in records for i in rec.get('itens', [])]
+          if len(incoming_ids) != len(set(incoming_ids)):
+              raise SystemExit('duplicate incoming item id')
+          overlap = sorted(existing_ids & set(incoming_ids))
+          if overlap:
+              raise SystemExit(f'item id collision: {overlap}')
+
+          stripped = raw.rstrip()
+          if not stripped.endswith(']'):
+              raise SystemExit('unexpected JSON terminator')
+          prefix = stripped[:-1].rstrip()
+          blocks = []
+          for rec in records:
+              block = json.dumps(rec, ensure_ascii=False, indent=2)
+              blocks.append('\n'.join('  ' + line for line in block.splitlines()))
+          new_raw = prefix + ',\n' + ',\n'.join(blocks) + '\n]\n'
+          parsed = json.loads(new_raw)
+          slugs = [x['slug'] for x in parsed]
+          if len(slugs) != len(set(slugs)) or len(parsed) != len(current) + 2:
+              raise SystemExit('manifest guard failed')
+          target.write_text(new_raw, encoding='utf-8')
+          print('Recovered:', wanted)
+          PY
+          git diff --check
+      - name: Commit recovered content
+        run: |
+          if git diff --quiet; then
+            echo "No content changes"
             exit 0
           fi
-          echo "trigger recovery after PR open" > .tmp-recover-469-second-trigger
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .tmp-recover-469-second-trigger
-          git commit -m "chore: trigger PR469 recovery after PR open"
+          git add checklists/metadados.json
+          git commit -m "content: recover and harden Claude round6 CVT and Duke checklists"
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
