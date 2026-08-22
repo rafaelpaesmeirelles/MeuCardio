@@ -35,3 +35,4 @@ from app.models.agenda import (  # noqa: F401
 )
 from app.models.knowledge import KnowledgeEntity, KnowledgeRelation  # noqa: F401
 from app.models.prontuario import ClinicalEncounter, PatientClinicalItem, PatientExamResult  # noqa: F401
+from app.models.patient_exam_attachment import PatientExamAttachment  # noqa: F401
