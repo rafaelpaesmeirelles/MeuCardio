@@ -1,0 +1,31 @@
+name: Temporary trigger Claude PR469 recovery
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  trigger:
+    if: github.event.pull_request.head.ref == 'content/publish-overnight-claude-469-20260822'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - name: Trigger recovery push once
+        run: |
+          if [ -f .tmp-recover-469-second-trigger ]; then
+            echo "Recovery trigger already emitted"
+            exit 0
+          fi
+          echo "trigger recovery after PR open" > .tmp-recover-469-second-trigger
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .tmp-recover-469-second-trigger
+          git commit -m "chore: trigger PR469 recovery after PR open"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
