@@ -20168,5 +20168,203 @@
       }
     ],
     "revisao": "Revisão editorial, científica e documental concluída para integração neste lote. O conteúdo permanece rastreável pelo documento de origem e pelas fontes primárias registradas, sem atribuição de revisão clínica individual a pessoa específica."
+  },
+  {
+    "slug": "diagnostico-e-anticoagulacao-na-trombose-venosa-cerebral",
+    "condicao": "Trombose venosa cerebral (trombose de seio venoso dural) — diagnóstico e anticoagulação",
+    "resumo": "O que checar diante de suspeita de trombose venosa cerebral: os fatores predisponentes a rastrear, o reconhecimento da apresentação clínica variável, a confirmação por venografia (RM ou TC), a anticoagulação terapêutica na fase aguda mesmo com infarto hemorrágico associado, o manejo de complicações e a definição da duração da anticoagulação de manutenção conforme o fator provocador.",
+    "documento_origem": "trombose-venosa-cerebral-diagnostico-e-manejo-aha-2024",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Saposnik G, Bushnell C, Coutinho JM, Field TS, Furie KL, Galadanci N, Kam W, Kirkham FC, McNair ND, Singhal AB, Thijs V, Yang VXD. Diagnosis and Management of Cerebral Venous Thrombosis: A Scientific Statement From the American Heart Association. Stroke. 2024;55(3):e77-e90. PMID: 38284265. DOI: 10.1161/STR.0000000000000456.",
+      "Saposnik G, Barinagarrementeria F, Brown RD Jr, Bushnell CD, Cucchiara B, Cushman M, deVeber G, Ferro JM, Tsai FY; American Heart Association Stroke Council and the Council on Epidemiology and Prevention. Diagnosis and management of cerebral venous thrombosis: a statement for healthcare professionals from the American Heart Association/American Stroke Association. Stroke. 2011;42(4):1158-1192. PMID: 21293023."
+    ],
+    "itens": [
+      {
+        "id": "trombose-venosa-cerebral-triagem-fatores-predisponentes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Triagem ativa de fatores predisponentes ao diagnóstico: gestação/puerpério, uso de contraceptivo hormonal combinado, trombofilia hereditária ou adquirida conhecida (incluindo síndrome antifosfolípide), neoplasia ativa, infecção regional contígua (mastoidite, sinusite, otite), doença inflamatória sistêmica e trauma craniano ou punção lombar recente",
+        "origem_secao": "Fatores de risco e predisponentes"
+      },
+      {
+        "id": "trombose-venosa-cerebral-reconhecimento-apresentacao-variavel",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Reconhecimento de que a apresentação clínica é heterogênea e frequentemente não localizatória: cefaleia de início subagudo ou progressivo (às vezes isolada, sem outro sinal), crise convulsiva focal, déficit neurológico focal, papiledema com hipertensão intracraniana isolada, ou rebaixamento do nível de consciência nos casos mais graves",
+        "origem_secao": "Apresentação clínica"
+      },
+      {
+        "id": "trombose-venosa-cerebral-venorm-ou-venotc-confirmatoria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Exame de imagem confirmatório solicitado é venografia por ressonância magnética ou venografia por tomografia computadorizada — nunca apenas TC de crânio sem contraste isolada, que pode ser normal em parcela relevante dos casos e não descarta o diagnóstico",
+        "origem_secao": "Confirmação diagnóstica por imagem"
+      },
+      {
+        "id": "trombose-venosa-cerebral-rm-sequencia-suscetibilidade",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "RM de crânio com sequência de suscetibilidade magnética (SWI ou T2*) considerada quando a venografia inicial for inconclusiva ou houver contraindicação a contraste iodado/gadolínio",
+        "origem_secao": "Confirmação diagnóstica por imagem"
+      },
+      {
+        "id": "trombose-venosa-cerebral-investigacao-etiologica-sem-fator-provocador",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Investigação etiológica de trombofilia hereditária ou adquirida direcionada quando não houver fator provocador transitório claramente identificado, sempre respeitando o momento adequado de coleta (fora da fase aguda e da anticoagulação, quando o painel exigir)",
+        "origem_secao": "Investigação etiológica"
+      },
+      {
+        "id": "trombose-venosa-cerebral-anticoagulacao-fase-aguda",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação terapêutica iniciada na fase aguda com heparina de baixo peso molecular ou heparina não fracionada, mantida mesmo na presença de infarto hemorrágico associado à trombose venosa — a hemorragia secundária à congestão venosa não é, por si só, contraindicação à anticoagulação",
+        "origem_secao": "Anticoagulação na fase aguda"
+      },
+      {
+        "id": "trombose-venosa-cerebral-trombolise-trombectomia-reservada",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Trombólise local ou trombectomia endovascular reservada para deterioração clínica apesar de anticoagulação plena em dose adequada — não é conduta de primeira linha nem substitui a anticoagulação inicial",
+        "origem_secao": "Manejo de complicações e refratariedade"
+      },
+      {
+        "id": "trombose-venosa-cerebral-encaminhamento-hipertensao-intracraniana-refrataria",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Avaliação neurocirúrgica ou neurointervencionista de urgência acionada diante de sinais de herniação iminente, deterioração neurológica aguda ou hipertensão intracraniana refratária ao tratamento clínico",
+        "origem_secao": "Manejo de complicações e refratariedade"
+      },
+      {
+        "id": "trombose-venosa-cerebral-manejo-crise-convulsiva",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Anticonvulsivante iniciado no paciente com crise convulsiva associada a lesão parenquimatosa supratentorial (hemorragia ou infarto venoso) — uso profilático rotineiro em todo paciente sem crise e sem lesão parenquimatosa não é indicado de forma indiscriminada",
+        "origem_secao": "Manejo de complicações e refratariedade"
+      },
+      {
+        "id": "trombose-venosa-cerebral-orientacao-contracepcao-na-alta",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientação, na alta, sobre contraindicação a contraceptivo hormonal combinado quando este foi fator predisponente identificado, com transição para método não hormonal ou hormonal apenas com progestagênio",
+        "origem_secao": "Orientação de alta"
+      },
+      {
+        "id": "trombose-venosa-cerebral-duracao-anticoagulacao-manutencao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Duração da anticoagulação oral de manutenção definida conforme o fator provocador identificado — transitório, não provocado ou trombofilia grave/evento recorrente — cada categoria com prazo próprio, sem aplicar duração única a todos os casos",
+        "origem_secao": "Anticoagulação de manutenção e duração"
+      },
+      {
+        "id": "trombose-venosa-cerebral-seguimento-oftalmologico-papiledema",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliação oftalmológica com fundoscopia e, quando disponível, campimetria agendada nos pacientes que tiveram papiledema, para monitorar risco de perda visual por hipertensão intracraniana persistente após a fase aguda",
+        "origem_secao": "Seguimento"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
+  },
+  {
+    "slug": "aplicacao-do-escore-de-duke-do-teste-ergometrico-na-avaliacao-prognostica-de-dor-toracica",
+    "condicao": "Aplicação do escore de Duke do teste ergométrico na avaliação prognóstica de dor torácica com suspeita de doença arterial coronariana",
+    "resumo": "O que checar ao aplicar o escore de Duke do teste ergométrico: a elegibilidade do paciente e do ECG basal para interpretação do segmento ST, o registro correto dos três componentes da fórmula (tempo de exercício, desvio de ST, índice de angina), o cálculo pela fórmula original, a classificação em baixo/intermediário/alto risco e a conduta associada a cada faixa.",
+    "documento_origem": "escore-de-duke-do-teste-ergometrico-valor-prognostico-em-dor-toracica",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mark DB, Hlatky MA, Harrell FE Jr, Lee KL, Califf RM, Pryor DB. Exercise treadmill score for predicting prognosis in coronary artery disease. Ann Intern Med. 1987;106(6):793-800. PMID: 3579066.",
+      "Mark DB, Shaw L, Harrell FE Jr, Hlatky MA, Lee KL, Lipscomb J, Califf RM, Pryor DB. Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease. N Engl J Med. 1991;325(12):849-853. PMID: 1875969."
+    ],
+    "itens": [
+      {
+        "id": "escore-duke-teste-ergometrico-confirmar-elegibilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmação de que o paciente tem capacidade de exercício em esteira e nenhuma contraindicação absoluta ao teste (síndrome coronariana aguda não estabilizada, estenose aórtica grave sintomática, arritmia não controlada, insuficiência cardíaca descompensada) antes de aplicar o escore",
+        "origem_secao": "Elegibilidade para o teste"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-checar-ecg-basal-interpretavel",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ECG basal checado quanto a alterações que tornem o segmento ST não interpretável para fins do escore — bloqueio de ramo esquerdo, síndrome de Wolff-Parkinson-White, ritmo de marcapasso ou alteração prévia de ST-T significativa — casos em que teste com imagem associada substitui o escore isolado",
+        "origem_secao": "Elegibilidade para o teste"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-registro-tempo-exercicio",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Registro do tempo total de exercício em minutos, conforme o protocolo utilizado (Bruce ou equivalente) — primeiro dos três componentes exigidos pela fórmula original do escore",
+        "origem_secao": "Componentes do escore"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-registro-desvio-st",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Registro do desvio máximo do segmento ST em milímetros, medido durante ou após o exercício — segundo componente da fórmula original",
+        "origem_secao": "Componentes do escore"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-registro-indice-angina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Registro do índice de angina do exercício na escala de três pontos da publicação original — 0 para ausência de angina, 1 para angina não limitante, 2 para angina que limita o exercício — terceiro componente da fórmula",
+        "origem_secao": "Componentes do escore"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-checar-teste-maximo-ou-motivo-interrupcao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Checagem de que o teste atingiu critério de esforço máximo ou, quando interrompido antes disso, registro do motivo (fadiga, dispneia, evento clínico) — teste submáximo limita a confiabilidade do escore calculado a partir dele",
+        "origem_secao": "Componentes do escore"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-calculo-formula-original",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Cálculo do escore pela fórmula original de derivação — tempo de exercício em minutos, subtraído de 5 vezes o desvio de ST em milímetros, subtraído de 4 vezes o índice de angina — sem substituir nenhum dos três componentes por estimativa",
+        "origem_secao": "Fórmula e classificação de risco"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-classificacao-faixa-risco",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificação do resultado em uma das três faixas de risco da coorte de derivação e validação (baixo, intermediário ou alto risco), aplicada exatamente conforme o valor calculado — sem arredondar para a categoria vizinha",
+        "origem_secao": "Fórmula e classificação de risco"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-conduta-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para estratificação invasiva priorizado nos pacientes classificados como alto risco pelo escore, mesmo quando o quadro clínico permanece estável no momento da avaliação",
+        "origem_secao": "Aplicação clínica do resultado"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-conduta-baixo-risco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Conduta conservadora inicial com tratamento clínico otimizado considerada apropriada nos pacientes de baixo risco pelo escore, reservando investigação adicional para mudança do quadro clínico",
+        "origem_secao": "Aplicação clínica do resultado"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-risco-intermediario-julgamento-adicional",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Faixa de risco intermediário reconhecida como a de maior incerteza prognóstica do escore — decisão sobre investigação adicional (exame de imagem complementar, avaliação de comorbidade) não tomada apenas pelo valor numérico, e sim com julgamento clínico agregado",
+        "origem_secao": "Aplicação clínica do resultado"
+      },
+      {
+        "id": "escore-duke-teste-ergometrico-limite-populacao-validada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registro de que o escore foi derivado e validado em pacientes ambulatoriais com dor torácica e suspeita de doença arterial coronariana — não substitui avaliação em síndrome coronariana aguda em curso nem em dor torácica de outra etiologia já estabelecida",
+        "origem_secao": "Limites de aplicação"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, em 22/08/2026."
   }
 ]
