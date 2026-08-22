@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
+import PatientECGAssistant from "./PatientECGAssistant";
 import PatientExamResults from "./PatientExamResults";
 import PatientProfileTimeline from "./PatientProfileTimeline";
 
@@ -52,7 +53,8 @@ export default function PatientClinicalSummary({patientId,currentEncounterId}:{p
       </div>
       <button className="botao" style={{marginTop:"0.5rem"}} onClick={adicionar} disabled={!name.trim()}>+ Registrar</button>
     </section>
-    <PatientExamResults patientId={patientId} currentEncounterId={currentEncounterId} onChanged={()=>setTimelineRevision(x=>x+1)}/>
+    <PatientExamResults key={`results-${patientId}-${timelineRevision}`} patientId={patientId} currentEncounterId={currentEncounterId} onChanged={()=>setTimelineRevision(x=>x+1)}/>
+    <PatientECGAssistant patientId={patientId} currentEncounterId={currentEncounterId} onChanged={()=>setTimelineRevision(x=>x+1)}/>
     <PatientProfileTimeline key={`${patientId}-${currentEncounterId||0}-${itens.map(i=>i.id).join("-")}-${timelineRevision}`} patientId={patientId}/>
   </>;
 }

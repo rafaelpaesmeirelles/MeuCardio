@@ -20,23 +20,29 @@ AuditLog sem copiar conteúdo clínico para o log.
 from __future__ import annotations
 
 import json
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, Response, UploadFile
 from pydantic import BaseModel
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
+from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
+from app.core.uploads import UploadRejected, safe_filename, validate_file
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment
 from app.models.lab_test import LabTest
 from app.models.patient_profile import PatientProfile
-from app.models.prontuario import ClinicalEncounter, PatientClinicalItem, PatientExamResult
+from app.models.prontuario import (
+    ClinicalEncounter, PatientClinicalAISuggestion, PatientClinicalItem,
+    PatientECGRecord, PatientExamResult,
+)
 from app.services import cofre
 from app.services.clinical_ownership import encounter_for_user, patient_profile_for_user
+from app.services.ia import ecg_assist
 from app.services.patient_profile_service import snapshot_de
 from app.services.professional_profile import normalize_search_text
 
@@ -94,6 +100,18 @@ class ExamResultIn(BaseModel):
 
 class ExamCorrectionIn(ExamResultIn):
     correction_reason: str
+
+
+class AISuggestionReviewIn(BaseModel):
+    decision: Literal["accept", "reject"]
+    final_interpretation: str | None = None
+    review_note: str | None = None
+
+
+class AIAnalysisRequestIn(BaseModel):
+    # Literal True torna a transferência ao provedor uma ação explícita, não
+    # um default silencioso de upload.
+    confirm_external_processing: Literal[True]
 
 
 class EncounterIn(BaseModel):
@@ -281,6 +299,11 @@ def _dump_exam_result(
 ) -> dict:
     payload = json.loads(cofre.decifrar_campo(row.payload_cifrado, row.id))
     catalog = db.get(LabTest, row.lab_test_id) if row.lab_test_id else None
+    ai_origin = db.query(PatientClinicalAISuggestion).filter(
+        PatientClinicalAISuggestion.owner_id == row.owner_id,
+        PatientClinicalAISuggestion.patient_profile_id == row.patient_profile_id,
+        PatientClinicalAISuggestion.accepted_result_id == row.id,
+    ).first()
     structured_result = payload.get("structured_result")
     report_text = payload.get("report_text")
     # Registros produzidos pelos primeiros commits do lote continuam legíveis.
@@ -312,6 +335,9 @@ def _dump_exam_result(
         "reference_range": payload.get("reference_range"),
         "notes": payload.get("notes"),
         "source": payload.get("source"),
+        "ecg_record_id": ai_origin.ecg_record_id if ai_origin else None,
+        "ai_suggestion_id": ai_origin.id if ai_origin else None,
+        "ai_review_status": ai_origin.status if ai_origin else None,
         "created_at": row.created_at,
     }
 
@@ -368,7 +394,7 @@ def _normalizar_resultado(dados: ExamResultIn) -> dict:
     }
 
 
-def _criar_resultado(
+def _preparar_resultado(
     pid: int,
     dados: ExamResultIn,
     db: Session,
@@ -377,6 +403,12 @@ def _criar_resultado(
     correction_of: PatientExamResult | None = None,
     correction_reason: str | None = None,
 ) -> PatientExamResult:
+    """Valida e inclui um resultado na transação atual, sem fazer commit.
+
+    A separação permite que a aceitação de sugestão IA e a criação do fato
+    médico aconteçam atomicamente; nunca pode sobrar resultado aceito sem a
+    respectiva decisão de revisão registrada.
+    """
     patient_profile_for_user(pid, db, user)
     payload = _normalizar_resultado(dados)
 
@@ -421,17 +453,37 @@ def _criar_resultado(
         payload_cifrado=b"",
         correction_reason_cifrado=None,
     )
+    db.add(row)
+    db.flush()
+    row.payload_cifrado = cofre.cifrar_campo(json.dumps(payload, ensure_ascii=False), row.id)
+    if correction_reason:
+        row.correction_reason_cifrado = cofre.cifrar_campo(correction_reason, row.id)
+    _auditar_resultado(
+        db,
+        user.id,
+        "correct_patient_exam_result" if correction_of else "create_patient_exam_result",
+        row,
+    )
+    return row
+
+
+def _criar_resultado(
+    pid: int,
+    dados: ExamResultIn,
+    db: Session,
+    user,
+    *,
+    correction_of: PatientExamResult | None = None,
+    correction_reason: str | None = None,
+) -> PatientExamResult:
     try:
-        db.add(row)
-        db.flush()
-        row.payload_cifrado = cofre.cifrar_campo(json.dumps(payload, ensure_ascii=False), row.id)
-        if correction_reason:
-            row.correction_reason_cifrado = cofre.cifrar_campo(correction_reason, row.id)
-        _auditar_resultado(
+        row = _preparar_resultado(
+            pid,
+            dados,
             db,
-            user.id,
-            "correct_patient_exam_result" if correction_of else "create_patient_exam_result",
-            row,
+            user,
+            correction_of=correction_of,
+            correction_reason=correction_reason,
         )
         db.commit()
     except IntegrityError:
@@ -448,6 +500,89 @@ def _criar_resultado(
         raise
     db.refresh(row)
     return row
+
+
+def _ecg_for_user(pid: int, ecg_id: int, db: Session, user) -> PatientECGRecord:
+    patient_profile_for_user(pid, db, user)
+    row = db.get(PatientECGRecord, ecg_id)
+    if not row or row.owner_id != user.id or row.patient_profile_id != pid:
+        raise HTTPException(status_code=404, detail="ECG não encontrado.")
+    return row
+
+
+def _suggestion_for_user(
+    pid: int, ecg_id: int, suggestion_id: int, db: Session, user,
+) -> PatientClinicalAISuggestion:
+    _ecg_for_user(pid, ecg_id, db, user)
+    row = db.get(PatientClinicalAISuggestion, suggestion_id)
+    if (
+        not row
+        or row.owner_id != user.id
+        or row.patient_profile_id != pid
+        or row.ecg_record_id != ecg_id
+    ):
+        raise HTTPException(status_code=404, detail="Sugestão clínica não encontrada.")
+    return row
+
+
+def _dump_ai_suggestion(row: PatientClinicalAISuggestion) -> dict:
+    payload = json.loads(cofre.decifrar_campo(row.payload_cifrado, row.id))
+    return {
+        "id": row.id,
+        "mode": row.mode,
+        "status": row.status,
+        "payload": payload,
+        "provider": row.provider,
+        "model": row.model,
+        "prompt_version": row.prompt_version,
+        "created_at": row.created_at,
+        "reviewed_by": row.reviewed_by,
+        "reviewed_at": row.reviewed_at,
+        "review_note": (
+            cofre.decifrar_campo(row.review_note_cifrado, row.id)
+            if row.review_note_cifrado else None
+        ),
+        "accepted_result_id": row.accepted_result_id,
+    }
+
+
+def _dump_ecg(row: PatientECGRecord, db: Session) -> dict:
+    suggestions = (
+        db.query(PatientClinicalAISuggestion)
+        .filter(
+            PatientClinicalAISuggestion.owner_id == row.owner_id,
+            PatientClinicalAISuggestion.patient_profile_id == row.patient_profile_id,
+            PatientClinicalAISuggestion.ecg_record_id == row.id,
+        )
+        .order_by(PatientClinicalAISuggestion.created_at.desc(), PatientClinicalAISuggestion.id.desc())
+        .all()
+    )
+    return {
+        "id": row.id,
+        "patient_profile_id": row.patient_profile_id,
+        "author_id": row.author_id,
+        "source_encounter_id": row.source_encounter_id,
+        "performed_at": row.performed_at,
+        "original_name": cofre.decifrar_campo(row.original_name_cifrado, row.id),
+        "media_type": row.media_type,
+        "size_bytes": row.size_bytes,
+        "created_at": row.created_at,
+        "suggestions": [_dump_ai_suggestion(item) for item in suggestions],
+    }
+
+
+def _audit_ecg(db: Session, user_id: int, action: str, row: PatientECGRecord, **extra) -> None:
+    db.add(AuditLog(
+        user_id=user_id,
+        action=action,
+        entity="patient_ecg_record",
+        entity_id=str(row.id),
+        detail={
+            "patient_profile_id": row.patient_profile_id,
+            "source_encounter_id": row.source_encounter_id,
+            **extra,
+        },
+    ))
 
 
 @router.get("")
@@ -513,6 +648,9 @@ def apagar_paciente(pid: int, db: Session = Depends(get_db), user=Depends(curren
         .first()
         or db.query(PatientExamResult.id)
         .filter(PatientExamResult.owner_id == user.id, PatientExamResult.patient_profile_id == perfil.id)
+        .first()
+        or db.query(PatientECGRecord.id)
+        .filter(PatientECGRecord.owner_id == user.id, PatientECGRecord.patient_profile_id == perfil.id)
         .first()
     )
     if existe_prontuario:
@@ -716,6 +854,320 @@ def corrigir_resultado(
         correction_reason=reason,
     )
     return _dump_exam_result(row, db)
+
+
+@router.get("/{pid}/ecgs")
+def listar_ecgs(
+    pid: int,
+    limite: int = Query(30, ge=1, le=100),
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    rows = (
+        db.query(PatientECGRecord)
+        .filter(PatientECGRecord.owner_id == user.id, PatientECGRecord.patient_profile_id == pid)
+        .order_by(PatientECGRecord.performed_at.desc(), PatientECGRecord.id.desc())
+        .limit(limite)
+        .all()
+    )
+    db.add(AuditLog(
+        user_id=user.id,
+        action="list_patient_ecgs",
+        entity="patient_profile",
+        entity_id=str(pid),
+        detail={"count": len(rows)},
+    ))
+    result = [_dump_ecg(row, db) for row in rows]
+    db.commit()
+    return result
+
+
+@router.post("/{pid}/ecgs", status_code=201)
+async def upload_ecg(
+    pid: int,
+    arquivo: UploadFile = File(...),
+    performed_at: datetime = Form(...),
+    source_encounter_id: int | None = Form(None),
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    if performed_at.tzinfo is None:
+        raise HTTPException(status_code=422, detail="A data clínica deve informar o fuso horário.")
+    if source_encounter_id is not None:
+        encounter = encounter_for_user(source_encounter_id, db, user)
+        if encounter.patient_profile_id != pid:
+            raise HTTPException(status_code=404, detail="Atendimento de origem não encontrado.")
+
+    content = await arquivo.read(20 * 1024 * 1024 + 1)
+    if len(content) > 20 * 1024 * 1024:
+        raise HTTPException(status_code=413, detail="O ECG precisa ter no máximo 20 MB.")
+    try:
+        original_name = safe_filename(arquivo.filename, "ecg")
+        media_type = validate_file(content, original_name, "exam")
+    except UploadRejected as error:
+        raise HTTPException(status_code=error.status_code, detail=error.detail) from error
+
+    row = PatientECGRecord(
+        owner_id=user.id,
+        patient_profile_id=pid,
+        author_id=user.id,
+        source_encounter_id=source_encounter_id,
+        performed_at=performed_at,
+        storage_key="",
+        original_name_cifrado=b"",
+        media_type=media_type,
+        size_bytes=len(content),
+    )
+    storage_key: str | None = None
+    try:
+        db.add(row)
+        db.flush()
+        storage_key = cofre.guardar(content, row.id)
+        row.storage_key = storage_key
+        row.original_name_cifrado = cofre.cifrar_campo(original_name, row.id)
+        _audit_ecg(
+            db, user.id, "upload_patient_ecg", row,
+            media_type=media_type, size_bytes=len(content),
+        )
+        db.commit()
+    except cofre.CofreIndisponivel as error:
+        db.rollback()
+        if storage_key:
+            cofre.apagar(storage_key)
+        raise HTTPException(
+            status_code=503,
+            detail="Armazenamento seguro de ECG indisponível.",
+        ) from error
+    except Exception:
+        db.rollback()
+        if storage_key:
+            cofre.apagar(storage_key)
+        raise
+    db.refresh(row)
+    return _dump_ecg(row, db)
+
+
+@router.get("/{pid}/ecgs/{ecg_id}/arquivo")
+def abrir_ecg(
+    pid: int,
+    ecg_id: int,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    row = _ecg_for_user(pid, ecg_id, db, user)
+    try:
+        content = cofre.ler(row.storage_key, row.id)
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail="Arquivo do ECG não encontrado.") from error
+    except cofre.CofreIndisponivel as error:
+        raise HTTPException(status_code=503, detail="Arquivo do ECG indisponível.") from error
+    _audit_ecg(db, user.id, "read_patient_ecg", row)
+    db.commit()
+    extension = {
+        "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "application/pdf": "pdf",
+    }.get(row.media_type, "bin")
+    return Response(
+        content=content,
+        media_type=row.media_type,
+        headers={
+            "Content-Disposition": f'inline; filename="ecg-{row.id}.{extension}"',
+            "Cache-Control": "no-store, private",
+            "X-Content-Type-Options": "nosniff",
+        },
+    )
+
+
+@router.post("/{pid}/ecgs/{ecg_id}/sugestoes", status_code=201)
+def gerar_sugestao_ecg(
+    pid: int,
+    ecg_id: int,
+    data: AIAnalysisRequestIn,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    if not settings.ai_enabled or not settings.ai_clinical_multimodal_enabled:
+        raise HTTPException(
+            status_code=503,
+            detail="A assistência multimodal clínica está desligada nesta instalação.",
+        )
+    start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    used = db.query(AuditLog.id).filter(
+        AuditLog.user_id == user.id,
+        AuditLog.action == "ai_ecg_suggest",
+        AuditLog.created_at >= start,
+        AuditLog.created_at < start + timedelta(days=1),
+    ).count()
+    if used >= settings.ai_daily_limit:
+        raise HTTPException(
+            status_code=429,
+            detail=f"Limite diário de {settings.ai_daily_limit} análises atingido. Recomeça amanhã.",
+        )
+
+    row = _ecg_for_user(pid, ecg_id, db, user)
+    try:
+        content = cofre.ler(row.storage_key, row.id)
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail="Arquivo do ECG não encontrado.") from error
+    except cofre.CofreIndisponivel as error:
+        raise HTTPException(status_code=503, detail="Arquivo do ECG indisponível.") from error
+    media_type = row.media_type
+
+    # Não mantém transação do prontuário ociosa durante a chamada externa.
+    db.rollback()
+    try:
+        analysis = ecg_assist.analyze_ecg(content, media_type)
+    except ValueError as error:
+        if "exige ECG" in str(error) or "Formato" in str(error):
+            raise HTTPException(status_code=422, detail=str(error)) from error
+        raise HTTPException(
+            status_code=502,
+            detail="O provedor devolveu uma sugestão clínica inválida. Nenhum fato foi registrado.",
+        ) from error
+    except Exception as error:
+        raise HTTPException(
+            status_code=502,
+            detail=f"O provedor multimodal não respondeu ({type(error).__name__}). Nenhum fato foi registrado.",
+        ) from error
+
+    row = _ecg_for_user(pid, ecg_id, db, user)
+    suggestion = PatientClinicalAISuggestion(
+        owner_id=user.id,
+        patient_profile_id=pid,
+        ecg_record_id=row.id,
+        requested_by=user.id,
+        mode="ecg_assistance",
+        status="generated",
+        payload_cifrado=b"",
+        provider=analysis["provider"],
+        model=analysis["model"],
+        prompt_version=analysis["prompt_version"],
+        tokens_input=analysis["tokens_input"],
+        tokens_output=analysis["tokens_output"],
+    )
+    db.add(suggestion)
+    db.flush()
+    suggestion.payload_cifrado = cofre.cifrar_campo(
+        json.dumps(analysis["payload"], ensure_ascii=False), suggestion.id,
+    )
+    db.add(AuditLog(
+        user_id=user.id,
+        action="ai_ecg_suggest",
+        entity="patient_clinical_ai_suggestion",
+        entity_id=str(suggestion.id),
+        detail={
+            "patient_profile_id": pid,
+            "ecg_record_id": row.id,
+            "provider": suggestion.provider,
+            "model": suggestion.model,
+            "prompt_version": suggestion.prompt_version,
+            "external_processing_confirmed": data.confirm_external_processing,
+        },
+    ))
+    db.commit()
+    db.refresh(suggestion)
+    return _dump_ai_suggestion(suggestion)
+
+
+@router.post("/{pid}/ecgs/{ecg_id}/sugestoes/{suggestion_id}/revisao")
+def revisar_sugestao_ecg(
+    pid: int,
+    ecg_id: int,
+    suggestion_id: int,
+    data: AISuggestionReviewIn,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    _suggestion_for_user(pid, ecg_id, suggestion_id, db, user)
+    suggestion = (
+        db.query(PatientClinicalAISuggestion)
+        .filter(
+            PatientClinicalAISuggestion.id == suggestion_id,
+            PatientClinicalAISuggestion.owner_id == user.id,
+            PatientClinicalAISuggestion.patient_profile_id == pid,
+            PatientClinicalAISuggestion.ecg_record_id == ecg_id,
+        )
+        .with_for_update()
+        .one_or_none()
+    )
+    if suggestion is None:
+        raise HTTPException(status_code=404, detail="Sugestão clínica não encontrada.")
+    if suggestion.status != "generated":
+        raise HTTPException(status_code=409, detail="Esta sugestão já foi revisada e é imutável.")
+
+    review_note = (data.review_note or "").strip() or None
+    if review_note and len(review_note) > 2000:
+        raise HTTPException(status_code=422, detail="Nota de revisão excede 2000 caracteres.")
+    now = datetime.now(timezone.utc)
+    accepted_result: PatientExamResult | None = None
+
+    try:
+        if data.decision == "accept":
+            final_interpretation = (data.final_interpretation or "").strip()
+            if not final_interpretation:
+                raise HTTPException(
+                    status_code=422,
+                    detail="Revise e confirme a interpretação médica antes de aceitar.",
+                )
+            if len(final_interpretation) > 12000:
+                raise HTTPException(status_code=422, detail="Interpretação excede 12000 caracteres.")
+            already_accepted = db.query(PatientClinicalAISuggestion.id).filter(
+                PatientClinicalAISuggestion.owner_id == user.id,
+                PatientClinicalAISuggestion.patient_profile_id == pid,
+                PatientClinicalAISuggestion.ecg_record_id == ecg_id,
+                PatientClinicalAISuggestion.status == "accepted",
+            ).first()
+            if already_accepted:
+                raise HTTPException(status_code=409, detail="Este ECG já possui interpretação aceita.")
+            ecg = _ecg_for_user(pid, ecg_id, db, user)
+            accepted_result = _preparar_resultado(
+                pid,
+                ExamResultIn(
+                    exam_kind="metodo_grafico",
+                    exam_name="ECG",
+                    performed_at=ecg.performed_at,
+                    report_text=final_interpretation,
+                    source="ECG anexado ao CorVIA · interpretação revisada pelo médico",
+                    source_encounter_id=ecg.source_encounter_id,
+                ),
+                db,
+                user,
+            )
+            suggestion.status = "accepted"
+            suggestion.accepted_result_id = accepted_result.id
+        else:
+            suggestion.status = "rejected"
+
+        suggestion.reviewed_by = user.id
+        suggestion.reviewed_at = now
+        suggestion.review_note_cifrado = (
+            cofre.cifrar_campo(review_note, suggestion.id) if review_note else None
+        )
+        db.add(AuditLog(
+            user_id=user.id,
+            action="review_ai_ecg_suggestion",
+            entity="patient_clinical_ai_suggestion",
+            entity_id=str(suggestion.id),
+            detail={
+                "patient_profile_id": pid,
+                "ecg_record_id": ecg_id,
+                "decision": data.decision,
+                "accepted_result_id": accepted_result.id if accepted_result else None,
+            },
+        ))
+        db.commit()
+    except IntegrityError as error:
+        db.rollback()
+        raise HTTPException(
+            status_code=409,
+            detail="Este ECG já foi revisado ou possui interpretação aceita.",
+        ) from error
+    db.refresh(suggestion)
+    return {
+        "suggestion": _dump_ai_suggestion(suggestion),
+        "result": _dump_exam_result(accepted_result, db) if accepted_result else None,
+    }
 
 
 @router.get("/{pid}/atendimentos")

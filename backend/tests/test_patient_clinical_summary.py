@@ -1,9 +1,18 @@
 """Um cenário integrado cobre resumo, resultados e timeline longitudinal."""
+import io
 from datetime import datetime
 
+from PIL import Image
+
+from app.core.config import settings
+from app.models.audit import AuditLog
 from app.models.lab_test import LabTest
-from app.models.prontuario import PatientClinicalItem, PatientExamResult
+from app.models.prontuario import (
+    PatientClinicalAISuggestion, PatientClinicalItem, PatientECGRecord, PatientExamResult,
+)
 from app.models.subscription import Subscription
+from app.services import cofre
+from app.services.ia import ecg_assist
 
 
 def _h(token: str) -> dict[str, str]:
@@ -15,7 +24,9 @@ def _assinar(db, *users) -> None:
     db.commit()
 
 
-def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(client, db, criar_usuario):
+def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
+    client, db, criar_usuario, monkeypatch, tmp_path,
+):
     medico, token = criar_usuario(email="resumo-a@teste.local")
     intruso, token_intruso = criar_usuario(email="resumo-b@teste.local")
     _assinar(db, medico, intruso)
@@ -151,6 +162,135 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(client, db, cri
     datas = [datetime.fromisoformat(evento["data"]) for evento in timeline.json()]
     assert datas == sorted(datas, reverse=True)
     assert client.get(f"/api/pacientes/{pid}/linha-do-tempo", headers=_h(token_intruso)).status_code == 404
+
+    # ECG patient-specific: arquivo cifrado, sugestão separada e somente a
+    # interpretação explicitamente aceita pelo médico vira resultado clínico.
+    monkeypatch.setattr(settings, "exames_dir", str(tmp_path / "ecgs"))
+    monkeypatch.setattr(settings, "ai_enabled", True)
+    monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", True)
+    image = io.BytesIO()
+    Image.new("RGB", (1200, 800), "white").save(image, format="PNG")
+    ecg_bytes = image.getvalue()
+    ecg_upload = client.post(
+        f"/api/pacientes/{pid}/ecgs",
+        headers=_h(token),
+        files={"arquivo": ("ecg-paciente.png", ecg_bytes, "image/png")},
+        data={"performed_at": "2026-08-23T08:00:00-03:00", "source_encounter_id": str(eid)},
+    )
+    assert ecg_upload.status_code == 201, ecg_upload.text
+    ecg_id = ecg_upload.json()["id"]
+    db.expire_all()
+    ecg_row = db.get(PatientECGRecord, ecg_id)
+    assert ecg_row is not None and ecg_row.patient_profile_id == pid
+    assert ecg_row.owner_id == medico.id and ecg_row.author_id == medico.id
+    assert ecg_row.source_encounter_id == eid
+    assert cofre.ler(ecg_row.storage_key, ecg_row.id) == ecg_bytes
+    assert ecg_bytes != (tmp_path / "ecgs" / ecg_row.storage_key).read_bytes()
+    assert client.get(f"/api/pacientes/{pid}/ecgs", headers=_h(token_intruso)).status_code == 404
+    assert client.get(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/arquivo", headers=_h(token_intruso),
+    ).status_code == 404
+    download = client.get(f"/api/pacientes/{pid}/ecgs/{ecg_id}/arquivo", headers=_h(token))
+    assert download.status_code == 200 and download.content == ecg_bytes
+    assert download.headers["cache-control"] == "no-store, private"
+
+    def _analysis(_content: bytes, _media_type: str) -> dict:
+        assert _content == ecg_bytes and _media_type == "image/png"
+        return {
+            "payload": {
+                "quality": "adequada", "summary": "Ritmo sinusal, FC aproximada de 72 bpm.",
+                "rhythm": "Ritmo sinusal", "heart_rate_bpm": 72,
+                "intervals": {"pr_ms": 160, "qrs_ms": 90, "qtc_ms": 420},
+                "axis": "Normal", "conduction": "Sem bloqueio evidente",
+                "st_t": "Sem supradesnivelamento evidente", "other_findings": [],
+                "red_flags": [], "limitations": ["Confirmar calibração no original"],
+                "urgent_review_recommended": False,
+                "disclaimer": "Sugestão gerada por IA; requer revisão médica.",
+            },
+            "provider": "test", "model": "vision-test", "prompt_version": "ecg-test-v1",
+            "tokens_input": 100, "tokens_output": 50,
+        }
+
+    monkeypatch.setattr(ecg_assist, "analyze_ecg", _analysis)
+    results_before_ai = len(client.get(resultados, headers=_h(token)).json())
+    assert client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token), json={},
+    ).status_code == 422
+    assert client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": False},
+    ).status_code == 422
+    suggestion_response = client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": True},
+    )
+    assert suggestion_response.status_code == 201, suggestion_response.text
+    suggestion = suggestion_response.json()
+    suggestion_id = suggestion["id"]
+    assert suggestion["status"] == "generated" and suggestion["accepted_result_id"] is None
+    assert suggestion["payload"]["rhythm"] == "Ritmo sinusal"
+    assert len(client.get(resultados, headers=_h(token)).json()) == results_before_ai
+    db.expire_all()
+    suggestion_row = db.get(PatientClinicalAISuggestion, suggestion_id)
+    assert suggestion_row is not None and b"Ritmo sinusal" not in suggestion_row.payload_cifrado
+    log = db.query(AuditLog).filter(AuditLog.action == "ai_ecg_suggest").order_by(AuditLog.id.desc()).first()
+    assert log is not None and "Ritmo" not in str(log.detail)
+    assert client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes/{suggestion_id}/revisao",
+        headers=_h(token_intruso),
+        json={"decision": "accept", "final_interpretation": "Acesso indevido"},
+    ).status_code == 404
+
+    pending_timeline = client.get(f"/api/pacientes/{pid}/linha-do-tempo", headers=_h(token)).json()
+    assert any(
+        item["tipo"] == "ecg_anexado" and item["ecg_record_id"] == ecg_id
+        and item["status"] == "awaiting_review"
+        for item in pending_timeline
+    )
+    reviewed_text = "Ritmo sinusal. FC 72 bpm. Sem alterações agudas de ST-T."
+    accepted = client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes/{suggestion_id}/revisao",
+        headers=_h(token),
+        json={
+            "decision": "accept", "final_interpretation": reviewed_text,
+            "review_note": "Traçado e calibração conferidos pelo médico.",
+        },
+    )
+    assert accepted.status_code == 200, accepted.text
+    assert accepted.json()["suggestion"]["status"] == "accepted"
+    accepted_result_id = accepted.json()["result"]["id"]
+    assert accepted.json()["result"]["report_text"] == reviewed_text
+    assert accepted.json()["result"]["ai_suggestion_id"] == suggestion_id
+    db.expire_all()
+    suggestion_row = db.get(PatientClinicalAISuggestion, suggestion_id)
+    assert suggestion_row.accepted_result_id == accepted_result_id
+    assert "Traçado".encode() not in (suggestion_row.review_note_cifrado or b"")
+
+    final_timeline = client.get(f"/api/pacientes/{pid}/linha-do-tempo", headers=_h(token)).json()
+    assert not any(item["tipo"] == "ecg_anexado" and item["ecg_record_id"] == ecg_id for item in final_timeline)
+    accepted_event = next(item for item in final_timeline if item.get("exam_result_id") == accepted_result_id)
+    assert accepted_event["ecg_record_id"] == ecg_id
+    assert accepted_event["ai_suggestion_id"] == suggestion_id
+    assert accepted_event["ai_review_status"] == "accepted"
+
+    second_suggestion = client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": True},
+    )
+    assert second_suggestion.status_code == 201
+    second_id = second_suggestion.json()["id"]
+    assert client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes/{second_id}/revisao",
+        headers=_h(token),
+        json={"decision": "accept", "final_interpretation": "Outra interpretação"},
+    ).status_code == 409
+    rejected = client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes/{second_id}/revisao",
+        headers=_h(token),
+        json={"decision": "reject", "review_note": "Sugestão não compatível com o traçado."},
+    )
+    assert rejected.status_code == 200 and rejected.json()["suggestion"]["status"] == "rejected"
+    assert rejected.json()["result"] is None
 
     # Qualquer dado longitudinal torna o cadastro parte do prontuário e impede deleção física.
     assert client.delete(f"/api/pacientes/{pid}", headers=_h(token)).status_code == 409

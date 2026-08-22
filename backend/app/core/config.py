@@ -113,6 +113,13 @@ class Settings(BaseSettings):
     # individualmente (users.ia_ferramentas_consent_em) — as duas condições,
     # não uma ou outra. Ver app/services/ia/assistant_tools.py.
     ai_assistant_tools_enabled: bool = False
+    # Multimodal clínico envia arquivo de paciente a um provedor externo. É
+    # uma capability separada e fail-closed: habilitar chat/RAG não habilita
+    # automaticamente processamento de ECG com PHI.
+    ai_clinical_multimodal_enabled: bool = False
+    # Vazio reutiliza o modelo principal do provedor. Permite homologar um
+    # modelo vision específico sem alterar o restante da Assistente Clínica.
+    ai_ecg_model: str = ""
 
     openai_api_key: str = ""
     # Confirme o identificador exato do modelo no painel da OpenAI antes do piloto.

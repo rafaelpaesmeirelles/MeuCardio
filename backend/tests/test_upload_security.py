@@ -238,6 +238,7 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         "auth.py",
         "email.py",
         "partner_courses.py",
+        "patient_profiles.py",
         "service_orders.py",
         # Trabalho 7 (assinatura.py, certificado A1) e Trabalho 11 (kyc.py,
         # documento/selfie) — os dois já fazem leitura limitada por tamanho
@@ -267,6 +268,7 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert policy_for("POST", "/api/auth/me/foto") is not None
     assert policy_for("POST", "/api/auth/me/logo") is not None
     assert policy_for("POST", "/api/pedidos/1/exame") is not None
+    assert policy_for("POST", "/api/pacientes/1/ecgs") is not None
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None
