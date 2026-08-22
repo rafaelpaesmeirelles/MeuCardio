@@ -1,16 +1,18 @@
-"""Cadastro de paciente reutilizável entre documentos (12/08/2026, pedido
-do Rafael) — ver `app.models.patient_profile.PatientProfile` para a
-justificativa de ser uma entidade separada do `Patient` do round.
+"""Cadastro identificável de paciente e núcleo do Prontuário Eletrônico.
 
-Todo endpoint aqui é escopado por `owner_id == user.id`: um médico só
-enxerga, busca, edita ou apaga o PRÓPRIO cadastro de paciente — nunca o de
-outro (mesma disciplina de posse do resto do produto, centralizada em
-`app.services.clinical_ownership.patient_profile_for_user`).
+`PatientProfile` permanece separado do `Patient` anonimizado do Round. Os
+atendimentos (`ClinicalEncounter`) usam o mesmo paciente identificável, mas
+cifram em repouso o conteúdo clínico. Atendimento finalizado é imutável;
+correção posterior nasce como adendo separado.
+
+Todo endpoint é escopado por `owner_id == user.id`: médico A nunca confirma a
+existência do paciente/atendimento do médico B. Leituras e mutações de
+Encounter geram AuditLog sem copiar conteúdo clínico para o log.
 """
 from __future__ import annotations
 
 import json
-from datetime import date
+from datetime import date, datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
@@ -18,9 +20,12 @@ from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user
+from app.models.audit import AuditLog
+from app.models.clinical_docs import Appointment
 from app.models.patient_profile import PatientProfile
+from app.models.prontuario import ClinicalEncounter
 from app.services import cofre
-from app.services.clinical_ownership import patient_profile_for_user
+from app.services.clinical_ownership import encounter_for_user, patient_profile_for_user
 from app.services.patient_profile_service import snapshot_de
 from app.services.professional_profile import normalize_search_text
 
@@ -53,6 +58,34 @@ class PatientProfileIn(BaseModel):
     endereco: EnderecoIn | None = None
 
 
+class EncounterIn(BaseModel):
+    encounter_type: str = "consulta"
+    appointment_id: int | None = None
+    started_at: datetime | None = None
+    ended_at: datetime | None = None
+    chief_complaint: str | None = None
+    anamnesis: str | None = None
+    physical_exam: str | None = None
+    assessment: str | None = None
+    plan: str | None = None
+    vital_signs: dict = {}
+    amendment_of_id: int | None = None
+    amendment_reason: str | None = None
+
+
+class EncounterPatch(BaseModel):
+    encounter_type: str | None = None
+    started_at: datetime | None = None
+    ended_at: datetime | None = None
+    chief_complaint: str | None = None
+    anamnesis: str | None = None
+    physical_exam: str | None = None
+    assessment: str | None = None
+    plan: str | None = None
+    vital_signs: dict | None = None
+    status: str | None = None
+
+
 def _dump(perfil: PatientProfile) -> dict:
     snap = snapshot_de(perfil)
     return {
@@ -70,8 +103,7 @@ def _dump(perfil: PatientProfile) -> dict:
 
 
 def _gravar_campos(perfil: PatientProfile, dados: PatientProfileIn) -> None:
-    """`perfil.id` precisa existir antes de cifrar (é o AAD do cofre) —
-    chamar sempre depois de `db.add(perfil); db.flush()`."""
+    """`perfil.id` precisa existir antes de cifrar (é o AAD do cofre)."""
     perfil.full_name_cifrado = cofre.cifrar_campo(dados.full_name.strip(), perfil.id)
     perfil.cpf_cifrado = cofre.cifrar_campo(dados.cpf.strip(), perfil.id) if dados.cpf and dados.cpf.strip() else None
     perfil.birth_date = dados.birth_date
@@ -86,17 +118,83 @@ def _gravar_campos(perfil: PatientProfile, dados: PatientProfileIn) -> None:
         perfil.endereco_cifrado = None
 
 
+def _cifrar_texto(valor: str | None, encounter_id: int) -> bytes | None:
+    if valor is None:
+        return None
+    return cofre.cifrar_campo(valor, encounter_id)
+
+
+def _decifrar_texto(valor: bytes | None, encounter_id: int) -> str | None:
+    return cofre.decifrar_campo(valor, encounter_id) if valor is not None else None
+
+
+def _gravar_conteudo(encounter: ClinicalEncounter, dados: EncounterIn | EncounterPatch) -> None:
+    campos = {
+        "chief_complaint": "chief_complaint_cifrado",
+        "anamnesis": "anamnesis_cifrado",
+        "physical_exam": "physical_exam_cifrado",
+        "assessment": "assessment_cifrado",
+        "plan": "plan_cifrado",
+    }
+    presentes = dados.model_fields_set
+    for origem, destino in campos.items():
+        if origem in presentes:
+            setattr(encounter, destino, _cifrar_texto(getattr(dados, origem), encounter.id))
+    if "vital_signs" in presentes:
+        sinais = getattr(dados, "vital_signs")
+        encounter.vital_signs_cifrado = (
+            cofre.cifrar_campo(json.dumps(sinais or {}, ensure_ascii=False), encounter.id)
+            if sinais is not None else None
+        )
+
+
+def _dump_encounter(encounter: ClinicalEncounter) -> dict:
+    sinais: dict = {}
+    if encounter.vital_signs_cifrado is not None:
+        sinais = json.loads(cofre.decifrar_campo(encounter.vital_signs_cifrado, encounter.id))
+    return {
+        "id": encounter.id,
+        "patient_profile_id": encounter.patient_profile_id,
+        "appointment_id": encounter.appointment_id,
+        "author_id": encounter.author_id,
+        "encounter_type": encounter.encounter_type,
+        "status": encounter.status,
+        "started_at": encounter.started_at,
+        "ended_at": encounter.ended_at,
+        "finalized_at": encounter.finalized_at,
+        "amendment_of_id": encounter.amendment_of_id,
+        "amendment_reason": _decifrar_texto(encounter.amendment_reason_cifrado, encounter.id),
+        "chief_complaint": _decifrar_texto(encounter.chief_complaint_cifrado, encounter.id),
+        "anamnesis": _decifrar_texto(encounter.anamnesis_cifrado, encounter.id),
+        "physical_exam": _decifrar_texto(encounter.physical_exam_cifrado, encounter.id),
+        "assessment": _decifrar_texto(encounter.assessment_cifrado, encounter.id),
+        "plan": _decifrar_texto(encounter.plan_cifrado, encounter.id),
+        "vital_signs": sinais,
+        "created_at": encounter.created_at,
+        "updated_at": encounter.updated_at,
+    }
+
+
+def _auditar(db: Session, user_id: int, action: str, encounter: ClinicalEncounter) -> None:
+    db.add(AuditLog(
+        user_id=user_id,
+        action=action,
+        entity="clinical_encounter",
+        entity_id=str(encounter.id),
+        detail={
+            "patient_profile_id": encounter.patient_profile_id,
+            "appointment_id": encounter.appointment_id,
+            "status": encounter.status,
+            "amendment_of_id": encounter.amendment_of_id,
+        },
+    ))
+
+
 @router.get("")
 def listar_pacientes(
     busca: str | None = Query(None, max_length=120),
     db: Session = Depends(get_db), user=Depends(current_user),
 ):
-    """Lista só o cadastro do próprio médico (`owner_id == user.id`) — o
-    mesmo filtro de posse que `patient_profile_for_user` aplica em cada
-    endpoint individual, aqui aplicado à listagem inteira. Decifra em
-    memória e filtra por nome em Python (mesmo padrão já usado em
-    `GET /document-templates/gerados?nome=`), porque o nome está cifrado
-    e não dá para filtrar por `LIKE` no banco."""
     rows = (
         db.query(PatientProfile)
         .filter(PatientProfile.owner_id == user.id)
@@ -146,8 +244,175 @@ def editar_paciente(pid: int, dados: PatientProfileIn, db: Session = Depends(get
 @router.delete("/{pid}", status_code=204)
 def apagar_paciente(pid: int, db: Session = Depends(get_db), user=Depends(current_user)):
     perfil = patient_profile_for_user(pid, db, user)
-    # `generated_documents.patient_profile_id` é `ON DELETE SET NULL` — o
-    # documento já emitido continua existindo, com o snapshot cifrado
-    # intacto; só perde o atalho de navegação até este cadastro.
+    existe_prontuario = (
+        db.query(ClinicalEncounter.id)
+        .filter(ClinicalEncounter.owner_id == user.id, ClinicalEncounter.patient_profile_id == perfil.id)
+        .first()
+    )
+    if existe_prontuario:
+        raise HTTPException(
+            status_code=409,
+            detail="Paciente possui prontuário clínico e não pode ser apagado fisicamente.",
+        )
     db.delete(perfil)
     db.commit()
+
+
+@router.get("/{pid}/atendimentos")
+def listar_atendimentos(pid: int, db: Session = Depends(get_db), user=Depends(current_user)):
+    patient_profile_for_user(pid, db, user)
+    rows = (
+        db.query(ClinicalEncounter)
+        .filter(ClinicalEncounter.owner_id == user.id, ClinicalEncounter.patient_profile_id == pid)
+        .order_by(ClinicalEncounter.created_at.desc(), ClinicalEncounter.id.desc())
+        .all()
+    )
+    db.add(AuditLog(
+        user_id=user.id,
+        action="list_clinical_encounters",
+        entity="patient_profile",
+        entity_id=str(pid),
+        detail={"count": len(rows)},
+    ))
+    db.commit()
+    return [_dump_encounter(row) for row in rows]
+
+
+@router.post("/{pid}/atendimentos", status_code=201)
+def criar_atendimento(
+    pid: int,
+    dados: EncounterIn,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+
+    tipo = (dados.encounter_type or "consulta").strip()[:40] or "consulta"
+    amendment_of_id = dados.amendment_of_id
+    if amendment_of_id is not None:
+        original = encounter_for_user(amendment_of_id, db, user)
+        if original.patient_profile_id != pid:
+            raise HTTPException(status_code=404, detail="Atendimento não encontrado.")
+        if original.status not in {"finalized", "amended"}:
+            raise HTTPException(status_code=409, detail="Adendo só pode referenciar atendimento finalizado.")
+        if not (dados.amendment_reason or "").strip():
+            raise HTTPException(status_code=422, detail="Informe o motivo do adendo.")
+        tipo = "adendo"
+
+    if dados.appointment_id is not None:
+        if amendment_of_id is not None:
+            raise HTTPException(status_code=422, detail="Adendo não reutiliza o agendamento original.")
+        appointment = db.get(Appointment, dados.appointment_id)
+        if not appointment or appointment.owner_id != user.id:
+            raise HTTPException(status_code=404, detail="Agendamento não encontrado.")
+        duplicado = (
+            db.query(ClinicalEncounter.id)
+            .filter(
+                ClinicalEncounter.owner_id == user.id,
+                ClinicalEncounter.appointment_id == dados.appointment_id,
+            )
+            .first()
+        )
+        if duplicado:
+            raise HTTPException(status_code=409, detail="Este agendamento já possui atendimento iniciado.")
+
+    agora = datetime.now(timezone.utc)
+    encounter = ClinicalEncounter(
+        owner_id=user.id,
+        patient_profile_id=pid,
+        appointment_id=dados.appointment_id,
+        author_id=user.id,
+        encounter_type=tipo,
+        status="draft",
+        started_at=dados.started_at or agora,
+        ended_at=dados.ended_at,
+        amendment_of_id=amendment_of_id,
+    )
+    db.add(encounter)
+    db.flush()
+    _gravar_conteudo(encounter, dados)
+    if amendment_of_id is not None:
+        encounter.amendment_reason_cifrado = _cifrar_texto(dados.amendment_reason, encounter.id)
+    _auditar(db, user.id, "create_clinical_encounter", encounter)
+    db.commit()
+    db.refresh(encounter)
+    return _dump_encounter(encounter)
+
+
+@router.get("/{pid}/atendimentos/{encounter_id}")
+def obter_atendimento(
+    pid: int,
+    encounter_id: int,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    encounter = encounter_for_user(encounter_id, db, user)
+    if encounter.patient_profile_id != pid:
+        raise HTTPException(status_code=404, detail="Atendimento não encontrado.")
+    _auditar(db, user.id, "read_clinical_encounter", encounter)
+    db.commit()
+    return _dump_encounter(encounter)
+
+
+@router.patch("/{pid}/atendimentos/{encounter_id}")
+def editar_atendimento(
+    pid: int,
+    encounter_id: int,
+    dados: EncounterPatch,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    encounter = encounter_for_user(encounter_id, db, user)
+    if encounter.patient_profile_id != pid:
+        raise HTTPException(status_code=404, detail="Atendimento não encontrado.")
+    if encounter.status in {"finalized", "amended", "cancelled"}:
+        raise HTTPException(
+            status_code=409,
+            detail="Atendimento finalizado é imutável. Registre um adendo para corrigir o histórico.",
+        )
+
+    presentes = dados.model_fields_set
+    if "status" in presentes:
+        if dados.status not in {"draft", "in_progress"}:
+            raise HTTPException(status_code=422, detail="Use a ação de finalizar para concluir o atendimento.")
+        encounter.status = dados.status
+    if "encounter_type" in presentes and dados.encounter_type is not None:
+        encounter.encounter_type = dados.encounter_type.strip()[:40] or encounter.encounter_type
+    if "started_at" in presentes:
+        encounter.started_at = dados.started_at
+    if "ended_at" in presentes:
+        encounter.ended_at = dados.ended_at
+
+    _gravar_conteudo(encounter, dados)
+    _auditar(db, user.id, "update_clinical_encounter", encounter)
+    db.commit()
+    db.refresh(encounter)
+    return _dump_encounter(encounter)
+
+
+@router.post("/{pid}/atendimentos/{encounter_id}/finalizar")
+def finalizar_atendimento(
+    pid: int,
+    encounter_id: int,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    encounter = encounter_for_user(encounter_id, db, user)
+    if encounter.patient_profile_id != pid:
+        raise HTTPException(status_code=404, detail="Atendimento não encontrado.")
+    if encounter.status in {"finalized", "amended"}:
+        return _dump_encounter(encounter)
+    if encounter.status == "cancelled":
+        raise HTTPException(status_code=409, detail="Atendimento cancelado não pode ser finalizado.")
+
+    agora = datetime.now(timezone.utc)
+    encounter.status = "finalized"
+    encounter.finalized_at = agora
+    encounter.ended_at = encounter.ended_at or agora
+    _auditar(db, user.id, "finalize_clinical_encounter", encounter)
+    db.commit()
+    db.refresh(encounter)
+    return _dump_encounter(encounter)
