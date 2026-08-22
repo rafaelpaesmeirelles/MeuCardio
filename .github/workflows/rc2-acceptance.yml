@@ -340,7 +340,7 @@ jobs:
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await mobile.page.screenshot({ path: path.join(out, 'mobile-home.png'), fullPage: false });
             const labels = await mobile.page.locator('.cc-mobile-nav > * span').allTextContents();
-            const expected = ['Início', 'Buscar', 'Pacientes', 'Agenda', 'Mais'];
+            const expected = ['Início', 'Buscar', 'Prontuário', 'Agenda', 'Mais'];
             if (JSON.stringify(labels.slice(0, 5)) !== JSON.stringify(expected)) fail(`mobile/nav divergente: ${JSON.stringify(labels.slice(0, 5))}`);
 
             if (selected?.slug) {

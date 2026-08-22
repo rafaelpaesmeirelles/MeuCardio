@@ -36,7 +36,8 @@ const ESTUDO_EDUCACAO: NavItem[] = [
 ];
 
 const TRABALHO_ASSISTENCIA: NavItem[] = [
-  { to: "/round", label: "Pacientes", icon: "pacientes" },
+  { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
+  { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
   { to: "/agenda", label: "Agenda", icon: "agenda" },

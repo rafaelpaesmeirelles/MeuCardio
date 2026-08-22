@@ -32,7 +32,7 @@ EXPECTED_APP_ROUTES = {
     "/material-paciente", "/emergencia", "/trilhas/:slug", "/casos-clinicos",
     "/casos-clinicos/:slug", "/checklists", "/checklists/alta/:id",
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
-    "/round", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
+    "/round", "/prontuario", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
@@ -46,7 +46,7 @@ EXPECTED_NAV_ROUTES = {
     "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
-    "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas", "/trilhas/timeline",
+    "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/trilhas", "/trilhas/timeline",
     "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
     "/sincronizacao", "/admin/usuarios", "/tour",
 }
@@ -63,8 +63,8 @@ EXPECTED_BACKEND_ROUTERS = {
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router", "exportacao_universal.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
-    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
-    "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
+    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router", "agenda_clinica.router",
+    "encounter_artifacts.router", "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
     "related_content.router", "knowledge_graph.router", "patient_profiles.router",
     "account_sync.router",
 }

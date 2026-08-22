@@ -19,9 +19,9 @@ def test_published_feature_inventory_is_intact():
         check=False,
     )
     assert result.returncode == 0, result.stdout + result.stderr
-    assert "68 rotas React" in result.stdout
-    assert "45 destinos" in result.stdout
-    assert "56 routers FastAPI" in result.stdout
+    assert "69 rotas React" in result.stdout
+    assert "46 destinos" in result.stdout
+    assert "58 routers FastAPI" in result.stdout
 
 
 def test_evidence_editorial_note_is_preserved_in_detail():

@@ -175,8 +175,8 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert '.ccc-reference-summary > .ccc-reference-assistant-summary { order: 3; }' in css
     assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 4; }' in css
 
-    # Bottom bar imutável.
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    # Bottom bar imutável, agora com o Prontuário como área clínica canônica.
+    labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]
     posicoes = [mobile_nav.index(f"<span>{label}</span>") for label in labels]
     assert posicoes == sorted(posicoes)
     assert len(posicoes) == 5
