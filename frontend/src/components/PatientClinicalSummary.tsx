@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
-import PatientTimeline from "./PatientTimeline";
+import PatientProfileTimeline from "./PatientProfileTimeline";
 
 type Kind = "problema" | "alergia" | "medicacao";
 type Item = {
@@ -48,6 +48,6 @@ export default function PatientClinicalSummary({patientId,currentEncounterId}:{p
       </div>
       <button className="botao" style={{marginTop:"0.5rem"}} onClick={adicionar} disabled={!name.trim()}>+ Registrar</button>
     </section>
-    <PatientTimeline key={`${patientId}-${currentEncounterId||0}-${itens.map(i=>i.id).join("-")}`} patientId={patientId}/>
+    <PatientProfileTimeline key={`${patientId}-${currentEncounterId||0}-${itens.map(i=>i.id).join("-")}`} patientId={patientId}/>
   </>;
 }
