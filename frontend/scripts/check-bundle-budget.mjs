@@ -97,7 +97,13 @@ for (const path of await listarArquivos(dist.pathname)) {
 // Agenda clínica/Sala de Espera ao Prontuário levou o precache a 2867358 B,
 // apenas 158 B acima do teto anterior. O acréscimo mantém ~10 KiB de margem e
 // preserva sem alteração os limites do entrypoint, gzip e chunks opcionais.
-const maxPrecacheBytes = 2810 * 1024;
+//
+// Ajustado de 2810 KB para 2820 KB em 22/08/2026: o slice vertical aprovado
+// de ECG com assistência IA revisável acrescentou a UI clínica ao chunk lazy
+// do Prontuário e levou o precache a 2884003 B. O entrypoint, seu teto gzip e
+// o limite individual de chunks opcionais permanecem inalterados; a margem
+// residual continua estreita (~4 KiB) para detectar crescimento acidental.
+const maxPrecacheBytes = 2820 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
