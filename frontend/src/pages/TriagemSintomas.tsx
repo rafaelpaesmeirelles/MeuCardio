@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 import { api } from "../lib/api";
 
 type Option = { value: string; label: string };
@@ -77,8 +79,9 @@ const RISK_LABEL: Record<string, string> = {
 };
 
 export default function TriagemSintomas() {
+  const [params, setParams] = useSearchParams();
   const [catalog, setCatalog] = useState<TriageSummary[] | null>(null);
-  const [selectedSlug, setSelectedSlug] = useState("");
+  const [selectedSlug, setSelectedSlug] = useState(params.get("slug") || "");
   const [detail, setDetail] = useState<TriageDetail | null>(null);
   const [context, setContext] = useState<"ambulatorio" | "emergencia">("ambulatorio");
   const [answers, setAnswers] = useState<Record<string, unknown>>({});
@@ -95,6 +98,11 @@ export default function TriagemSintomas() {
       .catch((cause) => { if (active) setError(cause.message); });
     return () => { active = false; };
   }, []);
+
+  useEffect(() => {
+    const slugDaUrl = params.get("slug") || "";
+    if (slugDaUrl && slugDaUrl !== selectedSlug) setSelectedSlug(slugDaUrl);
+  }, [params, selectedSlug]);
 
   useEffect(() => {
     if (!selectedSlug) {
@@ -127,6 +135,11 @@ export default function TriagemSintomas() {
     }
     return [...grouped.entries()];
   }, [detail]);
+
+  function selecionarSintoma(slug: string) {
+    setSelectedSlug(slug);
+    setParams({ slug });
+  }
 
   function updateAnswer(question: Question, value: unknown) {
     setAssessment(null);
@@ -175,7 +188,7 @@ export default function TriagemSintomas() {
         <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Pesquisar dor, dispneia, palpitação, síncope…" />
         <div className="painel__temas" style={{ marginTop: "0.7rem" }}>
           {filtered.map((item) => (
-            <button type="button" key={item.slug} className="painel__tema" onClick={() => setSelectedSlug(item.slug)} style={selectedSlug === item.slug ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>{item.name}</button>
+            <button type="button" key={item.slug} className="painel__tema" onClick={() => selecionarSintoma(item.slug)} style={selectedSlug === item.slug ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>{item.name}</button>
           ))}
         </div>
         {!filtered.length && <p>Nenhum sintoma encontrado.</p>}
@@ -250,6 +263,8 @@ export default function TriagemSintomas() {
           <p style={{ marginTop: "1rem", fontSize: "0.82rem", color: "var(--texto-secundario)" }}>{assessment.disclaimer}</p>
         </section>
       )}
+
+      {detail && <GrafoRelacionados entityType="triagem_sintoma" slug={detail.slug} />}
 
       {detail && (
         <section className="cartao" style={{ marginTop: "1rem" }}>
