@@ -36,6 +36,8 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 ];
 
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
+  { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
+  { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
@@ -125,7 +127,7 @@ export default function ClinicalMobileNav() {
     <nav className="cc-mobile-nav" aria-label="Navegação principal móvel">
       <NavLink to="/" end><IconeHoje /><span>Início</span></NavLink>
       <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
-      <NavLink to="/round"><Icone nome="pacientes" /><span>Pacientes</span></NavLink>
+      <NavLink to="/prontuario"><Icone nome="pacientes" /><span>Prontuário</span></NavLink>
       <NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink>
       <button ref={triggerRef} type="button" onClick={() => setMaisAberto(true)} aria-expanded={maisAberto}><Icone nome="mais" /><span>Mais</span></button>
     </nav>
