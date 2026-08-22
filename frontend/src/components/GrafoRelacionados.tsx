@@ -57,6 +57,8 @@ const ROTULO_TIPO: Record<string, string> = {
   material_paciente: "Material do paciente",
   protocolo_emergencia: "Protocolos de emergência",
   calculadora: "Calculadoras",
+  doenca: "Doenças",
+  triagem_sintoma: "Triagem por sintomas",
 };
 
 function rotuloTipo(tipo: string): string {
@@ -106,10 +108,6 @@ export default function GrafoRelacionados({ entityType, slug, limitePorTipo, tit
         <strong>{resposta.titulo ?? "este item"}</strong> no ecossistema.
       </p>
 
-      {/* Onboarding contextual (issue #52): a primeira vez que o médico
-          encontra o painel do grafo, uma frase explica o paradigma. Depois
-          de fechada, nunca mais aparece — em nenhuma das páginas de detalhe
-          que instalam este componente. */}
       <div style={{ marginTop: "0.7rem" }}>
         <DicaContextual id="grafo-relacionados" titulo="Tudo na Corvia está conectado">
           Estes itens não foram buscados por você: são as relações que a Corvia já conhece entre
