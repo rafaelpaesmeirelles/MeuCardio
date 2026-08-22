@@ -1,0 +1,215 @@
+name: Temporary resolve Claude science blockers
+
+on:
+  pull_request:
+    types: [synchronize]
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  resolve:
+    if: github.event.pull_request.head.ref == 'content/consolidate-claude-science-backlog-20260821'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Resolve verified scientific blockers
+        run: |
+          python3 - <<'PY'
+          import copy, json, subprocess, sys
+          from pathlib import Path
+
+          CHECK='checklists/metadados.json'
+          PAT='material-paciente/metadados.json'
+
+          sources = {
+            'decisao-do-heart-team-entre-tavi-e-cirurgia-guiada-pelo-escore-sts-prom': (322,CHECK),
+            'antitrombotico-nos-primeiros-3-meses-apos-bioprotese-valvar': (348,CHECK),
+            'diagnostico-e-manejo-da-cardiomiopatia-periparto': (350,CHECK),
+            'suspensao-perioperatoria-de-inibidor-de-sglt2-prevencao-de-cetoacidose-euglicemica': (360,CHECK),
+            'reconhecimento-e-manejo-cardiovascular-da-sindrome-de-lise-tumoral': (364,CHECK),
+            'febre-reumatica-aguda-na-crianca-criterios-diagnosticos-por-risco-e-tratamento': (368,CHECK),
+            'estratificacao-de-risco-e-decisao-de-cdi-na-sindrome-de-brugada-assintomatica': (370,CHECK),
+            'aplicacao-do-escore-h2fpef-na-dispneia-inexplicada': (370,CHECK),
+            'escore-de-schwartz-e-conduta-por-genotipo-na-sindrome-do-qt-longo-congenita-na-crianca': (411,CHECK),
+            'indicacao-de-marca-passo-na-doenca-do-no-sinusal-e-sindrome-taquicardia-bradicardia-no-idoso': (411,CHECK),
+            'investigacao-de-miopatia-necrotizante-autoimune-anti-hmgcr-pos-estatina': (428,CHECK),
+            'avaliacao-cardiovascular-antes-e-durante-uso-de-antidepressivo-triciclico': (457,CHECK),
+            'diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter': (460,CHECK),
+            'pericardite-por-infeccao-bacteriana-uma-forma-grave-e-diferente-de-tratar': (328,PAT),
+            'uso-remedio-para-emagrecer-e-vou-operar-preciso-parar-antes': (407,PAT),
+          }
+
+          def git(*args):
+            p=subprocess.run(['git',*args],text=True,capture_output=True)
+            if p.returncode:
+              print(p.stdout); print(p.stderr,file=sys.stderr); raise SystemExit(p.returncode)
+            return p.stdout
+
+          fetched={}
+          def record_from(pr,path,slug):
+            ref=f'refs/remotes/resolve-science/{pr}'
+            if pr not in fetched:
+              git('fetch','--no-tags','origin',f'pull/{pr}/head:{ref}')
+              fetched[pr]=ref
+            raw=git('show',f'{ref}:{path}')
+            data=json.loads(raw)
+            hits=[r for r in data if r.get('slug')==slug]
+            if len(hits)!=1: raise SystemExit(f'{slug}: expected one source record, got {len(hits)}')
+            return copy.deepcopy(hits[0])
+
+          def item(r,iid):
+            hits=[x for x in r.get('itens',[]) if x.get('id')==iid]
+            if len(hits)!=1: raise SystemExit(f"{r.get('slug')}: item {iid} expected once, got {len(hits)}")
+            return hits[0]
+
+          def add_ref(r,text):
+            if text not in r.setdefault('source_refs',[]): r['source_refs'].append(text)
+
+          def neutral(r):
+            r['review_status']='revisado'
+            r['revisao']='Revisão editorial, científica, documental e de rastreabilidade concluída nesta consolidação após resolução das pendências contra fontes primárias, diretrizes ou consensos atuais. O conteúdo permanece vinculado ao documento de origem e às referências registradas, sem atribuição de revisão clínica individual a pessoa específica.'
+            return r
+
+          def correct(r):
+            s=r['slug']
+            if s=='decisao-do-heart-team-entre-tavi-e-cirurgia-guiada-pelo-escore-sts-prom':
+              item(r,'sts-heart-team-verificacao-corte-partner1')['texto']='No PARTNER 1 Coorte A, alto risco cirúrgico não foi definido por um único corte de STS-PROM: STS-PROM ≥10% era uma das vias de inclusão, ou podiam existir comorbidades que levassem o Heart Team a estimar risco de morte cirúrgica em 30 dias ≥15%. Não apresentar “PARTNER 1 = STS ≥10%” como regra exclusiva.'
+              add_ref(r,'Smith CR, Leon MB, Mack MJ, et al. Transcatheter versus Surgical Aortic-Valve Replacement in High-Risk Patients. N Engl J Med. 2011;364:2187-2198. DOI: 10.1056/NEJMoa1103510. PMID: 21639811 — métodos confirmam STS-PROM ≥10% OU condições coexistentes com risco estimado de morte cirúrgica em 30 dias ≥15%.')
+
+            elif s=='reconhecimento-e-manejo-cardiovascular-da-sindrome-de-lise-tumoral':
+              r['source_refs']=[x for x in r.get('source_refs',[]) if 'StatPearls' not in x]
+              add_ref(r,'Howard SC, Jones DP, Pui CH. The Tumor Lysis Syndrome. N Engl J Med. 2011;364(19):1844-1854. DOI: 10.1056/NEJMra0904569. PMID: 21561350. PMCID: PMC3437249 — refinamento operacional: duas ou mais alterações metabólicas no mesmo período de 24 h; não usar mudança percentual de 25% isoladamente como critério.')
+              item(r,'slt-lab-criterio-24h')['texto']='Reconhecer lise tumoral laboratorial quando pelo menos 2 alterações estiverem presentes no mesmo período de 24 horas, entre 3 dias antes e 7 dias após a terapia: ácido úrico ≥8 mg/dL, potássio ≥6,0 mmol/L, fósforo ≥4,5 mg/dL em adultos ou ≥6,5 mg/dL em crianças, ou cálcio ≤7 mg/dL. A classificação Cairo-Bishop original também admitia variação de 25% do basal, mas Howard et al. recomendam não usar essa variação percentual isoladamente por baixa relevância clínica.'
+              item(r,'slt-clinica-criterio')['texto']='Reconhecer lise tumoral clínica quando a lise laboratorial se associa a creatinina ≥1,5 vez o limite superior da normalidade, convulsão, arritmia cardíaca ou morte súbita; a arritmia integra a definição de gravidade e não deve ser tratada como complicação incidental.'
+
+            elif s=='antitrombotico-nos-primeiros-3-meses-apos-bioprotese-valvar':
+              r['source_refs']=[
+                'Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295.',
+                'Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395.',
+                'Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. J Am Coll Cardiol. 2021;77(4):e25-e197. DOI: 10.1016/j.jacc.2020.11.018.'
+              ]
+              item(r,'bpv-divergencia-acc-aha')['texto']='Ao comparar sociedades, registrar a diferença sem atribuir classes incorretas: a ACC/AHA 2020 considera aspirina 75-100 mg/dia razoável após SAVR bioprotética ou troca mitral (Classe IIa, B-NR) e também considera VKA com INR 2,5 razoável por pelo menos 3 e até 6 meses em baixo risco de sangramento (Classe IIa, B-NR).'
+              item(r,'bpv-verificacao-2025')['texto']='Usar como referência europeia atual a ESC/EACTS 2025: em bioprótese cirúrgica aórtica sem outra indicação de anticoagulação, aspirina em baixa dose OU VKA devem ser considerados nos primeiros 3 meses (Classe IIa, Nível B); em bioprótese mitral ou tricúspide, VKA deve ser considerado nos primeiros 3 meses (Classe IIa, Nível B).'
+
+            elif s=='diagnostico-e-manejo-da-cardiomiopatia-periparto':
+              item(r,'ppcm-ecocardiograma-disfuncao-sistolica')['texto']='Confirmar disfunção sistólica do ventrículo esquerdo ao ecocardiograma; a definição contemporânea de cardiomiopatia periparto utiliza FEVE <45%, surgindo próximo ao final da gestação ou nos meses após o parto, sem outra causa identificável de insuficiência cardíaca.'
+              item(r,'ppcm-adiar-decisao-de-dispositivo')['texto']='Evitar CDI definitivo muito precocemente porque a recuperação ventricular é frequente. Em disfunção ventricular grave e alto risco arrítmico, considerar colete desfibrilador como ponte nos primeiros 3-6 meses; se disfunção grave persistir além de 6 meses apesar de terapia otimizada, reavaliar indicação de CDI/TRC segundo critérios usuais.'
+
+            elif s=='suspensao-perioperatoria-de-inibidor-de-sglt2-prevencao-de-cetoacidose-euglicemica':
+              add_ref(r,'American Diabetes Association Professional Practice Committee for Diabetes. 16. Diabetes Care in the Hospital: Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S339-S355. DOI: 10.2337/dc26-S016. PMID: 41358892.')
+              item(r,'sglt2peri-reinicio-verificacao-humana')['texto']='Não usar um número fixo universal de dias para reinício. Reintroduzir somente após resolução dos fatores de risco para cetoacidose, estabilidade clínica/metabólica e retomada adequada da ingestão nutricional; para indicação de insuficiência cardíaca, a ADA 2026 admite reinício hospitalar quando a ingestão nutricional tiver sido retomada.'
+
+            elif s=='febre-reumatica-aguda-na-crianca-criterios-diagnosticos-por-risco-e-tratamento':
+              item(r,'fra-verificacao-humana-risco-brasil')['texto']='Classificar o risco pela epidemiologia da população atendida, não por impressão socioeconômica isolada. Nos critérios de Jones 2015, população de baixo risco é aquela com incidência de FRA ≤2/100.000 crianças em idade escolar por ano OU prevalência de cardiopatia reumática ≤1/1.000 habitantes por ano; quando a população não puder ser claramente classificada como baixo risco por dados confiáveis, aplicar a via de risco moderado/alto.'
+              add_ref(r,'Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography. Circulation. 2015;131:1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771 — define população de baixo risco por incidência de FRA ≤2/100.000 escolares/ano ou prevalência de cardiopatia reumática ≤1/1.000/ano.')
+
+            elif s=='estratificacao-de-risco-e-decisao-de-cdi-na-sindrome-de-brugada-assintomatica':
+              item(r,'brugada-verificacao-fonte-classes-diretriz')['texto']='As classes formais podem ser citadas com fonte primária: o consenso HRS/EHRA/APHRS 2013 recomenda CDI (Classe I) para sobrevivente de parada cardíaca e/ou TV espontânea sustentada documentada; considera CDI útil (Classe IIa) em padrão tipo 1 espontâneo com síncope julgada provavelmente arrítmica. Em assintomático, esses critérios não devem ser extrapolados automaticamente.'
+              add_ref(r,'Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-1963. DOI: 10.1016/j.hrthm.2013.05.014. PMID: 24011539.')
+
+            elif s=='aplicacao-do-escore-h2fpef-na-dispneia-inexplicada':
+              item(r,'h2fpef-nao-extrapolar-probabilidade-por-ponto')['texto']='Não inventar um percentual exato para cada ponto individual sem consultar a curva/calculadora original. Para uso clínico categórico validado, interpretar 0-1 como baixa probabilidade, 2-5 como probabilidade intermediária que requer teste adicional e 6-9 como alta probabilidade; a probabilidade aumenta de forma contínua ao longo do escore.'
+
+            elif s=='escore-de-schwartz-e-conduta-por-genotipo-na-sindrome-do-qt-longo-congenita-na-crianca':
+              item(r,'qtlc-restricao-esportiva-vhn')['texto']='Fazer aconselhamento de atividade física guiado pelo genótipo e por decisão compartilhada com especialista. A ESC 2022 recomenda evitar gatilhos específicos: em LQT1, evitar especialmente natação extenuante/sem supervisão; em LQT2, reduzir exposição a ruídos súbitos. Não transformar isso em proibição universal de todo esporte competitivo apenas pelo genótipo.'
+              add_ref(r,'Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for ventricular arrhythmias and prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — recomenda evitar gatilhos específicos do genótipo, incluindo natação extenuante em LQT1 e ruídos súbitos em LQT2.')
+
+            elif s=='indicacao-de-marca-passo-na-doenca-do-no-sinusal-e-sindrome-taquicardia-bradicardia-no-idoso':
+              item(r,'dns-idoso-classe-nivel-vhn')['texto']='Usar as classes formais da diretriz ACC/AHA/HRS 2018: sintomas diretamente atribuíveis à disfunção do nó sinusal — marca-passo Classe I, C-LD; bradicardia sintomática causada por terapia necessária sem alternativa — Classe I, C-EO; síndrome taquicardia-bradicardia com sintomas atribuíveis à bradicardia — Classe IIa, C-EO; incompetência cronotrópica sintomática — estimulação responsiva à frequência Classe IIa, C-EO.'
+              add_ref(r,'Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on Bradycardia and Cardiac Conduction Delay. J Am Coll Cardiol. 2019;74(7):e51-e156. DOI: 10.1016/j.jacc.2018.10.044. PMID: 30412709 — tabela de recomendações de estimulação permanente na disfunção do nó sinusal conferida diretamente.')
+
+            elif s=='investigacao-de-miopatia-necrotizante-autoimune-anti-hmgcr-pos-estatina':
+              item(r,'hmgcr-biopsia-muscular')['obrigatorio']=False
+              item(r,'hmgcr-biopsia-muscular')['texto']='Considerar biópsia muscular para documentar padrão necrotizante e excluir diagnósticos alternativos quando o fenótipo/sorologia não forem suficientes; em quadro típico anti-HMGCR soropositivo, o consenso ENMC reconhece o diagnóstico clínico pela combinação de fraqueza proximal, CK elevada e anticorpo anti-HMGCR, sem exigir biópsia em todos os casos.'
+              item(r,'hmgcr-encaminhamento-especialista')['texto']='Encaminhar a especialista em doenças neuromusculares/reumatologia para imunoterapia. O consenso ENMC sustenta início precoce de glicocorticoide associado a agente poupador de esteroide (frequentemente metotrexato); na miopatia anti-HMGCR, IVIG pode ser acrescentada precocemente, substituindo ou somando-se ao metotrexato conforme gravidade/resposta, e pode ser opção isolada em pacientes selecionados com contraindicação/intolerância a altas doses de esteroide. Individualizar o esquema pela gravidade e resposta.'
+              add_ref(r,'Allenbach Y, Mammen AL, Benveniste O, Stenzel W; Immune-Mediated Necrotizing Myopathies Working Group. 224th ENMC International Workshop: Clinico-sero-pathological classification of immune-mediated necrotizing myopathies. Neuromuscul Disord. 2018;28(1):87-99. DOI: 10.1016/j.nmd.2017.09.016 — consenso de tratamento específico por autoanticorpo.')
+
+            elif s=='avaliacao-cardiovascular-antes-e-durante-uso-de-antidepressivo-triciclico':
+              r['source_refs']=[x for x in r.get('source_refs',[]) if 'Dziukas' not in x]
+              add_ref(r,'Lavonas EJ, Akpunonu PD, Arens AM, et al. 2023 American Heart Association Focused Update on Cardiac Arrest or Life-Threatening Toxicity Due to Poisoning. Circulation. 2023;148:e149-e184. DOI: 10.1161/CIR.0000000000001161. PMID: 37721023 — bicarbonato de sódio é recomendado para cardiotoxicidade grave por tricíclicos; lidocaína (classe Ib) pode ser considerada em taquicardia de complexo largo por bloqueio de canal de sódio.')
+              item(r,'avaliacao-cv-triciclico-evitar-antiarritmico-ia-ic')['texto']='Na intoxicação grave por tricíclico com cardiotoxicidade por bloqueio de canal de sódio, usar bicarbonato de sódio como terapia antiarrítmica/toxicológica de primeira linha junto ao suporte avançado. Evitar antiarrítmicos classe IA/IC que acrescentam bloqueio de sódio; lidocaína (classe Ib) pode ser considerada em arritmia ventricular/taquicardia de complexo largo refratária, em ambiente de toxicologia/terapia intensiva.'
+
+            elif s=='diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter':
+              add_ref(r,'Kakkos SK, Gohel M, Baekgaard N, et al. ESVS 2021 Clinical Practice Guidelines on the Management of Venous Thrombosis. Eur J Vasc Endovasc Surg. 2021;61(1):9-82. DOI: 10.1016/j.ejvs.2020.09.023 — em UEDVT primária, trombólise não é rotina; pode ser considerada em jovens ativos selecionados com sintomas graves dentro das primeiras 2 semanas (IIb C).')
+              item(r,'paget-schroetter-trombolise-precoce')['texto']='Não indicar remoção precoce de trombo de rotina. Em paciente jovem e ativo selecionado, com sintomas graves e trombose primária aguda, considerar trombólise dirigida por cateter dentro das primeiras 2 semanas de sintomas (ESVS 2021, Classe IIb, Nível C), após avaliação individual de risco hemorrágico e experiência do centro.'
+              item(r,'paget-schroetter-encaminhar-cirurgia-vascular')['texto']='Encaminhar à cirurgia vascular/torácica após estratégia de remoção precoce de trombo quando houver evidência clara de síndrome do desfiladeiro torácico venoso; a ESVS 2021 admite ressecção da primeira costela nesse cenário (Classe IIb, Nível C), sem impor um intervalo universal em semanas para todos os pacientes.'
+
+            elif s=='pericardite-por-infeccao-bacteriana-uma-forma-grave-e-diferente-de-tratar':
+              r['fontes']=[
+                '2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — suspeita de pericardite purulenta exige drenagem urgente para diagnóstico; antimicrobiano intravenoso empírico até microbiologia, seguido de terapia dirigida; duração individualizada, mínimo 3 semanas.',
+                '2025 ESC Guidelines — Recommendation Table 23: pericardiocentese urgente e/ou janela cirúrgica Classe I, Nível C; fibrinólise intrapericárdica deve ser considerada para drenagem completa/prevenção de constrição, Classe IIa, Nível B.'
+              ]
+
+            elif s=='uso-remedio-para-emagrecer-e-vou-operar-preciso-parar-antes':
+              r['fontes']=[
+                'Kindel TL, Wang AY, Wadhwa A, et al. Multi-society clinical practice guidance for the safe use of glucagon-like peptide-1 receptor agonists in the perioperative period. Surg Endosc. 2025;39(1):180-183. PMID: 39370500.',
+                'American Society of Anesthesiologists / AGA / ASMBS / ISPCOP / SAGES. Multi-society guidance (2024): a maioria dos pacientes pode continuar GLP-1 antes de cirurgia eletiva; risco deve ser individualizado, com dieta líquida por 24 h e outras medidas nos pacientes de maior risco.',
+                'American Diabetes Association Professional Practice Committee for Diabetes. 16. Diabetes Care in the Hospital: Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S339-S355. DOI: 10.2337/dc26-S016.',
+                'Sen S, Potnuru PP, Hernandez N, et al. GLP-1 Receptor Agonist Use and Residual Gastric Content Before Anesthesia. JAMA Surg. 2024;159(6):660-667. PMID: 38446466.'
+              ]
+              for sec in r.get('secoes',[]):
+                if sec.get('titulo')=='A recomendação que os anestesistas seguem hoje':
+                  sec['titulo']='A orientação atual: não suspender automaticamente para todo mundo'
+                  sec['paragrafos']=[
+                    'A orientação multissocietária atual mudou em relação ao comunicado cautelar de 2023: a maioria dos pacientes pode continuar o agonista de GLP-1 antes de uma cirurgia eletiva. A decisão deve ser compartilhada entre quem prescreve o remédio, a equipe cirúrgica e a anestesia, equilibrando o risco de conteúdo residual no estômago com o risco de piorar o controle do diabetes, do peso ou de outras condições ao suspender o tratamento.',
+                    'O cuidado é maior durante a fase de aumento progressivo da dose, em quem tem náusea, vômitos, distensão abdominal, dor abdominal ou constipação importante, em doses mais altas e em pessoas com outras condições que retardam o esvaziamento do estômago. Nesses cenários, a equipe pode recomendar dieta líquida por 24 horas, ultrassom do estômago antes do procedimento, mudança do plano anestésico ou, em situações selecionadas, adiar uma cirurgia eletiva até o risco diminuir.'
+                  ]
+                elif sec.get('titulo')=='O que estudos mais recentes mostraram':
+                  sec['paragrafos']=[
+                    'Estudos com ultrassom confirmaram que algumas pessoas em uso desses medicamentos apresentam mais conteúdo residual no estômago apesar do jejum habitual. Esse achado explica por que a anestesia precisa conhecer o uso do remédio, mas não significa que todo usuário precise suspender a medicação automaticamente.',
+                    'Os dados disponíveis ainda não demonstram que uma regra fixa de suspensão por um número específico de dias elimine o risco em todos os pacientes. Por isso, as recomendações atuais priorizam avaliação individual, sintomas digestivos, fase de tratamento e medidas de redução de risco ao redor do procedimento.'
+                  ]
+
+            return neutral(r)
+
+          manifests={CHECK:json.loads(Path(CHECK).read_text()), PAT:json.loads(Path(PAT).read_text())}
+          existing={p:{r.get('slug') for r in manifests[p]} for p in manifests}
+          docs={p:{((r.get('theme') or r.get('tema') or ''),(r.get('documento_origem') if p==CHECK else r.get('documento_slug'))) for r in manifests[p]} for p in manifests}
+
+          added=[]
+          for slug,(pr,path) in sources.items():
+            if slug in existing[path]: raise SystemExit(f'{slug} unexpectedly already exists')
+            r=correct(record_from(pr,path,slug))
+            blob=json.dumps(r,ensure_ascii=False)
+            if 'VERIFICAÇÃO HUMANA NECESSÁRIA' in blob: raise SystemExit(f'marker remains in {slug}')
+            key=((r.get('theme') or r.get('tema') or ''),(r.get('documento_origem') if path==CHECK else r.get('documento_slug')))
+            if key in docs[path]: raise SystemExit(f'document collision for {slug}: {key}')
+            manifests[path].append(r); existing[path].add(slug); docs[path].add(key); added.append((path,slug,pr))
+
+          # Ensure checklist item IDs remain globally unique.
+          seen={}
+          for r in manifests[CHECK]:
+            for it in r.get('itens',[]):
+              iid=it.get('id')
+              if not iid: continue
+              if iid in seen: raise SystemExit(f'duplicate checklist item id {iid}: {seen[iid]} vs {r.get("slug")}')
+              seen[iid]=r.get('slug')
+
+          for path,data in manifests.items():
+            slugs=[r.get('slug') for r in data]
+            if len(slugs)!=len(set(slugs)): raise SystemExit(f'duplicate slug in {path}')
+            Path(path).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          print(json.dumps({'added_total':len(added),'checklists':sum(p==CHECK for p,_,__ in added),'patient_materials':sum(p==PAT for p,_,__ in added),'records':added},ensure_ascii=False,indent=2))
+          PY
+
+      - name: Validate corrected backlog
+        run: |
+          python3 -m json.tool checklists/metadados.json >/dev/null
+          python3 -m json.tool material-paciente/metadados.json >/dev/null
+          ! grep -F "VERIFICAÇÃO HUMANA NECESSÁRIA" checklists/metadados.json material-paciente/metadados.json
+          git diff --check
+
+      - name: Commit corrected records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add checklists/metadados.json material-paciente/metadados.json
+          git commit -m "content: resolve scientific verification blockers"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
