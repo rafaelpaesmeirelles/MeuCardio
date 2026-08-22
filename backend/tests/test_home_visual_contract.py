@@ -128,7 +128,7 @@ def test_navigation_matches_reference_six_area_information_architecture():
     assert ".ccc-nav--reference" in nav_css
     assert ".cc-mobile-more__grid" in nav_css
 
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]
     positions = [mobile.index(f"<span>{label}</span>") for label in labels]
     assert positions == sorted(positions)
     assert len(positions) == 5
