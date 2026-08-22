@@ -1,4 +1,4 @@
-"""Um único cenário integrado cobre o resumo clínico longitudinal do paciente."""
+"""Um único cenário integrado cobre resumo clínico e timeline longitudinal."""
 from app.models.prontuario import PatientClinicalItem
 from app.models.subscription import Subscription
 
@@ -52,6 +52,13 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(client, db, cri
     assert len(client.get(base, headers=_h(token)).json()) == 2
     historico = client.get(f"{base}?incluir_inativos=true", headers=_h(token))
     assert historico.status_code == 200 and len(historico.json()) == 3
+
+    timeline = client.get(f"/api/pacientes/{pid}/linha-do-tempo", headers=_h(token))
+    assert timeline.status_code == 200
+    tipos = {evento["tipo"] for evento in timeline.json()}
+    assert {"atendimento", "problema", "alergia", "medicacao"}.issubset(tipos)
+    assert any(evento["titulo"] == "Medicação inativada" for evento in timeline.json())
+    assert client.get(f"/api/pacientes/{pid}/linha-do-tempo", headers=_h(token_intruso)).status_code == 404
 
     # Um resumo clínico já torna o cadastro parte do prontuário e impede deleção física.
     assert client.delete(f"/api/pacientes/{pid}", headers=_h(token)).status_code == 409
