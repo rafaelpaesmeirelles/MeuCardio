@@ -3,6 +3,7 @@
 O vínculo é explícito e não altera o documento/prescrição original. Assim,
 as regras legais, snapshots e assinatura continuam nos módulos canônicos.
 """
+import re
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -14,8 +15,11 @@ from app.core.security import current_user
 from app.models.audit import AuditLog
 from app.models.clinical_docs import GeneratedDocument, Prescription
 from app.models.encounter_artifact import EncounterArtifact
-from app.models.receituario import PrescriptionDocument
+from app.models.receituario import PrescriptionDocument, PrescriptionRecipient
+from app.services import cofre
 from app.services.clinical_ownership import encounter_for_user, patient_profile_for_user
+from app.services.patient_profile_service import snapshot_de
+from app.services.professional_profile import normalize_search_text
 
 router = APIRouter(prefix="/api/pacientes", tags=["prontuario"])
 
@@ -38,18 +42,50 @@ def _encounter(pid: int, eid: int, db: Session, user, *, mutacao: bool = False):
     return encounter
 
 
+def _validar_destinatario_prescricao(prescricao_id: int, pid: int, db: Session, user) -> None:
+    """Prova que o destinatário cifrado corresponde ao PatientProfile do Encounter.
+
+    É comparação determinística de identidade, nunca busca/fuzzy matching: nome
+    normalizado precisa coincidir e, se o cadastro tiver CPF, o documento da
+    receita também precisa coincidir dígito a dígito.
+    """
+    perfil = patient_profile_for_user(pid, db, user)
+    snap = snapshot_de(perfil)
+    destinatario = (
+        db.query(PrescriptionRecipient)
+        .filter(PrescriptionRecipient.prescription_id == prescricao_id)
+        .first()
+    )
+    if not destinatario:
+        raise HTTPException(status_code=409, detail="Receita sem destinatário identificável não pode ser vinculada ao prontuário.")
+
+    nome = cofre.decifrar_campo(destinatario.nome_cifrado, prescricao_id)
+    if normalize_search_text(nome) != normalize_search_text(snap.get("full_name")):
+        raise HTTPException(status_code=409, detail="Destinatário da receita não corresponde ao paciente deste atendimento.")
+
+    cpf = re.sub(r"\D", "", snap.get("cpf") or "")
+    if cpf:
+        documento = (
+            cofre.decifrar_campo(destinatario.documento_cifrado, prescricao_id)
+            if destinatario.documento_cifrado else ""
+        )
+        if re.sub(r"\D", "", documento) != cpf:
+            raise HTTPException(status_code=409, detail="Documento do destinatário não corresponde ao paciente deste atendimento.")
+
+
 def _validar_artefato(dados: ArtefatoIn, pid: int, db: Session, user):
     if dados.tipo == "prescricao":
         row = db.get(Prescription, dados.artifact_id)
         if not row or row.created_by != user.id:
             raise HTTPException(status_code=404, detail="Prescrição não encontrada.")
+        _validar_destinatario_prescricao(row.id, pid, db, user)
         return row
 
     row = db.get(GeneratedDocument, dados.artifact_id)
     if not row or row.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
-    if row.patient_profile_id not in {None, pid}:
-        raise HTTPException(status_code=409, detail="Documento pertence a outro paciente do prontuário.")
+    if row.patient_profile_id != pid:
+        raise HTTPException(status_code=409, detail="Documento não corresponde ao paciente deste atendimento.")
     return row
 
 
