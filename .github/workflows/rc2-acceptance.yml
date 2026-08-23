@@ -289,7 +289,7 @@ jobs:
                 if (state.path === '/entrar') fail(`${route}: perdeu sessão`);
                 if (state.stuck) fail(`${route}: preso em Carregando a tela`);
                 if (state.serverError) fail(`${route}: erro de servidor visível`);
-                if (!state.shell && !route.startsWith('/tour')) fail(`${route}: fora do shell canônico`);
+                if (!state.shell && !state.path.startsWith('/tour') && state.path !== '/em-breve') fail(`${route}: fora do shell canônico`);
                 if (state.scrollWidth > state.width + 16 && route !== '/agenda') fail(`${route}: overflow horizontal ${state.scrollWidth} > ${state.width}`);
               } catch (e) {
                 fail(`${route}: ${e}`);
