@@ -59,7 +59,7 @@ def test_ecg_assist_passes_the_configured_model_to_the_provider(monkeypatch):
     assert result["payload"]["quality"] == "limitada"
 
 
-def test_openai_ecg_uses_visual_default_and_retries_without_json_mode(monkeypatch):
+def test_openai_ecg_uses_frontier_visual_default_and_retries_without_json_mode(monkeypatch):
     from openai import BadRequestError
 
     calls = []
@@ -89,8 +89,11 @@ def test_openai_ecg_uses_visual_default_and_retries_without_json_mode(monkeypatc
         "sistema", "instrucao", b"jpeg", "image/jpeg",
     )
 
-    assert response.modelo == "gpt-4o-mini"
-    assert calls[0]["model"] == calls[1]["model"] == "gpt-4o-mini"
+    assert response.modelo == "gpt-5.6-sol"
+    assert calls[0]["model"] == calls[1]["model"] == "gpt-5.6-sol"
+    assert calls[0]["reasoning_effort"] == "high"
+    assert calls[0]["max_completion_tokens"] == 4096
+    assert calls[0]["messages"][1]["content"][1]["image_url"]["detail"] == "original"
     assert calls[0]["response_format"] == {"type": "json_object"}
     assert "response_format" not in calls[1]
 
