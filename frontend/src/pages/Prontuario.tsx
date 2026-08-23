@@ -47,12 +47,12 @@ export default function Prontuario(){
 
   const carregarFila=()=>api.get<Fila[]>("/agenda-clinica/hoje").then(setFila).catch(e=>setErro(e.message));
   const carregarArtefatos=()=>{if(!pid||!editando)return;const b=`/pacientes/${pid}/atendimentos/${editando}/artefatos`;Promise.all([api.get<Artefato[]>(b),api.get<Artefato[]>(`${b}/candidatos`)]).then(([a,c])=>{setArtefatos(a);setCandidatos(c);}).catch(e=>setErro(e.message));};
-  useEffect(()=>{api.get<Paciente[]>("/pacientes").then(lista=>{setPacientes(lista);if(!pid&&lista[0])setQs({paciente:String(lista[0].id)},{replace:true});}).catch(e=>setErro(e.message));carregarFila();},[]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{api.get<Paciente[]>("/pacientes").then(lista=>{setPacientes(lista);if(!pid&&lista[0]){const next=new URLSearchParams(qs);next.set("paciente",String(lista[0].id));setQs(next,{replace:true});}}).catch(e=>setErro(e.message));carregarFila();},[]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(()=>{if(!pid){setEncounters([]);return;}api.get<Encounter[]>(`/pacientes/${pid}/atendimentos`).then(setEncounters).catch(e=>setErro(e.message));},[pid]);
   useEffect(()=>{if(!editando){setArtefatos([]);setCandidatos([]);return;}carregarArtefatos();const f=()=>carregarArtefatos();window.addEventListener("focus",f);return()=>window.removeEventListener("focus",f);},[pid,editando]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filtrados=useMemo(()=>{const q=busca.trim().toLocaleLowerCase("pt-BR");return q?pacientes.filter(p=>p.full_name.toLocaleLowerCase("pt-BR").includes(q)):pacientes;},[busca,pacientes]);
-  const selecionar=(id:number)=>{setQs({paciente:String(id)});setEditor(false);setEditando(null);setForm(VAZIO);};
+  const selecionar=(id:number)=>{const next=new URLSearchParams(qs);next.set("paciente",String(id));setQs(next);setEditor(false);setEditando(null);setForm(VAZIO);};
 
   async function criarPaciente(){
     const nome=novoNome.trim(); if(!nome)return;
@@ -89,7 +89,7 @@ export default function Prontuario(){
       <main className="pep-main">
         {!paciente?<section className="pep-card pep-empty">Selecione ou cadastre um paciente.</section>:<>
           <section className="pep-card pep-patient"><div><p className="eyebrow">Paciente</p><h2>{paciente.full_name}</h2><small>{[paciente.birth_date,paciente.sex,paciente.phone].filter(Boolean).join(" · ")||"Dados complementares não informados"}</small></div><button className="botao" onClick={abrirNovo}>+ Iniciar atendimento</button></section>
-          <PatientClinicalSummary key={paciente.id} patientId={paciente.id} currentEncounterId={editando}/>
+          <PatientClinicalSummary key={paciente.id} patientId={paciente.id} currentEncounterId={editando} focusECG={qs.get("acao")==="ecg"}/>
           <div className="pep-clinical">
             <section className="pep-card pep-history"><div className="pep-title"><h2>Histórico</h2><small>{encounters.length} atendimento(s)</small></div>{!encounters.length&&<p className="pep-muted">Ainda não há atendimentos.</p>}{encounters.map(e=><article key={e.id}><div><strong>{e.encounter_type==="adendo"?"Adendo":"Atendimento"}</strong><time>{quando(e.started_at)}</time></div><p>{e.chief_complaint||e.assessment||"Sem resumo registrado."}</p>{e.status==="finalized"?<small>Finalizado · histórico preservado</small>:<button onClick={()=>abrir(e)}>Continuar</button>}</article>)}</section>
             <section className="pep-card pep-editor">

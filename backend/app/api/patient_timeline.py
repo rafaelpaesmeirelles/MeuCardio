@@ -17,7 +17,10 @@ from app.models.appointment_clinical_flow import AppointmentClinicalFlow
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment, GeneratedDocument, Prescription
 from app.models.encounter_artifact import EncounterArtifact
-from app.models.prontuario import ClinicalEncounter, PatientClinicalItem, PatientExamResult
+from app.models.prontuario import (
+    ClinicalEncounter, PatientClinicalAISuggestion, PatientClinicalItem,
+    PatientECGRecord, PatientExamResult,
+)
 from app.services import cofre
 from app.services.clinical_ownership import patient_profile_for_user
 
@@ -125,6 +128,28 @@ def linha_do_tempo_paciente(
         for row in resultados
         if row.correction_of_id is not None
     }
+    ecgs = (
+        db.query(PatientECGRecord)
+        .filter(PatientECGRecord.owner_id == user.id, PatientECGRecord.patient_profile_id == pid)
+        .all()
+    )
+    ai_suggestions = (
+        db.query(PatientClinicalAISuggestion)
+        .filter(
+            PatientClinicalAISuggestion.owner_id == user.id,
+            PatientClinicalAISuggestion.patient_profile_id == pid,
+        )
+        .order_by(PatientClinicalAISuggestion.created_at.desc())
+        .all()
+    )
+    accepted_by_result = {
+        row.accepted_result_id: row
+        for row in ai_suggestions
+        if row.status == "accepted" and row.accepted_result_id is not None
+    }
+    latest_by_ecg: dict[int, PatientClinicalAISuggestion] = {}
+    for suggestion in ai_suggestions:
+        latest_by_ecg.setdefault(suggestion.ecg_record_id, suggestion)
     for row in resultados:
         payload = _payload_resultado(row)
         nome = (payload.get("exam_name") or "").strip()
@@ -134,6 +159,7 @@ def linha_do_tempo_paciente(
         resultado = " ".join(x for x in (valor, unidade) if x).strip()
         origem = (payload.get("source") or "").strip()
         resumo = " · ".join(x for x in (nome, resultado or laudo, origem) if x)[:240]
+        ai_origin = accepted_by_result.get(row.id)
         eventos.append({
             "id": f"resultado_exame:{row.id}",
             "tipo": "resultado_exame",
@@ -148,6 +174,38 @@ def linha_do_tempo_paciente(
             "corrected_by_id": corrected_by.get(row.id),
             "is_superseded": row.id in corrected_by,
             "source": origem or None,
+            "ecg_record_id": ai_origin.ecg_record_id if ai_origin else None,
+            "ai_suggestion_id": ai_origin.id if ai_origin else None,
+            "ai_review_status": ai_origin.status if ai_origin else None,
+        })
+
+    # Um ECG aceito aparece pela fonte canônica `PatientExamResult`; enquanto
+    # não aceito, o próprio arquivo imutável é o evento. Assim a timeline não
+    # duplica o mesmo exame nem promove a sugestão da IA a fato clínico.
+    accepted_ecg_ids = {
+        row.ecg_record_id for row in ai_suggestions if row.status == "accepted"
+    }
+    for row in ecgs:
+        if row.id in accepted_ecg_ids:
+            continue
+        suggestion = latest_by_ecg.get(row.id)
+        if suggestion and suggestion.status == "generated":
+            resumo, status = "Sugestão da IA disponível; revisão médica pendente.", "awaiting_review"
+        elif suggestion and suggestion.status == "rejected":
+            resumo, status = "Sugestão da IA rejeitada; arquivo original preservado.", "ai_rejected"
+        else:
+            resumo, status = "Arquivo original anexado ao prontuário.", "uploaded"
+        eventos.append({
+            "id": f"ecg_anexado:{row.id}",
+            "tipo": "ecg_anexado",
+            "data": row.performed_at,
+            "titulo": "ECG anexado",
+            "resumo": resumo,
+            "status": status,
+            "encounter_id": row.source_encounter_id,
+            "ecg_record_id": row.id,
+            "ai_suggestion_id": suggestion.id if suggestion else None,
+            "ai_review_status": suggestion.status if suggestion else None,
         })
 
     flows = (

@@ -46,7 +46,7 @@ EXPECTED_NAV_ROUTES = {
     "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
-    "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/trilhas", "/trilhas/timeline",
+    "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/prontuario?acao=ecg", "/trilhas", "/trilhas/timeline",
     "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
     "/sincronizacao", "/admin/usuarios", "/tour",
 }

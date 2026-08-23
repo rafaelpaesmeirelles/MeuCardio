@@ -11,6 +11,7 @@ igual para qualquer provedor.
 
 from __future__ import annotations
 
+import base64
 import json
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
@@ -71,6 +72,22 @@ class ProvedorIA(ABC):
         """Gerador: produz {"delta": str} a cada pedaço de texto e termina com
         {"final": Resposta(...)}. Existe para manter a conexão HTTP viva em
         perguntas longas — ver nota em ProvedorAnthropic.responder_stream."""
+        ...
+
+    @abstractmethod
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+    ) -> Resposta:
+        """Analisa um arquivo clínico sem persistir o binário no provedor.
+
+        O chamador continua responsável por consentimento operacional,
+        ownership, auditoria e por nunca converter a saída em fato automático.
+        """
         ...
 
     @property
@@ -160,6 +177,55 @@ class ProvedorOpenAI(ProvedorIA):
             texto="".join(textos), tokens_entrada=tokens_entrada,
             tokens_saida=tokens_saida, modelo=modelo_efetivo, truncado=truncado,
         )}
+
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+    ) -> Resposta:
+        # Chat Completions aceita imagem inline, mas não PDF. Recusamos em vez
+        # de transformar PDF em texto e perder justamente o traçado do ECG.
+        if media_type == "application/pdf":
+            raise ValueError(
+                "O provedor OpenAI configurado exige ECG em JPEG, PNG ou WEBP para análise visual."
+            )
+        if media_type not in {"image/jpeg", "image/png", "image/webp"}:
+            raise ValueError("Formato de imagem não suportado pelo provedor multimodal.")
+        modelo_efetivo = modelo or self._modelo
+        imagem = base64.b64encode(conteudo).decode("ascii")
+        resp = self._cliente.chat.completions.create(
+            model=modelo_efetivo,
+            messages=[
+                {"role": "system", "content": sistema},
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": instrucao},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:{media_type};base64,{imagem}",
+                                "detail": "high",
+                            },
+                        },
+                    ],
+                },
+            ],
+            max_tokens=settings.ai_max_output_tokens,
+            temperature=0,
+            response_format={"type": "json_object"},
+        )
+        uso = resp.usage
+        return Resposta(
+            texto=resp.choices[0].message.content or "",
+            tokens_entrada=getattr(uso, "prompt_tokens", 0) or 0,
+            tokens_saida=getattr(uso, "completion_tokens", 0) or 0,
+            modelo=modelo_efetivo,
+            truncado=resp.choices[0].finish_reason == "length",
+        )
 
 
 class ProvedorAnthropic(ProvedorIA):
@@ -365,6 +431,53 @@ class ProvedorAnthropic(ProvedorIA):
             tokens_saida=tokens_saida, modelo=modelo_efetivo,
             truncado=resp.stop_reason == "max_tokens",
         )}
+
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+    ) -> Resposta:
+        modelo_efetivo = modelo or self._modelo
+        encoded = base64.b64encode(conteudo).decode("ascii")
+        if media_type == "application/pdf":
+            arquivo = {
+                "type": "document",
+                "source": {
+                    "type": "base64", "media_type": "application/pdf", "data": encoded,
+                },
+            }
+        elif media_type in {"image/jpeg", "image/png", "image/webp"}:
+            arquivo = {
+                "type": "image",
+                "source": {"type": "base64", "media_type": media_type, "data": encoded},
+            }
+        else:
+            raise ValueError("Formato de arquivo não suportado pelo provedor multimodal.")
+        resp = self._cliente.messages.create(
+            model=modelo_efetivo,
+            system=sistema,
+            max_tokens=settings.ai_max_output_tokens,
+            temperature=0,
+            messages=[{
+                "role": "user",
+                # Documento primeiro: ordem recomendada pelo provedor para
+                # análise visual e evita reapresentar PHI em texto.
+                "content": [arquivo, {"type": "text", "text": instrucao}],
+            }],
+        )
+        texto = "".join(
+            bloco.text for bloco in resp.content if getattr(bloco, "type", None) == "text"
+        )
+        return Resposta(
+            texto=texto,
+            tokens_entrada=getattr(resp.usage, "input_tokens", 0) or 0,
+            tokens_saida=getattr(resp.usage, "output_tokens", 0) or 0,
+            modelo=modelo_efetivo,
+            truncado=resp.stop_reason == "max_tokens",
+        )
 
 
 _cache: ProvedorIA | None = None

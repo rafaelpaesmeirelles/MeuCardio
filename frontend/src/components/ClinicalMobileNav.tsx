@@ -5,7 +5,7 @@ import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
-type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number };
+type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number; featured?: boolean };
 type MobileSection = { title: string; items: LinkItem[] };
 
 const CLINICA_DECISAO: LinkItem[] = [
@@ -36,6 +36,7 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 ];
 
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
+  { to: "/prontuario?acao=ecg", label: "IA para ECG", icon: "ecg", featured: true },
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
@@ -120,7 +121,7 @@ export default function ClinicalMobileNav() {
   }, [maisAberto]);
 
   function SheetLink({ item }: { item: LinkItem }) {
-    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}</strong></NavLink>;
+    return <NavLink to={item.to} className={item.featured ? "is-featured" : undefined} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{item.featured&&<small>Destaque</small>}{!!item.badge&&<span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}</strong></NavLink>;
   }
 
   return <>

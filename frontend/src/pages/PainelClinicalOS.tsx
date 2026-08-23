@@ -5,7 +5,7 @@ import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslo
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 
-type AcaoRapida = { to: string; titulo: string; detalhe: string; icone: NomeIcone; tone: string };
+type AcaoRapida = { to: string; titulo: string; detalhe: string; icone: NomeIcone; tone: string; featured?: boolean };
 type ContextoRecente = { path: string; titulo: string; detalhe: string; icone: NomeIcone; visitadoEm: number };
 type Atualizacao = { id: number; slug: string; org: string; title: string; published_at: string; status: "detected" | "aguardando_revisao" | "revisada"; url: string | null };
 type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
@@ -46,6 +46,7 @@ type ModuloItem = { to: string; label: string; icon: NomeIcone; adminOnly?: bool
 type ModuloGrupo = { title: string; tone: "cyan" | "violet" | "blue" | "amber" | "teal" | "slate"; icon: NomeIcone; items: ModuloItem[] };
 
 const ACOES: AcaoRapida[] = [
+  { to: "/prontuario?acao=ecg", titulo: "IA para ECG", detalhe: "Upload e sugestão revisável", icone: "ecg", tone: "green", featured: true },
   { to: "/receituario", titulo: "Prescrever", detalhe: "Novo receituário", icone: "prescricao", tone: "cyan" },
   { to: "/documentos", titulo: "Solicitar exames", detalhe: "Adicionar solicitação", icone: "clinica", tone: "blue" },
   { to: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e índices", icone: "calculadora", tone: "amber" },
@@ -53,7 +54,6 @@ const ACOES: AcaoRapida[] = [
   { to: "/emergencia", titulo: "Emergências", detalhe: "Condutas rápidas", icone: "emergencia", tone: "red" },
   { to: "/diretrizes", titulo: "Guidelines", detalhe: "Diretrizes atuais", icone: "conhecimento", tone: "green" },
   { to: "/assistente", titulo: "CorVIA AI", detalhe: "Assistente Clínica", icone: "assistente", tone: "blue" },
-  { to: "/documentos", titulo: "Documentos", detalhe: "Atestado, relatório...", icone: "documento", tone: "violet" },
 ];
 
 const MODULOS: ModuloGrupo[] = [
@@ -88,6 +88,7 @@ const MODULOS: ModuloGrupo[] = [
   },
   {
     title: "Trabalho & Assistência", tone: "blue", icon: "pacientes", items: [
+      { to: "/prontuario?acao=ecg", label: "IA para ECG · destaque", icon: "ecg" },
       { to: "/round", label: "Pacientes", icon: "pacientes" },
       { to: "/receituario", label: "Prescrição", icon: "prescricao" },
       { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
@@ -166,6 +167,7 @@ function enderecoDestino(destino?: ProximoLocal | null) {
 }
 function destinoDoComando(valor: string) {
   const termo = valor.trim(); const normalizado = termo.toLocaleLowerCase("pt-BR");
+  if (/\b(ecg|eletrocardiograma)\b/.test(normalizado)) return "/prontuario?acao=ecg";
   if (/\b(prescrev|prescri|receita|receitu)/.test(normalizado)) return "/receituario";
   if (/\b(atestado|documento|relat[oó]rio|encaminhamento|solicitar exames?|pedido de exames?)/.test(normalizado)) return "/documentos";
   if (/\b(calcul|escore|score|cha.?ds.?vasc)/.test(normalizado)) return "/calculadoras";
@@ -438,7 +440,7 @@ export default function PainelClinicalOS() {
 
         <section className="ccc-section ccc-actions-section" aria-labelledby="ccc-actions-title">
           <div className="ccc-section__head"><h2 id="ccc-actions-title">Ações rápidas</h2><Link to="/busca"><Icone nome="configuracao" /> Personalizar</Link></div>
-          <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}`} data-tone={acao.tone}><span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span></Link>)}</div>
+          <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}${acao.featured ? " is-featured" : ""}`} data-tone={acao.tone}>{acao.featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span></Link>)}</div>
         </section>
 
         <section className="ccc-mobile-summary ccc-reference-summary" aria-label="Resumo do dia e próximo deslocamento">
