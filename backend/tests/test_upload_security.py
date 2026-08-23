@@ -269,6 +269,7 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert policy_for("POST", "/api/auth/me/logo") is not None
     assert policy_for("POST", "/api/pedidos/1/exame") is not None
     assert policy_for("POST", "/api/pacientes/1/ecgs") is not None
+    assert policy_for("POST", "/api/ecg-ia/analisar") is not None
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None

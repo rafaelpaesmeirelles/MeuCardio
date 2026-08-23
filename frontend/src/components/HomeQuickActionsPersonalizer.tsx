@@ -7,7 +7,7 @@ import { useAuth } from "../lib/auth";
 type Acao = [id: string, to: string, titulo: string, icone: NomeIcone, tone: string, featured?: boolean];
 const N = 10;
 const TODAS: Acao[] = [
-  ["ecg-ia", "/prontuario?acao=ecg", "IA para ECG", "ecg", "green", true],
+  ["ecg-ia", "/ecg-ia", "IA para ECG", "ecg", "green", true],
   ["prescrever", "/receituario", "Prescrever", "prescricao", "cyan"],
   ["solicitar-exames", "/documentos", "Solicitar exames", "clinica", "blue"],
   ["calculadoras", "/calculadoras", "Calculadoras", "calculadora", "amber"],

@@ -75,7 +75,7 @@ def policy_for(method: str, path: str) -> UploadPolicy | None:
         return _IMAGE_POLICY
     if re.fullmatch(r"/api/pedidos/\d+/exame", path):
         return _EXAM_POLICY
-    if re.fullmatch(r"/api/pacientes/\d+/ecgs", path):
+    if re.fullmatch(r"/api/pacientes/\d+/ecgs", path) or path == "/api/ecg-ia/analisar":
         return _EXAM_POLICY
     if path == "/api/email/mensagens/anexos":
         return _EMAIL_POLICY
