@@ -96,10 +96,10 @@ class ProvedorIA(ABC):
 
 
 class ProvedorOpenAI(ProvedorIA):
-    # O modelo principal do chat pode ser textual. Quando o operador não
-    # escolhe um modelo exclusivo para ECG, a análise visual usa um modelo
-    # multimodal conhecido em vez de herdar silenciosamente o modelo do chat.
-    _MODELO_ECG_PADRAO = "gpt-4o-mini"
+    # O modelo principal do chat pode ser textual ou otimizado por custo.
+    # Quando o operador não escolhe um modelo exclusivo para ECG, a análise
+    # visual usa o modelo frontier em vez de herdar silenciosamente o do chat.
+    _MODELO_ECG_PADRAO = "gpt-5.6-sol"
 
     def __init__(self) -> None:
         from openai import OpenAI
@@ -200,6 +200,7 @@ class ProvedorOpenAI(ProvedorIA):
         if media_type not in {"image/jpeg", "image/png", "image/webp"}:
             raise ValueError("Formato de imagem não suportado pelo provedor multimodal.")
         modelo_efetivo = modelo or self._MODELO_ECG_PADRAO
+        modelo_gpt_56 = modelo_efetivo.startswith("gpt-5.6")
         imagem = base64.b64encode(conteudo).decode("ascii")
         kwargs = {
             "model": modelo_efetivo,
@@ -213,15 +214,27 @@ class ProvedorOpenAI(ProvedorIA):
                             "type": "image_url",
                             "image_url": {
                                 "url": f"data:{media_type};base64,{imagem}",
-                                "detail": "high",
+                                # O ECG tem linhas finas, quadrícula e texto
+                                # pequeno. GPT-5.6 preserva a resolução original
+                                # com este nível, evitando a redução usada em
+                                # `high` por famílias anteriores.
+                                "detail": "original" if modelo_gpt_56 else "high",
                             },
                         },
                     ],
                 },
             ],
-            "max_tokens": settings.ai_max_output_tokens,
-            "temperature": 0,
         }
+        if modelo_gpt_56:
+            kwargs.update({
+                "max_completion_tokens": settings.ai_max_output_tokens,
+                "reasoning_effort": "high",
+            })
+        else:
+            kwargs.update({
+                "max_tokens": settings.ai_max_output_tokens,
+                "temperature": 0,
+            })
         try:
             # JSON mode melhora a aderência ao contrato, mas algumas variantes
             # multimodais rejeitam esse parâmetro apesar de aceitarem imagem.
