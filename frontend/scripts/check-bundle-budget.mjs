@@ -103,7 +103,12 @@ for (const path of await listarArquivos(dist.pathname)) {
 // do Prontuário e levou o precache a 2884003 B. O entrypoint, seu teto gzip e
 // o limite individual de chunks opcionais permanecem inalterados; a margem
 // residual continua estreita (~4 KiB) para detectar crescimento acidental.
-const maxPrecacheBytes = 2820 * 1024;
+//
+// Ajustado de 2820 KB para 2821 KB em 22/08/2026: os controles finais da
+// revisão do ECG (ação destacada explicitamente fixa no personalizador)
+// consumiram a margem residual. O aumento é limitado a 1 KiB e os tetos do
+// entrypoint, gzip e chunks opcionais continuam inalterados.
+const maxPrecacheBytes = 2821 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }

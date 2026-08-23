@@ -171,6 +171,7 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
     monkeypatch.setattr(settings, "exames_dir", str(tmp_path / "ecgs"))
     monkeypatch.setattr(settings, "ai_enabled", True)
     monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", True)
+    monkeypatch.setattr(settings, "openai_api_key", "test-key")
     image = io.BytesIO()
     Image.new("RGB", (1200, 800), "white").save(image, format="PNG")
     ecg_bytes = image.getvalue()
@@ -194,6 +195,19 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
         "enabled": True,
         "supported_media_types": ["image/jpeg", "image/png", "image/webp"],
     }
+    monkeypatch.setattr(settings, "openai_api_key", "")
+    assert client.get(f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token)).json()["enabled"] is False
+    attempts_without_key = db.query(AuditLog.id).filter(
+        AuditLog.action == "ai_ecg_transfer_attempt",
+    ).count()
+    assert client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": True},
+    ).status_code == 503
+    assert db.query(AuditLog.id).filter(
+        AuditLog.action == "ai_ecg_transfer_attempt",
+    ).count() == attempts_without_key
+    monkeypatch.setattr(settings, "openai_api_key", "test-key")
     monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", False)
     assert client.get(
         f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token),
@@ -354,6 +368,14 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
     )
     assert second_suggestion.status_code == 201
     second_id = second_suggestion.json()["id"]
+    suggestion_history = f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes"
+    assert [row["id"] for row in client.get(
+        f"{suggestion_history}?limite=1&offset=0", headers=_h(token),
+    ).json()] == [second_id]
+    assert [row["id"] for row in client.get(
+        f"{suggestion_history}?limite=1&offset=1", headers=_h(token),
+    ).json()] == [suggestion_id]
+    assert client.get(suggestion_history, headers=_h(token_intruso)).status_code == 404
     assert client.post(
         f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes/{second_id}/revisao",
         headers=_h(token),

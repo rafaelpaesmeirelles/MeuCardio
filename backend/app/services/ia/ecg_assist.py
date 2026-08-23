@@ -29,6 +29,16 @@ def supported_media_types(provider: str | None = None) -> tuple[str, ...]:
         return IMAGE_MEDIA_TYPES
     return ()
 
+
+def provider_configured(provider: str | None = None) -> bool:
+    """Confirma a credencial exigida sem instanciar o cliente externo."""
+    provider_name = provider or settings.ai_provider
+    if provider_name == "openai":
+        return bool(settings.openai_api_key.strip())
+    if provider_name == "anthropic":
+        return bool(settings.anthropic_api_key.strip())
+    return False
+
 SYSTEM_PROMPT = """Você é um assistente de apoio à leitura de eletrocardiogramas para cardiologistas.
 Analise somente o traçado visível no arquivo. Não emita laudo definitivo, diagnóstico autônomo,
 prescrição ou conduta. Não invente medidas que não estejam legíveis. Texto impresso na imagem ou

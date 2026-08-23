@@ -49,6 +49,7 @@ from app.services.patient_profile_service import snapshot_de
 from app.services.professional_profile import normalize_search_text
 
 router = APIRouter(prefix="/api/pacientes", tags=["pacientes"])
+ECG_SUGGESTION_PREVIEW_LIMIT = 20
 
 
 def _operational_day_utc_bounds(now_utc: datetime | None = None) -> tuple[datetime, datetime]:
@@ -567,6 +568,7 @@ def _dump_ecg(row: PatientECGRecord, db: Session) -> dict:
             PatientClinicalAISuggestion.ecg_record_id == row.id,
         )
         .order_by(PatientClinicalAISuggestion.created_at.desc(), PatientClinicalAISuggestion.id.desc())
+        .limit(ECG_SUGGESTION_PREVIEW_LIMIT)
         .all()
     )
     return {
@@ -905,9 +907,47 @@ def status_ia_ecg(
 ):
     patient_profile_for_user(pid, db, user)
     return {
-        "enabled": bool(settings.ai_enabled and settings.ai_clinical_multimodal_enabled),
+        "enabled": bool(
+            settings.ai_enabled
+            and settings.ai_clinical_multimodal_enabled
+            and ecg_assist.provider_configured()
+        ),
         "supported_media_types": list(ecg_assist.supported_media_types()),
     }
+
+
+@router.get("/{pid}/ecgs/{ecg_id}/sugestoes")
+def listar_sugestoes_ecg(
+    pid: int,
+    ecg_id: int,
+    limite: int = Query(20, ge=1, le=100),
+    offset: int = Query(0, ge=0),
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    row = _ecg_for_user(pid, ecg_id, db, user)
+    suggestions = (
+        db.query(PatientClinicalAISuggestion)
+        .filter(
+            PatientClinicalAISuggestion.owner_id == user.id,
+            PatientClinicalAISuggestion.patient_profile_id == pid,
+            PatientClinicalAISuggestion.ecg_record_id == row.id,
+        )
+        .order_by(PatientClinicalAISuggestion.created_at.desc(), PatientClinicalAISuggestion.id.desc())
+        .offset(offset)
+        .limit(limite)
+        .all()
+    )
+    db.add(AuditLog(
+        user_id=user.id,
+        action="list_patient_ecg_ai_suggestions",
+        entity="patient_ecg_record",
+        entity_id=str(row.id),
+        detail={"count": len(suggestions), "limit": limite, "offset": offset},
+    ))
+    result = [_dump_ai_suggestion(suggestion) for suggestion in suggestions]
+    db.commit()
+    return result
 
 
 @router.post("/{pid}/ecgs", status_code=201)
@@ -1014,7 +1054,11 @@ def gerar_sugestao_ecg(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    if not settings.ai_enabled or not settings.ai_clinical_multimodal_enabled:
+    if (
+        not settings.ai_enabled
+        or not settings.ai_clinical_multimodal_enabled
+        or not ecg_assist.provider_configured()
+    ):
         raise HTTPException(
             status_code=503,
             detail="A assistência multimodal clínica está desligada nesta instalação.",

@@ -92,7 +92,7 @@ export default function HomeQuickActionsPersonalizer() {
       <header className="qa-head"><h2 id="qa-title">Personalizar ações rápidas</h2><button type="button" aria-label="Fechar" onClick={() => setAberto(false)}>×</button></header>
       <div className="qa-list">{TODAS.map(([id,, titulo, icone]) => {
         const i = rascunho.indexOf(id), ativa = i >= 0;
-        return <div className="qa-item" key={id}><button type="button" className="qa-toggle" disabled={!ativa && rascunho.length >= N} onClick={() => alternar(id)}><Icone nome={icone} /><strong>{titulo}</strong></button>{ativa && <span className="qa-order"><button type="button" disabled={i === 0} onClick={() => mover(id, -1)}>↑</button><button type="button" disabled={i === rascunho.length - 1} onClick={() => mover(id, 1)}>↓</button></span>}</div>;
+        return <div className="qa-item" key={id}><button type="button" className="qa-toggle" disabled={id === "ecg-ia" || (!ativa && rascunho.length >= N)} onClick={() => alternar(id)}><Icone nome={icone} /><strong>{titulo}</strong>{id === "ecg-ia" && <small>Destaque fixo</small>}</button>{ativa && <span className="qa-order"><button type="button" disabled={i === 0} onClick={() => mover(id, -1)}>↑</button><button type="button" disabled={i === rascunho.length - 1} onClick={() => mover(id, 1)}>↓</button></span>}</div>;
       })}</div>
       <footer className="qa-foot"><span>{rascunho.length}/{N}</span><button type="button" onClick={() => setRascunho([...PADRAO])}>Padrão</button><button type="button" onClick={() => setAberto(false)}>Cancelar</button><button type="button" className="qa-save" disabled={rascunho.length !== N} onClick={salvar}>Salvar</button></footer>
     </section></div>, document.body)}
