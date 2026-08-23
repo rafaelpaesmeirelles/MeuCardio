@@ -9,7 +9,7 @@ type Payload={
 };
 type Suggestion={id:number;status:"generated"|"accepted"|"rejected";payload:Payload;provider:string;model:string;created_at:string;reviewed_at:string|null;review_note:string|null;accepted_result_id:number|null};
 type ECG={id:number;performed_at:string;original_name:string;media_type:string;size_bytes:number;source_encounter_id:number|null;created_at:string;suggestions:Suggestion[]};
-type AIStatus={enabled:boolean};
+type AIStatus={enabled:boolean;supported_media_types:string[]};
 
 const PAGE_SIZE=30;
 
@@ -27,14 +27,14 @@ export default function PatientECGAssistant({patientId,currentEncounterId,focusO
   const sectionRef=useRef<HTMLElement>(null),fileRef=useRef<HTMLInputElement>(null);
   const [items,setItems]=useState<ECG[]>([]),[file,setFile]=useState<File|null>(null),[performedAt,setPerformedAt]=useState(localDateTime());
   const [drafts,setDrafts]=useState<Record<number,string>>({}),[notes,setNotes]=useState<Record<number,string>>({});
-  const [aiEnabled,setAIEnabled]=useState<boolean|null>(null),[hasMore,setHasMore]=useState(false);
+  const [aiEnabled,setAIEnabled]=useState<boolean|null>(null),[aiMediaTypes,setAIMediaTypes]=useState<string[]>([]),[hasMore,setHasMore]=useState(false);
   const [busy,setBusy]=useState(""),[error,setError]=useState("");
   const seedDrafts=(rows:ECG[])=>setDrafts(old=>{const next={...old};for(const ecg of rows)for(const s of ecg.suggestions)if(s.status==="generated"&&next[s.id]===undefined)next[s.id]=s.payload.summary;return next;});
   const load=()=>Promise.all([
     api.get<ECG[]>(`${base}?limite=${PAGE_SIZE}&offset=0`),
     api.get<AIStatus>(`${base}/ia-status`),
-  ]).then(([rows,status])=>{setItems(rows);seedDrafts(rows);setHasMore(rows.length===PAGE_SIZE);setAIEnabled(status.enabled);}).catch(e=>setError(e.message));
-  useEffect(()=>{setItems([]);setFile(null);setPerformedAt(localDateTime());setDrafts({});setNotes({});setAIEnabled(null);setHasMore(false);setBusy("");setError("");load();},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
+  ]).then(([rows,status])=>{setItems(rows);seedDrafts(rows);setHasMore(rows.length===PAGE_SIZE);setAIEnabled(status.enabled);setAIMediaTypes(status.supported_media_types);}).catch(e=>setError(e.message));
+  useEffect(()=>{setItems([]);setFile(null);setPerformedAt(localDateTime());setDrafts({});setNotes({});setAIEnabled(null);setAIMediaTypes([]);setHasMore(false);setBusy("");setError("");load();},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(()=>{if(!focusOnMount)return;const frame=requestAnimationFrame(()=>{const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;sectionRef.current?.scrollIntoView({behavior:reducedMotion?"auto":"smooth",block:"start"});fileRef.current?.focus({preventScroll:true});});return()=>cancelAnimationFrame(frame);},[focusOnMount,patientId]);
 
   async function upload(){
@@ -43,7 +43,7 @@ export default function PatientECGAssistant({patientId,currentEncounterId,focusO
     catch(e){setError(e instanceof Error?e.message:"Falha ao anexar.");}finally{setBusy("");}
   }
   async function analyze(ecg:ECG){
-    if(!aiEnabled)return;
+    if(!aiEnabled||!aiMediaTypes.includes(ecg.media_type))return;
     if(!window.confirm("O ECG será enviado ao provedor de IA para gerar sugestão não validada. Continuar?"))return;
     setBusy(`ai-${ecg.id}`);setError("");
     try{await api.post(`${base}/${ecg.id}/sugestoes`,{confirm_external_processing:true});await load();onChanged?.();}
@@ -80,7 +80,7 @@ export default function PatientECGAssistant({patientId,currentEncounterId,focusO
     {items.map(ecg=><article key={ecg.id}>
       <div><strong>ECG · {ecg.original_name}</strong><time>{when(ecg.performed_at)}</time></div>
       <small>{ecg.media_type} · {(ecg.size_bytes/1024/1024).toFixed(2)} MB · cifrado</small>
-      <div className="pep-actions"><button onClick={()=>open(ecg)}>Abrir original</button>{aiEnabled?<button className="botao botao--secundario" disabled={!!busy} onClick={()=>analyze(ecg)}>{busy===`ai-${ecg.id}`?"Analisando…":"Gerar sugestão"}</button>:aiEnabled===false?<small>IA indisponível; ECG preservado.</small>:null}</div>
+      <div className="pep-actions"><button onClick={()=>open(ecg)}>Abrir original</button>{aiEnabled&&aiMediaTypes.includes(ecg.media_type)?<button className="botao botao--secundario" disabled={!!busy} onClick={()=>analyze(ecg)}>{busy===`ai-${ecg.id}`?"Analisando…":"Gerar sugestão"}</button>:aiEnabled?<small>Formato preservado; o provedor atual não analisa este arquivo.</small>:aiEnabled===false?<small>IA indisponível; ECG preservado.</small>:null}</div>
       {ecg.suggestions.map(s=><details key={s.id} open={s.status==="generated"}>
         <summary>Sugestão IA #{s.id} · {s.status==="generated"?"revisar":s.status==="accepted"?"aceita":"rejeitada"}</summary>
         <p><strong>Qualidade:</strong> {s.payload.quality}{s.payload.urgent_review_recommended?" · revisão prioritária sugerida":""}</p>

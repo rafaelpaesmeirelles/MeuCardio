@@ -20,8 +20,9 @@ AuditLog sem copiar conteúdo clínico para o log.
 from __future__ import annotations
 
 import json
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, time, timedelta, timezone
 from typing import Literal
+from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, Response, UploadFile
 from pydantic import BaseModel
@@ -48,6 +49,16 @@ from app.services.patient_profile_service import snapshot_de
 from app.services.professional_profile import normalize_search_text
 
 router = APIRouter(prefix="/api/pacientes", tags=["pacientes"])
+
+
+def _operational_day_utc_bounds(now_utc: datetime | None = None) -> tuple[datetime, datetime]:
+    """Retorna o dia civil operacional convertido em limites UTC."""
+    current = now_utc or datetime.now(timezone.utc)
+    zone = ZoneInfo(settings.fuso_operacao)
+    local_day = current.astimezone(zone).date()
+    start_local = datetime.combine(local_day, time.min, tzinfo=zone)
+    end_local = datetime.combine(local_day + timedelta(days=1), time.min, tzinfo=zone)
+    return start_local.astimezone(timezone.utc), end_local.astimezone(timezone.utc)
 
 
 class EnderecoIn(BaseModel):
@@ -895,6 +906,7 @@ def status_ia_ecg(
     patient_profile_for_user(pid, db, user)
     return {
         "enabled": bool(settings.ai_enabled and settings.ai_clinical_multimodal_enabled),
+        "supported_media_types": list(ecg_assist.supported_media_types()),
     }
 
 
@@ -1008,6 +1020,11 @@ def gerar_sugestao_ecg(
             detail="A assistência multimodal clínica está desligada nesta instalação.",
         )
     row = _ecg_for_user(pid, ecg_id, db, user)
+    if row.media_type not in ecg_assist.supported_media_types():
+        raise HTTPException(
+            status_code=422,
+            detail="O provedor configurado não analisa este formato de ECG. Anexe JPEG, PNG ou WEBP.",
+        )
     try:
         content = cofre.ler(row.storage_key, row.id)
     except FileNotFoundError as error:
@@ -1022,12 +1039,12 @@ def gerar_sugestao_ecg(
     # ANTES de qualquer transferência de PHI e a transação é encerrada antes
     # da chamada externa, evitando tanto corrida de cota quanto conexão ociosa.
     db.query(User.id).filter(User.id == user_id).with_for_update().one()
-    start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    start, end = _operational_day_utc_bounds()
     used = db.query(AuditLog.id).filter(
         AuditLog.user_id == user_id,
         AuditLog.action == "ai_ecg_transfer_attempt",
         AuditLog.created_at >= start,
-        AuditLog.created_at < start + timedelta(days=1),
+        AuditLog.created_at < end,
     ).count()
     if used >= settings.ai_daily_limit:
         db.rollback()

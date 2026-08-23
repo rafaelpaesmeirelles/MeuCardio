@@ -17,6 +17,17 @@ from app.core.config import settings
 from app.services.ia.provedor import obter_provedor
 
 PROMPT_VERSION = "ecg-assist-v1-2026-08-22"
+IMAGE_MEDIA_TYPES = ("image/jpeg", "image/png", "image/webp")
+
+
+def supported_media_types(provider: str | None = None) -> tuple[str, ...]:
+    """Expõe a capacidade real do provedor sem instanciá-lo nem enviar PHI."""
+    provider_name = provider or settings.ai_provider
+    if provider_name == "anthropic":
+        return (*IMAGE_MEDIA_TYPES, "application/pdf")
+    if provider_name == "openai":
+        return IMAGE_MEDIA_TYPES
+    return ()
 
 SYSTEM_PROMPT = """Você é um assistente de apoio à leitura de eletrocardiogramas para cardiologistas.
 Analise somente o traçado visível no arquivo. Não emita laudo definitivo, diagnóstico autônomo,
@@ -67,7 +78,15 @@ class ECGSuggestionPayload(BaseModel):
     limitations: list[str] = Field(default_factory=list, max_length=20)
     urgent_review_recommended: bool = False
 
-    @field_validator("summary", "rhythm", "axis", "conduction", "st_t")
+    @field_validator("summary")
+    @classmethod
+    def _clean_summary(cls, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise ValueError("A síntese da sugestão não pode ser vazia.")
+        return value
+
+    @field_validator("rhythm", "axis", "conduction", "st_t")
     @classmethod
     def _clean_text(cls, value: str | None) -> str | None:
         if value is None:

@@ -1,9 +1,12 @@
 """Um cenário integrado cobre resumo, resultados e timeline longitudinal."""
 import io
-from datetime import datetime
+from datetime import datetime, timezone
 
+import pytest
 from PIL import Image
+from pydantic import ValidationError
 
+from app.api.patient_profiles import _operational_day_utc_bounds
 from app.core.config import settings
 from app.models.audit import AuditLog
 from app.models.lab_test import LabTest
@@ -187,11 +190,17 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
     assert cofre.ler(ecg_row.storage_key, ecg_row.id) == ecg_bytes
     assert ecg_bytes != (tmp_path / "ecgs" / ecg_row.storage_key).read_bytes()
     status_ia = client.get(f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token))
-    assert status_ia.status_code == 200 and status_ia.json() == {"enabled": True}
+    assert status_ia.status_code == 200 and status_ia.json() == {
+        "enabled": True,
+        "supported_media_types": ["image/jpeg", "image/png", "image/webp"],
+    }
     monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", False)
     assert client.get(
         f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token),
-    ).json() == {"enabled": False}
+    ).json() == {
+        "enabled": False,
+        "supported_media_types": ["image/jpeg", "image/png", "image/webp"],
+    }
     monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", True)
     assert client.get(
         f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token_intruso),
@@ -210,6 +219,22 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
     download = client.get(f"/api/pacientes/{pid}/ecgs/{ecg_id}/arquivo", headers=_h(token))
     assert download.status_code == 200 and download.content == ecg_bytes
     assert download.headers["cache-control"] == "no-store, private"
+
+    attempts_before_pdf = db.query(AuditLog.id).filter(
+        AuditLog.action == "ai_ecg_transfer_attempt",
+    ).count()
+    ecg_row.media_type = "application/pdf"
+    db.commit()
+    unsupported_pdf = client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": True},
+    )
+    assert unsupported_pdf.status_code == 422
+    assert db.query(AuditLog.id).filter(
+        AuditLog.action == "ai_ecg_transfer_attempt",
+    ).count() == attempts_before_pdf
+    ecg_row.media_type = "image/png"
+    db.commit()
 
     def _analysis(_content: bytes, _media_type: str) -> dict:
         assert _content == ecg_bytes and _media_type == "image/png"
@@ -351,3 +376,19 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
         json={"exam_kind": "metodo_grafico", "exam_name": "ECG", "report_text": "Ritmo sinusal"},
     ).status_code == 201
     assert client.delete(f"/api/pacientes/{pid_so_exame}", headers=_h(token)).status_code == 409
+
+
+def test_ecg_ai_contract_rejects_blank_summary_and_uses_operational_day(monkeypatch):
+    with pytest.raises(ValidationError):
+        ecg_assist.ECGSuggestionPayload.model_validate({
+            "quality": "adequada",
+            "summary": "   ",
+            "intervals": {"pr_ms": None, "qrs_ms": None, "qtc_ms": None},
+        })
+
+    monkeypatch.setattr(settings, "fuso_operacao", "America/Sao_Paulo")
+    start, end = _operational_day_utc_bounds(
+        datetime(2026, 8, 23, 0, 30, tzinfo=timezone.utc),
+    )
+    assert start == datetime(2026, 8, 22, 3, 0, tzinfo=timezone.utc)
+    assert end == datetime(2026, 8, 23, 3, 0, tzinfo=timezone.utc)
