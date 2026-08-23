@@ -6,6 +6,7 @@ somente metadados operacionais sem PHI entram no log de auditoria.
 """
 from __future__ import annotations
 
+import logging
 from datetime import datetime, time, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -22,6 +23,7 @@ from app.models.user import User
 from app.services.ia import ecg_assist
 
 router = APIRouter(prefix="/api/ecg-ia", tags=["ecg-ia"])
+logger = logging.getLogger(__name__)
 MAX_ECG_BYTES = 20 * 1024 * 1024
 
 
@@ -163,6 +165,13 @@ async def analisar_ecg_rapido(
         ) from error
     except Exception as error:
         db.rollback()
+        # Não inclui nome, bytes ou conteúdo do ECG. Mantém no log operacional
+        # apenas a pilha e a mensagem técnica devolvida pelo SDK/provedor.
+        logger.exception(
+            "Falha na análise multimodal rápida de ECG (provider=%s, error_type=%s)",
+            settings.ai_provider,
+            type(error).__name__,
+        )
         record_outcome("provider_error", error_type=type(error).__name__)
         raise HTTPException(
             status_code=502,

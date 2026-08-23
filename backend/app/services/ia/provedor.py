@@ -96,6 +96,11 @@ class ProvedorIA(ABC):
 
 
 class ProvedorOpenAI(ProvedorIA):
+    # O modelo principal do chat pode ser textual. Quando o operador não
+    # escolhe um modelo exclusivo para ECG, a análise visual usa um modelo
+    # multimodal conhecido em vez de herdar silenciosamente o modelo do chat.
+    _MODELO_ECG_PADRAO = "gpt-4o-mini"
+
     def __init__(self) -> None:
         from openai import OpenAI
 
@@ -194,11 +199,11 @@ class ProvedorOpenAI(ProvedorIA):
             )
         if media_type not in {"image/jpeg", "image/png", "image/webp"}:
             raise ValueError("Formato de imagem não suportado pelo provedor multimodal.")
-        modelo_efetivo = modelo or self._modelo
+        modelo_efetivo = modelo or self._MODELO_ECG_PADRAO
         imagem = base64.b64encode(conteudo).decode("ascii")
-        resp = self._cliente.chat.completions.create(
-            model=modelo_efetivo,
-            messages=[
+        kwargs = {
+            "model": modelo_efetivo,
+            "messages": [
                 {"role": "system", "content": sistema},
                 {
                     "role": "user",
@@ -214,10 +219,24 @@ class ProvedorOpenAI(ProvedorIA):
                     ],
                 },
             ],
-            max_tokens=settings.ai_max_output_tokens,
-            temperature=0,
-            response_format={"type": "json_object"},
-        )
+            "max_tokens": settings.ai_max_output_tokens,
+            "temperature": 0,
+        }
+        try:
+            # JSON mode melhora a aderência ao contrato, mas algumas variantes
+            # multimodais rejeitam esse parâmetro apesar de aceitarem imagem.
+            resp = self._cliente.chat.completions.create(
+                **kwargs,
+                response_format={"type": "json_object"},
+            )
+        except Exception as error:
+            from openai import BadRequestError
+
+            if not isinstance(error, BadRequestError):
+                raise
+            # Uma única repetição, no mesmo provedor e modelo, sem JSON mode.
+            # A saída continua submetida ao parser e ao schema clínico estritos.
+            resp = self._cliente.chat.completions.create(**kwargs)
         uso = resp.usage
         return Resposta(
             texto=resp.choices[0].message.content or "",
