@@ -36,7 +36,7 @@ EXPECTED_APP_ROUTES = {
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
-    "/tour", "/verificacao-identidade",
+    "/tour", "/em-breve", "/verificacao-identidade",
     "/sincronizacao",
 }
 
@@ -47,8 +47,8 @@ EXPECTED_NAV_ROUTES = {
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/prontuario?acao=ecg", "/trilhas", "/trilhas/timeline",
-    "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
-    "/sincronizacao", "/admin/usuarios", "/tour",
+    "/usuarios-online", "/minha-conta", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
+    "/sincronizacao", "/admin/usuarios", "/tour", "/tour?origem=assinatura&modo=quick",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -78,6 +78,7 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/components/ClinicalMobileNav.tsx",
     "frontend/src/pages/PainelClinicalOS.tsx",
     "frontend/src/pages/TourClinicalOS.tsx",
+    "frontend/src/pages/EmBreve.tsx",
     "frontend/src/pages/Admin.tsx",
     "frontend/src/pages/AdminGerenciarUsuario.tsx",
     "frontend/src/pages/Apresentacao.tsx",
@@ -223,3 +224,4 @@ if __name__ == "__main__":
     except AssertionError as exc:
         print(f"ERRO: {exc}", file=sys.stderr)
         raise SystemExit(1)
+

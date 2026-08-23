@@ -63,7 +63,7 @@ const REDE: LinkItem[] = [
 
 const CONTA_ADMIN: LinkItem[] = [
   { to: "/minha-conta", label: "Minha conta", icon: "conta" },
-  { to: "/assinatura", label: "Planos & Assinatura", icon: "check" },
+  { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
   { to: "/termos", label: "Termos", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
@@ -145,3 +145,4 @@ export default function ClinicalMobileNav() {
     </>}
   </>;
 }
+

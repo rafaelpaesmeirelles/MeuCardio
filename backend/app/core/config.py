@@ -181,6 +181,10 @@ class Settings(BaseSettings):
         return self.corvia_mail_preco_centavos > 0
 
     # --- Stripe / Assinatura -----------------------------------------------
+    # Chave operacional temporária. Desligada por padrão para impedir novos
+    # checkouts/trocas enquanto o lançamento comercial não estiver aberto.
+    # Portal e webhooks continuam ativos para assinaturas já existentes.
+    subscriptions_enabled: bool = False
     stripe_publishable_key: str = ""
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
@@ -287,3 +291,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
