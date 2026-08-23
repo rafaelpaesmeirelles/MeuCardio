@@ -18,15 +18,15 @@ type IntegracaoExterna = {
   last_error_message: string | null;
 };
 type CapacidadesSync = { connectors: Array<{ provider: string; oauth_configured?: boolean }> };
-const PROVEDORES_SINCRONIZAVEIS = ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"] as const;
-const PROVEDOR_LOGO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
-  google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo",
+const PROVEDORES_SINCRONIZAVEIS = ["google_calendar", "microsoft_365", "apple_icloud"] as const;
+const PROVEDOR_LOGO: Record<string, "google" | "microsoft" | "apple"> = {
+  google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple",
 };
 const PROVEDOR_NOME: Record<string, string> = {
-  google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud", yahoo_mail: "Yahoo Mail",
+  google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud",
 };
-const PROVEDOR_CHAVE_CONEXAO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
-  google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo",
+const PROVEDOR_CHAVE_CONEXAO: Record<string, "google" | "microsoft" | "apple"> = {
+  google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple",
 };
 
 /** Central única para conectar e acompanhar contas externas. O backend mantém
@@ -40,12 +40,12 @@ export default function Sincronizacao() {
   const [conectando, setConectando] = useState<string | null>(null);
   const [erro, setErro] = useState("");
   const [mensagem, setMensagem] = useState("");
-  const [formAberto, setFormAberto] = useState<"apple" | "yahoo" | null>(null);
+  const [formAberto, setFormAberto] = useState<"apple" | null>(null);
+  const [removendo, setRemovendo] = useState<number | null>(null);
   const [apple, setApple] = useState({
     apple_id: "", app_specific_password: "", consent_accepted: false,
     mail: false, mail_consent_accepted: false,
   });
-  const [yahoo, setYahoo] = useState({ endereco: "", senha_de_app: "", consent_accepted: false });
 
   async function carregar() {
     const [i, c] = await Promise.all([
@@ -107,24 +107,10 @@ export default function Sincronizacao() {
     }
   }
 
-  async function conectarYahoo() {
-    setErro(""); setMensagem("");
-    try {
-      await api.post("/email/conectar-yahoo", yahoo);
-      setYahoo({ endereco: "", senha_de_app: "", consent_accepted: false });
-      setFormAberto(null);
-      setMensagem("Conta Yahoo conectada. O e-mail é consultado ao vivo e a credencial será verificada continuamente.");
-      await carregar();
-    } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível conectar a Yahoo.");
-    }
-  }
-
   function reconectar(item: IntegracaoExterna) {
     const chave = PROVEDOR_CHAVE_CONEXAO[item.provider];
     if (chave === "google" || chave === "microsoft") { conectarOAuth(chave); return; }
     if (chave === "apple") { setApple((a) => ({ ...a, apple_id: item.display_name })); setFormAberto("apple"); return; }
-    if (chave === "yahoo") { setYahoo((y) => ({ ...y, endereco: item.display_name })); setFormAberto("yahoo"); return; }
   }
 
   async function alterarPreferencia(id: number, campo: "sync_calendar" | "sync_mail" | "contacts", valor: boolean) {
@@ -139,14 +125,15 @@ export default function Sincronizacao() {
 
   async function removerConta(id: number, nome: string) {
     if (!window.confirm(`Remover ${nome} do CorVIA? O vínculo e as credenciais salvas no CorVIA serão excluídos, assim como os contatos importados dessa conta. Sua conta no provedor não será apagada.`)) return;
-    setErro("");
+    setErro(""); setMensagem(""); setRemovendo(id);
     try {
       await api.delete(`/agenda/integrations/${id}`);
+      setIntegracoes((atuais) => atuais?.filter((item) => item.id !== id) ?? null);
       setMensagem("Conta removida do CorVIA.");
       await carregar();
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível remover a conta.");
-    }
+    } finally { setRemovendo(null); }
   }
 
   if (!integracoes || !capacidades) return null;
@@ -160,9 +147,9 @@ export default function Sincronizacao() {
       <p className="eyebrow">Sincronize suas contas</p>
       <h1>Sincronização de contas</h1>
       <p style={{ maxWidth: "62ch", color: "var(--texto-secundario)" }}>
-        Conecte Google, Microsoft, Apple e Yahoo — quantas contas quiser — e escolha o que cada
+        Conecte Google, Microsoft e Apple — quantas contas quiser — e escolha o que cada
         uma integra à Agenda e ao CorvIA Mail. Depois de conectada, a conta permanece vinculada:
-        A manutenção é automática: OAuth é renovado em segundo plano, Yahoo/iCloud recebem heartbeat
+        A manutenção é automática: OAuth é renovado em segundo plano e o iCloud recebe heartbeat
         de credencial e o CorVIA Mail consulta caixas externas ao vivo. Reconectar só aparece quando
         a autorização realmente expirar; para encerrar o vínculo, use Remover conta.
       </p>
@@ -193,10 +180,6 @@ export default function Sincronizacao() {
           <button className="botao botao--secundario" disabled={!consentimento}
                   onClick={() => setFormAberto(formAberto === "apple" ? null : "apple")}>
             <LogoProvedor provedor="apple" /> Conectar Apple
-          </button>
-          <button className="botao botao--secundario" disabled={!consentimento}
-                  onClick={() => setFormAberto(formAberto === "yahoo" ? null : "yahoo")}>
-            <LogoProvedor provedor="yahoo" /> Conectar Yahoo
           </button>
         </div>
 
@@ -240,33 +223,6 @@ export default function Sincronizacao() {
           </div>
         )}
 
-        {formAberto === "yahoo" && (
-          <div className="cartao" style={{ marginBottom: "1rem" }}>
-            <label>Endereço Yahoo
-              <input type="email" autoComplete="username" value={yahoo.endereco}
-                     onChange={(e) => setYahoo({ ...yahoo, endereco: e.target.value })} placeholder="nome@yahoo.com" />
-            </label>
-            <label>Senha específica de app
-              <CampoSenha autoComplete="new-password" value={yahoo.senha_de_app}
-                     onChange={(e) => setYahoo({ ...yahoo, senha_de_app: e.target.value })} placeholder="gerada em login.yahoo.com" />
-            </label>
-            <label className="agenda-check" style={{ alignItems: "flex-start", fontSize: "0.82rem", marginTop: "0.4rem" }}>
-              <input type="checkbox" checked={yahoo.consent_accepted}
-                     onChange={(e) => setYahoo({ ...yahoo, consent_accepted: e.target.checked })} />
-              Autorizo a leitura e o envio de e-mail pela minha caixa Yahoo.
-            </label>
-            <p style={{ fontSize: "0.78rem", color: "var(--texto-secundario)", margin: "0.5rem 0" }}>
-              Pode conectar mais de uma conta Yahoo. Gere a senha em login.yahoo.com → Segurança da
-              conta → Senhas de aplicativos de terceiros. A Yahoo integra e-mail; a caixa é consultada
-              diretamente no provedor e a credencial é verificada continuamente.
-            </p>
-            <button className="botao" disabled={!yahoo.endereco || !yahoo.senha_de_app || !yahoo.consent_accepted}
-                    onClick={conectarYahoo}>
-              Conectar
-            </button>
-          </div>
-        )}
-
         <h2 style={{ fontSize: "0.95rem", margin: "0.8rem 0 0.4rem" }}>Contas conectadas ({conectadas.length})</h2>
         {conectadas.length === 0 && (
           <p style={{ fontSize: "0.84rem", color: "var(--texto-secundario)" }}>Nenhuma conta conectada ainda.</p>
@@ -289,8 +245,9 @@ export default function Sincronizacao() {
                     </button>
                   )}
                   <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.78rem" }}
+                          disabled={removendo === item.id}
                           onClick={() => removerConta(item.id, item.display_name)}>
-                    Remover conta
+                    {removendo === item.id ? "Removendo…" : "Remover conta"}
                   </button>
                 </span>
               </div>

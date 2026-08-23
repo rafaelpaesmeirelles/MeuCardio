@@ -197,7 +197,7 @@ function AbaAssinar() {
         <ul style={{ margin: "0 0 1.1rem", paddingLeft: "1.1rem", lineHeight: 1.7 }}>
           <li>Envie receita e documento <strong>já assinados digitalmente</strong> direto ao paciente, sem trocar de aplicativo.</li>
           <li>Assinatura de e-mail com seu nome, conselho e logo em toda mensagem que você manda.</li>
-          <li>Leia Yahoo, iCloud, Gmail e Outlook <strong>na mesma caixa</strong>, dentro da Corvia.</li>
+          <li>Leia iCloud, Gmail e Outlook <strong>na mesma caixa</strong>, dentro da Corvia.</li>
           <li>Mande material educativo ao paciente por e-mail em um clique.</li>
         </ul>
       )}

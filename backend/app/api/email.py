@@ -607,55 +607,11 @@ class YahooMailIntegrationIn(BaseModel):
 
 @router.post("/conectar-yahoo", status_code=201)
 def conectar_yahoo(
-    dados: YahooMailIntegrationIn, db: Session = Depends(get_db),
-    user: User = Depends(bloquear_investidor_em_operacao_real_de_mail),
+    _dados: YahooMailIntegrationIn, _db: Session = Depends(get_db),
+    _user: User = Depends(bloquear_investidor_em_operacao_real_de_mail),
 ):
-    """Conecta uma conta Yahoo Mail via IMAP/SMTP com senha de aplicativo —
-    aparece depois em GET /contas e nas rotas /externas/{id}/... como
-    qualquer outra conta conectada. current_user (sessão principal Corvia),
-    não a sessão de e-mail: mesma família de decisão de conexão que
-    Google/Microsoft/Apple, que também vive fora da sessão de e-mail."""
-    if not dados.consent_accepted:
-        raise HTTPException(status_code=422, detail="Aceite o acesso de leitura/envio à sua caixa Yahoo.")
-    existing = db.query(CalendarIntegration).filter(
-        CalendarIntegration.owner_id == user.id,
-        CalendarIntegration.provider == "yahoo_mail",
-        CalendarIntegration.external_account_id == dados.endereco,
-    ).first()
-    item = existing or CalendarIntegration(
-        owner_id=user.id, provider="yahoo_mail", display_name=dados.endereco,
-        external_account_id=dados.endereco, sync_strategy="external_authoritative",
-    )
-    if not existing:
-        db.add(item)
-        db.flush()
-    credenciais = {"username": dados.endereco, "app_specific_password": dados.senha_de_app}
-    try:
-        diagnostico = yahoo_mail.diagnose(credenciais)
-    except YahooMailError as exc:
-        db.rollback()
-        raise HTTPException(status_code=exc.status_code, detail=str(exc)) from exc
-    item.status = "connected"
-    item.enabled = True
-    item.write_enabled = False
-    item.contacts_enabled = False
-    # Diferente de Google/Microsoft, aqui não há escopo parcial — a senha de
-    # aplicativo dá acesso de leitura E envio de uma vez, então as duas
-    # capacidades entram como concedidas ao conectar.
-    item.capabilities = {"read_mail": True, "send_mail": True}
-    item.consent_version = "yahoo-mail-v1-2026-08-06"
-    item.consent_at = datetime.now(timezone.utc)
-    item.revoked_at = None
-    item.last_error_code = None
-    item.last_error_message = None
-    store_integration_credentials(item, credenciais)
-    db.add(AuditLog(
-        user_id=user.id, action="external_account_connected", entity="calendar_integration",
-        entity_id=str(item.id), detail={"provider": "yahoo_mail"},
-    ))
-    db.commit()
-    db.refresh(item)
-    return {"id": item.id, "provider": "yahoo", "status": item.status, "diagnosis": diagnostico}
+    """Rota mantida temporariamente apenas para responder a clientes antigos."""
+    raise HTTPException(status_code=410, detail="A integração com Yahoo não está mais disponível no CorVIA.")
 
 
 @router.get("/contas")

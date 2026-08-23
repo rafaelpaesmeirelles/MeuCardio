@@ -164,10 +164,6 @@ type RotinaTrabalho = {
 
 const DIAS_SEMANA = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
 
-const PROVEDOR_POR_TIPO_INTEGRACAO: Record<string, "google" | "microsoft" | "apple" | "yahoo"> = {
-  google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo",
-};
-
 const STATUS: Record<string, string> = {
   pending_external: "Aguardando sistema externo",
   proposed: "Proposto",
@@ -346,7 +342,6 @@ export default function Agenda() {
   });
   const [novaIntegracao, setNovaIntegracao] = useState({ provider: "feegow", display_name: "" });
   const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false, mail: false, mail_consent_accepted: false });
-  const [yahoo, setYahoo] = useState({ endereco: "", senha_de_app: "", consent_accepted: false });
   const [consentimentoContas, setConsentimentoContas] = useState(false);
   const [novoLocal, setNovoLocal] = useState<LocalForm>({ ...LOCAL_VAZIO });
   const [localEmEdicaoId, setLocalEmEdicaoId] = useState<number | null>(null);
@@ -675,15 +670,6 @@ export default function Agenda() {
     await carregar();
   }
 
-  async function conectarYahoo() {
-    // Diferente de Apple/Google/Microsoft, é rota do CorvIA Mail
-    // (/api/email/...), não da Agenda — a Yahoo não sincroniza calendário
-    // nem contatos, só e-mail (ver docs/adr-... e o serviço yahoo_mail.py).
-    await api.post("/email/conectar-yahoo", { ...yahoo, senha_de_app: yahoo.senha_de_app });
-    setYahoo({ endereco: "", senha_de_app: "", consent_accepted: false });
-    await carregar();
-  }
-
   async function sincronizarConta(id: number) {
     setIntegracaoSincronizando(id); setErro(""); setMensagem("");
     try {
@@ -865,7 +851,7 @@ export default function Agenda() {
 
       {/* Onboarding contextual da área (issue #52) — aparece só na primeira visita. */}
       <DicaContextual id="agenda" titulo="Traga suas outras agendas para cá">
-        Em <strong>Configurar</strong> você conecta Google, Microsoft, Apple ou Yahoo e passa a
+        Em <strong>Configurar</strong> você conecta Google, Microsoft ou Apple e passa a
         ver tudo numa visão só — quantas contas quiser, inclusive mais de uma do mesmo provedor.
       </DicaContextual>
 
@@ -881,7 +867,7 @@ export default function Agenda() {
           <div>
             <p className="eyebrow">Sincronização externa</p>
             <h2 id="agenda-contas-titulo">Conecte seus Calendários, Contatos e Contas de E-mail</h2>
-            <p>Google, Microsoft, Apple e Yahoo — quantas contas quiser, de uma ou várias empresas ao mesmo tempo.</p>
+            <p>Google, Microsoft e Apple — quantas contas quiser, de uma ou várias empresas ao mesmo tempo.</p>
           </div>
           <Link to="/sincronizacao" className="botao botao--secundario"><Icone nome="configuracao" /> Gerenciar conexões</Link>
         </div>
@@ -894,9 +880,9 @@ export default function Agenda() {
          * projeto já gastou semanas removendo antes), esta seção virou um resumo
          * que aponta para lá. */}
         <div className="agenda-contas-destaque__grade">
-          {(["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"] as const).map((provider) => {
-            const nome = { google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud", yahoo_mail: "Yahoo Mail" }[provider];
-            const acao = { google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple", yahoo_mail: "yahoo" }[provider] as "google" | "microsoft" | "apple" | "yahoo";
+          {(["google_calendar", "microsoft_365", "apple_icloud"] as const).map((provider) => {
+            const nome = { google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud" }[provider];
+            const acao = { google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple" }[provider] as "google" | "microsoft" | "apple";
             const conectadas = integracoes.filter((item) => item.provider === provider && item.enabled);
             return (
               <Link to="/sincronizacao" key={provider} className="agenda-conta-provider agenda-conta-provider--link">
@@ -1141,9 +1127,9 @@ export default function Agenda() {
           <div className="agenda-config-section__title">
             <div>
               <h3>Administre suas contas</h3>
-              <p>Conectar, sincronizar e desconectar Google, Microsoft, Apple e Yahoo agora é tudo numa página só.</p>
+              <p>Conectar, sincronizar e desconectar Google, Microsoft e Apple agora é tudo numa página só.</p>
             </div>
-            <span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail"].includes(item.provider) && item.enabled).length}</span>
+            <span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider) && item.enabled).length}</span>
           </div>
           <Link to="/sincronizacao" className="botao botao--secundario">Abrir Sincronização de contas</Link>
         </section>

@@ -11,12 +11,12 @@ import "../styles/login-viewport-refinement.css";
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
 type SocialProvider = {
-  id: "google" | "microsoft" | "apple" | "yahoo" | "github";
+  id: "google" | "microsoft" | "apple" | "github";
   label: string;
   enabled: boolean;
 };
 
-const ORDEM_PROVEDORES: SocialProvider["id"][] = ["google", "microsoft", "apple", "yahoo", "github"];
+const ORDEM_PROVEDORES: SocialProvider["id"][] = ["google", "microsoft", "apple", "github"];
 
 const BENEFICIOS = [
   { icon: "assistente" as const, title: "Inteligência clínica", detail: "Contexto e apoio à decisão no mesmo ambiente.", tone: "cyan" as const },
@@ -65,7 +65,6 @@ function MarcaProvider({ provider }: { provider: SocialProvider["id"] }) {
       </span>
     );
   }
-  if (provider === "yahoo") return <span className="prehome-social__mark prehome-social__mark--yahoo" aria-hidden="true">Y!</span>;
   return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
 }
 
