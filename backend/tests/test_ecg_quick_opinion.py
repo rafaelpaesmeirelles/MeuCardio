@@ -1,6 +1,8 @@
 """Contrato do modo rápido: análise sem paciente e sem persistir o traçado."""
 import io
+from types import SimpleNamespace
 
+import httpx
 from PIL import Image
 
 from app.core.config import settings
@@ -9,7 +11,7 @@ from app.models.patient_profile import PatientProfile
 from app.models.prontuario import PatientClinicalAISuggestion, PatientECGRecord
 from app.models.subscription import Subscription
 from app.services.ia import ecg_assist
-from app.services.ia.provedor import Resposta
+from app.services.ia.provedor import ProvedorOpenAI, Resposta
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -55,6 +57,42 @@ def test_ecg_assist_passes_the_configured_model_to_the_provider(monkeypatch):
 
     assert result["model"] == "vision-test"
     assert result["payload"]["quality"] == "limitada"
+
+
+def test_openai_ecg_uses_visual_default_and_retries_without_json_mode(monkeypatch):
+    from openai import BadRequestError
+
+    calls = []
+
+    def create(**kwargs):
+        calls.append(kwargs)
+        if len(calls) == 1:
+            request = httpx.Request("POST", "https://api.openai.com/v1/chat/completions")
+            response = httpx.Response(400, request=request)
+            raise BadRequestError("JSON mode indisponível", response=response, body={})
+        return SimpleNamespace(
+            usage=SimpleNamespace(prompt_tokens=10, completion_tokens=20),
+            choices=[SimpleNamespace(
+                message=SimpleNamespace(content='{"quality":"limitada"}'),
+                finish_reason="stop",
+            )],
+        )
+
+    provider = ProvedorOpenAI.__new__(ProvedorOpenAI)
+    provider._modelo = "modelo-textual-do-chat"
+    provider._cliente = SimpleNamespace(
+        chat=SimpleNamespace(completions=SimpleNamespace(create=create)),
+    )
+    monkeypatch.setattr(settings, "ai_max_output_tokens", 4096)
+
+    response = provider.analisar_arquivo_clinico(
+        "sistema", "instrucao", b"jpeg", "image/jpeg",
+    )
+
+    assert response.modelo == "gpt-4o-mini"
+    assert calls[0]["model"] == calls[1]["model"] == "gpt-4o-mini"
+    assert calls[0]["response_format"] == {"type": "json_object"}
+    assert "response_format" not in calls[1]
 
 
 def test_quick_ecg_returns_transient_opinion_without_patient_record(
