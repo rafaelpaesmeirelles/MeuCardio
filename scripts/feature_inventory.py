@@ -224,4 +224,3 @@ if __name__ == "__main__":
     except AssertionError as exc:
         print(f"ERRO: {exc}", file=sys.stderr)
         raise SystemExit(1)
-

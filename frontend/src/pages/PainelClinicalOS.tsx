@@ -533,4 +533,3 @@ export default function PainelClinicalOS() {
     </div>
   );
 }
-

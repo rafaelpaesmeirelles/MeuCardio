@@ -45,4 +45,3 @@ def test_evidence_editorial_note_is_preserved_in_detail():
 
     assert detail["review_status"] == "revisado"
     assert detail["review_note"] == "Conferido pelo corpo editorial."
-
