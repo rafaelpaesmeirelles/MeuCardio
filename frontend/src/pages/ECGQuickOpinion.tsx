@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
 import { api } from "../lib/api";
 import "../styles/ecg-quick-opinion.css";
+import "../styles/ecg-quick-camera.css";
 
 type Payload = {
   quality: "adequada" | "limitada" | "inadequada";
@@ -21,6 +22,7 @@ type Payload = {
 };
 type AIStatus = {
   enabled: boolean;
+  unavailable_reason: "ai_disabled" | "multimodal_disabled" | "provider_unsupported" | "provider_not_configured" | null;
   supported_media_types: string[];
   max_size_bytes: number;
   stores_file: false;
@@ -38,6 +40,13 @@ const MIME_LABELS: Record<string, string> = {
   "image/png": "PNG",
   "image/webp": "WEBP",
   "application/pdf": "PDF",
+};
+
+const STATUS_MESSAGES: Record<Exclude<AIStatus["unavailable_reason"], null>, string> = {
+  ai_disabled: "A IA clínica está desligada nesta instalação.",
+  multimodal_disabled: "A análise visual de ECG ainda não foi habilitada no servidor.",
+  provider_unsupported: "O provedor de IA configurado não oferece análise visual de ECG.",
+  provider_not_configured: "O provedor multimodal ainda não está configurado no servidor.",
 };
 
 function measurements(payload: Payload) {
@@ -70,6 +79,8 @@ export default function ECGQuickOpinion() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
+  const cameraInput = useRef<HTMLInputElement>(null);
+  const fileInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     api.get<AIStatus>("/ecg-ia/status").then(setStatus).catch((reason) => {
@@ -100,6 +111,12 @@ export default function ECGQuickOpinion() {
       return;
     }
     setFile(next);
+  }
+
+  function selectedFrom(input: HTMLInputElement, next: File | null) {
+    choose(next);
+    // Permite fotografar ou selecionar novamente o mesmo arquivo após trocar.
+    input.value = "";
   }
 
   async function analyze() {
@@ -152,22 +169,45 @@ export default function ECGQuickOpinion() {
 
     {!analysis && <section className="ecgq__workspace">
       <div className="ecgq__upload">
-        <label className={`ecgq__drop${file ? " has-file" : ""}`}>
+        <div className={`ecgq__drop${file ? " has-file" : ""}`}>
           {preview ? <img src={preview} alt="Prévia do ECG selecionado" /> : <span className="ecgq__drop-icon"><Icone nome="ecg" /></span>}
           <strong>{file ? file.name : "Selecionar foto ou PDF do ECG"}</strong>
           <small>{file ? `${(file.size / 1024 / 1024).toFixed(2)} MB · pronto para análise` : `${formats || "JPG, PNG, WEBP ou PDF"} · até 20 MB`}</small>
-          <input type="file" accept={accepted} onChange={(event) => choose(event.target.files?.[0] || null)} />
-          <span className="botao botao--secundario">{file ? "Trocar arquivo" : "Escolher ECG"}</span>
-        </label>
+          <div className="ecgq__source-actions">
+            <button type="button" className="botao ecgq__camera" onClick={() => cameraInput.current?.click()}>
+              <Icone nome="camera" /> Tirar foto do ECG
+            </button>
+            <button type="button" className="botao botao--secundario" onClick={() => fileInput.current?.click()}>
+              {file ? "Trocar arquivo" : "Escolher arquivo"}
+            </button>
+          </div>
+          <input
+            ref={cameraInput}
+            className="ecgq__hidden-input"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            capture="environment"
+            onChange={(event) => selectedFrom(event.currentTarget, event.currentTarget.files?.[0] || null)}
+          />
+          <input
+            ref={fileInput}
+            className="ecgq__hidden-input"
+            type="file"
+            accept={accepted}
+            onChange={(event) => selectedFrom(event.currentTarget, event.currentTarget.files?.[0] || null)}
+          />
+        </div>
       </div>
       <div className="ecgq__controls">
         <div><p className="eyebrow">Como funciona</p><h2>Só o traçado, direto à análise</h2></div>
-        <ol><li>Escolha uma imagem nítida do ECG.</li><li>Autorize o processamento pelo provedor de IA.</li><li>Revise a sugestão clínica na própria tela.</li></ol>
+        <ol><li>Fotografe o ECG ou escolha uma imagem/PDF.</li><li>Autorize o processamento pelo provedor de IA.</li><li>Revise a sugestão clínica na própria tela.</li></ol>
         <label className="ecgq__consent">
           <input type="checkbox" checked={confirmed} onChange={(event) => setConfirmed(event.target.checked)} />
           <span>Confirmo o envio deste ECG ao provedor de IA para processamento. Removi identificadores desnecessários do paciente.</span>
         </label>
-        {status && !status.enabled && <p className="ecgq__warning" role="status">A IA multimodal está indisponível nesta instalação no momento.</p>}
+        {status && !status.enabled && <p className="ecgq__warning" role="status">
+          {status.unavailable_reason ? STATUS_MESSAGES[status.unavailable_reason] : "A IA multimodal está indisponível nesta instalação no momento."}
+        </p>}
         {error && <p className="ecgq__error" role="alert">{error}</p>}
         <button className="botao ecgq__analyze" disabled={!file || !confirmed || !status?.enabled || busy} onClick={analyze}>
           {busy ? "Analisando o traçado…" : "Analisar ECG agora"}

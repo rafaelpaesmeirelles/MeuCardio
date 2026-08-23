@@ -67,6 +67,7 @@ def test_quick_ecg_returns_transient_opinion_without_patient_record(
     assert status.status_code == 200
     assert status.json() == {
         "enabled": True,
+        "unavailable_reason": None,
         "supported_media_types": ["image/jpeg", "image/png", "image/webp"],
         "max_size_bytes": 20 * 1024 * 1024,
         "stores_file": False,

@@ -1,0 +1,46 @@
+/* Captura direta no celular sem remover o seletor tradicional de imagem/PDF. */
+.ecgq__source-actions {
+  display: flex;
+  justify-content: center;
+  gap: .45rem;
+  margin-top: .2rem;
+}
+
+.ecgq__source-actions .botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .38rem;
+  pointer-events: auto;
+}
+
+.ecgq__source-actions svg {
+  width: 17px;
+  height: 17px;
+}
+
+.ecgq__camera {
+  background: #167d92;
+  border-color: #167d92;
+}
+
+.ecgq__hidden-input {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 780px) {
+  .ecgq__source-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ecgq__source-actions .botao {
+    width: 100%;
+  }
+}
