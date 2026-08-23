@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 from sqlalchemy.orm import Session
+from starlette.concurrency import run_in_threadpool
 
 from app.core.config import settings
 from app.core.db import get_db
@@ -24,6 +25,19 @@ router = APIRouter(prefix="/api/ecg-ia", tags=["ecg-ia"])
 MAX_ECG_BYTES = 20 * 1024 * 1024
 
 
+def _availability() -> tuple[bool, str | None]:
+    """Expõe o bloqueio operacional sem revelar credenciais ou segredos."""
+    if not settings.ai_enabled:
+        return False, "ai_disabled"
+    if not settings.ai_clinical_multimodal_enabled:
+        return False, "multimodal_disabled"
+    if not ecg_assist.supported_media_types():
+        return False, "provider_unsupported"
+    if not ecg_assist.provider_configured():
+        return False, "provider_not_configured"
+    return True, None
+
+
 def _operational_day_utc_bounds(now_utc: datetime | None = None) -> tuple[datetime, datetime]:
     current = now_utc or datetime.now(timezone.utc)
     zone = ZoneInfo(settings.fuso_operacao)
@@ -34,11 +48,8 @@ def _operational_day_utc_bounds(now_utc: datetime | None = None) -> tuple[dateti
 
 
 def _ensure_available() -> None:
-    if (
-        not settings.ai_enabled
-        or not settings.ai_clinical_multimodal_enabled
-        or not ecg_assist.provider_configured()
-    ):
+    enabled, _ = _availability()
+    if not enabled:
         raise HTTPException(
             status_code=503,
             detail="A assistência multimodal clínica está desligada nesta instalação.",
@@ -47,12 +58,10 @@ def _ensure_available() -> None:
 
 @router.get("/status")
 def status_ia_ecg():
+    enabled, unavailable_reason = _availability()
     return {
-        "enabled": bool(
-            settings.ai_enabled
-            and settings.ai_clinical_multimodal_enabled
-            and ecg_assist.provider_configured()
-        ),
+        "enabled": enabled,
+        "unavailable_reason": unavailable_reason,
         "supported_media_types": list(ecg_assist.supported_media_types()),
         "max_size_bytes": MAX_ECG_BYTES,
         "stores_file": False,
@@ -139,7 +148,10 @@ async def analisar_ecg_rapido(
         db.commit()
 
     try:
-        analysis = ecg_assist.analyze_ecg(content, media_type)
+        # Os SDKs multimodais usados aqui são síncronos. Executá-los direto
+        # nesta rota async bloqueava o event loop do worker enquanto a IA
+        # processava a imagem, fazendo a tela parecer travada sob concorrência.
+        analysis = await run_in_threadpool(ecg_assist.analyze_ecg, content, media_type)
     except ValueError as error:
         db.rollback()
         record_outcome("invalid_response")
