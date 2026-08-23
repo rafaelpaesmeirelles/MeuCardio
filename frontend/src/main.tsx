@@ -4,7 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import { AuthProvider } from "./lib/auth";
-import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
+import {
+  liberarRecargaPendente,
+  recuperarChunkDesatualizado,
+  verificarVersaoAtual,
+} from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
 import "./styles/clinical-os.css";
@@ -116,12 +120,53 @@ document.addEventListener("keydown", () => void verificarAtualizacaoCompleta(fal
   void verificarAtualizacaoCompleta(true);
 };
 
+// Vite dispara este evento quando uma rota lazy ainda aponta para um chunk de
+// um deploy anterior. Impedir a exceção e buscar o bundle atual evita a tela
+// totalmente branca observada logo após login durante uma publicação.
+window.addEventListener("vite:preloadError", (evento) => {
+  evento.preventDefault();
+  void recuperarChunkDesatualizado();
+});
+
+type LimiteErroState = { erro: boolean };
+
+class LimiteErroAplicacao extends React.Component<React.PropsWithChildren, LimiteErroState> {
+  state: LimiteErroState = { erro: false };
+
+  static getDerivedStateFromError(): LimiteErroState {
+    return { erro: true };
+  }
+
+  componentDidCatch(erro: unknown) {
+    console.error("Falha não recuperada ao renderizar o CorVIA", erro);
+  }
+
+  render() {
+    if (!this.state.erro) return this.props.children;
+    return (
+      <main style={{ minHeight: "100vh", display: "grid", placeItems: "center", padding: 24, background: "#03101a", color: "#eef8ff" }}>
+        <section role="alert" style={{ width: "min(520px, 100%)", padding: 24, border: "1px solid #1c7690", borderRadius: 14, background: "#071a28" }}>
+          <h1 style={{ marginTop: 0, fontSize: "1.35rem" }}>Não foi possível abrir esta tela</h1>
+          <p style={{ color: "#b8cad7", lineHeight: 1.55 }}>
+            O CorVIA pode ter recebido uma atualização. Recarregue para continuar com a versão mais recente.
+          </p>
+          <button type="button" onClick={() => window.location.reload()} style={{ padding: "10px 16px", border: 0, borderRadius: 8, color: "#03101a", background: "#37d5e7", fontWeight: 700, cursor: "pointer" }}>
+            Recarregar o CorVIA
+          </button>
+        </section>
+      </main>
+    );
+  }
+}
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <HomeQuickActionsPersonalizer />
-        <App />
+        <LimiteErroAplicacao>
+          <HomeQuickActionsPersonalizer />
+          <App />
+        </LimiteErroAplicacao>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,

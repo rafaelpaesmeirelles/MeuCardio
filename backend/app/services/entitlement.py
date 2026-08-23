@@ -28,6 +28,21 @@ from app.core.security import current_user
 ACESSO_LIBERADO = {"ativo", "teste", "inadimplente"}
 
 
+def eh_socio(user) -> bool:
+    """Sócio operacional: administrador real com cortesia completa.
+
+    A combinação reaproveita a infraestrutura madura de Convidado para KYC
+    simplificado/CorVIA Mail, mas mantém o papel administrativo necessário
+    para acesso societário integral. Não confundir com Investidor, que é
+    demonstração somente leitura.
+    """
+    return bool(
+        getattr(user, "role", None) == "admin"
+        and getattr(user, "convidado", False)
+        and not getattr(user, "investidor", False)
+    )
+
+
 def tem_acesso_ao_produto(db: Session, user) -> bool:
     """True se o usuário pode usar o produto sem cobrança pendente —
     admin, assinatura paga em dia, convidado ou investidor administrativo.

@@ -275,7 +275,9 @@ export default function TourClinicalOS() {
           <p className="cos-tour-welcome__kicker">Bem-vindo ao CorVIA Clinical OS</p>
           <h1>Um sistema que começa pelo que você precisa resolver.</h1>
           <p className="cos-tour-welcome__lead">Não é prontuário. Não é só IA. Não é portal de conteúdo. É o workspace clínico inteligente do médico para pesquisar, decidir, executar e organizar o trabalho.</p>
-          {usuario?.convidado && <p className="cos-tour-welcome__entitlement">Acesso de médico convidado ativo conforme as permissões da sua conta.</p>}
+          {usuario?.socio
+            ? <p className="cos-tour-welcome__entitlement">Acesso societário integral ativo no CorVIA Clinical OS.</p>
+            : usuario?.convidado && <p className="cos-tour-welcome__entitlement">Acesso de médico convidado ativo conforme as permissões da sua conta.</p>}
           {usuario?.investidor && <p className="cos-tour-welcome__entitlement">Modo investidor: arquitetura completa; CorVIA Mail demonstrativo e sem operações reais.</p>}
           <div className="cos-tour-welcome__pillars"><span>Necessidade</span><i>→</i><span>Contexto</span><i>→</i><span>Conhecimento</span><i>→</i><span>Decisão</span><i>→</i><span>Ação</span></div>
           <button type="button" className="cos-tour__primary" onClick={avancar}>Ver como o CorVIA trabalha <Icone nome="seta" /></button>

@@ -63,10 +63,10 @@ def _kyc_required(db: Session, user: User) -> bool:
     e portanto nunca entra no fluxo de KYC. Convidado e assinante normal
     mantêm o gate real, calculado a cada requisição.
     """
-    from app.services.entitlement import tem_acesso_ao_produto
+    from app.services.entitlement import eh_socio, tem_acesso_ao_produto
     from app.services.kyc import verificacao as kyc_verificacao
 
-    if user.role == "admin" or user.investidor:
+    if (user.role == "admin" and not eh_socio(user)) or user.investidor:
         return False
     if not tem_acesso_ao_produto(db, user):
         return False
@@ -82,7 +82,9 @@ def _onboarding_pendente(db: Session, user: User) -> bool:
     """
     if _kyc_required(db, user):
         return False
-    if user.role == "admin":
+    from app.services.entitlement import eh_socio
+
+    if user.role == "admin" and not eh_socio(user):
         return False
     from app.services.entitlement import tem_acesso_ao_produto
 
@@ -92,6 +94,8 @@ def _onboarding_pendente(db: Session, user: User) -> bool:
 
 
 def _perfil(db: Session, user: User) -> dict:
+    from app.services.entitlement import eh_socio
+
     nome_conselho_exibicao, estado_conselho_exibicao = council_display(user)
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
@@ -102,6 +106,7 @@ def _perfil(db: Session, user: User) -> dict:
         # (`tem_acesso_ao_produto`), consultada a cada requisição protegida.
         "convidado": user.convidado,
         "investidor": user.investidor,
+        "socio": eh_socio(user),
         "council": f"{nome_conselho_exibicao} {user.council_number}/{estado_conselho_exibicao}"
                    if user.council_name else None,
         "crm": user.crm,
