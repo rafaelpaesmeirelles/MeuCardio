@@ -40,6 +40,7 @@ from app.models.prontuario import (
     ClinicalEncounter, PatientClinicalAISuggestion, PatientClinicalItem,
     PatientECGRecord, PatientExamResult,
 )
+from app.models.user import User
 from app.services import cofre
 from app.services.clinical_ownership import encounter_for_user, patient_profile_for_user
 from app.services.ia import ecg_assist
@@ -860,6 +861,7 @@ def corrigir_resultado(
 def listar_ecgs(
     pid: int,
     limite: int = Query(30, ge=1, le=100),
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
@@ -868,6 +870,7 @@ def listar_ecgs(
         db.query(PatientECGRecord)
         .filter(PatientECGRecord.owner_id == user.id, PatientECGRecord.patient_profile_id == pid)
         .order_by(PatientECGRecord.performed_at.desc(), PatientECGRecord.id.desc())
+        .offset(offset)
         .limit(limite)
         .all()
     )
@@ -876,11 +879,23 @@ def listar_ecgs(
         action="list_patient_ecgs",
         entity="patient_profile",
         entity_id=str(pid),
-        detail={"count": len(rows)},
+        detail={"count": len(rows), "limit": limite, "offset": offset},
     ))
     result = [_dump_ecg(row, db) for row in rows]
     db.commit()
     return result
+
+
+@router.get("/{pid}/ecgs/ia-status")
+def status_ia_ecg(
+    pid: int,
+    db: Session = Depends(get_db),
+    user=Depends(current_user),
+):
+    patient_profile_for_user(pid, db, user)
+    return {
+        "enabled": bool(settings.ai_enabled and settings.ai_clinical_multimodal_enabled),
+    }
 
 
 @router.post("/{pid}/ecgs", status_code=201)
@@ -992,19 +1007,6 @@ def gerar_sugestao_ecg(
             status_code=503,
             detail="A assistência multimodal clínica está desligada nesta instalação.",
         )
-    start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-    used = db.query(AuditLog.id).filter(
-        AuditLog.user_id == user.id,
-        AuditLog.action == "ai_ecg_suggest",
-        AuditLog.created_at >= start,
-        AuditLog.created_at < start + timedelta(days=1),
-    ).count()
-    if used >= settings.ai_daily_limit:
-        raise HTTPException(
-            status_code=429,
-            detail=f"Limite diário de {settings.ai_daily_limit} análises atingido. Recomeça amanhã.",
-        )
-
     row = _ecg_for_user(pid, ecg_id, db, user)
     try:
         content = cofre.ler(row.storage_key, row.id)
@@ -1012,13 +1014,66 @@ def gerar_sugestao_ecg(
         raise HTTPException(status_code=404, detail="Arquivo do ECG não encontrado.") from error
     except cofre.CofreIndisponivel as error:
         raise HTTPException(status_code=503, detail="Arquivo do ECG indisponível.") from error
+    user_id = user.id
+    row_id = row.id
     media_type = row.media_type
 
-    # Não mantém transação do prontuário ociosa durante a chamada externa.
-    db.rollback()
+    # Serializa a reserva da cota por médico/tenant. A tentativa é persistida
+    # ANTES de qualquer transferência de PHI e a transação é encerrada antes
+    # da chamada externa, evitando tanto corrida de cota quanto conexão ociosa.
+    db.query(User.id).filter(User.id == user_id).with_for_update().one()
+    start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    used = db.query(AuditLog.id).filter(
+        AuditLog.user_id == user_id,
+        AuditLog.action == "ai_ecg_transfer_attempt",
+        AuditLog.created_at >= start,
+        AuditLog.created_at < start + timedelta(days=1),
+    ).count()
+    if used >= settings.ai_daily_limit:
+        db.rollback()
+        raise HTTPException(
+            status_code=429,
+            detail=f"Limite diário de {settings.ai_daily_limit} análises atingido. Recomeça amanhã.",
+        )
+    attempt = AuditLog(
+        user_id=user_id,
+        action="ai_ecg_transfer_attempt",
+        entity="patient_ecg_record",
+        entity_id=str(row_id),
+        detail={
+            "patient_profile_id": pid,
+            "ecg_record_id": row_id,
+            "provider": settings.ai_provider,
+            "external_processing_confirmed": data.confirm_external_processing,
+            "status": "reserved",
+        },
+    )
+    db.add(attempt)
+    db.commit()
+    attempt_id = attempt.id
+
+    def registrar_resultado_transferencia(status: str, **detail: object) -> None:
+        db.add(AuditLog(
+            user_id=user_id,
+            action="ai_ecg_transfer_outcome",
+            entity="patient_ecg_record",
+            entity_id=str(row_id),
+            detail={
+                "patient_profile_id": pid,
+                "ecg_record_id": row_id,
+                "transfer_attempt_id": attempt_id,
+                "provider": settings.ai_provider,
+                "status": status,
+                **detail,
+            },
+        ))
+        db.commit()
+
     try:
         analysis = ecg_assist.analyze_ecg(content, media_type)
     except ValueError as error:
+        db.rollback()
+        registrar_resultado_transferencia("invalid_response")
         if "exige ECG" in str(error) or "Formato" in str(error):
             raise HTTPException(status_code=422, detail=str(error)) from error
         raise HTTPException(
@@ -1026,6 +1081,8 @@ def gerar_sugestao_ecg(
             detail="O provedor devolveu uma sugestão clínica inválida. Nenhum fato foi registrado.",
         ) from error
     except Exception as error:
+        db.rollback()
+        registrar_resultado_transferencia("provider_error", error_type=type(error).__name__)
         raise HTTPException(
             status_code=502,
             detail=f"O provedor multimodal não respondeu ({type(error).__name__}). Nenhum fato foi registrado.",
@@ -1052,7 +1109,7 @@ def gerar_sugestao_ecg(
         json.dumps(analysis["payload"], ensure_ascii=False), suggestion.id,
     )
     db.add(AuditLog(
-        user_id=user.id,
+        user_id=user_id,
         action="ai_ecg_suggest",
         entity="patient_clinical_ai_suggestion",
         entity_id=str(suggestion.id),
@@ -1063,6 +1120,21 @@ def gerar_sugestao_ecg(
             "model": suggestion.model,
             "prompt_version": suggestion.prompt_version,
             "external_processing_confirmed": data.confirm_external_processing,
+            "transfer_attempt_id": attempt_id,
+        },
+    ))
+    db.add(AuditLog(
+        user_id=user_id,
+        action="ai_ecg_transfer_outcome",
+        entity="patient_ecg_record",
+        entity_id=str(row_id),
+        detail={
+            "patient_profile_id": pid,
+            "ecg_record_id": row_id,
+            "transfer_attempt_id": attempt_id,
+            "provider": suggestion.provider,
+            "model": suggestion.model,
+            "status": "success",
         },
     ))
     db.commit()

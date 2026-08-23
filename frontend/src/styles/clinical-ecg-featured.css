@@ -1,0 +1,51 @@
+/* ECG assistido é um recurso de primeira linha, sem sair do prontuário longitudinal. */
+.ccc-action.is-featured {
+  position: relative;
+  border-color: rgba(80, 222, 167, .34) !important;
+}
+.ccc-action.is-featured .ccc-action__icon { color: #77e7b4 !important; }
+.ccc-action__featured {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  color: #91efc3;
+  font-size: .37rem;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+@media (min-width: 901px) {
+  .ccc-nav--reference .ccc-nav__item.is-featured {
+    color: #dff9ed;
+    border: 1px solid rgba(87, 222, 171, .13);
+  }
+  .ccc-nav--reference .ccc-nav__item.is-featured svg { color: #6be1ad; }
+  .ccc-nav__featured {
+    margin-left: auto;
+    color: #7ce4b5;
+    font-size: .36rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 900px) {
+  .cc-mobile-more__grid > a.is-featured {
+    border-color: rgba(80, 222, 167, .3) !important;
+  }
+  .cc-mobile-more__grid > a.is-featured > span,
+  .cc-mobile-more__grid > a.is-featured small { color: #77e7b4 !important; }
+}
+
+.pep-ecg-featured {
+  scroll-margin-top: 76px;
+  border-color: rgba(80, 222, 167, .3);
+  box-shadow: inset 3px 0 #55dca4;
+}
+.pep-featured-badge {
+  padding: .22rem .38rem;
+  color: #8aecbe;
+  font-size: .44rem;
+  text-transform: uppercase;
+}
+.pep-ecg-flow { margin: .35rem 0 .12rem; color: #c4dfe0; font-size: .61rem; }
+.pep-ecg-review-flow { color: #72a999; font-size: .49rem; }

@@ -8,7 +8,7 @@ export type NomeIcone =
   | "evidencia" | "curso" | "galeria" | "favorito" | "conta" | "sair"
   | "indicadores" | "check" | "mais" | "seta" | "pin" | "rota"
   | "relogio" | "sincronizar" | "filtro" | "configuracao" | "olho" | "olho-fechado"
-  | "adicionar" | "notificacao";
+  | "adicionar" | "notificacao" | "ecg";
 
 const caminhos: Record<NomeIcone, ReactNode> = {
   hoje: <><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5M9 20v-6h6v6"/></>,
@@ -28,6 +28,7 @@ const caminhos: Record<NomeIcone, ReactNode> = {
   documento: <><path d="M6 2h9l4 4v16H6Z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></>,
   triagem: <><path d="M9 4h6M12 1v6"/><path d="M5 8h14v13H5Z"/><path d="m8 15 2 2 5-5"/></>,
   assistente: <><path d="M4 6h16v11H8l-4 4Z"/><path d="M8 10h8M8 13h5"/></>,
+  ecg: <><path d="M3 12h4l2-5 4 10 2-5h6"/><path d="M5 4.5h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2Z"/></>,
   doencas: <><path d="M3 12h4l2-5 4 10 2-5h6"/><path d="M12 21C7 18 3 15 3 10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-4 8-9 11Z"/></>,
   calculadora: <><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1M8 19h1M12 19h5"/></>,
   medicamento: <><path d="m7 17 10-10a4 4 0 0 0-6-6L1 11a4 4 0 0 0 6 6Z"/><path d="m7 7 10 10"/></>,

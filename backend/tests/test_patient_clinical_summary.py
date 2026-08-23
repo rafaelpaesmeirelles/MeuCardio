@@ -186,6 +186,23 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
     assert ecg_row.source_encounter_id == eid
     assert cofre.ler(ecg_row.storage_key, ecg_row.id) == ecg_bytes
     assert ecg_bytes != (tmp_path / "ecgs" / ecg_row.storage_key).read_bytes()
+    status_ia = client.get(f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token))
+    assert status_ia.status_code == 200 and status_ia.json() == {"enabled": True}
+    monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", False)
+    assert client.get(
+        f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token),
+    ).json() == {"enabled": False}
+    monkeypatch.setattr(settings, "ai_clinical_multimodal_enabled", True)
+    assert client.get(
+        f"/api/pacientes/{pid}/ecgs/ia-status", headers=_h(token_intruso),
+    ).status_code == 404
+    primeira_pagina = client.get(
+        f"/api/pacientes/{pid}/ecgs?limite=1&offset=0", headers=_h(token),
+    )
+    assert primeira_pagina.status_code == 200 and [row["id"] for row in primeira_pagina.json()] == [ecg_id]
+    assert client.get(
+        f"/api/pacientes/{pid}/ecgs?limite=1&offset=1", headers=_h(token),
+    ).json() == []
     assert client.get(f"/api/pacientes/{pid}/ecgs", headers=_h(token_intruso)).status_code == 404
     assert client.get(
         f"/api/pacientes/{pid}/ecgs/{ecg_id}/arquivo", headers=_h(token_intruso),
@@ -211,7 +228,10 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
             "tokens_input": 100, "tokens_output": 50,
         }
 
-    monkeypatch.setattr(ecg_assist, "analyze_ecg", _analysis)
+    def _provider_failure(_content: bytes, _media_type: str) -> dict:
+        raise RuntimeError("falha simulada sem PHI")
+
+    monkeypatch.setattr(ecg_assist, "analyze_ecg", _provider_failure)
     results_before_ai = len(client.get(resultados, headers=_h(token)).json())
     assert client.post(
         f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token), json={},
@@ -220,6 +240,31 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
         f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
         json={"confirm_external_processing": False},
     ).status_code == 422
+    failed_transfer = client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": True},
+    )
+    assert failed_transfer.status_code == 502
+    db.expire_all()
+    failed_attempt = db.query(AuditLog).filter(
+        AuditLog.action == "ai_ecg_transfer_attempt",
+    ).order_by(AuditLog.id.desc()).first()
+    failed_outcome = db.query(AuditLog).filter(
+        AuditLog.action == "ai_ecg_transfer_outcome",
+    ).order_by(AuditLog.id.desc()).first()
+    assert failed_attempt is not None and failed_attempt.detail["status"] == "reserved"
+    assert failed_outcome is not None and failed_outcome.detail["status"] == "provider_error"
+    assert failed_outcome.detail["transfer_attempt_id"] == failed_attempt.id
+    assert "falha simulada" not in str(failed_attempt.detail) + str(failed_outcome.detail)
+
+    original_limit = settings.ai_daily_limit
+    monkeypatch.setattr(settings, "ai_daily_limit", 1)
+    assert client.post(
+        f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
+        json={"confirm_external_processing": True},
+    ).status_code == 429
+    monkeypatch.setattr(settings, "ai_daily_limit", original_limit)
+    monkeypatch.setattr(ecg_assist, "analyze_ecg", _analysis)
     suggestion_response = client.post(
         f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes", headers=_h(token),
         json={"confirm_external_processing": True},
@@ -235,6 +280,11 @@ def test_resumo_clinico_cifra_preserva_historico_e_isola_medicos(
     assert suggestion_row is not None and b"Ritmo sinusal" not in suggestion_row.payload_cifrado
     log = db.query(AuditLog).filter(AuditLog.action == "ai_ecg_suggest").order_by(AuditLog.id.desc()).first()
     assert log is not None and "Ritmo" not in str(log.detail)
+    successful_outcome = db.query(AuditLog).filter(
+        AuditLog.action == "ai_ecg_transfer_outcome",
+    ).order_by(AuditLog.id.desc()).first()
+    assert successful_outcome is not None and successful_outcome.detail["status"] == "success"
+    assert successful_outcome.detail["transfer_attempt_id"] == log.detail["transfer_attempt_id"]
     assert client.post(
         f"/api/pacientes/{pid}/ecgs/{ecg_id}/sugestoes/{suggestion_id}/revisao",
         headers=_h(token_intruso),
