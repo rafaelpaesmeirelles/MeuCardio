@@ -13,12 +13,16 @@ from __future__ import annotations
 
 import base64
 import json
+import logging
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 from fastapi.encoders import jsonable_encoder
 
 from app.core.config import settings
+
+
+logger = logging.getLogger("meucardio.ia.provedor")
 
 
 def _serializar_resultado_tool(resultado) -> str:
@@ -100,6 +104,7 @@ class ProvedorOpenAI(ProvedorIA):
     # Quando o operador não escolhe um modelo exclusivo para ECG, a análise
     # visual usa o modelo frontier em vez de herdar silenciosamente o do chat.
     _MODELO_ECG_PADRAO = "gpt-5.6-sol"
+    _MODELO_ECG_FALLBACK = "gpt-4o"
 
     def __init__(self) -> None:
         from openai import OpenAI
@@ -199,57 +204,77 @@ class ProvedorOpenAI(ProvedorIA):
             )
         if media_type not in {"image/jpeg", "image/png", "image/webp"}:
             raise ValueError("Formato de imagem não suportado pelo provedor multimodal.")
-        modelo_efetivo = modelo or self._MODELO_ECG_PADRAO
-        modelo_gpt_56 = modelo_efetivo.startswith("gpt-5.6")
         imagem = base64.b64encode(conteudo).decode("ascii")
-        kwargs = {
-            "model": modelo_efetivo,
-            "messages": [
-                {"role": "system", "content": sistema},
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": instrucao},
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:{media_type};base64,{imagem}",
-                                # O ECG tem linhas finas, quadrícula e texto
-                                # pequeno. GPT-5.6 preserva a resolução original
-                                # com este nível, evitando a redução usada em
-                                # `high` por famílias anteriores.
-                                "detail": "original" if modelo_gpt_56 else "high",
+        modelo_efetivo = modelo or self._MODELO_ECG_PADRAO
+
+        def kwargs_para(modelo_alvo: str) -> dict:
+            modelo_gpt_56 = modelo_alvo.startswith("gpt-5.6")
+            kwargs = {
+                "model": modelo_alvo,
+                "messages": [
+                    {"role": "system", "content": sistema},
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": instrucao},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:{media_type};base64,{imagem}",
+                                    # O ECG tem linhas finas, quadrícula e texto
+                                    # pequeno. GPT-5.6 preserva a resolução
+                                    # original; modelos anteriores usam `high`.
+                                    "detail": "original" if modelo_gpt_56 else "high",
+                                },
                             },
-                        },
-                    ],
-                },
-            ],
-        }
-        if modelo_gpt_56:
-            kwargs.update({
-                "max_completion_tokens": settings.ai_max_output_tokens,
-                "reasoning_effort": "high",
-            })
-        else:
-            kwargs.update({
-                "max_tokens": settings.ai_max_output_tokens,
-                "temperature": 0,
-            })
-        try:
-            # JSON mode melhora a aderência ao contrato, mas algumas variantes
-            # multimodais rejeitam esse parâmetro apesar de aceitarem imagem.
-            resp = self._cliente.chat.completions.create(
-                **kwargs,
-                response_format={"type": "json_object"},
-            )
-        except Exception as error:
+                        ],
+                    },
+                ],
+            }
+            if modelo_gpt_56:
+                kwargs.update({
+                    "max_completion_tokens": settings.ai_max_output_tokens,
+                    "reasoning_effort": "high",
+                })
+            else:
+                kwargs.update({
+                    "max_tokens": settings.ai_max_output_tokens,
+                    "temperature": 0,
+                })
+            return kwargs
+
+        def executar(modelo_alvo: str):
+            kwargs = kwargs_para(modelo_alvo)
             from openai import BadRequestError
 
-            if not isinstance(error, BadRequestError):
+            try:
+                # JSON mode melhora a aderência ao contrato, mas algumas
+                # variantes multimodais rejeitam o parâmetro apesar da imagem.
+                return self._cliente.chat.completions.create(
+                    **kwargs,
+                    response_format={"type": "json_object"},
+                )
+            except BadRequestError:
+                # Uma repetição, no mesmo modelo, sem JSON mode. A saída ainda
+                # passa pelo parser e pelo schema clínico estritos.
+                return self._cliente.chat.completions.create(**kwargs)
+
+        try:
+            resp = executar(modelo_efetivo)
+        except Exception as error:
+            from openai import NotFoundError
+
+            if not isinstance(error, NotFoundError) or modelo_efetivo == self._MODELO_ECG_FALLBACK:
                 raise
-            # Uma única repetição, no mesmo provedor e modelo, sem JSON mode.
-            # A saída continua submetida ao parser e ao schema clínico estritos.
-            resp = self._cliente.chat.completions.create(**kwargs)
+            # Contas/projetos podem não ter o frontier liberado. Mantém o
+            # melhor modelo como primeira tentativa, mas não derruba a função.
+            logger.warning(
+                "Modelo visual de ECG indisponível; usando fallback (requested=%s, fallback=%s)",
+                modelo_efetivo,
+                self._MODELO_ECG_FALLBACK,
+            )
+            modelo_efetivo = self._MODELO_ECG_FALLBACK
+            resp = executar(modelo_efetivo)
         uso = resp.usage
         return Resposta(
             texto=resp.choices[0].message.content or "",
