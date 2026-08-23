@@ -7,7 +7,6 @@ somente metadados operacionais sem PHI entram no log de auditoria.
 from __future__ import annotations
 
 from datetime import datetime, time, timedelta, timezone
-from typing import Literal
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
@@ -63,10 +62,15 @@ def status_ia_ecg():
 @router.post("/analisar")
 async def analisar_ecg_rapido(
     arquivo: UploadFile = File(...),
-    confirm_external_processing: Literal[True] = Form(...),
+    confirm_external_processing: bool = Form(...),
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
+    if not confirm_external_processing:
+        raise HTTPException(
+            status_code=422,
+            detail="Confirme o processamento externo para solicitar a opinião da IA.",
+        )
     _ensure_available()
     content = await arquivo.read(MAX_ECG_BYTES + 1)
     if len(content) > MAX_ECG_BYTES:

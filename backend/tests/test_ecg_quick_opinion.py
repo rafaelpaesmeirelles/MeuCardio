@@ -79,6 +79,14 @@ def test_quick_ecg_returns_transient_opinion_without_patient_record(
     )
     assert missing_consent.status_code == 422
 
+    refused_consent = client.post(
+        "/api/ecg-ia/analisar",
+        headers=_headers(token),
+        files={"arquivo": ("ecg.png", ecg_bytes, "image/png")},
+        data={"confirm_external_processing": "false"},
+    )
+    assert refused_consent.status_code == 422
+
     response = client.post(
         "/api/ecg-ia/analisar",
         headers=_headers(token),
