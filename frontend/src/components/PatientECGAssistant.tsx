@@ -80,7 +80,7 @@ export default function PatientECGAssistant({patientId,currentEncounterId,focusO
     {items.map(ecg=><article key={ecg.id}>
       <div><strong>ECG · {ecg.original_name}</strong><time>{when(ecg.performed_at)}</time></div>
       <small>{ecg.media_type} · {(ecg.size_bytes/1024/1024).toFixed(2)} MB · cifrado</small>
-      <div className="pep-actions"><button onClick={()=>open(ecg)}>Abrir original</button>{aiStatus?.enabled&&aiStatus.supported_media_types.includes(ecg.media_type)?<button className="botao botao--secundario" disabled={!!busy} onClick={()=>analyze(ecg)}>{busy===`ai-${ecg.id}`?"Analisando…":"Gerar sugestão"}</button>:aiStatus?.enabled?<small>Formato sem análise por IA.</small>:aiStatus?<small>IA indisponível; ECG preservado.</small>:null}</div>
+      <div className="pep-actions"><button onClick={()=>open(ecg)}>Abrir original</button>{aiStatus?.enabled&&aiStatus.supported_media_types.includes(ecg.media_type)?<button className="botao botao--secundario" disabled={!!busy} onClick={()=>analyze(ecg)}>{busy===`ai-${ecg.id}`?"Analisando…":"Gerar sugestão"}</button>:aiStatus&&!aiStatus.enabled?<small>IA indisponível; ECG preservado.</small>:null}</div>
       {ecg.suggestions.map(s=><details key={s.id} open={s.status==="generated"}>
         <summary>Sugestão IA #{s.id} · {s.status==="generated"?"revisar":s.status==="accepted"?"aceita":"rejeitada"}</summary>
         <p><strong>Qualidade:</strong> {s.payload.quality}{s.payload.urgent_review_recommended?" · revisão prioritária sugerida":""}</p>
