@@ -1702,7 +1702,16 @@ def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user:
 def list_integrations(professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "configure")
     result = []
-    for x in db.query(CalendarIntegration).filter(CalendarIntegration.owner_id == owner_id).order_by(CalendarIntegration.display_name).all():
+    # DELETE revoga a credencial e mantém apenas o registro técnico para
+    # auditoria. Uma conta removida pelo assinante não pode voltar a aparecer
+    # como se ainda estivesse conectada. Yahoo também deixou de ser oferecido
+    # pelo produto e não deve ser exposto nas telas de integração.
+    integracoes_visiveis = db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == owner_id,
+        CalendarIntegration.status != "disconnected",
+        CalendarIntegration.provider != "yahoo_mail",
+    ).order_by(CalendarIntegration.display_name).all()
+    for x in integracoes_visiveis:
         contact_count = db.query(ExternalContact).filter(
             ExternalContact.integration_id == x.id, ExternalContact.deleted.is_(False),
         ).count()

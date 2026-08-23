@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, timezone
 
-from app.models.agenda import AppointmentCommunication
+from app.models.agenda import AppointmentCommunication, CalendarIntegration
 from app.models.subscription import Subscription
 
 
@@ -24,6 +24,48 @@ def _location(client, token: str, name="Consultório Paulista") -> dict:
     })
     assert response.status_code == 201, response.text
     return response.json()
+
+
+def test_conta_removida_desaparece_da_listagem(client, criar_usuario, db):
+    user, token = criar_usuario(email="agenda.remocao@teste.local")
+    _subscribe(db, user.id)
+    integracao = CalendarIntegration(
+        owner_id=user.id,
+        provider="apple_icloud",
+        display_name="remover@icloud.com",
+        status="connected",
+        enabled=True,
+        capabilities={"read_appointments": True},
+    )
+    db.add(integracao)
+    db.commit()
+
+    removida = client.delete(
+        f"/api/agenda/integrations/{integracao.id}", headers=_headers(token),
+    )
+    assert removida.status_code == 204, removida.text
+
+    listagem = client.get("/api/agenda/integrations", headers=_headers(token))
+    assert listagem.status_code == 200, listagem.text
+    assert all(item["id"] != integracao.id for item in listagem.json())
+
+
+def test_yahoo_nao_e_exposto_na_listagem_de_integracoes(client, criar_usuario, db):
+    user, token = criar_usuario(email="agenda.sem-yahoo@teste.local")
+    _subscribe(db, user.id)
+    db.add(CalendarIntegration(
+        owner_id=user.id,
+        provider="yahoo_mail",
+        display_name="legado@yahoo.com",
+        status="connected",
+        enabled=True,
+        capabilities={"read_mail": True},
+    ))
+    db.commit()
+
+    listagem = client.get("/api/agenda/integrations", headers=_headers(token))
+    assert listagem.status_code == 200, listagem.text
+    assert all(item["provider"] != "yahoo_mail" for item in listagem.json())
 
 
 def test_tenant_cannot_read_or_configure_another_professionals_agenda(client, criar_usuario, db):

@@ -35,7 +35,7 @@ _STATE_COOKIE = "corvia_social_state"
 _NONCE_COOKIE = "corvia_social_nonce"
 _PROVIDER_COOKIE = "corvia_social_provider"
 _COOKIE_MAX_AGE = 10 * 60
-_SUPPORTED = {"google", "microsoft", "apple", "yahoo", "github"}
+_SUPPORTED = {"google", "microsoft", "apple", "github"}
 
 _GOOGLE_AUTH = "https://accounts.google.com/o/oauth2/v2/auth"
 _GOOGLE_TOKEN = "https://oauth2.googleapis.com/token"
@@ -299,7 +299,6 @@ def providers() -> dict[str, list[dict[str, Any]]]:
         ("google", "Google"),
         ("microsoft", "Microsoft"),
         ("apple", "Apple"),
-        ("yahoo", "Yahoo"),
         ("github", "GitHub"),
     ]
     return {"providers": [{"id": key, "label": label, "enabled": _configured(key)} for key, label in catalog]}

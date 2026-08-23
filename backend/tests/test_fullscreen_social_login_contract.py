@@ -32,13 +32,12 @@ def test_social_login_never_auto_provisions_or_bypasses_account_status():
 
 def test_provider_catalog_supports_mainstream_account_login():
     social = read(BACKEND / "api" / "social_login.py")
-    for provider in ("google", "microsoft", "apple", "yahoo", "github"):
+    for provider in ("google", "microsoft", "apple", "github"):
         assert f'("{provider}",' in social
     for variable in (
         "GOOGLE_SIGNIN_CLIENT_ID",
         "MICROSOFT_SIGNIN_CLIENT_ID",
         "APPLE_SIGNIN_CLIENT_ID",
-        "YAHOO_SIGNIN_CLIENT_ID",
         "GITHUB_SIGNIN_CLIENT_ID",
     ):
         assert variable in social
@@ -53,13 +52,11 @@ def test_external_email_is_verified_before_corvia_session():
     assert "gravar_cookie_sessao(response, create_access_token(user.email, scope=\"app\"))" in social
 
 
-def test_yahoo_uses_official_openid_connect_endpoints():
+def test_yahoo_is_not_offered_as_social_login():
     social = read(BACKEND / "api" / "social_login.py")
-    assert "https://api.login.yahoo.com/oauth2/request_auth" in social
-    assert "https://api.login.yahoo.com/oauth2/get_token" in social
-    assert "https://api.login.yahoo.com/openid/v1/userinfo" in social
-    assert "'scope': 'openid profile email'" in social
-    assert "'nonce': nonce" in social
+    login = read(FRONTEND / "pages" / "Entrar.tsx")
+    assert '("yahoo", "Yahoo")' not in social
+    assert '"yahoo" |' not in login
 
 
 def test_apple_uses_signed_client_secret_and_verified_identity_token():
@@ -79,13 +76,12 @@ def test_login_screen_uses_dynamic_viewport_and_social_buttons():
     assert 'login-fullscreen-social.css' in login
     assert '/auth/social/providers' in login
     assert '/auth/social/${provider}/start' in login
-    for provider in ("google", "microsoft", "apple", "yahoo", "github"):
+    for provider in ("google", "microsoft", "apple", "github"):
         assert provider in login
     assert "height:100dvh" in css
     assert "min-height:100svh" in css
     assert "@media(max-width:820px)" in css
     assert ".prehome-social__button" in css
-    assert ".prehome-social__mark--yahoo" in css
 
 
 def test_login_route_stays_online_first_instead_of_inflating_pwa_preload():
