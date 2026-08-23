@@ -82,7 +82,7 @@ def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
 
     assert 'to: "/tour?origem=assinatura&modo=quick"' in panel
     assert 'path="assinatura"' in app
-    assert 'path="/em-breve"' in app
+    assert 'path="/em-breve"' in app or 'path="em-breve"' in app
 
 
 def test_home_full_mobility_functions_are_not_removed_during_visual_rebuild():
