@@ -315,4 +315,5 @@ export type Usuario = {
   // frontend: a decisão real é sempre do backend.
   convidado: boolean;
   investidor: boolean;
+  socio: boolean;
 };
