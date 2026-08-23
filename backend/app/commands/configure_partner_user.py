@@ -61,7 +61,7 @@ def main() -> None:
         user.convidado = True
         user.investidor = False
         user.convidado_plano_preferido = PLANO_COMPLETO
-        user.profile_completion_required = True
+        user.profile_completion_required = False
         user.onboarding_visto = False
 
         waiver = db.get(KycRequirementWaiver, user.id)
@@ -91,7 +91,7 @@ def main() -> None:
                     "convidado": True,
                     "investidor": False,
                     "tipo_acesso": "socio",
-                    "profile_completion_required": True,
+                    "profile_completion_required": False,
                     "onboarding_visto": False,
                     "kyc": "somente_selfie_aprovacao_automatica",
                     "plano": PLANO_COMPLETO,
@@ -101,7 +101,7 @@ def main() -> None:
         db.commit()
         print(
             "Conta configurada como sócio: acesso administrativo e clínico integral, "
-            "plano completo/CorVIA Mail, perfil obrigatório, KYC somente com selfie "
+            "plano completo/CorVIA Mail, perfil opcional, KYC somente com selfie "
             "e tour pendente. A senha não foi alterada."
         )
     finally:

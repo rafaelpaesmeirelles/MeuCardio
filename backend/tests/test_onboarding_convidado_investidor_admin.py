@@ -233,7 +233,7 @@ class TestKycConvidado:
         socio, token = criar_usuario(email="socio-onboarding@teste.local", role="admin")
         socio.convidado = True
         socio.investidor = False
-        socio.profile_completion_required = True
+        socio.profile_completion_required = False
         socio.onboarding_visto = False
         db.add(KycRequirementWaiver(
             owner_id=socio.id,

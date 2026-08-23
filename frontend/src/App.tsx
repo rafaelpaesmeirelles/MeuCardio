@@ -124,7 +124,7 @@ export default function App() {
     return <Navigate to="/minha-conta" replace />;
   }
 
-  if (usuario.kyc_required && location.pathname !== "/verificacao-identidade") {
+  if (usuario.kyc_required && !usuario.profile_completion_required && location.pathname !== "/verificacao-identidade") {
     return <Navigate to="/verificacao-identidade" replace />;
   }
 

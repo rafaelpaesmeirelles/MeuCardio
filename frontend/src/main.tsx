@@ -4,10 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import { AuthProvider } from "./lib/auth";
-import {
-  liberarRecargaPendente,
-  verificarVersaoAtual,
-} from "./lib/freshness";
+import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
 import "./styles/clinical-os.css";
@@ -118,14 +115,6 @@ document.addEventListener("keydown", () => void verificarAtualizacaoCompleta(fal
 (window as unknown as { __corviaVerificarAtualizacao?: () => void }).__corviaVerificarAtualizacao = () => {
   void verificarAtualizacaoCompleta(true);
 };
-
-// Vite dispara este evento quando uma rota lazy ainda aponta para um chunk de
-// um deploy anterior. Impedir a exceção e buscar o bundle atual evita a tela
-// totalmente branca observada logo após login durante uma publicação.
-window.addEventListener("vite:preloadError", (evento) => {
-  evento.preventDefault();
-  void verificarVersaoAtual(true);
-});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
