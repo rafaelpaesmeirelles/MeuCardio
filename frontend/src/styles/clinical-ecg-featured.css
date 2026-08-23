@@ -1,4 +1,4 @@
-/* ECG assistido é um recurso de primeira linha, sem sair do prontuário longitudinal. */
+/* ECG assistido é um recurso de primeira linha, com modo rápido e fluxo longitudinal opcional. */
 .ccc-action.is-featured {
   position: relative;
   border-color: rgba(80, 222, 167, .34) !important;

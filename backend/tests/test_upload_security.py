@@ -258,6 +258,9 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         # digital embutida é conferida de verdade em verificacao_pdf.py).
         "receituario.py",
         "documents.py",
+        # Opinião rápida de ECG: leitura limitada a 20 MB + 1 byte,
+        # validação real por validate_file() e corte antecipado na camada ASGI.
+        "ecg_quick.py",
         # Prescrição livre especial: a devolução do PDF assinado também usa
         # o fluxo externo existente, com leitura limitada a 15 MB + 1 byte,
         # validação real do PDF por validate_file() e conferência criptográfica
@@ -269,6 +272,7 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert policy_for("POST", "/api/auth/me/logo") is not None
     assert policy_for("POST", "/api/pedidos/1/exame") is not None
     assert policy_for("POST", "/api/pacientes/1/ecgs") is not None
+    assert policy_for("POST", "/api/ecg-ia/analisar") is not None
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None

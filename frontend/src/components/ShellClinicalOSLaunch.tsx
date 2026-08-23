@@ -35,7 +35,7 @@ const BASE: Secao[] = [
     rotulo: "Prática clínica",
     icone: "pacientes",
     itens: [
-      { to: "/prontuario?acao=ecg", rotulo: "IA para ECG · destaque", icone: "ecg" },
+      { to: "/ecg-ia", rotulo: "IA para ECG · destaque", icone: "ecg" },
       { to: "/agenda", rotulo: "Agenda", icone: "agenda" },
       { to: "/round", rotulo: "Pacientes e round", icone: "round" },
       { to: "/receituario", rotulo: "Prescrição", icone: "prescricao" },
@@ -98,7 +98,8 @@ const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone
   { prefixo: "/exames", titulo: "Exames", detalhe: "Diagnóstico e interpretação", icone: "clinica" },
   { prefixo: "/receituario", titulo: "Prescrição", detalhe: "Produção clínica", icone: "prescricao" },
   { prefixo: "/documentos", titulo: "Documentos", detalhe: "Documentos e solicitações", icone: "documento" },
-  { prefixo: "/prontuario", titulo: "Prontuário", detalhe: "Registro longitudinal e IA para ECG", icone: "ecg" },
+  { prefixo: "/ecg-ia", titulo: "IA para ECG", detalhe: "Opinião rápida sem cadastro de paciente", icone: "ecg" },
+  { prefixo: "/prontuario", titulo: "Prontuário", detalhe: "Registro clínico longitudinal", icone: "pacientes" },
   { prefixo: "/round", titulo: "Pacientes e round", detalhe: "Continuidade do cuidado", icone: "round" },
   { prefixo: "/agenda", titulo: "Agenda", detalhe: "Organização clínica", icone: "agenda" },
   { prefixo: "/assistente", titulo: "Assistente", detalhe: "Assistência contextual", icone: "assistente" },
@@ -129,7 +130,7 @@ function chaveContextosRecentes(userId?: number) {
 function destino(valor: string) {
   const termo = valor.trim();
   const normalizado = termo.toLocaleLowerCase("pt-BR");
-  if (/\b(ecg|eletrocardiograma)\b/.test(normalizado)) return "/prontuario?acao=ecg";
+  if (/\b(ecg|eletrocardiograma)\b/.test(normalizado)) return "/ecg-ia";
   if (/\b(prescrev|prescri|receita|receitu)/.test(normalizado)) return "/receituario";
   if (/\b(atestado|documento|relat[oó]rio|encaminhamento|solicitar exames?|pedido de exames?)/.test(normalizado)) return "/documentos";
   if (/\b(calcul|escore|score)/.test(normalizado)) return "/calculadoras";

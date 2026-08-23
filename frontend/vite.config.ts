@@ -9,6 +9,10 @@ const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|login-[^/]*|SolicitarAcesso-
 // e liberar o PDF original. Não há valor nem comportamento correto em precache
 // offline dessa rota; os chunks continuam disponíveis por NetworkFirst em runtime.
 const validacaoPublicaSomenteOnline = /(?:^|\/)ValidarDocumento-[^/]*\.(?:js|css)$/;
+// A opinião rápida de ECG depende do backend e do provedor multimodal em toda
+// execução. O chunk continua disponível por NetworkFirst, mas não ocupa o
+// precache inicial com uma tela que não funciona offline.
+const ecgQuickSomenteOnline = /(?:^|\/)ECGQuickOpinion-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -43,6 +47,7 @@ export default defineConfig({
             manifest: entries.filter((entry) => {
               if (loginSomenteOnline.test(entry.url)) return false;
               if (validacaoPublicaSomenteOnline.test(entry.url)) return false;
+              if (ecgQuickSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
