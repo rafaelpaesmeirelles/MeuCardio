@@ -12,7 +12,7 @@ from app.core.db import get_db
 from app.core.security import require_admin
 from app.models.audit import AuditLog
 from app.models.email_account import EmailAccount
-from app.models.prontuario import PatientECGRecord
+from app.models.prontuario import PatientClinicalAISuggestion, PatientECGRecord
 from app.models.user import User
 from app.services import cofre, mail360
 from app.services.mail360 import Mail360Error
@@ -41,6 +41,16 @@ def _remover_referencias_usuario(db: Session, user_id: int) -> None:
     Vínculos Stripe relevantes continuam bloqueados ANTES de chegar aqui pela
     regra canônica de _pode_excluir().
     """
+    # A ordem da introspecção não garante a precedência exigida pelas FKs
+    # clínicas: sugestões dependem do ECG, que por sua vez depende do perfil.
+    # Remove explicitamente essa cadeia antes do tratamento genérico por user_id.
+    db.query(PatientClinicalAISuggestion).filter(
+        PatientClinicalAISuggestion.owner_id == user_id,
+    ).delete(synchronize_session=False)
+    db.query(PatientECGRecord).filter(
+        PatientECGRecord.owner_id == user_id,
+    ).delete(synchronize_session=False)
+
     inspector = inspect(db.get_bind())
     for table_name in inspector.get_table_names():
         columns = {col["name"]: col for col in inspector.get_columns(table_name)}
