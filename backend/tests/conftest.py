@@ -30,6 +30,7 @@ os.environ.setdefault("MAIL360_REFRESH_TOKEN", "refresh-de-teste")
 os.environ.setdefault("CORVIA_MAIL_PRECO_CENTAVOS", "1000")
 os.environ.setdefault("STRIPE_SECRET_KEY", "sk_test_dummy")
 os.environ.setdefault("STRIPE_WEBHOOK_SECRET", "whsec_teste_dummy")
+os.environ.setdefault("SUBSCRIPTIONS_ENABLED", "true")
 os.environ.setdefault("PUBLIC_URL", "https://corvia.med.br")
 os.environ.setdefault("AI_ENABLED", "false")
 

@@ -51,7 +51,7 @@ const Estudo = lazy(() => import("./pages/Estudo"));
 const Agenda = lazy(() => import("./pages/Agenda"));
 const Templates = lazy(() => import("./pages/Templates"));
 const AvaliacaoPreOperatoria = lazy(() => import("./pages/AvaliacaoPreOperatoria"));
-const Assinatura = lazy(() => import("./pages/Assinatura"));
+const EmBreve = lazy(() => import("./pages/EmBreve"));
 const MinhaConta = lazy(() => import("./pages/MinhaConta"));
 const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
@@ -180,7 +180,7 @@ export default function App() {
           <Route path="exportar" element={<ExportarConteudo />} />
           <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
           <Route path="receituario" element={<Receituario />} />
-          <Route path="assinatura" element={<Assinatura />} />
+          <Route path="assinatura" element={<Navigate to="/tour?origem=assinatura&modo=quick" replace />} />
           <Route path="minha-conta" element={<MinhaConta />} />
           <Route path="sincronizacao" element={<Sincronizacao />} />
           <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
@@ -199,6 +199,7 @@ export default function App() {
           {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
         </Route>
         <Route path="/tour" element={<Tour />} />
+        <Route path="/em-breve" element={<EmBreve />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </RotasSuspensas>

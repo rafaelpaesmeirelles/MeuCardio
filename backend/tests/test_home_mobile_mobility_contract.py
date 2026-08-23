@@ -204,7 +204,7 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
             "/indicadores", "/galeria", "/cursos", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar",
-            "/assistente", "/favoritos", "/minha-conta", "/assinatura", "/tour",
+            "/assistente", "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
         ):
             assert rota in fonte
 

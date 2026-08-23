@@ -331,6 +331,15 @@ def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
         db.commit()
 
 
+
+def _exigir_assinaturas_habilitadas() -> None:
+    if not settings.subscriptions_enabled:
+        raise HTTPException(
+            status_code=503,
+            detail="Assinaturas temporariamente indisponíveis. Conheça o CorVIA no tour.",
+        )
+
+
 @router.post("/checkout")
 def criar_checkout(
     plano: str = Query(PLANO_BASICO),
@@ -338,6 +347,7 @@ def criar_checkout(
     db: Session = Depends(get_db),
     user: User = Depends(current_user),
 ):
+    _exigir_assinaturas_habilitadas()
     if plano not in PLANOS_VALIDOS:
         raise HTTPException(status_code=400, detail="Plano inválido.")
     if periodicidade not in PERIODICIDADES_VALIDAS:
@@ -517,6 +527,7 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
     (app/services/entitlement.py) nunca deixa ativar de fato. Não é falha de
     segurança (nenhum dado vaza, nenhum acesso indevido é concedido) — é
     cobrar por algo que estruturalmente nunca funciona para essa conta."""
+    _exigir_assinaturas_habilitadas()
     if getattr(user, "investidor", False):
         raise HTTPException(
             status_code=409,
@@ -669,6 +680,7 @@ def trocar_plano(
     sempre o webhook (`customer.subscription.updated`), lendo o que o Stripe
     confirmou — mesma disciplina de "nunca confiar no otimista" que o resto
     deste arquivo já segue (ver `_inferir_plano_periodicidade_do_objeto`)."""
+    _exigir_assinaturas_habilitadas()
     if plano not in PLANOS_VALIDOS:
         raise HTTPException(status_code=400, detail="Plano inválido.")
     if periodicidade not in PERIODICIDADES_VALIDAS:
