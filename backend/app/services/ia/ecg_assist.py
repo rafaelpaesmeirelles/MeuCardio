@@ -139,7 +139,7 @@ def analyze_ecg(content: bytes, media_type: str) -> dict:
         INSTRUCTION,
         content,
         media_type,
-        model=(settings.ai_ecg_model or None),
+        modelo=(settings.ai_ecg_model or None),
     )
     if response.truncado:
         raise ValueError("A resposta do provedor foi truncada e não pode ser usada.")
