@@ -69,7 +69,7 @@ const ADMINISTRACAO: NavItem[] = [
   { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
   { to: "/minha-conta", label: "Configurações / Minha Conta", icon: "conta" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
-  { to: "/assinatura", label: "Planos & Assinatura", icon: "check" },
+  { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
   { to: "/termos", label: "Termos de uso", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
 ];
