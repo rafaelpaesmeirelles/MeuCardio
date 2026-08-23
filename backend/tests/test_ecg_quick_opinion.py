@@ -9,6 +9,7 @@ from app.models.patient_profile import PatientProfile
 from app.models.prontuario import PatientClinicalAISuggestion, PatientECGRecord
 from app.models.subscription import Subscription
 from app.services.ia import ecg_assist
+from app.services.ia.provedor import Resposta
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -24,6 +25,36 @@ def _png() -> bytes:
     image = io.BytesIO()
     Image.new("RGB", (1200, 800), "white").save(image, format="PNG")
     return image.getvalue()
+
+
+def test_ecg_assist_passes_the_configured_model_to_the_provider(monkeypatch):
+    class Provider:
+        def analisar_arquivo_clinico(
+            self, sistema, instrucao, conteudo, media_type, modelo=None,
+        ):
+            assert sistema == ecg_assist.SYSTEM_PROMPT
+            assert instrucao == ecg_assist.INSTRUCTION
+            assert conteudo == b"ecg"
+            assert media_type == "image/jpeg"
+            assert modelo == "vision-test"
+            return Resposta(
+                texto='{"quality":"limitada","summary":"Teste","rhythm":null,'
+                '"heart_rate_bpm":null,"intervals":{"pr_ms":null,"qrs_ms":null,'
+                '"qtc_ms":null},"axis":null,"conduction":null,"st_t":null,'
+                '"other_findings":[],"red_flags":[],"limitations":["Teste"],'
+                '"urgent_review_recommended":false}',
+                tokens_entrada=10,
+                tokens_saida=20,
+                modelo="vision-test",
+            )
+
+    monkeypatch.setattr(ecg_assist, "obter_provedor", lambda: Provider())
+    monkeypatch.setattr(settings, "ai_ecg_model", "vision-test")
+
+    result = ecg_assist.analyze_ecg(b"ecg", "image/jpeg")
+
+    assert result["model"] == "vision-test"
+    assert result["payload"]["quality"] == "limitada"
 
 
 def test_quick_ecg_returns_transient_opinion_without_patient_record(
