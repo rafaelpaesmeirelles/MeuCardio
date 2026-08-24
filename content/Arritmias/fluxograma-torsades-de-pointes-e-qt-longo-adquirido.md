@@ -3,96 +3,106 @@ title: "Fluxograma: Torsades de Pointes e QT Longo Adquirido — Conduta Imediat
 slug: fluxograma-torsades-de-pointes-e-qt-longo-adquirido
 theme: "Arritmias"
 kind: fluxograma
-summary: "Árvore de decisão da conduta imediata no torsades de pointes e no QT longo adquirido: TdP ativa exige desfibrilação ou cardioversão conforme pulso/estabilidade seguida de sulfato de magnésio IV independente do nível sérico, e QT longo identificado sem TdP segue via de prevenção guiada pelo escore de Tisdale."
-review_status: revisado
-source_refs: ["Tisdale JE, Jaynes HA, Kingery JR, et al. Development and validation of a risk score to predict QT interval prolongation in hospitalized patients. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — pontuação por variável conferida contra duas fontes secundárias independentes, texto completo bloqueado nesta sessão (paywall)", "Torsade de Pointes. StatPearls, NCBI Bookshelf, NBK459388 — seção de tratamento, consultada em 30/07/2026"]
+summary: "Árvore de decisão atualizada para TV polimórfica sustentada e torsades de pointes: choque não sincronizado imediato quando a arritmia está sustentada, distinção entre QT longo e QT normal e prevenção de recorrência orientada pelo mecanismo."
+review_status: pendente_revisao
+source_refs: ["Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884 — TV polimórfica sustentada: choque não sincronizado imediato (COR 1, LOE B-NR); magnésio pode ser considerado na recorrência associada a QT longo/TdP (COR 2b, LOE C-LD); sem benefício do magnésio rotineiro na TV polimórfica com QT normal (COR 3, LOE C-LD).", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — retirada de fármaco causal, correção de eletrólitos, magnésio IV na TdP e aumento da frequência com pacing/isoproterenol em recorrência no QT longo adquirido.", "Tisdale JE, Jaynes HA, Kingery JR, et al. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — escore de risco de prolongamento de QTc em pacientes hospitalizados, não escore de tratamento da TdP."]
+legacy_source: "Atualização de segurança em 24/08/2026. A versão anterior encaminhava TV polimórfica com pulso e instabilidade para cardioversão sincronizada. A AHA 2025 recomenda choque NÃO sincronizado imediato para TV polimórfica sustentada, independentemente de pulso, porque a sincronização não é confiável. Status rebaixado de revisado para pendente_revisao por ausência de revisão humana documentada desta nova versão."
 ---
 
 # Fluxograma: Torsades de Pointes e QT Longo Adquirido — Conduta Imediata
 
-Torsades de pointes (TdP) é a taquicardia ventricular polimórfica associada ao
-QT longo **adquirido** — por fármaco, distúrbio eletrolítico ou combinação dos
-dois. A conduta imediata separa dois cenários que não se misturam: TdP **em
-curso**, que exige estabilização elétrica conforme pulso/estabilidade e
-sulfato de magnésio sem esperar a dosagem sérica, e QT longo **identificado
-antes do evento**, em que a conduta é prevenir a torsades, não tratá-la. O
-escore de risco e o detalhamento fisiopatológico estão no documento de
-origem; aqui o foco é a sequência de decisão à beira do leito.
+> **STATUS DE CURADORIA:** `pendente_revisao`. **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de republicar como revisado ou converter doses/energia/metas em ordens clínicas institucionais.
+
+A decisão inicial é mais simples e mais segura do que na versão anterior: **TV polimórfica sustentada é arritmia eletricamente instável e requer choque não sincronizado imediato**. A presença de pulso não transforma a terapia elétrica em cardioversão sincronizada. Depois de interromper a arritmia, o QT basal e o contexto etiológico orientam a prevenção de recorrência.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R1{"Torsades de pointes ativa<br/>(TV polimórfica documentada) ou<br/>QT longo identificado,<br/>sem TdP em curso?"}
-  C_prev(["QT longo identificado, estável:<br/>suspender fármaco prolongador de QT,<br/>corrigir distúrbio eletrolítico e<br/>estratificar risco pelo escore de Tisdale —<br/>monitorização eletrocardiográfica conforme risco"])
-  D2{"Paciente sem pulso?"}
-  C_desfib(["Desfibrilação imediata —<br/>mesmo protocolo de FV/TV sem pulso"])
-  D3{"Hemodinamicamente instável<br/>(hipotensão, síncope persistente,<br/>sinais de baixo débito)?"}
-  C_cv(["Cardioversão elétrica sincronizada —<br/>100J monofásico ou 50J bifásico"])
-  P_mg["Sulfato de magnésio IV:<br/>2g em push lento, independente do<br/>nível sérico de magnésio, seguido de<br/>infusão de manutenção de 1-4g/hora"]
-  D4{"TdP recorrente apesar<br/>do sulfato de magnésio?"}
-  C_manter(["Manter magnésio de manutenção e<br/>monitorização eletrocardiográfica<br/>contínua até normalização do QT"])
-  C_refrat(["Overdrive pacing (FC ventricular<br/>90-110bpm, até 140bpm se necessário)<br/>ou isoproterenol IV 10-20mcg em push,<br/>ou infusão titulada para FC ~100bpm —<br/>mecanismo bradicardia/pausa-dependente;<br/>isoproterenol contraindicado no QT longo<br/>congênito, reservado ao adquirido"])
+  R1{"TV polimórfica sustentada<br/>em curso?"}
+  C_shock(["Choque NÃO sincronizado imediato<br/>— alta energia conforme fabricante/protocolo.<br/>AHA 2025: Classe 1, B-NR.<br/>Não atrasar para sincronização, magnésio ou laboratório."])
+  D_qt{"Após terminar o episódio:<br/>QT basal conhecido/suspeito prolongado?"}
+  C_tdp(["Provável TdP / QT longo:<br/>retirar gatilho pró-QT;<br/>corrigir K/Mg/Ca;<br/>magnésio IV pode ser considerado<br/>para prevenir/suprimir recorrências<br/>(AHA 2025: 2b, C-LD)."])
+  C_nonqt(["TV polimórfica sem QT longo:<br/>buscar/tratar isquemia e outras causas;<br/>lidocaína ou amiodarona podem ser consideradas<br/>para recorrências conforme contexto.<br/>Magnésio rotineiro: NÃO recomendado<br/>(AHA 2025: Classe 3, C-LD)."])
+  D_recur{"TdP recorrente e<br/>bradicardia/pausa-dependente?"}
+  C_rate(["Consulta especializada:<br/>overdrive pacing ou isoproterenol<br/>podem ser usados no QT longo ADQUIRIDO<br/>para aumentar a frequência e reduzir recorrência."])
+  C_monitor(["Monitorização contínua;<br/>reavaliar QT, eletrólitos, função renal/hepática,<br/>fármacos/interações e causa reversível."])
+  R2{"QT longo identificado,<br/>mas sem TV polimórfica em curso?"}
+  C_prev(["Prevenção:<br/>retirar/reduzir gatilhos quando possível;<br/>corrigir eletrólitos;<br/>rever função renal/hepática e combinações pró-QT;<br/>usar Tisdale apenas como risco de QTc prolongado<br/>na população hospitalar em que foi validado."])
 
-  R1 -->|"QT longo identificado, estável"| C_prev
-  R1 -->|"TdP ativa"| D2
-  D2 -->|"Sim, sem pulso"| C_desfib
-  D2 -->|"Não, com pulso"| D3
-  D3 -->|"Sim, instável"| C_cv
-  D3 -->|"Não, estável"| P_mg
-  P_mg -->|"Após magnésio"| D4
-  D4 -->|"Não"| C_manter
-  D4 -->|"Sim, refratária"| C_refrat
+  R1 -->|"Sim"| C_shock
+  C_shock --> D_qt
+  D_qt -->|"Sim / provável"| C_tdp
+  D_qt -->|"Não"| C_nonqt
+  C_tdp --> D_recur
+  D_recur -->|"Sim"| C_rate
+  D_recur -->|"Não"| C_monitor
+  C_rate --> C_monitor
+  C_nonqt --> C_monitor
+  R1 -->|"Não"| R2
+  R2 -->|"Sim"| C_prev
+  R2 -->|"Não / diagnóstico incerto"| C_monitor
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C_prev,C_desfib,C_cv,C_manter,C_refrat conduta;
+  class C_shock,C_tdp,C_nonqt,C_rate,C_monitor,C_prev conduta;
 ```
 
-## O que se repete em todo ramo, e por isso não está no diagrama
+## Regras de segurança incorporadas ao fluxo
 
-**Suspender o fármaco prolongador de QT e corrigir o distúrbio eletrolítico de
-base** é a primeira ação em qualquer ramo desta árvore — feita de imediato, em
-paralelo à estabilização elétrica ou ao início do magnésio, nunca como medida
-tardia ou acessória.
+### 1. Não sincronizar TV polimórfica sustentada
 
-**Potássio alvo 4,5–5,0mEq/L** durante o tratamento da torsades — faixa
-alta-normal, acima da normalidade habitual (3,5–4,5mEq/L), especificamente
-para reduzir a dispersão de repolarização.
+AHA 2025: os complexos variam de morfologia e **não permitem sincronização confiável**. O tratamento é choque não sincronizado imediato, mesmo quando há pulso. A versão anterior deste fluxograma continha o ramo “com pulso + instável → cardioversão sincronizada”; ele foi removido.
 
-**Não usar antiarrítmicos de classe Ia ou III** (ex.: procainamida,
-amiodarona, sotalol) no manejo agudo do torsades — esses fármacos prolongam
-ainda mais o QT e podem perpetuar a arritmia.
+### 2. Não usar “magnésio para toda TV polimórfica”
 
-**Reavaliação eletrocardiográfica contínua** (telemetria/monitor) em qualquer
-ramo, até a normalização do QT.
+- **QT longo/TdP recorrente:** magnésio pode ser considerado (**2b, C-LD**).
+- **QT normal:** magnésio rotineiro não é recomendado (**Classe 3: sem benefício, C-LD**).
 
-## Escore de Tisdale — risco de prolongamento do QTc em paciente internado
+A distinção importa porque TV polimórfica sem QT longo é frequentemente isquêmica e exige tratamento etiológico diferente.
 
-Usado na via de **prevenção** (QT longo identificado, sem TdP ativa) para
-decidir quem precisa de monitorização eletrocardiográfica mais próxima antes
-que a torsades ocorra — não para tratar o evento já instalado.
+### 3. Corrigir eletrólitos, mas não apresentar meta antiga como certeza moderna
+
+Hipocalemia, hipomagnesemia e hipocalcemia reduzem a reserva de repolarização e devem ser corrigidas. A faixa de K⁺ **4,5-5,0 mmol/L** aparece em recomendações/consensos mais antigos com evidência baixa; a AHA 2025 não a transforma em meta universal para toda TdP.
+
+> **VERIFICAÇÃO HUMANA NECESSÁRIA:** metas numéricas de K/Mg, dose/velocidade de MgSO4 e energia específica do choque devem ser validadas contra protocolo institucional antes de virar ordem operacional.
+
+### 4. Pacing/isoproterenol são estratégia de recorrência, não substituto do choque
+
+Em TdP adquirida recorrente associada a bradicardia/pausas, AHA 2025 recomenda consulta especializada para **overdrive pacing ou isoproterenol**; ESC 2022 também reconhece essas estratégias. Elas não devem atrasar o choque de TV polimórfica sustentada.
+
+Não extrapolar isoproterenol para síndrome de QT longo congênito sem avaliação especializada.
+
+## Escore de Tisdale — encaixe correto
+
+O Tisdale foi criado para predizer **prolongamento de QTc em paciente hospitalizado**, não para decidir choque, dose de magnésio ou probabilidade direta de TdP. No estudo original, QTc prolongado foi definido como >500 ms ou aumento >60 ms do basal.
 
 | Variável | Pontos |
-|---|---|
+|---|---:|
 | Idade ≥68 anos | 1 |
 | Sexo feminino | 1 |
 | Diurético de alça | 1 |
-| Potássio sérico ≤3,5mEq/L | 2 |
-| QTc na admissão ≥450ms | 2 |
+| Potássio sérico ≤3,5 mEq/L | 2 |
+| QTc na admissão ≥450 ms | 2 |
 | IAM agudo | 2 |
 | Sepse | 3 |
 | Insuficiência cardíaca | 3 |
 | Um fármaco prolongador de QTc | 3 |
 | ≥2 fármacos prolongadores de QTc | 3 |
-| **Pontuação máxima** | 21 |
 
-**Estratificação de risco** (grupo de validação): baixo risco ≤6 pontos
-(incidência 15%); risco moderado 7-10 pontos (incidência 37%); alto risco ≥11
-pontos (incidência 73%).
+Estratos originais: baixo ≤6, moderado 7-10, alto ≥11. O escore não deve ser automaticamente generalizado para ambulatório, pediatria ou para estimar risco absoluto de TdP.
 
-## Isoproterenol é contraindicação formal no QT longo congênito
+## Conexões prioritárias
 
-O isoproterenol (via de refratariedade ao magnésio) é **reservado ao QT longo
-adquirido**. Na síndrome do QT longo **congênito** ele é contraindicado —
-pode paradoxalmente prolongar ainda mais o QT nesse cenário, em vez de
-encurtá-lo como no adquirido.
+- `torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo`
+- `sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa`
+- fármacos pró-QT (sotalol, ibutilida, metadona, antipsicóticos, antieméticos e outros)
+- hipocalemia/hipomagnesemia/hipocalcemia
+- isquemia miocárdica/ACS quando TV polimórfica ocorre sem QT longo
+- intoxicação digitálica quando houver TV bidirecional/polimórfica por mecanismo tóxico
+
+## Pendências para os próximos lotes
+
+1. Auditar o verbete de sulfato de magnésio para alinhar a frase “primeira linha farmacológica” à prioridade do choque na TV polimórfica sustentada.
+2. Criar módulo de hipomagnesemia e sua relação com hipocalemia refratária, diuréticos, digoxina e risco arrítmico.
+3. Procurar outras ocorrências no corpus de “TV polimórfica → cardioversão sincronizada” e de “magnésio para qualquer TV polimórfica”.
+4. Normalizar exames canônicos de potássio e magnésio em lote seguro, sem edição cega do manifesto monolítico.
