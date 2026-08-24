@@ -29119,5 +29119,68 @@
     ],
     "revisao": "Revisão científica, editorial e documental concluída para integração neste lote, com rastreabilidade pelo documento de origem e fontes registradas.",
     "review_note": "Duke Treadmill Score preservado como instrumento prognóstico histórico; decisões de angiografia e imagem foram atualizadas para o contexto das diretrizes AHA/ACC contemporâneas e não são disparadas pelo escore isoladamente."
+  },
+  {
+    "slug": "passagem-de-plantao-estruturada-i-pass-em-cardiologia",
+    "condicao": "Passagem de plantão de rotina entre médicos em enfermaria de cardiologia ou UTI cardiológica",
+    "resumo": "Checklist dos cinco elementos do programa I-PASS para a passagem de plantão de rotina — distinta do SBAR de deterioração aguda —, com ênfase no plano de contingência, o item mais frequentemente omitido.",
+    "documento_origem": "passagem-de-plantao-estruturada-i-pass-e-reducao-de-erro-medico",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Starmer AJ, Spector ND, Srivastava R, West DC, Rosenbluth G, Allen AD, et al.; I-PASS Study Group. Changes in medical errors after implementation of a handoff program. N Engl J Med. 2014;371(19):1803-1812. DOI: 10.1056/NEJMsa1405556. PMID: 25372088"
+    ],
+    "itens": [
+      {
+        "id": "ipass-cardio-gravidade-numa-palavra",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Comunicar a gravidade do paciente (Illness severity) numa palavra ou classificação curta e padronizada, como primeiro item da passagem de plantão.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-resumo-do-caso",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Apresentar o resumo do caso (Patient summary): diagnóstico, evolução recente e o que motivou a internação ou a situação atual.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-lista-de-acoes-pendentes",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Explicitar a lista de ações pendentes (Action list) — exames a checar, resultados a revisar, procedimentos ainda a fazer no turno seguinte.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-plano-de-contingencia-se-piorar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Declarar explicitamente o plano de contingência (Situation awareness/contingency planning) — o que fazer se a situação mudar, por exemplo 'se a pressão cair abaixo de X, faça Y'. É o elemento mais frequentemente omitido na passagem de plantão não estruturada.",
+        "origem_secao": "Aplicação prática em cardiologia"
+      },
+      {
+        "id": "ipass-cardio-sintese-por-quem-recebe",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Exigir que quem recebe o plantão repita de volta, em suas palavras, o que entendeu (Synthesis by receiver), fechando o ciclo de comunicação em alça fechada antes de encerrar a passagem.",
+        "origem_secao": "O programa I-PASS"
+      },
+      {
+        "id": "ipass-cardio-nao-abreviar-por-falta-de-urgencia",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não tratar a passagem de plantão de rotina como menos crítica que a comunicação de deterioração aguda (SBAR) só por não haver urgência no momento — é justamente a ausência de urgência que faz a informação se perder de forma mais silenciosa.",
+        "origem_secao": "Um problema silencioso, diferente do SBAR"
+      },
+      {
+        "id": "ipass-cardio-extrapolacao-pediatrica-nao-testada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ter em mente que o estudo de origem (10.740 internações, 9 hospitais) foi conduzido majoritariamente em serviços de pediatria, com desenho pré-pós sem grupo controle contemporâneo randomizado — a extrapolação direta para cardiologia de adultos não foi testada especificamente, embora o mecanismo não seja de especificidade pediátrica.",
+        "origem_secao": "Limitações, declaradas com honestidade"
+      }
+    ],
+    "revisao": "Revisado por Dr. Rafael Paes Meirelles, CRM-SP 138266, RQE 134798, com base em Starmer AJ et al.; I-PASS Study Group, N Engl J Med. 2014;371(19):1803-1812 (PMID 25372088), em 21/08/2026."
   }
 ]
