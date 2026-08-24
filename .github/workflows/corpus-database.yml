@@ -29,7 +29,7 @@ permissions:
 
 jobs:
   reconcile:
-    name: Load 5,035 scientific records
+    name: Load full canonical corpus
     runs-on: ubuntu-latest
     services:
       postgres:
