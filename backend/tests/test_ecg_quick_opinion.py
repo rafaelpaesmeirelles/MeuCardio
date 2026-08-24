@@ -11,7 +11,7 @@ from app.models.patient_profile import PatientProfile
 from app.models.prontuario import PatientClinicalAISuggestion, PatientECGRecord
 from app.models.subscription import Subscription
 from app.services.ia import ecg_assist
-from app.services.ia.provedor import ProvedorOpenAI, Resposta
+from app.services.ia.provedor import ProvedorAnthropic, ProvedorOpenAI, Resposta
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -178,6 +178,96 @@ def test_openai_ecg_falls_back_to_gpt4o_after_frontier_bad_request(monkeypatch):
     assert "response_format" in calls[0]
     assert "response_format" not in calls[1]
     assert calls[2]["messages"][1]["content"][1]["image_url"]["detail"] == "high"
+
+
+def test_openai_ecg_ignores_anthropic_model_name(monkeypatch):
+    calls = []
+
+    def create(**kwargs):
+        calls.append(kwargs)
+        return SimpleNamespace(
+            usage=SimpleNamespace(prompt_tokens=10, completion_tokens=20),
+            choices=[SimpleNamespace(
+                message=SimpleNamespace(content='{"quality":"limitada"}'),
+                finish_reason="stop",
+            )],
+        )
+
+    provider = ProvedorOpenAI.__new__(ProvedorOpenAI)
+    provider._modelo = "gpt-4o-mini"
+    provider._cliente = SimpleNamespace(
+        chat=SimpleNamespace(completions=SimpleNamespace(create=create)),
+    )
+    monkeypatch.setattr(settings, "ai_max_output_tokens", 4096)
+
+    response = provider.analisar_arquivo_clinico(
+        "sistema", "instrucao", b"jpeg", "image/jpeg", modelo="claude-sonnet-4-6",
+    )
+
+    assert response.modelo == "gpt-5.6-sol"
+    assert calls[0]["model"] == "gpt-5.6-sol"
+
+
+def test_anthropic_ecg_ignores_openai_model_name(monkeypatch):
+    calls = []
+
+    def create(**kwargs):
+        calls.append(kwargs)
+        return SimpleNamespace(
+            usage=SimpleNamespace(input_tokens=11, output_tokens=22),
+            content=[SimpleNamespace(type="text", text='{"quality":"limitada"}')],
+            stop_reason="end_turn",
+        )
+
+    provider = ProvedorAnthropic.__new__(ProvedorAnthropic)
+    provider._modelo = "claude-sonnet-4-6"
+    provider._cliente = SimpleNamespace(messages=SimpleNamespace(create=create))
+    monkeypatch.setattr(settings, "ai_max_output_tokens", 4096)
+
+    response = provider.analisar_arquivo_clinico(
+        "sistema", "instrucao", b"jpeg", "image/jpeg", modelo="gpt-5.6-sol",
+    )
+
+    assert response.modelo == "claude-sonnet-4-6"
+    assert calls[0]["model"] == "claude-sonnet-4-6"
+    assert calls[0]["messages"][0]["content"][0]["type"] == "image"
+
+
+def test_anthropic_ecg_falls_back_from_rejected_claude_model(monkeypatch):
+    from anthropic import BadRequestError
+
+    calls = []
+
+    def create(**kwargs):
+        calls.append(kwargs)
+        if kwargs["model"] == "claude-modelo-sem-acesso":
+            request = httpx.Request("POST", "https://api.anthropic.com/v1/messages")
+            response = httpx.Response(400, request=request)
+            raise BadRequestError("model not available", response=response, body={})
+        return SimpleNamespace(
+            usage=SimpleNamespace(input_tokens=11, output_tokens=22),
+            content=[SimpleNamespace(type="text", text='{"quality":"limitada"}')],
+            stop_reason="end_turn",
+        )
+
+    provider = ProvedorAnthropic.__new__(ProvedorAnthropic)
+    provider._modelo = "claude-sonnet-4-6"
+    provider._cliente = SimpleNamespace(messages=SimpleNamespace(create=create))
+    monkeypatch.setattr(settings, "ai_max_output_tokens", 4096)
+
+    response = provider.analisar_arquivo_clinico(
+        "sistema",
+        "instrucao",
+        b"jpeg",
+        "image/jpeg",
+        modelo="claude-modelo-sem-acesso",
+    )
+
+    assert response.modelo == "claude-sonnet-4-6"
+    assert [call["model"] for call in calls] == [
+        "claude-modelo-sem-acesso",
+        "claude-sonnet-4-6",
+    ]
 
 
 def test_quick_ecg_returns_transient_opinion_without_patient_record(
