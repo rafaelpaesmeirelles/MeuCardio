@@ -135,6 +135,51 @@ def test_openai_ecg_falls_back_to_gpt4o_when_frontier_is_unavailable(monkeypatch
     assert calls[1]["temperature"] == 0
 
 
+def test_openai_ecg_falls_back_to_gpt4o_after_frontier_bad_request(monkeypatch):
+    from openai import BadRequestError
+
+    calls = []
+
+    def create(**kwargs):
+        calls.append(kwargs)
+        if kwargs["model"] == "gpt-5.6-sol":
+            request = httpx.Request("POST", "https://api.openai.com/v1/chat/completions")
+            response = httpx.Response(400, request=request)
+            raise BadRequestError(
+                "parâmetro ou acesso incompatível com o modelo",
+                response=response,
+                body={"error": {"type": "invalid_request_error"}},
+            )
+        return SimpleNamespace(
+            usage=SimpleNamespace(prompt_tokens=12, completion_tokens=24),
+            choices=[SimpleNamespace(
+                message=SimpleNamespace(content='{"quality":"limitada"}'),
+                finish_reason="stop",
+            )],
+        )
+
+    provider = ProvedorOpenAI.__new__(ProvedorOpenAI)
+    provider._modelo = "modelo-textual-do-chat"
+    provider._cliente = SimpleNamespace(
+        chat=SimpleNamespace(completions=SimpleNamespace(create=create)),
+    )
+    monkeypatch.setattr(settings, "ai_max_output_tokens", 4096)
+
+    response = provider.analisar_arquivo_clinico(
+        "sistema", "instrucao", b"jpeg", "image/jpeg",
+    )
+
+    assert response.modelo == "gpt-4o"
+    assert [call["model"] for call in calls] == [
+        "gpt-5.6-sol",
+        "gpt-5.6-sol",
+        "gpt-4o",
+    ]
+    assert "response_format" in calls[0]
+    assert "response_format" not in calls[1]
+    assert calls[2]["messages"][1]["content"][1]["image_url"]["detail"] == "high"
+
+
 def test_quick_ecg_returns_transient_opinion_without_patient_record(
     client, db, criar_usuario, monkeypatch,
 ):

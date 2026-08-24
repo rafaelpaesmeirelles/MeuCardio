@@ -262,16 +262,26 @@ class ProvedorOpenAI(ProvedorIA):
         try:
             resp = executar(modelo_efetivo)
         except Exception as error:
-            from openai import NotFoundError
+            from openai import BadRequestError, NotFoundError
 
-            if not isinstance(error, NotFoundError) or modelo_efetivo == self._MODELO_ECG_FALLBACK:
+            if (
+                not isinstance(error, (BadRequestError, NotFoundError))
+                or modelo_efetivo == self._MODELO_ECG_FALLBACK
+            ):
                 raise
-            # Contas/projetos podem não ter o frontier liberado. Mantém o
-            # melhor modelo como primeira tentativa, mas não derruba a função.
+            # A API pode representar modelo sem acesso tanto como 404 quanto
+            # como 400. O 400 também ocorre quando a conta aceita o modelo,
+            # mas rejeita algum parâmetro multimodal dele. Depois das duas
+            # tentativas controladas no modelo principal (com e sem JSON
+            # mode), usamos uma única vez o fallback visual consolidado.
+            # Erros do fallback continuam subindo normalmente: não escondemos
+            # imagem inválida, credencial, quota nem falha real do provedor.
             logger.warning(
-                "Modelo visual de ECG indisponível; usando fallback (requested=%s, fallback=%s)",
+                "Modelo visual de ECG rejeitado; usando fallback "
+                "(requested=%s, fallback=%s, status=%s)",
                 modelo_efetivo,
                 self._MODELO_ECG_FALLBACK,
+                getattr(error, "status_code", None),
             )
             modelo_efetivo = self._MODELO_ECG_FALLBACK
             resp = executar(modelo_efetivo)
