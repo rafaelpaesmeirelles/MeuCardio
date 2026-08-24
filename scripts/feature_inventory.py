@@ -32,11 +32,11 @@ EXPECTED_APP_ROUTES = {
     "/material-paciente", "/emergencia", "/trilhas/:slug", "/casos-clinicos",
     "/casos-clinicos/:slug", "/checklists", "/checklists/alta/:id",
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
-    "/round", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
+    "/round", "/prontuario", "/ecg-ia", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
-    "/tour", "/verificacao-identidade",
+    "/tour", "/em-breve", "/verificacao-identidade",
     "/sincronizacao",
 }
 
@@ -46,9 +46,9 @@ EXPECTED_NAV_ROUTES = {
     "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
-    "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas", "/trilhas/timeline",
-    "/usuarios-online", "/minha-conta", "/assinatura", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
-    "/sincronizacao", "/admin/usuarios", "/tour",
+    "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/ecg-ia", "/trilhas", "/trilhas/timeline",
+    "/usuarios-online", "/minha-conta", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
+    "/sincronizacao", "/admin/usuarios", "/tour", "/tour?origem=assinatura&modo=quick",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -63,10 +63,10 @@ EXPECTED_BACKEND_ROUTERS = {
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router", "exportacao_universal.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
-    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
-    "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
-    "related_content.router", "knowledge_graph.router", "patient_profiles.router",
-    "account_sync.router",
+    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router", "agenda_clinica.router",
+    "encounter_artifacts.router", "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
+    "related_content.router", "knowledge_graph.router", "patient_profiles.router", "patient_timeline.router",
+    "account_sync.router", "ecg_quick.router",
 }
 
 EXPECTED_SUPPORT_FILES = {
@@ -78,6 +78,8 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/components/ClinicalMobileNav.tsx",
     "frontend/src/pages/PainelClinicalOS.tsx",
     "frontend/src/pages/TourClinicalOS.tsx",
+    "frontend/src/pages/EmBreve.tsx",
+    "frontend/src/pages/ECGQuickOpinion.tsx",
     "frontend/src/pages/Admin.tsx",
     "frontend/src/pages/AdminGerenciarUsuario.tsx",
     "frontend/src/pages/Apresentacao.tsx",
@@ -110,6 +112,7 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/drug_insights.py",
     "backend/app/api/email.py",
     "backend/app/api/emergencia.py",
+    "backend/app/api/ecg_quick.py",
     "backend/app/api/exportacao_universal.py",
     "backend/app/api/guideline_updates.py",
     "backend/app/api/mail360_status.py",

@@ -31,6 +31,8 @@ const Calculadora = lazy(() => import("./pages/Calculadora"));
 const Medicamentos = lazy(() => import("./pages/MedicamentosClinicalCommand"));
 const Interacoes = lazy(() => import("./pages/Interacoes"));
 const Condicoes = lazy(() => import("./pages/Condicoes"));
+const Prontuario = lazy(() => import("./pages/Prontuario"));
+const ECGQuickOpinion = lazy(() => import("./pages/ECGQuickOpinion"));
 const Round = lazy(() => import("./pages/RoundGerenciavel"));
 const Assistente = lazy(() => import("./pages/Assistente"));
 const Admin = lazy(() => import("./pages/Admin"));
@@ -50,7 +52,7 @@ const Estudo = lazy(() => import("./pages/Estudo"));
 const Agenda = lazy(() => import("./pages/Agenda"));
 const Templates = lazy(() => import("./pages/Templates"));
 const AvaliacaoPreOperatoria = lazy(() => import("./pages/AvaliacaoPreOperatoria"));
-const Assinatura = lazy(() => import("./pages/Assinatura"));
+const EmBreve = lazy(() => import("./pages/EmBreve"));
 const MinhaConta = lazy(() => import("./pages/MinhaConta"));
 const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
@@ -123,7 +125,7 @@ export default function App() {
     return <Navigate to="/minha-conta" replace />;
   }
 
-  if (usuario.kyc_required && location.pathname !== "/verificacao-identidade") {
+  if (usuario.kyc_required && !usuario.profile_completion_required && location.pathname !== "/verificacao-identidade") {
     return <Navigate to="/verificacao-identidade" replace />;
   }
 
@@ -172,13 +174,15 @@ export default function App() {
           <Route path="cursos/:slug" element={<Navigate to="/cursos" replace />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="assistente" element={<Assistente />} />
+          <Route path="prontuario" element={<Prontuario />} />
+          <Route path="ecg-ia" element={<ECGQuickOpinion />} />
           <Route path="round" element={<Round />} />
           <Route path="agenda" element={<Agenda />} />
           <Route path="documentos" element={<Templates />} />
           <Route path="exportar" element={<ExportarConteudo />} />
           <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
           <Route path="receituario" element={<Receituario />} />
-          <Route path="assinatura" element={<Assinatura />} />
+          <Route path="assinatura" element={<Navigate to="/tour?origem=assinatura&modo=quick" replace />} />
           <Route path="minha-conta" element={<MinhaConta />} />
           <Route path="sincronizacao" element={<Sincronizacao />} />
           <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
@@ -197,6 +201,7 @@ export default function App() {
           {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
         </Route>
         <Route path="/tour" element={<Tour />} />
+        <Route path="/em-breve" element={<EmBreve />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </RotasSuspensas>

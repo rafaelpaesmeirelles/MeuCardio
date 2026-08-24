@@ -2876,6 +2876,312 @@
     "version": 1
   },
   {
+    "slug": "fadiga-e-intolerancia-ao-esforco",
+    "name": "Fadiga e intolerância ao esforço",
+    "aliases": [
+      "cansaço aos esforços",
+      "queda de desempenho",
+      "baixa tolerância ao exercício",
+      "fadiga ao esforço"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria",
+      "cardiooncologia",
+      "gravidez"
+    ],
+    "summary": "Triagem de fadiga e queda de tolerância ao esforço para reconhecer red flags, definir o sintoma que realmente limita o exercício e orientar investigação cardiovascular ou sistêmica sem presumir insuficiência cardíaca.",
+    "questions": [
+      {
+        "id": "rest_dyspnea_hypoxemia",
+        "label": "Há dispneia em repouso, hipóxia/cianose, hipotensão ou alteração do estado mental?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "exertional_chest_pain_or_syncope",
+        "label": "Há dor/pressão torácica importante ou síncope/pré-síncope durante o esforço?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "dyspnea_congestion",
+        "label": "O esforço é limitado por dispneia, ortopneia, edema ou ganho recente de peso?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fenótipo da limitação"
+      },
+      {
+        "id": "palpitations_or_hr_response",
+        "label": "Há palpitações ou percepção de frequência cardíaca inadequada durante o esforço?",
+        "type": "boolean",
+        "section": "Ritmo"
+      },
+      {
+        "id": "prior_pulmonary_embolism",
+        "label": "Há antecedente de embolia pulmonar com dispneia ou limitação persistente/nova desde o evento?",
+        "type": "boolean",
+        "section": "Tromboembolismo"
+      },
+      {
+        "id": "known_structural_disease",
+        "label": "Há valvopatia, cardiomiopatia, insuficiência cardíaca ou hipertensão pulmonar conhecida/suspeita?",
+        "type": "boolean",
+        "section": "Doença estrutural"
+      },
+      {
+        "id": "systemic_clues",
+        "label": "Há sangramento, febre, perda ponderal, doença renal, sintomas tireoidianos, distúrbio importante do sono ou medicamento novo/ajustado?",
+        "type": "boolean",
+        "section": "Causas sistêmicas"
+      },
+      {
+        "id": "persistent_unexplained",
+        "label": "Após avaliação clínica inicial, a limitação permanece relevante sem explicação suficiente pelos achados de repouso?",
+        "type": "boolean",
+        "section": "Próximo passo"
+      }
+    ],
+    "rules": [
+      {
+        "id": "instabilidade",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "rest_dyspnea_hypoxemia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dispneia em repouso, hipoxemia/cianose, hipotensão ou alteração mental pode representar insuficiência cardiopulmonar aguda"
+          ],
+          "emergency_flow": [
+            "Avaliar ABC, sinais vitais/oximetria, ECG e causa aguda; não conduzir como fadiga ambulatorial"
+          ]
+        }
+      },
+      {
+        "id": "esforco-alto-risco",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "exertional_chest_pain_or_syncope",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dor torácica ou síncope/pré-síncope durante o esforço exige excluir isquemia, arritmia e doença estrutural de alto risco"
+          ],
+          "suggested_tests": [
+            "ECG e avaliação cardiovascular presencial; usar os fluxos específicos de dor torácica ou síncope conforme o sintoma dominante"
+          ]
+        }
+      },
+      {
+        "id": "congestao",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "dyspnea_congestion",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Insuficiência cardíaca",
+            "Estenose aórtica",
+            "Hipertensão pulmonar"
+          ],
+          "suggested_tests": [
+            "ECG, avaliação clínica de congestão, peptídeo natriurético quando houver suspeita de insuficiência cardíaca e ecocardiograma conforme contexto"
+          ]
+        }
+      },
+      {
+        "id": "ritmo",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "palpitations_or_hr_response",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Arritmia",
+            "Incompetência cronotrópica"
+          ],
+          "suggested_tests": [
+            "ECG; monitorização ambulatorial se episódico; teste sob esforço quando a pergunta clínica for a resposta da frequência ou arritmia induzida pelo exercício"
+          ]
+        }
+      },
+      {
+        "id": "pos-ep",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "prior_pulmonary_embolism",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Limitação persistente ou nova após embolia pulmonar exige reconsiderar doença tromboembólica pulmonar crônica"
+          ],
+          "differentials": [
+            "Hipertensão pulmonar"
+          ],
+          "suggested_tests": [
+            "Investigar CTEPH/CTEPD conforme algoritmo específico e disponibilidade local"
+          ]
+        }
+      },
+      {
+        "id": "estrutural",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "known_structural_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Cardiomiopatia hipertrófica",
+            "Estenose aórtica",
+            "Hipertensão pulmonar",
+            "Insuficiência cardíaca"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma e avaliação dirigida à doença; considerar teste sob esforço quando os sintomas e os achados de repouso forem discordantes"
+          ]
+        }
+      },
+      {
+        "id": "sistemico",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "systemic_clues",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Hemograma, função renal/eletrólitos, tireoide, ferro ou outros exames apenas conforme a hipótese clínica; revisar medicamentos e sono"
+          ],
+          "messages": [
+            "Causas extracardíacas são comuns e podem coexistir com doença cardiovascular"
+          ]
+        }
+      },
+      {
+        "id": "inexplicada",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "persistent_unexplained",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Considerar teste de esforço ou CPET quando a pergunta exigir avaliar limitação cardiopulmonar, resposta cronotrópica ou mecanismo que aparece apenas no exercício"
+          ],
+          "messages": [
+            "ECG ou ecocardiograma de repouso normais não excluem toda doença induzida pelo esforço"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Sinais vitais, oximetria quando indicada e exame cardiopulmonar",
+      "ECG quando houver suspeita cardiovascular ou limitação inexplicada"
+    ],
+    "differentials": [
+      "Insuficiência cardíaca",
+      "Cardiomiopatia hipertrófica",
+      "Estenose aórtica",
+      "Hipertensão pulmonar",
+      "Arritmia",
+      "Anemia",
+      "Disfunção tireoidiana",
+      "Doença pulmonar",
+      "Efeito medicamentoso",
+      "Descondicionamento"
+    ],
+    "red_flags": [
+      "Dispneia em repouso/hipoxemia",
+      "Hipotensão ou alteração mental",
+      "Dor torácica no esforço",
+      "Síncope/pré-síncope no esforço",
+      "Palpitação com sintomas graves",
+      "Deterioração rápida com congestão"
+    ],
+    "ambulatory_flow": [
+      "Definir qual sintoma realmente limita o esforço",
+      "Revisar medicamentos e causas sistêmicas",
+      "Usar ECG/ecocardiograma/laboratório apenas conforme hipótese",
+      "Se repouso não explicar a limitação, considerar avaliação sob esforço ou CPET conforme a pergunta clínica"
+    ],
+    "emergency_flow": [
+      "Redirecionar para o fluxo específico de dor torácica, dispneia, palpitações ou síncope diante de red flags",
+      "Estabilizar e investigar a síndrome aguda antes da queixa crônica de fadiga"
+    ],
+    "tags": [
+      "fadiga",
+      "cansaço",
+      "intolerância ao esforço",
+      "CPET",
+      "teste de esforço",
+      "insuficiência cardíaca",
+      "valvopatia",
+      "hipertensão pulmonar"
+    ],
+    "source_refs": [
+      "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension",
+      "2024 AHA/ACC Multisociety Guideline for Hypertrophic Cardiomyopathy",
+      "2025 ESC/EACTS Guidelines for the management of valvular heart disease"
+    ],
+    "source_urls": [
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension",
+      "https://professional.heart.org/en/science-news/2024-guideline-for-the-management-of-hypertrophic-cardiomyopathy",
+      "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Valvular-Heart-Disease-Management-of"
+    ],
+    "review_status": "revisado",
+    "review_note": "Síntese sindrômica original derivada de recomendações específicas de IC, hipertensão pulmonar, CMH e valvopatias. Não existe guideline único de fadiga; classes de recomendação não são extrapoladas para todo paciente com cansaço.",
+    "version": 1
+  },
+  {
     "slug": "claudicacao-e-dor-em-membro-ao-esforco-ou-repouso",
     "name": "Claudicação e dor em membro ao esforço ou em repouso",
     "aliases": [

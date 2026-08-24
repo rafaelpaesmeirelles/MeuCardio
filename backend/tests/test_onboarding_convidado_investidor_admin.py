@@ -30,6 +30,7 @@ from PIL import Image
 
 from app.models.audit import AuditLog
 from app.models.kyc import KycVerification
+from app.models.kyc_waiver import KycRequirementWaiver
 from app.models.subscription import Subscription
 from app.models.user import User
 
@@ -227,6 +228,41 @@ class TestKycConvidado:
         registro = db.query(KycVerification).filter(KycVerification.owner_id == criado.id).first()
         assert registro.aprovado_por is None
         assert registro.status == "aprovado"
+
+    def test_socio_tem_acesso_integral_kyc_somente_selfie_e_depois_tour(self, client, db, criar_usuario):
+        socio, token = criar_usuario(email="socio-onboarding@teste.local", role="admin")
+        socio.convidado = True
+        socio.investidor = False
+        socio.profile_completion_required = False
+        socio.onboarding_visto = False
+        db.add(KycRequirementWaiver(
+            owner_id=socio.id,
+            professional_front=True,
+            professional_back=True,
+            personal_front=True,
+            personal_back=True,
+            personal_digital=True,
+            selfie=False,
+        ))
+        db.commit()
+
+        antes = client.get("/api/auth/me", headers=_headers(token))
+        assert antes.status_code == 200
+        assert antes.json()["socio"] is True
+        assert antes.json()["kyc_required"] is True
+        assert antes.json()["onboarding_pendente"] is False
+
+        somente_selfie = {
+            "selfie": ("selfie.jpg", _jpeg((30, 60, 90)), "image/jpeg"),
+        }
+        submissao = client.post("/api/kyc/submeter", files=somente_selfie, headers=_headers(token))
+        assert submissao.status_code == 201, submissao.text
+        assert submissao.json()["status"] == "aprovado"
+        assert submissao.json()["liberado"] is True
+
+        depois = client.get("/api/auth/me", headers=_headers(token)).json()
+        assert depois["kyc_required"] is False
+        assert depois["onboarding_pendente"] is True
 
     def test_convidado_nao_aparece_na_fila_de_kyc_pendente(self, client, db, admin):
         _, token_admin = admin

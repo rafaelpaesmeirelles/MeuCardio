@@ -5,7 +5,7 @@ import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
-type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number };
+type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number; featured?: boolean };
 type NavSection = { title: string; items: NavItem[] };
 
 const CLINICA_DECISAO: NavItem[] = [
@@ -36,7 +36,9 @@ const ESTUDO_EDUCACAO: NavItem[] = [
 ];
 
 const TRABALHO_ASSISTENCIA: NavItem[] = [
-  { to: "/round", label: "Pacientes", icon: "pacientes" },
+  { to: "/ecg-ia", label: "IA para ECG", icon: "ecg", featured: true },
+  { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
+  { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
   { to: "/agenda", label: "Agenda", icon: "agenda" },
@@ -67,15 +69,16 @@ const ADMINISTRACAO: NavItem[] = [
   { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
   { to: "/minha-conta", label: "Configurações / Minha Conta", icon: "conta" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
-  { to: "/assinatura", label: "Planos & Assinatura", icon: "check" },
+  { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
   { to: "/termos", label: "Termos de uso", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
 ];
 
 function Item({ item }: { item: NavItem }) {
   return (
-    <NavLink to={item.to} className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}`}>
+    <NavLink to={item.to} className={({ isActive }) => `ccc-nav__item${isActive ? " is-active" : ""}${item.featured ? " is-featured" : ""}`}>
       <Icone nome={item.icon} /><span>{item.label}</span>
+      {item.featured && <span className="ccc-nav__featured">Destaque</span>}
       {!!item.badge && <span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}
     </NavLink>
   );

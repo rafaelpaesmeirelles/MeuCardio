@@ -34,3 +34,7 @@ from app.models.agenda import (  # noqa: F401
     SchedulingService, ServiceResourceRequirement,
 )
 from app.models.knowledge import KnowledgeEntity, KnowledgeRelation  # noqa: F401
+from app.models.prontuario import (  # noqa: F401
+    ClinicalEncounter, PatientClinicalItem, PatientExamResult,
+    PatientECGRecord, PatientClinicalAISuggestion,
+)

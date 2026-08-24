@@ -73,12 +73,16 @@ def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
         "/cursos", "/apresentacao", "/round", "/receituario", "/documentos",
         "/material-paciente", "/agenda", "/corvia-mail",
         "/telediagnostico", "/indicadores", "/exportar", "/favoritos", "/busca",
-        "/assistente", "/usuarios-online", "/sincronizacao", "/minha-conta", "/assinatura",
+        "/assistente", "/usuarios-online", "/sincronizacao", "/minha-conta",
         "/tour", "/admin", "/admin/usuarios", "/fila-telediagnostico",
     )
     for route in routes:
         assert f'to: "{route}"' in panel
         assert f'path="{route.lstrip("/")}' in app or f'path="{route}"' in app
+
+    assert 'to: "/tour?origem=assinatura&modo=quick"' in panel
+    assert 'path="assinatura"' in app
+    assert 'path="/em-breve"' in app or 'path="em-breve"' in app
 
 
 def test_home_full_mobility_functions_are_not_removed_during_visual_rebuild():
@@ -119,7 +123,7 @@ def test_navigation_matches_reference_six_area_information_architecture():
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
             "/indicadores", "/galeria", "/cursos", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar", "/assistente",
-            "/favoritos", "/minha-conta", "/assinatura", "/tour",
+            "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
         ):
             assert route in source
 
@@ -128,7 +132,7 @@ def test_navigation_matches_reference_six_area_information_architecture():
     assert ".ccc-nav--reference" in nav_css
     assert ".cc-mobile-more__grid" in nav_css
 
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]
     positions = [mobile.index(f"<span>{label}</span>") for label in labels]
     assert positions == sorted(positions)
     assert len(positions) == 5

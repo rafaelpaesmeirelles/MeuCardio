@@ -4,45 +4,97 @@ slug: atropina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/", "ATROPINE SULFATE INJECTION — bula FDA", "Atropine (ACLS) — ACLS Certification Institute"]
+source_refs: ["Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376 · https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support", "American Heart Association. Adult Bradycardia With a Pulse Algorithm. 2025 · https://www.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Bradycardia-250514.pdf", "Atropine Sulfate Injection — FDA Prescribing Information, 2026 · https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214652s005lbl.pdf", "Atropine Sulfate Injection — DailyMed current labeling · https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c82cb295-ffce-47d6-97ad-a8aa723f4e4f"]
 ---
 
 # Atropina
 
-## Nome generico
-Atropina (sulfato de atropina)
+## Nome genérico
+
+Atropina (sulfato de atropina).
 
 ## Classe
-Antimuscarínico (antagonista competitivo e reversível dos receptores muscarínicos de acetilcolina)
 
-## Mecanismo acao
-Antagonismo competitivo dos receptores muscarínicos pós-ganglionares de acetilcolina — no coração, bloqueia o tônus vagal sobre o nó sinusal e o nó atrioventricular, aumentando a frequência de disparo sinusal e a condução AV
-- **fonte**: StatPearls (NCBI Bookshelf)
+Antimuscarínico: antagonista competitivo dos receptores muscarínicos de acetilcolina.
 
-## Indicacoes cardiologicas
-Terapia de primeira linha (classe IIa) para bradicardia sintomática na ausência de causas reversíveis identificáveis
-- **fonte**: StatPearls (NCBI Bookshelf)
+## Mecanismo de ação cardiovascular
 
-## Dose — bradicardia sintomatica (ACLS)
-0,5 a 1 mg por via intravenosa, repetido a cada 3-5 minutos até resposta desejada de frequência cardíaca, até dose total máxima de 3 mg (equivalente a aproximadamente 0,04 mg/kg). **Evitar doses abaixo de 0,5 mg** — podem piorar paradoxalmente a bradicardia por estimulação vagal central em vez de bloqueá-la.
-- **fonte**: ACLS dosing guidelines; StatPearls (NCBI Bookshelf)
+O bloqueio muscarínico reduz a influência vagal sobre o nó sinusal e o nó atrioventricular, podendo aumentar a frequência sinusal e a condução AV. A resposta depende do mecanismo da bradicardia e da integridade da inervação autonômica.
 
-## Limitacoes de eficacia
-Provavelmente ineficaz no bloqueio AV de segundo grau Mobitz II ou no bloqueio AV total com QRS largo — nesses casos o bloqueio costuma ser infra-nodal (abaixo do nó AV), fora do alcance do mecanismo de ação vagolítico da atropina. Nesses cenários, não atrasar a marca-passo transcutâneo esperando resposta à droga.
+## Papel na bradicardia aguda do adulto
 
-## Cautela especifica — isquemia coronariana
-Em síndrome coronariana aguda ou isquemia ativa, usar com cautela — o aumento de frequência cardíaca induzido pela atropina eleva o consumo miocárdico de oxigênio e pode piorar a isquemia. Em uso recorrente nesse contexto, limitar a dose total a 2-3 mg.
+Nas diretrizes AHA 2025 de suporte avançado, em **bradicardia aguda associada a comprometimento hemodinâmico**, atropina é considerada uma opção razoável para aumentar a frequência cardíaca (**Classe 2a, nível B-NR**).
+
+Isso não significa tratar qualquer frequência baixa. Bradicardia fisiológica pode ocorrer em pessoas saudáveis, atletas e durante o sono. A prioridade é decidir se há sintomas/sinais de hipoperfusão atribuíveis à bradicardia e investigar causas reversíveis em paralelo.
+
+AHA 2025 também recomenda avaliar e tratar causas reversíveis da bradicardia aguda (**Classe 1, nível C-EO**), incluindo isquemia miocárdica, hipóxia, distúrbios eletrolíticos/metabólicos e medicamentos/toxinas conforme o contexto.
+
+## Dose — bradicardia sintomática com repercussão (AHA 2025)
+
+**1 mg IV**, podendo repetir a cada **3–5 minutos**, até **3 mg de dose total máxima**.
+
+A formulação adulta antiga “0,5–1 mg” não deve ser usada no algoritmo ACLS 2025. Doses de atropina variam em outras indicações; não extrapolar a dose da bradicardia para intoxicação por organofosforado, uso perioperatório ou indicação pediátrica.
+
+## Se a atropina não resolver a instabilidade
+
+AHA 2025 considera que, quando a bradicardia não responde à atropina, **estimulação transcutânea e/ou agonista adrenérgico com efeito cronotrópico** (por exemplo, adrenalina ou dopamina em infusão) podem ser utilizados como ponte (**Classe 2b, nível C-LD**).
+
+Na bradicardia persistentemente instável e refratária à terapia medicamentosa, **marca-passo transvenoso temporário** é considerado razoável (**Classe 2a, nível C-LD**). A evidência para estimulação temporária é limitada e predominantemente observacional; a escolha de ponte depende do mecanismo, gravidade, resposta e recursos disponíveis.
+
+## Limitações de eficácia
+
+A atropina atua principalmente por antagonismo vagal; portanto, sua eficácia não é uniforme entre mecanismos de bradicardia. Bloqueio AV avançado e doença distal do sistema de condução devem reduzir o limiar para preparação de estimulação e avaliação especializada, sobretudo quando há instabilidade.
+
+Em **coração transplantado denervado**, a resposta à atropina é ausente ou imprevisível; rotulagens de atropina injetável registram que ela pode não ter efeito sobre a bradicardia do coração transplantado. Não se deve depender da atropina como estratégia padrão nesse cenário.
+
+## Doença coronariana / isquemia
+
+A atropina pode produzir taquicardia e aumentar a demanda miocárdica de oxigênio. Rotulagens FDA/DailyMed atuais orientam que, quando doses repetidas são necessárias em pacientes com doença coronariana, a dose total seja limitada a aproximadamente **0,03–0,04 mg/kg**; algumas apresentações expressam esse limite também como **2–3 mg**.
+
+Esse alerta regulatório não substitui o algoritmo de bradicardia da AHA: em paciente com comprometimento hemodinâmico e suspeita de isquemia, a decisão deve integrar perfusão, ECG, mecanismo da bradicardia, resposta inicial e necessidade de estimulação/terapia causal.
+
+## Contraindicações versus advertências
+
+**A rotulagem FDA/DailyMed atual de atropina injetável lista “nenhuma” contraindicação formal.** Portanto, glaucoma, obstrução pilórica e retenção urinária não devem ser apresentados como contraindicações absolutas da formulação injetável em um contexto emergencial.
+
+São, entretanto, **advertências/precauções relevantes** em rotulagens atuais:
+
+- atropina pode precipitar glaucoma agudo;
+- pode converter obstrução pilórica parcial em obstrução completa;
+- pode precipitar retenção urinária completa em pacientes predispostos, como aqueles com hipertrofia prostática;
+- pode espessar secreções brônquicas e favorecer tampões em doença pulmonar crônica;
+- pode provocar taquicardia clinicamente importante, especialmente relevante em doença coronariana.
+
+Hipersensibilidade e anafilaxia são riscos descritos em algumas apresentações e exigem manejo apropriado; não assumir que todas as formulações compartilham exatamente a mesma seção regulatória sem conferir a bula do produto utilizado.
 
 ## Efeitos adversos
-Boca seca, visão turva, fotofobia, taquicardia — diretamente relacionados ao efeito antimuscarínico. Anidrose (pode causar intolerância ao calor). Retenção urinária e constipação, mais relevantes em idoso. Em dose alta: midríase, hipertermia, delirium, arritmia.
 
-## Contraindicacoes
-- Glaucoma de ângulo estreito
-- Obstrução gastrointestinal ou pilórica
-- Retenção urinária por obstrução de via de saída vesical
-- Colite ulcerativa grave/megacólon tóxico
-- Miastenia gravis (piora a fraqueza muscular)
+Os efeitos adversos decorrem predominantemente da ação antimuscarínica e incluem:
 
-## Contraindicacao especifica — transplante cardiaco
-Ineficaz e deve ser evitada no tratamento de bradicardia sinusal em pacientes transplantados cardíacos sem reinervação autonômica — como o mecanismo de ação depende da inibição do tônus vagal, e o coração transplantado não possui inervação vagal intacta, a atropina não produz o efeito cronotrópico esperado nesses pacientes
-- **fonte**: StatPearls (NCBI Bookshelf)
+- boca seca;
+- visão turva, midríase e fotofobia;
+- taquicardia;
+- redução da sudorese e risco de hipertermia;
+- retenção urinária e constipação;
+- confusão/delirium, especialmente em maior exposição e em pacientes vulneráveis;
+- arritmias em contexto predisponente.
+
+A intensidade depende de dose, via, comorbidades e exposição cumulativa.
+
+## Interações e monitorização
+
+Rotulagens de atropina injetável descrevem interação com **mexiletina**, com redução da velocidade de absorção da mexiletina. Em uso agudo cardiovascular, a revisão da lista de medicamentos continua importante porque a própria causa da bradicardia pode ser farmacológica — por exemplo, betabloqueadores, bloqueadores de canais de cálcio não di-hidropiridínicos e digoxina.
+
+Monitorizar frequência e ritmo, pressão arterial, sintomas, perfusão e resposta ao tratamento. ECG de 12 derivações deve ser obtido assim que possível sem atrasar estabilização de um paciente instável.
+
+## Conexões no CorVIA
+
+- bradicardia sintomática / algoritmo AHA 2025;
+- doença do nó sinusal;
+- bloqueios AV;
+- marca-passo transcutâneo e transvenoso temporário;
+- hipercalemia e síndrome BRASH;
+- toxicidade por betabloqueador, bloqueador de canal de cálcio e digoxina;
+- isquemia/infarto com bradiarritmia;
+- coração transplantado;
+- atropina pediátrica, que possui dose e algoritmo próprios.

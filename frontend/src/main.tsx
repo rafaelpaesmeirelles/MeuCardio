@@ -71,6 +71,7 @@ import "./styles/corvia-via-blue-global.css";
 import "./styles/product-stabilization-final.css";
 import "./styles/clinical-pixel-polish-conservative.css";
 import "./styles/home-desktop-symmetric-personalizable.css";
+import "./styles/clinical-ecg-featured.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;

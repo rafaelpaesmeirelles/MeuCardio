@@ -40,6 +40,9 @@ services:
       # em produção, ainda condicionadas ao consentimento individual do médico
       # (users.ia_ferramentas_consent_em) e bloqueadas para Investidor.
       AI_ASSISTANT_TOOLS_ENABLED: "true"
+      # A rota exige consentimento explícito a cada ECG e não persiste o
+      # arquivo. Em produção, a capacidade solicitada faz parte do produto.
+      AI_CLINICAL_MULTIMODAL_ENABLED: "true"
     depends_on:
       db:
         condition: service_healthy

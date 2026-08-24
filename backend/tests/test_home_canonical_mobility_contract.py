@@ -69,7 +69,7 @@ def test_prancha_e_navegacao_mobile_permanecem_canonicas_com_p1():
     assert 'CorVIA Clinical OS' in home
     assert 'Tudo com Tudo' in home
 
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]
     posicoes = [mobile.index(f"<span>{label}</span>") for label in labels]
     assert posicoes == sorted(posicoes)
     assert 'className="cc-mobile-more__assistant"' in mobile

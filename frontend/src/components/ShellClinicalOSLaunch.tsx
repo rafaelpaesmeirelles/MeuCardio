@@ -35,6 +35,7 @@ const BASE: Secao[] = [
     rotulo: "Prática clínica",
     icone: "pacientes",
     itens: [
+      { to: "/ecg-ia", rotulo: "IA para ECG · destaque", icone: "ecg" },
       { to: "/agenda", rotulo: "Agenda", icone: "agenda" },
       { to: "/round", rotulo: "Pacientes e round", icone: "round" },
       { to: "/receituario", rotulo: "Prescrição", icone: "prescricao" },
@@ -97,6 +98,8 @@ const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone
   { prefixo: "/exames", titulo: "Exames", detalhe: "Diagnóstico e interpretação", icone: "clinica" },
   { prefixo: "/receituario", titulo: "Prescrição", detalhe: "Produção clínica", icone: "prescricao" },
   { prefixo: "/documentos", titulo: "Documentos", detalhe: "Documentos e solicitações", icone: "documento" },
+  { prefixo: "/ecg-ia", titulo: "IA para ECG", detalhe: "Opinião rápida sem cadastro de paciente", icone: "ecg" },
+  { prefixo: "/prontuario", titulo: "Prontuário", detalhe: "Registro clínico longitudinal", icone: "pacientes" },
   { prefixo: "/round", titulo: "Pacientes e round", detalhe: "Continuidade do cuidado", icone: "round" },
   { prefixo: "/agenda", titulo: "Agenda", detalhe: "Organização clínica", icone: "agenda" },
   { prefixo: "/assistente", titulo: "Assistente", detalhe: "Assistência contextual", icone: "assistente" },
@@ -127,6 +130,7 @@ function chaveContextosRecentes(userId?: number) {
 function destino(valor: string) {
   const termo = valor.trim();
   const normalizado = termo.toLocaleLowerCase("pt-BR");
+  if (/\b(ecg|eletrocardiograma)\b/.test(normalizado)) return "/ecg-ia";
   if (/\b(prescrev|prescri|receita|receitu)/.test(normalizado)) return "/receituario";
   if (/\b(atestado|documento|relat[oó]rio|encaminhamento|solicitar exames?|pedido de exames?)/.test(normalizado)) return "/documentos";
   if (/\b(calcul|escore|score)/.test(normalizado)) return "/calculadoras";
@@ -137,7 +141,7 @@ function destino(valor: string) {
 
 function Navegacao({ secoes, onNavigate }: { secoes: Secao[]; onNavigate?: () => void }) {
   const { pathname } = useLocation();
-  const ativa = secoes.find((secao) => secao.itens.some((item) => pathname === item.to || pathname.startsWith(`${item.to}/`)))?.id;
+  const ativa = secoes.find((secao) => secao.itens.some((item) => {const path=item.to.split("?")[0];return pathname===path||pathname.startsWith(`${path}/`);}))?.id;
   const [aberta, setAberta] = useState(ativa || "decisao");
   useEffect(() => { if (ativa) setAberta(ativa); }, [ativa]);
 
@@ -354,7 +358,7 @@ export default function ShellClinicalOSLaunch() {
                 {usuario?.photo_url && !fotoQuebrada ? <img src={assetUrl(usuario.photo_url)} alt="" onError={() => setFotoQuebrada(true)} /> : <span className="cos-account__avatar">{iniciais(usuario?.full_name)}</span>}
                 <span className="cos-account__identity"><strong><span className="cos-account__nome-completo">{usuario?.full_name}</span><span className="cos-account__nome-curto">{primeiroNome(usuario?.full_name)}</span></strong><small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small></span><Icone nome="chevron" />
               </button>
-              {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{usuario?.full_name}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/assinatura" role="menuitem"><Icone nome="check" />Assinatura e plano</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
+              {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{usuario?.full_name}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/tour?origem=assinatura&modo=quick" role="menuitem"><Icone nome="check" />Tour CorVIA</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
             </div>
           </div>
         </header>

@@ -888,5 +888,19 @@
       "sindrome-coronariana-aguda"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "isquemia-aguda-de-membro",
+    "titulo": "Isquemia aguda de membro",
+    "gatilho": "Dor súbita em membro com palidez/frialdade, pulso abruptamente reduzido ou ausente, parestesia ou déficit motor — suspeita de ameaça à viabilidade do membro",
+    "ordem": 122,
+    "documento_slug": "isquemia-aguda-de-membro-classificacao-de-rutherford-e-conduta",
+    "fluxograma_slug": "fluxograma-isquemia-aguda-de-membro-rutherford-2024",
+    "relacionados": [
+      "fibrilacao-atrial-de-alta-resposta",
+      "sindrome-aortica-aguda",
+      "endocardite-infecciosa-com-instabilidade-ou-complicacao-aguda"
+    ],
+    "review_status": "revisado"
   }
 ]

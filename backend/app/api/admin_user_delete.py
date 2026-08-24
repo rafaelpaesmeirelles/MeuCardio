@@ -12,8 +12,9 @@ from app.core.db import get_db
 from app.core.security import require_admin
 from app.models.audit import AuditLog
 from app.models.email_account import EmailAccount
+from app.models.prontuario import PatientClinicalAISuggestion, PatientECGRecord
 from app.models.user import User
-from app.services import mail360
+from app.services import cofre, mail360
 from app.services.mail360 import Mail360Error
 
 log = logging.getLogger("meucardio.admin-user-delete")
@@ -40,6 +41,16 @@ def _remover_referencias_usuario(db: Session, user_id: int) -> None:
     Vínculos Stripe relevantes continuam bloqueados ANTES de chegar aqui pela
     regra canônica de _pode_excluir().
     """
+    # A ordem da introspecção não garante a precedência exigida pelas FKs
+    # clínicas: sugestões dependem do ECG, que por sua vez depende do perfil.
+    # Remove explicitamente essa cadeia antes do tratamento genérico por user_id.
+    db.query(PatientClinicalAISuggestion).filter(
+        PatientClinicalAISuggestion.owner_id == user_id,
+    ).delete(synchronize_session=False)
+    db.query(PatientECGRecord).filter(
+        PatientECGRecord.owner_id == user_id,
+    ).delete(synchronize_session=False)
+
     inspector = inspect(db.get_bind())
     for table_name in inspector.get_table_names():
         columns = {col["name"]: col for col in inspector.get_columns(table_name)}
@@ -107,7 +118,9 @@ def excluir_usuario_definitivamente(
     db: Session = Depends(get_db),
     admin=Depends(require_admin),
 ):
-    alvo = db.get(User, user_id)
+    # Impede que um novo vínculo clínico/arquivo seja criado entre o inventário
+    # abaixo e a exclusão definitiva, o que deixaria um blob fora da coleta.
+    alvo = db.query(User).filter(User.id == user_id).with_for_update().one_or_none()
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
 
@@ -129,6 +142,11 @@ def excluir_usuario_definitivamente(
     nome = alvo.full_name
     mail_address = conta_email.email_address if conta_email else None
     mail_key = conta_email.mail360_account_key if conta_email else None
+    ecg_storage_keys = [
+        key for (key,) in db.query(PatientECGRecord.storage_key)
+        .filter(PatientECGRecord.owner_id == user_id)
+        .all()
+    ]
 
     _validar_exclusao_local(db, user_id)
 
@@ -166,6 +184,7 @@ def excluir_usuario_definitivamente(
                 "nome": nome,
                 "corvia_mail_excluido": bool(mail_address and mail_key),
                 "corvia_mail_endereco": mail_address,
+                "arquivos_ecg_programados_para_remocao": len(ecg_storage_keys),
             },
         ))
         db.commit()
@@ -177,10 +196,26 @@ def excluir_usuario_definitivamente(
             detail="A conta mudou durante a exclusão. Recarregue e tente novamente.",
         ) from exc
 
+    arquivos_ecg_removidos = 0
+    for storage_key in ecg_storage_keys:
+        try:
+            cofre.apagar(storage_key)
+            arquivos_ecg_removidos += 1
+        except OSError as exc:
+            # O banco e a conta externa já foram removidos; expõe a falha
+            # operacional sem registrar nome de paciente ou conteúdo clínico.
+            log.critical(
+                "Falha ao remover arquivo cifrado de ECG após excluir user_id=%s: %s",
+                user_id,
+                type(exc).__name__,
+            )
+
     return {
         "excluido": True,
         "user_id": user_id,
         "email": email_login,
         "corvia_mail_excluido": bool(mail_address and mail_key),
         "corvia_mail_endereco": mail_address,
+        "arquivos_ecg_removidos": arquivos_ecg_removidos,
+        "arquivos_ecg_pendentes": len(ecg_storage_keys) - arquivos_ecg_removidos,
     }

@@ -175,8 +175,8 @@ def test_home_mobile_mobilidade_e_privacidade_contract():
     assert '.ccc-reference-summary > .ccc-reference-assistant-summary { order: 3; }' in css
     assert '.ccc-reference-summary > .ccc-reference-updates-summary { order: 4; }' in css
 
-    # Bottom bar imutável.
-    labels = ["Início", "Buscar", "Pacientes", "Agenda", "Mais"]
+    # Bottom bar imutável, agora com o Prontuário como área clínica canônica.
+    labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]
     posicoes = [mobile_nav.index(f"<span>{label}</span>") for label in labels]
     assert posicoes == sorted(posicoes)
     assert len(posicoes) == 5
@@ -204,7 +204,7 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
             "/indicadores", "/galeria", "/cursos", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar",
-            "/assistente", "/favoritos", "/minha-conta", "/assinatura", "/tour",
+            "/assistente", "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
         ):
             assert rota in fonte
 

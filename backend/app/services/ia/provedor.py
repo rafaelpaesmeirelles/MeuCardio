@@ -11,13 +11,18 @@ igual para qualquer provedor.
 
 from __future__ import annotations
 
+import base64
 import json
+import logging
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 from fastapi.encoders import jsonable_encoder
 
 from app.core.config import settings
+
+
+logger = logging.getLogger("meucardio.ia.provedor")
 
 
 def _serializar_resultado_tool(resultado) -> str:
@@ -73,12 +78,46 @@ class ProvedorIA(ABC):
         perguntas longas — ver nota em ProvedorAnthropic.responder_stream."""
         ...
 
+    @abstractmethod
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+    ) -> Resposta:
+        """Analisa um arquivo clínico sem persistir o binário no provedor.
+
+        O chamador continua responsável por consentimento operacional,
+        ownership, auditoria e por nunca converter a saída em fato automático.
+        """
+        ...
+
     @property
     @abstractmethod
     def dimensao_embedding(self) -> int: ...
 
 
 class ProvedorOpenAI(ProvedorIA):
+    # O modelo principal do chat pode ser textual ou otimizado por custo.
+    # Quando o operador não escolhe um modelo exclusivo para ECG, a análise
+    # visual usa o modelo frontier em vez de herdar silenciosamente o do chat.
+    _MODELO_ECG_PADRAO = "gpt-5.6-sol"
+    _MODELO_ECG_FALLBACK = "gpt-4o"
+
+    @classmethod
+    def _modelo_ecg_compativel(cls, modelo: str | None) -> str:
+        if modelo and modelo.startswith("claude-"):
+            logger.warning(
+                "Modelo de outro provedor ignorado na análise de ECG "
+                "(provider=openai, requested=%s, selected=%s)",
+                modelo,
+                cls._MODELO_ECG_PADRAO,
+            )
+            return cls._MODELO_ECG_PADRAO
+        return modelo or cls._MODELO_ECG_PADRAO
+
     def __init__(self) -> None:
         from openai import OpenAI
 
@@ -161,6 +200,112 @@ class ProvedorOpenAI(ProvedorIA):
             tokens_saida=tokens_saida, modelo=modelo_efetivo, truncado=truncado,
         )}
 
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+    ) -> Resposta:
+        # Chat Completions aceita imagem inline, mas não PDF. Recusamos em vez
+        # de transformar PDF em texto e perder justamente o traçado do ECG.
+        if media_type == "application/pdf":
+            raise ValueError(
+                "O provedor OpenAI configurado exige ECG em JPEG, PNG ou WEBP para análise visual."
+            )
+        if media_type not in {"image/jpeg", "image/png", "image/webp"}:
+            raise ValueError("Formato de imagem não suportado pelo provedor multimodal.")
+        imagem = base64.b64encode(conteudo).decode("ascii")
+        modelo_efetivo = self._modelo_ecg_compativel(modelo)
+
+        def kwargs_para(modelo_alvo: str) -> dict:
+            modelo_gpt_56 = modelo_alvo.startswith("gpt-5.6")
+            kwargs = {
+                "model": modelo_alvo,
+                "messages": [
+                    {"role": "system", "content": sistema},
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": instrucao},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:{media_type};base64,{imagem}",
+                                    # O ECG tem linhas finas, quadrícula e texto
+                                    # pequeno. GPT-5.6 preserva a resolução
+                                    # original; modelos anteriores usam `high`.
+                                    "detail": "original" if modelo_gpt_56 else "high",
+                                },
+                            },
+                        ],
+                    },
+                ],
+            }
+            if modelo_gpt_56:
+                kwargs.update({
+                    "max_completion_tokens": settings.ai_max_output_tokens,
+                    "reasoning_effort": "high",
+                })
+            else:
+                kwargs.update({
+                    "max_tokens": settings.ai_max_output_tokens,
+                    "temperature": 0,
+                })
+            return kwargs
+
+        def executar(modelo_alvo: str):
+            kwargs = kwargs_para(modelo_alvo)
+            from openai import BadRequestError
+
+            try:
+                # JSON mode melhora a aderência ao contrato, mas algumas
+                # variantes multimodais rejeitam o parâmetro apesar da imagem.
+                return self._cliente.chat.completions.create(
+                    **kwargs,
+                    response_format={"type": "json_object"},
+                )
+            except BadRequestError:
+                # Uma repetição, no mesmo modelo, sem JSON mode. A saída ainda
+                # passa pelo parser e pelo schema clínico estritos.
+                return self._cliente.chat.completions.create(**kwargs)
+
+        try:
+            resp = executar(modelo_efetivo)
+        except Exception as error:
+            from openai import BadRequestError, NotFoundError
+
+            if (
+                not isinstance(error, (BadRequestError, NotFoundError))
+                or modelo_efetivo == self._MODELO_ECG_FALLBACK
+            ):
+                raise
+            # A API pode representar modelo sem acesso tanto como 404 quanto
+            # como 400. O 400 também ocorre quando a conta aceita o modelo,
+            # mas rejeita algum parâmetro multimodal dele. Depois das duas
+            # tentativas controladas no modelo principal (com e sem JSON
+            # mode), usamos uma única vez o fallback visual consolidado.
+            # Erros do fallback continuam subindo normalmente: não escondemos
+            # imagem inválida, credencial, quota nem falha real do provedor.
+            logger.warning(
+                "Modelo visual de ECG rejeitado; usando fallback "
+                "(requested=%s, fallback=%s, status=%s)",
+                modelo_efetivo,
+                self._MODELO_ECG_FALLBACK,
+                getattr(error, "status_code", None),
+            )
+            modelo_efetivo = self._MODELO_ECG_FALLBACK
+            resp = executar(modelo_efetivo)
+        uso = resp.usage
+        return Resposta(
+            texto=resp.choices[0].message.content or "",
+            tokens_entrada=getattr(uso, "prompt_tokens", 0) or 0,
+            tokens_saida=getattr(uso, "completion_tokens", 0) or 0,
+            modelo=modelo_efetivo,
+            truncado=resp.choices[0].finish_reason == "length",
+        )
+
 
 class ProvedorAnthropic(ProvedorIA):
     """Preparado para a troca futura.
@@ -170,6 +315,8 @@ class ProvedorAnthropic(ProvedorIA):
     local) e use a Anthropic apenas para a geração — por isso a interface
     separa `embeddings` de `responder`.
     """
+
+    _MODELO_ECG_PADRAO = "claude-sonnet-4-6"
 
     def __init__(self) -> None:
         import anthropic
@@ -185,6 +332,20 @@ class ProvedorAnthropic(ProvedorIA):
         raise NotImplementedError(
             "Configure AI_EMBEDDING_PROVIDER separadamente ao migrar a geração para Claude."
         )
+
+    def _modelo_ecg_compativel(self, modelo: str | None) -> str:
+        candidatos = (modelo, self._modelo, self._MODELO_ECG_PADRAO)
+        for candidato in candidatos:
+            if candidato and candidato.startswith("claude-"):
+                if modelo and candidato != modelo:
+                    logger.warning(
+                        "Modelo de outro provedor ignorado na análise de ECG "
+                        "(provider=anthropic, requested=%s, selected=%s)",
+                        modelo,
+                        candidato,
+                    )
+                return candidato
+        return self._MODELO_ECG_PADRAO
 
     def _kwargs_base(
         self, sistema: str, modelo_efetivo: str, usar_internet: bool,
@@ -365,6 +526,72 @@ class ProvedorAnthropic(ProvedorIA):
             tokens_saida=tokens_saida, modelo=modelo_efetivo,
             truncado=resp.stop_reason == "max_tokens",
         )}
+
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+    ) -> Resposta:
+        modelo_efetivo = self._modelo_ecg_compativel(modelo)
+        encoded = base64.b64encode(conteudo).decode("ascii")
+        if media_type == "application/pdf":
+            arquivo = {
+                "type": "document",
+                "source": {
+                    "type": "base64", "media_type": "application/pdf", "data": encoded,
+                },
+            }
+        elif media_type in {"image/jpeg", "image/png", "image/webp"}:
+            arquivo = {
+                "type": "image",
+                "source": {"type": "base64", "media_type": media_type, "data": encoded},
+            }
+        else:
+            raise ValueError("Formato de arquivo não suportado pelo provedor multimodal.")
+        kwargs = {
+            "system": sistema,
+            "max_tokens": settings.ai_max_output_tokens,
+            "temperature": 0,
+            "messages": [{
+                "role": "user",
+                # Documento primeiro: ordem recomendada pelo provedor para
+                # análise visual e evita reapresentar PHI em texto.
+                "content": [arquivo, {"type": "text", "text": instrucao}],
+            }],
+        }
+
+        try:
+            resp = self._cliente.messages.create(model=modelo_efetivo, **kwargs)
+        except Exception as error:
+            from anthropic import BadRequestError
+
+            if (
+                not isinstance(error, BadRequestError)
+                or modelo_efetivo == self._MODELO_ECG_PADRAO
+            ):
+                raise
+            logger.warning(
+                "Modelo visual de ECG da Anthropic rejeitado; usando fallback "
+                "(requested=%s, fallback=%s, status=%s)",
+                modelo_efetivo,
+                self._MODELO_ECG_PADRAO,
+                getattr(error, "status_code", None),
+            )
+            modelo_efetivo = self._MODELO_ECG_PADRAO
+            resp = self._cliente.messages.create(model=modelo_efetivo, **kwargs)
+        texto = "".join(
+            bloco.text for bloco in resp.content if getattr(bloco, "type", None) == "text"
+        )
+        return Resposta(
+            texto=texto,
+            tokens_entrada=getattr(resp.usage, "input_tokens", 0) or 0,
+            tokens_saida=getattr(resp.usage, "output_tokens", 0) or 0,
+            modelo=modelo_efetivo,
+            truncado=resp.stop_reason == "max_tokens",
+        )
 
 
 _cache: ProvedorIA | None = None

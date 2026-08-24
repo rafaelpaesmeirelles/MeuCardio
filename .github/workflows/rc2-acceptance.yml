@@ -289,7 +289,7 @@ jobs:
                 if (state.path === '/entrar') fail(`${route}: perdeu sessão`);
                 if (state.stuck) fail(`${route}: preso em Carregando a tela`);
                 if (state.serverError) fail(`${route}: erro de servidor visível`);
-                if (!state.shell && !route.startsWith('/tour')) fail(`${route}: fora do shell canônico`);
+                if (!state.shell && !state.path.startsWith('/tour') && state.path !== '/em-breve') fail(`${route}: fora do shell canônico`);
                 if (state.scrollWidth > state.width + 16 && route !== '/agenda') fail(`${route}: overflow horizontal ${state.scrollWidth} > ${state.width}`);
               } catch (e) {
                 fail(`${route}: ${e}`);
@@ -340,7 +340,7 @@ jobs:
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await mobile.page.screenshot({ path: path.join(out, 'mobile-home.png'), fullPage: false });
             const labels = await mobile.page.locator('.cc-mobile-nav > * span').allTextContents();
-            const expected = ['Início', 'Buscar', 'Pacientes', 'Agenda', 'Mais'];
+            const expected = ['Início', 'Buscar', 'Prontuário', 'Agenda', 'Mais'];
             if (JSON.stringify(labels.slice(0, 5)) !== JSON.stringify(expected)) fail(`mobile/nav divergente: ${JSON.stringify(labels.slice(0, 5))}`);
 
             if (selected?.slug) {

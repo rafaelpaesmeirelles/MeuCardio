@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 import { api } from "../lib/api";
 
 type Option = { value: string; label: string };
@@ -256,6 +257,8 @@ export default function GuiaDoenca() {
           <ListBlock title="Populações e situações especiais" items={disease.special_populations} />
         </>
       )}
+
+      <GrafoRelacionados entityType="doenca" slug={disease.slug} />
 
       <section className="cartao" style={{ marginTop: "1rem" }}>
         <h2>Fontes e revisão</h2>

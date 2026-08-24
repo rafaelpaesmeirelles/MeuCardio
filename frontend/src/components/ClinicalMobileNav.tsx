@@ -5,7 +5,7 @@ import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 
-type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number };
+type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number; featured?: boolean };
 type MobileSection = { title: string; items: LinkItem[] };
 
 const CLINICA_DECISAO: LinkItem[] = [
@@ -36,6 +36,9 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 ];
 
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
+  { to: "/ecg-ia", label: "IA para ECG", icon: "ecg", featured: true },
+  { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
+  { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
   { to: "/documentos", label: "Documentos", icon: "documento" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
@@ -60,7 +63,7 @@ const REDE: LinkItem[] = [
 
 const CONTA_ADMIN: LinkItem[] = [
   { to: "/minha-conta", label: "Minha conta", icon: "conta" },
-  { to: "/assinatura", label: "Planos & Assinatura", icon: "check" },
+  { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
   { to: "/termos", label: "Termos", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
@@ -118,14 +121,14 @@ export default function ClinicalMobileNav() {
   }, [maisAberto]);
 
   function SheetLink({ item }: { item: LinkItem }) {
-    return <NavLink to={item.to} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{!!item.badge&&<span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}</strong></NavLink>;
+    return <NavLink to={item.to} className={item.featured ? "is-featured" : undefined} onClick={() => setMaisAberto(false)}><span><Icone nome={item.icon} /></span><strong>{item.label}{item.featured&&<small>Destaque</small>}{!!item.badge&&<span className="cos-account-menu__badge" aria-label={`${item.badge} pendentes`}>{item.badge}</span>}</strong></NavLink>;
   }
 
   return <>
     <nav className="cc-mobile-nav" aria-label="Navegação principal móvel">
       <NavLink to="/" end><IconeHoje /><span>Início</span></NavLink>
       <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
-      <NavLink to="/round"><Icone nome="pacientes" /><span>Pacientes</span></NavLink>
+      <NavLink to="/prontuario"><Icone nome="pacientes" /><span>Prontuário</span></NavLink>
       <NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink>
       <button ref={triggerRef} type="button" onClick={() => setMaisAberto(true)} aria-expanded={maisAberto}><Icone nome="mais" /><span>Mais</span></button>
     </nav>

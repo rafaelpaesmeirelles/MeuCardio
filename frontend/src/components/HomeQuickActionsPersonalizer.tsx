@@ -4,9 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 import Icone, { type NomeIcone } from "./Icone";
 import { useAuth } from "../lib/auth";
 
-type Acao = [id: string, to: string, titulo: string, icone: NomeIcone, tone: string];
+type Acao = [id: string, to: string, titulo: string, icone: NomeIcone, tone: string, featured?: boolean];
 const N = 10;
 const TODAS: Acao[] = [
+  ["ecg-ia", "/ecg-ia", "IA para ECG", "ecg", "green", true],
   ["prescrever", "/receituario", "Prescrever", "prescricao", "cyan"],
   ["solicitar-exames", "/documentos", "Solicitar exames", "clinica", "blue"],
   ["calculadoras", "/calculadoras", "Calculadoras", "calculadora", "amber"],
@@ -27,7 +28,8 @@ const PADRAO = TODAS.slice(0, N).map((a) => a[0]);
 
 function normalizar(valor: unknown) {
   const ids = Array.isArray(valor) ? [...new Set(valor.filter((id): id is string => typeof id === "string" && POR_ID.has(id)))] : [];
-  return ids.length === N ? ids : PADRAO;
+  if (ids.length !== N) return PADRAO;
+  return ids.includes("ecg-ia") ? ids : ["ecg-ia", ...ids].slice(0, N);
 }
 
 export default function HomeQuickActionsPersonalizer() {
@@ -82,15 +84,15 @@ export default function HomeQuickActionsPersonalizer() {
   return <>
     {createPortal(selecionadas.map((id) => {
       const acao = POR_ID.get(id); if (!acao) return null;
-      const [, to, titulo, icone, tone] = acao;
-      return <Link to={to} key={id} className={`ccc-action qa-action ccc-action--${icone}`} data-tone={tone}><span className="ccc-action__icon"><Icone nome={icone} /></span><strong>{titulo}</strong></Link>;
+      const [, to, titulo, icone, tone, featured] = acao;
+      return <Link to={to} key={id} className={`ccc-action qa-action ccc-action--${icone}${featured ? " is-featured" : ""}`} data-tone={tone}>{featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={icone} /></span><strong>{titulo}</strong></Link>;
     }), alvos.a)}
     {createPortal(<button type="button" className="qa-edit" onClick={() => { setRascunho([...selecionadas]); setAberto(true); }}><Icone nome="configuracao" /> Personalizar</button>, alvos.h)}
     {aberto && createPortal(<div className="qa-modal" onMouseDown={() => setAberto(false)}><section className="qa-dialog" role="dialog" aria-modal="true" aria-labelledby="qa-title" onMouseDown={(e) => e.stopPropagation()}>
       <header className="qa-head"><h2 id="qa-title">Personalizar ações rápidas</h2><button type="button" aria-label="Fechar" onClick={() => setAberto(false)}>×</button></header>
       <div className="qa-list">{TODAS.map(([id,, titulo, icone]) => {
         const i = rascunho.indexOf(id), ativa = i >= 0;
-        return <div className="qa-item" key={id}><button type="button" className="qa-toggle" disabled={!ativa && rascunho.length >= N} onClick={() => alternar(id)}><Icone nome={icone} /><strong>{titulo}</strong></button>{ativa && <span className="qa-order"><button type="button" disabled={i === 0} onClick={() => mover(id, -1)}>↑</button><button type="button" disabled={i === rascunho.length - 1} onClick={() => mover(id, 1)}>↓</button></span>}</div>;
+        return <div className="qa-item" key={id}><button type="button" className="qa-toggle" disabled={id === "ecg-ia" || (!ativa && rascunho.length >= N)} onClick={() => alternar(id)}><Icone nome={icone} /><strong>{titulo}</strong>{id === "ecg-ia" && <small>Destaque fixo</small>}</button>{ativa && <span className="qa-order"><button type="button" disabled={i === 0} onClick={() => mover(id, -1)}>↑</button><button type="button" disabled={i === rascunho.length - 1} onClick={() => mover(id, 1)}>↓</button></span>}</div>;
       })}</div>
       <footer className="qa-foot"><span>{rascunho.length}/{N}</span><button type="button" onClick={() => setRascunho([...PADRAO])}>Padrão</button><button type="button" onClick={() => setAberto(false)}>Cancelar</button><button type="button" className="qa-save" disabled={rascunho.length !== N} onClick={salvar}>Salvar</button></footer>
     </section></div>, document.body)}

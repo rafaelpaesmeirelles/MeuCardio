@@ -12,16 +12,17 @@ modelo de `ServiceOrder` (telediagnóstico), que é um mercado de dois lados
 por desenho (o solicitante pede, o admin/especialista atende qualquer
 pedido da fila) e continua fora deste ponto único de propósito.
 
-Regra, sem exceção: só `patient.created_by == user.id`. Nenhum papel dá
-acesso amplo a paciente alheio — nem `admin`. Se uma regra de negócio real
-algum dia precisar de acesso administrativo a paciente de outro médico
-(auditoria, suporte), ela precisa ser uma exceção EXPLÍCITA e AUDITADA aqui,
-nunca reintroduzida por engano num endpoint disperso.
+Regra, sem exceção: só o tenant proprietário acessa o registro. Nenhum papel
+dá acesso clínico amplo — nem `admin`. Se uma regra de negócio real algum dia
+precisar de acesso administrativo a paciente de outro médico (auditoria,
+suporte), ela precisa ser uma exceção EXPLÍCITA e AUDITADA aqui, nunca
+reintroduzida por engano num endpoint disperso.
 """
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
 from app.models.patient_profile import PatientProfile
+from app.models.prontuario import ClinicalEncounter
 from app.models.round import Patient
 
 
@@ -56,3 +57,15 @@ def patient_profile_for_user(profile_id: int, db: Session, user) -> PatientProfi
     if not perfil or perfil.owner_id != user.id:
         raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     return perfil
+
+
+def encounter_for_user(encounter_id: int, db: Session, user) -> ClinicalEncounter:
+    """Atendimento do prontuário é sempre escopado por `owner_id`.
+
+    Retorna 404 tanto para id inexistente quanto para atendimento de outro
+    tenant, mantendo a mesma proteção contra enumeração usada nos pacientes.
+    """
+    encounter = db.get(ClinicalEncounter, encounter_id)
+    if not encounter or encounter.owner_id != user.id:
+        raise HTTPException(status_code=404, detail="Atendimento não encontrado.")
+    return encounter

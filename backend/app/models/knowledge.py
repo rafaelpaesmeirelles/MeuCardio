@@ -19,15 +19,16 @@ exato, sem persistir nada). As duas coexistem de propósito:
 `knowledge_entities`/`knowledge_relations` são o GRAFO GLOBAL — conteúdo
 científico/editorial (documento, evidência, estudo, medicamento, exame,
 caso clínico, trilha, checklist, protocolo de emergência, material do
-paciente, galeria, calculadora). NUNCA um `Patient`, `Prescription`,
-`Appointment`, `GeneratedDocument`, `ServiceOrder` ou qualquer entidade com
-dado de paciente/consulta/prescrição individual pode virar `knowledge_entity`
-— isso exporia contexto privado de um paciente como nó público indexável,
-inclusive entre médicos diferentes (o mesmo tipo de vazamento que o
-IDOR/BOLA desta mesma fase corrigiu, agora pela porta do grafo em vez da
-porta da rota REST). `TIPOS_ENTIDADE_PERMITIDOS` abaixo é o allowlist que
-impõe isso estruturalmente — `KnowledgeGraphService.registrar_entidade()`
-rejeita qualquer `entity_type` fora da lista, não é só documentação.
+paciente, galeria, calculadora, doença especializada e triagem por sintoma).
+NUNCA um `Patient`, `Prescription`, `Appointment`, `GeneratedDocument`,
+`ServiceOrder` ou qualquer entidade com dado de paciente/consulta/prescrição
+individual pode virar `knowledge_entity` — isso exporia contexto privado de
+um paciente como nó público indexável, inclusive entre médicos diferentes
+(o mesmo tipo de vazamento que o IDOR/BOLA desta mesma fase corrigiu, agora
+pela porta do grafo em vez da porta da rota REST).
+`TIPOS_ENTIDADE_PERMITIDOS` abaixo é o allowlist que impõe isso
+estruturalmente — `KnowledgeGraphService.registrar_entidade()` rejeita
+qualquer `entity_type` fora da lista, não é só documentação.
 """
 from __future__ import annotations
 
@@ -48,10 +49,10 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.core.db import Base
 
 # Allowlist estrutural — só conteúdo global/editorial pode virar nó do grafo.
-# Cada valor corresponde a uma tabela/frente já existente no produto (mesmas
-# 12 frentes de `related_content.py`, mais "medicamento" com nome próprio em
-# vez de reaproveitar "farmacologia"). Nenhum tipo de dado de paciente entra
-# aqui — ver nota de segurança no docstring do módulo.
+# Além das frentes já cobertas por `related_content.py`, doenças especializadas
+# e fluxos de triagem são conteúdo global versionado/publicável em tabelas
+# próprias (`specialty_diseases` e `symptom_triage_guides`). Nenhum tipo de
+# dado de paciente entra aqui — ver nota de segurança no docstring do módulo.
 TIPOS_ENTIDADE_PERMITIDOS = frozenset({
     "documento",
     "fluxograma",
@@ -66,18 +67,16 @@ TIPOS_ENTIDADE_PERMITIDOS = frozenset({
     "material_paciente",
     "protocolo_emergencia",
     "calculadora",
+    "doenca",
+    "triagem_sintoma",
 })
-# Mesmos 13 valores usados por `app/services/related_content.py` (o
-# cruzamento por tema já em produção) — não é coincidência: o backfill deste
-# módulo semeia entidades/arestas a partir exatamente dessas 12 frentes mais
-# medicamentos, então usar o mesmo vocabulário evita uma segunda taxonomia
-# paralela para o mesmo conjunto de tipos de conteúdo.
 
 # Catálogo de tipos de relação — evita a proliferação caótica que o pedido
 # pediu para prevenir. Cada relação usa um destes valores; a direção
 # (source -> target) é sempre a do verbo, ex.:
 # (calculadora) -[recommended_by]-> (evidencia)
 # (medicamento) -[treats]-> (documento de doença)
+# (doenca) -[differential_for]-> (triagem_sintoma)
 TIPOS_RELACAO_PERMITIDOS = frozenset({
     "treats",                       # trata / é indicado para
     "indicated_for",                # indicação clínica formal
@@ -97,6 +96,7 @@ TIPOS_RELACAO_PERMITIDOS = frozenset({
     "used_in_case",                 # citado/usado num caso clínico
     "mentioned_in",                 # citação/menção textual, sem afirmação clínica forte
     "patient_education_for",        # material de paciente sobre o tema
+    "differential_for",             # doença explicitamente listada como diferencial de sintoma/condição
     "same_theme",                   # mesmo tema clínico (proveniência: derivado por tema)
 })
 

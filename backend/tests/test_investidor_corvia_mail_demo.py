@@ -5,7 +5,7 @@ Duas regras distintas, testadas lado a lado para que a diferença fique
 explícita (nunca confundir as duas categorias):
 
 - CONVIDADO tem CorvIA Mail REAL e completo — provisiona caixa nativa,
-  conecta conta externa, envia, responde, sincroniza — sem checkout, sem
+  conecta contas externas ainda suportadas, envia, responde, sincroniza — sem checkout, sem
   cartão, exatamente como assinante pago (`assinatura_email_ativa()` em
   app/core/security.py concede o add-on a convidado sem depender de
   Subscription nenhuma).
@@ -311,18 +311,20 @@ class TestConvidadoTemCorvIAMailRealECompleto:
         leitura = client.get("/api/email/mensagens", headers=_headers(mailbox_token))
         assert leitura.status_code == 200
 
-    def test_convidado_conecta_yahoo_de_verdade(self, client, db, criar_usuario, monkeypatch):
-        from app.services import yahoo_mail
-
+    def test_convidado_tambem_nao_conecta_yahoo_retirado(self, client, db, criar_usuario):
         user, token = criar_usuario()
         _marcar(db, user, convidado=True)
-        monkeypatch.setattr(yahoo_mail, "diagnose", lambda credenciais: {"ok": True})
         resp = client.post(
             "/api/email/conectar-yahoo",
             json={"endereco": "convidado@yahoo.com", "senha_de_app": "abcd-efgh-ijkl-mnop", "consent_accepted": True},
             headers=_headers(token),
         )
-        assert resp.status_code == 201, resp.text
+        assert resp.status_code == 410, resp.text
+        assert "não está mais disponível" in resp.json()["detail"]
+        assert db.query(CalendarIntegration).filter(
+            CalendarIntegration.owner_id == user.id,
+            CalendarIntegration.provider == "yahoo_mail",
+        ).count() == 0
 
     def test_revogar_convidado_sem_assinatura_bloqueia_nova_ativacao(self, client, db, criar_usuario):
         user, token = criar_usuario()

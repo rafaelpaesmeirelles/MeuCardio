@@ -244,18 +244,18 @@ export default function TourClinicalOS() {
       if (alvo && /^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName)) return;
       if (evento.key === "ArrowRight") avancar();
       if (evento.key === "ArrowLeft") voltar();
-      if (evento.key === "Escape" && !pendente) navigate("/");
+      if (evento.key === "Escape" && !pendente) navigate("/em-breve");
     }
     window.addEventListener("keydown", teclado);
     return () => window.removeEventListener("keydown", teclado);
   }, [avancar, voltar, navigate, pendente]);
 
   async function concluir() {
-    if (!pendente) { navigate("/"); return; }
+    if (!pendente) { navigate("/em-breve"); return; }
     setConcluindo(true);
     try { await api.post("/auth/me/onboarding-concluido", {}); }
     catch (erro) { if (!(erro instanceof ApiError)) throw erro; }
-    finally { window.location.replace("/"); }
+    finally { window.location.replace("/em-breve"); }
   }
 
   function abrirCompleto() { setModo("completo"); setPasso(1); }
@@ -275,7 +275,7 @@ export default function TourClinicalOS() {
           <p className="cos-tour-welcome__kicker">Bem-vindo ao CorVIA Clinical OS</p>
           <h1>Um sistema que começa pelo que você precisa resolver.</h1>
           <p className="cos-tour-welcome__lead">Não é prontuário. Não é só IA. Não é portal de conteúdo. É o workspace clínico inteligente do médico para pesquisar, decidir, executar e organizar o trabalho.</p>
-          {usuario?.convidado && <p className="cos-tour-welcome__entitlement">Acesso de médico convidado ativo conforme as permissões da sua conta.</p>}
+          {usuario?.socio && <p className="cos-tour-welcome__entitlement">Acesso de sócio.</p>}
           {usuario?.investidor && <p className="cos-tour-welcome__entitlement">Modo investidor: arquitetura completa; CorVIA Mail demonstrativo e sem operações reais.</p>}
           <div className="cos-tour-welcome__pillars"><span>Necessidade</span><i>→</i><span>Contexto</span><i>→</i><span>Conhecimento</span><i>→</i><span>Decisão</span><i>→</i><span>Ação</span></div>
           <button type="button" className="cos-tour__primary" onClick={avancar}>Ver como o CorVIA trabalha <Icone nome="seta" /></button>
@@ -297,7 +297,7 @@ export default function TourClinicalOS() {
           <h1>Entre pelo problema. O CorVIA aproxima o resto.</h1>
           <p>Pesquise, aprenda, decida, execute e organize seu dia sem precisar pensar primeiro em qual módulo abrir.</p>
           <div className="cos-tour-final__map"><span><b>Necessidade</b><small>O que preciso resolver?</small></span><i>→</i><span><b>Contexto</b><small>Onde estou?</small></span><i>→</i><span><b>Decisão</b><small>O que faz sentido?</small></span><i>→</i><span><b>Ação</b><small>Faça agora.</small></span></div>
-          <button type="button" className="cos-tour__primary" onClick={() => void concluir()} disabled={concluindo}>{concluindo ? "Abrindo o CorVIA…" : "Abrir meu Clinical Command Center"} <Icone nome="seta" /></button>
+          <button type="button" className="cos-tour__primary" onClick={() => void concluir()} disabled={concluindo}>{concluindo ? "Continuando…" : "Continuar"} <Icone nome="seta" /></button>
           {modo === "quick" && <button type="button" className="cos-tour__secondary" onClick={abrirCompleto}>Quero ver o tour completo</button>}
         </section>}
       </main>

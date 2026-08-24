@@ -123,8 +123,8 @@ async function request<T>(
     throw new ApiError(401, "Sessão expirada.");
   }
   if (res.status === 402) {
-    if (!window.location.pathname.startsWith("/assinatura")) {
-      window.location.assign("/assinatura?status=necessaria");
+    if (!window.location.pathname.startsWith("/tour")) {
+      window.location.assign("/tour?origem=assinatura&modo=quick");
     }
     throw new ApiError(402, "Assinatura necessária.");
   }
@@ -315,4 +315,5 @@ export type Usuario = {
   // frontend: a decisão real é sempre do backend.
   convidado: boolean;
   investidor: boolean;
+  socio: boolean;
 };
