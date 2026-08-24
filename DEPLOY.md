@@ -4,6 +4,35 @@ Este guia descreve o deploy de produção em `corvia.med.br`, usando o diretóri
 
 > O nome `meucardio` ainda aparece em caminhos, usuário e banco porque são identificadores operacionais existentes. Renomeá-los exige migração própria; não faça substituição textual durante um deploy.
 
+## Deploy automático da `main`
+
+O workflow `Deploy production` só libera o SHA que ainda é a ponta da `main`
+e que concluiu com sucesso `CI`, `RC2 Acceptance`, `Visual QA` e
+`Corpus database reconciliation`. A conexão usa uma chave SSH forçada: ela
+não abre shell, não encaminha portas e só aceita `deploy <SHA>` quando esse SHA
+é exatamente o `origin/main` do servidor.
+
+Ativação única em produção, depois que os arquivos desta mudança estiverem na
+`main`:
+
+```bash
+cd /opt/meucardio
+git fetch origin main
+git checkout main
+git pull --ff-only origin main
+chmod 0755 ops/remote-deploy-entrypoint.sh ops/install-github-deploy-key.sh
+bash ops/install-github-deploy-key.sh 169.58.78.100 22
+```
+
+Depois da ativação, os deploys aprovados são automáticos. Para reprocessar
+manualmente um SHA já certificado:
+
+```bash
+gh workflow run deploy-production.yml \
+  --repo rafaelpaesmeirelles/MeuCardio \
+  -f sha="$(git rev-parse origin/main)"
+```
+
 ## O que `deploy.sh` garante
 
 O script só declara sucesso depois de:
