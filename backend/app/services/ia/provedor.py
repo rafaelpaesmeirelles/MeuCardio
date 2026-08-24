@@ -106,6 +106,18 @@ class ProvedorOpenAI(ProvedorIA):
     _MODELO_ECG_PADRAO = "gpt-5.6-sol"
     _MODELO_ECG_FALLBACK = "gpt-4o"
 
+    @classmethod
+    def _modelo_ecg_compativel(cls, modelo: str | None) -> str:
+        if modelo and modelo.startswith("claude-"):
+            logger.warning(
+                "Modelo de outro provedor ignorado na análise de ECG "
+                "(provider=openai, requested=%s, selected=%s)",
+                modelo,
+                cls._MODELO_ECG_PADRAO,
+            )
+            return cls._MODELO_ECG_PADRAO
+        return modelo or cls._MODELO_ECG_PADRAO
+
     def __init__(self) -> None:
         from openai import OpenAI
 
@@ -205,7 +217,7 @@ class ProvedorOpenAI(ProvedorIA):
         if media_type not in {"image/jpeg", "image/png", "image/webp"}:
             raise ValueError("Formato de imagem não suportado pelo provedor multimodal.")
         imagem = base64.b64encode(conteudo).decode("ascii")
-        modelo_efetivo = modelo or self._MODELO_ECG_PADRAO
+        modelo_efetivo = self._modelo_ecg_compativel(modelo)
 
         def kwargs_para(modelo_alvo: str) -> dict:
             modelo_gpt_56 = modelo_alvo.startswith("gpt-5.6")
@@ -304,6 +316,8 @@ class ProvedorAnthropic(ProvedorIA):
     separa `embeddings` de `responder`.
     """
 
+    _MODELO_ECG_PADRAO = "claude-sonnet-4-6"
+
     def __init__(self) -> None:
         import anthropic
 
@@ -318,6 +332,20 @@ class ProvedorAnthropic(ProvedorIA):
         raise NotImplementedError(
             "Configure AI_EMBEDDING_PROVIDER separadamente ao migrar a geração para Claude."
         )
+
+    def _modelo_ecg_compativel(self, modelo: str | None) -> str:
+        candidatos = (modelo, self._modelo, self._MODELO_ECG_PADRAO)
+        for candidato in candidatos:
+            if candidato and candidato.startswith("claude-"):
+                if modelo and candidato != modelo:
+                    logger.warning(
+                        "Modelo de outro provedor ignorado na análise de ECG "
+                        "(provider=anthropic, requested=%s, selected=%s)",
+                        modelo,
+                        candidato,
+                    )
+                return candidato
+        return self._MODELO_ECG_PADRAO
 
     def _kwargs_base(
         self, sistema: str, modelo_efetivo: str, usar_internet: bool,
@@ -507,7 +535,7 @@ class ProvedorAnthropic(ProvedorIA):
         media_type: str,
         modelo: str | None = None,
     ) -> Resposta:
-        modelo_efetivo = modelo or self._modelo
+        modelo_efetivo = self._modelo_ecg_compativel(modelo)
         encoded = base64.b64encode(conteudo).decode("ascii")
         if media_type == "application/pdf":
             arquivo = {
@@ -523,18 +551,37 @@ class ProvedorAnthropic(ProvedorIA):
             }
         else:
             raise ValueError("Formato de arquivo não suportado pelo provedor multimodal.")
-        resp = self._cliente.messages.create(
-            model=modelo_efetivo,
-            system=sistema,
-            max_tokens=settings.ai_max_output_tokens,
-            temperature=0,
-            messages=[{
+        kwargs = {
+            "system": sistema,
+            "max_tokens": settings.ai_max_output_tokens,
+            "temperature": 0,
+            "messages": [{
                 "role": "user",
                 # Documento primeiro: ordem recomendada pelo provedor para
                 # análise visual e evita reapresentar PHI em texto.
                 "content": [arquivo, {"type": "text", "text": instrucao}],
             }],
-        )
+        }
+
+        try:
+            resp = self._cliente.messages.create(model=modelo_efetivo, **kwargs)
+        except Exception as error:
+            from anthropic import BadRequestError
+
+            if (
+                not isinstance(error, BadRequestError)
+                or modelo_efetivo == self._MODELO_ECG_PADRAO
+            ):
+                raise
+            logger.warning(
+                "Modelo visual de ECG da Anthropic rejeitado; usando fallback "
+                "(requested=%s, fallback=%s, status=%s)",
+                modelo_efetivo,
+                self._MODELO_ECG_PADRAO,
+                getattr(error, "status_code", None),
+            )
+            modelo_efetivo = self._MODELO_ECG_PADRAO
+            resp = self._cliente.messages.create(model=modelo_efetivo, **kwargs)
         texto = "".join(
             bloco.text for bloco in resp.content if getattr(bloco, "type", None) == "text"
         )
