@@ -35,6 +35,6 @@ jobs:
       - name: Enforce scientific corpus baseline
         run: >-
           python scripts/content_inventory.py
-          --minimum-records 5035
-          --minimum-files 1329
+          --minimum-records 8184
+          --minimum-files 1968
           --strict
