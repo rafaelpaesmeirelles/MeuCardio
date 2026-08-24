@@ -5,7 +5,8 @@ theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore de emergência para criança com shunt sistêmico-pulmonar e dessaturação abrupta, priorizando confirmação rápida e reperfusão cirúrgica/percutânea."
 review_status: revisado
-source_refs: ["Gedicke M, Morgan G, Parry A, Martin R, Tulloh R. Heart Vessels. 2010;25(5):405-409. DOI: 10.1007/s00380-009-1219-1. PMID: 20676963.", "Moszura T, et al. Interact Cardiovasc Thorac Surg. 2010;10(5):727-731. DOI: 10.1510/icvts.2009.219741. PMID: 20139195.", "Sivakumar K, et al. Indian Heart J. 2001;53(6):743-748. PMID: 11838928."]
+source_refs: ["Gedicke M, Morgan G, Parry A, Martin R, Tulloh R. Heart Vessels. 2010;25(5):405-409. DOI: 10.1007/s00380-009-1219-1. PMID: 20676963.", "Moszura T, et al. Interact Cardiovasc Thorac Surg. 2010;10(5):727-731. DOI: 10.1510/icvts.2009.219741. PMID: 20139195.", "Sivakumar K, et al. Indian Heart J. 2001;53(6):743-748. PMID: 11838928.", "Monagle P, Chan AKC, Goldenberg NA, et al. Antithrombotic Therapy in Neonates and Children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e737S-e801S. PMID: 22315277 — citada para o reconhecimento explícito da diretriz de que a evidência em trombose de shunt pediátrico é predominantemente de baixa qualidade e a decisão (anticoagulação vs. trombólise sistêmica vs. dirigida por cateter) deve ser individualizada pela experiência institucional; nenhum esquema de dose foi extraído desta fonte para uso neste documento."]
+review_note: "Lote 1B (2026-08-24): por decisão do Dr. Rafael Paes Meirelles, o nó de conduta foi reescrito só com explicação não numérica — sem dose de alteplase/heparina/HBPM, porque a literatura mistura heparinização de procedimento, anticoagulação terapêutica, HBPM (com diferença real entre neonato e criança) e trombólise sistêmica/dirigida por cateter, sem um esquema único validado. A marcação de VERIFICAÇÃO HUMANA NECESSÁRIA foi substituída por explicação qualitativa, não por dose."
 ---
 
 # Trombose aguda de shunt sistêmico-pulmonar
@@ -24,7 +25,7 @@ flowchart TD
   C2(["Sim: cateterismo urgente<br/>± angioplastia/stent"])
   D4{"Cirurgia imediata disponível/<br/>preferível pela anatomia?"}
   C3(["Sim: revisão cirúrgica urgente"])
-  C4(["Não/ponte: discutir trombólise<br/>individualizada; dose = VERIFICAÇÃO HUMANA NECESSÁRIA"])
+  C4(["Não/ponte: anticoagulação, trombólise<br/>dirigida/sistêmica conforme protocolo<br/>institucional — sem esquema único validado"])
 
   R0 --> P1
   P1 --> D1

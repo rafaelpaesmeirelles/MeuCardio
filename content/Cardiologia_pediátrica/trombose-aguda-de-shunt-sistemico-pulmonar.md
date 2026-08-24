@@ -5,7 +5,8 @@ theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Reconhecimento e manejo de emergência da obstrução/trombose de shunt sistêmico-pulmonar em lactentes e crianças com cardiopatia congênita cianótica, priorizando estabilização e reperfusão urgente por hemodinâmica ou cirurgia."
 review_status: revisado
-source_refs: ["Gedicke M, Morgan G, Parry A, Martin R, Tulloh R. Risk factors for acute shunt blockage in children after modified Blalock-Taussig shunt operations. Heart Vessels. 2010;25(5):405-409. DOI: 10.1007/s00380-009-1219-1. PMID: 20676963.", "Moszura T, Zubrzycka M, Michalak KW, et al. Acute and late obstruction of a modified Blalock-Taussig shunt: a two-center experience in different catheter-based methods of treatment. Interact Cardiovasc Thorac Surg. 2010;10(5):727-731. DOI: 10.1510/icvts.2009.219741. PMID: 20139195.", "Sivakumar K, Anil SR, Ravichandra M, et al. Emergency transcatheter balloon recanalization of acutely thrombosed modified Blalock-Taussig shunts. Indian Heart J. 2001;53(6):743-748. PMID: 11838928.", "Endovascular stent implantation as a primary method of treatment for blocked modified Blalock-Taussig shunt. PMID: 36246754. PMCID: PMC9564406."]
+source_refs: ["Gedicke M, Morgan G, Parry A, Martin R, Tulloh R. Risk factors for acute shunt blockage in children after modified Blalock-Taussig shunt operations. Heart Vessels. 2010;25(5):405-409. DOI: 10.1007/s00380-009-1219-1. PMID: 20676963.", "Moszura T, Zubrzycka M, Michalak KW, et al. Acute and late obstruction of a modified Blalock-Taussig shunt: a two-center experience in different catheter-based methods of treatment. Interact Cardiovasc Thorac Surg. 2010;10(5):727-731. DOI: 10.1510/icvts.2009.219741. PMID: 20139195.", "Sivakumar K, Anil SR, Ravichandra M, et al. Emergency transcatheter balloon recanalization of acutely thrombosed modified Blalock-Taussig shunts. Indian Heart J. 2001;53(6):743-748. PMID: 11838928.", "Endovascular stent implantation as a primary method of treatment for blocked modified Blalock-Taussig shunt. PMID: 36246754. PMCID: PMC9564406.", "Monagle P, Chan AKC, Goldenberg NA, et al. Antithrombotic Therapy in Neonates and Children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e737S-e801S. PMID: 22315277 — citada para o reconhecimento explícito da diretriz de que a evidência em trombose de shunt pediátrico é de baixa qualidade e a decisão deve ser individualizada; nenhum esquema de dose foi extraído desta fonte."]
+review_note: "Lote 1B (2026-08-24): por decisão do Dr. Rafael Paes Meirelles, a seção 4 foi reescrita só com explicação não numérica — sem dose de alteplase/heparina/HBPM. A ocorrência de VERIFICAÇÃO HUMANA NECESSÁRIA da seção 2 (volume de bolus para expansão) NÃO foi tocada — fora do escopo desta rodada (não é uma das 8 ocorrências críticas do Lote 1B)."
 ---
 
 # Trombose aguda de shunt sistêmico-pulmonar
@@ -68,11 +69,9 @@ A decisão deve ser feita imediatamente pelo centro congênito com base em:
 
 ## 4. Anticoagulação/trombólise
 
-A literatura pediátrica histórica descreve heparina e rtPA em diferentes cenários, mas os esquemas publicados são heterogêneos e o risco hemorrágico é relevante.
+A literatura pediátrica histórica descreve heparina e rtPA em diferentes cenários, mas os esquemas publicados são heterogêneos e o risco hemorrágico é relevante — misturam heparinização de procedimento, anticoagulação terapêutica, HBPM (com diferença real de dose entre neonato e criança maior) e trombólise sistêmica ou dirigida por cateter, sem convergir para um esquema único.
 
-**Não há dose universal de heparina ou trombolítico estabelecida pelas fontes usadas nesta ficha.**
-
-Para qualquer dose de anticoagulação/trombólise: **VERIFICAÇÃO HUMANA NECESSÁRIA** contra protocolo de cardiologia pediátrica/hemodinâmica do centro.
+A trombose aguda de shunt sistêmico-pulmonar é emergência com risco de vida e requer acionamento imediato de cardiologia intervencionista, cirurgia cardíaca e terapia intensiva pediátrica. As opções incluem anticoagulação, intervenção percutânea, trombólise dirigida ou sistêmica e revisão cirúrgica. **Não existe esquema trombolítico único validado**; dose, via e associação com heparina devem seguir protocolo institucional e monitorização especializada — a diretriz CHEST (Monagle et al. 2012, PMID 22315277) reconhece explicitamente que a evidência nesse cenário é predominantemente de baixa qualidade e recomenda decisão individualizada pela experiência do centro.
 
 ## 5. Criança em parada cardíaca
 
