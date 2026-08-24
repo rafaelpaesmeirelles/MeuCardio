@@ -5,8 +5,8 @@ theme: "Arritmias"
 kind: fluxograma
 summary: "Árvore de decisão atualizada para TV polimórfica sustentada e torsades de pointes: choque não sincronizado imediato quando a arritmia está sustentada, distinção entre QT longo e QT normal e prevenção de recorrência orientada pelo mecanismo."
 review_status: pendente_revisao
-source_refs: ["Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884 — TV polimórfica sustentada: choque não sincronizado imediato (COR 1, LOE B-NR); magnésio pode ser considerado na recorrência associada a QT longo/TdP (COR 2b, LOE C-LD); sem benefício do magnésio rotineiro na TV polimórfica com QT normal (COR 3, LOE C-LD).", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — retirada de fármaco causal, correção de eletrólitos, magnésio IV na TdP e aumento da frequência com pacing/isoproterenol em recorrência no QT longo adquirido.", "Tisdale JE, Jaynes HA, Kingery JR, et al. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — escore de risco de prolongamento de QTc em pacientes hospitalizados, não escore de tratamento da TdP."]
-legacy_source: "Atualização de segurança em 24/08/2026. A versão anterior encaminhava TV polimórfica com pulso e instabilidade para cardioversão sincronizada. A AHA 2025 recomenda choque NÃO sincronizado imediato para TV polimórfica sustentada, independentemente de pulso, porque a sincronização não é confiável. Status rebaixado de revisado para pendente_revisao por ausência de revisão humana documentada desta nova versão."
+source_refs: ["Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884 — TV polimórfica sustentada: choque não sincronizado imediato (COR 1, LOE B-NR); magnésio pode ser considerado na recorrência associada a QT longo/TdP (COR 2b, LOE C-LD); sem benefício do magnésio rotineiro na TV polimórfica com QT normal (COR 3, LOE C-LD).", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — retirada de fármaco causal, correção de eletrólitos, magnésio IV na TdP e aumento da frequência com pacing/isoproterenol em recorrência no QT longo adquirido.", "Tisdale JE, Jaynes HA, Kingery JR, et al. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — escore de risco de prolongamento de QTc em pacientes hospitalizados, não escore de tratamento da TdP; ≥2 fármacos pró-QT somam 6 pontos no total (3 do primeiro + 3 adicionais)."]
+legacy_source: "Atualização de segurança em 24/08/2026. A versão anterior encaminhava TV polimórfica com pulso e instabilidade para cardioversão sincronizada e não deixava claro que ≥2 fármacos pró-QT somam 6 pontos no total no Tisdale. A AHA 2025 recomenda choque NÃO sincronizado imediato para TV polimórfica sustentada, independentemente de pulso, porque a sincronização não é confiável. Status rebaixado de revisado para pendente_revisao por ausência de revisão humana documentada desta nova versão."
 ---
 
 # Fluxograma: Torsades de Pointes e QT Longo Adquirido — Conduta Imediata
@@ -87,9 +87,10 @@ O Tisdale foi criado para predizer **prolongamento de QTc em paciente hospitaliz
 | Sepse | 3 |
 | Insuficiência cardíaca | 3 |
 | Um fármaco prolongador de QTc | 3 |
-| ≥2 fármacos prolongadores de QTc | 3 |
+| ≥2 fármacos prolongadores de QTc | **6 no total** (3 do primeiro + 3 adicionais) |
+| **Pontuação máxima** | **21** |
 
-Estratos originais: baixo ≤6, moderado 7-10, alto ≥11. O escore não deve ser automaticamente generalizado para ambulatório, pediatria ou para estimar risco absoluto de TdP.
+Estratos originais: baixo 0-6, moderado 7-10, alto 11-21. O escore não deve ser automaticamente generalizado para ambulatório, pediatria ou para estimar risco absoluto de TdP.
 
 ## Conexões prioritárias
 
