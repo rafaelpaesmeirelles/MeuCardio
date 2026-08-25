@@ -268,6 +268,14 @@ def _parse_files(body: bytes, content_type: str) -> list[tuple[str, bytes]]:
     return files
 
 
+def _parse_single_file(body: bytes, content_type: str) -> tuple[str, bytes]:
+    """Preserva o contrato dos fluxos legados que aceitam um único anexo."""
+    files = _parse_files(body, content_type)
+    if len(files) != 1:
+        raise UploadRejected(422, "Envie exatamente um arquivo por requisição.")
+    return files[0]
+
+
 def _client_key(scope: Scope, headers: Headers, policy_name: str) -> str:
     forwarded = headers.get("x-forwarded-for")
     if forwarded:
