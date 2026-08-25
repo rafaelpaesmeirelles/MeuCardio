@@ -1068,7 +1068,8 @@
       "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
       "crise-hipercianotica-na-tetralogia-de-fallot",
       "fluxograma-crise-hipercianotica-na-tetralogia-de-fallot"
-    ]
+    ],
+    "patient_material_slug": "tetralogia-de-fallot-e-coarctacao-de-aorta-acompanhamento-na-vida-adulta"
   },
   {
     "slug": "transposicao-das-grandes-arterias",
@@ -3196,7 +3197,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "patient_material_slug": "valvula-aortica-bicuspide-o-que-significa-esse-diagnostico",
+    "related_document_slugs": [
+      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024"
+    ]
   },
   {
     "slug": "retorno-venoso-pulmonar-anomalo",
@@ -3289,7 +3294,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes"
+    ]
   },
   {
     "slug": "tronco-arterial-comum",
@@ -3488,7 +3496,8 @@
     "version": 1,
     "related_document_slugs": [
       "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda"
-    ]
+    ],
+    "patient_material_slug": "cardite-reumatica-quando-a-febre-reumatica-atinge-o-coracao"
   },
   {
     "slug": "endocardite-pediatrica",
@@ -3702,7 +3711,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado"
+    ]
   },
   {
     "slug": "bloqueio-atrioventricular-fetal",
@@ -3734,7 +3746,8 @@
     "related_document_slugs": [
       "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
       "bloqueio-av-congenito-completo-no-recem-nascido"
-    ]
+    ],
+    "patient_material_slug": "gravidez-com-anticorpo-anti-ro-ssa-vigilancia-do-coracao-do-bebe"
   },
   {
     "slug": "flutter-atrial-fetal",
@@ -5218,7 +5231,8 @@
       "hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo",
       "inducao-do-parto-na-hipertensao-gestacional-e-pre-eclampsia-leve-a-termo-o-ensaio-hypitat",
       "fluxograma-eclampsia-e-hipertensao-grave-na-gestacao"
-    ]
+    ],
+    "patient_material_slug": "pre-eclampsia-o-que-isso-significa-para-seu-coracao-depois-do-parto"
   },
   {
     "slug": "valvopatias-na-gravidez",
@@ -5318,7 +5332,8 @@
     "related_document_slugs": [
       "hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio",
       "fluxograma-hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio"
-    ]
+    ],
+    "patient_material_slug": "hipertensao-pulmonar-e-gravidez-por-que-planejar-com-antecedencia"
   },
   {
     "slug": "sindrome-coronariana-gravidez",
