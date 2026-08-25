@@ -64,24 +64,22 @@ export default function TudoSobreEsteTema({ tema, medicamentoSlug, excluirTipo, 
     setResposta(null);
     const t = (tema ?? "").trim();
     if (!t && !medicamentoSlug) return;
-    if (medicamentoSlug) {
-      api
-        .get<Resposta>(`/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`)
-        .then(setResposta)
-        .catch(() => undefined);
-      return;
-    }
+    let ativo = true;
     const params = new URLSearchParams({ tema: t });
     if (excluirTipo) params.set("excluir_tipo", excluirTipo);
     if (excluirSlug) params.set("excluir_slug", excluirSlug);
+    const endpoint = medicamentoSlug
+      ? `/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`
+      : `/relacionados?${params.toString()}`;
     api
-      .get<Resposta>(`/relacionados?${params.toString()}`)
-      .then(setResposta)
+      .get<Resposta>(endpoint)
+      .then((dados) => { if (ativo) setResposta(dados); })
       .catch(() => {
         // Silencioso de propósito: este painel é um complemento da página, não
         // o conteúdo principal — uma falha aqui não pode quebrar a leitura do
         // item que o médico já abriu.
       });
+    return () => { ativo = false; };
   }, [tema, medicamentoSlug, excluirTipo, excluirSlug]);
 
   if (!resposta || resposta.total === 0) return null;
