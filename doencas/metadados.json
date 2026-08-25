@@ -1491,7 +1491,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Não recomenda retirada automática; toda mudança exige confirmação e plano de monitorização.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao"
+    ],
+    "patient_material_slug": "quantos-remedios-sao-demais-polifarmacia-no-idoso-cardiopata"
   },
   {
     "slug": "hipotensao-ortostatica-no-idoso",
@@ -1693,7 +1697,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Critérios numéricos devem ser conferidos na versão vigente do protocolo utilizado.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
+      "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
+      "hipotensao-ortostatica-nao-e-motivo-para-desescalonar-o-anti-hipertensivo"
+    ],
+    "patient_material_slug": "tontura-ao-levantar-hipotensao-ortostatica-e-pots"
   },
   {
     "slug": "fragilidade-pre-procedimento-cardiovascular",
@@ -4021,7 +4031,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+      "sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais",
+      "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca"
+    ],
+    "patient_material_slug": "escala-de-fragilidade-e-o-cuidado-do-seu-coracao"
   },
   {
     "slug": "risco-quedas-cardiogeriatria",
@@ -4462,7 +4478,8 @@
     "related_document_slugs": [
       "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
       "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida"
-    ]
+    ],
+    "patient_material_slug": "conversar-sobre-o-futuro-do-tratamento-planejamento-antecipado-de-cuidados"
   },
   {
     "slug": "plano-alta-cardiogeriatria",
@@ -4491,7 +4508,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "transicao-hospital-domicilio-na-ic-o-ensaio-pact-hf",
+      "telessaude-e-monitoramento-remoto-na-insuficiencia-cardiaca-do-idoso-o-que-funciona-e-para-quem",
+      "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao"
+    ]
   },
   {
     "slug": "cardiotoxicidade-anti-her2",
