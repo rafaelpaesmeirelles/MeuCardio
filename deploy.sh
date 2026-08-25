@@ -304,14 +304,12 @@ fi
 # shellcheck disable=SC1091
 source .env
 
-if [[ "${AI_PROVIDER:-openai}" != "openai" ]]; then
-  echo "AI_PROVIDER precisa ser openai para a central cardiovascular habilitada." >&2
-  exit 1
-fi
 if [[ -z "${OPENAI_API_KEY:-}" ]]; then
   echo "OPENAI_API_KEY está ausente; a central cardiovascular não pode ser habilitada." >&2
   exit 1
 fi
+# O compose de produção fixa OpenAI para esta release. Sobrescrever aqui evita
+# que um AI_PROVIDER legado do .env governe o canário ou a indexação do deploy.
 export AI_ENABLED=true
 export AI_PROVIDER=openai
 export AI_CLINICAL_MULTIMODAL_ENABLED=true
