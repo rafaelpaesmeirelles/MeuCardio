@@ -23252,5 +23252,91 @@
         "por_que": "Fecha a trilha no desfecho prático comum a boa parte dos diagnósticos das etapas 3 a 6: quando a estratificação de risco de ACM, canalopatia ou fenótipo arrítmico já resultou em implante de CDI ou S-ICD, a presença do dispositivo não deve ser usada, isoladamente, como motivo de desqualificação esportiva universal — a decisão volta a depender da doença de base e do fenótipo, não do dispositivo em si."
       }
     ]
+  },
+  {
+    "slug": "trilha-retorno-ao-esporte-apos-doenca-cardiaca",
+    "titulo": "Retorno ao esporte após doença cardíaca: da miocardite à decisão compartilhada",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Sair sabendo conduzir o retorno ao esporte depois de um evento cardíaco: quanto tempo afastar e o que reavaliar após miocardite e pericardite, como interpretar troponina elevada pós-esforço sem rotular doença, como prescrever exercício no cardiopata conhecido e como estruturar a decisão compartilhada quando existe risco residual de morte súbita.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "miocardite-retorno-ao-esporte",
+        "por_que": "O cenário mais comum e mais normatizado de afastamento temporário: define o padrão de 3-6 meses sem atividade extenuante e a reavaliação (ECG, eco, monitor de ritmo, ressonância) antes da liberação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "pericardite-retorno-esporte-atleta",
+        "por_que": "O diagnóstico vizinho com regra de retorno diferente — afastamento guiado por resolução da inflamação, não pelo mesmo calendário da miocardite; confundir os dois erra a conduta nos dois sentidos."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "troponina-apos-exercicio-intenso-atleta-interpretacao",
+        "por_que": "Antes de afastar alguém por um exame, é preciso saber que troponina sobe fisiologicamente após esforço intenso — a etapa que evita transformar achado esperado em doença."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas",
+        "por_que": "Com o diagnóstico estabelecido e o período de afastamento cumprido, esta é a moldura geral de prescrição de exercício por doença e por intensidade."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "decisao-compartilhada-no-retorno-ao-esporte-competitivo-em-cardiopatia-com-risco-de-morte-subita-esc-2020",
+        "por_que": "O fecho da trilha: quando o risco residual não é zero, a ESC 2020 estrutura a decisão compartilhada com o atleta — em vez da desqualificação unilateral — e este documento mostra como documentá-la."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cdi-sicd-participacao-esportiva-atleta",
+        "por_que": "O caso-limite concreto: o atleta com CDI que quer competir — onde o registro prospectivo de segurança e a decisão compartilhada se encontram na prática."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-populacoes-especiais-na-cardiologia-do-esporte",
+    "titulo": "Populações especiais na cardiologia do esporte: mulher, master, paratleta e os riscos exógenos",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Sair sabendo o que muda na avaliação cardiovascular fora do arquétipo do atleta jovem masculino: o remodelamento e o ECG da atleta mulher, o atleta master com doença coronariana silenciosa, a avaliação periódica do paratleta, e dois riscos exógenos frequentes — baixa disponibilidade energética (REDs) e anabolizantes.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "coracao-atleta-feminina-remodelamento-ecg-eco",
+        "por_que": "Os valores de referência do coração de atleta foram construídos majoritariamente em homens — começar pela atleta mulher corrige a régua antes de tudo."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "atleta-master-achados-cardiovasculares-e-participacao-esportiva",
+        "por_que": "No master, o problema dominante deixa de ser cardiomiopatia herdada e passa a ser doença coronariana — muda a pergunta da triagem e a interpretação de sintomas de esforço."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "para-atleta-avaliacao-periodica-cardiovascular",
+        "por_que": "O paratleta tem fisiologia, fatores de risco e barreiras de avaliação próprios — esta etapa cobre o que a avaliação periódica precisa adaptar."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "reds-baixa-disponibilidade-energetica-risco-cardiovascular-atleta",
+        "por_que": "REDs é o risco silencioso transversal (não só da mulher): baixa disponibilidade energética com repercussão cardiovascular e hormonal que a anamnese padrão não captura."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "esteroides-anabolizantes-doping-e-risco-cardiovascular-no-atleta",
+        "por_que": "O risco exógeno oposto: anabolizantes e doping, com dano cardiovascular estrutural documentado — fecha a trilha com o que perguntar e o que procurar no usuário."
+      }
+    ]
   }
 ]
