@@ -39,10 +39,14 @@ services:
       # Release Clinical OS: tools reais do Assistente Pessoal ficam disponíveis
       # em produção, ainda condicionadas ao consentimento individual do médico
       # (users.ia_ferramentas_consent_em) e bloqueadas para Investidor.
+      AI_ENABLED: "true"
+      AI_PROVIDER: "openai"
       AI_ASSISTANT_TOOLS_ENABLED: "true"
-      # A rota exige consentimento explícito a cada ECG e não persiste o
-      # arquivo. Em produção, a capacidade solicitada faz parte do produto.
+      # Autorização operacional registrada em 25/08/2026: a central exige
+      # desidentificação e consentimento explícito, sanitiza os arquivos e não
+      # persiste conteúdo clínico nem solicita armazenamento da resposta.
       AI_CLINICAL_MULTIMODAL_ENABLED: "true"
+      AI_CLINICAL_DATA_CONTROLS_APPROVED: "true"
     depends_on:
       db:
         condition: service_healthy

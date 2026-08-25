@@ -166,6 +166,34 @@ def test_deploy_injeta_e_confirma_commit_publico():
     assert '@router.get("/version")' in health
 
 
+def test_deploy_habilita_e_certifica_ia_cardiovascular_antes_do_trafego():
+    deploy = _fonte(DEPLOY)
+    compose = _fonte(COMPOSE)
+    for setting in (
+        'AI_ENABLED: "true"',
+        'AI_PROVIDER: "openai"',
+        'AI_CLINICAL_MULTIMODAL_ENABLED: "true"',
+        'AI_CLINICAL_DATA_CONTROLS_APPROVED: "true"',
+    ):
+        assert setting in compose
+
+    assert '[[ -z "${OPENAI_API_KEY:-}" ]]' in deploy
+    assert "Validando provedor multimodal sem enviar dados clínicos" in deploy
+    assert '"store": False' in deploy
+    assert "status_ia_exames" in deploy
+    assert '"persists_files_in_corvia": False' in deploy
+    assert '"provider_response_storage_requested": False' in deploy
+    assert "echo \"$OPENAI_API_KEY\"" not in deploy
+
+    indice_canario = deploy.index("Validando provedor multimodal sem enviar dados clínicos")
+    indice_indisponibilidade = deploy.index("Fechando o proxy e o backend antigo")
+    indice_status = deploy.index("Certificando flags e controles transitórios")
+    indice_rollback_off = deploy.index("ROLLBACK_NECESSARIO=0", indice_status)
+    indice_proxy = deploy.index("Abrindo o proxy somente após")
+    assert indice_canario < indice_indisponibilidade
+    assert indice_status < indice_rollback_off < indice_proxy
+
+
 def test_backup_e_portavel_atomico_restauravel_e_verificado():
     fonte = _fonte(BACKUP)
     linhas_ativas = "\n".join(_linhas_ativas(BACKUP))
