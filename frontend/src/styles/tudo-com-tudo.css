@@ -10,7 +10,8 @@
 .tct-topic { height:100%; scroll-margin-top:80px }
 .tct-pre { white-space:pre-line }
 .tct-group { scroll-margin-top:80px }
-.tct-group header { position:relative;padding-right:4rem;border-bottom:1px solid var(--cos-line,var(--borda)) }
+.tct-group header { position:relative;border-bottom:1px solid var(--cos-line,var(--borda)) }
+.tct-group header:has(>a) { padding-right:4rem }
 .tct-group header>a { position:absolute;right:0;top:0 }
 .tct-row { display:grid;gap:.2rem;padding:.7rem 0;color:inherit;border-bottom:1px solid var(--cos-line,var(--borda)) }
 .tct-row small { color:var(--acao);font-size:.65rem;text-transform:uppercase }
